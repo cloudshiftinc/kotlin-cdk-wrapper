@@ -14,10 +14,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * A container for the UI customization information for the hosted UI in a user pool.
  *
- * This data type is a response parameter of
- * [GetUICustomization](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPoolClient.html)
- * .
- *
  * Example:
  *
  * ```
@@ -68,12 +64,14 @@ public open class CfnUserPoolUICustomizationAttachment(
   }
 
   /**
-   * The CSS values in the UI customization.
+   * A plaintext CSS file that contains the custom fields that you want to apply to your user pool
+   * or app client.
    */
   public open fun css(): String? = unwrap(this).getCss()
 
   /**
-   * The CSS values in the UI customization.
+   * A plaintext CSS file that contains the custom fields that you want to apply to your user pool
+   * or app client.
    */
   public open fun css(`value`: String) {
     unwrap(this).setCss(`value`)
@@ -89,12 +87,12 @@ public open class CfnUserPoolUICustomizationAttachment(
   }
 
   /**
-   * The user pool ID for the user pool.
+   * The ID of the user pool where you want to apply branding to the classic hosted UI.
    */
   public open fun userPoolId(): String = unwrap(this).getUserPoolId()
 
   /**
-   * The user pool ID for the user pool.
+   * The ID of the user pool where you want to apply branding to the classic hosted UI.
    */
   public open fun userPoolId(`value`: String) {
     unwrap(this).setUserPoolId(`value`)
@@ -118,18 +116,25 @@ public open class CfnUserPoolUICustomizationAttachment(
     public fun clientId(clientId: String)
 
     /**
-     * The CSS values in the UI customization.
+     * A plaintext CSS file that contains the custom fields that you want to apply to your user pool
+     * or app client.
+     *
+     * To download a template, go to the Amazon Cognito console. Navigate to your user pool *App
+     * clients* tab, select *Login pages* , edit *Hosted UI (classic) style* , and select the link to
+     * `CSS template.css` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-css)
-     * @param css The CSS values in the UI customization. 
+     * @param css A plaintext CSS file that contains the custom fields that you want to apply to
+     * your user pool or app client. 
      */
     public fun css(css: String)
 
     /**
-     * The user pool ID for the user pool.
+     * The ID of the user pool where you want to apply branding to the classic hosted UI.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-userpoolid)
-     * @param userPoolId The user pool ID for the user pool. 
+     * @param userPoolId The ID of the user pool where you want to apply branding to the classic
+     * hosted UI. 
      */
     public fun userPoolId(userPoolId: String)
   }
@@ -157,20 +162,27 @@ public open class CfnUserPoolUICustomizationAttachment(
     }
 
     /**
-     * The CSS values in the UI customization.
+     * A plaintext CSS file that contains the custom fields that you want to apply to your user pool
+     * or app client.
+     *
+     * To download a template, go to the Amazon Cognito console. Navigate to your user pool *App
+     * clients* tab, select *Login pages* , edit *Hosted UI (classic) style* , and select the link to
+     * `CSS template.css` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-css)
-     * @param css The CSS values in the UI customization. 
+     * @param css A plaintext CSS file that contains the custom fields that you want to apply to
+     * your user pool or app client. 
      */
     override fun css(css: String) {
       cdkBuilder.css(css)
     }
 
     /**
-     * The user pool ID for the user pool.
+     * The ID of the user pool where you want to apply branding to the classic hosted UI.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-userpoolid)
-     * @param userPoolId The user pool ID for the user pool. 
+     * @param userPoolId The ID of the user pool where you want to apply branding to the classic
+     * hosted UI. 
      */
     override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)

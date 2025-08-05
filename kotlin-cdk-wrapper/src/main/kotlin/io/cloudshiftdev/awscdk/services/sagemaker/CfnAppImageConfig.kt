@@ -22,7 +22,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Creates a configuration for running a SageMaker image as a KernelGateway app.
+ * Creates a configuration for running a SageMaker AI image as a KernelGateway app.
  *
  * The configuration specifies the Amazon Elastic File System storage volume on the image, and a
  * list of the kernels in the image.
@@ -192,26 +192,26 @@ public open class CfnAppImageConfig(
       Unit = jupyterLabAppImageConfig(JupyterLabAppImageConfigProperty(`value`))
 
   /**
-   * The configuration for the file system and kernels in the SageMaker image.
+   * The configuration for the file system and kernels in the SageMaker AI image.
    */
   public open fun kernelGatewayImageConfig(): Any? = unwrap(this).getKernelGatewayImageConfig()
 
   /**
-   * The configuration for the file system and kernels in the SageMaker image.
+   * The configuration for the file system and kernels in the SageMaker AI image.
    */
   public open fun kernelGatewayImageConfig(`value`: IResolvable) {
     unwrap(this).setKernelGatewayImageConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The configuration for the file system and kernels in the SageMaker image.
+   * The configuration for the file system and kernels in the SageMaker AI image.
    */
   public open fun kernelGatewayImageConfig(`value`: KernelGatewayImageConfigProperty) {
     unwrap(this).setKernelGatewayImageConfig(`value`.let(KernelGatewayImageConfigProperty.Companion::unwrap))
   }
 
   /**
-   * The configuration for the file system and kernels in the SageMaker image.
+   * The configuration for the file system and kernels in the SageMaker AI image.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("95f670060a6826c4ddd58e4986bda60e40b9e0d74a4e45ed27746e6e44271f54")
@@ -324,29 +324,29 @@ public open class CfnAppImageConfig(
         fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: JupyterLabAppImageConfigProperty.Builder.() -> Unit)
 
     /**
-     * The configuration for the file system and kernels in the SageMaker image.
+     * The configuration for the file system and kernels in the SageMaker AI image.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-kernelgatewayimageconfig)
      * @param kernelGatewayImageConfig The configuration for the file system and kernels in the
-     * SageMaker image. 
+     * SageMaker AI image. 
      */
     public fun kernelGatewayImageConfig(kernelGatewayImageConfig: IResolvable)
 
     /**
-     * The configuration for the file system and kernels in the SageMaker image.
+     * The configuration for the file system and kernels in the SageMaker AI image.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-kernelgatewayimageconfig)
      * @param kernelGatewayImageConfig The configuration for the file system and kernels in the
-     * SageMaker image. 
+     * SageMaker AI image. 
      */
     public fun kernelGatewayImageConfig(kernelGatewayImageConfig: KernelGatewayImageConfigProperty)
 
     /**
-     * The configuration for the file system and kernels in the SageMaker image.
+     * The configuration for the file system and kernels in the SageMaker AI image.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-kernelgatewayimageconfig)
      * @param kernelGatewayImageConfig The configuration for the file system and kernels in the
-     * SageMaker image. 
+     * SageMaker AI image. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("48dd6586d112ce707aa713b8ce6dc56a8bffb85dc1e0d37e9f79481f6533f76b")
@@ -476,22 +476,22 @@ public open class CfnAppImageConfig(
         Unit = jupyterLabAppImageConfig(JupyterLabAppImageConfigProperty(jupyterLabAppImageConfig))
 
     /**
-     * The configuration for the file system and kernels in the SageMaker image.
+     * The configuration for the file system and kernels in the SageMaker AI image.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-kernelgatewayimageconfig)
      * @param kernelGatewayImageConfig The configuration for the file system and kernels in the
-     * SageMaker image. 
+     * SageMaker AI image. 
      */
     override fun kernelGatewayImageConfig(kernelGatewayImageConfig: IResolvable) {
       cdkBuilder.kernelGatewayImageConfig(kernelGatewayImageConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The configuration for the file system and kernels in the SageMaker image.
+     * The configuration for the file system and kernels in the SageMaker AI image.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-kernelgatewayimageconfig)
      * @param kernelGatewayImageConfig The configuration for the file system and kernels in the
-     * SageMaker image. 
+     * SageMaker AI image. 
      */
     override
         fun kernelGatewayImageConfig(kernelGatewayImageConfig: KernelGatewayImageConfigProperty) {
@@ -499,11 +499,11 @@ public open class CfnAppImageConfig(
     }
 
     /**
-     * The configuration for the file system and kernels in the SageMaker image.
+     * The configuration for the file system and kernels in the SageMaker AI image.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-kernelgatewayimageconfig)
      * @param kernelGatewayImageConfig The configuration for the file system and kernels in the
-     * SageMaker image. 
+     * SageMaker AI image. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("48dd6586d112ce707aa713b8ce6dc56a8bffb85dc1e0d37e9f79481f6533f76b")
@@ -991,7 +991,7 @@ public open class CfnAppImageConfig(
   }
 
   /**
-   * The Amazon Elastic File System storage configuration for a SageMaker image.
+   * The Amazon Elastic File System storage configuration for a SageMaker AI image.
    *
    * Example:
    *
@@ -1146,8 +1146,8 @@ public open class CfnAppImageConfig(
   }
 
   /**
-   * The configuration for the file system and kernels in a SageMaker image running as a JupyterLab
-   * app.
+   * The configuration for the file system and kernels in a SageMaker AI image running as a
+   * JupyterLab app.
    *
    * The `FileSystemConfig` object is not supported.
    *
@@ -1267,7 +1267,7 @@ public open class CfnAppImageConfig(
   }
 
   /**
-   * The configuration for the file system and kernels in a SageMaker image running as a
+   * The configuration for the file system and kernels in a SageMaker AI image running as a
    * KernelGateway app.
    *
    * Example:
@@ -1296,7 +1296,7 @@ public open class CfnAppImageConfig(
    */
   public interface KernelGatewayImageConfigProperty {
     /**
-     * The Amazon Elastic File System storage configuration for a SageMaker image.
+     * The Amazon Elastic File System storage configuration for a SageMaker AI image.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-kernelgatewayimageconfig.html#cfn-sagemaker-appimageconfig-kernelgatewayimageconfig-filesystemconfig)
      */
@@ -1316,19 +1316,19 @@ public open class CfnAppImageConfig(
     public interface Builder {
       /**
        * @param fileSystemConfig The Amazon Elastic File System storage configuration for a
-       * SageMaker image.
+       * SageMaker AI image.
        */
       public fun fileSystemConfig(fileSystemConfig: IResolvable)
 
       /**
        * @param fileSystemConfig The Amazon Elastic File System storage configuration for a
-       * SageMaker image.
+       * SageMaker AI image.
        */
       public fun fileSystemConfig(fileSystemConfig: FileSystemConfigProperty)
 
       /**
        * @param fileSystemConfig The Amazon Elastic File System storage configuration for a
-       * SageMaker image.
+       * SageMaker AI image.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28df5b17febe71ee76595a70da8e1da758c6b9bcb73a6c4dd93f394d942cb261")
@@ -1358,7 +1358,7 @@ public open class CfnAppImageConfig(
 
       /**
        * @param fileSystemConfig The Amazon Elastic File System storage configuration for a
-       * SageMaker image.
+       * SageMaker AI image.
        */
       override fun fileSystemConfig(fileSystemConfig: IResolvable) {
         cdkBuilder.fileSystemConfig(fileSystemConfig.let(IResolvable.Companion::unwrap))
@@ -1366,7 +1366,7 @@ public open class CfnAppImageConfig(
 
       /**
        * @param fileSystemConfig The Amazon Elastic File System storage configuration for a
-       * SageMaker image.
+       * SageMaker AI image.
        */
       override fun fileSystemConfig(fileSystemConfig: FileSystemConfigProperty) {
         cdkBuilder.fileSystemConfig(fileSystemConfig.let(FileSystemConfigProperty.Companion::unwrap))
@@ -1374,7 +1374,7 @@ public open class CfnAppImageConfig(
 
       /**
        * @param fileSystemConfig The Amazon Elastic File System storage configuration for a
-       * SageMaker image.
+       * SageMaker AI image.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28df5b17febe71ee76595a70da8e1da758c6b9bcb73a6c4dd93f394d942cb261")
@@ -1410,7 +1410,7 @@ public open class CfnAppImageConfig(
     ) : CdkObject(cdkObject),
         KernelGatewayImageConfigProperty {
       /**
-       * The Amazon Elastic File System storage configuration for a SageMaker image.
+       * The Amazon Elastic File System storage configuration for a SageMaker AI image.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-kernelgatewayimageconfig.html#cfn-sagemaker-appimageconfig-kernelgatewayimageconfig-filesystemconfig)
        */

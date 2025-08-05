@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.apigateway.IRestApi
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
+import io.cloudshiftdev.awscdk.services.stepfunctions.QueryLanguage
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskInput
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBase
 import io.cloudshiftdev.awscdk.services.stepfunctions.Timeout
@@ -45,14 +46,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * ```
  * import io.cloudshiftdev.awscdk.services.apigateway.*;
  * RestApi api;
- * CallApiGatewayRestApiEndpoint.Builder.create(this, "Endpoint")
+ * CallApiGatewayRestApiEndpoint.jsonata(this, "Endpoint",
+ * CallApiGatewayRestApiEndpointJsonataProps.builder()
  * .api(api)
  * .stageName("Stage")
  * .method(HttpMethod.PUT)
  * .integrationPattern(IntegrationPattern.WAIT_FOR_TASK_TOKEN)
  * .headers(TaskInput.fromObject(Map.of(
- * "TaskToken", JsonPath.array(JsonPath.getTaskToken()))))
- * .build();
+ * "TaskToken", "{% States.Array($states.context.taskToken) %}")))
+ * .build());
  * ```
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-api-gateway.html)
@@ -99,6 +101,19 @@ public open class CallApiGatewayRestApiEndpoint(
     public fun apiPath(apiPath: String)
 
     /**
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    public fun assign(assign: Map<String, Any>)
+
+    /**
      * Authentication methods.
      *
      * Default: AuthType.NO_AUTH
@@ -108,11 +123,11 @@ public open class CallApiGatewayRestApiEndpoint(
     public fun authType(authType: AuthType)
 
     /**
-     * An optional description for this state.
+     * A comment describing this state.
      *
-     * Default: - No comment
+     * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     public fun comment(comment: String)
 
@@ -182,7 +197,7 @@ public open class CallApiGatewayRestApiEndpoint(
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      *
      * @param inputPath JSONPath expression to select part of the state to be the input to this
      * state. 
@@ -215,18 +230,45 @@ public open class CallApiGatewayRestApiEndpoint(
     public fun method(method: HttpMethod)
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      *
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state. 
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state. 
      */
     public fun outputPath(outputPath: String)
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    public fun outputs(outputs: Any)
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
 
     /**
      * Query strings attatched to end of request.
@@ -236,6 +278,15 @@ public open class CallApiGatewayRestApiEndpoint(
      * @param queryParameters Query strings attatched to end of request. 
      */
     public fun queryParameters(queryParameters: TaskInput)
+
+    /**
+     * Specify a custom Region where the API is deployed, e.g. 'us-east-1'.
+     *
+     * Default: - Uses the Region of the stack containing the `api`.
+     *
+     * @param region Specify a custom Region where the API is deployed, e.g. 'us-east-1'. 
+     */
+    public fun region(region: String)
 
     /**
      * HTTP Request body.
@@ -252,7 +303,7 @@ public open class CallApiGatewayRestApiEndpoint(
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      *
      * @param resultPath JSONPath expression to indicate where to inject the state's output. 
      */
@@ -343,6 +394,21 @@ public open class CallApiGatewayRestApiEndpoint(
     }
 
     /**
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
      * Authentication methods.
      *
      * Default: AuthType.NO_AUTH
@@ -354,11 +420,11 @@ public open class CallApiGatewayRestApiEndpoint(
     }
 
     /**
-     * An optional description for this state.
+     * A comment describing this state.
      *
-     * Default: - No comment
+     * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -439,7 +505,7 @@ public open class CallApiGatewayRestApiEndpoint(
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      *
      * @param inputPath JSONPath expression to select part of the state to be the input to this
      * state. 
@@ -478,19 +544,50 @@ public open class CallApiGatewayRestApiEndpoint(
     }
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      *
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state. 
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state. 
      */
     override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
+    }
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    override fun outputs(outputs: Any) {
+      cdkBuilder.outputs(outputs)
+    }
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
     }
 
     /**
@@ -502,6 +599,17 @@ public open class CallApiGatewayRestApiEndpoint(
      */
     override fun queryParameters(queryParameters: TaskInput) {
       cdkBuilder.queryParameters(queryParameters.let(TaskInput.Companion::unwrap))
+    }
+
+    /**
+     * Specify a custom Region where the API is deployed, e.g. 'us-east-1'.
+     *
+     * Default: - Uses the Region of the stack containing the `api`.
+     *
+     * @param region Specify a custom Region where the API is deployed, e.g. 'us-east-1'. 
+     */
+    override fun region(region: String) {
+      cdkBuilder.region(region)
     }
 
     /**
@@ -521,7 +629,7 @@ public open class CallApiGatewayRestApiEndpoint(
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      *
      * @param resultPath JSONPath expression to indicate where to inject the state's output. 
      */
@@ -599,6 +707,45 @@ public open class CallApiGatewayRestApiEndpoint(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApiEndpoint.PROPERTY_INJECTION_ID
+
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: CallApiGatewayRestApiEndpointJsonPathProps,
+    ): CallApiGatewayRestApiEndpoint =
+        software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApiEndpoint.jsonPath(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        props.let(CallApiGatewayRestApiEndpointJsonPathProps.Companion::unwrap)).let(CallApiGatewayRestApiEndpoint::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a4017473eb0ef3c8b4e476e19ec5e0f062e7c49104a63bfa61b11b8d51c49e31")
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: CallApiGatewayRestApiEndpointJsonPathProps.Builder.() -> Unit,
+    ): CallApiGatewayRestApiEndpoint = jsonPath(scope, id,
+        CallApiGatewayRestApiEndpointJsonPathProps(props))
+
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: CallApiGatewayRestApiEndpointJsonataProps,
+    ): CallApiGatewayRestApiEndpoint =
+        software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApiEndpoint.jsonata(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        props.let(CallApiGatewayRestApiEndpointJsonataProps.Companion::unwrap)).let(CallApiGatewayRestApiEndpoint::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e52100f71953f0b073afe0fb7c93f520880220a103c976f8c17e6416afd9a90a")
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: CallApiGatewayRestApiEndpointJsonataProps.Builder.() -> Unit,
+    ): CallApiGatewayRestApiEndpoint = jsonata(scope, id,
+        CallApiGatewayRestApiEndpointJsonataProps(props))
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -173,15 +173,15 @@ public open class CfnDomain(
   /**
    * Additional options to specify for the OpenSearch Service domain.
    */
-  public open fun advancedOptions(`value`: IResolvable) {
-    unwrap(this).setAdvancedOptions(`value`.let(IResolvable.Companion::unwrap))
+  public open fun advancedOptions(`value`: Map<String, String>) {
+    unwrap(this).setAdvancedOptions(`value`)
   }
 
   /**
    * Additional options to specify for the OpenSearch Service domain.
    */
-  public open fun advancedOptions(`value`: Map<String, String>) {
-    unwrap(this).setAdvancedOptions(`value`)
+  public open fun advancedOptions(`value`: IResolvable) {
+    unwrap(this).setAdvancedOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -594,7 +594,7 @@ public open class CfnDomain(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-advancedoptions)
      * @param advancedOptions Additional options to specify for the OpenSearch Service domain. 
      */
-    public fun advancedOptions(advancedOptions: IResolvable)
+    public fun advancedOptions(advancedOptions: Map<String, String>)
 
     /**
      * Additional options to specify for the OpenSearch Service domain.
@@ -606,7 +606,7 @@ public open class CfnDomain(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-advancedoptions)
      * @param advancedOptions Additional options to specify for the OpenSearch Service domain. 
      */
-    public fun advancedOptions(advancedOptions: Map<String, String>)
+    public fun advancedOptions(advancedOptions: IResolvable)
 
     /**
      * Specifies options for fine-grained access control.
@@ -1066,8 +1066,8 @@ public open class CfnDomain(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-advancedoptions)
      * @param advancedOptions Additional options to specify for the OpenSearch Service domain. 
      */
-    override fun advancedOptions(advancedOptions: IResolvable) {
-      cdkBuilder.advancedOptions(advancedOptions.let(IResolvable.Companion::unwrap))
+    override fun advancedOptions(advancedOptions: Map<String, String>) {
+      cdkBuilder.advancedOptions(advancedOptions)
     }
 
     /**
@@ -1080,8 +1080,8 @@ public open class CfnDomain(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-advancedoptions)
      * @param advancedOptions Additional options to specify for the OpenSearch Service domain. 
      */
-    override fun advancedOptions(advancedOptions: Map<String, String>) {
-      cdkBuilder.advancedOptions(advancedOptions)
+    override fun advancedOptions(advancedOptions: IResolvable) {
+      cdkBuilder.advancedOptions(advancedOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**

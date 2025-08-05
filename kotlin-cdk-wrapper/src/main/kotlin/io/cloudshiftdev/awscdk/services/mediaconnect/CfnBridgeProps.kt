@@ -39,6 +39,10 @@ import kotlin.jvm.JvmName
  * .networkName("networkName")
  * .port(123)
  * .protocol("protocol")
+ * // the properties below are optional
+ * .multicastSourceSettings(MulticastSourceSettingsProperty.builder()
+ * .multicastSourceIp("multicastSourceIp")
+ * .build())
  * .build())
  * .build()))
  * // the properties below are optional
@@ -74,20 +78,18 @@ import kotlin.jvm.JvmName
  */
 public interface CfnBridgeProps {
   /**
-   * Create a bridge with the egress bridge type.
+   * An egress bridge is a cloud-to-ground bridge.
    *
-   * An egress bridge is a cloud-to-ground bridge. The content comes from an existing MediaConnect
-   * flow and is delivered to your premises.
+   * The content comes from an existing MediaConnect flow and is delivered to your premises.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-egressgatewaybridge)
    */
   public fun egressGatewayBridge(): Any? = unwrap(this).getEgressGatewayBridge()
 
   /**
-   * Create a bridge with the ingress bridge type.
+   * An ingress bridge is a ground-to-cloud bridge.
    *
-   * An ingress bridge is a ground-to-cloud bridge. The content originates at your premises and is
-   * delivered to the cloud.
+   * The content originates at your premises and is delivered to the cloud.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-ingressgatewaybridge)
    */
@@ -136,23 +138,20 @@ public interface CfnBridgeProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param egressGatewayBridge Create a bridge with the egress bridge type.
-     * An egress bridge is a cloud-to-ground bridge. The content comes from an existing MediaConnect
-     * flow and is delivered to your premises.
+     * @param egressGatewayBridge An egress bridge is a cloud-to-ground bridge.
+     * The content comes from an existing MediaConnect flow and is delivered to your premises.
      */
     public fun egressGatewayBridge(egressGatewayBridge: IResolvable)
 
     /**
-     * @param egressGatewayBridge Create a bridge with the egress bridge type.
-     * An egress bridge is a cloud-to-ground bridge. The content comes from an existing MediaConnect
-     * flow and is delivered to your premises.
+     * @param egressGatewayBridge An egress bridge is a cloud-to-ground bridge.
+     * The content comes from an existing MediaConnect flow and is delivered to your premises.
      */
     public fun egressGatewayBridge(egressGatewayBridge: CfnBridge.EgressGatewayBridgeProperty)
 
     /**
-     * @param egressGatewayBridge Create a bridge with the egress bridge type.
-     * An egress bridge is a cloud-to-ground bridge. The content comes from an existing MediaConnect
-     * flow and is delivered to your premises.
+     * @param egressGatewayBridge An egress bridge is a cloud-to-ground bridge.
+     * The content comes from an existing MediaConnect flow and is delivered to your premises.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c00a44f5337692dc3b05c2338a1ba9908a67b0abac8e0e7e784cc8992d5f6f43")
@@ -160,23 +159,20 @@ public interface CfnBridgeProps {
         fun egressGatewayBridge(egressGatewayBridge: CfnBridge.EgressGatewayBridgeProperty.Builder.() -> Unit)
 
     /**
-     * @param ingressGatewayBridge Create a bridge with the ingress bridge type.
-     * An ingress bridge is a ground-to-cloud bridge. The content originates at your premises and is
-     * delivered to the cloud.
+     * @param ingressGatewayBridge An ingress bridge is a ground-to-cloud bridge.
+     * The content originates at your premises and is delivered to the cloud.
      */
     public fun ingressGatewayBridge(ingressGatewayBridge: IResolvable)
 
     /**
-     * @param ingressGatewayBridge Create a bridge with the ingress bridge type.
-     * An ingress bridge is a ground-to-cloud bridge. The content originates at your premises and is
-     * delivered to the cloud.
+     * @param ingressGatewayBridge An ingress bridge is a ground-to-cloud bridge.
+     * The content originates at your premises and is delivered to the cloud.
      */
     public fun ingressGatewayBridge(ingressGatewayBridge: CfnBridge.IngressGatewayBridgeProperty)
 
     /**
-     * @param ingressGatewayBridge Create a bridge with the ingress bridge type.
-     * An ingress bridge is a ground-to-cloud bridge. The content originates at your premises and is
-     * delivered to the cloud.
+     * @param ingressGatewayBridge An ingress bridge is a ground-to-cloud bridge.
+     * The content originates at your premises and is delivered to the cloud.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("aeb90e11d39737f1807c3f7cb093da150771dfd68ec81f99ae6c2d2f58cc1e22")
@@ -248,27 +244,24 @@ public interface CfnBridgeProps {
         software.amazon.awscdk.services.mediaconnect.CfnBridgeProps.builder()
 
     /**
-     * @param egressGatewayBridge Create a bridge with the egress bridge type.
-     * An egress bridge is a cloud-to-ground bridge. The content comes from an existing MediaConnect
-     * flow and is delivered to your premises.
+     * @param egressGatewayBridge An egress bridge is a cloud-to-ground bridge.
+     * The content comes from an existing MediaConnect flow and is delivered to your premises.
      */
     override fun egressGatewayBridge(egressGatewayBridge: IResolvable) {
       cdkBuilder.egressGatewayBridge(egressGatewayBridge.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param egressGatewayBridge Create a bridge with the egress bridge type.
-     * An egress bridge is a cloud-to-ground bridge. The content comes from an existing MediaConnect
-     * flow and is delivered to your premises.
+     * @param egressGatewayBridge An egress bridge is a cloud-to-ground bridge.
+     * The content comes from an existing MediaConnect flow and is delivered to your premises.
      */
     override fun egressGatewayBridge(egressGatewayBridge: CfnBridge.EgressGatewayBridgeProperty) {
       cdkBuilder.egressGatewayBridge(egressGatewayBridge.let(CfnBridge.EgressGatewayBridgeProperty.Companion::unwrap))
     }
 
     /**
-     * @param egressGatewayBridge Create a bridge with the egress bridge type.
-     * An egress bridge is a cloud-to-ground bridge. The content comes from an existing MediaConnect
-     * flow and is delivered to your premises.
+     * @param egressGatewayBridge An egress bridge is a cloud-to-ground bridge.
+     * The content comes from an existing MediaConnect flow and is delivered to your premises.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c00a44f5337692dc3b05c2338a1ba9908a67b0abac8e0e7e784cc8992d5f6f43")
@@ -277,18 +270,16 @@ public interface CfnBridgeProps {
         Unit = egressGatewayBridge(CfnBridge.EgressGatewayBridgeProperty(egressGatewayBridge))
 
     /**
-     * @param ingressGatewayBridge Create a bridge with the ingress bridge type.
-     * An ingress bridge is a ground-to-cloud bridge. The content originates at your premises and is
-     * delivered to the cloud.
+     * @param ingressGatewayBridge An ingress bridge is a ground-to-cloud bridge.
+     * The content originates at your premises and is delivered to the cloud.
      */
     override fun ingressGatewayBridge(ingressGatewayBridge: IResolvable) {
       cdkBuilder.ingressGatewayBridge(ingressGatewayBridge.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param ingressGatewayBridge Create a bridge with the ingress bridge type.
-     * An ingress bridge is a ground-to-cloud bridge. The content originates at your premises and is
-     * delivered to the cloud.
+     * @param ingressGatewayBridge An ingress bridge is a ground-to-cloud bridge.
+     * The content originates at your premises and is delivered to the cloud.
      */
     override
         fun ingressGatewayBridge(ingressGatewayBridge: CfnBridge.IngressGatewayBridgeProperty) {
@@ -296,9 +287,8 @@ public interface CfnBridgeProps {
     }
 
     /**
-     * @param ingressGatewayBridge Create a bridge with the ingress bridge type.
-     * An ingress bridge is a ground-to-cloud bridge. The content originates at your premises and is
-     * delivered to the cloud.
+     * @param ingressGatewayBridge An ingress bridge is a ground-to-cloud bridge.
+     * The content originates at your premises and is delivered to the cloud.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("aeb90e11d39737f1807c3f7cb093da150771dfd68ec81f99ae6c2d2f58cc1e22")
@@ -391,20 +381,18 @@ public interface CfnBridgeProps {
   ) : CdkObject(cdkObject),
       CfnBridgeProps {
     /**
-     * Create a bridge with the egress bridge type.
+     * An egress bridge is a cloud-to-ground bridge.
      *
-     * An egress bridge is a cloud-to-ground bridge. The content comes from an existing MediaConnect
-     * flow and is delivered to your premises.
+     * The content comes from an existing MediaConnect flow and is delivered to your premises.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-egressgatewaybridge)
      */
     override fun egressGatewayBridge(): Any? = unwrap(this).getEgressGatewayBridge()
 
     /**
-     * Create a bridge with the ingress bridge type.
+     * An ingress bridge is a ground-to-cloud bridge.
      *
-     * An ingress bridge is a ground-to-cloud bridge. The content originates at your premises and is
-     * delivered to the cloud.
+     * The content originates at your premises and is delivered to the cloud.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-ingressgatewaybridge)
      */

@@ -678,7 +678,7 @@ public open class CfnFileSystem(
      * file system that you're creating.
      *
      * Required if `ThroughputMode` is set to `provisioned` . Valid values are 1-3414 MiBps, with
-     * the upper limit depending on Region. To increase this limit, contact AWS Support . For more
+     * the upper limit depending on Region. To increase this limit, contact Support . For more
      * information, see [Amazon EFS quotas that you can
      * increase](https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits) in the *Amazon EFS
      * User Guide* .
@@ -1073,7 +1073,7 @@ public open class CfnFileSystem(
      * file system that you're creating.
      *
      * Required if `ThroughputMode` is set to `provisioned` . Valid values are 1-3414 MiBps, with
-     * the upper limit depending on Region. To increase this limit, contact AWS Support . For more
+     * the upper limit depending on Region. To increase this limit, contact Support . For more
      * information, see [Amazon EFS quotas that you can
      * increase](https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits) in the *Amazon EFS
      * User Guide* .
@@ -1402,8 +1402,7 @@ public open class CfnFileSystem(
      * * `DISABLED` – The file system can be used as the destination file system in a replication
      * configuration. The file system is read-only and can only be modified by EFS replication.
      * * `REPLICATING` – The file system is being used as the destination file system in a
-     * replication configuration. The file system is read-only and is only modified only by EFS
-     * replication.
+     * replication configuration. The file system is read-only and is modified only by EFS replication.
      *
      * If the replication configuration is deleted, the file system's replication overwrite
      * protection is re-enabled, the file system becomes writeable.
@@ -1427,7 +1426,7 @@ public open class CfnFileSystem(
        * * `DISABLED` – The file system can be used as the destination file system in a replication
        * configuration. The file system is read-only and can only be modified by EFS replication.
        * * `REPLICATING` – The file system is being used as the destination file system in a
-       * replication configuration. The file system is read-only and is only modified only by EFS
+       * replication configuration. The file system is read-only and is modified only by EFS
        * replication.
        *
        * If the replication configuration is deleted, the file system's replication overwrite
@@ -1450,7 +1449,7 @@ public open class CfnFileSystem(
        * * `DISABLED` – The file system can be used as the destination file system in a replication
        * configuration. The file system is read-only and can only be modified by EFS replication.
        * * `REPLICATING` – The file system is being used as the destination file system in a
-       * replication configuration. The file system is read-only and is only modified only by EFS
+       * replication configuration. The file system is read-only and is modified only by EFS
        * replication.
        *
        * If the replication configuration is deleted, the file system's replication overwrite
@@ -1478,7 +1477,7 @@ public open class CfnFileSystem(
        * * `DISABLED` – The file system can be used as the destination file system in a replication
        * configuration. The file system is read-only and can only be modified by EFS replication.
        * * `REPLICATING` – The file system is being used as the destination file system in a
-       * replication configuration. The file system is read-only and is only modified only by EFS
+       * replication configuration. The file system is read-only and is modified only by EFS
        * replication.
        *
        * If the replication configuration is deleted, the file system's replication overwrite
@@ -1894,16 +1893,32 @@ public open class CfnFileSystem(
     public fun region(): String? = unwrap(this).getRegion()
 
     /**
+     * The Amazon Resource Name (ARN) of the current source file system in the replication
+     * configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-rolearn)
      */
     public fun roleArn(): String? = unwrap(this).getRoleArn()
 
     /**
+     * Describes the status of the replication configuration.
+     *
+     * For more information about replication status, see [Viewing replication
+     * details](https://docs.aws.amazon.com//efs/latest/ug/awsbackup.html#restoring-backup-efsmonitoring-replication-status.html)
+     * in the *Amazon EFS User Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-status)
      */
     public fun status(): String? = unwrap(this).getStatus()
 
     /**
+     * Message that provides details about the `PAUSED` or `ERRROR` state of the replication
+     * destination configuration.
+     *
+     * For more information about replication status messages, see [Viewing replication
+     * details](https://docs.aws.amazon.com//efs/latest/ug/awsbackup.html#restoring-backup-efsmonitoring-replication-status.html)
+     * in the *Amazon EFS User Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-statusmessage)
      */
     public fun statusMessage(): String? = unwrap(this).getStatusMessage()
@@ -1946,17 +1961,25 @@ public open class CfnFileSystem(
       public fun region(region: String)
 
       /**
-       * @param roleArn the value to be set.
+       * @param roleArn The Amazon Resource Name (ARN) of the current source file system in the
+       * replication configuration.
        */
       public fun roleArn(roleArn: String)
 
       /**
-       * @param status the value to be set.
+       * @param status Describes the status of the replication configuration.
+       * For more information about replication status, see [Viewing replication
+       * details](https://docs.aws.amazon.com//efs/latest/ug/awsbackup.html#restoring-backup-efsmonitoring-replication-status.html)
+       * in the *Amazon EFS User Guide* .
        */
       public fun status(status: String)
 
       /**
-       * @param statusMessage the value to be set.
+       * @param statusMessage Message that provides details about the `PAUSED` or `ERRROR` state of
+       * the replication destination configuration.
+       * For more information about replication status messages, see [Viewing replication
+       * details](https://docs.aws.amazon.com//efs/latest/ug/awsbackup.html#restoring-backup-efsmonitoring-replication-status.html)
+       * in the *Amazon EFS User Guide* .
        */
       public fun statusMessage(statusMessage: String)
     }
@@ -2007,21 +2030,29 @@ public open class CfnFileSystem(
       }
 
       /**
-       * @param roleArn the value to be set.
+       * @param roleArn The Amazon Resource Name (ARN) of the current source file system in the
+       * replication configuration.
        */
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
       /**
-       * @param status the value to be set.
+       * @param status Describes the status of the replication configuration.
+       * For more information about replication status, see [Viewing replication
+       * details](https://docs.aws.amazon.com//efs/latest/ug/awsbackup.html#restoring-backup-efsmonitoring-replication-status.html)
+       * in the *Amazon EFS User Guide* .
        */
       override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
       /**
-       * @param statusMessage the value to be set.
+       * @param statusMessage Message that provides details about the `PAUSED` or `ERRROR` state of
+       * the replication destination configuration.
+       * For more information about replication status messages, see [Viewing replication
+       * details](https://docs.aws.amazon.com//efs/latest/ug/awsbackup.html#restoring-backup-efsmonitoring-replication-status.html)
+       * in the *Amazon EFS User Guide* .
        */
       override fun statusMessage(statusMessage: String) {
         cdkBuilder.statusMessage(statusMessage)
@@ -2081,16 +2112,32 @@ public open class CfnFileSystem(
       override fun region(): String? = unwrap(this).getRegion()
 
       /**
+       * The Amazon Resource Name (ARN) of the current source file system in the replication
+       * configuration.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-rolearn)
        */
       override fun roleArn(): String? = unwrap(this).getRoleArn()
 
       /**
+       * Describes the status of the replication configuration.
+       *
+       * For more information about replication status, see [Viewing replication
+       * details](https://docs.aws.amazon.com//efs/latest/ug/awsbackup.html#restoring-backup-efsmonitoring-replication-status.html)
+       * in the *Amazon EFS User Guide* .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-status)
        */
       override fun status(): String? = unwrap(this).getStatus()
 
       /**
+       * Message that provides details about the `PAUSED` or `ERRROR` state of the replication
+       * destination configuration.
+       *
+       * For more information about replication status messages, see [Viewing replication
+       * details](https://docs.aws.amazon.com//efs/latest/ug/awsbackup.html#restoring-backup-efsmonitoring-replication-status.html)
+       * in the *Amazon EFS User Guide* .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-statusmessage)
        */
       override fun statusMessage(): String? = unwrap(this).getStatusMessage()

@@ -22,6 +22,7 @@ import kotlin.collections.Map
  * GetContextKeyOptions getContextKeyOptions = GetContextKeyOptions.builder()
  * .provider("provider")
  * // the properties below are optional
+ * .additionalCacheKey("additionalCacheKey")
  * .includeEnvironment(false)
  * .props(Map.of(
  * "propsKey", props))
@@ -29,6 +30,13 @@ import kotlin.collections.Map
  * ```
  */
 public interface GetContextKeyOptions {
+  /**
+   * Adds an additional discriminator to the `cdk.context.json` cache key.
+   *
+   * Default: - no additional cache key
+   */
+  public fun additionalCacheKey(): String? = unwrap(this).getAdditionalCacheKey()
+
   /**
    * Whether to include the stack's account and region automatically.
    *
@@ -52,6 +60,12 @@ public interface GetContextKeyOptions {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key.
+     */
+    public fun additionalCacheKey(additionalCacheKey: String)
+
+    /**
      * @param includeEnvironment Whether to include the stack's account and region automatically.
      */
     public fun includeEnvironment(includeEnvironment: Boolean)
@@ -70,6 +84,14 @@ public interface GetContextKeyOptions {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.GetContextKeyOptions.Builder =
         software.amazon.awscdk.GetContextKeyOptions.builder()
+
+    /**
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key.
+     */
+    override fun additionalCacheKey(additionalCacheKey: String) {
+      cdkBuilder.additionalCacheKey(additionalCacheKey)
+    }
 
     /**
      * @param includeEnvironment Whether to include the stack's account and region automatically.
@@ -99,6 +121,13 @@ public interface GetContextKeyOptions {
     cdkObject: software.amazon.awscdk.GetContextKeyOptions,
   ) : CdkObject(cdkObject),
       GetContextKeyOptions {
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     */
+    override fun additionalCacheKey(): String? = unwrap(this).getAdditionalCacheKey()
+
     /**
      * Whether to include the stack's account and region automatically.
      *

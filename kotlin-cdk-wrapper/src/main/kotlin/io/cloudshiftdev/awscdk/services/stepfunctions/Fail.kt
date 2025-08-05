@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -56,8 +57,18 @@ public open class Fail(
 
   /**
    * Return the Amazon States Language object for this state.
+   *
+   * @param queryLanguage
    */
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
+
+  /**
+   * Return the Amazon States Language object for this state.
+   *
+   * @param queryLanguage
+   */
+  public override fun toStateJson(queryLanguage: QueryLanguage): ObjectNode =
+      unwrap(this).toStateJson(queryLanguage.let(QueryLanguage.Companion::unwrap))
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.Fail].
@@ -88,11 +99,11 @@ public open class Fail(
     public fun causePath(causePath: String)
 
     /**
-     * An optional description for this state.
+     * A comment describing this state.
      *
-     * Default: - No comment
+     * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     public fun comment(comment: String)
 
@@ -118,6 +129,18 @@ public open class Fail(
      * state. 
      */
     public fun errorPath(errorPath: String)
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
 
     /**
      * Optional name for this state.
@@ -164,11 +187,11 @@ public open class Fail(
     }
 
     /**
-     * An optional description for this state.
+     * A comment describing this state.
      *
-     * Default: - No comment
+     * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -202,6 +225,20 @@ public open class Fail(
     }
 
     /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
+    }
+
+    /**
      * Optional name for this state.
      *
      * Default: - The construct ID will be used as state name
@@ -216,6 +253,46 @@ public open class Fail(
   }
 
   public companion object {
+    public fun jsonPath(scope: CloudshiftdevConstructsConstruct, id: String): Fail =
+        software.amazon.awscdk.services.stepfunctions.Fail.jsonPath(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id).let(Fail::wrap)
+
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: FailJsonPathProps,
+    ): Fail =
+        software.amazon.awscdk.services.stepfunctions.Fail.jsonPath(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, props.let(FailJsonPathProps.Companion::unwrap)).let(Fail::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("cf092d921d49fe0fdbdf85199e956ba67633d556333e83ee3b3a3928c89540b2")
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: FailJsonPathProps.Builder.() -> Unit,
+    ): Fail = jsonPath(scope, id, FailJsonPathProps(props))
+
+    public fun jsonata(scope: CloudshiftdevConstructsConstruct, id: String): Fail =
+        software.amazon.awscdk.services.stepfunctions.Fail.jsonata(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id).let(Fail::wrap)
+
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: FailJsonataProps,
+    ): Fail =
+        software.amazon.awscdk.services.stepfunctions.Fail.jsonata(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, props.let(FailJsonataProps.Companion::unwrap)).let(Fail::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c123b56c2cbe8fde4671dc00a8313cd24f68f1d60733fc04d554e14a9c086bed")
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: FailJsonataProps.Builder.() -> Unit,
+    ): Fail = jsonata(scope, id, FailJsonataProps(props))
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

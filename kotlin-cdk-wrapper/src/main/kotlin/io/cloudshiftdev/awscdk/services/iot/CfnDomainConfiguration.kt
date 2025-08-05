@@ -1186,11 +1186,26 @@ public open class CfnDomainConfiguration(
     public fun enableOcspCheck(): Any? = unwrap(this).getEnableOcspCheck()
 
     /**
+     * The Amazon Resource Name (ARN) for an X.509 certificate stored in ACM. If provided, AWS IoT
+     * Core will use this certificate to validate the signature of the received OCSP response. The OCSP
+     * responder must sign responses using either this authorized responder certificate or the issuing
+     * certificate, depending on whether the ARN is provided or not. The certificate must be in the
+     * same account and region as the domain configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html#cfn-iot-domainconfiguration-servercertificateconfig-ocspauthorizedresponderarn)
      */
     public fun ocspAuthorizedResponderArn(): String? = unwrap(this).getOcspAuthorizedResponderArn()
 
     /**
+     * The Amazon Resource Name (ARN) for a Lambda function that acts as a Request for Comments
+     * (RFC) 6960-compliant Online Certificate Status Protocol (OCSP) responder, supporting basic OCSP
+     * responses.
+     *
+     * The Lambda function accepts a base64-encoding of the OCSP request in the Distinguished
+     * Encoding Rules (DER) format. The Lambda function's response is also a base64-encoded OCSP
+     * response in the DER format. The response size must not exceed 4 kilobytes (KiB). The Lambda
+     * function must be in the same account and region as the domain configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html#cfn-iot-domainconfiguration-servercertificateconfig-ocsplambdaarn)
      */
     public fun ocspLambdaArn(): String? = unwrap(this).getOcspLambdaArn()
@@ -1219,12 +1234,23 @@ public open class CfnDomainConfiguration(
       public fun enableOcspCheck(enableOcspCheck: IResolvable)
 
       /**
-       * @param ocspAuthorizedResponderArn the value to be set.
+       * @param ocspAuthorizedResponderArn The Amazon Resource Name (ARN) for an X.509 certificate
+       * stored in ACM. If provided, AWS IoT Core will use this certificate to validate the signature
+       * of the received OCSP response. The OCSP responder must sign responses using either this
+       * authorized responder certificate or the issuing certificate, depending on whether the ARN is
+       * provided or not. The certificate must be in the same account and region as the domain
+       * configuration.
        */
       public fun ocspAuthorizedResponderArn(ocspAuthorizedResponderArn: String)
 
       /**
-       * @param ocspLambdaArn the value to be set.
+       * @param ocspLambdaArn The Amazon Resource Name (ARN) for a Lambda function that acts as a
+       * Request for Comments (RFC) 6960-compliant Online Certificate Status Protocol (OCSP) responder,
+       * supporting basic OCSP responses.
+       * The Lambda function accepts a base64-encoding of the OCSP request in the Distinguished
+       * Encoding Rules (DER) format. The Lambda function's response is also a base64-encoded OCSP
+       * response in the DER format. The response size must not exceed 4 kilobytes (KiB). The Lambda
+       * function must be in the same account and region as the domain configuration.
        */
       public fun ocspLambdaArn(ocspLambdaArn: String)
     }
@@ -1258,14 +1284,25 @@ public open class CfnDomainConfiguration(
       }
 
       /**
-       * @param ocspAuthorizedResponderArn the value to be set.
+       * @param ocspAuthorizedResponderArn The Amazon Resource Name (ARN) for an X.509 certificate
+       * stored in ACM. If provided, AWS IoT Core will use this certificate to validate the signature
+       * of the received OCSP response. The OCSP responder must sign responses using either this
+       * authorized responder certificate or the issuing certificate, depending on whether the ARN is
+       * provided or not. The certificate must be in the same account and region as the domain
+       * configuration.
        */
       override fun ocspAuthorizedResponderArn(ocspAuthorizedResponderArn: String) {
         cdkBuilder.ocspAuthorizedResponderArn(ocspAuthorizedResponderArn)
       }
 
       /**
-       * @param ocspLambdaArn the value to be set.
+       * @param ocspLambdaArn The Amazon Resource Name (ARN) for a Lambda function that acts as a
+       * Request for Comments (RFC) 6960-compliant Online Certificate Status Protocol (OCSP) responder,
+       * supporting basic OCSP responses.
+       * The Lambda function accepts a base64-encoding of the OCSP request in the Distinguished
+       * Encoding Rules (DER) format. The Lambda function's response is also a base64-encoded OCSP
+       * response in the DER format. The response size must not exceed 4 kilobytes (KiB). The Lambda
+       * function must be in the same account and region as the domain configuration.
        */
       override fun ocspLambdaArn(ocspLambdaArn: String) {
         cdkBuilder.ocspLambdaArn(ocspLambdaArn)
@@ -1293,12 +1330,27 @@ public open class CfnDomainConfiguration(
       override fun enableOcspCheck(): Any? = unwrap(this).getEnableOcspCheck()
 
       /**
+       * The Amazon Resource Name (ARN) for an X.509 certificate stored in ACM. If provided, AWS IoT
+       * Core will use this certificate to validate the signature of the received OCSP response. The
+       * OCSP responder must sign responses using either this authorized responder certificate or the
+       * issuing certificate, depending on whether the ARN is provided or not. The certificate must be
+       * in the same account and region as the domain configuration.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html#cfn-iot-domainconfiguration-servercertificateconfig-ocspauthorizedresponderarn)
        */
       override fun ocspAuthorizedResponderArn(): String? =
           unwrap(this).getOcspAuthorizedResponderArn()
 
       /**
+       * The Amazon Resource Name (ARN) for a Lambda function that acts as a Request for Comments
+       * (RFC) 6960-compliant Online Certificate Status Protocol (OCSP) responder, supporting basic
+       * OCSP responses.
+       *
+       * The Lambda function accepts a base64-encoding of the OCSP request in the Distinguished
+       * Encoding Rules (DER) format. The Lambda function's response is also a base64-encoded OCSP
+       * response in the DER format. The response size must not exceed 4 kilobytes (KiB). The Lambda
+       * function must be in the same account and region as the domain configuration.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html#cfn-iot-domainconfiguration-servercertificateconfig-ocsplambdaarn)
        */
       override fun ocspLambdaArn(): String? = unwrap(this).getOcspLambdaArn()

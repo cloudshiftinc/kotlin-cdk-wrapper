@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
+import io.cloudshiftdev.awscdk.services.stepfunctions.QueryLanguage
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskInput
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBase
 import io.cloudshiftdev.awscdk.services.stepfunctions.Timeout
@@ -66,11 +67,24 @@ public open class SageMakerCreateEndpointConfig(
   @CdkDslMarker
   public interface Builder {
     /**
-     * An optional description for this state.
+     * Workflow variables to store in this step.
      *
-     * Default: - No comment
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
      *
-     * @param comment An optional description for this state. 
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    public fun assign(assign: Map<String, Any>)
+
+    /**
+     * A comment describing this state.
+     *
+     * Default: No comment
+     *
+     * @param comment A comment describing this state. 
      */
     public fun comment(comment: String)
 
@@ -138,7 +152,7 @@ public open class SageMakerCreateEndpointConfig(
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      *
      * @param inputPath JSONPath expression to select part of the state to be the input to this
      * state. 
@@ -175,18 +189,33 @@ public open class SageMakerCreateEndpointConfig(
     public fun kmsKey(kmsKey: IKey)
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      *
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state. 
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state. 
      */
     public fun outputPath(outputPath: String)
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    public fun outputs(outputs: Any)
 
     /**
      * An list of ProductionVariant objects, one for each model that you want to host at this
@@ -215,12 +244,24 @@ public open class SageMakerCreateEndpointConfig(
     public fun productionVariants(vararg productionVariants: ProductionVariant)
 
     /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
+
+    /**
      * JSONPath expression to indicate where to inject the state's output.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      *
      * @param resultPath JSONPath expression to indicate where to inject the state's output. 
      */
@@ -293,11 +334,26 @@ public open class SageMakerCreateEndpointConfig(
         id)
 
     /**
-     * An optional description for this state.
+     * Workflow variables to store in this step.
      *
-     * Default: - No comment
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
      *
-     * @param comment An optional description for this state. 
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * A comment describing this state.
+     *
+     * Default: No comment
+     *
+     * @param comment A comment describing this state. 
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -376,7 +432,7 @@ public open class SageMakerCreateEndpointConfig(
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      *
      * @param inputPath JSONPath expression to select part of the state to be the input to this
      * state. 
@@ -419,19 +475,36 @@ public open class SageMakerCreateEndpointConfig(
     }
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      *
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state. 
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state. 
      */
     override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
+    }
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    override fun outputs(outputs: Any) {
+      cdkBuilder.outputs(outputs)
     }
 
     /**
@@ -464,12 +537,26 @@ public open class SageMakerCreateEndpointConfig(
         productionVariants(productionVariants.toList())
 
     /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
+    }
+
+    /**
      * JSONPath expression to indicate where to inject the state's output.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      *
      * @param resultPath JSONPath expression to indicate where to inject the state's output. 
      */
@@ -549,6 +636,45 @@ public open class SageMakerCreateEndpointConfig(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointConfig.PROPERTY_INJECTION_ID
+
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: SageMakerCreateEndpointConfigJsonPathProps,
+    ): SageMakerCreateEndpointConfig =
+        software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointConfig.jsonPath(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        props.let(SageMakerCreateEndpointConfigJsonPathProps.Companion::unwrap)).let(SageMakerCreateEndpointConfig::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9de5b3416c1d7774d07c23ddb5431c61d0446f02d05f927c48390f2bd160e377")
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: SageMakerCreateEndpointConfigJsonPathProps.Builder.() -> Unit,
+    ): SageMakerCreateEndpointConfig = jsonPath(scope, id,
+        SageMakerCreateEndpointConfigJsonPathProps(props))
+
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: SageMakerCreateEndpointConfigJsonataProps,
+    ): SageMakerCreateEndpointConfig =
+        software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointConfig.jsonata(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        props.let(SageMakerCreateEndpointConfigJsonataProps.Companion::unwrap)).let(SageMakerCreateEndpointConfig::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e0577d30b85f949569c36cfc4fd485d9b7236d37e48a0cdccfe24e46a0075dd9")
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: SageMakerCreateEndpointConfigJsonataProps.Builder.() -> Unit,
+    ): SageMakerCreateEndpointConfig = jsonata(scope, id,
+        SageMakerCreateEndpointConfigJsonataProps(props))
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

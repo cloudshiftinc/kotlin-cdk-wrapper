@@ -55,6 +55,9 @@ public open class AdotLambdaLayerJavaScriptSdkVersion(
     public val V1_18_1: AdotLambdaLayerJavaScriptSdkVersion =
         AdotLambdaLayerJavaScriptSdkVersion.wrap(software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaScriptSdkVersion.V1_18_1)
 
+    public val V1_30_0: AdotLambdaLayerJavaScriptSdkVersion =
+        AdotLambdaLayerJavaScriptSdkVersion.wrap(software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaScriptSdkVersion.V1_30_0)
+
     public val V1_7_0: AdotLambdaLayerJavaScriptSdkVersion =
         AdotLambdaLayerJavaScriptSdkVersion.wrap(software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaScriptSdkVersion.V1_7_0)
 

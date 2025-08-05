@@ -160,6 +160,9 @@ public open class ServerDeploymentConfig(
     public val ONE_AT_A_TIME: IServerDeploymentConfig =
         IServerDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig.ONE_AT_A_TIME)
 
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig.PROPERTY_INJECTION_ID
+
     public fun fromServerDeploymentConfigName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

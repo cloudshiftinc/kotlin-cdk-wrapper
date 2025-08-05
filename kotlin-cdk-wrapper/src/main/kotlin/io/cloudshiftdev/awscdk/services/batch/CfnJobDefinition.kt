@@ -17,6 +17,7 @@ import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.collections.Map
 import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
@@ -57,9 +58,39 @@ public open class CfnJobDefinition(
   )
 
   /**
-   *
+   * The job definition ARN, such as `batch: *us-east-1* : *111122223333* :job-definition/
+   * *test-gpu* : *2*` .
    */
-  public open fun attrId(): String = unwrap(this).getAttrId()
+  public open fun attrJobDefinitionArn(): String = unwrap(this).getAttrJobDefinitionArn()
+
+  /**
+   * Contains a list of consumable resources required by the job.
+   */
+  public open fun consumableResourceProperties(): Any? =
+      unwrap(this).getConsumableResourceProperties()
+
+  /**
+   * Contains a list of consumable resources required by the job.
+   */
+  public open fun consumableResourceProperties(`value`: IResolvable) {
+    unwrap(this).setConsumableResourceProperties(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Contains a list of consumable resources required by the job.
+   */
+  public open fun consumableResourceProperties(`value`: ConsumableResourcePropertiesProperty) {
+    unwrap(this).setConsumableResourceProperties(`value`.let(ConsumableResourcePropertiesProperty.Companion::unwrap))
+  }
+
+  /**
+   * Contains a list of consumable resources required by the job.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("2e140c08e22f2dd08a810b0710479642f39d622a0d17e9a81bb92c01b8ad8f0e")
+  public open
+      fun consumableResourceProperties(`value`: ConsumableResourcePropertiesProperty.Builder.() -> Unit):
+      Unit = consumableResourceProperties(ConsumableResourcePropertiesProperty(`value`))
 
   /**
    * An object with properties specific to Amazon ECS-based jobs.
@@ -352,6 +383,37 @@ public open class CfnJobDefinition(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Contains a list of consumable resources required by the job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-consumableresourceproperties)
+     * @param consumableResourceProperties Contains a list of consumable resources required by the
+     * job. 
+     */
+    public fun consumableResourceProperties(consumableResourceProperties: IResolvable)
+
+    /**
+     * Contains a list of consumable resources required by the job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-consumableresourceproperties)
+     * @param consumableResourceProperties Contains a list of consumable resources required by the
+     * job. 
+     */
+    public
+        fun consumableResourceProperties(consumableResourceProperties: ConsumableResourcePropertiesProperty)
+
+    /**
+     * Contains a list of consumable resources required by the job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-consumableresourceproperties)
+     * @param consumableResourceProperties Contains a list of consumable resources required by the
+     * job. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9e1ec69114140378fa9afcffe4adfdaa642ae1f8e1f4bf527c510b4c1f0bfbab")
+    public
+        fun consumableResourceProperties(consumableResourceProperties: ConsumableResourcePropertiesProperty.Builder.() -> Unit)
+
+    /**
      * An object with properties specific to Amazon ECS-based jobs.
      *
      * When `containerProperties` is used in the job definition, it can't be used in addition to
@@ -620,7 +682,7 @@ public open class CfnJobDefinition(
     /**
      * The scheduling priority of the job definition.
      *
-     * This only affects jobs in job queues with a fair share policy. Jobs with a higher scheduling
+     * This only affects jobs in job queues with a fair-share policy. Jobs with a higher scheduling
      * priority are scheduled before jobs with a lower scheduling priority.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-schedulingpriority)
@@ -698,6 +760,43 @@ public open class CfnJobDefinition(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.batch.CfnJobDefinition.Builder =
         software.amazon.awscdk.services.batch.CfnJobDefinition.Builder.create(scope, id)
+
+    /**
+     * Contains a list of consumable resources required by the job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-consumableresourceproperties)
+     * @param consumableResourceProperties Contains a list of consumable resources required by the
+     * job. 
+     */
+    override fun consumableResourceProperties(consumableResourceProperties: IResolvable) {
+      cdkBuilder.consumableResourceProperties(consumableResourceProperties.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Contains a list of consumable resources required by the job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-consumableresourceproperties)
+     * @param consumableResourceProperties Contains a list of consumable resources required by the
+     * job. 
+     */
+    override
+        fun consumableResourceProperties(consumableResourceProperties: ConsumableResourcePropertiesProperty) {
+      cdkBuilder.consumableResourceProperties(consumableResourceProperties.let(ConsumableResourcePropertiesProperty.Companion::unwrap))
+    }
+
+    /**
+     * Contains a list of consumable resources required by the job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-consumableresourceproperties)
+     * @param consumableResourceProperties Contains a list of consumable resources required by the
+     * job. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9e1ec69114140378fa9afcffe4adfdaa642ae1f8e1f4bf527c510b4c1f0bfbab")
+    override
+        fun consumableResourceProperties(consumableResourceProperties: ConsumableResourcePropertiesProperty.Builder.() -> Unit):
+        Unit =
+        consumableResourceProperties(ConsumableResourcePropertiesProperty(consumableResourceProperties))
 
     /**
      * An object with properties specific to Amazon ECS-based jobs.
@@ -1004,7 +1103,7 @@ public open class CfnJobDefinition(
     /**
      * The scheduling priority of the job definition.
      *
-     * This only affects jobs in job queues with a fair share policy. Jobs with a higher scheduling
+     * This only affects jobs in job queues with a fair-share policy. Jobs with a higher scheduling
      * priority are scheduled before jobs with a lower scheduling priority.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-schedulingpriority)
@@ -1111,8 +1210,6 @@ public open class CfnJobDefinition(
   }
 
   /**
-   * The authorization configuration details for the Amazon EFS file system.
-   *
    * Example:
    *
    * ```
@@ -1129,30 +1226,11 @@ public open class CfnJobDefinition(
    */
   public interface AuthorizationConfigProperty {
     /**
-     * The Amazon EFS access point ID to use.
-     *
-     * If an access point is specified, the root directory value specified in the
-     * `EFSVolumeConfiguration` must either be omitted or set to `/` which enforces the path set on the
-     * EFS access point. If an access point is used, transit encryption must be enabled in the
-     * `EFSVolumeConfiguration` . For more information, see [Working with Amazon EFS access
-     * points](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) in the *Amazon Elastic
-     * File System User Guide* .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-authorizationconfig.html#cfn-batch-jobdefinition-authorizationconfig-accesspointid)
      */
     public fun accessPointId(): String? = unwrap(this).getAccessPointId()
 
     /**
-     * Whether or not to use the AWS Batch job IAM role defined in a job definition when mounting
-     * the Amazon EFS file system.
-     *
-     * If enabled, transit encryption must be enabled in the `EFSVolumeConfiguration` . If this
-     * parameter is omitted, the default value of `DISABLED` is used. For more information, see [Using
-     * Amazon EFS access
-     * points](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html#efs-volume-accesspoints)
-     * in the *AWS Batch User Guide* . EFS IAM authorization requires that `TransitEncryption` be
-     * `ENABLED` and that a `JobRoleArn` is specified.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-authorizationconfig.html#cfn-batch-jobdefinition-authorizationconfig-iam)
      */
     public fun iam(): String? = unwrap(this).getIam()
@@ -1163,25 +1241,12 @@ public open class CfnJobDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param accessPointId The Amazon EFS access point ID to use.
-       * If an access point is specified, the root directory value specified in the
-       * `EFSVolumeConfiguration` must either be omitted or set to `/` which enforces the path set on
-       * the EFS access point. If an access point is used, transit encryption must be enabled in the
-       * `EFSVolumeConfiguration` . For more information, see [Working with Amazon EFS access
-       * points](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) in the *Amazon
-       * Elastic File System User Guide* .
+       * @param accessPointId the value to be set.
        */
       public fun accessPointId(accessPointId: String)
 
       /**
-       * @param iam Whether or not to use the AWS Batch job IAM role defined in a job definition
-       * when mounting the Amazon EFS file system.
-       * If enabled, transit encryption must be enabled in the `EFSVolumeConfiguration` . If this
-       * parameter is omitted, the default value of `DISABLED` is used. For more information, see
-       * [Using Amazon EFS access
-       * points](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html#efs-volume-accesspoints)
-       * in the *AWS Batch User Guide* . EFS IAM authorization requires that `TransitEncryption` be
-       * `ENABLED` and that a `JobRoleArn` is specified.
+       * @param iam the value to be set.
        */
       public fun iam(iam: String)
     }
@@ -1193,27 +1258,14 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.AuthorizationConfigProperty.builder()
 
       /**
-       * @param accessPointId The Amazon EFS access point ID to use.
-       * If an access point is specified, the root directory value specified in the
-       * `EFSVolumeConfiguration` must either be omitted or set to `/` which enforces the path set on
-       * the EFS access point. If an access point is used, transit encryption must be enabled in the
-       * `EFSVolumeConfiguration` . For more information, see [Working with Amazon EFS access
-       * points](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) in the *Amazon
-       * Elastic File System User Guide* .
+       * @param accessPointId the value to be set.
        */
       override fun accessPointId(accessPointId: String) {
         cdkBuilder.accessPointId(accessPointId)
       }
 
       /**
-       * @param iam Whether or not to use the AWS Batch job IAM role defined in a job definition
-       * when mounting the Amazon EFS file system.
-       * If enabled, transit encryption must be enabled in the `EFSVolumeConfiguration` . If this
-       * parameter is omitted, the default value of `DISABLED` is used. For more information, see
-       * [Using Amazon EFS access
-       * points](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html#efs-volume-accesspoints)
-       * in the *AWS Batch User Guide* . EFS IAM authorization requires that `TransitEncryption` be
-       * `ENABLED` and that a `JobRoleArn` is specified.
+       * @param iam the value to be set.
        */
       override fun iam(iam: String) {
         cdkBuilder.iam(iam)
@@ -1229,30 +1281,11 @@ public open class CfnJobDefinition(
     ) : CdkObject(cdkObject),
         AuthorizationConfigProperty {
       /**
-       * The Amazon EFS access point ID to use.
-       *
-       * If an access point is specified, the root directory value specified in the
-       * `EFSVolumeConfiguration` must either be omitted or set to `/` which enforces the path set on
-       * the EFS access point. If an access point is used, transit encryption must be enabled in the
-       * `EFSVolumeConfiguration` . For more information, see [Working with Amazon EFS access
-       * points](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) in the *Amazon
-       * Elastic File System User Guide* .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-authorizationconfig.html#cfn-batch-jobdefinition-authorizationconfig-accesspointid)
        */
       override fun accessPointId(): String? = unwrap(this).getAccessPointId()
 
       /**
-       * Whether or not to use the AWS Batch job IAM role defined in a job definition when mounting
-       * the Amazon EFS file system.
-       *
-       * If enabled, transit encryption must be enabled in the `EFSVolumeConfiguration` . If this
-       * parameter is omitted, the default value of `DISABLED` is used. For more information, see
-       * [Using Amazon EFS access
-       * points](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html#efs-volume-accesspoints)
-       * in the *AWS Batch User Guide* . EFS IAM authorization requires that `TransitEncryption` be
-       * `ENABLED` and that a `JobRoleArn` is specified.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-authorizationconfig.html#cfn-batch-jobdefinition-authorizationconfig-iam)
        */
       override fun iam(): String? = unwrap(this).getIam()
@@ -1277,6 +1310,229 @@ public open class CfnJobDefinition(
   }
 
   /**
+   * Contains a list of consumable resources required by a job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.batch.*;
+   * ConsumableResourcePropertiesProperty consumableResourcePropertiesProperty =
+   * ConsumableResourcePropertiesProperty.builder()
+   * .consumableResourceList(List.of(ConsumableResourceRequirementProperty.builder()
+   * .consumableResource("consumableResource")
+   * .quantity(123)
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-consumableresourceproperties.html)
+   */
+  public interface ConsumableResourcePropertiesProperty {
+    /**
+     * The list of consumable resources required by a job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-consumableresourceproperties.html#cfn-batch-jobdefinition-consumableresourceproperties-consumableresourcelist)
+     */
+    public fun consumableResourceList(): Any
+
+    /**
+     * A builder for [ConsumableResourcePropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param consumableResourceList The list of consumable resources required by a job. 
+       */
+      public fun consumableResourceList(consumableResourceList: IResolvable)
+
+      /**
+       * @param consumableResourceList The list of consumable resources required by a job. 
+       */
+      public fun consumableResourceList(consumableResourceList: List<Any>)
+
+      /**
+       * @param consumableResourceList The list of consumable resources required by a job. 
+       */
+      public fun consumableResourceList(vararg consumableResourceList: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnJobDefinition.ConsumableResourcePropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.batch.CfnJobDefinition.ConsumableResourcePropertiesProperty.builder()
+
+      /**
+       * @param consumableResourceList The list of consumable resources required by a job. 
+       */
+      override fun consumableResourceList(consumableResourceList: IResolvable) {
+        cdkBuilder.consumableResourceList(consumableResourceList.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param consumableResourceList The list of consumable resources required by a job. 
+       */
+      override fun consumableResourceList(consumableResourceList: List<Any>) {
+        cdkBuilder.consumableResourceList(consumableResourceList.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param consumableResourceList The list of consumable resources required by a job. 
+       */
+      override fun consumableResourceList(vararg consumableResourceList: Any): Unit =
+          consumableResourceList(consumableResourceList.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.batch.CfnJobDefinition.ConsumableResourcePropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.ConsumableResourcePropertiesProperty,
+    ) : CdkObject(cdkObject),
+        ConsumableResourcePropertiesProperty {
+      /**
+       * The list of consumable resources required by a job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-consumableresourceproperties.html#cfn-batch-jobdefinition-consumableresourceproperties-consumableresourcelist)
+       */
+      override fun consumableResourceList(): Any = unwrap(this).getConsumableResourceList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ConsumableResourcePropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.ConsumableResourcePropertiesProperty):
+          ConsumableResourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConsumableResourcePropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConsumableResourcePropertiesProperty):
+          software.amazon.awscdk.services.batch.CfnJobDefinition.ConsumableResourcePropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.batch.CfnJobDefinition.ConsumableResourcePropertiesProperty
+    }
+  }
+
+  /**
+   * Information about a consumable resource required to run a job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.batch.*;
+   * ConsumableResourceRequirementProperty consumableResourceRequirementProperty =
+   * ConsumableResourceRequirementProperty.builder()
+   * .consumableResource("consumableResource")
+   * .quantity(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-consumableresourcerequirement.html)
+   */
+  public interface ConsumableResourceRequirementProperty {
+    /**
+     * The name or ARN of the consumable resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-consumableresourcerequirement.html#cfn-batch-jobdefinition-consumableresourcerequirement-consumableresource)
+     */
+    public fun consumableResource(): String
+
+    /**
+     * The quantity of the consumable resource that is needed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-consumableresourcerequirement.html#cfn-batch-jobdefinition-consumableresourcerequirement-quantity)
+     */
+    public fun quantity(): Number
+
+    /**
+     * A builder for [ConsumableResourceRequirementProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param consumableResource The name or ARN of the consumable resource. 
+       */
+      public fun consumableResource(consumableResource: String)
+
+      /**
+       * @param quantity The quantity of the consumable resource that is needed. 
+       */
+      public fun quantity(quantity: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnJobDefinition.ConsumableResourceRequirementProperty.Builder
+          =
+          software.amazon.awscdk.services.batch.CfnJobDefinition.ConsumableResourceRequirementProperty.builder()
+
+      /**
+       * @param consumableResource The name or ARN of the consumable resource. 
+       */
+      override fun consumableResource(consumableResource: String) {
+        cdkBuilder.consumableResource(consumableResource)
+      }
+
+      /**
+       * @param quantity The quantity of the consumable resource that is needed. 
+       */
+      override fun quantity(quantity: Number) {
+        cdkBuilder.quantity(quantity)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.batch.CfnJobDefinition.ConsumableResourceRequirementProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.ConsumableResourceRequirementProperty,
+    ) : CdkObject(cdkObject),
+        ConsumableResourceRequirementProperty {
+      /**
+       * The name or ARN of the consumable resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-consumableresourcerequirement.html#cfn-batch-jobdefinition-consumableresourcerequirement-consumableresource)
+       */
+      override fun consumableResource(): String = unwrap(this).getConsumableResource()
+
+      /**
+       * The quantity of the consumable resource that is needed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-consumableresourcerequirement.html#cfn-batch-jobdefinition-consumableresourcerequirement-quantity)
+       */
+      override fun quantity(): Number = unwrap(this).getQuantity()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ConsumableResourceRequirementProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.ConsumableResourceRequirementProperty):
+          ConsumableResourceRequirementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConsumableResourceRequirementProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConsumableResourceRequirementProperty):
+          software.amazon.awscdk.services.batch.CfnJobDefinition.ConsumableResourceRequirementProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.batch.CfnJobDefinition.ConsumableResourceRequirementProperty
+    }
+  }
+
+  /**
    * Container properties are used for Amazon ECS based job definitions.
    *
    * These properties to describe the container that's launched as part of a job.
@@ -1292,6 +1548,7 @@ public open class CfnJobDefinition(
    * .image("image")
    * // the properties below are optional
    * .command(List.of("command"))
+   * .enableExecuteCommand(false)
    * .environment(List.of(EnvironmentProperty.builder()
    * .name("name")
    * .value("value")
@@ -1405,6 +1662,15 @@ public open class CfnJobDefinition(
     public fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
 
     /**
+     * Determines whether execute command functionality is turned on for this task.
+     *
+     * If `true` , execute command functionality is turned on all the containers in the task.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html#cfn-batch-jobdefinition-containerproperties-enableexecutecommand)
+     */
+    public fun enableExecuteCommand(): Any? = unwrap(this).getEnableExecuteCommand()
+
+    /**
      * The environment variables to pass to a container.
      *
      * This parameter maps to `Env` in the [Create a
@@ -1492,15 +1758,6 @@ public open class CfnJobDefinition(
     public fun image(): String
 
     /**
-     * The instance type to use for a multi-node parallel job.
-     *
-     * All node groups in a multi-node parallel job must use the same instance type.
-     *
-     *
-     * This parameter isn't applicable to single-node container jobs or jobs that run on Fargate
-     * resources, and shouldn't be provided.
-     *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html#cfn-batch-jobdefinition-containerproperties-instancetype)
      */
     public fun instanceType(): String? = unwrap(this).getInstanceType()
@@ -1768,6 +2025,20 @@ public open class CfnJobDefinition(
       public fun command(vararg command: String)
 
       /**
+       * @param enableExecuteCommand Determines whether execute command functionality is turned on
+       * for this task.
+       * If `true` , execute command functionality is turned on all the containers in the task.
+       */
+      public fun enableExecuteCommand(enableExecuteCommand: Boolean)
+
+      /**
+       * @param enableExecuteCommand Determines whether execute command functionality is turned on
+       * for this task.
+       * If `true` , execute command functionality is turned on all the containers in the task.
+       */
+      public fun enableExecuteCommand(enableExecuteCommand: IResolvable)
+
+      /**
        * @param environment The environment variables to pass to a container.
        * This parameter maps to `Env` in the [Create a
        * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
@@ -1908,12 +2179,7 @@ public open class CfnJobDefinition(
       public fun image(image: String)
 
       /**
-       * @param instanceType The instance type to use for a multi-node parallel job.
-       * All node groups in a multi-node parallel job must use the same instance type.
-       *
-       *
-       * This parameter isn't applicable to single-node container jobs or jobs that run on Fargate
-       * resources, and shouldn't be provided.
+       * @param instanceType the value to be set.
        */
       public fun instanceType(instanceType: String)
 
@@ -2396,6 +2662,24 @@ public open class CfnJobDefinition(
       override fun command(vararg command: String): Unit = command(command.toList())
 
       /**
+       * @param enableExecuteCommand Determines whether execute command functionality is turned on
+       * for this task.
+       * If `true` , execute command functionality is turned on all the containers in the task.
+       */
+      override fun enableExecuteCommand(enableExecuteCommand: Boolean) {
+        cdkBuilder.enableExecuteCommand(enableExecuteCommand)
+      }
+
+      /**
+       * @param enableExecuteCommand Determines whether execute command functionality is turned on
+       * for this task.
+       * If `true` , execute command functionality is turned on all the containers in the task.
+       */
+      override fun enableExecuteCommand(enableExecuteCommand: IResolvable) {
+        cdkBuilder.enableExecuteCommand(enableExecuteCommand.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
        * @param environment The environment variables to pass to a container.
        * This parameter maps to `Env` in the [Create a
        * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
@@ -2555,12 +2839,7 @@ public open class CfnJobDefinition(
       }
 
       /**
-       * @param instanceType The instance type to use for a multi-node parallel job.
-       * All node groups in a multi-node parallel job must use the same instance type.
-       *
-       *
-       * This parameter isn't applicable to single-node container jobs or jobs that run on Fargate
-       * resources, and shouldn't be provided.
+       * @param instanceType the value to be set.
        */
       override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
@@ -3096,6 +3375,15 @@ public open class CfnJobDefinition(
       override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
 
       /**
+       * Determines whether execute command functionality is turned on for this task.
+       *
+       * If `true` , execute command functionality is turned on all the containers in the task.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html#cfn-batch-jobdefinition-containerproperties-enableexecutecommand)
+       */
+      override fun enableExecuteCommand(): Any? = unwrap(this).getEnableExecuteCommand()
+
+      /**
        * The environment variables to pass to a container.
        *
        * This parameter maps to `Env` in the [Create a
@@ -3185,15 +3473,6 @@ public open class CfnJobDefinition(
       override fun image(): String = unwrap(this).getImage()
 
       /**
-       * The instance type to use for a multi-node parallel job.
-       *
-       * All node groups in a multi-node parallel job must use the same instance type.
-       *
-       *
-       * This parameter isn't applicable to single-node container jobs or jobs that run on Fargate
-       * resources, and shouldn't be provided.
-       *
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html#cfn-batch-jobdefinition-containerproperties-instancetype)
        */
       override fun instanceType(): String? = unwrap(this).getInstanceType()
@@ -3642,6 +3921,12 @@ public open class CfnJobDefinition(
    * .value("value")
    * .build()))
    * .essential(false)
+   * .firelensConfiguration(FirelensConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .options(Map.of(
+   * "optionsKey", "options"))
+   * .build())
    * .linuxParameters(LinuxParametersProperty.builder()
    * .devices(List.of(DeviceProperty.builder()
    * .containerPath("containerPath")
@@ -3668,7 +3953,7 @@ public open class CfnJobDefinition(
    * .valueFrom("valueFrom")
    * .build()))
    * .build())
-   * .mountPoints(List.of(MountPointsProperty.builder()
+   * .mountPoints(List.of(MountPointProperty.builder()
    * .containerPath("containerPath")
    * .readOnly(false)
    * .sourceVolume("sourceVolume")
@@ -3694,6 +3979,7 @@ public open class CfnJobDefinition(
    * .build()))
    * .user("user")
    * .build()))
+   * .enableExecuteCommand(false)
    * .ephemeralStorage(EphemeralStorageProperty.builder()
    * .sizeInGiB(123)
    * .build())
@@ -3883,6 +4169,12 @@ public open class CfnJobDefinition(
    * .value("value")
    * .build()))
    * .essential(false)
+   * .firelensConfiguration(FirelensConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .options(Map.of(
+   * "optionsKey", "options"))
+   * .build())
    * .linuxParameters(LinuxParametersProperty.builder()
    * .devices(List.of(DeviceProperty.builder()
    * .containerPath("containerPath")
@@ -3909,7 +4201,7 @@ public open class CfnJobDefinition(
    * .valueFrom("valueFrom")
    * .build()))
    * .build())
-   * .mountPoints(List.of(MountPointsProperty.builder()
+   * .mountPoints(List.of(MountPointProperty.builder()
    * .containerPath("containerPath")
    * .readOnly(false)
    * .sourceVolume("sourceVolume")
@@ -3935,6 +4227,7 @@ public open class CfnJobDefinition(
    * .build()))
    * .user("user")
    * .build()))
+   * .enableExecuteCommand(false)
    * .ephemeralStorage(EphemeralStorageProperty.builder()
    * .sizeInGiB(123)
    * .build())
@@ -3979,6 +4272,15 @@ public open class CfnJobDefinition(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-containers)
      */
     public fun containers(): Any? = unwrap(this).getContainers()
+
+    /**
+     * Determines whether execute command functionality is turned on for this task.
+     *
+     * If `true` , execute command functionality is turned on all the containers in the task.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-enableexecutecommand)
+     */
+    public fun enableExecuteCommand(): Any? = unwrap(this).getEnableExecuteCommand()
 
     /**
      * The amount of ephemeral storage to allocate for the task.
@@ -4115,6 +4417,20 @@ public open class CfnJobDefinition(
        * @param containers This object is a list of containers.
        */
       public fun containers(vararg containers: Any)
+
+      /**
+       * @param enableExecuteCommand Determines whether execute command functionality is turned on
+       * for this task.
+       * If `true` , execute command functionality is turned on all the containers in the task.
+       */
+      public fun enableExecuteCommand(enableExecuteCommand: Boolean)
+
+      /**
+       * @param enableExecuteCommand Determines whether execute command functionality is turned on
+       * for this task.
+       * If `true` , execute command functionality is turned on all the containers in the task.
+       */
+      public fun enableExecuteCommand(enableExecuteCommand: IResolvable)
 
       /**
        * @param ephemeralStorage The amount of ephemeral storage to allocate for the task.
@@ -4291,6 +4607,24 @@ public open class CfnJobDefinition(
        * @param containers This object is a list of containers.
        */
       override fun containers(vararg containers: Any): Unit = containers(containers.toList())
+
+      /**
+       * @param enableExecuteCommand Determines whether execute command functionality is turned on
+       * for this task.
+       * If `true` , execute command functionality is turned on all the containers in the task.
+       */
+      override fun enableExecuteCommand(enableExecuteCommand: Boolean) {
+        cdkBuilder.enableExecuteCommand(enableExecuteCommand)
+      }
+
+      /**
+       * @param enableExecuteCommand Determines whether execute command functionality is turned on
+       * for this task.
+       * If `true` , execute command functionality is turned on all the containers in the task.
+       */
+      override fun enableExecuteCommand(enableExecuteCommand: IResolvable) {
+        cdkBuilder.enableExecuteCommand(enableExecuteCommand.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param ephemeralStorage The amount of ephemeral storage to allocate for the task.
@@ -4489,6 +4823,15 @@ public open class CfnJobDefinition(
       override fun containers(): Any? = unwrap(this).getContainers()
 
       /**
+       * Determines whether execute command functionality is turned on for this task.
+       *
+       * If `true` , execute command functionality is turned on all the containers in the task.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-enableexecutecommand)
+       */
+      override fun enableExecuteCommand(): Any? = unwrap(this).getEnableExecuteCommand()
+
+      /**
        * The amount of ephemeral storage to allocate for the task.
        *
        * This parameter is used to expand the total amount of ephemeral storage available, beyond
@@ -4625,12 +4968,6 @@ public open class CfnJobDefinition(
   }
 
   /**
-   * This is used when you're using an Amazon Elastic File System file system for job storage.
-   *
-   * For more information, see [Amazon EFS
-   * Volumes](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html) in the *AWS Batch
-   * User Guide* .
-   *
    * Example:
    *
    * ```
@@ -4655,58 +4992,26 @@ public open class CfnJobDefinition(
    */
   public interface EfsVolumeConfigurationProperty {
     /**
-     * The authorization configuration details for the Amazon EFS file system.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-efsvolumeconfiguration.html#cfn-batch-jobdefinition-efsvolumeconfiguration-authorizationconfig)
      */
     public fun authorizationConfig(): Any? = unwrap(this).getAuthorizationConfig()
 
     /**
-     * The Amazon EFS file system ID to use.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-efsvolumeconfiguration.html#cfn-batch-jobdefinition-efsvolumeconfiguration-filesystemid)
      */
     public fun fileSystemId(): String
 
     /**
-     * The directory within the Amazon EFS file system to mount as the root directory inside the
-     * host.
-     *
-     * If this parameter is omitted, the root of the Amazon EFS volume is used instead. Specifying
-     * `/` has the same effect as omitting this parameter. The maximum length is 4,096 characters.
-     *
-     *
-     * If an EFS access point is specified in the `authorizationConfig` , the root directory
-     * parameter must either be omitted or set to `/` , which enforces the path set on the Amazon EFS
-     * access point.
-     *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-efsvolumeconfiguration.html#cfn-batch-jobdefinition-efsvolumeconfiguration-rootdirectory)
      */
     public fun rootDirectory(): String? = unwrap(this).getRootDirectory()
 
     /**
-     * Determines whether to enable encryption for Amazon EFS data in transit between the Amazon ECS
-     * host and the Amazon EFS server.
-     *
-     * Transit encryption must be enabled if Amazon EFS IAM authorization is used. If this parameter
-     * is omitted, the default value of `DISABLED` is used. For more information, see [Encrypting data
-     * in transit](https://docs.aws.amazon.com/efs/latest/ug/encryption-in-transit.html) in the *Amazon
-     * Elastic File System User Guide* .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-efsvolumeconfiguration.html#cfn-batch-jobdefinition-efsvolumeconfiguration-transitencryption)
      */
     public fun transitEncryption(): String? = unwrap(this).getTransitEncryption()
 
     /**
-     * The port to use when sending encrypted data between the Amazon ECS host and the Amazon EFS
-     * server.
-     *
-     * If you don't specify a transit encryption port, it uses the port selection strategy that the
-     * Amazon EFS mount helper uses. The value must be between 0 and 65,535. For more information, see
-     * [EFS mount helper](https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html) in the
-     * *Amazon Elastic File System User Guide* .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-efsvolumeconfiguration.html#cfn-batch-jobdefinition-efsvolumeconfiguration-transitencryptionport)
      */
     public fun transitEncryptionPort(): Number? = unwrap(this).getTransitEncryptionPort()
@@ -4717,20 +5022,17 @@ public open class CfnJobDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
-       * system.
+       * @param authorizationConfig the value to be set.
        */
       public fun authorizationConfig(authorizationConfig: IResolvable)
 
       /**
-       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
-       * system.
+       * @param authorizationConfig the value to be set.
        */
       public fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty)
 
       /**
-       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
-       * system.
+       * @param authorizationConfig the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7470c3e9883cb1e0e2e062dc1bd64cd1081ea458e11357768aaf3f5322d39814")
@@ -4738,42 +5040,22 @@ public open class CfnJobDefinition(
           fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty.Builder.() -> Unit)
 
       /**
-       * @param fileSystemId The Amazon EFS file system ID to use. 
+       * @param fileSystemId the value to be set. 
        */
       public fun fileSystemId(fileSystemId: String)
 
       /**
-       * @param rootDirectory The directory within the Amazon EFS file system to mount as the root
-       * directory inside the host.
-       * If this parameter is omitted, the root of the Amazon EFS volume is used instead. Specifying
-       * `/` has the same effect as omitting this parameter. The maximum length is 4,096 characters.
-       *
-       *
-       * If an EFS access point is specified in the `authorizationConfig` , the root directory
-       * parameter must either be omitted or set to `/` , which enforces the path set on the Amazon EFS
-       * access point.
+       * @param rootDirectory the value to be set.
        */
       public fun rootDirectory(rootDirectory: String)
 
       /**
-       * @param transitEncryption Determines whether to enable encryption for Amazon EFS data in
-       * transit between the Amazon ECS host and the Amazon EFS server.
-       * Transit encryption must be enabled if Amazon EFS IAM authorization is used. If this
-       * parameter is omitted, the default value of `DISABLED` is used. For more information, see
-       * [Encrypting data in
-       * transit](https://docs.aws.amazon.com/efs/latest/ug/encryption-in-transit.html) in the *Amazon
-       * Elastic File System User Guide* .
+       * @param transitEncryption the value to be set.
        */
       public fun transitEncryption(transitEncryption: String)
 
       /**
-       * @param transitEncryptionPort The port to use when sending encrypted data between the Amazon
-       * ECS host and the Amazon EFS server.
-       * If you don't specify a transit encryption port, it uses the port selection strategy that
-       * the Amazon EFS mount helper uses. The value must be between 0 and 65,535. For more
-       * information, see [EFS mount
-       * helper](https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html) in the *Amazon
-       * Elastic File System User Guide* .
+       * @param transitEncryptionPort the value to be set.
        */
       public fun transitEncryptionPort(transitEncryptionPort: Number)
     }
@@ -4785,24 +5067,21 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.EfsVolumeConfigurationProperty.builder()
 
       /**
-       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
-       * system.
+       * @param authorizationConfig the value to be set.
        */
       override fun authorizationConfig(authorizationConfig: IResolvable) {
         cdkBuilder.authorizationConfig(authorizationConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
-       * system.
+       * @param authorizationConfig the value to be set.
        */
       override fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty) {
         cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfigProperty.Companion::unwrap))
       }
 
       /**
-       * @param authorizationConfig The authorization configuration details for the Amazon EFS file
-       * system.
+       * @param authorizationConfig the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7470c3e9883cb1e0e2e062dc1bd64cd1081ea458e11357768aaf3f5322d39814")
@@ -4811,48 +5090,28 @@ public open class CfnJobDefinition(
           Unit = authorizationConfig(AuthorizationConfigProperty(authorizationConfig))
 
       /**
-       * @param fileSystemId The Amazon EFS file system ID to use. 
+       * @param fileSystemId the value to be set. 
        */
       override fun fileSystemId(fileSystemId: String) {
         cdkBuilder.fileSystemId(fileSystemId)
       }
 
       /**
-       * @param rootDirectory The directory within the Amazon EFS file system to mount as the root
-       * directory inside the host.
-       * If this parameter is omitted, the root of the Amazon EFS volume is used instead. Specifying
-       * `/` has the same effect as omitting this parameter. The maximum length is 4,096 characters.
-       *
-       *
-       * If an EFS access point is specified in the `authorizationConfig` , the root directory
-       * parameter must either be omitted or set to `/` , which enforces the path set on the Amazon EFS
-       * access point.
+       * @param rootDirectory the value to be set.
        */
       override fun rootDirectory(rootDirectory: String) {
         cdkBuilder.rootDirectory(rootDirectory)
       }
 
       /**
-       * @param transitEncryption Determines whether to enable encryption for Amazon EFS data in
-       * transit between the Amazon ECS host and the Amazon EFS server.
-       * Transit encryption must be enabled if Amazon EFS IAM authorization is used. If this
-       * parameter is omitted, the default value of `DISABLED` is used. For more information, see
-       * [Encrypting data in
-       * transit](https://docs.aws.amazon.com/efs/latest/ug/encryption-in-transit.html) in the *Amazon
-       * Elastic File System User Guide* .
+       * @param transitEncryption the value to be set.
        */
       override fun transitEncryption(transitEncryption: String) {
         cdkBuilder.transitEncryption(transitEncryption)
       }
 
       /**
-       * @param transitEncryptionPort The port to use when sending encrypted data between the Amazon
-       * ECS host and the Amazon EFS server.
-       * If you don't specify a transit encryption port, it uses the port selection strategy that
-       * the Amazon EFS mount helper uses. The value must be between 0 and 65,535. For more
-       * information, see [EFS mount
-       * helper](https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html) in the *Amazon
-       * Elastic File System User Guide* .
+       * @param transitEncryptionPort the value to be set.
        */
       override fun transitEncryptionPort(transitEncryptionPort: Number) {
         cdkBuilder.transitEncryptionPort(transitEncryptionPort)
@@ -4868,60 +5127,26 @@ public open class CfnJobDefinition(
     ) : CdkObject(cdkObject),
         EfsVolumeConfigurationProperty {
       /**
-       * The authorization configuration details for the Amazon EFS file system.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-efsvolumeconfiguration.html#cfn-batch-jobdefinition-efsvolumeconfiguration-authorizationconfig)
        */
       override fun authorizationConfig(): Any? = unwrap(this).getAuthorizationConfig()
 
       /**
-       * The Amazon EFS file system ID to use.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-efsvolumeconfiguration.html#cfn-batch-jobdefinition-efsvolumeconfiguration-filesystemid)
        */
       override fun fileSystemId(): String = unwrap(this).getFileSystemId()
 
       /**
-       * The directory within the Amazon EFS file system to mount as the root directory inside the
-       * host.
-       *
-       * If this parameter is omitted, the root of the Amazon EFS volume is used instead. Specifying
-       * `/` has the same effect as omitting this parameter. The maximum length is 4,096 characters.
-       *
-       *
-       * If an EFS access point is specified in the `authorizationConfig` , the root directory
-       * parameter must either be omitted or set to `/` , which enforces the path set on the Amazon EFS
-       * access point.
-       *
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-efsvolumeconfiguration.html#cfn-batch-jobdefinition-efsvolumeconfiguration-rootdirectory)
        */
       override fun rootDirectory(): String? = unwrap(this).getRootDirectory()
 
       /**
-       * Determines whether to enable encryption for Amazon EFS data in transit between the Amazon
-       * ECS host and the Amazon EFS server.
-       *
-       * Transit encryption must be enabled if Amazon EFS IAM authorization is used. If this
-       * parameter is omitted, the default value of `DISABLED` is used. For more information, see
-       * [Encrypting data in
-       * transit](https://docs.aws.amazon.com/efs/latest/ug/encryption-in-transit.html) in the *Amazon
-       * Elastic File System User Guide* .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-efsvolumeconfiguration.html#cfn-batch-jobdefinition-efsvolumeconfiguration-transitencryption)
        */
       override fun transitEncryption(): String? = unwrap(this).getTransitEncryption()
 
       /**
-       * The port to use when sending encrypted data between the Amazon ECS host and the Amazon EFS
-       * server.
-       *
-       * If you don't specify a transit encryption port, it uses the port selection strategy that
-       * the Amazon EFS mount helper uses. The value must be between 0 and 65,535. For more
-       * information, see [EFS mount
-       * helper](https://docs.aws.amazon.com/efs/latest/ug/efs-mount-helper.html) in the *Amazon
-       * Elastic File System User Guide* .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-efsvolumeconfiguration.html#cfn-batch-jobdefinition-efsvolumeconfiguration-transitencryptionport)
        */
       override fun transitEncryptionPort(): Number? = unwrap(this).getTransitEncryptionPort()
@@ -5100,6 +5325,7 @@ public open class CfnJobDefinition(
    * .mountPath("mountPath")
    * .name("name")
    * .readOnly(false)
+   * .subPath("subPath")
    * .build()))
    * .build();
    * ```
@@ -5867,6 +6093,7 @@ public open class CfnJobDefinition(
    * .mountPath("mountPath")
    * .name("name")
    * .readOnly(false)
+   * .subPath("subPath")
    * .build();
    * ```
    *
@@ -5899,6 +6126,13 @@ public open class CfnJobDefinition(
     public fun readOnly(): Any? = unwrap(this).getReadOnly()
 
     /**
+     * A sub-path inside the referenced volume instead of its root.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ekscontainervolumemount.html#cfn-batch-jobdefinition-ekscontainervolumemount-subpath)
+     */
+    public fun subPath(): String? = unwrap(this).getSubPath()
+
+    /**
      * A builder for [EksContainerVolumeMountProperty]
      */
     @CdkDslMarker
@@ -5925,6 +6159,11 @@ public open class CfnJobDefinition(
        * Otherwise, the container can write to the volume. The default value is `false` .
        */
       public fun readOnly(readOnly: IResolvable)
+
+      /**
+       * @param subPath A sub-path inside the referenced volume instead of its root.
+       */
+      public fun subPath(subPath: String)
     }
 
     private class BuilderImpl : Builder {
@@ -5964,6 +6203,13 @@ public open class CfnJobDefinition(
         cdkBuilder.readOnly(readOnly.let(IResolvable.Companion::unwrap))
       }
 
+      /**
+       * @param subPath A sub-path inside the referenced volume instead of its root.
+       */
+      override fun subPath(subPath: String) {
+        cdkBuilder.subPath(subPath)
+      }
+
       public fun build():
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerVolumeMountProperty =
           cdkBuilder.build()
@@ -5997,6 +6243,13 @@ public open class CfnJobDefinition(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ekscontainervolumemount.html#cfn-batch-jobdefinition-ekscontainervolumemount-readonly)
        */
       override fun readOnly(): Any? = unwrap(this).getReadOnly()
+
+      /**
+       * A sub-path inside the referenced volume instead of its root.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ekscontainervolumemount.html#cfn-batch-jobdefinition-ekscontainervolumemount-subpath)
+       */
+      override fun subPath(): String? = unwrap(this).getSubPath()
     }
 
     public companion object {
@@ -6014,6 +6267,169 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerVolumeMountProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerVolumeMountProperty
+    }
+  }
+
+  /**
+   * A `persistentVolumeClaim` volume is used to mount a
+   * [PersistentVolume](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
+   * into a Pod. PersistentVolumeClaims are a way for users to "claim" durable storage without knowing
+   * the details of the particular cloud environment. See the information about
+   * [PersistentVolumes](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
+   * in the *Kubernetes documentation* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.batch.*;
+   * EksPersistentVolumeClaimProperty eksPersistentVolumeClaimProperty =
+   * EksPersistentVolumeClaimProperty.builder()
+   * .claimName("claimName")
+   * // the properties below are optional
+   * .readOnly(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ekspersistentvolumeclaim.html)
+   */
+  public interface EksPersistentVolumeClaimProperty {
+    /**
+     * The name of the `persistentVolumeClaim` bounded to a `persistentVolume` .
+     *
+     * For more information, see [Persistent Volume
+     * Claims](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)
+     * in the *Kubernetes documentation* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ekspersistentvolumeclaim.html#cfn-batch-jobdefinition-ekspersistentvolumeclaim-claimname)
+     */
+    public fun claimName(): String
+
+    /**
+     * An optional boolean value indicating if the mount is read only.
+     *
+     * Default is false. For more information, see [Read Only
+     * Mounts](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/volumes/#read-only-mounts)
+     * in the *Kubernetes documentation* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ekspersistentvolumeclaim.html#cfn-batch-jobdefinition-ekspersistentvolumeclaim-readonly)
+     */
+    public fun readOnly(): Any? = unwrap(this).getReadOnly()
+
+    /**
+     * A builder for [EksPersistentVolumeClaimProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param claimName The name of the `persistentVolumeClaim` bounded to a `persistentVolume` . 
+       * For more information, see [Persistent Volume
+       * Claims](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)
+       * in the *Kubernetes documentation* .
+       */
+      public fun claimName(claimName: String)
+
+      /**
+       * @param readOnly An optional boolean value indicating if the mount is read only.
+       * Default is false. For more information, see [Read Only
+       * Mounts](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/volumes/#read-only-mounts)
+       * in the *Kubernetes documentation* .
+       */
+      public fun readOnly(readOnly: Boolean)
+
+      /**
+       * @param readOnly An optional boolean value indicating if the mount is read only.
+       * Default is false. For more information, see [Read Only
+       * Mounts](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/volumes/#read-only-mounts)
+       * in the *Kubernetes documentation* .
+       */
+      public fun readOnly(readOnly: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnJobDefinition.EksPersistentVolumeClaimProperty.Builder
+          =
+          software.amazon.awscdk.services.batch.CfnJobDefinition.EksPersistentVolumeClaimProperty.builder()
+
+      /**
+       * @param claimName The name of the `persistentVolumeClaim` bounded to a `persistentVolume` . 
+       * For more information, see [Persistent Volume
+       * Claims](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)
+       * in the *Kubernetes documentation* .
+       */
+      override fun claimName(claimName: String) {
+        cdkBuilder.claimName(claimName)
+      }
+
+      /**
+       * @param readOnly An optional boolean value indicating if the mount is read only.
+       * Default is false. For more information, see [Read Only
+       * Mounts](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/volumes/#read-only-mounts)
+       * in the *Kubernetes documentation* .
+       */
+      override fun readOnly(readOnly: Boolean) {
+        cdkBuilder.readOnly(readOnly)
+      }
+
+      /**
+       * @param readOnly An optional boolean value indicating if the mount is read only.
+       * Default is false. For more information, see [Read Only
+       * Mounts](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/volumes/#read-only-mounts)
+       * in the *Kubernetes documentation* .
+       */
+      override fun readOnly(readOnly: IResolvable) {
+        cdkBuilder.readOnly(readOnly.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.batch.CfnJobDefinition.EksPersistentVolumeClaimProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EksPersistentVolumeClaimProperty,
+    ) : CdkObject(cdkObject),
+        EksPersistentVolumeClaimProperty {
+      /**
+       * The name of the `persistentVolumeClaim` bounded to a `persistentVolume` .
+       *
+       * For more information, see [Persistent Volume
+       * Claims](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)
+       * in the *Kubernetes documentation* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ekspersistentvolumeclaim.html#cfn-batch-jobdefinition-ekspersistentvolumeclaim-claimname)
+       */
+      override fun claimName(): String = unwrap(this).getClaimName()
+
+      /**
+       * An optional boolean value indicating if the mount is read only.
+       *
+       * Default is false. For more information, see [Read Only
+       * Mounts](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/volumes/#read-only-mounts)
+       * in the *Kubernetes documentation* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ekspersistentvolumeclaim.html#cfn-batch-jobdefinition-ekspersistentvolumeclaim-readonly)
+       */
+      override fun readOnly(): Any? = unwrap(this).getReadOnly()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EksPersistentVolumeClaimProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EksPersistentVolumeClaimProperty):
+          EksPersistentVolumeClaimProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EksPersistentVolumeClaimProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EksPersistentVolumeClaimProperty):
+          software.amazon.awscdk.services.batch.CfnJobDefinition.EksPersistentVolumeClaimProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.batch.CfnJobDefinition.EksPersistentVolumeClaimProperty
     }
   }
 
@@ -6059,6 +6475,7 @@ public open class CfnJobDefinition(
    * .mountPath("mountPath")
    * .name("name")
    * .readOnly(false)
+   * .subPath("subPath")
    * .build()))
    * .build()))
    * .dnsPolicy("dnsPolicy")
@@ -6094,6 +6511,7 @@ public open class CfnJobDefinition(
    * .mountPath("mountPath")
    * .name("name")
    * .readOnly(false)
+   * .subPath("subPath")
    * .build()))
    * .build()))
    * .metadata(MetadataProperty.builder()
@@ -6110,6 +6528,11 @@ public open class CfnJobDefinition(
    * .build())
    * .hostPath(HostPathProperty.builder()
    * .path("path")
+   * .build())
+   * .persistentVolumeClaim(EksPersistentVolumeClaimProperty.builder()
+   * .claimName("claimName")
+   * // the properties below are optional
+   * .readOnly(false)
    * .build())
    * .secret(EksSecretProperty.builder()
    * .secretName("secretName")
@@ -6374,6 +6797,11 @@ public open class CfnJobDefinition(
    * .hostPath(HostPathProperty.builder()
    * .path("path")
    * .build())
+   * .persistentVolumeClaim(EksPersistentVolumeClaimProperty.builder()
+   * .claimName("claimName")
+   * // the properties below are optional
+   * .readOnly(false)
+   * .build())
    * .secret(EksSecretProperty.builder()
    * .secretName("secretName")
    * // the properties below are optional
@@ -6417,6 +6845,18 @@ public open class CfnJobDefinition(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-eksvolume.html#cfn-batch-jobdefinition-eksvolume-name)
      */
     public fun name(): String
+
+    /**
+     * Specifies the configuration of a Kubernetes `persistentVolumeClaim` bounded to a
+     * `persistentVolume` .
+     *
+     * For more information, see [Persistent Volume
+     * Claims](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)
+     * in the *Kubernetes documentation* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-eksvolume.html#cfn-batch-jobdefinition-eksvolume-persistentvolumeclaim)
+     */
+    public fun persistentVolumeClaim(): Any? = unwrap(this).getPersistentVolumeClaim()
 
     /**
      * Specifies the configuration of a Kubernetes `secret` volume.
@@ -6493,6 +6933,36 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        */
       public fun name(name: String)
+
+      /**
+       * @param persistentVolumeClaim Specifies the configuration of a Kubernetes
+       * `persistentVolumeClaim` bounded to a `persistentVolume` .
+       * For more information, see [Persistent Volume
+       * Claims](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)
+       * in the *Kubernetes documentation* .
+       */
+      public fun persistentVolumeClaim(persistentVolumeClaim: IResolvable)
+
+      /**
+       * @param persistentVolumeClaim Specifies the configuration of a Kubernetes
+       * `persistentVolumeClaim` bounded to a `persistentVolume` .
+       * For more information, see [Persistent Volume
+       * Claims](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)
+       * in the *Kubernetes documentation* .
+       */
+      public fun persistentVolumeClaim(persistentVolumeClaim: EksPersistentVolumeClaimProperty)
+
+      /**
+       * @param persistentVolumeClaim Specifies the configuration of a Kubernetes
+       * `persistentVolumeClaim` bounded to a `persistentVolume` .
+       * For more information, see [Persistent Volume
+       * Claims](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)
+       * in the *Kubernetes documentation* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b6335482281a4c90ad54e56f50d29fb980da19a958edf95471fec89328ee3483")
+      public
+          fun persistentVolumeClaim(persistentVolumeClaim: EksPersistentVolumeClaimProperty.Builder.() -> Unit)
 
       /**
        * @param secret Specifies the configuration of a Kubernetes `secret` volume.
@@ -6599,6 +7069,41 @@ public open class CfnJobDefinition(
       }
 
       /**
+       * @param persistentVolumeClaim Specifies the configuration of a Kubernetes
+       * `persistentVolumeClaim` bounded to a `persistentVolume` .
+       * For more information, see [Persistent Volume
+       * Claims](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)
+       * in the *Kubernetes documentation* .
+       */
+      override fun persistentVolumeClaim(persistentVolumeClaim: IResolvable) {
+        cdkBuilder.persistentVolumeClaim(persistentVolumeClaim.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param persistentVolumeClaim Specifies the configuration of a Kubernetes
+       * `persistentVolumeClaim` bounded to a `persistentVolume` .
+       * For more information, see [Persistent Volume
+       * Claims](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)
+       * in the *Kubernetes documentation* .
+       */
+      override fun persistentVolumeClaim(persistentVolumeClaim: EksPersistentVolumeClaimProperty) {
+        cdkBuilder.persistentVolumeClaim(persistentVolumeClaim.let(EksPersistentVolumeClaimProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param persistentVolumeClaim Specifies the configuration of a Kubernetes
+       * `persistentVolumeClaim` bounded to a `persistentVolume` .
+       * For more information, see [Persistent Volume
+       * Claims](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)
+       * in the *Kubernetes documentation* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b6335482281a4c90ad54e56f50d29fb980da19a958edf95471fec89328ee3483")
+      override
+          fun persistentVolumeClaim(persistentVolumeClaim: EksPersistentVolumeClaimProperty.Builder.() -> Unit):
+          Unit = persistentVolumeClaim(EksPersistentVolumeClaimProperty(persistentVolumeClaim))
+
+      /**
        * @param secret Specifies the configuration of a Kubernetes `secret` volume.
        * For more information, see
        * [secret](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/volumes/#secret)
@@ -6669,6 +7174,18 @@ public open class CfnJobDefinition(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-eksvolume.html#cfn-batch-jobdefinition-eksvolume-name)
        */
       override fun name(): String = unwrap(this).getName()
+
+      /**
+       * Specifies the configuration of a Kubernetes `persistentVolumeClaim` bounded to a
+       * `persistentVolume` .
+       *
+       * For more information, see [Persistent Volume
+       * Claims](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)
+       * in the *Kubernetes documentation* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-eksvolume.html#cfn-batch-jobdefinition-eksvolume-persistentvolumeclaim)
+       */
+      override fun persistentVolumeClaim(): Any? = unwrap(this).getPersistentVolumeClaim()
 
       /**
        * Specifies the configuration of a Kubernetes `secret` volume.
@@ -7340,6 +7857,185 @@ public open class CfnJobDefinition(
   }
 
   /**
+   * The FireLens configuration for the container.
+   *
+   * This is used to specify and configure a log router for container logs. For more information,
+   * see [Custom log](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html)
+   * routing in the *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.batch.*;
+   * FirelensConfigurationProperty firelensConfigurationProperty =
+   * FirelensConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .options(Map.of(
+   * "optionsKey", "options"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-firelensconfiguration.html)
+   */
+  public interface FirelensConfigurationProperty {
+    /**
+     * The options to use when configuring the log router.
+     *
+     * This field is optional and can be used to specify a custom configuration file or to add
+     * additional metadata, such as the task, task definition, cluster, and container instance details
+     * to the log event. If specified, the syntax to use is
+     * `"options":{"enable-ecs-log-metadata":"true|false","config-file-type:"s3|file","config-file-value":"arn:aws:s3:::mybucket/fluent.conf|filepath"}`
+     * . For more information, see [Creating a task definition that uses a FireLens
+     * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html#firelens-taskdef)
+     * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-firelensconfiguration.html#cfn-batch-jobdefinition-firelensconfiguration-options)
+     */
+    public fun options(): Any? = unwrap(this).getOptions()
+
+    /**
+     * The log router to use.
+     *
+     * The valid values are `fluentd` or `fluentbit` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-firelensconfiguration.html#cfn-batch-jobdefinition-firelensconfiguration-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [FirelensConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param options The options to use when configuring the log router.
+       * This field is optional and can be used to specify a custom configuration file or to add
+       * additional metadata, such as the task, task definition, cluster, and container instance
+       * details to the log event. If specified, the syntax to use is
+       * `"options":{"enable-ecs-log-metadata":"true|false","config-file-type:"s3|file","config-file-value":"arn:aws:s3:::mybucket/fluent.conf|filepath"}`
+       * . For more information, see [Creating a task definition that uses a FireLens
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html#firelens-taskdef)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      public fun options(options: Map<String, String>)
+
+      /**
+       * @param options The options to use when configuring the log router.
+       * This field is optional and can be used to specify a custom configuration file or to add
+       * additional metadata, such as the task, task definition, cluster, and container instance
+       * details to the log event. If specified, the syntax to use is
+       * `"options":{"enable-ecs-log-metadata":"true|false","config-file-type:"s3|file","config-file-value":"arn:aws:s3:::mybucket/fluent.conf|filepath"}`
+       * . For more information, see [Creating a task definition that uses a FireLens
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html#firelens-taskdef)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      public fun options(options: IResolvable)
+
+      /**
+       * @param type The log router to use. 
+       * The valid values are `fluentd` or `fluentbit` .
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnJobDefinition.FirelensConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.batch.CfnJobDefinition.FirelensConfigurationProperty.builder()
+
+      /**
+       * @param options The options to use when configuring the log router.
+       * This field is optional and can be used to specify a custom configuration file or to add
+       * additional metadata, such as the task, task definition, cluster, and container instance
+       * details to the log event. If specified, the syntax to use is
+       * `"options":{"enable-ecs-log-metadata":"true|false","config-file-type:"s3|file","config-file-value":"arn:aws:s3:::mybucket/fluent.conf|filepath"}`
+       * . For more information, see [Creating a task definition that uses a FireLens
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html#firelens-taskdef)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      override fun options(options: Map<String, String>) {
+        cdkBuilder.options(options)
+      }
+
+      /**
+       * @param options The options to use when configuring the log router.
+       * This field is optional and can be used to specify a custom configuration file or to add
+       * additional metadata, such as the task, task definition, cluster, and container instance
+       * details to the log event. If specified, the syntax to use is
+       * `"options":{"enable-ecs-log-metadata":"true|false","config-file-type:"s3|file","config-file-value":"arn:aws:s3:::mybucket/fluent.conf|filepath"}`
+       * . For more information, see [Creating a task definition that uses a FireLens
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html#firelens-taskdef)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      override fun options(options: IResolvable) {
+        cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param type The log router to use. 
+       * The valid values are `fluentd` or `fluentbit` .
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.batch.CfnJobDefinition.FirelensConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.FirelensConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        FirelensConfigurationProperty {
+      /**
+       * The options to use when configuring the log router.
+       *
+       * This field is optional and can be used to specify a custom configuration file or to add
+       * additional metadata, such as the task, task definition, cluster, and container instance
+       * details to the log event. If specified, the syntax to use is
+       * `"options":{"enable-ecs-log-metadata":"true|false","config-file-type:"s3|file","config-file-value":"arn:aws:s3:::mybucket/fluent.conf|filepath"}`
+       * . For more information, see [Creating a task definition that uses a FireLens
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html#firelens-taskdef)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-firelensconfiguration.html#cfn-batch-jobdefinition-firelensconfiguration-options)
+       */
+      override fun options(): Any? = unwrap(this).getOptions()
+
+      /**
+       * The log router to use.
+       *
+       * The valid values are `fluentd` or `fluentbit` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-firelensconfiguration.html#cfn-batch-jobdefinition-firelensconfiguration-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FirelensConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.FirelensConfigurationProperty):
+          FirelensConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FirelensConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FirelensConfigurationProperty):
+          software.amazon.awscdk.services.batch.CfnJobDefinition.FirelensConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.batch.CfnJobDefinition.FirelensConfigurationProperty
+    }
+  }
+
+  /**
    * Example:
    *
    * ```
@@ -7441,7 +8137,7 @@ public open class CfnJobDefinition(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-imagepullsecret.html#cfn-batch-jobdefinition-imagepullsecret-name)
      */
-    public fun name(): String
+    public fun name(): String? = unwrap(this).getName()
 
     /**
      * A builder for [ImagePullSecretProperty]
@@ -7449,7 +8145,7 @@ public open class CfnJobDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name Provides a unique identifier for the `ImagePullSecret` . 
+       * @param name Provides a unique identifier for the `ImagePullSecret` .
        * This object is required when `EksPodProperties$imagePullSecrets` is used.
        */
       public fun name(name: String)
@@ -7461,7 +8157,7 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.ImagePullSecretProperty.builder()
 
       /**
-       * @param name Provides a unique identifier for the `ImagePullSecret` . 
+       * @param name Provides a unique identifier for the `ImagePullSecret` .
        * This object is required when `EksPodProperties$imagePullSecrets` is used.
        */
       override fun name(name: String) {
@@ -7484,7 +8180,7 @@ public open class CfnJobDefinition(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-imagepullsecret.html#cfn-batch-jobdefinition-imagepullsecret-name)
        */
-      override fun name(): String = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -7502,6 +8198,121 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.ImagePullSecretProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.batch.CfnJobDefinition.ImagePullSecretProperty
+    }
+  }
+
+  /**
+   * An object that represents a job timeout configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.batch.*;
+   * JobTimeoutProperty jobTimeoutProperty = JobTimeoutProperty.builder()
+   * .attemptDurationSeconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-jobtimeout.html)
+   */
+  public interface JobTimeoutProperty {
+    /**
+     * The job timeout time (in seconds) that's measured from the job attempt's `startedAt`
+     * timestamp.
+     *
+     * After this time passes, AWS Batch terminates your jobs if they aren't finished. The minimum
+     * value for the timeout is 60 seconds.
+     *
+     * For array jobs, the timeout applies to the child jobs, not to the parent array job.
+     *
+     * For multi-node parallel (MNP) jobs, the timeout applies to the whole job, not to the
+     * individual nodes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-jobtimeout.html#cfn-batch-jobdefinition-jobtimeout-attemptdurationseconds)
+     */
+    public fun attemptDurationSeconds(): Number? = unwrap(this).getAttemptDurationSeconds()
+
+    /**
+     * A builder for [JobTimeoutProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attemptDurationSeconds The job timeout time (in seconds) that's measured from the
+       * job attempt's `startedAt` timestamp.
+       * After this time passes, AWS Batch terminates your jobs if they aren't finished. The minimum
+       * value for the timeout is 60 seconds.
+       *
+       * For array jobs, the timeout applies to the child jobs, not to the parent array job.
+       *
+       * For multi-node parallel (MNP) jobs, the timeout applies to the whole job, not to the
+       * individual nodes.
+       */
+      public fun attemptDurationSeconds(attemptDurationSeconds: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnJobDefinition.JobTimeoutProperty.Builder =
+          software.amazon.awscdk.services.batch.CfnJobDefinition.JobTimeoutProperty.builder()
+
+      /**
+       * @param attemptDurationSeconds The job timeout time (in seconds) that's measured from the
+       * job attempt's `startedAt` timestamp.
+       * After this time passes, AWS Batch terminates your jobs if they aren't finished. The minimum
+       * value for the timeout is 60 seconds.
+       *
+       * For array jobs, the timeout applies to the child jobs, not to the parent array job.
+       *
+       * For multi-node parallel (MNP) jobs, the timeout applies to the whole job, not to the
+       * individual nodes.
+       */
+      override fun attemptDurationSeconds(attemptDurationSeconds: Number) {
+        cdkBuilder.attemptDurationSeconds(attemptDurationSeconds)
+      }
+
+      public fun build(): software.amazon.awscdk.services.batch.CfnJobDefinition.JobTimeoutProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.JobTimeoutProperty,
+    ) : CdkObject(cdkObject),
+        JobTimeoutProperty {
+      /**
+       * The job timeout time (in seconds) that's measured from the job attempt's `startedAt`
+       * timestamp.
+       *
+       * After this time passes, AWS Batch terminates your jobs if they aren't finished. The minimum
+       * value for the timeout is 60 seconds.
+       *
+       * For array jobs, the timeout applies to the child jobs, not to the parent array job.
+       *
+       * For multi-node parallel (MNP) jobs, the timeout applies to the whole job, not to the
+       * individual nodes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-jobtimeout.html#cfn-batch-jobdefinition-jobtimeout-attemptdurationseconds)
+       */
+      override fun attemptDurationSeconds(): Number? = unwrap(this).getAttemptDurationSeconds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JobTimeoutProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.JobTimeoutProperty):
+          JobTimeoutProperty = CdkObjectWrappers.wrap(cdkObject) as? JobTimeoutProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JobTimeoutProperty):
+          software.amazon.awscdk.services.batch.CfnJobDefinition.JobTimeoutProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.batch.CfnJobDefinition.JobTimeoutProperty
     }
   }
 
@@ -7582,8 +8393,8 @@ public open class CfnJobDefinition(
      *
      * If a `maxSwap` value of `0` is specified, the container doesn't use swap. Accepted values are
      * `0` or any positive integer. If the `maxSwap` parameter is omitted, the container doesn't use
-     * the swap configuration for the container instance that it's running on. A `maxSwap` value must
-     * be set for the `swappiness` parameter to be used.
+     * the swap configuration for the container instance on which it runs. A `maxSwap` value must be
+     * set for the `swappiness` parameter to be used.
      *
      *
      * This parameter isn't applicable to jobs that are running on Fargate resources. Don't provide
@@ -7748,8 +8559,8 @@ public open class CfnJobDefinition(
        *
        * If a `maxSwap` value of `0` is specified, the container doesn't use swap. Accepted values
        * are `0` or any positive integer. If the `maxSwap` parameter is omitted, the container doesn't
-       * use the swap configuration for the container instance that it's running on. A `maxSwap` value
-       * must be set for the `swappiness` parameter to be used.
+       * use the swap configuration for the container instance on which it runs. A `maxSwap` value must
+       * be set for the `swappiness` parameter to be used.
        *
        *
        * This parameter isn't applicable to jobs that are running on Fargate resources. Don't
@@ -7931,8 +8742,8 @@ public open class CfnJobDefinition(
        *
        * If a `maxSwap` value of `0` is specified, the container doesn't use swap. Accepted values
        * are `0` or any positive integer. If the `maxSwap` parameter is omitted, the container doesn't
-       * use the swap configuration for the container instance that it's running on. A `maxSwap` value
-       * must be set for the `swappiness` parameter to be used.
+       * use the swap configuration for the container instance on which it runs. A `maxSwap` value must
+       * be set for the `swappiness` parameter to be used.
        *
        *
        * This parameter isn't applicable to jobs that are running on Fargate resources. Don't
@@ -8085,8 +8896,8 @@ public open class CfnJobDefinition(
        *
        * If a `maxSwap` value of `0` is specified, the container doesn't use swap. Accepted values
        * are `0` or any positive integer. If the `maxSwap` parameter is omitted, the container doesn't
-       * use the swap configuration for the container instance that it's running on. A `maxSwap` value
-       * must be set for the `swappiness` parameter to be used.
+       * use the swap configuration for the container instance on which it runs. A `maxSwap` value must
+       * be set for the `swappiness` parameter to be used.
        *
        *
        * This parameter isn't applicable to jobs that are running on Fargate resources. Don't
@@ -8223,6 +9034,10 @@ public open class CfnJobDefinition(
      * drivers.
      *
      *
+     * * **awsfirelens** - Specifies the firelens logging driver. For more information on
+     * configuring Firelens, see [Send Amazon ECS logs to an AWS service or AWS
+     * Partner](https://docs.aws.amazon.com//AmazonECS/latest/developerguide/using_firelens.html) in
+     * the *Amazon Elastic Container Service Developer Guide* .
      * * **awslogs** - Specifies the Amazon CloudWatch Logs logging driver. For more information,
      * see [Using the awslogs log
      * driver](https://docs.aws.amazon.com/batch/latest/userguide/using_awslogs.html) in the *AWS Batch
@@ -8313,6 +9128,10 @@ public open class CfnJobDefinition(
        * drivers.
        *
        *
+       * * **awsfirelens** - Specifies the firelens logging driver. For more information on
+       * configuring Firelens, see [Send Amazon ECS logs to an AWS service or AWS
+       * Partner](https://docs.aws.amazon.com//AmazonECS/latest/developerguide/using_firelens.html) in
+       * the *Amazon Elastic Container Service Developer Guide* .
        * * **awslogs** - Specifies the Amazon CloudWatch Logs logging driver. For more information,
        * see [Using the awslogs log
        * driver](https://docs.aws.amazon.com/batch/latest/userguide/using_awslogs.html) in the *AWS
@@ -8412,6 +9231,10 @@ public open class CfnJobDefinition(
        * drivers.
        *
        *
+       * * **awsfirelens** - Specifies the firelens logging driver. For more information on
+       * configuring Firelens, see [Send Amazon ECS logs to an AWS service or AWS
+       * Partner](https://docs.aws.amazon.com//AmazonECS/latest/developerguide/using_firelens.html) in
+       * the *Amazon Elastic Container Service Developer Guide* .
        * * **awslogs** - Specifies the Amazon CloudWatch Logs logging driver. For more information,
        * see [Using the awslogs log
        * driver](https://docs.aws.amazon.com/batch/latest/userguide/using_awslogs.html) in the *AWS
@@ -8524,6 +9347,10 @@ public open class CfnJobDefinition(
        * drivers.
        *
        *
+       * * **awsfirelens** - Specifies the firelens logging driver. For more information on
+       * configuring Firelens, see [Send Amazon ECS logs to an AWS service or AWS
+       * Partner](https://docs.aws.amazon.com//AmazonECS/latest/developerguide/using_firelens.html) in
+       * the *Amazon Elastic Container Service Developer Guide* .
        * * **awslogs** - Specifies the Amazon CloudWatch Logs logging driver. For more information,
        * see [Using the awslogs log
        * driver](https://docs.aws.amazon.com/batch/latest/userguide/using_awslogs.html) in the *AWS
@@ -8616,12 +9443,6 @@ public open class CfnJobDefinition(
   }
 
   /**
-   * Metadata about the Kubernetes pod.
-   *
-   * For more information, see [Understanding Kubernetes
-   * Objects](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
-   * in the *Kubernetes documentation* .
-   *
    * Example:
    *
    * ```
@@ -8638,12 +9459,6 @@ public open class CfnJobDefinition(
    */
   public interface MetadataProperty {
     /**
-     * Key-value pairs used to identify, sort, and organize cube resources.
-     *
-     * Can contain up to 63 uppercase letters, lowercase letters, numbers, hyphens (-), and
-     * underscores (_). Labels can be added or modified at any time. Each resource can have multiple
-     * labels, but each key must be unique for a given object.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-metadata.html#cfn-batch-jobdefinition-metadata-labels)
      */
     public fun labels(): Any? = unwrap(this).getLabels()
@@ -8654,10 +9469,7 @@ public open class CfnJobDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param labels Key-value pairs used to identify, sort, and organize cube resources.
-       * Can contain up to 63 uppercase letters, lowercase letters, numbers, hyphens (-), and
-       * underscores (_). Labels can be added or modified at any time. Each resource can have multiple
-       * labels, but each key must be unique for a given object.
+       * @param labels the value to be set.
        */
       public fun labels(labels: Any)
     }
@@ -8668,10 +9480,7 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.MetadataProperty.builder()
 
       /**
-       * @param labels Key-value pairs used to identify, sort, and organize cube resources.
-       * Can contain up to 63 uppercase letters, lowercase letters, numbers, hyphens (-), and
-       * underscores (_). Labels can be added or modified at any time. Each resource can have multiple
-       * labels, but each key must be unique for a given object.
+       * @param labels the value to be set.
        */
       override fun labels(labels: Any) {
         cdkBuilder.labels(labels)
@@ -8686,12 +9495,6 @@ public open class CfnJobDefinition(
     ) : CdkObject(cdkObject),
         MetadataProperty {
       /**
-       * Key-value pairs used to identify, sort, and organize cube resources.
-       *
-       * Can contain up to 63 uppercase letters, lowercase letters, numbers, hyphens (-), and
-       * underscores (_). Labels can be added or modified at any time. Each resource can have multiple
-       * labels, but each key must be unique for a given object.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-metadata.html#cfn-batch-jobdefinition-metadata-labels)
        */
       override fun labels(): Any? = unwrap(this).getLabels()
@@ -8728,20 +9531,20 @@ public open class CfnJobDefinition(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.batch.*;
-   * MountPointsProperty mountPointsProperty = MountPointsProperty.builder()
+   * MountPointProperty mountPointProperty = MountPointProperty.builder()
    * .containerPath("containerPath")
    * .readOnly(false)
    * .sourceVolume("sourceVolume")
    * .build();
    * ```
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoints.html)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoint.html)
    */
-  public interface MountPointsProperty {
+  public interface MountPointProperty {
     /**
      * The path on the container where the host volume is mounted.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoints.html#cfn-batch-jobdefinition-mountpoints-containerpath)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoint.html#cfn-batch-jobdefinition-mountpoint-containerpath)
      */
     public fun containerPath(): String? = unwrap(this).getContainerPath()
 
@@ -8750,19 +9553,19 @@ public open class CfnJobDefinition(
      *
      * Otherwise, the container can write to the volume. The default value is `false` .
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoints.html#cfn-batch-jobdefinition-mountpoints-readonly)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoint.html#cfn-batch-jobdefinition-mountpoint-readonly)
      */
     public fun readOnly(): Any? = unwrap(this).getReadOnly()
 
     /**
      * The name of the volume to mount.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoints.html#cfn-batch-jobdefinition-mountpoints-sourcevolume)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoint.html#cfn-batch-jobdefinition-mountpoint-sourcevolume)
      */
     public fun sourceVolume(): String? = unwrap(this).getSourceVolume()
 
     /**
-     * A builder for [MountPointsProperty]
+     * A builder for [MountPointProperty]
      */
     @CdkDslMarker
     public interface Builder {
@@ -8791,8 +9594,8 @@ public open class CfnJobDefinition(
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
-          software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointsProperty.Builder =
-          software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointsProperty.builder()
+          software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointProperty.Builder =
+          software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointProperty.builder()
 
       /**
        * @param containerPath The path on the container where the host volume is mounted.
@@ -8824,6 +9627,147 @@ public open class CfnJobDefinition(
         cdkBuilder.sourceVolume(sourceVolume)
       }
 
+      public fun build(): software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointProperty,
+    ) : CdkObject(cdkObject),
+        MountPointProperty {
+      /**
+       * The path on the container where the host volume is mounted.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoint.html#cfn-batch-jobdefinition-mountpoint-containerpath)
+       */
+      override fun containerPath(): String? = unwrap(this).getContainerPath()
+
+      /**
+       * If this value is `true` , the container has read-only access to the volume.
+       *
+       * Otherwise, the container can write to the volume. The default value is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoint.html#cfn-batch-jobdefinition-mountpoint-readonly)
+       */
+      override fun readOnly(): Any? = unwrap(this).getReadOnly()
+
+      /**
+       * The name of the volume to mount.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoint.html#cfn-batch-jobdefinition-mountpoint-sourcevolume)
+       */
+      override fun sourceVolume(): String? = unwrap(this).getSourceVolume()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MountPointProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointProperty):
+          MountPointProperty = CdkObjectWrappers.wrap(cdkObject) as? MountPointProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MountPointProperty):
+          software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.batch.*;
+   * MountPointsProperty mountPointsProperty = MountPointsProperty.builder()
+   * .containerPath("containerPath")
+   * .readOnly(false)
+   * .sourceVolume("sourceVolume")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoints.html)
+   */
+  public interface MountPointsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoints.html#cfn-batch-jobdefinition-mountpoints-containerpath)
+     */
+    public fun containerPath(): String? = unwrap(this).getContainerPath()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoints.html#cfn-batch-jobdefinition-mountpoints-readonly)
+     */
+    public fun readOnly(): Any? = unwrap(this).getReadOnly()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoints.html#cfn-batch-jobdefinition-mountpoints-sourcevolume)
+     */
+    public fun sourceVolume(): String? = unwrap(this).getSourceVolume()
+
+    /**
+     * A builder for [MountPointsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param containerPath the value to be set.
+       */
+      public fun containerPath(containerPath: String)
+
+      /**
+       * @param readOnly the value to be set.
+       */
+      public fun readOnly(readOnly: Boolean)
+
+      /**
+       * @param readOnly the value to be set.
+       */
+      public fun readOnly(readOnly: IResolvable)
+
+      /**
+       * @param sourceVolume the value to be set.
+       */
+      public fun sourceVolume(sourceVolume: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointsProperty.Builder =
+          software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointsProperty.builder()
+
+      /**
+       * @param containerPath the value to be set.
+       */
+      override fun containerPath(containerPath: String) {
+        cdkBuilder.containerPath(containerPath)
+      }
+
+      /**
+       * @param readOnly the value to be set.
+       */
+      override fun readOnly(readOnly: Boolean) {
+        cdkBuilder.readOnly(readOnly)
+      }
+
+      /**
+       * @param readOnly the value to be set.
+       */
+      override fun readOnly(readOnly: IResolvable) {
+        cdkBuilder.readOnly(readOnly.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param sourceVolume the value to be set.
+       */
+      override fun sourceVolume(sourceVolume: String) {
+        cdkBuilder.sourceVolume(sourceVolume)
+      }
+
       public fun build(): software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointsProperty
           = cdkBuilder.build()
     }
@@ -8833,24 +9777,16 @@ public open class CfnJobDefinition(
     ) : CdkObject(cdkObject),
         MountPointsProperty {
       /**
-       * The path on the container where the host volume is mounted.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoints.html#cfn-batch-jobdefinition-mountpoints-containerpath)
        */
       override fun containerPath(): String? = unwrap(this).getContainerPath()
 
       /**
-       * If this value is `true` , the container has read-only access to the volume.
-       *
-       * Otherwise, the container can write to the volume. The default value is `false` .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoints.html#cfn-batch-jobdefinition-mountpoints-readonly)
        */
       override fun readOnly(): Any? = unwrap(this).getReadOnly()
 
       /**
-       * The name of the volume to mount.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-mountpoints.html#cfn-batch-jobdefinition-mountpoints-sourcevolume)
        */
       override fun sourceVolume(): String? = unwrap(this).getSourceVolume()
@@ -8871,6 +9807,806 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointsProperty
+    }
+  }
+
+  /**
+   * An object that contains the properties for the Amazon ECS resources of a job.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.batch.*;
+   * Object options;
+   * MultiNodeEcsPropertiesProperty multiNodeEcsPropertiesProperty =
+   * MultiNodeEcsPropertiesProperty.builder()
+   * .taskProperties(List.of(MultiNodeEcsTaskPropertiesProperty.builder()
+   * .containers(List.of(TaskContainerPropertiesProperty.builder()
+   * .image("image")
+   * // the properties below are optional
+   * .command(List.of("command"))
+   * .dependsOn(List.of(TaskContainerDependencyProperty.builder()
+   * .condition("condition")
+   * .containerName("containerName")
+   * .build()))
+   * .environment(List.of(EnvironmentProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .essential(false)
+   * .firelensConfiguration(FirelensConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .options(Map.of(
+   * "optionsKey", "options"))
+   * .build())
+   * .linuxParameters(LinuxParametersProperty.builder()
+   * .devices(List.of(DeviceProperty.builder()
+   * .containerPath("containerPath")
+   * .hostPath("hostPath")
+   * .permissions(List.of("permissions"))
+   * .build()))
+   * .initProcessEnabled(false)
+   * .maxSwap(123)
+   * .sharedMemorySize(123)
+   * .swappiness(123)
+   * .tmpfs(List.of(TmpfsProperty.builder()
+   * .containerPath("containerPath")
+   * .size(123)
+   * // the properties below are optional
+   * .mountOptions(List.of("mountOptions"))
+   * .build()))
+   * .build())
+   * .logConfiguration(LogConfigurationProperty.builder()
+   * .logDriver("logDriver")
+   * // the properties below are optional
+   * .options(options)
+   * .secretOptions(List.of(SecretProperty.builder()
+   * .name("name")
+   * .valueFrom("valueFrom")
+   * .build()))
+   * .build())
+   * .mountPoints(List.of(MountPointProperty.builder()
+   * .containerPath("containerPath")
+   * .readOnly(false)
+   * .sourceVolume("sourceVolume")
+   * .build()))
+   * .name("name")
+   * .privileged(false)
+   * .readonlyRootFilesystem(false)
+   * .repositoryCredentials(RepositoryCredentialsProperty.builder()
+   * .credentialsParameter("credentialsParameter")
+   * .build())
+   * .resourceRequirements(List.of(ResourceRequirementProperty.builder()
+   * .type("type")
+   * .value("value")
+   * .build()))
+   * .secrets(List.of(SecretProperty.builder()
+   * .name("name")
+   * .valueFrom("valueFrom")
+   * .build()))
+   * .ulimits(List.of(UlimitProperty.builder()
+   * .hardLimit(123)
+   * .name("name")
+   * .softLimit(123)
+   * .build()))
+   * .user("user")
+   * .build()))
+   * .enableExecuteCommand(false)
+   * .executionRoleArn("executionRoleArn")
+   * .ipcMode("ipcMode")
+   * .pidMode("pidMode")
+   * .taskRoleArn("taskRoleArn")
+   * .volumes(List.of(VolumesProperty.builder()
+   * .efsVolumeConfiguration(EfsVolumeConfigurationProperty.builder()
+   * .fileSystemId("fileSystemId")
+   * // the properties below are optional
+   * .authorizationConfig(AuthorizationConfigProperty.builder()
+   * .accessPointId("accessPointId")
+   * .iam("iam")
+   * .build())
+   * .rootDirectory("rootDirectory")
+   * .transitEncryption("transitEncryption")
+   * .transitEncryptionPort(123)
+   * .build())
+   * .host(VolumesHostProperty.builder()
+   * .sourcePath("sourcePath")
+   * .build())
+   * .name("name")
+   * .build()))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecsproperties.html)
+   */
+  public interface MultiNodeEcsPropertiesProperty {
+    /**
+     * An object that contains the properties for the Amazon ECS task definition of a job.
+     *
+     *
+     * This object is currently limited to one task element. However, the task element can run up to
+     * 10 containers.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecsproperties.html#cfn-batch-jobdefinition-multinodeecsproperties-taskproperties)
+     */
+    public fun taskProperties(): Any
+
+    /**
+     * A builder for [MultiNodeEcsPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param taskProperties An object that contains the properties for the Amazon ECS task
+       * definition of a job. 
+       *
+       * This object is currently limited to one task element. However, the task element can run up
+       * to 10 containers.
+       */
+      public fun taskProperties(taskProperties: IResolvable)
+
+      /**
+       * @param taskProperties An object that contains the properties for the Amazon ECS task
+       * definition of a job. 
+       *
+       * This object is currently limited to one task element. However, the task element can run up
+       * to 10 containers.
+       */
+      public fun taskProperties(taskProperties: List<Any>)
+
+      /**
+       * @param taskProperties An object that contains the properties for the Amazon ECS task
+       * definition of a job. 
+       *
+       * This object is currently limited to one task element. However, the task element can run up
+       * to 10 containers.
+       */
+      public fun taskProperties(vararg taskProperties: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnJobDefinition.MultiNodeEcsPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.batch.CfnJobDefinition.MultiNodeEcsPropertiesProperty.builder()
+
+      /**
+       * @param taskProperties An object that contains the properties for the Amazon ECS task
+       * definition of a job. 
+       *
+       * This object is currently limited to one task element. However, the task element can run up
+       * to 10 containers.
+       */
+      override fun taskProperties(taskProperties: IResolvable) {
+        cdkBuilder.taskProperties(taskProperties.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param taskProperties An object that contains the properties for the Amazon ECS task
+       * definition of a job. 
+       *
+       * This object is currently limited to one task element. However, the task element can run up
+       * to 10 containers.
+       */
+      override fun taskProperties(taskProperties: List<Any>) {
+        cdkBuilder.taskProperties(taskProperties.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param taskProperties An object that contains the properties for the Amazon ECS task
+       * definition of a job. 
+       *
+       * This object is currently limited to one task element. However, the task element can run up
+       * to 10 containers.
+       */
+      override fun taskProperties(vararg taskProperties: Any): Unit =
+          taskProperties(taskProperties.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.batch.CfnJobDefinition.MultiNodeEcsPropertiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.MultiNodeEcsPropertiesProperty,
+    ) : CdkObject(cdkObject),
+        MultiNodeEcsPropertiesProperty {
+      /**
+       * An object that contains the properties for the Amazon ECS task definition of a job.
+       *
+       *
+       * This object is currently limited to one task element. However, the task element can run up
+       * to 10 containers.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecsproperties.html#cfn-batch-jobdefinition-multinodeecsproperties-taskproperties)
+       */
+      override fun taskProperties(): Any = unwrap(this).getTaskProperties()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MultiNodeEcsPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.MultiNodeEcsPropertiesProperty):
+          MultiNodeEcsPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiNodeEcsPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MultiNodeEcsPropertiesProperty):
+          software.amazon.awscdk.services.batch.CfnJobDefinition.MultiNodeEcsPropertiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.batch.CfnJobDefinition.MultiNodeEcsPropertiesProperty
+    }
+  }
+
+  /**
+   * The properties for a task definition that describes the container and volume definitions of an
+   * Amazon ECS task.
+   *
+   * You can specify which Docker images to use, the required resources, and other configurations
+   * related to launching the task definition through an Amazon ECS service or task.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.batch.*;
+   * Object options;
+   * MultiNodeEcsTaskPropertiesProperty multiNodeEcsTaskPropertiesProperty =
+   * MultiNodeEcsTaskPropertiesProperty.builder()
+   * .containers(List.of(TaskContainerPropertiesProperty.builder()
+   * .image("image")
+   * // the properties below are optional
+   * .command(List.of("command"))
+   * .dependsOn(List.of(TaskContainerDependencyProperty.builder()
+   * .condition("condition")
+   * .containerName("containerName")
+   * .build()))
+   * .environment(List.of(EnvironmentProperty.builder()
+   * .name("name")
+   * .value("value")
+   * .build()))
+   * .essential(false)
+   * .firelensConfiguration(FirelensConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .options(Map.of(
+   * "optionsKey", "options"))
+   * .build())
+   * .linuxParameters(LinuxParametersProperty.builder()
+   * .devices(List.of(DeviceProperty.builder()
+   * .containerPath("containerPath")
+   * .hostPath("hostPath")
+   * .permissions(List.of("permissions"))
+   * .build()))
+   * .initProcessEnabled(false)
+   * .maxSwap(123)
+   * .sharedMemorySize(123)
+   * .swappiness(123)
+   * .tmpfs(List.of(TmpfsProperty.builder()
+   * .containerPath("containerPath")
+   * .size(123)
+   * // the properties below are optional
+   * .mountOptions(List.of("mountOptions"))
+   * .build()))
+   * .build())
+   * .logConfiguration(LogConfigurationProperty.builder()
+   * .logDriver("logDriver")
+   * // the properties below are optional
+   * .options(options)
+   * .secretOptions(List.of(SecretProperty.builder()
+   * .name("name")
+   * .valueFrom("valueFrom")
+   * .build()))
+   * .build())
+   * .mountPoints(List.of(MountPointProperty.builder()
+   * .containerPath("containerPath")
+   * .readOnly(false)
+   * .sourceVolume("sourceVolume")
+   * .build()))
+   * .name("name")
+   * .privileged(false)
+   * .readonlyRootFilesystem(false)
+   * .repositoryCredentials(RepositoryCredentialsProperty.builder()
+   * .credentialsParameter("credentialsParameter")
+   * .build())
+   * .resourceRequirements(List.of(ResourceRequirementProperty.builder()
+   * .type("type")
+   * .value("value")
+   * .build()))
+   * .secrets(List.of(SecretProperty.builder()
+   * .name("name")
+   * .valueFrom("valueFrom")
+   * .build()))
+   * .ulimits(List.of(UlimitProperty.builder()
+   * .hardLimit(123)
+   * .name("name")
+   * .softLimit(123)
+   * .build()))
+   * .user("user")
+   * .build()))
+   * .enableExecuteCommand(false)
+   * .executionRoleArn("executionRoleArn")
+   * .ipcMode("ipcMode")
+   * .pidMode("pidMode")
+   * .taskRoleArn("taskRoleArn")
+   * .volumes(List.of(VolumesProperty.builder()
+   * .efsVolumeConfiguration(EfsVolumeConfigurationProperty.builder()
+   * .fileSystemId("fileSystemId")
+   * // the properties below are optional
+   * .authorizationConfig(AuthorizationConfigProperty.builder()
+   * .accessPointId("accessPointId")
+   * .iam("iam")
+   * .build())
+   * .rootDirectory("rootDirectory")
+   * .transitEncryption("transitEncryption")
+   * .transitEncryptionPort(123)
+   * .build())
+   * .host(VolumesHostProperty.builder()
+   * .sourcePath("sourcePath")
+   * .build())
+   * .name("name")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecstaskproperties.html)
+   */
+  public interface MultiNodeEcsTaskPropertiesProperty {
+    /**
+     * This object is a list of containers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecstaskproperties.html#cfn-batch-jobdefinition-multinodeecstaskproperties-containers)
+     */
+    public fun containers(): Any? = unwrap(this).getContainers()
+
+    /**
+     * Determines whether execute command functionality is turned on for this task.
+     *
+     * If `true` , execute command functionality is turned on all the containers in the task.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecstaskproperties.html#cfn-batch-jobdefinition-multinodeecstaskproperties-enableexecutecommand)
+     */
+    public fun enableExecuteCommand(): Any? = unwrap(this).getEnableExecuteCommand()
+
+    /**
+     * The Amazon Resource Name (ARN) of the execution role that AWS Batch can assume.
+     *
+     * For jobs that run on Fargate resources, you must provide an execution role. For more
+     * information, see [AWS Batch execution IAM
+     * role](https://docs.aws.amazon.com/batch/latest/userguide/execution-IAM-role.html) in the *AWS
+     * Batch User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecstaskproperties.html#cfn-batch-jobdefinition-multinodeecstaskproperties-executionrolearn)
+     */
+    public fun executionRoleArn(): String? = unwrap(this).getExecutionRoleArn()
+
+    /**
+     * The IPC resource namespace to use for the containers in the task.
+     *
+     * The valid values are `host` , `task` , or `none` .
+     *
+     * If `host` is specified, all containers within the tasks that specified the `host` IPC mode on
+     * the same container instance share the same IPC resources with the host Amazon EC2 instance.
+     *
+     * If `task` is specified, all containers within the specified `task` share the same IPC
+     * resources.
+     *
+     * If `none` is specified, the IPC resources within the containers of a task are private, and
+     * are not shared with other containers in a task or on the container instance.
+     *
+     * If no value is specified, then the IPC resource namespace sharing depends on the Docker
+     * daemon setting on the container instance. For more information, see [IPC
+     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#ipc-settings---ipc)
+     * in the Docker run reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecstaskproperties.html#cfn-batch-jobdefinition-multinodeecstaskproperties-ipcmode)
+     */
+    public fun ipcMode(): String? = unwrap(this).getIpcMode()
+
+    /**
+     * The process namespace to use for the containers in the task.
+     *
+     * The valid values are `host` or `task` . For example, monitoring sidecars might need `pidMode`
+     * to access information about other containers running in the same task.
+     *
+     * If `host` is specified, all containers within the tasks that specified the `host` PID mode on
+     * the same container instance share the process namespace with the host Amazon EC2 instance.
+     *
+     * If `task` is specified, all containers within the specified task share the same process
+     * namespace.
+     *
+     * If no value is specified, the default is a private namespace for each container. For more
+     * information, see [PID
+     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#pid-settings---pid)
+     * in the Docker run reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecstaskproperties.html#cfn-batch-jobdefinition-multinodeecstaskproperties-pidmode)
+     */
+    public fun pidMode(): String? = unwrap(this).getPidMode()
+
+    /**
+     * The Amazon Resource Name (ARN) that's associated with the Amazon ECS task.
+     *
+     *
+     * This is object is comparable to
+     * [ContainerProperties:jobRoleArn](https://docs.aws.amazon.com/batch/latest/APIReference/API_ContainerProperties.html)
+     * .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecstaskproperties.html#cfn-batch-jobdefinition-multinodeecstaskproperties-taskrolearn)
+     */
+    public fun taskRoleArn(): String? = unwrap(this).getTaskRoleArn()
+
+    /**
+     * A list of volumes that are associated with the job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecstaskproperties.html#cfn-batch-jobdefinition-multinodeecstaskproperties-volumes)
+     */
+    public fun volumes(): Any? = unwrap(this).getVolumes()
+
+    /**
+     * A builder for [MultiNodeEcsTaskPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param containers This object is a list of containers.
+       */
+      public fun containers(containers: IResolvable)
+
+      /**
+       * @param containers This object is a list of containers.
+       */
+      public fun containers(containers: List<Any>)
+
+      /**
+       * @param containers This object is a list of containers.
+       */
+      public fun containers(vararg containers: Any)
+
+      /**
+       * @param enableExecuteCommand Determines whether execute command functionality is turned on
+       * for this task.
+       * If `true` , execute command functionality is turned on all the containers in the task.
+       */
+      public fun enableExecuteCommand(enableExecuteCommand: Boolean)
+
+      /**
+       * @param enableExecuteCommand Determines whether execute command functionality is turned on
+       * for this task.
+       * If `true` , execute command functionality is turned on all the containers in the task.
+       */
+      public fun enableExecuteCommand(enableExecuteCommand: IResolvable)
+
+      /**
+       * @param executionRoleArn The Amazon Resource Name (ARN) of the execution role that AWS Batch
+       * can assume.
+       * For jobs that run on Fargate resources, you must provide an execution role. For more
+       * information, see [AWS Batch execution IAM
+       * role](https://docs.aws.amazon.com/batch/latest/userguide/execution-IAM-role.html) in the *AWS
+       * Batch User Guide* .
+       */
+      public fun executionRoleArn(executionRoleArn: String)
+
+      /**
+       * @param ipcMode The IPC resource namespace to use for the containers in the task.
+       * The valid values are `host` , `task` , or `none` .
+       *
+       * If `host` is specified, all containers within the tasks that specified the `host` IPC mode
+       * on the same container instance share the same IPC resources with the host Amazon EC2 instance.
+       *
+       * If `task` is specified, all containers within the specified `task` share the same IPC
+       * resources.
+       *
+       * If `none` is specified, the IPC resources within the containers of a task are private, and
+       * are not shared with other containers in a task or on the container instance.
+       *
+       * If no value is specified, then the IPC resource namespace sharing depends on the Docker
+       * daemon setting on the container instance. For more information, see [IPC
+       * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#ipc-settings---ipc)
+       * in the Docker run reference.
+       */
+      public fun ipcMode(ipcMode: String)
+
+      /**
+       * @param pidMode The process namespace to use for the containers in the task.
+       * The valid values are `host` or `task` . For example, monitoring sidecars might need
+       * `pidMode` to access information about other containers running in the same task.
+       *
+       * If `host` is specified, all containers within the tasks that specified the `host` PID mode
+       * on the same container instance share the process namespace with the host Amazon EC2 instance.
+       *
+       * If `task` is specified, all containers within the specified task share the same process
+       * namespace.
+       *
+       * If no value is specified, the default is a private namespace for each container. For more
+       * information, see [PID
+       * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#pid-settings---pid)
+       * in the Docker run reference.
+       */
+      public fun pidMode(pidMode: String)
+
+      /**
+       * @param taskRoleArn The Amazon Resource Name (ARN) that's associated with the Amazon ECS
+       * task.
+       *
+       * This is object is comparable to
+       * [ContainerProperties:jobRoleArn](https://docs.aws.amazon.com/batch/latest/APIReference/API_ContainerProperties.html)
+       * .
+       */
+      public fun taskRoleArn(taskRoleArn: String)
+
+      /**
+       * @param volumes A list of volumes that are associated with the job.
+       */
+      public fun volumes(volumes: IResolvable)
+
+      /**
+       * @param volumes A list of volumes that are associated with the job.
+       */
+      public fun volumes(volumes: List<Any>)
+
+      /**
+       * @param volumes A list of volumes that are associated with the job.
+       */
+      public fun volumes(vararg volumes: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnJobDefinition.MultiNodeEcsTaskPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.batch.CfnJobDefinition.MultiNodeEcsTaskPropertiesProperty.builder()
+
+      /**
+       * @param containers This object is a list of containers.
+       */
+      override fun containers(containers: IResolvable) {
+        cdkBuilder.containers(containers.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param containers This object is a list of containers.
+       */
+      override fun containers(containers: List<Any>) {
+        cdkBuilder.containers(containers.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param containers This object is a list of containers.
+       */
+      override fun containers(vararg containers: Any): Unit = containers(containers.toList())
+
+      /**
+       * @param enableExecuteCommand Determines whether execute command functionality is turned on
+       * for this task.
+       * If `true` , execute command functionality is turned on all the containers in the task.
+       */
+      override fun enableExecuteCommand(enableExecuteCommand: Boolean) {
+        cdkBuilder.enableExecuteCommand(enableExecuteCommand)
+      }
+
+      /**
+       * @param enableExecuteCommand Determines whether execute command functionality is turned on
+       * for this task.
+       * If `true` , execute command functionality is turned on all the containers in the task.
+       */
+      override fun enableExecuteCommand(enableExecuteCommand: IResolvable) {
+        cdkBuilder.enableExecuteCommand(enableExecuteCommand.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param executionRoleArn The Amazon Resource Name (ARN) of the execution role that AWS Batch
+       * can assume.
+       * For jobs that run on Fargate resources, you must provide an execution role. For more
+       * information, see [AWS Batch execution IAM
+       * role](https://docs.aws.amazon.com/batch/latest/userguide/execution-IAM-role.html) in the *AWS
+       * Batch User Guide* .
+       */
+      override fun executionRoleArn(executionRoleArn: String) {
+        cdkBuilder.executionRoleArn(executionRoleArn)
+      }
+
+      /**
+       * @param ipcMode The IPC resource namespace to use for the containers in the task.
+       * The valid values are `host` , `task` , or `none` .
+       *
+       * If `host` is specified, all containers within the tasks that specified the `host` IPC mode
+       * on the same container instance share the same IPC resources with the host Amazon EC2 instance.
+       *
+       * If `task` is specified, all containers within the specified `task` share the same IPC
+       * resources.
+       *
+       * If `none` is specified, the IPC resources within the containers of a task are private, and
+       * are not shared with other containers in a task or on the container instance.
+       *
+       * If no value is specified, then the IPC resource namespace sharing depends on the Docker
+       * daemon setting on the container instance. For more information, see [IPC
+       * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#ipc-settings---ipc)
+       * in the Docker run reference.
+       */
+      override fun ipcMode(ipcMode: String) {
+        cdkBuilder.ipcMode(ipcMode)
+      }
+
+      /**
+       * @param pidMode The process namespace to use for the containers in the task.
+       * The valid values are `host` or `task` . For example, monitoring sidecars might need
+       * `pidMode` to access information about other containers running in the same task.
+       *
+       * If `host` is specified, all containers within the tasks that specified the `host` PID mode
+       * on the same container instance share the process namespace with the host Amazon EC2 instance.
+       *
+       * If `task` is specified, all containers within the specified task share the same process
+       * namespace.
+       *
+       * If no value is specified, the default is a private namespace for each container. For more
+       * information, see [PID
+       * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#pid-settings---pid)
+       * in the Docker run reference.
+       */
+      override fun pidMode(pidMode: String) {
+        cdkBuilder.pidMode(pidMode)
+      }
+
+      /**
+       * @param taskRoleArn The Amazon Resource Name (ARN) that's associated with the Amazon ECS
+       * task.
+       *
+       * This is object is comparable to
+       * [ContainerProperties:jobRoleArn](https://docs.aws.amazon.com/batch/latest/APIReference/API_ContainerProperties.html)
+       * .
+       */
+      override fun taskRoleArn(taskRoleArn: String) {
+        cdkBuilder.taskRoleArn(taskRoleArn)
+      }
+
+      /**
+       * @param volumes A list of volumes that are associated with the job.
+       */
+      override fun volumes(volumes: IResolvable) {
+        cdkBuilder.volumes(volumes.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param volumes A list of volumes that are associated with the job.
+       */
+      override fun volumes(volumes: List<Any>) {
+        cdkBuilder.volumes(volumes.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param volumes A list of volumes that are associated with the job.
+       */
+      override fun volumes(vararg volumes: Any): Unit = volumes(volumes.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.batch.CfnJobDefinition.MultiNodeEcsTaskPropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.MultiNodeEcsTaskPropertiesProperty,
+    ) : CdkObject(cdkObject),
+        MultiNodeEcsTaskPropertiesProperty {
+      /**
+       * This object is a list of containers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecstaskproperties.html#cfn-batch-jobdefinition-multinodeecstaskproperties-containers)
+       */
+      override fun containers(): Any? = unwrap(this).getContainers()
+
+      /**
+       * Determines whether execute command functionality is turned on for this task.
+       *
+       * If `true` , execute command functionality is turned on all the containers in the task.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecstaskproperties.html#cfn-batch-jobdefinition-multinodeecstaskproperties-enableexecutecommand)
+       */
+      override fun enableExecuteCommand(): Any? = unwrap(this).getEnableExecuteCommand()
+
+      /**
+       * The Amazon Resource Name (ARN) of the execution role that AWS Batch can assume.
+       *
+       * For jobs that run on Fargate resources, you must provide an execution role. For more
+       * information, see [AWS Batch execution IAM
+       * role](https://docs.aws.amazon.com/batch/latest/userguide/execution-IAM-role.html) in the *AWS
+       * Batch User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecstaskproperties.html#cfn-batch-jobdefinition-multinodeecstaskproperties-executionrolearn)
+       */
+      override fun executionRoleArn(): String? = unwrap(this).getExecutionRoleArn()
+
+      /**
+       * The IPC resource namespace to use for the containers in the task.
+       *
+       * The valid values are `host` , `task` , or `none` .
+       *
+       * If `host` is specified, all containers within the tasks that specified the `host` IPC mode
+       * on the same container instance share the same IPC resources with the host Amazon EC2 instance.
+       *
+       * If `task` is specified, all containers within the specified `task` share the same IPC
+       * resources.
+       *
+       * If `none` is specified, the IPC resources within the containers of a task are private, and
+       * are not shared with other containers in a task or on the container instance.
+       *
+       * If no value is specified, then the IPC resource namespace sharing depends on the Docker
+       * daemon setting on the container instance. For more information, see [IPC
+       * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#ipc-settings---ipc)
+       * in the Docker run reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecstaskproperties.html#cfn-batch-jobdefinition-multinodeecstaskproperties-ipcmode)
+       */
+      override fun ipcMode(): String? = unwrap(this).getIpcMode()
+
+      /**
+       * The process namespace to use for the containers in the task.
+       *
+       * The valid values are `host` or `task` . For example, monitoring sidecars might need
+       * `pidMode` to access information about other containers running in the same task.
+       *
+       * If `host` is specified, all containers within the tasks that specified the `host` PID mode
+       * on the same container instance share the process namespace with the host Amazon EC2 instance.
+       *
+       * If `task` is specified, all containers within the specified task share the same process
+       * namespace.
+       *
+       * If no value is specified, the default is a private namespace for each container. For more
+       * information, see [PID
+       * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#pid-settings---pid)
+       * in the Docker run reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecstaskproperties.html#cfn-batch-jobdefinition-multinodeecstaskproperties-pidmode)
+       */
+      override fun pidMode(): String? = unwrap(this).getPidMode()
+
+      /**
+       * The Amazon Resource Name (ARN) that's associated with the Amazon ECS task.
+       *
+       *
+       * This is object is comparable to
+       * [ContainerProperties:jobRoleArn](https://docs.aws.amazon.com/batch/latest/APIReference/API_ContainerProperties.html)
+       * .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecstaskproperties.html#cfn-batch-jobdefinition-multinodeecstaskproperties-taskrolearn)
+       */
+      override fun taskRoleArn(): String? = unwrap(this).getTaskRoleArn()
+
+      /**
+       * A list of volumes that are associated with the job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodeecstaskproperties.html#cfn-batch-jobdefinition-multinodeecstaskproperties-volumes)
+       */
+      override fun volumes(): Any? = unwrap(this).getVolumes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MultiNodeEcsTaskPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.MultiNodeEcsTaskPropertiesProperty):
+          MultiNodeEcsTaskPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiNodeEcsTaskPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MultiNodeEcsTaskPropertiesProperty):
+          software.amazon.awscdk.services.batch.CfnJobDefinition.MultiNodeEcsTaskPropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.batch.CfnJobDefinition.MultiNodeEcsTaskPropertiesProperty
     }
   }
 
@@ -9010,10 +10746,17 @@ public open class CfnJobDefinition(
    * .nodeRangeProperties(List.of(NodeRangePropertyProperty.builder()
    * .targetNodes("targetNodes")
    * // the properties below are optional
+   * .consumableResourceProperties(ConsumableResourcePropertiesProperty.builder()
+   * .consumableResourceList(List.of(ConsumableResourceRequirementProperty.builder()
+   * .consumableResource("consumableResource")
+   * .quantity(123)
+   * .build()))
+   * .build())
    * .container(ContainerPropertiesProperty.builder()
    * .image("image")
    * // the properties below are optional
    * .command(List.of("command"))
+   * .enableExecuteCommand(false)
    * .environment(List.of(EnvironmentProperty.builder()
    * .name("name")
    * .value("value")
@@ -9104,8 +10847,8 @@ public open class CfnJobDefinition(
    * .name("name")
    * .build()))
    * .build())
-   * .ecsProperties(EcsPropertiesProperty.builder()
-   * .taskProperties(List.of(EcsTaskPropertiesProperty.builder()
+   * .ecsProperties(MultiNodeEcsPropertiesProperty.builder()
+   * .taskProperties(List.of(MultiNodeEcsTaskPropertiesProperty.builder()
    * .containers(List.of(TaskContainerPropertiesProperty.builder()
    * .image("image")
    * // the properties below are optional
@@ -9119,6 +10862,12 @@ public open class CfnJobDefinition(
    * .value("value")
    * .build()))
    * .essential(false)
+   * .firelensConfiguration(FirelensConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .options(Map.of(
+   * "optionsKey", "options"))
+   * .build())
    * .linuxParameters(LinuxParametersProperty.builder()
    * .devices(List.of(DeviceProperty.builder()
    * .containerPath("containerPath")
@@ -9145,7 +10894,7 @@ public open class CfnJobDefinition(
    * .valueFrom("valueFrom")
    * .build()))
    * .build())
-   * .mountPoints(List.of(MountPointsProperty.builder()
+   * .mountPoints(List.of(MountPointProperty.builder()
    * .containerPath("containerPath")
    * .readOnly(false)
    * .sourceVolume("sourceVolume")
@@ -9171,20 +10920,10 @@ public open class CfnJobDefinition(
    * .build()))
    * .user("user")
    * .build()))
-   * .ephemeralStorage(EphemeralStorageProperty.builder()
-   * .sizeInGiB(123)
-   * .build())
+   * .enableExecuteCommand(false)
    * .executionRoleArn("executionRoleArn")
    * .ipcMode("ipcMode")
-   * .networkConfiguration(NetworkConfigurationProperty.builder()
-   * .assignPublicIp("assignPublicIp")
-   * .build())
    * .pidMode("pidMode")
-   * .platformVersion("platformVersion")
-   * .runtimePlatform(RuntimePlatformProperty.builder()
-   * .cpuArchitecture("cpuArchitecture")
-   * .operatingSystemFamily("operatingSystemFamily")
-   * .build())
    * .taskRoleArn("taskRoleArn")
    * .volumes(List.of(VolumesProperty.builder()
    * .efsVolumeConfiguration(EfsVolumeConfigurationProperty.builder()
@@ -9235,6 +10974,7 @@ public open class CfnJobDefinition(
    * .mountPath("mountPath")
    * .name("name")
    * .readOnly(false)
+   * .subPath("subPath")
    * .build()))
    * .build()))
    * .dnsPolicy("dnsPolicy")
@@ -9270,6 +11010,7 @@ public open class CfnJobDefinition(
    * .mountPath("mountPath")
    * .name("name")
    * .readOnly(false)
+   * .subPath("subPath")
    * .build()))
    * .build()))
    * .metadata(MetadataProperty.builder()
@@ -9286,6 +11027,11 @@ public open class CfnJobDefinition(
    * .build())
    * .hostPath(HostPathProperty.builder()
    * .path("path")
+   * .build())
+   * .persistentVolumeClaim(EksPersistentVolumeClaimProperty.builder()
+   * .claimName("claimName")
+   * // the properties below are optional
+   * .readOnly(false)
    * .build())
    * .secret(EksSecretProperty.builder()
    * .secretName("secretName")
@@ -9475,10 +11221,17 @@ public open class CfnJobDefinition(
    * NodeRangePropertyProperty nodeRangePropertyProperty = NodeRangePropertyProperty.builder()
    * .targetNodes("targetNodes")
    * // the properties below are optional
+   * .consumableResourceProperties(ConsumableResourcePropertiesProperty.builder()
+   * .consumableResourceList(List.of(ConsumableResourceRequirementProperty.builder()
+   * .consumableResource("consumableResource")
+   * .quantity(123)
+   * .build()))
+   * .build())
    * .container(ContainerPropertiesProperty.builder()
    * .image("image")
    * // the properties below are optional
    * .command(List.of("command"))
+   * .enableExecuteCommand(false)
    * .environment(List.of(EnvironmentProperty.builder()
    * .name("name")
    * .value("value")
@@ -9569,8 +11322,8 @@ public open class CfnJobDefinition(
    * .name("name")
    * .build()))
    * .build())
-   * .ecsProperties(EcsPropertiesProperty.builder()
-   * .taskProperties(List.of(EcsTaskPropertiesProperty.builder()
+   * .ecsProperties(MultiNodeEcsPropertiesProperty.builder()
+   * .taskProperties(List.of(MultiNodeEcsTaskPropertiesProperty.builder()
    * .containers(List.of(TaskContainerPropertiesProperty.builder()
    * .image("image")
    * // the properties below are optional
@@ -9584,6 +11337,12 @@ public open class CfnJobDefinition(
    * .value("value")
    * .build()))
    * .essential(false)
+   * .firelensConfiguration(FirelensConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .options(Map.of(
+   * "optionsKey", "options"))
+   * .build())
    * .linuxParameters(LinuxParametersProperty.builder()
    * .devices(List.of(DeviceProperty.builder()
    * .containerPath("containerPath")
@@ -9610,7 +11369,7 @@ public open class CfnJobDefinition(
    * .valueFrom("valueFrom")
    * .build()))
    * .build())
-   * .mountPoints(List.of(MountPointsProperty.builder()
+   * .mountPoints(List.of(MountPointProperty.builder()
    * .containerPath("containerPath")
    * .readOnly(false)
    * .sourceVolume("sourceVolume")
@@ -9636,20 +11395,10 @@ public open class CfnJobDefinition(
    * .build()))
    * .user("user")
    * .build()))
-   * .ephemeralStorage(EphemeralStorageProperty.builder()
-   * .sizeInGiB(123)
-   * .build())
+   * .enableExecuteCommand(false)
    * .executionRoleArn("executionRoleArn")
    * .ipcMode("ipcMode")
-   * .networkConfiguration(NetworkConfigurationProperty.builder()
-   * .assignPublicIp("assignPublicIp")
-   * .build())
    * .pidMode("pidMode")
-   * .platformVersion("platformVersion")
-   * .runtimePlatform(RuntimePlatformProperty.builder()
-   * .cpuArchitecture("cpuArchitecture")
-   * .operatingSystemFamily("operatingSystemFamily")
-   * .build())
    * .taskRoleArn("taskRoleArn")
    * .volumes(List.of(VolumesProperty.builder()
    * .efsVolumeConfiguration(EfsVolumeConfigurationProperty.builder()
@@ -9700,6 +11449,7 @@ public open class CfnJobDefinition(
    * .mountPath("mountPath")
    * .name("name")
    * .readOnly(false)
+   * .subPath("subPath")
    * .build()))
    * .build()))
    * .dnsPolicy("dnsPolicy")
@@ -9735,6 +11485,7 @@ public open class CfnJobDefinition(
    * .mountPath("mountPath")
    * .name("name")
    * .readOnly(false)
+   * .subPath("subPath")
    * .build()))
    * .build()))
    * .metadata(MetadataProperty.builder()
@@ -9752,6 +11503,11 @@ public open class CfnJobDefinition(
    * .hostPath(HostPathProperty.builder()
    * .path("path")
    * .build())
+   * .persistentVolumeClaim(EksPersistentVolumeClaimProperty.builder()
+   * .claimName("claimName")
+   * // the properties below are optional
+   * .readOnly(false)
+   * .build())
    * .secret(EksSecretProperty.builder()
    * .secretName("secretName")
    * // the properties below are optional
@@ -9767,6 +11523,13 @@ public open class CfnJobDefinition(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-noderangeproperty.html)
    */
   public interface NodeRangePropertyProperty {
+    /**
+     * Contains a list of consumable resources required by a job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-noderangeproperty.html#cfn-batch-jobdefinition-noderangeproperty-consumableresourceproperties)
+     */
+    public fun consumableResourceProperties(): Any? = unwrap(this).getConsumableResourceProperties()
+
     /**
      * The container details for the node range.
      *
@@ -9823,6 +11586,28 @@ public open class CfnJobDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param consumableResourceProperties Contains a list of consumable resources required by a
+       * job.
+       */
+      public fun consumableResourceProperties(consumableResourceProperties: IResolvable)
+
+      /**
+       * @param consumableResourceProperties Contains a list of consumable resources required by a
+       * job.
+       */
+      public
+          fun consumableResourceProperties(consumableResourceProperties: ConsumableResourcePropertiesProperty)
+
+      /**
+       * @param consumableResourceProperties Contains a list of consumable resources required by a
+       * job.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("af84024189abc0e73427ba712d30da60d433ea8fe6d58a4e9e479c480c98b4c1")
+      public
+          fun consumableResourceProperties(consumableResourceProperties: ConsumableResourcePropertiesProperty.Builder.() -> Unit)
+
+      /**
        * @param container The container details for the node range.
        */
       public fun container(container: IResolvable)
@@ -9849,15 +11634,15 @@ public open class CfnJobDefinition(
        * @param ecsProperties This is an object that represents the properties of the node range for
        * a multi-node parallel job.
        */
-      public fun ecsProperties(ecsProperties: EcsPropertiesProperty)
+      public fun ecsProperties(ecsProperties: MultiNodeEcsPropertiesProperty)
 
       /**
        * @param ecsProperties This is an object that represents the properties of the node range for
        * a multi-node parallel job.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("66d8ff9e0f4f24b1d9c32aa5170dfcbcdf49c358ce50e8c393906952bbdddbcf")
-      public fun ecsProperties(ecsProperties: EcsPropertiesProperty.Builder.() -> Unit)
+      @JvmName("c23e00e3bdc1de2bd4ee7b584a7f5d3a1d5da5493ce521e7be015d5a17f9c9ae")
+      public fun ecsProperties(ecsProperties: MultiNodeEcsPropertiesProperty.Builder.() -> Unit)
 
       /**
        * @param eksProperties This is an object that represents the properties of the node range for
@@ -9917,6 +11702,34 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.NodeRangePropertyProperty.builder()
 
       /**
+       * @param consumableResourceProperties Contains a list of consumable resources required by a
+       * job.
+       */
+      override fun consumableResourceProperties(consumableResourceProperties: IResolvable) {
+        cdkBuilder.consumableResourceProperties(consumableResourceProperties.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param consumableResourceProperties Contains a list of consumable resources required by a
+       * job.
+       */
+      override
+          fun consumableResourceProperties(consumableResourceProperties: ConsumableResourcePropertiesProperty) {
+        cdkBuilder.consumableResourceProperties(consumableResourceProperties.let(ConsumableResourcePropertiesProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param consumableResourceProperties Contains a list of consumable resources required by a
+       * job.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("af84024189abc0e73427ba712d30da60d433ea8fe6d58a4e9e479c480c98b4c1")
+      override
+          fun consumableResourceProperties(consumableResourceProperties: ConsumableResourcePropertiesProperty.Builder.() -> Unit):
+          Unit =
+          consumableResourceProperties(ConsumableResourcePropertiesProperty(consumableResourceProperties))
+
+      /**
        * @param container The container details for the node range.
        */
       override fun container(container: IResolvable) {
@@ -9950,8 +11763,8 @@ public open class CfnJobDefinition(
        * @param ecsProperties This is an object that represents the properties of the node range for
        * a multi-node parallel job.
        */
-      override fun ecsProperties(ecsProperties: EcsPropertiesProperty) {
-        cdkBuilder.ecsProperties(ecsProperties.let(EcsPropertiesProperty.Companion::unwrap))
+      override fun ecsProperties(ecsProperties: MultiNodeEcsPropertiesProperty) {
+        cdkBuilder.ecsProperties(ecsProperties.let(MultiNodeEcsPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -9959,9 +11772,9 @@ public open class CfnJobDefinition(
        * a multi-node parallel job.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("66d8ff9e0f4f24b1d9c32aa5170dfcbcdf49c358ce50e8c393906952bbdddbcf")
-      override fun ecsProperties(ecsProperties: EcsPropertiesProperty.Builder.() -> Unit): Unit =
-          ecsProperties(EcsPropertiesProperty(ecsProperties))
+      @JvmName("c23e00e3bdc1de2bd4ee7b584a7f5d3a1d5da5493ce521e7be015d5a17f9c9ae")
+      override fun ecsProperties(ecsProperties: MultiNodeEcsPropertiesProperty.Builder.() -> Unit):
+          Unit = ecsProperties(MultiNodeEcsPropertiesProperty(ecsProperties))
 
       /**
        * @param eksProperties This is an object that represents the properties of the node range for
@@ -10034,6 +11847,14 @@ public open class CfnJobDefinition(
     ) : CdkObject(cdkObject),
         NodeRangePropertyProperty {
       /**
+       * Contains a list of consumable resources required by a job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-noderangeproperty.html#cfn-batch-jobdefinition-noderangeproperty-consumableresourceproperties)
+       */
+      override fun consumableResourceProperties(): Any? =
+          unwrap(this).getConsumableResourceProperties()
+
+      /**
        * The container details for the node range.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-noderangeproperty.html#cfn-batch-jobdefinition-noderangeproperty-container)
@@ -10103,8 +11924,6 @@ public open class CfnJobDefinition(
   }
 
   /**
-   * The properties for the pod.
-   *
    * Example:
    *
    * ```
@@ -10143,6 +11962,7 @@ public open class CfnJobDefinition(
    * .mountPath("mountPath")
    * .name("name")
    * .readOnly(false)
+   * .subPath("subPath")
    * .build()))
    * .build()))
    * .dnsPolicy("dnsPolicy")
@@ -10178,6 +11998,7 @@ public open class CfnJobDefinition(
    * .mountPath("mountPath")
    * .name("name")
    * .readOnly(false)
+   * .subPath("subPath")
    * .build()))
    * .build()))
    * .metadata(MetadataProperty.builder()
@@ -10195,6 +12016,11 @@ public open class CfnJobDefinition(
    * .hostPath(HostPathProperty.builder()
    * .path("path")
    * .build())
+   * .persistentVolumeClaim(EksPersistentVolumeClaimProperty.builder()
+   * .claimName("claimName")
+   * // the properties below are optional
+   * .readOnly(false)
+   * .build())
    * .secret(EksSecretProperty.builder()
    * .secretName("secretName")
    * // the properties below are optional
@@ -10208,43 +12034,16 @@ public open class CfnJobDefinition(
    */
   public interface PodPropertiesProperty {
     /**
-     * The properties of the container that's used on the Amazon EKS pod.
-     *
-     *
-     * This object is limited to 10 elements.
-     *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-containers)
      */
     public fun containers(): Any? = unwrap(this).getContainers()
 
     /**
-     * The DNS policy for the pod.
-     *
-     * The default value is `ClusterFirst` . If the `hostNetwork` parameter is not specified, the
-     * default is `ClusterFirstWithHostNet` . `ClusterFirst` indicates that any DNS query that does not
-     * match the configured cluster domain suffix is forwarded to the upstream nameserver inherited
-     * from the node. For more information, see [Pod's DNS
-     * policy](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy)
-     * in the *Kubernetes documentation* .
-     *
-     * Valid values: `Default` | `ClusterFirst` | `ClusterFirstWithHostNet`
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-dnspolicy)
      */
     public fun dnsPolicy(): String? = unwrap(this).getDnsPolicy()
 
     /**
-     * Indicates if the pod uses the hosts' network IP address.
-     *
-     * The default value is `true` . Setting this to `false` enables the Kubernetes pod networking
-     * model. Most AWS Batch workloads are egress-only and don't require the overhead of IP allocation
-     * for each pod for incoming connections. For more information, see [Host
-     * namespaces](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/security/pod-security-policy/#host-namespaces)
-     * and [Pod
-     * networking](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/#pod-networking)
-     * in the *Kubernetes documentation* .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-hostnetwork)
      */
     public fun hostNetwork(): Any? = unwrap(this).getHostNetwork()
@@ -10255,63 +12054,26 @@ public open class CfnJobDefinition(
     public fun imagePullSecrets(): Any? = unwrap(this).getImagePullSecrets()
 
     /**
-     * These containers run before application containers, always runs to completion, and must
-     * complete successfully before the next container starts.
-     *
-     * These containers are registered with the Amazon EKS Connector agent and persists the
-     * registration information in the Kubernetes backend data store. For more information, see [Init
-     * Containers](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
-     * in the *Kubernetes documentation* .
-     *
-     *
-     * This object is limited to 10 elements.
-     *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-initcontainers)
      */
     public fun initContainers(): Any? = unwrap(this).getInitContainers()
 
     /**
-     * Metadata about the Kubernetes pod.
-     *
-     * For more information, see [Understanding Kubernetes
-     * Objects](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
-     * in the *Kubernetes documentation* .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-metadata)
      */
     public fun metadata(): Any? = unwrap(this).getMetadata()
 
     /**
-     * The name of the service account that's used to run the pod.
-     *
-     * For more information, see [Kubernetes service
-     * accounts](https://docs.aws.amazon.com/eks/latest/userguide/service-accounts.html) and [Configure
-     * a Kubernetes service account to assume an IAM
-     * role](https://docs.aws.amazon.com/eks/latest/userguide/associate-service-account-role.html) in
-     * the *Amazon EKS User Guide* and [Configure service accounts for
-     * pods](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
-     * in the *Kubernetes documentation* .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-serviceaccountname)
      */
     public fun serviceAccountName(): String? = unwrap(this).getServiceAccountName()
 
     /**
-     * Indicates if the processes in a container are shared, or visible, to other containers in the
-     * same pod.
-     *
-     * For more information, see [Share Process Namespace between Containers in a
-     * Pod](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/)
-     * .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-shareprocessnamespace)
      */
     public fun shareProcessNamespace(): Any? = unwrap(this).getShareProcessNamespace()
 
     /**
-     * Specifies the volumes for a job definition that uses Amazon EKS resources.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-volumes)
      */
     public fun volumes(): Any? = unwrap(this).getVolumes()
@@ -10322,60 +12084,32 @@ public open class CfnJobDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param containers The properties of the container that's used on the Amazon EKS pod.
-       *
-       * This object is limited to 10 elements.
+       * @param containers the value to be set.
        */
       public fun containers(containers: IResolvable)
 
       /**
-       * @param containers The properties of the container that's used on the Amazon EKS pod.
-       *
-       * This object is limited to 10 elements.
+       * @param containers the value to be set.
        */
       public fun containers(containers: List<Any>)
 
       /**
-       * @param containers The properties of the container that's used on the Amazon EKS pod.
-       *
-       * This object is limited to 10 elements.
+       * @param containers the value to be set.
        */
       public fun containers(vararg containers: Any)
 
       /**
-       * @param dnsPolicy The DNS policy for the pod.
-       * The default value is `ClusterFirst` . If the `hostNetwork` parameter is not specified, the
-       * default is `ClusterFirstWithHostNet` . `ClusterFirst` indicates that any DNS query that does
-       * not match the configured cluster domain suffix is forwarded to the upstream nameserver
-       * inherited from the node. For more information, see [Pod's DNS
-       * policy](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy)
-       * in the *Kubernetes documentation* .
-       *
-       * Valid values: `Default` | `ClusterFirst` | `ClusterFirstWithHostNet`
+       * @param dnsPolicy the value to be set.
        */
       public fun dnsPolicy(dnsPolicy: String)
 
       /**
-       * @param hostNetwork Indicates if the pod uses the hosts' network IP address.
-       * The default value is `true` . Setting this to `false` enables the Kubernetes pod networking
-       * model. Most AWS Batch workloads are egress-only and don't require the overhead of IP
-       * allocation for each pod for incoming connections. For more information, see [Host
-       * namespaces](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/security/pod-security-policy/#host-namespaces)
-       * and [Pod
-       * networking](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/#pod-networking)
-       * in the *Kubernetes documentation* .
+       * @param hostNetwork the value to be set.
        */
       public fun hostNetwork(hostNetwork: Boolean)
 
       /**
-       * @param hostNetwork Indicates if the pod uses the hosts' network IP address.
-       * The default value is `true` . Setting this to `false` enables the Kubernetes pod networking
-       * model. Most AWS Batch workloads are egress-only and don't require the overhead of IP
-       * allocation for each pod for incoming connections. For more information, see [Host
-       * namespaces](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/security/pod-security-policy/#host-namespaces)
-       * and [Pod
-       * networking](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/#pod-networking)
-       * in the *Kubernetes documentation* .
+       * @param hostNetwork the value to be set.
        */
       public fun hostNetwork(hostNetwork: IResolvable)
 
@@ -10395,112 +12129,64 @@ public open class CfnJobDefinition(
       public fun imagePullSecrets(vararg imagePullSecrets: Any)
 
       /**
-       * @param initContainers These containers run before application containers, always runs to
-       * completion, and must complete successfully before the next container starts.
-       * These containers are registered with the Amazon EKS Connector agent and persists the
-       * registration information in the Kubernetes backend data store. For more information, see [Init
-       * Containers](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
-       * in the *Kubernetes documentation* .
-       *
-       *
-       * This object is limited to 10 elements.
+       * @param initContainers the value to be set.
        */
       public fun initContainers(initContainers: IResolvable)
 
       /**
-       * @param initContainers These containers run before application containers, always runs to
-       * completion, and must complete successfully before the next container starts.
-       * These containers are registered with the Amazon EKS Connector agent and persists the
-       * registration information in the Kubernetes backend data store. For more information, see [Init
-       * Containers](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
-       * in the *Kubernetes documentation* .
-       *
-       *
-       * This object is limited to 10 elements.
+       * @param initContainers the value to be set.
        */
       public fun initContainers(initContainers: List<Any>)
 
       /**
-       * @param initContainers These containers run before application containers, always runs to
-       * completion, and must complete successfully before the next container starts.
-       * These containers are registered with the Amazon EKS Connector agent and persists the
-       * registration information in the Kubernetes backend data store. For more information, see [Init
-       * Containers](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
-       * in the *Kubernetes documentation* .
-       *
-       *
-       * This object is limited to 10 elements.
+       * @param initContainers the value to be set.
        */
       public fun initContainers(vararg initContainers: Any)
 
       /**
-       * @param metadata Metadata about the Kubernetes pod.
-       * For more information, see [Understanding Kubernetes
-       * Objects](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
-       * in the *Kubernetes documentation* .
+       * @param metadata the value to be set.
        */
       public fun metadata(metadata: IResolvable)
 
       /**
-       * @param metadata Metadata about the Kubernetes pod.
-       * For more information, see [Understanding Kubernetes
-       * Objects](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
-       * in the *Kubernetes documentation* .
+       * @param metadata the value to be set.
        */
       public fun metadata(metadata: MetadataProperty)
 
       /**
-       * @param metadata Metadata about the Kubernetes pod.
-       * For more information, see [Understanding Kubernetes
-       * Objects](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
-       * in the *Kubernetes documentation* .
+       * @param metadata the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d4b08aa845521711bde52771185c3919a7e074569382fc63bb622ded44148f2b")
       public fun metadata(metadata: MetadataProperty.Builder.() -> Unit)
 
       /**
-       * @param serviceAccountName The name of the service account that's used to run the pod.
-       * For more information, see [Kubernetes service
-       * accounts](https://docs.aws.amazon.com/eks/latest/userguide/service-accounts.html) and
-       * [Configure a Kubernetes service account to assume an IAM
-       * role](https://docs.aws.amazon.com/eks/latest/userguide/associate-service-account-role.html) in
-       * the *Amazon EKS User Guide* and [Configure service accounts for
-       * pods](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
-       * in the *Kubernetes documentation* .
+       * @param serviceAccountName the value to be set.
        */
       public fun serviceAccountName(serviceAccountName: String)
 
       /**
-       * @param shareProcessNamespace Indicates if the processes in a container are shared, or
-       * visible, to other containers in the same pod.
-       * For more information, see [Share Process Namespace between Containers in a
-       * Pod](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/)
-       * .
+       * @param shareProcessNamespace the value to be set.
        */
       public fun shareProcessNamespace(shareProcessNamespace: Boolean)
 
       /**
-       * @param shareProcessNamespace Indicates if the processes in a container are shared, or
-       * visible, to other containers in the same pod.
-       * For more information, see [Share Process Namespace between Containers in a
-       * Pod](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/)
-       * .
+       * @param shareProcessNamespace the value to be set.
        */
       public fun shareProcessNamespace(shareProcessNamespace: IResolvable)
 
       /**
-       * @param volumes Specifies the volumes for a job definition that uses Amazon EKS resources.
+       * @param volumes the value to be set.
        */
       public fun volumes(volumes: IResolvable)
 
       /**
-       * @param volumes Specifies the volumes for a job definition that uses Amazon EKS resources.
+       * @param volumes the value to be set.
        */
       public fun volumes(volumes: List<Any>)
 
       /**
-       * @param volumes Specifies the volumes for a job definition that uses Amazon EKS resources.
+       * @param volumes the value to be set.
        */
       public fun volumes(vararg volumes: Any)
     }
@@ -10511,68 +12197,40 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.PodPropertiesProperty.builder()
 
       /**
-       * @param containers The properties of the container that's used on the Amazon EKS pod.
-       *
-       * This object is limited to 10 elements.
+       * @param containers the value to be set.
        */
       override fun containers(containers: IResolvable) {
         cdkBuilder.containers(containers.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param containers The properties of the container that's used on the Amazon EKS pod.
-       *
-       * This object is limited to 10 elements.
+       * @param containers the value to be set.
        */
       override fun containers(containers: List<Any>) {
         cdkBuilder.containers(containers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param containers The properties of the container that's used on the Amazon EKS pod.
-       *
-       * This object is limited to 10 elements.
+       * @param containers the value to be set.
        */
       override fun containers(vararg containers: Any): Unit = containers(containers.toList())
 
       /**
-       * @param dnsPolicy The DNS policy for the pod.
-       * The default value is `ClusterFirst` . If the `hostNetwork` parameter is not specified, the
-       * default is `ClusterFirstWithHostNet` . `ClusterFirst` indicates that any DNS query that does
-       * not match the configured cluster domain suffix is forwarded to the upstream nameserver
-       * inherited from the node. For more information, see [Pod's DNS
-       * policy](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy)
-       * in the *Kubernetes documentation* .
-       *
-       * Valid values: `Default` | `ClusterFirst` | `ClusterFirstWithHostNet`
+       * @param dnsPolicy the value to be set.
        */
       override fun dnsPolicy(dnsPolicy: String) {
         cdkBuilder.dnsPolicy(dnsPolicy)
       }
 
       /**
-       * @param hostNetwork Indicates if the pod uses the hosts' network IP address.
-       * The default value is `true` . Setting this to `false` enables the Kubernetes pod networking
-       * model. Most AWS Batch workloads are egress-only and don't require the overhead of IP
-       * allocation for each pod for incoming connections. For more information, see [Host
-       * namespaces](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/security/pod-security-policy/#host-namespaces)
-       * and [Pod
-       * networking](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/#pod-networking)
-       * in the *Kubernetes documentation* .
+       * @param hostNetwork the value to be set.
        */
       override fun hostNetwork(hostNetwork: Boolean) {
         cdkBuilder.hostNetwork(hostNetwork)
       }
 
       /**
-       * @param hostNetwork Indicates if the pod uses the hosts' network IP address.
-       * The default value is `true` . Setting this to `false` enables the Kubernetes pod networking
-       * model. Most AWS Batch workloads are egress-only and don't require the overhead of IP
-       * allocation for each pod for incoming connections. For more information, see [Host
-       * namespaces](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/security/pod-security-policy/#host-namespaces)
-       * and [Pod
-       * networking](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/#pod-networking)
-       * in the *Kubernetes documentation* .
+       * @param hostNetwork the value to be set.
        */
       override fun hostNetwork(hostNetwork: IResolvable) {
         cdkBuilder.hostNetwork(hostNetwork.let(IResolvable.Companion::unwrap))
@@ -10599,74 +12257,41 @@ public open class CfnJobDefinition(
           imagePullSecrets(imagePullSecrets.toList())
 
       /**
-       * @param initContainers These containers run before application containers, always runs to
-       * completion, and must complete successfully before the next container starts.
-       * These containers are registered with the Amazon EKS Connector agent and persists the
-       * registration information in the Kubernetes backend data store. For more information, see [Init
-       * Containers](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
-       * in the *Kubernetes documentation* .
-       *
-       *
-       * This object is limited to 10 elements.
+       * @param initContainers the value to be set.
        */
       override fun initContainers(initContainers: IResolvable) {
         cdkBuilder.initContainers(initContainers.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param initContainers These containers run before application containers, always runs to
-       * completion, and must complete successfully before the next container starts.
-       * These containers are registered with the Amazon EKS Connector agent and persists the
-       * registration information in the Kubernetes backend data store. For more information, see [Init
-       * Containers](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
-       * in the *Kubernetes documentation* .
-       *
-       *
-       * This object is limited to 10 elements.
+       * @param initContainers the value to be set.
        */
       override fun initContainers(initContainers: List<Any>) {
         cdkBuilder.initContainers(initContainers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param initContainers These containers run before application containers, always runs to
-       * completion, and must complete successfully before the next container starts.
-       * These containers are registered with the Amazon EKS Connector agent and persists the
-       * registration information in the Kubernetes backend data store. For more information, see [Init
-       * Containers](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
-       * in the *Kubernetes documentation* .
-       *
-       *
-       * This object is limited to 10 elements.
+       * @param initContainers the value to be set.
        */
       override fun initContainers(vararg initContainers: Any): Unit =
           initContainers(initContainers.toList())
 
       /**
-       * @param metadata Metadata about the Kubernetes pod.
-       * For more information, see [Understanding Kubernetes
-       * Objects](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
-       * in the *Kubernetes documentation* .
+       * @param metadata the value to be set.
        */
       override fun metadata(metadata: IResolvable) {
         cdkBuilder.metadata(metadata.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param metadata Metadata about the Kubernetes pod.
-       * For more information, see [Understanding Kubernetes
-       * Objects](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
-       * in the *Kubernetes documentation* .
+       * @param metadata the value to be set.
        */
       override fun metadata(metadata: MetadataProperty) {
         cdkBuilder.metadata(metadata.let(MetadataProperty.Companion::unwrap))
       }
 
       /**
-       * @param metadata Metadata about the Kubernetes pod.
-       * For more information, see [Understanding Kubernetes
-       * Objects](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
-       * in the *Kubernetes documentation* .
+       * @param metadata the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d4b08aa845521711bde52771185c3919a7e074569382fc63bb622ded44148f2b")
@@ -10674,57 +12299,42 @@ public open class CfnJobDefinition(
           metadata(MetadataProperty(metadata))
 
       /**
-       * @param serviceAccountName The name of the service account that's used to run the pod.
-       * For more information, see [Kubernetes service
-       * accounts](https://docs.aws.amazon.com/eks/latest/userguide/service-accounts.html) and
-       * [Configure a Kubernetes service account to assume an IAM
-       * role](https://docs.aws.amazon.com/eks/latest/userguide/associate-service-account-role.html) in
-       * the *Amazon EKS User Guide* and [Configure service accounts for
-       * pods](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
-       * in the *Kubernetes documentation* .
+       * @param serviceAccountName the value to be set.
        */
       override fun serviceAccountName(serviceAccountName: String) {
         cdkBuilder.serviceAccountName(serviceAccountName)
       }
 
       /**
-       * @param shareProcessNamespace Indicates if the processes in a container are shared, or
-       * visible, to other containers in the same pod.
-       * For more information, see [Share Process Namespace between Containers in a
-       * Pod](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/)
-       * .
+       * @param shareProcessNamespace the value to be set.
        */
       override fun shareProcessNamespace(shareProcessNamespace: Boolean) {
         cdkBuilder.shareProcessNamespace(shareProcessNamespace)
       }
 
       /**
-       * @param shareProcessNamespace Indicates if the processes in a container are shared, or
-       * visible, to other containers in the same pod.
-       * For more information, see [Share Process Namespace between Containers in a
-       * Pod](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/)
-       * .
+       * @param shareProcessNamespace the value to be set.
        */
       override fun shareProcessNamespace(shareProcessNamespace: IResolvable) {
         cdkBuilder.shareProcessNamespace(shareProcessNamespace.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param volumes Specifies the volumes for a job definition that uses Amazon EKS resources.
+       * @param volumes the value to be set.
        */
       override fun volumes(volumes: IResolvable) {
         cdkBuilder.volumes(volumes.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param volumes Specifies the volumes for a job definition that uses Amazon EKS resources.
+       * @param volumes the value to be set.
        */
       override fun volumes(volumes: List<Any>) {
         cdkBuilder.volumes(volumes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param volumes Specifies the volumes for a job definition that uses Amazon EKS resources.
+       * @param volumes the value to be set.
        */
       override fun volumes(vararg volumes: Any): Unit = volumes(volumes.toList())
 
@@ -10738,43 +12348,16 @@ public open class CfnJobDefinition(
     ) : CdkObject(cdkObject),
         PodPropertiesProperty {
       /**
-       * The properties of the container that's used on the Amazon EKS pod.
-       *
-       *
-       * This object is limited to 10 elements.
-       *
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-containers)
        */
       override fun containers(): Any? = unwrap(this).getContainers()
 
       /**
-       * The DNS policy for the pod.
-       *
-       * The default value is `ClusterFirst` . If the `hostNetwork` parameter is not specified, the
-       * default is `ClusterFirstWithHostNet` . `ClusterFirst` indicates that any DNS query that does
-       * not match the configured cluster domain suffix is forwarded to the upstream nameserver
-       * inherited from the node. For more information, see [Pod's DNS
-       * policy](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy)
-       * in the *Kubernetes documentation* .
-       *
-       * Valid values: `Default` | `ClusterFirst` | `ClusterFirstWithHostNet`
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-dnspolicy)
        */
       override fun dnsPolicy(): String? = unwrap(this).getDnsPolicy()
 
       /**
-       * Indicates if the pod uses the hosts' network IP address.
-       *
-       * The default value is `true` . Setting this to `false` enables the Kubernetes pod networking
-       * model. Most AWS Batch workloads are egress-only and don't require the overhead of IP
-       * allocation for each pod for incoming connections. For more information, see [Host
-       * namespaces](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/security/pod-security-policy/#host-namespaces)
-       * and [Pod
-       * networking](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/#pod-networking)
-       * in the *Kubernetes documentation* .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-hostnetwork)
        */
       override fun hostNetwork(): Any? = unwrap(this).getHostNetwork()
@@ -10785,63 +12368,26 @@ public open class CfnJobDefinition(
       override fun imagePullSecrets(): Any? = unwrap(this).getImagePullSecrets()
 
       /**
-       * These containers run before application containers, always runs to completion, and must
-       * complete successfully before the next container starts.
-       *
-       * These containers are registered with the Amazon EKS Connector agent and persists the
-       * registration information in the Kubernetes backend data store. For more information, see [Init
-       * Containers](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
-       * in the *Kubernetes documentation* .
-       *
-       *
-       * This object is limited to 10 elements.
-       *
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-initcontainers)
        */
       override fun initContainers(): Any? = unwrap(this).getInitContainers()
 
       /**
-       * Metadata about the Kubernetes pod.
-       *
-       * For more information, see [Understanding Kubernetes
-       * Objects](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
-       * in the *Kubernetes documentation* .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-metadata)
        */
       override fun metadata(): Any? = unwrap(this).getMetadata()
 
       /**
-       * The name of the service account that's used to run the pod.
-       *
-       * For more information, see [Kubernetes service
-       * accounts](https://docs.aws.amazon.com/eks/latest/userguide/service-accounts.html) and
-       * [Configure a Kubernetes service account to assume an IAM
-       * role](https://docs.aws.amazon.com/eks/latest/userguide/associate-service-account-role.html) in
-       * the *Amazon EKS User Guide* and [Configure service accounts for
-       * pods](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
-       * in the *Kubernetes documentation* .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-serviceaccountname)
        */
       override fun serviceAccountName(): String? = unwrap(this).getServiceAccountName()
 
       /**
-       * Indicates if the processes in a container are shared, or visible, to other containers in
-       * the same pod.
-       *
-       * For more information, see [Share Process Namespace between Containers in a
-       * Pod](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/)
-       * .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-shareprocessnamespace)
        */
       override fun shareProcessNamespace(): Any? = unwrap(this).getShareProcessNamespace()
 
       /**
-       * Specifies the volumes for a job definition that uses Amazon EKS resources.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-volumes)
        */
       override fun volumes(): Any? = unwrap(this).getVolumes()
@@ -12455,6 +14001,12 @@ public open class CfnJobDefinition(
    * .value("value")
    * .build()))
    * .essential(false)
+   * .firelensConfiguration(FirelensConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .options(Map.of(
+   * "optionsKey", "options"))
+   * .build())
    * .linuxParameters(LinuxParametersProperty.builder()
    * .devices(List.of(DeviceProperty.builder()
    * .containerPath("containerPath")
@@ -12481,7 +14033,7 @@ public open class CfnJobDefinition(
    * .valueFrom("valueFrom")
    * .build()))
    * .build())
-   * .mountPoints(List.of(MountPointsProperty.builder()
+   * .mountPoints(List.of(MountPointProperty.builder()
    * .containerPath("containerPath")
    * .readOnly(false)
    * .sourceVolume("sourceVolume")
@@ -12538,7 +14090,7 @@ public open class CfnJobDefinition(
     /**
      * The environment variables to pass to a container.
      *
-     * This parameter maps to Env inthe [Create a
+     * This parameter maps to Env in the [Create a
      * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
      * section of the [Docker Remote
      * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `--env`
@@ -12573,6 +14125,18 @@ public open class CfnJobDefinition(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-essential)
      */
     public fun essential(): Any? = unwrap(this).getEssential()
+
+    /**
+     * The FireLens configuration for the container.
+     *
+     * This is used to specify and configure a log router for container logs. For more information,
+     * see [Custom
+     * log](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) routing in
+     * the *Amazon Elastic Container Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-firelensconfiguration)
+     */
+    public fun firelensConfiguration(): Any? = unwrap(this).getFirelensConfiguration()
 
     /**
      * The image used to start a container.
@@ -12851,7 +14415,7 @@ public open class CfnJobDefinition(
 
       /**
        * @param environment The environment variables to pass to a container.
-       * This parameter maps to Env inthe [Create a
+       * This parameter maps to Env in the [Create a
        * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
        * section of the [Docker Remote
        * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `--env`
@@ -12867,7 +14431,7 @@ public open class CfnJobDefinition(
 
       /**
        * @param environment The environment variables to pass to a container.
-       * This parameter maps to Env inthe [Create a
+       * This parameter maps to Env in the [Create a
        * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
        * section of the [Docker Remote
        * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `--env`
@@ -12883,7 +14447,7 @@ public open class CfnJobDefinition(
 
       /**
        * @param environment The environment variables to pass to a container.
-       * This parameter maps to Env inthe [Create a
+       * This parameter maps to Env in the [Create a
        * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
        * section of the [Docker Remote
        * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `--env`
@@ -12930,6 +14494,36 @@ public open class CfnJobDefinition(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       public fun essential(essential: IResolvable)
+
+      /**
+       * @param firelensConfiguration The FireLens configuration for the container.
+       * This is used to specify and configure a log router for container logs. For more
+       * information, see [Custom
+       * log](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) routing
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      public fun firelensConfiguration(firelensConfiguration: IResolvable)
+
+      /**
+       * @param firelensConfiguration The FireLens configuration for the container.
+       * This is used to specify and configure a log router for container logs. For more
+       * information, see [Custom
+       * log](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) routing
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      public fun firelensConfiguration(firelensConfiguration: FirelensConfigurationProperty)
+
+      /**
+       * @param firelensConfiguration The FireLens configuration for the container.
+       * This is used to specify and configure a log router for container logs. For more
+       * information, see [Custom
+       * log](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) routing
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d8d7c3a896ec049375555946a0690fe3ec3e7c270b1a4d7e2d582b71a7271c2d")
+      public
+          fun firelensConfiguration(firelensConfiguration: FirelensConfigurationProperty.Builder.() -> Unit)
 
       /**
        * @param image The image used to start a container. 
@@ -13439,7 +15033,7 @@ public open class CfnJobDefinition(
 
       /**
        * @param environment The environment variables to pass to a container.
-       * This parameter maps to Env inthe [Create a
+       * This parameter maps to Env in the [Create a
        * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
        * section of the [Docker Remote
        * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `--env`
@@ -13457,7 +15051,7 @@ public open class CfnJobDefinition(
 
       /**
        * @param environment The environment variables to pass to a container.
-       * This parameter maps to Env inthe [Create a
+       * This parameter maps to Env in the [Create a
        * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
        * section of the [Docker Remote
        * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `--env`
@@ -13475,7 +15069,7 @@ public open class CfnJobDefinition(
 
       /**
        * @param environment The environment variables to pass to a container.
-       * This parameter maps to Env inthe [Create a
+       * This parameter maps to Env in the [Create a
        * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
        * section of the [Docker Remote
        * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `--env`
@@ -13526,6 +15120,41 @@ public open class CfnJobDefinition(
       override fun essential(essential: IResolvable) {
         cdkBuilder.essential(essential.let(IResolvable.Companion::unwrap))
       }
+
+      /**
+       * @param firelensConfiguration The FireLens configuration for the container.
+       * This is used to specify and configure a log router for container logs. For more
+       * information, see [Custom
+       * log](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) routing
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      override fun firelensConfiguration(firelensConfiguration: IResolvable) {
+        cdkBuilder.firelensConfiguration(firelensConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param firelensConfiguration The FireLens configuration for the container.
+       * This is used to specify and configure a log router for container logs. For more
+       * information, see [Custom
+       * log](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) routing
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      override fun firelensConfiguration(firelensConfiguration: FirelensConfigurationProperty) {
+        cdkBuilder.firelensConfiguration(firelensConfiguration.let(FirelensConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param firelensConfiguration The FireLens configuration for the container.
+       * This is used to specify and configure a log router for container logs. For more
+       * information, see [Custom
+       * log](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) routing
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d8d7c3a896ec049375555946a0690fe3ec3e7c270b1a4d7e2d582b71a7271c2d")
+      override
+          fun firelensConfiguration(firelensConfiguration: FirelensConfigurationProperty.Builder.() -> Unit):
+          Unit = firelensConfiguration(FirelensConfigurationProperty(firelensConfiguration))
 
       /**
        * @param image The image used to start a container. 
@@ -14060,7 +15689,7 @@ public open class CfnJobDefinition(
       /**
        * The environment variables to pass to a container.
        *
-       * This parameter maps to Env inthe [Create a
+       * This parameter maps to Env in the [Create a
        * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
        * section of the [Docker Remote
        * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `--env`
@@ -14095,6 +15724,18 @@ public open class CfnJobDefinition(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-essential)
        */
       override fun essential(): Any? = unwrap(this).getEssential()
+
+      /**
+       * The FireLens configuration for the container.
+       *
+       * This is used to specify and configure a log router for container logs. For more
+       * information, see [Custom
+       * log](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) routing
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-firelensconfiguration)
+       */
+      override fun firelensConfiguration(): Any? = unwrap(this).getFirelensConfiguration()
 
       /**
        * The image used to start a container.
@@ -14347,8 +15988,6 @@ public open class CfnJobDefinition(
   }
 
   /**
-   * An object that represents a job timeout configuration.
-   *
    * Example:
    *
    * ```
@@ -14364,17 +16003,6 @@ public open class CfnJobDefinition(
    */
   public interface TimeoutProperty {
     /**
-     * The job timeout time (in seconds) that's measured from the job attempt's `startedAt`
-     * timestamp.
-     *
-     * After this time passes, AWS Batch terminates your jobs if they aren't finished. The minimum
-     * value for the timeout is 60 seconds.
-     *
-     * For array jobs, the timeout applies to the child jobs, not to the parent array job.
-     *
-     * For multi-node parallel (MNP) jobs, the timeout applies to the whole job, not to the
-     * individual nodes.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-timeout.html#cfn-batch-jobdefinition-timeout-attemptdurationseconds)
      */
     public fun attemptDurationSeconds(): Number? = unwrap(this).getAttemptDurationSeconds()
@@ -14385,15 +16013,7 @@ public open class CfnJobDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param attemptDurationSeconds The job timeout time (in seconds) that's measured from the
-       * job attempt's `startedAt` timestamp.
-       * After this time passes, AWS Batch terminates your jobs if they aren't finished. The minimum
-       * value for the timeout is 60 seconds.
-       *
-       * For array jobs, the timeout applies to the child jobs, not to the parent array job.
-       *
-       * For multi-node parallel (MNP) jobs, the timeout applies to the whole job, not to the
-       * individual nodes.
+       * @param attemptDurationSeconds the value to be set.
        */
       public fun attemptDurationSeconds(attemptDurationSeconds: Number)
     }
@@ -14404,15 +16024,7 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.TimeoutProperty.builder()
 
       /**
-       * @param attemptDurationSeconds The job timeout time (in seconds) that's measured from the
-       * job attempt's `startedAt` timestamp.
-       * After this time passes, AWS Batch terminates your jobs if they aren't finished. The minimum
-       * value for the timeout is 60 seconds.
-       *
-       * For array jobs, the timeout applies to the child jobs, not to the parent array job.
-       *
-       * For multi-node parallel (MNP) jobs, the timeout applies to the whole job, not to the
-       * individual nodes.
+       * @param attemptDurationSeconds the value to be set.
        */
       override fun attemptDurationSeconds(attemptDurationSeconds: Number) {
         cdkBuilder.attemptDurationSeconds(attemptDurationSeconds)
@@ -14427,17 +16039,6 @@ public open class CfnJobDefinition(
     ) : CdkObject(cdkObject),
         TimeoutProperty {
       /**
-       * The job timeout time (in seconds) that's measured from the job attempt's `startedAt`
-       * timestamp.
-       *
-       * After this time passes, AWS Batch terminates your jobs if they aren't finished. The minimum
-       * value for the timeout is 60 seconds.
-       *
-       * For array jobs, the timeout applies to the child jobs, not to the parent array job.
-       *
-       * For multi-node parallel (MNP) jobs, the timeout applies to the whole job, not to the
-       * individual nodes.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-timeout.html#cfn-batch-jobdefinition-timeout-attemptdurationseconds)
        */
       override fun attemptDurationSeconds(): Number? = unwrap(this).getAttemptDurationSeconds()
@@ -14808,13 +16409,6 @@ public open class CfnJobDefinition(
   }
 
   /**
-   * Determine whether your data volume persists on the host container instance and where it's
-   * stored.
-   *
-   * If this parameter is empty, then the Docker daemon assigns a host path for your data volume.
-   * However, the data isn't guaranteed to persist after the containers that are associated with it
-   * stop running.
-   *
    * Example:
    *
    * ```
@@ -14830,19 +16424,6 @@ public open class CfnJobDefinition(
    */
   public interface VolumesHostProperty {
     /**
-     * The path on the host container instance that's presented to the container.
-     *
-     * If this parameter is empty, then the Docker daemon has assigned a host path for you. If this
-     * parameter contains a file location, then the data volume persists at the specified location on
-     * the host container instance until you delete it manually. If the source path location doesn't
-     * exist on the host container instance, the Docker daemon creates it. If the location does exist,
-     * the contents of the source path folder are exported.
-     *
-     *
-     * This parameter isn't applicable to jobs that run on Fargate resources. Don't provide this for
-     * these jobs.
-     *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-volumeshost.html#cfn-batch-jobdefinition-volumeshost-sourcepath)
      */
     public fun sourcePath(): String? = unwrap(this).getSourcePath()
@@ -14853,17 +16434,7 @@ public open class CfnJobDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param sourcePath The path on the host container instance that's presented to the
-       * container.
-       * If this parameter is empty, then the Docker daemon has assigned a host path for you. If
-       * this parameter contains a file location, then the data volume persists at the specified
-       * location on the host container instance until you delete it manually. If the source path
-       * location doesn't exist on the host container instance, the Docker daemon creates it. If the
-       * location does exist, the contents of the source path folder are exported.
-       *
-       *
-       * This parameter isn't applicable to jobs that run on Fargate resources. Don't provide this
-       * for these jobs.
+       * @param sourcePath the value to be set.
        */
       public fun sourcePath(sourcePath: String)
     }
@@ -14874,17 +16445,7 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.VolumesHostProperty.builder()
 
       /**
-       * @param sourcePath The path on the host container instance that's presented to the
-       * container.
-       * If this parameter is empty, then the Docker daemon has assigned a host path for you. If
-       * this parameter contains a file location, then the data volume persists at the specified
-       * location on the host container instance until you delete it manually. If the source path
-       * location doesn't exist on the host container instance, the Docker daemon creates it. If the
-       * location does exist, the contents of the source path folder are exported.
-       *
-       *
-       * This parameter isn't applicable to jobs that run on Fargate resources. Don't provide this
-       * for these jobs.
+       * @param sourcePath the value to be set.
        */
       override fun sourcePath(sourcePath: String) {
         cdkBuilder.sourcePath(sourcePath)
@@ -14899,19 +16460,6 @@ public open class CfnJobDefinition(
     ) : CdkObject(cdkObject),
         VolumesHostProperty {
       /**
-       * The path on the host container instance that's presented to the container.
-       *
-       * If this parameter is empty, then the Docker daemon has assigned a host path for you. If
-       * this parameter contains a file location, then the data volume persists at the specified
-       * location on the host container instance until you delete it manually. If the source path
-       * location doesn't exist on the host container instance, the Docker daemon creates it. If the
-       * location does exist, the contents of the source path folder are exported.
-       *
-       *
-       * This parameter isn't applicable to jobs that run on Fargate resources. Don't provide this
-       * for these jobs.
-       *
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-volumeshost.html#cfn-batch-jobdefinition-volumeshost-sourcepath)
        */
       override fun sourcePath(): String? = unwrap(this).getSourcePath()
@@ -14936,8 +16484,6 @@ public open class CfnJobDefinition(
   }
 
   /**
-   * A list of volumes that are associated with the job.
-   *
    * Example:
    *
    * ```
@@ -14967,40 +16513,16 @@ public open class CfnJobDefinition(
    */
   public interface VolumesProperty {
     /**
-     * This is used when you're using an Amazon Elastic File System file system for job storage.
-     *
-     * For more information, see [Amazon EFS
-     * Volumes](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html) in the *AWS Batch
-     * User Guide* .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-volumes.html#cfn-batch-jobdefinition-volumes-efsvolumeconfiguration)
      */
     public fun efsVolumeConfiguration(): Any? = unwrap(this).getEfsVolumeConfiguration()
 
     /**
-     * The contents of the `host` parameter determine whether your data volume persists on the host
-     * container instance and where it's stored.
-     *
-     * If the host parameter is empty, then the Docker daemon assigns a host path for your data
-     * volume. However, the data isn't guaranteed to persist after the containers that are associated
-     * with it stop running.
-     *
-     *
-     * This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't
-     * be provided.
-     *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-volumes.html#cfn-batch-jobdefinition-volumes-host)
      */
     public fun host(): Any? = unwrap(this).getHost()
 
     /**
-     * The name of the volume.
-     *
-     * It can be up to 255 characters long. It can contain uppercase and lowercase letters, numbers,
-     * hyphens (-), and underscores (_). This name is referenced in the `sourceVolume` parameter of
-     * container definition `mountPoints` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-volumes.html#cfn-batch-jobdefinition-volumes-name)
      */
     public fun name(): String? = unwrap(this).getName()
@@ -15011,29 +16533,17 @@ public open class CfnJobDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param efsVolumeConfiguration This is used when you're using an Amazon Elastic File System
-       * file system for job storage.
-       * For more information, see [Amazon EFS
-       * Volumes](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html) in the *AWS
-       * Batch User Guide* .
+       * @param efsVolumeConfiguration the value to be set.
        */
       public fun efsVolumeConfiguration(efsVolumeConfiguration: IResolvable)
 
       /**
-       * @param efsVolumeConfiguration This is used when you're using an Amazon Elastic File System
-       * file system for job storage.
-       * For more information, see [Amazon EFS
-       * Volumes](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html) in the *AWS
-       * Batch User Guide* .
+       * @param efsVolumeConfiguration the value to be set.
        */
       public fun efsVolumeConfiguration(efsVolumeConfiguration: EfsVolumeConfigurationProperty)
 
       /**
-       * @param efsVolumeConfiguration This is used when you're using an Amazon Elastic File System
-       * file system for job storage.
-       * For more information, see [Amazon EFS
-       * Volumes](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html) in the *AWS
-       * Batch User Guide* .
+       * @param efsVolumeConfiguration the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("39e3c0c777d8054e49cf8a6374ec7913736c25549290310919297432a3e67e03")
@@ -15041,51 +16551,24 @@ public open class CfnJobDefinition(
           fun efsVolumeConfiguration(efsVolumeConfiguration: EfsVolumeConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param host The contents of the `host` parameter determine whether your data volume
-       * persists on the host container instance and where it's stored.
-       * If the host parameter is empty, then the Docker daemon assigns a host path for your data
-       * volume. However, the data isn't guaranteed to persist after the containers that are associated
-       * with it stop running.
-       *
-       *
-       * This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't
-       * be provided.
+       * @param host the value to be set.
        */
       public fun host(host: IResolvable)
 
       /**
-       * @param host The contents of the `host` parameter determine whether your data volume
-       * persists on the host container instance and where it's stored.
-       * If the host parameter is empty, then the Docker daemon assigns a host path for your data
-       * volume. However, the data isn't guaranteed to persist after the containers that are associated
-       * with it stop running.
-       *
-       *
-       * This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't
-       * be provided.
+       * @param host the value to be set.
        */
       public fun host(host: VolumesHostProperty)
 
       /**
-       * @param host The contents of the `host` parameter determine whether your data volume
-       * persists on the host container instance and where it's stored.
-       * If the host parameter is empty, then the Docker daemon assigns a host path for your data
-       * volume. However, the data isn't guaranteed to persist after the containers that are associated
-       * with it stop running.
-       *
-       *
-       * This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't
-       * be provided.
+       * @param host the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b9f307de4c2cf22a50de68540c5f0e5ecb133e07393df0da68a313d24480803f")
       public fun host(host: VolumesHostProperty.Builder.() -> Unit)
 
       /**
-       * @param name The name of the volume.
-       * It can be up to 255 characters long. It can contain uppercase and lowercase letters,
-       * numbers, hyphens (-), and underscores (_). This name is referenced in the `sourceVolume`
-       * parameter of container definition `mountPoints` .
+       * @param name the value to be set.
        */
       public fun name(name: String)
     }
@@ -15096,33 +16579,21 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.VolumesProperty.builder()
 
       /**
-       * @param efsVolumeConfiguration This is used when you're using an Amazon Elastic File System
-       * file system for job storage.
-       * For more information, see [Amazon EFS
-       * Volumes](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html) in the *AWS
-       * Batch User Guide* .
+       * @param efsVolumeConfiguration the value to be set.
        */
       override fun efsVolumeConfiguration(efsVolumeConfiguration: IResolvable) {
         cdkBuilder.efsVolumeConfiguration(efsVolumeConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param efsVolumeConfiguration This is used when you're using an Amazon Elastic File System
-       * file system for job storage.
-       * For more information, see [Amazon EFS
-       * Volumes](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html) in the *AWS
-       * Batch User Guide* .
+       * @param efsVolumeConfiguration the value to be set.
        */
       override fun efsVolumeConfiguration(efsVolumeConfiguration: EfsVolumeConfigurationProperty) {
         cdkBuilder.efsVolumeConfiguration(efsVolumeConfiguration.let(EfsVolumeConfigurationProperty.Companion::unwrap))
       }
 
       /**
-       * @param efsVolumeConfiguration This is used when you're using an Amazon Elastic File System
-       * file system for job storage.
-       * For more information, see [Amazon EFS
-       * Volumes](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html) in the *AWS
-       * Batch User Guide* .
+       * @param efsVolumeConfiguration the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("39e3c0c777d8054e49cf8a6374ec7913736c25549290310919297432a3e67e03")
@@ -15131,45 +16602,21 @@ public open class CfnJobDefinition(
           Unit = efsVolumeConfiguration(EfsVolumeConfigurationProperty(efsVolumeConfiguration))
 
       /**
-       * @param host The contents of the `host` parameter determine whether your data volume
-       * persists on the host container instance and where it's stored.
-       * If the host parameter is empty, then the Docker daemon assigns a host path for your data
-       * volume. However, the data isn't guaranteed to persist after the containers that are associated
-       * with it stop running.
-       *
-       *
-       * This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't
-       * be provided.
+       * @param host the value to be set.
        */
       override fun host(host: IResolvable) {
         cdkBuilder.host(host.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param host The contents of the `host` parameter determine whether your data volume
-       * persists on the host container instance and where it's stored.
-       * If the host parameter is empty, then the Docker daemon assigns a host path for your data
-       * volume. However, the data isn't guaranteed to persist after the containers that are associated
-       * with it stop running.
-       *
-       *
-       * This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't
-       * be provided.
+       * @param host the value to be set.
        */
       override fun host(host: VolumesHostProperty) {
         cdkBuilder.host(host.let(VolumesHostProperty.Companion::unwrap))
       }
 
       /**
-       * @param host The contents of the `host` parameter determine whether your data volume
-       * persists on the host container instance and where it's stored.
-       * If the host parameter is empty, then the Docker daemon assigns a host path for your data
-       * volume. However, the data isn't guaranteed to persist after the containers that are associated
-       * with it stop running.
-       *
-       *
-       * This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't
-       * be provided.
+       * @param host the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b9f307de4c2cf22a50de68540c5f0e5ecb133e07393df0da68a313d24480803f")
@@ -15177,10 +16624,7 @@ public open class CfnJobDefinition(
           host(VolumesHostProperty(host))
 
       /**
-       * @param name The name of the volume.
-       * It can be up to 255 characters long. It can contain uppercase and lowercase letters,
-       * numbers, hyphens (-), and underscores (_). This name is referenced in the `sourceVolume`
-       * parameter of container definition `mountPoints` .
+       * @param name the value to be set.
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -15195,40 +16639,16 @@ public open class CfnJobDefinition(
     ) : CdkObject(cdkObject),
         VolumesProperty {
       /**
-       * This is used when you're using an Amazon Elastic File System file system for job storage.
-       *
-       * For more information, see [Amazon EFS
-       * Volumes](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html) in the *AWS
-       * Batch User Guide* .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-volumes.html#cfn-batch-jobdefinition-volumes-efsvolumeconfiguration)
        */
       override fun efsVolumeConfiguration(): Any? = unwrap(this).getEfsVolumeConfiguration()
 
       /**
-       * The contents of the `host` parameter determine whether your data volume persists on the
-       * host container instance and where it's stored.
-       *
-       * If the host parameter is empty, then the Docker daemon assigns a host path for your data
-       * volume. However, the data isn't guaranteed to persist after the containers that are associated
-       * with it stop running.
-       *
-       *
-       * This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't
-       * be provided.
-       *
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-volumes.html#cfn-batch-jobdefinition-volumes-host)
        */
       override fun host(): Any? = unwrap(this).getHost()
 
       /**
-       * The name of the volume.
-       *
-       * It can be up to 255 characters long. It can contain uppercase and lowercase letters,
-       * numbers, hyphens (-), and underscores (_). This name is referenced in the `sourceVolume`
-       * parameter of container definition `mountPoints` .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-volumes.html#cfn-batch-jobdefinition-volumes-name)
        */
       override fun name(): String? = unwrap(this).getName()

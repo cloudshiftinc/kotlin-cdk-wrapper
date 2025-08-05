@@ -459,7 +459,7 @@ public open class CfnExtension(
     public fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * The action name.
+     * The extension name.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-extension-action.html#cfn-appconfig-extension-action-name)
      */
@@ -494,7 +494,7 @@ public open class CfnExtension(
       public fun description(description: String)
 
       /**
-       * @param name The action name. 
+       * @param name The extension name. 
        */
       public fun name(name: String)
 
@@ -526,7 +526,7 @@ public open class CfnExtension(
       }
 
       /**
-       * @param name The action name. 
+       * @param name The extension name. 
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -566,7 +566,7 @@ public open class CfnExtension(
       override fun description(): String? = unwrap(this).getDescription()
 
       /**
-       * The action name.
+       * The extension name.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-extension-action.html#cfn-appconfig-extension-action-name)
        */

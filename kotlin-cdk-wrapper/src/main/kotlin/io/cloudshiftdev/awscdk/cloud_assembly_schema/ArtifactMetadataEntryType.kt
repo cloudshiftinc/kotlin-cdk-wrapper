@@ -11,6 +11,7 @@ public enum class ArtifactMetadataEntryType(
   ERROR(software.amazon.awscdk.cloud_assembly_schema.ArtifactMetadataEntryType.ERROR),
   LOGICAL_ID(software.amazon.awscdk.cloud_assembly_schema.ArtifactMetadataEntryType.LOGICAL_ID),
   STACK_TAGS(software.amazon.awscdk.cloud_assembly_schema.ArtifactMetadataEntryType.STACK_TAGS),
+  DO_NOT_REFACTOR(software.amazon.awscdk.cloud_assembly_schema.ArtifactMetadataEntryType.DO_NOT_REFACTOR),
   ;
 
   public companion object {
@@ -29,6 +30,8 @@ public enum class ArtifactMetadataEntryType(
           ArtifactMetadataEntryType.LOGICAL_ID
       software.amazon.awscdk.cloud_assembly_schema.ArtifactMetadataEntryType.STACK_TAGS ->
           ArtifactMetadataEntryType.STACK_TAGS
+      software.amazon.awscdk.cloud_assembly_schema.ArtifactMetadataEntryType.DO_NOT_REFACTOR ->
+          ArtifactMetadataEntryType.DO_NOT_REFACTOR
     }
 
     internal fun unwrap(wrapped: ArtifactMetadataEntryType):

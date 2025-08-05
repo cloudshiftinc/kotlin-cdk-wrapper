@@ -1321,7 +1321,9 @@ public open class CfnCluster(
     /**
      * If `true` , the data in the cluster is encrypted at rest.
      *
-     * Default: false
+     * If you set the value on this parameter to `false` , the request will fail.
+     *
+     * Default: true
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-encrypted)
      * @param encrypted If `true` , the data in the cluster is encrypted at rest. 
@@ -1331,7 +1333,9 @@ public open class CfnCluster(
     /**
      * If `true` , the data in the cluster is encrypted at rest.
      *
-     * Default: false
+     * If you set the value on this parameter to `false` , the request will fail.
+     *
+     * Default: true
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-encrypted)
      * @param encrypted If `true` , the data in the cluster is encrypted at rest. 
@@ -1723,6 +1727,8 @@ public open class CfnCluster(
     /**
      * If `true` , the cluster can be accessed from a public network.
      *
+     * Default: false
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-publiclyaccessible)
      * @param publiclyAccessible If `true` , the cluster can be accessed from a public network. 
      */
@@ -1730,6 +1736,8 @@ public open class CfnCluster(
 
     /**
      * If `true` , the cluster can be accessed from a public network.
+     *
+     * Default: false
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-publiclyaccessible)
      * @param publiclyAccessible If `true` , the cluster can be accessed from a public network. 
@@ -2279,7 +2287,9 @@ public open class CfnCluster(
     /**
      * If `true` , the data in the cluster is encrypted at rest.
      *
-     * Default: false
+     * If you set the value on this parameter to `false` , the request will fail.
+     *
+     * Default: true
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-encrypted)
      * @param encrypted If `true` , the data in the cluster is encrypted at rest. 
@@ -2291,7 +2301,9 @@ public open class CfnCluster(
     /**
      * If `true` , the data in the cluster is encrypted at rest.
      *
-     * Default: false
+     * If you set the value on this parameter to `false` , the request will fail.
+     *
+     * Default: true
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-encrypted)
      * @param encrypted If `true` , the data in the cluster is encrypted at rest. 
@@ -2737,6 +2749,8 @@ public open class CfnCluster(
     /**
      * If `true` , the cluster can be accessed from a public network.
      *
+     * Default: false
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-publiclyaccessible)
      * @param publiclyAccessible If `true` , the cluster can be accessed from a public network. 
      */
@@ -2746,6 +2760,8 @@ public open class CfnCluster(
 
     /**
      * If `true` , the cluster can be accessed from a public network.
+     *
+     * Default: false
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-publiclyaccessible)
      * @param publiclyAccessible If `true` , the cluster can be accessed from a public network. 

@@ -336,7 +336,7 @@ public interface CfnStageProps {
      * Variable names are limited to alphanumeric characters. Values must match the following
      * regular expression: `[A-Za-z0-9-._~:/?#&amp;=,]+` .
      */
-    public fun variables(variables: IResolvable)
+    public fun variables(variables: Map<String, String>)
 
     /**
      * @param variables A map (string-to-string map) that defines the stage variables, where the
@@ -344,7 +344,7 @@ public interface CfnStageProps {
      * Variable names are limited to alphanumeric characters. Values must match the following
      * regular expression: `[A-Za-z0-9-._~:/?#&amp;=,]+` .
      */
-    public fun variables(variables: Map<String, String>)
+    public fun variables(variables: IResolvable)
   }
 
   private class BuilderImpl : Builder {
@@ -533,8 +533,8 @@ public interface CfnStageProps {
      * Variable names are limited to alphanumeric characters. Values must match the following
      * regular expression: `[A-Za-z0-9-._~:/?#&amp;=,]+` .
      */
-    override fun variables(variables: IResolvable) {
-      cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
+    override fun variables(variables: Map<String, String>) {
+      cdkBuilder.variables(variables)
     }
 
     /**
@@ -543,8 +543,8 @@ public interface CfnStageProps {
      * Variable names are limited to alphanumeric characters. Values must match the following
      * regular expression: `[A-Za-z0-9-._~:/?#&amp;=,]+` .
      */
-    override fun variables(variables: Map<String, String>) {
-      cdkBuilder.variables(variables)
+    override fun variables(variables: IResolvable) {
+      cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.CfnStageProps =

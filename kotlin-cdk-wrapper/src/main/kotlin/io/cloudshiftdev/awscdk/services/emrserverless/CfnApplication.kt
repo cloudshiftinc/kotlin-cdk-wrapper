@@ -50,6 +50,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .enabled(false)
  * .idleTimeoutMinutes(123)
  * .build())
+ * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+ * .identityCenterInstanceArn("identityCenterInstanceArn")
+ * .build())
  * .imageConfiguration(ImageConfigurationInputProperty.builder()
  * .imageUri("imageUri")
  * .build())
@@ -91,6 +94,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .enabled(false)
  * .encryptionKeyArn("encryptionKeyArn")
  * .build())
+ * .prometheusMonitoringConfiguration(PrometheusMonitoringConfigurationProperty.builder()
+ * .remoteWriteUrl("remoteWriteUrl")
+ * .build())
  * .s3MonitoringConfiguration(S3MonitoringConfigurationProperty.builder()
  * .encryptionKeyArn("encryptionKeyArn")
  * .logUri("logUri")
@@ -108,6 +114,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .properties(Map.of(
  * "propertiesKey", "properties"))
  * .build()))
+ * .schedulerConfiguration(SchedulerConfigurationProperty.builder()
+ * .maxConcurrentRuns(123)
+ * .queueTimeoutMinutes(123)
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -224,6 +234,35 @@ public open class CfnApplication(
   @JvmName("ea4e5defa32ba28ac648747a6c25c971b88fcc98750fd1f70a7fa799513da492")
   public open fun autoStopConfiguration(`value`: AutoStopConfigurationProperty.Builder.() -> Unit):
       Unit = autoStopConfiguration(AutoStopConfigurationProperty(`value`))
+
+  /**
+   * A configuration specification to be used when provisioning an application.
+   */
+  public open fun identityCenterConfiguration(): Any? =
+      unwrap(this).getIdentityCenterConfiguration()
+
+  /**
+   * A configuration specification to be used when provisioning an application.
+   */
+  public open fun identityCenterConfiguration(`value`: IResolvable) {
+    unwrap(this).setIdentityCenterConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * A configuration specification to be used when provisioning an application.
+   */
+  public open fun identityCenterConfiguration(`value`: IdentityCenterConfigurationProperty) {
+    unwrap(this).setIdentityCenterConfiguration(`value`.let(IdentityCenterConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * A configuration specification to be used when provisioning an application.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("c74460ed5d23f7d87fe7a99f23a41cd0e505d7ef40ad10a2382e5c92280ee71a")
+  public open
+      fun identityCenterConfiguration(`value`: IdentityCenterConfigurationProperty.Builder.() -> Unit):
+      Unit = identityCenterConfiguration(IdentityCenterConfigurationProperty(`value`))
 
   /**
    * The image configuration applied to all worker types.
@@ -469,6 +508,34 @@ public open class CfnApplication(
       runtimeConfiguration(`value`.toList())
 
   /**
+   * The scheduler configuration for batch and streaming jobs running on this application.
+   */
+  public open fun schedulerConfiguration(): Any? = unwrap(this).getSchedulerConfiguration()
+
+  /**
+   * The scheduler configuration for batch and streaming jobs running on this application.
+   */
+  public open fun schedulerConfiguration(`value`: IResolvable) {
+    unwrap(this).setSchedulerConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The scheduler configuration for batch and streaming jobs running on this application.
+   */
+  public open fun schedulerConfiguration(`value`: SchedulerConfigurationProperty) {
+    unwrap(this).setSchedulerConfiguration(`value`.let(SchedulerConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The scheduler configuration for batch and streaming jobs running on this application.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("ef667ee41018129a7846fdb6c4ae30987e8bed4c8aeb898582f164aaee9f4135")
+  public open
+      fun schedulerConfiguration(`value`: SchedulerConfigurationProperty.Builder.() -> Unit): Unit =
+      schedulerConfiguration(SchedulerConfigurationProperty(`value`))
+
+  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
@@ -597,6 +664,49 @@ public open class CfnApplication(
     @JvmName("7d640017ae5c55847f0b88c39709b93ad9217e264081c45ad93a0f20c4adc60a")
     public
         fun autoStopConfiguration(autoStopConfiguration: AutoStopConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * A configuration specification to be used when provisioning an application.
+     *
+     * A configuration consists of a classification, properties, and optional nested configurations.
+     * A classification refers to an application-specific configuration file. Properties are the
+     * settings you want to change in that file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-identitycenterconfiguration)
+     * @param identityCenterConfiguration A configuration specification to be used when provisioning
+     * an application. 
+     */
+    public fun identityCenterConfiguration(identityCenterConfiguration: IResolvable)
+
+    /**
+     * A configuration specification to be used when provisioning an application.
+     *
+     * A configuration consists of a classification, properties, and optional nested configurations.
+     * A classification refers to an application-specific configuration file. Properties are the
+     * settings you want to change in that file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-identitycenterconfiguration)
+     * @param identityCenterConfiguration A configuration specification to be used when provisioning
+     * an application. 
+     */
+    public
+        fun identityCenterConfiguration(identityCenterConfiguration: IdentityCenterConfigurationProperty)
+
+    /**
+     * A configuration specification to be used when provisioning an application.
+     *
+     * A configuration consists of a classification, properties, and optional nested configurations.
+     * A classification refers to an application-specific configuration file. Properties are the
+     * settings you want to change in that file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-identitycenterconfiguration)
+     * @param identityCenterConfiguration A configuration specification to be used when provisioning
+     * an application. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b46aa939d5fa1c4aecb69e7d31016692b9d66c8e409601c5b152d1a1e53d2615")
+    public
+        fun identityCenterConfiguration(identityCenterConfiguration: IdentityCenterConfigurationProperty.Builder.() -> Unit)
 
     /**
      * The image configuration applied to all worker types.
@@ -869,6 +979,42 @@ public open class CfnApplication(
     public fun runtimeConfiguration(vararg runtimeConfiguration: Any)
 
     /**
+     * The scheduler configuration for batch and streaming jobs running on this application.
+     *
+     * Supported with release labels emr-7.0.0 and above.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-schedulerconfiguration)
+     * @param schedulerConfiguration The scheduler configuration for batch and streaming jobs
+     * running on this application. 
+     */
+    public fun schedulerConfiguration(schedulerConfiguration: IResolvable)
+
+    /**
+     * The scheduler configuration for batch and streaming jobs running on this application.
+     *
+     * Supported with release labels emr-7.0.0 and above.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-schedulerconfiguration)
+     * @param schedulerConfiguration The scheduler configuration for batch and streaming jobs
+     * running on this application. 
+     */
+    public fun schedulerConfiguration(schedulerConfiguration: SchedulerConfigurationProperty)
+
+    /**
+     * The scheduler configuration for batch and streaming jobs running on this application.
+     *
+     * Supported with release labels emr-7.0.0 and above.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-schedulerconfiguration)
+     * @param schedulerConfiguration The scheduler configuration for batch and streaming jobs
+     * running on this application. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("cbfec8afb96bf4b8a67dee2b52141d81397c831b1a5be95922dbe065da4672d7")
+    public
+        fun schedulerConfiguration(schedulerConfiguration: SchedulerConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * The tags assigned to the application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-tags)
@@ -998,6 +1144,55 @@ public open class CfnApplication(
     override
         fun autoStopConfiguration(autoStopConfiguration: AutoStopConfigurationProperty.Builder.() -> Unit):
         Unit = autoStopConfiguration(AutoStopConfigurationProperty(autoStopConfiguration))
+
+    /**
+     * A configuration specification to be used when provisioning an application.
+     *
+     * A configuration consists of a classification, properties, and optional nested configurations.
+     * A classification refers to an application-specific configuration file. Properties are the
+     * settings you want to change in that file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-identitycenterconfiguration)
+     * @param identityCenterConfiguration A configuration specification to be used when provisioning
+     * an application. 
+     */
+    override fun identityCenterConfiguration(identityCenterConfiguration: IResolvable) {
+      cdkBuilder.identityCenterConfiguration(identityCenterConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * A configuration specification to be used when provisioning an application.
+     *
+     * A configuration consists of a classification, properties, and optional nested configurations.
+     * A classification refers to an application-specific configuration file. Properties are the
+     * settings you want to change in that file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-identitycenterconfiguration)
+     * @param identityCenterConfiguration A configuration specification to be used when provisioning
+     * an application. 
+     */
+    override
+        fun identityCenterConfiguration(identityCenterConfiguration: IdentityCenterConfigurationProperty) {
+      cdkBuilder.identityCenterConfiguration(identityCenterConfiguration.let(IdentityCenterConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * A configuration specification to be used when provisioning an application.
+     *
+     * A configuration consists of a classification, properties, and optional nested configurations.
+     * A classification refers to an application-specific configuration file. Properties are the
+     * settings you want to change in that file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-identitycenterconfiguration)
+     * @param identityCenterConfiguration A configuration specification to be used when provisioning
+     * an application. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b46aa939d5fa1c4aecb69e7d31016692b9d66c8e409601c5b152d1a1e53d2615")
+    override
+        fun identityCenterConfiguration(identityCenterConfiguration: IdentityCenterConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        identityCenterConfiguration(IdentityCenterConfigurationProperty(identityCenterConfiguration))
 
     /**
      * The image configuration applied to all worker types.
@@ -1309,6 +1504,47 @@ public open class CfnApplication(
      */
     override fun runtimeConfiguration(vararg runtimeConfiguration: Any): Unit =
         runtimeConfiguration(runtimeConfiguration.toList())
+
+    /**
+     * The scheduler configuration for batch and streaming jobs running on this application.
+     *
+     * Supported with release labels emr-7.0.0 and above.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-schedulerconfiguration)
+     * @param schedulerConfiguration The scheduler configuration for batch and streaming jobs
+     * running on this application. 
+     */
+    override fun schedulerConfiguration(schedulerConfiguration: IResolvable) {
+      cdkBuilder.schedulerConfiguration(schedulerConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The scheduler configuration for batch and streaming jobs running on this application.
+     *
+     * Supported with release labels emr-7.0.0 and above.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-schedulerconfiguration)
+     * @param schedulerConfiguration The scheduler configuration for batch and streaming jobs
+     * running on this application. 
+     */
+    override fun schedulerConfiguration(schedulerConfiguration: SchedulerConfigurationProperty) {
+      cdkBuilder.schedulerConfiguration(schedulerConfiguration.let(SchedulerConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The scheduler configuration for batch and streaming jobs running on this application.
+     *
+     * Supported with release labels emr-7.0.0 and above.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-schedulerconfiguration)
+     * @param schedulerConfiguration The scheduler configuration for batch and streaming jobs
+     * running on this application. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("cbfec8afb96bf4b8a67dee2b52141d81397c831b1a5be95922dbe065da4672d7")
+    override
+        fun schedulerConfiguration(schedulerConfiguration: SchedulerConfigurationProperty.Builder.() -> Unit):
+        Unit = schedulerConfiguration(SchedulerConfigurationProperty(schedulerConfiguration))
 
     /**
      * The tags assigned to the application.
@@ -1951,12 +2187,12 @@ public open class CfnApplication(
       /**
        * @param properties A set of properties specified within a configuration classification.
        */
-      public fun properties(properties: IResolvable)
+      public fun properties(properties: Map<String, String>)
 
       /**
        * @param properties A set of properties specified within a configuration classification.
        */
-      public fun properties(properties: Map<String, String>)
+      public fun properties(properties: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1998,15 +2234,15 @@ public open class CfnApplication(
       /**
        * @param properties A set of properties specified within a configuration classification.
        */
-      override fun properties(properties: IResolvable) {
-        cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
+      override fun properties(properties: Map<String, String>) {
+        cdkBuilder.properties(properties)
       }
 
       /**
        * @param properties A set of properties specified within a configuration classification.
        */
-      override fun properties(properties: Map<String, String>) {
-        cdkBuilder.properties(properties)
+      override fun properties(properties: IResolvable) {
+        cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2055,6 +2291,94 @@ public open class CfnApplication(
           software.amazon.awscdk.services.emrserverless.CfnApplication.ConfigurationObjectProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.emrserverless.CfnApplication.ConfigurationObjectProperty
+    }
+  }
+
+  /**
+   * The IAM IdentityCenter configuration for trusted-identity-propagation on this application.
+   *
+   * Supported with release labels emr-7.8.0 and above.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emrserverless.*;
+   * IdentityCenterConfigurationProperty identityCenterConfigurationProperty =
+   * IdentityCenterConfigurationProperty.builder()
+   * .identityCenterInstanceArn("identityCenterInstanceArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-identitycenterconfiguration.html)
+   */
+  public interface IdentityCenterConfigurationProperty {
+    /**
+     * The IAM IdentityCenter instance arn.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-identitycenterconfiguration.html#cfn-emrserverless-application-identitycenterconfiguration-identitycenterinstancearn)
+     */
+    public fun identityCenterInstanceArn(): String? = unwrap(this).getIdentityCenterInstanceArn()
+
+    /**
+     * A builder for [IdentityCenterConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param identityCenterInstanceArn The IAM IdentityCenter instance arn.
+       */
+      public fun identityCenterInstanceArn(identityCenterInstanceArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emrserverless.CfnApplication.IdentityCenterConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.emrserverless.CfnApplication.IdentityCenterConfigurationProperty.builder()
+
+      /**
+       * @param identityCenterInstanceArn The IAM IdentityCenter instance arn.
+       */
+      override fun identityCenterInstanceArn(identityCenterInstanceArn: String) {
+        cdkBuilder.identityCenterInstanceArn(identityCenterInstanceArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emrserverless.CfnApplication.IdentityCenterConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.IdentityCenterConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        IdentityCenterConfigurationProperty {
+      /**
+       * The IAM IdentityCenter instance arn.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-identitycenterconfiguration.html#cfn-emrserverless-application-identitycenterconfiguration-identitycenterinstancearn)
+       */
+      override fun identityCenterInstanceArn(): String? =
+          unwrap(this).getIdentityCenterInstanceArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          IdentityCenterConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.IdentityCenterConfigurationProperty):
+          IdentityCenterConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IdentityCenterConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IdentityCenterConfigurationProperty):
+          software.amazon.awscdk.services.emrserverless.CfnApplication.IdentityCenterConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emrserverless.CfnApplication.IdentityCenterConfigurationProperty
     }
   }
 
@@ -3020,6 +3344,9 @@ public open class CfnApplication(
    * .enabled(false)
    * .encryptionKeyArn("encryptionKeyArn")
    * .build())
+   * .prometheusMonitoringConfiguration(PrometheusMonitoringConfigurationProperty.builder()
+   * .remoteWriteUrl("remoteWriteUrl")
+   * .build())
    * .s3MonitoringConfiguration(S3MonitoringConfigurationProperty.builder()
    * .encryptionKeyArn("encryptionKeyArn")
    * .logUri("logUri")
@@ -3047,6 +3374,15 @@ public open class CfnApplication(
      */
     public fun managedPersistenceMonitoringConfiguration(): Any? =
         unwrap(this).getManagedPersistenceMonitoringConfiguration()
+
+    /**
+     * The monitoring configuration object you can configure to send metrics to Amazon Managed
+     * Service for Prometheus for a job run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-prometheusmonitoringconfiguration)
+     */
+    public fun prometheusMonitoringConfiguration(): Any? =
+        unwrap(this).getPrometheusMonitoringConfiguration()
 
     /**
      * The Amazon S3 configuration for monitoring log publishing.
@@ -3107,6 +3443,28 @@ public open class CfnApplication(
       @JvmName("bf88f1af2e44e51488e14d43737bb7f0119c63c83cdbc1fccbd5493652d82ad4")
       public
           fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: ManagedPersistenceMonitoringConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param prometheusMonitoringConfiguration The monitoring configuration object you can
+       * configure to send metrics to Amazon Managed Service for Prometheus for a job run.
+       */
+      public fun prometheusMonitoringConfiguration(prometheusMonitoringConfiguration: IResolvable)
+
+      /**
+       * @param prometheusMonitoringConfiguration The monitoring configuration object you can
+       * configure to send metrics to Amazon Managed Service for Prometheus for a job run.
+       */
+      public
+          fun prometheusMonitoringConfiguration(prometheusMonitoringConfiguration: PrometheusMonitoringConfigurationProperty)
+
+      /**
+       * @param prometheusMonitoringConfiguration The monitoring configuration object you can
+       * configure to send metrics to Amazon Managed Service for Prometheus for a job run.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa4a22292db22babba5705c4aa551005223edd8b3e75a1e83654c59c795704f5")
+      public
+          fun prometheusMonitoringConfiguration(prometheusMonitoringConfiguration: PrometheusMonitoringConfigurationProperty.Builder.() -> Unit)
 
       /**
        * @param s3MonitoringConfiguration The Amazon S3 configuration for monitoring log publishing.
@@ -3195,6 +3553,35 @@ public open class CfnApplication(
           managedPersistenceMonitoringConfiguration(ManagedPersistenceMonitoringConfigurationProperty(managedPersistenceMonitoringConfiguration))
 
       /**
+       * @param prometheusMonitoringConfiguration The monitoring configuration object you can
+       * configure to send metrics to Amazon Managed Service for Prometheus for a job run.
+       */
+      override
+          fun prometheusMonitoringConfiguration(prometheusMonitoringConfiguration: IResolvable) {
+        cdkBuilder.prometheusMonitoringConfiguration(prometheusMonitoringConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param prometheusMonitoringConfiguration The monitoring configuration object you can
+       * configure to send metrics to Amazon Managed Service for Prometheus for a job run.
+       */
+      override
+          fun prometheusMonitoringConfiguration(prometheusMonitoringConfiguration: PrometheusMonitoringConfigurationProperty) {
+        cdkBuilder.prometheusMonitoringConfiguration(prometheusMonitoringConfiguration.let(PrometheusMonitoringConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param prometheusMonitoringConfiguration The monitoring configuration object you can
+       * configure to send metrics to Amazon Managed Service for Prometheus for a job run.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa4a22292db22babba5705c4aa551005223edd8b3e75a1e83654c59c795704f5")
+      override
+          fun prometheusMonitoringConfiguration(prometheusMonitoringConfiguration: PrometheusMonitoringConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          prometheusMonitoringConfiguration(PrometheusMonitoringConfigurationProperty(prometheusMonitoringConfiguration))
+
+      /**
        * @param s3MonitoringConfiguration The Amazon S3 configuration for monitoring log publishing.
        */
       override fun s3MonitoringConfiguration(s3MonitoringConfiguration: IResolvable) {
@@ -3245,6 +3632,15 @@ public open class CfnApplication(
        */
       override fun managedPersistenceMonitoringConfiguration(): Any? =
           unwrap(this).getManagedPersistenceMonitoringConfiguration()
+
+      /**
+       * The monitoring configuration object you can configure to send metrics to Amazon Managed
+       * Service for Prometheus for a job run.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-prometheusmonitoringconfiguration)
+       */
+      override fun prometheusMonitoringConfiguration(): Any? =
+          unwrap(this).getPrometheusMonitoringConfiguration()
 
       /**
        * The Amazon S3 configuration for monitoring log publishing.
@@ -3406,6 +3802,96 @@ public open class CfnApplication(
   }
 
   /**
+   * The monitoring configuration object you can configure to send metrics to Amazon Managed Service
+   * for Prometheus for a job run.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emrserverless.*;
+   * PrometheusMonitoringConfigurationProperty prometheusMonitoringConfigurationProperty =
+   * PrometheusMonitoringConfigurationProperty.builder()
+   * .remoteWriteUrl("remoteWriteUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-prometheusmonitoringconfiguration.html)
+   */
+  public interface PrometheusMonitoringConfigurationProperty {
+    /**
+     * The remote write URL in the Amazon Managed Service for Prometheus workspace to send metrics
+     * to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-prometheusmonitoringconfiguration.html#cfn-emrserverless-application-prometheusmonitoringconfiguration-remotewriteurl)
+     */
+    public fun remoteWriteUrl(): String? = unwrap(this).getRemoteWriteUrl()
+
+    /**
+     * A builder for [PrometheusMonitoringConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param remoteWriteUrl The remote write URL in the Amazon Managed Service for Prometheus
+       * workspace to send metrics to.
+       */
+      public fun remoteWriteUrl(remoteWriteUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emrserverless.CfnApplication.PrometheusMonitoringConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.emrserverless.CfnApplication.PrometheusMonitoringConfigurationProperty.builder()
+
+      /**
+       * @param remoteWriteUrl The remote write URL in the Amazon Managed Service for Prometheus
+       * workspace to send metrics to.
+       */
+      override fun remoteWriteUrl(remoteWriteUrl: String) {
+        cdkBuilder.remoteWriteUrl(remoteWriteUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emrserverless.CfnApplication.PrometheusMonitoringConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.PrometheusMonitoringConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        PrometheusMonitoringConfigurationProperty {
+      /**
+       * The remote write URL in the Amazon Managed Service for Prometheus workspace to send metrics
+       * to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-prometheusmonitoringconfiguration.html#cfn-emrserverless-application-prometheusmonitoringconfiguration-remotewriteurl)
+       */
+      override fun remoteWriteUrl(): String? = unwrap(this).getRemoteWriteUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PrometheusMonitoringConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.PrometheusMonitoringConfigurationProperty):
+          PrometheusMonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PrometheusMonitoringConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrometheusMonitoringConfigurationProperty):
+          software.amazon.awscdk.services.emrserverless.CfnApplication.PrometheusMonitoringConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emrserverless.CfnApplication.PrometheusMonitoringConfigurationProperty
+    }
+  }
+
+  /**
    * The Amazon S3 configuration for monitoring log publishing.
    *
    * You can configure your jobs to send log information to Amazon S3.
@@ -3518,6 +4004,139 @@ public open class CfnApplication(
           software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty
+    }
+  }
+
+  /**
+   * The scheduler configuration for batch and streaming jobs running on this application.
+   *
+   * Supported with release labels emr-7.0.0 and above.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emrserverless.*;
+   * SchedulerConfigurationProperty schedulerConfigurationProperty =
+   * SchedulerConfigurationProperty.builder()
+   * .maxConcurrentRuns(123)
+   * .queueTimeoutMinutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-schedulerconfiguration.html)
+   */
+  public interface SchedulerConfigurationProperty {
+    /**
+     * The maximum concurrent job runs on this application.
+     *
+     * If scheduler configuration is enabled on your application, the default value is 15. The valid
+     * range is 1 to 1000.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-schedulerconfiguration.html#cfn-emrserverless-application-schedulerconfiguration-maxconcurrentruns)
+     */
+    public fun maxConcurrentRuns(): Number? = unwrap(this).getMaxConcurrentRuns()
+
+    /**
+     * The maximum duration in minutes for the job in QUEUED state.
+     *
+     * If scheduler configuration is enabled on your application, the default value is 360 minutes
+     * (6 hours). The valid range is from 15 to 720.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-schedulerconfiguration.html#cfn-emrserverless-application-schedulerconfiguration-queuetimeoutminutes)
+     */
+    public fun queueTimeoutMinutes(): Number? = unwrap(this).getQueueTimeoutMinutes()
+
+    /**
+     * A builder for [SchedulerConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxConcurrentRuns The maximum concurrent job runs on this application.
+       * If scheduler configuration is enabled on your application, the default value is 15. The
+       * valid range is 1 to 1000.
+       */
+      public fun maxConcurrentRuns(maxConcurrentRuns: Number)
+
+      /**
+       * @param queueTimeoutMinutes The maximum duration in minutes for the job in QUEUED state.
+       * If scheduler configuration is enabled on your application, the default value is 360 minutes
+       * (6 hours). The valid range is from 15 to 720.
+       */
+      public fun queueTimeoutMinutes(queueTimeoutMinutes: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emrserverless.CfnApplication.SchedulerConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.emrserverless.CfnApplication.SchedulerConfigurationProperty.builder()
+
+      /**
+       * @param maxConcurrentRuns The maximum concurrent job runs on this application.
+       * If scheduler configuration is enabled on your application, the default value is 15. The
+       * valid range is 1 to 1000.
+       */
+      override fun maxConcurrentRuns(maxConcurrentRuns: Number) {
+        cdkBuilder.maxConcurrentRuns(maxConcurrentRuns)
+      }
+
+      /**
+       * @param queueTimeoutMinutes The maximum duration in minutes for the job in QUEUED state.
+       * If scheduler configuration is enabled on your application, the default value is 360 minutes
+       * (6 hours). The valid range is from 15 to 720.
+       */
+      override fun queueTimeoutMinutes(queueTimeoutMinutes: Number) {
+        cdkBuilder.queueTimeoutMinutes(queueTimeoutMinutes)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emrserverless.CfnApplication.SchedulerConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.SchedulerConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        SchedulerConfigurationProperty {
+      /**
+       * The maximum concurrent job runs on this application.
+       *
+       * If scheduler configuration is enabled on your application, the default value is 15. The
+       * valid range is 1 to 1000.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-schedulerconfiguration.html#cfn-emrserverless-application-schedulerconfiguration-maxconcurrentruns)
+       */
+      override fun maxConcurrentRuns(): Number? = unwrap(this).getMaxConcurrentRuns()
+
+      /**
+       * The maximum duration in minutes for the job in QUEUED state.
+       *
+       * If scheduler configuration is enabled on your application, the default value is 360 minutes
+       * (6 hours). The valid range is from 15 to 720.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-schedulerconfiguration.html#cfn-emrserverless-application-schedulerconfiguration-queuetimeoutminutes)
+       */
+      override fun queueTimeoutMinutes(): Number? = unwrap(this).getQueueTimeoutMinutes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SchedulerConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.SchedulerConfigurationProperty):
+          SchedulerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SchedulerConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SchedulerConfigurationProperty):
+          software.amazon.awscdk.services.emrserverless.CfnApplication.SchedulerConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emrserverless.CfnApplication.SchedulerConfigurationProperty
     }
   }
 

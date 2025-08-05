@@ -204,6 +204,9 @@ public open class ReceiptRuleSet(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ses.ReceiptRuleSet.PROPERTY_INJECTION_ID
+
     public fun fromReceiptRuleSetName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

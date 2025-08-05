@@ -127,6 +127,46 @@ public interface IBucket : IResource {
       filters: NotificationKeyFilter.Builder.() -> Unit)
 
   /**
+   * Function to add required permissions to the destination bucket for cross account replication.
+   *
+   * These permissions will be added as a resource based policy on the bucket.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accesscontroltranslation.html)
+   * @param roleArn 
+   * @param accessControlTransition
+   * @param account
+   */
+  public fun addReplicationPolicy(roleArn: String)
+
+  /**
+   * Function to add required permissions to the destination bucket for cross account replication.
+   *
+   * These permissions will be added as a resource based policy on the bucket.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accesscontroltranslation.html)
+   * @param roleArn 
+   * @param accessControlTransition
+   * @param account
+   */
+  public fun addReplicationPolicy(roleArn: String, accessControlTransition: Boolean)
+
+  /**
+   * Function to add required permissions to the destination bucket for cross account replication.
+   *
+   * These permissions will be added as a resource based policy on the bucket.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accesscontroltranslation.html)
+   * @param roleArn 
+   * @param accessControlTransition
+   * @param account
+   */
+  public fun addReplicationPolicy(
+    roleArn: String,
+    accessControlTransition: Boolean,
+    account: String,
+  )
+
+  /**
    * Adds a statement to the resource policy for a principal (i.e. account/role/service) to perform
    * actions on this bucket and/or its contents. Use `bucketArn` and `arnForObjects(keys)` to obtain
    * ARNs for this bucket or objects.
@@ -390,6 +430,34 @@ public interface IBucket : IResource {
   public fun grantReadWrite(identity: IGrantable, objectsKeyPattern: Any): Grant
 
   /**
+   * Allows permissions for replication operation to bucket replication role.
+   *
+   * If an encryption key is used, permission to use the key for
+   * encrypt/decrypt will also be granted.
+   *
+   * @return The `iam.Grant` object, which represents the grant of permissions.
+   * @param identity The principal. 
+   * @param props The properties of the replication source and destination buckets. 
+   */
+  public fun grantReplicationPermission(identity: IGrantable,
+      props: GrantReplicationPermissionProps): Grant
+
+  /**
+   * Allows permissions for replication operation to bucket replication role.
+   *
+   * If an encryption key is used, permission to use the key for
+   * encrypt/decrypt will also be granted.
+   *
+   * @return The `iam.Grant` object, which represents the grant of permissions.
+   * @param identity The principal. 
+   * @param props The properties of the replication source and destination buckets. 
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("4af4565714d0f3d475cfcd76e1d76a09236ba375662fcfeefe3baa65b4c6de21")
+  public fun grantReplicationPermission(identity: IGrantable,
+      props: GrantReplicationPermissionProps.Builder.() -> Unit): Grant
+
+  /**
    * Grant write permissions to this bucket to an IAM principal.
    *
    * If encryption is used, permission to use the key to encrypt the contents
@@ -624,6 +692,18 @@ public interface IBucket : IResource {
    */
   public fun policy(`value`: BucketPolicy) {
     unwrap(this).setPolicy(`value`.let(BucketPolicy.Companion::unwrap))
+  }
+
+  /**
+   * Role used to set up permissions on this bucket for replication.
+   */
+  public fun replicationRoleArn(): String? = unwrap(this).getReplicationRoleArn()
+
+  /**
+   * Role used to set up permissions on this bucket for replication.
+   */
+  public fun replicationRoleArn(`value`: String) {
+    unwrap(this).setReplicationRoleArn(`value`)
   }
 
   /**
@@ -921,6 +1001,52 @@ public interface IBucket : IResource {
     override fun addObjectRemovedNotification(dest: IBucketNotificationDestination,
         filters: NotificationKeyFilter.Builder.() -> Unit): Unit =
         addObjectRemovedNotification(dest, NotificationKeyFilter(filters))
+
+    /**
+     * Function to add required permissions to the destination bucket for cross account replication.
+     *
+     * These permissions will be added as a resource based policy on the bucket.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accesscontroltranslation.html)
+     * @param roleArn 
+     * @param accessControlTransition
+     * @param account
+     */
+    override fun addReplicationPolicy(roleArn: String) {
+      unwrap(this).addReplicationPolicy(roleArn)
+    }
+
+    /**
+     * Function to add required permissions to the destination bucket for cross account replication.
+     *
+     * These permissions will be added as a resource based policy on the bucket.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accesscontroltranslation.html)
+     * @param roleArn 
+     * @param accessControlTransition
+     * @param account
+     */
+    override fun addReplicationPolicy(roleArn: String, accessControlTransition: Boolean) {
+      unwrap(this).addReplicationPolicy(roleArn, accessControlTransition)
+    }
+
+    /**
+     * Function to add required permissions to the destination bucket for cross account replication.
+     *
+     * These permissions will be added as a resource based policy on the bucket.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accesscontroltranslation.html)
+     * @param roleArn 
+     * @param accessControlTransition
+     * @param account
+     */
+    override fun addReplicationPolicy(
+      roleArn: String,
+      accessControlTransition: Boolean,
+      account: String,
+    ) {
+      unwrap(this).addReplicationPolicy(roleArn, accessControlTransition, account)
+    }
 
     /**
      * Adds a statement to the resource policy for a principal (i.e. account/role/service) to
@@ -1239,6 +1365,37 @@ public interface IBucket : IResource {
         objectsKeyPattern).let(Grant::wrap)
 
     /**
+     * Allows permissions for replication operation to bucket replication role.
+     *
+     * If an encryption key is used, permission to use the key for
+     * encrypt/decrypt will also be granted.
+     *
+     * @return The `iam.Grant` object, which represents the grant of permissions.
+     * @param identity The principal. 
+     * @param props The properties of the replication source and destination buckets. 
+     */
+    override fun grantReplicationPermission(identity: IGrantable,
+        props: GrantReplicationPermissionProps): Grant =
+        unwrap(this).grantReplicationPermission(identity.let(IGrantable.Companion::unwrap),
+        props.let(GrantReplicationPermissionProps.Companion::unwrap)).let(Grant::wrap)
+
+    /**
+     * Allows permissions for replication operation to bucket replication role.
+     *
+     * If an encryption key is used, permission to use the key for
+     * encrypt/decrypt will also be granted.
+     *
+     * @return The `iam.Grant` object, which represents the grant of permissions.
+     * @param identity The principal. 
+     * @param props The properties of the replication source and destination buckets. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("4af4565714d0f3d475cfcd76e1d76a09236ba375662fcfeefe3baa65b4c6de21")
+    override fun grantReplicationPermission(identity: IGrantable,
+        props: GrantReplicationPermissionProps.Builder.() -> Unit): Grant =
+        grantReplicationPermission(identity, GrantReplicationPermissionProps(props))
+
+    /**
      * Grant write permissions to this bucket to an IAM principal.
      *
      * If encryption is used, permission to use the key to encrypt the contents
@@ -1494,6 +1651,18 @@ public interface IBucket : IResource {
      */
     override fun policy(`value`: BucketPolicy) {
       unwrap(this).setPolicy(`value`.let(BucketPolicy.Companion::unwrap))
+    }
+
+    /**
+     * Role used to set up permissions on this bucket for replication.
+     */
+    override fun replicationRoleArn(): String? = unwrap(this).getReplicationRoleArn()
+
+    /**
+     * Role used to set up permissions on this bucket for replication.
+     */
+    override fun replicationRoleArn(`value`: String) {
+      unwrap(this).setReplicationRoleArn(`value`)
     }
 
     /**

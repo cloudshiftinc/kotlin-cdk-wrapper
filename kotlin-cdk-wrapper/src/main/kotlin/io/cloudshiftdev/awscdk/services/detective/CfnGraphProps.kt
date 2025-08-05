@@ -41,6 +41,7 @@ public interface CfnGraphProps {
    * you must be the Detective administrator for the organization. For more information on setting a
    * Detective administrator account, see
    * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+   * .
    *
    * Default: - false
    *
@@ -67,6 +68,7 @@ public interface CfnGraphProps {
      * property, you must be the Detective administrator for the organization. For more information on
      * setting a Detective administrator account, see
      * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+     * .
      */
     public fun autoEnableMembers(autoEnableMembers: Boolean)
 
@@ -77,6 +79,7 @@ public interface CfnGraphProps {
      * property, you must be the Detective administrator for the organization. For more information on
      * setting a Detective administrator account, see
      * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+     * .
      */
     public fun autoEnableMembers(autoEnableMembers: IResolvable)
 
@@ -102,6 +105,7 @@ public interface CfnGraphProps {
      * property, you must be the Detective administrator for the organization. For more information on
      * setting a Detective administrator account, see
      * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+     * .
      */
     override fun autoEnableMembers(autoEnableMembers: Boolean) {
       cdkBuilder.autoEnableMembers(autoEnableMembers)
@@ -114,6 +118,7 @@ public interface CfnGraphProps {
      * property, you must be the Detective administrator for the organization. For more information on
      * setting a Detective administrator account, see
      * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+     * .
      */
     override fun autoEnableMembers(autoEnableMembers: IResolvable) {
       cdkBuilder.autoEnableMembers(autoEnableMembers.let(IResolvable.Companion::unwrap))
@@ -146,6 +151,7 @@ public interface CfnGraphProps {
      * property, you must be the Detective administrator for the organization. For more information on
      * setting a Detective administrator account, see
      * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+     * .
      *
      * Default: - false
      *

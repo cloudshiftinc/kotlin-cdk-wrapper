@@ -34,14 +34,19 @@ import kotlin.jvm.JvmName
  * .deletionProtection(false)
  * .enableCloudwatchLogsExports(List.of("enableCloudwatchLogsExports"))
  * .engineVersion("engineVersion")
+ * .globalClusterIdentifier("globalClusterIdentifier")
  * .kmsKeyId("kmsKeyId")
+ * .manageMasterUserPassword(false)
  * .masterUsername("masterUsername")
  * .masterUserPassword("masterUserPassword")
+ * .masterUserSecretKmsKeyId("masterUserSecretKmsKeyId")
+ * .networkType("networkType")
  * .port(123)
  * .preferredBackupWindow("preferredBackupWindow")
  * .preferredMaintenanceWindow("preferredMaintenanceWindow")
  * .restoreToTime("restoreToTime")
  * .restoreType("restoreType")
+ * .rotateMasterUserPassword(false)
  * .serverlessV2ScalingConfiguration(ServerlessV2ScalingConfigurationProperty.builder()
  * .maxCapacity(123)
  * .minCapacity(123)
@@ -157,14 +162,21 @@ public interface CfnDBClusterProps {
    * workloads, we recommend explicitly declaring this parameter with the intended major engine
    * version.
    *
-   * Changing the `EngineVersion` will start an in-place engine version upgrade. Note that in-place
-   * engine version upgrade will cause downtime in the cluster. See [Amazon DocumentDB in-place major
-   * version upgrade](https://docs.aws.amazon.com/documentdb/latest/developerguide/docdb-mvu.html)
-   * before starting an in-place engine version upgrade.
+   * If you intend to trigger an in-place upgrade, please refer to [Amazon DocumentDB in-place major
+   * version upgrade](https://docs.aws.amazon.com/documentdb/latest/developerguide/docdb-mvu.html) .
+   * Note that for an in-place engine version upgrade, you need to remove other cluster properties
+   * changes (e.g. SecurityGroupId) from the CFN template.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-engineversion)
    */
   public fun engineVersion(): String? = unwrap(this).getEngineVersion()
+
+  /**
+   * The cluster identifier of the new global cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-globalclusteridentifier)
+   */
+  public fun globalClusterIdentifier(): String? = unwrap(this).getGlobalClusterIdentifier()
 
   /**
    * The AWS KMS key identifier for an encrypted cluster.
@@ -187,6 +199,16 @@ public interface CfnDBClusterProps {
   public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
   /**
+   * Specifies whether to manage the master user password with Amazon Web Services Secrets Manager.
+   *
+   * Constraint: You can't manage the master user password with Amazon Web Services Secrets Manager
+   * if `MasterUserPassword` is specified.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-managemasteruserpassword)
+   */
+  public fun manageMasterUserPassword(): Any? = unwrap(this).getManageMasterUserPassword()
+
+  /**
    * The password for the master database user.
    *
    * This password can contain any printable ASCII character except forward slash (/), double quote
@@ -197,6 +219,29 @@ public interface CfnDBClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-masteruserpassword)
    */
   public fun masterUserPassword(): String? = unwrap(this).getMasterUserPassword()
+
+  /**
+   * The Amazon Web Services KMS key identifier to encrypt a secret that is automatically generated
+   * and managed in Amazon Web Services Secrets Manager.
+   *
+   * This setting is valid only if the master user password is managed by Amazon DocumentDB in
+   * Amazon Web Services Secrets Manager for the DB cluster.
+   *
+   * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for
+   * the KMS key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or
+   * alias ARN.
+   *
+   * If you don't specify `MasterUserSecretKmsKeyId` , then the `aws/secretsmanager` KMS key is used
+   * to encrypt the secret. If the secret is in a different Amazon Web Services account, then you can't
+   * use the `aws/secretsmanager` KMS key to encrypt the secret, and you must use a customer managed
+   * KMS key.
+   *
+   * There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services
+   * account has a different default KMS key for each Amazon Web Services Region.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-masterusersecretkmskeyid)
+   */
+  public fun masterUserSecretKmsKeyId(): String? = unwrap(this).getMasterUserSecretKmsKeyId()
 
   /**
    * The name of the master user for the cluster.
@@ -210,6 +255,11 @@ public interface CfnDBClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-masterusername)
    */
   public fun masterUsername(): String? = unwrap(this).getMasterUsername()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-networktype)
+   */
+  public fun networkType(): String? = unwrap(this).getNetworkType()
 
   /**
    * Specifies the port that the database engine is listening on.
@@ -286,6 +336,20 @@ public interface CfnDBClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-restoretype)
    */
   public fun restoreType(): String? = unwrap(this).getRestoreType()
+
+  /**
+   * Specifies whether to rotate the secret managed by Amazon Web Services Secrets Manager for the
+   * master user password.
+   *
+   * This setting is valid only if the master user password is managed by Amazon DocumentDB in
+   * Amazon Web Services Secrets Manager for the cluster. The secret value contains the updated
+   * password.
+   *
+   * Constraint: You must apply the change immediately when rotating the master user password.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-rotatemasteruserpassword)
+   */
+  public fun rotateMasterUserPassword(): Any? = unwrap(this).getRotateMasterUserPassword()
 
   /**
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-serverlessv2scalingconfiguration)
@@ -491,13 +555,18 @@ public interface CfnDBClusterProps {
      * workloads, we recommend explicitly declaring this parameter with the intended major engine
      * version.
      *
-     * Changing the `EngineVersion` will start an in-place engine version upgrade. Note that
-     * in-place engine version upgrade will cause downtime in the cluster. See [Amazon DocumentDB
-     * in-place major version
-     * upgrade](https://docs.aws.amazon.com/documentdb/latest/developerguide/docdb-mvu.html) before
-     * starting an in-place engine version upgrade.
+     * If you intend to trigger an in-place upgrade, please refer to [Amazon DocumentDB in-place
+     * major version
+     * upgrade](https://docs.aws.amazon.com/documentdb/latest/developerguide/docdb-mvu.html) . Note
+     * that for an in-place engine version upgrade, you need to remove other cluster properties changes
+     * (e.g. SecurityGroupId) from the CFN template.
      */
     public fun engineVersion(engineVersion: String)
+
+    /**
+     * @param globalClusterIdentifier The cluster identifier of the new global cluster.
+     */
+    public fun globalClusterIdentifier(globalClusterIdentifier: String)
 
     /**
      * @param kmsKeyId The AWS KMS key identifier for an encrypted cluster.
@@ -517,6 +586,22 @@ public interface CfnDBClusterProps {
     public fun kmsKeyId(kmsKeyId: String)
 
     /**
+     * @param manageMasterUserPassword Specifies whether to manage the master user password with
+     * Amazon Web Services Secrets Manager.
+     * Constraint: You can't manage the master user password with Amazon Web Services Secrets
+     * Manager if `MasterUserPassword` is specified.
+     */
+    public fun manageMasterUserPassword(manageMasterUserPassword: Boolean)
+
+    /**
+     * @param manageMasterUserPassword Specifies whether to manage the master user password with
+     * Amazon Web Services Secrets Manager.
+     * Constraint: You can't manage the master user password with Amazon Web Services Secrets
+     * Manager if `MasterUserPassword` is specified.
+     */
+    public fun manageMasterUserPassword(manageMasterUserPassword: IResolvable)
+
+    /**
      * @param masterUserPassword The password for the master database user.
      * This password can contain any printable ASCII character except forward slash (/), double
      * quote ("), or the "at" symbol (&#64;).
@@ -524,6 +609,26 @@ public interface CfnDBClusterProps {
      * Constraints: Must contain from 8 to 100 characters.
      */
     public fun masterUserPassword(masterUserPassword: String)
+
+    /**
+     * @param masterUserSecretKmsKeyId The Amazon Web Services KMS key identifier to encrypt a
+     * secret that is automatically generated and managed in Amazon Web Services Secrets Manager.
+     * This setting is valid only if the master user password is managed by Amazon DocumentDB in
+     * Amazon Web Services Secrets Manager for the DB cluster.
+     *
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name
+     * for the KMS key. To use a KMS key in a different Amazon Web Services account, specify the key
+     * ARN or alias ARN.
+     *
+     * If you don't specify `MasterUserSecretKmsKeyId` , then the `aws/secretsmanager` KMS key is
+     * used to encrypt the secret. If the secret is in a different Amazon Web Services account, then
+     * you can't use the `aws/secretsmanager` KMS key to encrypt the secret, and you must use a
+     * customer managed KMS key.
+     *
+     * There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services
+     * account has a different default KMS key for each Amazon Web Services Region.
+     */
+    public fun masterUserSecretKmsKeyId(masterUserSecretKmsKeyId: String)
 
     /**
      * @param masterUsername The name of the master user for the cluster.
@@ -534,6 +639,11 @@ public interface CfnDBClusterProps {
      * * Cannot be a reserved word for the chosen database engine.
      */
     public fun masterUsername(masterUsername: String)
+
+    /**
+     * @param networkType the value to be set.
+     */
+    public fun networkType(networkType: String)
 
     /**
      * @param port Specifies the port that the database engine is listening on.
@@ -597,6 +707,28 @@ public interface CfnDBClusterProps {
      * copy of the source DB cluster.
      */
     public fun restoreType(restoreType: String)
+
+    /**
+     * @param rotateMasterUserPassword Specifies whether to rotate the secret managed by Amazon Web
+     * Services Secrets Manager for the master user password.
+     * This setting is valid only if the master user password is managed by Amazon DocumentDB in
+     * Amazon Web Services Secrets Manager for the cluster. The secret value contains the updated
+     * password.
+     *
+     * Constraint: You must apply the change immediately when rotating the master user password.
+     */
+    public fun rotateMasterUserPassword(rotateMasterUserPassword: Boolean)
+
+    /**
+     * @param rotateMasterUserPassword Specifies whether to rotate the secret managed by Amazon Web
+     * Services Secrets Manager for the master user password.
+     * This setting is valid only if the master user password is managed by Amazon DocumentDB in
+     * Amazon Web Services Secrets Manager for the cluster. The secret value contains the updated
+     * password.
+     *
+     * Constraint: You must apply the change immediately when rotating the master user password.
+     */
+    public fun rotateMasterUserPassword(rotateMasterUserPassword: IResolvable)
 
     /**
      * @param serverlessV2ScalingConfiguration the value to be set.
@@ -850,14 +982,21 @@ public interface CfnDBClusterProps {
      * workloads, we recommend explicitly declaring this parameter with the intended major engine
      * version.
      *
-     * Changing the `EngineVersion` will start an in-place engine version upgrade. Note that
-     * in-place engine version upgrade will cause downtime in the cluster. See [Amazon DocumentDB
-     * in-place major version
-     * upgrade](https://docs.aws.amazon.com/documentdb/latest/developerguide/docdb-mvu.html) before
-     * starting an in-place engine version upgrade.
+     * If you intend to trigger an in-place upgrade, please refer to [Amazon DocumentDB in-place
+     * major version
+     * upgrade](https://docs.aws.amazon.com/documentdb/latest/developerguide/docdb-mvu.html) . Note
+     * that for an in-place engine version upgrade, you need to remove other cluster properties changes
+     * (e.g. SecurityGroupId) from the CFN template.
      */
     override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
+    }
+
+    /**
+     * @param globalClusterIdentifier The cluster identifier of the new global cluster.
+     */
+    override fun globalClusterIdentifier(globalClusterIdentifier: String) {
+      cdkBuilder.globalClusterIdentifier(globalClusterIdentifier)
     }
 
     /**
@@ -880,6 +1019,26 @@ public interface CfnDBClusterProps {
     }
 
     /**
+     * @param manageMasterUserPassword Specifies whether to manage the master user password with
+     * Amazon Web Services Secrets Manager.
+     * Constraint: You can't manage the master user password with Amazon Web Services Secrets
+     * Manager if `MasterUserPassword` is specified.
+     */
+    override fun manageMasterUserPassword(manageMasterUserPassword: Boolean) {
+      cdkBuilder.manageMasterUserPassword(manageMasterUserPassword)
+    }
+
+    /**
+     * @param manageMasterUserPassword Specifies whether to manage the master user password with
+     * Amazon Web Services Secrets Manager.
+     * Constraint: You can't manage the master user password with Amazon Web Services Secrets
+     * Manager if `MasterUserPassword` is specified.
+     */
+    override fun manageMasterUserPassword(manageMasterUserPassword: IResolvable) {
+      cdkBuilder.manageMasterUserPassword(manageMasterUserPassword.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
      * @param masterUserPassword The password for the master database user.
      * This password can contain any printable ASCII character except forward slash (/), double
      * quote ("), or the "at" symbol (&#64;).
@@ -888,6 +1047,28 @@ public interface CfnDBClusterProps {
      */
     override fun masterUserPassword(masterUserPassword: String) {
       cdkBuilder.masterUserPassword(masterUserPassword)
+    }
+
+    /**
+     * @param masterUserSecretKmsKeyId The Amazon Web Services KMS key identifier to encrypt a
+     * secret that is automatically generated and managed in Amazon Web Services Secrets Manager.
+     * This setting is valid only if the master user password is managed by Amazon DocumentDB in
+     * Amazon Web Services Secrets Manager for the DB cluster.
+     *
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name
+     * for the KMS key. To use a KMS key in a different Amazon Web Services account, specify the key
+     * ARN or alias ARN.
+     *
+     * If you don't specify `MasterUserSecretKmsKeyId` , then the `aws/secretsmanager` KMS key is
+     * used to encrypt the secret. If the secret is in a different Amazon Web Services account, then
+     * you can't use the `aws/secretsmanager` KMS key to encrypt the secret, and you must use a
+     * customer managed KMS key.
+     *
+     * There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services
+     * account has a different default KMS key for each Amazon Web Services Region.
+     */
+    override fun masterUserSecretKmsKeyId(masterUserSecretKmsKeyId: String) {
+      cdkBuilder.masterUserSecretKmsKeyId(masterUserSecretKmsKeyId)
     }
 
     /**
@@ -900,6 +1081,13 @@ public interface CfnDBClusterProps {
      */
     override fun masterUsername(masterUsername: String) {
       cdkBuilder.masterUsername(masterUsername)
+    }
+
+    /**
+     * @param networkType the value to be set.
+     */
+    override fun networkType(networkType: String) {
+      cdkBuilder.networkType(networkType)
     }
 
     /**
@@ -973,6 +1161,32 @@ public interface CfnDBClusterProps {
      */
     override fun restoreType(restoreType: String) {
       cdkBuilder.restoreType(restoreType)
+    }
+
+    /**
+     * @param rotateMasterUserPassword Specifies whether to rotate the secret managed by Amazon Web
+     * Services Secrets Manager for the master user password.
+     * This setting is valid only if the master user password is managed by Amazon DocumentDB in
+     * Amazon Web Services Secrets Manager for the cluster. The secret value contains the updated
+     * password.
+     *
+     * Constraint: You must apply the change immediately when rotating the master user password.
+     */
+    override fun rotateMasterUserPassword(rotateMasterUserPassword: Boolean) {
+      cdkBuilder.rotateMasterUserPassword(rotateMasterUserPassword)
+    }
+
+    /**
+     * @param rotateMasterUserPassword Specifies whether to rotate the secret managed by Amazon Web
+     * Services Secrets Manager for the master user password.
+     * This setting is valid only if the master user password is managed by Amazon DocumentDB in
+     * Amazon Web Services Secrets Manager for the cluster. The secret value contains the updated
+     * password.
+     *
+     * Constraint: You must apply the change immediately when rotating the master user password.
+     */
+    override fun rotateMasterUserPassword(rotateMasterUserPassword: IResolvable) {
+      cdkBuilder.rotateMasterUserPassword(rotateMasterUserPassword.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1223,15 +1437,22 @@ public interface CfnDBClusterProps {
      * workloads, we recommend explicitly declaring this parameter with the intended major engine
      * version.
      *
-     * Changing the `EngineVersion` will start an in-place engine version upgrade. Note that
-     * in-place engine version upgrade will cause downtime in the cluster. See [Amazon DocumentDB
-     * in-place major version
-     * upgrade](https://docs.aws.amazon.com/documentdb/latest/developerguide/docdb-mvu.html) before
-     * starting an in-place engine version upgrade.
+     * If you intend to trigger an in-place upgrade, please refer to [Amazon DocumentDB in-place
+     * major version
+     * upgrade](https://docs.aws.amazon.com/documentdb/latest/developerguide/docdb-mvu.html) . Note
+     * that for an in-place engine version upgrade, you need to remove other cluster properties changes
+     * (e.g. SecurityGroupId) from the CFN template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-engineversion)
      */
     override fun engineVersion(): String? = unwrap(this).getEngineVersion()
+
+    /**
+     * The cluster identifier of the new global cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-globalclusteridentifier)
+     */
+    override fun globalClusterIdentifier(): String? = unwrap(this).getGlobalClusterIdentifier()
 
     /**
      * The AWS KMS key identifier for an encrypted cluster.
@@ -1254,6 +1475,17 @@ public interface CfnDBClusterProps {
     override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
     /**
+     * Specifies whether to manage the master user password with Amazon Web Services Secrets
+     * Manager.
+     *
+     * Constraint: You can't manage the master user password with Amazon Web Services Secrets
+     * Manager if `MasterUserPassword` is specified.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-managemasteruserpassword)
+     */
+    override fun manageMasterUserPassword(): Any? = unwrap(this).getManageMasterUserPassword()
+
+    /**
      * The password for the master database user.
      *
      * This password can contain any printable ASCII character except forward slash (/), double
@@ -1264,6 +1496,29 @@ public interface CfnDBClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-masteruserpassword)
      */
     override fun masterUserPassword(): String? = unwrap(this).getMasterUserPassword()
+
+    /**
+     * The Amazon Web Services KMS key identifier to encrypt a secret that is automatically
+     * generated and managed in Amazon Web Services Secrets Manager.
+     *
+     * This setting is valid only if the master user password is managed by Amazon DocumentDB in
+     * Amazon Web Services Secrets Manager for the DB cluster.
+     *
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name
+     * for the KMS key. To use a KMS key in a different Amazon Web Services account, specify the key
+     * ARN or alias ARN.
+     *
+     * If you don't specify `MasterUserSecretKmsKeyId` , then the `aws/secretsmanager` KMS key is
+     * used to encrypt the secret. If the secret is in a different Amazon Web Services account, then
+     * you can't use the `aws/secretsmanager` KMS key to encrypt the secret, and you must use a
+     * customer managed KMS key.
+     *
+     * There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services
+     * account has a different default KMS key for each Amazon Web Services Region.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-masterusersecretkmskeyid)
+     */
+    override fun masterUserSecretKmsKeyId(): String? = unwrap(this).getMasterUserSecretKmsKeyId()
 
     /**
      * The name of the master user for the cluster.
@@ -1277,6 +1532,11 @@ public interface CfnDBClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-masterusername)
      */
     override fun masterUsername(): String? = unwrap(this).getMasterUsername()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-networktype)
+     */
+    override fun networkType(): String? = unwrap(this).getNetworkType()
 
     /**
      * Specifies the port that the database engine is listening on.
@@ -1354,6 +1614,20 @@ public interface CfnDBClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-restoretype)
      */
     override fun restoreType(): String? = unwrap(this).getRestoreType()
+
+    /**
+     * Specifies whether to rotate the secret managed by Amazon Web Services Secrets Manager for the
+     * master user password.
+     *
+     * This setting is valid only if the master user password is managed by Amazon DocumentDB in
+     * Amazon Web Services Secrets Manager for the cluster. The secret value contains the updated
+     * password.
+     *
+     * Constraint: You must apply the change immediately when rotating the master user password.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-rotatemasteruserpassword)
+     */
+    override fun rotateMasterUserPassword(): Any? = unwrap(this).getRotateMasterUserPassword()
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-serverlessv2scalingconfiguration)

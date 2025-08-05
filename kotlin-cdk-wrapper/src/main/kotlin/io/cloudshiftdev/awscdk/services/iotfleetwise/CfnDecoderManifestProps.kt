@@ -63,6 +63,7 @@ import kotlin.collections.List
  * .startBit("startBit")
  * // the properties below are optional
  * .name("name")
+ * .signalValueType("signalValueType")
  * .build())
  * .obdSignal(ObdSignalProperty.builder()
  * .byteLength("byteLength")
@@ -75,6 +76,8 @@ import kotlin.collections.List
  * // the properties below are optional
  * .bitMaskLength("bitMaskLength")
  * .bitRightShift("bitRightShift")
+ * .isSigned("isSigned")
+ * .signalValueType("signalValueType")
  * .build())
  * .build()))
  * .status("status")

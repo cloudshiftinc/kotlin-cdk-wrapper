@@ -23,10 +23,14 @@ import kotlin.jvm.JvmName
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
+ * Object assign;
+ * Object outputs;
  * Object resultSelector;
  * TaskRole taskRole;
  * Timeout timeout;
  * TaskStateBaseProps taskStateBaseProps = TaskStateBaseProps.builder()
+ * .assign(Map.of(
+ * "assignKey", assign))
  * .comment("comment")
  * .credentials(Credentials.builder()
  * .role(taskRole)
@@ -36,6 +40,8 @@ import kotlin.jvm.JvmName
  * .inputPath("inputPath")
  * .integrationPattern(IntegrationPattern.REQUEST_RESPONSE)
  * .outputPath("outputPath")
+ * .outputs(outputs)
+ * .queryLanguage(QueryLanguage.JSON_PATH)
  * .resultPath("resultPath")
  * .resultSelector(Map.of(
  * "resultSelectorKey", resultSelector))
@@ -45,90 +51,15 @@ import kotlin.jvm.JvmName
  * .build();
  * ```
  */
-public interface TaskStateBaseProps {
-  /**
-   * An optional description for this state.
-   *
-   * Default: - No comment
-   */
-  public fun comment(): String? = unwrap(this).getComment()
-
-  /**
-   * Credentials for an IAM Role that the State Machine assumes for executing the task.
-   *
-   * This enables cross-account resource invocations.
-   *
-   * Default: - None (Task is executed using the State Machine's execution role)
-   *
-   * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-access-cross-acct-resources.html)
-   */
-  public fun credentials(): Credentials? = unwrap(this).getCredentials()?.let(Credentials::wrap)
-
-  /**
-   * (deprecated) Timeout for the heartbeat.
-   *
-   * Default: - None
-   *
-   * @deprecated use `heartbeatTimeout`
-   */
-  @Deprecated(message = "deprecated in CDK")
-  public fun heartbeat(): Duration? = unwrap(this).getHeartbeat()?.let(Duration::wrap)
-
-  /**
-   * Timeout for the heartbeat.
-   *
-   * [disable-awslint:duration-prop-type] is needed because all props interface in
-   * aws-stepfunctions-tasks extend this interface
-   *
-   * Default: - None
-   */
-  public fun heartbeatTimeout(): Timeout? = unwrap(this).getHeartbeatTimeout()?.let(Timeout::wrap)
-
-  /**
-   * JSONPath expression to select part of the state to be the input to this state.
-   *
-   * May also be the special value JsonPath.DISCARD, which will cause the effective
-   * input to be the empty object {}.
-   *
-   * Default: - The entire task input (JSON path '$')
-   */
-  public fun inputPath(): String? = unwrap(this).getInputPath()
-
-  /**
-   * AWS Step Functions integrates with services directly in the Amazon States Language.
-   *
-   * You can control these AWS services using service integration patterns.
-   *
-   * Depending on the AWS Service, the Service Integration Pattern availability will vary.
-   *
-   * Default: - `IntegrationPattern.REQUEST_RESPONSE` for most tasks.
-   * `IntegrationPattern.RUN_JOB` for the following exceptions:
-   * `BatchSubmitJob`, `EmrAddStep`, `EmrCreateCluster`, `EmrTerminationCluster`, and
-   * `EmrContainersStartJobRun`.
-   *
-   * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-supported-services.html)
-   */
-  public fun integrationPattern(): IntegrationPattern? =
-      unwrap(this).getIntegrationPattern()?.let(IntegrationPattern::wrap)
-
-  /**
-   * JSONPath expression to select select a portion of the state output to pass to the next state.
-   *
-   * May also be the special value JsonPath.DISCARD, which will cause the effective
-   * output to be the empty object {}.
-   *
-   * Default: - The entire JSON node determined by the state input, the task result,
-   * and resultPath is passed to the next state (JSON path '$')
-   */
-  public fun outputPath(): String? = unwrap(this).getOutputPath()
-
+public interface TaskStateBaseProps : StateBaseProps, TaskStateBaseOptions, AssignableStateOptions,
+    JsonPathCommonOptions, JsonataCommonOptions {
   /**
    * JSONPath expression to indicate where to inject the state's output.
    *
    * May also be the special value JsonPath.DISCARD, which will cause the state's
    * input to become its output.
    *
-   * Default: - Replaces the entire input with the result (JSON path '$')
+   * Default: $
    */
   public fun resultPath(): String? = unwrap(this).getResultPath()
 
@@ -146,39 +77,19 @@ public interface TaskStateBaseProps {
   public fun resultSelector(): Map<String, Any> = unwrap(this).getResultSelector() ?: emptyMap()
 
   /**
-   * Optional name for this state.
-   *
-   * Default: - The construct ID will be used as state name
-   */
-  public fun stateName(): String? = unwrap(this).getStateName()
-
-  /**
-   * Timeout for the task.
-   *
-   * [disable-awslint:duration-prop-type] is needed because all props interface in
-   * aws-stepfunctions-tasks extend this interface
-   *
-   * Default: - None
-   */
-  public fun taskTimeout(): Timeout? = unwrap(this).getTaskTimeout()?.let(Timeout::wrap)
-
-  /**
-   * (deprecated) Timeout for the task.
-   *
-   * Default: - None
-   *
-   * @deprecated use `taskTimeout`
-   */
-  @Deprecated(message = "deprecated in CDK")
-  public fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
-
-  /**
    * A builder for [TaskStateBaseProps]
    */
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param comment An optional description for this state.
+     * @param assign Workflow variables to store in this step.
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     */
+    public fun assign(assign: Map<String, Any>)
+
+    /**
+     * @param comment A comment describing this state.
      */
     public fun comment(comment: String)
 
@@ -230,12 +141,29 @@ public interface TaskStateBaseProps {
     public fun integrationPattern(integrationPattern: IntegrationPattern)
 
     /**
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state.
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state.
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      */
     public fun outputPath(outputPath: String)
+
+    /**
+     * @param outputs Used to specify and transform output from the state.
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     */
+    public fun outputs(outputs: Any)
+
+    /**
+     * @param queryLanguage The name of the query language used by the state.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
 
     /**
      * @param resultPath JSONPath expression to indicate where to inject the state's output.
@@ -277,7 +205,16 @@ public interface TaskStateBaseProps {
         = software.amazon.awscdk.services.stepfunctions.TaskStateBaseProps.builder()
 
     /**
-     * @param comment An optional description for this state.
+     * @param assign Workflow variables to store in this step.
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * @param comment A comment describing this state.
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -342,13 +279,34 @@ public interface TaskStateBaseProps {
     }
 
     /**
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state.
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state.
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      */
     override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
+    }
+
+    /**
+     * @param outputs Used to specify and transform output from the state.
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     */
+    override fun outputs(outputs: Any) {
+      cdkBuilder.outputs(outputs)
+    }
+
+    /**
+     * @param queryLanguage The name of the query language used by the state.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
     }
 
     /**
@@ -404,9 +362,21 @@ public interface TaskStateBaseProps {
   ) : CdkObject(cdkObject),
       TaskStateBaseProps {
     /**
-     * An optional description for this state.
+     * Workflow variables to store in this step.
      *
-     * Default: - No comment
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     */
+    override fun assign(): Map<String, Any> = unwrap(this).getAssign() ?: emptyMap()
+
+    /**
+     * A comment describing this state.
+     *
+     * Default: No comment
      */
     override fun comment(): String? = unwrap(this).getComment()
 
@@ -448,7 +418,7 @@ public interface TaskStateBaseProps {
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      */
     override fun inputPath(): String? = unwrap(this).getInputPath()
 
@@ -470,15 +440,40 @@ public interface TaskStateBaseProps {
         unwrap(this).getIntegrationPattern()?.let(IntegrationPattern::wrap)
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      */
     override fun outputPath(): String? = unwrap(this).getOutputPath()
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     */
+    override fun outputs(): Any? = unwrap(this).getOutputs()
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     */
+    override fun queryLanguage(): QueryLanguage? =
+        unwrap(this).getQueryLanguage()?.let(QueryLanguage::wrap)
 
     /**
      * JSONPath expression to indicate where to inject the state's output.
@@ -486,7 +481,7 @@ public interface TaskStateBaseProps {
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      */
     override fun resultPath(): String? = unwrap(this).getResultPath()
 

@@ -658,6 +658,8 @@ public open class CfnTargetGroup(
     /**
      * The target group attributes.
      *
+     * Attributes that you do not modify retain their current values.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)
      * @param targetGroupAttributes The target group attributes. 
      */
@@ -666,6 +668,8 @@ public open class CfnTargetGroup(
     /**
      * The target group attributes.
      *
+     * Attributes that you do not modify retain their current values.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)
      * @param targetGroupAttributes The target group attributes. 
      */
@@ -673,6 +677,8 @@ public open class CfnTargetGroup(
 
     /**
      * The target group attributes.
+     *
+     * Attributes that you do not modify retain their current values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)
      * @param targetGroupAttributes The target group attributes. 
@@ -1016,6 +1022,8 @@ public open class CfnTargetGroup(
     /**
      * The target group attributes.
      *
+     * Attributes that you do not modify retain their current values.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)
      * @param targetGroupAttributes The target group attributes. 
      */
@@ -1026,6 +1034,8 @@ public open class CfnTargetGroup(
     /**
      * The target group attributes.
      *
+     * Attributes that you do not modify retain their current values.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)
      * @param targetGroupAttributes The target group attributes. 
      */
@@ -1035,6 +1045,8 @@ public open class CfnTargetGroup(
 
     /**
      * The target group attributes.
+     *
+     * Attributes that you do not modify retain their current values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)
      * @param targetGroupAttributes The target group attributes. 
@@ -1608,7 +1620,7 @@ public open class CfnTargetGroup(
      * * `target_group_health.dns_failover.minimum_healthy_targets.count` - The minimum number of
      * targets that must be healthy. If the number of healthy targets is below this value, mark the
      * zone as unhealthy in DNS, so that traffic is routed only to healthy zones. The possible values
-     * are `off` or an integer from 1 to the maximum number of targets. The default is `off` .
+     * are `off` or an integer from 1 to the maximum number of targets. The default is 1.
      * * `target_group_health.dns_failover.minimum_healthy_targets.percentage` - The minimum
      * percentage of targets that must be healthy. If the percentage of healthy targets is below this
      * value, mark the zone as unhealthy in DNS, so that traffic is routed only to healthy zones. The
@@ -1669,7 +1681,7 @@ public open class CfnTargetGroup(
      * value is `true` or `false` . The default is `false` .
      * * `target_health_state.unhealthy.connection_termination.enabled` - Indicates whether the load
      * balancer terminates connections to unhealthy targets. The value is `true` or `false` . The
-     * default is `true` .
+     * default is `true` . This attribute can't be enabled for UDP and TCP_UDP target groups.
      * * `target_health_state.unhealthy.draining_interval_seconds` - The amount of time for Elastic
      * Load Balancing to wait before changing the state of an unhealthy target from
      * `unhealthy.draining` to `unhealthy` . The range is 0-360000 seconds. The default value is 0
@@ -1731,7 +1743,7 @@ public open class CfnTargetGroup(
        * * `target_group_health.dns_failover.minimum_healthy_targets.count` - The minimum number of
        * targets that must be healthy. If the number of healthy targets is below this value, mark the
        * zone as unhealthy in DNS, so that traffic is routed only to healthy zones. The possible values
-       * are `off` or an integer from 1 to the maximum number of targets. The default is `off` .
+       * are `off` or an integer from 1 to the maximum number of targets. The default is 1.
        * * `target_group_health.dns_failover.minimum_healthy_targets.percentage` - The minimum
        * percentage of targets that must be healthy. If the percentage of healthy targets is below this
        * value, mark the zone as unhealthy in DNS, so that traffic is routed only to healthy zones. The
@@ -1793,7 +1805,7 @@ public open class CfnTargetGroup(
        * value is `true` or `false` . The default is `false` .
        * * `target_health_state.unhealthy.connection_termination.enabled` - Indicates whether the
        * load balancer terminates connections to unhealthy targets. The value is `true` or `false` .
-       * The default is `true` .
+       * The default is `true` . This attribute can't be enabled for UDP and TCP_UDP target groups.
        * * `target_health_state.unhealthy.draining_interval_seconds` - The amount of time for
        * Elastic Load Balancing to wait before changing the state of an unhealthy target from
        * `unhealthy.draining` to `unhealthy` . The range is 0-360000 seconds. The default value is 0
@@ -1853,7 +1865,7 @@ public open class CfnTargetGroup(
        * * `target_group_health.dns_failover.minimum_healthy_targets.count` - The minimum number of
        * targets that must be healthy. If the number of healthy targets is below this value, mark the
        * zone as unhealthy in DNS, so that traffic is routed only to healthy zones. The possible values
-       * are `off` or an integer from 1 to the maximum number of targets. The default is `off` .
+       * are `off` or an integer from 1 to the maximum number of targets. The default is 1.
        * * `target_group_health.dns_failover.minimum_healthy_targets.percentage` - The minimum
        * percentage of targets that must be healthy. If the percentage of healthy targets is below this
        * value, mark the zone as unhealthy in DNS, so that traffic is routed only to healthy zones. The
@@ -1915,7 +1927,7 @@ public open class CfnTargetGroup(
        * value is `true` or `false` . The default is `false` .
        * * `target_health_state.unhealthy.connection_termination.enabled` - Indicates whether the
        * load balancer terminates connections to unhealthy targets. The value is `true` or `false` .
-       * The default is `true` .
+       * The default is `true` . This attribute can't be enabled for UDP and TCP_UDP target groups.
        * * `target_health_state.unhealthy.draining_interval_seconds` - The amount of time for
        * Elastic Load Balancing to wait before changing the state of an unhealthy target from
        * `unhealthy.draining` to `unhealthy` . The range is 0-360000 seconds. The default value is 0
@@ -1982,7 +1994,7 @@ public open class CfnTargetGroup(
        * * `target_group_health.dns_failover.minimum_healthy_targets.count` - The minimum number of
        * targets that must be healthy. If the number of healthy targets is below this value, mark the
        * zone as unhealthy in DNS, so that traffic is routed only to healthy zones. The possible values
-       * are `off` or an integer from 1 to the maximum number of targets. The default is `off` .
+       * are `off` or an integer from 1 to the maximum number of targets. The default is 1.
        * * `target_group_health.dns_failover.minimum_healthy_targets.percentage` - The minimum
        * percentage of targets that must be healthy. If the percentage of healthy targets is below this
        * value, mark the zone as unhealthy in DNS, so that traffic is routed only to healthy zones. The
@@ -2044,7 +2056,7 @@ public open class CfnTargetGroup(
        * value is `true` or `false` . The default is `false` .
        * * `target_health_state.unhealthy.connection_termination.enabled` - Indicates whether the
        * load balancer terminates connections to unhealthy targets. The value is `true` or `false` .
-       * The default is `true` .
+       * The default is `true` . This attribute can't be enabled for UDP and TCP_UDP target groups.
        * * `target_health_state.unhealthy.draining_interval_seconds` - The amount of time for
        * Elastic Load Balancing to wait before changing the state of an unhealthy target from
        * `unhealthy.draining` to `unhealthy` . The range is 0-360000 seconds. The default value is 0

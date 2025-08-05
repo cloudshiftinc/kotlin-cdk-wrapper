@@ -738,7 +738,9 @@ public open class CfnUser(
     /**
      * The first name.
      *
-     * This is required if you are using Amazon Connect or SAML for identity management.
+     * This is required if you are using Amazon Connect or SAML for identity management. Inputs must
+     * be in Unicode Normalization Form C (NFC). Text containing characters in a non-NFC form (for
+     * example, decomposed characters or combining marks) are not accepted.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-useridentityinfo.html#cfn-connect-user-useridentityinfo-firstname)
      */
@@ -747,7 +749,9 @@ public open class CfnUser(
     /**
      * The last name.
      *
-     * This is required if you are using Amazon Connect or SAML for identity management.
+     * This is required if you are using Amazon Connect or SAML for identity management. Inputs must
+     * be in Unicode Normalization Form C (NFC). Text containing characters in a non-NFC form (for
+     * example, decomposed characters or combining marks) are not accepted.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-useridentityinfo.html#cfn-connect-user-useridentityinfo-lastname)
      */
@@ -786,13 +790,17 @@ public open class CfnUser(
 
       /**
        * @param firstName The first name.
-       * This is required if you are using Amazon Connect or SAML for identity management.
+       * This is required if you are using Amazon Connect or SAML for identity management. Inputs
+       * must be in Unicode Normalization Form C (NFC). Text containing characters in a non-NFC form
+       * (for example, decomposed characters or combining marks) are not accepted.
        */
       public fun firstName(firstName: String)
 
       /**
        * @param lastName The last name.
-       * This is required if you are using Amazon Connect or SAML for identity management.
+       * This is required if you are using Amazon Connect or SAML for identity management. Inputs
+       * must be in Unicode Normalization Form C (NFC). Text containing characters in a non-NFC form
+       * (for example, decomposed characters or combining marks) are not accepted.
        */
       public fun lastName(lastName: String)
 
@@ -828,7 +836,9 @@ public open class CfnUser(
 
       /**
        * @param firstName The first name.
-       * This is required if you are using Amazon Connect or SAML for identity management.
+       * This is required if you are using Amazon Connect or SAML for identity management. Inputs
+       * must be in Unicode Normalization Form C (NFC). Text containing characters in a non-NFC form
+       * (for example, decomposed characters or combining marks) are not accepted.
        */
       override fun firstName(firstName: String) {
         cdkBuilder.firstName(firstName)
@@ -836,7 +846,9 @@ public open class CfnUser(
 
       /**
        * @param lastName The last name.
-       * This is required if you are using Amazon Connect or SAML for identity management.
+       * This is required if you are using Amazon Connect or SAML for identity management. Inputs
+       * must be in Unicode Normalization Form C (NFC). Text containing characters in a non-NFC form
+       * (for example, decomposed characters or combining marks) are not accepted.
        */
       override fun lastName(lastName: String) {
         cdkBuilder.lastName(lastName)
@@ -882,7 +894,9 @@ public open class CfnUser(
       /**
        * The first name.
        *
-       * This is required if you are using Amazon Connect or SAML for identity management.
+       * This is required if you are using Amazon Connect or SAML for identity management. Inputs
+       * must be in Unicode Normalization Form C (NFC). Text containing characters in a non-NFC form
+       * (for example, decomposed characters or combining marks) are not accepted.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-useridentityinfo.html#cfn-connect-user-useridentityinfo-firstname)
        */
@@ -891,7 +905,9 @@ public open class CfnUser(
       /**
        * The last name.
        *
-       * This is required if you are using Amazon Connect or SAML for identity management.
+       * This is required if you are using Amazon Connect or SAML for identity management. Inputs
+       * must be in Unicode Normalization Form C (NFC). Text containing characters in a non-NFC form
+       * (for example, decomposed characters or combining marks) are not accepted.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-useridentityinfo.html#cfn-connect-user-useridentityinfo-lastname)
        */

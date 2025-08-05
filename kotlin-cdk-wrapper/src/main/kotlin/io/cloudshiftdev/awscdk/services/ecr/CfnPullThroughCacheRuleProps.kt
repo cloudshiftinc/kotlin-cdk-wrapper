@@ -20,9 +20,11 @@ import kotlin.Unit
  * CfnPullThroughCacheRuleProps cfnPullThroughCacheRuleProps =
  * CfnPullThroughCacheRuleProps.builder()
  * .credentialArn("credentialArn")
+ * .customRoleArn("customRoleArn")
  * .ecrRepositoryPrefix("ecrRepositoryPrefix")
  * .upstreamRegistry("upstreamRegistry")
  * .upstreamRegistryUrl("upstreamRegistryUrl")
+ * .upstreamRepositoryPrefix("upstreamRepositoryPrefix")
  * .build();
  * ```
  *
@@ -35,6 +37,13 @@ public interface CfnPullThroughCacheRuleProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-pullthroughcacherule.html#cfn-ecr-pullthroughcacherule-credentialarn)
    */
   public fun credentialArn(): String? = unwrap(this).getCredentialArn()
+
+  /**
+   * The ARN of the IAM role associated with the pull through cache rule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-pullthroughcacherule.html#cfn-ecr-pullthroughcacherule-customrolearn)
+   */
+  public fun customRoleArn(): String? = unwrap(this).getCustomRoleArn()
 
   /**
    * The Amazon ECR repository prefix associated with the pull through cache rule.
@@ -58,6 +67,13 @@ public interface CfnPullThroughCacheRuleProps {
   public fun upstreamRegistryUrl(): String? = unwrap(this).getUpstreamRegistryUrl()
 
   /**
+   * The upstream repository prefix associated with the pull through cache rule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-pullthroughcacherule.html#cfn-ecr-pullthroughcacherule-upstreamrepositoryprefix)
+   */
+  public fun upstreamRepositoryPrefix(): String? = unwrap(this).getUpstreamRepositoryPrefix()
+
+  /**
    * A builder for [CfnPullThroughCacheRuleProps]
    */
   @CdkDslMarker
@@ -67,6 +83,11 @@ public interface CfnPullThroughCacheRuleProps {
      * cache rule.
      */
     public fun credentialArn(credentialArn: String)
+
+    /**
+     * @param customRoleArn The ARN of the IAM role associated with the pull through cache rule.
+     */
+    public fun customRoleArn(customRoleArn: String)
 
     /**
      * @param ecrRepositoryPrefix The Amazon ECR repository prefix associated with the pull through
@@ -85,6 +106,12 @@ public interface CfnPullThroughCacheRuleProps {
      * rule.
      */
     public fun upstreamRegistryUrl(upstreamRegistryUrl: String)
+
+    /**
+     * @param upstreamRepositoryPrefix The upstream repository prefix associated with the pull
+     * through cache rule.
+     */
+    public fun upstreamRepositoryPrefix(upstreamRepositoryPrefix: String)
   }
 
   private class BuilderImpl : Builder {
@@ -97,6 +124,13 @@ public interface CfnPullThroughCacheRuleProps {
      */
     override fun credentialArn(credentialArn: String) {
       cdkBuilder.credentialArn(credentialArn)
+    }
+
+    /**
+     * @param customRoleArn The ARN of the IAM role associated with the pull through cache rule.
+     */
+    override fun customRoleArn(customRoleArn: String) {
+      cdkBuilder.customRoleArn(customRoleArn)
     }
 
     /**
@@ -123,6 +157,14 @@ public interface CfnPullThroughCacheRuleProps {
       cdkBuilder.upstreamRegistryUrl(upstreamRegistryUrl)
     }
 
+    /**
+     * @param upstreamRepositoryPrefix The upstream repository prefix associated with the pull
+     * through cache rule.
+     */
+    override fun upstreamRepositoryPrefix(upstreamRepositoryPrefix: String) {
+      cdkBuilder.upstreamRepositoryPrefix(upstreamRepositoryPrefix)
+    }
+
     public fun build(): software.amazon.awscdk.services.ecr.CfnPullThroughCacheRuleProps =
         cdkBuilder.build()
   }
@@ -137,6 +179,13 @@ public interface CfnPullThroughCacheRuleProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-pullthroughcacherule.html#cfn-ecr-pullthroughcacherule-credentialarn)
      */
     override fun credentialArn(): String? = unwrap(this).getCredentialArn()
+
+    /**
+     * The ARN of the IAM role associated with the pull through cache rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-pullthroughcacherule.html#cfn-ecr-pullthroughcacherule-customrolearn)
+     */
+    override fun customRoleArn(): String? = unwrap(this).getCustomRoleArn()
 
     /**
      * The Amazon ECR repository prefix associated with the pull through cache rule.
@@ -158,6 +207,13 @@ public interface CfnPullThroughCacheRuleProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-pullthroughcacherule.html#cfn-ecr-pullthroughcacherule-upstreamregistryurl)
      */
     override fun upstreamRegistryUrl(): String? = unwrap(this).getUpstreamRegistryUrl()
+
+    /**
+     * The upstream repository prefix associated with the pull through cache rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-pullthroughcacherule.html#cfn-ecr-pullthroughcacherule-upstreamrepositoryprefix)
+     */
+    override fun upstreamRepositoryPrefix(): String? = unwrap(this).getUpstreamRepositoryPrefix()
   }
 
   public companion object {

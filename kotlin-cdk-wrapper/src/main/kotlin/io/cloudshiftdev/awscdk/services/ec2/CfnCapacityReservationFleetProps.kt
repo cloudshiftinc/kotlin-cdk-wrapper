@@ -131,7 +131,9 @@ public interface CfnCapacityReservationFleetProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html#cfn-ec2-capacityreservationfleet-tagspecifications)
    */
-  public fun tagSpecifications(): Any? = unwrap(this).getTagSpecifications()
+  public fun tagSpecifications(): List<CfnCapacityReservationFleet.TagSpecificationProperty> =
+      unwrap(this).getTagSpecifications()?.map(CfnCapacityReservationFleet.TagSpecificationProperty::wrap)
+      ?: emptyList()
 
   /**
    * Indicates the tenancy of the Capacity Reservation Fleet.
@@ -255,19 +257,15 @@ public interface CfnCapacityReservationFleetProps {
      * @param tagSpecifications The tags to assign to the Capacity Reservation Fleet.
      * The tags are automatically assigned to the Capacity Reservations in the Fleet.
      */
-    public fun tagSpecifications(tagSpecifications: IResolvable)
+    public
+        fun tagSpecifications(tagSpecifications: List<CfnCapacityReservationFleet.TagSpecificationProperty>)
 
     /**
      * @param tagSpecifications The tags to assign to the Capacity Reservation Fleet.
      * The tags are automatically assigned to the Capacity Reservations in the Fleet.
      */
-    public fun tagSpecifications(tagSpecifications: List<Any>)
-
-    /**
-     * @param tagSpecifications The tags to assign to the Capacity Reservation Fleet.
-     * The tags are automatically assigned to the Capacity Reservations in the Fleet.
-     */
-    public fun tagSpecifications(vararg tagSpecifications: Any)
+    public fun tagSpecifications(vararg
+        tagSpecifications: CfnCapacityReservationFleet.TagSpecificationProperty)
 
     /**
      * @param tenancy Indicates the tenancy of the Capacity Reservation Fleet.
@@ -407,23 +405,17 @@ public interface CfnCapacityReservationFleetProps {
      * @param tagSpecifications The tags to assign to the Capacity Reservation Fleet.
      * The tags are automatically assigned to the Capacity Reservations in the Fleet.
      */
-    override fun tagSpecifications(tagSpecifications: IResolvable) {
-      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
+    override
+        fun tagSpecifications(tagSpecifications: List<CfnCapacityReservationFleet.TagSpecificationProperty>) {
+      cdkBuilder.tagSpecifications(tagSpecifications.map(CfnCapacityReservationFleet.TagSpecificationProperty.Companion::unwrap))
     }
 
     /**
      * @param tagSpecifications The tags to assign to the Capacity Reservation Fleet.
      * The tags are automatically assigned to the Capacity Reservations in the Fleet.
      */
-    override fun tagSpecifications(tagSpecifications: List<Any>) {
-      cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
-    }
-
-    /**
-     * @param tagSpecifications The tags to assign to the Capacity Reservation Fleet.
-     * The tags are automatically assigned to the Capacity Reservations in the Fleet.
-     */
-    override fun tagSpecifications(vararg tagSpecifications: Any): Unit =
+    override fun tagSpecifications(vararg
+        tagSpecifications: CfnCapacityReservationFleet.TagSpecificationProperty): Unit =
         tagSpecifications(tagSpecifications.toList())
 
     /**
@@ -540,7 +532,9 @@ public interface CfnCapacityReservationFleetProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html#cfn-ec2-capacityreservationfleet-tagspecifications)
      */
-    override fun tagSpecifications(): Any? = unwrap(this).getTagSpecifications()
+    override fun tagSpecifications(): List<CfnCapacityReservationFleet.TagSpecificationProperty> =
+        unwrap(this).getTagSpecifications()?.map(CfnCapacityReservationFleet.TagSpecificationProperty::wrap)
+        ?: emptyList()
 
     /**
      * Indicates the tenancy of the Capacity Reservation Fleet.

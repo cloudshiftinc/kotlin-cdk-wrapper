@@ -38,7 +38,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .options(VpcOptionsProperty.builder()
  * .applianceModeSupport(false)
+ * .dnsSupport(false)
  * .ipv6Support(false)
+ * .securityGroupReferencingSupport(false)
  * .build())
  * .proposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChangeProperty.builder()
  * .attachmentPolicyRuleNumber(123)
@@ -979,7 +981,9 @@ public open class CfnVpcAttachment(
    * import io.cloudshiftdev.awscdk.services.networkmanager.*;
    * VpcOptionsProperty vpcOptionsProperty = VpcOptionsProperty.builder()
    * .applianceModeSupport(false)
+   * .dnsSupport(false)
    * .ipv6Support(false)
+   * .securityGroupReferencingSupport(false)
    * .build();
    * ```
    *
@@ -999,6 +1003,15 @@ public open class CfnVpcAttachment(
     public fun applianceModeSupport(): Any? = unwrap(this).getApplianceModeSupport()
 
     /**
+     * Indicates whether DNS is supported.
+     *
+     * Default: - true
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html#cfn-networkmanager-vpcattachment-vpcoptions-dnssupport)
+     */
+    public fun dnsSupport(): Any? = unwrap(this).getDnsSupport()
+
+    /**
      * Indicates whether IPv6 is supported.
      *
      * Default: - false
@@ -1006,6 +1019,19 @@ public open class CfnVpcAttachment(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html#cfn-networkmanager-vpcattachment-vpcoptions-ipv6support)
      */
     public fun ipv6Support(): Any? = unwrap(this).getIpv6Support()
+
+    /**
+     * Indicates whether security group referencing is enabled for this VPC attachment.
+     *
+     * The default is `true` . However, at the core network policy-level the default is set to
+     * `false` .
+     *
+     * Default: - true
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html#cfn-networkmanager-vpcattachment-vpcoptions-securitygroupreferencingsupport)
+     */
+    public fun securityGroupReferencingSupport(): Any? =
+        unwrap(this).getSecurityGroupReferencingSupport()
 
     /**
      * A builder for [VpcOptionsProperty]
@@ -1027,6 +1053,16 @@ public open class CfnVpcAttachment(
       public fun applianceModeSupport(applianceModeSupport: IResolvable)
 
       /**
+       * @param dnsSupport Indicates whether DNS is supported.
+       */
+      public fun dnsSupport(dnsSupport: Boolean)
+
+      /**
+       * @param dnsSupport Indicates whether DNS is supported.
+       */
+      public fun dnsSupport(dnsSupport: IResolvable)
+
+      /**
        * @param ipv6Support Indicates whether IPv6 is supported.
        */
       public fun ipv6Support(ipv6Support: Boolean)
@@ -1035,6 +1071,22 @@ public open class CfnVpcAttachment(
        * @param ipv6Support Indicates whether IPv6 is supported.
        */
       public fun ipv6Support(ipv6Support: IResolvable)
+
+      /**
+       * @param securityGroupReferencingSupport Indicates whether security group referencing is
+       * enabled for this VPC attachment.
+       * The default is `true` . However, at the core network policy-level the default is set to
+       * `false` .
+       */
+      public fun securityGroupReferencingSupport(securityGroupReferencingSupport: Boolean)
+
+      /**
+       * @param securityGroupReferencingSupport Indicates whether security group referencing is
+       * enabled for this VPC attachment.
+       * The default is `true` . However, at the core network policy-level the default is set to
+       * `false` .
+       */
+      public fun securityGroupReferencingSupport(securityGroupReferencingSupport: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1062,6 +1114,20 @@ public open class CfnVpcAttachment(
       }
 
       /**
+       * @param dnsSupport Indicates whether DNS is supported.
+       */
+      override fun dnsSupport(dnsSupport: Boolean) {
+        cdkBuilder.dnsSupport(dnsSupport)
+      }
+
+      /**
+       * @param dnsSupport Indicates whether DNS is supported.
+       */
+      override fun dnsSupport(dnsSupport: IResolvable) {
+        cdkBuilder.dnsSupport(dnsSupport.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
        * @param ipv6Support Indicates whether IPv6 is supported.
        */
       override fun ipv6Support(ipv6Support: Boolean) {
@@ -1073,6 +1139,26 @@ public open class CfnVpcAttachment(
        */
       override fun ipv6Support(ipv6Support: IResolvable) {
         cdkBuilder.ipv6Support(ipv6Support.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param securityGroupReferencingSupport Indicates whether security group referencing is
+       * enabled for this VPC attachment.
+       * The default is `true` . However, at the core network policy-level the default is set to
+       * `false` .
+       */
+      override fun securityGroupReferencingSupport(securityGroupReferencingSupport: Boolean) {
+        cdkBuilder.securityGroupReferencingSupport(securityGroupReferencingSupport)
+      }
+
+      /**
+       * @param securityGroupReferencingSupport Indicates whether security group referencing is
+       * enabled for this VPC attachment.
+       * The default is `true` . However, at the core network policy-level the default is set to
+       * `false` .
+       */
+      override fun securityGroupReferencingSupport(securityGroupReferencingSupport: IResolvable) {
+        cdkBuilder.securityGroupReferencingSupport(securityGroupReferencingSupport.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1097,6 +1183,15 @@ public open class CfnVpcAttachment(
       override fun applianceModeSupport(): Any? = unwrap(this).getApplianceModeSupport()
 
       /**
+       * Indicates whether DNS is supported.
+       *
+       * Default: - true
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html#cfn-networkmanager-vpcattachment-vpcoptions-dnssupport)
+       */
+      override fun dnsSupport(): Any? = unwrap(this).getDnsSupport()
+
+      /**
        * Indicates whether IPv6 is supported.
        *
        * Default: - false
@@ -1104,6 +1199,19 @@ public open class CfnVpcAttachment(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html#cfn-networkmanager-vpcattachment-vpcoptions-ipv6support)
        */
       override fun ipv6Support(): Any? = unwrap(this).getIpv6Support()
+
+      /**
+       * Indicates whether security group referencing is enabled for this VPC attachment.
+       *
+       * The default is `true` . However, at the core network policy-level the default is set to
+       * `false` .
+       *
+       * Default: - true
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html#cfn-networkmanager-vpcattachment-vpcoptions-securitygroupreferencingsupport)
+       */
+      override fun securityGroupReferencingSupport(): Any? =
+          unwrap(this).getSecurityGroupReferencingSupport()
     }
 
     public companion object {

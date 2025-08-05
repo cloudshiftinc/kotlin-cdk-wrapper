@@ -29,6 +29,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .autoScalingRollingUpdate(CfnAutoScalingRollingUpdate.builder()
  * .maxBatchSize(123)
+ * .minActiveInstancesPercent(123)
  * .minInstancesInService(123)
  * .minSuccessfulInstancesPercent(123)
  * .pauseTime("pauseTime")

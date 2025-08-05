@@ -42,13 +42,15 @@ import kotlin.collections.List
  */
 public interface CfnDBShardGroupProps {
   /**
-   * Specifies whether to create standby DB shard groups for the DB shard group. Valid values are
-   * the following:.
+   * Specifies whether to create standby standby DB data access shard for the DB shard group.
    *
-   * * 0 - Creates a DB shard group without a standby DB shard group. This is the default value.
-   * * 1 - Creates a DB shard group with a standby DB shard group in a different Availability Zone
-   * (AZ).
-   * * 2 - Creates a DB shard group with two standby DB shard groups in two different AZs.
+   * Valid values are the following:
+   *
+   * * 0 - Creates a DB shard group without a standby DB data access shard. This is the default
+   * value.
+   * * 1 - Creates a DB shard group with a standby DB data access shard in a different Availability
+   * Zone (AZ).
+   * * 2 - Creates a DB shard group with two standby DB data access shard in two different AZs.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbshardgroup.html#cfn-rds-dbshardgroup-computeredundancy)
    */
@@ -130,12 +132,15 @@ public interface CfnDBShardGroupProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param computeRedundancy Specifies whether to create standby DB shard groups for the DB shard
-     * group. Valid values are the following:.
-     * * 0 - Creates a DB shard group without a standby DB shard group. This is the default value.
-     * * 1 - Creates a DB shard group with a standby DB shard group in a different Availability Zone
-     * (AZ).
-     * * 2 - Creates a DB shard group with two standby DB shard groups in two different AZs.
+     * @param computeRedundancy Specifies whether to create standby standby DB data access shard for
+     * the DB shard group.
+     * Valid values are the following:
+     *
+     * * 0 - Creates a DB shard group without a standby DB data access shard. This is the default
+     * value.
+     * * 1 - Creates a DB shard group with a standby DB data access shard in a different
+     * Availability Zone (AZ).
+     * * 2 - Creates a DB shard group with two standby DB data access shard in two different AZs.
      */
     public fun computeRedundancy(computeRedundancy: Number)
 
@@ -239,12 +244,15 @@ public interface CfnDBShardGroupProps {
         software.amazon.awscdk.services.rds.CfnDBShardGroupProps.builder()
 
     /**
-     * @param computeRedundancy Specifies whether to create standby DB shard groups for the DB shard
-     * group. Valid values are the following:.
-     * * 0 - Creates a DB shard group without a standby DB shard group. This is the default value.
-     * * 1 - Creates a DB shard group with a standby DB shard group in a different Availability Zone
-     * (AZ).
-     * * 2 - Creates a DB shard group with two standby DB shard groups in two different AZs.
+     * @param computeRedundancy Specifies whether to create standby standby DB data access shard for
+     * the DB shard group.
+     * Valid values are the following:
+     *
+     * * 0 - Creates a DB shard group without a standby DB data access shard. This is the default
+     * value.
+     * * 1 - Creates a DB shard group with a standby DB data access shard in a different
+     * Availability Zone (AZ).
+     * * 2 - Creates a DB shard group with two standby DB data access shard in two different AZs.
      */
     override fun computeRedundancy(computeRedundancy: Number) {
       cdkBuilder.computeRedundancy(computeRedundancy)
@@ -367,13 +375,15 @@ public interface CfnDBShardGroupProps {
   ) : CdkObject(cdkObject),
       CfnDBShardGroupProps {
     /**
-     * Specifies whether to create standby DB shard groups for the DB shard group. Valid values are
-     * the following:.
+     * Specifies whether to create standby standby DB data access shard for the DB shard group.
      *
-     * * 0 - Creates a DB shard group without a standby DB shard group. This is the default value.
-     * * 1 - Creates a DB shard group with a standby DB shard group in a different Availability Zone
-     * (AZ).
-     * * 2 - Creates a DB shard group with two standby DB shard groups in two different AZs.
+     * Valid values are the following:
+     *
+     * * 0 - Creates a DB shard group without a standby DB data access shard. This is the default
+     * value.
+     * * 1 - Creates a DB shard group with a standby DB data access shard in a different
+     * Availability Zone (AZ).
+     * * 2 - Creates a DB shard group with two standby DB data access shard in two different AZs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbshardgroup.html#cfn-rds-dbshardgroup-computeredundancy)
      */

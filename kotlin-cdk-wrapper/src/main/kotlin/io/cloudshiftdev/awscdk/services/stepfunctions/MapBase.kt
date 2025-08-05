@@ -38,8 +38,18 @@ public abstract class MapBase(
 
   /**
    * Return the Amazon States Language object for this state.
+   *
+   * @param topLevelQueryLanguage
    */
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
+
+  /**
+   * Return the Amazon States Language object for this state.
+   *
+   * @param topLevelQueryLanguage
+   */
+  public override fun toStateJson(topLevelQueryLanguage: QueryLanguage): ObjectNode =
+      unwrap(this).toStateJson(topLevelQueryLanguage.let(QueryLanguage.Companion::unwrap))
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.MapBase,

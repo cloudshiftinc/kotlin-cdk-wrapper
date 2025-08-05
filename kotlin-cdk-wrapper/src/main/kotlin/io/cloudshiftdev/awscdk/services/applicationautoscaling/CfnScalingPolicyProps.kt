@@ -195,6 +195,8 @@ public interface CfnScalingPolicyProps {
    * `StepScaling` —Not supported for DynamoDB, Amazon Comprehend, Lambda, Amazon Keyspaces, Amazon
    * MSK, Amazon ElastiCache, or Neptune.
    *
+   * `PredictiveScaling` —Only supported for Amazon ECS
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-policytype)
    */
   public fun policyType(): String
@@ -249,6 +251,8 @@ public interface CfnScalingPolicyProps {
    * .
    * * Amazon ElastiCache replication group - The resource type is `replication-group` and the
    * unique identifier is the replication group name. Example: `replication-group/mycluster` .
+   * * Amazon ElastiCache cache cluster - The resource type is `cache-cluster` and the unique
+   * identifier is the cache cluster name. Example: `cache-cluster/mycluster` .
    * * Neptune cluster - The resource type is `cluster` and the unique identifier is the cluster
    * name. Example: `cluster:mycluster` .
    * * SageMaker serverless endpoint - The resource type is `variant` and the unique identifier is
@@ -293,6 +297,8 @@ public interface CfnScalingPolicyProps {
    * table.
    * * `kafka:broker-storage:VolumeSize` - The provisioned volume size (in GiB) for brokers in an
    * Amazon MSK cluster.
+   * * `elasticache:cache-cluster:Nodes` - The number of nodes for an Amazon ElastiCache cache
+   * cluster.
    * * `elasticache:replication-group:NodeGroups` - The number of node groups for an Amazon
    * ElastiCache replication group.
    * * `elasticache:replication-group:Replicas` - The number of replicas per node group for an
@@ -371,6 +377,8 @@ public interface CfnScalingPolicyProps {
      *
      * `StepScaling` —Not supported for DynamoDB, Amazon Comprehend, Lambda, Amazon Keyspaces,
      * Amazon MSK, Amazon ElastiCache, or Neptune.
+     *
+     * `PredictiveScaling` —Only supported for Amazon ECS
      */
     public fun policyType(policyType: String)
 
@@ -436,6 +444,8 @@ public interface CfnScalingPolicyProps {
      * .
      * * Amazon ElastiCache replication group - The resource type is `replication-group` and the
      * unique identifier is the replication group name. Example: `replication-group/mycluster` .
+     * * Amazon ElastiCache cache cluster - The resource type is `cache-cluster` and the unique
+     * identifier is the cache cluster name. Example: `cache-cluster/mycluster` .
      * * Neptune cluster - The resource type is `cluster` and the unique identifier is the cluster
      * name. Example: `cluster:mycluster` .
      * * SageMaker serverless endpoint - The resource type is `variant` and the unique identifier is
@@ -479,6 +489,8 @@ public interface CfnScalingPolicyProps {
      * Keyspaces table.
      * * `kafka:broker-storage:VolumeSize` - The provisioned volume size (in GiB) for brokers in an
      * Amazon MSK cluster.
+     * * `elasticache:cache-cluster:Nodes` - The number of nodes for an Amazon ElastiCache cache
+     * cluster.
      * * `elasticache:replication-group:NodeGroups` - The number of node groups for an Amazon
      * ElastiCache replication group.
      * * `elasticache:replication-group:Replicas` - The number of replicas per node group for an
@@ -577,6 +589,8 @@ public interface CfnScalingPolicyProps {
      *
      * `StepScaling` —Not supported for DynamoDB, Amazon Comprehend, Lambda, Amazon Keyspaces,
      * Amazon MSK, Amazon ElastiCache, or Neptune.
+     *
+     * `PredictiveScaling` —Only supported for Amazon ECS
      */
     override fun policyType(policyType: String) {
       cdkBuilder.policyType(policyType)
@@ -650,6 +664,8 @@ public interface CfnScalingPolicyProps {
      * .
      * * Amazon ElastiCache replication group - The resource type is `replication-group` and the
      * unique identifier is the replication group name. Example: `replication-group/mycluster` .
+     * * Amazon ElastiCache cache cluster - The resource type is `cache-cluster` and the unique
+     * identifier is the cache cluster name. Example: `cache-cluster/mycluster` .
      * * Neptune cluster - The resource type is `cluster` and the unique identifier is the cluster
      * name. Example: `cluster:mycluster` .
      * * SageMaker serverless endpoint - The resource type is `variant` and the unique identifier is
@@ -695,6 +711,8 @@ public interface CfnScalingPolicyProps {
      * Keyspaces table.
      * * `kafka:broker-storage:VolumeSize` - The provisioned volume size (in GiB) for brokers in an
      * Amazon MSK cluster.
+     * * `elasticache:cache-cluster:Nodes` - The number of nodes for an Amazon ElastiCache cache
+     * cluster.
      * * `elasticache:replication-group:NodeGroups` - The number of node groups for an Amazon
      * ElastiCache replication group.
      * * `elasticache:replication-group:Replicas` - The number of replicas per node group for an
@@ -816,6 +834,8 @@ public interface CfnScalingPolicyProps {
      * `StepScaling` —Not supported for DynamoDB, Amazon Comprehend, Lambda, Amazon Keyspaces,
      * Amazon MSK, Amazon ElastiCache, or Neptune.
      *
+     * `PredictiveScaling` —Only supported for Amazon ECS
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-policytype)
      */
     override fun policyType(): String = unwrap(this).getPolicyType()
@@ -871,6 +891,8 @@ public interface CfnScalingPolicyProps {
      * .
      * * Amazon ElastiCache replication group - The resource type is `replication-group` and the
      * unique identifier is the replication group name. Example: `replication-group/mycluster` .
+     * * Amazon ElastiCache cache cluster - The resource type is `cache-cluster` and the unique
+     * identifier is the cache cluster name. Example: `cache-cluster/mycluster` .
      * * Neptune cluster - The resource type is `cluster` and the unique identifier is the cluster
      * name. Example: `cluster:mycluster` .
      * * SageMaker serverless endpoint - The resource type is `variant` and the unique identifier is
@@ -917,6 +939,8 @@ public interface CfnScalingPolicyProps {
      * Keyspaces table.
      * * `kafka:broker-storage:VolumeSize` - The provisioned volume size (in GiB) for brokers in an
      * Amazon MSK cluster.
+     * * `elasticache:cache-cluster:Nodes` - The number of nodes for an Amazon ElastiCache cache
+     * cluster.
      * * `elasticache:replication-group:NodeGroups` - The number of node groups for an Amazon
      * ElastiCache replication group.
      * * `elasticache:replication-group:Replicas` - The number of replicas per node group for an

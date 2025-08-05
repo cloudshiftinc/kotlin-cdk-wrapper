@@ -367,12 +367,12 @@ public open class CfnRecipe(
       /**
        * @param parameters Contextual parameters for the transformation.
        */
-      public fun parameters(parameters: IResolvable)
+      public fun parameters(parameters: Map<String, String>)
 
       /**
        * @param parameters Contextual parameters for the transformation.
        */
-      public fun parameters(parameters: Map<String, String>)
+      public fun parameters(parameters: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -390,15 +390,15 @@ public open class CfnRecipe(
       /**
        * @param parameters Contextual parameters for the transformation.
        */
-      override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+      override fun parameters(parameters: Map<String, String>) {
+        cdkBuilder.parameters(parameters)
       }
 
       /**
        * @param parameters Contextual parameters for the transformation.
        */
-      override fun parameters(parameters: Map<String, String>) {
-        cdkBuilder.parameters(parameters)
+      override fun parameters(parameters: IResolvable) {
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty =
@@ -2253,12 +2253,6 @@ public open class CfnRecipe(
        * @param sheetIndexes One or more sheet numbers in the Excel file, which will be included in
        * a dataset.
        */
-      public fun sheetIndexes(sheetIndexes: IResolvable)
-
-      /**
-       * @param sheetIndexes One or more sheet numbers in the Excel file, which will be included in
-       * a dataset.
-       */
       public fun sheetIndexes(sheetIndexes: List<Number>)
 
       /**
@@ -2266,6 +2260,12 @@ public open class CfnRecipe(
        * a dataset.
        */
       public fun sheetIndexes(vararg sheetIndexes: Number)
+
+      /**
+       * @param sheetIndexes One or more sheet numbers in the Excel file, which will be included in
+       * a dataset.
+       */
+      public fun sheetIndexes(sheetIndexes: IResolvable)
 
       /**
        * @param sheetNames Oone or more named sheets in the Excel file, which will be included in a
@@ -2975,14 +2975,6 @@ public open class CfnRecipe(
        * @param sheetIndexes One or more sheet numbers in the Excel file, which will be included in
        * a dataset.
        */
-      override fun sheetIndexes(sheetIndexes: IResolvable) {
-        cdkBuilder.sheetIndexes(sheetIndexes.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param sheetIndexes One or more sheet numbers in the Excel file, which will be included in
-       * a dataset.
-       */
       override fun sheetIndexes(sheetIndexes: List<Number>) {
         cdkBuilder.sheetIndexes(sheetIndexes)
       }
@@ -2993,6 +2985,14 @@ public open class CfnRecipe(
        */
       override fun sheetIndexes(vararg sheetIndexes: Number): Unit =
           sheetIndexes(sheetIndexes.toList())
+
+      /**
+       * @param sheetIndexes One or more sheet numbers in the Excel file, which will be included in
+       * a dataset.
+       */
+      override fun sheetIndexes(sheetIndexes: IResolvable) {
+        cdkBuilder.sheetIndexes(sheetIndexes.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param sheetNames Oone or more named sheets in the Excel file, which will be included in a

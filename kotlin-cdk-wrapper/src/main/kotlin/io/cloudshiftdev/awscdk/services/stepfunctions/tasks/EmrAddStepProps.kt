@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
+import io.cloudshiftdev.awscdk.services.stepfunctions.QueryLanguage
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBaseProps
 import io.cloudshiftdev.awscdk.services.stepfunctions.Timeout
 import kotlin.Any
@@ -125,12 +126,19 @@ public interface EmrAddStepProps : TaskStateBaseProps {
     public fun args(vararg args: String)
 
     /**
+     * @param assign Workflow variables to store in this step.
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     */
+    public fun assign(assign: Map<String, Any>)
+
+    /**
      * @param clusterId The ClusterId to add the Step to. 
      */
     public fun clusterId(clusterId: String)
 
     /**
-     * @param comment An optional description for this state.
+     * @param comment A comment describing this state.
      */
     public fun comment(comment: String)
 
@@ -204,18 +212,35 @@ public interface EmrAddStepProps : TaskStateBaseProps {
     public fun name(name: String)
 
     /**
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state.
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state.
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      */
     public fun outputPath(outputPath: String)
 
     /**
+     * @param outputs Used to specify and transform output from the state.
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     */
+    public fun outputs(outputs: Any)
+
+    /**
      * @param properties A list of Java properties that are set when the step runs.
      * You can use these properties to pass key value pairs to your main function.
      */
     public fun properties(properties: Map<String, String>)
+
+    /**
+     * @param queryLanguage The name of the query language used by the state.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
 
     /**
      * @param resultPath JSONPath expression to indicate where to inject the state's output.
@@ -279,6 +304,15 @@ public interface EmrAddStepProps : TaskStateBaseProps {
     override fun args(vararg args: String): Unit = args(args.toList())
 
     /**
+     * @param assign Workflow variables to store in this step.
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
      * @param clusterId The ClusterId to add the Step to. 
      */
     override fun clusterId(clusterId: String) {
@@ -286,7 +320,7 @@ public interface EmrAddStepProps : TaskStateBaseProps {
     }
 
     /**
-     * @param comment An optional description for this state.
+     * @param comment A comment describing this state.
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -381,8 +415,8 @@ public interface EmrAddStepProps : TaskStateBaseProps {
     }
 
     /**
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state.
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state.
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      */
@@ -391,11 +425,32 @@ public interface EmrAddStepProps : TaskStateBaseProps {
     }
 
     /**
+     * @param outputs Used to specify and transform output from the state.
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     */
+    override fun outputs(outputs: Any) {
+      cdkBuilder.outputs(outputs)
+    }
+
+    /**
      * @param properties A list of Java properties that are set when the step runs.
      * You can use these properties to pass key value pairs to your main function.
      */
     override fun properties(properties: Map<String, String>) {
       cdkBuilder.properties(properties)
+    }
+
+    /**
+     * @param queryLanguage The name of the query language used by the state.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
     }
 
     /**
@@ -470,14 +525,26 @@ public interface EmrAddStepProps : TaskStateBaseProps {
     override fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
 
     /**
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     */
+    override fun assign(): Map<String, Any> = unwrap(this).getAssign() ?: emptyMap()
+
+    /**
      * The ClusterId to add the Step to.
      */
     override fun clusterId(): String = unwrap(this).getClusterId()
 
     /**
-     * An optional description for this state.
+     * A comment describing this state.
      *
-     * Default: - No comment
+     * Default: No comment
      */
     override fun comment(): String? = unwrap(this).getComment()
 
@@ -528,7 +595,7 @@ public interface EmrAddStepProps : TaskStateBaseProps {
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      */
     override fun inputPath(): String? = unwrap(this).getInputPath()
 
@@ -575,15 +642,29 @@ public interface EmrAddStepProps : TaskStateBaseProps {
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      */
     override fun outputPath(): String? = unwrap(this).getOutputPath()
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     */
+    override fun outputs(): Any? = unwrap(this).getOutputs()
 
     /**
      * A list of Java properties that are set when the step runs.
@@ -597,12 +678,23 @@ public interface EmrAddStepProps : TaskStateBaseProps {
     override fun properties(): Map<String, String> = unwrap(this).getProperties() ?: emptyMap()
 
     /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     */
+    override fun queryLanguage(): QueryLanguage? =
+        unwrap(this).getQueryLanguage()?.let(QueryLanguage::wrap)
+
+    /**
      * JSONPath expression to indicate where to inject the state's output.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      */
     override fun resultPath(): String? = unwrap(this).getResultPath()
 

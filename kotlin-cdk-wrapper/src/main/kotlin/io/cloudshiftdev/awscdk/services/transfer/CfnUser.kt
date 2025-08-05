@@ -309,7 +309,8 @@ public open class CfnUser(
      * A `HomeDirectory` example is `/bucket_name/home/mydirectory` .
      *
      *
-     * The `HomeDirectory` parameter is only used if `HomeDirectoryType` is set to `PATH` .
+     * You can use the `HomeDirectory` parameter for `HomeDirectoryType` when it is set to either
+     * `PATH` or `LOGICAL` .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-homedirectory)
@@ -529,6 +530,12 @@ public open class CfnUser(
      * Specifies the public key portion of the Secure Shell (SSH) keys stored for the described
      * user.
      *
+     *
+     * To delete the public key body, set its value to zero keys, as shown here:
+     *
+     * `SshPublicKeys: []`
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-sshpublickeys)
      * @param sshPublicKeys Specifies the public key portion of the Secure Shell (SSH) keys stored
      * for the described user. 
@@ -538,6 +545,12 @@ public open class CfnUser(
     /**
      * Specifies the public key portion of the Secure Shell (SSH) keys stored for the described
      * user.
+     *
+     *
+     * To delete the public key body, set its value to zero keys, as shown here:
+     *
+     * `SshPublicKeys: []`
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-sshpublickeys)
      * @param sshPublicKeys Specifies the public key portion of the Secure Shell (SSH) keys stored
@@ -591,7 +604,8 @@ public open class CfnUser(
      * A `HomeDirectory` example is `/bucket_name/home/mydirectory` .
      *
      *
-     * The `HomeDirectory` parameter is only used if `HomeDirectoryType` is set to `PATH` .
+     * You can use the `HomeDirectory` parameter for `HomeDirectoryType` when it is set to either
+     * `PATH` or `LOGICAL` .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-homedirectory)
@@ -831,6 +845,12 @@ public open class CfnUser(
      * Specifies the public key portion of the Secure Shell (SSH) keys stored for the described
      * user.
      *
+     *
+     * To delete the public key body, set its value to zero keys, as shown here:
+     *
+     * `SshPublicKeys: []`
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-sshpublickeys)
      * @param sshPublicKeys Specifies the public key portion of the Secure Shell (SSH) keys stored
      * for the described user. 
@@ -842,6 +862,12 @@ public open class CfnUser(
     /**
      * Specifies the public key portion of the Secure Shell (SSH) keys stored for the described
      * user.
+     *
+     *
+     * To delete the public key body, set its value to zero keys, as shown here:
+     *
+     * `SshPublicKeys: []`
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-sshpublickeys)
      * @param sshPublicKeys Specifies the public key portion of the Secure Shell (SSH) keys stored
@@ -1139,12 +1165,6 @@ public open class CfnUser(
        * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
        * user.
        */
-      public fun secondaryGids(secondaryGids: IResolvable)
-
-      /**
-       * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
-       * user.
-       */
       public fun secondaryGids(secondaryGids: List<Number>)
 
       /**
@@ -1152,6 +1172,12 @@ public open class CfnUser(
        * user.
        */
       public fun secondaryGids(vararg secondaryGids: Number)
+
+      /**
+       * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
+       * user.
+       */
+      public fun secondaryGids(secondaryGids: IResolvable)
 
       /**
        * @param uid The POSIX user ID used for all EFS operations by this user. 
@@ -1175,14 +1201,6 @@ public open class CfnUser(
        * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
        * user.
        */
-      override fun secondaryGids(secondaryGids: IResolvable) {
-        cdkBuilder.secondaryGids(secondaryGids.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
-       * user.
-       */
       override fun secondaryGids(secondaryGids: List<Number>) {
         cdkBuilder.secondaryGids(secondaryGids)
       }
@@ -1193,6 +1211,14 @@ public open class CfnUser(
        */
       override fun secondaryGids(vararg secondaryGids: Number): Unit =
           secondaryGids(secondaryGids.toList())
+
+      /**
+       * @param secondaryGids The secondary POSIX group IDs used for all EFS operations by this
+       * user.
+       */
+      override fun secondaryGids(secondaryGids: IResolvable) {
+        cdkBuilder.secondaryGids(secondaryGids.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param uid The POSIX user ID used for all EFS operations by this user. 

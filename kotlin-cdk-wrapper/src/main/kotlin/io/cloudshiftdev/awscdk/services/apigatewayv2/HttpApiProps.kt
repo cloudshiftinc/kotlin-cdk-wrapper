@@ -111,6 +111,16 @@ public interface HttpApiProps {
   public fun disableExecuteApiEndpoint(): Boolean? = unwrap(this).getDisableExecuteApiEndpoint()
 
   /**
+   * The IP address types that can invoke the API.
+   *
+   * Default: undefined - AWS default is IPV4
+   *
+   * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-ip-address-type.html)
+   */
+  public fun ipAddressType(): IpAddressType? =
+      unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
+
+  /**
    * Whether to set the default route selection expression for the API.
    *
    * When enabled, "${request.method} ${request.path}" is set as the default route selection
@@ -200,6 +210,11 @@ public interface HttpApiProps {
      * true if you would like clients to use your custom domain name.
      */
     public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean)
+
+    /**
+     * @param ipAddressType The IP address types that can invoke the API.
+     */
+    public fun ipAddressType(ipAddressType: IpAddressType)
 
     /**
      * @param routeSelectionExpression Whether to set the default route selection expression for the
@@ -313,6 +328,13 @@ public interface HttpApiProps {
     }
 
     /**
+     * @param ipAddressType The IP address types that can invoke the API.
+     */
+    override fun ipAddressType(ipAddressType: IpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
+    }
+
+    /**
      * @param routeSelectionExpression Whether to set the default route selection expression for the
      * API.
      * When enabled, "${request.method} ${request.path}" is set as the default route selection
@@ -407,6 +429,16 @@ public interface HttpApiProps {
      * Default: false execute-api endpoint enabled.
      */
     override fun disableExecuteApiEndpoint(): Boolean? = unwrap(this).getDisableExecuteApiEndpoint()
+
+    /**
+     * The IP address types that can invoke the API.
+     *
+     * Default: undefined - AWS default is IPV4
+     *
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-ip-address-type.html)
+     */
+    override fun ipAddressType(): IpAddressType? =
+        unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
 
     /**
      * Whether to set the default route selection expression for the API.

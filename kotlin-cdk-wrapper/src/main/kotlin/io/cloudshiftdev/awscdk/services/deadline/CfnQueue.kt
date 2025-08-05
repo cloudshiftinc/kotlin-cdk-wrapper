@@ -324,6 +324,11 @@ public open class CfnQueue(
     /**
      * A description of the queue that helps identify what the queue is used for.
      *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
+     *
      * Default: - ""
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queue.html#cfn-deadline-queue-description)
@@ -506,6 +511,11 @@ public open class CfnQueue(
 
     /**
      * A description of the queue that helps identify what the queue is used for.
+     *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
      *
      * Default: - ""
      *

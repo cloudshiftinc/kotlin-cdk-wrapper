@@ -135,69 +135,94 @@ import kotlin.jvm.JvmName
  */
 public interface CfnClusterProps {
   /**
+   * Information about the broker nodes in the cluster.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-brokernodegroupinfo)
    */
   public fun brokerNodeGroupInfo(): Any
 
   /**
+   * Includes all client authentication related information.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-clientauthentication)
    */
   public fun clientAuthentication(): Any? = unwrap(this).getClientAuthentication()
 
   /**
+   * The name of the cluster.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-clustername)
    */
   public fun clusterName(): String
 
   /**
+   * Represents the configuration that you want MSK to use for the cluster.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-configurationinfo)
    */
   public fun configurationInfo(): Any? = unwrap(this).getConfigurationInfo()
 
   /**
-   * The current version of the MSK cluster.
+   * The version of the cluster that you want to update.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-currentversion)
    */
   public fun currentVersion(): String? = unwrap(this).getCurrentVersion()
 
   /**
+   * Includes all encryption-related information.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-encryptioninfo)
    */
   public fun encryptionInfo(): Any? = unwrap(this).getEncryptionInfo()
 
   /**
+   * Specifies the level of monitoring for the MSK cluster.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-enhancedmonitoring)
    */
   public fun enhancedMonitoring(): String? = unwrap(this).getEnhancedMonitoring()
 
   /**
+   * The version of Apache Kafka.
+   *
+   * You can use Amazon MSK to create clusters that use [supported Apache Kafka
+   * versions](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) .
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-kafkaversion)
    */
   public fun kafkaVersion(): String
 
   /**
+   * Logging info details for the cluster.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-logginginfo)
    */
   public fun loggingInfo(): Any? = unwrap(this).getLoggingInfo()
 
   /**
+   * The number of broker nodes in the cluster.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-numberofbrokernodes)
    */
   public fun numberOfBrokerNodes(): Number
 
   /**
+   * The settings for open monitoring.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-openmonitoring)
    */
   public fun openMonitoring(): Any? = unwrap(this).getOpenMonitoring()
 
   /**
+   * This controls storage mode for supported storage tiers.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-storagemode)
    */
   public fun storageMode(): String? = unwrap(this).getStorageMode()
 
   /**
-   * A key-value pair to associate with a resource.
+   * An arbitrary set of tags (key-value pairs) for the cluster.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-tags)
    */
@@ -209,17 +234,17 @@ public interface CfnClusterProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param brokerNodeGroupInfo the value to be set. 
+     * @param brokerNodeGroupInfo Information about the broker nodes in the cluster. 
      */
     public fun brokerNodeGroupInfo(brokerNodeGroupInfo: IResolvable)
 
     /**
-     * @param brokerNodeGroupInfo the value to be set. 
+     * @param brokerNodeGroupInfo Information about the broker nodes in the cluster. 
      */
     public fun brokerNodeGroupInfo(brokerNodeGroupInfo: CfnCluster.BrokerNodeGroupInfoProperty)
 
     /**
-     * @param brokerNodeGroupInfo the value to be set. 
+     * @param brokerNodeGroupInfo Information about the broker nodes in the cluster. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("204f829ea9396538d0e09bd0a89c725737b462f05c328c5e5180d1dccd1444eb")
@@ -227,17 +252,17 @@ public interface CfnClusterProps {
         fun brokerNodeGroupInfo(brokerNodeGroupInfo: CfnCluster.BrokerNodeGroupInfoProperty.Builder.() -> Unit)
 
     /**
-     * @param clientAuthentication the value to be set.
+     * @param clientAuthentication Includes all client authentication related information.
      */
     public fun clientAuthentication(clientAuthentication: IResolvable)
 
     /**
-     * @param clientAuthentication the value to be set.
+     * @param clientAuthentication Includes all client authentication related information.
      */
     public fun clientAuthentication(clientAuthentication: CfnCluster.ClientAuthenticationProperty)
 
     /**
-     * @param clientAuthentication the value to be set.
+     * @param clientAuthentication Includes all client authentication related information.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f493431925d32fcc1eecfaeb56dee04b7880fe9fe2bafa8755ff181c7f566e84")
@@ -245,22 +270,25 @@ public interface CfnClusterProps {
         fun clientAuthentication(clientAuthentication: CfnCluster.ClientAuthenticationProperty.Builder.() -> Unit)
 
     /**
-     * @param clusterName the value to be set. 
+     * @param clusterName The name of the cluster. 
      */
     public fun clusterName(clusterName: String)
 
     /**
-     * @param configurationInfo the value to be set.
+     * @param configurationInfo Represents the configuration that you want MSK to use for the
+     * cluster.
      */
     public fun configurationInfo(configurationInfo: IResolvable)
 
     /**
-     * @param configurationInfo the value to be set.
+     * @param configurationInfo Represents the configuration that you want MSK to use for the
+     * cluster.
      */
     public fun configurationInfo(configurationInfo: CfnCluster.ConfigurationInfoProperty)
 
     /**
-     * @param configurationInfo the value to be set.
+     * @param configurationInfo Represents the configuration that you want MSK to use for the
+     * cluster.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8d11771e5b61f02f304d91070170187c21cd4797b41c6dc2bc2c4667f68aa376")
@@ -268,83 +296,85 @@ public interface CfnClusterProps {
         fun configurationInfo(configurationInfo: CfnCluster.ConfigurationInfoProperty.Builder.() -> Unit)
 
     /**
-     * @param currentVersion The current version of the MSK cluster.
+     * @param currentVersion The version of the cluster that you want to update.
      */
     public fun currentVersion(currentVersion: String)
 
     /**
-     * @param encryptionInfo the value to be set.
+     * @param encryptionInfo Includes all encryption-related information.
      */
     public fun encryptionInfo(encryptionInfo: IResolvable)
 
     /**
-     * @param encryptionInfo the value to be set.
+     * @param encryptionInfo Includes all encryption-related information.
      */
     public fun encryptionInfo(encryptionInfo: CfnCluster.EncryptionInfoProperty)
 
     /**
-     * @param encryptionInfo the value to be set.
+     * @param encryptionInfo Includes all encryption-related information.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("25465acbe89e8d7d87c968bd7b150bcb98e76ae89a1f15554f17c0363bdd6059")
     public fun encryptionInfo(encryptionInfo: CfnCluster.EncryptionInfoProperty.Builder.() -> Unit)
 
     /**
-     * @param enhancedMonitoring the value to be set.
+     * @param enhancedMonitoring Specifies the level of monitoring for the MSK cluster.
      */
     public fun enhancedMonitoring(enhancedMonitoring: String)
 
     /**
-     * @param kafkaVersion the value to be set. 
+     * @param kafkaVersion The version of Apache Kafka. 
+     * You can use Amazon MSK to create clusters that use [supported Apache Kafka
+     * versions](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) .
      */
     public fun kafkaVersion(kafkaVersion: String)
 
     /**
-     * @param loggingInfo the value to be set.
+     * @param loggingInfo Logging info details for the cluster.
      */
     public fun loggingInfo(loggingInfo: IResolvable)
 
     /**
-     * @param loggingInfo the value to be set.
+     * @param loggingInfo Logging info details for the cluster.
      */
     public fun loggingInfo(loggingInfo: CfnCluster.LoggingInfoProperty)
 
     /**
-     * @param loggingInfo the value to be set.
+     * @param loggingInfo Logging info details for the cluster.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("61a9726c7caf1c5bf39cf0cd83968a213f130c1d526b26022dccc622d106aa46")
     public fun loggingInfo(loggingInfo: CfnCluster.LoggingInfoProperty.Builder.() -> Unit)
 
     /**
-     * @param numberOfBrokerNodes the value to be set. 
+     * @param numberOfBrokerNodes The number of broker nodes in the cluster. 
      */
     public fun numberOfBrokerNodes(numberOfBrokerNodes: Number)
 
     /**
-     * @param openMonitoring the value to be set.
+     * @param openMonitoring The settings for open monitoring.
      */
     public fun openMonitoring(openMonitoring: IResolvable)
 
     /**
-     * @param openMonitoring the value to be set.
+     * @param openMonitoring The settings for open monitoring.
      */
     public fun openMonitoring(openMonitoring: CfnCluster.OpenMonitoringProperty)
 
     /**
-     * @param openMonitoring the value to be set.
+     * @param openMonitoring The settings for open monitoring.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2f684fbbe73fa03faab9edc8ca6debc3749e4a3a492b69540a099e0ee9d85152")
     public fun openMonitoring(openMonitoring: CfnCluster.OpenMonitoringProperty.Builder.() -> Unit)
 
     /**
-     * @param storageMode the value to be set.
+     * @param storageMode This controls storage mode for supported storage tiers.
      */
     public fun storageMode(storageMode: String)
 
     /**
-     * @param tags A key-value pair to associate with a resource.
+     * @param tags An arbitrary set of tags (key-value pairs) for the cluster.
      */
     public fun tags(tags: Map<String, String>)
   }
@@ -354,21 +384,21 @@ public interface CfnClusterProps {
         software.amazon.awscdk.services.msk.CfnClusterProps.builder()
 
     /**
-     * @param brokerNodeGroupInfo the value to be set. 
+     * @param brokerNodeGroupInfo Information about the broker nodes in the cluster. 
      */
     override fun brokerNodeGroupInfo(brokerNodeGroupInfo: IResolvable) {
       cdkBuilder.brokerNodeGroupInfo(brokerNodeGroupInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param brokerNodeGroupInfo the value to be set. 
+     * @param brokerNodeGroupInfo Information about the broker nodes in the cluster. 
      */
     override fun brokerNodeGroupInfo(brokerNodeGroupInfo: CfnCluster.BrokerNodeGroupInfoProperty) {
       cdkBuilder.brokerNodeGroupInfo(brokerNodeGroupInfo.let(CfnCluster.BrokerNodeGroupInfoProperty.Companion::unwrap))
     }
 
     /**
-     * @param brokerNodeGroupInfo the value to be set. 
+     * @param brokerNodeGroupInfo Information about the broker nodes in the cluster. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("204f829ea9396538d0e09bd0a89c725737b462f05c328c5e5180d1dccd1444eb")
@@ -377,14 +407,14 @@ public interface CfnClusterProps {
         Unit = brokerNodeGroupInfo(CfnCluster.BrokerNodeGroupInfoProperty(brokerNodeGroupInfo))
 
     /**
-     * @param clientAuthentication the value to be set.
+     * @param clientAuthentication Includes all client authentication related information.
      */
     override fun clientAuthentication(clientAuthentication: IResolvable) {
       cdkBuilder.clientAuthentication(clientAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param clientAuthentication the value to be set.
+     * @param clientAuthentication Includes all client authentication related information.
      */
     override
         fun clientAuthentication(clientAuthentication: CfnCluster.ClientAuthenticationProperty) {
@@ -392,7 +422,7 @@ public interface CfnClusterProps {
     }
 
     /**
-     * @param clientAuthentication the value to be set.
+     * @param clientAuthentication Includes all client authentication related information.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f493431925d32fcc1eecfaeb56dee04b7880fe9fe2bafa8755ff181c7f566e84")
@@ -401,28 +431,31 @@ public interface CfnClusterProps {
         Unit = clientAuthentication(CfnCluster.ClientAuthenticationProperty(clientAuthentication))
 
     /**
-     * @param clusterName the value to be set. 
+     * @param clusterName The name of the cluster. 
      */
     override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
 
     /**
-     * @param configurationInfo the value to be set.
+     * @param configurationInfo Represents the configuration that you want MSK to use for the
+     * cluster.
      */
     override fun configurationInfo(configurationInfo: IResolvable) {
       cdkBuilder.configurationInfo(configurationInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param configurationInfo the value to be set.
+     * @param configurationInfo Represents the configuration that you want MSK to use for the
+     * cluster.
      */
     override fun configurationInfo(configurationInfo: CfnCluster.ConfigurationInfoProperty) {
       cdkBuilder.configurationInfo(configurationInfo.let(CfnCluster.ConfigurationInfoProperty.Companion::unwrap))
     }
 
     /**
-     * @param configurationInfo the value to be set.
+     * @param configurationInfo Represents the configuration that you want MSK to use for the
+     * cluster.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8d11771e5b61f02f304d91070170187c21cd4797b41c6dc2bc2c4667f68aa376")
@@ -431,28 +464,28 @@ public interface CfnClusterProps {
         Unit = configurationInfo(CfnCluster.ConfigurationInfoProperty(configurationInfo))
 
     /**
-     * @param currentVersion The current version of the MSK cluster.
+     * @param currentVersion The version of the cluster that you want to update.
      */
     override fun currentVersion(currentVersion: String) {
       cdkBuilder.currentVersion(currentVersion)
     }
 
     /**
-     * @param encryptionInfo the value to be set.
+     * @param encryptionInfo Includes all encryption-related information.
      */
     override fun encryptionInfo(encryptionInfo: IResolvable) {
       cdkBuilder.encryptionInfo(encryptionInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param encryptionInfo the value to be set.
+     * @param encryptionInfo Includes all encryption-related information.
      */
     override fun encryptionInfo(encryptionInfo: CfnCluster.EncryptionInfoProperty) {
       cdkBuilder.encryptionInfo(encryptionInfo.let(CfnCluster.EncryptionInfoProperty.Companion::unwrap))
     }
 
     /**
-     * @param encryptionInfo the value to be set.
+     * @param encryptionInfo Includes all encryption-related information.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("25465acbe89e8d7d87c968bd7b150bcb98e76ae89a1f15554f17c0363bdd6059")
@@ -461,35 +494,37 @@ public interface CfnClusterProps {
         Unit = encryptionInfo(CfnCluster.EncryptionInfoProperty(encryptionInfo))
 
     /**
-     * @param enhancedMonitoring the value to be set.
+     * @param enhancedMonitoring Specifies the level of monitoring for the MSK cluster.
      */
     override fun enhancedMonitoring(enhancedMonitoring: String) {
       cdkBuilder.enhancedMonitoring(enhancedMonitoring)
     }
 
     /**
-     * @param kafkaVersion the value to be set. 
+     * @param kafkaVersion The version of Apache Kafka. 
+     * You can use Amazon MSK to create clusters that use [supported Apache Kafka
+     * versions](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) .
      */
     override fun kafkaVersion(kafkaVersion: String) {
       cdkBuilder.kafkaVersion(kafkaVersion)
     }
 
     /**
-     * @param loggingInfo the value to be set.
+     * @param loggingInfo Logging info details for the cluster.
      */
     override fun loggingInfo(loggingInfo: IResolvable) {
       cdkBuilder.loggingInfo(loggingInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param loggingInfo the value to be set.
+     * @param loggingInfo Logging info details for the cluster.
      */
     override fun loggingInfo(loggingInfo: CfnCluster.LoggingInfoProperty) {
       cdkBuilder.loggingInfo(loggingInfo.let(CfnCluster.LoggingInfoProperty.Companion::unwrap))
     }
 
     /**
-     * @param loggingInfo the value to be set.
+     * @param loggingInfo Logging info details for the cluster.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("61a9726c7caf1c5bf39cf0cd83968a213f130c1d526b26022dccc622d106aa46")
@@ -497,28 +532,28 @@ public interface CfnClusterProps {
         loggingInfo(CfnCluster.LoggingInfoProperty(loggingInfo))
 
     /**
-     * @param numberOfBrokerNodes the value to be set. 
+     * @param numberOfBrokerNodes The number of broker nodes in the cluster. 
      */
     override fun numberOfBrokerNodes(numberOfBrokerNodes: Number) {
       cdkBuilder.numberOfBrokerNodes(numberOfBrokerNodes)
     }
 
     /**
-     * @param openMonitoring the value to be set.
+     * @param openMonitoring The settings for open monitoring.
      */
     override fun openMonitoring(openMonitoring: IResolvable) {
       cdkBuilder.openMonitoring(openMonitoring.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param openMonitoring the value to be set.
+     * @param openMonitoring The settings for open monitoring.
      */
     override fun openMonitoring(openMonitoring: CfnCluster.OpenMonitoringProperty) {
       cdkBuilder.openMonitoring(openMonitoring.let(CfnCluster.OpenMonitoringProperty.Companion::unwrap))
     }
 
     /**
-     * @param openMonitoring the value to be set.
+     * @param openMonitoring The settings for open monitoring.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2f684fbbe73fa03faab9edc8ca6debc3749e4a3a492b69540a099e0ee9d85152")
@@ -527,14 +562,14 @@ public interface CfnClusterProps {
         Unit = openMonitoring(CfnCluster.OpenMonitoringProperty(openMonitoring))
 
     /**
-     * @param storageMode the value to be set.
+     * @param storageMode This controls storage mode for supported storage tiers.
      */
     override fun storageMode(storageMode: String) {
       cdkBuilder.storageMode(storageMode)
     }
 
     /**
-     * @param tags A key-value pair to associate with a resource.
+     * @param tags An arbitrary set of tags (key-value pairs) for the cluster.
      */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
@@ -548,69 +583,94 @@ public interface CfnClusterProps {
   ) : CdkObject(cdkObject),
       CfnClusterProps {
     /**
+     * Information about the broker nodes in the cluster.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-brokernodegroupinfo)
      */
     override fun brokerNodeGroupInfo(): Any = unwrap(this).getBrokerNodeGroupInfo()
 
     /**
+     * Includes all client authentication related information.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-clientauthentication)
      */
     override fun clientAuthentication(): Any? = unwrap(this).getClientAuthentication()
 
     /**
+     * The name of the cluster.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-clustername)
      */
     override fun clusterName(): String = unwrap(this).getClusterName()
 
     /**
+     * Represents the configuration that you want MSK to use for the cluster.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-configurationinfo)
      */
     override fun configurationInfo(): Any? = unwrap(this).getConfigurationInfo()
 
     /**
-     * The current version of the MSK cluster.
+     * The version of the cluster that you want to update.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-currentversion)
      */
     override fun currentVersion(): String? = unwrap(this).getCurrentVersion()
 
     /**
+     * Includes all encryption-related information.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-encryptioninfo)
      */
     override fun encryptionInfo(): Any? = unwrap(this).getEncryptionInfo()
 
     /**
+     * Specifies the level of monitoring for the MSK cluster.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-enhancedmonitoring)
      */
     override fun enhancedMonitoring(): String? = unwrap(this).getEnhancedMonitoring()
 
     /**
+     * The version of Apache Kafka.
+     *
+     * You can use Amazon MSK to create clusters that use [supported Apache Kafka
+     * versions](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-kafkaversion)
      */
     override fun kafkaVersion(): String = unwrap(this).getKafkaVersion()
 
     /**
+     * Logging info details for the cluster.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-logginginfo)
      */
     override fun loggingInfo(): Any? = unwrap(this).getLoggingInfo()
 
     /**
+     * The number of broker nodes in the cluster.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-numberofbrokernodes)
      */
     override fun numberOfBrokerNodes(): Number = unwrap(this).getNumberOfBrokerNodes()
 
     /**
+     * The settings for open monitoring.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-openmonitoring)
      */
     override fun openMonitoring(): Any? = unwrap(this).getOpenMonitoring()
 
     /**
+     * This controls storage mode for supported storage tiers.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-storagemode)
      */
     override fun storageMode(): String? = unwrap(this).getStorageMode()
 
     /**
-     * A key-value pair to associate with a resource.
+     * An arbitrary set of tags (key-value pairs) for the cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-tags)
      */

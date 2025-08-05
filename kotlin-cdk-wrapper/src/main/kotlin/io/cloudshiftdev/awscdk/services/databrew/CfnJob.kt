@@ -4412,12 +4412,12 @@ public open class CfnJob(
       /**
        * @param parameters A map that includes overrides of an evaluation’s parameters. 
        */
-      public fun parameters(parameters: IResolvable)
+      public fun parameters(parameters: Map<String, String>)
 
       /**
        * @param parameters A map that includes overrides of an evaluation’s parameters. 
        */
-      public fun parameters(parameters: Map<String, String>)
+      public fun parameters(parameters: IResolvable)
 
       /**
        * @param statistic The name of an evaluation. 
@@ -4433,15 +4433,15 @@ public open class CfnJob(
       /**
        * @param parameters A map that includes overrides of an evaluation’s parameters. 
        */
-      override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+      override fun parameters(parameters: Map<String, String>) {
+        cdkBuilder.parameters(parameters)
       }
 
       /**
        * @param parameters A map that includes overrides of an evaluation’s parameters. 
        */
-      override fun parameters(parameters: Map<String, String>) {
-        cdkBuilder.parameters(parameters)
+      override fun parameters(parameters: IResolvable) {
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -115,59 +115,65 @@ public open class CfnUserPoolClient(
   }
 
   /**
-   * The OAuth grant types that you want your app client to generate.
+   * The OAuth grant types that you want your app client to generate for clients in managed login
+   * authentication.
    */
   public open fun allowedOAuthFlows(): List<String> = unwrap(this).getAllowedOAuthFlows() ?:
       emptyList()
 
   /**
-   * The OAuth grant types that you want your app client to generate.
+   * The OAuth grant types that you want your app client to generate for clients in managed login
+   * authentication.
    */
   public open fun allowedOAuthFlows(`value`: List<String>) {
     unwrap(this).setAllowedOAuthFlows(`value`)
   }
 
   /**
-   * The OAuth grant types that you want your app client to generate.
+   * The OAuth grant types that you want your app client to generate for clients in managed login
+   * authentication.
    */
   public open fun allowedOAuthFlows(vararg `value`: String): Unit =
       allowedOAuthFlows(`value`.toList())
 
   /**
-   * Set to `true` to use OAuth 2.0 features in your user pool app client.
+   * Set to `true` to use OAuth 2.0 authorization server features in your app client.
    */
   public open fun allowedOAuthFlowsUserPoolClient(): Any? =
       unwrap(this).getAllowedOAuthFlowsUserPoolClient()
 
   /**
-   * Set to `true` to use OAuth 2.0 features in your user pool app client.
+   * Set to `true` to use OAuth 2.0 authorization server features in your app client.
    */
   public open fun allowedOAuthFlowsUserPoolClient(`value`: Boolean) {
     unwrap(this).setAllowedOAuthFlowsUserPoolClient(`value`)
   }
 
   /**
-   * Set to `true` to use OAuth 2.0 features in your user pool app client.
+   * Set to `true` to use OAuth 2.0 authorization server features in your app client.
    */
   public open fun allowedOAuthFlowsUserPoolClient(`value`: IResolvable) {
     unwrap(this).setAllowedOAuthFlowsUserPoolClient(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The allowed OAuth scopes.
+   * The OAuth, OpenID Connect (OIDC), and custom scopes that you want to permit your app client to
+   * authorize access with.
    */
   public open fun allowedOAuthScopes(): List<String> = unwrap(this).getAllowedOAuthScopes() ?:
       emptyList()
 
   /**
-   * The allowed OAuth scopes.
+   * The OAuth, OpenID Connect (OIDC), and custom scopes that you want to permit your app client to
+   * authorize access with.
    */
   public open fun allowedOAuthScopes(`value`: List<String>) {
     unwrap(this).setAllowedOAuthScopes(`value`)
   }
 
   /**
-   * The allowed OAuth scopes.
+   * The OAuth, OpenID Connect (OIDC), and custom scopes that you want to permit your app client to
+   * authorize access with.
    */
   public open fun allowedOAuthScopes(vararg `value`: String): Unit =
       allowedOAuthScopes(`value`.toList())
@@ -232,29 +238,29 @@ public open class CfnUserPoolClient(
   }
 
   /**
-   * A list of allowed redirect (callback) URLs for the IdPs.
+   * A list of allowed redirect, or callback, URLs for managed login authentication.
    */
   public open fun callbackUrLs(): List<String> = unwrap(this).getCallbackUrLs() ?: emptyList()
 
   /**
-   * A list of allowed redirect (callback) URLs for the IdPs.
+   * A list of allowed redirect, or callback, URLs for managed login authentication.
    */
   public open fun callbackUrLs(`value`: List<String>) {
     unwrap(this).setCallbackUrLs(`value`)
   }
 
   /**
-   * A list of allowed redirect (callback) URLs for the IdPs.
+   * A list of allowed redirect, or callback, URLs for managed login authentication.
    */
   public open fun callbackUrLs(vararg `value`: String): Unit = callbackUrLs(`value`.toList())
 
   /**
-   * The client name for the user pool client you would like to create.
+   * A friendly name for the app client that you want to create.
    */
   public open fun clientName(): String? = unwrap(this).getClientName()
 
   /**
-   * The client name for the user pool client you would like to create.
+   * A friendly name for the app client that you want to create.
    */
   public open fun clientName(`value`: String) {
     unwrap(this).setClientName(`value`)
@@ -273,20 +279,23 @@ public open class CfnUserPoolClient(
   }
 
   /**
-   * Activates the propagation of additional user context data.
+   * When `true` , your application can include additional `UserContextData` in authentication
+   * requests.
    */
   public open fun enablePropagateAdditionalUserContextData(): Any? =
       unwrap(this).getEnablePropagateAdditionalUserContextData()
 
   /**
-   * Activates the propagation of additional user context data.
+   * When `true` , your application can include additional `UserContextData` in authentication
+   * requests.
    */
   public open fun enablePropagateAdditionalUserContextData(`value`: Boolean) {
     unwrap(this).setEnablePropagateAdditionalUserContextData(`value`)
   }
 
   /**
-   * Activates the propagation of additional user context data.
+   * When `true` , your application can include additional `UserContextData` in authentication
+   * requests.
    */
   public open fun enablePropagateAdditionalUserContextData(`value`: IResolvable) {
     unwrap(this).setEnablePropagateAdditionalUserContextData(`value`.let(IResolvable.Companion::unwrap))
@@ -294,19 +303,11 @@ public open class CfnUserPoolClient(
 
   /**
    * Activates or deactivates token revocation.
-   *
-   * For more information about revoking tokens, see
-   * [RevokeToken](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_RevokeToken.html)
-   * .
    */
   public open fun enableTokenRevocation(): Any? = unwrap(this).getEnableTokenRevocation()
 
   /**
    * Activates or deactivates token revocation.
-   *
-   * For more information about revoking tokens, see
-   * [RevokeToken](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_RevokeToken.html)
-   * .
    */
   public open fun enableTokenRevocation(`value`: Boolean) {
     unwrap(this).setEnableTokenRevocation(`value`)
@@ -314,51 +315,59 @@ public open class CfnUserPoolClient(
 
   /**
    * Activates or deactivates token revocation.
-   *
-   * For more information about revoking tokens, see
-   * [RevokeToken](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_RevokeToken.html)
-   * .
    */
   public open fun enableTokenRevocation(`value`: IResolvable) {
     unwrap(this).setEnableTokenRevocation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The authentication flows that you want your user pool client to support.
+   * The [authentication
+   * flows](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow-methods.html)
+   * that you want your user pool client to support. For each app client in your user pool, you can
+   * sign in your users with any combination of one or more flows, including with a user name and
+   * Secure Remote Password (SRP), a user name and password, or a custom authentication process that
+   * you define with Lambda functions.
    */
   public open fun explicitAuthFlows(): List<String> = unwrap(this).getExplicitAuthFlows() ?:
       emptyList()
 
   /**
-   * The authentication flows that you want your user pool client to support.
+   * The [authentication
+   * flows](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow-methods.html)
+   * that you want your user pool client to support. For each app client in your user pool, you can
+   * sign in your users with any combination of one or more flows, including with a user name and
+   * Secure Remote Password (SRP), a user name and password, or a custom authentication process that
+   * you define with Lambda functions.
    */
   public open fun explicitAuthFlows(`value`: List<String>) {
     unwrap(this).setExplicitAuthFlows(`value`)
   }
 
   /**
-   * The authentication flows that you want your user pool client to support.
+   * The [authentication
+   * flows](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow-methods.html)
+   * that you want your user pool client to support. For each app client in your user pool, you can
+   * sign in your users with any combination of one or more flows, including with a user name and
+   * Secure Remote Password (SRP), a user name and password, or a custom authentication process that
+   * you define with Lambda functions.
    */
   public open fun explicitAuthFlows(vararg `value`: String): Unit =
       explicitAuthFlows(`value`.toList())
 
   /**
-   * Boolean to specify whether you want to generate a secret for the user pool client being
-   * created.
+   * When `true` , generates a client secret for the app client.
    */
   public open fun generateSecret(): Any? = unwrap(this).getGenerateSecret()
 
   /**
-   * Boolean to specify whether you want to generate a secret for the user pool client being
-   * created.
+   * When `true` , generates a client secret for the app client.
    */
   public open fun generateSecret(`value`: Boolean) {
     unwrap(this).setGenerateSecret(`value`)
   }
 
   /**
-   * Boolean to specify whether you want to generate a secret for the user pool client being
-   * created.
+   * When `true` , generates a client secret for the app client.
    */
   public open fun generateSecret(`value`: IResolvable) {
     unwrap(this).setGenerateSecret(`value`.let(IResolvable.Companion::unwrap))
@@ -386,19 +395,19 @@ public open class CfnUserPoolClient(
   }
 
   /**
-   * A list of allowed logout URLs for the IdPs.
+   * A list of allowed logout URLs for managed login authentication.
    */
   public open fun logoutUrLs(): List<String> = unwrap(this).getLogoutUrLs() ?: emptyList()
 
   /**
-   * A list of allowed logout URLs for the IdPs.
+   * A list of allowed logout URLs for managed login authentication.
    */
   public open fun logoutUrLs(`value`: List<String>) {
     unwrap(this).setLogoutUrLs(`value`)
   }
 
   /**
-   * A list of allowed logout URLs for the IdPs.
+   * A list of allowed logout URLs for managed login authentication.
    */
   public open fun logoutUrLs(vararg `value`: String): Unit = logoutUrLs(`value`.toList())
 
@@ -435,6 +444,33 @@ public open class CfnUserPoolClient(
   public open fun readAttributes(vararg `value`: String): Unit = readAttributes(`value`.toList())
 
   /**
+   * The configuration of your app client for refresh token rotation.
+   */
+  public open fun refreshTokenRotation(): Any? = unwrap(this).getRefreshTokenRotation()
+
+  /**
+   * The configuration of your app client for refresh token rotation.
+   */
+  public open fun refreshTokenRotation(`value`: IResolvable) {
+    unwrap(this).setRefreshTokenRotation(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The configuration of your app client for refresh token rotation.
+   */
+  public open fun refreshTokenRotation(`value`: RefreshTokenRotationProperty) {
+    unwrap(this).setRefreshTokenRotation(`value`.let(RefreshTokenRotationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The configuration of your app client for refresh token rotation.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("42b2e28ca0ba8de081e5cf55a4bbb7e51e3ffd53644133a9b4a3ac64a684bf1d")
+  public open fun refreshTokenRotation(`value`: RefreshTokenRotationProperty.Builder.() -> Unit):
+      Unit = refreshTokenRotation(RefreshTokenRotationProperty(`value`))
+
+  /**
    * The refresh token time limit.
    */
   public open fun refreshTokenValidity(): Number? = unwrap(this).getRefreshTokenValidity()
@@ -466,26 +502,26 @@ public open class CfnUserPoolClient(
       supportedIdentityProviders(`value`.toList())
 
   /**
-   * The units in which the validity times are represented.
+   * The units that validity times are represented in.
    */
   public open fun tokenValidityUnits(): Any? = unwrap(this).getTokenValidityUnits()
 
   /**
-   * The units in which the validity times are represented.
+   * The units that validity times are represented in.
    */
   public open fun tokenValidityUnits(`value`: IResolvable) {
     unwrap(this).setTokenValidityUnits(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The units in which the validity times are represented.
+   * The units that validity times are represented in.
    */
   public open fun tokenValidityUnits(`value`: TokenValidityUnitsProperty) {
     unwrap(this).setTokenValidityUnits(`value`.let(TokenValidityUnitsProperty.Companion::unwrap))
   }
 
   /**
-   * The units in which the validity times are represented.
+   * The units that validity times are represented in.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("413ff2cb02d2613d782abf027a2d67ebe8e35dfbb363a27a330d747431aed8bb")
@@ -493,12 +529,12 @@ public open class CfnUserPoolClient(
       tokenValidityUnits(TokenValidityUnitsProperty(`value`))
 
   /**
-   * The user pool ID for the user pool where you want to create a user pool client.
+   * The ID of the user pool where you want to create an app client.
    */
   public open fun userPoolId(): String = unwrap(this).getUserPoolId()
 
   /**
-   * The user pool ID for the user pool where you want to create a user pool client.
+   * The ID of the user pool where you want to create an app client.
    */
   public open fun userPoolId(`value`: String) {
     unwrap(this).setUserPoolId(`value`)
@@ -549,46 +585,50 @@ public open class CfnUserPoolClient(
     public fun accessTokenValidity(accessTokenValidity: Number)
 
     /**
-     * The OAuth grant types that you want your app client to generate.
+     * The OAuth grant types that you want your app client to generate for clients in managed login
+     * authentication.
      *
      * To create an app client that generates client credentials grants, you must add
      * `client_credentials` as the only allowed OAuth flow.
      *
      * * **code** - Use a code grant flow, which provides an authorization code as the response.
      * This code can be exchanged for access tokens with the `/oauth2/token` endpoint.
-     * * **implicit** - Issue the access token (and, optionally, ID token, based on scopes) directly
-     * to your user.
+     * * **implicit** - Issue the access token, and the ID token when scopes like `openid` and
+     * `profile` are requested, directly to your user.
      * * **client_credentials** - Issue the access token from the `/oauth2/token` endpoint directly
-     * to a non-person user using a combination of the client ID and client secret.
+     * to a non-person user, authorized by a combination of the client ID and client secret.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthflows)
-     * @param allowedOAuthFlows The OAuth grant types that you want your app client to generate. 
+     * @param allowedOAuthFlows The OAuth grant types that you want your app client to generate for
+     * clients in managed login authentication. 
      */
     public fun allowedOAuthFlows(allowedOAuthFlows: List<String>)
 
     /**
-     * The OAuth grant types that you want your app client to generate.
+     * The OAuth grant types that you want your app client to generate for clients in managed login
+     * authentication.
      *
      * To create an app client that generates client credentials grants, you must add
      * `client_credentials` as the only allowed OAuth flow.
      *
      * * **code** - Use a code grant flow, which provides an authorization code as the response.
      * This code can be exchanged for access tokens with the `/oauth2/token` endpoint.
-     * * **implicit** - Issue the access token (and, optionally, ID token, based on scopes) directly
-     * to your user.
+     * * **implicit** - Issue the access token, and the ID token when scopes like `openid` and
+     * `profile` are requested, directly to your user.
      * * **client_credentials** - Issue the access token from the `/oauth2/token` endpoint directly
-     * to a non-person user using a combination of the client ID and client secret.
+     * to a non-person user, authorized by a combination of the client ID and client secret.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthflows)
-     * @param allowedOAuthFlows The OAuth grant types that you want your app client to generate. 
+     * @param allowedOAuthFlows The OAuth grant types that you want your app client to generate for
+     * clients in managed login authentication. 
      */
     public fun allowedOAuthFlows(vararg allowedOAuthFlows: String)
 
     /**
-     * Set to `true` to use OAuth 2.0 features in your user pool app client.
+     * Set to `true` to use OAuth 2.0 authorization server features in your app client.
      *
-     * `AllowedOAuthFlowsUserPoolClient` must be `true` before you can configure the following
-     * features in your app client.
+     * This parameter must have a value of `true` before you can configure the following features in
+     * your app client.
      *
      * * `CallBackURLs` : Callback URLs.
      * * `LogoutURLs` : Sign-out redirect URLs.
@@ -596,23 +636,23 @@ public open class CfnUserPoolClient(
      * * `AllowedOAuthFlows` : Support for authorization code, implicit, and client credentials
      * OAuth 2.0 grants.
      *
-     * To use OAuth 2.0 features, configure one of these features in the Amazon Cognito console or
-     * set `AllowedOAuthFlowsUserPoolClient` to `true` in a `CreateUserPoolClient` or
+     * To use authorization server features, configure one of these features in the Amazon Cognito
+     * console or set `AllowedOAuthFlowsUserPoolClient` to `true` in a `CreateUserPoolClient` or
      * `UpdateUserPoolClient` API request. If you don't set a value for
      * `AllowedOAuthFlowsUserPoolClient` in a request with the AWS CLI or SDKs, it defaults to `false`
-     * .
+     * . When `false` , only SDK-based API sign-in is permitted.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthflowsuserpoolclient)
-     * @param allowedOAuthFlowsUserPoolClient Set to `true` to use OAuth 2.0 features in your user
-     * pool app client. 
+     * @param allowedOAuthFlowsUserPoolClient Set to `true` to use OAuth 2.0 authorization server
+     * features in your app client. 
      */
     public fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: Boolean)
 
     /**
-     * Set to `true` to use OAuth 2.0 features in your user pool app client.
+     * Set to `true` to use OAuth 2.0 authorization server features in your app client.
      *
-     * `AllowedOAuthFlowsUserPoolClient` must be `true` before you can configure the following
-     * features in your app client.
+     * This parameter must have a value of `true` before you can configure the following features in
+     * your app client.
      *
      * * `CallBackURLs` : Callback URLs.
      * * `LogoutURLs` : Sign-out redirect URLs.
@@ -620,39 +660,45 @@ public open class CfnUserPoolClient(
      * * `AllowedOAuthFlows` : Support for authorization code, implicit, and client credentials
      * OAuth 2.0 grants.
      *
-     * To use OAuth 2.0 features, configure one of these features in the Amazon Cognito console or
-     * set `AllowedOAuthFlowsUserPoolClient` to `true` in a `CreateUserPoolClient` or
+     * To use authorization server features, configure one of these features in the Amazon Cognito
+     * console or set `AllowedOAuthFlowsUserPoolClient` to `true` in a `CreateUserPoolClient` or
      * `UpdateUserPoolClient` API request. If you don't set a value for
      * `AllowedOAuthFlowsUserPoolClient` in a request with the AWS CLI or SDKs, it defaults to `false`
-     * .
+     * . When `false` , only SDK-based API sign-in is permitted.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthflowsuserpoolclient)
-     * @param allowedOAuthFlowsUserPoolClient Set to `true` to use OAuth 2.0 features in your user
-     * pool app client. 
+     * @param allowedOAuthFlowsUserPoolClient Set to `true` to use OAuth 2.0 authorization server
+     * features in your app client. 
      */
     public fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: IResolvable)
 
     /**
-     * The allowed OAuth scopes.
+     * The OAuth, OpenID Connect (OIDC), and custom scopes that you want to permit your app client
+     * to authorize access with.
      *
-     * Possible values provided by OAuth are `phone` , `email` , `openid` , and `profile` . Possible
-     * values provided by AWS are `aws.cognito.signin.user.admin` . Custom scopes created in Resource
-     * Servers are also supported.
+     * Scopes govern access control to user pool self-service API operations, user data from the
+     * `userInfo` endpoint, and third-party APIs. Scope values include `phone` , `email` , `openid` ,
+     * and `profile` . The `aws.cognito.signin.user.admin` scope authorizes user self-service
+     * operations. Custom scopes with resource servers authorize access to external APIs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthscopes)
-     * @param allowedOAuthScopes The allowed OAuth scopes. 
+     * @param allowedOAuthScopes The OAuth, OpenID Connect (OIDC), and custom scopes that you want
+     * to permit your app client to authorize access with. 
      */
     public fun allowedOAuthScopes(allowedOAuthScopes: List<String>)
 
     /**
-     * The allowed OAuth scopes.
+     * The OAuth, OpenID Connect (OIDC), and custom scopes that you want to permit your app client
+     * to authorize access with.
      *
-     * Possible values provided by OAuth are `phone` , `email` , `openid` , and `profile` . Possible
-     * values provided by AWS are `aws.cognito.signin.user.admin` . Custom scopes created in Resource
-     * Servers are also supported.
+     * Scopes govern access control to user pool self-service API operations, user data from the
+     * `userInfo` endpoint, and third-party APIs. Scope values include `phone` , `email` , `openid` ,
+     * and `profile` . The `aws.cognito.signin.user.admin` scope authorizes user self-service
+     * operations. Custom scopes with resource servers authorize access to external APIs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthscopes)
-     * @param allowedOAuthScopes The allowed OAuth scopes. 
+     * @param allowedOAuthScopes The OAuth, OpenID Connect (OIDC), and custom scopes that you want
+     * to permit your app client to authorize access with. 
      */
     public fun allowedOAuthScopes(vararg allowedOAuthScopes: String)
 
@@ -660,12 +706,11 @@ public open class CfnUserPoolClient(
      * The user pool analytics configuration for collecting metrics and sending them to your Amazon
      * Pinpoint campaign.
      *
-     *
-     * In AWS Regions where Amazon Pinpoint isn't available, user pools only support sending events
-     * to Amazon Pinpoint projects in AWS Region us-east-1. In Regions where Amazon Pinpoint is
-     * available, user pools support sending events to Amazon Pinpoint projects within that same
-     * Region.
-     *
+     * In AWS Regions where Amazon Pinpoint isn't available, user pools might not have access to
+     * analytics or might be configurable with campaigns in the US East (N. Virginia) Region. For more
+     * information, see [Using Amazon Pinpoint
+     * analytics](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-pinpoint-integration.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-analyticsconfiguration)
      * @param analyticsConfiguration The user pool analytics configuration for collecting metrics
@@ -677,12 +722,11 @@ public open class CfnUserPoolClient(
      * The user pool analytics configuration for collecting metrics and sending them to your Amazon
      * Pinpoint campaign.
      *
-     *
-     * In AWS Regions where Amazon Pinpoint isn't available, user pools only support sending events
-     * to Amazon Pinpoint projects in AWS Region us-east-1. In Regions where Amazon Pinpoint is
-     * available, user pools support sending events to Amazon Pinpoint projects within that same
-     * Region.
-     *
+     * In AWS Regions where Amazon Pinpoint isn't available, user pools might not have access to
+     * analytics or might be configurable with campaigns in the US East (N. Virginia) Region. For more
+     * information, see [Using Amazon Pinpoint
+     * analytics](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-pinpoint-integration.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-analyticsconfiguration)
      * @param analyticsConfiguration The user pool analytics configuration for collecting metrics
@@ -694,12 +738,11 @@ public open class CfnUserPoolClient(
      * The user pool analytics configuration for collecting metrics and sending them to your Amazon
      * Pinpoint campaign.
      *
-     *
-     * In AWS Regions where Amazon Pinpoint isn't available, user pools only support sending events
-     * to Amazon Pinpoint projects in AWS Region us-east-1. In Regions where Amazon Pinpoint is
-     * available, user pools support sending events to Amazon Pinpoint projects within that same
-     * Region.
-     *
+     * In AWS Regions where Amazon Pinpoint isn't available, user pools might not have access to
+     * analytics or might be configurable with campaigns in the US East (N. Virginia) Region. For more
+     * information, see [Using Amazon Pinpoint
+     * analytics](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-pinpoint-integration.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-analyticsconfiguration)
      * @param analyticsConfiguration The user pool analytics configuration for collecting metrics
@@ -723,12 +766,18 @@ public open class CfnUserPoolClient(
     public fun authSessionValidity(authSessionValidity: Number)
 
     /**
-     * A list of allowed redirect (callback) URLs for the IdPs.
+     * A list of allowed redirect, or callback, URLs for managed login authentication.
      *
-     * A redirect URI must:
+     * These URLs are the paths where you want to send your users' browsers after they complete
+     * authentication with managed login or a third-party IdP. Typically, callback URLs are the home of
+     * an application that uses OAuth or OIDC libraries to process authentication outcomes.
+     *
+     * A redirect URI must meet the following requirements:
      *
      * * Be an absolute URI.
-     * * Be registered with the authorization server.
+     * * Be registered with the authorization server. Amazon Cognito doesn't accept authorization
+     * requests with `redirect_uri` values that aren't in the list of `CallbackURLs` that you provide
+     * in this parameter.
      * * Not include a fragment component.
      *
      * See [OAuth 2.0 - Redirection
@@ -740,17 +789,24 @@ public open class CfnUserPoolClient(
      * App callback URLs such as myapp://example are also supported.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-callbackurls)
-     * @param callbackUrLs A list of allowed redirect (callback) URLs for the IdPs. 
+     * @param callbackUrLs A list of allowed redirect, or callback, URLs for managed login
+     * authentication. 
      */
     public fun callbackUrLs(callbackUrLs: List<String>)
 
     /**
-     * A list of allowed redirect (callback) URLs for the IdPs.
+     * A list of allowed redirect, or callback, URLs for managed login authentication.
      *
-     * A redirect URI must:
+     * These URLs are the paths where you want to send your users' browsers after they complete
+     * authentication with managed login or a third-party IdP. Typically, callback URLs are the home of
+     * an application that uses OAuth or OIDC libraries to process authentication outcomes.
+     *
+     * A redirect URI must meet the following requirements:
      *
      * * Be an absolute URI.
-     * * Be registered with the authorization server.
+     * * Be registered with the authorization server. Amazon Cognito doesn't accept authorization
+     * requests with `redirect_uri` values that aren't in the list of `CallbackURLs` that you provide
+     * in this parameter.
      * * Not include a fragment component.
      *
      * See [OAuth 2.0 - Redirection
@@ -762,15 +818,16 @@ public open class CfnUserPoolClient(
      * App callback URLs such as myapp://example are also supported.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-callbackurls)
-     * @param callbackUrLs A list of allowed redirect (callback) URLs for the IdPs. 
+     * @param callbackUrLs A list of allowed redirect, or callback, URLs for managed login
+     * authentication. 
      */
     public fun callbackUrLs(vararg callbackUrLs: String)
 
     /**
-     * The client name for the user pool client you would like to create.
+     * A friendly name for the app client that you want to create.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-clientname)
-     * @param clientName The client name for the user pool client you would like to create. 
+     * @param clientName A friendly name for the app client that you want to create. 
      */
     public fun clientName(clientName: String)
 
@@ -780,105 +837,83 @@ public open class CfnUserPoolClient(
      * In app clients with one assigned IdP, replaces `redirect_uri` in authentication requests.
      * Must be in the `CallbackURLs` list.
      *
-     * A redirect URI must:
-     *
-     * * Be an absolute URI.
-     * * Be registered with the authorization server.
-     * * Not include a fragment component.
-     *
-     * For more information, see [Default redirect
-     * URI](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#cognito-user-pools-app-idp-settings-about)
-     * .
-     *
-     * Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes
-     * only.
-     *
-     * App callback URLs such as myapp://example are also supported.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-defaultredirecturi)
      * @param defaultRedirectUri The default redirect URI. 
      */
     public fun defaultRedirectUri(defaultRedirectUri: String)
 
     /**
-     * Activates the propagation of additional user context data.
+     * When `true` , your application can include additional `UserContextData` in authentication
+     * requests.
      *
-     * For more information about propagation of user context data, see [Adding advanced security to
-     * a user
-     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-threat-protection.html)
-     * . If you don’t include this parameter, you can't send device fingerprint information, including
-     * source IP address, to Amazon Cognito advanced security. You can only activate
-     * `EnablePropagateAdditionalUserContextData` in an app client that has a client secret.
+     * This data includes the IP address, and contributes to analysis by threat protection features.
+     * For more information about propagation of user context data, see [Adding session data to API
+     * requests](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint)
+     * . If you don’t include this parameter, you can't send the source IP address to Amazon Cognito
+     * threat protection features. You can only activate `EnablePropagateAdditionalUserContextData` in
+     * an app client that has a client secret.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-enablepropagateadditionalusercontextdata)
-     * @param enablePropagateAdditionalUserContextData Activates the propagation of additional user
-     * context data. 
+     * @param enablePropagateAdditionalUserContextData When `true` , your application can include
+     * additional `UserContextData` in authentication requests. 
      */
     public
         fun enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData: Boolean)
 
     /**
-     * Activates the propagation of additional user context data.
+     * When `true` , your application can include additional `UserContextData` in authentication
+     * requests.
      *
-     * For more information about propagation of user context data, see [Adding advanced security to
-     * a user
-     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-threat-protection.html)
-     * . If you don’t include this parameter, you can't send device fingerprint information, including
-     * source IP address, to Amazon Cognito advanced security. You can only activate
-     * `EnablePropagateAdditionalUserContextData` in an app client that has a client secret.
+     * This data includes the IP address, and contributes to analysis by threat protection features.
+     * For more information about propagation of user context data, see [Adding session data to API
+     * requests](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint)
+     * . If you don’t include this parameter, you can't send the source IP address to Amazon Cognito
+     * threat protection features. You can only activate `EnablePropagateAdditionalUserContextData` in
+     * an app client that has a client secret.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-enablepropagateadditionalusercontextdata)
-     * @param enablePropagateAdditionalUserContextData Activates the propagation of additional user
-     * context data. 
+     * @param enablePropagateAdditionalUserContextData When `true` , your application can include
+     * additional `UserContextData` in authentication requests. 
      */
     public
         fun enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData: IResolvable)
 
     /**
-     * Activates or deactivates token revocation. For more information about revoking tokens, see
-     * [RevokeToken](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_RevokeToken.html)
-     * .
+     * Activates or deactivates token revocation.
      *
      * If you don't include this parameter, token revocation is automatically activated for the new
      * user pool client.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-enabletokenrevocation)
-     * @param enableTokenRevocation Activates or deactivates token revocation. For more information
-     * about revoking tokens, see
-     * [RevokeToken](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_RevokeToken.html)
-     * . 
+     * @param enableTokenRevocation Activates or deactivates token revocation. 
      */
     public fun enableTokenRevocation(enableTokenRevocation: Boolean)
 
     /**
-     * Activates or deactivates token revocation. For more information about revoking tokens, see
-     * [RevokeToken](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_RevokeToken.html)
-     * .
+     * Activates or deactivates token revocation.
      *
      * If you don't include this parameter, token revocation is automatically activated for the new
      * user pool client.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-enabletokenrevocation)
-     * @param enableTokenRevocation Activates or deactivates token revocation. For more information
-     * about revoking tokens, see
-     * [RevokeToken](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_RevokeToken.html)
-     * . 
+     * @param enableTokenRevocation Activates or deactivates token revocation. 
      */
     public fun enableTokenRevocation(enableTokenRevocation: IResolvable)
 
     /**
-     * The authentication flows that you want your user pool client to support.
+     * The [authentication
+     * flows](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow-methods.html)
+     * that you want your user pool client to support. For each app client in your user pool, you can
+     * sign in your users with any combination of one or more flows, including with a user name and
+     * Secure Remote Password (SRP), a user name and password, or a custom authentication process that
+     * you define with Lambda functions.
      *
-     * For each app client in your user pool, you can sign in your users with any combination of one
-     * or more flows, including with a user name and Secure Remote Password (SRP), a user name and
-     * password, or a custom authentication process that you define with Lambda functions.
      *
-     *
-     * If you don't specify a value for `ExplicitAuthFlows` , your user client supports
+     * If you don't specify a value for `ExplicitAuthFlows` , your app client supports
      * `ALLOW_REFRESH_TOKEN_AUTH` , `ALLOW_USER_SRP_AUTH` , and `ALLOW_CUSTOM_AUTH` .
      *
      *
-     * Valid values include:
+     * The values for authentication flow options include the following.
      *
      * * `ALLOW_USER_AUTH` : Enable selection-based sign-in with `USER_AUTH` . This setting covers
      * username-password, secure remote password (SRP), passwordless, and passkey authentication. This
@@ -886,6 +921,11 @@ public open class CfnUserPoolClient(
      * `ExplicitAuthFlows` permitting them. For example users can complete an SRP challenge through
      * `USER_AUTH` without the flow `USER_SRP_AUTH` being active for the app client. This flow doesn't
      * include `CUSTOM_AUTH` .
+     *
+     * To activate this setting, your user pool must be in the [Essentials
+     * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-essentials.html)
+     * or higher.
+     *
      * * `ALLOW_ADMIN_USER_PASSWORD_AUTH` : Enable admin based user password authentication flow
      * `ADMIN_USER_PASSWORD_AUTH` . This setting replaces the `ADMIN_NO_SRP_AUTH` setting. With this
      * authentication flow, your app passes a user name and password to Amazon Cognito in the request,
@@ -903,24 +943,29 @@ public open class CfnUserPoolClient(
      * like `ALLOW_USER_SRP_AUTH` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-explicitauthflows)
-     * @param explicitAuthFlows The authentication flows that you want your user pool client to
-     * support. 
+     * @param explicitAuthFlows The [authentication
+     * flows](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow-methods.html)
+     * that you want your user pool client to support. For each app client in your user pool, you can
+     * sign in your users with any combination of one or more flows, including with a user name and
+     * Secure Remote Password (SRP), a user name and password, or a custom authentication process that
+     * you define with Lambda functions. 
      */
     public fun explicitAuthFlows(explicitAuthFlows: List<String>)
 
     /**
-     * The authentication flows that you want your user pool client to support.
+     * The [authentication
+     * flows](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow-methods.html)
+     * that you want your user pool client to support. For each app client in your user pool, you can
+     * sign in your users with any combination of one or more flows, including with a user name and
+     * Secure Remote Password (SRP), a user name and password, or a custom authentication process that
+     * you define with Lambda functions.
      *
-     * For each app client in your user pool, you can sign in your users with any combination of one
-     * or more flows, including with a user name and Secure Remote Password (SRP), a user name and
-     * password, or a custom authentication process that you define with Lambda functions.
      *
-     *
-     * If you don't specify a value for `ExplicitAuthFlows` , your user client supports
+     * If you don't specify a value for `ExplicitAuthFlows` , your app client supports
      * `ALLOW_REFRESH_TOKEN_AUTH` , `ALLOW_USER_SRP_AUTH` , and `ALLOW_CUSTOM_AUTH` .
      *
      *
-     * Valid values include:
+     * The values for authentication flow options include the following.
      *
      * * `ALLOW_USER_AUTH` : Enable selection-based sign-in with `USER_AUTH` . This setting covers
      * username-password, secure remote password (SRP), passwordless, and passkey authentication. This
@@ -928,6 +973,11 @@ public open class CfnUserPoolClient(
      * `ExplicitAuthFlows` permitting them. For example users can complete an SRP challenge through
      * `USER_AUTH` without the flow `USER_SRP_AUTH` being active for the app client. This flow doesn't
      * include `CUSTOM_AUTH` .
+     *
+     * To activate this setting, your user pool must be in the [Essentials
+     * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-essentials.html)
+     * or higher.
+     *
      * * `ALLOW_ADMIN_USER_PASSWORD_AUTH` : Enable admin based user password authentication flow
      * `ADMIN_USER_PASSWORD_AUTH` . This setting replaces the `ADMIN_NO_SRP_AUTH` setting. With this
      * authentication flow, your app passes a user name and password to Amazon Cognito in the request,
@@ -945,28 +995,40 @@ public open class CfnUserPoolClient(
      * like `ALLOW_USER_SRP_AUTH` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-explicitauthflows)
-     * @param explicitAuthFlows The authentication flows that you want your user pool client to
-     * support. 
+     * @param explicitAuthFlows The [authentication
+     * flows](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow-methods.html)
+     * that you want your user pool client to support. For each app client in your user pool, you can
+     * sign in your users with any combination of one or more flows, including with a user name and
+     * Secure Remote Password (SRP), a user name and password, or a custom authentication process that
+     * you define with Lambda functions. 
      */
     public fun explicitAuthFlows(vararg explicitAuthFlows: String)
 
     /**
-     * Boolean to specify whether you want to generate a secret for the user pool client being
-     * created.
+     * When `true` , generates a client secret for the app client.
+     *
+     * Client secrets are used with server-side and machine-to-machine applications. Client secrets
+     * are automatically generated; you can't specify a secret value. For more information, see [App
+     * client
+     * types](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#user-pool-settings-client-app-client-types)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-generatesecret)
-     * @param generateSecret Boolean to specify whether you want to generate a secret for the user
-     * pool client being created. 
+     * @param generateSecret When `true` , generates a client secret for the app client. 
      */
     public fun generateSecret(generateSecret: Boolean)
 
     /**
-     * Boolean to specify whether you want to generate a secret for the user pool client being
-     * created.
+     * When `true` , generates a client secret for the app client.
+     *
+     * Client secrets are used with server-side and machine-to-machine applications. Client secrets
+     * are automatically generated; you can't specify a secret value. For more information, see [App
+     * client
+     * types](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#user-pool-settings-client-app-client-types)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-generatesecret)
-     * @param generateSecret Boolean to specify whether you want to generate a secret for the user
-     * pool client being created. 
+     * @param generateSecret When `true` , generates a client secret for the app client. 
      */
     public fun generateSecret(generateSecret: IResolvable)
 
@@ -992,18 +1054,30 @@ public open class CfnUserPoolClient(
     public fun idTokenValidity(idTokenValidity: Number)
 
     /**
-     * A list of allowed logout URLs for the IdPs.
+     * A list of allowed logout URLs for managed login authentication.
+     *
+     * When you pass `logout_uri` and `client_id` parameters to `/logout` , Amazon Cognito signs out
+     * your user and redirects them to the logout URL. This parameter describes the URLs that you want
+     * to be the permitted targets of `logout_uri` . A typical use of these URLs is when a user selects
+     * "Sign out" and you redirect them to your public homepage. For more information, see [Logout
+     * endpoint](https://docs.aws.amazon.com/cognito/latest/developerguide/logout-endpoint.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-logouturls)
-     * @param logoutUrLs A list of allowed logout URLs for the IdPs. 
+     * @param logoutUrLs A list of allowed logout URLs for managed login authentication. 
      */
     public fun logoutUrLs(logoutUrLs: List<String>)
 
     /**
-     * A list of allowed logout URLs for the IdPs.
+     * A list of allowed logout URLs for managed login authentication.
+     *
+     * When you pass `logout_uri` and `client_id` parameters to `/logout` , Amazon Cognito signs out
+     * your user and redirects them to the logout URL. This parameter describes the URLs that you want
+     * to be the permitted targets of `logout_uri` . A typical use of these URLs is when a user selects
+     * "Sign out" and you redirect them to your public homepage. For more information, see [Logout
+     * endpoint](https://docs.aws.amazon.com/cognito/latest/developerguide/logout-endpoint.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-logouturls)
-     * @param logoutUrLs A list of allowed logout URLs for the IdPs. 
+     * @param logoutUrLs A list of allowed logout URLs for managed login authentication. 
      */
     public fun logoutUrLs(vararg logoutUrLs: String)
 
@@ -1036,9 +1110,7 @@ public open class CfnUserPoolClient(
      *
      * After your user authenticates in your app, their access token authorizes them to read their
      * own attribute value for any attribute in this list. An example of this kind of activity is when
-     * your user selects a link to view their profile information. Your app makes a
-     * [GetUser](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetUser.html)
-     * API request to retrieve and display your user's profile data.
+     * your user selects a link to view their profile information.
      *
      * When you don't specify the `ReadAttributes` for your app client, your app can read the values
      * of `email_verified` , `phone_number_verified` , and the Standard attributes of your user pool.
@@ -1057,9 +1129,7 @@ public open class CfnUserPoolClient(
      *
      * After your user authenticates in your app, their access token authorizes them to read their
      * own attribute value for any attribute in this list. An example of this kind of activity is when
-     * your user selects a link to view their profile information. Your app makes a
-     * [GetUser](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetUser.html)
-     * API request to retrieve and display your user's profile data.
+     * your user selects a link to view their profile information.
      *
      * When you don't specify the `ReadAttributes` for your app client, your app can read the values
      * of `email_verified` , `phone_number_verified` , and the Standard attributes of your user pool.
@@ -1072,6 +1142,45 @@ public open class CfnUserPoolClient(
      * access to. 
      */
     public fun readAttributes(vararg readAttributes: String)
+
+    /**
+     * The configuration of your app client for refresh token rotation.
+     *
+     * When enabled, your app client issues new ID, access, and refresh tokens when users renew
+     * their sessions with refresh tokens. When disabled, token refresh issues only ID and access
+     * tokens.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-refreshtokenrotation)
+     * @param refreshTokenRotation The configuration of your app client for refresh token rotation. 
+     */
+    public fun refreshTokenRotation(refreshTokenRotation: IResolvable)
+
+    /**
+     * The configuration of your app client for refresh token rotation.
+     *
+     * When enabled, your app client issues new ID, access, and refresh tokens when users renew
+     * their sessions with refresh tokens. When disabled, token refresh issues only ID and access
+     * tokens.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-refreshtokenrotation)
+     * @param refreshTokenRotation The configuration of your app client for refresh token rotation. 
+     */
+    public fun refreshTokenRotation(refreshTokenRotation: RefreshTokenRotationProperty)
+
+    /**
+     * The configuration of your app client for refresh token rotation.
+     *
+     * When enabled, your app client issues new ID, access, and refresh tokens when users renew
+     * their sessions with refresh tokens. When disabled, token refresh issues only ID and access
+     * tokens.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-refreshtokenrotation)
+     * @param refreshTokenRotation The configuration of your app client for refresh token rotation. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("55e5e8219a26d794d69968c27692de854cb96c57f73a84520e651f3396de76a9")
+    public
+        fun refreshTokenRotation(refreshTokenRotation: RefreshTokenRotationProperty.Builder.() -> Unit)
 
     /**
      * The refresh token time limit.
@@ -1103,12 +1212,11 @@ public open class CfnUserPoolClient(
      * `LoginWithAmazon` . You can also specify the names that you configured for the SAML and OIDC
      * IdPs in your user pool, for example `MySAMLIdP` or `MyOIDCIdP` .
      *
-     * This setting applies to providers that you can access with the [hosted UI and OAuth 2.0
-     * authorization
-     * server](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-integration.html)
-     * . The removal of `COGNITO` from this list doesn't prevent authentication operations for local
-     * users with the user pools API in an AWS SDK. The only way to prevent API-based authentication is
-     * to block access with a [AWS WAF
+     * This parameter sets the IdPs that [managed
+     * login](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-managed-login.html)
+     * will display on the login page for your app client. The removal of `COGNITO` from this list
+     * doesn't prevent authentication operations for local users with the user pools API in an AWS SDK.
+     * The only way to prevent SDK-based authentication is to block access with a [AWS WAF
      * rule](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-waf.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-supportedidentityproviders)
@@ -1124,12 +1232,11 @@ public open class CfnUserPoolClient(
      * `LoginWithAmazon` . You can also specify the names that you configured for the SAML and OIDC
      * IdPs in your user pool, for example `MySAMLIdP` or `MyOIDCIdP` .
      *
-     * This setting applies to providers that you can access with the [hosted UI and OAuth 2.0
-     * authorization
-     * server](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-integration.html)
-     * . The removal of `COGNITO` from this list doesn't prevent authentication operations for local
-     * users with the user pools API in an AWS SDK. The only way to prevent API-based authentication is
-     * to block access with a [AWS WAF
+     * This parameter sets the IdPs that [managed
+     * login](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-managed-login.html)
+     * will display on the login page for your app client. The removal of `COGNITO` from this list
+     * doesn't prevent authentication operations for local users with the user pools API in an AWS SDK.
+     * The only way to prevent SDK-based authentication is to block access with a [AWS WAF
      * rule](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-waf.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-supportedidentityproviders)
@@ -1139,43 +1246,45 @@ public open class CfnUserPoolClient(
     public fun supportedIdentityProviders(vararg supportedIdentityProviders: String)
 
     /**
-     * The units in which the validity times are represented.
+     * The units that validity times are represented in.
      *
-     * The default unit for RefreshToken is days, and default for ID and access tokens are hours.
+     * The default unit for refresh tokens is days, and the default for ID and access tokens are
+     * hours.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-tokenvalidityunits)
-     * @param tokenValidityUnits The units in which the validity times are represented. 
+     * @param tokenValidityUnits The units that validity times are represented in. 
      */
     public fun tokenValidityUnits(tokenValidityUnits: IResolvable)
 
     /**
-     * The units in which the validity times are represented.
+     * The units that validity times are represented in.
      *
-     * The default unit for RefreshToken is days, and default for ID and access tokens are hours.
+     * The default unit for refresh tokens is days, and the default for ID and access tokens are
+     * hours.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-tokenvalidityunits)
-     * @param tokenValidityUnits The units in which the validity times are represented. 
+     * @param tokenValidityUnits The units that validity times are represented in. 
      */
     public fun tokenValidityUnits(tokenValidityUnits: TokenValidityUnitsProperty)
 
     /**
-     * The units in which the validity times are represented.
+     * The units that validity times are represented in.
      *
-     * The default unit for RefreshToken is days, and default for ID and access tokens are hours.
+     * The default unit for refresh tokens is days, and the default for ID and access tokens are
+     * hours.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-tokenvalidityunits)
-     * @param tokenValidityUnits The units in which the validity times are represented. 
+     * @param tokenValidityUnits The units that validity times are represented in. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("443f031b846120e488d68c74c4d139304198bea73f85c4e88d462430a8525142")
     public fun tokenValidityUnits(tokenValidityUnits: TokenValidityUnitsProperty.Builder.() -> Unit)
 
     /**
-     * The user pool ID for the user pool where you want to create a user pool client.
+     * The ID of the user pool where you want to create an app client.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-userpoolid)
-     * @param userPoolId The user pool ID for the user pool where you want to create a user pool
-     * client. 
+     * @param userPoolId The ID of the user pool where you want to create an app client. 
      */
     public fun userPoolId(userPoolId: String)
 
@@ -1183,11 +1292,7 @@ public open class CfnUserPoolClient(
      * The list of user attributes that you want your app client to have write access to.
      *
      * After your user authenticates in your app, their access token authorizes them to set or
-     * modify their own attribute value for any attribute in this list. An example of this kind of
-     * activity is when you present your user with a form to update their profile information and they
-     * change their last name. Your app then makes an
-     * [UpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserAttributes.html)
-     * API request and sets `family_name` to the new value.
+     * modify their own attribute value for any attribute in this list.
      *
      * When you don't specify the `WriteAttributes` for your app client, your app can write the
      * values of the Standard attributes of your user pool. When your user pool has write access to
@@ -1213,11 +1318,7 @@ public open class CfnUserPoolClient(
      * The list of user attributes that you want your app client to have write access to.
      *
      * After your user authenticates in your app, their access token authorizes them to set or
-     * modify their own attribute value for any attribute in this list. An example of this kind of
-     * activity is when you present your user with a form to update their profile information and they
-     * change their last name. Your app then makes an
-     * [UpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserAttributes.html)
-     * API request and sets `family_name` to the new value.
+     * modify their own attribute value for any attribute in this list.
      *
      * When you don't specify the `WriteAttributes` for your app client, your app can write the
      * values of the Standard attributes of your user pool. When your user pool has write access to
@@ -1272,49 +1373,53 @@ public open class CfnUserPoolClient(
     }
 
     /**
-     * The OAuth grant types that you want your app client to generate.
+     * The OAuth grant types that you want your app client to generate for clients in managed login
+     * authentication.
      *
      * To create an app client that generates client credentials grants, you must add
      * `client_credentials` as the only allowed OAuth flow.
      *
      * * **code** - Use a code grant flow, which provides an authorization code as the response.
      * This code can be exchanged for access tokens with the `/oauth2/token` endpoint.
-     * * **implicit** - Issue the access token (and, optionally, ID token, based on scopes) directly
-     * to your user.
+     * * **implicit** - Issue the access token, and the ID token when scopes like `openid` and
+     * `profile` are requested, directly to your user.
      * * **client_credentials** - Issue the access token from the `/oauth2/token` endpoint directly
-     * to a non-person user using a combination of the client ID and client secret.
+     * to a non-person user, authorized by a combination of the client ID and client secret.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthflows)
-     * @param allowedOAuthFlows The OAuth grant types that you want your app client to generate. 
+     * @param allowedOAuthFlows The OAuth grant types that you want your app client to generate for
+     * clients in managed login authentication. 
      */
     override fun allowedOAuthFlows(allowedOAuthFlows: List<String>) {
       cdkBuilder.allowedOAuthFlows(allowedOAuthFlows)
     }
 
     /**
-     * The OAuth grant types that you want your app client to generate.
+     * The OAuth grant types that you want your app client to generate for clients in managed login
+     * authentication.
      *
      * To create an app client that generates client credentials grants, you must add
      * `client_credentials` as the only allowed OAuth flow.
      *
      * * **code** - Use a code grant flow, which provides an authorization code as the response.
      * This code can be exchanged for access tokens with the `/oauth2/token` endpoint.
-     * * **implicit** - Issue the access token (and, optionally, ID token, based on scopes) directly
-     * to your user.
+     * * **implicit** - Issue the access token, and the ID token when scopes like `openid` and
+     * `profile` are requested, directly to your user.
      * * **client_credentials** - Issue the access token from the `/oauth2/token` endpoint directly
-     * to a non-person user using a combination of the client ID and client secret.
+     * to a non-person user, authorized by a combination of the client ID and client secret.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthflows)
-     * @param allowedOAuthFlows The OAuth grant types that you want your app client to generate. 
+     * @param allowedOAuthFlows The OAuth grant types that you want your app client to generate for
+     * clients in managed login authentication. 
      */
     override fun allowedOAuthFlows(vararg allowedOAuthFlows: String): Unit =
         allowedOAuthFlows(allowedOAuthFlows.toList())
 
     /**
-     * Set to `true` to use OAuth 2.0 features in your user pool app client.
+     * Set to `true` to use OAuth 2.0 authorization server features in your app client.
      *
-     * `AllowedOAuthFlowsUserPoolClient` must be `true` before you can configure the following
-     * features in your app client.
+     * This parameter must have a value of `true` before you can configure the following features in
+     * your app client.
      *
      * * `CallBackURLs` : Callback URLs.
      * * `LogoutURLs` : Sign-out redirect URLs.
@@ -1322,25 +1427,25 @@ public open class CfnUserPoolClient(
      * * `AllowedOAuthFlows` : Support for authorization code, implicit, and client credentials
      * OAuth 2.0 grants.
      *
-     * To use OAuth 2.0 features, configure one of these features in the Amazon Cognito console or
-     * set `AllowedOAuthFlowsUserPoolClient` to `true` in a `CreateUserPoolClient` or
+     * To use authorization server features, configure one of these features in the Amazon Cognito
+     * console or set `AllowedOAuthFlowsUserPoolClient` to `true` in a `CreateUserPoolClient` or
      * `UpdateUserPoolClient` API request. If you don't set a value for
      * `AllowedOAuthFlowsUserPoolClient` in a request with the AWS CLI or SDKs, it defaults to `false`
-     * .
+     * . When `false` , only SDK-based API sign-in is permitted.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthflowsuserpoolclient)
-     * @param allowedOAuthFlowsUserPoolClient Set to `true` to use OAuth 2.0 features in your user
-     * pool app client. 
+     * @param allowedOAuthFlowsUserPoolClient Set to `true` to use OAuth 2.0 authorization server
+     * features in your app client. 
      */
     override fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: Boolean) {
       cdkBuilder.allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient)
     }
 
     /**
-     * Set to `true` to use OAuth 2.0 features in your user pool app client.
+     * Set to `true` to use OAuth 2.0 authorization server features in your app client.
      *
-     * `AllowedOAuthFlowsUserPoolClient` must be `true` before you can configure the following
-     * features in your app client.
+     * This parameter must have a value of `true` before you can configure the following features in
+     * your app client.
      *
      * * `CallBackURLs` : Callback URLs.
      * * `LogoutURLs` : Sign-out redirect URLs.
@@ -1348,43 +1453,49 @@ public open class CfnUserPoolClient(
      * * `AllowedOAuthFlows` : Support for authorization code, implicit, and client credentials
      * OAuth 2.0 grants.
      *
-     * To use OAuth 2.0 features, configure one of these features in the Amazon Cognito console or
-     * set `AllowedOAuthFlowsUserPoolClient` to `true` in a `CreateUserPoolClient` or
+     * To use authorization server features, configure one of these features in the Amazon Cognito
+     * console or set `AllowedOAuthFlowsUserPoolClient` to `true` in a `CreateUserPoolClient` or
      * `UpdateUserPoolClient` API request. If you don't set a value for
      * `AllowedOAuthFlowsUserPoolClient` in a request with the AWS CLI or SDKs, it defaults to `false`
-     * .
+     * . When `false` , only SDK-based API sign-in is permitted.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthflowsuserpoolclient)
-     * @param allowedOAuthFlowsUserPoolClient Set to `true` to use OAuth 2.0 features in your user
-     * pool app client. 
+     * @param allowedOAuthFlowsUserPoolClient Set to `true` to use OAuth 2.0 authorization server
+     * features in your app client. 
      */
     override fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: IResolvable) {
       cdkBuilder.allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The allowed OAuth scopes.
+     * The OAuth, OpenID Connect (OIDC), and custom scopes that you want to permit your app client
+     * to authorize access with.
      *
-     * Possible values provided by OAuth are `phone` , `email` , `openid` , and `profile` . Possible
-     * values provided by AWS are `aws.cognito.signin.user.admin` . Custom scopes created in Resource
-     * Servers are also supported.
+     * Scopes govern access control to user pool self-service API operations, user data from the
+     * `userInfo` endpoint, and third-party APIs. Scope values include `phone` , `email` , `openid` ,
+     * and `profile` . The `aws.cognito.signin.user.admin` scope authorizes user self-service
+     * operations. Custom scopes with resource servers authorize access to external APIs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthscopes)
-     * @param allowedOAuthScopes The allowed OAuth scopes. 
+     * @param allowedOAuthScopes The OAuth, OpenID Connect (OIDC), and custom scopes that you want
+     * to permit your app client to authorize access with. 
      */
     override fun allowedOAuthScopes(allowedOAuthScopes: List<String>) {
       cdkBuilder.allowedOAuthScopes(allowedOAuthScopes)
     }
 
     /**
-     * The allowed OAuth scopes.
+     * The OAuth, OpenID Connect (OIDC), and custom scopes that you want to permit your app client
+     * to authorize access with.
      *
-     * Possible values provided by OAuth are `phone` , `email` , `openid` , and `profile` . Possible
-     * values provided by AWS are `aws.cognito.signin.user.admin` . Custom scopes created in Resource
-     * Servers are also supported.
+     * Scopes govern access control to user pool self-service API operations, user data from the
+     * `userInfo` endpoint, and third-party APIs. Scope values include `phone` , `email` , `openid` ,
+     * and `profile` . The `aws.cognito.signin.user.admin` scope authorizes user self-service
+     * operations. Custom scopes with resource servers authorize access to external APIs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthscopes)
-     * @param allowedOAuthScopes The allowed OAuth scopes. 
+     * @param allowedOAuthScopes The OAuth, OpenID Connect (OIDC), and custom scopes that you want
+     * to permit your app client to authorize access with. 
      */
     override fun allowedOAuthScopes(vararg allowedOAuthScopes: String): Unit =
         allowedOAuthScopes(allowedOAuthScopes.toList())
@@ -1393,12 +1504,11 @@ public open class CfnUserPoolClient(
      * The user pool analytics configuration for collecting metrics and sending them to your Amazon
      * Pinpoint campaign.
      *
-     *
-     * In AWS Regions where Amazon Pinpoint isn't available, user pools only support sending events
-     * to Amazon Pinpoint projects in AWS Region us-east-1. In Regions where Amazon Pinpoint is
-     * available, user pools support sending events to Amazon Pinpoint projects within that same
-     * Region.
-     *
+     * In AWS Regions where Amazon Pinpoint isn't available, user pools might not have access to
+     * analytics or might be configurable with campaigns in the US East (N. Virginia) Region. For more
+     * information, see [Using Amazon Pinpoint
+     * analytics](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-pinpoint-integration.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-analyticsconfiguration)
      * @param analyticsConfiguration The user pool analytics configuration for collecting metrics
@@ -1412,12 +1522,11 @@ public open class CfnUserPoolClient(
      * The user pool analytics configuration for collecting metrics and sending them to your Amazon
      * Pinpoint campaign.
      *
-     *
-     * In AWS Regions where Amazon Pinpoint isn't available, user pools only support sending events
-     * to Amazon Pinpoint projects in AWS Region us-east-1. In Regions where Amazon Pinpoint is
-     * available, user pools support sending events to Amazon Pinpoint projects within that same
-     * Region.
-     *
+     * In AWS Regions where Amazon Pinpoint isn't available, user pools might not have access to
+     * analytics or might be configurable with campaigns in the US East (N. Virginia) Region. For more
+     * information, see [Using Amazon Pinpoint
+     * analytics](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-pinpoint-integration.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-analyticsconfiguration)
      * @param analyticsConfiguration The user pool analytics configuration for collecting metrics
@@ -1431,12 +1540,11 @@ public open class CfnUserPoolClient(
      * The user pool analytics configuration for collecting metrics and sending them to your Amazon
      * Pinpoint campaign.
      *
-     *
-     * In AWS Regions where Amazon Pinpoint isn't available, user pools only support sending events
-     * to Amazon Pinpoint projects in AWS Region us-east-1. In Regions where Amazon Pinpoint is
-     * available, user pools support sending events to Amazon Pinpoint projects within that same
-     * Region.
-     *
+     * In AWS Regions where Amazon Pinpoint isn't available, user pools might not have access to
+     * analytics or might be configurable with campaigns in the US East (N. Virginia) Region. For more
+     * information, see [Using Amazon Pinpoint
+     * analytics](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-pinpoint-integration.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-analyticsconfiguration)
      * @param analyticsConfiguration The user pool analytics configuration for collecting metrics
@@ -1463,12 +1571,18 @@ public open class CfnUserPoolClient(
     }
 
     /**
-     * A list of allowed redirect (callback) URLs for the IdPs.
+     * A list of allowed redirect, or callback, URLs for managed login authentication.
      *
-     * A redirect URI must:
+     * These URLs are the paths where you want to send your users' browsers after they complete
+     * authentication with managed login or a third-party IdP. Typically, callback URLs are the home of
+     * an application that uses OAuth or OIDC libraries to process authentication outcomes.
+     *
+     * A redirect URI must meet the following requirements:
      *
      * * Be an absolute URI.
-     * * Be registered with the authorization server.
+     * * Be registered with the authorization server. Amazon Cognito doesn't accept authorization
+     * requests with `redirect_uri` values that aren't in the list of `CallbackURLs` that you provide
+     * in this parameter.
      * * Not include a fragment component.
      *
      * See [OAuth 2.0 - Redirection
@@ -1480,19 +1594,26 @@ public open class CfnUserPoolClient(
      * App callback URLs such as myapp://example are also supported.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-callbackurls)
-     * @param callbackUrLs A list of allowed redirect (callback) URLs for the IdPs. 
+     * @param callbackUrLs A list of allowed redirect, or callback, URLs for managed login
+     * authentication. 
      */
     override fun callbackUrLs(callbackUrLs: List<String>) {
       cdkBuilder.callbackUrLs(callbackUrLs)
     }
 
     /**
-     * A list of allowed redirect (callback) URLs for the IdPs.
+     * A list of allowed redirect, or callback, URLs for managed login authentication.
      *
-     * A redirect URI must:
+     * These URLs are the paths where you want to send your users' browsers after they complete
+     * authentication with managed login or a third-party IdP. Typically, callback URLs are the home of
+     * an application that uses OAuth or OIDC libraries to process authentication outcomes.
+     *
+     * A redirect URI must meet the following requirements:
      *
      * * Be an absolute URI.
-     * * Be registered with the authorization server.
+     * * Be registered with the authorization server. Amazon Cognito doesn't accept authorization
+     * requests with `redirect_uri` values that aren't in the list of `CallbackURLs` that you provide
+     * in this parameter.
      * * Not include a fragment component.
      *
      * See [OAuth 2.0 - Redirection
@@ -1504,16 +1625,17 @@ public open class CfnUserPoolClient(
      * App callback URLs such as myapp://example are also supported.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-callbackurls)
-     * @param callbackUrLs A list of allowed redirect (callback) URLs for the IdPs. 
+     * @param callbackUrLs A list of allowed redirect, or callback, URLs for managed login
+     * authentication. 
      */
     override fun callbackUrLs(vararg callbackUrLs: String): Unit =
         callbackUrLs(callbackUrLs.toList())
 
     /**
-     * The client name for the user pool client you would like to create.
+     * A friendly name for the app client that you want to create.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-clientname)
-     * @param clientName The client name for the user pool client you would like to create. 
+     * @param clientName A friendly name for the app client that you want to create. 
      */
     override fun clientName(clientName: String) {
       cdkBuilder.clientName(clientName)
@@ -1525,21 +1647,6 @@ public open class CfnUserPoolClient(
      * In app clients with one assigned IdP, replaces `redirect_uri` in authentication requests.
      * Must be in the `CallbackURLs` list.
      *
-     * A redirect URI must:
-     *
-     * * Be an absolute URI.
-     * * Be registered with the authorization server.
-     * * Not include a fragment component.
-     *
-     * For more information, see [Default redirect
-     * URI](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#cognito-user-pools-app-idp-settings-about)
-     * .
-     *
-     * Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes
-     * only.
-     *
-     * App callback URLs such as myapp://example are also supported.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-defaultredirecturi)
      * @param defaultRedirectUri The default redirect URI. 
      */
@@ -1548,18 +1655,19 @@ public open class CfnUserPoolClient(
     }
 
     /**
-     * Activates the propagation of additional user context data.
+     * When `true` , your application can include additional `UserContextData` in authentication
+     * requests.
      *
-     * For more information about propagation of user context data, see [Adding advanced security to
-     * a user
-     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-threat-protection.html)
-     * . If you don’t include this parameter, you can't send device fingerprint information, including
-     * source IP address, to Amazon Cognito advanced security. You can only activate
-     * `EnablePropagateAdditionalUserContextData` in an app client that has a client secret.
+     * This data includes the IP address, and contributes to analysis by threat protection features.
+     * For more information about propagation of user context data, see [Adding session data to API
+     * requests](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint)
+     * . If you don’t include this parameter, you can't send the source IP address to Amazon Cognito
+     * threat protection features. You can only activate `EnablePropagateAdditionalUserContextData` in
+     * an app client that has a client secret.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-enablepropagateadditionalusercontextdata)
-     * @param enablePropagateAdditionalUserContextData Activates the propagation of additional user
-     * context data. 
+     * @param enablePropagateAdditionalUserContextData When `true` , your application can include
+     * additional `UserContextData` in authentication requests. 
      */
     override
         fun enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData: Boolean) {
@@ -1567,18 +1675,19 @@ public open class CfnUserPoolClient(
     }
 
     /**
-     * Activates the propagation of additional user context data.
+     * When `true` , your application can include additional `UserContextData` in authentication
+     * requests.
      *
-     * For more information about propagation of user context data, see [Adding advanced security to
-     * a user
-     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-threat-protection.html)
-     * . If you don’t include this parameter, you can't send device fingerprint information, including
-     * source IP address, to Amazon Cognito advanced security. You can only activate
-     * `EnablePropagateAdditionalUserContextData` in an app client that has a client secret.
+     * This data includes the IP address, and contributes to analysis by threat protection features.
+     * For more information about propagation of user context data, see [Adding session data to API
+     * requests](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint)
+     * . If you don’t include this parameter, you can't send the source IP address to Amazon Cognito
+     * threat protection features. You can only activate `EnablePropagateAdditionalUserContextData` in
+     * an app client that has a client secret.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-enablepropagateadditionalusercontextdata)
-     * @param enablePropagateAdditionalUserContextData Activates the propagation of additional user
-     * context data. 
+     * @param enablePropagateAdditionalUserContextData When `true` , your application can include
+     * additional `UserContextData` in authentication requests. 
      */
     override
         fun enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData: IResolvable) {
@@ -1586,54 +1695,45 @@ public open class CfnUserPoolClient(
     }
 
     /**
-     * Activates or deactivates token revocation. For more information about revoking tokens, see
-     * [RevokeToken](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_RevokeToken.html)
-     * .
+     * Activates or deactivates token revocation.
      *
      * If you don't include this parameter, token revocation is automatically activated for the new
      * user pool client.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-enabletokenrevocation)
-     * @param enableTokenRevocation Activates or deactivates token revocation. For more information
-     * about revoking tokens, see
-     * [RevokeToken](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_RevokeToken.html)
-     * . 
+     * @param enableTokenRevocation Activates or deactivates token revocation. 
      */
     override fun enableTokenRevocation(enableTokenRevocation: Boolean) {
       cdkBuilder.enableTokenRevocation(enableTokenRevocation)
     }
 
     /**
-     * Activates or deactivates token revocation. For more information about revoking tokens, see
-     * [RevokeToken](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_RevokeToken.html)
-     * .
+     * Activates or deactivates token revocation.
      *
      * If you don't include this parameter, token revocation is automatically activated for the new
      * user pool client.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-enabletokenrevocation)
-     * @param enableTokenRevocation Activates or deactivates token revocation. For more information
-     * about revoking tokens, see
-     * [RevokeToken](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_RevokeToken.html)
-     * . 
+     * @param enableTokenRevocation Activates or deactivates token revocation. 
      */
     override fun enableTokenRevocation(enableTokenRevocation: IResolvable) {
       cdkBuilder.enableTokenRevocation(enableTokenRevocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The authentication flows that you want your user pool client to support.
+     * The [authentication
+     * flows](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow-methods.html)
+     * that you want your user pool client to support. For each app client in your user pool, you can
+     * sign in your users with any combination of one or more flows, including with a user name and
+     * Secure Remote Password (SRP), a user name and password, or a custom authentication process that
+     * you define with Lambda functions.
      *
-     * For each app client in your user pool, you can sign in your users with any combination of one
-     * or more flows, including with a user name and Secure Remote Password (SRP), a user name and
-     * password, or a custom authentication process that you define with Lambda functions.
      *
-     *
-     * If you don't specify a value for `ExplicitAuthFlows` , your user client supports
+     * If you don't specify a value for `ExplicitAuthFlows` , your app client supports
      * `ALLOW_REFRESH_TOKEN_AUTH` , `ALLOW_USER_SRP_AUTH` , and `ALLOW_CUSTOM_AUTH` .
      *
      *
-     * Valid values include:
+     * The values for authentication flow options include the following.
      *
      * * `ALLOW_USER_AUTH` : Enable selection-based sign-in with `USER_AUTH` . This setting covers
      * username-password, secure remote password (SRP), passwordless, and passkey authentication. This
@@ -1641,6 +1741,11 @@ public open class CfnUserPoolClient(
      * `ExplicitAuthFlows` permitting them. For example users can complete an SRP challenge through
      * `USER_AUTH` without the flow `USER_SRP_AUTH` being active for the app client. This flow doesn't
      * include `CUSTOM_AUTH` .
+     *
+     * To activate this setting, your user pool must be in the [Essentials
+     * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-essentials.html)
+     * or higher.
+     *
      * * `ALLOW_ADMIN_USER_PASSWORD_AUTH` : Enable admin based user password authentication flow
      * `ADMIN_USER_PASSWORD_AUTH` . This setting replaces the `ADMIN_NO_SRP_AUTH` setting. With this
      * authentication flow, your app passes a user name and password to Amazon Cognito in the request,
@@ -1658,26 +1763,31 @@ public open class CfnUserPoolClient(
      * like `ALLOW_USER_SRP_AUTH` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-explicitauthflows)
-     * @param explicitAuthFlows The authentication flows that you want your user pool client to
-     * support. 
+     * @param explicitAuthFlows The [authentication
+     * flows](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow-methods.html)
+     * that you want your user pool client to support. For each app client in your user pool, you can
+     * sign in your users with any combination of one or more flows, including with a user name and
+     * Secure Remote Password (SRP), a user name and password, or a custom authentication process that
+     * you define with Lambda functions. 
      */
     override fun explicitAuthFlows(explicitAuthFlows: List<String>) {
       cdkBuilder.explicitAuthFlows(explicitAuthFlows)
     }
 
     /**
-     * The authentication flows that you want your user pool client to support.
+     * The [authentication
+     * flows](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow-methods.html)
+     * that you want your user pool client to support. For each app client in your user pool, you can
+     * sign in your users with any combination of one or more flows, including with a user name and
+     * Secure Remote Password (SRP), a user name and password, or a custom authentication process that
+     * you define with Lambda functions.
      *
-     * For each app client in your user pool, you can sign in your users with any combination of one
-     * or more flows, including with a user name and Secure Remote Password (SRP), a user name and
-     * password, or a custom authentication process that you define with Lambda functions.
      *
-     *
-     * If you don't specify a value for `ExplicitAuthFlows` , your user client supports
+     * If you don't specify a value for `ExplicitAuthFlows` , your app client supports
      * `ALLOW_REFRESH_TOKEN_AUTH` , `ALLOW_USER_SRP_AUTH` , and `ALLOW_CUSTOM_AUTH` .
      *
      *
-     * Valid values include:
+     * The values for authentication flow options include the following.
      *
      * * `ALLOW_USER_AUTH` : Enable selection-based sign-in with `USER_AUTH` . This setting covers
      * username-password, secure remote password (SRP), passwordless, and passkey authentication. This
@@ -1685,6 +1795,11 @@ public open class CfnUserPoolClient(
      * `ExplicitAuthFlows` permitting them. For example users can complete an SRP challenge through
      * `USER_AUTH` without the flow `USER_SRP_AUTH` being active for the app client. This flow doesn't
      * include `CUSTOM_AUTH` .
+     *
+     * To activate this setting, your user pool must be in the [Essentials
+     * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-essentials.html)
+     * or higher.
+     *
      * * `ALLOW_ADMIN_USER_PASSWORD_AUTH` : Enable admin based user password authentication flow
      * `ADMIN_USER_PASSWORD_AUTH` . This setting replaces the `ADMIN_NO_SRP_AUTH` setting. With this
      * authentication flow, your app passes a user name and password to Amazon Cognito in the request,
@@ -1702,31 +1817,43 @@ public open class CfnUserPoolClient(
      * like `ALLOW_USER_SRP_AUTH` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-explicitauthflows)
-     * @param explicitAuthFlows The authentication flows that you want your user pool client to
-     * support. 
+     * @param explicitAuthFlows The [authentication
+     * flows](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow-methods.html)
+     * that you want your user pool client to support. For each app client in your user pool, you can
+     * sign in your users with any combination of one or more flows, including with a user name and
+     * Secure Remote Password (SRP), a user name and password, or a custom authentication process that
+     * you define with Lambda functions. 
      */
     override fun explicitAuthFlows(vararg explicitAuthFlows: String): Unit =
         explicitAuthFlows(explicitAuthFlows.toList())
 
     /**
-     * Boolean to specify whether you want to generate a secret for the user pool client being
-     * created.
+     * When `true` , generates a client secret for the app client.
+     *
+     * Client secrets are used with server-side and machine-to-machine applications. Client secrets
+     * are automatically generated; you can't specify a secret value. For more information, see [App
+     * client
+     * types](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#user-pool-settings-client-app-client-types)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-generatesecret)
-     * @param generateSecret Boolean to specify whether you want to generate a secret for the user
-     * pool client being created. 
+     * @param generateSecret When `true` , generates a client secret for the app client. 
      */
     override fun generateSecret(generateSecret: Boolean) {
       cdkBuilder.generateSecret(generateSecret)
     }
 
     /**
-     * Boolean to specify whether you want to generate a secret for the user pool client being
-     * created.
+     * When `true` , generates a client secret for the app client.
+     *
+     * Client secrets are used with server-side and machine-to-machine applications. Client secrets
+     * are automatically generated; you can't specify a secret value. For more information, see [App
+     * client
+     * types](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#user-pool-settings-client-app-client-types)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-generatesecret)
-     * @param generateSecret Boolean to specify whether you want to generate a secret for the user
-     * pool client being created. 
+     * @param generateSecret When `true` , generates a client secret for the app client. 
      */
     override fun generateSecret(generateSecret: IResolvable) {
       cdkBuilder.generateSecret(generateSecret.let(IResolvable.Companion::unwrap))
@@ -1756,20 +1883,32 @@ public open class CfnUserPoolClient(
     }
 
     /**
-     * A list of allowed logout URLs for the IdPs.
+     * A list of allowed logout URLs for managed login authentication.
+     *
+     * When you pass `logout_uri` and `client_id` parameters to `/logout` , Amazon Cognito signs out
+     * your user and redirects them to the logout URL. This parameter describes the URLs that you want
+     * to be the permitted targets of `logout_uri` . A typical use of these URLs is when a user selects
+     * "Sign out" and you redirect them to your public homepage. For more information, see [Logout
+     * endpoint](https://docs.aws.amazon.com/cognito/latest/developerguide/logout-endpoint.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-logouturls)
-     * @param logoutUrLs A list of allowed logout URLs for the IdPs. 
+     * @param logoutUrLs A list of allowed logout URLs for managed login authentication. 
      */
     override fun logoutUrLs(logoutUrLs: List<String>) {
       cdkBuilder.logoutUrLs(logoutUrLs)
     }
 
     /**
-     * A list of allowed logout URLs for the IdPs.
+     * A list of allowed logout URLs for managed login authentication.
+     *
+     * When you pass `logout_uri` and `client_id` parameters to `/logout` , Amazon Cognito signs out
+     * your user and redirects them to the logout URL. This parameter describes the URLs that you want
+     * to be the permitted targets of `logout_uri` . A typical use of these URLs is when a user selects
+     * "Sign out" and you redirect them to your public homepage. For more information, see [Logout
+     * endpoint](https://docs.aws.amazon.com/cognito/latest/developerguide/logout-endpoint.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-logouturls)
-     * @param logoutUrLs A list of allowed logout URLs for the IdPs. 
+     * @param logoutUrLs A list of allowed logout URLs for managed login authentication. 
      */
     override fun logoutUrLs(vararg logoutUrLs: String): Unit = logoutUrLs(logoutUrLs.toList())
 
@@ -1804,9 +1943,7 @@ public open class CfnUserPoolClient(
      *
      * After your user authenticates in your app, their access token authorizes them to read their
      * own attribute value for any attribute in this list. An example of this kind of activity is when
-     * your user selects a link to view their profile information. Your app makes a
-     * [GetUser](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetUser.html)
-     * API request to retrieve and display your user's profile data.
+     * your user selects a link to view their profile information.
      *
      * When you don't specify the `ReadAttributes` for your app client, your app can read the values
      * of `email_verified` , `phone_number_verified` , and the Standard attributes of your user pool.
@@ -1827,9 +1964,7 @@ public open class CfnUserPoolClient(
      *
      * After your user authenticates in your app, their access token authorizes them to read their
      * own attribute value for any attribute in this list. An example of this kind of activity is when
-     * your user selects a link to view their profile information. Your app makes a
-     * [GetUser](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetUser.html)
-     * API request to retrieve and display your user's profile data.
+     * your user selects a link to view their profile information.
      *
      * When you don't specify the `ReadAttributes` for your app client, your app can read the values
      * of `email_verified` , `phone_number_verified` , and the Standard attributes of your user pool.
@@ -1843,6 +1978,50 @@ public open class CfnUserPoolClient(
      */
     override fun readAttributes(vararg readAttributes: String): Unit =
         readAttributes(readAttributes.toList())
+
+    /**
+     * The configuration of your app client for refresh token rotation.
+     *
+     * When enabled, your app client issues new ID, access, and refresh tokens when users renew
+     * their sessions with refresh tokens. When disabled, token refresh issues only ID and access
+     * tokens.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-refreshtokenrotation)
+     * @param refreshTokenRotation The configuration of your app client for refresh token rotation. 
+     */
+    override fun refreshTokenRotation(refreshTokenRotation: IResolvable) {
+      cdkBuilder.refreshTokenRotation(refreshTokenRotation.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The configuration of your app client for refresh token rotation.
+     *
+     * When enabled, your app client issues new ID, access, and refresh tokens when users renew
+     * their sessions with refresh tokens. When disabled, token refresh issues only ID and access
+     * tokens.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-refreshtokenrotation)
+     * @param refreshTokenRotation The configuration of your app client for refresh token rotation. 
+     */
+    override fun refreshTokenRotation(refreshTokenRotation: RefreshTokenRotationProperty) {
+      cdkBuilder.refreshTokenRotation(refreshTokenRotation.let(RefreshTokenRotationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The configuration of your app client for refresh token rotation.
+     *
+     * When enabled, your app client issues new ID, access, and refresh tokens when users renew
+     * their sessions with refresh tokens. When disabled, token refresh issues only ID and access
+     * tokens.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-refreshtokenrotation)
+     * @param refreshTokenRotation The configuration of your app client for refresh token rotation. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("55e5e8219a26d794d69968c27692de854cb96c57f73a84520e651f3396de76a9")
+    override
+        fun refreshTokenRotation(refreshTokenRotation: RefreshTokenRotationProperty.Builder.() -> Unit):
+        Unit = refreshTokenRotation(RefreshTokenRotationProperty(refreshTokenRotation))
 
     /**
      * The refresh token time limit.
@@ -1876,12 +2055,11 @@ public open class CfnUserPoolClient(
      * `LoginWithAmazon` . You can also specify the names that you configured for the SAML and OIDC
      * IdPs in your user pool, for example `MySAMLIdP` or `MyOIDCIdP` .
      *
-     * This setting applies to providers that you can access with the [hosted UI and OAuth 2.0
-     * authorization
-     * server](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-integration.html)
-     * . The removal of `COGNITO` from this list doesn't prevent authentication operations for local
-     * users with the user pools API in an AWS SDK. The only way to prevent API-based authentication is
-     * to block access with a [AWS WAF
+     * This parameter sets the IdPs that [managed
+     * login](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-managed-login.html)
+     * will display on the login page for your app client. The removal of `COGNITO` from this list
+     * doesn't prevent authentication operations for local users with the user pools API in an AWS SDK.
+     * The only way to prevent SDK-based authentication is to block access with a [AWS WAF
      * rule](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-waf.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-supportedidentityproviders)
@@ -1899,12 +2077,11 @@ public open class CfnUserPoolClient(
      * `LoginWithAmazon` . You can also specify the names that you configured for the SAML and OIDC
      * IdPs in your user pool, for example `MySAMLIdP` or `MyOIDCIdP` .
      *
-     * This setting applies to providers that you can access with the [hosted UI and OAuth 2.0
-     * authorization
-     * server](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-integration.html)
-     * . The removal of `COGNITO` from this list doesn't prevent authentication operations for local
-     * users with the user pools API in an AWS SDK. The only way to prevent API-based authentication is
-     * to block access with a [AWS WAF
+     * This parameter sets the IdPs that [managed
+     * login](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-managed-login.html)
+     * will display on the login page for your app client. The removal of `COGNITO` from this list
+     * doesn't prevent authentication operations for local users with the user pools API in an AWS SDK.
+     * The only way to prevent SDK-based authentication is to block access with a [AWS WAF
      * rule](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-waf.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-supportedidentityproviders)
@@ -1915,36 +2092,39 @@ public open class CfnUserPoolClient(
         supportedIdentityProviders(supportedIdentityProviders.toList())
 
     /**
-     * The units in which the validity times are represented.
+     * The units that validity times are represented in.
      *
-     * The default unit for RefreshToken is days, and default for ID and access tokens are hours.
+     * The default unit for refresh tokens is days, and the default for ID and access tokens are
+     * hours.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-tokenvalidityunits)
-     * @param tokenValidityUnits The units in which the validity times are represented. 
+     * @param tokenValidityUnits The units that validity times are represented in. 
      */
     override fun tokenValidityUnits(tokenValidityUnits: IResolvable) {
       cdkBuilder.tokenValidityUnits(tokenValidityUnits.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The units in which the validity times are represented.
+     * The units that validity times are represented in.
      *
-     * The default unit for RefreshToken is days, and default for ID and access tokens are hours.
+     * The default unit for refresh tokens is days, and the default for ID and access tokens are
+     * hours.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-tokenvalidityunits)
-     * @param tokenValidityUnits The units in which the validity times are represented. 
+     * @param tokenValidityUnits The units that validity times are represented in. 
      */
     override fun tokenValidityUnits(tokenValidityUnits: TokenValidityUnitsProperty) {
       cdkBuilder.tokenValidityUnits(tokenValidityUnits.let(TokenValidityUnitsProperty.Companion::unwrap))
     }
 
     /**
-     * The units in which the validity times are represented.
+     * The units that validity times are represented in.
      *
-     * The default unit for RefreshToken is days, and default for ID and access tokens are hours.
+     * The default unit for refresh tokens is days, and the default for ID and access tokens are
+     * hours.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-tokenvalidityunits)
-     * @param tokenValidityUnits The units in which the validity times are represented. 
+     * @param tokenValidityUnits The units that validity times are represented in. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("443f031b846120e488d68c74c4d139304198bea73f85c4e88d462430a8525142")
@@ -1953,11 +2133,10 @@ public open class CfnUserPoolClient(
         Unit = tokenValidityUnits(TokenValidityUnitsProperty(tokenValidityUnits))
 
     /**
-     * The user pool ID for the user pool where you want to create a user pool client.
+     * The ID of the user pool where you want to create an app client.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-userpoolid)
-     * @param userPoolId The user pool ID for the user pool where you want to create a user pool
-     * client. 
+     * @param userPoolId The ID of the user pool where you want to create an app client. 
      */
     override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
@@ -1967,11 +2146,7 @@ public open class CfnUserPoolClient(
      * The list of user attributes that you want your app client to have write access to.
      *
      * After your user authenticates in your app, their access token authorizes them to set or
-     * modify their own attribute value for any attribute in this list. An example of this kind of
-     * activity is when you present your user with a form to update their profile information and they
-     * change their last name. Your app then makes an
-     * [UpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserAttributes.html)
-     * API request and sets `family_name` to the new value.
+     * modify their own attribute value for any attribute in this list.
      *
      * When you don't specify the `WriteAttributes` for your app client, your app can write the
      * values of the Standard attributes of your user pool. When your user pool has write access to
@@ -1999,11 +2174,7 @@ public open class CfnUserPoolClient(
      * The list of user attributes that you want your app client to have write access to.
      *
      * After your user authenticates in your app, their access token authorizes them to set or
-     * modify their own attribute value for any attribute in this list. An example of this kind of
-     * activity is when you present your user with a form to update their profile information and they
-     * change their last name. Your app then makes an
-     * [UpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserAttributes.html)
-     * API request and sets `family_name` to the new value.
+     * modify their own attribute value for any attribute in this list.
      *
      * When you don't specify the `WriteAttributes` for your app client, your app can write the
      * values of the Standard attributes of your user pool. When your user pool has write access to
@@ -2060,14 +2231,6 @@ public open class CfnUserPoolClient(
    * Amazon Pinpoint isn't available in all AWS Regions. For a list of available Regions, see
    * [Amazon Cognito and Amazon Pinpoint Region
    * availability](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-pinpoint-integration.html#cognito-user-pools-find-region-mappings)
-   * .
-   *
-   * This data type is a request parameter of
-   * [CreateUserPoolClient](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPoolClient.html)
-   * and
-   * [UpdateUserPoolClient](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPoolClient.html)
-   * , and a response parameter of
-   * [DescribeUserPoolClient](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPoolClient.html)
    * .
    *
    * Example:
@@ -2312,9 +2475,143 @@ public open class CfnUserPoolClient(
   }
 
   /**
-   * The time units you use when you set the duration of ID, access, and refresh tokens.
+   * The configuration of your app client for refresh token rotation.
    *
-   * The default unit for RefreshToken is days, and the default for ID and access tokens is hours.
+   * When enabled, your app client issues new ID, access, and refresh tokens when users renew their
+   * sessions with refresh tokens. When disabled, token refresh issues only ID and access tokens.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cognito.*;
+   * RefreshTokenRotationProperty refreshTokenRotationProperty =
+   * RefreshTokenRotationProperty.builder()
+   * .feature("feature")
+   * .retryGracePeriodSeconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-refreshtokenrotation.html)
+   */
+  public interface RefreshTokenRotationProperty {
+    /**
+     * The state of refresh token rotation for the current app client.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-refreshtokenrotation.html#cfn-cognito-userpoolclient-refreshtokenrotation-feature)
+     */
+    public fun feature(): String? = unwrap(this).getFeature()
+
+    /**
+     * When you request a token refresh with `GetTokensFromRefreshToken` , the original refresh
+     * token that you're rotating out can remain valid for a period of time of up to 60 seconds.
+     *
+     * This allows for client-side retries. When `RetryGracePeriodSeconds` is `0` , the grace period
+     * is disabled and a successful request immediately invalidates the submitted refresh token.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-refreshtokenrotation.html#cfn-cognito-userpoolclient-refreshtokenrotation-retrygraceperiodseconds)
+     */
+    public fun retryGracePeriodSeconds(): Number? = unwrap(this).getRetryGracePeriodSeconds()
+
+    /**
+     * A builder for [RefreshTokenRotationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param feature The state of refresh token rotation for the current app client.
+       */
+      public fun feature(feature: String)
+
+      /**
+       * @param retryGracePeriodSeconds When you request a token refresh with
+       * `GetTokensFromRefreshToken` , the original refresh token that you're rotating out can remain
+       * valid for a period of time of up to 60 seconds.
+       * This allows for client-side retries. When `RetryGracePeriodSeconds` is `0` , the grace
+       * period is disabled and a successful request immediately invalidates the submitted refresh
+       * token.
+       */
+      public fun retryGracePeriodSeconds(retryGracePeriodSeconds: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cognito.CfnUserPoolClient.RefreshTokenRotationProperty.Builder
+          =
+          software.amazon.awscdk.services.cognito.CfnUserPoolClient.RefreshTokenRotationProperty.builder()
+
+      /**
+       * @param feature The state of refresh token rotation for the current app client.
+       */
+      override fun feature(feature: String) {
+        cdkBuilder.feature(feature)
+      }
+
+      /**
+       * @param retryGracePeriodSeconds When you request a token refresh with
+       * `GetTokensFromRefreshToken` , the original refresh token that you're rotating out can remain
+       * valid for a period of time of up to 60 seconds.
+       * This allows for client-side retries. When `RetryGracePeriodSeconds` is `0` , the grace
+       * period is disabled and a successful request immediately invalidates the submitted refresh
+       * token.
+       */
+      override fun retryGracePeriodSeconds(retryGracePeriodSeconds: Number) {
+        cdkBuilder.retryGracePeriodSeconds(retryGracePeriodSeconds)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cognito.CfnUserPoolClient.RefreshTokenRotationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClient.RefreshTokenRotationProperty,
+    ) : CdkObject(cdkObject),
+        RefreshTokenRotationProperty {
+      /**
+       * The state of refresh token rotation for the current app client.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-refreshtokenrotation.html#cfn-cognito-userpoolclient-refreshtokenrotation-feature)
+       */
+      override fun feature(): String? = unwrap(this).getFeature()
+
+      /**
+       * When you request a token refresh with `GetTokensFromRefreshToken` , the original refresh
+       * token that you're rotating out can remain valid for a period of time of up to 60 seconds.
+       *
+       * This allows for client-side retries. When `RetryGracePeriodSeconds` is `0` , the grace
+       * period is disabled and a successful request immediately invalidates the submitted refresh
+       * token.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-refreshtokenrotation.html#cfn-cognito-userpoolclient-refreshtokenrotation-retrygraceperiodseconds)
+       */
+      override fun retryGracePeriodSeconds(): Number? = unwrap(this).getRetryGracePeriodSeconds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RefreshTokenRotationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClient.RefreshTokenRotationProperty):
+          RefreshTokenRotationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RefreshTokenRotationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RefreshTokenRotationProperty):
+          software.amazon.awscdk.services.cognito.CfnUserPoolClient.RefreshTokenRotationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cognito.CfnUserPoolClient.RefreshTokenRotationProperty
+    }
+  }
+
+  /**
+   * The units that validity times are represented in.
+   *
+   * The default unit for refresh tokens is days, and the default for ID and access tokens are
+   * hours.
    *
    * Example:
    *

@@ -47,6 +47,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .contactflowLogs(false)
  * .contactLens(false)
  * .earlyMedia(false)
+ * .enhancedChatMonitoring(false)
+ * .enhancedContactMonitoring(false)
+ * .highVolumeOutBound(false)
+ * .multiPartyChatConference(false)
+ * .multiPartyConference(false)
  * .useCustomTtsVoices(false)
  * .build())
  * .identityManagementType("identityManagementType")
@@ -411,6 +416,11 @@ public open class CfnInstance(
    * .contactflowLogs(false)
    * .contactLens(false)
    * .earlyMedia(false)
+   * .enhancedChatMonitoring(false)
+   * .enhancedContactMonitoring(false)
+   * .highVolumeOutBound(false)
+   * .multiPartyChatConference(false)
+   * .multiPartyConference(false)
    * .useCustomTtsVoices(false)
    * .build();
    * ```
@@ -447,11 +457,46 @@ public open class CfnInstance(
     public fun earlyMedia(): Any? = unwrap(this).getEarlyMedia()
 
     /**
+     * Boolean flag which enables ENHANCED_CHAT_MONITORING on an instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-enhancedchatmonitoring)
+     */
+    public fun enhancedChatMonitoring(): Any? = unwrap(this).getEnhancedChatMonitoring()
+
+    /**
+     * Boolean flag which enables ENHANCED_CONTACT_MONITORING on an instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-enhancedcontactmonitoring)
+     */
+    public fun enhancedContactMonitoring(): Any? = unwrap(this).getEnhancedContactMonitoring()
+
+    /**
+     * Boolean flag which enables HIGH_VOLUME_OUTBOUND on an instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-highvolumeoutbound)
+     */
+    public fun highVolumeOutBound(): Any? = unwrap(this).getHighVolumeOutBound()
+
+    /**
      * Mandatory element which enables inbound calls on new instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-inboundcalls)
      */
     public fun inboundCalls(): Any
+
+    /**
+     * Boolean flag which enables MULTI_PARTY_CHAT_CONFERENCE on an instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-multipartychatconference)
+     */
+    public fun multiPartyChatConference(): Any? = unwrap(this).getMultiPartyChatConference()
+
+    /**
+     * Boolean flag which enables MULTI_PARTY_CONFERENCE on an instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-multipartyconference)
+     */
+    public fun multiPartyConference(): Any? = unwrap(this).getMultiPartyConference()
 
     /**
      * Mandatory element which enables outbound calls on new instance.
@@ -515,6 +560,40 @@ public open class CfnInstance(
       public fun earlyMedia(earlyMedia: IResolvable)
 
       /**
+       * @param enhancedChatMonitoring Boolean flag which enables ENHANCED_CHAT_MONITORING on an
+       * instance.
+       */
+      public fun enhancedChatMonitoring(enhancedChatMonitoring: Boolean)
+
+      /**
+       * @param enhancedChatMonitoring Boolean flag which enables ENHANCED_CHAT_MONITORING on an
+       * instance.
+       */
+      public fun enhancedChatMonitoring(enhancedChatMonitoring: IResolvable)
+
+      /**
+       * @param enhancedContactMonitoring Boolean flag which enables ENHANCED_CONTACT_MONITORING on
+       * an instance.
+       */
+      public fun enhancedContactMonitoring(enhancedContactMonitoring: Boolean)
+
+      /**
+       * @param enhancedContactMonitoring Boolean flag which enables ENHANCED_CONTACT_MONITORING on
+       * an instance.
+       */
+      public fun enhancedContactMonitoring(enhancedContactMonitoring: IResolvable)
+
+      /**
+       * @param highVolumeOutBound Boolean flag which enables HIGH_VOLUME_OUTBOUND on an instance.
+       */
+      public fun highVolumeOutBound(highVolumeOutBound: Boolean)
+
+      /**
+       * @param highVolumeOutBound Boolean flag which enables HIGH_VOLUME_OUTBOUND on an instance.
+       */
+      public fun highVolumeOutBound(highVolumeOutBound: IResolvable)
+
+      /**
        * @param inboundCalls Mandatory element which enables inbound calls on new instance. 
        */
       public fun inboundCalls(inboundCalls: Boolean)
@@ -523,6 +602,30 @@ public open class CfnInstance(
        * @param inboundCalls Mandatory element which enables inbound calls on new instance. 
        */
       public fun inboundCalls(inboundCalls: IResolvable)
+
+      /**
+       * @param multiPartyChatConference Boolean flag which enables MULTI_PARTY_CHAT_CONFERENCE on
+       * an instance.
+       */
+      public fun multiPartyChatConference(multiPartyChatConference: Boolean)
+
+      /**
+       * @param multiPartyChatConference Boolean flag which enables MULTI_PARTY_CHAT_CONFERENCE on
+       * an instance.
+       */
+      public fun multiPartyChatConference(multiPartyChatConference: IResolvable)
+
+      /**
+       * @param multiPartyConference Boolean flag which enables MULTI_PARTY_CONFERENCE on an
+       * instance.
+       */
+      public fun multiPartyConference(multiPartyConference: Boolean)
+
+      /**
+       * @param multiPartyConference Boolean flag which enables MULTI_PARTY_CONFERENCE on an
+       * instance.
+       */
+      public fun multiPartyConference(multiPartyConference: IResolvable)
 
       /**
        * @param outboundCalls Mandatory element which enables outbound calls on new instance. 
@@ -609,6 +712,52 @@ public open class CfnInstance(
       }
 
       /**
+       * @param enhancedChatMonitoring Boolean flag which enables ENHANCED_CHAT_MONITORING on an
+       * instance.
+       */
+      override fun enhancedChatMonitoring(enhancedChatMonitoring: Boolean) {
+        cdkBuilder.enhancedChatMonitoring(enhancedChatMonitoring)
+      }
+
+      /**
+       * @param enhancedChatMonitoring Boolean flag which enables ENHANCED_CHAT_MONITORING on an
+       * instance.
+       */
+      override fun enhancedChatMonitoring(enhancedChatMonitoring: IResolvable) {
+        cdkBuilder.enhancedChatMonitoring(enhancedChatMonitoring.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param enhancedContactMonitoring Boolean flag which enables ENHANCED_CONTACT_MONITORING on
+       * an instance.
+       */
+      override fun enhancedContactMonitoring(enhancedContactMonitoring: Boolean) {
+        cdkBuilder.enhancedContactMonitoring(enhancedContactMonitoring)
+      }
+
+      /**
+       * @param enhancedContactMonitoring Boolean flag which enables ENHANCED_CONTACT_MONITORING on
+       * an instance.
+       */
+      override fun enhancedContactMonitoring(enhancedContactMonitoring: IResolvable) {
+        cdkBuilder.enhancedContactMonitoring(enhancedContactMonitoring.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param highVolumeOutBound Boolean flag which enables HIGH_VOLUME_OUTBOUND on an instance.
+       */
+      override fun highVolumeOutBound(highVolumeOutBound: Boolean) {
+        cdkBuilder.highVolumeOutBound(highVolumeOutBound)
+      }
+
+      /**
+       * @param highVolumeOutBound Boolean flag which enables HIGH_VOLUME_OUTBOUND on an instance.
+       */
+      override fun highVolumeOutBound(highVolumeOutBound: IResolvable) {
+        cdkBuilder.highVolumeOutBound(highVolumeOutBound.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
        * @param inboundCalls Mandatory element which enables inbound calls on new instance. 
        */
       override fun inboundCalls(inboundCalls: Boolean) {
@@ -620,6 +769,38 @@ public open class CfnInstance(
        */
       override fun inboundCalls(inboundCalls: IResolvable) {
         cdkBuilder.inboundCalls(inboundCalls.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param multiPartyChatConference Boolean flag which enables MULTI_PARTY_CHAT_CONFERENCE on
+       * an instance.
+       */
+      override fun multiPartyChatConference(multiPartyChatConference: Boolean) {
+        cdkBuilder.multiPartyChatConference(multiPartyChatConference)
+      }
+
+      /**
+       * @param multiPartyChatConference Boolean flag which enables MULTI_PARTY_CHAT_CONFERENCE on
+       * an instance.
+       */
+      override fun multiPartyChatConference(multiPartyChatConference: IResolvable) {
+        cdkBuilder.multiPartyChatConference(multiPartyChatConference.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param multiPartyConference Boolean flag which enables MULTI_PARTY_CONFERENCE on an
+       * instance.
+       */
+      override fun multiPartyConference(multiPartyConference: Boolean) {
+        cdkBuilder.multiPartyConference(multiPartyConference)
+      }
+
+      /**
+       * @param multiPartyConference Boolean flag which enables MULTI_PARTY_CONFERENCE on an
+       * instance.
+       */
+      override fun multiPartyConference(multiPartyConference: IResolvable) {
+        cdkBuilder.multiPartyConference(multiPartyConference.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -687,11 +868,46 @@ public open class CfnInstance(
       override fun earlyMedia(): Any? = unwrap(this).getEarlyMedia()
 
       /**
+       * Boolean flag which enables ENHANCED_CHAT_MONITORING on an instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-enhancedchatmonitoring)
+       */
+      override fun enhancedChatMonitoring(): Any? = unwrap(this).getEnhancedChatMonitoring()
+
+      /**
+       * Boolean flag which enables ENHANCED_CONTACT_MONITORING on an instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-enhancedcontactmonitoring)
+       */
+      override fun enhancedContactMonitoring(): Any? = unwrap(this).getEnhancedContactMonitoring()
+
+      /**
+       * Boolean flag which enables HIGH_VOLUME_OUTBOUND on an instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-highvolumeoutbound)
+       */
+      override fun highVolumeOutBound(): Any? = unwrap(this).getHighVolumeOutBound()
+
+      /**
        * Mandatory element which enables inbound calls on new instance.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-inboundcalls)
        */
       override fun inboundCalls(): Any = unwrap(this).getInboundCalls()
+
+      /**
+       * Boolean flag which enables MULTI_PARTY_CHAT_CONFERENCE on an instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-multipartychatconference)
+       */
+      override fun multiPartyChatConference(): Any? = unwrap(this).getMultiPartyChatConference()
+
+      /**
+       * Boolean flag which enables MULTI_PARTY_CONFERENCE on an instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-multipartyconference)
+       */
+      override fun multiPartyConference(): Any? = unwrap(this).getMultiPartyConference()
 
       /**
        * Mandatory element which enables outbound calls on new instance.

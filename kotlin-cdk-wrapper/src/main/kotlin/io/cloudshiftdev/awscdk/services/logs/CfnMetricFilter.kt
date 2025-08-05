@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -48,6 +49,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .unit("unit")
  * .build()))
  * // the properties below are optional
+ * .applyOnTransformedLogs(false)
  * .filterName("filterName")
  * .build();
  * ```
@@ -73,6 +75,25 @@ public open class CfnMetricFilter(
     props: CfnMetricFilterProps.Builder.() -> Unit,
   ) : this(scope, id, CfnMetricFilterProps(props)
   )
+
+  /**
+   * This parameter is valid only for log groups that have an active log transformer.
+   */
+  public open fun applyOnTransformedLogs(): Any? = unwrap(this).getApplyOnTransformedLogs()
+
+  /**
+   * This parameter is valid only for log groups that have an active log transformer.
+   */
+  public open fun applyOnTransformedLogs(`value`: Boolean) {
+    unwrap(this).setApplyOnTransformedLogs(`value`)
+  }
+
+  /**
+   * This parameter is valid only for log groups that have an active log transformer.
+   */
+  public open fun applyOnTransformedLogs(`value`: IResolvable) {
+    unwrap(this).setApplyOnTransformedLogs(`value`.let(IResolvable.Companion::unwrap))
+  }
 
   /**
    * The name of the metric filter.
@@ -150,6 +171,38 @@ public open class CfnMetricFilter(
   @CdkDslMarker
   public interface Builder {
     /**
+     * This parameter is valid only for log groups that have an active log transformer.
+     *
+     * For more information about log transformers, see
+     * [PutTransformer](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutTransformer.html)
+     * .
+     *
+     * If this value is `true` , the metric filter is applied on the transformed version of the log
+     * events instead of the original ingested log events.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-logs-metricfilter-applyontransformedlogs)
+     * @param applyOnTransformedLogs This parameter is valid only for log groups that have an active
+     * log transformer. 
+     */
+    public fun applyOnTransformedLogs(applyOnTransformedLogs: Boolean)
+
+    /**
+     * This parameter is valid only for log groups that have an active log transformer.
+     *
+     * For more information about log transformers, see
+     * [PutTransformer](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutTransformer.html)
+     * .
+     *
+     * If this value is `true` , the metric filter is applied on the transformed version of the log
+     * events instead of the original ingested log events.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-logs-metricfilter-applyontransformedlogs)
+     * @param applyOnTransformedLogs This parameter is valid only for log groups that have an active
+     * log transformer. 
+     */
+    public fun applyOnTransformedLogs(applyOnTransformedLogs: IResolvable)
+
+    /**
      * The name of the metric filter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-logs-metricfilter-filtername)
@@ -208,6 +261,42 @@ public open class CfnMetricFilter(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.logs.CfnMetricFilter.Builder =
         software.amazon.awscdk.services.logs.CfnMetricFilter.Builder.create(scope, id)
+
+    /**
+     * This parameter is valid only for log groups that have an active log transformer.
+     *
+     * For more information about log transformers, see
+     * [PutTransformer](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutTransformer.html)
+     * .
+     *
+     * If this value is `true` , the metric filter is applied on the transformed version of the log
+     * events instead of the original ingested log events.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-logs-metricfilter-applyontransformedlogs)
+     * @param applyOnTransformedLogs This parameter is valid only for log groups that have an active
+     * log transformer. 
+     */
+    override fun applyOnTransformedLogs(applyOnTransformedLogs: Boolean) {
+      cdkBuilder.applyOnTransformedLogs(applyOnTransformedLogs)
+    }
+
+    /**
+     * This parameter is valid only for log groups that have an active log transformer.
+     *
+     * For more information about log transformers, see
+     * [PutTransformer](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutTransformer.html)
+     * .
+     *
+     * If this value is `true` , the metric filter is applied on the transformed version of the log
+     * events instead of the original ingested log events.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-logs-metricfilter-applyontransformedlogs)
+     * @param applyOnTransformedLogs This parameter is valid only for log groups that have an active
+     * log transformer. 
+     */
+    override fun applyOnTransformedLogs(applyOnTransformedLogs: IResolvable) {
+      cdkBuilder.applyOnTransformedLogs(applyOnTransformedLogs.let(IResolvable.Companion::unwrap))
+    }
 
     /**
      * The name of the metric filter.

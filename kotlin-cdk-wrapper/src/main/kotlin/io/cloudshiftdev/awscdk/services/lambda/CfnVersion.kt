@@ -29,13 +29,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.lambda.*;
- * Object policy;
  * CfnVersion cfnVersion = CfnVersion.Builder.create(this, "MyCfnVersion")
  * .functionName("functionName")
  * // the properties below are optional
  * .codeSha256("codeSha256")
  * .description("description")
- * .policy(policy)
  * .provisionedConcurrencyConfig(ProvisionedConcurrencyConfigurationProperty.builder()
  * .provisionedConcurrentExecutions(123)
  * .build())
@@ -122,18 +120,6 @@ public open class CfnVersion(
    */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
-  }
-
-  /**
-   * The resource policy of your function.
-   */
-  public open fun policy(): Any? = unwrap(this).getPolicy()
-
-  /**
-   * The resource policy of your function.
-   */
-  public open fun policy(`value`: Any) {
-    unwrap(this).setPolicy(`value`)
   }
 
   /**
@@ -236,14 +222,6 @@ public open class CfnVersion(
      * @param functionName The name or ARN of the Lambda function. 
      */
     public fun functionName(functionName: String)
-
-    /**
-     * The resource policy of your function.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-policy)
-     * @param policy The resource policy of your function. 
-     */
-    public fun policy(policy: Any)
 
     /**
      * Specifies a provisioned concurrency configuration for a function's version.
@@ -359,16 +337,6 @@ public open class CfnVersion(
      */
     override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
-    }
-
-    /**
-     * The resource policy of your function.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-policy)
-     * @param policy The resource policy of your function. 
-     */
-    override fun policy(policy: Any) {
-      cdkBuilder.policy(policy)
     }
 
     /**
@@ -559,7 +527,10 @@ public open class CfnVersion(
   }
 
   /**
-   * Runtime Management Config of a function.
+   * Sets the runtime management configuration for a function's version.
+   *
+   * For more information, see [Runtime
+   * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html) .
    *
    * Example:
    *
@@ -578,16 +549,36 @@ public open class CfnVersion(
    */
   public interface RuntimePolicyProperty {
     /**
-     * The ARN of the runtime the function is configured to use.
+     * The ARN of the runtime version you want the function to use.
      *
-     * If the runtime update mode is manual, the ARN is returned, otherwise null is returned.
+     *
+     * This is only required if you're using the *Manual* runtime update mode.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-version-runtimepolicy.html#cfn-lambda-version-runtimepolicy-runtimeversionarn)
      */
     public fun runtimeVersionArn(): String? = unwrap(this).getRuntimeVersionArn()
 
     /**
-     * The runtime update mode.
+     * Specify the runtime update mode.
+     *
+     * * *Auto (default)* - Automatically update to the most recent and secure runtime version using
+     * a [Two-phase runtime version
+     * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase)
+     * . This is the best choice for most customers to ensure they always benefit from runtime updates.
+     * * *FunctionUpdate* - Lambda updates the runtime of you function to the most recent and secure
+     * runtime version when you update your function. This approach synchronizes runtime updates with
+     * function deployments, giving you control over when runtime updates are applied and allowing you
+     * to detect and mitigate rare runtime update incompatibilities early. When using this setting, you
+     * need to regularly update your functions to keep their runtime up-to-date.
+     * * *Manual* - You specify a runtime version in your function configuration. The function will
+     * use this runtime version indefinitely. In the rare case where a new runtime version is
+     * incompatible with an existing function, this allows you to roll back your function to an earlier
+     * runtime version. For more information, see [Roll back a runtime
+     * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback)
+     * .
+     *
+     * *Valid Values* : `Auto` | `FunctionUpdate` | `Manual`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-version-runtimepolicy.html#cfn-lambda-version-runtimepolicy-updateruntimeon)
      */
@@ -599,13 +590,33 @@ public open class CfnVersion(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param runtimeVersionArn The ARN of the runtime the function is configured to use.
-       * If the runtime update mode is manual, the ARN is returned, otherwise null is returned.
+       * @param runtimeVersionArn The ARN of the runtime version you want the function to use.
+       *
+       * This is only required if you're using the *Manual* runtime update mode.
        */
       public fun runtimeVersionArn(runtimeVersionArn: String)
 
       /**
-       * @param updateRuntimeOn The runtime update mode. 
+       * @param updateRuntimeOn Specify the runtime update mode. 
+       * * *Auto (default)* - Automatically update to the most recent and secure runtime version
+       * using a [Two-phase runtime version
+       * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase)
+       * . This is the best choice for most customers to ensure they always benefit from runtime
+       * updates.
+       * * *FunctionUpdate* - Lambda updates the runtime of you function to the most recent and
+       * secure runtime version when you update your function. This approach synchronizes runtime
+       * updates with function deployments, giving you control over when runtime updates are applied
+       * and allowing you to detect and mitigate rare runtime update incompatibilities early. When
+       * using this setting, you need to regularly update your functions to keep their runtime
+       * up-to-date.
+       * * *Manual* - You specify a runtime version in your function configuration. The function
+       * will use this runtime version indefinitely. In the rare case where a new runtime version is
+       * incompatible with an existing function, this allows you to roll back your function to an
+       * earlier runtime version. For more information, see [Roll back a runtime
+       * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback)
+       * .
+       *
+       * *Valid Values* : `Auto` | `FunctionUpdate` | `Manual`
        */
       public fun updateRuntimeOn(updateRuntimeOn: String)
     }
@@ -616,15 +627,35 @@ public open class CfnVersion(
           software.amazon.awscdk.services.lambda.CfnVersion.RuntimePolicyProperty.builder()
 
       /**
-       * @param runtimeVersionArn The ARN of the runtime the function is configured to use.
-       * If the runtime update mode is manual, the ARN is returned, otherwise null is returned.
+       * @param runtimeVersionArn The ARN of the runtime version you want the function to use.
+       *
+       * This is only required if you're using the *Manual* runtime update mode.
        */
       override fun runtimeVersionArn(runtimeVersionArn: String) {
         cdkBuilder.runtimeVersionArn(runtimeVersionArn)
       }
 
       /**
-       * @param updateRuntimeOn The runtime update mode. 
+       * @param updateRuntimeOn Specify the runtime update mode. 
+       * * *Auto (default)* - Automatically update to the most recent and secure runtime version
+       * using a [Two-phase runtime version
+       * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase)
+       * . This is the best choice for most customers to ensure they always benefit from runtime
+       * updates.
+       * * *FunctionUpdate* - Lambda updates the runtime of you function to the most recent and
+       * secure runtime version when you update your function. This approach synchronizes runtime
+       * updates with function deployments, giving you control over when runtime updates are applied
+       * and allowing you to detect and mitigate rare runtime update incompatibilities early. When
+       * using this setting, you need to regularly update your functions to keep their runtime
+       * up-to-date.
+       * * *Manual* - You specify a runtime version in your function configuration. The function
+       * will use this runtime version indefinitely. In the rare case where a new runtime version is
+       * incompatible with an existing function, this allows you to roll back your function to an
+       * earlier runtime version. For more information, see [Roll back a runtime
+       * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback)
+       * .
+       *
+       * *Valid Values* : `Auto` | `FunctionUpdate` | `Manual`
        */
       override fun updateRuntimeOn(updateRuntimeOn: String) {
         cdkBuilder.updateRuntimeOn(updateRuntimeOn)
@@ -639,16 +670,38 @@ public open class CfnVersion(
     ) : CdkObject(cdkObject),
         RuntimePolicyProperty {
       /**
-       * The ARN of the runtime the function is configured to use.
+       * The ARN of the runtime version you want the function to use.
        *
-       * If the runtime update mode is manual, the ARN is returned, otherwise null is returned.
+       *
+       * This is only required if you're using the *Manual* runtime update mode.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-version-runtimepolicy.html#cfn-lambda-version-runtimepolicy-runtimeversionarn)
        */
       override fun runtimeVersionArn(): String? = unwrap(this).getRuntimeVersionArn()
 
       /**
-       * The runtime update mode.
+       * Specify the runtime update mode.
+       *
+       * * *Auto (default)* - Automatically update to the most recent and secure runtime version
+       * using a [Two-phase runtime version
+       * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase)
+       * . This is the best choice for most customers to ensure they always benefit from runtime
+       * updates.
+       * * *FunctionUpdate* - Lambda updates the runtime of you function to the most recent and
+       * secure runtime version when you update your function. This approach synchronizes runtime
+       * updates with function deployments, giving you control over when runtime updates are applied
+       * and allowing you to detect and mitigate rare runtime update incompatibilities early. When
+       * using this setting, you need to regularly update your functions to keep their runtime
+       * up-to-date.
+       * * *Manual* - You specify a runtime version in your function configuration. The function
+       * will use this runtime version indefinitely. In the rare case where a new runtime version is
+       * incompatible with an existing function, this allows you to roll back your function to an
+       * earlier runtime version. For more information, see [Roll back a runtime
+       * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback)
+       * .
+       *
+       * *Valid Values* : `Auto` | `FunctionUpdate` | `Manual`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-version-runtimepolicy.html#cfn-lambda-version-runtimepolicy-updateruntimeon)
        */

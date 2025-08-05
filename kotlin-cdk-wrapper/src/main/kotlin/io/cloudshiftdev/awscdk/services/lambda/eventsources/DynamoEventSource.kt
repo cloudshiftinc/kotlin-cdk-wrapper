@@ -209,11 +209,12 @@ public open class DynamoEventSource(
     public fun metricsConfig(metricsConfig: MetricsConfig.Builder.() -> Unit)
 
     /**
-     * An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+     * An Amazon S3, Amazon SQS queue or Amazon SNS topic destination for discarded records.
      *
      * Default: - discarded records are ignored
      *
-     * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records. 
+     * @param onFailure An Amazon S3, Amazon SQS queue or Amazon SNS topic destination for discarded
+     * records. 
      */
     public fun onFailure(onFailure: IEventSourceDlq)
 
@@ -272,16 +273,15 @@ public open class DynamoEventSource(
     public fun reportBatchItemFailures(reportBatchItemFailures: Boolean)
 
     /**
-     * Maximum number of retry attempts Valid Range: * Minimum value of 0 * Maximum value of 10000.
+     * Maximum number of retry attempts.
      *
-     * The default value is -1, which sets the maximum number of retries to infinite.
-     * When MaximumRetryAttempts is infinite, Lambda retries failed records until
-     * the record expires in the event source.
+     * Set to -1 for infinite retries (until the record expires in the event source).
      *
-     * Default: -1
+     * Valid Range: -1 (infinite) or 0 to 10000
      *
-     * @param retryAttempts Maximum number of retry attempts Valid Range: * Minimum value of 0 *
-     * Maximum value of 10000. 
+     * Default: -1 (infinite retries)
+     *
+     * @param retryAttempts Maximum number of retry attempts. 
      */
     public fun retryAttempts(retryAttempts: Number)
 
@@ -456,11 +456,12 @@ public open class DynamoEventSource(
         metricsConfig(MetricsConfig(metricsConfig))
 
     /**
-     * An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+     * An Amazon S3, Amazon SQS queue or Amazon SNS topic destination for discarded records.
      *
      * Default: - discarded records are ignored
      *
-     * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records. 
+     * @param onFailure An Amazon S3, Amazon SQS queue or Amazon SNS topic destination for discarded
+     * records. 
      */
     override fun onFailure(onFailure: IEventSourceDlq) {
       cdkBuilder.onFailure(onFailure.let(IEventSourceDlq.Companion::unwrap))
@@ -528,16 +529,15 @@ public open class DynamoEventSource(
     }
 
     /**
-     * Maximum number of retry attempts Valid Range: * Minimum value of 0 * Maximum value of 10000.
+     * Maximum number of retry attempts.
      *
-     * The default value is -1, which sets the maximum number of retries to infinite.
-     * When MaximumRetryAttempts is infinite, Lambda retries failed records until
-     * the record expires in the event source.
+     * Set to -1 for infinite retries (until the record expires in the event source).
      *
-     * Default: -1
+     * Valid Range: -1 (infinite) or 0 to 10000
      *
-     * @param retryAttempts Maximum number of retry attempts Valid Range: * Minimum value of 0 *
-     * Maximum value of 10000. 
+     * Default: -1 (infinite retries)
+     *
+     * @param retryAttempts Maximum number of retry attempts. 
      */
     override fun retryAttempts(retryAttempts: Number) {
       cdkBuilder.retryAttempts(retryAttempts)

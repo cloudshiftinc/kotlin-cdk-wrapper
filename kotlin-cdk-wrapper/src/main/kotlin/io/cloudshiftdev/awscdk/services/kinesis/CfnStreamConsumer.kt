@@ -3,11 +3,15 @@
 package io.cloudshiftdev.awscdk.services.kinesis
 
 import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -21,7 +25,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * every shard you subscribe to. This rate is unaffected by the total number of consumers that read
  * from the same stream.
  *
- * You can register up to five consumers per stream. However, you can request a limit increase using
+ * You can register up to 20 consumers per stream. However, you can request a limit increase using
  * the [Kinesis Data Streams limits form](https://docs.aws.amazon.com/support/v1?#/) . A given consumer
  * can only be registered with one stream at a time.
  *
@@ -38,6 +42,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * "MyCfnStreamConsumer")
  * .consumerName("consumerName")
  * .streamArn("streamArn")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -46,7 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStreamConsumer(
   cdkObject: software.amazon.awscdk.services.kinesis.CfnStreamConsumer,
 ) : CfnResource(cdkObject),
-    IInspectable {
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -93,14 +103,15 @@ public open class CfnStreamConsumer(
   public open fun attrConsumerStatus(): String = unwrap(this).getAttrConsumerStatus()
 
   /**
-   *
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
-
-  /**
    * The ARN of the data stream with which the consumer is registered.
    */
   public open fun attrStreamArn(): String = unwrap(this).getAttrStreamArn()
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * The name of the consumer is something you choose when you register the consumer.
@@ -136,6 +147,23 @@ public open class CfnStreamConsumer(
   }
 
   /**
+   * An array of tags to be added to a specified Kinesis resource.
+   */
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * An array of tags to be added to a specified Kinesis resource.
+   */
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
+  }
+
+  /**
+   * An array of tags to be added to a specified Kinesis resource.
+   */
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.kinesis.CfnStreamConsumer].
    */
   @CdkDslMarker
@@ -156,6 +184,28 @@ public open class CfnStreamConsumer(
      * @param streamArn The ARN of the stream with which you registered the consumer. 
      */
     public fun streamArn(streamArn: String)
+
+    /**
+     * An array of tags to be added to a specified Kinesis resource.
+     *
+     * A tag consists of a required key and an optional value. You can specify up to 50 tag
+     * key-value pairs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html#cfn-kinesis-streamconsumer-tags)
+     * @param tags An array of tags to be added to a specified Kinesis resource. 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * An array of tags to be added to a specified Kinesis resource.
+     *
+     * A tag consists of a required key and an optional value. You can specify up to 50 tag
+     * key-value pairs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html#cfn-kinesis-streamconsumer-tags)
+     * @param tags An array of tags to be added to a specified Kinesis resource. 
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -185,6 +235,30 @@ public open class CfnStreamConsumer(
     override fun streamArn(streamArn: String) {
       cdkBuilder.streamArn(streamArn)
     }
+
+    /**
+     * An array of tags to be added to a specified Kinesis resource.
+     *
+     * A tag consists of a required key and an optional value. You can specify up to 50 tag
+     * key-value pairs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html#cfn-kinesis-streamconsumer-tags)
+     * @param tags An array of tags to be added to a specified Kinesis resource. 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * An array of tags to be added to a specified Kinesis resource.
+     *
+     * A tag consists of a required key and an optional value. You can specify up to 50 tag
+     * key-value pairs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html#cfn-kinesis-streamconsumer-tags)
+     * @param tags An array of tags to be added to a specified Kinesis resource. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.kinesis.CfnStreamConsumer =
         cdkBuilder.build()

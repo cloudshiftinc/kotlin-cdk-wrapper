@@ -89,12 +89,14 @@ public open class CfnResolverConfig(
   }
 
   /**
-   * The ID of the Amazon Virtual Private Cloud VPC that you're configuring Resolver for.
+   * The ID of the Amazon Virtual Private Cloud VPC or a Route 53 Profile that you're configuring
+   * Resolver for.
    */
   public open fun resourceId(): String = unwrap(this).getResourceId()
 
   /**
-   * The ID of the Amazon Virtual Private Cloud VPC that you're configuring Resolver for.
+   * The ID of the Amazon Virtual Private Cloud VPC or a Route 53 Profile that you're configuring
+   * Resolver for.
    */
   public open fun resourceId(`value`: String) {
     unwrap(this).setResourceId(`value`)
@@ -117,11 +119,12 @@ public open class CfnResolverConfig(
     public fun autodefinedReverseFlag(autodefinedReverseFlag: String)
 
     /**
-     * The ID of the Amazon Virtual Private Cloud VPC that you're configuring Resolver for.
+     * The ID of the Amazon Virtual Private Cloud VPC or a Route 53 Profile that you're configuring
+     * Resolver for.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverconfig.html#cfn-route53resolver-resolverconfig-resourceid)
-     * @param resourceId The ID of the Amazon Virtual Private Cloud VPC that you're configuring
-     * Resolver for. 
+     * @param resourceId The ID of the Amazon Virtual Private Cloud VPC or a Route 53 Profile that
+     * you're configuring Resolver for. 
      */
     public fun resourceId(resourceId: String)
   }
@@ -148,11 +151,12 @@ public open class CfnResolverConfig(
     }
 
     /**
-     * The ID of the Amazon Virtual Private Cloud VPC that you're configuring Resolver for.
+     * The ID of the Amazon Virtual Private Cloud VPC or a Route 53 Profile that you're configuring
+     * Resolver for.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverconfig.html#cfn-route53resolver-resolverconfig-resourceid)
-     * @param resourceId The ID of the Amazon Virtual Private Cloud VPC that you're configuring
-     * Resolver for. 
+     * @param resourceId The ID of the Amazon Virtual Private Cloud VPC or a Route 53 Profile that
+     * you're configuring Resolver for. 
      */
     override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)

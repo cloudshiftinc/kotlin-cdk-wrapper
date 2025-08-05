@@ -51,7 +51,7 @@ public open class FlowLog(
   public open fun bucket(): IBucket? = unwrap(this).getBucket()?.let(IBucket::wrap)
 
   /**
-   * The ARN of the Kinesis Data Firehose delivery stream to publish flow logs to.
+   * The ARN of the Amazon Data Firehose delivery stream to publish flow logs to.
    */
   public open fun deliveryStreamArn(): String? = unwrap(this).getDeliveryStreamArn()
 
@@ -290,6 +290,9 @@ public open class FlowLog(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ec2.FlowLog.PROPERTY_INJECTION_ID
+
     public fun fromFlowLogId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

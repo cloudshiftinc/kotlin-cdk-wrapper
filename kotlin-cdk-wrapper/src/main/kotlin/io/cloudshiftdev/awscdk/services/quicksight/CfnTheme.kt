@@ -1216,8 +1216,8 @@ public open class CfnTheme(
      * (This is common.)
      * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
      * dashboard, template, or theme. (This is common.)
-     * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN. Use
-     * this option only to share resources (templates) across AWS accounts . (This is less common.)
+     * * The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN. Use this
+     * option only to share resources (templates) across AWS accounts . (This is less common.)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-resourcepermission.html#cfn-quicksight-theme-resourcepermission-principal)
      */
@@ -1250,9 +1250,8 @@ public open class CfnTheme(
        * (This is common.)
        * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
        * dashboard, template, or theme. (This is common.)
-       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
-       * Use this option only to share resources (templates) across AWS accounts . (This is less
-       * common.)
+       * * The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN. Use this
+       * option only to share resources (templates) across AWS accounts . (This is less common.)
        */
       public fun principal(principal: String)
 
@@ -1286,9 +1285,8 @@ public open class CfnTheme(
        * (This is common.)
        * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
        * dashboard, template, or theme. (This is common.)
-       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
-       * Use this option only to share resources (templates) across AWS accounts . (This is less
-       * common.)
+       * * The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN. Use this
+       * option only to share resources (templates) across AWS accounts . (This is less common.)
        */
       override fun principal(principal: String) {
         cdkBuilder.principal(principal)
@@ -1324,9 +1322,8 @@ public open class CfnTheme(
        * (This is common.)
        * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
        * dashboard, template, or theme. (This is common.)
-       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
-       * Use this option only to share resources (templates) across AWS accounts . (This is less
-       * common.)
+       * * The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN. Use this
+       * option only to share resources (templates) across AWS accounts . (This is less common.)
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-resourcepermission.html#cfn-quicksight-theme-resourcepermission-principal)
        */

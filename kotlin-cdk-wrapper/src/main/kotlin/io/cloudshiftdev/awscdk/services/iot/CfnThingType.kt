@@ -92,11 +92,15 @@ public open class CfnThingType(
 
   /**
    * Deprecates a thing type.
+   *
+   * You can not associate new things with deprecated thing type.
    */
   public open fun deprecateThingType(): Any? = unwrap(this).getDeprecateThingType()
 
   /**
    * Deprecates a thing type.
+   *
+   * You can not associate new things with deprecated thing type.
    */
   public open fun deprecateThingType(`value`: Boolean) {
     unwrap(this).setDeprecateThingType(`value`)
@@ -104,6 +108,8 @@ public open class CfnThingType(
 
   /**
    * Deprecates a thing type.
+   *
+   * You can not associate new things with deprecated thing type.
    */
   public open fun deprecateThingType(`value`: IResolvable) {
     unwrap(this).setDeprecateThingType(`value`.let(IResolvable.Companion::unwrap))
@@ -186,32 +192,28 @@ public open class CfnThingType(
   @CdkDslMarker
   public interface Builder {
     /**
-     * Deprecates a thing type.
-     *
-     * You can not associate new things with deprecated thing type. You cannot update
-     * `ThingTypeProperties` if the thing type is deprecated.
+     * Deprecates a thing type. You can not associate new things with deprecated thing type.
      *
      * Requires permission to access the
      * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
      * action.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingtype.html#cfn-iot-thingtype-deprecatethingtype)
-     * @param deprecateThingType Deprecates a thing type. 
+     * @param deprecateThingType Deprecates a thing type. You can not associate new things with
+     * deprecated thing type. 
      */
     public fun deprecateThingType(deprecateThingType: Boolean)
 
     /**
-     * Deprecates a thing type.
-     *
-     * You can not associate new things with deprecated thing type. You cannot update
-     * `ThingTypeProperties` if the thing type is deprecated.
+     * Deprecates a thing type. You can not associate new things with deprecated thing type.
      *
      * Requires permission to access the
      * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
      * action.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingtype.html#cfn-iot-thingtype-deprecatethingtype)
-     * @param deprecateThingType Deprecates a thing type. 
+     * @param deprecateThingType Deprecates a thing type. You can not associate new things with
+     * deprecated thing type. 
      */
     public fun deprecateThingType(deprecateThingType: IResolvable)
 
@@ -287,34 +289,30 @@ public open class CfnThingType(
         software.amazon.awscdk.services.iot.CfnThingType.Builder.create(scope, id)
 
     /**
-     * Deprecates a thing type.
-     *
-     * You can not associate new things with deprecated thing type. You cannot update
-     * `ThingTypeProperties` if the thing type is deprecated.
+     * Deprecates a thing type. You can not associate new things with deprecated thing type.
      *
      * Requires permission to access the
      * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
      * action.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingtype.html#cfn-iot-thingtype-deprecatethingtype)
-     * @param deprecateThingType Deprecates a thing type. 
+     * @param deprecateThingType Deprecates a thing type. You can not associate new things with
+     * deprecated thing type. 
      */
     override fun deprecateThingType(deprecateThingType: Boolean) {
       cdkBuilder.deprecateThingType(deprecateThingType)
     }
 
     /**
-     * Deprecates a thing type.
-     *
-     * You can not associate new things with deprecated thing type. You cannot update
-     * `ThingTypeProperties` if the thing type is deprecated.
+     * Deprecates a thing type. You can not associate new things with deprecated thing type.
      *
      * Requires permission to access the
      * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
      * action.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingtype.html#cfn-iot-thingtype-deprecatethingtype)
-     * @param deprecateThingType Deprecates a thing type. 
+     * @param deprecateThingType Deprecates a thing type. You can not associate new things with
+     * deprecated thing type. 
      */
     override fun deprecateThingType(deprecateThingType: IResolvable) {
       cdkBuilder.deprecateThingType(deprecateThingType.let(IResolvable.Companion::unwrap))

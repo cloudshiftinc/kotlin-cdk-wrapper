@@ -25,7 +25,6 @@ import kotlin.collections.List
  * .authorizedPrincipals(List.of("authorizedPrincipals"))
  * .domainIdentifier("domainIdentifier")
  * .environmentIdentifier("environmentIdentifier")
- * .manageAccessRole("manageAccessRole")
  * .name("name")
  * .subscriptionTargetConfig(List.of(SubscriptionTargetFormProperty.builder()
  * .content("content")
@@ -33,6 +32,7 @@ import kotlin.collections.List
  * .build()))
  * .type("type")
  * // the properties below are optional
+ * .manageAccessRole("manageAccessRole")
  * .provider("provider")
  * .build();
  * ```
@@ -73,7 +73,7 @@ public interface CfnSubscriptionTargetProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-subscriptiontarget.html#cfn-datazone-subscriptiontarget-manageaccessrole)
    */
-  public fun manageAccessRole(): String
+  public fun manageAccessRole(): String? = unwrap(this).getManageAccessRole()
 
   /**
    * The name of the subscription target.
@@ -142,7 +142,7 @@ public interface CfnSubscriptionTargetProps {
 
     /**
      * @param manageAccessRole The manage access role that is used to create the subscription
-     * target. 
+     * target.
      */
     public fun manageAccessRole(manageAccessRole: String)
 
@@ -226,7 +226,7 @@ public interface CfnSubscriptionTargetProps {
 
     /**
      * @param manageAccessRole The manage access role that is used to create the subscription
-     * target. 
+     * target.
      */
     override fun manageAccessRole(manageAccessRole: String) {
       cdkBuilder.manageAccessRole(manageAccessRole)
@@ -314,7 +314,7 @@ public interface CfnSubscriptionTargetProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-subscriptiontarget.html#cfn-datazone-subscriptiontarget-manageaccessrole)
      */
-    override fun manageAccessRole(): String = unwrap(this).getManageAccessRole()
+    override fun manageAccessRole(): String? = unwrap(this).getManageAccessRole()
 
     /**
      * The name of the subscription target.

@@ -250,7 +250,7 @@ public open class CfnTable(
      * ```
      * { "Type" : AWS::Timestream::Table", "Properties":{ "DatabaseName":"TestDatabase",
      * "TableName":"TestTable", "MagneticStoreWriteProperties":{ "EnableMagneticStoreWrites":true,
-     * "MagneticStoreRejectedDataLocation":{ "S3Configuration":{ "BucketName":"testbucket",
+     * "MagneticStoreRejectedDataLocation":{ "S3Configuration":{ "BucketName":" amzn-s3-demo-bucket ",
      * "EncryptionOption":"SSE_KMS", "KmsKeyId":"1234abcd-12ab-34cd-56ef-1234567890ab",
      * "ObjectKeyPrefix":"prefix" } } } }
      * }
@@ -263,8 +263,8 @@ public open class CfnTable(
      * DependsOn: TestDatabase
      * Properties: TableName: "TestTable" DatabaseName: "TestDatabase" MagneticStoreWriteProperties:
      * EnableMagneticStoreWrites: true MagneticStoreRejectedDataLocation: S3Configuration: BucketName:
-     * "testbucket" EncryptionOption: "SSE_KMS" KmsKeyId: "1234abcd-12ab-34cd-56ef-1234567890ab"
-     * ObjectKeyPrefix: "prefix"
+     * " amzn-s3-demo-bucket " EncryptionOption: "SSE_KMS" KmsKeyId:
+     * "1234abcd-12ab-34cd-56ef-1234567890ab" ObjectKeyPrefix: "prefix"
      * ```
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-table.html#cfn-timestream-table-magneticstorewriteproperties)
@@ -407,7 +407,7 @@ public open class CfnTable(
      * ```
      * { "Type" : AWS::Timestream::Table", "Properties":{ "DatabaseName":"TestDatabase",
      * "TableName":"TestTable", "MagneticStoreWriteProperties":{ "EnableMagneticStoreWrites":true,
-     * "MagneticStoreRejectedDataLocation":{ "S3Configuration":{ "BucketName":"testbucket",
+     * "MagneticStoreRejectedDataLocation":{ "S3Configuration":{ "BucketName":" amzn-s3-demo-bucket ",
      * "EncryptionOption":"SSE_KMS", "KmsKeyId":"1234abcd-12ab-34cd-56ef-1234567890ab",
      * "ObjectKeyPrefix":"prefix" } } } }
      * }
@@ -420,8 +420,8 @@ public open class CfnTable(
      * DependsOn: TestDatabase
      * Properties: TableName: "TestTable" DatabaseName: "TestDatabase" MagneticStoreWriteProperties:
      * EnableMagneticStoreWrites: true MagneticStoreRejectedDataLocation: S3Configuration: BucketName:
-     * "testbucket" EncryptionOption: "SSE_KMS" KmsKeyId: "1234abcd-12ab-34cd-56ef-1234567890ab"
-     * ObjectKeyPrefix: "prefix"
+     * " amzn-s3-demo-bucket " EncryptionOption: "SSE_KMS" KmsKeyId:
+     * "1234abcd-12ab-34cd-56ef-1234567890ab" ObjectKeyPrefix: "prefix"
      * ```
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-table.html#cfn-timestream-table-magneticstorewriteproperties)

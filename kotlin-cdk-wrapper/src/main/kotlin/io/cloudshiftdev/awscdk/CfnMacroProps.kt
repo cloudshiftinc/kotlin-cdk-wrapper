@@ -38,24 +38,26 @@ public interface CfnMacroProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * The Amazon Resource Name (ARN) of the underlying AWS Lambda function that you want AWS
-   * CloudFormation to invoke when the macro is run.
+   * The Amazon Resource Name (ARN) of the underlying Lambda function that you want CloudFormation
+   * to invoke when the macro is run.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html#cfn-cloudformation-macro-functionname)
    */
   public fun functionName(): String
 
   /**
-   * The CloudWatch Logs group to which AWS CloudFormation sends error logging information when
-   * invoking the macro's underlying AWS Lambda function.
+   * The CloudWatch Logs group to which CloudFormation sends error logging information when invoking
+   * the macro's underlying Lambda function.
+   *
+   * This will be an existing CloudWatch Logs LogGroup. Neither CloudFormation or Lambda will create
+   * the group.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html#cfn-cloudformation-macro-loggroupname)
    */
   public fun logGroupName(): String? = unwrap(this).getLogGroupName()
 
   /**
-   * The ARN of the role AWS CloudFormation should assume when sending log entries to CloudWatch
-   * Logs .
+   * The ARN of the role CloudFormation should assume when sending log entries to CloudWatch Logs .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html#cfn-cloudformation-macro-logrolearn)
    */
@@ -81,20 +83,22 @@ public interface CfnMacroProps {
     public fun description(description: String)
 
     /**
-     * @param functionName The Amazon Resource Name (ARN) of the underlying AWS Lambda function that
-     * you want AWS CloudFormation to invoke when the macro is run. 
+     * @param functionName The Amazon Resource Name (ARN) of the underlying Lambda function that you
+     * want CloudFormation to invoke when the macro is run. 
      */
     public fun functionName(functionName: String)
 
     /**
-     * @param logGroupName The CloudWatch Logs group to which AWS CloudFormation sends error logging
-     * information when invoking the macro's underlying AWS Lambda function.
+     * @param logGroupName The CloudWatch Logs group to which CloudFormation sends error logging
+     * information when invoking the macro's underlying Lambda function.
+     * This will be an existing CloudWatch Logs LogGroup. Neither CloudFormation or Lambda will
+     * create the group.
      */
     public fun logGroupName(logGroupName: String)
 
     /**
-     * @param logRoleArn The ARN of the role AWS CloudFormation should assume when sending log
-     * entries to CloudWatch Logs .
+     * @param logRoleArn The ARN of the role CloudFormation should assume when sending log entries
+     * to CloudWatch Logs .
      */
     public fun logRoleArn(logRoleArn: String)
 
@@ -117,24 +121,26 @@ public interface CfnMacroProps {
     }
 
     /**
-     * @param functionName The Amazon Resource Name (ARN) of the underlying AWS Lambda function that
-     * you want AWS CloudFormation to invoke when the macro is run. 
+     * @param functionName The Amazon Resource Name (ARN) of the underlying Lambda function that you
+     * want CloudFormation to invoke when the macro is run. 
      */
     override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
     }
 
     /**
-     * @param logGroupName The CloudWatch Logs group to which AWS CloudFormation sends error logging
-     * information when invoking the macro's underlying AWS Lambda function.
+     * @param logGroupName The CloudWatch Logs group to which CloudFormation sends error logging
+     * information when invoking the macro's underlying Lambda function.
+     * This will be an existing CloudWatch Logs LogGroup. Neither CloudFormation or Lambda will
+     * create the group.
      */
     override fun logGroupName(logGroupName: String) {
       cdkBuilder.logGroupName(logGroupName)
     }
 
     /**
-     * @param logRoleArn The ARN of the role AWS CloudFormation should assume when sending log
-     * entries to CloudWatch Logs .
+     * @param logRoleArn The ARN of the role CloudFormation should assume when sending log entries
+     * to CloudWatch Logs .
      */
     override fun logRoleArn(logRoleArn: String) {
       cdkBuilder.logRoleArn(logRoleArn)
@@ -163,24 +169,27 @@ public interface CfnMacroProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * The Amazon Resource Name (ARN) of the underlying AWS Lambda function that you want AWS
-     * CloudFormation to invoke when the macro is run.
+     * The Amazon Resource Name (ARN) of the underlying Lambda function that you want CloudFormation
+     * to invoke when the macro is run.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html#cfn-cloudformation-macro-functionname)
      */
     override fun functionName(): String = unwrap(this).getFunctionName()
 
     /**
-     * The CloudWatch Logs group to which AWS CloudFormation sends error logging information when
-     * invoking the macro's underlying AWS Lambda function.
+     * The CloudWatch Logs group to which CloudFormation sends error logging information when
+     * invoking the macro's underlying Lambda function.
+     *
+     * This will be an existing CloudWatch Logs LogGroup. Neither CloudFormation or Lambda will
+     * create the group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html#cfn-cloudformation-macro-loggroupname)
      */
     override fun logGroupName(): String? = unwrap(this).getLogGroupName()
 
     /**
-     * The ARN of the role AWS CloudFormation should assume when sending log entries to CloudWatch
-     * Logs .
+     * The ARN of the role CloudFormation should assume when sending log entries to CloudWatch Logs
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html#cfn-cloudformation-macro-logrolearn)
      */

@@ -249,6 +249,9 @@ public open class Listener(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.globalaccelerator.Listener.PROPERTY_INJECTION_ID
+
     public fun fromListenerArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -130,51 +130,51 @@ public open class CfnFHIRDatastore(
   public open fun attrDatastoreStatus(): String = unwrap(this).getAttrDatastoreStatus()
 
   /**
-   * The user generated name for the data store.
+   * The data store name (user-generated).
    */
   public open fun datastoreName(): String? = unwrap(this).getDatastoreName()
 
   /**
-   * The user generated name for the data store.
+   * The data store name (user-generated).
    */
   public open fun datastoreName(`value`: String) {
     unwrap(this).setDatastoreName(`value`)
   }
 
   /**
-   * The FHIR version of the data store.
+   * The FHIR release version supported by the data store.
    */
   public open fun datastoreTypeVersion(): String = unwrap(this).getDatastoreTypeVersion()
 
   /**
-   * The FHIR version of the data store.
+   * The FHIR release version supported by the data store.
    */
   public open fun datastoreTypeVersion(`value`: String) {
     unwrap(this).setDatastoreTypeVersion(`value`)
   }
 
   /**
-   * The identity provider configuration that you gave when the data store was created.
+   * The identity provider configuration selected when the data store was created.
    */
   public open fun identityProviderConfiguration(): Any? =
       unwrap(this).getIdentityProviderConfiguration()
 
   /**
-   * The identity provider configuration that you gave when the data store was created.
+   * The identity provider configuration selected when the data store was created.
    */
   public open fun identityProviderConfiguration(`value`: IResolvable) {
     unwrap(this).setIdentityProviderConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The identity provider configuration that you gave when the data store was created.
+   * The identity provider configuration selected when the data store was created.
    */
   public open fun identityProviderConfiguration(`value`: IdentityProviderConfigurationProperty) {
     unwrap(this).setIdentityProviderConfiguration(`value`.let(IdentityProviderConfigurationProperty.Companion::unwrap))
   }
 
   /**
-   * The identity provider configuration that you gave when the data store was created.
+   * The identity provider configuration selected when the data store was created.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("c59b927899bad6099026fcb7d2328d2122456f4ea7d2e06c6ea513861c813813")
@@ -192,26 +192,26 @@ public open class CfnFHIRDatastore(
   }
 
   /**
-   * The preloaded data configuration for the data store.
+   * The preloaded Synthea data configuration for the data store.
    */
   public open fun preloadDataConfig(): Any? = unwrap(this).getPreloadDataConfig()
 
   /**
-   * The preloaded data configuration for the data store.
+   * The preloaded Synthea data configuration for the data store.
    */
   public open fun preloadDataConfig(`value`: IResolvable) {
     unwrap(this).setPreloadDataConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The preloaded data configuration for the data store.
+   * The preloaded Synthea data configuration for the data store.
    */
   public open fun preloadDataConfig(`value`: PreloadDataConfigProperty) {
     unwrap(this).setPreloadDataConfig(`value`.let(PreloadDataConfigProperty.Companion::unwrap))
   }
 
   /**
-   * The preloaded data configuration for the data store.
+   * The preloaded Synthea data configuration for the data store.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("b14710e249703a79b742ddb36815ed3a08c54cc20543e86a9f152648d553b6ac")
@@ -219,13 +219,13 @@ public open class CfnFHIRDatastore(
       preloadDataConfig(PreloadDataConfigProperty(`value`))
 
   /**
-   * The server-side encryption key configuration for a customer provided encryption key specified
+   * The server-side encryption key configuration for a customer-provided encryption key specified
    * for creating a data store.
    */
   public open fun sseConfiguration(): Any? = unwrap(this).getSseConfiguration()
 
   /**
-   * The server-side encryption key configuration for a customer provided encryption key specified
+   * The server-side encryption key configuration for a customer-provided encryption key specified
    * for creating a data store.
    */
   public open fun sseConfiguration(`value`: IResolvable) {
@@ -233,7 +233,7 @@ public open class CfnFHIRDatastore(
   }
 
   /**
-   * The server-side encryption key configuration for a customer provided encryption key specified
+   * The server-side encryption key configuration for a customer-provided encryption key specified
    * for creating a data store.
    */
   public open fun sseConfiguration(`value`: SseConfigurationProperty) {
@@ -241,7 +241,7 @@ public open class CfnFHIRDatastore(
   }
 
   /**
-   * The server-side encryption key configuration for a customer provided encryption key specified
+   * The server-side encryption key configuration for a customer-provided encryption key specified
    * for creating a data store.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -278,48 +278,48 @@ public open class CfnFHIRDatastore(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The user generated name for the data store.
+     * The data store name (user-generated).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-datastorename)
-     * @param datastoreName The user generated name for the data store. 
+     * @param datastoreName The data store name (user-generated). 
      */
     public fun datastoreName(datastoreName: String)
 
     /**
-     * The FHIR version of the data store.
+     * The FHIR release version supported by the data store.
      *
-     * The only supported version is R4.
+     * Current support is for version `R4` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-datastoretypeversion)
-     * @param datastoreTypeVersion The FHIR version of the data store. 
+     * @param datastoreTypeVersion The FHIR release version supported by the data store. 
      */
     public fun datastoreTypeVersion(datastoreTypeVersion: String)
 
     /**
-     * The identity provider configuration that you gave when the data store was created.
+     * The identity provider configuration selected when the data store was created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration)
-     * @param identityProviderConfiguration The identity provider configuration that you gave when
-     * the data store was created. 
+     * @param identityProviderConfiguration The identity provider configuration selected when the
+     * data store was created. 
      */
     public fun identityProviderConfiguration(identityProviderConfiguration: IResolvable)
 
     /**
-     * The identity provider configuration that you gave when the data store was created.
+     * The identity provider configuration selected when the data store was created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration)
-     * @param identityProviderConfiguration The identity provider configuration that you gave when
-     * the data store was created. 
+     * @param identityProviderConfiguration The identity provider configuration selected when the
+     * data store was created. 
      */
     public
         fun identityProviderConfiguration(identityProviderConfiguration: IdentityProviderConfigurationProperty)
 
     /**
-     * The identity provider configuration that you gave when the data store was created.
+     * The identity provider configuration selected when the data store was created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration)
-     * @param identityProviderConfiguration The identity provider configuration that you gave when
-     * the data store was created. 
+     * @param identityProviderConfiguration The identity provider configuration selected when the
+     * data store was created. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dffc6d7ef11842eb6785afe9896bf02391868537b05102cc60c9d6e7bf910c86")
@@ -327,63 +327,57 @@ public open class CfnFHIRDatastore(
         fun identityProviderConfiguration(identityProviderConfiguration: IdentityProviderConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * The preloaded data configuration for the data store.
-     *
-     * Only data preloaded from Synthea is supported.
+     * The preloaded Synthea data configuration for the data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-preloaddataconfig)
-     * @param preloadDataConfig The preloaded data configuration for the data store. 
+     * @param preloadDataConfig The preloaded Synthea data configuration for the data store. 
      */
     public fun preloadDataConfig(preloadDataConfig: IResolvable)
 
     /**
-     * The preloaded data configuration for the data store.
-     *
-     * Only data preloaded from Synthea is supported.
+     * The preloaded Synthea data configuration for the data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-preloaddataconfig)
-     * @param preloadDataConfig The preloaded data configuration for the data store. 
+     * @param preloadDataConfig The preloaded Synthea data configuration for the data store. 
      */
     public fun preloadDataConfig(preloadDataConfig: PreloadDataConfigProperty)
 
     /**
-     * The preloaded data configuration for the data store.
-     *
-     * Only data preloaded from Synthea is supported.
+     * The preloaded Synthea data configuration for the data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-preloaddataconfig)
-     * @param preloadDataConfig The preloaded data configuration for the data store. 
+     * @param preloadDataConfig The preloaded Synthea data configuration for the data store. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0f415c8ec6d6fb864b37abdb60559b8096a0e3743967f14948ddbdfb7cdebddb")
     public fun preloadDataConfig(preloadDataConfig: PreloadDataConfigProperty.Builder.() -> Unit)
 
     /**
-     * The server-side encryption key configuration for a customer provided encryption key specified
+     * The server-side encryption key configuration for a customer-provided encryption key specified
      * for creating a data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-sseconfiguration)
-     * @param sseConfiguration The server-side encryption key configuration for a customer provided
+     * @param sseConfiguration The server-side encryption key configuration for a customer-provided
      * encryption key specified for creating a data store. 
      */
     public fun sseConfiguration(sseConfiguration: IResolvable)
 
     /**
-     * The server-side encryption key configuration for a customer provided encryption key specified
+     * The server-side encryption key configuration for a customer-provided encryption key specified
      * for creating a data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-sseconfiguration)
-     * @param sseConfiguration The server-side encryption key configuration for a customer provided
+     * @param sseConfiguration The server-side encryption key configuration for a customer-provided
      * encryption key specified for creating a data store. 
      */
     public fun sseConfiguration(sseConfiguration: SseConfigurationProperty)
 
     /**
-     * The server-side encryption key configuration for a customer provided encryption key specified
+     * The server-side encryption key configuration for a customer-provided encryption key specified
      * for creating a data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-sseconfiguration)
-     * @param sseConfiguration The server-side encryption key configuration for a customer provided
+     * @param sseConfiguration The server-side encryption key configuration for a customer-provided
      * encryption key specified for creating a data store. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -423,44 +417,44 @@ public open class CfnFHIRDatastore(
         software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.Builder.create(scope, id)
 
     /**
-     * The user generated name for the data store.
+     * The data store name (user-generated).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-datastorename)
-     * @param datastoreName The user generated name for the data store. 
+     * @param datastoreName The data store name (user-generated). 
      */
     override fun datastoreName(datastoreName: String) {
       cdkBuilder.datastoreName(datastoreName)
     }
 
     /**
-     * The FHIR version of the data store.
+     * The FHIR release version supported by the data store.
      *
-     * The only supported version is R4.
+     * Current support is for version `R4` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-datastoretypeversion)
-     * @param datastoreTypeVersion The FHIR version of the data store. 
+     * @param datastoreTypeVersion The FHIR release version supported by the data store. 
      */
     override fun datastoreTypeVersion(datastoreTypeVersion: String) {
       cdkBuilder.datastoreTypeVersion(datastoreTypeVersion)
     }
 
     /**
-     * The identity provider configuration that you gave when the data store was created.
+     * The identity provider configuration selected when the data store was created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration)
-     * @param identityProviderConfiguration The identity provider configuration that you gave when
-     * the data store was created. 
+     * @param identityProviderConfiguration The identity provider configuration selected when the
+     * data store was created. 
      */
     override fun identityProviderConfiguration(identityProviderConfiguration: IResolvable) {
       cdkBuilder.identityProviderConfiguration(identityProviderConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The identity provider configuration that you gave when the data store was created.
+     * The identity provider configuration selected when the data store was created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration)
-     * @param identityProviderConfiguration The identity provider configuration that you gave when
-     * the data store was created. 
+     * @param identityProviderConfiguration The identity provider configuration selected when the
+     * data store was created. 
      */
     override
         fun identityProviderConfiguration(identityProviderConfiguration: IdentityProviderConfigurationProperty) {
@@ -468,11 +462,11 @@ public open class CfnFHIRDatastore(
     }
 
     /**
-     * The identity provider configuration that you gave when the data store was created.
+     * The identity provider configuration selected when the data store was created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration)
-     * @param identityProviderConfiguration The identity provider configuration that you gave when
-     * the data store was created. 
+     * @param identityProviderConfiguration The identity provider configuration selected when the
+     * data store was created. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dffc6d7ef11842eb6785afe9896bf02391868537b05102cc60c9d6e7bf910c86")
@@ -482,36 +476,30 @@ public open class CfnFHIRDatastore(
         identityProviderConfiguration(IdentityProviderConfigurationProperty(identityProviderConfiguration))
 
     /**
-     * The preloaded data configuration for the data store.
-     *
-     * Only data preloaded from Synthea is supported.
+     * The preloaded Synthea data configuration for the data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-preloaddataconfig)
-     * @param preloadDataConfig The preloaded data configuration for the data store. 
+     * @param preloadDataConfig The preloaded Synthea data configuration for the data store. 
      */
     override fun preloadDataConfig(preloadDataConfig: IResolvable) {
       cdkBuilder.preloadDataConfig(preloadDataConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The preloaded data configuration for the data store.
-     *
-     * Only data preloaded from Synthea is supported.
+     * The preloaded Synthea data configuration for the data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-preloaddataconfig)
-     * @param preloadDataConfig The preloaded data configuration for the data store. 
+     * @param preloadDataConfig The preloaded Synthea data configuration for the data store. 
      */
     override fun preloadDataConfig(preloadDataConfig: PreloadDataConfigProperty) {
       cdkBuilder.preloadDataConfig(preloadDataConfig.let(PreloadDataConfigProperty.Companion::unwrap))
     }
 
     /**
-     * The preloaded data configuration for the data store.
-     *
-     * Only data preloaded from Synthea is supported.
+     * The preloaded Synthea data configuration for the data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-preloaddataconfig)
-     * @param preloadDataConfig The preloaded data configuration for the data store. 
+     * @param preloadDataConfig The preloaded Synthea data configuration for the data store. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0f415c8ec6d6fb864b37abdb60559b8096a0e3743967f14948ddbdfb7cdebddb")
@@ -519,11 +507,11 @@ public open class CfnFHIRDatastore(
         Unit = preloadDataConfig(PreloadDataConfigProperty(preloadDataConfig))
 
     /**
-     * The server-side encryption key configuration for a customer provided encryption key specified
+     * The server-side encryption key configuration for a customer-provided encryption key specified
      * for creating a data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-sseconfiguration)
-     * @param sseConfiguration The server-side encryption key configuration for a customer provided
+     * @param sseConfiguration The server-side encryption key configuration for a customer-provided
      * encryption key specified for creating a data store. 
      */
     override fun sseConfiguration(sseConfiguration: IResolvable) {
@@ -531,11 +519,11 @@ public open class CfnFHIRDatastore(
     }
 
     /**
-     * The server-side encryption key configuration for a customer provided encryption key specified
+     * The server-side encryption key configuration for a customer-provided encryption key specified
      * for creating a data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-sseconfiguration)
-     * @param sseConfiguration The server-side encryption key configuration for a customer provided
+     * @param sseConfiguration The server-side encryption key configuration for a customer-provided
      * encryption key specified for creating a data store. 
      */
     override fun sseConfiguration(sseConfiguration: SseConfigurationProperty) {
@@ -543,11 +531,11 @@ public open class CfnFHIRDatastore(
     }
 
     /**
-     * The server-side encryption key configuration for a customer provided encryption key specified
+     * The server-side encryption key configuration for a customer-provided encryption key specified
      * for creating a data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-sseconfiguration)
-     * @param sseConfiguration The server-side encryption key configuration for a customer provided
+     * @param sseConfiguration The server-side encryption key configuration for a customer-provided
      * encryption key specified for creating a data store. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -716,7 +704,7 @@ public open class CfnFHIRDatastore(
   }
 
   /**
-   * The identity provider configuration that you gave when the data store was created.
+   * The identity provider configuration selected when the data store was created.
    *
    * Example:
    *
@@ -738,14 +726,25 @@ public open class CfnFHIRDatastore(
    */
   public interface IdentityProviderConfigurationProperty {
     /**
-     * The authorization strategy that you selected when you created the data store.
+     * The authorization strategy selected when the HealthLake data store is created.
+     *
+     *
+     * HealthLake provides support for both SMART on FHIR V1 and V2 as described below.
+     *
+     * * `SMART_ON_FHIR_V1` – Support for only SMART on FHIR V1, which includes `read` (read/search)
+     * and `write` (create/update/delete) permissions.
+     * * `SMART_ON_FHIR` – Support for both SMART on FHIR V1 and V2, which includes `create` ,
+     * `read` , `update` , `delete` , and `search` permissions.
+     * * `AWS_AUTH` – The default HealthLake authorization strategy; not affiliated with SMART on
+     * FHIR.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-identityproviderconfiguration.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration-authorizationstrategy)
      */
     public fun authorizationStrategy(): String
 
     /**
-     * If you enabled fine-grained authorization when you created the data store.
+     * The parameter to enable SMART on FHIR fine-grained authorization for the data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-identityproviderconfiguration.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration-finegrainedauthorizationenabled)
      */
@@ -753,15 +752,15 @@ public open class CfnFHIRDatastore(
         unwrap(this).getFineGrainedAuthorizationEnabled()
 
     /**
-     * The Amazon Resource Name (ARN) of the Lambda function that you want to use to decode the
-     * access token created by the authorization server.
+     * The Amazon Resource Name (ARN) of the Lambda function to use to decode the access token
+     * created by the authorization server.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-identityproviderconfiguration.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration-idplambdaarn)
      */
     public fun idpLambdaArn(): String? = unwrap(this).getIdpLambdaArn()
 
     /**
-     * The JSON metadata elements that you want to use in your identity provider configuration.
+     * The JSON metadata elements to use in your identity provider configuration.
      *
      * Required elements are listed based on the launch specification of the SMART application. For
      * more information on all possible elements, see
@@ -792,32 +791,40 @@ public open class CfnFHIRDatastore(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param authorizationStrategy The authorization strategy that you selected when you created
-       * the data store. 
+       * @param authorizationStrategy The authorization strategy selected when the HealthLake data
+       * store is created. 
+       *
+       * HealthLake provides support for both SMART on FHIR V1 and V2 as described below.
+       *
+       * * `SMART_ON_FHIR_V1` – Support for only SMART on FHIR V1, which includes `read`
+       * (read/search) and `write` (create/update/delete) permissions.
+       * * `SMART_ON_FHIR` – Support for both SMART on FHIR V1 and V2, which includes `create` ,
+       * `read` , `update` , `delete` , and `search` permissions.
+       * * `AWS_AUTH` – The default HealthLake authorization strategy; not affiliated with SMART on
+       * FHIR.
        */
       public fun authorizationStrategy(authorizationStrategy: String)
 
       /**
-       * @param fineGrainedAuthorizationEnabled If you enabled fine-grained authorization when you
-       * created the data store.
+       * @param fineGrainedAuthorizationEnabled The parameter to enable SMART on FHIR fine-grained
+       * authorization for the data store.
        */
       public fun fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled: Boolean)
 
       /**
-       * @param fineGrainedAuthorizationEnabled If you enabled fine-grained authorization when you
-       * created the data store.
+       * @param fineGrainedAuthorizationEnabled The parameter to enable SMART on FHIR fine-grained
+       * authorization for the data store.
        */
       public fun fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled: IResolvable)
 
       /**
-       * @param idpLambdaArn The Amazon Resource Name (ARN) of the Lambda function that you want to
-       * use to decode the access token created by the authorization server.
+       * @param idpLambdaArn The Amazon Resource Name (ARN) of the Lambda function to use to decode
+       * the access token created by the authorization server.
        */
       public fun idpLambdaArn(idpLambdaArn: String)
 
       /**
-       * @param metadata The JSON metadata elements that you want to use in your identity provider
-       * configuration.
+       * @param metadata The JSON metadata elements to use in your identity provider configuration.
        * Required elements are listed based on the launch specification of the SMART application.
        * For more information on all possible elements, see
        * [Metadata](https://docs.aws.amazon.com/https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#metadata)
@@ -847,40 +854,48 @@ public open class CfnFHIRDatastore(
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.IdentityProviderConfigurationProperty.builder()
 
       /**
-       * @param authorizationStrategy The authorization strategy that you selected when you created
-       * the data store. 
+       * @param authorizationStrategy The authorization strategy selected when the HealthLake data
+       * store is created. 
+       *
+       * HealthLake provides support for both SMART on FHIR V1 and V2 as described below.
+       *
+       * * `SMART_ON_FHIR_V1` – Support for only SMART on FHIR V1, which includes `read`
+       * (read/search) and `write` (create/update/delete) permissions.
+       * * `SMART_ON_FHIR` – Support for both SMART on FHIR V1 and V2, which includes `create` ,
+       * `read` , `update` , `delete` , and `search` permissions.
+       * * `AWS_AUTH` – The default HealthLake authorization strategy; not affiliated with SMART on
+       * FHIR.
        */
       override fun authorizationStrategy(authorizationStrategy: String) {
         cdkBuilder.authorizationStrategy(authorizationStrategy)
       }
 
       /**
-       * @param fineGrainedAuthorizationEnabled If you enabled fine-grained authorization when you
-       * created the data store.
+       * @param fineGrainedAuthorizationEnabled The parameter to enable SMART on FHIR fine-grained
+       * authorization for the data store.
        */
       override fun fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled: Boolean) {
         cdkBuilder.fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled)
       }
 
       /**
-       * @param fineGrainedAuthorizationEnabled If you enabled fine-grained authorization when you
-       * created the data store.
+       * @param fineGrainedAuthorizationEnabled The parameter to enable SMART on FHIR fine-grained
+       * authorization for the data store.
        */
       override fun fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled: IResolvable) {
         cdkBuilder.fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param idpLambdaArn The Amazon Resource Name (ARN) of the Lambda function that you want to
-       * use to decode the access token created by the authorization server.
+       * @param idpLambdaArn The Amazon Resource Name (ARN) of the Lambda function to use to decode
+       * the access token created by the authorization server.
        */
       override fun idpLambdaArn(idpLambdaArn: String) {
         cdkBuilder.idpLambdaArn(idpLambdaArn)
       }
 
       /**
-       * @param metadata The JSON metadata elements that you want to use in your identity provider
-       * configuration.
+       * @param metadata The JSON metadata elements to use in your identity provider configuration.
        * Required elements are listed based on the launch specification of the SMART application.
        * For more information on all possible elements, see
        * [Metadata](https://docs.aws.amazon.com/https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#metadata)
@@ -914,14 +929,25 @@ public open class CfnFHIRDatastore(
     ) : CdkObject(cdkObject),
         IdentityProviderConfigurationProperty {
       /**
-       * The authorization strategy that you selected when you created the data store.
+       * The authorization strategy selected when the HealthLake data store is created.
+       *
+       *
+       * HealthLake provides support for both SMART on FHIR V1 and V2 as described below.
+       *
+       * * `SMART_ON_FHIR_V1` – Support for only SMART on FHIR V1, which includes `read`
+       * (read/search) and `write` (create/update/delete) permissions.
+       * * `SMART_ON_FHIR` – Support for both SMART on FHIR V1 and V2, which includes `create` ,
+       * `read` , `update` , `delete` , and `search` permissions.
+       * * `AWS_AUTH` – The default HealthLake authorization strategy; not affiliated with SMART on
+       * FHIR.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-identityproviderconfiguration.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration-authorizationstrategy)
        */
       override fun authorizationStrategy(): String = unwrap(this).getAuthorizationStrategy()
 
       /**
-       * If you enabled fine-grained authorization when you created the data store.
+       * The parameter to enable SMART on FHIR fine-grained authorization for the data store.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-identityproviderconfiguration.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration-finegrainedauthorizationenabled)
        */
@@ -929,15 +955,15 @@ public open class CfnFHIRDatastore(
           unwrap(this).getFineGrainedAuthorizationEnabled()
 
       /**
-       * The Amazon Resource Name (ARN) of the Lambda function that you want to use to decode the
-       * access token created by the authorization server.
+       * The Amazon Resource Name (ARN) of the Lambda function to use to decode the access token
+       * created by the authorization server.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-identityproviderconfiguration.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration-idplambdaarn)
        */
       override fun idpLambdaArn(): String? = unwrap(this).getIdpLambdaArn()
 
       /**
-       * The JSON metadata elements that you want to use in your identity provider configuration.
+       * The JSON metadata elements to use in your identity provider configuration.
        *
        * Required elements are listed based on the launch specification of the SMART application.
        * For more information on all possible elements, see
@@ -1016,7 +1042,8 @@ public open class CfnFHIRDatastore(
     public fun cmkType(): String
 
     /**
-     * The KMS encryption key id/alias used to encrypt the data store contents at rest.
+     * The Key Management Service (KMS) encryption key id/alias used to encrypt the data store
+     * contents at rest.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-kmsencryptionconfig.html#cfn-healthlake-fhirdatastore-kmsencryptionconfig-kmskeyid)
      */
@@ -1037,8 +1064,8 @@ public open class CfnFHIRDatastore(
       public fun cmkType(cmkType: String)
 
       /**
-       * @param kmsKeyId The KMS encryption key id/alias used to encrypt the data store contents at
-       * rest.
+       * @param kmsKeyId The Key Management Service (KMS) encryption key id/alias used to encrypt
+       * the data store contents at rest.
        */
       public fun kmsKeyId(kmsKeyId: String)
     }
@@ -1061,8 +1088,8 @@ public open class CfnFHIRDatastore(
       }
 
       /**
-       * @param kmsKeyId The KMS encryption key id/alias used to encrypt the data store contents at
-       * rest.
+       * @param kmsKeyId The Key Management Service (KMS) encryption key id/alias used to encrypt
+       * the data store contents at rest.
        */
       override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
@@ -1090,7 +1117,8 @@ public open class CfnFHIRDatastore(
       override fun cmkType(): String = unwrap(this).getCmkType()
 
       /**
-       * The KMS encryption key id/alias used to encrypt the data store contents at rest.
+       * The Key Management Service (KMS) encryption key id/alias used to encrypt the data store
+       * contents at rest.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-kmsencryptionconfig.html#cfn-healthlake-fhirdatastore-kmsencryptionconfig-kmskeyid)
        */
@@ -1116,9 +1144,8 @@ public open class CfnFHIRDatastore(
   }
 
   /**
-   * Optional parameter to preload data upon creation of the data store.
-   *
-   * Currently, the only supported preloaded data is synthetic data generated from Synthea.
+   * An optional parameter to preload (import) open source Synthea FHIR data upon creation of the
+   * data store.
    *
    * Example:
    *
@@ -1207,7 +1234,7 @@ public open class CfnFHIRDatastore(
   }
 
   /**
-   * The server-side encryption key configuration for a customer provided encryption key.
+   * The server-side encryption key configuration for a customer-provided encryption key.
    *
    * Example:
    *
@@ -1228,7 +1255,7 @@ public open class CfnFHIRDatastore(
    */
   public interface SseConfigurationProperty {
     /**
-     * The server-side encryption key configuration for a customer provided encryption key (CMK).
+     * The server-side encryption key configuration for a customer provided encryption key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-sseconfiguration.html#cfn-healthlake-fhirdatastore-sseconfiguration-kmsencryptionconfig)
      */
@@ -1241,19 +1268,19 @@ public open class CfnFHIRDatastore(
     public interface Builder {
       /**
        * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
-       * provided encryption key (CMK). 
+       * provided encryption key. 
        */
       public fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable)
 
       /**
        * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
-       * provided encryption key (CMK). 
+       * provided encryption key. 
        */
       public fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty)
 
       /**
        * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
-       * provided encryption key (CMK). 
+       * provided encryption key. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4c721448173211696f2fe6251251770004484fa49a3e92d45027181a323d63ff")
@@ -1269,7 +1296,7 @@ public open class CfnFHIRDatastore(
 
       /**
        * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
-       * provided encryption key (CMK). 
+       * provided encryption key. 
        */
       override fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable) {
         cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(IResolvable.Companion::unwrap))
@@ -1277,7 +1304,7 @@ public open class CfnFHIRDatastore(
 
       /**
        * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
-       * provided encryption key (CMK). 
+       * provided encryption key. 
        */
       override fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty) {
         cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(KmsEncryptionConfigProperty.Companion::unwrap))
@@ -1285,7 +1312,7 @@ public open class CfnFHIRDatastore(
 
       /**
        * @param kmsEncryptionConfig The server-side encryption key configuration for a customer
-       * provided encryption key (CMK). 
+       * provided encryption key. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4c721448173211696f2fe6251251770004484fa49a3e92d45027181a323d63ff")
@@ -1303,7 +1330,7 @@ public open class CfnFHIRDatastore(
     ) : CdkObject(cdkObject),
         SseConfigurationProperty {
       /**
-       * The server-side encryption key configuration for a customer provided encryption key (CMK).
+       * The server-side encryption key configuration for a customer provided encryption key.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-sseconfiguration.html#cfn-healthlake-fhirdatastore-sseconfiguration-kmsencryptionconfig)
        */

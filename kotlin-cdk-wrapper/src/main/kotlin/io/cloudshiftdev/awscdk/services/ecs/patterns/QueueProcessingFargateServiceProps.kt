@@ -44,6 +44,7 @@ import kotlin.jvm.JvmName
  * .cluster(cluster)
  * .memoryLimitMiB(512)
  * .image(ContainerImage.fromRegistry("test"))
+ * .minHealthyPercent(100)
  * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
  * .capacityProvider("FARGATE_SPOT")
  * .weight(2)
@@ -80,6 +81,16 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
    * Default: - Health check configuration from container.
    */
   public fun healthCheck(): HealthCheck? = unwrap(this).getHealthCheck()?.let(HealthCheck::wrap)
+
+  /**
+   * The period of time, in seconds, that the Amazon ECS service scheduler ignores unhealthy Elastic
+   * Load Balancing target health checks after a task has first started.
+   *
+   * Default: - defaults to 60 seconds if at least one load balancer is in-use and it is not already
+   * set
+   */
+  public fun healthCheckGracePeriod(): Duration? =
+      unwrap(this).getHealthCheckGracePeriod()?.let(Duration::wrap)
 
   /**
    * The security groups to associate with the service.
@@ -281,6 +292,13 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3326961939a08233e2db2fab56e0e5f2776b0e6fd211f4a125c8c2ba0be26d04")
     public fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit)
+
+    /**
+     * @param healthCheckGracePeriod The period of time, in seconds, that the Amazon ECS service
+     * scheduler ignores unhealthy Elastic Load Balancing target health checks after a task has first
+     * started.
+     */
+    public fun healthCheckGracePeriod(healthCheckGracePeriod: Duration)
 
     /**
      * @param image The image used to start a container.
@@ -700,6 +718,15 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
     @JvmName("3326961939a08233e2db2fab56e0e5f2776b0e6fd211f4a125c8c2ba0be26d04")
     override fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit): Unit =
         healthCheck(HealthCheck(healthCheck))
+
+    /**
+     * @param healthCheckGracePeriod The period of time, in seconds, that the Amazon ECS service
+     * scheduler ignores unhealthy Elastic Load Balancing target health checks after a task has first
+     * started.
+     */
+    override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
+      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration.Companion::unwrap))
+    }
 
     /**
      * @param image The image used to start a container.
@@ -1136,6 +1163,16 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      * Default: - Health check configuration from container.
      */
     override fun healthCheck(): HealthCheck? = unwrap(this).getHealthCheck()?.let(HealthCheck::wrap)
+
+    /**
+     * The period of time, in seconds, that the Amazon ECS service scheduler ignores unhealthy
+     * Elastic Load Balancing target health checks after a task has first started.
+     *
+     * Default: - defaults to 60 seconds if at least one load balancer is in-use and it is not
+     * already set
+     */
+    override fun healthCheckGracePeriod(): Duration? =
+        unwrap(this).getHealthCheckGracePeriod()?.let(Duration::wrap)
 
     /**
      * The image used to start a container.

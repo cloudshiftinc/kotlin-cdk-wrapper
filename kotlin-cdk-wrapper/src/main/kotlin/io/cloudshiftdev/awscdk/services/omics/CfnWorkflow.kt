@@ -21,7 +21,23 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Creates a workflow.
+ * Creates a private workflow. Before you create a private workflow, you must create and configure
+ * these required resources:.
+ *
+ * * *Workflow definition files* : Define your workflow in one or more workflow definition files,
+ * written in WDL, Nextflow, or CWL. The workflow definition specifies the inputs and outputs for runs
+ * that use the workflow. It also includes specifications for the runs and run tasks for your workflow,
+ * including compute and memory requirements. The workflow definition file must be in .zip format.
+ * * (Optional) *Parameter template* : You can create a parameter template file that defines the run
+ * parameters, or AWS HealthOmics can generate the parameter template for you.
+ * * *ECR container images* : Create one or more container images for the workflow. Store the images
+ * in a private ECR repository.
+ * * (Optional) *Sentieon licenses* : Request a Sentieon license if using the Sentieon software in a
+ * private workflow.
+ *
+ * For more information, see [Creating or updating a private workflow in AWS
+ * HealthOmics](https://docs.aws.amazon.com/omics/latest/dev/creating-private-workflows.html) in the
+ * *AWS HealthOmics User Guide* .
  *
  * Example:
  *
@@ -42,6 +58,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .optional(false)
  * .build()))
  * .storageCapacity(123)
+ * .storageType("storageType")
  * .tags(Map.of(
  * "tagsKey", "tags"))
  * .build();
@@ -111,6 +128,11 @@ public open class CfnWorkflow(
    * The workflow's type.
    */
   public open fun attrType(): String = unwrap(this).getAttrType()
+
+  /**
+   *
+   */
+  public open fun attrUuid(): String = unwrap(this).getAttrUuid()
 
   /**
    * The URI of a definition for the workflow.
@@ -201,15 +223,29 @@ public open class CfnWorkflow(
   }
 
   /**
-   * The default storage capacity for the workflow runs, in gibibytes.
+   * The default static storage capacity (in gibibytes) for runs that use this workflow or workflow
+   * version.
    */
   public open fun storageCapacity(): Number? = unwrap(this).getStorageCapacity()
 
   /**
-   * The default storage capacity for the workflow runs, in gibibytes.
+   * The default static storage capacity (in gibibytes) for runs that use this workflow or workflow
+   * version.
    */
   public open fun storageCapacity(`value`: Number) {
     unwrap(this).setStorageCapacity(`value`)
+  }
+
+  /**
+   *
+   */
+  public open fun storageType(): String? = unwrap(this).getStorageType()
+
+  /**
+   *
+   */
+  public open fun storageType(`value`: String) {
+    unwrap(this).setStorageType(`value`)
   }
 
   /**
@@ -297,12 +333,23 @@ public open class CfnWorkflow(
     public fun parameterTemplate(parameterTemplate: Map<String, Any>)
 
     /**
-     * The default storage capacity for the workflow runs, in gibibytes.
+     * The default static storage capacity (in gibibytes) for runs that use this workflow or
+     * workflow version.
+     *
+     * The `storageCapacity` can be overwritten at run time. The storage capacity is not required
+     * for runs with a `DYNAMIC` storage type.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagecapacity)
-     * @param storageCapacity The default storage capacity for the workflow runs, in gibibytes. 
+     * @param storageCapacity The default static storage capacity (in gibibytes) for runs that use
+     * this workflow or workflow version. 
      */
     public fun storageCapacity(storageCapacity: Number)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagetype)
+     * @param storageType 
+     */
+    public fun storageType(storageType: String)
 
     /**
      * Tags for the workflow.
@@ -399,13 +446,26 @@ public open class CfnWorkflow(
     }
 
     /**
-     * The default storage capacity for the workflow runs, in gibibytes.
+     * The default static storage capacity (in gibibytes) for runs that use this workflow or
+     * workflow version.
+     *
+     * The `storageCapacity` can be overwritten at run time. The storage capacity is not required
+     * for runs with a `DYNAMIC` storage type.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagecapacity)
-     * @param storageCapacity The default storage capacity for the workflow runs, in gibibytes. 
+     * @param storageCapacity The default static storage capacity (in gibibytes) for runs that use
+     * this workflow or workflow version. 
      */
     override fun storageCapacity(storageCapacity: Number) {
       cdkBuilder.storageCapacity(storageCapacity)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagetype)
+     * @param storageType 
+     */
+    override fun storageType(storageType: String) {
+      cdkBuilder.storageType(storageType)
     }
 
     /**

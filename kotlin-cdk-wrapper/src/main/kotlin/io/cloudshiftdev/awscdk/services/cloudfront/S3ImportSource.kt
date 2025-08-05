@@ -48,6 +48,7 @@ import kotlin.String
  * .workingDirectory("workingDirectory")
  * .build())
  * .deployTime(false)
+ * .displayName("displayName")
  * .exclude(List.of("exclude"))
  * .followSymlinks(SymlinkFollowMode.NEVER)
  * .ignoreMode(IgnoreMode.GLOB)

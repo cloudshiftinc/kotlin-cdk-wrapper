@@ -303,6 +303,9 @@ public open class Accelerator(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.globalaccelerator.Accelerator.PROPERTY_INJECTION_ID
+
     public fun fromAcceleratorAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

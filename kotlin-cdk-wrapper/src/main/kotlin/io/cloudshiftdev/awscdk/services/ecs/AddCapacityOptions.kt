@@ -7,9 +7,11 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.autoscaling.BlockDevice
+import io.cloudshiftdev.awscdk.services.autoscaling.CapacityDistributionStrategy
 import io.cloudshiftdev.awscdk.services.autoscaling.CommonAutoScalingGroupProps
 import io.cloudshiftdev.awscdk.services.autoscaling.GroupMetrics
 import io.cloudshiftdev.awscdk.services.autoscaling.HealthCheck
+import io.cloudshiftdev.awscdk.services.autoscaling.HealthChecks
 import io.cloudshiftdev.awscdk.services.autoscaling.Monitoring
 import io.cloudshiftdev.awscdk.services.autoscaling.NotificationConfiguration
 import io.cloudshiftdev.awscdk.services.autoscaling.Signals
@@ -104,6 +106,13 @@ public interface AddCapacityOptions : AddAutoScalingGroupCapacityOptions,
     public fun autoScalingGroupName(autoScalingGroupName: String)
 
     /**
+     * @param azCapacityDistributionStrategy The strategy for distributing instances across
+     * Availability Zones.
+     */
+    public
+        fun azCapacityDistributionStrategy(azCapacityDistributionStrategy: CapacityDistributionStrategy)
+
+    /**
      * @param blockDevices Specifies how block devices are exposed to the instance. You can specify
      * virtual devices and EBS volumes.
      * Each instance that is launched has an associated root device volume,
@@ -132,7 +141,9 @@ public interface AddCapacityOptions : AddAutoScalingGroupCapacityOptions,
     /**
      * @param canContainersAccessInstanceRole Specifies whether the containers can access the
      * container instance role.
+     * @deprecated See https://github.com/aws/aws-cdk/discussions/32609
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun canContainersAccessInstanceRole(canContainersAccessInstanceRole: Boolean)
 
     /**
@@ -192,8 +203,16 @@ public interface AddCapacityOptions : AddAutoScalingGroupCapacityOptions,
 
     /**
      * @param healthCheck Configuration for health checks.
+     * @deprecated Use `healthChecks` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun healthCheck(healthCheck: HealthCheck)
+
+    /**
+     * @param healthChecks Configuration for EC2 or additional health checks.
+     * Even when using `HealthChecks.withAdditionalChecks()`, the EC2 type is implicitly included.
+     */
+    public fun healthChecks(healthChecks: HealthChecks)
 
     /**
      * @param ignoreUnmodifiedSizeProperties If the ASG has scheduled actions, don't reset unchanged
@@ -475,6 +494,15 @@ public interface AddCapacityOptions : AddAutoScalingGroupCapacityOptions,
     }
 
     /**
+     * @param azCapacityDistributionStrategy The strategy for distributing instances across
+     * Availability Zones.
+     */
+    override
+        fun azCapacityDistributionStrategy(azCapacityDistributionStrategy: CapacityDistributionStrategy) {
+      cdkBuilder.azCapacityDistributionStrategy(azCapacityDistributionStrategy.let(CapacityDistributionStrategy.Companion::unwrap))
+    }
+
+    /**
      * @param blockDevices Specifies how block devices are exposed to the instance. You can specify
      * virtual devices and EBS volumes.
      * Each instance that is launched has an associated root device volume,
@@ -506,7 +534,9 @@ public interface AddCapacityOptions : AddAutoScalingGroupCapacityOptions,
     /**
      * @param canContainersAccessInstanceRole Specifies whether the containers can access the
      * container instance role.
+     * @deprecated See https://github.com/aws/aws-cdk/discussions/32609
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun canContainersAccessInstanceRole(canContainersAccessInstanceRole: Boolean) {
       cdkBuilder.canContainersAccessInstanceRole(canContainersAccessInstanceRole)
     }
@@ -579,9 +609,19 @@ public interface AddCapacityOptions : AddAutoScalingGroupCapacityOptions,
 
     /**
      * @param healthCheck Configuration for health checks.
+     * @deprecated Use `healthChecks` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun healthCheck(healthCheck: HealthCheck) {
       cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
+    }
+
+    /**
+     * @param healthChecks Configuration for EC2 or additional health checks.
+     * Even when using `HealthChecks.withAdditionalChecks()`, the EC2 type is implicitly included.
+     */
+    override fun healthChecks(healthChecks: HealthChecks) {
+      cdkBuilder.healthChecks(healthChecks.let(HealthChecks.Companion::unwrap))
     }
 
     /**
@@ -912,6 +952,14 @@ public interface AddCapacityOptions : AddAutoScalingGroupCapacityOptions,
     override fun autoScalingGroupName(): String? = unwrap(this).getAutoScalingGroupName()
 
     /**
+     * The strategy for distributing instances across Availability Zones.
+     *
+     * Default: None
+     */
+    override fun azCapacityDistributionStrategy(): CapacityDistributionStrategy? =
+        unwrap(this).getAzCapacityDistributionStrategy()?.let(CapacityDistributionStrategy::wrap)
+
+    /**
      * Specifies how block devices are exposed to the instance. You can specify virtual devices and
      * EBS volumes.
      *
@@ -931,10 +979,13 @@ public interface AddCapacityOptions : AddAutoScalingGroupCapacityOptions,
         unwrap(this).getBlockDevices()?.map(BlockDevice::wrap) ?: emptyList()
 
     /**
-     * Specifies whether the containers can access the container instance role.
+     * (deprecated) Specifies whether the containers can access the container instance role.
      *
-     * Default: false
+     * Default: true if
+     *
+     * @deprecated See https://github.com/aws/aws-cdk/discussions/32609
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun canContainersAccessInstanceRole(): Boolean? =
         unwrap(this).getCanContainersAccessInstanceRole()
 
@@ -1008,11 +1059,26 @@ public interface AddCapacityOptions : AddAutoScalingGroupCapacityOptions,
         unwrap(this).getGroupMetrics()?.map(GroupMetrics::wrap) ?: emptyList()
 
     /**
-     * Configuration for health checks.
+     * (deprecated) Configuration for health checks.
      *
      * Default: - HealthCheck.ec2 with no grace period
+     *
+     * @deprecated Use `healthChecks` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun healthCheck(): HealthCheck? = unwrap(this).getHealthCheck()?.let(HealthCheck::wrap)
+
+    /**
+     * Configuration for EC2 or additional health checks.
+     *
+     * Even when using `HealthChecks.withAdditionalChecks()`, the EC2 type is implicitly included.
+     *
+     * Default: - EC2 type with no grace period
+     *
+     * [Documentation](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-health-checks.html)
+     */
+    override fun healthChecks(): HealthChecks? =
+        unwrap(this).getHealthChecks()?.let(HealthChecks::wrap)
 
     /**
      * If the ASG has scheduled actions, don't reset unchanged group sizes.

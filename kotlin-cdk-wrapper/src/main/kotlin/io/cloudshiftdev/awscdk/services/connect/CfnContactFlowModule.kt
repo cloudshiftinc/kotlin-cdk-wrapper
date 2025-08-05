@@ -63,9 +63,7 @@ public open class CfnContactFlowModule(
   )
 
   /**
-   * `Ref` returns the Amazon Resource Name (ARN) of the flow module. For example:.
-   *
-   * `{ "Ref": "myFlowModuleArn" }`
+   * `Ref` returns the Amazon Resource Name (ARN) of the flow module.
    */
   public open fun attrContactFlowModuleArn(): String = unwrap(this).getAttrContactFlowModuleArn()
 

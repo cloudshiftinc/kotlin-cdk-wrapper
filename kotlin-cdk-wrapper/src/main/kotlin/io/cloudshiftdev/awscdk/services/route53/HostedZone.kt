@@ -22,15 +22,20 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Key kmsKey = Key.Builder.create(this, "KmsCMK")
- * .keySpec(KeySpec.ECC_NIST_P256)
- * .keyUsage(KeyUsage.SIGN_VERIFY)
- * .build();
- * HostedZone hostedZone = HostedZone.Builder.create(this, "HostedZone")
+ * HostedZone exampleCom = HostedZone.Builder.create(this, "ExampleCom")
  * .zoneName("example.com")
  * .build();
- * // Enable DNSSEC signing for the zone
- * hostedZone.enableDnssec(ZoneSigningOptions.builder().kmsKey(kmsKey).build());
+ * HostedZone exampleNet = HostedZone.Builder.create(this, "ExampleNet")
+ * .zoneName("example.net")
+ * .build();
+ * Certificate cert = Certificate.Builder.create(this, "Certificate")
+ * .domainName("test.example.com")
+ * .subjectAlternativeNames(List.of("cool.example.com", "test.example.net"))
+ * .validation(CertificateValidation.fromDnsMultiZone(Map.of(
+ * "test.example.com", exampleCom,
+ * "cool.example.com", exampleCom,
+ * "test.example.net", exampleNet)))
+ * .build();
  * ```
  */
 public open class HostedZone(
@@ -279,6 +284,9 @@ public open class HostedZone(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.route53.HostedZone.PROPERTY_INJECTION_ID
+
     public fun fromHostedZoneAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

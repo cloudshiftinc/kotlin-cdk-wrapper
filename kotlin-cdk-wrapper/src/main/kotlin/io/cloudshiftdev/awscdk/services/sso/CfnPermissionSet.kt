@@ -164,19 +164,22 @@ public open class CfnPermissionSet(
   }
 
   /**
-   * A structure that stores the details of the AWS managed policy.
+   * A structure that stores a list of managed policy ARNs that describe the associated AWS managed
+   * policy.
    */
   public open fun managedPolicies(): List<String> = unwrap(this).getManagedPolicies() ?: emptyList()
 
   /**
-   * A structure that stores the details of the AWS managed policy.
+   * A structure that stores a list of managed policy ARNs that describe the associated AWS managed
+   * policy.
    */
   public open fun managedPolicies(`value`: List<String>) {
     unwrap(this).setManagedPolicies(`value`)
   }
 
   /**
-   * A structure that stores the details of the AWS managed policy.
+   * A structure that stores a list of managed policy ARNs that describe the associated AWS managed
+   * policy.
    */
   public open fun managedPolicies(vararg `value`: String): Unit = managedPolicies(`value`.toList())
 
@@ -340,18 +343,22 @@ public open class CfnPermissionSet(
     public fun instanceArn(instanceArn: String)
 
     /**
-     * A structure that stores the details of the AWS managed policy.
+     * A structure that stores a list of managed policy ARNs that describe the associated AWS
+     * managed policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-permissionset.html#cfn-sso-permissionset-managedpolicies)
-     * @param managedPolicies A structure that stores the details of the AWS managed policy. 
+     * @param managedPolicies A structure that stores a list of managed policy ARNs that describe
+     * the associated AWS managed policy. 
      */
     public fun managedPolicies(managedPolicies: List<String>)
 
     /**
-     * A structure that stores the details of the AWS managed policy.
+     * A structure that stores a list of managed policy ARNs that describe the associated AWS
+     * managed policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-permissionset.html#cfn-sso-permissionset-managedpolicies)
-     * @param managedPolicies A structure that stores the details of the AWS managed policy. 
+     * @param managedPolicies A structure that stores a list of managed policy ARNs that describe
+     * the associated AWS managed policy. 
      */
     public fun managedPolicies(vararg managedPolicies: String)
 
@@ -559,20 +566,24 @@ public open class CfnPermissionSet(
     }
 
     /**
-     * A structure that stores the details of the AWS managed policy.
+     * A structure that stores a list of managed policy ARNs that describe the associated AWS
+     * managed policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-permissionset.html#cfn-sso-permissionset-managedpolicies)
-     * @param managedPolicies A structure that stores the details of the AWS managed policy. 
+     * @param managedPolicies A structure that stores a list of managed policy ARNs that describe
+     * the associated AWS managed policy. 
      */
     override fun managedPolicies(managedPolicies: List<String>) {
       cdkBuilder.managedPolicies(managedPolicies)
     }
 
     /**
-     * A structure that stores the details of the AWS managed policy.
+     * A structure that stores a list of managed policy ARNs that describe the associated AWS
+     * managed policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-permissionset.html#cfn-sso-permissionset-managedpolicies)
-     * @param managedPolicies A structure that stores the details of the AWS managed policy. 
+     * @param managedPolicies A structure that stores a list of managed policy ARNs that describe
+     * the associated AWS managed policy. 
      */
     override fun managedPolicies(vararg managedPolicies: String): Unit =
         managedPolicies(managedPolicies.toList())

@@ -160,6 +160,30 @@ public interface IAlias : IKey {
         unwrap(this).grantGenerateMac(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
+     * Grant sign permissions using this key to the given principal.
+     *
+     * @param grantee 
+     */
+    override fun grantSign(grantee: IGrantable): Grant =
+        unwrap(this).grantSign(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+    /**
+     * Grant sign and verify permissions using this key to the given principal.
+     *
+     * @param grantee 
+     */
+    override fun grantSignVerify(grantee: IGrantable): Grant =
+        unwrap(this).grantSignVerify(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+    /**
+     * Grant verify permissions using this key to the given principal.
+     *
+     * @param grantee 
+     */
+    override fun grantVerify(grantee: IGrantable): Grant =
+        unwrap(this).grantVerify(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+    /**
      * Grant permissions to verifying MACs to the given principal.
      *
      * @param grantee 

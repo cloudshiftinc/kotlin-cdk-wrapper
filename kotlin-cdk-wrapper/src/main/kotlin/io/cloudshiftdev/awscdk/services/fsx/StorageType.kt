@@ -7,6 +7,7 @@ public enum class StorageType(
 ) {
   SSD(software.amazon.awscdk.services.fsx.StorageType.SSD),
   HDD(software.amazon.awscdk.services.fsx.StorageType.HDD),
+  INTELLIGENT_TIERING(software.amazon.awscdk.services.fsx.StorageType.INTELLIGENT_TIERING),
   ;
 
   public companion object {
@@ -14,6 +15,8 @@ public enum class StorageType(
         when (cdkObject) {
       software.amazon.awscdk.services.fsx.StorageType.SSD -> StorageType.SSD
       software.amazon.awscdk.services.fsx.StorageType.HDD -> StorageType.HDD
+      software.amazon.awscdk.services.fsx.StorageType.INTELLIGENT_TIERING ->
+          StorageType.INTELLIGENT_TIERING
     }
 
     internal fun unwrap(wrapped: StorageType): software.amazon.awscdk.services.fsx.StorageType =

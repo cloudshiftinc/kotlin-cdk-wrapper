@@ -27,6 +27,7 @@ import kotlin.collections.List
  * import io.cloudshiftdev.awscdk.*;
  * CfnAutoScalingRollingUpdate cfnAutoScalingRollingUpdate = CfnAutoScalingRollingUpdate.builder()
  * .maxBatchSize(123)
+ * .minActiveInstancesPercent(123)
  * .minInstancesInService(123)
  * .minSuccessfulInstancesPercent(123)
  * .pauseTime("pauseTime")
@@ -40,6 +41,17 @@ public interface CfnAutoScalingRollingUpdate {
    * Specifies the maximum number of instances that AWS CloudFormation updates.
    */
   public fun maxBatchSize(): Number? = unwrap(this).getMaxBatchSize()
+
+  /**
+   * Specifies the percentage of instances in an Auto Scaling group that must remain in service
+   * while AWS CloudFormation updates old instances.
+   *
+   * You can specify a value from 0 to 100. AWS CloudFormation rounds to the nearest tenth of a
+   * percent.
+   * For example, if you update five instances with a minimum active percentage of 50, three
+   * instances must remain in service.
+   */
+  public fun minActiveInstancesPercent(): Number? = unwrap(this).getMinActiveInstancesPercent()
 
   /**
    * Specifies the minimum number of instances that must be in service within the Auto Scaling group
@@ -131,6 +143,16 @@ public interface CfnAutoScalingRollingUpdate {
      * updates.
      */
     public fun maxBatchSize(maxBatchSize: Number)
+
+    /**
+     * @param minActiveInstancesPercent Specifies the percentage of instances in an Auto Scaling
+     * group that must remain in service while AWS CloudFormation updates old instances.
+     * You can specify a value from 0 to 100. AWS CloudFormation rounds to the nearest tenth of a
+     * percent.
+     * For example, if you update five instances with a minimum active percentage of 50, three
+     * instances must remain in service.
+     */
+    public fun minActiveInstancesPercent(minActiveInstancesPercent: Number)
 
     /**
      * @param minInstancesInService Specifies the minimum number of instances that must be in
@@ -232,6 +254,18 @@ public interface CfnAutoScalingRollingUpdate {
      */
     override fun maxBatchSize(maxBatchSize: Number) {
       cdkBuilder.maxBatchSize(maxBatchSize)
+    }
+
+    /**
+     * @param minActiveInstancesPercent Specifies the percentage of instances in an Auto Scaling
+     * group that must remain in service while AWS CloudFormation updates old instances.
+     * You can specify a value from 0 to 100. AWS CloudFormation rounds to the nearest tenth of a
+     * percent.
+     * For example, if you update five instances with a minimum active percentage of 50, three
+     * instances must remain in service.
+     */
+    override fun minActiveInstancesPercent(minActiveInstancesPercent: Number) {
+      cdkBuilder.minActiveInstancesPercent(minActiveInstancesPercent)
     }
 
     /**
@@ -345,6 +379,17 @@ public interface CfnAutoScalingRollingUpdate {
      * Specifies the maximum number of instances that AWS CloudFormation updates.
      */
     override fun maxBatchSize(): Number? = unwrap(this).getMaxBatchSize()
+
+    /**
+     * Specifies the percentage of instances in an Auto Scaling group that must remain in service
+     * while AWS CloudFormation updates old instances.
+     *
+     * You can specify a value from 0 to 100. AWS CloudFormation rounds to the nearest tenth of a
+     * percent.
+     * For example, if you update five instances with a minimum active percentage of 50, three
+     * instances must remain in service.
+     */
+    override fun minActiveInstancesPercent(): Number? = unwrap(this).getMinActiveInstancesPercent()
 
     /**
      * Specifies the minimum number of instances that must be in service within the Auto Scaling

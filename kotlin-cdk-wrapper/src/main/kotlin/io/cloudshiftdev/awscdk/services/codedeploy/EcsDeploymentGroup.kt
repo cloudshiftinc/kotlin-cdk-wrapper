@@ -406,6 +406,9 @@ public open class EcsDeploymentGroup(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.codedeploy.EcsDeploymentGroup.PROPERTY_INJECTION_ID
+
     public fun fromEcsDeploymentGroupAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

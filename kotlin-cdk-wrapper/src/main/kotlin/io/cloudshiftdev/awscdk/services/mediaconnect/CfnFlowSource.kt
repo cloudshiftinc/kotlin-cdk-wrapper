@@ -18,7 +18,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The AWS::MediaConnect::FlowSource resource is usedt to add additional sources to an existing
+ * The `AWS::MediaConnect::FlowSource` resource is usedt to add additional sources to an existing
  * flow.
  *
  * Adding an additional source requires Failover to be enabled. When you enable Failover, the
@@ -113,26 +113,26 @@ public open class CfnFlowSource(
   public open fun attrSourceIngestPort(): String = unwrap(this).getAttrSourceIngestPort()
 
   /**
-   * The type of encryption that is used on the content ingested from the source.
+   * The type of encryption that is used on the content ingested from this source.
    */
   public open fun decryption(): Any? = unwrap(this).getDecryption()
 
   /**
-   * The type of encryption that is used on the content ingested from the source.
+   * The type of encryption that is used on the content ingested from this source.
    */
   public open fun decryption(`value`: IResolvable) {
     unwrap(this).setDecryption(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The type of encryption that is used on the content ingested from the source.
+   * The type of encryption that is used on the content ingested from this source.
    */
   public open fun decryption(`value`: EncryptionProperty) {
     unwrap(this).setDecryption(`value`.let(EncryptionProperty.Companion::unwrap))
   }
 
   /**
-   * The type of encryption that is used on the content ingested from the source.
+   * The type of encryption that is used on the content ingested from this source.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("6bef9d320d73a09780a6b8a6ad11f125ecd161cfd424639faac0d6256d4e946e")
@@ -140,24 +140,24 @@ public open class CfnFlowSource(
       decryption(EncryptionProperty(`value`))
 
   /**
-   * A description of the source.
+   * A description for the source.
    */
   public open fun description(): String = unwrap(this).getDescription()
 
   /**
-   * A description of the source.
+   * A description for the source.
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
   }
 
   /**
-   * The ARN of the entitlement that allows you to subscribe to the flow.
+   * The ARN of the entitlement that allows you to subscribe to this flow.
    */
   public open fun entitlementArn(): String? = unwrap(this).getEntitlementArn()
 
   /**
-   * The ARN of the entitlement that allows you to subscribe to the flow.
+   * The ARN of the entitlement that allows you to subscribe to this flow.
    */
   public open fun entitlementArn(`value`: String) {
     unwrap(this).setEntitlementArn(`value`)
@@ -176,26 +176,26 @@ public open class CfnFlowSource(
   }
 
   /**
-   * The source configuration for cloud flows receiving a stream from a bridge.
+   * The bridge's source.
    */
   public open fun gatewayBridgeSource(): Any? = unwrap(this).getGatewayBridgeSource()
 
   /**
-   * The source configuration for cloud flows receiving a stream from a bridge.
+   * The bridge's source.
    */
   public open fun gatewayBridgeSource(`value`: IResolvable) {
     unwrap(this).setGatewayBridgeSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The source configuration for cloud flows receiving a stream from a bridge.
+   * The bridge's source.
    */
   public open fun gatewayBridgeSource(`value`: GatewayBridgeSourceProperty) {
     unwrap(this).setGatewayBridgeSource(`value`.let(GatewayBridgeSourceProperty.Companion::unwrap))
   }
 
   /**
-   * The source configuration for cloud flows receiving a stream from a bridge.
+   * The bridge's source.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("6c461a61dbbc538bc19f84b2a06355eb21b6bf4dfeb61a89e6d71e93dafe04f8")
@@ -224,12 +224,12 @@ public open class CfnFlowSource(
   }
 
   /**
-   * The maximum bitrate for RIST, RTP, and RTP-FEC streams.
+   * The smoothing max bitrate (in bps) for RIST, RTP, and RTP-FEC streams.
    */
   public open fun maxBitrate(): Number? = unwrap(this).getMaxBitrate()
 
   /**
-   * The maximum bitrate for RIST, RTP, and RTP-FEC streams.
+   * The smoothing max bitrate (in bps) for RIST, RTP, and RTP-FEC streams.
    */
   public open fun maxBitrate(`value`: Number) {
     unwrap(this).setMaxBitrate(`value`)
@@ -344,24 +344,24 @@ public open class CfnFlowSource(
   }
 
   /**
-   * The name of the VPC interface that you want to send your output to.
+   * The name of the VPC interface to use for this source.
    */
   public open fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
 
   /**
-   * The name of the VPC interface that you want to send your output to.
+   * The name of the VPC interface to use for this source.
    */
   public open fun vpcInterfaceName(`value`: String) {
     unwrap(this).setVpcInterfaceName(`value`)
   }
 
   /**
-   * The range of IP addresses that are allowed to contribute content to your source.
+   * The range of IP addresses that should be allowed to contribute content to your source.
    */
   public open fun whitelistCidr(): String? = unwrap(this).getWhitelistCidr()
 
   /**
-   * The range of IP addresses that are allowed to contribute content to your source.
+   * The range of IP addresses that should be allowed to contribute content to your source.
    */
   public open fun whitelistCidr(`value`: String) {
     unwrap(this).setWhitelistCidr(`value`)
@@ -373,28 +373,34 @@ public open class CfnFlowSource(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The type of encryption that is used on the content ingested from the source.
+     * The type of encryption that is used on the content ingested from this source.
+     *
+     * Allowable encryption types: static-key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-decryption)
-     * @param decryption The type of encryption that is used on the content ingested from the
+     * @param decryption The type of encryption that is used on the content ingested from this
      * source. 
      */
     public fun decryption(decryption: IResolvable)
 
     /**
-     * The type of encryption that is used on the content ingested from the source.
+     * The type of encryption that is used on the content ingested from this source.
+     *
+     * Allowable encryption types: static-key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-decryption)
-     * @param decryption The type of encryption that is used on the content ingested from the
+     * @param decryption The type of encryption that is used on the content ingested from this
      * source. 
      */
     public fun decryption(decryption: EncryptionProperty)
 
     /**
-     * The type of encryption that is used on the content ingested from the source.
+     * The type of encryption that is used on the content ingested from this source.
+     *
+     * Allowable encryption types: static-key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-decryption)
-     * @param decryption The type of encryption that is used on the content ingested from the
+     * @param decryption The type of encryption that is used on the content ingested from this
      * source. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -402,23 +408,23 @@ public open class CfnFlowSource(
     public fun decryption(decryption: EncryptionProperty.Builder.() -> Unit)
 
     /**
-     * A description of the source.
+     * A description for the source.
      *
-     * This description is not visible outside of the current AWS account.
+     * This value is not used or seen outside of the current MediaConnect account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-description)
-     * @param description A description of the source. 
+     * @param description A description for the source. 
      */
     public fun description(description: String)
 
     /**
-     * The ARN of the entitlement that allows you to subscribe to the flow.
+     * The ARN of the entitlement that allows you to subscribe to this flow.
      *
-     * The entitlement is set by the content originator, and the ARN is generated as part of the
+     * The entitlement is set by the flow originator, and the ARN is generated as part of the
      * originator's flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-entitlementarn)
-     * @param entitlementArn The ARN of the entitlement that allows you to subscribe to the flow. 
+     * @param entitlementArn The ARN of the entitlement that allows you to subscribe to this flow. 
      */
     public fun entitlementArn(entitlementArn: String)
 
@@ -433,29 +439,26 @@ public open class CfnFlowSource(
     public fun flowArn(flowArn: String)
 
     /**
-     * The source configuration for cloud flows receiving a stream from a bridge.
+     * The bridge's source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-gatewaybridgesource)
-     * @param gatewayBridgeSource The source configuration for cloud flows receiving a stream from a
-     * bridge. 
+     * @param gatewayBridgeSource The bridge's source. 
      */
     public fun gatewayBridgeSource(gatewayBridgeSource: IResolvable)
 
     /**
-     * The source configuration for cloud flows receiving a stream from a bridge.
+     * The bridge's source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-gatewaybridgesource)
-     * @param gatewayBridgeSource The source configuration for cloud flows receiving a stream from a
-     * bridge. 
+     * @param gatewayBridgeSource The bridge's source. 
      */
     public fun gatewayBridgeSource(gatewayBridgeSource: GatewayBridgeSourceProperty)
 
     /**
-     * The source configuration for cloud flows receiving a stream from a bridge.
+     * The bridge's source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-gatewaybridgesource)
-     * @param gatewayBridgeSource The source configuration for cloud flows receiving a stream from a
-     * bridge. 
+     * @param gatewayBridgeSource The bridge's source. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9c1cdbcb9bc692f05686bb840b6e19403470dbeb5b6b434a34687d0f43c867b4")
@@ -473,10 +476,10 @@ public open class CfnFlowSource(
     public fun ingestPort(ingestPort: Number)
 
     /**
-     * The maximum bitrate for RIST, RTP, and RTP-FEC streams.
+     * The smoothing max bitrate (in bps) for RIST, RTP, and RTP-FEC streams.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-maxbitrate)
-     * @param maxBitrate The maximum bitrate for RIST, RTP, and RTP-FEC streams. 
+     * @param maxBitrate The smoothing max bitrate (in bps) for RIST, RTP, and RTP-FEC streams. 
      */
     public fun maxBitrate(maxBitrate: Number)
 
@@ -573,22 +576,22 @@ public open class CfnFlowSource(
     public fun streamId(streamId: String)
 
     /**
-     * The name of the VPC interface that you want to send your output to.
+     * The name of the VPC interface to use for this source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-vpcinterfacename)
-     * @param vpcInterfaceName The name of the VPC interface that you want to send your output to. 
+     * @param vpcInterfaceName The name of the VPC interface to use for this source. 
      */
     public fun vpcInterfaceName(vpcInterfaceName: String)
 
     /**
-     * The range of IP addresses that are allowed to contribute content to your source.
+     * The range of IP addresses that should be allowed to contribute content to your source.
      *
-     * Format the IP addresses as a Classless Inter-Domain Routing (CIDR) block; for example,
-     * 10.0.0.0/16.
+     * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block;
+     * for example, 10.0.0.0/16.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-whitelistcidr)
-     * @param whitelistCidr The range of IP addresses that are allowed to contribute content to your
-     * source. 
+     * @param whitelistCidr The range of IP addresses that should be allowed to contribute content
+     * to your source. 
      */
     public fun whitelistCidr(whitelistCidr: String)
   }
@@ -601,10 +604,12 @@ public open class CfnFlowSource(
         software.amazon.awscdk.services.mediaconnect.CfnFlowSource.Builder.create(scope, id)
 
     /**
-     * The type of encryption that is used on the content ingested from the source.
+     * The type of encryption that is used on the content ingested from this source.
+     *
+     * Allowable encryption types: static-key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-decryption)
-     * @param decryption The type of encryption that is used on the content ingested from the
+     * @param decryption The type of encryption that is used on the content ingested from this
      * source. 
      */
     override fun decryption(decryption: IResolvable) {
@@ -612,10 +617,12 @@ public open class CfnFlowSource(
     }
 
     /**
-     * The type of encryption that is used on the content ingested from the source.
+     * The type of encryption that is used on the content ingested from this source.
+     *
+     * Allowable encryption types: static-key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-decryption)
-     * @param decryption The type of encryption that is used on the content ingested from the
+     * @param decryption The type of encryption that is used on the content ingested from this
      * source. 
      */
     override fun decryption(decryption: EncryptionProperty) {
@@ -623,10 +630,12 @@ public open class CfnFlowSource(
     }
 
     /**
-     * The type of encryption that is used on the content ingested from the source.
+     * The type of encryption that is used on the content ingested from this source.
+     *
+     * Allowable encryption types: static-key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-decryption)
-     * @param decryption The type of encryption that is used on the content ingested from the
+     * @param decryption The type of encryption that is used on the content ingested from this
      * source. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -635,25 +644,25 @@ public open class CfnFlowSource(
         decryption(EncryptionProperty(decryption))
 
     /**
-     * A description of the source.
+     * A description for the source.
      *
-     * This description is not visible outside of the current AWS account.
+     * This value is not used or seen outside of the current MediaConnect account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-description)
-     * @param description A description of the source. 
+     * @param description A description for the source. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
-     * The ARN of the entitlement that allows you to subscribe to the flow.
+     * The ARN of the entitlement that allows you to subscribe to this flow.
      *
-     * The entitlement is set by the content originator, and the ARN is generated as part of the
+     * The entitlement is set by the flow originator, and the ARN is generated as part of the
      * originator's flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-entitlementarn)
-     * @param entitlementArn The ARN of the entitlement that allows you to subscribe to the flow. 
+     * @param entitlementArn The ARN of the entitlement that allows you to subscribe to this flow. 
      */
     override fun entitlementArn(entitlementArn: String) {
       cdkBuilder.entitlementArn(entitlementArn)
@@ -672,33 +681,30 @@ public open class CfnFlowSource(
     }
 
     /**
-     * The source configuration for cloud flows receiving a stream from a bridge.
+     * The bridge's source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-gatewaybridgesource)
-     * @param gatewayBridgeSource The source configuration for cloud flows receiving a stream from a
-     * bridge. 
+     * @param gatewayBridgeSource The bridge's source. 
      */
     override fun gatewayBridgeSource(gatewayBridgeSource: IResolvable) {
       cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The source configuration for cloud flows receiving a stream from a bridge.
+     * The bridge's source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-gatewaybridgesource)
-     * @param gatewayBridgeSource The source configuration for cloud flows receiving a stream from a
-     * bridge. 
+     * @param gatewayBridgeSource The bridge's source. 
      */
     override fun gatewayBridgeSource(gatewayBridgeSource: GatewayBridgeSourceProperty) {
       cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(GatewayBridgeSourceProperty.Companion::unwrap))
     }
 
     /**
-     * The source configuration for cloud flows receiving a stream from a bridge.
+     * The bridge's source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-gatewaybridgesource)
-     * @param gatewayBridgeSource The source configuration for cloud flows receiving a stream from a
-     * bridge. 
+     * @param gatewayBridgeSource The bridge's source. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9c1cdbcb9bc692f05686bb840b6e19403470dbeb5b6b434a34687d0f43c867b4")
@@ -719,10 +725,10 @@ public open class CfnFlowSource(
     }
 
     /**
-     * The maximum bitrate for RIST, RTP, and RTP-FEC streams.
+     * The smoothing max bitrate (in bps) for RIST, RTP, and RTP-FEC streams.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-maxbitrate)
-     * @param maxBitrate The maximum bitrate for RIST, RTP, and RTP-FEC streams. 
+     * @param maxBitrate The smoothing max bitrate (in bps) for RIST, RTP, and RTP-FEC streams. 
      */
     override fun maxBitrate(maxBitrate: Number) {
       cdkBuilder.maxBitrate(maxBitrate)
@@ -839,24 +845,24 @@ public open class CfnFlowSource(
     }
 
     /**
-     * The name of the VPC interface that you want to send your output to.
+     * The name of the VPC interface to use for this source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-vpcinterfacename)
-     * @param vpcInterfaceName The name of the VPC interface that you want to send your output to. 
+     * @param vpcInterfaceName The name of the VPC interface to use for this source. 
      */
     override fun vpcInterfaceName(vpcInterfaceName: String) {
       cdkBuilder.vpcInterfaceName(vpcInterfaceName)
     }
 
     /**
-     * The range of IP addresses that are allowed to contribute content to your source.
+     * The range of IP addresses that should be allowed to contribute content to your source.
      *
-     * Format the IP addresses as a Classless Inter-Domain Routing (CIDR) block; for example,
-     * 10.0.0.0/16.
+     * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block;
+     * for example, 10.0.0.0/16.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-whitelistcidr)
-     * @param whitelistCidr The range of IP addresses that are allowed to contribute content to your
-     * source. 
+     * @param whitelistCidr The range of IP addresses that should be allowed to contribute content
+     * to your source. 
      */
     override fun whitelistCidr(whitelistCidr: String) {
       cdkBuilder.whitelistCidr(whitelistCidr)
@@ -977,8 +983,8 @@ public open class CfnFlowSource(
     public fun resourceId(): String? = unwrap(this).getResourceId()
 
     /**
-     * The Amazon Resource Name (ARN) of the role that you created during setup (when you set up
-     * MediaConnect as a trusted entity).
+     * The ARN of the role that you created during setup (when you set up MediaConnect as a trusted
+     * entity).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-encryption.html#cfn-mediaconnect-flowsource-encryption-rolearn)
      */
@@ -986,6 +992,8 @@ public open class CfnFlowSource(
 
     /**
      * The ARN of the secret that you created in AWS Secrets Manager to store the encryption key.
+     *
+     * This parameter is required for static key encryption and is not valid for SPEKE encryption.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-encryption.html#cfn-mediaconnect-flowsource-encryption-secretarn)
      */
@@ -1048,14 +1056,15 @@ public open class CfnFlowSource(
       public fun resourceId(resourceId: String)
 
       /**
-       * @param roleArn The Amazon Resource Name (ARN) of the role that you created during setup
-       * (when you set up MediaConnect as a trusted entity). 
+       * @param roleArn The ARN of the role that you created during setup (when you set up
+       * MediaConnect as a trusted entity). 
        */
       public fun roleArn(roleArn: String)
 
       /**
        * @param secretArn The ARN of the secret that you created in AWS Secrets Manager to store the
        * encryption key.
+       * This parameter is required for static key encryption and is not valid for SPEKE encryption.
        */
       public fun secretArn(secretArn: String)
 
@@ -1126,8 +1135,8 @@ public open class CfnFlowSource(
       }
 
       /**
-       * @param roleArn The Amazon Resource Name (ARN) of the role that you created during setup
-       * (when you set up MediaConnect as a trusted entity). 
+       * @param roleArn The ARN of the role that you created during setup (when you set up
+       * MediaConnect as a trusted entity). 
        */
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
@@ -1136,6 +1145,7 @@ public open class CfnFlowSource(
       /**
        * @param secretArn The ARN of the secret that you created in AWS Secrets Manager to store the
        * encryption key.
+       * This parameter is required for static key encryption and is not valid for SPEKE encryption.
        */
       override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
@@ -1222,8 +1232,8 @@ public open class CfnFlowSource(
       override fun resourceId(): String? = unwrap(this).getResourceId()
 
       /**
-       * The Amazon Resource Name (ARN) of the role that you created during setup (when you set up
-       * MediaConnect as a trusted entity).
+       * The ARN of the role that you created during setup (when you set up MediaConnect as a
+       * trusted entity).
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-encryption.html#cfn-mediaconnect-flowsource-encryption-rolearn)
        */
@@ -1231,6 +1241,8 @@ public open class CfnFlowSource(
 
       /**
        * The ARN of the secret that you created in AWS Secrets Manager to store the encryption key.
+       *
+       * This parameter is required for static key encryption and is not valid for SPEKE encryption.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-encryption.html#cfn-mediaconnect-flowsource-encryption-secretarn)
        */
@@ -1413,7 +1425,7 @@ public open class CfnFlowSource(
   }
 
   /**
-   * The VPC interface that you want to send your output to.
+   * The settings for attaching a VPC interface to an resource.
    *
    * Example:
    *
@@ -1431,7 +1443,7 @@ public open class CfnFlowSource(
    */
   public interface VpcInterfaceAttachmentProperty {
     /**
-     * The name of the VPC interface that you want to send your output to.
+     * The name of the VPC interface to use for this resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-vpcinterfaceattachment.html#cfn-mediaconnect-flowsource-vpcinterfaceattachment-vpcinterfacename)
      */
@@ -1443,7 +1455,7 @@ public open class CfnFlowSource(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+       * @param vpcInterfaceName The name of the VPC interface to use for this resource.
        */
       public fun vpcInterfaceName(vpcInterfaceName: String)
     }
@@ -1455,7 +1467,7 @@ public open class CfnFlowSource(
           software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty.builder()
 
       /**
-       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+       * @param vpcInterfaceName The name of the VPC interface to use for this resource.
        */
       override fun vpcInterfaceName(vpcInterfaceName: String) {
         cdkBuilder.vpcInterfaceName(vpcInterfaceName)
@@ -1471,7 +1483,7 @@ public open class CfnFlowSource(
     ) : CdkObject(cdkObject),
         VpcInterfaceAttachmentProperty {
       /**
-       * The name of the VPC interface that you want to send your output to.
+       * The name of the VPC interface to use for this resource.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-vpcinterfaceattachment.html#cfn-mediaconnect-flowsource-vpcinterfaceattachment-vpcinterfacename)
        */

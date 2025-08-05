@@ -165,6 +165,9 @@ public open class InstanceProfile(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.iam.InstanceProfile.PROPERTY_INJECTION_ID
+
     public fun fromInstanceProfileArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

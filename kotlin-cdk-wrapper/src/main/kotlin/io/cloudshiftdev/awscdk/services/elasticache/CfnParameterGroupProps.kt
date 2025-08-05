@@ -42,8 +42,8 @@ public interface CfnParameterGroupProps {
    * The name of the cache parameter group family that this cache parameter group is compatible
    * with.
    *
-   * Valid values are: `memcached1.4` | `memcached1.5` | `memcached1.6` | `redis2.6` | `redis2.8` |
-   * `redis3.2` | `redis4.0` | `redis5.0` | `redis6.x` | `redis7`
+   * Valid values are: `valkey8` | `valkey7` | `memcached1.4` | `memcached1.5` | `memcached1.6` |
+   * `redis2.6` | `redis2.8` | `redis3.2` | `redis4.0` | `redis5.0` | `redis6.x` | `redis7`
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-parametergroup.html#cfn-elasticache-parametergroup-cacheparametergroupfamily)
    */
@@ -88,8 +88,8 @@ public interface CfnParameterGroupProps {
     /**
      * @param cacheParameterGroupFamily The name of the cache parameter group family that this cache
      * parameter group is compatible with. 
-     * Valid values are: `memcached1.4` | `memcached1.5` | `memcached1.6` | `redis2.6` | `redis2.8`
-     * | `redis3.2` | `redis4.0` | `redis5.0` | `redis6.x` | `redis7`
+     * Valid values are: `valkey8` | `valkey7` | `memcached1.4` | `memcached1.5` | `memcached1.6` |
+     * `redis2.6` | `redis2.8` | `redis3.2` | `redis4.0` | `redis5.0` | `redis6.x` | `redis7`
      */
     public fun cacheParameterGroupFamily(cacheParameterGroupFamily: String)
 
@@ -107,7 +107,7 @@ public interface CfnParameterGroupProps {
      * }
      * ```
      */
-    public fun properties(properties: IResolvable)
+    public fun properties(properties: Map<String, String>)
 
     /**
      * @param properties A comma-delimited list of parameter name/value pairs.
@@ -118,7 +118,7 @@ public interface CfnParameterGroupProps {
      * }
      * ```
      */
-    public fun properties(properties: Map<String, String>)
+    public fun properties(properties: IResolvable)
 
     /**
      * @param tags A tag that can be added to an ElastiCache parameter group.
@@ -143,8 +143,8 @@ public interface CfnParameterGroupProps {
     /**
      * @param cacheParameterGroupFamily The name of the cache parameter group family that this cache
      * parameter group is compatible with. 
-     * Valid values are: `memcached1.4` | `memcached1.5` | `memcached1.6` | `redis2.6` | `redis2.8`
-     * | `redis3.2` | `redis4.0` | `redis5.0` | `redis6.x` | `redis7`
+     * Valid values are: `valkey8` | `valkey7` | `memcached1.4` | `memcached1.5` | `memcached1.6` |
+     * `redis2.6` | `redis2.8` | `redis3.2` | `redis4.0` | `redis5.0` | `redis6.x` | `redis7`
      */
     override fun cacheParameterGroupFamily(cacheParameterGroupFamily: String) {
       cdkBuilder.cacheParameterGroupFamily(cacheParameterGroupFamily)
@@ -166,8 +166,8 @@ public interface CfnParameterGroupProps {
      * }
      * ```
      */
-    override fun properties(properties: IResolvable) {
-      cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
+    override fun properties(properties: Map<String, String>) {
+      cdkBuilder.properties(properties)
     }
 
     /**
@@ -179,8 +179,8 @@ public interface CfnParameterGroupProps {
      * }
      * ```
      */
-    override fun properties(properties: Map<String, String>) {
-      cdkBuilder.properties(properties)
+    override fun properties(properties: IResolvable) {
+      cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -211,8 +211,8 @@ public interface CfnParameterGroupProps {
      * The name of the cache parameter group family that this cache parameter group is compatible
      * with.
      *
-     * Valid values are: `memcached1.4` | `memcached1.5` | `memcached1.6` | `redis2.6` | `redis2.8`
-     * | `redis3.2` | `redis4.0` | `redis5.0` | `redis6.x` | `redis7`
+     * Valid values are: `valkey8` | `valkey7` | `memcached1.4` | `memcached1.5` | `memcached1.6` |
+     * `redis2.6` | `redis2.8` | `redis3.2` | `redis4.0` | `redis5.0` | `redis6.x` | `redis7`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-parametergroup.html#cfn-elasticache-parametergroup-cacheparametergroupfamily)
      */

@@ -1644,6 +1644,13 @@ public open class CfnModel(
   }
 
   /**
+   * The configuration for a private hub model reference that points to a public SageMaker JumpStart
+   * model.
+   *
+   * For more information about private hubs, see [Private curated hubs for foundation model access
+   * control in JumpStart](https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-curated-hubs.html)
+   * .
+   *
    * Example:
    *
    * ```
@@ -1659,6 +1666,11 @@ public open class CfnModel(
    */
   public interface HubAccessConfigProperty {
     /**
+     * The ARN of your private model hub content.
+     *
+     * This should be a `ModelReference` resource type that points to a SageMaker JumpStart public
+     * hub model.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-hubaccessconfig.html#cfn-sagemaker-model-hubaccessconfig-hubcontentarn)
      */
     public fun hubContentArn(): String
@@ -1669,7 +1681,9 @@ public open class CfnModel(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param hubContentArn the value to be set. 
+       * @param hubContentArn The ARN of your private model hub content. 
+       * This should be a `ModelReference` resource type that points to a SageMaker JumpStart public
+       * hub model.
        */
       public fun hubContentArn(hubContentArn: String)
     }
@@ -1680,7 +1694,9 @@ public open class CfnModel(
           software.amazon.awscdk.services.sagemaker.CfnModel.HubAccessConfigProperty.builder()
 
       /**
-       * @param hubContentArn the value to be set. 
+       * @param hubContentArn The ARN of your private model hub content. 
+       * This should be a `ModelReference` resource type that points to a SageMaker JumpStart public
+       * hub model.
        */
       override fun hubContentArn(hubContentArn: String) {
         cdkBuilder.hubContentArn(hubContentArn)
@@ -1695,6 +1711,11 @@ public open class CfnModel(
     ) : CdkObject(cdkObject),
         HubAccessConfigProperty {
       /**
+       * The ARN of your private model hub content.
+       *
+       * This should be a `ModelReference` resource type that points to a SageMaker JumpStart public
+       * hub model.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-hubaccessconfig.html#cfn-sagemaker-model-hubaccessconfig-hubcontentarn)
        */
       override fun hubContentArn(): String = unwrap(this).getHubContentArn()
@@ -2501,6 +2522,9 @@ public open class CfnModel(
     public fun compressionType(): String
 
     /**
+     * The configuration for a private hub model reference that points to a SageMaker JumpStart
+     * public hub model.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-hubaccessconfig)
      */
     public fun hubAccessConfig(): Any? = unwrap(this).getHubAccessConfig()
@@ -2518,9 +2542,13 @@ public open class CfnModel(
      * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
      * containing a list of object keys that you want SageMaker to use for model training.
      *
-     * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
+     * If you choose `AugmentedManifestFile` , `S3Uri` identifies an object that is an augmented
      * manifest file in JSON lines format. This file contains the data you want to use for model
      * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
+     *
+     * If you choose `Converse` , `S3Uri` identifies an Amazon S3 location that contains data
+     * formatted according to Converse format. This format structures conversational messages with
+     * specific roles and content types used for training and fine-tuning foundational models.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-s3datatype)
      */
@@ -2586,17 +2614,20 @@ public open class CfnModel(
       public fun compressionType(compressionType: String)
 
       /**
-       * @param hubAccessConfig the value to be set.
+       * @param hubAccessConfig The configuration for a private hub model reference that points to a
+       * SageMaker JumpStart public hub model.
        */
       public fun hubAccessConfig(hubAccessConfig: IResolvable)
 
       /**
-       * @param hubAccessConfig the value to be set.
+       * @param hubAccessConfig The configuration for a private hub model reference that points to a
+       * SageMaker JumpStart public hub model.
        */
       public fun hubAccessConfig(hubAccessConfig: HubAccessConfigProperty)
 
       /**
-       * @param hubAccessConfig the value to be set.
+       * @param hubAccessConfig The configuration for a private hub model reference that points to a
+       * SageMaker JumpStart public hub model.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d659e84329a57ed448e1bfd976f49ddb856b4cb452027a419144fbfad60eb1f1")
@@ -2626,9 +2657,13 @@ public open class CfnModel(
        * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
        * containing a list of object keys that you want SageMaker to use for model training.
        *
-       * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
+       * If you choose `AugmentedManifestFile` , `S3Uri` identifies an object that is an augmented
        * manifest file in JSON lines format. This file contains the data you want to use for model
        * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
+       *
+       * If you choose `Converse` , `S3Uri` identifies an Amazon S3 location that contains data
+       * formatted according to Converse format. This format structures conversational messages with
+       * specific roles and content types used for training and fine-tuning foundational models.
        */
       public fun s3DataType(s3DataType: String)
 
@@ -2692,21 +2727,24 @@ public open class CfnModel(
       }
 
       /**
-       * @param hubAccessConfig the value to be set.
+       * @param hubAccessConfig The configuration for a private hub model reference that points to a
+       * SageMaker JumpStart public hub model.
        */
       override fun hubAccessConfig(hubAccessConfig: IResolvable) {
         cdkBuilder.hubAccessConfig(hubAccessConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param hubAccessConfig the value to be set.
+       * @param hubAccessConfig The configuration for a private hub model reference that points to a
+       * SageMaker JumpStart public hub model.
        */
       override fun hubAccessConfig(hubAccessConfig: HubAccessConfigProperty) {
         cdkBuilder.hubAccessConfig(hubAccessConfig.let(HubAccessConfigProperty.Companion::unwrap))
       }
 
       /**
-       * @param hubAccessConfig the value to be set.
+       * @param hubAccessConfig The configuration for a private hub model reference that points to a
+       * SageMaker JumpStart public hub model.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d659e84329a57ed448e1bfd976f49ddb856b4cb452027a419144fbfad60eb1f1")
@@ -2743,9 +2781,13 @@ public open class CfnModel(
        * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
        * containing a list of object keys that you want SageMaker to use for model training.
        *
-       * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
+       * If you choose `AugmentedManifestFile` , `S3Uri` identifies an object that is an augmented
        * manifest file in JSON lines format. This file contains the data you want to use for model
        * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
+       *
+       * If you choose `Converse` , `S3Uri` identifies an Amazon S3 location that contains data
+       * formatted according to Converse format. This format structures conversational messages with
+       * specific roles and content types used for training and fine-tuning foundational models.
        */
       override fun s3DataType(s3DataType: String) {
         cdkBuilder.s3DataType(s3DataType)
@@ -2813,6 +2855,9 @@ public open class CfnModel(
       override fun compressionType(): String = unwrap(this).getCompressionType()
 
       /**
+       * The configuration for a private hub model reference that points to a SageMaker JumpStart
+       * public hub model.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-hubaccessconfig)
        */
       override fun hubAccessConfig(): Any? = unwrap(this).getHubAccessConfig()
@@ -2830,9 +2875,13 @@ public open class CfnModel(
        * If you choose `ManifestFile` , `S3Uri` identifies an object that is a manifest file
        * containing a list of object keys that you want SageMaker to use for model training.
        *
-       * If you choose `AugmentedManifestFile` , S3Uri identifies an object that is an augmented
+       * If you choose `AugmentedManifestFile` , `S3Uri` identifies an object that is an augmented
        * manifest file in JSON lines format. This file contains the data you want to use for model
        * training. `AugmentedManifestFile` can only be used if the Channel's input mode is `Pipe` .
+       *
+       * If you choose `Converse` , `S3Uri` identifies an Amazon S3 location that contains data
+       * formatted according to Converse format. This format structures conversational messages with
+       * specific roles and content types used for training and fine-tuning foundational models.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-s3datatype)
        */

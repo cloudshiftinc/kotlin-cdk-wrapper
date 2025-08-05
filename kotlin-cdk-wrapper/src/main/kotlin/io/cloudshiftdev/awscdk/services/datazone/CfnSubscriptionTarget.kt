@@ -38,7 +38,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .authorizedPrincipals(List.of("authorizedPrincipals"))
  * .domainIdentifier("domainIdentifier")
  * .environmentIdentifier("environmentIdentifier")
- * .manageAccessRole("manageAccessRole")
  * .name("name")
  * .subscriptionTargetConfig(List.of(SubscriptionTargetFormProperty.builder()
  * .content("content")
@@ -46,6 +45,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .type("type")
  * // the properties below are optional
+ * .manageAccessRole("manageAccessRole")
  * .provider("provider")
  * .build();
  * ```
@@ -184,7 +184,7 @@ public open class CfnSubscriptionTarget(
   /**
    * The manage access role that is used to create the subscription target.
    */
-  public open fun manageAccessRole(): String = unwrap(this).getManageAccessRole()
+  public open fun manageAccessRole(): String? = unwrap(this).getManageAccessRole()
 
   /**
    * The manage access role that is used to create the subscription target.

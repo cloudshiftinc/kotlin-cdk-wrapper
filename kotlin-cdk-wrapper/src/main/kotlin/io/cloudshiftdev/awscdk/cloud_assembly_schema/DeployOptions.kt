@@ -134,7 +134,7 @@ public interface DeployOptions : DefaultCdkOptions {
   /**
    * What kind of security changes require approval.
    *
-   * Default: RequireApproval.Never
+   * Default: RequireApproval.NEVER
    */
   public fun requireApproval(): RequireApproval? =
       unwrap(this).getRequireApproval()?.let(RequireApproval::wrap)
@@ -887,7 +887,7 @@ public interface DeployOptions : DefaultCdkOptions {
     /**
      * What kind of security changes require approval.
      *
-     * Default: RequireApproval.Never
+     * Default: RequireApproval.NEVER
      */
     override fun requireApproval(): RequireApproval? =
         unwrap(this).getRequireApproval()?.let(RequireApproval::wrap)

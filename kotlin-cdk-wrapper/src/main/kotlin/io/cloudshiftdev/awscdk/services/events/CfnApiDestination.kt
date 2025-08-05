@@ -86,6 +86,23 @@ public open class CfnApiDestination(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
+   * Returns the Amazon Resource Name (ARN) of an API destination in resource format, so it can be
+   * used in the `Resource` element of IAM permission policy statements.
+   *
+   * For more information, see [Resource types defined by Amazon
+   * EventBridge](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridge.html#amazoneventbridge-resources-for-iam-policies)
+   * in the *Service Authorization Reference* .
+   *
+   * For example, the following resource defines an IAM policy that grants permission to update a
+   * specific API destination.
+   *
+   * `Resources: ExamplePolicy: Type: AWS::IAM::Policy Properties: PolicyName: ExamplePolicy
+   * PolicyDocument: Version: '2012-10-17' Statement: - Effect: Allow Action: -
+   * events:UpdateApiDestination Resource: - !GetAtt myApiDestination.ArnForPolicy`
+   */
+  public open fun attrArnForPolicy(): String = unwrap(this).getAttrArnForPolicy()
+
+  /**
    * The ARN of the connection to use for the API destination.
    */
   public open fun connectionArn(): String = unwrap(this).getConnectionArn()

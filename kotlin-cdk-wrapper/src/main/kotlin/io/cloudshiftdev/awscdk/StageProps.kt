@@ -82,6 +82,20 @@ public interface StageProps {
    * Options for applying a permissions boundary to all IAM Roles and Users created within this
    * Stage.
    *
+   * Be aware that this feature uses Aspects, and the Aspects are applied at the
+   * Stack level with a priority of `MUTATING` (if the feature flag
+   * `&#64;aws-cdk/core:aspectPrioritiesMutating` is set) or `DEFAULT` (if the flag
+   * is not set). This is relevant if you are both using your own Aspects to
+   * assign Permissions Boundaries, as well as specifying this property.  The
+   * Aspect added by this property will overwrite the Permissions Boundary
+   * assigned by your own Aspect if both: (a) your Aspect has a lower or equal
+   * priority to the automatic Aspect, and (b) your Aspect is applied *above*
+   * the Stack level.  If either of those conditions are not true, your own
+   * Aspect will win.
+   *
+   * We recommend assigning Permissions Boundaries only using the provided APIs,
+   * and not using custom Aspects.
+   *
    * Default: - no permissions boundary is applied
    */
   public fun permissionsBoundary(): PermissionsBoundary? =
@@ -98,6 +112,14 @@ public interface StageProps {
   public fun policyValidationBeta1(): List<IPolicyValidationPluginBeta1> =
       unwrap(this).getPolicyValidationBeta1()?.map(IPolicyValidationPluginBeta1::wrap) ?:
       emptyList()
+
+  /**
+   * A list of IPropertyInjector attached to this Stage.
+   *
+   * Default: - no PropertyInjectors
+   */
+  public fun propertyInjectors(): List<IPropertyInjector> =
+      unwrap(this).getPropertyInjectors()?.map(IPropertyInjector::wrap) ?: emptyList()
 
   /**
    * Name of this stage.
@@ -158,6 +180,19 @@ public interface StageProps {
     /**
      * @param permissionsBoundary Options for applying a permissions boundary to all IAM Roles and
      * Users created within this Stage.
+     * Be aware that this feature uses Aspects, and the Aspects are applied at the
+     * Stack level with a priority of `MUTATING` (if the feature flag
+     * `&#64;aws-cdk/core:aspectPrioritiesMutating` is set) or `DEFAULT` (if the flag
+     * is not set). This is relevant if you are both using your own Aspects to
+     * assign Permissions Boundaries, as well as specifying this property.  The
+     * Aspect added by this property will overwrite the Permissions Boundary
+     * assigned by your own Aspect if both: (a) your Aspect has a lower or equal
+     * priority to the automatic Aspect, and (b) your Aspect is applied *above*
+     * the Stack level.  If either of those conditions are not true, your own
+     * Aspect will win.
+     *
+     * We recommend assigning Permissions Boundaries only using the provided APIs,
+     * and not using custom Aspects.
      */
     public fun permissionsBoundary(permissionsBoundary: PermissionsBoundary)
 
@@ -174,6 +209,16 @@ public interface StageProps {
      * synthesis will be interrupted and the report displayed to the user.
      */
     public fun policyValidationBeta1(vararg policyValidationBeta1: IPolicyValidationPluginBeta1)
+
+    /**
+     * @param propertyInjectors A list of IPropertyInjector attached to this Stage.
+     */
+    public fun propertyInjectors(propertyInjectors: List<IPropertyInjector>)
+
+    /**
+     * @param propertyInjectors A list of IPropertyInjector attached to this Stage.
+     */
+    public fun propertyInjectors(vararg propertyInjectors: IPropertyInjector)
 
     /**
      * @param stageName Name of this stage.
@@ -236,6 +281,19 @@ public interface StageProps {
     /**
      * @param permissionsBoundary Options for applying a permissions boundary to all IAM Roles and
      * Users created within this Stage.
+     * Be aware that this feature uses Aspects, and the Aspects are applied at the
+     * Stack level with a priority of `MUTATING` (if the feature flag
+     * `&#64;aws-cdk/core:aspectPrioritiesMutating` is set) or `DEFAULT` (if the flag
+     * is not set). This is relevant if you are both using your own Aspects to
+     * assign Permissions Boundaries, as well as specifying this property.  The
+     * Aspect added by this property will overwrite the Permissions Boundary
+     * assigned by your own Aspect if both: (a) your Aspect has a lower or equal
+     * priority to the automatic Aspect, and (b) your Aspect is applied *above*
+     * the Stack level.  If either of those conditions are not true, your own
+     * Aspect will win.
+     *
+     * We recommend assigning Permissions Boundaries only using the provided APIs,
+     * and not using custom Aspects.
      */
     override fun permissionsBoundary(permissionsBoundary: PermissionsBoundary) {
       cdkBuilder.permissionsBoundary(permissionsBoundary.let(PermissionsBoundary.Companion::unwrap))
@@ -257,6 +315,19 @@ public interface StageProps {
      */
     override fun policyValidationBeta1(vararg policyValidationBeta1: IPolicyValidationPluginBeta1):
         Unit = policyValidationBeta1(policyValidationBeta1.toList())
+
+    /**
+     * @param propertyInjectors A list of IPropertyInjector attached to this Stage.
+     */
+    override fun propertyInjectors(propertyInjectors: List<IPropertyInjector>) {
+      cdkBuilder.propertyInjectors(propertyInjectors.map(IPropertyInjector.Companion::unwrap))
+    }
+
+    /**
+     * @param propertyInjectors A list of IPropertyInjector attached to this Stage.
+     */
+    override fun propertyInjectors(vararg propertyInjectors: IPropertyInjector): Unit =
+        propertyInjectors(propertyInjectors.toList())
 
     /**
      * @param stageName Name of this stage.
@@ -324,6 +395,20 @@ public interface StageProps {
      * Options for applying a permissions boundary to all IAM Roles and Users created within this
      * Stage.
      *
+     * Be aware that this feature uses Aspects, and the Aspects are applied at the
+     * Stack level with a priority of `MUTATING` (if the feature flag
+     * `&#64;aws-cdk/core:aspectPrioritiesMutating` is set) or `DEFAULT` (if the flag
+     * is not set). This is relevant if you are both using your own Aspects to
+     * assign Permissions Boundaries, as well as specifying this property.  The
+     * Aspect added by this property will overwrite the Permissions Boundary
+     * assigned by your own Aspect if both: (a) your Aspect has a lower or equal
+     * priority to the automatic Aspect, and (b) your Aspect is applied *above*
+     * the Stack level.  If either of those conditions are not true, your own
+     * Aspect will win.
+     *
+     * We recommend assigning Permissions Boundaries only using the provided APIs,
+     * and not using custom Aspects.
+     *
      * Default: - no permissions boundary is applied
      */
     override fun permissionsBoundary(): PermissionsBoundary? =
@@ -340,6 +425,14 @@ public interface StageProps {
     override fun policyValidationBeta1(): List<IPolicyValidationPluginBeta1> =
         unwrap(this).getPolicyValidationBeta1()?.map(IPolicyValidationPluginBeta1::wrap) ?:
         emptyList()
+
+    /**
+     * A list of IPropertyInjector attached to this Stage.
+     *
+     * Default: - no PropertyInjectors
+     */
+    override fun propertyInjectors(): List<IPropertyInjector> =
+        unwrap(this).getPropertyInjectors()?.map(IPropertyInjector::wrap) ?: emptyList()
 
     /**
      * Name of this stage.

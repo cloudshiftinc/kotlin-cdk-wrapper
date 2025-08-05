@@ -23,11 +23,12 @@ import kotlin.collections.List
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.ec2.*;
  * CfnCapacityReservationProps cfnCapacityReservationProps = CfnCapacityReservationProps.builder()
- * .availabilityZone("availabilityZone")
  * .instanceCount(123)
  * .instancePlatform("instancePlatform")
  * .instanceType("instanceType")
  * // the properties below are optional
+ * .availabilityZone("availabilityZone")
+ * .availabilityZoneId("availabilityZoneId")
  * .ebsOptimized(false)
  * .endDate("endDate")
  * .endDateType("endDateType")
@@ -55,7 +56,14 @@ public interface CfnCapacityReservationProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-availabilityzone)
    */
-  public fun availabilityZone(): String
+  public fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+
+  /**
+   * The Availability Zone ID of the Capacity Reservation.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-availabilityzoneid)
+   */
+  public fun availabilityZoneId(): String? = unwrap(this).getAvailabilityZoneId()
 
   /**
    * Indicates whether the Capacity Reservation supports EBS-optimized instances.
@@ -114,9 +122,9 @@ public interface CfnCapacityReservationProps {
    * The number of instances for which to reserve capacity.
    *
    *
-   * You can request future-dated Capacity Reservations for an instance count with a minimum of 100
-   * VPUs. For example, if you request a future-dated Capacity Reservation for `m5.xlarge` instances,
-   * you must request at least 25 instances ( *25 * m5.xlarge = 100 vCPUs* ).
+   * You can request future-dated Capacity Reservations for an instance count with a minimum of 64
+   * vCPUs. For example, if you request a future-dated Capacity Reservation for `m5.xlarge` instances,
+   * you must request at least 25 instances ( *16 * m5.xlarge = 64 vCPUs* ).
    *
    *
    * Valid range: 1 - 1000
@@ -158,8 +166,8 @@ public interface CfnCapacityReservationProps {
    * The instance type for which to reserve capacity.
    *
    *
-   * You can request future-dated Capacity Reservations for instance types in the C, M, R, I, and T
-   * instance families only.
+   * You can request future-dated Capacity Reservations for instance types in the C, M, R, I, T, and
+   * G instance families only.
    *
    *
    * For more information, see [Instance
@@ -196,7 +204,9 @@ public interface CfnCapacityReservationProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-tagspecifications)
    */
-  public fun tagSpecifications(): Any? = unwrap(this).getTagSpecifications()
+  public fun tagSpecifications(): List<CfnCapacityReservation.TagSpecificationProperty> =
+      unwrap(this).getTagSpecifications()?.map(CfnCapacityReservation.TagSpecificationProperty::wrap)
+      ?: emptyList()
 
   /**
    * Indicates the tenancy of the Capacity Reservation. A Capacity Reservation can have one of the
@@ -236,9 +246,14 @@ public interface CfnCapacityReservationProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param availabilityZone The Availability Zone in which to create the Capacity Reservation. 
+     * @param availabilityZone The Availability Zone in which to create the Capacity Reservation.
      */
     public fun availabilityZone(availabilityZone: String)
+
+    /**
+     * @param availabilityZoneId The Availability Zone ID of the Capacity Reservation.
+     */
+    public fun availabilityZoneId(availabilityZoneId: String)
 
     /**
      * @param ebsOptimized Indicates whether the Capacity Reservation supports EBS-optimized
@@ -300,9 +315,9 @@ public interface CfnCapacityReservationProps {
     /**
      * @param instanceCount The number of instances for which to reserve capacity. 
      *
-     * You can request future-dated Capacity Reservations for an instance count with a minimum of
-     * 100 VPUs. For example, if you request a future-dated Capacity Reservation for `m5.xlarge`
-     * instances, you must request at least 25 instances ( *25 * m5.xlarge = 100 vCPUs* ).
+     * You can request future-dated Capacity Reservations for an instance count with a minimum of 64
+     * vCPUs. For example, if you request a future-dated Capacity Reservation for `m5.xlarge`
+     * instances, you must request at least 25 instances ( *16 * m5.xlarge = 64 vCPUs* ).
      *
      *
      * Valid range: 1 - 1000
@@ -336,8 +351,8 @@ public interface CfnCapacityReservationProps {
     /**
      * @param instanceType The instance type for which to reserve capacity. 
      *
-     * You can request future-dated Capacity Reservations for instance types in the C, M, R, I, and
-     * T instance families only.
+     * You can request future-dated Capacity Reservations for instance types in the C, M, R, I, T,
+     * and G instance families only.
      *
      *
      * For more information, see [Instance
@@ -364,17 +379,14 @@ public interface CfnCapacityReservationProps {
     /**
      * @param tagSpecifications The tags to apply to the Capacity Reservation during launch.
      */
-    public fun tagSpecifications(tagSpecifications: IResolvable)
+    public
+        fun tagSpecifications(tagSpecifications: List<CfnCapacityReservation.TagSpecificationProperty>)
 
     /**
      * @param tagSpecifications The tags to apply to the Capacity Reservation during launch.
      */
-    public fun tagSpecifications(tagSpecifications: List<Any>)
-
-    /**
-     * @param tagSpecifications The tags to apply to the Capacity Reservation during launch.
-     */
-    public fun tagSpecifications(vararg tagSpecifications: Any)
+    public fun tagSpecifications(vararg
+        tagSpecifications: CfnCapacityReservation.TagSpecificationProperty)
 
     /**
      * @param tenancy Indicates the tenancy of the Capacity Reservation. A Capacity Reservation can
@@ -407,10 +419,17 @@ public interface CfnCapacityReservationProps {
         = software.amazon.awscdk.services.ec2.CfnCapacityReservationProps.builder()
 
     /**
-     * @param availabilityZone The Availability Zone in which to create the Capacity Reservation. 
+     * @param availabilityZone The Availability Zone in which to create the Capacity Reservation.
      */
     override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
+    }
+
+    /**
+     * @param availabilityZoneId The Availability Zone ID of the Capacity Reservation.
+     */
+    override fun availabilityZoneId(availabilityZoneId: String) {
+      cdkBuilder.availabilityZoneId(availabilityZoneId)
     }
 
     /**
@@ -485,9 +504,9 @@ public interface CfnCapacityReservationProps {
     /**
      * @param instanceCount The number of instances for which to reserve capacity. 
      *
-     * You can request future-dated Capacity Reservations for an instance count with a minimum of
-     * 100 VPUs. For example, if you request a future-dated Capacity Reservation for `m5.xlarge`
-     * instances, you must request at least 25 instances ( *25 * m5.xlarge = 100 vCPUs* ).
+     * You can request future-dated Capacity Reservations for an instance count with a minimum of 64
+     * vCPUs. For example, if you request a future-dated Capacity Reservation for `m5.xlarge`
+     * instances, you must request at least 25 instances ( *16 * m5.xlarge = 64 vCPUs* ).
      *
      *
      * Valid range: 1 - 1000
@@ -527,8 +546,8 @@ public interface CfnCapacityReservationProps {
     /**
      * @param instanceType The instance type for which to reserve capacity. 
      *
-     * You can request future-dated Capacity Reservations for instance types in the C, M, R, I, and
-     * T instance families only.
+     * You can request future-dated Capacity Reservations for instance types in the C, M, R, I, T,
+     * and G instance families only.
      *
      *
      * For more information, see [Instance
@@ -561,21 +580,16 @@ public interface CfnCapacityReservationProps {
     /**
      * @param tagSpecifications The tags to apply to the Capacity Reservation during launch.
      */
-    override fun tagSpecifications(tagSpecifications: IResolvable) {
-      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
+    override
+        fun tagSpecifications(tagSpecifications: List<CfnCapacityReservation.TagSpecificationProperty>) {
+      cdkBuilder.tagSpecifications(tagSpecifications.map(CfnCapacityReservation.TagSpecificationProperty.Companion::unwrap))
     }
 
     /**
      * @param tagSpecifications The tags to apply to the Capacity Reservation during launch.
      */
-    override fun tagSpecifications(tagSpecifications: List<Any>) {
-      cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
-    }
-
-    /**
-     * @param tagSpecifications The tags to apply to the Capacity Reservation during launch.
-     */
-    override fun tagSpecifications(vararg tagSpecifications: Any): Unit =
+    override fun tagSpecifications(vararg
+        tagSpecifications: CfnCapacityReservation.TagSpecificationProperty): Unit =
         tagSpecifications(tagSpecifications.toList())
 
     /**
@@ -620,7 +634,14 @@ public interface CfnCapacityReservationProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-availabilityzone)
      */
-    override fun availabilityZone(): String = unwrap(this).getAvailabilityZone()
+    override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+
+    /**
+     * The Availability Zone ID of the Capacity Reservation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-availabilityzoneid)
+     */
+    override fun availabilityZoneId(): String? = unwrap(this).getAvailabilityZoneId()
 
     /**
      * Indicates whether the Capacity Reservation supports EBS-optimized instances.
@@ -679,9 +700,9 @@ public interface CfnCapacityReservationProps {
      * The number of instances for which to reserve capacity.
      *
      *
-     * You can request future-dated Capacity Reservations for an instance count with a minimum of
-     * 100 VPUs. For example, if you request a future-dated Capacity Reservation for `m5.xlarge`
-     * instances, you must request at least 25 instances ( *25 * m5.xlarge = 100 vCPUs* ).
+     * You can request future-dated Capacity Reservations for an instance count with a minimum of 64
+     * vCPUs. For example, if you request a future-dated Capacity Reservation for `m5.xlarge`
+     * instances, you must request at least 25 instances ( *16 * m5.xlarge = 64 vCPUs* ).
      *
      *
      * Valid range: 1 - 1000
@@ -723,8 +744,8 @@ public interface CfnCapacityReservationProps {
      * The instance type for which to reserve capacity.
      *
      *
-     * You can request future-dated Capacity Reservations for instance types in the C, M, R, I, and
-     * T instance families only.
+     * You can request future-dated Capacity Reservations for instance types in the C, M, R, I, T,
+     * and G instance families only.
      *
      *
      * For more information, see [Instance
@@ -761,7 +782,9 @@ public interface CfnCapacityReservationProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-tagspecifications)
      */
-    override fun tagSpecifications(): Any? = unwrap(this).getTagSpecifications()
+    override fun tagSpecifications(): List<CfnCapacityReservation.TagSpecificationProperty> =
+        unwrap(this).getTagSpecifications()?.map(CfnCapacityReservation.TagSpecificationProperty::wrap)
+        ?: emptyList()
 
     /**
      * Indicates the tenancy of the Capacity Reservation. A Capacity Reservation can have one of the

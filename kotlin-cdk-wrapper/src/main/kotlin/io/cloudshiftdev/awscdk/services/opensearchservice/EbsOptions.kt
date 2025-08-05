@@ -22,14 +22,19 @@ import kotlin.Unit
  *
  * ```
  * Domain domain = Domain.Builder.create(this, "Domain")
- * .version(EngineVersion.OPENSEARCH_1_0)
+ * .version(EngineVersion.OPENSEARCH_1_3)
  * .ebs(EbsOptions.builder()
- * .volumeSize(100)
- * .volumeType(EbsDeviceVolumeType.GENERAL_PURPOSE_SSD)
+ * .volumeSize(10)
+ * .volumeType(EbsDeviceVolumeType.GENERAL_PURPOSE_SSD_GP3)
  * .build())
- * .nodeToNodeEncryption(true)
- * .encryptionAtRest(EncryptionAtRestOptions.builder()
+ * .zoneAwareness(ZoneAwarenessConfig.builder()
  * .enabled(true)
+ * .availabilityZoneCount(3)
+ * .build())
+ * .capacity(CapacityConfig.builder()
+ * .multiAzWithStandbyEnabled(true)
+ * .masterNodes(3)
+ * .dataNodes(3)
  * .build())
  * .build();
  * ```

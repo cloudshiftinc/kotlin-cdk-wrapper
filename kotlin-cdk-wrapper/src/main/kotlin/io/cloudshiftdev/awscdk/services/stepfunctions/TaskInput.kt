@@ -14,14 +14,17 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * Function fn;
- * LambdaInvoke.Builder.create(this, "Invoke with callback")
- * .lambdaFunction(fn)
+ * import io.cloudshiftdev.awscdk.services.apigateway.*;
+ * RestApi api;
+ * CallApiGatewayRestApiEndpoint.jsonata(this, "Endpoint",
+ * CallApiGatewayRestApiEndpointJsonataProps.builder()
+ * .api(api)
+ * .stageName("Stage")
+ * .method(HttpMethod.PUT)
  * .integrationPattern(IntegrationPattern.WAIT_FOR_TASK_TOKEN)
- * .payload(TaskInput.fromObject(Map.of(
- * "token", JsonPath.getTaskToken(),
- * "input", JsonPath.stringAt("$.someField"))))
- * .build();
+ * .headers(TaskInput.fromObject(Map.of(
+ * "TaskToken", "{% States.Array($states.context.taskToken) %}")))
+ * .build());
  * ```
  */
 public open class TaskInput(

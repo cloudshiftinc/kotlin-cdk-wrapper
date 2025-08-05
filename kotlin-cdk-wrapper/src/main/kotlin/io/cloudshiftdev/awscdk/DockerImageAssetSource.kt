@@ -24,6 +24,7 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .assetName("assetName")
  * .directoryName("directoryName")
+ * .displayName("displayName")
  * .dockerBuildArgs(Map.of(
  * "dockerBuildArgsKey", "dockerBuildArgs"))
  * .dockerBuildSecrets(Map.of(
@@ -67,6 +68,16 @@ public interface DockerImageAssetSource {
    * Default: - Exactly one of `directoryName` and `executable` is required
    */
   public fun directoryName(): String? = unwrap(this).getDirectoryName()
+
+  /**
+   * A display name for this asset.
+   *
+   * If supplied, the display name will be used in locations where the asset
+   * identifier is printed, like in the CLI progress information.
+   *
+   * Default: - The asset hash is used to display the asset
+   */
+  public fun displayName(): String? = unwrap(this).getDisplayName()
 
   /**
    * Build args to pass to the `docker build` command.
@@ -208,6 +219,13 @@ public interface DockerImageAssetSource {
     public fun directoryName(directoryName: String)
 
     /**
+     * @param displayName A display name for this asset.
+     * If supplied, the display name will be used in locations where the asset
+     * identifier is printed, like in the CLI progress information.
+     */
+    public fun displayName(displayName: String)
+
+    /**
      * @param dockerBuildArgs Build args to pass to the `docker build` command.
      * Since Docker build arguments are resolved before deployment, keys and
      * values cannot refer to unresolved tokens (such as `lambda.functionArn` or
@@ -337,6 +355,15 @@ public interface DockerImageAssetSource {
      */
     override fun directoryName(directoryName: String) {
       cdkBuilder.directoryName(directoryName)
+    }
+
+    /**
+     * @param displayName A display name for this asset.
+     * If supplied, the display name will be used in locations where the asset
+     * identifier is printed, like in the CLI progress information.
+     */
+    override fun displayName(displayName: String) {
+      cdkBuilder.displayName(displayName)
     }
 
     /**
@@ -501,6 +528,16 @@ public interface DockerImageAssetSource {
      * Default: - Exactly one of `directoryName` and `executable` is required
      */
     override fun directoryName(): String? = unwrap(this).getDirectoryName()
+
+    /**
+     * A display name for this asset.
+     *
+     * If supplied, the display name will be used in locations where the asset
+     * identifier is printed, like in the CLI progress information.
+     *
+     * Default: - The asset hash is used to display the asset
+     */
+    override fun displayName(): String? = unwrap(this).getDisplayName()
 
     /**
      * Build args to pass to the `docker build` command.

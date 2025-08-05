@@ -4750,12 +4750,12 @@ public open class CfnComponent(
       /**
        * @param variantValues The combination of variants that comprise this variant.
        */
-      public fun variantValues(variantValues: IResolvable)
+      public fun variantValues(variantValues: Map<String, String>)
 
       /**
        * @param variantValues The combination of variants that comprise this variant.
        */
-      public fun variantValues(variantValues: Map<String, String>)
+      public fun variantValues(variantValues: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -4776,15 +4776,15 @@ public open class CfnComponent(
       /**
        * @param variantValues The combination of variants that comprise this variant.
        */
-      override fun variantValues(variantValues: IResolvable) {
-        cdkBuilder.variantValues(variantValues.let(IResolvable.Companion::unwrap))
+      override fun variantValues(variantValues: Map<String, String>) {
+        cdkBuilder.variantValues(variantValues)
       }
 
       /**
        * @param variantValues The combination of variants that comprise this variant.
        */
-      override fun variantValues(variantValues: Map<String, String>) {
-        cdkBuilder.variantValues(variantValues)
+      override fun variantValues(variantValues: IResolvable) {
+        cdkBuilder.variantValues(variantValues.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

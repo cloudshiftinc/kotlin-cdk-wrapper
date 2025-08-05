@@ -1808,14 +1808,14 @@ public open class CfnCluster(
        * This is meta information about clusters and applications that are used for testing and
        * troubleshooting.
        */
-      public fun additionalInfo(additionalInfo: IResolvable)
+      public fun additionalInfo(additionalInfo: Map<String, String>)
 
       /**
        * @param additionalInfo This option is for advanced users only.
        * This is meta information about clusters and applications that are used for testing and
        * troubleshooting.
        */
-      public fun additionalInfo(additionalInfo: Map<String, String>)
+      public fun additionalInfo(additionalInfo: IResolvable)
 
       /**
        * @param args Arguments for Amazon EMR to pass to the application.
@@ -1848,8 +1848,8 @@ public open class CfnCluster(
        * This is meta information about clusters and applications that are used for testing and
        * troubleshooting.
        */
-      override fun additionalInfo(additionalInfo: IResolvable) {
-        cdkBuilder.additionalInfo(additionalInfo.let(IResolvable.Companion::unwrap))
+      override fun additionalInfo(additionalInfo: Map<String, String>) {
+        cdkBuilder.additionalInfo(additionalInfo)
       }
 
       /**
@@ -1857,8 +1857,8 @@ public open class CfnCluster(
        * This is meta information about clusters and applications that are used for testing and
        * troubleshooting.
        */
-      override fun additionalInfo(additionalInfo: Map<String, String>) {
-        cdkBuilder.additionalInfo(additionalInfo)
+      override fun additionalInfo(additionalInfo: IResolvable) {
+        cdkBuilder.additionalInfo(additionalInfo.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3117,13 +3117,13 @@ public open class CfnCluster(
        * @param configurationProperties A list of additional configurations to apply within a
        * configuration object.
        */
-      public fun configurationProperties(configurationProperties: IResolvable)
+      public fun configurationProperties(configurationProperties: Map<String, String>)
 
       /**
        * @param configurationProperties A list of additional configurations to apply within a
        * configuration object.
        */
-      public fun configurationProperties(configurationProperties: Map<String, String>)
+      public fun configurationProperties(configurationProperties: IResolvable)
 
       /**
        * @param configurations A list of additional configurations to apply within a configuration
@@ -3160,16 +3160,16 @@ public open class CfnCluster(
        * @param configurationProperties A list of additional configurations to apply within a
        * configuration object.
        */
-      override fun configurationProperties(configurationProperties: IResolvable) {
-        cdkBuilder.configurationProperties(configurationProperties.let(IResolvable.Companion::unwrap))
+      override fun configurationProperties(configurationProperties: Map<String, String>) {
+        cdkBuilder.configurationProperties(configurationProperties)
       }
 
       /**
        * @param configurationProperties A list of additional configurations to apply within a
        * configuration object.
        */
-      override fun configurationProperties(configurationProperties: Map<String, String>) {
-        cdkBuilder.configurationProperties(configurationProperties)
+      override fun configurationProperties(configurationProperties: IResolvable) {
+        cdkBuilder.configurationProperties(configurationProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3450,6 +3450,9 @@ public open class CfnCluster(
     /**
      * Indicates whether an Amazon EBS volume is EBS-optimized.
      *
+     * The default is false. You should explicitly set this value to true to enable the Amazon
+     * EBS-optimized setting for an EC2 instance.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsconfiguration.html#cfn-emr-cluster-ebsconfiguration-ebsoptimized)
      */
     public fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
@@ -3479,11 +3482,15 @@ public open class CfnCluster(
 
       /**
        * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
+       * The default is false. You should explicitly set this value to true to enable the Amazon
+       * EBS-optimized setting for an EC2 instance.
        */
       public fun ebsOptimized(ebsOptimized: Boolean)
 
       /**
        * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
+       * The default is false. You should explicitly set this value to true to enable the Amazon
+       * EBS-optimized setting for an EC2 instance.
        */
       public fun ebsOptimized(ebsOptimized: IResolvable)
     }
@@ -3518,6 +3525,8 @@ public open class CfnCluster(
 
       /**
        * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
+       * The default is false. You should explicitly set this value to true to enable the Amazon
+       * EBS-optimized setting for an EC2 instance.
        */
       override fun ebsOptimized(ebsOptimized: Boolean) {
         cdkBuilder.ebsOptimized(ebsOptimized)
@@ -3525,6 +3534,8 @@ public open class CfnCluster(
 
       /**
        * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
+       * The default is false. You should explicitly set this value to true to enable the Amazon
+       * EBS-optimized setting for an EC2 instance.
        */
       override fun ebsOptimized(ebsOptimized: IResolvable) {
         cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable.Companion::unwrap))
@@ -3547,6 +3558,9 @@ public open class CfnCluster(
 
       /**
        * Indicates whether an Amazon EBS volume is EBS-optimized.
+       *
+       * The default is false. You should explicitly set this value to true to enable the Amazon
+       * EBS-optimized setting for an EC2 instance.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsconfiguration.html#cfn-emr-cluster-ebsconfiguration-ebsoptimized)
        */
@@ -7681,6 +7695,8 @@ public open class CfnCluster(
    * .maximumCoreCapacityUnits(123)
    * .maximumOnDemandCapacityUnits(123)
    * .build())
+   * .scalingStrategy("scalingStrategy")
+   * .utilizationPerformanceIndex(123)
    * .build();
    * ```
    *
@@ -7697,6 +7713,27 @@ public open class CfnCluster(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-managedscalingpolicy.html#cfn-emr-cluster-managedscalingpolicy-computelimits)
      */
     public fun computeLimits(): Any? = unwrap(this).getComputeLimits()
+
+    /**
+     * Determines whether a custom scaling utilization performance index can be set.
+     *
+     * Possible values include *ADVANCED* or *DEFAULT* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-managedscalingpolicy.html#cfn-emr-cluster-managedscalingpolicy-scalingstrategy)
+     */
+    public fun scalingStrategy(): String? = unwrap(this).getScalingStrategy()
+
+    /**
+     * An integer value that represents an advanced scaling strategy.
+     *
+     * Setting a higher value optimizes for performance. Setting a lower value optimizes for
+     * resource conservation. Setting the value to 50 balances performance and resource conservation.
+     * Possible values are 1, 25, 50, 75, and 100.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-managedscalingpolicy.html#cfn-emr-cluster-managedscalingpolicy-utilizationperformanceindex)
+     */
+    public fun utilizationPerformanceIndex(): Number? =
+        unwrap(this).getUtilizationPerformanceIndex()
 
     /**
      * A builder for [ManagedScalingPolicyProperty]
@@ -7728,6 +7765,22 @@ public open class CfnCluster(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("95bc72e2e9aa925adeed929babb4791327d9958ad0bd79ae634df9497a8bec64")
       public fun computeLimits(computeLimits: ComputeLimitsProperty.Builder.() -> Unit)
+
+      /**
+       * @param scalingStrategy Determines whether a custom scaling utilization performance index
+       * can be set.
+       * Possible values include *ADVANCED* or *DEFAULT* .
+       */
+      public fun scalingStrategy(scalingStrategy: String)
+
+      /**
+       * @param utilizationPerformanceIndex An integer value that represents an advanced scaling
+       * strategy.
+       * Setting a higher value optimizes for performance. Setting a lower value optimizes for
+       * resource conservation. Setting the value to 50 balances performance and resource conservation.
+       * Possible values are 1, 25, 50, 75, and 100.
+       */
+      public fun utilizationPerformanceIndex(utilizationPerformanceIndex: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -7766,6 +7819,26 @@ public open class CfnCluster(
       override fun computeLimits(computeLimits: ComputeLimitsProperty.Builder.() -> Unit): Unit =
           computeLimits(ComputeLimitsProperty(computeLimits))
 
+      /**
+       * @param scalingStrategy Determines whether a custom scaling utilization performance index
+       * can be set.
+       * Possible values include *ADVANCED* or *DEFAULT* .
+       */
+      override fun scalingStrategy(scalingStrategy: String) {
+        cdkBuilder.scalingStrategy(scalingStrategy)
+      }
+
+      /**
+       * @param utilizationPerformanceIndex An integer value that represents an advanced scaling
+       * strategy.
+       * Setting a higher value optimizes for performance. Setting a lower value optimizes for
+       * resource conservation. Setting the value to 50 balances performance and resource conservation.
+       * Possible values are 1, 25, 50, 75, and 100.
+       */
+      override fun utilizationPerformanceIndex(utilizationPerformanceIndex: Number) {
+        cdkBuilder.utilizationPerformanceIndex(utilizationPerformanceIndex)
+      }
+
       public fun build():
           software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty =
           cdkBuilder.build()
@@ -7785,6 +7858,27 @@ public open class CfnCluster(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-managedscalingpolicy.html#cfn-emr-cluster-managedscalingpolicy-computelimits)
        */
       override fun computeLimits(): Any? = unwrap(this).getComputeLimits()
+
+      /**
+       * Determines whether a custom scaling utilization performance index can be set.
+       *
+       * Possible values include *ADVANCED* or *DEFAULT* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-managedscalingpolicy.html#cfn-emr-cluster-managedscalingpolicy-scalingstrategy)
+       */
+      override fun scalingStrategy(): String? = unwrap(this).getScalingStrategy()
+
+      /**
+       * An integer value that represents an advanced scaling strategy.
+       *
+       * Setting a higher value optimizes for performance. Setting a lower value optimizes for
+       * resource conservation. Setting the value to 50 balances performance and resource conservation.
+       * Possible values are 1, 25, 50, 75, and 100.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-managedscalingpolicy.html#cfn-emr-cluster-managedscalingpolicy-utilizationperformanceindex)
+       */
+      override fun utilizationPerformanceIndex(): Number? =
+          unwrap(this).getUtilizationPerformanceIndex()
     }
 
     public companion object {

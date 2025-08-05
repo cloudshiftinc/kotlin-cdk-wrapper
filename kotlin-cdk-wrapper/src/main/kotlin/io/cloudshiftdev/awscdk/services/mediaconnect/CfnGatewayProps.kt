@@ -45,16 +45,16 @@ public interface CfnGatewayProps {
   public fun egressCidrBlocks(): List<String>
 
   /**
-   * The name of the network.
+   * The name of the gateway.
    *
-   * This name is used to reference the network and must be unique among networks in this gateway.
+   * This name can not be modified after the gateway is created.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-gateway.html#cfn-mediaconnect-gateway-name)
    */
   public fun name(): String
 
   /**
-   * The list of networks that you want to add.
+   * The list of networks in the gateway.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-gateway.html#cfn-mediaconnect-gateway-networks)
    */
@@ -82,23 +82,23 @@ public interface CfnGatewayProps {
     public fun egressCidrBlocks(vararg egressCidrBlocks: String)
 
     /**
-     * @param name The name of the network. 
-     * This name is used to reference the network and must be unique among networks in this gateway.
+     * @param name The name of the gateway. 
+     * This name can not be modified after the gateway is created.
      */
     public fun name(name: String)
 
     /**
-     * @param networks The list of networks that you want to add. 
+     * @param networks The list of networks in the gateway. 
      */
     public fun networks(networks: IResolvable)
 
     /**
-     * @param networks The list of networks that you want to add. 
+     * @param networks The list of networks in the gateway. 
      */
     public fun networks(networks: List<Any>)
 
     /**
-     * @param networks The list of networks that you want to add. 
+     * @param networks The list of networks in the gateway. 
      */
     public fun networks(vararg networks: Any)
   }
@@ -127,29 +127,29 @@ public interface CfnGatewayProps {
         egressCidrBlocks(egressCidrBlocks.toList())
 
     /**
-     * @param name The name of the network. 
-     * This name is used to reference the network and must be unique among networks in this gateway.
+     * @param name The name of the gateway. 
+     * This name can not be modified after the gateway is created.
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     /**
-     * @param networks The list of networks that you want to add. 
+     * @param networks The list of networks in the gateway. 
      */
     override fun networks(networks: IResolvable) {
       cdkBuilder.networks(networks.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param networks The list of networks that you want to add. 
+     * @param networks The list of networks in the gateway. 
      */
     override fun networks(networks: List<Any>) {
       cdkBuilder.networks(networks.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param networks The list of networks that you want to add. 
+     * @param networks The list of networks in the gateway. 
      */
     override fun networks(vararg networks: Any): Unit = networks(networks.toList())
 
@@ -173,16 +173,16 @@ public interface CfnGatewayProps {
     override fun egressCidrBlocks(): List<String> = unwrap(this).getEgressCidrBlocks()
 
     /**
-     * The name of the network.
+     * The name of the gateway.
      *
-     * This name is used to reference the network and must be unique among networks in this gateway.
+     * This name can not be modified after the gateway is created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-gateway.html#cfn-mediaconnect-gateway-name)
      */
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * The list of networks that you want to add.
+     * The list of networks in the gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-gateway.html#cfn-mediaconnect-gateway-networks)
      */

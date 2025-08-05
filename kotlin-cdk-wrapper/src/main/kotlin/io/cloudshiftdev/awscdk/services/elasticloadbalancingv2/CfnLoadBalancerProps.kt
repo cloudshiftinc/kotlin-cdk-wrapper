@@ -26,6 +26,7 @@ import kotlin.jvm.JvmName
  * .enablePrefixForIpv6SourceNat("enablePrefixForIpv6SourceNat")
  * .enforceSecurityGroupInboundRulesOnPrivateLinkTraffic("enforceSecurityGroupInboundRulesOnPrivateLinkTraffic")
  * .ipAddressType("ipAddressType")
+ * .ipv4IpamPoolId("ipv4IpamPoolId")
  * .loadBalancerAttributes(List.of(LoadBalancerAttributeProperty.builder()
  * .key("key")
  * .value("value")
@@ -71,6 +72,11 @@ public interface CfnLoadBalancerProps {
    * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
    * Balancer through AWS PrivateLink .
    *
+   * The default is `on` .
+   *
+   * You can't configure this property on a Network Load Balancer unless you associated a security
+   * group with the load balancer when you created it.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-enforcesecuritygroupinboundrulesonprivatelinktraffic)
    */
   public fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(): String? =
@@ -95,7 +101,16 @@ public interface CfnLoadBalancerProps {
   public fun ipAddressType(): String? = unwrap(this).getIpAddressType()
 
   /**
+   * The ID of the IPv4 IPAM pool.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-ipv4ipampoolid)
+   */
+  public fun ipv4IpamPoolId(): String? = unwrap(this).getIpv4IpamPoolId()
+
+  /**
    * The load balancer attributes.
+   *
+   * Attributes that you do not modify retain their current values.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes)
    */
@@ -231,6 +246,10 @@ public interface CfnLoadBalancerProps {
      * @param enforceSecurityGroupInboundRulesOnPrivateLinkTraffic Indicates whether to evaluate
      * inbound security group rules for traffic sent to a Network Load Balancer through AWS PrivateLink
      * .
+     * The default is `on` .
+     *
+     * You can't configure this property on a Network Load Balancer unless you associated a security
+     * group with the load balancer when you created it.
      */
     public
         fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(enforceSecurityGroupInboundRulesOnPrivateLinkTraffic: String)
@@ -251,17 +270,25 @@ public interface CfnLoadBalancerProps {
     public fun ipAddressType(ipAddressType: String)
 
     /**
+     * @param ipv4IpamPoolId The ID of the IPv4 IPAM pool.
+     */
+    public fun ipv4IpamPoolId(ipv4IpamPoolId: String)
+
+    /**
      * @param loadBalancerAttributes The load balancer attributes.
+     * Attributes that you do not modify retain their current values.
      */
     public fun loadBalancerAttributes(loadBalancerAttributes: IResolvable)
 
     /**
      * @param loadBalancerAttributes The load balancer attributes.
+     * Attributes that you do not modify retain their current values.
      */
     public fun loadBalancerAttributes(loadBalancerAttributes: List<Any>)
 
     /**
      * @param loadBalancerAttributes The load balancer attributes.
+     * Attributes that you do not modify retain their current values.
      */
     public fun loadBalancerAttributes(vararg loadBalancerAttributes: Any)
 
@@ -468,6 +495,10 @@ public interface CfnLoadBalancerProps {
      * @param enforceSecurityGroupInboundRulesOnPrivateLinkTraffic Indicates whether to evaluate
      * inbound security group rules for traffic sent to a Network Load Balancer through AWS PrivateLink
      * .
+     * The default is `on` .
+     *
+     * You can't configure this property on a Network Load Balancer unless you associated a security
+     * group with the load balancer when you created it.
      */
     override
         fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(enforceSecurityGroupInboundRulesOnPrivateLinkTraffic: String) {
@@ -492,7 +523,15 @@ public interface CfnLoadBalancerProps {
     }
 
     /**
+     * @param ipv4IpamPoolId The ID of the IPv4 IPAM pool.
+     */
+    override fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
+      cdkBuilder.ipv4IpamPoolId(ipv4IpamPoolId)
+    }
+
+    /**
      * @param loadBalancerAttributes The load balancer attributes.
+     * Attributes that you do not modify retain their current values.
      */
     override fun loadBalancerAttributes(loadBalancerAttributes: IResolvable) {
       cdkBuilder.loadBalancerAttributes(loadBalancerAttributes.let(IResolvable.Companion::unwrap))
@@ -500,6 +539,7 @@ public interface CfnLoadBalancerProps {
 
     /**
      * @param loadBalancerAttributes The load balancer attributes.
+     * Attributes that you do not modify retain their current values.
      */
     override fun loadBalancerAttributes(loadBalancerAttributes: List<Any>) {
       cdkBuilder.loadBalancerAttributes(loadBalancerAttributes.map{CdkObjectWrappers.unwrap(it)})
@@ -507,6 +547,7 @@ public interface CfnLoadBalancerProps {
 
     /**
      * @param loadBalancerAttributes The load balancer attributes.
+     * Attributes that you do not modify retain their current values.
      */
     override fun loadBalancerAttributes(vararg loadBalancerAttributes: Any): Unit =
         loadBalancerAttributes(loadBalancerAttributes.toList())
@@ -742,6 +783,11 @@ public interface CfnLoadBalancerProps {
      * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
      * Balancer through AWS PrivateLink .
      *
+     * The default is `on` .
+     *
+     * You can't configure this property on a Network Load Balancer unless you associated a security
+     * group with the load balancer when you created it.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-enforcesecuritygroupinboundrulesonprivatelinktraffic)
      */
     override fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(): String? =
@@ -766,7 +812,16 @@ public interface CfnLoadBalancerProps {
     override fun ipAddressType(): String? = unwrap(this).getIpAddressType()
 
     /**
+     * The ID of the IPv4 IPAM pool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-ipv4ipampoolid)
+     */
+    override fun ipv4IpamPoolId(): String? = unwrap(this).getIpv4IpamPoolId()
+
+    /**
      * The load balancer attributes.
+     *
+     * Attributes that you do not modify retain their current values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes)
      */

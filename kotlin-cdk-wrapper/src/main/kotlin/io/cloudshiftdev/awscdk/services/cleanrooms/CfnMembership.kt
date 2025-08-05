@@ -34,6 +34,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .collaborationIdentifier("collaborationIdentifier")
  * .queryLogStatus("queryLogStatus")
  * // the properties below are optional
+ * .defaultJobResultConfiguration(MembershipProtectedJobResultConfigurationProperty.builder()
+ * .outputConfiguration(MembershipProtectedJobOutputConfigurationProperty.builder()
+ * .s3(ProtectedJobS3OutputConfigurationInputProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .keyPrefix("keyPrefix")
+ * .build())
+ * .build())
+ * .roleArn("roleArn")
+ * .build())
  * .defaultResultConfiguration(MembershipProtectedQueryResultConfigurationProperty.builder()
  * .outputConfiguration(MembershipProtectedQueryOutputConfigurationProperty.builder()
  * .s3(ProtectedQueryS3OutputConfigurationProperty.builder()
@@ -47,9 +57,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .roleArn("roleArn")
  * .build())
+ * .jobLogStatus("jobLogStatus")
  * .paymentConfiguration(MembershipPaymentConfigurationProperty.builder()
  * .queryCompute(MembershipQueryComputePaymentConfigProperty.builder()
  * .isResponsible(false)
+ * .build())
+ * // the properties below are optional
+ * .jobCompute(MembershipJobComputePaymentConfigProperty.builder()
+ * .isResponsible(false)
+ * .build())
+ * .machineLearning(MembershipMLPaymentConfigProperty.builder()
+ * .modelInference(MembershipModelInferencePaymentConfigProperty.builder()
+ * .isResponsible(false)
+ * .build())
+ * .modelTraining(MembershipModelTrainingPaymentConfigProperty.builder()
+ * .isResponsible(false)
+ * .build())
  * .build())
  * .build())
  * .tags(List.of(CfnTag.builder()
@@ -132,6 +155,37 @@ public open class CfnMembership(
   }
 
   /**
+   * The default job result configuration for the membership.
+   */
+  public open fun defaultJobResultConfiguration(): Any? =
+      unwrap(this).getDefaultJobResultConfiguration()
+
+  /**
+   * The default job result configuration for the membership.
+   */
+  public open fun defaultJobResultConfiguration(`value`: IResolvable) {
+    unwrap(this).setDefaultJobResultConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The default job result configuration for the membership.
+   */
+  public open
+      fun defaultJobResultConfiguration(`value`: MembershipProtectedJobResultConfigurationProperty) {
+    unwrap(this).setDefaultJobResultConfiguration(`value`.let(MembershipProtectedJobResultConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The default job result configuration for the membership.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("cb7fc4986f6a0a57a4c6364c1b1951a2d202f03a381e739613389d40b141d393")
+  public open
+      fun defaultJobResultConfiguration(`value`: MembershipProtectedJobResultConfigurationProperty.Builder.() -> Unit):
+      Unit =
+      defaultJobResultConfiguration(MembershipProtectedJobResultConfigurationProperty(`value`))
+
+  /**
    * The default protected query result configuration as specified by the member who can receive
    * results.
    */
@@ -172,6 +226,18 @@ public open class CfnMembership(
    */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
+  }
+
+  /**
+   * An indicator as to whether job logging has been enabled or disabled for the collaboration.
+   */
+  public open fun jobLogStatus(): String? = unwrap(this).getJobLogStatus()
+
+  /**
+   * An indicator as to whether job logging has been enabled or disabled for the collaboration.
+   */
+  public open fun jobLogStatus(`value`: String) {
+    unwrap(this).setJobLogStatus(`value`)
   }
 
   /**
@@ -245,6 +311,37 @@ public open class CfnMembership(
     public fun collaborationIdentifier(collaborationIdentifier: String)
 
     /**
+     * The default job result configuration for the membership.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-defaultjobresultconfiguration)
+     * @param defaultJobResultConfiguration The default job result configuration for the membership.
+     * 
+     */
+    public fun defaultJobResultConfiguration(defaultJobResultConfiguration: IResolvable)
+
+    /**
+     * The default job result configuration for the membership.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-defaultjobresultconfiguration)
+     * @param defaultJobResultConfiguration The default job result configuration for the membership.
+     * 
+     */
+    public
+        fun defaultJobResultConfiguration(defaultJobResultConfiguration: MembershipProtectedJobResultConfigurationProperty)
+
+    /**
+     * The default job result configuration for the membership.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-defaultjobresultconfiguration)
+     * @param defaultJobResultConfiguration The default job result configuration for the membership.
+     * 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("6b8f665ee5f396669cae7f004b8cb9647bb18b036c722e61ea3d3f2e09de165c")
+    public
+        fun defaultJobResultConfiguration(defaultJobResultConfiguration: MembershipProtectedJobResultConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * The default protected query result configuration as specified by the member who can receive
      * results.
      *
@@ -279,6 +376,18 @@ public open class CfnMembership(
         fun defaultResultConfiguration(defaultResultConfiguration: MembershipProtectedQueryResultConfigurationProperty.Builder.() -> Unit)
 
     /**
+     * An indicator as to whether job logging has been enabled or disabled for the collaboration.
+     *
+     * When `ENABLED` , AWS Clean Rooms logs details about jobs run within this collaboration and
+     * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-joblogstatus)
+     * @param jobLogStatus An indicator as to whether job logging has been enabled or disabled for
+     * the collaboration. 
+     */
+    public fun jobLogStatus(jobLogStatus: String)
+
+    /**
      * The payment responsibilities accepted by the collaboration member.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-paymentconfiguration)
@@ -310,6 +419,9 @@ public open class CfnMembership(
 
     /**
      * An indicator as to whether query logging has been enabled or disabled for the membership.
+     *
+     * When `ENABLED` , AWS Clean Rooms logs details about queries run within this collaboration and
+     * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-querylogstatus)
      * @param queryLogStatus An indicator as to whether query logging has been enabled or disabled
@@ -360,6 +472,43 @@ public open class CfnMembership(
     }
 
     /**
+     * The default job result configuration for the membership.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-defaultjobresultconfiguration)
+     * @param defaultJobResultConfiguration The default job result configuration for the membership.
+     * 
+     */
+    override fun defaultJobResultConfiguration(defaultJobResultConfiguration: IResolvable) {
+      cdkBuilder.defaultJobResultConfiguration(defaultJobResultConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The default job result configuration for the membership.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-defaultjobresultconfiguration)
+     * @param defaultJobResultConfiguration The default job result configuration for the membership.
+     * 
+     */
+    override
+        fun defaultJobResultConfiguration(defaultJobResultConfiguration: MembershipProtectedJobResultConfigurationProperty) {
+      cdkBuilder.defaultJobResultConfiguration(defaultJobResultConfiguration.let(MembershipProtectedJobResultConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The default job result configuration for the membership.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-defaultjobresultconfiguration)
+     * @param defaultJobResultConfiguration The default job result configuration for the membership.
+     * 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("6b8f665ee5f396669cae7f004b8cb9647bb18b036c722e61ea3d3f2e09de165c")
+    override
+        fun defaultJobResultConfiguration(defaultJobResultConfiguration: MembershipProtectedJobResultConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        defaultJobResultConfiguration(MembershipProtectedJobResultConfigurationProperty(defaultJobResultConfiguration))
+
+    /**
      * The default protected query result configuration as specified by the member who can receive
      * results.
      *
@@ -400,6 +549,20 @@ public open class CfnMembership(
         defaultResultConfiguration(MembershipProtectedQueryResultConfigurationProperty(defaultResultConfiguration))
 
     /**
+     * An indicator as to whether job logging has been enabled or disabled for the collaboration.
+     *
+     * When `ENABLED` , AWS Clean Rooms logs details about jobs run within this collaboration and
+     * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-joblogstatus)
+     * @param jobLogStatus An indicator as to whether job logging has been enabled or disabled for
+     * the collaboration. 
+     */
+    override fun jobLogStatus(jobLogStatus: String) {
+      cdkBuilder.jobLogStatus(jobLogStatus)
+    }
+
+    /**
      * The payment responsibilities accepted by the collaboration member.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-paymentconfiguration)
@@ -437,6 +600,9 @@ public open class CfnMembership(
 
     /**
      * An indicator as to whether query logging has been enabled or disabled for the membership.
+     *
+     * When `ENABLED` , AWS Clean Rooms logs details about queries run within this collaboration and
+     * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-querylogstatus)
      * @param queryLogStatus An indicator as to whether query logging has been enabled or disabled
@@ -498,6 +664,666 @@ public open class CfnMembership(
   }
 
   /**
+   * An object representing the payment responsibilities accepted by the collaboration member for
+   * query and job compute costs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * MembershipJobComputePaymentConfigProperty membershipJobComputePaymentConfigProperty =
+   * MembershipJobComputePaymentConfigProperty.builder()
+   * .isResponsible(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipjobcomputepaymentconfig.html)
+   */
+  public interface MembershipJobComputePaymentConfigProperty {
+    /**
+     * Indicates whether the collaboration member has accepted to pay for job compute costs ( `TRUE`
+     * ) or has not accepted to pay for query and job compute costs ( `FALSE` ).
+     *
+     * There is only one member who pays for queries and jobs.
+     *
+     * An error message is returned for the following reasons:
+     *
+     * * If you set the value to `FALSE` but you are responsible to pay for query and job compute
+     * costs.
+     * * If you set the value to `TRUE` but you are not responsible to pay for query and job compute
+     * costs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipjobcomputepaymentconfig.html#cfn-cleanrooms-membership-membershipjobcomputepaymentconfig-isresponsible)
+     */
+    public fun isResponsible(): Any
+
+    /**
+     * A builder for [MembershipJobComputePaymentConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param isResponsible Indicates whether the collaboration member has accepted to pay for job
+       * compute costs ( `TRUE` ) or has not accepted to pay for query and job compute costs ( `FALSE`
+       * ). 
+       * There is only one member who pays for queries and jobs.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for query and job compute
+       * costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for query and job
+       * compute costs.
+       */
+      public fun isResponsible(isResponsible: Boolean)
+
+      /**
+       * @param isResponsible Indicates whether the collaboration member has accepted to pay for job
+       * compute costs ( `TRUE` ) or has not accepted to pay for query and job compute costs ( `FALSE`
+       * ). 
+       * There is only one member who pays for queries and jobs.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for query and job compute
+       * costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for query and job
+       * compute costs.
+       */
+      public fun isResponsible(isResponsible: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipJobComputePaymentConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipJobComputePaymentConfigProperty.builder()
+
+      /**
+       * @param isResponsible Indicates whether the collaboration member has accepted to pay for job
+       * compute costs ( `TRUE` ) or has not accepted to pay for query and job compute costs ( `FALSE`
+       * ). 
+       * There is only one member who pays for queries and jobs.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for query and job compute
+       * costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for query and job
+       * compute costs.
+       */
+      override fun isResponsible(isResponsible: Boolean) {
+        cdkBuilder.isResponsible(isResponsible)
+      }
+
+      /**
+       * @param isResponsible Indicates whether the collaboration member has accepted to pay for job
+       * compute costs ( `TRUE` ) or has not accepted to pay for query and job compute costs ( `FALSE`
+       * ). 
+       * There is only one member who pays for queries and jobs.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for query and job compute
+       * costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for query and job
+       * compute costs.
+       */
+      override fun isResponsible(isResponsible: IResolvable) {
+        cdkBuilder.isResponsible(isResponsible.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipJobComputePaymentConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipJobComputePaymentConfigProperty,
+    ) : CdkObject(cdkObject),
+        MembershipJobComputePaymentConfigProperty {
+      /**
+       * Indicates whether the collaboration member has accepted to pay for job compute costs (
+       * `TRUE` ) or has not accepted to pay for query and job compute costs ( `FALSE` ).
+       *
+       * There is only one member who pays for queries and jobs.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for query and job compute
+       * costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for query and job
+       * compute costs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipjobcomputepaymentconfig.html#cfn-cleanrooms-membership-membershipjobcomputepaymentconfig-isresponsible)
+       */
+      override fun isResponsible(): Any = unwrap(this).getIsResponsible()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MembershipJobComputePaymentConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipJobComputePaymentConfigProperty):
+          MembershipJobComputePaymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MembershipJobComputePaymentConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MembershipJobComputePaymentConfigProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipJobComputePaymentConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipJobComputePaymentConfigProperty
+    }
+  }
+
+  /**
+   * An object representing the collaboration member's machine learning payment responsibilities set
+   * by the collaboration creator.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * MembershipMLPaymentConfigProperty membershipMLPaymentConfigProperty =
+   * MembershipMLPaymentConfigProperty.builder()
+   * .modelInference(MembershipModelInferencePaymentConfigProperty.builder()
+   * .isResponsible(false)
+   * .build())
+   * .modelTraining(MembershipModelTrainingPaymentConfigProperty.builder()
+   * .isResponsible(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipmlpaymentconfig.html)
+   */
+  public interface MembershipMLPaymentConfigProperty {
+    /**
+     * The payment responsibilities accepted by the member for model inference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipmlpaymentconfig.html#cfn-cleanrooms-membership-membershipmlpaymentconfig-modelinference)
+     */
+    public fun modelInference(): Any? = unwrap(this).getModelInference()
+
+    /**
+     * The payment responsibilities accepted by the member for model training.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipmlpaymentconfig.html#cfn-cleanrooms-membership-membershipmlpaymentconfig-modeltraining)
+     */
+    public fun modelTraining(): Any? = unwrap(this).getModelTraining()
+
+    /**
+     * A builder for [MembershipMLPaymentConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param modelInference The payment responsibilities accepted by the member for model
+       * inference.
+       */
+      public fun modelInference(modelInference: IResolvable)
+
+      /**
+       * @param modelInference The payment responsibilities accepted by the member for model
+       * inference.
+       */
+      public fun modelInference(modelInference: MembershipModelInferencePaymentConfigProperty)
+
+      /**
+       * @param modelInference The payment responsibilities accepted by the member for model
+       * inference.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f75ca1787818d4b78a8756131e69b2c260e19c1dfea3ef1a21edb648c15a2feb")
+      public
+          fun modelInference(modelInference: MembershipModelInferencePaymentConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param modelTraining The payment responsibilities accepted by the member for model
+       * training.
+       */
+      public fun modelTraining(modelTraining: IResolvable)
+
+      /**
+       * @param modelTraining The payment responsibilities accepted by the member for model
+       * training.
+       */
+      public fun modelTraining(modelTraining: MembershipModelTrainingPaymentConfigProperty)
+
+      /**
+       * @param modelTraining The payment responsibilities accepted by the member for model
+       * training.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("398bf5c8f578e02a109b247e712a41392b28f84d5745ff5f362a32b25a6feae9")
+      public
+          fun modelTraining(modelTraining: MembershipModelTrainingPaymentConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipMLPaymentConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipMLPaymentConfigProperty.builder()
+
+      /**
+       * @param modelInference The payment responsibilities accepted by the member for model
+       * inference.
+       */
+      override fun modelInference(modelInference: IResolvable) {
+        cdkBuilder.modelInference(modelInference.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param modelInference The payment responsibilities accepted by the member for model
+       * inference.
+       */
+      override fun modelInference(modelInference: MembershipModelInferencePaymentConfigProperty) {
+        cdkBuilder.modelInference(modelInference.let(MembershipModelInferencePaymentConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param modelInference The payment responsibilities accepted by the member for model
+       * inference.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f75ca1787818d4b78a8756131e69b2c260e19c1dfea3ef1a21edb648c15a2feb")
+      override
+          fun modelInference(modelInference: MembershipModelInferencePaymentConfigProperty.Builder.() -> Unit):
+          Unit = modelInference(MembershipModelInferencePaymentConfigProperty(modelInference))
+
+      /**
+       * @param modelTraining The payment responsibilities accepted by the member for model
+       * training.
+       */
+      override fun modelTraining(modelTraining: IResolvable) {
+        cdkBuilder.modelTraining(modelTraining.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param modelTraining The payment responsibilities accepted by the member for model
+       * training.
+       */
+      override fun modelTraining(modelTraining: MembershipModelTrainingPaymentConfigProperty) {
+        cdkBuilder.modelTraining(modelTraining.let(MembershipModelTrainingPaymentConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param modelTraining The payment responsibilities accepted by the member for model
+       * training.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("398bf5c8f578e02a109b247e712a41392b28f84d5745ff5f362a32b25a6feae9")
+      override
+          fun modelTraining(modelTraining: MembershipModelTrainingPaymentConfigProperty.Builder.() -> Unit):
+          Unit = modelTraining(MembershipModelTrainingPaymentConfigProperty(modelTraining))
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipMLPaymentConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipMLPaymentConfigProperty,
+    ) : CdkObject(cdkObject),
+        MembershipMLPaymentConfigProperty {
+      /**
+       * The payment responsibilities accepted by the member for model inference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipmlpaymentconfig.html#cfn-cleanrooms-membership-membershipmlpaymentconfig-modelinference)
+       */
+      override fun modelInference(): Any? = unwrap(this).getModelInference()
+
+      /**
+       * The payment responsibilities accepted by the member for model training.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipmlpaymentconfig.html#cfn-cleanrooms-membership-membershipmlpaymentconfig-modeltraining)
+       */
+      override fun modelTraining(): Any? = unwrap(this).getModelTraining()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MembershipMLPaymentConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipMLPaymentConfigProperty):
+          MembershipMLPaymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MembershipMLPaymentConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MembershipMLPaymentConfigProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipMLPaymentConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipMLPaymentConfigProperty
+    }
+  }
+
+  /**
+   * An object representing the collaboration member's model inference payment responsibilities set
+   * by the collaboration creator.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * MembershipModelInferencePaymentConfigProperty membershipModelInferencePaymentConfigProperty =
+   * MembershipModelInferencePaymentConfigProperty.builder()
+   * .isResponsible(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipmodelinferencepaymentconfig.html)
+   */
+  public interface MembershipModelInferencePaymentConfigProperty {
+    /**
+     * Indicates whether the collaboration member has accepted to pay for model inference costs (
+     * `TRUE` ) or has not accepted to pay for model inference costs ( `FALSE` ).
+     *
+     * If the collaboration creator has not specified anyone to pay for model inference costs, then
+     * the member who can query is the default payer.
+     *
+     * An error message is returned for the following reasons:
+     *
+     * * If you set the value to `FALSE` but you are responsible to pay for model inference costs.
+     * * If you set the value to `TRUE` but you are not responsible to pay for model inference
+     * costs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipmodelinferencepaymentconfig.html#cfn-cleanrooms-membership-membershipmodelinferencepaymentconfig-isresponsible)
+     */
+    public fun isResponsible(): Any
+
+    /**
+     * A builder for [MembershipModelInferencePaymentConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param isResponsible Indicates whether the collaboration member has accepted to pay for
+       * model inference costs ( `TRUE` ) or has not accepted to pay for model inference costs (
+       * `FALSE` ). 
+       * If the collaboration creator has not specified anyone to pay for model inference costs,
+       * then the member who can query is the default payer.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for model inference costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for model inference
+       * costs.
+       */
+      public fun isResponsible(isResponsible: Boolean)
+
+      /**
+       * @param isResponsible Indicates whether the collaboration member has accepted to pay for
+       * model inference costs ( `TRUE` ) or has not accepted to pay for model inference costs (
+       * `FALSE` ). 
+       * If the collaboration creator has not specified anyone to pay for model inference costs,
+       * then the member who can query is the default payer.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for model inference costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for model inference
+       * costs.
+       */
+      public fun isResponsible(isResponsible: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipModelInferencePaymentConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipModelInferencePaymentConfigProperty.builder()
+
+      /**
+       * @param isResponsible Indicates whether the collaboration member has accepted to pay for
+       * model inference costs ( `TRUE` ) or has not accepted to pay for model inference costs (
+       * `FALSE` ). 
+       * If the collaboration creator has not specified anyone to pay for model inference costs,
+       * then the member who can query is the default payer.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for model inference costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for model inference
+       * costs.
+       */
+      override fun isResponsible(isResponsible: Boolean) {
+        cdkBuilder.isResponsible(isResponsible)
+      }
+
+      /**
+       * @param isResponsible Indicates whether the collaboration member has accepted to pay for
+       * model inference costs ( `TRUE` ) or has not accepted to pay for model inference costs (
+       * `FALSE` ). 
+       * If the collaboration creator has not specified anyone to pay for model inference costs,
+       * then the member who can query is the default payer.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for model inference costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for model inference
+       * costs.
+       */
+      override fun isResponsible(isResponsible: IResolvable) {
+        cdkBuilder.isResponsible(isResponsible.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipModelInferencePaymentConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipModelInferencePaymentConfigProperty,
+    ) : CdkObject(cdkObject),
+        MembershipModelInferencePaymentConfigProperty {
+      /**
+       * Indicates whether the collaboration member has accepted to pay for model inference costs (
+       * `TRUE` ) or has not accepted to pay for model inference costs ( `FALSE` ).
+       *
+       * If the collaboration creator has not specified anyone to pay for model inference costs,
+       * then the member who can query is the default payer.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for model inference costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for model inference
+       * costs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipmodelinferencepaymentconfig.html#cfn-cleanrooms-membership-membershipmodelinferencepaymentconfig-isresponsible)
+       */
+      override fun isResponsible(): Any = unwrap(this).getIsResponsible()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MembershipModelInferencePaymentConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipModelInferencePaymentConfigProperty):
+          MembershipModelInferencePaymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MembershipModelInferencePaymentConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MembershipModelInferencePaymentConfigProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipModelInferencePaymentConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipModelInferencePaymentConfigProperty
+    }
+  }
+
+  /**
+   * An object representing the collaboration member's model training payment responsibilities set
+   * by the collaboration creator.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * MembershipModelTrainingPaymentConfigProperty membershipModelTrainingPaymentConfigProperty =
+   * MembershipModelTrainingPaymentConfigProperty.builder()
+   * .isResponsible(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipmodeltrainingpaymentconfig.html)
+   */
+  public interface MembershipModelTrainingPaymentConfigProperty {
+    /**
+     * Indicates whether the collaboration member has accepted to pay for model training costs (
+     * `TRUE` ) or has not accepted to pay for model training costs ( `FALSE` ).
+     *
+     * If the collaboration creator has not specified anyone to pay for model training costs, then
+     * the member who can query is the default payer.
+     *
+     * An error message is returned for the following reasons:
+     *
+     * * If you set the value to `FALSE` but you are responsible to pay for model training costs.
+     * * If you set the value to `TRUE` but you are not responsible to pay for model training costs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipmodeltrainingpaymentconfig.html#cfn-cleanrooms-membership-membershipmodeltrainingpaymentconfig-isresponsible)
+     */
+    public fun isResponsible(): Any
+
+    /**
+     * A builder for [MembershipModelTrainingPaymentConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param isResponsible Indicates whether the collaboration member has accepted to pay for
+       * model training costs ( `TRUE` ) or has not accepted to pay for model training costs ( `FALSE`
+       * ). 
+       * If the collaboration creator has not specified anyone to pay for model training costs, then
+       * the member who can query is the default payer.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for model training costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for model training
+       * costs.
+       */
+      public fun isResponsible(isResponsible: Boolean)
+
+      /**
+       * @param isResponsible Indicates whether the collaboration member has accepted to pay for
+       * model training costs ( `TRUE` ) or has not accepted to pay for model training costs ( `FALSE`
+       * ). 
+       * If the collaboration creator has not specified anyone to pay for model training costs, then
+       * the member who can query is the default payer.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for model training costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for model training
+       * costs.
+       */
+      public fun isResponsible(isResponsible: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipModelTrainingPaymentConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipModelTrainingPaymentConfigProperty.builder()
+
+      /**
+       * @param isResponsible Indicates whether the collaboration member has accepted to pay for
+       * model training costs ( `TRUE` ) or has not accepted to pay for model training costs ( `FALSE`
+       * ). 
+       * If the collaboration creator has not specified anyone to pay for model training costs, then
+       * the member who can query is the default payer.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for model training costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for model training
+       * costs.
+       */
+      override fun isResponsible(isResponsible: Boolean) {
+        cdkBuilder.isResponsible(isResponsible)
+      }
+
+      /**
+       * @param isResponsible Indicates whether the collaboration member has accepted to pay for
+       * model training costs ( `TRUE` ) or has not accepted to pay for model training costs ( `FALSE`
+       * ). 
+       * If the collaboration creator has not specified anyone to pay for model training costs, then
+       * the member who can query is the default payer.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for model training costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for model training
+       * costs.
+       */
+      override fun isResponsible(isResponsible: IResolvable) {
+        cdkBuilder.isResponsible(isResponsible.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipModelTrainingPaymentConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipModelTrainingPaymentConfigProperty,
+    ) : CdkObject(cdkObject),
+        MembershipModelTrainingPaymentConfigProperty {
+      /**
+       * Indicates whether the collaboration member has accepted to pay for model training costs (
+       * `TRUE` ) or has not accepted to pay for model training costs ( `FALSE` ).
+       *
+       * If the collaboration creator has not specified anyone to pay for model training costs, then
+       * the member who can query is the default payer.
+       *
+       * An error message is returned for the following reasons:
+       *
+       * * If you set the value to `FALSE` but you are responsible to pay for model training costs.
+       * * If you set the value to `TRUE` but you are not responsible to pay for model training
+       * costs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipmodeltrainingpaymentconfig.html#cfn-cleanrooms-membership-membershipmodeltrainingpaymentconfig-isresponsible)
+       */
+      override fun isResponsible(): Any = unwrap(this).getIsResponsible()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MembershipModelTrainingPaymentConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipModelTrainingPaymentConfigProperty):
+          MembershipModelTrainingPaymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MembershipModelTrainingPaymentConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MembershipModelTrainingPaymentConfigProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipModelTrainingPaymentConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipModelTrainingPaymentConfigProperty
+    }
+  }
+
+  /**
    * An object representing the payment responsibilities accepted by the collaboration member.
    *
    * Example:
@@ -511,12 +1337,38 @@ public open class CfnMembership(
    * .queryCompute(MembershipQueryComputePaymentConfigProperty.builder()
    * .isResponsible(false)
    * .build())
+   * // the properties below are optional
+   * .jobCompute(MembershipJobComputePaymentConfigProperty.builder()
+   * .isResponsible(false)
+   * .build())
+   * .machineLearning(MembershipMLPaymentConfigProperty.builder()
+   * .modelInference(MembershipModelInferencePaymentConfigProperty.builder()
+   * .isResponsible(false)
+   * .build())
+   * .modelTraining(MembershipModelTrainingPaymentConfigProperty.builder()
+   * .isResponsible(false)
+   * .build())
+   * .build())
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershippaymentconfiguration.html)
    */
   public interface MembershipPaymentConfigurationProperty {
+    /**
+     * The payment responsibilities accepted by the collaboration member for job compute costs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershippaymentconfiguration.html#cfn-cleanrooms-membership-membershippaymentconfiguration-jobcompute)
+     */
+    public fun jobCompute(): Any? = unwrap(this).getJobCompute()
+
+    /**
+     * The payment responsibilities accepted by the collaboration member for machine learning costs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershippaymentconfiguration.html#cfn-cleanrooms-membership-membershippaymentconfiguration-machinelearning)
+     */
+    public fun machineLearning(): Any? = unwrap(this).getMachineLearning()
+
     /**
      * The payment responsibilities accepted by the collaboration member for query compute costs.
      *
@@ -529,6 +1381,48 @@ public open class CfnMembership(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param jobCompute The payment responsibilities accepted by the collaboration member for job
+       * compute costs.
+       */
+      public fun jobCompute(jobCompute: IResolvable)
+
+      /**
+       * @param jobCompute The payment responsibilities accepted by the collaboration member for job
+       * compute costs.
+       */
+      public fun jobCompute(jobCompute: MembershipJobComputePaymentConfigProperty)
+
+      /**
+       * @param jobCompute The payment responsibilities accepted by the collaboration member for job
+       * compute costs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0030cbbc87f91b56bb8b73eed5258b91ea7620b5ef69eb6a90505d4f50123aa0")
+      public
+          fun jobCompute(jobCompute: MembershipJobComputePaymentConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param machineLearning The payment responsibilities accepted by the collaboration member
+       * for machine learning costs.
+       */
+      public fun machineLearning(machineLearning: IResolvable)
+
+      /**
+       * @param machineLearning The payment responsibilities accepted by the collaboration member
+       * for machine learning costs.
+       */
+      public fun machineLearning(machineLearning: MembershipMLPaymentConfigProperty)
+
+      /**
+       * @param machineLearning The payment responsibilities accepted by the collaboration member
+       * for machine learning costs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a41e2efe1035d0f473867bd2935f715633d45a4b0fb66f2ab6e9560303ab425e")
+      public
+          fun machineLearning(machineLearning: MembershipMLPaymentConfigProperty.Builder.() -> Unit)
+
       /**
        * @param queryCompute The payment responsibilities accepted by the collaboration member for
        * query compute costs. 
@@ -556,6 +1450,58 @@ public open class CfnMembership(
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipPaymentConfigurationProperty.Builder
           =
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipPaymentConfigurationProperty.builder()
+
+      /**
+       * @param jobCompute The payment responsibilities accepted by the collaboration member for job
+       * compute costs.
+       */
+      override fun jobCompute(jobCompute: IResolvable) {
+        cdkBuilder.jobCompute(jobCompute.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param jobCompute The payment responsibilities accepted by the collaboration member for job
+       * compute costs.
+       */
+      override fun jobCompute(jobCompute: MembershipJobComputePaymentConfigProperty) {
+        cdkBuilder.jobCompute(jobCompute.let(MembershipJobComputePaymentConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param jobCompute The payment responsibilities accepted by the collaboration member for job
+       * compute costs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0030cbbc87f91b56bb8b73eed5258b91ea7620b5ef69eb6a90505d4f50123aa0")
+      override
+          fun jobCompute(jobCompute: MembershipJobComputePaymentConfigProperty.Builder.() -> Unit):
+          Unit = jobCompute(MembershipJobComputePaymentConfigProperty(jobCompute))
+
+      /**
+       * @param machineLearning The payment responsibilities accepted by the collaboration member
+       * for machine learning costs.
+       */
+      override fun machineLearning(machineLearning: IResolvable) {
+        cdkBuilder.machineLearning(machineLearning.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param machineLearning The payment responsibilities accepted by the collaboration member
+       * for machine learning costs.
+       */
+      override fun machineLearning(machineLearning: MembershipMLPaymentConfigProperty) {
+        cdkBuilder.machineLearning(machineLearning.let(MembershipMLPaymentConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param machineLearning The payment responsibilities accepted by the collaboration member
+       * for machine learning costs.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a41e2efe1035d0f473867bd2935f715633d45a4b0fb66f2ab6e9560303ab425e")
+      override
+          fun machineLearning(machineLearning: MembershipMLPaymentConfigProperty.Builder.() -> Unit):
+          Unit = machineLearning(MembershipMLPaymentConfigProperty(machineLearning))
 
       /**
        * @param queryCompute The payment responsibilities accepted by the collaboration member for
@@ -593,6 +1539,21 @@ public open class CfnMembership(
     ) : CdkObject(cdkObject),
         MembershipPaymentConfigurationProperty {
       /**
+       * The payment responsibilities accepted by the collaboration member for job compute costs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershippaymentconfiguration.html#cfn-cleanrooms-membership-membershippaymentconfiguration-jobcompute)
+       */
+      override fun jobCompute(): Any? = unwrap(this).getJobCompute()
+
+      /**
+       * The payment responsibilities accepted by the collaboration member for machine learning
+       * costs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershippaymentconfiguration.html#cfn-cleanrooms-membership-membershippaymentconfiguration-machinelearning)
+       */
+      override fun machineLearning(): Any? = unwrap(this).getMachineLearning()
+
+      /**
        * The payment responsibilities accepted by the collaboration member for query compute costs.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershippaymentconfiguration.html#cfn-cleanrooms-membership-membershippaymentconfiguration-querycompute)
@@ -616,6 +1577,278 @@ public open class CfnMembership(
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipPaymentConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipPaymentConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains configurations for protected job results.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * MembershipProtectedJobOutputConfigurationProperty
+   * membershipProtectedJobOutputConfigurationProperty =
+   * MembershipProtectedJobOutputConfigurationProperty.builder()
+   * .s3(ProtectedJobS3OutputConfigurationInputProperty.builder()
+   * .bucket("bucket")
+   * // the properties below are optional
+   * .keyPrefix("keyPrefix")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipprotectedjoboutputconfiguration.html)
+   */
+  public interface MembershipProtectedJobOutputConfigurationProperty {
+    /**
+     * Contains the configuration to write the job results to S3.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipprotectedjoboutputconfiguration.html#cfn-cleanrooms-membership-membershipprotectedjoboutputconfiguration-s3)
+     */
+    public fun s3(): Any
+
+    /**
+     * A builder for [MembershipProtectedJobOutputConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3 Contains the configuration to write the job results to S3. 
+       */
+      public fun s3(s3: IResolvable)
+
+      /**
+       * @param s3 Contains the configuration to write the job results to S3. 
+       */
+      public fun s3(s3: ProtectedJobS3OutputConfigurationInputProperty)
+
+      /**
+       * @param s3 Contains the configuration to write the job results to S3. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7bb9cfe12282eabacd9ea868fa38e0d942f01c1fa07bc4375f2c8a4514ed74c7")
+      public fun s3(s3: ProtectedJobS3OutputConfigurationInputProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedJobOutputConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedJobOutputConfigurationProperty.builder()
+
+      /**
+       * @param s3 Contains the configuration to write the job results to S3. 
+       */
+      override fun s3(s3: IResolvable) {
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param s3 Contains the configuration to write the job results to S3. 
+       */
+      override fun s3(s3: ProtectedJobS3OutputConfigurationInputProperty) {
+        cdkBuilder.s3(s3.let(ProtectedJobS3OutputConfigurationInputProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param s3 Contains the configuration to write the job results to S3. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7bb9cfe12282eabacd9ea868fa38e0d942f01c1fa07bc4375f2c8a4514ed74c7")
+      override fun s3(s3: ProtectedJobS3OutputConfigurationInputProperty.Builder.() -> Unit): Unit =
+          s3(ProtectedJobS3OutputConfigurationInputProperty(s3))
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedJobOutputConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedJobOutputConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        MembershipProtectedJobOutputConfigurationProperty {
+      /**
+       * Contains the configuration to write the job results to S3.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipprotectedjoboutputconfiguration.html#cfn-cleanrooms-membership-membershipprotectedjoboutputconfiguration-s3)
+       */
+      override fun s3(): Any = unwrap(this).getS3()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MembershipProtectedJobOutputConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedJobOutputConfigurationProperty):
+          MembershipProtectedJobOutputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MembershipProtectedJobOutputConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MembershipProtectedJobOutputConfigurationProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedJobOutputConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedJobOutputConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains configurations for protected job results.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * MembershipProtectedJobResultConfigurationProperty
+   * membershipProtectedJobResultConfigurationProperty =
+   * MembershipProtectedJobResultConfigurationProperty.builder()
+   * .outputConfiguration(MembershipProtectedJobOutputConfigurationProperty.builder()
+   * .s3(ProtectedJobS3OutputConfigurationInputProperty.builder()
+   * .bucket("bucket")
+   * // the properties below are optional
+   * .keyPrefix("keyPrefix")
+   * .build())
+   * .build())
+   * .roleArn("roleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipprotectedjobresultconfiguration.html)
+   */
+  public interface MembershipProtectedJobResultConfigurationProperty {
+    /**
+     * The output configuration for a protected job result.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipprotectedjobresultconfiguration.html#cfn-cleanrooms-membership-membershipprotectedjobresultconfiguration-outputconfiguration)
+     */
+    public fun outputConfiguration(): Any
+
+    /**
+     * The unique ARN for an IAM role that is used by AWS Clean Rooms to write protected job results
+     * to the result location, given by the member who can receive results.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipprotectedjobresultconfiguration.html#cfn-cleanrooms-membership-membershipprotectedjobresultconfiguration-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [MembershipProtectedJobResultConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param outputConfiguration The output configuration for a protected job result. 
+       */
+      public fun outputConfiguration(outputConfiguration: IResolvable)
+
+      /**
+       * @param outputConfiguration The output configuration for a protected job result. 
+       */
+      public
+          fun outputConfiguration(outputConfiguration: MembershipProtectedJobOutputConfigurationProperty)
+
+      /**
+       * @param outputConfiguration The output configuration for a protected job result. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("55a1ba112bc0b4af8b2fdb1509ca9a6106fb59e252d5398923f79fd3df0f73e6")
+      public
+          fun outputConfiguration(outputConfiguration: MembershipProtectedJobOutputConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param roleArn The unique ARN for an IAM role that is used by AWS Clean Rooms to write
+       * protected job results to the result location, given by the member who can receive results. 
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedJobResultConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedJobResultConfigurationProperty.builder()
+
+      /**
+       * @param outputConfiguration The output configuration for a protected job result. 
+       */
+      override fun outputConfiguration(outputConfiguration: IResolvable) {
+        cdkBuilder.outputConfiguration(outputConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param outputConfiguration The output configuration for a protected job result. 
+       */
+      override
+          fun outputConfiguration(outputConfiguration: MembershipProtectedJobOutputConfigurationProperty) {
+        cdkBuilder.outputConfiguration(outputConfiguration.let(MembershipProtectedJobOutputConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param outputConfiguration The output configuration for a protected job result. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("55a1ba112bc0b4af8b2fdb1509ca9a6106fb59e252d5398923f79fd3df0f73e6")
+      override
+          fun outputConfiguration(outputConfiguration: MembershipProtectedJobOutputConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          outputConfiguration(MembershipProtectedJobOutputConfigurationProperty(outputConfiguration))
+
+      /**
+       * @param roleArn The unique ARN for an IAM role that is used by AWS Clean Rooms to write
+       * protected job results to the result location, given by the member who can receive results. 
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedJobResultConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedJobResultConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        MembershipProtectedJobResultConfigurationProperty {
+      /**
+       * The output configuration for a protected job result.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipprotectedjobresultconfiguration.html#cfn-cleanrooms-membership-membershipprotectedjobresultconfiguration-outputconfiguration)
+       */
+      override fun outputConfiguration(): Any = unwrap(this).getOutputConfiguration()
+
+      /**
+       * The unique ARN for an IAM role that is used by AWS Clean Rooms to write protected job
+       * results to the result location, given by the member who can receive results.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipprotectedjobresultconfiguration.html#cfn-cleanrooms-membership-membershipprotectedjobresultconfiguration-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MembershipProtectedJobResultConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedJobResultConfigurationProperty):
+          MembershipProtectedJobResultConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MembershipProtectedJobResultConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MembershipProtectedJobResultConfigurationProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedJobResultConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedJobResultConfigurationProperty
     }
   }
 
@@ -1050,6 +2283,119 @@ public open class CfnMembership(
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty
+    }
+  }
+
+  /**
+   * Contains input information for protected jobs with an S3 output type.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * ProtectedJobS3OutputConfigurationInputProperty protectedJobS3OutputConfigurationInputProperty =
+   * ProtectedJobS3OutputConfigurationInputProperty.builder()
+   * .bucket("bucket")
+   * // the properties below are optional
+   * .keyPrefix("keyPrefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedjobs3outputconfigurationinput.html)
+   */
+  public interface ProtectedJobS3OutputConfigurationInputProperty {
+    /**
+     * The S3 bucket for job output.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedjobs3outputconfigurationinput.html#cfn-cleanrooms-membership-protectedjobs3outputconfigurationinput-bucket)
+     */
+    public fun bucket(): String
+
+    /**
+     * The S3 prefix to unload the protected job results.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedjobs3outputconfigurationinput.html#cfn-cleanrooms-membership-protectedjobs3outputconfigurationinput-keyprefix)
+     */
+    public fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
+
+    /**
+     * A builder for [ProtectedJobS3OutputConfigurationInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucket The S3 bucket for job output. 
+       */
+      public fun bucket(bucket: String)
+
+      /**
+       * @param keyPrefix The S3 prefix to unload the protected job results.
+       */
+      public fun keyPrefix(keyPrefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedJobS3OutputConfigurationInputProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedJobS3OutputConfigurationInputProperty.builder()
+
+      /**
+       * @param bucket The S3 bucket for job output. 
+       */
+      override fun bucket(bucket: String) {
+        cdkBuilder.bucket(bucket)
+      }
+
+      /**
+       * @param keyPrefix The S3 prefix to unload the protected job results.
+       */
+      override fun keyPrefix(keyPrefix: String) {
+        cdkBuilder.keyPrefix(keyPrefix)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedJobS3OutputConfigurationInputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedJobS3OutputConfigurationInputProperty,
+    ) : CdkObject(cdkObject),
+        ProtectedJobS3OutputConfigurationInputProperty {
+      /**
+       * The S3 bucket for job output.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedjobs3outputconfigurationinput.html#cfn-cleanrooms-membership-protectedjobs3outputconfigurationinput-bucket)
+       */
+      override fun bucket(): String = unwrap(this).getBucket()
+
+      /**
+       * The S3 prefix to unload the protected job results.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedjobs3outputconfigurationinput.html#cfn-cleanrooms-membership-protectedjobs3outputconfigurationinput-keyprefix)
+       */
+      override fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ProtectedJobS3OutputConfigurationInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedJobS3OutputConfigurationInputProperty):
+          ProtectedJobS3OutputConfigurationInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProtectedJobS3OutputConfigurationInputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProtectedJobS3OutputConfigurationInputProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedJobS3OutputConfigurationInputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedJobS3OutputConfigurationInputProperty
     }
   }
 

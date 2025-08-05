@@ -100,7 +100,7 @@ public abstract class BaseService(
    *
    * Don't call this. Call `loadBalancer.addTarget()` instead.
    *
-   * @param loadBalancer 
+   * @param loadBalancer [disable-awslint:ref-via-interface]. 
    */
   public override fun attachToClassicLB(loadBalancer: LoadBalancer) {
     unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer.Companion::unwrap))

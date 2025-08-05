@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 
@@ -20,6 +21,7 @@ import kotlin.Unit
  * ClusterEngineFeatures clusterEngineFeatures = ClusterEngineFeatures.builder()
  * .s3Export("s3Export")
  * .s3Import("s3Import")
+ * .serverlessV2AutoPauseSupported(false)
  * .build();
  * ```
  */
@@ -41,6 +43,14 @@ public interface ClusterEngineFeatures {
   public fun s3Import(): String? = unwrap(this).getS3Import()
 
   /**
+   * Whether the DB cluster engine supports the Aurora ServerlessV2 auto-pause feature.
+   *
+   * Default: false
+   */
+  public fun serverlessV2AutoPauseSupported(): Boolean? =
+      unwrap(this).getServerlessV2AutoPauseSupported()
+
+  /**
    * A builder for [ClusterEngineFeatures]
    */
   @CdkDslMarker
@@ -56,6 +66,12 @@ public interface ClusterEngineFeatures {
      * for import is to be associated with.
      */
     public fun s3Import(s3Import: String)
+
+    /**
+     * @param serverlessV2AutoPauseSupported Whether the DB cluster engine supports the Aurora
+     * ServerlessV2 auto-pause feature.
+     */
+    public fun serverlessV2AutoPauseSupported(serverlessV2AutoPauseSupported: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -76,6 +92,14 @@ public interface ClusterEngineFeatures {
      */
     override fun s3Import(s3Import: String) {
       cdkBuilder.s3Import(s3Import)
+    }
+
+    /**
+     * @param serverlessV2AutoPauseSupported Whether the DB cluster engine supports the Aurora
+     * ServerlessV2 auto-pause feature.
+     */
+    override fun serverlessV2AutoPauseSupported(serverlessV2AutoPauseSupported: Boolean) {
+      cdkBuilder.serverlessV2AutoPauseSupported(serverlessV2AutoPauseSupported)
     }
 
     public fun build(): software.amazon.awscdk.services.rds.ClusterEngineFeatures =
@@ -101,6 +125,14 @@ public interface ClusterEngineFeatures {
      * Default: - no s3Import feature name
      */
     override fun s3Import(): String? = unwrap(this).getS3Import()
+
+    /**
+     * Whether the DB cluster engine supports the Aurora ServerlessV2 auto-pause feature.
+     *
+     * Default: false
+     */
+    override fun serverlessV2AutoPauseSupported(): Boolean? =
+        unwrap(this).getServerlessV2AutoPauseSupported()
   }
 
   public companion object {

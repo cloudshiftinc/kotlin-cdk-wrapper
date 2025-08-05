@@ -710,7 +710,7 @@ public open class CfnSamplingRule(
        *
        * *Value Length Constraints:* Minimum length of 1. Maximum length of 32.
        */
-      public fun attributes(attributes: IResolvable)
+      public fun attributes(attributes: Map<String, String>)
 
       /**
        * @param attributes Matches attributes derived from the request.
@@ -720,7 +720,7 @@ public open class CfnSamplingRule(
        *
        * *Value Length Constraints:* Minimum length of 1. Maximum length of 32.
        */
-      public fun attributes(attributes: Map<String, String>)
+      public fun attributes(attributes: IResolvable)
 
       /**
        * @param fixedRate The percentage of matching requests to instrument, after the reservoir is
@@ -808,8 +808,8 @@ public open class CfnSamplingRule(
        *
        * *Value Length Constraints:* Minimum length of 1. Maximum length of 32.
        */
-      override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
+      override fun attributes(attributes: Map<String, String>) {
+        cdkBuilder.attributes(attributes)
       }
 
       /**
@@ -820,8 +820,8 @@ public open class CfnSamplingRule(
        *
        * *Value Length Constraints:* Minimum length of 1. Maximum length of 32.
        */
-      override fun attributes(attributes: Map<String, String>) {
-        cdkBuilder.attributes(attributes)
+      override fun attributes(attributes: IResolvable) {
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1357,12 +1357,12 @@ public open class CfnSamplingRule(
       /**
        * @param attributes Matches attributes derived from the request.
        */
-      public fun attributes(attributes: IResolvable)
+      public fun attributes(attributes: Map<String, String>)
 
       /**
        * @param attributes Matches attributes derived from the request.
        */
-      public fun attributes(attributes: Map<String, String>)
+      public fun attributes(attributes: IResolvable)
 
       /**
        * @param fixedRate The percentage of matching requests to instrument, after the reservoir is
@@ -1435,15 +1435,15 @@ public open class CfnSamplingRule(
       /**
        * @param attributes Matches attributes derived from the request.
        */
-      override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
+      override fun attributes(attributes: Map<String, String>) {
+        cdkBuilder.attributes(attributes)
       }
 
       /**
        * @param attributes Matches attributes derived from the request.
        */
-      override fun attributes(attributes: Map<String, String>) {
-        cdkBuilder.attributes(attributes)
+      override fun attributes(attributes: IResolvable) {
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       /**

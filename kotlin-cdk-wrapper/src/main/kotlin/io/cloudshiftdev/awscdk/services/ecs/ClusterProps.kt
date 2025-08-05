@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -17,25 +18,36 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * IVpc vpc = Vpc.fromLookup(this, "Vpc", VpcLookupOptions.builder()
- * .isDefault(true)
- * .build());
- * Cluster cluster = Cluster.Builder.create(this, "ECSCluster").vpc(vpc).build();
- * TaskDefinition taskDefinition = TaskDefinition.Builder.create(this, "TD")
- * .compatibility(Compatibility.FARGATE)
- * .cpu("256")
- * .memoryMiB("512")
+ * Vpc vpc;
+ * Cluster cluster = Cluster.Builder.create(this, "Cluster")
+ * .vpc(vpc)
  * .build();
- * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
- * .image(ContainerImage.fromRegistry("foo/bar"))
+ * AutoScalingGroup autoScalingGroup = AutoScalingGroup.Builder.create(this, "ASG")
+ * .vpc(vpc)
+ * .instanceType(new InstanceType("t2.micro"))
+ * .machineImage(EcsOptimizedImage.amazonLinux2())
+ * .minCapacity(0)
+ * .maxCapacity(100)
+ * .build();
+ * AsgCapacityProvider capacityProvider = AsgCapacityProvider.Builder.create(this,
+ * "AsgCapacityProvider")
+ * .autoScalingGroup(autoScalingGroup)
+ * .instanceWarmupPeriod(300)
+ * .build();
+ * cluster.addAsgCapacityProvider(capacityProvider);
+ * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("web", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .memoryReservationMiB(256)
  * .build());
- * EcsRunTask runTask = EcsRunTask.Builder.create(this, "Run")
- * .integrationPattern(IntegrationPattern.RUN_JOB)
+ * Ec2Service.Builder.create(this, "EC2Service")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
- * .launchTarget(new EcsFargateLaunchTarget())
- * .cpu("1024")
- * .memoryMiB("1048")
+ * .minHealthyPercent(100)
+ * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
+ * .capacityProvider(capacityProvider.getCapacityProviderName())
+ * .weight(1)
+ * .build()))
  * .build();
  * ```
  */
@@ -56,11 +68,22 @@ public interface ClusterProps {
   public fun clusterName(): String? = unwrap(this).getClusterName()
 
   /**
-   * If true CloudWatch Container Insights will be enabled for the cluster.
+   * (deprecated) If true CloudWatch Container Insights will be enabled for the cluster.
    *
    * Default: - Container Insights will be disabled for this cluster.
+   *
+   * @deprecated See [containerInsightsV2 ]
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun containerInsights(): Boolean? = unwrap(this).getContainerInsights()
+
+  /**
+   * The CloudWatch Container Insights configuration for the cluster.
+   *
+   * Default: [ContainerInsights.DISABLED ] This may be overridden by ECS account level settings.
+   */
+  public fun containerInsightsV2(): ContainerInsights? =
+      unwrap(this).getContainerInsightsV2()?.let(ContainerInsights::wrap)
 
   /**
    * The service discovery namespace created in this cluster.
@@ -128,8 +151,15 @@ public interface ClusterProps {
     /**
      * @param containerInsights If true CloudWatch Container Insights will be enabled for the
      * cluster.
+     * @deprecated See [containerInsightsV2 ]
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun containerInsights(containerInsights: Boolean)
+
+    /**
+     * @param containerInsightsV2 The CloudWatch Container Insights configuration for the cluster.
+     */
+    public fun containerInsightsV2(containerInsightsV2: ContainerInsights)
 
     /**
      * @param defaultCloudMapNamespace The service discovery namespace created in this cluster.
@@ -210,9 +240,18 @@ public interface ClusterProps {
     /**
      * @param containerInsights If true CloudWatch Container Insights will be enabled for the
      * cluster.
+     * @deprecated See [containerInsightsV2 ]
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun containerInsights(containerInsights: Boolean) {
       cdkBuilder.containerInsights(containerInsights)
+    }
+
+    /**
+     * @param containerInsightsV2 The CloudWatch Container Insights configuration for the cluster.
+     */
+    override fun containerInsightsV2(containerInsightsV2: ContainerInsights) {
+      cdkBuilder.containerInsightsV2(containerInsightsV2.let(ContainerInsights.Companion::unwrap))
     }
 
     /**
@@ -302,11 +341,22 @@ public interface ClusterProps {
     override fun clusterName(): String? = unwrap(this).getClusterName()
 
     /**
-     * If true CloudWatch Container Insights will be enabled for the cluster.
+     * (deprecated) If true CloudWatch Container Insights will be enabled for the cluster.
      *
      * Default: - Container Insights will be disabled for this cluster.
+     *
+     * @deprecated See [containerInsightsV2 ]
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun containerInsights(): Boolean? = unwrap(this).getContainerInsights()
+
+    /**
+     * The CloudWatch Container Insights configuration for the cluster.
+     *
+     * Default: [ContainerInsights.DISABLED ] This may be overridden by ECS account level settings.
+     */
+    override fun containerInsightsV2(): ContainerInsights? =
+        unwrap(this).getContainerInsightsV2()?.let(ContainerInsights::wrap)
 
     /**
      * The service discovery namespace created in this cluster.

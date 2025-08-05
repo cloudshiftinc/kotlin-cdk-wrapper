@@ -15,6 +15,7 @@ public enum class ContextProvider(
   LOAD_BALANCER_LISTENER_PROVIDER(software.amazon.awscdk.cloud_assembly_schema.ContextProvider.LOAD_BALANCER_LISTENER_PROVIDER),
   SECURITY_GROUP_PROVIDER(software.amazon.awscdk.cloud_assembly_schema.ContextProvider.SECURITY_GROUP_PROVIDER),
   KEY_PROVIDER(software.amazon.awscdk.cloud_assembly_schema.ContextProvider.KEY_PROVIDER),
+  CC_API_PROVIDER(software.amazon.awscdk.cloud_assembly_schema.ContextProvider.CC_API_PROVIDER),
   PLUGIN(software.amazon.awscdk.cloud_assembly_schema.ContextProvider.PLUGIN),
   ;
 
@@ -41,6 +42,8 @@ public enum class ContextProvider(
           ContextProvider.SECURITY_GROUP_PROVIDER
       software.amazon.awscdk.cloud_assembly_schema.ContextProvider.KEY_PROVIDER ->
           ContextProvider.KEY_PROVIDER
+      software.amazon.awscdk.cloud_assembly_schema.ContextProvider.CC_API_PROVIDER ->
+          ContextProvider.CC_API_PROVIDER
       software.amazon.awscdk.cloud_assembly_schema.ContextProvider.PLUGIN -> ContextProvider.PLUGIN
     }
 

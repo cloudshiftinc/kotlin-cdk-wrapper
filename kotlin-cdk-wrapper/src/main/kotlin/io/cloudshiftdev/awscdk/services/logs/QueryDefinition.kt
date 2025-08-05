@@ -25,6 +25,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * \"&lt;*&gt;: *\" as differentLoggingType, differentLoggingMessage"))
  * .filterStatements(List.of("loggingType = \"ERROR\"", "loggingMessage = \"A very strange error
  * occurred!\""))
+ * .statsStatements(List.of("count(loggingMessage) as loggingErrors",
+ * "count(differentLoggingMessage) as differentLoggingErrors"))
  * .sort("&#64;timestamp desc")
  * .limit(20)
  * .build())
@@ -161,6 +163,9 @@ public open class QueryDefinition(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.logs.QueryDefinition.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

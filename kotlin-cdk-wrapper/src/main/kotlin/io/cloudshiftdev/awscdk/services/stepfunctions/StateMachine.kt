@@ -121,6 +121,14 @@ public open class StateMachine(
       unwrap(this).grantRead(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
+   * Grant the given identity permission to redrive the execution of the state machine.
+   *
+   * @param identity 
+   */
+  public open fun grantRedriveExecution(identity: IGrantable): Grant =
+      unwrap(this).grantRedriveExecution(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+  /**
    * Grant the given identity permissions to start an execution of this state machine.
    *
    * @param identity 
@@ -494,6 +502,18 @@ public open class StateMachine(
     public fun logs(logs: LogOptions.Builder.() -> Unit)
 
     /**
+     * The name of the query language used by the state machine.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in this `queryLanguage` field.
+     *
+     * Default: - JSON_PATH
+     *
+     * @param queryLanguage The name of the query language used by the state machine. 
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
+
+    /**
      * The removal policy to apply to state machine.
      *
      * Default: RemovalPolicy.DESTROY
@@ -631,6 +651,20 @@ public open class StateMachine(
     override fun logs(logs: LogOptions.Builder.() -> Unit): Unit = logs(LogOptions(logs))
 
     /**
+     * The name of the query language used by the state machine.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in this `queryLanguage` field.
+     *
+     * Default: - JSON_PATH
+     *
+     * @param queryLanguage The name of the query language used by the state machine. 
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
+    }
+
+    /**
      * The removal policy to apply to state machine.
      *
      * Default: RemovalPolicy.DESTROY
@@ -702,6 +736,9 @@ public open class StateMachine(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.stepfunctions.StateMachine.PROPERTY_INJECTION_ID
+
     public fun fromStateMachineArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

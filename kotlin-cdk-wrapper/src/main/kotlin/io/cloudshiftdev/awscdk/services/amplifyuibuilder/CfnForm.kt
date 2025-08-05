@@ -2044,17 +2044,17 @@ public open class CfnForm(
       /**
        * @param numValues The validation to perform on a number value.
        */
-      public fun numValues(numValues: IResolvable)
-
-      /**
-       * @param numValues The validation to perform on a number value.
-       */
       public fun numValues(numValues: List<Number>)
 
       /**
        * @param numValues The validation to perform on a number value.
        */
       public fun numValues(vararg numValues: Number)
+
+      /**
+       * @param numValues The validation to perform on a number value.
+       */
+      public fun numValues(numValues: IResolvable)
 
       /**
        * @param strValues The validation to perform on a string value.
@@ -2087,13 +2087,6 @@ public open class CfnForm(
       /**
        * @param numValues The validation to perform on a number value.
        */
-      override fun numValues(numValues: IResolvable) {
-        cdkBuilder.numValues(numValues.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param numValues The validation to perform on a number value.
-       */
       override fun numValues(numValues: List<Number>) {
         cdkBuilder.numValues(numValues)
       }
@@ -2102,6 +2095,13 @@ public open class CfnForm(
        * @param numValues The validation to perform on a number value.
        */
       override fun numValues(vararg numValues: Number): Unit = numValues(numValues.toList())
+
+      /**
+       * @param numValues The validation to perform on a number value.
+       */
+      override fun numValues(numValues: IResolvable) {
+        cdkBuilder.numValues(numValues.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param strValues The validation to perform on a string value.

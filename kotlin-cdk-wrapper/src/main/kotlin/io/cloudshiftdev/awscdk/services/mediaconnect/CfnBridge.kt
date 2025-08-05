@@ -19,7 +19,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The AWS::MediaConnect::Bridge resource defines a connection between your data center’s gateway
+ * The `AWS::MediaConnect::Bridge` resource defines a connection between your data center’s gateway
  * instances and the cloud.
  *
  * For each bridge, you specify the type of bridge, transport protocol to use, and details for any
@@ -49,6 +49,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .networkName("networkName")
  * .port(123)
  * .protocol("protocol")
+ * // the properties below are optional
+ * .multicastSourceSettings(MulticastSourceSettingsProperty.builder()
+ * .multicastSourceIp("multicastSourceIp")
+ * .build())
  * .build())
  * .build()))
  * // the properties below are optional
@@ -115,26 +119,26 @@ public open class CfnBridge(
   public open fun attrBridgeState(): String = unwrap(this).getAttrBridgeState()
 
   /**
-   * Create a bridge with the egress bridge type.
+   * An egress bridge is a cloud-to-ground bridge.
    */
   public open fun egressGatewayBridge(): Any? = unwrap(this).getEgressGatewayBridge()
 
   /**
-   * Create a bridge with the egress bridge type.
+   * An egress bridge is a cloud-to-ground bridge.
    */
   public open fun egressGatewayBridge(`value`: IResolvable) {
     unwrap(this).setEgressGatewayBridge(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Create a bridge with the egress bridge type.
+   * An egress bridge is a cloud-to-ground bridge.
    */
   public open fun egressGatewayBridge(`value`: EgressGatewayBridgeProperty) {
     unwrap(this).setEgressGatewayBridge(`value`.let(EgressGatewayBridgeProperty.Companion::unwrap))
   }
 
   /**
-   * Create a bridge with the egress bridge type.
+   * An egress bridge is a cloud-to-ground bridge.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("70fb1c84e742a3e95c3bab10489b85dab946dd3d65202b8b1eafbdceb732229e")
@@ -142,26 +146,26 @@ public open class CfnBridge(
       = egressGatewayBridge(EgressGatewayBridgeProperty(`value`))
 
   /**
-   * Create a bridge with the ingress bridge type.
+   * An ingress bridge is a ground-to-cloud bridge.
    */
   public open fun ingressGatewayBridge(): Any? = unwrap(this).getIngressGatewayBridge()
 
   /**
-   * Create a bridge with the ingress bridge type.
+   * An ingress bridge is a ground-to-cloud bridge.
    */
   public open fun ingressGatewayBridge(`value`: IResolvable) {
     unwrap(this).setIngressGatewayBridge(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Create a bridge with the ingress bridge type.
+   * An ingress bridge is a ground-to-cloud bridge.
    */
   public open fun ingressGatewayBridge(`value`: IngressGatewayBridgeProperty) {
     unwrap(this).setIngressGatewayBridge(`value`.let(IngressGatewayBridgeProperty.Companion::unwrap))
   }
 
   /**
-   * Create a bridge with the ingress bridge type.
+   * An ingress bridge is a ground-to-cloud bridge.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("c770bd80ef4aac3e8ba9121245762b8868e5bd45bd039957214b6f9c513167b1")
@@ -282,35 +286,32 @@ public open class CfnBridge(
   @CdkDslMarker
   public interface Builder {
     /**
-     * Create a bridge with the egress bridge type.
+     * An egress bridge is a cloud-to-ground bridge.
      *
-     * An egress bridge is a cloud-to-ground bridge. The content comes from an existing MediaConnect
-     * flow and is delivered to your premises.
+     * The content comes from an existing MediaConnect flow and is delivered to your premises.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-egressgatewaybridge)
-     * @param egressGatewayBridge Create a bridge with the egress bridge type. 
+     * @param egressGatewayBridge An egress bridge is a cloud-to-ground bridge. 
      */
     public fun egressGatewayBridge(egressGatewayBridge: IResolvable)
 
     /**
-     * Create a bridge with the egress bridge type.
+     * An egress bridge is a cloud-to-ground bridge.
      *
-     * An egress bridge is a cloud-to-ground bridge. The content comes from an existing MediaConnect
-     * flow and is delivered to your premises.
+     * The content comes from an existing MediaConnect flow and is delivered to your premises.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-egressgatewaybridge)
-     * @param egressGatewayBridge Create a bridge with the egress bridge type. 
+     * @param egressGatewayBridge An egress bridge is a cloud-to-ground bridge. 
      */
     public fun egressGatewayBridge(egressGatewayBridge: EgressGatewayBridgeProperty)
 
     /**
-     * Create a bridge with the egress bridge type.
+     * An egress bridge is a cloud-to-ground bridge.
      *
-     * An egress bridge is a cloud-to-ground bridge. The content comes from an existing MediaConnect
-     * flow and is delivered to your premises.
+     * The content comes from an existing MediaConnect flow and is delivered to your premises.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-egressgatewaybridge)
-     * @param egressGatewayBridge Create a bridge with the egress bridge type. 
+     * @param egressGatewayBridge An egress bridge is a cloud-to-ground bridge. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fb4e47ca6e679dc8a042e36f6f677bb466453247f12689dee9a713dc94ee64e5")
@@ -318,35 +319,32 @@ public open class CfnBridge(
         fun egressGatewayBridge(egressGatewayBridge: EgressGatewayBridgeProperty.Builder.() -> Unit)
 
     /**
-     * Create a bridge with the ingress bridge type.
+     * An ingress bridge is a ground-to-cloud bridge.
      *
-     * An ingress bridge is a ground-to-cloud bridge. The content originates at your premises and is
-     * delivered to the cloud.
+     * The content originates at your premises and is delivered to the cloud.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-ingressgatewaybridge)
-     * @param ingressGatewayBridge Create a bridge with the ingress bridge type. 
+     * @param ingressGatewayBridge An ingress bridge is a ground-to-cloud bridge. 
      */
     public fun ingressGatewayBridge(ingressGatewayBridge: IResolvable)
 
     /**
-     * Create a bridge with the ingress bridge type.
+     * An ingress bridge is a ground-to-cloud bridge.
      *
-     * An ingress bridge is a ground-to-cloud bridge. The content originates at your premises and is
-     * delivered to the cloud.
+     * The content originates at your premises and is delivered to the cloud.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-ingressgatewaybridge)
-     * @param ingressGatewayBridge Create a bridge with the ingress bridge type. 
+     * @param ingressGatewayBridge An ingress bridge is a ground-to-cloud bridge. 
      */
     public fun ingressGatewayBridge(ingressGatewayBridge: IngressGatewayBridgeProperty)
 
     /**
-     * Create a bridge with the ingress bridge type.
+     * An ingress bridge is a ground-to-cloud bridge.
      *
-     * An ingress bridge is a ground-to-cloud bridge. The content originates at your premises and is
-     * delivered to the cloud.
+     * The content originates at your premises and is delivered to the cloud.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-ingressgatewaybridge)
-     * @param ingressGatewayBridge Create a bridge with the ingress bridge type. 
+     * @param ingressGatewayBridge An ingress bridge is a ground-to-cloud bridge. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("79ee9332cc61112458697a9323457833ddf24d8bb615b3fb77d585d5ef31c910")
@@ -454,39 +452,36 @@ public open class CfnBridge(
         software.amazon.awscdk.services.mediaconnect.CfnBridge.Builder.create(scope, id)
 
     /**
-     * Create a bridge with the egress bridge type.
+     * An egress bridge is a cloud-to-ground bridge.
      *
-     * An egress bridge is a cloud-to-ground bridge. The content comes from an existing MediaConnect
-     * flow and is delivered to your premises.
+     * The content comes from an existing MediaConnect flow and is delivered to your premises.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-egressgatewaybridge)
-     * @param egressGatewayBridge Create a bridge with the egress bridge type. 
+     * @param egressGatewayBridge An egress bridge is a cloud-to-ground bridge. 
      */
     override fun egressGatewayBridge(egressGatewayBridge: IResolvable) {
       cdkBuilder.egressGatewayBridge(egressGatewayBridge.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Create a bridge with the egress bridge type.
+     * An egress bridge is a cloud-to-ground bridge.
      *
-     * An egress bridge is a cloud-to-ground bridge. The content comes from an existing MediaConnect
-     * flow and is delivered to your premises.
+     * The content comes from an existing MediaConnect flow and is delivered to your premises.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-egressgatewaybridge)
-     * @param egressGatewayBridge Create a bridge with the egress bridge type. 
+     * @param egressGatewayBridge An egress bridge is a cloud-to-ground bridge. 
      */
     override fun egressGatewayBridge(egressGatewayBridge: EgressGatewayBridgeProperty) {
       cdkBuilder.egressGatewayBridge(egressGatewayBridge.let(EgressGatewayBridgeProperty.Companion::unwrap))
     }
 
     /**
-     * Create a bridge with the egress bridge type.
+     * An egress bridge is a cloud-to-ground bridge.
      *
-     * An egress bridge is a cloud-to-ground bridge. The content comes from an existing MediaConnect
-     * flow and is delivered to your premises.
+     * The content comes from an existing MediaConnect flow and is delivered to your premises.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-egressgatewaybridge)
-     * @param egressGatewayBridge Create a bridge with the egress bridge type. 
+     * @param egressGatewayBridge An egress bridge is a cloud-to-ground bridge. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fb4e47ca6e679dc8a042e36f6f677bb466453247f12689dee9a713dc94ee64e5")
@@ -495,39 +490,36 @@ public open class CfnBridge(
         Unit = egressGatewayBridge(EgressGatewayBridgeProperty(egressGatewayBridge))
 
     /**
-     * Create a bridge with the ingress bridge type.
+     * An ingress bridge is a ground-to-cloud bridge.
      *
-     * An ingress bridge is a ground-to-cloud bridge. The content originates at your premises and is
-     * delivered to the cloud.
+     * The content originates at your premises and is delivered to the cloud.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-ingressgatewaybridge)
-     * @param ingressGatewayBridge Create a bridge with the ingress bridge type. 
+     * @param ingressGatewayBridge An ingress bridge is a ground-to-cloud bridge. 
      */
     override fun ingressGatewayBridge(ingressGatewayBridge: IResolvable) {
       cdkBuilder.ingressGatewayBridge(ingressGatewayBridge.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Create a bridge with the ingress bridge type.
+     * An ingress bridge is a ground-to-cloud bridge.
      *
-     * An ingress bridge is a ground-to-cloud bridge. The content originates at your premises and is
-     * delivered to the cloud.
+     * The content originates at your premises and is delivered to the cloud.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-ingressgatewaybridge)
-     * @param ingressGatewayBridge Create a bridge with the ingress bridge type. 
+     * @param ingressGatewayBridge An ingress bridge is a ground-to-cloud bridge. 
      */
     override fun ingressGatewayBridge(ingressGatewayBridge: IngressGatewayBridgeProperty) {
       cdkBuilder.ingressGatewayBridge(ingressGatewayBridge.let(IngressGatewayBridgeProperty.Companion::unwrap))
     }
 
     /**
-     * Create a bridge with the ingress bridge type.
+     * An ingress bridge is a ground-to-cloud bridge.
      *
-     * An ingress bridge is a ground-to-cloud bridge. The content originates at your premises and is
-     * delivered to the cloud.
+     * The content originates at your premises and is delivered to the cloud.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html#cfn-mediaconnect-bridge-ingressgatewaybridge)
-     * @param ingressGatewayBridge Create a bridge with the ingress bridge type. 
+     * @param ingressGatewayBridge An ingress bridge is a ground-to-cloud bridge. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("79ee9332cc61112458697a9323457833ddf24d8bb615b3fb77d585d5ef31c910")
@@ -872,7 +864,7 @@ public open class CfnBridge(
    */
   public interface BridgeNetworkOutputProperty {
     /**
-     * The network output IP Address.
+     * The network output IP address.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworkoutput.html#cfn-mediaconnect-bridge-bridgenetworkoutput-ipaddress)
      */
@@ -893,7 +885,7 @@ public open class CfnBridge(
     public fun networkName(): String
 
     /**
-     * The network output port.
+     * The network output's port.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworkoutput.html#cfn-mediaconnect-bridge-bridgenetworkoutput-port)
      */
@@ -901,6 +893,11 @@ public open class CfnBridge(
 
     /**
      * The network output protocol.
+     *
+     *
+     * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+     * maintained for legacy purposes only.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworkoutput.html#cfn-mediaconnect-bridge-bridgenetworkoutput-protocol)
      */
@@ -919,7 +916,7 @@ public open class CfnBridge(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param ipAddress The network output IP Address. 
+       * @param ipAddress The network output IP address. 
        */
       public fun ipAddress(ipAddress: String)
 
@@ -934,12 +931,15 @@ public open class CfnBridge(
       public fun networkName(networkName: String)
 
       /**
-       * @param port The network output port. 
+       * @param port The network output's port. 
        */
       public fun port(port: Number)
 
       /**
        * @param protocol The network output protocol. 
+       *
+       * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+       * maintained for legacy purposes only.
        */
       public fun protocol(protocol: String)
 
@@ -956,7 +956,7 @@ public open class CfnBridge(
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkOutputProperty.builder()
 
       /**
-       * @param ipAddress The network output IP Address. 
+       * @param ipAddress The network output IP address. 
        */
       override fun ipAddress(ipAddress: String) {
         cdkBuilder.ipAddress(ipAddress)
@@ -977,7 +977,7 @@ public open class CfnBridge(
       }
 
       /**
-       * @param port The network output port. 
+       * @param port The network output's port. 
        */
       override fun port(port: Number) {
         cdkBuilder.port(port)
@@ -985,6 +985,9 @@ public open class CfnBridge(
 
       /**
        * @param protocol The network output protocol. 
+       *
+       * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+       * maintained for legacy purposes only.
        */
       override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
@@ -1007,7 +1010,7 @@ public open class CfnBridge(
     ) : CdkObject(cdkObject),
         BridgeNetworkOutputProperty {
       /**
-       * The network output IP Address.
+       * The network output IP address.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworkoutput.html#cfn-mediaconnect-bridge-bridgenetworkoutput-ipaddress)
        */
@@ -1028,7 +1031,7 @@ public open class CfnBridge(
       override fun networkName(): String = unwrap(this).getNetworkName()
 
       /**
-       * The network output port.
+       * The network output's port.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworkoutput.html#cfn-mediaconnect-bridge-bridgenetworkoutput-port)
        */
@@ -1036,6 +1039,11 @@ public open class CfnBridge(
 
       /**
        * The network output protocol.
+       *
+       *
+       * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+       * maintained for legacy purposes only.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworkoutput.html#cfn-mediaconnect-bridge-bridgenetworkoutput-protocol)
        */
@@ -1084,6 +1092,10 @@ public open class CfnBridge(
    * .networkName("networkName")
    * .port(123)
    * .protocol("protocol")
+   * // the properties below are optional
+   * .multicastSourceSettings(MulticastSourceSettingsProperty.builder()
+   * .multicastSourceIp("multicastSourceIp")
+   * .build())
    * .build();
    * ```
    *
@@ -1098,9 +1110,14 @@ public open class CfnBridge(
     public fun multicastIp(): String
 
     /**
-     * The name of the network source.
+     * The settings related to the multicast source.
      *
-     * This name is used to reference the source and must be unique among sources in this bridge.
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-multicastsourcesettings)
+     */
+    public fun multicastSourceSettings(): Any? = unwrap(this).getMulticastSourceSettings()
+
+    /**
+     * The name of the network source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-name)
      */
@@ -1123,6 +1140,11 @@ public open class CfnBridge(
     /**
      * The network source protocol.
      *
+     *
+     * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+     * maintained for legacy purposes only.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-protocol)
      */
     public fun protocol(): String
@@ -1138,8 +1160,25 @@ public open class CfnBridge(
       public fun multicastIp(multicastIp: String)
 
       /**
+       * @param multicastSourceSettings The settings related to the multicast source.
+       */
+      public fun multicastSourceSettings(multicastSourceSettings: IResolvable)
+
+      /**
+       * @param multicastSourceSettings The settings related to the multicast source.
+       */
+      public fun multicastSourceSettings(multicastSourceSettings: MulticastSourceSettingsProperty)
+
+      /**
+       * @param multicastSourceSettings The settings related to the multicast source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5e8c0579ceda1564b9f0e6b45abdd62954d885b827293b88479f06a0e2540834")
+      public
+          fun multicastSourceSettings(multicastSourceSettings: MulticastSourceSettingsProperty.Builder.() -> Unit)
+
+      /**
        * @param name The name of the network source. 
-       * This name is used to reference the source and must be unique among sources in this bridge.
        */
       public fun name(name: String)
 
@@ -1155,6 +1194,9 @@ public open class CfnBridge(
 
       /**
        * @param protocol The network source protocol. 
+       *
+       * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+       * maintained for legacy purposes only.
        */
       public fun protocol(protocol: String)
     }
@@ -1173,8 +1215,31 @@ public open class CfnBridge(
       }
 
       /**
+       * @param multicastSourceSettings The settings related to the multicast source.
+       */
+      override fun multicastSourceSettings(multicastSourceSettings: IResolvable) {
+        cdkBuilder.multicastSourceSettings(multicastSourceSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param multicastSourceSettings The settings related to the multicast source.
+       */
+      override
+          fun multicastSourceSettings(multicastSourceSettings: MulticastSourceSettingsProperty) {
+        cdkBuilder.multicastSourceSettings(multicastSourceSettings.let(MulticastSourceSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param multicastSourceSettings The settings related to the multicast source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5e8c0579ceda1564b9f0e6b45abdd62954d885b827293b88479f06a0e2540834")
+      override
+          fun multicastSourceSettings(multicastSourceSettings: MulticastSourceSettingsProperty.Builder.() -> Unit):
+          Unit = multicastSourceSettings(MulticastSourceSettingsProperty(multicastSourceSettings))
+
+      /**
        * @param name The name of the network source. 
-       * This name is used to reference the source and must be unique among sources in this bridge.
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -1196,6 +1261,9 @@ public open class CfnBridge(
 
       /**
        * @param protocol The network source protocol. 
+       *
+       * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+       * maintained for legacy purposes only.
        */
       override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
@@ -1218,9 +1286,14 @@ public open class CfnBridge(
       override fun multicastIp(): String = unwrap(this).getMulticastIp()
 
       /**
-       * The name of the network source.
+       * The settings related to the multicast source.
        *
-       * This name is used to reference the source and must be unique among sources in this bridge.
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-multicastsourcesettings)
+       */
+      override fun multicastSourceSettings(): Any? = unwrap(this).getMulticastSourceSettings()
+
+      /**
+       * The name of the network source.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-name)
        */
@@ -1242,6 +1315,11 @@ public open class CfnBridge(
 
       /**
        * The network source protocol.
+       *
+       *
+       * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+       * maintained for legacy purposes only.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html#cfn-mediaconnect-bridge-bridgenetworksource-protocol)
        */
@@ -1416,6 +1494,10 @@ public open class CfnBridge(
    * .networkName("networkName")
    * .port(123)
    * .protocol("protocol")
+   * // the properties below are optional
+   * .multicastSourceSettings(MulticastSourceSettingsProperty.builder()
+   * .multicastSourceIp("multicastSourceIp")
+   * .build())
    * .build())
    * .build();
    * ```
@@ -1709,8 +1791,7 @@ public open class CfnBridge(
     /**
      * The priority you want to assign to a source.
      *
-     * You can have a primary stream and a backup stream or two equally prioritized streams. This
-     * setting only applies when Failover Mode is set to FAILOVER.
+     * You can have a primary stream and a backup stream or two equally prioritized streams.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html#cfn-mediaconnect-bridge-failoverconfig-sourcepriority)
      */
@@ -1740,22 +1821,19 @@ public open class CfnBridge(
 
       /**
        * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
+       * You can have a primary stream and a backup stream or two equally prioritized streams.
        */
       public fun sourcePriority(sourcePriority: IResolvable)
 
       /**
        * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
+       * You can have a primary stream and a backup stream or two equally prioritized streams.
        */
       public fun sourcePriority(sourcePriority: SourcePriorityProperty)
 
       /**
        * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
+       * You can have a primary stream and a backup stream or two equally prioritized streams.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7418a01e3373546a55fa87100fa1ffc695721eb0587c200ba81655dc45139f31")
@@ -1785,8 +1863,7 @@ public open class CfnBridge(
 
       /**
        * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
+       * You can have a primary stream and a backup stream or two equally prioritized streams.
        */
       override fun sourcePriority(sourcePriority: IResolvable) {
         cdkBuilder.sourcePriority(sourcePriority.let(IResolvable.Companion::unwrap))
@@ -1794,8 +1871,7 @@ public open class CfnBridge(
 
       /**
        * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
+       * You can have a primary stream and a backup stream or two equally prioritized streams.
        */
       override fun sourcePriority(sourcePriority: SourcePriorityProperty) {
         cdkBuilder.sourcePriority(sourcePriority.let(SourcePriorityProperty.Companion::unwrap))
@@ -1803,8 +1879,7 @@ public open class CfnBridge(
 
       /**
        * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
+       * You can have a primary stream and a backup stream or two equally prioritized streams.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7418a01e3373546a55fa87100fa1ffc695721eb0587c200ba81655dc45139f31")
@@ -1842,8 +1917,7 @@ public open class CfnBridge(
       /**
        * The priority you want to assign to a source.
        *
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
+       * You can have a primary stream and a backup stream or two equally prioritized streams.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html#cfn-mediaconnect-bridge-failoverconfig-sourcepriority)
        */
@@ -1993,10 +2067,93 @@ public open class CfnBridge(
   }
 
   /**
+   * The settings related to the multicast source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * MulticastSourceSettingsProperty multicastSourceSettingsProperty =
+   * MulticastSourceSettingsProperty.builder()
+   * .multicastSourceIp("multicastSourceIp")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-multicastsourcesettings.html)
+   */
+  public interface MulticastSourceSettingsProperty {
+    /**
+     * The IP address of the source for source-specific multicast (SSM).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-multicastsourcesettings.html#cfn-mediaconnect-bridge-multicastsourcesettings-multicastsourceip)
+     */
+    public fun multicastSourceIp(): String? = unwrap(this).getMulticastSourceIp()
+
+    /**
+     * A builder for [MulticastSourceSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param multicastSourceIp The IP address of the source for source-specific multicast (SSM).
+       */
+      public fun multicastSourceIp(multicastSourceIp: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.MulticastSourceSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.MulticastSourceSettingsProperty.builder()
+
+      /**
+       * @param multicastSourceIp The IP address of the source for source-specific multicast (SSM).
+       */
+      override fun multicastSourceIp(multicastSourceIp: String) {
+        cdkBuilder.multicastSourceIp(multicastSourceIp)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.MulticastSourceSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.MulticastSourceSettingsProperty,
+    ) : CdkObject(cdkObject),
+        MulticastSourceSettingsProperty {
+      /**
+       * The IP address of the source for source-specific multicast (SSM).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-multicastsourcesettings.html#cfn-mediaconnect-bridge-multicastsourcesettings-multicastsourceip)
+       */
+      override fun multicastSourceIp(): String? = unwrap(this).getMulticastSourceIp()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MulticastSourceSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.MulticastSourceSettingsProperty):
+          MulticastSourceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MulticastSourceSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MulticastSourceSettingsProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.MulticastSourceSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnBridge.MulticastSourceSettingsProperty
+    }
+  }
+
+  /**
    * The priority you want to assign to a source.
    *
-   * You can have a primary stream and a backup stream or two equally prioritized streams. This
-   * setting only applies when Failover Mode is set to FAILOVER.
+   * You can have a primary stream and a backup stream or two equally prioritized streams.
    *
    * Example:
    *
@@ -2078,7 +2235,7 @@ public open class CfnBridge(
   }
 
   /**
-   * The VPC interface that you want to send your output to.
+   * The settings for attaching a VPC interface to an resource.
    *
    * Example:
    *
@@ -2096,7 +2253,7 @@ public open class CfnBridge(
    */
   public interface VpcInterfaceAttachmentProperty {
     /**
-     * The name of the VPC interface that you want to send your output to.
+     * The name of the VPC interface to use for this resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-vpcinterfaceattachment.html#cfn-mediaconnect-bridge-vpcinterfaceattachment-vpcinterfacename)
      */
@@ -2108,7 +2265,7 @@ public open class CfnBridge(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+       * @param vpcInterfaceName The name of the VPC interface to use for this resource.
        */
       public fun vpcInterfaceName(vpcInterfaceName: String)
     }
@@ -2120,7 +2277,7 @@ public open class CfnBridge(
           software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty.builder()
 
       /**
-       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+       * @param vpcInterfaceName The name of the VPC interface to use for this resource.
        */
       override fun vpcInterfaceName(vpcInterfaceName: String) {
         cdkBuilder.vpcInterfaceName(vpcInterfaceName)
@@ -2136,7 +2293,7 @@ public open class CfnBridge(
     ) : CdkObject(cdkObject),
         VpcInterfaceAttachmentProperty {
       /**
-       * The name of the VPC interface that you want to send your output to.
+       * The name of the VPC interface to use for this resource.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-vpcinterfaceattachment.html#cfn-mediaconnect-bridge-vpcinterfaceattachment-vpcinterfacename)
        */

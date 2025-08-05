@@ -57,6 +57,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .efsFileSystem(EFSFileSystemProperty.builder()
  * .fileSystemId("fileSystemId")
  * .build())
+ * .fSxLustreFileSystem(FSxLustreFileSystemProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * .build())
  * .build()))
  * .jupyterLabAppSettings(SpaceJupyterLabAppSettingsProperty.builder()
  * .appLifecycleManagement(SpaceAppLifecycleManagementProperty.builder()
@@ -98,6 +101,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
  * .build())
+ * .remoteAccess("remoteAccess")
+ * .spaceManagedResources("spaceManagedResources")
  * .spaceStorageSettings(SpaceStorageSettingsProperty.builder()
  * .ebsStorageSettings(EbsStorageSettingsProperty.builder()
  * .ebsVolumeSizeInGb(123)
@@ -620,7 +625,7 @@ public open class CfnSpace(
   }
 
   /**
-   * A Git repository that SageMaker automatically displays to users for cloning in the
+   * A Git repository that SageMaker AI automatically displays to users for cloning in the
    * JupyterServer application.
    *
    * Example:
@@ -703,9 +708,9 @@ public open class CfnSpace(
 
   /**
    * A file system, created by you, that you assign to a user profile or space for an Amazon
-   * SageMaker Domain.
+   * SageMaker AI Domain.
    *
-   * Permitted users can access this file system in Amazon SageMaker Studio.
+   * Permitted users can access this file system in Amazon SageMaker AI Studio.
    *
    * Example:
    *
@@ -715,6 +720,9 @@ public open class CfnSpace(
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
    * CustomFileSystemProperty customFileSystemProperty = CustomFileSystemProperty.builder()
    * .efsFileSystem(EFSFileSystemProperty.builder()
+   * .fileSystemId("fileSystemId")
+   * .build())
+   * .fSxLustreFileSystem(FSxLustreFileSystemProperty.builder()
    * .fileSystemId("fileSystemId")
    * .build())
    * .build();
@@ -729,6 +737,13 @@ public open class CfnSpace(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-customfilesystem.html#cfn-sagemaker-space-customfilesystem-efsfilesystem)
      */
     public fun efsFileSystem(): Any? = unwrap(this).getEfsFileSystem()
+
+    /**
+     * A custom file system in Amazon FSx for Lustre.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-customfilesystem.html#cfn-sagemaker-space-customfilesystem-fsxlustrefilesystem)
+     */
+    public fun fSxLustreFileSystem(): Any? = unwrap(this).getFSxLustreFileSystem()
 
     /**
      * A builder for [CustomFileSystemProperty]
@@ -751,6 +766,24 @@ public open class CfnSpace(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("725ca5e0d45e073f9dc82a5b9c4d49c124c28a0ae1d82214e51e13314304bc14")
       public fun efsFileSystem(efsFileSystem: EFSFileSystemProperty.Builder.() -> Unit)
+
+      /**
+       * @param fSxLustreFileSystem A custom file system in Amazon FSx for Lustre.
+       */
+      public fun fSxLustreFileSystem(fSxLustreFileSystem: IResolvable)
+
+      /**
+       * @param fSxLustreFileSystem A custom file system in Amazon FSx for Lustre.
+       */
+      public fun fSxLustreFileSystem(fSxLustreFileSystem: FSxLustreFileSystemProperty)
+
+      /**
+       * @param fSxLustreFileSystem A custom file system in Amazon FSx for Lustre.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("736cc355198e7171f2fccd5629f76db1a7b63f01f1d0f3b4627e5b5d620934e4")
+      public
+          fun fSxLustreFileSystem(fSxLustreFileSystem: FSxLustreFileSystemProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -780,6 +813,29 @@ public open class CfnSpace(
       override fun efsFileSystem(efsFileSystem: EFSFileSystemProperty.Builder.() -> Unit): Unit =
           efsFileSystem(EFSFileSystemProperty(efsFileSystem))
 
+      /**
+       * @param fSxLustreFileSystem A custom file system in Amazon FSx for Lustre.
+       */
+      override fun fSxLustreFileSystem(fSxLustreFileSystem: IResolvable) {
+        cdkBuilder.fSxLustreFileSystem(fSxLustreFileSystem.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param fSxLustreFileSystem A custom file system in Amazon FSx for Lustre.
+       */
+      override fun fSxLustreFileSystem(fSxLustreFileSystem: FSxLustreFileSystemProperty) {
+        cdkBuilder.fSxLustreFileSystem(fSxLustreFileSystem.let(FSxLustreFileSystemProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param fSxLustreFileSystem A custom file system in Amazon FSx for Lustre.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("736cc355198e7171f2fccd5629f76db1a7b63f01f1d0f3b4627e5b5d620934e4")
+      override
+          fun fSxLustreFileSystem(fSxLustreFileSystem: FSxLustreFileSystemProperty.Builder.() -> Unit):
+          Unit = fSxLustreFileSystem(FSxLustreFileSystemProperty(fSxLustreFileSystem))
+
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnSpace.CustomFileSystemProperty =
           cdkBuilder.build()
@@ -795,6 +851,13 @@ public open class CfnSpace(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-customfilesystem.html#cfn-sagemaker-space-customfilesystem-efsfilesystem)
        */
       override fun efsFileSystem(): Any? = unwrap(this).getEfsFileSystem()
+
+      /**
+       * A custom file system in Amazon FSx for Lustre.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-customfilesystem.html#cfn-sagemaker-space-customfilesystem-fsxlustrefilesystem)
+       */
+      override fun fSxLustreFileSystem(): Any? = unwrap(this).getFSxLustreFileSystem()
     }
 
     public companion object {
@@ -816,9 +879,9 @@ public open class CfnSpace(
   }
 
   /**
-   * A custom SageMaker image.
+   * A custom SageMaker AI image.
    *
-   * For more information, see [Bring your own SageMaker
+   * For more information, see [Bring your own SageMaker AI
    * image](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html) .
    *
    * Example:
@@ -962,9 +1025,9 @@ public open class CfnSpace(
 
   /**
    * A file system, created by you in Amazon EFS, that you assign to a user profile or space for an
-   * Amazon SageMaker Domain.
+   * Amazon SageMaker AI Domain.
    *
-   * Permitted users can access this file system in Amazon SageMaker Studio.
+   * Permitted users can access this file system in Amazon SageMaker AI Studio.
    *
    * Example:
    *
@@ -1127,6 +1190,88 @@ public open class CfnSpace(
   }
 
   /**
+   * A custom file system in Amazon FSx for Lustre.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * FSxLustreFileSystemProperty fSxLustreFileSystemProperty = FSxLustreFileSystemProperty.builder()
+   * .fileSystemId("fileSystemId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-fsxlustrefilesystem.html)
+   */
+  public interface FSxLustreFileSystemProperty {
+    /**
+     * Amazon FSx for Lustre file system ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-fsxlustrefilesystem.html#cfn-sagemaker-space-fsxlustrefilesystem-filesystemid)
+     */
+    public fun fileSystemId(): String
+
+    /**
+     * A builder for [FSxLustreFileSystemProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fileSystemId Amazon FSx for Lustre file system ID. 
+       */
+      public fun fileSystemId(fileSystemId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnSpace.FSxLustreFileSystemProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnSpace.FSxLustreFileSystemProperty.builder()
+
+      /**
+       * @param fileSystemId Amazon FSx for Lustre file system ID. 
+       */
+      override fun fileSystemId(fileSystemId: String) {
+        cdkBuilder.fileSystemId(fileSystemId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnSpace.FSxLustreFileSystemProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.FSxLustreFileSystemProperty,
+    ) : CdkObject(cdkObject),
+        FSxLustreFileSystemProperty {
+      /**
+       * Amazon FSx for Lustre file system ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-fsxlustrefilesystem.html#cfn-sagemaker-space-fsxlustrefilesystem-filesystemid)
+       */
+      override fun fileSystemId(): String = unwrap(this).getFileSystemId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FSxLustreFileSystemProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.FSxLustreFileSystemProperty):
+          FSxLustreFileSystemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FSxLustreFileSystemProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FSxLustreFileSystemProperty):
+          software.amazon.awscdk.services.sagemaker.CfnSpace.FSxLustreFileSystemProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnSpace.FSxLustreFileSystemProperty
+    }
+  }
+
+  /**
    * The JupyterServer app settings.
    *
    * Example:
@@ -1151,8 +1296,8 @@ public open class CfnSpace(
    */
   public interface JupyterServerAppSettingsProperty {
     /**
-     * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
-     * used by the JupyterServer app.
+     * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker AI
+     * image used by the JupyterServer app.
      *
      * If you use the `LifecycleConfigArns` parameter, then this parameter is also required.
      *
@@ -1182,21 +1327,21 @@ public open class CfnSpace(
     public interface Builder {
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the JupyterServer app.
+       * the default SageMaker AI image used by the JupyterServer app.
        * If you use the `LifecycleConfigArns` parameter, then this parameter is also required.
        */
       public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the JupyterServer app.
+       * the default SageMaker AI image used by the JupyterServer app.
        * If you use the `LifecycleConfigArns` parameter, then this parameter is also required.
        */
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the JupyterServer app.
+       * the default SageMaker AI image used by the JupyterServer app.
        * If you use the `LifecycleConfigArns` parameter, then this parameter is also required.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -1232,7 +1377,7 @@ public open class CfnSpace(
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the JupyterServer app.
+       * the default SageMaker AI image used by the JupyterServer app.
        * If you use the `LifecycleConfigArns` parameter, then this parameter is also required.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
@@ -1241,7 +1386,7 @@ public open class CfnSpace(
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the JupyterServer app.
+       * the default SageMaker AI image used by the JupyterServer app.
        * If you use the `LifecycleConfigArns` parameter, then this parameter is also required.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
@@ -1250,7 +1395,7 @@ public open class CfnSpace(
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the JupyterServer app.
+       * the default SageMaker AI image used by the JupyterServer app.
        * If you use the `LifecycleConfigArns` parameter, then this parameter is also required.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -1292,8 +1437,8 @@ public open class CfnSpace(
     ) : CdkObject(cdkObject),
         JupyterServerAppSettingsProperty {
       /**
-       * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
-       * used by the JupyterServer app.
+       * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker AI
+       * image used by the JupyterServer app.
        *
        * If you use the `LifecycleConfigArns` parameter, then this parameter is also required.
        *
@@ -1366,18 +1511,24 @@ public open class CfnSpace(
    */
   public interface KernelGatewayAppSettingsProperty {
     /**
-     * A list of custom SageMaker images that are configured to run as a KernelGateway app.
+     * A list of custom SageMaker AI images that are configured to run as a KernelGateway app.
+     *
+     * The maximum number of custom images are as follows.
+     *
+     * * On a domain level: 200
+     * * On a space level: 5
+     * * On a user profile level: 5
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-kernelgatewayappsettings.html#cfn-sagemaker-space-kernelgatewayappsettings-customimages)
      */
     public fun customImages(): Any? = unwrap(this).getCustomImages()
 
     /**
-     * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
-     * used by the KernelGateway app.
+     * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker AI
+     * image used by the KernelGateway app.
      *
      *
-     * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
+     * The Amazon SageMaker AI Studio UI does not use the default instance type value set here. The
      * default instance type set here is used when Apps are created using the AWS CLI or AWS
      * CloudFormation and the instance type parameter value is not passed.
      *
@@ -1405,49 +1556,64 @@ public open class CfnSpace(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * @param customImages A list of custom SageMaker AI images that are configured to run as a
        * KernelGateway app.
+       * The maximum number of custom images are as follows.
+       *
+       * * On a domain level: 200
+       * * On a space level: 5
+       * * On a user profile level: 5
        */
       public fun customImages(customImages: IResolvable)
 
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * @param customImages A list of custom SageMaker AI images that are configured to run as a
        * KernelGateway app.
+       * The maximum number of custom images are as follows.
+       *
+       * * On a domain level: 200
+       * * On a space level: 5
+       * * On a user profile level: 5
        */
       public fun customImages(customImages: List<Any>)
 
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * @param customImages A list of custom SageMaker AI images that are configured to run as a
        * KernelGateway app.
+       * The maximum number of custom images are as follows.
+       *
+       * * On a domain level: 200
+       * * On a space level: 5
+       * * On a user profile level: 5
        */
       public fun customImages(vararg customImages: Any)
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
+       * the default SageMaker AI image used by the KernelGateway app.
        *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * The Amazon SageMaker AI Studio UI does not use the default instance type value set here.
+       * The default instance type set here is used when Apps are created using the AWS CLI or AWS
        * CloudFormation and the instance type parameter value is not passed.
        */
       public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
+       * the default SageMaker AI image used by the KernelGateway app.
        *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * The Amazon SageMaker AI Studio UI does not use the default instance type value set here.
+       * The default instance type set here is used when Apps are created using the AWS CLI or AWS
        * CloudFormation and the instance type parameter value is not passed.
        */
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
+       * the default SageMaker AI image used by the KernelGateway app.
        *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * The Amazon SageMaker AI Studio UI does not use the default instance type value set here.
+       * The default instance type set here is used when Apps are created using the AWS CLI or AWS
        * CloudFormation and the instance type parameter value is not passed.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -1478,34 +1644,49 @@ public open class CfnSpace(
           software.amazon.awscdk.services.sagemaker.CfnSpace.KernelGatewayAppSettingsProperty.builder()
 
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * @param customImages A list of custom SageMaker AI images that are configured to run as a
        * KernelGateway app.
+       * The maximum number of custom images are as follows.
+       *
+       * * On a domain level: 200
+       * * On a space level: 5
+       * * On a user profile level: 5
        */
       override fun customImages(customImages: IResolvable) {
         cdkBuilder.customImages(customImages.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * @param customImages A list of custom SageMaker AI images that are configured to run as a
        * KernelGateway app.
+       * The maximum number of custom images are as follows.
+       *
+       * * On a domain level: 200
+       * * On a space level: 5
+       * * On a user profile level: 5
        */
       override fun customImages(customImages: List<Any>) {
         cdkBuilder.customImages(customImages.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * @param customImages A list of custom SageMaker AI images that are configured to run as a
        * KernelGateway app.
+       * The maximum number of custom images are as follows.
+       *
+       * * On a domain level: 200
+       * * On a space level: 5
+       * * On a user profile level: 5
        */
       override fun customImages(vararg customImages: Any): Unit =
           customImages(customImages.toList())
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
+       * the default SageMaker AI image used by the KernelGateway app.
        *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * The Amazon SageMaker AI Studio UI does not use the default instance type value set here.
+       * The default instance type set here is used when Apps are created using the AWS CLI or AWS
        * CloudFormation and the instance type parameter value is not passed.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
@@ -1514,10 +1695,10 @@ public open class CfnSpace(
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
+       * the default SageMaker AI image used by the KernelGateway app.
        *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * The Amazon SageMaker AI Studio UI does not use the default instance type value set here.
+       * The default instance type set here is used when Apps are created using the AWS CLI or AWS
        * CloudFormation and the instance type parameter value is not passed.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
@@ -1526,10 +1707,10 @@ public open class CfnSpace(
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
+       * the default SageMaker AI image used by the KernelGateway app.
        *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * The Amazon SageMaker AI Studio UI does not use the default instance type value set here.
+       * The default instance type set here is used when Apps are created using the AWS CLI or AWS
        * CloudFormation and the instance type parameter value is not passed.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -1567,19 +1748,25 @@ public open class CfnSpace(
     ) : CdkObject(cdkObject),
         KernelGatewayAppSettingsProperty {
       /**
-       * A list of custom SageMaker images that are configured to run as a KernelGateway app.
+       * A list of custom SageMaker AI images that are configured to run as a KernelGateway app.
+       *
+       * The maximum number of custom images are as follows.
+       *
+       * * On a domain level: 200
+       * * On a space level: 5
+       * * On a user profile level: 5
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-kernelgatewayappsettings.html#cfn-sagemaker-space-kernelgatewayappsettings-customimages)
        */
       override fun customImages(): Any? = unwrap(this).getCustomImages()
 
       /**
-       * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
-       * used by the KernelGateway app.
+       * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker AI
+       * image used by the KernelGateway app.
        *
        *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * The Amazon SageMaker AI Studio UI does not use the default instance type value set here.
+       * The default instance type set here is used when Apps are created using the AWS CLI or AWS
        * CloudFormation and the instance type parameter value is not passed.
        *
        *
@@ -1702,8 +1889,16 @@ public open class CfnSpace(
   }
 
   /**
-   * Specifies the ARN's of a SageMaker image and SageMaker image version, and the instance type
-   * that the version runs on.
+   * Specifies the ARN's of a SageMaker AI image and SageMaker AI image version, and the instance
+   * type that the version runs on.
+   *
+   *
+   * When both `SageMakerImageVersionArn` and `SageMakerImageArn` are passed,
+   * `SageMakerImageVersionArn` is used. Any updates to `SageMakerImageArn` will not take effect if
+   * `SageMakerImageVersionArn` already exists in the `ResourceSpec` because `SageMakerImageVersionArn`
+   * always takes precedence. To clear the value set for `SageMakerImageVersionArn` , pass `None` as
+   * the value.
+   *
    *
    * Example:
    *
@@ -1744,7 +1939,7 @@ public open class CfnSpace(
     public fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
 
     /**
-     * The ARN of the SageMaker image that the image version belongs to.
+     * The ARN of the SageMaker AI image that the image version belongs to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-resourcespec.html#cfn-sagemaker-space-resourcespec-sagemakerimagearn)
      */
@@ -1752,6 +1947,8 @@ public open class CfnSpace(
 
     /**
      * The ARN of the image version created on the instance.
+     *
+     * To clear the value set for `SageMakerImageVersionArn` , pass `None` as the value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-resourcespec.html#cfn-sagemaker-space-resourcespec-sagemakerimageversionarn)
      */
@@ -1779,12 +1976,14 @@ public open class CfnSpace(
       public fun lifecycleConfigArn(lifecycleConfigArn: String)
 
       /**
-       * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
+       * @param sageMakerImageArn The ARN of the SageMaker AI image that the image version belongs
+       * to.
        */
       public fun sageMakerImageArn(sageMakerImageArn: String)
 
       /**
        * @param sageMakerImageVersionArn The ARN of the image version created on the instance.
+       * To clear the value set for `SageMakerImageVersionArn` , pass `None` as the value.
        */
       public fun sageMakerImageVersionArn(sageMakerImageVersionArn: String)
     }
@@ -1815,7 +2014,8 @@ public open class CfnSpace(
       }
 
       /**
-       * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
+       * @param sageMakerImageArn The ARN of the SageMaker AI image that the image version belongs
+       * to.
        */
       override fun sageMakerImageArn(sageMakerImageArn: String) {
         cdkBuilder.sageMakerImageArn(sageMakerImageArn)
@@ -1823,6 +2023,7 @@ public open class CfnSpace(
 
       /**
        * @param sageMakerImageVersionArn The ARN of the image version created on the instance.
+       * To clear the value set for `SageMakerImageVersionArn` , pass `None` as the value.
        */
       override fun sageMakerImageVersionArn(sageMakerImageVersionArn: String) {
         cdkBuilder.sageMakerImageVersionArn(sageMakerImageVersionArn)
@@ -1858,7 +2059,7 @@ public open class CfnSpace(
       override fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
 
       /**
-       * The ARN of the SageMaker image that the image version belongs to.
+       * The ARN of the SageMaker AI image that the image version belongs to.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-resourcespec.html#cfn-sagemaker-space-resourcespec-sagemakerimagearn)
        */
@@ -1866,6 +2067,8 @@ public open class CfnSpace(
 
       /**
        * The ARN of the image version created on the instance.
+       *
+       * To clear the value set for `SageMakerImageVersionArn` , pass `None` as the value.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-resourcespec.html#cfn-sagemaker-space-resourcespec-sagemakerimageversionarn)
        */
@@ -2567,6 +2770,9 @@ public open class CfnSpace(
    * .efsFileSystem(EFSFileSystemProperty.builder()
    * .fileSystemId("fileSystemId")
    * .build())
+   * .fSxLustreFileSystem(FSxLustreFileSystemProperty.builder()
+   * .fileSystemId("fileSystemId")
+   * .build())
    * .build()))
    * .jupyterLabAppSettings(SpaceJupyterLabAppSettingsProperty.builder()
    * .appLifecycleManagement(SpaceAppLifecycleManagementProperty.builder()
@@ -2608,6 +2814,8 @@ public open class CfnSpace(
    * .build())
    * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
    * .build())
+   * .remoteAccess("remoteAccess")
+   * .spaceManagedResources("spaceManagedResources")
    * .spaceStorageSettings(SpaceStorageSettingsProperty.builder()
    * .ebsStorageSettings(EbsStorageSettingsProperty.builder()
    * .ebsVolumeSizeInGb(123)
@@ -2622,6 +2830,10 @@ public open class CfnSpace(
     /**
      * The type of app created within the space.
      *
+     * If using the
+     * [UpdateSpace](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateSpace.html)
+     * API, you can't change the app type of your space by specifying a different value for this field.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacesettings.html#cfn-sagemaker-space-spacesettings-apptype)
      */
     public fun appType(): String? = unwrap(this).getAppType()
@@ -2634,9 +2846,9 @@ public open class CfnSpace(
     public fun codeEditorAppSettings(): Any? = unwrap(this).getCodeEditorAppSettings()
 
     /**
-     * A file system, created by you, that you assign to a space for an Amazon SageMaker Domain.
+     * A file system, created by you, that you assign to a space for an Amazon SageMaker AI Domain.
      *
-     * Permitted users can access this file system in Amazon SageMaker Studio.
+     * Permitted users can access this file system in Amazon SageMaker AI Studio.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacesettings.html#cfn-sagemaker-space-spacesettings-customfilesystems)
      */
@@ -2664,6 +2876,26 @@ public open class CfnSpace(
     public fun kernelGatewayAppSettings(): Any? = unwrap(this).getKernelGatewayAppSettings()
 
     /**
+     * A setting that enables or disables remote access for a SageMaker space.
+     *
+     * When enabled, this allows you to connect to the remote space from your local IDE.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacesettings.html#cfn-sagemaker-space-spacesettings-remoteaccess)
+     */
+    public fun remoteAccess(): String? = unwrap(this).getRemoteAccess()
+
+    /**
+     * If you enable this option, SageMaker AI creates the following resources on your behalf when
+     * you create the space:.
+     *
+     * * The user profile that possesses the space.
+     * * The app that the space contains.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacesettings.html#cfn-sagemaker-space-spacesettings-spacemanagedresources)
+     */
+    public fun spaceManagedResources(): String? = unwrap(this).getSpaceManagedResources()
+
+    /**
      * The storage settings for a space.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacesettings.html#cfn-sagemaker-space-spacesettings-spacestoragesettings)
@@ -2677,6 +2909,10 @@ public open class CfnSpace(
     public interface Builder {
       /**
        * @param appType The type of app created within the space.
+       * If using the
+       * [UpdateSpace](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateSpace.html)
+       * API, you can't change the app type of your space by specifying a different value for this
+       * field.
        */
       public fun appType(appType: String)
 
@@ -2700,22 +2936,22 @@ public open class CfnSpace(
 
       /**
        * @param customFileSystems A file system, created by you, that you assign to a space for an
-       * Amazon SageMaker Domain.
-       * Permitted users can access this file system in Amazon SageMaker Studio.
+       * Amazon SageMaker AI Domain.
+       * Permitted users can access this file system in Amazon SageMaker AI Studio.
        */
       public fun customFileSystems(customFileSystems: IResolvable)
 
       /**
        * @param customFileSystems A file system, created by you, that you assign to a space for an
-       * Amazon SageMaker Domain.
-       * Permitted users can access this file system in Amazon SageMaker Studio.
+       * Amazon SageMaker AI Domain.
+       * Permitted users can access this file system in Amazon SageMaker AI Studio.
        */
       public fun customFileSystems(customFileSystems: List<Any>)
 
       /**
        * @param customFileSystems A file system, created by you, that you assign to a space for an
-       * Amazon SageMaker Domain.
-       * Permitted users can access this file system in Amazon SageMaker Studio.
+       * Amazon SageMaker AI Domain.
+       * Permitted users can access this file system in Amazon SageMaker AI Studio.
        */
       public fun customFileSystems(vararg customFileSystems: Any)
 
@@ -2776,6 +3012,20 @@ public open class CfnSpace(
           fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty.Builder.() -> Unit)
 
       /**
+       * @param remoteAccess A setting that enables or disables remote access for a SageMaker space.
+       * When enabled, this allows you to connect to the remote space from your local IDE.
+       */
+      public fun remoteAccess(remoteAccess: String)
+
+      /**
+       * @param spaceManagedResources If you enable this option, SageMaker AI creates the following
+       * resources on your behalf when you create the space:.
+       * * The user profile that possesses the space.
+       * * The app that the space contains.
+       */
+      public fun spaceManagedResources(spaceManagedResources: String)
+
+      /**
        * @param spaceStorageSettings The storage settings for a space.
        */
       public fun spaceStorageSettings(spaceStorageSettings: IResolvable)
@@ -2801,6 +3051,10 @@ public open class CfnSpace(
 
       /**
        * @param appType The type of app created within the space.
+       * If using the
+       * [UpdateSpace](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateSpace.html)
+       * API, you can't change the app type of your space by specifying a different value for this
+       * field.
        */
       override fun appType(appType: String) {
         cdkBuilder.appType(appType)
@@ -2832,8 +3086,8 @@ public open class CfnSpace(
 
       /**
        * @param customFileSystems A file system, created by you, that you assign to a space for an
-       * Amazon SageMaker Domain.
-       * Permitted users can access this file system in Amazon SageMaker Studio.
+       * Amazon SageMaker AI Domain.
+       * Permitted users can access this file system in Amazon SageMaker AI Studio.
        */
       override fun customFileSystems(customFileSystems: IResolvable) {
         cdkBuilder.customFileSystems(customFileSystems.let(IResolvable.Companion::unwrap))
@@ -2841,8 +3095,8 @@ public open class CfnSpace(
 
       /**
        * @param customFileSystems A file system, created by you, that you assign to a space for an
-       * Amazon SageMaker Domain.
-       * Permitted users can access this file system in Amazon SageMaker Studio.
+       * Amazon SageMaker AI Domain.
+       * Permitted users can access this file system in Amazon SageMaker AI Studio.
        */
       override fun customFileSystems(customFileSystems: List<Any>) {
         cdkBuilder.customFileSystems(customFileSystems.map{CdkObjectWrappers.unwrap(it)})
@@ -2850,8 +3104,8 @@ public open class CfnSpace(
 
       /**
        * @param customFileSystems A file system, created by you, that you assign to a space for an
-       * Amazon SageMaker Domain.
-       * Permitted users can access this file system in Amazon SageMaker Studio.
+       * Amazon SageMaker AI Domain.
+       * Permitted users can access this file system in Amazon SageMaker AI Studio.
        */
       override fun customFileSystems(vararg customFileSystems: Any): Unit =
           customFileSystems(customFileSystems.toList())
@@ -2931,6 +3185,24 @@ public open class CfnSpace(
           kernelGatewayAppSettings(KernelGatewayAppSettingsProperty(kernelGatewayAppSettings))
 
       /**
+       * @param remoteAccess A setting that enables or disables remote access for a SageMaker space.
+       * When enabled, this allows you to connect to the remote space from your local IDE.
+       */
+      override fun remoteAccess(remoteAccess: String) {
+        cdkBuilder.remoteAccess(remoteAccess)
+      }
+
+      /**
+       * @param spaceManagedResources If you enable this option, SageMaker AI creates the following
+       * resources on your behalf when you create the space:.
+       * * The user profile that possesses the space.
+       * * The app that the space contains.
+       */
+      override fun spaceManagedResources(spaceManagedResources: String) {
+        cdkBuilder.spaceManagedResources(spaceManagedResources)
+      }
+
+      /**
        * @param spaceStorageSettings The storage settings for a space.
        */
       override fun spaceStorageSettings(spaceStorageSettings: IResolvable) {
@@ -2964,6 +3236,11 @@ public open class CfnSpace(
       /**
        * The type of app created within the space.
        *
+       * If using the
+       * [UpdateSpace](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateSpace.html)
+       * API, you can't change the app type of your space by specifying a different value for this
+       * field.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacesettings.html#cfn-sagemaker-space-spacesettings-apptype)
        */
       override fun appType(): String? = unwrap(this).getAppType()
@@ -2976,9 +3253,10 @@ public open class CfnSpace(
       override fun codeEditorAppSettings(): Any? = unwrap(this).getCodeEditorAppSettings()
 
       /**
-       * A file system, created by you, that you assign to a space for an Amazon SageMaker Domain.
+       * A file system, created by you, that you assign to a space for an Amazon SageMaker AI
+       * Domain.
        *
-       * Permitted users can access this file system in Amazon SageMaker Studio.
+       * Permitted users can access this file system in Amazon SageMaker AI Studio.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacesettings.html#cfn-sagemaker-space-spacesettings-customfilesystems)
        */
@@ -3004,6 +3282,26 @@ public open class CfnSpace(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacesettings.html#cfn-sagemaker-space-spacesettings-kernelgatewayappsettings)
        */
       override fun kernelGatewayAppSettings(): Any? = unwrap(this).getKernelGatewayAppSettings()
+
+      /**
+       * A setting that enables or disables remote access for a SageMaker space.
+       *
+       * When enabled, this allows you to connect to the remote space from your local IDE.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacesettings.html#cfn-sagemaker-space-spacesettings-remoteaccess)
+       */
+      override fun remoteAccess(): String? = unwrap(this).getRemoteAccess()
+
+      /**
+       * If you enable this option, SageMaker AI creates the following resources on your behalf when
+       * you create the space:.
+       *
+       * * The user profile that possesses the space.
+       * * The app that the space contains.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacesettings.html#cfn-sagemaker-space-spacesettings-spacemanagedresources)
+       */
+      override fun spaceManagedResources(): String? = unwrap(this).getSpaceManagedResources()
 
       /**
        * The storage settings for a space.

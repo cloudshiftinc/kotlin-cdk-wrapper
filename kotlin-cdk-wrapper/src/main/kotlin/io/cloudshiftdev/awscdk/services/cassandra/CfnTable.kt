@@ -26,8 +26,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * You can use the `AWS::Cassandra::Table` resource to create a new table in Amazon Keyspaces (for
  * Apache Cassandra).
  *
- * For more information, see [Create a keyspace and a
- * table](https://docs.aws.amazon.com/keyspaces/latest/devguide/getting-started.ddl.html) in the
+ * For more information, see [Create a
+ * table](https://docs.aws.amazon.com/keyspaces/latest/devguide/getting-started.tables.html) in the
  * *Amazon Keyspaces Developer Guide* .
  *
  * Example:
@@ -80,6 +80,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .readCapacityUnits(123)
  * .writeCapacityUnits(123)
  * .build())
+ * .build())
+ * .cdcSpecification(CdcSpecificationProperty.builder()
+ * .status("status")
+ * // the properties below are optional
+ * .viewType("viewType")
  * .build())
  * .clientSideTimestampsEnabled(false)
  * .clusteringKeyColumns(List.of(ClusteringKeyColumnProperty.builder()
@@ -205,6 +210,33 @@ public open class CfnTable(
   @JvmName("0566a41490d57e7aa3afa772835c7907b1626cd5ee4aa891045a85ac1f9ba0ad")
   public open fun billingMode(`value`: BillingModeProperty.Builder.() -> Unit): Unit =
       billingMode(BillingModeProperty(`value`))
+
+  /**
+   * The settings for the CDC stream of a table.
+   */
+  public open fun cdcSpecification(): Any? = unwrap(this).getCdcSpecification()
+
+  /**
+   * The settings for the CDC stream of a table.
+   */
+  public open fun cdcSpecification(`value`: IResolvable) {
+    unwrap(this).setCdcSpecification(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The settings for the CDC stream of a table.
+   */
+  public open fun cdcSpecification(`value`: CdcSpecificationProperty) {
+    unwrap(this).setCdcSpecification(`value`.let(CdcSpecificationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The settings for the CDC stream of a table.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("1f0d6675c6df0b5d9e5b0bb4d21d5bf46a8bc6637b97d59edae16fd1fe81068f")
+  public open fun cdcSpecification(`value`: CdcSpecificationProperty.Builder.() -> Unit): Unit =
+      cdcSpecification(CdcSpecificationProperty(`value`))
 
   /**
    * Enables client-side timestamps for the table.
@@ -529,6 +561,44 @@ public open class CfnTable(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("67ee3519a80b06e9ad6c8f1ae08b363b5907d831f8e0d8fdf71b54ac1f4d6be4")
     public fun billingMode(billingMode: BillingModeProperty.Builder.() -> Unit)
+
+    /**
+     * The settings for the CDC stream of a table.
+     *
+     * For more information about CDC streams, see [Working with change data capture (CDC) streams
+     * in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/cdc.html) in the
+     * *Amazon Keyspaces Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-cdcspecification)
+     * @param cdcSpecification The settings for the CDC stream of a table. 
+     */
+    public fun cdcSpecification(cdcSpecification: IResolvable)
+
+    /**
+     * The settings for the CDC stream of a table.
+     *
+     * For more information about CDC streams, see [Working with change data capture (CDC) streams
+     * in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/cdc.html) in the
+     * *Amazon Keyspaces Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-cdcspecification)
+     * @param cdcSpecification The settings for the CDC stream of a table. 
+     */
+    public fun cdcSpecification(cdcSpecification: CdcSpecificationProperty)
+
+    /**
+     * The settings for the CDC stream of a table.
+     *
+     * For more information about CDC streams, see [Working with change data capture (CDC) streams
+     * in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/cdc.html) in the
+     * *Amazon Keyspaces Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-cdcspecification)
+     * @param cdcSpecification The settings for the CDC stream of a table. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("40349e5df1b0ae0de570917feb7345f55040728ce414c9dc011906bd08c3d9c9")
+    public fun cdcSpecification(cdcSpecification: CdcSpecificationProperty.Builder.() -> Unit)
 
     /**
      * Enables client-side timestamps for the table.
@@ -962,6 +1032,49 @@ public open class CfnTable(
     @JvmName("67ee3519a80b06e9ad6c8f1ae08b363b5907d831f8e0d8fdf71b54ac1f4d6be4")
     override fun billingMode(billingMode: BillingModeProperty.Builder.() -> Unit): Unit =
         billingMode(BillingModeProperty(billingMode))
+
+    /**
+     * The settings for the CDC stream of a table.
+     *
+     * For more information about CDC streams, see [Working with change data capture (CDC) streams
+     * in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/cdc.html) in the
+     * *Amazon Keyspaces Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-cdcspecification)
+     * @param cdcSpecification The settings for the CDC stream of a table. 
+     */
+    override fun cdcSpecification(cdcSpecification: IResolvable) {
+      cdkBuilder.cdcSpecification(cdcSpecification.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The settings for the CDC stream of a table.
+     *
+     * For more information about CDC streams, see [Working with change data capture (CDC) streams
+     * in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/cdc.html) in the
+     * *Amazon Keyspaces Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-cdcspecification)
+     * @param cdcSpecification The settings for the CDC stream of a table. 
+     */
+    override fun cdcSpecification(cdcSpecification: CdcSpecificationProperty) {
+      cdkBuilder.cdcSpecification(cdcSpecification.let(CdcSpecificationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The settings for the CDC stream of a table.
+     *
+     * For more information about CDC streams, see [Working with change data capture (CDC) streams
+     * in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/cdc.html) in the
+     * *Amazon Keyspaces Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-cdcspecification)
+     * @param cdcSpecification The settings for the CDC stream of a table. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("40349e5df1b0ae0de570917feb7345f55040728ce414c9dc011906bd08c3d9c9")
+    override fun cdcSpecification(cdcSpecification: CdcSpecificationProperty.Builder.() -> Unit):
+        Unit = cdcSpecification(CdcSpecificationProperty(cdcSpecification))
 
     /**
      * Enables client-side timestamps for the table.
@@ -2054,6 +2167,172 @@ public open class CfnTable(
           software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty
+    }
+  }
+
+  /**
+   * The settings for the CDC stream of a table.
+   *
+   * For more information about CDC streams, see [Working with change data capture (CDC) streams in
+   * Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/cdc.html) in the *Amazon
+   * Keyspaces Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cassandra.*;
+   * CdcSpecificationProperty cdcSpecificationProperty = CdcSpecificationProperty.builder()
+   * .status("status")
+   * // the properties below are optional
+   * .viewType("viewType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-cdcspecification.html)
+   */
+  public interface CdcSpecificationProperty {
+    /**
+     * The status of the CDC stream.
+     *
+     * You can enable or disable a stream for a table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-cdcspecification.html#cfn-cassandra-table-cdcspecification-status)
+     */
+    public fun status(): String
+
+    /**
+     * The view type specifies the changes Amazon Keyspaces records for each changed row in the
+     * stream.
+     *
+     * After you create the stream, you can't make changes to this selection.
+     *
+     * The options are:
+     *
+     * * `NEW_AND_OLD_IMAGES` - both versions of the row, before and after the change. This is the
+     * default.
+     * * `NEW_IMAGE` - the version of the row after the change.
+     * * `OLD_IMAGE` - the version of the row before the change.
+     * * `KEYS_ONLY` - the partition and clustering keys of the row that was changed.
+     *
+     * Default: - "NEW_AND_OLD_IMAGES"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-cdcspecification.html#cfn-cassandra-table-cdcspecification-viewtype)
+     */
+    public fun viewType(): String? = unwrap(this).getViewType()
+
+    /**
+     * A builder for [CdcSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param status The status of the CDC stream. 
+       * You can enable or disable a stream for a table.
+       */
+      public fun status(status: String)
+
+      /**
+       * @param viewType The view type specifies the changes Amazon Keyspaces records for each
+       * changed row in the stream.
+       * After you create the stream, you can't make changes to this selection.
+       *
+       * The options are:
+       *
+       * * `NEW_AND_OLD_IMAGES` - both versions of the row, before and after the change. This is the
+       * default.
+       * * `NEW_IMAGE` - the version of the row after the change.
+       * * `OLD_IMAGE` - the version of the row before the change.
+       * * `KEYS_ONLY` - the partition and clustering keys of the row that was changed.
+       */
+      public fun viewType(viewType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cassandra.CfnTable.CdcSpecificationProperty.Builder =
+          software.amazon.awscdk.services.cassandra.CfnTable.CdcSpecificationProperty.builder()
+
+      /**
+       * @param status The status of the CDC stream. 
+       * You can enable or disable a stream for a table.
+       */
+      override fun status(status: String) {
+        cdkBuilder.status(status)
+      }
+
+      /**
+       * @param viewType The view type specifies the changes Amazon Keyspaces records for each
+       * changed row in the stream.
+       * After you create the stream, you can't make changes to this selection.
+       *
+       * The options are:
+       *
+       * * `NEW_AND_OLD_IMAGES` - both versions of the row, before and after the change. This is the
+       * default.
+       * * `NEW_IMAGE` - the version of the row after the change.
+       * * `OLD_IMAGE` - the version of the row before the change.
+       * * `KEYS_ONLY` - the partition and clustering keys of the row that was changed.
+       */
+      override fun viewType(viewType: String) {
+        cdkBuilder.viewType(viewType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cassandra.CfnTable.CdcSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.CdcSpecificationProperty,
+    ) : CdkObject(cdkObject),
+        CdcSpecificationProperty {
+      /**
+       * The status of the CDC stream.
+       *
+       * You can enable or disable a stream for a table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-cdcspecification.html#cfn-cassandra-table-cdcspecification-status)
+       */
+      override fun status(): String = unwrap(this).getStatus()
+
+      /**
+       * The view type specifies the changes Amazon Keyspaces records for each changed row in the
+       * stream.
+       *
+       * After you create the stream, you can't make changes to this selection.
+       *
+       * The options are:
+       *
+       * * `NEW_AND_OLD_IMAGES` - both versions of the row, before and after the change. This is the
+       * default.
+       * * `NEW_IMAGE` - the version of the row after the change.
+       * * `OLD_IMAGE` - the version of the row before the change.
+       * * `KEYS_ONLY` - the partition and clustering keys of the row that was changed.
+       *
+       * Default: - "NEW_AND_OLD_IMAGES"
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-cdcspecification.html#cfn-cassandra-table-cdcspecification-viewtype)
+       */
+      override fun viewType(): String? = unwrap(this).getViewType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CdcSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.CdcSpecificationProperty):
+          CdcSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? CdcSpecificationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CdcSpecificationProperty):
+          software.amazon.awscdk.services.cassandra.CfnTable.CdcSpecificationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.cassandra.CfnTable.CdcSpecificationProperty
     }
   }
 

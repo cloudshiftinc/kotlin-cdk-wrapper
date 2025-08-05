@@ -3,8 +3,11 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
@@ -45,6 +48,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .gatewayLoadBalancerArns(List.of("gatewayLoadBalancerArns"))
  * .networkLoadBalancerArns(List.of("networkLoadBalancerArns"))
  * .payerResponsibility("payerResponsibility")
+ * .supportedIpAddressTypes(List.of("supportedIpAddressTypes"))
+ * .supportedRegions(List.of("supportedRegions"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -53,7 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVPCEndpointService(
   cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointService,
 ) : CfnResource(cdkObject),
-    IInspectable {
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnVPCEndpointService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -101,6 +111,12 @@ public open class CfnVPCEndpointService(
    * The ID of the endpoint service.
    */
   public open fun attrServiceId(): String = unwrap(this).getAttrServiceId()
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * Indicates whether to enable the built-in Contributor Insights rules provided by AWS PrivateLink
@@ -182,6 +198,61 @@ public open class CfnVPCEndpointService(
   public open fun payerResponsibility(`value`: String) {
     unwrap(this).setPayerResponsibility(`value`)
   }
+
+  /**
+   * The supported IP address types.
+   */
+  public open fun supportedIpAddressTypes(): List<String> =
+      unwrap(this).getSupportedIpAddressTypes() ?: emptyList()
+
+  /**
+   * The supported IP address types.
+   */
+  public open fun supportedIpAddressTypes(`value`: List<String>) {
+    unwrap(this).setSupportedIpAddressTypes(`value`)
+  }
+
+  /**
+   * The supported IP address types.
+   */
+  public open fun supportedIpAddressTypes(vararg `value`: String): Unit =
+      supportedIpAddressTypes(`value`.toList())
+
+  /**
+   * The Regions from which service consumers can access the service.
+   */
+  public open fun supportedRegions(): List<String> = unwrap(this).getSupportedRegions() ?:
+      emptyList()
+
+  /**
+   * The Regions from which service consumers can access the service.
+   */
+  public open fun supportedRegions(`value`: List<String>) {
+    unwrap(this).setSupportedRegions(`value`)
+  }
+
+  /**
+   * The Regions from which service consumers can access the service.
+   */
+  public open fun supportedRegions(vararg `value`: String): Unit =
+      supportedRegions(`value`.toList())
+
+  /**
+   * The tags to associate with the service.
+   */
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * The tags to associate with the service.
+   */
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
+  }
+
+  /**
+   * The tags to associate with the service.
+   */
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.CfnVPCEndpointService].
@@ -274,6 +345,58 @@ public open class CfnVPCEndpointService(
      * @param payerResponsibility The entity that is responsible for the endpoint costs. 
      */
     public fun payerResponsibility(payerResponsibility: String)
+
+    /**
+     * The supported IP address types.
+     *
+     * The possible values are `ipv4` and `ipv6` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-supportedipaddresstypes)
+     * @param supportedIpAddressTypes The supported IP address types. 
+     */
+    public fun supportedIpAddressTypes(supportedIpAddressTypes: List<String>)
+
+    /**
+     * The supported IP address types.
+     *
+     * The possible values are `ipv4` and `ipv6` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-supportedipaddresstypes)
+     * @param supportedIpAddressTypes The supported IP address types. 
+     */
+    public fun supportedIpAddressTypes(vararg supportedIpAddressTypes: String)
+
+    /**
+     * The Regions from which service consumers can access the service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-supportedregions)
+     * @param supportedRegions The Regions from which service consumers can access the service. 
+     */
+    public fun supportedRegions(supportedRegions: List<String>)
+
+    /**
+     * The Regions from which service consumers can access the service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-supportedregions)
+     * @param supportedRegions The Regions from which service consumers can access the service. 
+     */
+    public fun supportedRegions(vararg supportedRegions: String)
+
+    /**
+     * The tags to associate with the service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-tags)
+     * @param tags The tags to associate with the service. 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * The tags to associate with the service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-tags)
+     * @param tags The tags to associate with the service. 
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -385,6 +508,66 @@ public open class CfnVPCEndpointService(
     override fun payerResponsibility(payerResponsibility: String) {
       cdkBuilder.payerResponsibility(payerResponsibility)
     }
+
+    /**
+     * The supported IP address types.
+     *
+     * The possible values are `ipv4` and `ipv6` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-supportedipaddresstypes)
+     * @param supportedIpAddressTypes The supported IP address types. 
+     */
+    override fun supportedIpAddressTypes(supportedIpAddressTypes: List<String>) {
+      cdkBuilder.supportedIpAddressTypes(supportedIpAddressTypes)
+    }
+
+    /**
+     * The supported IP address types.
+     *
+     * The possible values are `ipv4` and `ipv6` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-supportedipaddresstypes)
+     * @param supportedIpAddressTypes The supported IP address types. 
+     */
+    override fun supportedIpAddressTypes(vararg supportedIpAddressTypes: String): Unit =
+        supportedIpAddressTypes(supportedIpAddressTypes.toList())
+
+    /**
+     * The Regions from which service consumers can access the service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-supportedregions)
+     * @param supportedRegions The Regions from which service consumers can access the service. 
+     */
+    override fun supportedRegions(supportedRegions: List<String>) {
+      cdkBuilder.supportedRegions(supportedRegions)
+    }
+
+    /**
+     * The Regions from which service consumers can access the service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-supportedregions)
+     * @param supportedRegions The Regions from which service consumers can access the service. 
+     */
+    override fun supportedRegions(vararg supportedRegions: String): Unit =
+        supportedRegions(supportedRegions.toList())
+
+    /**
+     * The tags to associate with the service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-tags)
+     * @param tags The tags to associate with the service. 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * The tags to associate with the service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-tags)
+     * @param tags The tags to associate with the service. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnVPCEndpointService =
         cdkBuilder.build()

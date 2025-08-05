@@ -9066,33 +9066,6 @@ public open class CfnEndpoint(
        * Concepts](https://docs.aws.amazon.com/https://docs.oracle.com/en/database/oracle/oracle-database/19/bradv/rman-data-repair-concepts.html#GUID-1805CCF7-4AF2-482D-B65A-998192F89C2B)
        * in the *Oracle Database Backup and Recovery User's Guide* .
        */
-      public fun extraArchivedLogDestIds(extraArchivedLogDestIds: IResolvable)
-
-      /**
-       * @param extraArchivedLogDestIds Specifies the IDs of one more destinations for one or more
-       * archived redo logs.
-       * These IDs are the values of the `dest_id` column in the `v$archived_log` view. Use this
-       * setting with the `archivedLogDestId` extra connection attribute in a primary-to-single setup
-       * or a primary-to-multiple-standby setup.
-       *
-       * This setting is useful in a switchover when you use an Oracle Data Guard database as a
-       * source. In this case, AWS DMS needs information about what destination to get archive redo
-       * logs from to read changes. AWS DMS needs this because after the switchover the previous
-       * primary is a standby instance. For example, in a primary-to-single standby setup you might
-       * apply the following settings.
-       *
-       * `archivedLogDestId=1; ExtraArchivedLogDestIds=[2]`
-       *
-       * In a primary-to-multiple-standby setup, you might apply the following settings.
-       *
-       * `archivedLogDestId=1; ExtraArchivedLogDestIds=[2,3,4]`
-       *
-       * Although AWS DMS supports the use of the Oracle `RESETLOGS` option to open the database,
-       * never use `RESETLOGS` unless it's necessary. For more information about `RESETLOGS` , see
-       * [RMAN Data Repair
-       * Concepts](https://docs.aws.amazon.com/https://docs.oracle.com/en/database/oracle/oracle-database/19/bradv/rman-data-repair-concepts.html#GUID-1805CCF7-4AF2-482D-B65A-998192F89C2B)
-       * in the *Oracle Database Backup and Recovery User's Guide* .
-       */
       public fun extraArchivedLogDestIds(extraArchivedLogDestIds: List<Number>)
 
       /**
@@ -9121,6 +9094,33 @@ public open class CfnEndpoint(
        * in the *Oracle Database Backup and Recovery User's Guide* .
        */
       public fun extraArchivedLogDestIds(vararg extraArchivedLogDestIds: Number)
+
+      /**
+       * @param extraArchivedLogDestIds Specifies the IDs of one more destinations for one or more
+       * archived redo logs.
+       * These IDs are the values of the `dest_id` column in the `v$archived_log` view. Use this
+       * setting with the `archivedLogDestId` extra connection attribute in a primary-to-single setup
+       * or a primary-to-multiple-standby setup.
+       *
+       * This setting is useful in a switchover when you use an Oracle Data Guard database as a
+       * source. In this case, AWS DMS needs information about what destination to get archive redo
+       * logs from to read changes. AWS DMS needs this because after the switchover the previous
+       * primary is a standby instance. For example, in a primary-to-single standby setup you might
+       * apply the following settings.
+       *
+       * `archivedLogDestId=1; ExtraArchivedLogDestIds=[2]`
+       *
+       * In a primary-to-multiple-standby setup, you might apply the following settings.
+       *
+       * `archivedLogDestId=1; ExtraArchivedLogDestIds=[2,3,4]`
+       *
+       * Although AWS DMS supports the use of the Oracle `RESETLOGS` option to open the database,
+       * never use `RESETLOGS` unless it's necessary. For more information about `RESETLOGS` , see
+       * [RMAN Data Repair
+       * Concepts](https://docs.aws.amazon.com/https://docs.oracle.com/en/database/oracle/oracle-database/19/bradv/rman-data-repair-concepts.html#GUID-1805CCF7-4AF2-482D-B65A-998192F89C2B)
+       * in the *Oracle Database Backup and Recovery User's Guide* .
+       */
+      public fun extraArchivedLogDestIds(extraArchivedLogDestIds: IResolvable)
 
       /**
        * @param failTasksOnLobTruncation When set to `true` , this attribute causes a task to fail
@@ -9638,35 +9638,6 @@ public open class CfnEndpoint(
        * Concepts](https://docs.aws.amazon.com/https://docs.oracle.com/en/database/oracle/oracle-database/19/bradv/rman-data-repair-concepts.html#GUID-1805CCF7-4AF2-482D-B65A-998192F89C2B)
        * in the *Oracle Database Backup and Recovery User's Guide* .
        */
-      override fun extraArchivedLogDestIds(extraArchivedLogDestIds: IResolvable) {
-        cdkBuilder.extraArchivedLogDestIds(extraArchivedLogDestIds.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param extraArchivedLogDestIds Specifies the IDs of one more destinations for one or more
-       * archived redo logs.
-       * These IDs are the values of the `dest_id` column in the `v$archived_log` view. Use this
-       * setting with the `archivedLogDestId` extra connection attribute in a primary-to-single setup
-       * or a primary-to-multiple-standby setup.
-       *
-       * This setting is useful in a switchover when you use an Oracle Data Guard database as a
-       * source. In this case, AWS DMS needs information about what destination to get archive redo
-       * logs from to read changes. AWS DMS needs this because after the switchover the previous
-       * primary is a standby instance. For example, in a primary-to-single standby setup you might
-       * apply the following settings.
-       *
-       * `archivedLogDestId=1; ExtraArchivedLogDestIds=[2]`
-       *
-       * In a primary-to-multiple-standby setup, you might apply the following settings.
-       *
-       * `archivedLogDestId=1; ExtraArchivedLogDestIds=[2,3,4]`
-       *
-       * Although AWS DMS supports the use of the Oracle `RESETLOGS` option to open the database,
-       * never use `RESETLOGS` unless it's necessary. For more information about `RESETLOGS` , see
-       * [RMAN Data Repair
-       * Concepts](https://docs.aws.amazon.com/https://docs.oracle.com/en/database/oracle/oracle-database/19/bradv/rman-data-repair-concepts.html#GUID-1805CCF7-4AF2-482D-B65A-998192F89C2B)
-       * in the *Oracle Database Backup and Recovery User's Guide* .
-       */
       override fun extraArchivedLogDestIds(extraArchivedLogDestIds: List<Number>) {
         cdkBuilder.extraArchivedLogDestIds(extraArchivedLogDestIds)
       }
@@ -9698,6 +9669,35 @@ public open class CfnEndpoint(
        */
       override fun extraArchivedLogDestIds(vararg extraArchivedLogDestIds: Number): Unit =
           extraArchivedLogDestIds(extraArchivedLogDestIds.toList())
+
+      /**
+       * @param extraArchivedLogDestIds Specifies the IDs of one more destinations for one or more
+       * archived redo logs.
+       * These IDs are the values of the `dest_id` column in the `v$archived_log` view. Use this
+       * setting with the `archivedLogDestId` extra connection attribute in a primary-to-single setup
+       * or a primary-to-multiple-standby setup.
+       *
+       * This setting is useful in a switchover when you use an Oracle Data Guard database as a
+       * source. In this case, AWS DMS needs information about what destination to get archive redo
+       * logs from to read changes. AWS DMS needs this because after the switchover the previous
+       * primary is a standby instance. For example, in a primary-to-single standby setup you might
+       * apply the following settings.
+       *
+       * `archivedLogDestId=1; ExtraArchivedLogDestIds=[2]`
+       *
+       * In a primary-to-multiple-standby setup, you might apply the following settings.
+       *
+       * `archivedLogDestId=1; ExtraArchivedLogDestIds=[2,3,4]`
+       *
+       * Although AWS DMS supports the use of the Oracle `RESETLOGS` option to open the database,
+       * never use `RESETLOGS` unless it's necessary. For more information about `RESETLOGS` , see
+       * [RMAN Data Repair
+       * Concepts](https://docs.aws.amazon.com/https://docs.oracle.com/en/database/oracle/oracle-database/19/bradv/rman-data-repair-concepts.html#GUID-1805CCF7-4AF2-482D-B65A-998192F89C2B)
+       * in the *Oracle Database Backup and Recovery User's Guide* .
+       */
+      override fun extraArchivedLogDestIds(extraArchivedLogDestIds: IResolvable) {
+        cdkBuilder.extraArchivedLogDestIds(extraArchivedLogDestIds.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param failTasksOnLobTruncation When set to `true` , this attribute causes a task to fail

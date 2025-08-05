@@ -174,8 +174,18 @@ public open class CustomState(
 
   /**
    * Returns the Amazon States Language object for this state.
+   *
+   * @param queryLanguage
    */
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
+
+  /**
+   * Returns the Amazon States Language object for this state.
+   *
+   * @param queryLanguage
+   */
+  public override fun toStateJson(queryLanguage: QueryLanguage): ObjectNode =
+      unwrap(this).toStateJson(queryLanguage.let(QueryLanguage.Companion::unwrap))
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.CustomState].

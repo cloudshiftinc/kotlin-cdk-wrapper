@@ -35,6 +35,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .operatingRegions(List.of(IpamOperatingRegionProperty.builder()
  * .regionName("regionName")
  * .build()))
+ * .organizationalUnitExclusions(List.of(IpamResourceDiscoveryOrganizationalUnitExclusionProperty.builder()
+ * .organizationsEntityPath("organizationsEntityPath")
+ * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -168,6 +171,52 @@ public open class CfnIPAMResourceDiscovery(
   public open fun operatingRegions(vararg `value`: Any): Unit = operatingRegions(`value`.toList())
 
   /**
+   * If your IPAM is integrated with AWS Organizations, you can exclude an [organizational unit
+   * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+   * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+   * accounts in that OU. For more information, see [Exclude organizational units from
+   * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual Private
+   * Cloud IP Address Manager User Guide* .
+   */
+  public open fun organizationalUnitExclusions(): Any? =
+      unwrap(this).getOrganizationalUnitExclusions()
+
+  /**
+   * If your IPAM is integrated with AWS Organizations, you can exclude an [organizational unit
+   * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+   * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+   * accounts in that OU. For more information, see [Exclude organizational units from
+   * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual Private
+   * Cloud IP Address Manager User Guide* .
+   */
+  public open fun organizationalUnitExclusions(`value`: IResolvable) {
+    unwrap(this).setOrganizationalUnitExclusions(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * If your IPAM is integrated with AWS Organizations, you can exclude an [organizational unit
+   * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+   * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+   * accounts in that OU. For more information, see [Exclude organizational units from
+   * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual Private
+   * Cloud IP Address Manager User Guide* .
+   */
+  public open fun organizationalUnitExclusions(`value`: List<Any>) {
+    unwrap(this).setOrganizationalUnitExclusions(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * If your IPAM is integrated with AWS Organizations, you can exclude an [organizational unit
+   * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+   * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+   * accounts in that OU. For more information, see [Exclude organizational units from
+   * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual Private
+   * Cloud IP Address Manager User Guide* .
+   */
+  public open fun organizationalUnitExclusions(vararg `value`: Any): Unit =
+      organizationalUnitExclusions(`value`.toList())
+
+  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
@@ -235,6 +284,63 @@ public open class CfnIPAMResourceDiscovery(
      * @param operatingRegions The operating Regions for the resource discovery. 
      */
     public fun operatingRegions(vararg operatingRegions: Any)
+
+    /**
+     * If your IPAM is integrated with AWS Organizations, you can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamresourcediscovery.html#cfn-ec2-ipamresourcediscovery-organizationalunitexclusions)
+     * @param organizationalUnitExclusions If your IPAM is integrated with AWS Organizations, you
+     * can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* . 
+     */
+    public fun organizationalUnitExclusions(organizationalUnitExclusions: IResolvable)
+
+    /**
+     * If your IPAM is integrated with AWS Organizations, you can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamresourcediscovery.html#cfn-ec2-ipamresourcediscovery-organizationalunitexclusions)
+     * @param organizationalUnitExclusions If your IPAM is integrated with AWS Organizations, you
+     * can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* . 
+     */
+    public fun organizationalUnitExclusions(organizationalUnitExclusions: List<Any>)
+
+    /**
+     * If your IPAM is integrated with AWS Organizations, you can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamresourcediscovery.html#cfn-ec2-ipamresourcediscovery-organizationalunitexclusions)
+     * @param organizationalUnitExclusions If your IPAM is integrated with AWS Organizations, you
+     * can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* . 
+     */
+    public fun organizationalUnitExclusions(vararg organizationalUnitExclusions: Any)
 
     /**
      * A tag is a label that you assign to an AWS resource.
@@ -313,6 +419,68 @@ public open class CfnIPAMResourceDiscovery(
      */
     override fun operatingRegions(vararg operatingRegions: Any): Unit =
         operatingRegions(operatingRegions.toList())
+
+    /**
+     * If your IPAM is integrated with AWS Organizations, you can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamresourcediscovery.html#cfn-ec2-ipamresourcediscovery-organizationalunitexclusions)
+     * @param organizationalUnitExclusions If your IPAM is integrated with AWS Organizations, you
+     * can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* . 
+     */
+    override fun organizationalUnitExclusions(organizationalUnitExclusions: IResolvable) {
+      cdkBuilder.organizationalUnitExclusions(organizationalUnitExclusions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * If your IPAM is integrated with AWS Organizations, you can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamresourcediscovery.html#cfn-ec2-ipamresourcediscovery-organizationalunitexclusions)
+     * @param organizationalUnitExclusions If your IPAM is integrated with AWS Organizations, you
+     * can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* . 
+     */
+    override fun organizationalUnitExclusions(organizationalUnitExclusions: List<Any>) {
+      cdkBuilder.organizationalUnitExclusions(organizationalUnitExclusions.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * If your IPAM is integrated with AWS Organizations, you can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamresourcediscovery.html#cfn-ec2-ipamresourcediscovery-organizationalunitexclusions)
+     * @param organizationalUnitExclusions If your IPAM is integrated with AWS Organizations, you
+     * can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* . 
+     */
+    override fun organizationalUnitExclusions(vararg organizationalUnitExclusions: Any): Unit =
+        organizationalUnitExclusions(organizationalUnitExclusions.toList())
 
     /**
      * A tag is a label that you assign to an AWS resource.
@@ -450,6 +618,112 @@ public open class CfnIPAMResourceDiscovery(
           software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery.IpamOperatingRegionProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery.IpamOperatingRegionProperty
+    }
+  }
+
+  /**
+   * If your IPAM is integrated with AWS Organizations, you can exclude an [organizational unit
+   * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+   * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+   * accounts in that OU. For more information, see [Exclude organizational units from
+   * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual Private
+   * Cloud IP Address Manager User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * IpamResourceDiscoveryOrganizationalUnitExclusionProperty
+   * ipamResourceDiscoveryOrganizationalUnitExclusionProperty =
+   * IpamResourceDiscoveryOrganizationalUnitExclusionProperty.builder()
+   * .organizationsEntityPath("organizationsEntityPath")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ipamresourcediscovery-ipamresourcediscoveryorganizationalunitexclusion.html)
+   */
+  public interface IpamResourceDiscoveryOrganizationalUnitExclusionProperty {
+    /**
+     * An AWS Organizations entity path.
+     *
+     * For more information on the entity path, see [Understand the AWS Organizations entity
+     * path](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_last-accessed-view-data-orgs.html#access_policies_access-advisor-viewing-orgs-entity-path)
+     * in the *AWS Identity and Access Management User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ipamresourcediscovery-ipamresourcediscoveryorganizationalunitexclusion.html#cfn-ec2-ipamresourcediscovery-ipamresourcediscoveryorganizationalunitexclusion-organizationsentitypath)
+     */
+    public fun organizationsEntityPath(): String
+
+    /**
+     * A builder for [IpamResourceDiscoveryOrganizationalUnitExclusionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param organizationsEntityPath An AWS Organizations entity path. 
+       * For more information on the entity path, see [Understand the AWS Organizations entity
+       * path](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_last-accessed-view-data-orgs.html#access_policies_access-advisor-viewing-orgs-entity-path)
+       * in the *AWS Identity and Access Management User Guide* .
+       */
+      public fun organizationsEntityPath(organizationsEntityPath: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery.IpamResourceDiscoveryOrganizationalUnitExclusionProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery.IpamResourceDiscoveryOrganizationalUnitExclusionProperty.builder()
+
+      /**
+       * @param organizationsEntityPath An AWS Organizations entity path. 
+       * For more information on the entity path, see [Understand the AWS Organizations entity
+       * path](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_last-accessed-view-data-orgs.html#access_policies_access-advisor-viewing-orgs-entity-path)
+       * in the *AWS Identity and Access Management User Guide* .
+       */
+      override fun organizationsEntityPath(organizationsEntityPath: String) {
+        cdkBuilder.organizationsEntityPath(organizationsEntityPath)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery.IpamResourceDiscoveryOrganizationalUnitExclusionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery.IpamResourceDiscoveryOrganizationalUnitExclusionProperty,
+    ) : CdkObject(cdkObject),
+        IpamResourceDiscoveryOrganizationalUnitExclusionProperty {
+      /**
+       * An AWS Organizations entity path.
+       *
+       * For more information on the entity path, see [Understand the AWS Organizations entity
+       * path](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_last-accessed-view-data-orgs.html#access_policies_access-advisor-viewing-orgs-entity-path)
+       * in the *AWS Identity and Access Management User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ipamresourcediscovery-ipamresourcediscoveryorganizationalunitexclusion.html#cfn-ec2-ipamresourcediscovery-ipamresourcediscoveryorganizationalunitexclusion-organizationsentitypath)
+       */
+      override fun organizationsEntityPath(): String = unwrap(this).getOrganizationsEntityPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          IpamResourceDiscoveryOrganizationalUnitExclusionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery.IpamResourceDiscoveryOrganizationalUnitExclusionProperty):
+          IpamResourceDiscoveryOrganizationalUnitExclusionProperty =
+          CdkObjectWrappers.wrap(cdkObject) as?
+          IpamResourceDiscoveryOrganizationalUnitExclusionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IpamResourceDiscoveryOrganizationalUnitExclusionProperty):
+          software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery.IpamResourceDiscoveryOrganizationalUnitExclusionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery.IpamResourceDiscoveryOrganizationalUnitExclusionProperty
     }
   }
 }

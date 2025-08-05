@@ -178,6 +178,9 @@ public open class UserPoolResourceServer(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.cognito.UserPoolResourceServer.PROPERTY_INJECTION_ID
+
     public fun fromUserPoolResourceServerId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

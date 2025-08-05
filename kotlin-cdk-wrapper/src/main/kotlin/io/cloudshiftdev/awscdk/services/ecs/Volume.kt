@@ -41,6 +41,7 @@ import kotlin.jvm.JvmName
  * FargateService service = FargateService.Builder.create(this, "FargateService")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
+ * .minHealthyPercent(100)
  * .build();
  * service.addVolume(volumeFromSnapshot);
  * ```

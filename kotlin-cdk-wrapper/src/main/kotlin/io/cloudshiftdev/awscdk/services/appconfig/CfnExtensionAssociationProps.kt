@@ -104,13 +104,13 @@ public interface CfnExtensionAssociationProps {
      * @param parameters The parameter names and values defined in the extensions.
      * Extension parameters marked `Required` must be entered for this field.
      */
-    public fun parameters(parameters: IResolvable)
+    public fun parameters(parameters: Map<String, String>)
 
     /**
      * @param parameters The parameter names and values defined in the extensions.
      * Extension parameters marked `Required` must be entered for this field.
      */
-    public fun parameters(parameters: Map<String, String>)
+    public fun parameters(parameters: IResolvable)
 
     /**
      * @param resourceIdentifier The ARN of an application, configuration profile, or environment.
@@ -159,16 +159,16 @@ public interface CfnExtensionAssociationProps {
      * @param parameters The parameter names and values defined in the extensions.
      * Extension parameters marked `Required` must be entered for this field.
      */
-    override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+    override fun parameters(parameters: Map<String, String>) {
+      cdkBuilder.parameters(parameters)
     }
 
     /**
      * @param parameters The parameter names and values defined in the extensions.
      * Extension parameters marked `Required` must be entered for this field.
      */
-    override fun parameters(parameters: Map<String, String>) {
-      cdkBuilder.parameters(parameters)
+    override fun parameters(parameters: IResolvable) {
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**

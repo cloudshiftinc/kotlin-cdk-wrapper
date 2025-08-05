@@ -19,15 +19,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.sns.*;
- * Topic topic = new Topic(this, "MyTopic");
- * TopicRule topicRule = TopicRule.Builder.create(this, "TopicRule")
- * .sql(IotSql.fromStringAsVer20160323("SELECT topic(2) as device_id, year, month, day FROM
- * 'device/+/data'"))
- * .actions(List.of(
- * SnsTopicAction.Builder.create(topic)
- * .messageFormat(SnsActionMessageFormat.JSON)
- * .build()))
+ * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
+ * DeliveryStream stream;
+ * Topic topic = new Topic(this, "Topic");
+ * Subscription.Builder.create(this, "Subscription")
+ * .topic(topic)
+ * .endpoint(stream.getDeliveryStreamArn())
+ * .protocol(SubscriptionProtocol.FIREHOSE)
+ * .subscriptionRoleArn("SAMPLE_ARN")
  * .build();
  * ```
  */
@@ -88,6 +87,13 @@ public open class Topic(
   public override fun fifo(): Boolean = unwrap(this).getFifo()
 
   /**
+   * A KMS Key, either managed by this CDK app, or imported.
+   *
+   * This property applies only to server-side encryption.
+   */
+  public override fun masterKey(): IKey? = unwrap(this).getMasterKey()?.let(IKey::wrap)
+
+  /**
    * The ARN of the topic.
    */
   public override fun topicArn(): String = unwrap(this).getTopicArn()
@@ -142,6 +148,18 @@ public open class Topic(
      * @param fifo Set to true to create a FIFO topic. 
      */
     public fun fifo(fifo: Boolean)
+
+    /**
+     * Specifies the throughput quota and deduplication behavior to apply for the FIFO topic.
+     *
+     * You can only set this property when `fifo` is `true`.
+     *
+     * Default: undefined - SNS default setting is FifoThroughputScope.TOPIC
+     *
+     * @param fifoThroughputScope Specifies the throughput quota and deduplication behavior to apply
+     * for the FIFO topic. 
+     */
+    public fun fifoThroughputScope(fifoThroughputScope: FifoThroughputScope)
 
     /**
      * The list of delivery status logging configurations for the topic.
@@ -279,6 +297,20 @@ public open class Topic(
     }
 
     /**
+     * Specifies the throughput quota and deduplication behavior to apply for the FIFO topic.
+     *
+     * You can only set this property when `fifo` is `true`.
+     *
+     * Default: undefined - SNS default setting is FifoThroughputScope.TOPIC
+     *
+     * @param fifoThroughputScope Specifies the throughput quota and deduplication behavior to apply
+     * for the FIFO topic. 
+     */
+    override fun fifoThroughputScope(fifoThroughputScope: FifoThroughputScope) {
+      cdkBuilder.fifoThroughputScope(fifoThroughputScope.let(FifoThroughputScope.Companion::unwrap))
+    }
+
+    /**
      * The list of delivery status logging configurations for the topic.
      *
      * Default: None
@@ -373,6 +405,9 @@ public open class Topic(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.sns.Topic.PROPERTY_INJECTION_ID
+
     public fun fromTopicArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

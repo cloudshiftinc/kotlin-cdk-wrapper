@@ -182,12 +182,12 @@ public interface CfnPortalProps {
     /**
      * @param additionalEncryptionContext The additional encryption context of the portal.
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
+    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
     /**
      * @param additionalEncryptionContext The additional encryption context of the portal.
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
     /**
      * @param authenticationType The type of authentication integration points used when signing
@@ -296,15 +296,15 @@ public interface CfnPortalProps {
     /**
      * @param additionalEncryptionContext The additional encryption context of the portal.
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
+    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
     }
 
     /**
      * @param additionalEncryptionContext The additional encryption context of the portal.
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
     }
 
     /**

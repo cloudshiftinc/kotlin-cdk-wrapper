@@ -100,12 +100,12 @@ public open class CfnEmailAddress(
   }
 
   /**
-   * The email address with the instance, in [^\s&#64;]+&#64;[^\s&#64;]+.[^\s&#64;]+ format.
+   * The email address, including the domain.
    */
   public open fun emailAddress(): String = unwrap(this).getEmailAddress()
 
   /**
-   * The email address with the instance, in [^\s&#64;]+&#64;[^\s&#64;]+.[^\s&#64;]+ format.
+   * The email address, including the domain.
    */
   public open fun emailAddress(`value`: String) {
     unwrap(this).setEmailAddress(`value`)
@@ -133,19 +133,19 @@ public open class CfnEmailAddress(
   }
 
   /**
-   * One or more tags.
+   * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * One or more tags.
+   * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * One or more tags.
+   * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
@@ -171,11 +171,10 @@ public open class CfnEmailAddress(
     public fun displayName(displayName: String)
 
     /**
-     * The email address with the instance, in [^\s&#64;]+&#64;[^\s&#64;]+.[^\s&#64;]+ format.
+     * The email address, including the domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-emailaddress.html#cfn-connect-emailaddress-emailaddress)
-     * @param emailAddress The email address with the instance, in
-     * [^\s&#64;]+&#64;[^\s&#64;]+.[^\s&#64;]+ format. 
+     * @param emailAddress The email address, including the domain. 
      */
     public fun emailAddress(emailAddress: String)
 
@@ -188,18 +187,18 @@ public open class CfnEmailAddress(
     public fun instanceArn(instanceArn: String)
 
     /**
-     * One or more tags.
+     * An array of key-value pairs to apply to this resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-emailaddress.html#cfn-connect-emailaddress-tags)
-     * @param tags One or more tags. 
+     * @param tags An array of key-value pairs to apply to this resource. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * One or more tags.
+     * An array of key-value pairs to apply to this resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-emailaddress.html#cfn-connect-emailaddress-tags)
-     * @param tags One or more tags. 
+     * @param tags An array of key-value pairs to apply to this resource. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -232,11 +231,10 @@ public open class CfnEmailAddress(
     }
 
     /**
-     * The email address with the instance, in [^\s&#64;]+&#64;[^\s&#64;]+.[^\s&#64;]+ format.
+     * The email address, including the domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-emailaddress.html#cfn-connect-emailaddress-emailaddress)
-     * @param emailAddress The email address with the instance, in
-     * [^\s&#64;]+&#64;[^\s&#64;]+.[^\s&#64;]+ format. 
+     * @param emailAddress The email address, including the domain. 
      */
     override fun emailAddress(emailAddress: String) {
       cdkBuilder.emailAddress(emailAddress)
@@ -253,20 +251,20 @@ public open class CfnEmailAddress(
     }
 
     /**
-     * One or more tags.
+     * An array of key-value pairs to apply to this resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-emailaddress.html#cfn-connect-emailaddress-tags)
-     * @param tags One or more tags. 
+     * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * One or more tags.
+     * An array of key-value pairs to apply to this resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-emailaddress.html#cfn-connect-emailaddress-tags)
-     * @param tags One or more tags. 
+     * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 

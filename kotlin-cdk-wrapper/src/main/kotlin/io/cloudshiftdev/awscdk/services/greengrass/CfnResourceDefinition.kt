@@ -1064,7 +1064,7 @@ public open class CfnResourceDefinition(
         unwrap(this).getS3MachineLearningModelResourceData()
 
     /**
-     * Settings for a machine learning resource saved as an SageMaker training job.
+     * Settings for a machine learning resource saved as an SageMaker AI training job.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html#cfn-greengrass-resourcedefinition-resourcedatacontainer-sagemakermachinelearningmodelresourcedata)
      */
@@ -1144,21 +1144,21 @@ public open class CfnResourceDefinition(
 
       /**
        * @param sageMakerMachineLearningModelResourceData Settings for a machine learning resource
-       * saved as an SageMaker training job.
+       * saved as an SageMaker AI training job.
        */
       public
           fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: IResolvable)
 
       /**
        * @param sageMakerMachineLearningModelResourceData Settings for a machine learning resource
-       * saved as an SageMaker training job.
+       * saved as an SageMaker AI training job.
        */
       public
           fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: SageMakerMachineLearningModelResourceDataProperty)
 
       /**
        * @param sageMakerMachineLearningModelResourceData Settings for a machine learning resource
-       * saved as an SageMaker training job.
+       * saved as an SageMaker AI training job.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d765df094e5bca3ebc387e99ef4bcf53f5556f1662b724d4ad3cdb9393a53ac2")
@@ -1270,7 +1270,7 @@ public open class CfnResourceDefinition(
 
       /**
        * @param sageMakerMachineLearningModelResourceData Settings for a machine learning resource
-       * saved as an SageMaker training job.
+       * saved as an SageMaker AI training job.
        */
       override
           fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: IResolvable) {
@@ -1279,7 +1279,7 @@ public open class CfnResourceDefinition(
 
       /**
        * @param sageMakerMachineLearningModelResourceData Settings for a machine learning resource
-       * saved as an SageMaker training job.
+       * saved as an SageMaker AI training job.
        */
       override
           fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: SageMakerMachineLearningModelResourceDataProperty) {
@@ -1288,7 +1288,7 @@ public open class CfnResourceDefinition(
 
       /**
        * @param sageMakerMachineLearningModelResourceData Settings for a machine learning resource
-       * saved as an SageMaker training job.
+       * saved as an SageMaker AI training job.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d765df094e5bca3ebc387e99ef4bcf53f5556f1662b724d4ad3cdb9393a53ac2")
@@ -1354,7 +1354,7 @@ public open class CfnResourceDefinition(
           unwrap(this).getS3MachineLearningModelResourceData()
 
       /**
-       * Settings for a machine learning resource saved as an SageMaker training job.
+       * Settings for a machine learning resource saved as an SageMaker AI training job.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html#cfn-greengrass-resourcedefinition-resourcedatacontainer-sagemakermachinelearningmodelresourcedata)
        */
@@ -2265,7 +2265,7 @@ public open class CfnResourceDefinition(
     public fun ownerSetting(): Any? = unwrap(this).getOwnerSetting()
 
     /**
-     * The Amazon Resource Name (ARN) of the Amazon SageMaker training job that represents the
+     * The Amazon Resource Name (ARN) of the Amazon SageMaker AI training job that represents the
      * source model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-sagemakerjobarn)
@@ -2310,8 +2310,8 @@ public open class CfnResourceDefinition(
       public fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty.Builder.() -> Unit)
 
       /**
-       * @param sageMakerJobArn The Amazon Resource Name (ARN) of the Amazon SageMaker training job
-       * that represents the source model. 
+       * @param sageMakerJobArn The Amazon Resource Name (ARN) of the Amazon SageMaker AI training
+       * job that represents the source model. 
        */
       public fun sageMakerJobArn(sageMakerJobArn: String)
     }
@@ -2363,8 +2363,8 @@ public open class CfnResourceDefinition(
           Unit = ownerSetting(ResourceDownloadOwnerSettingProperty(ownerSetting))
 
       /**
-       * @param sageMakerJobArn The Amazon Resource Name (ARN) of the Amazon SageMaker training job
-       * that represents the source model. 
+       * @param sageMakerJobArn The Amazon Resource Name (ARN) of the Amazon SageMaker AI training
+       * job that represents the source model. 
        */
       override fun sageMakerJobArn(sageMakerJobArn: String) {
         cdkBuilder.sageMakerJobArn(sageMakerJobArn)
@@ -2398,7 +2398,7 @@ public open class CfnResourceDefinition(
       override fun ownerSetting(): Any? = unwrap(this).getOwnerSetting()
 
       /**
-       * The Amazon Resource Name (ARN) of the Amazon SageMaker training job that represents the
+       * The Amazon Resource Name (ARN) of the Amazon SageMaker AI training job that represents the
        * source model.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-sagemakerjobarn)

@@ -61,6 +61,20 @@ public enum class InstanceClass(
   U_18TB1(software.amazon.awscdk.services.ec2.InstanceClass.U_18TB1),
   HIGH_MEMORY_24TB_1(software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_24TB_1),
   U_24TB1(software.amazon.awscdk.services.ec2.InstanceClass.U_24TB1),
+  HIGH_MEMORY_6TB_7(software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_6TB_7),
+  U7I_6TB(software.amazon.awscdk.services.ec2.InstanceClass.U7I_6TB),
+  HIGH_MEMORY_8TB_7(software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_8TB_7),
+  U7I_8TB(software.amazon.awscdk.services.ec2.InstanceClass.U7I_8TB),
+  HIGH_MEMORY_12TB_7(software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_12TB_7),
+  U7I_12TB(software.amazon.awscdk.services.ec2.InstanceClass.U7I_12TB),
+  HIGH_MEMORY_HIGH_NETWORK_16TB_7(software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_HIGH_NETWORK_16TB_7),
+  U7IN_16TB(software.amazon.awscdk.services.ec2.InstanceClass.U7IN_16TB),
+  HIGH_MEMORY_HIGH_NETWORK_24TB_7(software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_HIGH_NETWORK_24TB_7),
+  U7IN_24TB(software.amazon.awscdk.services.ec2.InstanceClass.U7IN_24TB),
+  HIGH_MEMORY_HIGH_NETWORK_32TB_7(software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_HIGH_NETWORK_32TB_7),
+  U7IN_32TB(software.amazon.awscdk.services.ec2.InstanceClass.U7IN_32TB),
+  HIGH_MEMORY_HIGH_NETWORK_HPE_32TB_7(software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_HIGH_NETWORK_HPE_32TB_7),
+  U7INH_32TB(software.amazon.awscdk.services.ec2.InstanceClass.U7INH_32TB),
   MEMORY5_EBS_OPTIMIZED(software.amazon.awscdk.services.ec2.InstanceClass.MEMORY5_EBS_OPTIMIZED),
   R5B(software.amazon.awscdk.services.ec2.InstanceClass.R5B),
   MEMORY6_GRAVITON(software.amazon.awscdk.services.ec2.InstanceClass.MEMORY6_GRAVITON),
@@ -79,6 +93,8 @@ public enum class InstanceClass(
   R7A(software.amazon.awscdk.services.ec2.InstanceClass.R7A),
   MEMORY8_GRAVITON(software.amazon.awscdk.services.ec2.InstanceClass.MEMORY8_GRAVITON),
   R8G(software.amazon.awscdk.services.ec2.InstanceClass.R8G),
+  MEMORY8_GRAVITON4_NVME_DRIVE(software.amazon.awscdk.services.ec2.InstanceClass.MEMORY8_GRAVITON4_NVME_DRIVE),
+  R8GD(software.amazon.awscdk.services.ec2.InstanceClass.R8GD),
   COMPUTE3(software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE3),
   C3(software.amazon.awscdk.services.ec2.InstanceClass.C3),
   COMPUTE4(software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE4),
@@ -105,16 +121,24 @@ public enum class InstanceClass(
   C6G(software.amazon.awscdk.services.ec2.InstanceClass.C6G),
   COMPUTE7_GRAVITON3(software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE7_GRAVITON3),
   C7G(software.amazon.awscdk.services.ec2.InstanceClass.C7G),
+  COMPUTE8_GRAVITON4(software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE8_GRAVITON4),
+  C8G(software.amazon.awscdk.services.ec2.InstanceClass.C8G),
   COMPUTE6_GRAVITON2_NVME_DRIVE(software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE6_GRAVITON2_NVME_DRIVE),
   C6GD(software.amazon.awscdk.services.ec2.InstanceClass.C6GD),
   COMPUTE7_GRAVITON3_NVME_DRIVE(software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE7_GRAVITON3_NVME_DRIVE),
   C7GD(software.amazon.awscdk.services.ec2.InstanceClass.C7GD),
+  COMPUTE8_GRAVITON4_NVME_DRIVE(software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE8_GRAVITON4_NVME_DRIVE),
+  C8GD(software.amazon.awscdk.services.ec2.InstanceClass.C8GD),
   COMPUTE6_GRAVITON2_HIGH_NETWORK_BANDWIDTH(software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE6_GRAVITON2_HIGH_NETWORK_BANDWIDTH),
   C6GN(software.amazon.awscdk.services.ec2.InstanceClass.C6GN),
   COMPUTE7_GRAVITON3_HIGH_NETWORK_BANDWIDTH(software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE7_GRAVITON3_HIGH_NETWORK_BANDWIDTH),
   C7GN(software.amazon.awscdk.services.ec2.InstanceClass.C7GN),
+  COMPUTE8_GRAVITON4_HIGH_NETWORK_BANDWIDTH(software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE8_GRAVITON4_HIGH_NETWORK_BANDWIDTH),
+  C8GN(software.amazon.awscdk.services.ec2.InstanceClass.C8GN),
   COMPUTE7_INTEL(software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE7_INTEL),
   C7I(software.amazon.awscdk.services.ec2.InstanceClass.C7I),
+  COMPUTE7_INTEL_FLEX(software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE7_INTEL_FLEX),
+  C7I_FLEX(software.amazon.awscdk.services.ec2.InstanceClass.C7I_FLEX),
   COMPUTE7_AMD(software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE7_AMD),
   C7A(software.amazon.awscdk.services.ec2.InstanceClass.C7A),
   STORAGE2(software.amazon.awscdk.services.ec2.InstanceClass.STORAGE2),
@@ -129,6 +153,10 @@ public enum class InstanceClass(
   TRN1(software.amazon.awscdk.services.ec2.InstanceClass.TRN1),
   TRAINING_ACCELERATOR1_ENHANCED_NETWORK(software.amazon.awscdk.services.ec2.InstanceClass.TRAINING_ACCELERATOR1_ENHANCED_NETWORK),
   TRN1N(software.amazon.awscdk.services.ec2.InstanceClass.TRN1N),
+  TRAINING_ACCELERATOR2(software.amazon.awscdk.services.ec2.InstanceClass.TRAINING_ACCELERATOR2),
+  TRN2(software.amazon.awscdk.services.ec2.InstanceClass.TRN2),
+  TRAINING_ACCELERATOR2_ULTRASERVER(software.amazon.awscdk.services.ec2.InstanceClass.TRAINING_ACCELERATOR2_ULTRASERVER),
+  TRN2U(software.amazon.awscdk.services.ec2.InstanceClass.TRN2U),
   IO3(software.amazon.awscdk.services.ec2.InstanceClass.IO3),
   I3(software.amazon.awscdk.services.ec2.InstanceClass.I3),
   IO3_DENSE_NVME_DRIVE(software.amazon.awscdk.services.ec2.InstanceClass.IO3_DENSE_NVME_DRIVE),
@@ -141,6 +169,12 @@ public enum class InstanceClass(
   IM4GN(software.amazon.awscdk.services.ec2.InstanceClass.IM4GN),
   STORAGE4_GRAVITON_NETWORK_STORAGE_OPTIMIZED(software.amazon.awscdk.services.ec2.InstanceClass.STORAGE4_GRAVITON_NETWORK_STORAGE_OPTIMIZED),
   IS4GEN(software.amazon.awscdk.services.ec2.InstanceClass.IS4GEN),
+  STORAGE7_INTEL_STORAGE_OPTIMIZED(software.amazon.awscdk.services.ec2.InstanceClass.STORAGE7_INTEL_STORAGE_OPTIMIZED),
+  I7IE(software.amazon.awscdk.services.ec2.InstanceClass.I7IE),
+  IO7_INTEL(software.amazon.awscdk.services.ec2.InstanceClass.IO7_INTEL),
+  I7I(software.amazon.awscdk.services.ec2.InstanceClass.I7I),
+  STORAGE8_GRAVITON(software.amazon.awscdk.services.ec2.InstanceClass.STORAGE8_GRAVITON),
+  I8G(software.amazon.awscdk.services.ec2.InstanceClass.I8G),
   BURSTABLE2(software.amazon.awscdk.services.ec2.InstanceClass.BURSTABLE2),
   T2(software.amazon.awscdk.services.ec2.InstanceClass.T2),
   BURSTABLE3(software.amazon.awscdk.services.ec2.InstanceClass.BURSTABLE3),
@@ -163,8 +197,12 @@ public enum class InstanceClass(
   X2IDN(software.amazon.awscdk.services.ec2.InstanceClass.X2IDN),
   MEMORY_INTENSIVE_2_XTZ_INTEL(software.amazon.awscdk.services.ec2.InstanceClass.MEMORY_INTENSIVE_2_XTZ_INTEL),
   X2IEZN(software.amazon.awscdk.services.ec2.InstanceClass.X2IEZN),
+  MEMORY_INTENSIVE_8_GRAVITON(software.amazon.awscdk.services.ec2.InstanceClass.MEMORY_INTENSIVE_8_GRAVITON),
+  X8G(software.amazon.awscdk.services.ec2.InstanceClass.X8G),
   FPGA1(software.amazon.awscdk.services.ec2.InstanceClass.FPGA1),
   F1(software.amazon.awscdk.services.ec2.InstanceClass.F1),
+  FPGA2(software.amazon.awscdk.services.ec2.InstanceClass.FPGA2),
+  F2(software.amazon.awscdk.services.ec2.InstanceClass.F2),
   GRAPHICS3_SMALL(software.amazon.awscdk.services.ec2.InstanceClass.GRAPHICS3_SMALL),
   G3S(software.amazon.awscdk.services.ec2.InstanceClass.G3S),
   GRAPHICS3(software.amazon.awscdk.services.ec2.InstanceClass.GRAPHICS3),
@@ -181,6 +219,8 @@ public enum class InstanceClass(
   G6(software.amazon.awscdk.services.ec2.InstanceClass.G6),
   GRAPHICS6_EFFICIENT(software.amazon.awscdk.services.ec2.InstanceClass.GRAPHICS6_EFFICIENT),
   G6E(software.amazon.awscdk.services.ec2.InstanceClass.G6E),
+  GRAPHICS_RAM_6(software.amazon.awscdk.services.ec2.InstanceClass.GRAPHICS_RAM_6),
+  GR6(software.amazon.awscdk.services.ec2.InstanceClass.GR6),
   PARALLEL2(software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL2),
   P2(software.amazon.awscdk.services.ec2.InstanceClass.P2),
   PARALLEL3(software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL3),
@@ -193,6 +233,10 @@ public enum class InstanceClass(
   P4D(software.amazon.awscdk.services.ec2.InstanceClass.P4D),
   PARALLEL5(software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL5),
   P5(software.amazon.awscdk.services.ec2.InstanceClass.P5),
+  PARALLEL5_EXTENDED(software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL5_EXTENDED),
+  P5E(software.amazon.awscdk.services.ec2.InstanceClass.P5E),
+  PARALLEL5_EXTENDED_NETWORK(software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL5_EXTENDED_NETWORK),
+  P5EN(software.amazon.awscdk.services.ec2.InstanceClass.P5EN),
   ARM1(software.amazon.awscdk.services.ec2.InstanceClass.ARM1),
   A1(software.amazon.awscdk.services.ec2.InstanceClass.A1),
   STANDARD6_GRAVITON(software.amazon.awscdk.services.ec2.InstanceClass.STANDARD6_GRAVITON),
@@ -211,8 +255,12 @@ public enum class InstanceClass(
   M6GD(software.amazon.awscdk.services.ec2.InstanceClass.M6GD),
   STANDARD7_GRAVITON(software.amazon.awscdk.services.ec2.InstanceClass.STANDARD7_GRAVITON),
   M7G(software.amazon.awscdk.services.ec2.InstanceClass.M7G),
+  STANDARD8_GRAVITON(software.amazon.awscdk.services.ec2.InstanceClass.STANDARD8_GRAVITON),
+  M8G(software.amazon.awscdk.services.ec2.InstanceClass.M8G),
   STANDARD7_GRAVITON3_NVME_DRIVE(software.amazon.awscdk.services.ec2.InstanceClass.STANDARD7_GRAVITON3_NVME_DRIVE),
   M7GD(software.amazon.awscdk.services.ec2.InstanceClass.M7GD),
+  STANDARD8_GRAVITON4_NVME_DRIVE(software.amazon.awscdk.services.ec2.InstanceClass.STANDARD8_GRAVITON4_NVME_DRIVE),
+  M8GD(software.amazon.awscdk.services.ec2.InstanceClass.M8GD),
   STANDARD7_INTEL(software.amazon.awscdk.services.ec2.InstanceClass.STANDARD7_INTEL),
   M7I(software.amazon.awscdk.services.ec2.InstanceClass.M7I),
   STANDARD7_INTEL_FLEX(software.amazon.awscdk.services.ec2.InstanceClass.STANDARD7_INTEL_FLEX),
@@ -328,6 +376,27 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_24TB_1 ->
           InstanceClass.HIGH_MEMORY_24TB_1
       software.amazon.awscdk.services.ec2.InstanceClass.U_24TB1 -> InstanceClass.U_24TB1
+      software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_6TB_7 ->
+          InstanceClass.HIGH_MEMORY_6TB_7
+      software.amazon.awscdk.services.ec2.InstanceClass.U7I_6TB -> InstanceClass.U7I_6TB
+      software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_8TB_7 ->
+          InstanceClass.HIGH_MEMORY_8TB_7
+      software.amazon.awscdk.services.ec2.InstanceClass.U7I_8TB -> InstanceClass.U7I_8TB
+      software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_12TB_7 ->
+          InstanceClass.HIGH_MEMORY_12TB_7
+      software.amazon.awscdk.services.ec2.InstanceClass.U7I_12TB -> InstanceClass.U7I_12TB
+      software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_HIGH_NETWORK_16TB_7 ->
+          InstanceClass.HIGH_MEMORY_HIGH_NETWORK_16TB_7
+      software.amazon.awscdk.services.ec2.InstanceClass.U7IN_16TB -> InstanceClass.U7IN_16TB
+      software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_HIGH_NETWORK_24TB_7 ->
+          InstanceClass.HIGH_MEMORY_HIGH_NETWORK_24TB_7
+      software.amazon.awscdk.services.ec2.InstanceClass.U7IN_24TB -> InstanceClass.U7IN_24TB
+      software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_HIGH_NETWORK_32TB_7 ->
+          InstanceClass.HIGH_MEMORY_HIGH_NETWORK_32TB_7
+      software.amazon.awscdk.services.ec2.InstanceClass.U7IN_32TB -> InstanceClass.U7IN_32TB
+      software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_HIGH_NETWORK_HPE_32TB_7 ->
+          InstanceClass.HIGH_MEMORY_HIGH_NETWORK_HPE_32TB_7
+      software.amazon.awscdk.services.ec2.InstanceClass.U7INH_32TB -> InstanceClass.U7INH_32TB
       software.amazon.awscdk.services.ec2.InstanceClass.MEMORY5_EBS_OPTIMIZED ->
           InstanceClass.MEMORY5_EBS_OPTIMIZED
       software.amazon.awscdk.services.ec2.InstanceClass.R5B -> InstanceClass.R5B
@@ -353,6 +422,9 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.MEMORY8_GRAVITON ->
           InstanceClass.MEMORY8_GRAVITON
       software.amazon.awscdk.services.ec2.InstanceClass.R8G -> InstanceClass.R8G
+      software.amazon.awscdk.services.ec2.InstanceClass.MEMORY8_GRAVITON4_NVME_DRIVE ->
+          InstanceClass.MEMORY8_GRAVITON4_NVME_DRIVE
+      software.amazon.awscdk.services.ec2.InstanceClass.R8GD -> InstanceClass.R8GD
       software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE3 -> InstanceClass.COMPUTE3
       software.amazon.awscdk.services.ec2.InstanceClass.C3 -> InstanceClass.C3
       software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE4 -> InstanceClass.COMPUTE4
@@ -387,21 +459,33 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE7_GRAVITON3 ->
           InstanceClass.COMPUTE7_GRAVITON3
       software.amazon.awscdk.services.ec2.InstanceClass.C7G -> InstanceClass.C7G
+      software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE8_GRAVITON4 ->
+          InstanceClass.COMPUTE8_GRAVITON4
+      software.amazon.awscdk.services.ec2.InstanceClass.C8G -> InstanceClass.C8G
       software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE6_GRAVITON2_NVME_DRIVE ->
           InstanceClass.COMPUTE6_GRAVITON2_NVME_DRIVE
       software.amazon.awscdk.services.ec2.InstanceClass.C6GD -> InstanceClass.C6GD
       software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE7_GRAVITON3_NVME_DRIVE ->
           InstanceClass.COMPUTE7_GRAVITON3_NVME_DRIVE
       software.amazon.awscdk.services.ec2.InstanceClass.C7GD -> InstanceClass.C7GD
+      software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE8_GRAVITON4_NVME_DRIVE ->
+          InstanceClass.COMPUTE8_GRAVITON4_NVME_DRIVE
+      software.amazon.awscdk.services.ec2.InstanceClass.C8GD -> InstanceClass.C8GD
       software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE6_GRAVITON2_HIGH_NETWORK_BANDWIDTH ->
           InstanceClass.COMPUTE6_GRAVITON2_HIGH_NETWORK_BANDWIDTH
       software.amazon.awscdk.services.ec2.InstanceClass.C6GN -> InstanceClass.C6GN
       software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE7_GRAVITON3_HIGH_NETWORK_BANDWIDTH ->
           InstanceClass.COMPUTE7_GRAVITON3_HIGH_NETWORK_BANDWIDTH
       software.amazon.awscdk.services.ec2.InstanceClass.C7GN -> InstanceClass.C7GN
+      software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE8_GRAVITON4_HIGH_NETWORK_BANDWIDTH ->
+          InstanceClass.COMPUTE8_GRAVITON4_HIGH_NETWORK_BANDWIDTH
+      software.amazon.awscdk.services.ec2.InstanceClass.C8GN -> InstanceClass.C8GN
       software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE7_INTEL ->
           InstanceClass.COMPUTE7_INTEL
       software.amazon.awscdk.services.ec2.InstanceClass.C7I -> InstanceClass.C7I
+      software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE7_INTEL_FLEX ->
+          InstanceClass.COMPUTE7_INTEL_FLEX
+      software.amazon.awscdk.services.ec2.InstanceClass.C7I_FLEX -> InstanceClass.C7I_FLEX
       software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE7_AMD -> InstanceClass.COMPUTE7_AMD
       software.amazon.awscdk.services.ec2.InstanceClass.C7A -> InstanceClass.C7A
       software.amazon.awscdk.services.ec2.InstanceClass.STORAGE2 -> InstanceClass.STORAGE2
@@ -420,6 +504,12 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.TRAINING_ACCELERATOR1_ENHANCED_NETWORK ->
           InstanceClass.TRAINING_ACCELERATOR1_ENHANCED_NETWORK
       software.amazon.awscdk.services.ec2.InstanceClass.TRN1N -> InstanceClass.TRN1N
+      software.amazon.awscdk.services.ec2.InstanceClass.TRAINING_ACCELERATOR2 ->
+          InstanceClass.TRAINING_ACCELERATOR2
+      software.amazon.awscdk.services.ec2.InstanceClass.TRN2 -> InstanceClass.TRN2
+      software.amazon.awscdk.services.ec2.InstanceClass.TRAINING_ACCELERATOR2_ULTRASERVER ->
+          InstanceClass.TRAINING_ACCELERATOR2_ULTRASERVER
+      software.amazon.awscdk.services.ec2.InstanceClass.TRN2U -> InstanceClass.TRN2U
       software.amazon.awscdk.services.ec2.InstanceClass.IO3 -> InstanceClass.IO3
       software.amazon.awscdk.services.ec2.InstanceClass.I3 -> InstanceClass.I3
       software.amazon.awscdk.services.ec2.InstanceClass.IO3_DENSE_NVME_DRIVE ->
@@ -436,6 +526,14 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.STORAGE4_GRAVITON_NETWORK_STORAGE_OPTIMIZED ->
           InstanceClass.STORAGE4_GRAVITON_NETWORK_STORAGE_OPTIMIZED
       software.amazon.awscdk.services.ec2.InstanceClass.IS4GEN -> InstanceClass.IS4GEN
+      software.amazon.awscdk.services.ec2.InstanceClass.STORAGE7_INTEL_STORAGE_OPTIMIZED ->
+          InstanceClass.STORAGE7_INTEL_STORAGE_OPTIMIZED
+      software.amazon.awscdk.services.ec2.InstanceClass.I7IE -> InstanceClass.I7IE
+      software.amazon.awscdk.services.ec2.InstanceClass.IO7_INTEL -> InstanceClass.IO7_INTEL
+      software.amazon.awscdk.services.ec2.InstanceClass.I7I -> InstanceClass.I7I
+      software.amazon.awscdk.services.ec2.InstanceClass.STORAGE8_GRAVITON ->
+          InstanceClass.STORAGE8_GRAVITON
+      software.amazon.awscdk.services.ec2.InstanceClass.I8G -> InstanceClass.I8G
       software.amazon.awscdk.services.ec2.InstanceClass.BURSTABLE2 -> InstanceClass.BURSTABLE2
       software.amazon.awscdk.services.ec2.InstanceClass.T2 -> InstanceClass.T2
       software.amazon.awscdk.services.ec2.InstanceClass.BURSTABLE3 -> InstanceClass.BURSTABLE3
@@ -467,8 +565,13 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.MEMORY_INTENSIVE_2_XTZ_INTEL ->
           InstanceClass.MEMORY_INTENSIVE_2_XTZ_INTEL
       software.amazon.awscdk.services.ec2.InstanceClass.X2IEZN -> InstanceClass.X2IEZN
+      software.amazon.awscdk.services.ec2.InstanceClass.MEMORY_INTENSIVE_8_GRAVITON ->
+          InstanceClass.MEMORY_INTENSIVE_8_GRAVITON
+      software.amazon.awscdk.services.ec2.InstanceClass.X8G -> InstanceClass.X8G
       software.amazon.awscdk.services.ec2.InstanceClass.FPGA1 -> InstanceClass.FPGA1
       software.amazon.awscdk.services.ec2.InstanceClass.F1 -> InstanceClass.F1
+      software.amazon.awscdk.services.ec2.InstanceClass.FPGA2 -> InstanceClass.FPGA2
+      software.amazon.awscdk.services.ec2.InstanceClass.F2 -> InstanceClass.F2
       software.amazon.awscdk.services.ec2.InstanceClass.GRAPHICS3_SMALL ->
           InstanceClass.GRAPHICS3_SMALL
       software.amazon.awscdk.services.ec2.InstanceClass.G3S -> InstanceClass.G3S
@@ -490,6 +593,9 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.GRAPHICS6_EFFICIENT ->
           InstanceClass.GRAPHICS6_EFFICIENT
       software.amazon.awscdk.services.ec2.InstanceClass.G6E -> InstanceClass.G6E
+      software.amazon.awscdk.services.ec2.InstanceClass.GRAPHICS_RAM_6 ->
+          InstanceClass.GRAPHICS_RAM_6
+      software.amazon.awscdk.services.ec2.InstanceClass.GR6 -> InstanceClass.GR6
       software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL2 -> InstanceClass.PARALLEL2
       software.amazon.awscdk.services.ec2.InstanceClass.P2 -> InstanceClass.P2
       software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL3 -> InstanceClass.PARALLEL3
@@ -504,6 +610,12 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.P4D -> InstanceClass.P4D
       software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL5 -> InstanceClass.PARALLEL5
       software.amazon.awscdk.services.ec2.InstanceClass.P5 -> InstanceClass.P5
+      software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL5_EXTENDED ->
+          InstanceClass.PARALLEL5_EXTENDED
+      software.amazon.awscdk.services.ec2.InstanceClass.P5E -> InstanceClass.P5E
+      software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL5_EXTENDED_NETWORK ->
+          InstanceClass.PARALLEL5_EXTENDED_NETWORK
+      software.amazon.awscdk.services.ec2.InstanceClass.P5EN -> InstanceClass.P5EN
       software.amazon.awscdk.services.ec2.InstanceClass.ARM1 -> InstanceClass.ARM1
       software.amazon.awscdk.services.ec2.InstanceClass.A1 -> InstanceClass.A1
       software.amazon.awscdk.services.ec2.InstanceClass.STANDARD6_GRAVITON ->
@@ -529,9 +641,15 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.STANDARD7_GRAVITON ->
           InstanceClass.STANDARD7_GRAVITON
       software.amazon.awscdk.services.ec2.InstanceClass.M7G -> InstanceClass.M7G
+      software.amazon.awscdk.services.ec2.InstanceClass.STANDARD8_GRAVITON ->
+          InstanceClass.STANDARD8_GRAVITON
+      software.amazon.awscdk.services.ec2.InstanceClass.M8G -> InstanceClass.M8G
       software.amazon.awscdk.services.ec2.InstanceClass.STANDARD7_GRAVITON3_NVME_DRIVE ->
           InstanceClass.STANDARD7_GRAVITON3_NVME_DRIVE
       software.amazon.awscdk.services.ec2.InstanceClass.M7GD -> InstanceClass.M7GD
+      software.amazon.awscdk.services.ec2.InstanceClass.STANDARD8_GRAVITON4_NVME_DRIVE ->
+          InstanceClass.STANDARD8_GRAVITON4_NVME_DRIVE
+      software.amazon.awscdk.services.ec2.InstanceClass.M8GD -> InstanceClass.M8GD
       software.amazon.awscdk.services.ec2.InstanceClass.STANDARD7_INTEL ->
           InstanceClass.STANDARD7_INTEL
       software.amazon.awscdk.services.ec2.InstanceClass.M7I -> InstanceClass.M7I

@@ -15,6 +15,7 @@ import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
@@ -169,6 +170,27 @@ public open class LogGroup(
   @JvmName("b93f8258425594b02debe63f0c120f198512d8431f5ae67b7fb7780e34fcbae2")
   public override fun addToResourcePolicy(statement: PolicyStatement.Builder.() -> Unit):
       AddToResourcePolicyResult = addToResourcePolicy(PolicyStatement(statement))
+
+  /**
+   * Create a new Transformer on this Log Group.
+   *
+   * @param id Unique identifier for the construct in its parent. 
+   * @param props Properties for creating the Transformer. 
+   */
+  public override fun addTransformer(id: String, props: TransformerOptions): Transformer =
+      unwrap(this).addTransformer(id,
+      props.let(TransformerOptions.Companion::unwrap)).let(Transformer::wrap)
+
+  /**
+   * Create a new Transformer on this Log Group.
+   *
+   * @param id Unique identifier for the construct in its parent. 
+   * @param props Properties for creating the Transformer. 
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("b9ff4e7a8c844c9c7e83b607771b404351b7784102e7de5dbb13f4be956945d3")
+  public override fun addTransformer(id: String, props: TransformerOptions.Builder.() -> Unit):
+      Transformer = addTransformer(id, TransformerOptions(props))
 
   /**
    * Extract a metric from structured log events in the LogGroup.
@@ -481,6 +503,24 @@ public open class LogGroup(
     public fun encryptionKey(encryptionKey: IKey)
 
     /**
+     * Field Index Policies for this log group.
+     *
+     * Default: - no field index policies for this log group.
+     *
+     * @param fieldIndexPolicies Field Index Policies for this log group. 
+     */
+    public fun fieldIndexPolicies(fieldIndexPolicies: List<FieldIndexPolicy>)
+
+    /**
+     * Field Index Policies for this log group.
+     *
+     * Default: - no field index policies for this log group.
+     *
+     * @param fieldIndexPolicies Field Index Policies for this log group. 
+     */
+    public fun fieldIndexPolicies(vararg fieldIndexPolicies: FieldIndexPolicy)
+
+    /**
      * The class of the log group. Possible values are: STANDARD and INFREQUENT_ACCESS.
      *
      * INFREQUENT_ACCESS class provides customers a cost-effective way to consolidate
@@ -572,6 +612,27 @@ public open class LogGroup(
     }
 
     /**
+     * Field Index Policies for this log group.
+     *
+     * Default: - no field index policies for this log group.
+     *
+     * @param fieldIndexPolicies Field Index Policies for this log group. 
+     */
+    override fun fieldIndexPolicies(fieldIndexPolicies: List<FieldIndexPolicy>) {
+      cdkBuilder.fieldIndexPolicies(fieldIndexPolicies.map(FieldIndexPolicy.Companion::unwrap))
+    }
+
+    /**
+     * Field Index Policies for this log group.
+     *
+     * Default: - no field index policies for this log group.
+     *
+     * @param fieldIndexPolicies Field Index Policies for this log group. 
+     */
+    override fun fieldIndexPolicies(vararg fieldIndexPolicies: FieldIndexPolicy): Unit =
+        fieldIndexPolicies(fieldIndexPolicies.toList())
+
+    /**
      * The class of the log group. Possible values are: STANDARD and INFREQUENT_ACCESS.
      *
      * INFREQUENT_ACCESS class provides customers a cost-effective way to consolidate
@@ -631,6 +692,9 @@ public open class LogGroup(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.logs.LogGroup.PROPERTY_INJECTION_ID
+
     public fun fromLogGroupArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

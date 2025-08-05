@@ -10,6 +10,7 @@ public enum class FleetComputeType(
   LARGE(software.amazon.awscdk.services.codebuild.FleetComputeType.LARGE),
   X_LARGE(software.amazon.awscdk.services.codebuild.FleetComputeType.X_LARGE),
   X2_LARGE(software.amazon.awscdk.services.codebuild.FleetComputeType.X2_LARGE),
+  ATTRIBUTE_BASED(software.amazon.awscdk.services.codebuild.FleetComputeType.ATTRIBUTE_BASED),
   ;
 
   public companion object {
@@ -21,6 +22,8 @@ public enum class FleetComputeType(
       software.amazon.awscdk.services.codebuild.FleetComputeType.X_LARGE -> FleetComputeType.X_LARGE
       software.amazon.awscdk.services.codebuild.FleetComputeType.X2_LARGE ->
           FleetComputeType.X2_LARGE
+      software.amazon.awscdk.services.codebuild.FleetComputeType.ATTRIBUTE_BASED ->
+          FleetComputeType.ATTRIBUTE_BASED
     }
 
     internal fun unwrap(wrapped: FleetComputeType):

@@ -2,9 +2,11 @@
 
 package io.cloudshiftdev.awscdk.services.datazone
 
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -23,7 +25,18 @@ import kotlin.collections.List
  * .name("name")
  * // the properties below are optional
  * .description("description")
+ * .domainUnitId("domainUnitId")
  * .glossaryTerms(List.of("glossaryTerms"))
+ * .projectProfileId("projectProfileId")
+ * .projectProfileVersion("projectProfileVersion")
+ * .userParameters(List.of(EnvironmentConfigurationUserParameterProperty.builder()
+ * .environmentConfigurationName("environmentConfigurationName")
+ * .environmentId("environmentId")
+ * .environmentParameters(List.of(EnvironmentParameterProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build()))
  * .build();
  * ```
  *
@@ -45,6 +58,16 @@ public interface CfnProjectProps {
   public fun domainIdentifier(): String
 
   /**
+   * The ID of the domain unit.
+   *
+   * This parameter is not required and if it is not specified, then the project is created at the
+   * root domain unit level.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-domainunitid)
+   */
+  public fun domainUnitId(): String? = unwrap(this).getDomainUnitId()
+
+  /**
    * The glossary terms that can be used in this Amazon DataZone project.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-glossaryterms)
@@ -57,6 +80,29 @@ public interface CfnProjectProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-name)
    */
   public fun name(): String
+
+  /**
+   * The project profile ID.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-projectprofileid)
+   */
+  public fun projectProfileId(): String? = unwrap(this).getProjectProfileId()
+
+  /**
+   * The project profile version to which the project should be updated.
+   *
+   * You can only specify the following string for this parameter: latest.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-projectprofileversion)
+   */
+  public fun projectProfileVersion(): String? = unwrap(this).getProjectProfileVersion()
+
+  /**
+   * The user parameters of the project.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-userparameters)
+   */
+  public fun userParameters(): Any? = unwrap(this).getUserParameters()
 
   /**
    * A builder for [CfnProjectProps]
@@ -74,6 +120,13 @@ public interface CfnProjectProps {
     public fun domainIdentifier(domainIdentifier: String)
 
     /**
+     * @param domainUnitId The ID of the domain unit.
+     * This parameter is not required and if it is not specified, then the project is created at the
+     * root domain unit level.
+     */
+    public fun domainUnitId(domainUnitId: String)
+
+    /**
      * @param glossaryTerms The glossary terms that can be used in this Amazon DataZone project.
      */
     public fun glossaryTerms(glossaryTerms: List<String>)
@@ -87,6 +140,33 @@ public interface CfnProjectProps {
      * @param name The name of a project. 
      */
     public fun name(name: String)
+
+    /**
+     * @param projectProfileId The project profile ID.
+     */
+    public fun projectProfileId(projectProfileId: String)
+
+    /**
+     * @param projectProfileVersion The project profile version to which the project should be
+     * updated.
+     * You can only specify the following string for this parameter: latest.
+     */
+    public fun projectProfileVersion(projectProfileVersion: String)
+
+    /**
+     * @param userParameters The user parameters of the project.
+     */
+    public fun userParameters(userParameters: IResolvable)
+
+    /**
+     * @param userParameters The user parameters of the project.
+     */
+    public fun userParameters(userParameters: List<Any>)
+
+    /**
+     * @param userParameters The user parameters of the project.
+     */
+    public fun userParameters(vararg userParameters: Any)
   }
 
   private class BuilderImpl : Builder {
@@ -108,6 +188,15 @@ public interface CfnProjectProps {
     }
 
     /**
+     * @param domainUnitId The ID of the domain unit.
+     * This parameter is not required and if it is not specified, then the project is created at the
+     * root domain unit level.
+     */
+    override fun domainUnitId(domainUnitId: String) {
+      cdkBuilder.domainUnitId(domainUnitId)
+    }
+
+    /**
      * @param glossaryTerms The glossary terms that can be used in this Amazon DataZone project.
      */
     override fun glossaryTerms(glossaryTerms: List<String>) {
@@ -126,6 +215,42 @@ public interface CfnProjectProps {
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
+
+    /**
+     * @param projectProfileId The project profile ID.
+     */
+    override fun projectProfileId(projectProfileId: String) {
+      cdkBuilder.projectProfileId(projectProfileId)
+    }
+
+    /**
+     * @param projectProfileVersion The project profile version to which the project should be
+     * updated.
+     * You can only specify the following string for this parameter: latest.
+     */
+    override fun projectProfileVersion(projectProfileVersion: String) {
+      cdkBuilder.projectProfileVersion(projectProfileVersion)
+    }
+
+    /**
+     * @param userParameters The user parameters of the project.
+     */
+    override fun userParameters(userParameters: IResolvable) {
+      cdkBuilder.userParameters(userParameters.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param userParameters The user parameters of the project.
+     */
+    override fun userParameters(userParameters: List<Any>) {
+      cdkBuilder.userParameters(userParameters.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param userParameters The user parameters of the project.
+     */
+    override fun userParameters(vararg userParameters: Any): Unit =
+        userParameters(userParameters.toList())
 
     public fun build(): software.amazon.awscdk.services.datazone.CfnProjectProps =
         cdkBuilder.build()
@@ -150,6 +275,16 @@ public interface CfnProjectProps {
     override fun domainIdentifier(): String = unwrap(this).getDomainIdentifier()
 
     /**
+     * The ID of the domain unit.
+     *
+     * This parameter is not required and if it is not specified, then the project is created at the
+     * root domain unit level.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-domainunitid)
+     */
+    override fun domainUnitId(): String? = unwrap(this).getDomainUnitId()
+
+    /**
      * The glossary terms that can be used in this Amazon DataZone project.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-glossaryterms)
@@ -162,6 +297,29 @@ public interface CfnProjectProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-name)
      */
     override fun name(): String = unwrap(this).getName()
+
+    /**
+     * The project profile ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-projectprofileid)
+     */
+    override fun projectProfileId(): String? = unwrap(this).getProjectProfileId()
+
+    /**
+     * The project profile version to which the project should be updated.
+     *
+     * You can only specify the following string for this parameter: latest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-projectprofileversion)
+     */
+    override fun projectProfileVersion(): String? = unwrap(this).getProjectProfileVersion()
+
+    /**
+     * The user parameters of the project.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-userparameters)
+     */
+    override fun userParameters(): Any? = unwrap(this).getUserParameters()
   }
 
   public companion object {

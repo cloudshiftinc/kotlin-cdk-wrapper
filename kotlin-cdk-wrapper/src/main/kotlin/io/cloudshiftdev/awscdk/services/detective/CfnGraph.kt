@@ -139,6 +139,7 @@ public open class CfnGraph(
      * property, you must be the Detective administrator for the organization. For more information on
      * setting a Detective administrator account, see
      * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+     * .
      *
      * Default: - false
      *
@@ -156,6 +157,7 @@ public open class CfnGraph(
      * property, you must be the Detective administrator for the organization. For more information on
      * setting a Detective administrator account, see
      * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+     * .
      *
      * Default: - false
      *
@@ -197,6 +199,7 @@ public open class CfnGraph(
      * property, you must be the Detective administrator for the organization. For more information on
      * setting a Detective administrator account, see
      * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+     * .
      *
      * Default: - false
      *
@@ -216,6 +219,7 @@ public open class CfnGraph(
      * property, you must be the Detective administrator for the organization. For more information on
      * setting a Detective administrator account, see
      * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+     * .
      *
      * Default: - false
      *

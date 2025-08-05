@@ -43,6 +43,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .analyzer("analyzer")
  * .resultField("resultField")
  * .build())
+ * .isInAddressList(IngressIsInAddressListProperty.builder()
+ * .addressLists(List.of("addressLists"))
+ * .attribute("attribute")
+ * .build())
  * .build())
  * .operator("operator")
  * .build())
@@ -53,8 +57,19 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .operator("operator")
  * .values(List.of("values"))
  * .build())
+ * .ipv6Expression(IngressIpv6ExpressionProperty.builder()
+ * .evaluate(IngressIpv6ToEvaluateProperty.builder()
+ * .attribute("attribute")
+ * .build())
+ * .operator("operator")
+ * .values(List.of("values"))
+ * .build())
  * .stringExpression(IngressStringExpressionProperty.builder()
  * .evaluate(IngressStringToEvaluateProperty.builder()
+ * .analysis(IngressAnalysisProperty.builder()
+ * .analyzer("analyzer")
+ * .resultField("resultField")
+ * .build())
  * .attribute("attribute")
  * .build())
  * .operator("operator")
@@ -538,6 +553,10 @@ public open class CfnMailManagerTrafficPolicy(
    * .analyzer("analyzer")
    * .resultField("resultField")
    * .build())
+   * .isInAddressList(IngressIsInAddressListProperty.builder()
+   * .addressLists(List.of("addressLists"))
+   * .attribute("attribute")
+   * .build())
    * .build())
    * .operator("operator")
    * .build();
@@ -680,6 +699,10 @@ public open class CfnMailManagerTrafficPolicy(
    * .analyzer("analyzer")
    * .resultField("resultField")
    * .build())
+   * .isInAddressList(IngressIsInAddressListProperty.builder()
+   * .addressLists(List.of("addressLists"))
+   * .attribute("attribute")
+   * .build())
    * .build();
    * ```
    *
@@ -691,7 +714,12 @@ public open class CfnMailManagerTrafficPolicy(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressbooleantoevaluate.html#cfn-ses-mailmanagertrafficpolicy-ingressbooleantoevaluate-analysis)
      */
-    public fun analysis(): Any
+    public fun analysis(): Any? = unwrap(this).getAnalysis()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressbooleantoevaluate.html#cfn-ses-mailmanagertrafficpolicy-ingressbooleantoevaluate-isinaddresslist)
+     */
+    public fun isInAddressList(): Any? = unwrap(this).getIsInAddressList()
 
     /**
      * A builder for [IngressBooleanToEvaluateProperty]
@@ -700,23 +728,40 @@ public open class CfnMailManagerTrafficPolicy(
     public interface Builder {
       /**
        * @param analysis The structure type for a boolean condition stating the Add On ARN and its
-       * returned value. 
+       * returned value.
        */
       public fun analysis(analysis: IResolvable)
 
       /**
        * @param analysis The structure type for a boolean condition stating the Add On ARN and its
-       * returned value. 
+       * returned value.
        */
       public fun analysis(analysis: IngressAnalysisProperty)
 
       /**
        * @param analysis The structure type for a boolean condition stating the Add On ARN and its
-       * returned value. 
+       * returned value.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c970d1bc25b19e527529260ea28764e9824b9eb7d3aedca77227abd4ed388536")
       public fun analysis(analysis: IngressAnalysisProperty.Builder.() -> Unit)
+
+      /**
+       * @param isInAddressList the value to be set.
+       */
+      public fun isInAddressList(isInAddressList: IResolvable)
+
+      /**
+       * @param isInAddressList the value to be set.
+       */
+      public fun isInAddressList(isInAddressList: IngressIsInAddressListProperty)
+
+      /**
+       * @param isInAddressList the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("229d63b1c17fe8d779e468bde8afe1d9330d3631370bc9465be393c56a6c0e84")
+      public fun isInAddressList(isInAddressList: IngressIsInAddressListProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -727,7 +772,7 @@ public open class CfnMailManagerTrafficPolicy(
 
       /**
        * @param analysis The structure type for a boolean condition stating the Add On ARN and its
-       * returned value. 
+       * returned value.
        */
       override fun analysis(analysis: IResolvable) {
         cdkBuilder.analysis(analysis.let(IResolvable.Companion::unwrap))
@@ -735,7 +780,7 @@ public open class CfnMailManagerTrafficPolicy(
 
       /**
        * @param analysis The structure type for a boolean condition stating the Add On ARN and its
-       * returned value. 
+       * returned value.
        */
       override fun analysis(analysis: IngressAnalysisProperty) {
         cdkBuilder.analysis(analysis.let(IngressAnalysisProperty.Companion::unwrap))
@@ -743,12 +788,35 @@ public open class CfnMailManagerTrafficPolicy(
 
       /**
        * @param analysis The structure type for a boolean condition stating the Add On ARN and its
-       * returned value. 
+       * returned value.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c970d1bc25b19e527529260ea28764e9824b9eb7d3aedca77227abd4ed388536")
       override fun analysis(analysis: IngressAnalysisProperty.Builder.() -> Unit): Unit =
           analysis(IngressAnalysisProperty(analysis))
+
+      /**
+       * @param isInAddressList the value to be set.
+       */
+      override fun isInAddressList(isInAddressList: IResolvable) {
+        cdkBuilder.isInAddressList(isInAddressList.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param isInAddressList the value to be set.
+       */
+      override fun isInAddressList(isInAddressList: IngressIsInAddressListProperty) {
+        cdkBuilder.isInAddressList(isInAddressList.let(IngressIsInAddressListProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param isInAddressList the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("229d63b1c17fe8d779e468bde8afe1d9330d3631370bc9465be393c56a6c0e84")
+      override
+          fun isInAddressList(isInAddressList: IngressIsInAddressListProperty.Builder.() -> Unit):
+          Unit = isInAddressList(IngressIsInAddressListProperty(isInAddressList))
 
       public fun build():
           software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressBooleanToEvaluateProperty
@@ -764,7 +832,12 @@ public open class CfnMailManagerTrafficPolicy(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressbooleantoevaluate.html#cfn-ses-mailmanagertrafficpolicy-ingressbooleantoevaluate-analysis)
        */
-      override fun analysis(): Any = unwrap(this).getAnalysis()
+      override fun analysis(): Any? = unwrap(this).getAnalysis()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressbooleantoevaluate.html#cfn-ses-mailmanagertrafficpolicy-ingressbooleantoevaluate-isinaddresslist)
+       */
+      override fun isInAddressList(): Any? = unwrap(this).getIsInAddressList()
     }
 
     public companion object {
@@ -1048,6 +1121,359 @@ public open class CfnMailManagerTrafficPolicy(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * IngressIpv6ExpressionProperty ingressIpv6ExpressionProperty =
+   * IngressIpv6ExpressionProperty.builder()
+   * .evaluate(IngressIpv6ToEvaluateProperty.builder()
+   * .attribute("attribute")
+   * .build())
+   * .operator("operator")
+   * .values(List.of("values"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressipv6expression.html)
+   */
+  public interface IngressIpv6ExpressionProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressipv6expression.html#cfn-ses-mailmanagertrafficpolicy-ingressipv6expression-evaluate)
+     */
+    public fun evaluate(): Any
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressipv6expression.html#cfn-ses-mailmanagertrafficpolicy-ingressipv6expression-operator)
+     */
+    public fun `operator`(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressipv6expression.html#cfn-ses-mailmanagertrafficpolicy-ingressipv6expression-values)
+     */
+    public fun values(): List<String>
+
+    /**
+     * A builder for [IngressIpv6ExpressionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param evaluate the value to be set. 
+       */
+      public fun evaluate(evaluate: IResolvable)
+
+      /**
+       * @param evaluate the value to be set. 
+       */
+      public fun evaluate(evaluate: IngressIpv6ToEvaluateProperty)
+
+      /**
+       * @param evaluate the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("462f6ea37b7edbcf483658ac04e5e1e9352fd3e2a207df57da78d0db0ccc0bb8")
+      public fun evaluate(evaluate: IngressIpv6ToEvaluateProperty.Builder.() -> Unit)
+
+      /**
+       * @param operator the value to be set. 
+       */
+      public fun `operator`(`operator`: String)
+
+      /**
+       * @param values the value to be set. 
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values the value to be set. 
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIpv6ExpressionProperty.Builder
+          =
+          software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIpv6ExpressionProperty.builder()
+
+      /**
+       * @param evaluate the value to be set. 
+       */
+      override fun evaluate(evaluate: IResolvable) {
+        cdkBuilder.evaluate(evaluate.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param evaluate the value to be set. 
+       */
+      override fun evaluate(evaluate: IngressIpv6ToEvaluateProperty) {
+        cdkBuilder.evaluate(evaluate.let(IngressIpv6ToEvaluateProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param evaluate the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("462f6ea37b7edbcf483658ac04e5e1e9352fd3e2a207df57da78d0db0ccc0bb8")
+      override fun evaluate(evaluate: IngressIpv6ToEvaluateProperty.Builder.() -> Unit): Unit =
+          evaluate(IngressIpv6ToEvaluateProperty(evaluate))
+
+      /**
+       * @param operator the value to be set. 
+       */
+      override fun `operator`(`operator`: String) {
+        cdkBuilder.`operator`(`operator`)
+      }
+
+      /**
+       * @param values the value to be set. 
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values the value to be set. 
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIpv6ExpressionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIpv6ExpressionProperty,
+    ) : CdkObject(cdkObject),
+        IngressIpv6ExpressionProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressipv6expression.html#cfn-ses-mailmanagertrafficpolicy-ingressipv6expression-evaluate)
+       */
+      override fun evaluate(): Any = unwrap(this).getEvaluate()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressipv6expression.html#cfn-ses-mailmanagertrafficpolicy-ingressipv6expression-operator)
+       */
+      override fun `operator`(): String = unwrap(this).getOperator()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressipv6expression.html#cfn-ses-mailmanagertrafficpolicy-ingressipv6expression-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IngressIpv6ExpressionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIpv6ExpressionProperty):
+          IngressIpv6ExpressionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IngressIpv6ExpressionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IngressIpv6ExpressionProperty):
+          software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIpv6ExpressionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIpv6ExpressionProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * IngressIpv6ToEvaluateProperty ingressIpv6ToEvaluateProperty =
+   * IngressIpv6ToEvaluateProperty.builder()
+   * .attribute("attribute")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressipv6toevaluate.html)
+   */
+  public interface IngressIpv6ToEvaluateProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressipv6toevaluate.html#cfn-ses-mailmanagertrafficpolicy-ingressipv6toevaluate-attribute)
+     */
+    public fun attribute(): String
+
+    /**
+     * A builder for [IngressIpv6ToEvaluateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attribute the value to be set. 
+       */
+      public fun attribute(attribute: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIpv6ToEvaluateProperty.Builder
+          =
+          software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIpv6ToEvaluateProperty.builder()
+
+      /**
+       * @param attribute the value to be set. 
+       */
+      override fun attribute(attribute: String) {
+        cdkBuilder.attribute(attribute)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIpv6ToEvaluateProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIpv6ToEvaluateProperty,
+    ) : CdkObject(cdkObject),
+        IngressIpv6ToEvaluateProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressipv6toevaluate.html#cfn-ses-mailmanagertrafficpolicy-ingressipv6toevaluate-attribute)
+       */
+      override fun attribute(): String = unwrap(this).getAttribute()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IngressIpv6ToEvaluateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIpv6ToEvaluateProperty):
+          IngressIpv6ToEvaluateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IngressIpv6ToEvaluateProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IngressIpv6ToEvaluateProperty):
+          software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIpv6ToEvaluateProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIpv6ToEvaluateProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * IngressIsInAddressListProperty ingressIsInAddressListProperty =
+   * IngressIsInAddressListProperty.builder()
+   * .addressLists(List.of("addressLists"))
+   * .attribute("attribute")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressisinaddresslist.html)
+   */
+  public interface IngressIsInAddressListProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressisinaddresslist.html#cfn-ses-mailmanagertrafficpolicy-ingressisinaddresslist-addresslists)
+     */
+    public fun addressLists(): List<String>
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressisinaddresslist.html#cfn-ses-mailmanagertrafficpolicy-ingressisinaddresslist-attribute)
+     */
+    public fun attribute(): String
+
+    /**
+     * A builder for [IngressIsInAddressListProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param addressLists the value to be set. 
+       */
+      public fun addressLists(addressLists: List<String>)
+
+      /**
+       * @param addressLists the value to be set. 
+       */
+      public fun addressLists(vararg addressLists: String)
+
+      /**
+       * @param attribute the value to be set. 
+       */
+      public fun attribute(attribute: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIsInAddressListProperty.Builder
+          =
+          software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIsInAddressListProperty.builder()
+
+      /**
+       * @param addressLists the value to be set. 
+       */
+      override fun addressLists(addressLists: List<String>) {
+        cdkBuilder.addressLists(addressLists)
+      }
+
+      /**
+       * @param addressLists the value to be set. 
+       */
+      override fun addressLists(vararg addressLists: String): Unit =
+          addressLists(addressLists.toList())
+
+      /**
+       * @param attribute the value to be set. 
+       */
+      override fun attribute(attribute: String) {
+        cdkBuilder.attribute(attribute)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIsInAddressListProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIsInAddressListProperty,
+    ) : CdkObject(cdkObject),
+        IngressIsInAddressListProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressisinaddresslist.html#cfn-ses-mailmanagertrafficpolicy-ingressisinaddresslist-addresslists)
+       */
+      override fun addressLists(): List<String> = unwrap(this).getAddressLists()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressisinaddresslist.html#cfn-ses-mailmanagertrafficpolicy-ingressisinaddresslist-attribute)
+       */
+      override fun attribute(): String = unwrap(this).getAttribute()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IngressIsInAddressListProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIsInAddressListProperty):
+          IngressIsInAddressListProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IngressIsInAddressListProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IngressIsInAddressListProperty):
+          software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIsInAddressListProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressIsInAddressListProperty
+    }
+  }
+
+  /**
    * The structure for a string based condition matching on the incoming mail.
    *
    * Example:
@@ -1059,6 +1485,10 @@ public open class CfnMailManagerTrafficPolicy(
    * IngressStringExpressionProperty ingressStringExpressionProperty =
    * IngressStringExpressionProperty.builder()
    * .evaluate(IngressStringToEvaluateProperty.builder()
+   * .analysis(IngressAnalysisProperty.builder()
+   * .analyzer("analyzer")
+   * .resultField("resultField")
+   * .build())
    * .attribute("attribute")
    * .build())
    * .operator("operator")
@@ -1231,6 +1661,10 @@ public open class CfnMailManagerTrafficPolicy(
    * import io.cloudshiftdev.awscdk.services.ses.*;
    * IngressStringToEvaluateProperty ingressStringToEvaluateProperty =
    * IngressStringToEvaluateProperty.builder()
+   * .analysis(IngressAnalysisProperty.builder()
+   * .analyzer("analyzer")
+   * .resultField("resultField")
+   * .build())
    * .attribute("attribute")
    * .build();
    * ```
@@ -1239,11 +1673,16 @@ public open class CfnMailManagerTrafficPolicy(
    */
   public interface IngressStringToEvaluateProperty {
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressstringtoevaluate.html#cfn-ses-mailmanagertrafficpolicy-ingressstringtoevaluate-analysis)
+     */
+    public fun analysis(): Any? = unwrap(this).getAnalysis()
+
+    /**
      * The enum type representing the allowed attribute types for a string condition.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressstringtoevaluate.html#cfn-ses-mailmanagertrafficpolicy-ingressstringtoevaluate-attribute)
      */
-    public fun attribute(): String
+    public fun attribute(): String? = unwrap(this).getAttribute()
 
     /**
      * A builder for [IngressStringToEvaluateProperty]
@@ -1251,8 +1690,25 @@ public open class CfnMailManagerTrafficPolicy(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param analysis the value to be set.
+       */
+      public fun analysis(analysis: IResolvable)
+
+      /**
+       * @param analysis the value to be set.
+       */
+      public fun analysis(analysis: IngressAnalysisProperty)
+
+      /**
+       * @param analysis the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d8d6059d7f48c4ffd0c16dc85f1dfb9ec5f4697ae5f829f61e8d250f1db7a1ef")
+      public fun analysis(analysis: IngressAnalysisProperty.Builder.() -> Unit)
+
+      /**
        * @param attribute The enum type representing the allowed attribute types for a string
-       * condition. 
+       * condition.
        */
       public fun attribute(attribute: String)
     }
@@ -1264,8 +1720,30 @@ public open class CfnMailManagerTrafficPolicy(
           software.amazon.awscdk.services.ses.CfnMailManagerTrafficPolicy.IngressStringToEvaluateProperty.builder()
 
       /**
+       * @param analysis the value to be set.
+       */
+      override fun analysis(analysis: IResolvable) {
+        cdkBuilder.analysis(analysis.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param analysis the value to be set.
+       */
+      override fun analysis(analysis: IngressAnalysisProperty) {
+        cdkBuilder.analysis(analysis.let(IngressAnalysisProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param analysis the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d8d6059d7f48c4ffd0c16dc85f1dfb9ec5f4697ae5f829f61e8d250f1db7a1ef")
+      override fun analysis(analysis: IngressAnalysisProperty.Builder.() -> Unit): Unit =
+          analysis(IngressAnalysisProperty(analysis))
+
+      /**
        * @param attribute The enum type representing the allowed attribute types for a string
-       * condition. 
+       * condition.
        */
       override fun attribute(attribute: String) {
         cdkBuilder.attribute(attribute)
@@ -1281,11 +1759,16 @@ public open class CfnMailManagerTrafficPolicy(
     ) : CdkObject(cdkObject),
         IngressStringToEvaluateProperty {
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressstringtoevaluate.html#cfn-ses-mailmanagertrafficpolicy-ingressstringtoevaluate-analysis)
+       */
+      override fun analysis(): Any? = unwrap(this).getAnalysis()
+
+      /**
        * The enum type representing the allowed attribute types for a string condition.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressstringtoevaluate.html#cfn-ses-mailmanagertrafficpolicy-ingressstringtoevaluate-attribute)
        */
-      override fun attribute(): String = unwrap(this).getAttribute()
+      override fun attribute(): String? = unwrap(this).getAttribute()
     }
 
     public companion object {
@@ -1582,6 +2065,10 @@ public open class CfnMailManagerTrafficPolicy(
    * .analyzer("analyzer")
    * .resultField("resultField")
    * .build())
+   * .isInAddressList(IngressIsInAddressListProperty.builder()
+   * .addressLists(List.of("addressLists"))
+   * .attribute("attribute")
+   * .build())
    * .build())
    * .operator("operator")
    * .build())
@@ -1592,8 +2079,19 @@ public open class CfnMailManagerTrafficPolicy(
    * .operator("operator")
    * .values(List.of("values"))
    * .build())
+   * .ipv6Expression(IngressIpv6ExpressionProperty.builder()
+   * .evaluate(IngressIpv6ToEvaluateProperty.builder()
+   * .attribute("attribute")
+   * .build())
+   * .operator("operator")
+   * .values(List.of("values"))
+   * .build())
    * .stringExpression(IngressStringExpressionProperty.builder()
    * .evaluate(IngressStringToEvaluateProperty.builder()
+   * .analysis(IngressAnalysisProperty.builder()
+   * .analyzer("analyzer")
+   * .resultField("resultField")
+   * .build())
    * .attribute("attribute")
    * .build())
    * .operator("operator")
@@ -1631,6 +2129,11 @@ public open class CfnMailManagerTrafficPolicy(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-policycondition.html#cfn-ses-mailmanagertrafficpolicy-policycondition-ipexpression)
      */
     public fun ipExpression(): Any? = unwrap(this).getIpExpression()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-policycondition.html#cfn-ses-mailmanagertrafficpolicy-policycondition-ipv6expression)
+     */
+    public fun ipv6Expression(): Any? = unwrap(this).getIpv6Expression()
 
     /**
      * This represents a string based condition matching on the incoming mail.
@@ -1706,6 +2209,23 @@ public open class CfnMailManagerTrafficPolicy(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4c5fcb3c2a7821f3bbef3fbc7a85b73bcf5e67f62e0d3a04f11d35bc79db7aaa")
       public fun ipExpression(ipExpression: IngressIpv4ExpressionProperty.Builder.() -> Unit)
+
+      /**
+       * @param ipv6Expression the value to be set.
+       */
+      public fun ipv6Expression(ipv6Expression: IResolvable)
+
+      /**
+       * @param ipv6Expression the value to be set.
+       */
+      public fun ipv6Expression(ipv6Expression: IngressIpv6ExpressionProperty)
+
+      /**
+       * @param ipv6Expression the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f00b72765b82ad9f6346da5a5d4cfa55a783a9d4b929d2cd96522f19392efb72")
+      public fun ipv6Expression(ipv6Expression: IngressIpv6ExpressionProperty.Builder.() -> Unit)
 
       /**
        * @param stringExpression This represents a string based condition matching on the incoming
@@ -1826,6 +2346,28 @@ public open class CfnMailManagerTrafficPolicy(
           Unit = ipExpression(IngressIpv4ExpressionProperty(ipExpression))
 
       /**
+       * @param ipv6Expression the value to be set.
+       */
+      override fun ipv6Expression(ipv6Expression: IResolvable) {
+        cdkBuilder.ipv6Expression(ipv6Expression.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ipv6Expression the value to be set.
+       */
+      override fun ipv6Expression(ipv6Expression: IngressIpv6ExpressionProperty) {
+        cdkBuilder.ipv6Expression(ipv6Expression.let(IngressIpv6ExpressionProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param ipv6Expression the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f00b72765b82ad9f6346da5a5d4cfa55a783a9d4b929d2cd96522f19392efb72")
+      override fun ipv6Expression(ipv6Expression: IngressIpv6ExpressionProperty.Builder.() -> Unit):
+          Unit = ipv6Expression(IngressIpv6ExpressionProperty(ipv6Expression))
+
+      /**
        * @param stringExpression This represents a string based condition matching on the incoming
        * mail.
        * It performs the string operation configured in 'Operator' and evaluates the 'Protocol'
@@ -1916,6 +2458,11 @@ public open class CfnMailManagerTrafficPolicy(
       override fun ipExpression(): Any? = unwrap(this).getIpExpression()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-policycondition.html#cfn-ses-mailmanagertrafficpolicy-policycondition-ipv6expression)
+       */
+      override fun ipv6Expression(): Any? = unwrap(this).getIpv6Expression()
+
+      /**
        * This represents a string based condition matching on the incoming mail.
        *
        * It performs the string operation configured in 'Operator' and evaluates the 'Protocol'
@@ -1972,6 +2519,10 @@ public open class CfnMailManagerTrafficPolicy(
    * .analyzer("analyzer")
    * .resultField("resultField")
    * .build())
+   * .isInAddressList(IngressIsInAddressListProperty.builder()
+   * .addressLists(List.of("addressLists"))
+   * .attribute("attribute")
+   * .build())
    * .build())
    * .operator("operator")
    * .build())
@@ -1982,8 +2533,19 @@ public open class CfnMailManagerTrafficPolicy(
    * .operator("operator")
    * .values(List.of("values"))
    * .build())
+   * .ipv6Expression(IngressIpv6ExpressionProperty.builder()
+   * .evaluate(IngressIpv6ToEvaluateProperty.builder()
+   * .attribute("attribute")
+   * .build())
+   * .operator("operator")
+   * .values(List.of("values"))
+   * .build())
    * .stringExpression(IngressStringExpressionProperty.builder()
    * .evaluate(IngressStringToEvaluateProperty.builder()
+   * .analysis(IngressAnalysisProperty.builder()
+   * .analyzer("analyzer")
+   * .resultField("resultField")
+   * .build())
    * .attribute("attribute")
    * .build())
    * .operator("operator")

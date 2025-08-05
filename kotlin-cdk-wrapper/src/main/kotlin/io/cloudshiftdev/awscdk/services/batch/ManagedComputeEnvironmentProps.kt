@@ -149,7 +149,12 @@ public interface ManagedComputeEnvironmentProps : ComputeEnvironmentProps {
    *
    * If you specify a specific AMI, this property will be ignored.
    *
-   * Default: true
+   * Note: the CDK will never set this value by default, `false` will set by CFN.
+   * This is to avoid a deployment failure that occurs when this value is set.
+   *
+   * Default: false
+   *
+   * [Documentation](https://github.com/aws/aws-cdk/issues/27054)
    */
   public fun updateToLatestImageVersion(): Boolean? = unwrap(this).getUpdateToLatestImageVersion()
 
@@ -266,6 +271,9 @@ public interface ManagedComputeEnvironmentProps : ComputeEnvironmentProps {
      * @param updateToLatestImageVersion Whether or not the AMI is updated to the latest one
      * supported by Batch when an infrastructure update occurs.
      * If you specify a specific AMI, this property will be ignored.
+     *
+     * Note: the CDK will never set this value by default, `false` will set by CFN.
+     * This is to avoid a deployment failure that occurs when this value is set.
      */
     public fun updateToLatestImageVersion(updateToLatestImageVersion: Boolean)
 
@@ -406,6 +414,9 @@ public interface ManagedComputeEnvironmentProps : ComputeEnvironmentProps {
      * @param updateToLatestImageVersion Whether or not the AMI is updated to the latest one
      * supported by Batch when an infrastructure update occurs.
      * If you specify a specific AMI, this property will be ignored.
+     *
+     * Note: the CDK will never set this value by default, `false` will set by CFN.
+     * This is to avoid a deployment failure that occurs when this value is set.
      */
     override fun updateToLatestImageVersion(updateToLatestImageVersion: Boolean) {
       cdkBuilder.updateToLatestImageVersion(updateToLatestImageVersion)
@@ -564,7 +575,12 @@ public interface ManagedComputeEnvironmentProps : ComputeEnvironmentProps {
      *
      * If you specify a specific AMI, this property will be ignored.
      *
-     * Default: true
+     * Note: the CDK will never set this value by default, `false` will set by CFN.
+     * This is to avoid a deployment failure that occurs when this value is set.
+     *
+     * Default: false
+     *
+     * [Documentation](https://github.com/aws/aws-cdk/issues/27054)
      */
     override fun updateToLatestImageVersion(): Boolean? =
         unwrap(this).getUpdateToLatestImageVersion()

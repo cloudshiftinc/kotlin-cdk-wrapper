@@ -37,10 +37,12 @@ import kotlin.jvm.JvmName
  * .enableBasicAuth(false)
  * .build())
  * .buildSpec("buildSpec")
+ * .computeRoleArn("computeRoleArn")
  * .description("description")
  * .enableAutoBuild(false)
  * .enablePerformanceMode(false)
  * .enablePullRequestPreview(false)
+ * .enableSkewProtection(false)
  * .environmentVariables(List.of(EnvironmentVariableProperty.builder()
  * .name("name")
  * .value("value")
@@ -101,6 +103,19 @@ public interface CfnBranchProps {
   public fun buildSpec(): String? = unwrap(this).getBuildSpec()
 
   /**
+   * The Amazon Resource Name (ARN) of the IAM role to assign to a branch of an SSR app.
+   *
+   * The SSR Compute role allows the Amplify Hosting compute service to securely access specific AWS
+   * resources based on the role's permissions. For more information about the SSR Compute role, see
+   * [Adding an SSR Compute
+   * role](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-SSR-compute-role.html) in the
+   * *Amplify User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-computerolearn)
+   */
+  public fun computeRoleArn(): String? = unwrap(this).getComputeRoleArn()
+
+  /**
    * The description for the branch that is part of an Amplify app.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-description)
@@ -144,6 +159,21 @@ public interface CfnBranchProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-enablepullrequestpreview)
    */
   public fun enablePullRequestPreview(): Any? = unwrap(this).getEnablePullRequestPreview()
+
+  /**
+   * Specifies whether the skew protection feature is enabled for the branch.
+   *
+   * Deployment skew protection is available to Amplify applications to eliminate version skew
+   * issues between client and servers in web applications. When you apply skew protection to a branch,
+   * you can ensure that your clients always interact with the correct version of server-side assets,
+   * regardless of when a deployment occurs. For more information about skew protection, see [Skew
+   * protection for Amplify
+   * deployments](https://docs.aws.amazon.com/amplify/latest/userguide/skew-protection.html) in the
+   * *Amplify User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-enableskewprotection)
+   */
+  public fun enableSkewProtection(): Any? = unwrap(this).getEnableSkewProtection()
 
   /**
    * The environment variables for the branch.
@@ -265,6 +295,17 @@ public interface CfnBranchProps {
     public fun buildSpec(buildSpec: String)
 
     /**
+     * @param computeRoleArn The Amazon Resource Name (ARN) of the IAM role to assign to a branch of
+     * an SSR app.
+     * The SSR Compute role allows the Amplify Hosting compute service to securely access specific
+     * AWS resources based on the role's permissions. For more information about the SSR Compute role,
+     * see [Adding an SSR Compute
+     * role](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-SSR-compute-role.html) in the
+     * *Amplify User Guide* .
+     */
+    public fun computeRoleArn(computeRoleArn: String)
+
+    /**
      * @param description The description for the branch that is part of an Amplify app.
      */
     public fun description(description: String)
@@ -328,6 +369,32 @@ public interface CfnBranchProps {
      * Amplify Hosting User Guide* .
      */
     public fun enablePullRequestPreview(enablePullRequestPreview: IResolvable)
+
+    /**
+     * @param enableSkewProtection Specifies whether the skew protection feature is enabled for the
+     * branch.
+     * Deployment skew protection is available to Amplify applications to eliminate version skew
+     * issues between client and servers in web applications. When you apply skew protection to a
+     * branch, you can ensure that your clients always interact with the correct version of server-side
+     * assets, regardless of when a deployment occurs. For more information about skew protection, see
+     * [Skew protection for Amplify
+     * deployments](https://docs.aws.amazon.com/amplify/latest/userguide/skew-protection.html) in the
+     * *Amplify User Guide* .
+     */
+    public fun enableSkewProtection(enableSkewProtection: Boolean)
+
+    /**
+     * @param enableSkewProtection Specifies whether the skew protection feature is enabled for the
+     * branch.
+     * Deployment skew protection is available to Amplify applications to eliminate version skew
+     * issues between client and servers in web applications. When you apply skew protection to a
+     * branch, you can ensure that your clients always interact with the correct version of server-side
+     * assets, regardless of when a deployment occurs. For more information about skew protection, see
+     * [Skew protection for Amplify
+     * deployments](https://docs.aws.amazon.com/amplify/latest/userguide/skew-protection.html) in the
+     * *Amplify User Guide* .
+     */
+    public fun enableSkewProtection(enableSkewProtection: IResolvable)
 
     /**
      * @param environmentVariables The environment variables for the branch.
@@ -469,6 +536,19 @@ public interface CfnBranchProps {
     }
 
     /**
+     * @param computeRoleArn The Amazon Resource Name (ARN) of the IAM role to assign to a branch of
+     * an SSR app.
+     * The SSR Compute role allows the Amplify Hosting compute service to securely access specific
+     * AWS resources based on the role's permissions. For more information about the SSR Compute role,
+     * see [Adding an SSR Compute
+     * role](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-SSR-compute-role.html) in the
+     * *Amplify User Guide* .
+     */
+    override fun computeRoleArn(computeRoleArn: String) {
+      cdkBuilder.computeRoleArn(computeRoleArn)
+    }
+
+    /**
      * @param description The description for the branch that is part of an Amplify app.
      */
     override fun description(description: String) {
@@ -545,6 +625,36 @@ public interface CfnBranchProps {
      */
     override fun enablePullRequestPreview(enablePullRequestPreview: IResolvable) {
       cdkBuilder.enablePullRequestPreview(enablePullRequestPreview.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param enableSkewProtection Specifies whether the skew protection feature is enabled for the
+     * branch.
+     * Deployment skew protection is available to Amplify applications to eliminate version skew
+     * issues between client and servers in web applications. When you apply skew protection to a
+     * branch, you can ensure that your clients always interact with the correct version of server-side
+     * assets, regardless of when a deployment occurs. For more information about skew protection, see
+     * [Skew protection for Amplify
+     * deployments](https://docs.aws.amazon.com/amplify/latest/userguide/skew-protection.html) in the
+     * *Amplify User Guide* .
+     */
+    override fun enableSkewProtection(enableSkewProtection: Boolean) {
+      cdkBuilder.enableSkewProtection(enableSkewProtection)
+    }
+
+    /**
+     * @param enableSkewProtection Specifies whether the skew protection feature is enabled for the
+     * branch.
+     * Deployment skew protection is available to Amplify applications to eliminate version skew
+     * issues between client and servers in web applications. When you apply skew protection to a
+     * branch, you can ensure that your clients always interact with the correct version of server-side
+     * assets, regardless of when a deployment occurs. For more information about skew protection, see
+     * [Skew protection for Amplify
+     * deployments](https://docs.aws.amazon.com/amplify/latest/userguide/skew-protection.html) in the
+     * *Amplify User Guide* .
+     */
+    override fun enableSkewProtection(enableSkewProtection: IResolvable) {
+      cdkBuilder.enableSkewProtection(enableSkewProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -663,6 +773,19 @@ public interface CfnBranchProps {
     override fun buildSpec(): String? = unwrap(this).getBuildSpec()
 
     /**
+     * The Amazon Resource Name (ARN) of the IAM role to assign to a branch of an SSR app.
+     *
+     * The SSR Compute role allows the Amplify Hosting compute service to securely access specific
+     * AWS resources based on the role's permissions. For more information about the SSR Compute role,
+     * see [Adding an SSR Compute
+     * role](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-SSR-compute-role.html) in the
+     * *Amplify User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-computerolearn)
+     */
+    override fun computeRoleArn(): String? = unwrap(this).getComputeRoleArn()
+
+    /**
      * The description for the branch that is part of an Amplify app.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-description)
@@ -706,6 +829,21 @@ public interface CfnBranchProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-enablepullrequestpreview)
      */
     override fun enablePullRequestPreview(): Any? = unwrap(this).getEnablePullRequestPreview()
+
+    /**
+     * Specifies whether the skew protection feature is enabled for the branch.
+     *
+     * Deployment skew protection is available to Amplify applications to eliminate version skew
+     * issues between client and servers in web applications. When you apply skew protection to a
+     * branch, you can ensure that your clients always interact with the correct version of server-side
+     * assets, regardless of when a deployment occurs. For more information about skew protection, see
+     * [Skew protection for Amplify
+     * deployments](https://docs.aws.amazon.com/amplify/latest/userguide/skew-protection.html) in the
+     * *Amplify User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-enableskewprotection)
+     */
+    override fun enableSkewProtection(): Any? = unwrap(this).getEnableSkewProtection()
 
     /**
      * The environment variables for the branch.

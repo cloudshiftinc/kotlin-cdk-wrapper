@@ -12,6 +12,7 @@ import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Boolean
 import kotlin.String
@@ -37,8 +38,11 @@ public abstract class TopicBase(
    * Adds a statement to the IAM resource policy associated with this topic.
    *
    * If this topic was created in this stack (`new Topic`), a topic policy
-   * will be automatically created upon the first call to `addToResourcePolicy`. If
-   * the topic is imported (`Topic.import`), then this is a no-op.
+   * will be automatically created upon the first call to `addToResourcePolicy`.
+   * However, if `enforceSSL` is set to `true`, the policy has already been created
+   * before the first call to this method.
+   *
+   * If the topic is imported (`Topic.import`), then this is a no-op.
    *
    * @param statement 
    */
@@ -49,8 +53,11 @@ public abstract class TopicBase(
    * Adds a statement to the IAM resource policy associated with this topic.
    *
    * If this topic was created in this stack (`new Topic`), a topic policy
-   * will be automatically created upon the first call to `addToResourcePolicy`. If
-   * the topic is imported (`Topic.import`), then this is a no-op.
+   * will be automatically created upon the first call to `addToResourcePolicy`.
+   * However, if `enforceSSL` is set to `true`, the policy has already been created
+   * before the first call to this method.
+   *
+   * If the topic is imported (`Topic.import`), then this is a no-op.
    *
    * @param statement 
    */
@@ -95,6 +102,13 @@ public abstract class TopicBase(
    */
   public override fun grantSubscribe(grantee: IGrantable): Grant =
       unwrap(this).grantSubscribe(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+  /**
+   * A KMS Key, either managed by this CDK app, or imported.
+   *
+   * This property applies only to server-side encryption.
+   */
+  public override fun masterKey(): IKey? = unwrap(this).getMasterKey()?.let(IKey::wrap)
 
   /**
    * Return the given named metric for this Topic.

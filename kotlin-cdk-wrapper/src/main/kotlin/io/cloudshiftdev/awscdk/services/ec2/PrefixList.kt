@@ -4,10 +4,13 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import kotlin.Any
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -17,9 +20,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * PrefixList.Builder.create(this, "EmptyPrefixList")
- * .maxEntries(100)
- * .build();
+ * PrefixList.fromLookup(this, "PrefixListFromName", PrefixListLookupOptions.builder()
+ * .prefixListName("com.amazonaws.global.cloudfront.origin-facing")
+ * .build());
  * ```
  */
 public open class PrefixList(
@@ -53,6 +56,17 @@ public open class PrefixList(
   public open fun addressFamily(): String = unwrap(this).getAddressFamily()
 
   /**
+   * Whether the rule can be inlined into a SecurityGroup or not.
+   */
+  public override fun canInlineRule(): Boolean = unwrap(this).getCanInlineRule()
+
+  /**
+   * The network connections associated with this resource.
+   */
+  public override fun connections(): Connections =
+      unwrap(this).getConnections().let(Connections::wrap)
+
+  /**
    * The owner ID of the prefix list.
    */
   public open fun ownerId(): String = unwrap(this).getOwnerId()
@@ -71,6 +85,21 @@ public open class PrefixList(
    * The name of the prefix list.
    */
   public open fun prefixListName(): String = unwrap(this).getPrefixListName()
+
+  /**
+   * Produce the egress rule JSON for the given connection.
+   */
+  public override fun toEgressRuleConfig(): Any = unwrap(this).toEgressRuleConfig()
+
+  /**
+   * Produce the ingress rule JSON for the given connection.
+   */
+  public override fun toIngressRuleConfig(): Any = unwrap(this).toIngressRuleConfig()
+
+  /**
+   * A unique identifier for this connection peer.
+   */
+  public override fun uniqueId(): String = unwrap(this).getUniqueId()
 
   /**
    * The version of the prefix list.
@@ -193,6 +222,25 @@ public open class PrefixList(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ec2.PrefixList.PROPERTY_INJECTION_ID
+
+    public fun fromLookup(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      options: PrefixListLookupOptions,
+    ): IPrefixList =
+        software.amazon.awscdk.services.ec2.PrefixList.fromLookup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, options.let(PrefixListLookupOptions.Companion::unwrap)).let(IPrefixList::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3765b91bd01f2a1bb2331d0dc1a3db5b907e7f2dce77b8556c09660131785dd1")
+    public fun fromLookup(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      options: PrefixListLookupOptions.Builder.() -> Unit,
+    ): IPrefixList = fromLookup(scope, id, PrefixListLookupOptions(options))
+
     public fun fromPrefixListId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

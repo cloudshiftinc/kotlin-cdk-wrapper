@@ -692,6 +692,9 @@ public open class DatabaseProxy(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.rds.DatabaseProxy.PROPERTY_INJECTION_ID
+
     public fun fromDatabaseProxyAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

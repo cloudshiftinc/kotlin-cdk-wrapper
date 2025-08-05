@@ -81,6 +81,16 @@ public interface WebSocketApiProps {
       unwrap(this).getDisconnectRouteOptions()?.let(WebSocketRouteOptions::wrap)
 
   /**
+   * The IP address types that can invoke the API.
+   *
+   * Default: undefined - AWS default is IPV4
+   *
+   * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-ip-address-type.html)
+   */
+  public fun ipAddressType(): IpAddressType? =
+      unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
+
+  /**
    * The route selection expression for the API.
    *
    * Default: '$request.body.action'
@@ -145,6 +155,11 @@ public interface WebSocketApiProps {
     @JvmName("651268f75dbfc984cc8c8060b4b193d89f410cabcd165f98e02f14e1a74b981b")
     public
         fun disconnectRouteOptions(disconnectRouteOptions: WebSocketRouteOptions.Builder.() -> Unit)
+
+    /**
+     * @param ipAddressType The IP address types that can invoke the API.
+     */
+    public fun ipAddressType(ipAddressType: IpAddressType)
 
     /**
      * @param routeSelectionExpression The route selection expression for the API.
@@ -226,6 +241,13 @@ public interface WebSocketApiProps {
         Unit = disconnectRouteOptions(WebSocketRouteOptions(disconnectRouteOptions))
 
     /**
+     * @param ipAddressType The IP address types that can invoke the API.
+     */
+    override fun ipAddressType(ipAddressType: IpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
+    }
+
+    /**
      * @param routeSelectionExpression The route selection expression for the API.
      */
     override fun routeSelectionExpression(routeSelectionExpression: String) {
@@ -287,6 +309,16 @@ public interface WebSocketApiProps {
      */
     override fun disconnectRouteOptions(): WebSocketRouteOptions? =
         unwrap(this).getDisconnectRouteOptions()?.let(WebSocketRouteOptions::wrap)
+
+    /**
+     * The IP address types that can invoke the API.
+     *
+     * Default: undefined - AWS default is IPV4
+     *
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-ip-address-type.html)
+     */
+    override fun ipAddressType(): IpAddressType? =
+        unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
 
     /**
      * The route selection expression for the API.

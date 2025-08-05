@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.services.iam.IPrincipal
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
+import io.cloudshiftdev.awscdk.services.stepfunctions.QueryLanguage
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBase
 import io.cloudshiftdev.awscdk.services.stepfunctions.Timeout
 import kotlin.Any
@@ -109,11 +110,24 @@ public open class EmrContainersStartJobRun(
     public fun applicationConfig(vararg applicationConfig: ApplicationConfiguration)
 
     /**
-     * An optional description for this state.
+     * Workflow variables to store in this step.
      *
-     * Default: - No comment
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
      *
-     * @param comment An optional description for this state. 
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    public fun assign(assign: Map<String, Any>)
+
+    /**
+     * A comment describing this state.
+     *
+     * Default: No comment
+     *
+     * @param comment A comment describing this state. 
      */
     public fun comment(comment: String)
 
@@ -188,7 +202,7 @@ public open class EmrContainersStartJobRun(
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      *
      * @param inputPath JSONPath expression to select part of the state to be the input to this
      * state. 
@@ -265,18 +279,45 @@ public open class EmrContainersStartJobRun(
     public fun monitoring(monitoring: Monitoring.Builder.() -> Unit)
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      *
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state. 
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state. 
      */
     public fun outputPath(outputPath: String)
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    public fun outputs(outputs: Any)
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
 
     /**
      * The Amazon EMR release version to use for the job run.
@@ -291,7 +332,7 @@ public open class EmrContainersStartJobRun(
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      *
      * @param resultPath JSONPath expression to indicate where to inject the state's output. 
      */
@@ -398,11 +439,26 @@ public open class EmrContainersStartJobRun(
         applicationConfig(applicationConfig.toList())
 
     /**
-     * An optional description for this state.
+     * Workflow variables to store in this step.
      *
-     * Default: - No comment
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
      *
-     * @param comment An optional description for this state. 
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * A comment describing this state.
+     *
+     * Default: No comment
+     *
+     * @param comment A comment describing this state. 
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -488,7 +544,7 @@ public open class EmrContainersStartJobRun(
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      *
      * @param inputPath JSONPath expression to select part of the state to be the input to this
      * state. 
@@ -577,19 +633,50 @@ public open class EmrContainersStartJobRun(
         monitoring(Monitoring(monitoring))
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      *
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state. 
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state. 
      */
     override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
+    }
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    override fun outputs(outputs: Any) {
+      cdkBuilder.outputs(outputs)
+    }
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
     }
 
     /**
@@ -607,7 +694,7 @@ public open class EmrContainersStartJobRun(
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      *
      * @param resultPath JSONPath expression to indicate where to inject the state's output. 
      */
@@ -695,6 +782,40 @@ public open class EmrContainersStartJobRun(
   }
 
   public companion object {
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: EmrContainersStartJobRunJsonPathProps,
+    ): EmrContainersStartJobRun =
+        software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRun.jsonPath(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        props.let(EmrContainersStartJobRunJsonPathProps.Companion::unwrap)).let(EmrContainersStartJobRun::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("64bb0a71f1ce3c7775dfcb81129f7bacc5d1b4561a93b3e774c390222e9e2252")
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: EmrContainersStartJobRunJsonPathProps.Builder.() -> Unit,
+    ): EmrContainersStartJobRun = jsonPath(scope, id, EmrContainersStartJobRunJsonPathProps(props))
+
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: EmrContainersStartJobRunJsonataProps,
+    ): EmrContainersStartJobRun =
+        software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRun.jsonata(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        props.let(EmrContainersStartJobRunJsonataProps.Companion::unwrap)).let(EmrContainersStartJobRun::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f82ece9690db81b32580468ebfd2e229cd5a4f814eb27a8bd3c2288f7791a0c6")
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: EmrContainersStartJobRunJsonataProps.Builder.() -> Unit,
+    ): EmrContainersStartJobRun = jsonata(scope, id, EmrContainersStartJobRunJsonataProps(props))
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

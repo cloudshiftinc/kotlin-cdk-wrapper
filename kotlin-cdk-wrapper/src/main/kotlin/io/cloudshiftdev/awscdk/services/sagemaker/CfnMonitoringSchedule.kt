@@ -2811,7 +2811,7 @@ public open class CfnMonitoringSchedule(
     /**
      * The array of inputs for the monitoring job.
      *
-     * Currently we support monitoring an Amazon SageMaker Endpoint.
+     * Currently we support monitoring an Amazon SageMaker AI Endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringjobdefinition.html#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringinputs)
      */
@@ -2842,7 +2842,7 @@ public open class CfnMonitoringSchedule(
     public fun networkConfig(): Any? = unwrap(this).getNetworkConfig()
 
     /**
-     * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform
+     * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker AI can assume to perform
      * tasks on your behalf.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringjobdefinition.html#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-rolearn)
@@ -2884,12 +2884,12 @@ public open class CfnMonitoringSchedule(
       /**
        * @param environment Sets the environment variables in the Docker container.
        */
-      public fun environment(environment: IResolvable)
+      public fun environment(environment: Map<String, String>)
 
       /**
        * @param environment Sets the environment variables in the Docker container.
        */
-      public fun environment(environment: Map<String, String>)
+      public fun environment(environment: IResolvable)
 
       /**
        * @param monitoringAppSpecification Configures the monitoring job to run a specified Docker
@@ -2915,19 +2915,19 @@ public open class CfnMonitoringSchedule(
 
       /**
        * @param monitoringInputs The array of inputs for the monitoring job. 
-       * Currently we support monitoring an Amazon SageMaker Endpoint.
+       * Currently we support monitoring an Amazon SageMaker AI Endpoint.
        */
       public fun monitoringInputs(monitoringInputs: IResolvable)
 
       /**
        * @param monitoringInputs The array of inputs for the monitoring job. 
-       * Currently we support monitoring an Amazon SageMaker Endpoint.
+       * Currently we support monitoring an Amazon SageMaker AI Endpoint.
        */
       public fun monitoringInputs(monitoringInputs: List<Any>)
 
       /**
        * @param monitoringInputs The array of inputs for the monitoring job. 
-       * Currently we support monitoring an Amazon SageMaker Endpoint.
+       * Currently we support monitoring an Amazon SageMaker AI Endpoint.
        */
       public fun monitoringInputs(vararg monitoringInputs: Any)
 
@@ -2994,7 +2994,7 @@ public open class CfnMonitoringSchedule(
       public fun networkConfig(networkConfig: NetworkConfigProperty.Builder.() -> Unit)
 
       /**
-       * @param roleArn The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can
+       * @param roleArn The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker AI can
        * assume to perform tasks on your behalf. 
        */
       public fun roleArn(roleArn: String)
@@ -3054,15 +3054,15 @@ public open class CfnMonitoringSchedule(
       /**
        * @param environment Sets the environment variables in the Docker container.
        */
-      override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
+      override fun environment(environment: Map<String, String>) {
+        cdkBuilder.environment(environment)
       }
 
       /**
        * @param environment Sets the environment variables in the Docker container.
        */
-      override fun environment(environment: Map<String, String>) {
-        cdkBuilder.environment(environment)
+      override fun environment(environment: IResolvable) {
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3095,7 +3095,7 @@ public open class CfnMonitoringSchedule(
 
       /**
        * @param monitoringInputs The array of inputs for the monitoring job. 
-       * Currently we support monitoring an Amazon SageMaker Endpoint.
+       * Currently we support monitoring an Amazon SageMaker AI Endpoint.
        */
       override fun monitoringInputs(monitoringInputs: IResolvable) {
         cdkBuilder.monitoringInputs(monitoringInputs.let(IResolvable.Companion::unwrap))
@@ -3103,7 +3103,7 @@ public open class CfnMonitoringSchedule(
 
       /**
        * @param monitoringInputs The array of inputs for the monitoring job. 
-       * Currently we support monitoring an Amazon SageMaker Endpoint.
+       * Currently we support monitoring an Amazon SageMaker AI Endpoint.
        */
       override fun monitoringInputs(monitoringInputs: List<Any>) {
         cdkBuilder.monitoringInputs(monitoringInputs.map{CdkObjectWrappers.unwrap(it)})
@@ -3111,7 +3111,7 @@ public open class CfnMonitoringSchedule(
 
       /**
        * @param monitoringInputs The array of inputs for the monitoring job. 
-       * Currently we support monitoring an Amazon SageMaker Endpoint.
+       * Currently we support monitoring an Amazon SageMaker AI Endpoint.
        */
       override fun monitoringInputs(vararg monitoringInputs: Any): Unit =
           monitoringInputs(monitoringInputs.toList())
@@ -3194,7 +3194,7 @@ public open class CfnMonitoringSchedule(
           networkConfig(NetworkConfigProperty(networkConfig))
 
       /**
-       * @param roleArn The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can
+       * @param roleArn The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker AI can
        * assume to perform tasks on your behalf. 
        */
       override fun roleArn(roleArn: String) {
@@ -3261,7 +3261,7 @@ public open class CfnMonitoringSchedule(
       /**
        * The array of inputs for the monitoring job.
        *
-       * Currently we support monitoring an Amazon SageMaker Endpoint.
+       * Currently we support monitoring an Amazon SageMaker AI Endpoint.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringjobdefinition.html#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringinputs)
        */
@@ -3292,8 +3292,8 @@ public open class CfnMonitoringSchedule(
       override fun networkConfig(): Any? = unwrap(this).getNetworkConfig()
 
       /**
-       * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform
-       * tasks on your behalf.
+       * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker AI can assume to
+       * perform tasks on your behalf.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringjobdefinition.html#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-rolearn)
        */
@@ -3353,7 +3353,7 @@ public open class CfnMonitoringSchedule(
    */
   public interface MonitoringOutputConfigProperty {
     /**
-     * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
+     * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker AI uses to encrypt the
      * model artifacts at rest using Amazon S3 server-side encryption.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutputconfig.html#cfn-sagemaker-monitoringschedule-monitoringoutputconfig-kmskeyid)
@@ -3375,8 +3375,8 @@ public open class CfnMonitoringSchedule(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses
-       * to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
+       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker AI
+       * uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
        */
       public fun kmsKeyId(kmsKeyId: String)
 
@@ -3406,8 +3406,8 @@ public open class CfnMonitoringSchedule(
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty.builder()
 
       /**
-       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses
-       * to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
+       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker AI
+       * uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
        */
       override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
@@ -3446,7 +3446,7 @@ public open class CfnMonitoringSchedule(
     ) : CdkObject(cdkObject),
         MonitoringOutputConfigProperty {
       /**
-       * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
+       * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker AI uses to encrypt the
        * model artifacts at rest using Amazon S3 server-side encryption.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringoutputconfig.html#cfn-sagemaker-monitoringschedule-monitoringoutputconfig-kmskeyid)
@@ -4541,7 +4541,7 @@ public open class CfnMonitoringSchedule(
      * * Even though the cron expression is set to start at 5PM UTC, note that there could be a
      * delay of 0-20 minutes from the actual requested time to run the execution.
      * * We recommend that if you would like a daily schedule, you do not provide this parameter.
-     * Amazon SageMaker will pick a time for running every day.
+     * Amazon SageMaker AI will pick a time for running every day.
      *
      *
      * You can also specify the keyword `NOW` to run the monitoring job immediately, one time,
@@ -4619,7 +4619,7 @@ public open class CfnMonitoringSchedule(
        * * Even though the cron expression is set to start at 5PM UTC, note that there could be a
        * delay of 0-20 minutes from the actual requested time to run the execution.
        * * We recommend that if you would like a daily schedule, you do not provide this parameter.
-       * Amazon SageMaker will pick a time for running every day.
+       * Amazon SageMaker AI will pick a time for running every day.
        *
        *
        * You can also specify the keyword `NOW` to run the monitoring job immediately, one time,
@@ -4701,7 +4701,7 @@ public open class CfnMonitoringSchedule(
        * * Even though the cron expression is set to start at 5PM UTC, note that there could be a
        * delay of 0-20 minutes from the actual requested time to run the execution.
        * * We recommend that if you would like a daily schedule, you do not provide this parameter.
-       * Amazon SageMaker will pick a time for running every day.
+       * Amazon SageMaker AI will pick a time for running every day.
        *
        *
        * You can also specify the keyword `NOW` to run the monitoring job immediately, one time,
@@ -4789,7 +4789,7 @@ public open class CfnMonitoringSchedule(
        * * Even though the cron expression is set to start at 5PM UTC, note that there could be a
        * delay of 0-20 minutes from the actual requested time to run the execution.
        * * We recommend that if you would like a daily schedule, you do not provide this parameter.
-       * Amazon SageMaker will pick a time for running every day.
+       * Amazon SageMaker AI will pick a time for running every day.
        *
        *
        * You can also specify the keyword `NOW` to run the monitoring job immediately, one time,

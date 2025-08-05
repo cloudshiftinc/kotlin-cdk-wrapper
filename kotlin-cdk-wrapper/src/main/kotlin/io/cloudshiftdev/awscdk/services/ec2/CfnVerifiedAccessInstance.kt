@@ -33,6 +33,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.ec2.*;
  * CfnVerifiedAccessInstance cfnVerifiedAccessInstance =
  * CfnVerifiedAccessInstance.Builder.create(this, "MyCfnVerifiedAccessInstance")
+ * .cidrEndpointsCustomSubDomain("cidrEndpointsCustomSubDomain")
  * .description("description")
  * .fipsEnabled(false)
  * .loggingConfigurations(VerifiedAccessLogsProperty.builder()
@@ -97,6 +98,12 @@ public open class CfnVerifiedAccessInstance(
   )
 
   /**
+   * The name servers.
+   */
+  public open fun attrCidrEndpointsCustomSubDomainNameServers(): List<String> =
+      unwrap(this).getAttrCidrEndpointsCustomSubDomainNameServers()
+
+  /**
    * The creation time.
    */
   public open fun attrCreationTime(): String = unwrap(this).getAttrCreationTime()
@@ -111,6 +118,19 @@ public open class CfnVerifiedAccessInstance(
    */
   public open fun attrVerifiedAccessInstanceId(): String =
       unwrap(this).getAttrVerifiedAccessInstanceId()
+
+  /**
+   * The custom subdomain.
+   */
+  public open fun cidrEndpointsCustomSubDomain(): String? =
+      unwrap(this).getCidrEndpointsCustomSubDomain()
+
+  /**
+   * The custom subdomain.
+   */
+  public open fun cidrEndpointsCustomSubDomain(`value`: String) {
+    unwrap(this).setCidrEndpointsCustomSubDomain(`value`)
+  }
 
   /**
    * A description for the AWS Verified Access instance.
@@ -256,6 +276,14 @@ public open class CfnVerifiedAccessInstance(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The custom subdomain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessinstance.html#cfn-ec2-verifiedaccessinstance-cidrendpointscustomsubdomain)
+     * @param cidrEndpointsCustomSubDomain The custom subdomain. 
+     */
+    public fun cidrEndpointsCustomSubDomain(cidrEndpointsCustomSubDomain: String)
+
+    /**
      * A description for the AWS Verified Access instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessinstance.html#cfn-ec2-verifiedaccessinstance-description)
@@ -373,6 +401,16 @@ public open class CfnVerifiedAccessInstance(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.Builder =
         software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.Builder.create(scope, id)
+
+    /**
+     * The custom subdomain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessinstance.html#cfn-ec2-verifiedaccessinstance-cidrendpointscustomsubdomain)
+     * @param cidrEndpointsCustomSubDomain The custom subdomain. 
+     */
+    override fun cidrEndpointsCustomSubDomain(cidrEndpointsCustomSubDomain: String) {
+      cdkBuilder.cidrEndpointsCustomSubDomain(cidrEndpointsCustomSubDomain)
+    }
 
     /**
      * A description for the AWS Verified Access instance.

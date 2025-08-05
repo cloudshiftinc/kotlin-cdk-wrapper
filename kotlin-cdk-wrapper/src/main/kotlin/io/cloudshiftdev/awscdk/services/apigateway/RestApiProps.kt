@@ -23,23 +23,14 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Bucket destinationBucket = new Bucket(this, "Bucket");
- * Role deliveryStreamRole = Role.Builder.create(this, "Role")
- * .assumedBy(new ServicePrincipal("firehose.amazonaws.com"))
+ * StateMachine stateMachine = StateMachine.Builder.create(this, "MyStateMachine")
+ * .stateMachineType(StateMachineType.EXPRESS)
+ * .definition(Chain.start(new Pass(this, "Pass")))
  * .build();
- * CfnDeliveryStream stream = CfnDeliveryStream.Builder.create(this, "MyStream")
- * .deliveryStreamName("amazon-apigateway-delivery-stream")
- * .s3DestinationConfiguration(S3DestinationConfigurationProperty.builder()
- * .bucketArn(destinationBucket.getBucketArn())
- * .roleArn(deliveryStreamRole.getRoleArn())
- * .build())
+ * RestApi api = RestApi.Builder.create(this, "Api")
+ * .restApiName("MyApi")
  * .build();
- * RestApi api = RestApi.Builder.create(this, "books")
- * .deployOptions(StageOptions.builder()
- * .accessLogDestination(new FirehoseLogDestination(stream))
- * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
- * .build())
- * .build();
+ * api.root.addMethod("GET", StepFunctionsIntegration.startExecution(stateMachine));
  * ```
  */
 public interface RestApiProps : ResourceOptions, RestApiBaseProps {
@@ -65,16 +56,6 @@ public interface RestApiProps : ResourceOptions, RestApiBaseProps {
    * Default: - None.
    */
   public fun cloneFrom(): IRestApi? = unwrap(this).getCloneFrom()?.let(IRestApi::wrap)
-
-  /**
-   * The EndpointConfiguration property type specifies the endpoint types of a REST API.
-   *
-   * Default: EndpointType.EDGE
-   *
-   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html)
-   */
-  public fun endpointConfiguration(): EndpointConfiguration? =
-      unwrap(this).getEndpointConfiguration()?.let(EndpointConfiguration::wrap)
 
   /**
    * A Size(in bytes, kibibytes, mebibytes etc) that is used to enable compression (with
@@ -142,7 +123,7 @@ public interface RestApiProps : ResourceOptions, RestApiBaseProps {
     /**
      * @param cloudWatchRoleRemovalPolicy The removal policy applied to the AWS CloudWatch role when
      * this resource is removed from the application.
-     * Requires `cloudWatchRole` to be enabled.
+     * Requires `cloudWatchRole` to be enabled.
      */
     public fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy)
 
@@ -393,7 +374,7 @@ public interface RestApiProps : ResourceOptions, RestApiBaseProps {
     /**
      * @param cloudWatchRoleRemovalPolicy The removal policy applied to the AWS CloudWatch role when
      * this resource is removed from the application.
-     * Requires `cloudWatchRole` to be enabled.
+     * Requires `cloudWatchRole` to be enabled.
      */
     override fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy) {
       cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
@@ -688,7 +669,7 @@ public interface RestApiProps : ResourceOptions, RestApiBaseProps {
      * The removal policy applied to the AWS CloudWatch role when this resource is removed from the
      * application.
      *
-     * Requires `cloudWatchRole` to be enabled.
+     * Requires `cloudWatchRole` to be enabled.
      *
      * Default: - RemovalPolicy.RETAIN
      */

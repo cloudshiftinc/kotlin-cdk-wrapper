@@ -18,6 +18,8 @@ public enum class ServiceNamespace(
   KAFKA(software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace.KAFKA),
   ELASTICACHE(software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace.ELASTICACHE),
   NEPTUNE(software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace.NEPTUNE),
+  CASSANDRA(software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace.CASSANDRA),
+  WORKSPACES(software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace.WORKSPACES),
   ;
 
   public companion object {
@@ -50,6 +52,10 @@ public enum class ServiceNamespace(
           ServiceNamespace.ELASTICACHE
       software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace.NEPTUNE ->
           ServiceNamespace.NEPTUNE
+      software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace.CASSANDRA ->
+          ServiceNamespace.CASSANDRA
+      software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace.WORKSPACES ->
+          ServiceNamespace.WORKSPACES
     }
 
     internal fun unwrap(wrapped: ServiceNamespace):

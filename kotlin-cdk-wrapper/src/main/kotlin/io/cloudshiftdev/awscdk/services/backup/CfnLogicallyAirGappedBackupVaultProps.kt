@@ -36,8 +36,6 @@ import kotlin.jvm.JvmName
  * .backupVaultEvents(List.of("backupVaultEvents"))
  * .snsTopicArn("snsTopicArn")
  * .build())
- * .vaultState("vaultState")
- * .vaultType("vaultType")
  * .build();
  * ```
  *
@@ -93,20 +91,6 @@ public interface CfnLogicallyAirGappedBackupVaultProps {
   public fun notifications(): Any? = unwrap(this).getNotifications()
 
   /**
-   * The current state of the vault.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-logicallyairgappedbackupvault.html#cfn-backup-logicallyairgappedbackupvault-vaultstate)
-   */
-  public fun vaultState(): String? = unwrap(this).getVaultState()
-
-  /**
-   * The type of vault described.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-logicallyairgappedbackupvault.html#cfn-backup-logicallyairgappedbackupvault-vaulttype)
-   */
-  public fun vaultType(): String? = unwrap(this).getVaultType()
-
-  /**
    * A builder for [CfnLogicallyAirGappedBackupVaultProps]
    */
   @CdkDslMarker
@@ -159,16 +143,6 @@ public interface CfnLogicallyAirGappedBackupVaultProps {
     @JvmName("0653c06aaf1efddb8a5e4699a8eeac3d8c13b4afb24efb2f53e36fdccf742745")
     public
         fun notifications(notifications: CfnLogicallyAirGappedBackupVault.NotificationObjectTypeProperty.Builder.() -> Unit)
-
-    /**
-     * @param vaultState The current state of the vault.
-     */
-    public fun vaultState(vaultState: String)
-
-    /**
-     * @param vaultType The type of vault described.
-     */
-    public fun vaultType(vaultType: String)
   }
 
   private class BuilderImpl : Builder {
@@ -241,20 +215,6 @@ public interface CfnLogicallyAirGappedBackupVaultProps {
         Unit =
         notifications(CfnLogicallyAirGappedBackupVault.NotificationObjectTypeProperty(notifications))
 
-    /**
-     * @param vaultState The current state of the vault.
-     */
-    override fun vaultState(vaultState: String) {
-      cdkBuilder.vaultState(vaultState)
-    }
-
-    /**
-     * @param vaultType The type of vault described.
-     */
-    override fun vaultType(vaultType: String) {
-      cdkBuilder.vaultType(vaultType)
-    }
-
     public fun build(): software.amazon.awscdk.services.backup.CfnLogicallyAirGappedBackupVaultProps
         = cdkBuilder.build()
   }
@@ -311,20 +271,6 @@ public interface CfnLogicallyAirGappedBackupVaultProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-logicallyairgappedbackupvault.html#cfn-backup-logicallyairgappedbackupvault-notifications)
      */
     override fun notifications(): Any? = unwrap(this).getNotifications()
-
-    /**
-     * The current state of the vault.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-logicallyairgappedbackupvault.html#cfn-backup-logicallyairgappedbackupvault-vaultstate)
-     */
-    override fun vaultState(): String? = unwrap(this).getVaultState()
-
-    /**
-     * The type of vault described.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-logicallyairgappedbackupvault.html#cfn-backup-logicallyairgappedbackupvault-vaulttype)
-     */
-    override fun vaultType(): String? = unwrap(this).getVaultType()
   }
 
   public companion object {

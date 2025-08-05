@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
+import io.cloudshiftdev.awscdk.services.stepfunctions.QueryLanguage
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBase
 import io.cloudshiftdev.awscdk.services.stepfunctions.Timeout
 import kotlin.Any
@@ -59,6 +60,19 @@ public open class EmrModifyInstanceFleetByName(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    public fun assign(assign: Map<String, Any>)
+
+    /**
      * The ClusterId to update.
      *
      * @param clusterId The ClusterId to update. 
@@ -66,11 +80,11 @@ public open class EmrModifyInstanceFleetByName(
     public fun clusterId(clusterId: String)
 
     /**
-     * An optional description for this state.
+     * A comment describing this state.
      *
-     * Default: - No comment
+     * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     public fun comment(comment: String)
 
@@ -131,7 +145,7 @@ public open class EmrModifyInstanceFleetByName(
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      *
      * @param inputPath JSONPath expression to select part of the state to be the input to this
      * state. 
@@ -164,18 +178,45 @@ public open class EmrModifyInstanceFleetByName(
     public fun integrationPattern(integrationPattern: IntegrationPattern)
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      *
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state. 
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state. 
      */
     public fun outputPath(outputPath: String)
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    public fun outputs(outputs: Any)
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
 
     /**
      * JSONPath expression to indicate where to inject the state's output.
@@ -183,7 +224,7 @@ public open class EmrModifyInstanceFleetByName(
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      *
      * @param resultPath JSONPath expression to indicate where to inject the state's output. 
      */
@@ -267,6 +308,21 @@ public open class EmrModifyInstanceFleetByName(
         id)
 
     /**
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
      * The ClusterId to update.
      *
      * @param clusterId The ClusterId to update. 
@@ -276,11 +332,11 @@ public open class EmrModifyInstanceFleetByName(
     }
 
     /**
-     * An optional description for this state.
+     * A comment describing this state.
      *
-     * Default: - No comment
+     * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -350,7 +406,7 @@ public open class EmrModifyInstanceFleetByName(
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      *
      * @param inputPath JSONPath expression to select part of the state to be the input to this
      * state. 
@@ -389,19 +445,50 @@ public open class EmrModifyInstanceFleetByName(
     }
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      *
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state. 
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state. 
      */
     override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
+    }
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    override fun outputs(outputs: Any) {
+      cdkBuilder.outputs(outputs)
+    }
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
     }
 
     /**
@@ -410,7 +497,7 @@ public open class EmrModifyInstanceFleetByName(
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      *
      * @param resultPath JSONPath expression to indicate where to inject the state's output. 
      */
@@ -503,6 +590,42 @@ public open class EmrModifyInstanceFleetByName(
   }
 
   public companion object {
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: EmrModifyInstanceFleetByNameJsonPathProps,
+    ): EmrModifyInstanceFleetByName =
+        software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceFleetByName.jsonPath(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        props.let(EmrModifyInstanceFleetByNameJsonPathProps.Companion::unwrap)).let(EmrModifyInstanceFleetByName::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("17bb877487234753f2b7c8040de1d14207d2094bf12e637aab091ccd9561fd41")
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: EmrModifyInstanceFleetByNameJsonPathProps.Builder.() -> Unit,
+    ): EmrModifyInstanceFleetByName = jsonPath(scope, id,
+        EmrModifyInstanceFleetByNameJsonPathProps(props))
+
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: EmrModifyInstanceFleetByNameJsonataProps,
+    ): EmrModifyInstanceFleetByName =
+        software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceFleetByName.jsonata(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        props.let(EmrModifyInstanceFleetByNameJsonataProps.Companion::unwrap)).let(EmrModifyInstanceFleetByName::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("54c3fee852b9addaf8d050d0d42e5697f724fe64f49960c1003b5d90bf2a1c1a")
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: EmrModifyInstanceFleetByNameJsonataProps.Builder.() -> Unit,
+    ): EmrModifyInstanceFleetByName = jsonata(scope, id,
+        EmrModifyInstanceFleetByNameJsonataProps(props))
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

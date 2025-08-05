@@ -1548,13 +1548,13 @@ public open class CfnIdMappingWorkflow(
        * @param providerConfiguration The required configuration fields to use with the provider
        * service.
        */
-      public fun providerConfiguration(providerConfiguration: IResolvable)
+      public fun providerConfiguration(providerConfiguration: Map<String, String>)
 
       /**
        * @param providerConfiguration The required configuration fields to use with the provider
        * service.
        */
-      public fun providerConfiguration(providerConfiguration: Map<String, String>)
+      public fun providerConfiguration(providerConfiguration: IResolvable)
 
       /**
        * @param providerServiceArn The ARN of the provider service. 
@@ -1603,16 +1603,16 @@ public open class CfnIdMappingWorkflow(
        * @param providerConfiguration The required configuration fields to use with the provider
        * service.
        */
-      override fun providerConfiguration(providerConfiguration: IResolvable) {
-        cdkBuilder.providerConfiguration(providerConfiguration.let(IResolvable.Companion::unwrap))
+      override fun providerConfiguration(providerConfiguration: Map<String, String>) {
+        cdkBuilder.providerConfiguration(providerConfiguration)
       }
 
       /**
        * @param providerConfiguration The required configuration fields to use with the provider
        * service.
        */
-      override fun providerConfiguration(providerConfiguration: Map<String, String>) {
-        cdkBuilder.providerConfiguration(providerConfiguration)
+      override fun providerConfiguration(providerConfiguration: IResolvable) {
+        cdkBuilder.providerConfiguration(providerConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**

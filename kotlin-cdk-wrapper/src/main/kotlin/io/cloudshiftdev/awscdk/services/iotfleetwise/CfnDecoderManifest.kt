@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -89,6 +90,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .startBit("startBit")
  * // the properties below are optional
  * .name("name")
+ * .signalValueType("signalValueType")
  * .build())
  * .obdSignal(ObdSignalProperty.builder()
  * .byteLength("byteLength")
@@ -101,6 +103,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .bitMaskLength("bitMaskLength")
  * .bitRightShift("bitRightShift")
+ * .isSigned("isSigned")
+ * .signalValueType("signalValueType")
  * .build())
  * .build()))
  * .status("status")
@@ -935,6 +939,7 @@ public open class CfnDecoderManifest(
    * .startBit("startBit")
    * // the properties below are optional
    * .name("name")
+   * .signalValueType("signalValueType")
    * .build())
    * .fullyQualifiedName("fullyQualifiedName")
    * .interfaceId("interfaceId")
@@ -1162,6 +1167,7 @@ public open class CfnDecoderManifest(
    * .startBit("startBit")
    * // the properties below are optional
    * .name("name")
+   * .signalValueType("signalValueType")
    * .build();
    * ```
    *
@@ -1220,6 +1226,15 @@ public open class CfnDecoderManifest(
     public fun offset(): String
 
     /**
+     * The value type of the signal.
+     *
+     * The default value is `INTEGER` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-signalvaluetype)
+     */
+    public fun signalValueType(): String? = unwrap(this).getSignalValueType()
+
+    /**
      * Indicates the beginning of the CAN message.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-startbit)
@@ -1266,6 +1281,12 @@ public open class CfnDecoderManifest(
        * Combined with factor, the calculation is `value = raw_value * factor + offset` .
        */
       public fun offset(offset: String)
+
+      /**
+       * @param signalValueType The value type of the signal.
+       * The default value is `INTEGER` .
+       */
+      public fun signalValueType(signalValueType: String)
 
       /**
        * @param startBit Indicates the beginning of the CAN message. 
@@ -1327,6 +1348,14 @@ public open class CfnDecoderManifest(
        */
       override fun offset(offset: String) {
         cdkBuilder.offset(offset)
+      }
+
+      /**
+       * @param signalValueType The value type of the signal.
+       * The default value is `INTEGER` .
+       */
+      override fun signalValueType(signalValueType: String) {
+        cdkBuilder.signalValueType(signalValueType)
       }
 
       /**
@@ -1395,6 +1424,15 @@ public open class CfnDecoderManifest(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-offset)
        */
       override fun offset(): String = unwrap(this).getOffset()
+
+      /**
+       * The value type of the signal.
+       *
+       * The default value is `INTEGER` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-signalvaluetype)
+       */
+      override fun signalValueType(): String? = unwrap(this).getSignalValueType()
 
       /**
        * Indicates the beginning of the CAN message.
@@ -2107,6 +2145,8 @@ public open class CfnDecoderManifest(
    * // the properties below are optional
    * .bitMaskLength("bitMaskLength")
    * .bitRightShift("bitRightShift")
+   * .isSigned("isSigned")
+   * .signalValueType("signalValueType")
    * .build())
    * .type("type")
    * .build();
@@ -2333,6 +2373,8 @@ public open class CfnDecoderManifest(
    * // the properties below are optional
    * .bitMaskLength("bitMaskLength")
    * .bitRightShift("bitRightShift")
+   * .isSigned("isSigned")
+   * .signalValueType("signalValueType")
    * .build();
    * ```
    *
@@ -2359,6 +2401,17 @@ public open class CfnDecoderManifest(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bytelength)
      */
     public fun byteLength(): String
+
+    /**
+     * Determines whether the message is signed ( `true` ) or not ( `false` ).
+     *
+     * If it's signed, the message can represent both positive and negative numbers. The `isSigned`
+     * parameter only applies to the `INTEGER` raw signal type, and it doesn't affect the
+     * `FLOATING_POINT` raw signal type. The default value is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-issigned)
+     */
+    public fun isSigned(): Any? = unwrap(this).getIsSigned()
 
     /**
      * The offset used to calculate the signal value.
@@ -2398,6 +2451,15 @@ public open class CfnDecoderManifest(
     public fun serviceMode(): String
 
     /**
+     * The value type of the signal.
+     *
+     * The default value is `INTEGER` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-signalvaluetype)
+     */
+    public fun signalValueType(): String? = unwrap(this).getSignalValueType()
+
+    /**
      * Indicates the beginning of the message.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-startbyte)
@@ -2425,6 +2487,30 @@ public open class CfnDecoderManifest(
       public fun byteLength(byteLength: String)
 
       /**
+       * @param isSigned Determines whether the message is signed ( `true` ) or not ( `false` ).
+       * If it's signed, the message can represent both positive and negative numbers. The
+       * `isSigned` parameter only applies to the `INTEGER` raw signal type, and it doesn't affect the
+       * `FLOATING_POINT` raw signal type. The default value is `false` .
+       */
+      public fun isSigned(isSigned: String)
+
+      /**
+       * @param isSigned Determines whether the message is signed ( `true` ) or not ( `false` ).
+       * If it's signed, the message can represent both positive and negative numbers. The
+       * `isSigned` parameter only applies to the `INTEGER` raw signal type, and it doesn't affect the
+       * `FLOATING_POINT` raw signal type. The default value is `false` .
+       */
+      public fun isSigned(isSigned: Boolean)
+
+      /**
+       * @param isSigned Determines whether the message is signed ( `true` ) or not ( `false` ).
+       * If it's signed, the message can represent both positive and negative numbers. The
+       * `isSigned` parameter only applies to the `INTEGER` raw signal type, and it doesn't affect the
+       * `FLOATING_POINT` raw signal type. The default value is `false` .
+       */
+      public fun isSigned(isSigned: IResolvable)
+
+      /**
        * @param offset The offset used to calculate the signal value. 
        * Combined with scaling, the calculation is `value = raw_value * scaling + offset` .
        */
@@ -2449,6 +2535,12 @@ public open class CfnDecoderManifest(
        * @param serviceMode The mode of operation (diagnostic service) in a message. 
        */
       public fun serviceMode(serviceMode: String)
+
+      /**
+       * @param signalValueType The value type of the signal.
+       * The default value is `INTEGER` .
+       */
+      public fun signalValueType(signalValueType: String)
 
       /**
        * @param startByte Indicates the beginning of the message. 
@@ -2481,6 +2573,36 @@ public open class CfnDecoderManifest(
        */
       override fun byteLength(byteLength: String) {
         cdkBuilder.byteLength(byteLength)
+      }
+
+      /**
+       * @param isSigned Determines whether the message is signed ( `true` ) or not ( `false` ).
+       * If it's signed, the message can represent both positive and negative numbers. The
+       * `isSigned` parameter only applies to the `INTEGER` raw signal type, and it doesn't affect the
+       * `FLOATING_POINT` raw signal type. The default value is `false` .
+       */
+      override fun isSigned(isSigned: String) {
+        cdkBuilder.isSigned(isSigned)
+      }
+
+      /**
+       * @param isSigned Determines whether the message is signed ( `true` ) or not ( `false` ).
+       * If it's signed, the message can represent both positive and negative numbers. The
+       * `isSigned` parameter only applies to the `INTEGER` raw signal type, and it doesn't affect the
+       * `FLOATING_POINT` raw signal type. The default value is `false` .
+       */
+      override fun isSigned(isSigned: Boolean) {
+        cdkBuilder.isSigned(isSigned)
+      }
+
+      /**
+       * @param isSigned Determines whether the message is signed ( `true` ) or not ( `false` ).
+       * If it's signed, the message can represent both positive and negative numbers. The
+       * `isSigned` parameter only applies to the `INTEGER` raw signal type, and it doesn't affect the
+       * `FLOATING_POINT` raw signal type. The default value is `false` .
+       */
+      override fun isSigned(isSigned: IResolvable) {
+        cdkBuilder.isSigned(isSigned.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2517,6 +2639,14 @@ public open class CfnDecoderManifest(
        */
       override fun serviceMode(serviceMode: String) {
         cdkBuilder.serviceMode(serviceMode)
+      }
+
+      /**
+       * @param signalValueType The value type of the signal.
+       * The default value is `INTEGER` .
+       */
+      override fun signalValueType(signalValueType: String) {
+        cdkBuilder.signalValueType(signalValueType)
       }
 
       /**
@@ -2557,6 +2687,17 @@ public open class CfnDecoderManifest(
       override fun byteLength(): String = unwrap(this).getByteLength()
 
       /**
+       * Determines whether the message is signed ( `true` ) or not ( `false` ).
+       *
+       * If it's signed, the message can represent both positive and negative numbers. The
+       * `isSigned` parameter only applies to the `INTEGER` raw signal type, and it doesn't affect the
+       * `FLOATING_POINT` raw signal type. The default value is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-issigned)
+       */
+      override fun isSigned(): Any? = unwrap(this).getIsSigned()
+
+      /**
        * The offset used to calculate the signal value.
        *
        * Combined with scaling, the calculation is `value = raw_value * scaling + offset` .
@@ -2592,6 +2733,15 @@ public open class CfnDecoderManifest(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-servicemode)
        */
       override fun serviceMode(): String = unwrap(this).getServiceMode()
+
+      /**
+       * The value type of the signal.
+       *
+       * The default value is `INTEGER` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-signalvaluetype)
+       */
+      override fun signalValueType(): String? = unwrap(this).getSignalValueType()
 
       /**
        * Indicates the beginning of the message.
@@ -2643,6 +2793,7 @@ public open class CfnDecoderManifest(
    * .startBit("startBit")
    * // the properties below are optional
    * .name("name")
+   * .signalValueType("signalValueType")
    * .build())
    * .obdSignal(ObdSignalProperty.builder()
    * .byteLength("byteLength")
@@ -2655,6 +2806,8 @@ public open class CfnDecoderManifest(
    * // the properties below are optional
    * .bitMaskLength("bitMaskLength")
    * .bitRightShift("bitRightShift")
+   * .isSigned("isSigned")
+   * .signalValueType("signalValueType")
    * .build())
    * .build();
    * ```

@@ -539,6 +539,9 @@ public open class GraphqlApi(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.appsync.GraphqlApi.PROPERTY_INJECTION_ID
+
     public fun fromGraphqlApiAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

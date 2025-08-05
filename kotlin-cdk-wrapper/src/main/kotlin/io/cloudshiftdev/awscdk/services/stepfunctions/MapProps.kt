@@ -25,19 +25,56 @@ import kotlin.collections.Map
  * "item", JsonPath.stringAt("$.Map.Item.Value")))
  * .resultPath("$.mapOutput")
  * .build();
- * // The Map iterator can contain a IChainable, which can be an individual or multiple steps
- * chained together.
- * // Below example is with a Choice and Pass step
- * Choice choice = new Choice(this, "Choice");
- * Condition condition1 = Condition.stringEquals("$.item.status", "SUCCESS");
- * Pass step1 = new Pass(this, "Step1");
- * Pass step2 = new Pass(this, "Step2");
- * Pass finish = new Pass(this, "Finish");
- * Chain definition = choice.when(condition1, step1).otherwise(step2).afterwards().next(finish);
- * map.itemProcessor(definition);
+ * map.itemProcessor(new Pass(this, "Pass State"), ProcessorConfig.builder()
+ * .mode(ProcessorMode.DISTRIBUTED)
+ * .executionType(ProcessorType.STANDARD)
+ * .build());
  * ```
  */
-public interface MapProps : MapBaseProps {
+public interface MapProps : MapBaseProps, MapBaseOptions {
+  /**
+   * Workflow variables to store in this step.
+   *
+   * Using workflow variables, you can store data in a step and retrieve that data in future steps.
+   *
+   * Default: - Not assign variables
+   *
+   * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+   */
+  public override fun assign(): Map<String, Any> = unwrap(this).getAssign() ?: emptyMap()
+
+  /**
+   * The JSON that you want to override your default iteration input (mutually exclusive  with
+   * `parameters` and `jsonataItemSelector`).
+   *
+   * Default: $
+   *
+   * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-itemselector.html)
+   */
+  public override fun itemSelector(): Map<String, Any> = unwrap(this).getItemSelector() ?:
+      emptyMap()
+
+  /**
+   * Jsonata expression that evaluates to a JSON array to override your default iteration input
+   * (mutually exclusive with `parameters` and `itemSelector`).
+   *
+   * Example value: `{% {\"foo\": \"foo\", \"input\": $states.input} %}`
+   *
+   * Default: $
+   */
+  public override fun jsonataItemSelector(): String? = unwrap(this).getJsonataItemSelector()
+
+  /**
+   * MaxConcurrency.
+   *
+   * An upper bound on the number of iterations you want running at once.
+   *
+   * Default: - full concurrency
+   *
+   * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-asl-use-map-state-inline.html#map-state-inline-additional-fields)
+   */
+  public override fun maxConcurrency(): Number? = unwrap(this).getMaxConcurrency()
+
   /**
    * (deprecated) The JSON that you want to override your default iteration input (mutually
    * exclusive  with `itemSelector`).
@@ -57,7 +94,14 @@ public interface MapProps : MapBaseProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param comment An optional description for this state.
+     * @param assign Workflow variables to store in this step.
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     */
+    public fun assign(assign: Map<String, Any>)
+
+    /**
+     * @param comment A comment describing this state.
      */
     public fun comment(comment: String)
 
@@ -71,14 +115,26 @@ public interface MapProps : MapBaseProps {
 
     /**
      * @param itemSelector The JSON that you want to override your default iteration input (mutually
-     * exclusive  with `parameters`).
+     * exclusive  with `parameters` and `jsonataItemSelector`).
      */
     public fun itemSelector(itemSelector: Map<String, Any>)
+
+    /**
+     * @param items The array that the Map state will iterate over.
+     */
+    public fun items(items: ProvideItems)
 
     /**
      * @param itemsPath JSONPath expression to select the array to iterate over.
      */
     public fun itemsPath(itemsPath: String)
+
+    /**
+     * @param jsonataItemSelector Jsonata expression that evaluates to a JSON array to override your
+     * default iteration input (mutually exclusive with `parameters` and `itemSelector`).
+     * Example value: `{% {\"foo\": \"foo\", \"input\": $states.input} %}`
+     */
+    public fun jsonataItemSelector(jsonataItemSelector: String)
 
     /**
      * @param maxConcurrency MaxConcurrency.
@@ -101,6 +157,16 @@ public interface MapProps : MapBaseProps {
     public fun outputPath(outputPath: String)
 
     /**
+     * @param outputs Used to specify and transform output from the state.
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     */
+    public fun outputs(outputs: Any)
+
+    /**
      * @param parameters The JSON that you want to override your default iteration input (mutually
      * exclusive  with `itemSelector`).
      * @deprecated Step Functions has deprecated the `parameters` field in favor of
@@ -108,6 +174,13 @@ public interface MapProps : MapBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     public fun parameters(parameters: Map<String, Any>)
+
+    /**
+     * @param queryLanguage The name of the query language used by the state.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
 
     /**
      * @param resultPath JSONPath expression to indicate where to inject the state's output.
@@ -135,7 +208,16 @@ public interface MapProps : MapBaseProps {
         software.amazon.awscdk.services.stepfunctions.MapProps.builder()
 
     /**
-     * @param comment An optional description for this state.
+     * @param assign Workflow variables to store in this step.
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * @param comment A comment describing this state.
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -153,10 +235,17 @@ public interface MapProps : MapBaseProps {
 
     /**
      * @param itemSelector The JSON that you want to override your default iteration input (mutually
-     * exclusive  with `parameters`).
+     * exclusive  with `parameters` and `jsonataItemSelector`).
      */
     override fun itemSelector(itemSelector: Map<String, Any>) {
       cdkBuilder.itemSelector(itemSelector.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * @param items The array that the Map state will iterate over.
+     */
+    override fun items(items: ProvideItems) {
+      cdkBuilder.items(items.let(ProvideItems.Companion::unwrap))
     }
 
     /**
@@ -164,6 +253,15 @@ public interface MapProps : MapBaseProps {
      */
     override fun itemsPath(itemsPath: String) {
       cdkBuilder.itemsPath(itemsPath)
+    }
+
+    /**
+     * @param jsonataItemSelector Jsonata expression that evaluates to a JSON array to override your
+     * default iteration input (mutually exclusive with `parameters` and `itemSelector`).
+     * Example value: `{% {\"foo\": \"foo\", \"input\": $states.input} %}`
+     */
+    override fun jsonataItemSelector(jsonataItemSelector: String) {
+      cdkBuilder.jsonataItemSelector(jsonataItemSelector)
     }
 
     /**
@@ -193,6 +291,18 @@ public interface MapProps : MapBaseProps {
     }
 
     /**
+     * @param outputs Used to specify and transform output from the state.
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     */
+    override fun outputs(outputs: Any) {
+      cdkBuilder.outputs(outputs)
+    }
+
+    /**
      * @param parameters The JSON that you want to override your default iteration input (mutually
      * exclusive  with `itemSelector`).
      * @deprecated Step Functions has deprecated the `parameters` field in favor of
@@ -201,6 +311,15 @@ public interface MapProps : MapBaseProps {
     @Deprecated(message = "deprecated in CDK")
     override fun parameters(parameters: Map<String, Any>) {
       cdkBuilder.parameters(parameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * @param queryLanguage The name of the query language used by the state.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
     }
 
     /**
@@ -237,7 +356,19 @@ public interface MapProps : MapBaseProps {
   ) : CdkObject(cdkObject),
       MapProps {
     /**
-     * An optional description for this state.
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     */
+    override fun assign(): Map<String, Any> = unwrap(this).getAssign() ?: emptyMap()
+
+    /**
+     * A comment describing this state.
      *
      * Default: No comment
      */
@@ -255,7 +386,7 @@ public interface MapProps : MapBaseProps {
 
     /**
      * The JSON that you want to override your default iteration input (mutually exclusive  with
-     * `parameters`).
+     * `parameters` and `jsonataItemSelector`).
      *
      * Default: $
      *
@@ -264,11 +395,28 @@ public interface MapProps : MapBaseProps {
     override fun itemSelector(): Map<String, Any> = unwrap(this).getItemSelector() ?: emptyMap()
 
     /**
+     * The array that the Map state will iterate over.
+     *
+     * Default: - The state input as is.
+     */
+    override fun items(): ProvideItems? = unwrap(this).getItems()?.let(ProvideItems::wrap)
+
+    /**
      * JSONPath expression to select the array to iterate over.
      *
      * Default: $
      */
     override fun itemsPath(): String? = unwrap(this).getItemsPath()
+
+    /**
+     * Jsonata expression that evaluates to a JSON array to override your default iteration input
+     * (mutually exclusive with `parameters` and `itemSelector`).
+     *
+     * Example value: `{% {\"foo\": \"foo\", \"input\": $states.input} %}`
+     *
+     * Default: $
+     */
+    override fun jsonataItemSelector(): String? = unwrap(this).getJsonataItemSelector()
 
     /**
      * MaxConcurrency.
@@ -303,6 +451,21 @@ public interface MapProps : MapBaseProps {
     override fun outputPath(): String? = unwrap(this).getOutputPath()
 
     /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     */
+    override fun outputs(): Any? = unwrap(this).getOutputs()
+
+    /**
      * (deprecated) The JSON that you want to override your default iteration input (mutually
      * exclusive  with `itemSelector`).
      *
@@ -314,6 +477,17 @@ public interface MapProps : MapBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun parameters(): Map<String, Any> = unwrap(this).getParameters() ?: emptyMap()
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     */
+    override fun queryLanguage(): QueryLanguage? =
+        unwrap(this).getQueryLanguage()?.let(QueryLanguage::wrap)
 
     /**
      * JSONPath expression to indicate where to inject the state's output.

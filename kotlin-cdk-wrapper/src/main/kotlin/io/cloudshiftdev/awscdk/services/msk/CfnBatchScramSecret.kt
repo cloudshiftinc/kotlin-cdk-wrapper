@@ -13,7 +13,8 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html.
+ * Represents a secret stored in the AWS Secrets Manager that can be used to authenticate with a
+ * cluster using a user name and a password.
  *
  * Example:
  *
@@ -52,12 +53,12 @@ public open class CfnBatchScramSecret(
   )
 
   /**
-   *
+   * The Amazon Resource Name (ARN) that uniquely identifies the cluster.
    */
   public open fun clusterArn(): String = unwrap(this).getClusterArn()
 
   /**
-   *
+   * The Amazon Resource Name (ARN) that uniquely identifies the cluster.
    */
   public open fun clusterArn(`value`: String) {
     unwrap(this).setClusterArn(`value`)
@@ -73,19 +74,19 @@ public open class CfnBatchScramSecret(
   }
 
   /**
-   *
+   * List of Amazon Resource Name (ARN)s of Secrets Manager secrets.
    */
   public open fun secretArnList(): List<String> = unwrap(this).getSecretArnList() ?: emptyList()
 
   /**
-   *
+   * List of Amazon Resource Name (ARN)s of Secrets Manager secrets.
    */
   public open fun secretArnList(`value`: List<String>) {
     unwrap(this).setSecretArnList(`value`)
   }
 
   /**
-   *
+   * List of Amazon Resource Name (ARN)s of Secrets Manager secrets.
    */
   public open fun secretArnList(vararg `value`: String): Unit = secretArnList(`value`.toList())
 
@@ -95,20 +96,26 @@ public open class CfnBatchScramSecret(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The Amazon Resource Name (ARN) that uniquely identifies the cluster.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html#cfn-msk-batchscramsecret-clusterarn)
-     * @param clusterArn 
+     * @param clusterArn The Amazon Resource Name (ARN) that uniquely identifies the cluster. 
      */
     public fun clusterArn(clusterArn: String)
 
     /**
+     * List of Amazon Resource Name (ARN)s of Secrets Manager secrets.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html#cfn-msk-batchscramsecret-secretarnlist)
-     * @param secretArnList 
+     * @param secretArnList List of Amazon Resource Name (ARN)s of Secrets Manager secrets. 
      */
     public fun secretArnList(secretArnList: List<String>)
 
     /**
+     * List of Amazon Resource Name (ARN)s of Secrets Manager secrets.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html#cfn-msk-batchscramsecret-secretarnlist)
-     * @param secretArnList 
+     * @param secretArnList List of Amazon Resource Name (ARN)s of Secrets Manager secrets. 
      */
     public fun secretArnList(vararg secretArnList: String)
   }
@@ -121,24 +128,30 @@ public open class CfnBatchScramSecret(
         software.amazon.awscdk.services.msk.CfnBatchScramSecret.Builder.create(scope, id)
 
     /**
+     * The Amazon Resource Name (ARN) that uniquely identifies the cluster.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html#cfn-msk-batchscramsecret-clusterarn)
-     * @param clusterArn 
+     * @param clusterArn The Amazon Resource Name (ARN) that uniquely identifies the cluster. 
      */
     override fun clusterArn(clusterArn: String) {
       cdkBuilder.clusterArn(clusterArn)
     }
 
     /**
+     * List of Amazon Resource Name (ARN)s of Secrets Manager secrets.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html#cfn-msk-batchscramsecret-secretarnlist)
-     * @param secretArnList 
+     * @param secretArnList List of Amazon Resource Name (ARN)s of Secrets Manager secrets. 
      */
     override fun secretArnList(secretArnList: List<String>) {
       cdkBuilder.secretArnList(secretArnList)
     }
 
     /**
+     * List of Amazon Resource Name (ARN)s of Secrets Manager secrets.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html#cfn-msk-batchscramsecret-secretarnlist)
-     * @param secretArnList 
+     * @param secretArnList List of Amazon Resource Name (ARN)s of Secrets Manager secrets. 
      */
     override fun secretArnList(vararg secretArnList: String): Unit =
         secretArnList(secretArnList.toList())

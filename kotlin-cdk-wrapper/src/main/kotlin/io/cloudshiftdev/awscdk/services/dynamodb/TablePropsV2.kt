@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import io.cloudshiftdev.awscdk.services.kinesis.IStream
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -27,7 +28,7 @@ import kotlin.jvm.JvmName
  * "Stack").env(Environment.builder().region("us-west-2").build()).build();
  * TableV2 globalTable = TableV2.Builder.create(stack, "GlobalTable")
  * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
- * // applys to all replicas, i.e., us-west-2, us-east-1, us-east-2
+ * // applies to all replicas, i.e., us-west-2, us-east-1, us-east-2
  * .removalPolicy(RemovalPolicy.DESTROY)
  * .replicas(List.of(ReplicaTableProps.builder().region("us-east-1").build(),
  * ReplicaTableProps.builder().region("us-east-2").build()))
@@ -210,8 +211,26 @@ public interface TablePropsV2 : TableOptionsV2 {
 
     /**
      * @param pointInTimeRecovery Whether point-in-time recovery is enabled.
+     * @deprecated use `pointInTimeRecoverySpecification` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun pointInTimeRecovery(pointInTimeRecovery: Boolean)
+
+    /**
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set.
+     */
+    public
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification)
+
+    /**
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5f0f20e9a6f0d5d62943679d8e02f6314bbdf053fa7d4ff8af848e482510bc58")
+    public
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification.Builder.() -> Unit)
 
     /**
      * @param removalPolicy The removal policy applied to the table.
@@ -390,10 +409,32 @@ public interface TablePropsV2 : TableOptionsV2 {
 
     /**
      * @param pointInTimeRecovery Whether point-in-time recovery is enabled.
+     * @deprecated use `pointInTimeRecoverySpecification` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun pointInTimeRecovery(pointInTimeRecovery: Boolean) {
       cdkBuilder.pointInTimeRecovery(pointInTimeRecovery)
     }
+
+    /**
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set.
+     */
+    override
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification) {
+      cdkBuilder.pointInTimeRecoverySpecification(pointInTimeRecoverySpecification.let(PointInTimeRecoverySpecification.Companion::unwrap))
+    }
+
+    /**
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5f0f20e9a6f0d5d62943679d8e02f6314bbdf053fa7d4ff8af848e482510bc58")
+    override
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification.Builder.() -> Unit):
+        Unit =
+        pointInTimeRecoverySpecification(PointInTimeRecoverySpecification(pointInTimeRecoverySpecification))
 
     /**
      * @param removalPolicy The removal policy applied to the table.
@@ -578,11 +619,22 @@ public interface TablePropsV2 : TableOptionsV2 {
     override fun partitionKey(): Attribute = unwrap(this).getPartitionKey().let(Attribute::wrap)
 
     /**
-     * Whether point-in-time recovery is enabled.
+     * (deprecated) Whether point-in-time recovery is enabled.
      *
-     * Default: false
+     * Default: false - point in time recovery is not enabled.
+     *
+     * @deprecated use `pointInTimeRecoverySpecification` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun pointInTimeRecovery(): Boolean? = unwrap(this).getPointInTimeRecovery()
+
+    /**
+     * Whether point-in-time recovery is enabled and recoveryPeriodInDays is set.
+     *
+     * Default: - point in time recovery is not enabled.
+     */
+    override fun pointInTimeRecoverySpecification(): PointInTimeRecoverySpecification? =
+        unwrap(this).getPointInTimeRecoverySpecification()?.let(PointInTimeRecoverySpecification::wrap)
 
     /**
      * The removal policy applied to the table.

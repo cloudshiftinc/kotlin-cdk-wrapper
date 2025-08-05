@@ -19,7 +19,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Describes a zero-ETL integration.
+ * Describes a zero-ETL or S3 integration.
  *
  * Example:
  *
@@ -74,15 +74,15 @@ public open class CfnIntegration(
   /**
    * The encryption context for the integration.
    */
-  public open fun additionalEncryptionContext(`value`: IResolvable) {
-    unwrap(this).setAdditionalEncryptionContext(`value`.let(IResolvable.Companion::unwrap))
+  public open fun additionalEncryptionContext(`value`: Map<String, String>) {
+    unwrap(this).setAdditionalEncryptionContext(`value`)
   }
 
   /**
    * The encryption context for the integration.
    */
-  public open fun additionalEncryptionContext(`value`: Map<String, String>) {
-    unwrap(this).setAdditionalEncryptionContext(`value`)
+  public open fun additionalEncryptionContext(`value`: IResolvable) {
+    unwrap(this).setAdditionalEncryptionContext(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -123,13 +123,13 @@ public open class CfnIntegration(
   }
 
   /**
-   * The AWS Key Management Service ( AWS KMS ) key identifier for the key used to encrypt the
+   * The AWS Key Management Service ( AWS KMS) key identifier for the key used to encrypt the
    * integration.
    */
   public open fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
   /**
-   * The AWS Key Management Service ( AWS KMS ) key identifier for the key used to encrypt the
+   * The AWS Key Management Service ( AWS KMS) key identifier for the key used to encrypt the
    * integration.
    */
   public open fun kmsKeyId(`value`: String) {
@@ -187,26 +187,24 @@ public open class CfnIntegration(
     /**
      * The encryption context for the integration.
      *
-     * For more information, see [Encryption
-     * context](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context) in
-     * the *AWS Key Management Service Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-integration.html#cfn-redshift-integration-additionalencryptioncontext)
-     * @param additionalEncryptionContext The encryption context for the integration. 
-     */
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
-
-    /**
-     * The encryption context for the integration.
-     *
-     * For more information, see [Encryption
-     * context](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context) in
-     * the *AWS Key Management Service Developer Guide* .
+     * For more information, see [Encryption context](https://docs.aws.amazon.com/) in the *AWS Key
+     * Management Service Developer Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-integration.html#cfn-redshift-integration-additionalencryptioncontext)
      * @param additionalEncryptionContext The encryption context for the integration. 
      */
     public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
+
+    /**
+     * The encryption context for the integration.
+     *
+     * For more information, see [Encryption context](https://docs.aws.amazon.com/) in the *AWS Key
+     * Management Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-integration.html#cfn-redshift-integration-additionalencryptioncontext)
+     * @param additionalEncryptionContext The encryption context for the integration. 
+     */
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
     /**
      * The name of the integration.
@@ -217,11 +215,11 @@ public open class CfnIntegration(
     public fun integrationName(integrationName: String)
 
     /**
-     * The AWS Key Management Service ( AWS KMS ) key identifier for the key used to encrypt the
+     * The AWS Key Management Service ( AWS KMS) key identifier for the key used to encrypt the
      * integration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-integration.html#cfn-redshift-integration-kmskeyid)
-     * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key identifier for the key used to
+     * @param kmsKeyId The AWS Key Management Service ( AWS KMS) key identifier for the key used to
      * encrypt the integration. 
      */
     public fun kmsKeyId(kmsKeyId: String)
@@ -272,29 +270,27 @@ public open class CfnIntegration(
     /**
      * The encryption context for the integration.
      *
-     * For more information, see [Encryption
-     * context](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context) in
-     * the *AWS Key Management Service Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-integration.html#cfn-redshift-integration-additionalencryptioncontext)
-     * @param additionalEncryptionContext The encryption context for the integration. 
-     */
-    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
-    }
-
-    /**
-     * The encryption context for the integration.
-     *
-     * For more information, see [Encryption
-     * context](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context) in
-     * the *AWS Key Management Service Developer Guide* .
+     * For more information, see [Encryption context](https://docs.aws.amazon.com/) in the *AWS Key
+     * Management Service Developer Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-integration.html#cfn-redshift-integration-additionalencryptioncontext)
      * @param additionalEncryptionContext The encryption context for the integration. 
      */
     override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
       cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
+    }
+
+    /**
+     * The encryption context for the integration.
+     *
+     * For more information, see [Encryption context](https://docs.aws.amazon.com/) in the *AWS Key
+     * Management Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-integration.html#cfn-redshift-integration-additionalencryptioncontext)
+     * @param additionalEncryptionContext The encryption context for the integration. 
+     */
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -308,11 +304,11 @@ public open class CfnIntegration(
     }
 
     /**
-     * The AWS Key Management Service ( AWS KMS ) key identifier for the key used to encrypt the
+     * The AWS Key Management Service ( AWS KMS) key identifier for the key used to encrypt the
      * integration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-integration.html#cfn-redshift-integration-kmskeyid)
-     * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key identifier for the key used to
+     * @param kmsKeyId The AWS Key Management Service ( AWS KMS) key identifier for the key used to
      * encrypt the integration. 
      */
     override fun kmsKeyId(kmsKeyId: String) {

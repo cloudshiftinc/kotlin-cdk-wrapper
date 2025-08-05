@@ -199,7 +199,7 @@ public open class HttpApi(
   /**
    * The default stage of this API.
    */
-  public open fun defaultStage(): IHttpStage? =
+  public override fun defaultStage(): IHttpStage? =
       unwrap(this).getDefaultStage()?.let(IHttpStage::wrap)
 
   /**
@@ -563,6 +563,16 @@ public open class HttpApi(
     public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean)
 
     /**
+     * The IP address types that can invoke the API.
+     *
+     * Default: undefined - AWS default is IPV4
+     *
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-ip-address-type.html)
+     * @param ipAddressType The IP address types that can invoke the API. 
+     */
+    public fun ipAddressType(ipAddressType: IpAddressType)
+
+    /**
      * Whether to set the default route selection expression for the API.
      *
      * When enabled, "${request.method} ${request.path}" is set as the default route selection
@@ -739,6 +749,18 @@ public open class HttpApi(
     }
 
     /**
+     * The IP address types that can invoke the API.
+     *
+     * Default: undefined - AWS default is IPV4
+     *
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-ip-address-type.html)
+     * @param ipAddressType The IP address types that can invoke the API. 
+     */
+    override fun ipAddressType(ipAddressType: IpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
+    }
+
+    /**
      * Whether to set the default route selection expression for the API.
      *
      * When enabled, "${request.method} ${request.path}" is set as the default route selection
@@ -757,6 +779,9 @@ public open class HttpApi(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.apigatewayv2.HttpApi.PROPERTY_INJECTION_ID
+
     public fun fromHttpApiAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

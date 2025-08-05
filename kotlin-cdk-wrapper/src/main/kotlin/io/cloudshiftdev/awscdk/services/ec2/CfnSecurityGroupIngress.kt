@@ -142,12 +142,12 @@ public open class CfnSecurityGroupIngress(
   }
 
   /**
-   * The name of the security group.
+   * [Default VPC] The name of the security group.
    */
   public open fun groupName(): String? = unwrap(this).getGroupName()
 
   /**
-   * The name of the security group.
+   * [Default VPC] The name of the security group.
    */
   public open fun groupName(`value`: String) {
     unwrap(this).setGroupName(`value`)
@@ -315,14 +315,14 @@ public open class CfnSecurityGroupIngress(
     public fun groupId(groupId: String)
 
     /**
-     * The name of the security group.
+     * [Default VPC] The name of the security group.
      *
-     * Constraints: Up to 255 characters in length. Cannot start with `sg-` .
-     *
-     * Valid characters: a-z, A-Z, 0-9, spaces, and ._-:/()#,&#64;[]+=&amp;;{}!$*
+     * For security groups for a default VPC you can specify either the ID or the name of the
+     * security group. For security groups for a nondefault VPC, you must specify the ID of the
+     * security group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroupingress.html#cfn-ec2-securitygroupingress-groupname)
-     * @param groupName The name of the security group. 
+     * @param groupName [Default VPC] The name of the security group. 
      */
     public fun groupName(groupName: String)
 
@@ -495,14 +495,14 @@ public open class CfnSecurityGroupIngress(
     }
 
     /**
-     * The name of the security group.
+     * [Default VPC] The name of the security group.
      *
-     * Constraints: Up to 255 characters in length. Cannot start with `sg-` .
-     *
-     * Valid characters: a-z, A-Z, 0-9, spaces, and ._-:/()#,&#64;[]+=&amp;;{}!$*
+     * For security groups for a default VPC you can specify either the ID or the name of the
+     * security group. For security groups for a nondefault VPC, you must specify the ID of the
+     * security group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroupingress.html#cfn-ec2-securitygroupingress-groupname)
-     * @param groupName The name of the security group. 
+     * @param groupName [Default VPC] The name of the security group. 
      */
     override fun groupName(groupName: String) {
       cdkBuilder.groupName(groupName)

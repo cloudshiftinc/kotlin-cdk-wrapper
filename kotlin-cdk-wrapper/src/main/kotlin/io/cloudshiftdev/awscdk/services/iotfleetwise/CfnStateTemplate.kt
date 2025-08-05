@@ -87,6 +87,11 @@ public open class CfnStateTemplate(
   public open fun attrCreationTime(): String = unwrap(this).getAttrCreationTime()
 
   /**
+   * The unique ID of the state template.
+   */
+  public open fun attrId(): String = unwrap(this).getAttrId()
+
+  /**
    * The time the state template was last updated, in seconds since epoch (January 1, 1970 at
    * midnight UTC time).
    */

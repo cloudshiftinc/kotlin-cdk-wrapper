@@ -13,6 +13,7 @@ import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a `CfnWorkgroup`.
@@ -35,13 +36,59 @@ import kotlin.collections.List
  * .maxCapacity(123)
  * .namespaceName("namespaceName")
  * .port(123)
+ * .pricePerformanceTarget(PerformanceTargetProperty.builder()
+ * .level(123)
+ * .status("status")
+ * .build())
  * .publiclyAccessible(false)
+ * .recoveryPointId("recoveryPointId")
  * .securityGroupIds(List.of("securityGroupIds"))
+ * .snapshotArn("snapshotArn")
+ * .snapshotName("snapshotName")
+ * .snapshotOwnerAccount("snapshotOwnerAccount")
  * .subnetIds(List.of("subnetIds"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .trackName("trackName")
+ * .workgroup(WorkgroupProperty.builder()
+ * .baseCapacity(123)
+ * .configParameters(List.of(ConfigParameterProperty.builder()
+ * .parameterKey("parameterKey")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .creationDate("creationDate")
+ * .endpoint(EndpointProperty.builder()
+ * .address("address")
+ * .port(123)
+ * .vpcEndpoints(List.of(VpcEndpointProperty.builder()
+ * .networkInterfaces(List.of(NetworkInterfaceProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .networkInterfaceId("networkInterfaceId")
+ * .privateIpAddress("privateIpAddress")
+ * .subnetId("subnetId")
+ * .build()))
+ * .vpcEndpointId("vpcEndpointId")
+ * .vpcId("vpcId")
+ * .build()))
+ * .build())
+ * .enhancedVpcRouting(false)
+ * .maxCapacity(123)
+ * .namespaceName("namespaceName")
+ * .pricePerformanceTarget(PerformanceTargetProperty.builder()
+ * .level(123)
+ * .status("status")
+ * .build())
+ * .publiclyAccessible(false)
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .status("status")
+ * .subnetIds(List.of("subnetIds"))
+ * .trackName("trackName")
+ * .workgroupArn("workgroupArn")
+ * .workgroupId("workgroupId")
+ * .workgroupName("workgroupName")
+ * .build())
  * .build();
  * ```
  *
@@ -56,10 +103,15 @@ public interface CfnWorkgroupProps {
   public fun baseCapacity(): Number? = unwrap(this).getBaseCapacity()
 
   /**
-   * A list of parameters to set for finer control over a database.
+   * The key of the parameter.
    *
-   * Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
-   * `search_path` , `max_query_execution_time` , and `require_ssl` .
+   * The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
+   * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , `use_fips_ssl` ,
+   * and query monitoring metrics that let you define performance boundaries. For more information
+   * about query monitoring rules and available metrics, see [Query monitoring metrics for Amazon
+   * Redshift
+   * Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
+   * .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-configparameters)
    */
@@ -101,6 +153,13 @@ public interface CfnWorkgroupProps {
   public fun port(): Number? = unwrap(this).getPort()
 
   /**
+   * An object that represents the price performance target settings for the workgroup.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-priceperformancetarget)
+   */
+  public fun pricePerformanceTarget(): Any? = unwrap(this).getPricePerformanceTarget()
+
+  /**
    * A value that specifies whether the workgroup can be accessible from a public network.
    *
    * Default: - false
@@ -110,11 +169,39 @@ public interface CfnWorkgroupProps {
   public fun publiclyAccessible(): Any? = unwrap(this).getPubliclyAccessible()
 
   /**
+   * The recovery point id to restore from.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-recoverypointid)
+   */
+  public fun recoveryPointId(): String? = unwrap(this).getRecoveryPointId()
+
+  /**
    * A list of security group IDs to associate with the workgroup.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-securitygroupids)
    */
   public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
+
+  /**
+   * The Amazon Resource Name (ARN) of the snapshot to restore from.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-snapshotarn)
+   */
+  public fun snapshotArn(): String? = unwrap(this).getSnapshotArn()
+
+  /**
+   * The snapshot name to restore from.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-snapshotname)
+   */
+  public fun snapshotName(): String? = unwrap(this).getSnapshotName()
+
+  /**
+   * The Amazon Web Services account that owns the snapshot.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-snapshotowneraccount)
+   */
+  public fun snapshotOwnerAccount(): String? = unwrap(this).getSnapshotOwnerAccount()
 
   /**
    * A list of subnet IDs the workgroup is associated with.
@@ -129,6 +216,22 @@ public interface CfnWorkgroupProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-tags)
    */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * An optional parameter for the name of the track for the workgroup.
+   *
+   * If you don't provide a track name, the workgroup is assigned to the current track.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-trackname)
+   */
+  public fun trackName(): String? = unwrap(this).getTrackName()
+
+  /**
+   * The collection of computing resources from which an endpoint is created.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-workgroup)
+   */
+  public fun workgroup(): Any? = unwrap(this).getWorkgroup()
 
   /**
    * The name of the workgroup.
@@ -149,23 +252,38 @@ public interface CfnWorkgroupProps {
     public fun baseCapacity(baseCapacity: Number)
 
     /**
-     * @param configParameters A list of parameters to set for finer control over a database.
-     * Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
-     * `search_path` , `max_query_execution_time` , and `require_ssl` .
+     * @param configParameters The key of the parameter.
+     * The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
+     * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , `use_fips_ssl`
+     * , and query monitoring metrics that let you define performance boundaries. For more information
+     * about query monitoring rules and available metrics, see [Query monitoring metrics for Amazon
+     * Redshift
+     * Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
+     * .
      */
     public fun configParameters(configParameters: IResolvable)
 
     /**
-     * @param configParameters A list of parameters to set for finer control over a database.
-     * Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
-     * `search_path` , `max_query_execution_time` , and `require_ssl` .
+     * @param configParameters The key of the parameter.
+     * The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
+     * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , `use_fips_ssl`
+     * , and query monitoring metrics that let you define performance boundaries. For more information
+     * about query monitoring rules and available metrics, see [Query monitoring metrics for Amazon
+     * Redshift
+     * Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
+     * .
      */
     public fun configParameters(configParameters: List<Any>)
 
     /**
-     * @param configParameters A list of parameters to set for finer control over a database.
-     * Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
-     * `search_path` , `max_query_execution_time` , and `require_ssl` .
+     * @param configParameters The key of the parameter.
+     * The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
+     * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , `use_fips_ssl`
+     * , and query monitoring metrics that let you define performance boundaries. For more information
+     * about query monitoring rules and available metrics, see [Query monitoring metrics for Amazon
+     * Redshift
+     * Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
+     * .
      */
     public fun configParameters(vararg configParameters: Any)
 
@@ -200,6 +318,28 @@ public interface CfnWorkgroupProps {
     public fun port(port: Number)
 
     /**
+     * @param pricePerformanceTarget An object that represents the price performance target settings
+     * for the workgroup.
+     */
+    public fun pricePerformanceTarget(pricePerformanceTarget: IResolvable)
+
+    /**
+     * @param pricePerformanceTarget An object that represents the price performance target settings
+     * for the workgroup.
+     */
+    public
+        fun pricePerformanceTarget(pricePerformanceTarget: CfnWorkgroup.PerformanceTargetProperty)
+
+    /**
+     * @param pricePerformanceTarget An object that represents the price performance target settings
+     * for the workgroup.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("4d5c42a29dae939c118a2fd3c13215ab0d6c8421b804c31e2c13105882fe9ebb")
+    public
+        fun pricePerformanceTarget(pricePerformanceTarget: CfnWorkgroup.PerformanceTargetProperty.Builder.() -> Unit)
+
+    /**
      * @param publiclyAccessible A value that specifies whether the workgroup can be accessible from
      * a public network.
      */
@@ -212,6 +352,11 @@ public interface CfnWorkgroupProps {
     public fun publiclyAccessible(publiclyAccessible: IResolvable)
 
     /**
+     * @param recoveryPointId The recovery point id to restore from.
+     */
+    public fun recoveryPointId(recoveryPointId: String)
+
+    /**
      * @param securityGroupIds A list of security group IDs to associate with the workgroup.
      */
     public fun securityGroupIds(securityGroupIds: List<String>)
@@ -220,6 +365,21 @@ public interface CfnWorkgroupProps {
      * @param securityGroupIds A list of security group IDs to associate with the workgroup.
      */
     public fun securityGroupIds(vararg securityGroupIds: String)
+
+    /**
+     * @param snapshotArn The Amazon Resource Name (ARN) of the snapshot to restore from.
+     */
+    public fun snapshotArn(snapshotArn: String)
+
+    /**
+     * @param snapshotName The snapshot name to restore from.
+     */
+    public fun snapshotName(snapshotName: String)
+
+    /**
+     * @param snapshotOwnerAccount The Amazon Web Services account that owns the snapshot.
+     */
+    public fun snapshotOwnerAccount(snapshotOwnerAccount: String)
 
     /**
      * @param subnetIds A list of subnet IDs the workgroup is associated with.
@@ -242,6 +402,29 @@ public interface CfnWorkgroupProps {
     public fun tags(vararg tags: CfnTag)
 
     /**
+     * @param trackName An optional parameter for the name of the track for the workgroup.
+     * If you don't provide a track name, the workgroup is assigned to the current track.
+     */
+    public fun trackName(trackName: String)
+
+    /**
+     * @param workgroup The collection of computing resources from which an endpoint is created.
+     */
+    public fun workgroup(workgroup: IResolvable)
+
+    /**
+     * @param workgroup The collection of computing resources from which an endpoint is created.
+     */
+    public fun workgroup(workgroup: CfnWorkgroup.WorkgroupProperty)
+
+    /**
+     * @param workgroup The collection of computing resources from which an endpoint is created.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d89dbdb5074458b2e3050d0c8c3d56f9fb57a4c793dec2ed4afd5949d17fe1f8")
+    public fun workgroup(workgroup: CfnWorkgroup.WorkgroupProperty.Builder.() -> Unit)
+
+    /**
      * @param workgroupName The name of the workgroup. 
      */
     public fun workgroupName(workgroupName: String)
@@ -261,27 +444,42 @@ public interface CfnWorkgroupProps {
     }
 
     /**
-     * @param configParameters A list of parameters to set for finer control over a database.
-     * Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
-     * `search_path` , `max_query_execution_time` , and `require_ssl` .
+     * @param configParameters The key of the parameter.
+     * The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
+     * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , `use_fips_ssl`
+     * , and query monitoring metrics that let you define performance boundaries. For more information
+     * about query monitoring rules and available metrics, see [Query monitoring metrics for Amazon
+     * Redshift
+     * Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
+     * .
      */
     override fun configParameters(configParameters: IResolvable) {
       cdkBuilder.configParameters(configParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param configParameters A list of parameters to set for finer control over a database.
-     * Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
-     * `search_path` , `max_query_execution_time` , and `require_ssl` .
+     * @param configParameters The key of the parameter.
+     * The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
+     * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , `use_fips_ssl`
+     * , and query monitoring metrics that let you define performance boundaries. For more information
+     * about query monitoring rules and available metrics, see [Query monitoring metrics for Amazon
+     * Redshift
+     * Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
+     * .
      */
     override fun configParameters(configParameters: List<Any>) {
       cdkBuilder.configParameters(configParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param configParameters A list of parameters to set for finer control over a database.
-     * Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
-     * `search_path` , `max_query_execution_time` , and `require_ssl` .
+     * @param configParameters The key of the parameter.
+     * The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
+     * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , `use_fips_ssl`
+     * , and query monitoring metrics that let you define performance boundaries. For more information
+     * about query monitoring rules and available metrics, see [Query monitoring metrics for Amazon
+     * Redshift
+     * Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
+     * .
      */
     override fun configParameters(vararg configParameters: Any): Unit =
         configParameters(configParameters.toList())
@@ -327,6 +525,34 @@ public interface CfnWorkgroupProps {
     }
 
     /**
+     * @param pricePerformanceTarget An object that represents the price performance target settings
+     * for the workgroup.
+     */
+    override fun pricePerformanceTarget(pricePerformanceTarget: IResolvable) {
+      cdkBuilder.pricePerformanceTarget(pricePerformanceTarget.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param pricePerformanceTarget An object that represents the price performance target settings
+     * for the workgroup.
+     */
+    override
+        fun pricePerformanceTarget(pricePerformanceTarget: CfnWorkgroup.PerformanceTargetProperty) {
+      cdkBuilder.pricePerformanceTarget(pricePerformanceTarget.let(CfnWorkgroup.PerformanceTargetProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param pricePerformanceTarget An object that represents the price performance target settings
+     * for the workgroup.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("4d5c42a29dae939c118a2fd3c13215ab0d6c8421b804c31e2c13105882fe9ebb")
+    override
+        fun pricePerformanceTarget(pricePerformanceTarget: CfnWorkgroup.PerformanceTargetProperty.Builder.() -> Unit):
+        Unit =
+        pricePerformanceTarget(CfnWorkgroup.PerformanceTargetProperty(pricePerformanceTarget))
+
+    /**
      * @param publiclyAccessible A value that specifies whether the workgroup can be accessible from
      * a public network.
      */
@@ -343,6 +569,13 @@ public interface CfnWorkgroupProps {
     }
 
     /**
+     * @param recoveryPointId The recovery point id to restore from.
+     */
+    override fun recoveryPointId(recoveryPointId: String) {
+      cdkBuilder.recoveryPointId(recoveryPointId)
+    }
+
+    /**
      * @param securityGroupIds A list of security group IDs to associate with the workgroup.
      */
     override fun securityGroupIds(securityGroupIds: List<String>) {
@@ -354,6 +587,27 @@ public interface CfnWorkgroupProps {
      */
     override fun securityGroupIds(vararg securityGroupIds: String): Unit =
         securityGroupIds(securityGroupIds.toList())
+
+    /**
+     * @param snapshotArn The Amazon Resource Name (ARN) of the snapshot to restore from.
+     */
+    override fun snapshotArn(snapshotArn: String) {
+      cdkBuilder.snapshotArn(snapshotArn)
+    }
+
+    /**
+     * @param snapshotName The snapshot name to restore from.
+     */
+    override fun snapshotName(snapshotName: String) {
+      cdkBuilder.snapshotName(snapshotName)
+    }
+
+    /**
+     * @param snapshotOwnerAccount The Amazon Web Services account that owns the snapshot.
+     */
+    override fun snapshotOwnerAccount(snapshotOwnerAccount: String) {
+      cdkBuilder.snapshotOwnerAccount(snapshotOwnerAccount)
+    }
 
     /**
      * @param subnetIds A list of subnet IDs the workgroup is associated with.
@@ -380,6 +634,36 @@ public interface CfnWorkgroupProps {
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
+     * @param trackName An optional parameter for the name of the track for the workgroup.
+     * If you don't provide a track name, the workgroup is assigned to the current track.
+     */
+    override fun trackName(trackName: String) {
+      cdkBuilder.trackName(trackName)
+    }
+
+    /**
+     * @param workgroup The collection of computing resources from which an endpoint is created.
+     */
+    override fun workgroup(workgroup: IResolvable) {
+      cdkBuilder.workgroup(workgroup.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param workgroup The collection of computing resources from which an endpoint is created.
+     */
+    override fun workgroup(workgroup: CfnWorkgroup.WorkgroupProperty) {
+      cdkBuilder.workgroup(workgroup.let(CfnWorkgroup.WorkgroupProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param workgroup The collection of computing resources from which an endpoint is created.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d89dbdb5074458b2e3050d0c8c3d56f9fb57a4c793dec2ed4afd5949d17fe1f8")
+    override fun workgroup(workgroup: CfnWorkgroup.WorkgroupProperty.Builder.() -> Unit): Unit =
+        workgroup(CfnWorkgroup.WorkgroupProperty(workgroup))
+
+    /**
      * @param workgroupName The name of the workgroup. 
      */
     override fun workgroupName(workgroupName: String) {
@@ -402,10 +686,15 @@ public interface CfnWorkgroupProps {
     override fun baseCapacity(): Number? = unwrap(this).getBaseCapacity()
 
     /**
-     * A list of parameters to set for finer control over a database.
+     * The key of the parameter.
      *
-     * Available options are `datestyle` , `enable_user_activity_logging` , `query_group` ,
-     * `search_path` , `max_query_execution_time` , and `require_ssl` .
+     * The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
+     * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , `use_fips_ssl`
+     * , and query monitoring metrics that let you define performance boundaries. For more information
+     * about query monitoring rules and available metrics, see [Query monitoring metrics for Amazon
+     * Redshift
+     * Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-configparameters)
      */
@@ -447,6 +736,13 @@ public interface CfnWorkgroupProps {
     override fun port(): Number? = unwrap(this).getPort()
 
     /**
+     * An object that represents the price performance target settings for the workgroup.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-priceperformancetarget)
+     */
+    override fun pricePerformanceTarget(): Any? = unwrap(this).getPricePerformanceTarget()
+
+    /**
      * A value that specifies whether the workgroup can be accessible from a public network.
      *
      * Default: - false
@@ -456,12 +752,40 @@ public interface CfnWorkgroupProps {
     override fun publiclyAccessible(): Any? = unwrap(this).getPubliclyAccessible()
 
     /**
+     * The recovery point id to restore from.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-recoverypointid)
+     */
+    override fun recoveryPointId(): String? = unwrap(this).getRecoveryPointId()
+
+    /**
      * A list of security group IDs to associate with the workgroup.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-securitygroupids)
      */
     override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
         emptyList()
+
+    /**
+     * The Amazon Resource Name (ARN) of the snapshot to restore from.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-snapshotarn)
+     */
+    override fun snapshotArn(): String? = unwrap(this).getSnapshotArn()
+
+    /**
+     * The snapshot name to restore from.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-snapshotname)
+     */
+    override fun snapshotName(): String? = unwrap(this).getSnapshotName()
+
+    /**
+     * The Amazon Web Services account that owns the snapshot.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-snapshotowneraccount)
+     */
+    override fun snapshotOwnerAccount(): String? = unwrap(this).getSnapshotOwnerAccount()
 
     /**
      * A list of subnet IDs the workgroup is associated with.
@@ -476,6 +800,22 @@ public interface CfnWorkgroupProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-tags)
      */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * An optional parameter for the name of the track for the workgroup.
+     *
+     * If you don't provide a track name, the workgroup is assigned to the current track.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-trackname)
+     */
+    override fun trackName(): String? = unwrap(this).getTrackName()
+
+    /**
+     * The collection of computing resources from which an endpoint is created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-workgroup)
+     */
+    override fun workgroup(): Any? = unwrap(this).getWorkgroup()
 
     /**
      * The name of the workgroup.

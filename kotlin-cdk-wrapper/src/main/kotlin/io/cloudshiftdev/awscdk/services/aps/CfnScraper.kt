@@ -68,6 +68,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * // the properties below are optional
  * .alias("alias")
+ * .roleConfiguration(RoleConfigurationProperty.builder()
+ * .sourceRoleArn("sourceRoleArn")
+ * .targetRoleArn("targetRoleArn")
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -174,6 +178,33 @@ public open class CfnScraper(
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
+
+  /**
+   * The role configuration in an Amazon Managed Service for Prometheus scraper.
+   */
+  public open fun roleConfiguration(): Any? = unwrap(this).getRoleConfiguration()
+
+  /**
+   * The role configuration in an Amazon Managed Service for Prometheus scraper.
+   */
+  public open fun roleConfiguration(`value`: IResolvable) {
+    unwrap(this).setRoleConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The role configuration in an Amazon Managed Service for Prometheus scraper.
+   */
+  public open fun roleConfiguration(`value`: RoleConfigurationProperty) {
+    unwrap(this).setRoleConfiguration(`value`.let(RoleConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The role configuration in an Amazon Managed Service for Prometheus scraper.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("58e890cf4696f71748826e2afe5c8e7d9f13ab4317b511ae80dbe8712300abb7")
+  public open fun roleConfiguration(`value`: RoleConfigurationProperty.Builder.() -> Unit): Unit =
+      roleConfiguration(RoleConfigurationProperty(`value`))
 
   /**
    * The configuration in use by the scraper.
@@ -287,6 +318,35 @@ public open class CfnScraper(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f2278d04adcb3a7675f040f9dc1d8bd8f7fe3680ea2624286e6beaee9715ce67")
     public fun destination(destination: DestinationProperty.Builder.() -> Unit)
+
+    /**
+     * The role configuration in an Amazon Managed Service for Prometheus scraper.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-scraper.html#cfn-aps-scraper-roleconfiguration)
+     * @param roleConfiguration The role configuration in an Amazon Managed Service for Prometheus
+     * scraper. 
+     */
+    public fun roleConfiguration(roleConfiguration: IResolvable)
+
+    /**
+     * The role configuration in an Amazon Managed Service for Prometheus scraper.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-scraper.html#cfn-aps-scraper-roleconfiguration)
+     * @param roleConfiguration The role configuration in an Amazon Managed Service for Prometheus
+     * scraper. 
+     */
+    public fun roleConfiguration(roleConfiguration: RoleConfigurationProperty)
+
+    /**
+     * The role configuration in an Amazon Managed Service for Prometheus scraper.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-scraper.html#cfn-aps-scraper-roleconfiguration)
+     * @param roleConfiguration The role configuration in an Amazon Managed Service for Prometheus
+     * scraper. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("840829ec18a6bb285cf211406f0dae5698c892fd8b434c8109839b51d0cabbb5")
+    public fun roleConfiguration(roleConfiguration: RoleConfigurationProperty.Builder.() -> Unit)
 
     /**
      * The configuration in use by the scraper.
@@ -408,6 +468,40 @@ public open class CfnScraper(
     @JvmName("f2278d04adcb3a7675f040f9dc1d8bd8f7fe3680ea2624286e6beaee9715ce67")
     override fun destination(destination: DestinationProperty.Builder.() -> Unit): Unit =
         destination(DestinationProperty(destination))
+
+    /**
+     * The role configuration in an Amazon Managed Service for Prometheus scraper.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-scraper.html#cfn-aps-scraper-roleconfiguration)
+     * @param roleConfiguration The role configuration in an Amazon Managed Service for Prometheus
+     * scraper. 
+     */
+    override fun roleConfiguration(roleConfiguration: IResolvable) {
+      cdkBuilder.roleConfiguration(roleConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The role configuration in an Amazon Managed Service for Prometheus scraper.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-scraper.html#cfn-aps-scraper-roleconfiguration)
+     * @param roleConfiguration The role configuration in an Amazon Managed Service for Prometheus
+     * scraper. 
+     */
+    override fun roleConfiguration(roleConfiguration: RoleConfigurationProperty) {
+      cdkBuilder.roleConfiguration(roleConfiguration.let(RoleConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The role configuration in an Amazon Managed Service for Prometheus scraper.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-scraper.html#cfn-aps-scraper-roleconfiguration)
+     * @param roleConfiguration The role configuration in an Amazon Managed Service for Prometheus
+     * scraper. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("840829ec18a6bb285cf211406f0dae5698c892fd8b434c8109839b51d0cabbb5")
+    override fun roleConfiguration(roleConfiguration: RoleConfigurationProperty.Builder.() -> Unit):
+        Unit = roleConfiguration(RoleConfigurationProperty(roleConfiguration))
 
     /**
      * The configuration in use by the scraper.
@@ -870,6 +964,114 @@ public open class CfnScraper(
           software.amazon.awscdk.services.aps.CfnScraper.EksConfigurationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.aps.CfnScraper.EksConfigurationProperty
+    }
+  }
+
+  /**
+   * The role configuration in an Amazon Managed Service for Prometheus scraper.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.aps.*;
+   * RoleConfigurationProperty roleConfigurationProperty = RoleConfigurationProperty.builder()
+   * .sourceRoleArn("sourceRoleArn")
+   * .targetRoleArn("targetRoleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-aps-scraper-roleconfiguration.html)
+   */
+  public interface RoleConfigurationProperty {
+    /**
+     * The ARN of the source role.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-aps-scraper-roleconfiguration.html#cfn-aps-scraper-roleconfiguration-sourcerolearn)
+     */
+    public fun sourceRoleArn(): String? = unwrap(this).getSourceRoleArn()
+
+    /**
+     * The ARN of the target role.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-aps-scraper-roleconfiguration.html#cfn-aps-scraper-roleconfiguration-targetrolearn)
+     */
+    public fun targetRoleArn(): String? = unwrap(this).getTargetRoleArn()
+
+    /**
+     * A builder for [RoleConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sourceRoleArn The ARN of the source role.
+       */
+      public fun sourceRoleArn(sourceRoleArn: String)
+
+      /**
+       * @param targetRoleArn The ARN of the target role.
+       */
+      public fun targetRoleArn(targetRoleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.aps.CfnScraper.RoleConfigurationProperty.Builder =
+          software.amazon.awscdk.services.aps.CfnScraper.RoleConfigurationProperty.builder()
+
+      /**
+       * @param sourceRoleArn The ARN of the source role.
+       */
+      override fun sourceRoleArn(sourceRoleArn: String) {
+        cdkBuilder.sourceRoleArn(sourceRoleArn)
+      }
+
+      /**
+       * @param targetRoleArn The ARN of the target role.
+       */
+      override fun targetRoleArn(targetRoleArn: String) {
+        cdkBuilder.targetRoleArn(targetRoleArn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.aps.CfnScraper.RoleConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.aps.CfnScraper.RoleConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        RoleConfigurationProperty {
+      /**
+       * The ARN of the source role.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-aps-scraper-roleconfiguration.html#cfn-aps-scraper-roleconfiguration-sourcerolearn)
+       */
+      override fun sourceRoleArn(): String? = unwrap(this).getSourceRoleArn()
+
+      /**
+       * The ARN of the target role.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-aps-scraper-roleconfiguration.html#cfn-aps-scraper-roleconfiguration-targetrolearn)
+       */
+      override fun targetRoleArn(): String? = unwrap(this).getTargetRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RoleConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.aps.CfnScraper.RoleConfigurationProperty):
+          RoleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RoleConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RoleConfigurationProperty):
+          software.amazon.awscdk.services.aps.CfnScraper.RoleConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.aps.CfnScraper.RoleConfigurationProperty
     }
   }
 

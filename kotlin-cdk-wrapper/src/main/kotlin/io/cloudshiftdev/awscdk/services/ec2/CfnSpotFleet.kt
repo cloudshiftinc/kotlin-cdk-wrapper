@@ -101,6 +101,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .max(123)
  * .min(123)
  * .build())
+ * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+ * .cpu(CpuPerformanceFactorRequestProperty.builder()
+ * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+ * .instanceFamily("instanceFamily")
+ * .build()))
+ * .build())
+ * .build())
  * .burstablePerformance("burstablePerformance")
  * .cpuManufacturers(List.of("cpuManufacturers"))
  * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
@@ -208,6 +215,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
  * .max(123)
  * .min(123)
+ * .build())
+ * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+ * .cpu(CpuPerformanceFactorRequestProperty.builder()
+ * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+ * .instanceFamily("instanceFamily")
+ * .build()))
+ * .build())
  * .build())
  * .burstablePerformance("burstablePerformance")
  * .cpuManufacturers(List.of("cpuManufacturers"))
@@ -835,6 +849,136 @@ public open class CfnSpotFleet(
   }
 
   /**
+   * The baseline performance to consider, using an instance family as a baseline reference.
+   *
+   * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+   * this baseline to guide instance type selection, but there is no guarantee that the selected
+   * instance types will always exceed the baseline for every application.
+   *
+   * Currently, this parameter only supports CPU performance as a baseline performance factor. For
+   * example, specifying `c6i` would use the CPU performance of the `c6i` family as the baseline
+   * reference.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * BaselinePerformanceFactorsRequestProperty baselinePerformanceFactorsRequestProperty =
+   * BaselinePerformanceFactorsRequestProperty.builder()
+   * .cpu(CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-baselineperformancefactorsrequest.html)
+   */
+  public interface BaselinePerformanceFactorsRequestProperty {
+    /**
+     * The CPU performance to consider, using an instance family as the baseline reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-baselineperformancefactorsrequest.html#cfn-ec2-spotfleet-baselineperformancefactorsrequest-cpu)
+     */
+    public fun cpu(): Any? = unwrap(this).getCpu()
+
+    /**
+     * A builder for [BaselinePerformanceFactorsRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      public fun cpu(cpu: IResolvable)
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      public fun cpu(cpu: CpuPerformanceFactorRequestProperty)
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4e424b80d8f082fb9d828cb3061c2cd9fdb276f19ca86e170de9b5f1ca966f2c")
+      public fun cpu(cpu: CpuPerformanceFactorRequestProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselinePerformanceFactorsRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselinePerformanceFactorsRequestProperty.builder()
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      override fun cpu(cpu: IResolvable) {
+        cdkBuilder.cpu(cpu.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      override fun cpu(cpu: CpuPerformanceFactorRequestProperty) {
+        cdkBuilder.cpu(cpu.let(CpuPerformanceFactorRequestProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4e424b80d8f082fb9d828cb3061c2cd9fdb276f19ca86e170de9b5f1ca966f2c")
+      override fun cpu(cpu: CpuPerformanceFactorRequestProperty.Builder.() -> Unit): Unit =
+          cpu(CpuPerformanceFactorRequestProperty(cpu))
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselinePerformanceFactorsRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselinePerformanceFactorsRequestProperty,
+    ) : CdkObject(cdkObject),
+        BaselinePerformanceFactorsRequestProperty {
+      /**
+       * The CPU performance to consider, using an instance family as the baseline reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-baselineperformancefactorsrequest.html#cfn-ec2-spotfleet-baselineperformancefactorsrequest-cpu)
+       */
+      override fun cpu(): Any? = unwrap(this).getCpu()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BaselinePerformanceFactorsRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselinePerformanceFactorsRequestProperty):
+          BaselinePerformanceFactorsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BaselinePerformanceFactorsRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BaselinePerformanceFactorsRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselinePerformanceFactorsRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselinePerformanceFactorsRequestProperty
+    }
+  }
+
+  /**
    * Specifies a block device mapping.
    *
    * You can specify `Ebs` or `VirtualName` , but not both.
@@ -1287,6 +1431,173 @@ public open class CfnSpotFleet(
           software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty
+    }
+  }
+
+  /**
+   * The CPU performance to consider, using an instance family as the baseline reference.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * CpuPerformanceFactorRequestProperty cpuPerformanceFactorRequestProperty =
+   * CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-cpuperformancefactorrequest.html)
+   */
+  public interface CpuPerformanceFactorRequestProperty {
+    /**
+     * Specify an instance family to use as the baseline reference for CPU performance.
+     *
+     * All instance types that match your specified attributes will be compared against the CPU
+     * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+     * differences.
+     *
+     *
+     * Currently, only one instance family can be specified in the list.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-cpuperformancefactorrequest.html#cfn-ec2-spotfleet-cpuperformancefactorrequest-references)
+     */
+    public fun references(): Any? = unwrap(this).getReferences()
+
+    /**
+     * A builder for [CpuPerformanceFactorRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently, only one instance family can be specified in the list.
+       */
+      public fun references(references: IResolvable)
+
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently, only one instance family can be specified in the list.
+       */
+      public fun references(references: List<Any>)
+
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently, only one instance family can be specified in the list.
+       */
+      public fun references(vararg references: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.CpuPerformanceFactorRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.CpuPerformanceFactorRequestProperty.builder()
+
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently, only one instance family can be specified in the list.
+       */
+      override fun references(references: IResolvable) {
+        cdkBuilder.references(references.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently, only one instance family can be specified in the list.
+       */
+      override fun references(references: List<Any>) {
+        cdkBuilder.references(references.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently, only one instance family can be specified in the list.
+       */
+      override fun references(vararg references: Any): Unit = references(references.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.CpuPerformanceFactorRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.CpuPerformanceFactorRequestProperty,
+    ) : CdkObject(cdkObject),
+        CpuPerformanceFactorRequestProperty {
+      /**
+       * Specify an instance family to use as the baseline reference for CPU performance.
+       *
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently, only one instance family can be specified in the list.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-cpuperformancefactorrequest.html#cfn-ec2-spotfleet-cpuperformancefactorrequest-references)
+       */
+      override fun references(): Any? = unwrap(this).getReferences()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CpuPerformanceFactorRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.CpuPerformanceFactorRequestProperty):
+          CpuPerformanceFactorRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CpuPerformanceFactorRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CpuPerformanceFactorRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.CpuPerformanceFactorRequestProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.CpuPerformanceFactorRequestProperty
     }
   }
 
@@ -2360,11 +2671,8 @@ public open class CfnSpotFleet(
     /**
      * The number of secondary private IPv4 addresses.
      *
-     * You can't specify this option and specify more than one private IP address using the private
-     * IP addresses option. You cannot specify this option if you're launching more than one instance
-     * in a
-     * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
-     * request.
+     * You can’t specify this parameter and also specify a secondary private IP address using the
+     * `PrivateIpAddress` parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount)
      */
@@ -2518,11 +2826,8 @@ public open class CfnSpotFleet(
 
       /**
        * @param secondaryPrivateIpAddressCount The number of secondary private IPv4 addresses.
-       * You can't specify this option and specify more than one private IP address using the
-       * private IP addresses option. You cannot specify this option if you're launching more than one
-       * instance in a
-       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
-       * request.
+       * You can’t specify this parameter and also specify a secondary private IP address using the
+       * `PrivateIpAddress` parameter.
        */
       public fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number)
 
@@ -2701,11 +3006,8 @@ public open class CfnSpotFleet(
 
       /**
        * @param secondaryPrivateIpAddressCount The number of secondary private IPv4 addresses.
-       * You can't specify this option and specify more than one private IP address using the
-       * private IP addresses option. You cannot specify this option if you're launching more than one
-       * instance in a
-       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
-       * request.
+       * You can’t specify this parameter and also specify a secondary private IP address using the
+       * `PrivateIpAddress` parameter.
        */
       override fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
         cdkBuilder.secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount)
@@ -2827,11 +3129,8 @@ public open class CfnSpotFleet(
       /**
        * The number of secondary private IPv4 addresses.
        *
-       * You can't specify this option and specify more than one private IP address using the
-       * private IP addresses option. You cannot specify this option if you're launching more than one
-       * instance in a
-       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html)
-       * request.
+       * You can’t specify this parameter and also specify a secondary private IP address using the
+       * `PrivateIpAddress` parameter.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount)
        */
@@ -2930,6 +3229,13 @@ public open class CfnSpotFleet(
    * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
    * .max(123)
    * .min(123)
+   * .build())
+   * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+   * .cpu(CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
    * .build())
    * .burstablePerformance("burstablePerformance")
    * .cpuManufacturers(List.of("cpuManufacturers"))
@@ -3033,8 +3339,9 @@ public open class CfnSpotFleet(
     /**
      * The accelerator types that must be on the instance type.
      *
-     * * To include instance types with GPU hardware, specify `gpu` .
-     * * To include instance types with FPGA hardware, specify `fpga` .
+     * * For instance types with FPGA accelerators, specify `fpga` .
+     * * For instance types with GPU accelerators, specify `gpu` .
+     * * For instance types with Inference accelerators, specify `inference` .
      *
      * Default: Any accelerator type
      *
@@ -3091,6 +3398,21 @@ public open class CfnSpotFleet(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancerequirementsrequest.html#cfn-ec2-spotfleet-instancerequirementsrequest-baselineebsbandwidthmbps)
      */
     public fun baselineEbsBandwidthMbps(): Any? = unwrap(this).getBaselineEbsBandwidthMbps()
+
+    /**
+     * The baseline performance to consider, using an instance family as a baseline reference.
+     *
+     * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+     * this baseline to guide instance type selection, but there is no guarantee that the selected
+     * instance types will always exceed the baseline for every application. Currently, this parameter
+     * only supports CPU performance as a baseline performance factor. For more information, see
+     * [Performance
+     * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+     * in the *Amazon EC2 User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancerequirementsrequest.html#cfn-ec2-spotfleet-instancerequirementsrequest-baselineperformancefactors)
+     */
+    public fun baselinePerformanceFactors(): Any? = unwrap(this).getBaselinePerformanceFactors()
 
     /**
      * Indicates whether burstable performance T instance types are included, excluded, or required.
@@ -3495,8 +3817,9 @@ public open class CfnSpotFleet(
 
       /**
        * @param acceleratorTypes The accelerator types that must be on the instance type.
-       * * To include instance types with GPU hardware, specify `gpu` .
-       * * To include instance types with FPGA hardware, specify `fpga` .
+       * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with Inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -3504,8 +3827,9 @@ public open class CfnSpotFleet(
 
       /**
        * @param acceleratorTypes The accelerator types that must be on the instance type.
-       * * To include instance types with GPU hardware, specify `gpu` .
-       * * To include instance types with FPGA hardware, specify `fpga` .
+       * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with Inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -3598,6 +3922,49 @@ public open class CfnSpotFleet(
       @JvmName("ce444a765458867778cd413296fa644507b6c553db7ebf192135fc3103638111")
       public
           fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsRequestProperty.Builder.() -> Unit)
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      public fun baselinePerformanceFactors(baselinePerformanceFactors: IResolvable)
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      public
+          fun baselinePerformanceFactors(baselinePerformanceFactors: BaselinePerformanceFactorsRequestProperty)
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9789bf248588c2aba2e9d8ae36811eed568865028a787340b13de9de45def776")
+      public
+          fun baselinePerformanceFactors(baselinePerformanceFactors: BaselinePerformanceFactorsRequestProperty.Builder.() -> Unit)
 
       /**
        * @param burstablePerformance Indicates whether burstable performance T instance types are
@@ -4143,8 +4510,9 @@ public open class CfnSpotFleet(
 
       /**
        * @param acceleratorTypes The accelerator types that must be on the instance type.
-       * * To include instance types with GPU hardware, specify `gpu` .
-       * * To include instance types with FPGA hardware, specify `fpga` .
+       * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with Inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -4154,8 +4522,9 @@ public open class CfnSpotFleet(
 
       /**
        * @param acceleratorTypes The accelerator types that must be on the instance type.
-       * * To include instance types with GPU hardware, specify `gpu` .
-       * * To include instance types with FPGA hardware, specify `fpga` .
+       * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with Inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -4260,6 +4629,55 @@ public open class CfnSpotFleet(
           fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsRequestProperty.Builder.() -> Unit):
           Unit =
           baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty(baselineEbsBandwidthMbps))
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      override fun baselinePerformanceFactors(baselinePerformanceFactors: IResolvable) {
+        cdkBuilder.baselinePerformanceFactors(baselinePerformanceFactors.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      override
+          fun baselinePerformanceFactors(baselinePerformanceFactors: BaselinePerformanceFactorsRequestProperty) {
+        cdkBuilder.baselinePerformanceFactors(baselinePerformanceFactors.let(BaselinePerformanceFactorsRequestProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9789bf248588c2aba2e9d8ae36811eed568865028a787340b13de9de45def776")
+      override
+          fun baselinePerformanceFactors(baselinePerformanceFactors: BaselinePerformanceFactorsRequestProperty.Builder.() -> Unit):
+          Unit =
+          baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty(baselinePerformanceFactors))
 
       /**
        * @param burstablePerformance Indicates whether burstable performance T instance types are
@@ -4789,8 +5207,9 @@ public open class CfnSpotFleet(
       /**
        * The accelerator types that must be on the instance type.
        *
-       * * To include instance types with GPU hardware, specify `gpu` .
-       * * To include instance types with FPGA hardware, specify `fpga` .
+       * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with Inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        *
@@ -4848,6 +5267,21 @@ public open class CfnSpotFleet(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancerequirementsrequest.html#cfn-ec2-spotfleet-instancerequirementsrequest-baselineebsbandwidthmbps)
        */
       override fun baselineEbsBandwidthMbps(): Any? = unwrap(this).getBaselineEbsBandwidthMbps()
+
+      /**
+       * The baseline performance to consider, using an instance family as a baseline reference.
+       *
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancerequirementsrequest.html#cfn-ec2-spotfleet-instancerequirementsrequest-baselineperformancefactors)
+       */
+      override fun baselinePerformanceFactors(): Any? = unwrap(this).getBaselinePerformanceFactors()
 
       /**
        * Indicates whether burstable performance T instance types are included, excluded, or
@@ -5188,6 +5622,13 @@ public open class CfnSpotFleet(
    * .max(123)
    * .min(123)
    * .build())
+   * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+   * .cpu(CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
+   * .build())
    * .burstablePerformance("burstablePerformance")
    * .cpuManufacturers(List.of("cpuManufacturers"))
    * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
@@ -5434,6 +5875,13 @@ public open class CfnSpotFleet(
    * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
    * .max(123)
    * .min(123)
+   * .build())
+   * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+   * .cpu(CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
    * .build())
    * .burstablePerformance("burstablePerformance")
    * .cpuManufacturers(List.of("cpuManufacturers"))
@@ -6591,6 +7039,236 @@ public open class CfnSpotFleet(
   }
 
   /**
+   * Specify an instance family to use as the baseline reference for CPU performance.
+   *
+   * All instance types that match your specified attributes will be compared against the CPU
+   * performance of the referenced instance family, regardless of CPU manufacturer or architecture.
+   *
+   *
+   * Currently, only one instance family can be specified in the list.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * PerformanceFactorReferenceRequestProperty performanceFactorReferenceRequestProperty =
+   * PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-performancefactorreferencerequest.html)
+   */
+  public interface PerformanceFactorReferenceRequestProperty {
+    /**
+     * The instance family to use as a baseline reference.
+     *
+     *
+     * Ensure that you specify the correct value for the instance family. The instance family is
+     * everything before the period ( `.` ) in the instance type name. For example, in the instance
+     * type `c6i.large` , the instance family is `c6i` , not `c6` . For more information, see [Amazon
+     * EC2 instance type naming
+     * conventions](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-type-names.html) in
+     * *Amazon EC2 Instance Types* .
+     *
+     *
+     * The following instance families are *not supported* for performance protection:
+     *
+     * * `c1`
+     * * `g3` | `g3s`
+     * * `hpc7g`
+     * * `m1` | `m2`
+     * * `mac1` | `mac2` | `mac2-m1ultra` | `mac2-m2` | `mac2-m2pro`
+     * * `p3dn` | `p4d` | `p5`
+     * * `t1`
+     * * `u-12tb1` | `u-18tb1` | `u-24tb1` | `u-3tb1` | `u-6tb1` | `u-9tb1` | `u7i-12tb` |
+     * `u7in-16tb` | `u7in-24tb` | `u7in-32tb`
+     *
+     * If you enable performance protection by specifying a supported instance family, the returned
+     * instance types will exclude the above unsupported instance families.
+     *
+     * If you specify an unsupported instance family as a value for baseline performance, the API
+     * returns an empty response for
+     * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
+     * and an exception for
+     * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet.html) ,
+     * [RequestSpotFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet.html)
+     * , [ModifyFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyFleet.html) ,
+     * and
+     * [ModifySpotFleetRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifySpotFleetRequest.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-performancefactorreferencerequest.html#cfn-ec2-spotfleet-performancefactorreferencerequest-instancefamily)
+     */
+    public fun instanceFamily(): String? = unwrap(this).getInstanceFamily()
+
+    /**
+     * A builder for [PerformanceFactorReferenceRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instanceFamily The instance family to use as a baseline reference.
+       *
+       * Ensure that you specify the correct value for the instance family. The instance family is
+       * everything before the period ( `.` ) in the instance type name. For example, in the instance
+       * type `c6i.large` , the instance family is `c6i` , not `c6` . For more information, see [Amazon
+       * EC2 instance type naming
+       * conventions](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-type-names.html) in
+       * *Amazon EC2 Instance Types* .
+       *
+       *
+       * The following instance families are *not supported* for performance protection:
+       *
+       * * `c1`
+       * * `g3` | `g3s`
+       * * `hpc7g`
+       * * `m1` | `m2`
+       * * `mac1` | `mac2` | `mac2-m1ultra` | `mac2-m2` | `mac2-m2pro`
+       * * `p3dn` | `p4d` | `p5`
+       * * `t1`
+       * * `u-12tb1` | `u-18tb1` | `u-24tb1` | `u-3tb1` | `u-6tb1` | `u-9tb1` | `u7i-12tb` |
+       * `u7in-16tb` | `u7in-24tb` | `u7in-32tb`
+       *
+       * If you enable performance protection by specifying a supported instance family, the
+       * returned instance types will exclude the above unsupported instance families.
+       *
+       * If you specify an unsupported instance family as a value for baseline performance, the API
+       * returns an empty response for
+       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
+       * and an exception for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet.html) ,
+       * [RequestSpotFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet.html)
+       * , [ModifyFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyFleet.html) ,
+       * and
+       * [ModifySpotFleetRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifySpotFleetRequest.html)
+       * .
+       */
+      public fun instanceFamily(instanceFamily: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.PerformanceFactorReferenceRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.PerformanceFactorReferenceRequestProperty.builder()
+
+      /**
+       * @param instanceFamily The instance family to use as a baseline reference.
+       *
+       * Ensure that you specify the correct value for the instance family. The instance family is
+       * everything before the period ( `.` ) in the instance type name. For example, in the instance
+       * type `c6i.large` , the instance family is `c6i` , not `c6` . For more information, see [Amazon
+       * EC2 instance type naming
+       * conventions](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-type-names.html) in
+       * *Amazon EC2 Instance Types* .
+       *
+       *
+       * The following instance families are *not supported* for performance protection:
+       *
+       * * `c1`
+       * * `g3` | `g3s`
+       * * `hpc7g`
+       * * `m1` | `m2`
+       * * `mac1` | `mac2` | `mac2-m1ultra` | `mac2-m2` | `mac2-m2pro`
+       * * `p3dn` | `p4d` | `p5`
+       * * `t1`
+       * * `u-12tb1` | `u-18tb1` | `u-24tb1` | `u-3tb1` | `u-6tb1` | `u-9tb1` | `u7i-12tb` |
+       * `u7in-16tb` | `u7in-24tb` | `u7in-32tb`
+       *
+       * If you enable performance protection by specifying a supported instance family, the
+       * returned instance types will exclude the above unsupported instance families.
+       *
+       * If you specify an unsupported instance family as a value for baseline performance, the API
+       * returns an empty response for
+       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
+       * and an exception for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet.html) ,
+       * [RequestSpotFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet.html)
+       * , [ModifyFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyFleet.html) ,
+       * and
+       * [ModifySpotFleetRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifySpotFleetRequest.html)
+       * .
+       */
+      override fun instanceFamily(instanceFamily: String) {
+        cdkBuilder.instanceFamily(instanceFamily)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.PerformanceFactorReferenceRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.PerformanceFactorReferenceRequestProperty,
+    ) : CdkObject(cdkObject),
+        PerformanceFactorReferenceRequestProperty {
+      /**
+       * The instance family to use as a baseline reference.
+       *
+       *
+       * Ensure that you specify the correct value for the instance family. The instance family is
+       * everything before the period ( `.` ) in the instance type name. For example, in the instance
+       * type `c6i.large` , the instance family is `c6i` , not `c6` . For more information, see [Amazon
+       * EC2 instance type naming
+       * conventions](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-type-names.html) in
+       * *Amazon EC2 Instance Types* .
+       *
+       *
+       * The following instance families are *not supported* for performance protection:
+       *
+       * * `c1`
+       * * `g3` | `g3s`
+       * * `hpc7g`
+       * * `m1` | `m2`
+       * * `mac1` | `mac2` | `mac2-m1ultra` | `mac2-m2` | `mac2-m2pro`
+       * * `p3dn` | `p4d` | `p5`
+       * * `t1`
+       * * `u-12tb1` | `u-18tb1` | `u-24tb1` | `u-3tb1` | `u-6tb1` | `u-9tb1` | `u7i-12tb` |
+       * `u7in-16tb` | `u7in-24tb` | `u7in-32tb`
+       *
+       * If you enable performance protection by specifying a supported instance family, the
+       * returned instance types will exclude the above unsupported instance families.
+       *
+       * If you specify an unsupported instance family as a value for baseline performance, the API
+       * returns an empty response for
+       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
+       * and an exception for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet.html) ,
+       * [RequestSpotFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet.html)
+       * , [ModifyFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyFleet.html) ,
+       * and
+       * [ModifySpotFleetRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifySpotFleetRequest.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-performancefactorreferencerequest.html#cfn-ec2-spotfleet-performancefactorreferencerequest-instancefamily)
+       */
+      override fun instanceFamily(): String? = unwrap(this).getInstanceFamily()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PerformanceFactorReferenceRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.PerformanceFactorReferenceRequestProperty):
+          PerformanceFactorReferenceRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PerformanceFactorReferenceRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PerformanceFactorReferenceRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.PerformanceFactorReferenceRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSpotFleet.PerformanceFactorReferenceRequestProperty
+    }
+  }
+
+  /**
    * Describes a secondary private IPv4 address for a network interface.
    *
    * Example:
@@ -6964,6 +7642,13 @@ public open class CfnSpotFleet(
    * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
    * .max(123)
    * .min(123)
+   * .build())
+   * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+   * .cpu(CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
    * .build())
    * .burstablePerformance("burstablePerformance")
    * .cpuManufacturers(List.of("cpuManufacturers"))
@@ -8193,6 +8878,13 @@ public open class CfnSpotFleet(
    * .max(123)
    * .min(123)
    * .build())
+   * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+   * .cpu(CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
+   * .build())
    * .burstablePerformance("burstablePerformance")
    * .cpuManufacturers(List.of("cpuManufacturers"))
    * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
@@ -8300,6 +8992,13 @@ public open class CfnSpotFleet(
    * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
    * .max(123)
    * .min(123)
+   * .build())
+   * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+   * .cpu(CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
    * .build())
    * .burstablePerformance("burstablePerformance")
    * .cpuManufacturers(List.of("cpuManufacturers"))

@@ -27,9 +27,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * You can only create a node group for your cluster that is equal to the current Kubernetes version
  * for the cluster. All node groups are created with the latest AMI release version for the respective
- * minor Kubernetes version of the cluster, unless you deploy a custom AMI using a launch template. For
- * more information about using launch templates, see [Customizing managed nodes with launch
- * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) .
+ * minor Kubernetes version of the cluster, unless you deploy a custom AMI using a launch template.
+ *
+ * For later updates, you will only be able to update a node group using a launch template only if
+ * it was originally deployed with a launch template. Additionally, the launch template ID or name must
+ * match what was used when the node group was created. You can update the launch template version with
+ * necessary changes. For more information about using launch templates, see [Customizing managed nodes
+ * with launch templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) .
  *
  * An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2
  * instances that are managed by AWS for an Amazon EKS cluster. For more information, see [Managed node
@@ -89,6 +93,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .updateConfig(UpdateConfigProperty.builder()
  * .maxUnavailable(123)
  * .maxUnavailablePercentage(123)
+ * .updateStrategy("updateStrategy")
  * .build())
  * .version("version")
  * .build();
@@ -241,15 +246,15 @@ public open class CfnNodegroup(
   /**
    * The Kubernetes `labels` applied to the nodes in the node group.
    */
-  public open fun labels(`value`: IResolvable) {
-    unwrap(this).setLabels(`value`.let(IResolvable.Companion::unwrap))
+  public open fun labels(`value`: Map<String, String>) {
+    unwrap(this).setLabels(`value`)
   }
 
   /**
    * The Kubernetes `labels` applied to the nodes in the node group.
    */
-  public open fun labels(`value`: Map<String, String>) {
-    unwrap(this).setLabels(`value`)
+  public open fun labels(`value`: IResolvable) {
+    unwrap(this).setLabels(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -280,26 +285,26 @@ public open class CfnNodegroup(
       Unit = launchTemplate(LaunchTemplateSpecificationProperty(`value`))
 
   /**
-   * The node auto repair configuration for node group.
+   * The node auto repair configuration for the node group.
    */
   public open fun nodeRepairConfig(): Any? = unwrap(this).getNodeRepairConfig()
 
   /**
-   * The node auto repair configuration for node group.
+   * The node auto repair configuration for the node group.
    */
   public open fun nodeRepairConfig(`value`: IResolvable) {
     unwrap(this).setNodeRepairConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The node auto repair configuration for node group.
+   * The node auto repair configuration for the node group.
    */
   public open fun nodeRepairConfig(`value`: NodeRepairConfigProperty) {
     unwrap(this).setNodeRepairConfig(`value`.let(NodeRepairConfigProperty.Companion::unwrap))
   }
 
   /**
-   * The node auto repair configuration for node group.
+   * The node auto repair configuration for the node group.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("8303069d159346ef14a49116c4799cc0bf76790c7435d281e56cbda94743c619")
@@ -640,7 +645,7 @@ public open class CfnNodegroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-labels)
      * @param labels The Kubernetes `labels` applied to the nodes in the node group. 
      */
-    public fun labels(labels: IResolvable)
+    public fun labels(labels: Map<String, String>)
 
     /**
      * The Kubernetes `labels` applied to the nodes in the node group.
@@ -653,14 +658,17 @@ public open class CfnNodegroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-labels)
      * @param labels The Kubernetes `labels` applied to the nodes in the node group. 
      */
-    public fun labels(labels: Map<String, String>)
+    public fun labels(labels: IResolvable)
 
     /**
      * An object representing a node group's launch template specification.
      *
      * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
-     * `remoteAccess` . Make sure that the launch template meets the requirements in
-     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * `remoteAccess` . You cannot later specify a different launch template ID or name than what was
+     * used to create the node group.
+     *
+     * Make sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * Also refer to [Customizing managed nodes with launch
      * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
      * *Amazon EKS User Guide* .
      *
@@ -673,8 +681,11 @@ public open class CfnNodegroup(
      * An object representing a node group's launch template specification.
      *
      * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
-     * `remoteAccess` . Make sure that the launch template meets the requirements in
-     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * `remoteAccess` . You cannot later specify a different launch template ID or name than what was
+     * used to create the node group.
+     *
+     * Make sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * Also refer to [Customizing managed nodes with launch
      * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
      * *Amazon EKS User Guide* .
      *
@@ -687,8 +698,11 @@ public open class CfnNodegroup(
      * An object representing a node group's launch template specification.
      *
      * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
-     * `remoteAccess` . Make sure that the launch template meets the requirements in
-     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * `remoteAccess` . You cannot later specify a different launch template ID or name than what was
+     * used to create the node group.
+     *
+     * Make sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * Also refer to [Customizing managed nodes with launch
      * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
      * *Amazon EKS User Guide* .
      *
@@ -701,26 +715,26 @@ public open class CfnNodegroup(
         fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty.Builder.() -> Unit)
 
     /**
-     * The node auto repair configuration for node group.
+     * The node auto repair configuration for the node group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderepairconfig)
-     * @param nodeRepairConfig The node auto repair configuration for node group. 
+     * @param nodeRepairConfig The node auto repair configuration for the node group. 
      */
     public fun nodeRepairConfig(nodeRepairConfig: IResolvable)
 
     /**
-     * The node auto repair configuration for node group.
+     * The node auto repair configuration for the node group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderepairconfig)
-     * @param nodeRepairConfig The node auto repair configuration for node group. 
+     * @param nodeRepairConfig The node auto repair configuration for the node group. 
      */
     public fun nodeRepairConfig(nodeRepairConfig: NodeRepairConfigProperty)
 
     /**
-     * The node auto repair configuration for node group.
+     * The node auto repair configuration for the node group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderepairconfig)
-     * @param nodeRepairConfig The node auto repair configuration for node group. 
+     * @param nodeRepairConfig The node auto repair configuration for the node group. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("98eeaf534285a101e573e3f4e28bada2c222425d6030d59241c33a13d085c41b")
@@ -1139,8 +1153,8 @@ public open class CfnNodegroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-labels)
      * @param labels The Kubernetes `labels` applied to the nodes in the node group. 
      */
-    override fun labels(labels: IResolvable) {
-      cdkBuilder.labels(labels.let(IResolvable.Companion::unwrap))
+    override fun labels(labels: Map<String, String>) {
+      cdkBuilder.labels(labels)
     }
 
     /**
@@ -1154,16 +1168,19 @@ public open class CfnNodegroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-labels)
      * @param labels The Kubernetes `labels` applied to the nodes in the node group. 
      */
-    override fun labels(labels: Map<String, String>) {
-      cdkBuilder.labels(labels)
+    override fun labels(labels: IResolvable) {
+      cdkBuilder.labels(labels.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * An object representing a node group's launch template specification.
      *
      * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
-     * `remoteAccess` . Make sure that the launch template meets the requirements in
-     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * `remoteAccess` . You cannot later specify a different launch template ID or name than what was
+     * used to create the node group.
+     *
+     * Make sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * Also refer to [Customizing managed nodes with launch
      * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
      * *Amazon EKS User Guide* .
      *
@@ -1178,8 +1195,11 @@ public open class CfnNodegroup(
      * An object representing a node group's launch template specification.
      *
      * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
-     * `remoteAccess` . Make sure that the launch template meets the requirements in
-     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * `remoteAccess` . You cannot later specify a different launch template ID or name than what was
+     * used to create the node group.
+     *
+     * Make sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * Also refer to [Customizing managed nodes with launch
      * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
      * *Amazon EKS User Guide* .
      *
@@ -1194,8 +1214,11 @@ public open class CfnNodegroup(
      * An object representing a node group's launch template specification.
      *
      * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
-     * `remoteAccess` . Make sure that the launch template meets the requirements in
-     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * `remoteAccess` . You cannot later specify a different launch template ID or name than what was
+     * used to create the node group.
+     *
+     * Make sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * Also refer to [Customizing managed nodes with launch
      * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
      * *Amazon EKS User Guide* .
      *
@@ -1209,30 +1232,30 @@ public open class CfnNodegroup(
         Unit = launchTemplate(LaunchTemplateSpecificationProperty(launchTemplate))
 
     /**
-     * The node auto repair configuration for node group.
+     * The node auto repair configuration for the node group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderepairconfig)
-     * @param nodeRepairConfig The node auto repair configuration for node group. 
+     * @param nodeRepairConfig The node auto repair configuration for the node group. 
      */
     override fun nodeRepairConfig(nodeRepairConfig: IResolvable) {
       cdkBuilder.nodeRepairConfig(nodeRepairConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The node auto repair configuration for node group.
+     * The node auto repair configuration for the node group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderepairconfig)
-     * @param nodeRepairConfig The node auto repair configuration for node group. 
+     * @param nodeRepairConfig The node auto repair configuration for the node group. 
      */
     override fun nodeRepairConfig(nodeRepairConfig: NodeRepairConfigProperty) {
       cdkBuilder.nodeRepairConfig(nodeRepairConfig.let(NodeRepairConfigProperty.Companion::unwrap))
     }
 
     /**
-     * The node auto repair configuration for node group.
+     * The node auto repair configuration for the node group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderepairconfig)
-     * @param nodeRepairConfig The node auto repair configuration for node group. 
+     * @param nodeRepairConfig The node auto repair configuration for the node group. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("98eeaf534285a101e573e3f4e28bada2c222425d6030d59241c33a13d085c41b")
@@ -1598,7 +1621,7 @@ public open class CfnNodegroup(
      * The ID of the launch template.
      *
      * You must specify either the launch template ID or the launch template name in the request,
-     * but not both.
+     * but not both. After node group creation, you cannot use a different ID.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-launchtemplatespecification.html#cfn-eks-nodegroup-launchtemplatespecification-id)
      */
@@ -1608,7 +1631,7 @@ public open class CfnNodegroup(
      * The name of the launch template.
      *
      * You must specify either the launch template name or the launch template ID in the request,
-     * but not both.
+     * but not both. After node group creation, you cannot use a different name.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-launchtemplatespecification.html#cfn-eks-nodegroup-launchtemplatespecification-name)
      */
@@ -1617,7 +1640,8 @@ public open class CfnNodegroup(
     /**
      * The version number of the launch template to use.
      *
-     * If no version is specified, then the template's default version is used.
+     * If no version is specified, then the template's default version is used. You can use a
+     * different version for node group updates.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-launchtemplatespecification.html#cfn-eks-nodegroup-launchtemplatespecification-version)
      */
@@ -1631,20 +1655,21 @@ public open class CfnNodegroup(
       /**
        * @param id The ID of the launch template.
        * You must specify either the launch template ID or the launch template name in the request,
-       * but not both.
+       * but not both. After node group creation, you cannot use a different ID.
        */
       public fun id(id: String)
 
       /**
        * @param name The name of the launch template.
        * You must specify either the launch template name or the launch template ID in the request,
-       * but not both.
+       * but not both. After node group creation, you cannot use a different name.
        */
       public fun name(name: String)
 
       /**
        * @param version The version number of the launch template to use.
-       * If no version is specified, then the template's default version is used.
+       * If no version is specified, then the template's default version is used. You can use a
+       * different version for node group updates.
        */
       public fun version(version: String)
     }
@@ -1658,7 +1683,7 @@ public open class CfnNodegroup(
       /**
        * @param id The ID of the launch template.
        * You must specify either the launch template ID or the launch template name in the request,
-       * but not both.
+       * but not both. After node group creation, you cannot use a different ID.
        */
       override fun id(id: String) {
         cdkBuilder.id(id)
@@ -1667,7 +1692,7 @@ public open class CfnNodegroup(
       /**
        * @param name The name of the launch template.
        * You must specify either the launch template name or the launch template ID in the request,
-       * but not both.
+       * but not both. After node group creation, you cannot use a different name.
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -1675,7 +1700,8 @@ public open class CfnNodegroup(
 
       /**
        * @param version The version number of the launch template to use.
-       * If no version is specified, then the template's default version is used.
+       * If no version is specified, then the template's default version is used. You can use a
+       * different version for node group updates.
        */
       override fun version(version: String) {
         cdkBuilder.version(version)
@@ -1694,7 +1720,7 @@ public open class CfnNodegroup(
        * The ID of the launch template.
        *
        * You must specify either the launch template ID or the launch template name in the request,
-       * but not both.
+       * but not both. After node group creation, you cannot use a different ID.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-launchtemplatespecification.html#cfn-eks-nodegroup-launchtemplatespecification-id)
        */
@@ -1704,7 +1730,7 @@ public open class CfnNodegroup(
        * The name of the launch template.
        *
        * You must specify either the launch template name or the launch template ID in the request,
-       * but not both.
+       * but not both. After node group creation, you cannot use a different name.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-launchtemplatespecification.html#cfn-eks-nodegroup-launchtemplatespecification-name)
        */
@@ -1713,7 +1739,8 @@ public open class CfnNodegroup(
       /**
        * The version number of the launch template to use.
        *
-       * If no version is specified, then the template's default version is used.
+       * If no version is specified, then the template's default version is used. You can use a
+       * different version for node group updates.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-launchtemplatespecification.html#cfn-eks-nodegroup-launchtemplatespecification-version)
        */
@@ -1740,7 +1767,7 @@ public open class CfnNodegroup(
   }
 
   /**
-   * The node auto repair configuration for node group.
+   * The node auto repair configuration for the node group.
    *
    * Example:
    *
@@ -1757,7 +1784,9 @@ public open class CfnNodegroup(
    */
   public interface NodeRepairConfigProperty {
     /**
-     * Set this value to true to enable node auto repair for the node group.
+     * Specifies whether to enable node auto repair for the node group.
+     *
+     * Node auto repair is disabled by default.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-noderepairconfig.html#cfn-eks-nodegroup-noderepairconfig-enabled)
      */
@@ -1769,12 +1798,14 @@ public open class CfnNodegroup(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enabled Set this value to true to enable node auto repair for the node group.
+       * @param enabled Specifies whether to enable node auto repair for the node group.
+       * Node auto repair is disabled by default.
        */
       public fun enabled(enabled: Boolean)
 
       /**
-       * @param enabled Set this value to true to enable node auto repair for the node group.
+       * @param enabled Specifies whether to enable node auto repair for the node group.
+       * Node auto repair is disabled by default.
        */
       public fun enabled(enabled: IResolvable)
     }
@@ -1785,14 +1816,16 @@ public open class CfnNodegroup(
           software.amazon.awscdk.services.eks.CfnNodegroup.NodeRepairConfigProperty.builder()
 
       /**
-       * @param enabled Set this value to true to enable node auto repair for the node group.
+       * @param enabled Specifies whether to enable node auto repair for the node group.
+       * Node auto repair is disabled by default.
        */
       override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
       /**
-       * @param enabled Set this value to true to enable node auto repair for the node group.
+       * @param enabled Specifies whether to enable node auto repair for the node group.
+       * Node auto repair is disabled by default.
        */
       override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
@@ -1807,7 +1840,9 @@ public open class CfnNodegroup(
     ) : CdkObject(cdkObject),
         NodeRepairConfigProperty {
       /**
-       * Set this value to true to enable node auto repair for the node group.
+       * Specifies whether to enable node auto repair for the node group.
+       *
+       * Node auto repair is disabled by default.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-noderepairconfig.html#cfn-eks-nodegroup-noderepairconfig-enabled)
        */
@@ -2398,6 +2433,7 @@ public open class CfnNodegroup(
    * UpdateConfigProperty updateConfigProperty = UpdateConfigProperty.builder()
    * .maxUnavailable(123)
    * .maxUnavailablePercentage(123)
+   * .updateStrategy("updateStrategy")
    * .build();
    * ```
    *
@@ -2425,6 +2461,26 @@ public open class CfnNodegroup(
     public fun maxUnavailablePercentage(): Number? = unwrap(this).getMaxUnavailablePercentage()
 
     /**
+     * The configuration for the behavior to follow during a node group version update of this
+     * managed node group.
+     *
+     * You choose between two possible strategies for replacing nodes during an
+     * [`UpdateNodegroupVersion`](https://docs.aws.amazon.com/eks/latest/APIReference/API_UpdateNodegroupVersion.html)
+     * action.
+     *
+     * An Amazon EKS managed node group updates by replacing nodes with new nodes of newer AMI
+     * versions in parallel. The *update strategy* changes the managed node update behavior of the
+     * managed node group for each quantity. The *default* strategy has guardrails to protect you from
+     * misconfiguration and launches the new instances first, before terminating the old instances. The
+     * *minimal* strategy removes the guardrails and terminates the old instances before launching the
+     * new instances. This minimal strategy is useful in scenarios where you are constrained to
+     * resources or costs (for example, with hardware accelerators such as GPUs).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html#cfn-eks-nodegroup-updateconfig-updatestrategy)
+     */
+    public fun updateStrategy(): String? = unwrap(this).getUpdateStrategy()
+
+    /**
      * A builder for [UpdateConfigProperty]
      */
     @CdkDslMarker
@@ -2444,6 +2500,23 @@ public open class CfnNodegroup(
        * `maxUnavailable` is required to have a value.
        */
       public fun maxUnavailablePercentage(maxUnavailablePercentage: Number)
+
+      /**
+       * @param updateStrategy The configuration for the behavior to follow during a node group
+       * version update of this managed node group.
+       * You choose between two possible strategies for replacing nodes during an
+       * [`UpdateNodegroupVersion`](https://docs.aws.amazon.com/eks/latest/APIReference/API_UpdateNodegroupVersion.html)
+       * action.
+       *
+       * An Amazon EKS managed node group updates by replacing nodes with new nodes of newer AMI
+       * versions in parallel. The *update strategy* changes the managed node update behavior of the
+       * managed node group for each quantity. The *default* strategy has guardrails to protect you
+       * from misconfiguration and launches the new instances first, before terminating the old
+       * instances. The *minimal* strategy removes the guardrails and terminates the old instances
+       * before launching the new instances. This minimal strategy is useful in scenarios where you are
+       * constrained to resources or costs (for example, with hardware accelerators such as GPUs).
+       */
+      public fun updateStrategy(updateStrategy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2469,6 +2542,25 @@ public open class CfnNodegroup(
        */
       override fun maxUnavailablePercentage(maxUnavailablePercentage: Number) {
         cdkBuilder.maxUnavailablePercentage(maxUnavailablePercentage)
+      }
+
+      /**
+       * @param updateStrategy The configuration for the behavior to follow during a node group
+       * version update of this managed node group.
+       * You choose between two possible strategies for replacing nodes during an
+       * [`UpdateNodegroupVersion`](https://docs.aws.amazon.com/eks/latest/APIReference/API_UpdateNodegroupVersion.html)
+       * action.
+       *
+       * An Amazon EKS managed node group updates by replacing nodes with new nodes of newer AMI
+       * versions in parallel. The *update strategy* changes the managed node update behavior of the
+       * managed node group for each quantity. The *default* strategy has guardrails to protect you
+       * from misconfiguration and launches the new instances first, before terminating the old
+       * instances. The *minimal* strategy removes the guardrails and terminates the old instances
+       * before launching the new instances. This minimal strategy is useful in scenarios where you are
+       * constrained to resources or costs (for example, with hardware accelerators such as GPUs).
+       */
+      override fun updateStrategy(updateStrategy: String) {
+        cdkBuilder.updateStrategy(updateStrategy)
       }
 
       public fun build(): software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty =
@@ -2498,6 +2590,26 @@ public open class CfnNodegroup(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html#cfn-eks-nodegroup-updateconfig-maxunavailablepercentage)
        */
       override fun maxUnavailablePercentage(): Number? = unwrap(this).getMaxUnavailablePercentage()
+
+      /**
+       * The configuration for the behavior to follow during a node group version update of this
+       * managed node group.
+       *
+       * You choose between two possible strategies for replacing nodes during an
+       * [`UpdateNodegroupVersion`](https://docs.aws.amazon.com/eks/latest/APIReference/API_UpdateNodegroupVersion.html)
+       * action.
+       *
+       * An Amazon EKS managed node group updates by replacing nodes with new nodes of newer AMI
+       * versions in parallel. The *update strategy* changes the managed node update behavior of the
+       * managed node group for each quantity. The *default* strategy has guardrails to protect you
+       * from misconfiguration and launches the new instances first, before terminating the old
+       * instances. The *minimal* strategy removes the guardrails and terminates the old instances
+       * before launching the new instances. This minimal strategy is useful in scenarios where you are
+       * constrained to resources or costs (for example, with hardware accelerators such as GPUs).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html#cfn-eks-nodegroup-updateconfig-updatestrategy)
+       */
+      override fun updateStrategy(): String? = unwrap(this).getUpdateStrategy()
     }
 
     public companion object {

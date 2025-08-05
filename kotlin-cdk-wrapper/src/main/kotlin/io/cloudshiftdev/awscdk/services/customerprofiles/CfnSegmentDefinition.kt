@@ -201,6 +201,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .dimensionType("dimensionType")
  * .values(List.of("values"))
  * .build())
+ * .profileType(ProfileTypeDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
  * .shippingAddress(AddressDimensionProperty.builder()
  * .city(ProfileDimensionProperty.builder()
  * .dimensionType("dimensionType")
@@ -1713,6 +1717,10 @@ public open class CfnSegmentDefinition(
    * .dimensionType("dimensionType")
    * .values(List.of("values"))
    * .build())
+   * .profileType(ProfileTypeDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
    * .shippingAddress(AddressDimensionProperty.builder()
    * .city(ProfileDimensionProperty.builder()
    * .dimensionType("dimensionType")
@@ -2173,6 +2181,10 @@ public open class CfnSegmentDefinition(
    * .dimensionType("dimensionType")
    * .values(List.of("values"))
    * .build())
+   * .profileType(ProfileTypeDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
    * .shippingAddress(AddressDimensionProperty.builder()
    * .city(ProfileDimensionProperty.builder()
    * .dimensionType("dimensionType")
@@ -2557,6 +2569,10 @@ public open class CfnSegmentDefinition(
    * .dimensionType("dimensionType")
    * .values(List.of("values"))
    * .build())
+   * .profileType(ProfileTypeDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
    * .shippingAddress(AddressDimensionProperty.builder()
    * .city(ProfileDimensionProperty.builder()
    * .dimensionType("dimensionType")
@@ -2728,6 +2744,13 @@ public open class CfnSegmentDefinition(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-segmentdefinition-profileattributes.html#cfn-customerprofiles-segmentdefinition-profileattributes-phonenumber)
      */
     public fun phoneNumber(): Any? = unwrap(this).getPhoneNumber()
+
+    /**
+     * The type of profile.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-segmentdefinition-profileattributes.html#cfn-customerprofiles-segmentdefinition-profileattributes-profiletype)
+     */
+    public fun profileType(): Any? = unwrap(this).getProfileType()
 
     /**
      * A field to describe values to segment on within shipping address.
@@ -3093,6 +3116,23 @@ public open class CfnSegmentDefinition(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0db851745a1b3d3a7b7172123ab4cd0b375593a28d6215b0d0ff6db9addf9286")
       public fun phoneNumber(phoneNumber: ProfileDimensionProperty.Builder.() -> Unit)
+
+      /**
+       * @param profileType The type of profile.
+       */
+      public fun profileType(profileType: IResolvable)
+
+      /**
+       * @param profileType The type of profile.
+       */
+      public fun profileType(profileType: ProfileTypeDimensionProperty)
+
+      /**
+       * @param profileType The type of profile.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8193865f3a374b6859c647d0f719bafc76a7ce0fa5b6806801defc68f1f0e56d")
+      public fun profileType(profileType: ProfileTypeDimensionProperty.Builder.() -> Unit)
 
       /**
        * @param shippingAddress A field to describe values to segment on within shipping address.
@@ -3573,6 +3613,28 @@ public open class CfnSegmentDefinition(
           phoneNumber(ProfileDimensionProperty(phoneNumber))
 
       /**
+       * @param profileType The type of profile.
+       */
+      override fun profileType(profileType: IResolvable) {
+        cdkBuilder.profileType(profileType.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param profileType The type of profile.
+       */
+      override fun profileType(profileType: ProfileTypeDimensionProperty) {
+        cdkBuilder.profileType(profileType.let(ProfileTypeDimensionProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param profileType The type of profile.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8193865f3a374b6859c647d0f719bafc76a7ce0fa5b6806801defc68f1f0e56d")
+      override fun profileType(profileType: ProfileTypeDimensionProperty.Builder.() -> Unit): Unit =
+          profileType(ProfileTypeDimensionProperty(profileType))
+
+      /**
        * @param shippingAddress A field to describe values to segment on within shipping address.
        */
       override fun shippingAddress(shippingAddress: IResolvable) {
@@ -3744,6 +3806,13 @@ public open class CfnSegmentDefinition(
       override fun phoneNumber(): Any? = unwrap(this).getPhoneNumber()
 
       /**
+       * The type of profile.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-segmentdefinition-profileattributes.html#cfn-customerprofiles-segmentdefinition-profileattributes-profiletype)
+       */
+      override fun profileType(): Any? = unwrap(this).getProfileType()
+
+      /**
        * A field to describe values to segment on within shipping address.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-segmentdefinition-profileattributes.html#cfn-customerprofiles-segmentdefinition-profileattributes-shippingaddress)
@@ -3882,6 +3951,127 @@ public open class CfnSegmentDefinition(
           software.amazon.awscdk.services.customerprofiles.CfnSegmentDefinition.ProfileDimensionProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.customerprofiles.CfnSegmentDefinition.ProfileDimensionProperty
+    }
+  }
+
+  /**
+   * Specifies profile type based criteria for a segment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
+   * ProfileTypeDimensionProperty profileTypeDimensionProperty =
+   * ProfileTypeDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-segmentdefinition-profiletypedimension.html)
+   */
+  public interface ProfileTypeDimensionProperty {
+    /**
+     * The action to segment on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-segmentdefinition-profiletypedimension.html#cfn-customerprofiles-segmentdefinition-profiletypedimension-dimensiontype)
+     */
+    public fun dimensionType(): String
+
+    /**
+     * The values to apply the DimensionType on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-segmentdefinition-profiletypedimension.html#cfn-customerprofiles-segmentdefinition-profiletypedimension-values)
+     */
+    public fun values(): List<String>
+
+    /**
+     * A builder for [ProfileTypeDimensionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dimensionType The action to segment on. 
+       */
+      public fun dimensionType(dimensionType: String)
+
+      /**
+       * @param values The values to apply the DimensionType on. 
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values The values to apply the DimensionType on. 
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.customerprofiles.CfnSegmentDefinition.ProfileTypeDimensionProperty.Builder
+          =
+          software.amazon.awscdk.services.customerprofiles.CfnSegmentDefinition.ProfileTypeDimensionProperty.builder()
+
+      /**
+       * @param dimensionType The action to segment on. 
+       */
+      override fun dimensionType(dimensionType: String) {
+        cdkBuilder.dimensionType(dimensionType)
+      }
+
+      /**
+       * @param values The values to apply the DimensionType on. 
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values The values to apply the DimensionType on. 
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.customerprofiles.CfnSegmentDefinition.ProfileTypeDimensionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnSegmentDefinition.ProfileTypeDimensionProperty,
+    ) : CdkObject(cdkObject),
+        ProfileTypeDimensionProperty {
+      /**
+       * The action to segment on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-segmentdefinition-profiletypedimension.html#cfn-customerprofiles-segmentdefinition-profiletypedimension-dimensiontype)
+       */
+      override fun dimensionType(): String = unwrap(this).getDimensionType()
+
+      /**
+       * The values to apply the DimensionType on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-segmentdefinition-profiletypedimension.html#cfn-customerprofiles-segmentdefinition-profiletypedimension-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProfileTypeDimensionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnSegmentDefinition.ProfileTypeDimensionProperty):
+          ProfileTypeDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProfileTypeDimensionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProfileTypeDimensionProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnSegmentDefinition.ProfileTypeDimensionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.customerprofiles.CfnSegmentDefinition.ProfileTypeDimensionProperty
     }
   }
 
@@ -4194,6 +4384,10 @@ public open class CfnSegmentDefinition(
    * .values(List.of("values"))
    * .build())
    * .phoneNumber(ProfileDimensionProperty.builder()
+   * .dimensionType("dimensionType")
+   * .values(List.of("values"))
+   * .build())
+   * .profileType(ProfileTypeDimensionProperty.builder()
    * .dimensionType("dimensionType")
    * .values(List.of("values"))
    * .build())

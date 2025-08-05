@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.ArnPrincipal
 import kotlin.Boolean
+import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
@@ -16,13 +17,11 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * NetworkLoadBalancer networkLoadBalancer1;
- * NetworkLoadBalancer networkLoadBalancer2;
+ * NetworkLoadBalancer networkLoadBalancer;
  * VpcEndpointService.Builder.create(this, "EndpointService")
- * .vpcEndpointServiceLoadBalancers(List.of(networkLoadBalancer1, networkLoadBalancer2))
- * .acceptanceRequired(true)
- * .allowedPrincipals(List.of(new ArnPrincipal("arn:aws:iam::123456789012:root")))
- * .contributorInsights(true)
+ * .vpcEndpointServiceLoadBalancers(List.of(networkLoadBalancer))
+ * // Support both IPv4 and IPv6 connections to the endpoint service
+ * .supportedIpAddressTypes(List.of(IpAddressType.IPV4, IpAddressType.IPV6))
  * .build();
  * ```
  */
@@ -47,12 +46,27 @@ public interface VpcEndpointServiceProps {
       unwrap(this).getAllowedPrincipals()?.map(ArnPrincipal::wrap) ?: emptyList()
 
   /**
+   * The Regions from which service consumers can access the service.
+   *
+   * Default: - No Region restrictions
+   */
+  public fun allowedRegions(): List<String> = unwrap(this).getAllowedRegions() ?: emptyList()
+
+  /**
    * Indicates whether to enable the built-in Contributor Insights rules provided by AWS
    * PrivateLink.
    *
    * Default: false
    */
   public fun contributorInsights(): Boolean? = unwrap(this).getContributorInsights()
+
+  /**
+   * Specify which IP address types are supported for VPC endpoint service.
+   *
+   * Default: - No specific IP address types configured
+   */
+  public fun supportedIpAddressTypes(): List<IpAddressType> =
+      unwrap(this).getSupportedIpAddressTypes()?.map(IpAddressType::wrap) ?: emptyList()
 
   /**
    * One or more load balancers to host the VPC Endpoint Service.
@@ -87,10 +101,32 @@ public interface VpcEndpointServiceProps {
     public fun allowedPrincipals(vararg allowedPrincipals: ArnPrincipal)
 
     /**
+     * @param allowedRegions The Regions from which service consumers can access the service.
+     */
+    public fun allowedRegions(allowedRegions: List<String>)
+
+    /**
+     * @param allowedRegions The Regions from which service consumers can access the service.
+     */
+    public fun allowedRegions(vararg allowedRegions: String)
+
+    /**
      * @param contributorInsights Indicates whether to enable the built-in Contributor Insights
      * rules provided by AWS PrivateLink.
      */
     public fun contributorInsights(contributorInsights: Boolean)
+
+    /**
+     * @param supportedIpAddressTypes Specify which IP address types are supported for VPC endpoint
+     * service.
+     */
+    public fun supportedIpAddressTypes(supportedIpAddressTypes: List<IpAddressType>)
+
+    /**
+     * @param supportedIpAddressTypes Specify which IP address types are supported for VPC endpoint
+     * service.
+     */
+    public fun supportedIpAddressTypes(vararg supportedIpAddressTypes: IpAddressType)
 
     /**
      * @param vpcEndpointServiceLoadBalancers One or more load balancers to host the VPC Endpoint
@@ -139,12 +175,40 @@ public interface VpcEndpointServiceProps {
         allowedPrincipals(allowedPrincipals.toList())
 
     /**
+     * @param allowedRegions The Regions from which service consumers can access the service.
+     */
+    override fun allowedRegions(allowedRegions: List<String>) {
+      cdkBuilder.allowedRegions(allowedRegions)
+    }
+
+    /**
+     * @param allowedRegions The Regions from which service consumers can access the service.
+     */
+    override fun allowedRegions(vararg allowedRegions: String): Unit =
+        allowedRegions(allowedRegions.toList())
+
+    /**
      * @param contributorInsights Indicates whether to enable the built-in Contributor Insights
      * rules provided by AWS PrivateLink.
      */
     override fun contributorInsights(contributorInsights: Boolean) {
       cdkBuilder.contributorInsights(contributorInsights)
     }
+
+    /**
+     * @param supportedIpAddressTypes Specify which IP address types are supported for VPC endpoint
+     * service.
+     */
+    override fun supportedIpAddressTypes(supportedIpAddressTypes: List<IpAddressType>) {
+      cdkBuilder.supportedIpAddressTypes(supportedIpAddressTypes.map(IpAddressType.Companion::unwrap))
+    }
+
+    /**
+     * @param supportedIpAddressTypes Specify which IP address types are supported for VPC endpoint
+     * service.
+     */
+    override fun supportedIpAddressTypes(vararg supportedIpAddressTypes: IpAddressType): Unit =
+        supportedIpAddressTypes(supportedIpAddressTypes.toList())
 
     /**
      * @param vpcEndpointServiceLoadBalancers One or more load balancers to host the VPC Endpoint
@@ -191,12 +255,27 @@ public interface VpcEndpointServiceProps {
         unwrap(this).getAllowedPrincipals()?.map(ArnPrincipal::wrap) ?: emptyList()
 
     /**
+     * The Regions from which service consumers can access the service.
+     *
+     * Default: - No Region restrictions
+     */
+    override fun allowedRegions(): List<String> = unwrap(this).getAllowedRegions() ?: emptyList()
+
+    /**
      * Indicates whether to enable the built-in Contributor Insights rules provided by AWS
      * PrivateLink.
      *
      * Default: false
      */
     override fun contributorInsights(): Boolean? = unwrap(this).getContributorInsights()
+
+    /**
+     * Specify which IP address types are supported for VPC endpoint service.
+     *
+     * Default: - No specific IP address types configured
+     */
+    override fun supportedIpAddressTypes(): List<IpAddressType> =
+        unwrap(this).getSupportedIpAddressTypes()?.map(IpAddressType::wrap) ?: emptyList()
 
     /**
      * One or more load balancers to host the VPC Endpoint Service.

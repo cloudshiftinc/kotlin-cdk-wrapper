@@ -16,6 +16,7 @@ import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.constructs.Construct
 import io.cloudshiftdev.constructs.Node
 import kotlin.Boolean
@@ -84,6 +85,17 @@ public interface ITopic : IResource, INotificationRuleTarget {
    * @param identity 
    */
   public fun grantSubscribe(identity: IGrantable): Grant
+
+  /**
+   * A KMS Key, either managed by this CDK app, or imported.
+   *
+   * This property applies only to server-side encryption.
+   *
+   * Default: None
+   *
+   * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html)
+   */
+  public fun masterKey(): IKey? = unwrap(this).getMasterKey()?.let(IKey::wrap)
 
   /**
    * Return the given named metric for this Topic.
@@ -500,6 +512,17 @@ public interface ITopic : IResource, INotificationRuleTarget {
      */
     override fun grantSubscribe(identity: IGrantable): Grant =
         unwrap(this).grantSubscribe(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+    /**
+     * A KMS Key, either managed by this CDK app, or imported.
+     *
+     * This property applies only to server-side encryption.
+     *
+     * Default: None
+     *
+     * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html)
+     */
+    override fun masterKey(): IKey? = unwrap(this).getMasterKey()?.let(IKey::wrap)
 
     /**
      * Return the given named metric for this Topic.

@@ -39,6 +39,10 @@ import kotlin.collections.List
  * .name("name")
  * .build()))
  * .billingMode("billingMode")
+ * .contextKeySelectors(List.of(ContextKeySelectorProperty.builder()
+ * .equalTo(List.of("equalTo"))
+ * .type("type")
+ * .build()))
  * .federationEnabled(false)
  * .federationRoleArn("federationRoleArn")
  * .ingestionEnabled(false)
@@ -47,6 +51,7 @@ import kotlin.collections.List
  * .insightType("insightType")
  * .build()))
  * .kmsKeyId("kmsKeyId")
+ * .maxEventSize("maxEventSize")
  * .multiRegionEnabled(false)
  * .name("name")
  * .organizationEnabled(false)
@@ -110,6 +115,13 @@ public interface CfnEventDataStoreProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-billingmode)
    */
   public fun billingMode(): String? = unwrap(this).getBillingMode()
+
+  /**
+   * The list of context key selectors that are configured for the event data store.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-contextkeyselectors)
+   */
+  public fun contextKeySelectors(): Any? = unwrap(this).getContextKeySelectors()
 
   /**
    * Indicates if [Lake query
@@ -198,6 +210,15 @@ public interface CfnEventDataStoreProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-kmskeyid)
    */
   public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+  /**
+   * The maximum allowed size for events to be stored in the specified event data store.
+   *
+   * If you are using context key selectors, MaxEventSize must be set to Large.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-maxeventsize)
+   */
+  public fun maxEventSize(): String? = unwrap(this).getMaxEventSize()
 
   /**
    * Specifies whether the event data store includes events from all Regions, or only from the
@@ -357,6 +378,24 @@ public interface CfnEventDataStoreProps {
     public fun billingMode(billingMode: String)
 
     /**
+     * @param contextKeySelectors The list of context key selectors that are configured for the
+     * event data store.
+     */
+    public fun contextKeySelectors(contextKeySelectors: IResolvable)
+
+    /**
+     * @param contextKeySelectors The list of context key selectors that are configured for the
+     * event data store.
+     */
+    public fun contextKeySelectors(contextKeySelectors: List<Any>)
+
+    /**
+     * @param contextKeySelectors The list of context key selectors that are configured for the
+     * event data store.
+     */
+    public fun contextKeySelectors(vararg contextKeySelectors: Any)
+
+    /**
      * @param federationEnabled Indicates if [Lake query
      * federation](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-federation.html) is
      * enabled. By default, Lake query federation is disabled. You cannot delete an event data store if
@@ -470,6 +509,13 @@ public interface CfnEventDataStoreProps {
      * * `12345678-1234-1234-1234-123456789012`
      */
     public fun kmsKeyId(kmsKeyId: String)
+
+    /**
+     * @param maxEventSize The maximum allowed size for events to be stored in the specified event
+     * data store.
+     * If you are using context key selectors, MaxEventSize must be set to Large.
+     */
+    public fun maxEventSize(maxEventSize: String)
 
     /**
      * @param multiRegionEnabled Specifies whether the event data store includes events from all
@@ -650,6 +696,29 @@ public interface CfnEventDataStoreProps {
     }
 
     /**
+     * @param contextKeySelectors The list of context key selectors that are configured for the
+     * event data store.
+     */
+    override fun contextKeySelectors(contextKeySelectors: IResolvable) {
+      cdkBuilder.contextKeySelectors(contextKeySelectors.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param contextKeySelectors The list of context key selectors that are configured for the
+     * event data store.
+     */
+    override fun contextKeySelectors(contextKeySelectors: List<Any>) {
+      cdkBuilder.contextKeySelectors(contextKeySelectors.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param contextKeySelectors The list of context key selectors that are configured for the
+     * event data store.
+     */
+    override fun contextKeySelectors(vararg contextKeySelectors: Any): Unit =
+        contextKeySelectors(contextKeySelectors.toList())
+
+    /**
      * @param federationEnabled Indicates if [Lake query
      * federation](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-federation.html) is
      * enabled. By default, Lake query federation is disabled. You cannot delete an event data store if
@@ -781,6 +850,15 @@ public interface CfnEventDataStoreProps {
      */
     override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
+    }
+
+    /**
+     * @param maxEventSize The maximum allowed size for events to be stored in the specified event
+     * data store.
+     * If you are using context key selectors, MaxEventSize must be set to Large.
+     */
+    override fun maxEventSize(maxEventSize: String) {
+      cdkBuilder.maxEventSize(maxEventSize)
     }
 
     /**
@@ -934,6 +1012,13 @@ public interface CfnEventDataStoreProps {
     override fun billingMode(): String? = unwrap(this).getBillingMode()
 
     /**
+     * The list of context key selectors that are configured for the event data store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-contextkeyselectors)
+     */
+    override fun contextKeySelectors(): Any? = unwrap(this).getContextKeySelectors()
+
+    /**
      * Indicates if [Lake query
      * federation](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-federation.html) is
      * enabled. By default, Lake query federation is disabled. You cannot delete an event data store if
@@ -1020,6 +1105,15 @@ public interface CfnEventDataStoreProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-kmskeyid)
      */
     override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * The maximum allowed size for events to be stored in the specified event data store.
+     *
+     * If you are using context key selectors, MaxEventSize must be set to Large.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-maxeventsize)
+     */
+    override fun maxEventSize(): String? = unwrap(this).getMaxEventSize()
 
     /**
      * Specifies whether the event data store includes events from all Regions, or only from the

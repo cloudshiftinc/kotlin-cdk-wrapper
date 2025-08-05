@@ -41,15 +41,26 @@ import kotlin.jvm.JvmName
  * .statistic("statistic")
  * // the properties below are optional
  * .account("account")
+ * .accountOverride("accountOverride")
  * .dimensions(List.of(Dimension.builder()
  * .name("name")
  * .value(value)
  * .build()))
  * .region("region")
+ * .regionOverride("regionOverride")
  * .unitFilter(Unit.SECONDS)
  * .build())
  * .renderingProperties(Map.of(
  * "renderingPropertiesKey", renderingProperties))
+ * .searchExpression(MetricExpressionConfig.builder()
+ * .expression("expression")
+ * .period(123)
+ * .usingMetrics(Map.of(
+ * "usingMetricsKey", metric))
+ * // the properties below are optional
+ * .searchAccount("searchAccount")
+ * .searchRegion("searchRegion")
+ * .build())
  * .build();
  * ```
  */
@@ -80,6 +91,14 @@ public interface MetricConfig {
    */
   public fun renderingProperties(): Map<String, Any> = unwrap(this).getRenderingProperties() ?:
       emptyMap()
+
+  /**
+   * In case the metric is a search expression, the details of the search expression.
+   *
+   * Default: - None
+   */
+  public fun searchExpression(): MetricExpressionConfig? =
+      unwrap(this).getSearchExpression()?.let(MetricExpressionConfig::wrap)
 
   /**
    * A builder for [MetricConfig]
@@ -119,6 +138,20 @@ public interface MetricConfig {
      * added to dashboard graphs.
      */
     public fun renderingProperties(renderingProperties: Map<String, Any>)
+
+    /**
+     * @param searchExpression In case the metric is a search expression, the details of the search
+     * expression.
+     */
+    public fun searchExpression(searchExpression: MetricExpressionConfig)
+
+    /**
+     * @param searchExpression In case the metric is a search expression, the details of the search
+     * expression.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("70d783ea4b6b963cf88eb8d89739381313a605c8c6b4e175828cec29dadb029c")
+    public fun searchExpression(searchExpression: MetricExpressionConfig.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -167,6 +200,23 @@ public interface MetricConfig {
       cdkBuilder.renderingProperties(renderingProperties.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
+    /**
+     * @param searchExpression In case the metric is a search expression, the details of the search
+     * expression.
+     */
+    override fun searchExpression(searchExpression: MetricExpressionConfig) {
+      cdkBuilder.searchExpression(searchExpression.let(MetricExpressionConfig.Companion::unwrap))
+    }
+
+    /**
+     * @param searchExpression In case the metric is a search expression, the details of the search
+     * expression.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("70d783ea4b6b963cf88eb8d89739381313a605c8c6b4e175828cec29dadb029c")
+    override fun searchExpression(searchExpression: MetricExpressionConfig.Builder.() -> Unit): Unit
+        = searchExpression(MetricExpressionConfig(searchExpression))
+
     public fun build(): software.amazon.awscdk.services.cloudwatch.MetricConfig = cdkBuilder.build()
   }
 
@@ -200,6 +250,14 @@ public interface MetricConfig {
      */
     override fun renderingProperties(): Map<String, Any> = unwrap(this).getRenderingProperties() ?:
         emptyMap()
+
+    /**
+     * In case the metric is a search expression, the details of the search expression.
+     *
+     * Default: - None
+     */
+    override fun searchExpression(): MetricExpressionConfig? =
+        unwrap(this).getSearchExpression()?.let(MetricExpressionConfig::wrap)
   }
 
   public companion object {

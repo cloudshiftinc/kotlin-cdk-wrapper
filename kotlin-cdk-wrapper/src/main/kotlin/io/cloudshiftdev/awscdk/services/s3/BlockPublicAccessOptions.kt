@@ -13,7 +13,7 @@ import kotlin.Unit
  *
  * ```
  * Bucket bucket = Bucket.Builder.create(this, "MyBlockedBucket")
- * .blockPublicAccess(BlockPublicAccess.Builder.create().blockPublicPolicy(true).build())
+ * .blockPublicAccess(BlockPublicAccess.Builder.create().blockPublicPolicy(false).build())
  * .build();
  * ```
  */

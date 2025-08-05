@@ -16,7 +16,7 @@ import kotlin.String
  * Vpc vpc;
  * Cluster cluster = Cluster.Builder.create(this, "Cluster")
  * .clusterName("myCluster")
- * .kafkaVersion(KafkaVersion.V2_8_1)
+ * .kafkaVersion(KafkaVersion.V4_0_X_KRAFT)
  * .vpc(vpc)
  * .encryptionInTransit(EncryptionInTransitConfig.builder()
  * .clientBroker(ClientBrokerEncryption.TLS)

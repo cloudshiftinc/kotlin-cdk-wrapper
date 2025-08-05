@@ -23,12 +23,9 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * An Image Builder image recipe is a document that defines the base image and the components to be
- * applied to the base image to produce the desired configuration for the output image.
+ * Creates a new image recipe.
  *
- * You can use an image recipe to duplicate builds. Image Builder image recipes can be shared,
- * branched, and edited using the console wizard, the AWS CLI , or the API. You can use image recipes
- * with your version control software to maintain shareable versioned image recipes.
+ * Image recipes define how images are configured, tested, and assessed.
  *
  * Example:
  *
@@ -172,26 +169,26 @@ public open class CfnImageRecipe(
       blockDeviceMappings(`value`.toList())
 
   /**
-   * The components of the image recipe.
+   * The components that are included in the image recipe.
    */
   public open fun components(): Any = unwrap(this).getComponents()
 
   /**
-   * The components of the image recipe.
+   * The components that are included in the image recipe.
    */
   public open fun components(`value`: IResolvable) {
     unwrap(this).setComponents(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The components of the image recipe.
+   * The components that are included in the image recipe.
    */
   public open fun components(`value`: List<Any>) {
     unwrap(this).setComponents(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * The components of the image recipe.
+   * The components that are included in the image recipe.
    */
   public open fun components(vararg `value`: Any): Unit = components(`value`.toList())
 
@@ -229,12 +226,12 @@ public open class CfnImageRecipe(
   }
 
   /**
-   * The parent image of the image recipe.
+   * The base image for customizations specified in the image recipe.
    */
   public open fun parentImage(): String = unwrap(this).getParentImage()
 
   /**
-   * The parent image of the image recipe.
+   * The base image for customizations specified in the image recipe.
    */
   public open fun parentImage(`value`: String) {
     unwrap(this).setParentImage(`value`)
@@ -258,12 +255,12 @@ public open class CfnImageRecipe(
   }
 
   /**
-   * The semantic version of the image recipe.
+   * The version of the image recipe.
    */
   public open fun version(): String = unwrap(this).getVersion()
 
   /**
-   * The semantic version of the image recipe.
+   * The version of the image recipe.
    */
   public open fun version(`value`: String) {
     unwrap(this).setVersion(`value`)
@@ -357,38 +354,35 @@ public open class CfnImageRecipe(
     public fun blockDeviceMappings(vararg blockDeviceMappings: Any)
 
     /**
-     * The components of the image recipe.
+     * The components that are included in the image recipe.
      *
-     * Components are orchestration documents that define a sequence of steps for downloading,
-     * installing, configuring, and testing software packages. They also define validation and security
-     * hardening steps. A component is defined using a YAML document format.
+     * Recipes require a minimum of one build component, and can have a maximum of 20 build and test
+     * components in any combination.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-components)
-     * @param components The components of the image recipe. 
+     * @param components The components that are included in the image recipe. 
      */
     public fun components(components: IResolvable)
 
     /**
-     * The components of the image recipe.
+     * The components that are included in the image recipe.
      *
-     * Components are orchestration documents that define a sequence of steps for downloading,
-     * installing, configuring, and testing software packages. They also define validation and security
-     * hardening steps. A component is defined using a YAML document format.
+     * Recipes require a minimum of one build component, and can have a maximum of 20 build and test
+     * components in any combination.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-components)
-     * @param components The components of the image recipe. 
+     * @param components The components that are included in the image recipe. 
      */
     public fun components(components: List<Any>)
 
     /**
-     * The components of the image recipe.
+     * The components that are included in the image recipe.
      *
-     * Components are orchestration documents that define a sequence of steps for downloading,
-     * installing, configuring, and testing software packages. They also define validation and security
-     * hardening steps. A component is defined using a YAML document format.
+     * Recipes require a minimum of one build component, and can have a maximum of 20 build and test
+     * components in any combination.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-components)
-     * @param components The components of the image recipe. 
+     * @param components The components that are included in the image recipe. 
      */
     public fun components(vararg components: Any)
 
@@ -409,12 +403,18 @@ public open class CfnImageRecipe(
     public fun name(name: String)
 
     /**
-     * The parent image of the image recipe.
+     * The base image for customizations specified in the image recipe.
      *
-     * The string must be either an Image ARN or an AMI ID.
+     * You can specify the parent image using one of the following options:
+     *
+     * * AMI ID
+     * * Image Builder image Amazon Resource Name (ARN)
+     * * AWS Systems Manager (SSM) Parameter Store Parameter, prefixed by `ssm:` , followed by the
+     * parameter name or ARN.
+     * * AWS Marketplace product ID
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-parentimage)
-     * @param parentImage The parent image of the image recipe. 
+     * @param parentImage The base image for customizations specified in the image recipe. 
      */
     public fun parentImage(parentImage: String)
 
@@ -427,10 +427,10 @@ public open class CfnImageRecipe(
     public fun tags(tags: Map<String, String>)
 
     /**
-     * The semantic version of the image recipe.
+     * The version of the image recipe.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-version)
-     * @param version The semantic version of the image recipe. 
+     * @param version The version of the image recipe. 
      */
     public fun version(version: String)
 
@@ -532,42 +532,39 @@ public open class CfnImageRecipe(
         blockDeviceMappings(blockDeviceMappings.toList())
 
     /**
-     * The components of the image recipe.
+     * The components that are included in the image recipe.
      *
-     * Components are orchestration documents that define a sequence of steps for downloading,
-     * installing, configuring, and testing software packages. They also define validation and security
-     * hardening steps. A component is defined using a YAML document format.
+     * Recipes require a minimum of one build component, and can have a maximum of 20 build and test
+     * components in any combination.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-components)
-     * @param components The components of the image recipe. 
+     * @param components The components that are included in the image recipe. 
      */
     override fun components(components: IResolvable) {
       cdkBuilder.components(components.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The components of the image recipe.
+     * The components that are included in the image recipe.
      *
-     * Components are orchestration documents that define a sequence of steps for downloading,
-     * installing, configuring, and testing software packages. They also define validation and security
-     * hardening steps. A component is defined using a YAML document format.
+     * Recipes require a minimum of one build component, and can have a maximum of 20 build and test
+     * components in any combination.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-components)
-     * @param components The components of the image recipe. 
+     * @param components The components that are included in the image recipe. 
      */
     override fun components(components: List<Any>) {
       cdkBuilder.components(components.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * The components of the image recipe.
+     * The components that are included in the image recipe.
      *
-     * Components are orchestration documents that define a sequence of steps for downloading,
-     * installing, configuring, and testing software packages. They also define validation and security
-     * hardening steps. A component is defined using a YAML document format.
+     * Recipes require a minimum of one build component, and can have a maximum of 20 build and test
+     * components in any combination.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-components)
-     * @param components The components of the image recipe. 
+     * @param components The components that are included in the image recipe. 
      */
     override fun components(vararg components: Any): Unit = components(components.toList())
 
@@ -592,12 +589,18 @@ public open class CfnImageRecipe(
     }
 
     /**
-     * The parent image of the image recipe.
+     * The base image for customizations specified in the image recipe.
      *
-     * The string must be either an Image ARN or an AMI ID.
+     * You can specify the parent image using one of the following options:
+     *
+     * * AMI ID
+     * * Image Builder image Amazon Resource Name (ARN)
+     * * AWS Systems Manager (SSM) Parameter Store Parameter, prefixed by `ssm:` , followed by the
+     * parameter name or ARN.
+     * * AWS Marketplace product ID
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-parentimage)
-     * @param parentImage The parent image of the image recipe. 
+     * @param parentImage The base image for customizations specified in the image recipe. 
      */
     override fun parentImage(parentImage: String) {
       cdkBuilder.parentImage(parentImage)
@@ -614,10 +617,10 @@ public open class CfnImageRecipe(
     }
 
     /**
-     * The semantic version of the image recipe.
+     * The version of the image recipe.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-version)
-     * @param version The semantic version of the image recipe. 
+     * @param version The version of the image recipe. 
      */
     override fun version(version: String) {
       cdkBuilder.version(version)

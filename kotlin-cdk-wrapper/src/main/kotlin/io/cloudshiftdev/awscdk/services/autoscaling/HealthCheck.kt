@@ -4,12 +4,13 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkObject
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
 /**
- * Health check settings.
+ * (deprecated) Health check settings.
  *
  * Example:
  *
@@ -22,6 +23,8 @@ import kotlin.jvm.JvmName
  * .grace(Duration.minutes(30))
  * .build());
  * ```
+ *
+ * @deprecated Use HealthChecks instead
  */
 public open class HealthCheck(
   cdkObject: software.amazon.awscdk.services.autoscaling.HealthCheck,
@@ -29,28 +32,35 @@ public open class HealthCheck(
   /**
    *
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun gracePeriod(): Duration? = unwrap(this).getGracePeriod()?.let(Duration::wrap)
 
   /**
    *
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun type(): String = unwrap(this).getType()
 
   public companion object {
+    @Deprecated(message = "deprecated in CDK")
     public fun ec2(): HealthCheck =
         software.amazon.awscdk.services.autoscaling.HealthCheck.ec2().let(HealthCheck::wrap)
 
+    @Deprecated(message = "deprecated in CDK")
     public fun ec2(options: Ec2HealthCheckOptions): HealthCheck =
         software.amazon.awscdk.services.autoscaling.HealthCheck.ec2(options.let(Ec2HealthCheckOptions.Companion::unwrap)).let(HealthCheck::wrap)
 
+    @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("54c9b602a97c6a292e4db6e2877a5d704f1d7da99447038738708c63395f8b8f")
     public fun ec2(options: Ec2HealthCheckOptions.Builder.() -> Unit): HealthCheck =
         ec2(Ec2HealthCheckOptions(options))
 
+    @Deprecated(message = "deprecated in CDK")
     public fun elb(options: ElbHealthCheckOptions): HealthCheck =
         software.amazon.awscdk.services.autoscaling.HealthCheck.elb(options.let(ElbHealthCheckOptions.Companion::unwrap)).let(HealthCheck::wrap)
 
+    @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("556e456de2ad17d0ccbb8ab5ed1e8ac5ce2c6d126423e9ce8c6be8cf072b21f1")
     public fun elb(options: ElbHealthCheckOptions.Builder.() -> Unit): HealthCheck =

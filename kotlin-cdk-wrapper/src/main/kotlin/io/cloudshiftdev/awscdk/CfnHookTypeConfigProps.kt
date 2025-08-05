@@ -39,7 +39,7 @@ public interface CfnHookTypeConfigProps {
   public fun configuration(): String
 
   /**
-   * Specifies the activated Hook type configuration, in this AWS account and AWS Region .
+   * An alias by which to refer to this configuration data.
    *
    * Defaults to `default` alias. Hook types currently support default configuration alias.
    *
@@ -83,8 +83,7 @@ public interface CfnHookTypeConfigProps {
     public fun configuration(configuration: String)
 
     /**
-     * @param configurationAlias Specifies the activated Hook type configuration, in this AWS
-     * account and AWS Region .
+     * @param configurationAlias An alias by which to refer to this configuration data.
      * Defaults to `default` alias. Hook types currently support default configuration alias.
      */
     public fun configurationAlias(configurationAlias: String)
@@ -119,8 +118,7 @@ public interface CfnHookTypeConfigProps {
     }
 
     /**
-     * @param configurationAlias Specifies the activated Hook type configuration, in this AWS
-     * account and AWS Region .
+     * @param configurationAlias An alias by which to refer to this configuration data.
      * Defaults to `default` alias. Hook types currently support default configuration alias.
      */
     override fun configurationAlias(configurationAlias: String) {
@@ -163,7 +161,7 @@ public interface CfnHookTypeConfigProps {
     override fun configuration(): String = unwrap(this).getConfiguration()
 
     /**
-     * Specifies the activated Hook type configuration, in this AWS account and AWS Region .
+     * An alias by which to refer to this configuration data.
      *
      * Defaults to `default` alias. Hook types currently support default configuration alias.
      *

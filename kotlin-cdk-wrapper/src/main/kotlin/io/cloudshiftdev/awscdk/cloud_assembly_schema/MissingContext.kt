@@ -187,6 +187,18 @@ public interface MissingContext {
     /**
      * @param props A set of provider-specific options. 
      */
+    public fun props(props: CcApiContextQuery)
+
+    /**
+     * @param props A set of provider-specific options. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("17380b92bb69f0b7aedcb9cb555ec3d75cd87f11f16004796449e600a007383a")
+    public fun props(props: CcApiContextQuery.Builder.() -> Unit)
+
+    /**
+     * @param props A set of provider-specific options. 
+     */
     public fun props(props: PluginContextQuery)
 
     /**
@@ -362,6 +374,21 @@ public interface MissingContext {
     @JvmName("d95473f43c50367d266fb9490a73e778b09df9a3be0848c5ecd7808d0de2c0ef")
     override fun props(props: KeyContextQuery.Builder.() -> Unit): Unit =
         props(KeyContextQuery(props))
+
+    /**
+     * @param props A set of provider-specific options. 
+     */
+    override fun props(props: CcApiContextQuery) {
+      cdkBuilder.props(props.let(CcApiContextQuery.Companion::unwrap))
+    }
+
+    /**
+     * @param props A set of provider-specific options. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("17380b92bb69f0b7aedcb9cb555ec3d75cd87f11f16004796449e600a007383a")
+    override fun props(props: CcApiContextQuery.Builder.() -> Unit): Unit =
+        props(CcApiContextQuery(props))
 
     /**
      * @param props A set of provider-specific options. 

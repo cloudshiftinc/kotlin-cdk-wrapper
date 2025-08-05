@@ -244,7 +244,7 @@ public interface CfnStateMachineProps {
      *
      * Substitutions must follow the syntax: `${key_name}` or `${variable_1,variable_2,...}` .
      */
-    public fun definitionSubstitutions(definitionSubstitutions: IResolvable)
+    public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>)
 
     /**
      * @param definitionSubstitutions A map (string to string) that specifies the mappings for
@@ -255,7 +255,7 @@ public interface CfnStateMachineProps {
      *
      * Substitutions must follow the syntax: `${key_name}` or `${variable_1,variable_2,...}` .
      */
-    public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>)
+    public fun definitionSubstitutions(definitionSubstitutions: IResolvable)
 
     /**
      * @param encryptionConfiguration Encryption configuration for the state machine.
@@ -442,8 +442,8 @@ public interface CfnStateMachineProps {
      *
      * Substitutions must follow the syntax: `${key_name}` or `${variable_1,variable_2,...}` .
      */
-    override fun definitionSubstitutions(definitionSubstitutions: IResolvable) {
-      cdkBuilder.definitionSubstitutions(definitionSubstitutions.let(IResolvable.Companion::unwrap))
+    override fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
+      cdkBuilder.definitionSubstitutions(definitionSubstitutions)
     }
 
     /**
@@ -455,8 +455,8 @@ public interface CfnStateMachineProps {
      *
      * Substitutions must follow the syntax: `${key_name}` or `${variable_1,variable_2,...}` .
      */
-    override fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
-      cdkBuilder.definitionSubstitutions(definitionSubstitutions)
+    override fun definitionSubstitutions(definitionSubstitutions: IResolvable) {
+      cdkBuilder.definitionSubstitutions(definitionSubstitutions.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -914,13 +914,13 @@ public open class CfnIdNamespace(
        * @param providerConfiguration An object which defines any additional configurations required
        * by the provider service.
        */
-      public fun providerConfiguration(providerConfiguration: IResolvable)
+      public fun providerConfiguration(providerConfiguration: Map<String, String>)
 
       /**
        * @param providerConfiguration An object which defines any additional configurations required
        * by the provider service.
        */
-      public fun providerConfiguration(providerConfiguration: Map<String, String>)
+      public fun providerConfiguration(providerConfiguration: IResolvable)
 
       /**
        * @param providerServiceArn The Amazon Resource Name (ARN) of the provider service. 
@@ -938,16 +938,16 @@ public open class CfnIdNamespace(
        * @param providerConfiguration An object which defines any additional configurations required
        * by the provider service.
        */
-      override fun providerConfiguration(providerConfiguration: IResolvable) {
-        cdkBuilder.providerConfiguration(providerConfiguration.let(IResolvable.Companion::unwrap))
+      override fun providerConfiguration(providerConfiguration: Map<String, String>) {
+        cdkBuilder.providerConfiguration(providerConfiguration)
       }
 
       /**
        * @param providerConfiguration An object which defines any additional configurations required
        * by the provider service.
        */
-      override fun providerConfiguration(providerConfiguration: Map<String, String>) {
-        cdkBuilder.providerConfiguration(providerConfiguration)
+      override fun providerConfiguration(providerConfiguration: IResolvable) {
+        cdkBuilder.providerConfiguration(providerConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**

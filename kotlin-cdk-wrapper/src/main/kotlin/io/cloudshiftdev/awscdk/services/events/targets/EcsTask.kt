@@ -31,18 +31,18 @@ import kotlin.jvm.JvmName
  *
  * ```
  * import io.cloudshiftdev.awscdk.services.ecs.*;
- * import io.cloudshiftdev.awscdk.services.ec2.*;
  * ICluster cluster;
  * TaskDefinition taskDefinition;
  * Rule rule = Rule.Builder.create(this, "Rule")
  * .schedule(Schedule.rate(Duration.hours(1)))
  * .build();
- * rule.addTarget(
- * EcsTask.Builder.create()
+ * rule.addTarget(EcsTask.Builder.create()
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
- * .assignPublicIp(true)
- * .subnetSelection(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build())
+ * .taskCount(1)
+ * // Overrides the cpu and memory values in the task definition
+ * .cpu("512")
+ * .memory("512")
  * .build());
  * ```
  */
@@ -60,7 +60,7 @@ public open class EcsTask(
   /**
    * Allows using tasks as target of EventBridge events.
    *
-   * @param _rule 
+   * @param rule 
    * @param _id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
@@ -69,7 +69,7 @@ public open class EcsTask(
   /**
    * Allows using tasks as target of EventBridge events.
    *
-   * @param _rule 
+   * @param rule 
    * @param _id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
@@ -130,6 +130,15 @@ public open class EcsTask(
     public fun containerOverrides(vararg containerOverrides: ContainerOverride)
 
     /**
+     * The CPU override for the task.
+     *
+     * Default: - The task definition's CPU value
+     *
+     * @param cpu The CPU override for the task. 
+     */
+    public fun cpu(cpu: String)
+
+    /**
      * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a
      * dead-letter
      * queue](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html#dlq-considerations).
@@ -162,6 +171,71 @@ public open class EcsTask(
     public fun enableExecuteCommand(enableExecuteCommand: Boolean)
 
     /**
+     * The ephemeral storage setting override for the task.
+     *
+     * NOTE: This parameter is only supported for tasks hosted on Fargate that use the following
+     * platform versions:
+     *
+     * * Linux platform version 1.4.0 or later.
+     * * Windows platform version 1.0.0 or later.
+     *
+     * Default: - The task definition's ephemeral storage value
+     *
+     * @param ephemeralStorage The ephemeral storage setting override for the task. 
+     */
+    public fun ephemeralStorage(ephemeralStorage: EphemeralStorageOverride)
+
+    /**
+     * The ephemeral storage setting override for the task.
+     *
+     * NOTE: This parameter is only supported for tasks hosted on Fargate that use the following
+     * platform versions:
+     *
+     * * Linux platform version 1.4.0 or later.
+     * * Windows platform version 1.0.0 or later.
+     *
+     * Default: - The task definition's ephemeral storage value
+     *
+     * @param ephemeralStorage The ephemeral storage setting override for the task. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("aa9e7a931c33ebc2ea97cfa69c101fee3caf3fd00383d49fbdc234cbee4d58ff")
+    public fun ephemeralStorage(ephemeralStorage: EphemeralStorageOverride.Builder.() -> Unit)
+
+    /**
+     * The execution role for the task.
+     *
+     * The Amazon Resource Name (ARN) of the task execution role override for the task.
+     *
+     * Default: - The task definition's execution role
+     *
+     * @param executionRole The execution role for the task. 
+     */
+    public fun executionRole(executionRole: IRole)
+
+    /**
+     * The Elastic Inference accelerator override for the task.
+     *
+     * Default: - The task definition's inference accelerator overrides
+     *
+     * @param inferenceAcceleratorOverrides The Elastic Inference accelerator override for the task.
+     * 
+     */
+    public
+        fun inferenceAcceleratorOverrides(inferenceAcceleratorOverrides: List<InferenceAcceleratorOverride>)
+
+    /**
+     * The Elastic Inference accelerator override for the task.
+     *
+     * Default: - The task definition's inference accelerator overrides
+     *
+     * @param inferenceAcceleratorOverrides The Elastic Inference accelerator override for the task.
+     * 
+     */
+    public fun inferenceAcceleratorOverrides(vararg
+        inferenceAcceleratorOverrides: InferenceAcceleratorOverride)
+
+    /**
      * Specifies the launch type on which your task is running.
      *
      * The launch type that you specify here
@@ -185,6 +259,15 @@ public open class EcsTask(
      * processing. 
      */
     public fun maxEventAge(maxEventAge: Duration)
+
+    /**
+     * The memory override for the task.
+     *
+     * Default: - The task definition's memory value
+     *
+     * @param memory The memory override for the task. 
+     */
+    public fun memory(memory: String)
 
     /**
      * The platform version on which to run your task.
@@ -317,6 +400,15 @@ public open class EcsTask(
      * @param taskDefinition Task Definition of the task that should be started. 
      */
     public fun taskDefinition(taskDefinition: ITaskDefinition)
+
+    /**
+     * The IAM role for the task.
+     *
+     * Default: - The task definition's task role
+     *
+     * @param taskRole The IAM role for the task. 
+     */
+    public fun taskRole(taskRole: IRole)
   }
 
   private class BuilderImpl : Builder {
@@ -370,6 +462,17 @@ public open class EcsTask(
         containerOverrides(containerOverrides.toList())
 
     /**
+     * The CPU override for the task.
+     *
+     * Default: - The task definition's CPU value
+     *
+     * @param cpu The CPU override for the task. 
+     */
+    override fun cpu(cpu: String) {
+      cdkBuilder.cpu(cpu)
+    }
+
+    /**
      * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a
      * dead-letter
      * queue](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html#dlq-considerations).
@@ -406,6 +509,79 @@ public open class EcsTask(
     }
 
     /**
+     * The ephemeral storage setting override for the task.
+     *
+     * NOTE: This parameter is only supported for tasks hosted on Fargate that use the following
+     * platform versions:
+     *
+     * * Linux platform version 1.4.0 or later.
+     * * Windows platform version 1.0.0 or later.
+     *
+     * Default: - The task definition's ephemeral storage value
+     *
+     * @param ephemeralStorage The ephemeral storage setting override for the task. 
+     */
+    override fun ephemeralStorage(ephemeralStorage: EphemeralStorageOverride) {
+      cdkBuilder.ephemeralStorage(ephemeralStorage.let(EphemeralStorageOverride.Companion::unwrap))
+    }
+
+    /**
+     * The ephemeral storage setting override for the task.
+     *
+     * NOTE: This parameter is only supported for tasks hosted on Fargate that use the following
+     * platform versions:
+     *
+     * * Linux platform version 1.4.0 or later.
+     * * Windows platform version 1.0.0 or later.
+     *
+     * Default: - The task definition's ephemeral storage value
+     *
+     * @param ephemeralStorage The ephemeral storage setting override for the task. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("aa9e7a931c33ebc2ea97cfa69c101fee3caf3fd00383d49fbdc234cbee4d58ff")
+    override fun ephemeralStorage(ephemeralStorage: EphemeralStorageOverride.Builder.() -> Unit):
+        Unit = ephemeralStorage(EphemeralStorageOverride(ephemeralStorage))
+
+    /**
+     * The execution role for the task.
+     *
+     * The Amazon Resource Name (ARN) of the task execution role override for the task.
+     *
+     * Default: - The task definition's execution role
+     *
+     * @param executionRole The execution role for the task. 
+     */
+    override fun executionRole(executionRole: IRole) {
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
+    }
+
+    /**
+     * The Elastic Inference accelerator override for the task.
+     *
+     * Default: - The task definition's inference accelerator overrides
+     *
+     * @param inferenceAcceleratorOverrides The Elastic Inference accelerator override for the task.
+     * 
+     */
+    override
+        fun inferenceAcceleratorOverrides(inferenceAcceleratorOverrides: List<InferenceAcceleratorOverride>) {
+      cdkBuilder.inferenceAcceleratorOverrides(inferenceAcceleratorOverrides.map(InferenceAcceleratorOverride.Companion::unwrap))
+    }
+
+    /**
+     * The Elastic Inference accelerator override for the task.
+     *
+     * Default: - The task definition's inference accelerator overrides
+     *
+     * @param inferenceAcceleratorOverrides The Elastic Inference accelerator override for the task.
+     * 
+     */
+    override fun inferenceAcceleratorOverrides(vararg
+        inferenceAcceleratorOverrides: InferenceAcceleratorOverride): Unit =
+        inferenceAcceleratorOverrides(inferenceAcceleratorOverrides.toList())
+
+    /**
      * Specifies the launch type on which your task is running.
      *
      * The launch type that you specify here
@@ -432,6 +608,17 @@ public open class EcsTask(
      */
     override fun maxEventAge(maxEventAge: Duration) {
       cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * The memory override for the task.
+     *
+     * Default: - The task definition's memory value
+     *
+     * @param memory The memory override for the task. 
+     */
+    override fun memory(memory: String) {
+      cdkBuilder.memory(memory)
     }
 
     /**
@@ -584,6 +771,17 @@ public open class EcsTask(
      */
     override fun taskDefinition(taskDefinition: ITaskDefinition) {
       cdkBuilder.taskDefinition(taskDefinition.let(ITaskDefinition.Companion::unwrap))
+    }
+
+    /**
+     * The IAM role for the task.
+     *
+     * Default: - The task definition's task role
+     *
+     * @param taskRole The IAM role for the task. 
+     */
+    override fun taskRole(taskRole: IRole) {
+      cdkBuilder.taskRole(taskRole.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.events.targets.EcsTask = cdkBuilder.build()

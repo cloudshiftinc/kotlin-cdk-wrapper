@@ -75,6 +75,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .value("value")
  * .build()))
  * .throughput(123)
+ * .volumeInitializationRate(123)
  * .volumeType("volumeType")
  * .build();
  * ```
@@ -278,6 +279,20 @@ public open class CfnVolume(
    */
   public open fun throughput(`value`: Number) {
     unwrap(this).setThroughput(`value`)
+  }
+
+  /**
+   * Specifies the Amazon EBS Provisioned Rate for Volume Initialization (volume initialization
+   * rate), in MiB/s, at which to download the snapshot blocks from Amazon S3 to the volume.
+   */
+  public open fun volumeInitializationRate(): Number? = unwrap(this).getVolumeInitializationRate()
+
+  /**
+   * Specifies the Amazon EBS Provisioned Rate for Volume Initialization (volume initialization
+   * rate), in MiB/s, at which to download the snapshot blocks from Amazon S3 to the volume.
+   */
+  public open fun volumeInitializationRate(`value`: Number) {
+    unwrap(this).setVolumeInitializationRate(`value`)
   }
 
   /**
@@ -514,6 +529,39 @@ public open class CfnVolume(
      * @param throughput The throughput to provision for a volume, with a maximum of 1,000 MiB/s. 
      */
     public fun throughput(throughput: Number)
+
+    /**
+     * Specifies the Amazon EBS Provisioned Rate for Volume Initialization (volume initialization
+     * rate), in MiB/s, at which to download the snapshot blocks from Amazon S3 to the volume.
+     *
+     * This is also known as *volume initialization* . Specifying a volume initialization rate
+     * ensures that the volume is initialized at a predictable and consistent rate after creation.
+     *
+     * This parameter is supported only for volumes created from snapshots. Omit this parameter if:
+     *
+     * * You want to create the volume using fast snapshot restore. You must specify a snapshot that
+     * is enabled for fast snapshot restore. In this case, the volume is fully initialized at creation.
+     *
+     *
+     * If you specify a snapshot that is enabled for fast snapshot restore and a volume
+     * initialization rate, the volume will be initialized at the specified rate instead of fast
+     * snapshot restore.
+     *
+     *
+     * * You want to create a volume that is initialized at the default rate.
+     *
+     * For more information, see [Initialize Amazon EBS
+     * volumes](https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html) in the *Amazon
+     * EC2 User Guide* .
+     *
+     * Valid range: 100 - 300 MiB/s
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-volume.html#cfn-ec2-volume-volumeinitializationrate)
+     * @param volumeInitializationRate Specifies the Amazon EBS Provisioned Rate for Volume
+     * Initialization (volume initialization rate), in MiB/s, at which to download the snapshot blocks
+     * from Amazon S3 to the volume. 
+     */
+    public fun volumeInitializationRate(volumeInitializationRate: Number)
 
     /**
      * The volume type. This parameter can be one of the following values:.
@@ -782,6 +830,41 @@ public open class CfnVolume(
      */
     override fun throughput(throughput: Number) {
       cdkBuilder.throughput(throughput)
+    }
+
+    /**
+     * Specifies the Amazon EBS Provisioned Rate for Volume Initialization (volume initialization
+     * rate), in MiB/s, at which to download the snapshot blocks from Amazon S3 to the volume.
+     *
+     * This is also known as *volume initialization* . Specifying a volume initialization rate
+     * ensures that the volume is initialized at a predictable and consistent rate after creation.
+     *
+     * This parameter is supported only for volumes created from snapshots. Omit this parameter if:
+     *
+     * * You want to create the volume using fast snapshot restore. You must specify a snapshot that
+     * is enabled for fast snapshot restore. In this case, the volume is fully initialized at creation.
+     *
+     *
+     * If you specify a snapshot that is enabled for fast snapshot restore and a volume
+     * initialization rate, the volume will be initialized at the specified rate instead of fast
+     * snapshot restore.
+     *
+     *
+     * * You want to create a volume that is initialized at the default rate.
+     *
+     * For more information, see [Initialize Amazon EBS
+     * volumes](https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html) in the *Amazon
+     * EC2 User Guide* .
+     *
+     * Valid range: 100 - 300 MiB/s
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-volume.html#cfn-ec2-volume-volumeinitializationrate)
+     * @param volumeInitializationRate Specifies the Amazon EBS Provisioned Rate for Volume
+     * Initialization (volume initialization rate), in MiB/s, at which to download the snapshot blocks
+     * from Amazon S3 to the volume. 
+     */
+    override fun volumeInitializationRate(volumeInitializationRate: Number) {
+      cdkBuilder.volumeInitializationRate(volumeInitializationRate)
     }
 
     /**

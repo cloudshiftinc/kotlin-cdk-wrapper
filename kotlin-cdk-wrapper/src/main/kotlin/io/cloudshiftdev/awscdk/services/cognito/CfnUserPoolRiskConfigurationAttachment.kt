@@ -118,14 +118,14 @@ public open class CfnUserPoolRiskConfigurationAttachment(
 
   /**
    * The settings for automated responses and notification templates for adaptive authentication
-   * with advanced security features.
+   * with threat protection.
    */
   public open fun accountTakeoverRiskConfiguration(): Any? =
       unwrap(this).getAccountTakeoverRiskConfiguration()
 
   /**
    * The settings for automated responses and notification templates for adaptive authentication
-   * with advanced security features.
+   * with threat protection.
    */
   public open fun accountTakeoverRiskConfiguration(`value`: IResolvable) {
     unwrap(this).setAccountTakeoverRiskConfiguration(`value`.let(IResolvable.Companion::unwrap))
@@ -133,7 +133,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
 
   /**
    * The settings for automated responses and notification templates for adaptive authentication
-   * with advanced security features.
+   * with threat protection.
    */
   public open
       fun accountTakeoverRiskConfiguration(`value`: AccountTakeoverRiskConfigurationTypeProperty) {
@@ -142,7 +142,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
 
   /**
    * The settings for automated responses and notification templates for adaptive authentication
-   * with advanced security features.
+   * with threat protection.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("a2d693232dc81f90060219d90f0f03de79d833bbb55b26aa0ac11a65de8002d6")
@@ -163,23 +163,23 @@ public open class CfnUserPoolRiskConfigurationAttachment(
   }
 
   /**
-   * Settings for compromised-credentials actions and authentication types with advanced security
-   * features in full-function `ENFORCED` mode.
+   * Settings for compromised-credentials actions and authentication types with threat protection in
+   * full-function `ENFORCED` mode.
    */
   public open fun compromisedCredentialsRiskConfiguration(): Any? =
       unwrap(this).getCompromisedCredentialsRiskConfiguration()
 
   /**
-   * Settings for compromised-credentials actions and authentication types with advanced security
-   * features in full-function `ENFORCED` mode.
+   * Settings for compromised-credentials actions and authentication types with threat protection in
+   * full-function `ENFORCED` mode.
    */
   public open fun compromisedCredentialsRiskConfiguration(`value`: IResolvable) {
     unwrap(this).setCompromisedCredentialsRiskConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Settings for compromised-credentials actions and authentication types with advanced security
-   * features in full-function `ENFORCED` mode.
+   * Settings for compromised-credentials actions and authentication types with threat protection in
+   * full-function `ENFORCED` mode.
    */
   public open
       fun compromisedCredentialsRiskConfiguration(`value`: CompromisedCredentialsRiskConfigurationTypeProperty) {
@@ -187,8 +187,8 @@ public open class CfnUserPoolRiskConfigurationAttachment(
   }
 
   /**
-   * Settings for compromised-credentials actions and authentication types with advanced security
-   * features in full-function `ENFORCED` mode.
+   * Settings for compromised-credentials actions and authentication types with threat protection in
+   * full-function `ENFORCED` mode.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("e29eeb48e5960f8d9dcf803c25650c686eb50039e88d6d55c7735e6f3c6cc394")
@@ -258,32 +258,32 @@ public open class CfnUserPoolRiskConfigurationAttachment(
   public interface Builder {
     /**
      * The settings for automated responses and notification templates for adaptive authentication
-     * with advanced security features.
+     * with threat protection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration)
      * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
-     * templates for adaptive authentication with advanced security features. 
+     * templates for adaptive authentication with threat protection. 
      */
     public fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: IResolvable)
 
     /**
      * The settings for automated responses and notification templates for adaptive authentication
-     * with advanced security features.
+     * with threat protection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration)
      * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
-     * templates for adaptive authentication with advanced security features. 
+     * templates for adaptive authentication with threat protection. 
      */
     public
         fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: AccountTakeoverRiskConfigurationTypeProperty)
 
     /**
      * The settings for automated responses and notification templates for adaptive authentication
-     * with advanced security features.
+     * with threat protection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration)
      * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
-     * templates for adaptive authentication with advanced security features. 
+     * templates for adaptive authentication with threat protection. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("721ca80ae4ed9e75bccc80f643c64dc5e542b0513fb094e43bea7d923222a6af")
@@ -302,34 +302,34 @@ public open class CfnUserPoolRiskConfigurationAttachment(
     public fun clientId(clientId: String)
 
     /**
-     * Settings for compromised-credentials actions and authentication types with advanced security
-     * features in full-function `ENFORCED` mode.
+     * Settings for compromised-credentials actions and authentication types with threat protection
+     * in full-function `ENFORCED` mode.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration)
      * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
-     * and authentication types with advanced security features in full-function `ENFORCED` mode. 
+     * and authentication types with threat protection in full-function `ENFORCED` mode. 
      */
     public
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: IResolvable)
 
     /**
-     * Settings for compromised-credentials actions and authentication types with advanced security
-     * features in full-function `ENFORCED` mode.
+     * Settings for compromised-credentials actions and authentication types with threat protection
+     * in full-function `ENFORCED` mode.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration)
      * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
-     * and authentication types with advanced security features in full-function `ENFORCED` mode. 
+     * and authentication types with threat protection in full-function `ENFORCED` mode. 
      */
     public
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: CompromisedCredentialsRiskConfigurationTypeProperty)
 
     /**
-     * Settings for compromised-credentials actions and authentication types with advanced security
-     * features in full-function `ENFORCED` mode.
+     * Settings for compromised-credentials actions and authentication types with threat protection
+     * in full-function `ENFORCED` mode.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration)
      * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
-     * and authentication types with advanced security features in full-function `ENFORCED` mode. 
+     * and authentication types with threat protection in full-function `ENFORCED` mode. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d67967ce232d079c4e109c209c5a8c352c9d0c457a9de7ff64f55a6bbdf67b5d")
@@ -390,11 +390,11 @@ public open class CfnUserPoolRiskConfigurationAttachment(
 
     /**
      * The settings for automated responses and notification templates for adaptive authentication
-     * with advanced security features.
+     * with threat protection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration)
      * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
-     * templates for adaptive authentication with advanced security features. 
+     * templates for adaptive authentication with threat protection. 
      */
     override fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: IResolvable) {
       cdkBuilder.accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration.let(IResolvable.Companion::unwrap))
@@ -402,11 +402,11 @@ public open class CfnUserPoolRiskConfigurationAttachment(
 
     /**
      * The settings for automated responses and notification templates for adaptive authentication
-     * with advanced security features.
+     * with threat protection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration)
      * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
-     * templates for adaptive authentication with advanced security features. 
+     * templates for adaptive authentication with threat protection. 
      */
     override
         fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: AccountTakeoverRiskConfigurationTypeProperty) {
@@ -415,11 +415,11 @@ public open class CfnUserPoolRiskConfigurationAttachment(
 
     /**
      * The settings for automated responses and notification templates for adaptive authentication
-     * with advanced security features.
+     * with threat protection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration)
      * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
-     * templates for adaptive authentication with advanced security features. 
+     * templates for adaptive authentication with threat protection. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("721ca80ae4ed9e75bccc80f643c64dc5e542b0513fb094e43bea7d923222a6af")
@@ -442,12 +442,12 @@ public open class CfnUserPoolRiskConfigurationAttachment(
     }
 
     /**
-     * Settings for compromised-credentials actions and authentication types with advanced security
-     * features in full-function `ENFORCED` mode.
+     * Settings for compromised-credentials actions and authentication types with threat protection
+     * in full-function `ENFORCED` mode.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration)
      * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
-     * and authentication types with advanced security features in full-function `ENFORCED` mode. 
+     * and authentication types with threat protection in full-function `ENFORCED` mode. 
      */
     override
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: IResolvable) {
@@ -455,12 +455,12 @@ public open class CfnUserPoolRiskConfigurationAttachment(
     }
 
     /**
-     * Settings for compromised-credentials actions and authentication types with advanced security
-     * features in full-function `ENFORCED` mode.
+     * Settings for compromised-credentials actions and authentication types with threat protection
+     * in full-function `ENFORCED` mode.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration)
      * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
-     * and authentication types with advanced security features in full-function `ENFORCED` mode. 
+     * and authentication types with threat protection in full-function `ENFORCED` mode. 
      */
     override
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: CompromisedCredentialsRiskConfigurationTypeProperty) {
@@ -468,12 +468,12 @@ public open class CfnUserPoolRiskConfigurationAttachment(
     }
 
     /**
-     * Settings for compromised-credentials actions and authentication types with advanced security
-     * features in full-function `ENFORCED` mode.
+     * Settings for compromised-credentials actions and authentication types with threat protection
+     * in full-function `ENFORCED` mode.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration)
      * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
-     * and authentication types with advanced security features in full-function `ENFORCED` mode. 
+     * and authentication types with threat protection in full-function `ENFORCED` mode. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d67967ce232d079c4e109c209c5a8c352c9d0c457a9de7ff64f55a6bbdf67b5d")
@@ -565,12 +565,6 @@ public open class CfnUserPoolRiskConfigurationAttachment(
    * `ENFORCED` , mode.
    *
    * You can assign an action to each risk level that advanced security features evaluates.
-   *
-   * This data type is a request parameter of
-   * [SetRiskConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetRiskConfiguration.html)
-   * and a response parameter of
-   * [DescribeRiskConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeRiskConfiguration.html)
-   * .
    *
    * Example:
    *
@@ -751,12 +745,6 @@ public open class CfnUserPoolRiskConfigurationAttachment(
    * A list of account-takeover actions for each level of risk that Amazon Cognito might assess with
    * advanced security features.
    *
-   * This data type is a request parameter of
-   * [SetRiskConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetRiskConfiguration.html)
-   * and a response parameter of
-   * [DescribeRiskConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeRiskConfiguration.html)
-   * .
-   *
    * Example:
    *
    * ```
@@ -784,21 +772,21 @@ public open class CfnUserPoolRiskConfigurationAttachment(
    */
   public interface AccountTakeoverActionsTypeProperty {
     /**
-     * The action that you assign to a high-risk assessment by advanced security features.
+     * The action that you assign to a high-risk assessment by threat protection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-highaction)
      */
     public fun highAction(): Any? = unwrap(this).getHighAction()
 
     /**
-     * The action that you assign to a low-risk assessment by advanced security features.
+     * The action that you assign to a low-risk assessment by threat protection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-lowaction)
      */
     public fun lowAction(): Any? = unwrap(this).getLowAction()
 
     /**
-     * The action that you assign to a medium-risk assessment by advanced security features.
+     * The action that you assign to a medium-risk assessment by threat protection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-mediumaction)
      */
@@ -810,60 +798,57 @@ public open class CfnUserPoolRiskConfigurationAttachment(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param highAction The action that you assign to a high-risk assessment by advanced security
-       * features.
+       * @param highAction The action that you assign to a high-risk assessment by threat
+       * protection.
        */
       public fun highAction(highAction: IResolvable)
 
       /**
-       * @param highAction The action that you assign to a high-risk assessment by advanced security
-       * features.
+       * @param highAction The action that you assign to a high-risk assessment by threat
+       * protection.
        */
       public fun highAction(highAction: AccountTakeoverActionTypeProperty)
 
       /**
-       * @param highAction The action that you assign to a high-risk assessment by advanced security
-       * features.
+       * @param highAction The action that you assign to a high-risk assessment by threat
+       * protection.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("70360ca930418d113c3f4f29d74bc50c78c8d0a8793e26af75eb1c32ddf009d2")
       public fun highAction(highAction: AccountTakeoverActionTypeProperty.Builder.() -> Unit)
 
       /**
-       * @param lowAction The action that you assign to a low-risk assessment by advanced security
-       * features.
+       * @param lowAction The action that you assign to a low-risk assessment by threat protection.
        */
       public fun lowAction(lowAction: IResolvable)
 
       /**
-       * @param lowAction The action that you assign to a low-risk assessment by advanced security
-       * features.
+       * @param lowAction The action that you assign to a low-risk assessment by threat protection.
        */
       public fun lowAction(lowAction: AccountTakeoverActionTypeProperty)
 
       /**
-       * @param lowAction The action that you assign to a low-risk assessment by advanced security
-       * features.
+       * @param lowAction The action that you assign to a low-risk assessment by threat protection.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fb015d149cc8017ed15bddd8e6ff46fc0e53195f831d12fc31fe005305b98829")
       public fun lowAction(lowAction: AccountTakeoverActionTypeProperty.Builder.() -> Unit)
 
       /**
-       * @param mediumAction The action that you assign to a medium-risk assessment by advanced
-       * security features.
+       * @param mediumAction The action that you assign to a medium-risk assessment by threat
+       * protection.
        */
       public fun mediumAction(mediumAction: IResolvable)
 
       /**
-       * @param mediumAction The action that you assign to a medium-risk assessment by advanced
-       * security features.
+       * @param mediumAction The action that you assign to a medium-risk assessment by threat
+       * protection.
        */
       public fun mediumAction(mediumAction: AccountTakeoverActionTypeProperty)
 
       /**
-       * @param mediumAction The action that you assign to a medium-risk assessment by advanced
-       * security features.
+       * @param mediumAction The action that you assign to a medium-risk assessment by threat
+       * protection.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d0be028fa84e1ccf8a6615b4fb0fa99924be459f987b9f079eaf28bcdf633f50")
@@ -877,24 +862,24 @@ public open class CfnUserPoolRiskConfigurationAttachment(
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty.builder()
 
       /**
-       * @param highAction The action that you assign to a high-risk assessment by advanced security
-       * features.
+       * @param highAction The action that you assign to a high-risk assessment by threat
+       * protection.
        */
       override fun highAction(highAction: IResolvable) {
         cdkBuilder.highAction(highAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param highAction The action that you assign to a high-risk assessment by advanced security
-       * features.
+       * @param highAction The action that you assign to a high-risk assessment by threat
+       * protection.
        */
       override fun highAction(highAction: AccountTakeoverActionTypeProperty) {
         cdkBuilder.highAction(highAction.let(AccountTakeoverActionTypeProperty.Companion::unwrap))
       }
 
       /**
-       * @param highAction The action that you assign to a high-risk assessment by advanced security
-       * features.
+       * @param highAction The action that you assign to a high-risk assessment by threat
+       * protection.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("70360ca930418d113c3f4f29d74bc50c78c8d0a8793e26af75eb1c32ddf009d2")
@@ -902,24 +887,21 @@ public open class CfnUserPoolRiskConfigurationAttachment(
           Unit = highAction(AccountTakeoverActionTypeProperty(highAction))
 
       /**
-       * @param lowAction The action that you assign to a low-risk assessment by advanced security
-       * features.
+       * @param lowAction The action that you assign to a low-risk assessment by threat protection.
        */
       override fun lowAction(lowAction: IResolvable) {
         cdkBuilder.lowAction(lowAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param lowAction The action that you assign to a low-risk assessment by advanced security
-       * features.
+       * @param lowAction The action that you assign to a low-risk assessment by threat protection.
        */
       override fun lowAction(lowAction: AccountTakeoverActionTypeProperty) {
         cdkBuilder.lowAction(lowAction.let(AccountTakeoverActionTypeProperty.Companion::unwrap))
       }
 
       /**
-       * @param lowAction The action that you assign to a low-risk assessment by advanced security
-       * features.
+       * @param lowAction The action that you assign to a low-risk assessment by threat protection.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fb015d149cc8017ed15bddd8e6ff46fc0e53195f831d12fc31fe005305b98829")
@@ -927,24 +909,24 @@ public open class CfnUserPoolRiskConfigurationAttachment(
           = lowAction(AccountTakeoverActionTypeProperty(lowAction))
 
       /**
-       * @param mediumAction The action that you assign to a medium-risk assessment by advanced
-       * security features.
+       * @param mediumAction The action that you assign to a medium-risk assessment by threat
+       * protection.
        */
       override fun mediumAction(mediumAction: IResolvable) {
         cdkBuilder.mediumAction(mediumAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param mediumAction The action that you assign to a medium-risk assessment by advanced
-       * security features.
+       * @param mediumAction The action that you assign to a medium-risk assessment by threat
+       * protection.
        */
       override fun mediumAction(mediumAction: AccountTakeoverActionTypeProperty) {
         cdkBuilder.mediumAction(mediumAction.let(AccountTakeoverActionTypeProperty.Companion::unwrap))
       }
 
       /**
-       * @param mediumAction The action that you assign to a medium-risk assessment by advanced
-       * security features.
+       * @param mediumAction The action that you assign to a medium-risk assessment by threat
+       * protection.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d0be028fa84e1ccf8a6615b4fb0fa99924be459f987b9f079eaf28bcdf633f50")
@@ -961,21 +943,21 @@ public open class CfnUserPoolRiskConfigurationAttachment(
     ) : CdkObject(cdkObject),
         AccountTakeoverActionsTypeProperty {
       /**
-       * The action that you assign to a high-risk assessment by advanced security features.
+       * The action that you assign to a high-risk assessment by threat protection.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-highaction)
        */
       override fun highAction(): Any? = unwrap(this).getHighAction()
 
       /**
-       * The action that you assign to a low-risk assessment by advanced security features.
+       * The action that you assign to a low-risk assessment by threat protection.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-lowaction)
        */
       override fun lowAction(): Any? = unwrap(this).getLowAction()
 
       /**
-       * The action that you assign to a medium-risk assessment by advanced security features.
+       * The action that you assign to a medium-risk assessment by threat protection.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-mediumaction)
        */
@@ -1004,12 +986,6 @@ public open class CfnUserPoolRiskConfigurationAttachment(
   /**
    * The settings for automated responses and notification templates for adaptive authentication
    * with advanced security features.
-   *
-   * This data type is a request parameter of
-   * [SetRiskConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetRiskConfiguration.html)
-   * and a response parameter of
-   * [DescribeRiskConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeRiskConfiguration.html)
-   * .
    *
    * Example:
    *
@@ -1066,15 +1042,15 @@ public open class CfnUserPoolRiskConfigurationAttachment(
   public interface AccountTakeoverRiskConfigurationTypeProperty {
     /**
      * A list of account-takeover actions for each level of risk that Amazon Cognito might assess
-     * with advanced security features.
+     * with threat protection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype-actions)
      */
     public fun actions(): Any
 
     /**
-     * The settings for composing and sending an email message when advanced security features
-     * assesses a risk level with adaptive authentication.
+     * The settings for composing and sending an email message when threat protection assesses a
+     * risk level with adaptive authentication.
      *
      * When you choose to notify users in `AccountTakeoverRiskConfiguration` , Amazon Cognito sends
      * an email message using the method and template that you set with this data type.
@@ -1090,19 +1066,19 @@ public open class CfnUserPoolRiskConfigurationAttachment(
     public interface Builder {
       /**
        * @param actions A list of account-takeover actions for each level of risk that Amazon
-       * Cognito might assess with advanced security features. 
+       * Cognito might assess with threat protection. 
        */
       public fun actions(actions: IResolvable)
 
       /**
        * @param actions A list of account-takeover actions for each level of risk that Amazon
-       * Cognito might assess with advanced security features. 
+       * Cognito might assess with threat protection. 
        */
       public fun actions(actions: AccountTakeoverActionsTypeProperty)
 
       /**
        * @param actions A list of account-takeover actions for each level of risk that Amazon
-       * Cognito might assess with advanced security features. 
+       * Cognito might assess with threat protection. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f2c0e56172104dcc61cc0a874470d33913d309d539be3f24d6c0325b8d990990")
@@ -1110,7 +1086,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
 
       /**
        * @param notifyConfiguration The settings for composing and sending an email message when
-       * advanced security features assesses a risk level with adaptive authentication.
+       * threat protection assesses a risk level with adaptive authentication.
        * When you choose to notify users in `AccountTakeoverRiskConfiguration` , Amazon Cognito
        * sends an email message using the method and template that you set with this data type.
        */
@@ -1118,7 +1094,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
 
       /**
        * @param notifyConfiguration The settings for composing and sending an email message when
-       * advanced security features assesses a risk level with adaptive authentication.
+       * threat protection assesses a risk level with adaptive authentication.
        * When you choose to notify users in `AccountTakeoverRiskConfiguration` , Amazon Cognito
        * sends an email message using the method and template that you set with this data type.
        */
@@ -1126,7 +1102,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
 
       /**
        * @param notifyConfiguration The settings for composing and sending an email message when
-       * advanced security features assesses a risk level with adaptive authentication.
+       * threat protection assesses a risk level with adaptive authentication.
        * When you choose to notify users in `AccountTakeoverRiskConfiguration` , Amazon Cognito
        * sends an email message using the method and template that you set with this data type.
        */
@@ -1144,7 +1120,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
 
       /**
        * @param actions A list of account-takeover actions for each level of risk that Amazon
-       * Cognito might assess with advanced security features. 
+       * Cognito might assess with threat protection. 
        */
       override fun actions(actions: IResolvable) {
         cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
@@ -1152,7 +1128,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
 
       /**
        * @param actions A list of account-takeover actions for each level of risk that Amazon
-       * Cognito might assess with advanced security features. 
+       * Cognito might assess with threat protection. 
        */
       override fun actions(actions: AccountTakeoverActionsTypeProperty) {
         cdkBuilder.actions(actions.let(AccountTakeoverActionsTypeProperty.Companion::unwrap))
@@ -1160,7 +1136,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
 
       /**
        * @param actions A list of account-takeover actions for each level of risk that Amazon
-       * Cognito might assess with advanced security features. 
+       * Cognito might assess with threat protection. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f2c0e56172104dcc61cc0a874470d33913d309d539be3f24d6c0325b8d990990")
@@ -1169,7 +1145,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
 
       /**
        * @param notifyConfiguration The settings for composing and sending an email message when
-       * advanced security features assesses a risk level with adaptive authentication.
+       * threat protection assesses a risk level with adaptive authentication.
        * When you choose to notify users in `AccountTakeoverRiskConfiguration` , Amazon Cognito
        * sends an email message using the method and template that you set with this data type.
        */
@@ -1179,7 +1155,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
 
       /**
        * @param notifyConfiguration The settings for composing and sending an email message when
-       * advanced security features assesses a risk level with adaptive authentication.
+       * threat protection assesses a risk level with adaptive authentication.
        * When you choose to notify users in `AccountTakeoverRiskConfiguration` , Amazon Cognito
        * sends an email message using the method and template that you set with this data type.
        */
@@ -1189,7 +1165,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
 
       /**
        * @param notifyConfiguration The settings for composing and sending an email message when
-       * advanced security features assesses a risk level with adaptive authentication.
+       * threat protection assesses a risk level with adaptive authentication.
        * When you choose to notify users in `AccountTakeoverRiskConfiguration` , Amazon Cognito
        * sends an email message using the method and template that you set with this data type.
        */
@@ -1210,15 +1186,15 @@ public open class CfnUserPoolRiskConfigurationAttachment(
         AccountTakeoverRiskConfigurationTypeProperty {
       /**
        * A list of account-takeover actions for each level of risk that Amazon Cognito might assess
-       * with advanced security features.
+       * with threat protection.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype-actions)
        */
       override fun actions(): Any = unwrap(this).getActions()
 
       /**
-       * The settings for composing and sending an email message when advanced security features
-       * assesses a risk level with adaptive authentication.
+       * The settings for composing and sending an email message when threat protection assesses a
+       * risk level with adaptive authentication.
        *
        * When you choose to notify users in `AccountTakeoverRiskConfiguration` , Amazon Cognito
        * sends an email message using the method and template that you set with this data type.
@@ -1250,12 +1226,6 @@ public open class CfnUserPoolRiskConfigurationAttachment(
   /**
    * Settings for user pool actions when Amazon Cognito detects compromised credentials with
    * advanced security features in full-function `ENFORCED` mode.
-   *
-   * This data type is a request parameter of
-   * [SetRiskConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetRiskConfiguration.html)
-   * and a response parameter of
-   * [DescribeRiskConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeRiskConfiguration.html)
-   * .
    *
    * Example:
    *
@@ -1344,12 +1314,6 @@ public open class CfnUserPoolRiskConfigurationAttachment(
   /**
    * Settings for compromised-credentials actions and authentication-event sources with advanced
    * security features in full-function `ENFORCED` mode.
-   *
-   * This data type is a request parameter of
-   * [SetRiskConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetRiskConfiguration.html)
-   * and a response parameter of
-   * [DescribeRiskConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeRiskConfiguration.html)
-   * .
    *
    * Example:
    *
@@ -1526,12 +1490,6 @@ public open class CfnUserPoolRiskConfigurationAttachment(
   /**
    * The configuration for Amazon SES email messages that advanced security features sends to a user
    * when your adaptive authentication automated response has a *Notify* action.
-   *
-   * This data type is a request parameter of
-   * [SetRiskConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetRiskConfiguration.html)
-   * and a response parameter of
-   * [DescribeRiskConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeRiskConfiguration.html)
-   * .
    *
    * Example:
    *
@@ -1898,12 +1856,6 @@ public open class CfnUserPoolRiskConfigurationAttachment(
    * The template for email messages that advanced security features sends to a user when your
    * threat protection automated response has a *Notify* action.
    *
-   * This data type is a request parameter of
-   * [SetRiskConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetRiskConfiguration.html)
-   * and a response parameter of
-   * [DescribeRiskConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeRiskConfiguration.html)
-   * .
-   *
    * Example:
    *
    * ```
@@ -2062,12 +2014,6 @@ public open class CfnUserPoolRiskConfigurationAttachment(
   /**
    * Exceptions to the risk evaluation configuration, including always-allow and always-block IP
    * address ranges.
-   *
-   * This data type is a request parameter of
-   * [SetRiskConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetRiskConfiguration.html)
-   * and a response parameter of
-   * [DescribeRiskConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeRiskConfiguration.html)
-   * .
    *
    * Example:
    *

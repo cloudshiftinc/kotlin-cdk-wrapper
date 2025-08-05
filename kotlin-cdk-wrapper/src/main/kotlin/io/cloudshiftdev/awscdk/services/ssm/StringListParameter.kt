@@ -282,6 +282,9 @@ public open class StringListParameter(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ssm.StringListParameter.PROPERTY_INJECTION_ID
+
     public fun fromListParameterAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

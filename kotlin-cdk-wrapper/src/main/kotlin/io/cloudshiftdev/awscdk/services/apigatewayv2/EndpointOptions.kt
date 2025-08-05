@@ -25,6 +25,7 @@ import kotlin.Unit
  * // the properties below are optional
  * .certificateName("certificateName")
  * .endpointType(EndpointType.EDGE)
+ * .ipAddressType(IpAddressType.IPV4)
  * .ownershipCertificate(certificate)
  * .securityPolicy(SecurityPolicy.TLS_1_0)
  * .build();
@@ -52,6 +53,16 @@ public interface EndpointOptions {
    * Default: EndpointType.REGIONAL
    */
   public fun endpointType(): EndpointType? = unwrap(this).getEndpointType()?.let(EndpointType::wrap)
+
+  /**
+   * The IP address types that can invoke the API.
+   *
+   * Default: undefined - AWS default is IPV4
+   *
+   * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-ip-address-type.html)
+   */
+  public fun ipAddressType(): IpAddressType? =
+      unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
 
   /**
    * A public certificate issued by ACM to validate that you own a custom domain.
@@ -98,6 +109,11 @@ public interface EndpointOptions {
     public fun endpointType(endpointType: EndpointType)
 
     /**
+     * @param ipAddressType The IP address types that can invoke the API.
+     */
+    public fun ipAddressType(ipAddressType: IpAddressType)
+
+    /**
      * @param ownershipCertificate A public certificate issued by ACM to validate that you own a
      * custom domain.
      * This parameter is required
@@ -140,6 +156,13 @@ public interface EndpointOptions {
      */
     override fun endpointType(endpointType: EndpointType) {
       cdkBuilder.endpointType(endpointType.let(EndpointType.Companion::unwrap))
+    }
+
+    /**
+     * @param ipAddressType The IP address types that can invoke the API.
+     */
+    override fun ipAddressType(ipAddressType: IpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
     }
 
     /**
@@ -193,6 +216,16 @@ public interface EndpointOptions {
      */
     override fun endpointType(): EndpointType? =
         unwrap(this).getEndpointType()?.let(EndpointType::wrap)
+
+    /**
+     * The IP address types that can invoke the API.
+     *
+     * Default: undefined - AWS default is IPV4
+     *
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-ip-address-type.html)
+     */
+    override fun ipAddressType(): IpAddressType? =
+        unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
 
     /**
      * A public certificate issued by ACM to validate that you own a custom domain.

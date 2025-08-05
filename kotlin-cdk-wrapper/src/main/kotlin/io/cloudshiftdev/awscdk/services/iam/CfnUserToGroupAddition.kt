@@ -51,7 +51,11 @@ public open class CfnUserToGroupAddition(
   )
 
   /**
+   * The stable and unique string identifying the group.
    *
+   * For more information about IDs, see [IAM
+   * identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM
+   * User Guide* .
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 

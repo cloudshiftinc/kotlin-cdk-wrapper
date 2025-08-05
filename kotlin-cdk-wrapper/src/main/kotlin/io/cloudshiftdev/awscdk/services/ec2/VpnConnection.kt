@@ -230,6 +230,9 @@ public open class VpnConnection(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ec2.VpnConnection.PROPERTY_INJECTION_ID
+
     public fun fromVpnConnectionAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

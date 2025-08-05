@@ -33,16 +33,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.apigateway.*;
- * Object managementPolicy;
  * Object policy;
  * CfnDomainNameV2 cfnDomainNameV2 = CfnDomainNameV2.Builder.create(this, "MyCfnDomainNameV2")
  * .certificateArn("certificateArn")
  * .domainName("domainName")
  * .endpointConfiguration(EndpointConfigurationProperty.builder()
+ * .ipAddressType("ipAddressType")
  * .types(List.of("types"))
  * .build())
- * .managementPolicy(managementPolicy)
  * .policy(policy)
+ * .routingMode("routingMode")
  * .securityPolicy("securityPolicy")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -123,13 +123,13 @@ public open class CfnDomainNameV2(
 
   /**
    * The endpoint configuration to indicate the types of endpoints an API (RestApi) or its custom
-   * domain name (DomainName) has.
+   * domain name (DomainName) has and the IP address types that can invoke it.
    */
   public open fun endpointConfiguration(): Any? = unwrap(this).getEndpointConfiguration()
 
   /**
    * The endpoint configuration to indicate the types of endpoints an API (RestApi) or its custom
-   * domain name (DomainName) has.
+   * domain name (DomainName) has and the IP address types that can invoke it.
    */
   public open fun endpointConfiguration(`value`: IResolvable) {
     unwrap(this).setEndpointConfiguration(`value`.let(IResolvable.Companion::unwrap))
@@ -137,7 +137,7 @@ public open class CfnDomainNameV2(
 
   /**
    * The endpoint configuration to indicate the types of endpoints an API (RestApi) or its custom
-   * domain name (DomainName) has.
+   * domain name (DomainName) has and the IP address types that can invoke it.
    */
   public open fun endpointConfiguration(`value`: EndpointConfigurationProperty) {
     unwrap(this).setEndpointConfiguration(`value`.let(EndpointConfigurationProperty.Companion::unwrap))
@@ -145,7 +145,7 @@ public open class CfnDomainNameV2(
 
   /**
    * The endpoint configuration to indicate the types of endpoints an API (RestApi) or its custom
-   * domain name (DomainName) has.
+   * domain name (DomainName) has and the IP address types that can invoke it.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("842b9dc58ceaa8ce331a6cea1e166d33e45d316085b94a5a02b0f5d12782844c")
@@ -162,18 +162,6 @@ public open class CfnDomainNameV2(
   }
 
   /**
-   *
-   */
-  public open fun managementPolicy(): Any? = unwrap(this).getManagementPolicy()
-
-  /**
-   *
-   */
-  public open fun managementPolicy(`value`: Any) {
-    unwrap(this).setManagementPolicy(`value`)
-  }
-
-  /**
    * A stringified JSON policy document that applies to the `execute-api` service for this
    * DomainName regardless of the caller and Method configuration.
    */
@@ -185,6 +173,18 @@ public open class CfnDomainNameV2(
    */
   public open fun policy(`value`: Any) {
     unwrap(this).setPolicy(`value`)
+  }
+
+  /**
+   * The routing mode for this domain name.
+   */
+  public open fun routingMode(): String? = unwrap(this).getRoutingMode()
+
+  /**
+   * The routing mode for this domain name.
+   */
+  public open fun routingMode(`value`: String) {
+    unwrap(this).setRoutingMode(`value`)
   }
 
   /**
@@ -244,42 +244,39 @@ public open class CfnDomainNameV2(
 
     /**
      * The endpoint configuration to indicate the types of endpoints an API (RestApi) or its custom
-     * domain name (DomainName) has.
+     * domain name (DomainName) has and the IP address types that can invoke it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-endpointconfiguration)
      * @param endpointConfiguration The endpoint configuration to indicate the types of endpoints an
-     * API (RestApi) or its custom domain name (DomainName) has. 
+     * API (RestApi) or its custom domain name (DomainName) has and the IP address types that can
+     * invoke it. 
      */
     public fun endpointConfiguration(endpointConfiguration: IResolvable)
 
     /**
      * The endpoint configuration to indicate the types of endpoints an API (RestApi) or its custom
-     * domain name (DomainName) has.
+     * domain name (DomainName) has and the IP address types that can invoke it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-endpointconfiguration)
      * @param endpointConfiguration The endpoint configuration to indicate the types of endpoints an
-     * API (RestApi) or its custom domain name (DomainName) has. 
+     * API (RestApi) or its custom domain name (DomainName) has and the IP address types that can
+     * invoke it. 
      */
     public fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty)
 
     /**
      * The endpoint configuration to indicate the types of endpoints an API (RestApi) or its custom
-     * domain name (DomainName) has.
+     * domain name (DomainName) has and the IP address types that can invoke it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-endpointconfiguration)
      * @param endpointConfiguration The endpoint configuration to indicate the types of endpoints an
-     * API (RestApi) or its custom domain name (DomainName) has. 
+     * API (RestApi) or its custom domain name (DomainName) has and the IP address types that can
+     * invoke it. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a5d3d050188d6981179d9fb6fabcb89fa01c6262ce1853baee8b86f7036ce882")
     public
         fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty.Builder.() -> Unit)
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-managementpolicy)
-     * @param managementPolicy 
-     */
-    public fun managementPolicy(managementPolicy: Any)
 
     /**
      * A stringified JSON policy document that applies to the `execute-api` service for this
@@ -294,6 +291,19 @@ public open class CfnDomainNameV2(
      * for this DomainName regardless of the caller and Method configuration. 
      */
     public fun policy(policy: Any)
+
+    /**
+     * The routing mode for this domain name.
+     *
+     * The routing mode determines how API Gateway sends traffic from your custom domain name to
+     * your private APIs.
+     *
+     * Default: - "BASE_PATH_MAPPING_ONLY"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-routingmode)
+     * @param routingMode The routing mode for this domain name. 
+     */
+    public fun routingMode(routingMode: String)
 
     /**
      * The Transport Layer Security (TLS) version + cipher suite for this DomainName.
@@ -361,11 +371,12 @@ public open class CfnDomainNameV2(
 
     /**
      * The endpoint configuration to indicate the types of endpoints an API (RestApi) or its custom
-     * domain name (DomainName) has.
+     * domain name (DomainName) has and the IP address types that can invoke it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-endpointconfiguration)
      * @param endpointConfiguration The endpoint configuration to indicate the types of endpoints an
-     * API (RestApi) or its custom domain name (DomainName) has. 
+     * API (RestApi) or its custom domain name (DomainName) has and the IP address types that can
+     * invoke it. 
      */
     override fun endpointConfiguration(endpointConfiguration: IResolvable) {
       cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable.Companion::unwrap))
@@ -373,11 +384,12 @@ public open class CfnDomainNameV2(
 
     /**
      * The endpoint configuration to indicate the types of endpoints an API (RestApi) or its custom
-     * domain name (DomainName) has.
+     * domain name (DomainName) has and the IP address types that can invoke it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-endpointconfiguration)
      * @param endpointConfiguration The endpoint configuration to indicate the types of endpoints an
-     * API (RestApi) or its custom domain name (DomainName) has. 
+     * API (RestApi) or its custom domain name (DomainName) has and the IP address types that can
+     * invoke it. 
      */
     override fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty) {
       cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfigurationProperty.Companion::unwrap))
@@ -385,25 +397,18 @@ public open class CfnDomainNameV2(
 
     /**
      * The endpoint configuration to indicate the types of endpoints an API (RestApi) or its custom
-     * domain name (DomainName) has.
+     * domain name (DomainName) has and the IP address types that can invoke it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-endpointconfiguration)
      * @param endpointConfiguration The endpoint configuration to indicate the types of endpoints an
-     * API (RestApi) or its custom domain name (DomainName) has. 
+     * API (RestApi) or its custom domain name (DomainName) has and the IP address types that can
+     * invoke it. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a5d3d050188d6981179d9fb6fabcb89fa01c6262ce1853baee8b86f7036ce882")
     override
         fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty.Builder.() -> Unit):
         Unit = endpointConfiguration(EndpointConfigurationProperty(endpointConfiguration))
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-managementpolicy)
-     * @param managementPolicy 
-     */
-    override fun managementPolicy(managementPolicy: Any) {
-      cdkBuilder.managementPolicy(managementPolicy)
-    }
 
     /**
      * A stringified JSON policy document that applies to the `execute-api` service for this
@@ -419,6 +424,21 @@ public open class CfnDomainNameV2(
      */
     override fun policy(policy: Any) {
       cdkBuilder.policy(policy)
+    }
+
+    /**
+     * The routing mode for this domain name.
+     *
+     * The routing mode determines how API Gateway sends traffic from your custom domain name to
+     * your private APIs.
+     *
+     * Default: - "BASE_PATH_MAPPING_ONLY"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-routingmode)
+     * @param routingMode The routing mode for this domain name. 
+     */
+    override fun routingMode(routingMode: String) {
+      cdkBuilder.routingMode(routingMode)
     }
 
     /**
@@ -483,7 +503,7 @@ public open class CfnDomainNameV2(
 
   /**
    * The endpoint configuration to indicate the types of endpoints an API (RestApi) or its custom
-   * domain name (DomainName) has.
+   * domain name (DomainName) has and the IP address types that can invoke it.
    *
    * Example:
    *
@@ -493,6 +513,7 @@ public open class CfnDomainNameV2(
    * import io.cloudshiftdev.awscdk.services.apigateway.*;
    * EndpointConfigurationProperty endpointConfigurationProperty =
    * EndpointConfigurationProperty.builder()
+   * .ipAddressType("ipAddressType")
    * .types(List.of("types"))
    * .build();
    * ```
@@ -500,6 +521,17 @@ public open class CfnDomainNameV2(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainnamev2-endpointconfiguration.html)
    */
   public interface EndpointConfigurationProperty {
+    /**
+     * The IP address types that can invoke an API (RestApi) or a DomainName.
+     *
+     * Use `ipv4` to allow only IPv4 addresses to invoke an API or DomainName, or use `dualstack` to
+     * allow both IPv4 and IPv6 addresses to invoke an API or a DomainName. For the `PRIVATE` endpoint
+     * type, only `dualstack` is supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainnamev2-endpointconfiguration.html#cfn-apigateway-domainnamev2-endpointconfiguration-ipaddresstype)
+     */
+    public fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+
     /**
      * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
      *
@@ -516,6 +548,14 @@ public open class CfnDomainNameV2(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param ipAddressType The IP address types that can invoke an API (RestApi) or a DomainName.
+       * Use `ipv4` to allow only IPv4 addresses to invoke an API or DomainName, or use `dualstack`
+       * to allow both IPv4 and IPv6 addresses to invoke an API or a DomainName. For the `PRIVATE`
+       * endpoint type, only `dualstack` is supported.
+       */
+      public fun ipAddressType(ipAddressType: String)
+
       /**
        * @param types A list of endpoint types of an API (RestApi) or its custom domain name
        * (DomainName).
@@ -540,6 +580,16 @@ public open class CfnDomainNameV2(
           software.amazon.awscdk.services.apigateway.CfnDomainNameV2.EndpointConfigurationProperty.Builder
           =
           software.amazon.awscdk.services.apigateway.CfnDomainNameV2.EndpointConfigurationProperty.builder()
+
+      /**
+       * @param ipAddressType The IP address types that can invoke an API (RestApi) or a DomainName.
+       * Use `ipv4` to allow only IPv4 addresses to invoke an API or DomainName, or use `dualstack`
+       * to allow both IPv4 and IPv6 addresses to invoke an API or a DomainName. For the `PRIVATE`
+       * endpoint type, only `dualstack` is supported.
+       */
+      override fun ipAddressType(ipAddressType: String) {
+        cdkBuilder.ipAddressType(ipAddressType)
+      }
 
       /**
        * @param types A list of endpoint types of an API (RestApi) or its custom domain name
@@ -570,6 +620,17 @@ public open class CfnDomainNameV2(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainNameV2.EndpointConfigurationProperty,
     ) : CdkObject(cdkObject),
         EndpointConfigurationProperty {
+      /**
+       * The IP address types that can invoke an API (RestApi) or a DomainName.
+       *
+       * Use `ipv4` to allow only IPv4 addresses to invoke an API or DomainName, or use `dualstack`
+       * to allow both IPv4 and IPv6 addresses to invoke an API or a DomainName. For the `PRIVATE`
+       * endpoint type, only `dualstack` is supported.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainnamev2-endpointconfiguration.html#cfn-apigateway-domainnamev2-endpointconfiguration-ipaddresstype)
+       */
+      override fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+
       /**
        * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
        *

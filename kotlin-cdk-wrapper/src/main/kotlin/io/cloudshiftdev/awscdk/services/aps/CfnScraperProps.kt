@@ -41,6 +41,10 @@ import kotlin.jvm.JvmName
  * .build())
  * // the properties below are optional
  * .alias("alias")
+ * .roleConfiguration(RoleConfigurationProperty.builder()
+ * .sourceRoleArn("sourceRoleArn")
+ * .targetRoleArn("targetRoleArn")
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -64,6 +68,13 @@ public interface CfnScraperProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-scraper.html#cfn-aps-scraper-destination)
    */
   public fun destination(): Any
+
+  /**
+   * The role configuration in an Amazon Managed Service for Prometheus scraper.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-scraper.html#cfn-aps-scraper-roleconfiguration)
+   */
+  public fun roleConfiguration(): Any? = unwrap(this).getRoleConfiguration()
 
   /**
    * The configuration in use by the scraper.
@@ -115,6 +126,27 @@ public interface CfnScraperProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0fa6226dd6dcfea8ed204788e8684ad5b5135fc30eacc7a0fb41949ca96f1b25")
     public fun destination(destination: CfnScraper.DestinationProperty.Builder.() -> Unit)
+
+    /**
+     * @param roleConfiguration The role configuration in an Amazon Managed Service for Prometheus
+     * scraper.
+     */
+    public fun roleConfiguration(roleConfiguration: IResolvable)
+
+    /**
+     * @param roleConfiguration The role configuration in an Amazon Managed Service for Prometheus
+     * scraper.
+     */
+    public fun roleConfiguration(roleConfiguration: CfnScraper.RoleConfigurationProperty)
+
+    /**
+     * @param roleConfiguration The role configuration in an Amazon Managed Service for Prometheus
+     * scraper.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3b47b889931f97362c6c983f5c0b3e26470413dd60b45a8176df019943969125")
+    public
+        fun roleConfiguration(roleConfiguration: CfnScraper.RoleConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param scrapeConfiguration The configuration in use by the scraper. 
@@ -199,6 +231,32 @@ public interface CfnScraperProps {
         destination(CfnScraper.DestinationProperty(destination))
 
     /**
+     * @param roleConfiguration The role configuration in an Amazon Managed Service for Prometheus
+     * scraper.
+     */
+    override fun roleConfiguration(roleConfiguration: IResolvable) {
+      cdkBuilder.roleConfiguration(roleConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param roleConfiguration The role configuration in an Amazon Managed Service for Prometheus
+     * scraper.
+     */
+    override fun roleConfiguration(roleConfiguration: CfnScraper.RoleConfigurationProperty) {
+      cdkBuilder.roleConfiguration(roleConfiguration.let(CfnScraper.RoleConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param roleConfiguration The role configuration in an Amazon Managed Service for Prometheus
+     * scraper.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3b47b889931f97362c6c983f5c0b3e26470413dd60b45a8176df019943969125")
+    override
+        fun roleConfiguration(roleConfiguration: CfnScraper.RoleConfigurationProperty.Builder.() -> Unit):
+        Unit = roleConfiguration(CfnScraper.RoleConfigurationProperty(roleConfiguration))
+
+    /**
      * @param scrapeConfiguration The configuration in use by the scraper. 
      */
     override fun scrapeConfiguration(scrapeConfiguration: IResolvable) {
@@ -275,6 +333,13 @@ public interface CfnScraperProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-scraper.html#cfn-aps-scraper-destination)
      */
     override fun destination(): Any = unwrap(this).getDestination()
+
+    /**
+     * The role configuration in an Amazon Managed Service for Prometheus scraper.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-scraper.html#cfn-aps-scraper-roleconfiguration)
+     */
+    override fun roleConfiguration(): Any? = unwrap(this).getRoleConfiguration()
 
     /**
      * The configuration in use by the scraper.

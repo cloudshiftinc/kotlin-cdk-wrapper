@@ -56,6 +56,20 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
       unwrap(this).getLoadBalancingAlgorithmType()?.let(TargetGroupLoadBalancingAlgorithmType::wrap)
 
   /**
+   * Indicates whether the target group supports multi-value headers.
+   *
+   * If the value is true, the request and response headers exchanged between
+   * the load balancer and the Lambda function include arrays of values or strings.
+   *
+   * Only applicable for Lambda targets.
+   *
+   * Default: false
+   *
+   * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#target-group-attributes)
+   */
+  public fun multiValueHeadersEnabled(): Boolean? = unwrap(this).getMultiValueHeadersEnabled()
+
+  /**
    * The port on which the target receives traffic.
    *
    * This is not applicable for Lambda targets.
@@ -182,6 +196,16 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
      */
     public
         fun loadBalancingAlgorithmType(loadBalancingAlgorithmType: TargetGroupLoadBalancingAlgorithmType)
+
+    /**
+     * @param multiValueHeadersEnabled Indicates whether the target group supports multi-value
+     * headers.
+     * If the value is true, the request and response headers exchanged between
+     * the load balancer and the Lambda function include arrays of values or strings.
+     *
+     * Only applicable for Lambda targets.
+     */
+    public fun multiValueHeadersEnabled(multiValueHeadersEnabled: Boolean)
 
     /**
      * @param port The port on which the target receives traffic.
@@ -326,6 +350,18 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
     override
         fun loadBalancingAlgorithmType(loadBalancingAlgorithmType: TargetGroupLoadBalancingAlgorithmType) {
       cdkBuilder.loadBalancingAlgorithmType(loadBalancingAlgorithmType.let(TargetGroupLoadBalancingAlgorithmType.Companion::unwrap))
+    }
+
+    /**
+     * @param multiValueHeadersEnabled Indicates whether the target group supports multi-value
+     * headers.
+     * If the value is true, the request and response headers exchanged between
+     * the load balancer and the Lambda function include arrays of values or strings.
+     *
+     * Only applicable for Lambda targets.
+     */
+    override fun multiValueHeadersEnabled(multiValueHeadersEnabled: Boolean) {
+      cdkBuilder.multiValueHeadersEnabled(multiValueHeadersEnabled)
     }
 
     /**
@@ -496,6 +532,20 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
      */
     override fun loadBalancingAlgorithmType(): TargetGroupLoadBalancingAlgorithmType? =
         unwrap(this).getLoadBalancingAlgorithmType()?.let(TargetGroupLoadBalancingAlgorithmType::wrap)
+
+    /**
+     * Indicates whether the target group supports multi-value headers.
+     *
+     * If the value is true, the request and response headers exchanged between
+     * the load balancer and the Lambda function include arrays of values or strings.
+     *
+     * Only applicable for Lambda targets.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#target-group-attributes)
+     */
+    override fun multiValueHeadersEnabled(): Boolean? = unwrap(this).getMultiValueHeadersEnabled()
 
     /**
      * The port on which the target receives traffic.

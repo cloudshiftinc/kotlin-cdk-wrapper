@@ -141,6 +141,9 @@ public open class SubnetNetworkAclAssociation(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociation.PROPERTY_INJECTION_ID
+
     public fun fromSubnetNetworkAclAssociationAssociationId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

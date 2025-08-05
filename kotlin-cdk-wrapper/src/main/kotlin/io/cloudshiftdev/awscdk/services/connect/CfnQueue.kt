@@ -42,6 +42,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .outboundCallerIdNumberArn("outboundCallerIdNumberArn")
  * .outboundFlowArn("outboundFlowArn")
  * .build())
+ * .outboundEmailConfig(OutboundEmailConfigProperty.builder()
+ * .outboundEmailAddressId("outboundEmailAddressId")
+ * .build())
  * .quickConnectArns(List.of("quickConnectArns"))
  * .status("status")
  * .tags(List.of(CfnTag.builder()
@@ -187,6 +190,33 @@ public open class CfnQueue(
       Unit = outboundCallerConfig(OutboundCallerConfigProperty(`value`))
 
   /**
+   * The outbound email address ID for a specified queue.
+   */
+  public open fun outboundEmailConfig(): Any? = unwrap(this).getOutboundEmailConfig()
+
+  /**
+   * The outbound email address ID for a specified queue.
+   */
+  public open fun outboundEmailConfig(`value`: IResolvable) {
+    unwrap(this).setOutboundEmailConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The outbound email address ID for a specified queue.
+   */
+  public open fun outboundEmailConfig(`value`: OutboundEmailConfigProperty) {
+    unwrap(this).setOutboundEmailConfig(`value`.let(OutboundEmailConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * The outbound email address ID for a specified queue.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("deb42ed756a0700dd0606fa86e82fdb87ca5cd0de27eae7ab462b11dbea3e75a")
+  public open fun outboundEmailConfig(`value`: OutboundEmailConfigProperty.Builder.() -> Unit): Unit
+      = outboundEmailConfig(OutboundEmailConfigProperty(`value`))
+
+  /**
    * The Amazon Resource Names (ARN) of the of the quick connects available to agents who are
    * working the queue.
    */
@@ -309,6 +339,33 @@ public open class CfnQueue(
     @JvmName("4fea0c6d4349f0a909729187b8314330b05c7d9bb80d6adb423178a0df302ce2")
     public
         fun outboundCallerConfig(outboundCallerConfig: OutboundCallerConfigProperty.Builder.() -> Unit)
+
+    /**
+     * The outbound email address ID for a specified queue.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html#cfn-connect-queue-outboundemailconfig)
+     * @param outboundEmailConfig The outbound email address ID for a specified queue. 
+     */
+    public fun outboundEmailConfig(outboundEmailConfig: IResolvable)
+
+    /**
+     * The outbound email address ID for a specified queue.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html#cfn-connect-queue-outboundemailconfig)
+     * @param outboundEmailConfig The outbound email address ID for a specified queue. 
+     */
+    public fun outboundEmailConfig(outboundEmailConfig: OutboundEmailConfigProperty)
+
+    /**
+     * The outbound email address ID for a specified queue.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html#cfn-connect-queue-outboundemailconfig)
+     * @param outboundEmailConfig The outbound email address ID for a specified queue. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7658d1f6690870b2c6e44ff919f657f74ba91ad92b73b58f3f5bbe837f4a5d92")
+    public
+        fun outboundEmailConfig(outboundEmailConfig: OutboundEmailConfigProperty.Builder.() -> Unit)
 
     /**
      * The Amazon Resource Names (ARN) of the of the quick connects available to agents who are
@@ -448,6 +505,38 @@ public open class CfnQueue(
     override
         fun outboundCallerConfig(outboundCallerConfig: OutboundCallerConfigProperty.Builder.() -> Unit):
         Unit = outboundCallerConfig(OutboundCallerConfigProperty(outboundCallerConfig))
+
+    /**
+     * The outbound email address ID for a specified queue.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html#cfn-connect-queue-outboundemailconfig)
+     * @param outboundEmailConfig The outbound email address ID for a specified queue. 
+     */
+    override fun outboundEmailConfig(outboundEmailConfig: IResolvable) {
+      cdkBuilder.outboundEmailConfig(outboundEmailConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The outbound email address ID for a specified queue.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html#cfn-connect-queue-outboundemailconfig)
+     * @param outboundEmailConfig The outbound email address ID for a specified queue. 
+     */
+    override fun outboundEmailConfig(outboundEmailConfig: OutboundEmailConfigProperty) {
+      cdkBuilder.outboundEmailConfig(outboundEmailConfig.let(OutboundEmailConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * The outbound email address ID for a specified queue.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html#cfn-connect-queue-outboundemailconfig)
+     * @param outboundEmailConfig The outbound email address ID for a specified queue. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7658d1f6690870b2c6e44ff919f657f74ba91ad92b73b58f3f5bbe837f4a5d92")
+    override
+        fun outboundEmailConfig(outboundEmailConfig: OutboundEmailConfigProperty.Builder.() -> Unit):
+        Unit = outboundEmailConfig(OutboundEmailConfigProperty(outboundEmailConfig))
 
     /**
      * The Amazon Resource Names (ARN) of the of the quick connects available to agents who are
@@ -695,6 +784,88 @@ public open class CfnQueue(
           software.amazon.awscdk.services.connect.CfnQueue.OutboundCallerConfigProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.connect.CfnQueue.OutboundCallerConfigProperty
+    }
+  }
+
+  /**
+   * The outbound email address ID.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * OutboundEmailConfigProperty outboundEmailConfigProperty = OutboundEmailConfigProperty.builder()
+   * .outboundEmailAddressId("outboundEmailAddressId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-queue-outboundemailconfig.html)
+   */
+  public interface OutboundEmailConfigProperty {
+    /**
+     * The identifier of the email address.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-queue-outboundemailconfig.html#cfn-connect-queue-outboundemailconfig-outboundemailaddressid)
+     */
+    public fun outboundEmailAddressId(): String? = unwrap(this).getOutboundEmailAddressId()
+
+    /**
+     * A builder for [OutboundEmailConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param outboundEmailAddressId The identifier of the email address.
+       */
+      public fun outboundEmailAddressId(outboundEmailAddressId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnQueue.OutboundEmailConfigProperty.Builder =
+          software.amazon.awscdk.services.connect.CfnQueue.OutboundEmailConfigProperty.builder()
+
+      /**
+       * @param outboundEmailAddressId The identifier of the email address.
+       */
+      override fun outboundEmailAddressId(outboundEmailAddressId: String) {
+        cdkBuilder.outboundEmailAddressId(outboundEmailAddressId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnQueue.OutboundEmailConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.connect.CfnQueue.OutboundEmailConfigProperty,
+    ) : CdkObject(cdkObject),
+        OutboundEmailConfigProperty {
+      /**
+       * The identifier of the email address.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-queue-outboundemailconfig.html#cfn-connect-queue-outboundemailconfig-outboundemailaddressid)
+       */
+      override fun outboundEmailAddressId(): String? = unwrap(this).getOutboundEmailAddressId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OutboundEmailConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnQueue.OutboundEmailConfigProperty):
+          OutboundEmailConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OutboundEmailConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OutboundEmailConfigProperty):
+          software.amazon.awscdk.services.connect.CfnQueue.OutboundEmailConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnQueue.OutboundEmailConfigProperty
     }
   }
 }

@@ -19,8 +19,13 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
+ * Properties with `__Update requires: Replacement__` can result in the creation of a new data
+ * source and deletion of the old one.
+ *
+ * This can happen if you also change the Name of the data source.
+ *
  * Specifies a data source as a resource in a top-level template. Minimally, you must specify the
- * following properties:.
+ * following properties:
  *
  * * Name – Specify a name for the data source.
  * * KnowledgeBaseId – Specify the ID of the knowledge base for the data source to belong to.
@@ -132,11 +137,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .crawlerConfiguration(WebCrawlerConfigurationProperty.builder()
  * .crawlerLimits(WebCrawlerLimitsProperty.builder()
+ * .maxPages(123)
  * .rateLimit(123)
  * .build())
  * .exclusionFilters(List.of("exclusionFilters"))
  * .inclusionFilters(List.of("inclusionFilters"))
  * .scope("scope")
+ * .userAgent("userAgent")
+ * .userAgentHeader("userAgentHeader")
  * .build())
  * .build())
  * .build())
@@ -168,6 +176,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .maxTokens(123)
  * .build())
  * .build())
+ * .contextEnrichmentConfiguration(ContextEnrichmentConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .bedrockFoundationModelConfiguration(BedrockFoundationModelContextEnrichmentConfigurationProperty.builder()
+ * .enrichmentStrategyConfiguration(EnrichmentStrategyConfigurationProperty.builder()
+ * .method("method")
+ * .build())
+ * .modelArn("modelArn")
+ * .build())
+ * .build())
  * .customTransformationConfiguration(CustomTransformationConfigurationProperty.builder()
  * .intermediateStorage(IntermediateStorageProperty.builder()
  * .s3Location(S3LocationProperty.builder()
@@ -186,9 +204,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .parsingConfiguration(ParsingConfigurationProperty.builder()
  * .parsingStrategy("parsingStrategy")
  * // the properties below are optional
+ * .bedrockDataAutomationConfiguration(BedrockDataAutomationConfigurationProperty.builder()
+ * .parsingModality("parsingModality")
+ * .build())
  * .bedrockFoundationModelConfiguration(BedrockFoundationModelConfigurationProperty.builder()
  * .modelArn("modelArn")
  * // the properties below are optional
+ * .parsingModality("parsingModality")
  * .parsingPrompt(ParsingPromptProperty.builder()
  * .parsingPromptText("parsingPromptText")
  * .build())
@@ -224,6 +246,18 @@ public open class CfnDataSource(
    * The time at which the data source was created.
    */
   public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
+
+  /**
+   * A string used for identifying the crawler or bot when it accesses a web server.
+   *
+   * The user agent header value consists of the `bedrockbot` , UUID, and a user agent suffix for
+   * your crawler (if one is provided). By default, it is set to `bedrockbot_UUID` . You can optionally
+   * append a custom suffix to `bedrockbot_UUID` to allowlist a specific user agent permitted to access
+   * your source URLs.
+   */
+  public open fun attrDataSourceConfigurationWebConfigurationCrawlerConfigurationUserAgentHeader():
+      String =
+      unwrap(this).getAttrDataSourceConfigurationWebConfigurationCrawlerConfigurationUserAgentHeader()
 
   /**
    * The unique identifier of the data source.
@@ -700,9 +734,95 @@ public open class CfnDataSource(
   }
 
   /**
-   * Settings for a foundation model or [inference
-   * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html) used to
-   * parse documents for a data source.
+   * Contains configurations for using Amazon Bedrock Data Automation as the parser for ingesting
+   * your data sources.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * BedrockDataAutomationConfigurationProperty bedrockDataAutomationConfigurationProperty =
+   * BedrockDataAutomationConfigurationProperty.builder()
+   * .parsingModality("parsingModality")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-bedrockdataautomationconfiguration.html)
+   */
+  public interface BedrockDataAutomationConfigurationProperty {
+    /**
+     * Specifies whether to enable parsing of multimodal data, including both text and/or images.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-bedrockdataautomationconfiguration.html#cfn-bedrock-datasource-bedrockdataautomationconfiguration-parsingmodality)
+     */
+    public fun parsingModality(): String? = unwrap(this).getParsingModality()
+
+    /**
+     * A builder for [BedrockDataAutomationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param parsingModality Specifies whether to enable parsing of multimodal data, including
+       * both text and/or images.
+       */
+      public fun parsingModality(parsingModality: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockDataAutomationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockDataAutomationConfigurationProperty.builder()
+
+      /**
+       * @param parsingModality Specifies whether to enable parsing of multimodal data, including
+       * both text and/or images.
+       */
+      override fun parsingModality(parsingModality: String) {
+        cdkBuilder.parsingModality(parsingModality)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockDataAutomationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockDataAutomationConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        BedrockDataAutomationConfigurationProperty {
+      /**
+       * Specifies whether to enable parsing of multimodal data, including both text and/or images.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-bedrockdataautomationconfiguration.html#cfn-bedrock-datasource-bedrockdataautomationconfiguration-parsingmodality)
+       */
+      override fun parsingModality(): String? = unwrap(this).getParsingModality()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BedrockDataAutomationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockDataAutomationConfigurationProperty):
+          BedrockDataAutomationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BedrockDataAutomationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BedrockDataAutomationConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockDataAutomationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockDataAutomationConfigurationProperty
+    }
+  }
+
+  /**
+   * Settings for a foundation model used to parse documents for a data source.
    *
    * Example:
    *
@@ -714,6 +834,7 @@ public open class CfnDataSource(
    * BedrockFoundationModelConfigurationProperty.builder()
    * .modelArn("modelArn")
    * // the properties below are optional
+   * .parsingModality("parsingModality")
    * .parsingPrompt(ParsingPromptProperty.builder()
    * .parsingPromptText("parsingPromptText")
    * .build())
@@ -724,12 +845,18 @@ public open class CfnDataSource(
    */
   public interface BedrockFoundationModelConfigurationProperty {
     /**
-     * The ARN of the foundation model or [inference
-     * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html) .
+     * The ARN of the foundation model to use for parsing.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-bedrockfoundationmodelconfiguration.html#cfn-bedrock-datasource-bedrockfoundationmodelconfiguration-modelarn)
      */
     public fun modelArn(): String
+
+    /**
+     * Specifies whether to enable parsing of multimodal data, including both text and/or images.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-bedrockfoundationmodelconfiguration.html#cfn-bedrock-datasource-bedrockfoundationmodelconfiguration-parsingmodality)
+     */
+    public fun parsingModality(): String? = unwrap(this).getParsingModality()
 
     /**
      * Instructions for interpreting the contents of a document.
@@ -744,10 +871,15 @@ public open class CfnDataSource(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param modelArn The ARN of the foundation model or [inference
-       * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html) . 
+       * @param modelArn The ARN of the foundation model to use for parsing. 
        */
       public fun modelArn(modelArn: String)
+
+      /**
+       * @param parsingModality Specifies whether to enable parsing of multimodal data, including
+       * both text and/or images.
+       */
+      public fun parsingModality(parsingModality: String)
 
       /**
        * @param parsingPrompt Instructions for interpreting the contents of a document.
@@ -774,11 +906,18 @@ public open class CfnDataSource(
           software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockFoundationModelConfigurationProperty.builder()
 
       /**
-       * @param modelArn The ARN of the foundation model or [inference
-       * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html) . 
+       * @param modelArn The ARN of the foundation model to use for parsing. 
        */
       override fun modelArn(modelArn: String) {
         cdkBuilder.modelArn(modelArn)
+      }
+
+      /**
+       * @param parsingModality Specifies whether to enable parsing of multimodal data, including
+       * both text and/or images.
+       */
+      override fun parsingModality(parsingModality: String) {
+        cdkBuilder.parsingModality(parsingModality)
       }
 
       /**
@@ -813,12 +952,18 @@ public open class CfnDataSource(
     ) : CdkObject(cdkObject),
         BedrockFoundationModelConfigurationProperty {
       /**
-       * The ARN of the foundation model or [inference
-       * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html) .
+       * The ARN of the foundation model to use for parsing.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-bedrockfoundationmodelconfiguration.html#cfn-bedrock-datasource-bedrockfoundationmodelconfiguration-modelarn)
        */
       override fun modelArn(): String = unwrap(this).getModelArn()
+
+      /**
+       * Specifies whether to enable parsing of multimodal data, including both text and/or images.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-bedrockfoundationmodelconfiguration.html#cfn-bedrock-datasource-bedrockfoundationmodelconfiguration-parsingmodality)
+       */
+      override fun parsingModality(): String? = unwrap(this).getParsingModality()
 
       /**
        * Instructions for interpreting the contents of a document.
@@ -844,6 +989,184 @@ public open class CfnDataSource(
           software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockFoundationModelConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockFoundationModelConfigurationProperty
+    }
+  }
+
+  /**
+   * Context enrichment configuration is used to provide additional context to the RAG application
+   * using Amazon Bedrock foundation models.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * BedrockFoundationModelContextEnrichmentConfigurationProperty
+   * bedrockFoundationModelContextEnrichmentConfigurationProperty =
+   * BedrockFoundationModelContextEnrichmentConfigurationProperty.builder()
+   * .enrichmentStrategyConfiguration(EnrichmentStrategyConfigurationProperty.builder()
+   * .method("method")
+   * .build())
+   * .modelArn("modelArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-bedrockfoundationmodelcontextenrichmentconfiguration.html)
+   */
+  public interface BedrockFoundationModelContextEnrichmentConfigurationProperty {
+    /**
+     * The enrichment stategy used to provide additional context.
+     *
+     * For example, Neptune GraphRAG uses Amazon Bedrock foundation models to perform chunk entity
+     * extraction.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-bedrockfoundationmodelcontextenrichmentconfiguration.html#cfn-bedrock-datasource-bedrockfoundationmodelcontextenrichmentconfiguration-enrichmentstrategyconfiguration)
+     */
+    public fun enrichmentStrategyConfiguration(): Any
+
+    /**
+     * The Amazon Resource Name (ARN) of the model used to create vector embeddings for the
+     * knowledge base.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-bedrockfoundationmodelcontextenrichmentconfiguration.html#cfn-bedrock-datasource-bedrockfoundationmodelcontextenrichmentconfiguration-modelarn)
+     */
+    public fun modelArn(): String
+
+    /**
+     * A builder for [BedrockFoundationModelContextEnrichmentConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enrichmentStrategyConfiguration The enrichment stategy used to provide additional
+       * context. 
+       * For example, Neptune GraphRAG uses Amazon Bedrock foundation models to perform chunk entity
+       * extraction.
+       */
+      public fun enrichmentStrategyConfiguration(enrichmentStrategyConfiguration: IResolvable)
+
+      /**
+       * @param enrichmentStrategyConfiguration The enrichment stategy used to provide additional
+       * context. 
+       * For example, Neptune GraphRAG uses Amazon Bedrock foundation models to perform chunk entity
+       * extraction.
+       */
+      public
+          fun enrichmentStrategyConfiguration(enrichmentStrategyConfiguration: EnrichmentStrategyConfigurationProperty)
+
+      /**
+       * @param enrichmentStrategyConfiguration The enrichment stategy used to provide additional
+       * context. 
+       * For example, Neptune GraphRAG uses Amazon Bedrock foundation models to perform chunk entity
+       * extraction.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0e2fc1bf893fefc81f825a427136cd7b09824cf9bc0bf87c468748cce0e3b14e")
+      public
+          fun enrichmentStrategyConfiguration(enrichmentStrategyConfiguration: EnrichmentStrategyConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param modelArn The Amazon Resource Name (ARN) of the model used to create vector
+       * embeddings for the knowledge base. 
+       */
+      public fun modelArn(modelArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockFoundationModelContextEnrichmentConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockFoundationModelContextEnrichmentConfigurationProperty.builder()
+
+      /**
+       * @param enrichmentStrategyConfiguration The enrichment stategy used to provide additional
+       * context. 
+       * For example, Neptune GraphRAG uses Amazon Bedrock foundation models to perform chunk entity
+       * extraction.
+       */
+      override fun enrichmentStrategyConfiguration(enrichmentStrategyConfiguration: IResolvable) {
+        cdkBuilder.enrichmentStrategyConfiguration(enrichmentStrategyConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param enrichmentStrategyConfiguration The enrichment stategy used to provide additional
+       * context. 
+       * For example, Neptune GraphRAG uses Amazon Bedrock foundation models to perform chunk entity
+       * extraction.
+       */
+      override
+          fun enrichmentStrategyConfiguration(enrichmentStrategyConfiguration: EnrichmentStrategyConfigurationProperty) {
+        cdkBuilder.enrichmentStrategyConfiguration(enrichmentStrategyConfiguration.let(EnrichmentStrategyConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param enrichmentStrategyConfiguration The enrichment stategy used to provide additional
+       * context. 
+       * For example, Neptune GraphRAG uses Amazon Bedrock foundation models to perform chunk entity
+       * extraction.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0e2fc1bf893fefc81f825a427136cd7b09824cf9bc0bf87c468748cce0e3b14e")
+      override
+          fun enrichmentStrategyConfiguration(enrichmentStrategyConfiguration: EnrichmentStrategyConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          enrichmentStrategyConfiguration(EnrichmentStrategyConfigurationProperty(enrichmentStrategyConfiguration))
+
+      /**
+       * @param modelArn The Amazon Resource Name (ARN) of the model used to create vector
+       * embeddings for the knowledge base. 
+       */
+      override fun modelArn(modelArn: String) {
+        cdkBuilder.modelArn(modelArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockFoundationModelContextEnrichmentConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockFoundationModelContextEnrichmentConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        BedrockFoundationModelContextEnrichmentConfigurationProperty {
+      /**
+       * The enrichment stategy used to provide additional context.
+       *
+       * For example, Neptune GraphRAG uses Amazon Bedrock foundation models to perform chunk entity
+       * extraction.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-bedrockfoundationmodelcontextenrichmentconfiguration.html#cfn-bedrock-datasource-bedrockfoundationmodelcontextenrichmentconfiguration-enrichmentstrategyconfiguration)
+       */
+      override fun enrichmentStrategyConfiguration(): Any =
+          unwrap(this).getEnrichmentStrategyConfiguration()
+
+      /**
+       * The Amazon Resource Name (ARN) of the model used to create vector embeddings for the
+       * knowledge base.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-bedrockfoundationmodelcontextenrichmentconfiguration.html#cfn-bedrock-datasource-bedrockfoundationmodelcontextenrichmentconfiguration-modelarn)
+       */
+      override fun modelArn(): String = unwrap(this).getModelArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BedrockFoundationModelContextEnrichmentConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockFoundationModelContextEnrichmentConfigurationProperty):
+          BedrockFoundationModelContextEnrichmentConfigurationProperty =
+          CdkObjectWrappers.wrap(cdkObject) as?
+          BedrockFoundationModelContextEnrichmentConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BedrockFoundationModelContextEnrichmentConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockFoundationModelContextEnrichmentConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnDataSource.BedrockFoundationModelContextEnrichmentConfigurationProperty
     }
   }
 
@@ -1783,6 +2106,172 @@ public open class CfnDataSource(
   }
 
   /**
+   * Context enrichment configuration is used to provide additional context to the RAG application.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * ContextEnrichmentConfigurationProperty contextEnrichmentConfigurationProperty =
+   * ContextEnrichmentConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .bedrockFoundationModelConfiguration(BedrockFoundationModelContextEnrichmentConfigurationProperty.builder()
+   * .enrichmentStrategyConfiguration(EnrichmentStrategyConfigurationProperty.builder()
+   * .method("method")
+   * .build())
+   * .modelArn("modelArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-contextenrichmentconfiguration.html)
+   */
+  public interface ContextEnrichmentConfigurationProperty {
+    /**
+     * The configuration of the Amazon Bedrock foundation model used for context enrichment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-contextenrichmentconfiguration.html#cfn-bedrock-datasource-contextenrichmentconfiguration-bedrockfoundationmodelconfiguration)
+     */
+    public fun bedrockFoundationModelConfiguration(): Any? =
+        unwrap(this).getBedrockFoundationModelConfiguration()
+
+    /**
+     * The method used for context enrichment.
+     *
+     * It must be Amazon Bedrock foundation models.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-contextenrichmentconfiguration.html#cfn-bedrock-datasource-contextenrichmentconfiguration-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [ContextEnrichmentConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bedrockFoundationModelConfiguration The configuration of the Amazon Bedrock
+       * foundation model used for context enrichment.
+       */
+      public
+          fun bedrockFoundationModelConfiguration(bedrockFoundationModelConfiguration: IResolvable)
+
+      /**
+       * @param bedrockFoundationModelConfiguration The configuration of the Amazon Bedrock
+       * foundation model used for context enrichment.
+       */
+      public
+          fun bedrockFoundationModelConfiguration(bedrockFoundationModelConfiguration: BedrockFoundationModelContextEnrichmentConfigurationProperty)
+
+      /**
+       * @param bedrockFoundationModelConfiguration The configuration of the Amazon Bedrock
+       * foundation model used for context enrichment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f8f228ee46d48295d66b52b5fcb6b5fb3aad63fbe1da7ddea93b48a0a76b53da")
+      public
+          fun bedrockFoundationModelConfiguration(bedrockFoundationModelConfiguration: BedrockFoundationModelContextEnrichmentConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param type The method used for context enrichment. 
+       * It must be Amazon Bedrock foundation models.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnDataSource.ContextEnrichmentConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnDataSource.ContextEnrichmentConfigurationProperty.builder()
+
+      /**
+       * @param bedrockFoundationModelConfiguration The configuration of the Amazon Bedrock
+       * foundation model used for context enrichment.
+       */
+      override
+          fun bedrockFoundationModelConfiguration(bedrockFoundationModelConfiguration: IResolvable) {
+        cdkBuilder.bedrockFoundationModelConfiguration(bedrockFoundationModelConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockFoundationModelConfiguration The configuration of the Amazon Bedrock
+       * foundation model used for context enrichment.
+       */
+      override
+          fun bedrockFoundationModelConfiguration(bedrockFoundationModelConfiguration: BedrockFoundationModelContextEnrichmentConfigurationProperty) {
+        cdkBuilder.bedrockFoundationModelConfiguration(bedrockFoundationModelConfiguration.let(BedrockFoundationModelContextEnrichmentConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockFoundationModelConfiguration The configuration of the Amazon Bedrock
+       * foundation model used for context enrichment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f8f228ee46d48295d66b52b5fcb6b5fb3aad63fbe1da7ddea93b48a0a76b53da")
+      override
+          fun bedrockFoundationModelConfiguration(bedrockFoundationModelConfiguration: BedrockFoundationModelContextEnrichmentConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          bedrockFoundationModelConfiguration(BedrockFoundationModelContextEnrichmentConfigurationProperty(bedrockFoundationModelConfiguration))
+
+      /**
+       * @param type The method used for context enrichment. 
+       * It must be Amazon Bedrock foundation models.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnDataSource.ContextEnrichmentConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnDataSource.ContextEnrichmentConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ContextEnrichmentConfigurationProperty {
+      /**
+       * The configuration of the Amazon Bedrock foundation model used for context enrichment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-contextenrichmentconfiguration.html#cfn-bedrock-datasource-contextenrichmentconfiguration-bedrockfoundationmodelconfiguration)
+       */
+      override fun bedrockFoundationModelConfiguration(): Any? =
+          unwrap(this).getBedrockFoundationModelConfiguration()
+
+      /**
+       * The method used for context enrichment.
+       *
+       * It must be Amazon Bedrock foundation models.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-contextenrichmentconfiguration.html#cfn-bedrock-datasource-contextenrichmentconfiguration-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ContextEnrichmentConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnDataSource.ContextEnrichmentConfigurationProperty):
+          ContextEnrichmentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContextEnrichmentConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ContextEnrichmentConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnDataSource.ContextEnrichmentConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnDataSource.ContextEnrichmentConfigurationProperty
+    }
+  }
+
+  /**
    * The configuration of filtering the data source content.
    *
    * For example, configuring regular expression patterns to include or exclude certain content.
@@ -2237,11 +2726,14 @@ public open class CfnDataSource(
    * // the properties below are optional
    * .crawlerConfiguration(WebCrawlerConfigurationProperty.builder()
    * .crawlerLimits(WebCrawlerLimitsProperty.builder()
+   * .maxPages(123)
    * .rateLimit(123)
    * .build())
    * .exclusionFilters(List.of("exclusionFilters"))
    * .inclusionFilters(List.of("inclusionFilters"))
    * .scope("scope")
+   * .userAgent("userAgent")
+   * .userAgentHeader("userAgentHeader")
    * .build())
    * .build())
    * .build();
@@ -2713,6 +3205,91 @@ public open class CfnDataSource(
   }
 
   /**
+   * The strategy used for performing context enrichment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * EnrichmentStrategyConfigurationProperty enrichmentStrategyConfigurationProperty =
+   * EnrichmentStrategyConfigurationProperty.builder()
+   * .method("method")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-enrichmentstrategyconfiguration.html)
+   */
+  public interface EnrichmentStrategyConfigurationProperty {
+    /**
+     * The method used for the context enrichment strategy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-enrichmentstrategyconfiguration.html#cfn-bedrock-datasource-enrichmentstrategyconfiguration-method)
+     */
+    public fun method(): String
+
+    /**
+     * A builder for [EnrichmentStrategyConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param method The method used for the context enrichment strategy. 
+       */
+      public fun method(method: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnDataSource.EnrichmentStrategyConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnDataSource.EnrichmentStrategyConfigurationProperty.builder()
+
+      /**
+       * @param method The method used for the context enrichment strategy. 
+       */
+      override fun method(method: String) {
+        cdkBuilder.method(method)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnDataSource.EnrichmentStrategyConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnDataSource.EnrichmentStrategyConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        EnrichmentStrategyConfigurationProperty {
+      /**
+       * The method used for the context enrichment strategy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-enrichmentstrategyconfiguration.html#cfn-bedrock-datasource-enrichmentstrategyconfiguration-method)
+       */
+      override fun method(): String = unwrap(this).getMethod()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          EnrichmentStrategyConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnDataSource.EnrichmentStrategyConfigurationProperty):
+          EnrichmentStrategyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnrichmentStrategyConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EnrichmentStrategyConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnDataSource.EnrichmentStrategyConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnDataSource.EnrichmentStrategyConfigurationProperty
+    }
+  }
+
+  /**
    * Configurations for when you choose fixed-size chunking.
    *
    * If you set the `chunkingStrategy` as `NONE` , exclude this field.
@@ -3174,23 +3751,16 @@ public open class CfnDataSource(
   /**
    * Settings for parsing document contents.
    *
-   * By default, the service converts the contents of each document into text before splitting it
-   * into chunks. To improve processing of PDF files with tables and images, you can configure the data
-   * source to convert the pages of text into images and use a model to describe the contents of each
-   * page.
+   * If you exclude this field, the default parser converts the contents of each document into text
+   * before splitting it into chunks. Specify the parsing strategy to use in the `parsingStrategy`
+   * field and include the relevant configuration, or omit it to use the Amazon Bedrock default parser.
+   * For more information, see [Parsing options for your data
+   * source](https://docs.aws.amazon.com/bedrock/latest/userguide/kb-advanced-parsing.html) .
    *
-   * To use a model to parse PDF documents, set the parsing strategy to `BEDROCK_FOUNDATION_MODEL`
-   * and specify the model or [inference
-   * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html) to use
-   * by ARN. You can also override the default parsing prompt with instructions for how to interpret
-   * images and tables in your documents. The following models are supported.
    *
-   * * Anthropic Claude 3 Sonnet - `anthropic.claude-3-sonnet-20240229-v1:0`
-   * * Anthropic Claude 3 Haiku - `anthropic.claude-3-haiku-20240307-v1:0`
+   * If you specify `BEDROCK_DATA_AUTOMATION` or `BEDROCK_FOUNDATION_MODEL` and it fails to parse a
+   * file, the Amazon Bedrock default parser will be used instead.
    *
-   * You can get the ARN of a model with the
-   * [ListFoundationModels](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_ListFoundationModels.html)
-   * action. Standard model usage charges apply for the foundation model parsing strategy.
    *
    * Example:
    *
@@ -3202,9 +3772,13 @@ public open class CfnDataSource(
    * ParsingConfigurationProperty.builder()
    * .parsingStrategy("parsingStrategy")
    * // the properties below are optional
+   * .bedrockDataAutomationConfiguration(BedrockDataAutomationConfigurationProperty.builder()
+   * .parsingModality("parsingModality")
+   * .build())
    * .bedrockFoundationModelConfiguration(BedrockFoundationModelConfigurationProperty.builder()
    * .modelArn("modelArn")
    * // the properties below are optional
+   * .parsingModality("parsingModality")
    * .parsingPrompt(ParsingPromptProperty.builder()
    * .parsingPromptText("parsingPromptText")
    * .build())
@@ -3216,7 +3790,19 @@ public open class CfnDataSource(
    */
   public interface ParsingConfigurationProperty {
     /**
-     * Settings for a foundation model used to parse documents for a data source.
+     * If you specify `BEDROCK_DATA_AUTOMATION` as the parsing strategy for ingesting your data
+     * source, use this object to modify configurations for using the Amazon Bedrock Data Automation
+     * parser.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-parsingconfiguration.html#cfn-bedrock-datasource-parsingconfiguration-bedrockdataautomationconfiguration)
+     */
+    public fun bedrockDataAutomationConfiguration(): Any? =
+        unwrap(this).getBedrockDataAutomationConfiguration()
+
+    /**
+     * If you specify `BEDROCK_FOUNDATION_MODEL` as the parsing strategy for ingesting your data
+     * source, use this object to modify configurations for using a foundation model to parse
+     * documents.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-parsingconfiguration.html#cfn-bedrock-datasource-parsingconfiguration-bedrockfoundationmodelconfiguration)
      */
@@ -3236,22 +3822,50 @@ public open class CfnDataSource(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param bedrockFoundationModelConfiguration Settings for a foundation model used to parse
-       * documents for a data source.
+       * @param bedrockDataAutomationConfiguration If you specify `BEDROCK_DATA_AUTOMATION` as the
+       * parsing strategy for ingesting your data source, use this object to modify configurations for
+       * using the Amazon Bedrock Data Automation parser.
+       */
+      public fun bedrockDataAutomationConfiguration(bedrockDataAutomationConfiguration: IResolvable)
+
+      /**
+       * @param bedrockDataAutomationConfiguration If you specify `BEDROCK_DATA_AUTOMATION` as the
+       * parsing strategy for ingesting your data source, use this object to modify configurations for
+       * using the Amazon Bedrock Data Automation parser.
+       */
+      public
+          fun bedrockDataAutomationConfiguration(bedrockDataAutomationConfiguration: BedrockDataAutomationConfigurationProperty)
+
+      /**
+       * @param bedrockDataAutomationConfiguration If you specify `BEDROCK_DATA_AUTOMATION` as the
+       * parsing strategy for ingesting your data source, use this object to modify configurations for
+       * using the Amazon Bedrock Data Automation parser.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("891e559fa87ef2d9a513a39f248293c7ffa853feffdf0dedf0e7af8b159b2886")
+      public
+          fun bedrockDataAutomationConfiguration(bedrockDataAutomationConfiguration: BedrockDataAutomationConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param bedrockFoundationModelConfiguration If you specify `BEDROCK_FOUNDATION_MODEL` as the
+       * parsing strategy for ingesting your data source, use this object to modify configurations for
+       * using a foundation model to parse documents.
        */
       public
           fun bedrockFoundationModelConfiguration(bedrockFoundationModelConfiguration: IResolvable)
 
       /**
-       * @param bedrockFoundationModelConfiguration Settings for a foundation model used to parse
-       * documents for a data source.
+       * @param bedrockFoundationModelConfiguration If you specify `BEDROCK_FOUNDATION_MODEL` as the
+       * parsing strategy for ingesting your data source, use this object to modify configurations for
+       * using a foundation model to parse documents.
        */
       public
           fun bedrockFoundationModelConfiguration(bedrockFoundationModelConfiguration: BedrockFoundationModelConfigurationProperty)
 
       /**
-       * @param bedrockFoundationModelConfiguration Settings for a foundation model used to parse
-       * documents for a data source.
+       * @param bedrockFoundationModelConfiguration If you specify `BEDROCK_FOUNDATION_MODEL` as the
+       * parsing strategy for ingesting your data source, use this object to modify configurations for
+       * using a foundation model to parse documents.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0ca0d63d2261f8329ba49af91b7a2211b1818236da7c3e615b8efc52551e174b")
@@ -3271,8 +3885,41 @@ public open class CfnDataSource(
           software.amazon.awscdk.services.bedrock.CfnDataSource.ParsingConfigurationProperty.builder()
 
       /**
-       * @param bedrockFoundationModelConfiguration Settings for a foundation model used to parse
-       * documents for a data source.
+       * @param bedrockDataAutomationConfiguration If you specify `BEDROCK_DATA_AUTOMATION` as the
+       * parsing strategy for ingesting your data source, use this object to modify configurations for
+       * using the Amazon Bedrock Data Automation parser.
+       */
+      override
+          fun bedrockDataAutomationConfiguration(bedrockDataAutomationConfiguration: IResolvable) {
+        cdkBuilder.bedrockDataAutomationConfiguration(bedrockDataAutomationConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockDataAutomationConfiguration If you specify `BEDROCK_DATA_AUTOMATION` as the
+       * parsing strategy for ingesting your data source, use this object to modify configurations for
+       * using the Amazon Bedrock Data Automation parser.
+       */
+      override
+          fun bedrockDataAutomationConfiguration(bedrockDataAutomationConfiguration: BedrockDataAutomationConfigurationProperty) {
+        cdkBuilder.bedrockDataAutomationConfiguration(bedrockDataAutomationConfiguration.let(BedrockDataAutomationConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockDataAutomationConfiguration If you specify `BEDROCK_DATA_AUTOMATION` as the
+       * parsing strategy for ingesting your data source, use this object to modify configurations for
+       * using the Amazon Bedrock Data Automation parser.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("891e559fa87ef2d9a513a39f248293c7ffa853feffdf0dedf0e7af8b159b2886")
+      override
+          fun bedrockDataAutomationConfiguration(bedrockDataAutomationConfiguration: BedrockDataAutomationConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          bedrockDataAutomationConfiguration(BedrockDataAutomationConfigurationProperty(bedrockDataAutomationConfiguration))
+
+      /**
+       * @param bedrockFoundationModelConfiguration If you specify `BEDROCK_FOUNDATION_MODEL` as the
+       * parsing strategy for ingesting your data source, use this object to modify configurations for
+       * using a foundation model to parse documents.
        */
       override
           fun bedrockFoundationModelConfiguration(bedrockFoundationModelConfiguration: IResolvable) {
@@ -3280,8 +3927,9 @@ public open class CfnDataSource(
       }
 
       /**
-       * @param bedrockFoundationModelConfiguration Settings for a foundation model used to parse
-       * documents for a data source.
+       * @param bedrockFoundationModelConfiguration If you specify `BEDROCK_FOUNDATION_MODEL` as the
+       * parsing strategy for ingesting your data source, use this object to modify configurations for
+       * using a foundation model to parse documents.
        */
       override
           fun bedrockFoundationModelConfiguration(bedrockFoundationModelConfiguration: BedrockFoundationModelConfigurationProperty) {
@@ -3289,8 +3937,9 @@ public open class CfnDataSource(
       }
 
       /**
-       * @param bedrockFoundationModelConfiguration Settings for a foundation model used to parse
-       * documents for a data source.
+       * @param bedrockFoundationModelConfiguration If you specify `BEDROCK_FOUNDATION_MODEL` as the
+       * parsing strategy for ingesting your data source, use this object to modify configurations for
+       * using a foundation model to parse documents.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0ca0d63d2261f8329ba49af91b7a2211b1818236da7c3e615b8efc52551e174b")
@@ -3316,7 +3965,19 @@ public open class CfnDataSource(
     ) : CdkObject(cdkObject),
         ParsingConfigurationProperty {
       /**
-       * Settings for a foundation model used to parse documents for a data source.
+       * If you specify `BEDROCK_DATA_AUTOMATION` as the parsing strategy for ingesting your data
+       * source, use this object to modify configurations for using the Amazon Bedrock Data Automation
+       * parser.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-parsingconfiguration.html#cfn-bedrock-datasource-parsingconfiguration-bedrockdataautomationconfiguration)
+       */
+      override fun bedrockDataAutomationConfiguration(): Any? =
+          unwrap(this).getBedrockDataAutomationConfiguration()
+
+      /**
+       * If you specify `BEDROCK_FOUNDATION_MODEL` as the parsing strategy for ingesting your data
+       * source, use this object to modify configurations for using a foundation model to parse
+       * documents.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-parsingconfiguration.html#cfn-bedrock-datasource-parsingconfiguration-bedrockfoundationmodelconfiguration)
        */
@@ -3795,7 +4456,8 @@ public open class CfnDataSource(
     /**
      * A list of S3 prefixes to include certain files or content.
      *
-     * For more information, see [Organizing objects using
+     * This field is an array with a maximum of one item, which can contain a string that has a
+     * maximum length of 300 characters. For more information, see [Organizing objects using
      * prefixes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-s3datasourceconfiguration.html#cfn-bedrock-datasource-s3datasourceconfiguration-inclusionprefixes)
@@ -3820,14 +4482,16 @@ public open class CfnDataSource(
 
       /**
        * @param inclusionPrefixes A list of S3 prefixes to include certain files or content.
-       * For more information, see [Organizing objects using
+       * This field is an array with a maximum of one item, which can contain a string that has a
+       * maximum length of 300 characters. For more information, see [Organizing objects using
        * prefixes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html) .
        */
       public fun inclusionPrefixes(inclusionPrefixes: List<String>)
 
       /**
        * @param inclusionPrefixes A list of S3 prefixes to include certain files or content.
-       * For more information, see [Organizing objects using
+       * This field is an array with a maximum of one item, which can contain a string that has a
+       * maximum length of 300 characters. For more information, see [Organizing objects using
        * prefixes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html) .
        */
       public fun inclusionPrefixes(vararg inclusionPrefixes: String)
@@ -3855,7 +4519,8 @@ public open class CfnDataSource(
 
       /**
        * @param inclusionPrefixes A list of S3 prefixes to include certain files or content.
-       * For more information, see [Organizing objects using
+       * This field is an array with a maximum of one item, which can contain a string that has a
+       * maximum length of 300 characters. For more information, see [Organizing objects using
        * prefixes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html) .
        */
       override fun inclusionPrefixes(inclusionPrefixes: List<String>) {
@@ -3864,7 +4529,8 @@ public open class CfnDataSource(
 
       /**
        * @param inclusionPrefixes A list of S3 prefixes to include certain files or content.
-       * For more information, see [Organizing objects using
+       * This field is an array with a maximum of one item, which can contain a string that has a
+       * maximum length of 300 characters. For more information, see [Organizing objects using
        * prefixes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html) .
        */
       override fun inclusionPrefixes(vararg inclusionPrefixes: String): Unit =
@@ -3896,7 +4562,8 @@ public open class CfnDataSource(
       /**
        * A list of S3 prefixes to include certain files or content.
        *
-       * For more information, see [Organizing objects using
+       * This field is an array with a maximum of one item, which can contain a string that has a
+       * maximum length of 300 characters. For more information, see [Organizing objects using
        * prefixes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html) .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-s3datasourceconfiguration.html#cfn-bedrock-datasource-s3datasourceconfiguration-inclusionprefixes)
@@ -3925,7 +4592,7 @@ public open class CfnDataSource(
   }
 
   /**
-   * An Amazon S3 location.
+   * A storage location in an Amazon S3 bucket.
    *
    * Example:
    *
@@ -3942,9 +4609,7 @@ public open class CfnDataSource(
    */
   public interface S3LocationProperty {
     /**
-     * The location's URI.
-     *
-     * For example, `s3://my-bucket/chunk-processor/` .
+     * An object URI starting with `s3://` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-s3location.html#cfn-bedrock-datasource-s3location-uri)
      */
@@ -3956,8 +4621,7 @@ public open class CfnDataSource(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param uri The location's URI. 
-       * For example, `s3://my-bucket/chunk-processor/` .
+       * @param uri An object URI starting with `s3://` . 
        */
       public fun uri(uri: String)
     }
@@ -3968,8 +4632,7 @@ public open class CfnDataSource(
           software.amazon.awscdk.services.bedrock.CfnDataSource.S3LocationProperty.builder()
 
       /**
-       * @param uri The location's URI. 
-       * For example, `s3://my-bucket/chunk-processor/` .
+       * @param uri An object URI starting with `s3://` . 
        */
       override fun uri(uri: String) {
         cdkBuilder.uri(uri)
@@ -3984,9 +4647,7 @@ public open class CfnDataSource(
     ) : CdkObject(cdkObject),
         S3LocationProperty {
       /**
-       * The location's URI.
-       *
-       * For example, `s3://my-bucket/chunk-processor/` .
+       * An object URI starting with `s3://` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-s3location.html#cfn-bedrock-datasource-s3location-uri)
        */
@@ -5932,6 +6593,16 @@ public open class CfnDataSource(
    * .maxTokens(123)
    * .build())
    * .build())
+   * .contextEnrichmentConfiguration(ContextEnrichmentConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .bedrockFoundationModelConfiguration(BedrockFoundationModelContextEnrichmentConfigurationProperty.builder()
+   * .enrichmentStrategyConfiguration(EnrichmentStrategyConfigurationProperty.builder()
+   * .method("method")
+   * .build())
+   * .modelArn("modelArn")
+   * .build())
+   * .build())
    * .customTransformationConfiguration(CustomTransformationConfigurationProperty.builder()
    * .intermediateStorage(IntermediateStorageProperty.builder()
    * .s3Location(S3LocationProperty.builder()
@@ -5950,9 +6621,13 @@ public open class CfnDataSource(
    * .parsingConfiguration(ParsingConfigurationProperty.builder()
    * .parsingStrategy("parsingStrategy")
    * // the properties below are optional
+   * .bedrockDataAutomationConfiguration(BedrockDataAutomationConfigurationProperty.builder()
+   * .parsingModality("parsingModality")
+   * .build())
    * .bedrockFoundationModelConfiguration(BedrockFoundationModelConfigurationProperty.builder()
    * .modelArn("modelArn")
    * // the properties below are optional
+   * .parsingModality("parsingModality")
    * .parsingPrompt(ParsingPromptProperty.builder()
    * .parsingPromptText("parsingPromptText")
    * .build())
@@ -5975,6 +6650,14 @@ public open class CfnDataSource(
     public fun chunkingConfiguration(): Any? = unwrap(this).getChunkingConfiguration()
 
     /**
+     * The context enrichment configuration used for ingestion of the data into the vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-vectoringestionconfiguration.html#cfn-bedrock-datasource-vectoringestionconfiguration-contextenrichmentconfiguration)
+     */
+    public fun contextEnrichmentConfiguration(): Any? =
+        unwrap(this).getContextEnrichmentConfiguration()
+
+    /**
      * A custom document transformer for parsed data source documents.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-vectoringestionconfiguration.html#cfn-bedrock-datasource-vectoringestionconfiguration-customtransformationconfiguration)
@@ -5983,7 +6666,9 @@ public open class CfnDataSource(
         unwrap(this).getCustomTransformationConfiguration()
 
     /**
-     * A custom parser for data source documents.
+     * Configurations for a parser to use for parsing documents in your data source.
+     *
+     * If you exclude this field, the default parser will be used.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-vectoringestionconfiguration.html#cfn-bedrock-datasource-vectoringestionconfiguration-parsingconfiguration)
      */
@@ -6019,6 +6704,28 @@ public open class CfnDataSource(
           fun chunkingConfiguration(chunkingConfiguration: ChunkingConfigurationProperty.Builder.() -> Unit)
 
       /**
+       * @param contextEnrichmentConfiguration The context enrichment configuration used for
+       * ingestion of the data into the vector store.
+       */
+      public fun contextEnrichmentConfiguration(contextEnrichmentConfiguration: IResolvable)
+
+      /**
+       * @param contextEnrichmentConfiguration The context enrichment configuration used for
+       * ingestion of the data into the vector store.
+       */
+      public
+          fun contextEnrichmentConfiguration(contextEnrichmentConfiguration: ContextEnrichmentConfigurationProperty)
+
+      /**
+       * @param contextEnrichmentConfiguration The context enrichment configuration used for
+       * ingestion of the data into the vector store.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9583acb1cccdea5023a0b2e64fd5614a3657cb14261a639748f21e5a9a5ec1ca")
+      public
+          fun contextEnrichmentConfiguration(contextEnrichmentConfiguration: ContextEnrichmentConfigurationProperty.Builder.() -> Unit)
+
+      /**
        * @param customTransformationConfiguration A custom document transformer for parsed data
        * source documents.
        */
@@ -6041,17 +6748,23 @@ public open class CfnDataSource(
           fun customTransformationConfiguration(customTransformationConfiguration: CustomTransformationConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param parsingConfiguration A custom parser for data source documents.
+       * @param parsingConfiguration Configurations for a parser to use for parsing documents in
+       * your data source.
+       * If you exclude this field, the default parser will be used.
        */
       public fun parsingConfiguration(parsingConfiguration: IResolvable)
 
       /**
-       * @param parsingConfiguration A custom parser for data source documents.
+       * @param parsingConfiguration Configurations for a parser to use for parsing documents in
+       * your data source.
+       * If you exclude this field, the default parser will be used.
        */
       public fun parsingConfiguration(parsingConfiguration: ParsingConfigurationProperty)
 
       /**
-       * @param parsingConfiguration A custom parser for data source documents.
+       * @param parsingConfiguration Configurations for a parser to use for parsing documents in
+       * your data source.
+       * If you exclude this field, the default parser will be used.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("992577a2f174620e35a00071c4b317dd3f21d37a965ade40f5bb4c5e912a2fab")
@@ -6095,6 +6808,34 @@ public open class CfnDataSource(
           Unit = chunkingConfiguration(ChunkingConfigurationProperty(chunkingConfiguration))
 
       /**
+       * @param contextEnrichmentConfiguration The context enrichment configuration used for
+       * ingestion of the data into the vector store.
+       */
+      override fun contextEnrichmentConfiguration(contextEnrichmentConfiguration: IResolvable) {
+        cdkBuilder.contextEnrichmentConfiguration(contextEnrichmentConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param contextEnrichmentConfiguration The context enrichment configuration used for
+       * ingestion of the data into the vector store.
+       */
+      override
+          fun contextEnrichmentConfiguration(contextEnrichmentConfiguration: ContextEnrichmentConfigurationProperty) {
+        cdkBuilder.contextEnrichmentConfiguration(contextEnrichmentConfiguration.let(ContextEnrichmentConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param contextEnrichmentConfiguration The context enrichment configuration used for
+       * ingestion of the data into the vector store.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9583acb1cccdea5023a0b2e64fd5614a3657cb14261a639748f21e5a9a5ec1ca")
+      override
+          fun contextEnrichmentConfiguration(contextEnrichmentConfiguration: ContextEnrichmentConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          contextEnrichmentConfiguration(ContextEnrichmentConfigurationProperty(contextEnrichmentConfiguration))
+
+      /**
        * @param customTransformationConfiguration A custom document transformer for parsed data
        * source documents.
        */
@@ -6124,21 +6865,27 @@ public open class CfnDataSource(
           customTransformationConfiguration(CustomTransformationConfigurationProperty(customTransformationConfiguration))
 
       /**
-       * @param parsingConfiguration A custom parser for data source documents.
+       * @param parsingConfiguration Configurations for a parser to use for parsing documents in
+       * your data source.
+       * If you exclude this field, the default parser will be used.
        */
       override fun parsingConfiguration(parsingConfiguration: IResolvable) {
         cdkBuilder.parsingConfiguration(parsingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param parsingConfiguration A custom parser for data source documents.
+       * @param parsingConfiguration Configurations for a parser to use for parsing documents in
+       * your data source.
+       * If you exclude this field, the default parser will be used.
        */
       override fun parsingConfiguration(parsingConfiguration: ParsingConfigurationProperty) {
         cdkBuilder.parsingConfiguration(parsingConfiguration.let(ParsingConfigurationProperty.Companion::unwrap))
       }
 
       /**
-       * @param parsingConfiguration A custom parser for data source documents.
+       * @param parsingConfiguration Configurations for a parser to use for parsing documents in
+       * your data source.
+       * If you exclude this field, the default parser will be used.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("992577a2f174620e35a00071c4b317dd3f21d37a965ade40f5bb4c5e912a2fab")
@@ -6166,6 +6913,14 @@ public open class CfnDataSource(
       override fun chunkingConfiguration(): Any? = unwrap(this).getChunkingConfiguration()
 
       /**
+       * The context enrichment configuration used for ingestion of the data into the vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-vectoringestionconfiguration.html#cfn-bedrock-datasource-vectoringestionconfiguration-contextenrichmentconfiguration)
+       */
+      override fun contextEnrichmentConfiguration(): Any? =
+          unwrap(this).getContextEnrichmentConfiguration()
+
+      /**
        * A custom document transformer for parsed data source documents.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-vectoringestionconfiguration.html#cfn-bedrock-datasource-vectoringestionconfiguration-customtransformationconfiguration)
@@ -6174,7 +6929,9 @@ public open class CfnDataSource(
           unwrap(this).getCustomTransformationConfiguration()
 
       /**
-       * A custom parser for data source documents.
+       * Configurations for a parser to use for parsing documents in your data source.
+       *
+       * If you exclude this field, the default parser will be used.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-vectoringestionconfiguration.html#cfn-bedrock-datasource-vectoringestionconfiguration-parsingconfiguration)
        */
@@ -6214,11 +6971,14 @@ public open class CfnDataSource(
    * WebCrawlerConfigurationProperty webCrawlerConfigurationProperty =
    * WebCrawlerConfigurationProperty.builder()
    * .crawlerLimits(WebCrawlerLimitsProperty.builder()
+   * .maxPages(123)
    * .rateLimit(123)
    * .build())
    * .exclusionFilters(List.of("exclusionFilters"))
    * .inclusionFilters(List.of("inclusionFilters"))
    * .scope("scope")
+   * .userAgent("userAgent")
+   * .userAgentHeader("userAgentHeader")
    * .build();
    * ```
    *
@@ -6264,6 +7024,25 @@ public open class CfnDataSource(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-webcrawlerconfiguration.html#cfn-bedrock-datasource-webcrawlerconfiguration-scope)
      */
     public fun scope(): String? = unwrap(this).getScope()
+
+    /**
+     * Returns the user agent suffix for your web crawler.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-webcrawlerconfiguration.html#cfn-bedrock-datasource-webcrawlerconfiguration-useragent)
+     */
+    public fun userAgent(): String? = unwrap(this).getUserAgent()
+
+    /**
+     * A string used for identifying the crawler or bot when it accesses a web server.
+     *
+     * The user agent header value consists of the `bedrockbot` , UUID, and a user agent suffix for
+     * your crawler (if one is provided). By default, it is set to `bedrockbot_UUID` . You can
+     * optionally append a custom suffix to `bedrockbot_UUID` to allowlist a specific user agent
+     * permitted to access your source URLs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-webcrawlerconfiguration.html#cfn-bedrock-datasource-webcrawlerconfiguration-useragentheader)
+     */
+    public fun userAgentHeader(): String? = unwrap(this).getUserAgentHeader()
 
     /**
      * A builder for [WebCrawlerConfigurationProperty]
@@ -6328,6 +7107,21 @@ public open class CfnDataSource(
        * contain "aws.amazon.com" can also include sub domain "docs.aws.amazon.com".
        */
       public fun scope(scope: String)
+
+      /**
+       * @param userAgent Returns the user agent suffix for your web crawler.
+       */
+      public fun userAgent(userAgent: String)
+
+      /**
+       * @param userAgentHeader A string used for identifying the crawler or bot when it accesses a
+       * web server.
+       * The user agent header value consists of the `bedrockbot` , UUID, and a user agent suffix
+       * for your crawler (if one is provided). By default, it is set to `bedrockbot_UUID` . You can
+       * optionally append a custom suffix to `bedrockbot_UUID` to allowlist a specific user agent
+       * permitted to access your source URLs.
+       */
+      public fun userAgentHeader(userAgentHeader: String)
     }
 
     private class BuilderImpl : Builder {
@@ -6408,6 +7202,25 @@ public open class CfnDataSource(
         cdkBuilder.scope(scope)
       }
 
+      /**
+       * @param userAgent Returns the user agent suffix for your web crawler.
+       */
+      override fun userAgent(userAgent: String) {
+        cdkBuilder.userAgent(userAgent)
+      }
+
+      /**
+       * @param userAgentHeader A string used for identifying the crawler or bot when it accesses a
+       * web server.
+       * The user agent header value consists of the `bedrockbot` , UUID, and a user agent suffix
+       * for your crawler (if one is provided). By default, it is set to `bedrockbot_UUID` . You can
+       * optionally append a custom suffix to `bedrockbot_UUID` to allowlist a specific user agent
+       * permitted to access your source URLs.
+       */
+      override fun userAgentHeader(userAgentHeader: String) {
+        cdkBuilder.userAgentHeader(userAgentHeader)
+      }
+
       public fun build():
           software.amazon.awscdk.services.bedrock.CfnDataSource.WebCrawlerConfigurationProperty =
           cdkBuilder.build()
@@ -6458,6 +7271,25 @@ public open class CfnDataSource(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-webcrawlerconfiguration.html#cfn-bedrock-datasource-webcrawlerconfiguration-scope)
        */
       override fun scope(): String? = unwrap(this).getScope()
+
+      /**
+       * Returns the user agent suffix for your web crawler.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-webcrawlerconfiguration.html#cfn-bedrock-datasource-webcrawlerconfiguration-useragent)
+       */
+      override fun userAgent(): String? = unwrap(this).getUserAgent()
+
+      /**
+       * A string used for identifying the crawler or bot when it accesses a web server.
+       *
+       * The user agent header value consists of the `bedrockbot` , UUID, and a user agent suffix
+       * for your crawler (if one is provided). By default, it is set to `bedrockbot_UUID` . You can
+       * optionally append a custom suffix to `bedrockbot_UUID` to allowlist a specific user agent
+       * permitted to access your source URLs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-webcrawlerconfiguration.html#cfn-bedrock-datasource-webcrawlerconfiguration-useragentheader)
+       */
+      override fun userAgentHeader(): String? = unwrap(this).getUserAgentHeader()
     }
 
     public companion object {
@@ -6490,6 +7322,7 @@ public open class CfnDataSource(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.bedrock.*;
    * WebCrawlerLimitsProperty webCrawlerLimitsProperty = WebCrawlerLimitsProperty.builder()
+   * .maxPages(123)
    * .rateLimit(123)
    * .build();
    * ```
@@ -6497,6 +7330,16 @@ public open class CfnDataSource(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-webcrawlerlimits.html)
    */
   public interface WebCrawlerLimitsProperty {
+    /**
+     * The max number of web pages crawled from your source URLs, up to 25,000 pages.
+     *
+     * If the web pages exceed this limit, the data source sync will fail and no web pages will be
+     * ingested.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-webcrawlerlimits.html#cfn-bedrock-datasource-webcrawlerlimits-maxpages)
+     */
+    public fun maxPages(): Number? = unwrap(this).getMaxPages()
+
     /**
      * The max rate at which pages are crawled, up to 300 per minute per host.
      *
@@ -6510,6 +7353,14 @@ public open class CfnDataSource(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param maxPages The max number of web pages crawled from your source URLs, up to 25,000
+       * pages.
+       * If the web pages exceed this limit, the data source sync will fail and no web pages will be
+       * ingested.
+       */
+      public fun maxPages(maxPages: Number)
+
+      /**
        * @param rateLimit The max rate at which pages are crawled, up to 300 per minute per host.
        */
       public fun rateLimit(rateLimit: Number)
@@ -6519,6 +7370,16 @@ public open class CfnDataSource(
       private val cdkBuilder:
           software.amazon.awscdk.services.bedrock.CfnDataSource.WebCrawlerLimitsProperty.Builder =
           software.amazon.awscdk.services.bedrock.CfnDataSource.WebCrawlerLimitsProperty.builder()
+
+      /**
+       * @param maxPages The max number of web pages crawled from your source URLs, up to 25,000
+       * pages.
+       * If the web pages exceed this limit, the data source sync will fail and no web pages will be
+       * ingested.
+       */
+      override fun maxPages(maxPages: Number) {
+        cdkBuilder.maxPages(maxPages)
+      }
 
       /**
        * @param rateLimit The max rate at which pages are crawled, up to 300 per minute per host.
@@ -6536,6 +7397,16 @@ public open class CfnDataSource(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnDataSource.WebCrawlerLimitsProperty,
     ) : CdkObject(cdkObject),
         WebCrawlerLimitsProperty {
+      /**
+       * The max number of web pages crawled from your source URLs, up to 25,000 pages.
+       *
+       * If the web pages exceed this limit, the data source sync will fail and no web pages will be
+       * ingested.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-webcrawlerlimits.html#cfn-bedrock-datasource-webcrawlerlimits-maxpages)
+       */
+      override fun maxPages(): Number? = unwrap(this).getMaxPages()
+
       /**
        * The max rate at which pages are crawled, up to 300 per minute per host.
        *
@@ -6583,11 +7454,14 @@ public open class CfnDataSource(
    * // the properties below are optional
    * .crawlerConfiguration(WebCrawlerConfigurationProperty.builder()
    * .crawlerLimits(WebCrawlerLimitsProperty.builder()
+   * .maxPages(123)
    * .rateLimit(123)
    * .build())
    * .exclusionFilters(List.of("exclusionFilters"))
    * .inclusionFilters(List.of("inclusionFilters"))
    * .scope("scope")
+   * .userAgent("userAgent")
+   * .userAgentHeader("userAgentHeader")
    * .build())
    * .build();
    * ```

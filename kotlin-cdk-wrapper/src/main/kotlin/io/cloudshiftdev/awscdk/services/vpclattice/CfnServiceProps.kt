@@ -69,7 +69,9 @@ public interface CfnServiceProps {
   public fun customDomainName(): String? = unwrap(this).getCustomDomainName()
 
   /**
-   * The DNS information of the service.
+   * Describes the DNS information of the service.
+   *
+   * This field is read-only.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-service.html#cfn-vpclattice-service-dnsentry)
    */
@@ -119,17 +121,20 @@ public interface CfnServiceProps {
     public fun customDomainName(customDomainName: String)
 
     /**
-     * @param dnsEntry The DNS information of the service.
+     * @param dnsEntry Describes the DNS information of the service.
+     * This field is read-only.
      */
     public fun dnsEntry(dnsEntry: IResolvable)
 
     /**
-     * @param dnsEntry The DNS information of the service.
+     * @param dnsEntry Describes the DNS information of the service.
+     * This field is read-only.
      */
     public fun dnsEntry(dnsEntry: CfnService.DnsEntryProperty)
 
     /**
-     * @param dnsEntry The DNS information of the service.
+     * @param dnsEntry Describes the DNS information of the service.
+     * This field is read-only.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3efe9b948caff662dde3459e0c0997e86b85201c4c333d14d68fcc0d3a5e07fa")
@@ -185,21 +190,24 @@ public interface CfnServiceProps {
     }
 
     /**
-     * @param dnsEntry The DNS information of the service.
+     * @param dnsEntry Describes the DNS information of the service.
+     * This field is read-only.
      */
     override fun dnsEntry(dnsEntry: IResolvable) {
       cdkBuilder.dnsEntry(dnsEntry.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param dnsEntry The DNS information of the service.
+     * @param dnsEntry Describes the DNS information of the service.
+     * This field is read-only.
      */
     override fun dnsEntry(dnsEntry: CfnService.DnsEntryProperty) {
       cdkBuilder.dnsEntry(dnsEntry.let(CfnService.DnsEntryProperty.Companion::unwrap))
     }
 
     /**
-     * @param dnsEntry The DNS information of the service.
+     * @param dnsEntry Describes the DNS information of the service.
+     * This field is read-only.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3efe9b948caff662dde3459e0c0997e86b85201c4c333d14d68fcc0d3a5e07fa")
@@ -266,7 +274,9 @@ public interface CfnServiceProps {
     override fun customDomainName(): String? = unwrap(this).getCustomDomainName()
 
     /**
-     * The DNS information of the service.
+     * Describes the DNS information of the service.
+     *
+     * This field is read-only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-service.html#cfn-vpclattice-service-dnsentry)
      */

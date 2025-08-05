@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.Duration
+import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -46,19 +47,23 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.signer.*;
- * SigningProfile signingProfile = SigningProfile.Builder.create(this, "SigningProfile")
- * .platform(Platform.AWS_LAMBDA_SHA384_ECDSA)
- * .build();
- * CodeSigningConfig codeSigningConfig = CodeSigningConfig.Builder.create(this, "CodeSigningConfig")
- * .signingProfiles(List.of(signingProfile))
- * .build();
- * Function.Builder.create(this, "Function")
- * .codeSigningConfig(codeSigningConfig)
- * .runtime(Runtime.NODEJS_18_X)
+ * import io.cloudshiftdev.awscdk.services.lambda.*;
+ * Function fn = Function.Builder.create(this, "MyFunc")
+ * .runtime(Runtime.NODEJS_LATEST)
  * .handler("index.handler")
- * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
+ * .code(Code.fromInline("exports.handler = handler.toString()"))
  * .build();
+ * Rule rule = Rule.Builder.create(this, "rule")
+ * .eventPattern(EventPattern.builder()
+ * .source(List.of("aws.ec2"))
+ * .build())
+ * .build();
+ * Queue queue = new Queue(this, "Queue");
+ * rule.addTarget(LambdaFunction.Builder.create(fn)
+ * .deadLetterQueue(queue) // Optional: add a dead letter queue
+ * .maxEventAge(Duration.hours(2)) // Optional: set the maxEventAge retry policy
+ * .retryAttempts(2)
+ * .build());
  * ```
  */
 public open class Function(
@@ -704,7 +709,25 @@ public open class Function(
     public fun logGroup(logGroup: ILogGroup)
 
     /**
-     * The number of days log events are kept in CloudWatch Logs.
+     * (deprecated) Determine the removal policy of the log group that is auto-created by this
+     * construct.
+     *
+     * Normally you want to retain the log group so you can diagnose issues
+     * from logs even after a deployment that no longer includes the log group.
+     * In that case, use the normal date-based retention policy to age out your
+     * logs.
+     *
+     * Default: RemovalPolicy.Retain
+     *
+     * @deprecated use `logGroup` instead
+     * @param logRemovalPolicy Determine the removal policy of the log group that is auto-created by
+     * this construct. 
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun logRemovalPolicy(logRemovalPolicy: RemovalPolicy)
+
+    /**
+     * (deprecated) The number of days log events are kept in CloudWatch Logs.
      *
      * When updating
      * this property, unsetting it doesn't remove the log retention policy. To
@@ -727,8 +750,10 @@ public open class Function(
      *
      * Default: logs.RetentionDays.INFINITE
      *
+     * @deprecated use `logGroup` instead
      * @param logRetention The number of days log events are kept in CloudWatch Logs. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun logRetention(logRetention: RetentionDays)
 
     /**
@@ -1520,7 +1545,27 @@ public open class Function(
     }
 
     /**
-     * The number of days log events are kept in CloudWatch Logs.
+     * (deprecated) Determine the removal policy of the log group that is auto-created by this
+     * construct.
+     *
+     * Normally you want to retain the log group so you can diagnose issues
+     * from logs even after a deployment that no longer includes the log group.
+     * In that case, use the normal date-based retention policy to age out your
+     * logs.
+     *
+     * Default: RemovalPolicy.Retain
+     *
+     * @deprecated use `logGroup` instead
+     * @param logRemovalPolicy Determine the removal policy of the log group that is auto-created by
+     * this construct. 
+     */
+    @Deprecated(message = "deprecated in CDK")
+    override fun logRemovalPolicy(logRemovalPolicy: RemovalPolicy) {
+      cdkBuilder.logRemovalPolicy(logRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
+    }
+
+    /**
+     * (deprecated) The number of days log events are kept in CloudWatch Logs.
      *
      * When updating
      * this property, unsetting it doesn't remove the log retention policy. To
@@ -1543,8 +1588,10 @@ public open class Function(
      *
      * Default: logs.RetentionDays.INFINITE
      *
+     * @deprecated use `logGroup` instead
      * @param logRetention The number of days log events are kept in CloudWatch Logs. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun logRetention(logRetention: RetentionDays) {
       cdkBuilder.logRetention(logRetention.let(RetentionDays.Companion::unwrap))
     }
@@ -1942,6 +1989,9 @@ public open class Function(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.lambda.Function.PROPERTY_INJECTION_ID
+
     public fun classifyVersionProperty(propertyName: String, locked: Boolean) {
       software.amazon.awscdk.services.lambda.Function.classifyVersionProperty(propertyName, locked)
     }

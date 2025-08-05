@@ -22,6 +22,16 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
+ * End of support notice: On May 31, 2026, AWS will end support for AWS Panorama .
+ *
+ * After May 31, 2026,
+ *
+ *
+ * you will no longer be able to access the AWS Panorama console or AWS Panorama resources. For more
+ * information, see [AWS Panorama end of
+ * support](https://docs.aws.amazon.com/panorama/latest/dev/panorama-end-of-support.html) .
+ *
+ *
  * Creates a package and storage location in an Amazon S3 access point.
  *
  * Example:

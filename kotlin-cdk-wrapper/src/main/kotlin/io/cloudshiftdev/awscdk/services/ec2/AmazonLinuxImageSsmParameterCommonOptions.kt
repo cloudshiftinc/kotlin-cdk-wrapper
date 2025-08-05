@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
+import kotlin.String
 import kotlin.Unit
 
 /**
@@ -20,6 +21,7 @@ import kotlin.Unit
  * UserData userData;
  * AmazonLinuxImageSsmParameterCommonOptions amazonLinuxImageSsmParameterCommonOptions =
  * AmazonLinuxImageSsmParameterCommonOptions.builder()
+ * .additionalCacheKey("additionalCacheKey")
  * .cachedInContext(false)
  * .cpuType(AmazonLinuxCpuType.ARM_64)
  * .edition(AmazonLinuxEdition.STANDARD)
@@ -50,6 +52,12 @@ public interface AmazonLinuxImageSsmParameterCommonOptions : AmazonLinuxImageSsm
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key.
+     */
+    public fun additionalCacheKey(additionalCacheKey: String)
+
     /**
      * @param cachedInContext Whether the AMI ID is cached to be stable between deployments.
      * By default, the newest image is used on each deployment. This will cause
@@ -88,6 +96,14 @@ public interface AmazonLinuxImageSsmParameterCommonOptions : AmazonLinuxImageSsm
     private val cdkBuilder:
         software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterCommonOptions.Builder =
         software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterCommonOptions.builder()
+
+    /**
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key.
+     */
+    override fun additionalCacheKey(additionalCacheKey: String) {
+      cdkBuilder.additionalCacheKey(additionalCacheKey)
+    }
 
     /**
      * @param cachedInContext Whether the AMI ID is cached to be stable between deployments.
@@ -139,6 +155,13 @@ public interface AmazonLinuxImageSsmParameterCommonOptions : AmazonLinuxImageSsm
     cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterCommonOptions,
   ) : CdkObject(cdkObject),
       AmazonLinuxImageSsmParameterCommonOptions {
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     */
+    override fun additionalCacheKey(): String? = unwrap(this).getAdditionalCacheKey()
+
     /**
      * Whether the AMI ID is cached to be stable between deployments.
      *

@@ -64,6 +64,16 @@ public open class CfnSession(
   )
 
   /**
+   * The status of automated sensitive data discovery for the account.
+   *
+   * Possible values are: `ENABLED` , perform automated sensitive data discovery activities for the
+   * account; and, `DISABLED` , don't perform automated sensitive data discovery activities for the
+   * account.
+   */
+  public open fun attrAutomatedDiscoveryStatus(): String =
+      unwrap(this).getAttrAutomatedDiscoveryStatus()
+
+  /**
    * The account ID for the AWS account in which the Amazon Macie session is created.
    */
   public open fun attrAwsAccountId(): String = unwrap(this).getAttrAwsAccountId()
@@ -134,8 +144,8 @@ public open class CfnSession(
     /**
      * The status of Amazon Macie for the account.
      *
-     * Valid values are: `ENABLED` , start or resume all Macie activities for the account; and,
-     * `PAUSED` , suspend all Macie activities for the account.
+     * Valid values are: `ENABLED` , start or resume Macie activities for the account; and, `PAUSED`
+     * , suspend Macie activities for the account.
      *
      * Default: - "ENABLED"
      *
@@ -175,8 +185,8 @@ public open class CfnSession(
     /**
      * The status of Amazon Macie for the account.
      *
-     * Valid values are: `ENABLED` , start or resume all Macie activities for the account; and,
-     * `PAUSED` , suspend all Macie activities for the account.
+     * Valid values are: `ENABLED` , start or resume Macie activities for the account; and, `PAUSED`
+     * , suspend Macie activities for the account.
      *
      * Default: - "ENABLED"
      *

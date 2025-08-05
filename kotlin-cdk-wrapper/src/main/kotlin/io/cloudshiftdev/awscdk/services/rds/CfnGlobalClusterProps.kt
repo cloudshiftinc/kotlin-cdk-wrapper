@@ -12,7 +12,6 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
-import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a `CfnGlobalCluster`.
@@ -29,9 +28,6 @@ import kotlin.jvm.JvmName
  * .engineLifecycleSupport("engineLifecycleSupport")
  * .engineVersion("engineVersion")
  * .globalClusterIdentifier("globalClusterIdentifier")
- * .globalEndpoint(GlobalEndpointProperty.builder()
- * .address("address")
- * .build())
  * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
  * .storageEncrypted(false)
  * .tags(List.of(CfnTag.builder()
@@ -82,10 +78,10 @@ public interface CfnGlobalClusterProps {
    *
    * You can use this setting to enroll your global cluster into Amazon RDS Extended Support. With
    * RDS Extended Support, you can run the selected major engine version on your global cluster past
-   * the end of standard support for that engine version. For more information, see [Using Amazon RDS
-   * Extended
-   * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
-   * the *Amazon Aurora User Guide* .
+   * the end of standard support for that engine version. For more information, see [Amazon RDS
+   * Extended Support with Amazon
+   * Aurora](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in the
+   * *Amazon Aurora User Guide* .
    *
    * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
    *
@@ -115,15 +111,6 @@ public interface CfnGlobalClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-globalclusteridentifier)
    */
   public fun globalClusterIdentifier(): String? = unwrap(this).getGlobalClusterIdentifier()
-
-  /**
-   * The writer endpoint for the new global database cluster.
-   *
-   * This endpoint always points to the writer DB instance in the current primary cluster.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-globalendpoint)
-   */
-  public fun globalEndpoint(): Any? = unwrap(this).getGlobalEndpoint()
 
   /**
    * The Amazon Resource Name (ARN) to use as the primary cluster of the global database.
@@ -209,9 +196,9 @@ public interface CfnGlobalClusterProps {
      *
      * You can use this setting to enroll your global cluster into Amazon RDS Extended Support. With
      * RDS Extended Support, you can run the selected major engine version on your global cluster past
-     * the end of standard support for that engine version. For more information, see [Using Amazon RDS
-     * Extended
-     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+     * the end of standard support for that engine version. For more information, see [Amazon RDS
+     * Extended Support with Amazon
+     * Aurora](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
      * the *Amazon Aurora User Guide* .
      *
      * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
@@ -234,27 +221,6 @@ public interface CfnGlobalClusterProps {
      * This parameter is stored as a lowercase string.
      */
     public fun globalClusterIdentifier(globalClusterIdentifier: String)
-
-    /**
-     * @param globalEndpoint The writer endpoint for the new global database cluster.
-     * This endpoint always points to the writer DB instance in the current primary cluster.
-     */
-    public fun globalEndpoint(globalEndpoint: IResolvable)
-
-    /**
-     * @param globalEndpoint The writer endpoint for the new global database cluster.
-     * This endpoint always points to the writer DB instance in the current primary cluster.
-     */
-    public fun globalEndpoint(globalEndpoint: CfnGlobalCluster.GlobalEndpointProperty)
-
-    /**
-     * @param globalEndpoint The writer endpoint for the new global database cluster.
-     * This endpoint always points to the writer DB instance in the current primary cluster.
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("e8bed818e64c78311a2895bab0181d9d8278e1588ec61cb9fb2a42b997b8db24")
-    public
-        fun globalEndpoint(globalEndpoint: CfnGlobalCluster.GlobalEndpointProperty.Builder.() -> Unit)
 
     /**
      * @param sourceDbClusterIdentifier The Amazon Resource Name (ARN) to use as the primary cluster
@@ -359,9 +325,9 @@ public interface CfnGlobalClusterProps {
      *
      * You can use this setting to enroll your global cluster into Amazon RDS Extended Support. With
      * RDS Extended Support, you can run the selected major engine version on your global cluster past
-     * the end of standard support for that engine version. For more information, see [Using Amazon RDS
-     * Extended
-     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+     * the end of standard support for that engine version. For more information, see [Amazon RDS
+     * Extended Support with Amazon
+     * Aurora](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
      * the *Amazon Aurora User Guide* .
      *
      * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
@@ -390,32 +356,6 @@ public interface CfnGlobalClusterProps {
     override fun globalClusterIdentifier(globalClusterIdentifier: String) {
       cdkBuilder.globalClusterIdentifier(globalClusterIdentifier)
     }
-
-    /**
-     * @param globalEndpoint The writer endpoint for the new global database cluster.
-     * This endpoint always points to the writer DB instance in the current primary cluster.
-     */
-    override fun globalEndpoint(globalEndpoint: IResolvable) {
-      cdkBuilder.globalEndpoint(globalEndpoint.let(IResolvable.Companion::unwrap))
-    }
-
-    /**
-     * @param globalEndpoint The writer endpoint for the new global database cluster.
-     * This endpoint always points to the writer DB instance in the current primary cluster.
-     */
-    override fun globalEndpoint(globalEndpoint: CfnGlobalCluster.GlobalEndpointProperty) {
-      cdkBuilder.globalEndpoint(globalEndpoint.let(CfnGlobalCluster.GlobalEndpointProperty.Companion::unwrap))
-    }
-
-    /**
-     * @param globalEndpoint The writer endpoint for the new global database cluster.
-     * This endpoint always points to the writer DB instance in the current primary cluster.
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("e8bed818e64c78311a2895bab0181d9d8278e1588ec61cb9fb2a42b997b8db24")
-    override
-        fun globalEndpoint(globalEndpoint: CfnGlobalCluster.GlobalEndpointProperty.Builder.() -> Unit):
-        Unit = globalEndpoint(CfnGlobalCluster.GlobalEndpointProperty(globalEndpoint))
 
     /**
      * @param sourceDbClusterIdentifier The Amazon Resource Name (ARN) to use as the primary cluster
@@ -524,9 +464,9 @@ public interface CfnGlobalClusterProps {
      *
      * You can use this setting to enroll your global cluster into Amazon RDS Extended Support. With
      * RDS Extended Support, you can run the selected major engine version on your global cluster past
-     * the end of standard support for that engine version. For more information, see [Using Amazon RDS
-     * Extended
-     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+     * the end of standard support for that engine version. For more information, see [Amazon RDS
+     * Extended Support with Amazon
+     * Aurora](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
      * the *Amazon Aurora User Guide* .
      *
      * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
@@ -557,15 +497,6 @@ public interface CfnGlobalClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-globalclusteridentifier)
      */
     override fun globalClusterIdentifier(): String? = unwrap(this).getGlobalClusterIdentifier()
-
-    /**
-     * The writer endpoint for the new global database cluster.
-     *
-     * This endpoint always points to the writer DB instance in the current primary cluster.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-globalendpoint)
-     */
-    override fun globalEndpoint(): Any? = unwrap(this).getGlobalEndpoint()
 
     /**
      * The Amazon Resource Name (ARN) to use as the primary cluster of the global database.

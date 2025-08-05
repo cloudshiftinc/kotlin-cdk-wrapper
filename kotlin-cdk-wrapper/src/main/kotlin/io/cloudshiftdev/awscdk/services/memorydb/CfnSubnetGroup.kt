@@ -73,6 +73,15 @@ public open class CfnSubnetGroup(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
+   * The network types supported by this subnet.
+   *
+   * Returns an array of strings that can include 'ipv4', 'ipv6', or both, indicating whether the
+   * subnet supports IPv4 only, IPv6 only, or dual-stack deployments.
+   */
+  public open fun attrSupportedNetworkTypes(): List<String> =
+      unwrap(this).getAttrSupportedNetworkTypes()
+
+  /**
    * A description of the subnet group.
    */
   public open fun description(): String? = unwrap(this).getDescription()

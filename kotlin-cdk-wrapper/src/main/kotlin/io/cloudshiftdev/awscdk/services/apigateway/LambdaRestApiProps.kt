@@ -99,7 +99,7 @@ public interface LambdaRestApiProps : RestApiProps {
     /**
      * @param cloudWatchRoleRemovalPolicy The removal policy applied to the AWS CloudWatch role when
      * this resource is removed from the application.
-     * Requires `cloudWatchRole` to be enabled.
+     * Requires `cloudWatchRole` to be enabled.
      */
     public fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy)
 
@@ -376,7 +376,7 @@ public interface LambdaRestApiProps : RestApiProps {
     /**
      * @param cloudWatchRoleRemovalPolicy The removal policy applied to the AWS CloudWatch role when
      * this resource is removed from the application.
-     * Requires `cloudWatchRole` to be enabled.
+     * Requires `cloudWatchRole` to be enabled.
      */
     override fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy) {
       cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
@@ -706,7 +706,7 @@ public interface LambdaRestApiProps : RestApiProps {
      * The removal policy applied to the AWS CloudWatch role when this resource is removed from the
      * application.
      *
-     * Requires `cloudWatchRole` to be enabled.
+     * Requires `cloudWatchRole` to be enabled.
      *
      * Default: - RemovalPolicy.RETAIN
      */

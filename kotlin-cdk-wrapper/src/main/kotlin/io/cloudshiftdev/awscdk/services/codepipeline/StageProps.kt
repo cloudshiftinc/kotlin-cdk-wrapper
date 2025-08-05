@@ -9,6 +9,7 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 
 /**
  * Construction properties of a Pipeline Stage.
@@ -20,10 +21,31 @@ import kotlin.collections.List
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.codepipeline.*;
  * Action action;
+ * Rule rule;
  * StageProps stageProps = StageProps.builder()
  * .stageName("stageName")
  * // the properties below are optional
  * .actions(List.of(action))
+ * .beforeEntry(Conditions.builder()
+ * .conditions(List.of(Condition.builder()
+ * .result(Result.ROLLBACK)
+ * .rules(List.of(rule))
+ * .build()))
+ * .build())
+ * .onFailure(FailureConditions.builder()
+ * .conditions(List.of(Condition.builder()
+ * .result(Result.ROLLBACK)
+ * .rules(List.of(rule))
+ * .build()))
+ * .result(Result.ROLLBACK)
+ * .retryMode(RetryMode.ALL_ACTIONS)
+ * .build())
+ * .onSuccess(Conditions.builder()
+ * .conditions(List.of(Condition.builder()
+ * .result(Result.ROLLBACK)
+ * .rules(List.of(rule))
+ * .build()))
+ * .build())
  * .transitionDisabledReason("transitionDisabledReason")
  * .transitionToEnabled(false)
  * .build();
@@ -36,6 +58,28 @@ public interface StageProps {
    * You can always add more Actions later by calling `IStage#addAction`.
    */
   public fun actions(): List<IAction> = unwrap(this).getActions()?.map(IAction::wrap) ?: emptyList()
+
+  /**
+   * The method to use when a stage allows entry.
+   *
+   * Default: - No conditions are applied before stage entry
+   */
+  public fun beforeEntry(): Conditions? = unwrap(this).getBeforeEntry()?.let(Conditions::wrap)
+
+  /**
+   * The method to use when a stage has not completed successfully.
+   *
+   * Default: - No failure conditions are applied
+   */
+  public fun onFailure(): FailureConditions? =
+      unwrap(this).getOnFailure()?.let(FailureConditions::wrap)
+
+  /**
+   * The method to use when a stage has succeeded.
+   *
+   * Default: - No success conditions are applied
+   */
+  public fun onSuccess(): Conditions? = unwrap(this).getOnSuccess()?.let(Conditions::wrap)
 
   /**
    * The physical, human-readable name to assign to this Pipeline Stage.
@@ -77,6 +121,42 @@ public interface StageProps {
     public fun actions(vararg actions: IAction)
 
     /**
+     * @param beforeEntry The method to use when a stage allows entry.
+     */
+    public fun beforeEntry(beforeEntry: Conditions)
+
+    /**
+     * @param beforeEntry The method to use when a stage allows entry.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("80877067d0d49db632355839a3033c1b2334f7e16feec710d0e3005eb0c02ed7")
+    public fun beforeEntry(beforeEntry: Conditions.Builder.() -> Unit)
+
+    /**
+     * @param onFailure The method to use when a stage has not completed successfully.
+     */
+    public fun onFailure(onFailure: FailureConditions)
+
+    /**
+     * @param onFailure The method to use when a stage has not completed successfully.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7a52996cb4c4dd23c8c2f38f0b6fa3d6445555890743fb88f51b8f440b2d8678")
+    public fun onFailure(onFailure: FailureConditions.Builder.() -> Unit)
+
+    /**
+     * @param onSuccess The method to use when a stage has succeeded.
+     */
+    public fun onSuccess(onSuccess: Conditions)
+
+    /**
+     * @param onSuccess The method to use when a stage has succeeded.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7ff4191e79a7d77e9550c27a335341408d8b1b95bcf9a896b59f63b38970c285")
+    public fun onSuccess(onSuccess: Conditions.Builder.() -> Unit)
+
+    /**
      * @param stageName The physical, human-readable name to assign to this Pipeline Stage. 
      */
     public fun stageName(stageName: String)
@@ -111,6 +191,51 @@ public interface StageProps {
      * You can always add more Actions later by calling `IStage#addAction`.
      */
     override fun actions(vararg actions: IAction): Unit = actions(actions.toList())
+
+    /**
+     * @param beforeEntry The method to use when a stage allows entry.
+     */
+    override fun beforeEntry(beforeEntry: Conditions) {
+      cdkBuilder.beforeEntry(beforeEntry.let(Conditions.Companion::unwrap))
+    }
+
+    /**
+     * @param beforeEntry The method to use when a stage allows entry.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("80877067d0d49db632355839a3033c1b2334f7e16feec710d0e3005eb0c02ed7")
+    override fun beforeEntry(beforeEntry: Conditions.Builder.() -> Unit): Unit =
+        beforeEntry(Conditions(beforeEntry))
+
+    /**
+     * @param onFailure The method to use when a stage has not completed successfully.
+     */
+    override fun onFailure(onFailure: FailureConditions) {
+      cdkBuilder.onFailure(onFailure.let(FailureConditions.Companion::unwrap))
+    }
+
+    /**
+     * @param onFailure The method to use when a stage has not completed successfully.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7a52996cb4c4dd23c8c2f38f0b6fa3d6445555890743fb88f51b8f440b2d8678")
+    override fun onFailure(onFailure: FailureConditions.Builder.() -> Unit): Unit =
+        onFailure(FailureConditions(onFailure))
+
+    /**
+     * @param onSuccess The method to use when a stage has succeeded.
+     */
+    override fun onSuccess(onSuccess: Conditions) {
+      cdkBuilder.onSuccess(onSuccess.let(Conditions.Companion::unwrap))
+    }
+
+    /**
+     * @param onSuccess The method to use when a stage has succeeded.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7ff4191e79a7d77e9550c27a335341408d8b1b95bcf9a896b59f63b38970c285")
+    override fun onSuccess(onSuccess: Conditions.Builder.() -> Unit): Unit =
+        onSuccess(Conditions(onSuccess))
 
     /**
      * @param stageName The physical, human-readable name to assign to this Pipeline Stage. 
@@ -149,6 +274,28 @@ public interface StageProps {
      */
     override fun actions(): List<IAction> = unwrap(this).getActions()?.map(IAction::wrap) ?:
         emptyList()
+
+    /**
+     * The method to use when a stage allows entry.
+     *
+     * Default: - No conditions are applied before stage entry
+     */
+    override fun beforeEntry(): Conditions? = unwrap(this).getBeforeEntry()?.let(Conditions::wrap)
+
+    /**
+     * The method to use when a stage has not completed successfully.
+     *
+     * Default: - No failure conditions are applied
+     */
+    override fun onFailure(): FailureConditions? =
+        unwrap(this).getOnFailure()?.let(FailureConditions::wrap)
+
+    /**
+     * The method to use when a stage has succeeded.
+     *
+     * Default: - No success conditions are applied
+     */
+    override fun onSuccess(): Conditions? = unwrap(this).getOnSuccess()?.let(Conditions::wrap)
 
     /**
      * The physical, human-readable name to assign to this Pipeline Stage.

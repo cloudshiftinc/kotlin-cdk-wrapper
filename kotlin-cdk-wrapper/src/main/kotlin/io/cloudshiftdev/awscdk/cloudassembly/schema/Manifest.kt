@@ -12,6 +12,9 @@ public open class Manifest(
   cdkObject: software.amazon.awscdk.cloudassembly.schema.Manifest,
 ) : CdkObject(cdkObject) {
   public companion object {
+    public fun cliVersion(): String? =
+        software.amazon.awscdk.cloudassembly.schema.Manifest.cliVersion()
+
     @Deprecated(message = "deprecated in CDK")
     public fun load(filePath: String): AssemblyManifest =
         software.amazon.awscdk.cloudassembly.schema.Manifest.load(filePath).let(AssemblyManifest::wrap)

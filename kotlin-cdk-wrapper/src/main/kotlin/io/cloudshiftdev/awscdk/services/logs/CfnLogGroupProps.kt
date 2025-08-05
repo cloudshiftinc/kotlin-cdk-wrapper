@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.logs
 
 import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -22,8 +23,10 @@ import kotlin.collections.List
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.logs.*;
  * Object dataProtectionPolicy;
+ * Object fieldIndexPolicies;
  * CfnLogGroupProps cfnLogGroupProps = CfnLogGroupProps.builder()
  * .dataProtectionPolicy(dataProtectionPolicy)
+ * .fieldIndexPolicies(List.of(fieldIndexPolicies))
  * .kmsKeyId("kmsKeyId")
  * .logGroupClass("logGroupClass")
  * .logGroupName("logGroupName")
@@ -53,6 +56,30 @@ public interface CfnLogGroupProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html#cfn-logs-loggroup-dataprotectionpolicy)
    */
   public fun dataProtectionPolicy(): Any? = unwrap(this).getDataProtectionPolicy()
+
+  /**
+   * Creates or updates a *field index policy* for the specified log group.
+   *
+   * Only log groups in the Standard log class support field index policies. For more information
+   * about log classes, see [Log
+   * classes](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html)
+   * .
+   *
+   * You can use field index policies to create *field indexes* on fields found in log events in the
+   * log group. Creating field indexes lowers the costs for CloudWatch Logs Insights queries that
+   * reference those field indexes, because these queries attempt to skip the processing of log events
+   * that are known to not match the indexed field. Good fields to index are fields that you often need
+   * to query for and fields that have high cardinality of values Common examples of indexes include
+   * request ID, session ID, userID, and instance IDs. For more information, see [Create field indexes
+   * to improve query performance and reduce
+   * costs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatchLogs-Field-Indexing.html)
+   * .
+   *
+   * Currently, this array supports only one field index policy object.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html#cfn-logs-loggroup-fieldindexpolicies)
+   */
+  public fun fieldIndexPolicies(): Any? = unwrap(this).getFieldIndexPolicies()
 
   /**
    * The Amazon Resource Name (ARN) of the AWS KMS key to use when encrypting log data.
@@ -144,6 +171,72 @@ public interface CfnLogGroupProps {
     public fun dataProtectionPolicy(dataProtectionPolicy: Any)
 
     /**
+     * @param fieldIndexPolicies Creates or updates a *field index policy* for the specified log
+     * group.
+     * Only log groups in the Standard log class support field index policies. For more information
+     * about log classes, see [Log
+     * classes](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html)
+     * .
+     *
+     * You can use field index policies to create *field indexes* on fields found in log events in
+     * the log group. Creating field indexes lowers the costs for CloudWatch Logs Insights queries that
+     * reference those field indexes, because these queries attempt to skip the processing of log
+     * events that are known to not match the indexed field. Good fields to index are fields that you
+     * often need to query for and fields that have high cardinality of values Common examples of
+     * indexes include request ID, session ID, userID, and instance IDs. For more information, see
+     * [Create field indexes to improve query performance and reduce
+     * costs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatchLogs-Field-Indexing.html)
+     * .
+     *
+     * Currently, this array supports only one field index policy object.
+     */
+    public fun fieldIndexPolicies(fieldIndexPolicies: List<Any>)
+
+    /**
+     * @param fieldIndexPolicies Creates or updates a *field index policy* for the specified log
+     * group.
+     * Only log groups in the Standard log class support field index policies. For more information
+     * about log classes, see [Log
+     * classes](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html)
+     * .
+     *
+     * You can use field index policies to create *field indexes* on fields found in log events in
+     * the log group. Creating field indexes lowers the costs for CloudWatch Logs Insights queries that
+     * reference those field indexes, because these queries attempt to skip the processing of log
+     * events that are known to not match the indexed field. Good fields to index are fields that you
+     * often need to query for and fields that have high cardinality of values Common examples of
+     * indexes include request ID, session ID, userID, and instance IDs. For more information, see
+     * [Create field indexes to improve query performance and reduce
+     * costs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatchLogs-Field-Indexing.html)
+     * .
+     *
+     * Currently, this array supports only one field index policy object.
+     */
+    public fun fieldIndexPolicies(vararg fieldIndexPolicies: Any)
+
+    /**
+     * @param fieldIndexPolicies Creates or updates a *field index policy* for the specified log
+     * group.
+     * Only log groups in the Standard log class support field index policies. For more information
+     * about log classes, see [Log
+     * classes](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html)
+     * .
+     *
+     * You can use field index policies to create *field indexes* on fields found in log events in
+     * the log group. Creating field indexes lowers the costs for CloudWatch Logs Insights queries that
+     * reference those field indexes, because these queries attempt to skip the processing of log
+     * events that are known to not match the indexed field. Good fields to index are fields that you
+     * often need to query for and fields that have high cardinality of values Common examples of
+     * indexes include request ID, session ID, userID, and instance IDs. For more information, see
+     * [Create field indexes to improve query performance and reduce
+     * costs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatchLogs-Field-Indexing.html)
+     * .
+     *
+     * Currently, this array supports only one field index policy object.
+     */
+    public fun fieldIndexPolicies(fieldIndexPolicies: IResolvable)
+
+    /**
      * @param kmsKeyId The Amazon Resource Name (ARN) of the AWS KMS key to use when encrypting log
      * data.
      * To associate an AWS KMS key with the log group, specify the ARN of that KMS key here. If you
@@ -226,6 +319,77 @@ public interface CfnLogGroupProps {
      */
     override fun dataProtectionPolicy(dataProtectionPolicy: Any) {
       cdkBuilder.dataProtectionPolicy(dataProtectionPolicy)
+    }
+
+    /**
+     * @param fieldIndexPolicies Creates or updates a *field index policy* for the specified log
+     * group.
+     * Only log groups in the Standard log class support field index policies. For more information
+     * about log classes, see [Log
+     * classes](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html)
+     * .
+     *
+     * You can use field index policies to create *field indexes* on fields found in log events in
+     * the log group. Creating field indexes lowers the costs for CloudWatch Logs Insights queries that
+     * reference those field indexes, because these queries attempt to skip the processing of log
+     * events that are known to not match the indexed field. Good fields to index are fields that you
+     * often need to query for and fields that have high cardinality of values Common examples of
+     * indexes include request ID, session ID, userID, and instance IDs. For more information, see
+     * [Create field indexes to improve query performance and reduce
+     * costs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatchLogs-Field-Indexing.html)
+     * .
+     *
+     * Currently, this array supports only one field index policy object.
+     */
+    override fun fieldIndexPolicies(fieldIndexPolicies: List<Any>) {
+      cdkBuilder.fieldIndexPolicies(fieldIndexPolicies.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param fieldIndexPolicies Creates or updates a *field index policy* for the specified log
+     * group.
+     * Only log groups in the Standard log class support field index policies. For more information
+     * about log classes, see [Log
+     * classes](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html)
+     * .
+     *
+     * You can use field index policies to create *field indexes* on fields found in log events in
+     * the log group. Creating field indexes lowers the costs for CloudWatch Logs Insights queries that
+     * reference those field indexes, because these queries attempt to skip the processing of log
+     * events that are known to not match the indexed field. Good fields to index are fields that you
+     * often need to query for and fields that have high cardinality of values Common examples of
+     * indexes include request ID, session ID, userID, and instance IDs. For more information, see
+     * [Create field indexes to improve query performance and reduce
+     * costs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatchLogs-Field-Indexing.html)
+     * .
+     *
+     * Currently, this array supports only one field index policy object.
+     */
+    override fun fieldIndexPolicies(vararg fieldIndexPolicies: Any): Unit =
+        fieldIndexPolicies(fieldIndexPolicies.toList())
+
+    /**
+     * @param fieldIndexPolicies Creates or updates a *field index policy* for the specified log
+     * group.
+     * Only log groups in the Standard log class support field index policies. For more information
+     * about log classes, see [Log
+     * classes](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html)
+     * .
+     *
+     * You can use field index policies to create *field indexes* on fields found in log events in
+     * the log group. Creating field indexes lowers the costs for CloudWatch Logs Insights queries that
+     * reference those field indexes, because these queries attempt to skip the processing of log
+     * events that are known to not match the indexed field. Good fields to index are fields that you
+     * often need to query for and fields that have high cardinality of values Common examples of
+     * indexes include request ID, session ID, userID, and instance IDs. For more information, see
+     * [Create field indexes to improve query performance and reduce
+     * costs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatchLogs-Field-Indexing.html)
+     * .
+     *
+     * Currently, this array supports only one field index policy object.
+     */
+    override fun fieldIndexPolicies(fieldIndexPolicies: IResolvable) {
+      cdkBuilder.fieldIndexPolicies(fieldIndexPolicies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -325,6 +489,30 @@ public interface CfnLogGroupProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html#cfn-logs-loggroup-dataprotectionpolicy)
      */
     override fun dataProtectionPolicy(): Any? = unwrap(this).getDataProtectionPolicy()
+
+    /**
+     * Creates or updates a *field index policy* for the specified log group.
+     *
+     * Only log groups in the Standard log class support field index policies. For more information
+     * about log classes, see [Log
+     * classes](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html)
+     * .
+     *
+     * You can use field index policies to create *field indexes* on fields found in log events in
+     * the log group. Creating field indexes lowers the costs for CloudWatch Logs Insights queries that
+     * reference those field indexes, because these queries attempt to skip the processing of log
+     * events that are known to not match the indexed field. Good fields to index are fields that you
+     * often need to query for and fields that have high cardinality of values Common examples of
+     * indexes include request ID, session ID, userID, and instance IDs. For more information, see
+     * [Create field indexes to improve query performance and reduce
+     * costs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatchLogs-Field-Indexing.html)
+     * .
+     *
+     * Currently, this array supports only one field index policy object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html#cfn-logs-loggroup-fieldindexpolicies)
+     */
+    override fun fieldIndexPolicies(): Any? = unwrap(this).getFieldIndexPolicies()
 
     /**
      * The Amazon Resource Name (ARN) of the AWS KMS key to use when encrypting log data.

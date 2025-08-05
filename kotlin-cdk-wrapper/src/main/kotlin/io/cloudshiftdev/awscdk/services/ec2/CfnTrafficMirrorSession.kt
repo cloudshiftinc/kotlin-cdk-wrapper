@@ -44,6 +44,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .trafficMirrorTargetId("trafficMirrorTargetId")
  * // the properties below are optional
  * .description("description")
+ * .ownerId("ownerId")
  * .packetLength(123)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -77,7 +78,7 @@ public open class CfnTrafficMirrorSession(
   )
 
   /**
-   *
+   * The ID of a Traffic Mirror session.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
@@ -112,6 +113,18 @@ public open class CfnTrafficMirrorSession(
    */
   public open fun networkInterfaceId(`value`: String) {
     unwrap(this).setNetworkInterfaceId(`value`)
+  }
+
+  /**
+   * The ID of the account that owns the Traffic Mirror session.
+   */
+  public open fun ownerId(): String? = unwrap(this).getOwnerId()
+
+  /**
+   * The ID of the account that owns the Traffic Mirror session.
+   */
+  public open fun ownerId(`value`: String) {
+    unwrap(this).setOwnerId(`value`)
   }
 
   /**
@@ -221,6 +234,14 @@ public open class CfnTrafficMirrorSession(
     public fun networkInterfaceId(networkInterfaceId: String)
 
     /**
+     * The ID of the account that owns the Traffic Mirror session.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html#cfn-ec2-trafficmirrorsession-ownerid)
+     * @param ownerId The ID of the account that owns the Traffic Mirror session. 
+     */
+    public fun ownerId(ownerId: String)
+
+    /**
      * The number of bytes in each packet to mirror.
      *
      * These are bytes after the VXLAN header. Do not specify this parameter when you want to mirror
@@ -324,6 +345,16 @@ public open class CfnTrafficMirrorSession(
      */
     override fun networkInterfaceId(networkInterfaceId: String) {
       cdkBuilder.networkInterfaceId(networkInterfaceId)
+    }
+
+    /**
+     * The ID of the account that owns the Traffic Mirror session.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html#cfn-ec2-trafficmirrorsession-ownerid)
+     * @param ownerId The ID of the account that owns the Traffic Mirror session. 
+     */
+    override fun ownerId(ownerId: String) {
+      cdkBuilder.ownerId(ownerId)
     }
 
     /**

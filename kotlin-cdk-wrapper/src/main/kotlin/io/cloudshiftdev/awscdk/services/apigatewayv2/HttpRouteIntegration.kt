@@ -13,18 +13,24 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegration;
- * ApplicationLoadBalancer lb;
- * ApplicationListener listener = lb.addListener("listener",
- * BaseApplicationListenerProps.builder().port(80).build());
- * listener.addTargets("target", AddApplicationTargetsProps.builder()
- * .port(80)
+ * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration;
+ * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration;
+ * Function bookStoreDefaultFn;
+ * HttpUrlIntegration getBooksIntegration = new HttpUrlIntegration("GetBooksIntegration",
+ * "https://get-books-proxy.example.com");
+ * HttpLambdaIntegration bookStoreDefaultIntegration = new HttpLambdaIntegration("BooksIntegration",
+ * bookStoreDefaultFn);
+ * HttpApi httpApi = new HttpApi(this, "HttpApi");
+ * httpApi.addRoutes(AddRoutesOptions.builder()
+ * .path("/books")
+ * .methods(List.of(HttpMethod.GET))
+ * .integration(getBooksIntegration)
  * .build());
- * HttpApi httpEndpoint = HttpApi.Builder.create(this, "HttpProxyPrivateApi")
- * .defaultIntegration(HttpAlbIntegration.Builder.create("DefaultIntegration", listener)
- * .parameterMapping(new ParameterMapping().custom("myKey", "myValue"))
- * .build())
- * .build();
+ * httpApi.addRoutes(AddRoutesOptions.builder()
+ * .path("/books")
+ * .methods(List.of(HttpMethod.ANY))
+ * .integration(bookStoreDefaultIntegration)
+ * .build());
  * ```
  */
 public abstract class HttpRouteIntegration(

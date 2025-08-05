@@ -3153,13 +3153,13 @@ public open class CfnRule(
        * @param headerParameters The headers that need to be sent as part of request invoking the
        * API Gateway API or EventBridge ApiDestination.
        */
-      public fun headerParameters(headerParameters: IResolvable)
+      public fun headerParameters(headerParameters: Map<String, String>)
 
       /**
        * @param headerParameters The headers that need to be sent as part of request invoking the
        * API Gateway API or EventBridge ApiDestination.
        */
-      public fun headerParameters(headerParameters: Map<String, String>)
+      public fun headerParameters(headerParameters: IResolvable)
 
       /**
        * @param pathParameterValues The path parameter values to be used to populate API Gateway API
@@ -3177,13 +3177,13 @@ public open class CfnRule(
        * @param queryStringParameters The query string keys/values that need to be sent as part of
        * request invoking the API Gateway API or EventBridge ApiDestination.
        */
-      public fun queryStringParameters(queryStringParameters: IResolvable)
+      public fun queryStringParameters(queryStringParameters: Map<String, String>)
 
       /**
        * @param queryStringParameters The query string keys/values that need to be sent as part of
        * request invoking the API Gateway API or EventBridge ApiDestination.
        */
-      public fun queryStringParameters(queryStringParameters: Map<String, String>)
+      public fun queryStringParameters(queryStringParameters: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -3195,16 +3195,16 @@ public open class CfnRule(
        * @param headerParameters The headers that need to be sent as part of request invoking the
        * API Gateway API or EventBridge ApiDestination.
        */
-      override fun headerParameters(headerParameters: IResolvable) {
-        cdkBuilder.headerParameters(headerParameters.let(IResolvable.Companion::unwrap))
+      override fun headerParameters(headerParameters: Map<String, String>) {
+        cdkBuilder.headerParameters(headerParameters)
       }
 
       /**
        * @param headerParameters The headers that need to be sent as part of request invoking the
        * API Gateway API or EventBridge ApiDestination.
        */
-      override fun headerParameters(headerParameters: Map<String, String>) {
-        cdkBuilder.headerParameters(headerParameters)
+      override fun headerParameters(headerParameters: IResolvable) {
+        cdkBuilder.headerParameters(headerParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3226,16 +3226,16 @@ public open class CfnRule(
        * @param queryStringParameters The query string keys/values that need to be sent as part of
        * request invoking the API Gateway API or EventBridge ApiDestination.
        */
-      override fun queryStringParameters(queryStringParameters: IResolvable) {
-        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable.Companion::unwrap))
+      override fun queryStringParameters(queryStringParameters: Map<String, String>) {
+        cdkBuilder.queryStringParameters(queryStringParameters)
       }
 
       /**
        * @param queryStringParameters The query string keys/values that need to be sent as part of
        * request invoking the API Gateway API or EventBridge ApiDestination.
        */
-      override fun queryStringParameters(queryStringParameters: Map<String, String>) {
-        cdkBuilder.queryStringParameters(queryStringParameters)
+      override fun queryStringParameters(queryStringParameters: IResolvable) {
+        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty =
@@ -3395,7 +3395,7 @@ public open class CfnRule(
        *
        * The keys cannot start with " AWS ."
        */
-      public fun inputPathsMap(inputPathsMap: IResolvable)
+      public fun inputPathsMap(inputPathsMap: Map<String, String>)
 
       /**
        * @param inputPathsMap Map of JSON paths to be extracted from the event.
@@ -3407,7 +3407,7 @@ public open class CfnRule(
        *
        * The keys cannot start with " AWS ."
        */
-      public fun inputPathsMap(inputPathsMap: Map<String, String>)
+      public fun inputPathsMap(inputPathsMap: IResolvable)
 
       /**
        * @param inputTemplate Input template where you specify placeholders that will be filled with
@@ -3476,8 +3476,8 @@ public open class CfnRule(
        *
        * The keys cannot start with " AWS ."
        */
-      override fun inputPathsMap(inputPathsMap: IResolvable) {
-        cdkBuilder.inputPathsMap(inputPathsMap.let(IResolvable.Companion::unwrap))
+      override fun inputPathsMap(inputPathsMap: Map<String, String>) {
+        cdkBuilder.inputPathsMap(inputPathsMap)
       }
 
       /**
@@ -3490,8 +3490,8 @@ public open class CfnRule(
        *
        * The keys cannot start with " AWS ."
        */
-      override fun inputPathsMap(inputPathsMap: Map<String, String>) {
-        cdkBuilder.inputPathsMap(inputPathsMap)
+      override fun inputPathsMap(inputPathsMap: IResolvable) {
+        cdkBuilder.inputPathsMap(inputPathsMap.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4871,7 +4871,7 @@ public open class CfnRule(
   }
 
   /**
-   * Name/Value pair of a parameter to start execution of a SageMaker Model Building Pipeline.
+   * Name/Value pair of a parameter to start execution of a SageMaker AI Model Building Pipeline.
    *
    * Example:
    *
@@ -4890,14 +4890,14 @@ public open class CfnRule(
    */
   public interface SageMakerPipelineParameterProperty {
     /**
-     * Name of parameter to start execution of a SageMaker Model Building Pipeline.
+     * Name of parameter to start execution of a SageMaker AI Model Building Pipeline.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameter.html#cfn-events-rule-sagemakerpipelineparameter-name)
      */
     public fun name(): String
 
     /**
-     * Value of parameter to start execution of a SageMaker Model Building Pipeline.
+     * Value of parameter to start execution of a SageMaker AI Model Building Pipeline.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameter.html#cfn-events-rule-sagemakerpipelineparameter-value)
      */
@@ -4909,12 +4909,14 @@ public open class CfnRule(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name Name of parameter to start execution of a SageMaker Model Building Pipeline. 
+       * @param name Name of parameter to start execution of a SageMaker AI Model Building Pipeline.
+       * 
        */
       public fun name(name: String)
 
       /**
-       * @param value Value of parameter to start execution of a SageMaker Model Building Pipeline. 
+       * @param value Value of parameter to start execution of a SageMaker AI Model Building
+       * Pipeline. 
        */
       public fun `value`(`value`: String)
     }
@@ -4926,14 +4928,16 @@ public open class CfnRule(
           software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty.builder()
 
       /**
-       * @param name Name of parameter to start execution of a SageMaker Model Building Pipeline. 
+       * @param name Name of parameter to start execution of a SageMaker AI Model Building Pipeline.
+       * 
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
       /**
-       * @param value Value of parameter to start execution of a SageMaker Model Building Pipeline. 
+       * @param value Value of parameter to start execution of a SageMaker AI Model Building
+       * Pipeline. 
        */
       override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
@@ -4949,14 +4953,14 @@ public open class CfnRule(
     ) : CdkObject(cdkObject),
         SageMakerPipelineParameterProperty {
       /**
-       * Name of parameter to start execution of a SageMaker Model Building Pipeline.
+       * Name of parameter to start execution of a SageMaker AI Model Building Pipeline.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameter.html#cfn-events-rule-sagemakerpipelineparameter-name)
        */
       override fun name(): String = unwrap(this).getName()
 
       /**
-       * Value of parameter to start execution of a SageMaker Model Building Pipeline.
+       * Value of parameter to start execution of a SageMaker AI Model Building Pipeline.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameter.html#cfn-events-rule-sagemakerpipelineparameter-value)
        */
@@ -4983,8 +4987,8 @@ public open class CfnRule(
   }
 
   /**
-   * These are custom parameters to use when the target is a SageMaker Model Building Pipeline that
-   * starts based on EventBridge events.
+   * These are custom parameters to use when the target is a SageMaker AI Model Building Pipeline
+   * that starts based on EventBridge events.
    *
    * Example:
    *
@@ -5005,7 +5009,7 @@ public open class CfnRule(
    */
   public interface SageMakerPipelineParametersProperty {
     /**
-     * List of Parameter names and values for SageMaker Model Building Pipeline execution.
+     * List of Parameter names and values for SageMaker AI Model Building Pipeline execution.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameters.html#cfn-events-rule-sagemakerpipelineparameters-pipelineparameterlist)
      */
@@ -5017,19 +5021,19 @@ public open class CfnRule(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param pipelineParameterList List of Parameter names and values for SageMaker Model
+       * @param pipelineParameterList List of Parameter names and values for SageMaker AI Model
        * Building Pipeline execution.
        */
       public fun pipelineParameterList(pipelineParameterList: IResolvable)
 
       /**
-       * @param pipelineParameterList List of Parameter names and values for SageMaker Model
+       * @param pipelineParameterList List of Parameter names and values for SageMaker AI Model
        * Building Pipeline execution.
        */
       public fun pipelineParameterList(pipelineParameterList: List<Any>)
 
       /**
-       * @param pipelineParameterList List of Parameter names and values for SageMaker Model
+       * @param pipelineParameterList List of Parameter names and values for SageMaker AI Model
        * Building Pipeline execution.
        */
       public fun pipelineParameterList(vararg pipelineParameterList: Any)
@@ -5042,7 +5046,7 @@ public open class CfnRule(
           software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParametersProperty.builder()
 
       /**
-       * @param pipelineParameterList List of Parameter names and values for SageMaker Model
+       * @param pipelineParameterList List of Parameter names and values for SageMaker AI Model
        * Building Pipeline execution.
        */
       override fun pipelineParameterList(pipelineParameterList: IResolvable) {
@@ -5050,7 +5054,7 @@ public open class CfnRule(
       }
 
       /**
-       * @param pipelineParameterList List of Parameter names and values for SageMaker Model
+       * @param pipelineParameterList List of Parameter names and values for SageMaker AI Model
        * Building Pipeline execution.
        */
       override fun pipelineParameterList(pipelineParameterList: List<Any>) {
@@ -5058,7 +5062,7 @@ public open class CfnRule(
       }
 
       /**
-       * @param pipelineParameterList List of Parameter names and values for SageMaker Model
+       * @param pipelineParameterList List of Parameter names and values for SageMaker AI Model
        * Building Pipeline execution.
        */
       override fun pipelineParameterList(vararg pipelineParameterList: Any): Unit =
@@ -5074,7 +5078,7 @@ public open class CfnRule(
     ) : CdkObject(cdkObject),
         SageMakerPipelineParametersProperty {
       /**
-       * List of Parameter names and values for SageMaker Model Building Pipeline execution.
+       * List of Parameter names and values for SageMaker AI Model Building Pipeline execution.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameters.html#cfn-events-rule-sagemakerpipelineparameters-pipelineparameterlist)
        */
@@ -5579,11 +5583,11 @@ public open class CfnRule(
     public fun runCommandParameters(): Any? = unwrap(this).getRunCommandParameters()
 
     /**
-     * Contains the SageMaker Model Building Pipeline parameters to start execution of a SageMaker
-     * Model Building Pipeline.
+     * Contains the SageMaker AI Model Building Pipeline parameters to start execution of a
+     * SageMaker AI Model Building Pipeline.
      *
-     * If you specify a SageMaker Model Building Pipeline as a target, you can use this to specify
-     * parameters to start a pipeline execution based on EventBridge events.
+     * If you specify a SageMaker AI Model Building Pipeline as a target, you can use this to
+     * specify parameters to start a pipeline execution based on EventBridge events.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-sagemakerpipelineparameters)
      */
@@ -5893,27 +5897,27 @@ public open class CfnRule(
           fun runCommandParameters(runCommandParameters: RunCommandParametersProperty.Builder.() -> Unit)
 
       /**
-       * @param sageMakerPipelineParameters Contains the SageMaker Model Building Pipeline
-       * parameters to start execution of a SageMaker Model Building Pipeline.
-       * If you specify a SageMaker Model Building Pipeline as a target, you can use this to specify
-       * parameters to start a pipeline execution based on EventBridge events.
+       * @param sageMakerPipelineParameters Contains the SageMaker AI Model Building Pipeline
+       * parameters to start execution of a SageMaker AI Model Building Pipeline.
+       * If you specify a SageMaker AI Model Building Pipeline as a target, you can use this to
+       * specify parameters to start a pipeline execution based on EventBridge events.
        */
       public fun sageMakerPipelineParameters(sageMakerPipelineParameters: IResolvable)
 
       /**
-       * @param sageMakerPipelineParameters Contains the SageMaker Model Building Pipeline
-       * parameters to start execution of a SageMaker Model Building Pipeline.
-       * If you specify a SageMaker Model Building Pipeline as a target, you can use this to specify
-       * parameters to start a pipeline execution based on EventBridge events.
+       * @param sageMakerPipelineParameters Contains the SageMaker AI Model Building Pipeline
+       * parameters to start execution of a SageMaker AI Model Building Pipeline.
+       * If you specify a SageMaker AI Model Building Pipeline as a target, you can use this to
+       * specify parameters to start a pipeline execution based on EventBridge events.
        */
       public
           fun sageMakerPipelineParameters(sageMakerPipelineParameters: SageMakerPipelineParametersProperty)
 
       /**
-       * @param sageMakerPipelineParameters Contains the SageMaker Model Building Pipeline
-       * parameters to start execution of a SageMaker Model Building Pipeline.
-       * If you specify a SageMaker Model Building Pipeline as a target, you can use this to specify
-       * parameters to start a pipeline execution based on EventBridge events.
+       * @param sageMakerPipelineParameters Contains the SageMaker AI Model Building Pipeline
+       * parameters to start execution of a SageMaker AI Model Building Pipeline.
+       * If you specify a SageMaker AI Model Building Pipeline as a target, you can use this to
+       * specify parameters to start a pipeline execution based on EventBridge events.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e773de01415c981b518d93ff1e6f4f97e74194e27b2fd49706d15475ea83362e")
@@ -6299,20 +6303,20 @@ public open class CfnRule(
           Unit = runCommandParameters(RunCommandParametersProperty(runCommandParameters))
 
       /**
-       * @param sageMakerPipelineParameters Contains the SageMaker Model Building Pipeline
-       * parameters to start execution of a SageMaker Model Building Pipeline.
-       * If you specify a SageMaker Model Building Pipeline as a target, you can use this to specify
-       * parameters to start a pipeline execution based on EventBridge events.
+       * @param sageMakerPipelineParameters Contains the SageMaker AI Model Building Pipeline
+       * parameters to start execution of a SageMaker AI Model Building Pipeline.
+       * If you specify a SageMaker AI Model Building Pipeline as a target, you can use this to
+       * specify parameters to start a pipeline execution based on EventBridge events.
        */
       override fun sageMakerPipelineParameters(sageMakerPipelineParameters: IResolvable) {
         cdkBuilder.sageMakerPipelineParameters(sageMakerPipelineParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param sageMakerPipelineParameters Contains the SageMaker Model Building Pipeline
-       * parameters to start execution of a SageMaker Model Building Pipeline.
-       * If you specify a SageMaker Model Building Pipeline as a target, you can use this to specify
-       * parameters to start a pipeline execution based on EventBridge events.
+       * @param sageMakerPipelineParameters Contains the SageMaker AI Model Building Pipeline
+       * parameters to start execution of a SageMaker AI Model Building Pipeline.
+       * If you specify a SageMaker AI Model Building Pipeline as a target, you can use this to
+       * specify parameters to start a pipeline execution based on EventBridge events.
        */
       override
           fun sageMakerPipelineParameters(sageMakerPipelineParameters: SageMakerPipelineParametersProperty) {
@@ -6320,10 +6324,10 @@ public open class CfnRule(
       }
 
       /**
-       * @param sageMakerPipelineParameters Contains the SageMaker Model Building Pipeline
-       * parameters to start execution of a SageMaker Model Building Pipeline.
-       * If you specify a SageMaker Model Building Pipeline as a target, you can use this to specify
-       * parameters to start a pipeline execution based on EventBridge events.
+       * @param sageMakerPipelineParameters Contains the SageMaker AI Model Building Pipeline
+       * parameters to start execution of a SageMaker AI Model Building Pipeline.
+       * If you specify a SageMaker AI Model Building Pipeline as a target, you can use this to
+       * specify parameters to start a pipeline execution based on EventBridge events.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e773de01415c981b518d93ff1e6f4f97e74194e27b2fd49706d15475ea83362e")
@@ -6518,11 +6522,11 @@ public open class CfnRule(
       override fun runCommandParameters(): Any? = unwrap(this).getRunCommandParameters()
 
       /**
-       * Contains the SageMaker Model Building Pipeline parameters to start execution of a SageMaker
-       * Model Building Pipeline.
+       * Contains the SageMaker AI Model Building Pipeline parameters to start execution of a
+       * SageMaker AI Model Building Pipeline.
        *
-       * If you specify a SageMaker Model Building Pipeline as a target, you can use this to specify
-       * parameters to start a pipeline execution based on EventBridge events.
+       * If you specify a SageMaker AI Model Building Pipeline as a target, you can use this to
+       * specify parameters to start a pipeline execution based on EventBridge events.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-sagemakerpipelineparameters)
        */

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.Duration
+import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -275,6 +276,18 @@ public interface DockerImageFunctionProps : FunctionOptions {
     public fun logGroup(logGroup: ILogGroup)
 
     /**
+     * @param logRemovalPolicy Determine the removal policy of the log group that is auto-created by
+     * this construct.
+     * Normally you want to retain the log group so you can diagnose issues
+     * from logs even after a deployment that no longer includes the log group.
+     * In that case, use the normal date-based retention policy to age out your
+     * logs.
+     * @deprecated use `logGroup` instead
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun logRemovalPolicy(logRemovalPolicy: RemovalPolicy)
+
+    /**
      * @param logRetention The number of days log events are kept in CloudWatch Logs.
      * When updating
      * this property, unsetting it doesn't remove the log retention policy. To
@@ -296,7 +309,9 @@ public interface DockerImageFunctionProps : FunctionOptions {
      * *
      * myLogGroup.getLogGroupName();
      * ```
+     * @deprecated use `logGroup` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun logRetention(logRetention: RetentionDays)
 
     /**
@@ -775,6 +790,20 @@ public interface DockerImageFunctionProps : FunctionOptions {
     }
 
     /**
+     * @param logRemovalPolicy Determine the removal policy of the log group that is auto-created by
+     * this construct.
+     * Normally you want to retain the log group so you can diagnose issues
+     * from logs even after a deployment that no longer includes the log group.
+     * In that case, use the normal date-based retention policy to age out your
+     * logs.
+     * @deprecated use `logGroup` instead
+     */
+    @Deprecated(message = "deprecated in CDK")
+    override fun logRemovalPolicy(logRemovalPolicy: RemovalPolicy) {
+      cdkBuilder.logRemovalPolicy(logRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
+    }
+
+    /**
      * @param logRetention The number of days log events are kept in CloudWatch Logs.
      * When updating
      * this property, unsetting it doesn't remove the log retention policy. To
@@ -796,7 +825,9 @@ public interface DockerImageFunctionProps : FunctionOptions {
      * *
      * myLogGroup.getLogGroupName();
      * ```
+     * @deprecated use `logGroup` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun logRetention(logRetention: RetentionDays) {
       cdkBuilder.logRetention(logRetention.let(RetentionDays.Companion::unwrap))
     }
@@ -1313,7 +1344,24 @@ public interface DockerImageFunctionProps : FunctionOptions {
     override fun logGroup(): ILogGroup? = unwrap(this).getLogGroup()?.let(ILogGroup::wrap)
 
     /**
-     * The number of days log events are kept in CloudWatch Logs.
+     * (deprecated) Determine the removal policy of the log group that is auto-created by this
+     * construct.
+     *
+     * Normally you want to retain the log group so you can diagnose issues
+     * from logs even after a deployment that no longer includes the log group.
+     * In that case, use the normal date-based retention policy to age out your
+     * logs.
+     *
+     * Default: RemovalPolicy.Retain
+     *
+     * @deprecated use `logGroup` instead
+     */
+    @Deprecated(message = "deprecated in CDK")
+    override fun logRemovalPolicy(): RemovalPolicy? =
+        unwrap(this).getLogRemovalPolicy()?.let(RemovalPolicy::wrap)
+
+    /**
+     * (deprecated) The number of days log events are kept in CloudWatch Logs.
      *
      * When updating
      * this property, unsetting it doesn't remove the log retention policy. To
@@ -1335,7 +1383,10 @@ public interface DockerImageFunctionProps : FunctionOptions {
      * ```
      *
      * Default: logs.RetentionDays.INFINITE
+     *
+     * @deprecated use `logGroup` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun logRetention(): RetentionDays? =
         unwrap(this).getLogRetention()?.let(RetentionDays::wrap)
 

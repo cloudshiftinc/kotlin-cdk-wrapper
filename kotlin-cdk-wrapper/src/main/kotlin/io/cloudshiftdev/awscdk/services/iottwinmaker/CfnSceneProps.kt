@@ -121,12 +121,12 @@ public interface CfnSceneProps {
     /**
      * @param sceneMetadata The scene metadata.
      */
-    public fun sceneMetadata(sceneMetadata: IResolvable)
+    public fun sceneMetadata(sceneMetadata: Map<String, String>)
 
     /**
      * @param sceneMetadata The scene metadata.
      */
-    public fun sceneMetadata(sceneMetadata: Map<String, String>)
+    public fun sceneMetadata(sceneMetadata: IResolvable)
 
     /**
      * @param tags The ComponentType tags.
@@ -181,15 +181,15 @@ public interface CfnSceneProps {
     /**
      * @param sceneMetadata The scene metadata.
      */
-    override fun sceneMetadata(sceneMetadata: IResolvable) {
-      cdkBuilder.sceneMetadata(sceneMetadata.let(IResolvable.Companion::unwrap))
+    override fun sceneMetadata(sceneMetadata: Map<String, String>) {
+      cdkBuilder.sceneMetadata(sceneMetadata)
     }
 
     /**
      * @param sceneMetadata The scene metadata.
      */
-    override fun sceneMetadata(sceneMetadata: Map<String, String>) {
-      cdkBuilder.sceneMetadata(sceneMetadata)
+    override fun sceneMetadata(sceneMetadata: IResolvable) {
+      cdkBuilder.sceneMetadata(sceneMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**

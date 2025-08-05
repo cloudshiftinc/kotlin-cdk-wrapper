@@ -36,6 +36,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.kinesis.*;
  * CfnStream cfnStream = CfnStream.Builder.create(this, "MyCfnStream")
+ * .desiredShardLevelMetrics(List.of("desiredShardLevelMetrics"))
  * .name("name")
  * .retentionPeriodHours(123)
  * .shardCount(123)
@@ -86,6 +87,25 @@ public open class CfnStream(
    * `arn:aws:kinesis:us-east-2:123456789012:stream/mystream` .
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
+
+  /**
+   * A list of shard-level metrics in properties to enable enhanced monitoring mode.
+   */
+  public open fun desiredShardLevelMetrics(): List<String> =
+      unwrap(this).getDesiredShardLevelMetrics() ?: emptyList()
+
+  /**
+   * A list of shard-level metrics in properties to enable enhanced monitoring mode.
+   */
+  public open fun desiredShardLevelMetrics(`value`: List<String>) {
+    unwrap(this).setDesiredShardLevelMetrics(`value`)
+  }
+
+  /**
+   * A list of shard-level metrics in properties to enable enhanced monitoring mode.
+   */
+  public open fun desiredShardLevelMetrics(vararg `value`: String): Unit =
+      desiredShardLevelMetrics(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -218,6 +238,24 @@ public open class CfnStream(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * A list of shard-level metrics in properties to enable enhanced monitoring mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-desiredshardlevelmetrics)
+     * @param desiredShardLevelMetrics A list of shard-level metrics in properties to enable
+     * enhanced monitoring mode. 
+     */
+    public fun desiredShardLevelMetrics(desiredShardLevelMetrics: List<String>)
+
+    /**
+     * A list of shard-level metrics in properties to enable enhanced monitoring mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-desiredshardlevelmetrics)
+     * @param desiredShardLevelMetrics A list of shard-level metrics in properties to enable
+     * enhanced monitoring mode. 
+     */
+    public fun desiredShardLevelMetrics(vararg desiredShardLevelMetrics: String)
+
     /**
      * The name of the Kinesis stream.
      *
@@ -365,6 +403,27 @@ public open class CfnStream(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.kinesis.CfnStream.Builder =
         software.amazon.awscdk.services.kinesis.CfnStream.Builder.create(scope, id)
+
+    /**
+     * A list of shard-level metrics in properties to enable enhanced monitoring mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-desiredshardlevelmetrics)
+     * @param desiredShardLevelMetrics A list of shard-level metrics in properties to enable
+     * enhanced monitoring mode. 
+     */
+    override fun desiredShardLevelMetrics(desiredShardLevelMetrics: List<String>) {
+      cdkBuilder.desiredShardLevelMetrics(desiredShardLevelMetrics)
+    }
+
+    /**
+     * A list of shard-level metrics in properties to enable enhanced monitoring mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-desiredshardlevelmetrics)
+     * @param desiredShardLevelMetrics A list of shard-level metrics in properties to enable
+     * enhanced monitoring mode. 
+     */
+    override fun desiredShardLevelMetrics(vararg desiredShardLevelMetrics: String): Unit =
+        desiredShardLevelMetrics(desiredShardLevelMetrics.toList())
 
     /**
      * The name of the Kinesis stream.

@@ -308,6 +308,9 @@ public open class StringParameter(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ssm.StringParameter.PROPERTY_INJECTION_ID
+
     public fun fromSecureStringParameterAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
@@ -439,6 +442,25 @@ public open class StringParameter(
     ): String =
         software.amazon.awscdk.services.ssm.StringParameter.valueFromLookup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         parameterName, defaultValue)
+
+    public fun valueFromLookup(
+      scope: CloudshiftdevConstructsConstruct,
+      parameterName: String,
+      defaultValue: String,
+      options: StringParameterLookupOptions,
+    ): String =
+        software.amazon.awscdk.services.ssm.StringParameter.valueFromLookup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        parameterName, defaultValue, options.let(StringParameterLookupOptions.Companion::unwrap))
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("53cb83e774ef28bd3242d9d26cb76a9d60d76341d10699ef6fffcd0866e6966b")
+    public fun valueFromLookup(
+      scope: CloudshiftdevConstructsConstruct,
+      parameterName: String,
+      defaultValue: String,
+      options: StringParameterLookupOptions.Builder.() -> Unit,
+    ): String = valueFromLookup(scope, parameterName, defaultValue,
+        StringParameterLookupOptions(options))
 
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,

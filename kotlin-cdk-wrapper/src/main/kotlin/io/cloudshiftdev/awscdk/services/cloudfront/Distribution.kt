@@ -26,17 +26,18 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * // Adding an existing Lambda&#64;Edge function created in a different stack
- * // to a CloudFront distribution.
  * Bucket s3Bucket;
- * IVersion functionVersion = Version.fromVersionArn(this, "Version",
- * "arn:aws:lambda:us-east-1:123456789012:function:functionName:1");
+ * // Add a cloudfront Function to a Distribution
+ * Function cfFunction = Function.Builder.create(this, "Function")
+ * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
+ * .runtime(FunctionRuntime.JS_2_0)
+ * .build();
  * Distribution.Builder.create(this, "distro")
  * .defaultBehavior(BehaviorOptions.builder()
  * .origin(new S3Origin(s3Bucket))
- * .edgeLambdas(List.of(EdgeLambda.builder()
- * .functionVersion(functionVersion)
- * .eventType(LambdaEdgeEventType.VIEWER_REQUEST)
+ * .functionAssociations(List.of(FunctionAssociation.builder()
+ * .function(cfFunction)
+ * .eventType(FunctionEventType.VIEWER_REQUEST)
  * .build()))
  * .build())
  * .build();
@@ -117,6 +118,11 @@ public open class Distribution(
   public open fun attachWebAclId(webAclId: String) {
     unwrap(this).attachWebAclId(webAclId)
   }
+
+  /**
+   * The distribution ARN for this distribution.
+   */
+  public override fun distributionArn(): String = unwrap(this).getDistributionArn()
 
   /**
    * The domain name of the Distribution, such as d111111abcdef8.cloudfront.net.
@@ -1375,6 +1381,9 @@ public open class Distribution(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.cloudfront.Distribution.PROPERTY_INJECTION_ID
+
     public fun fromDistributionAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

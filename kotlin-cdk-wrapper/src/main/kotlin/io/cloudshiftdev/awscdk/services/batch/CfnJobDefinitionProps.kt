@@ -26,6 +26,13 @@ import kotlin.jvm.JvmName
  */
 public interface CfnJobDefinitionProps {
   /**
+   * Contains a list of consumable resources required by the job.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-consumableresourceproperties)
+   */
+  public fun consumableResourceProperties(): Any? = unwrap(this).getConsumableResourceProperties()
+
+  /**
    * An object with properties specific to Amazon ECS-based jobs.
    *
    * When `containerProperties` is used in the job definition, it can't be used in addition to
@@ -123,7 +130,7 @@ public interface CfnJobDefinitionProps {
   /**
    * The scheduling priority of the job definition.
    *
-   * This only affects jobs in job queues with a fair share policy. Jobs with a higher scheduling
+   * This only affects jobs in job queues with a fair-share policy. Jobs with a higher scheduling
    * priority are scheduled before jobs with a lower scheduling priority.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-schedulingpriority)
@@ -171,6 +178,28 @@ public interface CfnJobDefinitionProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param consumableResourceProperties Contains a list of consumable resources required by the
+     * job.
+     */
+    public fun consumableResourceProperties(consumableResourceProperties: IResolvable)
+
+    /**
+     * @param consumableResourceProperties Contains a list of consumable resources required by the
+     * job.
+     */
+    public
+        fun consumableResourceProperties(consumableResourceProperties: CfnJobDefinition.ConsumableResourcePropertiesProperty)
+
+    /**
+     * @param consumableResourceProperties Contains a list of consumable resources required by the
+     * job.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e80dd2c04b4dcf88ed58b86a0aa67a168a9854ccf3232833a95a4213ea8f3e12")
+    public
+        fun consumableResourceProperties(consumableResourceProperties: CfnJobDefinition.ConsumableResourcePropertiesProperty.Builder.() -> Unit)
+
     /**
      * @param containerProperties An object with properties specific to Amazon ECS-based jobs.
      * When `containerProperties` is used in the job definition, it can't be used in addition to
@@ -356,7 +385,7 @@ public interface CfnJobDefinitionProps {
 
     /**
      * @param schedulingPriority The scheduling priority of the job definition.
-     * This only affects jobs in job queues with a fair share policy. Jobs with a higher scheduling
+     * This only affects jobs in job queues with a fair-share policy. Jobs with a higher scheduling
      * priority are scheduled before jobs with a lower scheduling priority.
      */
     public fun schedulingPriority(schedulingPriority: Number)
@@ -408,6 +437,34 @@ public interface CfnJobDefinitionProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.batch.CfnJobDefinitionProps.Builder =
         software.amazon.awscdk.services.batch.CfnJobDefinitionProps.builder()
+
+    /**
+     * @param consumableResourceProperties Contains a list of consumable resources required by the
+     * job.
+     */
+    override fun consumableResourceProperties(consumableResourceProperties: IResolvable) {
+      cdkBuilder.consumableResourceProperties(consumableResourceProperties.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param consumableResourceProperties Contains a list of consumable resources required by the
+     * job.
+     */
+    override
+        fun consumableResourceProperties(consumableResourceProperties: CfnJobDefinition.ConsumableResourcePropertiesProperty) {
+      cdkBuilder.consumableResourceProperties(consumableResourceProperties.let(CfnJobDefinition.ConsumableResourcePropertiesProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param consumableResourceProperties Contains a list of consumable resources required by the
+     * job.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e80dd2c04b4dcf88ed58b86a0aa67a168a9854ccf3232833a95a4213ea8f3e12")
+    override
+        fun consumableResourceProperties(consumableResourceProperties: CfnJobDefinition.ConsumableResourcePropertiesProperty.Builder.() -> Unit):
+        Unit =
+        consumableResourceProperties(CfnJobDefinition.ConsumableResourcePropertiesProperty(consumableResourceProperties))
 
     /**
      * @param containerProperties An object with properties specific to Amazon ECS-based jobs.
@@ -631,7 +688,7 @@ public interface CfnJobDefinitionProps {
 
     /**
      * @param schedulingPriority The scheduling priority of the job definition.
-     * This only affects jobs in job queues with a fair share policy. Jobs with a higher scheduling
+     * This only affects jobs in job queues with a fair-share policy. Jobs with a higher scheduling
      * priority are scheduled before jobs with a lower scheduling priority.
      */
     override fun schedulingPriority(schedulingPriority: Number) {
@@ -698,6 +755,14 @@ public interface CfnJobDefinitionProps {
     cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinitionProps,
   ) : CdkObject(cdkObject),
       CfnJobDefinitionProps {
+    /**
+     * Contains a list of consumable resources required by the job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-consumableresourceproperties)
+     */
+    override fun consumableResourceProperties(): Any? =
+        unwrap(this).getConsumableResourceProperties()
+
     /**
      * An object with properties specific to Amazon ECS-based jobs.
      *
@@ -796,7 +861,7 @@ public interface CfnJobDefinitionProps {
     /**
      * The scheduling priority of the job definition.
      *
-     * This only affects jobs in job queues with a fair share policy. Jobs with a higher scheduling
+     * This only affects jobs in job queues with a fair-share policy. Jobs with a higher scheduling
      * priority are scheduled before jobs with a lower scheduling priority.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-schedulingpriority)

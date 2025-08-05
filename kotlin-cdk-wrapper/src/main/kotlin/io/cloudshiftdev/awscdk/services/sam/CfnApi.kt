@@ -592,15 +592,15 @@ public open class CfnApi(
   /**
    *
    */
-  public open fun variables(`value`: IResolvable) {
-    unwrap(this).setVariables(`value`.let(IResolvable.Companion::unwrap))
+  public open fun variables(`value`: Map<String, String>) {
+    unwrap(this).setVariables(`value`)
   }
 
   /**
    *
    */
-  public open fun variables(`value`: Map<String, String>) {
-    unwrap(this).setVariables(`value`)
+  public open fun variables(`value`: IResolvable) {
+    unwrap(this).setVariables(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -909,13 +909,13 @@ public open class CfnApi(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-api.html#cfn-serverless-api-variables)
      * @param variables 
      */
-    public fun variables(variables: IResolvable)
+    public fun variables(variables: Map<String, String>)
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-api.html#cfn-serverless-api-variables)
      * @param variables 
      */
-    public fun variables(variables: Map<String, String>)
+    public fun variables(variables: IResolvable)
   }
 
   private class BuilderImpl(
@@ -1310,16 +1310,16 @@ public open class CfnApi(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-api.html#cfn-serverless-api-variables)
      * @param variables 
      */
-    override fun variables(variables: IResolvable) {
-      cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
+    override fun variables(variables: Map<String, String>) {
+      cdkBuilder.variables(variables)
     }
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-api.html#cfn-serverless-api-variables)
      * @param variables 
      */
-    override fun variables(variables: Map<String, String>) {
-      cdkBuilder.variables(variables)
+    override fun variables(variables: IResolvable) {
+      cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.sam.CfnApi = cdkBuilder.build()
@@ -1638,12 +1638,12 @@ public open class CfnApi(
       /**
        * @param stageVariableOverrides the value to be set.
        */
-      public fun stageVariableOverrides(stageVariableOverrides: IResolvable)
+      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>)
 
       /**
        * @param stageVariableOverrides the value to be set.
        */
-      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>)
+      public fun stageVariableOverrides(stageVariableOverrides: IResolvable)
 
       /**
        * @param useStageCache the value to be set.
@@ -1678,15 +1678,15 @@ public open class CfnApi(
       /**
        * @param stageVariableOverrides the value to be set.
        */
-      override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
-        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable.Companion::unwrap))
+      override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
+        cdkBuilder.stageVariableOverrides(stageVariableOverrides)
       }
 
       /**
        * @param stageVariableOverrides the value to be set.
        */
-      override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
-        cdkBuilder.stageVariableOverrides(stageVariableOverrides)
+      override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
+        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable.Companion::unwrap))
       }
 
       /**

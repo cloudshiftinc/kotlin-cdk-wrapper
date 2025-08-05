@@ -362,8 +362,10 @@ public open class CfnSchemaMapping(
   }
 
   /**
-   * An object containing `FieldName` , `Type` , `GroupName` , `MatchKey` , `Hashing` , and
-   * `SubType` .
+   * A configuration object for defining input data fields in AWS Entity Resolution .
+   *
+   * The `SchemaInputAttribute` specifies how individual fields in your input data should be
+   * processed and matched.
    *
    * Example:
    *
@@ -397,7 +399,7 @@ public open class CfnSchemaMapping(
      * A string that instructs AWS Entity Resolution to combine several columns into a unified
      * column with the identical attribute type.
      *
-     * For example, when working with columns such as `first_name` , `middle_name` , and `last_name`
+     * For example, when working with columns such as `NAME_FIRST` , `NAME_MIDDLE` , and `NAME_LAST`
      * , assigning them a common `groupName` will prompt AWS Entity Resolution to concatenate them into
      * a single value.
      *
@@ -408,8 +410,9 @@ public open class CfnSchemaMapping(
     /**
      * Indicates if the column values are hashed in the schema input.
      *
-     * If the value is set to `TRUE` , the column values are hashed. If the value is set to `FALSE`
-     * , the column values are cleartext.
+     * If the value is set to `TRUE` , the column values are hashed.
+     *
+     * If the value is set to `FALSE` , the column values are cleartext.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-hashed)
      */
@@ -440,6 +443,31 @@ public open class CfnSchemaMapping(
     /**
      * The type of the attribute, selected from a list of values.
      *
+     * LiveRamp supports: `NAME` | `NAME_FIRST` | `NAME_MIDDLE` | `NAME_LAST` | `ADDRESS` |
+     * `ADDRESS_STREET1` | `ADDRESS_STREET2` | `ADDRESS_STREET3` | `ADDRESS_CITY` | `ADDRESS_STATE` |
+     * `ADDRESS_COUNTRY` | `ADDRESS_POSTALCODE` | `PHONE` | `PHONE_NUMBER` | `EMAIL_ADDRESS` |
+     * `UNIQUE_ID` | `PROVIDER_ID`
+     *
+     * TransUnion supports: `NAME` | `NAME_FIRST` | `NAME_LAST` | `ADDRESS` | `ADDRESS_CITY` |
+     * `ADDRESS_STATE` | `ADDRESS_COUNTRY` | `ADDRESS_POSTALCODE` | `PHONE_NUMBER` | `EMAIL_ADDRESS` |
+     * `UNIQUE_ID` | `IPV4` | `IPV6` | `MAID`
+     *
+     * Unified ID 2.0 supports: `PHONE_NUMBER` | `EMAIL_ADDRESS` | `UNIQUE_ID`
+     *
+     *
+     * Normalization is only supported for `NAME` , `ADDRESS` , `PHONE` , and `EMAIL_ADDRESS` .
+     *
+     * If you want to normalize `NAME_FIRST` , `NAME_MIDDLE` , and `NAME_LAST` , you must group them
+     * by assigning them to the `NAME` `groupName` .
+     *
+     * If you want to normalize `ADDRESS_STREET1` , `ADDRESS_STREET2` , `ADDRESS_STREET3` ,
+     * `ADDRESS_CITY` , `ADDRESS_STATE` , `ADDRESS_COUNTRY` , and `ADDRESS_POSTALCODE` , you must group
+     * them by assigning them to the `ADDRESS` `groupName` .
+     *
+     * If you want to normalize `PHONE_NUMBER` and `PHONE_COUNTRYCODE` , you must group them by
+     * assigning them to the `PHONE` `groupName` .
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-type)
      */
     public fun type(): String
@@ -457,23 +485,25 @@ public open class CfnSchemaMapping(
       /**
        * @param groupName A string that instructs AWS Entity Resolution to combine several columns
        * into a unified column with the identical attribute type.
-       * For example, when working with columns such as `first_name` , `middle_name` , and
-       * `last_name` , assigning them a common `groupName` will prompt AWS Entity Resolution to
+       * For example, when working with columns such as `NAME_FIRST` , `NAME_MIDDLE` , and
+       * `NAME_LAST` , assigning them a common `groupName` will prompt AWS Entity Resolution to
        * concatenate them into a single value.
        */
       public fun groupName(groupName: String)
 
       /**
        * @param hashed Indicates if the column values are hashed in the schema input.
-       * If the value is set to `TRUE` , the column values are hashed. If the value is set to
-       * `FALSE` , the column values are cleartext.
+       * If the value is set to `TRUE` , the column values are hashed.
+       *
+       * If the value is set to `FALSE` , the column values are cleartext.
        */
       public fun hashed(hashed: Boolean)
 
       /**
        * @param hashed Indicates if the column values are hashed in the schema input.
-       * If the value is set to `TRUE` , the column values are hashed. If the value is set to
-       * `FALSE` , the column values are cleartext.
+       * If the value is set to `TRUE` , the column values are hashed.
+       *
+       * If the value is set to `FALSE` , the column values are cleartext.
        */
       public fun hashed(hashed: IResolvable)
 
@@ -497,6 +527,29 @@ public open class CfnSchemaMapping(
 
       /**
        * @param type The type of the attribute, selected from a list of values. 
+       * LiveRamp supports: `NAME` | `NAME_FIRST` | `NAME_MIDDLE` | `NAME_LAST` | `ADDRESS` |
+       * `ADDRESS_STREET1` | `ADDRESS_STREET2` | `ADDRESS_STREET3` | `ADDRESS_CITY` | `ADDRESS_STATE` |
+       * `ADDRESS_COUNTRY` | `ADDRESS_POSTALCODE` | `PHONE` | `PHONE_NUMBER` | `EMAIL_ADDRESS` |
+       * `UNIQUE_ID` | `PROVIDER_ID`
+       *
+       * TransUnion supports: `NAME` | `NAME_FIRST` | `NAME_LAST` | `ADDRESS` | `ADDRESS_CITY` |
+       * `ADDRESS_STATE` | `ADDRESS_COUNTRY` | `ADDRESS_POSTALCODE` | `PHONE_NUMBER` | `EMAIL_ADDRESS`
+       * | `UNIQUE_ID` | `IPV4` | `IPV6` | `MAID`
+       *
+       * Unified ID 2.0 supports: `PHONE_NUMBER` | `EMAIL_ADDRESS` | `UNIQUE_ID`
+       *
+       *
+       * Normalization is only supported for `NAME` , `ADDRESS` , `PHONE` , and `EMAIL_ADDRESS` .
+       *
+       * If you want to normalize `NAME_FIRST` , `NAME_MIDDLE` , and `NAME_LAST` , you must group
+       * them by assigning them to the `NAME` `groupName` .
+       *
+       * If you want to normalize `ADDRESS_STREET1` , `ADDRESS_STREET2` , `ADDRESS_STREET3` ,
+       * `ADDRESS_CITY` , `ADDRESS_STATE` , `ADDRESS_COUNTRY` , and `ADDRESS_POSTALCODE` , you must
+       * group them by assigning them to the `ADDRESS` `groupName` .
+       *
+       * If you want to normalize `PHONE_NUMBER` and `PHONE_COUNTRYCODE` , you must group them by
+       * assigning them to the `PHONE` `groupName` .
        */
       public fun type(type: String)
     }
@@ -517,8 +570,8 @@ public open class CfnSchemaMapping(
       /**
        * @param groupName A string that instructs AWS Entity Resolution to combine several columns
        * into a unified column with the identical attribute type.
-       * For example, when working with columns such as `first_name` , `middle_name` , and
-       * `last_name` , assigning them a common `groupName` will prompt AWS Entity Resolution to
+       * For example, when working with columns such as `NAME_FIRST` , `NAME_MIDDLE` , and
+       * `NAME_LAST` , assigning them a common `groupName` will prompt AWS Entity Resolution to
        * concatenate them into a single value.
        */
       override fun groupName(groupName: String) {
@@ -527,8 +580,9 @@ public open class CfnSchemaMapping(
 
       /**
        * @param hashed Indicates if the column values are hashed in the schema input.
-       * If the value is set to `TRUE` , the column values are hashed. If the value is set to
-       * `FALSE` , the column values are cleartext.
+       * If the value is set to `TRUE` , the column values are hashed.
+       *
+       * If the value is set to `FALSE` , the column values are cleartext.
        */
       override fun hashed(hashed: Boolean) {
         cdkBuilder.hashed(hashed)
@@ -536,8 +590,9 @@ public open class CfnSchemaMapping(
 
       /**
        * @param hashed Indicates if the column values are hashed in the schema input.
-       * If the value is set to `TRUE` , the column values are hashed. If the value is set to
-       * `FALSE` , the column values are cleartext.
+       * If the value is set to `TRUE` , the column values are hashed.
+       *
+       * If the value is set to `FALSE` , the column values are cleartext.
        */
       override fun hashed(hashed: IResolvable) {
         cdkBuilder.hashed(hashed.let(IResolvable.Companion::unwrap))
@@ -567,6 +622,29 @@ public open class CfnSchemaMapping(
 
       /**
        * @param type The type of the attribute, selected from a list of values. 
+       * LiveRamp supports: `NAME` | `NAME_FIRST` | `NAME_MIDDLE` | `NAME_LAST` | `ADDRESS` |
+       * `ADDRESS_STREET1` | `ADDRESS_STREET2` | `ADDRESS_STREET3` | `ADDRESS_CITY` | `ADDRESS_STATE` |
+       * `ADDRESS_COUNTRY` | `ADDRESS_POSTALCODE` | `PHONE` | `PHONE_NUMBER` | `EMAIL_ADDRESS` |
+       * `UNIQUE_ID` | `PROVIDER_ID`
+       *
+       * TransUnion supports: `NAME` | `NAME_FIRST` | `NAME_LAST` | `ADDRESS` | `ADDRESS_CITY` |
+       * `ADDRESS_STATE` | `ADDRESS_COUNTRY` | `ADDRESS_POSTALCODE` | `PHONE_NUMBER` | `EMAIL_ADDRESS`
+       * | `UNIQUE_ID` | `IPV4` | `IPV6` | `MAID`
+       *
+       * Unified ID 2.0 supports: `PHONE_NUMBER` | `EMAIL_ADDRESS` | `UNIQUE_ID`
+       *
+       *
+       * Normalization is only supported for `NAME` , `ADDRESS` , `PHONE` , and `EMAIL_ADDRESS` .
+       *
+       * If you want to normalize `NAME_FIRST` , `NAME_MIDDLE` , and `NAME_LAST` , you must group
+       * them by assigning them to the `NAME` `groupName` .
+       *
+       * If you want to normalize `ADDRESS_STREET1` , `ADDRESS_STREET2` , `ADDRESS_STREET3` ,
+       * `ADDRESS_CITY` , `ADDRESS_STATE` , `ADDRESS_COUNTRY` , and `ADDRESS_POSTALCODE` , you must
+       * group them by assigning them to the `ADDRESS` `groupName` .
+       *
+       * If you want to normalize `PHONE_NUMBER` and `PHONE_COUNTRYCODE` , you must group them by
+       * assigning them to the `PHONE` `groupName` .
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -592,8 +670,8 @@ public open class CfnSchemaMapping(
        * A string that instructs AWS Entity Resolution to combine several columns into a unified
        * column with the identical attribute type.
        *
-       * For example, when working with columns such as `first_name` , `middle_name` , and
-       * `last_name` , assigning them a common `groupName` will prompt AWS Entity Resolution to
+       * For example, when working with columns such as `NAME_FIRST` , `NAME_MIDDLE` , and
+       * `NAME_LAST` , assigning them a common `groupName` will prompt AWS Entity Resolution to
        * concatenate them into a single value.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-groupname)
@@ -603,8 +681,9 @@ public open class CfnSchemaMapping(
       /**
        * Indicates if the column values are hashed in the schema input.
        *
-       * If the value is set to `TRUE` , the column values are hashed. If the value is set to
-       * `FALSE` , the column values are cleartext.
+       * If the value is set to `TRUE` , the column values are hashed.
+       *
+       * If the value is set to `FALSE` , the column values are cleartext.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-hashed)
        */
@@ -634,6 +713,31 @@ public open class CfnSchemaMapping(
 
       /**
        * The type of the attribute, selected from a list of values.
+       *
+       * LiveRamp supports: `NAME` | `NAME_FIRST` | `NAME_MIDDLE` | `NAME_LAST` | `ADDRESS` |
+       * `ADDRESS_STREET1` | `ADDRESS_STREET2` | `ADDRESS_STREET3` | `ADDRESS_CITY` | `ADDRESS_STATE` |
+       * `ADDRESS_COUNTRY` | `ADDRESS_POSTALCODE` | `PHONE` | `PHONE_NUMBER` | `EMAIL_ADDRESS` |
+       * `UNIQUE_ID` | `PROVIDER_ID`
+       *
+       * TransUnion supports: `NAME` | `NAME_FIRST` | `NAME_LAST` | `ADDRESS` | `ADDRESS_CITY` |
+       * `ADDRESS_STATE` | `ADDRESS_COUNTRY` | `ADDRESS_POSTALCODE` | `PHONE_NUMBER` | `EMAIL_ADDRESS`
+       * | `UNIQUE_ID` | `IPV4` | `IPV6` | `MAID`
+       *
+       * Unified ID 2.0 supports: `PHONE_NUMBER` | `EMAIL_ADDRESS` | `UNIQUE_ID`
+       *
+       *
+       * Normalization is only supported for `NAME` , `ADDRESS` , `PHONE` , and `EMAIL_ADDRESS` .
+       *
+       * If you want to normalize `NAME_FIRST` , `NAME_MIDDLE` , and `NAME_LAST` , you must group
+       * them by assigning them to the `NAME` `groupName` .
+       *
+       * If you want to normalize `ADDRESS_STREET1` , `ADDRESS_STREET2` , `ADDRESS_STREET3` ,
+       * `ADDRESS_CITY` , `ADDRESS_STATE` , `ADDRESS_COUNTRY` , and `ADDRESS_POSTALCODE` , you must
+       * group them by assigning them to the `ADDRESS` `groupName` .
+       *
+       * If you want to normalize `PHONE_NUMBER` and `PHONE_COUNTRYCODE` , you must group them by
+       * assigning them to the `PHONE` `groupName` .
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-type)
        */

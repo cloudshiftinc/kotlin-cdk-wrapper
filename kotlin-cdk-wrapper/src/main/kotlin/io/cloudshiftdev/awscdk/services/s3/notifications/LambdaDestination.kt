@@ -41,7 +41,7 @@ public open class LambdaDestination(
    * pair and the result will be cached, so there is no need to implement
    * idempotency in each destination.
    *
-   * @param _scope 
+   * @param scope 
    * @param bucket 
    */
   public override fun bind(scope: Construct, bucket: IBucket): BucketNotificationDestinationConfig =

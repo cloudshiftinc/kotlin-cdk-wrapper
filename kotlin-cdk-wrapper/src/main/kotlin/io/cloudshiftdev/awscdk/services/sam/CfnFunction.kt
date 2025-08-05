@@ -5634,12 +5634,12 @@ public open class CfnFunction(
       /**
        * @param variables the value to be set. 
        */
-      public fun variables(variables: IResolvable)
+      public fun variables(variables: Map<String, String>)
 
       /**
        * @param variables the value to be set. 
        */
-      public fun variables(variables: Map<String, String>)
+      public fun variables(variables: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -5650,15 +5650,15 @@ public open class CfnFunction(
       /**
        * @param variables the value to be set. 
        */
-      override fun variables(variables: IResolvable) {
-        cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
+      override fun variables(variables: Map<String, String>) {
+        cdkBuilder.variables(variables)
       }
 
       /**
        * @param variables the value to be set. 
        */
-      override fun variables(variables: Map<String, String>) {
-        cdkBuilder.variables(variables)
+      override fun variables(variables: IResolvable) {
+        cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

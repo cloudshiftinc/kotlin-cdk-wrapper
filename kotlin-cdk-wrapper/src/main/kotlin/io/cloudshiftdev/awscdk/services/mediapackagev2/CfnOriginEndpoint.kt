@@ -41,7 +41,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .dashManifests(List.of(DashManifestConfigurationProperty.builder()
  * .manifestName("manifestName")
  * // the properties below are optional
+ * .baseUrls(List.of(DashBaseUrlProperty.builder()
+ * .url("url")
+ * // the properties below are optional
+ * .dvbPriority(123)
+ * .dvbWeight(123)
+ * .serviceLocation("serviceLocation")
+ * .build()))
+ * .compactness("compactness")
  * .drmSignaling("drmSignaling")
+ * .dvbSettings(DashDvbSettingsProperty.builder()
+ * .errorMetrics(List.of(DashDvbMetricsReportingProperty.builder()
+ * .reportingUrl("reportingUrl")
+ * // the properties below are optional
+ * .probability(123)
+ * .build()))
+ * .fontDownload(DashDvbFontDownloadProperty.builder()
+ * .fontFamily("fontFamily")
+ * .mimeType("mimeType")
+ * .url("url")
+ * .build())
+ * .build())
  * .filterConfiguration(FilterConfigurationProperty.builder()
  * .clipStartTime("clipStartTime")
  * .end("end")
@@ -53,10 +73,23 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .minBufferTimeSeconds(123)
  * .minUpdatePeriodSeconds(123)
  * .periodTriggers(List.of("periodTriggers"))
+ * .profiles(List.of("profiles"))
+ * .programInformation(DashProgramInformationProperty.builder()
+ * .copyright("copyright")
+ * .languageCode("languageCode")
+ * .moreInformationUrl("moreInformationUrl")
+ * .source("source")
+ * .title("title")
+ * .build())
  * .scteDash(ScteDashProperty.builder()
  * .adMarkerDash("adMarkerDash")
  * .build())
  * .segmentTemplateFormat("segmentTemplateFormat")
+ * .subtitleConfiguration(DashSubtitleConfigurationProperty.builder()
+ * .ttmlConfiguration(DashTtmlConfigurationProperty.builder()
+ * .ttmlProfile("ttmlProfile")
+ * .build())
+ * .build())
  * .suggestedPresentationDelaySeconds(123)
  * .utcTiming(DashUtcTimingProperty.builder()
  * .timingMode("timingMode")
@@ -89,6 +122,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .precise(false)
  * .build())
  * .url("url")
+ * .urlEncodeChildManifest(false)
  * .build()))
  * .lowLatencyHlsManifests(List.of(LowLatencyHlsManifestConfigurationProperty.builder()
  * .manifestName("manifestName")
@@ -112,6 +146,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .precise(false)
  * .build())
  * .url("url")
+ * .urlEncodeChildManifest(false)
  * .build()))
  * .segment(SegmentProperty.builder()
  * .encryption(EncryptionProperty.builder()
@@ -184,17 +219,17 @@ public open class CfnOriginEndpoint(
   public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
 
   /**
-   *
+   * The egress domain URL for stream delivery from MediaPackage.
    */
   public open fun attrDashManifestUrls(): List<String> = unwrap(this).getAttrDashManifestUrls()
 
   /**
-   *
+   * The egress domain URL for stream delivery from MediaPackage.
    */
   public open fun attrHlsManifestUrls(): List<String> = unwrap(this).getAttrHlsManifestUrls()
 
   /**
-   *
+   * The egress domain URL for stream delivery from MediaPackage.
    */
   public open fun attrLowLatencyHlsManifestUrls(): List<String> =
       unwrap(this).getAttrLowLatencyHlsManifestUrls()
@@ -313,26 +348,26 @@ public open class CfnOriginEndpoint(
       Unit = forceEndpointErrorConfiguration(ForceEndpointErrorConfigurationProperty(`value`))
 
   /**
-   * The HLS manfiests associated with the origin endpoint configuration.
+   * The HLS manifests associated with the origin endpoint configuration.
    */
   public open fun hlsManifests(): Any? = unwrap(this).getHlsManifests()
 
   /**
-   * The HLS manfiests associated with the origin endpoint configuration.
+   * The HLS manifests associated with the origin endpoint configuration.
    */
   public open fun hlsManifests(`value`: IResolvable) {
     unwrap(this).setHlsManifests(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The HLS manfiests associated with the origin endpoint configuration.
+   * The HLS manifests associated with the origin endpoint configuration.
    */
   public open fun hlsManifests(`value`: List<Any>) {
     unwrap(this).setHlsManifests(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * The HLS manfiests associated with the origin endpoint configuration.
+   * The HLS manifests associated with the origin endpoint configuration.
    */
   public open fun hlsManifests(vararg `value`: Any): Unit = hlsManifests(`value`.toList())
 
@@ -531,26 +566,26 @@ public open class CfnOriginEndpoint(
         fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: ForceEndpointErrorConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * The HLS manfiests associated with the origin endpoint configuration.
+     * The HLS manifests associated with the origin endpoint configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-hlsmanifests)
-     * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration. 
+     * @param hlsManifests The HLS manifests associated with the origin endpoint configuration. 
      */
     public fun hlsManifests(hlsManifests: IResolvable)
 
     /**
-     * The HLS manfiests associated with the origin endpoint configuration.
+     * The HLS manifests associated with the origin endpoint configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-hlsmanifests)
-     * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration. 
+     * @param hlsManifests The HLS manifests associated with the origin endpoint configuration. 
      */
     public fun hlsManifests(hlsManifests: List<Any>)
 
     /**
-     * The HLS manfiests associated with the origin endpoint configuration.
+     * The HLS manifests associated with the origin endpoint configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-hlsmanifests)
-     * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration. 
+     * @param hlsManifests The HLS manifests associated with the origin endpoint configuration. 
      */
     public fun hlsManifests(vararg hlsManifests: Any)
 
@@ -757,30 +792,30 @@ public open class CfnOriginEndpoint(
         forceEndpointErrorConfiguration(ForceEndpointErrorConfigurationProperty(forceEndpointErrorConfiguration))
 
     /**
-     * The HLS manfiests associated with the origin endpoint configuration.
+     * The HLS manifests associated with the origin endpoint configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-hlsmanifests)
-     * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration. 
+     * @param hlsManifests The HLS manifests associated with the origin endpoint configuration. 
      */
     override fun hlsManifests(hlsManifests: IResolvable) {
       cdkBuilder.hlsManifests(hlsManifests.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The HLS manfiests associated with the origin endpoint configuration.
+     * The HLS manifests associated with the origin endpoint configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-hlsmanifests)
-     * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration. 
+     * @param hlsManifests The HLS manifests associated with the origin endpoint configuration. 
      */
     override fun hlsManifests(hlsManifests: List<Any>) {
       cdkBuilder.hlsManifests(hlsManifests.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * The HLS manfiests associated with the origin endpoint configuration.
+     * The HLS manifests associated with the origin endpoint configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-hlsmanifests)
-     * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration. 
+     * @param hlsManifests The HLS manifests associated with the origin endpoint configuration. 
      */
     override fun hlsManifests(vararg hlsManifests: Any): Unit = hlsManifests(hlsManifests.toList())
 
@@ -916,7 +951,651 @@ public open class CfnOriginEndpoint(
   }
 
   /**
-   * Retrieve the DASH manifest configuration.</p>.
+   * The base URLs to use for retrieving segments.
+   *
+   * You can specify multiple locations and indicate the priority and weight for when each should be
+   * used, for use in mutli-CDN workflows.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * DashBaseUrlProperty dashBaseUrlProperty = DashBaseUrlProperty.builder()
+   * .url("url")
+   * // the properties below are optional
+   * .dvbPriority(123)
+   * .dvbWeight(123)
+   * .serviceLocation("serviceLocation")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashbaseurl.html)
+   */
+  public interface DashBaseUrlProperty {
+    /**
+     * For use with DVB-DASH profiles only.
+     *
+     * The priority of this location for servings segments. The lower the number, the higher the
+     * priority.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashbaseurl.html#cfn-mediapackagev2-originendpoint-dashbaseurl-dvbpriority)
+     */
+    public fun dvbPriority(): Number? = unwrap(this).getDvbPriority()
+
+    /**
+     * For use with DVB-DASH profiles only.
+     *
+     * The weighting for source locations that have the same priority.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashbaseurl.html#cfn-mediapackagev2-originendpoint-dashbaseurl-dvbweight)
+     */
+    public fun dvbWeight(): Number? = unwrap(this).getDvbWeight()
+
+    /**
+     * The name of the source location.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashbaseurl.html#cfn-mediapackagev2-originendpoint-dashbaseurl-servicelocation)
+     */
+    public fun serviceLocation(): String? = unwrap(this).getServiceLocation()
+
+    /**
+     * A source location for segments.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashbaseurl.html#cfn-mediapackagev2-originendpoint-dashbaseurl-url)
+     */
+    public fun url(): String
+
+    /**
+     * A builder for [DashBaseUrlProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dvbPriority For use with DVB-DASH profiles only.
+       * The priority of this location for servings segments. The lower the number, the higher the
+       * priority.
+       */
+      public fun dvbPriority(dvbPriority: Number)
+
+      /**
+       * @param dvbWeight For use with DVB-DASH profiles only.
+       * The weighting for source locations that have the same priority.
+       */
+      public fun dvbWeight(dvbWeight: Number)
+
+      /**
+       * @param serviceLocation The name of the source location.
+       */
+      public fun serviceLocation(serviceLocation: String)
+
+      /**
+       * @param url A source location for segments. 
+       */
+      public fun url(url: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashBaseUrlProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashBaseUrlProperty.builder()
+
+      /**
+       * @param dvbPriority For use with DVB-DASH profiles only.
+       * The priority of this location for servings segments. The lower the number, the higher the
+       * priority.
+       */
+      override fun dvbPriority(dvbPriority: Number) {
+        cdkBuilder.dvbPriority(dvbPriority)
+      }
+
+      /**
+       * @param dvbWeight For use with DVB-DASH profiles only.
+       * The weighting for source locations that have the same priority.
+       */
+      override fun dvbWeight(dvbWeight: Number) {
+        cdkBuilder.dvbWeight(dvbWeight)
+      }
+
+      /**
+       * @param serviceLocation The name of the source location.
+       */
+      override fun serviceLocation(serviceLocation: String) {
+        cdkBuilder.serviceLocation(serviceLocation)
+      }
+
+      /**
+       * @param url A source location for segments. 
+       */
+      override fun url(url: String) {
+        cdkBuilder.url(url)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashBaseUrlProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashBaseUrlProperty,
+    ) : CdkObject(cdkObject),
+        DashBaseUrlProperty {
+      /**
+       * For use with DVB-DASH profiles only.
+       *
+       * The priority of this location for servings segments. The lower the number, the higher the
+       * priority.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashbaseurl.html#cfn-mediapackagev2-originendpoint-dashbaseurl-dvbpriority)
+       */
+      override fun dvbPriority(): Number? = unwrap(this).getDvbPriority()
+
+      /**
+       * For use with DVB-DASH profiles only.
+       *
+       * The weighting for source locations that have the same priority.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashbaseurl.html#cfn-mediapackagev2-originendpoint-dashbaseurl-dvbweight)
+       */
+      override fun dvbWeight(): Number? = unwrap(this).getDvbWeight()
+
+      /**
+       * The name of the source location.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashbaseurl.html#cfn-mediapackagev2-originendpoint-dashbaseurl-servicelocation)
+       */
+      override fun serviceLocation(): String? = unwrap(this).getServiceLocation()
+
+      /**
+       * A source location for segments.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashbaseurl.html#cfn-mediapackagev2-originendpoint-dashbaseurl-url)
+       */
+      override fun url(): String = unwrap(this).getUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DashBaseUrlProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashBaseUrlProperty):
+          DashBaseUrlProperty = CdkObjectWrappers.wrap(cdkObject) as? DashBaseUrlProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DashBaseUrlProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashBaseUrlProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashBaseUrlProperty
+    }
+  }
+
+  /**
+   * For use with DVB-DASH profiles only.
+   *
+   * The settings for font downloads that you want AWS Elemental MediaPackage to pass through to the
+   * manifest.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * DashDvbFontDownloadProperty dashDvbFontDownloadProperty = DashDvbFontDownloadProperty.builder()
+   * .fontFamily("fontFamily")
+   * .mimeType("mimeType")
+   * .url("url")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbfontdownload.html)
+   */
+  public interface DashDvbFontDownloadProperty {
+    /**
+     * The `fontFamily` name for subtitles, as described in [EBU-TT-D Subtitling Distribution
+     * Format](https://docs.aws.amazon.com/https://tech.ebu.ch/publications/tech3380) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbfontdownload.html#cfn-mediapackagev2-originendpoint-dashdvbfontdownload-fontfamily)
+     */
+    public fun fontFamily(): String? = unwrap(this).getFontFamily()
+
+    /**
+     * The `mimeType` of the resource that's at the font download URL.
+     *
+     * For information about font MIME types, see the [MPEG-DASH Profile for Transport of ISO BMFF
+     * Based DVB Services over IP Based
+     * Networks](https://docs.aws.amazon.com/https://dvb.org/wp-content/uploads/2021/06/A168r4_MPEG-DASH-Profile-for-Transport-of-ISO-BMFF-Based-DVB-Services_Draft-ts_103-285-v140_November_2021.pdf)
+     * document.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbfontdownload.html#cfn-mediapackagev2-originendpoint-dashdvbfontdownload-mimetype)
+     */
+    public fun mimeType(): String? = unwrap(this).getMimeType()
+
+    /**
+     * The URL for downloading fonts for subtitles.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbfontdownload.html#cfn-mediapackagev2-originendpoint-dashdvbfontdownload-url)
+     */
+    public fun url(): String? = unwrap(this).getUrl()
+
+    /**
+     * A builder for [DashDvbFontDownloadProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fontFamily The `fontFamily` name for subtitles, as described in [EBU-TT-D Subtitling
+       * Distribution Format](https://docs.aws.amazon.com/https://tech.ebu.ch/publications/tech3380) .
+       */
+      public fun fontFamily(fontFamily: String)
+
+      /**
+       * @param mimeType The `mimeType` of the resource that's at the font download URL.
+       * For information about font MIME types, see the [MPEG-DASH Profile for Transport of ISO BMFF
+       * Based DVB Services over IP Based
+       * Networks](https://docs.aws.amazon.com/https://dvb.org/wp-content/uploads/2021/06/A168r4_MPEG-DASH-Profile-for-Transport-of-ISO-BMFF-Based-DVB-Services_Draft-ts_103-285-v140_November_2021.pdf)
+       * document.
+       */
+      public fun mimeType(mimeType: String)
+
+      /**
+       * @param url The URL for downloading fonts for subtitles.
+       */
+      public fun url(url: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbFontDownloadProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbFontDownloadProperty.builder()
+
+      /**
+       * @param fontFamily The `fontFamily` name for subtitles, as described in [EBU-TT-D Subtitling
+       * Distribution Format](https://docs.aws.amazon.com/https://tech.ebu.ch/publications/tech3380) .
+       */
+      override fun fontFamily(fontFamily: String) {
+        cdkBuilder.fontFamily(fontFamily)
+      }
+
+      /**
+       * @param mimeType The `mimeType` of the resource that's at the font download URL.
+       * For information about font MIME types, see the [MPEG-DASH Profile for Transport of ISO BMFF
+       * Based DVB Services over IP Based
+       * Networks](https://docs.aws.amazon.com/https://dvb.org/wp-content/uploads/2021/06/A168r4_MPEG-DASH-Profile-for-Transport-of-ISO-BMFF-Based-DVB-Services_Draft-ts_103-285-v140_November_2021.pdf)
+       * document.
+       */
+      override fun mimeType(mimeType: String) {
+        cdkBuilder.mimeType(mimeType)
+      }
+
+      /**
+       * @param url The URL for downloading fonts for subtitles.
+       */
+      override fun url(url: String) {
+        cdkBuilder.url(url)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbFontDownloadProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbFontDownloadProperty,
+    ) : CdkObject(cdkObject),
+        DashDvbFontDownloadProperty {
+      /**
+       * The `fontFamily` name for subtitles, as described in [EBU-TT-D Subtitling Distribution
+       * Format](https://docs.aws.amazon.com/https://tech.ebu.ch/publications/tech3380) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbfontdownload.html#cfn-mediapackagev2-originendpoint-dashdvbfontdownload-fontfamily)
+       */
+      override fun fontFamily(): String? = unwrap(this).getFontFamily()
+
+      /**
+       * The `mimeType` of the resource that's at the font download URL.
+       *
+       * For information about font MIME types, see the [MPEG-DASH Profile for Transport of ISO BMFF
+       * Based DVB Services over IP Based
+       * Networks](https://docs.aws.amazon.com/https://dvb.org/wp-content/uploads/2021/06/A168r4_MPEG-DASH-Profile-for-Transport-of-ISO-BMFF-Based-DVB-Services_Draft-ts_103-285-v140_November_2021.pdf)
+       * document.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbfontdownload.html#cfn-mediapackagev2-originendpoint-dashdvbfontdownload-mimetype)
+       */
+      override fun mimeType(): String? = unwrap(this).getMimeType()
+
+      /**
+       * The URL for downloading fonts for subtitles.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbfontdownload.html#cfn-mediapackagev2-originendpoint-dashdvbfontdownload-url)
+       */
+      override fun url(): String? = unwrap(this).getUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DashDvbFontDownloadProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbFontDownloadProperty):
+          DashDvbFontDownloadProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DashDvbFontDownloadProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DashDvbFontDownloadProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbFontDownloadProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbFontDownloadProperty
+    }
+  }
+
+  /**
+   * For use with DVB-DASH profiles only.
+   *
+   * The settings for error reporting from the playback device that you want AWS Elemental
+   * MediaPackage to pass through to the manifest.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * DashDvbMetricsReportingProperty dashDvbMetricsReportingProperty =
+   * DashDvbMetricsReportingProperty.builder()
+   * .reportingUrl("reportingUrl")
+   * // the properties below are optional
+   * .probability(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbmetricsreporting.html)
+   */
+  public interface DashDvbMetricsReportingProperty {
+    /**
+     * The number of playback devices per 1000 that will send error reports to the reporting URL.
+     *
+     * This represents the probability that a playback device will be a reporting player for this
+     * session.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbmetricsreporting.html#cfn-mediapackagev2-originendpoint-dashdvbmetricsreporting-probability)
+     */
+    public fun probability(): Number? = unwrap(this).getProbability()
+
+    /**
+     * The URL where playback devices send error reports.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbmetricsreporting.html#cfn-mediapackagev2-originendpoint-dashdvbmetricsreporting-reportingurl)
+     */
+    public fun reportingUrl(): String
+
+    /**
+     * A builder for [DashDvbMetricsReportingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param probability The number of playback devices per 1000 that will send error reports to
+       * the reporting URL.
+       * This represents the probability that a playback device will be a reporting player for this
+       * session.
+       */
+      public fun probability(probability: Number)
+
+      /**
+       * @param reportingUrl The URL where playback devices send error reports. 
+       */
+      public fun reportingUrl(reportingUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbMetricsReportingProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbMetricsReportingProperty.builder()
+
+      /**
+       * @param probability The number of playback devices per 1000 that will send error reports to
+       * the reporting URL.
+       * This represents the probability that a playback device will be a reporting player for this
+       * session.
+       */
+      override fun probability(probability: Number) {
+        cdkBuilder.probability(probability)
+      }
+
+      /**
+       * @param reportingUrl The URL where playback devices send error reports. 
+       */
+      override fun reportingUrl(reportingUrl: String) {
+        cdkBuilder.reportingUrl(reportingUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbMetricsReportingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbMetricsReportingProperty,
+    ) : CdkObject(cdkObject),
+        DashDvbMetricsReportingProperty {
+      /**
+       * The number of playback devices per 1000 that will send error reports to the reporting URL.
+       *
+       * This represents the probability that a playback device will be a reporting player for this
+       * session.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbmetricsreporting.html#cfn-mediapackagev2-originendpoint-dashdvbmetricsreporting-probability)
+       */
+      override fun probability(): Number? = unwrap(this).getProbability()
+
+      /**
+       * The URL where playback devices send error reports.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbmetricsreporting.html#cfn-mediapackagev2-originendpoint-dashdvbmetricsreporting-reportingurl)
+       */
+      override fun reportingUrl(): String = unwrap(this).getReportingUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DashDvbMetricsReportingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbMetricsReportingProperty):
+          DashDvbMetricsReportingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DashDvbMetricsReportingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DashDvbMetricsReportingProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbMetricsReportingProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbMetricsReportingProperty
+    }
+  }
+
+  /**
+   * For endpoints that use the DVB-DASH profile only.
+   *
+   * The font download and error reporting information that you want MediaPackage to pass through to
+   * the manifest.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * DashDvbSettingsProperty dashDvbSettingsProperty = DashDvbSettingsProperty.builder()
+   * .errorMetrics(List.of(DashDvbMetricsReportingProperty.builder()
+   * .reportingUrl("reportingUrl")
+   * // the properties below are optional
+   * .probability(123)
+   * .build()))
+   * .fontDownload(DashDvbFontDownloadProperty.builder()
+   * .fontFamily("fontFamily")
+   * .mimeType("mimeType")
+   * .url("url")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbsettings.html)
+   */
+  public interface DashDvbSettingsProperty {
+    /**
+     * Playback device error reporting settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbsettings.html#cfn-mediapackagev2-originendpoint-dashdvbsettings-errormetrics)
+     */
+    public fun errorMetrics(): Any? = unwrap(this).getErrorMetrics()
+
+    /**
+     * Subtitle font settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbsettings.html#cfn-mediapackagev2-originendpoint-dashdvbsettings-fontdownload)
+     */
+    public fun fontDownload(): Any? = unwrap(this).getFontDownload()
+
+    /**
+     * A builder for [DashDvbSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param errorMetrics Playback device error reporting settings.
+       */
+      public fun errorMetrics(errorMetrics: IResolvable)
+
+      /**
+       * @param errorMetrics Playback device error reporting settings.
+       */
+      public fun errorMetrics(errorMetrics: List<Any>)
+
+      /**
+       * @param errorMetrics Playback device error reporting settings.
+       */
+      public fun errorMetrics(vararg errorMetrics: Any)
+
+      /**
+       * @param fontDownload Subtitle font settings.
+       */
+      public fun fontDownload(fontDownload: IResolvable)
+
+      /**
+       * @param fontDownload Subtitle font settings.
+       */
+      public fun fontDownload(fontDownload: DashDvbFontDownloadProperty)
+
+      /**
+       * @param fontDownload Subtitle font settings.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4f0fffb43db97f6f942a8a8da96823103237a0ec9cf7413b90ea0648916a5ee6")
+      public fun fontDownload(fontDownload: DashDvbFontDownloadProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbSettingsProperty.builder()
+
+      /**
+       * @param errorMetrics Playback device error reporting settings.
+       */
+      override fun errorMetrics(errorMetrics: IResolvable) {
+        cdkBuilder.errorMetrics(errorMetrics.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param errorMetrics Playback device error reporting settings.
+       */
+      override fun errorMetrics(errorMetrics: List<Any>) {
+        cdkBuilder.errorMetrics(errorMetrics.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param errorMetrics Playback device error reporting settings.
+       */
+      override fun errorMetrics(vararg errorMetrics: Any): Unit =
+          errorMetrics(errorMetrics.toList())
+
+      /**
+       * @param fontDownload Subtitle font settings.
+       */
+      override fun fontDownload(fontDownload: IResolvable) {
+        cdkBuilder.fontDownload(fontDownload.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param fontDownload Subtitle font settings.
+       */
+      override fun fontDownload(fontDownload: DashDvbFontDownloadProperty) {
+        cdkBuilder.fontDownload(fontDownload.let(DashDvbFontDownloadProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param fontDownload Subtitle font settings.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4f0fffb43db97f6f942a8a8da96823103237a0ec9cf7413b90ea0648916a5ee6")
+      override fun fontDownload(fontDownload: DashDvbFontDownloadProperty.Builder.() -> Unit): Unit
+          = fontDownload(DashDvbFontDownloadProperty(fontDownload))
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbSettingsProperty,
+    ) : CdkObject(cdkObject),
+        DashDvbSettingsProperty {
+      /**
+       * Playback device error reporting settings.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbsettings.html#cfn-mediapackagev2-originendpoint-dashdvbsettings-errormetrics)
+       */
+      override fun errorMetrics(): Any? = unwrap(this).getErrorMetrics()
+
+      /**
+       * Subtitle font settings.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashdvbsettings.html#cfn-mediapackagev2-originendpoint-dashdvbsettings-fontdownload)
+       */
+      override fun fontDownload(): Any? = unwrap(this).getFontDownload()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DashDvbSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbSettingsProperty):
+          DashDvbSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? DashDvbSettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DashDvbSettingsProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashDvbSettingsProperty
+    }
+  }
+
+  /**
+   * The DASH manifest configuration associated with the origin endpoint.
    *
    * Example:
    *
@@ -928,7 +1607,27 @@ public open class CfnOriginEndpoint(
    * DashManifestConfigurationProperty.builder()
    * .manifestName("manifestName")
    * // the properties below are optional
+   * .baseUrls(List.of(DashBaseUrlProperty.builder()
+   * .url("url")
+   * // the properties below are optional
+   * .dvbPriority(123)
+   * .dvbWeight(123)
+   * .serviceLocation("serviceLocation")
+   * .build()))
+   * .compactness("compactness")
    * .drmSignaling("drmSignaling")
+   * .dvbSettings(DashDvbSettingsProperty.builder()
+   * .errorMetrics(List.of(DashDvbMetricsReportingProperty.builder()
+   * .reportingUrl("reportingUrl")
+   * // the properties below are optional
+   * .probability(123)
+   * .build()))
+   * .fontDownload(DashDvbFontDownloadProperty.builder()
+   * .fontFamily("fontFamily")
+   * .mimeType("mimeType")
+   * .url("url")
+   * .build())
+   * .build())
    * .filterConfiguration(FilterConfigurationProperty.builder()
    * .clipStartTime("clipStartTime")
    * .end("end")
@@ -940,10 +1639,23 @@ public open class CfnOriginEndpoint(
    * .minBufferTimeSeconds(123)
    * .minUpdatePeriodSeconds(123)
    * .periodTriggers(List.of("periodTriggers"))
+   * .profiles(List.of("profiles"))
+   * .programInformation(DashProgramInformationProperty.builder()
+   * .copyright("copyright")
+   * .languageCode("languageCode")
+   * .moreInformationUrl("moreInformationUrl")
+   * .source("source")
+   * .title("title")
+   * .build())
    * .scteDash(ScteDashProperty.builder()
    * .adMarkerDash("adMarkerDash")
    * .build())
    * .segmentTemplateFormat("segmentTemplateFormat")
+   * .subtitleConfiguration(DashSubtitleConfigurationProperty.builder()
+   * .ttmlConfiguration(DashTtmlConfigurationProperty.builder()
+   * .ttmlProfile("ttmlProfile")
+   * .build())
+   * .build())
    * .suggestedPresentationDelaySeconds(123)
    * .utcTiming(DashUtcTimingProperty.builder()
    * .timingMode("timingMode")
@@ -956,15 +1668,46 @@ public open class CfnOriginEndpoint(
    */
   public interface DashManifestConfigurationProperty {
     /**
+     * The base URLs to use for retrieving segments.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-baseurls)
+     */
+    public fun baseUrls(): Any? = unwrap(this).getBaseUrls()
+
+    /**
+     * The layout of the DASH manifest that MediaPackage produces.
+     *
+     * `STANDARD` indicates a default manifest, which is compacted. `NONE` indicates a full
+     * manifest.
+     *
+     * For information about compactness, see [DASH manifest
+     * compactness](https://docs.aws.amazon.com/mediapackage/latest/userguide/compacted.html) in the
+     * *AWS Elemental MediaPackage v2 User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-compactness)
+     */
+    public fun compactness(): String? = unwrap(this).getCompactness()
+
+    /**
+     * Determines how the DASH manifest signals the DRM content.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-drmsignaling)
      */
     public fun drmSignaling(): String? = unwrap(this).getDrmSignaling()
 
     /**
+     * For endpoints that use the DVB-DASH profile only.
+     *
+     * The font download and error reporting information that you want MediaPackage to pass through
+     * to the manifest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-dvbsettings)
+     */
+    public fun dvbSettings(): Any? = unwrap(this).getDvbSettings()
+
+    /**
      * Filter configuration includes settings for manifest filtering, start and end times, and time
      * delay that apply to all of your egress requests for this manifest.
-     *
-     * </p>
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-filterconfiguration)
      */
@@ -973,22 +1716,21 @@ public open class CfnOriginEndpoint(
     /**
      * A short string that's appended to the endpoint URL.
      *
-     * The manifest name creates a unique path to this endpoint. If you don't enter a value,
-     * MediaPackage uses the default manifest name, index. </p>
+     * The child manifest name creates a unique path to this endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-manifestname)
      */
     public fun manifestName(): String
 
     /**
-     * The total duration (in seconds) of the manifest's content.</p>.
+     * The total duration (in seconds) of the manifest's content.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-manifestwindowseconds)
      */
     public fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
 
     /**
-     * Minimum amount of content (in seconds) that a player must keep available in the buffer.</p>.
+     * Minimum amount of content (in seconds) that a player must keep available in the buffer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-minbuffertimeseconds)
      */
@@ -996,7 +1738,7 @@ public open class CfnOriginEndpoint(
 
     /**
      * Minimum amount of time (in seconds) that the player should wait before requesting updates to
-     * the manifest.</p>.
+     * the manifest.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-minupdateperiodseconds)
      */
@@ -1006,29 +1748,64 @@ public open class CfnOriginEndpoint(
      * A list of triggers that controls when AWS Elemental MediaPackage separates the MPEG-DASH
      * manifest into multiple periods.
      *
-     * Leave this value empty to indicate that the manifest is contained all in one period.
-     * For more information about periods in the DASH manifest, see [Multi-period DASH in AWS
-     * Elemental
-     * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html).</p>
+     * Type `ADS` to indicate that AWS Elemental MediaPackage must create periods in the output
+     * manifest that correspond to SCTE-35 ad markers in the input source. Leave this value empty to
+     * indicate that the manifest is contained all in one period. For more information about periods in
+     * the DASH manifest, see [Multi-period DASH in AWS Elemental
+     * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-periodtriggers)
      */
     public fun periodTriggers(): List<String> = unwrap(this).getPeriodTriggers() ?: emptyList()
 
     /**
-     * The SCTE configuration.</p>.
+     * The profile that the output is compliant with.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-profiles)
+     */
+    public fun profiles(): List<String> = unwrap(this).getProfiles() ?: emptyList()
+
+    /**
+     * Details about the content that you want MediaPackage to pass through in the manifest to the
+     * playback device.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-programinformation)
+     */
+    public fun programInformation(): Any? = unwrap(this).getProgramInformation()
+
+    /**
+     * The SCTE configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-sctedash)
      */
     public fun scteDash(): Any? = unwrap(this).getScteDash()
 
     /**
+     * Determines the type of variable used in the `media` URL of the `SegmentTemplate` tag in the
+     * manifest.
+     *
+     * Also specifies if segment timeline information is included in `SegmentTimeline` or
+     * `SegmentTemplate` .
+     *
+     * Value description:
+     *
+     * * `NUMBER_WITH_TIMELINE` - The `$Number$` variable is used in the `media` URL. The value of
+     * this variable is the sequential number of the segment. A full `SegmentTimeline` object is
+     * presented in each `SegmentTemplate` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-segmenttemplateformat)
      */
     public fun segmentTemplateFormat(): String? = unwrap(this).getSegmentTemplateFormat()
 
     /**
-     * The amount of time (in seconds) that the player should be from the end of the manifest.</p>.
+     * The configuration for DASH subtitles.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-subtitleconfiguration)
+     */
+    public fun subtitleConfiguration(): Any? = unwrap(this).getSubtitleConfiguration()
+
+    /**
+     * The amount of time (in seconds) that the player should be from the end of the manifest.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-suggestedpresentationdelayseconds)
      */
@@ -1036,8 +1813,7 @@ public open class CfnOriginEndpoint(
         unwrap(this).getSuggestedPresentationDelaySeconds()
 
     /**
-     * Determines the type of UTC timing included in the DASH Media Presentation Description
-     * (MPD).</p>.
+     * Determines the type of UTC timing included in the DASH Media Presentation Description (MPD).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-utctiming)
      */
@@ -1049,15 +1825,63 @@ public open class CfnOriginEndpoint(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param drmSignaling the value to be set.
+       * @param baseUrls The base URLs to use for retrieving segments.
+       */
+      public fun baseUrls(baseUrls: IResolvable)
+
+      /**
+       * @param baseUrls The base URLs to use for retrieving segments.
+       */
+      public fun baseUrls(baseUrls: List<Any>)
+
+      /**
+       * @param baseUrls The base URLs to use for retrieving segments.
+       */
+      public fun baseUrls(vararg baseUrls: Any)
+
+      /**
+       * @param compactness The layout of the DASH manifest that MediaPackage produces.
+       * `STANDARD` indicates a default manifest, which is compacted. `NONE` indicates a full
+       * manifest.
+       *
+       * For information about compactness, see [DASH manifest
+       * compactness](https://docs.aws.amazon.com/mediapackage/latest/userguide/compacted.html) in the
+       * *AWS Elemental MediaPackage v2 User Guide* .
+       */
+      public fun compactness(compactness: String)
+
+      /**
+       * @param drmSignaling Determines how the DASH manifest signals the DRM content.
        */
       public fun drmSignaling(drmSignaling: String)
+
+      /**
+       * @param dvbSettings For endpoints that use the DVB-DASH profile only.
+       * The font download and error reporting information that you want MediaPackage to pass
+       * through to the manifest.
+       */
+      public fun dvbSettings(dvbSettings: IResolvable)
+
+      /**
+       * @param dvbSettings For endpoints that use the DVB-DASH profile only.
+       * The font download and error reporting information that you want MediaPackage to pass
+       * through to the manifest.
+       */
+      public fun dvbSettings(dvbSettings: DashDvbSettingsProperty)
+
+      /**
+       * @param dvbSettings For endpoints that use the DVB-DASH profile only.
+       * The font download and error reporting information that you want MediaPackage to pass
+       * through to the manifest.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("98fe114294be8565e0e032b5fb84af4f55023753485c670825c93b30239a8344")
+      public fun dvbSettings(dvbSettings: DashDvbSettingsProperty.Builder.() -> Unit)
 
       /**
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       public fun filterConfiguration(filterConfiguration: IResolvable)
 
@@ -1065,7 +1889,6 @@ public open class CfnOriginEndpoint(
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       public fun filterConfiguration(filterConfiguration: FilterConfigurationProperty)
 
@@ -1073,7 +1896,6 @@ public open class CfnOriginEndpoint(
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c9c71597cb955dbd506744c1077ee76abd6acdc3884ce17cd2562482051335b6")
@@ -1082,92 +1904,150 @@ public open class CfnOriginEndpoint(
 
       /**
        * @param manifestName A short string that's appended to the endpoint URL. 
-       * The manifest name creates a unique path to this endpoint. If you don't enter a value,
-       * MediaPackage uses the default manifest name, index. </p>
+       * The child manifest name creates a unique path to this endpoint.
        */
       public fun manifestName(manifestName: String)
 
       /**
-       * @param manifestWindowSeconds The total duration (in seconds) of the manifest's
-       * content.</p>.
+       * @param manifestWindowSeconds The total duration (in seconds) of the manifest's content.
        */
       public fun manifestWindowSeconds(manifestWindowSeconds: Number)
 
       /**
        * @param minBufferTimeSeconds Minimum amount of content (in seconds) that a player must keep
-       * available in the buffer.</p>.
+       * available in the buffer.
        */
       public fun minBufferTimeSeconds(minBufferTimeSeconds: Number)
 
       /**
        * @param minUpdatePeriodSeconds Minimum amount of time (in seconds) that the player should
-       * wait before requesting updates to the manifest.</p>.
+       * wait before requesting updates to the manifest.
        */
       public fun minUpdatePeriodSeconds(minUpdatePeriodSeconds: Number)
 
       /**
        * @param periodTriggers A list of triggers that controls when AWS Elemental MediaPackage
        * separates the MPEG-DASH manifest into multiple periods.
-       * Leave this value empty to indicate that the manifest is contained all in one period.
-       * For more information about periods in the DASH manifest, see [Multi-period DASH in AWS
-       * Elemental
-       * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html).</p>
+       * Type `ADS` to indicate that AWS Elemental MediaPackage must create periods in the output
+       * manifest that correspond to SCTE-35 ad markers in the input source. Leave this value empty to
+       * indicate that the manifest is contained all in one period. For more information about periods
+       * in the DASH manifest, see [Multi-period DASH in AWS Elemental
+       * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html) .
        */
       public fun periodTriggers(periodTriggers: List<String>)
 
       /**
        * @param periodTriggers A list of triggers that controls when AWS Elemental MediaPackage
        * separates the MPEG-DASH manifest into multiple periods.
-       * Leave this value empty to indicate that the manifest is contained all in one period.
-       * For more information about periods in the DASH manifest, see [Multi-period DASH in AWS
-       * Elemental
-       * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html).</p>
+       * Type `ADS` to indicate that AWS Elemental MediaPackage must create periods in the output
+       * manifest that correspond to SCTE-35 ad markers in the input source. Leave this value empty to
+       * indicate that the manifest is contained all in one period. For more information about periods
+       * in the DASH manifest, see [Multi-period DASH in AWS Elemental
+       * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html) .
        */
       public fun periodTriggers(vararg periodTriggers: String)
 
       /**
-       * @param scteDash The SCTE configuration.</p>.
+       * @param profiles The profile that the output is compliant with.
+       */
+      public fun profiles(profiles: List<String>)
+
+      /**
+       * @param profiles The profile that the output is compliant with.
+       */
+      public fun profiles(vararg profiles: String)
+
+      /**
+       * @param programInformation Details about the content that you want MediaPackage to pass
+       * through in the manifest to the playback device.
+       */
+      public fun programInformation(programInformation: IResolvable)
+
+      /**
+       * @param programInformation Details about the content that you want MediaPackage to pass
+       * through in the manifest to the playback device.
+       */
+      public fun programInformation(programInformation: DashProgramInformationProperty)
+
+      /**
+       * @param programInformation Details about the content that you want MediaPackage to pass
+       * through in the manifest to the playback device.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("55e7d1c0c2c963f3278d6278dc70ab1e228b0c0a25f37e6c07493ac4ff0ff140")
+      public
+          fun programInformation(programInformation: DashProgramInformationProperty.Builder.() -> Unit)
+
+      /**
+       * @param scteDash The SCTE configuration.
        */
       public fun scteDash(scteDash: IResolvable)
 
       /**
-       * @param scteDash The SCTE configuration.</p>.
+       * @param scteDash The SCTE configuration.
        */
       public fun scteDash(scteDash: ScteDashProperty)
 
       /**
-       * @param scteDash The SCTE configuration.</p>.
+       * @param scteDash The SCTE configuration.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("38790bb2dbacae4b3fd4a62c1b3a8203ea772a5c13552e23b40f72c28e14584f")
       public fun scteDash(scteDash: ScteDashProperty.Builder.() -> Unit)
 
       /**
-       * @param segmentTemplateFormat the value to be set.
+       * @param segmentTemplateFormat Determines the type of variable used in the `media` URL of the
+       * `SegmentTemplate` tag in the manifest.
+       * Also specifies if segment timeline information is included in `SegmentTimeline` or
+       * `SegmentTemplate` .
+       *
+       * Value description:
+       *
+       * * `NUMBER_WITH_TIMELINE` - The `$Number$` variable is used in the `media` URL. The value of
+       * this variable is the sequential number of the segment. A full `SegmentTimeline` object is
+       * presented in each `SegmentTemplate` .
        */
       public fun segmentTemplateFormat(segmentTemplateFormat: String)
 
       /**
+       * @param subtitleConfiguration The configuration for DASH subtitles.
+       */
+      public fun subtitleConfiguration(subtitleConfiguration: IResolvable)
+
+      /**
+       * @param subtitleConfiguration The configuration for DASH subtitles.
+       */
+      public fun subtitleConfiguration(subtitleConfiguration: DashSubtitleConfigurationProperty)
+
+      /**
+       * @param subtitleConfiguration The configuration for DASH subtitles.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("94131e2a8956a5867ed51e958cb96acae37fae7b1d59accd2f5975a8d36ab9d3")
+      public
+          fun subtitleConfiguration(subtitleConfiguration: DashSubtitleConfigurationProperty.Builder.() -> Unit)
+
+      /**
        * @param suggestedPresentationDelaySeconds The amount of time (in seconds) that the player
-       * should be from the end of the manifest.</p>.
+       * should be from the end of the manifest.
        */
       public fun suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds: Number)
 
       /**
        * @param utcTiming Determines the type of UTC timing included in the DASH Media Presentation
-       * Description (MPD).</p>.
+       * Description (MPD).
        */
       public fun utcTiming(utcTiming: IResolvable)
 
       /**
        * @param utcTiming Determines the type of UTC timing included in the DASH Media Presentation
-       * Description (MPD).</p>.
+       * Description (MPD).
        */
       public fun utcTiming(utcTiming: DashUtcTimingProperty)
 
       /**
        * @param utcTiming Determines the type of UTC timing included in the DASH Media Presentation
-       * Description (MPD).</p>.
+       * Description (MPD).
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f7fc2a5e9905d25d702d76df25aa6f17a90741e74417f395d514442fb4e389b3")
@@ -1181,17 +2061,76 @@ public open class CfnOriginEndpoint(
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashManifestConfigurationProperty.builder()
 
       /**
-       * @param drmSignaling the value to be set.
+       * @param baseUrls The base URLs to use for retrieving segments.
+       */
+      override fun baseUrls(baseUrls: IResolvable) {
+        cdkBuilder.baseUrls(baseUrls.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param baseUrls The base URLs to use for retrieving segments.
+       */
+      override fun baseUrls(baseUrls: List<Any>) {
+        cdkBuilder.baseUrls(baseUrls.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param baseUrls The base URLs to use for retrieving segments.
+       */
+      override fun baseUrls(vararg baseUrls: Any): Unit = baseUrls(baseUrls.toList())
+
+      /**
+       * @param compactness The layout of the DASH manifest that MediaPackage produces.
+       * `STANDARD` indicates a default manifest, which is compacted. `NONE` indicates a full
+       * manifest.
+       *
+       * For information about compactness, see [DASH manifest
+       * compactness](https://docs.aws.amazon.com/mediapackage/latest/userguide/compacted.html) in the
+       * *AWS Elemental MediaPackage v2 User Guide* .
+       */
+      override fun compactness(compactness: String) {
+        cdkBuilder.compactness(compactness)
+      }
+
+      /**
+       * @param drmSignaling Determines how the DASH manifest signals the DRM content.
        */
       override fun drmSignaling(drmSignaling: String) {
         cdkBuilder.drmSignaling(drmSignaling)
       }
 
       /**
+       * @param dvbSettings For endpoints that use the DVB-DASH profile only.
+       * The font download and error reporting information that you want MediaPackage to pass
+       * through to the manifest.
+       */
+      override fun dvbSettings(dvbSettings: IResolvable) {
+        cdkBuilder.dvbSettings(dvbSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param dvbSettings For endpoints that use the DVB-DASH profile only.
+       * The font download and error reporting information that you want MediaPackage to pass
+       * through to the manifest.
+       */
+      override fun dvbSettings(dvbSettings: DashDvbSettingsProperty) {
+        cdkBuilder.dvbSettings(dvbSettings.let(DashDvbSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param dvbSettings For endpoints that use the DVB-DASH profile only.
+       * The font download and error reporting information that you want MediaPackage to pass
+       * through to the manifest.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("98fe114294be8565e0e032b5fb84af4f55023753485c670825c93b30239a8344")
+      override fun dvbSettings(dvbSettings: DashDvbSettingsProperty.Builder.() -> Unit): Unit =
+          dvbSettings(DashDvbSettingsProperty(dvbSettings))
+
+      /**
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       override fun filterConfiguration(filterConfiguration: IResolvable) {
         cdkBuilder.filterConfiguration(filterConfiguration.let(IResolvable.Companion::unwrap))
@@ -1201,7 +2140,6 @@ public open class CfnOriginEndpoint(
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       override fun filterConfiguration(filterConfiguration: FilterConfigurationProperty) {
         cdkBuilder.filterConfiguration(filterConfiguration.let(FilterConfigurationProperty.Companion::unwrap))
@@ -1211,7 +2149,6 @@ public open class CfnOriginEndpoint(
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c9c71597cb955dbd506744c1077ee76abd6acdc3884ce17cd2562482051335b6")
@@ -1221,16 +2158,14 @@ public open class CfnOriginEndpoint(
 
       /**
        * @param manifestName A short string that's appended to the endpoint URL. 
-       * The manifest name creates a unique path to this endpoint. If you don't enter a value,
-       * MediaPackage uses the default manifest name, index. </p>
+       * The child manifest name creates a unique path to this endpoint.
        */
       override fun manifestName(manifestName: String) {
         cdkBuilder.manifestName(manifestName)
       }
 
       /**
-       * @param manifestWindowSeconds The total duration (in seconds) of the manifest's
-       * content.</p>.
+       * @param manifestWindowSeconds The total duration (in seconds) of the manifest's content.
        */
       override fun manifestWindowSeconds(manifestWindowSeconds: Number) {
         cdkBuilder.manifestWindowSeconds(manifestWindowSeconds)
@@ -1238,7 +2173,7 @@ public open class CfnOriginEndpoint(
 
       /**
        * @param minBufferTimeSeconds Minimum amount of content (in seconds) that a player must keep
-       * available in the buffer.</p>.
+       * available in the buffer.
        */
       override fun minBufferTimeSeconds(minBufferTimeSeconds: Number) {
         cdkBuilder.minBufferTimeSeconds(minBufferTimeSeconds)
@@ -1246,7 +2181,7 @@ public open class CfnOriginEndpoint(
 
       /**
        * @param minUpdatePeriodSeconds Minimum amount of time (in seconds) that the player should
-       * wait before requesting updates to the manifest.</p>.
+       * wait before requesting updates to the manifest.
        */
       override fun minUpdatePeriodSeconds(minUpdatePeriodSeconds: Number) {
         cdkBuilder.minUpdatePeriodSeconds(minUpdatePeriodSeconds)
@@ -1255,10 +2190,11 @@ public open class CfnOriginEndpoint(
       /**
        * @param periodTriggers A list of triggers that controls when AWS Elemental MediaPackage
        * separates the MPEG-DASH manifest into multiple periods.
-       * Leave this value empty to indicate that the manifest is contained all in one period.
-       * For more information about periods in the DASH manifest, see [Multi-period DASH in AWS
-       * Elemental
-       * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html).</p>
+       * Type `ADS` to indicate that AWS Elemental MediaPackage must create periods in the output
+       * manifest that correspond to SCTE-35 ad markers in the input source. Leave this value empty to
+       * indicate that the manifest is contained all in one period. For more information about periods
+       * in the DASH manifest, see [Multi-period DASH in AWS Elemental
+       * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html) .
        */
       override fun periodTriggers(periodTriggers: List<String>) {
         cdkBuilder.periodTriggers(periodTriggers)
@@ -1267,30 +2203,69 @@ public open class CfnOriginEndpoint(
       /**
        * @param periodTriggers A list of triggers that controls when AWS Elemental MediaPackage
        * separates the MPEG-DASH manifest into multiple periods.
-       * Leave this value empty to indicate that the manifest is contained all in one period.
-       * For more information about periods in the DASH manifest, see [Multi-period DASH in AWS
-       * Elemental
-       * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html).</p>
+       * Type `ADS` to indicate that AWS Elemental MediaPackage must create periods in the output
+       * manifest that correspond to SCTE-35 ad markers in the input source. Leave this value empty to
+       * indicate that the manifest is contained all in one period. For more information about periods
+       * in the DASH manifest, see [Multi-period DASH in AWS Elemental
+       * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html) .
        */
       override fun periodTriggers(vararg periodTriggers: String): Unit =
           periodTriggers(periodTriggers.toList())
 
       /**
-       * @param scteDash The SCTE configuration.</p>.
+       * @param profiles The profile that the output is compliant with.
+       */
+      override fun profiles(profiles: List<String>) {
+        cdkBuilder.profiles(profiles)
+      }
+
+      /**
+       * @param profiles The profile that the output is compliant with.
+       */
+      override fun profiles(vararg profiles: String): Unit = profiles(profiles.toList())
+
+      /**
+       * @param programInformation Details about the content that you want MediaPackage to pass
+       * through in the manifest to the playback device.
+       */
+      override fun programInformation(programInformation: IResolvable) {
+        cdkBuilder.programInformation(programInformation.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param programInformation Details about the content that you want MediaPackage to pass
+       * through in the manifest to the playback device.
+       */
+      override fun programInformation(programInformation: DashProgramInformationProperty) {
+        cdkBuilder.programInformation(programInformation.let(DashProgramInformationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param programInformation Details about the content that you want MediaPackage to pass
+       * through in the manifest to the playback device.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("55e7d1c0c2c963f3278d6278dc70ab1e228b0c0a25f37e6c07493ac4ff0ff140")
+      override
+          fun programInformation(programInformation: DashProgramInformationProperty.Builder.() -> Unit):
+          Unit = programInformation(DashProgramInformationProperty(programInformation))
+
+      /**
+       * @param scteDash The SCTE configuration.
        */
       override fun scteDash(scteDash: IResolvable) {
         cdkBuilder.scteDash(scteDash.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param scteDash The SCTE configuration.</p>.
+       * @param scteDash The SCTE configuration.
        */
       override fun scteDash(scteDash: ScteDashProperty) {
         cdkBuilder.scteDash(scteDash.let(ScteDashProperty.Companion::unwrap))
       }
 
       /**
-       * @param scteDash The SCTE configuration.</p>.
+       * @param scteDash The SCTE configuration.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("38790bb2dbacae4b3fd4a62c1b3a8203ea772a5c13552e23b40f72c28e14584f")
@@ -1298,15 +2273,47 @@ public open class CfnOriginEndpoint(
           scteDash(ScteDashProperty(scteDash))
 
       /**
-       * @param segmentTemplateFormat the value to be set.
+       * @param segmentTemplateFormat Determines the type of variable used in the `media` URL of the
+       * `SegmentTemplate` tag in the manifest.
+       * Also specifies if segment timeline information is included in `SegmentTimeline` or
+       * `SegmentTemplate` .
+       *
+       * Value description:
+       *
+       * * `NUMBER_WITH_TIMELINE` - The `$Number$` variable is used in the `media` URL. The value of
+       * this variable is the sequential number of the segment. A full `SegmentTimeline` object is
+       * presented in each `SegmentTemplate` .
        */
       override fun segmentTemplateFormat(segmentTemplateFormat: String) {
         cdkBuilder.segmentTemplateFormat(segmentTemplateFormat)
       }
 
       /**
+       * @param subtitleConfiguration The configuration for DASH subtitles.
+       */
+      override fun subtitleConfiguration(subtitleConfiguration: IResolvable) {
+        cdkBuilder.subtitleConfiguration(subtitleConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param subtitleConfiguration The configuration for DASH subtitles.
+       */
+      override fun subtitleConfiguration(subtitleConfiguration: DashSubtitleConfigurationProperty) {
+        cdkBuilder.subtitleConfiguration(subtitleConfiguration.let(DashSubtitleConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param subtitleConfiguration The configuration for DASH subtitles.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("94131e2a8956a5867ed51e958cb96acae37fae7b1d59accd2f5975a8d36ab9d3")
+      override
+          fun subtitleConfiguration(subtitleConfiguration: DashSubtitleConfigurationProperty.Builder.() -> Unit):
+          Unit = subtitleConfiguration(DashSubtitleConfigurationProperty(subtitleConfiguration))
+
+      /**
        * @param suggestedPresentationDelaySeconds The amount of time (in seconds) that the player
-       * should be from the end of the manifest.</p>.
+       * should be from the end of the manifest.
        */
       override fun suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds: Number) {
         cdkBuilder.suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds)
@@ -1314,7 +2321,7 @@ public open class CfnOriginEndpoint(
 
       /**
        * @param utcTiming Determines the type of UTC timing included in the DASH Media Presentation
-       * Description (MPD).</p>.
+       * Description (MPD).
        */
       override fun utcTiming(utcTiming: IResolvable) {
         cdkBuilder.utcTiming(utcTiming.let(IResolvable.Companion::unwrap))
@@ -1322,7 +2329,7 @@ public open class CfnOriginEndpoint(
 
       /**
        * @param utcTiming Determines the type of UTC timing included in the DASH Media Presentation
-       * Description (MPD).</p>.
+       * Description (MPD).
        */
       override fun utcTiming(utcTiming: DashUtcTimingProperty) {
         cdkBuilder.utcTiming(utcTiming.let(DashUtcTimingProperty.Companion::unwrap))
@@ -1330,7 +2337,7 @@ public open class CfnOriginEndpoint(
 
       /**
        * @param utcTiming Determines the type of UTC timing included in the DASH Media Presentation
-       * Description (MPD).</p>.
+       * Description (MPD).
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f7fc2a5e9905d25d702d76df25aa6f17a90741e74417f395d514442fb4e389b3")
@@ -1347,15 +2354,46 @@ public open class CfnOriginEndpoint(
     ) : CdkObject(cdkObject),
         DashManifestConfigurationProperty {
       /**
+       * The base URLs to use for retrieving segments.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-baseurls)
+       */
+      override fun baseUrls(): Any? = unwrap(this).getBaseUrls()
+
+      /**
+       * The layout of the DASH manifest that MediaPackage produces.
+       *
+       * `STANDARD` indicates a default manifest, which is compacted. `NONE` indicates a full
+       * manifest.
+       *
+       * For information about compactness, see [DASH manifest
+       * compactness](https://docs.aws.amazon.com/mediapackage/latest/userguide/compacted.html) in the
+       * *AWS Elemental MediaPackage v2 User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-compactness)
+       */
+      override fun compactness(): String? = unwrap(this).getCompactness()
+
+      /**
+       * Determines how the DASH manifest signals the DRM content.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-drmsignaling)
        */
       override fun drmSignaling(): String? = unwrap(this).getDrmSignaling()
 
       /**
+       * For endpoints that use the DVB-DASH profile only.
+       *
+       * The font download and error reporting information that you want MediaPackage to pass
+       * through to the manifest.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-dvbsettings)
+       */
+      override fun dvbSettings(): Any? = unwrap(this).getDvbSettings()
+
+      /**
        * Filter configuration includes settings for manifest filtering, start and end times, and
        * time delay that apply to all of your egress requests for this manifest.
-       *
-       * </p>
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-filterconfiguration)
        */
@@ -1364,23 +2402,21 @@ public open class CfnOriginEndpoint(
       /**
        * A short string that's appended to the endpoint URL.
        *
-       * The manifest name creates a unique path to this endpoint. If you don't enter a value,
-       * MediaPackage uses the default manifest name, index. </p>
+       * The child manifest name creates a unique path to this endpoint.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-manifestname)
        */
       override fun manifestName(): String = unwrap(this).getManifestName()
 
       /**
-       * The total duration (in seconds) of the manifest's content.</p>.
+       * The total duration (in seconds) of the manifest's content.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-manifestwindowseconds)
        */
       override fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
 
       /**
-       * Minimum amount of content (in seconds) that a player must keep available in the
-       * buffer.</p>.
+       * Minimum amount of content (in seconds) that a player must keep available in the buffer.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-minbuffertimeseconds)
        */
@@ -1388,7 +2424,7 @@ public open class CfnOriginEndpoint(
 
       /**
        * Minimum amount of time (in seconds) that the player should wait before requesting updates
-       * to the manifest.</p>.
+       * to the manifest.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-minupdateperiodseconds)
        */
@@ -1398,30 +2434,64 @@ public open class CfnOriginEndpoint(
        * A list of triggers that controls when AWS Elemental MediaPackage separates the MPEG-DASH
        * manifest into multiple periods.
        *
-       * Leave this value empty to indicate that the manifest is contained all in one period.
-       * For more information about periods in the DASH manifest, see [Multi-period DASH in AWS
-       * Elemental
-       * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html).</p>
+       * Type `ADS` to indicate that AWS Elemental MediaPackage must create periods in the output
+       * manifest that correspond to SCTE-35 ad markers in the input source. Leave this value empty to
+       * indicate that the manifest is contained all in one period. For more information about periods
+       * in the DASH manifest, see [Multi-period DASH in AWS Elemental
+       * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html) .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-periodtriggers)
        */
       override fun periodTriggers(): List<String> = unwrap(this).getPeriodTriggers() ?: emptyList()
 
       /**
-       * The SCTE configuration.</p>.
+       * The profile that the output is compliant with.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-profiles)
+       */
+      override fun profiles(): List<String> = unwrap(this).getProfiles() ?: emptyList()
+
+      /**
+       * Details about the content that you want MediaPackage to pass through in the manifest to the
+       * playback device.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-programinformation)
+       */
+      override fun programInformation(): Any? = unwrap(this).getProgramInformation()
+
+      /**
+       * The SCTE configuration.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-sctedash)
        */
       override fun scteDash(): Any? = unwrap(this).getScteDash()
 
       /**
+       * Determines the type of variable used in the `media` URL of the `SegmentTemplate` tag in the
+       * manifest.
+       *
+       * Also specifies if segment timeline information is included in `SegmentTimeline` or
+       * `SegmentTemplate` .
+       *
+       * Value description:
+       *
+       * * `NUMBER_WITH_TIMELINE` - The `$Number$` variable is used in the `media` URL. The value of
+       * this variable is the sequential number of the segment. A full `SegmentTimeline` object is
+       * presented in each `SegmentTemplate` .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-segmenttemplateformat)
        */
       override fun segmentTemplateFormat(): String? = unwrap(this).getSegmentTemplateFormat()
 
       /**
-       * The amount of time (in seconds) that the player should be from the end of the
-       * manifest.</p>.
+       * The configuration for DASH subtitles.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-subtitleconfiguration)
+       */
+      override fun subtitleConfiguration(): Any? = unwrap(this).getSubtitleConfiguration()
+
+      /**
+       * The amount of time (in seconds) that the player should be from the end of the manifest.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-suggestedpresentationdelayseconds)
        */
@@ -1430,7 +2500,7 @@ public open class CfnOriginEndpoint(
 
       /**
        * Determines the type of UTC timing included in the DASH Media Presentation Description
-       * (MPD).</p>.
+       * (MPD).
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-utctiming)
        */
@@ -1453,6 +2523,421 @@ public open class CfnOriginEndpoint(
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashManifestConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashManifestConfigurationProperty
+    }
+  }
+
+  /**
+   * Details about the content that you want MediaPackage to pass through in the manifest to the
+   * playback device.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * DashProgramInformationProperty dashProgramInformationProperty =
+   * DashProgramInformationProperty.builder()
+   * .copyright("copyright")
+   * .languageCode("languageCode")
+   * .moreInformationUrl("moreInformationUrl")
+   * .source("source")
+   * .title("title")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashprograminformation.html)
+   */
+  public interface DashProgramInformationProperty {
+    /**
+     * A copyright statement about the content.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashprograminformation.html#cfn-mediapackagev2-originendpoint-dashprograminformation-copyright)
+     */
+    public fun copyright(): String? = unwrap(this).getCopyright()
+
+    /**
+     * The language code for this manifest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashprograminformation.html#cfn-mediapackagev2-originendpoint-dashprograminformation-languagecode)
+     */
+    public fun languageCode(): String? = unwrap(this).getLanguageCode()
+
+    /**
+     * An absolute URL that contains more information about this content.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashprograminformation.html#cfn-mediapackagev2-originendpoint-dashprograminformation-moreinformationurl)
+     */
+    public fun moreInformationUrl(): String? = unwrap(this).getMoreInformationUrl()
+
+    /**
+     * Information about the content provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashprograminformation.html#cfn-mediapackagev2-originendpoint-dashprograminformation-source)
+     */
+    public fun source(): String? = unwrap(this).getSource()
+
+    /**
+     * The title for the manifest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashprograminformation.html#cfn-mediapackagev2-originendpoint-dashprograminformation-title)
+     */
+    public fun title(): String? = unwrap(this).getTitle()
+
+    /**
+     * A builder for [DashProgramInformationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param copyright A copyright statement about the content.
+       */
+      public fun copyright(copyright: String)
+
+      /**
+       * @param languageCode The language code for this manifest.
+       */
+      public fun languageCode(languageCode: String)
+
+      /**
+       * @param moreInformationUrl An absolute URL that contains more information about this
+       * content.
+       */
+      public fun moreInformationUrl(moreInformationUrl: String)
+
+      /**
+       * @param source Information about the content provider.
+       */
+      public fun source(source: String)
+
+      /**
+       * @param title The title for the manifest.
+       */
+      public fun title(title: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashProgramInformationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashProgramInformationProperty.builder()
+
+      /**
+       * @param copyright A copyright statement about the content.
+       */
+      override fun copyright(copyright: String) {
+        cdkBuilder.copyright(copyright)
+      }
+
+      /**
+       * @param languageCode The language code for this manifest.
+       */
+      override fun languageCode(languageCode: String) {
+        cdkBuilder.languageCode(languageCode)
+      }
+
+      /**
+       * @param moreInformationUrl An absolute URL that contains more information about this
+       * content.
+       */
+      override fun moreInformationUrl(moreInformationUrl: String) {
+        cdkBuilder.moreInformationUrl(moreInformationUrl)
+      }
+
+      /**
+       * @param source Information about the content provider.
+       */
+      override fun source(source: String) {
+        cdkBuilder.source(source)
+      }
+
+      /**
+       * @param title The title for the manifest.
+       */
+      override fun title(title: String) {
+        cdkBuilder.title(title)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashProgramInformationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashProgramInformationProperty,
+    ) : CdkObject(cdkObject),
+        DashProgramInformationProperty {
+      /**
+       * A copyright statement about the content.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashprograminformation.html#cfn-mediapackagev2-originendpoint-dashprograminformation-copyright)
+       */
+      override fun copyright(): String? = unwrap(this).getCopyright()
+
+      /**
+       * The language code for this manifest.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashprograminformation.html#cfn-mediapackagev2-originendpoint-dashprograminformation-languagecode)
+       */
+      override fun languageCode(): String? = unwrap(this).getLanguageCode()
+
+      /**
+       * An absolute URL that contains more information about this content.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashprograminformation.html#cfn-mediapackagev2-originendpoint-dashprograminformation-moreinformationurl)
+       */
+      override fun moreInformationUrl(): String? = unwrap(this).getMoreInformationUrl()
+
+      /**
+       * Information about the content provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashprograminformation.html#cfn-mediapackagev2-originendpoint-dashprograminformation-source)
+       */
+      override fun source(): String? = unwrap(this).getSource()
+
+      /**
+       * The title for the manifest.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashprograminformation.html#cfn-mediapackagev2-originendpoint-dashprograminformation-title)
+       */
+      override fun title(): String? = unwrap(this).getTitle()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DashProgramInformationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashProgramInformationProperty):
+          DashProgramInformationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DashProgramInformationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DashProgramInformationProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashProgramInformationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashProgramInformationProperty
+    }
+  }
+
+  /**
+   * The configuration for DASH subtitles.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * DashSubtitleConfigurationProperty dashSubtitleConfigurationProperty =
+   * DashSubtitleConfigurationProperty.builder()
+   * .ttmlConfiguration(DashTtmlConfigurationProperty.builder()
+   * .ttmlProfile("ttmlProfile")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashsubtitleconfiguration.html)
+   */
+  public interface DashSubtitleConfigurationProperty {
+    /**
+     * Settings for TTML subtitles.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashsubtitleconfiguration.html#cfn-mediapackagev2-originendpoint-dashsubtitleconfiguration-ttmlconfiguration)
+     */
+    public fun ttmlConfiguration(): Any? = unwrap(this).getTtmlConfiguration()
+
+    /**
+     * A builder for [DashSubtitleConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ttmlConfiguration Settings for TTML subtitles.
+       */
+      public fun ttmlConfiguration(ttmlConfiguration: IResolvable)
+
+      /**
+       * @param ttmlConfiguration Settings for TTML subtitles.
+       */
+      public fun ttmlConfiguration(ttmlConfiguration: DashTtmlConfigurationProperty)
+
+      /**
+       * @param ttmlConfiguration Settings for TTML subtitles.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("49c23a6b3b10c602f71501c6cce282666873270d994ee3c38060740cefaa07f0")
+      public
+          fun ttmlConfiguration(ttmlConfiguration: DashTtmlConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashSubtitleConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashSubtitleConfigurationProperty.builder()
+
+      /**
+       * @param ttmlConfiguration Settings for TTML subtitles.
+       */
+      override fun ttmlConfiguration(ttmlConfiguration: IResolvable) {
+        cdkBuilder.ttmlConfiguration(ttmlConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ttmlConfiguration Settings for TTML subtitles.
+       */
+      override fun ttmlConfiguration(ttmlConfiguration: DashTtmlConfigurationProperty) {
+        cdkBuilder.ttmlConfiguration(ttmlConfiguration.let(DashTtmlConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param ttmlConfiguration Settings for TTML subtitles.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("49c23a6b3b10c602f71501c6cce282666873270d994ee3c38060740cefaa07f0")
+      override
+          fun ttmlConfiguration(ttmlConfiguration: DashTtmlConfigurationProperty.Builder.() -> Unit):
+          Unit = ttmlConfiguration(DashTtmlConfigurationProperty(ttmlConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashSubtitleConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashSubtitleConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        DashSubtitleConfigurationProperty {
+      /**
+       * Settings for TTML subtitles.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashsubtitleconfiguration.html#cfn-mediapackagev2-originendpoint-dashsubtitleconfiguration-ttmlconfiguration)
+       */
+      override fun ttmlConfiguration(): Any? = unwrap(this).getTtmlConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DashSubtitleConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashSubtitleConfigurationProperty):
+          DashSubtitleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DashSubtitleConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DashSubtitleConfigurationProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashSubtitleConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashSubtitleConfigurationProperty
+    }
+  }
+
+  /**
+   * The settings for TTML subtitles.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * DashTtmlConfigurationProperty dashTtmlConfigurationProperty =
+   * DashTtmlConfigurationProperty.builder()
+   * .ttmlProfile("ttmlProfile")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashttmlconfiguration.html)
+   */
+  public interface DashTtmlConfigurationProperty {
+    /**
+     * The profile that MediaPackage uses when signaling subtitles in the manifest.
+     *
+     * `IMSC` is the default profile. `EBU-TT-D` produces subtitles that are compliant with the
+     * EBU-TT-D TTML profile. MediaPackage passes through subtitle styles to the manifest. For more
+     * information about EBU-TT-D subtitles, see [EBU-TT-D Subtitling Distribution
+     * Format](https://docs.aws.amazon.com/https://tech.ebu.ch/publications/tech3380) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashttmlconfiguration.html#cfn-mediapackagev2-originendpoint-dashttmlconfiguration-ttmlprofile)
+     */
+    public fun ttmlProfile(): String
+
+    /**
+     * A builder for [DashTtmlConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ttmlProfile The profile that MediaPackage uses when signaling subtitles in the
+       * manifest. 
+       * `IMSC` is the default profile. `EBU-TT-D` produces subtitles that are compliant with the
+       * EBU-TT-D TTML profile. MediaPackage passes through subtitle styles to the manifest. For more
+       * information about EBU-TT-D subtitles, see [EBU-TT-D Subtitling Distribution
+       * Format](https://docs.aws.amazon.com/https://tech.ebu.ch/publications/tech3380) .
+       */
+      public fun ttmlProfile(ttmlProfile: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashTtmlConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashTtmlConfigurationProperty.builder()
+
+      /**
+       * @param ttmlProfile The profile that MediaPackage uses when signaling subtitles in the
+       * manifest. 
+       * `IMSC` is the default profile. `EBU-TT-D` produces subtitles that are compliant with the
+       * EBU-TT-D TTML profile. MediaPackage passes through subtitle styles to the manifest. For more
+       * information about EBU-TT-D subtitles, see [EBU-TT-D Subtitling Distribution
+       * Format](https://docs.aws.amazon.com/https://tech.ebu.ch/publications/tech3380) .
+       */
+      override fun ttmlProfile(ttmlProfile: String) {
+        cdkBuilder.ttmlProfile(ttmlProfile)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashTtmlConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashTtmlConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        DashTtmlConfigurationProperty {
+      /**
+       * The profile that MediaPackage uses when signaling subtitles in the manifest.
+       *
+       * `IMSC` is the default profile. `EBU-TT-D` produces subtitles that are compliant with the
+       * EBU-TT-D TTML profile. MediaPackage passes through subtitle styles to the manifest. For more
+       * information about EBU-TT-D subtitles, see [EBU-TT-D Subtitling Distribution
+       * Format](https://docs.aws.amazon.com/https://tech.ebu.ch/publications/tech3380) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashttmlconfiguration.html#cfn-mediapackagev2-originendpoint-dashttmlconfiguration-ttmlprofile)
+       */
+      override fun ttmlProfile(): String = unwrap(this).getTtmlProfile()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DashTtmlConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashTtmlConfigurationProperty):
+          DashTtmlConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DashTtmlConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DashTtmlConfigurationProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashTtmlConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashTtmlConfigurationProperty
     }
   }
 
@@ -2578,7 +4063,7 @@ public open class CfnOriginEndpoint(
   }
 
   /**
-   * The HLS manfiest configuration associated with the origin endpoint.
+   * The HLS manifest configuration associated with the origin endpoint.
    *
    * Example:
    *
@@ -2609,6 +4094,7 @@ public open class CfnOriginEndpoint(
    * .precise(false)
    * .build())
    * .url("url")
+   * .urlEncodeChildManifest(false)
    * .build();
    * ```
    *
@@ -2625,8 +4111,6 @@ public open class CfnOriginEndpoint(
     /**
      * Filter configuration includes settings for manifest filtering, start and end times, and time
      * delay that apply to all of your egress requests for this manifest.
-     *
-     * </p>
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-hlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-hlsmanifestconfiguration-filterconfiguration)
      */
@@ -2667,7 +4151,7 @@ public open class CfnOriginEndpoint(
      * with a valid TimeOffset.
      *
      * When you do, you can also optionally specify whether to include a PRECISE value in the
-     * EXT-X-START tag.</p>
+     * EXT-X-START tag.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-hlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-hlsmanifestconfiguration-starttag)
      */
@@ -2679,6 +4163,18 @@ public open class CfnOriginEndpoint(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-hlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-hlsmanifestconfiguration-url)
      */
     public fun url(): String? = unwrap(this).getUrl()
+
+    /**
+     * When enabled, MediaPackage URL-encodes the query string for API requests for HLS child
+     * manifests to comply with AWS Signature Version 4 (SigV4) signature signing protocol.
+     *
+     * For more information, see [AWS Signature Version 4 for API
+     * requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html) in *AWS Identity
+     * and Access Management User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-hlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-hlsmanifestconfiguration-urlencodechildmanifest)
+     */
+    public fun urlEncodeChildManifest(): Any? = unwrap(this).getUrlEncodeChildManifest()
 
     /**
      * A builder for [HlsManifestConfigurationProperty]
@@ -2695,7 +4191,6 @@ public open class CfnOriginEndpoint(
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       public fun filterConfiguration(filterConfiguration: IResolvable)
 
@@ -2703,7 +4198,6 @@ public open class CfnOriginEndpoint(
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       public fun filterConfiguration(filterConfiguration: FilterConfigurationProperty)
 
@@ -2711,7 +4205,6 @@ public open class CfnOriginEndpoint(
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d0aee2c032693bff8484255c2220fc44ce6cb6a02c0f9ebe20ec091ab4fd812a")
@@ -2760,7 +4253,7 @@ public open class CfnOriginEndpoint(
        * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
        * configuration object with a valid TimeOffset.
        * When you do, you can also optionally specify whether to include a PRECISE value in the
-       * EXT-X-START tag.</p>
+       * EXT-X-START tag.
        */
       public fun startTag(startTag: IResolvable)
 
@@ -2768,7 +4261,7 @@ public open class CfnOriginEndpoint(
        * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
        * configuration object with a valid TimeOffset.
        * When you do, you can also optionally specify whether to include a PRECISE value in the
-       * EXT-X-START tag.</p>
+       * EXT-X-START tag.
        */
       public fun startTag(startTag: StartTagProperty)
 
@@ -2776,7 +4269,7 @@ public open class CfnOriginEndpoint(
        * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
        * configuration object with a valid TimeOffset.
        * When you do, you can also optionally specify whether to include a PRECISE value in the
-       * EXT-X-START tag.</p>
+       * EXT-X-START tag.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("43eb43fd53dacd3efac7f4eb52f4186ee8e5cee2e144ff4d0ec91ad13725d23f")
@@ -2786,6 +4279,26 @@ public open class CfnOriginEndpoint(
        * @param url The URL of the HLS manifest configuration.
        */
       public fun url(url: String)
+
+      /**
+       * @param urlEncodeChildManifest When enabled, MediaPackage URL-encodes the query string for
+       * API requests for HLS child manifests to comply with AWS Signature Version 4 (SigV4) signature
+       * signing protocol.
+       * For more information, see [AWS Signature Version 4 for API
+       * requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html) in *AWS
+       * Identity and Access Management User Guide* .
+       */
+      public fun urlEncodeChildManifest(urlEncodeChildManifest: Boolean)
+
+      /**
+       * @param urlEncodeChildManifest When enabled, MediaPackage URL-encodes the query string for
+       * API requests for HLS child manifests to comply with AWS Signature Version 4 (SigV4) signature
+       * signing protocol.
+       * For more information, see [AWS Signature Version 4 for API
+       * requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html) in *AWS
+       * Identity and Access Management User Guide* .
+       */
+      public fun urlEncodeChildManifest(urlEncodeChildManifest: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -2806,7 +4319,6 @@ public open class CfnOriginEndpoint(
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       override fun filterConfiguration(filterConfiguration: IResolvable) {
         cdkBuilder.filterConfiguration(filterConfiguration.let(IResolvable.Companion::unwrap))
@@ -2816,7 +4328,6 @@ public open class CfnOriginEndpoint(
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       override fun filterConfiguration(filterConfiguration: FilterConfigurationProperty) {
         cdkBuilder.filterConfiguration(filterConfiguration.let(FilterConfigurationProperty.Companion::unwrap))
@@ -2826,7 +4337,6 @@ public open class CfnOriginEndpoint(
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d0aee2c032693bff8484255c2220fc44ce6cb6a02c0f9ebe20ec091ab4fd812a")
@@ -2887,7 +4397,7 @@ public open class CfnOriginEndpoint(
        * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
        * configuration object with a valid TimeOffset.
        * When you do, you can also optionally specify whether to include a PRECISE value in the
-       * EXT-X-START tag.</p>
+       * EXT-X-START tag.
        */
       override fun startTag(startTag: IResolvable) {
         cdkBuilder.startTag(startTag.let(IResolvable.Companion::unwrap))
@@ -2897,7 +4407,7 @@ public open class CfnOriginEndpoint(
        * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
        * configuration object with a valid TimeOffset.
        * When you do, you can also optionally specify whether to include a PRECISE value in the
-       * EXT-X-START tag.</p>
+       * EXT-X-START tag.
        */
       override fun startTag(startTag: StartTagProperty) {
         cdkBuilder.startTag(startTag.let(StartTagProperty.Companion::unwrap))
@@ -2907,7 +4417,7 @@ public open class CfnOriginEndpoint(
        * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
        * configuration object with a valid TimeOffset.
        * When you do, you can also optionally specify whether to include a PRECISE value in the
-       * EXT-X-START tag.</p>
+       * EXT-X-START tag.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("43eb43fd53dacd3efac7f4eb52f4186ee8e5cee2e144ff4d0ec91ad13725d23f")
@@ -2919,6 +4429,30 @@ public open class CfnOriginEndpoint(
        */
       override fun url(url: String) {
         cdkBuilder.url(url)
+      }
+
+      /**
+       * @param urlEncodeChildManifest When enabled, MediaPackage URL-encodes the query string for
+       * API requests for HLS child manifests to comply with AWS Signature Version 4 (SigV4) signature
+       * signing protocol.
+       * For more information, see [AWS Signature Version 4 for API
+       * requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html) in *AWS
+       * Identity and Access Management User Guide* .
+       */
+      override fun urlEncodeChildManifest(urlEncodeChildManifest: Boolean) {
+        cdkBuilder.urlEncodeChildManifest(urlEncodeChildManifest)
+      }
+
+      /**
+       * @param urlEncodeChildManifest When enabled, MediaPackage URL-encodes the query string for
+       * API requests for HLS child manifests to comply with AWS Signature Version 4 (SigV4) signature
+       * signing protocol.
+       * For more information, see [AWS Signature Version 4 for API
+       * requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html) in *AWS
+       * Identity and Access Management User Guide* .
+       */
+      override fun urlEncodeChildManifest(urlEncodeChildManifest: IResolvable) {
+        cdkBuilder.urlEncodeChildManifest(urlEncodeChildManifest.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2940,8 +4474,6 @@ public open class CfnOriginEndpoint(
       /**
        * Filter configuration includes settings for manifest filtering, start and end times, and
        * time delay that apply to all of your egress requests for this manifest.
-       *
-       * </p>
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-hlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-hlsmanifestconfiguration-filterconfiguration)
        */
@@ -2982,7 +4514,7 @@ public open class CfnOriginEndpoint(
        * with a valid TimeOffset.
        *
        * When you do, you can also optionally specify whether to include a PRECISE value in the
-       * EXT-X-START tag.</p>
+       * EXT-X-START tag.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-hlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-hlsmanifestconfiguration-starttag)
        */
@@ -2994,6 +4526,18 @@ public open class CfnOriginEndpoint(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-hlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-hlsmanifestconfiguration-url)
        */
       override fun url(): String? = unwrap(this).getUrl()
+
+      /**
+       * When enabled, MediaPackage URL-encodes the query string for API requests for HLS child
+       * manifests to comply with AWS Signature Version 4 (SigV4) signature signing protocol.
+       *
+       * For more information, see [AWS Signature Version 4 for API
+       * requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html) in *AWS
+       * Identity and Access Management User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-hlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-hlsmanifestconfiguration-urlencodechildmanifest)
+       */
+      override fun urlEncodeChildManifest(): Any? = unwrap(this).getUrlEncodeChildManifest()
     }
 
     public companion object {
@@ -3046,6 +4590,7 @@ public open class CfnOriginEndpoint(
    * .precise(false)
    * .build())
    * .url("url")
+   * .urlEncodeChildManifest(false)
    * .build();
    * ```
    *
@@ -3064,14 +4609,12 @@ public open class CfnOriginEndpoint(
      * Filter configuration includes settings for manifest filtering, start and end times, and time
      * delay that apply to all of your egress requests for this manifest.
      *
-     * </p>
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration-filterconfiguration)
      */
     public fun filterConfiguration(): Any? = unwrap(this).getFilterConfiguration()
 
     /**
-     * A short short string that's appended to the endpoint URL.
+     * A short string that's appended to the endpoint URL.
      *
      * The manifest name creates a unique path to this endpoint. If you don't enter a value,
      * MediaPackage uses the default manifest name, `index` . MediaPackage automatically inserts the
@@ -3119,7 +4662,7 @@ public open class CfnOriginEndpoint(
      * with a valid TimeOffset.
      *
      * When you do, you can also optionally specify whether to include a PRECISE value in the
-     * EXT-X-START tag.</p>
+     * EXT-X-START tag.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration-starttag)
      */
@@ -3131,6 +4674,18 @@ public open class CfnOriginEndpoint(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration-url)
      */
     public fun url(): String? = unwrap(this).getUrl()
+
+    /**
+     * When enabled, MediaPackage URL-encodes the query string for API requests for LL-HLS child
+     * manifests to comply with AWS Signature Version 4 (SigV4) signature signing protocol.
+     *
+     * For more information, see [AWS Signature Version 4 for API
+     * requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html) in *AWS Identity
+     * and Access Management User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration-urlencodechildmanifest)
+     */
+    public fun urlEncodeChildManifest(): Any? = unwrap(this).getUrlEncodeChildManifest()
 
     /**
      * A builder for [LowLatencyHlsManifestConfigurationProperty]
@@ -3147,7 +4702,6 @@ public open class CfnOriginEndpoint(
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       public fun filterConfiguration(filterConfiguration: IResolvable)
 
@@ -3155,7 +4709,6 @@ public open class CfnOriginEndpoint(
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       public fun filterConfiguration(filterConfiguration: FilterConfigurationProperty)
 
@@ -3163,7 +4716,6 @@ public open class CfnOriginEndpoint(
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e60276fbe3576bbb1f200a20e4faae25c52ef9ea8bc9f0248f931dcc59627ce8")
@@ -3171,7 +4723,7 @@ public open class CfnOriginEndpoint(
           fun filterConfiguration(filterConfiguration: FilterConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param manifestName A short short string that's appended to the endpoint URL. 
+       * @param manifestName A short string that's appended to the endpoint URL. 
        * The manifest name creates a unique path to this endpoint. If you don't enter a value,
        * MediaPackage uses the default manifest name, `index` . MediaPackage automatically inserts the
        * format extension, such as `.m3u8` . You can't use the same manifest name if you use HLS
@@ -3221,7 +4773,7 @@ public open class CfnOriginEndpoint(
        * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
        * configuration object with a valid TimeOffset.
        * When you do, you can also optionally specify whether to include a PRECISE value in the
-       * EXT-X-START tag.</p>
+       * EXT-X-START tag.
        */
       public fun startTag(startTag: IResolvable)
 
@@ -3229,7 +4781,7 @@ public open class CfnOriginEndpoint(
        * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
        * configuration object with a valid TimeOffset.
        * When you do, you can also optionally specify whether to include a PRECISE value in the
-       * EXT-X-START tag.</p>
+       * EXT-X-START tag.
        */
       public fun startTag(startTag: StartTagProperty)
 
@@ -3237,7 +4789,7 @@ public open class CfnOriginEndpoint(
        * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
        * configuration object with a valid TimeOffset.
        * When you do, you can also optionally specify whether to include a PRECISE value in the
-       * EXT-X-START tag.</p>
+       * EXT-X-START tag.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cd9c6291a1a8674dd45c02619fb284e3b031a041d42ea827b7637e2042ce8612")
@@ -3248,6 +4800,26 @@ public open class CfnOriginEndpoint(
        * endpoint.
        */
       public fun url(url: String)
+
+      /**
+       * @param urlEncodeChildManifest When enabled, MediaPackage URL-encodes the query string for
+       * API requests for LL-HLS child manifests to comply with AWS Signature Version 4 (SigV4)
+       * signature signing protocol.
+       * For more information, see [AWS Signature Version 4 for API
+       * requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html) in *AWS
+       * Identity and Access Management User Guide* .
+       */
+      public fun urlEncodeChildManifest(urlEncodeChildManifest: Boolean)
+
+      /**
+       * @param urlEncodeChildManifest When enabled, MediaPackage URL-encodes the query string for
+       * API requests for LL-HLS child manifests to comply with AWS Signature Version 4 (SigV4)
+       * signature signing protocol.
+       * For more information, see [AWS Signature Version 4 for API
+       * requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html) in *AWS
+       * Identity and Access Management User Guide* .
+       */
+      public fun urlEncodeChildManifest(urlEncodeChildManifest: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -3268,7 +4840,6 @@ public open class CfnOriginEndpoint(
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       override fun filterConfiguration(filterConfiguration: IResolvable) {
         cdkBuilder.filterConfiguration(filterConfiguration.let(IResolvable.Companion::unwrap))
@@ -3278,7 +4849,6 @@ public open class CfnOriginEndpoint(
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       override fun filterConfiguration(filterConfiguration: FilterConfigurationProperty) {
         cdkBuilder.filterConfiguration(filterConfiguration.let(FilterConfigurationProperty.Companion::unwrap))
@@ -3288,7 +4858,6 @@ public open class CfnOriginEndpoint(
        * @param filterConfiguration Filter configuration includes settings for manifest filtering,
        * start and end times, and time delay that apply to all of your egress requests for this
        * manifest.
-       * </p>
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e60276fbe3576bbb1f200a20e4faae25c52ef9ea8bc9f0248f931dcc59627ce8")
@@ -3297,7 +4866,7 @@ public open class CfnOriginEndpoint(
           Unit = filterConfiguration(FilterConfigurationProperty(filterConfiguration))
 
       /**
-       * @param manifestName A short short string that's appended to the endpoint URL. 
+       * @param manifestName A short string that's appended to the endpoint URL. 
        * The manifest name creates a unique path to this endpoint. If you don't enter a value,
        * MediaPackage uses the default manifest name, `index` . MediaPackage automatically inserts the
        * format extension, such as `.m3u8` . You can't use the same manifest name if you use HLS
@@ -3358,7 +4927,7 @@ public open class CfnOriginEndpoint(
        * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
        * configuration object with a valid TimeOffset.
        * When you do, you can also optionally specify whether to include a PRECISE value in the
-       * EXT-X-START tag.</p>
+       * EXT-X-START tag.
        */
       override fun startTag(startTag: IResolvable) {
         cdkBuilder.startTag(startTag.let(IResolvable.Companion::unwrap))
@@ -3368,7 +4937,7 @@ public open class CfnOriginEndpoint(
        * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
        * configuration object with a valid TimeOffset.
        * When you do, you can also optionally specify whether to include a PRECISE value in the
-       * EXT-X-START tag.</p>
+       * EXT-X-START tag.
        */
       override fun startTag(startTag: StartTagProperty) {
         cdkBuilder.startTag(startTag.let(StartTagProperty.Companion::unwrap))
@@ -3378,7 +4947,7 @@ public open class CfnOriginEndpoint(
        * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
        * configuration object with a valid TimeOffset.
        * When you do, you can also optionally specify whether to include a PRECISE value in the
-       * EXT-X-START tag.</p>
+       * EXT-X-START tag.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cd9c6291a1a8674dd45c02619fb284e3b031a041d42ea827b7637e2042ce8612")
@@ -3391,6 +4960,30 @@ public open class CfnOriginEndpoint(
        */
       override fun url(url: String) {
         cdkBuilder.url(url)
+      }
+
+      /**
+       * @param urlEncodeChildManifest When enabled, MediaPackage URL-encodes the query string for
+       * API requests for LL-HLS child manifests to comply with AWS Signature Version 4 (SigV4)
+       * signature signing protocol.
+       * For more information, see [AWS Signature Version 4 for API
+       * requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html) in *AWS
+       * Identity and Access Management User Guide* .
+       */
+      override fun urlEncodeChildManifest(urlEncodeChildManifest: Boolean) {
+        cdkBuilder.urlEncodeChildManifest(urlEncodeChildManifest)
+      }
+
+      /**
+       * @param urlEncodeChildManifest When enabled, MediaPackage URL-encodes the query string for
+       * API requests for LL-HLS child manifests to comply with AWS Signature Version 4 (SigV4)
+       * signature signing protocol.
+       * For more information, see [AWS Signature Version 4 for API
+       * requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html) in *AWS
+       * Identity and Access Management User Guide* .
+       */
+      override fun urlEncodeChildManifest(urlEncodeChildManifest: IResolvable) {
+        cdkBuilder.urlEncodeChildManifest(urlEncodeChildManifest.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -3414,14 +5007,12 @@ public open class CfnOriginEndpoint(
        * Filter configuration includes settings for manifest filtering, start and end times, and
        * time delay that apply to all of your egress requests for this manifest.
        *
-       * </p>
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration-filterconfiguration)
        */
       override fun filterConfiguration(): Any? = unwrap(this).getFilterConfiguration()
 
       /**
-       * A short short string that's appended to the endpoint URL.
+       * A short string that's appended to the endpoint URL.
        *
        * The manifest name creates a unique path to this endpoint. If you don't enter a value,
        * MediaPackage uses the default manifest name, `index` . MediaPackage automatically inserts the
@@ -3469,7 +5060,7 @@ public open class CfnOriginEndpoint(
        * with a valid TimeOffset.
        *
        * When you do, you can also optionally specify whether to include a PRECISE value in the
-       * EXT-X-START tag.</p>
+       * EXT-X-START tag.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration-starttag)
        */
@@ -3481,6 +5072,18 @@ public open class CfnOriginEndpoint(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration-url)
        */
       override fun url(): String? = unwrap(this).getUrl()
+
+      /**
+       * When enabled, MediaPackage URL-encodes the query string for API requests for LL-HLS child
+       * manifests to comply with AWS Signature Version 4 (SigV4) signature signing protocol.
+       *
+       * For more information, see [AWS Signature Version 4 for API
+       * requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html) in *AWS
+       * Identity and Access Management User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration-urlencodechildmanifest)
+       */
+      override fun urlEncodeChildManifest(): Any? = unwrap(this).getUrlEncodeChildManifest()
     }
 
     public companion object {

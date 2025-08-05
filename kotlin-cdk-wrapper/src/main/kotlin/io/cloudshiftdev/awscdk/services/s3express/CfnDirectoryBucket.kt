@@ -3,8 +3,11 @@
 package io.cloudshiftdev.awscdk.services.s3express
 
 import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -20,7 +23,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The `AWS::S3Express::DirectoryBucket` resource creates an Amazon S3 directory bucket in the same
+ * The `AWS::S3Express::DirectoryBucket` resource defines an Amazon S3 directory bucket in the same
  * AWS Region where you create the AWS CloudFormation stack.
  *
  * To control how AWS CloudFormation handles the bucket when the stack is deleted, you can set a
@@ -99,6 +102,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .prefix("prefix")
  * .build()))
  * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -107,7 +114,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDirectoryBucket(
   cdkObject: software.amazon.awscdk.services.s3express.CfnDirectoryBucket,
 ) : CfnResource(cdkObject),
-    IInspectable {
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -133,9 +141,10 @@ public open class CfnDirectoryBucket(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   * Returns the code for the Availability Zone where the directory bucket was created.
+   * Returns the code for the Availability Zone or the Local Zone where the directory bucket was
+   * created.
    *
-   * Example: *us-east-1f*
+   * Example value for an Availability Zone code: *us-east-1f*
    *
    *
    * An Availability Zone code might not represent the same physical location for different AWS
@@ -187,6 +196,12 @@ public open class CfnDirectoryBucket(
   public open fun bucketName(`value`: String) {
     unwrap(this).setBucketName(`value`)
   }
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * The number of Zone (Availability Zone or Local Zone) that's used for redundancy for the bucket.
@@ -258,6 +273,23 @@ public open class CfnDirectoryBucket(
   }
 
   /**
+   * An array of tags that you can apply to the S3 directory bucket.
+   */
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * An array of tags that you can apply to the S3 directory bucket.
+   */
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
+  }
+
+  /**
+   * An array of tags that you can apply to the S3 directory bucket.
+   */
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.s3express.CfnDirectoryBucket].
    */
   @CdkDslMarker
@@ -313,11 +345,11 @@ public open class CfnDirectoryBucket(
      * A name for the bucket.
      *
      * The bucket name must contain only lowercase letters, numbers, and hyphens (-). A directory
-     * bucket name must be unique in the chosen Availability Zone. The bucket name must also follow the
-     * format `*bucket_base_name* -- *az_id* --x-s3` (for example, `*bucket_base_name* --
-     * *usw2-az1* --x-s3` ). If you don't specify a name, AWS CloudFormation generates a unique ID and
-     * uses that ID for the bucket name. For information about bucket naming restrictions, see
-     * [Directory bucket naming
+     * bucket name must be unique in the chosen Zone (Availability Zone or Local Zone). The bucket name
+     * must also follow the format `*bucket_base_name* -- *zone_id* --x-s3` (for example,
+     * `*bucket_base_name* -- *usw2-az1* --x-s3` ). If you don't specify a name, AWS CloudFormation
+     * generates a unique ID and uses that ID for the bucket name. For information about bucket naming
+     * restrictions, see [Directory bucket naming
      * rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/directory-bucket-naming-rules.html)
      * in the *Amazon S3 User Guide* .
      *
@@ -394,6 +426,30 @@ public open class CfnDirectoryBucket(
      * @param locationName The name of the location where the bucket will be created. 
      */
     public fun locationName(locationName: String)
+
+    /**
+     * An array of tags that you can apply to the S3 directory bucket.
+     *
+     * Tags are key-value pairs of metadata used to categorize and organize your buckets, track
+     * costs, and control access. For more information, see [Using tags with directory
+     * buckets](https://docs.aws.amazon.com/AmazonS3/latest/userguide/directory-buckets-tagging.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-directorybucket.html#cfn-s3express-directorybucket-tags)
+     * @param tags An array of tags that you can apply to the S3 directory bucket. 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * An array of tags that you can apply to the S3 directory bucket.
+     *
+     * Tags are key-value pairs of metadata used to categorize and organize your buckets, track
+     * costs, and control access. For more information, see [Using tags with directory
+     * buckets](https://docs.aws.amazon.com/AmazonS3/latest/userguide/directory-buckets-tagging.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-directorybucket.html#cfn-s3express-directorybucket-tags)
+     * @param tags An array of tags that you can apply to the S3 directory bucket. 
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -459,11 +515,11 @@ public open class CfnDirectoryBucket(
      * A name for the bucket.
      *
      * The bucket name must contain only lowercase letters, numbers, and hyphens (-). A directory
-     * bucket name must be unique in the chosen Availability Zone. The bucket name must also follow the
-     * format `*bucket_base_name* -- *az_id* --x-s3` (for example, `*bucket_base_name* --
-     * *usw2-az1* --x-s3` ). If you don't specify a name, AWS CloudFormation generates a unique ID and
-     * uses that ID for the bucket name. For information about bucket naming restrictions, see
-     * [Directory bucket naming
+     * bucket name must be unique in the chosen Zone (Availability Zone or Local Zone). The bucket name
+     * must also follow the format `*bucket_base_name* -- *zone_id* --x-s3` (for example,
+     * `*bucket_base_name* -- *usw2-az1* --x-s3` ). If you don't specify a name, AWS CloudFormation
+     * generates a unique ID and uses that ID for the bucket name. For information about bucket naming
+     * restrictions, see [Directory bucket naming
      * rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/directory-bucket-naming-rules.html)
      * in the *Amazon S3 User Guide* .
      *
@@ -551,6 +607,32 @@ public open class CfnDirectoryBucket(
     override fun locationName(locationName: String) {
       cdkBuilder.locationName(locationName)
     }
+
+    /**
+     * An array of tags that you can apply to the S3 directory bucket.
+     *
+     * Tags are key-value pairs of metadata used to categorize and organize your buckets, track
+     * costs, and control access. For more information, see [Using tags with directory
+     * buckets](https://docs.aws.amazon.com/AmazonS3/latest/userguide/directory-buckets-tagging.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-directorybucket.html#cfn-s3express-directorybucket-tags)
+     * @param tags An array of tags that you can apply to the S3 directory bucket. 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * An array of tags that you can apply to the S3 directory bucket.
+     *
+     * Tags are key-value pairs of metadata used to categorize and organize your buckets, track
+     * costs, and control access. For more information, see [Using tags with directory
+     * buckets](https://docs.aws.amazon.com/AmazonS3/latest/userguide/directory-buckets-tagging.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-directorybucket.html#cfn-s3express-directorybucket-tags)
+     * @param tags An array of tags that you can apply to the S3 directory bucket. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.s3express.CfnDirectoryBucket =
         cdkBuilder.build()

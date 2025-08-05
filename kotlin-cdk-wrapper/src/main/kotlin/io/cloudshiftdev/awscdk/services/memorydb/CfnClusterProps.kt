@@ -39,9 +39,11 @@ import kotlin.jvm.JvmName
  * .engine("engine")
  * .engineVersion("engineVersion")
  * .finalSnapshotName("finalSnapshotName")
+ * .ipDiscovery("ipDiscovery")
  * .kmsKeyId("kmsKeyId")
  * .maintenanceWindow("maintenanceWindow")
  * .multiRegionClusterName("multiRegionClusterName")
+ * .networkType("networkType")
  * .numReplicasPerShard(123)
  * .numShards(123)
  * .parameterGroupName("parameterGroupName")
@@ -120,7 +122,7 @@ public interface CfnClusterProps {
   public fun engine(): String? = unwrap(this).getEngine()
 
   /**
-   * The Valkey or Redis OSS engine version used by the cluster .
+   * The Redis engine version used by the cluster .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-engineversion)
    */
@@ -135,6 +137,16 @@ public interface CfnClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-finalsnapshotname)
    */
   public fun finalSnapshotName(): String? = unwrap(this).getFinalSnapshotName()
+
+  /**
+   * The mechanism that the cluster uses to discover IP addresses.
+   *
+   * Returns 'ipv4' when DNS endpoints resolve to IPv4 addresses, or 'ipv6' when DNS endpoints
+   * resolve to IPv6 addresses.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-ipdiscovery)
+   */
+  public fun ipDiscovery(): String? = unwrap(this).getIpDiscovery()
 
   /**
    * The ID of the KMS key used to encrypt the cluster .
@@ -161,6 +173,16 @@ public interface CfnClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-multiregionclustername)
    */
   public fun multiRegionClusterName(): String? = unwrap(this).getMultiRegionClusterName()
+
+  /**
+   * The IP address type for the cluster.
+   *
+   * Returns 'ipv4' for IPv4 only, 'ipv6' for IPv6 only, or 'dual-stack' if the cluster supports
+   * both IPv4 and IPv6 addressing.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-networktype)
+   */
+  public fun networkType(): String? = unwrap(this).getNetworkType()
 
   /**
    * The cluster 's node type.
@@ -352,7 +374,7 @@ public interface CfnClusterProps {
     public fun engine(engine: String)
 
     /**
-     * @param engineVersion The Valkey or Redis OSS engine version used by the cluster .
+     * @param engineVersion The Redis engine version used by the cluster .
      */
     public fun engineVersion(engineVersion: String)
 
@@ -362,6 +384,13 @@ public interface CfnClusterProps {
      * deletes the cluster immediately afterward.
      */
     public fun finalSnapshotName(finalSnapshotName: String)
+
+    /**
+     * @param ipDiscovery The mechanism that the cluster uses to discover IP addresses.
+     * Returns 'ipv4' when DNS endpoints resolve to IPv4 addresses, or 'ipv6' when DNS endpoints
+     * resolve to IPv6 addresses.
+     */
+    public fun ipDiscovery(ipDiscovery: String)
 
     /**
      * @param kmsKeyId The ID of the KMS key used to encrypt the cluster .
@@ -383,6 +412,13 @@ public interface CfnClusterProps {
      * to.
      */
     public fun multiRegionClusterName(multiRegionClusterName: String)
+
+    /**
+     * @param networkType The IP address type for the cluster.
+     * Returns 'ipv4' for IPv4 only, 'ipv6' for IPv6 only, or 'dual-stack' if the cluster supports
+     * both IPv4 and IPv6 addressing.
+     */
+    public fun networkType(networkType: String)
 
     /**
      * @param nodeType The cluster 's node type. 
@@ -585,7 +621,7 @@ public interface CfnClusterProps {
     }
 
     /**
-     * @param engineVersion The Valkey or Redis OSS engine version used by the cluster .
+     * @param engineVersion The Redis engine version used by the cluster .
      */
     override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
@@ -598,6 +634,15 @@ public interface CfnClusterProps {
      */
     override fun finalSnapshotName(finalSnapshotName: String) {
       cdkBuilder.finalSnapshotName(finalSnapshotName)
+    }
+
+    /**
+     * @param ipDiscovery The mechanism that the cluster uses to discover IP addresses.
+     * Returns 'ipv4' when DNS endpoints resolve to IPv4 addresses, or 'ipv6' when DNS endpoints
+     * resolve to IPv6 addresses.
+     */
+    override fun ipDiscovery(ipDiscovery: String) {
+      cdkBuilder.ipDiscovery(ipDiscovery)
     }
 
     /**
@@ -625,6 +670,15 @@ public interface CfnClusterProps {
      */
     override fun multiRegionClusterName(multiRegionClusterName: String) {
       cdkBuilder.multiRegionClusterName(multiRegionClusterName)
+    }
+
+    /**
+     * @param networkType The IP address type for the cluster.
+     * Returns 'ipv4' for IPv4 only, 'ipv6' for IPv6 only, or 'dual-stack' if the cluster supports
+     * both IPv4 and IPv6 addressing.
+     */
+    override fun networkType(networkType: String) {
+      cdkBuilder.networkType(networkType)
     }
 
     /**
@@ -843,7 +897,7 @@ public interface CfnClusterProps {
     override fun engine(): String? = unwrap(this).getEngine()
 
     /**
-     * The Valkey or Redis OSS engine version used by the cluster .
+     * The Redis engine version used by the cluster .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-engineversion)
      */
@@ -858,6 +912,16 @@ public interface CfnClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-finalsnapshotname)
      */
     override fun finalSnapshotName(): String? = unwrap(this).getFinalSnapshotName()
+
+    /**
+     * The mechanism that the cluster uses to discover IP addresses.
+     *
+     * Returns 'ipv4' when DNS endpoints resolve to IPv4 addresses, or 'ipv6' when DNS endpoints
+     * resolve to IPv6 addresses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-ipdiscovery)
+     */
+    override fun ipDiscovery(): String? = unwrap(this).getIpDiscovery()
 
     /**
      * The ID of the KMS key used to encrypt the cluster .
@@ -884,6 +948,16 @@ public interface CfnClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-multiregionclustername)
      */
     override fun multiRegionClusterName(): String? = unwrap(this).getMultiRegionClusterName()
+
+    /**
+     * The IP address type for the cluster.
+     *
+     * Returns 'ipv4' for IPv4 only, 'ipv6' for IPv6 only, or 'dual-stack' if the cluster supports
+     * both IPv4 and IPv6 addressing.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-networktype)
+     */
+    override fun networkType(): String? = unwrap(this).getNetworkType()
 
     /**
      * The cluster 's node type.

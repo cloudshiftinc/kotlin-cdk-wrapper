@@ -89,6 +89,7 @@ import kotlin.jvm.JvmName
  * .policyDescription("policyDescription")
  * .resourcesCleanUp(false)
  * .resourceSetIds(List.of("resourceSetIds"))
+ * .resourceTagLogicalOperator("resourceTagLogicalOperator")
  * .resourceTags(List.of(ResourceTagProperty.builder()
  * .key("key")
  * // the properties below are optional
@@ -225,6 +226,16 @@ public interface CfnPolicyProps {
   public fun resourceSetIds(): List<String> = unwrap(this).getResourceSetIds() ?: emptyList()
 
   /**
+   * Specifies whether to combine multiple resource tags with AND, so that a resource must have all
+   * tags to be included or excluded, or OR, so that a resource must have at least one tag.
+   *
+   * Default: `AND`
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-resourcetaglogicaloperator)
+   */
+  public fun resourceTagLogicalOperator(): String? = unwrap(this).getResourceTagLogicalOperator()
+
+  /**
    * An array of `ResourceTag` objects, used to explicitly include resources in the policy scope or
    * explicitly exclude them.
    *
@@ -296,8 +307,7 @@ public interface CfnPolicyProps {
    *
    * * Type - Indicates the service type that the policy uses to protect the resource. For security
    * group policies, Firewall Manager supports one security group for each common policy and for each
-   * content audit policy. This is an adjustable limit that you can increase by contacting AWS Support
-   * .
+   * content audit policy. This is an adjustable limit that you can increase by contacting  .
    *
    * Valid values: `DNS_FIREWALL` | `NETWORK_FIREWALL` | `SECURITY_GROUPS_COMMON` |
    * `SECURITY_GROUPS_CONTENT_AUDIT` | `SECURITY_GROUPS_USAGE_AUDIT` | `SHIELD_ADVANCED` |
@@ -717,6 +727,14 @@ public interface CfnPolicyProps {
     public fun resourceSetIds(vararg resourceSetIds: String)
 
     /**
+     * @param resourceTagLogicalOperator Specifies whether to combine multiple resource tags with
+     * AND, so that a resource must have all tags to be included or excluded, or OR, so that a resource
+     * must have at least one tag.
+     * Default: `AND`
+     */
+    public fun resourceTagLogicalOperator(resourceTagLogicalOperator: String)
+
+    /**
      * @param resourceTags An array of `ResourceTag` objects, used to explicitly include resources
      * in the policy scope or explicitly exclude them.
      * If this isn't set, then tags aren't used to modify policy scope. See also
@@ -813,8 +831,8 @@ public interface CfnPolicyProps {
      *
      * * Type - Indicates the service type that the policy uses to protect the resource. For
      * security group policies, Firewall Manager supports one security group for each common policy and
-     * for each content audit policy. This is an adjustable limit that you can increase by contacting
-     * AWS Support .
+     * for each content audit policy. This is an adjustable limit that you can increase by contacting 
+     * .
      *
      * Valid values: `DNS_FIREWALL` | `NETWORK_FIREWALL` | `SECURITY_GROUPS_COMMON` |
      * `SECURITY_GROUPS_CONTENT_AUDIT` | `SECURITY_GROUPS_USAGE_AUDIT` | `SHIELD_ADVANCED` |
@@ -983,8 +1001,8 @@ public interface CfnPolicyProps {
      *
      * * Type - Indicates the service type that the policy uses to protect the resource. For
      * security group policies, Firewall Manager supports one security group for each common policy and
-     * for each content audit policy. This is an adjustable limit that you can increase by contacting
-     * AWS Support .
+     * for each content audit policy. This is an adjustable limit that you can increase by contacting 
+     * .
      *
      * Valid values: `DNS_FIREWALL` | `NETWORK_FIREWALL` | `SECURITY_GROUPS_COMMON` |
      * `SECURITY_GROUPS_CONTENT_AUDIT` | `SECURITY_GROUPS_USAGE_AUDIT` | `SHIELD_ADVANCED` |
@@ -1154,8 +1172,8 @@ public interface CfnPolicyProps {
      *
      * * Type - Indicates the service type that the policy uses to protect the resource. For
      * security group policies, Firewall Manager supports one security group for each common policy and
-     * for each content audit policy. This is an adjustable limit that you can increase by contacting
-     * AWS Support .
+     * for each content audit policy. This is an adjustable limit that you can increase by contacting 
+     * .
      *
      * Valid values: `DNS_FIREWALL` | `NETWORK_FIREWALL` | `SECURITY_GROUPS_COMMON` |
      * `SECURITY_GROUPS_CONTENT_AUDIT` | `SECURITY_GROUPS_USAGE_AUDIT` | `SHIELD_ADVANCED` |
@@ -1609,6 +1627,16 @@ public interface CfnPolicyProps {
         resourceSetIds(resourceSetIds.toList())
 
     /**
+     * @param resourceTagLogicalOperator Specifies whether to combine multiple resource tags with
+     * AND, so that a resource must have all tags to be included or excluded, or OR, so that a resource
+     * must have at least one tag.
+     * Default: `AND`
+     */
+    override fun resourceTagLogicalOperator(resourceTagLogicalOperator: String) {
+      cdkBuilder.resourceTagLogicalOperator(resourceTagLogicalOperator)
+    }
+
+    /**
      * @param resourceTags An array of `ResourceTag` objects, used to explicitly include resources
      * in the policy scope or explicitly exclude them.
      * If this isn't set, then tags aren't used to modify policy scope. See also
@@ -1718,8 +1746,8 @@ public interface CfnPolicyProps {
      *
      * * Type - Indicates the service type that the policy uses to protect the resource. For
      * security group policies, Firewall Manager supports one security group for each common policy and
-     * for each content audit policy. This is an adjustable limit that you can increase by contacting
-     * AWS Support .
+     * for each content audit policy. This is an adjustable limit that you can increase by contacting 
+     * .
      *
      * Valid values: `DNS_FIREWALL` | `NETWORK_FIREWALL` | `SECURITY_GROUPS_COMMON` |
      * `SECURITY_GROUPS_CONTENT_AUDIT` | `SECURITY_GROUPS_USAGE_AUDIT` | `SHIELD_ADVANCED` |
@@ -1890,8 +1918,8 @@ public interface CfnPolicyProps {
      *
      * * Type - Indicates the service type that the policy uses to protect the resource. For
      * security group policies, Firewall Manager supports one security group for each common policy and
-     * for each content audit policy. This is an adjustable limit that you can increase by contacting
-     * AWS Support .
+     * for each content audit policy. This is an adjustable limit that you can increase by contacting 
+     * .
      *
      * Valid values: `DNS_FIREWALL` | `NETWORK_FIREWALL` | `SECURITY_GROUPS_COMMON` |
      * `SECURITY_GROUPS_CONTENT_AUDIT` | `SECURITY_GROUPS_USAGE_AUDIT` | `SHIELD_ADVANCED` |
@@ -2063,8 +2091,8 @@ public interface CfnPolicyProps {
      *
      * * Type - Indicates the service type that the policy uses to protect the resource. For
      * security group policies, Firewall Manager supports one security group for each common policy and
-     * for each content audit policy. This is an adjustable limit that you can increase by contacting
-     * AWS Support .
+     * for each content audit policy. This is an adjustable limit that you can increase by contacting 
+     * .
      *
      * Valid values: `DNS_FIREWALL` | `NETWORK_FIREWALL` | `SECURITY_GROUPS_COMMON` |
      * `SECURITY_GROUPS_CONTENT_AUDIT` | `SECURITY_GROUPS_USAGE_AUDIT` | `SHIELD_ADVANCED` |
@@ -2375,6 +2403,17 @@ public interface CfnPolicyProps {
     override fun resourceSetIds(): List<String> = unwrap(this).getResourceSetIds() ?: emptyList()
 
     /**
+     * Specifies whether to combine multiple resource tags with AND, so that a resource must have
+     * all tags to be included or excluded, or OR, so that a resource must have at least one tag.
+     *
+     * Default: `AND`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-resourcetaglogicaloperator)
+     */
+    override fun resourceTagLogicalOperator(): String? =
+        unwrap(this).getResourceTagLogicalOperator()
+
+    /**
      * An array of `ResourceTag` objects, used to explicitly include resources in the policy scope
      * or explicitly exclude them.
      *
@@ -2447,8 +2486,8 @@ public interface CfnPolicyProps {
      *
      * * Type - Indicates the service type that the policy uses to protect the resource. For
      * security group policies, Firewall Manager supports one security group for each common policy and
-     * for each content audit policy. This is an adjustable limit that you can increase by contacting
-     * AWS Support .
+     * for each content audit policy. This is an adjustable limit that you can increase by contacting 
+     * .
      *
      * Valid values: `DNS_FIREWALL` | `NETWORK_FIREWALL` | `SECURITY_GROUPS_COMMON` |
      * `SECURITY_GROUPS_CONTENT_AUDIT` | `SECURITY_GROUPS_USAGE_AUDIT` | `SHIELD_ADVANCED` |

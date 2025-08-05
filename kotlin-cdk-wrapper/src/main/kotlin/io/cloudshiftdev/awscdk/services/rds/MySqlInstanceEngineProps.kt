@@ -16,18 +16,14 @@ import kotlin.Unit
  *
  * ```
  * Vpc vpc;
- * DatabaseInstance iopsInstance = DatabaseInstance.Builder.create(this, "IopsInstance")
+ * Key kmsKey;
+ * DatabaseInstance instance = DatabaseInstance.Builder.create(this, "Instance")
  * .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder().version(MysqlEngineVersion.VER_8_0_39).build()))
+ * .instanceType(InstanceType.of(InstanceClass.R7G, InstanceSize.LARGE))
  * .vpc(vpc)
- * .storageType(StorageType.IO1)
- * .iops(5000)
- * .build();
- * DatabaseInstance gp3Instance = DatabaseInstance.Builder.create(this, "Gp3Instance")
- * .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder().version(MysqlEngineVersion.VER_8_0_39).build()))
- * .vpc(vpc)
- * .allocatedStorage(500)
- * .storageType(StorageType.GP3)
- * .storageThroughput(500)
+ * .enablePerformanceInsights(true)
+ * .performanceInsightRetention(PerformanceInsightRetention.LONG_TERM)
+ * .performanceInsightEncryptionKey(kmsKey)
  * .build();
  * ```
  */

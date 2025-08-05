@@ -2,11 +2,13 @@
 
 package io.cloudshiftdev.awscdk.services.appsync
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 
 /**
  * Properties for defining a `CfnDomainName`.
@@ -22,6 +24,10 @@ import kotlin.Unit
  * .domainName("domainName")
  * // the properties below are optional
  * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -52,6 +58,13 @@ public interface CfnDomainNameProps {
   public fun domainName(): String
 
   /**
+   * A set of tags (key-value pairs) for this domain name.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-domainname.html#cfn-appsync-domainname-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
    * A builder for [CfnDomainNameProps]
    */
   @CdkDslMarker
@@ -71,6 +84,16 @@ public interface CfnDomainNameProps {
      * @param domainName The domain name. 
      */
     public fun domainName(domainName: String)
+
+    /**
+     * @param tags A set of tags (key-value pairs) for this domain name.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags A set of tags (key-value pairs) for this domain name.
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl : Builder {
@@ -98,6 +121,18 @@ public interface CfnDomainNameProps {
     override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
+
+    /**
+     * @param tags A set of tags (key-value pairs) for this domain name.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags A set of tags (key-value pairs) for this domain name.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.appsync.CfnDomainNameProps =
         cdkBuilder.build()
@@ -129,6 +164,13 @@ public interface CfnDomainNameProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-domainname.html#cfn-appsync-domainname-domainname)
      */
     override fun domainName(): String = unwrap(this).getDomainName()
+
+    /**
+     * A set of tags (key-value pairs) for this domain name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-domainname.html#cfn-appsync-domainname-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 
   public companion object {

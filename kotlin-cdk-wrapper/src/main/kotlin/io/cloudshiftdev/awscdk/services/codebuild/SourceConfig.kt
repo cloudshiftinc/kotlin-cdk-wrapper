@@ -52,6 +52,9 @@ import kotlin.jvm.JvmName
  * .build())))
  * .scopeConfiguration(ScopeConfigurationProperty.builder()
  * .name("name")
+ * // the properties below are optional
+ * .domain("domain")
+ * .scope("scope")
  * .build())
  * .webhook(false)
  * .build())

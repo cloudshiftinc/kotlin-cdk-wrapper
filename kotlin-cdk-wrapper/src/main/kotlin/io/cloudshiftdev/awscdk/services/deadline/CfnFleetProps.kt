@@ -65,6 +65,7 @@ import kotlin.jvm.JvmName
  * .build())
  * // the properties below are optional
  * .storageProfileId("storageProfileId")
+ * .tagPropagationMode("tagPropagationMode")
  * .build())
  * .serviceManagedEc2(ServiceManagedEc2FleetConfigurationProperty.builder()
  * .instanceCapabilities(ServiceManagedEc2InstanceCapabilitiesProperty.builder()
@@ -115,6 +116,8 @@ import kotlin.jvm.JvmName
  * .instanceMarketOptions(ServiceManagedEc2InstanceMarketOptionsProperty.builder()
  * .type("type")
  * .build())
+ * // the properties below are optional
+ * .storageProfileId("storageProfileId")
  * .build())
  * .build())
  * .displayName("displayName")
@@ -123,6 +126,11 @@ import kotlin.jvm.JvmName
  * .roleArn("roleArn")
  * // the properties below are optional
  * .description("description")
+ * .hostConfiguration(HostConfigurationProperty.builder()
+ * .scriptBody("scriptBody")
+ * // the properties below are optional
+ * .scriptTimeoutSeconds(123)
+ * .build())
  * .minWorkerCount(123)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -143,6 +151,11 @@ public interface CfnFleetProps {
 
   /**
    * A description that helps identify what the fleet is used for.
+   *
+   *
+   * This field can store any content. Escape or encode this content before displaying it on a
+   * webpage or any other system that might interpret the content of this field.
+   *
    *
    * Default: - ""
    *
@@ -168,6 +181,18 @@ public interface CfnFleetProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-farmid)
    */
   public fun farmId(): String
+
+  /**
+   * Provides a script that runs as a worker is starting up that you can use to provide additional
+   * configuration for workers in your fleet.
+   *
+   * To remove a script from a fleet, use the
+   * [UpdateFleet](https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateFleet.html)
+   * operation with the `hostConfiguration` `scriptBody` parameter set to an empty string ("").
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-hostconfiguration)
+   */
+  public fun hostConfiguration(): Any? = unwrap(this).getHostConfiguration()
 
   /**
    * The maximum number of workers specified in the fleet.
@@ -226,6 +251,9 @@ public interface CfnFleetProps {
 
     /**
      * @param description A description that helps identify what the fleet is used for.
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
      */
     public fun description(description: String)
 
@@ -241,6 +269,36 @@ public interface CfnFleetProps {
      * @param farmId The farm ID. 
      */
     public fun farmId(farmId: String)
+
+    /**
+     * @param hostConfiguration Provides a script that runs as a worker is starting up that you can
+     * use to provide additional configuration for workers in your fleet.
+     * To remove a script from a fleet, use the
+     * [UpdateFleet](https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateFleet.html)
+     * operation with the `hostConfiguration` `scriptBody` parameter set to an empty string ("").
+     */
+    public fun hostConfiguration(hostConfiguration: IResolvable)
+
+    /**
+     * @param hostConfiguration Provides a script that runs as a worker is starting up that you can
+     * use to provide additional configuration for workers in your fleet.
+     * To remove a script from a fleet, use the
+     * [UpdateFleet](https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateFleet.html)
+     * operation with the `hostConfiguration` `scriptBody` parameter set to an empty string ("").
+     */
+    public fun hostConfiguration(hostConfiguration: CfnFleet.HostConfigurationProperty)
+
+    /**
+     * @param hostConfiguration Provides a script that runs as a worker is starting up that you can
+     * use to provide additional configuration for workers in your fleet.
+     * To remove a script from a fleet, use the
+     * [UpdateFleet](https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateFleet.html)
+     * operation with the `hostConfiguration` `scriptBody` parameter set to an empty string ("").
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("09d3e8bff8f82ded5cc30de9bf303e475159d13efe80252f243a30ec3b859487")
+    public
+        fun hostConfiguration(hostConfiguration: CfnFleet.HostConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param maxWorkerCount The maximum number of workers specified in the fleet. 
@@ -301,6 +359,9 @@ public interface CfnFleetProps {
 
     /**
      * @param description A description that helps identify what the fleet is used for.
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -322,6 +383,41 @@ public interface CfnFleetProps {
     override fun farmId(farmId: String) {
       cdkBuilder.farmId(farmId)
     }
+
+    /**
+     * @param hostConfiguration Provides a script that runs as a worker is starting up that you can
+     * use to provide additional configuration for workers in your fleet.
+     * To remove a script from a fleet, use the
+     * [UpdateFleet](https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateFleet.html)
+     * operation with the `hostConfiguration` `scriptBody` parameter set to an empty string ("").
+     */
+    override fun hostConfiguration(hostConfiguration: IResolvable) {
+      cdkBuilder.hostConfiguration(hostConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param hostConfiguration Provides a script that runs as a worker is starting up that you can
+     * use to provide additional configuration for workers in your fleet.
+     * To remove a script from a fleet, use the
+     * [UpdateFleet](https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateFleet.html)
+     * operation with the `hostConfiguration` `scriptBody` parameter set to an empty string ("").
+     */
+    override fun hostConfiguration(hostConfiguration: CfnFleet.HostConfigurationProperty) {
+      cdkBuilder.hostConfiguration(hostConfiguration.let(CfnFleet.HostConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param hostConfiguration Provides a script that runs as a worker is starting up that you can
+     * use to provide additional configuration for workers in your fleet.
+     * To remove a script from a fleet, use the
+     * [UpdateFleet](https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateFleet.html)
+     * operation with the `hostConfiguration` `scriptBody` parameter set to an empty string ("").
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("09d3e8bff8f82ded5cc30de9bf303e475159d13efe80252f243a30ec3b859487")
+    override
+        fun hostConfiguration(hostConfiguration: CfnFleet.HostConfigurationProperty.Builder.() -> Unit):
+        Unit = hostConfiguration(CfnFleet.HostConfigurationProperty(hostConfiguration))
 
     /**
      * @param maxWorkerCount The maximum number of workers specified in the fleet. 
@@ -377,6 +473,11 @@ public interface CfnFleetProps {
     /**
      * A description that helps identify what the fleet is used for.
      *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
+     *
      * Default: - ""
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-description)
@@ -401,6 +502,18 @@ public interface CfnFleetProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-farmid)
      */
     override fun farmId(): String = unwrap(this).getFarmId()
+
+    /**
+     * Provides a script that runs as a worker is starting up that you can use to provide additional
+     * configuration for workers in your fleet.
+     *
+     * To remove a script from a fleet, use the
+     * [UpdateFleet](https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateFleet.html)
+     * operation with the `hostConfiguration` `scriptBody` parameter set to an empty string ("").
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-hostconfiguration)
+     */
+    override fun hostConfiguration(): Any? = unwrap(this).getHostConfiguration()
 
     /**
      * The maximum number of workers specified in the fleet.

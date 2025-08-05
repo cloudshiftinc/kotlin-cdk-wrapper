@@ -18,17 +18,12 @@ import kotlin.Unit
  * Vpc vpc;
  * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
  * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
- * .credentials(Credentials.fromGeneratedSecret("clusteradmin")) // Optional - will default to
- * 'admin' username and generated password
- * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
- * .publiclyAccessible(false)
+ * .writer(ClusterInstance.provisioned("Instance", ProvisionedClusterInstanceProps.builder()
+ * .instanceType(InstanceType.of(InstanceClass.BURSTABLE3, InstanceSize.SMALL))
  * .build()))
- * .readers(List.of(ClusterInstance.provisioned("reader1",
- * ProvisionedClusterInstanceProps.builder().promotionTier(1).build()),
- * ClusterInstance.serverlessV2("reader2")))
- * .vpcSubnets(SubnetSelection.builder()
- * .subnetType(SubnetType.PRIVATE_WITH_EGRESS)
- * .build())
+ * .readers(List.of(ClusterInstance.provisioned("reader")))
+ * .instanceUpdateBehaviour(InstanceUpdateBehaviour.ROLLING) // Optional - defaults to
+ * rds.InstanceUpdateBehaviour.BULK
  * .vpc(vpc)
  * .build();
  * ```

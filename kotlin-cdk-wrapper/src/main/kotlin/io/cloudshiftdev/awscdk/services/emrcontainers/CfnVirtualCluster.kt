@@ -47,6 +47,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .name("name")
  * // the properties below are optional
+ * .securityConfigurationId("securityConfigurationId")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -137,6 +138,18 @@ public open class CfnVirtualCluster(
   }
 
   /**
+   * The ID of the security configuration.
+   */
+  public open fun securityConfigurationId(): String? = unwrap(this).getSecurityConfigurationId()
+
+  /**
+   * The ID of the security configuration.
+   */
+  public open fun securityConfigurationId(`value`: String) {
+    unwrap(this).setSecurityConfigurationId(`value`)
+  }
+
+  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
@@ -197,6 +210,14 @@ public open class CfnVirtualCluster(
      * @param name The name of the virtual cluster. 
      */
     public fun name(name: String)
+
+    /**
+     * The ID of the security configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html#cfn-emrcontainers-virtualcluster-securityconfigurationid)
+     * @param securityConfigurationId The ID of the security configuration. 
+     */
+    public fun securityConfigurationId(securityConfigurationId: String)
 
     /**
      * An array of key-value pairs to apply to this resource.
@@ -269,6 +290,16 @@ public open class CfnVirtualCluster(
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * The ID of the security configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html#cfn-emrcontainers-virtualcluster-securityconfigurationid)
+     * @param securityConfigurationId The ID of the security configuration. 
+     */
+    override fun securityConfigurationId(securityConfigurationId: String) {
+      cdkBuilder.securityConfigurationId(securityConfigurationId)
     }
 
     /**

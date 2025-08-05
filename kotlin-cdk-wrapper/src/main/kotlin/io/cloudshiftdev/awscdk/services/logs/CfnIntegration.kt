@@ -332,7 +332,9 @@ public open class CfnIntegration(
      *
      *
      * In addition to specifying these users here, you must also grant them the
-     * *CloudWatchOpenSearchDashboardsAccess* IAM policy. For more information, see
+     * *CloudWatchOpenSearchDashboardAccess* IAM policy. For more information, see [IAM policies for
+     * users](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/OpenSearch-Dashboards-UserRoles.html)
+     * .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-integration-opensearchresourceconfig.html#cfn-logs-integration-opensearchresourceconfig-dashboardviewerprincipals)
@@ -343,10 +345,10 @@ public open class CfnIntegration(
      * Specify the ARN of an IAM role that CloudWatch Logs will use to create the integration.
      *
      * This role must have the permissions necessary to access the OpenSearch Service collection to
-     * be able to create the dashboards. For more information about the permissions needed, see [Create
-     * an IAM role to access the OpenSearch Service
-     * collection](https://docs.aws.amazon.com/OpenSearch-Dashboards-CreateRole) in the CloudWatch Logs
-     * User Guide.
+     * be able to create the dashboards. For more information about the permissions needed, see
+     * [Permissions that the integration
+     * needs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/OpenSearch-Dashboards-CreateRole.html)
+     * in the CloudWatch Logs User Guide.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-integration-opensearchresourceconfig.html#cfn-logs-integration-opensearchresourceconfig-datasourcerolearn)
      */
@@ -388,7 +390,9 @@ public open class CfnIntegration(
        * to grant permission to for viewing the dashboards. 
        *
        * In addition to specifying these users here, you must also grant them the
-       * *CloudWatchOpenSearchDashboardsAccess* IAM policy. For more information, see
+       * *CloudWatchOpenSearchDashboardAccess* IAM policy. For more information, see [IAM policies for
+       * users](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/OpenSearch-Dashboards-UserRoles.html)
+       * .
        */
       public fun dashboardViewerPrincipals(dashboardViewerPrincipals: List<String>)
 
@@ -397,7 +401,9 @@ public open class CfnIntegration(
        * to grant permission to for viewing the dashboards. 
        *
        * In addition to specifying these users here, you must also grant them the
-       * *CloudWatchOpenSearchDashboardsAccess* IAM policy. For more information, see
+       * *CloudWatchOpenSearchDashboardAccess* IAM policy. For more information, see [IAM policies for
+       * users](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/OpenSearch-Dashboards-UserRoles.html)
+       * .
        */
       public fun dashboardViewerPrincipals(vararg dashboardViewerPrincipals: String)
 
@@ -406,9 +412,9 @@ public open class CfnIntegration(
        * create the integration. 
        * This role must have the permissions necessary to access the OpenSearch Service collection
        * to be able to create the dashboards. For more information about the permissions needed, see
-       * [Create an IAM role to access the OpenSearch Service
-       * collection](https://docs.aws.amazon.com/OpenSearch-Dashboards-CreateRole) in the CloudWatch
-       * Logs User Guide.
+       * [Permissions that the integration
+       * needs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/OpenSearch-Dashboards-CreateRole.html)
+       * in the CloudWatch Logs User Guide.
        */
       public fun dataSourceRoleArn(dataSourceRoleArn: String)
 
@@ -448,7 +454,9 @@ public open class CfnIntegration(
        * to grant permission to for viewing the dashboards. 
        *
        * In addition to specifying these users here, you must also grant them the
-       * *CloudWatchOpenSearchDashboardsAccess* IAM policy. For more information, see
+       * *CloudWatchOpenSearchDashboardAccess* IAM policy. For more information, see [IAM policies for
+       * users](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/OpenSearch-Dashboards-UserRoles.html)
+       * .
        */
       override fun dashboardViewerPrincipals(dashboardViewerPrincipals: List<String>) {
         cdkBuilder.dashboardViewerPrincipals(dashboardViewerPrincipals)
@@ -459,7 +467,9 @@ public open class CfnIntegration(
        * to grant permission to for viewing the dashboards. 
        *
        * In addition to specifying these users here, you must also grant them the
-       * *CloudWatchOpenSearchDashboardsAccess* IAM policy. For more information, see
+       * *CloudWatchOpenSearchDashboardAccess* IAM policy. For more information, see [IAM policies for
+       * users](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/OpenSearch-Dashboards-UserRoles.html)
+       * .
        */
       override fun dashboardViewerPrincipals(vararg dashboardViewerPrincipals: String): Unit =
           dashboardViewerPrincipals(dashboardViewerPrincipals.toList())
@@ -469,9 +479,9 @@ public open class CfnIntegration(
        * create the integration. 
        * This role must have the permissions necessary to access the OpenSearch Service collection
        * to be able to create the dashboards. For more information about the permissions needed, see
-       * [Create an IAM role to access the OpenSearch Service
-       * collection](https://docs.aws.amazon.com/OpenSearch-Dashboards-CreateRole) in the CloudWatch
-       * Logs User Guide.
+       * [Permissions that the integration
+       * needs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/OpenSearch-Dashboards-CreateRole.html)
+       * in the CloudWatch Logs User Guide.
        */
       override fun dataSourceRoleArn(dataSourceRoleArn: String) {
         cdkBuilder.dataSourceRoleArn(dataSourceRoleArn)
@@ -521,7 +531,9 @@ public open class CfnIntegration(
        *
        *
        * In addition to specifying these users here, you must also grant them the
-       * *CloudWatchOpenSearchDashboardsAccess* IAM policy. For more information, see
+       * *CloudWatchOpenSearchDashboardAccess* IAM policy. For more information, see [IAM policies for
+       * users](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/OpenSearch-Dashboards-UserRoles.html)
+       * .
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-integration-opensearchresourceconfig.html#cfn-logs-integration-opensearchresourceconfig-dashboardviewerprincipals)
@@ -534,9 +546,9 @@ public open class CfnIntegration(
        *
        * This role must have the permissions necessary to access the OpenSearch Service collection
        * to be able to create the dashboards. For more information about the permissions needed, see
-       * [Create an IAM role to access the OpenSearch Service
-       * collection](https://docs.aws.amazon.com/OpenSearch-Dashboards-CreateRole) in the CloudWatch
-       * Logs User Guide.
+       * [Permissions that the integration
+       * needs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/OpenSearch-Dashboards-CreateRole.html)
+       * in the CloudWatch Logs User Guide.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-integration-opensearchresourceconfig.html#cfn-logs-integration-opensearchresourceconfig-datasourcerolearn)
        */

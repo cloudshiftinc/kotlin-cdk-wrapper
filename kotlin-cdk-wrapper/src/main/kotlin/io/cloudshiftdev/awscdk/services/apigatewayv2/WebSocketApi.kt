@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -91,77 +92,93 @@ public open class WebSocketApi(
   public override fun apiId(): String = unwrap(this).getApiId()
 
   /**
-   * Get the "execute-api" ARN.
+   * (deprecated) Get the "execute-api" ARN.
    *
-   * When 'ANY' is passed to the method, an ARN with the method set to '*' is obtained.
-   *
-   * Default: - The default behavior applies when no specific method, path, or stage is provided.
-   * In this case, the ARN will cover all methods, all resources, and all stages of this API.
-   * Specifically, if 'method' is not specified, it defaults to '*', representing all methods.
-   * If 'path' is not specified, it defaults to '/ *', representing all paths.
-   * If 'stage' is not specified, it also defaults to '*', representing all stages.
-   *
+   * @deprecated Use `arnForExecuteApiV2()` instead.
    * @param method
    * @param path
    * @param stage
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun arnForExecuteApi(): String = unwrap(this).arnForExecuteApi()
 
   /**
-   * Get the "execute-api" ARN.
+   * (deprecated) Get the "execute-api" ARN.
    *
-   * When 'ANY' is passed to the method, an ARN with the method set to '*' is obtained.
-   *
-   * Default: - The default behavior applies when no specific method, path, or stage is provided.
-   * In this case, the ARN will cover all methods, all resources, and all stages of this API.
-   * Specifically, if 'method' is not specified, it defaults to '*', representing all methods.
-   * If 'path' is not specified, it defaults to '/ *', representing all paths.
-   * If 'stage' is not specified, it also defaults to '*', representing all stages.
-   *
+   * @deprecated Use `arnForExecuteApiV2()` instead.
    * @param method
    * @param path
    * @param stage
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun arnForExecuteApi(method: String): String = unwrap(this).arnForExecuteApi(method)
 
   /**
-   * Get the "execute-api" ARN.
+   * (deprecated) Get the "execute-api" ARN.
    *
-   * When 'ANY' is passed to the method, an ARN with the method set to '*' is obtained.
-   *
-   * Default: - The default behavior applies when no specific method, path, or stage is provided.
-   * In this case, the ARN will cover all methods, all resources, and all stages of this API.
-   * Specifically, if 'method' is not specified, it defaults to '*', representing all methods.
-   * If 'path' is not specified, it defaults to '/ *', representing all paths.
-   * If 'stage' is not specified, it also defaults to '*', representing all stages.
-   *
+   * @deprecated Use `arnForExecuteApiV2()` instead.
    * @param method
    * @param path
    * @param stage
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun arnForExecuteApi(method: String, path: String): String =
       unwrap(this).arnForExecuteApi(method, path)
 
   /**
-   * Get the "execute-api" ARN.
+   * (deprecated) Get the "execute-api" ARN.
    *
-   * When 'ANY' is passed to the method, an ARN with the method set to '*' is obtained.
-   *
-   * Default: - The default behavior applies when no specific method, path, or stage is provided.
-   * In this case, the ARN will cover all methods, all resources, and all stages of this API.
-   * Specifically, if 'method' is not specified, it defaults to '*', representing all methods.
-   * If 'path' is not specified, it defaults to '/ *', representing all paths.
-   * If 'stage' is not specified, it also defaults to '*', representing all stages.
-   *
+   * @deprecated Use `arnForExecuteApiV2()` instead.
    * @param method
    * @param path
    * @param stage
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun arnForExecuteApi(
     method: String,
     path: String,
     stage: String,
   ): String = unwrap(this).arnForExecuteApi(method, path, stage)
+
+  /**
+   * Get the "execute-api" ARN.
+   *
+   * Default: - The default behavior applies when no specific route, or stage is provided.
+   * In this case, the ARN will cover all routes, and all stages of this API.
+   * Specifically, if 'route' is not specified, it defaults to '*', representing all routes.
+   * If 'stage' is not specified, it also defaults to '*', representing all stages.
+   *
+   * @param route
+   * @param stage
+   */
+  public open fun arnForExecuteApiV2(): String = unwrap(this).arnForExecuteApiV2()
+
+  /**
+   * Get the "execute-api" ARN.
+   *
+   * Default: - The default behavior applies when no specific route, or stage is provided.
+   * In this case, the ARN will cover all routes, and all stages of this API.
+   * Specifically, if 'route' is not specified, it defaults to '*', representing all routes.
+   * If 'stage' is not specified, it also defaults to '*', representing all stages.
+   *
+   * @param route
+   * @param stage
+   */
+  public open fun arnForExecuteApiV2(route: String): String = unwrap(this).arnForExecuteApiV2(route)
+
+  /**
+   * Get the "execute-api" ARN.
+   *
+   * Default: - The default behavior applies when no specific route, or stage is provided.
+   * In this case, the ARN will cover all routes, and all stages of this API.
+   * Specifically, if 'route' is not specified, it defaults to '*', representing all routes.
+   * If 'stage' is not specified, it also defaults to '*', representing all stages.
+   *
+   * @param route
+   * @param stage
+   */
+  public open fun arnForExecuteApiV2(route: String, stage: String): String =
+      unwrap(this).arnForExecuteApiV2(route, stage)
 
   /**
    * Grant access to the API Gateway management API for this WebSocket API to an IAM principal
@@ -305,6 +322,16 @@ public open class WebSocketApi(
         fun disconnectRouteOptions(disconnectRouteOptions: WebSocketRouteOptions.Builder.() -> Unit)
 
     /**
+     * The IP address types that can invoke the API.
+     *
+     * Default: undefined - AWS default is IPV4
+     *
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-ip-address-type.html)
+     * @param ipAddressType The IP address types that can invoke the API. 
+     */
+    public fun ipAddressType(ipAddressType: IpAddressType)
+
+    /**
      * The route selection expression for the API.
      *
      * Default: '$request.body.action'
@@ -428,6 +455,18 @@ public open class WebSocketApi(
         Unit = disconnectRouteOptions(WebSocketRouteOptions(disconnectRouteOptions))
 
     /**
+     * The IP address types that can invoke the API.
+     *
+     * Default: undefined - AWS default is IPV4
+     *
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-ip-address-type.html)
+     * @param ipAddressType The IP address types that can invoke the API. 
+     */
+    override fun ipAddressType(ipAddressType: IpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
+    }
+
+    /**
      * The route selection expression for the API.
      *
      * Default: '$request.body.action'
@@ -443,6 +482,9 @@ public open class WebSocketApi(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.apigatewayv2.WebSocketApi.PROPERTY_INJECTION_ID
+
     public fun fromWebSocketApiAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

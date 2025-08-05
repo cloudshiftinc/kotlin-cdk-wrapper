@@ -260,8 +260,8 @@ public open class CfnTemplate(
     /**
      * The name of the template.
      *
-     * You will refer to this name when you send email using the `SendTemplatedEmail` or
-     * `SendBulkTemplatedEmail` operations.
+     * You will refer to this name when you send email using the `SendEmail` or `SendBulkEmail`
+     * operations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-templatename)
      */
@@ -291,8 +291,8 @@ public open class CfnTemplate(
 
       /**
        * @param templateName The name of the template.
-       * You will refer to this name when you send email using the `SendTemplatedEmail` or
-       * `SendBulkTemplatedEmail` operations.
+       * You will refer to this name when you send email using the `SendEmail` or `SendBulkEmail`
+       * operations.
        */
       public fun templateName(templateName: String)
 
@@ -324,8 +324,8 @@ public open class CfnTemplate(
 
       /**
        * @param templateName The name of the template.
-       * You will refer to this name when you send email using the `SendTemplatedEmail` or
-       * `SendBulkTemplatedEmail` operations.
+       * You will refer to this name when you send email using the `SendEmail` or `SendBulkEmail`
+       * operations.
        */
       override fun templateName(templateName: String) {
         cdkBuilder.templateName(templateName)
@@ -364,8 +364,8 @@ public open class CfnTemplate(
       /**
        * The name of the template.
        *
-       * You will refer to this name when you send email using the `SendTemplatedEmail` or
-       * `SendBulkTemplatedEmail` operations.
+       * You will refer to this name when you send email using the `SendEmail` or `SendBulkEmail`
+       * operations.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-templatename)
        */

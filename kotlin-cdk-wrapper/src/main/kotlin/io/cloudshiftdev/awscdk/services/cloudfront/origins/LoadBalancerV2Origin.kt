@@ -21,8 +21,7 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2 as
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.ec2.*;
- * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+ * // Creates a distribution from an ELBv2 load balancer
  * Vpc vpc;
  * // Create an application load balancer in a VPC. 'internetFacing' must be 'true'
  * // for CloudFront to access the load balancer and use it as an origin.

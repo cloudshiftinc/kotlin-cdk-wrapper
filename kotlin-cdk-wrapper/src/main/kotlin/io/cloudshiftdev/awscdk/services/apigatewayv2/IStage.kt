@@ -20,6 +20,14 @@ import kotlin.jvm.JvmName
  */
 public interface IStage : IResource {
   /**
+   * Adds a stage variable to this stage.
+   *
+   * @param name The name of the stage variable. 
+   * @param value The value of the stage variable. 
+   */
+  public fun addStageVariable(name: String, `value`: String)
+
+  /**
    * Return the given named metric for this HTTP Api Gateway Stage.
    *
    * Default: - average over 5 minutes
@@ -67,6 +75,16 @@ public interface IStage : IResource {
     cdkObject: software.amazon.awscdk.services.apigatewayv2.IStage,
   ) : CdkObject(cdkObject),
       IStage {
+    /**
+     * Adds a stage variable to this stage.
+     *
+     * @param name The name of the stage variable. 
+     * @param value The value of the stage variable. 
+     */
+    override fun addStageVariable(name: String, `value`: String) {
+      unwrap(this).addStageVariable(name, `value`)
+    }
+
     /**
      * Apply the given removal policy to this resource.
      *

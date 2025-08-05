@@ -17,7 +17,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Creates a refresh schedule for a dataset in Amazon QuickSight .
+ * Creates a refresh schedule for a dataset in QuickSight .
  *
  * Example:
  *
@@ -428,7 +428,7 @@ public open class CfnRefreshSchedule(
      *
      * For more information on full and incremental refreshes, see [Refreshing SPICE
      * data](https://docs.aws.amazon.com/quicksight/latest/user/refreshing-imported-data.html) in the
-     * *Amazon QuickSight User Guide* .
+     * *QuickSight User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-refreshschedulemap.html#cfn-quicksight-refreshschedule-refreshschedulemap-refreshtype)
      */
@@ -470,7 +470,7 @@ public open class CfnRefreshSchedule(
        *
        * For more information on full and incremental refreshes, see [Refreshing SPICE
        * data](https://docs.aws.amazon.com/quicksight/latest/user/refreshing-imported-data.html) in the
-       * *Amazon QuickSight User Guide* .
+       * *QuickSight User Guide* .
        */
       public fun refreshType(refreshType: String)
 
@@ -518,7 +518,7 @@ public open class CfnRefreshSchedule(
        *
        * For more information on full and incremental refreshes, see [Refreshing SPICE
        * data](https://docs.aws.amazon.com/quicksight/latest/user/refreshing-imported-data.html) in the
-       * *Amazon QuickSight User Guide* .
+       * *QuickSight User Guide* .
        */
       override fun refreshType(refreshType: String) {
         cdkBuilder.refreshType(refreshType)
@@ -580,7 +580,7 @@ public open class CfnRefreshSchedule(
        *
        * For more information on full and incremental refreshes, see [Refreshing SPICE
        * data](https://docs.aws.amazon.com/quicksight/latest/user/refreshing-imported-data.html) in the
-       * *Amazon QuickSight User Guide* .
+       * *QuickSight User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-refreshschedulemap.html#cfn-quicksight-refreshschedule-refreshschedulemap-refreshtype)
        */

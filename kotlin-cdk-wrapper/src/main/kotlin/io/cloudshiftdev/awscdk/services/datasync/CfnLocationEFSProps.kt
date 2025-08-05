@@ -96,8 +96,8 @@ public interface CfnLocationEFSProps {
   /**
    * Specifies a mount path for your Amazon EFS file system.
    *
-   * This is where DataSync reads or writes data (depending on if this is a source or destination
-   * location) on your file system.
+   * This is where DataSync reads or writes data on your file system (depending on if this is a
+   * source or destination location).
    *
    * By default, DataSync uses the root directory (or [access
    * point](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) if you provide one by
@@ -179,8 +179,8 @@ public interface CfnLocationEFSProps {
 
     /**
      * @param subdirectory Specifies a mount path for your Amazon EFS file system.
-     * This is where DataSync reads or writes data (depending on if this is a source or destination
-     * location) on your file system.
+     * This is where DataSync reads or writes data on your file system (depending on if this is a
+     * source or destination location).
      *
      * By default, DataSync uses the root directory (or [access
      * point](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) if you provide one by
@@ -279,8 +279,8 @@ public interface CfnLocationEFSProps {
 
     /**
      * @param subdirectory Specifies a mount path for your Amazon EFS file system.
-     * This is where DataSync reads or writes data (depending on if this is a source or destination
-     * location) on your file system.
+     * This is where DataSync reads or writes data on your file system (depending on if this is a
+     * source or destination location).
      *
      * By default, DataSync uses the root directory (or [access
      * point](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) if you provide one by
@@ -370,8 +370,8 @@ public interface CfnLocationEFSProps {
     /**
      * Specifies a mount path for your Amazon EFS file system.
      *
-     * This is where DataSync reads or writes data (depending on if this is a source or destination
-     * location) on your file system.
+     * This is where DataSync reads or writes data on your file system (depending on if this is a
+     * source or destination location).
      *
      * By default, DataSync uses the root directory (or [access
      * point](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) if you provide one by

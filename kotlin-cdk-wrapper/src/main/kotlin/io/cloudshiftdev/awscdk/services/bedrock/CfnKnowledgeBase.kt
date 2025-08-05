@@ -54,21 +54,127 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnKnowledgeBase cfnKnowledgeBase = CfnKnowledgeBase.Builder.create(this, "MyCfnKnowledgeBase")
  * .knowledgeBaseConfiguration(KnowledgeBaseConfigurationProperty.builder()
  * .type("type")
+ * // the properties below are optional
+ * .kendraKnowledgeBaseConfiguration(KendraKnowledgeBaseConfigurationProperty.builder()
+ * .kendraIndexArn("kendraIndexArn")
+ * .build())
+ * .sqlKnowledgeBaseConfiguration(SqlKnowledgeBaseConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .redshiftConfiguration(RedshiftConfigurationProperty.builder()
+ * .queryEngineConfiguration(RedshiftQueryEngineConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .provisionedConfiguration(RedshiftProvisionedConfigurationProperty.builder()
+ * .authConfiguration(RedshiftProvisionedAuthConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .databaseUser("databaseUser")
+ * .usernamePasswordSecretArn("usernamePasswordSecretArn")
+ * .build())
+ * .clusterIdentifier("clusterIdentifier")
+ * .build())
+ * .serverlessConfiguration(RedshiftServerlessConfigurationProperty.builder()
+ * .authConfiguration(RedshiftServerlessAuthConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .usernamePasswordSecretArn("usernamePasswordSecretArn")
+ * .build())
+ * .workgroupArn("workgroupArn")
+ * .build())
+ * .build())
+ * .storageConfigurations(List.of(RedshiftQueryEngineStorageConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .awsDataCatalogConfiguration(RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty.builder()
+ * .tableNames(List.of("tableNames"))
+ * .build())
+ * .redshiftConfiguration(RedshiftQueryEngineRedshiftStorageConfigurationProperty.builder()
+ * .databaseName("databaseName")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .queryGenerationConfiguration(QueryGenerationConfigurationProperty.builder()
+ * .executionTimeoutSeconds(123)
+ * .generationContext(QueryGenerationContextProperty.builder()
+ * .curatedQueries(List.of(CuratedQueryProperty.builder()
+ * .naturalLanguage("naturalLanguage")
+ * .sql("sql")
+ * .build()))
+ * .tables(List.of(QueryGenerationTableProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .columns(List.of(QueryGenerationColumnProperty.builder()
+ * .description("description")
+ * .inclusion("inclusion")
+ * .name("name")
+ * .build()))
+ * .description("description")
+ * .inclusion("inclusion")
+ * .build()))
+ * .build())
+ * .build())
+ * .build())
+ * .build())
  * .vectorKnowledgeBaseConfiguration(VectorKnowledgeBaseConfigurationProperty.builder()
  * .embeddingModelArn("embeddingModelArn")
  * // the properties below are optional
  * .embeddingModelConfiguration(EmbeddingModelConfigurationProperty.builder()
  * .bedrockEmbeddingModelConfiguration(BedrockEmbeddingModelConfigurationProperty.builder()
  * .dimensions(123)
+ * .embeddingDataType("embeddingDataType")
  * .build())
+ * .build())
+ * .supplementalDataStorageConfiguration(SupplementalDataStorageConfigurationProperty.builder()
+ * .supplementalDataStorageLocations(List.of(SupplementalDataStorageLocationProperty.builder()
+ * .supplementalDataStorageLocationType("supplementalDataStorageLocationType")
+ * // the properties below are optional
+ * .s3Location(S3LocationProperty.builder()
+ * .uri("uri")
+ * .build())
+ * .build()))
  * .build())
  * .build())
  * .build())
  * .name("name")
  * .roleArn("roleArn")
+ * // the properties below are optional
+ * .description("description")
  * .storageConfiguration(StorageConfigurationProperty.builder()
  * .type("type")
  * // the properties below are optional
+ * .mongoDbAtlasConfiguration(MongoDbAtlasConfigurationProperty.builder()
+ * .collectionName("collectionName")
+ * .credentialsSecretArn("credentialsSecretArn")
+ * .databaseName("databaseName")
+ * .endpoint("endpoint")
+ * .fieldMapping(MongoDbAtlasFieldMappingProperty.builder()
+ * .metadataField("metadataField")
+ * .textField("textField")
+ * .vectorField("vectorField")
+ * .build())
+ * .vectorIndexName("vectorIndexName")
+ * // the properties below are optional
+ * .endpointServiceName("endpointServiceName")
+ * .textIndexName("textIndexName")
+ * .build())
+ * .neptuneAnalyticsConfiguration(NeptuneAnalyticsConfigurationProperty.builder()
+ * .fieldMapping(NeptuneAnalyticsFieldMappingProperty.builder()
+ * .metadataField("metadataField")
+ * .textField("textField")
+ * .build())
+ * .graphArn("graphArn")
+ * .build())
+ * .opensearchManagedClusterConfiguration(OpenSearchManagedClusterConfigurationProperty.builder()
+ * .domainArn("domainArn")
+ * .domainEndpoint("domainEndpoint")
+ * .fieldMapping(OpenSearchManagedClusterFieldMappingProperty.builder()
+ * .metadataField("metadataField")
+ * .textField("textField")
+ * .vectorField("vectorField")
+ * .build())
+ * .vectorIndexName("vectorIndexName")
+ * .build())
  * .opensearchServerlessConfiguration(OpenSearchServerlessConfigurationProperty.builder()
  * .collectionArn("collectionArn")
  * .fieldMapping(OpenSearchServerlessFieldMappingProperty.builder()
@@ -96,13 +202,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .primaryKeyField("primaryKeyField")
  * .textField("textField")
  * .vectorField("vectorField")
+ * // the properties below are optional
+ * .customMetadataField("customMetadataField")
  * .build())
  * .resourceArn("resourceArn")
  * .tableName("tableName")
  * .build())
  * .build())
- * // the properties below are optional
- * .description("description")
  * .tags(Map.of(
  * "tagsKey", "tags"))
  * .build();
@@ -245,7 +351,7 @@ public open class CfnKnowledgeBase(
   /**
    * Contains details about the storage configuration of the knowledge base.
    */
-  public open fun storageConfiguration(): Any = unwrap(this).getStorageConfiguration()
+  public open fun storageConfiguration(): Any? = unwrap(this).getStorageConfiguration()
 
   /**
    * Contains details about the storage configuration of the knowledge base.
@@ -558,6 +664,7 @@ public open class CfnKnowledgeBase(
    * BedrockEmbeddingModelConfigurationProperty bedrockEmbeddingModelConfigurationProperty =
    * BedrockEmbeddingModelConfigurationProperty.builder()
    * .dimensions(123)
+   * .embeddingDataType("embeddingDataType")
    * .build();
    * ```
    *
@@ -572,6 +679,19 @@ public open class CfnKnowledgeBase(
     public fun dimensions(): Number? = unwrap(this).getDimensions()
 
     /**
+     * The data type for the vectors when using a model to convert text into vector embeddings.
+     *
+     * The model must support the specified data type for vector embeddings. Floating-point
+     * (float32) is the default data type, and is supported by most models for vector embeddings. See
+     * [Supported embeddings
+     * models](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html) for
+     * information on the available models and their vector data types.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-bedrockembeddingmodelconfiguration.html#cfn-bedrock-knowledgebase-bedrockembeddingmodelconfiguration-embeddingdatatype)
+     */
+    public fun embeddingDataType(): String? = unwrap(this).getEmbeddingDataType()
+
+    /**
      * A builder for [BedrockEmbeddingModelConfigurationProperty]
      */
     @CdkDslMarker
@@ -581,6 +701,17 @@ public open class CfnKnowledgeBase(
        * embeddings model.
        */
       public fun dimensions(dimensions: Number)
+
+      /**
+       * @param embeddingDataType The data type for the vectors when using a model to convert text
+       * into vector embeddings.
+       * The model must support the specified data type for vector embeddings. Floating-point
+       * (float32) is the default data type, and is supported by most models for vector embeddings. See
+       * [Supported embeddings
+       * models](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html)
+       * for information on the available models and their vector data types.
+       */
+      public fun embeddingDataType(embeddingDataType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -595,6 +726,19 @@ public open class CfnKnowledgeBase(
        */
       override fun dimensions(dimensions: Number) {
         cdkBuilder.dimensions(dimensions)
+      }
+
+      /**
+       * @param embeddingDataType The data type for the vectors when using a model to convert text
+       * into vector embeddings.
+       * The model must support the specified data type for vector embeddings. Floating-point
+       * (float32) is the default data type, and is supported by most models for vector embeddings. See
+       * [Supported embeddings
+       * models](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html)
+       * for information on the available models and their vector data types.
+       */
+      override fun embeddingDataType(embeddingDataType: String) {
+        cdkBuilder.embeddingDataType(embeddingDataType)
       }
 
       public fun build():
@@ -612,6 +756,19 @@ public open class CfnKnowledgeBase(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-bedrockembeddingmodelconfiguration.html#cfn-bedrock-knowledgebase-bedrockembeddingmodelconfiguration-dimensions)
        */
       override fun dimensions(): Number? = unwrap(this).getDimensions()
+
+      /**
+       * The data type for the vectors when using a model to convert text into vector embeddings.
+       *
+       * The model must support the specified data type for vector embeddings. Floating-point
+       * (float32) is the default data type, and is supported by most models for vector embeddings. See
+       * [Supported embeddings
+       * models](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html)
+       * for information on the available models and their vector data types.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-bedrockembeddingmodelconfiguration.html#cfn-bedrock-knowledgebase-bedrockembeddingmodelconfiguration-embeddingdatatype)
+       */
+      override fun embeddingDataType(): String? = unwrap(this).getEmbeddingDataType()
     }
 
     public companion object {
@@ -634,6 +791,116 @@ public open class CfnKnowledgeBase(
   }
 
   /**
+   * Contains configurations for a query, each of which defines information about example queries to
+   * help the query engine generate appropriate SQL queries.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * CuratedQueryProperty curatedQueryProperty = CuratedQueryProperty.builder()
+   * .naturalLanguage("naturalLanguage")
+   * .sql("sql")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-curatedquery.html)
+   */
+  public interface CuratedQueryProperty {
+    /**
+     * An example natural language query.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-curatedquery.html#cfn-bedrock-knowledgebase-curatedquery-naturallanguage)
+     */
+    public fun naturalLanguage(): String
+
+    /**
+     * The SQL equivalent of the natural language query.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-curatedquery.html#cfn-bedrock-knowledgebase-curatedquery-sql)
+     */
+    public fun sql(): String
+
+    /**
+     * A builder for [CuratedQueryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param naturalLanguage An example natural language query. 
+       */
+      public fun naturalLanguage(naturalLanguage: String)
+
+      /**
+       * @param sql The SQL equivalent of the natural language query. 
+       */
+      public fun sql(sql: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.CuratedQueryProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.CuratedQueryProperty.builder()
+
+      /**
+       * @param naturalLanguage An example natural language query. 
+       */
+      override fun naturalLanguage(naturalLanguage: String) {
+        cdkBuilder.naturalLanguage(naturalLanguage)
+      }
+
+      /**
+       * @param sql The SQL equivalent of the natural language query. 
+       */
+      override fun sql(sql: String) {
+        cdkBuilder.sql(sql)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.CuratedQueryProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.CuratedQueryProperty,
+    ) : CdkObject(cdkObject),
+        CuratedQueryProperty {
+      /**
+       * An example natural language query.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-curatedquery.html#cfn-bedrock-knowledgebase-curatedquery-naturallanguage)
+       */
+      override fun naturalLanguage(): String = unwrap(this).getNaturalLanguage()
+
+      /**
+       * The SQL equivalent of the natural language query.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-curatedquery.html#cfn-bedrock-knowledgebase-curatedquery-sql)
+       */
+      override fun sql(): String = unwrap(this).getSql()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CuratedQueryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.CuratedQueryProperty):
+          CuratedQueryProperty = CdkObjectWrappers.wrap(cdkObject) as? CuratedQueryProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CuratedQueryProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.CuratedQueryProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.CuratedQueryProperty
+    }
+  }
+
+  /**
    * The configuration details for the embeddings model.
    *
    * Example:
@@ -646,6 +913,7 @@ public open class CfnKnowledgeBase(
    * EmbeddingModelConfigurationProperty.builder()
    * .bedrockEmbeddingModelConfiguration(BedrockEmbeddingModelConfigurationProperty.builder()
    * .dimensions(123)
+   * .embeddingDataType("embeddingDataType")
    * .build())
    * .build();
    * ```
@@ -762,6 +1030,91 @@ public open class CfnKnowledgeBase(
   }
 
   /**
+   * Settings for an Amazon Kendra knowledge base.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * KendraKnowledgeBaseConfigurationProperty kendraKnowledgeBaseConfigurationProperty =
+   * KendraKnowledgeBaseConfigurationProperty.builder()
+   * .kendraIndexArn("kendraIndexArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-kendraknowledgebaseconfiguration.html)
+   */
+  public interface KendraKnowledgeBaseConfigurationProperty {
+    /**
+     * The ARN of the Amazon Kendra index.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-kendraknowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-kendraknowledgebaseconfiguration-kendraindexarn)
+     */
+    public fun kendraIndexArn(): String
+
+    /**
+     * A builder for [KendraKnowledgeBaseConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kendraIndexArn The ARN of the Amazon Kendra index. 
+       */
+      public fun kendraIndexArn(kendraIndexArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.KendraKnowledgeBaseConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.KendraKnowledgeBaseConfigurationProperty.builder()
+
+      /**
+       * @param kendraIndexArn The ARN of the Amazon Kendra index. 
+       */
+      override fun kendraIndexArn(kendraIndexArn: String) {
+        cdkBuilder.kendraIndexArn(kendraIndexArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.KendraKnowledgeBaseConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.KendraKnowledgeBaseConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        KendraKnowledgeBaseConfigurationProperty {
+      /**
+       * The ARN of the Amazon Kendra index.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-kendraknowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-kendraknowledgebaseconfiguration-kendraindexarn)
+       */
+      override fun kendraIndexArn(): String = unwrap(this).getKendraIndexArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          KendraKnowledgeBaseConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.KendraKnowledgeBaseConfigurationProperty):
+          KendraKnowledgeBaseConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KendraKnowledgeBaseConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KendraKnowledgeBaseConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.KendraKnowledgeBaseConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.KendraKnowledgeBaseConfigurationProperty
+    }
+  }
+
+  /**
    * Configurations to apply to a knowledge base attached to the agent during query.
    *
    * For more information, see [Knowledge base retrieval
@@ -777,13 +1130,85 @@ public open class CfnKnowledgeBase(
    * KnowledgeBaseConfigurationProperty knowledgeBaseConfigurationProperty =
    * KnowledgeBaseConfigurationProperty.builder()
    * .type("type")
+   * // the properties below are optional
+   * .kendraKnowledgeBaseConfiguration(KendraKnowledgeBaseConfigurationProperty.builder()
+   * .kendraIndexArn("kendraIndexArn")
+   * .build())
+   * .sqlKnowledgeBaseConfiguration(SqlKnowledgeBaseConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .redshiftConfiguration(RedshiftConfigurationProperty.builder()
+   * .queryEngineConfiguration(RedshiftQueryEngineConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .provisionedConfiguration(RedshiftProvisionedConfigurationProperty.builder()
+   * .authConfiguration(RedshiftProvisionedAuthConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .databaseUser("databaseUser")
+   * .usernamePasswordSecretArn("usernamePasswordSecretArn")
+   * .build())
+   * .clusterIdentifier("clusterIdentifier")
+   * .build())
+   * .serverlessConfiguration(RedshiftServerlessConfigurationProperty.builder()
+   * .authConfiguration(RedshiftServerlessAuthConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .usernamePasswordSecretArn("usernamePasswordSecretArn")
+   * .build())
+   * .workgroupArn("workgroupArn")
+   * .build())
+   * .build())
+   * .storageConfigurations(List.of(RedshiftQueryEngineStorageConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .awsDataCatalogConfiguration(RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty.builder()
+   * .tableNames(List.of("tableNames"))
+   * .build())
+   * .redshiftConfiguration(RedshiftQueryEngineRedshiftStorageConfigurationProperty.builder()
+   * .databaseName("databaseName")
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .queryGenerationConfiguration(QueryGenerationConfigurationProperty.builder()
+   * .executionTimeoutSeconds(123)
+   * .generationContext(QueryGenerationContextProperty.builder()
+   * .curatedQueries(List.of(CuratedQueryProperty.builder()
+   * .naturalLanguage("naturalLanguage")
+   * .sql("sql")
+   * .build()))
+   * .tables(List.of(QueryGenerationTableProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .columns(List.of(QueryGenerationColumnProperty.builder()
+   * .description("description")
+   * .inclusion("inclusion")
+   * .name("name")
+   * .build()))
+   * .description("description")
+   * .inclusion("inclusion")
+   * .build()))
+   * .build())
+   * .build())
+   * .build())
+   * .build())
    * .vectorKnowledgeBaseConfiguration(VectorKnowledgeBaseConfigurationProperty.builder()
    * .embeddingModelArn("embeddingModelArn")
    * // the properties below are optional
    * .embeddingModelConfiguration(EmbeddingModelConfigurationProperty.builder()
    * .bedrockEmbeddingModelConfiguration(BedrockEmbeddingModelConfigurationProperty.builder()
    * .dimensions(123)
+   * .embeddingDataType("embeddingDataType")
    * .build())
+   * .build())
+   * .supplementalDataStorageConfiguration(SupplementalDataStorageConfigurationProperty.builder()
+   * .supplementalDataStorageLocations(List.of(SupplementalDataStorageLocationProperty.builder()
+   * .supplementalDataStorageLocationType("supplementalDataStorageLocationType")
+   * // the properties below are optional
+   * .s3Location(S3LocationProperty.builder()
+   * .uri("uri")
+   * .build())
+   * .build()))
    * .build())
    * .build())
    * .build();
@@ -792,6 +1217,22 @@ public open class CfnKnowledgeBase(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html)
    */
   public interface KnowledgeBaseConfigurationProperty {
+    /**
+     * Settings for an Amazon Kendra knowledge base.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-knowledgebaseconfiguration-kendraknowledgebaseconfiguration)
+     */
+    public fun kendraKnowledgeBaseConfiguration(): Any? =
+        unwrap(this).getKendraKnowledgeBaseConfiguration()
+
+    /**
+     * Specifies configurations for a knowledge base connected to an SQL database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-knowledgebaseconfiguration-sqlknowledgebaseconfiguration)
+     */
+    public fun sqlKnowledgeBaseConfiguration(): Any? =
+        unwrap(this).getSqlKnowledgeBaseConfiguration()
+
     /**
      * The type of data that the data source is converted into for the knowledge base.
      *
@@ -805,13 +1246,55 @@ public open class CfnKnowledgeBase(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-knowledgebaseconfiguration-vectorknowledgebaseconfiguration)
      */
-    public fun vectorKnowledgeBaseConfiguration(): Any
+    public fun vectorKnowledgeBaseConfiguration(): Any? =
+        unwrap(this).getVectorKnowledgeBaseConfiguration()
 
     /**
      * A builder for [KnowledgeBaseConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param kendraKnowledgeBaseConfiguration Settings for an Amazon Kendra knowledge base.
+       */
+      public fun kendraKnowledgeBaseConfiguration(kendraKnowledgeBaseConfiguration: IResolvable)
+
+      /**
+       * @param kendraKnowledgeBaseConfiguration Settings for an Amazon Kendra knowledge base.
+       */
+      public
+          fun kendraKnowledgeBaseConfiguration(kendraKnowledgeBaseConfiguration: KendraKnowledgeBaseConfigurationProperty)
+
+      /**
+       * @param kendraKnowledgeBaseConfiguration Settings for an Amazon Kendra knowledge base.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa5bc3c1b48d30f544f93d898723e438f6a40d1f7b6064fee03259cc011e7106")
+      public
+          fun kendraKnowledgeBaseConfiguration(kendraKnowledgeBaseConfiguration: KendraKnowledgeBaseConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param sqlKnowledgeBaseConfiguration Specifies configurations for a knowledge base
+       * connected to an SQL database.
+       */
+      public fun sqlKnowledgeBaseConfiguration(sqlKnowledgeBaseConfiguration: IResolvable)
+
+      /**
+       * @param sqlKnowledgeBaseConfiguration Specifies configurations for a knowledge base
+       * connected to an SQL database.
+       */
+      public
+          fun sqlKnowledgeBaseConfiguration(sqlKnowledgeBaseConfiguration: SqlKnowledgeBaseConfigurationProperty)
+
+      /**
+       * @param sqlKnowledgeBaseConfiguration Specifies configurations for a knowledge base
+       * connected to an SQL database.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8d39a4477d5f6dd27188998221f07090b55af6097fb8a4400cff003d314ca2e5")
+      public
+          fun sqlKnowledgeBaseConfiguration(sqlKnowledgeBaseConfiguration: SqlKnowledgeBaseConfigurationProperty.Builder.() -> Unit)
+
       /**
        * @param type The type of data that the data source is converted into for the knowledge base.
        * 
@@ -820,20 +1303,20 @@ public open class CfnKnowledgeBase(
 
       /**
        * @param vectorKnowledgeBaseConfiguration Contains details about the model that's used to
-       * convert the data source into vector embeddings. 
+       * convert the data source into vector embeddings.
        */
       public fun vectorKnowledgeBaseConfiguration(vectorKnowledgeBaseConfiguration: IResolvable)
 
       /**
        * @param vectorKnowledgeBaseConfiguration Contains details about the model that's used to
-       * convert the data source into vector embeddings. 
+       * convert the data source into vector embeddings.
        */
       public
           fun vectorKnowledgeBaseConfiguration(vectorKnowledgeBaseConfiguration: VectorKnowledgeBaseConfigurationProperty)
 
       /**
        * @param vectorKnowledgeBaseConfiguration Contains details about the model that's used to
-       * convert the data source into vector embeddings. 
+       * convert the data source into vector embeddings.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d1436463a51d226fda4896a15739aa86c924098a9d68554af8e2d3e4633b861f")
@@ -848,6 +1331,59 @@ public open class CfnKnowledgeBase(
           software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.KnowledgeBaseConfigurationProperty.builder()
 
       /**
+       * @param kendraKnowledgeBaseConfiguration Settings for an Amazon Kendra knowledge base.
+       */
+      override fun kendraKnowledgeBaseConfiguration(kendraKnowledgeBaseConfiguration: IResolvable) {
+        cdkBuilder.kendraKnowledgeBaseConfiguration(kendraKnowledgeBaseConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param kendraKnowledgeBaseConfiguration Settings for an Amazon Kendra knowledge base.
+       */
+      override
+          fun kendraKnowledgeBaseConfiguration(kendraKnowledgeBaseConfiguration: KendraKnowledgeBaseConfigurationProperty) {
+        cdkBuilder.kendraKnowledgeBaseConfiguration(kendraKnowledgeBaseConfiguration.let(KendraKnowledgeBaseConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param kendraKnowledgeBaseConfiguration Settings for an Amazon Kendra knowledge base.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa5bc3c1b48d30f544f93d898723e438f6a40d1f7b6064fee03259cc011e7106")
+      override
+          fun kendraKnowledgeBaseConfiguration(kendraKnowledgeBaseConfiguration: KendraKnowledgeBaseConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          kendraKnowledgeBaseConfiguration(KendraKnowledgeBaseConfigurationProperty(kendraKnowledgeBaseConfiguration))
+
+      /**
+       * @param sqlKnowledgeBaseConfiguration Specifies configurations for a knowledge base
+       * connected to an SQL database.
+       */
+      override fun sqlKnowledgeBaseConfiguration(sqlKnowledgeBaseConfiguration: IResolvable) {
+        cdkBuilder.sqlKnowledgeBaseConfiguration(sqlKnowledgeBaseConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param sqlKnowledgeBaseConfiguration Specifies configurations for a knowledge base
+       * connected to an SQL database.
+       */
+      override
+          fun sqlKnowledgeBaseConfiguration(sqlKnowledgeBaseConfiguration: SqlKnowledgeBaseConfigurationProperty) {
+        cdkBuilder.sqlKnowledgeBaseConfiguration(sqlKnowledgeBaseConfiguration.let(SqlKnowledgeBaseConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param sqlKnowledgeBaseConfiguration Specifies configurations for a knowledge base
+       * connected to an SQL database.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8d39a4477d5f6dd27188998221f07090b55af6097fb8a4400cff003d314ca2e5")
+      override
+          fun sqlKnowledgeBaseConfiguration(sqlKnowledgeBaseConfiguration: SqlKnowledgeBaseConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          sqlKnowledgeBaseConfiguration(SqlKnowledgeBaseConfigurationProperty(sqlKnowledgeBaseConfiguration))
+
+      /**
        * @param type The type of data that the data source is converted into for the knowledge base.
        * 
        */
@@ -857,7 +1393,7 @@ public open class CfnKnowledgeBase(
 
       /**
        * @param vectorKnowledgeBaseConfiguration Contains details about the model that's used to
-       * convert the data source into vector embeddings. 
+       * convert the data source into vector embeddings.
        */
       override fun vectorKnowledgeBaseConfiguration(vectorKnowledgeBaseConfiguration: IResolvable) {
         cdkBuilder.vectorKnowledgeBaseConfiguration(vectorKnowledgeBaseConfiguration.let(IResolvable.Companion::unwrap))
@@ -865,7 +1401,7 @@ public open class CfnKnowledgeBase(
 
       /**
        * @param vectorKnowledgeBaseConfiguration Contains details about the model that's used to
-       * convert the data source into vector embeddings. 
+       * convert the data source into vector embeddings.
        */
       override
           fun vectorKnowledgeBaseConfiguration(vectorKnowledgeBaseConfiguration: VectorKnowledgeBaseConfigurationProperty) {
@@ -874,7 +1410,7 @@ public open class CfnKnowledgeBase(
 
       /**
        * @param vectorKnowledgeBaseConfiguration Contains details about the model that's used to
-       * convert the data source into vector embeddings. 
+       * convert the data source into vector embeddings.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d1436463a51d226fda4896a15739aa86c924098a9d68554af8e2d3e4633b861f")
@@ -893,6 +1429,22 @@ public open class CfnKnowledgeBase(
     ) : CdkObject(cdkObject),
         KnowledgeBaseConfigurationProperty {
       /**
+       * Settings for an Amazon Kendra knowledge base.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-knowledgebaseconfiguration-kendraknowledgebaseconfiguration)
+       */
+      override fun kendraKnowledgeBaseConfiguration(): Any? =
+          unwrap(this).getKendraKnowledgeBaseConfiguration()
+
+      /**
+       * Specifies configurations for a knowledge base connected to an SQL database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-knowledgebaseconfiguration-sqlknowledgebaseconfiguration)
+       */
+      override fun sqlKnowledgeBaseConfiguration(): Any? =
+          unwrap(this).getSqlKnowledgeBaseConfiguration()
+
+      /**
        * The type of data that the data source is converted into for the knowledge base.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-knowledgebaseconfiguration-type)
@@ -905,7 +1457,7 @@ public open class CfnKnowledgeBase(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-knowledgebaseconfiguration-vectorknowledgebaseconfiguration)
        */
-      override fun vectorKnowledgeBaseConfiguration(): Any =
+      override fun vectorKnowledgeBaseConfiguration(): Any? =
           unwrap(this).getVectorKnowledgeBaseConfiguration()
     }
 
@@ -925,6 +1477,1124 @@ public open class CfnKnowledgeBase(
           software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.KnowledgeBaseConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.KnowledgeBaseConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains details about the storage configuration of the knowledge base in MongoDB Atlas.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * MongoDbAtlasConfigurationProperty mongoDbAtlasConfigurationProperty =
+   * MongoDbAtlasConfigurationProperty.builder()
+   * .collectionName("collectionName")
+   * .credentialsSecretArn("credentialsSecretArn")
+   * .databaseName("databaseName")
+   * .endpoint("endpoint")
+   * .fieldMapping(MongoDbAtlasFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .textField("textField")
+   * .vectorField("vectorField")
+   * .build())
+   * .vectorIndexName("vectorIndexName")
+   * // the properties below are optional
+   * .endpointServiceName("endpointServiceName")
+   * .textIndexName("textIndexName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html)
+   */
+  public interface MongoDbAtlasConfigurationProperty {
+    /**
+     * The collection name of the knowledge base in MongoDB Atlas.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html#cfn-bedrock-knowledgebase-mongodbatlasconfiguration-collectionname)
+     */
+    public fun collectionName(): String
+
+    /**
+     * The Amazon Resource Name (ARN) of the secret that you created in AWS Secrets Manager that
+     * contains user credentials for your MongoDB Atlas cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html#cfn-bedrock-knowledgebase-mongodbatlasconfiguration-credentialssecretarn)
+     */
+    public fun credentialsSecretArn(): String
+
+    /**
+     * The database name in your MongoDB Atlas cluster for your knowledge base.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html#cfn-bedrock-knowledgebase-mongodbatlasconfiguration-databasename)
+     */
+    public fun databaseName(): String
+
+    /**
+     * The endpoint URL of your MongoDB Atlas cluster for your knowledge base.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html#cfn-bedrock-knowledgebase-mongodbatlasconfiguration-endpoint)
+     */
+    public fun endpoint(): String
+
+    /**
+     * The name of the VPC endpoint service in your account that is connected to your MongoDB Atlas
+     * cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html#cfn-bedrock-knowledgebase-mongodbatlasconfiguration-endpointservicename)
+     */
+    public fun endpointServiceName(): String? = unwrap(this).getEndpointServiceName()
+
+    /**
+     * Contains the names of the fields to which to map information about the vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html#cfn-bedrock-knowledgebase-mongodbatlasconfiguration-fieldmapping)
+     */
+    public fun fieldMapping(): Any
+
+    /**
+     * The name of the text search index in the MongoDB collection.
+     *
+     * This is required for using the hybrid search feature.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html#cfn-bedrock-knowledgebase-mongodbatlasconfiguration-textindexname)
+     */
+    public fun textIndexName(): String? = unwrap(this).getTextIndexName()
+
+    /**
+     * The name of the MongoDB Atlas vector search index.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html#cfn-bedrock-knowledgebase-mongodbatlasconfiguration-vectorindexname)
+     */
+    public fun vectorIndexName(): String
+
+    /**
+     * A builder for [MongoDbAtlasConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param collectionName The collection name of the knowledge base in MongoDB Atlas. 
+       */
+      public fun collectionName(collectionName: String)
+
+      /**
+       * @param credentialsSecretArn The Amazon Resource Name (ARN) of the secret that you created
+       * in AWS Secrets Manager that contains user credentials for your MongoDB Atlas cluster. 
+       */
+      public fun credentialsSecretArn(credentialsSecretArn: String)
+
+      /**
+       * @param databaseName The database name in your MongoDB Atlas cluster for your knowledge
+       * base. 
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param endpoint The endpoint URL of your MongoDB Atlas cluster for your knowledge base. 
+       */
+      public fun endpoint(endpoint: String)
+
+      /**
+       * @param endpointServiceName The name of the VPC endpoint service in your account that is
+       * connected to your MongoDB Atlas cluster.
+       */
+      public fun endpointServiceName(endpointServiceName: String)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      public fun fieldMapping(fieldMapping: IResolvable)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      public fun fieldMapping(fieldMapping: MongoDbAtlasFieldMappingProperty)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0812ebbaa97dba29669834bbfcd4ae269927e13d70bbdaebd0cab58b3558cd72")
+      public fun fieldMapping(fieldMapping: MongoDbAtlasFieldMappingProperty.Builder.() -> Unit)
+
+      /**
+       * @param textIndexName The name of the text search index in the MongoDB collection.
+       * This is required for using the hybrid search feature.
+       */
+      public fun textIndexName(textIndexName: String)
+
+      /**
+       * @param vectorIndexName The name of the MongoDB Atlas vector search index. 
+       */
+      public fun vectorIndexName(vectorIndexName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.MongoDbAtlasConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.MongoDbAtlasConfigurationProperty.builder()
+
+      /**
+       * @param collectionName The collection name of the knowledge base in MongoDB Atlas. 
+       */
+      override fun collectionName(collectionName: String) {
+        cdkBuilder.collectionName(collectionName)
+      }
+
+      /**
+       * @param credentialsSecretArn The Amazon Resource Name (ARN) of the secret that you created
+       * in AWS Secrets Manager that contains user credentials for your MongoDB Atlas cluster. 
+       */
+      override fun credentialsSecretArn(credentialsSecretArn: String) {
+        cdkBuilder.credentialsSecretArn(credentialsSecretArn)
+      }
+
+      /**
+       * @param databaseName The database name in your MongoDB Atlas cluster for your knowledge
+       * base. 
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param endpoint The endpoint URL of your MongoDB Atlas cluster for your knowledge base. 
+       */
+      override fun endpoint(endpoint: String) {
+        cdkBuilder.endpoint(endpoint)
+      }
+
+      /**
+       * @param endpointServiceName The name of the VPC endpoint service in your account that is
+       * connected to your MongoDB Atlas cluster.
+       */
+      override fun endpointServiceName(endpointServiceName: String) {
+        cdkBuilder.endpointServiceName(endpointServiceName)
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      override fun fieldMapping(fieldMapping: IResolvable) {
+        cdkBuilder.fieldMapping(fieldMapping.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      override fun fieldMapping(fieldMapping: MongoDbAtlasFieldMappingProperty) {
+        cdkBuilder.fieldMapping(fieldMapping.let(MongoDbAtlasFieldMappingProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0812ebbaa97dba29669834bbfcd4ae269927e13d70bbdaebd0cab58b3558cd72")
+      override fun fieldMapping(fieldMapping: MongoDbAtlasFieldMappingProperty.Builder.() -> Unit):
+          Unit = fieldMapping(MongoDbAtlasFieldMappingProperty(fieldMapping))
+
+      /**
+       * @param textIndexName The name of the text search index in the MongoDB collection.
+       * This is required for using the hybrid search feature.
+       */
+      override fun textIndexName(textIndexName: String) {
+        cdkBuilder.textIndexName(textIndexName)
+      }
+
+      /**
+       * @param vectorIndexName The name of the MongoDB Atlas vector search index. 
+       */
+      override fun vectorIndexName(vectorIndexName: String) {
+        cdkBuilder.vectorIndexName(vectorIndexName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.MongoDbAtlasConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.MongoDbAtlasConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        MongoDbAtlasConfigurationProperty {
+      /**
+       * The collection name of the knowledge base in MongoDB Atlas.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html#cfn-bedrock-knowledgebase-mongodbatlasconfiguration-collectionname)
+       */
+      override fun collectionName(): String = unwrap(this).getCollectionName()
+
+      /**
+       * The Amazon Resource Name (ARN) of the secret that you created in AWS Secrets Manager that
+       * contains user credentials for your MongoDB Atlas cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html#cfn-bedrock-knowledgebase-mongodbatlasconfiguration-credentialssecretarn)
+       */
+      override fun credentialsSecretArn(): String = unwrap(this).getCredentialsSecretArn()
+
+      /**
+       * The database name in your MongoDB Atlas cluster for your knowledge base.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html#cfn-bedrock-knowledgebase-mongodbatlasconfiguration-databasename)
+       */
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
+
+      /**
+       * The endpoint URL of your MongoDB Atlas cluster for your knowledge base.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html#cfn-bedrock-knowledgebase-mongodbatlasconfiguration-endpoint)
+       */
+      override fun endpoint(): String = unwrap(this).getEndpoint()
+
+      /**
+       * The name of the VPC endpoint service in your account that is connected to your MongoDB
+       * Atlas cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html#cfn-bedrock-knowledgebase-mongodbatlasconfiguration-endpointservicename)
+       */
+      override fun endpointServiceName(): String? = unwrap(this).getEndpointServiceName()
+
+      /**
+       * Contains the names of the fields to which to map information about the vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html#cfn-bedrock-knowledgebase-mongodbatlasconfiguration-fieldmapping)
+       */
+      override fun fieldMapping(): Any = unwrap(this).getFieldMapping()
+
+      /**
+       * The name of the text search index in the MongoDB collection.
+       *
+       * This is required for using the hybrid search feature.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html#cfn-bedrock-knowledgebase-mongodbatlasconfiguration-textindexname)
+       */
+      override fun textIndexName(): String? = unwrap(this).getTextIndexName()
+
+      /**
+       * The name of the MongoDB Atlas vector search index.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasconfiguration.html#cfn-bedrock-knowledgebase-mongodbatlasconfiguration-vectorindexname)
+       */
+      override fun vectorIndexName(): String = unwrap(this).getVectorIndexName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MongoDbAtlasConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.MongoDbAtlasConfigurationProperty):
+          MongoDbAtlasConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MongoDbAtlasConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MongoDbAtlasConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.MongoDbAtlasConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.MongoDbAtlasConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains the names of the fields to which to map information about the vector store.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * MongoDbAtlasFieldMappingProperty mongoDbAtlasFieldMappingProperty =
+   * MongoDbAtlasFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .textField("textField")
+   * .vectorField("vectorField")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasfieldmapping.html)
+   */
+  public interface MongoDbAtlasFieldMappingProperty {
+    /**
+     * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasfieldmapping.html#cfn-bedrock-knowledgebase-mongodbatlasfieldmapping-metadatafield)
+     */
+    public fun metadataField(): String
+
+    /**
+     * The name of the field in which Amazon Bedrock stores the raw text from your data.
+     *
+     * The text is split according to the chunking strategy you choose.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasfieldmapping.html#cfn-bedrock-knowledgebase-mongodbatlasfieldmapping-textfield)
+     */
+    public fun textField(): String
+
+    /**
+     * The name of the field in which Amazon Bedrock stores the vector embeddings for your data
+     * sources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasfieldmapping.html#cfn-bedrock-knowledgebase-mongodbatlasfieldmapping-vectorfield)
+     */
+    public fun vectorField(): String
+
+    /**
+     * A builder for [MongoDbAtlasFieldMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param metadataField The name of the field in which Amazon Bedrock stores metadata about
+       * the vector store. 
+       */
+      public fun metadataField(metadataField: String)
+
+      /**
+       * @param textField The name of the field in which Amazon Bedrock stores the raw text from
+       * your data. 
+       * The text is split according to the chunking strategy you choose.
+       */
+      public fun textField(textField: String)
+
+      /**
+       * @param vectorField The name of the field in which Amazon Bedrock stores the vector
+       * embeddings for your data sources. 
+       */
+      public fun vectorField(vectorField: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.MongoDbAtlasFieldMappingProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.MongoDbAtlasFieldMappingProperty.builder()
+
+      /**
+       * @param metadataField The name of the field in which Amazon Bedrock stores metadata about
+       * the vector store. 
+       */
+      override fun metadataField(metadataField: String) {
+        cdkBuilder.metadataField(metadataField)
+      }
+
+      /**
+       * @param textField The name of the field in which Amazon Bedrock stores the raw text from
+       * your data. 
+       * The text is split according to the chunking strategy you choose.
+       */
+      override fun textField(textField: String) {
+        cdkBuilder.textField(textField)
+      }
+
+      /**
+       * @param vectorField The name of the field in which Amazon Bedrock stores the vector
+       * embeddings for your data sources. 
+       */
+      override fun vectorField(vectorField: String) {
+        cdkBuilder.vectorField(vectorField)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.MongoDbAtlasFieldMappingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.MongoDbAtlasFieldMappingProperty,
+    ) : CdkObject(cdkObject),
+        MongoDbAtlasFieldMappingProperty {
+      /**
+       * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasfieldmapping.html#cfn-bedrock-knowledgebase-mongodbatlasfieldmapping-metadatafield)
+       */
+      override fun metadataField(): String = unwrap(this).getMetadataField()
+
+      /**
+       * The name of the field in which Amazon Bedrock stores the raw text from your data.
+       *
+       * The text is split according to the chunking strategy you choose.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasfieldmapping.html#cfn-bedrock-knowledgebase-mongodbatlasfieldmapping-textfield)
+       */
+      override fun textField(): String = unwrap(this).getTextField()
+
+      /**
+       * The name of the field in which Amazon Bedrock stores the vector embeddings for your data
+       * sources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-mongodbatlasfieldmapping.html#cfn-bedrock-knowledgebase-mongodbatlasfieldmapping-vectorfield)
+       */
+      override fun vectorField(): String = unwrap(this).getVectorField()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MongoDbAtlasFieldMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.MongoDbAtlasFieldMappingProperty):
+          MongoDbAtlasFieldMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MongoDbAtlasFieldMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MongoDbAtlasFieldMappingProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.MongoDbAtlasFieldMappingProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.MongoDbAtlasFieldMappingProperty
+    }
+  }
+
+  /**
+   * Contains details about the storage configuration of the knowledge base in Amazon Neptune
+   * Analytics.
+   *
+   * For more information, see [Create a vector index in Amazon Neptune
+   * Analytics](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-neptune.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * NeptuneAnalyticsConfigurationProperty neptuneAnalyticsConfigurationProperty =
+   * NeptuneAnalyticsConfigurationProperty.builder()
+   * .fieldMapping(NeptuneAnalyticsFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .textField("textField")
+   * .build())
+   * .graphArn("graphArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-neptuneanalyticsconfiguration.html)
+   */
+  public interface NeptuneAnalyticsConfigurationProperty {
+    /**
+     * Contains the names of the fields to which to map information about the vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-neptuneanalyticsconfiguration.html#cfn-bedrock-knowledgebase-neptuneanalyticsconfiguration-fieldmapping)
+     */
+    public fun fieldMapping(): Any
+
+    /**
+     * The Amazon Resource Name (ARN) of the Neptune Analytics vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-neptuneanalyticsconfiguration.html#cfn-bedrock-knowledgebase-neptuneanalyticsconfiguration-grapharn)
+     */
+    public fun graphArn(): String
+
+    /**
+     * A builder for [NeptuneAnalyticsConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      public fun fieldMapping(fieldMapping: IResolvable)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      public fun fieldMapping(fieldMapping: NeptuneAnalyticsFieldMappingProperty)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3152befddf4b7fb24a7bef22b67e844a7868b93ced26644386705861debdbb5d")
+      public fun fieldMapping(fieldMapping: NeptuneAnalyticsFieldMappingProperty.Builder.() -> Unit)
+
+      /**
+       * @param graphArn The Amazon Resource Name (ARN) of the Neptune Analytics vector store. 
+       */
+      public fun graphArn(graphArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.NeptuneAnalyticsConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.NeptuneAnalyticsConfigurationProperty.builder()
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      override fun fieldMapping(fieldMapping: IResolvable) {
+        cdkBuilder.fieldMapping(fieldMapping.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      override fun fieldMapping(fieldMapping: NeptuneAnalyticsFieldMappingProperty) {
+        cdkBuilder.fieldMapping(fieldMapping.let(NeptuneAnalyticsFieldMappingProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3152befddf4b7fb24a7bef22b67e844a7868b93ced26644386705861debdbb5d")
+      override
+          fun fieldMapping(fieldMapping: NeptuneAnalyticsFieldMappingProperty.Builder.() -> Unit):
+          Unit = fieldMapping(NeptuneAnalyticsFieldMappingProperty(fieldMapping))
+
+      /**
+       * @param graphArn The Amazon Resource Name (ARN) of the Neptune Analytics vector store. 
+       */
+      override fun graphArn(graphArn: String) {
+        cdkBuilder.graphArn(graphArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.NeptuneAnalyticsConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.NeptuneAnalyticsConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        NeptuneAnalyticsConfigurationProperty {
+      /**
+       * Contains the names of the fields to which to map information about the vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-neptuneanalyticsconfiguration.html#cfn-bedrock-knowledgebase-neptuneanalyticsconfiguration-fieldmapping)
+       */
+      override fun fieldMapping(): Any = unwrap(this).getFieldMapping()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Neptune Analytics vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-neptuneanalyticsconfiguration.html#cfn-bedrock-knowledgebase-neptuneanalyticsconfiguration-grapharn)
+       */
+      override fun graphArn(): String = unwrap(this).getGraphArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NeptuneAnalyticsConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.NeptuneAnalyticsConfigurationProperty):
+          NeptuneAnalyticsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NeptuneAnalyticsConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NeptuneAnalyticsConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.NeptuneAnalyticsConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.NeptuneAnalyticsConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains the names of the fields to which to map information about the vector store.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * NeptuneAnalyticsFieldMappingProperty neptuneAnalyticsFieldMappingProperty =
+   * NeptuneAnalyticsFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .textField("textField")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-neptuneanalyticsfieldmapping.html)
+   */
+  public interface NeptuneAnalyticsFieldMappingProperty {
+    /**
+     * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-neptuneanalyticsfieldmapping.html#cfn-bedrock-knowledgebase-neptuneanalyticsfieldmapping-metadatafield)
+     */
+    public fun metadataField(): String
+
+    /**
+     * The name of the field in which Amazon Bedrock stores the raw text from your data.
+     *
+     * The text is split according to the chunking strategy you choose.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-neptuneanalyticsfieldmapping.html#cfn-bedrock-knowledgebase-neptuneanalyticsfieldmapping-textfield)
+     */
+    public fun textField(): String
+
+    /**
+     * A builder for [NeptuneAnalyticsFieldMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param metadataField The name of the field in which Amazon Bedrock stores metadata about
+       * the vector store. 
+       */
+      public fun metadataField(metadataField: String)
+
+      /**
+       * @param textField The name of the field in which Amazon Bedrock stores the raw text from
+       * your data. 
+       * The text is split according to the chunking strategy you choose.
+       */
+      public fun textField(textField: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.NeptuneAnalyticsFieldMappingProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.NeptuneAnalyticsFieldMappingProperty.builder()
+
+      /**
+       * @param metadataField The name of the field in which Amazon Bedrock stores metadata about
+       * the vector store. 
+       */
+      override fun metadataField(metadataField: String) {
+        cdkBuilder.metadataField(metadataField)
+      }
+
+      /**
+       * @param textField The name of the field in which Amazon Bedrock stores the raw text from
+       * your data. 
+       * The text is split according to the chunking strategy you choose.
+       */
+      override fun textField(textField: String) {
+        cdkBuilder.textField(textField)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.NeptuneAnalyticsFieldMappingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.NeptuneAnalyticsFieldMappingProperty,
+    ) : CdkObject(cdkObject),
+        NeptuneAnalyticsFieldMappingProperty {
+      /**
+       * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-neptuneanalyticsfieldmapping.html#cfn-bedrock-knowledgebase-neptuneanalyticsfieldmapping-metadatafield)
+       */
+      override fun metadataField(): String = unwrap(this).getMetadataField()
+
+      /**
+       * The name of the field in which Amazon Bedrock stores the raw text from your data.
+       *
+       * The text is split according to the chunking strategy you choose.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-neptuneanalyticsfieldmapping.html#cfn-bedrock-knowledgebase-neptuneanalyticsfieldmapping-textfield)
+       */
+      override fun textField(): String = unwrap(this).getTextField()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NeptuneAnalyticsFieldMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.NeptuneAnalyticsFieldMappingProperty):
+          NeptuneAnalyticsFieldMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NeptuneAnalyticsFieldMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NeptuneAnalyticsFieldMappingProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.NeptuneAnalyticsFieldMappingProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.NeptuneAnalyticsFieldMappingProperty
+    }
+  }
+
+  /**
+   * Contains details about the Managed Cluster configuration of the knowledge base in Amazon
+   * OpenSearch Service.
+   *
+   * For more information, see [Create a vector index in OpenSearch Managed
+   * Cluster](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-osm.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * OpenSearchManagedClusterConfigurationProperty openSearchManagedClusterConfigurationProperty =
+   * OpenSearchManagedClusterConfigurationProperty.builder()
+   * .domainArn("domainArn")
+   * .domainEndpoint("domainEndpoint")
+   * .fieldMapping(OpenSearchManagedClusterFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .textField("textField")
+   * .vectorField("vectorField")
+   * .build())
+   * .vectorIndexName("vectorIndexName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchmanagedclusterconfiguration.html)
+   */
+  public interface OpenSearchManagedClusterConfigurationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the OpenSearch domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchmanagedclusterconfiguration.html#cfn-bedrock-knowledgebase-opensearchmanagedclusterconfiguration-domainarn)
+     */
+    public fun domainArn(): String
+
+    /**
+     * The endpoint URL the OpenSearch domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchmanagedclusterconfiguration.html#cfn-bedrock-knowledgebase-opensearchmanagedclusterconfiguration-domainendpoint)
+     */
+    public fun domainEndpoint(): String
+
+    /**
+     * Contains the names of the fields to which to map information about the vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchmanagedclusterconfiguration.html#cfn-bedrock-knowledgebase-opensearchmanagedclusterconfiguration-fieldmapping)
+     */
+    public fun fieldMapping(): Any
+
+    /**
+     * The name of the vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchmanagedclusterconfiguration.html#cfn-bedrock-knowledgebase-opensearchmanagedclusterconfiguration-vectorindexname)
+     */
+    public fun vectorIndexName(): String
+
+    /**
+     * A builder for [OpenSearchManagedClusterConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param domainArn The Amazon Resource Name (ARN) of the OpenSearch domain. 
+       */
+      public fun domainArn(domainArn: String)
+
+      /**
+       * @param domainEndpoint The endpoint URL the OpenSearch domain. 
+       */
+      public fun domainEndpoint(domainEndpoint: String)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      public fun fieldMapping(fieldMapping: IResolvable)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      public fun fieldMapping(fieldMapping: OpenSearchManagedClusterFieldMappingProperty)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5b753401f015f084a8059fc330858916f960b1d13dcab52c98fa18ce2fdd4ab8")
+      public
+          fun fieldMapping(fieldMapping: OpenSearchManagedClusterFieldMappingProperty.Builder.() -> Unit)
+
+      /**
+       * @param vectorIndexName The name of the vector store. 
+       */
+      public fun vectorIndexName(vectorIndexName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchManagedClusterConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchManagedClusterConfigurationProperty.builder()
+
+      /**
+       * @param domainArn The Amazon Resource Name (ARN) of the OpenSearch domain. 
+       */
+      override fun domainArn(domainArn: String) {
+        cdkBuilder.domainArn(domainArn)
+      }
+
+      /**
+       * @param domainEndpoint The endpoint URL the OpenSearch domain. 
+       */
+      override fun domainEndpoint(domainEndpoint: String) {
+        cdkBuilder.domainEndpoint(domainEndpoint)
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      override fun fieldMapping(fieldMapping: IResolvable) {
+        cdkBuilder.fieldMapping(fieldMapping.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      override fun fieldMapping(fieldMapping: OpenSearchManagedClusterFieldMappingProperty) {
+        cdkBuilder.fieldMapping(fieldMapping.let(OpenSearchManagedClusterFieldMappingProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5b753401f015f084a8059fc330858916f960b1d13dcab52c98fa18ce2fdd4ab8")
+      override
+          fun fieldMapping(fieldMapping: OpenSearchManagedClusterFieldMappingProperty.Builder.() -> Unit):
+          Unit = fieldMapping(OpenSearchManagedClusterFieldMappingProperty(fieldMapping))
+
+      /**
+       * @param vectorIndexName The name of the vector store. 
+       */
+      override fun vectorIndexName(vectorIndexName: String) {
+        cdkBuilder.vectorIndexName(vectorIndexName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchManagedClusterConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchManagedClusterConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        OpenSearchManagedClusterConfigurationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the OpenSearch domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchmanagedclusterconfiguration.html#cfn-bedrock-knowledgebase-opensearchmanagedclusterconfiguration-domainarn)
+       */
+      override fun domainArn(): String = unwrap(this).getDomainArn()
+
+      /**
+       * The endpoint URL the OpenSearch domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchmanagedclusterconfiguration.html#cfn-bedrock-knowledgebase-opensearchmanagedclusterconfiguration-domainendpoint)
+       */
+      override fun domainEndpoint(): String = unwrap(this).getDomainEndpoint()
+
+      /**
+       * Contains the names of the fields to which to map information about the vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchmanagedclusterconfiguration.html#cfn-bedrock-knowledgebase-opensearchmanagedclusterconfiguration-fieldmapping)
+       */
+      override fun fieldMapping(): Any = unwrap(this).getFieldMapping()
+
+      /**
+       * The name of the vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchmanagedclusterconfiguration.html#cfn-bedrock-knowledgebase-opensearchmanagedclusterconfiguration-vectorindexname)
+       */
+      override fun vectorIndexName(): String = unwrap(this).getVectorIndexName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OpenSearchManagedClusterConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchManagedClusterConfigurationProperty):
+          OpenSearchManagedClusterConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenSearchManagedClusterConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OpenSearchManagedClusterConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchManagedClusterConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchManagedClusterConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains the names of the fields to which to map information about the vector store.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * OpenSearchManagedClusterFieldMappingProperty openSearchManagedClusterFieldMappingProperty =
+   * OpenSearchManagedClusterFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .textField("textField")
+   * .vectorField("vectorField")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchmanagedclusterfieldmapping.html)
+   */
+  public interface OpenSearchManagedClusterFieldMappingProperty {
+    /**
+     * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchmanagedclusterfieldmapping.html#cfn-bedrock-knowledgebase-opensearchmanagedclusterfieldmapping-metadatafield)
+     */
+    public fun metadataField(): String
+
+    /**
+     * The name of the field in which Amazon Bedrock stores the raw text from your data.
+     *
+     * The text is split according to the chunking strategy you choose.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchmanagedclusterfieldmapping.html#cfn-bedrock-knowledgebase-opensearchmanagedclusterfieldmapping-textfield)
+     */
+    public fun textField(): String
+
+    /**
+     * The name of the field in which Amazon Bedrock stores the vector embeddings for your data
+     * sources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchmanagedclusterfieldmapping.html#cfn-bedrock-knowledgebase-opensearchmanagedclusterfieldmapping-vectorfield)
+     */
+    public fun vectorField(): String
+
+    /**
+     * A builder for [OpenSearchManagedClusterFieldMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param metadataField The name of the field in which Amazon Bedrock stores metadata about
+       * the vector store. 
+       */
+      public fun metadataField(metadataField: String)
+
+      /**
+       * @param textField The name of the field in which Amazon Bedrock stores the raw text from
+       * your data. 
+       * The text is split according to the chunking strategy you choose.
+       */
+      public fun textField(textField: String)
+
+      /**
+       * @param vectorField The name of the field in which Amazon Bedrock stores the vector
+       * embeddings for your data sources. 
+       */
+      public fun vectorField(vectorField: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchManagedClusterFieldMappingProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchManagedClusterFieldMappingProperty.builder()
+
+      /**
+       * @param metadataField The name of the field in which Amazon Bedrock stores metadata about
+       * the vector store. 
+       */
+      override fun metadataField(metadataField: String) {
+        cdkBuilder.metadataField(metadataField)
+      }
+
+      /**
+       * @param textField The name of the field in which Amazon Bedrock stores the raw text from
+       * your data. 
+       * The text is split according to the chunking strategy you choose.
+       */
+      override fun textField(textField: String) {
+        cdkBuilder.textField(textField)
+      }
+
+      /**
+       * @param vectorField The name of the field in which Amazon Bedrock stores the vector
+       * embeddings for your data sources. 
+       */
+      override fun vectorField(vectorField: String) {
+        cdkBuilder.vectorField(vectorField)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchManagedClusterFieldMappingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchManagedClusterFieldMappingProperty,
+    ) : CdkObject(cdkObject),
+        OpenSearchManagedClusterFieldMappingProperty {
+      /**
+       * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchmanagedclusterfieldmapping.html#cfn-bedrock-knowledgebase-opensearchmanagedclusterfieldmapping-metadatafield)
+       */
+      override fun metadataField(): String = unwrap(this).getMetadataField()
+
+      /**
+       * The name of the field in which Amazon Bedrock stores the raw text from your data.
+       *
+       * The text is split according to the chunking strategy you choose.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchmanagedclusterfieldmapping.html#cfn-bedrock-knowledgebase-opensearchmanagedclusterfieldmapping-textfield)
+       */
+      override fun textField(): String = unwrap(this).getTextField()
+
+      /**
+       * The name of the field in which Amazon Bedrock stores the vector embeddings for your data
+       * sources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchmanagedclusterfieldmapping.html#cfn-bedrock-knowledgebase-opensearchmanagedclusterfieldmapping-vectorfield)
+       */
+      override fun vectorField(): String = unwrap(this).getVectorField()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OpenSearchManagedClusterFieldMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchManagedClusterFieldMappingProperty):
+          OpenSearchManagedClusterFieldMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenSearchManagedClusterFieldMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OpenSearchManagedClusterFieldMappingProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchManagedClusterFieldMappingProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchManagedClusterFieldMappingProperty
     }
   }
 
@@ -1597,6 +3267,721 @@ public open class CfnKnowledgeBase(
   }
 
   /**
+   * Contains information about a column in the current table for the query engine to consider.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * QueryGenerationColumnProperty queryGenerationColumnProperty =
+   * QueryGenerationColumnProperty.builder()
+   * .description("description")
+   * .inclusion("inclusion")
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationcolumn.html)
+   */
+  public interface QueryGenerationColumnProperty {
+    /**
+     * A description of the column that helps the query engine understand the contents of the
+     * column.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationcolumn.html#cfn-bedrock-knowledgebase-querygenerationcolumn-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * Specifies whether to include or exclude the column during query generation.
+     *
+     * If you specify `EXCLUDE` , the column will be ignored. If you specify `INCLUDE` , all other
+     * columns in the table will be ignored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationcolumn.html#cfn-bedrock-knowledgebase-querygenerationcolumn-inclusion)
+     */
+    public fun inclusion(): String? = unwrap(this).getInclusion()
+
+    /**
+     * The name of the column for which the other fields in this object apply.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationcolumn.html#cfn-bedrock-knowledgebase-querygenerationcolumn-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [QueryGenerationColumnProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param description A description of the column that helps the query engine understand the
+       * contents of the column.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param inclusion Specifies whether to include or exclude the column during query
+       * generation.
+       * If you specify `EXCLUDE` , the column will be ignored. If you specify `INCLUDE` , all other
+       * columns in the table will be ignored.
+       */
+      public fun inclusion(inclusion: String)
+
+      /**
+       * @param name The name of the column for which the other fields in this object apply.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationColumnProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationColumnProperty.builder()
+
+      /**
+       * @param description A description of the column that helps the query engine understand the
+       * contents of the column.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param inclusion Specifies whether to include or exclude the column during query
+       * generation.
+       * If you specify `EXCLUDE` , the column will be ignored. If you specify `INCLUDE` , all other
+       * columns in the table will be ignored.
+       */
+      override fun inclusion(inclusion: String) {
+        cdkBuilder.inclusion(inclusion)
+      }
+
+      /**
+       * @param name The name of the column for which the other fields in this object apply.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationColumnProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationColumnProperty,
+    ) : CdkObject(cdkObject),
+        QueryGenerationColumnProperty {
+      /**
+       * A description of the column that helps the query engine understand the contents of the
+       * column.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationcolumn.html#cfn-bedrock-knowledgebase-querygenerationcolumn-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * Specifies whether to include or exclude the column during query generation.
+       *
+       * If you specify `EXCLUDE` , the column will be ignored. If you specify `INCLUDE` , all other
+       * columns in the table will be ignored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationcolumn.html#cfn-bedrock-knowledgebase-querygenerationcolumn-inclusion)
+       */
+      override fun inclusion(): String? = unwrap(this).getInclusion()
+
+      /**
+       * The name of the column for which the other fields in this object apply.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationcolumn.html#cfn-bedrock-knowledgebase-querygenerationcolumn-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): QueryGenerationColumnProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationColumnProperty):
+          QueryGenerationColumnProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueryGenerationColumnProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: QueryGenerationColumnProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationColumnProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationColumnProperty
+    }
+  }
+
+  /**
+   * Contains configurations for query generation.
+   *
+   * For more information, see [Build a knowledge base by connecting to a structured data
+   * source](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-build-structured.html)
+   * in the Amazon Bedrock User Guide..
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * QueryGenerationConfigurationProperty queryGenerationConfigurationProperty =
+   * QueryGenerationConfigurationProperty.builder()
+   * .executionTimeoutSeconds(123)
+   * .generationContext(QueryGenerationContextProperty.builder()
+   * .curatedQueries(List.of(CuratedQueryProperty.builder()
+   * .naturalLanguage("naturalLanguage")
+   * .sql("sql")
+   * .build()))
+   * .tables(List.of(QueryGenerationTableProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .columns(List.of(QueryGenerationColumnProperty.builder()
+   * .description("description")
+   * .inclusion("inclusion")
+   * .name("name")
+   * .build()))
+   * .description("description")
+   * .inclusion("inclusion")
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationconfiguration.html)
+   */
+  public interface QueryGenerationConfigurationProperty {
+    /**
+     * The time after which query generation will time out.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationconfiguration.html#cfn-bedrock-knowledgebase-querygenerationconfiguration-executiontimeoutseconds)
+     */
+    public fun executionTimeoutSeconds(): Number? = unwrap(this).getExecutionTimeoutSeconds()
+
+    /**
+     * Specifies configurations for context to use during query generation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationconfiguration.html#cfn-bedrock-knowledgebase-querygenerationconfiguration-generationcontext)
+     */
+    public fun generationContext(): Any? = unwrap(this).getGenerationContext()
+
+    /**
+     * A builder for [QueryGenerationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param executionTimeoutSeconds The time after which query generation will time out.
+       */
+      public fun executionTimeoutSeconds(executionTimeoutSeconds: Number)
+
+      /**
+       * @param generationContext Specifies configurations for context to use during query
+       * generation.
+       */
+      public fun generationContext(generationContext: IResolvable)
+
+      /**
+       * @param generationContext Specifies configurations for context to use during query
+       * generation.
+       */
+      public fun generationContext(generationContext: QueryGenerationContextProperty)
+
+      /**
+       * @param generationContext Specifies configurations for context to use during query
+       * generation.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("459b7327746e6fb475e6965e51d2a8d833186a6eced350b07d6a84421da2a80e")
+      public
+          fun generationContext(generationContext: QueryGenerationContextProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationConfigurationProperty.builder()
+
+      /**
+       * @param executionTimeoutSeconds The time after which query generation will time out.
+       */
+      override fun executionTimeoutSeconds(executionTimeoutSeconds: Number) {
+        cdkBuilder.executionTimeoutSeconds(executionTimeoutSeconds)
+      }
+
+      /**
+       * @param generationContext Specifies configurations for context to use during query
+       * generation.
+       */
+      override fun generationContext(generationContext: IResolvable) {
+        cdkBuilder.generationContext(generationContext.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param generationContext Specifies configurations for context to use during query
+       * generation.
+       */
+      override fun generationContext(generationContext: QueryGenerationContextProperty) {
+        cdkBuilder.generationContext(generationContext.let(QueryGenerationContextProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param generationContext Specifies configurations for context to use during query
+       * generation.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("459b7327746e6fb475e6965e51d2a8d833186a6eced350b07d6a84421da2a80e")
+      override
+          fun generationContext(generationContext: QueryGenerationContextProperty.Builder.() -> Unit):
+          Unit = generationContext(QueryGenerationContextProperty(generationContext))
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        QueryGenerationConfigurationProperty {
+      /**
+       * The time after which query generation will time out.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationconfiguration.html#cfn-bedrock-knowledgebase-querygenerationconfiguration-executiontimeoutseconds)
+       */
+      override fun executionTimeoutSeconds(): Number? = unwrap(this).getExecutionTimeoutSeconds()
+
+      /**
+       * Specifies configurations for context to use during query generation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationconfiguration.html#cfn-bedrock-knowledgebase-querygenerationconfiguration-generationcontext)
+       */
+      override fun generationContext(): Any? = unwrap(this).getGenerationContext()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          QueryGenerationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationConfigurationProperty):
+          QueryGenerationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueryGenerationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: QueryGenerationConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains configurations for context to use during query generation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * QueryGenerationContextProperty queryGenerationContextProperty =
+   * QueryGenerationContextProperty.builder()
+   * .curatedQueries(List.of(CuratedQueryProperty.builder()
+   * .naturalLanguage("naturalLanguage")
+   * .sql("sql")
+   * .build()))
+   * .tables(List.of(QueryGenerationTableProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .columns(List.of(QueryGenerationColumnProperty.builder()
+   * .description("description")
+   * .inclusion("inclusion")
+   * .name("name")
+   * .build()))
+   * .description("description")
+   * .inclusion("inclusion")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationcontext.html)
+   */
+  public interface QueryGenerationContextProperty {
+    /**
+     * An array of objects, each of which defines information about example queries to help the
+     * query engine generate appropriate SQL queries.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationcontext.html#cfn-bedrock-knowledgebase-querygenerationcontext-curatedqueries)
+     */
+    public fun curatedQueries(): Any? = unwrap(this).getCuratedQueries()
+
+    /**
+     * An array of objects, each of which defines information about a table in the database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationcontext.html#cfn-bedrock-knowledgebase-querygenerationcontext-tables)
+     */
+    public fun tables(): Any? = unwrap(this).getTables()
+
+    /**
+     * A builder for [QueryGenerationContextProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param curatedQueries An array of objects, each of which defines information about example
+       * queries to help the query engine generate appropriate SQL queries.
+       */
+      public fun curatedQueries(curatedQueries: IResolvable)
+
+      /**
+       * @param curatedQueries An array of objects, each of which defines information about example
+       * queries to help the query engine generate appropriate SQL queries.
+       */
+      public fun curatedQueries(curatedQueries: List<Any>)
+
+      /**
+       * @param curatedQueries An array of objects, each of which defines information about example
+       * queries to help the query engine generate appropriate SQL queries.
+       */
+      public fun curatedQueries(vararg curatedQueries: Any)
+
+      /**
+       * @param tables An array of objects, each of which defines information about a table in the
+       * database.
+       */
+      public fun tables(tables: IResolvable)
+
+      /**
+       * @param tables An array of objects, each of which defines information about a table in the
+       * database.
+       */
+      public fun tables(tables: List<Any>)
+
+      /**
+       * @param tables An array of objects, each of which defines information about a table in the
+       * database.
+       */
+      public fun tables(vararg tables: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationContextProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationContextProperty.builder()
+
+      /**
+       * @param curatedQueries An array of objects, each of which defines information about example
+       * queries to help the query engine generate appropriate SQL queries.
+       */
+      override fun curatedQueries(curatedQueries: IResolvable) {
+        cdkBuilder.curatedQueries(curatedQueries.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param curatedQueries An array of objects, each of which defines information about example
+       * queries to help the query engine generate appropriate SQL queries.
+       */
+      override fun curatedQueries(curatedQueries: List<Any>) {
+        cdkBuilder.curatedQueries(curatedQueries.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param curatedQueries An array of objects, each of which defines information about example
+       * queries to help the query engine generate appropriate SQL queries.
+       */
+      override fun curatedQueries(vararg curatedQueries: Any): Unit =
+          curatedQueries(curatedQueries.toList())
+
+      /**
+       * @param tables An array of objects, each of which defines information about a table in the
+       * database.
+       */
+      override fun tables(tables: IResolvable) {
+        cdkBuilder.tables(tables.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param tables An array of objects, each of which defines information about a table in the
+       * database.
+       */
+      override fun tables(tables: List<Any>) {
+        cdkBuilder.tables(tables.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param tables An array of objects, each of which defines information about a table in the
+       * database.
+       */
+      override fun tables(vararg tables: Any): Unit = tables(tables.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationContextProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationContextProperty,
+    ) : CdkObject(cdkObject),
+        QueryGenerationContextProperty {
+      /**
+       * An array of objects, each of which defines information about example queries to help the
+       * query engine generate appropriate SQL queries.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationcontext.html#cfn-bedrock-knowledgebase-querygenerationcontext-curatedqueries)
+       */
+      override fun curatedQueries(): Any? = unwrap(this).getCuratedQueries()
+
+      /**
+       * An array of objects, each of which defines information about a table in the database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationcontext.html#cfn-bedrock-knowledgebase-querygenerationcontext-tables)
+       */
+      override fun tables(): Any? = unwrap(this).getTables()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): QueryGenerationContextProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationContextProperty):
+          QueryGenerationContextProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueryGenerationContextProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: QueryGenerationContextProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationContextProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationContextProperty
+    }
+  }
+
+  /**
+   * Contains information about a table for the query engine to consider.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * QueryGenerationTableProperty queryGenerationTableProperty =
+   * QueryGenerationTableProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .columns(List.of(QueryGenerationColumnProperty.builder()
+   * .description("description")
+   * .inclusion("inclusion")
+   * .name("name")
+   * .build()))
+   * .description("description")
+   * .inclusion("inclusion")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationtable.html)
+   */
+  public interface QueryGenerationTableProperty {
+    /**
+     * An array of objects, each of which defines information about a column in the table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationtable.html#cfn-bedrock-knowledgebase-querygenerationtable-columns)
+     */
+    public fun columns(): Any? = unwrap(this).getColumns()
+
+    /**
+     * A description of the table that helps the query engine understand the contents of the table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationtable.html#cfn-bedrock-knowledgebase-querygenerationtable-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * Specifies whether to include or exclude the table during query generation.
+     *
+     * If you specify `EXCLUDE` , the table will be ignored. If you specify `INCLUDE` , all other
+     * tables will be ignored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationtable.html#cfn-bedrock-knowledgebase-querygenerationtable-inclusion)
+     */
+    public fun inclusion(): String? = unwrap(this).getInclusion()
+
+    /**
+     * The name of the table for which the other fields in this object apply.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationtable.html#cfn-bedrock-knowledgebase-querygenerationtable-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [QueryGenerationTableProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param columns An array of objects, each of which defines information about a column in the
+       * table.
+       */
+      public fun columns(columns: IResolvable)
+
+      /**
+       * @param columns An array of objects, each of which defines information about a column in the
+       * table.
+       */
+      public fun columns(columns: List<Any>)
+
+      /**
+       * @param columns An array of objects, each of which defines information about a column in the
+       * table.
+       */
+      public fun columns(vararg columns: Any)
+
+      /**
+       * @param description A description of the table that helps the query engine understand the
+       * contents of the table.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param inclusion Specifies whether to include or exclude the table during query generation.
+       * If you specify `EXCLUDE` , the table will be ignored. If you specify `INCLUDE` , all other
+       * tables will be ignored.
+       */
+      public fun inclusion(inclusion: String)
+
+      /**
+       * @param name The name of the table for which the other fields in this object apply. 
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationTableProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationTableProperty.builder()
+
+      /**
+       * @param columns An array of objects, each of which defines information about a column in the
+       * table.
+       */
+      override fun columns(columns: IResolvable) {
+        cdkBuilder.columns(columns.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param columns An array of objects, each of which defines information about a column in the
+       * table.
+       */
+      override fun columns(columns: List<Any>) {
+        cdkBuilder.columns(columns.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param columns An array of objects, each of which defines information about a column in the
+       * table.
+       */
+      override fun columns(vararg columns: Any): Unit = columns(columns.toList())
+
+      /**
+       * @param description A description of the table that helps the query engine understand the
+       * contents of the table.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param inclusion Specifies whether to include or exclude the table during query generation.
+       * If you specify `EXCLUDE` , the table will be ignored. If you specify `INCLUDE` , all other
+       * tables will be ignored.
+       */
+      override fun inclusion(inclusion: String) {
+        cdkBuilder.inclusion(inclusion)
+      }
+
+      /**
+       * @param name The name of the table for which the other fields in this object apply. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationTableProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationTableProperty,
+    ) : CdkObject(cdkObject),
+        QueryGenerationTableProperty {
+      /**
+       * An array of objects, each of which defines information about a column in the table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationtable.html#cfn-bedrock-knowledgebase-querygenerationtable-columns)
+       */
+      override fun columns(): Any? = unwrap(this).getColumns()
+
+      /**
+       * A description of the table that helps the query engine understand the contents of the
+       * table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationtable.html#cfn-bedrock-knowledgebase-querygenerationtable-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * Specifies whether to include or exclude the table during query generation.
+       *
+       * If you specify `EXCLUDE` , the table will be ignored. If you specify `INCLUDE` , all other
+       * tables will be ignored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationtable.html#cfn-bedrock-knowledgebase-querygenerationtable-inclusion)
+       */
+      override fun inclusion(): String? = unwrap(this).getInclusion()
+
+      /**
+       * The name of the table for which the other fields in this object apply.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-querygenerationtable.html#cfn-bedrock-knowledgebase-querygenerationtable-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): QueryGenerationTableProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationTableProperty):
+          QueryGenerationTableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueryGenerationTableProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: QueryGenerationTableProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationTableProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.QueryGenerationTableProperty
+    }
+  }
+
+  /**
    * Contains details about the storage configuration of the knowledge base in Amazon RDS.
    *
    * For more information, see [Create a vector index in Amazon
@@ -1616,6 +4001,8 @@ public open class CfnKnowledgeBase(
    * .primaryKeyField("primaryKeyField")
    * .textField("textField")
    * .vectorField("vectorField")
+   * // the properties below are optional
+   * .customMetadataField("customMetadataField")
    * .build())
    * .resourceArn("resourceArn")
    * .tableName("tableName")
@@ -1846,12 +4233,22 @@ public open class CfnKnowledgeBase(
    * .primaryKeyField("primaryKeyField")
    * .textField("textField")
    * .vectorField("vectorField")
+   * // the properties below are optional
+   * .customMetadataField("customMetadataField")
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsfieldmapping.html)
    */
   public interface RdsFieldMappingProperty {
+    /**
+     * Provide a name for the universal metadata field where Amazon Bedrock will store any custom
+     * metadata from your data source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsfieldmapping.html#cfn-bedrock-knowledgebase-rdsfieldmapping-custommetadatafield)
+     */
+    public fun customMetadataField(): String? = unwrap(this).getCustomMetadataField()
+
     /**
      * The name of the field in which Amazon Bedrock stores metadata about the vector store.
      *
@@ -1889,6 +4286,12 @@ public open class CfnKnowledgeBase(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param customMetadataField Provide a name for the universal metadata field where Amazon
+       * Bedrock will store any custom metadata from your data source.
+       */
+      public fun customMetadataField(customMetadataField: String)
+
+      /**
        * @param metadataField The name of the field in which Amazon Bedrock stores metadata about
        * the vector store. 
        */
@@ -1918,6 +4321,14 @@ public open class CfnKnowledgeBase(
       private val cdkBuilder:
           software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsFieldMappingProperty.Builder =
           software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsFieldMappingProperty.builder()
+
+      /**
+       * @param customMetadataField Provide a name for the universal metadata field where Amazon
+       * Bedrock will store any custom metadata from your data source.
+       */
+      override fun customMetadataField(customMetadataField: String) {
+        cdkBuilder.customMetadataField(customMetadataField)
+      }
 
       /**
        * @param metadataField The name of the field in which Amazon Bedrock stores metadata about
@@ -1961,6 +4372,14 @@ public open class CfnKnowledgeBase(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsFieldMappingProperty,
     ) : CdkObject(cdkObject),
         RdsFieldMappingProperty {
+      /**
+       * Provide a name for the universal metadata field where Amazon Bedrock will store any custom
+       * metadata from your data source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsfieldmapping.html#cfn-bedrock-knowledgebase-rdsfieldmapping-custommetadatafield)
+       */
+      override fun customMetadataField(): String? = unwrap(this).getCustomMetadataField()
+
       /**
        * The name of the field in which Amazon Bedrock stores metadata about the vector store.
        *
@@ -2012,6 +4431,1788 @@ public open class CfnKnowledgeBase(
   }
 
   /**
+   * Contains configurations for an Amazon Redshift database.
+   *
+   * For more information, see [Build a knowledge base by connecting to a structured data
+   * source](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-build-structured.html)
+   * in the Amazon Bedrock User Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * RedshiftConfigurationProperty redshiftConfigurationProperty =
+   * RedshiftConfigurationProperty.builder()
+   * .queryEngineConfiguration(RedshiftQueryEngineConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .provisionedConfiguration(RedshiftProvisionedConfigurationProperty.builder()
+   * .authConfiguration(RedshiftProvisionedAuthConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .databaseUser("databaseUser")
+   * .usernamePasswordSecretArn("usernamePasswordSecretArn")
+   * .build())
+   * .clusterIdentifier("clusterIdentifier")
+   * .build())
+   * .serverlessConfiguration(RedshiftServerlessConfigurationProperty.builder()
+   * .authConfiguration(RedshiftServerlessAuthConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .usernamePasswordSecretArn("usernamePasswordSecretArn")
+   * .build())
+   * .workgroupArn("workgroupArn")
+   * .build())
+   * .build())
+   * .storageConfigurations(List.of(RedshiftQueryEngineStorageConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .awsDataCatalogConfiguration(RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty.builder()
+   * .tableNames(List.of("tableNames"))
+   * .build())
+   * .redshiftConfiguration(RedshiftQueryEngineRedshiftStorageConfigurationProperty.builder()
+   * .databaseName("databaseName")
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .queryGenerationConfiguration(QueryGenerationConfigurationProperty.builder()
+   * .executionTimeoutSeconds(123)
+   * .generationContext(QueryGenerationContextProperty.builder()
+   * .curatedQueries(List.of(CuratedQueryProperty.builder()
+   * .naturalLanguage("naturalLanguage")
+   * .sql("sql")
+   * .build()))
+   * .tables(List.of(QueryGenerationTableProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .columns(List.of(QueryGenerationColumnProperty.builder()
+   * .description("description")
+   * .inclusion("inclusion")
+   * .name("name")
+   * .build()))
+   * .description("description")
+   * .inclusion("inclusion")
+   * .build()))
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftconfiguration.html)
+   */
+  public interface RedshiftConfigurationProperty {
+    /**
+     * Specifies configurations for an Amazon Redshift query engine.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftconfiguration.html#cfn-bedrock-knowledgebase-redshiftconfiguration-queryengineconfiguration)
+     */
+    public fun queryEngineConfiguration(): Any
+
+    /**
+     * Specifies configurations for generating queries.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftconfiguration.html#cfn-bedrock-knowledgebase-redshiftconfiguration-querygenerationconfiguration)
+     */
+    public fun queryGenerationConfiguration(): Any? = unwrap(this).getQueryGenerationConfiguration()
+
+    /**
+     * Specifies configurations for Amazon Redshift database storage.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftconfiguration.html#cfn-bedrock-knowledgebase-redshiftconfiguration-storageconfigurations)
+     */
+    public fun storageConfigurations(): Any
+
+    /**
+     * A builder for [RedshiftConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param queryEngineConfiguration Specifies configurations for an Amazon Redshift query
+       * engine. 
+       */
+      public fun queryEngineConfiguration(queryEngineConfiguration: IResolvable)
+
+      /**
+       * @param queryEngineConfiguration Specifies configurations for an Amazon Redshift query
+       * engine. 
+       */
+      public
+          fun queryEngineConfiguration(queryEngineConfiguration: RedshiftQueryEngineConfigurationProperty)
+
+      /**
+       * @param queryEngineConfiguration Specifies configurations for an Amazon Redshift query
+       * engine. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("905984c4c9801f1f3e298c28f4490f5c26a275ff6bba8590cd98337688846a12")
+      public
+          fun queryEngineConfiguration(queryEngineConfiguration: RedshiftQueryEngineConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param queryGenerationConfiguration Specifies configurations for generating queries.
+       */
+      public fun queryGenerationConfiguration(queryGenerationConfiguration: IResolvable)
+
+      /**
+       * @param queryGenerationConfiguration Specifies configurations for generating queries.
+       */
+      public
+          fun queryGenerationConfiguration(queryGenerationConfiguration: QueryGenerationConfigurationProperty)
+
+      /**
+       * @param queryGenerationConfiguration Specifies configurations for generating queries.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("985b6b671525b1e4d4e1b48a70f9158e59d680ba60df5789b6365a588eb14298")
+      public
+          fun queryGenerationConfiguration(queryGenerationConfiguration: QueryGenerationConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param storageConfigurations Specifies configurations for Amazon Redshift database storage.
+       * 
+       */
+      public fun storageConfigurations(storageConfigurations: IResolvable)
+
+      /**
+       * @param storageConfigurations Specifies configurations for Amazon Redshift database storage.
+       * 
+       */
+      public fun storageConfigurations(storageConfigurations: List<Any>)
+
+      /**
+       * @param storageConfigurations Specifies configurations for Amazon Redshift database storage.
+       * 
+       */
+      public fun storageConfigurations(vararg storageConfigurations: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftConfigurationProperty.builder()
+
+      /**
+       * @param queryEngineConfiguration Specifies configurations for an Amazon Redshift query
+       * engine. 
+       */
+      override fun queryEngineConfiguration(queryEngineConfiguration: IResolvable) {
+        cdkBuilder.queryEngineConfiguration(queryEngineConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param queryEngineConfiguration Specifies configurations for an Amazon Redshift query
+       * engine. 
+       */
+      override
+          fun queryEngineConfiguration(queryEngineConfiguration: RedshiftQueryEngineConfigurationProperty) {
+        cdkBuilder.queryEngineConfiguration(queryEngineConfiguration.let(RedshiftQueryEngineConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param queryEngineConfiguration Specifies configurations for an Amazon Redshift query
+       * engine. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("905984c4c9801f1f3e298c28f4490f5c26a275ff6bba8590cd98337688846a12")
+      override
+          fun queryEngineConfiguration(queryEngineConfiguration: RedshiftQueryEngineConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          queryEngineConfiguration(RedshiftQueryEngineConfigurationProperty(queryEngineConfiguration))
+
+      /**
+       * @param queryGenerationConfiguration Specifies configurations for generating queries.
+       */
+      override fun queryGenerationConfiguration(queryGenerationConfiguration: IResolvable) {
+        cdkBuilder.queryGenerationConfiguration(queryGenerationConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param queryGenerationConfiguration Specifies configurations for generating queries.
+       */
+      override
+          fun queryGenerationConfiguration(queryGenerationConfiguration: QueryGenerationConfigurationProperty) {
+        cdkBuilder.queryGenerationConfiguration(queryGenerationConfiguration.let(QueryGenerationConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param queryGenerationConfiguration Specifies configurations for generating queries.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("985b6b671525b1e4d4e1b48a70f9158e59d680ba60df5789b6365a588eb14298")
+      override
+          fun queryGenerationConfiguration(queryGenerationConfiguration: QueryGenerationConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          queryGenerationConfiguration(QueryGenerationConfigurationProperty(queryGenerationConfiguration))
+
+      /**
+       * @param storageConfigurations Specifies configurations for Amazon Redshift database storage.
+       * 
+       */
+      override fun storageConfigurations(storageConfigurations: IResolvable) {
+        cdkBuilder.storageConfigurations(storageConfigurations.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param storageConfigurations Specifies configurations for Amazon Redshift database storage.
+       * 
+       */
+      override fun storageConfigurations(storageConfigurations: List<Any>) {
+        cdkBuilder.storageConfigurations(storageConfigurations.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param storageConfigurations Specifies configurations for Amazon Redshift database storage.
+       * 
+       */
+      override fun storageConfigurations(vararg storageConfigurations: Any): Unit =
+          storageConfigurations(storageConfigurations.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        RedshiftConfigurationProperty {
+      /**
+       * Specifies configurations for an Amazon Redshift query engine.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftconfiguration.html#cfn-bedrock-knowledgebase-redshiftconfiguration-queryengineconfiguration)
+       */
+      override fun queryEngineConfiguration(): Any = unwrap(this).getQueryEngineConfiguration()
+
+      /**
+       * Specifies configurations for generating queries.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftconfiguration.html#cfn-bedrock-knowledgebase-redshiftconfiguration-querygenerationconfiguration)
+       */
+      override fun queryGenerationConfiguration(): Any? =
+          unwrap(this).getQueryGenerationConfiguration()
+
+      /**
+       * Specifies configurations for Amazon Redshift database storage.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftconfiguration.html#cfn-bedrock-knowledgebase-redshiftconfiguration-storageconfigurations)
+       */
+      override fun storageConfigurations(): Any = unwrap(this).getStorageConfigurations()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RedshiftConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftConfigurationProperty):
+          RedshiftConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains configurations for authentication to an Amazon Redshift provisioned data warehouse.
+   *
+   * Specify the type of authentication to use in the `type` field and include the corresponding
+   * field. If you specify IAM authentication, you don't need to include another field.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * RedshiftProvisionedAuthConfigurationProperty redshiftProvisionedAuthConfigurationProperty =
+   * RedshiftProvisionedAuthConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .databaseUser("databaseUser")
+   * .usernamePasswordSecretArn("usernamePasswordSecretArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftprovisionedauthconfiguration.html)
+   */
+  public interface RedshiftProvisionedAuthConfigurationProperty {
+    /**
+     * The database username for authentication to an Amazon Redshift provisioned data warehouse.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftprovisionedauthconfiguration.html#cfn-bedrock-knowledgebase-redshiftprovisionedauthconfiguration-databaseuser)
+     */
+    public fun databaseUser(): String? = unwrap(this).getDatabaseUser()
+
+    /**
+     * The type of authentication to use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftprovisionedauthconfiguration.html#cfn-bedrock-knowledgebase-redshiftprovisionedauthconfiguration-type)
+     */
+    public fun type(): String
+
+    /**
+     * The ARN of an Secrets Manager secret for authentication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftprovisionedauthconfiguration.html#cfn-bedrock-knowledgebase-redshiftprovisionedauthconfiguration-usernamepasswordsecretarn)
+     */
+    public fun usernamePasswordSecretArn(): String? = unwrap(this).getUsernamePasswordSecretArn()
+
+    /**
+     * A builder for [RedshiftProvisionedAuthConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param databaseUser The database username for authentication to an Amazon Redshift
+       * provisioned data warehouse.
+       */
+      public fun databaseUser(databaseUser: String)
+
+      /**
+       * @param type The type of authentication to use. 
+       */
+      public fun type(type: String)
+
+      /**
+       * @param usernamePasswordSecretArn The ARN of an Secrets Manager secret for authentication.
+       */
+      public fun usernamePasswordSecretArn(usernamePasswordSecretArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftProvisionedAuthConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftProvisionedAuthConfigurationProperty.builder()
+
+      /**
+       * @param databaseUser The database username for authentication to an Amazon Redshift
+       * provisioned data warehouse.
+       */
+      override fun databaseUser(databaseUser: String) {
+        cdkBuilder.databaseUser(databaseUser)
+      }
+
+      /**
+       * @param type The type of authentication to use. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param usernamePasswordSecretArn The ARN of an Secrets Manager secret for authentication.
+       */
+      override fun usernamePasswordSecretArn(usernamePasswordSecretArn: String) {
+        cdkBuilder.usernamePasswordSecretArn(usernamePasswordSecretArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftProvisionedAuthConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftProvisionedAuthConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        RedshiftProvisionedAuthConfigurationProperty {
+      /**
+       * The database username for authentication to an Amazon Redshift provisioned data warehouse.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftprovisionedauthconfiguration.html#cfn-bedrock-knowledgebase-redshiftprovisionedauthconfiguration-databaseuser)
+       */
+      override fun databaseUser(): String? = unwrap(this).getDatabaseUser()
+
+      /**
+       * The type of authentication to use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftprovisionedauthconfiguration.html#cfn-bedrock-knowledgebase-redshiftprovisionedauthconfiguration-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+
+      /**
+       * The ARN of an Secrets Manager secret for authentication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftprovisionedauthconfiguration.html#cfn-bedrock-knowledgebase-redshiftprovisionedauthconfiguration-usernamepasswordsecretarn)
+       */
+      override fun usernamePasswordSecretArn(): String? =
+          unwrap(this).getUsernamePasswordSecretArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RedshiftProvisionedAuthConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftProvisionedAuthConfigurationProperty):
+          RedshiftProvisionedAuthConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftProvisionedAuthConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftProvisionedAuthConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftProvisionedAuthConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftProvisionedAuthConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains configurations for a provisioned Amazon Redshift query engine.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * RedshiftProvisionedConfigurationProperty redshiftProvisionedConfigurationProperty =
+   * RedshiftProvisionedConfigurationProperty.builder()
+   * .authConfiguration(RedshiftProvisionedAuthConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .databaseUser("databaseUser")
+   * .usernamePasswordSecretArn("usernamePasswordSecretArn")
+   * .build())
+   * .clusterIdentifier("clusterIdentifier")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftprovisionedconfiguration.html)
+   */
+  public interface RedshiftProvisionedConfigurationProperty {
+    /**
+     * Specifies configurations for authentication to Amazon Redshift.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftprovisionedconfiguration.html#cfn-bedrock-knowledgebase-redshiftprovisionedconfiguration-authconfiguration)
+     */
+    public fun authConfiguration(): Any
+
+    /**
+     * The ID of the Amazon Redshift cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftprovisionedconfiguration.html#cfn-bedrock-knowledgebase-redshiftprovisionedconfiguration-clusteridentifier)
+     */
+    public fun clusterIdentifier(): String
+
+    /**
+     * A builder for [RedshiftProvisionedConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param authConfiguration Specifies configurations for authentication to Amazon Redshift. 
+       */
+      public fun authConfiguration(authConfiguration: IResolvable)
+
+      /**
+       * @param authConfiguration Specifies configurations for authentication to Amazon Redshift. 
+       */
+      public fun authConfiguration(authConfiguration: RedshiftProvisionedAuthConfigurationProperty)
+
+      /**
+       * @param authConfiguration Specifies configurations for authentication to Amazon Redshift. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("985e9a32797badcef97519710d3c6bd630504a605cee4333279b98399fb79dd4")
+      public
+          fun authConfiguration(authConfiguration: RedshiftProvisionedAuthConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param clusterIdentifier The ID of the Amazon Redshift cluster. 
+       */
+      public fun clusterIdentifier(clusterIdentifier: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftProvisionedConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftProvisionedConfigurationProperty.builder()
+
+      /**
+       * @param authConfiguration Specifies configurations for authentication to Amazon Redshift. 
+       */
+      override fun authConfiguration(authConfiguration: IResolvable) {
+        cdkBuilder.authConfiguration(authConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param authConfiguration Specifies configurations for authentication to Amazon Redshift. 
+       */
+      override
+          fun authConfiguration(authConfiguration: RedshiftProvisionedAuthConfigurationProperty) {
+        cdkBuilder.authConfiguration(authConfiguration.let(RedshiftProvisionedAuthConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param authConfiguration Specifies configurations for authentication to Amazon Redshift. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("985e9a32797badcef97519710d3c6bd630504a605cee4333279b98399fb79dd4")
+      override
+          fun authConfiguration(authConfiguration: RedshiftProvisionedAuthConfigurationProperty.Builder.() -> Unit):
+          Unit = authConfiguration(RedshiftProvisionedAuthConfigurationProperty(authConfiguration))
+
+      /**
+       * @param clusterIdentifier The ID of the Amazon Redshift cluster. 
+       */
+      override fun clusterIdentifier(clusterIdentifier: String) {
+        cdkBuilder.clusterIdentifier(clusterIdentifier)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftProvisionedConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftProvisionedConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        RedshiftProvisionedConfigurationProperty {
+      /**
+       * Specifies configurations for authentication to Amazon Redshift.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftprovisionedconfiguration.html#cfn-bedrock-knowledgebase-redshiftprovisionedconfiguration-authconfiguration)
+       */
+      override fun authConfiguration(): Any = unwrap(this).getAuthConfiguration()
+
+      /**
+       * The ID of the Amazon Redshift cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftprovisionedconfiguration.html#cfn-bedrock-knowledgebase-redshiftprovisionedconfiguration-clusteridentifier)
+       */
+      override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RedshiftProvisionedConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftProvisionedConfigurationProperty):
+          RedshiftProvisionedConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftProvisionedConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftProvisionedConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftProvisionedConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftProvisionedConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains configurations for storage in AWS Glue Data Catalog.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty
+   * redshiftQueryEngineAwsDataCatalogStorageConfigurationProperty =
+   * RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty.builder()
+   * .tableNames(List.of("tableNames"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryengineawsdatacatalogstorageconfiguration.html)
+   */
+  public interface RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty {
+    /**
+     * A list of names of the tables to use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryengineawsdatacatalogstorageconfiguration.html#cfn-bedrock-knowledgebase-redshiftqueryengineawsdatacatalogstorageconfiguration-tablenames)
+     */
+    public fun tableNames(): List<String>
+
+    /**
+     * A builder for [RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param tableNames A list of names of the tables to use. 
+       */
+      public fun tableNames(tableNames: List<String>)
+
+      /**
+       * @param tableNames A list of names of the tables to use. 
+       */
+      public fun tableNames(vararg tableNames: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty.builder()
+
+      /**
+       * @param tableNames A list of names of the tables to use. 
+       */
+      override fun tableNames(tableNames: List<String>) {
+        cdkBuilder.tableNames(tableNames)
+      }
+
+      /**
+       * @param tableNames A list of names of the tables to use. 
+       */
+      override fun tableNames(vararg tableNames: String): Unit = tableNames(tableNames.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty {
+      /**
+       * A list of names of the tables to use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryengineawsdatacatalogstorageconfiguration.html#cfn-bedrock-knowledgebase-redshiftqueryengineawsdatacatalogstorageconfiguration-tablenames)
+       */
+      override fun tableNames(): List<String> = unwrap(this).getTableNames()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty):
+          RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty =
+          CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains configurations for an Amazon Redshift query engine.
+   *
+   * Specify the type of query engine in `type` and include the corresponding field. For more
+   * information, see [Build a knowledge base by connecting to a structured data
+   * source](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-build-structured.html)
+   * in the Amazon Bedrock User Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * RedshiftQueryEngineConfigurationProperty redshiftQueryEngineConfigurationProperty =
+   * RedshiftQueryEngineConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .provisionedConfiguration(RedshiftProvisionedConfigurationProperty.builder()
+   * .authConfiguration(RedshiftProvisionedAuthConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .databaseUser("databaseUser")
+   * .usernamePasswordSecretArn("usernamePasswordSecretArn")
+   * .build())
+   * .clusterIdentifier("clusterIdentifier")
+   * .build())
+   * .serverlessConfiguration(RedshiftServerlessConfigurationProperty.builder()
+   * .authConfiguration(RedshiftServerlessAuthConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .usernamePasswordSecretArn("usernamePasswordSecretArn")
+   * .build())
+   * .workgroupArn("workgroupArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryengineconfiguration.html)
+   */
+  public interface RedshiftQueryEngineConfigurationProperty {
+    /**
+     * Specifies configurations for a provisioned Amazon Redshift query engine.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryengineconfiguration.html#cfn-bedrock-knowledgebase-redshiftqueryengineconfiguration-provisionedconfiguration)
+     */
+    public fun provisionedConfiguration(): Any? = unwrap(this).getProvisionedConfiguration()
+
+    /**
+     * Specifies configurations for a serverless Amazon Redshift query engine.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryengineconfiguration.html#cfn-bedrock-knowledgebase-redshiftqueryengineconfiguration-serverlessconfiguration)
+     */
+    public fun serverlessConfiguration(): Any? = unwrap(this).getServerlessConfiguration()
+
+    /**
+     * The type of query engine.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryengineconfiguration.html#cfn-bedrock-knowledgebase-redshiftqueryengineconfiguration-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [RedshiftQueryEngineConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param provisionedConfiguration Specifies configurations for a provisioned Amazon Redshift
+       * query engine.
+       */
+      public fun provisionedConfiguration(provisionedConfiguration: IResolvable)
+
+      /**
+       * @param provisionedConfiguration Specifies configurations for a provisioned Amazon Redshift
+       * query engine.
+       */
+      public
+          fun provisionedConfiguration(provisionedConfiguration: RedshiftProvisionedConfigurationProperty)
+
+      /**
+       * @param provisionedConfiguration Specifies configurations for a provisioned Amazon Redshift
+       * query engine.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("41fefc4e7648a051d31e7745768162b0ed0261cd46f28c328f795af8fe934c39")
+      public
+          fun provisionedConfiguration(provisionedConfiguration: RedshiftProvisionedConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param serverlessConfiguration Specifies configurations for a serverless Amazon Redshift
+       * query engine.
+       */
+      public fun serverlessConfiguration(serverlessConfiguration: IResolvable)
+
+      /**
+       * @param serverlessConfiguration Specifies configurations for a serverless Amazon Redshift
+       * query engine.
+       */
+      public
+          fun serverlessConfiguration(serverlessConfiguration: RedshiftServerlessConfigurationProperty)
+
+      /**
+       * @param serverlessConfiguration Specifies configurations for a serverless Amazon Redshift
+       * query engine.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ed69b2ada9fc0843376dcdb3a2619c6df61e3ea143ee5accb1bff313307028de")
+      public
+          fun serverlessConfiguration(serverlessConfiguration: RedshiftServerlessConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param type The type of query engine. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineConfigurationProperty.builder()
+
+      /**
+       * @param provisionedConfiguration Specifies configurations for a provisioned Amazon Redshift
+       * query engine.
+       */
+      override fun provisionedConfiguration(provisionedConfiguration: IResolvable) {
+        cdkBuilder.provisionedConfiguration(provisionedConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param provisionedConfiguration Specifies configurations for a provisioned Amazon Redshift
+       * query engine.
+       */
+      override
+          fun provisionedConfiguration(provisionedConfiguration: RedshiftProvisionedConfigurationProperty) {
+        cdkBuilder.provisionedConfiguration(provisionedConfiguration.let(RedshiftProvisionedConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param provisionedConfiguration Specifies configurations for a provisioned Amazon Redshift
+       * query engine.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("41fefc4e7648a051d31e7745768162b0ed0261cd46f28c328f795af8fe934c39")
+      override
+          fun provisionedConfiguration(provisionedConfiguration: RedshiftProvisionedConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          provisionedConfiguration(RedshiftProvisionedConfigurationProperty(provisionedConfiguration))
+
+      /**
+       * @param serverlessConfiguration Specifies configurations for a serverless Amazon Redshift
+       * query engine.
+       */
+      override fun serverlessConfiguration(serverlessConfiguration: IResolvable) {
+        cdkBuilder.serverlessConfiguration(serverlessConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param serverlessConfiguration Specifies configurations for a serverless Amazon Redshift
+       * query engine.
+       */
+      override
+          fun serverlessConfiguration(serverlessConfiguration: RedshiftServerlessConfigurationProperty) {
+        cdkBuilder.serverlessConfiguration(serverlessConfiguration.let(RedshiftServerlessConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param serverlessConfiguration Specifies configurations for a serverless Amazon Redshift
+       * query engine.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ed69b2ada9fc0843376dcdb3a2619c6df61e3ea143ee5accb1bff313307028de")
+      override
+          fun serverlessConfiguration(serverlessConfiguration: RedshiftServerlessConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          serverlessConfiguration(RedshiftServerlessConfigurationProperty(serverlessConfiguration))
+
+      /**
+       * @param type The type of query engine. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        RedshiftQueryEngineConfigurationProperty {
+      /**
+       * Specifies configurations for a provisioned Amazon Redshift query engine.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryengineconfiguration.html#cfn-bedrock-knowledgebase-redshiftqueryengineconfiguration-provisionedconfiguration)
+       */
+      override fun provisionedConfiguration(): Any? = unwrap(this).getProvisionedConfiguration()
+
+      /**
+       * Specifies configurations for a serverless Amazon Redshift query engine.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryengineconfiguration.html#cfn-bedrock-knowledgebase-redshiftqueryengineconfiguration-serverlessconfiguration)
+       */
+      override fun serverlessConfiguration(): Any? = unwrap(this).getServerlessConfiguration()
+
+      /**
+       * The type of query engine.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryengineconfiguration.html#cfn-bedrock-knowledgebase-redshiftqueryengineconfiguration-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RedshiftQueryEngineConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineConfigurationProperty):
+          RedshiftQueryEngineConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftQueryEngineConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftQueryEngineConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains configurations for storage in Amazon Redshift.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * RedshiftQueryEngineRedshiftStorageConfigurationProperty
+   * redshiftQueryEngineRedshiftStorageConfigurationProperty =
+   * RedshiftQueryEngineRedshiftStorageConfigurationProperty.builder()
+   * .databaseName("databaseName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryengineredshiftstorageconfiguration.html)
+   */
+  public interface RedshiftQueryEngineRedshiftStorageConfigurationProperty {
+    /**
+     * The name of the Amazon Redshift database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryengineredshiftstorageconfiguration.html#cfn-bedrock-knowledgebase-redshiftqueryengineredshiftstorageconfiguration-databasename)
+     */
+    public fun databaseName(): String
+
+    /**
+     * A builder for [RedshiftQueryEngineRedshiftStorageConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param databaseName The name of the Amazon Redshift database. 
+       */
+      public fun databaseName(databaseName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineRedshiftStorageConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineRedshiftStorageConfigurationProperty.builder()
+
+      /**
+       * @param databaseName The name of the Amazon Redshift database. 
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineRedshiftStorageConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineRedshiftStorageConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        RedshiftQueryEngineRedshiftStorageConfigurationProperty {
+      /**
+       * The name of the Amazon Redshift database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryengineredshiftstorageconfiguration.html#cfn-bedrock-knowledgebase-redshiftqueryengineredshiftstorageconfiguration-databasename)
+       */
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RedshiftQueryEngineRedshiftStorageConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineRedshiftStorageConfigurationProperty):
+          RedshiftQueryEngineRedshiftStorageConfigurationProperty =
+          CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftQueryEngineRedshiftStorageConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftQueryEngineRedshiftStorageConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineRedshiftStorageConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineRedshiftStorageConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains configurations for Amazon Redshift data storage.
+   *
+   * Specify the data storage service to use in the `type` field and include the corresponding
+   * field. For more information, see [Build a knowledge base by connecting to a structured data
+   * source](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-build-structured.html)
+   * in the Amazon Bedrock User Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * RedshiftQueryEngineStorageConfigurationProperty redshiftQueryEngineStorageConfigurationProperty
+   * = RedshiftQueryEngineStorageConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .awsDataCatalogConfiguration(RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty.builder()
+   * .tableNames(List.of("tableNames"))
+   * .build())
+   * .redshiftConfiguration(RedshiftQueryEngineRedshiftStorageConfigurationProperty.builder()
+   * .databaseName("databaseName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryenginestorageconfiguration.html)
+   */
+  public interface RedshiftQueryEngineStorageConfigurationProperty {
+    /**
+     * Specifies configurations for storage in AWS Glue Data Catalog.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryenginestorageconfiguration.html#cfn-bedrock-knowledgebase-redshiftqueryenginestorageconfiguration-awsdatacatalogconfiguration)
+     */
+    public fun awsDataCatalogConfiguration(): Any? = unwrap(this).getAwsDataCatalogConfiguration()
+
+    /**
+     * Specifies configurations for storage in Amazon Redshift.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryenginestorageconfiguration.html#cfn-bedrock-knowledgebase-redshiftqueryenginestorageconfiguration-redshiftconfiguration)
+     */
+    public fun redshiftConfiguration(): Any? = unwrap(this).getRedshiftConfiguration()
+
+    /**
+     * The data storage service to use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryenginestorageconfiguration.html#cfn-bedrock-knowledgebase-redshiftqueryenginestorageconfiguration-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [RedshiftQueryEngineStorageConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param awsDataCatalogConfiguration Specifies configurations for storage in AWS Glue Data
+       * Catalog.
+       */
+      public fun awsDataCatalogConfiguration(awsDataCatalogConfiguration: IResolvable)
+
+      /**
+       * @param awsDataCatalogConfiguration Specifies configurations for storage in AWS Glue Data
+       * Catalog.
+       */
+      public
+          fun awsDataCatalogConfiguration(awsDataCatalogConfiguration: RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty)
+
+      /**
+       * @param awsDataCatalogConfiguration Specifies configurations for storage in AWS Glue Data
+       * Catalog.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("041edbd99819672453fd89ab66c05a9768e7eb43506affcd764f1161105e224c")
+      public
+          fun awsDataCatalogConfiguration(awsDataCatalogConfiguration: RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param redshiftConfiguration Specifies configurations for storage in Amazon Redshift.
+       */
+      public fun redshiftConfiguration(redshiftConfiguration: IResolvable)
+
+      /**
+       * @param redshiftConfiguration Specifies configurations for storage in Amazon Redshift.
+       */
+      public
+          fun redshiftConfiguration(redshiftConfiguration: RedshiftQueryEngineRedshiftStorageConfigurationProperty)
+
+      /**
+       * @param redshiftConfiguration Specifies configurations for storage in Amazon Redshift.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("59821c61a9ea256ed7ce2dfaccf407eb185f67e9e663b481eb1309982e41a1c0")
+      public
+          fun redshiftConfiguration(redshiftConfiguration: RedshiftQueryEngineRedshiftStorageConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param type The data storage service to use. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineStorageConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineStorageConfigurationProperty.builder()
+
+      /**
+       * @param awsDataCatalogConfiguration Specifies configurations for storage in AWS Glue Data
+       * Catalog.
+       */
+      override fun awsDataCatalogConfiguration(awsDataCatalogConfiguration: IResolvable) {
+        cdkBuilder.awsDataCatalogConfiguration(awsDataCatalogConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param awsDataCatalogConfiguration Specifies configurations for storage in AWS Glue Data
+       * Catalog.
+       */
+      override
+          fun awsDataCatalogConfiguration(awsDataCatalogConfiguration: RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty) {
+        cdkBuilder.awsDataCatalogConfiguration(awsDataCatalogConfiguration.let(RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param awsDataCatalogConfiguration Specifies configurations for storage in AWS Glue Data
+       * Catalog.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("041edbd99819672453fd89ab66c05a9768e7eb43506affcd764f1161105e224c")
+      override
+          fun awsDataCatalogConfiguration(awsDataCatalogConfiguration: RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          awsDataCatalogConfiguration(RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty(awsDataCatalogConfiguration))
+
+      /**
+       * @param redshiftConfiguration Specifies configurations for storage in Amazon Redshift.
+       */
+      override fun redshiftConfiguration(redshiftConfiguration: IResolvable) {
+        cdkBuilder.redshiftConfiguration(redshiftConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param redshiftConfiguration Specifies configurations for storage in Amazon Redshift.
+       */
+      override
+          fun redshiftConfiguration(redshiftConfiguration: RedshiftQueryEngineRedshiftStorageConfigurationProperty) {
+        cdkBuilder.redshiftConfiguration(redshiftConfiguration.let(RedshiftQueryEngineRedshiftStorageConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param redshiftConfiguration Specifies configurations for storage in Amazon Redshift.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("59821c61a9ea256ed7ce2dfaccf407eb185f67e9e663b481eb1309982e41a1c0")
+      override
+          fun redshiftConfiguration(redshiftConfiguration: RedshiftQueryEngineRedshiftStorageConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          redshiftConfiguration(RedshiftQueryEngineRedshiftStorageConfigurationProperty(redshiftConfiguration))
+
+      /**
+       * @param type The data storage service to use. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineStorageConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineStorageConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        RedshiftQueryEngineStorageConfigurationProperty {
+      /**
+       * Specifies configurations for storage in AWS Glue Data Catalog.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryenginestorageconfiguration.html#cfn-bedrock-knowledgebase-redshiftqueryenginestorageconfiguration-awsdatacatalogconfiguration)
+       */
+      override fun awsDataCatalogConfiguration(): Any? =
+          unwrap(this).getAwsDataCatalogConfiguration()
+
+      /**
+       * Specifies configurations for storage in Amazon Redshift.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryenginestorageconfiguration.html#cfn-bedrock-knowledgebase-redshiftqueryenginestorageconfiguration-redshiftconfiguration)
+       */
+      override fun redshiftConfiguration(): Any? = unwrap(this).getRedshiftConfiguration()
+
+      /**
+       * The data storage service to use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftqueryenginestorageconfiguration.html#cfn-bedrock-knowledgebase-redshiftqueryenginestorageconfiguration-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RedshiftQueryEngineStorageConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineStorageConfigurationProperty):
+          RedshiftQueryEngineStorageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftQueryEngineStorageConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftQueryEngineStorageConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineStorageConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftQueryEngineStorageConfigurationProperty
+    }
+  }
+
+  /**
+   * Specifies configurations for authentication to a Redshift Serverless.
+   *
+   * Specify the type of authentication to use in the `type` field and include the corresponding
+   * field. If you specify IAM authentication, you don't need to include another field.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * RedshiftServerlessAuthConfigurationProperty redshiftServerlessAuthConfigurationProperty =
+   * RedshiftServerlessAuthConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .usernamePasswordSecretArn("usernamePasswordSecretArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftserverlessauthconfiguration.html)
+   */
+  public interface RedshiftServerlessAuthConfigurationProperty {
+    /**
+     * The type of authentication to use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftserverlessauthconfiguration.html#cfn-bedrock-knowledgebase-redshiftserverlessauthconfiguration-type)
+     */
+    public fun type(): String
+
+    /**
+     * The ARN of an Secrets Manager secret for authentication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftserverlessauthconfiguration.html#cfn-bedrock-knowledgebase-redshiftserverlessauthconfiguration-usernamepasswordsecretarn)
+     */
+    public fun usernamePasswordSecretArn(): String? = unwrap(this).getUsernamePasswordSecretArn()
+
+    /**
+     * A builder for [RedshiftServerlessAuthConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type The type of authentication to use. 
+       */
+      public fun type(type: String)
+
+      /**
+       * @param usernamePasswordSecretArn The ARN of an Secrets Manager secret for authentication.
+       */
+      public fun usernamePasswordSecretArn(usernamePasswordSecretArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftServerlessAuthConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftServerlessAuthConfigurationProperty.builder()
+
+      /**
+       * @param type The type of authentication to use. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param usernamePasswordSecretArn The ARN of an Secrets Manager secret for authentication.
+       */
+      override fun usernamePasswordSecretArn(usernamePasswordSecretArn: String) {
+        cdkBuilder.usernamePasswordSecretArn(usernamePasswordSecretArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftServerlessAuthConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftServerlessAuthConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        RedshiftServerlessAuthConfigurationProperty {
+      /**
+       * The type of authentication to use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftserverlessauthconfiguration.html#cfn-bedrock-knowledgebase-redshiftserverlessauthconfiguration-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+
+      /**
+       * The ARN of an Secrets Manager secret for authentication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftserverlessauthconfiguration.html#cfn-bedrock-knowledgebase-redshiftserverlessauthconfiguration-usernamepasswordsecretarn)
+       */
+      override fun usernamePasswordSecretArn(): String? =
+          unwrap(this).getUsernamePasswordSecretArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RedshiftServerlessAuthConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftServerlessAuthConfigurationProperty):
+          RedshiftServerlessAuthConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftServerlessAuthConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftServerlessAuthConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftServerlessAuthConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftServerlessAuthConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains configurations for authentication to Amazon Redshift Serverless.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * RedshiftServerlessConfigurationProperty redshiftServerlessConfigurationProperty =
+   * RedshiftServerlessConfigurationProperty.builder()
+   * .authConfiguration(RedshiftServerlessAuthConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .usernamePasswordSecretArn("usernamePasswordSecretArn")
+   * .build())
+   * .workgroupArn("workgroupArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftserverlessconfiguration.html)
+   */
+  public interface RedshiftServerlessConfigurationProperty {
+    /**
+     * Specifies configurations for authentication to an Amazon Redshift provisioned data warehouse.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftserverlessconfiguration.html#cfn-bedrock-knowledgebase-redshiftserverlessconfiguration-authconfiguration)
+     */
+    public fun authConfiguration(): Any
+
+    /**
+     * The ARN of the Amazon Redshift workgroup.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftserverlessconfiguration.html#cfn-bedrock-knowledgebase-redshiftserverlessconfiguration-workgrouparn)
+     */
+    public fun workgroupArn(): String
+
+    /**
+     * A builder for [RedshiftServerlessConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param authConfiguration Specifies configurations for authentication to an Amazon Redshift
+       * provisioned data warehouse. 
+       */
+      public fun authConfiguration(authConfiguration: IResolvable)
+
+      /**
+       * @param authConfiguration Specifies configurations for authentication to an Amazon Redshift
+       * provisioned data warehouse. 
+       */
+      public fun authConfiguration(authConfiguration: RedshiftServerlessAuthConfigurationProperty)
+
+      /**
+       * @param authConfiguration Specifies configurations for authentication to an Amazon Redshift
+       * provisioned data warehouse. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ada3e80d40167959339dbc77e07a8b167e52d5be8442fd3ee6238a1571ce833e")
+      public
+          fun authConfiguration(authConfiguration: RedshiftServerlessAuthConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param workgroupArn The ARN of the Amazon Redshift workgroup. 
+       */
+      public fun workgroupArn(workgroupArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftServerlessConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftServerlessConfigurationProperty.builder()
+
+      /**
+       * @param authConfiguration Specifies configurations for authentication to an Amazon Redshift
+       * provisioned data warehouse. 
+       */
+      override fun authConfiguration(authConfiguration: IResolvable) {
+        cdkBuilder.authConfiguration(authConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param authConfiguration Specifies configurations for authentication to an Amazon Redshift
+       * provisioned data warehouse. 
+       */
+      override
+          fun authConfiguration(authConfiguration: RedshiftServerlessAuthConfigurationProperty) {
+        cdkBuilder.authConfiguration(authConfiguration.let(RedshiftServerlessAuthConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param authConfiguration Specifies configurations for authentication to an Amazon Redshift
+       * provisioned data warehouse. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ada3e80d40167959339dbc77e07a8b167e52d5be8442fd3ee6238a1571ce833e")
+      override
+          fun authConfiguration(authConfiguration: RedshiftServerlessAuthConfigurationProperty.Builder.() -> Unit):
+          Unit = authConfiguration(RedshiftServerlessAuthConfigurationProperty(authConfiguration))
+
+      /**
+       * @param workgroupArn The ARN of the Amazon Redshift workgroup. 
+       */
+      override fun workgroupArn(workgroupArn: String) {
+        cdkBuilder.workgroupArn(workgroupArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftServerlessConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftServerlessConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        RedshiftServerlessConfigurationProperty {
+      /**
+       * Specifies configurations for authentication to an Amazon Redshift provisioned data
+       * warehouse.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftserverlessconfiguration.html#cfn-bedrock-knowledgebase-redshiftserverlessconfiguration-authconfiguration)
+       */
+      override fun authConfiguration(): Any = unwrap(this).getAuthConfiguration()
+
+      /**
+       * The ARN of the Amazon Redshift workgroup.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-redshiftserverlessconfiguration.html#cfn-bedrock-knowledgebase-redshiftserverlessconfiguration-workgrouparn)
+       */
+      override fun workgroupArn(): String = unwrap(this).getWorkgroupArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RedshiftServerlessConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftServerlessConfigurationProperty):
+          RedshiftServerlessConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftServerlessConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftServerlessConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftServerlessConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RedshiftServerlessConfigurationProperty
+    }
+  }
+
+  /**
+   * A storage location in an Amazon S3 bucket.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
+   * .uri("uri")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-s3location.html)
+   */
+  public interface S3LocationProperty {
+    /**
+     * An object URI starting with `s3://` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-s3location.html#cfn-bedrock-knowledgebase-s3location-uri)
+     */
+    public fun uri(): String
+
+    /**
+     * A builder for [S3LocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param uri An object URI starting with `s3://` . 
+       */
+      public fun uri(uri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.S3LocationProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.S3LocationProperty.builder()
+
+      /**
+       * @param uri An object URI starting with `s3://` . 
+       */
+      override fun uri(uri: String) {
+        cdkBuilder.uri(uri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.S3LocationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.S3LocationProperty,
+    ) : CdkObject(cdkObject),
+        S3LocationProperty {
+      /**
+       * An object URI starting with `s3://` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-s3location.html#cfn-bedrock-knowledgebase-s3location-uri)
+       */
+      override fun uri(): String = unwrap(this).getUri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.S3LocationProperty):
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3LocationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.S3LocationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.S3LocationProperty
+    }
+  }
+
+  /**
+   * Contains configurations for a knowledge base connected to an SQL database.
+   *
+   * Specify the SQL database type in the `type` field and include the corresponding field. For more
+   * information, see [Build a knowledge base by connecting to a structured data
+   * source](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-build-structured.html)
+   * in the Amazon Bedrock User Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * SqlKnowledgeBaseConfigurationProperty sqlKnowledgeBaseConfigurationProperty =
+   * SqlKnowledgeBaseConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .redshiftConfiguration(RedshiftConfigurationProperty.builder()
+   * .queryEngineConfiguration(RedshiftQueryEngineConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .provisionedConfiguration(RedshiftProvisionedConfigurationProperty.builder()
+   * .authConfiguration(RedshiftProvisionedAuthConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .databaseUser("databaseUser")
+   * .usernamePasswordSecretArn("usernamePasswordSecretArn")
+   * .build())
+   * .clusterIdentifier("clusterIdentifier")
+   * .build())
+   * .serverlessConfiguration(RedshiftServerlessConfigurationProperty.builder()
+   * .authConfiguration(RedshiftServerlessAuthConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .usernamePasswordSecretArn("usernamePasswordSecretArn")
+   * .build())
+   * .workgroupArn("workgroupArn")
+   * .build())
+   * .build())
+   * .storageConfigurations(List.of(RedshiftQueryEngineStorageConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .awsDataCatalogConfiguration(RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty.builder()
+   * .tableNames(List.of("tableNames"))
+   * .build())
+   * .redshiftConfiguration(RedshiftQueryEngineRedshiftStorageConfigurationProperty.builder()
+   * .databaseName("databaseName")
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .queryGenerationConfiguration(QueryGenerationConfigurationProperty.builder()
+   * .executionTimeoutSeconds(123)
+   * .generationContext(QueryGenerationContextProperty.builder()
+   * .curatedQueries(List.of(CuratedQueryProperty.builder()
+   * .naturalLanguage("naturalLanguage")
+   * .sql("sql")
+   * .build()))
+   * .tables(List.of(QueryGenerationTableProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .columns(List.of(QueryGenerationColumnProperty.builder()
+   * .description("description")
+   * .inclusion("inclusion")
+   * .name("name")
+   * .build()))
+   * .description("description")
+   * .inclusion("inclusion")
+   * .build()))
+   * .build())
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-sqlknowledgebaseconfiguration.html)
+   */
+  public interface SqlKnowledgeBaseConfigurationProperty {
+    /**
+     * Specifies configurations for a knowledge base connected to an Amazon Redshift database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-sqlknowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-sqlknowledgebaseconfiguration-redshiftconfiguration)
+     */
+    public fun redshiftConfiguration(): Any? = unwrap(this).getRedshiftConfiguration()
+
+    /**
+     * The type of SQL database to connect to the knowledge base.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-sqlknowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-sqlknowledgebaseconfiguration-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [SqlKnowledgeBaseConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param redshiftConfiguration Specifies configurations for a knowledge base connected to an
+       * Amazon Redshift database.
+       */
+      public fun redshiftConfiguration(redshiftConfiguration: IResolvable)
+
+      /**
+       * @param redshiftConfiguration Specifies configurations for a knowledge base connected to an
+       * Amazon Redshift database.
+       */
+      public fun redshiftConfiguration(redshiftConfiguration: RedshiftConfigurationProperty)
+
+      /**
+       * @param redshiftConfiguration Specifies configurations for a knowledge base connected to an
+       * Amazon Redshift database.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("825e30ad72b27311b7272a7ec2be176b77b48812a74ff28d6254941172f40c59")
+      public
+          fun redshiftConfiguration(redshiftConfiguration: RedshiftConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param type The type of SQL database to connect to the knowledge base. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SqlKnowledgeBaseConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SqlKnowledgeBaseConfigurationProperty.builder()
+
+      /**
+       * @param redshiftConfiguration Specifies configurations for a knowledge base connected to an
+       * Amazon Redshift database.
+       */
+      override fun redshiftConfiguration(redshiftConfiguration: IResolvable) {
+        cdkBuilder.redshiftConfiguration(redshiftConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param redshiftConfiguration Specifies configurations for a knowledge base connected to an
+       * Amazon Redshift database.
+       */
+      override fun redshiftConfiguration(redshiftConfiguration: RedshiftConfigurationProperty) {
+        cdkBuilder.redshiftConfiguration(redshiftConfiguration.let(RedshiftConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param redshiftConfiguration Specifies configurations for a knowledge base connected to an
+       * Amazon Redshift database.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("825e30ad72b27311b7272a7ec2be176b77b48812a74ff28d6254941172f40c59")
+      override
+          fun redshiftConfiguration(redshiftConfiguration: RedshiftConfigurationProperty.Builder.() -> Unit):
+          Unit = redshiftConfiguration(RedshiftConfigurationProperty(redshiftConfiguration))
+
+      /**
+       * @param type The type of SQL database to connect to the knowledge base. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SqlKnowledgeBaseConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SqlKnowledgeBaseConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        SqlKnowledgeBaseConfigurationProperty {
+      /**
+       * Specifies configurations for a knowledge base connected to an Amazon Redshift database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-sqlknowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-sqlknowledgebaseconfiguration-redshiftconfiguration)
+       */
+      override fun redshiftConfiguration(): Any? = unwrap(this).getRedshiftConfiguration()
+
+      /**
+       * The type of SQL database to connect to the knowledge base.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-sqlknowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-sqlknowledgebaseconfiguration-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SqlKnowledgeBaseConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SqlKnowledgeBaseConfigurationProperty):
+          SqlKnowledgeBaseConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SqlKnowledgeBaseConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SqlKnowledgeBaseConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SqlKnowledgeBaseConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SqlKnowledgeBaseConfigurationProperty
+    }
+  }
+
+  /**
    * Contains the storage configuration of the knowledge base.
    *
    * Example:
@@ -2024,6 +6225,38 @@ public open class CfnKnowledgeBase(
    * StorageConfigurationProperty.builder()
    * .type("type")
    * // the properties below are optional
+   * .mongoDbAtlasConfiguration(MongoDbAtlasConfigurationProperty.builder()
+   * .collectionName("collectionName")
+   * .credentialsSecretArn("credentialsSecretArn")
+   * .databaseName("databaseName")
+   * .endpoint("endpoint")
+   * .fieldMapping(MongoDbAtlasFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .textField("textField")
+   * .vectorField("vectorField")
+   * .build())
+   * .vectorIndexName("vectorIndexName")
+   * // the properties below are optional
+   * .endpointServiceName("endpointServiceName")
+   * .textIndexName("textIndexName")
+   * .build())
+   * .neptuneAnalyticsConfiguration(NeptuneAnalyticsConfigurationProperty.builder()
+   * .fieldMapping(NeptuneAnalyticsFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .textField("textField")
+   * .build())
+   * .graphArn("graphArn")
+   * .build())
+   * .opensearchManagedClusterConfiguration(OpenSearchManagedClusterConfigurationProperty.builder()
+   * .domainArn("domainArn")
+   * .domainEndpoint("domainEndpoint")
+   * .fieldMapping(OpenSearchManagedClusterFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .textField("textField")
+   * .vectorField("vectorField")
+   * .build())
+   * .vectorIndexName("vectorIndexName")
+   * .build())
    * .opensearchServerlessConfiguration(OpenSearchServerlessConfigurationProperty.builder()
    * .collectionArn("collectionArn")
    * .fieldMapping(OpenSearchServerlessFieldMappingProperty.builder()
@@ -2051,6 +6284,8 @@ public open class CfnKnowledgeBase(
    * .primaryKeyField("primaryKeyField")
    * .textField("textField")
    * .vectorField("vectorField")
+   * // the properties below are optional
+   * .customMetadataField("customMetadataField")
    * .build())
    * .resourceArn("resourceArn")
    * .tableName("tableName")
@@ -2061,6 +6296,38 @@ public open class CfnKnowledgeBase(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html)
    */
   public interface StorageConfigurationProperty {
+    /**
+     * Contains the storage configuration of the knowledge base in MongoDB Atlas.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-mongodbatlasconfiguration)
+     */
+    public fun mongoDbAtlasConfiguration(): Any? = unwrap(this).getMongoDbAtlasConfiguration()
+
+    /**
+     * Contains details about the Neptune Analytics configuration of the knowledge base in Amazon
+     * Neptune.
+     *
+     * For more information, see [Create a vector index in Amazon Neptune
+     * Analytics.](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-neptune.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-neptuneanalyticsconfiguration)
+     */
+    public fun neptuneAnalyticsConfiguration(): Any? =
+        unwrap(this).getNeptuneAnalyticsConfiguration()
+
+    /**
+     * Contains details about the storage configuration of the knowledge base in OpenSearch Managed
+     * Cluster.
+     *
+     * For more information, see [Create a vector index in Amazon OpenSearch
+     * Service](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-osm.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-opensearchmanagedclusterconfiguration)
+     */
+    public fun opensearchManagedClusterConfiguration(): Any? =
+        unwrap(this).getOpensearchManagedClusterConfiguration()
+
     /**
      * Contains the storage configuration of the knowledge base in Amazon OpenSearch Service.
      *
@@ -2098,6 +6365,88 @@ public open class CfnKnowledgeBase(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param mongoDbAtlasConfiguration Contains the storage configuration of the knowledge base
+       * in MongoDB Atlas.
+       */
+      public fun mongoDbAtlasConfiguration(mongoDbAtlasConfiguration: IResolvable)
+
+      /**
+       * @param mongoDbAtlasConfiguration Contains the storage configuration of the knowledge base
+       * in MongoDB Atlas.
+       */
+      public
+          fun mongoDbAtlasConfiguration(mongoDbAtlasConfiguration: MongoDbAtlasConfigurationProperty)
+
+      /**
+       * @param mongoDbAtlasConfiguration Contains the storage configuration of the knowledge base
+       * in MongoDB Atlas.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e6ae595b02f6f6f81cda37dfd1cd5cf522f9458cdd2191d2f9f10ecb6ceba4fc")
+      public
+          fun mongoDbAtlasConfiguration(mongoDbAtlasConfiguration: MongoDbAtlasConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param neptuneAnalyticsConfiguration Contains details about the Neptune Analytics
+       * configuration of the knowledge base in Amazon Neptune.
+       * For more information, see [Create a vector index in Amazon Neptune
+       * Analytics.](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-neptune.html)
+       * .
+       */
+      public fun neptuneAnalyticsConfiguration(neptuneAnalyticsConfiguration: IResolvable)
+
+      /**
+       * @param neptuneAnalyticsConfiguration Contains details about the Neptune Analytics
+       * configuration of the knowledge base in Amazon Neptune.
+       * For more information, see [Create a vector index in Amazon Neptune
+       * Analytics.](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-neptune.html)
+       * .
+       */
+      public
+          fun neptuneAnalyticsConfiguration(neptuneAnalyticsConfiguration: NeptuneAnalyticsConfigurationProperty)
+
+      /**
+       * @param neptuneAnalyticsConfiguration Contains details about the Neptune Analytics
+       * configuration of the knowledge base in Amazon Neptune.
+       * For more information, see [Create a vector index in Amazon Neptune
+       * Analytics.](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-neptune.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("763f7690489e64dc0e4eeffda3aa488534ab7c2a519c277e27d43d912674691b")
+      public
+          fun neptuneAnalyticsConfiguration(neptuneAnalyticsConfiguration: NeptuneAnalyticsConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param opensearchManagedClusterConfiguration Contains details about the storage
+       * configuration of the knowledge base in OpenSearch Managed Cluster.
+       * For more information, see [Create a vector index in Amazon OpenSearch
+       * Service](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-osm.html) .
+       */
+      public
+          fun opensearchManagedClusterConfiguration(opensearchManagedClusterConfiguration: IResolvable)
+
+      /**
+       * @param opensearchManagedClusterConfiguration Contains details about the storage
+       * configuration of the knowledge base in OpenSearch Managed Cluster.
+       * For more information, see [Create a vector index in Amazon OpenSearch
+       * Service](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-osm.html) .
+       */
+      public
+          fun opensearchManagedClusterConfiguration(opensearchManagedClusterConfiguration: OpenSearchManagedClusterConfigurationProperty)
+
+      /**
+       * @param opensearchManagedClusterConfiguration Contains details about the storage
+       * configuration of the knowledge base in OpenSearch Managed Cluster.
+       * For more information, see [Create a vector index in Amazon OpenSearch
+       * Service](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-osm.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bf19db16b275beeb23609d110d1fd904465157a61ca78b2be29f5ebd979cce8d")
+      public
+          fun opensearchManagedClusterConfiguration(opensearchManagedClusterConfiguration: OpenSearchManagedClusterConfigurationProperty.Builder.() -> Unit)
+
       /**
        * @param opensearchServerlessConfiguration Contains the storage configuration of the
        * knowledge base in Amazon OpenSearch Service.
@@ -2178,6 +6527,106 @@ public open class CfnKnowledgeBase(
           software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.StorageConfigurationProperty.Builder
           =
           software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.StorageConfigurationProperty.builder()
+
+      /**
+       * @param mongoDbAtlasConfiguration Contains the storage configuration of the knowledge base
+       * in MongoDB Atlas.
+       */
+      override fun mongoDbAtlasConfiguration(mongoDbAtlasConfiguration: IResolvable) {
+        cdkBuilder.mongoDbAtlasConfiguration(mongoDbAtlasConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param mongoDbAtlasConfiguration Contains the storage configuration of the knowledge base
+       * in MongoDB Atlas.
+       */
+      override
+          fun mongoDbAtlasConfiguration(mongoDbAtlasConfiguration: MongoDbAtlasConfigurationProperty) {
+        cdkBuilder.mongoDbAtlasConfiguration(mongoDbAtlasConfiguration.let(MongoDbAtlasConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param mongoDbAtlasConfiguration Contains the storage configuration of the knowledge base
+       * in MongoDB Atlas.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e6ae595b02f6f6f81cda37dfd1cd5cf522f9458cdd2191d2f9f10ecb6ceba4fc")
+      override
+          fun mongoDbAtlasConfiguration(mongoDbAtlasConfiguration: MongoDbAtlasConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          mongoDbAtlasConfiguration(MongoDbAtlasConfigurationProperty(mongoDbAtlasConfiguration))
+
+      /**
+       * @param neptuneAnalyticsConfiguration Contains details about the Neptune Analytics
+       * configuration of the knowledge base in Amazon Neptune.
+       * For more information, see [Create a vector index in Amazon Neptune
+       * Analytics.](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-neptune.html)
+       * .
+       */
+      override fun neptuneAnalyticsConfiguration(neptuneAnalyticsConfiguration: IResolvable) {
+        cdkBuilder.neptuneAnalyticsConfiguration(neptuneAnalyticsConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param neptuneAnalyticsConfiguration Contains details about the Neptune Analytics
+       * configuration of the knowledge base in Amazon Neptune.
+       * For more information, see [Create a vector index in Amazon Neptune
+       * Analytics.](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-neptune.html)
+       * .
+       */
+      override
+          fun neptuneAnalyticsConfiguration(neptuneAnalyticsConfiguration: NeptuneAnalyticsConfigurationProperty) {
+        cdkBuilder.neptuneAnalyticsConfiguration(neptuneAnalyticsConfiguration.let(NeptuneAnalyticsConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param neptuneAnalyticsConfiguration Contains details about the Neptune Analytics
+       * configuration of the knowledge base in Amazon Neptune.
+       * For more information, see [Create a vector index in Amazon Neptune
+       * Analytics.](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-neptune.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("763f7690489e64dc0e4eeffda3aa488534ab7c2a519c277e27d43d912674691b")
+      override
+          fun neptuneAnalyticsConfiguration(neptuneAnalyticsConfiguration: NeptuneAnalyticsConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          neptuneAnalyticsConfiguration(NeptuneAnalyticsConfigurationProperty(neptuneAnalyticsConfiguration))
+
+      /**
+       * @param opensearchManagedClusterConfiguration Contains details about the storage
+       * configuration of the knowledge base in OpenSearch Managed Cluster.
+       * For more information, see [Create a vector index in Amazon OpenSearch
+       * Service](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-osm.html) .
+       */
+      override
+          fun opensearchManagedClusterConfiguration(opensearchManagedClusterConfiguration: IResolvable) {
+        cdkBuilder.opensearchManagedClusterConfiguration(opensearchManagedClusterConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param opensearchManagedClusterConfiguration Contains details about the storage
+       * configuration of the knowledge base in OpenSearch Managed Cluster.
+       * For more information, see [Create a vector index in Amazon OpenSearch
+       * Service](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-osm.html) .
+       */
+      override
+          fun opensearchManagedClusterConfiguration(opensearchManagedClusterConfiguration: OpenSearchManagedClusterConfigurationProperty) {
+        cdkBuilder.opensearchManagedClusterConfiguration(opensearchManagedClusterConfiguration.let(OpenSearchManagedClusterConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param opensearchManagedClusterConfiguration Contains details about the storage
+       * configuration of the knowledge base in OpenSearch Managed Cluster.
+       * For more information, see [Create a vector index in Amazon OpenSearch
+       * Service](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-osm.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bf19db16b275beeb23609d110d1fd904465157a61ca78b2be29f5ebd979cce8d")
+      override
+          fun opensearchManagedClusterConfiguration(opensearchManagedClusterConfiguration: OpenSearchManagedClusterConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          opensearchManagedClusterConfiguration(OpenSearchManagedClusterConfigurationProperty(opensearchManagedClusterConfiguration))
 
       /**
        * @param opensearchServerlessConfiguration Contains the storage configuration of the
@@ -2282,6 +6731,38 @@ public open class CfnKnowledgeBase(
     ) : CdkObject(cdkObject),
         StorageConfigurationProperty {
       /**
+       * Contains the storage configuration of the knowledge base in MongoDB Atlas.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-mongodbatlasconfiguration)
+       */
+      override fun mongoDbAtlasConfiguration(): Any? = unwrap(this).getMongoDbAtlasConfiguration()
+
+      /**
+       * Contains details about the Neptune Analytics configuration of the knowledge base in Amazon
+       * Neptune.
+       *
+       * For more information, see [Create a vector index in Amazon Neptune
+       * Analytics.](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-neptune.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-neptuneanalyticsconfiguration)
+       */
+      override fun neptuneAnalyticsConfiguration(): Any? =
+          unwrap(this).getNeptuneAnalyticsConfiguration()
+
+      /**
+       * Contains details about the storage configuration of the knowledge base in OpenSearch
+       * Managed Cluster.
+       *
+       * For more information, see [Create a vector index in Amazon OpenSearch
+       * Service](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-osm.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-opensearchmanagedclusterconfiguration)
+       */
+      override fun opensearchManagedClusterConfiguration(): Any? =
+          unwrap(this).getOpensearchManagedClusterConfiguration()
+
+      /**
        * Contains the storage configuration of the knowledge base in Amazon OpenSearch Service.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-opensearchserverlessconfiguration)
@@ -2333,6 +6814,275 @@ public open class CfnKnowledgeBase(
   }
 
   /**
+   * Specifies configurations for the storage location of the images extracted from multimodal
+   * documents in your data source.
+   *
+   * These images can be retrieved and returned to the end user.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * SupplementalDataStorageConfigurationProperty supplementalDataStorageConfigurationProperty =
+   * SupplementalDataStorageConfigurationProperty.builder()
+   * .supplementalDataStorageLocations(List.of(SupplementalDataStorageLocationProperty.builder()
+   * .supplementalDataStorageLocationType("supplementalDataStorageLocationType")
+   * // the properties below are optional
+   * .s3Location(S3LocationProperty.builder()
+   * .uri("uri")
+   * .build())
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-supplementaldatastorageconfiguration.html)
+   */
+  public interface SupplementalDataStorageConfigurationProperty {
+    /**
+     * List of supplemental data storage locations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-supplementaldatastorageconfiguration.html#cfn-bedrock-knowledgebase-supplementaldatastorageconfiguration-supplementaldatastoragelocations)
+     */
+    public fun supplementalDataStorageLocations(): Any
+
+    /**
+     * A builder for [SupplementalDataStorageConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param supplementalDataStorageLocations List of supplemental data storage locations. 
+       */
+      public fun supplementalDataStorageLocations(supplementalDataStorageLocations: IResolvable)
+
+      /**
+       * @param supplementalDataStorageLocations List of supplemental data storage locations. 
+       */
+      public fun supplementalDataStorageLocations(supplementalDataStorageLocations: List<Any>)
+
+      /**
+       * @param supplementalDataStorageLocations List of supplemental data storage locations. 
+       */
+      public fun supplementalDataStorageLocations(vararg supplementalDataStorageLocations: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SupplementalDataStorageConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SupplementalDataStorageConfigurationProperty.builder()
+
+      /**
+       * @param supplementalDataStorageLocations List of supplemental data storage locations. 
+       */
+      override fun supplementalDataStorageLocations(supplementalDataStorageLocations: IResolvable) {
+        cdkBuilder.supplementalDataStorageLocations(supplementalDataStorageLocations.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param supplementalDataStorageLocations List of supplemental data storage locations. 
+       */
+      override fun supplementalDataStorageLocations(supplementalDataStorageLocations: List<Any>) {
+        cdkBuilder.supplementalDataStorageLocations(supplementalDataStorageLocations.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param supplementalDataStorageLocations List of supplemental data storage locations. 
+       */
+      override fun supplementalDataStorageLocations(vararg supplementalDataStorageLocations: Any):
+          Unit = supplementalDataStorageLocations(supplementalDataStorageLocations.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SupplementalDataStorageConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SupplementalDataStorageConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        SupplementalDataStorageConfigurationProperty {
+      /**
+       * List of supplemental data storage locations.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-supplementaldatastorageconfiguration.html#cfn-bedrock-knowledgebase-supplementaldatastorageconfiguration-supplementaldatastoragelocations)
+       */
+      override fun supplementalDataStorageLocations(): Any =
+          unwrap(this).getSupplementalDataStorageLocations()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SupplementalDataStorageConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SupplementalDataStorageConfigurationProperty):
+          SupplementalDataStorageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SupplementalDataStorageConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SupplementalDataStorageConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SupplementalDataStorageConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SupplementalDataStorageConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains information about a storage location for images extracted from multimodal documents in
+   * your data source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * SupplementalDataStorageLocationProperty supplementalDataStorageLocationProperty =
+   * SupplementalDataStorageLocationProperty.builder()
+   * .supplementalDataStorageLocationType("supplementalDataStorageLocationType")
+   * // the properties below are optional
+   * .s3Location(S3LocationProperty.builder()
+   * .uri("uri")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-supplementaldatastoragelocation.html)
+   */
+  public interface SupplementalDataStorageLocationProperty {
+    /**
+     * Contains information about the Amazon S3 location for the extracted images.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-supplementaldatastoragelocation.html#cfn-bedrock-knowledgebase-supplementaldatastoragelocation-s3location)
+     */
+    public fun s3Location(): Any? = unwrap(this).getS3Location()
+
+    /**
+     * Supplemental data storage location type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-supplementaldatastoragelocation.html#cfn-bedrock-knowledgebase-supplementaldatastoragelocation-supplementaldatastoragelocationtype)
+     */
+    public fun supplementalDataStorageLocationType(): String
+
+    /**
+     * A builder for [SupplementalDataStorageLocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Location Contains information about the Amazon S3 location for the extracted
+       * images.
+       */
+      public fun s3Location(s3Location: IResolvable)
+
+      /**
+       * @param s3Location Contains information about the Amazon S3 location for the extracted
+       * images.
+       */
+      public fun s3Location(s3Location: S3LocationProperty)
+
+      /**
+       * @param s3Location Contains information about the Amazon S3 location for the extracted
+       * images.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("668a0b54a947b14142052d723c35d02c0a0101c5f6373c72260685ee1a95df9e")
+      public fun s3Location(s3Location: S3LocationProperty.Builder.() -> Unit)
+
+      /**
+       * @param supplementalDataStorageLocationType Supplemental data storage location type. 
+       */
+      public fun supplementalDataStorageLocationType(supplementalDataStorageLocationType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SupplementalDataStorageLocationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SupplementalDataStorageLocationProperty.builder()
+
+      /**
+       * @param s3Location Contains information about the Amazon S3 location for the extracted
+       * images.
+       */
+      override fun s3Location(s3Location: IResolvable) {
+        cdkBuilder.s3Location(s3Location.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param s3Location Contains information about the Amazon S3 location for the extracted
+       * images.
+       */
+      override fun s3Location(s3Location: S3LocationProperty) {
+        cdkBuilder.s3Location(s3Location.let(S3LocationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param s3Location Contains information about the Amazon S3 location for the extracted
+       * images.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("668a0b54a947b14142052d723c35d02c0a0101c5f6373c72260685ee1a95df9e")
+      override fun s3Location(s3Location: S3LocationProperty.Builder.() -> Unit): Unit =
+          s3Location(S3LocationProperty(s3Location))
+
+      /**
+       * @param supplementalDataStorageLocationType Supplemental data storage location type. 
+       */
+      override
+          fun supplementalDataStorageLocationType(supplementalDataStorageLocationType: String) {
+        cdkBuilder.supplementalDataStorageLocationType(supplementalDataStorageLocationType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SupplementalDataStorageLocationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SupplementalDataStorageLocationProperty,
+    ) : CdkObject(cdkObject),
+        SupplementalDataStorageLocationProperty {
+      /**
+       * Contains information about the Amazon S3 location for the extracted images.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-supplementaldatastoragelocation.html#cfn-bedrock-knowledgebase-supplementaldatastoragelocation-s3location)
+       */
+      override fun s3Location(): Any? = unwrap(this).getS3Location()
+
+      /**
+       * Supplemental data storage location type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-supplementaldatastoragelocation.html#cfn-bedrock-knowledgebase-supplementaldatastoragelocation-supplementaldatastoragelocationtype)
+       */
+      override fun supplementalDataStorageLocationType(): String =
+          unwrap(this).getSupplementalDataStorageLocationType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SupplementalDataStorageLocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SupplementalDataStorageLocationProperty):
+          SupplementalDataStorageLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SupplementalDataStorageLocationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SupplementalDataStorageLocationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SupplementalDataStorageLocationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.SupplementalDataStorageLocationProperty
+    }
+  }
+
+  /**
    * Contains details about the model used to create vector embeddings for the knowledge base.
    *
    * Example:
@@ -2348,7 +7098,17 @@ public open class CfnKnowledgeBase(
    * .embeddingModelConfiguration(EmbeddingModelConfigurationProperty.builder()
    * .bedrockEmbeddingModelConfiguration(BedrockEmbeddingModelConfigurationProperty.builder()
    * .dimensions(123)
+   * .embeddingDataType("embeddingDataType")
    * .build())
+   * .build())
+   * .supplementalDataStorageConfiguration(SupplementalDataStorageConfigurationProperty.builder()
+   * .supplementalDataStorageLocations(List.of(SupplementalDataStorageLocationProperty.builder()
+   * .supplementalDataStorageLocationType("supplementalDataStorageLocationType")
+   * // the properties below are optional
+   * .s3Location(S3LocationProperty.builder()
+   * .uri("uri")
+   * .build())
+   * .build()))
    * .build())
    * .build();
    * ```
@@ -2357,8 +7117,8 @@ public open class CfnKnowledgeBase(
    */
   public interface VectorKnowledgeBaseConfigurationProperty {
     /**
-     * The Amazon Resource Name (ARN) of the model or inference profile used to create vector
-     * embeddings for the knowledge base.
+     * The Amazon Resource Name (ARN) of the model used to create vector embeddings for the
+     * knowledge base.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-vectorknowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-vectorknowledgebaseconfiguration-embeddingmodelarn)
      */
@@ -2372,13 +7132,27 @@ public open class CfnKnowledgeBase(
     public fun embeddingModelConfiguration(): Any? = unwrap(this).getEmbeddingModelConfiguration()
 
     /**
+     * If you include multimodal data from your data source, use this object to specify
+     * configurations for the storage location of the images extracted from your documents.
+     *
+     * These images can be retrieved and returned to the end user. They can also be used in
+     * generation when using
+     * [RetrieveAndGenerate](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_RetrieveAndGenerate.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-vectorknowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-vectorknowledgebaseconfiguration-supplementaldatastorageconfiguration)
+     */
+    public fun supplementalDataStorageConfiguration(): Any? =
+        unwrap(this).getSupplementalDataStorageConfiguration()
+
+    /**
      * A builder for [VectorKnowledgeBaseConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param embeddingModelArn The Amazon Resource Name (ARN) of the model or inference profile
-       * used to create vector embeddings for the knowledge base. 
+       * @param embeddingModelArn The Amazon Resource Name (ARN) of the model used to create vector
+       * embeddings for the knowledge base. 
        */
       public fun embeddingModelArn(embeddingModelArn: String)
 
@@ -2403,6 +7177,44 @@ public open class CfnKnowledgeBase(
       @JvmName("38170d9af7d2c9e074ba25342b9b34f11f5d34e34d36410e027a205a972027e6")
       public
           fun embeddingModelConfiguration(embeddingModelConfiguration: EmbeddingModelConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param supplementalDataStorageConfiguration If you include multimodal data from your data
+       * source, use this object to specify configurations for the storage location of the images
+       * extracted from your documents.
+       * These images can be retrieved and returned to the end user. They can also be used in
+       * generation when using
+       * [RetrieveAndGenerate](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_RetrieveAndGenerate.html)
+       * .
+       */
+      public
+          fun supplementalDataStorageConfiguration(supplementalDataStorageConfiguration: IResolvable)
+
+      /**
+       * @param supplementalDataStorageConfiguration If you include multimodal data from your data
+       * source, use this object to specify configurations for the storage location of the images
+       * extracted from your documents.
+       * These images can be retrieved and returned to the end user. They can also be used in
+       * generation when using
+       * [RetrieveAndGenerate](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_RetrieveAndGenerate.html)
+       * .
+       */
+      public
+          fun supplementalDataStorageConfiguration(supplementalDataStorageConfiguration: SupplementalDataStorageConfigurationProperty)
+
+      /**
+       * @param supplementalDataStorageConfiguration If you include multimodal data from your data
+       * source, use this object to specify configurations for the storage location of the images
+       * extracted from your documents.
+       * These images can be retrieved and returned to the end user. They can also be used in
+       * generation when using
+       * [RetrieveAndGenerate](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_RetrieveAndGenerate.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("851fdb52faef057b03c21a246d344144de41217cedd2734bcaa2f96fe3d02a68")
+      public
+          fun supplementalDataStorageConfiguration(supplementalDataStorageConfiguration: SupplementalDataStorageConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2412,8 +7224,8 @@ public open class CfnKnowledgeBase(
           software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.VectorKnowledgeBaseConfigurationProperty.builder()
 
       /**
-       * @param embeddingModelArn The Amazon Resource Name (ARN) of the model or inference profile
-       * used to create vector embeddings for the knowledge base. 
+       * @param embeddingModelArn The Amazon Resource Name (ARN) of the model used to create vector
+       * embeddings for the knowledge base. 
        */
       override fun embeddingModelArn(embeddingModelArn: String) {
         cdkBuilder.embeddingModelArn(embeddingModelArn)
@@ -2447,6 +7259,50 @@ public open class CfnKnowledgeBase(
           Unit =
           embeddingModelConfiguration(EmbeddingModelConfigurationProperty(embeddingModelConfiguration))
 
+      /**
+       * @param supplementalDataStorageConfiguration If you include multimodal data from your data
+       * source, use this object to specify configurations for the storage location of the images
+       * extracted from your documents.
+       * These images can be retrieved and returned to the end user. They can also be used in
+       * generation when using
+       * [RetrieveAndGenerate](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_RetrieveAndGenerate.html)
+       * .
+       */
+      override
+          fun supplementalDataStorageConfiguration(supplementalDataStorageConfiguration: IResolvable) {
+        cdkBuilder.supplementalDataStorageConfiguration(supplementalDataStorageConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param supplementalDataStorageConfiguration If you include multimodal data from your data
+       * source, use this object to specify configurations for the storage location of the images
+       * extracted from your documents.
+       * These images can be retrieved and returned to the end user. They can also be used in
+       * generation when using
+       * [RetrieveAndGenerate](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_RetrieveAndGenerate.html)
+       * .
+       */
+      override
+          fun supplementalDataStorageConfiguration(supplementalDataStorageConfiguration: SupplementalDataStorageConfigurationProperty) {
+        cdkBuilder.supplementalDataStorageConfiguration(supplementalDataStorageConfiguration.let(SupplementalDataStorageConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param supplementalDataStorageConfiguration If you include multimodal data from your data
+       * source, use this object to specify configurations for the storage location of the images
+       * extracted from your documents.
+       * These images can be retrieved and returned to the end user. They can also be used in
+       * generation when using
+       * [RetrieveAndGenerate](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_RetrieveAndGenerate.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("851fdb52faef057b03c21a246d344144de41217cedd2734bcaa2f96fe3d02a68")
+      override
+          fun supplementalDataStorageConfiguration(supplementalDataStorageConfiguration: SupplementalDataStorageConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          supplementalDataStorageConfiguration(SupplementalDataStorageConfigurationProperty(supplementalDataStorageConfiguration))
+
       public fun build():
           software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.VectorKnowledgeBaseConfigurationProperty
           = cdkBuilder.build()
@@ -2457,8 +7313,8 @@ public open class CfnKnowledgeBase(
     ) : CdkObject(cdkObject),
         VectorKnowledgeBaseConfigurationProperty {
       /**
-       * The Amazon Resource Name (ARN) of the model or inference profile used to create vector
-       * embeddings for the knowledge base.
+       * The Amazon Resource Name (ARN) of the model used to create vector embeddings for the
+       * knowledge base.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-vectorknowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-vectorknowledgebaseconfiguration-embeddingmodelarn)
        */
@@ -2471,6 +7327,20 @@ public open class CfnKnowledgeBase(
        */
       override fun embeddingModelConfiguration(): Any? =
           unwrap(this).getEmbeddingModelConfiguration()
+
+      /**
+       * If you include multimodal data from your data source, use this object to specify
+       * configurations for the storage location of the images extracted from your documents.
+       *
+       * These images can be retrieved and returned to the end user. They can also be used in
+       * generation when using
+       * [RetrieveAndGenerate](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_RetrieveAndGenerate.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-vectorknowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-vectorknowledgebaseconfiguration-supplementaldatastorageconfiguration)
+       */
+      override fun supplementalDataStorageConfiguration(): Any? =
+          unwrap(this).getSupplementalDataStorageConfiguration()
     }
 
     public companion object {

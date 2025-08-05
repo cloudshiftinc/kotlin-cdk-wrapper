@@ -41,6 +41,7 @@ import kotlin.jvm.JvmName
  * .url("url")
  * .build())
  * .identityProviderType("identityProviderType")
+ * .ipAddressType("ipAddressType")
  * .loggingRole("loggingRole")
  * .postAuthenticationLoginBanner("postAuthenticationLoginBanner")
  * .preAuthenticationLoginBanner("preAuthenticationLoginBanner")
@@ -196,8 +197,30 @@ public interface CfnServerProps {
   public fun identityProviderType(): String? = unwrap(this).getIdentityProviderType()
 
   /**
+   * Specifies whether to use IPv4 only, or to use dual-stack (IPv4 and IPv6) for your AWS Transfer
+   * Family endpoint.
+   *
+   * The default value is `IPV4` .
+   *
+   *
+   * The `IpAddressType` parameter has the following limitations:
+   *
+   * * It cannot be changed while the server is online. You must stop the server before modifying
+   * this parameter.
+   * * It cannot be updated to `DUALSTACK` if the server has `AddressAllocationIds` specified. &gt;
+   * When using `DUALSTACK` as the `IpAddressType` , you cannot set the `AddressAllocationIds`
+   * parameter for the
+   * [EndpointDetails](https://docs.aws.amazon.com/transfer/latest/APIReference/API_EndpointDetails.html)
+   * for the server.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-ipaddresstype)
+   */
+  public fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+
+  /**
    * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that allows
-   * a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFSevents.
+   * a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS events.
    *
    * When set, you can view user activity in your CloudWatch logs.
    *
@@ -291,8 +314,10 @@ public interface CfnServerProps {
   public fun protocols(): List<String> = unwrap(this).getProtocols() ?: emptyList()
 
   /**
-   * Specifies whether or not performance for your Amazon S3 directories is optimized. This is
-   * disabled by default.
+   * Specifies whether or not performance for your Amazon S3 directories is optimized.
+   *
+   * * If using the console, this is enabled by default.
+   * * If using the API or CLI, this is disabled by default.
    *
    * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
    * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a
@@ -502,9 +527,27 @@ public interface CfnServerProps {
     public fun identityProviderType(identityProviderType: String)
 
     /**
+     * @param ipAddressType Specifies whether to use IPv4 only, or to use dual-stack (IPv4 and IPv6)
+     * for your AWS Transfer Family endpoint.
+     * The default value is `IPV4` .
+     *
+     *
+     * The `IpAddressType` parameter has the following limitations:
+     *
+     * * It cannot be changed while the server is online. You must stop the server before modifying
+     * this parameter.
+     * * It cannot be updated to `DUALSTACK` if the server has `AddressAllocationIds` specified.
+     * &gt; When using `DUALSTACK` as the `IpAddressType` , you cannot set the `AddressAllocationIds`
+     * parameter for the
+     * [EndpointDetails](https://docs.aws.amazon.com/transfer/latest/APIReference/API_EndpointDetails.html)
+     * for the server.
+     */
+    public fun ipAddressType(ipAddressType: String)
+
+    /**
      * @param loggingRole The Amazon Resource Name (ARN) of the AWS Identity and Access Management
-     * (IAM) role that allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon
-     * EFSevents.
+     * (IAM) role that allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS
+     * events.
      * When set, you can view user activity in your CloudWatch logs.
      */
     public fun loggingRole(loggingRole: String)
@@ -662,7 +705,10 @@ public interface CfnServerProps {
 
     /**
      * @param s3StorageOptions Specifies whether or not performance for your Amazon S3 directories
-     * is optimized. This is disabled by default.
+     * is optimized.
+     * * If using the console, this is enabled by default.
+     * * If using the API or CLI, this is disabled by default.
+     *
      * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
      * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a
      * mapping to have a file target.
@@ -671,7 +717,10 @@ public interface CfnServerProps {
 
     /**
      * @param s3StorageOptions Specifies whether or not performance for your Amazon S3 directories
-     * is optimized. This is disabled by default.
+     * is optimized.
+     * * If using the console, this is enabled by default.
+     * * If using the API or CLI, this is disabled by default.
+     *
      * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
      * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a
      * mapping to have a file target.
@@ -680,7 +729,10 @@ public interface CfnServerProps {
 
     /**
      * @param s3StorageOptions Specifies whether or not performance for your Amazon S3 directories
-     * is optimized. This is disabled by default.
+     * is optimized.
+     * * If using the console, this is enabled by default.
+     * * If using the API or CLI, this is disabled by default.
+     *
      * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
      * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a
      * mapping to have a file target.
@@ -941,9 +993,29 @@ public interface CfnServerProps {
     }
 
     /**
+     * @param ipAddressType Specifies whether to use IPv4 only, or to use dual-stack (IPv4 and IPv6)
+     * for your AWS Transfer Family endpoint.
+     * The default value is `IPV4` .
+     *
+     *
+     * The `IpAddressType` parameter has the following limitations:
+     *
+     * * It cannot be changed while the server is online. You must stop the server before modifying
+     * this parameter.
+     * * It cannot be updated to `DUALSTACK` if the server has `AddressAllocationIds` specified.
+     * &gt; When using `DUALSTACK` as the `IpAddressType` , you cannot set the `AddressAllocationIds`
+     * parameter for the
+     * [EndpointDetails](https://docs.aws.amazon.com/transfer/latest/APIReference/API_EndpointDetails.html)
+     * for the server.
+     */
+    override fun ipAddressType(ipAddressType: String) {
+      cdkBuilder.ipAddressType(ipAddressType)
+    }
+
+    /**
      * @param loggingRole The Amazon Resource Name (ARN) of the AWS Identity and Access Management
-     * (IAM) role that allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon
-     * EFSevents.
+     * (IAM) role that allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS
+     * events.
      * When set, you can view user activity in your CloudWatch logs.
      */
     override fun loggingRole(loggingRole: String) {
@@ -1114,7 +1186,10 @@ public interface CfnServerProps {
 
     /**
      * @param s3StorageOptions Specifies whether or not performance for your Amazon S3 directories
-     * is optimized. This is disabled by default.
+     * is optimized.
+     * * If using the console, this is enabled by default.
+     * * If using the API or CLI, this is disabled by default.
+     *
      * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
      * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a
      * mapping to have a file target.
@@ -1125,7 +1200,10 @@ public interface CfnServerProps {
 
     /**
      * @param s3StorageOptions Specifies whether or not performance for your Amazon S3 directories
-     * is optimized. This is disabled by default.
+     * is optimized.
+     * * If using the console, this is enabled by default.
+     * * If using the API or CLI, this is disabled by default.
+     *
      * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
      * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a
      * mapping to have a file target.
@@ -1136,7 +1214,10 @@ public interface CfnServerProps {
 
     /**
      * @param s3StorageOptions Specifies whether or not performance for your Amazon S3 directories
-     * is optimized. This is disabled by default.
+     * is optimized.
+     * * If using the console, this is enabled by default.
+     * * If using the API or CLI, this is disabled by default.
+     *
      * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
      * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a
      * mapping to have a file target.
@@ -1366,8 +1447,30 @@ public interface CfnServerProps {
     override fun identityProviderType(): String? = unwrap(this).getIdentityProviderType()
 
     /**
+     * Specifies whether to use IPv4 only, or to use dual-stack (IPv4 and IPv6) for your AWS
+     * Transfer Family endpoint.
+     *
+     * The default value is `IPV4` .
+     *
+     *
+     * The `IpAddressType` parameter has the following limitations:
+     *
+     * * It cannot be changed while the server is online. You must stop the server before modifying
+     * this parameter.
+     * * It cannot be updated to `DUALSTACK` if the server has `AddressAllocationIds` specified.
+     * &gt; When using `DUALSTACK` as the `IpAddressType` , you cannot set the `AddressAllocationIds`
+     * parameter for the
+     * [EndpointDetails](https://docs.aws.amazon.com/transfer/latest/APIReference/API_EndpointDetails.html)
+     * for the server.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-ipaddresstype)
+     */
+    override fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+
+    /**
      * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that
-     * allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFSevents.
+     * allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS events.
      *
      * When set, you can view user activity in your CloudWatch logs.
      *
@@ -1463,8 +1566,10 @@ public interface CfnServerProps {
     override fun protocols(): List<String> = unwrap(this).getProtocols() ?: emptyList()
 
     /**
-     * Specifies whether or not performance for your Amazon S3 directories is optimized. This is
-     * disabled by default.
+     * Specifies whether or not performance for your Amazon S3 directories is optimized.
+     *
+     * * If using the console, this is enabled by default.
+     * * If using the API or CLI, this is disabled by default.
      *
      * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
      * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a

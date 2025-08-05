@@ -52,6 +52,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .domainName("domainName")
  * // the properties below are optional
  * .certificateAuthorityArn("certificateAuthorityArn")
+ * .certificateExport("certificateExport")
  * .certificateTransparencyLoggingPreference("certificateTransparencyLoggingPreference")
  * .domainValidationOptions(List.of(DomainValidationOptionProperty.builder()
  * .domainName("domainName")
@@ -109,6 +110,18 @@ public open class CfnCertificate(
    */
   public open fun certificateAuthorityArn(`value`: String) {
     unwrap(this).setCertificateAuthorityArn(`value`)
+  }
+
+  /**
+   * You can opt out of allowing export of your certificate by specifying the `DISABLED` option.
+   */
+  public open fun certificateExport(): String? = unwrap(this).getCertificateExport()
+
+  /**
+   * You can opt out of allowing export of your certificate by specifying the `DISABLED` option.
+   */
+  public open fun certificateExport(`value`: String) {
+    unwrap(this).setCertificateExport(`value`)
   }
 
   /**
@@ -277,6 +290,20 @@ public open class CfnCertificate(
     public fun certificateAuthorityArn(certificateAuthorityArn: String)
 
     /**
+     * You can opt out of allowing export of your certificate by specifying the `DISABLED` option.
+     *
+     * Allow export of your certificate by specifying the `ENABLED` option.
+     *
+     * If you do not specify an export preference in a new CloudFormation template, it is the same
+     * as explicitly denying export of your certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-certificateexport)
+     * @param certificateExport You can opt out of allowing export of your certificate by specifying
+     * the `DISABLED` option. 
+     */
+    public fun certificateExport(certificateExport: String)
+
+    /**
      * You can opt out of certificate transparency logging by specifying the `DISABLED` option. Opt
      * in by specifying `ENABLED` .
      *
@@ -371,7 +398,8 @@ public open class CfnCertificate(
      * use of either RSA and ECDSA keys to ensure that compatibility is not broken. Check the
      * requirements for the AWS service where you plan to deploy your certificate. For more information
      * about selecting an algorithm, see [Key
-     * algorithms](https://docs.aws.amazon.com/acm/latest/userguide/acm-certificate.html#algorithms) .
+     * algorithms](https://docs.aws.amazon.com/acm/latest/userguide/acm-certificate-characteristics.html#algorithms-term)
+     * .
      *
      *
      * Algorithms supported for an ACM certificate request include:
@@ -482,6 +510,22 @@ public open class CfnCertificate(
     }
 
     /**
+     * You can opt out of allowing export of your certificate by specifying the `DISABLED` option.
+     *
+     * Allow export of your certificate by specifying the `ENABLED` option.
+     *
+     * If you do not specify an export preference in a new CloudFormation template, it is the same
+     * as explicitly denying export of your certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-certificateexport)
+     * @param certificateExport You can opt out of allowing export of your certificate by specifying
+     * the `DISABLED` option. 
+     */
+    override fun certificateExport(certificateExport: String) {
+      cdkBuilder.certificateExport(certificateExport)
+    }
+
+    /**
      * You can opt out of certificate transparency logging by specifying the `DISABLED` option. Opt
      * in by specifying `ENABLED` .
      *
@@ -585,7 +629,8 @@ public open class CfnCertificate(
      * use of either RSA and ECDSA keys to ensure that compatibility is not broken. Check the
      * requirements for the AWS service where you plan to deploy your certificate. For more information
      * about selecting an algorithm, see [Key
-     * algorithms](https://docs.aws.amazon.com/acm/latest/userguide/acm-certificate.html#algorithms) .
+     * algorithms](https://docs.aws.amazon.com/acm/latest/userguide/acm-certificate-characteristics.html#algorithms-term)
+     * .
      *
      *
      * Algorithms supported for an ACM certificate request include:

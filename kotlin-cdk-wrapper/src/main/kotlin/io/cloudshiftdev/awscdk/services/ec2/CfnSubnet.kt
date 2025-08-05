@@ -35,6 +35,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.cdk.lambdalayer.kubectl.v33.KubectlV33Layer;
  * Vpc vpc;
  * public void associateSubnetWithV6Cidr(Vpc vpc, Number count, ISubnet subnet) {
  * CfnSubnet cfnSubnet = (CfnSubnet)subnet.getNode().getDefaultChild();
@@ -57,10 +58,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * subnetcount = subnetcount + 1;
  * }
  * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
- * .version(KubernetesVersion.V1_31)
+ * .version(KubernetesVersion.V1_33)
  * .vpc(vpc)
  * .ipFamily(IpFamily.IP_V6)
  * .vpcSubnets(List.of(SubnetSelection.builder().subnets(vpc.getPublicSubnets()).build()))
+ * .kubectlLayer(new KubectlV33Layer(this, "kubectl"))
  * .build();
  * ```
  *
@@ -126,6 +128,12 @@ public open class CfnSubnet(
    * For example, `use1-az1` .
    */
   public open fun attrAvailabilityZoneId(): String = unwrap(this).getAttrAvailabilityZoneId()
+
+  /**
+   *
+   */
+  public open fun attrBlockPublicAccessStates(): IResolvable =
+      unwrap(this).getAttrBlockPublicAccessStates().let(IResolvable::wrap)
 
   /**
    * The IPv4 CIDR blocks that are associated with the subnet.
@@ -979,6 +987,119 @@ public open class CfnSubnet(
 
     internal fun unwrap(wrapped: CfnSubnet): software.amazon.awscdk.services.ec2.CfnSubnet =
         wrapped.cdkObject as software.amazon.awscdk.services.ec2.CfnSubnet
+  }
+
+  /**
+   * The state of VPC Block Public Access (BPA).
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * BlockPublicAccessStatesProperty blockPublicAccessStatesProperty =
+   * BlockPublicAccessStatesProperty.builder()
+   * .internetGatewayBlockMode("internetGatewayBlockMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-subnet-blockpublicaccessstates.html)
+   */
+  public interface BlockPublicAccessStatesProperty {
+    /**
+     * The mode of VPC BPA.
+     *
+     * * `off` : VPC BPA is not enabled and traffic is allowed to and from internet gateways and
+     * egress-only internet gateways in this Region.
+     * * `block-bidirectional` : Block all traffic to and from internet gateways and egress-only
+     * internet gateways in this Region (except for excluded VPCs and subnets).
+     * * `block-ingress` : Block all internet traffic to the VPCs in this Region (except for VPCs or
+     * subnets which are excluded). Only traffic to and from NAT gateways and egress-only internet
+     * gateways is allowed because these gateways only allow outbound connections to be established.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-subnet-blockpublicaccessstates.html#cfn-ec2-subnet-blockpublicaccessstates-internetgatewayblockmode)
+     */
+    public fun internetGatewayBlockMode(): String? = unwrap(this).getInternetGatewayBlockMode()
+
+    /**
+     * A builder for [BlockPublicAccessStatesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param internetGatewayBlockMode The mode of VPC BPA.
+       * * `off` : VPC BPA is not enabled and traffic is allowed to and from internet gateways and
+       * egress-only internet gateways in this Region.
+       * * `block-bidirectional` : Block all traffic to and from internet gateways and egress-only
+       * internet gateways in this Region (except for excluded VPCs and subnets).
+       * * `block-ingress` : Block all internet traffic to the VPCs in this Region (except for VPCs
+       * or subnets which are excluded). Only traffic to and from NAT gateways and egress-only internet
+       * gateways is allowed because these gateways only allow outbound connections to be established.
+       */
+      public fun internetGatewayBlockMode(internetGatewayBlockMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnSubnet.BlockPublicAccessStatesProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnSubnet.BlockPublicAccessStatesProperty.builder()
+
+      /**
+       * @param internetGatewayBlockMode The mode of VPC BPA.
+       * * `off` : VPC BPA is not enabled and traffic is allowed to and from internet gateways and
+       * egress-only internet gateways in this Region.
+       * * `block-bidirectional` : Block all traffic to and from internet gateways and egress-only
+       * internet gateways in this Region (except for excluded VPCs and subnets).
+       * * `block-ingress` : Block all internet traffic to the VPCs in this Region (except for VPCs
+       * or subnets which are excluded). Only traffic to and from NAT gateways and egress-only internet
+       * gateways is allowed because these gateways only allow outbound connections to be established.
+       */
+      override fun internetGatewayBlockMode(internetGatewayBlockMode: String) {
+        cdkBuilder.internetGatewayBlockMode(internetGatewayBlockMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnSubnet.BlockPublicAccessStatesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnSubnet.BlockPublicAccessStatesProperty,
+    ) : CdkObject(cdkObject),
+        BlockPublicAccessStatesProperty {
+      /**
+       * The mode of VPC BPA.
+       *
+       * * `off` : VPC BPA is not enabled and traffic is allowed to and from internet gateways and
+       * egress-only internet gateways in this Region.
+       * * `block-bidirectional` : Block all traffic to and from internet gateways and egress-only
+       * internet gateways in this Region (except for excluded VPCs and subnets).
+       * * `block-ingress` : Block all internet traffic to the VPCs in this Region (except for VPCs
+       * or subnets which are excluded). Only traffic to and from NAT gateways and egress-only internet
+       * gateways is allowed because these gateways only allow outbound connections to be established.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-subnet-blockpublicaccessstates.html#cfn-ec2-subnet-blockpublicaccessstates-internetgatewayblockmode)
+       */
+      override fun internetGatewayBlockMode(): String? = unwrap(this).getInternetGatewayBlockMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BlockPublicAccessStatesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSubnet.BlockPublicAccessStatesProperty):
+          BlockPublicAccessStatesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BlockPublicAccessStatesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BlockPublicAccessStatesProperty):
+          software.amazon.awscdk.services.ec2.CfnSubnet.BlockPublicAccessStatesProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnSubnet.BlockPublicAccessStatesProperty
+    }
   }
 
   /**

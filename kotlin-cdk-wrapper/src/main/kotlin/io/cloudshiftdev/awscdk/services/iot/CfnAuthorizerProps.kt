@@ -198,13 +198,13 @@ public interface CfnAuthorizerProps {
      * @param tokenSigningPublicKeys The public keys used to validate the token signature returned
      * by your custom authentication service.
      */
-    public fun tokenSigningPublicKeys(tokenSigningPublicKeys: IResolvable)
+    public fun tokenSigningPublicKeys(tokenSigningPublicKeys: Map<String, String>)
 
     /**
      * @param tokenSigningPublicKeys The public keys used to validate the token signature returned
      * by your custom authentication service.
      */
-    public fun tokenSigningPublicKeys(tokenSigningPublicKeys: Map<String, String>)
+    public fun tokenSigningPublicKeys(tokenSigningPublicKeys: IResolvable)
   }
 
   private class BuilderImpl : Builder {
@@ -308,16 +308,16 @@ public interface CfnAuthorizerProps {
      * @param tokenSigningPublicKeys The public keys used to validate the token signature returned
      * by your custom authentication service.
      */
-    override fun tokenSigningPublicKeys(tokenSigningPublicKeys: IResolvable) {
-      cdkBuilder.tokenSigningPublicKeys(tokenSigningPublicKeys.let(IResolvable.Companion::unwrap))
+    override fun tokenSigningPublicKeys(tokenSigningPublicKeys: Map<String, String>) {
+      cdkBuilder.tokenSigningPublicKeys(tokenSigningPublicKeys)
     }
 
     /**
      * @param tokenSigningPublicKeys The public keys used to validate the token signature returned
      * by your custom authentication service.
      */
-    override fun tokenSigningPublicKeys(tokenSigningPublicKeys: Map<String, String>) {
-      cdkBuilder.tokenSigningPublicKeys(tokenSigningPublicKeys)
+    override fun tokenSigningPublicKeys(tokenSigningPublicKeys: IResolvable) {
+      cdkBuilder.tokenSigningPublicKeys(tokenSigningPublicKeys.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.iot.CfnAuthorizerProps = cdkBuilder.build()

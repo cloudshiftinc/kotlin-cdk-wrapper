@@ -24,7 +24,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * IApiKey importedKey = ApiKey.fromApiKeyId(this, "imported-key", "&lt;api-key-id&gt;");
+ * Stack stack = Stack.Builder.create(app, "my-stack").build();
+ * ApiKey.Builder.create(stack, "my-api-key")
+ * .enabled(false)
+ * .build();
  * ```
  */
 public open class ApiKey(
@@ -480,6 +483,9 @@ public open class ApiKey(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.apigateway.ApiKey.PROPERTY_INJECTION_ID
+
     public fun fromApiKeyId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

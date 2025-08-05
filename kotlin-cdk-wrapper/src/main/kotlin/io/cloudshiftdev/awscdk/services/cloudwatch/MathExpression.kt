@@ -229,14 +229,14 @@ public open class MathExpression(
     public fun label(label: String)
 
     /**
-     * The period over which the expression's statistics are applied.
+     * The period over which the math expression's statistics are applied.
      *
      * This period overrides all periods in the metrics used in this
      * math expression.
      *
      * Default: Duration.minutes(5)
      *
-     * @param period The period over which the expression's statistics are applied. 
+     * @param period The period over which the math expression's statistics are applied. 
      */
     public fun period(period: Duration)
 
@@ -365,14 +365,14 @@ public open class MathExpression(
     }
 
     /**
-     * The period over which the expression's statistics are applied.
+     * The period over which the math expression's statistics are applied.
      *
      * This period overrides all periods in the metrics used in this
      * math expression.
      *
      * Default: Duration.minutes(5)
      *
-     * @param period The period over which the expression's statistics are applied. 
+     * @param period The period over which the math expression's statistics are applied. 
      */
     override fun period(period: Duration) {
       cdkBuilder.period(period.let(Duration.Companion::unwrap))

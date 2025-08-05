@@ -194,11 +194,6 @@ public open class CfnGraphQLApi(
   public open fun attrGraphQlUrl(): String = unwrap(this).getAttrGraphQlUrl()
 
   /**
-   *
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
-
-  /**
    * The fully qualified domain name (FQDN) of the real-time endpoint URL of your GraphQL API.
    */
   public open fun attrRealtimeDns(): String = unwrap(this).getAttrRealtimeDns()
@@ -259,15 +254,15 @@ public open class CfnGraphQLApi(
   /**
    * A map containing the list of resources with their properties and environment variables.
    */
-  public open fun environmentVariables(`value`: IResolvable) {
-    unwrap(this).setEnvironmentVariables(`value`.let(IResolvable.Companion::unwrap))
+  public open fun environmentVariables(`value`: Map<String, String>) {
+    unwrap(this).setEnvironmentVariables(`value`)
   }
 
   /**
    * A map containing the list of resources with their properties and environment variables.
    */
-  public open fun environmentVariables(`value`: Map<String, String>) {
-    unwrap(this).setEnvironmentVariables(`value`)
+  public open fun environmentVariables(`value`: IResolvable) {
+    unwrap(this).setEnvironmentVariables(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -654,7 +649,7 @@ public open class CfnGraphQLApi(
      * @param environmentVariables A map containing the list of resources with their properties and
      * environment variables. 
      */
-    public fun environmentVariables(environmentVariables: IResolvable)
+    public fun environmentVariables(environmentVariables: Map<String, String>)
 
     /**
      * A map containing the list of resources with their properties and environment variables.
@@ -672,7 +667,7 @@ public open class CfnGraphQLApi(
      * @param environmentVariables A map containing the list of resources with their properties and
      * environment variables. 
      */
-    public fun environmentVariables(environmentVariables: Map<String, String>)
+    public fun environmentVariables(environmentVariables: IResolvable)
 
     /**
      *
@@ -1068,8 +1063,8 @@ public open class CfnGraphQLApi(
      * @param environmentVariables A map containing the list of resources with their properties and
      * environment variables. 
      */
-    override fun environmentVariables(environmentVariables: IResolvable) {
-      cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
+    override fun environmentVariables(environmentVariables: Map<String, String>) {
+      cdkBuilder.environmentVariables(environmentVariables)
     }
 
     /**
@@ -1088,8 +1083,8 @@ public open class CfnGraphQLApi(
      * @param environmentVariables A map containing the list of resources with their properties and
      * environment variables. 
      */
-    override fun environmentVariables(environmentVariables: Map<String, String>) {
-      cdkBuilder.environmentVariables(environmentVariables)
+    override fun environmentVariables(environmentVariables: IResolvable) {
+      cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
     }
 
     /**

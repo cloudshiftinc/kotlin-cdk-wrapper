@@ -22,7 +22,7 @@ import kotlin.jvm.JvmName
  * Notifications Service).
  *
  * A single logical Principal may also map to a set of physical principals.
- * For example, `new OrganizationPrincipal('o-1234')` represents all
+ * For example, `new OrganizationPrincipal('o-12345abcde')` represents all
  * identities that are part of the given AWS Organization.
  */
 public interface IPrincipal : IGrantable {

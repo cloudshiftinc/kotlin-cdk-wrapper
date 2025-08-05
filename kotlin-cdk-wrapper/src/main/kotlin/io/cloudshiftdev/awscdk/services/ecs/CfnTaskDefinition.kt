@@ -14,6 +14,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -185,6 +186,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .workingDirectory("workingDirectory")
  * .build()))
  * .cpu("cpu")
+ * .enableFaultInjection(false)
  * .ephemeralStorage(EphemeralStorageProperty.builder()
  * .sizeInGiB(123)
  * .build())
@@ -336,6 +338,28 @@ public open class CfnTaskDefinition(
   }
 
   /**
+   * Enables fault injection and allows for fault injection requests to be accepted from the task's
+   * containers.
+   */
+  public open fun enableFaultInjection(): Any? = unwrap(this).getEnableFaultInjection()
+
+  /**
+   * Enables fault injection and allows for fault injection requests to be accepted from the task's
+   * containers.
+   */
+  public open fun enableFaultInjection(`value`: Boolean) {
+    unwrap(this).setEnableFaultInjection(`value`)
+  }
+
+  /**
+   * Enables fault injection and allows for fault injection requests to be accepted from the task's
+   * containers.
+   */
+  public open fun enableFaultInjection(`value`: IResolvable) {
+    unwrap(this).setEnableFaultInjection(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
    * The ephemeral storage settings to use for tasks run with the task definition.
    */
   public open fun ephemeralStorage(): Any? = unwrap(this).getEphemeralStorage()
@@ -389,27 +413,31 @@ public open class CfnTaskDefinition(
   }
 
   /**
-   * The Elastic Inference accelerators to use for the containers in the task.
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun inferenceAccelerators(): Any? = unwrap(this).getInferenceAccelerators()
 
   /**
-   * The Elastic Inference accelerators to use for the containers in the task.
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun inferenceAccelerators(`value`: IResolvable) {
     unwrap(this).setInferenceAccelerators(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The Elastic Inference accelerators to use for the containers in the task.
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun inferenceAccelerators(`value`: List<Any>) {
     unwrap(this).setInferenceAccelerators(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * The Elastic Inference accelerators to use for the containers in the task.
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun inferenceAccelerators(vararg `value`: Any): Unit =
       inferenceAccelerators(`value`.toList())
 
@@ -683,32 +711,42 @@ public open class CfnTaskDefinition(
      * Fargate launch type, this field is required. You must use one of the following values. The value
      * that you choose determines your range of valid values for the `memory` parameter.
      *
-     * If you use the EC2 launch type, this field is optional. Supported values are between `128`
-     * CPU units ( `0.125` vCPUs) and `10240` CPU units ( `10` vCPUs).
+     * If you're using the EC2 launch type or the external launch type, this field is optional.
+     * Supported values are between `128` CPU units ( `0.125` vCPUs) and `196608` CPU units ( `192`
+     * vCPUs).
      *
-     * The CPU units cannot be less than 1 vCPU when you use Windows containers on Fargate.
-     *
-     * * 256 (.25 vCPU) - Available `memory` values: 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB)
-     * * 512 (.5 vCPU) - Available `memory` values: 1024 (1 GB), 2048 (2 GB), 3072 (3 GB), 4096 (4
-     * GB)
-     * * 1024 (1 vCPU) - Available `memory` values: 2048 (2 GB), 3072 (3 GB), 4096 (4 GB), 5120 (5
-     * GB), 6144 (6 GB), 7168 (7 GB), 8192 (8 GB)
-     * * 2048 (2 vCPU) - Available `memory` values: 4096 (4 GB) and 16384 (16 GB) in increments of
-     * 1024 (1 GB)
-     * * 4096 (4 vCPU) - Available `memory` values: 8192 (8 GB) and 30720 (30 GB) in increments of
-     * 1024 (1 GB)
-     * * 8192 (8 vCPU) - Available `memory` values: 16 GB and 60 GB in 4 GB increments
-     *
-     * This option requires Linux platform `1.4.0` or later.
-     *
-     * * 16384 (16vCPU) - Available `memory` values: 32GB and 120 GB in 8 GB increments
-     *
-     * This option requires Linux platform `1.4.0` or later.
+     * This field is required for Fargate. For information about the valid values, see [Task
+     * size](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_size)
+     * in the *Amazon Elastic Container Service Developer Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-cpu)
      * @param cpu The number of `cpu` units used by the task. 
      */
     public fun cpu(cpu: String)
+
+    /**
+     * Enables fault injection and allows for fault injection requests to be accepted from the
+     * task's containers.
+     *
+     * The default value is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-enablefaultinjection)
+     * @param enableFaultInjection Enables fault injection and allows for fault injection requests
+     * to be accepted from the task's containers. 
+     */
+    public fun enableFaultInjection(enableFaultInjection: Boolean)
+
+    /**
+     * Enables fault injection and allows for fault injection requests to be accepted from the
+     * task's containers.
+     *
+     * The default value is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-enablefaultinjection)
+     * @param enableFaultInjection Enables fault injection and allows for fault injection requests
+     * to be accepted from the task's containers. 
+     */
+    public fun enableFaultInjection(enableFaultInjection: IResolvable)
 
     /**
      * The ephemeral storage settings to use for tasks run with the task definition.
@@ -774,30 +812,27 @@ public open class CfnTaskDefinition(
     public fun family(family: String)
 
     /**
-     * The Elastic Inference accelerators to use for the containers in the task.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-inferenceaccelerators)
-     * @param inferenceAccelerators The Elastic Inference accelerators to use for the containers in
-     * the task. 
+     * @deprecated this property has been deprecated
+     * @param inferenceAccelerators 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun inferenceAccelerators(inferenceAccelerators: IResolvable)
 
     /**
-     * The Elastic Inference accelerators to use for the containers in the task.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-inferenceaccelerators)
-     * @param inferenceAccelerators The Elastic Inference accelerators to use for the containers in
-     * the task. 
+     * @deprecated this property has been deprecated
+     * @param inferenceAccelerators 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun inferenceAccelerators(inferenceAccelerators: List<Any>)
 
     /**
-     * The Elastic Inference accelerators to use for the containers in the task.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-inferenceaccelerators)
-     * @param inferenceAccelerators The Elastic Inference accelerators to use for the containers in
-     * the task. 
+     * @deprecated this property has been deprecated
+     * @param inferenceAccelerators 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun inferenceAccelerators(vararg inferenceAccelerators: Any)
 
     /**
@@ -1259,33 +1294,47 @@ public open class CfnTaskDefinition(
      * Fargate launch type, this field is required. You must use one of the following values. The value
      * that you choose determines your range of valid values for the `memory` parameter.
      *
-     * If you use the EC2 launch type, this field is optional. Supported values are between `128`
-     * CPU units ( `0.125` vCPUs) and `10240` CPU units ( `10` vCPUs).
+     * If you're using the EC2 launch type or the external launch type, this field is optional.
+     * Supported values are between `128` CPU units ( `0.125` vCPUs) and `196608` CPU units ( `192`
+     * vCPUs).
      *
-     * The CPU units cannot be less than 1 vCPU when you use Windows containers on Fargate.
-     *
-     * * 256 (.25 vCPU) - Available `memory` values: 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB)
-     * * 512 (.5 vCPU) - Available `memory` values: 1024 (1 GB), 2048 (2 GB), 3072 (3 GB), 4096 (4
-     * GB)
-     * * 1024 (1 vCPU) - Available `memory` values: 2048 (2 GB), 3072 (3 GB), 4096 (4 GB), 5120 (5
-     * GB), 6144 (6 GB), 7168 (7 GB), 8192 (8 GB)
-     * * 2048 (2 vCPU) - Available `memory` values: 4096 (4 GB) and 16384 (16 GB) in increments of
-     * 1024 (1 GB)
-     * * 4096 (4 vCPU) - Available `memory` values: 8192 (8 GB) and 30720 (30 GB) in increments of
-     * 1024 (1 GB)
-     * * 8192 (8 vCPU) - Available `memory` values: 16 GB and 60 GB in 4 GB increments
-     *
-     * This option requires Linux platform `1.4.0` or later.
-     *
-     * * 16384 (16vCPU) - Available `memory` values: 32GB and 120 GB in 8 GB increments
-     *
-     * This option requires Linux platform `1.4.0` or later.
+     * This field is required for Fargate. For information about the valid values, see [Task
+     * size](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_size)
+     * in the *Amazon Elastic Container Service Developer Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-cpu)
      * @param cpu The number of `cpu` units used by the task. 
      */
     override fun cpu(cpu: String) {
       cdkBuilder.cpu(cpu)
+    }
+
+    /**
+     * Enables fault injection and allows for fault injection requests to be accepted from the
+     * task's containers.
+     *
+     * The default value is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-enablefaultinjection)
+     * @param enableFaultInjection Enables fault injection and allows for fault injection requests
+     * to be accepted from the task's containers. 
+     */
+    override fun enableFaultInjection(enableFaultInjection: Boolean) {
+      cdkBuilder.enableFaultInjection(enableFaultInjection)
+    }
+
+    /**
+     * Enables fault injection and allows for fault injection requests to be accepted from the
+     * task's containers.
+     *
+     * The default value is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-enablefaultinjection)
+     * @param enableFaultInjection Enables fault injection and allows for fault injection requests
+     * to be accepted from the task's containers. 
+     */
+    override fun enableFaultInjection(enableFaultInjection: IResolvable) {
+      cdkBuilder.enableFaultInjection(enableFaultInjection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1361,34 +1410,31 @@ public open class CfnTaskDefinition(
     }
 
     /**
-     * The Elastic Inference accelerators to use for the containers in the task.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-inferenceaccelerators)
-     * @param inferenceAccelerators The Elastic Inference accelerators to use for the containers in
-     * the task. 
+     * @deprecated this property has been deprecated
+     * @param inferenceAccelerators 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun inferenceAccelerators(inferenceAccelerators: IResolvable) {
       cdkBuilder.inferenceAccelerators(inferenceAccelerators.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The Elastic Inference accelerators to use for the containers in the task.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-inferenceaccelerators)
-     * @param inferenceAccelerators The Elastic Inference accelerators to use for the containers in
-     * the task. 
+     * @deprecated this property has been deprecated
+     * @param inferenceAccelerators 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun inferenceAccelerators(inferenceAccelerators: List<Any>) {
       cdkBuilder.inferenceAccelerators(inferenceAccelerators.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * The Elastic Inference accelerators to use for the containers in the task.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-inferenceaccelerators)
-     * @param inferenceAccelerators The Elastic Inference accelerators to use for the containers in
-     * the task. 
+     * @deprecated this property has been deprecated
+     * @param inferenceAccelerators 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun inferenceAccelerators(vararg inferenceAccelerators: Any): Unit =
         inferenceAccelerators(inferenceAccelerators.toList())
 
@@ -2284,9 +2330,7 @@ public open class CfnTaskDefinition(
      * If the task definition is used in a blue/green deployment that uses
      * [AWS::CodeDeploy::DeploymentGroup
      * BlueGreenDeploymentConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html)
-     * , the `dependsOn` parameter is not supported. For more information see [Issue
-     * #680](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-coverage-roadmap/issues/680)
-     * on the on the GitHub website.
+     * , the `dependsOn` parameter is not supported.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-dependson)
      */
@@ -2508,10 +2552,14 @@ public open class CfnTaskDefinition(
      *
      * This string is passed directly to the Docker daemon. By default, images in the Docker Hub
      * registry are available. Other repositories are specified with either `*repository-url* / *image*
-     * : *tag*` or `*repository-url* / *image* &#64; *digest*` . Up to 255 letters (uppercase and
-     * lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number signs
-     * are allowed. This parameter maps to `Image` in the docker container create command and the
-     * `IMAGE` parameter of docker run.
+     * : *tag*` or `*repository-url* / *image* &#64; *digest*` . For images using tags
+     * (repository-url/image:tag), up to 255 characters total are allowed, including letters (uppercase
+     * and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number
+     * signs (#). For images using digests (repository-url/image&#64;digest), the 255 character limit
+     * applies only to the repository URL and image name (everything before the &#64; sign). The only
+     * supported hash function is sha256, and the hash value after sha256: must be exactly 64
+     * characters (only letters A-F, a-f, and numbers 0-9 are allowed). This parameter maps to `Image`
+     * in the docker container create command and the `IMAGE` parameter of docker run.
      *
      * * When a new task starts, the Amazon ECS container agent pulls the latest version of the
      * specified image and tag for the container to use. However, subsequent updates to a repository
@@ -3167,9 +3215,7 @@ public open class CfnTaskDefinition(
        * If the task definition is used in a blue/green deployment that uses
        * [AWS::CodeDeploy::DeploymentGroup
        * BlueGreenDeploymentConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html)
-       * , the `dependsOn` parameter is not supported. For more information see [Issue
-       * #680](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-coverage-roadmap/issues/680)
-       * on the on the GitHub website.
+       * , the `dependsOn` parameter is not supported.
        */
       public fun dependsOn(dependsOn: IResolvable)
 
@@ -3200,9 +3246,7 @@ public open class CfnTaskDefinition(
        * If the task definition is used in a blue/green deployment that uses
        * [AWS::CodeDeploy::DeploymentGroup
        * BlueGreenDeploymentConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html)
-       * , the `dependsOn` parameter is not supported. For more information see [Issue
-       * #680](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-coverage-roadmap/issues/680)
-       * on the on the GitHub website.
+       * , the `dependsOn` parameter is not supported.
        */
       public fun dependsOn(dependsOn: List<Any>)
 
@@ -3233,9 +3277,7 @@ public open class CfnTaskDefinition(
        * If the task definition is used in a blue/green deployment that uses
        * [AWS::CodeDeploy::DeploymentGroup
        * BlueGreenDeploymentConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html)
-       * , the `dependsOn` parameter is not supported. For more information see [Issue
-       * #680](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-coverage-roadmap/issues/680)
-       * on the on the GitHub website.
+       * , the `dependsOn` parameter is not supported.
        */
       public fun dependsOn(vararg dependsOn: Any)
 
@@ -3307,7 +3349,7 @@ public open class CfnTaskDefinition(
        * log in to your container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        */
-      public fun dockerLabels(dockerLabels: IResolvable)
+      public fun dockerLabels(dockerLabels: Map<String, String>)
 
       /**
        * @param dockerLabels A key/value map of labels to add to the container.
@@ -3317,7 +3359,7 @@ public open class CfnTaskDefinition(
        * log in to your container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        */
-      public fun dockerLabels(dockerLabels: Map<String, String>)
+      public fun dockerLabels(dockerLabels: IResolvable)
 
       /**
        * @param dockerSecurityOptions A list of strings to provide custom configuration for multiple
@@ -3637,10 +3679,15 @@ public open class CfnTaskDefinition(
        * @param image The image used to start a container. 
        * This string is passed directly to the Docker daemon. By default, images in the Docker Hub
        * registry are available. Other repositories are specified with either `*repository-url* /
-       * *image* : *tag*` or `*repository-url* / *image* &#64; *digest*` . Up to 255 letters (uppercase
-       * and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number
-       * signs are allowed. This parameter maps to `Image` in the docker container create command and
-       * the `IMAGE` parameter of docker run.
+       * *image* : *tag*` or `*repository-url* / *image* &#64; *digest*` . For images using tags
+       * (repository-url/image:tag), up to 255 characters total are allowed, including letters
+       * (uppercase and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes,
+       * and number signs (#). For images using digests (repository-url/image&#64;digest), the 255
+       * character limit applies only to the repository URL and image name (everything before the &#64;
+       * sign). The only supported hash function is sha256, and the hash value after sha256: must be
+       * exactly 64 characters (only letters A-F, a-f, and numbers 0-9 are allowed). This parameter
+       * maps to `Image` in the docker container create command and the `IMAGE` parameter of docker
+       * run.
        *
        * * When a new task starts, the Amazon ECS container agent pulls the latest version of the
        * specified image and tag for the container to use. However, subsequent updates to a repository
@@ -4593,9 +4640,7 @@ public open class CfnTaskDefinition(
        * If the task definition is used in a blue/green deployment that uses
        * [AWS::CodeDeploy::DeploymentGroup
        * BlueGreenDeploymentConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html)
-       * , the `dependsOn` parameter is not supported. For more information see [Issue
-       * #680](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-coverage-roadmap/issues/680)
-       * on the on the GitHub website.
+       * , the `dependsOn` parameter is not supported.
        */
       override fun dependsOn(dependsOn: IResolvable) {
         cdkBuilder.dependsOn(dependsOn.let(IResolvable.Companion::unwrap))
@@ -4628,9 +4673,7 @@ public open class CfnTaskDefinition(
        * If the task definition is used in a blue/green deployment that uses
        * [AWS::CodeDeploy::DeploymentGroup
        * BlueGreenDeploymentConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html)
-       * , the `dependsOn` parameter is not supported. For more information see [Issue
-       * #680](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-coverage-roadmap/issues/680)
-       * on the on the GitHub website.
+       * , the `dependsOn` parameter is not supported.
        */
       override fun dependsOn(dependsOn: List<Any>) {
         cdkBuilder.dependsOn(dependsOn.map{CdkObjectWrappers.unwrap(it)})
@@ -4663,9 +4706,7 @@ public open class CfnTaskDefinition(
        * If the task definition is used in a blue/green deployment that uses
        * [AWS::CodeDeploy::DeploymentGroup
        * BlueGreenDeploymentConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html)
-       * , the `dependsOn` parameter is not supported. For more information see [Issue
-       * #680](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-coverage-roadmap/issues/680)
-       * on the on the GitHub website.
+       * , the `dependsOn` parameter is not supported.
        */
       override fun dependsOn(vararg dependsOn: Any): Unit = dependsOn(dependsOn.toList())
 
@@ -4746,8 +4787,8 @@ public open class CfnTaskDefinition(
        * log in to your container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        */
-      override fun dockerLabels(dockerLabels: IResolvable) {
-        cdkBuilder.dockerLabels(dockerLabels.let(IResolvable.Companion::unwrap))
+      override fun dockerLabels(dockerLabels: Map<String, String>) {
+        cdkBuilder.dockerLabels(dockerLabels)
       }
 
       /**
@@ -4758,8 +4799,8 @@ public open class CfnTaskDefinition(
        * log in to your container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        */
-      override fun dockerLabels(dockerLabels: Map<String, String>) {
-        cdkBuilder.dockerLabels(dockerLabels)
+      override fun dockerLabels(dockerLabels: IResolvable) {
+        cdkBuilder.dockerLabels(dockerLabels.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5114,10 +5155,15 @@ public open class CfnTaskDefinition(
        * @param image The image used to start a container. 
        * This string is passed directly to the Docker daemon. By default, images in the Docker Hub
        * registry are available. Other repositories are specified with either `*repository-url* /
-       * *image* : *tag*` or `*repository-url* / *image* &#64; *digest*` . Up to 255 letters (uppercase
-       * and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number
-       * signs are allowed. This parameter maps to `Image` in the docker container create command and
-       * the `IMAGE` parameter of docker run.
+       * *image* : *tag*` or `*repository-url* / *image* &#64; *digest*` . For images using tags
+       * (repository-url/image:tag), up to 255 characters total are allowed, including letters
+       * (uppercase and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes,
+       * and number signs (#). For images using digests (repository-url/image&#64;digest), the 255
+       * character limit applies only to the repository URL and image name (everything before the &#64;
+       * sign). The only supported hash function is sha256, and the hash value after sha256: must be
+       * exactly 64 characters (only letters A-F, a-f, and numbers 0-9 are allowed). This parameter
+       * maps to `Image` in the docker container create command and the `IMAGE` parameter of docker
+       * run.
        *
        * * When a new task starts, the Amazon ECS container agent pulls the latest version of the
        * specified image and tag for the container to use. However, subsequent updates to a repository
@@ -6119,9 +6165,7 @@ public open class CfnTaskDefinition(
        * If the task definition is used in a blue/green deployment that uses
        * [AWS::CodeDeploy::DeploymentGroup
        * BlueGreenDeploymentConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html)
-       * , the `dependsOn` parameter is not supported. For more information see [Issue
-       * #680](https://docs.aws.amazon.com/https://github.com/aws-cloudformation/cloudformation-coverage-roadmap/issues/680)
-       * on the on the GitHub website.
+       * , the `dependsOn` parameter is not supported.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-dependson)
        */
@@ -6345,10 +6389,15 @@ public open class CfnTaskDefinition(
        *
        * This string is passed directly to the Docker daemon. By default, images in the Docker Hub
        * registry are available. Other repositories are specified with either `*repository-url* /
-       * *image* : *tag*` or `*repository-url* / *image* &#64; *digest*` . Up to 255 letters (uppercase
-       * and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number
-       * signs are allowed. This parameter maps to `Image` in the docker container create command and
-       * the `IMAGE` parameter of docker run.
+       * *image* : *tag*` or `*repository-url* / *image* &#64; *digest*` . For images using tags
+       * (repository-url/image:tag), up to 255 characters total are allowed, including letters
+       * (uppercase and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes,
+       * and number signs (#). For images using digests (repository-url/image&#64;digest), the 255
+       * character limit applies only to the repository URL and image name (everything before the &#64;
+       * sign). The only supported hash function is sha256, and the hash value after sha256: must be
+       * exactly 64 characters (only letters A-F, a-f, and numbers 0-9 are allowed). This parameter
+       * maps to `Image` in the docker container create command and the `IMAGE` parameter of docker
+       * run.
        *
        * * When a new task starts, the Amazon ECS container agent pulls the latest version of the
        * specified image and tag for the container to use. However, subsequent updates to a repository
@@ -7316,21 +7365,14 @@ public open class CfnTaskDefinition(
        * This parameter maps to `DriverOpts` in the docker create-volume command and the `xxopt`
        * option to docker volume create.
        */
-      public fun driverOpts(driverOpts: IResolvable)
+      public fun driverOpts(driverOpts: Map<String, String>)
 
       /**
        * @param driverOpts A map of Docker driver-specific options passed through.
        * This parameter maps to `DriverOpts` in the docker create-volume command and the `xxopt`
        * option to docker volume create.
        */
-      public fun driverOpts(driverOpts: Map<String, String>)
-
-      /**
-       * @param labels Custom metadata to add to your Docker volume.
-       * This parameter maps to `Labels` in the docker container create command and the `xxlabel`
-       * option to docker volume create.
-       */
-      public fun labels(labels: IResolvable)
+      public fun driverOpts(driverOpts: IResolvable)
 
       /**
        * @param labels Custom metadata to add to your Docker volume.
@@ -7338,6 +7380,13 @@ public open class CfnTaskDefinition(
        * option to docker volume create.
        */
       public fun labels(labels: Map<String, String>)
+
+      /**
+       * @param labels Custom metadata to add to your Docker volume.
+       * This parameter maps to `Labels` in the docker container create command and the `xxlabel`
+       * option to docker volume create.
+       */
+      public fun labels(labels: IResolvable)
 
       /**
        * @param scope The scope for the Docker volume that determines its lifecycle.
@@ -7392,8 +7441,8 @@ public open class CfnTaskDefinition(
        * This parameter maps to `DriverOpts` in the docker create-volume command and the `xxopt`
        * option to docker volume create.
        */
-      override fun driverOpts(driverOpts: IResolvable) {
-        cdkBuilder.driverOpts(driverOpts.let(IResolvable.Companion::unwrap))
+      override fun driverOpts(driverOpts: Map<String, String>) {
+        cdkBuilder.driverOpts(driverOpts)
       }
 
       /**
@@ -7401,17 +7450,8 @@ public open class CfnTaskDefinition(
        * This parameter maps to `DriverOpts` in the docker create-volume command and the `xxopt`
        * option to docker volume create.
        */
-      override fun driverOpts(driverOpts: Map<String, String>) {
-        cdkBuilder.driverOpts(driverOpts)
-      }
-
-      /**
-       * @param labels Custom metadata to add to your Docker volume.
-       * This parameter maps to `Labels` in the docker container create command and the `xxlabel`
-       * option to docker volume create.
-       */
-      override fun labels(labels: IResolvable) {
-        cdkBuilder.labels(labels.let(IResolvable.Companion::unwrap))
+      override fun driverOpts(driverOpts: IResolvable) {
+        cdkBuilder.driverOpts(driverOpts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7421,6 +7461,15 @@ public open class CfnTaskDefinition(
        */
       override fun labels(labels: Map<String, String>) {
         cdkBuilder.labels(labels)
+      }
+
+      /**
+       * @param labels Custom metadata to add to your Docker volume.
+       * This parameter maps to `Labels` in the docker container create command and the `xxlabel`
+       * option to docker volume create.
+       */
+      override fun labels(labels: IResolvable) {
+        cdkBuilder.labels(labels.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8480,7 +8529,7 @@ public open class CfnTaskDefinition(
        * * `config-file-type` , which can be `s3` or `file`
        * * `config-file-value` , which is either an S3 ARN or a file path
        */
-      public fun options(options: IResolvable)
+      public fun options(options: Map<String, String>)
 
       /**
        * @param options The options to use when configuring the log router.
@@ -8493,7 +8542,7 @@ public open class CfnTaskDefinition(
        * * `config-file-type` , which can be `s3` or `file`
        * * `config-file-value` , which is either an S3 ARN or a file path
        */
-      public fun options(options: Map<String, String>)
+      public fun options(options: IResolvable)
 
       /**
        * @param type The log router to use.
@@ -8519,8 +8568,8 @@ public open class CfnTaskDefinition(
        * * `config-file-type` , which can be `s3` or `file`
        * * `config-file-value` , which is either an S3 ARN or a file path
        */
-      override fun options(options: IResolvable) {
-        cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
+      override fun options(options: Map<String, String>) {
+        cdkBuilder.options(options)
       }
 
       /**
@@ -8534,8 +8583,8 @@ public open class CfnTaskDefinition(
        * * `config-file-type` , which can be `s3` or `file`
        * * `config-file-value` , which is either an S3 ARN or a file path
        */
-      override fun options(options: Map<String, String>) {
-        cdkBuilder.options(options)
+      override fun options(options: IResolvable) {
+        cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8672,7 +8721,8 @@ public open class CfnTaskDefinition(
     /**
      * The time period in seconds between each health check execution.
      *
-     * You may specify between 5 and 300 seconds. The default value is 30 seconds.
+     * You may specify between 5 and 300 seconds. The default value is 30 seconds. This value
+     * applies only when you specify a `command` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-interval)
      */
@@ -8682,7 +8732,8 @@ public open class CfnTaskDefinition(
      * The number of times to retry a failed health check before the container is considered
      * unhealthy.
      *
-     * You may specify between 1 and 10 retries. The default value is 3.
+     * You may specify between 1 and 10 retries. The default value is 3. This value applies only
+     * when you specify a `command` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-retries)
      */
@@ -8692,7 +8743,8 @@ public open class CfnTaskDefinition(
      * The optional grace period to provide containers time to bootstrap before failed health checks
      * count towards the maximum number of retries.
      *
-     * You can specify between 0 and 300 seconds. By default, the `startPeriod` is off.
+     * You can specify between 0 and 300 seconds. By default, the `startPeriod` is off. This value
+     * applies only when you specify a `command` .
      *
      *
      * If a health check succeeds within the `startPeriod` , then the container is considered
@@ -8707,7 +8759,8 @@ public open class CfnTaskDefinition(
      * The time period in seconds to wait for a health check to succeed before it is considered a
      * failure.
      *
-     * You may specify between 2 and 60 seconds. The default value is 5.
+     * You may specify between 2 and 60 seconds. The default value is 5. This value applies only
+     * when you specify a `command` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-timeout)
      */
@@ -8760,21 +8813,24 @@ public open class CfnTaskDefinition(
 
       /**
        * @param interval The time period in seconds between each health check execution.
-       * You may specify between 5 and 300 seconds. The default value is 30 seconds.
+       * You may specify between 5 and 300 seconds. The default value is 30 seconds. This value
+       * applies only when you specify a `command` .
        */
       public fun interval(interval: Number)
 
       /**
        * @param retries The number of times to retry a failed health check before the container is
        * considered unhealthy.
-       * You may specify between 1 and 10 retries. The default value is 3.
+       * You may specify between 1 and 10 retries. The default value is 3. This value applies only
+       * when you specify a `command` .
        */
       public fun retries(retries: Number)
 
       /**
        * @param startPeriod The optional grace period to provide containers time to bootstrap before
        * failed health checks count towards the maximum number of retries.
-       * You can specify between 0 and 300 seconds. By default, the `startPeriod` is off.
+       * You can specify between 0 and 300 seconds. By default, the `startPeriod` is off. This value
+       * applies only when you specify a `command` .
        *
        *
        * If a health check succeeds within the `startPeriod` , then the container is considered
@@ -8785,7 +8841,8 @@ public open class CfnTaskDefinition(
       /**
        * @param timeout The time period in seconds to wait for a health check to succeed before it
        * is considered a failure.
-       * You may specify between 2 and 60 seconds. The default value is 5.
+       * You may specify between 2 and 60 seconds. The default value is 5. This value applies only
+       * when you specify a `command` .
        */
       public fun timeout(timeout: Number)
     }
@@ -8839,7 +8896,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param interval The time period in seconds between each health check execution.
-       * You may specify between 5 and 300 seconds. The default value is 30 seconds.
+       * You may specify between 5 and 300 seconds. The default value is 30 seconds. This value
+       * applies only when you specify a `command` .
        */
       override fun interval(interval: Number) {
         cdkBuilder.interval(interval)
@@ -8848,7 +8906,8 @@ public open class CfnTaskDefinition(
       /**
        * @param retries The number of times to retry a failed health check before the container is
        * considered unhealthy.
-       * You may specify between 1 and 10 retries. The default value is 3.
+       * You may specify between 1 and 10 retries. The default value is 3. This value applies only
+       * when you specify a `command` .
        */
       override fun retries(retries: Number) {
         cdkBuilder.retries(retries)
@@ -8857,7 +8916,8 @@ public open class CfnTaskDefinition(
       /**
        * @param startPeriod The optional grace period to provide containers time to bootstrap before
        * failed health checks count towards the maximum number of retries.
-       * You can specify between 0 and 300 seconds. By default, the `startPeriod` is off.
+       * You can specify between 0 and 300 seconds. By default, the `startPeriod` is off. This value
+       * applies only when you specify a `command` .
        *
        *
        * If a health check succeeds within the `startPeriod` , then the container is considered
@@ -8870,7 +8930,8 @@ public open class CfnTaskDefinition(
       /**
        * @param timeout The time period in seconds to wait for a health check to succeed before it
        * is considered a failure.
-       * You may specify between 2 and 60 seconds. The default value is 5.
+       * You may specify between 2 and 60 seconds. The default value is 5. This value applies only
+       * when you specify a `command` .
        */
       override fun timeout(timeout: Number) {
         cdkBuilder.timeout(timeout)
@@ -8910,7 +8971,8 @@ public open class CfnTaskDefinition(
       /**
        * The time period in seconds between each health check execution.
        *
-       * You may specify between 5 and 300 seconds. The default value is 30 seconds.
+       * You may specify between 5 and 300 seconds. The default value is 30 seconds. This value
+       * applies only when you specify a `command` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-interval)
        */
@@ -8920,7 +8982,8 @@ public open class CfnTaskDefinition(
        * The number of times to retry a failed health check before the container is considered
        * unhealthy.
        *
-       * You may specify between 1 and 10 retries. The default value is 3.
+       * You may specify between 1 and 10 retries. The default value is 3. This value applies only
+       * when you specify a `command` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-retries)
        */
@@ -8930,7 +8993,8 @@ public open class CfnTaskDefinition(
        * The optional grace period to provide containers time to bootstrap before failed health
        * checks count towards the maximum number of retries.
        *
-       * You can specify between 0 and 300 seconds. By default, the `startPeriod` is off.
+       * You can specify between 0 and 300 seconds. By default, the `startPeriod` is off. This value
+       * applies only when you specify a `command` .
        *
        *
        * If a health check succeeds within the `startPeriod` , then the container is considered
@@ -8945,7 +9009,8 @@ public open class CfnTaskDefinition(
        * The time period in seconds to wait for a health check to succeed before it is considered a
        * failure.
        *
-       * You may specify between 2 and 60 seconds. The default value is 5.
+       * You may specify between 2 and 60 seconds. The default value is 5. This value applies only
+       * when you specify a `command` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-timeout)
        */
@@ -9200,12 +9265,6 @@ public open class CfnTaskDefinition(
   }
 
   /**
-   * Details on an Elastic Inference accelerator.
-   *
-   * For more information, see [Working with Amazon Elastic Inference on Amazon
-   * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-inference.html) in the
-   * *Amazon Elastic Container Service Developer Guide* .
-   *
    * Example:
    *
    * ```
@@ -9223,19 +9282,11 @@ public open class CfnTaskDefinition(
    */
   public interface InferenceAcceleratorProperty {
     /**
-     * The Elastic Inference accelerator device name.
-     *
-     * The `deviceName` must also be referenced in a container definition as a
-     * [ResourceRequirement](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ResourceRequirement.html)
-     * .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicename)
      */
     public fun deviceName(): String? = unwrap(this).getDeviceName()
 
     /**
-     * The Elastic Inference accelerator type to use.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicetype)
      */
     public fun deviceType(): String? = unwrap(this).getDeviceType()
@@ -9246,15 +9297,12 @@ public open class CfnTaskDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param deviceName The Elastic Inference accelerator device name.
-       * The `deviceName` must also be referenced in a container definition as a
-       * [ResourceRequirement](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ResourceRequirement.html)
-       * .
+       * @param deviceName the value to be set.
        */
       public fun deviceName(deviceName: String)
 
       /**
-       * @param deviceType The Elastic Inference accelerator type to use.
+       * @param deviceType the value to be set.
        */
       public fun deviceType(deviceType: String)
     }
@@ -9266,17 +9314,14 @@ public open class CfnTaskDefinition(
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty.builder()
 
       /**
-       * @param deviceName The Elastic Inference accelerator device name.
-       * The `deviceName` must also be referenced in a container definition as a
-       * [ResourceRequirement](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ResourceRequirement.html)
-       * .
+       * @param deviceName the value to be set.
        */
       override fun deviceName(deviceName: String) {
         cdkBuilder.deviceName(deviceName)
       }
 
       /**
-       * @param deviceType The Elastic Inference accelerator type to use.
+       * @param deviceType the value to be set.
        */
       override fun deviceType(deviceType: String) {
         cdkBuilder.deviceType(deviceType)
@@ -9292,19 +9337,11 @@ public open class CfnTaskDefinition(
     ) : CdkObject(cdkObject),
         InferenceAcceleratorProperty {
       /**
-       * The Elastic Inference accelerator device name.
-       *
-       * The `deviceName` must also be referenced in a container definition as a
-       * [ResourceRequirement](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ResourceRequirement.html)
-       * .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicename)
        */
       override fun deviceName(): String? = unwrap(this).getDeviceName()
 
       /**
-       * The Elastic Inference accelerator type to use.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-inferenceaccelerator.html#cfn-ecs-taskdefinition-inferenceaccelerator-devicetype)
        */
       override fun deviceType(): String? = unwrap(this).getDeviceType()
@@ -9335,6 +9372,24 @@ public open class CfnTaskDefinition(
    * For more detailed information about these Linux capabilities, see the
    * [capabilities(7)](https://docs.aws.amazon.com/http://man7.org/linux/man-pages/man7/capabilities.7.html)
    * Linux manual page.
+   *
+   * The following describes how Docker processes the Linux capabilities specified in the `add` and
+   * `drop` request parameters. For information about the latest behavior, see [Docker Compose: order
+   * of cap_drop and
+   * cap_add](https://docs.aws.amazon.com/https://forums.docker.com/t/docker-compose-order-of-cap-drop-and-cap-add/97136/1)
+   * in the Docker Community Forum.
+   *
+   * * When the container is a privleged container, the container capabilities are all of the
+   * default Docker capabilities. The capabilities specified in the `add` request parameter, and the
+   * `drop` request parameter are ignored.
+   * * When the `add` request parameter is set to ALL, the container capabilities are all of the
+   * default Docker capabilities, excluding those specified in the `drop` request parameter.
+   * * When the `drop` request parameter is set to ALL, the container capabilities are the
+   * capabilities specified in the `add` request parameter.
+   * * When the `add` request parameter and the `drop` request parameter are both empty, the
+   * capabilities the container capabilities are all of the default Docker capabilities.
+   * * The default is to first drop the capabilities specified in the `drop` request parameter, and
+   * then add the capabilities specified in the `add` request parameter.
    *
    * Example:
    *
@@ -10457,8 +10512,7 @@ public open class CfnTaskDefinition(
      *
      * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
      *
-     * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional for
-     * the EC2 launch type, required for the Fargate launch type.
+     * * **awslogs-stream-prefix** - Required: Yes, when using Fargate.Optional when using EC2.
      *
      * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
      * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
@@ -10520,26 +10574,44 @@ public open class CfnTaskDefinition(
      * might have a negative impact on logging performance.
      *
      *
+     * The following options apply to all supported log drivers.
+     *
      * * **mode** - Required: No
      *
      * Valid values: `non-blocking` | `blocking`
      *
-     * This option defines the delivery mode of log messages from the container to CloudWatch Logs.
-     * The delivery mode you choose affects application availability when the flow of logs from
-     * container to CloudWatch is interrupted.
+     * This option defines the delivery mode of log messages from the container to the log driver
+     * specified using `logDriver` . The delivery mode you choose affects application availability when
+     * the flow of logs from container is interrupted.
      *
-     * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls from
-     * container code to write to the `stdout` and `stderr` streams will block. The logging thread of
-     * the application will block as a result. This may cause the application to become unresponsive
-     * and lead to container healthcheck failure.
+     * If you use the `blocking` mode and the flow of logs is interrupted, calls from container code
+     * to write to the `stdout` and `stderr` streams will block. The logging thread of the application
+     * will block as a result. This may cause the application to become unresponsive and lead to
+     * container healthcheck failure.
      *
      * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
      * intermediate buffer configured with the `max-buffer-size` option. This prevents the application
-     * from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend using this mode
-     * if you want to ensure service availability and are okay with some log loss. For more
-     * information, see [Preventing log loss with non-blocking mode in the `awslogs` container log
+     * from becoming unresponsive when logs cannot be sent. We recommend using this mode if you want to
+     * ensure service availability and are okay with some log loss. For more information, see
+     * [Preventing log loss with non-blocking mode in the `awslogs` container log
      * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
      * .
+     *
+     * You can set a default `mode` for all containers in a specific AWS Region by using the
+     * `defaultLogDriverMode` account setting. If you don't specify the `mode` option or configure the
+     * account setting, Amazon ECS will default to the `non-blocking` mode. For more information about
+     * the account setting, see [Default log driver
+     * mode](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#default-log-driver-mode)
+     * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     *
+     * On June 25, 2025, Amazon ECS changed the default log driver mode from `blocking` to
+     * `non-blocking` to prioritize task availability over logging. To continue using the `blocking`
+     * mode after this change, do one of the following:
+     *
+     * * Set the `mode` option in your container definition's `logConfiguration` as `blocking` .
+     * * Set the `defaultLogDriverMode` account setting to `blocking` .
+     *
      *
      * * **max-buffer-size** - Required: No
      *
@@ -10568,7 +10640,9 @@ public open class CfnTaskDefinition(
      *
      * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
      * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth` ,
-     * `Aws_region` , `Suppress_Type_Name` , and `tls` .
+     * `Aws_region` , `Suppress_Type_Name` , and `tls` . For more information, see [Under the hood:
+     * FireLens for Amazon ECS
+     * Tasks](https://docs.aws.amazon.com/containers/under-the-hood-firelens-for-amazon-ecs-tasks/) .
      *
      * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option. You
      * can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
@@ -10653,8 +10727,7 @@ public open class CfnTaskDefinition(
        *
        * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
        *
-       * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional
-       * for the EC2 launch type, required for the Fargate launch type.
+       * * **awslogs-stream-prefix** - Required: Yes, when using Fargate.Optional when using EC2.
        *
        * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
        * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
@@ -10716,27 +10789,44 @@ public open class CfnTaskDefinition(
        * This might have a negative impact on logging performance.
        *
        *
+       * The following options apply to all supported log drivers.
+       *
        * * **mode** - Required: No
        *
        * Valid values: `non-blocking` | `blocking`
        *
-       * This option defines the delivery mode of log messages from the container to CloudWatch
-       * Logs. The delivery mode you choose affects application availability when the flow of logs from
-       * container to CloudWatch is interrupted.
+       * This option defines the delivery mode of log messages from the container to the log driver
+       * specified using `logDriver` . The delivery mode you choose affects application availability
+       * when the flow of logs from container is interrupted.
        *
-       * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls
-       * from container code to write to the `stdout` and `stderr` streams will block. The logging
-       * thread of the application will block as a result. This may cause the application to become
-       * unresponsive and lead to container healthcheck failure.
+       * If you use the `blocking` mode and the flow of logs is interrupted, calls from container
+       * code to write to the `stdout` and `stderr` streams will block. The logging thread of the
+       * application will block as a result. This may cause the application to become unresponsive and
+       * lead to container healthcheck failure.
        *
        * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
        * intermediate buffer configured with the `max-buffer-size` option. This prevents the
-       * application from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend
-       * using this mode if you want to ensure service availability and are okay with some log loss.
-       * For more information, see [Preventing log loss with non-blocking mode in the `awslogs`
-       * container log
+       * application from becoming unresponsive when logs cannot be sent. We recommend using this mode
+       * if you want to ensure service availability and are okay with some log loss. For more
+       * information, see [Preventing log loss with non-blocking mode in the `awslogs` container log
        * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
        * .
+       *
+       * You can set a default `mode` for all containers in a specific AWS Region by using the
+       * `defaultLogDriverMode` account setting. If you don't specify the `mode` option or configure
+       * the account setting, Amazon ECS will default to the `non-blocking` mode. For more information
+       * about the account setting, see [Default log driver
+       * mode](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#default-log-driver-mode)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       *
+       * On June 25, 2025, Amazon ECS changed the default log driver mode from `blocking` to
+       * `non-blocking` to prioritize task availability over logging. To continue using the `blocking`
+       * mode after this change, do one of the following:
+       *
+       * * Set the `mode` option in your container definition's `logConfiguration` as `blocking` .
+       * * Set the `defaultLogDriverMode` account setting to `blocking` .
+       *
        *
        * * **max-buffer-size** - Required: No
        *
@@ -10765,7 +10855,9 @@ public open class CfnTaskDefinition(
        *
        * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
        * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth`
-       * , `Aws_region` , `Suppress_Type_Name` , and `tls` .
+       * , `Aws_region` , `Suppress_Type_Name` , and `tls` . For more information, see [Under the hood:
+       * FireLens for Amazon ECS
+       * Tasks](https://docs.aws.amazon.com/containers/under-the-hood-firelens-for-amazon-ecs-tasks/) .
        *
        * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option.
        * You can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
@@ -10776,7 +10868,7 @@ public open class CfnTaskDefinition(
        * container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        */
-      public fun options(options: IResolvable)
+      public fun options(options: Map<String, String>)
 
       /**
        * @param options The configuration options to send to the log driver.
@@ -10806,8 +10898,7 @@ public open class CfnTaskDefinition(
        *
        * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
        *
-       * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional
-       * for the EC2 launch type, required for the Fargate launch type.
+       * * **awslogs-stream-prefix** - Required: Yes, when using Fargate.Optional when using EC2.
        *
        * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
        * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
@@ -10869,27 +10960,44 @@ public open class CfnTaskDefinition(
        * This might have a negative impact on logging performance.
        *
        *
+       * The following options apply to all supported log drivers.
+       *
        * * **mode** - Required: No
        *
        * Valid values: `non-blocking` | `blocking`
        *
-       * This option defines the delivery mode of log messages from the container to CloudWatch
-       * Logs. The delivery mode you choose affects application availability when the flow of logs from
-       * container to CloudWatch is interrupted.
+       * This option defines the delivery mode of log messages from the container to the log driver
+       * specified using `logDriver` . The delivery mode you choose affects application availability
+       * when the flow of logs from container is interrupted.
        *
-       * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls
-       * from container code to write to the `stdout` and `stderr` streams will block. The logging
-       * thread of the application will block as a result. This may cause the application to become
-       * unresponsive and lead to container healthcheck failure.
+       * If you use the `blocking` mode and the flow of logs is interrupted, calls from container
+       * code to write to the `stdout` and `stderr` streams will block. The logging thread of the
+       * application will block as a result. This may cause the application to become unresponsive and
+       * lead to container healthcheck failure.
        *
        * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
        * intermediate buffer configured with the `max-buffer-size` option. This prevents the
-       * application from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend
-       * using this mode if you want to ensure service availability and are okay with some log loss.
-       * For more information, see [Preventing log loss with non-blocking mode in the `awslogs`
-       * container log
+       * application from becoming unresponsive when logs cannot be sent. We recommend using this mode
+       * if you want to ensure service availability and are okay with some log loss. For more
+       * information, see [Preventing log loss with non-blocking mode in the `awslogs` container log
        * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
        * .
+       *
+       * You can set a default `mode` for all containers in a specific AWS Region by using the
+       * `defaultLogDriverMode` account setting. If you don't specify the `mode` option or configure
+       * the account setting, Amazon ECS will default to the `non-blocking` mode. For more information
+       * about the account setting, see [Default log driver
+       * mode](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#default-log-driver-mode)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       *
+       * On June 25, 2025, Amazon ECS changed the default log driver mode from `blocking` to
+       * `non-blocking` to prioritize task availability over logging. To continue using the `blocking`
+       * mode after this change, do one of the following:
+       *
+       * * Set the `mode` option in your container definition's `logConfiguration` as `blocking` .
+       * * Set the `defaultLogDriverMode` account setting to `blocking` .
+       *
        *
        * * **max-buffer-size** - Required: No
        *
@@ -10918,7 +11026,9 @@ public open class CfnTaskDefinition(
        *
        * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
        * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth`
-       * , `Aws_region` , `Suppress_Type_Name` , and `tls` .
+       * , `Aws_region` , `Suppress_Type_Name` , and `tls` . For more information, see [Under the hood:
+       * FireLens for Amazon ECS
+       * Tasks](https://docs.aws.amazon.com/containers/under-the-hood-firelens-for-amazon-ecs-tasks/) .
        *
        * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option.
        * You can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
@@ -10929,7 +11039,7 @@ public open class CfnTaskDefinition(
        * container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        */
-      public fun options(options: Map<String, String>)
+      public fun options(options: IResolvable)
 
       /**
        * @param secretOptions The secrets to pass to the log configuration.
@@ -11017,8 +11127,7 @@ public open class CfnTaskDefinition(
        *
        * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
        *
-       * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional
-       * for the EC2 launch type, required for the Fargate launch type.
+       * * **awslogs-stream-prefix** - Required: Yes, when using Fargate.Optional when using EC2.
        *
        * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
        * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
@@ -11080,27 +11189,44 @@ public open class CfnTaskDefinition(
        * This might have a negative impact on logging performance.
        *
        *
+       * The following options apply to all supported log drivers.
+       *
        * * **mode** - Required: No
        *
        * Valid values: `non-blocking` | `blocking`
        *
-       * This option defines the delivery mode of log messages from the container to CloudWatch
-       * Logs. The delivery mode you choose affects application availability when the flow of logs from
-       * container to CloudWatch is interrupted.
+       * This option defines the delivery mode of log messages from the container to the log driver
+       * specified using `logDriver` . The delivery mode you choose affects application availability
+       * when the flow of logs from container is interrupted.
        *
-       * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls
-       * from container code to write to the `stdout` and `stderr` streams will block. The logging
-       * thread of the application will block as a result. This may cause the application to become
-       * unresponsive and lead to container healthcheck failure.
+       * If you use the `blocking` mode and the flow of logs is interrupted, calls from container
+       * code to write to the `stdout` and `stderr` streams will block. The logging thread of the
+       * application will block as a result. This may cause the application to become unresponsive and
+       * lead to container healthcheck failure.
        *
        * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
        * intermediate buffer configured with the `max-buffer-size` option. This prevents the
-       * application from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend
-       * using this mode if you want to ensure service availability and are okay with some log loss.
-       * For more information, see [Preventing log loss with non-blocking mode in the `awslogs`
-       * container log
+       * application from becoming unresponsive when logs cannot be sent. We recommend using this mode
+       * if you want to ensure service availability and are okay with some log loss. For more
+       * information, see [Preventing log loss with non-blocking mode in the `awslogs` container log
        * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
        * .
+       *
+       * You can set a default `mode` for all containers in a specific AWS Region by using the
+       * `defaultLogDriverMode` account setting. If you don't specify the `mode` option or configure
+       * the account setting, Amazon ECS will default to the `non-blocking` mode. For more information
+       * about the account setting, see [Default log driver
+       * mode](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#default-log-driver-mode)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       *
+       * On June 25, 2025, Amazon ECS changed the default log driver mode from `blocking` to
+       * `non-blocking` to prioritize task availability over logging. To continue using the `blocking`
+       * mode after this change, do one of the following:
+       *
+       * * Set the `mode` option in your container definition's `logConfiguration` as `blocking` .
+       * * Set the `defaultLogDriverMode` account setting to `blocking` .
+       *
        *
        * * **max-buffer-size** - Required: No
        *
@@ -11129,7 +11255,9 @@ public open class CfnTaskDefinition(
        *
        * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
        * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth`
-       * , `Aws_region` , `Suppress_Type_Name` , and `tls` .
+       * , `Aws_region` , `Suppress_Type_Name` , and `tls` . For more information, see [Under the hood:
+       * FireLens for Amazon ECS
+       * Tasks](https://docs.aws.amazon.com/containers/under-the-hood-firelens-for-amazon-ecs-tasks/) .
        *
        * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option.
        * You can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
@@ -11140,8 +11268,8 @@ public open class CfnTaskDefinition(
        * container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        */
-      override fun options(options: IResolvable) {
-        cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
+      override fun options(options: Map<String, String>) {
+        cdkBuilder.options(options)
       }
 
       /**
@@ -11172,8 +11300,7 @@ public open class CfnTaskDefinition(
        *
        * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
        *
-       * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional
-       * for the EC2 launch type, required for the Fargate launch type.
+       * * **awslogs-stream-prefix** - Required: Yes, when using Fargate.Optional when using EC2.
        *
        * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
        * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
@@ -11235,27 +11362,44 @@ public open class CfnTaskDefinition(
        * This might have a negative impact on logging performance.
        *
        *
+       * The following options apply to all supported log drivers.
+       *
        * * **mode** - Required: No
        *
        * Valid values: `non-blocking` | `blocking`
        *
-       * This option defines the delivery mode of log messages from the container to CloudWatch
-       * Logs. The delivery mode you choose affects application availability when the flow of logs from
-       * container to CloudWatch is interrupted.
+       * This option defines the delivery mode of log messages from the container to the log driver
+       * specified using `logDriver` . The delivery mode you choose affects application availability
+       * when the flow of logs from container is interrupted.
        *
-       * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls
-       * from container code to write to the `stdout` and `stderr` streams will block. The logging
-       * thread of the application will block as a result. This may cause the application to become
-       * unresponsive and lead to container healthcheck failure.
+       * If you use the `blocking` mode and the flow of logs is interrupted, calls from container
+       * code to write to the `stdout` and `stderr` streams will block. The logging thread of the
+       * application will block as a result. This may cause the application to become unresponsive and
+       * lead to container healthcheck failure.
        *
        * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
        * intermediate buffer configured with the `max-buffer-size` option. This prevents the
-       * application from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend
-       * using this mode if you want to ensure service availability and are okay with some log loss.
-       * For more information, see [Preventing log loss with non-blocking mode in the `awslogs`
-       * container log
+       * application from becoming unresponsive when logs cannot be sent. We recommend using this mode
+       * if you want to ensure service availability and are okay with some log loss. For more
+       * information, see [Preventing log loss with non-blocking mode in the `awslogs` container log
        * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
        * .
+       *
+       * You can set a default `mode` for all containers in a specific AWS Region by using the
+       * `defaultLogDriverMode` account setting. If you don't specify the `mode` option or configure
+       * the account setting, Amazon ECS will default to the `non-blocking` mode. For more information
+       * about the account setting, see [Default log driver
+       * mode](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#default-log-driver-mode)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       *
+       * On June 25, 2025, Amazon ECS changed the default log driver mode from `blocking` to
+       * `non-blocking` to prioritize task availability over logging. To continue using the `blocking`
+       * mode after this change, do one of the following:
+       *
+       * * Set the `mode` option in your container definition's `logConfiguration` as `blocking` .
+       * * Set the `defaultLogDriverMode` account setting to `blocking` .
+       *
        *
        * * **max-buffer-size** - Required: No
        *
@@ -11284,7 +11428,9 @@ public open class CfnTaskDefinition(
        *
        * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
        * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth`
-       * , `Aws_region` , `Suppress_Type_Name` , and `tls` .
+       * , `Aws_region` , `Suppress_Type_Name` , and `tls` . For more information, see [Under the hood:
+       * FireLens for Amazon ECS
+       * Tasks](https://docs.aws.amazon.com/containers/under-the-hood-firelens-for-amazon-ecs-tasks/) .
        *
        * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option.
        * You can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
@@ -11295,8 +11441,8 @@ public open class CfnTaskDefinition(
        * container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        */
-      override fun options(options: Map<String, String>) {
-        cdkBuilder.options(options)
+      override fun options(options: IResolvable) {
+        cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11396,8 +11542,7 @@ public open class CfnTaskDefinition(
        *
        * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
        *
-       * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional
-       * for the EC2 launch type, required for the Fargate launch type.
+       * * **awslogs-stream-prefix** - Required: Yes, when using Fargate.Optional when using EC2.
        *
        * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
        * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
@@ -11459,27 +11604,44 @@ public open class CfnTaskDefinition(
        * This might have a negative impact on logging performance.
        *
        *
+       * The following options apply to all supported log drivers.
+       *
        * * **mode** - Required: No
        *
        * Valid values: `non-blocking` | `blocking`
        *
-       * This option defines the delivery mode of log messages from the container to CloudWatch
-       * Logs. The delivery mode you choose affects application availability when the flow of logs from
-       * container to CloudWatch is interrupted.
+       * This option defines the delivery mode of log messages from the container to the log driver
+       * specified using `logDriver` . The delivery mode you choose affects application availability
+       * when the flow of logs from container is interrupted.
        *
-       * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls
-       * from container code to write to the `stdout` and `stderr` streams will block. The logging
-       * thread of the application will block as a result. This may cause the application to become
-       * unresponsive and lead to container healthcheck failure.
+       * If you use the `blocking` mode and the flow of logs is interrupted, calls from container
+       * code to write to the `stdout` and `stderr` streams will block. The logging thread of the
+       * application will block as a result. This may cause the application to become unresponsive and
+       * lead to container healthcheck failure.
        *
        * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
        * intermediate buffer configured with the `max-buffer-size` option. This prevents the
-       * application from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend
-       * using this mode if you want to ensure service availability and are okay with some log loss.
-       * For more information, see [Preventing log loss with non-blocking mode in the `awslogs`
-       * container log
+       * application from becoming unresponsive when logs cannot be sent. We recommend using this mode
+       * if you want to ensure service availability and are okay with some log loss. For more
+       * information, see [Preventing log loss with non-blocking mode in the `awslogs` container log
        * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
        * .
+       *
+       * You can set a default `mode` for all containers in a specific AWS Region by using the
+       * `defaultLogDriverMode` account setting. If you don't specify the `mode` option or configure
+       * the account setting, Amazon ECS will default to the `non-blocking` mode. For more information
+       * about the account setting, see [Default log driver
+       * mode](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#default-log-driver-mode)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       *
+       * On June 25, 2025, Amazon ECS changed the default log driver mode from `blocking` to
+       * `non-blocking` to prioritize task availability over logging. To continue using the `blocking`
+       * mode after this change, do one of the following:
+       *
+       * * Set the `mode` option in your container definition's `logConfiguration` as `blocking` .
+       * * Set the `defaultLogDriverMode` account setting to `blocking` .
+       *
        *
        * * **max-buffer-size** - Required: No
        *
@@ -11508,7 +11670,9 @@ public open class CfnTaskDefinition(
        *
        * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
        * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth`
-       * , `Aws_region` , `Suppress_Type_Name` , and `tls` .
+       * , `Aws_region` , `Suppress_Type_Name` , and `tls` . For more information, see [Under the hood:
+       * FireLens for Amazon ECS
+       * Tasks](https://docs.aws.amazon.com/containers/under-the-hood-firelens-for-amazon-ecs-tasks/) .
        *
        * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option.
        * You can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
@@ -13012,14 +13176,6 @@ public open class CfnTaskDefinition(
        * You can specify a maximum of 50 container exit codes. By default, Amazon ECS does not
        * ignore any exit codes.
        */
-      public fun ignoredExitCodes(ignoredExitCodes: IResolvable)
-
-      /**
-       * @param ignoredExitCodes A list of exit codes that Amazon ECS will ignore and not attempt a
-       * restart on.
-       * You can specify a maximum of 50 container exit codes. By default, Amazon ECS does not
-       * ignore any exit codes.
-       */
       public fun ignoredExitCodes(ignoredExitCodes: List<Number>)
 
       /**
@@ -13029,6 +13185,14 @@ public open class CfnTaskDefinition(
        * ignore any exit codes.
        */
       public fun ignoredExitCodes(vararg ignoredExitCodes: Number)
+
+      /**
+       * @param ignoredExitCodes A list of exit codes that Amazon ECS will ignore and not attempt a
+       * restart on.
+       * You can specify a maximum of 50 container exit codes. By default, Amazon ECS does not
+       * ignore any exit codes.
+       */
+      public fun ignoredExitCodes(ignoredExitCodes: IResolvable)
 
       /**
        * @param restartAttemptPeriod A period of time (in seconds) that the container must run for
@@ -13066,16 +13230,6 @@ public open class CfnTaskDefinition(
        * You can specify a maximum of 50 container exit codes. By default, Amazon ECS does not
        * ignore any exit codes.
        */
-      override fun ignoredExitCodes(ignoredExitCodes: IResolvable) {
-        cdkBuilder.ignoredExitCodes(ignoredExitCodes.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param ignoredExitCodes A list of exit codes that Amazon ECS will ignore and not attempt a
-       * restart on.
-       * You can specify a maximum of 50 container exit codes. By default, Amazon ECS does not
-       * ignore any exit codes.
-       */
       override fun ignoredExitCodes(ignoredExitCodes: List<Number>) {
         cdkBuilder.ignoredExitCodes(ignoredExitCodes)
       }
@@ -13088,6 +13242,16 @@ public open class CfnTaskDefinition(
        */
       override fun ignoredExitCodes(vararg ignoredExitCodes: Number): Unit =
           ignoredExitCodes(ignoredExitCodes.toList())
+
+      /**
+       * @param ignoredExitCodes A list of exit codes that Amazon ECS will ignore and not attempt a
+       * restart on.
+       * You can specify a maximum of 50 container exit codes. By default, Amazon ECS does not
+       * ignore any exit codes.
+       */
+      override fun ignoredExitCodes(ignoredExitCodes: IResolvable) {
+        cdkBuilder.ignoredExitCodes(ignoredExitCodes.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param restartAttemptPeriod A period of time (in seconds) that the container must run for
@@ -13531,7 +13695,8 @@ public open class CfnTaskDefinition(
      * "kernel.sem" | "kernel.shmall" | "kernel.shmmax" | "kernel.shmmni" | "kernel.shm_rmid_forced"` ,
      * and `Sysctls` that start with `"fs.mqueue.*"`
      *
-     * Valid network namespace values: `Sysctls` that start with `"net.*"`
+     * Valid network namespace values: `Sysctls` that start with `"net.*"` . Only namespaced
+     * `Sysctls` that exist within the container starting with "net.* are accepted.
      *
      * All of these values are supported by Fargate.
      *
@@ -13555,7 +13720,8 @@ public open class CfnTaskDefinition(
        * "kernel.sem" | "kernel.shmall" | "kernel.shmmax" | "kernel.shmmni" | "kernel.shm_rmid_forced"`
        * , and `Sysctls` that start with `"fs.mqueue.*"`
        *
-       * Valid network namespace values: `Sysctls` that start with `"net.*"`
+       * Valid network namespace values: `Sysctls` that start with `"net.*"` . Only namespaced
+       * `Sysctls` that exist within the container starting with "net.* are accepted.
        *
        * All of these values are supported by Fargate.
        */
@@ -13580,7 +13746,8 @@ public open class CfnTaskDefinition(
        * "kernel.sem" | "kernel.shmall" | "kernel.shmmax" | "kernel.shmmni" | "kernel.shm_rmid_forced"`
        * , and `Sysctls` that start with `"fs.mqueue.*"`
        *
-       * Valid network namespace values: `Sysctls` that start with `"net.*"`
+       * Valid network namespace values: `Sysctls` that start with `"net.*"` . Only namespaced
+       * `Sysctls` that exist within the container starting with "net.* are accepted.
        *
        * All of these values are supported by Fargate.
        */
@@ -13611,7 +13778,8 @@ public open class CfnTaskDefinition(
        * "kernel.sem" | "kernel.shmall" | "kernel.shmmax" | "kernel.shmmni" | "kernel.shm_rmid_forced"`
        * , and `Sysctls` that start with `"fs.mqueue.*"`
        *
-       * Valid network namespace values: `Sysctls` that start with `"net.*"`
+       * Valid network namespace values: `Sysctls` that start with `"net.*"` . Only namespaced
+       * `Sysctls` that exist within the container starting with "net.* are accepted.
        *
        * All of these values are supported by Fargate.
        *

@@ -51,6 +51,13 @@ import kotlin.Unit
  */
 public interface SsmParameterImageOptions {
   /**
+   * Adds an additional discriminator to the `cdk.context.json` cache key.
+   *
+   * Default: - no additional cache key
+   */
+  public fun additionalCacheKey(): String? = unwrap(this).getAdditionalCacheKey()
+
+  /**
    * Whether the AMI ID is cached to be stable between deployments.
    *
    * By default, the newest image is used on each deployment. This will cause
@@ -98,6 +105,12 @@ public interface SsmParameterImageOptions {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key.
+     */
+    public fun additionalCacheKey(additionalCacheKey: String)
+
+    /**
      * @param cachedInContext Whether the AMI ID is cached to be stable between deployments.
      * By default, the newest image is used on each deployment. This will cause
      * instances to be replaced whenever a new version is released, and may cause
@@ -134,6 +147,14 @@ public interface SsmParameterImageOptions {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.SsmParameterImageOptions.Builder =
         software.amazon.awscdk.services.ec2.SsmParameterImageOptions.builder()
+
+    /**
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key.
+     */
+    override fun additionalCacheKey(additionalCacheKey: String) {
+      cdkBuilder.additionalCacheKey(additionalCacheKey)
+    }
 
     /**
      * @param cachedInContext Whether the AMI ID is cached to be stable between deployments.
@@ -184,6 +205,13 @@ public interface SsmParameterImageOptions {
     cdkObject: software.amazon.awscdk.services.ec2.SsmParameterImageOptions,
   ) : CdkObject(cdkObject),
       SsmParameterImageOptions {
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     */
+    override fun additionalCacheKey(): String? = unwrap(this).getAdditionalCacheKey()
+
     /**
      * Whether the AMI ID is cached to be stable between deployments.
      *

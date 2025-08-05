@@ -192,7 +192,7 @@ public interface CfnRestoreTestingSelectionProps {
      * metadata](https://docs.aws.amazon.com/aws-backup/latest/devguide/restore-testing-inferred-metadata.html)
      * .
      */
-    public fun restoreMetadataOverrides(restoreMetadataOverrides: IResolvable)
+    public fun restoreMetadataOverrides(restoreMetadataOverrides: Map<String, String>)
 
     /**
      * @param restoreMetadataOverrides You can override certain restore metadata keys by including
@@ -203,7 +203,7 @@ public interface CfnRestoreTestingSelectionProps {
      * metadata](https://docs.aws.amazon.com/aws-backup/latest/devguide/restore-testing-inferred-metadata.html)
      * .
      */
-    public fun restoreMetadataOverrides(restoreMetadataOverrides: Map<String, String>)
+    public fun restoreMetadataOverrides(restoreMetadataOverrides: IResolvable)
 
     /**
      * @param restoreTestingPlanName Unique string that is the name of the restore testing plan. 
@@ -304,8 +304,8 @@ public interface CfnRestoreTestingSelectionProps {
      * metadata](https://docs.aws.amazon.com/aws-backup/latest/devguide/restore-testing-inferred-metadata.html)
      * .
      */
-    override fun restoreMetadataOverrides(restoreMetadataOverrides: IResolvable) {
-      cdkBuilder.restoreMetadataOverrides(restoreMetadataOverrides.let(IResolvable.Companion::unwrap))
+    override fun restoreMetadataOverrides(restoreMetadataOverrides: Map<String, String>) {
+      cdkBuilder.restoreMetadataOverrides(restoreMetadataOverrides)
     }
 
     /**
@@ -317,8 +317,8 @@ public interface CfnRestoreTestingSelectionProps {
      * metadata](https://docs.aws.amazon.com/aws-backup/latest/devguide/restore-testing-inferred-metadata.html)
      * .
      */
-    override fun restoreMetadataOverrides(restoreMetadataOverrides: Map<String, String>) {
-      cdkBuilder.restoreMetadataOverrides(restoreMetadataOverrides)
+    override fun restoreMetadataOverrides(restoreMetadataOverrides: IResolvable) {
+      cdkBuilder.restoreMetadataOverrides(restoreMetadataOverrides.let(IResolvable.Companion::unwrap))
     }
 
     /**

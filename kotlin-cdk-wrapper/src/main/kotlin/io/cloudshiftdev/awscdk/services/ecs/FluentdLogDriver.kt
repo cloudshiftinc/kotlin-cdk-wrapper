@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -23,6 +24,7 @@ import kotlin.collections.List
  * import io.cloudshiftdev.awscdk.services.ecs.*;
  * FluentdLogDriver fluentdLogDriver = FluentdLogDriver.Builder.create()
  * .address("address")
+ * .async(false)
  * .asyncConnect(false)
  * .bufferLimit(123)
  * .env(List.of("env"))
@@ -85,8 +87,22 @@ public open class FluentdLogDriver(
      *
      * Default: - false
      *
+     * @param async Docker connects to Fluentd in the background. 
+     */
+    public fun async(async: Boolean)
+
+    /**
+     * (deprecated) Docker connects to Fluentd in the background.
+     *
+     * Messages are buffered until
+     * the connection is established.
+     *
+     * Default: - false
+     *
+     * @deprecated use `async` instead
      * @param asyncConnect Docker connects to Fluentd in the background. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun asyncConnect(asyncConnect: Boolean)
 
     /**
@@ -231,8 +247,24 @@ public open class FluentdLogDriver(
      *
      * Default: - false
      *
+     * @param async Docker connects to Fluentd in the background. 
+     */
+    override fun async(async: Boolean) {
+      cdkBuilder.async(async)
+    }
+
+    /**
+     * (deprecated) Docker connects to Fluentd in the background.
+     *
+     * Messages are buffered until
+     * the connection is established.
+     *
+     * Default: - false
+     *
+     * @deprecated use `async` instead
      * @param asyncConnect Docker connects to Fluentd in the background. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun asyncConnect(asyncConnect: Boolean) {
       cdkBuilder.asyncConnect(asyncConnect)
     }

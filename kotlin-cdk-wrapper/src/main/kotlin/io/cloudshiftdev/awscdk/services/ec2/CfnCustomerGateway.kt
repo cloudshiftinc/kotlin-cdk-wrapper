@@ -127,12 +127,12 @@ public open class CfnCustomerGateway(
   }
 
   /**
-   * IPv4 address for the customer gateway device's outside interface.
+   * The IP address for the customer gateway device's outside interface.
    */
   public open fun ipAddress(): String = unwrap(this).getIpAddress()
 
   /**
-   * IPv4 address for the customer gateway device's outside interface.
+   * The IP address for the customer gateway device's outside interface.
    */
   public open fun ipAddress(`value`: String) {
     unwrap(this).setIpAddress(`value`)
@@ -226,14 +226,14 @@ public open class CfnCustomerGateway(
     public fun deviceName(deviceName: String)
 
     /**
-     * IPv4 address for the customer gateway device's outside interface.
+     * The IP address for the customer gateway device's outside interface.
      *
      * The address must be static. If `OutsideIpAddressType` in your VPN connection options is set
      * to `PrivateIpv4` , you can use an RFC6598 or RFC1918 private IPv4 address. If
-     * `OutsideIpAddressType` is set to `PublicIpv4` , you can use a public IPv4 address.
+     * `OutsideIpAddressType` is set to `Ipv6` , you can use an IPv6 address.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-ipaddress)
-     * @param ipAddress IPv4 address for the customer gateway device's outside interface. 
+     * @param ipAddress The IP address for the customer gateway device's outside interface. 
      */
     public fun ipAddress(ipAddress: String)
 
@@ -325,14 +325,14 @@ public open class CfnCustomerGateway(
     }
 
     /**
-     * IPv4 address for the customer gateway device's outside interface.
+     * The IP address for the customer gateway device's outside interface.
      *
      * The address must be static. If `OutsideIpAddressType` in your VPN connection options is set
      * to `PrivateIpv4` , you can use an RFC6598 or RFC1918 private IPv4 address. If
-     * `OutsideIpAddressType` is set to `PublicIpv4` , you can use a public IPv4 address.
+     * `OutsideIpAddressType` is set to `Ipv6` , you can use an IPv6 address.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-ipaddress)
-     * @param ipAddress IPv4 address for the customer gateway device's outside interface. 
+     * @param ipAddress The IP address for the customer gateway device's outside interface. 
      */
     override fun ipAddress(ipAddress: String) {
       cdkBuilder.ipAddress(ipAddress)

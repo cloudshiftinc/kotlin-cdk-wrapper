@@ -38,16 +38,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * ```
  * Vpc vpc;
  * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
- * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
- * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
- * .instanceType(InstanceType.of(InstanceClass.R6G, InstanceSize.XLARGE4))
+ * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder()
+ * .version(AuroraMysqlEngineVersion.VER_3_03_0)
  * .build()))
- * .serverlessV2MinCapacity(6.5)
- * .serverlessV2MaxCapacity(64)
- * .readers(List.of(ClusterInstance.serverlessV2("reader1",
- * ServerlessV2ClusterInstanceProps.builder().scaleWithWriter(true).build()),
- * ClusterInstance.serverlessV2("reader2")))
+ * .writer(ClusterInstance.provisioned("writer"))
  * .vpc(vpc)
+ * .build();
+ * DatabaseProxy proxy = DatabaseProxy.Builder.create(this, "Proxy")
+ * .proxyTarget(ProxyTarget.fromCluster(cluster))
+ * .secrets(List.of(cluster.getSecret()))
+ * .vpc(vpc)
+ * .clientPasswordAuthType(ClientPasswordAuthType.MYSQL_NATIVE_PASSWORD)
  * .build();
  * ```
  */
@@ -171,6 +172,12 @@ public open class DatabaseCluster(
    */
   public override fun connections(): Connections =
       unwrap(this).getConnections().let(Connections::wrap)
+
+  /**
+   * The database insights mode.
+   */
+  public open fun databaseInsightsMode(): DatabaseInsightsMode? =
+      unwrap(this).getDatabaseInsightsMode()?.let(DatabaseInsightsMode::wrap)
 
   /**
    * The engine for this Cluster.
@@ -424,15 +431,30 @@ public open class DatabaseCluster(
     public fun clusterIdentifier(clusterIdentifier: String)
 
     /**
-     * Specifies the scalability mode of the Aurora DB cluster.
+     * (deprecated) [Misspelled] Specifies the scalability mode of the Aurora DB cluster.
      *
      * Set LIMITLESS if you want to use a limitless database; otherwise, set it to STANDARD.
      *
      * Default: ClusterScailabilityType.STANDARD
      *
-     * @param clusterScailabilityType Specifies the scalability mode of the Aurora DB cluster. 
+     * @deprecated Use clusterScalabilityType instead. This will be removed in the next major
+     * version.
+     * @param clusterScailabilityType [Misspelled] Specifies the scalability mode of the Aurora DB
+     * cluster. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun clusterScailabilityType(clusterScailabilityType: ClusterScailabilityType)
+
+    /**
+     * Specifies the scalability mode of the Aurora DB cluster.
+     *
+     * Set LIMITLESS if you want to use a limitless database; otherwise, set it to STANDARD.
+     *
+     * Default: ClusterScalabilityType.STANDARD
+     *
+     * @param clusterScalabilityType Specifies the scalability mode of the Aurora DB cluster. 
+     */
+    public fun clusterScalabilityType(clusterScalabilityType: ClusterScalabilityType)
 
     /**
      * Whether to copy tags to the snapshot when a snapshot is created.
@@ -452,6 +474,16 @@ public open class DatabaseCluster(
      * @param credentials Credentials for the administrative user. 
      */
     public fun credentials(credentials: Credentials)
+
+    /**
+     * The database insights mode.
+     *
+     * Default: - DatabaseInsightsMode.STANDARD when performance insights are enabled and Amazon
+     * Aurora engine is used, otherwise not set.
+     *
+     * @param databaseInsightsMode The database insights mode. 
+     */
+    public fun databaseInsightsMode(databaseInsightsMode: DatabaseInsightsMode)
 
     /**
      * Name of a database which is automatically created inside the cluster.
@@ -550,7 +582,8 @@ public open class DatabaseCluster(
      * Whether to enable Performance Insights for the DB cluster.
      *
      * Default: - false, unless `performanceInsightRetention` or `performanceInsightEncryptionKey`
-     * is set.
+     * is set,
+     * or `databaseInsightsMode` is set to `DatabaseInsightsMode.ADVANCED`.
      *
      * @param enablePerformanceInsights Whether to enable Performance Insights for the DB cluster. 
      */
@@ -562,6 +595,17 @@ public open class DatabaseCluster(
      * @param engine What kind of database to start. 
      */
     public fun engine(engine: IClusterEngine)
+
+    /**
+     * The life cycle type for this DB cluster.
+     *
+     * Default: undefined - AWS RDS default setting is
+     * `EngineLifecycleSupport.OPEN_SOURCE_RDS_EXTENDED_SUPPORT`
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html)
+     * @param engineLifecycleSupport The life cycle type for this DB cluster. 
+     */
+    public fun engineLifecycleSupport(engineLifecycleSupport: EngineLifecycleSupport)
 
     /**
      * Whether to enable mapping of AWS Identity and Access Management (IAM) accounts to database
@@ -698,7 +742,10 @@ public open class DatabaseCluster(
     /**
      * The amount of time, in days, to retain Performance Insights data.
      *
-     * Default: 7
+     * If you set `databaseInsightsMode` to `DatabaseInsightsMode.ADVANCED`, you must set this
+     * property to `PerformanceInsightRetention.MONTHS_15`.
+     *
+     * Default: - 7
      *
      * @param performanceInsightRetention The amount of time, in days, to retain Performance
      * Insights data. 
@@ -758,6 +805,19 @@ public open class DatabaseCluster(
      * removed from the stack or replaced during an update. 
      */
     public fun removalPolicy(removalPolicy: RemovalPolicy)
+
+    /**
+     * The Amazon Resource Name (ARN) of the source DB instance or DB cluster if this DB cluster is
+     * created as a read replica.
+     *
+     * Cannot be used with credentials.
+     *
+     * Default: - This DB Cluster is not a read replica
+     *
+     * @param replicationSourceIdentifier The Amazon Resource Name (ARN) of the source DB instance
+     * or DB cluster if this DB cluster is created as a read replica. 
+     */
+    public fun replicationSourceIdentifier(replicationSourceIdentifier: String)
 
     /**
      * S3 buckets that you want to load data into. This feature is only supported by the Aurora
@@ -876,6 +936,20 @@ public open class DatabaseCluster(
     public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     /**
+     * Specifies the duration an Aurora Serverless v2 DB instance must be idle before Aurora
+     * attempts to automatically pause it.
+     *
+     * The duration must be between 300 seconds (5 minutes) and 86,400 seconds (24 hours).
+     *
+     * Default: - The default is 300 seconds (5 minutes).
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2-auto-pause.html)
+     * @param serverlessV2AutoPauseDuration Specifies the duration an Aurora Serverless v2 DB
+     * instance must be idle before Aurora attempts to automatically pause it. 
+     */
+    public fun serverlessV2AutoPauseDuration(serverlessV2AutoPauseDuration: Duration)
+
+    /**
      * The maximum number of Aurora capacity units (ACUs) for a DB instance in an Aurora Serverless
      * v2 cluster.
      *
@@ -935,7 +1009,7 @@ public open class DatabaseCluster(
     /**
      * The storage type to be associated with the DB cluster.
      *
-     * Default: - DBClusterStorageType.AURORA_IOPT1
+     * Default: - DBClusterStorageType.AURORA
      *
      * @param storageType The storage type to be associated with the DB cluster. 
      */
@@ -1115,16 +1189,33 @@ public open class DatabaseCluster(
     }
 
     /**
-     * Specifies the scalability mode of the Aurora DB cluster.
+     * (deprecated) [Misspelled] Specifies the scalability mode of the Aurora DB cluster.
      *
      * Set LIMITLESS if you want to use a limitless database; otherwise, set it to STANDARD.
      *
      * Default: ClusterScailabilityType.STANDARD
      *
-     * @param clusterScailabilityType Specifies the scalability mode of the Aurora DB cluster. 
+     * @deprecated Use clusterScalabilityType instead. This will be removed in the next major
+     * version.
+     * @param clusterScailabilityType [Misspelled] Specifies the scalability mode of the Aurora DB
+     * cluster. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun clusterScailabilityType(clusterScailabilityType: ClusterScailabilityType) {
       cdkBuilder.clusterScailabilityType(clusterScailabilityType.let(ClusterScailabilityType.Companion::unwrap))
+    }
+
+    /**
+     * Specifies the scalability mode of the Aurora DB cluster.
+     *
+     * Set LIMITLESS if you want to use a limitless database; otherwise, set it to STANDARD.
+     *
+     * Default: ClusterScalabilityType.STANDARD
+     *
+     * @param clusterScalabilityType Specifies the scalability mode of the Aurora DB cluster. 
+     */
+    override fun clusterScalabilityType(clusterScalabilityType: ClusterScalabilityType) {
+      cdkBuilder.clusterScalabilityType(clusterScalabilityType.let(ClusterScalabilityType.Companion::unwrap))
     }
 
     /**
@@ -1148,6 +1239,18 @@ public open class DatabaseCluster(
      */
     override fun credentials(credentials: Credentials) {
       cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
+    }
+
+    /**
+     * The database insights mode.
+     *
+     * Default: - DatabaseInsightsMode.STANDARD when performance insights are enabled and Amazon
+     * Aurora engine is used, otherwise not set.
+     *
+     * @param databaseInsightsMode The database insights mode. 
+     */
+    override fun databaseInsightsMode(databaseInsightsMode: DatabaseInsightsMode) {
+      cdkBuilder.databaseInsightsMode(databaseInsightsMode.let(DatabaseInsightsMode.Companion::unwrap))
     }
 
     /**
@@ -1262,7 +1365,8 @@ public open class DatabaseCluster(
      * Whether to enable Performance Insights for the DB cluster.
      *
      * Default: - false, unless `performanceInsightRetention` or `performanceInsightEncryptionKey`
-     * is set.
+     * is set,
+     * or `databaseInsightsMode` is set to `DatabaseInsightsMode.ADVANCED`.
      *
      * @param enablePerformanceInsights Whether to enable Performance Insights for the DB cluster. 
      */
@@ -1277,6 +1381,19 @@ public open class DatabaseCluster(
      */
     override fun engine(engine: IClusterEngine) {
       cdkBuilder.engine(engine.let(IClusterEngine.Companion::unwrap))
+    }
+
+    /**
+     * The life cycle type for this DB cluster.
+     *
+     * Default: undefined - AWS RDS default setting is
+     * `EngineLifecycleSupport.OPEN_SOURCE_RDS_EXTENDED_SUPPORT`
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html)
+     * @param engineLifecycleSupport The life cycle type for this DB cluster. 
+     */
+    override fun engineLifecycleSupport(engineLifecycleSupport: EngineLifecycleSupport) {
+      cdkBuilder.engineLifecycleSupport(engineLifecycleSupport.let(EngineLifecycleSupport.Companion::unwrap))
     }
 
     /**
@@ -1437,7 +1554,10 @@ public open class DatabaseCluster(
     /**
      * The amount of time, in days, to retain Performance Insights data.
      *
-     * Default: 7
+     * If you set `databaseInsightsMode` to `DatabaseInsightsMode.ADVANCED`, you must set this
+     * property to `PerformanceInsightRetention.MONTHS_15`.
+     *
+     * Default: - 7
      *
      * @param performanceInsightRetention The amount of time, in days, to retain Performance
      * Insights data. 
@@ -1507,6 +1627,21 @@ public open class DatabaseCluster(
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
+    }
+
+    /**
+     * The Amazon Resource Name (ARN) of the source DB instance or DB cluster if this DB cluster is
+     * created as a read replica.
+     *
+     * Cannot be used with credentials.
+     *
+     * Default: - This DB Cluster is not a read replica
+     *
+     * @param replicationSourceIdentifier The Amazon Resource Name (ARN) of the source DB instance
+     * or DB cluster if this DB cluster is created as a read replica. 
+     */
+    override fun replicationSourceIdentifier(replicationSourceIdentifier: String) {
+      cdkBuilder.replicationSourceIdentifier(replicationSourceIdentifier)
     }
 
     /**
@@ -1639,6 +1774,22 @@ public open class DatabaseCluster(
         securityGroups(securityGroups.toList())
 
     /**
+     * Specifies the duration an Aurora Serverless v2 DB instance must be idle before Aurora
+     * attempts to automatically pause it.
+     *
+     * The duration must be between 300 seconds (5 minutes) and 86,400 seconds (24 hours).
+     *
+     * Default: - The default is 300 seconds (5 minutes).
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2-auto-pause.html)
+     * @param serverlessV2AutoPauseDuration Specifies the duration an Aurora Serverless v2 DB
+     * instance must be idle before Aurora attempts to automatically pause it. 
+     */
+    override fun serverlessV2AutoPauseDuration(serverlessV2AutoPauseDuration: Duration) {
+      cdkBuilder.serverlessV2AutoPauseDuration(serverlessV2AutoPauseDuration.let(Duration.Companion::unwrap))
+    }
+
+    /**
      * The maximum number of Aurora capacity units (ACUs) for a DB instance in an Aurora Serverless
      * v2 cluster.
      *
@@ -1706,7 +1857,7 @@ public open class DatabaseCluster(
     /**
      * The storage type to be associated with the DB cluster.
      *
-     * Default: - DBClusterStorageType.AURORA_IOPT1
+     * Default: - DBClusterStorageType.AURORA
      *
      * @param storageType The storage type to be associated with the DB cluster. 
      */
@@ -1774,6 +1925,9 @@ public open class DatabaseCluster(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.rds.DatabaseCluster.PROPERTY_INJECTION_ID
+
     public fun fromDatabaseClusterAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
@@ -1789,6 +1943,22 @@ public open class DatabaseCluster(
       id: String,
       attrs: DatabaseClusterAttributes.Builder.() -> Unit,
     ): IDatabaseCluster = fromDatabaseClusterAttributes(scope, id, DatabaseClusterAttributes(attrs))
+
+    public fun fromLookup(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      options: DatabaseClusterLookupOptions,
+    ): IDatabaseCluster =
+        software.amazon.awscdk.services.rds.DatabaseCluster.fromLookup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, options.let(DatabaseClusterLookupOptions.Companion::unwrap)).let(IDatabaseCluster::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c09d719c81d7435b5ade315d1ba8b0d3249d70de2d2a41460e486d604642c020")
+    public fun fromLookup(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      options: DatabaseClusterLookupOptions.Builder.() -> Unit,
+    ): IDatabaseCluster = fromLookup(scope, id, DatabaseClusterLookupOptions(options))
 
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,

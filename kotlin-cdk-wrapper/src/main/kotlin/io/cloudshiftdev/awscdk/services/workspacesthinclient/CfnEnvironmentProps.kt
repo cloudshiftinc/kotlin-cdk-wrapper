@@ -63,8 +63,8 @@ public interface CfnEnvironmentProps {
   public fun desiredSoftwareSetId(): String? = unwrap(this).getDesiredSoftwareSetId()
 
   /**
-   * The Amazon Resource Name (ARN) of the desktop to stream from Amazon WorkSpaces, WorkSpaces Web,
-   * or AppStream 2.0.
+   * The Amazon Resource Name (ARN) of the desktop to stream from Amazon WorkSpaces, WorkSpaces
+   * Secure Browser, or AppStream 2.0.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-desktoparn)
    */
@@ -78,7 +78,7 @@ public interface CfnEnvironmentProps {
   public fun desktopEndpoint(): String? = unwrap(this).getDesktopEndpoint()
 
   /**
-   * The tag keys and optional values for the newly created devices for this environment.
+   * An array of key-value pairs to apply to the newly created devices for this environment.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-devicecreationtags)
    */
@@ -143,7 +143,7 @@ public interface CfnEnvironmentProps {
 
     /**
      * @param desktopArn The Amazon Resource Name (ARN) of the desktop to stream from Amazon
-     * WorkSpaces, WorkSpaces Web, or AppStream 2.0. 
+     * WorkSpaces, WorkSpaces Secure Browser, or AppStream 2.0. 
      */
     public fun desktopArn(desktopArn: String)
 
@@ -154,20 +154,20 @@ public interface CfnEnvironmentProps {
     public fun desktopEndpoint(desktopEndpoint: String)
 
     /**
-     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
-     * this environment.
+     * @param deviceCreationTags An array of key-value pairs to apply to the newly created devices
+     * for this environment.
      */
     public fun deviceCreationTags(deviceCreationTags: IResolvable)
 
     /**
-     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
-     * this environment.
+     * @param deviceCreationTags An array of key-value pairs to apply to the newly created devices
+     * for this environment.
      */
     public fun deviceCreationTags(deviceCreationTags: List<Any>)
 
     /**
-     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
-     * this environment.
+     * @param deviceCreationTags An array of key-value pairs to apply to the newly created devices
+     * for this environment.
      */
     public fun deviceCreationTags(vararg deviceCreationTags: Any)
 
@@ -242,7 +242,7 @@ public interface CfnEnvironmentProps {
 
     /**
      * @param desktopArn The Amazon Resource Name (ARN) of the desktop to stream from Amazon
-     * WorkSpaces, WorkSpaces Web, or AppStream 2.0. 
+     * WorkSpaces, WorkSpaces Secure Browser, or AppStream 2.0. 
      */
     override fun desktopArn(desktopArn: String) {
       cdkBuilder.desktopArn(desktopArn)
@@ -257,24 +257,24 @@ public interface CfnEnvironmentProps {
     }
 
     /**
-     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
-     * this environment.
+     * @param deviceCreationTags An array of key-value pairs to apply to the newly created devices
+     * for this environment.
      */
     override fun deviceCreationTags(deviceCreationTags: IResolvable) {
       cdkBuilder.deviceCreationTags(deviceCreationTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
-     * this environment.
+     * @param deviceCreationTags An array of key-value pairs to apply to the newly created devices
+     * for this environment.
      */
     override fun deviceCreationTags(deviceCreationTags: List<Any>) {
       cdkBuilder.deviceCreationTags(deviceCreationTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
-     * this environment.
+     * @param deviceCreationTags An array of key-value pairs to apply to the newly created devices
+     * for this environment.
      */
     override fun deviceCreationTags(vararg deviceCreationTags: Any): Unit =
         deviceCreationTags(deviceCreationTags.toList())
@@ -367,7 +367,7 @@ public interface CfnEnvironmentProps {
 
     /**
      * The Amazon Resource Name (ARN) of the desktop to stream from Amazon WorkSpaces, WorkSpaces
-     * Web, or AppStream 2.0.
+     * Secure Browser, or AppStream 2.0.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-desktoparn)
      */
@@ -381,7 +381,7 @@ public interface CfnEnvironmentProps {
     override fun desktopEndpoint(): String? = unwrap(this).getDesktopEndpoint()
 
     /**
-     * The tag keys and optional values for the newly created devices for this environment.
+     * An array of key-value pairs to apply to the newly created devices for this environment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-devicecreationtags)
      */

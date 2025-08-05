@@ -47,6 +47,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .metadata("metadata")
  * // the properties below are optional
  * .groupAttribute("groupAttribute")
+ * .openSearchServerlessEntityId("openSearchServerlessEntityId")
  * .sessionTimeout(123)
  * .userAttribute("userAttribute")
  * .build())
@@ -120,30 +121,26 @@ public open class CfnSecurityConfig(
   }
 
   /**
-   * Describes IAM Identity Center options for an OpenSearch Serverless security configuration in
-   * the form of a key-value map.
+   * Describes IAM Identity Center options in the form of a key-value map.
    */
   public open fun iamIdentityCenterOptions(): Any? = unwrap(this).getIamIdentityCenterOptions()
 
   /**
-   * Describes IAM Identity Center options for an OpenSearch Serverless security configuration in
-   * the form of a key-value map.
+   * Describes IAM Identity Center options in the form of a key-value map.
    */
   public open fun iamIdentityCenterOptions(`value`: IResolvable) {
     unwrap(this).setIamIdentityCenterOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Describes IAM Identity Center options for an OpenSearch Serverless security configuration in
-   * the form of a key-value map.
+   * Describes IAM Identity Center options in the form of a key-value map.
    */
   public open fun iamIdentityCenterOptions(`value`: IamIdentityCenterConfigOptionsProperty) {
     unwrap(this).setIamIdentityCenterOptions(`value`.let(IamIdentityCenterConfigOptionsProperty.Companion::unwrap))
   }
 
   /**
-   * Describes IAM Identity Center options for an OpenSearch Serverless security configuration in
-   * the form of a key-value map.
+   * Describes IAM Identity Center options in the form of a key-value map.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("07696eaf7a9854c39a2fe9a59529a78b60f060d4ca3c84a36e9b28b22281bd32")
@@ -225,33 +222,30 @@ public open class CfnSecurityConfig(
     public fun description(description: String)
 
     /**
-     * Describes IAM Identity Center options for an OpenSearch Serverless security configuration in
-     * the form of a key-value map.
+     * Describes IAM Identity Center options in the form of a key-value map.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html#cfn-opensearchserverless-securityconfig-iamidentitycenteroptions)
-     * @param iamIdentityCenterOptions Describes IAM Identity Center options for an OpenSearch
-     * Serverless security configuration in the form of a key-value map. 
+     * @param iamIdentityCenterOptions Describes IAM Identity Center options in the form of a
+     * key-value map. 
      */
     public fun iamIdentityCenterOptions(iamIdentityCenterOptions: IResolvable)
 
     /**
-     * Describes IAM Identity Center options for an OpenSearch Serverless security configuration in
-     * the form of a key-value map.
+     * Describes IAM Identity Center options in the form of a key-value map.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html#cfn-opensearchserverless-securityconfig-iamidentitycenteroptions)
-     * @param iamIdentityCenterOptions Describes IAM Identity Center options for an OpenSearch
-     * Serverless security configuration in the form of a key-value map. 
+     * @param iamIdentityCenterOptions Describes IAM Identity Center options in the form of a
+     * key-value map. 
      */
     public
         fun iamIdentityCenterOptions(iamIdentityCenterOptions: IamIdentityCenterConfigOptionsProperty)
 
     /**
-     * Describes IAM Identity Center options for an OpenSearch Serverless security configuration in
-     * the form of a key-value map.
+     * Describes IAM Identity Center options in the form of a key-value map.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html#cfn-opensearchserverless-securityconfig-iamidentitycenteroptions)
-     * @param iamIdentityCenterOptions Describes IAM Identity Center options for an OpenSearch
-     * Serverless security configuration in the form of a key-value map. 
+     * @param iamIdentityCenterOptions Describes IAM Identity Center options in the form of a
+     * key-value map. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b9b259d4d52e3a45485098ebbf1c6bd3601e4098eea5b01ad6c577bba2b4f18e")
@@ -326,24 +320,22 @@ public open class CfnSecurityConfig(
     }
 
     /**
-     * Describes IAM Identity Center options for an OpenSearch Serverless security configuration in
-     * the form of a key-value map.
+     * Describes IAM Identity Center options in the form of a key-value map.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html#cfn-opensearchserverless-securityconfig-iamidentitycenteroptions)
-     * @param iamIdentityCenterOptions Describes IAM Identity Center options for an OpenSearch
-     * Serverless security configuration in the form of a key-value map. 
+     * @param iamIdentityCenterOptions Describes IAM Identity Center options in the form of a
+     * key-value map. 
      */
     override fun iamIdentityCenterOptions(iamIdentityCenterOptions: IResolvable) {
       cdkBuilder.iamIdentityCenterOptions(iamIdentityCenterOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Describes IAM Identity Center options for an OpenSearch Serverless security configuration in
-     * the form of a key-value map.
+     * Describes IAM Identity Center options in the form of a key-value map.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html#cfn-opensearchserverless-securityconfig-iamidentitycenteroptions)
-     * @param iamIdentityCenterOptions Describes IAM Identity Center options for an OpenSearch
-     * Serverless security configuration in the form of a key-value map. 
+     * @param iamIdentityCenterOptions Describes IAM Identity Center options in the form of a
+     * key-value map. 
      */
     override
         fun iamIdentityCenterOptions(iamIdentityCenterOptions: IamIdentityCenterConfigOptionsProperty) {
@@ -351,12 +343,11 @@ public open class CfnSecurityConfig(
     }
 
     /**
-     * Describes IAM Identity Center options for an OpenSearch Serverless security configuration in
-     * the form of a key-value map.
+     * Describes IAM Identity Center options in the form of a key-value map.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html#cfn-opensearchserverless-securityconfig-iamidentitycenteroptions)
-     * @param iamIdentityCenterOptions Describes IAM Identity Center options for an OpenSearch
-     * Serverless security configuration in the form of a key-value map. 
+     * @param iamIdentityCenterOptions Describes IAM Identity Center options in the form of a
+     * key-value map. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b9b259d4d52e3a45485098ebbf1c6bd3601e4098eea5b01ad6c577bba2b4f18e")
@@ -495,7 +486,9 @@ public open class CfnSecurityConfig(
     public fun applicationName(): String? = unwrap(this).getApplicationName()
 
     /**
-     * Group attribute for this IAM Identity Center integration.
+     * The group attribute for this IAM Identity Center integration.
+     *
+     * Defaults to `GroupId` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchserverless-securityconfig-iamidentitycenterconfigoptions.html#cfn-opensearchserverless-securityconfig-iamidentitycenterconfigoptions-groupattribute)
      */
@@ -509,7 +502,9 @@ public open class CfnSecurityConfig(
     public fun instanceArn(): String
 
     /**
-     * User attribute for this IAM Identity Center integration.
+     * The user attribute for this IAM Identity Center integration.
+     *
+     * Defaults to `UserId`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchserverless-securityconfig-iamidentitycenterconfigoptions.html#cfn-opensearchserverless-securityconfig-iamidentitycenterconfigoptions-userattribute)
      */
@@ -539,7 +534,8 @@ public open class CfnSecurityConfig(
       public fun applicationName(applicationName: String)
 
       /**
-       * @param groupAttribute Group attribute for this IAM Identity Center integration.
+       * @param groupAttribute The group attribute for this IAM Identity Center integration.
+       * Defaults to `GroupId` .
        */
       public fun groupAttribute(groupAttribute: String)
 
@@ -550,7 +546,8 @@ public open class CfnSecurityConfig(
       public fun instanceArn(instanceArn: String)
 
       /**
-       * @param userAttribute User attribute for this IAM Identity Center integration.
+       * @param userAttribute The user attribute for this IAM Identity Center integration.
+       * Defaults to `UserId`
        */
       public fun userAttribute(userAttribute: String)
     }
@@ -586,7 +583,8 @@ public open class CfnSecurityConfig(
       }
 
       /**
-       * @param groupAttribute Group attribute for this IAM Identity Center integration.
+       * @param groupAttribute The group attribute for this IAM Identity Center integration.
+       * Defaults to `GroupId` .
        */
       override fun groupAttribute(groupAttribute: String) {
         cdkBuilder.groupAttribute(groupAttribute)
@@ -601,7 +599,8 @@ public open class CfnSecurityConfig(
       }
 
       /**
-       * @param userAttribute User attribute for this IAM Identity Center integration.
+       * @param userAttribute The user attribute for this IAM Identity Center integration.
+       * Defaults to `UserId`
        */
       override fun userAttribute(userAttribute: String) {
         cdkBuilder.userAttribute(userAttribute)
@@ -641,7 +640,9 @@ public open class CfnSecurityConfig(
       override fun applicationName(): String? = unwrap(this).getApplicationName()
 
       /**
-       * Group attribute for this IAM Identity Center integration.
+       * The group attribute for this IAM Identity Center integration.
+       *
+       * Defaults to `GroupId` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchserverless-securityconfig-iamidentitycenterconfigoptions.html#cfn-opensearchserverless-securityconfig-iamidentitycenterconfigoptions-groupattribute)
        */
@@ -655,7 +656,9 @@ public open class CfnSecurityConfig(
       override fun instanceArn(): String = unwrap(this).getInstanceArn()
 
       /**
-       * User attribute for this IAM Identity Center integration.
+       * The user attribute for this IAM Identity Center integration.
+       *
+       * Defaults to `UserId`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchserverless-securityconfig-iamidentitycenterconfigoptions.html#cfn-opensearchserverless-securityconfig-iamidentitycenterconfigoptions-userattribute)
        */
@@ -695,6 +698,7 @@ public open class CfnSecurityConfig(
    * .metadata("metadata")
    * // the properties below are optional
    * .groupAttribute("groupAttribute")
+   * .openSearchServerlessEntityId("openSearchServerlessEntityId")
    * .sessionTimeout(123)
    * .userAttribute("userAttribute")
    * .build();
@@ -716,6 +720,14 @@ public open class CfnSecurityConfig(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchserverless-securityconfig-samlconfigoptions.html#cfn-opensearchserverless-securityconfig-samlconfigoptions-metadata)
      */
     public fun metadata(): String
+
+    /**
+     * Custom entity id attribute to override default entity id for this saml integration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchserverless-securityconfig-samlconfigoptions.html#cfn-opensearchserverless-securityconfig-samlconfigoptions-opensearchserverlessentityid)
+     */
+    public fun openSearchServerlessEntityId(): String? =
+        unwrap(this).getOpenSearchServerlessEntityId()
 
     /**
      * The session timeout, in minutes.
@@ -749,6 +761,12 @@ public open class CfnSecurityConfig(
       public fun metadata(metadata: String)
 
       /**
+       * @param openSearchServerlessEntityId Custom entity id attribute to override default entity
+       * id for this saml integration.
+       */
+      public fun openSearchServerlessEntityId(openSearchServerlessEntityId: String)
+
+      /**
        * @param sessionTimeout The session timeout, in minutes.
        * Default is 60 minutes (12 hours).
        */
@@ -778,6 +796,14 @@ public open class CfnSecurityConfig(
        */
       override fun metadata(metadata: String) {
         cdkBuilder.metadata(metadata)
+      }
+
+      /**
+       * @param openSearchServerlessEntityId Custom entity id attribute to override default entity
+       * id for this saml integration.
+       */
+      override fun openSearchServerlessEntityId(openSearchServerlessEntityId: String) {
+        cdkBuilder.openSearchServerlessEntityId(openSearchServerlessEntityId)
       }
 
       /**
@@ -817,6 +843,14 @@ public open class CfnSecurityConfig(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchserverless-securityconfig-samlconfigoptions.html#cfn-opensearchserverless-securityconfig-samlconfigoptions-metadata)
        */
       override fun metadata(): String = unwrap(this).getMetadata()
+
+      /**
+       * Custom entity id attribute to override default entity id for this saml integration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchserverless-securityconfig-samlconfigoptions.html#cfn-opensearchserverless-securityconfig-samlconfigoptions-opensearchserverlessentityid)
+       */
+      override fun openSearchServerlessEntityId(): String? =
+          unwrap(this).getOpenSearchServerlessEntityId()
 
       /**
        * The session timeout, in minutes.

@@ -136,6 +136,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .policyDescription("policyDescription")
  * .resourcesCleanUp(false)
  * .resourceSetIds(List.of("resourceSetIds"))
+ * .resourceTagLogicalOperator("resourceTagLogicalOperator")
  * .resourceTags(List.of(ResourceTagProperty.builder()
  * .key("key")
  * // the properties below are optional
@@ -363,6 +364,21 @@ public open class CfnPolicy(
    * The unique identifiers of the resource sets used by the policy.
    */
   public open fun resourceSetIds(vararg `value`: String): Unit = resourceSetIds(`value`.toList())
+
+  /**
+   * Specifies whether to combine multiple resource tags with AND, so that a resource must have all
+   * tags to be included or excluded, or OR, so that a resource must have at least one tag.
+   */
+  public open fun resourceTagLogicalOperator(): String? =
+      unwrap(this).getResourceTagLogicalOperator()
+
+  /**
+   * Specifies whether to combine multiple resource tags with AND, so that a resource must have all
+   * tags to be included or excluded, or OR, so that a resource must have at least one tag.
+   */
+  public open fun resourceTagLogicalOperator(`value`: String) {
+    unwrap(this).setResourceTagLogicalOperator(`value`)
+  }
 
   /**
    * An array of `ResourceTag` objects, used to explicitly include resources in the policy scope or
@@ -804,6 +820,19 @@ public open class CfnPolicy(
     public fun resourceSetIds(vararg resourceSetIds: String)
 
     /**
+     * Specifies whether to combine multiple resource tags with AND, so that a resource must have
+     * all tags to be included or excluded, or OR, so that a resource must have at least one tag.
+     *
+     * Default: `AND`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-resourcetaglogicaloperator)
+     * @param resourceTagLogicalOperator Specifies whether to combine multiple resource tags with
+     * AND, so that a resource must have all tags to be included or excluded, or OR, so that a resource
+     * must have at least one tag. 
+     */
+    public fun resourceTagLogicalOperator(resourceTagLogicalOperator: String)
+
+    /**
      * An array of `ResourceTag` objects, used to explicitly include resources in the policy scope
      * or explicitly exclude them.
      *
@@ -939,8 +968,8 @@ public open class CfnPolicy(
      *
      * * Type - Indicates the service type that the policy uses to protect the resource. For
      * security group policies, Firewall Manager supports one security group for each common policy and
-     * for each content audit policy. This is an adjustable limit that you can increase by contacting
-     * AWS Support .
+     * for each content audit policy. This is an adjustable limit that you can increase by contacting 
+     * .
      *
      * Valid values: `DNS_FIREWALL` | `NETWORK_FIREWALL` | `SECURITY_GROUPS_COMMON` |
      * `SECURITY_GROUPS_CONTENT_AUDIT` | `SECURITY_GROUPS_USAGE_AUDIT` | `SHIELD_ADVANCED` |
@@ -1113,8 +1142,8 @@ public open class CfnPolicy(
      *
      * * Type - Indicates the service type that the policy uses to protect the resource. For
      * security group policies, Firewall Manager supports one security group for each common policy and
-     * for each content audit policy. This is an adjustable limit that you can increase by contacting
-     * AWS Support .
+     * for each content audit policy. This is an adjustable limit that you can increase by contacting 
+     * .
      *
      * Valid values: `DNS_FIREWALL` | `NETWORK_FIREWALL` | `SECURITY_GROUPS_COMMON` |
      * `SECURITY_GROUPS_CONTENT_AUDIT` | `SECURITY_GROUPS_USAGE_AUDIT` | `SHIELD_ADVANCED` |
@@ -1288,8 +1317,8 @@ public open class CfnPolicy(
      *
      * * Type - Indicates the service type that the policy uses to protect the resource. For
      * security group policies, Firewall Manager supports one security group for each common policy and
-     * for each content audit policy. This is an adjustable limit that you can increase by contacting
-     * AWS Support .
+     * for each content audit policy. This is an adjustable limit that you can increase by contacting 
+     * .
      *
      * Valid values: `DNS_FIREWALL` | `NETWORK_FIREWALL` | `SECURITY_GROUPS_COMMON` |
      * `SECURITY_GROUPS_CONTENT_AUDIT` | `SECURITY_GROUPS_USAGE_AUDIT` | `SHIELD_ADVANCED` |
@@ -1824,6 +1853,21 @@ public open class CfnPolicy(
         resourceSetIds(resourceSetIds.toList())
 
     /**
+     * Specifies whether to combine multiple resource tags with AND, so that a resource must have
+     * all tags to be included or excluded, or OR, so that a resource must have at least one tag.
+     *
+     * Default: `AND`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-resourcetaglogicaloperator)
+     * @param resourceTagLogicalOperator Specifies whether to combine multiple resource tags with
+     * AND, so that a resource must have all tags to be included or excluded, or OR, so that a resource
+     * must have at least one tag. 
+     */
+    override fun resourceTagLogicalOperator(resourceTagLogicalOperator: String) {
+      cdkBuilder.resourceTagLogicalOperator(resourceTagLogicalOperator)
+    }
+
+    /**
      * An array of `ResourceTag` objects, used to explicitly include resources in the policy scope
      * or explicitly exclude them.
      *
@@ -1972,8 +2016,8 @@ public open class CfnPolicy(
      *
      * * Type - Indicates the service type that the policy uses to protect the resource. For
      * security group policies, Firewall Manager supports one security group for each common policy and
-     * for each content audit policy. This is an adjustable limit that you can increase by contacting
-     * AWS Support .
+     * for each content audit policy. This is an adjustable limit that you can increase by contacting 
+     * .
      *
      * Valid values: `DNS_FIREWALL` | `NETWORK_FIREWALL` | `SECURITY_GROUPS_COMMON` |
      * `SECURITY_GROUPS_CONTENT_AUDIT` | `SECURITY_GROUPS_USAGE_AUDIT` | `SHIELD_ADVANCED` |
@@ -2148,8 +2192,8 @@ public open class CfnPolicy(
      *
      * * Type - Indicates the service type that the policy uses to protect the resource. For
      * security group policies, Firewall Manager supports one security group for each common policy and
-     * for each content audit policy. This is an adjustable limit that you can increase by contacting
-     * AWS Support .
+     * for each content audit policy. This is an adjustable limit that you can increase by contacting 
+     * .
      *
      * Valid values: `DNS_FIREWALL` | `NETWORK_FIREWALL` | `SECURITY_GROUPS_COMMON` |
      * `SECURITY_GROUPS_CONTENT_AUDIT` | `SECURITY_GROUPS_USAGE_AUDIT` | `SHIELD_ADVANCED` |
@@ -2325,8 +2369,8 @@ public open class CfnPolicy(
      *
      * * Type - Indicates the service type that the policy uses to protect the resource. For
      * security group policies, Firewall Manager supports one security group for each common policy and
-     * for each content audit policy. This is an adjustable limit that you can increase by contacting
-     * AWS Support .
+     * for each content audit policy. This is an adjustable limit that you can increase by contacting 
+     * .
      *
      * Valid values: `DNS_FIREWALL` | `NETWORK_FIREWALL` | `SECURITY_GROUPS_COMMON` |
      * `SECURITY_GROUPS_CONTENT_AUDIT` | `SECURITY_GROUPS_USAGE_AUDIT` | `SHIELD_ADVANCED` |
@@ -4753,7 +4797,7 @@ public open class CfnPolicy(
      * This specifies the type of policy that is created, either an AWS WAF policy, a Shield
      * Advanced policy, or a security group policy. For security group policies, Firewall Manager
      * supports one security group for each common policy and for each content audit policy. This is an
-     * adjustable limit that you can increase by contacting AWS Support .
+     * adjustable limit that you can increase by contacting SUPlong .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-securityservicepolicydata.html#cfn-fms-policy-securityservicepolicydata-type)
      */
@@ -4946,7 +4990,7 @@ public open class CfnPolicy(
        * This specifies the type of policy that is created, either an AWS WAF policy, a Shield
        * Advanced policy, or a security group policy. For security group policies, Firewall Manager
        * supports one security group for each common policy and for each content audit policy. This is
-       * an adjustable limit that you can increase by contacting AWS Support .
+       * an adjustable limit that you can increase by contacting SUPlong .
        */
       public fun type(type: String)
     }
@@ -5145,7 +5189,7 @@ public open class CfnPolicy(
        * This specifies the type of policy that is created, either an AWS WAF policy, a Shield
        * Advanced policy, or a security group policy. For security group policies, Firewall Manager
        * supports one security group for each common policy and for each content audit policy. This is
-       * an adjustable limit that you can increase by contacting AWS Support .
+       * an adjustable limit that you can increase by contacting SUPlong .
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -5333,7 +5377,7 @@ public open class CfnPolicy(
        * This specifies the type of policy that is created, either an AWS WAF policy, a Shield
        * Advanced policy, or a security group policy. For security group policies, Firewall Manager
        * supports one security group for each common policy and for each content audit policy. This is
-       * an adjustable limit that you can increase by contacting AWS Support .
+       * an adjustable limit that you can increase by contacting SUPlong .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-securityservicepolicydata.html#cfn-fms-policy-securityservicepolicydata-type)
        */

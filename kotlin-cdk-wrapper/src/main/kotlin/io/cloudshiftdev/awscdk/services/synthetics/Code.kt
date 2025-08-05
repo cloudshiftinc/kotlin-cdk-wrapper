@@ -17,15 +17,14 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.*;
  * Canary canary = Canary.Builder.create(this, "MyCanary")
  * .schedule(Schedule.rate(Duration.minutes(5)))
  * .test(Test.custom(CustomTestOptions.builder()
  * .code(Code.fromAsset(join(__dirname, "canary")))
  * .handler("index.handler")
  * .build()))
- * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
- * .memory(Size.mebibytes(1024))
+ * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_7_0)
+ * .resourcesToReplicateTags(List.of(ResourceToReplicateTags.LAMBDA_FUNCTION))
  * .build();
  * ```
  */
@@ -40,6 +39,7 @@ public abstract class Code(
    * @param scope The binding scope. 
    * @param handler 
    * @param family 
+   * @param runtimeName
    */
   public open fun bind(
     scope: Construct,
@@ -47,6 +47,24 @@ public abstract class Code(
     family: RuntimeFamily,
   ): CodeConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap), handler,
       family.let(RuntimeFamily.Companion::unwrap)).let(CodeConfig::wrap)
+
+  /**
+   * Called when the canary is initialized to allow this object to bind to the stack, add resources
+   * and have fun.
+   *
+   * @return a bound `CodeConfig`.
+   * @param scope The binding scope. 
+   * @param handler 
+   * @param family 
+   * @param runtimeName
+   */
+  public open fun bind(
+    scope: Construct,
+    handler: String,
+    family: RuntimeFamily,
+    runtimeName: String,
+  ): CodeConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap), handler,
+      family.let(RuntimeFamily.Companion::unwrap), runtimeName).let(CodeConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.synthetics.Code,

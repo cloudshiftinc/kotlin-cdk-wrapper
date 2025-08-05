@@ -21,7 +21,18 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Creates an application in IAM Identity Center for the given application provider.
+ * Creates an OAuth 2.0 customer managed application in IAM Identity Center for the given
+ * application provider.
+ *
+ *
+ * This API does not support creating SAML 2.0 customer managed applications or AWS managed
+ * applications. To learn how to create an AWS managed application, see the application user guide. You
+ * can create a SAML 2.0 customer managed application in the AWS Management Console only. See [Setting
+ * up customer managed SAML 2.0
+ * applications](https://docs.aws.amazon.com/singlesignon/latest/userguide/customermanagedapps-saml2-setup.html)
+ * . For more information on these application types, see [AWS managed
+ * applications](https://docs.aws.amazon.com/singlesignon/latest/userguide/awsapps.html) .
+ *
  *
  * Example:
  *

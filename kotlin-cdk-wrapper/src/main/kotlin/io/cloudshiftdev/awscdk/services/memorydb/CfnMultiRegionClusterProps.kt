@@ -66,9 +66,12 @@ public interface CfnMultiRegionClusterProps {
   public fun engineVersion(): String? = unwrap(this).getEngineVersion()
 
   /**
-   * The name of the Multi Region cluster.
+   * A suffix to be added to the Multi-Region cluster name.
    *
-   * This value must be unique as it also serves as the multi region cluster identifier.
+   * Amazon MemoryDB automatically applies a prefix to the Multi-Region cluster Name when it is
+   * created. Each Amazon Region has its own prefix. For instance, a Multi-Region cluster Name created
+   * in the US-West-1 region will begin with "virxk", along with the suffix name you provide. The
+   * suffix guarantees uniqueness of the Multi-Region cluster name across multiple regions.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-multiregioncluster.html#cfn-memorydb-multiregioncluster-multiregionclusternamesuffix)
    */
@@ -91,14 +94,14 @@ public interface CfnMultiRegionClusterProps {
   public fun nodeType(): String
 
   /**
-   * The number of shards the multi region cluster will contain.
+   * The number of shards in the multi-Region cluster.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-multiregioncluster.html#cfn-memorydb-multiregioncluster-numshards)
    */
   public fun numShards(): Number? = unwrap(this).getNumShards()
 
   /**
-   * An array of key-value pairs to apply to this multi region cluster.
+   * A list of tags to be applied to the multi-Region cluster.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-multiregioncluster.html#cfn-memorydb-multiregioncluster-tags)
    */
@@ -112,9 +115,9 @@ public interface CfnMultiRegionClusterProps {
   public fun tlsEnabled(): Any? = unwrap(this).getTlsEnabled()
 
   /**
-   * An enum string value that determines the update strategy for scaling.
+   * The strategy to use for the update operation.
    *
-   * Possible values are 'COORDINATED' and 'UNCOORDINATED'. Default is 'COORDINATED'.
+   * Supported values are "coordinated" or "uncoordinated".
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-multiregioncluster.html#cfn-memorydb-multiregioncluster-updatestrategy)
    */
@@ -141,8 +144,11 @@ public interface CfnMultiRegionClusterProps {
     public fun engineVersion(engineVersion: String)
 
     /**
-     * @param multiRegionClusterNameSuffix The name of the Multi Region cluster.
-     * This value must be unique as it also serves as the multi region cluster identifier.
+     * @param multiRegionClusterNameSuffix A suffix to be added to the Multi-Region cluster name.
+     * Amazon MemoryDB automatically applies a prefix to the Multi-Region cluster Name when it is
+     * created. Each Amazon Region has its own prefix. For instance, a Multi-Region cluster Name
+     * created in the US-West-1 region will begin with "virxk", along with the suffix name you provide.
+     * The suffix guarantees uniqueness of the Multi-Region cluster name across multiple regions.
      */
     public fun multiRegionClusterNameSuffix(multiRegionClusterNameSuffix: String)
 
@@ -158,17 +164,17 @@ public interface CfnMultiRegionClusterProps {
     public fun nodeType(nodeType: String)
 
     /**
-     * @param numShards The number of shards the multi region cluster will contain.
+     * @param numShards The number of shards in the multi-Region cluster.
      */
     public fun numShards(numShards: Number)
 
     /**
-     * @param tags An array of key-value pairs to apply to this multi region cluster.
+     * @param tags A list of tags to be applied to the multi-Region cluster.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags An array of key-value pairs to apply to this multi region cluster.
+     * @param tags A list of tags to be applied to the multi-Region cluster.
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -183,8 +189,8 @@ public interface CfnMultiRegionClusterProps {
     public fun tlsEnabled(tlsEnabled: IResolvable)
 
     /**
-     * @param updateStrategy An enum string value that determines the update strategy for scaling.
-     * Possible values are 'COORDINATED' and 'UNCOORDINATED'. Default is 'COORDINATED'.
+     * @param updateStrategy The strategy to use for the update operation.
+     * Supported values are "coordinated" or "uncoordinated".
      */
     public fun updateStrategy(updateStrategy: String)
   }
@@ -216,8 +222,11 @@ public interface CfnMultiRegionClusterProps {
     }
 
     /**
-     * @param multiRegionClusterNameSuffix The name of the Multi Region cluster.
-     * This value must be unique as it also serves as the multi region cluster identifier.
+     * @param multiRegionClusterNameSuffix A suffix to be added to the Multi-Region cluster name.
+     * Amazon MemoryDB automatically applies a prefix to the Multi-Region cluster Name when it is
+     * created. Each Amazon Region has its own prefix. For instance, a Multi-Region cluster Name
+     * created in the US-West-1 region will begin with "virxk", along with the suffix name you provide.
+     * The suffix guarantees uniqueness of the Multi-Region cluster name across multiple regions.
      */
     override fun multiRegionClusterNameSuffix(multiRegionClusterNameSuffix: String) {
       cdkBuilder.multiRegionClusterNameSuffix(multiRegionClusterNameSuffix)
@@ -239,21 +248,21 @@ public interface CfnMultiRegionClusterProps {
     }
 
     /**
-     * @param numShards The number of shards the multi region cluster will contain.
+     * @param numShards The number of shards in the multi-Region cluster.
      */
     override fun numShards(numShards: Number) {
       cdkBuilder.numShards(numShards)
     }
 
     /**
-     * @param tags An array of key-value pairs to apply to this multi region cluster.
+     * @param tags A list of tags to be applied to the multi-Region cluster.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags An array of key-value pairs to apply to this multi region cluster.
+     * @param tags A list of tags to be applied to the multi-Region cluster.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -272,8 +281,8 @@ public interface CfnMultiRegionClusterProps {
     }
 
     /**
-     * @param updateStrategy An enum string value that determines the update strategy for scaling.
-     * Possible values are 'COORDINATED' and 'UNCOORDINATED'. Default is 'COORDINATED'.
+     * @param updateStrategy The strategy to use for the update operation.
+     * Supported values are "coordinated" or "uncoordinated".
      */
     override fun updateStrategy(updateStrategy: String) {
       cdkBuilder.updateStrategy(updateStrategy)
@@ -309,9 +318,12 @@ public interface CfnMultiRegionClusterProps {
     override fun engineVersion(): String? = unwrap(this).getEngineVersion()
 
     /**
-     * The name of the Multi Region cluster.
+     * A suffix to be added to the Multi-Region cluster name.
      *
-     * This value must be unique as it also serves as the multi region cluster identifier.
+     * Amazon MemoryDB automatically applies a prefix to the Multi-Region cluster Name when it is
+     * created. Each Amazon Region has its own prefix. For instance, a Multi-Region cluster Name
+     * created in the US-West-1 region will begin with "virxk", along with the suffix name you provide.
+     * The suffix guarantees uniqueness of the Multi-Region cluster name across multiple regions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-multiregioncluster.html#cfn-memorydb-multiregioncluster-multiregionclusternamesuffix)
      */
@@ -334,14 +346,14 @@ public interface CfnMultiRegionClusterProps {
     override fun nodeType(): String = unwrap(this).getNodeType()
 
     /**
-     * The number of shards the multi region cluster will contain.
+     * The number of shards in the multi-Region cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-multiregioncluster.html#cfn-memorydb-multiregioncluster-numshards)
      */
     override fun numShards(): Number? = unwrap(this).getNumShards()
 
     /**
-     * An array of key-value pairs to apply to this multi region cluster.
+     * A list of tags to be applied to the multi-Region cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-multiregioncluster.html#cfn-memorydb-multiregioncluster-tags)
      */
@@ -355,9 +367,9 @@ public interface CfnMultiRegionClusterProps {
     override fun tlsEnabled(): Any? = unwrap(this).getTlsEnabled()
 
     /**
-     * An enum string value that determines the update strategy for scaling.
+     * The strategy to use for the update operation.
      *
-     * Possible values are 'COORDINATED' and 'UNCOORDINATED'. Default is 'COORDINATED'.
+     * Supported values are "coordinated" or "uncoordinated".
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-multiregioncluster.html#cfn-memorydb-multiregioncluster-updatestrategy)
      */

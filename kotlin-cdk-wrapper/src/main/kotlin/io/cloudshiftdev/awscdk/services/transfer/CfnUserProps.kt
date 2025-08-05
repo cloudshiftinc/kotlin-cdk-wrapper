@@ -59,7 +59,8 @@ public interface CfnUserProps {
    * A `HomeDirectory` example is `/bucket_name/home/mydirectory` .
    *
    *
-   * The `HomeDirectory` parameter is only used if `HomeDirectoryType` is set to `PATH` .
+   * You can use the `HomeDirectory` parameter for `HomeDirectoryType` when it is set to either
+   * `PATH` or `LOGICAL` .
    *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-homedirectory)
@@ -174,6 +175,12 @@ public interface CfnUserProps {
   /**
    * Specifies the public key portion of the Secure Shell (SSH) keys stored for the described user.
    *
+   *
+   * To delete the public key body, set its value to zero keys, as shown here:
+   *
+   * `SshPublicKeys: []`
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-sshpublickeys)
    */
   public fun sshPublicKeys(): List<String> = unwrap(this).getSshPublicKeys() ?: emptyList()
@@ -209,7 +216,8 @@ public interface CfnUserProps {
      * A `HomeDirectory` example is `/bucket_name/home/mydirectory` .
      *
      *
-     * The `HomeDirectory` parameter is only used if `HomeDirectoryType` is set to `PATH` .
+     * You can use the `HomeDirectory` parameter for `HomeDirectoryType` when it is set to either
+     * `PATH` or `LOGICAL` .
      */
     public fun homeDirectory(homeDirectory: String)
 
@@ -370,12 +378,20 @@ public interface CfnUserProps {
     /**
      * @param sshPublicKeys Specifies the public key portion of the Secure Shell (SSH) keys stored
      * for the described user.
+     *
+     * To delete the public key body, set its value to zero keys, as shown here:
+     *
+     * `SshPublicKeys: []`
      */
     public fun sshPublicKeys(sshPublicKeys: List<String>)
 
     /**
      * @param sshPublicKeys Specifies the public key portion of the Secure Shell (SSH) keys stored
      * for the described user.
+     *
+     * To delete the public key body, set its value to zero keys, as shown here:
+     *
+     * `SshPublicKeys: []`
      */
     public fun sshPublicKeys(vararg sshPublicKeys: String)
 
@@ -410,7 +426,8 @@ public interface CfnUserProps {
      * A `HomeDirectory` example is `/bucket_name/home/mydirectory` .
      *
      *
-     * The `HomeDirectory` parameter is only used if `HomeDirectoryType` is set to `PATH` .
+     * You can use the `HomeDirectory` parameter for `HomeDirectoryType` when it is set to either
+     * `PATH` or `LOGICAL` .
      */
     override fun homeDirectory(homeDirectory: String) {
       cdkBuilder.homeDirectory(homeDirectory)
@@ -591,6 +608,10 @@ public interface CfnUserProps {
     /**
      * @param sshPublicKeys Specifies the public key portion of the Secure Shell (SSH) keys stored
      * for the described user.
+     *
+     * To delete the public key body, set its value to zero keys, as shown here:
+     *
+     * `SshPublicKeys: []`
      */
     override fun sshPublicKeys(sshPublicKeys: List<String>) {
       cdkBuilder.sshPublicKeys(sshPublicKeys)
@@ -599,6 +620,10 @@ public interface CfnUserProps {
     /**
      * @param sshPublicKeys Specifies the public key portion of the Secure Shell (SSH) keys stored
      * for the described user.
+     *
+     * To delete the public key body, set its value to zero keys, as shown here:
+     *
+     * `SshPublicKeys: []`
      */
     override fun sshPublicKeys(vararg sshPublicKeys: String): Unit =
         sshPublicKeys(sshPublicKeys.toList())
@@ -640,7 +665,8 @@ public interface CfnUserProps {
      * A `HomeDirectory` example is `/bucket_name/home/mydirectory` .
      *
      *
-     * The `HomeDirectory` parameter is only used if `HomeDirectoryType` is set to `PATH` .
+     * You can use the `HomeDirectory` parameter for `HomeDirectoryType` when it is set to either
+     * `PATH` or `LOGICAL` .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-homedirectory)
@@ -755,6 +781,12 @@ public interface CfnUserProps {
     /**
      * Specifies the public key portion of the Secure Shell (SSH) keys stored for the described
      * user.
+     *
+     *
+     * To delete the public key body, set its value to zero keys, as shown here:
+     *
+     * `SshPublicKeys: []`
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html#cfn-transfer-user-sshpublickeys)
      */

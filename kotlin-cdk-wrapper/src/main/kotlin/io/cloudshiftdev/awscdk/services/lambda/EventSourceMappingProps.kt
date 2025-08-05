@@ -31,6 +31,7 @@ import kotlin.jvm.JvmName
  * Object filters;
  * Function function_;
  * Key key;
+ * ISchemaRegistry schemaRegistry;
  * SourceAccessConfigurationType sourceAccessConfigurationType;
  * EventSourceMappingProps eventSourceMappingProps = EventSourceMappingProps.builder()
  * .target(function_)
@@ -59,6 +60,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .reportBatchItemFailures(false)
  * .retryAttempts(123)
+ * .schemaRegistryConfig(schemaRegistry)
  * .sourceAccessConfigurations(List.of(SourceAccessConfiguration.builder()
  * .type(sourceAccessConfigurationType)
  * .uri("uri")
@@ -143,7 +145,7 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
      * @param kafkaConsumerGroupId The identifier for the Kafka consumer group to join.
      * The consumer group ID must be unique among all your Kafka event sources. After creating a
      * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
-     * The value must have a lenght between 1 and 200 and full the pattern '[a-zA-Z0-9-/
+     * The value must have a length between 1 and 200 and full the pattern '[a-zA-Z0-9-/
      * *:_+=.&#64;-]*'. For more information, see [Customizable consumer group
      * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id).
      */
@@ -192,7 +194,8 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
     public fun metricsConfig(metricsConfig: MetricsConfig.Builder.() -> Unit)
 
     /**
-     * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+     * @param onFailure An Amazon S3, Amazon SQS queue or Amazon SNS topic destination for discarded
+     * records.
      */
     public fun onFailure(onFailure: IEventSourceDlq)
 
@@ -243,6 +246,11 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
     public fun retryAttempts(retryAttempts: Number)
 
     /**
+     * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry.
+     */
+    public fun schemaRegistryConfig(schemaRegistryConfig: ISchemaRegistry)
+
+    /**
      * @param sourceAccessConfigurations Specific settings like the authentication protocol or the
      * VPC components to secure access to your event source.
      */
@@ -268,8 +276,8 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
     public fun startingPositionTimestamp(startingPositionTimestamp: Number)
 
     /**
-     * @param supportS3OnFailureDestination Check if support S3 onfailure destination(ODF).
-     * Currently only MSK and self managed kafka event support S3 ODF
+     * @param supportS3OnFailureDestination Check if support S3 onfailure destination(OFD).
+     * Kinesis, DynamoDB, MSK and self managed kafka event support S3 OFD
      */
     public fun supportS3OnFailureDestination(supportS3OnFailureDestination: Boolean)
 
@@ -366,7 +374,7 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
      * @param kafkaConsumerGroupId The identifier for the Kafka consumer group to join.
      * The consumer group ID must be unique among all your Kafka event sources. After creating a
      * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
-     * The value must have a lenght between 1 and 200 and full the pattern '[a-zA-Z0-9-/
+     * The value must have a length between 1 and 200 and full the pattern '[a-zA-Z0-9-/
      * *:_+=.&#64;-]*'. For more information, see [Customizable consumer group
      * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id).
      */
@@ -428,7 +436,8 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
         metricsConfig(MetricsConfig(metricsConfig))
 
     /**
-     * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+     * @param onFailure An Amazon S3, Amazon SQS queue or Amazon SNS topic destination for discarded
+     * records.
      */
     override fun onFailure(onFailure: IEventSourceDlq) {
       cdkBuilder.onFailure(onFailure.let(IEventSourceDlq.Companion::unwrap))
@@ -490,6 +499,13 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
     }
 
     /**
+     * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry.
+     */
+    override fun schemaRegistryConfig(schemaRegistryConfig: ISchemaRegistry) {
+      cdkBuilder.schemaRegistryConfig(schemaRegistryConfig.let(ISchemaRegistry.Companion::unwrap))
+    }
+
+    /**
      * @param sourceAccessConfigurations Specific settings like the authentication protocol or the
      * VPC components to secure access to your event source.
      */
@@ -522,8 +538,8 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
     }
 
     /**
-     * @param supportS3OnFailureDestination Check if support S3 onfailure destination(ODF).
-     * Currently only MSK and self managed kafka event support S3 ODF
+     * @param supportS3OnFailureDestination Check if support S3 onfailure destination(OFD).
+     * Kinesis, DynamoDB, MSK and self managed kafka event support S3 OFD
      */
     override fun supportS3OnFailureDestination(supportS3OnFailureDestination: Boolean) {
       cdkBuilder.supportS3OnFailureDestination(supportS3OnFailureDestination)
@@ -625,7 +641,7 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
      *
      * The consumer group ID must be unique among all your Kafka event sources. After creating a
      * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
-     * The value must have a lenght between 1 and 200 and full the pattern '[a-zA-Z0-9-/
+     * The value must have a length between 1 and 200 and full the pattern '[a-zA-Z0-9-/
      * *:_+=.&#64;-]*'. For more information, see [Customizable consumer group
      * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id).
      *
@@ -688,7 +704,7 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
         unwrap(this).getMetricsConfig()?.let(MetricsConfig::wrap)
 
     /**
-     * An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+     * An Amazon S3, Amazon SQS queue or Amazon SNS topic destination for discarded records.
      *
      * Default: discarded records are ignored
      */
@@ -743,6 +759,14 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
     override fun retryAttempts(): Number? = unwrap(this).getRetryAttempts()
 
     /**
+     * Specific configuration settings for a Kafka schema registry.
+     *
+     * Default: - none
+     */
+    override fun schemaRegistryConfig(): ISchemaRegistry? =
+        unwrap(this).getSchemaRegistryConfig()?.let(ISchemaRegistry::wrap)
+
+    /**
      * Specific settings like the authentication protocol or the VPC components to secure access to
      * your event source.
      *
@@ -772,9 +796,9 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
     override fun startingPositionTimestamp(): Number? = unwrap(this).getStartingPositionTimestamp()
 
     /**
-     * Check if support S3 onfailure destination(ODF).
+     * Check if support S3 onfailure destination(OFD).
      *
-     * Currently only MSK and self managed kafka event support S3 ODF
+     * Kinesis, DynamoDB, MSK and self managed kafka event support S3 OFD
      *
      * Default: false
      */

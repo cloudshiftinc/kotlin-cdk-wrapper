@@ -20,7 +20,7 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public interface FailProps {
+public interface FailProps : StateBaseProps {
   /**
    * A description for the cause of the failure.
    *
@@ -40,13 +40,6 @@ public interface FailProps {
   public fun causePath(): String? = unwrap(this).getCausePath()
 
   /**
-   * An optional description for this state.
-   *
-   * Default: - No comment
-   */
-  public fun comment(): String? = unwrap(this).getComment()
-
-  /**
    * Error code used to represent this failure.
    *
    * Default: - No error code
@@ -63,13 +56,6 @@ public interface FailProps {
    * Default: - No error path
    */
   public fun errorPath(): String? = unwrap(this).getErrorPath()
-
-  /**
-   * Optional name for this state.
-   *
-   * Default: - The construct ID will be used as state name
-   */
-  public fun stateName(): String? = unwrap(this).getStateName()
 
   /**
    * A builder for [FailProps]
@@ -91,7 +77,7 @@ public interface FailProps {
     public fun causePath(causePath: String)
 
     /**
-     * @param comment An optional description for this state.
+     * @param comment A comment describing this state.
      */
     public fun comment(comment: String)
 
@@ -108,6 +94,13 @@ public interface FailProps {
      * States.Base64Encode, States.Base64Decode, States.Hash, and States.UUID.
      */
     public fun errorPath(errorPath: String)
+
+    /**
+     * @param queryLanguage The name of the query language used by the state.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
 
     /**
      * @param stateName Optional name for this state.
@@ -138,7 +131,7 @@ public interface FailProps {
     }
 
     /**
-     * @param comment An optional description for this state.
+     * @param comment A comment describing this state.
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -160,6 +153,15 @@ public interface FailProps {
      */
     override fun errorPath(errorPath: String) {
       cdkBuilder.errorPath(errorPath)
+    }
+
+    /**
+     * @param queryLanguage The name of the query language used by the state.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
     }
 
     /**
@@ -195,9 +197,9 @@ public interface FailProps {
     override fun causePath(): String? = unwrap(this).getCausePath()
 
     /**
-     * An optional description for this state.
+     * A comment describing this state.
      *
-     * Default: - No comment
+     * Default: No comment
      */
     override fun comment(): String? = unwrap(this).getComment()
 
@@ -218,6 +220,17 @@ public interface FailProps {
      * Default: - No error path
      */
     override fun errorPath(): String? = unwrap(this).getErrorPath()
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     */
+    override fun queryLanguage(): QueryLanguage? =
+        unwrap(this).getQueryLanguage()?.let(QueryLanguage::wrap)
 
     /**
      * Optional name for this state.

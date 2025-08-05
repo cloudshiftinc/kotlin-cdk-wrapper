@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -23,6 +24,7 @@ import kotlin.collections.List
  * ProxyConfiguration proxyConfiguration;
  * Role role;
  * ExternalTaskDefinitionProps externalTaskDefinitionProps = ExternalTaskDefinitionProps.builder()
+ * .enableFaultInjection(false)
  * .executionRole(role)
  * .family("family")
  * .networkMode(NetworkMode.NONE)
@@ -76,6 +78,14 @@ public interface ExternalTaskDefinitionProps : CommonTaskDefinitionProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param enableFaultInjection Enables fault injection and allows for fault injection requests
+     * to be accepted from the task's containers.
+     * Fault injection only works with tasks using the [NetworkMode.AWS_VPC] or [NetworkMode.HOST]
+     * network modes.
+     */
+    public fun enableFaultInjection(enableFaultInjection: Boolean)
+
+    /**
      * @param executionRole The name of the IAM task execution role that grants the ECS agent
      * permission to call AWS APIs on your behalf.
      * The role will be used to retrieve container images from ECR and create CloudWatch log groups.
@@ -125,6 +135,16 @@ public interface ExternalTaskDefinitionProps : CommonTaskDefinitionProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.ExternalTaskDefinitionProps.Builder
         = software.amazon.awscdk.services.ecs.ExternalTaskDefinitionProps.builder()
+
+    /**
+     * @param enableFaultInjection Enables fault injection and allows for fault injection requests
+     * to be accepted from the task's containers.
+     * Fault injection only works with tasks using the [NetworkMode.AWS_VPC] or [NetworkMode.HOST]
+     * network modes.
+     */
+    override fun enableFaultInjection(enableFaultInjection: Boolean) {
+      cdkBuilder.enableFaultInjection(enableFaultInjection)
+    }
 
     /**
      * @param executionRole The name of the IAM task execution role that grants the ECS agent
@@ -192,6 +212,17 @@ public interface ExternalTaskDefinitionProps : CommonTaskDefinitionProps {
     cdkObject: software.amazon.awscdk.services.ecs.ExternalTaskDefinitionProps,
   ) : CdkObject(cdkObject),
       ExternalTaskDefinitionProps {
+    /**
+     * Enables fault injection and allows for fault injection requests to be accepted from the
+     * task's containers.
+     *
+     * Fault injection only works with tasks using the [NetworkMode.AWS_VPC] or [NetworkMode.HOST]
+     * network modes.
+     *
+     * Default: undefined - ECS default setting is false
+     */
+    override fun enableFaultInjection(): Boolean? = unwrap(this).getEnableFaultInjection()
+
     /**
      * The name of the IAM task execution role that grants the ECS agent permission to call AWS APIs
      * on your behalf.

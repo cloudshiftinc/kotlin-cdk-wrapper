@@ -135,12 +135,12 @@ public open class CfnDBParameterGroup(
   }
 
   /**
-   * An array of parameter names and values for the parameter update.
+   * A mapping of parameter names and values for the parameter update.
    */
   public open fun parameters(): Any? = unwrap(this).getParameters()
 
   /**
-   * An array of parameter names and values for the parameter update.
+   * A mapping of parameter names and values for the parameter update.
    */
   public open fun parameters(`value`: Any) {
     unwrap(this).setParameters(`value`)
@@ -249,7 +249,7 @@ public open class CfnDBParameterGroup(
     public fun family(family: String)
 
     /**
-     * An array of parameter names and values for the parameter update.
+     * A mapping of parameter names and values for the parameter update.
      *
      * You must specify at least one parameter name and value.
      *
@@ -265,7 +265,7 @@ public open class CfnDBParameterGroup(
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbparametergroup.html#cfn-rds-dbparametergroup-parameters)
-     * @param parameters An array of parameter names and values for the parameter update. 
+     * @param parameters A mapping of parameter names and values for the parameter update. 
      */
     public fun parameters(parameters: Any)
 
@@ -374,7 +374,7 @@ public open class CfnDBParameterGroup(
     }
 
     /**
-     * An array of parameter names and values for the parameter update.
+     * A mapping of parameter names and values for the parameter update.
      *
      * You must specify at least one parameter name and value.
      *
@@ -390,7 +390,7 @@ public open class CfnDBParameterGroup(
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbparametergroup.html#cfn-rds-dbparametergroup-parameters)
-     * @param parameters An array of parameter names and values for the parameter update. 
+     * @param parameters A mapping of parameter names and values for the parameter update. 
      */
     override fun parameters(parameters: Any) {
       cdkBuilder.parameters(parameters)

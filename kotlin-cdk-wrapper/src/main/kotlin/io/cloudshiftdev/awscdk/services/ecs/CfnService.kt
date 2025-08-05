@@ -29,156 +29,83 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  *
  * The stack update fails if you change any properties that require replacement and at least one
- * Amazon ECS Service Connect `ServiceConnectConfiguration` property the is configured. This is because
- * AWS CloudFormation creates the replacement service first, but each `ServiceConnectService` must have
- * a name that is unique in the namespace. &gt; Starting April 15, 2023, AWS ; will not onboard new
+ * Amazon ECS Service Connect `ServiceConnectConfiguration` property is configured. This is because AWS
+ * CloudFormation creates the replacement service first, but each `ServiceConnectService` must have a
+ * name that is unique in the namespace. &gt; Starting April 15, 2023, AWS ; will not onboard new
  * customers to Amazon Elastic Inference (EI), and will help current customers migrate their workloads
  * to options that offer better price and performance. After April 15, 2023, new customers will not be
  * able to launch instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS , or Amazon EC2
  * . However, customers who have used Amazon EI at least once during the past 30-day period are
- * considered current customers and will be able to continue using the service.
+ * considered current customers and will be able to continue using the service. &gt; On June 12, 2025,
+ * Amazon ECS launched support for updating capacity provider configuration for Amazon ECS services.
+ * With this launch, Amazon ECS also aligned the AWS CloudFormation update behavior for
+ * `CapacityProviderStrategy` parameter with the standard practice. For more information, see [Amazon
+ * ECS adds support for updating capacity provider configuration for ECS
+ * services](https://docs.aws.amazon.com/about-aws/whats-new/2025/05/amazon-ecs-capacity-provider-configuration-ecs/)
+ * . Previously Amazon ECS ignored the `CapacityProviderStrategy` property if it was set to an empty
+ * list for example, `[]` in AWS CloudFormation , because updating capacity provider configuration was
+ * not supported. Now, with support for capacity provider updates, customers can remove capacity
+ * providers from a service by passing an empty list. When you specify an empty list ( `[]` ) for the
+ * `CapacityProviderStrategy` property in your AWS CloudFormation template, Amazon ECS will remove any
+ * capacity providers associated with the service, as follows:
+ *
+ * * For services created with a capacity provider strategy after the launch:
+ * * If there's a cluster default strategy set, the service will revert to using that default
+ * strategy.
+ * * If no cluster default strategy exists, you will receive the following error:
+ *
+ * No launch type to fall back to for empty capacity provider strategy. Your service was not created
+ * with a launch type.
+ *
+ * * For services created with a capacity provider strategy prior to the launch:
+ * * If `CapacityProviderStrategy` had `FARGATE_SPOT` or `FARGATE` capacity providers, the launch
+ * type will be updated to `FARGATE` and the capacity provider will be removed.
+ * * If the strategy included Auto Scaling group capacity providers, the service will revert to EC2
+ * launch type, and the Auto Scaling group capacity providers will not be used.
+ *
+ * Recommended Actions
+ *
+ * If you are currently using `CapacityProviderStrategy: []` in your AWS CloudFormation templates,
+ * you should take one of the following actions:
+ *
+ * * If you do not intend to update the Capacity Provider Strategy:
+ * * Remove the `CapacityProviderStrategy` property entirely from your AWS CloudFormation template
+ * * Alternatively, use `!Ref AWS ::NoValue` for the `CapacityProviderStrategy` property in your
+ * template
+ * * If you intend to maintain or update the Capacity Provider Strategy, specify the actual Capacity
+ * Provider Strategy for the service in your AWS CloudFormation template.
+ *
+ * If your AWS CloudFormation template had an empty list ([]) for `CapacityProviderStrategy` prior
+ * to the aforementioned launch on June 12, and you are using the same template with
+ * `CapacityProviderStrategy: []` , you might encounter the following error:
+ *
+ * Invalid request provided: When switching from launch type to capacity provider strategy on an
+ * existing service, or making a change to a capacity provider strategy on a service that is already
+ * using one, you must force a new deployment. (Service: Ecs, Status Code: 400, Request ID: xxx) (SDK
+ * Attempt Count: 1)" (RequestToken: xxx HandlerErrorCode: InvalidRequest)
+ *
+ * Note that AWS CloudFormation automatically initiates a new deployment when it detects a parameter
+ * change, but customers cannot choose to force a deployment through AWS CloudFormation . This is an
+ * invalid input scenario that requires one of the remediation actions listed above.
+ *
+ * If you are experiencing active production issues related to this change, contact AWS Support or
+ * your Technical Account Manager.
  *
  *
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.ecs.*;
- * CfnService cfnService = CfnService.Builder.create(this, "MyCfnService")
- * .availabilityZoneRebalancing("availabilityZoneRebalancing")
- * .capacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
- * .base(123)
- * .capacityProvider("capacityProvider")
- * .weight(123)
- * .build()))
- * .cluster("cluster")
- * .deploymentConfiguration(DeploymentConfigurationProperty.builder()
- * .alarms(DeploymentAlarmsProperty.builder()
- * .alarmNames(List.of("alarmNames"))
- * .enable(false)
- * .rollback(false)
- * .build())
- * .deploymentCircuitBreaker(DeploymentCircuitBreakerProperty.builder()
- * .enable(false)
- * .rollback(false)
- * .build())
- * .maximumPercent(123)
- * .minimumHealthyPercent(123)
- * .build())
- * .deploymentController(DeploymentControllerProperty.builder()
- * .type("type")
- * .build())
- * .desiredCount(123)
- * .enableEcsManagedTags(false)
- * .enableExecuteCommand(false)
- * .healthCheckGracePeriodSeconds(123)
- * .launchType("launchType")
- * .loadBalancers(List.of(LoadBalancerProperty.builder()
- * .containerName("containerName")
- * .containerPort(123)
- * .loadBalancerName("loadBalancerName")
- * .targetGroupArn("targetGroupArn")
- * .build()))
- * .networkConfiguration(NetworkConfigurationProperty.builder()
- * .awsvpcConfiguration(AwsVpcConfigurationProperty.builder()
- * .assignPublicIp("assignPublicIp")
- * .securityGroups(List.of("securityGroups"))
- * .subnets(List.of("subnets"))
- * .build())
- * .build())
- * .placementConstraints(List.of(PlacementConstraintProperty.builder()
- * .type("type")
- * // the properties below are optional
- * .expression("expression")
- * .build()))
- * .placementStrategies(List.of(PlacementStrategyProperty.builder()
- * .type("type")
- * // the properties below are optional
- * .field("field")
- * .build()))
- * .platformVersion("platformVersion")
- * .propagateTags("propagateTags")
- * .role("role")
- * .schedulingStrategy("schedulingStrategy")
- * .serviceConnectConfiguration(ServiceConnectConfigurationProperty.builder()
- * .enabled(false)
- * // the properties below are optional
- * .logConfiguration(LogConfigurationProperty.builder()
- * .logDriver("logDriver")
- * .options(Map.of(
- * "optionsKey", "options"))
- * .secretOptions(List.of(SecretProperty.builder()
- * .name("name")
- * .valueFrom("valueFrom")
- * .build()))
- * .build())
- * .namespace("namespace")
- * .services(List.of(ServiceConnectServiceProperty.builder()
- * .portName("portName")
- * // the properties below are optional
- * .clientAliases(List.of(ServiceConnectClientAliasProperty.builder()
- * .port(123)
- * // the properties below are optional
- * .dnsName("dnsName")
- * .build()))
- * .discoveryName("discoveryName")
- * .ingressPortOverride(123)
- * .timeout(TimeoutConfigurationProperty.builder()
- * .idleTimeoutSeconds(123)
- * .perRequestTimeoutSeconds(123)
- * .build())
- * .tls(ServiceConnectTlsConfigurationProperty.builder()
- * .issuerCertificateAuthority(ServiceConnectTlsCertificateAuthorityProperty.builder()
- * .awsPcaAuthorityArn("awsPcaAuthorityArn")
- * .build())
- * // the properties below are optional
- * .kmsKey("kmsKey")
- * .roleArn("roleArn")
- * .build())
- * .build()))
- * .build())
- * .serviceName("serviceName")
- * .serviceRegistries(List.of(ServiceRegistryProperty.builder()
- * .containerName("containerName")
- * .containerPort(123)
- * .port(123)
- * .registryArn("registryArn")
- * .build()))
- * .tags(List.of(CfnTag.builder()
- * .key("key")
- * .value("value")
- * .build()))
- * .taskDefinition("taskDefinition")
- * .volumeConfigurations(List.of(ServiceVolumeConfigurationProperty.builder()
- * .name("name")
- * // the properties below are optional
- * .managedEbsVolume(ServiceManagedEBSVolumeConfigurationProperty.builder()
- * .roleArn("roleArn")
- * // the properties below are optional
- * .encrypted(false)
- * .filesystemType("filesystemType")
- * .iops(123)
- * .kmsKeyId("kmsKeyId")
- * .sizeInGiB(123)
- * .snapshotId("snapshotId")
- * .tagSpecifications(List.of(EBSTagSpecificationProperty.builder()
- * .resourceType("resourceType")
- * // the properties below are optional
- * .propagateTags("propagateTags")
- * .tags(List.of(CfnTag.builder()
- * .key("key")
- * .value("value")
- * .build()))
- * .build()))
- * .throughput(123)
- * .volumeType("volumeType")
- * .build())
- * .build()))
- * .vpcLatticeConfigurations(List.of(VpcLatticeConfigurationProperty.builder()
- * .portName("portName")
- * .roleArn("roleArn")
- * .targetGroupArn("targetGroupArn")
+ * FargateService service;
+ * CfnService cfnService = (CfnService)service.getNode().getDefaultChild();
+ * cfnService.getDeploymentConfiguration() = DeploymentConfigurationProperty.builder()
+ * .maximumPercent(200)
+ * .minimumHealthyPercent(100)
+ * .strategy("BLUE_GREEN")
+ * .bakeTimeInMinutes(15)
+ * .lifecycleHooks(List.of(DeploymentLifecycleHookProperty.builder()
+ * .hookTargetArn("arn:aws:lambda:region:account:function:pre-deployment-hook")
+ * .roleArn("arn:aws:iam::account:role/deployment-hook-role")
+ * .lifecycleStages(List.of("PRE_STOP", "POST_START"))
  * .build()))
  * .build();
  * ```
@@ -217,7 +144,11 @@ public open class CfnService(
   public open fun attrName(): String = unwrap(this).getAttrName()
 
   /**
-   * Not currently supported in AWS CloudFormation .
+   * The ARN that identifies the service.
+   *
+   * For more information about the ARN format, see [Amazon Resource Name
+   * (ARN)](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#ecs-resource-ids)
+   * in the *Amazon ECS Developer Guide* .
    */
   public open fun attrServiceArn(): String = unwrap(this).getAttrServiceArn()
 
@@ -757,7 +688,7 @@ public open class CfnService(
      *
      * For more information, see [Balancing an Amazon ECS service across Availability
      * Zones](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html) in
-     * the *Amazon Elastic Container Service Developer Guide* .
+     * the **Amazon Elastic Container Service Developer Guide** .
      *
      * Default: - "DISABLED"
      *
@@ -774,7 +705,12 @@ public open class CfnService(
      * no `capacityProviderStrategy` or `launchType` is specified, the
      * `defaultCapacityProviderStrategy` for the cluster is used.
      *
-     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * A capacity provider strategy can contain a maximum of 20 capacity providers.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `CapacityProviderStrategyItem` array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy)
      * @param capacityProviderStrategy The capacity provider strategy to use for the service. 
@@ -788,7 +724,12 @@ public open class CfnService(
      * no `capacityProviderStrategy` or `launchType` is specified, the
      * `defaultCapacityProviderStrategy` for the cluster is used.
      *
-     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * A capacity provider strategy can contain a maximum of 20 capacity providers.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `CapacityProviderStrategyItem` array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy)
      * @param capacityProviderStrategy The capacity provider strategy to use for the service. 
@@ -802,7 +743,12 @@ public open class CfnService(
      * no `capacityProviderStrategy` or `launchType` is specified, the
      * `defaultCapacityProviderStrategy` for the cluster is used.
      *
-     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * A capacity provider strategy can contain a maximum of 20 capacity providers.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `CapacityProviderStrategyItem` array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy)
      * @param capacityProviderStrategy The capacity provider strategy to use for the service. 
@@ -857,8 +803,6 @@ public open class CfnService(
     /**
      * The deployment controller to use for the service.
      *
-     * If no deployment controller is specified, the default value of `ECS` is used.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-deploymentcontroller)
      * @param deploymentController The deployment controller to use for the service. 
      */
@@ -867,8 +811,6 @@ public open class CfnService(
     /**
      * The deployment controller to use for the service.
      *
-     * If no deployment controller is specified, the default value of `ECS` is used.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-deploymentcontroller)
      * @param deploymentController The deployment controller to use for the service. 
      */
@@ -876,8 +818,6 @@ public open class CfnService(
 
     /**
      * The deployment controller to use for the service.
-     *
-     * If no deployment controller is specified, the default value of `ECS` is used.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-deploymentcontroller)
      * @param deploymentController The deployment controller to use for the service. 
@@ -909,7 +849,7 @@ public open class CfnService(
      * resources](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html) in
      * the *Amazon Elastic Container Service Developer Guide* .
      *
-     * When you use Amazon ECS managed tags, you need to set the `propagateTags` request parameter.
+     * When you use Amazon ECS managed tags, you must set the `propagateTags` request parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-enableecsmanagedtags)
      * @param enableEcsManagedTags Specifies whether to turn on Amazon ECS managed tags for the
@@ -924,7 +864,7 @@ public open class CfnService(
      * resources](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html) in
      * the *Amazon Elastic Container Service Developer Guide* .
      *
-     * When you use Amazon ECS managed tags, you need to set the `propagateTags` request parameter.
+     * When you use Amazon ECS managed tags, you must set the `propagateTags` request parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-enableecsmanagedtags)
      * @param enableEcsManagedTags Specifies whether to turn on Amazon ECS managed tags for the
@@ -997,6 +937,10 @@ public open class CfnService(
      * Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
      *
+     *
+     * To remove this property from your service resource, specify an empty `LoadBalancer` array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-loadbalancers)
      * @param loadBalancers A list of load balancer objects to associate with the service. 
      */
@@ -1011,6 +955,10 @@ public open class CfnService(
      * Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
      *
+     *
+     * To remove this property from your service resource, specify an empty `LoadBalancer` array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-loadbalancers)
      * @param loadBalancers A list of load balancer objects to associate with the service. 
      */
@@ -1024,6 +972,10 @@ public open class CfnService(
      * Load
      * Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     *
+     * To remove this property from your service resource, specify an empty `LoadBalancer` array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-loadbalancers)
      * @param loadBalancers A list of load balancer objects to associate with the service. 
@@ -1081,6 +1033,11 @@ public open class CfnService(
      * You can specify a maximum of 10 constraints for each task. This limit includes constraints in
      * the task definition and those specified at runtime.
      *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementConstraint`
+     * array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementconstraints)
      * @param placementConstraints An array of placement constraint objects to use for tasks in your
      * service. 
@@ -1092,6 +1049,11 @@ public open class CfnService(
      *
      * You can specify a maximum of 10 constraints for each task. This limit includes constraints in
      * the task definition and those specified at runtime.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementConstraint`
+     * array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementconstraints)
      * @param placementConstraints An array of placement constraint objects to use for tasks in your
@@ -1105,6 +1067,11 @@ public open class CfnService(
      * You can specify a maximum of 10 constraints for each task. This limit includes constraints in
      * the task definition and those specified at runtime.
      *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementConstraint`
+     * array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementconstraints)
      * @param placementConstraints An array of placement constraint objects to use for tasks in your
      * service. 
@@ -1116,6 +1083,11 @@ public open class CfnService(
      *
      * You can specify a maximum of 5 strategy rules for each service.
      *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementStrategy`
+     * array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementstrategies)
      * @param placementStrategies The placement strategy objects to use for tasks in your service. 
      */
@@ -1126,6 +1098,11 @@ public open class CfnService(
      *
      * You can specify a maximum of 5 strategy rules for each service.
      *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementStrategy`
+     * array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementstrategies)
      * @param placementStrategies The placement strategy objects to use for tasks in your service. 
      */
@@ -1135,6 +1112,11 @@ public open class CfnService(
      * The placement strategy objects to use for tasks in your service.
      *
      * You can specify a maximum of 5 strategy rules for each service.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementStrategy`
+     * array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementstrategies)
      * @param placementStrategies The placement strategy objects to use for tasks in your service. 
@@ -1323,7 +1305,8 @@ public open class CfnService(
      *
      *
      * Each service may be associated with one service registry. Multiple service registries for
-     * each service isn't supported.
+     * each service isn't supported. &gt; To remove this property from your service resource, specify
+     * an empty `ServiceRegistry` array.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-serviceregistries)
@@ -1341,7 +1324,8 @@ public open class CfnService(
      *
      *
      * Each service may be associated with one service registry. Multiple service registries for
-     * each service isn't supported.
+     * each service isn't supported. &gt; To remove this property from your service resource, specify
+     * an empty `ServiceRegistry` array.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-serviceregistries)
@@ -1359,7 +1343,8 @@ public open class CfnService(
      *
      *
      * Each service may be associated with one service registry. Multiple service registries for
-     * each service isn't supported.
+     * each service isn't supported. &gt; To remove this property from your service resource, specify
+     * an empty `ServiceRegistry` array.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-serviceregistries)
@@ -1438,6 +1423,11 @@ public open class CfnService(
      *
      * Currently, the only supported volume type is an Amazon EBS volume.
      *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `ServiceVolumeConfiguration` array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-volumeconfigurations)
      * @param volumeConfigurations The configuration for a volume specified in the task definition
      * as a volume that is configured at launch time. 
@@ -1450,6 +1440,11 @@ public open class CfnService(
      *
      * Currently, the only supported volume type is an Amazon EBS volume.
      *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `ServiceVolumeConfiguration` array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-volumeconfigurations)
      * @param volumeConfigurations The configuration for a volume specified in the task definition
      * as a volume that is configured at launch time. 
@@ -1461,6 +1456,11 @@ public open class CfnService(
      * configured at launch time.
      *
      * Currently, the only supported volume type is an Amazon EBS volume.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `ServiceVolumeConfiguration` array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-volumeconfigurations)
      * @param volumeConfigurations The configuration for a volume specified in the task definition
@@ -1505,7 +1505,7 @@ public open class CfnService(
      *
      * For more information, see [Balancing an Amazon ECS service across Availability
      * Zones](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html) in
-     * the *Amazon Elastic Container Service Developer Guide* .
+     * the **Amazon Elastic Container Service Developer Guide** .
      *
      * Default: - "DISABLED"
      *
@@ -1524,7 +1524,12 @@ public open class CfnService(
      * no `capacityProviderStrategy` or `launchType` is specified, the
      * `defaultCapacityProviderStrategy` for the cluster is used.
      *
-     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * A capacity provider strategy can contain a maximum of 20 capacity providers.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `CapacityProviderStrategyItem` array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy)
      * @param capacityProviderStrategy The capacity provider strategy to use for the service. 
@@ -1540,7 +1545,12 @@ public open class CfnService(
      * no `capacityProviderStrategy` or `launchType` is specified, the
      * `defaultCapacityProviderStrategy` for the cluster is used.
      *
-     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * A capacity provider strategy can contain a maximum of 20 capacity providers.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `CapacityProviderStrategyItem` array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy)
      * @param capacityProviderStrategy The capacity provider strategy to use for the service. 
@@ -1556,7 +1566,12 @@ public open class CfnService(
      * no `capacityProviderStrategy` or `launchType` is specified, the
      * `defaultCapacityProviderStrategy` for the cluster is used.
      *
-     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * A capacity provider strategy can contain a maximum of 20 capacity providers.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `CapacityProviderStrategyItem` array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy)
      * @param capacityProviderStrategy The capacity provider strategy to use for the service. 
@@ -1619,8 +1634,6 @@ public open class CfnService(
     /**
      * The deployment controller to use for the service.
      *
-     * If no deployment controller is specified, the default value of `ECS` is used.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-deploymentcontroller)
      * @param deploymentController The deployment controller to use for the service. 
      */
@@ -1631,8 +1644,6 @@ public open class CfnService(
     /**
      * The deployment controller to use for the service.
      *
-     * If no deployment controller is specified, the default value of `ECS` is used.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-deploymentcontroller)
      * @param deploymentController The deployment controller to use for the service. 
      */
@@ -1642,8 +1653,6 @@ public open class CfnService(
 
     /**
      * The deployment controller to use for the service.
-     *
-     * If no deployment controller is specified, the default value of `ECS` is used.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-deploymentcontroller)
      * @param deploymentController The deployment controller to use for the service. 
@@ -1678,7 +1687,7 @@ public open class CfnService(
      * resources](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html) in
      * the *Amazon Elastic Container Service Developer Guide* .
      *
-     * When you use Amazon ECS managed tags, you need to set the `propagateTags` request parameter.
+     * When you use Amazon ECS managed tags, you must set the `propagateTags` request parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-enableecsmanagedtags)
      * @param enableEcsManagedTags Specifies whether to turn on Amazon ECS managed tags for the
@@ -1695,7 +1704,7 @@ public open class CfnService(
      * resources](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html) in
      * the *Amazon Elastic Container Service Developer Guide* .
      *
-     * When you use Amazon ECS managed tags, you need to set the `propagateTags` request parameter.
+     * When you use Amazon ECS managed tags, you must set the `propagateTags` request parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-enableecsmanagedtags)
      * @param enableEcsManagedTags Specifies whether to turn on Amazon ECS managed tags for the
@@ -1778,6 +1787,10 @@ public open class CfnService(
      * Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
      *
+     *
+     * To remove this property from your service resource, specify an empty `LoadBalancer` array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-loadbalancers)
      * @param loadBalancers A list of load balancer objects to associate with the service. 
      */
@@ -1794,6 +1807,10 @@ public open class CfnService(
      * Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
      *
+     *
+     * To remove this property from your service resource, specify an empty `LoadBalancer` array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-loadbalancers)
      * @param loadBalancers A list of load balancer objects to associate with the service. 
      */
@@ -1809,6 +1826,10 @@ public open class CfnService(
      * Load
      * Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     *
+     * To remove this property from your service resource, specify an empty `LoadBalancer` array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-loadbalancers)
      * @param loadBalancers A list of load balancer objects to associate with the service. 
@@ -1872,6 +1893,11 @@ public open class CfnService(
      * You can specify a maximum of 10 constraints for each task. This limit includes constraints in
      * the task definition and those specified at runtime.
      *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementConstraint`
+     * array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementconstraints)
      * @param placementConstraints An array of placement constraint objects to use for tasks in your
      * service. 
@@ -1885,6 +1911,11 @@ public open class CfnService(
      *
      * You can specify a maximum of 10 constraints for each task. This limit includes constraints in
      * the task definition and those specified at runtime.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementConstraint`
+     * array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementconstraints)
      * @param placementConstraints An array of placement constraint objects to use for tasks in your
@@ -1900,6 +1931,11 @@ public open class CfnService(
      * You can specify a maximum of 10 constraints for each task. This limit includes constraints in
      * the task definition and those specified at runtime.
      *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementConstraint`
+     * array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementconstraints)
      * @param placementConstraints An array of placement constraint objects to use for tasks in your
      * service. 
@@ -1911,6 +1947,11 @@ public open class CfnService(
      * The placement strategy objects to use for tasks in your service.
      *
      * You can specify a maximum of 5 strategy rules for each service.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementStrategy`
+     * array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementstrategies)
      * @param placementStrategies The placement strategy objects to use for tasks in your service. 
@@ -1924,6 +1965,11 @@ public open class CfnService(
      *
      * You can specify a maximum of 5 strategy rules for each service.
      *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementStrategy`
+     * array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementstrategies)
      * @param placementStrategies The placement strategy objects to use for tasks in your service. 
      */
@@ -1935,6 +1981,11 @@ public open class CfnService(
      * The placement strategy objects to use for tasks in your service.
      *
      * You can specify a maximum of 5 strategy rules for each service.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementStrategy`
+     * array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementstrategies)
      * @param placementStrategies The placement strategy objects to use for tasks in your service. 
@@ -2140,7 +2191,8 @@ public open class CfnService(
      *
      *
      * Each service may be associated with one service registry. Multiple service registries for
-     * each service isn't supported.
+     * each service isn't supported. &gt; To remove this property from your service resource, specify
+     * an empty `ServiceRegistry` array.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-serviceregistries)
@@ -2160,7 +2212,8 @@ public open class CfnService(
      *
      *
      * Each service may be associated with one service registry. Multiple service registries for
-     * each service isn't supported.
+     * each service isn't supported. &gt; To remove this property from your service resource, specify
+     * an empty `ServiceRegistry` array.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-serviceregistries)
@@ -2180,7 +2233,8 @@ public open class CfnService(
      *
      *
      * Each service may be associated with one service registry. Multiple service registries for
-     * each service isn't supported.
+     * each service isn't supported. &gt; To remove this property from your service resource, specify
+     * an empty `ServiceRegistry` array.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-serviceregistries)
@@ -2264,6 +2318,11 @@ public open class CfnService(
      *
      * Currently, the only supported volume type is an Amazon EBS volume.
      *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `ServiceVolumeConfiguration` array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-volumeconfigurations)
      * @param volumeConfigurations The configuration for a volume specified in the task definition
      * as a volume that is configured at launch time. 
@@ -2278,6 +2337,11 @@ public open class CfnService(
      *
      * Currently, the only supported volume type is an Amazon EBS volume.
      *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `ServiceVolumeConfiguration` array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-volumeconfigurations)
      * @param volumeConfigurations The configuration for a volume specified in the task definition
      * as a volume that is configured at launch time. 
@@ -2291,6 +2355,11 @@ public open class CfnService(
      * configured at launch time.
      *
      * Currently, the only supported volume type is an Amazon EBS volume.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `ServiceVolumeConfiguration` array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-volumeconfigurations)
      * @param volumeConfigurations The configuration for a volume specified in the task definition
@@ -2352,6 +2421,201 @@ public open class CfnService(
   }
 
   /**
+   * The advanced settings for a load balancer used in blue/green deployments.
+   *
+   * Specify the alternate target group, listener rules, and IAM role required for traffic shifting
+   * during blue/green deployments. For more information, see [Required resources for Amazon ECS
+   * blue/green
+   * deployments](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/blue-green-deployment-implementation.html)
+   * in the *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * AdvancedConfigurationProperty advancedConfigurationProperty =
+   * AdvancedConfigurationProperty.builder()
+   * .alternateTargetGroupArn("alternateTargetGroupArn")
+   * // the properties below are optional
+   * .productionListenerRule("productionListenerRule")
+   * .roleArn("roleArn")
+   * .testListenerRule("testListenerRule")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-advancedconfiguration.html)
+   */
+  public interface AdvancedConfigurationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the alternate target group for Amazon ECS blue/green
+     * deployments.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-advancedconfiguration.html#cfn-ecs-service-advancedconfiguration-alternatetargetgrouparn)
+     */
+    public fun alternateTargetGroupArn(): String
+
+    /**
+     * The Amazon Resource Name (ARN) that that identifies the production listener rule (in the case
+     * of an Application Load Balancer) or listener (in the case for an Network Load Balancer) for
+     * routing production traffic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-advancedconfiguration.html#cfn-ecs-service-advancedconfiguration-productionlistenerrule)
+     */
+    public fun productionListenerRule(): String? = unwrap(this).getProductionListenerRule()
+
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon ECS permission to call the
+     * Elastic Load Balancing APIs for you.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-advancedconfiguration.html#cfn-ecs-service-advancedconfiguration-rolearn)
+     */
+    public fun roleArn(): String? = unwrap(this).getRoleArn()
+
+    /**
+     * The Amazon Resource Name (ARN) that identifies ) that identifies the test listener rule (in
+     * the case of an Application Load Balancer) or listener (in the case for an Network Load Balancer)
+     * for routing test traffic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-advancedconfiguration.html#cfn-ecs-service-advancedconfiguration-testlistenerrule)
+     */
+    public fun testListenerRule(): String? = unwrap(this).getTestListenerRule()
+
+    /**
+     * A builder for [AdvancedConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param alternateTargetGroupArn The Amazon Resource Name (ARN) of the alternate target group
+       * for Amazon ECS blue/green deployments. 
+       */
+      public fun alternateTargetGroupArn(alternateTargetGroupArn: String)
+
+      /**
+       * @param productionListenerRule The Amazon Resource Name (ARN) that that identifies the
+       * production listener rule (in the case of an Application Load Balancer) or listener (in the
+       * case for an Network Load Balancer) for routing production traffic.
+       */
+      public fun productionListenerRule(productionListenerRule: String)
+
+      /**
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM role that grants Amazon ECS
+       * permission to call the Elastic Load Balancing APIs for you.
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param testListenerRule The Amazon Resource Name (ARN) that identifies ) that identifies
+       * the test listener rule (in the case of an Application Load Balancer) or listener (in the case
+       * for an Network Load Balancer) for routing test traffic.
+       */
+      public fun testListenerRule(testListenerRule: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnService.AdvancedConfigurationProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnService.AdvancedConfigurationProperty.builder()
+
+      /**
+       * @param alternateTargetGroupArn The Amazon Resource Name (ARN) of the alternate target group
+       * for Amazon ECS blue/green deployments. 
+       */
+      override fun alternateTargetGroupArn(alternateTargetGroupArn: String) {
+        cdkBuilder.alternateTargetGroupArn(alternateTargetGroupArn)
+      }
+
+      /**
+       * @param productionListenerRule The Amazon Resource Name (ARN) that that identifies the
+       * production listener rule (in the case of an Application Load Balancer) or listener (in the
+       * case for an Network Load Balancer) for routing production traffic.
+       */
+      override fun productionListenerRule(productionListenerRule: String) {
+        cdkBuilder.productionListenerRule(productionListenerRule)
+      }
+
+      /**
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM role that grants Amazon ECS
+       * permission to call the Elastic Load Balancing APIs for you.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param testListenerRule The Amazon Resource Name (ARN) that identifies ) that identifies
+       * the test listener rule (in the case of an Application Load Balancer) or listener (in the case
+       * for an Network Load Balancer) for routing test traffic.
+       */
+      override fun testListenerRule(testListenerRule: String) {
+        cdkBuilder.testListenerRule(testListenerRule)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnService.AdvancedConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.AdvancedConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        AdvancedConfigurationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the alternate target group for Amazon ECS blue/green
+       * deployments.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-advancedconfiguration.html#cfn-ecs-service-advancedconfiguration-alternatetargetgrouparn)
+       */
+      override fun alternateTargetGroupArn(): String = unwrap(this).getAlternateTargetGroupArn()
+
+      /**
+       * The Amazon Resource Name (ARN) that that identifies the production listener rule (in the
+       * case of an Application Load Balancer) or listener (in the case for an Network Load Balancer)
+       * for routing production traffic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-advancedconfiguration.html#cfn-ecs-service-advancedconfiguration-productionlistenerrule)
+       */
+      override fun productionListenerRule(): String? = unwrap(this).getProductionListenerRule()
+
+      /**
+       * The Amazon Resource Name (ARN) of the IAM role that grants Amazon ECS permission to call
+       * the Elastic Load Balancing APIs for you.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-advancedconfiguration.html#cfn-ecs-service-advancedconfiguration-rolearn)
+       */
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
+
+      /**
+       * The Amazon Resource Name (ARN) that identifies ) that identifies the test listener rule (in
+       * the case of an Application Load Balancer) or listener (in the case for an Network Load
+       * Balancer) for routing test traffic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-advancedconfiguration.html#cfn-ecs-service-advancedconfiguration-testlistenerrule)
+       */
+      override fun testListenerRule(): String? = unwrap(this).getTestListenerRule()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AdvancedConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.AdvancedConfigurationProperty):
+          AdvancedConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdvancedConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AdvancedConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnService.AdvancedConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.AdvancedConfigurationProperty
+    }
+  }
+
+  /**
    * An object representing the networking details for a task or service.
    *
    * For example `awsVpcConfiguration={subnets=["subnet-12344321"],securityGroups=["sg-12344321"]}`
@@ -2376,7 +2640,10 @@ public open class CfnService(
     /**
      * Whether the task's elastic network interface receives a public IP address.
      *
-     * The default value is `ENABLED` .
+     * Consider the following when you set this value:
+     *
+     * * When you use `create-service` or `update-service` , the default is `DISABLED` .
+     * * When the service `deploymentController` is `ECS` , the value must be `DISABLED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-assignpublicip)
      */
@@ -2386,7 +2653,7 @@ public open class CfnService(
      * The IDs of the security groups associated with the task or service.
      *
      * If you don't specify a security group, the default security group for the VPC is used.
-     * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
+     * There's a limit of 5 security groups that can be specified.
      *
      *
      * All specified security groups must be from the same VPC.
@@ -2399,7 +2666,7 @@ public open class CfnService(
     /**
      * The IDs of the subnets associated with the task or service.
      *
-     * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
+     * There's a limit of 16 subnets that can be specified.
      *
      *
      * All specified subnets must be from the same VPC.
@@ -2417,14 +2684,17 @@ public open class CfnService(
       /**
        * @param assignPublicIp Whether the task's elastic network interface receives a public IP
        * address.
-       * The default value is `ENABLED` .
+       * Consider the following when you set this value:
+       *
+       * * When you use `create-service` or `update-service` , the default is `DISABLED` .
+       * * When the service `deploymentController` is `ECS` , the value must be `DISABLED` .
        */
       public fun assignPublicIp(assignPublicIp: String)
 
       /**
        * @param securityGroups The IDs of the security groups associated with the task or service.
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified.
        *
        *
        * All specified security groups must be from the same VPC.
@@ -2434,7 +2704,7 @@ public open class CfnService(
       /**
        * @param securityGroups The IDs of the security groups associated with the task or service.
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified.
        *
        *
        * All specified security groups must be from the same VPC.
@@ -2443,7 +2713,7 @@ public open class CfnService(
 
       /**
        * @param subnets The IDs of the subnets associated with the task or service.
-       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified.
        *
        *
        * All specified subnets must be from the same VPC.
@@ -2452,7 +2722,7 @@ public open class CfnService(
 
       /**
        * @param subnets The IDs of the subnets associated with the task or service.
-       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified.
        *
        *
        * All specified subnets must be from the same VPC.
@@ -2468,7 +2738,10 @@ public open class CfnService(
       /**
        * @param assignPublicIp Whether the task's elastic network interface receives a public IP
        * address.
-       * The default value is `ENABLED` .
+       * Consider the following when you set this value:
+       *
+       * * When you use `create-service` or `update-service` , the default is `DISABLED` .
+       * * When the service `deploymentController` is `ECS` , the value must be `DISABLED` .
        */
       override fun assignPublicIp(assignPublicIp: String) {
         cdkBuilder.assignPublicIp(assignPublicIp)
@@ -2477,7 +2750,7 @@ public open class CfnService(
       /**
        * @param securityGroups The IDs of the security groups associated with the task or service.
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified.
        *
        *
        * All specified security groups must be from the same VPC.
@@ -2489,7 +2762,7 @@ public open class CfnService(
       /**
        * @param securityGroups The IDs of the security groups associated with the task or service.
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified.
        *
        *
        * All specified security groups must be from the same VPC.
@@ -2499,7 +2772,7 @@ public open class CfnService(
 
       /**
        * @param subnets The IDs of the subnets associated with the task or service.
-       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified.
        *
        *
        * All specified subnets must be from the same VPC.
@@ -2510,7 +2783,7 @@ public open class CfnService(
 
       /**
        * @param subnets The IDs of the subnets associated with the task or service.
-       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified.
        *
        *
        * All specified subnets must be from the same VPC.
@@ -2528,7 +2801,10 @@ public open class CfnService(
       /**
        * Whether the task's elastic network interface receives a public IP address.
        *
-       * The default value is `ENABLED` .
+       * Consider the following when you set this value:
+       *
+       * * When you use `create-service` or `update-service` , the default is `DISABLED` .
+       * * When the service `deploymentController` is `ECS` , the value must be `DISABLED` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-assignpublicip)
        */
@@ -2538,7 +2814,7 @@ public open class CfnService(
        * The IDs of the security groups associated with the task or service.
        *
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified.
        *
        *
        * All specified security groups must be from the same VPC.
@@ -2551,7 +2827,7 @@ public open class CfnService(
       /**
        * The IDs of the subnets associated with the task or service.
        *
-       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified.
        *
        *
        * All specified subnets must be from the same VPC.
@@ -2823,7 +3099,7 @@ public open class CfnService(
    * after a failure.
    *
    * You can only use the `DeploymentAlarms` method to detect failures when the
-   * `DeploymentController` is set to `ECS` (rolling update).
+   * `DeploymentController` is set to `ECS` .
    *
    * For more information, see [Rolling
    * update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html) in
@@ -3214,12 +3490,19 @@ public open class CfnService(
    * .enable(false)
    * .rollback(false)
    * .build())
+   * .bakeTimeInMinutes(123)
    * .deploymentCircuitBreaker(DeploymentCircuitBreakerProperty.builder()
    * .enable(false)
    * .rollback(false)
    * .build())
+   * .lifecycleHooks(List.of(DeploymentLifecycleHookProperty.builder()
+   * .hookTargetArn("hookTargetArn")
+   * .lifecycleStages(List.of("lifecycleStages"))
+   * .roleArn("roleArn")
+   * .build()))
    * .maximumPercent(123)
    * .minimumHealthyPercent(123)
+   * .strategy("strategy")
    * .build();
    * ```
    *
@@ -3232,6 +3515,21 @@ public open class CfnService(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-alarms)
      */
     public fun alarms(): Any? = unwrap(this).getAlarms()
+
+    /**
+     * The duration when both blue and green service revisions are running simultaneously after the
+     * production traffic has shifted.
+     *
+     * The following rules apply when you don't specify a value:
+     *
+     * * For rolling deployments, the value is set to 3 hours (180 minutes).
+     * * When you use an external deployment controller ( `EXTERNAL` ), or the CodeDeploy blue/green
+     * deployment controller ( `CODE_DEPLOY` ), the value is set to 3 hours (180 minutes).
+     * * For all other cases, the value is set to 36 hours (2160 minutes).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-baketimeinminutes)
+     */
+    public fun bakeTimeInMinutes(): Number? = unwrap(this).getBakeTimeInMinutes()
 
     /**
      * The deployment circuit breaker can only be used for services using the rolling update ( `ECS`
@@ -3250,6 +3548,14 @@ public open class CfnService(
     public fun deploymentCircuitBreaker(): Any? = unwrap(this).getDeploymentCircuitBreaker()
 
     /**
+     * An array of deployment lifecycle hook objects to run custom logic at specific stages of the
+     * deployment lifecycle.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-lifecyclehooks)
+     */
+    public fun lifecycleHooks(): Any? = unwrap(this).getLifecycleHooks()
+
+    /**
      * If a service is using the rolling update ( `ECS` ) deployment type, the `maximumPercent`
      * parameter represents an upper limit on the number of your service's tasks that are allowed in
      * the `RUNNING` or `PENDING` state during a deployment, as a percentage of the `desiredCount`
@@ -3260,6 +3566,12 @@ public open class CfnService(
      * `maximumPercent` value of 200%, the scheduler may start four new tasks before stopping the four
      * older tasks (provided that the cluster resources required to do this are available). The default
      * `maximumPercent` value for a service using the `REPLICA` service scheduler is 200%.
+     *
+     * The Amazon ECS scheduler uses this parameter to replace unhealthy tasks by starting
+     * replacement tasks first and then stopping the unhealthy tasks, as long as cluster resources for
+     * starting replacement tasks are available. For more information about how the scheduler replaces
+     * unhealthy tasks, see [Amazon ECS
+     * services](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html) .
      *
      * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types,
      * and tasks in the service use the EC2 launch type, the *maximum percent* value is set to the
@@ -3273,8 +3585,9 @@ public open class CfnService(
      * launch type.
      *
      *
-     * If the tasks in the service use the Fargate launch type, the maximum percent value is not
-     * used, although it is returned when describing your service.
+     * If the service uses either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types,
+     * and the tasks in the service use the Fargate launch type, the maximum percent value is not used.
+     * The value is still returned when describing your service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-maximumpercent)
      */
@@ -3290,6 +3603,12 @@ public open class CfnService(
      * if your service has a `desiredCount` of four tasks and a `minimumHealthyPercent` of 50%, the
      * service scheduler may stop two existing tasks to free up cluster capacity before starting two
      * new tasks.
+     *
+     * If any tasks are unhealthy and if `maximumPercent` doesn't allow the Amazon ECS scheduler to
+     * start replacement tasks, the scheduler stops the unhealthy tasks one-by-one — using the
+     * `minimumHealthyPercent` as a constraint — to clear up capacity to launch replacement tasks. For
+     * more information about how the scheduler replaces unhealthy tasks, see [Amazon ECS
+     * services](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html) .
      *
      * For services that *do not* use a load balancer, the following should be noted:
      *
@@ -3342,6 +3661,23 @@ public open class CfnService(
     public fun minimumHealthyPercent(): Number? = unwrap(this).getMinimumHealthyPercent()
 
     /**
+     * The deployment strategy for the service. Choose from these valid values:.
+     *
+     * * `ROLLING` - When you create a service which uses the rolling update ( `ROLLING` )
+     * deployment strategy, the Amazon ECS service scheduler replaces the currently running tasks with
+     * new tasks. The number of tasks that Amazon ECS adds or removes from the service during a rolling
+     * update is controlled by the service deployment configuration.
+     * * `BLUE_GREEN` - A blue/green deployment strategy ( `BLUE_GREEN` ) is a release methodology
+     * that reduces downtime and risk by running two identical production environments called blue and
+     * green. With Amazon ECS blue/green deployments, you can validate new service revisions before
+     * directing production traffic to them. This approach provides a safer way to deploy changes with
+     * the ability to quickly roll back if needed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-strategy)
+     */
+    public fun strategy(): String? = unwrap(this).getStrategy()
+
+    /**
      * A builder for [DeploymentConfigurationProperty]
      */
     @CdkDslMarker
@@ -3362,6 +3698,18 @@ public open class CfnService(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("efd9a5f127d78c01958f4cf4b39acf88204ea3d9b713d0c6e12a4bcd49c0914b")
       public fun alarms(alarms: DeploymentAlarmsProperty.Builder.() -> Unit)
+
+      /**
+       * @param bakeTimeInMinutes The duration when both blue and green service revisions are
+       * running simultaneously after the production traffic has shifted.
+       * The following rules apply when you don't specify a value:
+       *
+       * * For rolling deployments, the value is set to 3 hours (180 minutes).
+       * * When you use an external deployment controller ( `EXTERNAL` ), or the CodeDeploy
+       * blue/green deployment controller ( `CODE_DEPLOY` ), the value is set to 3 hours (180 minutes).
+       * * For all other cases, the value is set to 36 hours (2160 minutes).
+       */
+      public fun bakeTimeInMinutes(bakeTimeInMinutes: Number)
 
       /**
        * @param deploymentCircuitBreaker The deployment circuit breaker can only be used for
@@ -3407,6 +3755,24 @@ public open class CfnService(
           fun deploymentCircuitBreaker(deploymentCircuitBreaker: DeploymentCircuitBreakerProperty.Builder.() -> Unit)
 
       /**
+       * @param lifecycleHooks An array of deployment lifecycle hook objects to run custom logic at
+       * specific stages of the deployment lifecycle.
+       */
+      public fun lifecycleHooks(lifecycleHooks: IResolvable)
+
+      /**
+       * @param lifecycleHooks An array of deployment lifecycle hook objects to run custom logic at
+       * specific stages of the deployment lifecycle.
+       */
+      public fun lifecycleHooks(lifecycleHooks: List<Any>)
+
+      /**
+       * @param lifecycleHooks An array of deployment lifecycle hook objects to run custom logic at
+       * specific stages of the deployment lifecycle.
+       */
+      public fun lifecycleHooks(vararg lifecycleHooks: Any)
+
+      /**
        * @param maximumPercent If a service is using the rolling update ( `ECS` ) deployment type,
        * the `maximumPercent` parameter represents an upper limit on the number of your service's tasks
        * that are allowed in the `RUNNING` or `PENDING` state during a deployment, as a percentage of
@@ -3416,6 +3782,12 @@ public open class CfnService(
        * `maximumPercent` value of 200%, the scheduler may start four new tasks before stopping the
        * four older tasks (provided that the cluster resources required to do this are available). The
        * default `maximumPercent` value for a service using the `REPLICA` service scheduler is 200%.
+       *
+       * The Amazon ECS scheduler uses this parameter to replace unhealthy tasks by starting
+       * replacement tasks first and then stopping the unhealthy tasks, as long as cluster resources
+       * for starting replacement tasks are available. For more information about how the scheduler
+       * replaces unhealthy tasks, see [Amazon ECS
+       * services](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html) .
        *
        * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
        * types, and tasks in the service use the EC2 launch type, the *maximum percent* value is set to
@@ -3429,8 +3801,9 @@ public open class CfnService(
        * launch type.
        *
        *
-       * If the tasks in the service use the Fargate launch type, the maximum percent value is not
-       * used, although it is returned when describing your service.
+       * If the service uses either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types,
+       * and the tasks in the service use the Fargate launch type, the maximum percent value is not
+       * used. The value is still returned when describing your service.
        */
       public fun maximumPercent(maximumPercent: Number)
 
@@ -3443,6 +3816,12 @@ public open class CfnService(
        * example, if your service has a `desiredCount` of four tasks and a `minimumHealthyPercent` of
        * 50%, the service scheduler may stop two existing tasks to free up cluster capacity before
        * starting two new tasks.
+       *
+       * If any tasks are unhealthy and if `maximumPercent` doesn't allow the Amazon ECS scheduler
+       * to start replacement tasks, the scheduler stops the unhealthy tasks one-by-one — using the
+       * `minimumHealthyPercent` as a constraint — to clear up capacity to launch replacement tasks.
+       * For more information about how the scheduler replaces unhealthy tasks, see [Amazon ECS
+       * services](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html) .
        *
        * For services that *do not* use a load balancer, the following should be noted:
        *
@@ -3491,6 +3870,20 @@ public open class CfnService(
        * is not used, although it is returned when describing your service.
        */
       public fun minimumHealthyPercent(minimumHealthyPercent: Number)
+
+      /**
+       * @param strategy The deployment strategy for the service. Choose from these valid values:.
+       * * `ROLLING` - When you create a service which uses the rolling update ( `ROLLING` )
+       * deployment strategy, the Amazon ECS service scheduler replaces the currently running tasks
+       * with new tasks. The number of tasks that Amazon ECS adds or removes from the service during a
+       * rolling update is controlled by the service deployment configuration.
+       * * `BLUE_GREEN` - A blue/green deployment strategy ( `BLUE_GREEN` ) is a release methodology
+       * that reduces downtime and risk by running two identical production environments called blue
+       * and green. With Amazon ECS blue/green deployments, you can validate new service revisions
+       * before directing production traffic to them. This approach provides a safer way to deploy
+       * changes with the ability to quickly roll back if needed.
+       */
+      public fun strategy(strategy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3519,6 +3912,20 @@ public open class CfnService(
       @JvmName("efd9a5f127d78c01958f4cf4b39acf88204ea3d9b713d0c6e12a4bcd49c0914b")
       override fun alarms(alarms: DeploymentAlarmsProperty.Builder.() -> Unit): Unit =
           alarms(DeploymentAlarmsProperty(alarms))
+
+      /**
+       * @param bakeTimeInMinutes The duration when both blue and green service revisions are
+       * running simultaneously after the production traffic has shifted.
+       * The following rules apply when you don't specify a value:
+       *
+       * * For rolling deployments, the value is set to 3 hours (180 minutes).
+       * * When you use an external deployment controller ( `EXTERNAL` ), or the CodeDeploy
+       * blue/green deployment controller ( `CODE_DEPLOY` ), the value is set to 3 hours (180 minutes).
+       * * For all other cases, the value is set to 36 hours (2160 minutes).
+       */
+      override fun bakeTimeInMinutes(bakeTimeInMinutes: Number) {
+        cdkBuilder.bakeTimeInMinutes(bakeTimeInMinutes)
+      }
 
       /**
        * @param deploymentCircuitBreaker The deployment circuit breaker can only be used for
@@ -3570,6 +3977,29 @@ public open class CfnService(
           deploymentCircuitBreaker(DeploymentCircuitBreakerProperty(deploymentCircuitBreaker))
 
       /**
+       * @param lifecycleHooks An array of deployment lifecycle hook objects to run custom logic at
+       * specific stages of the deployment lifecycle.
+       */
+      override fun lifecycleHooks(lifecycleHooks: IResolvable) {
+        cdkBuilder.lifecycleHooks(lifecycleHooks.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param lifecycleHooks An array of deployment lifecycle hook objects to run custom logic at
+       * specific stages of the deployment lifecycle.
+       */
+      override fun lifecycleHooks(lifecycleHooks: List<Any>) {
+        cdkBuilder.lifecycleHooks(lifecycleHooks.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param lifecycleHooks An array of deployment lifecycle hook objects to run custom logic at
+       * specific stages of the deployment lifecycle.
+       */
+      override fun lifecycleHooks(vararg lifecycleHooks: Any): Unit =
+          lifecycleHooks(lifecycleHooks.toList())
+
+      /**
        * @param maximumPercent If a service is using the rolling update ( `ECS` ) deployment type,
        * the `maximumPercent` parameter represents an upper limit on the number of your service's tasks
        * that are allowed in the `RUNNING` or `PENDING` state during a deployment, as a percentage of
@@ -3579,6 +4009,12 @@ public open class CfnService(
        * `maximumPercent` value of 200%, the scheduler may start four new tasks before stopping the
        * four older tasks (provided that the cluster resources required to do this are available). The
        * default `maximumPercent` value for a service using the `REPLICA` service scheduler is 200%.
+       *
+       * The Amazon ECS scheduler uses this parameter to replace unhealthy tasks by starting
+       * replacement tasks first and then stopping the unhealthy tasks, as long as cluster resources
+       * for starting replacement tasks are available. For more information about how the scheduler
+       * replaces unhealthy tasks, see [Amazon ECS
+       * services](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html) .
        *
        * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
        * types, and tasks in the service use the EC2 launch type, the *maximum percent* value is set to
@@ -3592,8 +4028,9 @@ public open class CfnService(
        * launch type.
        *
        *
-       * If the tasks in the service use the Fargate launch type, the maximum percent value is not
-       * used, although it is returned when describing your service.
+       * If the service uses either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types,
+       * and the tasks in the service use the Fargate launch type, the maximum percent value is not
+       * used. The value is still returned when describing your service.
        */
       override fun maximumPercent(maximumPercent: Number) {
         cdkBuilder.maximumPercent(maximumPercent)
@@ -3608,6 +4045,12 @@ public open class CfnService(
        * example, if your service has a `desiredCount` of four tasks and a `minimumHealthyPercent` of
        * 50%, the service scheduler may stop two existing tasks to free up cluster capacity before
        * starting two new tasks.
+       *
+       * If any tasks are unhealthy and if `maximumPercent` doesn't allow the Amazon ECS scheduler
+       * to start replacement tasks, the scheduler stops the unhealthy tasks one-by-one — using the
+       * `minimumHealthyPercent` as a constraint — to clear up capacity to launch replacement tasks.
+       * For more information about how the scheduler replaces unhealthy tasks, see [Amazon ECS
+       * services](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html) .
        *
        * For services that *do not* use a load balancer, the following should be noted:
        *
@@ -3659,6 +4102,22 @@ public open class CfnService(
         cdkBuilder.minimumHealthyPercent(minimumHealthyPercent)
       }
 
+      /**
+       * @param strategy The deployment strategy for the service. Choose from these valid values:.
+       * * `ROLLING` - When you create a service which uses the rolling update ( `ROLLING` )
+       * deployment strategy, the Amazon ECS service scheduler replaces the currently running tasks
+       * with new tasks. The number of tasks that Amazon ECS adds or removes from the service during a
+       * rolling update is controlled by the service deployment configuration.
+       * * `BLUE_GREEN` - A blue/green deployment strategy ( `BLUE_GREEN` ) is a release methodology
+       * that reduces downtime and risk by running two identical production environments called blue
+       * and green. With Amazon ECS blue/green deployments, you can validate new service revisions
+       * before directing production traffic to them. This approach provides a safer way to deploy
+       * changes with the ability to quickly roll back if needed.
+       */
+      override fun strategy(strategy: String) {
+        cdkBuilder.strategy(strategy)
+      }
+
       public fun build():
           software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty =
           cdkBuilder.build()
@@ -3674,6 +4133,21 @@ public open class CfnService(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-alarms)
        */
       override fun alarms(): Any? = unwrap(this).getAlarms()
+
+      /**
+       * The duration when both blue and green service revisions are running simultaneously after
+       * the production traffic has shifted.
+       *
+       * The following rules apply when you don't specify a value:
+       *
+       * * For rolling deployments, the value is set to 3 hours (180 minutes).
+       * * When you use an external deployment controller ( `EXTERNAL` ), or the CodeDeploy
+       * blue/green deployment controller ( `CODE_DEPLOY` ), the value is set to 3 hours (180 minutes).
+       * * For all other cases, the value is set to 36 hours (2160 minutes).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-baketimeinminutes)
+       */
+      override fun bakeTimeInMinutes(): Number? = unwrap(this).getBakeTimeInMinutes()
 
       /**
        * The deployment circuit breaker can only be used for services using the rolling update (
@@ -3692,6 +4166,14 @@ public open class CfnService(
       override fun deploymentCircuitBreaker(): Any? = unwrap(this).getDeploymentCircuitBreaker()
 
       /**
+       * An array of deployment lifecycle hook objects to run custom logic at specific stages of the
+       * deployment lifecycle.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-lifecyclehooks)
+       */
+      override fun lifecycleHooks(): Any? = unwrap(this).getLifecycleHooks()
+
+      /**
        * If a service is using the rolling update ( `ECS` ) deployment type, the `maximumPercent`
        * parameter represents an upper limit on the number of your service's tasks that are allowed in
        * the `RUNNING` or `PENDING` state during a deployment, as a percentage of the `desiredCount`
@@ -3702,6 +4184,12 @@ public open class CfnService(
        * `maximumPercent` value of 200%, the scheduler may start four new tasks before stopping the
        * four older tasks (provided that the cluster resources required to do this are available). The
        * default `maximumPercent` value for a service using the `REPLICA` service scheduler is 200%.
+       *
+       * The Amazon ECS scheduler uses this parameter to replace unhealthy tasks by starting
+       * replacement tasks first and then stopping the unhealthy tasks, as long as cluster resources
+       * for starting replacement tasks are available. For more information about how the scheduler
+       * replaces unhealthy tasks, see [Amazon ECS
+       * services](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html) .
        *
        * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
        * types, and tasks in the service use the EC2 launch type, the *maximum percent* value is set to
@@ -3715,8 +4203,9 @@ public open class CfnService(
        * launch type.
        *
        *
-       * If the tasks in the service use the Fargate launch type, the maximum percent value is not
-       * used, although it is returned when describing your service.
+       * If the service uses either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types,
+       * and the tasks in the service use the Fargate launch type, the maximum percent value is not
+       * used. The value is still returned when describing your service.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-maximumpercent)
        */
@@ -3732,6 +4221,12 @@ public open class CfnService(
        * example, if your service has a `desiredCount` of four tasks and a `minimumHealthyPercent` of
        * 50%, the service scheduler may stop two existing tasks to free up cluster capacity before
        * starting two new tasks.
+       *
+       * If any tasks are unhealthy and if `maximumPercent` doesn't allow the Amazon ECS scheduler
+       * to start replacement tasks, the scheduler stops the unhealthy tasks one-by-one — using the
+       * `minimumHealthyPercent` as a constraint — to clear up capacity to launch replacement tasks.
+       * For more information about how the scheduler replaces unhealthy tasks, see [Amazon ECS
+       * services](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html) .
        *
        * For services that *do not* use a load balancer, the following should be noted:
        *
@@ -3782,6 +4277,23 @@ public open class CfnService(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent)
        */
       override fun minimumHealthyPercent(): Number? = unwrap(this).getMinimumHealthyPercent()
+
+      /**
+       * The deployment strategy for the service. Choose from these valid values:.
+       *
+       * * `ROLLING` - When you create a service which uses the rolling update ( `ROLLING` )
+       * deployment strategy, the Amazon ECS service scheduler replaces the currently running tasks
+       * with new tasks. The number of tasks that Amazon ECS adds or removes from the service during a
+       * rolling update is controlled by the service deployment configuration.
+       * * `BLUE_GREEN` - A blue/green deployment strategy ( `BLUE_GREEN` ) is a release methodology
+       * that reduces downtime and risk by running two identical production environments called blue
+       * and green. With Amazon ECS blue/green deployments, you can validate new service revisions
+       * before directing production traffic to them. This approach provides a safer way to deploy
+       * changes with the ability to quickly roll back if needed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-strategy)
+       */
+      override fun strategy(): String? = unwrap(this).getStrategy()
     }
 
     public companion object {
@@ -3821,21 +4333,95 @@ public open class CfnService(
    */
   public interface DeploymentControllerProperty {
     /**
-     * The deployment controller type to use. There are three deployment controller types
-     * available:.
+     * The deployment controller type to use.
      *
-     * * **ECS** - The rolling update ( `ECS` ) deployment type involves replacing the current
-     * running version of the container with the latest version. The number of containers Amazon ECS
-     * adds or removes from the service during a rolling update is controlled by adjusting the minimum
-     * and maximum number of healthy tasks allowed during a service deployment, as specified in the
-     * [DeploymentConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeploymentConfiguration.html)
-     * .
-     * * **CODE_DEPLOY** - The blue/green ( `CODE_DEPLOY` ) deployment type uses the blue/green
-     * deployment model powered by AWS CodeDeploy , which allows you to verify a new deployment of a
-     * service before sending production traffic to it.
-     * * **EXTERNAL** - The external ( `EXTERNAL` ) deployment type enables you to use any
-     * third-party deployment controller for full control over the deployment process for an Amazon ECS
-     * service.
+     * The deployment controller is the mechanism that determines how tasks are deployed for your
+     * service. The valid options are:
+     *
+     * * ECS
+     *
+     * When you create a service which uses the `ECS` deployment controller, you can choose between
+     * the following deployment strategies:
+     *
+     * * `ROLLING` : When you create a service which uses the *rolling update* ( `ROLLING` )
+     * deployment strategy, the Amazon ECS service scheduler replaces the currently running tasks with
+     * new tasks. The number of tasks that Amazon ECS adds or removes from the service during a rolling
+     * update is controlled by the service deployment configuration.
+     *
+     * Rolling update deployments are best suited for the following scenarios:
+     *
+     * * Gradual service updates: You need to update your service incrementally without taking the
+     * entire service offline at once.
+     * * Limited resource requirements: You want to avoid the additional resource costs of running
+     * two complete environments simultaneously (as required by blue/green deployments).
+     * * Acceptable deployment time: Your application can tolerate a longer deployment process, as
+     * rolling updates replace tasks one by one.
+     * * No need for instant roll back: Your service can tolerate a rollback process that takes
+     * minutes rather than seconds.
+     * * Simple deployment process: You prefer a straightforward deployment approach without the
+     * complexity of managing multiple environments, target groups, and listeners.
+     * * No load balancer requirement: Your service doesn't use or require a load balancer,
+     * Application Load Balancer , Network Load Balancer , or Service Connect (which are required for
+     * blue/green deployments).
+     * * Stateful applications: Your application maintains state that makes it difficult to run two
+     * parallel environments.
+     * * Cost sensitivity: You want to minimize deployment costs by not running duplicate
+     * environments during deployment.
+     *
+     * Rolling updates are the default deployment strategy for services and provide a balance
+     * between deployment safety and resource efficiency for many common application scenarios.
+     *
+     * * `BLUE_GREEN` : A *blue/green* deployment strategy ( `BLUE_GREEN` ) is a release methodology
+     * that reduces downtime and risk by running two identical production environments called blue and
+     * green. With Amazon ECS blue/green deployments, you can validate new service revisions before
+     * directing production traffic to them. This approach provides a safer way to deploy changes with
+     * the ability to quickly roll back if needed.
+     *
+     * Amazon ECS blue/green deployments are best suited for the following scenarios:
+     *
+     * * Service validation: When you need to validate new service revisions before directing
+     * production traffic to them
+     * * Zero downtime: When your service requires zero-downtime deployments
+     * * Instant roll back: When you need the ability to quickly roll back if issues are detected
+     * * Load balancer requirement: When your service uses Application Load Balancer , Network Load
+     * Balancer , or Service Connect
+     * * External
+     *
+     * Use a third-party deployment controller.
+     *
+     * * Blue/green deployment (powered by CodeDeploy )
+     *
+     * CodeDeploy installs an updated version of the application as a new replacement task set and
+     * reroutes production traffic from the original application task set to the replacement task set.
+     * The original task set is terminated after a successful deployment. Use this deployment
+     * controller to verify a new deployment of a service before sending production traffic to it.
+     *
+     * When updating the deployment controller for a service, consider the following depending on
+     * the type of migration you're performing.
+     *
+     * * If you have a template that contains the `EXTERNAL` deployment controller information as
+     * well as `TaskSet` and `PrimaryTaskSet` resources, and you remove the task set resources from the
+     * template when updating from `EXTERNAL` to `ECS` , the `DescribeTaskSet` and `DeleteTaskSet` API
+     * calls will return a 400 error after the deployment controller is updated to `ECS` . This results
+     * in a delete failure on the task set resources, even though the stack transitions to
+     * `UPDATE_COMPLETE` status. For more information, see [Resource removed from stack but not
+     * deleted](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html#troubleshooting-errors-resource-removed-not-deleted)
+     * in the AWS CloudFormation User Guide. To fix this issue, delete the task sets directly using the
+     * Amazon ECS `DeleteTaskSet` API. For more information about how to delete a task set, see
+     * [DeleteTaskSet](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeleteTaskSet.html)
+     * in the Amazon Elastic Container Service API Reference.
+     * * If you're migrating from `CODE_DEPLOY` to `ECS` with a new task definition and AWS
+     * CloudFormation performs a rollback operation, the Amazon ECS `UpdateService` request fails with
+     * the following error:
+     *
+     * Resource handler returned message: "Invalid request provided: Unable to update task
+     * definition on services with a CODE_DEPLOY deployment controller.
+     *
+     * * After a successful migration from `ECS` to `EXTERNAL` deployment controller, you need to
+     * manually remove the `ACTIVE` task set, because Amazon ECS no longer manages the deployment. For
+     * information about how to delete a task set, see
+     * [DeleteTaskSet](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeleteTaskSet.html)
+     * in the Amazon Elastic Container Service API Reference.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcontroller.html#cfn-ecs-service-deploymentcontroller-type)
      */
@@ -3847,21 +4433,95 @@ public open class CfnService(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param type The deployment controller type to use. There are three deployment controller
-       * types available:.
-       * * **ECS** - The rolling update ( `ECS` ) deployment type involves replacing the current
-       * running version of the container with the latest version. The number of containers Amazon ECS
-       * adds or removes from the service during a rolling update is controlled by adjusting the
-       * minimum and maximum number of healthy tasks allowed during a service deployment, as specified
-       * in the
-       * [DeploymentConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeploymentConfiguration.html)
-       * .
-       * * **CODE_DEPLOY** - The blue/green ( `CODE_DEPLOY` ) deployment type uses the blue/green
-       * deployment model powered by AWS CodeDeploy , which allows you to verify a new deployment of a
-       * service before sending production traffic to it.
-       * * **EXTERNAL** - The external ( `EXTERNAL` ) deployment type enables you to use any
-       * third-party deployment controller for full control over the deployment process for an Amazon
-       * ECS service.
+       * @param type The deployment controller type to use.
+       * The deployment controller is the mechanism that determines how tasks are deployed for your
+       * service. The valid options are:
+       *
+       * * ECS
+       *
+       * When you create a service which uses the `ECS` deployment controller, you can choose
+       * between the following deployment strategies:
+       *
+       * * `ROLLING` : When you create a service which uses the *rolling update* ( `ROLLING` )
+       * deployment strategy, the Amazon ECS service scheduler replaces the currently running tasks
+       * with new tasks. The number of tasks that Amazon ECS adds or removes from the service during a
+       * rolling update is controlled by the service deployment configuration.
+       *
+       * Rolling update deployments are best suited for the following scenarios:
+       *
+       * * Gradual service updates: You need to update your service incrementally without taking the
+       * entire service offline at once.
+       * * Limited resource requirements: You want to avoid the additional resource costs of running
+       * two complete environments simultaneously (as required by blue/green deployments).
+       * * Acceptable deployment time: Your application can tolerate a longer deployment process, as
+       * rolling updates replace tasks one by one.
+       * * No need for instant roll back: Your service can tolerate a rollback process that takes
+       * minutes rather than seconds.
+       * * Simple deployment process: You prefer a straightforward deployment approach without the
+       * complexity of managing multiple environments, target groups, and listeners.
+       * * No load balancer requirement: Your service doesn't use or require a load balancer,
+       * Application Load Balancer , Network Load Balancer , or Service Connect (which are required for
+       * blue/green deployments).
+       * * Stateful applications: Your application maintains state that makes it difficult to run
+       * two parallel environments.
+       * * Cost sensitivity: You want to minimize deployment costs by not running duplicate
+       * environments during deployment.
+       *
+       * Rolling updates are the default deployment strategy for services and provide a balance
+       * between deployment safety and resource efficiency for many common application scenarios.
+       *
+       * * `BLUE_GREEN` : A *blue/green* deployment strategy ( `BLUE_GREEN` ) is a release
+       * methodology that reduces downtime and risk by running two identical production environments
+       * called blue and green. With Amazon ECS blue/green deployments, you can validate new service
+       * revisions before directing production traffic to them. This approach provides a safer way to
+       * deploy changes with the ability to quickly roll back if needed.
+       *
+       * Amazon ECS blue/green deployments are best suited for the following scenarios:
+       *
+       * * Service validation: When you need to validate new service revisions before directing
+       * production traffic to them
+       * * Zero downtime: When your service requires zero-downtime deployments
+       * * Instant roll back: When you need the ability to quickly roll back if issues are detected
+       * * Load balancer requirement: When your service uses Application Load Balancer , Network
+       * Load Balancer , or Service Connect
+       * * External
+       *
+       * Use a third-party deployment controller.
+       *
+       * * Blue/green deployment (powered by CodeDeploy )
+       *
+       * CodeDeploy installs an updated version of the application as a new replacement task set and
+       * reroutes production traffic from the original application task set to the replacement task
+       * set. The original task set is terminated after a successful deployment. Use this deployment
+       * controller to verify a new deployment of a service before sending production traffic to it.
+       *
+       * When updating the deployment controller for a service, consider the following depending on
+       * the type of migration you're performing.
+       *
+       * * If you have a template that contains the `EXTERNAL` deployment controller information as
+       * well as `TaskSet` and `PrimaryTaskSet` resources, and you remove the task set resources from
+       * the template when updating from `EXTERNAL` to `ECS` , the `DescribeTaskSet` and
+       * `DeleteTaskSet` API calls will return a 400 error after the deployment controller is updated
+       * to `ECS` . This results in a delete failure on the task set resources, even though the stack
+       * transitions to `UPDATE_COMPLETE` status. For more information, see [Resource removed from
+       * stack but not
+       * deleted](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html#troubleshooting-errors-resource-removed-not-deleted)
+       * in the AWS CloudFormation User Guide. To fix this issue, delete the task sets directly using
+       * the Amazon ECS `DeleteTaskSet` API. For more information about how to delete a task set, see
+       * [DeleteTaskSet](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeleteTaskSet.html)
+       * in the Amazon Elastic Container Service API Reference.
+       * * If you're migrating from `CODE_DEPLOY` to `ECS` with a new task definition and AWS
+       * CloudFormation performs a rollback operation, the Amazon ECS `UpdateService` request fails
+       * with the following error:
+       *
+       * Resource handler returned message: "Invalid request provided: Unable to update task
+       * definition on services with a CODE_DEPLOY deployment controller.
+       *
+       * * After a successful migration from `ECS` to `EXTERNAL` deployment controller, you need to
+       * manually remove the `ACTIVE` task set, because Amazon ECS no longer manages the deployment.
+       * For information about how to delete a task set, see
+       * [DeleteTaskSet](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeleteTaskSet.html)
+       * in the Amazon Elastic Container Service API Reference.
        */
       public fun type(type: String)
     }
@@ -3872,21 +4532,95 @@ public open class CfnService(
           software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty.builder()
 
       /**
-       * @param type The deployment controller type to use. There are three deployment controller
-       * types available:.
-       * * **ECS** - The rolling update ( `ECS` ) deployment type involves replacing the current
-       * running version of the container with the latest version. The number of containers Amazon ECS
-       * adds or removes from the service during a rolling update is controlled by adjusting the
-       * minimum and maximum number of healthy tasks allowed during a service deployment, as specified
-       * in the
-       * [DeploymentConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeploymentConfiguration.html)
-       * .
-       * * **CODE_DEPLOY** - The blue/green ( `CODE_DEPLOY` ) deployment type uses the blue/green
-       * deployment model powered by AWS CodeDeploy , which allows you to verify a new deployment of a
-       * service before sending production traffic to it.
-       * * **EXTERNAL** - The external ( `EXTERNAL` ) deployment type enables you to use any
-       * third-party deployment controller for full control over the deployment process for an Amazon
-       * ECS service.
+       * @param type The deployment controller type to use.
+       * The deployment controller is the mechanism that determines how tasks are deployed for your
+       * service. The valid options are:
+       *
+       * * ECS
+       *
+       * When you create a service which uses the `ECS` deployment controller, you can choose
+       * between the following deployment strategies:
+       *
+       * * `ROLLING` : When you create a service which uses the *rolling update* ( `ROLLING` )
+       * deployment strategy, the Amazon ECS service scheduler replaces the currently running tasks
+       * with new tasks. The number of tasks that Amazon ECS adds or removes from the service during a
+       * rolling update is controlled by the service deployment configuration.
+       *
+       * Rolling update deployments are best suited for the following scenarios:
+       *
+       * * Gradual service updates: You need to update your service incrementally without taking the
+       * entire service offline at once.
+       * * Limited resource requirements: You want to avoid the additional resource costs of running
+       * two complete environments simultaneously (as required by blue/green deployments).
+       * * Acceptable deployment time: Your application can tolerate a longer deployment process, as
+       * rolling updates replace tasks one by one.
+       * * No need for instant roll back: Your service can tolerate a rollback process that takes
+       * minutes rather than seconds.
+       * * Simple deployment process: You prefer a straightforward deployment approach without the
+       * complexity of managing multiple environments, target groups, and listeners.
+       * * No load balancer requirement: Your service doesn't use or require a load balancer,
+       * Application Load Balancer , Network Load Balancer , or Service Connect (which are required for
+       * blue/green deployments).
+       * * Stateful applications: Your application maintains state that makes it difficult to run
+       * two parallel environments.
+       * * Cost sensitivity: You want to minimize deployment costs by not running duplicate
+       * environments during deployment.
+       *
+       * Rolling updates are the default deployment strategy for services and provide a balance
+       * between deployment safety and resource efficiency for many common application scenarios.
+       *
+       * * `BLUE_GREEN` : A *blue/green* deployment strategy ( `BLUE_GREEN` ) is a release
+       * methodology that reduces downtime and risk by running two identical production environments
+       * called blue and green. With Amazon ECS blue/green deployments, you can validate new service
+       * revisions before directing production traffic to them. This approach provides a safer way to
+       * deploy changes with the ability to quickly roll back if needed.
+       *
+       * Amazon ECS blue/green deployments are best suited for the following scenarios:
+       *
+       * * Service validation: When you need to validate new service revisions before directing
+       * production traffic to them
+       * * Zero downtime: When your service requires zero-downtime deployments
+       * * Instant roll back: When you need the ability to quickly roll back if issues are detected
+       * * Load balancer requirement: When your service uses Application Load Balancer , Network
+       * Load Balancer , or Service Connect
+       * * External
+       *
+       * Use a third-party deployment controller.
+       *
+       * * Blue/green deployment (powered by CodeDeploy )
+       *
+       * CodeDeploy installs an updated version of the application as a new replacement task set and
+       * reroutes production traffic from the original application task set to the replacement task
+       * set. The original task set is terminated after a successful deployment. Use this deployment
+       * controller to verify a new deployment of a service before sending production traffic to it.
+       *
+       * When updating the deployment controller for a service, consider the following depending on
+       * the type of migration you're performing.
+       *
+       * * If you have a template that contains the `EXTERNAL` deployment controller information as
+       * well as `TaskSet` and `PrimaryTaskSet` resources, and you remove the task set resources from
+       * the template when updating from `EXTERNAL` to `ECS` , the `DescribeTaskSet` and
+       * `DeleteTaskSet` API calls will return a 400 error after the deployment controller is updated
+       * to `ECS` . This results in a delete failure on the task set resources, even though the stack
+       * transitions to `UPDATE_COMPLETE` status. For more information, see [Resource removed from
+       * stack but not
+       * deleted](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html#troubleshooting-errors-resource-removed-not-deleted)
+       * in the AWS CloudFormation User Guide. To fix this issue, delete the task sets directly using
+       * the Amazon ECS `DeleteTaskSet` API. For more information about how to delete a task set, see
+       * [DeleteTaskSet](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeleteTaskSet.html)
+       * in the Amazon Elastic Container Service API Reference.
+       * * If you're migrating from `CODE_DEPLOY` to `ECS` with a new task definition and AWS
+       * CloudFormation performs a rollback operation, the Amazon ECS `UpdateService` request fails
+       * with the following error:
+       *
+       * Resource handler returned message: "Invalid request provided: Unable to update task
+       * definition on services with a CODE_DEPLOY deployment controller.
+       *
+       * * After a successful migration from `ECS` to `EXTERNAL` deployment controller, you need to
+       * manually remove the `ACTIVE` task set, because Amazon ECS no longer manages the deployment.
+       * For information about how to delete a task set, see
+       * [DeleteTaskSet](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeleteTaskSet.html)
+       * in the Amazon Elastic Container Service API Reference.
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -3902,22 +4636,96 @@ public open class CfnService(
     ) : CdkObject(cdkObject),
         DeploymentControllerProperty {
       /**
-       * The deployment controller type to use. There are three deployment controller types
-       * available:.
+       * The deployment controller type to use.
        *
-       * * **ECS** - The rolling update ( `ECS` ) deployment type involves replacing the current
-       * running version of the container with the latest version. The number of containers Amazon ECS
-       * adds or removes from the service during a rolling update is controlled by adjusting the
-       * minimum and maximum number of healthy tasks allowed during a service deployment, as specified
-       * in the
-       * [DeploymentConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeploymentConfiguration.html)
-       * .
-       * * **CODE_DEPLOY** - The blue/green ( `CODE_DEPLOY` ) deployment type uses the blue/green
-       * deployment model powered by AWS CodeDeploy , which allows you to verify a new deployment of a
-       * service before sending production traffic to it.
-       * * **EXTERNAL** - The external ( `EXTERNAL` ) deployment type enables you to use any
-       * third-party deployment controller for full control over the deployment process for an Amazon
-       * ECS service.
+       * The deployment controller is the mechanism that determines how tasks are deployed for your
+       * service. The valid options are:
+       *
+       * * ECS
+       *
+       * When you create a service which uses the `ECS` deployment controller, you can choose
+       * between the following deployment strategies:
+       *
+       * * `ROLLING` : When you create a service which uses the *rolling update* ( `ROLLING` )
+       * deployment strategy, the Amazon ECS service scheduler replaces the currently running tasks
+       * with new tasks. The number of tasks that Amazon ECS adds or removes from the service during a
+       * rolling update is controlled by the service deployment configuration.
+       *
+       * Rolling update deployments are best suited for the following scenarios:
+       *
+       * * Gradual service updates: You need to update your service incrementally without taking the
+       * entire service offline at once.
+       * * Limited resource requirements: You want to avoid the additional resource costs of running
+       * two complete environments simultaneously (as required by blue/green deployments).
+       * * Acceptable deployment time: Your application can tolerate a longer deployment process, as
+       * rolling updates replace tasks one by one.
+       * * No need for instant roll back: Your service can tolerate a rollback process that takes
+       * minutes rather than seconds.
+       * * Simple deployment process: You prefer a straightforward deployment approach without the
+       * complexity of managing multiple environments, target groups, and listeners.
+       * * No load balancer requirement: Your service doesn't use or require a load balancer,
+       * Application Load Balancer , Network Load Balancer , or Service Connect (which are required for
+       * blue/green deployments).
+       * * Stateful applications: Your application maintains state that makes it difficult to run
+       * two parallel environments.
+       * * Cost sensitivity: You want to minimize deployment costs by not running duplicate
+       * environments during deployment.
+       *
+       * Rolling updates are the default deployment strategy for services and provide a balance
+       * between deployment safety and resource efficiency for many common application scenarios.
+       *
+       * * `BLUE_GREEN` : A *blue/green* deployment strategy ( `BLUE_GREEN` ) is a release
+       * methodology that reduces downtime and risk by running two identical production environments
+       * called blue and green. With Amazon ECS blue/green deployments, you can validate new service
+       * revisions before directing production traffic to them. This approach provides a safer way to
+       * deploy changes with the ability to quickly roll back if needed.
+       *
+       * Amazon ECS blue/green deployments are best suited for the following scenarios:
+       *
+       * * Service validation: When you need to validate new service revisions before directing
+       * production traffic to them
+       * * Zero downtime: When your service requires zero-downtime deployments
+       * * Instant roll back: When you need the ability to quickly roll back if issues are detected
+       * * Load balancer requirement: When your service uses Application Load Balancer , Network
+       * Load Balancer , or Service Connect
+       * * External
+       *
+       * Use a third-party deployment controller.
+       *
+       * * Blue/green deployment (powered by CodeDeploy )
+       *
+       * CodeDeploy installs an updated version of the application as a new replacement task set and
+       * reroutes production traffic from the original application task set to the replacement task
+       * set. The original task set is terminated after a successful deployment. Use this deployment
+       * controller to verify a new deployment of a service before sending production traffic to it.
+       *
+       * When updating the deployment controller for a service, consider the following depending on
+       * the type of migration you're performing.
+       *
+       * * If you have a template that contains the `EXTERNAL` deployment controller information as
+       * well as `TaskSet` and `PrimaryTaskSet` resources, and you remove the task set resources from
+       * the template when updating from `EXTERNAL` to `ECS` , the `DescribeTaskSet` and
+       * `DeleteTaskSet` API calls will return a 400 error after the deployment controller is updated
+       * to `ECS` . This results in a delete failure on the task set resources, even though the stack
+       * transitions to `UPDATE_COMPLETE` status. For more information, see [Resource removed from
+       * stack but not
+       * deleted](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html#troubleshooting-errors-resource-removed-not-deleted)
+       * in the AWS CloudFormation User Guide. To fix this issue, delete the task sets directly using
+       * the Amazon ECS `DeleteTaskSet` API. For more information about how to delete a task set, see
+       * [DeleteTaskSet](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeleteTaskSet.html)
+       * in the Amazon Elastic Container Service API Reference.
+       * * If you're migrating from `CODE_DEPLOY` to `ECS` with a new task definition and AWS
+       * CloudFormation performs a rollback operation, the Amazon ECS `UpdateService` request fails
+       * with the following error:
+       *
+       * Resource handler returned message: "Invalid request provided: Unable to update task
+       * definition on services with a CODE_DEPLOY deployment controller.
+       *
+       * * After a successful migration from `ECS` to `EXTERNAL` deployment controller, you need to
+       * manually remove the `ACTIVE` task set, because Amazon ECS no longer manages the deployment.
+       * For information about how to delete a task set, see
+       * [DeleteTaskSet](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeleteTaskSet.html)
+       * in the Amazon Elastic Container Service API Reference.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcontroller.html#cfn-ecs-service-deploymentcontroller-type)
        */
@@ -3939,6 +4747,496 @@ public open class CfnService(
           software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty
+    }
+  }
+
+  /**
+   * A deployment lifecycle hook runs custom logic at specific stages of the deployment process.
+   *
+   * Currently, you can use Lambda functions as hook targets.
+   *
+   * For more information, see [Lifecycle hooks for Amazon ECS service
+   * deployments](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-lifecycle-hooks.html)
+   * in the *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * DeploymentLifecycleHookProperty deploymentLifecycleHookProperty =
+   * DeploymentLifecycleHookProperty.builder()
+   * .hookTargetArn("hookTargetArn")
+   * .lifecycleStages(List.of("lifecycleStages"))
+   * .roleArn("roleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentlifecyclehook.html)
+   */
+  public interface DeploymentLifecycleHookProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the hook target. Currently, only Lambda function ARNs are
+     * supported.
+     *
+     * You must provide this parameter when configuring a deployment lifecycle hook.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentlifecyclehook.html#cfn-ecs-service-deploymentlifecyclehook-hooktargetarn)
+     */
+    public fun hookTargetArn(): String
+
+    /**
+     * The lifecycle stages at which to run the hook. Choose from these valid values:.
+     *
+     * * RECONCILE_SERVICE
+     *
+     * The reconciliation stage that only happens when you start a new service deployment with more
+     * than 1 service revision in an ACTIVE state.
+     *
+     * You can use a lifecycle hook for this stage.
+     *
+     * * PRE_SCALE_UP
+     *
+     * The green service revision has not started. The blue service revision is handling 100% of the
+     * production traffic. There is no test traffic.
+     *
+     * You can use a lifecycle hook for this stage.
+     *
+     * * POST_SCALE_UP
+     *
+     * The green service revision has started. The blue service revision is handling 100% of the
+     * production traffic. There is no test traffic.
+     *
+     * You can use a lifecycle hook for this stage.
+     *
+     * * TEST_TRAFFIC_SHIFT
+     *
+     * The blue and green service revisions are running. The blue service revision handles 100% of
+     * the production traffic. The green service revision is migrating from 0% to 100% of test traffic.
+     *
+     * You can use a lifecycle hook for this stage.
+     *
+     * * POST_TEST_TRAFFIC_SHIFT
+     *
+     * The test traffic shift is complete. The green service revision handles 100% of the test
+     * traffic.
+     *
+     * You can use a lifecycle hook for this stage.
+     *
+     * * PRODUCTION_TRAFFIC_SHIFT
+     *
+     * Production traffic is shifting to the green service revision. The green service revision is
+     * migrating from 0% to 100% of production traffic.
+     *
+     * You can use a lifecycle hook for this stage.
+     *
+     * * POST_PRODUCTION_TRAFFIC_SHIFT
+     *
+     * The production traffic shift is complete.
+     *
+     * You can use a lifecycle hook for this stage.
+     *
+     * You must provide this parameter when configuring a deployment lifecycle hook.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentlifecyclehook.html#cfn-ecs-service-deploymentlifecyclehook-lifecyclestages)
+     */
+    public fun lifecycleStages(): List<String>
+
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role that grants Amazon ECS permission to call
+     * Lambda functions on your behalf.
+     *
+     * For more information, see [Permissions required for Lambda functions in Amazon ECS blue/green
+     * deployments](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/blue-green-permissions.html)
+     * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentlifecyclehook.html#cfn-ecs-service-deploymentlifecyclehook-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [DeploymentLifecycleHookProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param hookTargetArn The Amazon Resource Name (ARN) of the hook target. Currently, only
+       * Lambda function ARNs are supported. 
+       * You must provide this parameter when configuring a deployment lifecycle hook.
+       */
+      public fun hookTargetArn(hookTargetArn: String)
+
+      /**
+       * @param lifecycleStages The lifecycle stages at which to run the hook. Choose from these
+       * valid values:. 
+       * * RECONCILE_SERVICE
+       *
+       * The reconciliation stage that only happens when you start a new service deployment with
+       * more than 1 service revision in an ACTIVE state.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * PRE_SCALE_UP
+       *
+       * The green service revision has not started. The blue service revision is handling 100% of
+       * the production traffic. There is no test traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * POST_SCALE_UP
+       *
+       * The green service revision has started. The blue service revision is handling 100% of the
+       * production traffic. There is no test traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * TEST_TRAFFIC_SHIFT
+       *
+       * The blue and green service revisions are running. The blue service revision handles 100% of
+       * the production traffic. The green service revision is migrating from 0% to 100% of test
+       * traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * POST_TEST_TRAFFIC_SHIFT
+       *
+       * The test traffic shift is complete. The green service revision handles 100% of the test
+       * traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * PRODUCTION_TRAFFIC_SHIFT
+       *
+       * Production traffic is shifting to the green service revision. The green service revision is
+       * migrating from 0% to 100% of production traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * POST_PRODUCTION_TRAFFIC_SHIFT
+       *
+       * The production traffic shift is complete.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * You must provide this parameter when configuring a deployment lifecycle hook.
+       */
+      public fun lifecycleStages(lifecycleStages: List<String>)
+
+      /**
+       * @param lifecycleStages The lifecycle stages at which to run the hook. Choose from these
+       * valid values:. 
+       * * RECONCILE_SERVICE
+       *
+       * The reconciliation stage that only happens when you start a new service deployment with
+       * more than 1 service revision in an ACTIVE state.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * PRE_SCALE_UP
+       *
+       * The green service revision has not started. The blue service revision is handling 100% of
+       * the production traffic. There is no test traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * POST_SCALE_UP
+       *
+       * The green service revision has started. The blue service revision is handling 100% of the
+       * production traffic. There is no test traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * TEST_TRAFFIC_SHIFT
+       *
+       * The blue and green service revisions are running. The blue service revision handles 100% of
+       * the production traffic. The green service revision is migrating from 0% to 100% of test
+       * traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * POST_TEST_TRAFFIC_SHIFT
+       *
+       * The test traffic shift is complete. The green service revision handles 100% of the test
+       * traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * PRODUCTION_TRAFFIC_SHIFT
+       *
+       * Production traffic is shifting to the green service revision. The green service revision is
+       * migrating from 0% to 100% of production traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * POST_PRODUCTION_TRAFFIC_SHIFT
+       *
+       * The production traffic shift is complete.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * You must provide this parameter when configuring a deployment lifecycle hook.
+       */
+      public fun lifecycleStages(vararg lifecycleStages: String)
+
+      /**
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM role that grants Amazon ECS
+       * permission to call Lambda functions on your behalf. 
+       * For more information, see [Permissions required for Lambda functions in Amazon ECS
+       * blue/green
+       * deployments](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/blue-green-permissions.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentLifecycleHookProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentLifecycleHookProperty.builder()
+
+      /**
+       * @param hookTargetArn The Amazon Resource Name (ARN) of the hook target. Currently, only
+       * Lambda function ARNs are supported. 
+       * You must provide this parameter when configuring a deployment lifecycle hook.
+       */
+      override fun hookTargetArn(hookTargetArn: String) {
+        cdkBuilder.hookTargetArn(hookTargetArn)
+      }
+
+      /**
+       * @param lifecycleStages The lifecycle stages at which to run the hook. Choose from these
+       * valid values:. 
+       * * RECONCILE_SERVICE
+       *
+       * The reconciliation stage that only happens when you start a new service deployment with
+       * more than 1 service revision in an ACTIVE state.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * PRE_SCALE_UP
+       *
+       * The green service revision has not started. The blue service revision is handling 100% of
+       * the production traffic. There is no test traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * POST_SCALE_UP
+       *
+       * The green service revision has started. The blue service revision is handling 100% of the
+       * production traffic. There is no test traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * TEST_TRAFFIC_SHIFT
+       *
+       * The blue and green service revisions are running. The blue service revision handles 100% of
+       * the production traffic. The green service revision is migrating from 0% to 100% of test
+       * traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * POST_TEST_TRAFFIC_SHIFT
+       *
+       * The test traffic shift is complete. The green service revision handles 100% of the test
+       * traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * PRODUCTION_TRAFFIC_SHIFT
+       *
+       * Production traffic is shifting to the green service revision. The green service revision is
+       * migrating from 0% to 100% of production traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * POST_PRODUCTION_TRAFFIC_SHIFT
+       *
+       * The production traffic shift is complete.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * You must provide this parameter when configuring a deployment lifecycle hook.
+       */
+      override fun lifecycleStages(lifecycleStages: List<String>) {
+        cdkBuilder.lifecycleStages(lifecycleStages)
+      }
+
+      /**
+       * @param lifecycleStages The lifecycle stages at which to run the hook. Choose from these
+       * valid values:. 
+       * * RECONCILE_SERVICE
+       *
+       * The reconciliation stage that only happens when you start a new service deployment with
+       * more than 1 service revision in an ACTIVE state.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * PRE_SCALE_UP
+       *
+       * The green service revision has not started. The blue service revision is handling 100% of
+       * the production traffic. There is no test traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * POST_SCALE_UP
+       *
+       * The green service revision has started. The blue service revision is handling 100% of the
+       * production traffic. There is no test traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * TEST_TRAFFIC_SHIFT
+       *
+       * The blue and green service revisions are running. The blue service revision handles 100% of
+       * the production traffic. The green service revision is migrating from 0% to 100% of test
+       * traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * POST_TEST_TRAFFIC_SHIFT
+       *
+       * The test traffic shift is complete. The green service revision handles 100% of the test
+       * traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * PRODUCTION_TRAFFIC_SHIFT
+       *
+       * Production traffic is shifting to the green service revision. The green service revision is
+       * migrating from 0% to 100% of production traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * POST_PRODUCTION_TRAFFIC_SHIFT
+       *
+       * The production traffic shift is complete.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * You must provide this parameter when configuring a deployment lifecycle hook.
+       */
+      override fun lifecycleStages(vararg lifecycleStages: String): Unit =
+          lifecycleStages(lifecycleStages.toList())
+
+      /**
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM role that grants Amazon ECS
+       * permission to call Lambda functions on your behalf. 
+       * For more information, see [Permissions required for Lambda functions in Amazon ECS
+       * blue/green
+       * deployments](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/blue-green-permissions.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentLifecycleHookProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentLifecycleHookProperty,
+    ) : CdkObject(cdkObject),
+        DeploymentLifecycleHookProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the hook target. Currently, only Lambda function ARNs are
+       * supported.
+       *
+       * You must provide this parameter when configuring a deployment lifecycle hook.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentlifecyclehook.html#cfn-ecs-service-deploymentlifecyclehook-hooktargetarn)
+       */
+      override fun hookTargetArn(): String = unwrap(this).getHookTargetArn()
+
+      /**
+       * The lifecycle stages at which to run the hook. Choose from these valid values:.
+       *
+       * * RECONCILE_SERVICE
+       *
+       * The reconciliation stage that only happens when you start a new service deployment with
+       * more than 1 service revision in an ACTIVE state.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * PRE_SCALE_UP
+       *
+       * The green service revision has not started. The blue service revision is handling 100% of
+       * the production traffic. There is no test traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * POST_SCALE_UP
+       *
+       * The green service revision has started. The blue service revision is handling 100% of the
+       * production traffic. There is no test traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * TEST_TRAFFIC_SHIFT
+       *
+       * The blue and green service revisions are running. The blue service revision handles 100% of
+       * the production traffic. The green service revision is migrating from 0% to 100% of test
+       * traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * POST_TEST_TRAFFIC_SHIFT
+       *
+       * The test traffic shift is complete. The green service revision handles 100% of the test
+       * traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * PRODUCTION_TRAFFIC_SHIFT
+       *
+       * Production traffic is shifting to the green service revision. The green service revision is
+       * migrating from 0% to 100% of production traffic.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * * POST_PRODUCTION_TRAFFIC_SHIFT
+       *
+       * The production traffic shift is complete.
+       *
+       * You can use a lifecycle hook for this stage.
+       *
+       * You must provide this parameter when configuring a deployment lifecycle hook.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentlifecyclehook.html#cfn-ecs-service-deploymentlifecyclehook-lifecyclestages)
+       */
+      override fun lifecycleStages(): List<String> = unwrap(this).getLifecycleStages()
+
+      /**
+       * The Amazon Resource Name (ARN) of the IAM role that grants Amazon ECS permission to call
+       * Lambda functions on your behalf.
+       *
+       * For more information, see [Permissions required for Lambda functions in Amazon ECS
+       * blue/green
+       * deployments](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/blue-green-permissions.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentlifecyclehook.html#cfn-ecs-service-deploymentlifecyclehook-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeploymentLifecycleHookProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentLifecycleHookProperty):
+          DeploymentLifecycleHookProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentLifecycleHookProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeploymentLifecycleHookProperty):
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentLifecycleHookProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.DeploymentLifecycleHookProperty
     }
   }
 
@@ -4134,6 +5432,13 @@ public open class CfnService(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ecs.*;
    * LoadBalancerProperty loadBalancerProperty = LoadBalancerProperty.builder()
+   * .advancedConfiguration(AdvancedConfigurationProperty.builder()
+   * .alternateTargetGroupArn("alternateTargetGroupArn")
+   * // the properties below are optional
+   * .productionListenerRule("productionListenerRule")
+   * .roleArn("roleArn")
+   * .testListenerRule("testListenerRule")
+   * .build())
    * .containerName("containerName")
    * .containerPort(123)
    * .loadBalancerName("loadBalancerName")
@@ -4144,6 +5449,16 @@ public open class CfnService(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancer.html)
    */
   public interface LoadBalancerProperty {
+    /**
+     * The advanced settings for the load balancer used in blue/green deployments.
+     *
+     * Specify the alternate target group, listener rules, and IAM role required for traffic
+     * shifting during blue/green deployments.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancer.html#cfn-ecs-service-loadbalancer-advancedconfiguration)
+     */
+    public fun advancedConfiguration(): Any? = unwrap(this).getAdvancedConfiguration()
+
     /**
      * The name of the container (as it appears in a container definition) to associate with the
      * load balancer.
@@ -4210,6 +5525,33 @@ public open class CfnService(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param advancedConfiguration The advanced settings for the load balancer used in blue/green
+       * deployments.
+       * Specify the alternate target group, listener rules, and IAM role required for traffic
+       * shifting during blue/green deployments.
+       */
+      public fun advancedConfiguration(advancedConfiguration: IResolvable)
+
+      /**
+       * @param advancedConfiguration The advanced settings for the load balancer used in blue/green
+       * deployments.
+       * Specify the alternate target group, listener rules, and IAM role required for traffic
+       * shifting during blue/green deployments.
+       */
+      public fun advancedConfiguration(advancedConfiguration: AdvancedConfigurationProperty)
+
+      /**
+       * @param advancedConfiguration The advanced settings for the load balancer used in blue/green
+       * deployments.
+       * Specify the alternate target group, listener rules, and IAM role required for traffic
+       * shifting during blue/green deployments.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0bf8ba6d55c78e84597527a66a761165ee61df85426c3ad8c051cd296e741a67")
+      public
+          fun advancedConfiguration(advancedConfiguration: AdvancedConfigurationProperty.Builder.() -> Unit)
+
+      /**
        * @param containerName The name of the container (as it appears in a container definition) to
        * associate with the load balancer.
        * You need to specify the container name when configuring the target group for an Amazon ECS
@@ -4262,6 +5604,38 @@ public open class CfnService(
       private val cdkBuilder:
           software.amazon.awscdk.services.ecs.CfnService.LoadBalancerProperty.Builder =
           software.amazon.awscdk.services.ecs.CfnService.LoadBalancerProperty.builder()
+
+      /**
+       * @param advancedConfiguration The advanced settings for the load balancer used in blue/green
+       * deployments.
+       * Specify the alternate target group, listener rules, and IAM role required for traffic
+       * shifting during blue/green deployments.
+       */
+      override fun advancedConfiguration(advancedConfiguration: IResolvable) {
+        cdkBuilder.advancedConfiguration(advancedConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param advancedConfiguration The advanced settings for the load balancer used in blue/green
+       * deployments.
+       * Specify the alternate target group, listener rules, and IAM role required for traffic
+       * shifting during blue/green deployments.
+       */
+      override fun advancedConfiguration(advancedConfiguration: AdvancedConfigurationProperty) {
+        cdkBuilder.advancedConfiguration(advancedConfiguration.let(AdvancedConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param advancedConfiguration The advanced settings for the load balancer used in blue/green
+       * deployments.
+       * Specify the alternate target group, listener rules, and IAM role required for traffic
+       * shifting during blue/green deployments.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0bf8ba6d55c78e84597527a66a761165ee61df85426c3ad8c051cd296e741a67")
+      override
+          fun advancedConfiguration(advancedConfiguration: AdvancedConfigurationProperty.Builder.() -> Unit):
+          Unit = advancedConfiguration(AdvancedConfigurationProperty(advancedConfiguration))
 
       /**
        * @param containerName The name of the container (as it appears in a container definition) to
@@ -4327,6 +5701,16 @@ public open class CfnService(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.LoadBalancerProperty,
     ) : CdkObject(cdkObject),
         LoadBalancerProperty {
+      /**
+       * The advanced settings for the load balancer used in blue/green deployments.
+       *
+       * Specify the alternate target group, listener rules, and IAM role required for traffic
+       * shifting during blue/green deployments.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancer.html#cfn-ecs-service-loadbalancer-advancedconfiguration)
+       */
+      override fun advancedConfiguration(): Any? = unwrap(this).getAdvancedConfiguration()
+
       /**
        * The name of the container (as it appears in a container definition) to associate with the
        * load balancer.
@@ -4518,8 +5902,7 @@ public open class CfnService(
      *
      * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
      *
-     * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional for
-     * the EC2 launch type, required for the Fargate launch type.
+     * * **awslogs-stream-prefix** - Required: Yes, when using Fargate.Optional when using EC2.
      *
      * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
      * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
@@ -4581,26 +5964,44 @@ public open class CfnService(
      * might have a negative impact on logging performance.
      *
      *
+     * The following options apply to all supported log drivers.
+     *
      * * **mode** - Required: No
      *
      * Valid values: `non-blocking` | `blocking`
      *
-     * This option defines the delivery mode of log messages from the container to CloudWatch Logs.
-     * The delivery mode you choose affects application availability when the flow of logs from
-     * container to CloudWatch is interrupted.
+     * This option defines the delivery mode of log messages from the container to the log driver
+     * specified using `logDriver` . The delivery mode you choose affects application availability when
+     * the flow of logs from container is interrupted.
      *
-     * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls from
-     * container code to write to the `stdout` and `stderr` streams will block. The logging thread of
-     * the application will block as a result. This may cause the application to become unresponsive
-     * and lead to container healthcheck failure.
+     * If you use the `blocking` mode and the flow of logs is interrupted, calls from container code
+     * to write to the `stdout` and `stderr` streams will block. The logging thread of the application
+     * will block as a result. This may cause the application to become unresponsive and lead to
+     * container healthcheck failure.
      *
      * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
      * intermediate buffer configured with the `max-buffer-size` option. This prevents the application
-     * from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend using this mode
-     * if you want to ensure service availability and are okay with some log loss. For more
-     * information, see [Preventing log loss with non-blocking mode in the `awslogs` container log
+     * from becoming unresponsive when logs cannot be sent. We recommend using this mode if you want to
+     * ensure service availability and are okay with some log loss. For more information, see
+     * [Preventing log loss with non-blocking mode in the `awslogs` container log
      * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
      * .
+     *
+     * You can set a default `mode` for all containers in a specific AWS Region by using the
+     * `defaultLogDriverMode` account setting. If you don't specify the `mode` option or configure the
+     * account setting, Amazon ECS will default to the `non-blocking` mode. For more information about
+     * the account setting, see [Default log driver
+     * mode](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#default-log-driver-mode)
+     * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     *
+     * On June 25, 2025, Amazon ECS changed the default log driver mode from `blocking` to
+     * `non-blocking` to prioritize task availability over logging. To continue using the `blocking`
+     * mode after this change, do one of the following:
+     *
+     * * Set the `mode` option in your container definition's `logConfiguration` as `blocking` .
+     * * Set the `defaultLogDriverMode` account setting to `blocking` .
+     *
      *
      * * **max-buffer-size** - Required: No
      *
@@ -4629,7 +6030,9 @@ public open class CfnService(
      *
      * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
      * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth` ,
-     * `Aws_region` , `Suppress_Type_Name` , and `tls` .
+     * `Aws_region` , `Suppress_Type_Name` , and `tls` . For more information, see [Under the hood:
+     * FireLens for Amazon ECS
+     * Tasks](https://docs.aws.amazon.com/containers/under-the-hood-firelens-for-amazon-ecs-tasks/) .
      *
      * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option. You
      * can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
@@ -4714,8 +6117,7 @@ public open class CfnService(
        *
        * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
        *
-       * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional
-       * for the EC2 launch type, required for the Fargate launch type.
+       * * **awslogs-stream-prefix** - Required: Yes, when using Fargate.Optional when using EC2.
        *
        * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
        * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
@@ -4777,27 +6179,44 @@ public open class CfnService(
        * This might have a negative impact on logging performance.
        *
        *
+       * The following options apply to all supported log drivers.
+       *
        * * **mode** - Required: No
        *
        * Valid values: `non-blocking` | `blocking`
        *
-       * This option defines the delivery mode of log messages from the container to CloudWatch
-       * Logs. The delivery mode you choose affects application availability when the flow of logs from
-       * container to CloudWatch is interrupted.
+       * This option defines the delivery mode of log messages from the container to the log driver
+       * specified using `logDriver` . The delivery mode you choose affects application availability
+       * when the flow of logs from container is interrupted.
        *
-       * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls
-       * from container code to write to the `stdout` and `stderr` streams will block. The logging
-       * thread of the application will block as a result. This may cause the application to become
-       * unresponsive and lead to container healthcheck failure.
+       * If you use the `blocking` mode and the flow of logs is interrupted, calls from container
+       * code to write to the `stdout` and `stderr` streams will block. The logging thread of the
+       * application will block as a result. This may cause the application to become unresponsive and
+       * lead to container healthcheck failure.
        *
        * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
        * intermediate buffer configured with the `max-buffer-size` option. This prevents the
-       * application from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend
-       * using this mode if you want to ensure service availability and are okay with some log loss.
-       * For more information, see [Preventing log loss with non-blocking mode in the `awslogs`
-       * container log
+       * application from becoming unresponsive when logs cannot be sent. We recommend using this mode
+       * if you want to ensure service availability and are okay with some log loss. For more
+       * information, see [Preventing log loss with non-blocking mode in the `awslogs` container log
        * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
        * .
+       *
+       * You can set a default `mode` for all containers in a specific AWS Region by using the
+       * `defaultLogDriverMode` account setting. If you don't specify the `mode` option or configure
+       * the account setting, Amazon ECS will default to the `non-blocking` mode. For more information
+       * about the account setting, see [Default log driver
+       * mode](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#default-log-driver-mode)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       *
+       * On June 25, 2025, Amazon ECS changed the default log driver mode from `blocking` to
+       * `non-blocking` to prioritize task availability over logging. To continue using the `blocking`
+       * mode after this change, do one of the following:
+       *
+       * * Set the `mode` option in your container definition's `logConfiguration` as `blocking` .
+       * * Set the `defaultLogDriverMode` account setting to `blocking` .
+       *
        *
        * * **max-buffer-size** - Required: No
        *
@@ -4826,7 +6245,9 @@ public open class CfnService(
        *
        * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
        * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth`
-       * , `Aws_region` , `Suppress_Type_Name` , and `tls` .
+       * , `Aws_region` , `Suppress_Type_Name` , and `tls` . For more information, see [Under the hood:
+       * FireLens for Amazon ECS
+       * Tasks](https://docs.aws.amazon.com/containers/under-the-hood-firelens-for-amazon-ecs-tasks/) .
        *
        * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option.
        * You can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
@@ -4837,7 +6258,7 @@ public open class CfnService(
        * container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        */
-      public fun options(options: IResolvable)
+      public fun options(options: Map<String, String>)
 
       /**
        * @param options The configuration options to send to the log driver.
@@ -4867,8 +6288,7 @@ public open class CfnService(
        *
        * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
        *
-       * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional
-       * for the EC2 launch type, required for the Fargate launch type.
+       * * **awslogs-stream-prefix** - Required: Yes, when using Fargate.Optional when using EC2.
        *
        * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
        * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
@@ -4930,27 +6350,44 @@ public open class CfnService(
        * This might have a negative impact on logging performance.
        *
        *
+       * The following options apply to all supported log drivers.
+       *
        * * **mode** - Required: No
        *
        * Valid values: `non-blocking` | `blocking`
        *
-       * This option defines the delivery mode of log messages from the container to CloudWatch
-       * Logs. The delivery mode you choose affects application availability when the flow of logs from
-       * container to CloudWatch is interrupted.
+       * This option defines the delivery mode of log messages from the container to the log driver
+       * specified using `logDriver` . The delivery mode you choose affects application availability
+       * when the flow of logs from container is interrupted.
        *
-       * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls
-       * from container code to write to the `stdout` and `stderr` streams will block. The logging
-       * thread of the application will block as a result. This may cause the application to become
-       * unresponsive and lead to container healthcheck failure.
+       * If you use the `blocking` mode and the flow of logs is interrupted, calls from container
+       * code to write to the `stdout` and `stderr` streams will block. The logging thread of the
+       * application will block as a result. This may cause the application to become unresponsive and
+       * lead to container healthcheck failure.
        *
        * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
        * intermediate buffer configured with the `max-buffer-size` option. This prevents the
-       * application from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend
-       * using this mode if you want to ensure service availability and are okay with some log loss.
-       * For more information, see [Preventing log loss with non-blocking mode in the `awslogs`
-       * container log
+       * application from becoming unresponsive when logs cannot be sent. We recommend using this mode
+       * if you want to ensure service availability and are okay with some log loss. For more
+       * information, see [Preventing log loss with non-blocking mode in the `awslogs` container log
        * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
        * .
+       *
+       * You can set a default `mode` for all containers in a specific AWS Region by using the
+       * `defaultLogDriverMode` account setting. If you don't specify the `mode` option or configure
+       * the account setting, Amazon ECS will default to the `non-blocking` mode. For more information
+       * about the account setting, see [Default log driver
+       * mode](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#default-log-driver-mode)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       *
+       * On June 25, 2025, Amazon ECS changed the default log driver mode from `blocking` to
+       * `non-blocking` to prioritize task availability over logging. To continue using the `blocking`
+       * mode after this change, do one of the following:
+       *
+       * * Set the `mode` option in your container definition's `logConfiguration` as `blocking` .
+       * * Set the `defaultLogDriverMode` account setting to `blocking` .
+       *
        *
        * * **max-buffer-size** - Required: No
        *
@@ -4979,7 +6416,9 @@ public open class CfnService(
        *
        * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
        * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth`
-       * , `Aws_region` , `Suppress_Type_Name` , and `tls` .
+       * , `Aws_region` , `Suppress_Type_Name` , and `tls` . For more information, see [Under the hood:
+       * FireLens for Amazon ECS
+       * Tasks](https://docs.aws.amazon.com/containers/under-the-hood-firelens-for-amazon-ecs-tasks/) .
        *
        * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option.
        * You can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
@@ -4990,7 +6429,7 @@ public open class CfnService(
        * container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        */
-      public fun options(options: Map<String, String>)
+      public fun options(options: IResolvable)
 
       /**
        * @param secretOptions The secrets to pass to the log configuration.
@@ -5078,8 +6517,7 @@ public open class CfnService(
        *
        * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
        *
-       * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional
-       * for the EC2 launch type, required for the Fargate launch type.
+       * * **awslogs-stream-prefix** - Required: Yes, when using Fargate.Optional when using EC2.
        *
        * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
        * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
@@ -5141,27 +6579,44 @@ public open class CfnService(
        * This might have a negative impact on logging performance.
        *
        *
+       * The following options apply to all supported log drivers.
+       *
        * * **mode** - Required: No
        *
        * Valid values: `non-blocking` | `blocking`
        *
-       * This option defines the delivery mode of log messages from the container to CloudWatch
-       * Logs. The delivery mode you choose affects application availability when the flow of logs from
-       * container to CloudWatch is interrupted.
+       * This option defines the delivery mode of log messages from the container to the log driver
+       * specified using `logDriver` . The delivery mode you choose affects application availability
+       * when the flow of logs from container is interrupted.
        *
-       * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls
-       * from container code to write to the `stdout` and `stderr` streams will block. The logging
-       * thread of the application will block as a result. This may cause the application to become
-       * unresponsive and lead to container healthcheck failure.
+       * If you use the `blocking` mode and the flow of logs is interrupted, calls from container
+       * code to write to the `stdout` and `stderr` streams will block. The logging thread of the
+       * application will block as a result. This may cause the application to become unresponsive and
+       * lead to container healthcheck failure.
        *
        * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
        * intermediate buffer configured with the `max-buffer-size` option. This prevents the
-       * application from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend
-       * using this mode if you want to ensure service availability and are okay with some log loss.
-       * For more information, see [Preventing log loss with non-blocking mode in the `awslogs`
-       * container log
+       * application from becoming unresponsive when logs cannot be sent. We recommend using this mode
+       * if you want to ensure service availability and are okay with some log loss. For more
+       * information, see [Preventing log loss with non-blocking mode in the `awslogs` container log
        * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
        * .
+       *
+       * You can set a default `mode` for all containers in a specific AWS Region by using the
+       * `defaultLogDriverMode` account setting. If you don't specify the `mode` option or configure
+       * the account setting, Amazon ECS will default to the `non-blocking` mode. For more information
+       * about the account setting, see [Default log driver
+       * mode](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#default-log-driver-mode)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       *
+       * On June 25, 2025, Amazon ECS changed the default log driver mode from `blocking` to
+       * `non-blocking` to prioritize task availability over logging. To continue using the `blocking`
+       * mode after this change, do one of the following:
+       *
+       * * Set the `mode` option in your container definition's `logConfiguration` as `blocking` .
+       * * Set the `defaultLogDriverMode` account setting to `blocking` .
+       *
        *
        * * **max-buffer-size** - Required: No
        *
@@ -5190,7 +6645,9 @@ public open class CfnService(
        *
        * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
        * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth`
-       * , `Aws_region` , `Suppress_Type_Name` , and `tls` .
+       * , `Aws_region` , `Suppress_Type_Name` , and `tls` . For more information, see [Under the hood:
+       * FireLens for Amazon ECS
+       * Tasks](https://docs.aws.amazon.com/containers/under-the-hood-firelens-for-amazon-ecs-tasks/) .
        *
        * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option.
        * You can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
@@ -5201,8 +6658,8 @@ public open class CfnService(
        * container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        */
-      override fun options(options: IResolvable) {
-        cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
+      override fun options(options: Map<String, String>) {
+        cdkBuilder.options(options)
       }
 
       /**
@@ -5233,8 +6690,7 @@ public open class CfnService(
        *
        * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
        *
-       * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional
-       * for the EC2 launch type, required for the Fargate launch type.
+       * * **awslogs-stream-prefix** - Required: Yes, when using Fargate.Optional when using EC2.
        *
        * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
        * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
@@ -5296,27 +6752,44 @@ public open class CfnService(
        * This might have a negative impact on logging performance.
        *
        *
+       * The following options apply to all supported log drivers.
+       *
        * * **mode** - Required: No
        *
        * Valid values: `non-blocking` | `blocking`
        *
-       * This option defines the delivery mode of log messages from the container to CloudWatch
-       * Logs. The delivery mode you choose affects application availability when the flow of logs from
-       * container to CloudWatch is interrupted.
+       * This option defines the delivery mode of log messages from the container to the log driver
+       * specified using `logDriver` . The delivery mode you choose affects application availability
+       * when the flow of logs from container is interrupted.
        *
-       * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls
-       * from container code to write to the `stdout` and `stderr` streams will block. The logging
-       * thread of the application will block as a result. This may cause the application to become
-       * unresponsive and lead to container healthcheck failure.
+       * If you use the `blocking` mode and the flow of logs is interrupted, calls from container
+       * code to write to the `stdout` and `stderr` streams will block. The logging thread of the
+       * application will block as a result. This may cause the application to become unresponsive and
+       * lead to container healthcheck failure.
        *
        * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
        * intermediate buffer configured with the `max-buffer-size` option. This prevents the
-       * application from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend
-       * using this mode if you want to ensure service availability and are okay with some log loss.
-       * For more information, see [Preventing log loss with non-blocking mode in the `awslogs`
-       * container log
+       * application from becoming unresponsive when logs cannot be sent. We recommend using this mode
+       * if you want to ensure service availability and are okay with some log loss. For more
+       * information, see [Preventing log loss with non-blocking mode in the `awslogs` container log
        * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
        * .
+       *
+       * You can set a default `mode` for all containers in a specific AWS Region by using the
+       * `defaultLogDriverMode` account setting. If you don't specify the `mode` option or configure
+       * the account setting, Amazon ECS will default to the `non-blocking` mode. For more information
+       * about the account setting, see [Default log driver
+       * mode](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#default-log-driver-mode)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       *
+       * On June 25, 2025, Amazon ECS changed the default log driver mode from `blocking` to
+       * `non-blocking` to prioritize task availability over logging. To continue using the `blocking`
+       * mode after this change, do one of the following:
+       *
+       * * Set the `mode` option in your container definition's `logConfiguration` as `blocking` .
+       * * Set the `defaultLogDriverMode` account setting to `blocking` .
+       *
        *
        * * **max-buffer-size** - Required: No
        *
@@ -5345,7 +6818,9 @@ public open class CfnService(
        *
        * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
        * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth`
-       * , `Aws_region` , `Suppress_Type_Name` , and `tls` .
+       * , `Aws_region` , `Suppress_Type_Name` , and `tls` . For more information, see [Under the hood:
+       * FireLens for Amazon ECS
+       * Tasks](https://docs.aws.amazon.com/containers/under-the-hood-firelens-for-amazon-ecs-tasks/) .
        *
        * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option.
        * You can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
@@ -5356,8 +6831,8 @@ public open class CfnService(
        * container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        */
-      override fun options(options: Map<String, String>) {
-        cdkBuilder.options(options)
+      override fun options(options: IResolvable) {
+        cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5456,8 +6931,7 @@ public open class CfnService(
        *
        * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
        *
-       * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional
-       * for the EC2 launch type, required for the Fargate launch type.
+       * * **awslogs-stream-prefix** - Required: Yes, when using Fargate.Optional when using EC2.
        *
        * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
        * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
@@ -5519,27 +6993,44 @@ public open class CfnService(
        * This might have a negative impact on logging performance.
        *
        *
+       * The following options apply to all supported log drivers.
+       *
        * * **mode** - Required: No
        *
        * Valid values: `non-blocking` | `blocking`
        *
-       * This option defines the delivery mode of log messages from the container to CloudWatch
-       * Logs. The delivery mode you choose affects application availability when the flow of logs from
-       * container to CloudWatch is interrupted.
+       * This option defines the delivery mode of log messages from the container to the log driver
+       * specified using `logDriver` . The delivery mode you choose affects application availability
+       * when the flow of logs from container is interrupted.
        *
-       * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls
-       * from container code to write to the `stdout` and `stderr` streams will block. The logging
-       * thread of the application will block as a result. This may cause the application to become
-       * unresponsive and lead to container healthcheck failure.
+       * If you use the `blocking` mode and the flow of logs is interrupted, calls from container
+       * code to write to the `stdout` and `stderr` streams will block. The logging thread of the
+       * application will block as a result. This may cause the application to become unresponsive and
+       * lead to container healthcheck failure.
        *
        * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
        * intermediate buffer configured with the `max-buffer-size` option. This prevents the
-       * application from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend
-       * using this mode if you want to ensure service availability and are okay with some log loss.
-       * For more information, see [Preventing log loss with non-blocking mode in the `awslogs`
-       * container log
+       * application from becoming unresponsive when logs cannot be sent. We recommend using this mode
+       * if you want to ensure service availability and are okay with some log loss. For more
+       * information, see [Preventing log loss with non-blocking mode in the `awslogs` container log
        * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
        * .
+       *
+       * You can set a default `mode` for all containers in a specific AWS Region by using the
+       * `defaultLogDriverMode` account setting. If you don't specify the `mode` option or configure
+       * the account setting, Amazon ECS will default to the `non-blocking` mode. For more information
+       * about the account setting, see [Default log driver
+       * mode](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#default-log-driver-mode)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       *
+       * On June 25, 2025, Amazon ECS changed the default log driver mode from `blocking` to
+       * `non-blocking` to prioritize task availability over logging. To continue using the `blocking`
+       * mode after this change, do one of the following:
+       *
+       * * Set the `mode` option in your container definition's `logConfiguration` as `blocking` .
+       * * Set the `defaultLogDriverMode` account setting to `blocking` .
+       *
        *
        * * **max-buffer-size** - Required: No
        *
@@ -5568,7 +7059,9 @@ public open class CfnService(
        *
        * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
        * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth`
-       * , `Aws_region` , `Suppress_Type_Name` , and `tls` .
+       * , `Aws_region` , `Suppress_Type_Name` , and `tls` . For more information, see [Under the hood:
+       * FireLens for Amazon ECS
+       * Tasks](https://docs.aws.amazon.com/containers/under-the-hood-firelens-for-amazon-ecs-tasks/) .
        *
        * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option.
        * You can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
@@ -6269,6 +7762,15 @@ public open class CfnService(
    * .port(123)
    * // the properties below are optional
    * .dnsName("dnsName")
+   * .testTrafficRules(ServiceConnectTestTrafficRulesProperty.builder()
+   * .header(ServiceConnectTestTrafficRulesHeaderProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .value(ServiceConnectTestTrafficRulesHeaderValueProperty.builder()
+   * .exact("exact")
+   * .build())
+   * .build())
+   * .build())
    * .build();
    * ```
    *
@@ -6313,6 +7815,17 @@ public open class CfnService(
     public fun port(): Number
 
     /**
+     * The configuration for test traffic routing rules used during blue/green deployments with
+     * Amazon ECS Service Connect.
+     *
+     * This allows you to route a portion of traffic to the new service revision of your service for
+     * testing before shifting all production traffic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectclientalias.html#cfn-ecs-service-serviceconnectclientalias-testtrafficrules)
+     */
+    public fun testTrafficRules(): Any? = unwrap(this).getTestTrafficRules()
+
+    /**
      * A builder for [ServiceConnectClientAliasProperty]
      */
     @CdkDslMarker
@@ -6347,6 +7860,33 @@ public open class CfnService(
        * the *Amazon Elastic Container Service Developer Guide* .
        */
       public fun port(port: Number)
+
+      /**
+       * @param testTrafficRules The configuration for test traffic routing rules used during
+       * blue/green deployments with Amazon ECS Service Connect.
+       * This allows you to route a portion of traffic to the new service revision of your service
+       * for testing before shifting all production traffic.
+       */
+      public fun testTrafficRules(testTrafficRules: IResolvable)
+
+      /**
+       * @param testTrafficRules The configuration for test traffic routing rules used during
+       * blue/green deployments with Amazon ECS Service Connect.
+       * This allows you to route a portion of traffic to the new service revision of your service
+       * for testing before shifting all production traffic.
+       */
+      public fun testTrafficRules(testTrafficRules: ServiceConnectTestTrafficRulesProperty)
+
+      /**
+       * @param testTrafficRules The configuration for test traffic routing rules used during
+       * blue/green deployments with Amazon ECS Service Connect.
+       * This allows you to route a portion of traffic to the new service revision of your service
+       * for testing before shifting all production traffic.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9ffc4cfa3a32a97d7faf98e83ed8b81fa3bdadf01ff8333b2e6d144665e30d6f")
+      public
+          fun testTrafficRules(testTrafficRules: ServiceConnectTestTrafficRulesProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -6388,6 +7928,38 @@ public open class CfnService(
       override fun port(port: Number) {
         cdkBuilder.port(port)
       }
+
+      /**
+       * @param testTrafficRules The configuration for test traffic routing rules used during
+       * blue/green deployments with Amazon ECS Service Connect.
+       * This allows you to route a portion of traffic to the new service revision of your service
+       * for testing before shifting all production traffic.
+       */
+      override fun testTrafficRules(testTrafficRules: IResolvable) {
+        cdkBuilder.testTrafficRules(testTrafficRules.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param testTrafficRules The configuration for test traffic routing rules used during
+       * blue/green deployments with Amazon ECS Service Connect.
+       * This allows you to route a portion of traffic to the new service revision of your service
+       * for testing before shifting all production traffic.
+       */
+      override fun testTrafficRules(testTrafficRules: ServiceConnectTestTrafficRulesProperty) {
+        cdkBuilder.testTrafficRules(testTrafficRules.let(ServiceConnectTestTrafficRulesProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param testTrafficRules The configuration for test traffic routing rules used during
+       * blue/green deployments with Amazon ECS Service Connect.
+       * This allows you to route a portion of traffic to the new service revision of your service
+       * for testing before shifting all production traffic.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9ffc4cfa3a32a97d7faf98e83ed8b81fa3bdadf01ff8333b2e6d144665e30d6f")
+      override
+          fun testTrafficRules(testTrafficRules: ServiceConnectTestTrafficRulesProperty.Builder.() -> Unit):
+          Unit = testTrafficRules(ServiceConnectTestTrafficRulesProperty(testTrafficRules))
 
       public fun build():
           software.amazon.awscdk.services.ecs.CfnService.ServiceConnectClientAliasProperty =
@@ -6434,6 +8006,17 @@ public open class CfnService(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectclientalias.html#cfn-ecs-service-serviceconnectclientalias-port)
        */
       override fun port(): Number = unwrap(this).getPort()
+
+      /**
+       * The configuration for test traffic routing rules used during blue/green deployments with
+       * Amazon ECS Service Connect.
+       *
+       * This allows you to route a portion of traffic to the new service revision of your service
+       * for testing before shifting all production traffic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectclientalias.html#cfn-ecs-service-serviceconnectclientalias-testtrafficrules)
+       */
+      override fun testTrafficRules(): Any? = unwrap(this).getTestTrafficRules()
     }
 
     public companion object {
@@ -6496,6 +8079,15 @@ public open class CfnService(
    * .port(123)
    * // the properties below are optional
    * .dnsName("dnsName")
+   * .testTrafficRules(ServiceConnectTestTrafficRulesProperty.builder()
+   * .header(ServiceConnectTestTrafficRulesHeaderProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .value(ServiceConnectTestTrafficRulesHeaderValueProperty.builder()
+   * .exact("exact")
+   * .build())
+   * .build())
+   * .build())
    * .build()))
    * .discoveryName("discoveryName")
    * .ingressPortOverride(123)
@@ -7111,6 +8703,15 @@ public open class CfnService(
    * .port(123)
    * // the properties below are optional
    * .dnsName("dnsName")
+   * .testTrafficRules(ServiceConnectTestTrafficRulesProperty.builder()
+   * .header(ServiceConnectTestTrafficRulesHeaderProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .value(ServiceConnectTestTrafficRulesHeaderValueProperty.builder()
+   * .exact("exact")
+   * .build())
+   * .build())
+   * .build())
    * .build()))
    * .discoveryName("discoveryName")
    * .ingressPortOverride(123)
@@ -7563,6 +9164,372 @@ public open class CfnService(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * ServiceConnectTestTrafficRulesHeaderProperty serviceConnectTestTrafficRulesHeaderProperty =
+   * ServiceConnectTestTrafficRulesHeaderProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .value(ServiceConnectTestTrafficRulesHeaderValueProperty.builder()
+   * .exact("exact")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttesttrafficrulesheader.html)
+   */
+  public interface ServiceConnectTestTrafficRulesHeaderProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttesttrafficrulesheader.html#cfn-ecs-service-serviceconnecttesttrafficrulesheader-name)
+     */
+    public fun name(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttesttrafficrulesheader.html#cfn-ecs-service-serviceconnecttesttrafficrulesheader-value)
+     */
+    public fun `value`(): Any? = unwrap(this).getValue()
+
+    /**
+     * A builder for [ServiceConnectTestTrafficRulesHeaderProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name the value to be set. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param value the value to be set.
+       */
+      public fun `value`(`value`: IResolvable)
+
+      /**
+       * @param value the value to be set.
+       */
+      public fun `value`(`value`: ServiceConnectTestTrafficRulesHeaderValueProperty)
+
+      /**
+       * @param value the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2ad4ddcde25908eb6d64ad4fb7e2685f67437d2de3b8710c0abb5a3e77232b6a")
+      public
+          fun `value`(`value`: ServiceConnectTestTrafficRulesHeaderValueProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesHeaderProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesHeaderProperty.builder()
+
+      /**
+       * @param name the value to be set. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param value the value to be set.
+       */
+      override fun `value`(`value`: IResolvable) {
+        cdkBuilder.`value`(`value`.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param value the value to be set.
+       */
+      override fun `value`(`value`: ServiceConnectTestTrafficRulesHeaderValueProperty) {
+        cdkBuilder.`value`(`value`.let(ServiceConnectTestTrafficRulesHeaderValueProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param value the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2ad4ddcde25908eb6d64ad4fb7e2685f67437d2de3b8710c0abb5a3e77232b6a")
+      override
+          fun `value`(`value`: ServiceConnectTestTrafficRulesHeaderValueProperty.Builder.() -> Unit):
+          Unit = `value`(ServiceConnectTestTrafficRulesHeaderValueProperty(`value`))
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesHeaderProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesHeaderProperty,
+    ) : CdkObject(cdkObject),
+        ServiceConnectTestTrafficRulesHeaderProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttesttrafficrulesheader.html#cfn-ecs-service-serviceconnecttesttrafficrulesheader-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttesttrafficrulesheader.html#cfn-ecs-service-serviceconnecttesttrafficrulesheader-value)
+       */
+      override fun `value`(): Any? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ServiceConnectTestTrafficRulesHeaderProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesHeaderProperty):
+          ServiceConnectTestTrafficRulesHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceConnectTestTrafficRulesHeaderProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ServiceConnectTestTrafficRulesHeaderProperty):
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesHeaderProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesHeaderProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * ServiceConnectTestTrafficRulesHeaderValueProperty
+   * serviceConnectTestTrafficRulesHeaderValueProperty =
+   * ServiceConnectTestTrafficRulesHeaderValueProperty.builder()
+   * .exact("exact")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttesttrafficrulesheadervalue.html)
+   */
+  public interface ServiceConnectTestTrafficRulesHeaderValueProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttesttrafficrulesheadervalue.html#cfn-ecs-service-serviceconnecttesttrafficrulesheadervalue-exact)
+     */
+    public fun exact(): String
+
+    /**
+     * A builder for [ServiceConnectTestTrafficRulesHeaderValueProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param exact the value to be set. 
+       */
+      public fun exact(exact: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesHeaderValueProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesHeaderValueProperty.builder()
+
+      /**
+       * @param exact the value to be set. 
+       */
+      override fun exact(exact: String) {
+        cdkBuilder.exact(exact)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesHeaderValueProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesHeaderValueProperty,
+    ) : CdkObject(cdkObject),
+        ServiceConnectTestTrafficRulesHeaderValueProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttesttrafficrulesheadervalue.html#cfn-ecs-service-serviceconnecttesttrafficrulesheadervalue-exact)
+       */
+      override fun exact(): String = unwrap(this).getExact()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ServiceConnectTestTrafficRulesHeaderValueProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesHeaderValueProperty):
+          ServiceConnectTestTrafficRulesHeaderValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceConnectTestTrafficRulesHeaderValueProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ServiceConnectTestTrafficRulesHeaderValueProperty):
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesHeaderValueProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesHeaderValueProperty
+    }
+  }
+
+  /**
+   * The test traffic routing configuration for Amazon ECS blue/green deployments.
+   *
+   * This configuration allows you to define rules for routing specific traffic to the new service
+   * revision during the deployment process, allowing for safe testing before full production traffic
+   * shift.
+   *
+   * For more information, see [Service Connect for Amazon ECS blue/green
+   * deployments](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect-blue-green.html)
+   * in the *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * ServiceConnectTestTrafficRulesProperty serviceConnectTestTrafficRulesProperty =
+   * ServiceConnectTestTrafficRulesProperty.builder()
+   * .header(ServiceConnectTestTrafficRulesHeaderProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .value(ServiceConnectTestTrafficRulesHeaderValueProperty.builder()
+   * .exact("exact")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttesttrafficrules.html)
+   */
+  public interface ServiceConnectTestTrafficRulesProperty {
+    /**
+     * The HTTP header-based routing rules that determine which requests should be routed to the new
+     * service version during blue/green deployment testing.
+     *
+     * These rules provide fine-grained control over test traffic routing based on request headers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttesttrafficrules.html#cfn-ecs-service-serviceconnecttesttrafficrules-header)
+     */
+    public fun `header`(): Any
+
+    /**
+     * A builder for [ServiceConnectTestTrafficRulesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param header The HTTP header-based routing rules that determine which requests should be
+       * routed to the new service version during blue/green deployment testing. 
+       * These rules provide fine-grained control over test traffic routing based on request
+       * headers.
+       */
+      public fun `header`(`header`: IResolvable)
+
+      /**
+       * @param header The HTTP header-based routing rules that determine which requests should be
+       * routed to the new service version during blue/green deployment testing. 
+       * These rules provide fine-grained control over test traffic routing based on request
+       * headers.
+       */
+      public fun `header`(`header`: ServiceConnectTestTrafficRulesHeaderProperty)
+
+      /**
+       * @param header The HTTP header-based routing rules that determine which requests should be
+       * routed to the new service version during blue/green deployment testing. 
+       * These rules provide fine-grained control over test traffic routing based on request
+       * headers.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("90b94d8120dcfc3ff046deae396a5573ed7740da84406fb8e90a1e8f04a52c7b")
+      public fun `header`(`header`: ServiceConnectTestTrafficRulesHeaderProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesProperty.builder()
+
+      /**
+       * @param header The HTTP header-based routing rules that determine which requests should be
+       * routed to the new service version during blue/green deployment testing. 
+       * These rules provide fine-grained control over test traffic routing based on request
+       * headers.
+       */
+      override fun `header`(`header`: IResolvable) {
+        cdkBuilder.`header`(`header`.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param header The HTTP header-based routing rules that determine which requests should be
+       * routed to the new service version during blue/green deployment testing. 
+       * These rules provide fine-grained control over test traffic routing based on request
+       * headers.
+       */
+      override fun `header`(`header`: ServiceConnectTestTrafficRulesHeaderProperty) {
+        cdkBuilder.`header`(`header`.let(ServiceConnectTestTrafficRulesHeaderProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param header The HTTP header-based routing rules that determine which requests should be
+       * routed to the new service version during blue/green deployment testing. 
+       * These rules provide fine-grained control over test traffic routing based on request
+       * headers.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("90b94d8120dcfc3ff046deae396a5573ed7740da84406fb8e90a1e8f04a52c7b")
+      override
+          fun `header`(`header`: ServiceConnectTestTrafficRulesHeaderProperty.Builder.() -> Unit):
+          Unit = `header`(ServiceConnectTestTrafficRulesHeaderProperty(`header`))
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesProperty,
+    ) : CdkObject(cdkObject),
+        ServiceConnectTestTrafficRulesProperty {
+      /**
+       * The HTTP header-based routing rules that determine which requests should be routed to the
+       * new service version during blue/green deployment testing.
+       *
+       * These rules provide fine-grained control over test traffic routing based on request
+       * headers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnecttesttrafficrules.html#cfn-ecs-service-serviceconnecttesttrafficrules-header)
+       */
+      override fun `header`(): Any = unwrap(this).getHeader()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ServiceConnectTestTrafficRulesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesProperty):
+          ServiceConnectTestTrafficRulesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceConnectTestTrafficRulesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ServiceConnectTestTrafficRulesProperty):
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTestTrafficRulesProperty
+    }
+  }
+
+  /**
    * The certificate root authority that secures your service.
    *
    * Example:
@@ -7862,6 +9829,7 @@ public open class CfnService(
    * .build()))
    * .build()))
    * .throughput(123)
+   * .volumeInitializationRate(123)
    * .volumeType("volumeType")
    * .build();
    * ```
@@ -7872,10 +9840,11 @@ public open class CfnService(
     /**
      * Indicates whether the volume should be encrypted.
      *
-     * If no value is specified, encryption is turned on by default. This parameter maps 1:1 with
-     * the `Encrypted` parameter of the [CreateVolume
-     * API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the
-     * *Amazon EC2 API Reference* .
+     * If you turn on Region-level Amazon EBS encryption by default but set this value as `false` ,
+     * the setting is overridden and the volume is encrypted with the KMS key specified for Amazon EBS
+     * encryption by default. This parameter maps 1:1 with the `Encrypted` parameter of the
+     * [CreateVolume API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html)
+     * in the *Amazon EC2 API Reference* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-servicemanagedebsvolumeconfiguration.html#cfn-ecs-service-servicemanagedebsvolumeconfiguration-encrypted)
      */
@@ -7885,8 +9854,8 @@ public open class CfnService(
      * The filesystem type for the volume.
      *
      * For volumes created from a snapshot, you must specify the same filesystem type that the
-     * volume was using when the snapshot was created. If there is a filesystem type mismatch, the task
-     * will fail to start.
+     * volume was using when the snapshot was created. If there is a filesystem type mismatch, the
+     * tasks will fail to start.
      *
      * The available Linux filesystem types are `ext3` , `ext4` , and `xfs` . If no value is
      * specified, the `xfs` filesystem type is used by default.
@@ -7925,11 +9894,13 @@ public open class CfnService(
      * The Amazon Resource Name (ARN) identifier of the AWS Key Management Service key to use for
      * Amazon EBS encryption.
      *
-     * When encryption is turned on and no AWS Key Management Service key is specified, the default
-     * AWS managed key for Amazon EBS volumes is used. This parameter maps 1:1 with the `KmsKeyId`
-     * parameter of the [CreateVolume
+     * When a key is specified using this parameter, it overrides Amazon EBS default encryption or
+     * any KMS key that you specified for cluster-level managed storage encryption. This parameter maps
+     * 1:1 with the `KmsKeyId` parameter of the [CreateVolume
      * API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the
-     * *Amazon EC2 API Reference* .
+     * *Amazon EC2 API Reference* . For more information about encrypting Amazon EBS volumes attached
+     * to tasks, see [Encrypt data stored in Amazon EBS volumes attached to Amazon ECS
+     * tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-kms-encryption.html) .
      *
      *
      * AWS authenticates the AWS Key Management Service key asynchronously. Therefore, if you
@@ -7977,10 +9948,11 @@ public open class CfnService(
     public fun sizeInGiB(): Number? = unwrap(this).getSizeInGiB()
 
     /**
-     * The snapshot that Amazon ECS uses to create the volume.
+     * The snapshot that Amazon ECS uses to create volumes for attachment to tasks maintained by the
+     * service.
      *
-     * You must specify either a snapshot ID or a volume size. This parameter maps 1:1 with the
-     * `SnapshotId` parameter of the [CreateVolume
+     * You must specify either `snapshotId` or `sizeInGiB` in your volume configuration. This
+     * parameter maps 1:1 with the `SnapshotId` parameter of the [CreateVolume
      * API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the
      * *Amazon EC2 API Reference* .
      *
@@ -8016,6 +9988,19 @@ public open class CfnService(
     public fun throughput(): Number? = unwrap(this).getThroughput()
 
     /**
+     * The rate, in MiB/s, at which data is fetched from a snapshot of an existing EBS volume to
+     * create new volumes for attachment to the tasks maintained by the service.
+     *
+     * This property can be specified only if you specify a `snapshotId` . For more information, see
+     * [Initialize Amazon EBS
+     * volumes](https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html) in the *Amazon
+     * EBS User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-servicemanagedebsvolumeconfiguration.html#cfn-ecs-service-servicemanagedebsvolumeconfiguration-volumeinitializationrate)
+     */
+    public fun volumeInitializationRate(): Number? = unwrap(this).getVolumeInitializationRate()
+
+    /**
      * The volume type.
      *
      * This parameter maps 1:1 with the `VolumeType` parameter of the [CreateVolume
@@ -8047,8 +10032,10 @@ public open class CfnService(
     public interface Builder {
       /**
        * @param encrypted Indicates whether the volume should be encrypted.
-       * If no value is specified, encryption is turned on by default. This parameter maps 1:1 with
-       * the `Encrypted` parameter of the [CreateVolume
+       * If you turn on Region-level Amazon EBS encryption by default but set this value as `false`
+       * , the setting is overridden and the volume is encrypted with the KMS key specified for Amazon
+       * EBS encryption by default. This parameter maps 1:1 with the `Encrypted` parameter of the
+       * [CreateVolume
        * API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the
        * *Amazon EC2 API Reference* .
        */
@@ -8056,8 +10043,10 @@ public open class CfnService(
 
       /**
        * @param encrypted Indicates whether the volume should be encrypted.
-       * If no value is specified, encryption is turned on by default. This parameter maps 1:1 with
-       * the `Encrypted` parameter of the [CreateVolume
+       * If you turn on Region-level Amazon EBS encryption by default but set this value as `false`
+       * , the setting is overridden and the volume is encrypted with the KMS key specified for Amazon
+       * EBS encryption by default. This parameter maps 1:1 with the `Encrypted` parameter of the
+       * [CreateVolume
        * API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the
        * *Amazon EC2 API Reference* .
        */
@@ -8067,7 +10056,7 @@ public open class CfnService(
        * @param filesystemType The filesystem type for the volume.
        * For volumes created from a snapshot, you must specify the same filesystem type that the
        * volume was using when the snapshot was created. If there is a filesystem type mismatch, the
-       * task will fail to start.
+       * tasks will fail to start.
        *
        * The available Linux filesystem types are `ext3` , `ext4` , and `xfs` . If no value is
        * specified, the `xfs` filesystem type is used by default.
@@ -8101,11 +10090,13 @@ public open class CfnService(
       /**
        * @param kmsKeyId The Amazon Resource Name (ARN) identifier of the AWS Key Management Service
        * key to use for Amazon EBS encryption.
-       * When encryption is turned on and no AWS Key Management Service key is specified, the
-       * default AWS managed key for Amazon EBS volumes is used. This parameter maps 1:1 with the
-       * `KmsKeyId` parameter of the [CreateVolume
+       * When a key is specified using this parameter, it overrides Amazon EBS default encryption or
+       * any KMS key that you specified for cluster-level managed storage encryption. This parameter
+       * maps 1:1 with the `KmsKeyId` parameter of the [CreateVolume
        * API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the
-       * *Amazon EC2 API Reference* .
+       * *Amazon EC2 API Reference* . For more information about encrypting Amazon EBS volumes attached
+       * to tasks, see [Encrypt data stored in Amazon EBS volumes attached to Amazon ECS
+       * tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-kms-encryption.html) .
        *
        *
        * AWS authenticates the AWS Key Management Service key asynchronously. Therefore, if you
@@ -8144,9 +10135,10 @@ public open class CfnService(
       public fun sizeInGiB(sizeInGiB: Number)
 
       /**
-       * @param snapshotId The snapshot that Amazon ECS uses to create the volume.
-       * You must specify either a snapshot ID or a volume size. This parameter maps 1:1 with the
-       * `SnapshotId` parameter of the [CreateVolume
+       * @param snapshotId The snapshot that Amazon ECS uses to create volumes for attachment to
+       * tasks maintained by the service.
+       * You must specify either `snapshotId` or `sizeInGiB` in your volume configuration. This
+       * parameter maps 1:1 with the `SnapshotId` parameter of the [CreateVolume
        * API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the
        * *Amazon EC2 API Reference* .
        */
@@ -8192,6 +10184,17 @@ public open class CfnService(
       public fun throughput(throughput: Number)
 
       /**
+       * @param volumeInitializationRate The rate, in MiB/s, at which data is fetched from a
+       * snapshot of an existing EBS volume to create new volumes for attachment to the tasks
+       * maintained by the service.
+       * This property can be specified only if you specify a `snapshotId` . For more information,
+       * see [Initialize Amazon EBS
+       * volumes](https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html) in the
+       * *Amazon EBS User Guide* .
+       */
+      public fun volumeInitializationRate(volumeInitializationRate: Number)
+
+      /**
        * @param volumeType The volume type.
        * This parameter maps 1:1 with the `VolumeType` parameter of the [CreateVolume
        * API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the
@@ -8221,8 +10224,10 @@ public open class CfnService(
 
       /**
        * @param encrypted Indicates whether the volume should be encrypted.
-       * If no value is specified, encryption is turned on by default. This parameter maps 1:1 with
-       * the `Encrypted` parameter of the [CreateVolume
+       * If you turn on Region-level Amazon EBS encryption by default but set this value as `false`
+       * , the setting is overridden and the volume is encrypted with the KMS key specified for Amazon
+       * EBS encryption by default. This parameter maps 1:1 with the `Encrypted` parameter of the
+       * [CreateVolume
        * API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the
        * *Amazon EC2 API Reference* .
        */
@@ -8232,8 +10237,10 @@ public open class CfnService(
 
       /**
        * @param encrypted Indicates whether the volume should be encrypted.
-       * If no value is specified, encryption is turned on by default. This parameter maps 1:1 with
-       * the `Encrypted` parameter of the [CreateVolume
+       * If you turn on Region-level Amazon EBS encryption by default but set this value as `false`
+       * , the setting is overridden and the volume is encrypted with the KMS key specified for Amazon
+       * EBS encryption by default. This parameter maps 1:1 with the `Encrypted` parameter of the
+       * [CreateVolume
        * API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the
        * *Amazon EC2 API Reference* .
        */
@@ -8245,7 +10252,7 @@ public open class CfnService(
        * @param filesystemType The filesystem type for the volume.
        * For volumes created from a snapshot, you must specify the same filesystem type that the
        * volume was using when the snapshot was created. If there is a filesystem type mismatch, the
-       * task will fail to start.
+       * tasks will fail to start.
        *
        * The available Linux filesystem types are `ext3` , `ext4` , and `xfs` . If no value is
        * specified, the `xfs` filesystem type is used by default.
@@ -8283,11 +10290,13 @@ public open class CfnService(
       /**
        * @param kmsKeyId The Amazon Resource Name (ARN) identifier of the AWS Key Management Service
        * key to use for Amazon EBS encryption.
-       * When encryption is turned on and no AWS Key Management Service key is specified, the
-       * default AWS managed key for Amazon EBS volumes is used. This parameter maps 1:1 with the
-       * `KmsKeyId` parameter of the [CreateVolume
+       * When a key is specified using this parameter, it overrides Amazon EBS default encryption or
+       * any KMS key that you specified for cluster-level managed storage encryption. This parameter
+       * maps 1:1 with the `KmsKeyId` parameter of the [CreateVolume
        * API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the
-       * *Amazon EC2 API Reference* .
+       * *Amazon EC2 API Reference* . For more information about encrypting Amazon EBS volumes attached
+       * to tasks, see [Encrypt data stored in Amazon EBS volumes attached to Amazon ECS
+       * tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-kms-encryption.html) .
        *
        *
        * AWS authenticates the AWS Key Management Service key asynchronously. Therefore, if you
@@ -8332,9 +10341,10 @@ public open class CfnService(
       }
 
       /**
-       * @param snapshotId The snapshot that Amazon ECS uses to create the volume.
-       * You must specify either a snapshot ID or a volume size. This parameter maps 1:1 with the
-       * `SnapshotId` parameter of the [CreateVolume
+       * @param snapshotId The snapshot that Amazon ECS uses to create volumes for attachment to
+       * tasks maintained by the service.
+       * You must specify either `snapshotId` or `sizeInGiB` in your volume configuration. This
+       * parameter maps 1:1 with the `SnapshotId` parameter of the [CreateVolume
        * API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the
        * *Amazon EC2 API Reference* .
        */
@@ -8389,6 +10399,19 @@ public open class CfnService(
       }
 
       /**
+       * @param volumeInitializationRate The rate, in MiB/s, at which data is fetched from a
+       * snapshot of an existing EBS volume to create new volumes for attachment to the tasks
+       * maintained by the service.
+       * This property can be specified only if you specify a `snapshotId` . For more information,
+       * see [Initialize Amazon EBS
+       * volumes](https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html) in the
+       * *Amazon EBS User Guide* .
+       */
+      override fun volumeInitializationRate(volumeInitializationRate: Number) {
+        cdkBuilder.volumeInitializationRate(volumeInitializationRate)
+      }
+
+      /**
        * @param volumeType The volume type.
        * This parameter maps 1:1 with the `VolumeType` parameter of the [CreateVolume
        * API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the
@@ -8423,8 +10446,10 @@ public open class CfnService(
       /**
        * Indicates whether the volume should be encrypted.
        *
-       * If no value is specified, encryption is turned on by default. This parameter maps 1:1 with
-       * the `Encrypted` parameter of the [CreateVolume
+       * If you turn on Region-level Amazon EBS encryption by default but set this value as `false`
+       * , the setting is overridden and the volume is encrypted with the KMS key specified for Amazon
+       * EBS encryption by default. This parameter maps 1:1 with the `Encrypted` parameter of the
+       * [CreateVolume
        * API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the
        * *Amazon EC2 API Reference* .
        *
@@ -8437,7 +10462,7 @@ public open class CfnService(
        *
        * For volumes created from a snapshot, you must specify the same filesystem type that the
        * volume was using when the snapshot was created. If there is a filesystem type mismatch, the
-       * task will fail to start.
+       * tasks will fail to start.
        *
        * The available Linux filesystem types are `ext3` , `ext4` , and `xfs` . If no value is
        * specified, the `xfs` filesystem type is used by default.
@@ -8477,11 +10502,13 @@ public open class CfnService(
        * The Amazon Resource Name (ARN) identifier of the AWS Key Management Service key to use for
        * Amazon EBS encryption.
        *
-       * When encryption is turned on and no AWS Key Management Service key is specified, the
-       * default AWS managed key for Amazon EBS volumes is used. This parameter maps 1:1 with the
-       * `KmsKeyId` parameter of the [CreateVolume
+       * When a key is specified using this parameter, it overrides Amazon EBS default encryption or
+       * any KMS key that you specified for cluster-level managed storage encryption. This parameter
+       * maps 1:1 with the `KmsKeyId` parameter of the [CreateVolume
        * API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the
-       * *Amazon EC2 API Reference* .
+       * *Amazon EC2 API Reference* . For more information about encrypting Amazon EBS volumes attached
+       * to tasks, see [Encrypt data stored in Amazon EBS volumes attached to Amazon ECS
+       * tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-kms-encryption.html) .
        *
        *
        * AWS authenticates the AWS Key Management Service key asynchronously. Therefore, if you
@@ -8529,10 +10556,11 @@ public open class CfnService(
       override fun sizeInGiB(): Number? = unwrap(this).getSizeInGiB()
 
       /**
-       * The snapshot that Amazon ECS uses to create the volume.
+       * The snapshot that Amazon ECS uses to create volumes for attachment to tasks maintained by
+       * the service.
        *
-       * You must specify either a snapshot ID or a volume size. This parameter maps 1:1 with the
-       * `SnapshotId` parameter of the [CreateVolume
+       * You must specify either `snapshotId` or `sizeInGiB` in your volume configuration. This
+       * parameter maps 1:1 with the `SnapshotId` parameter of the [CreateVolume
        * API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the
        * *Amazon EC2 API Reference* .
        *
@@ -8566,6 +10594,19 @@ public open class CfnService(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-servicemanagedebsvolumeconfiguration.html#cfn-ecs-service-servicemanagedebsvolumeconfiguration-throughput)
        */
       override fun throughput(): Number? = unwrap(this).getThroughput()
+
+      /**
+       * The rate, in MiB/s, at which data is fetched from a snapshot of an existing EBS volume to
+       * create new volumes for attachment to the tasks maintained by the service.
+       *
+       * This property can be specified only if you specify a `snapshotId` . For more information,
+       * see [Initialize Amazon EBS
+       * volumes](https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html) in the
+       * *Amazon EBS User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-servicemanagedebsvolumeconfiguration.html#cfn-ecs-service-servicemanagedebsvolumeconfiguration-volumeinitializationrate)
+       */
+      override fun volumeInitializationRate(): Number? = unwrap(this).getVolumeInitializationRate()
 
       /**
        * The volume type.
@@ -8886,6 +10927,7 @@ public open class CfnService(
    * .build()))
    * .build()))
    * .throughput(123)
+   * .volumeInitializationRate(123)
    * .volumeType("volumeType")
    * .build())
    * .build();

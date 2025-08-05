@@ -16,10 +16,10 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * This structure contains information about one *delivery source* in your account.
+ * Creates or updates one *delivery source* in your account.
  *
  * A delivery source is an AWS resource that sends logs to an AWS destination. The destination can
- * be CloudWatch Logs, Amazon S3, or Firehose.
+ * be CloudWatch Logs , Amazon S3 , or Firehose .
  *
  * Only some AWS services support being configured as a delivery source. These services are listed
  * as *Supported [V2 Permissions]* in the table at [Enabling logging from AWS
@@ -29,19 +29,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * following:
  *
  * * Create a delivery source, which is a logical object that represents the resource that is
- * actually sending the logs. For more information, see
- * [PutDeliverySource](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html)
- * .
+ * actually sending the logs.
  * * Create a *delivery destination* , which is a logical object that represents the actual delivery
  * destination. For more information, see
+ * [AWS::Logs::DeliveryDestination](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverydestination.html)
+ * or
  * [PutDeliveryDestination](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html)
  * .
- * * If you are delivering logs cross-account, you must use
- * [PutDeliveryDestinationPolicy](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationPolicy.html)
- * in the destination account to assign an IAM policy to the destination. This policy allows delivery
- * to that destination.
  * * Create a *delivery* by pairing exactly one delivery source and one delivery destination. For
  * more information, see
+ * [AWS::Logs::Delivery](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html)
+ * or
  * [CreateDelivery](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html)
  * .
  *
@@ -149,31 +147,31 @@ public open class CfnDeliverySource(
   }
 
   /**
-   * The Amazon Resource Name (ARN) that uniquely identifies this delivery source.
+   * The ARN of the AWS resource that is generating and sending logs.
    */
   public open fun resourceArn(): String? = unwrap(this).getResourceArn()
 
   /**
-   * The Amazon Resource Name (ARN) that uniquely identifies this delivery source.
+   * The ARN of the AWS resource that is generating and sending logs.
    */
   public open fun resourceArn(`value`: String) {
     unwrap(this).setResourceArn(`value`)
   }
 
   /**
-   * The tags that have been assigned to this delivery source.
+   * An array of key-value pairs to apply to the delivery source.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * The tags that have been assigned to this delivery source.
+   * An array of key-value pairs to apply to the delivery source.
    */
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * The tags that have been assigned to this delivery source.
+   * An array of key-value pairs to apply to the delivery source.
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
@@ -201,27 +199,37 @@ public open class CfnDeliverySource(
     public fun name(name: String)
 
     /**
-     * The Amazon Resource Name (ARN) that uniquely identifies this delivery source.
+     * The ARN of the AWS resource that is generating and sending logs.
+     *
+     * For example,
+     * `arn:aws:workmail:us-east-1:123456789012:organization/m-1234EXAMPLEabcd1234abcd1234abcd1234`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverysource.html#cfn-logs-deliverysource-resourcearn)
-     * @param resourceArn The Amazon Resource Name (ARN) that uniquely identifies this delivery
-     * source. 
+     * @param resourceArn The ARN of the AWS resource that is generating and sending logs. 
      */
     public fun resourceArn(resourceArn: String)
 
     /**
-     * The tags that have been assigned to this delivery source.
+     * An array of key-value pairs to apply to the delivery source.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverysource.html#cfn-logs-deliverysource-tags)
-     * @param tags The tags that have been assigned to this delivery source. 
+     * @param tags An array of key-value pairs to apply to the delivery source. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * The tags that have been assigned to this delivery source.
+     * An array of key-value pairs to apply to the delivery source.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverysource.html#cfn-logs-deliverysource-tags)
-     * @param tags The tags that have been assigned to this delivery source. 
+     * @param tags An array of key-value pairs to apply to the delivery source. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -256,31 +264,41 @@ public open class CfnDeliverySource(
     }
 
     /**
-     * The Amazon Resource Name (ARN) that uniquely identifies this delivery source.
+     * The ARN of the AWS resource that is generating and sending logs.
+     *
+     * For example,
+     * `arn:aws:workmail:us-east-1:123456789012:organization/m-1234EXAMPLEabcd1234abcd1234abcd1234`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverysource.html#cfn-logs-deliverysource-resourcearn)
-     * @param resourceArn The Amazon Resource Name (ARN) that uniquely identifies this delivery
-     * source. 
+     * @param resourceArn The ARN of the AWS resource that is generating and sending logs. 
      */
     override fun resourceArn(resourceArn: String) {
       cdkBuilder.resourceArn(resourceArn)
     }
 
     /**
-     * The tags that have been assigned to this delivery source.
+     * An array of key-value pairs to apply to the delivery source.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverysource.html#cfn-logs-deliverysource-tags)
-     * @param tags The tags that have been assigned to this delivery source. 
+     * @param tags An array of key-value pairs to apply to the delivery source. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * The tags that have been assigned to this delivery source.
+     * An array of key-value pairs to apply to the delivery source.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverysource.html#cfn-logs-deliverysource-tags)
-     * @param tags The tags that have been assigned to this delivery source. 
+     * @param tags An array of key-value pairs to apply to the delivery source. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 

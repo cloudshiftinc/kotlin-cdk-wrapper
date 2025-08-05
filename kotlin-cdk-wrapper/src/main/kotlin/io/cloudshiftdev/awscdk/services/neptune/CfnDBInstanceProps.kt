@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -113,14 +114,16 @@ public interface CfnDBInstanceProps {
   public fun dbParameterGroupName(): String? = unwrap(this).getDbParameterGroupName()
 
   /**
-   * This parameter is not supported.
+   * (deprecated) This parameter is not supported.
    *
    * `AWS::Neptune::DBInstance` does not support restoring from snapshots.
    *
    * `AWS::Neptune::DBCluster` does support restoring from snapshots.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbsnapshotidentifier)
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun dbSnapshotIdentifier(): String? = unwrap(this).getDbSnapshotIdentifier()
 
   /**
@@ -230,7 +233,9 @@ public interface CfnDBInstanceProps {
      * `AWS::Neptune::DBInstance` does not support restoring from snapshots.
      *
      * `AWS::Neptune::DBCluster` does support restoring from snapshots.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun dbSnapshotIdentifier(dbSnapshotIdentifier: String)
 
     /**
@@ -356,7 +361,9 @@ public interface CfnDBInstanceProps {
      * `AWS::Neptune::DBInstance` does not support restoring from snapshots.
      *
      * `AWS::Neptune::DBCluster` does support restoring from snapshots.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun dbSnapshotIdentifier(dbSnapshotIdentifier: String) {
       cdkBuilder.dbSnapshotIdentifier(dbSnapshotIdentifier)
     }
@@ -468,14 +475,16 @@ public interface CfnDBInstanceProps {
     override fun dbParameterGroupName(): String? = unwrap(this).getDbParameterGroupName()
 
     /**
-     * This parameter is not supported.
+     * (deprecated) This parameter is not supported.
      *
      * `AWS::Neptune::DBInstance` does not support restoring from snapshots.
      *
      * `AWS::Neptune::DBCluster` does support restoring from snapshots.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbsnapshotidentifier)
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun dbSnapshotIdentifier(): String? = unwrap(this).getDbSnapshotIdentifier()
 
     /**

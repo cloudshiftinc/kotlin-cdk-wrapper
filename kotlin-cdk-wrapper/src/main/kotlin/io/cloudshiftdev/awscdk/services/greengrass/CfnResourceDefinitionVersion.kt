@@ -899,7 +899,7 @@ public open class CfnResourceDefinitionVersion(
         unwrap(this).getS3MachineLearningModelResourceData()
 
     /**
-     * Settings for a machine learning resource saved as an SageMaker training job.
+     * Settings for a machine learning resource saved as an SageMaker AI training job.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourcedatacontainer.html#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-sagemakermachinelearningmodelresourcedata)
      */
@@ -979,21 +979,21 @@ public open class CfnResourceDefinitionVersion(
 
       /**
        * @param sageMakerMachineLearningModelResourceData Settings for a machine learning resource
-       * saved as an SageMaker training job.
+       * saved as an SageMaker AI training job.
        */
       public
           fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: IResolvable)
 
       /**
        * @param sageMakerMachineLearningModelResourceData Settings for a machine learning resource
-       * saved as an SageMaker training job.
+       * saved as an SageMaker AI training job.
        */
       public
           fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: SageMakerMachineLearningModelResourceDataProperty)
 
       /**
        * @param sageMakerMachineLearningModelResourceData Settings for a machine learning resource
-       * saved as an SageMaker training job.
+       * saved as an SageMaker AI training job.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5d4481c0beb7f1a56a3d4a576e952f7e92219b31dc1c6f418d5748ec3e8955f2")
@@ -1105,7 +1105,7 @@ public open class CfnResourceDefinitionVersion(
 
       /**
        * @param sageMakerMachineLearningModelResourceData Settings for a machine learning resource
-       * saved as an SageMaker training job.
+       * saved as an SageMaker AI training job.
        */
       override
           fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: IResolvable) {
@@ -1114,7 +1114,7 @@ public open class CfnResourceDefinitionVersion(
 
       /**
        * @param sageMakerMachineLearningModelResourceData Settings for a machine learning resource
-       * saved as an SageMaker training job.
+       * saved as an SageMaker AI training job.
        */
       override
           fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: SageMakerMachineLearningModelResourceDataProperty) {
@@ -1123,7 +1123,7 @@ public open class CfnResourceDefinitionVersion(
 
       /**
        * @param sageMakerMachineLearningModelResourceData Settings for a machine learning resource
-       * saved as an SageMaker training job.
+       * saved as an SageMaker AI training job.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5d4481c0beb7f1a56a3d4a576e952f7e92219b31dc1c6f418d5748ec3e8955f2")
@@ -1189,7 +1189,7 @@ public open class CfnResourceDefinitionVersion(
           unwrap(this).getS3MachineLearningModelResourceData()
 
       /**
-       * Settings for a machine learning resource saved as an SageMaker training job.
+       * Settings for a machine learning resource saved as an SageMaker AI training job.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourcedatacontainer.html#cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-sagemakermachinelearningmodelresourcedata)
        */
@@ -1933,7 +1933,7 @@ public open class CfnResourceDefinitionVersion(
     public fun ownerSetting(): Any? = unwrap(this).getOwnerSetting()
 
     /**
-     * The Amazon Resource Name (ARN) of the Amazon SageMaker training job that represents the
+     * The Amazon Resource Name (ARN) of the Amazon SageMaker AI training job that represents the
      * source model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinitionversion-sagemakermachinelearningmodelresourcedata-sagemakerjobarn)
@@ -1978,8 +1978,8 @@ public open class CfnResourceDefinitionVersion(
       public fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty.Builder.() -> Unit)
 
       /**
-       * @param sageMakerJobArn The Amazon Resource Name (ARN) of the Amazon SageMaker training job
-       * that represents the source model. 
+       * @param sageMakerJobArn The Amazon Resource Name (ARN) of the Amazon SageMaker AI training
+       * job that represents the source model. 
        */
       public fun sageMakerJobArn(sageMakerJobArn: String)
     }
@@ -2031,8 +2031,8 @@ public open class CfnResourceDefinitionVersion(
           Unit = ownerSetting(ResourceDownloadOwnerSettingProperty(ownerSetting))
 
       /**
-       * @param sageMakerJobArn The Amazon Resource Name (ARN) of the Amazon SageMaker training job
-       * that represents the source model. 
+       * @param sageMakerJobArn The Amazon Resource Name (ARN) of the Amazon SageMaker AI training
+       * job that represents the source model. 
        */
       override fun sageMakerJobArn(sageMakerJobArn: String) {
         cdkBuilder.sageMakerJobArn(sageMakerJobArn)
@@ -2066,7 +2066,7 @@ public open class CfnResourceDefinitionVersion(
       override fun ownerSetting(): Any? = unwrap(this).getOwnerSetting()
 
       /**
-       * The Amazon Resource Name (ARN) of the Amazon SageMaker training job that represents the
+       * The Amazon Resource Name (ARN) of the Amazon SageMaker AI training job that represents the
        * source model.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-sagemakermachinelearningmodelresourcedata.html#cfn-greengrass-resourcedefinitionversion-sagemakermachinelearningmodelresourcedata-sagemakerjobarn)

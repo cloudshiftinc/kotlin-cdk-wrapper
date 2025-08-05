@@ -31,6 +31,7 @@ import kotlin.collections.List
  * SourcedConfigurationOptions sourcedConfigurationOptions = SourcedConfigurationOptions.builder()
  * .location(configurationSource)
  * // the properties below are optional
+ * .deletionProtectionCheck(DeletionProtectionCheck.ACCOUNT_DEFAULT)
  * .deploymentKey(key)
  * .deploymentStrategy(deploymentStrategy)
  * .deployTo(List.of(environment))
@@ -71,6 +72,15 @@ public interface SourcedConfigurationOptions : ConfigurationOptions {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param deletionProtectionCheck A parameter to configure deletion protection.
+     * Deletion protection prevents a user from deleting a configuration profile if your application
+     * has called
+     * either `GetLatestConfiguration` or `GetConfiguration` for the configuration profile during
+     * the specified interval.
+     */
+    public fun deletionProtectionCheck(deletionProtectionCheck: DeletionProtectionCheck)
+
     /**
      * @param deployTo The list of environments to deploy the configuration to.
      * If this parameter is not specified, then there will be no
@@ -148,6 +158,17 @@ public interface SourcedConfigurationOptions : ConfigurationOptions {
     private val cdkBuilder:
         software.amazon.awscdk.services.appconfig.SourcedConfigurationOptions.Builder =
         software.amazon.awscdk.services.appconfig.SourcedConfigurationOptions.builder()
+
+    /**
+     * @param deletionProtectionCheck A parameter to configure deletion protection.
+     * Deletion protection prevents a user from deleting a configuration profile if your application
+     * has called
+     * either `GetLatestConfiguration` or `GetConfiguration` for the configuration profile during
+     * the specified interval.
+     */
+    override fun deletionProtectionCheck(deletionProtectionCheck: DeletionProtectionCheck) {
+      cdkBuilder.deletionProtectionCheck(deletionProtectionCheck.let(DeletionProtectionCheck.Companion::unwrap))
+    }
 
     /**
      * @param deployTo The list of environments to deploy the configuration to.
@@ -249,6 +270,21 @@ public interface SourcedConfigurationOptions : ConfigurationOptions {
     cdkObject: software.amazon.awscdk.services.appconfig.SourcedConfigurationOptions,
   ) : CdkObject(cdkObject),
       SourcedConfigurationOptions {
+    /**
+     * A parameter to configure deletion protection.
+     *
+     * Deletion protection prevents a user from deleting a configuration profile if your application
+     * has called
+     * either `GetLatestConfiguration` or `GetConfiguration` for the configuration profile during
+     * the specified interval.
+     *
+     * Default: DeletionProtectionCheck.ACCOUNT_DEFAULT
+     *
+     * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/deletion-protection.html)
+     */
+    override fun deletionProtectionCheck(): DeletionProtectionCheck? =
+        unwrap(this).getDeletionProtectionCheck()?.let(DeletionProtectionCheck::wrap)
+
     /**
      * The list of environments to deploy the configuration to.
      *

@@ -79,6 +79,11 @@ import kotlin.jvm.JvmName
  * .build())
  * .build()))
  * .dataSetRefreshProperties(DataSetRefreshPropertiesProperty.builder()
+ * .failureConfiguration(RefreshFailureConfigurationProperty.builder()
+ * .emailAlert(RefreshFailureEmailAlertProperty.builder()
+ * .alertStatus("alertStatus")
+ * .build())
+ * .build())
  * .refreshConfiguration(RefreshConfigurationProperty.builder()
  * .incrementalRefresh(IncrementalRefreshProperty.builder()
  * .lookbackWindow(LookbackWindowProperty.builder()
@@ -142,6 +147,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .renameColumnOperation(RenameColumnOperationProperty.builder()
  * .columnName("columnName")
+ * // the properties below are optional
  * .newColumnName("newColumnName")
  * .build())
  * .tagColumnOperation(TagColumnOperationProperty.builder()
@@ -177,6 +183,11 @@ import kotlin.jvm.JvmName
  * .build())
  * .build()))
  * .name("name")
+ * .performanceConfiguration(PerformanceConfigurationProperty.builder()
+ * .uniqueKeys(List.of(UniqueKeyProperty.builder()
+ * .columnNames(List.of("columnNames"))
+ * .build()))
+ * .build())
  * .permissions(List.of(ResourcePermissionProperty.builder()
  * .actions(List.of("actions"))
  * .principal("principal")
@@ -210,13 +221,13 @@ import kotlin.jvm.JvmName
  * .build())
  * .s3Source(S3SourceProperty.builder()
  * .dataSourceArn("dataSourceArn")
+ * // the properties below are optional
  * .inputColumns(List.of(InputColumnProperty.builder()
  * .name("name")
  * .type("type")
  * // the properties below are optional
  * .subType("subType")
  * .build()))
- * // the properties below are optional
  * .uploadSettings(UploadSettingsProperty.builder()
  * .containsHeader(false)
  * .delimiter("delimiter")
@@ -250,6 +261,7 @@ import kotlin.jvm.JvmName
  * .key("key")
  * .value("value")
  * .build()))
+ * .useAs("useAs")
  * .build();
  * ```
  *
@@ -354,6 +366,13 @@ public interface CfnDataSetProps {
   public fun name(): String? = unwrap(this).getName()
 
   /**
+   * The performance optimization configuration of a dataset.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-performanceconfiguration)
+   */
+  public fun performanceConfiguration(): Any? = unwrap(this).getPerformanceConfiguration()
+
+  /**
    * A list of resource permissions on the dataset.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-permissions)
@@ -388,6 +407,13 @@ public interface CfnDataSetProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-tags)
    */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * The usage of the dataset.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-useas)
+   */
+  public fun useAs(): String? = unwrap(this).getUseAs()
 
   /**
    * A builder for [CfnDataSetProps]
@@ -566,6 +592,25 @@ public interface CfnDataSetProps {
     public fun name(name: String)
 
     /**
+     * @param performanceConfiguration The performance optimization configuration of a dataset.
+     */
+    public fun performanceConfiguration(performanceConfiguration: IResolvable)
+
+    /**
+     * @param performanceConfiguration The performance optimization configuration of a dataset.
+     */
+    public
+        fun performanceConfiguration(performanceConfiguration: CfnDataSet.PerformanceConfigurationProperty)
+
+    /**
+     * @param performanceConfiguration The performance optimization configuration of a dataset.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5b83b3af32cfa880c8ea4cc564e7c999c36703eed520fe431c30bcde853f26ed")
+    public
+        fun performanceConfiguration(performanceConfiguration: CfnDataSet.PerformanceConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * @param permissions A list of resource permissions on the dataset.
      */
     public fun permissions(permissions: IResolvable)
@@ -647,6 +692,11 @@ public interface CfnDataSetProps {
      * the dataset.
      */
     public fun tags(vararg tags: CfnTag)
+
+    /**
+     * @param useAs The usage of the dataset.
+     */
+    public fun useAs(useAs: String)
   }
 
   private class BuilderImpl : Builder {
@@ -874,6 +924,31 @@ public interface CfnDataSetProps {
     }
 
     /**
+     * @param performanceConfiguration The performance optimization configuration of a dataset.
+     */
+    override fun performanceConfiguration(performanceConfiguration: IResolvable) {
+      cdkBuilder.performanceConfiguration(performanceConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param performanceConfiguration The performance optimization configuration of a dataset.
+     */
+    override
+        fun performanceConfiguration(performanceConfiguration: CfnDataSet.PerformanceConfigurationProperty) {
+      cdkBuilder.performanceConfiguration(performanceConfiguration.let(CfnDataSet.PerformanceConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param performanceConfiguration The performance optimization configuration of a dataset.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5b83b3af32cfa880c8ea4cc564e7c999c36703eed520fe431c30bcde853f26ed")
+    override
+        fun performanceConfiguration(performanceConfiguration: CfnDataSet.PerformanceConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        performanceConfiguration(CfnDataSet.PerformanceConfigurationProperty(performanceConfiguration))
+
+    /**
      * @param permissions A list of resource permissions on the dataset.
      */
     override fun permissions(permissions: IResolvable) {
@@ -978,6 +1053,13 @@ public interface CfnDataSetProps {
      * the dataset.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    /**
+     * @param useAs The usage of the dataset.
+     */
+    override fun useAs(useAs: String) {
+      cdkBuilder.useAs(useAs)
+    }
 
     public fun build(): software.amazon.awscdk.services.quicksight.CfnDataSetProps =
         cdkBuilder.build()
@@ -1085,6 +1167,13 @@ public interface CfnDataSetProps {
     override fun name(): String? = unwrap(this).getName()
 
     /**
+     * The performance optimization configuration of a dataset.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-performanceconfiguration)
+     */
+    override fun performanceConfiguration(): Any? = unwrap(this).getPerformanceConfiguration()
+
+    /**
      * A list of resource permissions on the dataset.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-permissions)
@@ -1119,6 +1208,13 @@ public interface CfnDataSetProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-tags)
      */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * The usage of the dataset.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-useas)
+     */
+    override fun useAs(): String? = unwrap(this).getUseAs()
   }
 
   public companion object {

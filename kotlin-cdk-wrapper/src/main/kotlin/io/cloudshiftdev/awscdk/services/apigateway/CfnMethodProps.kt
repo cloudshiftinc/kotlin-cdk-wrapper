@@ -310,13 +310,13 @@ public interface CfnMethodProps {
      * @param requestModels A key-value map specifying data schemas, represented by Model resources,
      * (as the mapped value) of the request payloads of given content types (as the mapping key).
      */
-    public fun requestModels(requestModels: IResolvable)
+    public fun requestModels(requestModels: Map<String, String>)
 
     /**
      * @param requestModels A key-value map specifying data schemas, represented by Model resources,
      * (as the mapped value) of the request payloads of given content types (as the mapping key).
      */
-    public fun requestModels(requestModels: Map<String, String>)
+    public fun requestModels(requestModels: IResolvable)
 
     /**
      * @param requestParameters A key-value map defining required or optional method request
@@ -490,16 +490,16 @@ public interface CfnMethodProps {
      * @param requestModels A key-value map specifying data schemas, represented by Model resources,
      * (as the mapped value) of the request payloads of given content types (as the mapping key).
      */
-    override fun requestModels(requestModels: IResolvable) {
-      cdkBuilder.requestModels(requestModels.let(IResolvable.Companion::unwrap))
+    override fun requestModels(requestModels: Map<String, String>) {
+      cdkBuilder.requestModels(requestModels)
     }
 
     /**
      * @param requestModels A key-value map specifying data schemas, represented by Model resources,
      * (as the mapped value) of the request payloads of given content types (as the mapping key).
      */
-    override fun requestModels(requestModels: Map<String, String>) {
-      cdkBuilder.requestModels(requestModels)
+    override fun requestModels(requestModels: IResolvable) {
+      cdkBuilder.requestModels(requestModels.let(IResolvable.Companion::unwrap))
     }
 
     /**

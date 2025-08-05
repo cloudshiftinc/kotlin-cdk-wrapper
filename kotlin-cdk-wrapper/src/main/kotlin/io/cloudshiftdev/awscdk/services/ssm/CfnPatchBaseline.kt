@@ -58,6 +58,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .approvedPatches(List.of("approvedPatches"))
  * .approvedPatchesComplianceLevel("approvedPatchesComplianceLevel")
  * .approvedPatchesEnableNonSecurity(false)
+ * .availableSecurityUpdatesComplianceStatus("availableSecurityUpdatesComplianceStatus")
  * .defaultBaseline(false)
  * .description("description")
  * .globalFilters(PatchFilterGroupProperty.builder()
@@ -191,19 +192,34 @@ public open class CfnPatchBaseline(
   public open fun attrId(): String = unwrap(this).getAttrId()
 
   /**
-   * Set the baseline as default baseline.
+   * The compliance status for vendor recommended security updates that are not approved by this
+   * patch baseline.
+   */
+  public open fun availableSecurityUpdatesComplianceStatus(): String? =
+      unwrap(this).getAvailableSecurityUpdatesComplianceStatus()
+
+  /**
+   * The compliance status for vendor recommended security updates that are not approved by this
+   * patch baseline.
+   */
+  public open fun availableSecurityUpdatesComplianceStatus(`value`: String) {
+    unwrap(this).setAvailableSecurityUpdatesComplianceStatus(`value`)
+  }
+
+  /**
+   * Indicates whether this is the default baseline.
    */
   public open fun defaultBaseline(): Any? = unwrap(this).getDefaultBaseline()
 
   /**
-   * Set the baseline as default baseline.
+   * Indicates whether this is the default baseline.
    */
   public open fun defaultBaseline(`value`: Boolean) {
     unwrap(this).setDefaultBaseline(`value`)
   }
 
   /**
-   * Set the baseline as default baseline.
+   * Indicates whether this is the default baseline.
    */
   public open fun defaultBaseline(`value`: IResolvable) {
     unwrap(this).setDefaultBaseline(`value`.let(IResolvable.Companion::unwrap))
@@ -477,26 +493,39 @@ public open class CfnPatchBaseline(
     public fun approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity: IResolvable)
 
     /**
-     * Set the baseline as default baseline.
+     * The compliance status for vendor recommended security updates that are not approved by this
+     * patch baseline.
      *
-     * Only registering to default patch baseline is allowed.
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-availablesecurityupdatescompliancestatus)
+     * @param availableSecurityUpdatesComplianceStatus The compliance status for vendor recommended
+     * security updates that are not approved by this patch baseline. 
+     */
+    public
+        fun availableSecurityUpdatesComplianceStatus(availableSecurityUpdatesComplianceStatus: String)
+
+    /**
+     * Indicates whether this is the default baseline.
+     *
+     * AWS Systems Manager supports creating multiple default patch baselines. For example, you can
+     * create a default patch baseline for each operating system.
      *
      * Default: - false
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-defaultbaseline)
-     * @param defaultBaseline Set the baseline as default baseline. 
+     * @param defaultBaseline Indicates whether this is the default baseline. 
      */
     public fun defaultBaseline(defaultBaseline: Boolean)
 
     /**
-     * Set the baseline as default baseline.
+     * Indicates whether this is the default baseline.
      *
-     * Only registering to default patch baseline is allowed.
+     * AWS Systems Manager supports creating multiple default patch baselines. For example, you can
+     * create a default patch baseline for each operating system.
      *
      * Default: - false
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-defaultbaseline)
-     * @param defaultBaseline Set the baseline as default baseline. 
+     * @param defaultBaseline Indicates whether this is the default baseline. 
      */
     public fun defaultBaseline(defaultBaseline: IResolvable)
 
@@ -817,28 +846,43 @@ public open class CfnPatchBaseline(
     }
 
     /**
-     * Set the baseline as default baseline.
+     * The compliance status for vendor recommended security updates that are not approved by this
+     * patch baseline.
      *
-     * Only registering to default patch baseline is allowed.
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-availablesecurityupdatescompliancestatus)
+     * @param availableSecurityUpdatesComplianceStatus The compliance status for vendor recommended
+     * security updates that are not approved by this patch baseline. 
+     */
+    override
+        fun availableSecurityUpdatesComplianceStatus(availableSecurityUpdatesComplianceStatus: String) {
+      cdkBuilder.availableSecurityUpdatesComplianceStatus(availableSecurityUpdatesComplianceStatus)
+    }
+
+    /**
+     * Indicates whether this is the default baseline.
+     *
+     * AWS Systems Manager supports creating multiple default patch baselines. For example, you can
+     * create a default patch baseline for each operating system.
      *
      * Default: - false
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-defaultbaseline)
-     * @param defaultBaseline Set the baseline as default baseline. 
+     * @param defaultBaseline Indicates whether this is the default baseline. 
      */
     override fun defaultBaseline(defaultBaseline: Boolean) {
       cdkBuilder.defaultBaseline(defaultBaseline)
     }
 
     /**
-     * Set the baseline as default baseline.
+     * Indicates whether this is the default baseline.
      *
-     * Only registering to default patch baseline is allowed.
+     * AWS Systems Manager supports creating multiple default patch baselines. For example, you can
+     * create a default patch baseline for each operating system.
      *
      * Default: - false
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-defaultbaseline)
-     * @param defaultBaseline Set the baseline as default baseline. 
+     * @param defaultBaseline Indicates whether this is the default baseline. 
      */
     override fun defaultBaseline(defaultBaseline: IResolvable) {
       cdkBuilder.defaultBaseline(defaultBaseline.let(IResolvable.Companion::unwrap))
@@ -1396,7 +1440,9 @@ public open class CfnPatchBaseline(
    */
   public interface PatchSourceProperty {
     /**
-     * The value of the yum repo configuration. For example:.
+     * The value of the repo configuration.
+     *
+     * *Example for yum repositories*
      *
      * `[main]`
      *
@@ -1406,11 +1452,22 @@ public open class CfnPatchBaseline(
      *
      * `enabled=1`
      *
-     *
      * For information about other options available for your yum repository configuration, see
      * [dnf.conf(5)](https://docs.aws.amazon.com/https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
-     * .
+     * on the *man7.org* website.
      *
+     * *Examples for Ubuntu Server and Debian Server*
+     *
+     * `deb http://security.ubuntu.com/ubuntu jammy main`
+     *
+     * `deb https://site.example.com/debian distribution component1 component2 component3`
+     *
+     * Repo information for Ubuntu Server repositories must be specifed in a single line. For more
+     * examples and information, see [jammy (5)
+     * sources.list.5.gz](https://docs.aws.amazon.com/https://manpages.ubuntu.com/manpages/jammy/man5/sources.list.5.html)
+     * on the *Ubuntu Server Manuals* website and [sources.list
+     * format](https://docs.aws.amazon.com/https://wiki.debian.org/SourcesList#sources.list_format) on
+     * the *Debian Wiki* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchsource.html#cfn-ssm-patchbaseline-patchsource-configuration)
      */
@@ -1439,7 +1496,9 @@ public open class CfnPatchBaseline(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param configuration The value of the yum repo configuration. For example:.
+       * @param configuration The value of the repo configuration.
+       * *Example for yum repositories*
+       *
        * `[main]`
        *
        * `name=MyCustomRepository`
@@ -1448,10 +1507,22 @@ public open class CfnPatchBaseline(
        *
        * `enabled=1`
        *
-       *
        * For information about other options available for your yum repository configuration, see
        * [dnf.conf(5)](https://docs.aws.amazon.com/https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
-       * .
+       * on the *man7.org* website.
+       *
+       * *Examples for Ubuntu Server and Debian Server*
+       *
+       * `deb http://security.ubuntu.com/ubuntu jammy main`
+       *
+       * `deb https://site.example.com/debian distribution component1 component2 component3`
+       *
+       * Repo information for Ubuntu Server repositories must be specifed in a single line. For more
+       * examples and information, see [jammy (5)
+       * sources.list.5.gz](https://docs.aws.amazon.com/https://manpages.ubuntu.com/manpages/jammy/man5/sources.list.5.html)
+       * on the *Ubuntu Server Manuals* website and [sources.list
+       * format](https://docs.aws.amazon.com/https://wiki.debian.org/SourcesList#sources.list_format)
+       * on the *Debian Wiki* .
        */
       public fun configuration(configuration: String)
 
@@ -1485,7 +1556,9 @@ public open class CfnPatchBaseline(
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty.builder()
 
       /**
-       * @param configuration The value of the yum repo configuration. For example:.
+       * @param configuration The value of the repo configuration.
+       * *Example for yum repositories*
+       *
        * `[main]`
        *
        * `name=MyCustomRepository`
@@ -1494,10 +1567,22 @@ public open class CfnPatchBaseline(
        *
        * `enabled=1`
        *
-       *
        * For information about other options available for your yum repository configuration, see
        * [dnf.conf(5)](https://docs.aws.amazon.com/https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
-       * .
+       * on the *man7.org* website.
+       *
+       * *Examples for Ubuntu Server and Debian Server*
+       *
+       * `deb http://security.ubuntu.com/ubuntu jammy main`
+       *
+       * `deb https://site.example.com/debian distribution component1 component2 component3`
+       *
+       * Repo information for Ubuntu Server repositories must be specifed in a single line. For more
+       * examples and information, see [jammy (5)
+       * sources.list.5.gz](https://docs.aws.amazon.com/https://manpages.ubuntu.com/manpages/jammy/man5/sources.list.5.html)
+       * on the *Ubuntu Server Manuals* website and [sources.list
+       * format](https://docs.aws.amazon.com/https://wiki.debian.org/SourcesList#sources.list_format)
+       * on the *Debian Wiki* .
        */
       override fun configuration(configuration: String) {
         cdkBuilder.configuration(configuration)
@@ -1539,7 +1624,9 @@ public open class CfnPatchBaseline(
     ) : CdkObject(cdkObject),
         PatchSourceProperty {
       /**
-       * The value of the yum repo configuration. For example:.
+       * The value of the repo configuration.
+       *
+       * *Example for yum repositories*
        *
        * `[main]`
        *
@@ -1549,11 +1636,22 @@ public open class CfnPatchBaseline(
        *
        * `enabled=1`
        *
-       *
        * For information about other options available for your yum repository configuration, see
        * [dnf.conf(5)](https://docs.aws.amazon.com/https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
-       * .
+       * on the *man7.org* website.
        *
+       * *Examples for Ubuntu Server and Debian Server*
+       *
+       * `deb http://security.ubuntu.com/ubuntu jammy main`
+       *
+       * `deb https://site.example.com/debian distribution component1 component2 component3`
+       *
+       * Repo information for Ubuntu Server repositories must be specifed in a single line. For more
+       * examples and information, see [jammy (5)
+       * sources.list.5.gz](https://docs.aws.amazon.com/https://manpages.ubuntu.com/manpages/jammy/man5/sources.list.5.html)
+       * on the *Ubuntu Server Manuals* website and [sources.list
+       * format](https://docs.aws.amazon.com/https://wiki.debian.org/SourcesList#sources.list_format)
+       * on the *Debian Wiki* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchsource.html#cfn-ssm-patchbaseline-patchsource-configuration)
        */

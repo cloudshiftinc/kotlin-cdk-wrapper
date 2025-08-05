@@ -39,6 +39,37 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .description("description")
  * .exactSettings(false)
  * .settings(SettingsProperty.builder()
+ * .docDbSettings(DocDbSettingsProperty.builder()
+ * .databaseName("databaseName")
+ * .port(123)
+ * .serverName("serverName")
+ * // the properties below are optional
+ * .certificateArn("certificateArn")
+ * .sslMode("sslMode")
+ * .build())
+ * .ibmDb2LuwSettings(IbmDb2LuwSettingsProperty.builder()
+ * .databaseName("databaseName")
+ * .port(123)
+ * .serverName("serverName")
+ * .sslMode("sslMode")
+ * // the properties below are optional
+ * .certificateArn("certificateArn")
+ * .build())
+ * .ibmDb2ZOsSettings(IbmDb2zOsSettingsProperty.builder()
+ * .databaseName("databaseName")
+ * .port(123)
+ * .serverName("serverName")
+ * .sslMode("sslMode")
+ * // the properties below are optional
+ * .certificateArn("certificateArn")
+ * .build())
+ * .mariaDbSettings(MariaDbSettingsProperty.builder()
+ * .port(123)
+ * .serverName("serverName")
+ * .sslMode("sslMode")
+ * // the properties below are optional
+ * .certificateArn("certificateArn")
+ * .build())
  * .microsoftSqlServerSettings(MicrosoftSqlServerSettingsProperty.builder()
  * .databaseName("databaseName")
  * .port(123)
@@ -46,6 +77,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .sslMode("sslMode")
  * // the properties below are optional
  * .certificateArn("certificateArn")
+ * .build())
+ * .mongoDbSettings(MongoDbSettingsProperty.builder()
+ * .port(123)
+ * .serverName("serverName")
+ * // the properties below are optional
+ * .authMechanism("authMechanism")
+ * .authSource("authSource")
+ * .authType("authType")
+ * .certificateArn("certificateArn")
+ * .databaseName("databaseName")
+ * .sslMode("sslMode")
  * .build())
  * .mySqlSettings(MySqlSettingsProperty.builder()
  * .port(123)
@@ -74,6 +116,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .sslMode("sslMode")
  * // the properties below are optional
  * .certificateArn("certificateArn")
+ * .build())
+ * .redshiftSettings(RedshiftSettingsProperty.builder()
+ * .databaseName("databaseName")
+ * .port(123)
+ * .serverName("serverName")
  * .build())
  * .build())
  * .tags(List.of(CfnTag.builder()
@@ -283,8 +330,8 @@ public open class CfnDataProvider(
      * The type of database engine for the data provider.
      *
      * Valid values include `"aurora"` , `"aurora-postgresql"` , `"mysql"` , `"oracle"` ,
-     * `"postgres"` , `"sqlserver"` , `redshift` , `mariadb` , `mongodb` , and `docdb` . A value of
-     * `"aurora"` represents Amazon Aurora MySQL-Compatible Edition.
+     * `"postgres"` , `"sqlserver"` , `redshift` , `mariadb` , `mongodb` , `db2` , `db2-zos` and
+     * `docdb` . A value of `"aurora"` represents Amazon Aurora MySQL-Compatible Edition.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-engine)
      * @param engine The type of database engine for the data provider. 
@@ -402,8 +449,8 @@ public open class CfnDataProvider(
      * The type of database engine for the data provider.
      *
      * Valid values include `"aurora"` , `"aurora-postgresql"` , `"mysql"` , `"oracle"` ,
-     * `"postgres"` , `"sqlserver"` , `redshift` , `mariadb` , `mongodb` , and `docdb` . A value of
-     * `"aurora"` represents Amazon Aurora MySQL-Compatible Edition.
+     * `"postgres"` , `"sqlserver"` , `redshift` , `mariadb` , `mongodb` , `db2` , `db2-zos` and
+     * `docdb` . A value of `"aurora"` represents Amazon Aurora MySQL-Compatible Edition.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-engine)
      * @param engine The type of database engine for the data provider. 
@@ -507,6 +554,678 @@ public open class CfnDataProvider(
     internal fun unwrap(wrapped: CfnDataProvider):
         software.amazon.awscdk.services.dms.CfnDataProvider = wrapped.cdkObject as
         software.amazon.awscdk.services.dms.CfnDataProvider
+  }
+
+  /**
+   * Provides information that defines a DocumentDB endpoint.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * DocDbSettingsProperty docDbSettingsProperty = DocDbSettingsProperty.builder()
+   * .databaseName("databaseName")
+   * .port(123)
+   * .serverName("serverName")
+   * // the properties below are optional
+   * .certificateArn("certificateArn")
+   * .sslMode("sslMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-docdbsettings.html)
+   */
+  public interface DocDbSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-docdbsettings.html#cfn-dms-dataprovider-docdbsettings-certificatearn)
+     */
+    public fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+    /**
+     * The database name on the DocumentDB source endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-docdbsettings.html#cfn-dms-dataprovider-docdbsettings-databasename)
+     */
+    public fun databaseName(): String
+
+    /**
+     * The port value for the DocumentDB source endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-docdbsettings.html#cfn-dms-dataprovider-docdbsettings-port)
+     */
+    public fun port(): Number
+
+    /**
+     * The name of the server on the DocumentDB source endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-docdbsettings.html#cfn-dms-dataprovider-docdbsettings-servername)
+     */
+    public fun serverName(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-docdbsettings.html#cfn-dms-dataprovider-docdbsettings-sslmode)
+     */
+    public fun sslMode(): String? = unwrap(this).getSslMode()
+
+    /**
+     * A builder for [DocDbSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certificateArn the value to be set.
+       */
+      public fun certificateArn(certificateArn: String)
+
+      /**
+       * @param databaseName The database name on the DocumentDB source endpoint. 
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param port The port value for the DocumentDB source endpoint. 
+       */
+      public fun port(port: Number)
+
+      /**
+       * @param serverName The name of the server on the DocumentDB source endpoint. 
+       */
+      public fun serverName(serverName: String)
+
+      /**
+       * @param sslMode the value to be set.
+       */
+      public fun sslMode(sslMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnDataProvider.DocDbSettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnDataProvider.DocDbSettingsProperty.builder()
+
+      /**
+       * @param certificateArn the value to be set.
+       */
+      override fun certificateArn(certificateArn: String) {
+        cdkBuilder.certificateArn(certificateArn)
+      }
+
+      /**
+       * @param databaseName The database name on the DocumentDB source endpoint. 
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param port The port value for the DocumentDB source endpoint. 
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param serverName The name of the server on the DocumentDB source endpoint. 
+       */
+      override fun serverName(serverName: String) {
+        cdkBuilder.serverName(serverName)
+      }
+
+      /**
+       * @param sslMode the value to be set.
+       */
+      override fun sslMode(sslMode: String) {
+        cdkBuilder.sslMode(sslMode)
+      }
+
+      public fun build(): software.amazon.awscdk.services.dms.CfnDataProvider.DocDbSettingsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.DocDbSettingsProperty,
+    ) : CdkObject(cdkObject),
+        DocDbSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-docdbsettings.html#cfn-dms-dataprovider-docdbsettings-certificatearn)
+       */
+      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+      /**
+       * The database name on the DocumentDB source endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-docdbsettings.html#cfn-dms-dataprovider-docdbsettings-databasename)
+       */
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
+
+      /**
+       * The port value for the DocumentDB source endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-docdbsettings.html#cfn-dms-dataprovider-docdbsettings-port)
+       */
+      override fun port(): Number = unwrap(this).getPort()
+
+      /**
+       * The name of the server on the DocumentDB source endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-docdbsettings.html#cfn-dms-dataprovider-docdbsettings-servername)
+       */
+      override fun serverName(): String = unwrap(this).getServerName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-docdbsettings.html#cfn-dms-dataprovider-docdbsettings-sslmode)
+       */
+      override fun sslMode(): String? = unwrap(this).getSslMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DocDbSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.DocDbSettingsProperty):
+          DocDbSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? DocDbSettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DocDbSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnDataProvider.DocDbSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnDataProvider.DocDbSettingsProperty
+    }
+  }
+
+  /**
+   * IbmDb2LuwSettings property identifier.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * IbmDb2LuwSettingsProperty ibmDb2LuwSettingsProperty = IbmDb2LuwSettingsProperty.builder()
+   * .databaseName("databaseName")
+   * .port(123)
+   * .serverName("serverName")
+   * .sslMode("sslMode")
+   * // the properties below are optional
+   * .certificateArn("certificateArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2luwsettings.html)
+   */
+  public interface IbmDb2LuwSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2luwsettings.html#cfn-dms-dataprovider-ibmdb2luwsettings-certificatearn)
+     */
+    public fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2luwsettings.html#cfn-dms-dataprovider-ibmdb2luwsettings-databasename)
+     */
+    public fun databaseName(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2luwsettings.html#cfn-dms-dataprovider-ibmdb2luwsettings-port)
+     */
+    public fun port(): Number
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2luwsettings.html#cfn-dms-dataprovider-ibmdb2luwsettings-servername)
+     */
+    public fun serverName(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2luwsettings.html#cfn-dms-dataprovider-ibmdb2luwsettings-sslmode)
+     */
+    public fun sslMode(): String
+
+    /**
+     * A builder for [IbmDb2LuwSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certificateArn the value to be set.
+       */
+      public fun certificateArn(certificateArn: String)
+
+      /**
+       * @param databaseName the value to be set. 
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param port the value to be set. 
+       */
+      public fun port(port: Number)
+
+      /**
+       * @param serverName the value to be set. 
+       */
+      public fun serverName(serverName: String)
+
+      /**
+       * @param sslMode the value to be set. 
+       */
+      public fun sslMode(sslMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnDataProvider.IbmDb2LuwSettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnDataProvider.IbmDb2LuwSettingsProperty.builder()
+
+      /**
+       * @param certificateArn the value to be set.
+       */
+      override fun certificateArn(certificateArn: String) {
+        cdkBuilder.certificateArn(certificateArn)
+      }
+
+      /**
+       * @param databaseName the value to be set. 
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param port the value to be set. 
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param serverName the value to be set. 
+       */
+      override fun serverName(serverName: String) {
+        cdkBuilder.serverName(serverName)
+      }
+
+      /**
+       * @param sslMode the value to be set. 
+       */
+      override fun sslMode(sslMode: String) {
+        cdkBuilder.sslMode(sslMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dms.CfnDataProvider.IbmDb2LuwSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.IbmDb2LuwSettingsProperty,
+    ) : CdkObject(cdkObject),
+        IbmDb2LuwSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2luwsettings.html#cfn-dms-dataprovider-ibmdb2luwsettings-certificatearn)
+       */
+      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2luwsettings.html#cfn-dms-dataprovider-ibmdb2luwsettings-databasename)
+       */
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2luwsettings.html#cfn-dms-dataprovider-ibmdb2luwsettings-port)
+       */
+      override fun port(): Number = unwrap(this).getPort()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2luwsettings.html#cfn-dms-dataprovider-ibmdb2luwsettings-servername)
+       */
+      override fun serverName(): String = unwrap(this).getServerName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2luwsettings.html#cfn-dms-dataprovider-ibmdb2luwsettings-sslmode)
+       */
+      override fun sslMode(): String = unwrap(this).getSslMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IbmDb2LuwSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.IbmDb2LuwSettingsProperty):
+          IbmDb2LuwSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IbmDb2LuwSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IbmDb2LuwSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnDataProvider.IbmDb2LuwSettingsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnDataProvider.IbmDb2LuwSettingsProperty
+    }
+  }
+
+  /**
+   * IbmDb2zOsSettings property identifier.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * IbmDb2zOsSettingsProperty ibmDb2zOsSettingsProperty = IbmDb2zOsSettingsProperty.builder()
+   * .databaseName("databaseName")
+   * .port(123)
+   * .serverName("serverName")
+   * .sslMode("sslMode")
+   * // the properties below are optional
+   * .certificateArn("certificateArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2zossettings.html)
+   */
+  public interface IbmDb2zOsSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2zossettings.html#cfn-dms-dataprovider-ibmdb2zossettings-certificatearn)
+     */
+    public fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2zossettings.html#cfn-dms-dataprovider-ibmdb2zossettings-databasename)
+     */
+    public fun databaseName(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2zossettings.html#cfn-dms-dataprovider-ibmdb2zossettings-port)
+     */
+    public fun port(): Number
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2zossettings.html#cfn-dms-dataprovider-ibmdb2zossettings-servername)
+     */
+    public fun serverName(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2zossettings.html#cfn-dms-dataprovider-ibmdb2zossettings-sslmode)
+     */
+    public fun sslMode(): String
+
+    /**
+     * A builder for [IbmDb2zOsSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certificateArn the value to be set.
+       */
+      public fun certificateArn(certificateArn: String)
+
+      /**
+       * @param databaseName the value to be set. 
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param port the value to be set. 
+       */
+      public fun port(port: Number)
+
+      /**
+       * @param serverName the value to be set. 
+       */
+      public fun serverName(serverName: String)
+
+      /**
+       * @param sslMode the value to be set. 
+       */
+      public fun sslMode(sslMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnDataProvider.IbmDb2zOsSettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnDataProvider.IbmDb2zOsSettingsProperty.builder()
+
+      /**
+       * @param certificateArn the value to be set.
+       */
+      override fun certificateArn(certificateArn: String) {
+        cdkBuilder.certificateArn(certificateArn)
+      }
+
+      /**
+       * @param databaseName the value to be set. 
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param port the value to be set. 
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param serverName the value to be set. 
+       */
+      override fun serverName(serverName: String) {
+        cdkBuilder.serverName(serverName)
+      }
+
+      /**
+       * @param sslMode the value to be set. 
+       */
+      override fun sslMode(sslMode: String) {
+        cdkBuilder.sslMode(sslMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dms.CfnDataProvider.IbmDb2zOsSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.IbmDb2zOsSettingsProperty,
+    ) : CdkObject(cdkObject),
+        IbmDb2zOsSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2zossettings.html#cfn-dms-dataprovider-ibmdb2zossettings-certificatearn)
+       */
+      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2zossettings.html#cfn-dms-dataprovider-ibmdb2zossettings-databasename)
+       */
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2zossettings.html#cfn-dms-dataprovider-ibmdb2zossettings-port)
+       */
+      override fun port(): Number = unwrap(this).getPort()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2zossettings.html#cfn-dms-dataprovider-ibmdb2zossettings-servername)
+       */
+      override fun serverName(): String = unwrap(this).getServerName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-ibmdb2zossettings.html#cfn-dms-dataprovider-ibmdb2zossettings-sslmode)
+       */
+      override fun sslMode(): String = unwrap(this).getSslMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IbmDb2zOsSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.IbmDb2zOsSettingsProperty):
+          IbmDb2zOsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IbmDb2zOsSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IbmDb2zOsSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnDataProvider.IbmDb2zOsSettingsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnDataProvider.IbmDb2zOsSettingsProperty
+    }
+  }
+
+  /**
+   * MariaDbSettings property identifier.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * MariaDbSettingsProperty mariaDbSettingsProperty = MariaDbSettingsProperty.builder()
+   * .port(123)
+   * .serverName("serverName")
+   * .sslMode("sslMode")
+   * // the properties below are optional
+   * .certificateArn("certificateArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mariadbsettings.html)
+   */
+  public interface MariaDbSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mariadbsettings.html#cfn-dms-dataprovider-mariadbsettings-certificatearn)
+     */
+    public fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mariadbsettings.html#cfn-dms-dataprovider-mariadbsettings-port)
+     */
+    public fun port(): Number
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mariadbsettings.html#cfn-dms-dataprovider-mariadbsettings-servername)
+     */
+    public fun serverName(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mariadbsettings.html#cfn-dms-dataprovider-mariadbsettings-sslmode)
+     */
+    public fun sslMode(): String
+
+    /**
+     * A builder for [MariaDbSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certificateArn the value to be set.
+       */
+      public fun certificateArn(certificateArn: String)
+
+      /**
+       * @param port the value to be set. 
+       */
+      public fun port(port: Number)
+
+      /**
+       * @param serverName the value to be set. 
+       */
+      public fun serverName(serverName: String)
+
+      /**
+       * @param sslMode the value to be set. 
+       */
+      public fun sslMode(sslMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnDataProvider.MariaDbSettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnDataProvider.MariaDbSettingsProperty.builder()
+
+      /**
+       * @param certificateArn the value to be set.
+       */
+      override fun certificateArn(certificateArn: String) {
+        cdkBuilder.certificateArn(certificateArn)
+      }
+
+      /**
+       * @param port the value to be set. 
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param serverName the value to be set. 
+       */
+      override fun serverName(serverName: String) {
+        cdkBuilder.serverName(serverName)
+      }
+
+      /**
+       * @param sslMode the value to be set. 
+       */
+      override fun sslMode(sslMode: String) {
+        cdkBuilder.sslMode(sslMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dms.CfnDataProvider.MariaDbSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.MariaDbSettingsProperty,
+    ) : CdkObject(cdkObject),
+        MariaDbSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mariadbsettings.html#cfn-dms-dataprovider-mariadbsettings-certificatearn)
+       */
+      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mariadbsettings.html#cfn-dms-dataprovider-mariadbsettings-port)
+       */
+      override fun port(): Number = unwrap(this).getPort()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mariadbsettings.html#cfn-dms-dataprovider-mariadbsettings-servername)
+       */
+      override fun serverName(): String = unwrap(this).getServerName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mariadbsettings.html#cfn-dms-dataprovider-mariadbsettings-sslmode)
+       */
+      override fun sslMode(): String = unwrap(this).getSslMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MariaDbSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.MariaDbSettingsProperty):
+          MariaDbSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? MariaDbSettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MariaDbSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnDataProvider.MariaDbSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnDataProvider.MariaDbSettingsProperty
+    }
   }
 
   /**
@@ -714,6 +1433,306 @@ public open class CfnDataProvider(
           software.amazon.awscdk.services.dms.CfnDataProvider.MicrosoftSqlServerSettingsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.dms.CfnDataProvider.MicrosoftSqlServerSettingsProperty
+    }
+  }
+
+  /**
+   * Provides information that defines a MongoDB endpoint.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * MongoDbSettingsProperty mongoDbSettingsProperty = MongoDbSettingsProperty.builder()
+   * .port(123)
+   * .serverName("serverName")
+   * // the properties below are optional
+   * .authMechanism("authMechanism")
+   * .authSource("authSource")
+   * .authType("authType")
+   * .certificateArn("certificateArn")
+   * .databaseName("databaseName")
+   * .sslMode("sslMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html)
+   */
+  public interface MongoDbSettingsProperty {
+    /**
+     * The authentication mechanism you use to access the MongoDB source endpoint.
+     *
+     * For the default value, in MongoDB version 2.x, `"default"` is `"mongodb_cr"` . For MongoDB
+     * version 3.x or later, `"default"` is `"scram_sha_1"` . This setting isn't used when `AuthType`
+     * is set to `"no"` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html#cfn-dms-dataprovider-mongodbsettings-authmechanism)
+     */
+    public fun authMechanism(): String? = unwrap(this).getAuthMechanism()
+
+    /**
+     * The MongoDB database name. This setting isn't used when `AuthType` is set to `"no"` .
+     *
+     * The default is `"admin"` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html#cfn-dms-dataprovider-mongodbsettings-authsource)
+     */
+    public fun authSource(): String? = unwrap(this).getAuthSource()
+
+    /**
+     * The authentication type you use to access the MongoDB source endpoint.
+     *
+     * When when set to `"no"` , user name and password parameters are not used and can be empty.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html#cfn-dms-dataprovider-mongodbsettings-authtype)
+     */
+    public fun authType(): String? = unwrap(this).getAuthType()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html#cfn-dms-dataprovider-mongodbsettings-certificatearn)
+     */
+    public fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+    /**
+     * The database name on the MongoDB source endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html#cfn-dms-dataprovider-mongodbsettings-databasename)
+     */
+    public fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+    /**
+     * The port value for the MongoDB source endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html#cfn-dms-dataprovider-mongodbsettings-port)
+     */
+    public fun port(): Number
+
+    /**
+     * The name of the server on the MongoDB source endpoint.
+     *
+     * For MongoDB Atlas, provide the server name for any of the servers in the replication set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html#cfn-dms-dataprovider-mongodbsettings-servername)
+     */
+    public fun serverName(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html#cfn-dms-dataprovider-mongodbsettings-sslmode)
+     */
+    public fun sslMode(): String? = unwrap(this).getSslMode()
+
+    /**
+     * A builder for [MongoDbSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param authMechanism The authentication mechanism you use to access the MongoDB source
+       * endpoint.
+       * For the default value, in MongoDB version 2.x, `"default"` is `"mongodb_cr"` . For MongoDB
+       * version 3.x or later, `"default"` is `"scram_sha_1"` . This setting isn't used when `AuthType`
+       * is set to `"no"` .
+       */
+      public fun authMechanism(authMechanism: String)
+
+      /**
+       * @param authSource The MongoDB database name. This setting isn't used when `AuthType` is set
+       * to `"no"` .
+       * The default is `"admin"` .
+       */
+      public fun authSource(authSource: String)
+
+      /**
+       * @param authType The authentication type you use to access the MongoDB source endpoint.
+       * When when set to `"no"` , user name and password parameters are not used and can be empty.
+       */
+      public fun authType(authType: String)
+
+      /**
+       * @param certificateArn the value to be set.
+       */
+      public fun certificateArn(certificateArn: String)
+
+      /**
+       * @param databaseName The database name on the MongoDB source endpoint.
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param port The port value for the MongoDB source endpoint. 
+       */
+      public fun port(port: Number)
+
+      /**
+       * @param serverName The name of the server on the MongoDB source endpoint. 
+       * For MongoDB Atlas, provide the server name for any of the servers in the replication set.
+       */
+      public fun serverName(serverName: String)
+
+      /**
+       * @param sslMode the value to be set.
+       */
+      public fun sslMode(sslMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnDataProvider.MongoDbSettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnDataProvider.MongoDbSettingsProperty.builder()
+
+      /**
+       * @param authMechanism The authentication mechanism you use to access the MongoDB source
+       * endpoint.
+       * For the default value, in MongoDB version 2.x, `"default"` is `"mongodb_cr"` . For MongoDB
+       * version 3.x or later, `"default"` is `"scram_sha_1"` . This setting isn't used when `AuthType`
+       * is set to `"no"` .
+       */
+      override fun authMechanism(authMechanism: String) {
+        cdkBuilder.authMechanism(authMechanism)
+      }
+
+      /**
+       * @param authSource The MongoDB database name. This setting isn't used when `AuthType` is set
+       * to `"no"` .
+       * The default is `"admin"` .
+       */
+      override fun authSource(authSource: String) {
+        cdkBuilder.authSource(authSource)
+      }
+
+      /**
+       * @param authType The authentication type you use to access the MongoDB source endpoint.
+       * When when set to `"no"` , user name and password parameters are not used and can be empty.
+       */
+      override fun authType(authType: String) {
+        cdkBuilder.authType(authType)
+      }
+
+      /**
+       * @param certificateArn the value to be set.
+       */
+      override fun certificateArn(certificateArn: String) {
+        cdkBuilder.certificateArn(certificateArn)
+      }
+
+      /**
+       * @param databaseName The database name on the MongoDB source endpoint.
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param port The port value for the MongoDB source endpoint. 
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param serverName The name of the server on the MongoDB source endpoint. 
+       * For MongoDB Atlas, provide the server name for any of the servers in the replication set.
+       */
+      override fun serverName(serverName: String) {
+        cdkBuilder.serverName(serverName)
+      }
+
+      /**
+       * @param sslMode the value to be set.
+       */
+      override fun sslMode(sslMode: String) {
+        cdkBuilder.sslMode(sslMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dms.CfnDataProvider.MongoDbSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.MongoDbSettingsProperty,
+    ) : CdkObject(cdkObject),
+        MongoDbSettingsProperty {
+      /**
+       * The authentication mechanism you use to access the MongoDB source endpoint.
+       *
+       * For the default value, in MongoDB version 2.x, `"default"` is `"mongodb_cr"` . For MongoDB
+       * version 3.x or later, `"default"` is `"scram_sha_1"` . This setting isn't used when `AuthType`
+       * is set to `"no"` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html#cfn-dms-dataprovider-mongodbsettings-authmechanism)
+       */
+      override fun authMechanism(): String? = unwrap(this).getAuthMechanism()
+
+      /**
+       * The MongoDB database name. This setting isn't used when `AuthType` is set to `"no"` .
+       *
+       * The default is `"admin"` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html#cfn-dms-dataprovider-mongodbsettings-authsource)
+       */
+      override fun authSource(): String? = unwrap(this).getAuthSource()
+
+      /**
+       * The authentication type you use to access the MongoDB source endpoint.
+       *
+       * When when set to `"no"` , user name and password parameters are not used and can be empty.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html#cfn-dms-dataprovider-mongodbsettings-authtype)
+       */
+      override fun authType(): String? = unwrap(this).getAuthType()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html#cfn-dms-dataprovider-mongodbsettings-certificatearn)
+       */
+      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+      /**
+       * The database name on the MongoDB source endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html#cfn-dms-dataprovider-mongodbsettings-databasename)
+       */
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+      /**
+       * The port value for the MongoDB source endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html#cfn-dms-dataprovider-mongodbsettings-port)
+       */
+      override fun port(): Number = unwrap(this).getPort()
+
+      /**
+       * The name of the server on the MongoDB source endpoint.
+       *
+       * For MongoDB Atlas, provide the server name for any of the servers in the replication set.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html#cfn-dms-dataprovider-mongodbsettings-servername)
+       */
+      override fun serverName(): String = unwrap(this).getServerName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-mongodbsettings.html#cfn-dms-dataprovider-mongodbsettings-sslmode)
+       */
+      override fun sslMode(): String? = unwrap(this).getSslMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MongoDbSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.MongoDbSettingsProperty):
+          MongoDbSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? MongoDbSettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MongoDbSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnDataProvider.MongoDbSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnDataProvider.MongoDbSettingsProperty
     }
   }
 
@@ -1578,6 +2597,150 @@ public open class CfnDataProvider(
   }
 
   /**
+   * Provides information that defines an Amazon Redshift endpoint.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dms.*;
+   * RedshiftSettingsProperty redshiftSettingsProperty = RedshiftSettingsProperty.builder()
+   * .databaseName("databaseName")
+   * .port(123)
+   * .serverName("serverName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-redshiftsettings.html)
+   */
+  public interface RedshiftSettingsProperty {
+    /**
+     * The name of the Amazon Redshift data warehouse (service) that you are working with.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-redshiftsettings.html#cfn-dms-dataprovider-redshiftsettings-databasename)
+     */
+    public fun databaseName(): String
+
+    /**
+     * The port number for Amazon Redshift.
+     *
+     * The default value is 5439.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-redshiftsettings.html#cfn-dms-dataprovider-redshiftsettings-port)
+     */
+    public fun port(): Number
+
+    /**
+     * The name of the Amazon Redshift cluster you are using.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-redshiftsettings.html#cfn-dms-dataprovider-redshiftsettings-servername)
+     */
+    public fun serverName(): String
+
+    /**
+     * A builder for [RedshiftSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param databaseName The name of the Amazon Redshift data warehouse (service) that you are
+       * working with. 
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param port The port number for Amazon Redshift. 
+       * The default value is 5439.
+       */
+      public fun port(port: Number)
+
+      /**
+       * @param serverName The name of the Amazon Redshift cluster you are using. 
+       */
+      public fun serverName(serverName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dms.CfnDataProvider.RedshiftSettingsProperty.Builder =
+          software.amazon.awscdk.services.dms.CfnDataProvider.RedshiftSettingsProperty.builder()
+
+      /**
+       * @param databaseName The name of the Amazon Redshift data warehouse (service) that you are
+       * working with. 
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param port The port number for Amazon Redshift. 
+       * The default value is 5439.
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param serverName The name of the Amazon Redshift cluster you are using. 
+       */
+      override fun serverName(serverName: String) {
+        cdkBuilder.serverName(serverName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dms.CfnDataProvider.RedshiftSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.RedshiftSettingsProperty,
+    ) : CdkObject(cdkObject),
+        RedshiftSettingsProperty {
+      /**
+       * The name of the Amazon Redshift data warehouse (service) that you are working with.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-redshiftsettings.html#cfn-dms-dataprovider-redshiftsettings-databasename)
+       */
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
+
+      /**
+       * The port number for Amazon Redshift.
+       *
+       * The default value is 5439.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-redshiftsettings.html#cfn-dms-dataprovider-redshiftsettings-port)
+       */
+      override fun port(): Number = unwrap(this).getPort()
+
+      /**
+       * The name of the Amazon Redshift cluster you are using.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-redshiftsettings.html#cfn-dms-dataprovider-redshiftsettings-servername)
+       */
+      override fun serverName(): String = unwrap(this).getServerName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RedshiftSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.RedshiftSettingsProperty):
+          RedshiftSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? RedshiftSettingsProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftSettingsProperty):
+          software.amazon.awscdk.services.dms.CfnDataProvider.RedshiftSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dms.CfnDataProvider.RedshiftSettingsProperty
+    }
+  }
+
+  /**
    * The property identifies the exact type of settings for the data provider.
    *
    * Example:
@@ -1587,6 +2750,37 @@ public open class CfnDataProvider(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.dms.*;
    * SettingsProperty settingsProperty = SettingsProperty.builder()
+   * .docDbSettings(DocDbSettingsProperty.builder()
+   * .databaseName("databaseName")
+   * .port(123)
+   * .serverName("serverName")
+   * // the properties below are optional
+   * .certificateArn("certificateArn")
+   * .sslMode("sslMode")
+   * .build())
+   * .ibmDb2LuwSettings(IbmDb2LuwSettingsProperty.builder()
+   * .databaseName("databaseName")
+   * .port(123)
+   * .serverName("serverName")
+   * .sslMode("sslMode")
+   * // the properties below are optional
+   * .certificateArn("certificateArn")
+   * .build())
+   * .ibmDb2ZOsSettings(IbmDb2zOsSettingsProperty.builder()
+   * .databaseName("databaseName")
+   * .port(123)
+   * .serverName("serverName")
+   * .sslMode("sslMode")
+   * // the properties below are optional
+   * .certificateArn("certificateArn")
+   * .build())
+   * .mariaDbSettings(MariaDbSettingsProperty.builder()
+   * .port(123)
+   * .serverName("serverName")
+   * .sslMode("sslMode")
+   * // the properties below are optional
+   * .certificateArn("certificateArn")
+   * .build())
    * .microsoftSqlServerSettings(MicrosoftSqlServerSettingsProperty.builder()
    * .databaseName("databaseName")
    * .port(123)
@@ -1594,6 +2788,17 @@ public open class CfnDataProvider(
    * .sslMode("sslMode")
    * // the properties below are optional
    * .certificateArn("certificateArn")
+   * .build())
+   * .mongoDbSettings(MongoDbSettingsProperty.builder()
+   * .port(123)
+   * .serverName("serverName")
+   * // the properties below are optional
+   * .authMechanism("authMechanism")
+   * .authSource("authSource")
+   * .authType("authType")
+   * .certificateArn("certificateArn")
+   * .databaseName("databaseName")
+   * .sslMode("sslMode")
    * .build())
    * .mySqlSettings(MySqlSettingsProperty.builder()
    * .port(123)
@@ -1623,6 +2828,11 @@ public open class CfnDataProvider(
    * // the properties below are optional
    * .certificateArn("certificateArn")
    * .build())
+   * .redshiftSettings(RedshiftSettingsProperty.builder()
+   * .databaseName("databaseName")
+   * .port(123)
+   * .serverName("serverName")
+   * .build())
    * .build();
    * ```
    *
@@ -1630,11 +2840,46 @@ public open class CfnDataProvider(
    */
   public interface SettingsProperty {
     /**
+     * DocDbSettings property identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-docdbsettings)
+     */
+    public fun docDbSettings(): Any? = unwrap(this).getDocDbSettings()
+
+    /**
+     * IbmDb2LuwSettings property identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-ibmdb2luwsettings)
+     */
+    public fun ibmDb2LuwSettings(): Any? = unwrap(this).getIbmDb2LuwSettings()
+
+    /**
+     * IbmDb2zOsSettings property identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-ibmdb2zossettings)
+     */
+    public fun ibmDb2ZOsSettings(): Any? = unwrap(this).getIbmDb2ZOsSettings()
+
+    /**
+     * MariaDbSettings property identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-mariadbsettings)
+     */
+    public fun mariaDbSettings(): Any? = unwrap(this).getMariaDbSettings()
+
+    /**
      * MicrosoftSqlServerSettings property identifier.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-microsoftsqlserversettings)
      */
     public fun microsoftSqlServerSettings(): Any? = unwrap(this).getMicrosoftSqlServerSettings()
+
+    /**
+     * MongoDbSettings property identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-mongodbsettings)
+     */
+    public fun mongoDbSettings(): Any? = unwrap(this).getMongoDbSettings()
 
     /**
      * MySqlSettings property identifier.
@@ -1658,10 +2903,85 @@ public open class CfnDataProvider(
     public fun postgreSqlSettings(): Any? = unwrap(this).getPostgreSqlSettings()
 
     /**
+     * RedshiftSettings property identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-redshiftsettings)
+     */
+    public fun redshiftSettings(): Any? = unwrap(this).getRedshiftSettings()
+
+    /**
      * A builder for [SettingsProperty]
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param docDbSettings DocDbSettings property identifier.
+       */
+      public fun docDbSettings(docDbSettings: IResolvable)
+
+      /**
+       * @param docDbSettings DocDbSettings property identifier.
+       */
+      public fun docDbSettings(docDbSettings: DocDbSettingsProperty)
+
+      /**
+       * @param docDbSettings DocDbSettings property identifier.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("986824ba93a508590776a585c9d3a91ed910552795dcd8ad30791842cfefb211")
+      public fun docDbSettings(docDbSettings: DocDbSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param ibmDb2LuwSettings IbmDb2LuwSettings property identifier.
+       */
+      public fun ibmDb2LuwSettings(ibmDb2LuwSettings: IResolvable)
+
+      /**
+       * @param ibmDb2LuwSettings IbmDb2LuwSettings property identifier.
+       */
+      public fun ibmDb2LuwSettings(ibmDb2LuwSettings: IbmDb2LuwSettingsProperty)
+
+      /**
+       * @param ibmDb2LuwSettings IbmDb2LuwSettings property identifier.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d769df473d4c037d42b433d6c62ad086e989bbfee3d26bbc8beca03a498623dd")
+      public fun ibmDb2LuwSettings(ibmDb2LuwSettings: IbmDb2LuwSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param ibmDb2ZOsSettings IbmDb2zOsSettings property identifier.
+       */
+      public fun ibmDb2ZOsSettings(ibmDb2ZOsSettings: IResolvable)
+
+      /**
+       * @param ibmDb2ZOsSettings IbmDb2zOsSettings property identifier.
+       */
+      public fun ibmDb2ZOsSettings(ibmDb2ZOsSettings: IbmDb2zOsSettingsProperty)
+
+      /**
+       * @param ibmDb2ZOsSettings IbmDb2zOsSettings property identifier.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("dda0fe9b0677982f0df699b5eb3c11d80f4369f3d256777a2e165c736fddc574")
+      public fun ibmDb2ZOsSettings(ibmDb2ZOsSettings: IbmDb2zOsSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param mariaDbSettings MariaDbSettings property identifier.
+       */
+      public fun mariaDbSettings(mariaDbSettings: IResolvable)
+
+      /**
+       * @param mariaDbSettings MariaDbSettings property identifier.
+       */
+      public fun mariaDbSettings(mariaDbSettings: MariaDbSettingsProperty)
+
+      /**
+       * @param mariaDbSettings MariaDbSettings property identifier.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2ab75070ff7ae65c24b55bcc70336ed1915fddcd8a08d0985d2f02c23dd82d5b")
+      public fun mariaDbSettings(mariaDbSettings: MariaDbSettingsProperty.Builder.() -> Unit)
+
       /**
        * @param microsoftSqlServerSettings MicrosoftSqlServerSettings property identifier.
        */
@@ -1680,6 +3000,23 @@ public open class CfnDataProvider(
       @JvmName("61f8503042f0cca48195edeb6a80756458cfe5b9a3e185af4a0c029631fd1f49")
       public
           fun microsoftSqlServerSettings(microsoftSqlServerSettings: MicrosoftSqlServerSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param mongoDbSettings MongoDbSettings property identifier.
+       */
+      public fun mongoDbSettings(mongoDbSettings: IResolvable)
+
+      /**
+       * @param mongoDbSettings MongoDbSettings property identifier.
+       */
+      public fun mongoDbSettings(mongoDbSettings: MongoDbSettingsProperty)
+
+      /**
+       * @param mongoDbSettings MongoDbSettings property identifier.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2ea423cffb00196b6c8788d877cf4d2ec5152ec92196b8daffe5bf3b93663e26")
+      public fun mongoDbSettings(mongoDbSettings: MongoDbSettingsProperty.Builder.() -> Unit)
 
       /**
        * @param mySqlSettings MySqlSettings property identifier.
@@ -1732,12 +3069,119 @@ public open class CfnDataProvider(
       @JvmName("bbe648e536f99226c51402e8eee8ad1e33005dfd09b98a1cb53237bb9ad30d3f")
       public
           fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param redshiftSettings RedshiftSettings property identifier.
+       */
+      public fun redshiftSettings(redshiftSettings: IResolvable)
+
+      /**
+       * @param redshiftSettings RedshiftSettings property identifier.
+       */
+      public fun redshiftSettings(redshiftSettings: RedshiftSettingsProperty)
+
+      /**
+       * @param redshiftSettings RedshiftSettings property identifier.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bc5577543e1f068df74e013bdbce230bde056cbc4d8e147a026ecc6c4102cdfa")
+      public fun redshiftSettings(redshiftSettings: RedshiftSettingsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
           software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty.builder()
+
+      /**
+       * @param docDbSettings DocDbSettings property identifier.
+       */
+      override fun docDbSettings(docDbSettings: IResolvable) {
+        cdkBuilder.docDbSettings(docDbSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param docDbSettings DocDbSettings property identifier.
+       */
+      override fun docDbSettings(docDbSettings: DocDbSettingsProperty) {
+        cdkBuilder.docDbSettings(docDbSettings.let(DocDbSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param docDbSettings DocDbSettings property identifier.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("986824ba93a508590776a585c9d3a91ed910552795dcd8ad30791842cfefb211")
+      override fun docDbSettings(docDbSettings: DocDbSettingsProperty.Builder.() -> Unit): Unit =
+          docDbSettings(DocDbSettingsProperty(docDbSettings))
+
+      /**
+       * @param ibmDb2LuwSettings IbmDb2LuwSettings property identifier.
+       */
+      override fun ibmDb2LuwSettings(ibmDb2LuwSettings: IResolvable) {
+        cdkBuilder.ibmDb2LuwSettings(ibmDb2LuwSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ibmDb2LuwSettings IbmDb2LuwSettings property identifier.
+       */
+      override fun ibmDb2LuwSettings(ibmDb2LuwSettings: IbmDb2LuwSettingsProperty) {
+        cdkBuilder.ibmDb2LuwSettings(ibmDb2LuwSettings.let(IbmDb2LuwSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param ibmDb2LuwSettings IbmDb2LuwSettings property identifier.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d769df473d4c037d42b433d6c62ad086e989bbfee3d26bbc8beca03a498623dd")
+      override
+          fun ibmDb2LuwSettings(ibmDb2LuwSettings: IbmDb2LuwSettingsProperty.Builder.() -> Unit):
+          Unit = ibmDb2LuwSettings(IbmDb2LuwSettingsProperty(ibmDb2LuwSettings))
+
+      /**
+       * @param ibmDb2ZOsSettings IbmDb2zOsSettings property identifier.
+       */
+      override fun ibmDb2ZOsSettings(ibmDb2ZOsSettings: IResolvable) {
+        cdkBuilder.ibmDb2ZOsSettings(ibmDb2ZOsSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ibmDb2ZOsSettings IbmDb2zOsSettings property identifier.
+       */
+      override fun ibmDb2ZOsSettings(ibmDb2ZOsSettings: IbmDb2zOsSettingsProperty) {
+        cdkBuilder.ibmDb2ZOsSettings(ibmDb2ZOsSettings.let(IbmDb2zOsSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param ibmDb2ZOsSettings IbmDb2zOsSettings property identifier.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("dda0fe9b0677982f0df699b5eb3c11d80f4369f3d256777a2e165c736fddc574")
+      override
+          fun ibmDb2ZOsSettings(ibmDb2ZOsSettings: IbmDb2zOsSettingsProperty.Builder.() -> Unit):
+          Unit = ibmDb2ZOsSettings(IbmDb2zOsSettingsProperty(ibmDb2ZOsSettings))
+
+      /**
+       * @param mariaDbSettings MariaDbSettings property identifier.
+       */
+      override fun mariaDbSettings(mariaDbSettings: IResolvable) {
+        cdkBuilder.mariaDbSettings(mariaDbSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param mariaDbSettings MariaDbSettings property identifier.
+       */
+      override fun mariaDbSettings(mariaDbSettings: MariaDbSettingsProperty) {
+        cdkBuilder.mariaDbSettings(mariaDbSettings.let(MariaDbSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param mariaDbSettings MariaDbSettings property identifier.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2ab75070ff7ae65c24b55bcc70336ed1915fddcd8a08d0985d2f02c23dd82d5b")
+      override fun mariaDbSettings(mariaDbSettings: MariaDbSettingsProperty.Builder.() -> Unit):
+          Unit = mariaDbSettings(MariaDbSettingsProperty(mariaDbSettings))
 
       /**
        * @param microsoftSqlServerSettings MicrosoftSqlServerSettings property identifier.
@@ -1763,6 +3207,28 @@ public open class CfnDataProvider(
           fun microsoftSqlServerSettings(microsoftSqlServerSettings: MicrosoftSqlServerSettingsProperty.Builder.() -> Unit):
           Unit =
           microsoftSqlServerSettings(MicrosoftSqlServerSettingsProperty(microsoftSqlServerSettings))
+
+      /**
+       * @param mongoDbSettings MongoDbSettings property identifier.
+       */
+      override fun mongoDbSettings(mongoDbSettings: IResolvable) {
+        cdkBuilder.mongoDbSettings(mongoDbSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param mongoDbSettings MongoDbSettings property identifier.
+       */
+      override fun mongoDbSettings(mongoDbSettings: MongoDbSettingsProperty) {
+        cdkBuilder.mongoDbSettings(mongoDbSettings.let(MongoDbSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param mongoDbSettings MongoDbSettings property identifier.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2ea423cffb00196b6c8788d877cf4d2ec5152ec92196b8daffe5bf3b93663e26")
+      override fun mongoDbSettings(mongoDbSettings: MongoDbSettingsProperty.Builder.() -> Unit):
+          Unit = mongoDbSettings(MongoDbSettingsProperty(mongoDbSettings))
 
       /**
        * @param mySqlSettings MySqlSettings property identifier.
@@ -1831,6 +3297,28 @@ public open class CfnDataProvider(
           fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty.Builder.() -> Unit):
           Unit = postgreSqlSettings(PostgreSqlSettingsProperty(postgreSqlSettings))
 
+      /**
+       * @param redshiftSettings RedshiftSettings property identifier.
+       */
+      override fun redshiftSettings(redshiftSettings: IResolvable) {
+        cdkBuilder.redshiftSettings(redshiftSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param redshiftSettings RedshiftSettings property identifier.
+       */
+      override fun redshiftSettings(redshiftSettings: RedshiftSettingsProperty) {
+        cdkBuilder.redshiftSettings(redshiftSettings.let(RedshiftSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param redshiftSettings RedshiftSettings property identifier.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bc5577543e1f068df74e013bdbce230bde056cbc4d8e147a026ecc6c4102cdfa")
+      override fun redshiftSettings(redshiftSettings: RedshiftSettingsProperty.Builder.() -> Unit):
+          Unit = redshiftSettings(RedshiftSettingsProperty(redshiftSettings))
+
       public fun build(): software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty =
           cdkBuilder.build()
     }
@@ -1840,11 +3328,46 @@ public open class CfnDataProvider(
     ) : CdkObject(cdkObject),
         SettingsProperty {
       /**
+       * DocDbSettings property identifier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-docdbsettings)
+       */
+      override fun docDbSettings(): Any? = unwrap(this).getDocDbSettings()
+
+      /**
+       * IbmDb2LuwSettings property identifier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-ibmdb2luwsettings)
+       */
+      override fun ibmDb2LuwSettings(): Any? = unwrap(this).getIbmDb2LuwSettings()
+
+      /**
+       * IbmDb2zOsSettings property identifier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-ibmdb2zossettings)
+       */
+      override fun ibmDb2ZOsSettings(): Any? = unwrap(this).getIbmDb2ZOsSettings()
+
+      /**
+       * MariaDbSettings property identifier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-mariadbsettings)
+       */
+      override fun mariaDbSettings(): Any? = unwrap(this).getMariaDbSettings()
+
+      /**
        * MicrosoftSqlServerSettings property identifier.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-microsoftsqlserversettings)
        */
       override fun microsoftSqlServerSettings(): Any? = unwrap(this).getMicrosoftSqlServerSettings()
+
+      /**
+       * MongoDbSettings property identifier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-mongodbsettings)
+       */
+      override fun mongoDbSettings(): Any? = unwrap(this).getMongoDbSettings()
 
       /**
        * MySqlSettings property identifier.
@@ -1866,6 +3389,13 @@ public open class CfnDataProvider(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-postgresqlsettings)
        */
       override fun postgreSqlSettings(): Any? = unwrap(this).getPostgreSqlSettings()
+
+      /**
+       * RedshiftSettings property identifier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-redshiftsettings)
+       */
+      override fun redshiftSettings(): Any? = unwrap(this).getRedshiftSettings()
     }
 
     public companion object {

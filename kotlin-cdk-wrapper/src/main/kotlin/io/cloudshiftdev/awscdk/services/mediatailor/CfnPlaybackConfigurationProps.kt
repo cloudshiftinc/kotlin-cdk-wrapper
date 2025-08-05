@@ -31,6 +31,9 @@ import kotlin.jvm.JvmName
  * .name("name")
  * .videoContentSourceUrl("videoContentSourceUrl")
  * // the properties below are optional
+ * .adConditioningConfiguration(AdConditioningConfigurationProperty.builder()
+ * .streamingMediaFileConditioning("streamingMediaFileConditioning")
+ * .build())
  * .availSuppression(AvailSuppressionProperty.builder()
  * .fillPolicy("fillPolicy")
  * .mode("mode")
@@ -54,9 +57,22 @@ import kotlin.jvm.JvmName
  * .hlsConfiguration(HlsConfigurationProperty.builder()
  * .manifestEndpointPrefix("manifestEndpointPrefix")
  * .build())
+ * .insertionMode("insertionMode")
  * .livePreRollConfiguration(LivePreRollConfigurationProperty.builder()
  * .adDecisionServerUrl("adDecisionServerUrl")
  * .maxDurationSeconds(123)
+ * .build())
+ * .logConfiguration(LogConfigurationProperty.builder()
+ * .percentEnabled(123)
+ * // the properties below are optional
+ * .adsInteractionLog(AdsInteractionLogProperty.builder()
+ * .excludeEventTypes(List.of("excludeEventTypes"))
+ * .publishOptInEventTypes(List.of("publishOptInEventTypes"))
+ * .build())
+ * .enabledLoggingStrategies(List.of("enabledLoggingStrategies"))
+ * .manifestServiceInteractionLog(ManifestServiceInteractionLogProperty.builder()
+ * .excludeEventTypes(List.of("excludeEventTypes"))
+ * .build())
  * .build())
  * .manifestProcessingRules(ManifestProcessingRulesProperty.builder()
  * .adMarkerPassthrough(AdMarkerPassthroughProperty.builder()
@@ -76,6 +92,14 @@ import kotlin.jvm.JvmName
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html)
  */
 public interface CfnPlaybackConfigurationProps {
+  /**
+   * The setting that indicates what conditioning MediaTailor will perform on ads that the ad
+   * decision server (ADS) returns, and what priority MediaTailor uses when inserting ads.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-adconditioningconfiguration)
+   */
+  public fun adConditioningConfiguration(): Any? = unwrap(this).getAdConditioningConfiguration()
+
   /**
    * The URL for the ad decision server (ADS).
    *
@@ -142,11 +166,30 @@ public interface CfnPlaybackConfigurationProps {
   public fun hlsConfiguration(): Any? = unwrap(this).getHlsConfiguration()
 
   /**
+   * The setting that controls whether players can use stitched or guided ad insertion.
+   *
+   * The default, `STITCHED_ONLY` , forces all player sessions to use stitched (server-side) ad
+   * insertion. Choosing `PLAYER_SELECT` allows players to select either stitched or guided ad
+   * insertion at session-initialization time. The default for players that do not specify an insertion
+   * mode is stitched.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-insertionmode)
+   */
+  public fun insertionMode(): String? = unwrap(this).getInsertionMode()
+
+  /**
    * The configuration for pre-roll ad insertion.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-liveprerollconfiguration)
    */
   public fun livePreRollConfiguration(): Any? = unwrap(this).getLivePreRollConfiguration()
+
+  /**
+   * Defines where AWS Elemental MediaTailor sends logs for the playback configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration)
+   */
+  public fun logConfiguration(): Any? = unwrap(this).getLogConfiguration()
 
   /**
    * The configuration for manifest processing rules.
@@ -227,6 +270,31 @@ public interface CfnPlaybackConfigurationProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param adConditioningConfiguration The setting that indicates what conditioning MediaTailor
+     * will perform on ads that the ad decision server (ADS) returns, and what priority MediaTailor
+     * uses when inserting ads.
+     */
+    public fun adConditioningConfiguration(adConditioningConfiguration: IResolvable)
+
+    /**
+     * @param adConditioningConfiguration The setting that indicates what conditioning MediaTailor
+     * will perform on ads that the ad decision server (ADS) returns, and what priority MediaTailor
+     * uses when inserting ads.
+     */
+    public
+        fun adConditioningConfiguration(adConditioningConfiguration: CfnPlaybackConfiguration.AdConditioningConfigurationProperty)
+
+    /**
+     * @param adConditioningConfiguration The setting that indicates what conditioning MediaTailor
+     * will perform on ads that the ad decision server (ADS) returns, and what priority MediaTailor
+     * uses when inserting ads.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9239fe339077f00aefa36e5a587949d244c8a0aa874563b58ee3bc9996a0817d")
+    public
+        fun adConditioningConfiguration(adConditioningConfiguration: CfnPlaybackConfiguration.AdConditioningConfigurationProperty.Builder.() -> Unit)
+
     /**
      * @param adDecisionServerUrl The URL for the ad decision server (ADS). 
      * This includes the specification of static parameters and placeholders for dynamic parameters.
@@ -316,7 +384,7 @@ public interface CfnPlaybackConfigurationProps {
      * For more information, see [Domain
      * Variables](https://docs.aws.amazon.com/mediatailor/latest/ug/variables-domain.html) .
      */
-    public fun configurationAliases(configurationAliases: IResolvable)
+    public fun configurationAliases(configurationAliases: Map<String, Any>)
 
     /**
      * @param configurationAliases The player parameters and aliases used as dynamic variables
@@ -324,7 +392,7 @@ public interface CfnPlaybackConfigurationProps {
      * For more information, see [Domain
      * Variables](https://docs.aws.amazon.com/mediatailor/latest/ug/variables-domain.html) .
      */
-    public fun configurationAliases(configurationAliases: Map<String, Any>)
+    public fun configurationAliases(configurationAliases: IResolvable)
 
     /**
      * @param dashConfiguration The configuration for a DASH source.
@@ -364,6 +432,16 @@ public interface CfnPlaybackConfigurationProps {
         fun hlsConfiguration(hlsConfiguration: CfnPlaybackConfiguration.HlsConfigurationProperty.Builder.() -> Unit)
 
     /**
+     * @param insertionMode The setting that controls whether players can use stitched or guided ad
+     * insertion.
+     * The default, `STITCHED_ONLY` , forces all player sessions to use stitched (server-side) ad
+     * insertion. Choosing `PLAYER_SELECT` allows players to select either stitched or guided ad
+     * insertion at session-initialization time. The default for players that do not specify an
+     * insertion mode is stitched.
+     */
+    public fun insertionMode(insertionMode: String)
+
+    /**
      * @param livePreRollConfiguration The configuration for pre-roll ad insertion.
      */
     public fun livePreRollConfiguration(livePreRollConfiguration: IResolvable)
@@ -381,6 +459,27 @@ public interface CfnPlaybackConfigurationProps {
     @JvmName("540b8a134d0608705410d3d40ab82f8883e15c1ecacfefe7c63c550ac5e4f6c5")
     public
         fun livePreRollConfiguration(livePreRollConfiguration: CfnPlaybackConfiguration.LivePreRollConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * @param logConfiguration Defines where AWS Elemental MediaTailor sends logs for the playback
+     * configuration.
+     */
+    public fun logConfiguration(logConfiguration: IResolvable)
+
+    /**
+     * @param logConfiguration Defines where AWS Elemental MediaTailor sends logs for the playback
+     * configuration.
+     */
+    public fun logConfiguration(logConfiguration: CfnPlaybackConfiguration.LogConfigurationProperty)
+
+    /**
+     * @param logConfiguration Defines where AWS Elemental MediaTailor sends logs for the playback
+     * configuration.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("068b5b24ef410320ccf566cf0bbe406ba717fb9fbf4d22085e7d50e2d8ee167d")
+    public
+        fun logConfiguration(logConfiguration: CfnPlaybackConfiguration.LogConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param manifestProcessingRules The configuration for manifest processing rules.
@@ -472,6 +571,37 @@ public interface CfnPlaybackConfigurationProps {
     private val cdkBuilder:
         software.amazon.awscdk.services.mediatailor.CfnPlaybackConfigurationProps.Builder =
         software.amazon.awscdk.services.mediatailor.CfnPlaybackConfigurationProps.builder()
+
+    /**
+     * @param adConditioningConfiguration The setting that indicates what conditioning MediaTailor
+     * will perform on ads that the ad decision server (ADS) returns, and what priority MediaTailor
+     * uses when inserting ads.
+     */
+    override fun adConditioningConfiguration(adConditioningConfiguration: IResolvable) {
+      cdkBuilder.adConditioningConfiguration(adConditioningConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param adConditioningConfiguration The setting that indicates what conditioning MediaTailor
+     * will perform on ads that the ad decision server (ADS) returns, and what priority MediaTailor
+     * uses when inserting ads.
+     */
+    override
+        fun adConditioningConfiguration(adConditioningConfiguration: CfnPlaybackConfiguration.AdConditioningConfigurationProperty) {
+      cdkBuilder.adConditioningConfiguration(adConditioningConfiguration.let(CfnPlaybackConfiguration.AdConditioningConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param adConditioningConfiguration The setting that indicates what conditioning MediaTailor
+     * will perform on ads that the ad decision server (ADS) returns, and what priority MediaTailor
+     * uses when inserting ads.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9239fe339077f00aefa36e5a587949d244c8a0aa874563b58ee3bc9996a0817d")
+    override
+        fun adConditioningConfiguration(adConditioningConfiguration: CfnPlaybackConfiguration.AdConditioningConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        adConditioningConfiguration(CfnPlaybackConfiguration.AdConditioningConfigurationProperty(adConditioningConfiguration))
 
     /**
      * @param adDecisionServerUrl The URL for the ad decision server (ADS). 
@@ -581,8 +711,8 @@ public interface CfnPlaybackConfigurationProps {
      * For more information, see [Domain
      * Variables](https://docs.aws.amazon.com/mediatailor/latest/ug/variables-domain.html) .
      */
-    override fun configurationAliases(configurationAliases: IResolvable) {
-      cdkBuilder.configurationAliases(configurationAliases.let(IResolvable.Companion::unwrap))
+    override fun configurationAliases(configurationAliases: Map<String, Any>) {
+      cdkBuilder.configurationAliases(configurationAliases.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -591,8 +721,8 @@ public interface CfnPlaybackConfigurationProps {
      * For more information, see [Domain
      * Variables](https://docs.aws.amazon.com/mediatailor/latest/ug/variables-domain.html) .
      */
-    override fun configurationAliases(configurationAliases: Map<String, Any>) {
-      cdkBuilder.configurationAliases(configurationAliases.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    override fun configurationAliases(configurationAliases: IResolvable) {
+      cdkBuilder.configurationAliases(configurationAliases.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -645,6 +775,18 @@ public interface CfnPlaybackConfigurationProps {
         Unit = hlsConfiguration(CfnPlaybackConfiguration.HlsConfigurationProperty(hlsConfiguration))
 
     /**
+     * @param insertionMode The setting that controls whether players can use stitched or guided ad
+     * insertion.
+     * The default, `STITCHED_ONLY` , forces all player sessions to use stitched (server-side) ad
+     * insertion. Choosing `PLAYER_SELECT` allows players to select either stitched or guided ad
+     * insertion at session-initialization time. The default for players that do not specify an
+     * insertion mode is stitched.
+     */
+    override fun insertionMode(insertionMode: String) {
+      cdkBuilder.insertionMode(insertionMode)
+    }
+
+    /**
      * @param livePreRollConfiguration The configuration for pre-roll ad insertion.
      */
     override fun livePreRollConfiguration(livePreRollConfiguration: IResolvable) {
@@ -668,6 +810,33 @@ public interface CfnPlaybackConfigurationProps {
         fun livePreRollConfiguration(livePreRollConfiguration: CfnPlaybackConfiguration.LivePreRollConfigurationProperty.Builder.() -> Unit):
         Unit =
         livePreRollConfiguration(CfnPlaybackConfiguration.LivePreRollConfigurationProperty(livePreRollConfiguration))
+
+    /**
+     * @param logConfiguration Defines where AWS Elemental MediaTailor sends logs for the playback
+     * configuration.
+     */
+    override fun logConfiguration(logConfiguration: IResolvable) {
+      cdkBuilder.logConfiguration(logConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param logConfiguration Defines where AWS Elemental MediaTailor sends logs for the playback
+     * configuration.
+     */
+    override
+        fun logConfiguration(logConfiguration: CfnPlaybackConfiguration.LogConfigurationProperty) {
+      cdkBuilder.logConfiguration(logConfiguration.let(CfnPlaybackConfiguration.LogConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param logConfiguration Defines where AWS Elemental MediaTailor sends logs for the playback
+     * configuration.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("068b5b24ef410320ccf566cf0bbe406ba717fb9fbf4d22085e7d50e2d8ee167d")
+    override
+        fun logConfiguration(logConfiguration: CfnPlaybackConfiguration.LogConfigurationProperty.Builder.() -> Unit):
+        Unit = logConfiguration(CfnPlaybackConfiguration.LogConfigurationProperty(logConfiguration))
 
     /**
      * @param manifestProcessingRules The configuration for manifest processing rules.
@@ -781,6 +950,14 @@ public interface CfnPlaybackConfigurationProps {
   ) : CdkObject(cdkObject),
       CfnPlaybackConfigurationProps {
     /**
+     * The setting that indicates what conditioning MediaTailor will perform on ads that the ad
+     * decision server (ADS) returns, and what priority MediaTailor uses when inserting ads.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-adconditioningconfiguration)
+     */
+    override fun adConditioningConfiguration(): Any? = unwrap(this).getAdConditioningConfiguration()
+
+    /**
      * The URL for the ad decision server (ADS).
      *
      * This includes the specification of static parameters and placeholders for dynamic parameters.
@@ -846,11 +1023,30 @@ public interface CfnPlaybackConfigurationProps {
     override fun hlsConfiguration(): Any? = unwrap(this).getHlsConfiguration()
 
     /**
+     * The setting that controls whether players can use stitched or guided ad insertion.
+     *
+     * The default, `STITCHED_ONLY` , forces all player sessions to use stitched (server-side) ad
+     * insertion. Choosing `PLAYER_SELECT` allows players to select either stitched or guided ad
+     * insertion at session-initialization time. The default for players that do not specify an
+     * insertion mode is stitched.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-insertionmode)
+     */
+    override fun insertionMode(): String? = unwrap(this).getInsertionMode()
+
+    /**
      * The configuration for pre-roll ad insertion.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-liveprerollconfiguration)
      */
     override fun livePreRollConfiguration(): Any? = unwrap(this).getLivePreRollConfiguration()
+
+    /**
+     * Defines where AWS Elemental MediaTailor sends logs for the playback configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration)
+     */
+    override fun logConfiguration(): Any? = unwrap(this).getLogConfiguration()
 
     /**
      * The configuration for manifest processing rules.

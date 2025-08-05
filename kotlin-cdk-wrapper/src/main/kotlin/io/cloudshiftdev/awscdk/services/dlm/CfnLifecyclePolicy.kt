@@ -1502,9 +1502,9 @@ public open class CfnLifecyclePolicy(
      * The schedule, as a Cron expression.
      *
      * The schedule interval must be between 1 hour and 1 year. For more information, see the [Cron
-     * expressions
-     * reference](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cron-expressions.html) in
-     * the *Amazon EventBridge User Guide* .
+     * and rate
+     * expressions](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-scheduled-rule-pattern.html)
+     * in the *Amazon EventBridge User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-createrule.html#cfn-dlm-lifecyclepolicy-createrule-cronexpression)
      */
@@ -1530,13 +1530,22 @@ public open class CfnLifecyclePolicy(
      * *[Custom snapshot policies only]* Specifies the destination for snapshots created by the
      * policy.
      *
-     * To create snapshots in the same Region as the source resource, specify `CLOUD` . To create
-     * snapshots on the same Outpost as the source resource, specify `OUTPOST_LOCAL` . If you omit this
-     * parameter, `CLOUD` is used by default.
+     * The allowed destinations depend on the location of the targeted resources.
      *
-     * If the policy targets resources in an AWS Region , then you must create snapshots in the same
-     * Region as the source resource. If the policy targets resources on an Outpost, then you can
-     * create snapshots on the same Outpost as the source resource, or in the Region of that Outpost.
+     * * If the policy targets resources in a Region, then you must create snapshots in the same
+     * Region as the source resource.
+     * * If the policy targets resources in a Local Zone, you can create snapshots in the same Local
+     * Zone or in its parent Region.
+     * * If the policy targets resources on an Outpost, then you can create snapshots on the same
+     * Outpost or in its parent Region.
+     *
+     * Specify one of the following values:
+     *
+     * * To create snapshots in the same Region as the source resource, specify `CLOUD` .
+     * * To create snapshots in the same Local Zone as the source resource, specify `LOCAL_ZONE` .
+     * * To create snapshots on the same Outpost as the source resource, specify `OUTPOST_LOCAL` .
+     *
+     * Default: `CLOUD`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-createrule.html#cfn-dlm-lifecyclepolicy-createrule-location)
      */
@@ -1575,8 +1584,8 @@ public open class CfnLifecyclePolicy(
       /**
        * @param cronExpression The schedule, as a Cron expression.
        * The schedule interval must be between 1 hour and 1 year. For more information, see the
-       * [Cron expressions
-       * reference](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cron-expressions.html)
+       * [Cron and rate
+       * expressions](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-scheduled-rule-pattern.html)
        * in the *Amazon EventBridge User Guide* .
        */
       public fun cronExpression(cronExpression: String)
@@ -1595,14 +1604,22 @@ public open class CfnLifecyclePolicy(
       /**
        * @param location *[Custom snapshot policies only]* Specifies the destination for snapshots
        * created by the policy.
-       * To create snapshots in the same Region as the source resource, specify `CLOUD` . To create
-       * snapshots on the same Outpost as the source resource, specify `OUTPOST_LOCAL` . If you omit
-       * this parameter, `CLOUD` is used by default.
+       * The allowed destinations depend on the location of the targeted resources.
        *
-       * If the policy targets resources in an AWS Region , then you must create snapshots in the
-       * same Region as the source resource. If the policy targets resources on an Outpost, then you
-       * can create snapshots on the same Outpost as the source resource, or in the Region of that
-       * Outpost.
+       * * If the policy targets resources in a Region, then you must create snapshots in the same
+       * Region as the source resource.
+       * * If the policy targets resources in a Local Zone, you can create snapshots in the same
+       * Local Zone or in its parent Region.
+       * * If the policy targets resources on an Outpost, then you can create snapshots on the same
+       * Outpost or in its parent Region.
+       *
+       * Specify one of the following values:
+       *
+       * * To create snapshots in the same Region as the source resource, specify `CLOUD` .
+       * * To create snapshots in the same Local Zone as the source resource, specify `LOCAL_ZONE` .
+       * * To create snapshots on the same Outpost as the source resource, specify `OUTPOST_LOCAL` .
+       *
+       * Default: `CLOUD`
        */
       public fun location(location: String)
 
@@ -1668,8 +1685,8 @@ public open class CfnLifecyclePolicy(
       /**
        * @param cronExpression The schedule, as a Cron expression.
        * The schedule interval must be between 1 hour and 1 year. For more information, see the
-       * [Cron expressions
-       * reference](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cron-expressions.html)
+       * [Cron and rate
+       * expressions](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-scheduled-rule-pattern.html)
        * in the *Amazon EventBridge User Guide* .
        */
       override fun cronExpression(cronExpression: String) {
@@ -1694,14 +1711,22 @@ public open class CfnLifecyclePolicy(
       /**
        * @param location *[Custom snapshot policies only]* Specifies the destination for snapshots
        * created by the policy.
-       * To create snapshots in the same Region as the source resource, specify `CLOUD` . To create
-       * snapshots on the same Outpost as the source resource, specify `OUTPOST_LOCAL` . If you omit
-       * this parameter, `CLOUD` is used by default.
+       * The allowed destinations depend on the location of the targeted resources.
        *
-       * If the policy targets resources in an AWS Region , then you must create snapshots in the
-       * same Region as the source resource. If the policy targets resources on an Outpost, then you
-       * can create snapshots on the same Outpost as the source resource, or in the Region of that
-       * Outpost.
+       * * If the policy targets resources in a Region, then you must create snapshots in the same
+       * Region as the source resource.
+       * * If the policy targets resources in a Local Zone, you can create snapshots in the same
+       * Local Zone or in its parent Region.
+       * * If the policy targets resources on an Outpost, then you can create snapshots on the same
+       * Outpost or in its parent Region.
+       *
+       * Specify one of the following values:
+       *
+       * * To create snapshots in the same Region as the source resource, specify `CLOUD` .
+       * * To create snapshots in the same Local Zone as the source resource, specify `LOCAL_ZONE` .
+       * * To create snapshots on the same Outpost as the source resource, specify `OUTPOST_LOCAL` .
+       *
+       * Default: `CLOUD`
        */
       override fun location(location: String) {
         cdkBuilder.location(location)
@@ -1778,8 +1803,8 @@ public open class CfnLifecyclePolicy(
        * The schedule, as a Cron expression.
        *
        * The schedule interval must be between 1 hour and 1 year. For more information, see the
-       * [Cron expressions
-       * reference](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cron-expressions.html)
+       * [Cron and rate
+       * expressions](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-scheduled-rule-pattern.html)
        * in the *Amazon EventBridge User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-createrule.html#cfn-dlm-lifecyclepolicy-createrule-cronexpression)
@@ -1806,14 +1831,22 @@ public open class CfnLifecyclePolicy(
        * *[Custom snapshot policies only]* Specifies the destination for snapshots created by the
        * policy.
        *
-       * To create snapshots in the same Region as the source resource, specify `CLOUD` . To create
-       * snapshots on the same Outpost as the source resource, specify `OUTPOST_LOCAL` . If you omit
-       * this parameter, `CLOUD` is used by default.
+       * The allowed destinations depend on the location of the targeted resources.
        *
-       * If the policy targets resources in an AWS Region , then you must create snapshots in the
-       * same Region as the source resource. If the policy targets resources on an Outpost, then you
-       * can create snapshots on the same Outpost as the source resource, or in the Region of that
-       * Outpost.
+       * * If the policy targets resources in a Region, then you must create snapshots in the same
+       * Region as the source resource.
+       * * If the policy targets resources in a Local Zone, you can create snapshots in the same
+       * Local Zone or in its parent Region.
+       * * If the policy targets resources on an Outpost, then you can create snapshots on the same
+       * Outpost or in its parent Region.
+       *
+       * Specify one of the following values:
+       *
+       * * To create snapshots in the same Region as the source resource, specify `CLOUD` .
+       * * To create snapshots in the same Local Zone as the source resource, specify `LOCAL_ZONE` .
+       * * To create snapshots on the same Outpost as the source resource, specify `OUTPOST_LOCAL` .
+       *
+       * Default: `CLOUD`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-createrule.html#cfn-dlm-lifecyclepolicy-createrule-location)
        */
@@ -3332,7 +3365,8 @@ public open class CfnLifecyclePolicy(
     /**
      * The source of the event.
      *
-     * Currently only managed CloudWatch Events rules are supported.
+     * Currently only managed Amazon EventBridge (formerly known as Amazon CloudWatch) events are
+     * supported.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-eventsource.html#cfn-dlm-lifecyclepolicy-eventsource-type)
      */
@@ -3362,7 +3396,8 @@ public open class CfnLifecyclePolicy(
 
       /**
        * @param type The source of the event. 
-       * Currently only managed CloudWatch Events rules are supported.
+       * Currently only managed Amazon EventBridge (formerly known as Amazon CloudWatch) events are
+       * supported.
        */
       public fun type(type: String)
     }
@@ -3396,7 +3431,8 @@ public open class CfnLifecyclePolicy(
 
       /**
        * @param type The source of the event. 
-       * Currently only managed CloudWatch Events rules are supported.
+       * Currently only managed Amazon EventBridge (formerly known as Amazon CloudWatch) events are
+       * supported.
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -3420,7 +3456,8 @@ public open class CfnLifecyclePolicy(
       /**
        * The source of the event.
        *
-       * Currently only managed CloudWatch Events rules are supported.
+       * Currently only managed Amazon EventBridge (formerly known as Amazon CloudWatch) events are
+       * supported.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-eventsource.html#cfn-dlm-lifecyclepolicy-eventsource-type)
        */
@@ -4366,11 +4403,15 @@ public open class CfnLifecyclePolicy(
     /**
      * *[Custom snapshot and AMI policies only]* The location of the resources to backup.
      *
-     * If the source resources are located in an AWS Region , specify `CLOUD` . If the source
-     * resources are located on an Outpost in your account, specify `OUTPOST` .
-     *
-     * If you specify `OUTPOST` , Amazon Data Lifecycle Manager backs up all resources of the
-     * specified type with matching target tags across all of the Outposts in your account.
+     * * If the source resources are located in a Region, specify `CLOUD` . In this case, the policy
+     * targets all resources of the specified type with matching target tags across all Availability
+     * Zones in the Region.
+     * * *[Custom snapshot policies only]* If the source resources are located in a Local Zone,
+     * specify `LOCAL_ZONE` . In this case, the policy targets all resources of the specified type with
+     * matching target tags across all Local Zones in the Region.
+     * * If the source resources are located on an Outpost in your account, specify `OUTPOST` . In
+     * this case, the policy targets all resources of the specified type with matching target tags
+     * across all of the Outposts in your account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-policydetails.html#cfn-dlm-lifecyclepolicy-policydetails-resourcelocations)
      */
@@ -4645,22 +4686,30 @@ public open class CfnLifecyclePolicy(
       /**
        * @param resourceLocations *[Custom snapshot and AMI policies only]* The location of the
        * resources to backup.
-       * If the source resources are located in an AWS Region , specify `CLOUD` . If the source
-       * resources are located on an Outpost in your account, specify `OUTPOST` .
-       *
-       * If you specify `OUTPOST` , Amazon Data Lifecycle Manager backs up all resources of the
-       * specified type with matching target tags across all of the Outposts in your account.
+       * * If the source resources are located in a Region, specify `CLOUD` . In this case, the
+       * policy targets all resources of the specified type with matching target tags across all
+       * Availability Zones in the Region.
+       * * *[Custom snapshot policies only]* If the source resources are located in a Local Zone,
+       * specify `LOCAL_ZONE` . In this case, the policy targets all resources of the specified type
+       * with matching target tags across all Local Zones in the Region.
+       * * If the source resources are located on an Outpost in your account, specify `OUTPOST` . In
+       * this case, the policy targets all resources of the specified type with matching target tags
+       * across all of the Outposts in your account.
        */
       public fun resourceLocations(resourceLocations: List<String>)
 
       /**
        * @param resourceLocations *[Custom snapshot and AMI policies only]* The location of the
        * resources to backup.
-       * If the source resources are located in an AWS Region , specify `CLOUD` . If the source
-       * resources are located on an Outpost in your account, specify `OUTPOST` .
-       *
-       * If you specify `OUTPOST` , Amazon Data Lifecycle Manager backs up all resources of the
-       * specified type with matching target tags across all of the Outposts in your account.
+       * * If the source resources are located in a Region, specify `CLOUD` . In this case, the
+       * policy targets all resources of the specified type with matching target tags across all
+       * Availability Zones in the Region.
+       * * *[Custom snapshot policies only]* If the source resources are located in a Local Zone,
+       * specify `LOCAL_ZONE` . In this case, the policy targets all resources of the specified type
+       * with matching target tags across all Local Zones in the Region.
+       * * If the source resources are located on an Outpost in your account, specify `OUTPOST` . In
+       * this case, the policy targets all resources of the specified type with matching target tags
+       * across all of the Outposts in your account.
        */
       public fun resourceLocations(vararg resourceLocations: String)
 
@@ -4990,11 +5039,15 @@ public open class CfnLifecyclePolicy(
       /**
        * @param resourceLocations *[Custom snapshot and AMI policies only]* The location of the
        * resources to backup.
-       * If the source resources are located in an AWS Region , specify `CLOUD` . If the source
-       * resources are located on an Outpost in your account, specify `OUTPOST` .
-       *
-       * If you specify `OUTPOST` , Amazon Data Lifecycle Manager backs up all resources of the
-       * specified type with matching target tags across all of the Outposts in your account.
+       * * If the source resources are located in a Region, specify `CLOUD` . In this case, the
+       * policy targets all resources of the specified type with matching target tags across all
+       * Availability Zones in the Region.
+       * * *[Custom snapshot policies only]* If the source resources are located in a Local Zone,
+       * specify `LOCAL_ZONE` . In this case, the policy targets all resources of the specified type
+       * with matching target tags across all Local Zones in the Region.
+       * * If the source resources are located on an Outpost in your account, specify `OUTPOST` . In
+       * this case, the policy targets all resources of the specified type with matching target tags
+       * across all of the Outposts in your account.
        */
       override fun resourceLocations(resourceLocations: List<String>) {
         cdkBuilder.resourceLocations(resourceLocations)
@@ -5003,11 +5056,15 @@ public open class CfnLifecyclePolicy(
       /**
        * @param resourceLocations *[Custom snapshot and AMI policies only]* The location of the
        * resources to backup.
-       * If the source resources are located in an AWS Region , specify `CLOUD` . If the source
-       * resources are located on an Outpost in your account, specify `OUTPOST` .
-       *
-       * If you specify `OUTPOST` , Amazon Data Lifecycle Manager backs up all resources of the
-       * specified type with matching target tags across all of the Outposts in your account.
+       * * If the source resources are located in a Region, specify `CLOUD` . In this case, the
+       * policy targets all resources of the specified type with matching target tags across all
+       * Availability Zones in the Region.
+       * * *[Custom snapshot policies only]* If the source resources are located in a Local Zone,
+       * specify `LOCAL_ZONE` . In this case, the policy targets all resources of the specified type
+       * with matching target tags across all Local Zones in the Region.
+       * * If the source resources are located on an Outpost in your account, specify `OUTPOST` . In
+       * this case, the policy targets all resources of the specified type with matching target tags
+       * across all of the Outposts in your account.
        */
       override fun resourceLocations(vararg resourceLocations: String): Unit =
           resourceLocations(resourceLocations.toList())
@@ -5246,11 +5303,15 @@ public open class CfnLifecyclePolicy(
       /**
        * *[Custom snapshot and AMI policies only]* The location of the resources to backup.
        *
-       * If the source resources are located in an AWS Region , specify `CLOUD` . If the source
-       * resources are located on an Outpost in your account, specify `OUTPOST` .
-       *
-       * If you specify `OUTPOST` , Amazon Data Lifecycle Manager backs up all resources of the
-       * specified type with matching target tags across all of the Outposts in your account.
+       * * If the source resources are located in a Region, specify `CLOUD` . In this case, the
+       * policy targets all resources of the specified type with matching target tags across all
+       * Availability Zones in the Region.
+       * * *[Custom snapshot policies only]* If the source resources are located in a Local Zone,
+       * specify `LOCAL_ZONE` . In this case, the policy targets all resources of the specified type
+       * with matching target tags across all Local Zones in the Region.
+       * * If the source resources are located on an Outpost in your account, specify `OUTPOST` . In
+       * this case, the policy targets all resources of the specified type with matching target tags
+       * across all of the Outposts in your account.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-policydetails.html#cfn-dlm-lifecyclepolicy-policydetails-resourcelocations)
        */
@@ -5849,12 +5910,12 @@ public open class CfnLifecyclePolicy(
     public fun createRule(): Any? = unwrap(this).getCreateRule()
 
     /**
-     * Specifies a rule for copying snapshots or AMIs across regions.
+     * Specifies a rule for copying snapshots or AMIs across Regions.
      *
      *
-     * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost.
-     * If the policy creates snapshots in a Region, then snapshots can be copied to up to three Regions
-     * or Outposts.
+     * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost or
+     * in a Local Zone. If the policy creates snapshots in a Region, then snapshots can be copied to up
+     * to three Regions or Outposts.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-schedule.html#cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules)
@@ -5996,29 +6057,29 @@ public open class CfnLifecyclePolicy(
       public fun createRule(createRule: CreateRuleProperty.Builder.() -> Unit)
 
       /**
-       * @param crossRegionCopyRules Specifies a rule for copying snapshots or AMIs across regions.
+       * @param crossRegionCopyRules Specifies a rule for copying snapshots or AMIs across Regions.
        *
-       * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost.
-       * If the policy creates snapshots in a Region, then snapshots can be copied to up to three
-       * Regions or Outposts.
+       * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost
+       * or in a Local Zone. If the policy creates snapshots in a Region, then snapshots can be copied
+       * to up to three Regions or Outposts.
        */
       public fun crossRegionCopyRules(crossRegionCopyRules: IResolvable)
 
       /**
-       * @param crossRegionCopyRules Specifies a rule for copying snapshots or AMIs across regions.
+       * @param crossRegionCopyRules Specifies a rule for copying snapshots or AMIs across Regions.
        *
-       * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost.
-       * If the policy creates snapshots in a Region, then snapshots can be copied to up to three
-       * Regions or Outposts.
+       * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost
+       * or in a Local Zone. If the policy creates snapshots in a Region, then snapshots can be copied
+       * to up to three Regions or Outposts.
        */
       public fun crossRegionCopyRules(crossRegionCopyRules: List<Any>)
 
       /**
-       * @param crossRegionCopyRules Specifies a rule for copying snapshots or AMIs across regions.
+       * @param crossRegionCopyRules Specifies a rule for copying snapshots or AMIs across Regions.
        *
-       * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost.
-       * If the policy creates snapshots in a Region, then snapshots can be copied to up to three
-       * Regions or Outposts.
+       * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost
+       * or in a Local Zone. If the policy creates snapshots in a Region, then snapshots can be copied
+       * to up to three Regions or Outposts.
        */
       public fun crossRegionCopyRules(vararg crossRegionCopyRules: Any)
 
@@ -6241,33 +6302,33 @@ public open class CfnLifecyclePolicy(
           createRule(CreateRuleProperty(createRule))
 
       /**
-       * @param crossRegionCopyRules Specifies a rule for copying snapshots or AMIs across regions.
+       * @param crossRegionCopyRules Specifies a rule for copying snapshots or AMIs across Regions.
        *
-       * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost.
-       * If the policy creates snapshots in a Region, then snapshots can be copied to up to three
-       * Regions or Outposts.
+       * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost
+       * or in a Local Zone. If the policy creates snapshots in a Region, then snapshots can be copied
+       * to up to three Regions or Outposts.
        */
       override fun crossRegionCopyRules(crossRegionCopyRules: IResolvable) {
         cdkBuilder.crossRegionCopyRules(crossRegionCopyRules.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param crossRegionCopyRules Specifies a rule for copying snapshots or AMIs across regions.
+       * @param crossRegionCopyRules Specifies a rule for copying snapshots or AMIs across Regions.
        *
-       * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost.
-       * If the policy creates snapshots in a Region, then snapshots can be copied to up to three
-       * Regions or Outposts.
+       * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost
+       * or in a Local Zone. If the policy creates snapshots in a Region, then snapshots can be copied
+       * to up to three Regions or Outposts.
        */
       override fun crossRegionCopyRules(crossRegionCopyRules: List<Any>) {
         cdkBuilder.crossRegionCopyRules(crossRegionCopyRules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param crossRegionCopyRules Specifies a rule for copying snapshots or AMIs across regions.
+       * @param crossRegionCopyRules Specifies a rule for copying snapshots or AMIs across Regions.
        *
-       * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost.
-       * If the policy creates snapshots in a Region, then snapshots can be copied to up to three
-       * Regions or Outposts.
+       * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost
+       * or in a Local Zone. If the policy creates snapshots in a Region, then snapshots can be copied
+       * to up to three Regions or Outposts.
        */
       override fun crossRegionCopyRules(vararg crossRegionCopyRules: Any): Unit =
           crossRegionCopyRules(crossRegionCopyRules.toList())
@@ -6468,12 +6529,12 @@ public open class CfnLifecyclePolicy(
       override fun createRule(): Any? = unwrap(this).getCreateRule()
 
       /**
-       * Specifies a rule for copying snapshots or AMIs across regions.
+       * Specifies a rule for copying snapshots or AMIs across Regions.
        *
        *
-       * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost.
-       * If the policy creates snapshots in a Region, then snapshots can be copied to up to three
-       * Regions or Outposts.
+       * You can't specify cross-Region copy rules for policies that create snapshots on an Outpost
+       * or in a Local Zone. If the policy creates snapshots in a Region, then snapshots can be copied
+       * to up to three Regions or Outposts.
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-schedule.html#cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules)

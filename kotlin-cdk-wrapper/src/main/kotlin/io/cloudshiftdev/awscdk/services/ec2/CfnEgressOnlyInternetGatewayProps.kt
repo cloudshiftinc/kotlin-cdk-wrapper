@@ -2,11 +2,13 @@
 
 package io.cloudshiftdev.awscdk.services.ec2
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 
 /**
  * Properties for defining a `CfnEgressOnlyInternetGateway`.
@@ -20,12 +22,24 @@ import kotlin.Unit
  * CfnEgressOnlyInternetGatewayProps cfnEgressOnlyInternetGatewayProps =
  * CfnEgressOnlyInternetGatewayProps.builder()
  * .vpcId("vpcId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-egressonlyinternetgateway.html)
  */
 public interface CfnEgressOnlyInternetGatewayProps {
+  /**
+   * The tags assigned to the egress-only internet gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-egressonlyinternetgateway.html#cfn-ec2-egressonlyinternetgateway-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
   /**
    * The ID of the VPC for which to create the egress-only internet gateway.
    *
@@ -39,6 +53,16 @@ public interface CfnEgressOnlyInternetGatewayProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param tags The tags assigned to the egress-only internet gateway.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags The tags assigned to the egress-only internet gateway.
+     */
+    public fun tags(vararg tags: CfnTag)
+
+    /**
      * @param vpcId The ID of the VPC for which to create the egress-only internet gateway. 
      */
     public fun vpcId(vpcId: String)
@@ -48,6 +72,18 @@ public interface CfnEgressOnlyInternetGatewayProps {
     private val cdkBuilder:
         software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGatewayProps.Builder =
         software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGatewayProps.builder()
+
+    /**
+     * @param tags The tags assigned to the egress-only internet gateway.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags The tags assigned to the egress-only internet gateway.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
      * @param vpcId The ID of the VPC for which to create the egress-only internet gateway. 
@@ -64,6 +100,13 @@ public interface CfnEgressOnlyInternetGatewayProps {
     cdkObject: software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGatewayProps,
   ) : CdkObject(cdkObject),
       CfnEgressOnlyInternetGatewayProps {
+    /**
+     * The tags assigned to the egress-only internet gateway.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-egressonlyinternetgateway.html#cfn-ec2-egressonlyinternetgateway-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
     /**
      * The ID of the VPC for which to create the egress-only internet gateway.
      *

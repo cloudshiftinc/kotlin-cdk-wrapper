@@ -23,7 +23,6 @@ import kotlin.collections.Map
  * CfnCloudWatchAlarmTemplateProps.builder()
  * .comparisonOperator("comparisonOperator")
  * .evaluationPeriods(123)
- * .groupIdentifier("groupIdentifier")
  * .metricName("metricName")
  * .name("name")
  * .period(123)
@@ -34,6 +33,7 @@ import kotlin.collections.Map
  * // the properties below are optional
  * .datapointsToAlarm(123)
  * .description("description")
+ * .groupIdentifier("groupIdentifier")
  * .tags(Map.of(
  * "tagsKey", "tags"))
  * .build();
@@ -82,7 +82,7 @@ public interface CfnCloudWatchAlarmTemplateProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-cloudwatchalarmtemplate.html#cfn-medialive-cloudwatchalarmtemplate-groupidentifier)
    */
-  public fun groupIdentifier(): String
+  public fun groupIdentifier(): String? = unwrap(this).getGroupIdentifier()
 
   /**
    * The name of the metric associated with the alarm.
@@ -177,7 +177,7 @@ public interface CfnCloudWatchAlarmTemplateProps {
     public fun evaluationPeriods(evaluationPeriods: Number)
 
     /**
-     * @param groupIdentifier A cloudwatch alarm template group's identifier. 
+     * @param groupIdentifier A cloudwatch alarm template group's identifier.
      * Can be either be its id or current name.
      */
     public fun groupIdentifier(groupIdentifier: String)
@@ -264,7 +264,7 @@ public interface CfnCloudWatchAlarmTemplateProps {
     }
 
     /**
-     * @param groupIdentifier A cloudwatch alarm template group's identifier. 
+     * @param groupIdentifier A cloudwatch alarm template group's identifier.
      * Can be either be its id or current name.
      */
     override fun groupIdentifier(groupIdentifier: String) {
@@ -379,7 +379,7 @@ public interface CfnCloudWatchAlarmTemplateProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-cloudwatchalarmtemplate.html#cfn-medialive-cloudwatchalarmtemplate-groupidentifier)
      */
-    override fun groupIdentifier(): String = unwrap(this).getGroupIdentifier()
+    override fun groupIdentifier(): String? = unwrap(this).getGroupIdentifier()
 
     /**
      * The name of the metric associated with the alarm.

@@ -70,7 +70,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .replicatorName("replicatorName")
  * .serviceExecutionRoleArn("serviceExecutionRoleArn")
  * // the properties below are optional
- * .currentVersion("currentVersion")
  * .description("description")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -103,6 +102,11 @@ public open class CfnReplicator(
   )
 
   /**
+   * The current version number of the replicator.
+   */
+  public open fun attrCurrentVersion(): String = unwrap(this).getAttrCurrentVersion()
+
+  /**
    * Amazon Resource Name (ARN) for the created replicator.
    */
   public open fun attrReplicatorArn(): String = unwrap(this).getAttrReplicatorArn()
@@ -112,18 +116,6 @@ public open class CfnReplicator(
    */
   public override fun cdkTagManager(): TagManager =
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
-
-  /**
-   * The current version number of the replicator.
-   */
-  public open fun currentVersion(): String? = unwrap(this).getCurrentVersion()
-
-  /**
-   * The current version number of the replicator.
-   */
-  public open fun currentVersion(`value`: String) {
-    unwrap(this).setCurrentVersion(`value`)
-  }
 
   /**
    * A summary description of the replicator.
@@ -248,14 +240,6 @@ public open class CfnReplicator(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The current version number of the replicator.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-currentversion)
-     * @param currentVersion The current version number of the replicator. 
-     */
-    public fun currentVersion(currentVersion: String)
-
-    /**
      * A summary description of the replicator.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-description)
@@ -360,16 +344,6 @@ public open class CfnReplicator(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.msk.CfnReplicator.Builder =
         software.amazon.awscdk.services.msk.CfnReplicator.Builder.create(scope, id)
-
-    /**
-     * The current version number of the replicator.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-currentversion)
-     * @param currentVersion The current version number of the replicator. 
-     */
-    override fun currentVersion(currentVersion: String) {
-      cdkBuilder.currentVersion(currentVersion)
-    }
 
     /**
      * A summary description of the replicator.

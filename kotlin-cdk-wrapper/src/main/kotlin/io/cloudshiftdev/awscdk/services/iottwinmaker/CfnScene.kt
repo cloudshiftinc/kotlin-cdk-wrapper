@@ -154,15 +154,15 @@ public open class CfnScene(
   /**
    * The scene metadata.
    */
-  public open fun sceneMetadata(`value`: IResolvable) {
-    unwrap(this).setSceneMetadata(`value`.let(IResolvable.Companion::unwrap))
+  public open fun sceneMetadata(`value`: Map<String, String>) {
+    unwrap(this).setSceneMetadata(`value`)
   }
 
   /**
    * The scene metadata.
    */
-  public open fun sceneMetadata(`value`: Map<String, String>) {
-    unwrap(this).setSceneMetadata(`value`)
+  public open fun sceneMetadata(`value`: IResolvable) {
+    unwrap(this).setSceneMetadata(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -246,7 +246,7 @@ public open class CfnScene(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-scenemetadata)
      * @param sceneMetadata The scene metadata. 
      */
-    public fun sceneMetadata(sceneMetadata: IResolvable)
+    public fun sceneMetadata(sceneMetadata: Map<String, String>)
 
     /**
      * The scene metadata.
@@ -254,7 +254,7 @@ public open class CfnScene(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-scenemetadata)
      * @param sceneMetadata The scene metadata. 
      */
-    public fun sceneMetadata(sceneMetadata: Map<String, String>)
+    public fun sceneMetadata(sceneMetadata: IResolvable)
 
     /**
      * The ComponentType tags.
@@ -336,8 +336,8 @@ public open class CfnScene(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-scenemetadata)
      * @param sceneMetadata The scene metadata. 
      */
-    override fun sceneMetadata(sceneMetadata: IResolvable) {
-      cdkBuilder.sceneMetadata(sceneMetadata.let(IResolvable.Companion::unwrap))
+    override fun sceneMetadata(sceneMetadata: Map<String, String>) {
+      cdkBuilder.sceneMetadata(sceneMetadata)
     }
 
     /**
@@ -346,8 +346,8 @@ public open class CfnScene(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-scenemetadata)
      * @param sceneMetadata The scene metadata. 
      */
-    override fun sceneMetadata(sceneMetadata: Map<String, String>) {
-      cdkBuilder.sceneMetadata(sceneMetadata)
+    override fun sceneMetadata(sceneMetadata: IResolvable) {
+      cdkBuilder.sceneMetadata(sceneMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**

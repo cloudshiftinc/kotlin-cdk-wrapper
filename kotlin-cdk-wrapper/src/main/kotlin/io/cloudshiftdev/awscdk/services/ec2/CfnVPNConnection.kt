@@ -198,12 +198,12 @@ public open class CfnVPNConnection(
   }
 
   /**
-   * The type of IPv4 address assigned to the outside interface of the customer gateway device.
+   * The type of IP address assigned to the outside interface of the customer gateway device.
    */
   public open fun outsideIpAddressType(): String? = unwrap(this).getOutsideIpAddressType()
 
   /**
-   * The type of IPv4 address assigned to the outside interface of the customer gateway device.
+   * The type of IP address assigned to the outside interface of the customer gateway device.
    */
   public open fun outsideIpAddressType(`value`: String) {
     unwrap(this).setOutsideIpAddressType(`value`)
@@ -418,14 +418,14 @@ public open class CfnVPNConnection(
     public fun localIpv6NetworkCidr(localIpv6NetworkCidr: String)
 
     /**
-     * The type of IPv4 address assigned to the outside interface of the customer gateway device.
+     * The type of IP address assigned to the outside interface of the customer gateway device.
      *
-     * Valid values: `PrivateIpv4` | `PublicIpv4`
+     * Valid values: `PrivateIpv4` | `PublicIpv4` | `Ipv6`
      *
      * Default: `PublicIpv4`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-outsideipaddresstype)
-     * @param outsideIpAddressType The type of IPv4 address assigned to the outside interface of the
+     * @param outsideIpAddressType The type of IP address assigned to the outside interface of the
      * customer gateway device. 
      */
     public fun outsideIpAddressType(outsideIpAddressType: String)
@@ -635,14 +635,14 @@ public open class CfnVPNConnection(
     }
 
     /**
-     * The type of IPv4 address assigned to the outside interface of the customer gateway device.
+     * The type of IP address assigned to the outside interface of the customer gateway device.
      *
-     * Valid values: `PrivateIpv4` | `PublicIpv4`
+     * Valid values: `PrivateIpv4` | `PublicIpv4` | `Ipv6`
      *
      * Default: `PublicIpv4`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-outsideipaddresstype)
-     * @param outsideIpAddressType The type of IPv4 address assigned to the outside interface of the
+     * @param outsideIpAddressType The type of IP address assigned to the outside interface of the
      * customer gateway device. 
      */
     override fun outsideIpAddressType(outsideIpAddressType: String) {

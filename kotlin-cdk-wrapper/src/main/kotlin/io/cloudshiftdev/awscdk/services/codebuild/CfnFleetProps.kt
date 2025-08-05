@@ -27,6 +27,7 @@ import kotlin.jvm.JvmName
  * .baseCapacity(123)
  * .computeConfiguration(ComputeConfigurationProperty.builder()
  * .disk(123)
+ * .instanceType("instanceType")
  * .machineType("machineType")
  * .memory(123)
  * .vCpu(123)
@@ -79,7 +80,8 @@ public interface CfnFleetProps {
   /**
    * The compute configuration of the compute fleet.
    *
-   * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+   * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` or
+   * `CUSTOM_INSTANCE_TYPE` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration)
    */
@@ -272,19 +274,22 @@ public interface CfnFleetProps {
 
     /**
      * @param computeConfiguration The compute configuration of the compute fleet.
-     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` or
+     * `CUSTOM_INSTANCE_TYPE` .
      */
     public fun computeConfiguration(computeConfiguration: IResolvable)
 
     /**
      * @param computeConfiguration The compute configuration of the compute fleet.
-     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` or
+     * `CUSTOM_INSTANCE_TYPE` .
      */
     public fun computeConfiguration(computeConfiguration: CfnFleet.ComputeConfigurationProperty)
 
     /**
      * @param computeConfiguration The compute configuration of the compute fleet.
-     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` or
+     * `CUSTOM_INSTANCE_TYPE` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("eef64696e9e535b61b2ca5b72ad98eff19cde3053d2afa5324d2b74b708e5ce3")
@@ -505,7 +510,8 @@ public interface CfnFleetProps {
 
     /**
      * @param computeConfiguration The compute configuration of the compute fleet.
-     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` or
+     * `CUSTOM_INSTANCE_TYPE` .
      */
     override fun computeConfiguration(computeConfiguration: IResolvable) {
       cdkBuilder.computeConfiguration(computeConfiguration.let(IResolvable.Companion::unwrap))
@@ -513,7 +519,8 @@ public interface CfnFleetProps {
 
     /**
      * @param computeConfiguration The compute configuration of the compute fleet.
-     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` or
+     * `CUSTOM_INSTANCE_TYPE` .
      */
     override fun computeConfiguration(computeConfiguration: CfnFleet.ComputeConfigurationProperty) {
       cdkBuilder.computeConfiguration(computeConfiguration.let(CfnFleet.ComputeConfigurationProperty.Companion::unwrap))
@@ -521,7 +528,8 @@ public interface CfnFleetProps {
 
     /**
      * @param computeConfiguration The compute configuration of the compute fleet.
-     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` or
+     * `CUSTOM_INSTANCE_TYPE` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("eef64696e9e535b61b2ca5b72ad98eff19cde3053d2afa5324d2b74b708e5ce3")
@@ -777,7 +785,8 @@ public interface CfnFleetProps {
     /**
      * The compute configuration of the compute fleet.
      *
-     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` or
+     * `CUSTOM_INSTANCE_TYPE` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration)
      */

@@ -45,6 +45,9 @@ public open class WaitTime(
     public fun duration(duration: Duration): WaitTime =
         software.amazon.awscdk.services.stepfunctions.WaitTime.duration(duration.let(Duration.Companion::unwrap)).let(WaitTime::wrap)
 
+    public fun seconds(seconds: String): WaitTime =
+        software.amazon.awscdk.services.stepfunctions.WaitTime.seconds(seconds).let(WaitTime::wrap)
+
     public fun secondsPath(path: String): WaitTime =
         software.amazon.awscdk.services.stepfunctions.WaitTime.secondsPath(path).let(WaitTime::wrap)
 

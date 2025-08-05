@@ -103,12 +103,12 @@ public interface CfnApplicationProps {
     /**
      * @param parameters the value to be set.
      */
-    public fun parameters(parameters: IResolvable)
+    public fun parameters(parameters: Map<String, String>)
 
     /**
      * @param parameters the value to be set.
      */
-    public fun parameters(parameters: Map<String, String>)
+    public fun parameters(parameters: IResolvable)
 
     /**
      * @param tags the value to be set.
@@ -170,15 +170,15 @@ public interface CfnApplicationProps {
     /**
      * @param parameters the value to be set.
      */
-    override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+    override fun parameters(parameters: Map<String, String>) {
+      cdkBuilder.parameters(parameters)
     }
 
     /**
      * @param parameters the value to be set.
      */
-    override fun parameters(parameters: Map<String, String>) {
-      cdkBuilder.parameters(parameters)
+    override fun parameters(parameters: IResolvable) {
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**

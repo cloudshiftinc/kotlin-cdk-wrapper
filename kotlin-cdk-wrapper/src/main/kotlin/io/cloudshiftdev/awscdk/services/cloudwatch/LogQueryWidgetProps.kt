@@ -27,6 +27,20 @@ import kotlin.collections.List
  */
 public interface LogQueryWidgetProps {
   /**
+   * The AWS account ID where the log groups are located.
+   *
+   * This enables cross-account functionality for CloudWatch dashboards.
+   * Before using this feature, ensure that proper cross-account sharing is configured
+   * between the monitoring account and source account.
+   *
+   * For more information, see:
+   * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+   *
+   * Default: - Current account
+   */
+  public fun accountId(): String? = unwrap(this).getAccountId()
+
+  /**
    * Height of the widget.
    *
    * Default: 6
@@ -37,6 +51,14 @@ public interface LogQueryWidgetProps {
    * Names of log groups to query.
    */
   public fun logGroupNames(): List<String>
+
+  /**
+   * The query language to use for the query.
+   *
+   * Default: LogQueryLanguage.LOGS_INSIGHTS
+   */
+  public fun queryLanguage(): LogQueryLanguage? =
+      unwrap(this).getQueryLanguage()?.let(LogQueryLanguage::wrap)
 
   /**
    * A sequence of lines to use to build the query.
@@ -92,6 +114,17 @@ public interface LogQueryWidgetProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param accountId The AWS account ID where the log groups are located.
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     */
+    public fun accountId(accountId: String)
+
+    /**
      * @param height Height of the widget.
      */
     public fun height(height: Number)
@@ -105,6 +138,11 @@ public interface LogQueryWidgetProps {
      * @param logGroupNames Names of log groups to query. 
      */
     public fun logGroupNames(vararg logGroupNames: String)
+
+    /**
+     * @param queryLanguage The query language to use for the query.
+     */
+    public fun queryLanguage(queryLanguage: LogQueryLanguage)
 
     /**
      * @param queryLines A sequence of lines to use to build the query.
@@ -151,6 +189,19 @@ public interface LogQueryWidgetProps {
         software.amazon.awscdk.services.cloudwatch.LogQueryWidgetProps.builder()
 
     /**
+     * @param accountId The AWS account ID where the log groups are located.
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     */
+    override fun accountId(accountId: String) {
+      cdkBuilder.accountId(accountId)
+    }
+
+    /**
      * @param height Height of the widget.
      */
     override fun height(height: Number) {
@@ -169,6 +220,13 @@ public interface LogQueryWidgetProps {
      */
     override fun logGroupNames(vararg logGroupNames: String): Unit =
         logGroupNames(logGroupNames.toList())
+
+    /**
+     * @param queryLanguage The query language to use for the query.
+     */
+    override fun queryLanguage(queryLanguage: LogQueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(LogQueryLanguage.Companion::unwrap))
+    }
 
     /**
      * @param queryLines A sequence of lines to use to build the query.
@@ -230,6 +288,20 @@ public interface LogQueryWidgetProps {
   ) : CdkObject(cdkObject),
       LogQueryWidgetProps {
     /**
+     * The AWS account ID where the log groups are located.
+     *
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     *
+     * Default: - Current account
+     */
+    override fun accountId(): String? = unwrap(this).getAccountId()
+
+    /**
      * Height of the widget.
      *
      * Default: 6
@@ -240,6 +312,14 @@ public interface LogQueryWidgetProps {
      * Names of log groups to query.
      */
     override fun logGroupNames(): List<String> = unwrap(this).getLogGroupNames()
+
+    /**
+     * The query language to use for the query.
+     *
+     * Default: LogQueryLanguage.LOGS_INSIGHTS
+     */
+    override fun queryLanguage(): LogQueryLanguage? =
+        unwrap(this).getQueryLanguage()?.let(LogQueryLanguage::wrap)
 
     /**
      * A sequence of lines to use to build the query.

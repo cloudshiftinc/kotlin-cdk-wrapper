@@ -14,6 +14,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.collections.Map
 import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
@@ -28,11 +29,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.omics.*;
+ * Object s3AccessPolicy;
  * CfnSequenceStore cfnSequenceStore = CfnSequenceStore.Builder.create(this, "MyCfnSequenceStore")
  * .name("name")
  * // the properties below are optional
+ * .accessLogLocation("accessLogLocation")
  * .description("description")
+ * .eTagAlgorithmFamily("eTagAlgorithmFamily")
  * .fallbackLocation("fallbackLocation")
+ * .propagatedSetLevelTags(List.of("propagatedSetLevelTags"))
+ * .s3AccessPolicy(s3AccessPolicy)
  * .sseConfig(SseConfigProperty.builder()
  * .type("type")
  * // the properties below are optional
@@ -67,6 +73,18 @@ public open class CfnSequenceStore(
   )
 
   /**
+   * Location of the access logs.
+   */
+  public open fun accessLogLocation(): String? = unwrap(this).getAccessLogLocation()
+
+  /**
+   * Location of the access logs.
+   */
+  public open fun accessLogLocation(`value`: String) {
+    unwrap(this).setAccessLogLocation(`value`)
+  }
+
+  /**
    * The store's ARN.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
@@ -77,9 +95,34 @@ public open class CfnSequenceStore(
   public open fun attrCreationTime(): String = unwrap(this).getAttrCreationTime()
 
   /**
+   * This is ARN of the access point associated with the S3 bucket storing read sets.
+   */
+  public open fun attrS3AccessPointArn(): String = unwrap(this).getAttrS3AccessPointArn()
+
+  /**
+   * The S3 URI of the sequence store.
+   */
+  public open fun attrS3Uri(): String = unwrap(this).getAttrS3Uri()
+
+  /**
    * The store's ID.
    */
   public open fun attrSequenceStoreId(): String = unwrap(this).getAttrSequenceStoreId()
+
+  /**
+   * Status of the sequence store.
+   */
+  public open fun attrStatus(): String = unwrap(this).getAttrStatus()
+
+  /**
+   * The status message of the sequence store.
+   */
+  public open fun attrStatusMessage(): String = unwrap(this).getAttrStatusMessage()
+
+  /**
+   * The last-updated time of the Sequence Store.
+   */
+  public open fun attrUpdateTime(): String = unwrap(this).getAttrUpdateTime()
 
   /**
    * A description for the store.
@@ -91,6 +134,18 @@ public open class CfnSequenceStore(
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
+  }
+
+  /**
+   * The algorithm family of the ETag.
+   */
+  public open fun eTagAlgorithmFamily(): String? = unwrap(this).getETagAlgorithmFamily()
+
+  /**
+   * The algorithm family of the ETag.
+   */
+  public open fun eTagAlgorithmFamily(`value`: String) {
+    unwrap(this).setETagAlgorithmFamily(`value`)
   }
 
   /**
@@ -124,6 +179,37 @@ public open class CfnSequenceStore(
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
+  }
+
+  /**
+   * The tags keys to propagate to the S3 objects associated with read sets in the sequence store.
+   */
+  public open fun propagatedSetLevelTags(): List<String> = unwrap(this).getPropagatedSetLevelTags()
+      ?: emptyList()
+
+  /**
+   * The tags keys to propagate to the S3 objects associated with read sets in the sequence store.
+   */
+  public open fun propagatedSetLevelTags(`value`: List<String>) {
+    unwrap(this).setPropagatedSetLevelTags(`value`)
+  }
+
+  /**
+   * The tags keys to propagate to the S3 objects associated with read sets in the sequence store.
+   */
+  public open fun propagatedSetLevelTags(vararg `value`: String): Unit =
+      propagatedSetLevelTags(`value`.toList())
+
+  /**
+   * The resource policy that controls S3 access on the store.
+   */
+  public open fun s3AccessPolicy(): Any? = unwrap(this).getS3AccessPolicy()
+
+  /**
+   * The resource policy that controls S3 access on the store.
+   */
+  public open fun s3AccessPolicy(`value`: Any) {
+    unwrap(this).setS3AccessPolicy(`value`)
   }
 
   /**
@@ -176,12 +262,28 @@ public open class CfnSequenceStore(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Location of the access logs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-accessloglocation)
+     * @param accessLogLocation Location of the access logs. 
+     */
+    public fun accessLogLocation(accessLogLocation: String)
+
+    /**
      * A description for the store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-description)
      * @param description A description for the store. 
      */
     public fun description(description: String)
+
+    /**
+     * The algorithm family of the ETag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-etagalgorithmfamily)
+     * @param eTagAlgorithmFamily The algorithm family of the ETag. 
+     */
+    public fun eTagAlgorithmFamily(eTagAlgorithmFamily: String)
 
     /**
      * An S3 location that is used to store files that have failed a direct upload.
@@ -199,6 +301,32 @@ public open class CfnSequenceStore(
      * @param name A name for the store. 
      */
     public fun name(name: String)
+
+    /**
+     * The tags keys to propagate to the S3 objects associated with read sets in the sequence store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-propagatedsetleveltags)
+     * @param propagatedSetLevelTags The tags keys to propagate to the S3 objects associated with
+     * read sets in the sequence store. 
+     */
+    public fun propagatedSetLevelTags(propagatedSetLevelTags: List<String>)
+
+    /**
+     * The tags keys to propagate to the S3 objects associated with read sets in the sequence store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-propagatedsetleveltags)
+     * @param propagatedSetLevelTags The tags keys to propagate to the S3 objects associated with
+     * read sets in the sequence store. 
+     */
+    public fun propagatedSetLevelTags(vararg propagatedSetLevelTags: String)
+
+    /**
+     * The resource policy that controls S3 access on the store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-s3accesspolicy)
+     * @param s3AccessPolicy The resource policy that controls S3 access on the store. 
+     */
+    public fun s3AccessPolicy(s3AccessPolicy: Any)
 
     /**
      * Server-side encryption (SSE) settings for the store.
@@ -243,6 +371,16 @@ public open class CfnSequenceStore(
         software.amazon.awscdk.services.omics.CfnSequenceStore.Builder.create(scope, id)
 
     /**
+     * Location of the access logs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-accessloglocation)
+     * @param accessLogLocation Location of the access logs. 
+     */
+    override fun accessLogLocation(accessLogLocation: String) {
+      cdkBuilder.accessLogLocation(accessLogLocation)
+    }
+
+    /**
      * A description for the store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-description)
@@ -250,6 +388,16 @@ public open class CfnSequenceStore(
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
+    }
+
+    /**
+     * The algorithm family of the ETag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-etagalgorithmfamily)
+     * @param eTagAlgorithmFamily The algorithm family of the ETag. 
+     */
+    override fun eTagAlgorithmFamily(eTagAlgorithmFamily: String) {
+      cdkBuilder.eTagAlgorithmFamily(eTagAlgorithmFamily)
     }
 
     /**
@@ -271,6 +419,37 @@ public open class CfnSequenceStore(
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * The tags keys to propagate to the S3 objects associated with read sets in the sequence store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-propagatedsetleveltags)
+     * @param propagatedSetLevelTags The tags keys to propagate to the S3 objects associated with
+     * read sets in the sequence store. 
+     */
+    override fun propagatedSetLevelTags(propagatedSetLevelTags: List<String>) {
+      cdkBuilder.propagatedSetLevelTags(propagatedSetLevelTags)
+    }
+
+    /**
+     * The tags keys to propagate to the S3 objects associated with read sets in the sequence store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-propagatedsetleveltags)
+     * @param propagatedSetLevelTags The tags keys to propagate to the S3 objects associated with
+     * read sets in the sequence store. 
+     */
+    override fun propagatedSetLevelTags(vararg propagatedSetLevelTags: String): Unit =
+        propagatedSetLevelTags(propagatedSetLevelTags.toList())
+
+    /**
+     * The resource policy that controls S3 access on the store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-s3accesspolicy)
+     * @param s3AccessPolicy The resource policy that controls S3 access on the store. 
+     */
+    override fun s3AccessPolicy(s3AccessPolicy: Any) {
+      cdkBuilder.s3AccessPolicy(s3AccessPolicy)
     }
 
     /**

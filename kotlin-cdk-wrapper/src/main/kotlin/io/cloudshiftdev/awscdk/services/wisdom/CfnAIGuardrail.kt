@@ -22,7 +22,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Definition of AWS::Wisdom::AIGuardrail Resource Type.
+ * Creates an Amazon Q in Connect AI Guardrail.
  *
  * Example:
  *
@@ -109,51 +109,51 @@ public open class CfnAIGuardrail(
   )
 
   /**
-   *
+   * The identifier of the Amazon Q in Connect assistant.
    */
   public open fun assistantId(): String = unwrap(this).getAssistantId()
 
   /**
-   *
+   * The identifier of the Amazon Q in Connect assistant.
    */
   public open fun assistantId(`value`: String) {
     unwrap(this).setAssistantId(`value`)
   }
 
   /**
-   *
+   * The Amazon Resource Name (ARN) of the AI Guardrail.
    */
   public open fun attrAiGuardrailArn(): String = unwrap(this).getAttrAiGuardrailArn()
 
   /**
-   *
+   * The identifier of the Amazon Q in Connect AI Guardrail.
    */
   public open fun attrAiGuardrailId(): String = unwrap(this).getAttrAiGuardrailId()
 
   /**
-   *
+   * The Amazon Resource Name (ARN) of the Amazon Q in Connect assistant.
    */
   public open fun attrAssistantArn(): String = unwrap(this).getAttrAssistantArn()
 
   /**
-   * Messaging for when violations are detected in text.
+   * The message to return when the AI Guardrail blocks a prompt.
    */
   public open fun blockedInputMessaging(): String = unwrap(this).getBlockedInputMessaging()
 
   /**
-   * Messaging for when violations are detected in text.
+   * The message to return when the AI Guardrail blocks a prompt.
    */
   public open fun blockedInputMessaging(`value`: String) {
     unwrap(this).setBlockedInputMessaging(`value`)
   }
 
   /**
-   * Messaging for when violations are detected in text.
+   * The message to return when the AI Guardrail blocks a model response.
    */
   public open fun blockedOutputsMessaging(): String = unwrap(this).getBlockedOutputsMessaging()
 
   /**
-   * Messaging for when violations are detected in text.
+   * The message to return when the AI Guardrail blocks a model response.
    */
   public open fun blockedOutputsMessaging(`value`: String) {
     unwrap(this).setBlockedOutputsMessaging(`value`)
@@ -166,26 +166,26 @@ public open class CfnAIGuardrail(
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
-   * Content policy config for a guardrail.
+   * Contains details about how to handle harmful content.
    */
   public open fun contentPolicyConfig(): Any? = unwrap(this).getContentPolicyConfig()
 
   /**
-   * Content policy config for a guardrail.
+   * Contains details about how to handle harmful content.
    */
   public open fun contentPolicyConfig(`value`: IResolvable) {
     unwrap(this).setContentPolicyConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Content policy config for a guardrail.
+   * Contains details about how to handle harmful content.
    */
   public open fun contentPolicyConfig(`value`: AIGuardrailContentPolicyConfigProperty) {
     unwrap(this).setContentPolicyConfig(`value`.let(AIGuardrailContentPolicyConfigProperty.Companion::unwrap))
   }
 
   /**
-   * Content policy config for a guardrail.
+   * Contains details about how to handle harmful content.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("47e21566c18416e84d4bd237dfeb18260aa10921c2c5827d3c956a7b089583ec")
@@ -194,20 +194,20 @@ public open class CfnAIGuardrail(
       Unit = contentPolicyConfig(AIGuardrailContentPolicyConfigProperty(`value`))
 
   /**
-   * Contextual grounding policy config for a guardrail.
+   * The policy configuration details for the AI Guardrail's contextual grounding policy.
    */
   public open fun contextualGroundingPolicyConfig(): Any? =
       unwrap(this).getContextualGroundingPolicyConfig()
 
   /**
-   * Contextual grounding policy config for a guardrail.
+   * The policy configuration details for the AI Guardrail's contextual grounding policy.
    */
   public open fun contextualGroundingPolicyConfig(`value`: IResolvable) {
     unwrap(this).setContextualGroundingPolicyConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Contextual grounding policy config for a guardrail.
+   * The policy configuration details for the AI Guardrail's contextual grounding policy.
    */
   public open
       fun contextualGroundingPolicyConfig(`value`: AIGuardrailContextualGroundingPolicyConfigProperty) {
@@ -215,7 +215,7 @@ public open class CfnAIGuardrail(
   }
 
   /**
-   * Contextual grounding policy config for a guardrail.
+   * The policy configuration details for the AI Guardrail's contextual grounding policy.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("d0308b4f1944da023fdbbb11f5b68d51f25e7e984d41b34477207125260ecba4")
@@ -225,12 +225,12 @@ public open class CfnAIGuardrail(
       contextualGroundingPolicyConfig(AIGuardrailContextualGroundingPolicyConfigProperty(`value`))
 
   /**
-   * Description of the guardrail or its version.
+   * A description of the AI Guardrail.
    */
   public open fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * Description of the guardrail or its version.
+   * A description of the AI Guardrail.
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
@@ -246,32 +246,32 @@ public open class CfnAIGuardrail(
   }
 
   /**
-   *
+   * The name of the AI Guardrail.
    */
   public open fun name(): String? = unwrap(this).getName()
 
   /**
-   *
+   * The name of the AI Guardrail.
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
   }
 
   /**
-   * Sensitive information policy config for a guardrail.
+   * Contains details about PII entities and regular expressions to configure for the AI Guardrail.
    */
   public open fun sensitiveInformationPolicyConfig(): Any? =
       unwrap(this).getSensitiveInformationPolicyConfig()
 
   /**
-   * Sensitive information policy config for a guardrail.
+   * Contains details about PII entities and regular expressions to configure for the AI Guardrail.
    */
   public open fun sensitiveInformationPolicyConfig(`value`: IResolvable) {
     unwrap(this).setSensitiveInformationPolicyConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Sensitive information policy config for a guardrail.
+   * Contains details about PII entities and regular expressions to configure for the AI Guardrail.
    */
   public open
       fun sensitiveInformationPolicyConfig(`value`: AIGuardrailSensitiveInformationPolicyConfigProperty) {
@@ -279,7 +279,7 @@ public open class CfnAIGuardrail(
   }
 
   /**
-   * Sensitive information policy config for a guardrail.
+   * Contains details about PII entities and regular expressions to configure for the AI Guardrail.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("94e82f78fddc1c7aa2d40db852df62f16489a684688d4f5e5108042b399793f3")
@@ -289,38 +289,38 @@ public open class CfnAIGuardrail(
       sensitiveInformationPolicyConfig(AIGuardrailSensitiveInformationPolicyConfigProperty(`value`))
 
   /**
-   *
+   * The tags used to organize, track, or control access for this resource.
    */
   public open fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
   /**
-   *
+   * The tags used to organize, track, or control access for this resource.
    */
   public open fun tags(`value`: Map<String, String>) {
     unwrap(this).setTags(`value`)
   }
 
   /**
-   * Topic policy config for a guardrail.
+   * Contains details about topics that the AI Guardrail should identify and deny.
    */
   public open fun topicPolicyConfig(): Any? = unwrap(this).getTopicPolicyConfig()
 
   /**
-   * Topic policy config for a guardrail.
+   * Contains details about topics that the AI Guardrail should identify and deny.
    */
   public open fun topicPolicyConfig(`value`: IResolvable) {
     unwrap(this).setTopicPolicyConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Topic policy config for a guardrail.
+   * Contains details about topics that the AI Guardrail should identify and deny.
    */
   public open fun topicPolicyConfig(`value`: AIGuardrailTopicPolicyConfigProperty) {
     unwrap(this).setTopicPolicyConfig(`value`.let(AIGuardrailTopicPolicyConfigProperty.Companion::unwrap))
   }
 
   /**
-   * Topic policy config for a guardrail.
+   * Contains details about topics that the AI Guardrail should identify and deny.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("53b9aeb439c0dec89297fb842f9b287b67fe473b8981dd3c18b018ee5831b693")
@@ -329,26 +329,26 @@ public open class CfnAIGuardrail(
       = topicPolicyConfig(AIGuardrailTopicPolicyConfigProperty(`value`))
 
   /**
-   * Word policy config for a guardrail.
+   * Contains details about the word policy to configured for the AI Guardrail.
    */
   public open fun wordPolicyConfig(): Any? = unwrap(this).getWordPolicyConfig()
 
   /**
-   * Word policy config for a guardrail.
+   * Contains details about the word policy to configured for the AI Guardrail.
    */
   public open fun wordPolicyConfig(`value`: IResolvable) {
     unwrap(this).setWordPolicyConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Word policy config for a guardrail.
+   * Contains details about the word policy to configured for the AI Guardrail.
    */
   public open fun wordPolicyConfig(`value`: AIGuardrailWordPolicyConfigProperty) {
     unwrap(this).setWordPolicyConfig(`value`.let(AIGuardrailWordPolicyConfigProperty.Companion::unwrap))
   }
 
   /**
-   * Word policy config for a guardrail.
+   * Contains details about the word policy to configured for the AI Guardrail.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("4928a472a707df488654ca89d89f60ce16fd305aee332c95b685f30df77c1708")
@@ -361,48 +361,53 @@ public open class CfnAIGuardrail(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The identifier of the Amazon Q in Connect assistant.
+     *
+     * Can be either the ID or the ARN. URLs cannot contain the ARN.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-assistantid)
-     * @param assistantId 
+     * @param assistantId The identifier of the Amazon Q in Connect assistant. 
      */
     public fun assistantId(assistantId: String)
 
     /**
-     * Messaging for when violations are detected in text.
+     * The message to return when the AI Guardrail blocks a prompt.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-blockedinputmessaging)
-     * @param blockedInputMessaging Messaging for when violations are detected in text. 
+     * @param blockedInputMessaging The message to return when the AI Guardrail blocks a prompt. 
      */
     public fun blockedInputMessaging(blockedInputMessaging: String)
 
     /**
-     * Messaging for when violations are detected in text.
+     * The message to return when the AI Guardrail blocks a model response.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-blockedoutputsmessaging)
-     * @param blockedOutputsMessaging Messaging for when violations are detected in text. 
+     * @param blockedOutputsMessaging The message to return when the AI Guardrail blocks a model
+     * response. 
      */
     public fun blockedOutputsMessaging(blockedOutputsMessaging: String)
 
     /**
-     * Content policy config for a guardrail.
+     * Contains details about how to handle harmful content.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-contentpolicyconfig)
-     * @param contentPolicyConfig Content policy config for a guardrail. 
+     * @param contentPolicyConfig Contains details about how to handle harmful content. 
      */
     public fun contentPolicyConfig(contentPolicyConfig: IResolvable)
 
     /**
-     * Content policy config for a guardrail.
+     * Contains details about how to handle harmful content.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-contentpolicyconfig)
-     * @param contentPolicyConfig Content policy config for a guardrail. 
+     * @param contentPolicyConfig Contains details about how to handle harmful content. 
      */
     public fun contentPolicyConfig(contentPolicyConfig: AIGuardrailContentPolicyConfigProperty)
 
     /**
-     * Content policy config for a guardrail.
+     * Contains details about how to handle harmful content.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-contentpolicyconfig)
-     * @param contentPolicyConfig Content policy config for a guardrail. 
+     * @param contentPolicyConfig Contains details about how to handle harmful content. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e0e35d95e7cd9abba1688c8f7b3013b09d4387749a99b5513d274c8f12938f4a")
@@ -410,27 +415,30 @@ public open class CfnAIGuardrail(
         fun contentPolicyConfig(contentPolicyConfig: AIGuardrailContentPolicyConfigProperty.Builder.() -> Unit)
 
     /**
-     * Contextual grounding policy config for a guardrail.
+     * The policy configuration details for the AI Guardrail's contextual grounding policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-contextualgroundingpolicyconfig)
-     * @param contextualGroundingPolicyConfig Contextual grounding policy config for a guardrail. 
+     * @param contextualGroundingPolicyConfig The policy configuration details for the AI
+     * Guardrail's contextual grounding policy. 
      */
     public fun contextualGroundingPolicyConfig(contextualGroundingPolicyConfig: IResolvable)
 
     /**
-     * Contextual grounding policy config for a guardrail.
+     * The policy configuration details for the AI Guardrail's contextual grounding policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-contextualgroundingpolicyconfig)
-     * @param contextualGroundingPolicyConfig Contextual grounding policy config for a guardrail. 
+     * @param contextualGroundingPolicyConfig The policy configuration details for the AI
+     * Guardrail's contextual grounding policy. 
      */
     public
         fun contextualGroundingPolicyConfig(contextualGroundingPolicyConfig: AIGuardrailContextualGroundingPolicyConfigProperty)
 
     /**
-     * Contextual grounding policy config for a guardrail.
+     * The policy configuration details for the AI Guardrail's contextual grounding policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-contextualgroundingpolicyconfig)
-     * @param contextualGroundingPolicyConfig Contextual grounding policy config for a guardrail. 
+     * @param contextualGroundingPolicyConfig The policy configuration details for the AI
+     * Guardrail's contextual grounding policy. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7f5bff589c511ae1654609eac6e7db8492667649d3ea5dc95d279e2f4ac402c6")
@@ -438,41 +446,49 @@ public open class CfnAIGuardrail(
         fun contextualGroundingPolicyConfig(contextualGroundingPolicyConfig: AIGuardrailContextualGroundingPolicyConfigProperty.Builder.() -> Unit)
 
     /**
-     * Description of the guardrail or its version.
+     * A description of the AI Guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-description)
-     * @param description Description of the guardrail or its version. 
+     * @param description A description of the AI Guardrail. 
      */
     public fun description(description: String)
 
     /**
+     * The name of the AI Guardrail.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-name)
-     * @param name 
+     * @param name The name of the AI Guardrail. 
      */
     public fun name(name: String)
 
     /**
-     * Sensitive information policy config for a guardrail.
+     * Contains details about PII entities and regular expressions to configure for the AI
+     * Guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-sensitiveinformationpolicyconfig)
-     * @param sensitiveInformationPolicyConfig Sensitive information policy config for a guardrail. 
+     * @param sensitiveInformationPolicyConfig Contains details about PII entities and regular
+     * expressions to configure for the AI Guardrail. 
      */
     public fun sensitiveInformationPolicyConfig(sensitiveInformationPolicyConfig: IResolvable)
 
     /**
-     * Sensitive information policy config for a guardrail.
+     * Contains details about PII entities and regular expressions to configure for the AI
+     * Guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-sensitiveinformationpolicyconfig)
-     * @param sensitiveInformationPolicyConfig Sensitive information policy config for a guardrail. 
+     * @param sensitiveInformationPolicyConfig Contains details about PII entities and regular
+     * expressions to configure for the AI Guardrail. 
      */
     public
         fun sensitiveInformationPolicyConfig(sensitiveInformationPolicyConfig: AIGuardrailSensitiveInformationPolicyConfigProperty)
 
     /**
-     * Sensitive information policy config for a guardrail.
+     * Contains details about PII entities and regular expressions to configure for the AI
+     * Guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-sensitiveinformationpolicyconfig)
-     * @param sensitiveInformationPolicyConfig Sensitive information policy config for a guardrail. 
+     * @param sensitiveInformationPolicyConfig Contains details about PII entities and regular
+     * expressions to configure for the AI Guardrail. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("375fc056751412fd5ca2fb1eead4c2d13695156c24d0978835c04277d18243bb")
@@ -480,32 +496,37 @@ public open class CfnAIGuardrail(
         fun sensitiveInformationPolicyConfig(sensitiveInformationPolicyConfig: AIGuardrailSensitiveInformationPolicyConfigProperty.Builder.() -> Unit)
 
     /**
+     * The tags used to organize, track, or control access for this resource.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-tags)
-     * @param tags 
+     * @param tags The tags used to organize, track, or control access for this resource. 
      */
     public fun tags(tags: Map<String, String>)
 
     /**
-     * Topic policy config for a guardrail.
+     * Contains details about topics that the AI Guardrail should identify and deny.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-topicpolicyconfig)
-     * @param topicPolicyConfig Topic policy config for a guardrail. 
+     * @param topicPolicyConfig Contains details about topics that the AI Guardrail should identify
+     * and deny. 
      */
     public fun topicPolicyConfig(topicPolicyConfig: IResolvable)
 
     /**
-     * Topic policy config for a guardrail.
+     * Contains details about topics that the AI Guardrail should identify and deny.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-topicpolicyconfig)
-     * @param topicPolicyConfig Topic policy config for a guardrail. 
+     * @param topicPolicyConfig Contains details about topics that the AI Guardrail should identify
+     * and deny. 
      */
     public fun topicPolicyConfig(topicPolicyConfig: AIGuardrailTopicPolicyConfigProperty)
 
     /**
-     * Topic policy config for a guardrail.
+     * Contains details about topics that the AI Guardrail should identify and deny.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-topicpolicyconfig)
-     * @param topicPolicyConfig Topic policy config for a guardrail. 
+     * @param topicPolicyConfig Contains details about topics that the AI Guardrail should identify
+     * and deny. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0574574ea3ae1d8fe6c95f45cccc0ace920be820fd0cc9fb19ec670a9507ee89")
@@ -513,26 +534,29 @@ public open class CfnAIGuardrail(
         fun topicPolicyConfig(topicPolicyConfig: AIGuardrailTopicPolicyConfigProperty.Builder.() -> Unit)
 
     /**
-     * Word policy config for a guardrail.
+     * Contains details about the word policy to configured for the AI Guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-wordpolicyconfig)
-     * @param wordPolicyConfig Word policy config for a guardrail. 
+     * @param wordPolicyConfig Contains details about the word policy to configured for the AI
+     * Guardrail. 
      */
     public fun wordPolicyConfig(wordPolicyConfig: IResolvable)
 
     /**
-     * Word policy config for a guardrail.
+     * Contains details about the word policy to configured for the AI Guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-wordpolicyconfig)
-     * @param wordPolicyConfig Word policy config for a guardrail. 
+     * @param wordPolicyConfig Contains details about the word policy to configured for the AI
+     * Guardrail. 
      */
     public fun wordPolicyConfig(wordPolicyConfig: AIGuardrailWordPolicyConfigProperty)
 
     /**
-     * Word policy config for a guardrail.
+     * Contains details about the word policy to configured for the AI Guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-wordpolicyconfig)
-     * @param wordPolicyConfig Word policy config for a guardrail. 
+     * @param wordPolicyConfig Contains details about the word policy to configured for the AI
+     * Guardrail. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c52c81185f2186735c6b27ac2ffbae104fa2564190e7a9a622b5d17dce55f885")
@@ -548,58 +572,63 @@ public open class CfnAIGuardrail(
         software.amazon.awscdk.services.wisdom.CfnAIGuardrail.Builder.create(scope, id)
 
     /**
+     * The identifier of the Amazon Q in Connect assistant.
+     *
+     * Can be either the ID or the ARN. URLs cannot contain the ARN.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-assistantid)
-     * @param assistantId 
+     * @param assistantId The identifier of the Amazon Q in Connect assistant. 
      */
     override fun assistantId(assistantId: String) {
       cdkBuilder.assistantId(assistantId)
     }
 
     /**
-     * Messaging for when violations are detected in text.
+     * The message to return when the AI Guardrail blocks a prompt.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-blockedinputmessaging)
-     * @param blockedInputMessaging Messaging for when violations are detected in text. 
+     * @param blockedInputMessaging The message to return when the AI Guardrail blocks a prompt. 
      */
     override fun blockedInputMessaging(blockedInputMessaging: String) {
       cdkBuilder.blockedInputMessaging(blockedInputMessaging)
     }
 
     /**
-     * Messaging for when violations are detected in text.
+     * The message to return when the AI Guardrail blocks a model response.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-blockedoutputsmessaging)
-     * @param blockedOutputsMessaging Messaging for when violations are detected in text. 
+     * @param blockedOutputsMessaging The message to return when the AI Guardrail blocks a model
+     * response. 
      */
     override fun blockedOutputsMessaging(blockedOutputsMessaging: String) {
       cdkBuilder.blockedOutputsMessaging(blockedOutputsMessaging)
     }
 
     /**
-     * Content policy config for a guardrail.
+     * Contains details about how to handle harmful content.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-contentpolicyconfig)
-     * @param contentPolicyConfig Content policy config for a guardrail. 
+     * @param contentPolicyConfig Contains details about how to handle harmful content. 
      */
     override fun contentPolicyConfig(contentPolicyConfig: IResolvable) {
       cdkBuilder.contentPolicyConfig(contentPolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Content policy config for a guardrail.
+     * Contains details about how to handle harmful content.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-contentpolicyconfig)
-     * @param contentPolicyConfig Content policy config for a guardrail. 
+     * @param contentPolicyConfig Contains details about how to handle harmful content. 
      */
     override fun contentPolicyConfig(contentPolicyConfig: AIGuardrailContentPolicyConfigProperty) {
       cdkBuilder.contentPolicyConfig(contentPolicyConfig.let(AIGuardrailContentPolicyConfigProperty.Companion::unwrap))
     }
 
     /**
-     * Content policy config for a guardrail.
+     * Contains details about how to handle harmful content.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-contentpolicyconfig)
-     * @param contentPolicyConfig Content policy config for a guardrail. 
+     * @param contentPolicyConfig Contains details about how to handle harmful content. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e0e35d95e7cd9abba1688c8f7b3013b09d4387749a99b5513d274c8f12938f4a")
@@ -608,20 +637,22 @@ public open class CfnAIGuardrail(
         Unit = contentPolicyConfig(AIGuardrailContentPolicyConfigProperty(contentPolicyConfig))
 
     /**
-     * Contextual grounding policy config for a guardrail.
+     * The policy configuration details for the AI Guardrail's contextual grounding policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-contextualgroundingpolicyconfig)
-     * @param contextualGroundingPolicyConfig Contextual grounding policy config for a guardrail. 
+     * @param contextualGroundingPolicyConfig The policy configuration details for the AI
+     * Guardrail's contextual grounding policy. 
      */
     override fun contextualGroundingPolicyConfig(contextualGroundingPolicyConfig: IResolvable) {
       cdkBuilder.contextualGroundingPolicyConfig(contextualGroundingPolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Contextual grounding policy config for a guardrail.
+     * The policy configuration details for the AI Guardrail's contextual grounding policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-contextualgroundingpolicyconfig)
-     * @param contextualGroundingPolicyConfig Contextual grounding policy config for a guardrail. 
+     * @param contextualGroundingPolicyConfig The policy configuration details for the AI
+     * Guardrail's contextual grounding policy. 
      */
     override
         fun contextualGroundingPolicyConfig(contextualGroundingPolicyConfig: AIGuardrailContextualGroundingPolicyConfigProperty) {
@@ -629,10 +660,11 @@ public open class CfnAIGuardrail(
     }
 
     /**
-     * Contextual grounding policy config for a guardrail.
+     * The policy configuration details for the AI Guardrail's contextual grounding policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-contextualgroundingpolicyconfig)
-     * @param contextualGroundingPolicyConfig Contextual grounding policy config for a guardrail. 
+     * @param contextualGroundingPolicyConfig The policy configuration details for the AI
+     * Guardrail's contextual grounding policy. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7f5bff589c511ae1654609eac6e7db8492667649d3ea5dc95d279e2f4ac402c6")
@@ -642,38 +674,44 @@ public open class CfnAIGuardrail(
         contextualGroundingPolicyConfig(AIGuardrailContextualGroundingPolicyConfigProperty(contextualGroundingPolicyConfig))
 
     /**
-     * Description of the guardrail or its version.
+     * A description of the AI Guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-description)
-     * @param description Description of the guardrail or its version. 
+     * @param description A description of the AI Guardrail. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
+     * The name of the AI Guardrail.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-name)
-     * @param name 
+     * @param name The name of the AI Guardrail. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     /**
-     * Sensitive information policy config for a guardrail.
+     * Contains details about PII entities and regular expressions to configure for the AI
+     * Guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-sensitiveinformationpolicyconfig)
-     * @param sensitiveInformationPolicyConfig Sensitive information policy config for a guardrail. 
+     * @param sensitiveInformationPolicyConfig Contains details about PII entities and regular
+     * expressions to configure for the AI Guardrail. 
      */
     override fun sensitiveInformationPolicyConfig(sensitiveInformationPolicyConfig: IResolvable) {
       cdkBuilder.sensitiveInformationPolicyConfig(sensitiveInformationPolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Sensitive information policy config for a guardrail.
+     * Contains details about PII entities and regular expressions to configure for the AI
+     * Guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-sensitiveinformationpolicyconfig)
-     * @param sensitiveInformationPolicyConfig Sensitive information policy config for a guardrail. 
+     * @param sensitiveInformationPolicyConfig Contains details about PII entities and regular
+     * expressions to configure for the AI Guardrail. 
      */
     override
         fun sensitiveInformationPolicyConfig(sensitiveInformationPolicyConfig: AIGuardrailSensitiveInformationPolicyConfigProperty) {
@@ -681,10 +719,12 @@ public open class CfnAIGuardrail(
     }
 
     /**
-     * Sensitive information policy config for a guardrail.
+     * Contains details about PII entities and regular expressions to configure for the AI
+     * Guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-sensitiveinformationpolicyconfig)
-     * @param sensitiveInformationPolicyConfig Sensitive information policy config for a guardrail. 
+     * @param sensitiveInformationPolicyConfig Contains details about PII entities and regular
+     * expressions to configure for the AI Guardrail. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("375fc056751412fd5ca2fb1eead4c2d13695156c24d0978835c04277d18243bb")
@@ -694,38 +734,43 @@ public open class CfnAIGuardrail(
         sensitiveInformationPolicyConfig(AIGuardrailSensitiveInformationPolicyConfigProperty(sensitiveInformationPolicyConfig))
 
     /**
+     * The tags used to organize, track, or control access for this resource.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-tags)
-     * @param tags 
+     * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
     /**
-     * Topic policy config for a guardrail.
+     * Contains details about topics that the AI Guardrail should identify and deny.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-topicpolicyconfig)
-     * @param topicPolicyConfig Topic policy config for a guardrail. 
+     * @param topicPolicyConfig Contains details about topics that the AI Guardrail should identify
+     * and deny. 
      */
     override fun topicPolicyConfig(topicPolicyConfig: IResolvable) {
       cdkBuilder.topicPolicyConfig(topicPolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Topic policy config for a guardrail.
+     * Contains details about topics that the AI Guardrail should identify and deny.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-topicpolicyconfig)
-     * @param topicPolicyConfig Topic policy config for a guardrail. 
+     * @param topicPolicyConfig Contains details about topics that the AI Guardrail should identify
+     * and deny. 
      */
     override fun topicPolicyConfig(topicPolicyConfig: AIGuardrailTopicPolicyConfigProperty) {
       cdkBuilder.topicPolicyConfig(topicPolicyConfig.let(AIGuardrailTopicPolicyConfigProperty.Companion::unwrap))
     }
 
     /**
-     * Topic policy config for a guardrail.
+     * Contains details about topics that the AI Guardrail should identify and deny.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-topicpolicyconfig)
-     * @param topicPolicyConfig Topic policy config for a guardrail. 
+     * @param topicPolicyConfig Contains details about topics that the AI Guardrail should identify
+     * and deny. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0574574ea3ae1d8fe6c95f45cccc0ace920be820fd0cc9fb19ec670a9507ee89")
@@ -734,30 +779,33 @@ public open class CfnAIGuardrail(
         Unit = topicPolicyConfig(AIGuardrailTopicPolicyConfigProperty(topicPolicyConfig))
 
     /**
-     * Word policy config for a guardrail.
+     * Contains details about the word policy to configured for the AI Guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-wordpolicyconfig)
-     * @param wordPolicyConfig Word policy config for a guardrail. 
+     * @param wordPolicyConfig Contains details about the word policy to configured for the AI
+     * Guardrail. 
      */
     override fun wordPolicyConfig(wordPolicyConfig: IResolvable) {
       cdkBuilder.wordPolicyConfig(wordPolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Word policy config for a guardrail.
+     * Contains details about the word policy to configured for the AI Guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-wordpolicyconfig)
-     * @param wordPolicyConfig Word policy config for a guardrail. 
+     * @param wordPolicyConfig Contains details about the word policy to configured for the AI
+     * Guardrail. 
      */
     override fun wordPolicyConfig(wordPolicyConfig: AIGuardrailWordPolicyConfigProperty) {
       cdkBuilder.wordPolicyConfig(wordPolicyConfig.let(AIGuardrailWordPolicyConfigProperty.Companion::unwrap))
     }
 
     /**
-     * Word policy config for a guardrail.
+     * Contains details about the word policy to configured for the AI Guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrail.html#cfn-wisdom-aiguardrail-wordpolicyconfig)
-     * @param wordPolicyConfig Word policy config for a guardrail. 
+     * @param wordPolicyConfig Contains details about the word policy to configured for the AI
+     * Guardrail. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c52c81185f2186735c6b27ac2ffbae104fa2564190e7a9a622b5d17dce55f885")
@@ -812,7 +860,7 @@ public open class CfnAIGuardrail(
    */
   public interface AIGuardrailContentPolicyConfigProperty {
     /**
-     * List of content filter configs in content policy.
+     * List of content filter configurations in a content policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-aiguardrailcontentpolicyconfig.html#cfn-wisdom-aiguardrail-aiguardrailcontentpolicyconfig-filtersconfig)
      */
@@ -824,17 +872,17 @@ public open class CfnAIGuardrail(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param filtersConfig List of content filter configs in content policy. 
+       * @param filtersConfig List of content filter configurations in a content policy. 
        */
       public fun filtersConfig(filtersConfig: IResolvable)
 
       /**
-       * @param filtersConfig List of content filter configs in content policy. 
+       * @param filtersConfig List of content filter configurations in a content policy. 
        */
       public fun filtersConfig(filtersConfig: List<Any>)
 
       /**
-       * @param filtersConfig List of content filter configs in content policy. 
+       * @param filtersConfig List of content filter configurations in a content policy. 
        */
       public fun filtersConfig(vararg filtersConfig: Any)
     }
@@ -846,21 +894,21 @@ public open class CfnAIGuardrail(
           software.amazon.awscdk.services.wisdom.CfnAIGuardrail.AIGuardrailContentPolicyConfigProperty.builder()
 
       /**
-       * @param filtersConfig List of content filter configs in content policy. 
+       * @param filtersConfig List of content filter configurations in a content policy. 
        */
       override fun filtersConfig(filtersConfig: IResolvable) {
         cdkBuilder.filtersConfig(filtersConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param filtersConfig List of content filter configs in content policy. 
+       * @param filtersConfig List of content filter configurations in a content policy. 
        */
       override fun filtersConfig(filtersConfig: List<Any>) {
         cdkBuilder.filtersConfig(filtersConfig.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param filtersConfig List of content filter configs in content policy. 
+       * @param filtersConfig List of content filter configurations in a content policy. 
        */
       override fun filtersConfig(vararg filtersConfig: Any): Unit =
           filtersConfig(filtersConfig.toList())
@@ -875,7 +923,7 @@ public open class CfnAIGuardrail(
     ) : CdkObject(cdkObject),
         AIGuardrailContentPolicyConfigProperty {
       /**
-       * List of content filter configs in content policy.
+       * List of content filter configurations in a content policy.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-aiguardrailcontentpolicyconfig.html#cfn-wisdom-aiguardrail-aiguardrailcontentpolicyconfig-filtersconfig)
        */
@@ -1014,7 +1062,7 @@ public open class CfnAIGuardrail(
   }
 
   /**
-   * Sensitive information policy config for a guardrail.
+   * Sensitive information policy configuration for a guardrail.
    *
    * Example:
    *
@@ -1182,7 +1230,7 @@ public open class CfnAIGuardrail(
   }
 
   /**
-   * Topic policy config for a guardrail.
+   * Topic policy configuration for a guardrail.
    *
    * Example:
    *
@@ -1326,7 +1374,7 @@ public open class CfnAIGuardrail(
     public fun managedWordListsConfig(): Any? = unwrap(this).getManagedWordListsConfig()
 
     /**
-     * List of custom word configs.
+     * List of custom word configurations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-aiguardrailwordpolicyconfig.html#cfn-wisdom-aiguardrail-aiguardrailwordpolicyconfig-wordsconfig)
      */
@@ -1353,17 +1401,17 @@ public open class CfnAIGuardrail(
       public fun managedWordListsConfig(vararg managedWordListsConfig: Any)
 
       /**
-       * @param wordsConfig List of custom word configs.
+       * @param wordsConfig List of custom word configurations.
        */
       public fun wordsConfig(wordsConfig: IResolvable)
 
       /**
-       * @param wordsConfig List of custom word configs.
+       * @param wordsConfig List of custom word configurations.
        */
       public fun wordsConfig(wordsConfig: List<Any>)
 
       /**
-       * @param wordsConfig List of custom word configs.
+       * @param wordsConfig List of custom word configurations.
        */
       public fun wordsConfig(vararg wordsConfig: Any)
     }
@@ -1395,21 +1443,21 @@ public open class CfnAIGuardrail(
           managedWordListsConfig(managedWordListsConfig.toList())
 
       /**
-       * @param wordsConfig List of custom word configs.
+       * @param wordsConfig List of custom word configurations.
        */
       override fun wordsConfig(wordsConfig: IResolvable) {
         cdkBuilder.wordsConfig(wordsConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param wordsConfig List of custom word configs.
+       * @param wordsConfig List of custom word configurations.
        */
       override fun wordsConfig(wordsConfig: List<Any>) {
         cdkBuilder.wordsConfig(wordsConfig.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param wordsConfig List of custom word configs.
+       * @param wordsConfig List of custom word configurations.
        */
       override fun wordsConfig(vararg wordsConfig: Any): Unit = wordsConfig(wordsConfig.toList())
 
@@ -1430,7 +1478,7 @@ public open class CfnAIGuardrail(
       override fun managedWordListsConfig(): Any? = unwrap(this).getManagedWordListsConfig()
 
       /**
-       * List of custom word configs.
+       * List of custom word configurations.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-aiguardrailwordpolicyconfig.html#cfn-wisdom-aiguardrail-aiguardrailwordpolicyconfig-wordsconfig)
        */
@@ -1457,7 +1505,7 @@ public open class CfnAIGuardrail(
   }
 
   /**
-   * Content filter config in content policy.
+   * Content filter configuration in content policy.
    *
    * Example:
    *
@@ -1477,21 +1525,21 @@ public open class CfnAIGuardrail(
    */
   public interface GuardrailContentFilterConfigProperty {
     /**
-     * Strength for filters.
+     * The strength of the input for the guardrail content filter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailcontentfilterconfig.html#cfn-wisdom-aiguardrail-guardrailcontentfilterconfig-inputstrength)
      */
     public fun inputStrength(): String
 
     /**
-     * Strength for filters.
+     * The output strength of the guardrail content filter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailcontentfilterconfig.html#cfn-wisdom-aiguardrail-guardrailcontentfilterconfig-outputstrength)
      */
     public fun outputStrength(): String
 
     /**
-     * Type of text to text filter in content policy.
+     * The type of the guardrail content filter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailcontentfilterconfig.html#cfn-wisdom-aiguardrail-guardrailcontentfilterconfig-type)
      */
@@ -1503,17 +1551,17 @@ public open class CfnAIGuardrail(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param inputStrength Strength for filters. 
+       * @param inputStrength The strength of the input for the guardrail content filter. 
        */
       public fun inputStrength(inputStrength: String)
 
       /**
-       * @param outputStrength Strength for filters. 
+       * @param outputStrength The output strength of the guardrail content filter. 
        */
       public fun outputStrength(outputStrength: String)
 
       /**
-       * @param type Type of text to text filter in content policy. 
+       * @param type The type of the guardrail content filter. 
        */
       public fun type(type: String)
     }
@@ -1525,21 +1573,21 @@ public open class CfnAIGuardrail(
           software.amazon.awscdk.services.wisdom.CfnAIGuardrail.GuardrailContentFilterConfigProperty.builder()
 
       /**
-       * @param inputStrength Strength for filters. 
+       * @param inputStrength The strength of the input for the guardrail content filter. 
        */
       override fun inputStrength(inputStrength: String) {
         cdkBuilder.inputStrength(inputStrength)
       }
 
       /**
-       * @param outputStrength Strength for filters. 
+       * @param outputStrength The output strength of the guardrail content filter. 
        */
       override fun outputStrength(outputStrength: String) {
         cdkBuilder.outputStrength(outputStrength)
       }
 
       /**
-       * @param type Type of text to text filter in content policy. 
+       * @param type The type of the guardrail content filter. 
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -1555,21 +1603,21 @@ public open class CfnAIGuardrail(
     ) : CdkObject(cdkObject),
         GuardrailContentFilterConfigProperty {
       /**
-       * Strength for filters.
+       * The strength of the input for the guardrail content filter.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailcontentfilterconfig.html#cfn-wisdom-aiguardrail-guardrailcontentfilterconfig-inputstrength)
        */
       override fun inputStrength(): String = unwrap(this).getInputStrength()
 
       /**
-       * Strength for filters.
+       * The output strength of the guardrail content filter.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailcontentfilterconfig.html#cfn-wisdom-aiguardrail-guardrailcontentfilterconfig-outputstrength)
        */
       override fun outputStrength(): String = unwrap(this).getOutputStrength()
 
       /**
-       * Type of text to text filter in content policy.
+       * The type of the guardrail content filter.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailcontentfilterconfig.html#cfn-wisdom-aiguardrail-guardrailcontentfilterconfig-type)
        */
@@ -1596,7 +1644,7 @@ public open class CfnAIGuardrail(
   }
 
   /**
-   * A config for grounding filter.
+   * A configuration for grounding filter.
    *
    * Example:
    *
@@ -1625,7 +1673,7 @@ public open class CfnAIGuardrail(
     public fun threshold(): Number
 
     /**
-     * Type of contextual grounding filter.
+     * The type of this filter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailcontextualgroundingfilterconfig.html#cfn-wisdom-aiguardrail-guardrailcontextualgroundingfilterconfig-type)
      */
@@ -1642,7 +1690,7 @@ public open class CfnAIGuardrail(
       public fun threshold(threshold: Number)
 
       /**
-       * @param type Type of contextual grounding filter. 
+       * @param type The type of this filter. 
        */
       public fun type(type: String)
     }
@@ -1661,7 +1709,7 @@ public open class CfnAIGuardrail(
       }
 
       /**
-       * @param type Type of contextual grounding filter. 
+       * @param type The type of this filter. 
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -1686,7 +1734,7 @@ public open class CfnAIGuardrail(
       override fun threshold(): Number = unwrap(this).getThreshold()
 
       /**
-       * Type of contextual grounding filter.
+       * The type of this filter.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailcontextualgroundingfilterconfig.html#cfn-wisdom-aiguardrail-guardrailcontextualgroundingfilterconfig-type)
        */
@@ -1731,7 +1779,7 @@ public open class CfnAIGuardrail(
    */
   public interface GuardrailManagedWordsConfigProperty {
     /**
-     * Options for managed words.
+     * The type of guardrail managed words.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailmanagedwordsconfig.html#cfn-wisdom-aiguardrail-guardrailmanagedwordsconfig-type)
      */
@@ -1743,7 +1791,7 @@ public open class CfnAIGuardrail(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param type Options for managed words. 
+       * @param type The type of guardrail managed words. 
        */
       public fun type(type: String)
     }
@@ -1755,7 +1803,7 @@ public open class CfnAIGuardrail(
           software.amazon.awscdk.services.wisdom.CfnAIGuardrail.GuardrailManagedWordsConfigProperty.builder()
 
       /**
-       * @param type Options for managed words. 
+       * @param type The type of guardrail managed words. 
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -1771,7 +1819,7 @@ public open class CfnAIGuardrail(
     ) : CdkObject(cdkObject),
         GuardrailManagedWordsConfigProperty {
       /**
-       * Options for managed words.
+       * The type of guardrail managed words.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailmanagedwordsconfig.html#cfn-wisdom-aiguardrail-guardrailmanagedwordsconfig-type)
        */
@@ -1798,7 +1846,7 @@ public open class CfnAIGuardrail(
   }
 
   /**
-   * Pii entity configuration.
+   * PII entity configuration.
    *
    * Example:
    *
@@ -1817,7 +1865,7 @@ public open class CfnAIGuardrail(
    */
   public interface GuardrailPiiEntityConfigProperty {
     /**
-     * Options for sensitive information action.
+     * The action of guardrail PII entity configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailpiientityconfig.html#cfn-wisdom-aiguardrail-guardrailpiientityconfig-action)
      */
@@ -1836,7 +1884,7 @@ public open class CfnAIGuardrail(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param action Options for sensitive information action. 
+       * @param action The action of guardrail PII entity configuration. 
        */
       public fun action(action: String)
 
@@ -1853,7 +1901,7 @@ public open class CfnAIGuardrail(
           software.amazon.awscdk.services.wisdom.CfnAIGuardrail.GuardrailPiiEntityConfigProperty.builder()
 
       /**
-       * @param action Options for sensitive information action. 
+       * @param action The action of guardrail PII entity configuration. 
        */
       override fun action(action: String) {
         cdkBuilder.action(action)
@@ -1876,7 +1924,7 @@ public open class CfnAIGuardrail(
     ) : CdkObject(cdkObject),
         GuardrailPiiEntityConfigProperty {
       /**
-       * Options for sensitive information action.
+       * The action of guardrail PII entity configuration.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailpiientityconfig.html#cfn-wisdom-aiguardrail-guardrailpiientityconfig-action)
        */
@@ -1931,7 +1979,7 @@ public open class CfnAIGuardrail(
    */
   public interface GuardrailRegexConfigProperty {
     /**
-     * Options for sensitive information action.
+     * The action of the guardrail regex configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailregexconfig.html#cfn-wisdom-aiguardrail-guardrailregexconfig-action)
      */
@@ -1945,7 +1993,7 @@ public open class CfnAIGuardrail(
     public fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * The regex name.
+     * A regex configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailregexconfig.html#cfn-wisdom-aiguardrail-guardrailregexconfig-name)
      */
@@ -1964,7 +2012,7 @@ public open class CfnAIGuardrail(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param action Options for sensitive information action. 
+       * @param action The action of the guardrail regex configuration. 
        */
       public fun action(action: String)
 
@@ -1974,7 +2022,7 @@ public open class CfnAIGuardrail(
       public fun description(description: String)
 
       /**
-       * @param name The regex name. 
+       * @param name A regex configuration. 
        */
       public fun name(name: String)
 
@@ -1991,7 +2039,7 @@ public open class CfnAIGuardrail(
           software.amazon.awscdk.services.wisdom.CfnAIGuardrail.GuardrailRegexConfigProperty.builder()
 
       /**
-       * @param action Options for sensitive information action. 
+       * @param action The action of the guardrail regex configuration. 
        */
       override fun action(action: String) {
         cdkBuilder.action(action)
@@ -2005,7 +2053,7 @@ public open class CfnAIGuardrail(
       }
 
       /**
-       * @param name The regex name. 
+       * @param name A regex configuration. 
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -2028,7 +2076,7 @@ public open class CfnAIGuardrail(
     ) : CdkObject(cdkObject),
         GuardrailRegexConfigProperty {
       /**
-       * Options for sensitive information action.
+       * The action of the guardrail regex configuration.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailregexconfig.html#cfn-wisdom-aiguardrail-guardrailregexconfig-action)
        */
@@ -2042,7 +2090,7 @@ public open class CfnAIGuardrail(
       override fun description(): String? = unwrap(this).getDescription()
 
       /**
-       * The regex name.
+       * A regex configuration.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailregexconfig.html#cfn-wisdom-aiguardrail-guardrailregexconfig-name)
        */
@@ -2075,7 +2123,7 @@ public open class CfnAIGuardrail(
   }
 
   /**
-   * Topic config in topic policy.
+   * Topic configuration in topic policy.
    *
    * Example:
    *
@@ -2104,7 +2152,7 @@ public open class CfnAIGuardrail(
     public fun definition(): String
 
     /**
-     * List of text examples.
+     * Text example in topic policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailtopicconfig.html#cfn-wisdom-aiguardrail-guardrailtopicconfig-examples)
      */
@@ -2135,12 +2183,12 @@ public open class CfnAIGuardrail(
       public fun definition(definition: String)
 
       /**
-       * @param examples List of text examples.
+       * @param examples Text example in topic policy.
        */
       public fun examples(examples: List<String>)
 
       /**
-       * @param examples List of text examples.
+       * @param examples Text example in topic policy.
        */
       public fun examples(vararg examples: String)
 
@@ -2169,14 +2217,14 @@ public open class CfnAIGuardrail(
       }
 
       /**
-       * @param examples List of text examples.
+       * @param examples Text example in topic policy.
        */
       override fun examples(examples: List<String>) {
         cdkBuilder.examples(examples)
       }
 
       /**
-       * @param examples List of text examples.
+       * @param examples Text example in topic policy.
        */
       override fun examples(vararg examples: String): Unit = examples(examples.toList())
 
@@ -2211,7 +2259,7 @@ public open class CfnAIGuardrail(
       override fun definition(): String = unwrap(this).getDefinition()
 
       /**
-       * List of text examples.
+       * Text example in topic policy.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiguardrail-guardrailtopicconfig.html#cfn-wisdom-aiguardrail-guardrailtopicconfig-examples)
        */

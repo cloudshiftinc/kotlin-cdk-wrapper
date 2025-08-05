@@ -42,6 +42,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .certificateArn("certificateArn")
  * .certificateName("certificateName")
  * .endpointType("endpointType")
+ * .ipAddressType("ipAddressType")
  * .ownershipVerificationCertificateArn("ownershipVerificationCertificateArn")
  * .securityPolicy("securityPolicy")
  * .build()))
@@ -49,6 +50,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .truststoreUri("truststoreUri")
  * .truststoreVersion("truststoreVersion")
  * .build())
+ * .routingMode("routingMode")
  * .tags(Map.of(
  * "tagsKey", "tags"))
  * .build();
@@ -76,6 +78,11 @@ public open class CfnDomainName(
     props: CfnDomainNameProps.Builder.() -> Unit,
   ) : this(scope, id, CfnDomainNameProps(props)
   )
+
+  /**
+   * Represents an Amazon Resource Name (ARN).
+   */
+  public open fun attrDomainNameArn(): String = unwrap(this).getAttrDomainNameArn()
 
   /**
    * The domain name associated with the regional endpoint for this custom domain name.
@@ -165,6 +172,18 @@ public open class CfnDomainName(
       = mutualTlsAuthentication(MutualTlsAuthenticationProperty(`value`))
 
   /**
+   * The routing mode API Gateway uses to route traffic to your APIs.
+   */
+  public open fun routingMode(): String? = unwrap(this).getRoutingMode()
+
+  /**
+   * The routing mode API Gateway uses to route traffic to your APIs.
+   */
+  public open fun routingMode(`value`: String) {
+    unwrap(this).setRoutingMode(`value`)
+  }
+
+  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
@@ -249,6 +268,16 @@ public open class CfnDomainName(
     @JvmName("54b3f93f1f07c6288dc8128a5b41417be3e6cd17c1990fb447a874e975ae6ac0")
     public
         fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty.Builder.() -> Unit)
+
+    /**
+     * The routing mode API Gateway uses to route traffic to your APIs.
+     *
+     * Default: - "API_MAPPING_ONLY"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-routingmode)
+     * @param routingMode The routing mode API Gateway uses to route traffic to your APIs. 
+     */
+    public fun routingMode(routingMode: String)
 
     /**
      * The collection of tags associated with a domain name.
@@ -343,6 +372,18 @@ public open class CfnDomainName(
         Unit = mutualTlsAuthentication(MutualTlsAuthenticationProperty(mutualTlsAuthentication))
 
     /**
+     * The routing mode API Gateway uses to route traffic to your APIs.
+     *
+     * Default: - "API_MAPPING_ONLY"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-routingmode)
+     * @param routingMode The routing mode API Gateway uses to route traffic to your APIs. 
+     */
+    override fun routingMode(routingMode: String) {
+      cdkBuilder.routingMode(routingMode)
+    }
+
+    /**
      * The collection of tags associated with a domain name.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-tags)
@@ -396,6 +437,7 @@ public open class CfnDomainName(
    * .certificateArn("certificateArn")
    * .certificateName("certificateName")
    * .endpointType("endpointType")
+   * .ipAddressType("ipAddressType")
    * .ownershipVerificationCertificateArn("ownershipVerificationCertificateArn")
    * .securityPolicy("securityPolicy")
    * .build();
@@ -428,6 +470,16 @@ public open class CfnDomainName(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype)
      */
     public fun endpointType(): String? = unwrap(this).getEndpointType()
+
+    /**
+     * The IP address types that can invoke the domain name.
+     *
+     * Use `ipv4` to allow only IPv4 addresses to invoke your domain name, or use `dualstack` to
+     * allow both IPv4 and IPv6 addresses to invoke your domain name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-ipaddresstype)
+     */
+    public fun ipAddressType(): String? = unwrap(this).getIpAddressType()
 
     /**
      * The Amazon resource name (ARN) for the public certificate issued by AWS Certificate Manager .
@@ -474,6 +526,13 @@ public open class CfnDomainName(
       public fun endpointType(endpointType: String)
 
       /**
+       * @param ipAddressType The IP address types that can invoke the domain name.
+       * Use `ipv4` to allow only IPv4 addresses to invoke your domain name, or use `dualstack` to
+       * allow both IPv4 and IPv6 addresses to invoke your domain name.
+       */
+      public fun ipAddressType(ipAddressType: String)
+
+      /**
        * @param ownershipVerificationCertificateArn The Amazon resource name (ARN) for the public
        * certificate issued by AWS Certificate Manager .
        * This ARN is used to validate custom domain ownership. It's required only if you configure
@@ -518,6 +577,15 @@ public open class CfnDomainName(
        */
       override fun endpointType(endpointType: String) {
         cdkBuilder.endpointType(endpointType)
+      }
+
+      /**
+       * @param ipAddressType The IP address types that can invoke the domain name.
+       * Use `ipv4` to allow only IPv4 addresses to invoke your domain name, or use `dualstack` to
+       * allow both IPv4 and IPv6 addresses to invoke your domain name.
+       */
+      override fun ipAddressType(ipAddressType: String) {
+        cdkBuilder.ipAddressType(ipAddressType)
       }
 
       /**
@@ -574,6 +642,16 @@ public open class CfnDomainName(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype)
        */
       override fun endpointType(): String? = unwrap(this).getEndpointType()
+
+      /**
+       * The IP address types that can invoke the domain name.
+       *
+       * Use `ipv4` to allow only IPv4 addresses to invoke your domain name, or use `dualstack` to
+       * allow both IPv4 and IPv6 addresses to invoke your domain name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-ipaddresstype)
+       */
+      override fun ipAddressType(): String? = unwrap(this).getIpAddressType()
 
       /**
        * The Amazon resource name (ARN) for the public certificate issued by AWS Certificate Manager

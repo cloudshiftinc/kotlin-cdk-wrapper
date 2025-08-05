@@ -37,6 +37,16 @@ public interface IWebSocketStage : IStage {
   ) : CdkObject(cdkObject),
       IWebSocketStage {
     /**
+     * Adds a stage variable to this stage.
+     *
+     * @param name The name of the stage variable. 
+     * @param value The value of the stage variable. 
+     */
+    override fun addStageVariable(name: String, `value`: String) {
+      unwrap(this).addStageVariable(name, `value`)
+    }
+
+    /**
      * The API this stage is associated to.
      */
     override fun api(): IWebSocketApi = unwrap(this).getApi().let(IWebSocketApi::wrap)

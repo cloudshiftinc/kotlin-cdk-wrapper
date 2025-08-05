@@ -552,6 +552,9 @@ public open class NetworkTargetGroup(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroup.PROPERTY_INJECTION_ID
+
     public fun fromTargetGroupAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

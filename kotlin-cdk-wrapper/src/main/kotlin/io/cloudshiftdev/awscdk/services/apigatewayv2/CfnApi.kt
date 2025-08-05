@@ -62,6 +62,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .disableExecuteApiEndpoint(false)
  * .disableSchemaValidation(false)
  * .failOnWarnings(false)
+ * .ipAddressType("ipAddressType")
  * .name("name")
  * .protocolType("protocolType")
  * .routeKey("routeKey")
@@ -291,6 +292,18 @@ public open class CfnApi(
    */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
+  }
+
+  /**
+   * The IP address types that can invoke the API.
+   */
+  public open fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+
+  /**
+   * The IP address types that can invoke the API.
+   */
+  public open fun ipAddressType(`value`: String) {
+    unwrap(this).setIpAddressType(`value`)
   }
 
   /**
@@ -594,6 +607,20 @@ public open class CfnApi(
      * encountered. 
      */
     public fun failOnWarnings(failOnWarnings: IResolvable)
+
+    /**
+     * The IP address types that can invoke the API.
+     *
+     * Use `ipv4` to allow only IPv4 addresses to invoke your API, or use `dualstack` to allow both
+     * IPv4 and IPv6 addresses to invoke your API.
+     *
+     * Don’t use IP address type for an HTTP API based on an OpenAPI specification. Instead, specify
+     * the IP address type in the OpenAPI specification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-ipaddresstype)
+     * @param ipAddressType The IP address types that can invoke the API. 
+     */
+    public fun ipAddressType(ipAddressType: String)
 
     /**
      * The name of the API.
@@ -918,6 +945,22 @@ public open class CfnApi(
      */
     override fun failOnWarnings(failOnWarnings: IResolvable) {
       cdkBuilder.failOnWarnings(failOnWarnings.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The IP address types that can invoke the API.
+     *
+     * Use `ipv4` to allow only IPv4 addresses to invoke your API, or use `dualstack` to allow both
+     * IPv4 and IPv6 addresses to invoke your API.
+     *
+     * Don’t use IP address type for an HTTP API based on an OpenAPI specification. Instead, specify
+     * the IP address type in the OpenAPI specification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-ipaddresstype)
+     * @param ipAddressType The IP address types that can invoke the API. 
+     */
+    override fun ipAddressType(ipAddressType: String) {
+      cdkBuilder.ipAddressType(ipAddressType)
     }
 
     /**

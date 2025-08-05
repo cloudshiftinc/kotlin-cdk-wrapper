@@ -29,14 +29,75 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Bucket sourceBucket;
- * Distribution myDistribution = Distribution.Builder.create(this, "MyCfWebDistribution")
+ * // Create the simple Origin
+ * Bucket myBucket = new Bucket(this, "myBucket");
+ * IOrigin s3Origin = S3BucketOrigin.withOriginAccessControl(myBucket,
+ * S3BucketOriginWithOACProps.builder()
+ * .originAccessLevels(List.of(AccessLevel.READ, AccessLevel.LIST))
+ * .build());
+ * // Create the Distribution construct
+ * Distribution myMultiTenantDistribution = Distribution.Builder.create(this, "distribution")
  * .defaultBehavior(BehaviorOptions.builder()
- * .origin(new S3Origin(sourceBucket))
+ * .origin(s3Origin)
+ * .build())
+ * .defaultRootObject("index.html")
+ * .build();
+ * // Access the underlying L1 CfnDistribution to configure SaaS Manager properties which are not
+ * yet available in the L2 Distribution construct
+ * CfnDistribution cfnDistribution =
+ * (CfnDistribution)myMultiTenantDistribution.getNode().getDefaultChild();
+ * DefaultCacheBehaviorProperty defaultCacheBehavior = DefaultCacheBehaviorProperty.builder()
+ * .targetOriginId(myBucket.getBucketArn())
+ * .viewerProtocolPolicy("allow-all")
+ * .compress(false)
+ * .allowedMethods(List.of("GET", "HEAD"))
+ * .cachePolicyId(CachePolicy.CACHING_OPTIMIZED.getCachePolicyId())
+ * .build();
+ * // Create the updated distributionConfig
+ * DistributionConfigProperty distributionConfig = DistributionConfigProperty.builder()
+ * .defaultCacheBehavior(defaultCacheBehavior)
+ * .enabled(true)
+ * // the properties below are optional
+ * .connectionMode("tenant-only")
+ * .origins(List.of(OriginProperty.builder()
+ * .id(myBucket.getBucketArn())
+ * .domainName(myBucket.getBucketDomainName())
+ * .s3OriginConfig(S3OriginConfigProperty.builder().build())
+ * .originPath("/{{tenantName}}")
+ * .build()))
+ * .tenantConfig(TenantConfigProperty.builder()
+ * .parameterDefinitions(List.of(ParameterDefinitionProperty.builder()
+ * .definition(DefinitionProperty.builder()
+ * .stringSchema(StringSchemaProperty.builder()
+ * .required(false)
+ * // the properties below are optional
+ * .comment("tenantName")
+ * .defaultValue("root")
+ * .build())
+ * .build())
+ * .name("tenantName")
+ * .build()))
  * .build())
  * .build();
- * CfnDistribution cfnDistribution = (CfnDistribution)myDistribution.getNode().getDefaultChild();
- * cfnDistribution.overrideLogicalId("MyDistributionCFDistribution3H55TI9Q");
+ * // Override the distribution configuration to enable multi-tenancy.
+ * cfnDistribution.getDistributionConfig() = distributionConfig;
+ * // Create a distribution tenant using an existing ACM certificate
+ * CfnDistributionTenant cfnDistributionTenant = CfnDistributionTenant.Builder.create(this,
+ * "distribution-tenant")
+ * .distributionId(myMultiTenantDistribution.getDistributionId())
+ * .domains(List.of("my-tenant.my.domain.com"))
+ * .name("my-tenant")
+ * .enabled(true)
+ * .parameters(List.of(ParameterProperty.builder()
+ * .name("tenantName")
+ * .value("app")
+ * .build()))
+ * .customizations(CustomizationsProperty.builder()
+ * .certificate(CertificateProperty.builder()
+ * .arn("REPLACE_WITH_ARN")
+ * .build())
+ * .build())
+ * .build();
  * ```
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)
@@ -289,6 +350,12 @@ public open class CfnDistribution(
    * To add, change, or remove one or more cache behaviors, update the distribution configuration
    * and specify all of the cache behaviors that you want to include in the updated distribution.
    *
+   *
+   * If your minimum TTL is greater than 0, CloudFront will cache content for at least the duration
+   * specified in the cache policy's minimum TTL, even if the `Cache-Control: no-cache` , `no-store` ,
+   * or `private` directives are present in the origin headers.
+   *
+   *
    * For more information about cache behaviors, see [Cache Behavior
    * Settings](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesCacheBehavior)
    * in the *Amazon CloudFront Developer Guide* .
@@ -325,6 +392,9 @@ public open class CfnDistribution(
    * .eventType("eventType")
    * .functionArn("functionArn")
    * .build()))
+   * .grpcConfig(GrpcConfigProperty.builder()
+   * .enabled(false)
+   * .build())
    * .lambdaFunctionAssociations(List.of(LambdaFunctionAssociationProperty.builder()
    * .eventType("eventType")
    * .includeBody(false)
@@ -409,10 +479,15 @@ public open class CfnDistribution(
     public fun compress(): Any? = unwrap(this).getCompress()
 
     /**
-     * This field is deprecated.
+     * This field only supports standard distributions.
      *
-     * We recommend that you use the `DefaultTTL` field in a cache policy instead of this field. For
-     * more information, see [Creating cache
+     * You can't specify this field for multi-tenant distributions. For more information, see
+     * [Unsupported features for SaaS Manager for Amazon
+     * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * This field is deprecated. We recommend that you use the `DefaultTTL` field in a cache policy
+     * instead of this field. For more information, see [Creating cache
      * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
      * or [Using the managed cache
      * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -485,6 +560,13 @@ public open class CfnDistribution(
     public fun functionAssociations(): Any? = unwrap(this).getFunctionAssociations()
 
     /**
+     * The gRPC configuration for your cache behavior.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-grpcconfig)
+     */
+    public fun grpcConfig(): Any? = unwrap(this).getGrpcConfig()
+
+    /**
      * A complex type that contains zero or more Lambda&#64;Edge function associations for a cache
      * behavior.
      *
@@ -493,10 +575,15 @@ public open class CfnDistribution(
     public fun lambdaFunctionAssociations(): Any? = unwrap(this).getLambdaFunctionAssociations()
 
     /**
-     * This field is deprecated.
+     * This field only supports standard distributions.
      *
-     * We recommend that you use the `MaxTTL` field in a cache policy instead of this field. For
-     * more information, see [Creating cache
+     * You can't specify this field for multi-tenant distributions. For more information, see
+     * [Unsupported features for SaaS Manager for Amazon
+     * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * This field is deprecated. We recommend that you use the `MaxTTL` field in a cache policy
+     * instead of this field. For more information, see [Creating cache
      * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
      * or [Using the managed cache
      * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -517,10 +604,15 @@ public open class CfnDistribution(
     public fun maxTtl(): Number? = unwrap(this).getMaxTtl()
 
     /**
-     * This field is deprecated.
+     * This field only supports standard distributions.
      *
-     * We recommend that you use the `MinTTL` field in a cache policy instead of this field. For
-     * more information, see [Creating cache
+     * You can't specify this field for multi-tenant distributions. For more information, see
+     * [Unsupported features for SaaS Manager for Amazon
+     * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * This field is deprecated. We recommend that you use the `MinTTL` field in a cache policy
+     * instead of this field. For more information, see [Creating cache
      * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
      * or [Using the managed cache
      * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -596,12 +688,17 @@ public open class CfnDistribution(
     public fun responseHeadersPolicyId(): String? = unwrap(this).getResponseHeadersPolicyId()
 
     /**
-     * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming format
-     * using the origin that is associated with this cache behavior.
+     * This field only supports standard distributions.
      *
-     * If so, specify `true` ; if not, specify `false` . If you specify `true` for `SmoothStreaming`
-     * , you can still distribute other content using this cache behavior if the content matches the
-     * value of `PathPattern` .
+     * You can't specify this field for multi-tenant distributions. For more information, see
+     * [Unsupported features for SaaS Manager for Amazon
+     * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming format
+     * using the origin that is associated with this cache behavior. If so, specify `true` ; if not,
+     * specify `false` . If you specify `true` for `SmoothStreaming` , you can still distribute other
+     * content using this cache behavior if the content matches the value of `PathPattern` .
      *
      * Default: - false
      *
@@ -634,6 +731,14 @@ public open class CfnDistribution(
 
     /**
      * We recommend using `TrustedKeyGroups` instead of `TrustedSigners` .
+     *
+     *
+     * This field only supports standard distributions. You can't specify this field for
+     * multi-tenant distributions. For more information, see [Unsupported features for SaaS Manager for
+     * Amazon
+     * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
      *
      * A list of AWS account IDs whose public keys CloudFront can use to validate signed URLs or
      * signed cookies.
@@ -779,9 +884,14 @@ public open class CfnDistribution(
       public fun compress(compress: IResolvable)
 
       /**
-       * @param defaultTtl This field is deprecated.
-       * We recommend that you use the `DefaultTTL` field in a cache policy instead of this field.
-       * For more information, see [Creating cache
+       * @param defaultTtl This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `DefaultTTL` field in a cache
+       * policy instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -918,6 +1028,23 @@ public open class CfnDistribution(
       public fun functionAssociations(vararg functionAssociations: Any)
 
       /**
+       * @param grpcConfig The gRPC configuration for your cache behavior.
+       */
+      public fun grpcConfig(grpcConfig: IResolvable)
+
+      /**
+       * @param grpcConfig The gRPC configuration for your cache behavior.
+       */
+      public fun grpcConfig(grpcConfig: GrpcConfigProperty)
+
+      /**
+       * @param grpcConfig The gRPC configuration for your cache behavior.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e2060be1748ee2afe8ff36564a7e19892051f8a2563dbb0efdb28e9d9564758e")
+      public fun grpcConfig(grpcConfig: GrpcConfigProperty.Builder.() -> Unit)
+
+      /**
        * @param lambdaFunctionAssociations A complex type that contains zero or more Lambda&#64;Edge
        * function associations for a cache behavior.
        */
@@ -936,9 +1063,14 @@ public open class CfnDistribution(
       public fun lambdaFunctionAssociations(vararg lambdaFunctionAssociations: Any)
 
       /**
-       * @param maxTtl This field is deprecated.
-       * We recommend that you use the `MaxTTL` field in a cache policy instead of this field. For
-       * more information, see [Creating cache
+       * @param maxTtl This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `MaxTTL` field in a cache policy
+       * instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -955,9 +1087,14 @@ public open class CfnDistribution(
       public fun maxTtl(maxTtl: Number)
 
       /**
-       * @param minTtl This field is deprecated.
-       * We recommend that you use the `MinTTL` field in a cache policy instead of this field. For
-       * more information, see [Creating cache
+       * @param minTtl This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `MinTTL` field in a cache policy
+       * instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -1020,22 +1157,32 @@ public open class CfnDistribution(
       public fun responseHeadersPolicyId(responseHeadersPolicyId: String)
 
       /**
-       * @param smoothStreaming Indicates whether you want to distribute media files in the
-       * Microsoft Smooth Streaming format using the origin that is associated with this cache
-       * behavior.
-       * If so, specify `true` ; if not, specify `false` . If you specify `true` for
-       * `SmoothStreaming` , you can still distribute other content using this cache behavior if the
-       * content matches the value of `PathPattern` .
+       * @param smoothStreaming This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming
+       * format using the origin that is associated with this cache behavior. If so, specify `true` ;
+       * if not, specify `false` . If you specify `true` for `SmoothStreaming` , you can still
+       * distribute other content using this cache behavior if the content matches the value of
+       * `PathPattern` .
        */
       public fun smoothStreaming(smoothStreaming: Boolean)
 
       /**
-       * @param smoothStreaming Indicates whether you want to distribute media files in the
-       * Microsoft Smooth Streaming format using the origin that is associated with this cache
-       * behavior.
-       * If so, specify `true` ; if not, specify `false` . If you specify `true` for
-       * `SmoothStreaming` , you can still distribute other content using this cache behavior if the
-       * content matches the value of `PathPattern` .
+       * @param smoothStreaming This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming
+       * format using the origin that is associated with this cache behavior. If so, specify `true` ;
+       * if not, specify `false` . If you specify `true` for `SmoothStreaming` , you can still
+       * distribute other content using this cache behavior if the content matches the value of
+       * `PathPattern` .
        */
       public fun smoothStreaming(smoothStreaming: IResolvable)
 
@@ -1073,6 +1220,14 @@ public open class CfnDistribution(
 
       /**
        * @param trustedSigners We recommend using `TrustedKeyGroups` instead of `TrustedSigners` .
+       *
+       * This field only supports standard distributions. You can't specify this field for
+       * multi-tenant distributions. For more information, see [Unsupported features for SaaS Manager
+       * for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       *
        * A list of AWS account IDs whose public keys CloudFront can use to validate signed URLs or
        * signed cookies.
        *
@@ -1088,6 +1243,14 @@ public open class CfnDistribution(
 
       /**
        * @param trustedSigners We recommend using `TrustedKeyGroups` instead of `TrustedSigners` .
+       *
+       * This field only supports standard distributions. You can't specify this field for
+       * multi-tenant distributions. For more information, see [Unsupported features for SaaS Manager
+       * for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       *
        * A list of AWS account IDs whose public keys CloudFront can use to validate signed URLs or
        * signed cookies.
        *
@@ -1240,9 +1403,14 @@ public open class CfnDistribution(
       }
 
       /**
-       * @param defaultTtl This field is deprecated.
-       * We recommend that you use the `DefaultTTL` field in a cache policy instead of this field.
-       * For more information, see [Creating cache
+       * @param defaultTtl This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `DefaultTTL` field in a cache
+       * policy instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -1393,6 +1561,28 @@ public open class CfnDistribution(
           functionAssociations(functionAssociations.toList())
 
       /**
+       * @param grpcConfig The gRPC configuration for your cache behavior.
+       */
+      override fun grpcConfig(grpcConfig: IResolvable) {
+        cdkBuilder.grpcConfig(grpcConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param grpcConfig The gRPC configuration for your cache behavior.
+       */
+      override fun grpcConfig(grpcConfig: GrpcConfigProperty) {
+        cdkBuilder.grpcConfig(grpcConfig.let(GrpcConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param grpcConfig The gRPC configuration for your cache behavior.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e2060be1748ee2afe8ff36564a7e19892051f8a2563dbb0efdb28e9d9564758e")
+      override fun grpcConfig(grpcConfig: GrpcConfigProperty.Builder.() -> Unit): Unit =
+          grpcConfig(GrpcConfigProperty(grpcConfig))
+
+      /**
        * @param lambdaFunctionAssociations A complex type that contains zero or more Lambda&#64;Edge
        * function associations for a cache behavior.
        */
@@ -1416,9 +1606,14 @@ public open class CfnDistribution(
           lambdaFunctionAssociations(lambdaFunctionAssociations.toList())
 
       /**
-       * @param maxTtl This field is deprecated.
-       * We recommend that you use the `MaxTTL` field in a cache policy instead of this field. For
-       * more information, see [Creating cache
+       * @param maxTtl This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `MaxTTL` field in a cache policy
+       * instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -1437,9 +1632,14 @@ public open class CfnDistribution(
       }
 
       /**
-       * @param minTtl This field is deprecated.
-       * We recommend that you use the `MinTTL` field in a cache policy instead of this field. For
-       * more information, see [Creating cache
+       * @param minTtl This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `MinTTL` field in a cache policy
+       * instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -1512,24 +1712,34 @@ public open class CfnDistribution(
       }
 
       /**
-       * @param smoothStreaming Indicates whether you want to distribute media files in the
-       * Microsoft Smooth Streaming format using the origin that is associated with this cache
-       * behavior.
-       * If so, specify `true` ; if not, specify `false` . If you specify `true` for
-       * `SmoothStreaming` , you can still distribute other content using this cache behavior if the
-       * content matches the value of `PathPattern` .
+       * @param smoothStreaming This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming
+       * format using the origin that is associated with this cache behavior. If so, specify `true` ;
+       * if not, specify `false` . If you specify `true` for `SmoothStreaming` , you can still
+       * distribute other content using this cache behavior if the content matches the value of
+       * `PathPattern` .
        */
       override fun smoothStreaming(smoothStreaming: Boolean) {
         cdkBuilder.smoothStreaming(smoothStreaming)
       }
 
       /**
-       * @param smoothStreaming Indicates whether you want to distribute media files in the
-       * Microsoft Smooth Streaming format using the origin that is associated with this cache
-       * behavior.
-       * If so, specify `true` ; if not, specify `false` . If you specify `true` for
-       * `SmoothStreaming` , you can still distribute other content using this cache behavior if the
-       * content matches the value of `PathPattern` .
+       * @param smoothStreaming This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming
+       * format using the origin that is associated with this cache behavior. If so, specify `true` ;
+       * if not, specify `false` . If you specify `true` for `SmoothStreaming` , you can still
+       * distribute other content using this cache behavior if the content matches the value of
+       * `PathPattern` .
        */
       override fun smoothStreaming(smoothStreaming: IResolvable) {
         cdkBuilder.smoothStreaming(smoothStreaming.let(IResolvable.Companion::unwrap))
@@ -1574,6 +1784,14 @@ public open class CfnDistribution(
 
       /**
        * @param trustedSigners We recommend using `TrustedKeyGroups` instead of `TrustedSigners` .
+       *
+       * This field only supports standard distributions. You can't specify this field for
+       * multi-tenant distributions. For more information, see [Unsupported features for SaaS Manager
+       * for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       *
        * A list of AWS account IDs whose public keys CloudFront can use to validate signed URLs or
        * signed cookies.
        *
@@ -1591,6 +1809,14 @@ public open class CfnDistribution(
 
       /**
        * @param trustedSigners We recommend using `TrustedKeyGroups` instead of `TrustedSigners` .
+       *
+       * This field only supports standard distributions. You can't specify this field for
+       * multi-tenant distributions. For more information, see [Unsupported features for SaaS Manager
+       * for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       *
        * A list of AWS account IDs whose public keys CloudFront can use to validate signed URLs or
        * signed cookies.
        *
@@ -1712,10 +1938,15 @@ public open class CfnDistribution(
       override fun compress(): Any? = unwrap(this).getCompress()
 
       /**
-       * This field is deprecated.
+       * This field only supports standard distributions.
        *
-       * We recommend that you use the `DefaultTTL` field in a cache policy instead of this field.
-       * For more information, see [Creating cache
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `DefaultTTL` field in a cache
+       * policy instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -1788,6 +2019,13 @@ public open class CfnDistribution(
       override fun functionAssociations(): Any? = unwrap(this).getFunctionAssociations()
 
       /**
+       * The gRPC configuration for your cache behavior.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html#cfn-cloudfront-distribution-cachebehavior-grpcconfig)
+       */
+      override fun grpcConfig(): Any? = unwrap(this).getGrpcConfig()
+
+      /**
        * A complex type that contains zero or more Lambda&#64;Edge function associations for a cache
        * behavior.
        *
@@ -1796,10 +2034,15 @@ public open class CfnDistribution(
       override fun lambdaFunctionAssociations(): Any? = unwrap(this).getLambdaFunctionAssociations()
 
       /**
-       * This field is deprecated.
+       * This field only supports standard distributions.
        *
-       * We recommend that you use the `MaxTTL` field in a cache policy instead of this field. For
-       * more information, see [Creating cache
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `MaxTTL` field in a cache policy
+       * instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -1820,10 +2063,15 @@ public open class CfnDistribution(
       override fun maxTtl(): Number? = unwrap(this).getMaxTtl()
 
       /**
-       * This field is deprecated.
+       * This field only supports standard distributions.
        *
-       * We recommend that you use the `MinTTL` field in a cache policy instead of this field. For
-       * more information, see [Creating cache
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `MinTTL` field in a cache policy
+       * instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -1899,12 +2147,18 @@ public open class CfnDistribution(
       override fun responseHeadersPolicyId(): String? = unwrap(this).getResponseHeadersPolicyId()
 
       /**
-       * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming
-       * format using the origin that is associated with this cache behavior.
+       * This field only supports standard distributions.
        *
-       * If so, specify `true` ; if not, specify `false` . If you specify `true` for
-       * `SmoothStreaming` , you can still distribute other content using this cache behavior if the
-       * content matches the value of `PathPattern` .
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming
+       * format using the origin that is associated with this cache behavior. If so, specify `true` ;
+       * if not, specify `false` . If you specify `true` for `SmoothStreaming` , you can still
+       * distribute other content using this cache behavior if the content matches the value of
+       * `PathPattern` .
        *
        * Default: - false
        *
@@ -1938,6 +2192,14 @@ public open class CfnDistribution(
 
       /**
        * We recommend using `TrustedKeyGroups` instead of `TrustedSigners` .
+       *
+       *
+       * This field only supports standard distributions. You can't specify this field for
+       * multi-tenant distributions. For more information, see [Unsupported features for SaaS Manager
+       * for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
        *
        * A list of AWS account IDs whose public keys CloudFront can use to validate signed URLs or
        * signed cookies.
@@ -2756,11 +3018,11 @@ public open class CfnDistribution(
     /**
      * Specifies how long, in seconds, CloudFront persists its connection to the origin.
      *
-     * The minimum timeout is 1 second, the maximum is 60 seconds, and the default (if you don't
+     * The minimum timeout is 1 second, the maximum is 120 seconds, and the default (if you don't
      * specify otherwise) is 5 seconds.
      *
-     * For more information, see [Origin Keep-alive
-     * Timeout](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginKeepaliveTimeout)
+     * For more information, see [Keep-alive timeout (custom origins
+     * only)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginKeepaliveTimeout)
      * in the *Amazon CloudFront Developer Guide* .
      *
      * Default: - 5
@@ -2786,10 +3048,10 @@ public open class CfnDistribution(
      * Specifies how long, in seconds, CloudFront waits for a response from the origin.
      *
      * This is also known as the *origin response timeout* . The minimum timeout is 1 second, the
-     * maximum is 60 seconds, and the default (if you don't specify otherwise) is 30 seconds.
+     * maximum is 120 seconds, and the default (if you don't specify otherwise) is 30 seconds.
      *
-     * For more information, see [Origin Response
-     * Timeout](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginResponseTimeout)
+     * For more information, see [Response timeout (custom origins
+     * only)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginResponseTimeout)
      * in the *Amazon CloudFront Developer Guide* .
      *
      * Default: - 30
@@ -2805,7 +3067,7 @@ public open class CfnDistribution(
      * Valid values include `SSLv3` , `TLSv1` , `TLSv1.1` , and `TLSv1.2` .
      *
      * For more information, see [Minimum Origin SSL
-     * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginSSLProtocols)
+     * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginSSLProtocols)
      * in the *Amazon CloudFront Developer Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originsslprotocols)
@@ -2833,11 +3095,11 @@ public open class CfnDistribution(
       /**
        * @param originKeepaliveTimeout Specifies how long, in seconds, CloudFront persists its
        * connection to the origin.
-       * The minimum timeout is 1 second, the maximum is 60 seconds, and the default (if you don't
+       * The minimum timeout is 1 second, the maximum is 120 seconds, and the default (if you don't
        * specify otherwise) is 5 seconds.
        *
-       * For more information, see [Origin Keep-alive
-       * Timeout](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginKeepaliveTimeout)
+       * For more information, see [Keep-alive timeout (custom origins
+       * only)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginKeepaliveTimeout)
        * in the *Amazon CloudFront Developer Guide* .
        */
       public fun originKeepaliveTimeout(originKeepaliveTimeout: Number)
@@ -2856,10 +3118,10 @@ public open class CfnDistribution(
        * @param originReadTimeout Specifies how long, in seconds, CloudFront waits for a response
        * from the origin.
        * This is also known as the *origin response timeout* . The minimum timeout is 1 second, the
-       * maximum is 60 seconds, and the default (if you don't specify otherwise) is 30 seconds.
+       * maximum is 120 seconds, and the default (if you don't specify otherwise) is 30 seconds.
        *
-       * For more information, see [Origin Response
-       * Timeout](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginResponseTimeout)
+       * For more information, see [Response timeout (custom origins
+       * only)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginResponseTimeout)
        * in the *Amazon CloudFront Developer Guide* .
        */
       public fun originReadTimeout(originReadTimeout: Number)
@@ -2870,7 +3132,7 @@ public open class CfnDistribution(
        * Valid values include `SSLv3` , `TLSv1` , `TLSv1.1` , and `TLSv1.2` .
        *
        * For more information, see [Minimum Origin SSL
-       * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginSSLProtocols)
+       * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginSSLProtocols)
        * in the *Amazon CloudFront Developer Guide* .
        */
       public fun originSslProtocols(originSslProtocols: List<String>)
@@ -2881,7 +3143,7 @@ public open class CfnDistribution(
        * Valid values include `SSLv3` , `TLSv1` , `TLSv1.1` , and `TLSv1.2` .
        *
        * For more information, see [Minimum Origin SSL
-       * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginSSLProtocols)
+       * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginSSLProtocols)
        * in the *Amazon CloudFront Developer Guide* .
        */
       public fun originSslProtocols(vararg originSslProtocols: String)
@@ -2912,11 +3174,11 @@ public open class CfnDistribution(
       /**
        * @param originKeepaliveTimeout Specifies how long, in seconds, CloudFront persists its
        * connection to the origin.
-       * The minimum timeout is 1 second, the maximum is 60 seconds, and the default (if you don't
+       * The minimum timeout is 1 second, the maximum is 120 seconds, and the default (if you don't
        * specify otherwise) is 5 seconds.
        *
-       * For more information, see [Origin Keep-alive
-       * Timeout](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginKeepaliveTimeout)
+       * For more information, see [Keep-alive timeout (custom origins
+       * only)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginKeepaliveTimeout)
        * in the *Amazon CloudFront Developer Guide* .
        */
       override fun originKeepaliveTimeout(originKeepaliveTimeout: Number) {
@@ -2939,10 +3201,10 @@ public open class CfnDistribution(
        * @param originReadTimeout Specifies how long, in seconds, CloudFront waits for a response
        * from the origin.
        * This is also known as the *origin response timeout* . The minimum timeout is 1 second, the
-       * maximum is 60 seconds, and the default (if you don't specify otherwise) is 30 seconds.
+       * maximum is 120 seconds, and the default (if you don't specify otherwise) is 30 seconds.
        *
-       * For more information, see [Origin Response
-       * Timeout](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginResponseTimeout)
+       * For more information, see [Response timeout (custom origins
+       * only)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginResponseTimeout)
        * in the *Amazon CloudFront Developer Guide* .
        */
       override fun originReadTimeout(originReadTimeout: Number) {
@@ -2955,7 +3217,7 @@ public open class CfnDistribution(
        * Valid values include `SSLv3` , `TLSv1` , `TLSv1.1` , and `TLSv1.2` .
        *
        * For more information, see [Minimum Origin SSL
-       * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginSSLProtocols)
+       * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginSSLProtocols)
        * in the *Amazon CloudFront Developer Guide* .
        */
       override fun originSslProtocols(originSslProtocols: List<String>) {
@@ -2968,7 +3230,7 @@ public open class CfnDistribution(
        * Valid values include `SSLv3` , `TLSv1` , `TLSv1.1` , and `TLSv1.2` .
        *
        * For more information, see [Minimum Origin SSL
-       * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginSSLProtocols)
+       * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginSSLProtocols)
        * in the *Amazon CloudFront Developer Guide* .
        */
       override fun originSslProtocols(vararg originSslProtocols: String): Unit =
@@ -3008,11 +3270,11 @@ public open class CfnDistribution(
       /**
        * Specifies how long, in seconds, CloudFront persists its connection to the origin.
        *
-       * The minimum timeout is 1 second, the maximum is 60 seconds, and the default (if you don't
+       * The minimum timeout is 1 second, the maximum is 120 seconds, and the default (if you don't
        * specify otherwise) is 5 seconds.
        *
-       * For more information, see [Origin Keep-alive
-       * Timeout](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginKeepaliveTimeout)
+       * For more information, see [Keep-alive timeout (custom origins
+       * only)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginKeepaliveTimeout)
        * in the *Amazon CloudFront Developer Guide* .
        *
        * Default: - 5
@@ -3038,10 +3300,10 @@ public open class CfnDistribution(
        * Specifies how long, in seconds, CloudFront waits for a response from the origin.
        *
        * This is also known as the *origin response timeout* . The minimum timeout is 1 second, the
-       * maximum is 60 seconds, and the default (if you don't specify otherwise) is 30 seconds.
+       * maximum is 120 seconds, and the default (if you don't specify otherwise) is 30 seconds.
        *
-       * For more information, see [Origin Response
-       * Timeout](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginResponseTimeout)
+       * For more information, see [Response timeout (custom origins
+       * only)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginResponseTimeout)
        * in the *Amazon CloudFront Developer Guide* .
        *
        * Default: - 30
@@ -3057,7 +3319,7 @@ public open class CfnDistribution(
        * Valid values include `SSLv3` , `TLSv1` , `TLSv1.1` , and `TLSv1.2` .
        *
        * For more information, see [Minimum Origin SSL
-       * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginSSLProtocols)
+       * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginSSLProtocols)
        * in the *Amazon CloudFront Developer Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html#cfn-cloudfront-distribution-customoriginconfig-originsslprotocols)
@@ -3091,51 +3353,96 @@ public open class CfnDistribution(
    *
    * You must create exactly one default cache behavior.
    *
+   *
+   * If your minimum TTL is greater than 0, CloudFront will cache content for at least the duration
+   * specified in the cache policy's minimum TTL, even if the `Cache-Control: no-cache` , `no-store` ,
+   * or `private` directives are present in the origin headers.
+   *
+   *
    * Example:
    *
    * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * DefaultCacheBehaviorProperty defaultCacheBehaviorProperty =
-   * DefaultCacheBehaviorProperty.builder()
-   * .targetOriginId("targetOriginId")
-   * .viewerProtocolPolicy("viewerProtocolPolicy")
-   * // the properties below are optional
-   * .allowedMethods(List.of("allowedMethods"))
-   * .cachedMethods(List.of("cachedMethods"))
-   * .cachePolicyId("cachePolicyId")
+   * // Create the simple Origin
+   * Bucket myBucket = new Bucket(this, "myBucket");
+   * IOrigin s3Origin = S3BucketOrigin.withOriginAccessControl(myBucket,
+   * S3BucketOriginWithOACProps.builder()
+   * .originAccessLevels(List.of(AccessLevel.READ, AccessLevel.LIST))
+   * .build());
+   * // Create the Distribution construct
+   * Distribution myMultiTenantDistribution = Distribution.Builder.create(this,
+   * "cf-hosted-distribution")
+   * .defaultBehavior(BehaviorOptions.builder()
+   * .origin(s3Origin)
+   * .build())
+   * .defaultRootObject("index.html")
+   * .build();
+   * // Access the underlying L1 CfnDistribution to configure SaaS Manager properties which are not
+   * yet available in the L2 Distribution construct
+   * CfnDistribution cfnDistribution =
+   * (CfnDistribution)myMultiTenantDistribution.getNode().getDefaultChild();
+   * DefaultCacheBehaviorProperty defaultCacheBehavior = DefaultCacheBehaviorProperty.builder()
+   * .targetOriginId(myBucket.getBucketArn())
+   * .viewerProtocolPolicy("allow-all")
    * .compress(false)
-   * .defaultTtl(123)
-   * .fieldLevelEncryptionId("fieldLevelEncryptionId")
-   * .forwardedValues(ForwardedValuesProperty.builder()
-   * .queryString(false)
+   * .allowedMethods(List.of("GET", "HEAD"))
+   * .cachePolicyId(CachePolicy.CACHING_OPTIMIZED.getCachePolicyId())
+   * .build();
+   * // Create the updated distributionConfig
+   * DistributionConfigProperty distributionConfig = DistributionConfigProperty.builder()
+   * .defaultCacheBehavior(defaultCacheBehavior)
+   * .enabled(true)
    * // the properties below are optional
-   * .cookies(CookiesProperty.builder()
-   * .forward("forward")
+   * .connectionMode("tenant-only")
+   * .origins(List.of(OriginProperty.builder()
+   * .id(myBucket.getBucketArn())
+   * .domainName(myBucket.getBucketDomainName())
+   * .s3OriginConfig(S3OriginConfigProperty.builder().build())
+   * .originPath("/{{tenantName}}")
+   * .build()))
+   * .tenantConfig(TenantConfigProperty.builder()
+   * .parameterDefinitions(List.of(ParameterDefinitionProperty.builder()
+   * .definition(DefinitionProperty.builder()
+   * .stringSchema(StringSchemaProperty.builder()
+   * .required(false)
    * // the properties below are optional
-   * .whitelistedNames(List.of("whitelistedNames"))
+   * .comment("tenantName")
+   * .defaultValue("root")
    * .build())
-   * .headers(List.of("headers"))
-   * .queryStringCacheKeys(List.of("queryStringCacheKeys"))
    * .build())
-   * .functionAssociations(List.of(FunctionAssociationProperty.builder()
-   * .eventType("eventType")
-   * .functionArn("functionArn")
+   * .name("tenantName")
    * .build()))
-   * .lambdaFunctionAssociations(List.of(LambdaFunctionAssociationProperty.builder()
-   * .eventType("eventType")
-   * .includeBody(false)
-   * .lambdaFunctionArn("lambdaFunctionArn")
-   * .build()))
-   * .maxTtl(123)
-   * .minTtl(123)
-   * .originRequestPolicyId("originRequestPolicyId")
-   * .realtimeLogConfigArn("realtimeLogConfigArn")
-   * .responseHeadersPolicyId("responseHeadersPolicyId")
-   * .smoothStreaming(false)
-   * .trustedKeyGroups(List.of("trustedKeyGroups"))
-   * .trustedSigners(List.of("trustedSigners"))
+   * .build())
+   * .build();
+   * // Override the distribution configuration to enable multi-tenancy.
+   * cfnDistribution.getDistributionConfig() = distributionConfig;
+   * // Create a connection group so we have access to the RoutingEndpoint associated with the
+   * tenant we are about to create
+   * CfnConnectionGroup connectionGroup = CfnConnectionGroup.Builder.create(this,
+   * "self-hosted-connection-group")
+   * .enabled(true)
+   * .ipv6Enabled(true)
+   * .name("self-hosted-connection-group")
+   * .build();
+   * // Export the RoutingEndpoint, skip this step if you'd prefer to fetch it from the CloudFront
+   * console or via Cloudfront.ListConnectionGroups API
+   * // Export the RoutingEndpoint, skip this step if you'd prefer to fetch it from the CloudFront
+   * console or via Cloudfront.ListConnectionGroups API
+   * CfnOutput.Builder.create(this, "RoutingEndpoint")
+   * .value(connectionGroup.getAttrRoutingEndpoint())
+   * .description("CloudFront Routing Endpoint to be added to my hosted zone CNAME records")
+   * .build();
+   * // Create a distribution tenant with a self-hosted domain.
+   * CfnDistributionTenant selfHostedTenant = CfnDistributionTenant.Builder.create(this,
+   * "self-hosted-tenant")
+   * .distributionId(myMultiTenantDistribution.getDistributionId())
+   * .connectionGroupId(connectionGroup.getAttrId())
+   * .name("self-hosted-tenant")
+   * .domains(List.of("self-hosted-tenant.my.domain.com"))
+   * .enabled(true)
+   * .managedCertificateRequest(ManagedCertificateRequestProperty.builder()
+   * .primaryDomainName("self-hosted-tenant.my.domain.com")
+   * .validationTokenHost("self-hosted")
+   * .build())
    * .build();
    * ```
    *
@@ -3210,10 +3517,15 @@ public open class CfnDistribution(
     public fun compress(): Any? = unwrap(this).getCompress()
 
     /**
-     * This field is deprecated.
+     * This field only supports standard distributions.
      *
-     * We recommend that you use the `DefaultTTL` field in a cache policy instead of this field. For
-     * more information, see [Creating cache
+     * You can't specify this field for multi-tenant distributions. For more information, see
+     * [Unsupported features for SaaS Manager for Amazon
+     * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * This field is deprecated. We recommend that you use the `DefaultTTL` field in a cache policy
+     * instead of this field. For more information, see [Creating cache
      * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
      * or [Using the managed cache
      * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -3285,6 +3597,13 @@ public open class CfnDistribution(
     public fun functionAssociations(): Any? = unwrap(this).getFunctionAssociations()
 
     /**
+     * The gRPC configuration for your cache behavior.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-grpcconfig)
+     */
+    public fun grpcConfig(): Any? = unwrap(this).getGrpcConfig()
+
+    /**
      * A complex type that contains zero or more Lambda&#64;Edge function associations for a cache
      * behavior.
      *
@@ -3293,10 +3612,15 @@ public open class CfnDistribution(
     public fun lambdaFunctionAssociations(): Any? = unwrap(this).getLambdaFunctionAssociations()
 
     /**
-     * This field is deprecated.
+     * This field only supports standard distributions.
      *
-     * We recommend that you use the `MaxTTL` field in a cache policy instead of this field. For
-     * more information, see [Creating cache
+     * You can't specify this field for multi-tenant distributions. For more information, see
+     * [Unsupported features for SaaS Manager for Amazon
+     * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * This field is deprecated. We recommend that you use the `MaxTTL` field in a cache policy
+     * instead of this field. For more information, see [Creating cache
      * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
      * or [Using the managed cache
      * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -3317,10 +3641,15 @@ public open class CfnDistribution(
     public fun maxTtl(): Number? = unwrap(this).getMaxTtl()
 
     /**
-     * This field is deprecated.
+     * This field only supports standard distributions.
      *
-     * We recommend that you use the `MinTTL` field in a cache policy instead of this field. For
-     * more information, see [Creating cache
+     * You can't specify this field for multi-tenant distributions. For more information, see
+     * [Unsupported features for SaaS Manager for Amazon
+     * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * This field is deprecated. We recommend that you use the `MinTTL` field in a cache policy
+     * instead of this field. For more information, see [Creating cache
      * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
      * or [Using the managed cache
      * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -3381,12 +3710,17 @@ public open class CfnDistribution(
     public fun responseHeadersPolicyId(): String? = unwrap(this).getResponseHeadersPolicyId()
 
     /**
-     * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming format
-     * using the origin that is associated with this cache behavior.
+     * This field only supports standard distributions.
      *
-     * If so, specify `true` ; if not, specify `false` . If you specify `true` for `SmoothStreaming`
-     * , you can still distribute other content using this cache behavior if the content matches the
-     * value of `PathPattern` .
+     * You can't specify this field for multi-tenant distributions. For more information, see
+     * [Unsupported features for SaaS Manager for Amazon
+     * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming format
+     * using the origin that is associated with this cache behavior. If so, specify `true` ; if not,
+     * specify `false` . If you specify `true` for `SmoothStreaming` , you can still distribute other
+     * content using this cache behavior if the content matches the value of `PathPattern` .
      *
      * Default: - false
      *
@@ -3419,6 +3753,14 @@ public open class CfnDistribution(
 
     /**
      * We recommend using `TrustedKeyGroups` instead of `TrustedSigners` .
+     *
+     *
+     * This field only supports standard distributions. You can't specify this field for
+     * multi-tenant distributions. For more information, see [Unsupported features for SaaS Manager for
+     * Amazon
+     * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
      *
      * A list of AWS account IDs whose public keys CloudFront can use to validate signed URLs or
      * signed cookies.
@@ -3566,9 +3908,14 @@ public open class CfnDistribution(
       public fun compress(compress: IResolvable)
 
       /**
-       * @param defaultTtl This field is deprecated.
-       * We recommend that you use the `DefaultTTL` field in a cache policy instead of this field.
-       * For more information, see [Creating cache
+       * @param defaultTtl This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `DefaultTTL` field in a cache
+       * policy instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -3705,6 +4052,23 @@ public open class CfnDistribution(
       public fun functionAssociations(vararg functionAssociations: Any)
 
       /**
+       * @param grpcConfig The gRPC configuration for your cache behavior.
+       */
+      public fun grpcConfig(grpcConfig: IResolvable)
+
+      /**
+       * @param grpcConfig The gRPC configuration for your cache behavior.
+       */
+      public fun grpcConfig(grpcConfig: GrpcConfigProperty)
+
+      /**
+       * @param grpcConfig The gRPC configuration for your cache behavior.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("557434c7014504ba793bb32a5585f668560b72306022900f81446a7e6b499dec")
+      public fun grpcConfig(grpcConfig: GrpcConfigProperty.Builder.() -> Unit)
+
+      /**
        * @param lambdaFunctionAssociations A complex type that contains zero or more Lambda&#64;Edge
        * function associations for a cache behavior.
        */
@@ -3723,9 +4087,14 @@ public open class CfnDistribution(
       public fun lambdaFunctionAssociations(vararg lambdaFunctionAssociations: Any)
 
       /**
-       * @param maxTtl This field is deprecated.
-       * We recommend that you use the `MaxTTL` field in a cache policy instead of this field. For
-       * more information, see [Creating cache
+       * @param maxTtl This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `MaxTTL` field in a cache policy
+       * instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -3742,9 +4111,14 @@ public open class CfnDistribution(
       public fun maxTtl(maxTtl: Number)
 
       /**
-       * @param minTtl This field is deprecated.
-       * We recommend that you use the `MinTTL` field in a cache policy instead of this field. For
-       * more information, see [Creating cache
+       * @param minTtl This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `MinTTL` field in a cache policy
+       * instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -3787,22 +4161,32 @@ public open class CfnDistribution(
       public fun responseHeadersPolicyId(responseHeadersPolicyId: String)
 
       /**
-       * @param smoothStreaming Indicates whether you want to distribute media files in the
-       * Microsoft Smooth Streaming format using the origin that is associated with this cache
-       * behavior.
-       * If so, specify `true` ; if not, specify `false` . If you specify `true` for
-       * `SmoothStreaming` , you can still distribute other content using this cache behavior if the
-       * content matches the value of `PathPattern` .
+       * @param smoothStreaming This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming
+       * format using the origin that is associated with this cache behavior. If so, specify `true` ;
+       * if not, specify `false` . If you specify `true` for `SmoothStreaming` , you can still
+       * distribute other content using this cache behavior if the content matches the value of
+       * `PathPattern` .
        */
       public fun smoothStreaming(smoothStreaming: Boolean)
 
       /**
-       * @param smoothStreaming Indicates whether you want to distribute media files in the
-       * Microsoft Smooth Streaming format using the origin that is associated with this cache
-       * behavior.
-       * If so, specify `true` ; if not, specify `false` . If you specify `true` for
-       * `SmoothStreaming` , you can still distribute other content using this cache behavior if the
-       * content matches the value of `PathPattern` .
+       * @param smoothStreaming This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming
+       * format using the origin that is associated with this cache behavior. If so, specify `true` ;
+       * if not, specify `false` . If you specify `true` for `SmoothStreaming` , you can still
+       * distribute other content using this cache behavior if the content matches the value of
+       * `PathPattern` .
        */
       public fun smoothStreaming(smoothStreaming: IResolvable)
 
@@ -3840,6 +4224,14 @@ public open class CfnDistribution(
 
       /**
        * @param trustedSigners We recommend using `TrustedKeyGroups` instead of `TrustedSigners` .
+       *
+       * This field only supports standard distributions. You can't specify this field for
+       * multi-tenant distributions. For more information, see [Unsupported features for SaaS Manager
+       * for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       *
        * A list of AWS account IDs whose public keys CloudFront can use to validate signed URLs or
        * signed cookies.
        *
@@ -3855,6 +4247,14 @@ public open class CfnDistribution(
 
       /**
        * @param trustedSigners We recommend using `TrustedKeyGroups` instead of `TrustedSigners` .
+       *
+       * This field only supports standard distributions. You can't specify this field for
+       * multi-tenant distributions. For more information, see [Unsupported features for SaaS Manager
+       * for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       *
        * A list of AWS account IDs whose public keys CloudFront can use to validate signed URLs or
        * signed cookies.
        *
@@ -4010,9 +4410,14 @@ public open class CfnDistribution(
       }
 
       /**
-       * @param defaultTtl This field is deprecated.
-       * We recommend that you use the `DefaultTTL` field in a cache policy instead of this field.
-       * For more information, see [Creating cache
+       * @param defaultTtl This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `DefaultTTL` field in a cache
+       * policy instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -4163,6 +4568,28 @@ public open class CfnDistribution(
           functionAssociations(functionAssociations.toList())
 
       /**
+       * @param grpcConfig The gRPC configuration for your cache behavior.
+       */
+      override fun grpcConfig(grpcConfig: IResolvable) {
+        cdkBuilder.grpcConfig(grpcConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param grpcConfig The gRPC configuration for your cache behavior.
+       */
+      override fun grpcConfig(grpcConfig: GrpcConfigProperty) {
+        cdkBuilder.grpcConfig(grpcConfig.let(GrpcConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param grpcConfig The gRPC configuration for your cache behavior.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("557434c7014504ba793bb32a5585f668560b72306022900f81446a7e6b499dec")
+      override fun grpcConfig(grpcConfig: GrpcConfigProperty.Builder.() -> Unit): Unit =
+          grpcConfig(GrpcConfigProperty(grpcConfig))
+
+      /**
        * @param lambdaFunctionAssociations A complex type that contains zero or more Lambda&#64;Edge
        * function associations for a cache behavior.
        */
@@ -4186,9 +4613,14 @@ public open class CfnDistribution(
           lambdaFunctionAssociations(lambdaFunctionAssociations.toList())
 
       /**
-       * @param maxTtl This field is deprecated.
-       * We recommend that you use the `MaxTTL` field in a cache policy instead of this field. For
-       * more information, see [Creating cache
+       * @param maxTtl This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `MaxTTL` field in a cache policy
+       * instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -4207,9 +4639,14 @@ public open class CfnDistribution(
       }
 
       /**
-       * @param minTtl This field is deprecated.
-       * We recommend that you use the `MinTTL` field in a cache policy instead of this field. For
-       * more information, see [Creating cache
+       * @param minTtl This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `MinTTL` field in a cache policy
+       * instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -4260,24 +4697,34 @@ public open class CfnDistribution(
       }
 
       /**
-       * @param smoothStreaming Indicates whether you want to distribute media files in the
-       * Microsoft Smooth Streaming format using the origin that is associated with this cache
-       * behavior.
-       * If so, specify `true` ; if not, specify `false` . If you specify `true` for
-       * `SmoothStreaming` , you can still distribute other content using this cache behavior if the
-       * content matches the value of `PathPattern` .
+       * @param smoothStreaming This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming
+       * format using the origin that is associated with this cache behavior. If so, specify `true` ;
+       * if not, specify `false` . If you specify `true` for `SmoothStreaming` , you can still
+       * distribute other content using this cache behavior if the content matches the value of
+       * `PathPattern` .
        */
       override fun smoothStreaming(smoothStreaming: Boolean) {
         cdkBuilder.smoothStreaming(smoothStreaming)
       }
 
       /**
-       * @param smoothStreaming Indicates whether you want to distribute media files in the
-       * Microsoft Smooth Streaming format using the origin that is associated with this cache
-       * behavior.
-       * If so, specify `true` ; if not, specify `false` . If you specify `true` for
-       * `SmoothStreaming` , you can still distribute other content using this cache behavior if the
-       * content matches the value of `PathPattern` .
+       * @param smoothStreaming This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming
+       * format using the origin that is associated with this cache behavior. If so, specify `true` ;
+       * if not, specify `false` . If you specify `true` for `SmoothStreaming` , you can still
+       * distribute other content using this cache behavior if the content matches the value of
+       * `PathPattern` .
        */
       override fun smoothStreaming(smoothStreaming: IResolvable) {
         cdkBuilder.smoothStreaming(smoothStreaming.let(IResolvable.Companion::unwrap))
@@ -4322,6 +4769,14 @@ public open class CfnDistribution(
 
       /**
        * @param trustedSigners We recommend using `TrustedKeyGroups` instead of `TrustedSigners` .
+       *
+       * This field only supports standard distributions. You can't specify this field for
+       * multi-tenant distributions. For more information, see [Unsupported features for SaaS Manager
+       * for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       *
        * A list of AWS account IDs whose public keys CloudFront can use to validate signed URLs or
        * signed cookies.
        *
@@ -4339,6 +4794,14 @@ public open class CfnDistribution(
 
       /**
        * @param trustedSigners We recommend using `TrustedKeyGroups` instead of `TrustedSigners` .
+       *
+       * This field only supports standard distributions. You can't specify this field for
+       * multi-tenant distributions. For more information, see [Unsupported features for SaaS Manager
+       * for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       *
        * A list of AWS account IDs whose public keys CloudFront can use to validate signed URLs or
        * signed cookies.
        *
@@ -4463,10 +4926,15 @@ public open class CfnDistribution(
       override fun compress(): Any? = unwrap(this).getCompress()
 
       /**
-       * This field is deprecated.
+       * This field only supports standard distributions.
        *
-       * We recommend that you use the `DefaultTTL` field in a cache policy instead of this field.
-       * For more information, see [Creating cache
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `DefaultTTL` field in a cache
+       * policy instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -4539,6 +5007,13 @@ public open class CfnDistribution(
       override fun functionAssociations(): Any? = unwrap(this).getFunctionAssociations()
 
       /**
+       * The gRPC configuration for your cache behavior.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html#cfn-cloudfront-distribution-defaultcachebehavior-grpcconfig)
+       */
+      override fun grpcConfig(): Any? = unwrap(this).getGrpcConfig()
+
+      /**
        * A complex type that contains zero or more Lambda&#64;Edge function associations for a cache
        * behavior.
        *
@@ -4547,10 +5022,15 @@ public open class CfnDistribution(
       override fun lambdaFunctionAssociations(): Any? = unwrap(this).getLambdaFunctionAssociations()
 
       /**
-       * This field is deprecated.
+       * This field only supports standard distributions.
        *
-       * We recommend that you use the `MaxTTL` field in a cache policy instead of this field. For
-       * more information, see [Creating cache
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `MaxTTL` field in a cache policy
+       * instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -4571,10 +5051,15 @@ public open class CfnDistribution(
       override fun maxTtl(): Number? = unwrap(this).getMaxTtl()
 
       /**
-       * This field is deprecated.
+       * This field only supports standard distributions.
        *
-       * We recommend that you use the `MinTTL` field in a cache policy instead of this field. For
-       * more information, see [Creating cache
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * This field is deprecated. We recommend that you use the `MinTTL` field in a cache policy
+       * instead of this field. For more information, see [Creating cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
        * or [Using the managed cache
        * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html)
@@ -4635,12 +5120,18 @@ public open class CfnDistribution(
       override fun responseHeadersPolicyId(): String? = unwrap(this).getResponseHeadersPolicyId()
 
       /**
-       * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming
-       * format using the origin that is associated with this cache behavior.
+       * This field only supports standard distributions.
        *
-       * If so, specify `true` ; if not, specify `false` . If you specify `true` for
-       * `SmoothStreaming` , you can still distribute other content using this cache behavior if the
-       * content matches the value of `PathPattern` .
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming
+       * format using the origin that is associated with this cache behavior. If so, specify `true` ;
+       * if not, specify `false` . If you specify `true` for `SmoothStreaming` , you can still
+       * distribute other content using this cache behavior if the content matches the value of
+       * `PathPattern` .
        *
        * Default: - false
        *
@@ -4674,6 +5165,14 @@ public open class CfnDistribution(
 
       /**
        * We recommend using `TrustedKeyGroups` instead of `TrustedSigners` .
+       *
+       *
+       * This field only supports standard distributions. You can't specify this field for
+       * multi-tenant distributions. For more information, see [Unsupported features for SaaS Manager
+       * for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
        *
        * A list of AWS account IDs whose public keys CloudFront can use to validate signed URLs or
        * signed cookies.
@@ -4743,7 +5242,7 @@ public open class CfnDistribution(
   }
 
   /**
-   * A distribution configuration.
+   * The value that you assigned to the parameter.
    *
    * Example:
    *
@@ -4751,186 +5250,194 @@ public open class CfnDistribution(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cloudfront.*;
-   * DistributionConfigProperty distributionConfigProperty = DistributionConfigProperty.builder()
-   * .defaultCacheBehavior(DefaultCacheBehaviorProperty.builder()
-   * .targetOriginId("targetOriginId")
-   * .viewerProtocolPolicy("viewerProtocolPolicy")
+   * DefinitionProperty definitionProperty = DefinitionProperty.builder()
+   * .stringSchema(StringSchemaProperty.builder()
+   * .required(false)
    * // the properties below are optional
-   * .allowedMethods(List.of("allowedMethods"))
-   * .cachedMethods(List.of("cachedMethods"))
-   * .cachePolicyId("cachePolicyId")
-   * .compress(false)
-   * .defaultTtl(123)
-   * .fieldLevelEncryptionId("fieldLevelEncryptionId")
-   * .forwardedValues(ForwardedValuesProperty.builder()
-   * .queryString(false)
-   * // the properties below are optional
-   * .cookies(CookiesProperty.builder()
-   * .forward("forward")
-   * // the properties below are optional
-   * .whitelistedNames(List.of("whitelistedNames"))
-   * .build())
-   * .headers(List.of("headers"))
-   * .queryStringCacheKeys(List.of("queryStringCacheKeys"))
-   * .build())
-   * .functionAssociations(List.of(FunctionAssociationProperty.builder()
-   * .eventType("eventType")
-   * .functionArn("functionArn")
-   * .build()))
-   * .lambdaFunctionAssociations(List.of(LambdaFunctionAssociationProperty.builder()
-   * .eventType("eventType")
-   * .includeBody(false)
-   * .lambdaFunctionArn("lambdaFunctionArn")
-   * .build()))
-   * .maxTtl(123)
-   * .minTtl(123)
-   * .originRequestPolicyId("originRequestPolicyId")
-   * .realtimeLogConfigArn("realtimeLogConfigArn")
-   * .responseHeadersPolicyId("responseHeadersPolicyId")
-   * .smoothStreaming(false)
-   * .trustedKeyGroups(List.of("trustedKeyGroups"))
-   * .trustedSigners(List.of("trustedSigners"))
-   * .build())
-   * .enabled(false)
-   * // the properties below are optional
-   * .aliases(List.of("aliases"))
-   * .cacheBehaviors(List.of(CacheBehaviorProperty.builder()
-   * .pathPattern("pathPattern")
-   * .targetOriginId("targetOriginId")
-   * .viewerProtocolPolicy("viewerProtocolPolicy")
-   * // the properties below are optional
-   * .allowedMethods(List.of("allowedMethods"))
-   * .cachedMethods(List.of("cachedMethods"))
-   * .cachePolicyId("cachePolicyId")
-   * .compress(false)
-   * .defaultTtl(123)
-   * .fieldLevelEncryptionId("fieldLevelEncryptionId")
-   * .forwardedValues(ForwardedValuesProperty.builder()
-   * .queryString(false)
-   * // the properties below are optional
-   * .cookies(CookiesProperty.builder()
-   * .forward("forward")
-   * // the properties below are optional
-   * .whitelistedNames(List.of("whitelistedNames"))
-   * .build())
-   * .headers(List.of("headers"))
-   * .queryStringCacheKeys(List.of("queryStringCacheKeys"))
-   * .build())
-   * .functionAssociations(List.of(FunctionAssociationProperty.builder()
-   * .eventType("eventType")
-   * .functionArn("functionArn")
-   * .build()))
-   * .lambdaFunctionAssociations(List.of(LambdaFunctionAssociationProperty.builder()
-   * .eventType("eventType")
-   * .includeBody(false)
-   * .lambdaFunctionArn("lambdaFunctionArn")
-   * .build()))
-   * .maxTtl(123)
-   * .minTtl(123)
-   * .originRequestPolicyId("originRequestPolicyId")
-   * .realtimeLogConfigArn("realtimeLogConfigArn")
-   * .responseHeadersPolicyId("responseHeadersPolicyId")
-   * .smoothStreaming(false)
-   * .trustedKeyGroups(List.of("trustedKeyGroups"))
-   * .trustedSigners(List.of("trustedSigners"))
-   * .build()))
-   * .cnamEs(List.of("cnamEs"))
    * .comment("comment")
-   * .continuousDeploymentPolicyId("continuousDeploymentPolicyId")
-   * .customErrorResponses(List.of(CustomErrorResponseProperty.builder()
-   * .errorCode(123)
+   * .defaultValue("defaultValue")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-definition.html)
+   */
+  public interface DefinitionProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-definition.html#cfn-cloudfront-distribution-definition-stringschema)
+     */
+    public fun stringSchema(): Any? = unwrap(this).getStringSchema()
+
+    /**
+     * A builder for [DefinitionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param stringSchema the value to be set.
+       */
+      public fun stringSchema(stringSchema: IResolvable)
+
+      /**
+       * @param stringSchema the value to be set.
+       */
+      public fun stringSchema(stringSchema: StringSchemaProperty)
+
+      /**
+       * @param stringSchema the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("03b7be8bfdaefb43b956a52bd9d85c04a34f61a572fba4ade5c13bc3682ddc9a")
+      public fun stringSchema(stringSchema: StringSchemaProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.DefinitionProperty.Builder =
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.DefinitionProperty.builder()
+
+      /**
+       * @param stringSchema the value to be set.
+       */
+      override fun stringSchema(stringSchema: IResolvable) {
+        cdkBuilder.stringSchema(stringSchema.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param stringSchema the value to be set.
+       */
+      override fun stringSchema(stringSchema: StringSchemaProperty) {
+        cdkBuilder.stringSchema(stringSchema.let(StringSchemaProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param stringSchema the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("03b7be8bfdaefb43b956a52bd9d85c04a34f61a572fba4ade5c13bc3682ddc9a")
+      override fun stringSchema(stringSchema: StringSchemaProperty.Builder.() -> Unit): Unit =
+          stringSchema(StringSchemaProperty(stringSchema))
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.DefinitionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.DefinitionProperty,
+    ) : CdkObject(cdkObject),
+        DefinitionProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-definition.html#cfn-cloudfront-distribution-definition-stringschema)
+       */
+      override fun stringSchema(): Any? = unwrap(this).getStringSchema()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DefinitionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.DefinitionProperty):
+          DefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? DefinitionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DefinitionProperty):
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.DefinitionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.DefinitionProperty
+    }
+  }
+
+  /**
+   * A distribution configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // Create the simple Origin
+   * Bucket myBucket = new Bucket(this, "myBucket");
+   * IOrigin s3Origin = S3BucketOrigin.withOriginAccessControl(myBucket,
+   * S3BucketOriginWithOACProps.builder()
+   * .originAccessLevels(List.of(AccessLevel.READ, AccessLevel.LIST))
+   * .build());
+   * // Create the Distribution construct
+   * Distribution myMultiTenantDistribution = Distribution.Builder.create(this,
+   * "cf-hosted-distribution")
+   * .defaultBehavior(BehaviorOptions.builder()
+   * .origin(s3Origin)
+   * .build())
+   * .defaultRootObject("index.html")
+   * .build();
+   * // Access the underlying L1 CfnDistribution to configure SaaS Manager properties which are not
+   * yet available in the L2 Distribution construct
+   * CfnDistribution cfnDistribution =
+   * (CfnDistribution)myMultiTenantDistribution.getNode().getDefaultChild();
+   * DefaultCacheBehaviorProperty defaultCacheBehavior = DefaultCacheBehaviorProperty.builder()
+   * .targetOriginId(myBucket.getBucketArn())
+   * .viewerProtocolPolicy("allow-all")
+   * .compress(false)
+   * .allowedMethods(List.of("GET", "HEAD"))
+   * .cachePolicyId(CachePolicy.CACHING_OPTIMIZED.getCachePolicyId())
+   * .build();
+   * // Create the updated distributionConfig
+   * DistributionConfigProperty distributionConfig = DistributionConfigProperty.builder()
+   * .defaultCacheBehavior(defaultCacheBehavior)
+   * .enabled(true)
    * // the properties below are optional
-   * .errorCachingMinTtl(123)
-   * .responseCode(123)
-   * .responsePagePath("responsePagePath")
-   * .build()))
-   * .customOrigin(LegacyCustomOriginProperty.builder()
-   * .dnsName("dnsName")
-   * .originProtocolPolicy("originProtocolPolicy")
-   * .originSslProtocols(List.of("originSslProtocols"))
-   * // the properties below are optional
-   * .httpPort(123)
-   * .httpsPort(123)
-   * .build())
-   * .defaultRootObject("defaultRootObject")
-   * .httpVersion("httpVersion")
-   * .ipv6Enabled(false)
-   * .logging(LoggingProperty.builder()
-   * .bucket("bucket")
-   * // the properties below are optional
-   * .includeCookies(false)
-   * .prefix("prefix")
-   * .build())
-   * .originGroups(OriginGroupsProperty.builder()
-   * .quantity(123)
-   * // the properties below are optional
-   * .items(List.of(OriginGroupProperty.builder()
-   * .failoverCriteria(OriginGroupFailoverCriteriaProperty.builder()
-   * .statusCodes(StatusCodesProperty.builder()
-   * .items(List.of(123))
-   * .quantity(123)
-   * .build())
-   * .build())
-   * .id("id")
-   * .members(OriginGroupMembersProperty.builder()
-   * .items(List.of(OriginGroupMemberProperty.builder()
-   * .originId("originId")
-   * .build()))
-   * .quantity(123)
-   * .build())
-   * .build()))
-   * .build())
+   * .connectionMode("tenant-only")
    * .origins(List.of(OriginProperty.builder()
-   * .domainName("domainName")
-   * .id("id")
-   * // the properties below are optional
-   * .connectionAttempts(123)
-   * .connectionTimeout(123)
-   * .customOriginConfig(CustomOriginConfigProperty.builder()
-   * .originProtocolPolicy("originProtocolPolicy")
-   * // the properties below are optional
-   * .httpPort(123)
-   * .httpsPort(123)
-   * .originKeepaliveTimeout(123)
-   * .originReadTimeout(123)
-   * .originSslProtocols(List.of("originSslProtocols"))
-   * .build())
-   * .originAccessControlId("originAccessControlId")
-   * .originCustomHeaders(List.of(OriginCustomHeaderProperty.builder()
-   * .headerName("headerName")
-   * .headerValue("headerValue")
+   * .id(myBucket.getBucketArn())
+   * .domainName(myBucket.getBucketDomainName())
+   * .s3OriginConfig(S3OriginConfigProperty.builder().build())
+   * .originPath("/{{tenantName}}")
    * .build()))
-   * .originPath("originPath")
-   * .originShield(OriginShieldProperty.builder()
-   * .enabled(false)
-   * .originShieldRegion("originShieldRegion")
+   * .tenantConfig(TenantConfigProperty.builder()
+   * .parameterDefinitions(List.of(ParameterDefinitionProperty.builder()
+   * .definition(DefinitionProperty.builder()
+   * .stringSchema(StringSchemaProperty.builder()
+   * .required(false)
+   * // the properties below are optional
+   * .comment("tenantName")
+   * .defaultValue("root")
    * .build())
-   * .s3OriginConfig(S3OriginConfigProperty.builder()
-   * .originAccessIdentity("originAccessIdentity")
    * .build())
+   * .name("tenantName")
    * .build()))
-   * .priceClass("priceClass")
-   * .restrictions(RestrictionsProperty.builder()
-   * .geoRestriction(GeoRestrictionProperty.builder()
-   * .restrictionType("restrictionType")
-   * // the properties below are optional
-   * .locations(List.of("locations"))
    * .build())
+   * .build();
+   * // Override the distribution configuration to enable multi-tenancy.
+   * cfnDistribution.getDistributionConfig() = distributionConfig;
+   * // Create a connection group so we have access to the RoutingEndpoint associated with the
+   * tenant we are about to create
+   * CfnConnectionGroup connectionGroup = CfnConnectionGroup.Builder.create(this,
+   * "self-hosted-connection-group")
+   * .enabled(true)
+   * .ipv6Enabled(true)
+   * .name("self-hosted-connection-group")
+   * .build();
+   * // Export the RoutingEndpoint, skip this step if you'd prefer to fetch it from the CloudFront
+   * console or via Cloudfront.ListConnectionGroups API
+   * // Export the RoutingEndpoint, skip this step if you'd prefer to fetch it from the CloudFront
+   * console or via Cloudfront.ListConnectionGroups API
+   * CfnOutput.Builder.create(this, "RoutingEndpoint")
+   * .value(connectionGroup.getAttrRoutingEndpoint())
+   * .description("CloudFront Routing Endpoint to be added to my hosted zone CNAME records")
+   * .build();
+   * // Create a distribution tenant with a self-hosted domain.
+   * CfnDistributionTenant selfHostedTenant = CfnDistributionTenant.Builder.create(this,
+   * "self-hosted-tenant")
+   * .distributionId(myMultiTenantDistribution.getDistributionId())
+   * .connectionGroupId(connectionGroup.getAttrId())
+   * .name("self-hosted-tenant")
+   * .domains(List.of("self-hosted-tenant.my.domain.com"))
+   * .enabled(true)
+   * .managedCertificateRequest(ManagedCertificateRequestProperty.builder()
+   * .primaryDomainName("self-hosted-tenant.my.domain.com")
+   * .validationTokenHost("self-hosted")
    * .build())
-   * .s3Origin(LegacyS3OriginProperty.builder()
-   * .dnsName("dnsName")
-   * // the properties below are optional
-   * .originAccessIdentity("originAccessIdentity")
-   * .build())
-   * .staging(false)
-   * .viewerCertificate(ViewerCertificateProperty.builder()
-   * .acmCertificateArn("acmCertificateArn")
-   * .cloudFrontDefaultCertificate(false)
-   * .iamCertificateId("iamCertificateId")
-   * .minimumProtocolVersion("minimumProtocolVersion")
-   * .sslSupportMethod("sslSupportMethod")
-   * .build())
-   * .webAclId("webAclId")
    * .build();
    * ```
    *
@@ -4938,12 +5445,32 @@ public open class CfnDistribution(
    */
   public interface DistributionConfigProperty {
     /**
+     * This field only supports standard distributions.
+     *
+     * You can't specify this field for multi-tenant distributions. For more information, see
+     * [Unsupported features for SaaS Manager for Amazon
+     * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
      * A complex type that contains information about CNAMEs (alternate domain names), if any, for
      * this distribution.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-aliases)
      */
     public fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
+
+    /**
+     * To use this field for a multi-tenant distribution, use a connection group instead.
+     *
+     * For more information, see
+     * [ConnectionGroup](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ConnectionGroup.html)
+     * .
+     *
+     * ID of the Anycast static IP list that is associated with the distribution.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-anycastiplistid)
+     */
+    public fun anycastIpListId(): String? = unwrap(this).getAnycastIpListId()
 
     /**
      * A complex type that contains zero or more `CacheBehavior` elements.
@@ -4977,9 +5504,23 @@ public open class CfnDistribution(
     public fun comment(): String? = unwrap(this).getComment()
 
     /**
-     * The identifier of a continuous deployment policy.
+     * This field specifies whether the connection mode is through a standard distribution (direct)
+     * or a multi-tenant distribution with distribution tenants (tenant-only).
      *
-     * For more information, see `CreateContinuousDeploymentPolicy` .
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-connectionmode)
+     */
+    public fun connectionMode(): String? = unwrap(this).getConnectionMode()
+
+    /**
+     * This field only supports standard distributions.
+     *
+     * You can't specify this field for multi-tenant distributions. For more information, see
+     * [Unsupported features for SaaS Manager for Amazon
+     * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * The identifier of a continuous deployment policy. For more information, see
+     * `CreateContinuousDeploymentPolicy` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-continuousdeploymentpolicyid)
      */
@@ -5027,13 +5568,18 @@ public open class CfnDistribution(
     public fun defaultCacheBehavior(): Any
 
     /**
-     * The object that you want CloudFront to request from your origin (for example, `index.html` )
-     * when a viewer requests the root URL for your distribution ( `https://www.example.com` ) instead
-     * of an object in your distribution ( `https://www.example.com/product-description.html` ).
-     * Specifying a default root object avoids exposing the contents of your distribution.
+     * When a viewer requests the root URL for your distribution, the default root object is the
+     * object that you want CloudFront to request from your origin.
      *
-     * Specify only the object name, for example, `index.html` . Don't add a `/` before the object
-     * name.
+     * For example, if your root URL is `https://www.example.com` , you can specify CloudFront to
+     * return the `index.html` file as the default root object. You can specify a default root object
+     * so that viewers see a specific file or object, instead of another object in your distribution
+     * (for example, `https://www.example.com/product-description.html` ). A default root object avoids
+     * exposing the contents of your distribution.
+     *
+     * You can specify the object name or a path to the object name (for example, `index.html` or
+     * `exampleFolderName/index.html` ). Your string can't begin with a forward slash ( `/` ). Only
+     * specify the object name or the path to the object.
      *
      * If you don't want to specify a default root object when you create a distribution, include an
      * empty `DefaultRootObject` element.
@@ -5044,8 +5590,8 @@ public open class CfnDistribution(
      * To replace the default root object, update the distribution configuration and specify the new
      * object.
      *
-     * For more information about the default root object, see [Creating a Default Root
-     * Object](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DefaultRootObject.html)
+     * For more information about the default root object, see [Specify a default root
+     * object](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DefaultRootObject.html)
      * in the *Amazon CloudFront Developer Guide* .
      *
      * Default: - ""
@@ -5087,12 +5633,16 @@ public open class CfnDistribution(
     public fun httpVersion(): String? = unwrap(this).getHttpVersion()
 
     /**
-     * If you want CloudFront to respond to IPv6 DNS requests with an IPv6 address for your
-     * distribution, specify `true` .
+     * To use this field for a multi-tenant distribution, use a connection group instead.
      *
-     * If you specify `false` , CloudFront responds to IPv6 DNS requests with the DNS response code
-     * `NOERROR` and with no IP addresses. This allows viewers to submit a second request, for an IPv4
-     * address for your distribution.
+     * For more information, see
+     * [ConnectionGroup](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ConnectionGroup.html)
+     * .
+     *
+     * If you want CloudFront to respond to IPv6 DNS requests with an IPv6 address for your
+     * distribution, specify `true` . If you specify `false` , CloudFront responds to IPv6 DNS requests
+     * with the DNS response code `NOERROR` and with no IP addresses. This allows viewers to submit a
+     * second request, for an IPv4 address for your distribution.
      *
      * In general, you should enable IPv6 if you have users on IPv6 networks who want to access your
      * content. However, if you're using signed URLs or signed cookies to restrict access to your
@@ -5154,11 +5704,16 @@ public open class CfnDistribution(
     public fun origins(): Any? = unwrap(this).getOrigins()
 
     /**
-     * The price class that corresponds with the maximum price that you want to pay for CloudFront
-     * service.
+     * This field only supports standard distributions.
      *
-     * If you specify `PriceClass_All` , CloudFront responds to requests for your objects from all
-     * CloudFront edge locations.
+     * You can't specify this field for multi-tenant distributions. For more information, see
+     * [Unsupported features for SaaS Manager for Amazon
+     * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * The price class that corresponds with the maximum price that you want to pay for CloudFront
+     * service. If you specify `PriceClass_All` , CloudFront responds to requests for your objects from
+     * all CloudFront edge locations.
      *
      * If you specify a price class other than `PriceClass_All` , CloudFront serves your objects
      * from the CloudFront edge location that has the lowest latency among the edge locations in your
@@ -5199,14 +5754,33 @@ public open class CfnDistribution(
     public fun s3Origin(): Any? = unwrap(this).getS3Origin()
 
     /**
-     * A Boolean that indicates whether this is a staging distribution.
+     * This field only supports standard distributions.
      *
-     * When this value is `true` , this is a staging distribution. When this value is `false` , this
-     * is not a staging distribution.
+     * You can't specify this field for multi-tenant distributions. For more information, see
+     * [Unsupported features for SaaS Manager for Amazon
+     * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * A Boolean that indicates whether this is a staging distribution. When this value is `true` ,
+     * this is a staging distribution. When this value is `false` , this is not a staging distribution.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-staging)
      */
     public fun staging(): Any? = unwrap(this).getStaging()
+
+    /**
+     * This field only supports multi-tenant distributions.
+     *
+     * You can't specify this field for standard distributions. For more information, see
+     * [Unsupported features for SaaS Manager for Amazon
+     * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * A distribution tenant configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-tenantconfig)
+     */
+    public fun tenantConfig(): Any? = unwrap(this).getTenantConfig()
 
     /**
      * A complex type that determines the distribution's SSL/TLS configuration for communicating
@@ -5217,11 +5791,11 @@ public open class CfnDistribution(
     public fun viewerCertificate(): Any? = unwrap(this).getViewerCertificate()
 
     /**
-     * A unique identifier that specifies the AWS WAF web ACL, if any, to associate with this
-     * distribution.
+     * Multi-tenant distributions only support AWS WAF V2 web ACLs.
      *
-     * To specify a web ACL created using the latest version of AWS WAF , use the ACL ARN, for
-     * example
+     * A unique identifier that specifies the AWS WAF web ACL, if any, to associate with this
+     * distribution. To specify a web ACL created using the latest version of AWS WAF , use the ACL
+     * ARN, for example
      * `arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/a1b2c3d4-5678-90ab-cdef-EXAMPLE11111`
      * . To specify a web ACL created using AWS WAF Classic, use the ACL ID, for example
      * `a1b2c3d4-5678-90ab-cdef-EXAMPLE11111` .
@@ -5246,16 +5820,39 @@ public open class CfnDistribution(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param aliases A complex type that contains information about CNAMEs (alternate domain
-       * names), if any, for this distribution.
+       * @param aliases This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * A complex type that contains information about CNAMEs (alternate domain names), if any, for
+       * this distribution.
        */
       public fun aliases(aliases: List<String>)
 
       /**
-       * @param aliases A complex type that contains information about CNAMEs (alternate domain
-       * names), if any, for this distribution.
+       * @param aliases This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * A complex type that contains information about CNAMEs (alternate domain names), if any, for
+       * this distribution.
        */
       public fun aliases(vararg aliases: String)
+
+      /**
+       * @param anycastIpListId To use this field for a multi-tenant distribution, use a connection
+       * group instead.
+       * For more information, see
+       * [ConnectionGroup](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ConnectionGroup.html)
+       * .
+       *
+       * ID of the Anycast static IP list that is associated with the distribution.
+       */
+      public fun anycastIpListId(anycastIpListId: String)
 
       /**
        * @param cacheBehaviors A complex type that contains zero or more `CacheBehavior` elements.
@@ -5297,8 +5894,21 @@ public open class CfnDistribution(
       public fun comment(comment: String)
 
       /**
-       * @param continuousDeploymentPolicyId The identifier of a continuous deployment policy.
-       * For more information, see `CreateContinuousDeploymentPolicy` .
+       * @param connectionMode This field specifies whether the connection mode is through a
+       * standard distribution (direct) or a multi-tenant distribution with distribution tenants
+       * (tenant-only).
+       */
+      public fun connectionMode(connectionMode: String)
+
+      /**
+       * @param continuousDeploymentPolicyId This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * The identifier of a continuous deployment policy. For more information, see
+       * `CreateContinuousDeploymentPolicy` .
        */
       public fun continuousDeploymentPolicyId(continuousDeploymentPolicyId: String)
 
@@ -5398,13 +6008,17 @@ public open class CfnDistribution(
           fun defaultCacheBehavior(defaultCacheBehavior: DefaultCacheBehaviorProperty.Builder.() -> Unit)
 
       /**
-       * @param defaultRootObject The object that you want CloudFront to request from your origin
-       * (for example, `index.html` ) when a viewer requests the root URL for your distribution (
-       * `https://www.example.com` ) instead of an object in your distribution (
-       * `https://www.example.com/product-description.html` ). Specifying a default root object avoids
-       * exposing the contents of your distribution.
-       * Specify only the object name, for example, `index.html` . Don't add a `/` before the object
-       * name.
+       * @param defaultRootObject When a viewer requests the root URL for your distribution, the
+       * default root object is the object that you want CloudFront to request from your origin.
+       * For example, if your root URL is `https://www.example.com` , you can specify CloudFront to
+       * return the `index.html` file as the default root object. You can specify a default root object
+       * so that viewers see a specific file or object, instead of another object in your distribution
+       * (for example, `https://www.example.com/product-description.html` ). A default root object
+       * avoids exposing the contents of your distribution.
+       *
+       * You can specify the object name or a path to the object name (for example, `index.html` or
+       * `exampleFolderName/index.html` ). Your string can't begin with a forward slash ( `/` ). Only
+       * specify the object name or the path to the object.
        *
        * If you don't want to specify a default root object when you create a distribution, include
        * an empty `DefaultRootObject` element.
@@ -5415,8 +6029,8 @@ public open class CfnDistribution(
        * To replace the default root object, update the distribution configuration and specify the
        * new object.
        *
-       * For more information about the default root object, see [Creating a Default Root
-       * Object](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DefaultRootObject.html)
+       * For more information about the default root object, see [Specify a default root
+       * object](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DefaultRootObject.html)
        * in the *Amazon CloudFront Developer Guide* .
        */
       public fun defaultRootObject(defaultRootObject: String)
@@ -5452,11 +6066,16 @@ public open class CfnDistribution(
       public fun httpVersion(httpVersion: String)
 
       /**
-       * @param ipv6Enabled If you want CloudFront to respond to IPv6 DNS requests with an IPv6
-       * address for your distribution, specify `true` .
-       * If you specify `false` , CloudFront responds to IPv6 DNS requests with the DNS response
-       * code `NOERROR` and with no IP addresses. This allows viewers to submit a second request, for
-       * an IPv4 address for your distribution.
+       * @param ipv6Enabled To use this field for a multi-tenant distribution, use a connection
+       * group instead.
+       * For more information, see
+       * [ConnectionGroup](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ConnectionGroup.html)
+       * .
+       *
+       * If you want CloudFront to respond to IPv6 DNS requests with an IPv6 address for your
+       * distribution, specify `true` . If you specify `false` , CloudFront responds to IPv6 DNS
+       * requests with the DNS response code `NOERROR` and with no IP addresses. This allows viewers to
+       * submit a second request, for an IPv4 address for your distribution.
        *
        * In general, you should enable IPv6 if you have users on IPv6 networks who want to access
        * your content. However, if you're using signed URLs or signed cookies to restrict access to
@@ -5487,11 +6106,16 @@ public open class CfnDistribution(
       public fun ipv6Enabled(ipv6Enabled: Boolean)
 
       /**
-       * @param ipv6Enabled If you want CloudFront to respond to IPv6 DNS requests with an IPv6
-       * address for your distribution, specify `true` .
-       * If you specify `false` , CloudFront responds to IPv6 DNS requests with the DNS response
-       * code `NOERROR` and with no IP addresses. This allows viewers to submit a second request, for
-       * an IPv4 address for your distribution.
+       * @param ipv6Enabled To use this field for a multi-tenant distribution, use a connection
+       * group instead.
+       * For more information, see
+       * [ConnectionGroup](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ConnectionGroup.html)
+       * .
+       *
+       * If you want CloudFront to respond to IPv6 DNS requests with an IPv6 address for your
+       * distribution, specify `true` . If you specify `false` , CloudFront responds to IPv6 DNS
+       * requests with the DNS response code `NOERROR` and with no IP addresses. This allows viewers to
+       * submit a second request, for an IPv4 address for your distribution.
        *
        * In general, you should enable IPv6 if you have users on IPv6 networks who want to access
        * your content. However, if you're using signed URLs or signed cookies to restrict access to
@@ -5595,10 +6219,15 @@ public open class CfnDistribution(
       public fun origins(vararg origins: Any)
 
       /**
-       * @param priceClass The price class that corresponds with the maximum price that you want to
-       * pay for CloudFront service.
-       * If you specify `PriceClass_All` , CloudFront responds to requests for your objects from all
-       * CloudFront edge locations.
+       * @param priceClass This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * The price class that corresponds with the maximum price that you want to pay for CloudFront
+       * service. If you specify `PriceClass_All` , CloudFront responds to requests for your objects
+       * from all CloudFront edge locations.
        *
        * If you specify a price class other than `PriceClass_All` , CloudFront serves your objects
        * from the CloudFront edge location that has the lowest latency among the edge locations in your
@@ -5663,18 +6292,65 @@ public open class CfnDistribution(
       public fun s3Origin(s3Origin: LegacyS3OriginProperty.Builder.() -> Unit)
 
       /**
-       * @param staging A Boolean that indicates whether this is a staging distribution.
-       * When this value is `true` , this is a staging distribution. When this value is `false` ,
-       * this is not a staging distribution.
+       * @param staging This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * A Boolean that indicates whether this is a staging distribution. When this value is `true`
+       * , this is a staging distribution. When this value is `false` , this is not a staging
+       * distribution.
        */
       public fun staging(staging: Boolean)
 
       /**
-       * @param staging A Boolean that indicates whether this is a staging distribution.
-       * When this value is `true` , this is a staging distribution. When this value is `false` ,
-       * this is not a staging distribution.
+       * @param staging This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * A Boolean that indicates whether this is a staging distribution. When this value is `true`
+       * , this is a staging distribution. When this value is `false` , this is not a staging
+       * distribution.
        */
       public fun staging(staging: IResolvable)
+
+      /**
+       * @param tenantConfig This field only supports multi-tenant distributions.
+       * You can't specify this field for standard distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * A distribution tenant configuration.
+       */
+      public fun tenantConfig(tenantConfig: IResolvable)
+
+      /**
+       * @param tenantConfig This field only supports multi-tenant distributions.
+       * You can't specify this field for standard distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * A distribution tenant configuration.
+       */
+      public fun tenantConfig(tenantConfig: TenantConfigProperty)
+
+      /**
+       * @param tenantConfig This field only supports multi-tenant distributions.
+       * You can't specify this field for standard distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * A distribution tenant configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d50fd9bae4d369f930ac0b5856399ee6bd8c61722058f4bd5b9b85da2f7fdccb")
+      public fun tenantConfig(tenantConfig: TenantConfigProperty.Builder.() -> Unit)
 
       /**
        * @param viewerCertificate A complex type that determines the distribution's SSL/TLS
@@ -5697,10 +6373,10 @@ public open class CfnDistribution(
       public fun viewerCertificate(viewerCertificate: ViewerCertificateProperty.Builder.() -> Unit)
 
       /**
-       * @param webAclId A unique identifier that specifies the AWS WAF web ACL, if any, to
-       * associate with this distribution.
-       * To specify a web ACL created using the latest version of AWS WAF , use the ACL ARN, for
-       * example
+       * @param webAclId Multi-tenant distributions only support AWS WAF V2 web ACLs.
+       * A unique identifier that specifies the AWS WAF web ACL, if any, to associate with this
+       * distribution. To specify a web ACL created using the latest version of AWS WAF , use the ACL
+       * ARN, for example
        * `arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/a1b2c3d4-5678-90ab-cdef-EXAMPLE11111`
        * . To specify a web ACL created using AWS WAF Classic, use the ACL ID, for example
        * `a1b2c3d4-5678-90ab-cdef-EXAMPLE11111` .
@@ -5723,18 +6399,43 @@ public open class CfnDistribution(
           software.amazon.awscdk.services.cloudfront.CfnDistribution.DistributionConfigProperty.builder()
 
       /**
-       * @param aliases A complex type that contains information about CNAMEs (alternate domain
-       * names), if any, for this distribution.
+       * @param aliases This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * A complex type that contains information about CNAMEs (alternate domain names), if any, for
+       * this distribution.
        */
       override fun aliases(aliases: List<String>) {
         cdkBuilder.aliases(aliases)
       }
 
       /**
-       * @param aliases A complex type that contains information about CNAMEs (alternate domain
-       * names), if any, for this distribution.
+       * @param aliases This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * A complex type that contains information about CNAMEs (alternate domain names), if any, for
+       * this distribution.
        */
       override fun aliases(vararg aliases: String): Unit = aliases(aliases.toList())
+
+      /**
+       * @param anycastIpListId To use this field for a multi-tenant distribution, use a connection
+       * group instead.
+       * For more information, see
+       * [ConnectionGroup](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ConnectionGroup.html)
+       * .
+       *
+       * ID of the Anycast static IP list that is associated with the distribution.
+       */
+      override fun anycastIpListId(anycastIpListId: String) {
+        cdkBuilder.anycastIpListId(anycastIpListId)
+      }
 
       /**
        * @param cacheBehaviors A complex type that contains zero or more `CacheBehavior` elements.
@@ -5785,8 +6486,23 @@ public open class CfnDistribution(
       }
 
       /**
-       * @param continuousDeploymentPolicyId The identifier of a continuous deployment policy.
-       * For more information, see `CreateContinuousDeploymentPolicy` .
+       * @param connectionMode This field specifies whether the connection mode is through a
+       * standard distribution (direct) or a multi-tenant distribution with distribution tenants
+       * (tenant-only).
+       */
+      override fun connectionMode(connectionMode: String) {
+        cdkBuilder.connectionMode(connectionMode)
+      }
+
+      /**
+       * @param continuousDeploymentPolicyId This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * The identifier of a continuous deployment policy. For more information, see
+       * `CreateContinuousDeploymentPolicy` .
        */
       override fun continuousDeploymentPolicyId(continuousDeploymentPolicyId: String) {
         cdkBuilder.continuousDeploymentPolicyId(continuousDeploymentPolicyId)
@@ -5903,13 +6619,17 @@ public open class CfnDistribution(
           Unit = defaultCacheBehavior(DefaultCacheBehaviorProperty(defaultCacheBehavior))
 
       /**
-       * @param defaultRootObject The object that you want CloudFront to request from your origin
-       * (for example, `index.html` ) when a viewer requests the root URL for your distribution (
-       * `https://www.example.com` ) instead of an object in your distribution (
-       * `https://www.example.com/product-description.html` ). Specifying a default root object avoids
-       * exposing the contents of your distribution.
-       * Specify only the object name, for example, `index.html` . Don't add a `/` before the object
-       * name.
+       * @param defaultRootObject When a viewer requests the root URL for your distribution, the
+       * default root object is the object that you want CloudFront to request from your origin.
+       * For example, if your root URL is `https://www.example.com` , you can specify CloudFront to
+       * return the `index.html` file as the default root object. You can specify a default root object
+       * so that viewers see a specific file or object, instead of another object in your distribution
+       * (for example, `https://www.example.com/product-description.html` ). A default root object
+       * avoids exposing the contents of your distribution.
+       *
+       * You can specify the object name or a path to the object name (for example, `index.html` or
+       * `exampleFolderName/index.html` ). Your string can't begin with a forward slash ( `/` ). Only
+       * specify the object name or the path to the object.
        *
        * If you don't want to specify a default root object when you create a distribution, include
        * an empty `DefaultRootObject` element.
@@ -5920,8 +6640,8 @@ public open class CfnDistribution(
        * To replace the default root object, update the distribution configuration and specify the
        * new object.
        *
-       * For more information about the default root object, see [Creating a Default Root
-       * Object](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DefaultRootObject.html)
+       * For more information about the default root object, see [Specify a default root
+       * object](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DefaultRootObject.html)
        * in the *Amazon CloudFront Developer Guide* .
        */
       override fun defaultRootObject(defaultRootObject: String) {
@@ -5965,11 +6685,16 @@ public open class CfnDistribution(
       }
 
       /**
-       * @param ipv6Enabled If you want CloudFront to respond to IPv6 DNS requests with an IPv6
-       * address for your distribution, specify `true` .
-       * If you specify `false` , CloudFront responds to IPv6 DNS requests with the DNS response
-       * code `NOERROR` and with no IP addresses. This allows viewers to submit a second request, for
-       * an IPv4 address for your distribution.
+       * @param ipv6Enabled To use this field for a multi-tenant distribution, use a connection
+       * group instead.
+       * For more information, see
+       * [ConnectionGroup](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ConnectionGroup.html)
+       * .
+       *
+       * If you want CloudFront to respond to IPv6 DNS requests with an IPv6 address for your
+       * distribution, specify `true` . If you specify `false` , CloudFront responds to IPv6 DNS
+       * requests with the DNS response code `NOERROR` and with no IP addresses. This allows viewers to
+       * submit a second request, for an IPv4 address for your distribution.
        *
        * In general, you should enable IPv6 if you have users on IPv6 networks who want to access
        * your content. However, if you're using signed URLs or signed cookies to restrict access to
@@ -6002,11 +6727,16 @@ public open class CfnDistribution(
       }
 
       /**
-       * @param ipv6Enabled If you want CloudFront to respond to IPv6 DNS requests with an IPv6
-       * address for your distribution, specify `true` .
-       * If you specify `false` , CloudFront responds to IPv6 DNS requests with the DNS response
-       * code `NOERROR` and with no IP addresses. This allows viewers to submit a second request, for
-       * an IPv4 address for your distribution.
+       * @param ipv6Enabled To use this field for a multi-tenant distribution, use a connection
+       * group instead.
+       * For more information, see
+       * [ConnectionGroup](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ConnectionGroup.html)
+       * .
+       *
+       * If you want CloudFront to respond to IPv6 DNS requests with an IPv6 address for your
+       * distribution, specify `true` . If you specify `false` , CloudFront responds to IPv6 DNS
+       * requests with the DNS response code `NOERROR` and with no IP addresses. This allows viewers to
+       * submit a second request, for an IPv4 address for your distribution.
        *
        * In general, you should enable IPv6 if you have users on IPv6 networks who want to access
        * your content. However, if you're using signed URLs or signed cookies to restrict access to
@@ -6126,10 +6856,15 @@ public open class CfnDistribution(
       override fun origins(vararg origins: Any): Unit = origins(origins.toList())
 
       /**
-       * @param priceClass The price class that corresponds with the maximum price that you want to
-       * pay for CloudFront service.
-       * If you specify `PriceClass_All` , CloudFront responds to requests for your objects from all
-       * CloudFront edge locations.
+       * @param priceClass This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * The price class that corresponds with the maximum price that you want to pay for CloudFront
+       * service. If you specify `PriceClass_All` , CloudFront responds to requests for your objects
+       * from all CloudFront edge locations.
        *
        * If you specify a price class other than `PriceClass_All` , CloudFront serves your objects
        * from the CloudFront edge location that has the lowest latency among the edge locations in your
@@ -6206,22 +6941,74 @@ public open class CfnDistribution(
           s3Origin(LegacyS3OriginProperty(s3Origin))
 
       /**
-       * @param staging A Boolean that indicates whether this is a staging distribution.
-       * When this value is `true` , this is a staging distribution. When this value is `false` ,
-       * this is not a staging distribution.
+       * @param staging This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * A Boolean that indicates whether this is a staging distribution. When this value is `true`
+       * , this is a staging distribution. When this value is `false` , this is not a staging
+       * distribution.
        */
       override fun staging(staging: Boolean) {
         cdkBuilder.staging(staging)
       }
 
       /**
-       * @param staging A Boolean that indicates whether this is a staging distribution.
-       * When this value is `true` , this is a staging distribution. When this value is `false` ,
-       * this is not a staging distribution.
+       * @param staging This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * A Boolean that indicates whether this is a staging distribution. When this value is `true`
+       * , this is a staging distribution. When this value is `false` , this is not a staging
+       * distribution.
        */
       override fun staging(staging: IResolvable) {
         cdkBuilder.staging(staging.let(IResolvable.Companion::unwrap))
       }
+
+      /**
+       * @param tenantConfig This field only supports multi-tenant distributions.
+       * You can't specify this field for standard distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * A distribution tenant configuration.
+       */
+      override fun tenantConfig(tenantConfig: IResolvable) {
+        cdkBuilder.tenantConfig(tenantConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param tenantConfig This field only supports multi-tenant distributions.
+       * You can't specify this field for standard distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * A distribution tenant configuration.
+       */
+      override fun tenantConfig(tenantConfig: TenantConfigProperty) {
+        cdkBuilder.tenantConfig(tenantConfig.let(TenantConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param tenantConfig This field only supports multi-tenant distributions.
+       * You can't specify this field for standard distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * A distribution tenant configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d50fd9bae4d369f930ac0b5856399ee6bd8c61722058f4bd5b9b85da2f7fdccb")
+      override fun tenantConfig(tenantConfig: TenantConfigProperty.Builder.() -> Unit): Unit =
+          tenantConfig(TenantConfigProperty(tenantConfig))
 
       /**
        * @param viewerCertificate A complex type that determines the distribution's SSL/TLS
@@ -6250,10 +7037,10 @@ public open class CfnDistribution(
           Unit = viewerCertificate(ViewerCertificateProperty(viewerCertificate))
 
       /**
-       * @param webAclId A unique identifier that specifies the AWS WAF web ACL, if any, to
-       * associate with this distribution.
-       * To specify a web ACL created using the latest version of AWS WAF , use the ACL ARN, for
-       * example
+       * @param webAclId Multi-tenant distributions only support AWS WAF V2 web ACLs.
+       * A unique identifier that specifies the AWS WAF web ACL, if any, to associate with this
+       * distribution. To specify a web ACL created using the latest version of AWS WAF , use the ACL
+       * ARN, for example
        * `arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/a1b2c3d4-5678-90ab-cdef-EXAMPLE11111`
        * . To specify a web ACL created using AWS WAF Classic, use the ACL ID, for example
        * `a1b2c3d4-5678-90ab-cdef-EXAMPLE11111` .
@@ -6280,12 +7067,32 @@ public open class CfnDistribution(
     ) : CdkObject(cdkObject),
         DistributionConfigProperty {
       /**
+       * This field only supports standard distributions.
+       *
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
        * A complex type that contains information about CNAMEs (alternate domain names), if any, for
        * this distribution.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-aliases)
        */
       override fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
+
+      /**
+       * To use this field for a multi-tenant distribution, use a connection group instead.
+       *
+       * For more information, see
+       * [ConnectionGroup](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ConnectionGroup.html)
+       * .
+       *
+       * ID of the Anycast static IP list that is associated with the distribution.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-anycastiplistid)
+       */
+      override fun anycastIpListId(): String? = unwrap(this).getAnycastIpListId()
 
       /**
        * A complex type that contains zero or more `CacheBehavior` elements.
@@ -6319,9 +7126,23 @@ public open class CfnDistribution(
       override fun comment(): String? = unwrap(this).getComment()
 
       /**
-       * The identifier of a continuous deployment policy.
+       * This field specifies whether the connection mode is through a standard distribution
+       * (direct) or a multi-tenant distribution with distribution tenants (tenant-only).
        *
-       * For more information, see `CreateContinuousDeploymentPolicy` .
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-connectionmode)
+       */
+      override fun connectionMode(): String? = unwrap(this).getConnectionMode()
+
+      /**
+       * This field only supports standard distributions.
+       *
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * The identifier of a continuous deployment policy. For more information, see
+       * `CreateContinuousDeploymentPolicy` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-continuousdeploymentpolicyid)
        */
@@ -6369,13 +7190,18 @@ public open class CfnDistribution(
       override fun defaultCacheBehavior(): Any = unwrap(this).getDefaultCacheBehavior()
 
       /**
-       * The object that you want CloudFront to request from your origin (for example, `index.html`
-       * ) when a viewer requests the root URL for your distribution ( `https://www.example.com` )
-       * instead of an object in your distribution ( `https://www.example.com/product-description.html`
-       * ). Specifying a default root object avoids exposing the contents of your distribution.
+       * When a viewer requests the root URL for your distribution, the default root object is the
+       * object that you want CloudFront to request from your origin.
        *
-       * Specify only the object name, for example, `index.html` . Don't add a `/` before the object
-       * name.
+       * For example, if your root URL is `https://www.example.com` , you can specify CloudFront to
+       * return the `index.html` file as the default root object. You can specify a default root object
+       * so that viewers see a specific file or object, instead of another object in your distribution
+       * (for example, `https://www.example.com/product-description.html` ). A default root object
+       * avoids exposing the contents of your distribution.
+       *
+       * You can specify the object name or a path to the object name (for example, `index.html` or
+       * `exampleFolderName/index.html` ). Your string can't begin with a forward slash ( `/` ). Only
+       * specify the object name or the path to the object.
        *
        * If you don't want to specify a default root object when you create a distribution, include
        * an empty `DefaultRootObject` element.
@@ -6386,8 +7212,8 @@ public open class CfnDistribution(
        * To replace the default root object, update the distribution configuration and specify the
        * new object.
        *
-       * For more information about the default root object, see [Creating a Default Root
-       * Object](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DefaultRootObject.html)
+       * For more information about the default root object, see [Specify a default root
+       * object](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DefaultRootObject.html)
        * in the *Amazon CloudFront Developer Guide* .
        *
        * Default: - ""
@@ -6429,12 +7255,16 @@ public open class CfnDistribution(
       override fun httpVersion(): String? = unwrap(this).getHttpVersion()
 
       /**
-       * If you want CloudFront to respond to IPv6 DNS requests with an IPv6 address for your
-       * distribution, specify `true` .
+       * To use this field for a multi-tenant distribution, use a connection group instead.
        *
-       * If you specify `false` , CloudFront responds to IPv6 DNS requests with the DNS response
-       * code `NOERROR` and with no IP addresses. This allows viewers to submit a second request, for
-       * an IPv4 address for your distribution.
+       * For more information, see
+       * [ConnectionGroup](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ConnectionGroup.html)
+       * .
+       *
+       * If you want CloudFront to respond to IPv6 DNS requests with an IPv6 address for your
+       * distribution, specify `true` . If you specify `false` , CloudFront responds to IPv6 DNS
+       * requests with the DNS response code `NOERROR` and with no IP addresses. This allows viewers to
+       * submit a second request, for an IPv4 address for your distribution.
        *
        * In general, you should enable IPv6 if you have users on IPv6 networks who want to access
        * your content. However, if you're using signed URLs or signed cookies to restrict access to
@@ -6496,11 +7326,16 @@ public open class CfnDistribution(
       override fun origins(): Any? = unwrap(this).getOrigins()
 
       /**
-       * The price class that corresponds with the maximum price that you want to pay for CloudFront
-       * service.
+       * This field only supports standard distributions.
        *
-       * If you specify `PriceClass_All` , CloudFront responds to requests for your objects from all
-       * CloudFront edge locations.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * The price class that corresponds with the maximum price that you want to pay for CloudFront
+       * service. If you specify `PriceClass_All` , CloudFront responds to requests for your objects
+       * from all CloudFront edge locations.
        *
        * If you specify a price class other than `PriceClass_All` , CloudFront serves your objects
        * from the CloudFront edge location that has the lowest latency among the edge locations in your
@@ -6541,14 +7376,34 @@ public open class CfnDistribution(
       override fun s3Origin(): Any? = unwrap(this).getS3Origin()
 
       /**
-       * A Boolean that indicates whether this is a staging distribution.
+       * This field only supports standard distributions.
        *
-       * When this value is `true` , this is a staging distribution. When this value is `false` ,
-       * this is not a staging distribution.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * A Boolean that indicates whether this is a staging distribution. When this value is `true`
+       * , this is a staging distribution. When this value is `false` , this is not a staging
+       * distribution.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-staging)
        */
       override fun staging(): Any? = unwrap(this).getStaging()
+
+      /**
+       * This field only supports multi-tenant distributions.
+       *
+       * You can't specify this field for standard distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * A distribution tenant configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-tenantconfig)
+       */
+      override fun tenantConfig(): Any? = unwrap(this).getTenantConfig()
 
       /**
        * A complex type that determines the distribution's SSL/TLS configuration for communicating
@@ -6559,11 +7414,11 @@ public open class CfnDistribution(
       override fun viewerCertificate(): Any? = unwrap(this).getViewerCertificate()
 
       /**
-       * A unique identifier that specifies the AWS WAF web ACL, if any, to associate with this
-       * distribution.
+       * Multi-tenant distributions only support AWS WAF V2 web ACLs.
        *
-       * To specify a web ACL created using the latest version of AWS WAF , use the ACL ARN, for
-       * example
+       * A unique identifier that specifies the AWS WAF web ACL, if any, to associate with this
+       * distribution. To specify a web ACL created using the latest version of AWS WAF , use the ACL
+       * ARN, for example
        * `arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/a1b2c3d4-5678-90ab-cdef-EXAMPLE11111`
        * . To specify a web ACL created using AWS WAF Classic, use the ACL ID, for example
        * `a1b2c3d4-5678-90ab-cdef-EXAMPLE11111` .
@@ -6602,9 +7457,15 @@ public open class CfnDistribution(
   }
 
   /**
-   * This field is deprecated.
+   * This field only supports standard distributions.
    *
-   * We recommend that you use a cache policy or an origin request policy instead of this field.
+   * You can't specify this field for multi-tenant distributions. For more information, see
+   * [Unsupported features for SaaS Manager for Amazon
+   * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+   * in the *Amazon CloudFront Developer Guide* .
+   *
+   * This field is deprecated. We recommend that you use a cache policy or an origin request policy
+   * instead of this field.
    *
    * If you want to include values in the cache key, use a cache policy. For more information, see
    * [Creating cache
@@ -7730,6 +8591,117 @@ public open class CfnDistribution(
   }
 
   /**
+   * Amazon CloudFront supports gRPC, an open-source remote procedure call (RPC) framework built on
+   * HTTP/2.
+   *
+   * gRPC offers bi-directional streaming and binary protocol that buffers payloads, making it
+   * suitable for applications that require low latency communications.
+   *
+   * To enable your distribution to handle gRPC requests, you must include HTTP/2 as one of the
+   * supported `HTTP` versions and allow `HTTP` methods, including `POST` .
+   *
+   * For more information, see [Using gRPC with CloudFront
+   * distributions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-using-grpc.html)
+   * in the *Amazon CloudFront Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * GrpcConfigProperty grpcConfigProperty = GrpcConfigProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-grpcconfig.html)
+   */
+  public interface GrpcConfigProperty {
+    /**
+     * Enables your CloudFront distribution to receive gRPC requests and to proxy them directly to
+     * your origins.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-grpcconfig.html#cfn-cloudfront-distribution-grpcconfig-enabled)
+     */
+    public fun enabled(): Any
+
+    /**
+     * A builder for [GrpcConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Enables your CloudFront distribution to receive gRPC requests and to proxy
+       * them directly to your origins. 
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Enables your CloudFront distribution to receive gRPC requests and to proxy
+       * them directly to your origins. 
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.GrpcConfigProperty.Builder =
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.GrpcConfigProperty.builder()
+
+      /**
+       * @param enabled Enables your CloudFront distribution to receive gRPC requests and to proxy
+       * them directly to your origins. 
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Enables your CloudFront distribution to receive gRPC requests and to proxy
+       * them directly to your origins. 
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.GrpcConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.GrpcConfigProperty,
+    ) : CdkObject(cdkObject),
+        GrpcConfigProperty {
+      /**
+       * Enables your CloudFront distribution to receive gRPC requests and to proxy them directly to
+       * your origins.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-grpcconfig.html#cfn-cloudfront-distribution-grpcconfig-enabled)
+       */
+      override fun enabled(): Any = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GrpcConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.GrpcConfigProperty):
+          GrpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? GrpcConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GrpcConfigProperty):
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.GrpcConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.GrpcConfigProperty
+    }
+  }
+
+  /**
    * A complex type that contains a Lambda&#64;Edge function association.
    *
    * Example:
@@ -8407,7 +9379,6 @@ public open class CfnDistribution(
    * import io.cloudshiftdev.awscdk.services.cloudfront.*;
    * LoggingProperty loggingProperty = LoggingProperty.builder()
    * .bucket("bucket")
-   * // the properties below are optional
    * .includeCookies(false)
    * .prefix("prefix")
    * .build();
@@ -8422,7 +9393,7 @@ public open class CfnDistribution(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-logging.html#cfn-cloudfront-distribution-logging-bucket)
      */
-    public fun bucket(): String
+    public fun bucket(): String? = unwrap(this).getBucket()
 
     /**
      * Specifies whether you want CloudFront to include cookies in access logs, specify `true` for
@@ -8459,7 +9430,7 @@ public open class CfnDistribution(
     public interface Builder {
       /**
        * @param bucket The Amazon S3 bucket to store the access logs in, for example,
-       * `amzn-s3-demo-bucket.s3.amazonaws.com` . 
+       * `amzn-s3-demo-bucket.s3.amazonaws.com` .
        */
       public fun bucket(bucket: String)
 
@@ -8499,7 +9470,7 @@ public open class CfnDistribution(
 
       /**
        * @param bucket The Amazon S3 bucket to store the access logs in, for example,
-       * `amzn-s3-demo-bucket.s3.amazonaws.com` . 
+       * `amzn-s3-demo-bucket.s3.amazonaws.com` .
        */
       override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
@@ -8553,7 +9524,7 @@ public open class CfnDistribution(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-logging.html#cfn-cloudfront-distribution-logging-bucket)
        */
-      override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String? = unwrap(this).getBucket()
 
       /**
        * Specifies whether you want CloudFront to include cookies in access logs, specify `true` for
@@ -9101,6 +10072,8 @@ public open class CfnDistribution(
    * .build()))
    * .quantity(123)
    * .build())
+   * // the properties below are optional
+   * .selectionCriteria("selectionCriteria")
    * .build();
    * ```
    *
@@ -9127,6 +10100,17 @@ public open class CfnDistribution(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroup.html#cfn-cloudfront-distribution-origingroup-members)
      */
     public fun members(): Any
+
+    /**
+     * The selection criteria for the origin group.
+     *
+     * For more information, see [Create an origin
+     * group](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html#concept_origin_groups.creating)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroup.html#cfn-cloudfront-distribution-origingroup-selectioncriteria)
+     */
+    public fun selectionCriteria(): String? = unwrap(this).getSelectionCriteria()
 
     /**
      * A builder for [OriginGroupProperty]
@@ -9178,6 +10162,14 @@ public open class CfnDistribution(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("97933107d8a6aac776e575fc5da0ed9131a507ebb8949d354f76489a3be51a4e")
       public fun members(members: OriginGroupMembersProperty.Builder.() -> Unit)
+
+      /**
+       * @param selectionCriteria The selection criteria for the origin group.
+       * For more information, see [Create an origin
+       * group](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html#concept_origin_groups.creating)
+       * in the *Amazon CloudFront Developer Guide* .
+       */
+      public fun selectionCriteria(selectionCriteria: String)
     }
 
     private class BuilderImpl : Builder {
@@ -9243,6 +10235,16 @@ public open class CfnDistribution(
       override fun members(members: OriginGroupMembersProperty.Builder.() -> Unit): Unit =
           members(OriginGroupMembersProperty(members))
 
+      /**
+       * @param selectionCriteria The selection criteria for the origin group.
+       * For more information, see [Create an origin
+       * group](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html#concept_origin_groups.creating)
+       * in the *Amazon CloudFront Developer Guide* .
+       */
+      override fun selectionCriteria(selectionCriteria: String) {
+        cdkBuilder.selectionCriteria(selectionCriteria)
+      }
+
       public fun build():
           software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupProperty =
           cdkBuilder.build()
@@ -9272,6 +10274,17 @@ public open class CfnDistribution(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroup.html#cfn-cloudfront-distribution-origingroup-members)
        */
       override fun members(): Any = unwrap(this).getMembers()
+
+      /**
+       * The selection criteria for the origin group.
+       *
+       * For more information, see [Create an origin
+       * group](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html#concept_origin_groups.creating)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroup.html#cfn-cloudfront-distribution-origingroup-selectioncriteria)
+       */
+      override fun selectionCriteria(): String? = unwrap(this).getSelectionCriteria()
     }
 
     public companion object {
@@ -9318,6 +10331,8 @@ public open class CfnDistribution(
    * .build()))
    * .quantity(123)
    * .build())
+   * // the properties below are optional
+   * .selectionCriteria("selectionCriteria")
    * .build()))
    * .build();
    * ```
@@ -9446,6 +10461,7 @@ public open class CfnDistribution(
    *
    * * Use `S3OriginConfig` to specify an Amazon S3 bucket that is not configured with static
    * website hosting.
+   * * Use `VpcOriginConfig` to specify a VPC origin.
    * * Use `CustomOriginConfig` to specify all other kinds of origins, including:
    * * An Amazon S3 bucket that is configured with static website hosting
    * * An Elastic Load Balancing load balancer
@@ -9489,8 +10505,16 @@ public open class CfnDistribution(
    * .enabled(false)
    * .originShieldRegion("originShieldRegion")
    * .build())
+   * .responseCompletionTimeout(123)
    * .s3OriginConfig(S3OriginConfigProperty.builder()
    * .originAccessIdentity("originAccessIdentity")
+   * .originReadTimeout(123)
+   * .build())
+   * .vpcOriginConfig(VpcOriginConfigProperty.builder()
+   * .vpcOriginId("vpcOriginId")
+   * // the properties below are optional
+   * .originKeepaliveTimeout(123)
+   * .originReadTimeout(123)
    * .build())
    * .build();
    * ```
@@ -9614,6 +10638,11 @@ public open class CfnDistribution(
     public fun originShield(): Any? = unwrap(this).getOriginShield()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-responsecompletiontimeout)
+     */
+    public fun responseCompletionTimeout(): Number? = unwrap(this).getResponseCompletionTimeout()
+
+    /**
      * Use this type to specify an origin that is an Amazon S3 bucket that is not configured with
      * static website hosting.
      *
@@ -9623,6 +10652,13 @@ public open class CfnDistribution(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-s3originconfig)
      */
     public fun s3OriginConfig(): Any? = unwrap(this).getS3OriginConfig()
+
+    /**
+     * The VPC origin configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-vpcoriginconfig)
+     */
+    public fun vpcOriginConfig(): Any? = unwrap(this).getVpcOriginConfig()
 
     /**
      * A builder for [OriginProperty]
@@ -9780,6 +10816,11 @@ public open class CfnDistribution(
       public fun originShield(originShield: OriginShieldProperty.Builder.() -> Unit)
 
       /**
+       * @param responseCompletionTimeout the value to be set.
+       */
+      public fun responseCompletionTimeout(responseCompletionTimeout: Number)
+
+      /**
        * @param s3OriginConfig Use this type to specify an origin that is an Amazon S3 bucket that
        * is not configured with static website hosting.
        * To specify any other type of origin, including an Amazon S3 bucket that is configured with
@@ -9804,6 +10845,23 @@ public open class CfnDistribution(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("345ceecbfefa4e6f7dfc83aa125d7e491472a25e0620b0a0ff0e1fa09fe5eea9")
       public fun s3OriginConfig(s3OriginConfig: S3OriginConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param vpcOriginConfig The VPC origin configuration.
+       */
+      public fun vpcOriginConfig(vpcOriginConfig: IResolvable)
+
+      /**
+       * @param vpcOriginConfig The VPC origin configuration.
+       */
+      public fun vpcOriginConfig(vpcOriginConfig: VpcOriginConfigProperty)
+
+      /**
+       * @param vpcOriginConfig The VPC origin configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0ff0057fba96052d7b423bc6f631c6a54a3578a649dd745d949cb78df3351d30")
+      public fun vpcOriginConfig(vpcOriginConfig: VpcOriginConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -9989,6 +11047,13 @@ public open class CfnDistribution(
           originShield(OriginShieldProperty(originShield))
 
       /**
+       * @param responseCompletionTimeout the value to be set.
+       */
+      override fun responseCompletionTimeout(responseCompletionTimeout: Number) {
+        cdkBuilder.responseCompletionTimeout(responseCompletionTimeout)
+      }
+
+      /**
        * @param s3OriginConfig Use this type to specify an origin that is an Amazon S3 bucket that
        * is not configured with static website hosting.
        * To specify any other type of origin, including an Amazon S3 bucket that is configured with
@@ -10018,6 +11083,28 @@ public open class CfnDistribution(
       @JvmName("345ceecbfefa4e6f7dfc83aa125d7e491472a25e0620b0a0ff0e1fa09fe5eea9")
       override fun s3OriginConfig(s3OriginConfig: S3OriginConfigProperty.Builder.() -> Unit): Unit =
           s3OriginConfig(S3OriginConfigProperty(s3OriginConfig))
+
+      /**
+       * @param vpcOriginConfig The VPC origin configuration.
+       */
+      override fun vpcOriginConfig(vpcOriginConfig: IResolvable) {
+        cdkBuilder.vpcOriginConfig(vpcOriginConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param vpcOriginConfig The VPC origin configuration.
+       */
+      override fun vpcOriginConfig(vpcOriginConfig: VpcOriginConfigProperty) {
+        cdkBuilder.vpcOriginConfig(vpcOriginConfig.let(VpcOriginConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param vpcOriginConfig The VPC origin configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0ff0057fba96052d7b423bc6f631c6a54a3578a649dd745d949cb78df3351d30")
+      override fun vpcOriginConfig(vpcOriginConfig: VpcOriginConfigProperty.Builder.() -> Unit):
+          Unit = vpcOriginConfig(VpcOriginConfigProperty(vpcOriginConfig))
 
       public fun build(): software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginProperty
           = cdkBuilder.build()
@@ -10143,6 +11230,12 @@ public open class CfnDistribution(
       override fun originShield(): Any? = unwrap(this).getOriginShield()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-responsecompletiontimeout)
+       */
+      override fun responseCompletionTimeout(): Number? =
+          unwrap(this).getResponseCompletionTimeout()
+
+      /**
        * Use this type to specify an origin that is an Amazon S3 bucket that is not configured with
        * static website hosting.
        *
@@ -10152,6 +11245,13 @@ public open class CfnDistribution(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-s3originconfig)
        */
       override fun s3OriginConfig(): Any? = unwrap(this).getS3OriginConfig()
+
+      /**
+       * The VPC origin configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-vpcoriginconfig)
+       */
+      override fun vpcOriginConfig(): Any? = unwrap(this).getVpcOriginConfig()
     }
 
     public companion object {
@@ -10357,6 +11457,153 @@ public open class CfnDistribution(
   }
 
   /**
+   * A list of parameter values to add to the resource.
+   *
+   * A parameter is specified as a key-value pair. A valid parameter value must exist for any
+   * parameter that is marked as required in the multi-tenant distribution.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * ParameterDefinitionProperty parameterDefinitionProperty = ParameterDefinitionProperty.builder()
+   * .definition(DefinitionProperty.builder()
+   * .stringSchema(StringSchemaProperty.builder()
+   * .required(false)
+   * // the properties below are optional
+   * .comment("comment")
+   * .defaultValue("defaultValue")
+   * .build())
+   * .build())
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-parameterdefinition.html)
+   */
+  public interface ParameterDefinitionProperty {
+    /**
+     * The value that you assigned to the parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-parameterdefinition.html#cfn-cloudfront-distribution-parameterdefinition-definition)
+     */
+    public fun definition(): Any
+
+    /**
+     * The name of the parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-parameterdefinition.html#cfn-cloudfront-distribution-parameterdefinition-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [ParameterDefinitionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param definition The value that you assigned to the parameter. 
+       */
+      public fun definition(definition: IResolvable)
+
+      /**
+       * @param definition The value that you assigned to the parameter. 
+       */
+      public fun definition(definition: DefinitionProperty)
+
+      /**
+       * @param definition The value that you assigned to the parameter. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("842e184b6b3ba781081de75890368fb6d5b5df9f0a11783cc4e28370d1c6d098")
+      public fun definition(definition: DefinitionProperty.Builder.() -> Unit)
+
+      /**
+       * @param name The name of the parameter. 
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.ParameterDefinitionProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.ParameterDefinitionProperty.builder()
+
+      /**
+       * @param definition The value that you assigned to the parameter. 
+       */
+      override fun definition(definition: IResolvable) {
+        cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param definition The value that you assigned to the parameter. 
+       */
+      override fun definition(definition: DefinitionProperty) {
+        cdkBuilder.definition(definition.let(DefinitionProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param definition The value that you assigned to the parameter. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("842e184b6b3ba781081de75890368fb6d5b5df9f0a11783cc4e28370d1c6d098")
+      override fun definition(definition: DefinitionProperty.Builder.() -> Unit): Unit =
+          definition(DefinitionProperty(definition))
+
+      /**
+       * @param name The name of the parameter. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.ParameterDefinitionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.ParameterDefinitionProperty,
+    ) : CdkObject(cdkObject),
+        ParameterDefinitionProperty {
+      /**
+       * The value that you assigned to the parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-parameterdefinition.html#cfn-cloudfront-distribution-parameterdefinition-definition)
+       */
+      override fun definition(): Any = unwrap(this).getDefinition()
+
+      /**
+       * The name of the parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-parameterdefinition.html#cfn-cloudfront-distribution-parameterdefinition-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ParameterDefinitionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.ParameterDefinitionProperty):
+          ParameterDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ParameterDefinitionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ParameterDefinitionProperty):
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.ParameterDefinitionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.ParameterDefinitionProperty
+    }
+  }
+
+  /**
    * A complex type that identifies ways in which you want to restrict distribution of your content.
    *
    * Example:
@@ -10523,6 +11770,7 @@ public open class CfnDistribution(
    * import io.cloudshiftdev.awscdk.services.cloudfront.*;
    * S3OriginConfigProperty s3OriginConfigProperty = S3OriginConfigProperty.builder()
    * .originAccessIdentity("originAccessIdentity")
+   * .originReadTimeout(123)
    * .build();
    * ```
    *
@@ -10566,6 +11814,13 @@ public open class CfnDistribution(
     public fun originAccessIdentity(): String? = unwrap(this).getOriginAccessIdentity()
 
     /**
+     * Default: - 30
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-s3originconfig.html#cfn-cloudfront-distribution-s3originconfig-originreadtimeout)
+     */
+    public fun originReadTimeout(): Number? = unwrap(this).getOriginReadTimeout()
+
+    /**
      * A builder for [S3OriginConfigProperty]
      */
     @CdkDslMarker
@@ -10600,6 +11855,11 @@ public open class CfnDistribution(
        * in the *Amazon CloudFront Developer Guide* .
        */
       public fun originAccessIdentity(originAccessIdentity: String)
+
+      /**
+       * @param originReadTimeout the value to be set.
+       */
+      public fun originReadTimeout(originReadTimeout: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -10639,6 +11899,13 @@ public open class CfnDistribution(
        */
       override fun originAccessIdentity(originAccessIdentity: String) {
         cdkBuilder.originAccessIdentity(originAccessIdentity)
+      }
+
+      /**
+       * @param originReadTimeout the value to be set.
+       */
+      override fun originReadTimeout(originReadTimeout: Number) {
+        cdkBuilder.originReadTimeout(originReadTimeout)
       }
 
       public fun build():
@@ -10685,6 +11952,13 @@ public open class CfnDistribution(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-s3originconfig.html#cfn-cloudfront-distribution-s3originconfig-originaccessidentity)
        */
       override fun originAccessIdentity(): String? = unwrap(this).getOriginAccessIdentity()
+
+      /**
+       * Default: - 30
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-s3originconfig.html#cfn-cloudfront-distribution-s3originconfig-originreadtimeout)
+       */
+      override fun originReadTimeout(): Number? = unwrap(this).getOriginReadTimeout()
     }
 
     public companion object {
@@ -10746,17 +12020,17 @@ public open class CfnDistribution(
       /**
        * @param items The items (status codes) for an origin group. 
        */
-      public fun items(items: IResolvable)
-
-      /**
-       * @param items The items (status codes) for an origin group. 
-       */
       public fun items(items: List<Number>)
 
       /**
        * @param items The items (status codes) for an origin group. 
        */
       public fun items(vararg items: Number)
+
+      /**
+       * @param items The items (status codes) for an origin group. 
+       */
+      public fun items(items: IResolvable)
 
       /**
        * @param quantity The number of status codes. 
@@ -10772,13 +12046,6 @@ public open class CfnDistribution(
       /**
        * @param items The items (status codes) for an origin group. 
        */
-      override fun items(items: IResolvable) {
-        cdkBuilder.items(items.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param items The items (status codes) for an origin group. 
-       */
       override fun items(items: List<Number>) {
         cdkBuilder.items(items)
       }
@@ -10787,6 +12054,13 @@ public open class CfnDistribution(
        * @param items The items (status codes) for an origin group. 
        */
       override fun items(vararg items: Number): Unit = items(items.toList())
+
+      /**
+       * @param items The items (status codes) for an origin group. 
+       */
+      override fun items(items: IResolvable) {
+        cdkBuilder.items(items.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param quantity The number of status codes. 
@@ -10834,6 +12108,263 @@ public open class CfnDistribution(
           software.amazon.awscdk.services.cloudfront.CfnDistribution.StatusCodesProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnDistribution.StatusCodesProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * StringSchemaProperty stringSchemaProperty = StringSchemaProperty.builder()
+   * .required(false)
+   * // the properties below are optional
+   * .comment("comment")
+   * .defaultValue("defaultValue")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-stringschema.html)
+   */
+  public interface StringSchemaProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-stringschema.html#cfn-cloudfront-distribution-stringschema-comment)
+     */
+    public fun comment(): String? = unwrap(this).getComment()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-stringschema.html#cfn-cloudfront-distribution-stringschema-defaultvalue)
+     */
+    public fun defaultValue(): String? = unwrap(this).getDefaultValue()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-stringschema.html#cfn-cloudfront-distribution-stringschema-required)
+     */
+    public fun required(): Any
+
+    /**
+     * A builder for [StringSchemaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param comment the value to be set.
+       */
+      public fun comment(comment: String)
+
+      /**
+       * @param defaultValue the value to be set.
+       */
+      public fun defaultValue(defaultValue: String)
+
+      /**
+       * @param required the value to be set. 
+       */
+      public fun required(required: Boolean)
+
+      /**
+       * @param required the value to be set. 
+       */
+      public fun required(required: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.StringSchemaProperty.Builder =
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.StringSchemaProperty.builder()
+
+      /**
+       * @param comment the value to be set.
+       */
+      override fun comment(comment: String) {
+        cdkBuilder.comment(comment)
+      }
+
+      /**
+       * @param defaultValue the value to be set.
+       */
+      override fun defaultValue(defaultValue: String) {
+        cdkBuilder.defaultValue(defaultValue)
+      }
+
+      /**
+       * @param required the value to be set. 
+       */
+      override fun required(required: Boolean) {
+        cdkBuilder.required(required)
+      }
+
+      /**
+       * @param required the value to be set. 
+       */
+      override fun required(required: IResolvable) {
+        cdkBuilder.required(required.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.StringSchemaProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.StringSchemaProperty,
+    ) : CdkObject(cdkObject),
+        StringSchemaProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-stringschema.html#cfn-cloudfront-distribution-stringschema-comment)
+       */
+      override fun comment(): String? = unwrap(this).getComment()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-stringschema.html#cfn-cloudfront-distribution-stringschema-defaultvalue)
+       */
+      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-stringschema.html#cfn-cloudfront-distribution-stringschema-required)
+       */
+      override fun required(): Any = unwrap(this).getRequired()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StringSchemaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.StringSchemaProperty):
+          StringSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? StringSchemaProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StringSchemaProperty):
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.StringSchemaProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.StringSchemaProperty
+    }
+  }
+
+  /**
+   * This field only supports multi-tenant distributions.
+   *
+   * You can't specify this field for standard distributions. For more information, see [Unsupported
+   * features for SaaS Manager for Amazon
+   * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+   * in the *Amazon CloudFront Developer Guide* .
+   *
+   * The configuration for a distribution tenant.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * TenantConfigProperty tenantConfigProperty = TenantConfigProperty.builder()
+   * .parameterDefinitions(List.of(ParameterDefinitionProperty.builder()
+   * .definition(DefinitionProperty.builder()
+   * .stringSchema(StringSchemaProperty.builder()
+   * .required(false)
+   * // the properties below are optional
+   * .comment("comment")
+   * .defaultValue("defaultValue")
+   * .build())
+   * .build())
+   * .name("name")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-tenantconfig.html)
+   */
+  public interface TenantConfigProperty {
+    /**
+     * The parameters that you specify for a distribution tenant.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-tenantconfig.html#cfn-cloudfront-distribution-tenantconfig-parameterdefinitions)
+     */
+    public fun parameterDefinitions(): Any? = unwrap(this).getParameterDefinitions()
+
+    /**
+     * A builder for [TenantConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param parameterDefinitions The parameters that you specify for a distribution tenant.
+       */
+      public fun parameterDefinitions(parameterDefinitions: IResolvable)
+
+      /**
+       * @param parameterDefinitions The parameters that you specify for a distribution tenant.
+       */
+      public fun parameterDefinitions(parameterDefinitions: List<Any>)
+
+      /**
+       * @param parameterDefinitions The parameters that you specify for a distribution tenant.
+       */
+      public fun parameterDefinitions(vararg parameterDefinitions: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.TenantConfigProperty.Builder =
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.TenantConfigProperty.builder()
+
+      /**
+       * @param parameterDefinitions The parameters that you specify for a distribution tenant.
+       */
+      override fun parameterDefinitions(parameterDefinitions: IResolvable) {
+        cdkBuilder.parameterDefinitions(parameterDefinitions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param parameterDefinitions The parameters that you specify for a distribution tenant.
+       */
+      override fun parameterDefinitions(parameterDefinitions: List<Any>) {
+        cdkBuilder.parameterDefinitions(parameterDefinitions.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param parameterDefinitions The parameters that you specify for a distribution tenant.
+       */
+      override fun parameterDefinitions(vararg parameterDefinitions: Any): Unit =
+          parameterDefinitions(parameterDefinitions.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.TenantConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.TenantConfigProperty,
+    ) : CdkObject(cdkObject),
+        TenantConfigProperty {
+      /**
+       * The parameters that you specify for a distribution tenant.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-tenantconfig.html#cfn-cloudfront-distribution-tenantconfig-parameterdefinitions)
+       */
+      override fun parameterDefinitions(): Any? = unwrap(this).getParameterDefinitions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TenantConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.TenantConfigProperty):
+          TenantConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TenantConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TenantConfigProperty):
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.TenantConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.TenantConfigProperty
     }
   }
 
@@ -10937,7 +12468,13 @@ public open class CfnDistribution(
     public fun cloudFrontDefaultCertificate(): Any? = unwrap(this).getCloudFrontDefaultCertificate()
 
     /**
-     * In CloudFormation, this field name is `IamCertificateId` . Note the different capitalization.
+     * This field only supports standard distributions.
+     *
+     * You can't specify this field for multi-tenant distributions. For more information, see
+     * [Unsupported features for SaaS Manager for Amazon
+     * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+     * in the *Amazon CloudFront Developer Guide* . &gt; In CloudFormation, this field name is
+     * `IamCertificateId` . Note the different capitalization.
      *
      * If the distribution uses `Aliases` (alternate domain names or CNAMEs) and the SSL/TLS
      * certificate is stored in [AWS Identity and Access Management
@@ -10998,7 +12535,7 @@ public open class CfnDistribution(
      * CloudFront.
      * * `static-ip` - Do not specify this value unless your distribution has been enabled for this
      * feature by the CloudFront team. If you have a use case that requires static IP addresses for a
-     * distribution, contact CloudFront through the [AWS Support
+     * distribution, contact CloudFront through the [Support
      * Center](https://docs.aws.amazon.com/support/home) .
      *
      * If the distribution uses the CloudFront domain name such as `d111111abcdef8.cloudfront.net` ,
@@ -11053,8 +12590,13 @@ public open class CfnDistribution(
       public fun cloudFrontDefaultCertificate(cloudFrontDefaultCertificate: IResolvable)
 
       /**
-       * @param iamCertificateId In CloudFormation, this field name is `IamCertificateId` . Note the
-       * different capitalization.
+       * @param iamCertificateId This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* . &gt; In CloudFormation, this field name is
+       * `IamCertificateId` . Note the different capitalization.
+       *
        * If the distribution uses `Aliases` (alternate domain names or CNAMEs) and the SSL/TLS
        * certificate is stored in [AWS Identity and Access Management
        * (IAM)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html) ,
@@ -11110,7 +12652,7 @@ public open class CfnDistribution(
        * CloudFront.
        * * `static-ip` - Do not specify this value unless your distribution has been enabled for
        * this feature by the CloudFront team. If you have a use case that requires static IP addresses
-       * for a distribution, contact CloudFront through the [AWS Support
+       * for a distribution, contact CloudFront through the [Support
        * Center](https://docs.aws.amazon.com/support/home) .
        *
        * If the distribution uses the CloudFront domain name such as `d111111abcdef8.cloudfront.net`
@@ -11171,8 +12713,13 @@ public open class CfnDistribution(
       }
 
       /**
-       * @param iamCertificateId In CloudFormation, this field name is `IamCertificateId` . Note the
-       * different capitalization.
+       * @param iamCertificateId This field only supports standard distributions.
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* . &gt; In CloudFormation, this field name is
+       * `IamCertificateId` . Note the different capitalization.
+       *
        * If the distribution uses `Aliases` (alternate domain names or CNAMEs) and the SSL/TLS
        * certificate is stored in [AWS Identity and Access Management
        * (IAM)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html) ,
@@ -11232,7 +12779,7 @@ public open class CfnDistribution(
        * CloudFront.
        * * `static-ip` - Do not specify this value unless your distribution has been enabled for
        * this feature by the CloudFront team. If you have a use case that requires static IP addresses
-       * for a distribution, contact CloudFront through the [AWS Support
+       * for a distribution, contact CloudFront through the [Support
        * Center](https://docs.aws.amazon.com/support/home) .
        *
        * If the distribution uses the CloudFront domain name such as `d111111abcdef8.cloudfront.net`
@@ -11286,8 +12833,13 @@ public open class CfnDistribution(
           unwrap(this).getCloudFrontDefaultCertificate()
 
       /**
-       * In CloudFormation, this field name is `IamCertificateId` . Note the different
-       * capitalization.
+       * This field only supports standard distributions.
+       *
+       * You can't specify this field for multi-tenant distributions. For more information, see
+       * [Unsupported features for SaaS Manager for Amazon
+       * CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-config-options.html#unsupported-saas)
+       * in the *Amazon CloudFront Developer Guide* . &gt; In CloudFormation, this field name is
+       * `IamCertificateId` . Note the different capitalization.
        *
        * If the distribution uses `Aliases` (alternate domain names or CNAMEs) and the SSL/TLS
        * certificate is stored in [AWS Identity and Access Management
@@ -11349,7 +12901,7 @@ public open class CfnDistribution(
        * CloudFront.
        * * `static-ip` - Do not specify this value unless your distribution has been enabled for
        * this feature by the CloudFront team. If you have a use case that requires static IP addresses
-       * for a distribution, contact CloudFront through the [AWS Support
+       * for a distribution, contact CloudFront through the [Support
        * Center](https://docs.aws.amazon.com/support/home) .
        *
        * If the distribution uses the CloudFront domain name such as `d111111abcdef8.cloudfront.net`
@@ -11375,6 +12927,208 @@ public open class CfnDistribution(
           software.amazon.awscdk.services.cloudfront.CfnDistribution.ViewerCertificateProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudfront.CfnDistribution.ViewerCertificateProperty
+    }
+  }
+
+  /**
+   * An Amazon CloudFront VPC origin configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+   * VpcOriginConfigProperty vpcOriginConfigProperty = VpcOriginConfigProperty.builder()
+   * .vpcOriginId("vpcOriginId")
+   * // the properties below are optional
+   * .originKeepaliveTimeout(123)
+   * .originReadTimeout(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-vpcoriginconfig.html)
+   */
+  public interface VpcOriginConfigProperty {
+    /**
+     * Specifies how long, in seconds, CloudFront persists its connection to the origin.
+     *
+     * The minimum timeout is 1 second, the maximum is 120 seconds, and the default (if you don't
+     * specify otherwise) is 5 seconds.
+     *
+     * For more information, see [Keep-alive timeout (custom origins
+     * only)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginKeepaliveTimeout)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * Default: - 5
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-vpcoriginconfig.html#cfn-cloudfront-distribution-vpcoriginconfig-originkeepalivetimeout)
+     */
+    public fun originKeepaliveTimeout(): Number? = unwrap(this).getOriginKeepaliveTimeout()
+
+    /**
+     * Specifies how long, in seconds, CloudFront waits for a response from the origin.
+     *
+     * This is also known as the *origin response timeout* . The minimum timeout is 1 second, the
+     * maximum is 120 seconds, and the default (if you don't specify otherwise) is 30 seconds.
+     *
+     * For more information, see [Response timeout (custom origins
+     * only)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginResponseTimeout)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
+     * Default: - 30
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-vpcoriginconfig.html#cfn-cloudfront-distribution-vpcoriginconfig-originreadtimeout)
+     */
+    public fun originReadTimeout(): Number? = unwrap(this).getOriginReadTimeout()
+
+    /**
+     * The VPC origin ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-vpcoriginconfig.html#cfn-cloudfront-distribution-vpcoriginconfig-vpcoriginid)
+     */
+    public fun vpcOriginId(): String
+
+    /**
+     * A builder for [VpcOriginConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param originKeepaliveTimeout Specifies how long, in seconds, CloudFront persists its
+       * connection to the origin.
+       * The minimum timeout is 1 second, the maximum is 120 seconds, and the default (if you don't
+       * specify otherwise) is 5 seconds.
+       *
+       * For more information, see [Keep-alive timeout (custom origins
+       * only)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginKeepaliveTimeout)
+       * in the *Amazon CloudFront Developer Guide* .
+       */
+      public fun originKeepaliveTimeout(originKeepaliveTimeout: Number)
+
+      /**
+       * @param originReadTimeout Specifies how long, in seconds, CloudFront waits for a response
+       * from the origin.
+       * This is also known as the *origin response timeout* . The minimum timeout is 1 second, the
+       * maximum is 120 seconds, and the default (if you don't specify otherwise) is 30 seconds.
+       *
+       * For more information, see [Response timeout (custom origins
+       * only)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginResponseTimeout)
+       * in the *Amazon CloudFront Developer Guide* .
+       */
+      public fun originReadTimeout(originReadTimeout: Number)
+
+      /**
+       * @param vpcOriginId The VPC origin ID. 
+       */
+      public fun vpcOriginId(vpcOriginId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.VpcOriginConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.VpcOriginConfigProperty.builder()
+
+      /**
+       * @param originKeepaliveTimeout Specifies how long, in seconds, CloudFront persists its
+       * connection to the origin.
+       * The minimum timeout is 1 second, the maximum is 120 seconds, and the default (if you don't
+       * specify otherwise) is 5 seconds.
+       *
+       * For more information, see [Keep-alive timeout (custom origins
+       * only)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginKeepaliveTimeout)
+       * in the *Amazon CloudFront Developer Guide* .
+       */
+      override fun originKeepaliveTimeout(originKeepaliveTimeout: Number) {
+        cdkBuilder.originKeepaliveTimeout(originKeepaliveTimeout)
+      }
+
+      /**
+       * @param originReadTimeout Specifies how long, in seconds, CloudFront waits for a response
+       * from the origin.
+       * This is also known as the *origin response timeout* . The minimum timeout is 1 second, the
+       * maximum is 120 seconds, and the default (if you don't specify otherwise) is 30 seconds.
+       *
+       * For more information, see [Response timeout (custom origins
+       * only)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginResponseTimeout)
+       * in the *Amazon CloudFront Developer Guide* .
+       */
+      override fun originReadTimeout(originReadTimeout: Number) {
+        cdkBuilder.originReadTimeout(originReadTimeout)
+      }
+
+      /**
+       * @param vpcOriginId The VPC origin ID. 
+       */
+      override fun vpcOriginId(vpcOriginId: String) {
+        cdkBuilder.vpcOriginId(vpcOriginId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.VpcOriginConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.VpcOriginConfigProperty,
+    ) : CdkObject(cdkObject),
+        VpcOriginConfigProperty {
+      /**
+       * Specifies how long, in seconds, CloudFront persists its connection to the origin.
+       *
+       * The minimum timeout is 1 second, the maximum is 120 seconds, and the default (if you don't
+       * specify otherwise) is 5 seconds.
+       *
+       * For more information, see [Keep-alive timeout (custom origins
+       * only)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginKeepaliveTimeout)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * Default: - 5
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-vpcoriginconfig.html#cfn-cloudfront-distribution-vpcoriginconfig-originkeepalivetimeout)
+       */
+      override fun originKeepaliveTimeout(): Number? = unwrap(this).getOriginKeepaliveTimeout()
+
+      /**
+       * Specifies how long, in seconds, CloudFront waits for a response from the origin.
+       *
+       * This is also known as the *origin response timeout* . The minimum timeout is 1 second, the
+       * maximum is 120 seconds, and the default (if you don't specify otherwise) is 30 seconds.
+       *
+       * For more information, see [Response timeout (custom origins
+       * only)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html#DownloadDistValuesOriginResponseTimeout)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
+       * Default: - 30
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-vpcoriginconfig.html#cfn-cloudfront-distribution-vpcoriginconfig-originreadtimeout)
+       */
+      override fun originReadTimeout(): Number? = unwrap(this).getOriginReadTimeout()
+
+      /**
+       * The VPC origin ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-vpcoriginconfig.html#cfn-cloudfront-distribution-vpcoriginconfig-vpcoriginid)
+       */
+      override fun vpcOriginId(): String = unwrap(this).getVpcOriginId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcOriginConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.VpcOriginConfigProperty):
+          VpcOriginConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcOriginConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcOriginConfigProperty):
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.VpcOriginConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudfront.CfnDistribution.VpcOriginConfigProperty
     }
   }
 }

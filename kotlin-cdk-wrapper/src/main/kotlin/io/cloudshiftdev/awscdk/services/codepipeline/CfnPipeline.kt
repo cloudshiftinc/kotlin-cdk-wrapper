@@ -55,6 +55,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .commands(List.of("commands"))
  * .configuration(configuration)
+ * .environmentVariables(List.of(EnvironmentVariableProperty.builder()
+ * .name("name")
+ * .value("value")
+ * // the properties below are optional
+ * .type("type")
+ * .build()))
  * .inputArtifacts(List.of(InputArtifactProperty.builder()
  * .name("name")
  * .build()))
@@ -76,6 +82,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .conditions(List.of(ConditionProperty.builder()
  * .result("result")
  * .rules(List.of(RuleDeclarationProperty.builder()
+ * .commands(List.of("commands"))
  * .configuration(configuration)
  * .inputArtifacts(List.of(InputArtifactProperty.builder()
  * .name("name")
@@ -100,6 +107,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .conditions(List.of(ConditionProperty.builder()
  * .result("result")
  * .rules(List.of(RuleDeclarationProperty.builder()
+ * .commands(List.of("commands"))
  * .configuration(configuration)
  * .inputArtifacts(List.of(InputArtifactProperty.builder()
  * .name("name")
@@ -124,6 +132,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .conditions(List.of(ConditionProperty.builder()
  * .result("result")
  * .rules(List.of(RuleDeclarationProperty.builder()
+ * .commands(List.of("commands"))
  * .configuration(configuration)
  * .inputArtifacts(List.of(InputArtifactProperty.builder()
  * .name("name")
@@ -1235,6 +1244,12 @@ public open class CfnPipeline(
    * // the properties below are optional
    * .commands(List.of("commands"))
    * .configuration(configuration)
+   * .environmentVariables(List.of(EnvironmentVariableProperty.builder()
+   * .name("name")
+   * .value("value")
+   * // the properties below are optional
+   * .type("type")
+   * .build()))
    * .inputArtifacts(List.of(InputArtifactProperty.builder()
    * .name("name")
    * .build()))
@@ -1300,6 +1315,13 @@ public open class CfnPipeline(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-configuration)
      */
     public fun configuration(): Any? = unwrap(this).getConfiguration()
+
+    /**
+     * The environment variables for the action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-environmentvariables)
+     */
+    public fun environmentVariables(): Any? = unwrap(this).getEnvironmentVariables()
 
     /**
      * The name or ID of the artifact consumed by the action, such as a test or build artifact.
@@ -1455,6 +1477,21 @@ public open class CfnPipeline(
        * `"Configuration" : { Key : Value },`
        */
       public fun configuration(configuration: Any)
+
+      /**
+       * @param environmentVariables The environment variables for the action.
+       */
+      public fun environmentVariables(environmentVariables: IResolvable)
+
+      /**
+       * @param environmentVariables The environment variables for the action.
+       */
+      public fun environmentVariables(environmentVariables: List<Any>)
+
+      /**
+       * @param environmentVariables The environment variables for the action.
+       */
+      public fun environmentVariables(vararg environmentVariables: Any)
 
       /**
        * @param inputArtifacts The name or ID of the artifact consumed by the action, such as a test
@@ -1663,6 +1700,26 @@ public open class CfnPipeline(
       override fun configuration(configuration: Any) {
         cdkBuilder.configuration(configuration)
       }
+
+      /**
+       * @param environmentVariables The environment variables for the action.
+       */
+      override fun environmentVariables(environmentVariables: IResolvable) {
+        cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param environmentVariables The environment variables for the action.
+       */
+      override fun environmentVariables(environmentVariables: List<Any>) {
+        cdkBuilder.environmentVariables(environmentVariables.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param environmentVariables The environment variables for the action.
+       */
+      override fun environmentVariables(vararg environmentVariables: Any): Unit =
+          environmentVariables(environmentVariables.toList())
 
       /**
        * @param inputArtifacts The name or ID of the artifact consumed by the action, such as a test
@@ -1878,6 +1935,13 @@ public open class CfnPipeline(
       override fun configuration(): Any? = unwrap(this).getConfiguration()
 
       /**
+       * The environment variables for the action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-environmentvariables)
+       */
+      override fun environmentVariables(): Any? = unwrap(this).getEnvironmentVariables()
+
+      /**
        * The name or ID of the artifact consumed by the action, such as a test or build artifact.
        *
        * While the field is not a required parameter, most actions have an action configuration that
@@ -2020,6 +2084,7 @@ public open class CfnPipeline(
      * * `Deploy`
      * * `Invoke`
      * * `Approval`
+     * * `Compute`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-category)
      */
@@ -2074,6 +2139,7 @@ public open class CfnPipeline(
        * * `Deploy`
        * * `Invoke`
        * * `Approval`
+       * * `Compute`
        */
       public fun category(category: String)
 
@@ -2119,6 +2185,7 @@ public open class CfnPipeline(
        * * `Deploy`
        * * `Invoke`
        * * `Approval`
+       * * `Compute`
        */
       override fun category(category: String) {
         cdkBuilder.category(category)
@@ -2176,6 +2243,7 @@ public open class CfnPipeline(
        * * `Deploy`
        * * `Invoke`
        * * `Approval`
+       * * `Compute`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiontypeid.html#cfn-codepipeline-pipeline-actiontypeid-category)
        */
@@ -2658,6 +2726,12 @@ public open class CfnPipeline(
   /**
    * The conditions for making checks for entry to a stage.
    *
+   * For more information about conditions, see [Stage
+   * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html) and
+   * [How do stage conditions
+   * work?](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html)
+   * .
+   *
    * Example:
    *
    * ```
@@ -2670,6 +2744,7 @@ public open class CfnPipeline(
    * .conditions(List.of(ConditionProperty.builder()
    * .result("result")
    * .rules(List.of(RuleDeclarationProperty.builder()
+   * .commands(List.of("commands"))
    * .configuration(configuration)
    * .inputArtifacts(List.of(InputArtifactProperty.builder()
    * .name("name")
@@ -2894,8 +2969,10 @@ public open class CfnPipeline(
    *
    * A condition is made up of the rules and the result for the condition. For more information
    * about conditions, see [Stage
-   * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html) . For
-   * more information about rules, see the [AWS CodePipeline rule
+   * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html) and
+   * [How do stage conditions
+   * work?](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html)
+   * .. For more information about rules, see the [AWS CodePipeline rule
    * reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html) .
    *
    * Example:
@@ -2908,6 +2985,7 @@ public open class CfnPipeline(
    * ConditionProperty conditionProperty = ConditionProperty.builder()
    * .result("result")
    * .rules(List.of(RuleDeclarationProperty.builder()
+   * .commands(List.of("commands"))
    * .configuration(configuration)
    * .inputArtifacts(List.of(InputArtifactProperty.builder()
    * .name("name")
@@ -3199,7 +3277,161 @@ public open class CfnPipeline(
   }
 
   /**
+   * The environment variables for the action.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * EnvironmentVariableProperty environmentVariableProperty = EnvironmentVariableProperty.builder()
+   * .name("name")
+   * .value("value")
+   * // the properties below are optional
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-environmentvariable.html)
+   */
+  public interface EnvironmentVariableProperty {
+    /**
+     * The environment variable name in the key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-environmentvariable.html#cfn-codepipeline-pipeline-environmentvariable-name)
+     */
+    public fun name(): String
+
+    /**
+     * Specifies the type of use for the environment variable value.
+     *
+     * The value can be either `PLAINTEXT` or `SECRETS_MANAGER` . If the value is `SECRETS_MANAGER`
+     * , provide the Secrets reference in the EnvironmentVariable value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-environmentvariable.html#cfn-codepipeline-pipeline-environmentvariable-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * The environment variable value in the key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-environmentvariable.html#cfn-codepipeline-pipeline-environmentvariable-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [EnvironmentVariableProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The environment variable name in the key-value pair. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param type Specifies the type of use for the environment variable value.
+       * The value can be either `PLAINTEXT` or `SECRETS_MANAGER` . If the value is
+       * `SECRETS_MANAGER` , provide the Secrets reference in the EnvironmentVariable value.
+       */
+      public fun type(type: String)
+
+      /**
+       * @param value The environment variable value in the key-value pair. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.EnvironmentVariableProperty.Builder
+          =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.EnvironmentVariableProperty.builder()
+
+      /**
+       * @param name The environment variable name in the key-value pair. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param type Specifies the type of use for the environment variable value.
+       * The value can be either `PLAINTEXT` or `SECRETS_MANAGER` . If the value is
+       * `SECRETS_MANAGER` , provide the Secrets reference in the EnvironmentVariable value.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param value The environment variable value in the key-value pair. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.EnvironmentVariableProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.EnvironmentVariableProperty,
+    ) : CdkObject(cdkObject),
+        EnvironmentVariableProperty {
+      /**
+       * The environment variable name in the key-value pair.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-environmentvariable.html#cfn-codepipeline-pipeline-environmentvariable-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * Specifies the type of use for the environment variable value.
+       *
+       * The value can be either `PLAINTEXT` or `SECRETS_MANAGER` . If the value is
+       * `SECRETS_MANAGER` , provide the Secrets reference in the EnvironmentVariable value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-environmentvariable.html#cfn-codepipeline-pipeline-environmentvariable-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+
+      /**
+       * The environment variable value in the key-value pair.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-environmentvariable.html#cfn-codepipeline-pipeline-environmentvariable-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EnvironmentVariableProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.EnvironmentVariableProperty):
+          EnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnvironmentVariableProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EnvironmentVariableProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.EnvironmentVariableProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.EnvironmentVariableProperty
+    }
+  }
+
+  /**
    * The configuration that specifies the result, such as rollback, to occur upon stage failure.
+   *
+   * For more information about conditions, see [Stage
+   * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html) and
+   * [How do stage conditions
+   * work?](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html)
+   * .
    *
    * Example:
    *
@@ -3212,6 +3444,7 @@ public open class CfnPipeline(
    * .conditions(List.of(ConditionProperty.builder()
    * .result("result")
    * .rules(List.of(RuleDeclarationProperty.builder()
+   * .commands(List.of("commands"))
    * .configuration(configuration)
    * .inputArtifacts(List.of(InputArtifactProperty.builder()
    * .name("name")
@@ -3240,6 +3473,12 @@ public open class CfnPipeline(
     /**
      * The conditions that are configured as failure conditions.
      *
+     * For more information about conditions, see [Stage
+     * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html) and
+     * [How do stage conditions
+     * work?](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-failureconditions.html#cfn-codepipeline-pipeline-failureconditions-conditions)
      */
     public fun conditions(): Any? = unwrap(this).getConditions()
@@ -3266,16 +3505,31 @@ public open class CfnPipeline(
     public interface Builder {
       /**
        * @param conditions The conditions that are configured as failure conditions.
+       * For more information about conditions, see [Stage
+       * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html)
+       * and [How do stage conditions
+       * work?](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html)
+       * .
        */
       public fun conditions(conditions: IResolvable)
 
       /**
        * @param conditions The conditions that are configured as failure conditions.
+       * For more information about conditions, see [Stage
+       * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html)
+       * and [How do stage conditions
+       * work?](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html)
+       * .
        */
       public fun conditions(conditions: List<Any>)
 
       /**
        * @param conditions The conditions that are configured as failure conditions.
+       * For more information about conditions, see [Stage
+       * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html)
+       * and [How do stage conditions
+       * work?](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html)
+       * .
        */
       public fun conditions(vararg conditions: Any)
 
@@ -3315,6 +3569,11 @@ public open class CfnPipeline(
 
       /**
        * @param conditions The conditions that are configured as failure conditions.
+       * For more information about conditions, see [Stage
+       * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html)
+       * and [How do stage conditions
+       * work?](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html)
+       * .
        */
       override fun conditions(conditions: IResolvable) {
         cdkBuilder.conditions(conditions.let(IResolvable.Companion::unwrap))
@@ -3322,6 +3581,11 @@ public open class CfnPipeline(
 
       /**
        * @param conditions The conditions that are configured as failure conditions.
+       * For more information about conditions, see [Stage
+       * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html)
+       * and [How do stage conditions
+       * work?](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html)
+       * .
        */
       override fun conditions(conditions: List<Any>) {
         cdkBuilder.conditions(conditions.map{CdkObjectWrappers.unwrap(it)})
@@ -3329,6 +3593,11 @@ public open class CfnPipeline(
 
       /**
        * @param conditions The conditions that are configured as failure conditions.
+       * For more information about conditions, see [Stage
+       * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html)
+       * and [How do stage conditions
+       * work?](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html)
+       * .
        */
       override fun conditions(vararg conditions: Any): Unit = conditions(conditions.toList())
 
@@ -3377,6 +3646,12 @@ public open class CfnPipeline(
         FailureConditionsProperty {
       /**
        * The conditions that are configured as failure conditions.
+       *
+       * For more information about conditions, see [Stage
+       * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html)
+       * and [How do stage conditions
+       * work?](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html)
+       * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-failureconditions.html#cfn-codepipeline-pipeline-failureconditions-conditions)
        */
@@ -3958,6 +4233,12 @@ public open class CfnPipeline(
    * The event criteria for the pull request trigger configuration, such as the lists of branches or
    * file paths to include and exclude.
    *
+   * The following are valid values for the events for this filter:
+   *
+   * * CLOSED
+   * * OPEN
+   * * UPDATED
+   *
    * Example:
    *
    * ```
@@ -3989,7 +4270,7 @@ public open class CfnPipeline(
     public fun branches(): Any? = unwrap(this).getBranches()
 
     /**
-     * The field that specifies which pull request events to filter on (opened, updated, closed) for
+     * The field that specifies which pull request events to filter on (OPEN, UPDATED, CLOSED) for
      * the trigger configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html#cfn-codepipeline-pipeline-gitpullrequestfilter-events)
@@ -4029,14 +4310,14 @@ public open class CfnPipeline(
       public fun branches(branches: GitBranchFilterCriteriaProperty.Builder.() -> Unit)
 
       /**
-       * @param events The field that specifies which pull request events to filter on (opened,
-       * updated, closed) for the trigger configuration.
+       * @param events The field that specifies which pull request events to filter on (OPEN,
+       * UPDATED, CLOSED) for the trigger configuration.
        */
       public fun events(events: List<String>)
 
       /**
-       * @param events The field that specifies which pull request events to filter on (opened,
-       * updated, closed) for the trigger configuration.
+       * @param events The field that specifies which pull request events to filter on (OPEN,
+       * UPDATED, CLOSED) for the trigger configuration.
        */
       public fun events(vararg events: String)
 
@@ -4093,16 +4374,16 @@ public open class CfnPipeline(
           branches(GitBranchFilterCriteriaProperty(branches))
 
       /**
-       * @param events The field that specifies which pull request events to filter on (opened,
-       * updated, closed) for the trigger configuration.
+       * @param events The field that specifies which pull request events to filter on (OPEN,
+       * UPDATED, CLOSED) for the trigger configuration.
        */
       override fun events(events: List<String>) {
         cdkBuilder.events(events)
       }
 
       /**
-       * @param events The field that specifies which pull request events to filter on (opened,
-       * updated, closed) for the trigger configuration.
+       * @param events The field that specifies which pull request events to filter on (OPEN,
+       * UPDATED, CLOSED) for the trigger configuration.
        */
       override fun events(vararg events: String): Unit = events(events.toList())
 
@@ -4148,8 +4429,8 @@ public open class CfnPipeline(
       override fun branches(): Any? = unwrap(this).getBranches()
 
       /**
-       * The field that specifies which pull request events to filter on (opened, updated, closed)
-       * for the trigger configuration.
+       * The field that specifies which pull request events to filter on (OPEN, UPDATED, CLOSED) for
+       * the trigger configuration.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-gitpullrequestfilter.html#cfn-codepipeline-pipeline-gitpullrequestfilter-events)
        */
@@ -5112,8 +5393,10 @@ public open class CfnPipeline(
    * An example would be creating a new rule for an entry condition, such as a rule that checks for
    * a test result before allowing the run to enter the deployment stage. For more information about
    * conditions, see [Stage
-   * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html) . For
-   * more information about rules, see the [AWS CodePipeline rule
+   * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html) and
+   * [How do stage conditions
+   * work?](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html)
+   * . For more information about rules, see the [AWS CodePipeline rule
    * reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html) .
    *
    * Example:
@@ -5124,6 +5407,7 @@ public open class CfnPipeline(
    * import io.cloudshiftdev.awscdk.services.codepipeline.*;
    * Object configuration;
    * RuleDeclarationProperty ruleDeclarationProperty = RuleDeclarationProperty.builder()
+   * .commands(List.of("commands"))
    * .configuration(configuration)
    * .inputArtifacts(List.of(InputArtifactProperty.builder()
    * .name("name")
@@ -5143,6 +5427,20 @@ public open class CfnPipeline(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html)
    */
   public interface RuleDeclarationProperty {
+    /**
+     * The shell commands to run with your commands rule in CodePipeline.
+     *
+     * All commands are supported except multi-line formats. While CodeBuild logs and permissions
+     * are used, you do not need to create any resources in CodeBuild.
+     *
+     *
+     * Using compute time for this action will incur separate charges in AWS CodeBuild .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-commands)
+     */
+    public fun commands(): List<String> = unwrap(this).getCommands() ?: emptyList()
+
     /**
      * The action configuration fields for the rule.
      *
@@ -5191,6 +5489,26 @@ public open class CfnPipeline(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param commands The shell commands to run with your commands rule in CodePipeline.
+       * All commands are supported except multi-line formats. While CodeBuild logs and permissions
+       * are used, you do not need to create any resources in CodeBuild.
+       *
+       *
+       * Using compute time for this action will incur separate charges in AWS CodeBuild .
+       */
+      public fun commands(commands: List<String>)
+
+      /**
+       * @param commands The shell commands to run with your commands rule in CodePipeline.
+       * All commands are supported except multi-line formats. While CodeBuild logs and permissions
+       * are used, you do not need to create any resources in CodeBuild.
+       *
+       *
+       * Using compute time for this action will incur separate charges in AWS CodeBuild .
+       */
+      public fun commands(vararg commands: String)
+
       /**
        * @param configuration The action configuration fields for the rule.
        */
@@ -5255,6 +5573,28 @@ public open class CfnPipeline(
       private val cdkBuilder:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.RuleDeclarationProperty.Builder =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.RuleDeclarationProperty.builder()
+
+      /**
+       * @param commands The shell commands to run with your commands rule in CodePipeline.
+       * All commands are supported except multi-line formats. While CodeBuild logs and permissions
+       * are used, you do not need to create any resources in CodeBuild.
+       *
+       *
+       * Using compute time for this action will incur separate charges in AWS CodeBuild .
+       */
+      override fun commands(commands: List<String>) {
+        cdkBuilder.commands(commands)
+      }
+
+      /**
+       * @param commands The shell commands to run with your commands rule in CodePipeline.
+       * All commands are supported except multi-line formats. While CodeBuild logs and permissions
+       * are used, you do not need to create any resources in CodeBuild.
+       *
+       *
+       * Using compute time for this action will incur separate charges in AWS CodeBuild .
+       */
+      override fun commands(vararg commands: String): Unit = commands(commands.toList())
 
       /**
        * @param configuration The action configuration fields for the rule.
@@ -5343,6 +5683,20 @@ public open class CfnPipeline(
     ) : CdkObject(cdkObject),
         RuleDeclarationProperty {
       /**
+       * The shell commands to run with your commands rule in CodePipeline.
+       *
+       * All commands are supported except multi-line formats. While CodeBuild logs and permissions
+       * are used, you do not need to create any resources in CodeBuild.
+       *
+       *
+       * Using compute time for this action will incur separate charges in AWS CodeBuild .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-commands)
+       */
+      override fun commands(): List<String> = unwrap(this).getCommands() ?: emptyList()
+
+      /**
        * The action configuration fields for the rule.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-configuration)
@@ -5408,6 +5762,11 @@ public open class CfnPipeline(
    * The ID for the rule type, which is made up of the combined values for category, owner,
    * provider, and version.
    *
+   * For more information about conditions, see [Stage
+   * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html) . For
+   * more information about rules, see the [AWS CodePipeline rule
+   * reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html) .
+   *
    * Example:
    *
    * ```
@@ -5447,6 +5806,9 @@ public open class CfnPipeline(
     /**
      * The rule provider, such as the `DeploymentWindow` rule.
      *
+     * For a list of rule provider names, see the rules listed in the [AWS CodePipeline rule
+     * reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html) .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruletypeid.html#cfn-codepipeline-pipeline-ruletypeid-provider)
      */
     public fun provider(): String? = unwrap(this).getProvider()
@@ -5478,6 +5840,8 @@ public open class CfnPipeline(
 
       /**
        * @param provider The rule provider, such as the `DeploymentWindow` rule.
+       * For a list of rule provider names, see the rules listed in the [AWS CodePipeline rule
+       * reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html) .
        */
       public fun provider(provider: String)
 
@@ -5511,6 +5875,8 @@ public open class CfnPipeline(
 
       /**
        * @param provider The rule provider, such as the `DeploymentWindow` rule.
+       * For a list of rule provider names, see the rules listed in the [AWS CodePipeline rule
+       * reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html) .
        */
       override fun provider(provider: String) {
         cdkBuilder.provider(provider)
@@ -5553,6 +5919,9 @@ public open class CfnPipeline(
 
       /**
        * The rule provider, such as the `DeploymentWindow` rule.
+       *
+       * For a list of rule provider names, see the rules listed in the [AWS CodePipeline rule
+       * reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html) .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruletypeid.html#cfn-codepipeline-pipeline-ruletypeid-provider)
        */
@@ -5606,6 +5975,12 @@ public open class CfnPipeline(
    * // the properties below are optional
    * .commands(List.of("commands"))
    * .configuration(configuration)
+   * .environmentVariables(List.of(EnvironmentVariableProperty.builder()
+   * .name("name")
+   * .value("value")
+   * // the properties below are optional
+   * .type("type")
+   * .build()))
    * .inputArtifacts(List.of(InputArtifactProperty.builder()
    * .name("name")
    * .build()))
@@ -5627,6 +6002,7 @@ public open class CfnPipeline(
    * .conditions(List.of(ConditionProperty.builder()
    * .result("result")
    * .rules(List.of(RuleDeclarationProperty.builder()
+   * .commands(List.of("commands"))
    * .configuration(configuration)
    * .inputArtifacts(List.of(InputArtifactProperty.builder()
    * .name("name")
@@ -5651,6 +6027,7 @@ public open class CfnPipeline(
    * .conditions(List.of(ConditionProperty.builder()
    * .result("result")
    * .rules(List.of(RuleDeclarationProperty.builder()
+   * .commands(List.of("commands"))
    * .configuration(configuration)
    * .inputArtifacts(List.of(InputArtifactProperty.builder()
    * .name("name")
@@ -5675,6 +6052,7 @@ public open class CfnPipeline(
    * .conditions(List.of(ConditionProperty.builder()
    * .result("result")
    * .rules(List.of(RuleDeclarationProperty.builder()
+   * .commands(List.of("commands"))
    * .configuration(configuration)
    * .inputArtifacts(List.of(InputArtifactProperty.builder()
    * .name("name")
@@ -6199,6 +6577,12 @@ public open class CfnPipeline(
   /**
    * The conditions for making checks that, if met, succeed a stage.
    *
+   * For more information about conditions, see [Stage
+   * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html) and
+   * [How do stage conditions
+   * work?](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html)
+   * .
+   *
    * Example:
    *
    * ```
@@ -6210,6 +6594,7 @@ public open class CfnPipeline(
    * .conditions(List.of(ConditionProperty.builder()
    * .result("result")
    * .rules(List.of(RuleDeclarationProperty.builder()
+   * .commands(List.of("commands"))
    * .configuration(configuration)
    * .inputArtifacts(List.of(InputArtifactProperty.builder()
    * .name("name")

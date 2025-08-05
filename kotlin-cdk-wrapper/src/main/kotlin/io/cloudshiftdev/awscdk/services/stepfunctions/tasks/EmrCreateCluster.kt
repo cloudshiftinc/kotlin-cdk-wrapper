@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
+import io.cloudshiftdev.awscdk.services.stepfunctions.QueryLanguage
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBase
 import io.cloudshiftdev.awscdk.services.stepfunctions.Timeout
 import kotlin.Any
@@ -136,6 +137,19 @@ public open class EmrCreateCluster(
     public fun applications(vararg applications: ApplicationConfigProperty)
 
     /**
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    public fun assign(assign: Map<String, Any>)
+
+    /**
      * An IAM role for automatic scaling policies.
      *
      * Default: - A role will be created.
@@ -191,11 +205,11 @@ public open class EmrCreateCluster(
     public fun clusterRole(clusterRole: IRole)
 
     /**
-     * An optional description for this state.
+     * A comment describing this state.
      *
-     * Default: - No comment
+     * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     public fun comment(comment: String)
 
@@ -295,7 +309,7 @@ public open class EmrCreateCluster(
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      *
      * @param inputPath JSONPath expression to select part of the state to be the input to this
      * state. 
@@ -377,18 +391,45 @@ public open class EmrCreateCluster(
     public fun name(name: String)
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      *
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state. 
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state. 
      */
     public fun outputPath(outputPath: String)
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    public fun outputs(outputs: Any)
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
 
     /**
      * The Amazon EMR release label, which determines the version of open-source application
@@ -407,7 +448,7 @@ public open class EmrCreateCluster(
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      *
      * @param resultPath JSONPath expression to indicate where to inject the state's output. 
      */
@@ -572,6 +613,21 @@ public open class EmrCreateCluster(
         applications(applications.toList())
 
     /**
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
      * An IAM role for automatic scaling policies.
      *
      * Default: - A role will be created.
@@ -636,11 +692,11 @@ public open class EmrCreateCluster(
     }
 
     /**
-     * An optional description for this state.
+     * A comment describing this state.
      *
-     * Default: - No comment
+     * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -756,7 +812,7 @@ public open class EmrCreateCluster(
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      *
      * @param inputPath JSONPath expression to select part of the state to be the input to this
      * state. 
@@ -853,19 +909,50 @@ public open class EmrCreateCluster(
     }
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      *
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state. 
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state. 
      */
     override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
+    }
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    override fun outputs(outputs: Any) {
+      cdkBuilder.outputs(outputs)
+    }
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
     }
 
     /**
@@ -887,7 +974,7 @@ public open class EmrCreateCluster(
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      *
      * @param resultPath JSONPath expression to indicate where to inject the state's output. 
      */
@@ -1032,6 +1119,38 @@ public open class EmrCreateCluster(
   }
 
   public companion object {
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: EmrCreateClusterJsonPathProps,
+    ): EmrCreateCluster =
+        software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.jsonPath(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, props.let(EmrCreateClusterJsonPathProps.Companion::unwrap)).let(EmrCreateCluster::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("70cbba46b2d931c284642488c86d1b211eab6f1f1db7e8923bb79a7c24041d4f")
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: EmrCreateClusterJsonPathProps.Builder.() -> Unit,
+    ): EmrCreateCluster = jsonPath(scope, id, EmrCreateClusterJsonPathProps(props))
+
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: EmrCreateClusterJsonataProps,
+    ): EmrCreateCluster =
+        software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.jsonata(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, props.let(EmrCreateClusterJsonataProps.Companion::unwrap)).let(EmrCreateCluster::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c4b908f3c5a9e505f22bb9e726e82de1f31ea874f95f699a505709c394ff6a7d")
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: EmrCreateClusterJsonataProps.Builder.() -> Unit,
+    ): EmrCreateCluster = jsonata(scope, id, EmrCreateClusterJsonataProps(props))
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

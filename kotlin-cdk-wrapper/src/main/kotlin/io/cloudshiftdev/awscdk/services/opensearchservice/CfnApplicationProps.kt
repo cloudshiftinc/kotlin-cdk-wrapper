@@ -65,21 +65,25 @@ public interface CfnApplicationProps {
   public fun dataSources(): Any? = unwrap(this).getDataSources()
 
   /**
-   * Endpoint URL of an OpenSearch Application.
+   * The endpoint URL of an OpenSearch application.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-application.html#cfn-opensearchservice-application-endpoint)
    */
   public fun endpoint(): String? = unwrap(this).getEndpoint()
 
   /**
-   * Container for IAM Identity Center Options settings.
+   * Settings container for integrating IAM Identity Center with OpenSearch UI applications, which
+   * enables enabling secure user authentication and access control across multiple data sources.
+   *
+   * This setup supports single sign-on (SSO) through IAM Identity Center, allowing centralized user
+   * management.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-application.html#cfn-opensearchservice-application-iamidentitycenteroptions)
    */
   public fun iamIdentityCenterOptions(): Any? = unwrap(this).getIamIdentityCenterOptions()
 
   /**
-   * Name of an OpenSearch Application.
+   * The name of an OpenSearch application.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-application.html#cfn-opensearchservice-application-name)
    */
@@ -128,23 +132,35 @@ public interface CfnApplicationProps {
     public fun dataSources(vararg dataSources: Any)
 
     /**
-     * @param endpoint Endpoint URL of an OpenSearch Application.
+     * @param endpoint The endpoint URL of an OpenSearch application.
      */
     public fun endpoint(endpoint: String)
 
     /**
-     * @param iamIdentityCenterOptions Container for IAM Identity Center Options settings.
+     * @param iamIdentityCenterOptions Settings container for integrating IAM Identity Center with
+     * OpenSearch UI applications, which enables enabling secure user authentication and access control
+     * across multiple data sources.
+     * This setup supports single sign-on (SSO) through IAM Identity Center, allowing centralized
+     * user management.
      */
     public fun iamIdentityCenterOptions(iamIdentityCenterOptions: IResolvable)
 
     /**
-     * @param iamIdentityCenterOptions Container for IAM Identity Center Options settings.
+     * @param iamIdentityCenterOptions Settings container for integrating IAM Identity Center with
+     * OpenSearch UI applications, which enables enabling secure user authentication and access control
+     * across multiple data sources.
+     * This setup supports single sign-on (SSO) through IAM Identity Center, allowing centralized
+     * user management.
      */
     public
         fun iamIdentityCenterOptions(iamIdentityCenterOptions: CfnApplication.IamIdentityCenterOptionsProperty)
 
     /**
-     * @param iamIdentityCenterOptions Container for IAM Identity Center Options settings.
+     * @param iamIdentityCenterOptions Settings container for integrating IAM Identity Center with
+     * OpenSearch UI applications, which enables enabling secure user authentication and access control
+     * across multiple data sources.
+     * This setup supports single sign-on (SSO) through IAM Identity Center, allowing centralized
+     * user management.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f42d94eb7abdd344814d68c0ac50ae08f9cbc90152e0bb81f6afe1365e52e9f4")
@@ -152,7 +168,7 @@ public interface CfnApplicationProps {
         fun iamIdentityCenterOptions(iamIdentityCenterOptions: CfnApplication.IamIdentityCenterOptionsProperty.Builder.() -> Unit)
 
     /**
-     * @param name Name of an OpenSearch Application. 
+     * @param name The name of an OpenSearch application. 
      */
     public fun name(name: String)
 
@@ -211,21 +227,29 @@ public interface CfnApplicationProps {
     override fun dataSources(vararg dataSources: Any): Unit = dataSources(dataSources.toList())
 
     /**
-     * @param endpoint Endpoint URL of an OpenSearch Application.
+     * @param endpoint The endpoint URL of an OpenSearch application.
      */
     override fun endpoint(endpoint: String) {
       cdkBuilder.endpoint(endpoint)
     }
 
     /**
-     * @param iamIdentityCenterOptions Container for IAM Identity Center Options settings.
+     * @param iamIdentityCenterOptions Settings container for integrating IAM Identity Center with
+     * OpenSearch UI applications, which enables enabling secure user authentication and access control
+     * across multiple data sources.
+     * This setup supports single sign-on (SSO) through IAM Identity Center, allowing centralized
+     * user management.
      */
     override fun iamIdentityCenterOptions(iamIdentityCenterOptions: IResolvable) {
       cdkBuilder.iamIdentityCenterOptions(iamIdentityCenterOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param iamIdentityCenterOptions Container for IAM Identity Center Options settings.
+     * @param iamIdentityCenterOptions Settings container for integrating IAM Identity Center with
+     * OpenSearch UI applications, which enables enabling secure user authentication and access control
+     * across multiple data sources.
+     * This setup supports single sign-on (SSO) through IAM Identity Center, allowing centralized
+     * user management.
      */
     override
         fun iamIdentityCenterOptions(iamIdentityCenterOptions: CfnApplication.IamIdentityCenterOptionsProperty) {
@@ -233,7 +257,11 @@ public interface CfnApplicationProps {
     }
 
     /**
-     * @param iamIdentityCenterOptions Container for IAM Identity Center Options settings.
+     * @param iamIdentityCenterOptions Settings container for integrating IAM Identity Center with
+     * OpenSearch UI applications, which enables enabling secure user authentication and access control
+     * across multiple data sources.
+     * This setup supports single sign-on (SSO) through IAM Identity Center, allowing centralized
+     * user management.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f42d94eb7abdd344814d68c0ac50ae08f9cbc90152e0bb81f6afe1365e52e9f4")
@@ -243,7 +271,7 @@ public interface CfnApplicationProps {
         iamIdentityCenterOptions(CfnApplication.IamIdentityCenterOptionsProperty(iamIdentityCenterOptions))
 
     /**
-     * @param name Name of an OpenSearch Application. 
+     * @param name The name of an OpenSearch application. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -284,21 +312,25 @@ public interface CfnApplicationProps {
     override fun dataSources(): Any? = unwrap(this).getDataSources()
 
     /**
-     * Endpoint URL of an OpenSearch Application.
+     * The endpoint URL of an OpenSearch application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-application.html#cfn-opensearchservice-application-endpoint)
      */
     override fun endpoint(): String? = unwrap(this).getEndpoint()
 
     /**
-     * Container for IAM Identity Center Options settings.
+     * Settings container for integrating IAM Identity Center with OpenSearch UI applications, which
+     * enables enabling secure user authentication and access control across multiple data sources.
+     *
+     * This setup supports single sign-on (SSO) through IAM Identity Center, allowing centralized
+     * user management.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-application.html#cfn-opensearchservice-application-iamidentitycenteroptions)
      */
     override fun iamIdentityCenterOptions(): Any? = unwrap(this).getIamIdentityCenterOptions()
 
     /**
-     * Name of an OpenSearch Application.
+     * The name of an OpenSearch application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-application.html#cfn-opensearchservice-application-name)
      */

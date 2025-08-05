@@ -15,16 +15,15 @@ import kotlin.collections.List
  *
  * ```
  * CodePipeline pipeline;
- * MyApplicationStage preprod = new MyApplicationStage(this, "PreProd");
- * MyApplicationStage prod = new MyApplicationStage(this, "Prod");
- * pipeline.addStage(preprod, AddStageOpts.builder()
- * .post(List.of(
- * ShellStep.Builder.create("Validate Endpoint")
- * .commands(List.of("curl -Ssf https://my.webservice.com/"))
+ * Topic topic = new Topic(this, "SecurityChangesTopic");
+ * topic.addSubscription(new EmailSubscription("test&#64;email.com"));
+ * MyApplicationStage stage = new MyApplicationStage(this, "MyApplication");
+ * pipeline.addStage(stage, AddStageOpts.builder()
+ * .pre(List.of(
+ * ConfirmPermissionsBroadening.Builder.create("Check")
+ * .stage(stage)
+ * .notificationTopic(topic)
  * .build()))
- * .build());
- * pipeline.addStage(prod, AddStageOpts.builder()
- * .pre(List.of(new ManualApprovalStep("PromoteToProd")))
  * .build());
  * ```
  */

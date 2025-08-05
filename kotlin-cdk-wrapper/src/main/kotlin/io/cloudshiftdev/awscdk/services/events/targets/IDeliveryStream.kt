@@ -12,7 +12,7 @@ import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
 /**
- * Represents a Kinesis Data Firehose delivery stream.
+ * Represents an Amazon Data Firehose delivery stream.
  */
 public interface IDeliveryStream : IResource {
   /**

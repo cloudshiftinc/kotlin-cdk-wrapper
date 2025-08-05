@@ -7,9 +7,11 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.autoscaling.BlockDevice
+import io.cloudshiftdev.awscdk.services.autoscaling.CapacityDistributionStrategy
 import io.cloudshiftdev.awscdk.services.autoscaling.CommonAutoScalingGroupProps
 import io.cloudshiftdev.awscdk.services.autoscaling.GroupMetrics
 import io.cloudshiftdev.awscdk.services.autoscaling.HealthCheck
+import io.cloudshiftdev.awscdk.services.autoscaling.HealthChecks
 import io.cloudshiftdev.awscdk.services.autoscaling.Monitoring
 import io.cloudshiftdev.awscdk.services.autoscaling.NotificationConfiguration
 import io.cloudshiftdev.awscdk.services.autoscaling.Signals
@@ -118,6 +120,13 @@ public interface AutoScalingGroupCapacityOptions : CommonAutoScalingGroupProps {
     public fun autoScalingGroupName(autoScalingGroupName: String)
 
     /**
+     * @param azCapacityDistributionStrategy The strategy for distributing instances across
+     * Availability Zones.
+     */
+    public
+        fun azCapacityDistributionStrategy(azCapacityDistributionStrategy: CapacityDistributionStrategy)
+
+    /**
      * @param blockDevices Specifies how block devices are exposed to the instance. You can specify
      * virtual devices and EBS volumes.
      * Each instance that is launched has an associated root device volume,
@@ -221,8 +230,16 @@ public interface AutoScalingGroupCapacityOptions : CommonAutoScalingGroupProps {
 
     /**
      * @param healthCheck Configuration for health checks.
+     * @deprecated Use `healthChecks` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun healthCheck(healthCheck: HealthCheck)
+
+    /**
+     * @param healthChecks Configuration for EC2 or additional health checks.
+     * Even when using `HealthChecks.withAdditionalChecks()`, the EC2 type is implicitly included.
+     */
+    public fun healthChecks(healthChecks: HealthChecks)
 
     /**
      * @param ignoreUnmodifiedSizeProperties If the ASG has scheduled actions, don't reset unchanged
@@ -468,6 +485,15 @@ public interface AutoScalingGroupCapacityOptions : CommonAutoScalingGroupProps {
     }
 
     /**
+     * @param azCapacityDistributionStrategy The strategy for distributing instances across
+     * Availability Zones.
+     */
+    override
+        fun azCapacityDistributionStrategy(azCapacityDistributionStrategy: CapacityDistributionStrategy) {
+      cdkBuilder.azCapacityDistributionStrategy(azCapacityDistributionStrategy.let(CapacityDistributionStrategy.Companion::unwrap))
+    }
+
+    /**
      * @param blockDevices Specifies how block devices are exposed to the instance. You can specify
      * virtual devices and EBS volumes.
      * Each instance that is launched has an associated root device volume,
@@ -590,9 +616,19 @@ public interface AutoScalingGroupCapacityOptions : CommonAutoScalingGroupProps {
 
     /**
      * @param healthCheck Configuration for health checks.
+     * @deprecated Use `healthChecks` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun healthCheck(healthCheck: HealthCheck) {
       cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
+    }
+
+    /**
+     * @param healthChecks Configuration for EC2 or additional health checks.
+     * Even when using `HealthChecks.withAdditionalChecks()`, the EC2 type is implicitly included.
+     */
+    override fun healthChecks(healthChecks: HealthChecks) {
+      cdkBuilder.healthChecks(healthChecks.let(HealthChecks.Companion::unwrap))
     }
 
     /**
@@ -885,6 +921,14 @@ public interface AutoScalingGroupCapacityOptions : CommonAutoScalingGroupProps {
     override fun autoScalingGroupName(): String? = unwrap(this).getAutoScalingGroupName()
 
     /**
+     * The strategy for distributing instances across Availability Zones.
+     *
+     * Default: None
+     */
+    override fun azCapacityDistributionStrategy(): CapacityDistributionStrategy? =
+        unwrap(this).getAzCapacityDistributionStrategy()?.let(CapacityDistributionStrategy::wrap)
+
+    /**
      * Specifies how block devices are exposed to the instance. You can specify virtual devices and
      * EBS volumes.
      *
@@ -992,11 +1036,26 @@ public interface AutoScalingGroupCapacityOptions : CommonAutoScalingGroupProps {
         unwrap(this).getGroupMetrics()?.map(GroupMetrics::wrap) ?: emptyList()
 
     /**
-     * Configuration for health checks.
+     * (deprecated) Configuration for health checks.
      *
      * Default: - HealthCheck.ec2 with no grace period
+     *
+     * @deprecated Use `healthChecks` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun healthCheck(): HealthCheck? = unwrap(this).getHealthCheck()?.let(HealthCheck::wrap)
+
+    /**
+     * Configuration for EC2 or additional health checks.
+     *
+     * Even when using `HealthChecks.withAdditionalChecks()`, the EC2 type is implicitly included.
+     *
+     * Default: - EC2 type with no grace period
+     *
+     * [Documentation](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-health-checks.html)
+     */
+    override fun healthChecks(): HealthChecks? =
+        unwrap(this).getHealthChecks()?.let(HealthChecks::wrap)
 
     /**
      * If the ASG has scheduled actions, don't reset unchanged group sizes.

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
+import kotlin.String
 import kotlin.Unit
 
 /**
@@ -15,20 +16,38 @@ import kotlin.Unit
  *
  * ```
  * Vpc vpc;
- * Instance.Builder.create(this, "LatestAl2023")
+ * InstanceType instanceType;
+ * // Amazon Linux 2
+ * // Amazon Linux 2
+ * Instance.Builder.create(this, "Instance2")
+ * .vpc(vpc)
+ * .instanceType(instanceType)
+ * .machineImage(MachineImage.latestAmazonLinux2())
+ * .build();
+ * // Amazon Linux 2 with kernel 5.x
+ * // Amazon Linux 2 with kernel 5.x
+ * Instance.Builder.create(this, "Instance3")
+ * .vpc(vpc)
+ * .instanceType(instanceType)
+ * .machineImage(MachineImage.latestAmazonLinux2(AmazonLinux2ImageSsmParameterProps.builder()
+ * .kernel(AmazonLinux2Kernel.KERNEL_5_10)
+ * .build()))
+ * .build();
+ * // Amazon Linux 2023
+ * // Amazon Linux 2023
+ * Instance.Builder.create(this, "Instance4")
+ * .vpc(vpc)
+ * .instanceType(instanceType)
+ * .machineImage(MachineImage.latestAmazonLinux2023())
+ * .build();
+ * // Graviton 3 Processor
+ * // Graviton 3 Processor
+ * Instance.Builder.create(this, "Instance5")
  * .vpc(vpc)
  * .instanceType(InstanceType.of(InstanceClass.C7G, InstanceSize.LARGE))
  * .machineImage(MachineImage.latestAmazonLinux2023(AmazonLinux2023ImageSsmParameterProps.builder()
- * .cachedInContext(true)
+ * .cpuType(AmazonLinuxCpuType.ARM_64)
  * .build()))
- * .build();
- * // or
- * // or
- * Instance.Builder.create(this, "LatestAl2023")
- * .vpc(vpc)
- * .instanceType(InstanceType.of(InstanceClass.C7G, InstanceSize.LARGE))
- * // context cache is turned on by default
- * .machineImage(new AmazonLinux2023ImageSsmParameter())
  * .build();
  * ```
  */
@@ -46,6 +65,12 @@ public interface AmazonLinux2023ImageSsmParameterProps : AmazonLinuxImageSsmPara
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key.
+     */
+    public fun additionalCacheKey(additionalCacheKey: String)
+
     /**
      * @param cachedInContext Whether the AMI ID is cached to be stable between deployments.
      * By default, the newest image is used on each deployment. This will cause
@@ -89,6 +114,14 @@ public interface AmazonLinux2023ImageSsmParameterProps : AmazonLinuxImageSsmPara
     private val cdkBuilder:
         software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameterProps.Builder =
         software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameterProps.builder()
+
+    /**
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key.
+     */
+    override fun additionalCacheKey(additionalCacheKey: String) {
+      cdkBuilder.additionalCacheKey(additionalCacheKey)
+    }
 
     /**
      * @param cachedInContext Whether the AMI ID is cached to be stable between deployments.
@@ -146,6 +179,13 @@ public interface AmazonLinux2023ImageSsmParameterProps : AmazonLinuxImageSsmPara
     cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameterProps,
   ) : CdkObject(cdkObject),
       AmazonLinux2023ImageSsmParameterProps {
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     */
+    override fun additionalCacheKey(): String? = unwrap(this).getAdditionalCacheKey()
+
     /**
      * Whether the AMI ID is cached to be stable between deployments.
      *

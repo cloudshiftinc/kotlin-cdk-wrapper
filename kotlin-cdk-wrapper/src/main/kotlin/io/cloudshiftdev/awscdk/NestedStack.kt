@@ -78,6 +78,11 @@ public open class NestedStack(
   )
 
   /**
+   * Indicates whether the stack requires bundling or not.
+   */
+  public override fun bundlingRequired(): Boolean = unwrap(this).getBundlingRequired()
+
+  /**
    * If this is a nested stack, this represents its `AWS::CloudFormation::Stack` resource.
    *
    * `undefined` for top-level (non-nested) stacks.

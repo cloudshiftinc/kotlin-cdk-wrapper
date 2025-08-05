@@ -5,6 +5,8 @@ package io.cloudshiftdev.awscdk.services.imagebuilder
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -89,7 +91,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLifecyclePolicy(
   cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy,
 ) : CfnResource(cdkObject),
-    IInspectable {
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -110,6 +113,12 @@ public open class CfnLifecyclePolicy(
    * The Amazon Resource Name (ARN) of the lifecycle policy resource.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * Optional description for the lifecycle policy.
@@ -774,13 +783,13 @@ public open class CfnLifecyclePolicy(
        * @param tagMap Lists tags that should be excluded from lifecycle actions for the AMIs that
        * have them.
        */
-      public fun tagMap(tagMap: IResolvable)
+      public fun tagMap(tagMap: Map<String, String>)
 
       /**
        * @param tagMap Lists tags that should be excluded from lifecycle actions for the AMIs that
        * have them.
        */
-      public fun tagMap(tagMap: Map<String, String>)
+      public fun tagMap(tagMap: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -859,16 +868,16 @@ public open class CfnLifecyclePolicy(
        * @param tagMap Lists tags that should be excluded from lifecycle actions for the AMIs that
        * have them.
        */
-      override fun tagMap(tagMap: IResolvable) {
-        cdkBuilder.tagMap(tagMap.let(IResolvable.Companion::unwrap))
+      override fun tagMap(tagMap: Map<String, String>) {
+        cdkBuilder.tagMap(tagMap)
       }
 
       /**
        * @param tagMap Lists tags that should be excluded from lifecycle actions for the AMIs that
        * have them.
        */
-      override fun tagMap(tagMap: Map<String, String>) {
-        cdkBuilder.tagMap(tagMap)
+      override fun tagMap(tagMap: IResolvable) {
+        cdkBuilder.tagMap(tagMap.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1009,13 +1018,13 @@ public open class CfnLifecyclePolicy(
        * @param tagMap Contains a list of tags that Image Builder uses to skip lifecycle actions for
        * Image Builder image resources that have them.
        */
-      public fun tagMap(tagMap: IResolvable)
+      public fun tagMap(tagMap: Map<String, String>)
 
       /**
        * @param tagMap Contains a list of tags that Image Builder uses to skip lifecycle actions for
        * Image Builder image resources that have them.
        */
-      public fun tagMap(tagMap: Map<String, String>)
+      public fun tagMap(tagMap: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1053,16 +1062,16 @@ public open class CfnLifecyclePolicy(
        * @param tagMap Contains a list of tags that Image Builder uses to skip lifecycle actions for
        * Image Builder image resources that have them.
        */
-      override fun tagMap(tagMap: IResolvable) {
-        cdkBuilder.tagMap(tagMap.let(IResolvable.Companion::unwrap))
+      override fun tagMap(tagMap: Map<String, String>) {
+        cdkBuilder.tagMap(tagMap)
       }
 
       /**
        * @param tagMap Contains a list of tags that Image Builder uses to skip lifecycle actions for
        * Image Builder image resources that have them.
        */
-      override fun tagMap(tagMap: Map<String, String>) {
-        cdkBuilder.tagMap(tagMap)
+      override fun tagMap(tagMap: IResolvable) {
+        cdkBuilder.tagMap(tagMap.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2065,13 +2074,13 @@ public open class CfnLifecyclePolicy(
        * @param tagMap A list of tags that are used as selection criteria for the Image Builder
        * image resources that the lifecycle policy applies to.
        */
-      public fun tagMap(tagMap: IResolvable)
+      public fun tagMap(tagMap: Map<String, String>)
 
       /**
        * @param tagMap A list of tags that are used as selection criteria for the Image Builder
        * image resources that the lifecycle policy applies to.
        */
-      public fun tagMap(tagMap: Map<String, String>)
+      public fun tagMap(tagMap: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -2106,16 +2115,16 @@ public open class CfnLifecyclePolicy(
        * @param tagMap A list of tags that are used as selection criteria for the Image Builder
        * image resources that the lifecycle policy applies to.
        */
-      override fun tagMap(tagMap: IResolvable) {
-        cdkBuilder.tagMap(tagMap.let(IResolvable.Companion::unwrap))
+      override fun tagMap(tagMap: Map<String, String>) {
+        cdkBuilder.tagMap(tagMap)
       }
 
       /**
        * @param tagMap A list of tags that are used as selection criteria for the Image Builder
        * image resources that the lifecycle policy applies to.
        */
-      override fun tagMap(tagMap: Map<String, String>) {
-        cdkBuilder.tagMap(tagMap)
+      override fun tagMap(tagMap: IResolvable) {
+        cdkBuilder.tagMap(tagMap.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

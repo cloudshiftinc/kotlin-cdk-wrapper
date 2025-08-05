@@ -255,20 +255,20 @@ public open class CfnApplicationV2(
   }
 
   /**
-   * Describes the maintenance configuration for the application.
+   * Specifies the maintenance window parameters for a Kinesis Data Analytics application.
    */
   public open fun applicationMaintenanceConfiguration(): Any? =
       unwrap(this).getApplicationMaintenanceConfiguration()
 
   /**
-   * Describes the maintenance configuration for the application.
+   * Specifies the maintenance window parameters for a Kinesis Data Analytics application.
    */
   public open fun applicationMaintenanceConfiguration(`value`: IResolvable) {
     unwrap(this).setApplicationMaintenanceConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Describes the maintenance configuration for the application.
+   * Specifies the maintenance window parameters for a Kinesis Data Analytics application.
    */
   public open
       fun applicationMaintenanceConfiguration(`value`: ApplicationMaintenanceConfigurationProperty) {
@@ -276,7 +276,7 @@ public open class CfnApplicationV2(
   }
 
   /**
-   * Describes the maintenance configuration for the application.
+   * Specifies the maintenance window parameters for a Kinesis Data Analytics application.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("fdb94f1cebb358733aba10228ef4aa1abf1ca8ea84db3c5fc90e06ed008658fe")
@@ -435,30 +435,30 @@ public open class CfnApplicationV2(
     public fun applicationDescription(applicationDescription: String)
 
     /**
-     * Describes the maintenance configuration for the application.
+     * Specifies the maintenance window parameters for a Kinesis Data Analytics application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration)
-     * @param applicationMaintenanceConfiguration Describes the maintenance configuration for the
-     * application. 
+     * @param applicationMaintenanceConfiguration Specifies the maintenance window parameters for a
+     * Kinesis Data Analytics application. 
      */
     public fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: IResolvable)
 
     /**
-     * Describes the maintenance configuration for the application.
+     * Specifies the maintenance window parameters for a Kinesis Data Analytics application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration)
-     * @param applicationMaintenanceConfiguration Describes the maintenance configuration for the
-     * application. 
+     * @param applicationMaintenanceConfiguration Specifies the maintenance window parameters for a
+     * Kinesis Data Analytics application. 
      */
     public
         fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: ApplicationMaintenanceConfigurationProperty)
 
     /**
-     * Describes the maintenance configuration for the application.
+     * Specifies the maintenance window parameters for a Kinesis Data Analytics application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration)
-     * @param applicationMaintenanceConfiguration Describes the maintenance configuration for the
-     * application. 
+     * @param applicationMaintenanceConfiguration Specifies the maintenance window parameters for a
+     * Kinesis Data Analytics application. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5c0917024c31d712ff0173d51f996e37b3b43030d06df00cd121122e235f8e60")
@@ -609,11 +609,11 @@ public open class CfnApplicationV2(
     }
 
     /**
-     * Describes the maintenance configuration for the application.
+     * Specifies the maintenance window parameters for a Kinesis Data Analytics application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration)
-     * @param applicationMaintenanceConfiguration Describes the maintenance configuration for the
-     * application. 
+     * @param applicationMaintenanceConfiguration Specifies the maintenance window parameters for a
+     * Kinesis Data Analytics application. 
      */
     override
         fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: IResolvable) {
@@ -621,11 +621,11 @@ public open class CfnApplicationV2(
     }
 
     /**
-     * Describes the maintenance configuration for the application.
+     * Specifies the maintenance window parameters for a Kinesis Data Analytics application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration)
-     * @param applicationMaintenanceConfiguration Describes the maintenance configuration for the
-     * application. 
+     * @param applicationMaintenanceConfiguration Specifies the maintenance window parameters for a
+     * Kinesis Data Analytics application. 
      */
     override
         fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: ApplicationMaintenanceConfigurationProperty) {
@@ -633,11 +633,11 @@ public open class CfnApplicationV2(
     }
 
     /**
-     * Describes the maintenance configuration for the application.
+     * Specifies the maintenance window parameters for a Kinesis Data Analytics application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration)
-     * @param applicationMaintenanceConfiguration Describes the maintenance configuration for the
-     * application. 
+     * @param applicationMaintenanceConfiguration Specifies the maintenance window parameters for a
+     * Kinesis Data Analytics application. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5c0917024c31d712ff0173d51f996e37b3b43030d06df00cd121122e235f8e60")
@@ -1622,7 +1622,7 @@ public open class CfnApplicationV2(
   }
 
   /**
-   * Specifies the maintence window parameters for a Kinesis Data Analytics application.
+   * Describes the maintenance configuration for the application.
    *
    * Example:
    *
@@ -1640,7 +1640,7 @@ public open class CfnApplicationV2(
    */
   public interface ApplicationMaintenanceConfigurationProperty {
     /**
-     * Specifies the start time of the maintence window.
+     * The start time for the maintenance window.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationmaintenanceconfiguration.html#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration-applicationmaintenancewindowstarttime)
      */
@@ -1652,8 +1652,7 @@ public open class CfnApplicationV2(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param applicationMaintenanceWindowStartTime Specifies the start time of the maintence
-       * window. 
+       * @param applicationMaintenanceWindowStartTime The start time for the maintenance window. 
        */
       public
           fun applicationMaintenanceWindowStartTime(applicationMaintenanceWindowStartTime: String)
@@ -1666,8 +1665,7 @@ public open class CfnApplicationV2(
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationMaintenanceConfigurationProperty.builder()
 
       /**
-       * @param applicationMaintenanceWindowStartTime Specifies the start time of the maintence
-       * window. 
+       * @param applicationMaintenanceWindowStartTime The start time for the maintenance window. 
        */
       override
           fun applicationMaintenanceWindowStartTime(applicationMaintenanceWindowStartTime: String) {
@@ -1684,7 +1682,7 @@ public open class CfnApplicationV2(
     ) : CdkObject(cdkObject),
         ApplicationMaintenanceConfigurationProperty {
       /**
-       * Specifies the start time of the maintence window.
+       * The start time for the maintenance window.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationmaintenanceconfiguration.html#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration-applicationmaintenancewindowstarttime)
        */
@@ -5968,12 +5966,12 @@ public open class CfnApplicationV2(
       /**
        * @param propertyMap Describes the value of an application execution property key-value pair.
        */
-      public fun propertyMap(propertyMap: IResolvable)
+      public fun propertyMap(propertyMap: Map<String, String>)
 
       /**
        * @param propertyMap Describes the value of an application execution property key-value pair.
        */
-      public fun propertyMap(propertyMap: Map<String, String>)
+      public fun propertyMap(propertyMap: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -5993,15 +5991,15 @@ public open class CfnApplicationV2(
       /**
        * @param propertyMap Describes the value of an application execution property key-value pair.
        */
-      override fun propertyMap(propertyMap: IResolvable) {
-        cdkBuilder.propertyMap(propertyMap.let(IResolvable.Companion::unwrap))
+      override fun propertyMap(propertyMap: Map<String, String>) {
+        cdkBuilder.propertyMap(propertyMap)
       }
 
       /**
        * @param propertyMap Describes the value of an application execution property key-value pair.
        */
-      override fun propertyMap(propertyMap: Map<String, String>) {
-        cdkBuilder.propertyMap(propertyMap)
+      override fun propertyMap(propertyMap: IResolvable) {
+        cdkBuilder.propertyMap(propertyMap.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

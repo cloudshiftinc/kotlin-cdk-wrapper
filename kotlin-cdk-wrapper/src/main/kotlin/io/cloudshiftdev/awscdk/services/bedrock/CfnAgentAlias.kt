@@ -122,6 +122,7 @@ public open class CfnAgentAlias(
    * * FAILED – The agent alias API operation failed.
    * * UPDATING – The agent alias is being updated.
    * * DELETING – The agent alias is being deleted.
+   * * DISSOCIATED - The agent alias has no version associated with it.
    */
   public open fun attrAgentAliasStatus(): String = unwrap(this).getAttrAgentAliasStatus()
 

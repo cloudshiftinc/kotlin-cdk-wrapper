@@ -76,6 +76,7 @@ import kotlin.jvm.JvmName
  * .build())
  * // the properties below are optional
  * .availabilityZone("availabilityZone")
+ * .flowSize("flowSize")
  * .maintenance(MaintenanceProperty.builder()
  * .maintenanceDay("maintenanceDay")
  * .maintenanceStartHour("maintenanceStartHour")
@@ -102,6 +103,16 @@ import kotlin.jvm.JvmName
  * .fmt(123)
  * .videoFormat("videoFormat")
  * .build()))
+ * .ndiConfig(NdiConfigProperty.builder()
+ * .machineName("machineName")
+ * .ndiDiscoveryServers(List.of(NdiDiscoveryServerConfigProperty.builder()
+ * .discoveryServerAddress("discoveryServerAddress")
+ * .vpcInterfaceAdapter("vpcInterfaceAdapter")
+ * // the properties below are optional
+ * .discoveryServerPort(123)
+ * .build()))
+ * .ndiState("ndiState")
+ * .build())
  * .sourceFailoverConfig(FailoverConfigProperty.builder()
  * .failoverMode("failoverMode")
  * .recoveryWindow(123)
@@ -111,7 +122,24 @@ import kotlin.jvm.JvmName
  * .state("state")
  * .build())
  * .sourceMonitoringConfig(SourceMonitoringConfigProperty.builder()
+ * .audioMonitoringSettings(List.of(AudioMonitoringSettingProperty.builder()
+ * .silentAudio(SilentAudioProperty.builder()
+ * .state("state")
+ * .thresholdSeconds(123)
+ * .build())
+ * .build()))
+ * .contentQualityAnalysisState("contentQualityAnalysisState")
  * .thumbnailState("thumbnailState")
+ * .videoMonitoringSettings(List.of(VideoMonitoringSettingProperty.builder()
+ * .blackFrames(BlackFramesProperty.builder()
+ * .state("state")
+ * .thresholdSeconds(123)
+ * .build())
+ * .frozenFrames(FrozenFramesProperty.builder()
+ * .state("state")
+ * .thresholdSeconds(123)
+ * .build())
+ * .build()))
  * .build())
  * .vpcInterfaces(List.of(VpcInterfaceProperty.builder()
  * .name("name")
@@ -138,6 +166,15 @@ public interface CfnFlowProps {
   public fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
   /**
+   * Determines the processing capacity and feature set of the flow.
+   *
+   * Set this optional parameter to LARGE if you want to enable NDI outputs on the flow.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-flowsize)
+   */
+  public fun flowSize(): String? = unwrap(this).getFlowSize()
+
+  /**
    * The maintenance settings you want to use for the flow.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-maintenance)
@@ -145,9 +182,10 @@ public interface CfnFlowProps {
   public fun maintenance(): Any? = unwrap(this).getMaintenance()
 
   /**
-   * The media streams associated with the flow.
+   * The media streams that are associated with the flow.
    *
-   * You can associate any of these media streams with sources and outputs on the flow.
+   * After you associate a media stream with a source, you can also associate it with outputs on the
+   * flow.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-mediastreams)
    */
@@ -159,6 +197,15 @@ public interface CfnFlowProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-name)
    */
   public fun name(): String
+
+  /**
+   * Specifies the configuration settings for NDI outputs.
+   *
+   * Required when the flow includes NDI outputs.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-ndiconfig)
+   */
+  public fun ndiConfig(): Any? = unwrap(this).getNdiConfig()
 
   /**
    * The settings for the source that you want to use for the new flow.
@@ -182,7 +229,7 @@ public interface CfnFlowProps {
   public fun sourceMonitoringConfig(): Any? = unwrap(this).getSourceMonitoringConfig()
 
   /**
-   * The VPC interfaces that you added to this flow.
+   * The VPC Interfaces for this flow.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-vpcinterfaces)
    */
@@ -198,6 +245,12 @@ public interface CfnFlowProps {
      * These options are limited to the Availability Zones within the current AWS Region.
      */
     public fun availabilityZone(availabilityZone: String)
+
+    /**
+     * @param flowSize Determines the processing capacity and feature set of the flow.
+     * Set this optional parameter to LARGE if you want to enable NDI outputs on the flow.
+     */
+    public fun flowSize(flowSize: String)
 
     /**
      * @param maintenance The maintenance settings you want to use for the flow.
@@ -217,20 +270,23 @@ public interface CfnFlowProps {
     public fun maintenance(maintenance: CfnFlow.MaintenanceProperty.Builder.() -> Unit)
 
     /**
-     * @param mediaStreams The media streams associated with the flow.
-     * You can associate any of these media streams with sources and outputs on the flow.
+     * @param mediaStreams The media streams that are associated with the flow.
+     * After you associate a media stream with a source, you can also associate it with outputs on
+     * the flow.
      */
     public fun mediaStreams(mediaStreams: IResolvable)
 
     /**
-     * @param mediaStreams The media streams associated with the flow.
-     * You can associate any of these media streams with sources and outputs on the flow.
+     * @param mediaStreams The media streams that are associated with the flow.
+     * After you associate a media stream with a source, you can also associate it with outputs on
+     * the flow.
      */
     public fun mediaStreams(mediaStreams: List<Any>)
 
     /**
-     * @param mediaStreams The media streams associated with the flow.
-     * You can associate any of these media streams with sources and outputs on the flow.
+     * @param mediaStreams The media streams that are associated with the flow.
+     * After you associate a media stream with a source, you can also associate it with outputs on
+     * the flow.
      */
     public fun mediaStreams(vararg mediaStreams: Any)
 
@@ -238,6 +294,26 @@ public interface CfnFlowProps {
      * @param name The name of the flow. 
      */
     public fun name(name: String)
+
+    /**
+     * @param ndiConfig Specifies the configuration settings for NDI outputs.
+     * Required when the flow includes NDI outputs.
+     */
+    public fun ndiConfig(ndiConfig: IResolvable)
+
+    /**
+     * @param ndiConfig Specifies the configuration settings for NDI outputs.
+     * Required when the flow includes NDI outputs.
+     */
+    public fun ndiConfig(ndiConfig: CfnFlow.NdiConfigProperty)
+
+    /**
+     * @param ndiConfig Specifies the configuration settings for NDI outputs.
+     * Required when the flow includes NDI outputs.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("fcf411973a7749926ade7a880b376aebad089642e6ec2f7c4e0a1c5f8b0a45cf")
+    public fun ndiConfig(ndiConfig: CfnFlow.NdiConfigProperty.Builder.() -> Unit)
 
     /**
      * @param source The settings for the source that you want to use for the new flow. 
@@ -294,17 +370,17 @@ public interface CfnFlowProps {
         fun sourceMonitoringConfig(sourceMonitoringConfig: CfnFlow.SourceMonitoringConfigProperty.Builder.() -> Unit)
 
     /**
-     * @param vpcInterfaces The VPC interfaces that you added to this flow.
+     * @param vpcInterfaces The VPC Interfaces for this flow.
      */
     public fun vpcInterfaces(vpcInterfaces: IResolvable)
 
     /**
-     * @param vpcInterfaces The VPC interfaces that you added to this flow.
+     * @param vpcInterfaces The VPC Interfaces for this flow.
      */
     public fun vpcInterfaces(vpcInterfaces: List<Any>)
 
     /**
-     * @param vpcInterfaces The VPC interfaces that you added to this flow.
+     * @param vpcInterfaces The VPC Interfaces for this flow.
      */
     public fun vpcInterfaces(vararg vpcInterfaces: Any)
   }
@@ -319,6 +395,14 @@ public interface CfnFlowProps {
      */
     override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
+    }
+
+    /**
+     * @param flowSize Determines the processing capacity and feature set of the flow.
+     * Set this optional parameter to LARGE if you want to enable NDI outputs on the flow.
+     */
+    override fun flowSize(flowSize: String) {
+      cdkBuilder.flowSize(flowSize)
     }
 
     /**
@@ -344,24 +428,27 @@ public interface CfnFlowProps {
         maintenance(CfnFlow.MaintenanceProperty(maintenance))
 
     /**
-     * @param mediaStreams The media streams associated with the flow.
-     * You can associate any of these media streams with sources and outputs on the flow.
+     * @param mediaStreams The media streams that are associated with the flow.
+     * After you associate a media stream with a source, you can also associate it with outputs on
+     * the flow.
      */
     override fun mediaStreams(mediaStreams: IResolvable) {
       cdkBuilder.mediaStreams(mediaStreams.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param mediaStreams The media streams associated with the flow.
-     * You can associate any of these media streams with sources and outputs on the flow.
+     * @param mediaStreams The media streams that are associated with the flow.
+     * After you associate a media stream with a source, you can also associate it with outputs on
+     * the flow.
      */
     override fun mediaStreams(mediaStreams: List<Any>) {
       cdkBuilder.mediaStreams(mediaStreams.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param mediaStreams The media streams associated with the flow.
-     * You can associate any of these media streams with sources and outputs on the flow.
+     * @param mediaStreams The media streams that are associated with the flow.
+     * After you associate a media stream with a source, you can also associate it with outputs on
+     * the flow.
      */
     override fun mediaStreams(vararg mediaStreams: Any): Unit = mediaStreams(mediaStreams.toList())
 
@@ -371,6 +458,31 @@ public interface CfnFlowProps {
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
+
+    /**
+     * @param ndiConfig Specifies the configuration settings for NDI outputs.
+     * Required when the flow includes NDI outputs.
+     */
+    override fun ndiConfig(ndiConfig: IResolvable) {
+      cdkBuilder.ndiConfig(ndiConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param ndiConfig Specifies the configuration settings for NDI outputs.
+     * Required when the flow includes NDI outputs.
+     */
+    override fun ndiConfig(ndiConfig: CfnFlow.NdiConfigProperty) {
+      cdkBuilder.ndiConfig(ndiConfig.let(CfnFlow.NdiConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param ndiConfig Specifies the configuration settings for NDI outputs.
+     * Required when the flow includes NDI outputs.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("fcf411973a7749926ade7a880b376aebad089642e6ec2f7c4e0a1c5f8b0a45cf")
+    override fun ndiConfig(ndiConfig: CfnFlow.NdiConfigProperty.Builder.() -> Unit): Unit =
+        ndiConfig(CfnFlow.NdiConfigProperty(ndiConfig))
 
     /**
      * @param source The settings for the source that you want to use for the new flow. 
@@ -443,21 +555,21 @@ public interface CfnFlowProps {
         sourceMonitoringConfig(CfnFlow.SourceMonitoringConfigProperty(sourceMonitoringConfig))
 
     /**
-     * @param vpcInterfaces The VPC interfaces that you added to this flow.
+     * @param vpcInterfaces The VPC Interfaces for this flow.
      */
     override fun vpcInterfaces(vpcInterfaces: IResolvable) {
       cdkBuilder.vpcInterfaces(vpcInterfaces.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param vpcInterfaces The VPC interfaces that you added to this flow.
+     * @param vpcInterfaces The VPC Interfaces for this flow.
      */
     override fun vpcInterfaces(vpcInterfaces: List<Any>) {
       cdkBuilder.vpcInterfaces(vpcInterfaces.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param vpcInterfaces The VPC interfaces that you added to this flow.
+     * @param vpcInterfaces The VPC Interfaces for this flow.
      */
     override fun vpcInterfaces(vararg vpcInterfaces: Any): Unit =
         vpcInterfaces(vpcInterfaces.toList())
@@ -480,6 +592,15 @@ public interface CfnFlowProps {
     override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
     /**
+     * Determines the processing capacity and feature set of the flow.
+     *
+     * Set this optional parameter to LARGE if you want to enable NDI outputs on the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-flowsize)
+     */
+    override fun flowSize(): String? = unwrap(this).getFlowSize()
+
+    /**
      * The maintenance settings you want to use for the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-maintenance)
@@ -487,9 +608,10 @@ public interface CfnFlowProps {
     override fun maintenance(): Any? = unwrap(this).getMaintenance()
 
     /**
-     * The media streams associated with the flow.
+     * The media streams that are associated with the flow.
      *
-     * You can associate any of these media streams with sources and outputs on the flow.
+     * After you associate a media stream with a source, you can also associate it with outputs on
+     * the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-mediastreams)
      */
@@ -501,6 +623,15 @@ public interface CfnFlowProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-name)
      */
     override fun name(): String = unwrap(this).getName()
+
+    /**
+     * Specifies the configuration settings for NDI outputs.
+     *
+     * Required when the flow includes NDI outputs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-ndiconfig)
+     */
+    override fun ndiConfig(): Any? = unwrap(this).getNdiConfig()
 
     /**
      * The settings for the source that you want to use for the new flow.
@@ -524,7 +655,7 @@ public interface CfnFlowProps {
     override fun sourceMonitoringConfig(): Any? = unwrap(this).getSourceMonitoringConfig()
 
     /**
-     * The VPC interfaces that you added to this flow.
+     * The VPC Interfaces for this flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-vpcinterfaces)
      */

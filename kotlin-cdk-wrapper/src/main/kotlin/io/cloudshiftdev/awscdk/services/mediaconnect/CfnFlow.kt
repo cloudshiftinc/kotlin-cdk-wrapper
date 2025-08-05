@@ -19,7 +19,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The AWS::MediaConnect::Flow resource defines a connection between one or more video sources and
+ * The `AWS::MediaConnect::Flow` resource defines a connection between one or more video sources and
  * one or more outputs.
  *
  * For each flow, you specify the transport protocol to use, encryption information, and details for
@@ -89,6 +89,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * // the properties below are optional
  * .availabilityZone("availabilityZone")
+ * .flowSize("flowSize")
  * .maintenance(MaintenanceProperty.builder()
  * .maintenanceDay("maintenanceDay")
  * .maintenanceStartHour("maintenanceStartHour")
@@ -115,6 +116,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .fmt(123)
  * .videoFormat("videoFormat")
  * .build()))
+ * .ndiConfig(NdiConfigProperty.builder()
+ * .machineName("machineName")
+ * .ndiDiscoveryServers(List.of(NdiDiscoveryServerConfigProperty.builder()
+ * .discoveryServerAddress("discoveryServerAddress")
+ * .vpcInterfaceAdapter("vpcInterfaceAdapter")
+ * // the properties below are optional
+ * .discoveryServerPort(123)
+ * .build()))
+ * .ndiState("ndiState")
+ * .build())
  * .sourceFailoverConfig(FailoverConfigProperty.builder()
  * .failoverMode("failoverMode")
  * .recoveryWindow(123)
@@ -124,7 +135,24 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .state("state")
  * .build())
  * .sourceMonitoringConfig(SourceMonitoringConfigProperty.builder()
+ * .audioMonitoringSettings(List.of(AudioMonitoringSettingProperty.builder()
+ * .silentAudio(SilentAudioProperty.builder()
+ * .state("state")
+ * .thresholdSeconds(123)
+ * .build())
+ * .build()))
+ * .contentQualityAnalysisState("contentQualityAnalysisState")
  * .thumbnailState("thumbnailState")
+ * .videoMonitoringSettings(List.of(VideoMonitoringSettingProperty.builder()
+ * .blackFrames(BlackFramesProperty.builder()
+ * .state("state")
+ * .thresholdSeconds(123)
+ * .build())
+ * .frozenFrames(FrozenFramesProperty.builder()
+ * .state("state")
+ * .thresholdSeconds(123)
+ * .build())
+ * .build()))
  * .build())
  * .vpcInterfaces(List.of(VpcInterfaceProperty.builder()
  * .name("name")
@@ -161,7 +189,7 @@ public open class CfnFlow(
   )
 
   /**
-   * The outgoing IP address that MediaConnect uses to send video from the flow.
+   * The IP address from which video will be sent to output destinations.
    */
   public open fun attrEgressIp(): String = unwrap(this).getAttrEgressIp()
 
@@ -176,6 +204,14 @@ public open class CfnFlow(
    * These options are limited to the Availability Zones within the current AWS Region.
    */
   public open fun attrFlowAvailabilityZone(): String = unwrap(this).getAttrFlowAvailabilityZone()
+
+  /**
+   * This read-only value represents the automatically-generated NDI machine name that MediaConnect
+   * generated for this flow.
+   *
+   * These NDI machine names are only generated when you don't specify your own custom name.
+   */
+  public open fun attrFlowNdiMachineName(): String = unwrap(this).getAttrFlowNdiMachineName()
 
   /**
    * The IP address that the flow listens on for incoming content.
@@ -205,6 +241,18 @@ public open class CfnFlow(
    */
   public open fun availabilityZone(`value`: String) {
     unwrap(this).setAvailabilityZone(`value`)
+  }
+
+  /**
+   * Determines the processing capacity and feature set of the flow.
+   */
+  public open fun flowSize(): String? = unwrap(this).getFlowSize()
+
+  /**
+   * Determines the processing capacity and feature set of the flow.
+   */
+  public open fun flowSize(`value`: String) {
+    unwrap(this).setFlowSize(`value`)
   }
 
   /**
@@ -244,26 +292,26 @@ public open class CfnFlow(
       maintenance(MaintenanceProperty(`value`))
 
   /**
-   * The media streams associated with the flow.
+   * The media streams that are associated with the flow.
    */
   public open fun mediaStreams(): Any? = unwrap(this).getMediaStreams()
 
   /**
-   * The media streams associated with the flow.
+   * The media streams that are associated with the flow.
    */
   public open fun mediaStreams(`value`: IResolvable) {
     unwrap(this).setMediaStreams(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The media streams associated with the flow.
+   * The media streams that are associated with the flow.
    */
   public open fun mediaStreams(`value`: List<Any>) {
     unwrap(this).setMediaStreams(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * The media streams associated with the flow.
+   * The media streams that are associated with the flow.
    */
   public open fun mediaStreams(vararg `value`: Any): Unit = mediaStreams(`value`.toList())
 
@@ -278,6 +326,33 @@ public open class CfnFlow(
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
   }
+
+  /**
+   * Specifies the configuration settings for NDI outputs.
+   */
+  public open fun ndiConfig(): Any? = unwrap(this).getNdiConfig()
+
+  /**
+   * Specifies the configuration settings for NDI outputs.
+   */
+  public open fun ndiConfig(`value`: IResolvable) {
+    unwrap(this).setNdiConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Specifies the configuration settings for NDI outputs.
+   */
+  public open fun ndiConfig(`value`: NdiConfigProperty) {
+    unwrap(this).setNdiConfig(`value`.let(NdiConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * Specifies the configuration settings for NDI outputs.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("fdb49d6d4bdbd30d29fb73416da67f7128828a661785daa0b12ac39734050d8b")
+  public open fun ndiConfig(`value`: NdiConfigProperty.Builder.() -> Unit): Unit =
+      ndiConfig(NdiConfigProperty(`value`))
 
   /**
    * The settings for the source that you want to use for the new flow.
@@ -362,26 +437,26 @@ public open class CfnFlow(
       sourceMonitoringConfig(SourceMonitoringConfigProperty(`value`))
 
   /**
-   * The VPC interfaces that you added to this flow.
+   * The VPC Interfaces for this flow.
    */
   public open fun vpcInterfaces(): Any? = unwrap(this).getVpcInterfaces()
 
   /**
-   * The VPC interfaces that you added to this flow.
+   * The VPC Interfaces for this flow.
    */
   public open fun vpcInterfaces(`value`: IResolvable) {
     unwrap(this).setVpcInterfaces(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The VPC interfaces that you added to this flow.
+   * The VPC Interfaces for this flow.
    */
   public open fun vpcInterfaces(`value`: List<Any>) {
     unwrap(this).setVpcInterfaces(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * The VPC interfaces that you added to this flow.
+   * The VPC Interfaces for this flow.
    */
   public open fun vpcInterfaces(vararg `value`: Any): Unit = vpcInterfaces(`value`.toList())
 
@@ -399,6 +474,16 @@ public open class CfnFlow(
      * @param availabilityZone The Availability Zone that you want to create the flow in. 
      */
     public fun availabilityZone(availabilityZone: String)
+
+    /**
+     * Determines the processing capacity and feature set of the flow.
+     *
+     * Set this optional parameter to LARGE if you want to enable NDI outputs on the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-flowsize)
+     * @param flowSize Determines the processing capacity and feature set of the flow. 
+     */
+    public fun flowSize(flowSize: String)
 
     /**
      * The maintenance settings you want to use for the flow.
@@ -427,32 +512,35 @@ public open class CfnFlow(
     public fun maintenance(maintenance: MaintenanceProperty.Builder.() -> Unit)
 
     /**
-     * The media streams associated with the flow.
+     * The media streams that are associated with the flow.
      *
-     * You can associate any of these media streams with sources and outputs on the flow.
+     * After you associate a media stream with a source, you can also associate it with outputs on
+     * the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-mediastreams)
-     * @param mediaStreams The media streams associated with the flow. 
+     * @param mediaStreams The media streams that are associated with the flow. 
      */
     public fun mediaStreams(mediaStreams: IResolvable)
 
     /**
-     * The media streams associated with the flow.
+     * The media streams that are associated with the flow.
      *
-     * You can associate any of these media streams with sources and outputs on the flow.
+     * After you associate a media stream with a source, you can also associate it with outputs on
+     * the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-mediastreams)
-     * @param mediaStreams The media streams associated with the flow. 
+     * @param mediaStreams The media streams that are associated with the flow. 
      */
     public fun mediaStreams(mediaStreams: List<Any>)
 
     /**
-     * The media streams associated with the flow.
+     * The media streams that are associated with the flow.
      *
-     * You can associate any of these media streams with sources and outputs on the flow.
+     * After you associate a media stream with a source, you can also associate it with outputs on
+     * the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-mediastreams)
-     * @param mediaStreams The media streams associated with the flow. 
+     * @param mediaStreams The media streams that are associated with the flow. 
      */
     public fun mediaStreams(vararg mediaStreams: Any)
 
@@ -463,6 +551,38 @@ public open class CfnFlow(
      * @param name The name of the flow. 
      */
     public fun name(name: String)
+
+    /**
+     * Specifies the configuration settings for NDI outputs.
+     *
+     * Required when the flow includes NDI outputs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-ndiconfig)
+     * @param ndiConfig Specifies the configuration settings for NDI outputs. 
+     */
+    public fun ndiConfig(ndiConfig: IResolvable)
+
+    /**
+     * Specifies the configuration settings for NDI outputs.
+     *
+     * Required when the flow includes NDI outputs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-ndiconfig)
+     * @param ndiConfig Specifies the configuration settings for NDI outputs. 
+     */
+    public fun ndiConfig(ndiConfig: NdiConfigProperty)
+
+    /**
+     * Specifies the configuration settings for NDI outputs.
+     *
+     * Required when the flow includes NDI outputs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-ndiconfig)
+     * @param ndiConfig Specifies the configuration settings for NDI outputs. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ad781c65a775dad850f6559f439c9be66a1668f9b7df458e802546da0a5f4483")
+    public fun ndiConfig(ndiConfig: NdiConfigProperty.Builder.() -> Unit)
 
     /**
      * The settings for the source that you want to use for the new flow.
@@ -544,26 +664,26 @@ public open class CfnFlow(
         fun sourceMonitoringConfig(sourceMonitoringConfig: SourceMonitoringConfigProperty.Builder.() -> Unit)
 
     /**
-     * The VPC interfaces that you added to this flow.
+     * The VPC Interfaces for this flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-vpcinterfaces)
-     * @param vpcInterfaces The VPC interfaces that you added to this flow. 
+     * @param vpcInterfaces The VPC Interfaces for this flow. 
      */
     public fun vpcInterfaces(vpcInterfaces: IResolvable)
 
     /**
-     * The VPC interfaces that you added to this flow.
+     * The VPC Interfaces for this flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-vpcinterfaces)
-     * @param vpcInterfaces The VPC interfaces that you added to this flow. 
+     * @param vpcInterfaces The VPC Interfaces for this flow. 
      */
     public fun vpcInterfaces(vpcInterfaces: List<Any>)
 
     /**
-     * The VPC interfaces that you added to this flow.
+     * The VPC Interfaces for this flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-vpcinterfaces)
-     * @param vpcInterfaces The VPC interfaces that you added to this flow. 
+     * @param vpcInterfaces The VPC Interfaces for this flow. 
      */
     public fun vpcInterfaces(vararg vpcInterfaces: Any)
   }
@@ -585,6 +705,18 @@ public open class CfnFlow(
      */
     override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
+    }
+
+    /**
+     * Determines the processing capacity and feature set of the flow.
+     *
+     * Set this optional parameter to LARGE if you want to enable NDI outputs on the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-flowsize)
+     * @param flowSize Determines the processing capacity and feature set of the flow. 
+     */
+    override fun flowSize(flowSize: String) {
+      cdkBuilder.flowSize(flowSize)
     }
 
     /**
@@ -619,36 +751,39 @@ public open class CfnFlow(
         maintenance(MaintenanceProperty(maintenance))
 
     /**
-     * The media streams associated with the flow.
+     * The media streams that are associated with the flow.
      *
-     * You can associate any of these media streams with sources and outputs on the flow.
+     * After you associate a media stream with a source, you can also associate it with outputs on
+     * the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-mediastreams)
-     * @param mediaStreams The media streams associated with the flow. 
+     * @param mediaStreams The media streams that are associated with the flow. 
      */
     override fun mediaStreams(mediaStreams: IResolvable) {
       cdkBuilder.mediaStreams(mediaStreams.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The media streams associated with the flow.
+     * The media streams that are associated with the flow.
      *
-     * You can associate any of these media streams with sources and outputs on the flow.
+     * After you associate a media stream with a source, you can also associate it with outputs on
+     * the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-mediastreams)
-     * @param mediaStreams The media streams associated with the flow. 
+     * @param mediaStreams The media streams that are associated with the flow. 
      */
     override fun mediaStreams(mediaStreams: List<Any>) {
       cdkBuilder.mediaStreams(mediaStreams.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * The media streams associated with the flow.
+     * The media streams that are associated with the flow.
      *
-     * You can associate any of these media streams with sources and outputs on the flow.
+     * After you associate a media stream with a source, you can also associate it with outputs on
+     * the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-mediastreams)
-     * @param mediaStreams The media streams associated with the flow. 
+     * @param mediaStreams The media streams that are associated with the flow. 
      */
     override fun mediaStreams(vararg mediaStreams: Any): Unit = mediaStreams(mediaStreams.toList())
 
@@ -661,6 +796,43 @@ public open class CfnFlow(
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
+
+    /**
+     * Specifies the configuration settings for NDI outputs.
+     *
+     * Required when the flow includes NDI outputs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-ndiconfig)
+     * @param ndiConfig Specifies the configuration settings for NDI outputs. 
+     */
+    override fun ndiConfig(ndiConfig: IResolvable) {
+      cdkBuilder.ndiConfig(ndiConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Specifies the configuration settings for NDI outputs.
+     *
+     * Required when the flow includes NDI outputs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-ndiconfig)
+     * @param ndiConfig Specifies the configuration settings for NDI outputs. 
+     */
+    override fun ndiConfig(ndiConfig: NdiConfigProperty) {
+      cdkBuilder.ndiConfig(ndiConfig.let(NdiConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * Specifies the configuration settings for NDI outputs.
+     *
+     * Required when the flow includes NDI outputs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-ndiconfig)
+     * @param ndiConfig Specifies the configuration settings for NDI outputs. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ad781c65a775dad850f6559f439c9be66a1668f9b7df458e802546da0a5f4483")
+    override fun ndiConfig(ndiConfig: NdiConfigProperty.Builder.() -> Unit): Unit =
+        ndiConfig(NdiConfigProperty(ndiConfig))
 
     /**
      * The settings for the source that you want to use for the new flow.
@@ -758,30 +930,30 @@ public open class CfnFlow(
         Unit = sourceMonitoringConfig(SourceMonitoringConfigProperty(sourceMonitoringConfig))
 
     /**
-     * The VPC interfaces that you added to this flow.
+     * The VPC Interfaces for this flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-vpcinterfaces)
-     * @param vpcInterfaces The VPC interfaces that you added to this flow. 
+     * @param vpcInterfaces The VPC Interfaces for this flow. 
      */
     override fun vpcInterfaces(vpcInterfaces: IResolvable) {
       cdkBuilder.vpcInterfaces(vpcInterfaces.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The VPC interfaces that you added to this flow.
+     * The VPC Interfaces for this flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-vpcinterfaces)
-     * @param vpcInterfaces The VPC interfaces that you added to this flow. 
+     * @param vpcInterfaces The VPC Interfaces for this flow. 
      */
     override fun vpcInterfaces(vpcInterfaces: List<Any>) {
       cdkBuilder.vpcInterfaces(vpcInterfaces.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * The VPC interfaces that you added to this flow.
+     * The VPC Interfaces for this flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-vpcinterfaces)
-     * @param vpcInterfaces The VPC interfaces that you added to this flow. 
+     * @param vpcInterfaces The VPC Interfaces for this flow. 
      */
     override fun vpcInterfaces(vararg vpcInterfaces: Any): Unit =
         vpcInterfaces(vpcInterfaces.toList())
@@ -807,6 +979,231 @@ public open class CfnFlow(
 
     internal fun unwrap(wrapped: CfnFlow): software.amazon.awscdk.services.mediaconnect.CfnFlow =
         wrapped.cdkObject as software.amazon.awscdk.services.mediaconnect.CfnFlow
+  }
+
+  /**
+   * Specifies the configuration for audio stream metrics monitoring.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * AudioMonitoringSettingProperty audioMonitoringSettingProperty =
+   * AudioMonitoringSettingProperty.builder()
+   * .silentAudio(SilentAudioProperty.builder()
+   * .state("state")
+   * .thresholdSeconds(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-audiomonitoringsetting.html)
+   */
+  public interface AudioMonitoringSettingProperty {
+    /**
+     * Detects periods of silence.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-audiomonitoringsetting.html#cfn-mediaconnect-flow-audiomonitoringsetting-silentaudio)
+     */
+    public fun silentAudio(): Any? = unwrap(this).getSilentAudio()
+
+    /**
+     * A builder for [AudioMonitoringSettingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param silentAudio Detects periods of silence.
+       */
+      public fun silentAudio(silentAudio: IResolvable)
+
+      /**
+       * @param silentAudio Detects periods of silence.
+       */
+      public fun silentAudio(silentAudio: SilentAudioProperty)
+
+      /**
+       * @param silentAudio Detects periods of silence.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("57f1cbf4581f7acf128cd53fde9d72454cb8fe1f538075df0a77f965b6fed83a")
+      public fun silentAudio(silentAudio: SilentAudioProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.AudioMonitoringSettingProperty.Builder
+          =
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.AudioMonitoringSettingProperty.builder()
+
+      /**
+       * @param silentAudio Detects periods of silence.
+       */
+      override fun silentAudio(silentAudio: IResolvable) {
+        cdkBuilder.silentAudio(silentAudio.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param silentAudio Detects periods of silence.
+       */
+      override fun silentAudio(silentAudio: SilentAudioProperty) {
+        cdkBuilder.silentAudio(silentAudio.let(SilentAudioProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param silentAudio Detects periods of silence.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("57f1cbf4581f7acf128cd53fde9d72454cb8fe1f538075df0a77f965b6fed83a")
+      override fun silentAudio(silentAudio: SilentAudioProperty.Builder.() -> Unit): Unit =
+          silentAudio(SilentAudioProperty(silentAudio))
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.AudioMonitoringSettingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.AudioMonitoringSettingProperty,
+    ) : CdkObject(cdkObject),
+        AudioMonitoringSettingProperty {
+      /**
+       * Detects periods of silence.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-audiomonitoringsetting.html#cfn-mediaconnect-flow-audiomonitoringsetting-silentaudio)
+       */
+      override fun silentAudio(): Any? = unwrap(this).getSilentAudio()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AudioMonitoringSettingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.AudioMonitoringSettingProperty):
+          AudioMonitoringSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioMonitoringSettingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AudioMonitoringSettingProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.AudioMonitoringSettingProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.AudioMonitoringSettingProperty
+    }
+  }
+
+  /**
+   * Configures settings for the `BlackFrames` metric.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * BlackFramesProperty blackFramesProperty = BlackFramesProperty.builder()
+   * .state("state")
+   * .thresholdSeconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-blackframes.html)
+   */
+  public interface BlackFramesProperty {
+    /**
+     * Indicates whether the `BlackFrames` metric is enabled or disabled..
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-blackframes.html#cfn-mediaconnect-flow-blackframes-state)
+     */
+    public fun state(): String? = unwrap(this).getState()
+
+    /**
+     * Specifies the number of consecutive seconds of black frames that triggers an event or alert.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-blackframes.html#cfn-mediaconnect-flow-blackframes-thresholdseconds)
+     */
+    public fun thresholdSeconds(): Number? = unwrap(this).getThresholdSeconds()
+
+    /**
+     * A builder for [BlackFramesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param state Indicates whether the `BlackFrames` metric is enabled or disabled..
+       */
+      public fun state(state: String)
+
+      /**
+       * @param thresholdSeconds Specifies the number of consecutive seconds of black frames that
+       * triggers an event or alert.
+       */
+      public fun thresholdSeconds(thresholdSeconds: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.BlackFramesProperty.Builder =
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.BlackFramesProperty.builder()
+
+      /**
+       * @param state Indicates whether the `BlackFrames` metric is enabled or disabled..
+       */
+      override fun state(state: String) {
+        cdkBuilder.state(state)
+      }
+
+      /**
+       * @param thresholdSeconds Specifies the number of consecutive seconds of black frames that
+       * triggers an event or alert.
+       */
+      override fun thresholdSeconds(thresholdSeconds: Number) {
+        cdkBuilder.thresholdSeconds(thresholdSeconds)
+      }
+
+      public fun build(): software.amazon.awscdk.services.mediaconnect.CfnFlow.BlackFramesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.BlackFramesProperty,
+    ) : CdkObject(cdkObject),
+        BlackFramesProperty {
+      /**
+       * Indicates whether the `BlackFrames` metric is enabled or disabled..
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-blackframes.html#cfn-mediaconnect-flow-blackframes-state)
+       */
+      override fun state(): String? = unwrap(this).getState()
+
+      /**
+       * Specifies the number of consecutive seconds of black frames that triggers an event or
+       * alert.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-blackframes.html#cfn-mediaconnect-flow-blackframes-thresholdseconds)
+       */
+      override fun thresholdSeconds(): Number? = unwrap(this).getThresholdSeconds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BlackFramesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.BlackFramesProperty):
+          BlackFramesProperty = CdkObjectWrappers.wrap(cdkObject) as? BlackFramesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BlackFramesProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.BlackFramesProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.BlackFramesProperty
+    }
   }
 
   /**
@@ -899,8 +1296,8 @@ public open class CfnFlow(
     public fun resourceId(): String? = unwrap(this).getResourceId()
 
     /**
-     * The Amazon Resource Name (ARN) of the role that you created during setup (when you set up
-     * MediaConnect as a trusted entity).
+     * The ARN of the role that you created during setup (when you set up MediaConnect as a trusted
+     * entity).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-encryption.html#cfn-mediaconnect-flow-encryption-rolearn)
      */
@@ -908,6 +1305,8 @@ public open class CfnFlow(
 
     /**
      * The ARN of the secret that you created in AWS Secrets Manager to store the encryption key.
+     *
+     * This parameter is required for static key encryption and is not valid for SPEKE encryption.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-encryption.html#cfn-mediaconnect-flow-encryption-secretarn)
      */
@@ -970,14 +1369,15 @@ public open class CfnFlow(
       public fun resourceId(resourceId: String)
 
       /**
-       * @param roleArn The Amazon Resource Name (ARN) of the role that you created during setup
-       * (when you set up MediaConnect as a trusted entity). 
+       * @param roleArn The ARN of the role that you created during setup (when you set up
+       * MediaConnect as a trusted entity). 
        */
       public fun roleArn(roleArn: String)
 
       /**
        * @param secretArn The ARN of the secret that you created in AWS Secrets Manager to store the
        * encryption key.
+       * This parameter is required for static key encryption and is not valid for SPEKE encryption.
        */
       public fun secretArn(secretArn: String)
 
@@ -1048,8 +1448,8 @@ public open class CfnFlow(
       }
 
       /**
-       * @param roleArn The Amazon Resource Name (ARN) of the role that you created during setup
-       * (when you set up MediaConnect as a trusted entity). 
+       * @param roleArn The ARN of the role that you created during setup (when you set up
+       * MediaConnect as a trusted entity). 
        */
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
@@ -1058,6 +1458,7 @@ public open class CfnFlow(
       /**
        * @param secretArn The ARN of the secret that you created in AWS Secrets Manager to store the
        * encryption key.
+       * This parameter is required for static key encryption and is not valid for SPEKE encryption.
        */
       override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
@@ -1143,8 +1544,8 @@ public open class CfnFlow(
       override fun resourceId(): String? = unwrap(this).getResourceId()
 
       /**
-       * The Amazon Resource Name (ARN) of the role that you created during setup (when you set up
-       * MediaConnect as a trusted entity).
+       * The ARN of the role that you created during setup (when you set up MediaConnect as a
+       * trusted entity).
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-encryption.html#cfn-mediaconnect-flow-encryption-rolearn)
        */
@@ -1152,6 +1553,8 @@ public open class CfnFlow(
 
       /**
        * The ARN of the secret that you created in AWS Secrets Manager to store the encryption key.
+       *
+       * This parameter is required for static key encryption and is not valid for SPEKE encryption.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-encryption.html#cfn-mediaconnect-flow-encryption-secretarn)
        */
@@ -1219,12 +1622,7 @@ public open class CfnFlow(
     public fun failoverMode(): String? = unwrap(this).getFailoverMode()
 
     /**
-     * The size of the buffer (delay) that the service maintains.
-     *
-     * A larger buffer means a longer delay in transmitting the stream, but more room for error
-     * correction. A smaller buffer means a shorter delay, but less room for error correction. You can
-     * choose a value from 100-500 ms. If you keep this field blank, the service uses the default value
-     * of 200 ms. This setting only applies when Failover Mode is set to MERGE.
+     * Search window time to look for dash-7 packets.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-recoverywindow)
      */
@@ -1233,8 +1631,7 @@ public open class CfnFlow(
     /**
      * The priority you want to assign to a source.
      *
-     * You can have a primary stream and a backup stream or two equally prioritized streams. This
-     * setting only applies when Failover Mode is set to FAILOVER.
+     * You can have a primary stream and a backup stream or two equally prioritized streams.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-sourcepriority)
      */
@@ -1264,32 +1661,25 @@ public open class CfnFlow(
       public fun failoverMode(failoverMode: String)
 
       /**
-       * @param recoveryWindow The size of the buffer (delay) that the service maintains.
-       * A larger buffer means a longer delay in transmitting the stream, but more room for error
-       * correction. A smaller buffer means a shorter delay, but less room for error correction. You
-       * can choose a value from 100-500 ms. If you keep this field blank, the service uses the default
-       * value of 200 ms. This setting only applies when Failover Mode is set to MERGE.
+       * @param recoveryWindow Search window time to look for dash-7 packets.
        */
       public fun recoveryWindow(recoveryWindow: Number)
 
       /**
        * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
+       * You can have a primary stream and a backup stream or two equally prioritized streams.
        */
       public fun sourcePriority(sourcePriority: IResolvable)
 
       /**
        * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
+       * You can have a primary stream and a backup stream or two equally prioritized streams.
        */
       public fun sourcePriority(sourcePriority: SourcePriorityProperty)
 
       /**
        * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
+       * You can have a primary stream and a backup stream or two equally prioritized streams.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("433bb811abbc6de8c47e56b6bda3581404f5d13ff508958578003f78c0329544")
@@ -1319,11 +1709,7 @@ public open class CfnFlow(
       }
 
       /**
-       * @param recoveryWindow The size of the buffer (delay) that the service maintains.
-       * A larger buffer means a longer delay in transmitting the stream, but more room for error
-       * correction. A smaller buffer means a shorter delay, but less room for error correction. You
-       * can choose a value from 100-500 ms. If you keep this field blank, the service uses the default
-       * value of 200 ms. This setting only applies when Failover Mode is set to MERGE.
+       * @param recoveryWindow Search window time to look for dash-7 packets.
        */
       override fun recoveryWindow(recoveryWindow: Number) {
         cdkBuilder.recoveryWindow(recoveryWindow)
@@ -1331,8 +1717,7 @@ public open class CfnFlow(
 
       /**
        * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
+       * You can have a primary stream and a backup stream or two equally prioritized streams.
        */
       override fun sourcePriority(sourcePriority: IResolvable) {
         cdkBuilder.sourcePriority(sourcePriority.let(IResolvable.Companion::unwrap))
@@ -1340,8 +1725,7 @@ public open class CfnFlow(
 
       /**
        * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
+       * You can have a primary stream and a backup stream or two equally prioritized streams.
        */
       override fun sourcePriority(sourcePriority: SourcePriorityProperty) {
         cdkBuilder.sourcePriority(sourcePriority.let(SourcePriorityProperty.Companion::unwrap))
@@ -1349,8 +1733,7 @@ public open class CfnFlow(
 
       /**
        * @param sourcePriority The priority you want to assign to a source.
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
+       * You can have a primary stream and a backup stream or two equally prioritized streams.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("433bb811abbc6de8c47e56b6bda3581404f5d13ff508958578003f78c0329544")
@@ -1387,12 +1770,7 @@ public open class CfnFlow(
       override fun failoverMode(): String? = unwrap(this).getFailoverMode()
 
       /**
-       * The size of the buffer (delay) that the service maintains.
-       *
-       * A larger buffer means a longer delay in transmitting the stream, but more room for error
-       * correction. A smaller buffer means a shorter delay, but less room for error correction. You
-       * can choose a value from 100-500 ms. If you keep this field blank, the service uses the default
-       * value of 200 ms. This setting only applies when Failover Mode is set to MERGE.
+       * Search window time to look for dash-7 packets.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-recoverywindow)
        */
@@ -1401,8 +1779,7 @@ public open class CfnFlow(
       /**
        * The priority you want to assign to a source.
        *
-       * You can have a primary stream and a backup stream or two equally prioritized streams. This
-       * setting only applies when Failover Mode is set to FAILOVER.
+       * You can have a primary stream and a backup stream or two equally prioritized streams.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-failoverconfig.html#cfn-mediaconnect-flow-failoverconfig-sourcepriority)
        */
@@ -1685,6 +2062,118 @@ public open class CfnFlow(
   }
 
   /**
+   * Configures settings for the `FrozenFrames` metric.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * FrozenFramesProperty frozenFramesProperty = FrozenFramesProperty.builder()
+   * .state("state")
+   * .thresholdSeconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-frozenframes.html)
+   */
+  public interface FrozenFramesProperty {
+    /**
+     * Indicates whether the `FrozenFrames` metric is enabled or disabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-frozenframes.html#cfn-mediaconnect-flow-frozenframes-state)
+     */
+    public fun state(): String? = unwrap(this).getState()
+
+    /**
+     * Specifies the number of consecutive seconds of a static image that triggers an event or
+     * alert.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-frozenframes.html#cfn-mediaconnect-flow-frozenframes-thresholdseconds)
+     */
+    public fun thresholdSeconds(): Number? = unwrap(this).getThresholdSeconds()
+
+    /**
+     * A builder for [FrozenFramesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param state Indicates whether the `FrozenFrames` metric is enabled or disabled.
+       */
+      public fun state(state: String)
+
+      /**
+       * @param thresholdSeconds Specifies the number of consecutive seconds of a static image that
+       * triggers an event or alert.
+       */
+      public fun thresholdSeconds(thresholdSeconds: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.FrozenFramesProperty.Builder =
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.FrozenFramesProperty.builder()
+
+      /**
+       * @param state Indicates whether the `FrozenFrames` metric is enabled or disabled.
+       */
+      override fun state(state: String) {
+        cdkBuilder.state(state)
+      }
+
+      /**
+       * @param thresholdSeconds Specifies the number of consecutive seconds of a static image that
+       * triggers an event or alert.
+       */
+      override fun thresholdSeconds(thresholdSeconds: Number) {
+        cdkBuilder.thresholdSeconds(thresholdSeconds)
+      }
+
+      public fun build(): software.amazon.awscdk.services.mediaconnect.CfnFlow.FrozenFramesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.FrozenFramesProperty,
+    ) : CdkObject(cdkObject),
+        FrozenFramesProperty {
+      /**
+       * Indicates whether the `FrozenFrames` metric is enabled or disabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-frozenframes.html#cfn-mediaconnect-flow-frozenframes-state)
+       */
+      override fun state(): String? = unwrap(this).getState()
+
+      /**
+       * Specifies the number of consecutive seconds of a static image that triggers an event or
+       * alert.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-frozenframes.html#cfn-mediaconnect-flow-frozenframes-thresholdseconds)
+       */
+      override fun thresholdSeconds(): Number? = unwrap(this).getThresholdSeconds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FrozenFramesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.FrozenFramesProperty):
+          FrozenFramesProperty = CdkObjectWrappers.wrap(cdkObject) as? FrozenFramesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FrozenFramesProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.FrozenFramesProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.FrozenFramesProperty
+    }
+  }
+
+  /**
    * The source configuration for cloud flows receiving a stream from a bridge.
    *
    * Example:
@@ -1832,7 +2321,7 @@ public open class CfnFlow(
   }
 
   /**
-   * The transport parameters associated with an incoming media stream.
+   * The transport parameters that are associated with an incoming media stream.
    *
    * Example:
    *
@@ -1970,7 +2459,7 @@ public open class CfnFlow(
   }
 
   /**
-   * The VPC interface that you want to use for the media stream associated with the output.
+   * The VPC interface that is used for the media stream associated with the source or output.
    *
    * Example:
    *
@@ -1987,8 +2476,7 @@ public open class CfnFlow(
    */
   public interface InterfaceProperty {
     /**
-     * The name of the VPC interface that you want to use for the media stream associated with the
-     * output.
+     * The name of the VPC interface.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-interface.html#cfn-mediaconnect-flow-interface-name)
      */
@@ -2000,8 +2488,7 @@ public open class CfnFlow(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name The name of the VPC interface that you want to use for the media stream
-       * associated with the output. 
+       * @param name The name of the VPC interface. 
        */
       public fun name(name: String)
     }
@@ -2012,8 +2499,7 @@ public open class CfnFlow(
           software.amazon.awscdk.services.mediaconnect.CfnFlow.InterfaceProperty.builder()
 
       /**
-       * @param name The name of the VPC interface that you want to use for the media stream
-       * associated with the output. 
+       * @param name The name of the VPC interface. 
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -2028,8 +2514,7 @@ public open class CfnFlow(
     ) : CdkObject(cdkObject),
         InterfaceProperty {
       /**
-       * The name of the VPC interface that you want to use for the media stream associated with the
-       * output.
+       * The name of the VPC interface.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-interface.html#cfn-mediaconnect-flow-interface-name)
        */
@@ -2056,14 +2541,6 @@ public open class CfnFlow(
 
   /**
    * The maintenance setting of a flow.
-   *
-   * MediaConnect routinely performs maintenance on underlying systems for security, reliability,
-   * and operational performance. The maintenance activities include actions such as patching the
-   * operating system, updating drivers, or installing software and patches.
-   *
-   * You can select the day and time that maintenance events occur. This is called a maintenance
-   * window and is used every time a maintenance event is required. To change the day and time, you can
-   * edit the maintenance window using `MaintenanceDay` and `MaintenanceStartHour` .
    *
    * Example:
    *
@@ -2210,7 +2687,7 @@ public open class CfnFlow(
    */
   public interface MediaStreamAttributesProperty {
     /**
-     * A set of parameters that define the media stream.
+     * The settings that you want to use to define the media stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-mediastreamattributes.html#cfn-mediaconnect-flow-mediastreamattributes-fmtp)
      */
@@ -2229,17 +2706,17 @@ public open class CfnFlow(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param fmtp A set of parameters that define the media stream.
+       * @param fmtp The settings that you want to use to define the media stream.
        */
       public fun fmtp(fmtp: IResolvable)
 
       /**
-       * @param fmtp A set of parameters that define the media stream.
+       * @param fmtp The settings that you want to use to define the media stream.
        */
       public fun fmtp(fmtp: FmtpProperty)
 
       /**
-       * @param fmtp A set of parameters that define the media stream.
+       * @param fmtp The settings that you want to use to define the media stream.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dac843c0c4c8ac032a583fbbafc6a584aade8d2b36387f91611a8eb34dfd7562")
@@ -2258,21 +2735,21 @@ public open class CfnFlow(
           software.amazon.awscdk.services.mediaconnect.CfnFlow.MediaStreamAttributesProperty.builder()
 
       /**
-       * @param fmtp A set of parameters that define the media stream.
+       * @param fmtp The settings that you want to use to define the media stream.
        */
       override fun fmtp(fmtp: IResolvable) {
         cdkBuilder.fmtp(fmtp.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param fmtp A set of parameters that define the media stream.
+       * @param fmtp The settings that you want to use to define the media stream.
        */
       override fun fmtp(fmtp: FmtpProperty) {
         cdkBuilder.fmtp(fmtp.let(FmtpProperty.Companion::unwrap))
       }
 
       /**
-       * @param fmtp A set of parameters that define the media stream.
+       * @param fmtp The settings that you want to use to define the media stream.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dac843c0c4c8ac032a583fbbafc6a584aade8d2b36387f91611a8eb34dfd7562")
@@ -2295,7 +2772,7 @@ public open class CfnFlow(
     ) : CdkObject(cdkObject),
         MediaStreamAttributesProperty {
       /**
-       * A set of parameters that define the media stream.
+       * The settings that you want to use to define the media stream.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-mediastreamattributes.html#cfn-mediaconnect-flow-mediastreamattributes-fmtp)
        */
@@ -2328,11 +2805,11 @@ public open class CfnFlow(
   }
 
   /**
-   * A single track or stream of media that contains video, audio, or ancillary data.
+   * A media stream represents one component of your content, such as video, audio, or ancillary
+   * data.
    *
-   * After you add a media stream to a flow, you can associate it with sources and outputs on that
-   * flow, as long as they use the CDI protocol or the ST 2110 JPEG XS protocol. Each source or output
-   * can consist of one or many media streams.
+   * After you add a media stream to your flow, you can associate it with sources and outputs that
+   * use the ST 2110 JPEG XS or CDI protocol.
    *
    * Example:
    *
@@ -2377,7 +2854,7 @@ public open class CfnFlow(
     /**
      * The sample rate for the stream.
      *
-     * This value in measured in kHz.
+     * This value is measured in Hz.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-mediastream.html#cfn-mediaconnect-flow-mediastream-clockrate)
      */
@@ -2452,7 +2929,7 @@ public open class CfnFlow(
 
       /**
        * @param clockRate The sample rate for the stream.
-       * This value in measured in kHz.
+       * This value is measured in Hz.
        */
       public fun clockRate(clockRate: Number)
 
@@ -2520,7 +2997,7 @@ public open class CfnFlow(
 
       /**
        * @param clockRate The sample rate for the stream.
-       * This value in measured in kHz.
+       * This value is measured in Hz.
        */
       override fun clockRate(clockRate: Number) {
         cdkBuilder.clockRate(clockRate)
@@ -2590,7 +3067,7 @@ public open class CfnFlow(
       /**
        * The sample rate for the stream.
        *
-       * This value in measured in kHz.
+       * This value is measured in Hz.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-mediastream.html#cfn-mediaconnect-flow-mediastream-clockrate)
        */
@@ -2689,13 +3166,9 @@ public open class CfnFlow(
     /**
      * The format that was used to encode the data.
      *
-     * For ancillary data streams, set the encoding name to `smpte291` .
-     *
-     * For audio streams, set the encoding name to `pcm` .
-     *
-     * For video, 2110 streams, set the encoding name to `raw` .
-     *
-     * For video, JPEG XS streams, set the encoding name to `jxsv` .
+     * For ancillary data streams, set the encoding name to smpte291. For audio streams, set the
+     * encoding name to pcm. For video, 2110 streams, set the encoding name to raw. For video, JPEG XS
+     * streams, set the encoding name to jxsv.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-mediastreamsourceconfiguration.html#cfn-mediaconnect-flow-mediastreamsourceconfiguration-encodingname)
      */
@@ -2722,13 +3195,9 @@ public open class CfnFlow(
     public interface Builder {
       /**
        * @param encodingName The format that was used to encode the data. 
-       * For ancillary data streams, set the encoding name to `smpte291` .
-       *
-       * For audio streams, set the encoding name to `pcm` .
-       *
-       * For video, 2110 streams, set the encoding name to `raw` .
-       *
-       * For video, JPEG XS streams, set the encoding name to `jxsv` .
+       * For ancillary data streams, set the encoding name to smpte291. For audio streams, set the
+       * encoding name to pcm. For video, 2110 streams, set the encoding name to raw. For video, JPEG
+       * XS streams, set the encoding name to jxsv.
        */
       public fun encodingName(encodingName: String)
 
@@ -2761,13 +3230,9 @@ public open class CfnFlow(
 
       /**
        * @param encodingName The format that was used to encode the data. 
-       * For ancillary data streams, set the encoding name to `smpte291` .
-       *
-       * For audio streams, set the encoding name to `pcm` .
-       *
-       * For video, 2110 streams, set the encoding name to `raw` .
-       *
-       * For video, JPEG XS streams, set the encoding name to `jxsv` .
+       * For ancillary data streams, set the encoding name to smpte291. For audio streams, set the
+       * encoding name to pcm. For video, 2110 streams, set the encoding name to raw. For video, JPEG
+       * XS streams, set the encoding name to jxsv.
        */
       override fun encodingName(encodingName: String) {
         cdkBuilder.encodingName(encodingName)
@@ -2812,13 +3277,9 @@ public open class CfnFlow(
       /**
        * The format that was used to encode the data.
        *
-       * For ancillary data streams, set the encoding name to `smpte291` .
-       *
-       * For audio streams, set the encoding name to `pcm` .
-       *
-       * For video, 2110 streams, set the encoding name to `raw` .
-       *
-       * For video, JPEG XS streams, set the encoding name to `jxsv` .
+       * For ancillary data streams, set the encoding name to smpte291. For audio streams, set the
+       * encoding name to pcm. For video, 2110 streams, set the encoding name to raw. For video, JPEG
+       * XS streams, set the encoding name to jxsv.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-mediastreamsourceconfiguration.html#cfn-mediaconnect-flow-mediastreamsourceconfiguration-encodingname)
        */
@@ -2859,8 +3320,466 @@ public open class CfnFlow(
   }
 
   /**
+   * Specifies the configuration settings for NDI outputs.
+   *
+   * Required when the flow includes NDI outputs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * NdiConfigProperty ndiConfigProperty = NdiConfigProperty.builder()
+   * .machineName("machineName")
+   * .ndiDiscoveryServers(List.of(NdiDiscoveryServerConfigProperty.builder()
+   * .discoveryServerAddress("discoveryServerAddress")
+   * .vpcInterfaceAdapter("vpcInterfaceAdapter")
+   * // the properties below are optional
+   * .discoveryServerPort(123)
+   * .build()))
+   * .ndiState("ndiState")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-ndiconfig.html)
+   */
+  public interface NdiConfigProperty {
+    /**
+     * A prefix for the names of the NDI sources that the flow creates.
+     *
+     * If a custom name isn't specified, MediaConnect generates a unique 12-character ID as the
+     * prefix.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-ndiconfig.html#cfn-mediaconnect-flow-ndiconfig-machinename)
+     */
+    public fun machineName(): String? = unwrap(this).getMachineName()
+
+    /**
+     * A list of up to three NDI discovery server configurations.
+     *
+     * While not required by the API, this configuration is necessary for NDI functionality to work
+     * properly.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-ndiconfig.html#cfn-mediaconnect-flow-ndiconfig-ndidiscoveryservers)
+     */
+    public fun ndiDiscoveryServers(): Any? = unwrap(this).getNdiDiscoveryServers()
+
+    /**
+     * A setting that controls whether NDI outputs can be used in the flow.
+     *
+     * Must be ENABLED to add NDI outputs. Default is DISABLED.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-ndiconfig.html#cfn-mediaconnect-flow-ndiconfig-ndistate)
+     */
+    public fun ndiState(): String? = unwrap(this).getNdiState()
+
+    /**
+     * A builder for [NdiConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param machineName A prefix for the names of the NDI sources that the flow creates.
+       * If a custom name isn't specified, MediaConnect generates a unique 12-character ID as the
+       * prefix.
+       */
+      public fun machineName(machineName: String)
+
+      /**
+       * @param ndiDiscoveryServers A list of up to three NDI discovery server configurations.
+       * While not required by the API, this configuration is necessary for NDI functionality to
+       * work properly.
+       */
+      public fun ndiDiscoveryServers(ndiDiscoveryServers: IResolvable)
+
+      /**
+       * @param ndiDiscoveryServers A list of up to three NDI discovery server configurations.
+       * While not required by the API, this configuration is necessary for NDI functionality to
+       * work properly.
+       */
+      public fun ndiDiscoveryServers(ndiDiscoveryServers: List<Any>)
+
+      /**
+       * @param ndiDiscoveryServers A list of up to three NDI discovery server configurations.
+       * While not required by the API, this configuration is necessary for NDI functionality to
+       * work properly.
+       */
+      public fun ndiDiscoveryServers(vararg ndiDiscoveryServers: Any)
+
+      /**
+       * @param ndiState A setting that controls whether NDI outputs can be used in the flow.
+       * Must be ENABLED to add NDI outputs. Default is DISABLED.
+       */
+      public fun ndiState(ndiState: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.NdiConfigProperty.Builder =
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.NdiConfigProperty.builder()
+
+      /**
+       * @param machineName A prefix for the names of the NDI sources that the flow creates.
+       * If a custom name isn't specified, MediaConnect generates a unique 12-character ID as the
+       * prefix.
+       */
+      override fun machineName(machineName: String) {
+        cdkBuilder.machineName(machineName)
+      }
+
+      /**
+       * @param ndiDiscoveryServers A list of up to three NDI discovery server configurations.
+       * While not required by the API, this configuration is necessary for NDI functionality to
+       * work properly.
+       */
+      override fun ndiDiscoveryServers(ndiDiscoveryServers: IResolvable) {
+        cdkBuilder.ndiDiscoveryServers(ndiDiscoveryServers.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ndiDiscoveryServers A list of up to three NDI discovery server configurations.
+       * While not required by the API, this configuration is necessary for NDI functionality to
+       * work properly.
+       */
+      override fun ndiDiscoveryServers(ndiDiscoveryServers: List<Any>) {
+        cdkBuilder.ndiDiscoveryServers(ndiDiscoveryServers.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param ndiDiscoveryServers A list of up to three NDI discovery server configurations.
+       * While not required by the API, this configuration is necessary for NDI functionality to
+       * work properly.
+       */
+      override fun ndiDiscoveryServers(vararg ndiDiscoveryServers: Any): Unit =
+          ndiDiscoveryServers(ndiDiscoveryServers.toList())
+
+      /**
+       * @param ndiState A setting that controls whether NDI outputs can be used in the flow.
+       * Must be ENABLED to add NDI outputs. Default is DISABLED.
+       */
+      override fun ndiState(ndiState: String) {
+        cdkBuilder.ndiState(ndiState)
+      }
+
+      public fun build(): software.amazon.awscdk.services.mediaconnect.CfnFlow.NdiConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.NdiConfigProperty,
+    ) : CdkObject(cdkObject),
+        NdiConfigProperty {
+      /**
+       * A prefix for the names of the NDI sources that the flow creates.
+       *
+       * If a custom name isn't specified, MediaConnect generates a unique 12-character ID as the
+       * prefix.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-ndiconfig.html#cfn-mediaconnect-flow-ndiconfig-machinename)
+       */
+      override fun machineName(): String? = unwrap(this).getMachineName()
+
+      /**
+       * A list of up to three NDI discovery server configurations.
+       *
+       * While not required by the API, this configuration is necessary for NDI functionality to
+       * work properly.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-ndiconfig.html#cfn-mediaconnect-flow-ndiconfig-ndidiscoveryservers)
+       */
+      override fun ndiDiscoveryServers(): Any? = unwrap(this).getNdiDiscoveryServers()
+
+      /**
+       * A setting that controls whether NDI outputs can be used in the flow.
+       *
+       * Must be ENABLED to add NDI outputs. Default is DISABLED.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-ndiconfig.html#cfn-mediaconnect-flow-ndiconfig-ndistate)
+       */
+      override fun ndiState(): String? = unwrap(this).getNdiState()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NdiConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.NdiConfigProperty):
+          NdiConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? NdiConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NdiConfigProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.NdiConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.NdiConfigProperty
+    }
+  }
+
+  /**
+   * Specifies the configuration settings for individual NDI discovery servers.
+   *
+   * A maximum of 3 servers is allowed.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * NdiDiscoveryServerConfigProperty ndiDiscoveryServerConfigProperty =
+   * NdiDiscoveryServerConfigProperty.builder()
+   * .discoveryServerAddress("discoveryServerAddress")
+   * .vpcInterfaceAdapter("vpcInterfaceAdapter")
+   * // the properties below are optional
+   * .discoveryServerPort(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-ndidiscoveryserverconfig.html)
+   */
+  public interface NdiDiscoveryServerConfigProperty {
+    /**
+     * The unique network address of the NDI discovery server.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-ndidiscoveryserverconfig.html#cfn-mediaconnect-flow-ndidiscoveryserverconfig-discoveryserveraddress)
+     */
+    public fun discoveryServerAddress(): String
+
+    /**
+     * The port for the NDI discovery server.
+     *
+     * Defaults to 5959 if a custom port isn't specified.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-ndidiscoveryserverconfig.html#cfn-mediaconnect-flow-ndidiscoveryserverconfig-discoveryserverport)
+     */
+    public fun discoveryServerPort(): Number? = unwrap(this).getDiscoveryServerPort()
+
+    /**
+     * The identifier for the Virtual Private Cloud (VPC) network interface used by the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-ndidiscoveryserverconfig.html#cfn-mediaconnect-flow-ndidiscoveryserverconfig-vpcinterfaceadapter)
+     */
+    public fun vpcInterfaceAdapter(): String
+
+    /**
+     * A builder for [NdiDiscoveryServerConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param discoveryServerAddress The unique network address of the NDI discovery server. 
+       */
+      public fun discoveryServerAddress(discoveryServerAddress: String)
+
+      /**
+       * @param discoveryServerPort The port for the NDI discovery server.
+       * Defaults to 5959 if a custom port isn't specified.
+       */
+      public fun discoveryServerPort(discoveryServerPort: Number)
+
+      /**
+       * @param vpcInterfaceAdapter The identifier for the Virtual Private Cloud (VPC) network
+       * interface used by the flow. 
+       */
+      public fun vpcInterfaceAdapter(vpcInterfaceAdapter: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.NdiDiscoveryServerConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.NdiDiscoveryServerConfigProperty.builder()
+
+      /**
+       * @param discoveryServerAddress The unique network address of the NDI discovery server. 
+       */
+      override fun discoveryServerAddress(discoveryServerAddress: String) {
+        cdkBuilder.discoveryServerAddress(discoveryServerAddress)
+      }
+
+      /**
+       * @param discoveryServerPort The port for the NDI discovery server.
+       * Defaults to 5959 if a custom port isn't specified.
+       */
+      override fun discoveryServerPort(discoveryServerPort: Number) {
+        cdkBuilder.discoveryServerPort(discoveryServerPort)
+      }
+
+      /**
+       * @param vpcInterfaceAdapter The identifier for the Virtual Private Cloud (VPC) network
+       * interface used by the flow. 
+       */
+      override fun vpcInterfaceAdapter(vpcInterfaceAdapter: String) {
+        cdkBuilder.vpcInterfaceAdapter(vpcInterfaceAdapter)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.NdiDiscoveryServerConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.NdiDiscoveryServerConfigProperty,
+    ) : CdkObject(cdkObject),
+        NdiDiscoveryServerConfigProperty {
+      /**
+       * The unique network address of the NDI discovery server.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-ndidiscoveryserverconfig.html#cfn-mediaconnect-flow-ndidiscoveryserverconfig-discoveryserveraddress)
+       */
+      override fun discoveryServerAddress(): String = unwrap(this).getDiscoveryServerAddress()
+
+      /**
+       * The port for the NDI discovery server.
+       *
+       * Defaults to 5959 if a custom port isn't specified.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-ndidiscoveryserverconfig.html#cfn-mediaconnect-flow-ndidiscoveryserverconfig-discoveryserverport)
+       */
+      override fun discoveryServerPort(): Number? = unwrap(this).getDiscoveryServerPort()
+
+      /**
+       * The identifier for the Virtual Private Cloud (VPC) network interface used by the flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-ndidiscoveryserverconfig.html#cfn-mediaconnect-flow-ndidiscoveryserverconfig-vpcinterfaceadapter)
+       */
+      override fun vpcInterfaceAdapter(): String = unwrap(this).getVpcInterfaceAdapter()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NdiDiscoveryServerConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.NdiDiscoveryServerConfigProperty):
+          NdiDiscoveryServerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NdiDiscoveryServerConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NdiDiscoveryServerConfigProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.NdiDiscoveryServerConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.NdiDiscoveryServerConfigProperty
+    }
+  }
+
+  /**
+   * Configures settings for the `SilentAudio` metric.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * SilentAudioProperty silentAudioProperty = SilentAudioProperty.builder()
+   * .state("state")
+   * .thresholdSeconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-silentaudio.html)
+   */
+  public interface SilentAudioProperty {
+    /**
+     * Indicates whether the `SilentAudio` metric is enabled or disabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-silentaudio.html#cfn-mediaconnect-flow-silentaudio-state)
+     */
+    public fun state(): String? = unwrap(this).getState()
+
+    /**
+     * Specifies the number of consecutive seconds of silence that triggers an event or alert.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-silentaudio.html#cfn-mediaconnect-flow-silentaudio-thresholdseconds)
+     */
+    public fun thresholdSeconds(): Number? = unwrap(this).getThresholdSeconds()
+
+    /**
+     * A builder for [SilentAudioProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param state Indicates whether the `SilentAudio` metric is enabled or disabled.
+       */
+      public fun state(state: String)
+
+      /**
+       * @param thresholdSeconds Specifies the number of consecutive seconds of silence that
+       * triggers an event or alert.
+       */
+      public fun thresholdSeconds(thresholdSeconds: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.SilentAudioProperty.Builder =
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.SilentAudioProperty.builder()
+
+      /**
+       * @param state Indicates whether the `SilentAudio` metric is enabled or disabled.
+       */
+      override fun state(state: String) {
+        cdkBuilder.state(state)
+      }
+
+      /**
+       * @param thresholdSeconds Specifies the number of consecutive seconds of silence that
+       * triggers an event or alert.
+       */
+      override fun thresholdSeconds(thresholdSeconds: Number) {
+        cdkBuilder.thresholdSeconds(thresholdSeconds)
+      }
+
+      public fun build(): software.amazon.awscdk.services.mediaconnect.CfnFlow.SilentAudioProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.SilentAudioProperty,
+    ) : CdkObject(cdkObject),
+        SilentAudioProperty {
+      /**
+       * Indicates whether the `SilentAudio` metric is enabled or disabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-silentaudio.html#cfn-mediaconnect-flow-silentaudio-state)
+       */
+      override fun state(): String? = unwrap(this).getState()
+
+      /**
+       * Specifies the number of consecutive seconds of silence that triggers an event or alert.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-silentaudio.html#cfn-mediaconnect-flow-silentaudio-thresholdseconds)
+       */
+      override fun thresholdSeconds(): Number? = unwrap(this).getThresholdSeconds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SilentAudioProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.SilentAudioProperty):
+          SilentAudioProperty = CdkObjectWrappers.wrap(cdkObject) as? SilentAudioProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SilentAudioProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.SilentAudioProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.SilentAudioProperty
+    }
+  }
+
+  /**
    * The `SourceMonitoringConfig` property type specifies the source monitoring settings for an
-   * AWS::MediaConnect::Flow.
+   * `AWS::MediaConnect::Flow` .
    *
    * Example:
    *
@@ -2870,13 +3789,45 @@ public open class CfnFlow(
    * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
    * SourceMonitoringConfigProperty sourceMonitoringConfigProperty =
    * SourceMonitoringConfigProperty.builder()
+   * .audioMonitoringSettings(List.of(AudioMonitoringSettingProperty.builder()
+   * .silentAudio(SilentAudioProperty.builder()
+   * .state("state")
+   * .thresholdSeconds(123)
+   * .build())
+   * .build()))
+   * .contentQualityAnalysisState("contentQualityAnalysisState")
    * .thumbnailState("thumbnailState")
+   * .videoMonitoringSettings(List.of(VideoMonitoringSettingProperty.builder()
+   * .blackFrames(BlackFramesProperty.builder()
+   * .state("state")
+   * .thresholdSeconds(123)
+   * .build())
+   * .frozenFrames(FrozenFramesProperty.builder()
+   * .state("state")
+   * .thresholdSeconds(123)
+   * .build())
+   * .build()))
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcemonitoringconfig.html)
    */
   public interface SourceMonitoringConfigProperty {
+    /**
+     * Contains the settings for audio stream metrics monitoring.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcemonitoringconfig.html#cfn-mediaconnect-flow-sourcemonitoringconfig-audiomonitoringsettings)
+     */
+    public fun audioMonitoringSettings(): Any? = unwrap(this).getAudioMonitoringSettings()
+
+    /**
+     * Indicates whether content quality analysis is enabled or disabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcemonitoringconfig.html#cfn-mediaconnect-flow-sourcemonitoringconfig-contentqualityanalysisstate)
+     */
+    public fun contentQualityAnalysisState(): String? =
+        unwrap(this).getContentQualityAnalysisState()
+
     /**
      * The current state of the thumbnail monitoring.
      *
@@ -2887,7 +3838,14 @@ public open class CfnFlow(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcemonitoringconfig.html#cfn-mediaconnect-flow-sourcemonitoringconfig-thumbnailstate)
      */
-    public fun thumbnailState(): String
+    public fun thumbnailState(): String? = unwrap(this).getThumbnailState()
+
+    /**
+     * Contains the settings for video stream metrics monitoring.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcemonitoringconfig.html#cfn-mediaconnect-flow-sourcemonitoringconfig-videomonitoringsettings)
+     */
+    public fun videoMonitoringSettings(): Any? = unwrap(this).getVideoMonitoringSettings()
 
     /**
      * A builder for [SourceMonitoringConfigProperty]
@@ -2895,13 +3853,49 @@ public open class CfnFlow(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param thumbnailState The current state of the thumbnail monitoring. 
+       * @param audioMonitoringSettings Contains the settings for audio stream metrics monitoring.
+       */
+      public fun audioMonitoringSettings(audioMonitoringSettings: IResolvable)
+
+      /**
+       * @param audioMonitoringSettings Contains the settings for audio stream metrics monitoring.
+       */
+      public fun audioMonitoringSettings(audioMonitoringSettings: List<Any>)
+
+      /**
+       * @param audioMonitoringSettings Contains the settings for audio stream metrics monitoring.
+       */
+      public fun audioMonitoringSettings(vararg audioMonitoringSettings: Any)
+
+      /**
+       * @param contentQualityAnalysisState Indicates whether content quality analysis is enabled or
+       * disabled.
+       */
+      public fun contentQualityAnalysisState(contentQualityAnalysisState: String)
+
+      /**
+       * @param thumbnailState The current state of the thumbnail monitoring.
        * * If you don't explicitly specify a value when creating a flow, no thumbnail state will be
        * set.
        * * If you update an existing flow and remove a previously set thumbnail state, the value
        * will change to `DISABLED` .
        */
       public fun thumbnailState(thumbnailState: String)
+
+      /**
+       * @param videoMonitoringSettings Contains the settings for video stream metrics monitoring.
+       */
+      public fun videoMonitoringSettings(videoMonitoringSettings: IResolvable)
+
+      /**
+       * @param videoMonitoringSettings Contains the settings for video stream metrics monitoring.
+       */
+      public fun videoMonitoringSettings(videoMonitoringSettings: List<Any>)
+
+      /**
+       * @param videoMonitoringSettings Contains the settings for video stream metrics monitoring.
+       */
+      public fun videoMonitoringSettings(vararg videoMonitoringSettings: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2911,7 +3905,35 @@ public open class CfnFlow(
           software.amazon.awscdk.services.mediaconnect.CfnFlow.SourceMonitoringConfigProperty.builder()
 
       /**
-       * @param thumbnailState The current state of the thumbnail monitoring. 
+       * @param audioMonitoringSettings Contains the settings for audio stream metrics monitoring.
+       */
+      override fun audioMonitoringSettings(audioMonitoringSettings: IResolvable) {
+        cdkBuilder.audioMonitoringSettings(audioMonitoringSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param audioMonitoringSettings Contains the settings for audio stream metrics monitoring.
+       */
+      override fun audioMonitoringSettings(audioMonitoringSettings: List<Any>) {
+        cdkBuilder.audioMonitoringSettings(audioMonitoringSettings.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param audioMonitoringSettings Contains the settings for audio stream metrics monitoring.
+       */
+      override fun audioMonitoringSettings(vararg audioMonitoringSettings: Any): Unit =
+          audioMonitoringSettings(audioMonitoringSettings.toList())
+
+      /**
+       * @param contentQualityAnalysisState Indicates whether content quality analysis is enabled or
+       * disabled.
+       */
+      override fun contentQualityAnalysisState(contentQualityAnalysisState: String) {
+        cdkBuilder.contentQualityAnalysisState(contentQualityAnalysisState)
+      }
+
+      /**
+       * @param thumbnailState The current state of the thumbnail monitoring.
        * * If you don't explicitly specify a value when creating a flow, no thumbnail state will be
        * set.
        * * If you update an existing flow and remove a previously set thumbnail state, the value
@@ -2920,6 +3942,26 @@ public open class CfnFlow(
       override fun thumbnailState(thumbnailState: String) {
         cdkBuilder.thumbnailState(thumbnailState)
       }
+
+      /**
+       * @param videoMonitoringSettings Contains the settings for video stream metrics monitoring.
+       */
+      override fun videoMonitoringSettings(videoMonitoringSettings: IResolvable) {
+        cdkBuilder.videoMonitoringSettings(videoMonitoringSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param videoMonitoringSettings Contains the settings for video stream metrics monitoring.
+       */
+      override fun videoMonitoringSettings(videoMonitoringSettings: List<Any>) {
+        cdkBuilder.videoMonitoringSettings(videoMonitoringSettings.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param videoMonitoringSettings Contains the settings for video stream metrics monitoring.
+       */
+      override fun videoMonitoringSettings(vararg videoMonitoringSettings: Any): Unit =
+          videoMonitoringSettings(videoMonitoringSettings.toList())
 
       public fun build():
           software.amazon.awscdk.services.mediaconnect.CfnFlow.SourceMonitoringConfigProperty =
@@ -2931,6 +3973,21 @@ public open class CfnFlow(
     ) : CdkObject(cdkObject),
         SourceMonitoringConfigProperty {
       /**
+       * Contains the settings for audio stream metrics monitoring.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcemonitoringconfig.html#cfn-mediaconnect-flow-sourcemonitoringconfig-audiomonitoringsettings)
+       */
+      override fun audioMonitoringSettings(): Any? = unwrap(this).getAudioMonitoringSettings()
+
+      /**
+       * Indicates whether content quality analysis is enabled or disabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcemonitoringconfig.html#cfn-mediaconnect-flow-sourcemonitoringconfig-contentqualityanalysisstate)
+       */
+      override fun contentQualityAnalysisState(): String? =
+          unwrap(this).getContentQualityAnalysisState()
+
+      /**
        * The current state of the thumbnail monitoring.
        *
        * * If you don't explicitly specify a value when creating a flow, no thumbnail state will be
@@ -2940,7 +3997,14 @@ public open class CfnFlow(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcemonitoringconfig.html#cfn-mediaconnect-flow-sourcemonitoringconfig-thumbnailstate)
        */
-      override fun thumbnailState(): String = unwrap(this).getThumbnailState()
+      override fun thumbnailState(): String? = unwrap(this).getThumbnailState()
+
+      /**
+       * Contains the settings for video stream metrics monitoring.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcemonitoringconfig.html#cfn-mediaconnect-flow-sourcemonitoringconfig-videomonitoringsettings)
+       */
+      override fun videoMonitoringSettings(): Any? = unwrap(this).getVideoMonitoringSettings()
     }
 
     public companion object {
@@ -2964,8 +4028,7 @@ public open class CfnFlow(
   /**
    * The priority you want to assign to a source.
    *
-   * You can have a primary stream and a backup stream or two equally prioritized streams. This
-   * setting only applies when Failover Mode is set to FAILOVER.
+   * You can have a primary stream and a backup stream or two equally prioritized streams.
    *
    * Example:
    *
@@ -3124,16 +4187,16 @@ public open class CfnFlow(
    */
   public interface SourceProperty {
     /**
-     * The type of encryption that is used on the content ingested from the source.
+     * The type of encryption that is used on the content ingested from this source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-decryption)
      */
     public fun decryption(): Any? = unwrap(this).getDecryption()
 
     /**
-     * A description of the source.
+     * A description for the source.
      *
-     * This description is not visible outside of the current AWS account.
+     * This value is not used or seen outside of the current MediaConnect account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-description)
      */
@@ -3144,7 +4207,7 @@ public open class CfnFlow(
      * AWS account.
      *
      * The entitlement is set by the content originator and the ARN is generated as part of the
-     * originator’s flow.
+     * originator's flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-entitlementarn)
      */
@@ -3158,16 +4221,14 @@ public open class CfnFlow(
     public fun gatewayBridgeSource(): Any? = unwrap(this).getGatewayBridgeSource()
 
     /**
-     * The IP address that the flow listens on for incoming content.
+     * The IP address that the flow will be listening on for incoming content.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-ingestip)
      */
     public fun ingestIp(): String? = unwrap(this).getIngestIp()
 
     /**
-     * The port that the flow listens on for incoming content.
-     *
-     * If the protocol of the source is Zixi, the port must be set to 2088.
+     * The port that the flow will be listening on for incoming content.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-ingestport)
      */
@@ -3195,7 +4256,8 @@ public open class CfnFlow(
     public fun maxSyncBuffer(): Number? = unwrap(this).getMaxSyncBuffer()
 
     /**
-     * The media stream that is associated with the source, and the parameters for that association.
+     * The media streams that are associated with the source, and the parameters for those
+     * associations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-mediastreamsourceconfigurations)
      */
@@ -3289,17 +4351,17 @@ public open class CfnFlow(
     public fun streamId(): String? = unwrap(this).getStreamId()
 
     /**
-     * The name of the VPC interface that the source content comes from.
+     * The name of the VPC interface that is used for this source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-vpcinterfacename)
      */
     public fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
 
     /**
-     * The range of IP addresses that are allowed to contribute content to your source.
+     * The range of IP addresses that should be allowed to contribute content to your source.
      *
-     * Format the IP addresses as a Classless Inter-Domain Routing (CIDR) block; for example,
-     * 10.0.0.0/16.
+     * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block;
+     * for example, 10.0.0.0/16.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-whitelistcidr)
      */
@@ -3311,19 +4373,19 @@ public open class CfnFlow(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param decryption The type of encryption that is used on the content ingested from the
+       * @param decryption The type of encryption that is used on the content ingested from this
        * source.
        */
       public fun decryption(decryption: IResolvable)
 
       /**
-       * @param decryption The type of encryption that is used on the content ingested from the
+       * @param decryption The type of encryption that is used on the content ingested from this
        * source.
        */
       public fun decryption(decryption: EncryptionProperty)
 
       /**
-       * @param decryption The type of encryption that is used on the content ingested from the
+       * @param decryption The type of encryption that is used on the content ingested from this
        * source.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -3331,8 +4393,8 @@ public open class CfnFlow(
       public fun decryption(decryption: EncryptionProperty.Builder.() -> Unit)
 
       /**
-       * @param description A description of the source.
-       * This description is not visible outside of the current AWS account.
+       * @param description A description for the source.
+       * This value is not used or seen outside of the current MediaConnect account.
        */
       public fun description(description: String)
 
@@ -3340,7 +4402,7 @@ public open class CfnFlow(
        * @param entitlementArn The ARN of the entitlement that allows you to subscribe to content
        * that comes from another AWS account.
        * The entitlement is set by the content originator and the ARN is generated as part of the
-       * originator’s flow.
+       * originator's flow.
        */
       public fun entitlementArn(entitlementArn: String)
 
@@ -3366,13 +4428,12 @@ public open class CfnFlow(
           fun gatewayBridgeSource(gatewayBridgeSource: GatewayBridgeSourceProperty.Builder.() -> Unit)
 
       /**
-       * @param ingestIp The IP address that the flow listens on for incoming content.
+       * @param ingestIp The IP address that the flow will be listening on for incoming content.
        */
       public fun ingestIp(ingestIp: String)
 
       /**
-       * @param ingestPort The port that the flow listens on for incoming content.
-       * If the protocol of the source is Zixi, the port must be set to 2088.
+       * @param ingestPort The port that the flow will be listening on for incoming content.
        */
       public fun ingestPort(ingestPort: Number)
 
@@ -3393,20 +4454,20 @@ public open class CfnFlow(
       public fun maxSyncBuffer(maxSyncBuffer: Number)
 
       /**
-       * @param mediaStreamSourceConfigurations The media stream that is associated with the source,
-       * and the parameters for that association.
+       * @param mediaStreamSourceConfigurations The media streams that are associated with the
+       * source, and the parameters for those associations.
        */
       public fun mediaStreamSourceConfigurations(mediaStreamSourceConfigurations: IResolvable)
 
       /**
-       * @param mediaStreamSourceConfigurations The media stream that is associated with the source,
-       * and the parameters for that association.
+       * @param mediaStreamSourceConfigurations The media streams that are associated with the
+       * source, and the parameters for those associations.
        */
       public fun mediaStreamSourceConfigurations(mediaStreamSourceConfigurations: List<Any>)
 
       /**
-       * @param mediaStreamSourceConfigurations The media stream that is associated with the source,
-       * and the parameters for that association.
+       * @param mediaStreamSourceConfigurations The media streams that are associated with the
+       * source, and the parameters for those associations.
        */
       public fun mediaStreamSourceConfigurations(vararg mediaStreamSourceConfigurations: Any)
 
@@ -3474,15 +4535,15 @@ public open class CfnFlow(
       public fun streamId(streamId: String)
 
       /**
-       * @param vpcInterfaceName The name of the VPC interface that the source content comes from.
+       * @param vpcInterfaceName The name of the VPC interface that is used for this source.
        */
       public fun vpcInterfaceName(vpcInterfaceName: String)
 
       /**
-       * @param whitelistCidr The range of IP addresses that are allowed to contribute content to
-       * your source.
-       * Format the IP addresses as a Classless Inter-Domain Routing (CIDR) block; for example,
-       * 10.0.0.0/16.
+       * @param whitelistCidr The range of IP addresses that should be allowed to contribute content
+       * to your source.
+       * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block;
+       * for example, 10.0.0.0/16.
        */
       public fun whitelistCidr(whitelistCidr: String)
     }
@@ -3493,7 +4554,7 @@ public open class CfnFlow(
           software.amazon.awscdk.services.mediaconnect.CfnFlow.SourceProperty.builder()
 
       /**
-       * @param decryption The type of encryption that is used on the content ingested from the
+       * @param decryption The type of encryption that is used on the content ingested from this
        * source.
        */
       override fun decryption(decryption: IResolvable) {
@@ -3501,7 +4562,7 @@ public open class CfnFlow(
       }
 
       /**
-       * @param decryption The type of encryption that is used on the content ingested from the
+       * @param decryption The type of encryption that is used on the content ingested from this
        * source.
        */
       override fun decryption(decryption: EncryptionProperty) {
@@ -3509,7 +4570,7 @@ public open class CfnFlow(
       }
 
       /**
-       * @param decryption The type of encryption that is used on the content ingested from the
+       * @param decryption The type of encryption that is used on the content ingested from this
        * source.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -3518,8 +4579,8 @@ public open class CfnFlow(
           decryption(EncryptionProperty(decryption))
 
       /**
-       * @param description A description of the source.
-       * This description is not visible outside of the current AWS account.
+       * @param description A description for the source.
+       * This value is not used or seen outside of the current MediaConnect account.
        */
       override fun description(description: String) {
         cdkBuilder.description(description)
@@ -3529,7 +4590,7 @@ public open class CfnFlow(
        * @param entitlementArn The ARN of the entitlement that allows you to subscribe to content
        * that comes from another AWS account.
        * The entitlement is set by the content originator and the ARN is generated as part of the
-       * originator’s flow.
+       * originator's flow.
        */
       override fun entitlementArn(entitlementArn: String) {
         cdkBuilder.entitlementArn(entitlementArn)
@@ -3562,15 +4623,14 @@ public open class CfnFlow(
           Unit = gatewayBridgeSource(GatewayBridgeSourceProperty(gatewayBridgeSource))
 
       /**
-       * @param ingestIp The IP address that the flow listens on for incoming content.
+       * @param ingestIp The IP address that the flow will be listening on for incoming content.
        */
       override fun ingestIp(ingestIp: String) {
         cdkBuilder.ingestIp(ingestIp)
       }
 
       /**
-       * @param ingestPort The port that the flow listens on for incoming content.
-       * If the protocol of the source is Zixi, the port must be set to 2088.
+       * @param ingestPort The port that the flow will be listening on for incoming content.
        */
       override fun ingestPort(ingestPort: Number) {
         cdkBuilder.ingestPort(ingestPort)
@@ -3599,24 +4659,24 @@ public open class CfnFlow(
       }
 
       /**
-       * @param mediaStreamSourceConfigurations The media stream that is associated with the source,
-       * and the parameters for that association.
+       * @param mediaStreamSourceConfigurations The media streams that are associated with the
+       * source, and the parameters for those associations.
        */
       override fun mediaStreamSourceConfigurations(mediaStreamSourceConfigurations: IResolvable) {
         cdkBuilder.mediaStreamSourceConfigurations(mediaStreamSourceConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param mediaStreamSourceConfigurations The media stream that is associated with the source,
-       * and the parameters for that association.
+       * @param mediaStreamSourceConfigurations The media streams that are associated with the
+       * source, and the parameters for those associations.
        */
       override fun mediaStreamSourceConfigurations(mediaStreamSourceConfigurations: List<Any>) {
         cdkBuilder.mediaStreamSourceConfigurations(mediaStreamSourceConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param mediaStreamSourceConfigurations The media stream that is associated with the source,
-       * and the parameters for that association.
+       * @param mediaStreamSourceConfigurations The media streams that are associated with the
+       * source, and the parameters for those associations.
        */
       override fun mediaStreamSourceConfigurations(vararg mediaStreamSourceConfigurations: Any):
           Unit = mediaStreamSourceConfigurations(mediaStreamSourceConfigurations.toList())
@@ -3705,17 +4765,17 @@ public open class CfnFlow(
       }
 
       /**
-       * @param vpcInterfaceName The name of the VPC interface that the source content comes from.
+       * @param vpcInterfaceName The name of the VPC interface that is used for this source.
        */
       override fun vpcInterfaceName(vpcInterfaceName: String) {
         cdkBuilder.vpcInterfaceName(vpcInterfaceName)
       }
 
       /**
-       * @param whitelistCidr The range of IP addresses that are allowed to contribute content to
-       * your source.
-       * Format the IP addresses as a Classless Inter-Domain Routing (CIDR) block; for example,
-       * 10.0.0.0/16.
+       * @param whitelistCidr The range of IP addresses that should be allowed to contribute content
+       * to your source.
+       * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block;
+       * for example, 10.0.0.0/16.
        */
       override fun whitelistCidr(whitelistCidr: String) {
         cdkBuilder.whitelistCidr(whitelistCidr)
@@ -3730,16 +4790,16 @@ public open class CfnFlow(
     ) : CdkObject(cdkObject),
         SourceProperty {
       /**
-       * The type of encryption that is used on the content ingested from the source.
+       * The type of encryption that is used on the content ingested from this source.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-decryption)
        */
       override fun decryption(): Any? = unwrap(this).getDecryption()
 
       /**
-       * A description of the source.
+       * A description for the source.
        *
-       * This description is not visible outside of the current AWS account.
+       * This value is not used or seen outside of the current MediaConnect account.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-description)
        */
@@ -3750,7 +4810,7 @@ public open class CfnFlow(
        * AWS account.
        *
        * The entitlement is set by the content originator and the ARN is generated as part of the
-       * originator’s flow.
+       * originator's flow.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-entitlementarn)
        */
@@ -3764,16 +4824,14 @@ public open class CfnFlow(
       override fun gatewayBridgeSource(): Any? = unwrap(this).getGatewayBridgeSource()
 
       /**
-       * The IP address that the flow listens on for incoming content.
+       * The IP address that the flow will be listening on for incoming content.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-ingestip)
        */
       override fun ingestIp(): String? = unwrap(this).getIngestIp()
 
       /**
-       * The port that the flow listens on for incoming content.
-       *
-       * If the protocol of the source is Zixi, the port must be set to 2088.
+       * The port that the flow will be listening on for incoming content.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-ingestport)
        */
@@ -3801,8 +4859,8 @@ public open class CfnFlow(
       override fun maxSyncBuffer(): Number? = unwrap(this).getMaxSyncBuffer()
 
       /**
-       * The media stream that is associated with the source, and the parameters for that
-       * association.
+       * The media streams that are associated with the source, and the parameters for those
+       * associations.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-mediastreamsourceconfigurations)
        */
@@ -3897,17 +4955,17 @@ public open class CfnFlow(
       override fun streamId(): String? = unwrap(this).getStreamId()
 
       /**
-       * The name of the VPC interface that the source content comes from.
+       * The name of the VPC interface that is used for this source.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-vpcinterfacename)
        */
       override fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
 
       /**
-       * The range of IP addresses that are allowed to contribute content to your source.
+       * The range of IP addresses that should be allowed to contribute content to your source.
        *
-       * Format the IP addresses as a Classless Inter-Domain Routing (CIDR) block; for example,
-       * 10.0.0.0/16.
+       * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block;
+       * for example, 10.0.0.0/16.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-whitelistcidr)
        */
@@ -3933,7 +4991,178 @@ public open class CfnFlow(
   }
 
   /**
-   * The VPC interface that you want to send your output to.
+   * Specifies the configuration for video stream metrics monitoring.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * VideoMonitoringSettingProperty videoMonitoringSettingProperty =
+   * VideoMonitoringSettingProperty.builder()
+   * .blackFrames(BlackFramesProperty.builder()
+   * .state("state")
+   * .thresholdSeconds(123)
+   * .build())
+   * .frozenFrames(FrozenFramesProperty.builder()
+   * .state("state")
+   * .thresholdSeconds(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-videomonitoringsetting.html)
+   */
+  public interface VideoMonitoringSettingProperty {
+    /**
+     * Detects video frames that are black.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-videomonitoringsetting.html#cfn-mediaconnect-flow-videomonitoringsetting-blackframes)
+     */
+    public fun blackFrames(): Any? = unwrap(this).getBlackFrames()
+
+    /**
+     * Detects video frames that have not changed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-videomonitoringsetting.html#cfn-mediaconnect-flow-videomonitoringsetting-frozenframes)
+     */
+    public fun frozenFrames(): Any? = unwrap(this).getFrozenFrames()
+
+    /**
+     * A builder for [VideoMonitoringSettingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param blackFrames Detects video frames that are black.
+       */
+      public fun blackFrames(blackFrames: IResolvable)
+
+      /**
+       * @param blackFrames Detects video frames that are black.
+       */
+      public fun blackFrames(blackFrames: BlackFramesProperty)
+
+      /**
+       * @param blackFrames Detects video frames that are black.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("94ce03b6edc1199f96f2105e481261d9a9cfc7a7ac436c0b86c0d47f7a617c48")
+      public fun blackFrames(blackFrames: BlackFramesProperty.Builder.() -> Unit)
+
+      /**
+       * @param frozenFrames Detects video frames that have not changed.
+       */
+      public fun frozenFrames(frozenFrames: IResolvable)
+
+      /**
+       * @param frozenFrames Detects video frames that have not changed.
+       */
+      public fun frozenFrames(frozenFrames: FrozenFramesProperty)
+
+      /**
+       * @param frozenFrames Detects video frames that have not changed.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("75037f15f4fbaef8528479a936e575b8b81ad354cc75d894ab95499bb2959e12")
+      public fun frozenFrames(frozenFrames: FrozenFramesProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.VideoMonitoringSettingProperty.Builder
+          =
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.VideoMonitoringSettingProperty.builder()
+
+      /**
+       * @param blackFrames Detects video frames that are black.
+       */
+      override fun blackFrames(blackFrames: IResolvable) {
+        cdkBuilder.blackFrames(blackFrames.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param blackFrames Detects video frames that are black.
+       */
+      override fun blackFrames(blackFrames: BlackFramesProperty) {
+        cdkBuilder.blackFrames(blackFrames.let(BlackFramesProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param blackFrames Detects video frames that are black.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("94ce03b6edc1199f96f2105e481261d9a9cfc7a7ac436c0b86c0d47f7a617c48")
+      override fun blackFrames(blackFrames: BlackFramesProperty.Builder.() -> Unit): Unit =
+          blackFrames(BlackFramesProperty(blackFrames))
+
+      /**
+       * @param frozenFrames Detects video frames that have not changed.
+       */
+      override fun frozenFrames(frozenFrames: IResolvable) {
+        cdkBuilder.frozenFrames(frozenFrames.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param frozenFrames Detects video frames that have not changed.
+       */
+      override fun frozenFrames(frozenFrames: FrozenFramesProperty) {
+        cdkBuilder.frozenFrames(frozenFrames.let(FrozenFramesProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param frozenFrames Detects video frames that have not changed.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("75037f15f4fbaef8528479a936e575b8b81ad354cc75d894ab95499bb2959e12")
+      override fun frozenFrames(frozenFrames: FrozenFramesProperty.Builder.() -> Unit): Unit =
+          frozenFrames(FrozenFramesProperty(frozenFrames))
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.VideoMonitoringSettingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.VideoMonitoringSettingProperty,
+    ) : CdkObject(cdkObject),
+        VideoMonitoringSettingProperty {
+      /**
+       * Detects video frames that are black.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-videomonitoringsetting.html#cfn-mediaconnect-flow-videomonitoringsetting-blackframes)
+       */
+      override fun blackFrames(): Any? = unwrap(this).getBlackFrames()
+
+      /**
+       * Detects video frames that have not changed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-videomonitoringsetting.html#cfn-mediaconnect-flow-videomonitoringsetting-frozenframes)
+       */
+      override fun frozenFrames(): Any? = unwrap(this).getFrozenFrames()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VideoMonitoringSettingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.VideoMonitoringSettingProperty):
+          VideoMonitoringSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VideoMonitoringSettingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VideoMonitoringSettingProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.VideoMonitoringSettingProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnFlow.VideoMonitoringSettingProperty
+    }
+  }
+
+  /**
+   * The settings for attaching a VPC interface to an resource.
    *
    * Example:
    *
@@ -3951,7 +5180,7 @@ public open class CfnFlow(
    */
   public interface VpcInterfaceAttachmentProperty {
     /**
-     * The name of the VPC interface that you want to send your output to.
+     * The name of the VPC interface to use for this resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-vpcinterfaceattachment.html#cfn-mediaconnect-flow-vpcinterfaceattachment-vpcinterfacename)
      */
@@ -3963,7 +5192,7 @@ public open class CfnFlow(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+       * @param vpcInterfaceName The name of the VPC interface to use for this resource.
        */
       public fun vpcInterfaceName(vpcInterfaceName: String)
     }
@@ -3975,7 +5204,7 @@ public open class CfnFlow(
           software.amazon.awscdk.services.mediaconnect.CfnFlow.VpcInterfaceAttachmentProperty.builder()
 
       /**
-       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+       * @param vpcInterfaceName The name of the VPC interface to use for this resource.
        */
       override fun vpcInterfaceName(vpcInterfaceName: String) {
         cdkBuilder.vpcInterfaceName(vpcInterfaceName)
@@ -3991,7 +5220,7 @@ public open class CfnFlow(
     ) : CdkObject(cdkObject),
         VpcInterfaceAttachmentProperty {
       /**
-       * The name of the VPC interface that you want to send your output to.
+       * The name of the VPC interface to use for this resource.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-vpcinterfaceattachment.html#cfn-mediaconnect-flow-vpcinterfaceattachment-vpcinterfacename)
        */
@@ -4019,6 +5248,21 @@ public open class CfnFlow(
   /**
    * The details of a VPC interface.
    *
+   *
+   * When configuring VPC interfaces for NDI outputs, keep in mind the following:
+   *
+   * * VPC interfaces must be defined as nested attributes within the `AWS::MediaConnect::Flow`
+   * resource, and not within the top-level `AWS::MediaConnect::FlowVpcInterface` resource.
+   * * There's a maximum limit of three VPC interfaces for each flow. If you've already reached this
+   * limit, you can't update the flow to use a different VPC interface without first removing an
+   * existing one.
+   *
+   * To update your VPC interfaces in this scenario, you must first remove the VPC interface that’s
+   * not being used. Next, add the new VPC interfaces. Lastly, update the `VpcInterfaceAdapter` in the
+   * `NDIConfig` property. These changes must be performed as separate manual operations and cannot be
+   * done through a single template update.
+   *
+   *
    * Example:
    *
    * ```
@@ -4040,16 +5284,14 @@ public open class CfnFlow(
    */
   public interface VpcInterfaceProperty {
     /**
-     * The name for the VPC interface.
-     *
-     * This name must be unique within the flow.
+     * Immutable and has to be a unique against other VpcInterfaces in this Flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-vpcinterface.html#cfn-mediaconnect-flow-vpcinterface-name)
      */
     public fun name(): String
 
     /**
-     * The IDs of the network interfaces that MediaConnect created in your account.
+     * IDs of the network interfaces created in customer's account by MediaConnect .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-vpcinterface.html#cfn-mediaconnect-flow-vpcinterface-networkinterfaceids)
      */
@@ -4064,30 +5306,21 @@ public open class CfnFlow(
     public fun networkInterfaceType(): String? = unwrap(this).getNetworkInterfaceType()
 
     /**
-     * The ARN of the IAM role that you created when you set up MediaConnect as a trusted service.
+     * A role Arn MediaConnect can assume to create ENIs in your account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-vpcinterface.html#cfn-mediaconnect-flow-vpcinterface-rolearn)
      */
     public fun roleArn(): String
 
     /**
-     * A virtual firewall to control inbound and outbound traffic.
+     * Security Group IDs to be used on ENI.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-vpcinterface.html#cfn-mediaconnect-flow-vpcinterface-securitygroupids)
      */
     public fun securityGroupIds(): List<String>
 
     /**
-     * The subnet IDs that you specified for your VPC interface.
-     *
-     * A subnet ID is a range of IP addresses in your VPC. When you create your VPC, you specify a
-     * range of IPv4 addresses for the VPC in the form of a Classless Inter-Domain Routing (CIDR)
-     * block; for example, 10.0.0.0/16. This is the primary CIDR block for your VPC. When you create a
-     * subnet for your VPC, you specify the CIDR block for the subnet, which is a subset of the VPC
-     * CIDR block.
-     *
-     * The subnets that you use across all VPC interfaces on the flow must be in the same
-     * Availability Zone as the flow.
+     * Subnet must be in the AZ of the Flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-vpcinterface.html#cfn-mediaconnect-flow-vpcinterface-subnetid)
      */
@@ -4099,20 +5332,19 @@ public open class CfnFlow(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name The name for the VPC interface. 
-       * This name must be unique within the flow.
+       * @param name Immutable and has to be a unique against other VpcInterfaces in this Flow. 
        */
       public fun name(name: String)
 
       /**
-       * @param networkInterfaceIds The IDs of the network interfaces that MediaConnect created in
-       * your account.
+       * @param networkInterfaceIds IDs of the network interfaces created in customer's account by
+       * MediaConnect .
        */
       public fun networkInterfaceIds(networkInterfaceIds: List<String>)
 
       /**
-       * @param networkInterfaceIds The IDs of the network interfaces that MediaConnect created in
-       * your account.
+       * @param networkInterfaceIds IDs of the network interfaces created in customer's account by
+       * MediaConnect .
        */
       public fun networkInterfaceIds(vararg networkInterfaceIds: String)
 
@@ -4122,31 +5354,22 @@ public open class CfnFlow(
       public fun networkInterfaceType(networkInterfaceType: String)
 
       /**
-       * @param roleArn The ARN of the IAM role that you created when you set up MediaConnect as a
-       * trusted service. 
+       * @param roleArn A role Arn MediaConnect can assume to create ENIs in your account. 
        */
       public fun roleArn(roleArn: String)
 
       /**
-       * @param securityGroupIds A virtual firewall to control inbound and outbound traffic. 
+       * @param securityGroupIds Security Group IDs to be used on ENI. 
        */
       public fun securityGroupIds(securityGroupIds: List<String>)
 
       /**
-       * @param securityGroupIds A virtual firewall to control inbound and outbound traffic. 
+       * @param securityGroupIds Security Group IDs to be used on ENI. 
        */
       public fun securityGroupIds(vararg securityGroupIds: String)
 
       /**
-       * @param subnetId The subnet IDs that you specified for your VPC interface. 
-       * A subnet ID is a range of IP addresses in your VPC. When you create your VPC, you specify a
-       * range of IPv4 addresses for the VPC in the form of a Classless Inter-Domain Routing (CIDR)
-       * block; for example, 10.0.0.0/16. This is the primary CIDR block for your VPC. When you create
-       * a subnet for your VPC, you specify the CIDR block for the subnet, which is a subset of the VPC
-       * CIDR block.
-       *
-       * The subnets that you use across all VPC interfaces on the flow must be in the same
-       * Availability Zone as the flow.
+       * @param subnetId Subnet must be in the AZ of the Flow. 
        */
       public fun subnetId(subnetId: String)
     }
@@ -4157,24 +5380,23 @@ public open class CfnFlow(
           software.amazon.awscdk.services.mediaconnect.CfnFlow.VpcInterfaceProperty.builder()
 
       /**
-       * @param name The name for the VPC interface. 
-       * This name must be unique within the flow.
+       * @param name Immutable and has to be a unique against other VpcInterfaces in this Flow. 
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
       /**
-       * @param networkInterfaceIds The IDs of the network interfaces that MediaConnect created in
-       * your account.
+       * @param networkInterfaceIds IDs of the network interfaces created in customer's account by
+       * MediaConnect .
        */
       override fun networkInterfaceIds(networkInterfaceIds: List<String>) {
         cdkBuilder.networkInterfaceIds(networkInterfaceIds)
       }
 
       /**
-       * @param networkInterfaceIds The IDs of the network interfaces that MediaConnect created in
-       * your account.
+       * @param networkInterfaceIds IDs of the network interfaces created in customer's account by
+       * MediaConnect .
        */
       override fun networkInterfaceIds(vararg networkInterfaceIds: String): Unit =
           networkInterfaceIds(networkInterfaceIds.toList())
@@ -4187,36 +5409,27 @@ public open class CfnFlow(
       }
 
       /**
-       * @param roleArn The ARN of the IAM role that you created when you set up MediaConnect as a
-       * trusted service. 
+       * @param roleArn A role Arn MediaConnect can assume to create ENIs in your account. 
        */
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
       /**
-       * @param securityGroupIds A virtual firewall to control inbound and outbound traffic. 
+       * @param securityGroupIds Security Group IDs to be used on ENI. 
        */
       override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
       /**
-       * @param securityGroupIds A virtual firewall to control inbound and outbound traffic. 
+       * @param securityGroupIds Security Group IDs to be used on ENI. 
        */
       override fun securityGroupIds(vararg securityGroupIds: String): Unit =
           securityGroupIds(securityGroupIds.toList())
 
       /**
-       * @param subnetId The subnet IDs that you specified for your VPC interface. 
-       * A subnet ID is a range of IP addresses in your VPC. When you create your VPC, you specify a
-       * range of IPv4 addresses for the VPC in the form of a Classless Inter-Domain Routing (CIDR)
-       * block; for example, 10.0.0.0/16. This is the primary CIDR block for your VPC. When you create
-       * a subnet for your VPC, you specify the CIDR block for the subnet, which is a subset of the VPC
-       * CIDR block.
-       *
-       * The subnets that you use across all VPC interfaces on the flow must be in the same
-       * Availability Zone as the flow.
+       * @param subnetId Subnet must be in the AZ of the Flow. 
        */
       override fun subnetId(subnetId: String) {
         cdkBuilder.subnetId(subnetId)
@@ -4231,16 +5444,14 @@ public open class CfnFlow(
     ) : CdkObject(cdkObject),
         VpcInterfaceProperty {
       /**
-       * The name for the VPC interface.
-       *
-       * This name must be unique within the flow.
+       * Immutable and has to be a unique against other VpcInterfaces in this Flow.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-vpcinterface.html#cfn-mediaconnect-flow-vpcinterface-name)
        */
       override fun name(): String = unwrap(this).getName()
 
       /**
-       * The IDs of the network interfaces that MediaConnect created in your account.
+       * IDs of the network interfaces created in customer's account by MediaConnect .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-vpcinterface.html#cfn-mediaconnect-flow-vpcinterface-networkinterfaceids)
        */
@@ -4255,30 +5466,21 @@ public open class CfnFlow(
       override fun networkInterfaceType(): String? = unwrap(this).getNetworkInterfaceType()
 
       /**
-       * The ARN of the IAM role that you created when you set up MediaConnect as a trusted service.
+       * A role Arn MediaConnect can assume to create ENIs in your account.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-vpcinterface.html#cfn-mediaconnect-flow-vpcinterface-rolearn)
        */
       override fun roleArn(): String = unwrap(this).getRoleArn()
 
       /**
-       * A virtual firewall to control inbound and outbound traffic.
+       * Security Group IDs to be used on ENI.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-vpcinterface.html#cfn-mediaconnect-flow-vpcinterface-securitygroupids)
        */
       override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
       /**
-       * The subnet IDs that you specified for your VPC interface.
-       *
-       * A subnet ID is a range of IP addresses in your VPC. When you create your VPC, you specify a
-       * range of IPv4 addresses for the VPC in the form of a Classless Inter-Domain Routing (CIDR)
-       * block; for example, 10.0.0.0/16. This is the primary CIDR block for your VPC. When you create
-       * a subnet for your VPC, you specify the CIDR block for the subnet, which is a subset of the VPC
-       * CIDR block.
-       *
-       * The subnets that you use across all VPC interfaces on the flow must be in the same
-       * Availability Zone as the flow.
+       * Subnet must be in the AZ of the Flow.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-vpcinterface.html#cfn-mediaconnect-flow-vpcinterface-subnetid)
        */

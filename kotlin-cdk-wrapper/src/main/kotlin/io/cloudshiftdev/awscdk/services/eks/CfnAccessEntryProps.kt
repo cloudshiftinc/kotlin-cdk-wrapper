@@ -91,11 +91,12 @@ public interface CfnAccessEntryProps {
    * You can specify one ARN for each access entry. You can't specify the same ARN in more than one
    * access entry. This value can't be changed after access entry creation.
    *
-   * The valid principals differ depending on the type of the access entry in the `type` field. The
-   * only valid ARN is IAM roles for the types of access entries for nodes: ` ` . You can use every IAM
-   * principal type for `STANDARD` access entries. You can't use the STS session principal type with
-   * access entries because this is a temporary principal for each session and not a permanent identity
-   * that can be assigned permissions.
+   * The valid principals differ depending on the type of the access entry in the `type` field. For
+   * `STANDARD` access entries, you can use every IAM principal type. For nodes ( `EC2` (for EKS Auto
+   * Mode), `EC2_LINUX` , `EC2_WINDOWS` , `FARGATE_LINUX` , and `HYBRID_LINUX` ), the only valid ARN is
+   * IAM roles. You can't use the STS session principal type with access entries because this is a
+   * temporary principal for each session and not a permanent identity that can be assigned
+   * permissions.
    *
    * [IAM best
    * practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#bp-users-federation-idp)
@@ -117,16 +118,18 @@ public interface CfnAccessEntryProps {
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * The type of the new access entry. Valid values are `Standard` , `FARGATE_LINUX` , `EC2_LINUX` ,
-   * and `EC2_WINDOWS` .
+   * The type of the new access entry.
+   *
+   * Valid values are `STANDARD` , `FARGATE_LINUX` , `EC2_LINUX` , `EC2_WINDOWS` , `EC2` (for EKS
+   * Auto Mode), `HYBRID_LINUX` , and `HYPERPOD_LINUX` .
    *
    * If the `principalArn` is for an IAM role that's used for self-managed Amazon EC2 nodes, specify
    * `EC2_LINUX` or `EC2_WINDOWS` . Amazon EKS grants the necessary permissions to the node for you. If
    * the `principalArn` is for any other purpose, specify `STANDARD` . If you don't specify a value,
-   * Amazon EKS sets the value to `STANDARD` . It's unnecessary to create access entries for IAM roles
-   * used with Fargate profiles or managed Amazon EC2 nodes, because Amazon EKS creates entries in the
-   * `aws-auth` `ConfigMap` for the roles. You can't change this value once you've created the access
-   * entry.
+   * Amazon EKS sets the value to `STANDARD` . If you have the access mode of the cluster set to
+   * `API_AND_CONFIG_MAP` , it's unnecessary to create access entries for IAM roles used with Fargate
+   * profiles or managed Amazon EC2 nodes, because Amazon EKS creates entries in the `aws-auth`
+   * `ConfigMap` for the roles. You can't change this value once you've created the access entry.
    *
    * If you set the value to `EC2_LINUX` or `EC2_WINDOWS` , you can't specify values for
    * `kubernetesGroups` , or associate an `AccessPolicy` to the access entry.
@@ -223,10 +226,11 @@ public interface CfnAccessEntryProps {
      * one access entry. This value can't be changed after access entry creation.
      *
      * The valid principals differ depending on the type of the access entry in the `type` field.
-     * The only valid ARN is IAM roles for the types of access entries for nodes: ` ` . You can use
-     * every IAM principal type for `STANDARD` access entries. You can't use the STS session principal
-     * type with access entries because this is a temporary principal for each session and not a
-     * permanent identity that can be assigned permissions.
+     * For `STANDARD` access entries, you can use every IAM principal type. For nodes ( `EC2` (for EKS
+     * Auto Mode), `EC2_LINUX` , `EC2_WINDOWS` , `FARGATE_LINUX` , and `HYBRID_LINUX` ), the only valid
+     * ARN is IAM roles. You can't use the STS session principal type with access entries because this
+     * is a temporary principal for each session and not a permanent identity that can be assigned
+     * permissions.
      *
      * [IAM best
      * practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#bp-users-federation-idp)
@@ -250,15 +254,18 @@ public interface CfnAccessEntryProps {
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * @param type The type of the new access entry. Valid values are `Standard` , `FARGATE_LINUX` ,
-     * `EC2_LINUX` , and `EC2_WINDOWS` .
+     * @param type The type of the new access entry.
+     * Valid values are `STANDARD` , `FARGATE_LINUX` , `EC2_LINUX` , `EC2_WINDOWS` , `EC2` (for EKS
+     * Auto Mode), `HYBRID_LINUX` , and `HYPERPOD_LINUX` .
+     *
      * If the `principalArn` is for an IAM role that's used for self-managed Amazon EC2 nodes,
      * specify `EC2_LINUX` or `EC2_WINDOWS` . Amazon EKS grants the necessary permissions to the node
      * for you. If the `principalArn` is for any other purpose, specify `STANDARD` . If you don't
-     * specify a value, Amazon EKS sets the value to `STANDARD` . It's unnecessary to create access
-     * entries for IAM roles used with Fargate profiles or managed Amazon EC2 nodes, because Amazon EKS
-     * creates entries in the `aws-auth` `ConfigMap` for the roles. You can't change this value once
-     * you've created the access entry.
+     * specify a value, Amazon EKS sets the value to `STANDARD` . If you have the access mode of the
+     * cluster set to `API_AND_CONFIG_MAP` , it's unnecessary to create access entries for IAM roles
+     * used with Fargate profiles or managed Amazon EC2 nodes, because Amazon EKS creates entries in
+     * the `aws-auth` `ConfigMap` for the roles. You can't change this value once you've created the
+     * access entry.
      *
      * If you set the value to `EC2_LINUX` or `EC2_WINDOWS` , you can't specify values for
      * `kubernetesGroups` , or associate an `AccessPolicy` to the access entry.
@@ -360,10 +367,11 @@ public interface CfnAccessEntryProps {
      * one access entry. This value can't be changed after access entry creation.
      *
      * The valid principals differ depending on the type of the access entry in the `type` field.
-     * The only valid ARN is IAM roles for the types of access entries for nodes: ` ` . You can use
-     * every IAM principal type for `STANDARD` access entries. You can't use the STS session principal
-     * type with access entries because this is a temporary principal for each session and not a
-     * permanent identity that can be assigned permissions.
+     * For `STANDARD` access entries, you can use every IAM principal type. For nodes ( `EC2` (for EKS
+     * Auto Mode), `EC2_LINUX` , `EC2_WINDOWS` , `FARGATE_LINUX` , and `HYBRID_LINUX` ), the only valid
+     * ARN is IAM roles. You can't use the STS session principal type with access entries because this
+     * is a temporary principal for each session and not a permanent identity that can be assigned
+     * permissions.
      *
      * [IAM best
      * practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#bp-users-federation-idp)
@@ -391,15 +399,18 @@ public interface CfnAccessEntryProps {
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * @param type The type of the new access entry. Valid values are `Standard` , `FARGATE_LINUX` ,
-     * `EC2_LINUX` , and `EC2_WINDOWS` .
+     * @param type The type of the new access entry.
+     * Valid values are `STANDARD` , `FARGATE_LINUX` , `EC2_LINUX` , `EC2_WINDOWS` , `EC2` (for EKS
+     * Auto Mode), `HYBRID_LINUX` , and `HYPERPOD_LINUX` .
+     *
      * If the `principalArn` is for an IAM role that's used for self-managed Amazon EC2 nodes,
      * specify `EC2_LINUX` or `EC2_WINDOWS` . Amazon EKS grants the necessary permissions to the node
      * for you. If the `principalArn` is for any other purpose, specify `STANDARD` . If you don't
-     * specify a value, Amazon EKS sets the value to `STANDARD` . It's unnecessary to create access
-     * entries for IAM roles used with Fargate profiles or managed Amazon EC2 nodes, because Amazon EKS
-     * creates entries in the `aws-auth` `ConfigMap` for the roles. You can't change this value once
-     * you've created the access entry.
+     * specify a value, Amazon EKS sets the value to `STANDARD` . If you have the access mode of the
+     * cluster set to `API_AND_CONFIG_MAP` , it's unnecessary to create access entries for IAM roles
+     * used with Fargate profiles or managed Amazon EC2 nodes, because Amazon EKS creates entries in
+     * the `aws-auth` `ConfigMap` for the roles. You can't change this value once you've created the
+     * access entry.
      *
      * If you set the value to `EC2_LINUX` or `EC2_WINDOWS` , you can't specify values for
      * `kubernetesGroups` , or associate an `AccessPolicy` to the access entry.
@@ -474,10 +485,11 @@ public interface CfnAccessEntryProps {
      * one access entry. This value can't be changed after access entry creation.
      *
      * The valid principals differ depending on the type of the access entry in the `type` field.
-     * The only valid ARN is IAM roles for the types of access entries for nodes: ` ` . You can use
-     * every IAM principal type for `STANDARD` access entries. You can't use the STS session principal
-     * type with access entries because this is a temporary principal for each session and not a
-     * permanent identity that can be assigned permissions.
+     * For `STANDARD` access entries, you can use every IAM principal type. For nodes ( `EC2` (for EKS
+     * Auto Mode), `EC2_LINUX` , `EC2_WINDOWS` , `FARGATE_LINUX` , and `HYBRID_LINUX` ), the only valid
+     * ARN is IAM roles. You can't use the STS session principal type with access entries because this
+     * is a temporary principal for each session and not a permanent identity that can be assigned
+     * permissions.
      *
      * [IAM best
      * practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#bp-users-federation-idp)
@@ -499,16 +511,19 @@ public interface CfnAccessEntryProps {
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
-     * The type of the new access entry. Valid values are `Standard` , `FARGATE_LINUX` , `EC2_LINUX`
-     * , and `EC2_WINDOWS` .
+     * The type of the new access entry.
+     *
+     * Valid values are `STANDARD` , `FARGATE_LINUX` , `EC2_LINUX` , `EC2_WINDOWS` , `EC2` (for EKS
+     * Auto Mode), `HYBRID_LINUX` , and `HYPERPOD_LINUX` .
      *
      * If the `principalArn` is for an IAM role that's used for self-managed Amazon EC2 nodes,
      * specify `EC2_LINUX` or `EC2_WINDOWS` . Amazon EKS grants the necessary permissions to the node
      * for you. If the `principalArn` is for any other purpose, specify `STANDARD` . If you don't
-     * specify a value, Amazon EKS sets the value to `STANDARD` . It's unnecessary to create access
-     * entries for IAM roles used with Fargate profiles or managed Amazon EC2 nodes, because Amazon EKS
-     * creates entries in the `aws-auth` `ConfigMap` for the roles. You can't change this value once
-     * you've created the access entry.
+     * specify a value, Amazon EKS sets the value to `STANDARD` . If you have the access mode of the
+     * cluster set to `API_AND_CONFIG_MAP` , it's unnecessary to create access entries for IAM roles
+     * used with Fargate profiles or managed Amazon EC2 nodes, because Amazon EKS creates entries in
+     * the `aws-auth` `ConfigMap` for the roles. You can't change this value once you've created the
+     * access entry.
      *
      * If you set the value to `EC2_LINUX` or `EC2_WINDOWS` , you can't specify values for
      * `kubernetesGroups` , or associate an `AccessPolicy` to the access entry.

@@ -24,12 +24,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.route53.*;
+ * CidrRoutingConfig cidrRoutingConfig;
  * GeoLocation geoLocation;
  * HealthCheck healthCheck;
  * HostedZone hostedZone;
  * CaaAmazonRecord caaAmazonRecord = CaaAmazonRecord.Builder.create(this, "MyCaaAmazonRecord")
  * .zone(hostedZone)
  * // the properties below are optional
+ * .cidrRoutingConfig(cidrRoutingConfig)
  * .comment("comment")
  * .deleteExisting(false)
  * .geoLocation(geoLocation)
@@ -67,6 +69,21 @@ public open class CaaAmazonRecord(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The object that is specified in resource record set object when you are linking a resource
+     * record set to a CIDR location.
+     *
+     * A LocationName with an asterisk “*” can be used to create a default CIDR record. CollectionId
+     * is still required for default record.
+     *
+     * Default: - No CIDR routing configured
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordset.html#cfn-route53-recordset-cidrroutingconfig)
+     * @param cidrRoutingConfig The object that is specified in resource record set object when you
+     * are linking a resource record set to a CIDR location. 
+     */
+    public fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfig)
+
     /**
      * A comment to add on the record.
      *
@@ -222,6 +239,23 @@ public open class CaaAmazonRecord(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.route53.CaaAmazonRecord.Builder =
         software.amazon.awscdk.services.route53.CaaAmazonRecord.Builder.create(scope, id)
+
+    /**
+     * The object that is specified in resource record set object when you are linking a resource
+     * record set to a CIDR location.
+     *
+     * A LocationName with an asterisk “*” can be used to create a default CIDR record. CollectionId
+     * is still required for default record.
+     *
+     * Default: - No CIDR routing configured
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordset.html#cfn-route53-recordset-cidrroutingconfig)
+     * @param cidrRoutingConfig The object that is specified in resource record set object when you
+     * are linking a resource record set to a CIDR location. 
+     */
+    override fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfig) {
+      cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(CidrRoutingConfig.Companion::unwrap))
+    }
 
     /**
      * A comment to add on the record.
@@ -397,6 +431,9 @@ public open class CaaAmazonRecord(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.route53.CaaAmazonRecord.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

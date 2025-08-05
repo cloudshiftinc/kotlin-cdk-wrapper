@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.IRule
 import io.cloudshiftdev.awscdk.services.events.RuleTargetInput
 import io.cloudshiftdev.awscdk.services.events.RuleTargetInputProperties
+import kotlin.Deprecated
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -20,7 +21,7 @@ import kotlin.jvm.JvmName
  * LogGroup logGroup;
  * Rule rule;
  * rule.addTarget(CloudWatchLogGroup.Builder.create(logGroup)
- * .logEvent(LogGroupTargetInput.fromObject(LogGroupTargetInputOptions.builder()
+ * .logEvent(LogGroupTargetInput.fromObjectV2(LogGroupTargetInputOptions.builder()
  * .timestamp(EventField.fromPath("$.time"))
  * .message(EventField.fromPath("$.detail-type"))
  * .build()))
@@ -43,16 +44,30 @@ public abstract class LogGroupTargetInput(
   ) : LogGroupTargetInput(cdkObject)
 
   public companion object {
+    @Deprecated(message = "deprecated in CDK")
     public fun fromObject(): RuleTargetInput =
         software.amazon.awscdk.services.events.targets.LogGroupTargetInput.fromObject().let(RuleTargetInput::wrap)
 
+    @Deprecated(message = "deprecated in CDK")
     public fun fromObject(options: LogGroupTargetInputOptions): RuleTargetInput =
         software.amazon.awscdk.services.events.targets.LogGroupTargetInput.fromObject(options.let(LogGroupTargetInputOptions.Companion::unwrap)).let(RuleTargetInput::wrap)
 
+    @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("898b6d05b662d8870ea1382acc3991a186e6104ddb70b26df0483ceecd8265c6")
     public fun fromObject(options: LogGroupTargetInputOptions.Builder.() -> Unit): RuleTargetInput =
         fromObject(LogGroupTargetInputOptions(options))
+
+    public fun fromObjectV2(): LogGroupTargetInput =
+        software.amazon.awscdk.services.events.targets.LogGroupTargetInput.fromObjectV2().let(LogGroupTargetInput::wrap)
+
+    public fun fromObjectV2(options: LogGroupTargetInputOptions): LogGroupTargetInput =
+        software.amazon.awscdk.services.events.targets.LogGroupTargetInput.fromObjectV2(options.let(LogGroupTargetInputOptions.Companion::unwrap)).let(LogGroupTargetInput::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5f2d6a1229c125350d99563fa618dfe1e8fc60ae8084f2c1acd517fe4cff25c2")
+    public fun fromObjectV2(options: LogGroupTargetInputOptions.Builder.() -> Unit):
+        LogGroupTargetInput = fromObjectV2(LogGroupTargetInputOptions(options))
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.LogGroupTargetInput):

@@ -19,8 +19,9 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The AWS::MediaConnect::FlowEntitlement resource defines the permission that an AWS account grants
- * to another AWS account to allow access to the content in a specific AWS Elemental MediaConnect flow.
+ * The `AWS::MediaConnect::FlowEntitlement` resource defines the permission that an AWS account
+ * grants to another AWS account to allow access to the content in a specific AWS Elemental
+ * MediaConnect flow.
  *
  * The content originator grants an entitlement to a specific AWS account (the subscriber). When an
  * entitlement is granted, the subscriber can create a flow using the originator's flow as the source.
@@ -111,30 +112,26 @@ public open class CfnFlowEntitlement(
   }
 
   /**
-   * The type of encryption that MediaConnect will use on the output that is associated with the
-   * entitlement.
+   * Information about the encryption of the flow.
    */
   public open fun encryption(): Any? = unwrap(this).getEncryption()
 
   /**
-   * The type of encryption that MediaConnect will use on the output that is associated with the
-   * entitlement.
+   * Information about the encryption of the flow.
    */
   public open fun encryption(`value`: IResolvable) {
     unwrap(this).setEncryption(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The type of encryption that MediaConnect will use on the output that is associated with the
-   * entitlement.
+   * Information about the encryption of the flow.
    */
   public open fun encryption(`value`: EncryptionProperty) {
     unwrap(this).setEncryption(`value`.let(EncryptionProperty.Companion::unwrap))
   }
 
   /**
-   * The type of encryption that MediaConnect will use on the output that is associated with the
-   * entitlement.
+   * Information about the encryption of the flow.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("5caf46de7ac40526053d4bc96be79d10f8d8453da8a3e3dfbdf8c0fcec50517e")
@@ -234,32 +231,26 @@ public open class CfnFlowEntitlement(
     public fun description(description: String)
 
     /**
-     * The type of encryption that MediaConnect will use on the output that is associated with the
-     * entitlement.
+     * Information about the encryption of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-encryption)
-     * @param encryption The type of encryption that MediaConnect will use on the output that is
-     * associated with the entitlement. 
+     * @param encryption Information about the encryption of the flow. 
      */
     public fun encryption(encryption: IResolvable)
 
     /**
-     * The type of encryption that MediaConnect will use on the output that is associated with the
-     * entitlement.
+     * Information about the encryption of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-encryption)
-     * @param encryption The type of encryption that MediaConnect will use on the output that is
-     * associated with the entitlement. 
+     * @param encryption Information about the encryption of the flow. 
      */
     public fun encryption(encryption: EncryptionProperty)
 
     /**
-     * The type of encryption that MediaConnect will use on the output that is associated with the
-     * entitlement.
+     * Information about the encryption of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-encryption)
-     * @param encryption The type of encryption that MediaConnect will use on the output that is
-     * associated with the entitlement. 
+     * @param encryption Information about the encryption of the flow. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d33a6a6d917eef73825c3446bf9108c8e3d1046148d7e4a6af45c3aaaeebd876")
@@ -354,36 +345,30 @@ public open class CfnFlowEntitlement(
     }
 
     /**
-     * The type of encryption that MediaConnect will use on the output that is associated with the
-     * entitlement.
+     * Information about the encryption of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-encryption)
-     * @param encryption The type of encryption that MediaConnect will use on the output that is
-     * associated with the entitlement. 
+     * @param encryption Information about the encryption of the flow. 
      */
     override fun encryption(encryption: IResolvable) {
       cdkBuilder.encryption(encryption.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The type of encryption that MediaConnect will use on the output that is associated with the
-     * entitlement.
+     * Information about the encryption of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-encryption)
-     * @param encryption The type of encryption that MediaConnect will use on the output that is
-     * associated with the entitlement. 
+     * @param encryption Information about the encryption of the flow. 
      */
     override fun encryption(encryption: EncryptionProperty) {
       cdkBuilder.encryption(encryption.let(EncryptionProperty.Companion::unwrap))
     }
 
     /**
-     * The type of encryption that MediaConnect will use on the output that is associated with the
-     * entitlement.
+     * Information about the encryption of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-encryption)
-     * @param encryption The type of encryption that MediaConnect will use on the output that is
-     * associated with the entitlement. 
+     * @param encryption Information about the encryption of the flow. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d33a6a6d917eef73825c3446bf9108c8e3d1046148d7e4a6af45c3aaaeebd876")
@@ -566,8 +551,8 @@ public open class CfnFlowEntitlement(
     public fun resourceId(): String? = unwrap(this).getResourceId()
 
     /**
-     * The Amazon Resource Name (ARN) of the role that you created during setup (when you set up
-     * MediaConnect as a trusted entity).
+     * The ARN of the role that you created during setup (when you set up MediaConnect as a trusted
+     * entity).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowentitlement-encryption.html#cfn-mediaconnect-flowentitlement-encryption-rolearn)
      */
@@ -575,6 +560,8 @@ public open class CfnFlowEntitlement(
 
     /**
      * The ARN of the secret that you created in AWS Secrets Manager to store the encryption key.
+     *
+     * This parameter is required for static key encryption and is not valid for SPEKE encryption.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowentitlement-encryption.html#cfn-mediaconnect-flowentitlement-encryption-secretarn)
      */
@@ -637,14 +624,15 @@ public open class CfnFlowEntitlement(
       public fun resourceId(resourceId: String)
 
       /**
-       * @param roleArn The Amazon Resource Name (ARN) of the role that you created during setup
-       * (when you set up MediaConnect as a trusted entity). 
+       * @param roleArn The ARN of the role that you created during setup (when you set up
+       * MediaConnect as a trusted entity). 
        */
       public fun roleArn(roleArn: String)
 
       /**
        * @param secretArn The ARN of the secret that you created in AWS Secrets Manager to store the
        * encryption key.
+       * This parameter is required for static key encryption and is not valid for SPEKE encryption.
        */
       public fun secretArn(secretArn: String)
 
@@ -716,8 +704,8 @@ public open class CfnFlowEntitlement(
       }
 
       /**
-       * @param roleArn The Amazon Resource Name (ARN) of the role that you created during setup
-       * (when you set up MediaConnect as a trusted entity). 
+       * @param roleArn The ARN of the role that you created during setup (when you set up
+       * MediaConnect as a trusted entity). 
        */
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
@@ -726,6 +714,7 @@ public open class CfnFlowEntitlement(
       /**
        * @param secretArn The ARN of the secret that you created in AWS Secrets Manager to store the
        * encryption key.
+       * This parameter is required for static key encryption and is not valid for SPEKE encryption.
        */
       override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
@@ -812,8 +801,8 @@ public open class CfnFlowEntitlement(
       override fun resourceId(): String? = unwrap(this).getResourceId()
 
       /**
-       * The Amazon Resource Name (ARN) of the role that you created during setup (when you set up
-       * MediaConnect as a trusted entity).
+       * The ARN of the role that you created during setup (when you set up MediaConnect as a
+       * trusted entity).
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowentitlement-encryption.html#cfn-mediaconnect-flowentitlement-encryption-rolearn)
        */
@@ -821,6 +810,8 @@ public open class CfnFlowEntitlement(
 
       /**
        * The ARN of the secret that you created in AWS Secrets Manager to store the encryption key.
+       *
+       * This parameter is required for static key encryption and is not valid for SPEKE encryption.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowentitlement-encryption.html#cfn-mediaconnect-flowentitlement-encryption-secretarn)
        */

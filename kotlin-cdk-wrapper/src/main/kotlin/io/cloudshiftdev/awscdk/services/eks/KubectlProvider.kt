@@ -19,7 +19,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * ```
  * IRole handlerRole = Role.fromRoleArn(this, "HandlerRole",
  * "arn:aws:iam::123456789012:role/lambda-role");
- * // get the serivceToken from the custom resource provider
+ * // get the serviceToken from the custom resource provider
  * String functionArn = Function.fromFunctionName(this, "ProviderOnEventFunc",
  * "ProviderframeworkonEvent-XXX").getFunctionArn();
  * IKubectlProvider kubectlProvider = KubectlProvider.fromKubectlProviderAttributes(this,

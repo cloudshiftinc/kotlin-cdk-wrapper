@@ -43,6 +43,17 @@ public interface AlarmWidgetProps : MetricWidgetProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param accountId The AWS account ID where the metrics are located.
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     */
+    public fun accountId(accountId: String)
+
+    /**
      * @param alarm The alarm to show. 
      */
     public fun alarm(alarm: IAlarm)
@@ -83,6 +94,19 @@ public interface AlarmWidgetProps : MetricWidgetProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.AlarmWidgetProps.Builder =
         software.amazon.awscdk.services.cloudwatch.AlarmWidgetProps.builder()
+
+    /**
+     * @param accountId The AWS account ID where the metrics are located.
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     */
+    override fun accountId(accountId: String) {
+      cdkBuilder.accountId(accountId)
+    }
 
     /**
      * @param alarm The alarm to show. 
@@ -142,6 +166,20 @@ public interface AlarmWidgetProps : MetricWidgetProps {
     cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmWidgetProps,
   ) : CdkObject(cdkObject),
       AlarmWidgetProps {
+    /**
+     * The AWS account ID where the metrics are located.
+     *
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     *
+     * Default: - Current account
+     */
+    override fun accountId(): String? = unwrap(this).getAccountId()
+
     /**
      * The alarm to show.
      */

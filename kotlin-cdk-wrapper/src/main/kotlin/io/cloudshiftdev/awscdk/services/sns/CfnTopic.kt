@@ -49,6 +49,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .successFeedbackSampleRate("successFeedbackSampleRate")
  * .build()))
  * .displayName("displayName")
+ * .fifoThroughputScope("fifoThroughputScope")
  * .fifoTopic(false)
  * .kmsMasterKeyId("kmsMasterKeyId")
  * .signatureVersion("signatureVersion")
@@ -192,6 +193,18 @@ public open class CfnTopic(
    */
   public open fun displayName(`value`: String) {
     unwrap(this).setDisplayName(`value`)
+  }
+
+  /**
+   * Specifies the throughput quota and deduplication behavior to apply for the FIFO topic.
+   */
+  public open fun fifoThroughputScope(): String? = unwrap(this).getFifoThroughputScope()
+
+  /**
+   * Specifies the throughput quota and deduplication behavior to apply for the FIFO topic.
+   */
+  public open fun fifoThroughputScope(`value`: String) {
+    unwrap(this).setFifoThroughputScope(`value`)
   }
 
   /**
@@ -458,6 +471,17 @@ public open class CfnTopic(
      * @param displayName The display name to use for an Amazon SNS topic with SMS subscriptions. 
      */
     public fun displayName(displayName: String)
+
+    /**
+     * Specifies the throughput quota and deduplication behavior to apply for the FIFO topic.
+     *
+     * Valid values are `Topic` or `MessageGroup` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-fifothroughputscope)
+     * @param fifoThroughputScope Specifies the throughput quota and deduplication behavior to apply
+     * for the FIFO topic. 
+     */
+    public fun fifoThroughputScope(fifoThroughputScope: String)
 
     /**
      * Set to true to create a FIFO topic.
@@ -765,6 +789,19 @@ public open class CfnTopic(
      */
     override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
+    }
+
+    /**
+     * Specifies the throughput quota and deduplication behavior to apply for the FIFO topic.
+     *
+     * Valid values are `Topic` or `MessageGroup` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-fifothroughputscope)
+     * @param fifoThroughputScope Specifies the throughput quota and deduplication behavior to apply
+     * for the FIFO topic. 
+     */
+    override fun fifoThroughputScope(fifoThroughputScope: String) {
+      cdkBuilder.fifoThroughputScope(fifoThroughputScope)
     }
 
     /**

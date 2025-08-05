@@ -26,7 +26,7 @@ import kotlin.Unit
  * .build());
  * // An Rule that describes the event trigger (in this case a scheduled run)
  * Rule rule = Rule.Builder.create(this, "Rule")
- * .schedule(Schedule.expression("rate(1 min)"))
+ * .schedule(Schedule.expression("rate(1 minute)"))
  * .build();
  * // Pass an environment variable to the container 'TheContainer' in the task
  * rule.addTarget(EcsTask.Builder.create()

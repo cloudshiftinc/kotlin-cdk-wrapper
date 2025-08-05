@@ -16,8 +16,7 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.kinesisfirehose.alpha.*;
- * import io.cloudshiftdev.awscdk.services.kinesisfirehose.destinations.alpha.*;
+ * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
  * LogGroup logGroupDestination = LogGroup.Builder.create(this, "LogGroupLambdaAudit")
  * .logGroupName("auditDestinationForCDK")
  * .build();
@@ -44,7 +43,7 @@ import kotlin.collections.List
  */
 public interface DataProtectionPolicyProps {
   /**
-   * Amazon Kinesis Data Firehose delivery stream to send audit findings to.
+   * Amazon Data Firehose delivery stream to send audit findings to.
    *
    * The delivery stream must already exist.
    *
@@ -103,8 +102,8 @@ public interface DataProtectionPolicyProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param deliveryStreamNameAuditDestination Amazon Kinesis Data Firehose delivery stream to
-     * send audit findings to.
+     * @param deliveryStreamNameAuditDestination Amazon Data Firehose delivery stream to send audit
+     * findings to.
      * The delivery stream must already exist.
      */
     public fun deliveryStreamNameAuditDestination(deliveryStreamNameAuditDestination: String)
@@ -155,8 +154,8 @@ public interface DataProtectionPolicyProps {
         software.amazon.awscdk.services.logs.DataProtectionPolicyProps.builder()
 
     /**
-     * @param deliveryStreamNameAuditDestination Amazon Kinesis Data Firehose delivery stream to
-     * send audit findings to.
+     * @param deliveryStreamNameAuditDestination Amazon Data Firehose delivery stream to send audit
+     * findings to.
      * The delivery stream must already exist.
      */
     override fun deliveryStreamNameAuditDestination(deliveryStreamNameAuditDestination: String) {
@@ -223,7 +222,7 @@ public interface DataProtectionPolicyProps {
   ) : CdkObject(cdkObject),
       DataProtectionPolicyProps {
     /**
-     * Amazon Kinesis Data Firehose delivery stream to send audit findings to.
+     * Amazon Data Firehose delivery stream to send audit findings to.
      *
      * The delivery stream must already exist.
      *

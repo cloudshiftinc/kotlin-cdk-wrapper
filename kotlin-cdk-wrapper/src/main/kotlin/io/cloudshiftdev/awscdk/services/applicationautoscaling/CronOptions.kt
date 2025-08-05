@@ -27,6 +27,7 @@ import kotlin.Unit
  * .taskImageOptions(ApplicationLoadBalancedTaskImageOptions.builder()
  * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
  * .build())
+ * .minHealthyPercent(100)
  * .build();
  * ScalableTaskCount scalableTarget =
  * loadBalancedFargateService.service.autoScaleTaskCount(EnableScalingProps.builder()

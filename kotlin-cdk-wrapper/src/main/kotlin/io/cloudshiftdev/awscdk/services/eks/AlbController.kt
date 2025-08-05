@@ -28,6 +28,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .cluster(cluster)
  * .version(albControllerVersion)
  * // the properties below are optional
+ * .additionalHelmChartValues(AlbControllerHelmChartOptions.builder()
+ * .enableWaf(false)
+ * .enableWafv2(false)
+ * .build())
  * .policy(policy)
  * .repository("repository")
  * .build();
@@ -59,6 +63,27 @@ public open class AlbController(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Additional helm chart values for ALB controller.
+     *
+     * Default: - no additional helm chart values
+     *
+     * @param additionalHelmChartValues Additional helm chart values for ALB controller. 
+     */
+    public fun additionalHelmChartValues(additionalHelmChartValues: AlbControllerHelmChartOptions)
+
+    /**
+     * Additional helm chart values for ALB controller.
+     *
+     * Default: - no additional helm chart values
+     *
+     * @param additionalHelmChartValues Additional helm chart values for ALB controller. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7a2c5aa5e92b11aa645758f14d445bd1cb259110e561adb0d0ee3cf3a2ccea94")
+    public
+        fun additionalHelmChartValues(additionalHelmChartValues: AlbControllerHelmChartOptions.Builder.() -> Unit)
+
     /**
      * [disable-awslint:ref-via-interface] Cluster to install the controller onto.
      *
@@ -108,6 +133,31 @@ public open class AlbController(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.eks.AlbController.Builder =
         software.amazon.awscdk.services.eks.AlbController.Builder.create(scope, id)
+
+    /**
+     * Additional helm chart values for ALB controller.
+     *
+     * Default: - no additional helm chart values
+     *
+     * @param additionalHelmChartValues Additional helm chart values for ALB controller. 
+     */
+    override
+        fun additionalHelmChartValues(additionalHelmChartValues: AlbControllerHelmChartOptions) {
+      cdkBuilder.additionalHelmChartValues(additionalHelmChartValues.let(AlbControllerHelmChartOptions.Companion::unwrap))
+    }
+
+    /**
+     * Additional helm chart values for ALB controller.
+     *
+     * Default: - no additional helm chart values
+     *
+     * @param additionalHelmChartValues Additional helm chart values for ALB controller. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7a2c5aa5e92b11aa645758f14d445bd1cb259110e561adb0d0ee3cf3a2ccea94")
+    override
+        fun additionalHelmChartValues(additionalHelmChartValues: AlbControllerHelmChartOptions.Builder.() -> Unit):
+        Unit = additionalHelmChartValues(AlbControllerHelmChartOptions(additionalHelmChartValues))
 
     /**
      * [disable-awslint:ref-via-interface] Cluster to install the controller onto.

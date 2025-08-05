@@ -270,12 +270,12 @@ public open class CfnContainerRecipe(
   }
 
   /**
-   * The base image for the container recipe.
+   * The base image for customizations specified in the container recipe.
    */
   public open fun parentImage(): String = unwrap(this).getParentImage()
 
   /**
-   * The base image for the container recipe.
+   * The base image for customizations specified in the container recipe.
    */
   public open fun parentImage(`value`: String) {
     unwrap(this).setParentImage(`value`)
@@ -498,10 +498,13 @@ public open class CfnContainerRecipe(
     public fun name(name: String)
 
     /**
-     * The base image for the container recipe.
+     * The base image for customizations specified in the container recipe.
+     *
+     * This can contain an Image Builder image resource ARN or a container image URI, for example
+     * `amazonlinux:latest` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-parentimage)
-     * @param parentImage The base image for the container recipe. 
+     * @param parentImage The base image for customizations specified in the container recipe. 
      */
     public fun parentImage(parentImage: String)
 
@@ -746,10 +749,13 @@ public open class CfnContainerRecipe(
     }
 
     /**
-     * The base image for the container recipe.
+     * The base image for customizations specified in the container recipe.
+     *
+     * This can contain an Image Builder image resource ARN or a container image URI, for example
+     * `amazonlinux:latest` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-parentimage)
-     * @param parentImage The base image for the container recipe. 
+     * @param parentImage The base image for customizations specified in the container recipe. 
      */
     override fun parentImage(parentImage: String) {
       cdkBuilder.parentImage(parentImage)
@@ -1679,9 +1685,12 @@ public open class CfnContainerRecipe(
     public fun blockDeviceMappings(): Any? = unwrap(this).getBlockDeviceMappings()
 
     /**
-     * The AMI ID to use as the base image for a container build and test instance.
+     * The base image for a container build and test instance.
      *
-     * If not specified, Image Builder will use the appropriate ECS-optimized AMI as a base image.
+     * This can contain an AMI ID or it can specify an AWS Systems Manager (SSM) Parameter Store
+     * Parameter, prefixed by `ssm:` , followed by the parameter name or ARN.
+     *
+     * If not specified, Image Builder uses the appropriate ECS-optimized AMI as a base image.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-instanceconfiguration.html#cfn-imagebuilder-containerrecipe-instanceconfiguration-image)
      */
@@ -1711,8 +1720,11 @@ public open class CfnContainerRecipe(
       public fun blockDeviceMappings(vararg blockDeviceMappings: Any)
 
       /**
-       * @param image The AMI ID to use as the base image for a container build and test instance.
-       * If not specified, Image Builder will use the appropriate ECS-optimized AMI as a base image.
+       * @param image The base image for a container build and test instance.
+       * This can contain an AMI ID or it can specify an AWS Systems Manager (SSM) Parameter Store
+       * Parameter, prefixed by `ssm:` , followed by the parameter name or ARN.
+       *
+       * If not specified, Image Builder uses the appropriate ECS-optimized AMI as a base image.
        */
       public fun image(image: String)
     }
@@ -1747,8 +1759,11 @@ public open class CfnContainerRecipe(
           blockDeviceMappings(blockDeviceMappings.toList())
 
       /**
-       * @param image The AMI ID to use as the base image for a container build and test instance.
-       * If not specified, Image Builder will use the appropriate ECS-optimized AMI as a base image.
+       * @param image The base image for a container build and test instance.
+       * This can contain an AMI ID or it can specify an AWS Systems Manager (SSM) Parameter Store
+       * Parameter, prefixed by `ssm:` , followed by the parameter name or ARN.
+       *
+       * If not specified, Image Builder uses the appropriate ECS-optimized AMI as a base image.
        */
       override fun image(image: String) {
         cdkBuilder.image(image)
@@ -1771,9 +1786,12 @@ public open class CfnContainerRecipe(
       override fun blockDeviceMappings(): Any? = unwrap(this).getBlockDeviceMappings()
 
       /**
-       * The AMI ID to use as the base image for a container build and test instance.
+       * The base image for a container build and test instance.
        *
-       * If not specified, Image Builder will use the appropriate ECS-optimized AMI as a base image.
+       * This can contain an AMI ID or it can specify an AWS Systems Manager (SSM) Parameter Store
+       * Parameter, prefixed by `ssm:` , followed by the parameter name or ARN.
+       *
+       * If not specified, Image Builder uses the appropriate ECS-optimized AMI as a base image.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-instanceconfiguration.html#cfn-imagebuilder-containerrecipe-instanceconfiguration-image)
        */

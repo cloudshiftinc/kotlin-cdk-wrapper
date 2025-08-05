@@ -83,19 +83,19 @@ public open class CfnApiCache(
   }
 
   /**
-   * At-rest encryption flag for cache.
+   * *This parameter has been deprecated* .
    */
   public open fun atRestEncryptionEnabled(): Any? = unwrap(this).getAtRestEncryptionEnabled()
 
   /**
-   * At-rest encryption flag for cache.
+   * *This parameter has been deprecated* .
    */
   public open fun atRestEncryptionEnabled(`value`: Boolean) {
     unwrap(this).setAtRestEncryptionEnabled(`value`)
   }
 
   /**
-   * At-rest encryption flag for cache.
+   * *This parameter has been deprecated* .
    */
   public open fun atRestEncryptionEnabled(`value`: IResolvable) {
     unwrap(this).setAtRestEncryptionEnabled(`value`.let(IResolvable.Companion::unwrap))
@@ -132,19 +132,19 @@ public open class CfnApiCache(
   }
 
   /**
-   * Transit encryption flag when connecting to cache.
+   * *This parameter has been deprecated* .
    */
   public open fun transitEncryptionEnabled(): Any? = unwrap(this).getTransitEncryptionEnabled()
 
   /**
-   * Transit encryption flag when connecting to cache.
+   * *This parameter has been deprecated* .
    */
   public open fun transitEncryptionEnabled(`value`: Boolean) {
     unwrap(this).setTransitEncryptionEnabled(`value`)
   }
 
   /**
-   * Transit encryption flag when connecting to cache.
+   * *This parameter has been deprecated* .
    */
   public open fun transitEncryptionEnabled(`value`: IResolvable) {
     unwrap(this).setTransitEncryptionEnabled(`value`.let(IResolvable.Companion::unwrap))
@@ -186,8 +186,11 @@ public open class CfnApiCache(
     /**
      * Caching behavior.
      *
-     * * *FULL_REQUEST_CACHING* : All requests are fully cached.
+     * * *FULL_REQUEST_CACHING* : All requests from the same user are cached. Individual resolvers
+     * are automatically cached. All API calls will try to return responses from the cache.
      * * *PER_RESOLVER_CACHING* : Individual resolvers that you specify are cached.
+     * * *OPERATION_LEVEL_CACHING* : Full requests are cached together and returned without
+     * executing resolvers.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-apicachingbehavior)
      * @param apiCachingBehavior Caching behavior. 
@@ -203,22 +206,22 @@ public open class CfnApiCache(
     public fun apiId(apiId: String)
 
     /**
-     * At-rest encryption flag for cache.
+     * *This parameter has been deprecated* .
      *
-     * You cannot update this setting after creation.
+     * At-rest encryption flag for cache. You cannot update this setting after creation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-atrestencryptionenabled)
-     * @param atRestEncryptionEnabled At-rest encryption flag for cache. 
+     * @param atRestEncryptionEnabled *This parameter has been deprecated* . 
      */
     public fun atRestEncryptionEnabled(atRestEncryptionEnabled: Boolean)
 
     /**
-     * At-rest encryption flag for cache.
+     * *This parameter has been deprecated* .
      *
-     * You cannot update this setting after creation.
+     * At-rest encryption flag for cache. You cannot update this setting after creation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-atrestencryptionenabled)
-     * @param atRestEncryptionEnabled At-rest encryption flag for cache. 
+     * @param atRestEncryptionEnabled *This parameter has been deprecated* . 
      */
     public fun atRestEncryptionEnabled(atRestEncryptionEnabled: IResolvable)
 
@@ -241,22 +244,24 @@ public open class CfnApiCache(
     public fun healthMetricsConfig(healthMetricsConfig: String)
 
     /**
-     * Transit encryption flag when connecting to cache.
+     * *This parameter has been deprecated* .
      *
-     * You cannot update this setting after creation.
+     * Transit encryption flag when connecting to cache. You cannot update this setting after
+     * creation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-transitencryptionenabled)
-     * @param transitEncryptionEnabled Transit encryption flag when connecting to cache. 
+     * @param transitEncryptionEnabled *This parameter has been deprecated* . 
      */
     public fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean)
 
     /**
-     * Transit encryption flag when connecting to cache.
+     * *This parameter has been deprecated* .
      *
-     * You cannot update this setting after creation.
+     * Transit encryption flag when connecting to cache. You cannot update this setting after
+     * creation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-transitencryptionenabled)
-     * @param transitEncryptionEnabled Transit encryption flag when connecting to cache. 
+     * @param transitEncryptionEnabled *This parameter has been deprecated* . 
      */
     public fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable)
 
@@ -311,8 +316,11 @@ public open class CfnApiCache(
     /**
      * Caching behavior.
      *
-     * * *FULL_REQUEST_CACHING* : All requests are fully cached.
+     * * *FULL_REQUEST_CACHING* : All requests from the same user are cached. Individual resolvers
+     * are automatically cached. All API calls will try to return responses from the cache.
      * * *PER_RESOLVER_CACHING* : Individual resolvers that you specify are cached.
+     * * *OPERATION_LEVEL_CACHING* : Full requests are cached together and returned without
+     * executing resolvers.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-apicachingbehavior)
      * @param apiCachingBehavior Caching behavior. 
@@ -332,24 +340,24 @@ public open class CfnApiCache(
     }
 
     /**
-     * At-rest encryption flag for cache.
+     * *This parameter has been deprecated* .
      *
-     * You cannot update this setting after creation.
+     * At-rest encryption flag for cache. You cannot update this setting after creation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-atrestencryptionenabled)
-     * @param atRestEncryptionEnabled At-rest encryption flag for cache. 
+     * @param atRestEncryptionEnabled *This parameter has been deprecated* . 
      */
     override fun atRestEncryptionEnabled(atRestEncryptionEnabled: Boolean) {
       cdkBuilder.atRestEncryptionEnabled(atRestEncryptionEnabled)
     }
 
     /**
-     * At-rest encryption flag for cache.
+     * *This parameter has been deprecated* .
      *
-     * You cannot update this setting after creation.
+     * At-rest encryption flag for cache. You cannot update this setting after creation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-atrestencryptionenabled)
-     * @param atRestEncryptionEnabled At-rest encryption flag for cache. 
+     * @param atRestEncryptionEnabled *This parameter has been deprecated* . 
      */
     override fun atRestEncryptionEnabled(atRestEncryptionEnabled: IResolvable) {
       cdkBuilder.atRestEncryptionEnabled(atRestEncryptionEnabled.let(IResolvable.Companion::unwrap))
@@ -376,24 +384,26 @@ public open class CfnApiCache(
     }
 
     /**
-     * Transit encryption flag when connecting to cache.
+     * *This parameter has been deprecated* .
      *
-     * You cannot update this setting after creation.
+     * Transit encryption flag when connecting to cache. You cannot update this setting after
+     * creation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-transitencryptionenabled)
-     * @param transitEncryptionEnabled Transit encryption flag when connecting to cache. 
+     * @param transitEncryptionEnabled *This parameter has been deprecated* . 
      */
     override fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean) {
       cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled)
     }
 
     /**
-     * Transit encryption flag when connecting to cache.
+     * *This parameter has been deprecated* .
      *
-     * You cannot update this setting after creation.
+     * Transit encryption flag when connecting to cache. You cannot update this setting after
+     * creation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-transitencryptionenabled)
-     * @param transitEncryptionEnabled Transit encryption flag when connecting to cache. 
+     * @param transitEncryptionEnabled *This parameter has been deprecated* . 
      */
     override fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable) {
       cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled.let(IResolvable.Companion::unwrap))

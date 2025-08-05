@@ -609,6 +609,9 @@ public open class ServerDeploymentGroup(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup.PROPERTY_INJECTION_ID
+
     public fun fromServerDeploymentGroupAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -17,14 +17,26 @@ import kotlin.collections.List
  * Example:
  *
  * ```
+ * IVpcEndpoint someEndpoint;
  * RestApi api = RestApi.Builder.create(this, "api")
  * .endpointConfiguration(EndpointConfiguration.builder()
- * .types(List.of(EndpointType.EDGE))
+ * .types(List.of(EndpointType.PRIVATE))
+ * .vpcEndpoints(List.of(someEndpoint))
  * .build())
  * .build();
  * ```
  */
 public interface EndpointConfiguration {
+  /**
+   * The IP address types that can invoke the API.
+   *
+   * Default: undefined - AWS default is DUAL_STACK for private API, IPV4 for all other APIs.
+   *
+   * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-ip-address-type.html)
+   */
+  public fun ipAddressType(): IpAddressType? =
+      unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
+
   /**
    * A list of endpoint types of an API or its custom domain name.
    *
@@ -45,6 +57,11 @@ public interface EndpointConfiguration {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param ipAddressType The IP address types that can invoke the API.
+     */
+    public fun ipAddressType(ipAddressType: IpAddressType)
+
     /**
      * @param types A list of endpoint types of an API or its custom domain name. 
      */
@@ -69,6 +86,13 @@ public interface EndpointConfiguration {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.EndpointConfiguration.Builder
         = software.amazon.awscdk.services.apigateway.EndpointConfiguration.builder()
+
+    /**
+     * @param ipAddressType The IP address types that can invoke the API.
+     */
+    override fun ipAddressType(ipAddressType: IpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
+    }
 
     /**
      * @param types A list of endpoint types of an API or its custom domain name. 
@@ -103,6 +127,16 @@ public interface EndpointConfiguration {
     cdkObject: software.amazon.awscdk.services.apigateway.EndpointConfiguration,
   ) : CdkObject(cdkObject),
       EndpointConfiguration {
+    /**
+     * The IP address types that can invoke the API.
+     *
+     * Default: undefined - AWS default is DUAL_STACK for private API, IPV4 for all other APIs.
+     *
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-ip-address-type.html)
+     */
+    override fun ipAddressType(): IpAddressType? =
+        unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
+
     /**
      * A list of endpoint types of an API or its custom domain name.
      *

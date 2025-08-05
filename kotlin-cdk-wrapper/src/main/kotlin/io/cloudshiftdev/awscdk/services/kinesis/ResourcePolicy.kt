@@ -29,6 +29,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * ```
  * Stream stream = new Stream(this, "MyStream");
+ * StreamConsumer streamConsumer = StreamConsumer.Builder.create(this, "MyStreamConsumer")
+ * .streamConsumerName("MyStreamConsumer")
+ * .stream(stream)
+ * .build();
  * // create a custom policy document
  * PolicyDocument policyDocument = PolicyDocument.Builder.create()
  * .assignSids(true)
@@ -39,10 +43,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .principals(List.of(new AnyPrincipal()))
  * .build()))
  * .build();
- * // create a resource policy manually
- * // create a resource policy manually
+ * // create a stream resource policy manually
+ * // create a stream resource policy manually
  * ResourcePolicy.Builder.create(this, "ResourcePolicy")
  * .stream(stream)
+ * .policyDocument(policyDocument)
+ * .build();
+ * // create a stream consumer resource policy manually
+ * // create a stream consumer resource policy manually
+ * ResourcePolicy.Builder.create(this, "ResourcePolicy")
+ * .streamConsumer(streamConsumer)
  * .policyDocument(policyDocument)
  * .build();
  * ```
@@ -99,9 +109,24 @@ public open class ResourcePolicy(
     /**
      * The stream this policy applies to.
      *
+     * Note: only one of `stream` and `streamConsumer` must be set.
+     *
+     * Default: - policy is not associated to a stream
+     *
      * @param stream The stream this policy applies to. 
      */
     public fun stream(stream: IStream)
+
+    /**
+     * The stream consumer this policy applies to.
+     *
+     * Note: only one of `stream` and `streamConsumer` must be set.
+     *
+     * Default: - policy is not associated to a consumer
+     *
+     * @param streamConsumer The stream consumer this policy applies to. 
+     */
+    public fun streamConsumer(streamConsumer: IStreamConsumer)
   }
 
   private class BuilderImpl(
@@ -137,16 +162,36 @@ public open class ResourcePolicy(
     /**
      * The stream this policy applies to.
      *
+     * Note: only one of `stream` and `streamConsumer` must be set.
+     *
+     * Default: - policy is not associated to a stream
+     *
      * @param stream The stream this policy applies to. 
      */
     override fun stream(stream: IStream) {
       cdkBuilder.stream(stream.let(IStream.Companion::unwrap))
     }
 
+    /**
+     * The stream consumer this policy applies to.
+     *
+     * Note: only one of `stream` and `streamConsumer` must be set.
+     *
+     * Default: - policy is not associated to a consumer
+     *
+     * @param streamConsumer The stream consumer this policy applies to. 
+     */
+    override fun streamConsumer(streamConsumer: IStreamConsumer) {
+      cdkBuilder.streamConsumer(streamConsumer.let(IStreamConsumer.Companion::unwrap))
+    }
+
     public fun build(): software.amazon.awscdk.services.kinesis.ResourcePolicy = cdkBuilder.build()
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.kinesis.ResourcePolicy.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

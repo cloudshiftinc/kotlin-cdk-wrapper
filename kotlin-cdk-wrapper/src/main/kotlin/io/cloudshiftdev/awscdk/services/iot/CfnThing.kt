@@ -297,14 +297,14 @@ public open class CfnThing(
        * example:.
        * `{\"attributes\":{\"string1\":\"string2\"}}`
        */
-      public fun attributes(attributes: IResolvable)
+      public fun attributes(attributes: Map<String, String>)
 
       /**
        * @param attributes A JSON string containing up to three key-value pair in JSON format. For
        * example:.
        * `{\"attributes\":{\"string1\":\"string2\"}}`
        */
-      public fun attributes(attributes: Map<String, String>)
+      public fun attributes(attributes: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -317,8 +317,8 @@ public open class CfnThing(
        * example:.
        * `{\"attributes\":{\"string1\":\"string2\"}}`
        */
-      override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
+      override fun attributes(attributes: Map<String, String>) {
+        cdkBuilder.attributes(attributes)
       }
 
       /**
@@ -326,8 +326,8 @@ public open class CfnThing(
        * example:.
        * `{\"attributes\":{\"string1\":\"string2\"}}`
        */
-      override fun attributes(attributes: Map<String, String>) {
-        cdkBuilder.attributes(attributes)
+      override fun attributes(attributes: IResolvable) {
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.iot.CfnThing.AttributePayloadProperty =

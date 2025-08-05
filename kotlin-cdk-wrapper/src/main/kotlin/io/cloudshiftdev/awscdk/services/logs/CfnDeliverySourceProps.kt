@@ -51,14 +51,21 @@ public interface CfnDeliverySourceProps {
   public fun name(): String
 
   /**
-   * The Amazon Resource Name (ARN) that uniquely identifies this delivery source.
+   * The ARN of the AWS resource that is generating and sending logs.
+   *
+   * For example,
+   * `arn:aws:workmail:us-east-1:123456789012:organization/m-1234EXAMPLEabcd1234abcd1234abcd1234`
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverysource.html#cfn-logs-deliverysource-resourcearn)
    */
   public fun resourceArn(): String? = unwrap(this).getResourceArn()
 
   /**
-   * The tags that have been assigned to this delivery source.
+   * An array of key-value pairs to apply to the delivery source.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverysource.html#cfn-logs-deliverysource-tags)
    */
@@ -81,18 +88,25 @@ public interface CfnDeliverySourceProps {
     public fun name(name: String)
 
     /**
-     * @param resourceArn The Amazon Resource Name (ARN) that uniquely identifies this delivery
-     * source.
+     * @param resourceArn The ARN of the AWS resource that is generating and sending logs.
+     * For example,
+     * `arn:aws:workmail:us-east-1:123456789012:organization/m-1234EXAMPLEabcd1234abcd1234abcd1234`
      */
     public fun resourceArn(resourceArn: String)
 
     /**
-     * @param tags The tags that have been assigned to this delivery source.
+     * @param tags An array of key-value pairs to apply to the delivery source.
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags The tags that have been assigned to this delivery source.
+     * @param tags An array of key-value pairs to apply to the delivery source.
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -117,22 +131,29 @@ public interface CfnDeliverySourceProps {
     }
 
     /**
-     * @param resourceArn The Amazon Resource Name (ARN) that uniquely identifies this delivery
-     * source.
+     * @param resourceArn The ARN of the AWS resource that is generating and sending logs.
+     * For example,
+     * `arn:aws:workmail:us-east-1:123456789012:organization/m-1234EXAMPLEabcd1234abcd1234abcd1234`
      */
     override fun resourceArn(resourceArn: String) {
       cdkBuilder.resourceArn(resourceArn)
     }
 
     /**
-     * @param tags The tags that have been assigned to this delivery source.
+     * @param tags An array of key-value pairs to apply to the delivery source.
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags The tags that have been assigned to this delivery source.
+     * @param tags An array of key-value pairs to apply to the delivery source.
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -161,14 +182,21 @@ public interface CfnDeliverySourceProps {
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * The Amazon Resource Name (ARN) that uniquely identifies this delivery source.
+     * The ARN of the AWS resource that is generating and sending logs.
+     *
+     * For example,
+     * `arn:aws:workmail:us-east-1:123456789012:organization/m-1234EXAMPLEabcd1234abcd1234abcd1234`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverysource.html#cfn-logs-deliverysource-resourcearn)
      */
     override fun resourceArn(): String? = unwrap(this).getResourceArn()
 
     /**
-     * The tags that have been assigned to this delivery source.
+     * An array of key-value pairs to apply to the delivery source.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverysource.html#cfn-logs-deliverysource-tags)
      */

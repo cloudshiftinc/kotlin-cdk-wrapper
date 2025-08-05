@@ -110,6 +110,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .resourceAssociationArn("resourceAssociationArn")
  * .build())
  * .build())
+ * .kmsKeyIdentifier("kmsKeyIdentifier")
  * .name("name")
  * .build();
  * ```
@@ -147,12 +148,29 @@ public open class CfnConnection(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
+   * Returns the Amazon Resource Name (ARN) of a connection in resource format, so it can be used in
+   * the `Resource` element of IAM permission policy statements.
+   *
+   * For more information, see [Resource types defined by Amazon
+   * EventBridge](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridge.html#amazoneventbridge-resources-for-iam-policies)
+   * in the *Service Authorization Reference* .
+   *
+   * For example, the following resource defines an IAM policy that grants permission to update a
+   * specific connection.
+   *
+   * `Resources: ExamplePolicy: Type: AWS::IAM::Policy Properties: PolicyName: ExamplePolicy
+   * PolicyDocument: Version: '2012-10-17' Statement: - Effect: Allow Action: - events:UpdateConnection
+   * Resource: - !GetAtt myConnection.ArnForPolicy`
+   */
+  public open fun attrArnForPolicy(): String = unwrap(this).getAttrArnForPolicy()
+
+  /**
    * For connections to private APIs, the Amazon Resource Name (ARN) of the resource association
    * EventBridge created between the connection and the private API's resource configuration.
    *
-   * For more information, see [Managing service network resource associations for
-   * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html#connection-private-snra)
-   * in the **Amazon EventBridge User Guide** .
+   *
+   * The value of this property is set by EventBridge . Any value you specify in your template is
+   * ignored.
    */
   public open
       fun attrAuthParametersConnectivityParametersResourceParametersResourceAssociationArn(): String
@@ -163,9 +181,9 @@ public open class CfnConnection(
    * For connections to private APIs, the Amazon Resource Name (ARN) of the resource association
    * EventBridge created between the connection and the private API's resource configuration.
    *
-   * For more information, see [Managing service network resource associations for
-   * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html#connection-private-snra)
-   * in the **Amazon EventBridge User Guide** .
+   *
+   * The value of this property is set by EventBridge . Any value you specify in your template is
+   * ignored.
    */
   public open fun attrInvocationConnectivityParametersResourceParametersResourceAssociationArn():
       String =
@@ -237,20 +255,20 @@ public open class CfnConnection(
   }
 
   /**
-   * The private resource the HTTP request will be sent to.
+   * For connections to private APIs, the parameters to use for invoking the API.
    */
   public open fun invocationConnectivityParameters(): Any? =
       unwrap(this).getInvocationConnectivityParameters()
 
   /**
-   * The private resource the HTTP request will be sent to.
+   * For connections to private APIs, the parameters to use for invoking the API.
    */
   public open fun invocationConnectivityParameters(`value`: IResolvable) {
     unwrap(this).setInvocationConnectivityParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The private resource the HTTP request will be sent to.
+   * For connections to private APIs, the parameters to use for invoking the API.
    */
   public open
       fun invocationConnectivityParameters(`value`: InvocationConnectivityParametersProperty) {
@@ -258,13 +276,27 @@ public open class CfnConnection(
   }
 
   /**
-   * The private resource the HTTP request will be sent to.
+   * For connections to private APIs, the parameters to use for invoking the API.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("38adfdd7face237c5f007ca55f16e6508595048c2eaf41b1a0a60c42985d2355")
   public open
       fun invocationConnectivityParameters(`value`: InvocationConnectivityParametersProperty.Builder.() -> Unit):
       Unit = invocationConnectivityParameters(InvocationConnectivityParametersProperty(`value`))
+
+  /**
+   * The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use
+   * a customer managed key to encrypt this connection.
+   */
+  public open fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
+
+  /**
+   * The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use
+   * a customer managed key to encrypt this connection.
+   */
+  public open fun kmsKeyIdentifier(`value`: String) {
+    unwrap(this).setKmsKeyIdentifier(`value`)
+  }
 
   /**
    * The name for the connection to create.
@@ -336,35 +368,66 @@ public open class CfnConnection(
     public fun description(description: String)
 
     /**
-     * The private resource the HTTP request will be sent to.
+     * For connections to private APIs, the parameters to use for invoking the API.
+     *
+     * For more information, see [Connecting to private
+     * APIs](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html) in the
+     * **Amazon EventBridge User Guide** .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters)
-     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
-     * to. 
+     * @param invocationConnectivityParameters For connections to private APIs, the parameters to
+     * use for invoking the API. 
      */
     public fun invocationConnectivityParameters(invocationConnectivityParameters: IResolvable)
 
     /**
-     * The private resource the HTTP request will be sent to.
+     * For connections to private APIs, the parameters to use for invoking the API.
+     *
+     * For more information, see [Connecting to private
+     * APIs](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html) in the
+     * **Amazon EventBridge User Guide** .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters)
-     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
-     * to. 
+     * @param invocationConnectivityParameters For connections to private APIs, the parameters to
+     * use for invoking the API. 
      */
     public
         fun invocationConnectivityParameters(invocationConnectivityParameters: InvocationConnectivityParametersProperty)
 
     /**
-     * The private resource the HTTP request will be sent to.
+     * For connections to private APIs, the parameters to use for invoking the API.
+     *
+     * For more information, see [Connecting to private
+     * APIs](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html) in the
+     * **Amazon EventBridge User Guide** .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters)
-     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
-     * to. 
+     * @param invocationConnectivityParameters For connections to private APIs, the parameters to
+     * use for invoking the API. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3a337166580c9555a2a5aca7237263c17e3d8648807a680d1da4c884c851b7b2")
     public
         fun invocationConnectivityParameters(invocationConnectivityParameters: InvocationConnectivityParametersProperty.Builder.() -> Unit)
+
+    /**
+     * The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to
+     * use a customer managed key to encrypt this connection.
+     *
+     * The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.
+     *
+     * If you do not specify a customer managed key identifier, EventBridge uses an AWS owned key to
+     * encrypt the connection.
+     *
+     * For more information, see [Identify and view
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-kmskeyidentifier)
+     * @param kmsKeyIdentifier The identifier of the AWS KMS customer managed key for EventBridge to
+     * use, if you choose to use a customer managed key to encrypt this connection. 
+     */
+    public fun kmsKeyIdentifier(kmsKeyIdentifier: String)
 
     /**
      * The name for the connection to create.
@@ -444,22 +507,30 @@ public open class CfnConnection(
     }
 
     /**
-     * The private resource the HTTP request will be sent to.
+     * For connections to private APIs, the parameters to use for invoking the API.
+     *
+     * For more information, see [Connecting to private
+     * APIs](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html) in the
+     * **Amazon EventBridge User Guide** .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters)
-     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
-     * to. 
+     * @param invocationConnectivityParameters For connections to private APIs, the parameters to
+     * use for invoking the API. 
      */
     override fun invocationConnectivityParameters(invocationConnectivityParameters: IResolvable) {
       cdkBuilder.invocationConnectivityParameters(invocationConnectivityParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The private resource the HTTP request will be sent to.
+     * For connections to private APIs, the parameters to use for invoking the API.
+     *
+     * For more information, see [Connecting to private
+     * APIs](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html) in the
+     * **Amazon EventBridge User Guide** .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters)
-     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
-     * to. 
+     * @param invocationConnectivityParameters For connections to private APIs, the parameters to
+     * use for invoking the API. 
      */
     override
         fun invocationConnectivityParameters(invocationConnectivityParameters: InvocationConnectivityParametersProperty) {
@@ -467,11 +538,15 @@ public open class CfnConnection(
     }
 
     /**
-     * The private resource the HTTP request will be sent to.
+     * For connections to private APIs, the parameters to use for invoking the API.
+     *
+     * For more information, see [Connecting to private
+     * APIs](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html) in the
+     * **Amazon EventBridge User Guide** .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters)
-     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
-     * to. 
+     * @param invocationConnectivityParameters For connections to private APIs, the parameters to
+     * use for invoking the API. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3a337166580c9555a2a5aca7237263c17e3d8648807a680d1da4c884c851b7b2")
@@ -479,6 +554,27 @@ public open class CfnConnection(
         fun invocationConnectivityParameters(invocationConnectivityParameters: InvocationConnectivityParametersProperty.Builder.() -> Unit):
         Unit =
         invocationConnectivityParameters(InvocationConnectivityParametersProperty(invocationConnectivityParameters))
+
+    /**
+     * The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to
+     * use a customer managed key to encrypt this connection.
+     *
+     * The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.
+     *
+     * If you do not specify a customer managed key identifier, EventBridge uses an AWS owned key to
+     * encrypt the connection.
+     *
+     * For more information, see [Identify and view
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-kmskeyidentifier)
+     * @param kmsKeyIdentifier The identifier of the AWS KMS customer managed key for EventBridge to
+     * use, if you choose to use a customer managed key to encrypt this connection. 
+     */
+    override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
+      cdkBuilder.kmsKeyIdentifier(kmsKeyIdentifier)
+    }
 
     /**
      * The name for the connection to create.
@@ -720,6 +816,13 @@ public open class CfnConnection(
     public fun basicAuthParameters(): Any? = unwrap(this).getBasicAuthParameters()
 
     /**
+     * For private OAuth authentication endpoints. The parameters EventBridge uses to authenticate
+     * against the endpoint.
+     *
+     * For more information, see [Authorization methods for
+     * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-target-connection-auth.html)
+     * in the **Amazon EventBridge User Guide** .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-authparameters.html#cfn-events-connection-authparameters-connectivityparameters)
      */
     public fun connectivityParameters(): Any? = unwrap(this).getConnectivityParameters()
@@ -781,17 +884,29 @@ public open class CfnConnection(
           fun basicAuthParameters(basicAuthParameters: BasicAuthParametersProperty.Builder.() -> Unit)
 
       /**
-       * @param connectivityParameters the value to be set.
+       * @param connectivityParameters For private OAuth authentication endpoints. The parameters
+       * EventBridge uses to authenticate against the endpoint.
+       * For more information, see [Authorization methods for
+       * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-target-connection-auth.html)
+       * in the **Amazon EventBridge User Guide** .
        */
       public fun connectivityParameters(connectivityParameters: IResolvable)
 
       /**
-       * @param connectivityParameters the value to be set.
+       * @param connectivityParameters For private OAuth authentication endpoints. The parameters
+       * EventBridge uses to authenticate against the endpoint.
+       * For more information, see [Authorization methods for
+       * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-target-connection-auth.html)
+       * in the **Amazon EventBridge User Guide** .
        */
       public fun connectivityParameters(connectivityParameters: ConnectivityParametersProperty)
 
       /**
-       * @param connectivityParameters the value to be set.
+       * @param connectivityParameters For private OAuth authentication endpoints. The parameters
+       * EventBridge uses to authenticate against the endpoint.
+       * For more information, see [Authorization methods for
+       * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-target-connection-auth.html)
+       * in the **Amazon EventBridge User Guide** .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d0e0f26d10f7d57c423e97f54284633e5b6539da6e8946f125b45ee272ca6735")
@@ -890,21 +1005,33 @@ public open class CfnConnection(
           Unit = basicAuthParameters(BasicAuthParametersProperty(basicAuthParameters))
 
       /**
-       * @param connectivityParameters the value to be set.
+       * @param connectivityParameters For private OAuth authentication endpoints. The parameters
+       * EventBridge uses to authenticate against the endpoint.
+       * For more information, see [Authorization methods for
+       * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-target-connection-auth.html)
+       * in the **Amazon EventBridge User Guide** .
        */
       override fun connectivityParameters(connectivityParameters: IResolvable) {
         cdkBuilder.connectivityParameters(connectivityParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param connectivityParameters the value to be set.
+       * @param connectivityParameters For private OAuth authentication endpoints. The parameters
+       * EventBridge uses to authenticate against the endpoint.
+       * For more information, see [Authorization methods for
+       * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-target-connection-auth.html)
+       * in the **Amazon EventBridge User Guide** .
        */
       override fun connectivityParameters(connectivityParameters: ConnectivityParametersProperty) {
         cdkBuilder.connectivityParameters(connectivityParameters.let(ConnectivityParametersProperty.Companion::unwrap))
       }
 
       /**
-       * @param connectivityParameters the value to be set.
+       * @param connectivityParameters For private OAuth authentication endpoints. The parameters
+       * EventBridge uses to authenticate against the endpoint.
+       * For more information, see [Authorization methods for
+       * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-target-connection-auth.html)
+       * in the **Amazon EventBridge User Guide** .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d0e0f26d10f7d57c423e97f54284633e5b6539da6e8946f125b45ee272ca6735")
@@ -986,6 +1113,13 @@ public open class CfnConnection(
       override fun basicAuthParameters(): Any? = unwrap(this).getBasicAuthParameters()
 
       /**
+       * For private OAuth authentication endpoints. The parameters EventBridge uses to authenticate
+       * against the endpoint.
+       *
+       * For more information, see [Authorization methods for
+       * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-target-connection-auth.html)
+       * in the **Amazon EventBridge User Guide** .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-authparameters.html#cfn-events-connection-authparameters-connectivityparameters)
        */
       override fun connectivityParameters(): Any? = unwrap(this).getConnectivityParameters()
@@ -1467,6 +1601,13 @@ public open class CfnConnection(
   }
 
   /**
+   * If you specify a private OAuth endpoint, the parameters for EventBridge to use when
+   * authenticating against the endpoint.
+   *
+   * For more information, see [Authorization methods for
+   * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-target-connection-auth.html)
+   * in the **Amazon EventBridge User Guide** .
+   *
    * Example:
    *
    * ```
@@ -1487,6 +1628,8 @@ public open class CfnConnection(
    */
   public interface ConnectivityParametersProperty {
     /**
+     * The parameters for EventBridge to use when invoking the resource endpoint.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectivityparameters.html#cfn-events-connection-connectivityparameters-resourceparameters)
      */
     public fun resourceParameters(): Any
@@ -1497,17 +1640,20 @@ public open class CfnConnection(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param resourceParameters the value to be set. 
+       * @param resourceParameters The parameters for EventBridge to use when invoking the resource
+       * endpoint. 
        */
       public fun resourceParameters(resourceParameters: IResolvable)
 
       /**
-       * @param resourceParameters the value to be set. 
+       * @param resourceParameters The parameters for EventBridge to use when invoking the resource
+       * endpoint. 
        */
       public fun resourceParameters(resourceParameters: ResourceParametersProperty)
 
       /**
-       * @param resourceParameters the value to be set. 
+       * @param resourceParameters The parameters for EventBridge to use when invoking the resource
+       * endpoint. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("631a05aeda854718ad91124394a4b0540fae4efae6a438dd9d5f0773dcbb8d2c")
@@ -1522,21 +1668,24 @@ public open class CfnConnection(
           software.amazon.awscdk.services.events.CfnConnection.ConnectivityParametersProperty.builder()
 
       /**
-       * @param resourceParameters the value to be set. 
+       * @param resourceParameters The parameters for EventBridge to use when invoking the resource
+       * endpoint. 
        */
       override fun resourceParameters(resourceParameters: IResolvable) {
         cdkBuilder.resourceParameters(resourceParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param resourceParameters the value to be set. 
+       * @param resourceParameters The parameters for EventBridge to use when invoking the resource
+       * endpoint. 
        */
       override fun resourceParameters(resourceParameters: ResourceParametersProperty) {
         cdkBuilder.resourceParameters(resourceParameters.let(ResourceParametersProperty.Companion::unwrap))
       }
 
       /**
-       * @param resourceParameters the value to be set. 
+       * @param resourceParameters The parameters for EventBridge to use when invoking the resource
+       * endpoint. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("631a05aeda854718ad91124394a4b0540fae4efae6a438dd9d5f0773dcbb8d2c")
@@ -1554,6 +1703,8 @@ public open class CfnConnection(
     ) : CdkObject(cdkObject),
         ConnectivityParametersProperty {
       /**
+       * The parameters for EventBridge to use when invoking the resource endpoint.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectivityparameters.html#cfn-events-connection-connectivityparameters-resourceparameters)
        */
       override fun resourceParameters(): Any = unwrap(this).getResourceParameters()
@@ -1578,7 +1729,11 @@ public open class CfnConnection(
   }
 
   /**
-   * The private resource the HTTP request will be sent to.
+   * For connections to private APIs, the parameters to use for invoking the API.
+   *
+   * For more information, see [Connecting to private
+   * APIs](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html) in the
+   * **Amazon EventBridge User Guide** .
    *
    * Example:
    *
@@ -1600,6 +1755,8 @@ public open class CfnConnection(
    */
   public interface InvocationConnectivityParametersProperty {
     /**
+     * The parameters for EventBridge to use when invoking the resource endpoint.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-invocationconnectivityparameters.html#cfn-events-connection-invocationconnectivityparameters-resourceparameters)
      */
     public fun resourceParameters(): Any
@@ -1610,17 +1767,20 @@ public open class CfnConnection(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param resourceParameters the value to be set. 
+       * @param resourceParameters The parameters for EventBridge to use when invoking the resource
+       * endpoint. 
        */
       public fun resourceParameters(resourceParameters: IResolvable)
 
       /**
-       * @param resourceParameters the value to be set. 
+       * @param resourceParameters The parameters for EventBridge to use when invoking the resource
+       * endpoint. 
        */
       public fun resourceParameters(resourceParameters: ResourceParametersProperty)
 
       /**
-       * @param resourceParameters the value to be set. 
+       * @param resourceParameters The parameters for EventBridge to use when invoking the resource
+       * endpoint. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e019e752ea951abb6e5cc43613ddb0ea299ecb1685bab19de5e6655f1e5ba4c2")
@@ -1635,21 +1795,24 @@ public open class CfnConnection(
           software.amazon.awscdk.services.events.CfnConnection.InvocationConnectivityParametersProperty.builder()
 
       /**
-       * @param resourceParameters the value to be set. 
+       * @param resourceParameters The parameters for EventBridge to use when invoking the resource
+       * endpoint. 
        */
       override fun resourceParameters(resourceParameters: IResolvable) {
         cdkBuilder.resourceParameters(resourceParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param resourceParameters the value to be set. 
+       * @param resourceParameters The parameters for EventBridge to use when invoking the resource
+       * endpoint. 
        */
       override fun resourceParameters(resourceParameters: ResourceParametersProperty) {
         cdkBuilder.resourceParameters(resourceParameters.let(ResourceParametersProperty.Companion::unwrap))
       }
 
       /**
-       * @param resourceParameters the value to be set. 
+       * @param resourceParameters The parameters for EventBridge to use when invoking the resource
+       * endpoint. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e019e752ea951abb6e5cc43613ddb0ea299ecb1685bab19de5e6655f1e5ba4c2")
@@ -1667,6 +1830,8 @@ public open class CfnConnection(
     ) : CdkObject(cdkObject),
         InvocationConnectivityParametersProperty {
       /**
+       * The parameters for EventBridge to use when invoking the resource endpoint.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-invocationconnectivityparameters.html#cfn-events-connection-invocationconnectivityparameters-resourceparameters)
        */
       override fun resourceParameters(): Any = unwrap(this).getResourceParameters()
@@ -2097,6 +2262,8 @@ public open class CfnConnection(
   }
 
   /**
+   * The parameters for EventBridge to use when invoking the resource endpoint.
+   *
    * Example:
    *
    * ```
@@ -2117,15 +2284,19 @@ public open class CfnConnection(
      * For connections to private APIs, the Amazon Resource Name (ARN) of the resource association
      * EventBridge created between the connection and the private API's resource configuration.
      *
-     * For more information, see [Managing service network resource associations for
-     * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html#connection-private-snra)
-     * in the **Amazon EventBridge User Guide** .
+     *
+     * The value of this property is set by EventBridge . Any value you specify in your template is
+     * ignored.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-resourceparameters.html#cfn-events-connection-resourceparameters-resourceassociationarn)
      */
     public fun resourceAssociationArn(): String? = unwrap(this).getResourceAssociationArn()
 
     /**
+     * The Amazon Resource Name (ARN) of the Amazon VPC Lattice resource configuration for the
+     * resource endpoint.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-resourceparameters.html#cfn-events-connection-resourceparameters-resourceconfigurationarn)
      */
     public fun resourceConfigurationArn(): String
@@ -2139,14 +2310,15 @@ public open class CfnConnection(
        * @param resourceAssociationArn For connections to private APIs, the Amazon Resource Name
        * (ARN) of the resource association EventBridge created between the connection and the private
        * API's resource configuration.
-       * For more information, see [Managing service network resource associations for
-       * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html#connection-private-snra)
-       * in the **Amazon EventBridge User Guide** .
+       *
+       * The value of this property is set by EventBridge . Any value you specify in your template
+       * is ignored.
        */
       public fun resourceAssociationArn(resourceAssociationArn: String)
 
       /**
-       * @param resourceConfigurationArn the value to be set. 
+       * @param resourceConfigurationArn The Amazon Resource Name (ARN) of the Amazon VPC Lattice
+       * resource configuration for the resource endpoint. 
        */
       public fun resourceConfigurationArn(resourceConfigurationArn: String)
     }
@@ -2160,16 +2332,17 @@ public open class CfnConnection(
        * @param resourceAssociationArn For connections to private APIs, the Amazon Resource Name
        * (ARN) of the resource association EventBridge created between the connection and the private
        * API's resource configuration.
-       * For more information, see [Managing service network resource associations for
-       * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html#connection-private-snra)
-       * in the **Amazon EventBridge User Guide** .
+       *
+       * The value of this property is set by EventBridge . Any value you specify in your template
+       * is ignored.
        */
       override fun resourceAssociationArn(resourceAssociationArn: String) {
         cdkBuilder.resourceAssociationArn(resourceAssociationArn)
       }
 
       /**
-       * @param resourceConfigurationArn the value to be set. 
+       * @param resourceConfigurationArn The Amazon Resource Name (ARN) of the Amazon VPC Lattice
+       * resource configuration for the resource endpoint. 
        */
       override fun resourceConfigurationArn(resourceConfigurationArn: String) {
         cdkBuilder.resourceConfigurationArn(resourceConfigurationArn)
@@ -2188,15 +2361,19 @@ public open class CfnConnection(
        * For connections to private APIs, the Amazon Resource Name (ARN) of the resource association
        * EventBridge created between the connection and the private API's resource configuration.
        *
-       * For more information, see [Managing service network resource associations for
-       * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html#connection-private-snra)
-       * in the **Amazon EventBridge User Guide** .
+       *
+       * The value of this property is set by EventBridge . Any value you specify in your template
+       * is ignored.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-resourceparameters.html#cfn-events-connection-resourceparameters-resourceassociationarn)
        */
       override fun resourceAssociationArn(): String? = unwrap(this).getResourceAssociationArn()
 
       /**
+       * The Amazon Resource Name (ARN) of the Amazon VPC Lattice resource configuration for the
+       * resource endpoint.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-resourceparameters.html#cfn-events-connection-resourceparameters-resourceconfigurationarn)
        */
       override fun resourceConfigurationArn(): String = unwrap(this).getResourceConfigurationArn()

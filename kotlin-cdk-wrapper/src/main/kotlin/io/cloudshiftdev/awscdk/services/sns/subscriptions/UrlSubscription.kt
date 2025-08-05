@@ -238,6 +238,9 @@ public open class UrlSubscription(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.sns.subscriptions.UrlSubscription.PROPERTY_INJECTION_ID
+
     public operator fun invoke(url: String, block: Builder.() -> Unit = {}): UrlSubscription {
       val builderImpl = BuilderImpl(url)
       return UrlSubscription(builderImpl.apply(block).build())

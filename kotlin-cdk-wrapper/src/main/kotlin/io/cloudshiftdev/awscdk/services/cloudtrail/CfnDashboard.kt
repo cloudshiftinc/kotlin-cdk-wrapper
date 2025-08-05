@@ -964,7 +964,7 @@ public open class CfnDashboard(
        * widgets](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/lake-widget-properties.html)
        * in the *AWS CloudTrail User Guide* .
        */
-      public fun viewProperties(viewProperties: IResolvable)
+      public fun viewProperties(viewProperties: Map<String, String>)
 
       /**
        * @param viewProperties The view properties for the widget.
@@ -972,7 +972,7 @@ public open class CfnDashboard(
        * widgets](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/lake-widget-properties.html)
        * in the *AWS CloudTrail User Guide* .
        */
-      public fun viewProperties(viewProperties: Map<String, String>)
+      public fun viewProperties(viewProperties: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1014,8 +1014,8 @@ public open class CfnDashboard(
        * widgets](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/lake-widget-properties.html)
        * in the *AWS CloudTrail User Guide* .
        */
-      override fun viewProperties(viewProperties: IResolvable) {
-        cdkBuilder.viewProperties(viewProperties.let(IResolvable.Companion::unwrap))
+      override fun viewProperties(viewProperties: Map<String, String>) {
+        cdkBuilder.viewProperties(viewProperties)
       }
 
       /**
@@ -1024,8 +1024,8 @@ public open class CfnDashboard(
        * widgets](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/lake-widget-properties.html)
        * in the *AWS CloudTrail User Guide* .
        */
-      override fun viewProperties(viewProperties: Map<String, String>) {
-        cdkBuilder.viewProperties(viewProperties)
+      override fun viewProperties(viewProperties: IResolvable) {
+        cdkBuilder.viewProperties(viewProperties.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.cloudtrail.CfnDashboard.WidgetProperty =

@@ -4,9 +4,11 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import com.fasterxml.jackson.databind.node.ObjectNode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -53,8 +55,18 @@ public open class Succeed(
 
   /**
    * Return the Amazon States Language object for this state.
+   *
+   * @param queryLanguage
    */
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
+
+  /**
+   * Return the Amazon States Language object for this state.
+   *
+   * @param queryLanguage
+   */
+  public override fun toStateJson(queryLanguage: QueryLanguage): ObjectNode =
+      unwrap(this).toStateJson(queryLanguage.let(QueryLanguage.Companion::unwrap))
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.Succeed].
@@ -62,11 +74,11 @@ public open class Succeed(
   @CdkDslMarker
   public interface Builder {
     /**
-     * An optional description for this state.
+     * A comment describing this state.
      *
      * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     public fun comment(comment: String)
 
@@ -97,6 +109,34 @@ public open class Succeed(
     public fun outputPath(outputPath: String)
 
     /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    public fun outputs(outputs: Any)
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
+
+    /**
      * Optional name for this state.
      *
      * Default: - The construct ID will be used as state name
@@ -114,11 +154,11 @@ public open class Succeed(
         software.amazon.awscdk.services.stepfunctions.Succeed.Builder.create(scope, id)
 
     /**
-     * An optional description for this state.
+     * A comment describing this state.
      *
      * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -155,6 +195,38 @@ public open class Succeed(
     }
 
     /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    override fun outputs(outputs: Any) {
+      cdkBuilder.outputs(outputs)
+    }
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
+    }
+
+    /**
      * Optional name for this state.
      *
      * Default: - The construct ID will be used as state name
@@ -169,6 +241,46 @@ public open class Succeed(
   }
 
   public companion object {
+    public fun jsonPath(scope: CloudshiftdevConstructsConstruct, id: String): Succeed =
+        software.amazon.awscdk.services.stepfunctions.Succeed.jsonPath(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id).let(Succeed::wrap)
+
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: SucceedJsonPathProps,
+    ): Succeed =
+        software.amazon.awscdk.services.stepfunctions.Succeed.jsonPath(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, props.let(SucceedJsonPathProps.Companion::unwrap)).let(Succeed::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a35286065a80688584ea09dab5c71b62b36aa0c0e2da22589d8b31612cdd380d")
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: SucceedJsonPathProps.Builder.() -> Unit,
+    ): Succeed = jsonPath(scope, id, SucceedJsonPathProps(props))
+
+    public fun jsonata(scope: CloudshiftdevConstructsConstruct, id: String): Succeed =
+        software.amazon.awscdk.services.stepfunctions.Succeed.jsonata(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id).let(Succeed::wrap)
+
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: SucceedJsonataProps,
+    ): Succeed =
+        software.amazon.awscdk.services.stepfunctions.Succeed.jsonata(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, props.let(SucceedJsonataProps.Companion::unwrap)).let(Succeed::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("785e5101e9f48d3c6e9fa4538ffa29a8546a67e83d942bd93d347bca2261e536")
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: SucceedJsonataProps.Builder.() -> Unit,
+    ): Succeed = jsonata(scope, id, SucceedJsonataProps(props))
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

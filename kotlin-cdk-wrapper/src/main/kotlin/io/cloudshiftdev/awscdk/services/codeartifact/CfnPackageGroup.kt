@@ -90,8 +90,7 @@ public open class CfnPackageGroup(
   )
 
   /**
-   * When you pass the logical ID of this resource, the function returns the Amazon Resource Name
-   * (ARN) of the package group.
+   * The ARN of the package group.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
@@ -198,19 +197,19 @@ public open class CfnPackageGroup(
   }
 
   /**
-   * A list of tags to be applied to the package group.
+   * An array of key-value pairs to apply to the package group.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * A list of tags to be applied to the package group.
+   * An array of key-value pairs to apply to the package group.
    */
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * A list of tags to be applied to the package group.
+   * An array of key-value pairs to apply to the package group.
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
@@ -294,18 +293,18 @@ public open class CfnPackageGroup(
     public fun pattern(pattern: String)
 
     /**
-     * A list of tags to be applied to the package group.
+     * An array of key-value pairs to apply to the package group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-packagegroup.html#cfn-codeartifact-packagegroup-tags)
-     * @param tags A list of tags to be applied to the package group. 
+     * @param tags An array of key-value pairs to apply to the package group. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * A list of tags to be applied to the package group.
+     * An array of key-value pairs to apply to the package group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-packagegroup.html#cfn-codeartifact-packagegroup-tags)
-     * @param tags A list of tags to be applied to the package group. 
+     * @param tags An array of key-value pairs to apply to the package group. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -407,20 +406,20 @@ public open class CfnPackageGroup(
     }
 
     /**
-     * A list of tags to be applied to the package group.
+     * An array of key-value pairs to apply to the package group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-packagegroup.html#cfn-codeartifact-packagegroup-tags)
-     * @param tags A list of tags to be applied to the package group. 
+     * @param tags An array of key-value pairs to apply to the package group. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * A list of tags to be applied to the package group.
+     * An array of key-value pairs to apply to the package group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-packagegroup.html#cfn-codeartifact-packagegroup-tags)
-     * @param tags A list of tags to be applied to the package group. 
+     * @param tags An array of key-value pairs to apply to the package group. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -450,9 +449,6 @@ public open class CfnPackageGroup(
   }
 
   /**
-   * The package group origin configuration that determines how package versions can enter
-   * repositories.
-   *
    * Example:
    *
    * ```
@@ -484,8 +480,6 @@ public open class CfnPackageGroup(
    */
   public interface OriginConfigurationProperty {
     /**
-     * The origin configuration settings that determine how package versions can enter repositories.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeartifact-packagegroup-originconfiguration.html#cfn-codeartifact-packagegroup-originconfiguration-restrictions)
      */
     public fun restrictions(): Any
@@ -496,20 +490,17 @@ public open class CfnPackageGroup(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param restrictions The origin configuration settings that determine how package versions
-       * can enter repositories. 
+       * @param restrictions the value to be set. 
        */
       public fun restrictions(restrictions: IResolvable)
 
       /**
-       * @param restrictions The origin configuration settings that determine how package versions
-       * can enter repositories. 
+       * @param restrictions the value to be set. 
        */
       public fun restrictions(restrictions: RestrictionsProperty)
 
       /**
-       * @param restrictions The origin configuration settings that determine how package versions
-       * can enter repositories. 
+       * @param restrictions the value to be set. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("49591ad7fa504091032d0a38e28f247e7fe0849ab874454fc6cf875eb5852e6e")
@@ -523,24 +514,21 @@ public open class CfnPackageGroup(
           software.amazon.awscdk.services.codeartifact.CfnPackageGroup.OriginConfigurationProperty.builder()
 
       /**
-       * @param restrictions The origin configuration settings that determine how package versions
-       * can enter repositories. 
+       * @param restrictions the value to be set. 
        */
       override fun restrictions(restrictions: IResolvable) {
         cdkBuilder.restrictions(restrictions.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param restrictions The origin configuration settings that determine how package versions
-       * can enter repositories. 
+       * @param restrictions the value to be set. 
        */
       override fun restrictions(restrictions: RestrictionsProperty) {
         cdkBuilder.restrictions(restrictions.let(RestrictionsProperty.Companion::unwrap))
       }
 
       /**
-       * @param restrictions The origin configuration settings that determine how package versions
-       * can enter repositories. 
+       * @param restrictions the value to be set. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("49591ad7fa504091032d0a38e28f247e7fe0849ab874454fc6cf875eb5852e6e")
@@ -557,9 +545,6 @@ public open class CfnPackageGroup(
     ) : CdkObject(cdkObject),
         OriginConfigurationProperty {
       /**
-       * The origin configuration settings that determine how package versions can enter
-       * repositories.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeartifact-packagegroup-originconfiguration.html#cfn-codeartifact-packagegroup-originconfiguration-restrictions)
        */
       override fun restrictions(): Any = unwrap(this).getRestrictions()
@@ -584,10 +569,6 @@ public open class CfnPackageGroup(
   }
 
   /**
-   * The `RestrictionType` property type specifies the package group origin configuration
-   * restriction mode, and the repositories when the `RestrictionMode` is set to
-   * `ALLOW_SPECIFIC_REPOSITORIES` .
-   *
    * Example:
    *
    * ```
@@ -605,21 +586,11 @@ public open class CfnPackageGroup(
    */
   public interface RestrictionTypeProperty {
     /**
-     * The repositories to add to the allowed repositories list.
-     *
-     * The allowed repositories list is used when the `RestrictionMode` is set to
-     * `ALLOW_SPECIFIC_REPOSITORIES` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeartifact-packagegroup-restrictiontype.html#cfn-codeartifact-packagegroup-restrictiontype-repositories)
      */
     public fun repositories(): List<String> = unwrap(this).getRepositories() ?: emptyList()
 
     /**
-     * The package group origin restriction setting.
-     *
-     * When the value is `INHERIT` , the value is set to the value of the first parent package group
-     * which does not have a value of `INHERIT` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeartifact-packagegroup-restrictiontype.html#cfn-codeartifact-packagegroup-restrictiontype-restrictionmode)
      */
     public fun restrictionMode(): String
@@ -630,23 +601,17 @@ public open class CfnPackageGroup(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param repositories The repositories to add to the allowed repositories list.
-       * The allowed repositories list is used when the `RestrictionMode` is set to
-       * `ALLOW_SPECIFIC_REPOSITORIES` .
+       * @param repositories the value to be set.
        */
       public fun repositories(repositories: List<String>)
 
       /**
-       * @param repositories The repositories to add to the allowed repositories list.
-       * The allowed repositories list is used when the `RestrictionMode` is set to
-       * `ALLOW_SPECIFIC_REPOSITORIES` .
+       * @param repositories the value to be set.
        */
       public fun repositories(vararg repositories: String)
 
       /**
-       * @param restrictionMode The package group origin restriction setting. 
-       * When the value is `INHERIT` , the value is set to the value of the first parent package
-       * group which does not have a value of `INHERIT` .
+       * @param restrictionMode the value to be set. 
        */
       public fun restrictionMode(restrictionMode: String)
     }
@@ -658,26 +623,20 @@ public open class CfnPackageGroup(
           software.amazon.awscdk.services.codeartifact.CfnPackageGroup.RestrictionTypeProperty.builder()
 
       /**
-       * @param repositories The repositories to add to the allowed repositories list.
-       * The allowed repositories list is used when the `RestrictionMode` is set to
-       * `ALLOW_SPECIFIC_REPOSITORIES` .
+       * @param repositories the value to be set.
        */
       override fun repositories(repositories: List<String>) {
         cdkBuilder.repositories(repositories)
       }
 
       /**
-       * @param repositories The repositories to add to the allowed repositories list.
-       * The allowed repositories list is used when the `RestrictionMode` is set to
-       * `ALLOW_SPECIFIC_REPOSITORIES` .
+       * @param repositories the value to be set.
        */
       override fun repositories(vararg repositories: String): Unit =
           repositories(repositories.toList())
 
       /**
-       * @param restrictionMode The package group origin restriction setting. 
-       * When the value is `INHERIT` , the value is set to the value of the first parent package
-       * group which does not have a value of `INHERIT` .
+       * @param restrictionMode the value to be set. 
        */
       override fun restrictionMode(restrictionMode: String) {
         cdkBuilder.restrictionMode(restrictionMode)
@@ -693,21 +652,11 @@ public open class CfnPackageGroup(
     ) : CdkObject(cdkObject),
         RestrictionTypeProperty {
       /**
-       * The repositories to add to the allowed repositories list.
-       *
-       * The allowed repositories list is used when the `RestrictionMode` is set to
-       * `ALLOW_SPECIFIC_REPOSITORIES` .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeartifact-packagegroup-restrictiontype.html#cfn-codeartifact-packagegroup-restrictiontype-repositories)
        */
       override fun repositories(): List<String> = unwrap(this).getRepositories() ?: emptyList()
 
       /**
-       * The package group origin restriction setting.
-       *
-       * When the value is `INHERIT` , the value is set to the value of the first parent package
-       * group which does not have a value of `INHERIT` .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeartifact-packagegroup-restrictiontype.html#cfn-codeartifact-packagegroup-restrictiontype-restrictionmode)
        */
       override fun restrictionMode(): String = unwrap(this).getRestrictionMode()
@@ -732,9 +681,6 @@ public open class CfnPackageGroup(
   }
 
   /**
-   * Contains information about the configured restrictions of the origin controls of a package
-   * group.
-   *
    * Example:
    *
    * ```
@@ -764,22 +710,16 @@ public open class CfnPackageGroup(
    */
   public interface RestrictionsProperty {
     /**
-     * The package group origin restriction setting for external, upstream repositories.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeartifact-packagegroup-restrictions.html#cfn-codeartifact-packagegroup-restrictions-externalupstream)
      */
     public fun externalUpstream(): Any? = unwrap(this).getExternalUpstream()
 
     /**
-     * The package group origin restriction setting for internal, upstream repositories.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeartifact-packagegroup-restrictions.html#cfn-codeartifact-packagegroup-restrictions-internalupstream)
      */
     public fun internalUpstream(): Any? = unwrap(this).getInternalUpstream()
 
     /**
-     * The package group origin restriction setting for publishing packages.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeartifact-packagegroup-restrictions.html#cfn-codeartifact-packagegroup-restrictions-publish)
      */
     public fun publish(): Any? = unwrap(this).getPublish()
@@ -790,57 +730,51 @@ public open class CfnPackageGroup(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param externalUpstream The package group origin restriction setting for external, upstream
-       * repositories.
+       * @param externalUpstream the value to be set.
        */
       public fun externalUpstream(externalUpstream: IResolvable)
 
       /**
-       * @param externalUpstream The package group origin restriction setting for external, upstream
-       * repositories.
+       * @param externalUpstream the value to be set.
        */
       public fun externalUpstream(externalUpstream: RestrictionTypeProperty)
 
       /**
-       * @param externalUpstream The package group origin restriction setting for external, upstream
-       * repositories.
+       * @param externalUpstream the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c9bfa5c05a75fb1643430c59944f73bc7d5acfae487abd6ee6aefe42dcfad6f1")
       public fun externalUpstream(externalUpstream: RestrictionTypeProperty.Builder.() -> Unit)
 
       /**
-       * @param internalUpstream The package group origin restriction setting for internal, upstream
-       * repositories.
+       * @param internalUpstream the value to be set.
        */
       public fun internalUpstream(internalUpstream: IResolvable)
 
       /**
-       * @param internalUpstream The package group origin restriction setting for internal, upstream
-       * repositories.
+       * @param internalUpstream the value to be set.
        */
       public fun internalUpstream(internalUpstream: RestrictionTypeProperty)
 
       /**
-       * @param internalUpstream The package group origin restriction setting for internal, upstream
-       * repositories.
+       * @param internalUpstream the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9df2be732f8c2e76fa22da73deeb5bacdc6fdae0a7ad4bcaaa288d801cc5b893")
       public fun internalUpstream(internalUpstream: RestrictionTypeProperty.Builder.() -> Unit)
 
       /**
-       * @param publish The package group origin restriction setting for publishing packages.
+       * @param publish the value to be set.
        */
       public fun publish(publish: IResolvable)
 
       /**
-       * @param publish The package group origin restriction setting for publishing packages.
+       * @param publish the value to be set.
        */
       public fun publish(publish: RestrictionTypeProperty)
 
       /**
-       * @param publish The package group origin restriction setting for publishing packages.
+       * @param publish the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c78faf7115a7c8782be73eae7a537a294d18c27a2a05b4399f927b0dabcd6544")
@@ -854,24 +788,21 @@ public open class CfnPackageGroup(
           software.amazon.awscdk.services.codeartifact.CfnPackageGroup.RestrictionsProperty.builder()
 
       /**
-       * @param externalUpstream The package group origin restriction setting for external, upstream
-       * repositories.
+       * @param externalUpstream the value to be set.
        */
       override fun externalUpstream(externalUpstream: IResolvable) {
         cdkBuilder.externalUpstream(externalUpstream.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param externalUpstream The package group origin restriction setting for external, upstream
-       * repositories.
+       * @param externalUpstream the value to be set.
        */
       override fun externalUpstream(externalUpstream: RestrictionTypeProperty) {
         cdkBuilder.externalUpstream(externalUpstream.let(RestrictionTypeProperty.Companion::unwrap))
       }
 
       /**
-       * @param externalUpstream The package group origin restriction setting for external, upstream
-       * repositories.
+       * @param externalUpstream the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c9bfa5c05a75fb1643430c59944f73bc7d5acfae487abd6ee6aefe42dcfad6f1")
@@ -879,24 +810,21 @@ public open class CfnPackageGroup(
           Unit = externalUpstream(RestrictionTypeProperty(externalUpstream))
 
       /**
-       * @param internalUpstream The package group origin restriction setting for internal, upstream
-       * repositories.
+       * @param internalUpstream the value to be set.
        */
       override fun internalUpstream(internalUpstream: IResolvable) {
         cdkBuilder.internalUpstream(internalUpstream.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param internalUpstream The package group origin restriction setting for internal, upstream
-       * repositories.
+       * @param internalUpstream the value to be set.
        */
       override fun internalUpstream(internalUpstream: RestrictionTypeProperty) {
         cdkBuilder.internalUpstream(internalUpstream.let(RestrictionTypeProperty.Companion::unwrap))
       }
 
       /**
-       * @param internalUpstream The package group origin restriction setting for internal, upstream
-       * repositories.
+       * @param internalUpstream the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9df2be732f8c2e76fa22da73deeb5bacdc6fdae0a7ad4bcaaa288d801cc5b893")
@@ -904,21 +832,21 @@ public open class CfnPackageGroup(
           Unit = internalUpstream(RestrictionTypeProperty(internalUpstream))
 
       /**
-       * @param publish The package group origin restriction setting for publishing packages.
+       * @param publish the value to be set.
        */
       override fun publish(publish: IResolvable) {
         cdkBuilder.publish(publish.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param publish The package group origin restriction setting for publishing packages.
+       * @param publish the value to be set.
        */
       override fun publish(publish: RestrictionTypeProperty) {
         cdkBuilder.publish(publish.let(RestrictionTypeProperty.Companion::unwrap))
       }
 
       /**
-       * @param publish The package group origin restriction setting for publishing packages.
+       * @param publish the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c78faf7115a7c8782be73eae7a537a294d18c27a2a05b4399f927b0dabcd6544")
@@ -935,22 +863,16 @@ public open class CfnPackageGroup(
     ) : CdkObject(cdkObject),
         RestrictionsProperty {
       /**
-       * The package group origin restriction setting for external, upstream repositories.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeartifact-packagegroup-restrictions.html#cfn-codeartifact-packagegroup-restrictions-externalupstream)
        */
       override fun externalUpstream(): Any? = unwrap(this).getExternalUpstream()
 
       /**
-       * The package group origin restriction setting for internal, upstream repositories.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeartifact-packagegroup-restrictions.html#cfn-codeartifact-packagegroup-restrictions-internalupstream)
        */
       override fun internalUpstream(): Any? = unwrap(this).getInternalUpstream()
 
       /**
-       * The package group origin restriction setting for publishing packages.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codeartifact-packagegroup-restrictions.html#cfn-codeartifact-packagegroup-restrictions-publish)
        */
       override fun publish(): Any? = unwrap(this).getPublish()

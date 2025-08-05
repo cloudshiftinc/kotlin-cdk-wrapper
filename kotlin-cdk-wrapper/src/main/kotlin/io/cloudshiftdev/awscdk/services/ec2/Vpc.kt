@@ -1162,6 +1162,9 @@ public open class Vpc(
     public val DEFAULT_SUBNETS_NO_NAT: List<SubnetConfiguration> =
         software.amazon.awscdk.services.ec2.Vpc.DEFAULT_SUBNETS_NO_NAT.map(SubnetConfiguration::wrap)
 
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ec2.Vpc.PROPERTY_INJECTION_ID
+
     public fun fromLookup(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

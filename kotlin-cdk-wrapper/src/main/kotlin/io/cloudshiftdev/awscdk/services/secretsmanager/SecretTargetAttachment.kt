@@ -254,6 +254,9 @@ public open class SecretTargetAttachment(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment.PROPERTY_INJECTION_ID
+
     public fun fromSecretTargetAttachmentSecretArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -116,7 +116,7 @@ public interface EcsBlueGreenDeploymentConfig {
    * During a blue-green deployment, validation can occur after test traffic has been re-routed and
    * before production
    * traffic has been re-routed to the 'green' ECS task set.  You can specify one or more Lambda
-   * funtions in the
+   * functions in the
    * deployment's AppSpec file that run during the AfterAllowTestTraffic hook. The functions can run
    * validation tests.
    * If a validation test fails, a deployment rollback is triggered. If the validation tests
@@ -200,7 +200,7 @@ public interface EcsBlueGreenDeploymentConfig {
      * During a blue-green deployment, validation can occur after test traffic has been re-routed
      * and before production
      * traffic has been re-routed to the 'green' ECS task set.  You can specify one or more Lambda
-     * funtions in the
+     * functions in the
      * deployment's AppSpec file that run during the AfterAllowTestTraffic hook. The functions can
      * run validation tests.
      * If a validation test fails, a deployment rollback is triggered. If the validation tests
@@ -293,7 +293,7 @@ public interface EcsBlueGreenDeploymentConfig {
      * During a blue-green deployment, validation can occur after test traffic has been re-routed
      * and before production
      * traffic has been re-routed to the 'green' ECS task set.  You can specify one or more Lambda
-     * funtions in the
+     * functions in the
      * deployment's AppSpec file that run during the AfterAllowTestTraffic hook. The functions can
      * run validation tests.
      * If a validation test fails, a deployment rollback is triggered. If the validation tests
@@ -390,7 +390,7 @@ public interface EcsBlueGreenDeploymentConfig {
      * During a blue-green deployment, validation can occur after test traffic has been re-routed
      * and before production
      * traffic has been re-routed to the 'green' ECS task set.  You can specify one or more Lambda
-     * funtions in the
+     * functions in the
      * deployment's AppSpec file that run during the AfterAllowTestTraffic hook. The functions can
      * run validation tests.
      * If a validation test fails, a deployment rollback is triggered. If the validation tests

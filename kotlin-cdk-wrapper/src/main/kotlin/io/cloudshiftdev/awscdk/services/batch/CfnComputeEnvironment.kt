@@ -165,8 +165,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .launchTemplateId("launchTemplateId")
  * .launchTemplateName("launchTemplateName")
  * .targetInstanceTypes(List.of("targetInstanceTypes"))
+ * .userdataType("userdataType")
  * .version("version")
  * .build()))
+ * .userdataType("userdataType")
  * .version("version")
  * .build())
  * .minvCpus(123)
@@ -545,6 +547,9 @@ public open class CfnComputeEnvironment(
      * update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html)
      * in the *AWS CloudFormation User Guide* .
      *
+     * `ReplaceComputeEnvironment` is not applicable for Fargate compute environments. Fargate
+     * compute environments are always updated without interruption.
+     *
      * The properties that can't be changed without replacing the compute environment are in the
      * [`ComputeResources`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html)
      * property type:
@@ -604,6 +609,9 @@ public open class CfnComputeEnvironment(
      * settings and then try to update it again. For more information, see [Continue rolling back an
      * update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html)
      * in the *AWS CloudFormation User Guide* .
+     *
+     * `ReplaceComputeEnvironment` is not applicable for Fargate compute environments. Fargate
+     * compute environments are always updated without interruption.
      *
      * The properties that can't be changed without replacing the compute environment are in the
      * [`ComputeResources`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html)
@@ -741,8 +749,8 @@ public open class CfnComputeEnvironment(
     /**
      * The maximum number of vCPUs for an unmanaged compute environment.
      *
-     * This parameter is only used for fair share scheduling to reserve vCPU capacity for new share
-     * identifiers. If this parameter isn't provided for a fair share job queue, no vCPU capacity is
+     * This parameter is only used for fair-share scheduling to reserve vCPU capacity for new share
+     * identifiers. If this parameter isn't provided for a fair-share job queue, no vCPU capacity is
      * reserved.
      *
      *
@@ -923,6 +931,9 @@ public open class CfnComputeEnvironment(
      * update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html)
      * in the *AWS CloudFormation User Guide* .
      *
+     * `ReplaceComputeEnvironment` is not applicable for Fargate compute environments. Fargate
+     * compute environments are always updated without interruption.
+     *
      * The properties that can't be changed without replacing the compute environment are in the
      * [`ComputeResources`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html)
      * property type:
@@ -984,6 +995,9 @@ public open class CfnComputeEnvironment(
      * settings and then try to update it again. For more information, see [Continue rolling back an
      * update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html)
      * in the *AWS CloudFormation User Guide* .
+     *
+     * `ReplaceComputeEnvironment` is not applicable for Fargate compute environments. Fargate
+     * compute environments are always updated without interruption.
      *
      * The properties that can't be changed without replacing the compute environment are in the
      * [`ComputeResources`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html)
@@ -1131,8 +1145,8 @@ public open class CfnComputeEnvironment(
     /**
      * The maximum number of vCPUs for an unmanaged compute environment.
      *
-     * This parameter is only used for fair share scheduling to reserve vCPU capacity for new share
-     * identifiers. If this parameter isn't provided for a fair share job queue, no vCPU capacity is
+     * This parameter is only used for fair-share scheduling to reserve vCPU capacity for new share
+     * identifiers. If this parameter isn't provided for a fair-share job queue, no vCPU capacity is
      * reserved.
      *
      *
@@ -1252,8 +1266,10 @@ public open class CfnComputeEnvironment(
    * .launchTemplateId("launchTemplateId")
    * .launchTemplateName("launchTemplateName")
    * .targetInstanceTypes(List.of("targetInstanceTypes"))
+   * .userdataType("userdataType")
    * .version("version")
    * .build()))
+   * .userdataType("userdataType")
    * .version("version")
    * .build())
    * .minvCpus(123)
@@ -1646,7 +1662,7 @@ public open class CfnComputeEnvironment(
      * environment.
      *
      * For AWS Batch , these take the form of `"String1": "String2"` , where `String1` is the tag
-     * key and `String2` is the tag value-for example, `{ "Name": "Batch Instance - C4OnDemand" }` .
+     * key and `String2` is the tag value (for example, `{ "Name": "Batch Instance - C4OnDemand" }` ).
      * This is helpful for recognizing your Batch instances in the Amazon EC2 console. These tags
      * aren't seen when using the AWS Batch `ListTagsForResource` API operation.
      *
@@ -2196,8 +2212,8 @@ public open class CfnComputeEnvironment(
        * @param tags Key-value pair tags to be applied to Amazon EC2 resources that are launched in
        * the compute environment.
        * For AWS Batch , these take the form of `"String1": "String2"` , where `String1` is the tag
-       * key and `String2` is the tag value-for example, `{ "Name": "Batch Instance - C4OnDemand" }` .
-       * This is helpful for recognizing your Batch instances in the Amazon EC2 console. These tags
+       * key and `String2` is the tag value (for example, `{ "Name": "Batch Instance - C4OnDemand" }`
+       * ). This is helpful for recognizing your Batch instances in the Amazon EC2 console. These tags
        * aren't seen when using the AWS Batch `ListTagsForResource` API operation.
        *
        * When updating a compute environment, changing this setting requires an infrastructure
@@ -2797,8 +2813,8 @@ public open class CfnComputeEnvironment(
        * @param tags Key-value pair tags to be applied to Amazon EC2 resources that are launched in
        * the compute environment.
        * For AWS Batch , these take the form of `"String1": "String2"` , where `String1` is the tag
-       * key and `String2` is the tag value-for example, `{ "Name": "Batch Instance - C4OnDemand" }` .
-       * This is helpful for recognizing your Batch instances in the Amazon EC2 console. These tags
+       * key and `String2` is the tag value (for example, `{ "Name": "Batch Instance - C4OnDemand" }`
+       * ). This is helpful for recognizing your Batch instances in the Amazon EC2 console. These tags
        * aren't seen when using the AWS Batch `ListTagsForResource` API operation.
        *
        * When updating a compute environment, changing this setting requires an infrastructure
@@ -3274,8 +3290,8 @@ public open class CfnComputeEnvironment(
        * environment.
        *
        * For AWS Batch , these take the form of `"String1": "String2"` , where `String1` is the tag
-       * key and `String2` is the tag value-for example, `{ "Name": "Batch Instance - C4OnDemand" }` .
-       * This is helpful for recognizing your Batch instances in the Amazon EC2 console. These tags
+       * key and `String2` is the tag value (for example, `{ "Name": "Batch Instance - C4OnDemand" }`
+       * ). This is helpful for recognizing your Batch instances in the Amazon EC2 console. These tags
        * aren't seen when using the AWS Batch `ListTagsForResource` API operation.
        *
        * When updating a compute environment, changing this setting requires an infrastructure
@@ -3462,6 +3478,17 @@ public open class CfnComputeEnvironment(
      * (accelerated)](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) :
      * Default for all GPU instance families (for example, `P4` and `G4` ) and can be used for all non
      * AWS Graviton-based instance types.
+     * * **EKS_AL2023** - [Amazon Linux
+     * 2023](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) : AWS Batch
+     * supports Amazon Linux 2023.
+     *
+     *
+     * Amazon Linux 2023 does not support `A1` instances.
+     *
+     *
+     * * **EKS_AL2023_NVIDIA** - [Amazon Linux 2023
+     * (accelerated)](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) : GPU
+     * instance families and can be used for all non AWS Graviton-based instance types.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html#cfn-batch-computeenvironment-ec2configurationobject-imagetype)
      */
@@ -3536,6 +3563,17 @@ public open class CfnComputeEnvironment(
        * (accelerated)](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) :
        * Default for all GPU instance families (for example, `P4` and `G4` ) and can be used for all
        * non AWS Graviton-based instance types.
+       * * **EKS_AL2023** - [Amazon Linux
+       * 2023](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) : AWS Batch
+       * supports Amazon Linux 2023.
+       *
+       *
+       * Amazon Linux 2023 does not support `A1` instances.
+       *
+       *
+       * * **EKS_AL2023_NVIDIA** - [Amazon Linux 2023
+       * (accelerated)](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) : GPU
+       * instance families and can be used for all non AWS Graviton-based instance types.
        */
       public fun imageType(imageType: String)
     }
@@ -3614,6 +3652,17 @@ public open class CfnComputeEnvironment(
        * (accelerated)](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) :
        * Default for all GPU instance families (for example, `P4` and `G4` ) and can be used for all
        * non AWS Graviton-based instance types.
+       * * **EKS_AL2023** - [Amazon Linux
+       * 2023](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) : AWS Batch
+       * supports Amazon Linux 2023.
+       *
+       *
+       * Amazon Linux 2023 does not support `A1` instances.
+       *
+       *
+       * * **EKS_AL2023_NVIDIA** - [Amazon Linux 2023
+       * (accelerated)](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) : GPU
+       * instance families and can be used for all non AWS Graviton-based instance types.
        */
       override fun imageType(imageType: String) {
         cdkBuilder.imageType(imageType)
@@ -3700,6 +3749,17 @@ public open class CfnComputeEnvironment(
        * (accelerated)](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) :
        * Default for all GPU instance families (for example, `P4` and `G4` ) and can be used for all
        * non AWS Graviton-based instance types.
+       * * **EKS_AL2023** - [Amazon Linux
+       * 2023](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) : AWS Batch
+       * supports Amazon Linux 2023.
+       *
+       *
+       * Amazon Linux 2023 does not support `A1` instances.
+       *
+       *
+       * * **EKS_AL2023_NVIDIA** - [Amazon Linux 2023
+       * (accelerated)](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) : GPU
+       * instance families and can be used for all non AWS Graviton-based instance types.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html#cfn-batch-computeenvironment-ec2configurationobject-imagetype)
        */
@@ -3899,6 +3959,7 @@ public open class CfnComputeEnvironment(
    * .launchTemplateId("launchTemplateId")
    * .launchTemplateName("launchTemplateName")
    * .targetInstanceTypes(List.of("targetInstanceTypes"))
+   * .userdataType("userdataType")
    * .version("version")
    * .build();
    * ```
@@ -3927,7 +3988,7 @@ public open class CfnComputeEnvironment(
     public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
 
     /**
-     * The instance type or family that this this override launch template should be applied to.
+     * The instance type or family that this override launch template should be applied to.
      *
      * This parameter is required when defining a launch template override.
      *
@@ -3950,6 +4011,17 @@ public open class CfnComputeEnvironment(
      */
     public fun targetInstanceTypes(): List<String> = unwrap(this).getTargetInstanceTypes() ?:
         emptyList()
+
+    /**
+     * The EKS node initialization process to use.
+     *
+     * You only need to specify this value if you are using a custom AMI. The default value is
+     * `EKS_BOOTSTRAP_SH` . If *imageType* is a custom AMI based on EKS_AL2023 or EKS_AL2023_NVIDIA
+     * then you must choose `EKS_NODEADM` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecificationoverride.html#cfn-batch-computeenvironment-launchtemplatespecificationoverride-userdatatype)
+     */
+    public fun userdataType(): String? = unwrap(this).getUserdataType()
 
     /**
      * The version number of the launch template, `$Default` , or `$Latest` .
@@ -3998,8 +4070,8 @@ public open class CfnComputeEnvironment(
       public fun launchTemplateName(launchTemplateName: String)
 
       /**
-       * @param targetInstanceTypes The instance type or family that this this override launch
-       * template should be applied to.
+       * @param targetInstanceTypes The instance type or family that this override launch template
+       * should be applied to.
        * This parameter is required when defining a launch template override.
        *
        * Information included in this parameter must meet the following requirements:
@@ -4021,8 +4093,8 @@ public open class CfnComputeEnvironment(
       public fun targetInstanceTypes(targetInstanceTypes: List<String>)
 
       /**
-       * @param targetInstanceTypes The instance type or family that this this override launch
-       * template should be applied to.
+       * @param targetInstanceTypes The instance type or family that this override launch template
+       * should be applied to.
        * This parameter is required when defining a launch template override.
        *
        * Information included in this parameter must meet the following requirements:
@@ -4042,6 +4114,14 @@ public open class CfnComputeEnvironment(
        * instance type within this same family.
        */
       public fun targetInstanceTypes(vararg targetInstanceTypes: String)
+
+      /**
+       * @param userdataType The EKS node initialization process to use.
+       * You only need to specify this value if you are using a custom AMI. The default value is
+       * `EKS_BOOTSTRAP_SH` . If *imageType* is a custom AMI based on EKS_AL2023 or EKS_AL2023_NVIDIA
+       * then you must choose `EKS_NODEADM` .
+       */
+      public fun userdataType(userdataType: String)
 
       /**
        * @param version The version number of the launch template, `$Default` , or `$Latest` .
@@ -4093,8 +4173,8 @@ public open class CfnComputeEnvironment(
       }
 
       /**
-       * @param targetInstanceTypes The instance type or family that this this override launch
-       * template should be applied to.
+       * @param targetInstanceTypes The instance type or family that this override launch template
+       * should be applied to.
        * This parameter is required when defining a launch template override.
        *
        * Information included in this parameter must meet the following requirements:
@@ -4118,8 +4198,8 @@ public open class CfnComputeEnvironment(
       }
 
       /**
-       * @param targetInstanceTypes The instance type or family that this this override launch
-       * template should be applied to.
+       * @param targetInstanceTypes The instance type or family that this override launch template
+       * should be applied to.
        * This parameter is required when defining a launch template override.
        *
        * Information included in this parameter must meet the following requirements:
@@ -4140,6 +4220,16 @@ public open class CfnComputeEnvironment(
        */
       override fun targetInstanceTypes(vararg targetInstanceTypes: String): Unit =
           targetInstanceTypes(targetInstanceTypes.toList())
+
+      /**
+       * @param userdataType The EKS node initialization process to use.
+       * You only need to specify this value if you are using a custom AMI. The default value is
+       * `EKS_BOOTSTRAP_SH` . If *imageType* is a custom AMI based on EKS_AL2023 or EKS_AL2023_NVIDIA
+       * then you must choose `EKS_NODEADM` .
+       */
+      override fun userdataType(userdataType: String) {
+        cdkBuilder.userdataType(userdataType)
+      }
 
       /**
        * @param version The version number of the launch template, `$Default` , or `$Latest` .
@@ -4197,7 +4287,7 @@ public open class CfnComputeEnvironment(
       override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
 
       /**
-       * The instance type or family that this this override launch template should be applied to.
+       * The instance type or family that this override launch template should be applied to.
        *
        * This parameter is required when defining a launch template override.
        *
@@ -4221,6 +4311,17 @@ public open class CfnComputeEnvironment(
        */
       override fun targetInstanceTypes(): List<String> = unwrap(this).getTargetInstanceTypes() ?:
           emptyList()
+
+      /**
+       * The EKS node initialization process to use.
+       *
+       * You only need to specify this value if you are using a custom AMI. The default value is
+       * `EKS_BOOTSTRAP_SH` . If *imageType* is a custom AMI based on EKS_AL2023 or EKS_AL2023_NVIDIA
+       * then you must choose `EKS_NODEADM` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecificationoverride.html#cfn-batch-computeenvironment-launchtemplatespecificationoverride-userdatatype)
+       */
+      override fun userdataType(): String? = unwrap(this).getUserdataType()
 
       /**
        * The version number of the launch template, `$Default` , or `$Latest` .
@@ -4297,8 +4398,10 @@ public open class CfnComputeEnvironment(
    * .launchTemplateId("launchTemplateId")
    * .launchTemplateName("launchTemplateName")
    * .targetInstanceTypes(List.of("targetInstanceTypes"))
+   * .userdataType("userdataType")
    * .version("version")
    * .build()))
+   * .userdataType("userdataType")
    * .version("version")
    * .build();
    * ```
@@ -4339,6 +4442,17 @@ public open class CfnComputeEnvironment(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-overrides)
      */
     public fun overrides(): Any? = unwrap(this).getOverrides()
+
+    /**
+     * The EKS node initialization process to use.
+     *
+     * You only need to specify this value if you are using a custom AMI. The default value is
+     * `EKS_BOOTSTRAP_SH` . If *imageType* is a custom AMI based on EKS_AL2023 or EKS_AL2023_NVIDIA
+     * then you must choose `EKS_NODEADM` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-userdatatype)
+     */
+    public fun userdataType(): String? = unwrap(this).getUserdataType()
 
     /**
      * The version number of the launch template, `$Default` , or `$Latest` .
@@ -4432,6 +4546,14 @@ public open class CfnComputeEnvironment(
        * `UpdateComputeEnvironment` API operation.
        */
       public fun overrides(vararg overrides: Any)
+
+      /**
+       * @param userdataType The EKS node initialization process to use.
+       * You only need to specify this value if you are using a custom AMI. The default value is
+       * `EKS_BOOTSTRAP_SH` . If *imageType* is a custom AMI based on EKS_AL2023 or EKS_AL2023_NVIDIA
+       * then you must choose `EKS_NODEADM` .
+       */
+      public fun userdataType(userdataType: String)
 
       /**
        * @param version The version number of the launch template, `$Default` , or `$Latest` .
@@ -4534,6 +4656,16 @@ public open class CfnComputeEnvironment(
       override fun overrides(vararg overrides: Any): Unit = overrides(overrides.toList())
 
       /**
+       * @param userdataType The EKS node initialization process to use.
+       * You only need to specify this value if you are using a custom AMI. The default value is
+       * `EKS_BOOTSTRAP_SH` . If *imageType* is a custom AMI based on EKS_AL2023 or EKS_AL2023_NVIDIA
+       * then you must choose `EKS_NODEADM` .
+       */
+      override fun userdataType(userdataType: String) {
+        cdkBuilder.userdataType(userdataType)
+      }
+
+      /**
        * @param version The version number of the launch template, `$Default` , or `$Latest` .
        * If the value is `$Default` , the default version of the launch template is used. If the
        * value is `$Latest` , the latest version of the launch template is used.
@@ -4604,6 +4736,17 @@ public open class CfnComputeEnvironment(
       override fun overrides(): Any? = unwrap(this).getOverrides()
 
       /**
+       * The EKS node initialization process to use.
+       *
+       * You only need to specify this value if you are using a custom AMI. The default value is
+       * `EKS_BOOTSTRAP_SH` . If *imageType* is a custom AMI based on EKS_AL2023 or EKS_AL2023_NVIDIA
+       * then you must choose `EKS_NODEADM` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-userdatatype)
+       */
+      override fun userdataType(): String? = unwrap(this).getUserdataType()
+
+      /**
        * The version number of the launch template, `$Default` , or `$Latest` .
        *
        * If the value is `$Default` , the default version of the launch template is used. If the
@@ -4651,7 +4794,7 @@ public open class CfnComputeEnvironment(
   }
 
   /**
-   * Specifies the infrastructure update policy for the compute environment.
+   * Specifies the infrastructure update policy for the Amazon EC2 compute environment.
    *
    * For more information about infrastructure updates, see [Updating compute
    * environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html)
@@ -4685,7 +4828,7 @@ public open class CfnComputeEnvironment(
     public fun jobExecutionTimeoutMinutes(): Number? = unwrap(this).getJobExecutionTimeoutMinutes()
 
     /**
-     * Specifies whether jobs are automatically terminated when the computer environment
+     * Specifies whether jobs are automatically terminated when the compute environment
      * infrastructure is updated.
      *
      * The default value is `false` .
@@ -4710,14 +4853,14 @@ public open class CfnComputeEnvironment(
 
       /**
        * @param terminateJobsOnUpdate Specifies whether jobs are automatically terminated when the
-       * computer environment infrastructure is updated.
+       * compute environment infrastructure is updated.
        * The default value is `false` .
        */
       public fun terminateJobsOnUpdate(terminateJobsOnUpdate: Boolean)
 
       /**
        * @param terminateJobsOnUpdate Specifies whether jobs are automatically terminated when the
-       * computer environment infrastructure is updated.
+       * compute environment infrastructure is updated.
        * The default value is `false` .
        */
       public fun terminateJobsOnUpdate(terminateJobsOnUpdate: IResolvable)
@@ -4739,7 +4882,7 @@ public open class CfnComputeEnvironment(
 
       /**
        * @param terminateJobsOnUpdate Specifies whether jobs are automatically terminated when the
-       * computer environment infrastructure is updated.
+       * compute environment infrastructure is updated.
        * The default value is `false` .
        */
       override fun terminateJobsOnUpdate(terminateJobsOnUpdate: Boolean) {
@@ -4748,7 +4891,7 @@ public open class CfnComputeEnvironment(
 
       /**
        * @param terminateJobsOnUpdate Specifies whether jobs are automatically terminated when the
-       * computer environment infrastructure is updated.
+       * compute environment infrastructure is updated.
        * The default value is `false` .
        */
       override fun terminateJobsOnUpdate(terminateJobsOnUpdate: IResolvable) {
@@ -4778,7 +4921,7 @@ public open class CfnComputeEnvironment(
           unwrap(this).getJobExecutionTimeoutMinutes()
 
       /**
-       * Specifies whether jobs are automatically terminated when the computer environment
+       * Specifies whether jobs are automatically terminated when the compute environment
        * infrastructure is updated.
        *
        * The default value is `false` .

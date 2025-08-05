@@ -21,6 +21,7 @@ import kotlin.Unit
  * AuroraPostgresEngineFeatures.builder()
  * .s3Export(false)
  * .s3Import(false)
+ * .serverlessV2AutoPauseSupported(false)
  * .build();
  * ```
  */
@@ -40,6 +41,17 @@ public interface AuroraPostgresEngineFeatures {
   public fun s3Import(): Boolean? = unwrap(this).getS3Import()
 
   /**
+   * Whether this version of the Aurora Postgres cluster engine supports the Aurora SeverlessV2
+   * auto-pause feature.
+   *
+   * Default: false
+   *
+   * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2-auto-pause.html#auto-pause-prereqs)
+   */
+  public fun serverlessV2AutoPauseSupported(): Boolean? =
+      unwrap(this).getServerlessV2AutoPauseSupported()
+
+  /**
    * A builder for [AuroraPostgresEngineFeatures]
    */
   @CdkDslMarker
@@ -55,6 +67,12 @@ public interface AuroraPostgresEngineFeatures {
      * data import feature.
      */
     public fun s3Import(s3Import: Boolean)
+
+    /**
+     * @param serverlessV2AutoPauseSupported Whether this version of the Aurora Postgres cluster
+     * engine supports the Aurora SeverlessV2 auto-pause feature.
+     */
+    public fun serverlessV2AutoPauseSupported(serverlessV2AutoPauseSupported: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -75,6 +93,14 @@ public interface AuroraPostgresEngineFeatures {
      */
     override fun s3Import(s3Import: Boolean) {
       cdkBuilder.s3Import(s3Import)
+    }
+
+    /**
+     * @param serverlessV2AutoPauseSupported Whether this version of the Aurora Postgres cluster
+     * engine supports the Aurora SeverlessV2 auto-pause feature.
+     */
+    override fun serverlessV2AutoPauseSupported(serverlessV2AutoPauseSupported: Boolean) {
+      cdkBuilder.serverlessV2AutoPauseSupported(serverlessV2AutoPauseSupported)
     }
 
     public fun build(): software.amazon.awscdk.services.rds.AuroraPostgresEngineFeatures =
@@ -100,6 +126,17 @@ public interface AuroraPostgresEngineFeatures {
      * Default: false
      */
     override fun s3Import(): Boolean? = unwrap(this).getS3Import()
+
+    /**
+     * Whether this version of the Aurora Postgres cluster engine supports the Aurora SeverlessV2
+     * auto-pause feature.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2-auto-pause.html#auto-pause-prereqs)
+     */
+    override fun serverlessV2AutoPauseSupported(): Boolean? =
+        unwrap(this).getServerlessV2AutoPauseSupported()
   }
 
   public companion object {

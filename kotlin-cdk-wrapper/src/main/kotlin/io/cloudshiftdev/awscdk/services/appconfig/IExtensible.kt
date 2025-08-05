@@ -19,6 +19,36 @@ public interface IExtensible {
   public fun addExtension(extension: IExtension)
 
   /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to the derived resource.
+   *
+   * @param eventDestination The event that occurs during the extension. 
+   * @param options Options for the extension.
+   */
+  public fun atDeploymentTick(eventDestination: IEventDestination)
+
+  /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to the derived resource.
+   *
+   * @param eventDestination The event that occurs during the extension. 
+   * @param options Options for the extension.
+   */
+  public fun atDeploymentTick(eventDestination: IEventDestination, options: ExtensionOptions)
+
+  /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to the derived resource.
+   *
+   * @param eventDestination The event that occurs during the extension. 
+   * @param options Options for the extension.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("f8c201d364bd1348c470ff45a380b57e5cbcd5d83fb8aa9250995db9670d33c2")
+  public fun atDeploymentTick(eventDestination: IEventDestination,
+      options: ExtensionOptions.Builder.() -> Unit)
+
+  /**
    * Adds an extension defined by the action point and event destination and also creates an
    * extension association to the derived resource.
    *
@@ -281,6 +311,42 @@ public interface IExtensible {
     override fun addExtension(extension: IExtension) {
       unwrap(this).addExtension(extension.let(IExtension.Companion::unwrap))
     }
+
+    /**
+     * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+     * extension association to the derived resource.
+     *
+     * @param eventDestination The event that occurs during the extension. 
+     * @param options Options for the extension.
+     */
+    override fun atDeploymentTick(eventDestination: IEventDestination) {
+      unwrap(this).atDeploymentTick(eventDestination.let(IEventDestination.Companion::unwrap))
+    }
+
+    /**
+     * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+     * extension association to the derived resource.
+     *
+     * @param eventDestination The event that occurs during the extension. 
+     * @param options Options for the extension.
+     */
+    override fun atDeploymentTick(eventDestination: IEventDestination, options: ExtensionOptions) {
+      unwrap(this).atDeploymentTick(eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
+    }
+
+    /**
+     * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+     * extension association to the derived resource.
+     *
+     * @param eventDestination The event that occurs during the extension. 
+     * @param options Options for the extension.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f8c201d364bd1348c470ff45a380b57e5cbcd5d83fb8aa9250995db9670d33c2")
+    override fun atDeploymentTick(eventDestination: IEventDestination,
+        options: ExtensionOptions.Builder.() -> Unit): Unit = atDeploymentTick(eventDestination,
+        ExtensionOptions(options))
 
     /**
      * Adds an extension defined by the action point and event destination and also creates an

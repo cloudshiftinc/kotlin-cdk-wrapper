@@ -41,10 +41,10 @@ public open class CustomResourceConfig(
    *
    * This feature is currently experimental.
    *
-   * @param rentention 
+   * @param retention 
    */
-  public open fun addLogRetentionLifetime(rentention: RetentionDays) {
-    unwrap(this).addLogRetentionLifetime(rentention.let(RetentionDays.Companion::unwrap))
+  public open fun addLogRetentionLifetime(retention: RetentionDays) {
+    unwrap(this).addLogRetentionLifetime(retention.let(RetentionDays.Companion::unwrap))
   }
 
   /**

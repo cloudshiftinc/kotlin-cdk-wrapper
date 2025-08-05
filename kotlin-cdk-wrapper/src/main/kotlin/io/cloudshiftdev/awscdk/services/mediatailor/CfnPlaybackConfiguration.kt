@@ -39,6 +39,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .name("name")
  * .videoContentSourceUrl("videoContentSourceUrl")
  * // the properties below are optional
+ * .adConditioningConfiguration(AdConditioningConfigurationProperty.builder()
+ * .streamingMediaFileConditioning("streamingMediaFileConditioning")
+ * .build())
  * .availSuppression(AvailSuppressionProperty.builder()
  * .fillPolicy("fillPolicy")
  * .mode("mode")
@@ -62,9 +65,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .hlsConfiguration(HlsConfigurationProperty.builder()
  * .manifestEndpointPrefix("manifestEndpointPrefix")
  * .build())
+ * .insertionMode("insertionMode")
  * .livePreRollConfiguration(LivePreRollConfigurationProperty.builder()
  * .adDecisionServerUrl("adDecisionServerUrl")
  * .maxDurationSeconds(123)
+ * .build())
+ * .logConfiguration(LogConfigurationProperty.builder()
+ * .percentEnabled(123)
+ * // the properties below are optional
+ * .adsInteractionLog(AdsInteractionLogProperty.builder()
+ * .excludeEventTypes(List.of("excludeEventTypes"))
+ * .publishOptInEventTypes(List.of("publishOptInEventTypes"))
+ * .build())
+ * .enabledLoggingStrategies(List.of("enabledLoggingStrategies"))
+ * .manifestServiceInteractionLog(ManifestServiceInteractionLogProperty.builder()
+ * .excludeEventTypes(List.of("excludeEventTypes"))
+ * .build())
  * .build())
  * .manifestProcessingRules(ManifestProcessingRulesProperty.builder()
  * .adMarkerPassthrough(AdMarkerPassthroughProperty.builder()
@@ -103,6 +119,39 @@ public open class CfnPlaybackConfiguration(
     props: CfnPlaybackConfigurationProps.Builder.() -> Unit,
   ) : this(scope, id, CfnPlaybackConfigurationProps(props)
   )
+
+  /**
+   * The setting that indicates what conditioning MediaTailor will perform on ads that the ad
+   * decision server (ADS) returns, and what priority MediaTailor uses when inserting ads.
+   */
+  public open fun adConditioningConfiguration(): Any? =
+      unwrap(this).getAdConditioningConfiguration()
+
+  /**
+   * The setting that indicates what conditioning MediaTailor will perform on ads that the ad
+   * decision server (ADS) returns, and what priority MediaTailor uses when inserting ads.
+   */
+  public open fun adConditioningConfiguration(`value`: IResolvable) {
+    unwrap(this).setAdConditioningConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The setting that indicates what conditioning MediaTailor will perform on ads that the ad
+   * decision server (ADS) returns, and what priority MediaTailor uses when inserting ads.
+   */
+  public open fun adConditioningConfiguration(`value`: AdConditioningConfigurationProperty) {
+    unwrap(this).setAdConditioningConfiguration(`value`.let(AdConditioningConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The setting that indicates what conditioning MediaTailor will perform on ads that the ad
+   * decision server (ADS) returns, and what priority MediaTailor uses when inserting ads.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("f6b984bcfa6c6601358755c880b6e66c035d7e67378c0665d8eccb68eeb64b3b")
+  public open
+      fun adConditioningConfiguration(`value`: AdConditioningConfigurationProperty.Builder.() -> Unit):
+      Unit = adConditioningConfiguration(AdConditioningConfigurationProperty(`value`))
 
   /**
    * The URL for the ad decision server (ADS).
@@ -245,15 +294,15 @@ public open class CfnPlaybackConfiguration(
   /**
    * The player parameters and aliases used as dynamic variables during session initialization.
    */
-  public open fun configurationAliases(`value`: IResolvable) {
-    unwrap(this).setConfigurationAliases(`value`.let(IResolvable.Companion::unwrap))
+  public open fun configurationAliases(`value`: Map<String, Any>) {
+    unwrap(this).setConfigurationAliases(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
    * The player parameters and aliases used as dynamic variables during session initialization.
    */
-  public open fun configurationAliases(`value`: Map<String, Any>) {
-    unwrap(this).setConfigurationAliases(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
+  public open fun configurationAliases(`value`: IResolvable) {
+    unwrap(this).setConfigurationAliases(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -311,6 +360,18 @@ public open class CfnPlaybackConfiguration(
       hlsConfiguration(HlsConfigurationProperty(`value`))
 
   /**
+   * The setting that controls whether players can use stitched or guided ad insertion.
+   */
+  public open fun insertionMode(): String? = unwrap(this).getInsertionMode()
+
+  /**
+   * The setting that controls whether players can use stitched or guided ad insertion.
+   */
+  public open fun insertionMode(`value`: String) {
+    unwrap(this).setInsertionMode(`value`)
+  }
+
+  /**
    * Examines the CloudFormation resource and discloses attributes.
    *
    * @param inspector tree inspector to collect and process attributes. 
@@ -346,6 +407,33 @@ public open class CfnPlaybackConfiguration(
   public open
       fun livePreRollConfiguration(`value`: LivePreRollConfigurationProperty.Builder.() -> Unit):
       Unit = livePreRollConfiguration(LivePreRollConfigurationProperty(`value`))
+
+  /**
+   * Defines where AWS Elemental MediaTailor sends logs for the playback configuration.
+   */
+  public open fun logConfiguration(): Any? = unwrap(this).getLogConfiguration()
+
+  /**
+   * Defines where AWS Elemental MediaTailor sends logs for the playback configuration.
+   */
+  public open fun logConfiguration(`value`: IResolvable) {
+    unwrap(this).setLogConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Defines where AWS Elemental MediaTailor sends logs for the playback configuration.
+   */
+  public open fun logConfiguration(`value`: LogConfigurationProperty) {
+    unwrap(this).setLogConfiguration(`value`.let(LogConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * Defines where AWS Elemental MediaTailor sends logs for the playback configuration.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("4d8a3a1f984ce2a0398da06c91367f2ca6c113104bbcc635d8ef4a25717b1bad")
+  public open fun logConfiguration(`value`: LogConfigurationProperty.Builder.() -> Unit): Unit =
+      logConfiguration(LogConfigurationProperty(`value`))
 
   /**
    * The configuration for manifest processing rules.
@@ -464,6 +552,43 @@ public open class CfnPlaybackConfiguration(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The setting that indicates what conditioning MediaTailor will perform on ads that the ad
+     * decision server (ADS) returns, and what priority MediaTailor uses when inserting ads.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-adconditioningconfiguration)
+     * @param adConditioningConfiguration The setting that indicates what conditioning MediaTailor
+     * will perform on ads that the ad decision server (ADS) returns, and what priority MediaTailor
+     * uses when inserting ads. 
+     */
+    public fun adConditioningConfiguration(adConditioningConfiguration: IResolvable)
+
+    /**
+     * The setting that indicates what conditioning MediaTailor will perform on ads that the ad
+     * decision server (ADS) returns, and what priority MediaTailor uses when inserting ads.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-adconditioningconfiguration)
+     * @param adConditioningConfiguration The setting that indicates what conditioning MediaTailor
+     * will perform on ads that the ad decision server (ADS) returns, and what priority MediaTailor
+     * uses when inserting ads. 
+     */
+    public
+        fun adConditioningConfiguration(adConditioningConfiguration: AdConditioningConfigurationProperty)
+
+    /**
+     * The setting that indicates what conditioning MediaTailor will perform on ads that the ad
+     * decision server (ADS) returns, and what priority MediaTailor uses when inserting ads.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-adconditioningconfiguration)
+     * @param adConditioningConfiguration The setting that indicates what conditioning MediaTailor
+     * will perform on ads that the ad decision server (ADS) returns, and what priority MediaTailor
+     * uses when inserting ads. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a5c2478080f683a1612ff1d367225e8f1b3b06d8cdcbbdc88cef0616937fad70")
+    public
+        fun adConditioningConfiguration(adConditioningConfiguration: AdConditioningConfigurationProperty.Builder.() -> Unit)
+
     /**
      * The URL for the ad decision server (ADS).
      *
@@ -595,7 +720,7 @@ public open class CfnPlaybackConfiguration(
      * @param configurationAliases The player parameters and aliases used as dynamic variables
      * during session initialization. 
      */
-    public fun configurationAliases(configurationAliases: IResolvable)
+    public fun configurationAliases(configurationAliases: Map<String, Any>)
 
     /**
      * The player parameters and aliases used as dynamic variables during session initialization.
@@ -607,7 +732,7 @@ public open class CfnPlaybackConfiguration(
      * @param configurationAliases The player parameters and aliases used as dynamic variables
      * during session initialization. 
      */
-    public fun configurationAliases(configurationAliases: Map<String, Any>)
+    public fun configurationAliases(configurationAliases: IResolvable)
 
     /**
      * The configuration for a DASH source.
@@ -662,6 +787,20 @@ public open class CfnPlaybackConfiguration(
     public fun hlsConfiguration(hlsConfiguration: HlsConfigurationProperty.Builder.() -> Unit)
 
     /**
+     * The setting that controls whether players can use stitched or guided ad insertion.
+     *
+     * The default, `STITCHED_ONLY` , forces all player sessions to use stitched (server-side) ad
+     * insertion. Choosing `PLAYER_SELECT` allows players to select either stitched or guided ad
+     * insertion at session-initialization time. The default for players that do not specify an
+     * insertion mode is stitched.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-insertionmode)
+     * @param insertionMode The setting that controls whether players can use stitched or guided ad
+     * insertion. 
+     */
+    public fun insertionMode(insertionMode: String)
+
+    /**
      * The configuration for pre-roll ad insertion.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-liveprerollconfiguration)
@@ -687,6 +826,35 @@ public open class CfnPlaybackConfiguration(
     @JvmName("f82feb9340165b402df0727d1542a0723dda6732cb73a8fadfd92f8aafde4ad8")
     public
         fun livePreRollConfiguration(livePreRollConfiguration: LivePreRollConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * Defines where AWS Elemental MediaTailor sends logs for the playback configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration)
+     * @param logConfiguration Defines where AWS Elemental MediaTailor sends logs for the playback
+     * configuration. 
+     */
+    public fun logConfiguration(logConfiguration: IResolvable)
+
+    /**
+     * Defines where AWS Elemental MediaTailor sends logs for the playback configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration)
+     * @param logConfiguration Defines where AWS Elemental MediaTailor sends logs for the playback
+     * configuration. 
+     */
+    public fun logConfiguration(logConfiguration: LogConfigurationProperty)
+
+    /**
+     * Defines where AWS Elemental MediaTailor sends logs for the playback configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration)
+     * @param logConfiguration Defines where AWS Elemental MediaTailor sends logs for the playback
+     * configuration. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b54ef683e6cc12989942b17cceb675c202a2f5572ca37f38d8a62918ecff5a71")
+    public fun logConfiguration(logConfiguration: LogConfigurationProperty.Builder.() -> Unit)
 
     /**
      * The configuration for manifest processing rules.
@@ -821,6 +989,49 @@ public open class CfnPlaybackConfiguration(
         software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.Builder =
         software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.Builder.create(scope,
         id)
+
+    /**
+     * The setting that indicates what conditioning MediaTailor will perform on ads that the ad
+     * decision server (ADS) returns, and what priority MediaTailor uses when inserting ads.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-adconditioningconfiguration)
+     * @param adConditioningConfiguration The setting that indicates what conditioning MediaTailor
+     * will perform on ads that the ad decision server (ADS) returns, and what priority MediaTailor
+     * uses when inserting ads. 
+     */
+    override fun adConditioningConfiguration(adConditioningConfiguration: IResolvable) {
+      cdkBuilder.adConditioningConfiguration(adConditioningConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The setting that indicates what conditioning MediaTailor will perform on ads that the ad
+     * decision server (ADS) returns, and what priority MediaTailor uses when inserting ads.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-adconditioningconfiguration)
+     * @param adConditioningConfiguration The setting that indicates what conditioning MediaTailor
+     * will perform on ads that the ad decision server (ADS) returns, and what priority MediaTailor
+     * uses when inserting ads. 
+     */
+    override
+        fun adConditioningConfiguration(adConditioningConfiguration: AdConditioningConfigurationProperty) {
+      cdkBuilder.adConditioningConfiguration(adConditioningConfiguration.let(AdConditioningConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The setting that indicates what conditioning MediaTailor will perform on ads that the ad
+     * decision server (ADS) returns, and what priority MediaTailor uses when inserting ads.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-adconditioningconfiguration)
+     * @param adConditioningConfiguration The setting that indicates what conditioning MediaTailor
+     * will perform on ads that the ad decision server (ADS) returns, and what priority MediaTailor
+     * uses when inserting ads. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a5c2478080f683a1612ff1d367225e8f1b3b06d8cdcbbdc88cef0616937fad70")
+    override
+        fun adConditioningConfiguration(adConditioningConfiguration: AdConditioningConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        adConditioningConfiguration(AdConditioningConfigurationProperty(adConditioningConfiguration))
 
     /**
      * The URL for the ad decision server (ADS).
@@ -970,8 +1181,8 @@ public open class CfnPlaybackConfiguration(
      * @param configurationAliases The player parameters and aliases used as dynamic variables
      * during session initialization. 
      */
-    override fun configurationAliases(configurationAliases: IResolvable) {
-      cdkBuilder.configurationAliases(configurationAliases.let(IResolvable.Companion::unwrap))
+    override fun configurationAliases(configurationAliases: Map<String, Any>) {
+      cdkBuilder.configurationAliases(configurationAliases.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -984,8 +1195,8 @@ public open class CfnPlaybackConfiguration(
      * @param configurationAliases The player parameters and aliases used as dynamic variables
      * during session initialization. 
      */
-    override fun configurationAliases(configurationAliases: Map<String, Any>) {
-      cdkBuilder.configurationAliases(configurationAliases.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    override fun configurationAliases(configurationAliases: IResolvable) {
+      cdkBuilder.configurationAliases(configurationAliases.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1051,6 +1262,22 @@ public open class CfnPlaybackConfiguration(
         Unit = hlsConfiguration(HlsConfigurationProperty(hlsConfiguration))
 
     /**
+     * The setting that controls whether players can use stitched or guided ad insertion.
+     *
+     * The default, `STITCHED_ONLY` , forces all player sessions to use stitched (server-side) ad
+     * insertion. Choosing `PLAYER_SELECT` allows players to select either stitched or guided ad
+     * insertion at session-initialization time. The default for players that do not specify an
+     * insertion mode is stitched.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-insertionmode)
+     * @param insertionMode The setting that controls whether players can use stitched or guided ad
+     * insertion. 
+     */
+    override fun insertionMode(insertionMode: String) {
+      cdkBuilder.insertionMode(insertionMode)
+    }
+
+    /**
      * The configuration for pre-roll ad insertion.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-liveprerollconfiguration)
@@ -1082,6 +1309,40 @@ public open class CfnPlaybackConfiguration(
     override
         fun livePreRollConfiguration(livePreRollConfiguration: LivePreRollConfigurationProperty.Builder.() -> Unit):
         Unit = livePreRollConfiguration(LivePreRollConfigurationProperty(livePreRollConfiguration))
+
+    /**
+     * Defines where AWS Elemental MediaTailor sends logs for the playback configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration)
+     * @param logConfiguration Defines where AWS Elemental MediaTailor sends logs for the playback
+     * configuration. 
+     */
+    override fun logConfiguration(logConfiguration: IResolvable) {
+      cdkBuilder.logConfiguration(logConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Defines where AWS Elemental MediaTailor sends logs for the playback configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration)
+     * @param logConfiguration Defines where AWS Elemental MediaTailor sends logs for the playback
+     * configuration. 
+     */
+    override fun logConfiguration(logConfiguration: LogConfigurationProperty) {
+      cdkBuilder.logConfiguration(logConfiguration.let(LogConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * Defines where AWS Elemental MediaTailor sends logs for the playback configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration)
+     * @param logConfiguration Defines where AWS Elemental MediaTailor sends logs for the playback
+     * configuration. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b54ef683e6cc12989942b17cceb675c202a2f5572ca37f38d8a62918ecff5a71")
+    override fun logConfiguration(logConfiguration: LogConfigurationProperty.Builder.() -> Unit):
+        Unit = logConfiguration(LogConfigurationProperty(logConfiguration))
 
     /**
      * The configuration for manifest processing rules.
@@ -1251,6 +1512,123 @@ public open class CfnPlaybackConfiguration(
   }
 
   /**
+   * The setting that indicates what conditioning MediaTailor will perform on ads that the ad
+   * decision server (ADS) returns.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
+   * AdConditioningConfigurationProperty adConditioningConfigurationProperty =
+   * AdConditioningConfigurationProperty.builder()
+   * .streamingMediaFileConditioning("streamingMediaFileConditioning")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-adconditioningconfiguration.html)
+   */
+  public interface AdConditioningConfigurationProperty {
+    /**
+     * For ads that have media files with streaming delivery and supported file extensions,
+     * indicates what transcoding action MediaTailor takes when it first receives these ads from the
+     * ADS.
+     *
+     * `TRANSCODE` indicates that MediaTailor must transcode the ads. `NONE` indicates that you have
+     * already transcoded the ads outside of MediaTailor and don't need them transcoded as part of the
+     * ad insertion workflow. For more information about ad conditioning see [Using preconditioned
+     * ads](https://docs.aws.amazon.com/mediatailor/latest/ug/precondition-ads.html) in the AWS
+     * Elemental MediaTailor user guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-adconditioningconfiguration.html#cfn-mediatailor-playbackconfiguration-adconditioningconfiguration-streamingmediafileconditioning)
+     */
+    public fun streamingMediaFileConditioning(): String
+
+    /**
+     * A builder for [AdConditioningConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param streamingMediaFileConditioning For ads that have media files with streaming delivery
+       * and supported file extensions, indicates what transcoding action MediaTailor takes when it
+       * first receives these ads from the ADS. 
+       * `TRANSCODE` indicates that MediaTailor must transcode the ads. `NONE` indicates that you
+       * have already transcoded the ads outside of MediaTailor and don't need them transcoded as part
+       * of the ad insertion workflow. For more information about ad conditioning see [Using
+       * preconditioned ads](https://docs.aws.amazon.com/mediatailor/latest/ug/precondition-ads.html)
+       * in the AWS Elemental MediaTailor user guide.
+       */
+      public fun streamingMediaFileConditioning(streamingMediaFileConditioning: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdConditioningConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdConditioningConfigurationProperty.builder()
+
+      /**
+       * @param streamingMediaFileConditioning For ads that have media files with streaming delivery
+       * and supported file extensions, indicates what transcoding action MediaTailor takes when it
+       * first receives these ads from the ADS. 
+       * `TRANSCODE` indicates that MediaTailor must transcode the ads. `NONE` indicates that you
+       * have already transcoded the ads outside of MediaTailor and don't need them transcoded as part
+       * of the ad insertion workflow. For more information about ad conditioning see [Using
+       * preconditioned ads](https://docs.aws.amazon.com/mediatailor/latest/ug/precondition-ads.html)
+       * in the AWS Elemental MediaTailor user guide.
+       */
+      override fun streamingMediaFileConditioning(streamingMediaFileConditioning: String) {
+        cdkBuilder.streamingMediaFileConditioning(streamingMediaFileConditioning)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdConditioningConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdConditioningConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        AdConditioningConfigurationProperty {
+      /**
+       * For ads that have media files with streaming delivery and supported file extensions,
+       * indicates what transcoding action MediaTailor takes when it first receives these ads from the
+       * ADS.
+       *
+       * `TRANSCODE` indicates that MediaTailor must transcode the ads. `NONE` indicates that you
+       * have already transcoded the ads outside of MediaTailor and don't need them transcoded as part
+       * of the ad insertion workflow. For more information about ad conditioning see [Using
+       * preconditioned ads](https://docs.aws.amazon.com/mediatailor/latest/ug/precondition-ads.html)
+       * in the AWS Elemental MediaTailor user guide.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-adconditioningconfiguration.html#cfn-mediatailor-playbackconfiguration-adconditioningconfiguration-streamingmediafileconditioning)
+       */
+      override fun streamingMediaFileConditioning(): String =
+          unwrap(this).getStreamingMediaFileConditioning()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AdConditioningConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdConditioningConfigurationProperty):
+          AdConditioningConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdConditioningConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AdConditioningConfigurationProperty):
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdConditioningConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdConditioningConfigurationProperty
+    }
+  }
+
+  /**
    * For HLS, when set to `true` , MediaTailor passes through `EXT-X-CUE-IN` , `EXT-X-CUE-OUT` , and
    * `EXT-X-SPLICEPOINT-SCTE35` ad markers from the origin manifest to the MediaTailor personalized
    * manifest.
@@ -1347,6 +1725,160 @@ public open class CfnPlaybackConfiguration(
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty
+    }
+  }
+
+  /**
+   * Settings for customizing what events are included in logs for interactions with the ad decision
+   * server (ADS).
+   *
+   * For more information about ADS logs, inlcuding descriptions of the event types, see
+   * [MediaTailor ADS logs description and event
+   * types](https://docs.aws.amazon.com/mediatailor/latest/ug/ads-log-format.html) in AWS Elemental
+   * MediaTailor User Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
+   * AdsInteractionLogProperty adsInteractionLogProperty = AdsInteractionLogProperty.builder()
+   * .excludeEventTypes(List.of("excludeEventTypes"))
+   * .publishOptInEventTypes(List.of("publishOptInEventTypes"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-adsinteractionlog.html)
+   */
+  public interface AdsInteractionLogProperty {
+    /**
+     * Indicates that MediaTailor won't emit the selected events in the logs for playback sessions
+     * that are initialized with this configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-adsinteractionlog.html#cfn-mediatailor-playbackconfiguration-adsinteractionlog-excludeeventtypes)
+     */
+    public fun excludeEventTypes(): List<String> = unwrap(this).getExcludeEventTypes() ?:
+        emptyList()
+
+    /**
+     * Indicates that MediaTailor emits `RAW_ADS_RESPONSE` logs for playback sessions that are
+     * initialized with this configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-adsinteractionlog.html#cfn-mediatailor-playbackconfiguration-adsinteractionlog-publishoptineventtypes)
+     */
+    public fun publishOptInEventTypes(): List<String> = unwrap(this).getPublishOptInEventTypes() ?:
+        emptyList()
+
+    /**
+     * A builder for [AdsInteractionLogProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param excludeEventTypes Indicates that MediaTailor won't emit the selected events in the
+       * logs for playback sessions that are initialized with this configuration.
+       */
+      public fun excludeEventTypes(excludeEventTypes: List<String>)
+
+      /**
+       * @param excludeEventTypes Indicates that MediaTailor won't emit the selected events in the
+       * logs for playback sessions that are initialized with this configuration.
+       */
+      public fun excludeEventTypes(vararg excludeEventTypes: String)
+
+      /**
+       * @param publishOptInEventTypes Indicates that MediaTailor emits `RAW_ADS_RESPONSE` logs for
+       * playback sessions that are initialized with this configuration.
+       */
+      public fun publishOptInEventTypes(publishOptInEventTypes: List<String>)
+
+      /**
+       * @param publishOptInEventTypes Indicates that MediaTailor emits `RAW_ADS_RESPONSE` logs for
+       * playback sessions that are initialized with this configuration.
+       */
+      public fun publishOptInEventTypes(vararg publishOptInEventTypes: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdsInteractionLogProperty.Builder
+          =
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdsInteractionLogProperty.builder()
+
+      /**
+       * @param excludeEventTypes Indicates that MediaTailor won't emit the selected events in the
+       * logs for playback sessions that are initialized with this configuration.
+       */
+      override fun excludeEventTypes(excludeEventTypes: List<String>) {
+        cdkBuilder.excludeEventTypes(excludeEventTypes)
+      }
+
+      /**
+       * @param excludeEventTypes Indicates that MediaTailor won't emit the selected events in the
+       * logs for playback sessions that are initialized with this configuration.
+       */
+      override fun excludeEventTypes(vararg excludeEventTypes: String): Unit =
+          excludeEventTypes(excludeEventTypes.toList())
+
+      /**
+       * @param publishOptInEventTypes Indicates that MediaTailor emits `RAW_ADS_RESPONSE` logs for
+       * playback sessions that are initialized with this configuration.
+       */
+      override fun publishOptInEventTypes(publishOptInEventTypes: List<String>) {
+        cdkBuilder.publishOptInEventTypes(publishOptInEventTypes)
+      }
+
+      /**
+       * @param publishOptInEventTypes Indicates that MediaTailor emits `RAW_ADS_RESPONSE` logs for
+       * playback sessions that are initialized with this configuration.
+       */
+      override fun publishOptInEventTypes(vararg publishOptInEventTypes: String): Unit =
+          publishOptInEventTypes(publishOptInEventTypes.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdsInteractionLogProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdsInteractionLogProperty,
+    ) : CdkObject(cdkObject),
+        AdsInteractionLogProperty {
+      /**
+       * Indicates that MediaTailor won't emit the selected events in the logs for playback sessions
+       * that are initialized with this configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-adsinteractionlog.html#cfn-mediatailor-playbackconfiguration-adsinteractionlog-excludeeventtypes)
+       */
+      override fun excludeEventTypes(): List<String> = unwrap(this).getExcludeEventTypes() ?:
+          emptyList()
+
+      /**
+       * Indicates that MediaTailor emits `RAW_ADS_RESPONSE` logs for playback sessions that are
+       * initialized with this configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-adsinteractionlog.html#cfn-mediatailor-playbackconfiguration-adsinteractionlog-publishoptineventtypes)
+       */
+      override fun publishOptInEventTypes(): List<String> = unwrap(this).getPublishOptInEventTypes()
+          ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AdsInteractionLogProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdsInteractionLogProperty):
+          AdsInteractionLogProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdsInteractionLogProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AdsInteractionLogProperty):
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdsInteractionLogProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdsInteractionLogProperty
     }
   }
 
@@ -2236,6 +2768,329 @@ public open class CfnPlaybackConfiguration(
   }
 
   /**
+   * Defines where AWS Elemental MediaTailor sends logs for the playback configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
+   * LogConfigurationProperty logConfigurationProperty = LogConfigurationProperty.builder()
+   * .percentEnabled(123)
+   * // the properties below are optional
+   * .adsInteractionLog(AdsInteractionLogProperty.builder()
+   * .excludeEventTypes(List.of("excludeEventTypes"))
+   * .publishOptInEventTypes(List.of("publishOptInEventTypes"))
+   * .build())
+   * .enabledLoggingStrategies(List.of("enabledLoggingStrategies"))
+   * .manifestServiceInteractionLog(ManifestServiceInteractionLogProperty.builder()
+   * .excludeEventTypes(List.of("excludeEventTypes"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-logconfiguration.html)
+   */
+  public interface LogConfigurationProperty {
+    /**
+     * Settings for customizing what events are included in logs for interactions with the ad
+     * decision server (ADS).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-logconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration-adsinteractionlog)
+     */
+    public fun adsInteractionLog(): Any? = unwrap(this).getAdsInteractionLog()
+
+    /**
+     * The method used for collecting logs from AWS Elemental MediaTailor.
+     *
+     * `LEGACY_CLOUDWATCH` indicates that MediaTailor is sending logs directly to Amazon CloudWatch
+     * Logs. `VENDED_LOGS` indicates that MediaTailor is sending logs to CloudWatch, which then vends
+     * the logs to your destination of choice. Supported destinations are CloudWatch Logs log group,
+     * Amazon S3 bucket, and Amazon Data Firehose stream.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-logconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration-enabledloggingstrategies)
+     */
+    public fun enabledLoggingStrategies(): List<String> = unwrap(this).getEnabledLoggingStrategies()
+        ?: emptyList()
+
+    /**
+     * Settings for customizing what events are included in logs for interactions with the origin
+     * server.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-logconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration-manifestserviceinteractionlog)
+     */
+    public fun manifestServiceInteractionLog(): Any? =
+        unwrap(this).getManifestServiceInteractionLog()
+
+    /**
+     * The percentage of session logs that MediaTailor sends to your configured log destination.
+     *
+     * For example, if your playback configuration has 1000 sessions and `percentEnabled` is set to
+     * `60` , MediaTailor sends logs for 600 of the sessions to CloudWatch Logs. MediaTailor decides at
+     * random which of the playback configuration sessions to send logs for. If you want to view logs
+     * for a specific session, you can use the [debug log
+     * mode](https://docs.aws.amazon.com/mediatailor/latest/ug/debug-log-mode.html) .
+     *
+     * Valid values: `0` - `100`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-logconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration-percentenabled)
+     */
+    public fun percentEnabled(): Number
+
+    /**
+     * A builder for [LogConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param adsInteractionLog Settings for customizing what events are included in logs for
+       * interactions with the ad decision server (ADS).
+       */
+      public fun adsInteractionLog(adsInteractionLog: IResolvable)
+
+      /**
+       * @param adsInteractionLog Settings for customizing what events are included in logs for
+       * interactions with the ad decision server (ADS).
+       */
+      public fun adsInteractionLog(adsInteractionLog: AdsInteractionLogProperty)
+
+      /**
+       * @param adsInteractionLog Settings for customizing what events are included in logs for
+       * interactions with the ad decision server (ADS).
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e1196f3d675eb845f5d234ce873bd5f3bf7c546bc86bc05afa18429a2d85452b")
+      public fun adsInteractionLog(adsInteractionLog: AdsInteractionLogProperty.Builder.() -> Unit)
+
+      /**
+       * @param enabledLoggingStrategies The method used for collecting logs from AWS Elemental
+       * MediaTailor.
+       * `LEGACY_CLOUDWATCH` indicates that MediaTailor is sending logs directly to Amazon
+       * CloudWatch Logs. `VENDED_LOGS` indicates that MediaTailor is sending logs to CloudWatch, which
+       * then vends the logs to your destination of choice. Supported destinations are CloudWatch Logs
+       * log group, Amazon S3 bucket, and Amazon Data Firehose stream.
+       */
+      public fun enabledLoggingStrategies(enabledLoggingStrategies: List<String>)
+
+      /**
+       * @param enabledLoggingStrategies The method used for collecting logs from AWS Elemental
+       * MediaTailor.
+       * `LEGACY_CLOUDWATCH` indicates that MediaTailor is sending logs directly to Amazon
+       * CloudWatch Logs. `VENDED_LOGS` indicates that MediaTailor is sending logs to CloudWatch, which
+       * then vends the logs to your destination of choice. Supported destinations are CloudWatch Logs
+       * log group, Amazon S3 bucket, and Amazon Data Firehose stream.
+       */
+      public fun enabledLoggingStrategies(vararg enabledLoggingStrategies: String)
+
+      /**
+       * @param manifestServiceInteractionLog Settings for customizing what events are included in
+       * logs for interactions with the origin server.
+       */
+      public fun manifestServiceInteractionLog(manifestServiceInteractionLog: IResolvable)
+
+      /**
+       * @param manifestServiceInteractionLog Settings for customizing what events are included in
+       * logs for interactions with the origin server.
+       */
+      public
+          fun manifestServiceInteractionLog(manifestServiceInteractionLog: ManifestServiceInteractionLogProperty)
+
+      /**
+       * @param manifestServiceInteractionLog Settings for customizing what events are included in
+       * logs for interactions with the origin server.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5616864e41b27de6a2fbcfc93e5d9d5f29cd282b45d6f0049f147d9bcdcf1076")
+      public
+          fun manifestServiceInteractionLog(manifestServiceInteractionLog: ManifestServiceInteractionLogProperty.Builder.() -> Unit)
+
+      /**
+       * @param percentEnabled The percentage of session logs that MediaTailor sends to your
+       * configured log destination. 
+       * For example, if your playback configuration has 1000 sessions and `percentEnabled` is set
+       * to `60` , MediaTailor sends logs for 600 of the sessions to CloudWatch Logs. MediaTailor
+       * decides at random which of the playback configuration sessions to send logs for. If you want
+       * to view logs for a specific session, you can use the [debug log
+       * mode](https://docs.aws.amazon.com/mediatailor/latest/ug/debug-log-mode.html) .
+       *
+       * Valid values: `0` - `100`
+       */
+      public fun percentEnabled(percentEnabled: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LogConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LogConfigurationProperty.builder()
+
+      /**
+       * @param adsInteractionLog Settings for customizing what events are included in logs for
+       * interactions with the ad decision server (ADS).
+       */
+      override fun adsInteractionLog(adsInteractionLog: IResolvable) {
+        cdkBuilder.adsInteractionLog(adsInteractionLog.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param adsInteractionLog Settings for customizing what events are included in logs for
+       * interactions with the ad decision server (ADS).
+       */
+      override fun adsInteractionLog(adsInteractionLog: AdsInteractionLogProperty) {
+        cdkBuilder.adsInteractionLog(adsInteractionLog.let(AdsInteractionLogProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param adsInteractionLog Settings for customizing what events are included in logs for
+       * interactions with the ad decision server (ADS).
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e1196f3d675eb845f5d234ce873bd5f3bf7c546bc86bc05afa18429a2d85452b")
+      override
+          fun adsInteractionLog(adsInteractionLog: AdsInteractionLogProperty.Builder.() -> Unit):
+          Unit = adsInteractionLog(AdsInteractionLogProperty(adsInteractionLog))
+
+      /**
+       * @param enabledLoggingStrategies The method used for collecting logs from AWS Elemental
+       * MediaTailor.
+       * `LEGACY_CLOUDWATCH` indicates that MediaTailor is sending logs directly to Amazon
+       * CloudWatch Logs. `VENDED_LOGS` indicates that MediaTailor is sending logs to CloudWatch, which
+       * then vends the logs to your destination of choice. Supported destinations are CloudWatch Logs
+       * log group, Amazon S3 bucket, and Amazon Data Firehose stream.
+       */
+      override fun enabledLoggingStrategies(enabledLoggingStrategies: List<String>) {
+        cdkBuilder.enabledLoggingStrategies(enabledLoggingStrategies)
+      }
+
+      /**
+       * @param enabledLoggingStrategies The method used for collecting logs from AWS Elemental
+       * MediaTailor.
+       * `LEGACY_CLOUDWATCH` indicates that MediaTailor is sending logs directly to Amazon
+       * CloudWatch Logs. `VENDED_LOGS` indicates that MediaTailor is sending logs to CloudWatch, which
+       * then vends the logs to your destination of choice. Supported destinations are CloudWatch Logs
+       * log group, Amazon S3 bucket, and Amazon Data Firehose stream.
+       */
+      override fun enabledLoggingStrategies(vararg enabledLoggingStrategies: String): Unit =
+          enabledLoggingStrategies(enabledLoggingStrategies.toList())
+
+      /**
+       * @param manifestServiceInteractionLog Settings for customizing what events are included in
+       * logs for interactions with the origin server.
+       */
+      override fun manifestServiceInteractionLog(manifestServiceInteractionLog: IResolvable) {
+        cdkBuilder.manifestServiceInteractionLog(manifestServiceInteractionLog.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param manifestServiceInteractionLog Settings for customizing what events are included in
+       * logs for interactions with the origin server.
+       */
+      override
+          fun manifestServiceInteractionLog(manifestServiceInteractionLog: ManifestServiceInteractionLogProperty) {
+        cdkBuilder.manifestServiceInteractionLog(manifestServiceInteractionLog.let(ManifestServiceInteractionLogProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param manifestServiceInteractionLog Settings for customizing what events are included in
+       * logs for interactions with the origin server.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5616864e41b27de6a2fbcfc93e5d9d5f29cd282b45d6f0049f147d9bcdcf1076")
+      override
+          fun manifestServiceInteractionLog(manifestServiceInteractionLog: ManifestServiceInteractionLogProperty.Builder.() -> Unit):
+          Unit =
+          manifestServiceInteractionLog(ManifestServiceInteractionLogProperty(manifestServiceInteractionLog))
+
+      /**
+       * @param percentEnabled The percentage of session logs that MediaTailor sends to your
+       * configured log destination. 
+       * For example, if your playback configuration has 1000 sessions and `percentEnabled` is set
+       * to `60` , MediaTailor sends logs for 600 of the sessions to CloudWatch Logs. MediaTailor
+       * decides at random which of the playback configuration sessions to send logs for. If you want
+       * to view logs for a specific session, you can use the [debug log
+       * mode](https://docs.aws.amazon.com/mediatailor/latest/ug/debug-log-mode.html) .
+       *
+       * Valid values: `0` - `100`
+       */
+      override fun percentEnabled(percentEnabled: Number) {
+        cdkBuilder.percentEnabled(percentEnabled)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LogConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LogConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        LogConfigurationProperty {
+      /**
+       * Settings for customizing what events are included in logs for interactions with the ad
+       * decision server (ADS).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-logconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration-adsinteractionlog)
+       */
+      override fun adsInteractionLog(): Any? = unwrap(this).getAdsInteractionLog()
+
+      /**
+       * The method used for collecting logs from AWS Elemental MediaTailor.
+       *
+       * `LEGACY_CLOUDWATCH` indicates that MediaTailor is sending logs directly to Amazon
+       * CloudWatch Logs. `VENDED_LOGS` indicates that MediaTailor is sending logs to CloudWatch, which
+       * then vends the logs to your destination of choice. Supported destinations are CloudWatch Logs
+       * log group, Amazon S3 bucket, and Amazon Data Firehose stream.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-logconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration-enabledloggingstrategies)
+       */
+      override fun enabledLoggingStrategies(): List<String> =
+          unwrap(this).getEnabledLoggingStrategies() ?: emptyList()
+
+      /**
+       * Settings for customizing what events are included in logs for interactions with the origin
+       * server.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-logconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration-manifestserviceinteractionlog)
+       */
+      override fun manifestServiceInteractionLog(): Any? =
+          unwrap(this).getManifestServiceInteractionLog()
+
+      /**
+       * The percentage of session logs that MediaTailor sends to your configured log destination.
+       *
+       * For example, if your playback configuration has 1000 sessions and `percentEnabled` is set
+       * to `60` , MediaTailor sends logs for 600 of the sessions to CloudWatch Logs. MediaTailor
+       * decides at random which of the playback configuration sessions to send logs for. If you want
+       * to view logs for a specific session, you can use the [debug log
+       * mode](https://docs.aws.amazon.com/mediatailor/latest/ug/debug-log-mode.html) .
+       *
+       * Valid values: `0` - `100`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-logconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration-percentenabled)
+       */
+      override fun percentEnabled(): Number = unwrap(this).getPercentEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LogConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LogConfigurationProperty):
+          LogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? LogConfigurationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LogConfigurationProperty):
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LogConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LogConfigurationProperty
+    }
+  }
+
+  /**
    * The configuration for manifest processing rules.
    *
    * Manifest processing rules enable customization of the personalized manifests created by
@@ -2384,6 +3239,116 @@ public open class CfnPlaybackConfiguration(
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestProcessingRulesProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestProcessingRulesProperty
+    }
+  }
+
+  /**
+   * Settings for customizing what events are included in logs for interactions with the origin
+   * server.
+   *
+   * For more information about manifest service logs, including descriptions of the event types,
+   * see [MediaTailor manifest logs description and event
+   * types](https://docs.aws.amazon.com/mediatailor/latest/ug/log-types.html) in AWS Elemental
+   * MediaTailor User Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediatailor.*;
+   * ManifestServiceInteractionLogProperty manifestServiceInteractionLogProperty =
+   * ManifestServiceInteractionLogProperty.builder()
+   * .excludeEventTypes(List.of("excludeEventTypes"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-manifestserviceinteractionlog.html)
+   */
+  public interface ManifestServiceInteractionLogProperty {
+    /**
+     * Indicates that MediaTailor won't emit the selected events in the logs for playback sessions
+     * that are initialized with this configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-manifestserviceinteractionlog.html#cfn-mediatailor-playbackconfiguration-manifestserviceinteractionlog-excludeeventtypes)
+     */
+    public fun excludeEventTypes(): List<String> = unwrap(this).getExcludeEventTypes() ?:
+        emptyList()
+
+    /**
+     * A builder for [ManifestServiceInteractionLogProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param excludeEventTypes Indicates that MediaTailor won't emit the selected events in the
+       * logs for playback sessions that are initialized with this configuration.
+       */
+      public fun excludeEventTypes(excludeEventTypes: List<String>)
+
+      /**
+       * @param excludeEventTypes Indicates that MediaTailor won't emit the selected events in the
+       * logs for playback sessions that are initialized with this configuration.
+       */
+      public fun excludeEventTypes(vararg excludeEventTypes: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestServiceInteractionLogProperty.Builder
+          =
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestServiceInteractionLogProperty.builder()
+
+      /**
+       * @param excludeEventTypes Indicates that MediaTailor won't emit the selected events in the
+       * logs for playback sessions that are initialized with this configuration.
+       */
+      override fun excludeEventTypes(excludeEventTypes: List<String>) {
+        cdkBuilder.excludeEventTypes(excludeEventTypes)
+      }
+
+      /**
+       * @param excludeEventTypes Indicates that MediaTailor won't emit the selected events in the
+       * logs for playback sessions that are initialized with this configuration.
+       */
+      override fun excludeEventTypes(vararg excludeEventTypes: String): Unit =
+          excludeEventTypes(excludeEventTypes.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestServiceInteractionLogProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestServiceInteractionLogProperty,
+    ) : CdkObject(cdkObject),
+        ManifestServiceInteractionLogProperty {
+      /**
+       * Indicates that MediaTailor won't emit the selected events in the logs for playback sessions
+       * that are initialized with this configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-manifestserviceinteractionlog.html#cfn-mediatailor-playbackconfiguration-manifestserviceinteractionlog-excludeeventtypes)
+       */
+      override fun excludeEventTypes(): List<String> = unwrap(this).getExcludeEventTypes() ?:
+          emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ManifestServiceInteractionLogProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestServiceInteractionLogProperty):
+          ManifestServiceInteractionLogProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ManifestServiceInteractionLogProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ManifestServiceInteractionLogProperty):
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestServiceInteractionLogProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestServiceInteractionLogProperty
     }
   }
 }

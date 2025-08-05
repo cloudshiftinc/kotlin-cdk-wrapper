@@ -45,7 +45,7 @@ import kotlin.jvm.JvmName
  */
 public interface FlowLogDestinationConfig {
   /**
-   * The ARN of Kinesis Data Firehose delivery stream to publish the flow logs to.
+   * The ARN of Amazon Data Firehose delivery stream to publish the flow logs to.
    *
    * Default: - undefined
    */
@@ -100,7 +100,7 @@ public interface FlowLogDestinationConfig {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param deliveryStreamArn The ARN of Kinesis Data Firehose delivery stream to publish the flow
+     * @param deliveryStreamArn The ARN of Amazon Data Firehose delivery stream to publish the flow
      * logs to.
      */
     public fun deliveryStreamArn(deliveryStreamArn: String)
@@ -148,7 +148,7 @@ public interface FlowLogDestinationConfig {
         software.amazon.awscdk.services.ec2.FlowLogDestinationConfig.builder()
 
     /**
-     * @param deliveryStreamArn The ARN of Kinesis Data Firehose delivery stream to publish the flow
+     * @param deliveryStreamArn The ARN of Amazon Data Firehose delivery stream to publish the flow
      * logs to.
      */
     override fun deliveryStreamArn(deliveryStreamArn: String) {
@@ -214,7 +214,7 @@ public interface FlowLogDestinationConfig {
   ) : CdkObject(cdkObject),
       FlowLogDestinationConfig {
     /**
-     * The ARN of Kinesis Data Firehose delivery stream to publish the flow logs to.
+     * The ARN of Amazon Data Firehose delivery stream to publish the flow logs to.
      *
      * Default: - undefined
      */

@@ -105,7 +105,7 @@ public interface CfnPackageGroupProps {
   public fun pattern(): String
 
   /**
-   * A list of tags to be applied to the package group.
+   * An array of key-value pairs to apply to the package group.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-packagegroup.html#cfn-codeartifact-packagegroup-tags)
    */
@@ -162,12 +162,12 @@ public interface CfnPackageGroupProps {
     public fun pattern(pattern: String)
 
     /**
-     * @param tags A list of tags to be applied to the package group.
+     * @param tags An array of key-value pairs to apply to the package group.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags A list of tags to be applied to the package group.
+     * @param tags An array of key-value pairs to apply to the package group.
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -239,14 +239,14 @@ public interface CfnPackageGroupProps {
     }
 
     /**
-     * @param tags A list of tags to be applied to the package group.
+     * @param tags An array of key-value pairs to apply to the package group.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags A list of tags to be applied to the package group.
+     * @param tags An array of key-value pairs to apply to the package group.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -305,7 +305,7 @@ public interface CfnPackageGroupProps {
     override fun pattern(): String = unwrap(this).getPattern()
 
     /**
-     * A list of tags to be applied to the package group.
+     * An array of key-value pairs to apply to the package group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-packagegroup.html#cfn-codeartifact-packagegroup-tags)
      */

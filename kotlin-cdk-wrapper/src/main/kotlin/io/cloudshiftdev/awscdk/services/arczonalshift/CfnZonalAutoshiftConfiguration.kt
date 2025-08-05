@@ -21,9 +21,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * The zonal autoshift configuration for a resource includes the practice run configuration and the
  * status for running autoshifts, zonal autoshift status.
  *
- * When a resource has a practice run configuation, Route 53 ARC starts weekly zonal shifts for the
- * resource, to shift traffic away from an Availability Zone. Weekly practice runs help you to make
- * sure that your application can continue to operate normally with the loss of one Availability Zone.
+ * When a resource has a practice run configuation, ARC starts weekly zonal shifts for the resource,
+ * to shift traffic away from an Availability Zone. Weekly practice runs help you to make sure that
+ * your application can continue to operate normally with the loss of one Availability Zone.
  *
  * You can update the zonal autoshift autoshift status to enable or disable zonal autoshift. When
  * zonal autoshift is `ENABLED` , you authorize AWS to shift away resource traffic for an application
@@ -163,12 +163,12 @@ public open class CfnZonalAutoshiftConfiguration(
      * specified for a practice run, as well as any blocked dates or blocked windows for the practice
      * run.
      *
-     * When a resource has a practice run configuration, Route 53 ARC shifts traffic for the
-     * resource weekly for practice runs.
+     * When a resource has a practice run configuration, ARC shifts traffic for the resource weekly
+     * for practice runs.
      *
-     * Practice runs are required for zonal autoshift. The zonal shifts that Route 53 ARC starts for
-     * practice runs help you to ensure that shifting away traffic from an Availability Zone during an
-     * autoshift is safe for your application.
+     * Practice runs are required for zonal autoshift. The zonal shifts that ARC starts for practice
+     * runs help you to ensure that shifting away traffic from an Availability Zone during an autoshift
+     * is safe for your application.
      *
      * You can update or delete a practice run configuration. Before you delete a practice run
      * configuration, you must disable zonal autoshift for the resource. A practice run configuration
@@ -186,12 +186,12 @@ public open class CfnZonalAutoshiftConfiguration(
      * specified for a practice run, as well as any blocked dates or blocked windows for the practice
      * run.
      *
-     * When a resource has a practice run configuration, Route 53 ARC shifts traffic for the
-     * resource weekly for practice runs.
+     * When a resource has a practice run configuration, ARC shifts traffic for the resource weekly
+     * for practice runs.
      *
-     * Practice runs are required for zonal autoshift. The zonal shifts that Route 53 ARC starts for
-     * practice runs help you to ensure that shifting away traffic from an Availability Zone during an
-     * autoshift is safe for your application.
+     * Practice runs are required for zonal autoshift. The zonal shifts that ARC starts for practice
+     * runs help you to ensure that shifting away traffic from an Availability Zone during an autoshift
+     * is safe for your application.
      *
      * You can update or delete a practice run configuration. Before you delete a practice run
      * configuration, you must disable zonal autoshift for the resource. A practice run configuration
@@ -209,12 +209,12 @@ public open class CfnZonalAutoshiftConfiguration(
      * specified for a practice run, as well as any blocked dates or blocked windows for the practice
      * run.
      *
-     * When a resource has a practice run configuration, Route 53 ARC shifts traffic for the
-     * resource weekly for practice runs.
+     * When a resource has a practice run configuration, ARC shifts traffic for the resource weekly
+     * for practice runs.
      *
-     * Practice runs are required for zonal autoshift. The zonal shifts that Route 53 ARC starts for
-     * practice runs help you to ensure that shifting away traffic from an Availability Zone during an
-     * autoshift is safe for your application.
+     * Practice runs are required for zonal autoshift. The zonal shifts that ARC starts for practice
+     * runs help you to ensure that shifting away traffic from an Availability Zone during an autoshift
+     * is safe for your application.
      *
      * You can update or delete a practice run configuration. Before you delete a practice run
      * configuration, you must disable zonal autoshift for the resource. A practice run configuration
@@ -235,8 +235,7 @@ public open class CfnZonalAutoshiftConfiguration(
      *
      * The identifier is the Amazon Resource Name (ARN) for the resource.
      *
-     * At this time, supported resources are Network Load Balancers and Application Load Balancers
-     * with cross-zone load balancing turned off.
+     * At this time, supported resources are Network Load Balancers and Application Load Balancers.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-arczonalshift-zonalautoshiftconfiguration.html#cfn-arczonalshift-zonalautoshiftconfiguration-resourceidentifier)
      * @param resourceIdentifier The identifier for the resource that AWS shifts traffic for. 
@@ -272,12 +271,12 @@ public open class CfnZonalAutoshiftConfiguration(
      * specified for a practice run, as well as any blocked dates or blocked windows for the practice
      * run.
      *
-     * When a resource has a practice run configuration, Route 53 ARC shifts traffic for the
-     * resource weekly for practice runs.
+     * When a resource has a practice run configuration, ARC shifts traffic for the resource weekly
+     * for practice runs.
      *
-     * Practice runs are required for zonal autoshift. The zonal shifts that Route 53 ARC starts for
-     * practice runs help you to ensure that shifting away traffic from an Availability Zone during an
-     * autoshift is safe for your application.
+     * Practice runs are required for zonal autoshift. The zonal shifts that ARC starts for practice
+     * runs help you to ensure that shifting away traffic from an Availability Zone during an autoshift
+     * is safe for your application.
      *
      * You can update or delete a practice run configuration. Before you delete a practice run
      * configuration, you must disable zonal autoshift for the resource. A practice run configuration
@@ -297,12 +296,12 @@ public open class CfnZonalAutoshiftConfiguration(
      * specified for a practice run, as well as any blocked dates or blocked windows for the practice
      * run.
      *
-     * When a resource has a practice run configuration, Route 53 ARC shifts traffic for the
-     * resource weekly for practice runs.
+     * When a resource has a practice run configuration, ARC shifts traffic for the resource weekly
+     * for practice runs.
      *
-     * Practice runs are required for zonal autoshift. The zonal shifts that Route 53 ARC starts for
-     * practice runs help you to ensure that shifting away traffic from an Availability Zone during an
-     * autoshift is safe for your application.
+     * Practice runs are required for zonal autoshift. The zonal shifts that ARC starts for practice
+     * runs help you to ensure that shifting away traffic from an Availability Zone during an autoshift
+     * is safe for your application.
      *
      * You can update or delete a practice run configuration. Before you delete a practice run
      * configuration, you must disable zonal autoshift for the resource. A practice run configuration
@@ -323,12 +322,12 @@ public open class CfnZonalAutoshiftConfiguration(
      * specified for a practice run, as well as any blocked dates or blocked windows for the practice
      * run.
      *
-     * When a resource has a practice run configuration, Route 53 ARC shifts traffic for the
-     * resource weekly for practice runs.
+     * When a resource has a practice run configuration, ARC shifts traffic for the resource weekly
+     * for practice runs.
      *
-     * Practice runs are required for zonal autoshift. The zonal shifts that Route 53 ARC starts for
-     * practice runs help you to ensure that shifting away traffic from an Availability Zone during an
-     * autoshift is safe for your application.
+     * Practice runs are required for zonal autoshift. The zonal shifts that ARC starts for practice
+     * runs help you to ensure that shifting away traffic from an Availability Zone during an autoshift
+     * is safe for your application.
      *
      * You can update or delete a practice run configuration. Before you delete a practice run
      * configuration, you must disable zonal autoshift for the resource. A practice run configuration
@@ -350,8 +349,7 @@ public open class CfnZonalAutoshiftConfiguration(
      *
      * The identifier is the Amazon Resource Name (ARN) for the resource.
      *
-     * At this time, supported resources are Network Load Balancers and Application Load Balancers
-     * with cross-zone load balancing turned off.
+     * At this time, supported resources are Network Load Balancers and Application Load Balancers.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-arczonalshift-zonalautoshiftconfiguration.html#cfn-arczonalshift-zonalautoshiftconfiguration-resourceidentifier)
      * @param resourceIdentifier The identifier for the resource that AWS shifts traffic for. 
@@ -416,7 +414,7 @@ public open class CfnZonalAutoshiftConfiguration(
    *
    * For more information, see [Considerations when you configure zonal
    * autoshift](https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.considerations.html)
-   * in the Route 53 ARC Developer Guide.
+   * in the ARC Developer Guide.
    *
    * Example:
    *
@@ -544,9 +542,9 @@ public open class CfnZonalAutoshiftConfiguration(
    * specified for a practice run, as well as any blocked dates or blocked windows for the practice
    * run.
    *
-   * When a resource has a practice run configuation, Route 53 ARC starts weekly zonal shifts for
-   * the resource, to shift traffic away from an Availability Zone. Weekly practice runs help you to
-   * make sure that your application can continue to operate normally with the loss of one Availability
+   * When a resource has a practice run configuation, ARC starts weekly zonal shifts for the
+   * resource, to shift traffic away from an Availability Zone. Weekly practice runs help you to make
+   * sure that your application can continue to operate normally with the loss of one Availability
    * Zone.
    *
    * You can update or delete a practice run configuration. When you delete a practice run
@@ -591,13 +589,18 @@ public open class CfnZonalAutoshiftConfiguration(
     public fun blockedDates(): List<String> = unwrap(this).getBlockedDates() ?: emptyList()
 
     /**
-     * An array of one or more days and times that you can specify when Route 53 ARC does not start
-     * practice runs for a resource.
+     * An array of one or more days and times that you can specify when ARC does not start practice
+     * runs for a resource.
      *
      * Days and times are in UTC.
      *
      * Specify blocked windows in the format `DAY:HH:MM-DAY:HH:MM` , separated by spaces. For
      * example, `MON:18:30-MON:19:30 TUE:18:30-TUE:19:30` .
+     *
+     *
+     * Blocked windows have to start and end on the same day. Windows that span multiple days aren't
+     * supported.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arczonalshift-zonalautoshiftconfiguration-practicerunconfiguration.html#cfn-arczonalshift-zonalautoshiftconfiguration-practicerunconfiguration-blockedwindows)
      */
@@ -648,22 +651,30 @@ public open class CfnZonalAutoshiftConfiguration(
       public fun blockedDates(vararg blockedDates: String)
 
       /**
-       * @param blockedWindows An array of one or more days and times that you can specify when
-       * Route 53 ARC does not start practice runs for a resource.
+       * @param blockedWindows An array of one or more days and times that you can specify when ARC
+       * does not start practice runs for a resource.
        * Days and times are in UTC.
        *
        * Specify blocked windows in the format `DAY:HH:MM-DAY:HH:MM` , separated by spaces. For
        * example, `MON:18:30-MON:19:30 TUE:18:30-TUE:19:30` .
+       *
+       *
+       * Blocked windows have to start and end on the same day. Windows that span multiple days
+       * aren't supported.
        */
       public fun blockedWindows(blockedWindows: List<String>)
 
       /**
-       * @param blockedWindows An array of one or more days and times that you can specify when
-       * Route 53 ARC does not start practice runs for a resource.
+       * @param blockedWindows An array of one or more days and times that you can specify when ARC
+       * does not start practice runs for a resource.
        * Days and times are in UTC.
        *
        * Specify blocked windows in the format `DAY:HH:MM-DAY:HH:MM` , separated by spaces. For
        * example, `MON:18:30-MON:19:30 TUE:18:30-TUE:19:30` .
+       *
+       *
+       * Blocked windows have to start and end on the same day. Windows that span multiple days
+       * aren't supported.
        */
       public fun blockedWindows(vararg blockedWindows: String)
 
@@ -744,24 +755,32 @@ public open class CfnZonalAutoshiftConfiguration(
           blockedDates(blockedDates.toList())
 
       /**
-       * @param blockedWindows An array of one or more days and times that you can specify when
-       * Route 53 ARC does not start practice runs for a resource.
+       * @param blockedWindows An array of one or more days and times that you can specify when ARC
+       * does not start practice runs for a resource.
        * Days and times are in UTC.
        *
        * Specify blocked windows in the format `DAY:HH:MM-DAY:HH:MM` , separated by spaces. For
        * example, `MON:18:30-MON:19:30 TUE:18:30-TUE:19:30` .
+       *
+       *
+       * Blocked windows have to start and end on the same day. Windows that span multiple days
+       * aren't supported.
        */
       override fun blockedWindows(blockedWindows: List<String>) {
         cdkBuilder.blockedWindows(blockedWindows)
       }
 
       /**
-       * @param blockedWindows An array of one or more days and times that you can specify when
-       * Route 53 ARC does not start practice runs for a resource.
+       * @param blockedWindows An array of one or more days and times that you can specify when ARC
+       * does not start practice runs for a resource.
        * Days and times are in UTC.
        *
        * Specify blocked windows in the format `DAY:HH:MM-DAY:HH:MM` , separated by spaces. For
        * example, `MON:18:30-MON:19:30 TUE:18:30-TUE:19:30` .
+       *
+       *
+       * Blocked windows have to start and end on the same day. Windows that span multiple days
+       * aren't supported.
        */
       override fun blockedWindows(vararg blockedWindows: String): Unit =
           blockedWindows(blockedWindows.toList())
@@ -846,13 +865,18 @@ public open class CfnZonalAutoshiftConfiguration(
       override fun blockedDates(): List<String> = unwrap(this).getBlockedDates() ?: emptyList()
 
       /**
-       * An array of one or more days and times that you can specify when Route 53 ARC does not
-       * start practice runs for a resource.
+       * An array of one or more days and times that you can specify when ARC does not start
+       * practice runs for a resource.
        *
        * Days and times are in UTC.
        *
        * Specify blocked windows in the format `DAY:HH:MM-DAY:HH:MM` , separated by spaces. For
        * example, `MON:18:30-MON:19:30 TUE:18:30-TUE:19:30` .
+       *
+       *
+       * Blocked windows have to start and end on the same day. Windows that span multiple days
+       * aren't supported.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arczonalshift-zonalautoshiftconfiguration-practicerunconfiguration.html#cfn-arczonalshift-zonalautoshiftconfiguration-practicerunconfiguration-blockedwindows)
        */

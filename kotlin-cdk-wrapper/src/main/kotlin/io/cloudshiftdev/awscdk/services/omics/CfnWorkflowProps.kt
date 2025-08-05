@@ -34,6 +34,7 @@ import kotlin.collections.Map
  * .optional(false)
  * .build()))
  * .storageCapacity(123)
+ * .storageType("storageType")
  * .tags(Map.of(
  * "tagsKey", "tags"))
  * .build();
@@ -90,11 +91,20 @@ public interface CfnWorkflowProps {
   public fun parameterTemplate(): Any? = unwrap(this).getParameterTemplate()
 
   /**
-   * The default storage capacity for the workflow runs, in gibibytes.
+   * The default static storage capacity (in gibibytes) for runs that use this workflow or workflow
+   * version.
+   *
+   * The `storageCapacity` can be overwritten at run time. The storage capacity is not required for
+   * runs with a `DYNAMIC` storage type.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagecapacity)
    */
   public fun storageCapacity(): Number? = unwrap(this).getStorageCapacity()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagetype)
+   */
+  public fun storageType(): String? = unwrap(this).getStorageType()
 
   /**
    * Tags for the workflow.
@@ -149,9 +159,17 @@ public interface CfnWorkflowProps {
     public fun parameterTemplate(parameterTemplate: Map<String, Any>)
 
     /**
-     * @param storageCapacity The default storage capacity for the workflow runs, in gibibytes.
+     * @param storageCapacity The default static storage capacity (in gibibytes) for runs that use
+     * this workflow or workflow version.
+     * The `storageCapacity` can be overwritten at run time. The storage capacity is not required
+     * for runs with a `DYNAMIC` storage type.
      */
     public fun storageCapacity(storageCapacity: Number)
+
+    /**
+     * @param storageType the value to be set.
+     */
+    public fun storageType(storageType: String)
 
     /**
      * @param tags Tags for the workflow.
@@ -220,10 +238,20 @@ public interface CfnWorkflowProps {
     }
 
     /**
-     * @param storageCapacity The default storage capacity for the workflow runs, in gibibytes.
+     * @param storageCapacity The default static storage capacity (in gibibytes) for runs that use
+     * this workflow or workflow version.
+     * The `storageCapacity` can be overwritten at run time. The storage capacity is not required
+     * for runs with a `DYNAMIC` storage type.
      */
     override fun storageCapacity(storageCapacity: Number) {
       cdkBuilder.storageCapacity(storageCapacity)
+    }
+
+    /**
+     * @param storageType the value to be set.
+     */
+    override fun storageType(storageType: String) {
+      cdkBuilder.storageType(storageType)
     }
 
     /**
@@ -288,11 +316,20 @@ public interface CfnWorkflowProps {
     override fun parameterTemplate(): Any? = unwrap(this).getParameterTemplate()
 
     /**
-     * The default storage capacity for the workflow runs, in gibibytes.
+     * The default static storage capacity (in gibibytes) for runs that use this workflow or
+     * workflow version.
+     *
+     * The `storageCapacity` can be overwritten at run time. The storage capacity is not required
+     * for runs with a `DYNAMIC` storage type.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagecapacity)
      */
     override fun storageCapacity(): Number? = unwrap(this).getStorageCapacity()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagetype)
+     */
+    override fun storageType(): String? = unwrap(this).getStorageType()
 
     /**
      * Tags for the workflow.

@@ -699,6 +699,22 @@ public open class ApplicationTargetGroup(
         fun loadBalancingAlgorithmType(loadBalancingAlgorithmType: TargetGroupLoadBalancingAlgorithmType)
 
     /**
+     * Indicates whether the target group supports multi-value headers.
+     *
+     * If the value is true, the request and response headers exchanged between
+     * the load balancer and the Lambda function include arrays of values or strings.
+     *
+     * Only applicable for Lambda targets.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#target-group-attributes)
+     * @param multiValueHeadersEnabled Indicates whether the target group supports multi-value
+     * headers. 
+     */
+    public fun multiValueHeadersEnabled(multiValueHeadersEnabled: Boolean)
+
+    /**
      * The port on which the target receives traffic.
      *
      * This is not applicable for Lambda targets.
@@ -941,6 +957,24 @@ public open class ApplicationTargetGroup(
     }
 
     /**
+     * Indicates whether the target group supports multi-value headers.
+     *
+     * If the value is true, the request and response headers exchanged between
+     * the load balancer and the Lambda function include arrays of values or strings.
+     *
+     * Only applicable for Lambda targets.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#target-group-attributes)
+     * @param multiValueHeadersEnabled Indicates whether the target group supports multi-value
+     * headers. 
+     */
+    override fun multiValueHeadersEnabled(multiValueHeadersEnabled: Boolean) {
+      cdkBuilder.multiValueHeadersEnabled(multiValueHeadersEnabled)
+    }
+
+    /**
      * The port on which the target receives traffic.
      *
      * This is not applicable for Lambda targets.
@@ -1106,6 +1140,9 @@ public open class ApplicationTargetGroup(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup.PROPERTY_INJECTION_ID
+
     public fun fromTargetGroupAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

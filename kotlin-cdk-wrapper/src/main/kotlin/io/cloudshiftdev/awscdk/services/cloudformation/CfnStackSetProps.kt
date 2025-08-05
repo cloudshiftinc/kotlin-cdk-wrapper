@@ -77,42 +77,46 @@ import kotlin.jvm.JvmName
  */
 public interface CfnStackSetProps {
   /**
-   * The Amazon Resource Number (ARN) of the IAM role to use to create this stack set.
+   * The Amazon Resource Number (ARN) of the IAM role to use to create this StackSet.
    *
    * Specify an IAM role only if you are using customized administrator roles to control which users
-   * or groups can manage specific stack sets within the same administrator account.
+   * or groups can manage specific StackSets within the same administrator account.
    *
-   * Use customized administrator roles to control which users or groups can manage specific stack
-   * sets within the same administrator account. For more information, see [Prerequisites: Granting
-   * Permissions for Stack Set
-   * Operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html)
+   * Use customized administrator roles to control which users or groups can manage specific
+   * StackSets within the same administrator account. For more information, see [Grant self-managed
+   * permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
    * in the *AWS CloudFormation User Guide* .
    *
-   * *Minimum* : `20`
-   *
-   * *Maximum* : `2048`
+   * Valid only if the permissions model is `SELF_MANAGED` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-administrationrolearn)
    */
   public fun administrationRoleArn(): String? = unwrap(this).getAdministrationRoleArn()
 
   /**
-   * [ `Service-managed` permissions] Describes whether StackSets automatically deploys to AWS
-   * Organizations accounts that are added to a target organization or organizational unit (OU).
+   * Describes whether StackSets automatically deploys to AWS Organizations accounts that are added
+   * to a target organization or organizational unit (OU).
+   *
+   * For more information, see [Enable or disable automatic deployments for StackSets in AWS
+   * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-manage-auto-deployment.html)
+   * in the *AWS CloudFormation User Guide* .
+   *
+   * Required if the permissions model is `SERVICE_MANAGED` . (Not used with self-managed
+   * permissions.)
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-autodeployment)
    */
   public fun autoDeployment(): Any? = unwrap(this).getAutoDeployment()
 
   /**
-   * [Service-managed permissions] Specifies whether you are acting as an account administrator in
-   * the organization's management account or as a delegated administrator in a member account.
+   * Specifies whether you are acting as an account administrator in the organization's management
+   * account or as a delegated administrator in a member account.
    *
-   * By default, `SELF` is specified. Use `SELF` for stack sets with self-managed permissions.
+   * By default, `SELF` is specified. Use `SELF` for StackSets with self-managed permissions.
    *
-   * * To create a stack set with service-managed permissions while signed in to the management
+   * * To create a StackSet with service-managed permissions while signed in to the management
    * account, specify `SELF` .
-   * * To create a stack set with service-managed permissions while signed in to a delegated
+   * * To create a StackSet with service-managed permissions while signed in to a delegated
    * administrator account, specify `DELEGATED_ADMIN` .
    *
    * Your AWS account must be registered as a delegated admin in the management account. For more
@@ -120,48 +124,42 @@ public interface CfnStackSetProps {
    * administrator](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html)
    * in the *AWS CloudFormation User Guide* .
    *
-   * Stack sets with service-managed permissions are created in the management account, including
-   * stack sets that are created by delegated administrators.
+   * StackSets with service-managed permissions are created in the management account, including
+   * StackSets that are created by delegated administrators.
    *
-   * *Valid Values* : `SELF` | `DELEGATED_ADMIN`
+   * Valid only if the permissions model is `SERVICE_MANAGED` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-callas)
    */
   public fun callAs(): String? = unwrap(this).getCallAs()
 
   /**
-   * The capabilities that are allowed in the stack set.
+   * The capabilities that are allowed in the StackSet.
    *
-   * Some stack set templates might include resources that can affect permissions in your AWS
-   * account —for example, by creating new AWS Identity and Access Management ( IAM ) users. For more
-   * information, see [Acknowledging IAM Resources in AWS CloudFormation
-   * Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities)
-   * .
+   * Some StackSet templates might include resources that can affect permissions in your AWS account
+   * —for example, by creating new IAM users. For more information, see [Acknowledging IAM resources in
+   * CloudFormation
+   * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/control-access-with-iam.html#using-iam-capabilities)
+   * in the *AWS CloudFormation User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-capabilities)
    */
   public fun capabilities(): List<String> = unwrap(this).getCapabilities() ?: emptyList()
 
   /**
-   * A description of the stack set.
-   *
-   * *Minimum* : `1`
-   *
-   * *Maximum* : `1024`
+   * A description of the StackSet.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-description)
    */
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * The name of the IAM execution role to use to create the stack set.
+   * The name of the IAM execution role to use to create the StackSet.
    *
-   * If you don't specify an execution role, AWS CloudFormation uses the
-   * `AWSCloudFormationStackSetExecutionRole` role for the stack set operation.
+   * If you don't specify an execution role, CloudFormation uses the
+   * `AWSCloudFormationStackSetExecutionRole` role for the StackSet operation.
    *
-   * *Minimum* : `1`
-   *
-   * *Maximum* : `64`
+   * Valid only if the permissions model is `SELF_MANAGED` .
    *
    * *Pattern* : `[a-zA-Z_0-9+=,.&#64;-]+`
    *
@@ -181,8 +179,8 @@ public interface CfnStackSetProps {
    * If there are already running or queued operations, StackSets queues all incoming operations
    * even if they are non-conflicting.
    *
-   * You can't modify your stack set's execution configuration while there are running or queued
-   * operations for that stack set.
+   * You can't modify your StackSet's execution configuration while there are running or queued
+   * operations for that StackSet.
    *
    *
    * When inactive (default), StackSets performs one operation at a time in request order.
@@ -192,28 +190,31 @@ public interface CfnStackSetProps {
   public fun managedExecution(): Any? = unwrap(this).getManagedExecution()
 
   /**
-   * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
+   * The user-specified preferences for how CloudFormation performs a StackSet operation.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-operationpreferences)
    */
   public fun operationPreferences(): Any? = unwrap(this).getOperationPreferences()
 
   /**
-   * The input parameters for the stack set template.
+   * The input parameters for the StackSet template.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-parameters)
    */
   public fun parameters(): Any? = unwrap(this).getParameters()
 
   /**
-   * Describes how the IAM roles required for stack set operations are created.
+   * Describes how the IAM roles required for StackSet operations are created.
    *
    * * With `SELF_MANAGED` permissions, you must create the administrator and execution roles
-   * required to deploy to target accounts. For more information, see [Grant Self-Managed Stack Set
-   * Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
-   * .
+   * required to deploy to target accounts. For more information, see [Grant self-managed
+   * permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
+   * in the *AWS CloudFormation User Guide* .
    * * With `SERVICE_MANAGED` permissions, StackSets automatically creates the IAM roles required to
-   * deploy to accounts managed by AWS Organizations .
+   * deploy to accounts managed by AWS Organizations . For more information, see [Activate trusted
+   * access for StackSets with AWS
+   * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-activate-trusted-access.html)
+   * in the *AWS CloudFormation User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-permissionmodel)
    */
@@ -227,13 +228,9 @@ public interface CfnStackSetProps {
   public fun stackInstancesGroup(): Any? = unwrap(this).getStackInstancesGroup()
 
   /**
-   * The name to associate with the stack set.
+   * The name to associate with the StackSet.
    *
-   * The name must be unique in the Region where you create your stack set.
-   *
-   *
-   * The `StackSetName` property is required.
-   *
+   * The name must be unique in the Region where you create your StackSet.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-stacksetname)
    */
@@ -258,19 +255,17 @@ public interface CfnStackSetProps {
    *
    * You must include either `TemplateURL` or `TemplateBody` in a StackSet, but you can't use both.
    * Dynamic references in the `TemplateBody` may not work correctly in all cases. It's recommended to
-   * pass templates containing dynamic references through `TemplateUrl` instead.
+   * pass templates that contain dynamic references through `TemplateUrl` instead.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-templatebody)
    */
   public fun templateBody(): String? = unwrap(this).getTemplateBody()
 
   /**
-   * Location of file containing the template body.
+   * The URL of a file that contains the template body.
    *
-   * The URL must point to a template that's located in an Amazon S3 bucket or a Systems Manager
-   * document. For more information, go to [Template
-   * Anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html) in
-   * the AWS CloudFormation User Guide.
+   * The URL must point to a template (max size: 1 MB) that's located in an Amazon S3 bucket or a
+   * Systems Manager document. The location for an Amazon S3 bucket must start with `https://` .
    *
    * Conditional: You must specify only one of the following parameters: `TemplateBody` ,
    * `TemplateURL` .
@@ -286,54 +281,65 @@ public interface CfnStackSetProps {
   public interface Builder {
     /**
      * @param administrationRoleArn The Amazon Resource Number (ARN) of the IAM role to use to
-     * create this stack set.
+     * create this StackSet.
      * Specify an IAM role only if you are using customized administrator roles to control which
-     * users or groups can manage specific stack sets within the same administrator account.
+     * users or groups can manage specific StackSets within the same administrator account.
      *
-     * Use customized administrator roles to control which users or groups can manage specific stack
-     * sets within the same administrator account. For more information, see [Prerequisites: Granting
-     * Permissions for Stack Set
-     * Operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html)
+     * Use customized administrator roles to control which users or groups can manage specific
+     * StackSets within the same administrator account. For more information, see [Grant self-managed
+     * permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
      * in the *AWS CloudFormation User Guide* .
      *
-     * *Minimum* : `20`
-     *
-     * *Maximum* : `2048`
+     * Valid only if the permissions model is `SELF_MANAGED` .
      */
     public fun administrationRoleArn(administrationRoleArn: String)
 
     /**
-     * @param autoDeployment [ `Service-managed` permissions] Describes whether StackSets
-     * automatically deploys to AWS Organizations accounts that are added to a target organization or
-     * organizational unit (OU).
+     * @param autoDeployment Describes whether StackSets automatically deploys to AWS Organizations
+     * accounts that are added to a target organization or organizational unit (OU).
+     * For more information, see [Enable or disable automatic deployments for StackSets in AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-manage-auto-deployment.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     * Required if the permissions model is `SERVICE_MANAGED` . (Not used with self-managed
+     * permissions.)
      */
     public fun autoDeployment(autoDeployment: IResolvable)
 
     /**
-     * @param autoDeployment [ `Service-managed` permissions] Describes whether StackSets
-     * automatically deploys to AWS Organizations accounts that are added to a target organization or
-     * organizational unit (OU).
+     * @param autoDeployment Describes whether StackSets automatically deploys to AWS Organizations
+     * accounts that are added to a target organization or organizational unit (OU).
+     * For more information, see [Enable or disable automatic deployments for StackSets in AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-manage-auto-deployment.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     * Required if the permissions model is `SERVICE_MANAGED` . (Not used with self-managed
+     * permissions.)
      */
     public fun autoDeployment(autoDeployment: CfnStackSet.AutoDeploymentProperty)
 
     /**
-     * @param autoDeployment [ `Service-managed` permissions] Describes whether StackSets
-     * automatically deploys to AWS Organizations accounts that are added to a target organization or
-     * organizational unit (OU).
+     * @param autoDeployment Describes whether StackSets automatically deploys to AWS Organizations
+     * accounts that are added to a target organization or organizational unit (OU).
+     * For more information, see [Enable or disable automatic deployments for StackSets in AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-manage-auto-deployment.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     * Required if the permissions model is `SERVICE_MANAGED` . (Not used with self-managed
+     * permissions.)
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("94884309d1b95db1bcfea54028062296757ebac54e91c6a69cc0fd1950c04158")
     public fun autoDeployment(autoDeployment: CfnStackSet.AutoDeploymentProperty.Builder.() -> Unit)
 
     /**
-     * @param callAs [Service-managed permissions] Specifies whether you are acting as an account
-     * administrator in the organization's management account or as a delegated administrator in a
-     * member account.
-     * By default, `SELF` is specified. Use `SELF` for stack sets with self-managed permissions.
+     * @param callAs Specifies whether you are acting as an account administrator in the
+     * organization's management account or as a delegated administrator in a member account.
+     * By default, `SELF` is specified. Use `SELF` for StackSets with self-managed permissions.
      *
-     * * To create a stack set with service-managed permissions while signed in to the management
+     * * To create a StackSet with service-managed permissions while signed in to the management
      * account, specify `SELF` .
-     * * To create a stack set with service-managed permissions while signed in to a delegated
+     * * To create a StackSet with service-managed permissions while signed in to a delegated
      * administrator account, specify `DELEGATED_ADMIN` .
      *
      * Your AWS account must be registered as a delegated admin in the management account. For more
@@ -341,49 +347,44 @@ public interface CfnStackSetProps {
      * administrator](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html)
      * in the *AWS CloudFormation User Guide* .
      *
-     * Stack sets with service-managed permissions are created in the management account, including
-     * stack sets that are created by delegated administrators.
+     * StackSets with service-managed permissions are created in the management account, including
+     * StackSets that are created by delegated administrators.
      *
-     * *Valid Values* : `SELF` | `DELEGATED_ADMIN`
+     * Valid only if the permissions model is `SERVICE_MANAGED` .
      */
     public fun callAs(callAs: String)
 
     /**
-     * @param capabilities The capabilities that are allowed in the stack set.
-     * Some stack set templates might include resources that can affect permissions in your AWS
-     * account —for example, by creating new AWS Identity and Access Management ( IAM ) users. For more
-     * information, see [Acknowledging IAM Resources in AWS CloudFormation
-     * Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities)
-     * .
+     * @param capabilities The capabilities that are allowed in the StackSet.
+     * Some StackSet templates might include resources that can affect permissions in your AWS
+     * account —for example, by creating new IAM users. For more information, see [Acknowledging IAM
+     * resources in CloudFormation
+     * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/control-access-with-iam.html#using-iam-capabilities)
+     * in the *AWS CloudFormation User Guide* .
      */
     public fun capabilities(capabilities: List<String>)
 
     /**
-     * @param capabilities The capabilities that are allowed in the stack set.
-     * Some stack set templates might include resources that can affect permissions in your AWS
-     * account —for example, by creating new AWS Identity and Access Management ( IAM ) users. For more
-     * information, see [Acknowledging IAM Resources in AWS CloudFormation
-     * Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities)
-     * .
+     * @param capabilities The capabilities that are allowed in the StackSet.
+     * Some StackSet templates might include resources that can affect permissions in your AWS
+     * account —for example, by creating new IAM users. For more information, see [Acknowledging IAM
+     * resources in CloudFormation
+     * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/control-access-with-iam.html#using-iam-capabilities)
+     * in the *AWS CloudFormation User Guide* .
      */
     public fun capabilities(vararg capabilities: String)
 
     /**
-     * @param description A description of the stack set.
-     * *Minimum* : `1`
-     *
-     * *Maximum* : `1024`
+     * @param description A description of the StackSet.
      */
     public fun description(description: String)
 
     /**
-     * @param executionRoleName The name of the IAM execution role to use to create the stack set.
-     * If you don't specify an execution role, AWS CloudFormation uses the
-     * `AWSCloudFormationStackSetExecutionRole` role for the stack set operation.
+     * @param executionRoleName The name of the IAM execution role to use to create the StackSet.
+     * If you don't specify an execution role, CloudFormation uses the
+     * `AWSCloudFormationStackSetExecutionRole` role for the StackSet operation.
      *
-     * *Minimum* : `1`
-     *
-     * *Maximum* : `64`
+     * Valid only if the permissions model is `SELF_MANAGED` .
      *
      * *Pattern* : `[a-zA-Z_0-9+=,.&#64;-]+`
      */
@@ -400,8 +401,8 @@ public interface CfnStackSetProps {
      * If there are already running or queued operations, StackSets queues all incoming operations
      * even if they are non-conflicting.
      *
-     * You can't modify your stack set's execution configuration while there are running or queued
-     * operations for that stack set.
+     * You can't modify your StackSet's execution configuration while there are running or queued
+     * operations for that StackSet.
      *
      *
      * When inactive (default), StackSets performs one operation at a time in request order.
@@ -409,20 +410,20 @@ public interface CfnStackSetProps {
     public fun managedExecution(managedExecution: Any)
 
     /**
-     * @param operationPreferences The user-specified preferences for how AWS CloudFormation
-     * performs a stack set operation.
+     * @param operationPreferences The user-specified preferences for how CloudFormation performs a
+     * StackSet operation.
      */
     public fun operationPreferences(operationPreferences: IResolvable)
 
     /**
-     * @param operationPreferences The user-specified preferences for how AWS CloudFormation
-     * performs a stack set operation.
+     * @param operationPreferences The user-specified preferences for how CloudFormation performs a
+     * StackSet operation.
      */
     public fun operationPreferences(operationPreferences: CfnStackSet.OperationPreferencesProperty)
 
     /**
-     * @param operationPreferences The user-specified preferences for how AWS CloudFormation
-     * performs a stack set operation.
+     * @param operationPreferences The user-specified preferences for how CloudFormation performs a
+     * StackSet operation.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("50c6449649f81761af9c959da02e5f49ff8548a4841ad994b5353b1858093d07")
@@ -430,29 +431,32 @@ public interface CfnStackSetProps {
         fun operationPreferences(operationPreferences: CfnStackSet.OperationPreferencesProperty.Builder.() -> Unit)
 
     /**
-     * @param parameters The input parameters for the stack set template.
+     * @param parameters The input parameters for the StackSet template.
      */
     public fun parameters(parameters: IResolvable)
 
     /**
-     * @param parameters The input parameters for the stack set template.
+     * @param parameters The input parameters for the StackSet template.
      */
     public fun parameters(parameters: List<Any>)
 
     /**
-     * @param parameters The input parameters for the stack set template.
+     * @param parameters The input parameters for the StackSet template.
      */
     public fun parameters(vararg parameters: Any)
 
     /**
-     * @param permissionModel Describes how the IAM roles required for stack set operations are
+     * @param permissionModel Describes how the IAM roles required for StackSet operations are
      * created. 
      * * With `SELF_MANAGED` permissions, you must create the administrator and execution roles
-     * required to deploy to target accounts. For more information, see [Grant Self-Managed Stack Set
-     * Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
-     * .
+     * required to deploy to target accounts. For more information, see [Grant self-managed
+     * permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
+     * in the *AWS CloudFormation User Guide* .
      * * With `SERVICE_MANAGED` permissions, StackSets automatically creates the IAM roles required
-     * to deploy to accounts managed by AWS Organizations .
+     * to deploy to accounts managed by AWS Organizations . For more information, see [Activate trusted
+     * access for StackSets with AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-activate-trusted-access.html)
+     * in the *AWS CloudFormation User Guide* .
      */
     public fun permissionModel(permissionModel: String)
 
@@ -475,11 +479,8 @@ public interface CfnStackSetProps {
     public fun stackInstancesGroup(vararg stackInstancesGroup: Any)
 
     /**
-     * @param stackSetName The name to associate with the stack set. 
-     * The name must be unique in the Region where you create your stack set.
-     *
-     *
-     * The `StackSetName` property is required.
+     * @param stackSetName The name to associate with the StackSet. 
+     * The name must be unique in the Region where you create your StackSet.
      */
     public fun stackSetName(stackSetName: String)
 
@@ -508,16 +509,14 @@ public interface CfnStackSetProps {
      * byte and a maximum length of 51,200 bytes.
      * You must include either `TemplateURL` or `TemplateBody` in a StackSet, but you can't use
      * both. Dynamic references in the `TemplateBody` may not work correctly in all cases. It's
-     * recommended to pass templates containing dynamic references through `TemplateUrl` instead.
+     * recommended to pass templates that contain dynamic references through `TemplateUrl` instead.
      */
     public fun templateBody(templateBody: String)
 
     /**
-     * @param templateUrl Location of file containing the template body.
-     * The URL must point to a template that's located in an Amazon S3 bucket or a Systems Manager
-     * document. For more information, go to [Template
-     * Anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html)
-     * in the AWS CloudFormation User Guide.
+     * @param templateUrl The URL of a file that contains the template body.
+     * The URL must point to a template (max size: 1 MB) that's located in an Amazon S3 bucket or a
+     * Systems Manager document. The location for an Amazon S3 bucket must start with `https://` .
      *
      * Conditional: You must specify only one of the following parameters: `TemplateBody` ,
      * `TemplateURL` .
@@ -531,46 +530,58 @@ public interface CfnStackSetProps {
 
     /**
      * @param administrationRoleArn The Amazon Resource Number (ARN) of the IAM role to use to
-     * create this stack set.
+     * create this StackSet.
      * Specify an IAM role only if you are using customized administrator roles to control which
-     * users or groups can manage specific stack sets within the same administrator account.
+     * users or groups can manage specific StackSets within the same administrator account.
      *
-     * Use customized administrator roles to control which users or groups can manage specific stack
-     * sets within the same administrator account. For more information, see [Prerequisites: Granting
-     * Permissions for Stack Set
-     * Operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html)
+     * Use customized administrator roles to control which users or groups can manage specific
+     * StackSets within the same administrator account. For more information, see [Grant self-managed
+     * permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
      * in the *AWS CloudFormation User Guide* .
      *
-     * *Minimum* : `20`
-     *
-     * *Maximum* : `2048`
+     * Valid only if the permissions model is `SELF_MANAGED` .
      */
     override fun administrationRoleArn(administrationRoleArn: String) {
       cdkBuilder.administrationRoleArn(administrationRoleArn)
     }
 
     /**
-     * @param autoDeployment [ `Service-managed` permissions] Describes whether StackSets
-     * automatically deploys to AWS Organizations accounts that are added to a target organization or
-     * organizational unit (OU).
+     * @param autoDeployment Describes whether StackSets automatically deploys to AWS Organizations
+     * accounts that are added to a target organization or organizational unit (OU).
+     * For more information, see [Enable or disable automatic deployments for StackSets in AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-manage-auto-deployment.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     * Required if the permissions model is `SERVICE_MANAGED` . (Not used with self-managed
+     * permissions.)
      */
     override fun autoDeployment(autoDeployment: IResolvable) {
       cdkBuilder.autoDeployment(autoDeployment.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param autoDeployment [ `Service-managed` permissions] Describes whether StackSets
-     * automatically deploys to AWS Organizations accounts that are added to a target organization or
-     * organizational unit (OU).
+     * @param autoDeployment Describes whether StackSets automatically deploys to AWS Organizations
+     * accounts that are added to a target organization or organizational unit (OU).
+     * For more information, see [Enable or disable automatic deployments for StackSets in AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-manage-auto-deployment.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     * Required if the permissions model is `SERVICE_MANAGED` . (Not used with self-managed
+     * permissions.)
      */
     override fun autoDeployment(autoDeployment: CfnStackSet.AutoDeploymentProperty) {
       cdkBuilder.autoDeployment(autoDeployment.let(CfnStackSet.AutoDeploymentProperty.Companion::unwrap))
     }
 
     /**
-     * @param autoDeployment [ `Service-managed` permissions] Describes whether StackSets
-     * automatically deploys to AWS Organizations accounts that are added to a target organization or
-     * organizational unit (OU).
+     * @param autoDeployment Describes whether StackSets automatically deploys to AWS Organizations
+     * accounts that are added to a target organization or organizational unit (OU).
+     * For more information, see [Enable or disable automatic deployments for StackSets in AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-manage-auto-deployment.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     * Required if the permissions model is `SERVICE_MANAGED` . (Not used with self-managed
+     * permissions.)
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("94884309d1b95db1bcfea54028062296757ebac54e91c6a69cc0fd1950c04158")
@@ -579,14 +590,13 @@ public interface CfnStackSetProps {
         Unit = autoDeployment(CfnStackSet.AutoDeploymentProperty(autoDeployment))
 
     /**
-     * @param callAs [Service-managed permissions] Specifies whether you are acting as an account
-     * administrator in the organization's management account or as a delegated administrator in a
-     * member account.
-     * By default, `SELF` is specified. Use `SELF` for stack sets with self-managed permissions.
+     * @param callAs Specifies whether you are acting as an account administrator in the
+     * organization's management account or as a delegated administrator in a member account.
+     * By default, `SELF` is specified. Use `SELF` for StackSets with self-managed permissions.
      *
-     * * To create a stack set with service-managed permissions while signed in to the management
+     * * To create a StackSet with service-managed permissions while signed in to the management
      * account, specify `SELF` .
-     * * To create a stack set with service-managed permissions while signed in to a delegated
+     * * To create a StackSet with service-managed permissions while signed in to a delegated
      * administrator account, specify `DELEGATED_ADMIN` .
      *
      * Your AWS account must be registered as a delegated admin in the management account. For more
@@ -594,56 +604,51 @@ public interface CfnStackSetProps {
      * administrator](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html)
      * in the *AWS CloudFormation User Guide* .
      *
-     * Stack sets with service-managed permissions are created in the management account, including
-     * stack sets that are created by delegated administrators.
+     * StackSets with service-managed permissions are created in the management account, including
+     * StackSets that are created by delegated administrators.
      *
-     * *Valid Values* : `SELF` | `DELEGATED_ADMIN`
+     * Valid only if the permissions model is `SERVICE_MANAGED` .
      */
     override fun callAs(callAs: String) {
       cdkBuilder.callAs(callAs)
     }
 
     /**
-     * @param capabilities The capabilities that are allowed in the stack set.
-     * Some stack set templates might include resources that can affect permissions in your AWS
-     * account —for example, by creating new AWS Identity and Access Management ( IAM ) users. For more
-     * information, see [Acknowledging IAM Resources in AWS CloudFormation
-     * Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities)
-     * .
+     * @param capabilities The capabilities that are allowed in the StackSet.
+     * Some StackSet templates might include resources that can affect permissions in your AWS
+     * account —for example, by creating new IAM users. For more information, see [Acknowledging IAM
+     * resources in CloudFormation
+     * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/control-access-with-iam.html#using-iam-capabilities)
+     * in the *AWS CloudFormation User Guide* .
      */
     override fun capabilities(capabilities: List<String>) {
       cdkBuilder.capabilities(capabilities)
     }
 
     /**
-     * @param capabilities The capabilities that are allowed in the stack set.
-     * Some stack set templates might include resources that can affect permissions in your AWS
-     * account —for example, by creating new AWS Identity and Access Management ( IAM ) users. For more
-     * information, see [Acknowledging IAM Resources in AWS CloudFormation
-     * Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities)
-     * .
+     * @param capabilities The capabilities that are allowed in the StackSet.
+     * Some StackSet templates might include resources that can affect permissions in your AWS
+     * account —for example, by creating new IAM users. For more information, see [Acknowledging IAM
+     * resources in CloudFormation
+     * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/control-access-with-iam.html#using-iam-capabilities)
+     * in the *AWS CloudFormation User Guide* .
      */
     override fun capabilities(vararg capabilities: String): Unit =
         capabilities(capabilities.toList())
 
     /**
-     * @param description A description of the stack set.
-     * *Minimum* : `1`
-     *
-     * *Maximum* : `1024`
+     * @param description A description of the StackSet.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
-     * @param executionRoleName The name of the IAM execution role to use to create the stack set.
-     * If you don't specify an execution role, AWS CloudFormation uses the
-     * `AWSCloudFormationStackSetExecutionRole` role for the stack set operation.
+     * @param executionRoleName The name of the IAM execution role to use to create the StackSet.
+     * If you don't specify an execution role, CloudFormation uses the
+     * `AWSCloudFormationStackSetExecutionRole` role for the StackSet operation.
      *
-     * *Minimum* : `1`
-     *
-     * *Maximum* : `64`
+     * Valid only if the permissions model is `SELF_MANAGED` .
      *
      * *Pattern* : `[a-zA-Z_0-9+=,.&#64;-]+`
      */
@@ -662,8 +667,8 @@ public interface CfnStackSetProps {
      * If there are already running or queued operations, StackSets queues all incoming operations
      * even if they are non-conflicting.
      *
-     * You can't modify your stack set's execution configuration while there are running or queued
-     * operations for that stack set.
+     * You can't modify your StackSet's execution configuration while there are running or queued
+     * operations for that StackSet.
      *
      *
      * When inactive (default), StackSets performs one operation at a time in request order.
@@ -673,16 +678,16 @@ public interface CfnStackSetProps {
     }
 
     /**
-     * @param operationPreferences The user-specified preferences for how AWS CloudFormation
-     * performs a stack set operation.
+     * @param operationPreferences The user-specified preferences for how CloudFormation performs a
+     * StackSet operation.
      */
     override fun operationPreferences(operationPreferences: IResolvable) {
       cdkBuilder.operationPreferences(operationPreferences.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param operationPreferences The user-specified preferences for how AWS CloudFormation
-     * performs a stack set operation.
+     * @param operationPreferences The user-specified preferences for how CloudFormation performs a
+     * StackSet operation.
      */
     override
         fun operationPreferences(operationPreferences: CfnStackSet.OperationPreferencesProperty) {
@@ -690,8 +695,8 @@ public interface CfnStackSetProps {
     }
 
     /**
-     * @param operationPreferences The user-specified preferences for how AWS CloudFormation
-     * performs a stack set operation.
+     * @param operationPreferences The user-specified preferences for how CloudFormation performs a
+     * StackSet operation.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("50c6449649f81761af9c959da02e5f49ff8548a4841ad994b5353b1858093d07")
@@ -700,33 +705,36 @@ public interface CfnStackSetProps {
         Unit = operationPreferences(CfnStackSet.OperationPreferencesProperty(operationPreferences))
 
     /**
-     * @param parameters The input parameters for the stack set template.
+     * @param parameters The input parameters for the StackSet template.
      */
     override fun parameters(parameters: IResolvable) {
       cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param parameters The input parameters for the stack set template.
+     * @param parameters The input parameters for the StackSet template.
      */
     override fun parameters(parameters: List<Any>) {
       cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param parameters The input parameters for the stack set template.
+     * @param parameters The input parameters for the StackSet template.
      */
     override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
 
     /**
-     * @param permissionModel Describes how the IAM roles required for stack set operations are
+     * @param permissionModel Describes how the IAM roles required for StackSet operations are
      * created. 
      * * With `SELF_MANAGED` permissions, you must create the administrator and execution roles
-     * required to deploy to target accounts. For more information, see [Grant Self-Managed Stack Set
-     * Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
-     * .
+     * required to deploy to target accounts. For more information, see [Grant self-managed
+     * permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
+     * in the *AWS CloudFormation User Guide* .
      * * With `SERVICE_MANAGED` permissions, StackSets automatically creates the IAM roles required
-     * to deploy to accounts managed by AWS Organizations .
+     * to deploy to accounts managed by AWS Organizations . For more information, see [Activate trusted
+     * access for StackSets with AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-activate-trusted-access.html)
+     * in the *AWS CloudFormation User Guide* .
      */
     override fun permissionModel(permissionModel: String) {
       cdkBuilder.permissionModel(permissionModel)
@@ -756,11 +764,8 @@ public interface CfnStackSetProps {
         stackInstancesGroup(stackInstancesGroup.toList())
 
     /**
-     * @param stackSetName The name to associate with the stack set. 
-     * The name must be unique in the Region where you create your stack set.
-     *
-     *
-     * The `StackSetName` property is required.
+     * @param stackSetName The name to associate with the StackSet. 
+     * The name must be unique in the Region where you create your StackSet.
      */
     override fun stackSetName(stackSetName: String) {
       cdkBuilder.stackSetName(stackSetName)
@@ -793,18 +798,16 @@ public interface CfnStackSetProps {
      * byte and a maximum length of 51,200 bytes.
      * You must include either `TemplateURL` or `TemplateBody` in a StackSet, but you can't use
      * both. Dynamic references in the `TemplateBody` may not work correctly in all cases. It's
-     * recommended to pass templates containing dynamic references through `TemplateUrl` instead.
+     * recommended to pass templates that contain dynamic references through `TemplateUrl` instead.
      */
     override fun templateBody(templateBody: String) {
       cdkBuilder.templateBody(templateBody)
     }
 
     /**
-     * @param templateUrl Location of file containing the template body.
-     * The URL must point to a template that's located in an Amazon S3 bucket or a Systems Manager
-     * document. For more information, go to [Template
-     * Anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html)
-     * in the AWS CloudFormation User Guide.
+     * @param templateUrl The URL of a file that contains the template body.
+     * The URL must point to a template (max size: 1 MB) that's located in an Amazon S3 bucket or a
+     * Systems Manager document. The location for an Amazon S3 bucket must start with `https://` .
      *
      * Conditional: You must specify only one of the following parameters: `TemplateBody` ,
      * `TemplateURL` .
@@ -822,42 +825,46 @@ public interface CfnStackSetProps {
   ) : CdkObject(cdkObject),
       CfnStackSetProps {
     /**
-     * The Amazon Resource Number (ARN) of the IAM role to use to create this stack set.
+     * The Amazon Resource Number (ARN) of the IAM role to use to create this StackSet.
      *
      * Specify an IAM role only if you are using customized administrator roles to control which
-     * users or groups can manage specific stack sets within the same administrator account.
+     * users or groups can manage specific StackSets within the same administrator account.
      *
-     * Use customized administrator roles to control which users or groups can manage specific stack
-     * sets within the same administrator account. For more information, see [Prerequisites: Granting
-     * Permissions for Stack Set
-     * Operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html)
+     * Use customized administrator roles to control which users or groups can manage specific
+     * StackSets within the same administrator account. For more information, see [Grant self-managed
+     * permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
      * in the *AWS CloudFormation User Guide* .
      *
-     * *Minimum* : `20`
-     *
-     * *Maximum* : `2048`
+     * Valid only if the permissions model is `SELF_MANAGED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-administrationrolearn)
      */
     override fun administrationRoleArn(): String? = unwrap(this).getAdministrationRoleArn()
 
     /**
-     * [ `Service-managed` permissions] Describes whether StackSets automatically deploys to AWS
-     * Organizations accounts that are added to a target organization or organizational unit (OU).
+     * Describes whether StackSets automatically deploys to AWS Organizations accounts that are
+     * added to a target organization or organizational unit (OU).
+     *
+     * For more information, see [Enable or disable automatic deployments for StackSets in AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-manage-auto-deployment.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     * Required if the permissions model is `SERVICE_MANAGED` . (Not used with self-managed
+     * permissions.)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-autodeployment)
      */
     override fun autoDeployment(): Any? = unwrap(this).getAutoDeployment()
 
     /**
-     * [Service-managed permissions] Specifies whether you are acting as an account administrator in
-     * the organization's management account or as a delegated administrator in a member account.
+     * Specifies whether you are acting as an account administrator in the organization's management
+     * account or as a delegated administrator in a member account.
      *
-     * By default, `SELF` is specified. Use `SELF` for stack sets with self-managed permissions.
+     * By default, `SELF` is specified. Use `SELF` for StackSets with self-managed permissions.
      *
-     * * To create a stack set with service-managed permissions while signed in to the management
+     * * To create a StackSet with service-managed permissions while signed in to the management
      * account, specify `SELF` .
-     * * To create a stack set with service-managed permissions while signed in to a delegated
+     * * To create a StackSet with service-managed permissions while signed in to a delegated
      * administrator account, specify `DELEGATED_ADMIN` .
      *
      * Your AWS account must be registered as a delegated admin in the management account. For more
@@ -865,48 +872,42 @@ public interface CfnStackSetProps {
      * administrator](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html)
      * in the *AWS CloudFormation User Guide* .
      *
-     * Stack sets with service-managed permissions are created in the management account, including
-     * stack sets that are created by delegated administrators.
+     * StackSets with service-managed permissions are created in the management account, including
+     * StackSets that are created by delegated administrators.
      *
-     * *Valid Values* : `SELF` | `DELEGATED_ADMIN`
+     * Valid only if the permissions model is `SERVICE_MANAGED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-callas)
      */
     override fun callAs(): String? = unwrap(this).getCallAs()
 
     /**
-     * The capabilities that are allowed in the stack set.
+     * The capabilities that are allowed in the StackSet.
      *
-     * Some stack set templates might include resources that can affect permissions in your AWS
-     * account —for example, by creating new AWS Identity and Access Management ( IAM ) users. For more
-     * information, see [Acknowledging IAM Resources in AWS CloudFormation
-     * Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities)
-     * .
+     * Some StackSet templates might include resources that can affect permissions in your AWS
+     * account —for example, by creating new IAM users. For more information, see [Acknowledging IAM
+     * resources in CloudFormation
+     * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/control-access-with-iam.html#using-iam-capabilities)
+     * in the *AWS CloudFormation User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-capabilities)
      */
     override fun capabilities(): List<String> = unwrap(this).getCapabilities() ?: emptyList()
 
     /**
-     * A description of the stack set.
-     *
-     * *Minimum* : `1`
-     *
-     * *Maximum* : `1024`
+     * A description of the StackSet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-description)
      */
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * The name of the IAM execution role to use to create the stack set.
+     * The name of the IAM execution role to use to create the StackSet.
      *
-     * If you don't specify an execution role, AWS CloudFormation uses the
-     * `AWSCloudFormationStackSetExecutionRole` role for the stack set operation.
+     * If you don't specify an execution role, CloudFormation uses the
+     * `AWSCloudFormationStackSetExecutionRole` role for the StackSet operation.
      *
-     * *Minimum* : `1`
-     *
-     * *Maximum* : `64`
+     * Valid only if the permissions model is `SELF_MANAGED` .
      *
      * *Pattern* : `[a-zA-Z_0-9+=,.&#64;-]+`
      *
@@ -926,8 +927,8 @@ public interface CfnStackSetProps {
      * If there are already running or queued operations, StackSets queues all incoming operations
      * even if they are non-conflicting.
      *
-     * You can't modify your stack set's execution configuration while there are running or queued
-     * operations for that stack set.
+     * You can't modify your StackSet's execution configuration while there are running or queued
+     * operations for that StackSet.
      *
      *
      * When inactive (default), StackSets performs one operation at a time in request order.
@@ -937,28 +938,31 @@ public interface CfnStackSetProps {
     override fun managedExecution(): Any? = unwrap(this).getManagedExecution()
 
     /**
-     * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
+     * The user-specified preferences for how CloudFormation performs a StackSet operation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-operationpreferences)
      */
     override fun operationPreferences(): Any? = unwrap(this).getOperationPreferences()
 
     /**
-     * The input parameters for the stack set template.
+     * The input parameters for the StackSet template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-parameters)
      */
     override fun parameters(): Any? = unwrap(this).getParameters()
 
     /**
-     * Describes how the IAM roles required for stack set operations are created.
+     * Describes how the IAM roles required for StackSet operations are created.
      *
      * * With `SELF_MANAGED` permissions, you must create the administrator and execution roles
-     * required to deploy to target accounts. For more information, see [Grant Self-Managed Stack Set
-     * Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
-     * .
+     * required to deploy to target accounts. For more information, see [Grant self-managed
+     * permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
+     * in the *AWS CloudFormation User Guide* .
      * * With `SERVICE_MANAGED` permissions, StackSets automatically creates the IAM roles required
-     * to deploy to accounts managed by AWS Organizations .
+     * to deploy to accounts managed by AWS Organizations . For more information, see [Activate trusted
+     * access for StackSets with AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-activate-trusted-access.html)
+     * in the *AWS CloudFormation User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-permissionmodel)
      */
@@ -972,13 +976,9 @@ public interface CfnStackSetProps {
     override fun stackInstancesGroup(): Any? = unwrap(this).getStackInstancesGroup()
 
     /**
-     * The name to associate with the stack set.
+     * The name to associate with the StackSet.
      *
-     * The name must be unique in the Region where you create your stack set.
-     *
-     *
-     * The `StackSetName` property is required.
-     *
+     * The name must be unique in the Region where you create your StackSet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-stacksetname)
      */
@@ -1003,19 +1003,17 @@ public interface CfnStackSetProps {
      *
      * You must include either `TemplateURL` or `TemplateBody` in a StackSet, but you can't use
      * both. Dynamic references in the `TemplateBody` may not work correctly in all cases. It's
-     * recommended to pass templates containing dynamic references through `TemplateUrl` instead.
+     * recommended to pass templates that contain dynamic references through `TemplateUrl` instead.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-templatebody)
      */
     override fun templateBody(): String? = unwrap(this).getTemplateBody()
 
     /**
-     * Location of file containing the template body.
+     * The URL of a file that contains the template body.
      *
-     * The URL must point to a template that's located in an Amazon S3 bucket or a Systems Manager
-     * document. For more information, go to [Template
-     * Anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html)
-     * in the AWS CloudFormation User Guide.
+     * The URL must point to a template (max size: 1 MB) that's located in an Amazon S3 bucket or a
+     * Systems Manager document. The location for an Amazon S3 bucket must start with `https://` .
      *
      * Conditional: You must specify only one of the following parameters: `TemplateBody` ,
      * `TemplateURL` .

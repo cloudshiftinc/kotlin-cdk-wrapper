@@ -28,7 +28,7 @@ import software.amazon.awscdk.services.logs.ILogGroup as AmazonAwscdkServicesLog
  * LogGroup logGroup;
  * Rule rule;
  * rule.addTarget(CloudWatchLogGroup.Builder.create(logGroup)
- * .logEvent(LogGroupTargetInput.fromObject(LogGroupTargetInputOptions.builder()
+ * .logEvent(LogGroupTargetInput.fromObjectV2(LogGroupTargetInputOptions.builder()
  * .message(JSON.stringify(Map.of(
  * "CustomField", "CustomValue")))
  * .build()))
@@ -55,7 +55,7 @@ public open class CloudWatchLogGroup(
   /**
    * Returns a RuleTarget that can be used to log an event into a CloudWatch LogGroup.
    *
-   * @param _rule 
+   * @param rule 
    * @param _id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
@@ -64,7 +64,7 @@ public open class CloudWatchLogGroup(
   /**
    * Returns a RuleTarget that can be used to log an event into a CloudWatch LogGroup.
    *
-   * @param _rule 
+   * @param rule 
    * @param _id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =

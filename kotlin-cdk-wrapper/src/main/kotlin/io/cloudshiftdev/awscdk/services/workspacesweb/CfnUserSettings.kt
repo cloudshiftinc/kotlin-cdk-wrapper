@@ -66,6 +66,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .key("key")
  * .value("value")
  * .build()))
+ * .toolbarConfiguration(ToolbarConfigurationProperty.builder()
+ * .hiddenToolbarItems(List.of("hiddenToolbarItems"))
+ * .maxDisplayResolution("maxDisplayResolution")
+ * .toolbarType("toolbarType")
+ * .visualMode("visualMode")
+ * .build())
  * .build();
  * ```
  *
@@ -101,15 +107,15 @@ public open class CfnUserSettings(
   /**
    * The additional encryption context of the user settings.
    */
-  public open fun additionalEncryptionContext(`value`: IResolvable) {
-    unwrap(this).setAdditionalEncryptionContext(`value`.let(IResolvable.Companion::unwrap))
+  public open fun additionalEncryptionContext(`value`: Map<String, String>) {
+    unwrap(this).setAdditionalEncryptionContext(`value`)
   }
 
   /**
    * The additional encryption context of the user settings.
    */
-  public open fun additionalEncryptionContext(`value`: Map<String, String>) {
-    unwrap(this).setAdditionalEncryptionContext(`value`)
+  public open fun additionalEncryptionContext(`value`: IResolvable) {
+    unwrap(this).setAdditionalEncryptionContext(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -292,6 +298,33 @@ public open class CfnUserSettings(
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
+   * The configuration of the toolbar.
+   */
+  public open fun toolbarConfiguration(): Any? = unwrap(this).getToolbarConfiguration()
+
+  /**
+   * The configuration of the toolbar.
+   */
+  public open fun toolbarConfiguration(`value`: IResolvable) {
+    unwrap(this).setToolbarConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The configuration of the toolbar.
+   */
+  public open fun toolbarConfiguration(`value`: ToolbarConfigurationProperty) {
+    unwrap(this).setToolbarConfiguration(`value`.let(ToolbarConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The configuration of the toolbar.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("6f9a2a7199798cd73c22a7e477c97289740fce784b4369b3a1c6f8ef325562a0")
+  public open fun toolbarConfiguration(`value`: ToolbarConfigurationProperty.Builder.() -> Unit):
+      Unit = toolbarConfiguration(ToolbarConfigurationProperty(`value`))
+
+  /**
    * Specifies whether the user can upload files from the local device to the streaming session.
    */
   public open fun uploadAllowed(): String = unwrap(this).getUploadAllowed()
@@ -314,7 +347,7 @@ public open class CfnUserSettings(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-additionalencryptioncontext)
      * @param additionalEncryptionContext The additional encryption context of the user settings. 
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
+    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
     /**
      * The additional encryption context of the user settings.
@@ -322,7 +355,7 @@ public open class CfnUserSettings(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-additionalencryptioncontext)
      * @param additionalEncryptionContext The additional encryption context of the user settings. 
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
     /**
      * The configuration that specifies which cookies should be synchronized from the end user's
@@ -453,6 +486,48 @@ public open class CfnUserSettings(
     public fun tags(vararg tags: CfnTag)
 
     /**
+     * The configuration of the toolbar.
+     *
+     * This allows administrators to select the toolbar type and visual mode, set maximum display
+     * resolution for sessions, and choose which items are visible to end users during their sessions.
+     * If administrators do not modify these settings, end users retain control over their toolbar
+     * preferences.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-toolbarconfiguration)
+     * @param toolbarConfiguration The configuration of the toolbar. 
+     */
+    public fun toolbarConfiguration(toolbarConfiguration: IResolvable)
+
+    /**
+     * The configuration of the toolbar.
+     *
+     * This allows administrators to select the toolbar type and visual mode, set maximum display
+     * resolution for sessions, and choose which items are visible to end users during their sessions.
+     * If administrators do not modify these settings, end users retain control over their toolbar
+     * preferences.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-toolbarconfiguration)
+     * @param toolbarConfiguration The configuration of the toolbar. 
+     */
+    public fun toolbarConfiguration(toolbarConfiguration: ToolbarConfigurationProperty)
+
+    /**
+     * The configuration of the toolbar.
+     *
+     * This allows administrators to select the toolbar type and visual mode, set maximum display
+     * resolution for sessions, and choose which items are visible to end users during their sessions.
+     * If administrators do not modify these settings, end users retain control over their toolbar
+     * preferences.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-toolbarconfiguration)
+     * @param toolbarConfiguration The configuration of the toolbar. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("111023312fedd986cb5a900ad147e4147fe99f064aba814338f0128861640025")
+    public
+        fun toolbarConfiguration(toolbarConfiguration: ToolbarConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * Specifies whether the user can upload files from the local device to the streaming session.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-uploadallowed)
@@ -475,8 +550,8 @@ public open class CfnUserSettings(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-additionalencryptioncontext)
      * @param additionalEncryptionContext The additional encryption context of the user settings. 
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
+    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
     }
 
     /**
@@ -485,8 +560,8 @@ public open class CfnUserSettings(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-additionalencryptioncontext)
      * @param additionalEncryptionContext The additional encryption context of the user settings. 
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -641,6 +716,53 @@ public open class CfnUserSettings(
      * @param tags The tags to add to the user settings resource. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    /**
+     * The configuration of the toolbar.
+     *
+     * This allows administrators to select the toolbar type and visual mode, set maximum display
+     * resolution for sessions, and choose which items are visible to end users during their sessions.
+     * If administrators do not modify these settings, end users retain control over their toolbar
+     * preferences.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-toolbarconfiguration)
+     * @param toolbarConfiguration The configuration of the toolbar. 
+     */
+    override fun toolbarConfiguration(toolbarConfiguration: IResolvable) {
+      cdkBuilder.toolbarConfiguration(toolbarConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The configuration of the toolbar.
+     *
+     * This allows administrators to select the toolbar type and visual mode, set maximum display
+     * resolution for sessions, and choose which items are visible to end users during their sessions.
+     * If administrators do not modify these settings, end users retain control over their toolbar
+     * preferences.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-toolbarconfiguration)
+     * @param toolbarConfiguration The configuration of the toolbar. 
+     */
+    override fun toolbarConfiguration(toolbarConfiguration: ToolbarConfigurationProperty) {
+      cdkBuilder.toolbarConfiguration(toolbarConfiguration.let(ToolbarConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The configuration of the toolbar.
+     *
+     * This allows administrators to select the toolbar type and visual mode, set maximum display
+     * resolution for sessions, and choose which items are visible to end users during their sessions.
+     * If administrators do not modify these settings, end users retain control over their toolbar
+     * preferences.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-toolbarconfiguration)
+     * @param toolbarConfiguration The configuration of the toolbar. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("111023312fedd986cb5a900ad147e4147fe99f064aba814338f0128861640025")
+    override
+        fun toolbarConfiguration(toolbarConfiguration: ToolbarConfigurationProperty.Builder.() -> Unit):
+        Unit = toolbarConfiguration(ToolbarConfigurationProperty(toolbarConfiguration))
 
     /**
      * Specifies whether the user can upload files from the local device to the streaming session.
@@ -996,6 +1118,189 @@ public open class CfnUserSettings(
           software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSynchronizationConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSynchronizationConfigurationProperty
+    }
+  }
+
+  /**
+   * The configuration of the toolbar.
+   *
+   * This allows administrators to select the toolbar type and visual mode, set maximum display
+   * resolution for sessions, and choose which items are visible to end users during their sessions. If
+   * administrators do not modify these settings, end users retain control over their toolbar
+   * preferences.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.workspacesweb.*;
+   * ToolbarConfigurationProperty toolbarConfigurationProperty =
+   * ToolbarConfigurationProperty.builder()
+   * .hiddenToolbarItems(List.of("hiddenToolbarItems"))
+   * .maxDisplayResolution("maxDisplayResolution")
+   * .toolbarType("toolbarType")
+   * .visualMode("visualMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-toolbarconfiguration.html)
+   */
+  public interface ToolbarConfigurationProperty {
+    /**
+     * The list of toolbar items to be hidden.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-toolbarconfiguration.html#cfn-workspacesweb-usersettings-toolbarconfiguration-hiddentoolbaritems)
+     */
+    public fun hiddenToolbarItems(): List<String> = unwrap(this).getHiddenToolbarItems() ?:
+        emptyList()
+
+    /**
+     * The maximum display resolution that is allowed for the session.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-toolbarconfiguration.html#cfn-workspacesweb-usersettings-toolbarconfiguration-maxdisplayresolution)
+     */
+    public fun maxDisplayResolution(): String? = unwrap(this).getMaxDisplayResolution()
+
+    /**
+     * The type of toolbar displayed during the session.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-toolbarconfiguration.html#cfn-workspacesweb-usersettings-toolbarconfiguration-toolbartype)
+     */
+    public fun toolbarType(): String? = unwrap(this).getToolbarType()
+
+    /**
+     * The visual mode of the toolbar.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-toolbarconfiguration.html#cfn-workspacesweb-usersettings-toolbarconfiguration-visualmode)
+     */
+    public fun visualMode(): String? = unwrap(this).getVisualMode()
+
+    /**
+     * A builder for [ToolbarConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param hiddenToolbarItems The list of toolbar items to be hidden.
+       */
+      public fun hiddenToolbarItems(hiddenToolbarItems: List<String>)
+
+      /**
+       * @param hiddenToolbarItems The list of toolbar items to be hidden.
+       */
+      public fun hiddenToolbarItems(vararg hiddenToolbarItems: String)
+
+      /**
+       * @param maxDisplayResolution The maximum display resolution that is allowed for the session.
+       */
+      public fun maxDisplayResolution(maxDisplayResolution: String)
+
+      /**
+       * @param toolbarType The type of toolbar displayed during the session.
+       */
+      public fun toolbarType(toolbarType: String)
+
+      /**
+       * @param visualMode The visual mode of the toolbar.
+       */
+      public fun visualMode(visualMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.ToolbarConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.ToolbarConfigurationProperty.builder()
+
+      /**
+       * @param hiddenToolbarItems The list of toolbar items to be hidden.
+       */
+      override fun hiddenToolbarItems(hiddenToolbarItems: List<String>) {
+        cdkBuilder.hiddenToolbarItems(hiddenToolbarItems)
+      }
+
+      /**
+       * @param hiddenToolbarItems The list of toolbar items to be hidden.
+       */
+      override fun hiddenToolbarItems(vararg hiddenToolbarItems: String): Unit =
+          hiddenToolbarItems(hiddenToolbarItems.toList())
+
+      /**
+       * @param maxDisplayResolution The maximum display resolution that is allowed for the session.
+       */
+      override fun maxDisplayResolution(maxDisplayResolution: String) {
+        cdkBuilder.maxDisplayResolution(maxDisplayResolution)
+      }
+
+      /**
+       * @param toolbarType The type of toolbar displayed during the session.
+       */
+      override fun toolbarType(toolbarType: String) {
+        cdkBuilder.toolbarType(toolbarType)
+      }
+
+      /**
+       * @param visualMode The visual mode of the toolbar.
+       */
+      override fun visualMode(visualMode: String) {
+        cdkBuilder.visualMode(visualMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.ToolbarConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings.ToolbarConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ToolbarConfigurationProperty {
+      /**
+       * The list of toolbar items to be hidden.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-toolbarconfiguration.html#cfn-workspacesweb-usersettings-toolbarconfiguration-hiddentoolbaritems)
+       */
+      override fun hiddenToolbarItems(): List<String> = unwrap(this).getHiddenToolbarItems() ?:
+          emptyList()
+
+      /**
+       * The maximum display resolution that is allowed for the session.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-toolbarconfiguration.html#cfn-workspacesweb-usersettings-toolbarconfiguration-maxdisplayresolution)
+       */
+      override fun maxDisplayResolution(): String? = unwrap(this).getMaxDisplayResolution()
+
+      /**
+       * The type of toolbar displayed during the session.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-toolbarconfiguration.html#cfn-workspacesweb-usersettings-toolbarconfiguration-toolbartype)
+       */
+      override fun toolbarType(): String? = unwrap(this).getToolbarType()
+
+      /**
+       * The visual mode of the toolbar.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspacesweb-usersettings-toolbarconfiguration.html#cfn-workspacesweb-usersettings-toolbarconfiguration-visualmode)
+       */
+      override fun visualMode(): String? = unwrap(this).getVisualMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ToolbarConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings.ToolbarConfigurationProperty):
+          ToolbarConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ToolbarConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ToolbarConfigurationProperty):
+          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.ToolbarConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.workspacesweb.CfnUserSettings.ToolbarConfigurationProperty
     }
   }
 }

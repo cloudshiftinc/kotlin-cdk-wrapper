@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
@@ -29,6 +30,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.mediaconvert.*;
  * Object tags;
  * CfnQueue cfnQueue = CfnQueue.Builder.create(this, "MyCfnQueue")
+ * .concurrentJobs(123)
  * .description("description")
  * .name("name")
  * .pricingPlan("pricingPlan")
@@ -80,6 +82,18 @@ public open class CfnQueue(
    * The name of the queue, such as `Queue 2` .
    */
   public open fun attrName(): String = unwrap(this).getAttrName()
+
+  /**
+   * Specify the maximum number of jobs your queue can process concurrently.
+   */
+  public open fun concurrentJobs(): Number? = unwrap(this).getConcurrentJobs()
+
+  /**
+   * Specify the maximum number of jobs your queue can process concurrently.
+   */
+  public open fun concurrentJobs(`value`: Number) {
+    unwrap(this).setConcurrentJobs(`value`)
+  }
 
   /**
    * Optional.
@@ -161,6 +175,20 @@ public open class CfnQueue(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Specify the maximum number of jobs your queue can process concurrently.
+     *
+     * For on-demand queues, the value you enter is constrained by your service quotas for Maximum
+     * concurrent jobs, per on-demand queue and Maximum concurrent jobs, per account. For reserved
+     * queues, specify the number of jobs you can process concurrently in your reservation plan
+     * instead.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-queue.html#cfn-mediaconvert-queue-concurrentjobs)
+     * @param concurrentJobs Specify the maximum number of jobs your queue can process concurrently.
+     * 
+     */
+    public fun concurrentJobs(concurrentJobs: Number)
+
+    /**
      * Optional.
      *
      * A description of the queue that you are creating.
@@ -224,6 +252,22 @@ public open class CfnQueue(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.mediaconvert.CfnQueue.Builder =
         software.amazon.awscdk.services.mediaconvert.CfnQueue.Builder.create(scope, id)
+
+    /**
+     * Specify the maximum number of jobs your queue can process concurrently.
+     *
+     * For on-demand queues, the value you enter is constrained by your service quotas for Maximum
+     * concurrent jobs, per on-demand queue and Maximum concurrent jobs, per account. For reserved
+     * queues, specify the number of jobs you can process concurrently in your reservation plan
+     * instead.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-queue.html#cfn-mediaconvert-queue-concurrentjobs)
+     * @param concurrentJobs Specify the maximum number of jobs your queue can process concurrently.
+     * 
+     */
+    override fun concurrentJobs(concurrentJobs: Number) {
+      cdkBuilder.concurrentJobs(concurrentJobs)
+    }
 
     /**
      * Optional.

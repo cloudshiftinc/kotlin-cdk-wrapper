@@ -43,6 +43,11 @@ import kotlin.jvm.JvmName
  * .type("type")
  * // the properties below are optional
  * .certificate("certificate")
+ * .dockerServer(DockerServerProperty.builder()
+ * .computeType("computeType")
+ * // the properties below are optional
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .build())
  * .environmentVariables(List.of(EnvironmentVariableProperty.builder()
  * .name("name")
  * .value("value")
@@ -98,6 +103,7 @@ import kotlin.jvm.JvmName
  * .cache(ProjectCacheProperty.builder()
  * .type("type")
  * // the properties below are optional
+ * .cacheNamespace("cacheNamespace")
  * .location("location")
  * .modes(List.of("modes"))
  * .build())
@@ -184,6 +190,9 @@ import kotlin.jvm.JvmName
  * .build())))
  * .scopeConfiguration(ScopeConfigurationProperty.builder()
  * .name("name")
+ * // the properties below are optional
+ * .domain("domain")
+ * .scope("scope")
  * .build())
  * .webhook(false)
  * .build())

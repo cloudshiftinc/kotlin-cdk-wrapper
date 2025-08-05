@@ -55,6 +55,18 @@ public interface UserPoolDomainOptions {
       unwrap(this).getCustomDomain()?.let(CustomDomainOptions::wrap)
 
   /**
+   * A version that indicates the state of managed login.
+   *
+   * This choice applies to all app clients that host services at the domain.
+   *
+   * Default: undefined - Cognito default setting is ManagedLoginVersion.CLASSIC_HOSTED_UI
+   *
+   * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-managed-login.html)
+   */
+  public fun managedLoginVersion(): ManagedLoginVersion? =
+      unwrap(this).getManagedLoginVersion()?.let(ManagedLoginVersion::wrap)
+
+  /**
    * A builder for [UserPoolDomainOptions]
    */
   @CdkDslMarker
@@ -86,6 +98,12 @@ public interface UserPoolDomainOptions {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f355c33c3329c4211feb603e44fea910ca6b9b83eaaf1260b1432a8479eb8b3f")
     public fun customDomain(customDomain: CustomDomainOptions.Builder.() -> Unit)
+
+    /**
+     * @param managedLoginVersion A version that indicates the state of managed login.
+     * This choice applies to all app clients that host services at the domain.
+     */
+    public fun managedLoginVersion(managedLoginVersion: ManagedLoginVersion)
   }
 
   private class BuilderImpl : Builder {
@@ -126,6 +144,14 @@ public interface UserPoolDomainOptions {
     override fun customDomain(customDomain: CustomDomainOptions.Builder.() -> Unit): Unit =
         customDomain(CustomDomainOptions(customDomain))
 
+    /**
+     * @param managedLoginVersion A version that indicates the state of managed login.
+     * This choice applies to all app clients that host services at the domain.
+     */
+    override fun managedLoginVersion(managedLoginVersion: ManagedLoginVersion) {
+      cdkBuilder.managedLoginVersion(managedLoginVersion.let(ManagedLoginVersion.Companion::unwrap))
+    }
+
     public fun build(): software.amazon.awscdk.services.cognito.UserPoolDomainOptions =
         cdkBuilder.build()
   }
@@ -155,6 +181,18 @@ public interface UserPoolDomainOptions {
      */
     override fun customDomain(): CustomDomainOptions? =
         unwrap(this).getCustomDomain()?.let(CustomDomainOptions::wrap)
+
+    /**
+     * A version that indicates the state of managed login.
+     *
+     * This choice applies to all app clients that host services at the domain.
+     *
+     * Default: undefined - Cognito default setting is ManagedLoginVersion.CLASSIC_HOSTED_UI
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-managed-login.html)
+     */
+    override fun managedLoginVersion(): ManagedLoginVersion? =
+        unwrap(this).getManagedLoginVersion()?.let(ManagedLoginVersion::wrap)
   }
 
   public companion object {

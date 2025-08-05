@@ -22,14 +22,12 @@ import kotlin.collections.Map
  * Vpc vpc;
  * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
  * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
- * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
- * .instanceType(InstanceType.of(InstanceClass.R6G, InstanceSize.XLARGE4))
+ * .writer(ClusterInstance.provisioned("Instance", ProvisionedClusterInstanceProps.builder()
+ * .instanceType(InstanceType.of(InstanceClass.BURSTABLE3, InstanceSize.SMALL))
  * .build()))
- * .serverlessV2MinCapacity(6.5)
- * .serverlessV2MaxCapacity(64)
- * .readers(List.of(ClusterInstance.serverlessV2("reader1",
- * ServerlessV2ClusterInstanceProps.builder().scaleWithWriter(true).build()),
- * ClusterInstance.serverlessV2("reader2")))
+ * .readers(List.of(ClusterInstance.provisioned("reader")))
+ * .instanceUpdateBehaviour(InstanceUpdateBehaviour.ROLLING) // Optional - defaults to
+ * rds.InstanceUpdateBehaviour.BULK
  * .vpc(vpc)
  * .build();
  * ```
@@ -66,10 +64,33 @@ public interface ProvisionedClusterInstanceProps : ClusterInstanceOptions {
     public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: Boolean)
 
     /**
+     * @param applyImmediately Specifies whether changes to the DB instance and any pending
+     * modifications are applied immediately, regardless of the `preferredMaintenanceWindow` setting.
+     * If set to `false`, changes are applied during the next maintenance window.
+     *
+     * Until RDS applies the changes, the DB instance remains in a drift state.
+     * As a result, the configuration doesn't fully reflect the requested modifications and
+     * temporarily diverges from the intended state.
+     *
+     * This property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     */
+    public fun applyImmediately(applyImmediately: Boolean)
+
+    /**
      * @param autoMinorVersionUpgrade Whether to enable automatic upgrade of minor version for the
      * DB instance.
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
+
+    /**
+     * @param availabilityZone The Availability Zone (AZ) where the database will be created.
+     * For Amazon Aurora, each Aurora DB cluster hosts copies of its storage in three separate
+     * Availability Zones.
+     * Specify one of these Availability Zones. Aurora automatically chooses an appropriate
+     * Availability Zone if you don't specify one.
+     */
+    public fun availabilityZone(availabilityZone: String)
 
     /**
      * @param caCertificate The identifier of the CA certificate for this DB cluster's instances.
@@ -166,11 +187,38 @@ public interface ProvisionedClusterInstanceProps : ClusterInstanceOptions {
     }
 
     /**
+     * @param applyImmediately Specifies whether changes to the DB instance and any pending
+     * modifications are applied immediately, regardless of the `preferredMaintenanceWindow` setting.
+     * If set to `false`, changes are applied during the next maintenance window.
+     *
+     * Until RDS applies the changes, the DB instance remains in a drift state.
+     * As a result, the configuration doesn't fully reflect the requested modifications and
+     * temporarily diverges from the intended state.
+     *
+     * This property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     */
+    override fun applyImmediately(applyImmediately: Boolean) {
+      cdkBuilder.applyImmediately(applyImmediately)
+    }
+
+    /**
      * @param autoMinorVersionUpgrade Whether to enable automatic upgrade of minor version for the
      * DB instance.
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
+    }
+
+    /**
+     * @param availabilityZone The Availability Zone (AZ) where the database will be created.
+     * For Amazon Aurora, each Aurora DB cluster hosts copies of its storage in three separate
+     * Availability Zones.
+     * Specify one of these Availability Zones. Aurora automatically chooses an appropriate
+     * Availability Zone if you don't specify one.
+     */
+    override fun availabilityZone(availabilityZone: String) {
+      cdkBuilder.availabilityZone(availabilityZone)
     }
 
     /**
@@ -294,11 +342,44 @@ public interface ProvisionedClusterInstanceProps : ClusterInstanceOptions {
     override fun allowMajorVersionUpgrade(): Boolean? = unwrap(this).getAllowMajorVersionUpgrade()
 
     /**
+     * Specifies whether changes to the DB instance and any pending modifications are applied
+     * immediately, regardless of the `preferredMaintenanceWindow` setting.
+     *
+     * If set to `false`, changes are applied during the next maintenance window.
+     *
+     * Until RDS applies the changes, the DB instance remains in a drift state.
+     * As a result, the configuration doesn't fully reflect the requested modifications and
+     * temporarily diverges from the intended state.
+     *
+     * This property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     *
+     * Default: - Changes will be applied immediately
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Modifying.html)
+     */
+    override fun applyImmediately(): Boolean? = unwrap(this).getApplyImmediately()
+
+    /**
      * Whether to enable automatic upgrade of minor version for the DB instance.
      *
      * Default: - true
      */
     override fun autoMinorVersionUpgrade(): Boolean? = unwrap(this).getAutoMinorVersionUpgrade()
+
+    /**
+     * The Availability Zone (AZ) where the database will be created.
+     *
+     * For Amazon Aurora, each Aurora DB cluster hosts copies of its storage in three separate
+     * Availability Zones.
+     * Specify one of these Availability Zones. Aurora automatically chooses an appropriate
+     * Availability Zone if you don't specify one.
+     *
+     * Default: - A random, system-chosen Availability Zone in the endpointʼs AWS Region.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.RegionsAndAvailabilityZones.html)
+     */
+    override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
     /**
      * The identifier of the CA certificate for this DB cluster's instances.

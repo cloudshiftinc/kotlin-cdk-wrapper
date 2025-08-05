@@ -28,7 +28,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * TaskDefinition taskDefinition;
  * Vpc vpc;
  * Ec2Service service = Ec2Service.Builder.create(this,
- * "Service").cluster(cluster).taskDefinition(taskDefinition).build();
+ * "Service").cluster(cluster).taskDefinition(taskDefinition).minHealthyPercent(100).build();
  * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB").vpc(vpc).build();
  * lb.addListener(LoadBalancerListener.builder().externalPort(80).build());
  * lb.addTarget(service.loadBalancerTarget(LoadBalancerTargetOptions.builder()
@@ -479,6 +479,9 @@ public open class LoadBalancer(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.elasticloadbalancing.LoadBalancer.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

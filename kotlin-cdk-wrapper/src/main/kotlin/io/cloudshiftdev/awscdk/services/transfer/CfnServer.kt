@@ -51,6 +51,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .url("url")
  * .build())
  * .identityProviderType("identityProviderType")
+ * .ipAddressType("ipAddressType")
  * .loggingRole("loggingRole")
  * .postAuthenticationLoginBanner("postAuthenticationLoginBanner")
  * .preAuthenticationLoginBanner("preAuthenticationLoginBanner")
@@ -112,11 +113,7 @@ public open class CfnServer(
   )
 
   /**
-   * The Amazon Resource Name associated with the server, in the form `arn:aws:transfer:region:
-   * *account-id* :server/ *server-id* /` .
-   *
-   * An example of a server ARN is:
-   * `arn:aws:transfer:us-east-1:123456789012:server/s-01234567890abcdef` .
+   * Specifies the unique Amazon Resource Name (ARN) of the server.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
@@ -124,19 +121,30 @@ public open class CfnServer(
    * The list of egress IP addresses of this server.
    *
    * These IP addresses are only relevant for servers that use the AS2 protocol. They are used for
-   * sending asynchronous MDNs. These IP addresses are assigned automatically when you create an AS2
-   * server. Additionally, if you update an existing server and add the AS2 protocol, static IP
-   * addresses are assigned as well.
+   * sending asynchronous MDNs.
+   *
+   * These IP addresses are assigned automatically when you create an AS2 server. Additionally, if
+   * you update an existing server and add the AS2 protocol, static IP addresses are assigned as well.
    */
   public open fun attrAs2ServiceManagedEgressIpAddresses(): List<String> =
       unwrap(this).getAttrAs2ServiceManagedEgressIpAddresses()
 
   /**
-   * The service-assigned ID of the server that is created.
-   *
-   * An example `ServerId` is `s-01234567890abcdef` .
+   * Specifies the unique system-assigned identifier for a server that you instantiate.
    */
   public open fun attrServerId(): String = unwrap(this).getAttrServerId()
+
+  /**
+   * The condition of the server that was described.
+   *
+   * A value of `ONLINE` indicates that the server can accept jobs and transfer files. A `State`
+   * value of `OFFLINE` means that the server cannot perform file transfer operations.
+   *
+   * The states of `STARTING` and `STOPPING` indicate that the server is in an intermediate state,
+   * either not fully able to respond, or not fully offline. The values of `START_FAILED` or
+   * `STOP_FAILED` can indicate an error condition.
+   */
+  public open fun attrState(): String = unwrap(this).getAttrState()
 
   /**
    * The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate.
@@ -255,14 +263,28 @@ public open class CfnServer(
   }
 
   /**
+   * Specifies whether to use IPv4 only, or to use dual-stack (IPv4 and IPv6) for your AWS Transfer
+   * Family endpoint.
+   */
+  public open fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+
+  /**
+   * Specifies whether to use IPv4 only, or to use dual-stack (IPv4 and IPv6) for your AWS Transfer
+   * Family endpoint.
+   */
+  public open fun ipAddressType(`value`: String) {
+    unwrap(this).setIpAddressType(`value`)
+  }
+
+  /**
    * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that allows
-   * a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFSevents.
+   * a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS events.
    */
   public open fun loggingRole(): String? = unwrap(this).getLoggingRole()
 
   /**
    * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that allows
-   * a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFSevents.
+   * a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS events.
    */
   public open fun loggingRole(`value`: String) {
     unwrap(this).setLoggingRole(`value`)
@@ -347,15 +369,11 @@ public open class CfnServer(
 
   /**
    * Specifies whether or not performance for your Amazon S3 directories is optimized.
-   *
-   * This is disabled by default.
    */
   public open fun s3StorageOptions(): Any? = unwrap(this).getS3StorageOptions()
 
   /**
    * Specifies whether or not performance for your Amazon S3 directories is optimized.
-   *
-   * This is disabled by default.
    */
   public open fun s3StorageOptions(`value`: IResolvable) {
     unwrap(this).setS3StorageOptions(`value`.let(IResolvable.Companion::unwrap))
@@ -363,8 +381,6 @@ public open class CfnServer(
 
   /**
    * Specifies whether or not performance for your Amazon S3 directories is optimized.
-   *
-   * This is disabled by default.
    */
   public open fun s3StorageOptions(`value`: S3StorageOptionsProperty) {
     unwrap(this).setS3StorageOptions(`value`.let(S3StorageOptionsProperty.Companion::unwrap))
@@ -372,8 +388,6 @@ public open class CfnServer(
 
   /**
    * Specifies whether or not performance for your Amazon S3 directories is optimized.
-   *
-   * This is disabled by default.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("803382341c7075b476f354623c495bcadf2ea00bca87af7ff63b4bd8585fe539")
@@ -661,15 +675,39 @@ public open class CfnServer(
     public fun identityProviderType(identityProviderType: String)
 
     /**
+     * Specifies whether to use IPv4 only, or to use dual-stack (IPv4 and IPv6) for your AWS
+     * Transfer Family endpoint.
+     *
+     * The default value is `IPV4` .
+     *
+     *
+     * The `IpAddressType` parameter has the following limitations:
+     *
+     * * It cannot be changed while the server is online. You must stop the server before modifying
+     * this parameter.
+     * * It cannot be updated to `DUALSTACK` if the server has `AddressAllocationIds` specified.
+     * &gt; When using `DUALSTACK` as the `IpAddressType` , you cannot set the `AddressAllocationIds`
+     * parameter for the
+     * [EndpointDetails](https://docs.aws.amazon.com/transfer/latest/APIReference/API_EndpointDetails.html)
+     * for the server.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-ipaddresstype)
+     * @param ipAddressType Specifies whether to use IPv4 only, or to use dual-stack (IPv4 and IPv6)
+     * for your AWS Transfer Family endpoint. 
+     */
+    public fun ipAddressType(ipAddressType: String)
+
+    /**
      * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that
-     * allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFSevents.
+     * allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS events.
      *
      * When set, you can view user activity in your CloudWatch logs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-loggingrole)
      * @param loggingRole The Amazon Resource Name (ARN) of the AWS Identity and Access Management
-     * (IAM) role that allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon
-     * EFSevents. 
+     * (IAM) role that allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS
+     * events. 
      */
     public fun loggingRole(loggingRole: String)
 
@@ -856,8 +894,10 @@ public open class CfnServer(
     public fun protocols(vararg protocols: String)
 
     /**
-     * Specifies whether or not performance for your Amazon S3 directories is optimized. This is
-     * disabled by default.
+     * Specifies whether or not performance for your Amazon S3 directories is optimized.
+     *
+     * * If using the console, this is enabled by default.
+     * * If using the API or CLI, this is disabled by default.
      *
      * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
      * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a
@@ -865,13 +905,15 @@ public open class CfnServer(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-s3storageoptions)
      * @param s3StorageOptions Specifies whether or not performance for your Amazon S3 directories
-     * is optimized. This is disabled by default. 
+     * is optimized. 
      */
     public fun s3StorageOptions(s3StorageOptions: IResolvable)
 
     /**
-     * Specifies whether or not performance for your Amazon S3 directories is optimized. This is
-     * disabled by default.
+     * Specifies whether or not performance for your Amazon S3 directories is optimized.
+     *
+     * * If using the console, this is enabled by default.
+     * * If using the API or CLI, this is disabled by default.
      *
      * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
      * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a
@@ -879,13 +921,15 @@ public open class CfnServer(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-s3storageoptions)
      * @param s3StorageOptions Specifies whether or not performance for your Amazon S3 directories
-     * is optimized. This is disabled by default. 
+     * is optimized. 
      */
     public fun s3StorageOptions(s3StorageOptions: S3StorageOptionsProperty)
 
     /**
-     * Specifies whether or not performance for your Amazon S3 directories is optimized. This is
-     * disabled by default.
+     * Specifies whether or not performance for your Amazon S3 directories is optimized.
+     *
+     * * If using the console, this is enabled by default.
+     * * If using the API or CLI, this is disabled by default.
      *
      * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
      * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a
@@ -893,7 +937,7 @@ public open class CfnServer(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-s3storageoptions)
      * @param s3StorageOptions Specifies whether or not performance for your Amazon S3 directories
-     * is optimized. This is disabled by default. 
+     * is optimized. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b659ec0eca872ff75383846e223a401c1c1166dc943ca76d7852c3201d038157")
@@ -1228,15 +1272,41 @@ public open class CfnServer(
     }
 
     /**
+     * Specifies whether to use IPv4 only, or to use dual-stack (IPv4 and IPv6) for your AWS
+     * Transfer Family endpoint.
+     *
+     * The default value is `IPV4` .
+     *
+     *
+     * The `IpAddressType` parameter has the following limitations:
+     *
+     * * It cannot be changed while the server is online. You must stop the server before modifying
+     * this parameter.
+     * * It cannot be updated to `DUALSTACK` if the server has `AddressAllocationIds` specified.
+     * &gt; When using `DUALSTACK` as the `IpAddressType` , you cannot set the `AddressAllocationIds`
+     * parameter for the
+     * [EndpointDetails](https://docs.aws.amazon.com/transfer/latest/APIReference/API_EndpointDetails.html)
+     * for the server.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-ipaddresstype)
+     * @param ipAddressType Specifies whether to use IPv4 only, or to use dual-stack (IPv4 and IPv6)
+     * for your AWS Transfer Family endpoint. 
+     */
+    override fun ipAddressType(ipAddressType: String) {
+      cdkBuilder.ipAddressType(ipAddressType)
+    }
+
+    /**
      * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that
-     * allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFSevents.
+     * allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS events.
      *
      * When set, you can view user activity in your CloudWatch logs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-loggingrole)
      * @param loggingRole The Amazon Resource Name (ARN) of the AWS Identity and Access Management
-     * (IAM) role that allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon
-     * EFSevents. 
+     * (IAM) role that allows a server to turn on Amazon CloudWatch logging for Amazon S3 or Amazon EFS
+     * events. 
      */
     override fun loggingRole(loggingRole: String) {
       cdkBuilder.loggingRole(loggingRole)
@@ -1436,8 +1506,10 @@ public open class CfnServer(
     override fun protocols(vararg protocols: String): Unit = protocols(protocols.toList())
 
     /**
-     * Specifies whether or not performance for your Amazon S3 directories is optimized. This is
-     * disabled by default.
+     * Specifies whether or not performance for your Amazon S3 directories is optimized.
+     *
+     * * If using the console, this is enabled by default.
+     * * If using the API or CLI, this is disabled by default.
      *
      * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
      * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a
@@ -1445,15 +1517,17 @@ public open class CfnServer(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-s3storageoptions)
      * @param s3StorageOptions Specifies whether or not performance for your Amazon S3 directories
-     * is optimized. This is disabled by default. 
+     * is optimized. 
      */
     override fun s3StorageOptions(s3StorageOptions: IResolvable) {
       cdkBuilder.s3StorageOptions(s3StorageOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Specifies whether or not performance for your Amazon S3 directories is optimized. This is
-     * disabled by default.
+     * Specifies whether or not performance for your Amazon S3 directories is optimized.
+     *
+     * * If using the console, this is enabled by default.
+     * * If using the API or CLI, this is disabled by default.
      *
      * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
      * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a
@@ -1461,15 +1535,17 @@ public open class CfnServer(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-s3storageoptions)
      * @param s3StorageOptions Specifies whether or not performance for your Amazon S3 directories
-     * is optimized. This is disabled by default. 
+     * is optimized. 
      */
     override fun s3StorageOptions(s3StorageOptions: S3StorageOptionsProperty) {
       cdkBuilder.s3StorageOptions(s3StorageOptions.let(S3StorageOptionsProperty.Companion::unwrap))
     }
 
     /**
-     * Specifies whether or not performance for your Amazon S3 directories is optimized. This is
-     * disabled by default.
+     * Specifies whether or not performance for your Amazon S3 directories is optimized.
+     *
+     * * If using the console, this is enabled by default.
+     * * If using the API or CLI, this is disabled by default.
      *
      * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
      * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a
@@ -1477,7 +1553,7 @@ public open class CfnServer(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-s3storageoptions)
      * @param s3StorageOptions Specifies whether or not performance for your Amazon S3 directories
-     * is optimized. This is disabled by default. 
+     * is optimized. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b659ec0eca872ff75383846e223a401c1c1166dc943ca76d7852c3201d038157")
@@ -1684,6 +1760,8 @@ public open class CfnServer(
      * * `AddressAllocationIds` can't contain duplicates, and must be equal in length to `SubnetIds`
      * . For example, if you have three subnet IDs, you must also specify three address allocation IDs.
      * * Call the `UpdateServer` API to set or change this parameter.
+     * * You can't set address allocation IDs for servers that have an `IpAddressType` set to
+     * `DUALSTACK` You can only set this property if `IpAddressType` is set to `IPV4` .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-endpointdetails.html#cfn-transfer-server-endpointdetails-addressallocationids)
@@ -1774,6 +1852,8 @@ public open class CfnServer(
        * `SubnetIds` . For example, if you have three subnet IDs, you must also specify three address
        * allocation IDs.
        * * Call the `UpdateServer` API to set or change this parameter.
+       * * You can't set address allocation IDs for servers that have an `IpAddressType` set to
+       * `DUALSTACK` You can only set this property if `IpAddressType` is set to `IPV4` .
        */
       public fun addressAllocationIds(addressAllocationIds: List<String>)
 
@@ -1804,6 +1884,8 @@ public open class CfnServer(
        * `SubnetIds` . For example, if you have three subnet IDs, you must also specify three address
        * allocation IDs.
        * * Call the `UpdateServer` API to set or change this parameter.
+       * * You can't set address allocation IDs for servers that have an `IpAddressType` set to
+       * `DUALSTACK` You can only set this property if `IpAddressType` is set to `IPV4` .
        */
       public fun addressAllocationIds(vararg addressAllocationIds: String)
 
@@ -1903,6 +1985,8 @@ public open class CfnServer(
        * `SubnetIds` . For example, if you have three subnet IDs, you must also specify three address
        * allocation IDs.
        * * Call the `UpdateServer` API to set or change this parameter.
+       * * You can't set address allocation IDs for servers that have an `IpAddressType` set to
+       * `DUALSTACK` You can only set this property if `IpAddressType` is set to `IPV4` .
        */
       override fun addressAllocationIds(addressAllocationIds: List<String>) {
         cdkBuilder.addressAllocationIds(addressAllocationIds)
@@ -1935,6 +2019,8 @@ public open class CfnServer(
        * `SubnetIds` . For example, if you have three subnet IDs, you must also specify three address
        * allocation IDs.
        * * Call the `UpdateServer` API to set or change this parameter.
+       * * You can't set address allocation IDs for servers that have an `IpAddressType` set to
+       * `DUALSTACK` You can only set this property if `IpAddressType` is set to `IPV4` .
        */
       override fun addressAllocationIds(vararg addressAllocationIds: String): Unit =
           addressAllocationIds(addressAllocationIds.toList())
@@ -2047,6 +2133,8 @@ public open class CfnServer(
        * `SubnetIds` . For example, if you have three subnet IDs, you must also specify three address
        * allocation IDs.
        * * Call the `UpdateServer` API to set or change this parameter.
+       * * You can't set address allocation IDs for servers that have an `IpAddressType` set to
+       * `DUALSTACK` You can only set this property if `IpAddressType` is set to `IPV4` .
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-endpointdetails.html#cfn-transfer-server-endpointdetails-addressallocationids)
@@ -2849,8 +2937,10 @@ public open class CfnServer(
    */
   public interface S3StorageOptionsProperty {
     /**
-     * Specifies whether or not performance for your Amazon S3 directories is optimized. This is
-     * disabled by default.
+     * Specifies whether or not performance for your Amazon S3 directories is optimized.
+     *
+     * * If using the console, this is enabled by default.
+     * * If using the API or CLI, this is disabled by default.
      *
      * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this option,
      * you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if you want a
@@ -2868,7 +2958,10 @@ public open class CfnServer(
     public interface Builder {
       /**
        * @param directoryListingOptimization Specifies whether or not performance for your Amazon S3
-       * directories is optimized. This is disabled by default.
+       * directories is optimized.
+       * * If using the console, this is enabled by default.
+       * * If using the API or CLI, this is disabled by default.
+       *
        * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this
        * option, you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if
        * you want a mapping to have a file target.
@@ -2883,7 +2976,10 @@ public open class CfnServer(
 
       /**
        * @param directoryListingOptimization Specifies whether or not performance for your Amazon S3
-       * directories is optimized. This is disabled by default.
+       * directories is optimized.
+       * * If using the console, this is enabled by default.
+       * * If using the API or CLI, this is disabled by default.
+       *
        * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this
        * option, you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if
        * you want a mapping to have a file target.
@@ -2902,8 +2998,10 @@ public open class CfnServer(
     ) : CdkObject(cdkObject),
         S3StorageOptionsProperty {
       /**
-       * Specifies whether or not performance for your Amazon S3 directories is optimized. This is
-       * disabled by default.
+       * Specifies whether or not performance for your Amazon S3 directories is optimized.
+       *
+       * * If using the console, this is enabled by default.
+       * * If using the API or CLI, this is disabled by default.
        *
        * By default, home directory mappings have a `TYPE` of `DIRECTORY` . If you enable this
        * option, you would then need to explicitly set the `HomeDirectoryMapEntry` `Type` to `FILE` if

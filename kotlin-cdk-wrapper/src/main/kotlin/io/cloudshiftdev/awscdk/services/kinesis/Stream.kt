@@ -29,11 +29,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Key key = new Key(this, "MyKey");
- * Stream.Builder.create(this, "MyEncryptedStream")
- * .encryption(StreamEncryption.KMS)
- * .encryptionKey(key)
+ * Role lambdaRole = Role.Builder.create(this, "Role")
+ * .assumedBy(new ServicePrincipal("lambda.amazonaws.com"))
+ * .description("Example role...")
  * .build();
+ * Stream stream = Stream.Builder.create(this, "MyEncryptedStream")
+ * .encryption(StreamEncryption.KMS)
+ * .build();
+ * // give lambda permissions to read stream
+ * stream.grantRead(lambdaRole);
  * ```
  */
 public open class Stream(
@@ -64,7 +68,7 @@ public open class Stream(
   /**
    * Adds a statement to the IAM resource policy associated with this stream.
    *
-   * If this stream was created in this stack (`new Strem`), a resource policy
+   * If this stream was created in this stack (`new Stream`), a resource policy
    * will be automatically created upon the first call to `addToResourcePolicy`. If
    * the stream is imported (`Stream.import`), then this is a no-op.
    *
@@ -76,7 +80,7 @@ public open class Stream(
   /**
    * Adds a statement to the IAM resource policy associated with this stream.
    *
-   * If this stream was created in this stack (`new Strem`), a resource policy
+   * If this stream was created in this stack (`new Stream`), a resource policy
    * will be automatically created upon the first call to `addToResourcePolicy`. If
    * the stream is imported (`Stream.import`), then this is a no-op.
    *
@@ -1221,6 +1225,9 @@ public open class Stream(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.kinesis.Stream.PROPERTY_INJECTION_ID
+
     public fun fromStreamArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

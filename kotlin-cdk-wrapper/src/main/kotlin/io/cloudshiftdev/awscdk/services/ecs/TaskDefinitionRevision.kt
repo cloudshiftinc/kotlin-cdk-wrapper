@@ -19,12 +19,14 @@ import kotlin.String
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
  * .desiredCount(5)
+ * .minHealthyPercent(100)
  * .taskDefinitionRevision(TaskDefinitionRevision.of(1))
  * .build();
  * ExternalService.Builder.create(this, "Service")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
  * .desiredCount(5)
+ * .minHealthyPercent(100)
  * .taskDefinitionRevision(TaskDefinitionRevision.LATEST)
  * .build();
  * ```

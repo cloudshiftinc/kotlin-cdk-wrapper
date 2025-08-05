@@ -122,6 +122,13 @@ public interface CfnServiceProps {
   public fun namespaceId(): String? = unwrap(this).getNamespaceId()
 
   /**
+   * A string map that contains the following information for the service:.
+   *
+   * * The attributes that apply to the service
+   * * For each attribute, the applicable value.
+   *
+   * You can specify a total of 30 attributes.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-serviceattributes)
    */
   public fun serviceAttributes(): Any? = unwrap(this).getServiceAttributes()
@@ -262,7 +269,12 @@ public interface CfnServiceProps {
     public fun namespaceId(namespaceId: String)
 
     /**
-     * @param serviceAttributes the value to be set.
+     * @param serviceAttributes A string map that contains the following information for the
+     * service:.
+     * * The attributes that apply to the service
+     * * For each attribute, the applicable value.
+     *
+     * You can specify a total of 30 attributes.
      */
     public fun serviceAttributes(serviceAttributes: Any)
 
@@ -426,7 +438,12 @@ public interface CfnServiceProps {
     }
 
     /**
-     * @param serviceAttributes the value to be set.
+     * @param serviceAttributes A string map that contains the following information for the
+     * service:.
+     * * The attributes that apply to the service
+     * * For each attribute, the applicable value.
+     *
+     * You can specify a total of 30 attributes.
      */
     override fun serviceAttributes(serviceAttributes: Any) {
       cdkBuilder.serviceAttributes(serviceAttributes)
@@ -532,6 +549,13 @@ public interface CfnServiceProps {
     override fun namespaceId(): String? = unwrap(this).getNamespaceId()
 
     /**
+     * A string map that contains the following information for the service:.
+     *
+     * * The attributes that apply to the service
+     * * For each attribute, the applicable value.
+     *
+     * You can specify a total of 30 attributes.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-serviceattributes)
      */
     override fun serviceAttributes(): Any? = unwrap(this).getServiceAttributes()

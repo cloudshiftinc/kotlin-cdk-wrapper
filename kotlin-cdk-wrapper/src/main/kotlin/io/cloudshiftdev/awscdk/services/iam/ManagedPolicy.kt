@@ -499,6 +499,9 @@ public open class ManagedPolicy(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.iam.ManagedPolicy.PROPERTY_INJECTION_ID
+
     public fun fromAwsManagedPolicyName(managedPolicyName: String): IManagedPolicy =
         software.amazon.awscdk.services.iam.ManagedPolicy.fromAwsManagedPolicyName(managedPolicyName).let(IManagedPolicy::wrap)
 

@@ -5,7 +5,9 @@ package io.cloudshiftdev.awscdk.services.apigateway
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
 import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
+import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -23,12 +25,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Integration integration;
  * SpecRestApi api = SpecRestApi.Builder.create(this, "books-api")
  * .apiDefinition(ApiDefinition.fromAsset("path-to-file.json"))
+ * .mode(RestApiMode.MERGE)
  * .build();
- * Resource booksResource = api.root.addResource("books");
- * booksResource.addMethod("GET", integration);
  * ```
  *
  * @see <a href=" `RestApi` - such as the description -
@@ -59,6 +59,32 @@ public open class SpecRestApi(
     props: SpecRestApiProps.Builder.() -> Unit,
   ) : this(scope, id, SpecRestApiProps(props)
   )
+
+  /**
+   * Adds a statement to the resource policy associated with this rest api.
+   *
+   * A resource policy will be automatically created upon the first call to `addToResourcePolicy`.
+   *
+   * Note that this does not work with imported rest api.
+   *
+   * @param statement The policy statement to add. 
+   */
+  public override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
+      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
+
+  /**
+   * Adds a statement to the resource policy associated with this rest api.
+   *
+   * A resource policy will be automatically created upon the first call to `addToResourcePolicy`.
+   *
+   * Note that this does not work with imported rest api.
+   *
+   * @param statement The policy statement to add. 
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("b93f8258425594b02debe63f0c120f198512d8431f5ae67b7fb7780e34fcbae2")
+  public override fun addToResourcePolicy(statement: PolicyStatement.Builder.() -> Unit):
+      AddToResourcePolicyResult = addToResourcePolicy(PolicyStatement(statement))
 
   /**
    * The ID of this API Gateway RestApi.
@@ -104,7 +130,7 @@ public open class SpecRestApi(
      * The removal policy applied to the AWS CloudWatch role when this resource is removed from the
      * application.
      *
-     * Requires `cloudWatchRole` to be enabled.
+     * Requires `cloudWatchRole` to be enabled.
      *
      * Default: - RemovalPolicy.RETAIN
      *
@@ -213,6 +239,31 @@ public open class SpecRestApi(
     public fun domainName(domainName: DomainNameOptions.Builder.() -> Unit)
 
     /**
+     * The EndpointConfiguration property type specifies the endpoint types of a REST API.
+     *
+     * Default: EndpointType.EDGE
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html)
+     * @param endpointConfiguration The EndpointConfiguration property type specifies the endpoint
+     * types of a REST API. 
+     */
+    public fun endpointConfiguration(endpointConfiguration: EndpointConfiguration)
+
+    /**
+     * The EndpointConfiguration property type specifies the endpoint types of a REST API.
+     *
+     * Default: EndpointType.EDGE
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html)
+     * @param endpointConfiguration The EndpointConfiguration property type specifies the endpoint
+     * types of a REST API. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("657010a3e87ef610cad5f5f2a900d48adfc44d7b1ecde3a5627acaf8cffbbd03")
+    public
+        fun endpointConfiguration(endpointConfiguration: EndpointConfiguration.Builder.() -> Unit)
+
+    /**
      * Export name for the CfnOutput containing the API endpoint.
      *
      * Default: - when no export name is given, output will be created without export
@@ -273,6 +324,32 @@ public open class SpecRestApi(
      * compression (when undefined) on an API. 
      */
     public fun minCompressionSize(minCompressionSize: Size)
+
+    /**
+     * The Mode that determines how API Gateway handles resource updates.
+     *
+     * Valid values are `overwrite` or `merge`.
+     *
+     * For `overwrite`, the new API definition replaces the existing one.
+     * The existing API identifier remains unchanged.
+     *
+     * For `merge`, the new API definition is merged with the existing API.
+     *
+     * If you don't specify this property, a default value is chosen:
+     *
+     * * For REST APIs created before March 29, 2021, the default is `overwrite`
+     * * For REST APIs created after March 29, 2021, the new API definition takes precedence, but
+     * any container types such as endpoint configurations and binary media types are merged with the
+     * existing API.
+     *
+     * Use the default mode to define top-level RestApi properties in addition to using OpenAPI.
+     * Generally, it's preferred to use API Gateway's OpenAPI extensions to model these properties.
+     *
+     * Default: - `merge` for REST APIs created after March 29, 2021, otherwise `overwrite`
+     *
+     * @param mode The Mode that determines how API Gateway handles resource updates. 
+     */
+    public fun mode(mode: RestApiMode)
 
     /**
      * Custom header parameters for the request.
@@ -360,7 +437,7 @@ public open class SpecRestApi(
      * The removal policy applied to the AWS CloudWatch role when this resource is removed from the
      * application.
      *
-     * Requires `cloudWatchRole` to be enabled.
+     * Requires `cloudWatchRole` to be enabled.
      *
      * Default: - RemovalPolicy.RETAIN
      *
@@ -483,6 +560,34 @@ public open class SpecRestApi(
         domainName(DomainNameOptions(domainName))
 
     /**
+     * The EndpointConfiguration property type specifies the endpoint types of a REST API.
+     *
+     * Default: EndpointType.EDGE
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html)
+     * @param endpointConfiguration The EndpointConfiguration property type specifies the endpoint
+     * types of a REST API. 
+     */
+    override fun endpointConfiguration(endpointConfiguration: EndpointConfiguration) {
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfiguration.Companion::unwrap))
+    }
+
+    /**
+     * The EndpointConfiguration property type specifies the endpoint types of a REST API.
+     *
+     * Default: EndpointType.EDGE
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html)
+     * @param endpointConfiguration The EndpointConfiguration property type specifies the endpoint
+     * types of a REST API. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("657010a3e87ef610cad5f5f2a900d48adfc44d7b1ecde3a5627acaf8cffbbd03")
+    override
+        fun endpointConfiguration(endpointConfiguration: EndpointConfiguration.Builder.() -> Unit):
+        Unit = endpointConfiguration(EndpointConfiguration(endpointConfiguration))
+
+    /**
      * Export name for the CfnOutput containing the API endpoint.
      *
      * Default: - when no export name is given, output will be created without export
@@ -554,6 +659,34 @@ public open class SpecRestApi(
     }
 
     /**
+     * The Mode that determines how API Gateway handles resource updates.
+     *
+     * Valid values are `overwrite` or `merge`.
+     *
+     * For `overwrite`, the new API definition replaces the existing one.
+     * The existing API identifier remains unchanged.
+     *
+     * For `merge`, the new API definition is merged with the existing API.
+     *
+     * If you don't specify this property, a default value is chosen:
+     *
+     * * For REST APIs created before March 29, 2021, the default is `overwrite`
+     * * For REST APIs created after March 29, 2021, the new API definition takes precedence, but
+     * any container types such as endpoint configurations and binary media types are merged with the
+     * existing API.
+     *
+     * Use the default mode to define top-level RestApi properties in addition to using OpenAPI.
+     * Generally, it's preferred to use API Gateway's OpenAPI extensions to model these properties.
+     *
+     * Default: - `merge` for REST APIs created after March 29, 2021, otherwise `overwrite`
+     *
+     * @param mode The Mode that determines how API Gateway handles resource updates. 
+     */
+    override fun mode(mode: RestApiMode) {
+      cdkBuilder.mode(mode.let(RestApiMode.Companion::unwrap))
+    }
+
+    /**
      * Custom header parameters for the request.
      *
      * Default: - No parameters.
@@ -618,6 +751,9 @@ public open class SpecRestApi(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.apigateway.SpecRestApi.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

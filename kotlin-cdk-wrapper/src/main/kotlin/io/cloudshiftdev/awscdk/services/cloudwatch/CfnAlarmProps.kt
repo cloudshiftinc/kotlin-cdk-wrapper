@@ -264,8 +264,8 @@ public interface CfnAlarmProps {
   /**
    * The period, in seconds, over which the statistic is applied.
    *
-   * This is required for an alarm based on a metric. Valid values are 10, 30, 60, and any multiple
-   * of 60.
+   * This is required for an alarm based on a metric. Valid values are 10, 20, 30, 60, and any
+   * multiple of 60.
    *
    * For an alarm based on a math expression, you can't specify `Period` , and instead you use the
    * `Metrics` parameter.
@@ -557,7 +557,7 @@ public interface CfnAlarmProps {
 
     /**
      * @param period The period, in seconds, over which the statistic is applied.
-     * This is required for an alarm based on a metric. Valid values are 10, 30, 60, and any
+     * This is required for an alarm based on a metric. Valid values are 10, 20, 30, 60, and any
      * multiple of 60.
      *
      * For an alarm based on a math expression, you can't specify `Period` , and instead you use the
@@ -882,7 +882,7 @@ public interface CfnAlarmProps {
 
     /**
      * @param period The period, in seconds, over which the statistic is applied.
-     * This is required for an alarm based on a metric. Valid values are 10, 30, 60, and any
+     * This is required for an alarm based on a metric. Valid values are 10, 20, 30, 60, and any
      * multiple of 60.
      *
      * For an alarm based on a math expression, you can't specify `Period` , and instead you use the
@@ -1165,7 +1165,7 @@ public interface CfnAlarmProps {
     /**
      * The period, in seconds, over which the statistic is applied.
      *
-     * This is required for an alarm based on a metric. Valid values are 10, 30, 60, and any
+     * This is required for an alarm based on a metric. Valid values are 10, 20, 30, 60, and any
      * multiple of 60.
      *
      * For an alarm based on a math expression, you can't specify `Period` , and instead you use the

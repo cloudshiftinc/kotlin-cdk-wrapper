@@ -30,6 +30,7 @@ import kotlin.collections.Map
  * .taskImageOptions(ApplicationLoadBalancedTaskImageOptions.builder()
  * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
  * .build())
+ * .minHealthyPercent(100)
  * .taskSubnets(SubnetSelection.builder()
  * .subnets(List.of(Subnet.fromSubnetId(this, "subnet", "VpcISOLATEDSubnet1Subnet80F07FA0")))
  * .build())

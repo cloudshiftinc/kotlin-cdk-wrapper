@@ -237,6 +237,9 @@ public open class Runtime(
     public val DOTNET_8: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.lambda.Runtime.DOTNET_8)
 
+    public val DOTNET_9: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.lambda.Runtime.DOTNET_9)
+
     public val DOTNET_CORE_1: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.lambda.Runtime.DOTNET_CORE_1)
 
@@ -350,6 +353,9 @@ public open class Runtime(
 
     public val RUBY_3_3: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.lambda.Runtime.RUBY_3_3)
+
+    public val RUBY_3_4: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.lambda.Runtime.RUBY_3_4)
 
     public operator fun invoke(
       name: String,

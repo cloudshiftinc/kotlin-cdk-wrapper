@@ -36,6 +36,10 @@ import kotlin.jvm.JvmName
  * .networkName("networkName")
  * .port(123)
  * .protocol("protocol")
+ * // the properties below are optional
+ * .multicastSourceSettings(MulticastSourceSettingsProperty.builder()
+ * .multicastSourceIp("multicastSourceIp")
+ * .build())
  * .build())
  * .build();
  * ```
@@ -44,14 +48,14 @@ import kotlin.jvm.JvmName
  */
 public interface CfnBridgeSourceProps {
   /**
-   * The ARN of the bridge that you want to describe.
+   * The ARN of the bridge feeding this flow.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-bridgearn)
    */
   public fun bridgeArn(): String
 
   /**
-   * Add a flow source to an existing bridge.
+   * The source of the flow.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-flowsource)
    */
@@ -67,7 +71,7 @@ public interface CfnBridgeSourceProps {
   public fun name(): String
 
   /**
-   * Add a network source to an existing bridge.
+   * The source of the network.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-networksource)
    */
@@ -79,22 +83,22 @@ public interface CfnBridgeSourceProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param bridgeArn The ARN of the bridge that you want to describe. 
+     * @param bridgeArn The ARN of the bridge feeding this flow. 
      */
     public fun bridgeArn(bridgeArn: String)
 
     /**
-     * @param flowSource Add a flow source to an existing bridge.
+     * @param flowSource The source of the flow.
      */
     public fun flowSource(flowSource: IResolvable)
 
     /**
-     * @param flowSource Add a flow source to an existing bridge.
+     * @param flowSource The source of the flow.
      */
     public fun flowSource(flowSource: CfnBridgeSource.BridgeFlowSourceProperty)
 
     /**
-     * @param flowSource Add a flow source to an existing bridge.
+     * @param flowSource The source of the flow.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("671163b1a05c2c8a867c977ca6b807fd696e3cb4df0c764b74f9af2736559cc0")
@@ -107,17 +111,17 @@ public interface CfnBridgeSourceProps {
     public fun name(name: String)
 
     /**
-     * @param networkSource Add a network source to an existing bridge.
+     * @param networkSource The source of the network.
      */
     public fun networkSource(networkSource: IResolvable)
 
     /**
-     * @param networkSource Add a network source to an existing bridge.
+     * @param networkSource The source of the network.
      */
     public fun networkSource(networkSource: CfnBridgeSource.BridgeNetworkSourceProperty)
 
     /**
-     * @param networkSource Add a network source to an existing bridge.
+     * @param networkSource The source of the network.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c33d05cf2dfa41a6a9ec4a7c76df17f0a77b8403c4659c75d5e34c8bb83ab018")
@@ -131,28 +135,28 @@ public interface CfnBridgeSourceProps {
         software.amazon.awscdk.services.mediaconnect.CfnBridgeSourceProps.builder()
 
     /**
-     * @param bridgeArn The ARN of the bridge that you want to describe. 
+     * @param bridgeArn The ARN of the bridge feeding this flow. 
      */
     override fun bridgeArn(bridgeArn: String) {
       cdkBuilder.bridgeArn(bridgeArn)
     }
 
     /**
-     * @param flowSource Add a flow source to an existing bridge.
+     * @param flowSource The source of the flow.
      */
     override fun flowSource(flowSource: IResolvable) {
       cdkBuilder.flowSource(flowSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param flowSource Add a flow source to an existing bridge.
+     * @param flowSource The source of the flow.
      */
     override fun flowSource(flowSource: CfnBridgeSource.BridgeFlowSourceProperty) {
       cdkBuilder.flowSource(flowSource.let(CfnBridgeSource.BridgeFlowSourceProperty.Companion::unwrap))
     }
 
     /**
-     * @param flowSource Add a flow source to an existing bridge.
+     * @param flowSource The source of the flow.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("671163b1a05c2c8a867c977ca6b807fd696e3cb4df0c764b74f9af2736559cc0")
@@ -169,21 +173,21 @@ public interface CfnBridgeSourceProps {
     }
 
     /**
-     * @param networkSource Add a network source to an existing bridge.
+     * @param networkSource The source of the network.
      */
     override fun networkSource(networkSource: IResolvable) {
       cdkBuilder.networkSource(networkSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param networkSource Add a network source to an existing bridge.
+     * @param networkSource The source of the network.
      */
     override fun networkSource(networkSource: CfnBridgeSource.BridgeNetworkSourceProperty) {
       cdkBuilder.networkSource(networkSource.let(CfnBridgeSource.BridgeNetworkSourceProperty.Companion::unwrap))
     }
 
     /**
-     * @param networkSource Add a network source to an existing bridge.
+     * @param networkSource The source of the network.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c33d05cf2dfa41a6a9ec4a7c76df17f0a77b8403c4659c75d5e34c8bb83ab018")
@@ -200,14 +204,14 @@ public interface CfnBridgeSourceProps {
   ) : CdkObject(cdkObject),
       CfnBridgeSourceProps {
     /**
-     * The ARN of the bridge that you want to describe.
+     * The ARN of the bridge feeding this flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-bridgearn)
      */
     override fun bridgeArn(): String = unwrap(this).getBridgeArn()
 
     /**
-     * Add a flow source to an existing bridge.
+     * The source of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-flowsource)
      */
@@ -223,7 +227,7 @@ public interface CfnBridgeSourceProps {
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * Add a network source to an existing bridge.
+     * The source of the network.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-networksource)
      */

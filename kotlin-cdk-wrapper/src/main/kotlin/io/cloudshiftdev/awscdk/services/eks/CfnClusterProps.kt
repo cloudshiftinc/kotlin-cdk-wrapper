@@ -50,6 +50,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .resources(List.of("resources"))
  * .build()))
+ * .force(false)
  * .kubernetesNetworkConfig(KubernetesNetworkConfigProperty.builder()
  * .elasticLoadBalancing(ElasticLoadBalancingProperty.builder()
  * .enabled(false)
@@ -116,7 +117,7 @@ public interface CfnClusterProps {
    * If you set this value to `False` when creating a cluster, the default networking add-ons will
    * not be installed.
    *
-   * The default networking addons include vpc-cni, coredns, and kube-proxy.
+   * The default networking add-ons include `vpc-cni` , `coredns` , and `kube-proxy` .
    *
    * Use this option when you plan to install third-party alternative add-ons or self-manage the
    * default networking add-ons.
@@ -130,7 +131,7 @@ public interface CfnClusterProps {
    *
    * For example, if the capability is enabled or disabled. If the compute capability is enabled,
    * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
-   * information, see EKS Auto Mode compute capability in the EKS User Guide.
+   * information, see EKS Auto Mode compute capability in the *Amazon EKS User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig)
    */
@@ -142,6 +143,15 @@ public interface CfnClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-encryptionconfig)
    */
   public fun encryptionConfig(): Any? = unwrap(this).getEncryptionConfig()
+
+  /**
+   * Set this value to `true` to override upgrade-blocking readiness checks when updating a cluster.
+   *
+   * Default: - false
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-force)
+   */
+  public fun force(): Any? = unwrap(this).getForce()
 
   /**
    * The Kubernetes network configuration for the cluster.
@@ -181,7 +191,7 @@ public interface CfnClusterProps {
   /**
    * The configuration in the cluster for EKS Hybrid Nodes.
    *
-   * You can't change or update this configuration after the cluster is created.
+   * You can add, change, or remove this configuration after the cluster is created.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-remotenetworkconfig)
    */
@@ -221,7 +231,7 @@ public interface CfnClusterProps {
    *
    * For example, if the capability is enabled or disabled. If the block storage capability is
    * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
-   * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+   * information, see EKS Auto Mode block storage capability in the *Amazon EKS User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-storageconfig)
    */
@@ -248,8 +258,8 @@ public interface CfnClusterProps {
   /**
    * This value indicates if extended support is enabled or disabled for the cluster.
    *
-   * [Learn more about EKS Extended Support in the EKS User
-   * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+   * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+   * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-upgradepolicy)
    */
@@ -300,7 +310,7 @@ public interface CfnClusterProps {
     /**
      * @param bootstrapSelfManagedAddons If you set this value to `False` when creating a cluster,
      * the default networking add-ons will not be installed.
-     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * The default networking add-ons include `vpc-cni` , `coredns` , and `kube-proxy` .
      *
      * Use this option when you plan to install third-party alternative add-ons or self-manage the
      * default networking add-ons.
@@ -310,7 +320,7 @@ public interface CfnClusterProps {
     /**
      * @param bootstrapSelfManagedAddons If you set this value to `False` when creating a cluster,
      * the default networking add-ons will not be installed.
-     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * The default networking add-ons include `vpc-cni` , `coredns` , and `kube-proxy` .
      *
      * Use this option when you plan to install third-party alternative add-ons or self-manage the
      * default networking add-ons.
@@ -322,7 +332,7 @@ public interface CfnClusterProps {
      * EKS Auto Mode cluster.
      * For example, if the capability is enabled or disabled. If the compute capability is enabled,
      * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
-     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     * information, see EKS Auto Mode compute capability in the *Amazon EKS User Guide* .
      */
     public fun computeConfig(computeConfig: IResolvable)
 
@@ -331,7 +341,7 @@ public interface CfnClusterProps {
      * EKS Auto Mode cluster.
      * For example, if the capability is enabled or disabled. If the compute capability is enabled,
      * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
-     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     * information, see EKS Auto Mode compute capability in the *Amazon EKS User Guide* .
      */
     public fun computeConfig(computeConfig: CfnCluster.ComputeConfigProperty)
 
@@ -340,7 +350,7 @@ public interface CfnClusterProps {
      * EKS Auto Mode cluster.
      * For example, if the capability is enabled or disabled. If the compute capability is enabled,
      * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
-     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     * information, see EKS Auto Mode compute capability in the *Amazon EKS User Guide* .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b6ecd17793f597e6c5dd37f6d83cee516e0e704371bd39c1145bde6d175a13f4")
@@ -360,6 +370,18 @@ public interface CfnClusterProps {
      * @param encryptionConfig The encryption configuration for the cluster.
      */
     public fun encryptionConfig(vararg encryptionConfig: Any)
+
+    /**
+     * @param force Set this value to `true` to override upgrade-blocking readiness checks when
+     * updating a cluster.
+     */
+    public fun force(force: Boolean)
+
+    /**
+     * @param force Set this value to `true` to override upgrade-blocking readiness checks when
+     * updating a cluster.
+     */
+    public fun force(force: IResolvable)
 
     /**
      * @param kubernetesNetworkConfig The Kubernetes network configuration for the cluster.
@@ -431,19 +453,19 @@ public interface CfnClusterProps {
 
     /**
      * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes.
-     * You can't change or update this configuration after the cluster is created.
+     * You can add, change, or remove this configuration after the cluster is created.
      */
     public fun remoteNetworkConfig(remoteNetworkConfig: IResolvable)
 
     /**
      * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes.
-     * You can't change or update this configuration after the cluster is created.
+     * You can add, change, or remove this configuration after the cluster is created.
      */
     public fun remoteNetworkConfig(remoteNetworkConfig: CfnCluster.RemoteNetworkConfigProperty)
 
     /**
      * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes.
-     * You can't change or update this configuration after the cluster is created.
+     * You can add, change, or remove this configuration after the cluster is created.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9cec3c4da94376326ae42354991198f4e1d93dd7e05dd1e823a9f3349e00c936")
@@ -506,7 +528,7 @@ public interface CfnClusterProps {
      * your EKS Auto Mode cluster.
      * For example, if the capability is enabled or disabled. If the block storage capability is
      * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
-     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     * information, see EKS Auto Mode block storage capability in the *Amazon EKS User Guide* .
      */
     public fun storageConfig(storageConfig: IResolvable)
 
@@ -515,7 +537,7 @@ public interface CfnClusterProps {
      * your EKS Auto Mode cluster.
      * For example, if the capability is enabled or disabled. If the block storage capability is
      * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
-     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     * information, see EKS Auto Mode block storage capability in the *Amazon EKS User Guide* .
      */
     public fun storageConfig(storageConfig: CfnCluster.StorageConfigProperty)
 
@@ -524,7 +546,7 @@ public interface CfnClusterProps {
      * your EKS Auto Mode cluster.
      * For example, if the capability is enabled or disabled. If the block storage capability is
      * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
-     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     * information, see EKS Auto Mode block storage capability in the *Amazon EKS User Guide* .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("166a9eef5624306eb4c35f4469db18fc5f85a3a2eea858dd618d78055a436f8f")
@@ -563,24 +585,24 @@ public interface CfnClusterProps {
     /**
      * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
      * cluster.
-     * [Learn more about EKS Extended Support in the EKS User
-     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+     * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
      */
     public fun upgradePolicy(upgradePolicy: IResolvable)
 
     /**
      * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
      * cluster.
-     * [Learn more about EKS Extended Support in the EKS User
-     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+     * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
      */
     public fun upgradePolicy(upgradePolicy: CfnCluster.UpgradePolicyProperty)
 
     /**
      * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
      * cluster.
-     * [Learn more about EKS Extended Support in the EKS User
-     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+     * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8b4575816d8008e8e1ee5740e6ac42389be44347f8d3c7618e12a69a74dba5a5")
@@ -643,7 +665,7 @@ public interface CfnClusterProps {
     /**
      * @param bootstrapSelfManagedAddons If you set this value to `False` when creating a cluster,
      * the default networking add-ons will not be installed.
-     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * The default networking add-ons include `vpc-cni` , `coredns` , and `kube-proxy` .
      *
      * Use this option when you plan to install third-party alternative add-ons or self-manage the
      * default networking add-ons.
@@ -655,7 +677,7 @@ public interface CfnClusterProps {
     /**
      * @param bootstrapSelfManagedAddons If you set this value to `False` when creating a cluster,
      * the default networking add-ons will not be installed.
-     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * The default networking add-ons include `vpc-cni` , `coredns` , and `kube-proxy` .
      *
      * Use this option when you plan to install third-party alternative add-ons or self-manage the
      * default networking add-ons.
@@ -669,7 +691,7 @@ public interface CfnClusterProps {
      * EKS Auto Mode cluster.
      * For example, if the capability is enabled or disabled. If the compute capability is enabled,
      * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
-     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     * information, see EKS Auto Mode compute capability in the *Amazon EKS User Guide* .
      */
     override fun computeConfig(computeConfig: IResolvable) {
       cdkBuilder.computeConfig(computeConfig.let(IResolvable.Companion::unwrap))
@@ -680,7 +702,7 @@ public interface CfnClusterProps {
      * EKS Auto Mode cluster.
      * For example, if the capability is enabled or disabled. If the compute capability is enabled,
      * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
-     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     * information, see EKS Auto Mode compute capability in the *Amazon EKS User Guide* .
      */
     override fun computeConfig(computeConfig: CfnCluster.ComputeConfigProperty) {
       cdkBuilder.computeConfig(computeConfig.let(CfnCluster.ComputeConfigProperty.Companion::unwrap))
@@ -691,7 +713,7 @@ public interface CfnClusterProps {
      * EKS Auto Mode cluster.
      * For example, if the capability is enabled or disabled. If the compute capability is enabled,
      * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
-     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     * information, see EKS Auto Mode compute capability in the *Amazon EKS User Guide* .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b6ecd17793f597e6c5dd37f6d83cee516e0e704371bd39c1145bde6d175a13f4")
@@ -717,6 +739,22 @@ public interface CfnClusterProps {
      */
     override fun encryptionConfig(vararg encryptionConfig: Any): Unit =
         encryptionConfig(encryptionConfig.toList())
+
+    /**
+     * @param force Set this value to `true` to override upgrade-blocking readiness checks when
+     * updating a cluster.
+     */
+    override fun force(force: Boolean) {
+      cdkBuilder.force(force)
+    }
+
+    /**
+     * @param force Set this value to `true` to override upgrade-blocking readiness checks when
+     * updating a cluster.
+     */
+    override fun force(force: IResolvable) {
+      cdkBuilder.force(force.let(IResolvable.Companion::unwrap))
+    }
 
     /**
      * @param kubernetesNetworkConfig The Kubernetes network configuration for the cluster.
@@ -806,7 +844,7 @@ public interface CfnClusterProps {
 
     /**
      * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes.
-     * You can't change or update this configuration after the cluster is created.
+     * You can add, change, or remove this configuration after the cluster is created.
      */
     override fun remoteNetworkConfig(remoteNetworkConfig: IResolvable) {
       cdkBuilder.remoteNetworkConfig(remoteNetworkConfig.let(IResolvable.Companion::unwrap))
@@ -814,7 +852,7 @@ public interface CfnClusterProps {
 
     /**
      * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes.
-     * You can't change or update this configuration after the cluster is created.
+     * You can add, change, or remove this configuration after the cluster is created.
      */
     override fun remoteNetworkConfig(remoteNetworkConfig: CfnCluster.RemoteNetworkConfigProperty) {
       cdkBuilder.remoteNetworkConfig(remoteNetworkConfig.let(CfnCluster.RemoteNetworkConfigProperty.Companion::unwrap))
@@ -822,7 +860,7 @@ public interface CfnClusterProps {
 
     /**
      * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes.
-     * You can't change or update this configuration after the cluster is created.
+     * You can add, change, or remove this configuration after the cluster is created.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9cec3c4da94376326ae42354991198f4e1d93dd7e05dd1e823a9f3349e00c936")
@@ -893,7 +931,7 @@ public interface CfnClusterProps {
      * your EKS Auto Mode cluster.
      * For example, if the capability is enabled or disabled. If the block storage capability is
      * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
-     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     * information, see EKS Auto Mode block storage capability in the *Amazon EKS User Guide* .
      */
     override fun storageConfig(storageConfig: IResolvable) {
       cdkBuilder.storageConfig(storageConfig.let(IResolvable.Companion::unwrap))
@@ -904,7 +942,7 @@ public interface CfnClusterProps {
      * your EKS Auto Mode cluster.
      * For example, if the capability is enabled or disabled. If the block storage capability is
      * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
-     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     * information, see EKS Auto Mode block storage capability in the *Amazon EKS User Guide* .
      */
     override fun storageConfig(storageConfig: CfnCluster.StorageConfigProperty) {
       cdkBuilder.storageConfig(storageConfig.let(CfnCluster.StorageConfigProperty.Companion::unwrap))
@@ -915,7 +953,7 @@ public interface CfnClusterProps {
      * your EKS Auto Mode cluster.
      * For example, if the capability is enabled or disabled. If the block storage capability is
      * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
-     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     * information, see EKS Auto Mode block storage capability in the *Amazon EKS User Guide* .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("166a9eef5624306eb4c35f4469db18fc5f85a3a2eea858dd618d78055a436f8f")
@@ -957,8 +995,8 @@ public interface CfnClusterProps {
     /**
      * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
      * cluster.
-     * [Learn more about EKS Extended Support in the EKS User
-     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+     * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
      */
     override fun upgradePolicy(upgradePolicy: IResolvable) {
       cdkBuilder.upgradePolicy(upgradePolicy.let(IResolvable.Companion::unwrap))
@@ -967,8 +1005,8 @@ public interface CfnClusterProps {
     /**
      * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
      * cluster.
-     * [Learn more about EKS Extended Support in the EKS User
-     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+     * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
      */
     override fun upgradePolicy(upgradePolicy: CfnCluster.UpgradePolicyProperty) {
       cdkBuilder.upgradePolicy(upgradePolicy.let(CfnCluster.UpgradePolicyProperty.Companion::unwrap))
@@ -977,8 +1015,8 @@ public interface CfnClusterProps {
     /**
      * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
      * cluster.
-     * [Learn more about EKS Extended Support in the EKS User
-     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+     * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8b4575816d8008e8e1ee5740e6ac42389be44347f8d3c7618e12a69a74dba5a5")
@@ -1037,7 +1075,7 @@ public interface CfnClusterProps {
      * If you set this value to `False` when creating a cluster, the default networking add-ons will
      * not be installed.
      *
-     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * The default networking add-ons include `vpc-cni` , `coredns` , and `kube-proxy` .
      *
      * Use this option when you plan to install third-party alternative add-ons or self-manage the
      * default networking add-ons.
@@ -1051,7 +1089,7 @@ public interface CfnClusterProps {
      *
      * For example, if the capability is enabled or disabled. If the compute capability is enabled,
      * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
-     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     * information, see EKS Auto Mode compute capability in the *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig)
      */
@@ -1063,6 +1101,16 @@ public interface CfnClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-encryptionconfig)
      */
     override fun encryptionConfig(): Any? = unwrap(this).getEncryptionConfig()
+
+    /**
+     * Set this value to `true` to override upgrade-blocking readiness checks when updating a
+     * cluster.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-force)
+     */
+    override fun force(): Any? = unwrap(this).getForce()
 
     /**
      * The Kubernetes network configuration for the cluster.
@@ -1102,7 +1150,7 @@ public interface CfnClusterProps {
     /**
      * The configuration in the cluster for EKS Hybrid Nodes.
      *
-     * You can't change or update this configuration after the cluster is created.
+     * You can add, change, or remove this configuration after the cluster is created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-remotenetworkconfig)
      */
@@ -1142,7 +1190,7 @@ public interface CfnClusterProps {
      *
      * For example, if the capability is enabled or disabled. If the block storage capability is
      * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
-     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     * information, see EKS Auto Mode block storage capability in the *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-storageconfig)
      */
@@ -1169,8 +1217,8 @@ public interface CfnClusterProps {
     /**
      * This value indicates if extended support is enabled or disabled for the cluster.
      *
-     * [Learn more about EKS Extended Support in the EKS User
-     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+     * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-upgradepolicy)
      */

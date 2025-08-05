@@ -56,6 +56,8 @@ import kotlin.jvm.JvmName
  * .build()))
  * .minLatency(123)
  * .name("name")
+ * .ndiProgramName("ndiProgramName")
+ * .ndiSpeedHqQuality(123)
  * .outputStatus("outputStatus")
  * .port(123)
  * .remoteId("remoteId")
@@ -71,10 +73,10 @@ import kotlin.jvm.JvmName
  */
 public interface CfnFlowOutputProps {
   /**
-   * The range of IP addresses that are allowed to initiate output requests to this flow.
+   * The range of IP addresses that should be allowed to initiate output requests to this flow.
    *
-   * Format the IP addresses as a Classless Inter-Domain Routing (CIDR) block; for example,
-   * 10.0.0.0/16.
+   * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for
+   * example, 10.0.0.0/16.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-cidrallowlist)
    */
@@ -83,8 +85,7 @@ public interface CfnFlowOutputProps {
   /**
    * A description of the output.
    *
-   * This description is not visible outside of the current AWS account even if the account grants
-   * entitlements to other accounts.
+   * This description appears only on the MediaConnect console and will not be seen by the end user.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-description)
    */
@@ -98,7 +99,10 @@ public interface CfnFlowOutputProps {
   public fun destination(): String? = unwrap(this).getDestination()
 
   /**
-   * The encryption credentials that you want to use for the output.
+   * The type of key used for the encryption.
+   *
+   * If no `keyType` is provided, the service will use the default setting (static-key). Allowable
+   * encryption types: static-key.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-encryption)
    */
@@ -121,7 +125,8 @@ public interface CfnFlowOutputProps {
   public fun maxLatency(): Number? = unwrap(this).getMaxLatency()
 
   /**
-   * The definition for each media stream that is associated with the output.
+   * The media streams that are associated with the output, and the parameters for those
+   * associations.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-mediastreamoutputconfigurations)
    */
@@ -140,25 +145,37 @@ public interface CfnFlowOutputProps {
   public fun minLatency(): Number? = unwrap(this).getMinLatency()
 
   /**
-   * The name of the output.
-   *
-   * This value must be unique within the current flow.
+   * The name of the bridge's output.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-name)
    */
   public fun name(): String? = unwrap(this).getName()
 
   /**
-   * An indication of whether the new output should be enabled or disabled as soon as it is created.
+   * A suffix for the names of the NDI sources that the flow creates.
    *
-   * If you don't specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
+   * If a custom name isn't specified, MediaConnect uses the output name.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-ndiprogramname)
+   */
+  public fun ndiProgramName(): String? = unwrap(this).getNdiProgramName()
+
+  /**
+   * A quality setting for the NDI Speed HQ encoder.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-ndispeedhqquality)
+   */
+  public fun ndiSpeedHqQuality(): Number? = unwrap(this).getNdiSpeedHqQuality()
+
+  /**
+   * An indication of whether the output should transmit data or not.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-outputstatus)
    */
   public fun outputStatus(): String? = unwrap(this).getOutputStatus()
 
   /**
-   * The port to use when MediaConnect distributes content to the output.
+   * The port to use when content is distributed to this output.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-port)
    */
@@ -177,9 +194,7 @@ public interface CfnFlowOutputProps {
   public fun protocol(): String
 
   /**
-   * The identifier that is assigned to the Zixi receiver.
-   *
-   * This parameter applies only to outputs that use Zixi pull.
+   * The remote ID for the Zixi-pull stream.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-remoteid)
    */
@@ -202,7 +217,7 @@ public interface CfnFlowOutputProps {
   public fun streamId(): String? = unwrap(this).getStreamId()
 
   /**
-   * The VPC interface that you want to send your output to.
+   * The name of the VPC interface attachment to use for this output.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-vpcinterfaceattachment)
    */
@@ -214,25 +229,25 @@ public interface CfnFlowOutputProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param cidrAllowList The range of IP addresses that are allowed to initiate output requests
-     * to this flow.
-     * Format the IP addresses as a Classless Inter-Domain Routing (CIDR) block; for example,
-     * 10.0.0.0/16.
+     * @param cidrAllowList The range of IP addresses that should be allowed to initiate output
+     * requests to this flow.
+     * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block;
+     * for example, 10.0.0.0/16.
      */
     public fun cidrAllowList(cidrAllowList: List<String>)
 
     /**
-     * @param cidrAllowList The range of IP addresses that are allowed to initiate output requests
-     * to this flow.
-     * Format the IP addresses as a Classless Inter-Domain Routing (CIDR) block; for example,
-     * 10.0.0.0/16.
+     * @param cidrAllowList The range of IP addresses that should be allowed to initiate output
+     * requests to this flow.
+     * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block;
+     * for example, 10.0.0.0/16.
      */
     public fun cidrAllowList(vararg cidrAllowList: String)
 
     /**
      * @param description A description of the output.
-     * This description is not visible outside of the current AWS account even if the account grants
-     * entitlements to other accounts.
+     * This description appears only on the MediaConnect console and will not be seen by the end
+     * user.
      */
     public fun description(description: String)
 
@@ -242,17 +257,23 @@ public interface CfnFlowOutputProps {
     public fun destination(destination: String)
 
     /**
-     * @param encryption The encryption credentials that you want to use for the output.
+     * @param encryption The type of key used for the encryption.
+     * If no `keyType` is provided, the service will use the default setting (static-key). Allowable
+     * encryption types: static-key.
      */
     public fun encryption(encryption: IResolvable)
 
     /**
-     * @param encryption The encryption credentials that you want to use for the output.
+     * @param encryption The type of key used for the encryption.
+     * If no `keyType` is provided, the service will use the default setting (static-key). Allowable
+     * encryption types: static-key.
      */
     public fun encryption(encryption: CfnFlowOutput.EncryptionProperty)
 
     /**
-     * @param encryption The encryption credentials that you want to use for the output.
+     * @param encryption The type of key used for the encryption.
+     * If no `keyType` is provided, the service will use the default setting (static-key). Allowable
+     * encryption types: static-key.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f59ced2d139f794ca3d4f98e5468ddee0649043a41bfa5db7c3e30fd5d413d93")
@@ -270,20 +291,20 @@ public interface CfnFlowOutputProps {
     public fun maxLatency(maxLatency: Number)
 
     /**
-     * @param mediaStreamOutputConfigurations The definition for each media stream that is
-     * associated with the output.
+     * @param mediaStreamOutputConfigurations The media streams that are associated with the output,
+     * and the parameters for those associations.
      */
     public fun mediaStreamOutputConfigurations(mediaStreamOutputConfigurations: IResolvable)
 
     /**
-     * @param mediaStreamOutputConfigurations The definition for each media stream that is
-     * associated with the output.
+     * @param mediaStreamOutputConfigurations The media streams that are associated with the output,
+     * and the parameters for those associations.
      */
     public fun mediaStreamOutputConfigurations(mediaStreamOutputConfigurations: List<Any>)
 
     /**
-     * @param mediaStreamOutputConfigurations The definition for each media stream that is
-     * associated with the output.
+     * @param mediaStreamOutputConfigurations The media streams that are associated with the output,
+     * and the parameters for those associations.
      */
     public fun mediaStreamOutputConfigurations(vararg mediaStreamOutputConfigurations: Any)
 
@@ -297,20 +318,28 @@ public interface CfnFlowOutputProps {
     public fun minLatency(minLatency: Number)
 
     /**
-     * @param name The name of the output.
-     * This value must be unique within the current flow.
+     * @param name The name of the bridge's output.
      */
     public fun name(name: String)
 
     /**
-     * @param outputStatus An indication of whether the new output should be enabled or disabled as
-     * soon as it is created.
-     * If you don't specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
+     * @param ndiProgramName A suffix for the names of the NDI sources that the flow creates.
+     * If a custom name isn't specified, MediaConnect uses the output name.
+     */
+    public fun ndiProgramName(ndiProgramName: String)
+
+    /**
+     * @param ndiSpeedHqQuality A quality setting for the NDI Speed HQ encoder.
+     */
+    public fun ndiSpeedHqQuality(ndiSpeedHqQuality: Number)
+
+    /**
+     * @param outputStatus An indication of whether the output should transmit data or not.
      */
     public fun outputStatus(outputStatus: String)
 
     /**
-     * @param port The port to use when MediaConnect distributes content to the output.
+     * @param port The port to use when content is distributed to this output.
      */
     public fun port(port: Number)
 
@@ -323,8 +352,7 @@ public interface CfnFlowOutputProps {
     public fun protocol(protocol: String)
 
     /**
-     * @param remoteId The identifier that is assigned to the Zixi receiver.
-     * This parameter applies only to outputs that use Zixi pull.
+     * @param remoteId The remote ID for the Zixi-pull stream.
      */
     public fun remoteId(remoteId: String)
 
@@ -341,18 +369,21 @@ public interface CfnFlowOutputProps {
     public fun streamId(streamId: String)
 
     /**
-     * @param vpcInterfaceAttachment The VPC interface that you want to send your output to.
+     * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
+     * output.
      */
     public fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable)
 
     /**
-     * @param vpcInterfaceAttachment The VPC interface that you want to send your output to.
+     * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
+     * output.
      */
     public
         fun vpcInterfaceAttachment(vpcInterfaceAttachment: CfnFlowOutput.VpcInterfaceAttachmentProperty)
 
     /**
-     * @param vpcInterfaceAttachment The VPC interface that you want to send your output to.
+     * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
+     * output.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f53231f0185723a488a606bc19d0ac25b401cce21ea6fa43381af0fef59ba93c")
@@ -365,28 +396,28 @@ public interface CfnFlowOutputProps {
         = software.amazon.awscdk.services.mediaconnect.CfnFlowOutputProps.builder()
 
     /**
-     * @param cidrAllowList The range of IP addresses that are allowed to initiate output requests
-     * to this flow.
-     * Format the IP addresses as a Classless Inter-Domain Routing (CIDR) block; for example,
-     * 10.0.0.0/16.
+     * @param cidrAllowList The range of IP addresses that should be allowed to initiate output
+     * requests to this flow.
+     * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block;
+     * for example, 10.0.0.0/16.
      */
     override fun cidrAllowList(cidrAllowList: List<String>) {
       cdkBuilder.cidrAllowList(cidrAllowList)
     }
 
     /**
-     * @param cidrAllowList The range of IP addresses that are allowed to initiate output requests
-     * to this flow.
-     * Format the IP addresses as a Classless Inter-Domain Routing (CIDR) block; for example,
-     * 10.0.0.0/16.
+     * @param cidrAllowList The range of IP addresses that should be allowed to initiate output
+     * requests to this flow.
+     * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block;
+     * for example, 10.0.0.0/16.
      */
     override fun cidrAllowList(vararg cidrAllowList: String): Unit =
         cidrAllowList(cidrAllowList.toList())
 
     /**
      * @param description A description of the output.
-     * This description is not visible outside of the current AWS account even if the account grants
-     * entitlements to other accounts.
+     * This description appears only on the MediaConnect console and will not be seen by the end
+     * user.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -400,21 +431,27 @@ public interface CfnFlowOutputProps {
     }
 
     /**
-     * @param encryption The encryption credentials that you want to use for the output.
+     * @param encryption The type of key used for the encryption.
+     * If no `keyType` is provided, the service will use the default setting (static-key). Allowable
+     * encryption types: static-key.
      */
     override fun encryption(encryption: IResolvable) {
       cdkBuilder.encryption(encryption.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param encryption The encryption credentials that you want to use for the output.
+     * @param encryption The type of key used for the encryption.
+     * If no `keyType` is provided, the service will use the default setting (static-key). Allowable
+     * encryption types: static-key.
      */
     override fun encryption(encryption: CfnFlowOutput.EncryptionProperty) {
       cdkBuilder.encryption(encryption.let(CfnFlowOutput.EncryptionProperty.Companion::unwrap))
     }
 
     /**
-     * @param encryption The encryption credentials that you want to use for the output.
+     * @param encryption The type of key used for the encryption.
+     * If no `keyType` is provided, the service will use the default setting (static-key). Allowable
+     * encryption types: static-key.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f59ced2d139f794ca3d4f98e5468ddee0649043a41bfa5db7c3e30fd5d413d93")
@@ -437,24 +474,24 @@ public interface CfnFlowOutputProps {
     }
 
     /**
-     * @param mediaStreamOutputConfigurations The definition for each media stream that is
-     * associated with the output.
+     * @param mediaStreamOutputConfigurations The media streams that are associated with the output,
+     * and the parameters for those associations.
      */
     override fun mediaStreamOutputConfigurations(mediaStreamOutputConfigurations: IResolvable) {
       cdkBuilder.mediaStreamOutputConfigurations(mediaStreamOutputConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param mediaStreamOutputConfigurations The definition for each media stream that is
-     * associated with the output.
+     * @param mediaStreamOutputConfigurations The media streams that are associated with the output,
+     * and the parameters for those associations.
      */
     override fun mediaStreamOutputConfigurations(mediaStreamOutputConfigurations: List<Any>) {
       cdkBuilder.mediaStreamOutputConfigurations(mediaStreamOutputConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param mediaStreamOutputConfigurations The definition for each media stream that is
-     * associated with the output.
+     * @param mediaStreamOutputConfigurations The media streams that are associated with the output,
+     * and the parameters for those associations.
      */
     override fun mediaStreamOutputConfigurations(vararg mediaStreamOutputConfigurations: Any): Unit
         = mediaStreamOutputConfigurations(mediaStreamOutputConfigurations.toList())
@@ -471,24 +508,36 @@ public interface CfnFlowOutputProps {
     }
 
     /**
-     * @param name The name of the output.
-     * This value must be unique within the current flow.
+     * @param name The name of the bridge's output.
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     /**
-     * @param outputStatus An indication of whether the new output should be enabled or disabled as
-     * soon as it is created.
-     * If you don't specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
+     * @param ndiProgramName A suffix for the names of the NDI sources that the flow creates.
+     * If a custom name isn't specified, MediaConnect uses the output name.
+     */
+    override fun ndiProgramName(ndiProgramName: String) {
+      cdkBuilder.ndiProgramName(ndiProgramName)
+    }
+
+    /**
+     * @param ndiSpeedHqQuality A quality setting for the NDI Speed HQ encoder.
+     */
+    override fun ndiSpeedHqQuality(ndiSpeedHqQuality: Number) {
+      cdkBuilder.ndiSpeedHqQuality(ndiSpeedHqQuality)
+    }
+
+    /**
+     * @param outputStatus An indication of whether the output should transmit data or not.
      */
     override fun outputStatus(outputStatus: String) {
       cdkBuilder.outputStatus(outputStatus)
     }
 
     /**
-     * @param port The port to use when MediaConnect distributes content to the output.
+     * @param port The port to use when content is distributed to this output.
      */
     override fun port(port: Number) {
       cdkBuilder.port(port)
@@ -505,8 +554,7 @@ public interface CfnFlowOutputProps {
     }
 
     /**
-     * @param remoteId The identifier that is assigned to the Zixi receiver.
-     * This parameter applies only to outputs that use Zixi pull.
+     * @param remoteId The remote ID for the Zixi-pull stream.
      */
     override fun remoteId(remoteId: String) {
       cdkBuilder.remoteId(remoteId)
@@ -529,14 +577,16 @@ public interface CfnFlowOutputProps {
     }
 
     /**
-     * @param vpcInterfaceAttachment The VPC interface that you want to send your output to.
+     * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
+     * output.
      */
     override fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable) {
       cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param vpcInterfaceAttachment The VPC interface that you want to send your output to.
+     * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
+     * output.
      */
     override
         fun vpcInterfaceAttachment(vpcInterfaceAttachment: CfnFlowOutput.VpcInterfaceAttachmentProperty) {
@@ -544,7 +594,8 @@ public interface CfnFlowOutputProps {
     }
 
     /**
-     * @param vpcInterfaceAttachment The VPC interface that you want to send your output to.
+     * @param vpcInterfaceAttachment The name of the VPC interface attachment to use for this
+     * output.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f53231f0185723a488a606bc19d0ac25b401cce21ea6fa43381af0fef59ba93c")
@@ -562,10 +613,10 @@ public interface CfnFlowOutputProps {
   ) : CdkObject(cdkObject),
       CfnFlowOutputProps {
     /**
-     * The range of IP addresses that are allowed to initiate output requests to this flow.
+     * The range of IP addresses that should be allowed to initiate output requests to this flow.
      *
-     * Format the IP addresses as a Classless Inter-Domain Routing (CIDR) block; for example,
-     * 10.0.0.0/16.
+     * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block;
+     * for example, 10.0.0.0/16.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-cidrallowlist)
      */
@@ -574,8 +625,8 @@ public interface CfnFlowOutputProps {
     /**
      * A description of the output.
      *
-     * This description is not visible outside of the current AWS account even if the account grants
-     * entitlements to other accounts.
+     * This description appears only on the MediaConnect console and will not be seen by the end
+     * user.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-description)
      */
@@ -589,7 +640,10 @@ public interface CfnFlowOutputProps {
     override fun destination(): String? = unwrap(this).getDestination()
 
     /**
-     * The encryption credentials that you want to use for the output.
+     * The type of key used for the encryption.
+     *
+     * If no `keyType` is provided, the service will use the default setting (static-key). Allowable
+     * encryption types: static-key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-encryption)
      */
@@ -612,7 +666,8 @@ public interface CfnFlowOutputProps {
     override fun maxLatency(): Number? = unwrap(this).getMaxLatency()
 
     /**
-     * The definition for each media stream that is associated with the output.
+     * The media streams that are associated with the output, and the parameters for those
+     * associations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-mediastreamoutputconfigurations)
      */
@@ -632,26 +687,37 @@ public interface CfnFlowOutputProps {
     override fun minLatency(): Number? = unwrap(this).getMinLatency()
 
     /**
-     * The name of the output.
-     *
-     * This value must be unique within the current flow.
+     * The name of the bridge's output.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-name)
      */
     override fun name(): String? = unwrap(this).getName()
 
     /**
-     * An indication of whether the new output should be enabled or disabled as soon as it is
-     * created.
+     * A suffix for the names of the NDI sources that the flow creates.
      *
-     * If you don't specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
+     * If a custom name isn't specified, MediaConnect uses the output name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-ndiprogramname)
+     */
+    override fun ndiProgramName(): String? = unwrap(this).getNdiProgramName()
+
+    /**
+     * A quality setting for the NDI Speed HQ encoder.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-ndispeedhqquality)
+     */
+    override fun ndiSpeedHqQuality(): Number? = unwrap(this).getNdiSpeedHqQuality()
+
+    /**
+     * An indication of whether the output should transmit data or not.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-outputstatus)
      */
     override fun outputStatus(): String? = unwrap(this).getOutputStatus()
 
     /**
-     * The port to use when MediaConnect distributes content to the output.
+     * The port to use when content is distributed to this output.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-port)
      */
@@ -670,9 +736,7 @@ public interface CfnFlowOutputProps {
     override fun protocol(): String = unwrap(this).getProtocol()
 
     /**
-     * The identifier that is assigned to the Zixi receiver.
-     *
-     * This parameter applies only to outputs that use Zixi pull.
+     * The remote ID for the Zixi-pull stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-remoteid)
      */
@@ -695,7 +759,7 @@ public interface CfnFlowOutputProps {
     override fun streamId(): String? = unwrap(this).getStreamId()
 
     /**
-     * The VPC interface that you want to send your output to.
+     * The name of the VPC interface attachment to use for this output.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-vpcinterfaceattachment)
      */

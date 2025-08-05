@@ -36,18 +36,20 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * ```
  * Vpc vpc;
- * DatabaseInstance sourceInstance;
- * DatabaseInstanceFromSnapshot.Builder.create(this, "Instance")
- * .snapshotIdentifier("my-snapshot")
- * .engine(DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_16_3).build()))
- * // optional, defaults to m5.large
- * .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.LARGE))
+ * IInstanceEngine engine =
+ * DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_16_3).build());
+ * Key myKey = new Key(this, "MyKey");
+ * DatabaseInstanceFromSnapshot.Builder.create(this, "InstanceFromSnapshotWithCustomizedSecret")
+ * .engine(engine)
  * .vpc(vpc)
- * .build();
- * DatabaseInstanceReadReplica.Builder.create(this, "ReadReplica")
- * .sourceDatabaseInstance(sourceInstance)
- * .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.LARGE))
- * .vpc(vpc)
+ * .snapshotIdentifier("mySnapshot")
+ * .credentials(SnapshotCredentials.fromGeneratedSecret("username",
+ * SnapshotCredentialsFromGeneratedPasswordOptions.builder()
+ * .encryptionKey(myKey)
+ * .excludeCharacters("!&amp;*^#&#64;()")
+ * .replicaRegions(List.of(ReplicaRegion.builder().region("eu-west-1").build(),
+ * ReplicaRegion.builder().region("eu-west-2").build()))
+ * .build()))
  * .build();
  * ```
  */
@@ -226,6 +228,27 @@ public open class DatabaseInstanceFromSnapshot(
     public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: Boolean)
 
     /**
+     * Specifies whether changes to the DB instance and any pending modifications are applied
+     * immediately, regardless of the `preferredMaintenanceWindow` setting.
+     *
+     * If set to `false`, changes are applied during the next maintenance window.
+     *
+     * Until RDS applies the changes, the DB instance remains in a drift state.
+     * As a result, the configuration doesn't fully reflect the requested modifications and
+     * temporarily diverges from the intended state.
+     *
+     * This property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     *
+     * Default: - Changes will be applied immediately
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+     * @param applyImmediately Specifies whether changes to the DB instance and any pending
+     * modifications are applied immediately, regardless of the `preferredMaintenanceWindow` setting. 
+     */
+    public fun applyImmediately(applyImmediately: Boolean)
+
+    /**
      * Indicates that minor engine upgrades are applied automatically to the DB instance during the
      * maintenance window.
      *
@@ -318,6 +341,29 @@ public open class DatabaseInstanceFromSnapshot(
     public fun cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole: IRole)
 
     /**
+     * The identifier for the Multi-AZ DB cluster snapshot to restore from.
+     *
+     * For more information on Multi-AZ DB clusters, see [Multi-AZ DB cluster
+     * deployments](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html)
+     * in the *Amazon RDS User Guide* .
+     *
+     * Constraints:
+     *
+     * * Can't be specified when `snapshotIdentifier` is specified.
+     * * Must be specified when `snapshotIdentifier` isn't specified.
+     * * If you are restoring from a shared manual Multi-AZ DB cluster snapshot, the
+     * `clusterSnapshotIdentifier` must be the ARN of the shared snapshot.
+     * * Can't be the identifier of an Aurora DB cluster snapshot.
+     *
+     * Default: - None
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_RestoreFromMultiAZDBClusterSnapshot.html)
+     * @param clusterSnapshotIdentifier The identifier for the Multi-AZ DB cluster snapshot to
+     * restore from. 
+     */
+    public fun clusterSnapshotIdentifier(clusterSnapshotIdentifier: String)
+
+    /**
      * Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of
      * the DB instance.
      *
@@ -339,6 +385,16 @@ public open class DatabaseInstanceFromSnapshot(
      * @param credentials Master user credentials. 
      */
     public fun credentials(credentials: SnapshotCredentials)
+
+    /**
+     * The database insights mode.
+     *
+     * Default: - DatabaseInsightsMode.STANDARD when performance insights are enabled, otherwise not
+     * set.
+     *
+     * @param databaseInsightsMode The database insights mode. 
+     */
+    public fun databaseInsightsMode(databaseInsightsMode: DatabaseInsightsMode)
 
     /**
      * The name of the database.
@@ -407,6 +463,19 @@ public open class DatabaseInstanceFromSnapshot(
      * @param engine The database engine. 
      */
     public fun engine(engine: IInstanceEngine)
+
+    /**
+     * The life cycle type for this DB instance.
+     *
+     * This setting applies only to RDS for MySQL and RDS for PostgreSQL.
+     *
+     * Default: undefined - AWS RDS default setting is
+     * `EngineLifecycleSupport.OPEN_SOURCE_RDS_EXTENDED_SUPPORT`
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html)
+     * @param engineLifecycleSupport The life cycle type for this DB instance. 
+     */
+    public fun engineLifecycleSupport(engineLifecycleSupport: EngineLifecycleSupport)
 
     /**
      * Whether to enable mapping of AWS Identity and Access Management (IAM) accounts to database
@@ -557,6 +626,9 @@ public open class DatabaseInstanceFromSnapshot(
 
     /**
      * The amount of time, in days, to retain Performance Insights data.
+     *
+     * If you set `databaseInsightsMode` to `DatabaseInsightsMode.ADVANCED`, you must set this
+     * property to `PerformanceInsightRetention.MONTHS_15`.
      *
      * Default: 7 this is the free tier
      *
@@ -774,6 +846,12 @@ public open class DatabaseInstanceFromSnapshot(
      *
      * If you're restoring from a shared manual DB
      * snapshot, you must specify the ARN of the snapshot.
+     * Constraints:
+     *
+     * * Can't be specified when `clusterSnapshotIdentifier` is specified.
+     * * Must be specified when `clusterSnapshotIdentifier` isn't specified.
+     *
+     * Default: - None
      *
      * @param snapshotIdentifier The name or Amazon Resource Name (ARN) of the DB snapshot that's
      * used to restore the DB instance. 
@@ -886,6 +964,29 @@ public open class DatabaseInstanceFromSnapshot(
     }
 
     /**
+     * Specifies whether changes to the DB instance and any pending modifications are applied
+     * immediately, regardless of the `preferredMaintenanceWindow` setting.
+     *
+     * If set to `false`, changes are applied during the next maintenance window.
+     *
+     * Until RDS applies the changes, the DB instance remains in a drift state.
+     * As a result, the configuration doesn't fully reflect the requested modifications and
+     * temporarily diverges from the intended state.
+     *
+     * This property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     *
+     * Default: - Changes will be applied immediately
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+     * @param applyImmediately Specifies whether changes to the DB instance and any pending
+     * modifications are applied immediately, regardless of the `preferredMaintenanceWindow` setting. 
+     */
+    override fun applyImmediately(applyImmediately: Boolean) {
+      cdkBuilder.applyImmediately(applyImmediately)
+    }
+
+    /**
      * Indicates that minor engine upgrades are applied automatically to the DB instance during the
      * maintenance window.
      *
@@ -993,6 +1094,31 @@ public open class DatabaseInstanceFromSnapshot(
     }
 
     /**
+     * The identifier for the Multi-AZ DB cluster snapshot to restore from.
+     *
+     * For more information on Multi-AZ DB clusters, see [Multi-AZ DB cluster
+     * deployments](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html)
+     * in the *Amazon RDS User Guide* .
+     *
+     * Constraints:
+     *
+     * * Can't be specified when `snapshotIdentifier` is specified.
+     * * Must be specified when `snapshotIdentifier` isn't specified.
+     * * If you are restoring from a shared manual Multi-AZ DB cluster snapshot, the
+     * `clusterSnapshotIdentifier` must be the ARN of the shared snapshot.
+     * * Can't be the identifier of an Aurora DB cluster snapshot.
+     *
+     * Default: - None
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_RestoreFromMultiAZDBClusterSnapshot.html)
+     * @param clusterSnapshotIdentifier The identifier for the Multi-AZ DB cluster snapshot to
+     * restore from. 
+     */
+    override fun clusterSnapshotIdentifier(clusterSnapshotIdentifier: String) {
+      cdkBuilder.clusterSnapshotIdentifier(clusterSnapshotIdentifier)
+    }
+
+    /**
      * Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of
      * the DB instance.
      *
@@ -1017,6 +1143,18 @@ public open class DatabaseInstanceFromSnapshot(
      */
     override fun credentials(credentials: SnapshotCredentials) {
       cdkBuilder.credentials(credentials.let(SnapshotCredentials.Companion::unwrap))
+    }
+
+    /**
+     * The database insights mode.
+     *
+     * Default: - DatabaseInsightsMode.STANDARD when performance insights are enabled, otherwise not
+     * set.
+     *
+     * @param databaseInsightsMode The database insights mode. 
+     */
+    override fun databaseInsightsMode(databaseInsightsMode: DatabaseInsightsMode) {
+      cdkBuilder.databaseInsightsMode(databaseInsightsMode.let(DatabaseInsightsMode.Companion::unwrap))
     }
 
     /**
@@ -1099,6 +1237,21 @@ public open class DatabaseInstanceFromSnapshot(
      */
     override fun engine(engine: IInstanceEngine) {
       cdkBuilder.engine(engine.let(IInstanceEngine.Companion::unwrap))
+    }
+
+    /**
+     * The life cycle type for this DB instance.
+     *
+     * This setting applies only to RDS for MySQL and RDS for PostgreSQL.
+     *
+     * Default: undefined - AWS RDS default setting is
+     * `EngineLifecycleSupport.OPEN_SOURCE_RDS_EXTENDED_SUPPORT`
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html)
+     * @param engineLifecycleSupport The life cycle type for this DB instance. 
+     */
+    override fun engineLifecycleSupport(engineLifecycleSupport: EngineLifecycleSupport) {
+      cdkBuilder.engineLifecycleSupport(engineLifecycleSupport.let(EngineLifecycleSupport.Companion::unwrap))
     }
 
     /**
@@ -1278,6 +1431,9 @@ public open class DatabaseInstanceFromSnapshot(
 
     /**
      * The amount of time, in days, to retain Performance Insights data.
+     *
+     * If you set `databaseInsightsMode` to `DatabaseInsightsMode.ADVANCED`, you must set this
+     * property to `PerformanceInsightRetention.MONTHS_15`.
      *
      * Default: 7 this is the free tier
      *
@@ -1524,6 +1680,12 @@ public open class DatabaseInstanceFromSnapshot(
      *
      * If you're restoring from a shared manual DB
      * snapshot, you must specify the ARN of the snapshot.
+     * Constraints:
+     *
+     * * Can't be specified when `clusterSnapshotIdentifier` is specified.
+     * * Must be specified when `clusterSnapshotIdentifier` isn't specified.
+     *
+     * Default: - None
      *
      * @param snapshotIdentifier The name or Amazon Resource Name (ARN) of the DB snapshot that's
      * used to restore the DB instance. 
@@ -1625,6 +1787,9 @@ public open class DatabaseInstanceFromSnapshot(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.rds.DatabaseInstanceFromSnapshot.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

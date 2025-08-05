@@ -925,6 +925,9 @@ public open class DatabaseCluster(
     public val DEFAULT_PORT: Number =
         software.amazon.awscdk.services.docdb.DatabaseCluster.DEFAULT_PORT
 
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.docdb.DatabaseCluster.PROPERTY_INJECTION_ID
+
     public fun fromDatabaseClusterAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

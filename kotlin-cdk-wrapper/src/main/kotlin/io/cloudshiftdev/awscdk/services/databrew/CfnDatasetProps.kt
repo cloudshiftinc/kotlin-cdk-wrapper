@@ -32,6 +32,7 @@ import kotlin.jvm.JvmName
  * .tempDirectory(S3LocationProperty.builder()
  * .bucket("bucket")
  * // the properties below are optional
+ * .bucketOwner("bucketOwner")
  * .key("key")
  * .build())
  * .build())
@@ -42,6 +43,7 @@ import kotlin.jvm.JvmName
  * .tempDirectory(S3LocationProperty.builder()
  * .bucket("bucket")
  * // the properties below are optional
+ * .bucketOwner("bucketOwner")
  * .key("key")
  * .build())
  * .build())
@@ -51,6 +53,7 @@ import kotlin.jvm.JvmName
  * .s3InputDefinition(S3LocationProperty.builder()
  * .bucket("bucket")
  * // the properties below are optional
+ * .bucketOwner("bucketOwner")
  * .key("key")
  * .build())
  * .build())
@@ -108,6 +111,7 @@ import kotlin.jvm.JvmName
  * .pathParameterName("pathParameterName")
  * .build()))
  * .build())
+ * .source("source")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -153,6 +157,13 @@ public interface CfnDatasetProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-dataset.html#cfn-databrew-dataset-pathoptions)
    */
   public fun pathOptions(): Any? = unwrap(this).getPathOptions()
+
+  /**
+   * The location of the data for the dataset, either Amazon S3 or the AWS Glue Data Catalog .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-dataset.html#cfn-databrew-dataset-source)
+   */
+  public fun source(): String? = unwrap(this).getSource()
 
   /**
    * Metadata tags that have been applied to the dataset.
@@ -235,6 +246,12 @@ public interface CfnDatasetProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8d5dd025b80104e8acc63e6144c3bdb40a4e3581dff482613280a7ee4078dea7")
     public fun pathOptions(pathOptions: CfnDataset.PathOptionsProperty.Builder.() -> Unit)
+
+    /**
+     * @param source The location of the data for the dataset, either Amazon S3 or the AWS Glue Data
+     * Catalog .
+     */
+    public fun source(source: String)
 
     /**
      * @param tags Metadata tags that have been applied to the dataset.
@@ -341,6 +358,14 @@ public interface CfnDatasetProps {
         pathOptions(CfnDataset.PathOptionsProperty(pathOptions))
 
     /**
+     * @param source The location of the data for the dataset, either Amazon S3 or the AWS Glue Data
+     * Catalog .
+     */
+    override fun source(source: String) {
+      cdkBuilder.source(source)
+    }
+
+    /**
      * @param tags Metadata tags that have been applied to the dataset.
      */
     override fun tags(tags: List<CfnTag>) {
@@ -395,6 +420,13 @@ public interface CfnDatasetProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-dataset.html#cfn-databrew-dataset-pathoptions)
      */
     override fun pathOptions(): Any? = unwrap(this).getPathOptions()
+
+    /**
+     * The location of the data for the dataset, either Amazon S3 or the AWS Glue Data Catalog .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-dataset.html#cfn-databrew-dataset-source)
+     */
+    override fun source(): String? = unwrap(this).getSource()
 
     /**
      * Metadata tags that have been applied to the dataset.

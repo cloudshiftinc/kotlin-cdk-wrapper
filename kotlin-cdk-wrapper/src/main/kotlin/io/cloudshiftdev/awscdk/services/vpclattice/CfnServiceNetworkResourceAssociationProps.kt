@@ -34,16 +34,22 @@ import kotlin.collections.List
  */
 public interface CfnServiceNetworkResourceAssociationProps {
   /**
+   * The ID of the resource configuration associated with the service network.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkresourceassociation.html#cfn-vpclattice-servicenetworkresourceassociation-resourceconfigurationid)
    */
   public fun resourceConfigurationId(): String? = unwrap(this).getResourceConfigurationId()
 
   /**
+   * The ID of the service network associated with the resource configuration.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkresourceassociation.html#cfn-vpclattice-servicenetworkresourceassociation-servicenetworkid)
    */
   public fun serviceNetworkId(): String? = unwrap(this).getServiceNetworkId()
 
   /**
+   * A key-value pair to associate with a resource.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkresourceassociation.html#cfn-vpclattice-servicenetworkresourceassociation-tags)
    */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
@@ -54,22 +60,24 @@ public interface CfnServiceNetworkResourceAssociationProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param resourceConfigurationId the value to be set.
+     * @param resourceConfigurationId The ID of the resource configuration associated with the
+     * service network.
      */
     public fun resourceConfigurationId(resourceConfigurationId: String)
 
     /**
-     * @param serviceNetworkId the value to be set.
+     * @param serviceNetworkId The ID of the service network associated with the resource
+     * configuration.
      */
     public fun serviceNetworkId(serviceNetworkId: String)
 
     /**
-     * @param tags the value to be set.
+     * @param tags A key-value pair to associate with a resource.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags the value to be set.
+     * @param tags A key-value pair to associate with a resource.
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -81,28 +89,30 @@ public interface CfnServiceNetworkResourceAssociationProps {
         software.amazon.awscdk.services.vpclattice.CfnServiceNetworkResourceAssociationProps.builder()
 
     /**
-     * @param resourceConfigurationId the value to be set.
+     * @param resourceConfigurationId The ID of the resource configuration associated with the
+     * service network.
      */
     override fun resourceConfigurationId(resourceConfigurationId: String) {
       cdkBuilder.resourceConfigurationId(resourceConfigurationId)
     }
 
     /**
-     * @param serviceNetworkId the value to be set.
+     * @param serviceNetworkId The ID of the service network associated with the resource
+     * configuration.
      */
     override fun serviceNetworkId(serviceNetworkId: String) {
       cdkBuilder.serviceNetworkId(serviceNetworkId)
     }
 
     /**
-     * @param tags the value to be set.
+     * @param tags A key-value pair to associate with a resource.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags the value to be set.
+     * @param tags A key-value pair to associate with a resource.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -116,16 +126,22 @@ public interface CfnServiceNetworkResourceAssociationProps {
   ) : CdkObject(cdkObject),
       CfnServiceNetworkResourceAssociationProps {
     /**
+     * The ID of the resource configuration associated with the service network.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkresourceassociation.html#cfn-vpclattice-servicenetworkresourceassociation-resourceconfigurationid)
      */
     override fun resourceConfigurationId(): String? = unwrap(this).getResourceConfigurationId()
 
     /**
+     * The ID of the service network associated with the resource configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkresourceassociation.html#cfn-vpclattice-servicenetworkresourceassociation-servicenetworkid)
      */
     override fun serviceNetworkId(): String? = unwrap(this).getServiceNetworkId()
 
     /**
+     * A key-value pair to associate with a resource.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkresourceassociation.html#cfn-vpclattice-servicenetworkresourceassociation-tags)
      */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()

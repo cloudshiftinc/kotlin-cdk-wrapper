@@ -32,6 +32,10 @@ import kotlin.jvm.JvmName
  * .description("description")
  * .eventSourceName("eventSourceName")
  * .kmsKeyIdentifier("kmsKeyIdentifier")
+ * .logConfig(LogConfigProperty.builder()
+ * .includeDetail("includeDetail")
+ * .level("level")
+ * .build())
  * .policy(policy)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -79,33 +83,46 @@ public interface CfnEventBusProps {
    * If you do not specify a customer managed key identifier, EventBridge uses an AWS owned key to
    * encrypt events on the event bus.
    *
-   * For more information, see [Managing
-   * keys](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS Key
+   * For more information, see [Identify and view
+   * keys](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html) in the *AWS Key
    * Management Service Developer Guide* .
    *
    *
-   * Archives and schema discovery are not supported for event buses encrypted using a customer
-   * managed key. EventBridge returns an error if:
+   * Schema discovery is not supported for event buses encrypted using a customer managed key.
+   * EventBridge returns an error if:
    *
-   * * You call
-   * `[CreateArchive](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateArchive.html)`
-   * on an event bus set to use a customer managed key for encryption.
    * * You call
    * `[CreateDiscoverer](https://docs.aws.amazon.com/eventbridge/latest/schema-reference/v1-discoverers.html#CreateDiscoverer)`
    * on an event bus set to use a customer managed key for encryption.
    * * You call
    * `[UpdatedEventBus](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UpdatedEventBus.html)`
-   * to set a customer managed key on an event bus with an archives or schema discovery enabled.
+   * to set a customer managed key on an event bus with schema discovery enabled.
    *
-   * To enable archives or schema discovery on an event bus, choose to use an AWS owned key . For
-   * more information, see [Data encryption in
-   * EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption.html) in the
-   * *Amazon EventBridge User Guide* .
+   * To enable schema discovery on an event bus, choose to use an AWS owned key . For more
+   * information, see [Encrypting
+   * events](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption-event-bus-cmkey.html)
+   * in the *Amazon EventBridge User Guide* . &gt; If you have specified that EventBridge use a
+   * customer managed key for encrypting the source event bus, we strongly recommend you also specify a
+   * customer managed key for any archives for the event bus as well.
+   *
+   * For more information, see [Encrypting
+   * archives](https://docs.aws.amazon.com/eventbridge/latest/userguide/encryption-archives.html) in
+   * the *Amazon EventBridge User Guide* .
    *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-kmskeyidentifier)
    */
   public fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
+
+  /**
+   * The logging configuration settings for the event bus.
+   *
+   * For more information, see [Configuring logs for event
+   * buses](https://docs.aws.amazon.com/eb-event-bus-logs.html) in the *EventBridge User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-logconfig)
+   */
+  public fun logConfig(): Any? = unwrap(this).getLogConfig()
 
   /**
    * The name of the new event bus.
@@ -190,30 +207,56 @@ public interface CfnEventBusProps {
      * If you do not specify a customer managed key identifier, EventBridge uses an AWS owned key to
      * encrypt events on the event bus.
      *
-     * For more information, see [Managing
-     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS
-     * Key Management Service Developer Guide* .
+     * For more information, see [Identify and view
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
      *
      *
-     * Archives and schema discovery are not supported for event buses encrypted using a customer
-     * managed key. EventBridge returns an error if:
+     * Schema discovery is not supported for event buses encrypted using a customer managed key.
+     * EventBridge returns an error if:
      *
-     * * You call
-     * `[CreateArchive](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateArchive.html)`
-     * on an event bus set to use a customer managed key for encryption.
      * * You call
      * `[CreateDiscoverer](https://docs.aws.amazon.com/eventbridge/latest/schema-reference/v1-discoverers.html#CreateDiscoverer)`
      * on an event bus set to use a customer managed key for encryption.
      * * You call
      * `[UpdatedEventBus](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UpdatedEventBus.html)`
-     * to set a customer managed key on an event bus with an archives or schema discovery enabled.
+     * to set a customer managed key on an event bus with schema discovery enabled.
      *
-     * To enable archives or schema discovery on an event bus, choose to use an AWS owned key . For
-     * more information, see [Data encryption in
-     * EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption.html) in the
-     * *Amazon EventBridge User Guide* .
+     * To enable schema discovery on an event bus, choose to use an AWS owned key . For more
+     * information, see [Encrypting
+     * events](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption-event-bus-cmkey.html)
+     * in the *Amazon EventBridge User Guide* . &gt; If you have specified that EventBridge use a
+     * customer managed key for encrypting the source event bus, we strongly recommend you also specify
+     * a customer managed key for any archives for the event bus as well.
+     *
+     * For more information, see [Encrypting
+     * archives](https://docs.aws.amazon.com/eventbridge/latest/userguide/encryption-archives.html) in
+     * the *Amazon EventBridge User Guide* .
      */
     public fun kmsKeyIdentifier(kmsKeyIdentifier: String)
+
+    /**
+     * @param logConfig The logging configuration settings for the event bus.
+     * For more information, see [Configuring logs for event
+     * buses](https://docs.aws.amazon.com/eb-event-bus-logs.html) in the *EventBridge User Guide* .
+     */
+    public fun logConfig(logConfig: IResolvable)
+
+    /**
+     * @param logConfig The logging configuration settings for the event bus.
+     * For more information, see [Configuring logs for event
+     * buses](https://docs.aws.amazon.com/eb-event-bus-logs.html) in the *EventBridge User Guide* .
+     */
+    public fun logConfig(logConfig: CfnEventBus.LogConfigProperty)
+
+    /**
+     * @param logConfig The logging configuration settings for the event bus.
+     * For more information, see [Configuring logs for event
+     * buses](https://docs.aws.amazon.com/eb-event-bus-logs.html) in the *EventBridge User Guide* .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("27e4d94f0742a80cdaecadb43ceea15908c3f3b7c3a77b0fd0d333892c0c9191")
+    public fun logConfig(logConfig: CfnEventBus.LogConfigProperty.Builder.() -> Unit)
 
     /**
      * @param name The name of the new event bus. 
@@ -305,32 +348,63 @@ public interface CfnEventBusProps {
      * If you do not specify a customer managed key identifier, EventBridge uses an AWS owned key to
      * encrypt events on the event bus.
      *
-     * For more information, see [Managing
-     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS
-     * Key Management Service Developer Guide* .
+     * For more information, see [Identify and view
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
      *
      *
-     * Archives and schema discovery are not supported for event buses encrypted using a customer
-     * managed key. EventBridge returns an error if:
+     * Schema discovery is not supported for event buses encrypted using a customer managed key.
+     * EventBridge returns an error if:
      *
-     * * You call
-     * `[CreateArchive](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateArchive.html)`
-     * on an event bus set to use a customer managed key for encryption.
      * * You call
      * `[CreateDiscoverer](https://docs.aws.amazon.com/eventbridge/latest/schema-reference/v1-discoverers.html#CreateDiscoverer)`
      * on an event bus set to use a customer managed key for encryption.
      * * You call
      * `[UpdatedEventBus](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UpdatedEventBus.html)`
-     * to set a customer managed key on an event bus with an archives or schema discovery enabled.
+     * to set a customer managed key on an event bus with schema discovery enabled.
      *
-     * To enable archives or schema discovery on an event bus, choose to use an AWS owned key . For
-     * more information, see [Data encryption in
-     * EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption.html) in the
-     * *Amazon EventBridge User Guide* .
+     * To enable schema discovery on an event bus, choose to use an AWS owned key . For more
+     * information, see [Encrypting
+     * events](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption-event-bus-cmkey.html)
+     * in the *Amazon EventBridge User Guide* . &gt; If you have specified that EventBridge use a
+     * customer managed key for encrypting the source event bus, we strongly recommend you also specify
+     * a customer managed key for any archives for the event bus as well.
+     *
+     * For more information, see [Encrypting
+     * archives](https://docs.aws.amazon.com/eventbridge/latest/userguide/encryption-archives.html) in
+     * the *Amazon EventBridge User Guide* .
      */
     override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
       cdkBuilder.kmsKeyIdentifier(kmsKeyIdentifier)
     }
+
+    /**
+     * @param logConfig The logging configuration settings for the event bus.
+     * For more information, see [Configuring logs for event
+     * buses](https://docs.aws.amazon.com/eb-event-bus-logs.html) in the *EventBridge User Guide* .
+     */
+    override fun logConfig(logConfig: IResolvable) {
+      cdkBuilder.logConfig(logConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param logConfig The logging configuration settings for the event bus.
+     * For more information, see [Configuring logs for event
+     * buses](https://docs.aws.amazon.com/eb-event-bus-logs.html) in the *EventBridge User Guide* .
+     */
+    override fun logConfig(logConfig: CfnEventBus.LogConfigProperty) {
+      cdkBuilder.logConfig(logConfig.let(CfnEventBus.LogConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param logConfig The logging configuration settings for the event bus.
+     * For more information, see [Configuring logs for event
+     * buses](https://docs.aws.amazon.com/eb-event-bus-logs.html) in the *EventBridge User Guide* .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("27e4d94f0742a80cdaecadb43ceea15908c3f3b7c3a77b0fd0d333892c0c9191")
+    override fun logConfig(logConfig: CfnEventBus.LogConfigProperty.Builder.() -> Unit): Unit =
+        logConfig(CfnEventBus.LogConfigProperty(logConfig))
 
     /**
      * @param name The name of the new event bus. 
@@ -408,33 +482,46 @@ public interface CfnEventBusProps {
      * If you do not specify a customer managed key identifier, EventBridge uses an AWS owned key to
      * encrypt events on the event bus.
      *
-     * For more information, see [Managing
-     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS
-     * Key Management Service Developer Guide* .
+     * For more information, see [Identify and view
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
      *
      *
-     * Archives and schema discovery are not supported for event buses encrypted using a customer
-     * managed key. EventBridge returns an error if:
+     * Schema discovery is not supported for event buses encrypted using a customer managed key.
+     * EventBridge returns an error if:
      *
-     * * You call
-     * `[CreateArchive](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateArchive.html)`
-     * on an event bus set to use a customer managed key for encryption.
      * * You call
      * `[CreateDiscoverer](https://docs.aws.amazon.com/eventbridge/latest/schema-reference/v1-discoverers.html#CreateDiscoverer)`
      * on an event bus set to use a customer managed key for encryption.
      * * You call
      * `[UpdatedEventBus](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UpdatedEventBus.html)`
-     * to set a customer managed key on an event bus with an archives or schema discovery enabled.
+     * to set a customer managed key on an event bus with schema discovery enabled.
      *
-     * To enable archives or schema discovery on an event bus, choose to use an AWS owned key . For
-     * more information, see [Data encryption in
-     * EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption.html) in the
-     * *Amazon EventBridge User Guide* .
+     * To enable schema discovery on an event bus, choose to use an AWS owned key . For more
+     * information, see [Encrypting
+     * events](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption-event-bus-cmkey.html)
+     * in the *Amazon EventBridge User Guide* . &gt; If you have specified that EventBridge use a
+     * customer managed key for encrypting the source event bus, we strongly recommend you also specify
+     * a customer managed key for any archives for the event bus as well.
+     *
+     * For more information, see [Encrypting
+     * archives](https://docs.aws.amazon.com/eventbridge/latest/userguide/encryption-archives.html) in
+     * the *Amazon EventBridge User Guide* .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-kmskeyidentifier)
      */
     override fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
+
+    /**
+     * The logging configuration settings for the event bus.
+     *
+     * For more information, see [Configuring logs for event
+     * buses](https://docs.aws.amazon.com/eb-event-bus-logs.html) in the *EventBridge User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-logconfig)
+     */
+    override fun logConfig(): Any? = unwrap(this).getLogConfig()
 
     /**
      * The name of the new event bus.

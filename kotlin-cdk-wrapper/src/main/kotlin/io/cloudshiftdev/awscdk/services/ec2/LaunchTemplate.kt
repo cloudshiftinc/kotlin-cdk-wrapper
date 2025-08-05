@@ -401,6 +401,15 @@ public open class LaunchTemplate(
     public fun nitroEnclaveEnabled(nitroEnclaveEnabled: Boolean)
 
     /**
+     * The placement group that you want to launch the instance into.
+     *
+     * Default: - no placement group will be used for this launch template.
+     *
+     * @param placementGroup The placement group that you want to launch the instance into. 
+     */
+    public fun placementGroup(placementGroup: IPlacementGroup)
+
+    /**
      * Whether IMDSv2 should be required on launched instances.
      *
      * Default: - false
@@ -465,12 +474,12 @@ public open class LaunchTemplate(
     public fun spotOptions(spotOptions: LaunchTemplateSpotOptions.Builder.() -> Unit)
 
     /**
-     * The AMI that will be used by instances.
+     * The user data to make available to the instance.
      *
      * Default: - This Launch Template creates a UserData based on the type of provided
      * machineImage; no UserData is created if a machineImage is not provided
      *
-     * @param userData The AMI that will be used by instances. 
+     * @param userData The user data to make available to the instance. 
      */
     public fun userData(userData: UserData)
 
@@ -787,6 +796,17 @@ public open class LaunchTemplate(
     }
 
     /**
+     * The placement group that you want to launch the instance into.
+     *
+     * Default: - no placement group will be used for this launch template.
+     *
+     * @param placementGroup The placement group that you want to launch the instance into. 
+     */
+    override fun placementGroup(placementGroup: IPlacementGroup) {
+      cdkBuilder.placementGroup(placementGroup.let(IPlacementGroup.Companion::unwrap))
+    }
+
+    /**
      * Whether IMDSv2 should be required on launched instances.
      *
      * Default: - false
@@ -860,12 +880,12 @@ public open class LaunchTemplate(
         spotOptions(LaunchTemplateSpotOptions(spotOptions))
 
     /**
-     * The AMI that will be used by instances.
+     * The user data to make available to the instance.
      *
      * Default: - This Launch Template creates a UserData based on the type of provided
      * machineImage; no UserData is created if a machineImage is not provided
      *
-     * @param userData The AMI that will be used by instances. 
+     * @param userData The user data to make available to the instance. 
      */
     override fun userData(userData: UserData) {
       cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
@@ -889,6 +909,9 @@ public open class LaunchTemplate(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ec2.LaunchTemplate.PROPERTY_INJECTION_ID
+
     public fun fromLaunchTemplateAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -36,6 +36,12 @@ import kotlin.jvm.JvmName
  * .conflictingClientIdsCheck(AuditCheckConfigurationProperty.builder()
  * .enabled(false)
  * .build())
+ * .deviceCertificateAgeCheck(DeviceCertAgeAuditCheckConfigurationProperty.builder()
+ * .configuration(CertAgeCheckCustomConfigurationProperty.builder()
+ * .certAgeThresholdInDays("certAgeThresholdInDays")
+ * .build())
+ * .enabled(false)
+ * .build())
  * .deviceCertificateExpiringCheck(AuditCheckConfigurationProperty.builder()
  * .enabled(false)
  * .build())
@@ -109,7 +115,7 @@ public interface CfnAccountAuditConfigurationProps {
    * You can't disable a check if it's used by any scheduled audit. You must delete the check from
    * the scheduled audit or delete the scheduled audit itself to disable the check.
    *
-   * For more information on avialbe auidt checks see [AWS::IoT::AccountAuditConfiguration
+   * For more information on available audit checks see [AWS::IoT::AccountAuditConfiguration
    * AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-accountauditconfiguration.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations)
@@ -156,7 +162,7 @@ public interface CfnAccountAuditConfigurationProps {
      * You can't disable a check if it's used by any scheduled audit. You must delete the check from
      * the scheduled audit or delete the scheduled audit itself to disable the check.
      *
-     * For more information on avialbe auidt checks see [AWS::IoT::AccountAuditConfiguration
+     * For more information on available audit checks see [AWS::IoT::AccountAuditConfiguration
      * AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)
      */
     public fun auditCheckConfigurations(auditCheckConfigurations: IResolvable)
@@ -173,7 +179,7 @@ public interface CfnAccountAuditConfigurationProps {
      * You can't disable a check if it's used by any scheduled audit. You must delete the check from
      * the scheduled audit or delete the scheduled audit itself to disable the check.
      *
-     * For more information on avialbe auidt checks see [AWS::IoT::AccountAuditConfiguration
+     * For more information on available audit checks see [AWS::IoT::AccountAuditConfiguration
      * AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)
      */
     public
@@ -191,7 +197,7 @@ public interface CfnAccountAuditConfigurationProps {
      * You can't disable a check if it's used by any scheduled audit. You must delete the check from
      * the scheduled audit or delete the scheduled audit itself to disable the check.
      *
-     * For more information on avialbe auidt checks see [AWS::IoT::AccountAuditConfiguration
+     * For more information on available audit checks see [AWS::IoT::AccountAuditConfiguration
      * AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -255,7 +261,7 @@ public interface CfnAccountAuditConfigurationProps {
      * You can't disable a check if it's used by any scheduled audit. You must delete the check from
      * the scheduled audit or delete the scheduled audit itself to disable the check.
      *
-     * For more information on avialbe auidt checks see [AWS::IoT::AccountAuditConfiguration
+     * For more information on available audit checks see [AWS::IoT::AccountAuditConfiguration
      * AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)
      */
     override fun auditCheckConfigurations(auditCheckConfigurations: IResolvable) {
@@ -274,7 +280,7 @@ public interface CfnAccountAuditConfigurationProps {
      * You can't disable a check if it's used by any scheduled audit. You must delete the check from
      * the scheduled audit or delete the scheduled audit itself to disable the check.
      *
-     * For more information on avialbe auidt checks see [AWS::IoT::AccountAuditConfiguration
+     * For more information on available audit checks see [AWS::IoT::AccountAuditConfiguration
      * AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)
      */
     override
@@ -294,7 +300,7 @@ public interface CfnAccountAuditConfigurationProps {
      * You can't disable a check if it's used by any scheduled audit. You must delete the check from
      * the scheduled audit or delete the scheduled audit itself to disable the check.
      *
-     * For more information on avialbe auidt checks see [AWS::IoT::AccountAuditConfiguration
+     * For more information on available audit checks see [AWS::IoT::AccountAuditConfiguration
      * AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -371,7 +377,7 @@ public interface CfnAccountAuditConfigurationProps {
      * You can't disable a check if it's used by any scheduled audit. You must delete the check from
      * the scheduled audit or delete the scheduled audit itself to disable the check.
      *
-     * For more information on avialbe auidt checks see [AWS::IoT::AccountAuditConfiguration
+     * For more information on available audit checks see [AWS::IoT::AccountAuditConfiguration
      * AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-accountauditconfiguration.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations)

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import kotlin.Boolean
 import kotlin.Deprecated
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -561,6 +562,16 @@ public open class NetworkLoadBalancer(
     public fun loadBalancerName(loadBalancerName: String)
 
     /**
+     * The minimum capacity (LCU) for a load balancer.
+     *
+     * Default: undefined - ELB default is 0 LCU
+     *
+     * [Documentation](https://exampleloadbalancer.com/ondemand_capacity_reservation_calculator.html)
+     * @param minimumCapacityUnit The minimum capacity (LCU) for a load balancer. 
+     */
+    public fun minimumCapacityUnit(minimumCapacityUnit: Number)
+
+    /**
      * Security groups to associate with this load balancer.
      *
      * Default: - No security groups associated with the load balancer.
@@ -577,6 +588,24 @@ public open class NetworkLoadBalancer(
      * @param securityGroups Security groups to associate with this load balancer. 
      */
     public fun securityGroups(vararg securityGroups: ISecurityGroup)
+
+    /**
+     * Subnet information for the load balancer.
+     *
+     * Default: undefined - The VPC default strategy for subnets is used
+     *
+     * @param subnetMappings Subnet information for the load balancer. 
+     */
+    public fun subnetMappings(subnetMappings: List<SubnetMapping>)
+
+    /**
+     * Subnet information for the load balancer.
+     *
+     * Default: undefined - The VPC default strategy for subnets is used
+     *
+     * @param subnetMappings Subnet information for the load balancer. 
+     */
+    public fun subnetMappings(vararg subnetMappings: SubnetMapping)
 
     /**
      * The VPC network to place the load balancer in.
@@ -739,6 +768,18 @@ public open class NetworkLoadBalancer(
     }
 
     /**
+     * The minimum capacity (LCU) for a load balancer.
+     *
+     * Default: undefined - ELB default is 0 LCU
+     *
+     * [Documentation](https://exampleloadbalancer.com/ondemand_capacity_reservation_calculator.html)
+     * @param minimumCapacityUnit The minimum capacity (LCU) for a load balancer. 
+     */
+    override fun minimumCapacityUnit(minimumCapacityUnit: Number) {
+      cdkBuilder.minimumCapacityUnit(minimumCapacityUnit)
+    }
+
+    /**
      * Security groups to associate with this load balancer.
      *
      * Default: - No security groups associated with the load balancer.
@@ -758,6 +799,27 @@ public open class NetworkLoadBalancer(
      */
     override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
         securityGroups(securityGroups.toList())
+
+    /**
+     * Subnet information for the load balancer.
+     *
+     * Default: undefined - The VPC default strategy for subnets is used
+     *
+     * @param subnetMappings Subnet information for the load balancer. 
+     */
+    override fun subnetMappings(subnetMappings: List<SubnetMapping>) {
+      cdkBuilder.subnetMappings(subnetMappings.map(SubnetMapping.Companion::unwrap))
+    }
+
+    /**
+     * Subnet information for the load balancer.
+     *
+     * Default: undefined - The VPC default strategy for subnets is used
+     *
+     * @param subnetMappings Subnet information for the load balancer. 
+     */
+    override fun subnetMappings(vararg subnetMappings: SubnetMapping): Unit =
+        subnetMappings(subnetMappings.toList())
 
     /**
      * The VPC network to place the load balancer in.
@@ -808,6 +870,9 @@ public open class NetworkLoadBalancer(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer.PROPERTY_INJECTION_ID
+
     public fun fromLookup(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

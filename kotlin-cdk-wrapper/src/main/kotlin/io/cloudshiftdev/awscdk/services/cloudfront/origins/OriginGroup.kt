@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.cloudfront.IOrigin
 import io.cloudshiftdev.awscdk.services.cloudfront.OriginBindConfig
 import io.cloudshiftdev.awscdk.services.cloudfront.OriginBindOptions
+import io.cloudshiftdev.awscdk.services.cloudfront.OriginSelectionCriteria
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Number
 import kotlin.Unit
@@ -107,6 +108,16 @@ public open class OriginGroup(
      * @param primaryOrigin The primary origin that should serve requests for this group. 
      */
     public fun primaryOrigin(primaryOrigin: IOrigin)
+
+    /**
+     * The selection criteria for the origin group.
+     *
+     * Default: - OriginSelectionCriteria.DEFAULT
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html#concept_origin_groups.creating)
+     * @param selectionCriteria The selection criteria for the origin group. 
+     */
+    public fun selectionCriteria(selectionCriteria: OriginSelectionCriteria)
   }
 
   private class BuilderImpl : Builder {
@@ -154,6 +165,18 @@ public open class OriginGroup(
      */
     override fun primaryOrigin(primaryOrigin: IOrigin) {
       cdkBuilder.primaryOrigin(primaryOrigin.let(IOrigin.Companion::unwrap))
+    }
+
+    /**
+     * The selection criteria for the origin group.
+     *
+     * Default: - OriginSelectionCriteria.DEFAULT
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html#concept_origin_groups.creating)
+     * @param selectionCriteria The selection criteria for the origin group. 
+     */
+    override fun selectionCriteria(selectionCriteria: OriginSelectionCriteria) {
+      cdkBuilder.selectionCriteria(selectionCriteria.let(OriginSelectionCriteria.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.origins.OriginGroup =

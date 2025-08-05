@@ -17,21 +17,18 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.services.s3.*;
  * import io.cloudshiftdev.awscdk.services.certificatemanager.*;
- * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration;
- * Function handler;
+ * Bucket bucket;
  * String certArn = "arn:aws:acm:us-east-1:111111111111:certificate";
  * String domainName = "example.com";
- * DomainName dn = DomainName.Builder.create(this, "DN")
+ * DomainName.Builder.create(this, "DomainName")
  * .domainName(domainName)
  * .certificate(Certificate.fromCertificateArn(this, "cert", certArn))
- * .build();
- * HttpApi api = HttpApi.Builder.create(this, "HttpProxyProdApi")
- * .defaultIntegration(new HttpLambdaIntegration("DefaultIntegration", handler))
- * // https://${dn.domainName}/foo goes to prodApi $default stage
- * .defaultDomainMapping(DomainMappingOptions.builder()
- * .domainName(dn)
- * .mappingKey("foo")
+ * .mtls(MTLSConfig.builder()
+ * .bucket(bucket)
+ * .key("someca.pem")
+ * .version("version")
  * .build())
  * .build();
  * ```
@@ -132,6 +129,16 @@ public open class DomainName(
     public fun endpointType(endpointType: EndpointType)
 
     /**
+     * The IP address types that can invoke the API.
+     *
+     * Default: undefined - AWS default is IPV4
+     *
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-ip-address-type.html)
+     * @param ipAddressType The IP address types that can invoke the API. 
+     */
+    public fun ipAddressType(ipAddressType: IpAddressType)
+
+    /**
      * The mutual TLS authentication configuration for a custom domain name.
      *
      * Default: - mTLS is not configured.
@@ -230,6 +237,18 @@ public open class DomainName(
     }
 
     /**
+     * The IP address types that can invoke the API.
+     *
+     * Default: undefined - AWS default is IPV4
+     *
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-ip-address-type.html)
+     * @param ipAddressType The IP address types that can invoke the API. 
+     */
+    override fun ipAddressType(ipAddressType: IpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
+    }
+
+    /**
      * The mutual TLS authentication configuration for a custom domain name.
      *
      * Default: - mTLS is not configured.
@@ -285,6 +304,9 @@ public open class DomainName(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.apigatewayv2.DomainName.PROPERTY_INJECTION_ID
+
     public fun fromDomainNameAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

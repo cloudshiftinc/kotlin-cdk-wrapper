@@ -42,6 +42,7 @@ import kotlin.jvm.JvmName
  * .keyUsage("keyUsage")
  * .build())
  * // the properties below are optional
+ * .deriveKeyUsage("deriveKeyUsage")
  * .enabled(false)
  * .keyCheckValueAlgorithm("keyCheckValueAlgorithm")
  * .tags(List.of(CfnTag.builder()
@@ -54,6 +55,13 @@ import kotlin.jvm.JvmName
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-paymentcryptography-key.html)
  */
 public interface CfnKeyProps {
+  /**
+   * The cryptographic usage of an ECDH derived key as deﬁned in section A.5.2 of the TR-31 spec.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-paymentcryptography-key.html#cfn-paymentcryptography-key-derivekeyusage)
+   */
+  public fun deriveKeyUsage(): String? = unwrap(this).getDeriveKeyUsage()
+
   /**
    * Specifies whether the key is enabled.
    *
@@ -104,6 +112,12 @@ public interface CfnKeyProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param deriveKeyUsage The cryptographic usage of an ECDH derived key as deﬁned in section
+     * A.5.2 of the TR-31 spec.
+     */
+    public fun deriveKeyUsage(deriveKeyUsage: String)
+
     /**
      * @param enabled Specifies whether the key is enabled.
      */
@@ -175,6 +189,14 @@ public interface CfnKeyProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.paymentcryptography.CfnKeyProps.Builder
         = software.amazon.awscdk.services.paymentcryptography.CfnKeyProps.builder()
+
+    /**
+     * @param deriveKeyUsage The cryptographic usage of an ECDH derived key as deﬁned in section
+     * A.5.2 of the TR-31 spec.
+     */
+    override fun deriveKeyUsage(deriveKeyUsage: String) {
+      cdkBuilder.deriveKeyUsage(deriveKeyUsage)
+    }
 
     /**
      * @param enabled Specifies whether the key is enabled.
@@ -268,6 +290,13 @@ public interface CfnKeyProps {
     cdkObject: software.amazon.awscdk.services.paymentcryptography.CfnKeyProps,
   ) : CdkObject(cdkObject),
       CfnKeyProps {
+    /**
+     * The cryptographic usage of an ECDH derived key as deﬁned in section A.5.2 of the TR-31 spec.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-paymentcryptography-key.html#cfn-paymentcryptography-key-derivekeyusage)
+     */
+    override fun deriveKeyUsage(): String? = unwrap(this).getDeriveKeyUsage()
+
     /**
      * Specifies whether the key is enabled.
      *

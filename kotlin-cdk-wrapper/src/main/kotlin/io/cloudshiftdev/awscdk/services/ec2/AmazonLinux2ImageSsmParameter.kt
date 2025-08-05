@@ -21,6 +21,7 @@ import kotlin.jvm.JvmName
  * UserData userData;
  * AmazonLinux2ImageSsmParameter amazonLinux2ImageSsmParameter =
  * AmazonLinux2ImageSsmParameter.Builder.create()
+ * .additionalCacheKey("additionalCacheKey")
  * .cachedInContext(false)
  * .cpuType(AmazonLinuxCpuType.ARM_64)
  * .edition(AmazonLinuxEdition.STANDARD)
@@ -47,6 +48,16 @@ public open class AmazonLinux2ImageSsmParameter(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     *
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key. 
+     */
+    public fun additionalCacheKey(additionalCacheKey: String)
+
     /**
      * Whether the AMI ID is cached to be stable between deployments.
      *
@@ -129,6 +140,18 @@ public open class AmazonLinux2ImageSsmParameter(
     private val cdkBuilder:
         software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameter.Builder =
         software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameter.Builder.create()
+
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     *
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key. 
+     */
+    override fun additionalCacheKey(additionalCacheKey: String) {
+      cdkBuilder.additionalCacheKey(additionalCacheKey)
+    }
 
     /**
      * Whether the AMI ID is cached to be stable between deployments.

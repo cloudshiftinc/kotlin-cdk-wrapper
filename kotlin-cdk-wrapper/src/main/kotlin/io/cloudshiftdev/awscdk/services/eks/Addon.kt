@@ -4,9 +4,12 @@ package io.cloudshiftdev.awscdk.services.eks
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Map
 import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
@@ -20,11 +23,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Cluster cluster;
  * Addon.Builder.create(this, "Addon")
  * .cluster(cluster)
- * .addonName("aws-guardduty-agent")
- * .addonVersion("v1.6.1")
+ * .addonName("coredns")
+ * .addonVersion("v1.11.4-eksbuild.2")
  * // whether to preserve the add-on software on your cluster but Amazon EKS stops managing any
  * settings for the add-on.
  * .preserveOnDelete(false)
+ * .configurationValues(Map.of(
+ * "replicaCount", 2))
  * .build();
  * ```
  */
@@ -73,7 +78,7 @@ public open class Addon(
     /**
      * Version of the Add-On.
      *
-     * You can check all available versions with describe-addon-versons.
+     * You can check all available versions with describe-addon-versions.
      * For example, this lists all available versions for the `eks-pod-identity-agent` addon:
      * $ aws eks describe-addon-versions --addon-name eks-pod-identity-agent \
      * --query 'addons[*].addonVersions[*].addonVersion'
@@ -90,6 +95,15 @@ public open class Addon(
      * @param cluster The EKS cluster the Add-On is associated with. 
      */
     public fun cluster(cluster: ICluster)
+
+    /**
+     * The configuration values for the Add-on.
+     *
+     * Default: - Use default configuration.
+     *
+     * @param configurationValues The configuration values for the Add-on. 
+     */
+    public fun configurationValues(configurationValues: Map<String, Any>)
 
     /**
      * Specifying this option preserves the add-on software on your cluster but Amazon EKS stops
@@ -124,7 +138,7 @@ public open class Addon(
     /**
      * Version of the Add-On.
      *
-     * You can check all available versions with describe-addon-versons.
+     * You can check all available versions with describe-addon-versions.
      * For example, this lists all available versions for the `eks-pod-identity-agent` addon:
      * $ aws eks describe-addon-versions --addon-name eks-pod-identity-agent \
      * --query 'addons[*].addonVersions[*].addonVersion'
@@ -147,6 +161,17 @@ public open class Addon(
     }
 
     /**
+     * The configuration values for the Add-on.
+     *
+     * Default: - Use default configuration.
+     *
+     * @param configurationValues The configuration values for the Add-on. 
+     */
+    override fun configurationValues(configurationValues: Map<String, Any>) {
+      cdkBuilder.configurationValues(configurationValues.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
      * Specifying this option preserves the add-on software on your cluster but Amazon EKS stops
      * managing any settings for the add-on.
      *
@@ -165,6 +190,9 @@ public open class Addon(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.eks.Addon.PROPERTY_INJECTION_ID
+
     public fun fromAddonArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

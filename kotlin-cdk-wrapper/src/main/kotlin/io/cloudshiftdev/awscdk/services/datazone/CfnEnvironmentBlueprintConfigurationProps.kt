@@ -26,7 +26,14 @@ import kotlin.collections.List
  * .enabledRegions(List.of("enabledRegions"))
  * .environmentBlueprintIdentifier("environmentBlueprintIdentifier")
  * // the properties below are optional
+ * .environmentRolePermissionBoundary("environmentRolePermissionBoundary")
  * .manageAccessRoleArn("manageAccessRoleArn")
+ * .provisioningConfigurations(List.of(ProvisioningConfigurationProperty.builder()
+ * .lakeFormationConfiguration(LakeFormationConfigurationProperty.builder()
+ * .locationRegistrationExcludeS3Locations(List.of("locationRegistrationExcludeS3Locations"))
+ * .locationRegistrationRole("locationRegistrationRole")
+ * .build())
+ * .build()))
  * .provisioningRoleArn("provisioningRoleArn")
  * .regionalParameters(List.of(RegionalParameterProperty.builder()
  * .parameters(Map.of(
@@ -64,11 +71,26 @@ public interface CfnEnvironmentBlueprintConfigurationProps {
   public fun environmentBlueprintIdentifier(): String
 
   /**
+   * The environment role permission boundary.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-environmentrolepermissionboundary)
+   */
+  public fun environmentRolePermissionBoundary(): String? =
+      unwrap(this).getEnvironmentRolePermissionBoundary()
+
+  /**
    * The ARN of the manage access role.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-manageaccessrolearn)
    */
   public fun manageAccessRoleArn(): String? = unwrap(this).getManageAccessRoleArn()
+
+  /**
+   * The provisioning configuration of a blueprint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-provisioningconfigurations)
+   */
+  public fun provisioningConfigurations(): Any? = unwrap(this).getProvisioningConfigurations()
 
   /**
    * The ARN of the provisioning role.
@@ -113,9 +135,29 @@ public interface CfnEnvironmentBlueprintConfigurationProps {
     public fun environmentBlueprintIdentifier(environmentBlueprintIdentifier: String)
 
     /**
+     * @param environmentRolePermissionBoundary The environment role permission boundary.
+     */
+    public fun environmentRolePermissionBoundary(environmentRolePermissionBoundary: String)
+
+    /**
      * @param manageAccessRoleArn The ARN of the manage access role.
      */
     public fun manageAccessRoleArn(manageAccessRoleArn: String)
+
+    /**
+     * @param provisioningConfigurations The provisioning configuration of a blueprint.
+     */
+    public fun provisioningConfigurations(provisioningConfigurations: IResolvable)
+
+    /**
+     * @param provisioningConfigurations The provisioning configuration of a blueprint.
+     */
+    public fun provisioningConfigurations(provisioningConfigurations: List<Any>)
+
+    /**
+     * @param provisioningConfigurations The provisioning configuration of a blueprint.
+     */
+    public fun provisioningConfigurations(vararg provisioningConfigurations: Any)
 
     /**
      * @param provisioningRoleArn The ARN of the provisioning role.
@@ -174,11 +216,38 @@ public interface CfnEnvironmentBlueprintConfigurationProps {
     }
 
     /**
+     * @param environmentRolePermissionBoundary The environment role permission boundary.
+     */
+    override fun environmentRolePermissionBoundary(environmentRolePermissionBoundary: String) {
+      cdkBuilder.environmentRolePermissionBoundary(environmentRolePermissionBoundary)
+    }
+
+    /**
      * @param manageAccessRoleArn The ARN of the manage access role.
      */
     override fun manageAccessRoleArn(manageAccessRoleArn: String) {
       cdkBuilder.manageAccessRoleArn(manageAccessRoleArn)
     }
+
+    /**
+     * @param provisioningConfigurations The provisioning configuration of a blueprint.
+     */
+    override fun provisioningConfigurations(provisioningConfigurations: IResolvable) {
+      cdkBuilder.provisioningConfigurations(provisioningConfigurations.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param provisioningConfigurations The provisioning configuration of a blueprint.
+     */
+    override fun provisioningConfigurations(provisioningConfigurations: List<Any>) {
+      cdkBuilder.provisioningConfigurations(provisioningConfigurations.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param provisioningConfigurations The provisioning configuration of a blueprint.
+     */
+    override fun provisioningConfigurations(vararg provisioningConfigurations: Any): Unit =
+        provisioningConfigurations(provisioningConfigurations.toList())
 
     /**
      * @param provisioningRoleArn The ARN of the provisioning role.
@@ -242,11 +311,26 @@ public interface CfnEnvironmentBlueprintConfigurationProps {
         unwrap(this).getEnvironmentBlueprintIdentifier()
 
     /**
+     * The environment role permission boundary.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-environmentrolepermissionboundary)
+     */
+    override fun environmentRolePermissionBoundary(): String? =
+        unwrap(this).getEnvironmentRolePermissionBoundary()
+
+    /**
      * The ARN of the manage access role.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-manageaccessrolearn)
      */
     override fun manageAccessRoleArn(): String? = unwrap(this).getManageAccessRoleArn()
+
+    /**
+     * The provisioning configuration of a blueprint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-provisioningconfigurations)
+     */
+    override fun provisioningConfigurations(): Any? = unwrap(this).getProvisioningConfigurations()
 
     /**
      * The ARN of the provisioning role.

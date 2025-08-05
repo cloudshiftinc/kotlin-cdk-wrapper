@@ -9,7 +9,8 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Tests and publishes a registered extension as a public, third-party extension.
+ * The `AWS::CloudFormation::PublicTypeVersion` resource tests and publishes a registered extension
+ * as a public, third-party extension.
  *
  * CloudFormation first tests the extension to make sure it meets all necessary requirements for
  * being published in the CloudFormation registry. If it does, CloudFormation then publishes it to the
@@ -22,7 +23,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * For more information, see [Testing your public extension prior to
  * publishing](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-testing)
- * in the *CloudFormation CLI User Guide* .
+ * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
  *
  * If you don't specify a version, CloudFormation uses the default version of the extension in your
  * account and Region for testing.
@@ -32,8 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * An extension must have a test status of `PASSED` before it can be published. For more
  * information, see [Publishing extensions to make them available for public
- * use](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-publish.html) in
- * the *CloudFormation CLI User Guide* .
+ * use](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html) in the
+ * *AWS CloudFormation Command Line Interface (CLI) User Guide* .
  *
  * Example:
  *
@@ -189,12 +190,8 @@ public open class CfnPublicTypeVersion(
      * The user initiating the stack operation must be able to access items in the specified S3
      * bucket. Specifically, the user needs the following permissions:
      *
-     * * GetObject
-     * * PutObject
-     *
-     * For more information, see [Actions, Resources, and Condition Keys for Amazon
-     * S3](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html) in
-     * the *AWS Identity and Access Management User Guide* .
+     * * s3:GetObject
+     * * s3:PutObject
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-logdeliverybucket)
      * @param logDeliveryBucket The S3 bucket to which CloudFormation delivers the contract test
@@ -273,12 +270,8 @@ public open class CfnPublicTypeVersion(
      * The user initiating the stack operation must be able to access items in the specified S3
      * bucket. Specifically, the user needs the following permissions:
      *
-     * * GetObject
-     * * PutObject
-     *
-     * For more information, see [Actions, Resources, and Condition Keys for Amazon
-     * S3](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html) in
-     * the *AWS Identity and Access Management User Guide* .
+     * * s3:GetObject
+     * * s3:PutObject
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-logdeliverybucket)
      * @param logDeliveryBucket The S3 bucket to which CloudFormation delivers the contract test

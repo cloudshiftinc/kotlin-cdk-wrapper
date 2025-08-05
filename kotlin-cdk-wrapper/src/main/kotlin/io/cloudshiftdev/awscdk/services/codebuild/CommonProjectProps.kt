@@ -48,6 +48,7 @@ import kotlin.jvm.JvmName
  * Vpc vpc;
  * CommonProjectProps commonProjectProps = CommonProjectProps.builder()
  * .allowAllOutbound(false)
+ * .autoRetryLimit(123)
  * .badge(false)
  * .buildSpec(buildSpec)
  * .cache(cache)
@@ -124,6 +125,16 @@ public interface CommonProjectProps {
    * Default: true
    */
   public fun allowAllOutbound(): Boolean? = unwrap(this).getAllowAllOutbound()
+
+  /**
+   * CodeBuild will automatically call retry build using the project's service role up to the
+   * auto-retry limit.
+   *
+   * `autoRetryLimit` must be between 0 and 10.
+   *
+   * Default: - no retry
+   */
+  public fun autoRetryLimit(): Number? = unwrap(this).getAutoRetryLimit()
 
   /**
    * Indicates whether AWS CodeBuild generates a publicly accessible URL for your project's build
@@ -371,6 +382,13 @@ public interface CommonProjectProps {
     public fun allowAllOutbound(allowAllOutbound: Boolean)
 
     /**
+     * @param autoRetryLimit CodeBuild will automatically call retry build using the project's
+     * service role up to the auto-retry limit.
+     * `autoRetryLimit` must be between 0 and 10.
+     */
+    public fun autoRetryLimit(autoRetryLimit: Number)
+
+    /**
      * @param badge Indicates whether AWS CodeBuild generates a publicly accessible URL for your
      * project's build badge.
      * For more information, see Build Badges Sample
@@ -606,6 +624,15 @@ public interface CommonProjectProps {
      */
     override fun allowAllOutbound(allowAllOutbound: Boolean) {
       cdkBuilder.allowAllOutbound(allowAllOutbound)
+    }
+
+    /**
+     * @param autoRetryLimit CodeBuild will automatically call retry build using the project's
+     * service role up to the auto-retry limit.
+     * `autoRetryLimit` must be between 0 and 10.
+     */
+    override fun autoRetryLimit(autoRetryLimit: Number) {
+      cdkBuilder.autoRetryLimit(autoRetryLimit)
     }
 
     /**
@@ -896,6 +923,16 @@ public interface CommonProjectProps {
      * Default: true
      */
     override fun allowAllOutbound(): Boolean? = unwrap(this).getAllowAllOutbound()
+
+    /**
+     * CodeBuild will automatically call retry build using the project's service role up to the
+     * auto-retry limit.
+     *
+     * `autoRetryLimit` must be between 0 and 10.
+     *
+     * Default: - no retry
+     */
+    override fun autoRetryLimit(): Number? = unwrap(this).getAutoRetryLimit()
 
     /**
      * Indicates whether AWS CodeBuild generates a publicly accessible URL for your project's build

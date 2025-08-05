@@ -19,6 +19,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Imports the signing and encryption certificates that you need to create local (AS2) profiles and
  * partner profiles.
  *
+ * You can import both the certificate and its chain in the `Certificate` parameter.
+ *
+ *
+ * If you use the `Certificate` parameter to upload both the certificate and its chain, don't use
+ * the `CertificateChain` parameter.
+ *
+ *
  * Example:
  *
  * ```
@@ -235,6 +242,9 @@ public open class CfnCertificate(
     /**
      * An optional date that specifies when the certificate becomes active.
      *
+     * If you do not specify a value, `ActiveDate` takes the same value as `NotBeforeDate` , which
+     * is specified by the CA.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-certificate.html#cfn-transfer-certificate-activedate)
      * @param activeDate An optional date that specifies when the certificate becomes active. 
      */
@@ -266,6 +276,9 @@ public open class CfnCertificate(
 
     /**
      * An optional date that specifies when the certificate becomes inactive.
+     *
+     * If you do not specify a value, `InactiveDate` takes the same value as `NotAfterDate` , which
+     * is specified by the CA.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-certificate.html#cfn-transfer-certificate-inactivedate)
      * @param inactiveDate An optional date that specifies when the certificate becomes inactive. 
@@ -320,6 +333,9 @@ public open class CfnCertificate(
     /**
      * An optional date that specifies when the certificate becomes active.
      *
+     * If you do not specify a value, `ActiveDate` takes the same value as `NotBeforeDate` , which
+     * is specified by the CA.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-certificate.html#cfn-transfer-certificate-activedate)
      * @param activeDate An optional date that specifies when the certificate becomes active. 
      */
@@ -359,6 +375,9 @@ public open class CfnCertificate(
 
     /**
      * An optional date that specifies when the certificate becomes inactive.
+     *
+     * If you do not specify a value, `InactiveDate` takes the same value as `NotAfterDate` , which
+     * is specified by the CA.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-certificate.html#cfn-transfer-certificate-inactivedate)
      * @param inactiveDate An optional date that specifies when the certificate becomes inactive. 

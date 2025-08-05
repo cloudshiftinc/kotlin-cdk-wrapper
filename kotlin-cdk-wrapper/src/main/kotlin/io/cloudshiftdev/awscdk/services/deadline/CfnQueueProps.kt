@@ -78,6 +78,11 @@ public interface CfnQueueProps {
   /**
    * A description of the queue that helps identify what the queue is used for.
    *
+   *
+   * This field can store any content. Escape or encode this content before displaying it on a
+   * webpage or any other system that might interpret the content of this field.
+   *
+   *
    * Default: - ""
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queue.html#cfn-deadline-queue-description)
@@ -170,6 +175,9 @@ public interface CfnQueueProps {
 
     /**
      * @param description A description of the queue that helps identify what the queue is used for.
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
      */
     public fun description(description: String)
 
@@ -284,6 +292,9 @@ public interface CfnQueueProps {
 
     /**
      * @param description A description of the queue that helps identify what the queue is used for.
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -419,6 +430,11 @@ public interface CfnQueueProps {
 
     /**
      * A description of the queue that helps identify what the queue is used for.
+     *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
      *
      * Default: - ""
      *

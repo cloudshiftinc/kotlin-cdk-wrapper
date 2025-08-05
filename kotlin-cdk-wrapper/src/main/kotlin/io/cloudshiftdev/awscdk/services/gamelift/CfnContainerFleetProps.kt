@@ -62,6 +62,7 @@ import kotlin.jvm.JvmName
  * .build()))
  * .logConfiguration(LogConfigurationProperty.builder()
  * .logDestination("logDestination")
+ * .logGroupArn("logGroupArn")
  * .s3BucketName("s3BucketName")
  * .build())
  * .metricGroups(List.of("metricGroups"))
@@ -120,7 +121,7 @@ public interface CfnContainerFleetProps {
 
   /**
    * The unique identifier for an AWS Identity and Access Management (IAM) role with permissions to
-   * run your containers on resources that are managed by Amazon GameLift.
+   * run your containers on resources that are managed by Amazon GameLift Servers.
    *
    * See [Set up an IAM service
    * role](https://docs.aws.amazon.com/gamelift/latest/developerguide/setting-up-role.html) . This
@@ -195,8 +196,8 @@ public interface CfnContainerFleetProps {
   /**
    * The method that is used to collect container logs for the fleet.
    *
-   * Amazon GameLift saves all standard output for each container in logs, including game session
-   * logs.
+   * Amazon GameLift Servers saves all standard output for each container in logs, including game
+   * session logs.
    *
    * * `CLOUDWATCH` -- Send logs to an Amazon CloudWatch log group that you define. Each container
    * emits a log stream, which is organized in the log group.
@@ -217,11 +218,11 @@ public interface CfnContainerFleetProps {
   public fun metricGroups(): List<String> = unwrap(this).getMetricGroups() ?: emptyList()
 
   /**
-   * Determines whether Amazon GameLift can shut down game sessions on the fleet that are actively
-   * running and hosting players.
+   * Determines whether Amazon GameLift Servers can shut down game sessions on the fleet that are
+   * actively running and hosting players.
    *
-   * Amazon GameLift might prompt an instance shutdown when scaling down fleet capacity or when
-   * retiring unhealthy instances. You can also set game session protection for individual game
+   * Amazon GameLift Servers might prompt an instance shutdown when scaling down fleet capacity or
+   * when retiring unhealthy instances. You can also set game session protection for individual game
    * sessions using
    * [UpdateGameSession](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateGameSession.html)
    * .
@@ -301,7 +302,8 @@ public interface CfnContainerFleetProps {
 
     /**
      * @param fleetRoleArn The unique identifier for an AWS Identity and Access Management (IAM)
-     * role with permissions to run your containers on resources that are managed by Amazon GameLift. 
+     * role with permissions to run your containers on resources that are managed by Amazon GameLift
+     * Servers. 
      * See [Set up an IAM service
      * role](https://docs.aws.amazon.com/gamelift/latest/developerguide/setting-up-role.html) . This
      * fleet property can't be changed.
@@ -418,8 +420,8 @@ public interface CfnContainerFleetProps {
 
     /**
      * @param logConfiguration The method that is used to collect container logs for the fleet.
-     * Amazon GameLift saves all standard output for each container in logs, including game session
-     * logs.
+     * Amazon GameLift Servers saves all standard output for each container in logs, including game
+     * session logs.
      *
      * * `CLOUDWATCH` -- Send logs to an Amazon CloudWatch log group that you define. Each container
      * emits a log stream, which is organized in the log group.
@@ -430,8 +432,8 @@ public interface CfnContainerFleetProps {
 
     /**
      * @param logConfiguration The method that is used to collect container logs for the fleet.
-     * Amazon GameLift saves all standard output for each container in logs, including game session
-     * logs.
+     * Amazon GameLift Servers saves all standard output for each container in logs, including game
+     * session logs.
      *
      * * `CLOUDWATCH` -- Send logs to an Amazon CloudWatch log group that you define. Each container
      * emits a log stream, which is organized in the log group.
@@ -442,8 +444,8 @@ public interface CfnContainerFleetProps {
 
     /**
      * @param logConfiguration The method that is used to collect container logs for the fleet.
-     * Amazon GameLift saves all standard output for each container in logs, including game session
-     * logs.
+     * Amazon GameLift Servers saves all standard output for each container in logs, including game
+     * session logs.
      *
      * * `CLOUDWATCH` -- Send logs to an Amazon CloudWatch log group that you define. Each container
      * emits a log stream, which is organized in the log group.
@@ -468,10 +470,10 @@ public interface CfnContainerFleetProps {
     public fun metricGroups(vararg metricGroups: String)
 
     /**
-     * @param newGameSessionProtectionPolicy Determines whether Amazon GameLift can shut down game
-     * sessions on the fleet that are actively running and hosting players.
-     * Amazon GameLift might prompt an instance shutdown when scaling down fleet capacity or when
-     * retiring unhealthy instances. You can also set game session protection for individual game
+     * @param newGameSessionProtectionPolicy Determines whether Amazon GameLift Servers can shut
+     * down game sessions on the fleet that are actively running and hosting players.
+     * Amazon GameLift Servers might prompt an instance shutdown when scaling down fleet capacity or
+     * when retiring unhealthy instances. You can also set game session protection for individual game
      * sessions using
      * [UpdateGameSession](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateGameSession.html)
      * .
@@ -568,7 +570,8 @@ public interface CfnContainerFleetProps {
 
     /**
      * @param fleetRoleArn The unique identifier for an AWS Identity and Access Management (IAM)
-     * role with permissions to run your containers on resources that are managed by Amazon GameLift. 
+     * role with permissions to run your containers on resources that are managed by Amazon GameLift
+     * Servers. 
      * See [Set up an IAM service
      * role](https://docs.aws.amazon.com/gamelift/latest/developerguide/setting-up-role.html) . This
      * fleet property can't be changed.
@@ -715,8 +718,8 @@ public interface CfnContainerFleetProps {
 
     /**
      * @param logConfiguration The method that is used to collect container logs for the fleet.
-     * Amazon GameLift saves all standard output for each container in logs, including game session
-     * logs.
+     * Amazon GameLift Servers saves all standard output for each container in logs, including game
+     * session logs.
      *
      * * `CLOUDWATCH` -- Send logs to an Amazon CloudWatch log group that you define. Each container
      * emits a log stream, which is organized in the log group.
@@ -729,8 +732,8 @@ public interface CfnContainerFleetProps {
 
     /**
      * @param logConfiguration The method that is used to collect container logs for the fleet.
-     * Amazon GameLift saves all standard output for each container in logs, including game session
-     * logs.
+     * Amazon GameLift Servers saves all standard output for each container in logs, including game
+     * session logs.
      *
      * * `CLOUDWATCH` -- Send logs to an Amazon CloudWatch log group that you define. Each container
      * emits a log stream, which is organized in the log group.
@@ -743,8 +746,8 @@ public interface CfnContainerFleetProps {
 
     /**
      * @param logConfiguration The method that is used to collect container logs for the fleet.
-     * Amazon GameLift saves all standard output for each container in logs, including game session
-     * logs.
+     * Amazon GameLift Servers saves all standard output for each container in logs, including game
+     * session logs.
      *
      * * `CLOUDWATCH` -- Send logs to an Amazon CloudWatch log group that you define. Each container
      * emits a log stream, which is organized in the log group.
@@ -773,10 +776,10 @@ public interface CfnContainerFleetProps {
         metricGroups(metricGroups.toList())
 
     /**
-     * @param newGameSessionProtectionPolicy Determines whether Amazon GameLift can shut down game
-     * sessions on the fleet that are actively running and hosting players.
-     * Amazon GameLift might prompt an instance shutdown when scaling down fleet capacity or when
-     * retiring unhealthy instances. You can also set game session protection for individual game
+     * @param newGameSessionProtectionPolicy Determines whether Amazon GameLift Servers can shut
+     * down game sessions on the fleet that are actively running and hosting players.
+     * Amazon GameLift Servers might prompt an instance shutdown when scaling down fleet capacity or
+     * when retiring unhealthy instances. You can also set game session protection for individual game
      * sessions using
      * [UpdateGameSession](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateGameSession.html)
      * .
@@ -866,7 +869,7 @@ public interface CfnContainerFleetProps {
 
     /**
      * The unique identifier for an AWS Identity and Access Management (IAM) role with permissions
-     * to run your containers on resources that are managed by Amazon GameLift.
+     * to run your containers on resources that are managed by Amazon GameLift Servers.
      *
      * See [Set up an IAM service
      * role](https://docs.aws.amazon.com/gamelift/latest/developerguide/setting-up-role.html) . This
@@ -941,8 +944,8 @@ public interface CfnContainerFleetProps {
     /**
      * The method that is used to collect container logs for the fleet.
      *
-     * Amazon GameLift saves all standard output for each container in logs, including game session
-     * logs.
+     * Amazon GameLift Servers saves all standard output for each container in logs, including game
+     * session logs.
      *
      * * `CLOUDWATCH` -- Send logs to an Amazon CloudWatch log group that you define. Each container
      * emits a log stream, which is organized in the log group.
@@ -963,11 +966,11 @@ public interface CfnContainerFleetProps {
     override fun metricGroups(): List<String> = unwrap(this).getMetricGroups() ?: emptyList()
 
     /**
-     * Determines whether Amazon GameLift can shut down game sessions on the fleet that are actively
-     * running and hosting players.
+     * Determines whether Amazon GameLift Servers can shut down game sessions on the fleet that are
+     * actively running and hosting players.
      *
-     * Amazon GameLift might prompt an instance shutdown when scaling down fleet capacity or when
-     * retiring unhealthy instances. You can also set game session protection for individual game
+     * Amazon GameLift Servers might prompt an instance shutdown when scaling down fleet capacity or
+     * when retiring unhealthy instances. You can also set game session protection for individual game
      * sessions using
      * [UpdateGameSession](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateGameSession.html)
      * .

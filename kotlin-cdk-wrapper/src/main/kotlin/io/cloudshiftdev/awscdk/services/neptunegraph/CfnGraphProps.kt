@@ -69,7 +69,7 @@ public interface CfnGraphProps {
   /**
    * The provisioned memory-optimized Neptune Capacity Units (m-NCUs) to use for the graph.
    *
-   * Min = 128
+   * Min = 16
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptunegraph-graph.html#cfn-neptunegraph-graph-provisionedmemory)
    */
@@ -154,7 +154,7 @@ public interface CfnGraphProps {
     /**
      * @param provisionedMemory The provisioned memory-optimized Neptune Capacity Units (m-NCUs) to
      * use for the graph. 
-     * Min = 128
+     * Min = 16
      */
     public fun provisionedMemory(provisionedMemory: Number)
 
@@ -273,7 +273,7 @@ public interface CfnGraphProps {
     /**
      * @param provisionedMemory The provisioned memory-optimized Neptune Capacity Units (m-NCUs) to
      * use for the graph. 
-     * Min = 128
+     * Min = 16
      */
     override fun provisionedMemory(provisionedMemory: Number) {
       cdkBuilder.provisionedMemory(provisionedMemory)
@@ -403,7 +403,7 @@ public interface CfnGraphProps {
     /**
      * The provisioned memory-optimized Neptune Capacity Units (m-NCUs) to use for the graph.
      *
-     * Min = 128
+     * Min = 16
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptunegraph-graph.html#cfn-neptunegraph-graph-provisionedmemory)
      */

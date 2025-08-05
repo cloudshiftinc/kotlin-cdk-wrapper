@@ -49,8 +49,8 @@ public interface CfnGroupMembershipProps {
   /**
    * An object containing the identifier of a group member.
    *
-   * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider that
-   * User as a group member.
+   * Setting the `MemberId` 's `UserId` field to a specific User's ID indicates that user is a
+   * member of the group.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-memberid)
    */
@@ -73,22 +73,22 @@ public interface CfnGroupMembershipProps {
 
     /**
      * @param memberId An object containing the identifier of a group member. 
-     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
-     * that User as a group member.
+     * Setting the `MemberId` 's `UserId` field to a specific User's ID indicates that user is a
+     * member of the group.
      */
     public fun memberId(memberId: IResolvable)
 
     /**
      * @param memberId An object containing the identifier of a group member. 
-     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
-     * that User as a group member.
+     * Setting the `MemberId` 's `UserId` field to a specific User's ID indicates that user is a
+     * member of the group.
      */
     public fun memberId(memberId: CfnGroupMembership.MemberIdProperty)
 
     /**
      * @param memberId An object containing the identifier of a group member. 
-     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
-     * that User as a group member.
+     * Setting the `MemberId` 's `UserId` field to a specific User's ID indicates that user is a
+     * member of the group.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fa3e7416f49dd106ef3a316c7088dc5389fea36b39fe7170fef8f8f5c32d2000")
@@ -116,8 +116,8 @@ public interface CfnGroupMembershipProps {
 
     /**
      * @param memberId An object containing the identifier of a group member. 
-     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
-     * that User as a group member.
+     * Setting the `MemberId` 's `UserId` field to a specific User's ID indicates that user is a
+     * member of the group.
      */
     override fun memberId(memberId: IResolvable) {
       cdkBuilder.memberId(memberId.let(IResolvable.Companion::unwrap))
@@ -125,8 +125,8 @@ public interface CfnGroupMembershipProps {
 
     /**
      * @param memberId An object containing the identifier of a group member. 
-     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
-     * that User as a group member.
+     * Setting the `MemberId` 's `UserId` field to a specific User's ID indicates that user is a
+     * member of the group.
      */
     override fun memberId(memberId: CfnGroupMembership.MemberIdProperty) {
       cdkBuilder.memberId(memberId.let(CfnGroupMembership.MemberIdProperty.Companion::unwrap))
@@ -134,8 +134,8 @@ public interface CfnGroupMembershipProps {
 
     /**
      * @param memberId An object containing the identifier of a group member. 
-     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
-     * that User as a group member.
+     * Setting the `MemberId` 's `UserId` field to a specific User's ID indicates that user is a
+     * member of the group.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fa3e7416f49dd106ef3a316c7088dc5389fea36b39fe7170fef8f8f5c32d2000")
@@ -167,8 +167,8 @@ public interface CfnGroupMembershipProps {
     /**
      * An object containing the identifier of a group member.
      *
-     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
-     * that User as a group member.
+     * Setting the `MemberId` 's `UserId` field to a specific User's ID indicates that user is a
+     * member of the group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-memberid)
      */

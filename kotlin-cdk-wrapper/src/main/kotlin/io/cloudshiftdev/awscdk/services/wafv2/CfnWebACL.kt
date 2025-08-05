@@ -40,8 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * You can associate a web ACL with one or more AWS resources to protect. The resources can be an
  * Amazon CloudFront distribution, an Amazon API Gateway REST API, an Application Load Balancer , an
- * AWS AppSync GraphQL API , an Amazon Cognito user pool, an AWS App Runner service, or an AWS Verified
- * Access instance.
+ * AWS AppSync GraphQL API , an Amazon Cognito user pool, an AWS App Runner service, an AWS Amplify
+ * application, or an AWS Verified Access instance.
  *
  * For more information, see [Web access control lists (web
  * ACLs)](https://docs.aws.amazon.com/waf/latest/developerguide/web-acl.html) in the *AWS WAF developer
@@ -244,6 +244,33 @@ public open class CfnWebACL(
   }
 
   /**
+   * Specifies data protection to apply to the web request data for the web ACL.
+   */
+  public open fun dataProtectionConfig(): Any? = unwrap(this).getDataProtectionConfig()
+
+  /**
+   * Specifies data protection to apply to the web request data for the web ACL.
+   */
+  public open fun dataProtectionConfig(`value`: IResolvable) {
+    unwrap(this).setDataProtectionConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Specifies data protection to apply to the web request data for the web ACL.
+   */
+  public open fun dataProtectionConfig(`value`: DataProtectionConfigProperty) {
+    unwrap(this).setDataProtectionConfig(`value`.let(DataProtectionConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * Specifies data protection to apply to the web request data for the web ACL.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("6ee74ab5680d18d3e39f908b2fd780402dfadabfa1ec2bfefd06a951ad9842b7")
+  public open fun dataProtectionConfig(`value`: DataProtectionConfigProperty.Builder.() -> Unit):
+      Unit = dataProtectionConfig(DataProtectionConfigProperty(`value`))
+
+  /**
    * The action to perform if none of the `Rules` contained in the `WebACL` match.
    */
   public open fun defaultAction(): Any = unwrap(this).getDefaultAction()
@@ -302,6 +329,39 @@ public open class CfnWebACL(
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
   }
+
+  /**
+   * Configures the level of DDoS protection that applies to web ACLs associated with Application
+   * Load Balancers.
+   */
+  public open fun onSourceDDoSProtectionConfig(): Any? =
+      unwrap(this).getOnSourceDDoSProtectionConfig()
+
+  /**
+   * Configures the level of DDoS protection that applies to web ACLs associated with Application
+   * Load Balancers.
+   */
+  public open fun onSourceDDoSProtectionConfig(`value`: IResolvable) {
+    unwrap(this).setOnSourceDDoSProtectionConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Configures the level of DDoS protection that applies to web ACLs associated with Application
+   * Load Balancers.
+   */
+  public open fun onSourceDDoSProtectionConfig(`value`: OnSourceDDoSProtectionConfigProperty) {
+    unwrap(this).setOnSourceDDoSProtectionConfig(`value`.let(OnSourceDDoSProtectionConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * Configures the level of DDoS protection that applies to web ACLs associated with Application
+   * Load Balancers.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("d296280fb6dc0873a558795153265002a541203c7677b5779020f0a9700564f8")
+  public open
+      fun onSourceDDoSProtectionConfig(`value`: OnSourceDDoSProtectionConfigProperty.Builder.() -> Unit):
+      Unit = onSourceDDoSProtectionConfig(OnSourceDDoSProtectionConfigProperty(`value`))
 
   /**
    * The rule statements used to identify the web requests that you want to manage.
@@ -601,6 +661,57 @@ public open class CfnWebACL(
     public fun customResponseBodies(customResponseBodies: Map<String, Any>)
 
     /**
+     * Specifies data protection to apply to the web request data for the web ACL.
+     *
+     * This is a web ACL level data protection option.
+     *
+     * The data protection that you configure for the web ACL alters the data that's available for
+     * any other data collection activity, including your AWS WAF logging destinations, web ACL request
+     * sampling, and Amazon Security Lake data collection and management. Your other option for data
+     * protection is in the logging configuration, which only affects logging.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-dataprotectionconfig)
+     * @param dataProtectionConfig Specifies data protection to apply to the web request data for
+     * the web ACL. 
+     */
+    public fun dataProtectionConfig(dataProtectionConfig: IResolvable)
+
+    /**
+     * Specifies data protection to apply to the web request data for the web ACL.
+     *
+     * This is a web ACL level data protection option.
+     *
+     * The data protection that you configure for the web ACL alters the data that's available for
+     * any other data collection activity, including your AWS WAF logging destinations, web ACL request
+     * sampling, and Amazon Security Lake data collection and management. Your other option for data
+     * protection is in the logging configuration, which only affects logging.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-dataprotectionconfig)
+     * @param dataProtectionConfig Specifies data protection to apply to the web request data for
+     * the web ACL. 
+     */
+    public fun dataProtectionConfig(dataProtectionConfig: DataProtectionConfigProperty)
+
+    /**
+     * Specifies data protection to apply to the web request data for the web ACL.
+     *
+     * This is a web ACL level data protection option.
+     *
+     * The data protection that you configure for the web ACL alters the data that's available for
+     * any other data collection activity, including your AWS WAF logging destinations, web ACL request
+     * sampling, and Amazon Security Lake data collection and management. Your other option for data
+     * protection is in the logging configuration, which only affects logging.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-dataprotectionconfig)
+     * @param dataProtectionConfig Specifies data protection to apply to the web request data for
+     * the web ACL. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ccacf337d48b680b9c09636de822d3de83697a699d77ea7024b504c92e393e1f")
+    public
+        fun dataProtectionConfig(dataProtectionConfig: DataProtectionConfigProperty.Builder.() -> Unit)
+
+    /**
      * The action to perform if none of the `Rules` contained in the `WebACL` match.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-defaultaction)
@@ -648,6 +759,40 @@ public open class CfnWebACL(
     public fun name(name: String)
 
     /**
+     * Configures the level of DDoS protection that applies to web ACLs associated with Application
+     * Load Balancers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-onsourceddosprotectionconfig)
+     * @param onSourceDDoSProtectionConfig Configures the level of DDoS protection that applies to
+     * web ACLs associated with Application Load Balancers. 
+     */
+    public fun onSourceDDoSProtectionConfig(onSourceDDoSProtectionConfig: IResolvable)
+
+    /**
+     * Configures the level of DDoS protection that applies to web ACLs associated with Application
+     * Load Balancers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-onsourceddosprotectionconfig)
+     * @param onSourceDDoSProtectionConfig Configures the level of DDoS protection that applies to
+     * web ACLs associated with Application Load Balancers. 
+     */
+    public
+        fun onSourceDDoSProtectionConfig(onSourceDDoSProtectionConfig: OnSourceDDoSProtectionConfigProperty)
+
+    /**
+     * Configures the level of DDoS protection that applies to web ACLs associated with Application
+     * Load Balancers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-onsourceddosprotectionconfig)
+     * @param onSourceDDoSProtectionConfig Configures the level of DDoS protection that applies to
+     * web ACLs associated with Application Load Balancers. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a2d81c6c4c9453c1a0ccd83a89be090e93a9dff5bb21987c1666e0000059dab0")
+    public
+        fun onSourceDDoSProtectionConfig(onSourceDDoSProtectionConfig: OnSourceDDoSProtectionConfigProperty.Builder.() -> Unit)
+
+    /**
      * The rule statements used to identify the web requests that you want to manage.
      *
      * Each rule includes one top-level statement that AWS WAF uses to identify matching web
@@ -684,9 +829,10 @@ public open class CfnWebACL(
      * Specifies whether this is for an Amazon CloudFront distribution or for a regional
      * application.
      *
-     * A regional application can be an Application Load Balancer (ALB), an Amazon API Gateway REST
-     * API, an AWS AppSync GraphQL API, an Amazon Cognito user pool, an AWS App Runner service, or an
-     * AWS Verified Access instance. Valid Values are `CLOUDFRONT` and `REGIONAL` .
+     * For an AWS Amplify application, use `CLOUDFRONT` . A regional application can be an
+     * Application Load Balancer (ALB), an Amazon API Gateway REST API, an AWS AppSync GraphQL API, an
+     * Amazon Cognito user pool, an AWS App Runner service, or an AWS Verified Access instance. Valid
+     * Values are `CLOUDFRONT` and `REGIONAL` .
      *
      *
      * For `CLOUDFRONT` , you must create your WAFv2 resources in the US East (N. Virginia) Region,
@@ -1010,6 +1156,62 @@ public open class CfnWebACL(
     }
 
     /**
+     * Specifies data protection to apply to the web request data for the web ACL.
+     *
+     * This is a web ACL level data protection option.
+     *
+     * The data protection that you configure for the web ACL alters the data that's available for
+     * any other data collection activity, including your AWS WAF logging destinations, web ACL request
+     * sampling, and Amazon Security Lake data collection and management. Your other option for data
+     * protection is in the logging configuration, which only affects logging.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-dataprotectionconfig)
+     * @param dataProtectionConfig Specifies data protection to apply to the web request data for
+     * the web ACL. 
+     */
+    override fun dataProtectionConfig(dataProtectionConfig: IResolvable) {
+      cdkBuilder.dataProtectionConfig(dataProtectionConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Specifies data protection to apply to the web request data for the web ACL.
+     *
+     * This is a web ACL level data protection option.
+     *
+     * The data protection that you configure for the web ACL alters the data that's available for
+     * any other data collection activity, including your AWS WAF logging destinations, web ACL request
+     * sampling, and Amazon Security Lake data collection and management. Your other option for data
+     * protection is in the logging configuration, which only affects logging.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-dataprotectionconfig)
+     * @param dataProtectionConfig Specifies data protection to apply to the web request data for
+     * the web ACL. 
+     */
+    override fun dataProtectionConfig(dataProtectionConfig: DataProtectionConfigProperty) {
+      cdkBuilder.dataProtectionConfig(dataProtectionConfig.let(DataProtectionConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * Specifies data protection to apply to the web request data for the web ACL.
+     *
+     * This is a web ACL level data protection option.
+     *
+     * The data protection that you configure for the web ACL alters the data that's available for
+     * any other data collection activity, including your AWS WAF logging destinations, web ACL request
+     * sampling, and Amazon Security Lake data collection and management. Your other option for data
+     * protection is in the logging configuration, which only affects logging.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-dataprotectionconfig)
+     * @param dataProtectionConfig Specifies data protection to apply to the web request data for
+     * the web ACL. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ccacf337d48b680b9c09636de822d3de83697a699d77ea7024b504c92e393e1f")
+    override
+        fun dataProtectionConfig(dataProtectionConfig: DataProtectionConfigProperty.Builder.() -> Unit):
+        Unit = dataProtectionConfig(DataProtectionConfigProperty(dataProtectionConfig))
+
+    /**
      * The action to perform if none of the `Rules` contained in the `WebACL` match.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-defaultaction)
@@ -1066,6 +1268,46 @@ public open class CfnWebACL(
     }
 
     /**
+     * Configures the level of DDoS protection that applies to web ACLs associated with Application
+     * Load Balancers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-onsourceddosprotectionconfig)
+     * @param onSourceDDoSProtectionConfig Configures the level of DDoS protection that applies to
+     * web ACLs associated with Application Load Balancers. 
+     */
+    override fun onSourceDDoSProtectionConfig(onSourceDDoSProtectionConfig: IResolvable) {
+      cdkBuilder.onSourceDDoSProtectionConfig(onSourceDDoSProtectionConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Configures the level of DDoS protection that applies to web ACLs associated with Application
+     * Load Balancers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-onsourceddosprotectionconfig)
+     * @param onSourceDDoSProtectionConfig Configures the level of DDoS protection that applies to
+     * web ACLs associated with Application Load Balancers. 
+     */
+    override
+        fun onSourceDDoSProtectionConfig(onSourceDDoSProtectionConfig: OnSourceDDoSProtectionConfigProperty) {
+      cdkBuilder.onSourceDDoSProtectionConfig(onSourceDDoSProtectionConfig.let(OnSourceDDoSProtectionConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * Configures the level of DDoS protection that applies to web ACLs associated with Application
+     * Load Balancers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-onsourceddosprotectionconfig)
+     * @param onSourceDDoSProtectionConfig Configures the level of DDoS protection that applies to
+     * web ACLs associated with Application Load Balancers. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a2d81c6c4c9453c1a0ccd83a89be090e93a9dff5bb21987c1666e0000059dab0")
+    override
+        fun onSourceDDoSProtectionConfig(onSourceDDoSProtectionConfig: OnSourceDDoSProtectionConfigProperty.Builder.() -> Unit):
+        Unit =
+        onSourceDDoSProtectionConfig(OnSourceDDoSProtectionConfigProperty(onSourceDDoSProtectionConfig))
+
+    /**
      * The rule statements used to identify the web requests that you want to manage.
      *
      * Each rule includes one top-level statement that AWS WAF uses to identify matching web
@@ -1106,9 +1348,10 @@ public open class CfnWebACL(
      * Specifies whether this is for an Amazon CloudFront distribution or for a regional
      * application.
      *
-     * A regional application can be an Application Load Balancer (ALB), an Amazon API Gateway REST
-     * API, an AWS AppSync GraphQL API, an Amazon Cognito user pool, an AWS App Runner service, or an
-     * AWS Verified Access instance. Valid Values are `CLOUDFRONT` and `REGIONAL` .
+     * For an AWS Amplify application, use `CLOUDFRONT` . A regional application can be an
+     * Application Load Balancer (ALB), an Amazon API Gateway REST API, an AWS AppSync GraphQL API, an
+     * Amazon Cognito user pool, an AWS App Runner service, or an AWS Verified Access instance. Valid
+     * Values are `CLOUDFRONT` and `REGIONAL` .
      *
      *
      * For `CLOUDFRONT` , you must create your WAFv2 resources in the US East (N. Virginia) Region,
@@ -1255,6 +1498,13 @@ public open class CfnWebACL(
    * `AWSManagedRulesACFPRuleSet` .
    *
    * This configuration is used in `ManagedRuleGroupConfig` .
+   *
+   * For additional information about this and the other intelligent threat mitigation rule groups,
+   * see [Intelligent threat mitigation in AWS
+   * WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-managed-protections) and [AWS
+   * Managed Rules rule groups
+   * list](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list) in the
+   * *AWS WAF Developer Guide* .
    *
    * Example:
    *
@@ -1753,6 +2003,13 @@ public open class CfnWebACL(
    *
    * This configuration is used in `ManagedRuleGroupConfig` .
    *
+   * For additional information about this and the other intelligent threat mitigation rule groups,
+   * see [Intelligent threat mitigation in AWS
+   * WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-managed-protections) and [AWS
+   * Managed Rules rule groups
+   * list](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list) in the
+   * *AWS WAF Developer Guide* .
+   *
    * Example:
    *
    * ```
@@ -2142,10 +2399,253 @@ public open class CfnWebACL(
   }
 
   /**
+   * Configures the use of the anti-DDoS managed rule group, `AWSManagedRulesAntiDDoSRuleSet` . This
+   * configuration is used in `ManagedRuleGroupConfig` .
+   *
+   * The configuration that you provide here determines whether and how the rules in the rule group
+   * are used.
+   *
+   * For additional information about this and the other intelligent threat mitigation rule groups,
+   * see [Intelligent threat mitigation in AWS
+   * WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-managed-protections) and [AWS
+   * Managed Rules rule groups
+   * list](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list) in the
+   * *AWS WAF Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * AWSManagedRulesAntiDDoSRuleSetProperty aWSManagedRulesAntiDDoSRuleSetProperty =
+   * AWSManagedRulesAntiDDoSRuleSetProperty.builder()
+   * .clientSideActionConfig(ClientSideActionConfigProperty.builder()
+   * .challenge(ClientSideActionProperty.builder()
+   * .usageOfAction("usageOfAction")
+   * // the properties below are optional
+   * .exemptUriRegularExpressions(List.of(RegexProperty.builder()
+   * .regexString("regexString")
+   * .build()))
+   * .sensitivity("sensitivity")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .sensitivityToBlock("sensitivityToBlock")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-awsmanagedrulesantiddosruleset.html)
+   */
+  public interface AWSManagedRulesAntiDDoSRuleSetProperty {
+    /**
+     * Configures the request handling that's applied by the managed rule group rules
+     * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` during a distributed denial of service
+     * (DDoS) attack.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-awsmanagedrulesantiddosruleset.html#cfn-wafv2-webacl-awsmanagedrulesantiddosruleset-clientsideactionconfig)
+     */
+    public fun clientSideActionConfig(): Any
+
+    /**
+     * The sensitivity that the rule group rule `DDoSRequests` uses when matching against the DDoS
+     * suspicion labeling on a request.
+     *
+     * The managed rule group adds the labeling during DDoS events, before the `DDoSRequests` rule
+     * runs.
+     *
+     * The higher the sensitivity, the more levels of labeling that the rule matches:
+     *
+     * * Low sensitivity is less sensitive, causing the rule to match only on the most likely
+     * participants in an attack, which are the requests with the high suspicion label
+     * `awswaf:managed:aws:anti-ddos:high-suspicion-ddos-request` .
+     * * Medium sensitivity causes the rule to match on the medium and high suspicion labels.
+     * * High sensitivity causes the rule to match on all of the suspicion labels: low, medium, and
+     * high.
+     *
+     * Default: `LOW`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-awsmanagedrulesantiddosruleset.html#cfn-wafv2-webacl-awsmanagedrulesantiddosruleset-sensitivitytoblock)
+     */
+    public fun sensitivityToBlock(): String? = unwrap(this).getSensitivityToBlock()
+
+    /**
+     * A builder for [AWSManagedRulesAntiDDoSRuleSetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clientSideActionConfig Configures the request handling that's applied by the managed
+       * rule group rules `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` during a distributed
+       * denial of service (DDoS) attack. 
+       */
+      public fun clientSideActionConfig(clientSideActionConfig: IResolvable)
+
+      /**
+       * @param clientSideActionConfig Configures the request handling that's applied by the managed
+       * rule group rules `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` during a distributed
+       * denial of service (DDoS) attack. 
+       */
+      public fun clientSideActionConfig(clientSideActionConfig: ClientSideActionConfigProperty)
+
+      /**
+       * @param clientSideActionConfig Configures the request handling that's applied by the managed
+       * rule group rules `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` during a distributed
+       * denial of service (DDoS) attack. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("379ed386273663371ad93f9bc69b86f98062a9e14eec5fa619f0de6469817fef")
+      public
+          fun clientSideActionConfig(clientSideActionConfig: ClientSideActionConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param sensitivityToBlock The sensitivity that the rule group rule `DDoSRequests` uses when
+       * matching against the DDoS suspicion labeling on a request.
+       * The managed rule group adds the labeling during DDoS events, before the `DDoSRequests` rule
+       * runs.
+       *
+       * The higher the sensitivity, the more levels of labeling that the rule matches:
+       *
+       * * Low sensitivity is less sensitive, causing the rule to match only on the most likely
+       * participants in an attack, which are the requests with the high suspicion label
+       * `awswaf:managed:aws:anti-ddos:high-suspicion-ddos-request` .
+       * * Medium sensitivity causes the rule to match on the medium and high suspicion labels.
+       * * High sensitivity causes the rule to match on all of the suspicion labels: low, medium,
+       * and high.
+       *
+       * Default: `LOW`
+       */
+      public fun sensitivityToBlock(sensitivityToBlock: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnWebACL.AWSManagedRulesAntiDDoSRuleSetProperty.Builder
+          =
+          software.amazon.awscdk.services.wafv2.CfnWebACL.AWSManagedRulesAntiDDoSRuleSetProperty.builder()
+
+      /**
+       * @param clientSideActionConfig Configures the request handling that's applied by the managed
+       * rule group rules `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` during a distributed
+       * denial of service (DDoS) attack. 
+       */
+      override fun clientSideActionConfig(clientSideActionConfig: IResolvable) {
+        cdkBuilder.clientSideActionConfig(clientSideActionConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param clientSideActionConfig Configures the request handling that's applied by the managed
+       * rule group rules `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` during a distributed
+       * denial of service (DDoS) attack. 
+       */
+      override fun clientSideActionConfig(clientSideActionConfig: ClientSideActionConfigProperty) {
+        cdkBuilder.clientSideActionConfig(clientSideActionConfig.let(ClientSideActionConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param clientSideActionConfig Configures the request handling that's applied by the managed
+       * rule group rules `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` during a distributed
+       * denial of service (DDoS) attack. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("379ed386273663371ad93f9bc69b86f98062a9e14eec5fa619f0de6469817fef")
+      override
+          fun clientSideActionConfig(clientSideActionConfig: ClientSideActionConfigProperty.Builder.() -> Unit):
+          Unit = clientSideActionConfig(ClientSideActionConfigProperty(clientSideActionConfig))
+
+      /**
+       * @param sensitivityToBlock The sensitivity that the rule group rule `DDoSRequests` uses when
+       * matching against the DDoS suspicion labeling on a request.
+       * The managed rule group adds the labeling during DDoS events, before the `DDoSRequests` rule
+       * runs.
+       *
+       * The higher the sensitivity, the more levels of labeling that the rule matches:
+       *
+       * * Low sensitivity is less sensitive, causing the rule to match only on the most likely
+       * participants in an attack, which are the requests with the high suspicion label
+       * `awswaf:managed:aws:anti-ddos:high-suspicion-ddos-request` .
+       * * Medium sensitivity causes the rule to match on the medium and high suspicion labels.
+       * * High sensitivity causes the rule to match on all of the suspicion labels: low, medium,
+       * and high.
+       *
+       * Default: `LOW`
+       */
+      override fun sensitivityToBlock(sensitivityToBlock: String) {
+        cdkBuilder.sensitivityToBlock(sensitivityToBlock)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.wafv2.CfnWebACL.AWSManagedRulesAntiDDoSRuleSetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AWSManagedRulesAntiDDoSRuleSetProperty,
+    ) : CdkObject(cdkObject),
+        AWSManagedRulesAntiDDoSRuleSetProperty {
+      /**
+       * Configures the request handling that's applied by the managed rule group rules
+       * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` during a distributed denial of service
+       * (DDoS) attack.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-awsmanagedrulesantiddosruleset.html#cfn-wafv2-webacl-awsmanagedrulesantiddosruleset-clientsideactionconfig)
+       */
+      override fun clientSideActionConfig(): Any = unwrap(this).getClientSideActionConfig()
+
+      /**
+       * The sensitivity that the rule group rule `DDoSRequests` uses when matching against the DDoS
+       * suspicion labeling on a request.
+       *
+       * The managed rule group adds the labeling during DDoS events, before the `DDoSRequests` rule
+       * runs.
+       *
+       * The higher the sensitivity, the more levels of labeling that the rule matches:
+       *
+       * * Low sensitivity is less sensitive, causing the rule to match only on the most likely
+       * participants in an attack, which are the requests with the high suspicion label
+       * `awswaf:managed:aws:anti-ddos:high-suspicion-ddos-request` .
+       * * Medium sensitivity causes the rule to match on the medium and high suspicion labels.
+       * * High sensitivity causes the rule to match on all of the suspicion labels: low, medium,
+       * and high.
+       *
+       * Default: `LOW`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-awsmanagedrulesantiddosruleset.html#cfn-wafv2-webacl-awsmanagedrulesantiddosruleset-sensitivitytoblock)
+       */
+      override fun sensitivityToBlock(): String? = unwrap(this).getSensitivityToBlock()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AWSManagedRulesAntiDDoSRuleSetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AWSManagedRulesAntiDDoSRuleSetProperty):
+          AWSManagedRulesAntiDDoSRuleSetProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AWSManagedRulesAntiDDoSRuleSetProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AWSManagedRulesAntiDDoSRuleSetProperty):
+          software.amazon.awscdk.services.wafv2.CfnWebACL.AWSManagedRulesAntiDDoSRuleSetProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnWebACL.AWSManagedRulesAntiDDoSRuleSetProperty
+    }
+  }
+
+  /**
    * Details for your use of the Bot Control managed rule group, `AWSManagedRulesBotControlRuleSet`
    * .
    *
    * This configuration is used in `ManagedRuleGroupConfig` .
+   *
+   * For additional information about this and the other intelligent threat mitigation rule groups,
+   * see [Intelligent threat mitigation in AWS
+   * WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-managed-protections) and [AWS
+   * Managed Rules rule groups
+   * list](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list) in the
+   * *AWS WAF Developer Guide* .
    *
    * Example:
    *
@@ -2622,6 +3122,216 @@ public open class CfnWebACL(
   }
 
   /**
+   * A rule statement that inspects web traffic based on the Autonomous System Number (ASN)
+   * associated with the request's IP address.
+   *
+   * For additional details, see [ASN match rule
+   * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+   * in the [AWS WAF Developer
+   * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * AsnMatchStatementProperty asnMatchStatementProperty = AsnMatchStatementProperty.builder()
+   * .asnList(List.of(123))
+   * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .headerName("headerName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-asnmatchstatement.html)
+   */
+  public interface AsnMatchStatementProperty {
+    /**
+     * Contains one or more Autonomous System Numbers (ASNs).
+     *
+     * ASNs are unique identifiers assigned to large internet networks managed by organizations such
+     * as internet service providers, enterprises, universities, or government agencies.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-asnmatchstatement.html#cfn-wafv2-webacl-asnmatchstatement-asnlist)
+     */
+    public fun asnList(): Any? = unwrap(this).getAsnList()
+
+    /**
+     * The configuration for inspecting IP addresses to match against an ASN in an HTTP header that
+     * you specify, instead of using the IP address that's reported by the web request origin.
+     *
+     * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-asnmatchstatement.html#cfn-wafv2-webacl-asnmatchstatement-forwardedipconfig)
+     */
+    public fun forwardedIpConfig(): Any? = unwrap(this).getForwardedIpConfig()
+
+    /**
+     * A builder for [AsnMatchStatementProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param asnList Contains one or more Autonomous System Numbers (ASNs).
+       * ASNs are unique identifiers assigned to large internet networks managed by organizations
+       * such as internet service providers, enterprises, universities, or government agencies.
+       */
+      public fun asnList(asnList: List<Number>)
+
+      /**
+       * @param asnList Contains one or more Autonomous System Numbers (ASNs).
+       * ASNs are unique identifiers assigned to large internet networks managed by organizations
+       * such as internet service providers, enterprises, universities, or government agencies.
+       */
+      public fun asnList(vararg asnList: Number)
+
+      /**
+       * @param asnList Contains one or more Autonomous System Numbers (ASNs).
+       * ASNs are unique identifiers assigned to large internet networks managed by organizations
+       * such as internet service providers, enterprises, universities, or government agencies.
+       */
+      public fun asnList(asnList: IResolvable)
+
+      /**
+       * @param forwardedIpConfig The configuration for inspecting IP addresses to match against an
+       * ASN in an HTTP header that you specify, instead of using the IP address that's reported by the
+       * web request origin.
+       * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+       */
+      public fun forwardedIpConfig(forwardedIpConfig: IResolvable)
+
+      /**
+       * @param forwardedIpConfig The configuration for inspecting IP addresses to match against an
+       * ASN in an HTTP header that you specify, instead of using the IP address that's reported by the
+       * web request origin.
+       * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+       */
+      public fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty)
+
+      /**
+       * @param forwardedIpConfig The configuration for inspecting IP addresses to match against an
+       * ASN in an HTTP header that you specify, instead of using the IP address that's reported by the
+       * web request origin.
+       * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9cda49f2c264414a64086c59dc7395b1e079d842bdb2e9c863d47562345e8628")
+      public
+          fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnWebACL.AsnMatchStatementProperty.Builder =
+          software.amazon.awscdk.services.wafv2.CfnWebACL.AsnMatchStatementProperty.builder()
+
+      /**
+       * @param asnList Contains one or more Autonomous System Numbers (ASNs).
+       * ASNs are unique identifiers assigned to large internet networks managed by organizations
+       * such as internet service providers, enterprises, universities, or government agencies.
+       */
+      override fun asnList(asnList: List<Number>) {
+        cdkBuilder.asnList(asnList)
+      }
+
+      /**
+       * @param asnList Contains one or more Autonomous System Numbers (ASNs).
+       * ASNs are unique identifiers assigned to large internet networks managed by organizations
+       * such as internet service providers, enterprises, universities, or government agencies.
+       */
+      override fun asnList(vararg asnList: Number): Unit = asnList(asnList.toList())
+
+      /**
+       * @param asnList Contains one or more Autonomous System Numbers (ASNs).
+       * ASNs are unique identifiers assigned to large internet networks managed by organizations
+       * such as internet service providers, enterprises, universities, or government agencies.
+       */
+      override fun asnList(asnList: IResolvable) {
+        cdkBuilder.asnList(asnList.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param forwardedIpConfig The configuration for inspecting IP addresses to match against an
+       * ASN in an HTTP header that you specify, instead of using the IP address that's reported by the
+       * web request origin.
+       * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+       */
+      override fun forwardedIpConfig(forwardedIpConfig: IResolvable) {
+        cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param forwardedIpConfig The configuration for inspecting IP addresses to match against an
+       * ASN in an HTTP header that you specify, instead of using the IP address that's reported by the
+       * web request origin.
+       * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+       */
+      override fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty) {
+        cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(ForwardedIPConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param forwardedIpConfig The configuration for inspecting IP addresses to match against an
+       * ASN in an HTTP header that you specify, instead of using the IP address that's reported by the
+       * web request origin.
+       * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9cda49f2c264414a64086c59dc7395b1e079d842bdb2e9c863d47562345e8628")
+      override
+          fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty.Builder.() -> Unit):
+          Unit = forwardedIpConfig(ForwardedIPConfigurationProperty(forwardedIpConfig))
+
+      public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.AsnMatchStatementProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AsnMatchStatementProperty,
+    ) : CdkObject(cdkObject),
+        AsnMatchStatementProperty {
+      /**
+       * Contains one or more Autonomous System Numbers (ASNs).
+       *
+       * ASNs are unique identifiers assigned to large internet networks managed by organizations
+       * such as internet service providers, enterprises, universities, or government agencies.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-asnmatchstatement.html#cfn-wafv2-webacl-asnmatchstatement-asnlist)
+       */
+      override fun asnList(): Any? = unwrap(this).getAsnList()
+
+      /**
+       * The configuration for inspecting IP addresses to match against an ASN in an HTTP header
+       * that you specify, instead of using the IP address that's reported by the web request origin.
+       *
+       * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-asnmatchstatement.html#cfn-wafv2-webacl-asnmatchstatement-forwardedipconfig)
+       */
+      override fun forwardedIpConfig(): Any? = unwrap(this).getForwardedIpConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AsnMatchStatementProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AsnMatchStatementProperty):
+          AsnMatchStatementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AsnMatchStatementProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AsnMatchStatementProperty):
+          software.amazon.awscdk.services.wafv2.CfnWebACL.AsnMatchStatementProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnWebACL.AsnMatchStatementProperty
+    }
+  }
+
+  /**
    * Specifies custom configurations for the associations between the web ACL and protected
    * resources.
    *
@@ -3002,6 +3712,7 @@ public open class CfnWebACL(
      * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
      * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the web
      * ACL `AssociationConfig` , for additional processing fees.
+     * * For AWS Amplify , use the CloudFront limit.
      *
      * The options for oversize handling are the following:
      *
@@ -3037,6 +3748,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * The options for oversize handling are the following:
        *
@@ -3070,6 +3782,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * The options for oversize handling are the following:
        *
@@ -3108,6 +3821,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * The options for oversize handling are the following:
        *
@@ -3190,6 +3904,9 @@ public open class CfnWebACL(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -3204,6 +3921,9 @@ public open class CfnWebACL(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .positionalConstraint("positionalConstraint")
@@ -4291,6 +5011,667 @@ public open class CfnWebACL(
           software.amazon.awscdk.services.wafv2.CfnWebACL.ChallengeConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.wafv2.CfnWebACL.ChallengeConfigProperty
+    }
+  }
+
+  /**
+   * This is part of the configuration for the managed rules `AWSManagedRulesAntiDDoSRuleSet` in
+   * `ManagedRuleGroupConfig` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * ClientSideActionConfigProperty clientSideActionConfigProperty =
+   * ClientSideActionConfigProperty.builder()
+   * .challenge(ClientSideActionProperty.builder()
+   * .usageOfAction("usageOfAction")
+   * // the properties below are optional
+   * .exemptUriRegularExpressions(List.of(RegexProperty.builder()
+   * .regexString("regexString")
+   * .build()))
+   * .sensitivity("sensitivity")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-clientsideactionconfig.html)
+   */
+  public interface ClientSideActionConfigProperty {
+    /**
+     * Configuration for the use of the `AWSManagedRulesAntiDDoSRuleSet` rules
+     * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` .
+     *
+     *
+     * This setting isn't related to the configuration of the `Challenge` action itself. It only
+     * configures the use of the two anti-DDoS rules named here.
+     *
+     *
+     * You can enable or disable the use of these rules, and you can configure how to use them when
+     * they are enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-clientsideactionconfig.html#cfn-wafv2-webacl-clientsideactionconfig-challenge)
+     */
+    public fun challenge(): Any
+
+    /**
+     * A builder for [ClientSideActionConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param challenge Configuration for the use of the `AWSManagedRulesAntiDDoSRuleSet` rules
+       * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` . 
+       *
+       * This setting isn't related to the configuration of the `Challenge` action itself. It only
+       * configures the use of the two anti-DDoS rules named here.
+       *
+       *
+       * You can enable or disable the use of these rules, and you can configure how to use them
+       * when they are enabled.
+       */
+      public fun challenge(challenge: IResolvable)
+
+      /**
+       * @param challenge Configuration for the use of the `AWSManagedRulesAntiDDoSRuleSet` rules
+       * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` . 
+       *
+       * This setting isn't related to the configuration of the `Challenge` action itself. It only
+       * configures the use of the two anti-DDoS rules named here.
+       *
+       *
+       * You can enable or disable the use of these rules, and you can configure how to use them
+       * when they are enabled.
+       */
+      public fun challenge(challenge: ClientSideActionProperty)
+
+      /**
+       * @param challenge Configuration for the use of the `AWSManagedRulesAntiDDoSRuleSet` rules
+       * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` . 
+       *
+       * This setting isn't related to the configuration of the `Challenge` action itself. It only
+       * configures the use of the two anti-DDoS rules named here.
+       *
+       *
+       * You can enable or disable the use of these rules, and you can configure how to use them
+       * when they are enabled.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2ad5b78abd0b6eb616ee9e448264d8f0ead01f0ab187f5c091512f6f2ff6e5db")
+      public fun challenge(challenge: ClientSideActionProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnWebACL.ClientSideActionConfigProperty.Builder =
+          software.amazon.awscdk.services.wafv2.CfnWebACL.ClientSideActionConfigProperty.builder()
+
+      /**
+       * @param challenge Configuration for the use of the `AWSManagedRulesAntiDDoSRuleSet` rules
+       * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` . 
+       *
+       * This setting isn't related to the configuration of the `Challenge` action itself. It only
+       * configures the use of the two anti-DDoS rules named here.
+       *
+       *
+       * You can enable or disable the use of these rules, and you can configure how to use them
+       * when they are enabled.
+       */
+      override fun challenge(challenge: IResolvable) {
+        cdkBuilder.challenge(challenge.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param challenge Configuration for the use of the `AWSManagedRulesAntiDDoSRuleSet` rules
+       * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` . 
+       *
+       * This setting isn't related to the configuration of the `Challenge` action itself. It only
+       * configures the use of the two anti-DDoS rules named here.
+       *
+       *
+       * You can enable or disable the use of these rules, and you can configure how to use them
+       * when they are enabled.
+       */
+      override fun challenge(challenge: ClientSideActionProperty) {
+        cdkBuilder.challenge(challenge.let(ClientSideActionProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param challenge Configuration for the use of the `AWSManagedRulesAntiDDoSRuleSet` rules
+       * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` . 
+       *
+       * This setting isn't related to the configuration of the `Challenge` action itself. It only
+       * configures the use of the two anti-DDoS rules named here.
+       *
+       *
+       * You can enable or disable the use of these rules, and you can configure how to use them
+       * when they are enabled.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2ad5b78abd0b6eb616ee9e448264d8f0ead01f0ab187f5c091512f6f2ff6e5db")
+      override fun challenge(challenge: ClientSideActionProperty.Builder.() -> Unit): Unit =
+          challenge(ClientSideActionProperty(challenge))
+
+      public fun build():
+          software.amazon.awscdk.services.wafv2.CfnWebACL.ClientSideActionConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ClientSideActionConfigProperty,
+    ) : CdkObject(cdkObject),
+        ClientSideActionConfigProperty {
+      /**
+       * Configuration for the use of the `AWSManagedRulesAntiDDoSRuleSet` rules
+       * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` .
+       *
+       *
+       * This setting isn't related to the configuration of the `Challenge` action itself. It only
+       * configures the use of the two anti-DDoS rules named here.
+       *
+       *
+       * You can enable or disable the use of these rules, and you can configure how to use them
+       * when they are enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-clientsideactionconfig.html#cfn-wafv2-webacl-clientsideactionconfig-challenge)
+       */
+      override fun challenge(): Any = unwrap(this).getChallenge()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClientSideActionConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ClientSideActionConfigProperty):
+          ClientSideActionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClientSideActionConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClientSideActionConfigProperty):
+          software.amazon.awscdk.services.wafv2.CfnWebACL.ClientSideActionConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnWebACL.ClientSideActionConfigProperty
+    }
+  }
+
+  /**
+   * This is part of the `AWSManagedRulesAntiDDoSRuleSet` `ClientSideActionConfig` configuration in
+   * `ManagedRuleGroupConfig` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * ClientSideActionProperty clientSideActionProperty = ClientSideActionProperty.builder()
+   * .usageOfAction("usageOfAction")
+   * // the properties below are optional
+   * .exemptUriRegularExpressions(List.of(RegexProperty.builder()
+   * .regexString("regexString")
+   * .build()))
+   * .sensitivity("sensitivity")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-clientsideaction.html)
+   */
+  public interface ClientSideActionProperty {
+    /**
+     * The regular expression to match against the web request URI, used to identify requests that
+     * can't handle a silent browser challenge.
+     *
+     * When the `ClientSideAction` setting `UsageOfAction` is enabled, the managed rule group uses
+     * this setting to determine which requests to label with
+     * `awswaf:managed:aws:anti-ddos:challengeable-request` . If `UsageOfAction` is disabled, this
+     * setting has no effect and the managed rule group doesn't add the label to any requests.
+     *
+     * The anti-DDoS managed rule group doesn't evaluate the rules `ChallengeDDoSRequests` or
+     * `ChallengeAllDuringEvent` for web requests whose URIs match this regex. This is true regardless
+     * of whether you override the rule action for either of the rules in your web ACL configuration.
+     *
+     * AWS recommends using a regular expression.
+     *
+     * This setting is required if `UsageOfAction` is set to `ENABLED` . If required, you can
+     * provide between 1 and 5 regex objects in the array of settings.
+     *
+     * AWS recommends starting with the following setting. Review and update it for your
+     * application's needs:
+     *
+     * `\/api\/|\.(acc|avi|css|gif|jpe?g|js|mp[34]|ogg|otf|pdf|png|tiff?|ttf|webm|webp|woff2?)$`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-clientsideaction.html#cfn-wafv2-webacl-clientsideaction-exempturiregularexpressions)
+     */
+    public fun exemptUriRegularExpressions(): Any? = unwrap(this).getExemptUriRegularExpressions()
+
+    /**
+     * The sensitivity that the rule group rule `ChallengeDDoSRequests` uses when matching against
+     * the DDoS suspicion labeling on a request.
+     *
+     * The managed rule group adds the labeling during DDoS events, before the
+     * `ChallengeDDoSRequests` rule runs.
+     *
+     * The higher the sensitivity, the more levels of labeling that the rule matches:
+     *
+     * * Low sensitivity is less sensitive, causing the rule to match only on the most likely
+     * participants in an attack, which are the requests with the high suspicion label
+     * `awswaf:managed:aws:anti-ddos:high-suspicion-ddos-request` .
+     * * Medium sensitivity causes the rule to match on the medium and high suspicion labels.
+     * * High sensitivity causes the rule to match on all of the suspicion labels: low, medium, and
+     * high.
+     *
+     * Default: `HIGH`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-clientsideaction.html#cfn-wafv2-webacl-clientsideaction-sensitivity)
+     */
+    public fun sensitivity(): String? = unwrap(this).getSensitivity()
+
+    /**
+     * Determines whether to use the `AWSManagedRulesAntiDDoSRuleSet` rules
+     * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` in the rule group evaluation and the
+     * related label `awswaf:managed:aws:anti-ddos:challengeable-request` .
+     *
+     * * If usage is enabled:
+     * * The managed rule group adds the label `awswaf:managed:aws:anti-ddos:challengeable-request`
+     * to any web request whose URL does *NOT* match the regular expressions provided in the
+     * `ClientSideAction` setting `ExemptUriRegularExpressions` .
+     * * The two rules are evaluated against web requests for protected resources that are
+     * experiencing a DDoS attack. The two rules only apply their action to matching requests that have
+     * the label `awswaf:managed:aws:anti-ddos:challengeable-request` .
+     * * If usage is disabled:
+     * * The managed rule group doesn't add the label
+     * `awswaf:managed:aws:anti-ddos:challengeable-request` to any web requests.
+     * * The two rules are not evaluated.
+     * * None of the other `ClientSideAction` settings have any effect.
+     *
+     *
+     * This setting only enables or disables the use of the two anti-DDOS rules
+     * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` in the anti-DDoS managed rule group.
+     *
+     * This setting doesn't alter the action setting in the two rules. To override the actions used
+     * by the rules `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` , enable this setting, and
+     * then override the rule actions in the usual way, in your managed rule group configuration.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-clientsideaction.html#cfn-wafv2-webacl-clientsideaction-usageofaction)
+     */
+    public fun usageOfAction(): String
+
+    /**
+     * A builder for [ClientSideActionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param exemptUriRegularExpressions The regular expression to match against the web request
+       * URI, used to identify requests that can't handle a silent browser challenge.
+       * When the `ClientSideAction` setting `UsageOfAction` is enabled, the managed rule group uses
+       * this setting to determine which requests to label with
+       * `awswaf:managed:aws:anti-ddos:challengeable-request` . If `UsageOfAction` is disabled, this
+       * setting has no effect and the managed rule group doesn't add the label to any requests.
+       *
+       * The anti-DDoS managed rule group doesn't evaluate the rules `ChallengeDDoSRequests` or
+       * `ChallengeAllDuringEvent` for web requests whose URIs match this regex. This is true
+       * regardless of whether you override the rule action for either of the rules in your web ACL
+       * configuration.
+       *
+       * AWS recommends using a regular expression.
+       *
+       * This setting is required if `UsageOfAction` is set to `ENABLED` . If required, you can
+       * provide between 1 and 5 regex objects in the array of settings.
+       *
+       * AWS recommends starting with the following setting. Review and update it for your
+       * application's needs:
+       *
+       * `\/api\/|\.(acc|avi|css|gif|jpe?g|js|mp[34]|ogg|otf|pdf|png|tiff?|ttf|webm|webp|woff2?)$`
+       */
+      public fun exemptUriRegularExpressions(exemptUriRegularExpressions: IResolvable)
+
+      /**
+       * @param exemptUriRegularExpressions The regular expression to match against the web request
+       * URI, used to identify requests that can't handle a silent browser challenge.
+       * When the `ClientSideAction` setting `UsageOfAction` is enabled, the managed rule group uses
+       * this setting to determine which requests to label with
+       * `awswaf:managed:aws:anti-ddos:challengeable-request` . If `UsageOfAction` is disabled, this
+       * setting has no effect and the managed rule group doesn't add the label to any requests.
+       *
+       * The anti-DDoS managed rule group doesn't evaluate the rules `ChallengeDDoSRequests` or
+       * `ChallengeAllDuringEvent` for web requests whose URIs match this regex. This is true
+       * regardless of whether you override the rule action for either of the rules in your web ACL
+       * configuration.
+       *
+       * AWS recommends using a regular expression.
+       *
+       * This setting is required if `UsageOfAction` is set to `ENABLED` . If required, you can
+       * provide between 1 and 5 regex objects in the array of settings.
+       *
+       * AWS recommends starting with the following setting. Review and update it for your
+       * application's needs:
+       *
+       * `\/api\/|\.(acc|avi|css|gif|jpe?g|js|mp[34]|ogg|otf|pdf|png|tiff?|ttf|webm|webp|woff2?)$`
+       */
+      public fun exemptUriRegularExpressions(exemptUriRegularExpressions: List<Any>)
+
+      /**
+       * @param exemptUriRegularExpressions The regular expression to match against the web request
+       * URI, used to identify requests that can't handle a silent browser challenge.
+       * When the `ClientSideAction` setting `UsageOfAction` is enabled, the managed rule group uses
+       * this setting to determine which requests to label with
+       * `awswaf:managed:aws:anti-ddos:challengeable-request` . If `UsageOfAction` is disabled, this
+       * setting has no effect and the managed rule group doesn't add the label to any requests.
+       *
+       * The anti-DDoS managed rule group doesn't evaluate the rules `ChallengeDDoSRequests` or
+       * `ChallengeAllDuringEvent` for web requests whose URIs match this regex. This is true
+       * regardless of whether you override the rule action for either of the rules in your web ACL
+       * configuration.
+       *
+       * AWS recommends using a regular expression.
+       *
+       * This setting is required if `UsageOfAction` is set to `ENABLED` . If required, you can
+       * provide between 1 and 5 regex objects in the array of settings.
+       *
+       * AWS recommends starting with the following setting. Review and update it for your
+       * application's needs:
+       *
+       * `\/api\/|\.(acc|avi|css|gif|jpe?g|js|mp[34]|ogg|otf|pdf|png|tiff?|ttf|webm|webp|woff2?)$`
+       */
+      public fun exemptUriRegularExpressions(vararg exemptUriRegularExpressions: Any)
+
+      /**
+       * @param sensitivity The sensitivity that the rule group rule `ChallengeDDoSRequests` uses
+       * when matching against the DDoS suspicion labeling on a request.
+       * The managed rule group adds the labeling during DDoS events, before the
+       * `ChallengeDDoSRequests` rule runs.
+       *
+       * The higher the sensitivity, the more levels of labeling that the rule matches:
+       *
+       * * Low sensitivity is less sensitive, causing the rule to match only on the most likely
+       * participants in an attack, which are the requests with the high suspicion label
+       * `awswaf:managed:aws:anti-ddos:high-suspicion-ddos-request` .
+       * * Medium sensitivity causes the rule to match on the medium and high suspicion labels.
+       * * High sensitivity causes the rule to match on all of the suspicion labels: low, medium,
+       * and high.
+       *
+       * Default: `HIGH`
+       */
+      public fun sensitivity(sensitivity: String)
+
+      /**
+       * @param usageOfAction Determines whether to use the `AWSManagedRulesAntiDDoSRuleSet` rules
+       * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` in the rule group evaluation and the
+       * related label `awswaf:managed:aws:anti-ddos:challengeable-request` . 
+       * * If usage is enabled:
+       * * The managed rule group adds the label
+       * `awswaf:managed:aws:anti-ddos:challengeable-request` to any web request whose URL does *NOT*
+       * match the regular expressions provided in the `ClientSideAction` setting
+       * `ExemptUriRegularExpressions` .
+       * * The two rules are evaluated against web requests for protected resources that are
+       * experiencing a DDoS attack. The two rules only apply their action to matching requests that
+       * have the label `awswaf:managed:aws:anti-ddos:challengeable-request` .
+       * * If usage is disabled:
+       * * The managed rule group doesn't add the label
+       * `awswaf:managed:aws:anti-ddos:challengeable-request` to any web requests.
+       * * The two rules are not evaluated.
+       * * None of the other `ClientSideAction` settings have any effect.
+       *
+       *
+       * This setting only enables or disables the use of the two anti-DDOS rules
+       * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` in the anti-DDoS managed rule group.
+       *
+       * This setting doesn't alter the action setting in the two rules. To override the actions
+       * used by the rules `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` , enable this setting,
+       * and then override the rule actions in the usual way, in your managed rule group configuration.
+       */
+      public fun usageOfAction(usageOfAction: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnWebACL.ClientSideActionProperty.Builder =
+          software.amazon.awscdk.services.wafv2.CfnWebACL.ClientSideActionProperty.builder()
+
+      /**
+       * @param exemptUriRegularExpressions The regular expression to match against the web request
+       * URI, used to identify requests that can't handle a silent browser challenge.
+       * When the `ClientSideAction` setting `UsageOfAction` is enabled, the managed rule group uses
+       * this setting to determine which requests to label with
+       * `awswaf:managed:aws:anti-ddos:challengeable-request` . If `UsageOfAction` is disabled, this
+       * setting has no effect and the managed rule group doesn't add the label to any requests.
+       *
+       * The anti-DDoS managed rule group doesn't evaluate the rules `ChallengeDDoSRequests` or
+       * `ChallengeAllDuringEvent` for web requests whose URIs match this regex. This is true
+       * regardless of whether you override the rule action for either of the rules in your web ACL
+       * configuration.
+       *
+       * AWS recommends using a regular expression.
+       *
+       * This setting is required if `UsageOfAction` is set to `ENABLED` . If required, you can
+       * provide between 1 and 5 regex objects in the array of settings.
+       *
+       * AWS recommends starting with the following setting. Review and update it for your
+       * application's needs:
+       *
+       * `\/api\/|\.(acc|avi|css|gif|jpe?g|js|mp[34]|ogg|otf|pdf|png|tiff?|ttf|webm|webp|woff2?)$`
+       */
+      override fun exemptUriRegularExpressions(exemptUriRegularExpressions: IResolvable) {
+        cdkBuilder.exemptUriRegularExpressions(exemptUriRegularExpressions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param exemptUriRegularExpressions The regular expression to match against the web request
+       * URI, used to identify requests that can't handle a silent browser challenge.
+       * When the `ClientSideAction` setting `UsageOfAction` is enabled, the managed rule group uses
+       * this setting to determine which requests to label with
+       * `awswaf:managed:aws:anti-ddos:challengeable-request` . If `UsageOfAction` is disabled, this
+       * setting has no effect and the managed rule group doesn't add the label to any requests.
+       *
+       * The anti-DDoS managed rule group doesn't evaluate the rules `ChallengeDDoSRequests` or
+       * `ChallengeAllDuringEvent` for web requests whose URIs match this regex. This is true
+       * regardless of whether you override the rule action for either of the rules in your web ACL
+       * configuration.
+       *
+       * AWS recommends using a regular expression.
+       *
+       * This setting is required if `UsageOfAction` is set to `ENABLED` . If required, you can
+       * provide between 1 and 5 regex objects in the array of settings.
+       *
+       * AWS recommends starting with the following setting. Review and update it for your
+       * application's needs:
+       *
+       * `\/api\/|\.(acc|avi|css|gif|jpe?g|js|mp[34]|ogg|otf|pdf|png|tiff?|ttf|webm|webp|woff2?)$`
+       */
+      override fun exemptUriRegularExpressions(exemptUriRegularExpressions: List<Any>) {
+        cdkBuilder.exemptUriRegularExpressions(exemptUriRegularExpressions.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param exemptUriRegularExpressions The regular expression to match against the web request
+       * URI, used to identify requests that can't handle a silent browser challenge.
+       * When the `ClientSideAction` setting `UsageOfAction` is enabled, the managed rule group uses
+       * this setting to determine which requests to label with
+       * `awswaf:managed:aws:anti-ddos:challengeable-request` . If `UsageOfAction` is disabled, this
+       * setting has no effect and the managed rule group doesn't add the label to any requests.
+       *
+       * The anti-DDoS managed rule group doesn't evaluate the rules `ChallengeDDoSRequests` or
+       * `ChallengeAllDuringEvent` for web requests whose URIs match this regex. This is true
+       * regardless of whether you override the rule action for either of the rules in your web ACL
+       * configuration.
+       *
+       * AWS recommends using a regular expression.
+       *
+       * This setting is required if `UsageOfAction` is set to `ENABLED` . If required, you can
+       * provide between 1 and 5 regex objects in the array of settings.
+       *
+       * AWS recommends starting with the following setting. Review and update it for your
+       * application's needs:
+       *
+       * `\/api\/|\.(acc|avi|css|gif|jpe?g|js|mp[34]|ogg|otf|pdf|png|tiff?|ttf|webm|webp|woff2?)$`
+       */
+      override fun exemptUriRegularExpressions(vararg exemptUriRegularExpressions: Any): Unit =
+          exemptUriRegularExpressions(exemptUriRegularExpressions.toList())
+
+      /**
+       * @param sensitivity The sensitivity that the rule group rule `ChallengeDDoSRequests` uses
+       * when matching against the DDoS suspicion labeling on a request.
+       * The managed rule group adds the labeling during DDoS events, before the
+       * `ChallengeDDoSRequests` rule runs.
+       *
+       * The higher the sensitivity, the more levels of labeling that the rule matches:
+       *
+       * * Low sensitivity is less sensitive, causing the rule to match only on the most likely
+       * participants in an attack, which are the requests with the high suspicion label
+       * `awswaf:managed:aws:anti-ddos:high-suspicion-ddos-request` .
+       * * Medium sensitivity causes the rule to match on the medium and high suspicion labels.
+       * * High sensitivity causes the rule to match on all of the suspicion labels: low, medium,
+       * and high.
+       *
+       * Default: `HIGH`
+       */
+      override fun sensitivity(sensitivity: String) {
+        cdkBuilder.sensitivity(sensitivity)
+      }
+
+      /**
+       * @param usageOfAction Determines whether to use the `AWSManagedRulesAntiDDoSRuleSet` rules
+       * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` in the rule group evaluation and the
+       * related label `awswaf:managed:aws:anti-ddos:challengeable-request` . 
+       * * If usage is enabled:
+       * * The managed rule group adds the label
+       * `awswaf:managed:aws:anti-ddos:challengeable-request` to any web request whose URL does *NOT*
+       * match the regular expressions provided in the `ClientSideAction` setting
+       * `ExemptUriRegularExpressions` .
+       * * The two rules are evaluated against web requests for protected resources that are
+       * experiencing a DDoS attack. The two rules only apply their action to matching requests that
+       * have the label `awswaf:managed:aws:anti-ddos:challengeable-request` .
+       * * If usage is disabled:
+       * * The managed rule group doesn't add the label
+       * `awswaf:managed:aws:anti-ddos:challengeable-request` to any web requests.
+       * * The two rules are not evaluated.
+       * * None of the other `ClientSideAction` settings have any effect.
+       *
+       *
+       * This setting only enables or disables the use of the two anti-DDOS rules
+       * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` in the anti-DDoS managed rule group.
+       *
+       * This setting doesn't alter the action setting in the two rules. To override the actions
+       * used by the rules `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` , enable this setting,
+       * and then override the rule actions in the usual way, in your managed rule group configuration.
+       */
+      override fun usageOfAction(usageOfAction: String) {
+        cdkBuilder.usageOfAction(usageOfAction)
+      }
+
+      public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.ClientSideActionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ClientSideActionProperty,
+    ) : CdkObject(cdkObject),
+        ClientSideActionProperty {
+      /**
+       * The regular expression to match against the web request URI, used to identify requests that
+       * can't handle a silent browser challenge.
+       *
+       * When the `ClientSideAction` setting `UsageOfAction` is enabled, the managed rule group uses
+       * this setting to determine which requests to label with
+       * `awswaf:managed:aws:anti-ddos:challengeable-request` . If `UsageOfAction` is disabled, this
+       * setting has no effect and the managed rule group doesn't add the label to any requests.
+       *
+       * The anti-DDoS managed rule group doesn't evaluate the rules `ChallengeDDoSRequests` or
+       * `ChallengeAllDuringEvent` for web requests whose URIs match this regex. This is true
+       * regardless of whether you override the rule action for either of the rules in your web ACL
+       * configuration.
+       *
+       * AWS recommends using a regular expression.
+       *
+       * This setting is required if `UsageOfAction` is set to `ENABLED` . If required, you can
+       * provide between 1 and 5 regex objects in the array of settings.
+       *
+       * AWS recommends starting with the following setting. Review and update it for your
+       * application's needs:
+       *
+       * `\/api\/|\.(acc|avi|css|gif|jpe?g|js|mp[34]|ogg|otf|pdf|png|tiff?|ttf|webm|webp|woff2?)$`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-clientsideaction.html#cfn-wafv2-webacl-clientsideaction-exempturiregularexpressions)
+       */
+      override fun exemptUriRegularExpressions(): Any? =
+          unwrap(this).getExemptUriRegularExpressions()
+
+      /**
+       * The sensitivity that the rule group rule `ChallengeDDoSRequests` uses when matching against
+       * the DDoS suspicion labeling on a request.
+       *
+       * The managed rule group adds the labeling during DDoS events, before the
+       * `ChallengeDDoSRequests` rule runs.
+       *
+       * The higher the sensitivity, the more levels of labeling that the rule matches:
+       *
+       * * Low sensitivity is less sensitive, causing the rule to match only on the most likely
+       * participants in an attack, which are the requests with the high suspicion label
+       * `awswaf:managed:aws:anti-ddos:high-suspicion-ddos-request` .
+       * * Medium sensitivity causes the rule to match on the medium and high suspicion labels.
+       * * High sensitivity causes the rule to match on all of the suspicion labels: low, medium,
+       * and high.
+       *
+       * Default: `HIGH`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-clientsideaction.html#cfn-wafv2-webacl-clientsideaction-sensitivity)
+       */
+      override fun sensitivity(): String? = unwrap(this).getSensitivity()
+
+      /**
+       * Determines whether to use the `AWSManagedRulesAntiDDoSRuleSet` rules
+       * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` in the rule group evaluation and the
+       * related label `awswaf:managed:aws:anti-ddos:challengeable-request` .
+       *
+       * * If usage is enabled:
+       * * The managed rule group adds the label
+       * `awswaf:managed:aws:anti-ddos:challengeable-request` to any web request whose URL does *NOT*
+       * match the regular expressions provided in the `ClientSideAction` setting
+       * `ExemptUriRegularExpressions` .
+       * * The two rules are evaluated against web requests for protected resources that are
+       * experiencing a DDoS attack. The two rules only apply their action to matching requests that
+       * have the label `awswaf:managed:aws:anti-ddos:challengeable-request` .
+       * * If usage is disabled:
+       * * The managed rule group doesn't add the label
+       * `awswaf:managed:aws:anti-ddos:challengeable-request` to any web requests.
+       * * The two rules are not evaluated.
+       * * None of the other `ClientSideAction` settings have any effect.
+       *
+       *
+       * This setting only enables or disables the use of the two anti-DDOS rules
+       * `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` in the anti-DDoS managed rule group.
+       *
+       * This setting doesn't alter the action setting in the two rules. To override the actions
+       * used by the rules `ChallengeAllDuringEvent` and `ChallengeDDoSRequests` , enable this setting,
+       * and then override the rule actions in the usual way, in your managed rule group configuration.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-clientsideaction.html#cfn-wafv2-webacl-clientsideaction-usageofaction)
+       */
+      override fun usageOfAction(): String = unwrap(this).getUsageOfAction()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClientSideActionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ClientSideActionProperty):
+          ClientSideActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ClientSideActionProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClientSideActionProperty):
+          software.amazon.awscdk.services.wafv2.CfnWebACL.ClientSideActionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnWebACL.ClientSideActionProperty
     }
   }
 
@@ -5605,6 +6986,359 @@ public open class CfnWebACL(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * DataProtectProperty dataProtectProperty = DataProtectProperty.builder()
+   * .action("action")
+   * .field(FieldToProtectProperty.builder()
+   * .fieldType("fieldType")
+   * // the properties below are optional
+   * .fieldKeys(List.of("fieldKeys"))
+   * .build())
+   * // the properties below are optional
+   * .excludeRateBasedDetails(false)
+   * .excludeRuleMatchDetails(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-dataprotect.html)
+   */
+  public interface DataProtectProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-dataprotect.html#cfn-wafv2-webacl-dataprotect-action)
+     */
+    public fun action(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-dataprotect.html#cfn-wafv2-webacl-dataprotect-excluderatebaseddetails)
+     */
+    public fun excludeRateBasedDetails(): Any? = unwrap(this).getExcludeRateBasedDetails()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-dataprotect.html#cfn-wafv2-webacl-dataprotect-excluderulematchdetails)
+     */
+    public fun excludeRuleMatchDetails(): Any? = unwrap(this).getExcludeRuleMatchDetails()
+
+    /**
+     * Field in log to protect.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-dataprotect.html#cfn-wafv2-webacl-dataprotect-field)
+     */
+    public fun `field`(): Any
+
+    /**
+     * A builder for [DataProtectProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param action the value to be set. 
+       */
+      public fun action(action: String)
+
+      /**
+       * @param excludeRateBasedDetails the value to be set.
+       */
+      public fun excludeRateBasedDetails(excludeRateBasedDetails: Boolean)
+
+      /**
+       * @param excludeRateBasedDetails the value to be set.
+       */
+      public fun excludeRateBasedDetails(excludeRateBasedDetails: IResolvable)
+
+      /**
+       * @param excludeRuleMatchDetails the value to be set.
+       */
+      public fun excludeRuleMatchDetails(excludeRuleMatchDetails: Boolean)
+
+      /**
+       * @param excludeRuleMatchDetails the value to be set.
+       */
+      public fun excludeRuleMatchDetails(excludeRuleMatchDetails: IResolvable)
+
+      /**
+       * @param field Field in log to protect. 
+       */
+      public fun `field`(`field`: IResolvable)
+
+      /**
+       * @param field Field in log to protect. 
+       */
+      public fun `field`(`field`: FieldToProtectProperty)
+
+      /**
+       * @param field Field in log to protect. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("30cd59dda4015edd93ec8d0adff4005b9e3ea9577732855c7431099db3c49e17")
+      public fun `field`(`field`: FieldToProtectProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnWebACL.DataProtectProperty.Builder =
+          software.amazon.awscdk.services.wafv2.CfnWebACL.DataProtectProperty.builder()
+
+      /**
+       * @param action the value to be set. 
+       */
+      override fun action(action: String) {
+        cdkBuilder.action(action)
+      }
+
+      /**
+       * @param excludeRateBasedDetails the value to be set.
+       */
+      override fun excludeRateBasedDetails(excludeRateBasedDetails: Boolean) {
+        cdkBuilder.excludeRateBasedDetails(excludeRateBasedDetails)
+      }
+
+      /**
+       * @param excludeRateBasedDetails the value to be set.
+       */
+      override fun excludeRateBasedDetails(excludeRateBasedDetails: IResolvable) {
+        cdkBuilder.excludeRateBasedDetails(excludeRateBasedDetails.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param excludeRuleMatchDetails the value to be set.
+       */
+      override fun excludeRuleMatchDetails(excludeRuleMatchDetails: Boolean) {
+        cdkBuilder.excludeRuleMatchDetails(excludeRuleMatchDetails)
+      }
+
+      /**
+       * @param excludeRuleMatchDetails the value to be set.
+       */
+      override fun excludeRuleMatchDetails(excludeRuleMatchDetails: IResolvable) {
+        cdkBuilder.excludeRuleMatchDetails(excludeRuleMatchDetails.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param field Field in log to protect. 
+       */
+      override fun `field`(`field`: IResolvable) {
+        cdkBuilder.`field`(`field`.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param field Field in log to protect. 
+       */
+      override fun `field`(`field`: FieldToProtectProperty) {
+        cdkBuilder.`field`(`field`.let(FieldToProtectProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param field Field in log to protect. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("30cd59dda4015edd93ec8d0adff4005b9e3ea9577732855c7431099db3c49e17")
+      override fun `field`(`field`: FieldToProtectProperty.Builder.() -> Unit): Unit =
+          `field`(FieldToProtectProperty(`field`))
+
+      public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.DataProtectProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.DataProtectProperty,
+    ) : CdkObject(cdkObject),
+        DataProtectProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-dataprotect.html#cfn-wafv2-webacl-dataprotect-action)
+       */
+      override fun action(): String = unwrap(this).getAction()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-dataprotect.html#cfn-wafv2-webacl-dataprotect-excluderatebaseddetails)
+       */
+      override fun excludeRateBasedDetails(): Any? = unwrap(this).getExcludeRateBasedDetails()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-dataprotect.html#cfn-wafv2-webacl-dataprotect-excluderulematchdetails)
+       */
+      override fun excludeRuleMatchDetails(): Any? = unwrap(this).getExcludeRuleMatchDetails()
+
+      /**
+       * Field in log to protect.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-dataprotect.html#cfn-wafv2-webacl-dataprotect-field)
+       */
+      override fun `field`(): Any = unwrap(this).getField()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataProtectProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.DataProtectProperty):
+          DataProtectProperty = CdkObjectWrappers.wrap(cdkObject) as? DataProtectProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataProtectProperty):
+          software.amazon.awscdk.services.wafv2.CfnWebACL.DataProtectProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnWebACL.DataProtectProperty
+    }
+  }
+
+  /**
+   * Specifies data protection to apply to the web request data for the web ACL.
+   *
+   * This is a web ACL level data protection option.
+   *
+   * The data protection that you configure for the web ACL alters the data that's available for any
+   * other data collection activity, including your AWS WAF logging destinations, web ACL request
+   * sampling, and Amazon Security Lake data collection and management. Your other option for data
+   * protection is in the logging configuration, which only affects logging.
+   *
+   * This is part of the data protection configuration for a web ACL.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * DataProtectionConfigProperty dataProtectionConfigProperty =
+   * DataProtectionConfigProperty.builder()
+   * .dataProtections(List.of(DataProtectProperty.builder()
+   * .action("action")
+   * .field(FieldToProtectProperty.builder()
+   * .fieldType("fieldType")
+   * // the properties below are optional
+   * .fieldKeys(List.of("fieldKeys"))
+   * .build())
+   * // the properties below are optional
+   * .excludeRateBasedDetails(false)
+   * .excludeRuleMatchDetails(false)
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-dataprotectionconfig.html)
+   */
+  public interface DataProtectionConfigProperty {
+    /**
+     * An array of data protection configurations for specific web request field types.
+     *
+     * This is defined for each web ACL. AWS WAF applies the specified protection to all web
+     * requests that the web ACL inspects.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-dataprotectionconfig.html#cfn-wafv2-webacl-dataprotectionconfig-dataprotections)
+     */
+    public fun dataProtections(): Any
+
+    /**
+     * A builder for [DataProtectionConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dataProtections An array of data protection configurations for specific web request
+       * field types. 
+       * This is defined for each web ACL. AWS WAF applies the specified protection to all web
+       * requests that the web ACL inspects.
+       */
+      public fun dataProtections(dataProtections: IResolvable)
+
+      /**
+       * @param dataProtections An array of data protection configurations for specific web request
+       * field types. 
+       * This is defined for each web ACL. AWS WAF applies the specified protection to all web
+       * requests that the web ACL inspects.
+       */
+      public fun dataProtections(dataProtections: List<Any>)
+
+      /**
+       * @param dataProtections An array of data protection configurations for specific web request
+       * field types. 
+       * This is defined for each web ACL. AWS WAF applies the specified protection to all web
+       * requests that the web ACL inspects.
+       */
+      public fun dataProtections(vararg dataProtections: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnWebACL.DataProtectionConfigProperty.Builder =
+          software.amazon.awscdk.services.wafv2.CfnWebACL.DataProtectionConfigProperty.builder()
+
+      /**
+       * @param dataProtections An array of data protection configurations for specific web request
+       * field types. 
+       * This is defined for each web ACL. AWS WAF applies the specified protection to all web
+       * requests that the web ACL inspects.
+       */
+      override fun dataProtections(dataProtections: IResolvable) {
+        cdkBuilder.dataProtections(dataProtections.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param dataProtections An array of data protection configurations for specific web request
+       * field types. 
+       * This is defined for each web ACL. AWS WAF applies the specified protection to all web
+       * requests that the web ACL inspects.
+       */
+      override fun dataProtections(dataProtections: List<Any>) {
+        cdkBuilder.dataProtections(dataProtections.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param dataProtections An array of data protection configurations for specific web request
+       * field types. 
+       * This is defined for each web ACL. AWS WAF applies the specified protection to all web
+       * requests that the web ACL inspects.
+       */
+      override fun dataProtections(vararg dataProtections: Any): Unit =
+          dataProtections(dataProtections.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.wafv2.CfnWebACL.DataProtectionConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.DataProtectionConfigProperty,
+    ) : CdkObject(cdkObject),
+        DataProtectionConfigProperty {
+      /**
+       * An array of data protection configurations for specific web request field types.
+       *
+       * This is defined for each web ACL. AWS WAF applies the specified protection to all web
+       * requests that the web ACL inspects.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-dataprotectionconfig.html#cfn-wafv2-webacl-dataprotectionconfig-dataprotections)
+       */
+      override fun dataProtections(): Any = unwrap(this).getDataProtections()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataProtectionConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.DataProtectionConfigProperty):
+          DataProtectionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataProtectionConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataProtectionConfigProperty):
+          software.amazon.awscdk.services.wafv2.CfnWebACL.DataProtectionConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnWebACL.DataProtectionConfigProperty
+    }
+  }
+
+  /**
    * In a `WebACL` , this is the action that you want AWS WAF to perform when a web request doesn't
    * match any of the rules in the `WebACL` .
    *
@@ -6024,8 +7758,8 @@ public open class CfnWebACL(
    * web request component to inspect, but for field redaction, you are specifying the component type
    * to redact from the logs.
    * * If you have request sampling enabled, the redacted fields configuration for logging has no
-   * impact on sampling. The only way to exclude fields from request sampling is by disabling sampling
-   * in the web ACL visibility configuration.
+   * impact on sampling. You can only exclude fields from request sampling by disabling sampling in the
+   * web ACL visibility configuration or by configuring data protection for the web ACL.
    *
    * Example:
    *
@@ -6066,6 +7800,9 @@ public open class CfnWebACL(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -6080,6 +7817,9 @@ public open class CfnWebACL(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build();
    * ```
@@ -6110,6 +7850,7 @@ public open class CfnWebACL(
      * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
      * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the web
      * ACL `AssociationConfig` , for additional processing fees.
+     * * For AWS Amplify , use the CloudFront limit.
      *
      * For information about how to handle oversized request bodies, see the `Body` object
      * configuration.
@@ -6176,6 +7917,33 @@ public open class CfnWebACL(
     public fun ja3Fingerprint(): Any? = unwrap(this).getJa3Fingerprint()
 
     /**
+     * Available for use with Amazon CloudFront distributions and Application Load Balancers.
+     *
+     * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash
+     * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+     * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint for
+     * each request that has enough TLS Client Hello information for the calculation. Almost all web
+     * requests include this information.
+     *
+     *
+     * You can use this choice only with a string match `ByteMatchStatement` with the
+     * `PositionalConstraint` set to `EXACTLY` .
+     *
+     *
+     * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+     * able to calculate the fingerprint, it includes it in the logs. For information about the logging
+     * fields, see [Log
+     * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+     * WAF Developer Guide* .
+     *
+     * Provide the JA4 fingerprint string from the logs in your string match statement
+     * specification, to match with any future requests that have the same TLS configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtomatch.html#cfn-wafv2-webacl-fieldtomatch-ja4fingerprint)
+     */
+    public fun ja4Fingerprint(): Any? = unwrap(this).getJa4Fingerprint()
+
+    /**
      * Inspect the request body as JSON.
      *
      * The request body immediately follows the request headers. This is the part of a request that
@@ -6191,6 +7959,7 @@ public open class CfnWebACL(
      * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
      * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the web
      * ACL `AssociationConfig` , for additional processing fees.
+     * * For AWS Amplify , use the CloudFront limit.
      *
      * For information about how to handle oversized request bodies, see the `JsonBody` object
      * configuration.
@@ -6245,6 +8014,22 @@ public open class CfnWebACL(
     public fun singleQueryArgument(): Any? = unwrap(this).getSingleQueryArgument()
 
     /**
+     * Inspect fragments of the request URI.
+     *
+     * You must configure scope and pattern matching filters in the `UriFragment` object, to define
+     * the fragment of a URI that AWS WAF inspects.
+     *
+     * Only the first 8 KB (8192 bytes) of a request's URI fragments and only the first 200 URI
+     * fragments are forwarded to AWS WAF for inspection by the underlying host service. You must
+     * configure how to handle any oversize URI fragment content in the `UriFragment` object. AWS WAF
+     * applies the pattern matching filters to the cookies that it receives from the underlying host
+     * service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtomatch.html#cfn-wafv2-webacl-fieldtomatch-urifragment)
+     */
+    public fun uriFragment(): Any? = unwrap(this).getUriFragment()
+
+    /**
      * Inspect the request URI path.
      *
      * This is the part of the web request that identifies a resource, for example,
@@ -6279,6 +8064,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -6300,6 +8086,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -6321,6 +8108,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -6483,6 +8271,83 @@ public open class CfnWebACL(
       public fun ja3Fingerprint(ja3Fingerprint: JA3FingerprintProperty.Builder.() -> Unit)
 
       /**
+       * @param ja4Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA4 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      public fun ja4Fingerprint(ja4Fingerprint: IResolvable)
+
+      /**
+       * @param ja4Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA4 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      public fun ja4Fingerprint(ja4Fingerprint: JA4FingerprintProperty)
+
+      /**
+       * @param ja4Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA4 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("53c5c6863dac17817d030adf4d5f9299eaf03accfaa9d19de6660c52b3bf25b5")
+      public fun ja4Fingerprint(ja4Fingerprint: JA4FingerprintProperty.Builder.() -> Unit)
+
+      /**
        * @param jsonBody Inspect the request body as JSON.
        * The request body immediately follows the request headers. This is the part of a request
        * that contains any additional data that you want to send to your web server as the HTTP request
@@ -6497,6 +8362,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -6518,6 +8384,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -6539,6 +8406,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -6582,6 +8450,47 @@ public open class CfnWebACL(
       public fun singleQueryArgument(singleQueryArgument: Any)
 
       /**
+       * @param uriFragment Inspect fragments of the request URI.
+       * You must configure scope and pattern matching filters in the `UriFragment` object, to
+       * define the fragment of a URI that AWS WAF inspects.
+       *
+       * Only the first 8 KB (8192 bytes) of a request's URI fragments and only the first 200 URI
+       * fragments are forwarded to AWS WAF for inspection by the underlying host service. You must
+       * configure how to handle any oversize URI fragment content in the `UriFragment` object. AWS WAF
+       * applies the pattern matching filters to the cookies that it receives from the underlying host
+       * service.
+       */
+      public fun uriFragment(uriFragment: IResolvable)
+
+      /**
+       * @param uriFragment Inspect fragments of the request URI.
+       * You must configure scope and pattern matching filters in the `UriFragment` object, to
+       * define the fragment of a URI that AWS WAF inspects.
+       *
+       * Only the first 8 KB (8192 bytes) of a request's URI fragments and only the first 200 URI
+       * fragments are forwarded to AWS WAF for inspection by the underlying host service. You must
+       * configure how to handle any oversize URI fragment content in the `UriFragment` object. AWS WAF
+       * applies the pattern matching filters to the cookies that it receives from the underlying host
+       * service.
+       */
+      public fun uriFragment(uriFragment: UriFragmentProperty)
+
+      /**
+       * @param uriFragment Inspect fragments of the request URI.
+       * You must configure scope and pattern matching filters in the `UriFragment` object, to
+       * define the fragment of a URI that AWS WAF inspects.
+       *
+       * Only the first 8 KB (8192 bytes) of a request's URI fragments and only the first 200 URI
+       * fragments are forwarded to AWS WAF for inspection by the underlying host service. You must
+       * configure how to handle any oversize URI fragment content in the `UriFragment` object. AWS WAF
+       * applies the pattern matching filters to the cookies that it receives from the underlying host
+       * service.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fb9352abce63e01883e274a662ef6d700896935c778491335d8941e13c176ebf")
+      public fun uriFragment(uriFragment: UriFragmentProperty.Builder.() -> Unit)
+
+      /**
        * @param uriPath Inspect the request URI path.
        * This is the part of the web request that identifies a resource, for example,
        * `/images/daily-ad.jpg` .
@@ -6616,6 +8525,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -6639,6 +8549,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -6662,6 +8573,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -6839,6 +8751,88 @@ public open class CfnWebACL(
           ja3Fingerprint(JA3FingerprintProperty(ja3Fingerprint))
 
       /**
+       * @param ja4Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA4 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      override fun ja4Fingerprint(ja4Fingerprint: IResolvable) {
+        cdkBuilder.ja4Fingerprint(ja4Fingerprint.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ja4Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA4 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      override fun ja4Fingerprint(ja4Fingerprint: JA4FingerprintProperty) {
+        cdkBuilder.ja4Fingerprint(ja4Fingerprint.let(JA4FingerprintProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param ja4Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA4 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("53c5c6863dac17817d030adf4d5f9299eaf03accfaa9d19de6660c52b3bf25b5")
+      override fun ja4Fingerprint(ja4Fingerprint: JA4FingerprintProperty.Builder.() -> Unit): Unit =
+          ja4Fingerprint(JA4FingerprintProperty(ja4Fingerprint))
+
+      /**
        * @param jsonBody Inspect the request body as JSON.
        * The request body immediately follows the request headers. This is the part of a request
        * that contains any additional data that you want to send to your web server as the HTTP request
@@ -6853,6 +8847,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -6876,6 +8871,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -6899,6 +8895,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -6951,6 +8948,52 @@ public open class CfnWebACL(
       }
 
       /**
+       * @param uriFragment Inspect fragments of the request URI.
+       * You must configure scope and pattern matching filters in the `UriFragment` object, to
+       * define the fragment of a URI that AWS WAF inspects.
+       *
+       * Only the first 8 KB (8192 bytes) of a request's URI fragments and only the first 200 URI
+       * fragments are forwarded to AWS WAF for inspection by the underlying host service. You must
+       * configure how to handle any oversize URI fragment content in the `UriFragment` object. AWS WAF
+       * applies the pattern matching filters to the cookies that it receives from the underlying host
+       * service.
+       */
+      override fun uriFragment(uriFragment: IResolvable) {
+        cdkBuilder.uriFragment(uriFragment.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param uriFragment Inspect fragments of the request URI.
+       * You must configure scope and pattern matching filters in the `UriFragment` object, to
+       * define the fragment of a URI that AWS WAF inspects.
+       *
+       * Only the first 8 KB (8192 bytes) of a request's URI fragments and only the first 200 URI
+       * fragments are forwarded to AWS WAF for inspection by the underlying host service. You must
+       * configure how to handle any oversize URI fragment content in the `UriFragment` object. AWS WAF
+       * applies the pattern matching filters to the cookies that it receives from the underlying host
+       * service.
+       */
+      override fun uriFragment(uriFragment: UriFragmentProperty) {
+        cdkBuilder.uriFragment(uriFragment.let(UriFragmentProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param uriFragment Inspect fragments of the request URI.
+       * You must configure scope and pattern matching filters in the `UriFragment` object, to
+       * define the fragment of a URI that AWS WAF inspects.
+       *
+       * Only the first 8 KB (8192 bytes) of a request's URI fragments and only the first 200 URI
+       * fragments are forwarded to AWS WAF for inspection by the underlying host service. You must
+       * configure how to handle any oversize URI fragment content in the `UriFragment` object. AWS WAF
+       * applies the pattern matching filters to the cookies that it receives from the underlying host
+       * service.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fb9352abce63e01883e274a662ef6d700896935c778491335d8941e13c176ebf")
+      override fun uriFragment(uriFragment: UriFragmentProperty.Builder.() -> Unit): Unit =
+          uriFragment(UriFragmentProperty(uriFragment))
+
+      /**
        * @param uriPath Inspect the request URI path.
        * This is the part of the web request that identifies a resource, for example,
        * `/images/daily-ad.jpg` .
@@ -6990,6 +9033,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -7056,6 +9100,33 @@ public open class CfnWebACL(
       override fun ja3Fingerprint(): Any? = unwrap(this).getJa3Fingerprint()
 
       /**
+       * Available for use with Amazon CloudFront distributions and Application Load Balancers.
+       *
+       * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA4 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtomatch.html#cfn-wafv2-webacl-fieldtomatch-ja4fingerprint)
+       */
+      override fun ja4Fingerprint(): Any? = unwrap(this).getJa4Fingerprint()
+
+      /**
        * Inspect the request body as JSON.
        *
        * The request body immediately follows the request headers. This is the part of a request
@@ -7071,6 +9142,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -7126,6 +9198,22 @@ public open class CfnWebACL(
       override fun singleQueryArgument(): Any? = unwrap(this).getSingleQueryArgument()
 
       /**
+       * Inspect fragments of the request URI.
+       *
+       * You must configure scope and pattern matching filters in the `UriFragment` object, to
+       * define the fragment of a URI that AWS WAF inspects.
+       *
+       * Only the first 8 KB (8192 bytes) of a request's URI fragments and only the first 200 URI
+       * fragments are forwarded to AWS WAF for inspection by the underlying host service. You must
+       * configure how to handle any oversize URI fragment content in the `UriFragment` object. AWS WAF
+       * applies the pattern matching filters to the cookies that it receives from the underlying host
+       * service.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtomatch.html#cfn-wafv2-webacl-fieldtomatch-urifragment)
+       */
+      override fun uriFragment(): Any? = unwrap(this).getUriFragment()
+
+      /**
        * Inspect the request URI path.
        *
        * This is the part of the web request that identifies a resource, for example,
@@ -7155,6 +9243,135 @@ public open class CfnWebACL(
   }
 
   /**
+   * Specifies a field type and keys to protect in stored web request data.
+   *
+   * This is part of the data protection configuration for a web ACL.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * FieldToProtectProperty fieldToProtectProperty = FieldToProtectProperty.builder()
+   * .fieldType("fieldType")
+   * // the properties below are optional
+   * .fieldKeys(List.of("fieldKeys"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtoprotect.html)
+   */
+  public interface FieldToProtectProperty {
+    /**
+     * Specifies the keys to protect for the specified field type.
+     *
+     * If you don't specify any key, then all keys for the field type are protected.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtoprotect.html#cfn-wafv2-webacl-fieldtoprotect-fieldkeys)
+     */
+    public fun fieldKeys(): List<String> = unwrap(this).getFieldKeys() ?: emptyList()
+
+    /**
+     * Specifies the web request component type to protect.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtoprotect.html#cfn-wafv2-webacl-fieldtoprotect-fieldtype)
+     */
+    public fun fieldType(): String
+
+    /**
+     * A builder for [FieldToProtectProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fieldKeys Specifies the keys to protect for the specified field type.
+       * If you don't specify any key, then all keys for the field type are protected.
+       */
+      public fun fieldKeys(fieldKeys: List<String>)
+
+      /**
+       * @param fieldKeys Specifies the keys to protect for the specified field type.
+       * If you don't specify any key, then all keys for the field type are protected.
+       */
+      public fun fieldKeys(vararg fieldKeys: String)
+
+      /**
+       * @param fieldType Specifies the web request component type to protect. 
+       */
+      public fun fieldType(fieldType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnWebACL.FieldToProtectProperty.Builder =
+          software.amazon.awscdk.services.wafv2.CfnWebACL.FieldToProtectProperty.builder()
+
+      /**
+       * @param fieldKeys Specifies the keys to protect for the specified field type.
+       * If you don't specify any key, then all keys for the field type are protected.
+       */
+      override fun fieldKeys(fieldKeys: List<String>) {
+        cdkBuilder.fieldKeys(fieldKeys)
+      }
+
+      /**
+       * @param fieldKeys Specifies the keys to protect for the specified field type.
+       * If you don't specify any key, then all keys for the field type are protected.
+       */
+      override fun fieldKeys(vararg fieldKeys: String): Unit = fieldKeys(fieldKeys.toList())
+
+      /**
+       * @param fieldType Specifies the web request component type to protect. 
+       */
+      override fun fieldType(fieldType: String) {
+        cdkBuilder.fieldType(fieldType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.FieldToProtectProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.FieldToProtectProperty,
+    ) : CdkObject(cdkObject),
+        FieldToProtectProperty {
+      /**
+       * Specifies the keys to protect for the specified field type.
+       *
+       * If you don't specify any key, then all keys for the field type are protected.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtoprotect.html#cfn-wafv2-webacl-fieldtoprotect-fieldkeys)
+       */
+      override fun fieldKeys(): List<String> = unwrap(this).getFieldKeys() ?: emptyList()
+
+      /**
+       * Specifies the web request component type to protect.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtoprotect.html#cfn-wafv2-webacl-fieldtoprotect-fieldtype)
+       */
+      override fun fieldType(): String = unwrap(this).getFieldType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FieldToProtectProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.FieldToProtectProperty):
+          FieldToProtectProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldToProtectProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FieldToProtectProperty):
+          software.amazon.awscdk.services.wafv2.CfnWebACL.FieldToProtectProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnWebACL.FieldToProtectProperty
+    }
+  }
+
+  /**
    * The configuration for inspecting IP addresses in an HTTP header that you specify, instead of
    * using the IP address that's reported by the web request origin.
    *
@@ -7165,8 +9382,8 @@ public open class CfnWebACL(
    * request at all.
    *
    *
-   * This configuration is used for `GeoMatchStatement` and `RateBasedStatement` . For
-   * `IPSetReferenceStatement` , use `IPSetForwardedIPConfig` instead.
+   * This configuration is used for `GeoMatchStatement` , `AsnMatchStatement` , and
+   * `RateBasedStatement` . For `IPSetReferenceStatement` , use `IPSetForwardedIPConfig` instead.
    *
    * AWS WAF only evaluates the first IP address found in the specified HTTP header.
    *
@@ -7854,8 +10071,8 @@ public open class CfnWebACL(
     public fun matchScope(): String
 
     /**
-     * What AWS WAF should do if the headers of the request are more numerous or larger than AWS WAF
-     * can inspect.
+     * What AWS WAF should do if the headers determined by your match scope are more numerous or
+     * larger than AWS WAF can inspect.
      *
      * AWS WAF does not support inspecting the entire contents of request headers when they exceed 8
      * KB (8192 bytes) or 200 total headers. The underlying host service forwards a maximum of 200
@@ -7922,8 +10139,8 @@ public open class CfnWebACL(
       public fun matchScope(matchScope: String)
 
       /**
-       * @param oversizeHandling What AWS WAF should do if the headers of the request are more
-       * numerous or larger than AWS WAF can inspect. 
+       * @param oversizeHandling What AWS WAF should do if the headers determined by your match
+       * scope are more numerous or larger than AWS WAF can inspect. 
        * AWS WAF does not support inspecting the entire contents of request headers when they exceed
        * 8 KB (8192 bytes) or 200 total headers. The underlying host service forwards a maximum of 200
        * headers and at most 8 KB of header contents to AWS WAF .
@@ -7995,8 +10212,8 @@ public open class CfnWebACL(
       }
 
       /**
-       * @param oversizeHandling What AWS WAF should do if the headers of the request are more
-       * numerous or larger than AWS WAF can inspect. 
+       * @param oversizeHandling What AWS WAF should do if the headers determined by your match
+       * scope are more numerous or larger than AWS WAF can inspect. 
        * AWS WAF does not support inspecting the entire contents of request headers when they exceed
        * 8 KB (8192 bytes) or 200 total headers. The underlying host service forwards a maximum of 200
        * headers and at most 8 KB of header contents to AWS WAF .
@@ -8048,8 +10265,8 @@ public open class CfnWebACL(
       override fun matchScope(): String = unwrap(this).getMatchScope()
 
       /**
-       * What AWS WAF should do if the headers of the request are more numerous or larger than AWS
-       * WAF can inspect.
+       * What AWS WAF should do if the headers determined by your match scope are more numerous or
+       * larger than AWS WAF can inspect.
        *
        * AWS WAF does not support inspecting the entire contents of request headers when they exceed
        * 8 KB (8192 bytes) or 200 total headers. The underlying host service forwards a maximum of 200
@@ -8792,6 +11009,132 @@ public open class CfnWebACL(
   }
 
   /**
+   * Available for use with Amazon CloudFront distributions and Application Load Balancers.
+   *
+   * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash derived
+   * from the TLS Client Hello of an incoming request. This fingerprint serves as a unique identifier
+   * for the client's TLS configuration. AWS WAF calculates and logs this fingerprint for each request
+   * that has enough TLS Client Hello information for the calculation. Almost all web requests include
+   * this information.
+   *
+   *
+   * You can use this choice only with a string match `ByteMatchStatement` with the
+   * `PositionalConstraint` set to `EXACTLY` .
+   *
+   *
+   * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+   * able to calculate the fingerprint, it includes it in the logs. For information about the logging
+   * fields, see [Log
+   * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS WAF
+   * Developer Guide* .
+   *
+   * Provide the JA4 fingerprint string from the logs in your string match statement specification,
+   * to match with any future requests that have the same TLS configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * JA4FingerprintProperty jA4FingerprintProperty = JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ja4fingerprint.html)
+   */
+  public interface JA4FingerprintProperty {
+    /**
+     * The match status to assign to the web request if the request doesn't have a JA4 fingerprint.
+     *
+     * You can specify the following fallback behaviors:
+     *
+     * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+     * action to the request.
+     * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ja4fingerprint.html#cfn-wafv2-webacl-ja4fingerprint-fallbackbehavior)
+     */
+    public fun fallbackBehavior(): String
+
+    /**
+     * A builder for [JA4FingerprintProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fallbackBehavior The match status to assign to the web request if the request
+       * doesn't have a JA4 fingerprint. 
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       */
+      public fun fallbackBehavior(fallbackBehavior: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnWebACL.JA4FingerprintProperty.Builder =
+          software.amazon.awscdk.services.wafv2.CfnWebACL.JA4FingerprintProperty.builder()
+
+      /**
+       * @param fallbackBehavior The match status to assign to the web request if the request
+       * doesn't have a JA4 fingerprint. 
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       */
+      override fun fallbackBehavior(fallbackBehavior: String) {
+        cdkBuilder.fallbackBehavior(fallbackBehavior)
+      }
+
+      public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.JA4FingerprintProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.JA4FingerprintProperty,
+    ) : CdkObject(cdkObject),
+        JA4FingerprintProperty {
+      /**
+       * The match status to assign to the web request if the request doesn't have a JA4
+       * fingerprint.
+       *
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ja4fingerprint.html#cfn-wafv2-webacl-ja4fingerprint-fallbackbehavior)
+       */
+      override fun fallbackBehavior(): String = unwrap(this).getFallbackBehavior()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JA4FingerprintProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.JA4FingerprintProperty):
+          JA4FingerprintProperty = CdkObjectWrappers.wrap(cdkObject) as? JA4FingerprintProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JA4FingerprintProperty):
+          software.amazon.awscdk.services.wafv2.CfnWebACL.JA4FingerprintProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnWebACL.JA4FingerprintProperty
+    }
+  }
+
+  /**
    * Inspect the body of the web request as JSON. The body immediately follows the request headers.
    *
    * This is used to indicate the web request component to inspect, in the `FieldToMatch`
@@ -8890,6 +11233,7 @@ public open class CfnWebACL(
      * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
      * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the web
      * ACL `AssociationConfig` , for additional processing fees.
+     * * For AWS Amplify , use the CloudFront limit.
      *
      * The options for oversize handling are the following:
      *
@@ -8978,6 +11322,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * The options for oversize handling are the following:
        *
@@ -9074,6 +11419,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * The options for oversize handling are the following:
        *
@@ -9161,6 +11507,7 @@ public open class CfnWebACL(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * The options for oversize handling are the following:
        *
@@ -9701,6 +12048,20 @@ public open class CfnWebACL(
    * .build())
    * .build())
    * .build())
+   * .awsManagedRulesAntiDDoSRuleSet(AWSManagedRulesAntiDDoSRuleSetProperty.builder()
+   * .clientSideActionConfig(ClientSideActionConfigProperty.builder()
+   * .challenge(ClientSideActionProperty.builder()
+   * .usageOfAction("usageOfAction")
+   * // the properties below are optional
+   * .exemptUriRegularExpressions(List.of(RegexProperty.builder()
+   * .regexString("regexString")
+   * .build()))
+   * .sensitivity("sensitivity")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .sensitivityToBlock("sensitivityToBlock")
+   * .build())
    * .awsManagedRulesAtpRuleSet(AWSManagedRulesATPRuleSetProperty.builder()
    * .loginPath("loginPath")
    * // the properties below are optional
@@ -9772,6 +12133,23 @@ public open class CfnWebACL(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-managedrulegroupconfig.html#cfn-wafv2-webacl-managedrulegroupconfig-awsmanagedrulesacfpruleset)
      */
     public fun awsManagedRulesAcfpRuleSet(): Any? = unwrap(this).getAwsManagedRulesAcfpRuleSet()
+
+    /**
+     * Additional configuration for using the anti-DDoS managed rule group,
+     * `AWSManagedRulesAntiDDoSRuleSet` .
+     *
+     * Use this to configure anti-DDoS behavior for the rule group.
+     *
+     * For information about using the anti-DDoS managed rule group, see [AWS WAF Anti-DDoS rule
+     * group](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-anti-ddos.html)
+     * and [Distributed Denial of Service (DDoS)
+     * prevention](https://docs.aws.amazon.com/waf/latest/developerguide/waf-anti-ddos.html) in the
+     * *AWS WAF Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-managedrulegroupconfig.html#cfn-wafv2-webacl-managedrulegroupconfig-awsmanagedrulesantiddosruleset)
+     */
+    public fun awsManagedRulesAntiDDoSRuleSet(): Any? =
+        unwrap(this).getAwsManagedRulesAntiDDoSRuleSet()
 
     /**
      * Additional configuration for using the account takeover prevention (ATP) managed rule group,
@@ -9897,6 +12275,49 @@ public open class CfnWebACL(
       @JvmName("e365e2687f33e759cd514a180a5b741cba913ac9b26c94a6bdc672725ef94407")
       public
           fun awsManagedRulesAcfpRuleSet(awsManagedRulesAcfpRuleSet: AWSManagedRulesACFPRuleSetProperty.Builder.() -> Unit)
+
+      /**
+       * @param awsManagedRulesAntiDDoSRuleSet Additional configuration for using the anti-DDoS
+       * managed rule group, `AWSManagedRulesAntiDDoSRuleSet` .
+       * Use this to configure anti-DDoS behavior for the rule group.
+       *
+       * For information about using the anti-DDoS managed rule group, see [AWS WAF Anti-DDoS rule
+       * group](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-anti-ddos.html)
+       * and [Distributed Denial of Service (DDoS)
+       * prevention](https://docs.aws.amazon.com/waf/latest/developerguide/waf-anti-ddos.html) in the
+       * *AWS WAF Developer Guide* .
+       */
+      public fun awsManagedRulesAntiDDoSRuleSet(awsManagedRulesAntiDDoSRuleSet: IResolvable)
+
+      /**
+       * @param awsManagedRulesAntiDDoSRuleSet Additional configuration for using the anti-DDoS
+       * managed rule group, `AWSManagedRulesAntiDDoSRuleSet` .
+       * Use this to configure anti-DDoS behavior for the rule group.
+       *
+       * For information about using the anti-DDoS managed rule group, see [AWS WAF Anti-DDoS rule
+       * group](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-anti-ddos.html)
+       * and [Distributed Denial of Service (DDoS)
+       * prevention](https://docs.aws.amazon.com/waf/latest/developerguide/waf-anti-ddos.html) in the
+       * *AWS WAF Developer Guide* .
+       */
+      public
+          fun awsManagedRulesAntiDDoSRuleSet(awsManagedRulesAntiDDoSRuleSet: AWSManagedRulesAntiDDoSRuleSetProperty)
+
+      /**
+       * @param awsManagedRulesAntiDDoSRuleSet Additional configuration for using the anti-DDoS
+       * managed rule group, `AWSManagedRulesAntiDDoSRuleSet` .
+       * Use this to configure anti-DDoS behavior for the rule group.
+       *
+       * For information about using the anti-DDoS managed rule group, see [AWS WAF Anti-DDoS rule
+       * group](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-anti-ddos.html)
+       * and [Distributed Denial of Service (DDoS)
+       * prevention](https://docs.aws.amazon.com/waf/latest/developerguide/waf-anti-ddos.html) in the
+       * *AWS WAF Developer Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("dec237ca2f14adb84bd1211f31aff252914e19080ae35d59b3e2b33062816cb4")
+      public
+          fun awsManagedRulesAntiDDoSRuleSet(awsManagedRulesAntiDDoSRuleSet: AWSManagedRulesAntiDDoSRuleSetProperty.Builder.() -> Unit)
 
       /**
        * @param awsManagedRulesAtpRuleSet Additional configuration for using the account takeover
@@ -10116,6 +12537,55 @@ public open class CfnWebACL(
           awsManagedRulesAcfpRuleSet(AWSManagedRulesACFPRuleSetProperty(awsManagedRulesAcfpRuleSet))
 
       /**
+       * @param awsManagedRulesAntiDDoSRuleSet Additional configuration for using the anti-DDoS
+       * managed rule group, `AWSManagedRulesAntiDDoSRuleSet` .
+       * Use this to configure anti-DDoS behavior for the rule group.
+       *
+       * For information about using the anti-DDoS managed rule group, see [AWS WAF Anti-DDoS rule
+       * group](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-anti-ddos.html)
+       * and [Distributed Denial of Service (DDoS)
+       * prevention](https://docs.aws.amazon.com/waf/latest/developerguide/waf-anti-ddos.html) in the
+       * *AWS WAF Developer Guide* .
+       */
+      override fun awsManagedRulesAntiDDoSRuleSet(awsManagedRulesAntiDDoSRuleSet: IResolvable) {
+        cdkBuilder.awsManagedRulesAntiDDoSRuleSet(awsManagedRulesAntiDDoSRuleSet.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param awsManagedRulesAntiDDoSRuleSet Additional configuration for using the anti-DDoS
+       * managed rule group, `AWSManagedRulesAntiDDoSRuleSet` .
+       * Use this to configure anti-DDoS behavior for the rule group.
+       *
+       * For information about using the anti-DDoS managed rule group, see [AWS WAF Anti-DDoS rule
+       * group](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-anti-ddos.html)
+       * and [Distributed Denial of Service (DDoS)
+       * prevention](https://docs.aws.amazon.com/waf/latest/developerguide/waf-anti-ddos.html) in the
+       * *AWS WAF Developer Guide* .
+       */
+      override
+          fun awsManagedRulesAntiDDoSRuleSet(awsManagedRulesAntiDDoSRuleSet: AWSManagedRulesAntiDDoSRuleSetProperty) {
+        cdkBuilder.awsManagedRulesAntiDDoSRuleSet(awsManagedRulesAntiDDoSRuleSet.let(AWSManagedRulesAntiDDoSRuleSetProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param awsManagedRulesAntiDDoSRuleSet Additional configuration for using the anti-DDoS
+       * managed rule group, `AWSManagedRulesAntiDDoSRuleSet` .
+       * Use this to configure anti-DDoS behavior for the rule group.
+       *
+       * For information about using the anti-DDoS managed rule group, see [AWS WAF Anti-DDoS rule
+       * group](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-anti-ddos.html)
+       * and [Distributed Denial of Service (DDoS)
+       * prevention](https://docs.aws.amazon.com/waf/latest/developerguide/waf-anti-ddos.html) in the
+       * *AWS WAF Developer Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("dec237ca2f14adb84bd1211f31aff252914e19080ae35d59b3e2b33062816cb4")
+      override
+          fun awsManagedRulesAntiDDoSRuleSet(awsManagedRulesAntiDDoSRuleSet: AWSManagedRulesAntiDDoSRuleSetProperty.Builder.() -> Unit):
+          Unit =
+          awsManagedRulesAntiDDoSRuleSet(AWSManagedRulesAntiDDoSRuleSetProperty(awsManagedRulesAntiDDoSRuleSet))
+
+      /**
        * @param awsManagedRulesAtpRuleSet Additional configuration for using the account takeover
        * prevention (ATP) managed rule group, `AWSManagedRulesATPRuleSet` .
        * Use this to provide login request information to the rule group. For web ACLs that protect
@@ -10323,6 +12793,23 @@ public open class CfnWebACL(
       override fun awsManagedRulesAcfpRuleSet(): Any? = unwrap(this).getAwsManagedRulesAcfpRuleSet()
 
       /**
+       * Additional configuration for using the anti-DDoS managed rule group,
+       * `AWSManagedRulesAntiDDoSRuleSet` .
+       *
+       * Use this to configure anti-DDoS behavior for the rule group.
+       *
+       * For information about using the anti-DDoS managed rule group, see [AWS WAF Anti-DDoS rule
+       * group](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-anti-ddos.html)
+       * and [Distributed Denial of Service (DDoS)
+       * prevention](https://docs.aws.amazon.com/waf/latest/developerguide/waf-anti-ddos.html) in the
+       * *AWS WAF Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-managedrulegroupconfig.html#cfn-wafv2-webacl-managedrulegroupconfig-awsmanagedrulesantiddosruleset)
+       */
+      override fun awsManagedRulesAntiDDoSRuleSet(): Any? =
+          unwrap(this).getAwsManagedRulesAntiDDoSRuleSet()
+
+      /**
        * Additional configuration for using the account takeover prevention (ATP) managed rule
        * group, `AWSManagedRulesATPRuleSet` .
        *
@@ -10458,6 +12945,10 @@ public open class CfnWebACL(
      * fraud prevention managed rule group. The configuration includes the registration and sign-up
      * pages of your application and the locations in the account creation request payload of data,
      * such as the user email and phone number fields.
+     * * Use the `AWSManagedRulesAntiDDoSRuleSet` configuration object to configure the anti-DDoS
+     * managed rule group. The configuration includes the sensitivity levels to use in the rules that
+     * typically block and challenge requests that might be participating in DDoS attacks and the
+     * specification to use to indicate whether a request can handle a silent browser challenge.
      * * Use the `AWSManagedRulesATPRuleSet` configuration object to configure the account takeover
      * prevention managed rule group. The configuration includes the sign-in page of your application
      * and the locations in the login request payload of data such as the username and password.
@@ -10482,6 +12973,13 @@ public open class CfnWebACL(
      * group.
      *
      * You specify one override for each rule whose action you want to change.
+     *
+     *
+     * Verify the rule names in your overrides carefully. With managed rule groups, AWS WAF silently
+     * ignores any override that uses an invalid rule name. With customer-owned rule groups, invalid
+     * rule names in your overrides will cause web ACL updates to fail. An invalid rule name is any
+     * name that doesn't exactly match the case-sensitive name of an existing rule in the rule group.
+     *
      *
      * You can use overrides for testing, for example you can override all of rule actions to
      * `Count` and then monitor the resulting count metrics to understand how the rule group would
@@ -10562,6 +13060,10 @@ public open class CfnWebACL(
        * creation fraud prevention managed rule group. The configuration includes the registration and
        * sign-up pages of your application and the locations in the account creation request payload of
        * data, such as the user email and phone number fields.
+       * * Use the `AWSManagedRulesAntiDDoSRuleSet` configuration object to configure the anti-DDoS
+       * managed rule group. The configuration includes the sensitivity levels to use in the rules that
+       * typically block and challenge requests that might be participating in DDoS attacks and the
+       * specification to use to indicate whether a request can handle a silent browser challenge.
        * * Use the `AWSManagedRulesATPRuleSet` configuration object to configure the account
        * takeover prevention managed rule group. The configuration includes the sign-in page of your
        * application and the locations in the login request payload of data such as the username and
@@ -10580,6 +13082,10 @@ public open class CfnWebACL(
        * creation fraud prevention managed rule group. The configuration includes the registration and
        * sign-up pages of your application and the locations in the account creation request payload of
        * data, such as the user email and phone number fields.
+       * * Use the `AWSManagedRulesAntiDDoSRuleSet` configuration object to configure the anti-DDoS
+       * managed rule group. The configuration includes the sensitivity levels to use in the rules that
+       * typically block and challenge requests that might be participating in DDoS attacks and the
+       * specification to use to indicate whether a request can handle a silent browser challenge.
        * * Use the `AWSManagedRulesATPRuleSet` configuration object to configure the account
        * takeover prevention managed rule group. The configuration includes the sign-in page of your
        * application and the locations in the login request payload of data such as the username and
@@ -10598,6 +13104,10 @@ public open class CfnWebACL(
        * creation fraud prevention managed rule group. The configuration includes the registration and
        * sign-up pages of your application and the locations in the account creation request payload of
        * data, such as the user email and phone number fields.
+       * * Use the `AWSManagedRulesAntiDDoSRuleSet` configuration object to configure the anti-DDoS
+       * managed rule group. The configuration includes the sensitivity levels to use in the rules that
+       * typically block and challenge requests that might be participating in DDoS attacks and the
+       * specification to use to indicate whether a request can handle a silent browser challenge.
        * * Use the `AWSManagedRulesATPRuleSet` configuration object to configure the account
        * takeover prevention managed rule group. The configuration includes the sign-in page of your
        * application and the locations in the login request payload of data such as the username and
@@ -10618,6 +13128,14 @@ public open class CfnWebACL(
        * configured inside the rule group.
        * You specify one override for each rule whose action you want to change.
        *
+       *
+       * Verify the rule names in your overrides carefully. With managed rule groups, AWS WAF
+       * silently ignores any override that uses an invalid rule name. With customer-owned rule groups,
+       * invalid rule names in your overrides will cause web ACL updates to fail. An invalid rule name
+       * is any name that doesn't exactly match the case-sensitive name of an existing rule in the rule
+       * group.
+       *
+       *
        * You can use overrides for testing, for example you can override all of rule actions to
        * `Count` and then monitor the resulting count metrics to understand how the rule group would
        * handle your web traffic. You can also permanently override some or all actions, to modify how
@@ -10630,6 +13148,14 @@ public open class CfnWebACL(
        * configured inside the rule group.
        * You specify one override for each rule whose action you want to change.
        *
+       *
+       * Verify the rule names in your overrides carefully. With managed rule groups, AWS WAF
+       * silently ignores any override that uses an invalid rule name. With customer-owned rule groups,
+       * invalid rule names in your overrides will cause web ACL updates to fail. An invalid rule name
+       * is any name that doesn't exactly match the case-sensitive name of an existing rule in the rule
+       * group.
+       *
+       *
        * You can use overrides for testing, for example you can override all of rule actions to
        * `Count` and then monitor the resulting count metrics to understand how the rule group would
        * handle your web traffic. You can also permanently override some or all actions, to modify how
@@ -10641,6 +13167,14 @@ public open class CfnWebACL(
        * @param ruleActionOverrides Action settings to use in the place of the rule actions that are
        * configured inside the rule group.
        * You specify one override for each rule whose action you want to change.
+       *
+       *
+       * Verify the rule names in your overrides carefully. With managed rule groups, AWS WAF
+       * silently ignores any override that uses an invalid rule name. With customer-owned rule groups,
+       * invalid rule names in your overrides will cause web ACL updates to fail. An invalid rule name
+       * is any name that doesn't exactly match the case-sensitive name of an existing rule in the rule
+       * group.
+       *
        *
        * You can use overrides for testing, for example you can override all of rule actions to
        * `Count` and then monitor the resulting count metrics to understand how the rule group would
@@ -10737,6 +13271,10 @@ public open class CfnWebACL(
        * creation fraud prevention managed rule group. The configuration includes the registration and
        * sign-up pages of your application and the locations in the account creation request payload of
        * data, such as the user email and phone number fields.
+       * * Use the `AWSManagedRulesAntiDDoSRuleSet` configuration object to configure the anti-DDoS
+       * managed rule group. The configuration includes the sensitivity levels to use in the rules that
+       * typically block and challenge requests that might be participating in DDoS attacks and the
+       * specification to use to indicate whether a request can handle a silent browser challenge.
        * * Use the `AWSManagedRulesATPRuleSet` configuration object to configure the account
        * takeover prevention managed rule group. The configuration includes the sign-in page of your
        * application and the locations in the login request payload of data such as the username and
@@ -10757,6 +13295,10 @@ public open class CfnWebACL(
        * creation fraud prevention managed rule group. The configuration includes the registration and
        * sign-up pages of your application and the locations in the account creation request payload of
        * data, such as the user email and phone number fields.
+       * * Use the `AWSManagedRulesAntiDDoSRuleSet` configuration object to configure the anti-DDoS
+       * managed rule group. The configuration includes the sensitivity levels to use in the rules that
+       * typically block and challenge requests that might be participating in DDoS attacks and the
+       * specification to use to indicate whether a request can handle a silent browser challenge.
        * * Use the `AWSManagedRulesATPRuleSet` configuration object to configure the account
        * takeover prevention managed rule group. The configuration includes the sign-in page of your
        * application and the locations in the login request payload of data such as the username and
@@ -10777,6 +13319,10 @@ public open class CfnWebACL(
        * creation fraud prevention managed rule group. The configuration includes the registration and
        * sign-up pages of your application and the locations in the account creation request payload of
        * data, such as the user email and phone number fields.
+       * * Use the `AWSManagedRulesAntiDDoSRuleSet` configuration object to configure the anti-DDoS
+       * managed rule group. The configuration includes the sensitivity levels to use in the rules that
+       * typically block and challenge requests that might be participating in DDoS attacks and the
+       * specification to use to indicate whether a request can handle a silent browser challenge.
        * * Use the `AWSManagedRulesATPRuleSet` configuration object to configure the account
        * takeover prevention managed rule group. The configuration includes the sign-in page of your
        * application and the locations in the login request payload of data such as the username and
@@ -10800,6 +13346,14 @@ public open class CfnWebACL(
        * configured inside the rule group.
        * You specify one override for each rule whose action you want to change.
        *
+       *
+       * Verify the rule names in your overrides carefully. With managed rule groups, AWS WAF
+       * silently ignores any override that uses an invalid rule name. With customer-owned rule groups,
+       * invalid rule names in your overrides will cause web ACL updates to fail. An invalid rule name
+       * is any name that doesn't exactly match the case-sensitive name of an existing rule in the rule
+       * group.
+       *
+       *
        * You can use overrides for testing, for example you can override all of rule actions to
        * `Count` and then monitor the resulting count metrics to understand how the rule group would
        * handle your web traffic. You can also permanently override some or all actions, to modify how
@@ -10814,6 +13368,14 @@ public open class CfnWebACL(
        * configured inside the rule group.
        * You specify one override for each rule whose action you want to change.
        *
+       *
+       * Verify the rule names in your overrides carefully. With managed rule groups, AWS WAF
+       * silently ignores any override that uses an invalid rule name. With customer-owned rule groups,
+       * invalid rule names in your overrides will cause web ACL updates to fail. An invalid rule name
+       * is any name that doesn't exactly match the case-sensitive name of an existing rule in the rule
+       * group.
+       *
+       *
        * You can use overrides for testing, for example you can override all of rule actions to
        * `Count` and then monitor the resulting count metrics to understand how the rule group would
        * handle your web traffic. You can also permanently override some or all actions, to modify how
@@ -10827,6 +13389,14 @@ public open class CfnWebACL(
        * @param ruleActionOverrides Action settings to use in the place of the rule actions that are
        * configured inside the rule group.
        * You specify one override for each rule whose action you want to change.
+       *
+       *
+       * Verify the rule names in your overrides carefully. With managed rule groups, AWS WAF
+       * silently ignores any override that uses an invalid rule name. With customer-owned rule groups,
+       * invalid rule names in your overrides will cause web ACL updates to fail. An invalid rule name
+       * is any name that doesn't exactly match the case-sensitive name of an existing rule in the rule
+       * group.
+       *
        *
        * You can use overrides for testing, for example you can override all of rule actions to
        * `Count` and then monitor the resulting count metrics to understand how the rule group would
@@ -10919,6 +13489,10 @@ public open class CfnWebACL(
        * creation fraud prevention managed rule group. The configuration includes the registration and
        * sign-up pages of your application and the locations in the account creation request payload of
        * data, such as the user email and phone number fields.
+       * * Use the `AWSManagedRulesAntiDDoSRuleSet` configuration object to configure the anti-DDoS
+       * managed rule group. The configuration includes the sensitivity levels to use in the rules that
+       * typically block and challenge requests that might be participating in DDoS attacks and the
+       * specification to use to indicate whether a request can handle a silent browser challenge.
        * * Use the `AWSManagedRulesATPRuleSet` configuration object to configure the account
        * takeover prevention managed rule group. The configuration includes the sign-in page of your
        * application and the locations in the login request payload of data such as the username and
@@ -10944,6 +13518,14 @@ public open class CfnWebACL(
        * group.
        *
        * You specify one override for each rule whose action you want to change.
+       *
+       *
+       * Verify the rule names in your overrides carefully. With managed rule groups, AWS WAF
+       * silently ignores any override that uses an invalid rule name. With customer-owned rule groups,
+       * invalid rule names in your overrides will cause web ACL updates to fail. An invalid rule name
+       * is any name that doesn't exactly match the case-sensitive name of an existing rule in the rule
+       * group.
+       *
        *
        * You can use overrides for testing, for example you can override all of rule actions to
        * `Count` and then monitor the resulting count metrics to understand how the rule group would
@@ -11117,6 +13699,126 @@ public open class CfnWebACL(
           software.amazon.awscdk.services.wafv2.CfnWebACL.NotStatementProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.wafv2.CfnWebACL.NotStatementProperty
+    }
+  }
+
+  /**
+   * Configures the level of DDoS protection that applies to web ACLs associated with Application
+   * Load Balancers.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * OnSourceDDoSProtectionConfigProperty onSourceDDoSProtectionConfigProperty =
+   * OnSourceDDoSProtectionConfigProperty.builder()
+   * .albLowReputationMode("albLowReputationMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-onsourceddosprotectionconfig.html)
+   */
+  public interface OnSourceDDoSProtectionConfigProperty {
+    /**
+     * The level of DDoS protection that applies to web ACLs associated with Application Load
+     * Balancers.
+     *
+     * `ACTIVE_UNDER_DDOS` protection is enabled by default whenever a web ACL is associated with an
+     * Application Load Balancer. In the event that an Application Load Balancer experiences high-load
+     * conditions or suspected DDoS attacks, the `ACTIVE_UNDER_DDOS` protection automatically rate
+     * limits traffic from known low reputation sources without disrupting Application Load Balancer
+     * availability. `ALWAYS_ON` protection provides constant, always-on monitoring of known low
+     * reputation sources for suspected DDoS attacks. While this provides a higher level of protection,
+     * there may be potential impacts on legitimate traffic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-onsourceddosprotectionconfig.html#cfn-wafv2-webacl-onsourceddosprotectionconfig-alblowreputationmode)
+     */
+    public fun albLowReputationMode(): String
+
+    /**
+     * A builder for [OnSourceDDoSProtectionConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param albLowReputationMode The level of DDoS protection that applies to web ACLs
+       * associated with Application Load Balancers. 
+       * `ACTIVE_UNDER_DDOS` protection is enabled by default whenever a web ACL is associated with
+       * an Application Load Balancer. In the event that an Application Load Balancer experiences
+       * high-load conditions or suspected DDoS attacks, the `ACTIVE_UNDER_DDOS` protection
+       * automatically rate limits traffic from known low reputation sources without disrupting
+       * Application Load Balancer availability. `ALWAYS_ON` protection provides constant, always-on
+       * monitoring of known low reputation sources for suspected DDoS attacks. While this provides a
+       * higher level of protection, there may be potential impacts on legitimate traffic.
+       */
+      public fun albLowReputationMode(albLowReputationMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnWebACL.OnSourceDDoSProtectionConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.wafv2.CfnWebACL.OnSourceDDoSProtectionConfigProperty.builder()
+
+      /**
+       * @param albLowReputationMode The level of DDoS protection that applies to web ACLs
+       * associated with Application Load Balancers. 
+       * `ACTIVE_UNDER_DDOS` protection is enabled by default whenever a web ACL is associated with
+       * an Application Load Balancer. In the event that an Application Load Balancer experiences
+       * high-load conditions or suspected DDoS attacks, the `ACTIVE_UNDER_DDOS` protection
+       * automatically rate limits traffic from known low reputation sources without disrupting
+       * Application Load Balancer availability. `ALWAYS_ON` protection provides constant, always-on
+       * monitoring of known low reputation sources for suspected DDoS attacks. While this provides a
+       * higher level of protection, there may be potential impacts on legitimate traffic.
+       */
+      override fun albLowReputationMode(albLowReputationMode: String) {
+        cdkBuilder.albLowReputationMode(albLowReputationMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.wafv2.CfnWebACL.OnSourceDDoSProtectionConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.OnSourceDDoSProtectionConfigProperty,
+    ) : CdkObject(cdkObject),
+        OnSourceDDoSProtectionConfigProperty {
+      /**
+       * The level of DDoS protection that applies to web ACLs associated with Application Load
+       * Balancers.
+       *
+       * `ACTIVE_UNDER_DDOS` protection is enabled by default whenever a web ACL is associated with
+       * an Application Load Balancer. In the event that an Application Load Balancer experiences
+       * high-load conditions or suspected DDoS attacks, the `ACTIVE_UNDER_DDOS` protection
+       * automatically rate limits traffic from known low reputation sources without disrupting
+       * Application Load Balancer availability. `ALWAYS_ON` protection provides constant, always-on
+       * monitoring of known low reputation sources for suspected DDoS attacks. While this provides a
+       * higher level of protection, there may be potential impacts on legitimate traffic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-onsourceddosprotectionconfig.html#cfn-wafv2-webacl-onsourceddosprotectionconfig-alblowreputationmode)
+       */
+      override fun albLowReputationMode(): String = unwrap(this).getAlbLowReputationMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OnSourceDDoSProtectionConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.OnSourceDDoSProtectionConfigProperty):
+          OnSourceDDoSProtectionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OnSourceDDoSProtectionConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OnSourceDDoSProtectionConfigProperty):
+          software.amazon.awscdk.services.wafv2.CfnWebACL.OnSourceDDoSProtectionConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnWebACL.OnSourceDDoSProtectionConfigProperty
     }
   }
 
@@ -11396,11 +14098,13 @@ public open class CfnWebACL(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * Object asn;
    * Object forwardedIp;
    * Object httpMethod;
    * Object ip;
    * RateBasedStatementCustomKeyProperty rateBasedStatementCustomKeyProperty =
    * RateBasedStatementCustomKeyProperty.builder()
+   * .asn(asn)
    * .cookie(RateLimitCookieProperty.builder()
    * .name("name")
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -11418,6 +14122,12 @@ public open class CfnWebACL(
    * .build())
    * .httpMethod(httpMethod)
    * .ip(ip)
+   * .ja3Fingerprint(RateLimitJA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
+   * .ja4Fingerprint(RateLimitJA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
    * .namespace("namespace")
    * .build())
@@ -11446,6 +14156,16 @@ public open class CfnWebACL(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatementcustomkey.html)
    */
   public interface RateBasedStatementCustomKeyProperty {
+    /**
+     * Use an Autonomous System Number (ASN) derived from the request's originating or forwarded IP
+     * address as an aggregate key.
+     *
+     * Each distinct ASN contributes to the aggregation instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatementcustomkey.html#cfn-wafv2-webacl-ratebasedstatementcustomkey-asn)
+     */
+    public fun asn(): Any? = unwrap(this).getAsn()
+
     /**
      * Use the value of a cookie in the request as an aggregate key.
      *
@@ -11505,6 +14225,26 @@ public open class CfnWebACL(
     public fun ip(): Any? = unwrap(this).getIp()
 
     /**
+     * Use the request's JA3 fingerprint as an aggregate key.
+     *
+     * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+     * aggregation instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatementcustomkey.html#cfn-wafv2-webacl-ratebasedstatementcustomkey-ja3fingerprint)
+     */
+    public fun ja3Fingerprint(): Any? = unwrap(this).getJa3Fingerprint()
+
+    /**
+     * Use the request's JA4 fingerprint as an aggregate key.
+     *
+     * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+     * aggregation instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatementcustomkey.html#cfn-wafv2-webacl-ratebasedstatementcustomkey-ja4fingerprint)
+     */
+    public fun ja4Fingerprint(): Any? = unwrap(this).getJa4Fingerprint()
+
+    /**
      * Use the specified label namespace as an aggregate key.
      *
      * Each distinct fully qualified label name that has the specified label namespace contributes
@@ -11558,6 +14298,13 @@ public open class CfnWebACL(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param asn Use an Autonomous System Number (ASN) derived from the request's originating or
+       * forwarded IP address as an aggregate key.
+       * Each distinct ASN contributes to the aggregation instance.
+       */
+      public fun asn(asn: Any)
+
       /**
        * @param cookie Use the value of a cookie in the request as an aggregate key.
        * Each distinct value in the cookie contributes to the aggregation instance. If you use a
@@ -11632,6 +14379,52 @@ public open class CfnWebACL(
        * your rate-based statement's `AggregateKeyType` .
        */
       public fun ip(ip: Any)
+
+      /**
+       * @param ja3Fingerprint Use the request's JA3 fingerprint as an aggregate key.
+       * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      public fun ja3Fingerprint(ja3Fingerprint: IResolvable)
+
+      /**
+       * @param ja3Fingerprint Use the request's JA3 fingerprint as an aggregate key.
+       * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      public fun ja3Fingerprint(ja3Fingerprint: RateLimitJA3FingerprintProperty)
+
+      /**
+       * @param ja3Fingerprint Use the request's JA3 fingerprint as an aggregate key.
+       * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ff83d3275ac9f2a3274486c66f586230b785572a01f8184b11e2791b9f3c5e9c")
+      public fun ja3Fingerprint(ja3Fingerprint: RateLimitJA3FingerprintProperty.Builder.() -> Unit)
+
+      /**
+       * @param ja4Fingerprint Use the request's JA4 fingerprint as an aggregate key.
+       * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      public fun ja4Fingerprint(ja4Fingerprint: IResolvable)
+
+      /**
+       * @param ja4Fingerprint Use the request's JA4 fingerprint as an aggregate key.
+       * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      public fun ja4Fingerprint(ja4Fingerprint: RateLimitJA4FingerprintProperty)
+
+      /**
+       * @param ja4Fingerprint Use the request's JA4 fingerprint as an aggregate key.
+       * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b4abbd89efdcf0f4afb73d684def467f3855a509aab534f81b99b36af0d0ded9")
+      public fun ja4Fingerprint(ja4Fingerprint: RateLimitJA4FingerprintProperty.Builder.() -> Unit)
 
       /**
        * @param labelNamespace Use the specified label namespace as an aggregate key.
@@ -11760,6 +14553,15 @@ public open class CfnWebACL(
           software.amazon.awscdk.services.wafv2.CfnWebACL.RateBasedStatementCustomKeyProperty.builder()
 
       /**
+       * @param asn Use an Autonomous System Number (ASN) derived from the request's originating or
+       * forwarded IP address as an aggregate key.
+       * Each distinct ASN contributes to the aggregation instance.
+       */
+      override fun asn(asn: Any) {
+        cdkBuilder.asn(asn)
+      }
+
+      /**
        * @param cookie Use the value of a cookie in the request as an aggregate key.
        * Each distinct value in the cookie contributes to the aggregation instance. If you use a
        * single cookie as your custom key, then each value fully defines an aggregation instance.
@@ -11849,6 +14651,64 @@ public open class CfnWebACL(
       override fun ip(ip: Any) {
         cdkBuilder.ip(ip)
       }
+
+      /**
+       * @param ja3Fingerprint Use the request's JA3 fingerprint as an aggregate key.
+       * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      override fun ja3Fingerprint(ja3Fingerprint: IResolvable) {
+        cdkBuilder.ja3Fingerprint(ja3Fingerprint.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ja3Fingerprint Use the request's JA3 fingerprint as an aggregate key.
+       * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      override fun ja3Fingerprint(ja3Fingerprint: RateLimitJA3FingerprintProperty) {
+        cdkBuilder.ja3Fingerprint(ja3Fingerprint.let(RateLimitJA3FingerprintProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param ja3Fingerprint Use the request's JA3 fingerprint as an aggregate key.
+       * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ff83d3275ac9f2a3274486c66f586230b785572a01f8184b11e2791b9f3c5e9c")
+      override
+          fun ja3Fingerprint(ja3Fingerprint: RateLimitJA3FingerprintProperty.Builder.() -> Unit):
+          Unit = ja3Fingerprint(RateLimitJA3FingerprintProperty(ja3Fingerprint))
+
+      /**
+       * @param ja4Fingerprint Use the request's JA4 fingerprint as an aggregate key.
+       * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      override fun ja4Fingerprint(ja4Fingerprint: IResolvable) {
+        cdkBuilder.ja4Fingerprint(ja4Fingerprint.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ja4Fingerprint Use the request's JA4 fingerprint as an aggregate key.
+       * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      override fun ja4Fingerprint(ja4Fingerprint: RateLimitJA4FingerprintProperty) {
+        cdkBuilder.ja4Fingerprint(ja4Fingerprint.let(RateLimitJA4FingerprintProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param ja4Fingerprint Use the request's JA4 fingerprint as an aggregate key.
+       * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b4abbd89efdcf0f4afb73d684def467f3855a509aab534f81b99b36af0d0ded9")
+      override
+          fun ja4Fingerprint(ja4Fingerprint: RateLimitJA4FingerprintProperty.Builder.() -> Unit):
+          Unit = ja4Fingerprint(RateLimitJA4FingerprintProperty(ja4Fingerprint))
 
       /**
        * @param labelNamespace Use the specified label namespace as an aggregate key.
@@ -12000,6 +14860,16 @@ public open class CfnWebACL(
     ) : CdkObject(cdkObject),
         RateBasedStatementCustomKeyProperty {
       /**
+       * Use an Autonomous System Number (ASN) derived from the request's originating or forwarded
+       * IP address as an aggregate key.
+       *
+       * Each distinct ASN contributes to the aggregation instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatementcustomkey.html#cfn-wafv2-webacl-ratebasedstatementcustomkey-asn)
+       */
+      override fun asn(): Any? = unwrap(this).getAsn()
+
+      /**
        * Use the value of a cookie in the request as an aggregate key.
        *
        * Each distinct value in the cookie contributes to the aggregation instance. If you use a
@@ -12056,6 +14926,26 @@ public open class CfnWebACL(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatementcustomkey.html#cfn-wafv2-webacl-ratebasedstatementcustomkey-ip)
        */
       override fun ip(): Any? = unwrap(this).getIp()
+
+      /**
+       * Use the request's JA3 fingerprint as an aggregate key.
+       *
+       * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatementcustomkey.html#cfn-wafv2-webacl-ratebasedstatementcustomkey-ja3fingerprint)
+       */
+      override fun ja3Fingerprint(): Any? = unwrap(this).getJa3Fingerprint()
+
+      /**
+       * Use the request's JA4 fingerprint as an aggregate key.
+       *
+       * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatementcustomkey.html#cfn-wafv2-webacl-ratebasedstatementcustomkey-ja4fingerprint)
+       */
+      override fun ja4Fingerprint(): Any? = unwrap(this).getJa4Fingerprint()
 
       /**
        * Use the specified label namespace as an aggregate key.
@@ -12293,8 +15183,8 @@ public open class CfnWebACL(
     public fun forwardedIpConfig(): Any? = unwrap(this).getForwardedIpConfig()
 
     /**
-     * The limit on requests per 5-minute period for a single aggregation instance for the
-     * rate-based rule.
+     * The limit on requests during the specified evaluation window for a single aggregation
+     * instance for the rate-based rule.
      *
      * If the rate-based statement includes a `ScopeDownStatement` , this limit is applied only to
      * the requests that match the statement.
@@ -12439,8 +15329,8 @@ public open class CfnWebACL(
           fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param limit The limit on requests per 5-minute period for a single aggregation instance
-       * for the rate-based rule. 
+       * @param limit The limit on requests during the specified evaluation window for a single
+       * aggregation instance for the rate-based rule. 
        * If the rate-based statement includes a `ScopeDownStatement` , this limit is applied only to
        * the requests that match the statement.
        *
@@ -12616,8 +15506,8 @@ public open class CfnWebACL(
           Unit = forwardedIpConfig(ForwardedIPConfigurationProperty(forwardedIpConfig))
 
       /**
-       * @param limit The limit on requests per 5-minute period for a single aggregation instance
-       * for the rate-based rule. 
+       * @param limit The limit on requests during the specified evaluation window for a single
+       * aggregation instance for the rate-based rule. 
        * If the rate-based statement includes a `ScopeDownStatement` , this limit is applied only to
        * the requests that match the statement.
        *
@@ -12759,8 +15649,8 @@ public open class CfnWebACL(
       override fun forwardedIpConfig(): Any? = unwrap(this).getForwardedIpConfig()
 
       /**
-       * The limit on requests per 5-minute period for a single aggregation instance for the
-       * rate-based rule.
+       * The limit on requests during the specified evaluation window for a single aggregation
+       * instance for the rate-based rule.
        *
        * If the rate-based statement includes a `ScopeDownStatement` , this limit is applied only to
        * the requests that match the statement.
@@ -13193,6 +16083,232 @@ public open class CfnWebACL(
           software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitHeaderProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitHeaderProperty
+    }
+  }
+
+  /**
+   * Use the request's JA3 fingerprint derived from the TLS Client Hello of an incoming request as
+   * an aggregate key.
+   *
+   * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+   * aggregation instance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * RateLimitJA3FingerprintProperty rateLimitJA3FingerprintProperty =
+   * RateLimitJA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratelimitja3fingerprint.html)
+   */
+  public interface RateLimitJA3FingerprintProperty {
+    /**
+     * The match status to assign to the web request if there is insufficient TSL Client Hello
+     * information to compute the JA3 fingerprint.
+     *
+     * You can specify the following fallback behaviors:
+     *
+     * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+     * action to the request.
+     * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratelimitja3fingerprint.html#cfn-wafv2-webacl-ratelimitja3fingerprint-fallbackbehavior)
+     */
+    public fun fallbackBehavior(): String
+
+    /**
+     * A builder for [RateLimitJA3FingerprintProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fallbackBehavior The match status to assign to the web request if there is
+       * insufficient TSL Client Hello information to compute the JA3 fingerprint. 
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       */
+      public fun fallbackBehavior(fallbackBehavior: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitJA3FingerprintProperty.Builder =
+          software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitJA3FingerprintProperty.builder()
+
+      /**
+       * @param fallbackBehavior The match status to assign to the web request if there is
+       * insufficient TSL Client Hello information to compute the JA3 fingerprint. 
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       */
+      override fun fallbackBehavior(fallbackBehavior: String) {
+        cdkBuilder.fallbackBehavior(fallbackBehavior)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitJA3FingerprintProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitJA3FingerprintProperty,
+    ) : CdkObject(cdkObject),
+        RateLimitJA3FingerprintProperty {
+      /**
+       * The match status to assign to the web request if there is insufficient TSL Client Hello
+       * information to compute the JA3 fingerprint.
+       *
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratelimitja3fingerprint.html#cfn-wafv2-webacl-ratelimitja3fingerprint-fallbackbehavior)
+       */
+      override fun fallbackBehavior(): String = unwrap(this).getFallbackBehavior()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RateLimitJA3FingerprintProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitJA3FingerprintProperty):
+          RateLimitJA3FingerprintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RateLimitJA3FingerprintProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RateLimitJA3FingerprintProperty):
+          software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitJA3FingerprintProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitJA3FingerprintProperty
+    }
+  }
+
+  /**
+   * Use the request's JA4 fingerprint derived from the TLS Client Hello of an incoming request as
+   * an aggregate key.
+   *
+   * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+   * aggregation instance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * RateLimitJA4FingerprintProperty rateLimitJA4FingerprintProperty =
+   * RateLimitJA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratelimitja4fingerprint.html)
+   */
+  public interface RateLimitJA4FingerprintProperty {
+    /**
+     * The match status to assign to the web request if there is insufficient TSL Client Hello
+     * information to compute the JA4 fingerprint.
+     *
+     * You can specify the following fallback behaviors:
+     *
+     * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+     * action to the request.
+     * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratelimitja4fingerprint.html#cfn-wafv2-webacl-ratelimitja4fingerprint-fallbackbehavior)
+     */
+    public fun fallbackBehavior(): String
+
+    /**
+     * A builder for [RateLimitJA4FingerprintProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fallbackBehavior The match status to assign to the web request if there is
+       * insufficient TSL Client Hello information to compute the JA4 fingerprint. 
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       */
+      public fun fallbackBehavior(fallbackBehavior: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitJA4FingerprintProperty.Builder =
+          software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitJA4FingerprintProperty.builder()
+
+      /**
+       * @param fallbackBehavior The match status to assign to the web request if there is
+       * insufficient TSL Client Hello information to compute the JA4 fingerprint. 
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       */
+      override fun fallbackBehavior(fallbackBehavior: String) {
+        cdkBuilder.fallbackBehavior(fallbackBehavior)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitJA4FingerprintProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitJA4FingerprintProperty,
+    ) : CdkObject(cdkObject),
+        RateLimitJA4FingerprintProperty {
+      /**
+       * The match status to assign to the web request if there is insufficient TSL Client Hello
+       * information to compute the JA4 fingerprint.
+       *
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratelimitja4fingerprint.html#cfn-wafv2-webacl-ratelimitja4fingerprint-fallbackbehavior)
+       */
+      override fun fallbackBehavior(): String = unwrap(this).getFallbackBehavior()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RateLimitJA4FingerprintProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitJA4FingerprintProperty):
+          RateLimitJA4FingerprintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RateLimitJA4FingerprintProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RateLimitJA4FingerprintProperty):
+          software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitJA4FingerprintProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitJA4FingerprintProperty
     }
   }
 
@@ -13867,6 +16983,9 @@ public open class CfnWebACL(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -13881,6 +17000,9 @@ public open class CfnWebACL(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .regexString("regexString")
@@ -14148,6 +17270,9 @@ public open class CfnWebACL(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -14162,6 +17287,9 @@ public open class CfnWebACL(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -14376,6 +17504,86 @@ public open class CfnWebACL(
           software.amazon.awscdk.services.wafv2.CfnWebACL.RegexPatternSetReferenceStatementProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.wafv2.CfnWebACL.RegexPatternSetReferenceStatementProperty
+    }
+  }
+
+  /**
+   * A single regular expression.
+   *
+   * This is used in a `RegexPatternSet` and also in the configuration for the AWS Managed Rules
+   * rule group `AWSManagedRulesAntiDDoSRuleSet` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * RegexProperty regexProperty = RegexProperty.builder()
+   * .regexString("regexString")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-regex.html)
+   */
+  public interface RegexProperty {
+    /**
+     * The string representing the regular expression.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-regex.html#cfn-wafv2-webacl-regex-regexstring)
+     */
+    public fun regexString(): String? = unwrap(this).getRegexString()
+
+    /**
+     * A builder for [RegexProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param regexString The string representing the regular expression.
+       */
+      public fun regexString(regexString: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.services.wafv2.CfnWebACL.RegexProperty.Builder
+          = software.amazon.awscdk.services.wafv2.CfnWebACL.RegexProperty.builder()
+
+      /**
+       * @param regexString The string representing the regular expression.
+       */
+      override fun regexString(regexString: String) {
+        cdkBuilder.regexString(regexString)
+      }
+
+      public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.RegexProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RegexProperty,
+    ) : CdkObject(cdkObject),
+        RegexProperty {
+      /**
+       * The string representing the regular expression.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-regex.html#cfn-wafv2-webacl-regex-regexstring)
+       */
+      override fun regexString(): String? = unwrap(this).getRegexString()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RegexProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RegexProperty):
+          RegexProperty = CdkObjectWrappers.wrap(cdkObject) as? RegexProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RegexProperty):
+          software.amazon.awscdk.services.wafv2.CfnWebACL.RegexProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.wafv2.CfnWebACL.RegexProperty
     }
   }
 
@@ -17110,16 +20318,6 @@ public open class CfnWebACL(
        *
        * JSON example: `"FailureCodes": [ 400, 404 ]`
        */
-      public fun failureCodes(failureCodes: IResolvable)
-
-      /**
-       * @param failureCodes Status codes in the response that indicate a failed login or account
-       * creation attempt. 
-       * To be counted as a failure, the response status code must match one of these. Each code
-       * must be unique among the success and failure status codes.
-       *
-       * JSON example: `"FailureCodes": [ 400, 404 ]`
-       */
       public fun failureCodes(failureCodes: List<Number>)
 
       /**
@@ -17133,14 +20331,14 @@ public open class CfnWebACL(
       public fun failureCodes(vararg failureCodes: Number)
 
       /**
-       * @param successCodes Status codes in the response that indicate a successful login or
-       * account creation attempt. 
-       * To be counted as a success, the response status code must match one of these. Each code
+       * @param failureCodes Status codes in the response that indicate a failed login or account
+       * creation attempt. 
+       * To be counted as a failure, the response status code must match one of these. Each code
        * must be unique among the success and failure status codes.
        *
-       * JSON example: `"SuccessCodes": [ 200, 201 ]`
+       * JSON example: `"FailureCodes": [ 400, 404 ]`
        */
-      public fun successCodes(successCodes: IResolvable)
+      public fun failureCodes(failureCodes: IResolvable)
 
       /**
        * @param successCodes Status codes in the response that indicate a successful login or
@@ -17161,6 +20359,16 @@ public open class CfnWebACL(
        * JSON example: `"SuccessCodes": [ 200, 201 ]`
        */
       public fun successCodes(vararg successCodes: Number)
+
+      /**
+       * @param successCodes Status codes in the response that indicate a successful login or
+       * account creation attempt. 
+       * To be counted as a success, the response status code must match one of these. Each code
+       * must be unique among the success and failure status codes.
+       *
+       * JSON example: `"SuccessCodes": [ 200, 201 ]`
+       */
+      public fun successCodes(successCodes: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -17168,18 +20376,6 @@ public open class CfnWebACL(
           software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionStatusCodeProperty.Builder
           =
           software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionStatusCodeProperty.builder()
-
-      /**
-       * @param failureCodes Status codes in the response that indicate a failed login or account
-       * creation attempt. 
-       * To be counted as a failure, the response status code must match one of these. Each code
-       * must be unique among the success and failure status codes.
-       *
-       * JSON example: `"FailureCodes": [ 400, 404 ]`
-       */
-      override fun failureCodes(failureCodes: IResolvable) {
-        cdkBuilder.failureCodes(failureCodes.let(IResolvable.Companion::unwrap))
-      }
 
       /**
        * @param failureCodes Status codes in the response that indicate a failed login or account
@@ -17205,15 +20401,15 @@ public open class CfnWebACL(
           failureCodes(failureCodes.toList())
 
       /**
-       * @param successCodes Status codes in the response that indicate a successful login or
-       * account creation attempt. 
-       * To be counted as a success, the response status code must match one of these. Each code
+       * @param failureCodes Status codes in the response that indicate a failed login or account
+       * creation attempt. 
+       * To be counted as a failure, the response status code must match one of these. Each code
        * must be unique among the success and failure status codes.
        *
-       * JSON example: `"SuccessCodes": [ 200, 201 ]`
+       * JSON example: `"FailureCodes": [ 400, 404 ]`
        */
-      override fun successCodes(successCodes: IResolvable) {
-        cdkBuilder.successCodes(successCodes.let(IResolvable.Companion::unwrap))
+      override fun failureCodes(failureCodes: IResolvable) {
+        cdkBuilder.failureCodes(failureCodes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -17238,6 +20434,18 @@ public open class CfnWebACL(
        */
       override fun successCodes(vararg successCodes: Number): Unit =
           successCodes(successCodes.toList())
+
+      /**
+       * @param successCodes Status codes in the response that indicate a successful login or
+       * account creation attempt. 
+       * To be counted as a success, the response status code must match one of these. Each code
+       * must be unique among the success and failure status codes.
+       *
+       * JSON example: `"SuccessCodes": [ 200, 201 ]`
+       */
+      override fun successCodes(successCodes: IResolvable) {
+        cdkBuilder.successCodes(successCodes.let(IResolvable.Companion::unwrap))
+      }
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionStatusCodeProperty =
@@ -18096,6 +21304,13 @@ public open class CfnWebACL(
      *
      * You specify one override for each rule whose action you want to change.
      *
+     *
+     * Verify the rule names in your overrides carefully. With managed rule groups, AWS WAF silently
+     * ignores any override that uses an invalid rule name. With customer-owned rule groups, invalid
+     * rule names in your overrides will cause web ACL updates to fail. An invalid rule name is any
+     * name that doesn't exactly match the case-sensitive name of an existing rule in the rule group.
+     *
+     *
      * You can use overrides for testing, for example you can override all of rule actions to
      * `Count` and then monitor the resulting count metrics to understand how the rule group would
      * handle your web traffic. You can also permanently override some or all actions, to modify how
@@ -18144,6 +21359,14 @@ public open class CfnWebACL(
        * configured inside the rule group.
        * You specify one override for each rule whose action you want to change.
        *
+       *
+       * Verify the rule names in your overrides carefully. With managed rule groups, AWS WAF
+       * silently ignores any override that uses an invalid rule name. With customer-owned rule groups,
+       * invalid rule names in your overrides will cause web ACL updates to fail. An invalid rule name
+       * is any name that doesn't exactly match the case-sensitive name of an existing rule in the rule
+       * group.
+       *
+       *
        * You can use overrides for testing, for example you can override all of rule actions to
        * `Count` and then monitor the resulting count metrics to understand how the rule group would
        * handle your web traffic. You can also permanently override some or all actions, to modify how
@@ -18156,6 +21379,14 @@ public open class CfnWebACL(
        * configured inside the rule group.
        * You specify one override for each rule whose action you want to change.
        *
+       *
+       * Verify the rule names in your overrides carefully. With managed rule groups, AWS WAF
+       * silently ignores any override that uses an invalid rule name. With customer-owned rule groups,
+       * invalid rule names in your overrides will cause web ACL updates to fail. An invalid rule name
+       * is any name that doesn't exactly match the case-sensitive name of an existing rule in the rule
+       * group.
+       *
+       *
        * You can use overrides for testing, for example you can override all of rule actions to
        * `Count` and then monitor the resulting count metrics to understand how the rule group would
        * handle your web traffic. You can also permanently override some or all actions, to modify how
@@ -18167,6 +21398,14 @@ public open class CfnWebACL(
        * @param ruleActionOverrides Action settings to use in the place of the rule actions that are
        * configured inside the rule group.
        * You specify one override for each rule whose action you want to change.
+       *
+       *
+       * Verify the rule names in your overrides carefully. With managed rule groups, AWS WAF
+       * silently ignores any override that uses an invalid rule name. With customer-owned rule groups,
+       * invalid rule names in your overrides will cause web ACL updates to fail. An invalid rule name
+       * is any name that doesn't exactly match the case-sensitive name of an existing rule in the rule
+       * group.
+       *
        *
        * You can use overrides for testing, for example you can override all of rule actions to
        * `Count` and then monitor the resulting count metrics to understand how the rule group would
@@ -18223,6 +21462,14 @@ public open class CfnWebACL(
        * configured inside the rule group.
        * You specify one override for each rule whose action you want to change.
        *
+       *
+       * Verify the rule names in your overrides carefully. With managed rule groups, AWS WAF
+       * silently ignores any override that uses an invalid rule name. With customer-owned rule groups,
+       * invalid rule names in your overrides will cause web ACL updates to fail. An invalid rule name
+       * is any name that doesn't exactly match the case-sensitive name of an existing rule in the rule
+       * group.
+       *
+       *
        * You can use overrides for testing, for example you can override all of rule actions to
        * `Count` and then monitor the resulting count metrics to understand how the rule group would
        * handle your web traffic. You can also permanently override some or all actions, to modify how
@@ -18237,6 +21484,14 @@ public open class CfnWebACL(
        * configured inside the rule group.
        * You specify one override for each rule whose action you want to change.
        *
+       *
+       * Verify the rule names in your overrides carefully. With managed rule groups, AWS WAF
+       * silently ignores any override that uses an invalid rule name. With customer-owned rule groups,
+       * invalid rule names in your overrides will cause web ACL updates to fail. An invalid rule name
+       * is any name that doesn't exactly match the case-sensitive name of an existing rule in the rule
+       * group.
+       *
+       *
        * You can use overrides for testing, for example you can override all of rule actions to
        * `Count` and then monitor the resulting count metrics to understand how the rule group would
        * handle your web traffic. You can also permanently override some or all actions, to modify how
@@ -18250,6 +21505,14 @@ public open class CfnWebACL(
        * @param ruleActionOverrides Action settings to use in the place of the rule actions that are
        * configured inside the rule group.
        * You specify one override for each rule whose action you want to change.
+       *
+       *
+       * Verify the rule names in your overrides carefully. With managed rule groups, AWS WAF
+       * silently ignores any override that uses an invalid rule name. With customer-owned rule groups,
+       * invalid rule names in your overrides will cause web ACL updates to fail. An invalid rule name
+       * is any name that doesn't exactly match the case-sensitive name of an existing rule in the rule
+       * group.
+       *
        *
        * You can use overrides for testing, for example you can override all of rule actions to
        * `Count` and then monitor the resulting count metrics to understand how the rule group would
@@ -18292,6 +21555,14 @@ public open class CfnWebACL(
        * group.
        *
        * You specify one override for each rule whose action you want to change.
+       *
+       *
+       * Verify the rule names in your overrides carefully. With managed rule groups, AWS WAF
+       * silently ignores any override that uses an invalid rule name. With customer-owned rule groups,
+       * invalid rule names in your overrides will cause web ACL updates to fail. An invalid rule name
+       * is any name that doesn't exactly match the case-sensitive name of an existing rule in the rule
+       * group.
+       *
        *
        * You can use overrides for testing, for example you can override all of rule actions to
        * `Count` and then monitor the resulting count metrics to understand how the rule group would
@@ -18427,6 +21698,11 @@ public open class CfnWebACL(
      * AWS WAF applies fully qualified labels to matching web requests. A fully qualified label is
      * the concatenation of a label namespace and a rule label. The rule's rule group or web ACL
      * defines the label namespace.
+     *
+     *
+     * Any rule that isn't a rule group reference statement or managed rule group statement can add
+     * labels to matching web requests.
+     *
      *
      * Rules that run after this rule in the web ACL can match against these labels using a
      * `LabelMatchStatement` .
@@ -18656,6 +21932,11 @@ public open class CfnWebACL(
        * the concatenation of a label namespace and a rule label. The rule's rule group or web ACL
        * defines the label namespace.
        *
+       *
+       * Any rule that isn't a rule group reference statement or managed rule group statement can
+       * add labels to matching web requests.
+       *
+       *
        * Rules that run after this rule in the web ACL can match against these labels using a
        * `LabelMatchStatement` .
        *
@@ -18678,6 +21959,11 @@ public open class CfnWebACL(
        * the concatenation of a label namespace and a rule label. The rule's rule group or web ACL
        * defines the label namespace.
        *
+       *
+       * Any rule that isn't a rule group reference statement or managed rule group statement can
+       * add labels to matching web requests.
+       *
+       *
        * Rules that run after this rule in the web ACL can match against these labels using a
        * `LabelMatchStatement` .
        *
@@ -18699,6 +21985,11 @@ public open class CfnWebACL(
        * AWS WAF applies fully qualified labels to matching web requests. A fully qualified label is
        * the concatenation of a label namespace and a rule label. The rule's rule group or web ACL
        * defines the label namespace.
+       *
+       *
+       * Any rule that isn't a rule group reference statement or managed rule group statement can
+       * add labels to matching web requests.
+       *
        *
        * Rules that run after this rule in the web ACL can match against these labels using a
        * `LabelMatchStatement` .
@@ -18980,6 +22271,11 @@ public open class CfnWebACL(
        * the concatenation of a label namespace and a rule label. The rule's rule group or web ACL
        * defines the label namespace.
        *
+       *
+       * Any rule that isn't a rule group reference statement or managed rule group statement can
+       * add labels to matching web requests.
+       *
+       *
        * Rules that run after this rule in the web ACL can match against these labels using a
        * `LabelMatchStatement` .
        *
@@ -19004,6 +22300,11 @@ public open class CfnWebACL(
        * the concatenation of a label namespace and a rule label. The rule's rule group or web ACL
        * defines the label namespace.
        *
+       *
+       * Any rule that isn't a rule group reference statement or managed rule group statement can
+       * add labels to matching web requests.
+       *
+       *
        * Rules that run after this rule in the web ACL can match against these labels using a
        * `LabelMatchStatement` .
        *
@@ -19027,6 +22328,11 @@ public open class CfnWebACL(
        * AWS WAF applies fully qualified labels to matching web requests. A fully qualified label is
        * the concatenation of a label namespace and a rule label. The rule's rule group or web ACL
        * defines the label namespace.
+       *
+       *
+       * Any rule that isn't a rule group reference statement or managed rule group statement can
+       * add labels to matching web requests.
+       *
        *
        * Rules that run after this rule in the web ACL can match against these labels using a
        * `LabelMatchStatement` .
@@ -19202,6 +22508,11 @@ public open class CfnWebACL(
        * AWS WAF applies fully qualified labels to matching web requests. A fully qualified label is
        * the concatenation of a label namespace and a rule label. The rule's rule group or web ACL
        * defines the label namespace.
+       *
+       *
+       * Any rule that isn't a rule group reference statement or managed rule group statement can
+       * add labels to matching web requests.
+       *
        *
        * Rules that run after this rule in the web ACL can match against these labels using a
        * `LabelMatchStatement` .
@@ -19495,6 +22806,9 @@ public open class CfnWebACL(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -19509,6 +22823,9 @@ public open class CfnWebACL(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .size(123)
@@ -19797,6 +23114,9 @@ public open class CfnWebACL(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -19811,6 +23131,9 @@ public open class CfnWebACL(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -20089,6 +23412,19 @@ public open class CfnWebACL(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-statement.html#cfn-wafv2-webacl-statement-andstatement)
      */
     public fun andStatement(): Any? = unwrap(this).getAndStatement()
+
+    /**
+     * A rule statement that inspects web traffic based on the Autonomous System Number (ASN)
+     * associated with the request's IP address.
+     *
+     * For additional details, see [ASN match rule
+     * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+     * in the [AWS WAF Developer
+     * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-statement.html#cfn-wafv2-webacl-statement-asnmatchstatement)
+     */
+    public fun asnMatchStatement(): Any? = unwrap(this).getAsnMatchStatement()
 
     /**
      * A rule statement that defines a string match search for AWS WAF to apply to web requests.
@@ -20396,6 +23732,38 @@ public open class CfnWebACL(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0faf91fb3e60ba2aaa4f4a1d4b756e124092f1de837c505a2571fb537fbb55dd")
       public fun andStatement(andStatement: AndStatementProperty.Builder.() -> Unit)
+
+      /**
+       * @param asnMatchStatement A rule statement that inspects web traffic based on the Autonomous
+       * System Number (ASN) associated with the request's IP address.
+       * For additional details, see [ASN match rule
+       * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+       * in the [AWS WAF Developer
+       * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+       */
+      public fun asnMatchStatement(asnMatchStatement: IResolvable)
+
+      /**
+       * @param asnMatchStatement A rule statement that inspects web traffic based on the Autonomous
+       * System Number (ASN) associated with the request's IP address.
+       * For additional details, see [ASN match rule
+       * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+       * in the [AWS WAF Developer
+       * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+       */
+      public fun asnMatchStatement(asnMatchStatement: AsnMatchStatementProperty)
+
+      /**
+       * @param asnMatchStatement A rule statement that inspects web traffic based on the Autonomous
+       * System Number (ASN) associated with the request's IP address.
+       * For additional details, see [ASN match rule
+       * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+       * in the [AWS WAF Developer
+       * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("72486be4e1bf6103d01f36e5639b40a92e2df95205e3285de40af4ff50d10901")
+      public fun asnMatchStatement(asnMatchStatement: AsnMatchStatementProperty.Builder.() -> Unit)
 
       /**
        * @param byteMatchStatement A rule statement that defines a string match search for AWS WAF
@@ -21209,6 +24577,44 @@ public open class CfnWebACL(
       @JvmName("0faf91fb3e60ba2aaa4f4a1d4b756e124092f1de837c505a2571fb537fbb55dd")
       override fun andStatement(andStatement: AndStatementProperty.Builder.() -> Unit): Unit =
           andStatement(AndStatementProperty(andStatement))
+
+      /**
+       * @param asnMatchStatement A rule statement that inspects web traffic based on the Autonomous
+       * System Number (ASN) associated with the request's IP address.
+       * For additional details, see [ASN match rule
+       * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+       * in the [AWS WAF Developer
+       * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+       */
+      override fun asnMatchStatement(asnMatchStatement: IResolvable) {
+        cdkBuilder.asnMatchStatement(asnMatchStatement.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param asnMatchStatement A rule statement that inspects web traffic based on the Autonomous
+       * System Number (ASN) associated with the request's IP address.
+       * For additional details, see [ASN match rule
+       * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+       * in the [AWS WAF Developer
+       * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+       */
+      override fun asnMatchStatement(asnMatchStatement: AsnMatchStatementProperty) {
+        cdkBuilder.asnMatchStatement(asnMatchStatement.let(AsnMatchStatementProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param asnMatchStatement A rule statement that inspects web traffic based on the Autonomous
+       * System Number (ASN) associated with the request's IP address.
+       * For additional details, see [ASN match rule
+       * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+       * in the [AWS WAF Developer
+       * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("72486be4e1bf6103d01f36e5639b40a92e2df95205e3285de40af4ff50d10901")
+      override
+          fun asnMatchStatement(asnMatchStatement: AsnMatchStatementProperty.Builder.() -> Unit):
+          Unit = asnMatchStatement(AsnMatchStatementProperty(asnMatchStatement))
 
       /**
        * @param byteMatchStatement A rule statement that defines a string match search for AWS WAF
@@ -22085,6 +25491,19 @@ public open class CfnWebACL(
       override fun andStatement(): Any? = unwrap(this).getAndStatement()
 
       /**
+       * A rule statement that inspects web traffic based on the Autonomous System Number (ASN)
+       * associated with the request's IP address.
+       *
+       * For additional details, see [ASN match rule
+       * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+       * in the [AWS WAF Developer
+       * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-statement.html#cfn-wafv2-webacl-statement-asnmatchstatement)
+       */
+      override fun asnMatchStatement(): Any? = unwrap(this).getAsnMatchStatement()
+
+      /**
        * A rule statement that defines a string match search for AWS WAF to apply to web requests.
        *
        * The byte match statement provides the bytes to search for, the location in requests that
@@ -22517,6 +25936,176 @@ public open class CfnWebACL(
   }
 
   /**
+   * Inspect fragments of the request URI.
+   *
+   * You can specify the parts of the URI fragment to inspect and you can narrow the set of URI
+   * fragments to inspect by including or excluding specific keys.
+   *
+   * This is used to indicate the web request component to inspect, in the `FieldToMatch`
+   * specification.
+   *
+   * Example JSON: `"UriFragment": { "MatchPattern": { "All": {} }, "MatchScope": "KEY",
+   * "OversizeHandling": "MATCH" }`
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * UriFragmentProperty uriFragmentProperty = UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-urifragment.html)
+   */
+  public interface UriFragmentProperty {
+    /**
+     * What AWS WAF should do if it fails to completely parse the JSON body. The options are the
+     * following:.
+     *
+     * * `EVALUATE_AS_STRING` - Inspect the body as plain text. AWS WAF applies the text
+     * transformations and inspection criteria that you defined for the JSON inspection to the body
+     * text string.
+     * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+     * action to the request.
+     * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+     *
+     * If you don't provide this setting, AWS WAF parses and evaluates the content only up to the
+     * first parsing failure that it encounters.
+     *
+     * Example JSON: `{ "UriFragment": { "FallbackBehavior": "MATCH"} }`
+     *
+     *
+     * AWS WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even for
+     * invalid JSON. When parsing succeeds, AWS WAF doesn't apply the fallback behavior. For more
+     * information, see [JSON
+     * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+     * in the *AWS WAF Developer Guide* .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-urifragment.html#cfn-wafv2-webacl-urifragment-fallbackbehavior)
+     */
+    public fun fallbackBehavior(): String? = unwrap(this).getFallbackBehavior()
+
+    /**
+     * A builder for [UriFragmentProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fallbackBehavior What AWS WAF should do if it fails to completely parse the JSON
+       * body. The options are the following:.
+       * * `EVALUATE_AS_STRING` - Inspect the body as plain text. AWS WAF applies the text
+       * transformations and inspection criteria that you defined for the JSON inspection to the body
+       * text string.
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       *
+       * If you don't provide this setting, AWS WAF parses and evaluates the content only up to the
+       * first parsing failure that it encounters.
+       *
+       * Example JSON: `{ "UriFragment": { "FallbackBehavior": "MATCH"} }`
+       *
+       *
+       * AWS WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even
+       * for invalid JSON. When parsing succeeds, AWS WAF doesn't apply the fallback behavior. For more
+       * information, see [JSON
+       * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+       * in the *AWS WAF Developer Guide* .
+       */
+      public fun fallbackBehavior(fallbackBehavior: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnWebACL.UriFragmentProperty.Builder =
+          software.amazon.awscdk.services.wafv2.CfnWebACL.UriFragmentProperty.builder()
+
+      /**
+       * @param fallbackBehavior What AWS WAF should do if it fails to completely parse the JSON
+       * body. The options are the following:.
+       * * `EVALUATE_AS_STRING` - Inspect the body as plain text. AWS WAF applies the text
+       * transformations and inspection criteria that you defined for the JSON inspection to the body
+       * text string.
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       *
+       * If you don't provide this setting, AWS WAF parses and evaluates the content only up to the
+       * first parsing failure that it encounters.
+       *
+       * Example JSON: `{ "UriFragment": { "FallbackBehavior": "MATCH"} }`
+       *
+       *
+       * AWS WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even
+       * for invalid JSON. When parsing succeeds, AWS WAF doesn't apply the fallback behavior. For more
+       * information, see [JSON
+       * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+       * in the *AWS WAF Developer Guide* .
+       */
+      override fun fallbackBehavior(fallbackBehavior: String) {
+        cdkBuilder.fallbackBehavior(fallbackBehavior)
+      }
+
+      public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.UriFragmentProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.UriFragmentProperty,
+    ) : CdkObject(cdkObject),
+        UriFragmentProperty {
+      /**
+       * What AWS WAF should do if it fails to completely parse the JSON body. The options are the
+       * following:.
+       *
+       * * `EVALUATE_AS_STRING` - Inspect the body as plain text. AWS WAF applies the text
+       * transformations and inspection criteria that you defined for the JSON inspection to the body
+       * text string.
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       *
+       * If you don't provide this setting, AWS WAF parses and evaluates the content only up to the
+       * first parsing failure that it encounters.
+       *
+       * Example JSON: `{ "UriFragment": { "FallbackBehavior": "MATCH"} }`
+       *
+       *
+       * AWS WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even
+       * for invalid JSON. When parsing succeeds, AWS WAF doesn't apply the fallback behavior. For more
+       * information, see [JSON
+       * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+       * in the *AWS WAF Developer Guide* .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-urifragment.html#cfn-wafv2-webacl-urifragment-fallbackbehavior)
+       */
+      override fun fallbackBehavior(): String? = unwrap(this).getFallbackBehavior()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): UriFragmentProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.UriFragmentProperty):
+          UriFragmentProperty = CdkObjectWrappers.wrap(cdkObject) as? UriFragmentProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: UriFragmentProperty):
+          software.amazon.awscdk.services.wafv2.CfnWebACL.UriFragmentProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnWebACL.UriFragmentProperty
+    }
+  }
+
+  /**
    * Defines and enables Amazon CloudWatch metrics and web request sample collection.
    *
    * Example:
@@ -22569,10 +26158,14 @@ public open class CfnWebACL(
      *
      * You can view the sampled requests through the AWS WAF console.
      *
+     * If you configure data protection for the web ACL, the protection applies to the web ACL's
+     * sampled web request data.
+     *
      *
      * Request sampling doesn't provide a field redaction option, and any field redaction that you
-     * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
-     * from request sampling is by disabling sampling in the web ACL visibility configuration.
+     * specify in your logging configuration doesn't affect sampling. You can only exclude fields from
+     * request sampling by disabling sampling in the web ACL visibility configuration or by configuring
+     * data protection for the web ACL.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-visibilityconfig.html#cfn-wafv2-webacl-visibilityconfig-sampledrequestsenabled)
@@ -22629,10 +26222,14 @@ public open class CfnWebACL(
        * requests that match the rules. 
        * You can view the sampled requests through the AWS WAF console.
        *
+       * If you configure data protection for the web ACL, the protection applies to the web ACL's
+       * sampled web request data.
+       *
        *
        * Request sampling doesn't provide a field redaction option, and any field redaction that you
-       * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
-       * from request sampling is by disabling sampling in the web ACL visibility configuration.
+       * specify in your logging configuration doesn't affect sampling. You can only exclude fields
+       * from request sampling by disabling sampling in the web ACL visibility configuration or by
+       * configuring data protection for the web ACL.
        */
       public fun sampledRequestsEnabled(sampledRequestsEnabled: Boolean)
 
@@ -22641,10 +26238,14 @@ public open class CfnWebACL(
        * requests that match the rules. 
        * You can view the sampled requests through the AWS WAF console.
        *
+       * If you configure data protection for the web ACL, the protection applies to the web ACL's
+       * sampled web request data.
+       *
        *
        * Request sampling doesn't provide a field redaction option, and any field redaction that you
-       * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
-       * from request sampling is by disabling sampling in the web ACL visibility configuration.
+       * specify in your logging configuration doesn't affect sampling. You can only exclude fields
+       * from request sampling by disabling sampling in the web ACL visibility configuration or by
+       * configuring data protection for the web ACL.
        */
       public fun sampledRequestsEnabled(sampledRequestsEnabled: IResolvable)
     }
@@ -22705,10 +26306,14 @@ public open class CfnWebACL(
        * requests that match the rules. 
        * You can view the sampled requests through the AWS WAF console.
        *
+       * If you configure data protection for the web ACL, the protection applies to the web ACL's
+       * sampled web request data.
+       *
        *
        * Request sampling doesn't provide a field redaction option, and any field redaction that you
-       * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
-       * from request sampling is by disabling sampling in the web ACL visibility configuration.
+       * specify in your logging configuration doesn't affect sampling. You can only exclude fields
+       * from request sampling by disabling sampling in the web ACL visibility configuration or by
+       * configuring data protection for the web ACL.
        */
       override fun sampledRequestsEnabled(sampledRequestsEnabled: Boolean) {
         cdkBuilder.sampledRequestsEnabled(sampledRequestsEnabled)
@@ -22719,10 +26324,14 @@ public open class CfnWebACL(
        * requests that match the rules. 
        * You can view the sampled requests through the AWS WAF console.
        *
+       * If you configure data protection for the web ACL, the protection applies to the web ACL's
+       * sampled web request data.
+       *
        *
        * Request sampling doesn't provide a field redaction option, and any field redaction that you
-       * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
-       * from request sampling is by disabling sampling in the web ACL visibility configuration.
+       * specify in your logging configuration doesn't affect sampling. You can only exclude fields
+       * from request sampling by disabling sampling in the web ACL visibility configuration or by
+       * configuring data protection for the web ACL.
        */
       override fun sampledRequestsEnabled(sampledRequestsEnabled: IResolvable) {
         cdkBuilder.sampledRequestsEnabled(sampledRequestsEnabled.let(IResolvable.Companion::unwrap))
@@ -22770,10 +26379,14 @@ public open class CfnWebACL(
        *
        * You can view the sampled requests through the AWS WAF console.
        *
+       * If you configure data protection for the web ACL, the protection applies to the web ACL's
+       * sampled web request data.
+       *
        *
        * Request sampling doesn't provide a field redaction option, and any field redaction that you
-       * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
-       * from request sampling is by disabling sampling in the web ACL visibility configuration.
+       * specify in your logging configuration doesn't affect sampling. You can only exclude fields
+       * from request sampling by disabling sampling in the web ACL visibility configuration or by
+       * configuring data protection for the web ACL.
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-visibilityconfig.html#cfn-wafv2-webacl-visibilityconfig-sampledrequestsenabled)
@@ -22845,6 +26458,9 @@ public open class CfnWebACL(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -22859,6 +26475,9 @@ public open class CfnWebACL(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()

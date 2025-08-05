@@ -18,13 +18,23 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * UserPool importedPool;
- * UserPoolClient userPoolClient = UserPoolClient.Builder.create(this, "UserPoolClient")
- * .userPool(importedPool)
- * .generateSecret(true)
+ * import io.cloudshiftdev.awscdk.services.pinpoint.*;
+ * UserPool userPool;
+ * CfnApp pinpointApp;
+ * Role pinpointRole;
+ * UserPoolClient.Builder.create(this, "Client")
+ * .userPool(userPool)
+ * .analytics(AnalyticsConfiguration.builder()
+ * // Your Pinpoint project ID
+ * .applicationId(pinpointApp.getRef())
+ * // External ID for the IAM role
+ * .externalId("sample-external-id")
+ * // IAM role that Cognito can assume to publish to Pinpoint
+ * .role(pinpointRole)
+ * // Whether to include user data in analytics events
+ * .shareUserData(true)
+ * .build())
  * .build();
- * // Allows you to pass the generated secret to other pieces of infrastructure
- * SecretValue secret = userPoolClient.getUserPoolClientSecret();
  * ```
  */
 public interface UserPoolClientProps : UserPoolClientOptions {
@@ -44,6 +54,18 @@ public interface UserPoolClientProps : UserPoolClientOptions {
      * token validity.
      */
     public fun accessTokenValidity(accessTokenValidity: Duration)
+
+    /**
+     * @param analytics The analytics configuration for this client.
+     */
+    public fun analytics(analytics: AnalyticsConfiguration)
+
+    /**
+     * @param analytics The analytics configuration for this client.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c98079ef64f97945e975372b3b1c3a133dd1c1f43de880607abdac7e762cb1bd")
+    public fun analytics(analytics: AnalyticsConfiguration.Builder.() -> Unit)
 
     /**
      * @param authFlows The set of OAuth authentication flows to enable on the client.
@@ -170,6 +192,21 @@ public interface UserPoolClientProps : UserPoolClientOptions {
     override fun accessTokenValidity(accessTokenValidity: Duration) {
       cdkBuilder.accessTokenValidity(accessTokenValidity.let(Duration.Companion::unwrap))
     }
+
+    /**
+     * @param analytics The analytics configuration for this client.
+     */
+    override fun analytics(analytics: AnalyticsConfiguration) {
+      cdkBuilder.analytics(analytics.let(AnalyticsConfiguration.Companion::unwrap))
+    }
+
+    /**
+     * @param analytics The analytics configuration for this client.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c98079ef64f97945e975372b3b1c3a133dd1c1f43de880607abdac7e762cb1bd")
+    override fun analytics(analytics: AnalyticsConfiguration.Builder.() -> Unit): Unit =
+        analytics(AnalyticsConfiguration(analytics))
 
     /**
      * @param authFlows The set of OAuth authentication flows to enable on the client.
@@ -335,6 +372,14 @@ public interface UserPoolClientProps : UserPoolClientOptions {
      */
     override fun accessTokenValidity(): Duration? =
         unwrap(this).getAccessTokenValidity()?.let(Duration::wrap)
+
+    /**
+     * The analytics configuration for this client.
+     *
+     * Default: - no analytics configuration
+     */
+    override fun analytics(): AnalyticsConfiguration? =
+        unwrap(this).getAnalytics()?.let(AnalyticsConfiguration::wrap)
 
     /**
      * The set of OAuth authentication flows to enable on the client.

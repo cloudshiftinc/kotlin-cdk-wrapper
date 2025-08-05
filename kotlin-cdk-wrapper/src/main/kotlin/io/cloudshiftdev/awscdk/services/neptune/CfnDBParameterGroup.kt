@@ -93,11 +93,6 @@ public open class CfnDBParameterGroup(
   )
 
   /**
-   *
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
-
-  /**
    * Provides the customer-specified description for this DB parameter group.
    */
   public open fun description(): String = unwrap(this).getDescription()

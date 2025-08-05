@@ -116,13 +116,13 @@ public interface CfnDataProtectionSettingsProps {
      * @param additionalEncryptionContext The additional encryption context of the data protection
      * settings.
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
+    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
     /**
      * @param additionalEncryptionContext The additional encryption context of the data protection
      * settings.
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
     /**
      * @param customerManagedKey The customer managed key used to encrypt sensitive information in
@@ -182,16 +182,16 @@ public interface CfnDataProtectionSettingsProps {
      * @param additionalEncryptionContext The additional encryption context of the data protection
      * settings.
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
+    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
     }
 
     /**
      * @param additionalEncryptionContext The additional encryption context of the data protection
      * settings.
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
     }
 
     /**

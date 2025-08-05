@@ -31,6 +31,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .certificates(List.of(certificate))
  * // mTLS settings
  * .mutualAuthentication(MutualAuthentication.builder()
+ * .advertiseTrustStoreCaNames(true)
  * .ignoreClientCertificateExpiry(false)
  * .mutualAuthenticationMode(MutualAuthenticationMode.VERIFY)
  * .trustStore(trustStore)
@@ -175,6 +176,9 @@ public open class TrustStore(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.elasticloadbalancingv2.TrustStore.PROPERTY_INJECTION_ID
+
     public fun fromTrustStoreArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

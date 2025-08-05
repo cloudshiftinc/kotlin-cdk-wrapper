@@ -35,14 +35,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * data contains key attributes that define the scope and cryptographic operations that you can perform
  * using the key, for example key class (example: `SYMMETRIC_KEY` ), key algorithm (example:
  * `TDES_2KEY` ), key usage (example: `TR31_P0_PIN_ENCRYPTION_KEY` ) and key modes of use (example:
- * `Encrypt` ). For information about valid combinations of key attributes, see [Understanding key
+ * `Encrypt` ). AWS Payment Cryptography binds key attributes to keys using key blocks when you store
+ * or export them. AWS Payment Cryptography stores the key contents wrapped and never stores or
+ * transmits them in the clear.
+ *
+ * For information about valid combinations of key attributes, see [Understanding key
  * attributes](https://docs.aws.amazon.com/payment-cryptography/latest/userguide/keys-validattributes.html)
  * in the *AWS Payment Cryptography User Guide* . The mutable data contained within a key includes
  * usage timestamp and key deletion timestamp and can be modified after creation.
  *
- * AWS Payment Cryptography binds key attributes to keys using key blocks when you store or export
- * them. AWS Payment Cryptography stores the key contents wrapped and never stores or transmits them in
- * the clear.
+ * You can use the `CreateKey` operation to generate an ECC (Elliptic Curve Cryptography) key pair
+ * used for establishing an ECDH (Elliptic Curve Diffie-Hellman) key agreement between two parties. In
+ * the ECDH key agreement process, both parties generate their own ECC key pair with key usage K3 and
+ * exchange the public keys. Each party then use their private key, the received public key from the
+ * other party, and the key derivation parameters including key derivation function, hash algorithm,
+ * derivation data, and key algorithm to derive a shared key.
+ *
+ * To maintain the single-use principle of cryptographic keys in payments, ECDH derived keys should
+ * not be used for multiple purposes, such as a `TR31_P0_PIN_ENCRYPTION_KEY` and
+ * `TR31_K1_KEY_BLOCK_PROTECTION_KEY` . When creating ECC key pairs in AWS Payment Cryptography you can
+ * optionally set the `DeriveKeyUsage` parameter, which defines the key usage bound to the symmetric
+ * key that will be derived using the ECC key pair.
  *
  * *Cross-account use* : This operation can't be used across different AWS accounts.
  *
@@ -79,6 +92,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .keyUsage("keyUsage")
  * .build())
  * // the properties below are optional
+ * .deriveKeyUsage("deriveKeyUsage")
  * .enabled(false)
  * .keyCheckValueAlgorithm("keyCheckValueAlgorithm")
  * .tags(List.of(CfnTag.builder()
@@ -134,6 +148,18 @@ public open class CfnKey(
    */
   public override fun cdkTagManager(): TagManager =
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
+
+  /**
+   * The cryptographic usage of an ECDH derived key as deﬁned in section A.5.2 of the TR-31 spec.
+   */
+  public open fun deriveKeyUsage(): String? = unwrap(this).getDeriveKeyUsage()
+
+  /**
+   * The cryptographic usage of an ECDH derived key as deﬁned in section A.5.2 of the TR-31 spec.
+   */
+  public open fun deriveKeyUsage(`value`: String) {
+    unwrap(this).setDeriveKeyUsage(`value`)
+  }
 
   /**
    * Specifies whether the key is enabled.
@@ -248,6 +274,15 @@ public open class CfnKey(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The cryptographic usage of an ECDH derived key as deﬁned in section A.5.2 of the TR-31 spec.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-paymentcryptography-key.html#cfn-paymentcryptography-key-derivekeyusage)
+     * @param deriveKeyUsage The cryptographic usage of an ECDH derived key as deﬁned in section
+     * A.5.2 of the TR-31 spec. 
+     */
+    public fun deriveKeyUsage(deriveKeyUsage: String)
+
+    /**
      * Specifies whether the key is enabled.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-paymentcryptography-key.html#cfn-paymentcryptography-key-enabled)
@@ -356,6 +391,17 @@ public open class CfnKey(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.paymentcryptography.CfnKey.Builder =
         software.amazon.awscdk.services.paymentcryptography.CfnKey.Builder.create(scope, id)
+
+    /**
+     * The cryptographic usage of an ECDH derived key as deﬁned in section A.5.2 of the TR-31 spec.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-paymentcryptography-key.html#cfn-paymentcryptography-key-derivekeyusage)
+     * @param deriveKeyUsage The cryptographic usage of an ECDH derived key as deﬁned in section
+     * A.5.2 of the TR-31 spec. 
+     */
+    override fun deriveKeyUsage(deriveKeyUsage: String) {
+      cdkBuilder.deriveKeyUsage(deriveKeyUsage)
+    }
 
     /**
      * Specifies whether the key is enabled.

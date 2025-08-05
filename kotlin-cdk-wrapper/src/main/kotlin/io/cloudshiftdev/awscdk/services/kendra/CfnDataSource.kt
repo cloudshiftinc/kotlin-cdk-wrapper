@@ -4859,6 +4859,8 @@ public open class CfnDataSource(
     public fun sharePointConfiguration(): Any? = unwrap(this).getSharePointConfiguration()
 
     /**
+     * Provides a template for the configuration information to connect to your data source.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-datasourceconfiguration.html#cfn-kendra-datasource-datasourceconfiguration-templateconfiguration)
      */
     public fun templateConfiguration(): Any? = unwrap(this).getTemplateConfiguration()
@@ -5091,17 +5093,20 @@ public open class CfnDataSource(
           fun sharePointConfiguration(sharePointConfiguration: SharePointConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param templateConfiguration the value to be set.
+       * @param templateConfiguration Provides a template for the configuration information to
+       * connect to your data source.
        */
       public fun templateConfiguration(templateConfiguration: IResolvable)
 
       /**
-       * @param templateConfiguration the value to be set.
+       * @param templateConfiguration Provides a template for the configuration information to
+       * connect to your data source.
        */
       public fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty)
 
       /**
-       * @param templateConfiguration the value to be set.
+       * @param templateConfiguration Provides a template for the configuration information to
+       * connect to your data source.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("761ddab5ea2fb8114d8e3a3aad1ad2a6b467ea256238d87e7c81bae2db508d34")
@@ -5411,21 +5416,24 @@ public open class CfnDataSource(
           Unit = sharePointConfiguration(SharePointConfigurationProperty(sharePointConfiguration))
 
       /**
-       * @param templateConfiguration the value to be set.
+       * @param templateConfiguration Provides a template for the configuration information to
+       * connect to your data source.
        */
       override fun templateConfiguration(templateConfiguration: IResolvable) {
         cdkBuilder.templateConfiguration(templateConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param templateConfiguration the value to be set.
+       * @param templateConfiguration Provides a template for the configuration information to
+       * connect to your data source.
        */
       override fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty) {
         cdkBuilder.templateConfiguration(templateConfiguration.let(TemplateConfigurationProperty.Companion::unwrap))
       }
 
       /**
-       * @param templateConfiguration the value to be set.
+       * @param templateConfiguration Provides a template for the configuration information to
+       * connect to your data source.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("761ddab5ea2fb8114d8e3a3aad1ad2a6b467ea256238d87e7c81bae2db508d34")
@@ -5570,6 +5578,8 @@ public open class CfnDataSource(
       override fun sharePointConfiguration(): Any? = unwrap(this).getSharePointConfiguration()
 
       /**
+       * Provides a template for the configuration information to connect to your data source.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-datasourceconfiguration.html#cfn-kendra-datasource-datasourceconfiguration-templateconfiguration)
        */
       override fun templateConfiguration(): Any? = unwrap(this).getTemplateConfiguration()
@@ -8961,21 +8971,6 @@ public open class CfnDataSource(
 
   /**
    * Provides the configuration information to connect to an Amazon S3 bucket.
-   *
-   *
-   * Amazon Kendra now supports an upgraded Amazon S3 connector.
-   *
-   * You must now use the
-   * [TemplateConfiguration](https://docs.aws.amazon.com/kendra/latest/APIReference/API_TemplateConfiguration.html)
-   * object instead of the `S3DataSourceConfiguration` object to configure your connector.
-   *
-   * Connectors configured using the older console and API architecture will continue to function as
-   * configured. However, you won't be able to edit or update them. If you want to edit or update your
-   * connector configuration, you must create a new connector.
-   *
-   * We recommended migrating your connector workflow to the upgraded version. Support for
-   * connectors configured using the older architecture is scheduled to end by June 2024.
-   *
    *
    * Example:
    *
@@ -13869,6 +13864,8 @@ public open class CfnDataSource(
   }
 
   /**
+   * Provides a template for the configuration information to connect to your data source.
+   *
    * Example:
    *
    * ```
@@ -13885,6 +13882,11 @@ public open class CfnDataSource(
    */
   public interface TemplateConfigurationProperty {
     /**
+     * The template schema used for the data source, where templates schemas are supported.
+     *
+     * See [Data source template
+     * schemas](https://docs.aws.amazon.com/kendra/latest/dg/ds-schemas.html) .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-templateconfiguration.html#cfn-kendra-datasource-templateconfiguration-template)
      */
     public fun template(): String
@@ -13895,7 +13897,10 @@ public open class CfnDataSource(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param template the value to be set. 
+       * @param template The template schema used for the data source, where templates schemas are
+       * supported. 
+       * See [Data source template
+       * schemas](https://docs.aws.amazon.com/kendra/latest/dg/ds-schemas.html) .
        */
       public fun template(template: String)
     }
@@ -13907,7 +13912,10 @@ public open class CfnDataSource(
           software.amazon.awscdk.services.kendra.CfnDataSource.TemplateConfigurationProperty.builder()
 
       /**
-       * @param template the value to be set. 
+       * @param template The template schema used for the data source, where templates schemas are
+       * supported. 
+       * See [Data source template
+       * schemas](https://docs.aws.amazon.com/kendra/latest/dg/ds-schemas.html) .
        */
       override fun template(template: String) {
         cdkBuilder.template(template)
@@ -13923,6 +13931,11 @@ public open class CfnDataSource(
     ) : CdkObject(cdkObject),
         TemplateConfigurationProperty {
       /**
+       * The template schema used for the data source, where templates schemas are supported.
+       *
+       * See [Data source template
+       * schemas](https://docs.aws.amazon.com/kendra/latest/dg/ds-schemas.html) .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-templateconfiguration.html#cfn-kendra-datasource-templateconfiguration-template)
        */
       override fun template(): String = unwrap(this).getTemplate()

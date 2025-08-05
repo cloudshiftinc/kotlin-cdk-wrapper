@@ -16,7 +16,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Specifies the configuraiton for a MediaPackage V2 channel group.
+ * Specifies the configuration for a MediaPackage V2 channel group.
  *
  * Example:
  *

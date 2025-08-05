@@ -17,12 +17,73 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * // Using an existing cache policy for a Distribution
- * S3Origin bucketOrigin;
- * Distribution.Builder.create(this, "myDistManagedPolicy")
+ * // Create the simple Origin
+ * Bucket myBucket = new Bucket(this, "myBucket");
+ * IOrigin s3Origin = S3BucketOrigin.withOriginAccessControl(myBucket,
+ * S3BucketOriginWithOACProps.builder()
+ * .originAccessLevels(List.of(AccessLevel.READ, AccessLevel.LIST))
+ * .build());
+ * // Create the Distribution construct
+ * Distribution myMultiTenantDistribution = Distribution.Builder.create(this, "distribution")
  * .defaultBehavior(BehaviorOptions.builder()
- * .origin(bucketOrigin)
- * .cachePolicy(CachePolicy.CACHING_OPTIMIZED)
+ * .origin(s3Origin)
+ * .build())
+ * .defaultRootObject("index.html")
+ * .build();
+ * // Access the underlying L1 CfnDistribution to configure SaaS Manager properties which are not
+ * yet available in the L2 Distribution construct
+ * CfnDistribution cfnDistribution =
+ * (CfnDistribution)myMultiTenantDistribution.getNode().getDefaultChild();
+ * DefaultCacheBehaviorProperty defaultCacheBehavior = DefaultCacheBehaviorProperty.builder()
+ * .targetOriginId(myBucket.getBucketArn())
+ * .viewerProtocolPolicy("allow-all")
+ * .compress(false)
+ * .allowedMethods(List.of("GET", "HEAD"))
+ * .cachePolicyId(CachePolicy.CACHING_OPTIMIZED.getCachePolicyId())
+ * .build();
+ * // Create the updated distributionConfig
+ * DistributionConfigProperty distributionConfig = DistributionConfigProperty.builder()
+ * .defaultCacheBehavior(defaultCacheBehavior)
+ * .enabled(true)
+ * // the properties below are optional
+ * .connectionMode("tenant-only")
+ * .origins(List.of(OriginProperty.builder()
+ * .id(myBucket.getBucketArn())
+ * .domainName(myBucket.getBucketDomainName())
+ * .s3OriginConfig(S3OriginConfigProperty.builder().build())
+ * .originPath("/{{tenantName}}")
+ * .build()))
+ * .tenantConfig(TenantConfigProperty.builder()
+ * .parameterDefinitions(List.of(ParameterDefinitionProperty.builder()
+ * .definition(DefinitionProperty.builder()
+ * .stringSchema(StringSchemaProperty.builder()
+ * .required(false)
+ * // the properties below are optional
+ * .comment("tenantName")
+ * .defaultValue("root")
+ * .build())
+ * .build())
+ * .name("tenantName")
+ * .build()))
+ * .build())
+ * .build();
+ * // Override the distribution configuration to enable multi-tenancy.
+ * cfnDistribution.getDistributionConfig() = distributionConfig;
+ * // Create a distribution tenant using an existing ACM certificate
+ * CfnDistributionTenant cfnDistributionTenant = CfnDistributionTenant.Builder.create(this,
+ * "distribution-tenant")
+ * .distributionId(myMultiTenantDistribution.getDistributionId())
+ * .domains(List.of("my-tenant.my.domain.com"))
+ * .name("my-tenant")
+ * .enabled(true)
+ * .parameters(List.of(ParameterProperty.builder()
+ * .name("tenantName")
+ * .value("app")
+ * .build()))
+ * .customizations(CustomizationsProperty.builder()
+ * .certificate(CertificateProperty.builder()
+ * .arn("REPLACE_WITH_ARN")
+ * .build())
  * .build())
  * .build();
  * ```
@@ -326,6 +387,9 @@ public open class CachePolicy(
 
     public val ELEMENTAL_MEDIA_PACKAGE: ICachePolicy =
         ICachePolicy.wrap(software.amazon.awscdk.services.cloudfront.CachePolicy.ELEMENTAL_MEDIA_PACKAGE)
+
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.cloudfront.CachePolicy.PROPERTY_INJECTION_ID
 
     public val USE_ORIGIN_CACHE_CONTROL_HEADERS: ICachePolicy =
         ICachePolicy.wrap(software.amazon.awscdk.services.cloudfront.CachePolicy.USE_ORIGIN_CACHE_CONTROL_HEADERS)

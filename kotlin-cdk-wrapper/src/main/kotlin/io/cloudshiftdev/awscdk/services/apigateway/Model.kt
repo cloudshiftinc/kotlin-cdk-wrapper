@@ -243,6 +243,9 @@ public open class Model(
     public val ERROR_MODEL: IModel =
         IModel.wrap(software.amazon.awscdk.services.apigateway.Model.ERROR_MODEL)
 
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.apigateway.Model.PROPERTY_INJECTION_ID
+
     public fun fromModelName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

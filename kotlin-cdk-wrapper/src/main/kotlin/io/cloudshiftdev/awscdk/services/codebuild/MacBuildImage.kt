@@ -56,6 +56,7 @@ import kotlin.jvm.JvmName
  * .params(Map.of(
  * "paramsKey", "params"))
  * .build())
+ * .displayName("displayName")
  * .exclude(List.of("exclude"))
  * .extraHash("extraHash")
  * .file("file")

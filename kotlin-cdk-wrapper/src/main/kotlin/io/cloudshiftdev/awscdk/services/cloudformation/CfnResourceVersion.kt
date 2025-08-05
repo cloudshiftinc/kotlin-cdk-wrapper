@@ -17,7 +17,8 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Registers a resource version with the CloudFormation service.
+ * The `AWS::CloudFormation::ResourceVersion` resource registers a resource version with the
+ * CloudFormation registry.
  *
  * Registering a resource version makes it available for use in CloudFormation templates in your AWS
  * account , and includes:
@@ -26,10 +27,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * * Determining which handlers, if any, have been specified for the resource.
  * * Making the resource available for use in your account.
  *
- * For more information on how to develop resources and ready them for registration, see [Creating
- * Resource
- * Providers](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-types.html) in
- * the *CloudFormation CLI User Guide* .
+ * For information about the CloudFormation registry, see [Managing extensions with the
+ * CloudFormation
+ * registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html) in the *AWS
+ * CloudFormation User Guide* .
  *
  * You can have a maximum of 50 resource versions registered at a time. This maximum is per account
  * and per Region.
@@ -76,12 +77,12 @@ public open class CfnResourceVersion(
   )
 
   /**
-   * The Amazon Resource Name (ARN) of the extension.
+   * The Amazon Resource Name (ARN) of the resource.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   * Whether the specified extension version is set as the default version.
+   * Whether the specified resource version is set as the default version.
    *
    * This applies only to private extensions you have registered in your account, and extensions
    * published by AWS . For public third-party extensions, whether they are activated in your account,
@@ -96,7 +97,7 @@ public open class CfnResourceVersion(
    * CloudFormation determines the provisioning type during registration, based on the types of
    * handlers in the schema handler package submitted.
    *
-   * Valid values include:
+   * Possible values:
    *
    * * `FULLY_MUTABLE` : The resource type includes an update handler to process updates to the type
    * during stack update operations.
@@ -111,29 +112,25 @@ public open class CfnResourceVersion(
   public open fun attrProvisioningType(): String = unwrap(this).getAttrProvisioningType()
 
   /**
-   * The Amazon Resource Name (ARN) of the extension.
+   * The Amazon Resource Name (ARN) for the extension.
    */
   public open fun attrTypeArn(): String = unwrap(this).getAttrTypeArn()
 
   /**
-   * The ID of a specific version of the extension.
+   * The ID of a specific version of the resource.
    *
    * The version ID is the value at the end of the Amazon Resource Name (ARN) assigned to the
-   * extension version when it is registered.
-   *
-   * If you specify a `VersionId` , `DescribeType` returns information about that specific extension
-   * version. Otherwise, it returns information about the default extension version.
+   * resource version when it is registered.
    */
   public open fun attrVersionId(): String = unwrap(this).getAttrVersionId()
 
   /**
-   * The scope at which the extension is visible and usable in CloudFormation operations.
+   * The visibility level that determines who can see and use this resource in CloudFormation
+   * operations:.
    *
-   * Valid values include:
-   *
-   * * `PRIVATE` : The extension is only visible and usable within the account in which it is
-   * registered. CloudFormation marks any extensions you register as `PRIVATE` .
-   * * `PUBLIC` : The extension is publicly visible and usable within any AWS account.
+   * * `PRIVATE` : The resource is only visible and usable within the account where it was
+   * registered. CloudFormation automatically marks any resources you register as `PRIVATE` .
+   * * `PUBLIC` : The resource is publicly visible and usable within any AWS account.
    */
   public open fun attrVisibility(): String = unwrap(this).getAttrVisibility()
 
@@ -188,14 +185,14 @@ public open class CfnResourceVersion(
       loggingConfig(LoggingConfigProperty(`value`))
 
   /**
-   * A URL to the S3 bucket containing the resource project package that contains the necessary
-   * files for the resource you want to register.
+   * A URL to the S3 bucket for the resource project package that contains the necessary files for
+   * the resource you want to register.
    */
   public open fun schemaHandlerPackage(): String = unwrap(this).getSchemaHandlerPackage()
 
   /**
-   * A URL to the S3 bucket containing the resource project package that contains the necessary
-   * files for the resource you want to register.
+   * A URL to the S3 bucket for the resource project package that contains the necessary files for
+   * the resource you want to register.
    */
   public open fun schemaHandlerPackage(`value`: String) {
     unwrap(this).setSchemaHandlerPackage(`value`)
@@ -222,12 +219,12 @@ public open class CfnResourceVersion(
      * The Amazon Resource Name (ARN) of the IAM role for CloudFormation to assume when invoking the
      * resource.
      *
-     * If your resource calls AWS APIs in any of its handlers, you must create an *[IAM execution
-     * role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)* that includes the
-     * necessary permissions to call those AWS APIs, and provision that execution role in your account.
-     * When CloudFormation needs to invoke the resource type handler, CloudFormation assumes this
-     * execution role to create a temporary session token, which it then passes to the resource type
-     * handler, thereby supplying your resource type with the appropriate credentials.
+     * If your resource calls AWS APIs in any of its handlers, you must create an IAM execution role
+     * that includes the necessary permissions to call those AWS APIs, and provision that execution
+     * role in your account. When CloudFormation needs to invoke the resource type handler,
+     * CloudFormation assumes this execution role to create a temporary session token, which it then
+     * passes to the resource type handler, thereby supplying your resource type with the appropriate
+     * credentials.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourceversion.html#cfn-cloudformation-resourceversion-executionrolearn)
      * @param executionRoleArn The Amazon Resource Name (ARN) of the IAM role for CloudFormation to
@@ -262,26 +259,22 @@ public open class CfnResourceVersion(
     public fun loggingConfig(loggingConfig: LoggingConfigProperty.Builder.() -> Unit)
 
     /**
-     * A URL to the S3 bucket containing the resource project package that contains the necessary
-     * files for the resource you want to register.
+     * A URL to the S3 bucket for the resource project package that contains the necessary files for
+     * the resource you want to register.
      *
-     * For information on generating a schema handler package for the resource you want to register,
-     * see
-     * [submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)
-     * in the *CloudFormation CLI User Guide* .
+     * For information on generating a schema handler package, see [Modeling resource types to use
+     * with AWS
+     * CloudFormation](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-model.html)
+     * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
      *
      *
-     * The user registering the resource must be able to access the package in the S3 bucket. That
-     * is, the user needs to have
-     * [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for
-     * the schema handler package. For more information, see [Actions, Resources, and Condition Keys
-     * for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS
-     * Identity and Access Management User Guide* .
+     * To register the resource version, you must have `s3:GetObject` permissions to access the S3
+     * objects.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourceversion.html#cfn-cloudformation-resourceversion-schemahandlerpackage)
-     * @param schemaHandlerPackage A URL to the S3 bucket containing the resource project package
-     * that contains the necessary files for the resource you want to register. 
+     * @param schemaHandlerPackage A URL to the S3 bucket for the resource project package that
+     * contains the necessary files for the resource you want to register. 
      */
     public fun schemaHandlerPackage(schemaHandlerPackage: String)
 
@@ -320,12 +313,12 @@ public open class CfnResourceVersion(
      * The Amazon Resource Name (ARN) of the IAM role for CloudFormation to assume when invoking the
      * resource.
      *
-     * If your resource calls AWS APIs in any of its handlers, you must create an *[IAM execution
-     * role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)* that includes the
-     * necessary permissions to call those AWS APIs, and provision that execution role in your account.
-     * When CloudFormation needs to invoke the resource type handler, CloudFormation assumes this
-     * execution role to create a temporary session token, which it then passes to the resource type
-     * handler, thereby supplying your resource type with the appropriate credentials.
+     * If your resource calls AWS APIs in any of its handlers, you must create an IAM execution role
+     * that includes the necessary permissions to call those AWS APIs, and provision that execution
+     * role in your account. When CloudFormation needs to invoke the resource type handler,
+     * CloudFormation assumes this execution role to create a temporary session token, which it then
+     * passes to the resource type handler, thereby supplying your resource type with the appropriate
+     * credentials.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourceversion.html#cfn-cloudformation-resourceversion-executionrolearn)
      * @param executionRoleArn The Amazon Resource Name (ARN) of the IAM role for CloudFormation to
@@ -367,26 +360,22 @@ public open class CfnResourceVersion(
         loggingConfig(LoggingConfigProperty(loggingConfig))
 
     /**
-     * A URL to the S3 bucket containing the resource project package that contains the necessary
-     * files for the resource you want to register.
+     * A URL to the S3 bucket for the resource project package that contains the necessary files for
+     * the resource you want to register.
      *
-     * For information on generating a schema handler package for the resource you want to register,
-     * see
-     * [submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)
-     * in the *CloudFormation CLI User Guide* .
+     * For information on generating a schema handler package, see [Modeling resource types to use
+     * with AWS
+     * CloudFormation](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-model.html)
+     * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
      *
      *
-     * The user registering the resource must be able to access the package in the S3 bucket. That
-     * is, the user needs to have
-     * [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for
-     * the schema handler package. For more information, see [Actions, Resources, and Condition Keys
-     * for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS
-     * Identity and Access Management User Guide* .
+     * To register the resource version, you must have `s3:GetObject` permissions to access the S3
+     * objects.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourceversion.html#cfn-cloudformation-resourceversion-schemahandlerpackage)
-     * @param schemaHandlerPackage A URL to the S3 bucket containing the resource project package
-     * that contains the necessary files for the resource you want to register. 
+     * @param schemaHandlerPackage A URL to the S3 bucket for the resource project package that
+     * contains the necessary files for the resource you want to register. 
      */
     override fun schemaHandlerPackage(schemaHandlerPackage: String) {
       cdkBuilder.schemaHandlerPackage(schemaHandlerPackage)

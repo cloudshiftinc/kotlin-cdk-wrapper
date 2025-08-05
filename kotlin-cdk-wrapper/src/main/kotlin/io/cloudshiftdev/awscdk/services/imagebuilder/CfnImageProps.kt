@@ -24,8 +24,6 @@ import kotlin.jvm.JvmName
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
  * CfnImageProps cfnImageProps = CfnImageProps.builder()
- * .infrastructureConfigurationArn("infrastructureConfigurationArn")
- * // the properties below are optional
  * .containerRecipeArn("containerRecipeArn")
  * .distributionConfigurationArn("distributionConfigurationArn")
  * .enhancedImageMetadataEnabled(false)
@@ -42,6 +40,7 @@ import kotlin.jvm.JvmName
  * .imageTestsEnabled(false)
  * .timeoutMinutes(123)
  * .build())
+ * .infrastructureConfigurationArn("infrastructureConfigurationArn")
  * .tags(Map.of(
  * "tagsKey", "tags"))
  * .workflows(List.of(WorkflowConfigurationProperty.builder()
@@ -123,7 +122,8 @@ public interface CfnImageProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-infrastructureconfigurationarn)
    */
-  public fun infrastructureConfigurationArn(): String
+  public fun infrastructureConfigurationArn(): String? =
+      unwrap(this).getInfrastructureConfigurationArn()
 
   /**
    * The tags of the image.
@@ -224,7 +224,7 @@ public interface CfnImageProps {
 
     /**
      * @param infrastructureConfigurationArn The Amazon Resource Name (ARN) of the infrastructure
-     * configuration that defines the environment in which your image will be built and tested. 
+     * configuration that defines the environment in which your image will be built and tested.
      */
     public fun infrastructureConfigurationArn(infrastructureConfigurationArn: String)
 
@@ -357,7 +357,7 @@ public interface CfnImageProps {
 
     /**
      * @param infrastructureConfigurationArn The Amazon Resource Name (ARN) of the infrastructure
-     * configuration that defines the environment in which your image will be built and tested. 
+     * configuration that defines the environment in which your image will be built and tested.
      */
     override fun infrastructureConfigurationArn(infrastructureConfigurationArn: String) {
       cdkBuilder.infrastructureConfigurationArn(infrastructureConfigurationArn)
@@ -462,7 +462,7 @@ public interface CfnImageProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-infrastructureconfigurationarn)
      */
-    override fun infrastructureConfigurationArn(): String =
+    override fun infrastructureConfigurationArn(): String? =
         unwrap(this).getInfrastructureConfigurationArn()
 
     /**

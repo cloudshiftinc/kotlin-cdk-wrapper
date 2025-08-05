@@ -22,7 +22,13 @@ import kotlin.jvm.JvmName
  * Dashboard dashboard;
  * dashboard.addWidgets(GraphWidget.Builder.create()
  * // ...
- * .legendPosition(LegendPosition.RIGHT)
+ * .accountId("123456789012")
+ * .build());
+ * dashboard.addWidgets(LogQueryWidget.Builder.create()
+ * .logGroupNames(List.of("my-log-group"))
+ * // ...
+ * .accountId("123456789012")
+ * .queryLines(List.of("fields &#64;message"))
  * .build());
  * ```
  */
@@ -169,6 +175,17 @@ public interface GraphWidgetProps : MetricWidgetProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param accountId The AWS account ID where the metrics are located.
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     */
+    public fun accountId(accountId: String)
+
     /**
      * @param end The end of the time range to use for each widget independently from those of the
      * dashboard.
@@ -331,6 +348,19 @@ public interface GraphWidgetProps : MetricWidgetProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.GraphWidgetProps.Builder =
         software.amazon.awscdk.services.cloudwatch.GraphWidgetProps.builder()
+
+    /**
+     * @param accountId The AWS account ID where the metrics are located.
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     */
+    override fun accountId(accountId: String) {
+      cdkBuilder.accountId(accountId)
+    }
 
     /**
      * @param end The end of the time range to use for each widget independently from those of the
@@ -543,6 +573,20 @@ public interface GraphWidgetProps : MetricWidgetProps {
     cdkObject: software.amazon.awscdk.services.cloudwatch.GraphWidgetProps,
   ) : CdkObject(cdkObject),
       GraphWidgetProps {
+    /**
+     * The AWS account ID where the metrics are located.
+     *
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     *
+     * Default: - Current account
+     */
+    override fun accountId(): String? = unwrap(this).getAccountId()
+
     /**
      * The end of the time range to use for each widget independently from those of the dashboard.
      *

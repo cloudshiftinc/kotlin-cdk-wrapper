@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.IRole
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -30,6 +31,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * FargateService.Builder.create(this, "FargateService")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
+ * .minHealthyPercent(100)
  * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
  * .capacityProvider("FARGATE_SPOT")
  * .weight(2)
@@ -66,9 +68,19 @@ public open class FargateTaskDefinition(
   )
 
   /**
+   * The number of cpu units used by the task.
+   */
+  public open fun cpu(): Number = unwrap(this).getCpu()
+
+  /**
    * The amount (in GiB) of ephemeral storage to be allocated to the task.
    */
   public override fun ephemeralStorageGiB(): Number? = unwrap(this).getEphemeralStorageGiB()
+
+  /**
+   * The amount (in MiB) of memory used by the task.
+   */
+  public open fun memoryMiB(): Number = unwrap(this).getMemoryMiB()
 
   /**
    * The Docker networking mode to use for the containers in the task.
@@ -109,11 +121,29 @@ public open class FargateTaskDefinition(
      * 16384 (16 vCPU) - Available memory values: Between 32768 (32 GB) and 122880 (120 GB) in
      * increments of 8192 (8 GB)
      *
+     * Note: For windows platforms, this field is not enforced at runtime. However, it is still
+     * required as it is used to determine
+     * the instance type and size that tasks run on.
+     *
      * Default: 256
      *
      * @param cpu The number of cpu units used by the task. 
      */
     public fun cpu(cpu: Number)
+
+    /**
+     * Enables fault injection and allows for fault injection requests to be accepted from the
+     * task's containers.
+     *
+     * Fault injection only works with tasks using the [NetworkMode.AWS_VPC] or [NetworkMode.HOST]
+     * network modes.
+     *
+     * Default: undefined - ECS default setting is false
+     *
+     * @param enableFaultInjection Enables fault injection and allows for fault injection requests
+     * to be accepted from the task's containers. 
+     */
+    public fun enableFaultInjection(enableFaultInjection: Boolean)
 
     /**
      * The amount (in GiB) of ephemeral storage to be allocated to the task.
@@ -180,6 +210,10 @@ public open class FargateTaskDefinition(
      *
      * Between 32768 (32 GB) and 122880 (120 GB) in increments of 8192 (8 GB) - Available cpu
      * values: 16384 (16 vCPU)
+     *
+     * Note: For windows platforms, this field is not enforced at runtime. However, it is still
+     * required as it is used to determine
+     * the instance type and size that tasks run on.
      *
      * Default: 512
      *
@@ -308,12 +342,32 @@ public open class FargateTaskDefinition(
      * 16384 (16 vCPU) - Available memory values: Between 32768 (32 GB) and 122880 (120 GB) in
      * increments of 8192 (8 GB)
      *
+     * Note: For windows platforms, this field is not enforced at runtime. However, it is still
+     * required as it is used to determine
+     * the instance type and size that tasks run on.
+     *
      * Default: 256
      *
      * @param cpu The number of cpu units used by the task. 
      */
     override fun cpu(cpu: Number) {
       cdkBuilder.cpu(cpu)
+    }
+
+    /**
+     * Enables fault injection and allows for fault injection requests to be accepted from the
+     * task's containers.
+     *
+     * Fault injection only works with tasks using the [NetworkMode.AWS_VPC] or [NetworkMode.HOST]
+     * network modes.
+     *
+     * Default: undefined - ECS default setting is false
+     *
+     * @param enableFaultInjection Enables fault injection and allows for fault injection requests
+     * to be accepted from the task's containers. 
+     */
+    override fun enableFaultInjection(enableFaultInjection: Boolean) {
+      cdkBuilder.enableFaultInjection(enableFaultInjection)
     }
 
     /**
@@ -387,6 +441,10 @@ public open class FargateTaskDefinition(
      *
      * Between 32768 (32 GB) and 122880 (120 GB) in increments of 8192 (8 GB) - Available cpu
      * values: 16384 (16 vCPU)
+     *
+     * Note: For windows platforms, this field is not enforced at runtime. However, it is still
+     * required as it is used to determine
+     * the instance type and size that tasks run on.
      *
      * Default: 512
      *
@@ -499,6 +557,9 @@ public open class FargateTaskDefinition(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ecs.FargateTaskDefinition.PROPERTY_INJECTION_ID
+
     public fun fromFargateTaskDefinitionArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

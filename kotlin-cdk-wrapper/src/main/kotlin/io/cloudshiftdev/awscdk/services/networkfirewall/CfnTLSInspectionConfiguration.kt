@@ -1013,7 +1013,7 @@ public open class CfnTLSInspectionConfiguration(
      * * You can't use certificates issued by AWS Private Certificate Authority .
      *
      * For more information about configuring certificates for outbound inspection, see [Using
-     * SSL/TLS certificates with certificates with TLS inspection
+     * SSL/TLS certificates with TLS inspection
      * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html)
      * in the *AWS Network Firewall Developer Guide* .
      *
@@ -1070,7 +1070,7 @@ public open class CfnTLSInspectionConfiguration(
        * * You can't use certificates issued by AWS Private Certificate Authority .
        *
        * For more information about configuring certificates for outbound inspection, see [Using
-       * SSL/TLS certificates with certificates with TLS inspection
+       * SSL/TLS certificates with TLS inspection
        * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html)
        * in the *AWS Network Firewall Developer Guide* .
        *
@@ -1168,7 +1168,7 @@ public open class CfnTLSInspectionConfiguration(
        * * You can't use certificates issued by AWS Private Certificate Authority .
        *
        * For more information about configuring certificates for outbound inspection, see [Using
-       * SSL/TLS certificates with certificates with TLS inspection
+       * SSL/TLS certificates with TLS inspection
        * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html)
        * in the *AWS Network Firewall Developer Guide* .
        *
@@ -1285,7 +1285,7 @@ public open class CfnTLSInspectionConfiguration(
        * * You can't use certificates issued by AWS Private Certificate Authority .
        *
        * For more information about configuring certificates for outbound inspection, see [Using
-       * SSL/TLS certificates with certificates with TLS inspection
+       * SSL/TLS certificates with TLS inspection
        * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-certificate-requirements.html)
        * in the *AWS Network Firewall Developer Guide* .
        *
@@ -1502,8 +1502,10 @@ public open class CfnTLSInspectionConfiguration(
     public fun destinations(): Any? = unwrap(this).getDestinations()
 
     /**
-     * The protocols to decrypt for inspection, specified using each protocol's assigned internet
-     * protocol number (IANA).
+     * The protocols to inspect for, specified using the assigned internet protocol number (IANA)
+     * for each protocol.
+     *
+     * If not specified, this matches with any protocol.
      *
      * Network Firewall currently supports only TCP.
      *
@@ -1593,25 +1595,31 @@ public open class CfnTLSInspectionConfiguration(
       public fun destinations(vararg destinations: Any)
 
       /**
-       * @param protocols The protocols to decrypt for inspection, specified using each protocol's
-       * assigned internet protocol number (IANA).
-       * Network Firewall currently supports only TCP.
-       */
-      public fun protocols(protocols: IResolvable)
-
-      /**
-       * @param protocols The protocols to decrypt for inspection, specified using each protocol's
-       * assigned internet protocol number (IANA).
+       * @param protocols The protocols to inspect for, specified using the assigned internet
+       * protocol number (IANA) for each protocol.
+       * If not specified, this matches with any protocol.
+       *
        * Network Firewall currently supports only TCP.
        */
       public fun protocols(protocols: List<Number>)
 
       /**
-       * @param protocols The protocols to decrypt for inspection, specified using each protocol's
-       * assigned internet protocol number (IANA).
+       * @param protocols The protocols to inspect for, specified using the assigned internet
+       * protocol number (IANA) for each protocol.
+       * If not specified, this matches with any protocol.
+       *
        * Network Firewall currently supports only TCP.
        */
       public fun protocols(vararg protocols: Number)
+
+      /**
+       * @param protocols The protocols to inspect for, specified using the assigned internet
+       * protocol number (IANA) for each protocol.
+       * If not specified, this matches with any protocol.
+       *
+       * Network Firewall currently supports only TCP.
+       */
+      public fun protocols(protocols: IResolvable)
 
       /**
        * @param sourcePorts The source ports to decrypt for inspection, in Transmission Control
@@ -1739,17 +1747,10 @@ public open class CfnTLSInspectionConfiguration(
           destinations(destinations.toList())
 
       /**
-       * @param protocols The protocols to decrypt for inspection, specified using each protocol's
-       * assigned internet protocol number (IANA).
-       * Network Firewall currently supports only TCP.
-       */
-      override fun protocols(protocols: IResolvable) {
-        cdkBuilder.protocols(protocols.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param protocols The protocols to decrypt for inspection, specified using each protocol's
-       * assigned internet protocol number (IANA).
+       * @param protocols The protocols to inspect for, specified using the assigned internet
+       * protocol number (IANA) for each protocol.
+       * If not specified, this matches with any protocol.
+       *
        * Network Firewall currently supports only TCP.
        */
       override fun protocols(protocols: List<Number>) {
@@ -1757,11 +1758,24 @@ public open class CfnTLSInspectionConfiguration(
       }
 
       /**
-       * @param protocols The protocols to decrypt for inspection, specified using each protocol's
-       * assigned internet protocol number (IANA).
+       * @param protocols The protocols to inspect for, specified using the assigned internet
+       * protocol number (IANA) for each protocol.
+       * If not specified, this matches with any protocol.
+       *
        * Network Firewall currently supports only TCP.
        */
       override fun protocols(vararg protocols: Number): Unit = protocols(protocols.toList())
+
+      /**
+       * @param protocols The protocols to inspect for, specified using the assigned internet
+       * protocol number (IANA) for each protocol.
+       * If not specified, this matches with any protocol.
+       *
+       * Network Firewall currently supports only TCP.
+       */
+      override fun protocols(protocols: IResolvable) {
+        cdkBuilder.protocols(protocols.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param sourcePorts The source ports to decrypt for inspection, in Transmission Control
@@ -1859,8 +1873,10 @@ public open class CfnTLSInspectionConfiguration(
       override fun destinations(): Any? = unwrap(this).getDestinations()
 
       /**
-       * The protocols to decrypt for inspection, specified using each protocol's assigned internet
-       * protocol number (IANA).
+       * The protocols to inspect for, specified using the assigned internet protocol number (IANA)
+       * for each protocol.
+       *
+       * If not specified, this matches with any protocol.
        *
        * Network Firewall currently supports only TCP.
        *

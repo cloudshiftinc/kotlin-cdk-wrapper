@@ -23,6 +23,7 @@ import kotlin.Unit
  * AmazonLinuxImageSsmParameterBaseProps.builder()
  * .parameterName("parameterName")
  * // the properties below are optional
+ * .additionalCacheKey("additionalCacheKey")
  * .cachedInContext(false)
  * .userData(userData)
  * .build();
@@ -39,6 +40,12 @@ public interface AmazonLinuxImageSsmParameterBaseProps : AmazonLinuxImageSsmPara
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key.
+     */
+    public fun additionalCacheKey(additionalCacheKey: String)
+
     /**
      * @param cachedInContext Whether the AMI ID is cached to be stable between deployments.
      * By default, the newest image is used on each deployment. This will cause
@@ -72,6 +79,14 @@ public interface AmazonLinuxImageSsmParameterBaseProps : AmazonLinuxImageSsmPara
     private val cdkBuilder:
         software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBaseProps.Builder =
         software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBaseProps.builder()
+
+    /**
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key.
+     */
+    override fun additionalCacheKey(additionalCacheKey: String) {
+      cdkBuilder.additionalCacheKey(additionalCacheKey)
+    }
 
     /**
      * @param cachedInContext Whether the AMI ID is cached to be stable between deployments.
@@ -115,6 +130,13 @@ public interface AmazonLinuxImageSsmParameterBaseProps : AmazonLinuxImageSsmPara
     cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBaseProps,
   ) : CdkObject(cdkObject),
       AmazonLinuxImageSsmParameterBaseProps {
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     */
+    override fun additionalCacheKey(): String? = unwrap(this).getAdditionalCacheKey()
+
     /**
      * Whether the AMI ID is cached to be stable between deployments.
      *

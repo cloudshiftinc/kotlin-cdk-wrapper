@@ -18,6 +18,11 @@ import kotlin.String
  */
 public interface IDistribution : IResource {
   /**
+   * The distribution ARN for this distribution.
+   */
+  public fun distributionArn(): String
+
+  /**
    * The domain name of the Distribution, such as d111111abcdef8.cloudfront.net.
    */
   public fun distributionDomainName(): String
@@ -62,6 +67,11 @@ public interface IDistribution : IResource {
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
+
+    /**
+     * The distribution ARN for this distribution.
+     */
+    override fun distributionArn(): String = unwrap(this).getDistributionArn()
 
     /**
      * The domain name of the Distribution, such as d111111abcdef8.cloudfront.net.

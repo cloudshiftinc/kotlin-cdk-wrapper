@@ -9,10 +9,17 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The `HookDefaultVersion` resource specifies the default version of the Hook.
+ * The `AWS::CloudFormation::HookDefaultVersion` resource specifies the default version of a Hook.
  *
  * The default version of the Hook is used in CloudFormation operations for this AWS account and AWS
  * Region .
+ *
+ * For information about the CloudFormation registry, see [Managing extensions with the
+ * CloudFormation
+ * registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html) in the *AWS
+ * CloudFormation User Guide* .
+ *
+ * This resource type is not compatible with Guard and Lambda Hooks.
  *
  * Example:
  *
@@ -56,7 +63,7 @@ public open class CfnHookDefaultVersion(
   )
 
   /**
-   * The Amazon Resource Number (ARN) of the activated extension, in this account and Region.
+   * The Amazon Resource Number (ARN) of the activated Hook in this account and Region.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 

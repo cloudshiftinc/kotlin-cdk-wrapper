@@ -201,6 +201,9 @@ public open class OriginRequestPolicy(
     public val ELEMENTAL_MEDIA_TAILOR: IOriginRequestPolicy =
         IOriginRequestPolicy.wrap(software.amazon.awscdk.services.cloudfront.OriginRequestPolicy.ELEMENTAL_MEDIA_TAILOR)
 
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.cloudfront.OriginRequestPolicy.PROPERTY_INJECTION_ID
+
     public val USER_AGENT_REFERER_HEADERS: IOriginRequestPolicy =
         IOriginRequestPolicy.wrap(software.amazon.awscdk.services.cloudfront.OriginRequestPolicy.USER_AGENT_REFERER_HEADERS)
 

@@ -21,7 +21,7 @@ import kotlin.jvm.JvmName
  * TaskDefinition taskDefinition;
  * Vpc vpc;
  * FargateService service = FargateService.Builder.create(this,
- * "Service").cluster(cluster).taskDefinition(taskDefinition).build();
+ * "Service").cluster(cluster).taskDefinition(taskDefinition).minHealthyPercent(100).build();
  * ApplicationLoadBalancer lb = ApplicationLoadBalancer.Builder.create(this,
  * "LB").vpc(vpc).internetFacing(true).build();
  * ApplicationListener listener = lb.addListener("Listener",

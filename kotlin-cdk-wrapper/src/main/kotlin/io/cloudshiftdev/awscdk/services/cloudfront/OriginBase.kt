@@ -21,7 +21,7 @@ public abstract class OriginBase(
    *
    * Can be used to grant permissions, create dependent resources, etc.
    *
-   * @param _scope 
+   * @param scope 
    * @param options 
    */
   public override fun bind(scope: Construct, options: OriginBindOptions): OriginBindConfig =
@@ -33,7 +33,7 @@ public abstract class OriginBase(
    *
    * Can be used to grant permissions, create dependent resources, etc.
    *
-   * @param _scope 
+   * @param scope 
    * @param options 
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")

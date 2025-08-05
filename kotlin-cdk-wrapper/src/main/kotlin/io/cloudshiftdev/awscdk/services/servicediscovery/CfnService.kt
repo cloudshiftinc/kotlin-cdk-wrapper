@@ -255,12 +255,12 @@ public open class CfnService(
   }
 
   /**
-   *
+   * A string map that contains the following information for the service:.
    */
   public open fun serviceAttributes(): Any? = unwrap(this).getServiceAttributes()
 
   /**
-   *
+   * A string map that contains the following information for the service:.
    */
   public open fun serviceAttributes(`value`: Any) {
     unwrap(this).setServiceAttributes(`value`)
@@ -478,8 +478,16 @@ public open class CfnService(
     public fun namespaceId(namespaceId: String)
 
     /**
+     * A string map that contains the following information for the service:.
+     *
+     * * The attributes that apply to the service
+     * * For each attribute, the applicable value.
+     *
+     * You can specify a total of 30 attributes.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-serviceattributes)
-     * @param serviceAttributes 
+     * @param serviceAttributes A string map that contains the following information for the
+     * service:. 
      */
     public fun serviceAttributes(serviceAttributes: Any)
 
@@ -718,8 +726,16 @@ public open class CfnService(
     }
 
     /**
+     * A string map that contains the following information for the service:.
+     *
+     * * The attributes that apply to the service
+     * * For each attribute, the applicable value.
+     *
+     * You can specify a total of 30 attributes.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-serviceattributes)
-     * @param serviceAttributes 
+     * @param serviceAttributes A string map that contains the following information for the
+     * service:. 
      */
     override fun serviceAttributes(serviceAttributes: Any) {
       cdkBuilder.serviceAttributes(serviceAttributes)

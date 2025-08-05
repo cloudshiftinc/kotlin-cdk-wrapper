@@ -33,9 +33,8 @@ import kotlin.String
  * .objectSizeLessThan(10000)
  * .transitions(List.of(Transition.builder()
  * .storageClass(StorageClass.GLACIER)
- * // the properties below are optional
+ * // exactly one of transitionAfter or transitionDate must be specified
  * .transitionAfter(Duration.days(30))
- * .transitionDate(new Date())
  * .build()))
  * .build()))
  * .build();

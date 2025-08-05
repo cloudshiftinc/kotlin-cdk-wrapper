@@ -141,26 +141,26 @@ public open class CfnResponsePlan(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   * The AWS Chatbot chat channel used for collaboration during an incident.
+   * The  chat channel used for collaboration during an incident.
    */
   public open fun chatChannel(): Any? = unwrap(this).getChatChannel()
 
   /**
-   * The AWS Chatbot chat channel used for collaboration during an incident.
+   * The  chat channel used for collaboration during an incident.
    */
   public open fun chatChannel(`value`: IResolvable) {
     unwrap(this).setChatChannel(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The AWS Chatbot chat channel used for collaboration during an incident.
+   * The  chat channel used for collaboration during an incident.
    */
   public open fun chatChannel(`value`: ChatChannelProperty) {
     unwrap(this).setChatChannel(`value`.let(ChatChannelProperty.Companion::unwrap))
   }
 
   /**
-   * The AWS Chatbot chat channel used for collaboration during an incident.
+   * The  chat channel used for collaboration during an incident.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("88cd7ac7942ddca405d4953ccd62c0cc4ad546aed1a3d473d00286110359f925")
@@ -324,26 +324,26 @@ public open class CfnResponsePlan(
     public fun actions(vararg actions: Any)
 
     /**
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The  chat channel used for collaboration during an incident.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-chatchannel)
-     * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident. 
+     * @param chatChannel The  chat channel used for collaboration during an incident. 
      */
     public fun chatChannel(chatChannel: IResolvable)
 
     /**
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The  chat channel used for collaboration during an incident.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-chatchannel)
-     * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident. 
+     * @param chatChannel The  chat channel used for collaboration during an incident. 
      */
     public fun chatChannel(chatChannel: ChatChannelProperty)
 
     /**
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The  chat channel used for collaboration during an incident.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-chatchannel)
-     * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident. 
+     * @param chatChannel The  chat channel used for collaboration during an incident. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6753cc5e0723c78cfbb510065a013e2332c3b5f3fe56d9719df52b9989730a52")
@@ -499,30 +499,30 @@ public open class CfnResponsePlan(
     override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
     /**
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The  chat channel used for collaboration during an incident.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-chatchannel)
-     * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident. 
+     * @param chatChannel The  chat channel used for collaboration during an incident. 
      */
     override fun chatChannel(chatChannel: IResolvable) {
       cdkBuilder.chatChannel(chatChannel.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The  chat channel used for collaboration during an incident.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-chatchannel)
-     * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident. 
+     * @param chatChannel The  chat channel used for collaboration during an incident. 
      */
     override fun chatChannel(chatChannel: ChatChannelProperty) {
       cdkBuilder.chatChannel(chatChannel.let(ChatChannelProperty.Companion::unwrap))
     }
 
     /**
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The  chat channel used for collaboration during an incident.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-chatchannel)
-     * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident. 
+     * @param chatChannel The  chat channel used for collaboration during an incident. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6753cc5e0723c78cfbb510065a013e2332c3b5f3fe56d9719df52b9989730a52")
@@ -818,7 +818,7 @@ public open class CfnResponsePlan(
   }
 
   /**
-   * The AWS Chatbot chat channel used for collaboration during an incident.
+   * The  chat channel used for collaboration during an incident.
    *
    * Example:
    *
@@ -835,8 +835,7 @@ public open class CfnResponsePlan(
    */
   public interface ChatChannelProperty {
     /**
-     * The Amazon SNS targets that AWS Chatbot uses to notify the chat channel of updates to an
-     * incident.
+     * The Amazon SNS targets that  uses to notify the chat channel of updates to an incident.
      *
      * You can also make updates to the incident through the chat channel by using the Amazon SNS
      * topics
@@ -851,16 +850,16 @@ public open class CfnResponsePlan(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param chatbotSns The Amazon SNS targets that AWS Chatbot uses to notify the chat channel
-       * of updates to an incident.
+       * @param chatbotSns The Amazon SNS targets that  uses to notify the chat channel of updates
+       * to an incident.
        * You can also make updates to the incident through the chat channel by using the Amazon SNS
        * topics
        */
       public fun chatbotSns(chatbotSns: List<String>)
 
       /**
-       * @param chatbotSns The Amazon SNS targets that AWS Chatbot uses to notify the chat channel
-       * of updates to an incident.
+       * @param chatbotSns The Amazon SNS targets that  uses to notify the chat channel of updates
+       * to an incident.
        * You can also make updates to the incident through the chat channel by using the Amazon SNS
        * topics
        */
@@ -873,8 +872,8 @@ public open class CfnResponsePlan(
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty.builder()
 
       /**
-       * @param chatbotSns The Amazon SNS targets that AWS Chatbot uses to notify the chat channel
-       * of updates to an incident.
+       * @param chatbotSns The Amazon SNS targets that  uses to notify the chat channel of updates
+       * to an incident.
        * You can also make updates to the incident through the chat channel by using the Amazon SNS
        * topics
        */
@@ -883,8 +882,8 @@ public open class CfnResponsePlan(
       }
 
       /**
-       * @param chatbotSns The Amazon SNS targets that AWS Chatbot uses to notify the chat channel
-       * of updates to an incident.
+       * @param chatbotSns The Amazon SNS targets that  uses to notify the chat channel of updates
+       * to an incident.
        * You can also make updates to the incident through the chat channel by using the Amazon SNS
        * topics
        */
@@ -900,8 +899,7 @@ public open class CfnResponsePlan(
     ) : CdkObject(cdkObject),
         ChatChannelProperty {
       /**
-       * The Amazon SNS targets that AWS Chatbot uses to notify the chat channel of updates to an
-       * incident.
+       * The Amazon SNS targets that  uses to notify the chat channel of updates to an incident.
        *
        * You can also make updates to the incident through the chat channel by using the Amazon SNS
        * topics
@@ -1248,8 +1246,8 @@ public open class CfnResponsePlan(
     public fun incidentTags(): Any? = unwrap(this).getIncidentTags()
 
     /**
-     * The Amazon Simple Notification Service ( Amazon SNS ) targets that AWS Chatbot uses to notify
-     * the chat channel of updates to an incident.
+     * The Amazon Simple Notification Service ( Amazon SNS ) targets that  uses to notify the chat
+     * channel of updates to an incident.
      *
      * You can also make updates to the incident through the chat channel using the Amazon SNS
      * topics.
@@ -1319,7 +1317,7 @@ public open class CfnResponsePlan(
 
       /**
        * @param notificationTargets The Amazon Simple Notification Service ( Amazon SNS ) targets
-       * that AWS Chatbot uses to notify the chat channel of updates to an incident.
+       * that  uses to notify the chat channel of updates to an incident.
        * You can also make updates to the incident through the chat channel using the Amazon SNS
        * topics.
        */
@@ -1327,7 +1325,7 @@ public open class CfnResponsePlan(
 
       /**
        * @param notificationTargets The Amazon Simple Notification Service ( Amazon SNS ) targets
-       * that AWS Chatbot uses to notify the chat channel of updates to an incident.
+       * that  uses to notify the chat channel of updates to an incident.
        * You can also make updates to the incident through the chat channel using the Amazon SNS
        * topics.
        */
@@ -1335,7 +1333,7 @@ public open class CfnResponsePlan(
 
       /**
        * @param notificationTargets The Amazon Simple Notification Service ( Amazon SNS ) targets
-       * that AWS Chatbot uses to notify the chat channel of updates to an incident.
+       * that  uses to notify the chat channel of updates to an incident.
        * You can also make updates to the incident through the chat channel using the Amazon SNS
        * topics.
        */
@@ -1409,7 +1407,7 @@ public open class CfnResponsePlan(
 
       /**
        * @param notificationTargets The Amazon Simple Notification Service ( Amazon SNS ) targets
-       * that AWS Chatbot uses to notify the chat channel of updates to an incident.
+       * that  uses to notify the chat channel of updates to an incident.
        * You can also make updates to the incident through the chat channel using the Amazon SNS
        * topics.
        */
@@ -1419,7 +1417,7 @@ public open class CfnResponsePlan(
 
       /**
        * @param notificationTargets The Amazon Simple Notification Service ( Amazon SNS ) targets
-       * that AWS Chatbot uses to notify the chat channel of updates to an incident.
+       * that  uses to notify the chat channel of updates to an incident.
        * You can also make updates to the incident through the chat channel using the Amazon SNS
        * topics.
        */
@@ -1429,7 +1427,7 @@ public open class CfnResponsePlan(
 
       /**
        * @param notificationTargets The Amazon Simple Notification Service ( Amazon SNS ) targets
-       * that AWS Chatbot uses to notify the chat channel of updates to an incident.
+       * that  uses to notify the chat channel of updates to an incident.
        * You can also make updates to the incident through the chat channel using the Amazon SNS
        * topics.
        */
@@ -1494,8 +1492,8 @@ public open class CfnResponsePlan(
       override fun incidentTags(): Any? = unwrap(this).getIncidentTags()
 
       /**
-       * The Amazon Simple Notification Service ( Amazon SNS ) targets that AWS Chatbot uses to
-       * notify the chat channel of updates to an incident.
+       * The Amazon Simple Notification Service ( Amazon SNS ) targets that  uses to notify the chat
+       * channel of updates to an incident.
        *
        * You can also make updates to the incident through the chat channel using the Amazon SNS
        * topics.
@@ -1661,7 +1659,7 @@ public open class CfnResponsePlan(
   }
 
   /**
-   * The Amazon SNS topic that's used by AWS Chatbot to notify the incidents chat channel.
+   * The Amazon SNS topic that's used by  to notify the incidents chat channel.
    *
    * Example:
    *

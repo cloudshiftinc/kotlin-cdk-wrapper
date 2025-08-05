@@ -127,6 +127,13 @@ public interface IHttpApi : IApi {
       unwrap(this).getDefaultAuthorizer()?.let(IHttpRouteAuthorizer::wrap)
 
   /**
+   * The default stage of this API.
+   *
+   * Default: - a stage will be created
+   */
+  public fun defaultStage(): IHttpStage? = unwrap(this).getDefaultStage()?.let(IHttpStage::wrap)
+
+  /**
    * Metric for the number of client-side errors captured in a given period.
    *
    * Default: - sum over 5 minutes
@@ -452,6 +459,13 @@ public interface IHttpApi : IApi {
      */
     override fun defaultAuthorizer(): IHttpRouteAuthorizer? =
         unwrap(this).getDefaultAuthorizer()?.let(IHttpRouteAuthorizer::wrap)
+
+    /**
+     * The default stage of this API.
+     *
+     * Default: - a stage will be created
+     */
+    override fun defaultStage(): IHttpStage? = unwrap(this).getDefaultStage()?.let(IHttpStage::wrap)
 
     /**
      * The environment this resource belongs to.

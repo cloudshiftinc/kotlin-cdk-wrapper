@@ -124,6 +124,9 @@ public open class OriginAccessIdentity(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.cloudfront.OriginAccessIdentity.PROPERTY_INJECTION_ID
+
     public fun fromOriginAccessIdentityId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

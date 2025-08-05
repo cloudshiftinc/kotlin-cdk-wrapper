@@ -76,6 +76,13 @@ public open class FilterPattern(
     ): JsonPattern = software.amazon.awscdk.services.logs.FilterPattern.numberValue(jsonField,
         comparison, `value`).let(JsonPattern::wrap)
 
+    public fun regexValue(
+      jsonField: String,
+      comparison: String,
+      `value`: String,
+    ): JsonPattern = software.amazon.awscdk.services.logs.FilterPattern.regexValue(jsonField,
+        comparison, `value`).let(JsonPattern::wrap)
+
     public fun spaceDelimited(columns: String): SpaceDelimitedTextPattern =
         software.amazon.awscdk.services.logs.FilterPattern.spaceDelimited(columns).let(SpaceDelimitedTextPattern::wrap)
 

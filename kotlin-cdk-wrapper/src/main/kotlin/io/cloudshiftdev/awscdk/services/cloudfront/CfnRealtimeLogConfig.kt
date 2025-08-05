@@ -358,7 +358,7 @@ public open class CfnRealtimeLogConfig(
 
   /**
    * Contains information about the Amazon Kinesis data stream where you are sending real-time log
-   * data in a real-time log configuration.
+   * data for this real-time log configuration.
    *
    * Example:
    *
@@ -380,7 +380,7 @@ public open class CfnRealtimeLogConfig(
   public interface EndPointProperty {
     /**
      * Contains information about the Amazon Kinesis data stream where you are sending real-time log
-     * data.
+     * data in a real-time log configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-endpoint.html#cfn-cloudfront-realtimelogconfig-endpoint-kinesisstreamconfig)
      */
@@ -402,19 +402,19 @@ public open class CfnRealtimeLogConfig(
     public interface Builder {
       /**
        * @param kinesisStreamConfig Contains information about the Amazon Kinesis data stream where
-       * you are sending real-time log data. 
+       * you are sending real-time log data in a real-time log configuration. 
        */
       public fun kinesisStreamConfig(kinesisStreamConfig: IResolvable)
 
       /**
        * @param kinesisStreamConfig Contains information about the Amazon Kinesis data stream where
-       * you are sending real-time log data. 
+       * you are sending real-time log data in a real-time log configuration. 
        */
       public fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty)
 
       /**
        * @param kinesisStreamConfig Contains information about the Amazon Kinesis data stream where
-       * you are sending real-time log data. 
+       * you are sending real-time log data in a real-time log configuration. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("21e06eb0d0db3e46cab2d6c2972df2baca66b17c976eb901ccf7465cf00c8344")
@@ -435,7 +435,7 @@ public open class CfnRealtimeLogConfig(
 
       /**
        * @param kinesisStreamConfig Contains information about the Amazon Kinesis data stream where
-       * you are sending real-time log data. 
+       * you are sending real-time log data in a real-time log configuration. 
        */
       override fun kinesisStreamConfig(kinesisStreamConfig: IResolvable) {
         cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(IResolvable.Companion::unwrap))
@@ -443,7 +443,7 @@ public open class CfnRealtimeLogConfig(
 
       /**
        * @param kinesisStreamConfig Contains information about the Amazon Kinesis data stream where
-       * you are sending real-time log data. 
+       * you are sending real-time log data in a real-time log configuration. 
        */
       override fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty) {
         cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(KinesisStreamConfigProperty.Companion::unwrap))
@@ -451,7 +451,7 @@ public open class CfnRealtimeLogConfig(
 
       /**
        * @param kinesisStreamConfig Contains information about the Amazon Kinesis data stream where
-       * you are sending real-time log data. 
+       * you are sending real-time log data in a real-time log configuration. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("21e06eb0d0db3e46cab2d6c2972df2baca66b17c976eb901ccf7465cf00c8344")
@@ -478,7 +478,7 @@ public open class CfnRealtimeLogConfig(
         EndPointProperty {
       /**
        * Contains information about the Amazon Kinesis data stream where you are sending real-time
-       * log data.
+       * log data in a real-time log configuration.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-endpoint.html#cfn-cloudfront-realtimelogconfig-endpoint-kinesisstreamconfig)
        */

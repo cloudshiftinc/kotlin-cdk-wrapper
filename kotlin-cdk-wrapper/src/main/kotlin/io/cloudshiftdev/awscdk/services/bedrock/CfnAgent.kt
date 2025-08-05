@@ -46,6 +46,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.bedrock.*;
+ * Object additionalModelRequestFields;
  * CfnAgent cfnAgent = CfnAgent.Builder.create(this, "MyCfnAgent")
  * .agentName("agentName")
  * // the properties below are optional
@@ -77,14 +78,30 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .description("description")
  * .required(false)
  * .build()))
+ * .requireConfirmation("requireConfirmation")
  * .build()))
  * .build())
  * .parentActionGroupSignature("parentActionGroupSignature")
  * .skipResourceInUseCheckOnDelete(false)
  * .build()))
+ * .agentCollaboration("agentCollaboration")
+ * .agentCollaborators(List.of(AgentCollaboratorProperty.builder()
+ * .agentDescriptor(AgentDescriptorProperty.builder()
+ * .aliasArn("aliasArn")
+ * .build())
+ * .collaborationInstruction("collaborationInstruction")
+ * .collaboratorName("collaboratorName")
+ * // the properties below are optional
+ * .relayConversationHistory("relayConversationHistory")
+ * .build()))
  * .agentResourceRoleArn("agentResourceRoleArn")
  * .autoPrepare(false)
  * .customerEncryptionKeyArn("customerEncryptionKeyArn")
+ * .customOrchestration(CustomOrchestrationProperty.builder()
+ * .executor(OrchestrationExecutorProperty.builder()
+ * .lambda("lambda")
+ * .build())
+ * .build())
  * .description("description")
  * .foundationModel("foundationModel")
  * .guardrailConfiguration(GuardrailConfigurationProperty.builder()
@@ -99,9 +116,19 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .knowledgeBaseState("knowledgeBaseState")
  * .build()))
+ * .memoryConfiguration(MemoryConfigurationProperty.builder()
+ * .enabledMemoryTypes(List.of("enabledMemoryTypes"))
+ * .sessionSummaryConfiguration(SessionSummaryConfigurationProperty.builder()
+ * .maxRecentSessions(123)
+ * .build())
+ * .storageDays(123)
+ * .build())
+ * .orchestrationType("orchestrationType")
  * .promptOverrideConfiguration(PromptOverrideConfigurationProperty.builder()
  * .promptConfigurations(List.of(PromptConfigurationProperty.builder()
+ * .additionalModelRequestFields(additionalModelRequestFields)
  * .basePromptTemplate("basePromptTemplate")
+ * .foundationModel("foundationModel")
  * .inferenceConfiguration(InferenceConfigurationProperty.builder()
  * .maximumLength(123)
  * .stopSequences(List.of("stopSequences"))
@@ -171,6 +198,43 @@ public open class CfnAgent(
    * The action groups that belong to an agent.
    */
   public open fun actionGroups(vararg `value`: Any): Unit = actionGroups(`value`.toList())
+
+  /**
+   * The agent's collaboration settings.
+   */
+  public open fun agentCollaboration(): String? = unwrap(this).getAgentCollaboration()
+
+  /**
+   * The agent's collaboration settings.
+   */
+  public open fun agentCollaboration(`value`: String) {
+    unwrap(this).setAgentCollaboration(`value`)
+  }
+
+  /**
+   * List of Agent Collaborators.
+   */
+  public open fun agentCollaborators(): Any? = unwrap(this).getAgentCollaborators()
+
+  /**
+   * List of Agent Collaborators.
+   */
+  public open fun agentCollaborators(`value`: IResolvable) {
+    unwrap(this).setAgentCollaborators(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * List of Agent Collaborators.
+   */
+  public open fun agentCollaborators(`value`: List<Any>) {
+    unwrap(this).setAgentCollaborators(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * List of Agent Collaborators.
+   */
+  public open fun agentCollaborators(vararg `value`: Any): Unit =
+      agentCollaborators(`value`.toList())
 
   /**
    * The name of the agent.
@@ -278,6 +342,33 @@ public open class CfnAgent(
    */
   public override fun cdkTagManager(): TagManager =
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
+
+  /**
+   * Contains custom orchestration configurations for the agent.
+   */
+  public open fun customOrchestration(): Any? = unwrap(this).getCustomOrchestration()
+
+  /**
+   * Contains custom orchestration configurations for the agent.
+   */
+  public open fun customOrchestration(`value`: IResolvable) {
+    unwrap(this).setCustomOrchestration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Contains custom orchestration configurations for the agent.
+   */
+  public open fun customOrchestration(`value`: CustomOrchestrationProperty) {
+    unwrap(this).setCustomOrchestration(`value`.let(CustomOrchestrationProperty.Companion::unwrap))
+  }
+
+  /**
+   * Contains custom orchestration configurations for the agent.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("d056802d19df4b6ce757df2e5c9e3532a21f991436183f3a3c0e395dea1d43de")
+  public open fun customOrchestration(`value`: CustomOrchestrationProperty.Builder.() -> Unit): Unit
+      = customOrchestration(CustomOrchestrationProperty(`value`))
 
   /**
    * The Amazon Resource Name (ARN) of the AWS KMS key that encrypts the agent.
@@ -403,6 +494,45 @@ public open class CfnAgent(
   public open fun knowledgeBases(vararg `value`: Any): Unit = knowledgeBases(`value`.toList())
 
   /**
+   * Contains memory configuration for the agent.
+   */
+  public open fun memoryConfiguration(): Any? = unwrap(this).getMemoryConfiguration()
+
+  /**
+   * Contains memory configuration for the agent.
+   */
+  public open fun memoryConfiguration(`value`: IResolvable) {
+    unwrap(this).setMemoryConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Contains memory configuration for the agent.
+   */
+  public open fun memoryConfiguration(`value`: MemoryConfigurationProperty) {
+    unwrap(this).setMemoryConfiguration(`value`.let(MemoryConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * Contains memory configuration for the agent.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("1c9efe6cb3f299190f8981d97d700b394298eab4ece52fb73cac41d2cdee08af")
+  public open fun memoryConfiguration(`value`: MemoryConfigurationProperty.Builder.() -> Unit): Unit
+      = memoryConfiguration(MemoryConfigurationProperty(`value`))
+
+  /**
+   * Specifies the orchestration strategy for the agent.
+   */
+  public open fun orchestrationType(): String? = unwrap(this).getOrchestrationType()
+
+  /**
+   * Specifies the orchestration strategy for the agent.
+   */
+  public open fun orchestrationType(`value`: String) {
+    unwrap(this).setOrchestrationType(`value`)
+  }
+
+  /**
    * Contains configurations to override prompt templates in different parts of an agent sequence.
    */
   public open fun promptOverrideConfiguration(): Any? =
@@ -479,8 +609,8 @@ public open class CfnAgent(
    *
    * For more information, see the following resources:.
    */
-  public open fun testAliasTags(`value`: IResolvable) {
-    unwrap(this).setTestAliasTags(`value`.let(IResolvable.Companion::unwrap))
+  public open fun testAliasTags(`value`: Map<String, String>) {
+    unwrap(this).setTestAliasTags(`value`)
   }
 
   /**
@@ -488,8 +618,8 @@ public open class CfnAgent(
    *
    * For more information, see the following resources:.
    */
-  public open fun testAliasTags(`value`: Map<String, String>) {
-    unwrap(this).setTestAliasTags(`value`)
+  public open fun testAliasTags(`value`: IResolvable) {
+    unwrap(this).setTestAliasTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -520,6 +650,38 @@ public open class CfnAgent(
      * @param actionGroups The action groups that belong to an agent. 
      */
     public fun actionGroups(vararg actionGroups: Any)
+
+    /**
+     * The agent's collaboration settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-agentcollaboration)
+     * @param agentCollaboration The agent's collaboration settings. 
+     */
+    public fun agentCollaboration(agentCollaboration: String)
+
+    /**
+     * List of Agent Collaborators.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-agentcollaborators)
+     * @param agentCollaborators List of Agent Collaborators. 
+     */
+    public fun agentCollaborators(agentCollaborators: IResolvable)
+
+    /**
+     * List of Agent Collaborators.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-agentcollaborators)
+     * @param agentCollaborators List of Agent Collaborators. 
+     */
+    public fun agentCollaborators(agentCollaborators: List<Any>)
+
+    /**
+     * List of Agent Collaborators.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-agentcollaborators)
+     * @param agentCollaborators List of Agent Collaborators. 
+     */
+    public fun agentCollaborators(vararg agentCollaborators: Any)
 
     /**
      * The name of the agent.
@@ -568,6 +730,33 @@ public open class CfnAgent(
      * after making changes to the agent. 
      */
     public fun autoPrepare(autoPrepare: IResolvable)
+
+    /**
+     * Contains custom orchestration configurations for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-customorchestration)
+     * @param customOrchestration Contains custom orchestration configurations for the agent. 
+     */
+    public fun customOrchestration(customOrchestration: IResolvable)
+
+    /**
+     * Contains custom orchestration configurations for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-customorchestration)
+     * @param customOrchestration Contains custom orchestration configurations for the agent. 
+     */
+    public fun customOrchestration(customOrchestration: CustomOrchestrationProperty)
+
+    /**
+     * Contains custom orchestration configurations for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-customorchestration)
+     * @param customOrchestration Contains custom orchestration configurations for the agent. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7c38bec09316a44197e0821bf7af6e8e0753115e21b2a4961c33ca33c417976e")
+    public
+        fun customOrchestration(customOrchestration: CustomOrchestrationProperty.Builder.() -> Unit)
 
     /**
      * The Amazon Resource Name (ARN) of the AWS KMS key that encrypts the agent.
@@ -669,6 +858,41 @@ public open class CfnAgent(
     public fun knowledgeBases(vararg knowledgeBases: Any)
 
     /**
+     * Contains memory configuration for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-memoryconfiguration)
+     * @param memoryConfiguration Contains memory configuration for the agent. 
+     */
+    public fun memoryConfiguration(memoryConfiguration: IResolvable)
+
+    /**
+     * Contains memory configuration for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-memoryconfiguration)
+     * @param memoryConfiguration Contains memory configuration for the agent. 
+     */
+    public fun memoryConfiguration(memoryConfiguration: MemoryConfigurationProperty)
+
+    /**
+     * Contains memory configuration for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-memoryconfiguration)
+     * @param memoryConfiguration Contains memory configuration for the agent. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c29cdd82c7790a6fa8e9e775b4107abef523649d8234c60cc5e5046d36cdb2f3")
+    public
+        fun memoryConfiguration(memoryConfiguration: MemoryConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * Specifies the orchestration strategy for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-orchestrationtype)
+     * @param orchestrationType Specifies the orchestration strategy for the agent. 
+     */
+    public fun orchestrationType(orchestrationType: String)
+
+    /**
      * Contains configurations to override prompt templates in different parts of an agent sequence.
      *
      * For more information, see [Advanced
@@ -762,7 +986,7 @@ public open class CfnAgent(
      * @param testAliasTags Metadata that you can assign to a resource as key-value pairs. For more
      * information, see the following resources:. 
      */
-    public fun testAliasTags(testAliasTags: IResolvable)
+    public fun testAliasTags(testAliasTags: Map<String, String>)
 
     /**
      * Metadata that you can assign to a resource as key-value pairs. For more information, see the
@@ -777,7 +1001,7 @@ public open class CfnAgent(
      * @param testAliasTags Metadata that you can assign to a resource as key-value pairs. For more
      * information, see the following resources:. 
      */
-    public fun testAliasTags(testAliasTags: Map<String, String>)
+    public fun testAliasTags(testAliasTags: IResolvable)
   }
 
   private class BuilderImpl(
@@ -814,6 +1038,45 @@ public open class CfnAgent(
      * @param actionGroups The action groups that belong to an agent. 
      */
     override fun actionGroups(vararg actionGroups: Any): Unit = actionGroups(actionGroups.toList())
+
+    /**
+     * The agent's collaboration settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-agentcollaboration)
+     * @param agentCollaboration The agent's collaboration settings. 
+     */
+    override fun agentCollaboration(agentCollaboration: String) {
+      cdkBuilder.agentCollaboration(agentCollaboration)
+    }
+
+    /**
+     * List of Agent Collaborators.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-agentcollaborators)
+     * @param agentCollaborators List of Agent Collaborators. 
+     */
+    override fun agentCollaborators(agentCollaborators: IResolvable) {
+      cdkBuilder.agentCollaborators(agentCollaborators.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * List of Agent Collaborators.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-agentcollaborators)
+     * @param agentCollaborators List of Agent Collaborators. 
+     */
+    override fun agentCollaborators(agentCollaborators: List<Any>) {
+      cdkBuilder.agentCollaborators(agentCollaborators.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * List of Agent Collaborators.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-agentcollaborators)
+     * @param agentCollaborators List of Agent Collaborators. 
+     */
+    override fun agentCollaborators(vararg agentCollaborators: Any): Unit =
+        agentCollaborators(agentCollaborators.toList())
 
     /**
      * The name of the agent.
@@ -870,6 +1133,38 @@ public open class CfnAgent(
     override fun autoPrepare(autoPrepare: IResolvable) {
       cdkBuilder.autoPrepare(autoPrepare.let(IResolvable.Companion::unwrap))
     }
+
+    /**
+     * Contains custom orchestration configurations for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-customorchestration)
+     * @param customOrchestration Contains custom orchestration configurations for the agent. 
+     */
+    override fun customOrchestration(customOrchestration: IResolvable) {
+      cdkBuilder.customOrchestration(customOrchestration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Contains custom orchestration configurations for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-customorchestration)
+     * @param customOrchestration Contains custom orchestration configurations for the agent. 
+     */
+    override fun customOrchestration(customOrchestration: CustomOrchestrationProperty) {
+      cdkBuilder.customOrchestration(customOrchestration.let(CustomOrchestrationProperty.Companion::unwrap))
+    }
+
+    /**
+     * Contains custom orchestration configurations for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-customorchestration)
+     * @param customOrchestration Contains custom orchestration configurations for the agent. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7c38bec09316a44197e0821bf7af6e8e0753115e21b2a4961c33ca33c417976e")
+    override
+        fun customOrchestration(customOrchestration: CustomOrchestrationProperty.Builder.() -> Unit):
+        Unit = customOrchestration(CustomOrchestrationProperty(customOrchestration))
 
     /**
      * The Amazon Resource Name (ARN) of the AWS KMS key that encrypts the agent.
@@ -991,6 +1286,48 @@ public open class CfnAgent(
         knowledgeBases(knowledgeBases.toList())
 
     /**
+     * Contains memory configuration for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-memoryconfiguration)
+     * @param memoryConfiguration Contains memory configuration for the agent. 
+     */
+    override fun memoryConfiguration(memoryConfiguration: IResolvable) {
+      cdkBuilder.memoryConfiguration(memoryConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Contains memory configuration for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-memoryconfiguration)
+     * @param memoryConfiguration Contains memory configuration for the agent. 
+     */
+    override fun memoryConfiguration(memoryConfiguration: MemoryConfigurationProperty) {
+      cdkBuilder.memoryConfiguration(memoryConfiguration.let(MemoryConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * Contains memory configuration for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-memoryconfiguration)
+     * @param memoryConfiguration Contains memory configuration for the agent. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c29cdd82c7790a6fa8e9e775b4107abef523649d8234c60cc5e5046d36cdb2f3")
+    override
+        fun memoryConfiguration(memoryConfiguration: MemoryConfigurationProperty.Builder.() -> Unit):
+        Unit = memoryConfiguration(MemoryConfigurationProperty(memoryConfiguration))
+
+    /**
+     * Specifies the orchestration strategy for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-orchestrationtype)
+     * @param orchestrationType Specifies the orchestration strategy for the agent. 
+     */
+    override fun orchestrationType(orchestrationType: String) {
+      cdkBuilder.orchestrationType(orchestrationType)
+    }
+
+    /**
      * Contains configurations to override prompt templates in different parts of an agent sequence.
      *
      * For more information, see [Advanced
@@ -1096,8 +1433,8 @@ public open class CfnAgent(
      * @param testAliasTags Metadata that you can assign to a resource as key-value pairs. For more
      * information, see the following resources:. 
      */
-    override fun testAliasTags(testAliasTags: IResolvable) {
-      cdkBuilder.testAliasTags(testAliasTags.let(IResolvable.Companion::unwrap))
+    override fun testAliasTags(testAliasTags: Map<String, String>) {
+      cdkBuilder.testAliasTags(testAliasTags)
     }
 
     /**
@@ -1113,8 +1450,8 @@ public open class CfnAgent(
      * @param testAliasTags Metadata that you can assign to a resource as key-value pairs. For more
      * information, see the following resources:. 
      */
-    override fun testAliasTags(testAliasTags: Map<String, String>) {
-      cdkBuilder.testAliasTags(testAliasTags)
+    override fun testAliasTags(testAliasTags: IResolvable) {
+      cdkBuilder.testAliasTags(testAliasTags.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.bedrock.CfnAgent = cdkBuilder.build()
@@ -1446,6 +1783,7 @@ public open class CfnAgent(
    * .description("description")
    * .required(false)
    * .build()))
+   * .requireConfirmation("requireConfirmation")
    * .build()))
    * .build())
    * .parentActionGroupSignature("parentActionGroupSignature")
@@ -1911,6 +2249,279 @@ public open class CfnAgent(
   }
 
   /**
+   * An agent collaborator.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * AgentCollaboratorProperty agentCollaboratorProperty = AgentCollaboratorProperty.builder()
+   * .agentDescriptor(AgentDescriptorProperty.builder()
+   * .aliasArn("aliasArn")
+   * .build())
+   * .collaborationInstruction("collaborationInstruction")
+   * .collaboratorName("collaboratorName")
+   * // the properties below are optional
+   * .relayConversationHistory("relayConversationHistory")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentcollaborator.html)
+   */
+  public interface AgentCollaboratorProperty {
+    /**
+     * The collaborator's agent descriptor.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentcollaborator.html#cfn-bedrock-agent-agentcollaborator-agentdescriptor)
+     */
+    public fun agentDescriptor(): Any
+
+    /**
+     * The collaborator's instructions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentcollaborator.html#cfn-bedrock-agent-agentcollaborator-collaborationinstruction)
+     */
+    public fun collaborationInstruction(): String
+
+    /**
+     * The collaborator's collaborator name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentcollaborator.html#cfn-bedrock-agent-agentcollaborator-collaboratorname)
+     */
+    public fun collaboratorName(): String
+
+    /**
+     * The collaborator's relay conversation history.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentcollaborator.html#cfn-bedrock-agent-agentcollaborator-relayconversationhistory)
+     */
+    public fun relayConversationHistory(): String? = unwrap(this).getRelayConversationHistory()
+
+    /**
+     * A builder for [AgentCollaboratorProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param agentDescriptor The collaborator's agent descriptor. 
+       */
+      public fun agentDescriptor(agentDescriptor: IResolvable)
+
+      /**
+       * @param agentDescriptor The collaborator's agent descriptor. 
+       */
+      public fun agentDescriptor(agentDescriptor: AgentDescriptorProperty)
+
+      /**
+       * @param agentDescriptor The collaborator's agent descriptor. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("be703fab1407f7b7f2b5639d19e08c105939555cd8b582c676d92b4d203255c2")
+      public fun agentDescriptor(agentDescriptor: AgentDescriptorProperty.Builder.() -> Unit)
+
+      /**
+       * @param collaborationInstruction The collaborator's instructions. 
+       */
+      public fun collaborationInstruction(collaborationInstruction: String)
+
+      /**
+       * @param collaboratorName The collaborator's collaborator name. 
+       */
+      public fun collaboratorName(collaboratorName: String)
+
+      /**
+       * @param relayConversationHistory The collaborator's relay conversation history.
+       */
+      public fun relayConversationHistory(relayConversationHistory: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnAgent.AgentCollaboratorProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnAgent.AgentCollaboratorProperty.builder()
+
+      /**
+       * @param agentDescriptor The collaborator's agent descriptor. 
+       */
+      override fun agentDescriptor(agentDescriptor: IResolvable) {
+        cdkBuilder.agentDescriptor(agentDescriptor.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param agentDescriptor The collaborator's agent descriptor. 
+       */
+      override fun agentDescriptor(agentDescriptor: AgentDescriptorProperty) {
+        cdkBuilder.agentDescriptor(agentDescriptor.let(AgentDescriptorProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param agentDescriptor The collaborator's agent descriptor. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("be703fab1407f7b7f2b5639d19e08c105939555cd8b582c676d92b4d203255c2")
+      override fun agentDescriptor(agentDescriptor: AgentDescriptorProperty.Builder.() -> Unit):
+          Unit = agentDescriptor(AgentDescriptorProperty(agentDescriptor))
+
+      /**
+       * @param collaborationInstruction The collaborator's instructions. 
+       */
+      override fun collaborationInstruction(collaborationInstruction: String) {
+        cdkBuilder.collaborationInstruction(collaborationInstruction)
+      }
+
+      /**
+       * @param collaboratorName The collaborator's collaborator name. 
+       */
+      override fun collaboratorName(collaboratorName: String) {
+        cdkBuilder.collaboratorName(collaboratorName)
+      }
+
+      /**
+       * @param relayConversationHistory The collaborator's relay conversation history.
+       */
+      override fun relayConversationHistory(relayConversationHistory: String) {
+        cdkBuilder.relayConversationHistory(relayConversationHistory)
+      }
+
+      public fun build(): software.amazon.awscdk.services.bedrock.CfnAgent.AgentCollaboratorProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.AgentCollaboratorProperty,
+    ) : CdkObject(cdkObject),
+        AgentCollaboratorProperty {
+      /**
+       * The collaborator's agent descriptor.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentcollaborator.html#cfn-bedrock-agent-agentcollaborator-agentdescriptor)
+       */
+      override fun agentDescriptor(): Any = unwrap(this).getAgentDescriptor()
+
+      /**
+       * The collaborator's instructions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentcollaborator.html#cfn-bedrock-agent-agentcollaborator-collaborationinstruction)
+       */
+      override fun collaborationInstruction(): String = unwrap(this).getCollaborationInstruction()
+
+      /**
+       * The collaborator's collaborator name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentcollaborator.html#cfn-bedrock-agent-agentcollaborator-collaboratorname)
+       */
+      override fun collaboratorName(): String = unwrap(this).getCollaboratorName()
+
+      /**
+       * The collaborator's relay conversation history.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentcollaborator.html#cfn-bedrock-agent-agentcollaborator-relayconversationhistory)
+       */
+      override fun relayConversationHistory(): String? = unwrap(this).getRelayConversationHistory()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AgentCollaboratorProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.AgentCollaboratorProperty):
+          AgentCollaboratorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AgentCollaboratorProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AgentCollaboratorProperty):
+          software.amazon.awscdk.services.bedrock.CfnAgent.AgentCollaboratorProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnAgent.AgentCollaboratorProperty
+    }
+  }
+
+  /**
+   * An agent descriptor.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * AgentDescriptorProperty agentDescriptorProperty = AgentDescriptorProperty.builder()
+   * .aliasArn("aliasArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentdescriptor.html)
+   */
+  public interface AgentDescriptorProperty {
+    /**
+     * The agent's alias ARN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentdescriptor.html#cfn-bedrock-agent-agentdescriptor-aliasarn)
+     */
+    public fun aliasArn(): String? = unwrap(this).getAliasArn()
+
+    /**
+     * A builder for [AgentDescriptorProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param aliasArn The agent's alias ARN.
+       */
+      public fun aliasArn(aliasArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnAgent.AgentDescriptorProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnAgent.AgentDescriptorProperty.builder()
+
+      /**
+       * @param aliasArn The agent's alias ARN.
+       */
+      override fun aliasArn(aliasArn: String) {
+        cdkBuilder.aliasArn(aliasArn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.bedrock.CfnAgent.AgentDescriptorProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.AgentDescriptorProperty,
+    ) : CdkObject(cdkObject),
+        AgentDescriptorProperty {
+      /**
+       * The agent's alias ARN.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentdescriptor.html#cfn-bedrock-agent-agentdescriptor-aliasarn)
+       */
+      override fun aliasArn(): String? = unwrap(this).getAliasArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AgentDescriptorProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.AgentDescriptorProperty):
+          AgentDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as? AgentDescriptorProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AgentDescriptorProperty):
+          software.amazon.awscdk.services.bedrock.CfnAgent.AgentDescriptorProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnAgent.AgentDescriptorProperty
+    }
+  }
+
+  /**
    * Contains details about a knowledge base that is associated with an agent.
    *
    * Example:
@@ -2062,6 +2673,117 @@ public open class CfnAgent(
   }
 
   /**
+   * Contains details of the custom orchestration configured for the agent.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * CustomOrchestrationProperty customOrchestrationProperty = CustomOrchestrationProperty.builder()
+   * .executor(OrchestrationExecutorProperty.builder()
+   * .lambda("lambda")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-customorchestration.html)
+   */
+  public interface CustomOrchestrationProperty {
+    /**
+     * The structure of the executor invoking the actions in custom orchestration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-customorchestration.html#cfn-bedrock-agent-customorchestration-executor)
+     */
+    public fun executor(): Any? = unwrap(this).getExecutor()
+
+    /**
+     * A builder for [CustomOrchestrationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param executor The structure of the executor invoking the actions in custom orchestration.
+       */
+      public fun executor(executor: IResolvable)
+
+      /**
+       * @param executor The structure of the executor invoking the actions in custom orchestration.
+       */
+      public fun executor(executor: OrchestrationExecutorProperty)
+
+      /**
+       * @param executor The structure of the executor invoking the actions in custom orchestration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("00b2378d0be0bd94a7810fb8cecf4e41c6970912f9ee54688f99abe75d1b5fcf")
+      public fun executor(executor: OrchestrationExecutorProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnAgent.CustomOrchestrationProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnAgent.CustomOrchestrationProperty.builder()
+
+      /**
+       * @param executor The structure of the executor invoking the actions in custom orchestration.
+       */
+      override fun executor(executor: IResolvable) {
+        cdkBuilder.executor(executor.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param executor The structure of the executor invoking the actions in custom orchestration.
+       */
+      override fun executor(executor: OrchestrationExecutorProperty) {
+        cdkBuilder.executor(executor.let(OrchestrationExecutorProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param executor The structure of the executor invoking the actions in custom orchestration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("00b2378d0be0bd94a7810fb8cecf4e41c6970912f9ee54688f99abe75d1b5fcf")
+      override fun executor(executor: OrchestrationExecutorProperty.Builder.() -> Unit): Unit =
+          executor(OrchestrationExecutorProperty(executor))
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnAgent.CustomOrchestrationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.CustomOrchestrationProperty,
+    ) : CdkObject(cdkObject),
+        CustomOrchestrationProperty {
+      /**
+       * The structure of the executor invoking the actions in custom orchestration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-customorchestration.html#cfn-bedrock-agent-customorchestration-executor)
+       */
+      override fun executor(): Any? = unwrap(this).getExecutor()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CustomOrchestrationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.CustomOrchestrationProperty):
+          CustomOrchestrationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomOrchestrationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomOrchestrationProperty):
+          software.amazon.awscdk.services.bedrock.CfnAgent.CustomOrchestrationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnAgent.CustomOrchestrationProperty
+    }
+  }
+
+  /**
    * Defines parameters that the agent needs to invoke from the user to complete the function.
    *
    * Corresponds to an action in an action group.
@@ -2096,6 +2818,7 @@ public open class CfnAgent(
    * .description("description")
    * .required(false)
    * .build()))
+   * .requireConfirmation("requireConfirmation")
    * .build();
    * ```
    *
@@ -2124,6 +2847,13 @@ public open class CfnAgent(
     public fun parameters(): Any? = unwrap(this).getParameters()
 
     /**
+     * Contains information if user confirmation is required to invoke the function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-function.html#cfn-bedrock-agent-function-requireconfirmation)
+     */
+    public fun requireConfirmation(): String? = unwrap(this).getRequireConfirmation()
+
+    /**
      * A builder for [FunctionProperty]
      */
     @CdkDslMarker
@@ -2149,6 +2879,12 @@ public open class CfnAgent(
        * function.
        */
       public fun parameters(parameters: Map<String, Any>)
+
+      /**
+       * @param requireConfirmation Contains information if user confirmation is required to invoke
+       * the function.
+       */
+      public fun requireConfirmation(requireConfirmation: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2186,6 +2922,14 @@ public open class CfnAgent(
         cdkBuilder.parameters(parameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
+      /**
+       * @param requireConfirmation Contains information if user confirmation is required to invoke
+       * the function.
+       */
+      override fun requireConfirmation(requireConfirmation: String) {
+        cdkBuilder.requireConfirmation(requireConfirmation)
+      }
+
       public fun build(): software.amazon.awscdk.services.bedrock.CfnAgent.FunctionProperty =
           cdkBuilder.build()
     }
@@ -2214,6 +2958,13 @@ public open class CfnAgent(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-function.html#cfn-bedrock-agent-function-parameters)
        */
       override fun parameters(): Any? = unwrap(this).getParameters()
+
+      /**
+       * Contains information if user confirmation is required to invoke the function.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-function.html#cfn-bedrock-agent-function-requireconfirmation)
+       */
+      override fun requireConfirmation(): String? = unwrap(this).getRequireConfirmation()
     }
 
     public companion object {
@@ -2255,6 +3006,7 @@ public open class CfnAgent(
    * .description("description")
    * .required(false)
    * .build()))
+   * .requireConfirmation("requireConfirmation")
    * .build()))
    * .build();
    * ```
@@ -2761,6 +3513,285 @@ public open class CfnAgent(
   }
 
   /**
+   * Details of the memory configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * MemoryConfigurationProperty memoryConfigurationProperty = MemoryConfigurationProperty.builder()
+   * .enabledMemoryTypes(List.of("enabledMemoryTypes"))
+   * .sessionSummaryConfiguration(SessionSummaryConfigurationProperty.builder()
+   * .maxRecentSessions(123)
+   * .build())
+   * .storageDays(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-memoryconfiguration.html)
+   */
+  public interface MemoryConfigurationProperty {
+    /**
+     * The type of memory that is stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-memoryconfiguration.html#cfn-bedrock-agent-memoryconfiguration-enabledmemorytypes)
+     */
+    public fun enabledMemoryTypes(): List<String> = unwrap(this).getEnabledMemoryTypes() ?:
+        emptyList()
+
+    /**
+     * Contains the configuration for SESSION_SUMMARY memory type enabled for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-memoryconfiguration.html#cfn-bedrock-agent-memoryconfiguration-sessionsummaryconfiguration)
+     */
+    public fun sessionSummaryConfiguration(): Any? = unwrap(this).getSessionSummaryConfiguration()
+
+    /**
+     * The number of days the agent is configured to retain the conversational context.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-memoryconfiguration.html#cfn-bedrock-agent-memoryconfiguration-storagedays)
+     */
+    public fun storageDays(): Number? = unwrap(this).getStorageDays()
+
+    /**
+     * A builder for [MemoryConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabledMemoryTypes The type of memory that is stored.
+       */
+      public fun enabledMemoryTypes(enabledMemoryTypes: List<String>)
+
+      /**
+       * @param enabledMemoryTypes The type of memory that is stored.
+       */
+      public fun enabledMemoryTypes(vararg enabledMemoryTypes: String)
+
+      /**
+       * @param sessionSummaryConfiguration Contains the configuration for SESSION_SUMMARY memory
+       * type enabled for the agent.
+       */
+      public fun sessionSummaryConfiguration(sessionSummaryConfiguration: IResolvable)
+
+      /**
+       * @param sessionSummaryConfiguration Contains the configuration for SESSION_SUMMARY memory
+       * type enabled for the agent.
+       */
+      public
+          fun sessionSummaryConfiguration(sessionSummaryConfiguration: SessionSummaryConfigurationProperty)
+
+      /**
+       * @param sessionSummaryConfiguration Contains the configuration for SESSION_SUMMARY memory
+       * type enabled for the agent.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b30a67153d051849457d51621726ad2fea5100972337e7a6d209e16b8137566e")
+      public
+          fun sessionSummaryConfiguration(sessionSummaryConfiguration: SessionSummaryConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param storageDays The number of days the agent is configured to retain the conversational
+       * context.
+       */
+      public fun storageDays(storageDays: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnAgent.MemoryConfigurationProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnAgent.MemoryConfigurationProperty.builder()
+
+      /**
+       * @param enabledMemoryTypes The type of memory that is stored.
+       */
+      override fun enabledMemoryTypes(enabledMemoryTypes: List<String>) {
+        cdkBuilder.enabledMemoryTypes(enabledMemoryTypes)
+      }
+
+      /**
+       * @param enabledMemoryTypes The type of memory that is stored.
+       */
+      override fun enabledMemoryTypes(vararg enabledMemoryTypes: String): Unit =
+          enabledMemoryTypes(enabledMemoryTypes.toList())
+
+      /**
+       * @param sessionSummaryConfiguration Contains the configuration for SESSION_SUMMARY memory
+       * type enabled for the agent.
+       */
+      override fun sessionSummaryConfiguration(sessionSummaryConfiguration: IResolvable) {
+        cdkBuilder.sessionSummaryConfiguration(sessionSummaryConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param sessionSummaryConfiguration Contains the configuration for SESSION_SUMMARY memory
+       * type enabled for the agent.
+       */
+      override
+          fun sessionSummaryConfiguration(sessionSummaryConfiguration: SessionSummaryConfigurationProperty) {
+        cdkBuilder.sessionSummaryConfiguration(sessionSummaryConfiguration.let(SessionSummaryConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param sessionSummaryConfiguration Contains the configuration for SESSION_SUMMARY memory
+       * type enabled for the agent.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b30a67153d051849457d51621726ad2fea5100972337e7a6d209e16b8137566e")
+      override
+          fun sessionSummaryConfiguration(sessionSummaryConfiguration: SessionSummaryConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          sessionSummaryConfiguration(SessionSummaryConfigurationProperty(sessionSummaryConfiguration))
+
+      /**
+       * @param storageDays The number of days the agent is configured to retain the conversational
+       * context.
+       */
+      override fun storageDays(storageDays: Number) {
+        cdkBuilder.storageDays(storageDays)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnAgent.MemoryConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.MemoryConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        MemoryConfigurationProperty {
+      /**
+       * The type of memory that is stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-memoryconfiguration.html#cfn-bedrock-agent-memoryconfiguration-enabledmemorytypes)
+       */
+      override fun enabledMemoryTypes(): List<String> = unwrap(this).getEnabledMemoryTypes() ?:
+          emptyList()
+
+      /**
+       * Contains the configuration for SESSION_SUMMARY memory type enabled for the agent.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-memoryconfiguration.html#cfn-bedrock-agent-memoryconfiguration-sessionsummaryconfiguration)
+       */
+      override fun sessionSummaryConfiguration(): Any? =
+          unwrap(this).getSessionSummaryConfiguration()
+
+      /**
+       * The number of days the agent is configured to retain the conversational context.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-memoryconfiguration.html#cfn-bedrock-agent-memoryconfiguration-storagedays)
+       */
+      override fun storageDays(): Number? = unwrap(this).getStorageDays()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MemoryConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.MemoryConfigurationProperty):
+          MemoryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MemoryConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MemoryConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnAgent.MemoryConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnAgent.MemoryConfigurationProperty
+    }
+  }
+
+  /**
+   * The structure of the executor invoking the actions in custom orchestration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * OrchestrationExecutorProperty orchestrationExecutorProperty =
+   * OrchestrationExecutorProperty.builder()
+   * .lambda("lambda")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-orchestrationexecutor.html)
+   */
+  public interface OrchestrationExecutorProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is
+     * carried out upon invoking the action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-orchestrationexecutor.html#cfn-bedrock-agent-orchestrationexecutor-lambda)
+     */
+    public fun lambda(): String
+
+    /**
+     * A builder for [OrchestrationExecutorProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param lambda The Amazon Resource Name (ARN) of the Lambda function containing the business
+       * logic that is carried out upon invoking the action. 
+       */
+      public fun lambda(lambda: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnAgent.OrchestrationExecutorProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnAgent.OrchestrationExecutorProperty.builder()
+
+      /**
+       * @param lambda The Amazon Resource Name (ARN) of the Lambda function containing the business
+       * logic that is carried out upon invoking the action. 
+       */
+      override fun lambda(lambda: String) {
+        cdkBuilder.lambda(lambda)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnAgent.OrchestrationExecutorProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.OrchestrationExecutorProperty,
+    ) : CdkObject(cdkObject),
+        OrchestrationExecutorProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is
+       * carried out upon invoking the action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-orchestrationexecutor.html#cfn-bedrock-agent-orchestrationexecutor-lambda)
+       */
+      override fun lambda(): String = unwrap(this).getLambda()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OrchestrationExecutorProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.OrchestrationExecutorProperty):
+          OrchestrationExecutorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OrchestrationExecutorProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OrchestrationExecutorProperty):
+          software.amazon.awscdk.services.bedrock.CfnAgent.OrchestrationExecutorProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnAgent.OrchestrationExecutorProperty
+    }
+  }
+
+  /**
    * Contains details about a parameter in a function for an action group.
    *
    * Example:
@@ -2932,8 +3963,11 @@ public open class CfnAgent(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object additionalModelRequestFields;
    * PromptConfigurationProperty promptConfigurationProperty = PromptConfigurationProperty.builder()
+   * .additionalModelRequestFields(additionalModelRequestFields)
    * .basePromptTemplate("basePromptTemplate")
+   * .foundationModel("foundationModel")
    * .inferenceConfiguration(InferenceConfigurationProperty.builder()
    * .maximumLength(123)
    * .stopSequences(List.of("stopSequences"))
@@ -2952,6 +3986,18 @@ public open class CfnAgent(
    */
   public interface PromptConfigurationProperty {
     /**
+     * If the Converse or ConverseStream operations support the model,
+     * `additionalModelRequestFields` contains additional inference parameters, beyond the base set of
+     * inference parameters in the `inferenceConfiguration` field.
+     *
+     * For more information, see [Inference request parameters and response fields for foundation
+     * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-promptconfiguration.html#cfn-bedrock-agent-promptconfiguration-additionalmodelrequestfields)
+     */
+    public fun additionalModelRequestFields(): Any? = unwrap(this).getAdditionalModelRequestFields()
+
+    /**
      * Defines the prompt template with which to replace the default prompt template.
      *
      * You can use placeholder variables in the base prompt template to customize the prompt. For
@@ -2964,6 +4010,13 @@ public open class CfnAgent(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-promptconfiguration.html#cfn-bedrock-agent-promptconfiguration-baseprompttemplate)
      */
     public fun basePromptTemplate(): String? = unwrap(this).getBasePromptTemplate()
+
+    /**
+     * The agent's foundation model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-promptconfiguration.html#cfn-bedrock-agent-promptconfiguration-foundationmodel)
+     */
+    public fun foundationModel(): String? = unwrap(this).getFoundationModel()
 
     /**
      * Contains inference parameters to use when the agent invokes a foundation model in the part of
@@ -2980,7 +4033,7 @@ public open class CfnAgent(
      * Specifies whether to override the default parser Lambda function when parsing the raw
      * foundation model output in the part of the agent sequence defined by the `promptType` .
      *
-     * If you set the field as `OVERRIDEN` , the `overrideLambda` field in the
+     * If you set the field as `OVERRIDDEN` , the `overrideLambda` field in the
      * [PromptOverrideConfiguration](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_PromptOverrideConfiguration.html)
      * must be specified with the ARN of a Lambda function.
      *
@@ -3027,6 +4080,15 @@ public open class CfnAgent(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param additionalModelRequestFields If the Converse or ConverseStream operations support
+       * the model, `additionalModelRequestFields` contains additional inference parameters, beyond the
+       * base set of inference parameters in the `inferenceConfiguration` field.
+       * For more information, see [Inference request parameters and response fields for foundation
+       * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
+       */
+      public fun additionalModelRequestFields(additionalModelRequestFields: Any)
+
+      /**
        * @param basePromptTemplate Defines the prompt template with which to replace the default
        * prompt template.
        * You can use placeholder variables in the base prompt template to customize the prompt. For
@@ -3037,6 +4099,11 @@ public open class CfnAgent(
        * .
        */
       public fun basePromptTemplate(basePromptTemplate: String)
+
+      /**
+       * @param foundationModel The agent's foundation model.
+       */
+      public fun foundationModel(foundationModel: String)
 
       /**
        * @param inferenceConfiguration Contains inference parameters to use when the agent invokes a
@@ -3069,7 +4136,7 @@ public open class CfnAgent(
        * @param parserMode Specifies whether to override the default parser Lambda function when
        * parsing the raw foundation model output in the part of the agent sequence defined by the
        * `promptType` .
-       * If you set the field as `OVERRIDEN` , the `overrideLambda` field in the
+       * If you set the field as `OVERRIDDEN` , the `overrideLambda` field in the
        * [PromptOverrideConfiguration](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_PromptOverrideConfiguration.html)
        * must be specified with the ARN of a Lambda function.
        */
@@ -3109,6 +4176,17 @@ public open class CfnAgent(
           software.amazon.awscdk.services.bedrock.CfnAgent.PromptConfigurationProperty.builder()
 
       /**
+       * @param additionalModelRequestFields If the Converse or ConverseStream operations support
+       * the model, `additionalModelRequestFields` contains additional inference parameters, beyond the
+       * base set of inference parameters in the `inferenceConfiguration` field.
+       * For more information, see [Inference request parameters and response fields for foundation
+       * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
+       */
+      override fun additionalModelRequestFields(additionalModelRequestFields: Any) {
+        cdkBuilder.additionalModelRequestFields(additionalModelRequestFields)
+      }
+
+      /**
        * @param basePromptTemplate Defines the prompt template with which to replace the default
        * prompt template.
        * You can use placeholder variables in the base prompt template to customize the prompt. For
@@ -3120,6 +4198,13 @@ public open class CfnAgent(
        */
       override fun basePromptTemplate(basePromptTemplate: String) {
         cdkBuilder.basePromptTemplate(basePromptTemplate)
+      }
+
+      /**
+       * @param foundationModel The agent's foundation model.
+       */
+      override fun foundationModel(foundationModel: String) {
+        cdkBuilder.foundationModel(foundationModel)
       }
 
       /**
@@ -3158,7 +4243,7 @@ public open class CfnAgent(
        * @param parserMode Specifies whether to override the default parser Lambda function when
        * parsing the raw foundation model output in the part of the agent sequence defined by the
        * `promptType` .
-       * If you set the field as `OVERRIDEN` , the `overrideLambda` field in the
+       * If you set the field as `OVERRIDDEN` , the `overrideLambda` field in the
        * [PromptOverrideConfiguration](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_PromptOverrideConfiguration.html)
        * must be specified with the ARN of a Lambda function.
        */
@@ -3209,6 +4294,19 @@ public open class CfnAgent(
     ) : CdkObject(cdkObject),
         PromptConfigurationProperty {
       /**
+       * If the Converse or ConverseStream operations support the model,
+       * `additionalModelRequestFields` contains additional inference parameters, beyond the base set
+       * of inference parameters in the `inferenceConfiguration` field.
+       *
+       * For more information, see [Inference request parameters and response fields for foundation
+       * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-promptconfiguration.html#cfn-bedrock-agent-promptconfiguration-additionalmodelrequestfields)
+       */
+      override fun additionalModelRequestFields(): Any? =
+          unwrap(this).getAdditionalModelRequestFields()
+
+      /**
        * Defines the prompt template with which to replace the default prompt template.
        *
        * You can use placeholder variables in the base prompt template to customize the prompt. For
@@ -3221,6 +4319,13 @@ public open class CfnAgent(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-promptconfiguration.html#cfn-bedrock-agent-promptconfiguration-baseprompttemplate)
        */
       override fun basePromptTemplate(): String? = unwrap(this).getBasePromptTemplate()
+
+      /**
+       * The agent's foundation model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-promptconfiguration.html#cfn-bedrock-agent-promptconfiguration-foundationmodel)
+       */
+      override fun foundationModel(): String? = unwrap(this).getFoundationModel()
 
       /**
        * Contains inference parameters to use when the agent invokes a foundation model in the part
@@ -3237,7 +4342,7 @@ public open class CfnAgent(
        * Specifies whether to override the default parser Lambda function when parsing the raw
        * foundation model output in the part of the agent sequence defined by the `promptType` .
        *
-       * If you set the field as `OVERRIDEN` , the `overrideLambda` field in the
+       * If you set the field as `OVERRIDDEN` , the `overrideLambda` field in the
        * [PromptOverrideConfiguration](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_PromptOverrideConfiguration.html)
        * must be specified with the ARN of a Lambda function.
        *
@@ -3310,10 +4415,13 @@ public open class CfnAgent(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object additionalModelRequestFields;
    * PromptOverrideConfigurationProperty promptOverrideConfigurationProperty =
    * PromptOverrideConfigurationProperty.builder()
    * .promptConfigurations(List.of(PromptConfigurationProperty.builder()
+   * .additionalModelRequestFields(additionalModelRequestFields)
    * .basePromptTemplate("basePromptTemplate")
+   * .foundationModel("foundationModel")
    * .inferenceConfiguration(InferenceConfigurationProperty.builder()
    * .maximumLength(123)
    * .stopSequences(List.of("stopSequences"))
@@ -3601,6 +4709,93 @@ public open class CfnAgent(
           software.amazon.awscdk.services.bedrock.CfnAgent.S3IdentifierProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.bedrock.CfnAgent.S3IdentifierProperty
+    }
+  }
+
+  /**
+   * Configuration for SESSION_SUMMARY memory type enabled for the agent.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * SessionSummaryConfigurationProperty sessionSummaryConfigurationProperty =
+   * SessionSummaryConfigurationProperty.builder()
+   * .maxRecentSessions(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-sessionsummaryconfiguration.html)
+   */
+  public interface SessionSummaryConfigurationProperty {
+    /**
+     * Maximum number of recent session summaries to include in the agent's prompt context.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-sessionsummaryconfiguration.html#cfn-bedrock-agent-sessionsummaryconfiguration-maxrecentsessions)
+     */
+    public fun maxRecentSessions(): Number? = unwrap(this).getMaxRecentSessions()
+
+    /**
+     * A builder for [SessionSummaryConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxRecentSessions Maximum number of recent session summaries to include in the
+       * agent's prompt context.
+       */
+      public fun maxRecentSessions(maxRecentSessions: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnAgent.SessionSummaryConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnAgent.SessionSummaryConfigurationProperty.builder()
+
+      /**
+       * @param maxRecentSessions Maximum number of recent session summaries to include in the
+       * agent's prompt context.
+       */
+      override fun maxRecentSessions(maxRecentSessions: Number) {
+        cdkBuilder.maxRecentSessions(maxRecentSessions)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnAgent.SessionSummaryConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.SessionSummaryConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        SessionSummaryConfigurationProperty {
+      /**
+       * Maximum number of recent session summaries to include in the agent's prompt context.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-sessionsummaryconfiguration.html#cfn-bedrock-agent-sessionsummaryconfiguration-maxrecentsessions)
+       */
+      override fun maxRecentSessions(): Number? = unwrap(this).getMaxRecentSessions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SessionSummaryConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.SessionSummaryConfigurationProperty):
+          SessionSummaryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SessionSummaryConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SessionSummaryConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnAgent.SessionSummaryConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnAgent.SessionSummaryConfigurationProperty
     }
   }
 }

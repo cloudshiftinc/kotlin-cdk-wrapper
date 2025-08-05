@@ -52,6 +52,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .copyTagsToBackups(false)
  * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
  * .dataCompressionType("dataCompressionType")
+ * .dataReadCacheConfiguration(DataReadCacheConfigurationProperty.builder()
+ * .sizeGiB(123)
+ * .sizingMode("sizingMode")
+ * .build())
  * .deploymentType("deploymentType")
  * .driveCacheType("driveCacheType")
  * .efaEnabled(false)
@@ -63,6 +67,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .mode("mode")
  * .build())
  * .perUnitStorageThroughput(123)
+ * .throughputCapacity(123)
  * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
  * .build())
  * .ontapConfiguration(OntapConfigurationProperty.builder()
@@ -544,6 +549,11 @@ public open class CfnFileSystem(
      * * Amazon FSx for OpenZFS
      * * Amazon FSx for Windows File Server
      *
+     * If this ID isn't specified, the Amazon FSx-managed key for your account is used. For more
+     * information, see
+     * [Encrypt](https://docs.aws.amazon.com//kms/latest/APIReference/API_Encrypt.html) in the *AWS Key
+     * Management Service API Reference* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-kmskeyid)
      * @param kmsKeyId The ID of the AWS Key Management Service ( AWS KMS ) key used to encrypt
      * Amazon FSx file system data. 
@@ -552,6 +562,8 @@ public open class CfnFileSystem(
 
     /**
      * The Lustre configuration for the file system being created.
+     *
+     * This configuration is required if the `FileSystemType` is set to `LUSTRE` .
      *
      *
      * The following parameters are not supported when creating Lustre file systems with a data
@@ -571,6 +583,8 @@ public open class CfnFileSystem(
     /**
      * The Lustre configuration for the file system being created.
      *
+     * This configuration is required if the `FileSystemType` is set to `LUSTRE` .
+     *
      *
      * The following parameters are not supported when creating Lustre file systems with a data
      * repository association.
@@ -588,6 +602,8 @@ public open class CfnFileSystem(
 
     /**
      * The Lustre configuration for the file system being created.
+     *
+     * This configuration is required if the `FileSystemType` is set to `LUSTRE` .
      *
      *
      * The following parameters are not supported when creating Lustre file systems with a data
@@ -610,6 +626,8 @@ public open class CfnFileSystem(
     /**
      * The ONTAP configuration properties of the FSx for ONTAP file system that you are creating.
      *
+     * This configuration is required if the `FileSystemType` is set to `ONTAP` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-ontapconfiguration)
      * @param ontapConfiguration The ONTAP configuration properties of the FSx for ONTAP file system
      * that you are creating. 
@@ -619,6 +637,8 @@ public open class CfnFileSystem(
     /**
      * The ONTAP configuration properties of the FSx for ONTAP file system that you are creating.
      *
+     * This configuration is required if the `FileSystemType` is set to `ONTAP` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-ontapconfiguration)
      * @param ontapConfiguration The ONTAP configuration properties of the FSx for ONTAP file system
      * that you are creating. 
@@ -627,6 +647,8 @@ public open class CfnFileSystem(
 
     /**
      * The ONTAP configuration properties of the FSx for ONTAP file system that you are creating.
+     *
+     * This configuration is required if the `FileSystemType` is set to `ONTAP` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-ontapconfiguration)
      * @param ontapConfiguration The ONTAP configuration properties of the FSx for ONTAP file system
@@ -640,6 +662,8 @@ public open class CfnFileSystem(
      * The Amazon FSx for OpenZFS configuration properties for the file system that you are
      * creating.
      *
+     * This configuration is required if the `FileSystemType` is set to `OPENZFS` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-openzfsconfiguration)
      * @param openZfsConfiguration The Amazon FSx for OpenZFS configuration properties for the file
      * system that you are creating. 
@@ -650,6 +674,8 @@ public open class CfnFileSystem(
      * The Amazon FSx for OpenZFS configuration properties for the file system that you are
      * creating.
      *
+     * This configuration is required if the `FileSystemType` is set to `OPENZFS` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-openzfsconfiguration)
      * @param openZfsConfiguration The Amazon FSx for OpenZFS configuration properties for the file
      * system that you are creating. 
@@ -659,6 +685,8 @@ public open class CfnFileSystem(
     /**
      * The Amazon FSx for OpenZFS configuration properties for the file system that you are
      * creating.
+     *
+     * This configuration is required if the `FileSystemType` is set to `OPENZFS` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-openzfsconfiguration)
      * @param openZfsConfiguration The Amazon FSx for OpenZFS configuration properties for the file
@@ -747,18 +775,18 @@ public open class CfnFileSystem(
      *
      * * Set to `SSD` to use solid state drive storage. SSD is supported on all Windows, Lustre,
      * ONTAP, and OpenZFS deployment types.
-     * * Set to `HDD` to use hard disk drive storage. HDD is supported on `SINGLE_AZ_2` and
+     * * Set to `HDD` to use hard disk drive storage, which is supported on `SINGLE_AZ_2` and
      * `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT_1` Lustre file system
      * deployment types.
      * * Set to `INTELLIGENT_TIERING` to use fully elastic, intelligently-tiered storage.
-     * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment
-     * type.
+     * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment type
+     * and for Lustre file systems with the Persistent_2 deployment type.
      *
      * Default value is `SSD` . For more information, see [Storage type
      * options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options)
-     * in the *FSx for Windows File Server User Guide* , [Multiple storage
-     * options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options) in the
-     * *FSx for Lustre User Guide* , and [Working with
+     * in the *FSx for Windows File Server User Guide* , [FSx for Lustre storage
+     * classes](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-storage-classes)
+     * in the *FSx for Lustre User Guide* , and [Working with
      * Intelligent-Tiering](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance-intelligent-tiering)
      * in the *Amazon FSx for OpenZFS User Guide* .
      *
@@ -838,7 +866,7 @@ public open class CfnFileSystem(
     /**
      * The configuration object for the Microsoft Windows file system you are creating.
      *
-     * This value is required if `FileSystemType` is set to `WINDOWS` .
+     * This configuration is required if `FileSystemType` is set to `WINDOWS` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-windowsconfiguration)
      * @param windowsConfiguration The configuration object for the Microsoft Windows file system
@@ -849,7 +877,7 @@ public open class CfnFileSystem(
     /**
      * The configuration object for the Microsoft Windows file system you are creating.
      *
-     * This value is required if `FileSystemType` is set to `WINDOWS` .
+     * This configuration is required if `FileSystemType` is set to `WINDOWS` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-windowsconfiguration)
      * @param windowsConfiguration The configuration object for the Microsoft Windows file system
@@ -860,7 +888,7 @@ public open class CfnFileSystem(
     /**
      * The configuration object for the Microsoft Windows file system you are creating.
      *
-     * This value is required if `FileSystemType` is set to `WINDOWS` .
+     * This configuration is required if `FileSystemType` is set to `WINDOWS` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-windowsconfiguration)
      * @param windowsConfiguration The configuration object for the Microsoft Windows file system
@@ -947,6 +975,11 @@ public open class CfnFileSystem(
      * * Amazon FSx for OpenZFS
      * * Amazon FSx for Windows File Server
      *
+     * If this ID isn't specified, the Amazon FSx-managed key for your account is used. For more
+     * information, see
+     * [Encrypt](https://docs.aws.amazon.com//kms/latest/APIReference/API_Encrypt.html) in the *AWS Key
+     * Management Service API Reference* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-kmskeyid)
      * @param kmsKeyId The ID of the AWS Key Management Service ( AWS KMS ) key used to encrypt
      * Amazon FSx file system data. 
@@ -957,6 +990,8 @@ public open class CfnFileSystem(
 
     /**
      * The Lustre configuration for the file system being created.
+     *
+     * This configuration is required if the `FileSystemType` is set to `LUSTRE` .
      *
      *
      * The following parameters are not supported when creating Lustre file systems with a data
@@ -978,6 +1013,8 @@ public open class CfnFileSystem(
     /**
      * The Lustre configuration for the file system being created.
      *
+     * This configuration is required if the `FileSystemType` is set to `LUSTRE` .
+     *
      *
      * The following parameters are not supported when creating Lustre file systems with a data
      * repository association.
@@ -997,6 +1034,8 @@ public open class CfnFileSystem(
 
     /**
      * The Lustre configuration for the file system being created.
+     *
+     * This configuration is required if the `FileSystemType` is set to `LUSTRE` .
      *
      *
      * The following parameters are not supported when creating Lustre file systems with a data
@@ -1020,6 +1059,8 @@ public open class CfnFileSystem(
     /**
      * The ONTAP configuration properties of the FSx for ONTAP file system that you are creating.
      *
+     * This configuration is required if the `FileSystemType` is set to `ONTAP` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-ontapconfiguration)
      * @param ontapConfiguration The ONTAP configuration properties of the FSx for ONTAP file system
      * that you are creating. 
@@ -1031,6 +1072,8 @@ public open class CfnFileSystem(
     /**
      * The ONTAP configuration properties of the FSx for ONTAP file system that you are creating.
      *
+     * This configuration is required if the `FileSystemType` is set to `ONTAP` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-ontapconfiguration)
      * @param ontapConfiguration The ONTAP configuration properties of the FSx for ONTAP file system
      * that you are creating. 
@@ -1041,6 +1084,8 @@ public open class CfnFileSystem(
 
     /**
      * The ONTAP configuration properties of the FSx for ONTAP file system that you are creating.
+     *
+     * This configuration is required if the `FileSystemType` is set to `ONTAP` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-ontapconfiguration)
      * @param ontapConfiguration The ONTAP configuration properties of the FSx for ONTAP file system
@@ -1056,6 +1101,8 @@ public open class CfnFileSystem(
      * The Amazon FSx for OpenZFS configuration properties for the file system that you are
      * creating.
      *
+     * This configuration is required if the `FileSystemType` is set to `OPENZFS` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-openzfsconfiguration)
      * @param openZfsConfiguration The Amazon FSx for OpenZFS configuration properties for the file
      * system that you are creating. 
@@ -1068,6 +1115,8 @@ public open class CfnFileSystem(
      * The Amazon FSx for OpenZFS configuration properties for the file system that you are
      * creating.
      *
+     * This configuration is required if the `FileSystemType` is set to `OPENZFS` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-openzfsconfiguration)
      * @param openZfsConfiguration The Amazon FSx for OpenZFS configuration properties for the file
      * system that you are creating. 
@@ -1079,6 +1128,8 @@ public open class CfnFileSystem(
     /**
      * The Amazon FSx for OpenZFS configuration properties for the file system that you are
      * creating.
+     *
+     * This configuration is required if the `FileSystemType` is set to `OPENZFS` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-openzfsconfiguration)
      * @param openZfsConfiguration The Amazon FSx for OpenZFS configuration properties for the file
@@ -1173,18 +1224,18 @@ public open class CfnFileSystem(
      *
      * * Set to `SSD` to use solid state drive storage. SSD is supported on all Windows, Lustre,
      * ONTAP, and OpenZFS deployment types.
-     * * Set to `HDD` to use hard disk drive storage. HDD is supported on `SINGLE_AZ_2` and
+     * * Set to `HDD` to use hard disk drive storage, which is supported on `SINGLE_AZ_2` and
      * `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT_1` Lustre file system
      * deployment types.
      * * Set to `INTELLIGENT_TIERING` to use fully elastic, intelligently-tiered storage.
-     * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment
-     * type.
+     * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment type
+     * and for Lustre file systems with the Persistent_2 deployment type.
      *
      * Default value is `SSD` . For more information, see [Storage type
      * options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options)
-     * in the *FSx for Windows File Server User Guide* , [Multiple storage
-     * options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options) in the
-     * *FSx for Lustre User Guide* , and [Working with
+     * in the *FSx for Windows File Server User Guide* , [FSx for Lustre storage
+     * classes](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-storage-classes)
+     * in the *FSx for Lustre User Guide* , and [Working with
      * Intelligent-Tiering](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance-intelligent-tiering)
      * in the *Amazon FSx for OpenZFS User Guide* .
      *
@@ -1270,7 +1321,7 @@ public open class CfnFileSystem(
     /**
      * The configuration object for the Microsoft Windows file system you are creating.
      *
-     * This value is required if `FileSystemType` is set to `WINDOWS` .
+     * This configuration is required if `FileSystemType` is set to `WINDOWS` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-windowsconfiguration)
      * @param windowsConfiguration The configuration object for the Microsoft Windows file system
@@ -1283,7 +1334,7 @@ public open class CfnFileSystem(
     /**
      * The configuration object for the Microsoft Windows file system you are creating.
      *
-     * This value is required if `FileSystemType` is set to `WINDOWS` .
+     * This configuration is required if `FileSystemType` is set to `WINDOWS` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-windowsconfiguration)
      * @param windowsConfiguration The configuration object for the Microsoft Windows file system
@@ -1296,7 +1347,7 @@ public open class CfnFileSystem(
     /**
      * The configuration object for the Microsoft Windows file system you are creating.
      *
-     * This value is required if `FileSystemType` is set to `WINDOWS` .
+     * This configuration is required if `FileSystemType` is set to `WINDOWS` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-windowsconfiguration)
      * @param windowsConfiguration The configuration object for the Microsoft Windows file system
@@ -1757,6 +1808,147 @@ public open class CfnFileSystem(
   }
 
   /**
+   * The configuration for the optional provisioned SSD read cache on Amazon FSx for Lustre file
+   * systems that use the Intelligent-Tiering storage class.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fsx.*;
+   * DataReadCacheConfigurationProperty dataReadCacheConfigurationProperty =
+   * DataReadCacheConfigurationProperty.builder()
+   * .sizeGiB(123)
+   * .sizingMode("sizingMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-datareadcacheconfiguration.html)
+   */
+  public interface DataReadCacheConfigurationProperty {
+    /**
+     * Required if `SizingMode` is set to `USER_PROVISIONED` .
+     *
+     * Specifies the size of the file system's SSD read cache, in gibibytes (GiB).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-datareadcacheconfiguration.html#cfn-fsx-filesystem-datareadcacheconfiguration-sizegib)
+     */
+    public fun sizeGiB(): Number? = unwrap(this).getSizeGiB()
+
+    /**
+     * Specifies how the provisioned SSD read cache is sized, as follows:.
+     *
+     * * Set to `NO_CACHE` if you do not want to use an SSD read cache with your Intelligent-Tiering
+     * file system.
+     * * Set to `USER_PROVISIONED` to specify the exact size of your SSD read cache.
+     * * Set to `PROPORTIONAL_TO_THROUGHPUT_CAPACITY` to have your SSD read cache automatically
+     * sized based on your throughput capacity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-datareadcacheconfiguration.html#cfn-fsx-filesystem-datareadcacheconfiguration-sizingmode)
+     */
+    public fun sizingMode(): String? = unwrap(this).getSizingMode()
+
+    /**
+     * A builder for [DataReadCacheConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sizeGiB Required if `SizingMode` is set to `USER_PROVISIONED` .
+       * Specifies the size of the file system's SSD read cache, in gibibytes (GiB).
+       */
+      public fun sizeGiB(sizeGiB: Number)
+
+      /**
+       * @param sizingMode Specifies how the provisioned SSD read cache is sized, as follows:.
+       * * Set to `NO_CACHE` if you do not want to use an SSD read cache with your
+       * Intelligent-Tiering file system.
+       * * Set to `USER_PROVISIONED` to specify the exact size of your SSD read cache.
+       * * Set to `PROPORTIONAL_TO_THROUGHPUT_CAPACITY` to have your SSD read cache automatically
+       * sized based on your throughput capacity.
+       */
+      public fun sizingMode(sizingMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fsx.CfnFileSystem.DataReadCacheConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.fsx.CfnFileSystem.DataReadCacheConfigurationProperty.builder()
+
+      /**
+       * @param sizeGiB Required if `SizingMode` is set to `USER_PROVISIONED` .
+       * Specifies the size of the file system's SSD read cache, in gibibytes (GiB).
+       */
+      override fun sizeGiB(sizeGiB: Number) {
+        cdkBuilder.sizeGiB(sizeGiB)
+      }
+
+      /**
+       * @param sizingMode Specifies how the provisioned SSD read cache is sized, as follows:.
+       * * Set to `NO_CACHE` if you do not want to use an SSD read cache with your
+       * Intelligent-Tiering file system.
+       * * Set to `USER_PROVISIONED` to specify the exact size of your SSD read cache.
+       * * Set to `PROPORTIONAL_TO_THROUGHPUT_CAPACITY` to have your SSD read cache automatically
+       * sized based on your throughput capacity.
+       */
+      override fun sizingMode(sizingMode: String) {
+        cdkBuilder.sizingMode(sizingMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.fsx.CfnFileSystem.DataReadCacheConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.DataReadCacheConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        DataReadCacheConfigurationProperty {
+      /**
+       * Required if `SizingMode` is set to `USER_PROVISIONED` .
+       *
+       * Specifies the size of the file system's SSD read cache, in gibibytes (GiB).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-datareadcacheconfiguration.html#cfn-fsx-filesystem-datareadcacheconfiguration-sizegib)
+       */
+      override fun sizeGiB(): Number? = unwrap(this).getSizeGiB()
+
+      /**
+       * Specifies how the provisioned SSD read cache is sized, as follows:.
+       *
+       * * Set to `NO_CACHE` if you do not want to use an SSD read cache with your
+       * Intelligent-Tiering file system.
+       * * Set to `USER_PROVISIONED` to specify the exact size of your SSD read cache.
+       * * Set to `PROPORTIONAL_TO_THROUGHPUT_CAPACITY` to have your SSD read cache automatically
+       * sized based on your throughput capacity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-datareadcacheconfiguration.html#cfn-fsx-filesystem-datareadcacheconfiguration-sizingmode)
+       */
+      override fun sizingMode(): String? = unwrap(this).getSizingMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DataReadCacheConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.DataReadCacheConfigurationProperty):
+          DataReadCacheConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataReadCacheConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataReadCacheConfigurationProperty):
+          software.amazon.awscdk.services.fsx.CfnFileSystem.DataReadCacheConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fsx.CfnFileSystem.DataReadCacheConfigurationProperty
+    }
+  }
+
+  /**
    * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp
    * ONTAP, Amazon FSx for Windows File Server, or FSx for OpenZFS file system.
    *
@@ -1917,6 +2109,10 @@ public open class CfnFileSystem(
    * .copyTagsToBackups(false)
    * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
    * .dataCompressionType("dataCompressionType")
+   * .dataReadCacheConfiguration(DataReadCacheConfigurationProperty.builder()
+   * .sizeGiB(123)
+   * .sizingMode("sizingMode")
+   * .build())
    * .deploymentType("deploymentType")
    * .driveCacheType("driveCacheType")
    * .efaEnabled(false)
@@ -1928,6 +2124,7 @@ public open class CfnFileSystem(
    * .mode("mode")
    * .build())
    * .perUnitStorageThroughput(123)
+   * .throughputCapacity(123)
    * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
    * .build();
    * ```
@@ -2024,6 +2221,16 @@ public open class CfnFileSystem(
     public fun dataCompressionType(): String? = unwrap(this).getDataCompressionType()
 
     /**
+     * Specifies the optional provisioned SSD read cache on FSx for Lustre file systems that use the
+     * Intelligent-Tiering storage class.
+     *
+     * Required when `StorageType` is set to `INTELLIGENT_TIERING` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-datareadcacheconfiguration)
+     */
+    public fun dataReadCacheConfiguration(): Any? = unwrap(this).getDataReadCacheConfiguration()
+
+    /**
      * (Optional) Choose `SCRATCH_1` and `SCRATCH_2` deployment types when you need temporary
      * storage and shorter-term processing of data.
      *
@@ -2035,13 +2242,12 @@ public open class CfnFileSystem(
      * available in all AWS Regions in which FSx for Lustre is available.
      *
      * Choose `PERSISTENT_2` for longer-term storage and for latency-sensitive workloads that
-     * require the highest levels of IOPS/throughput. `PERSISTENT_2` supports SSD storage, and offers
-     * higher `PerUnitStorageThroughput` (up to 1000 MB/s/TiB). You can optionally specify a metadata
-     * configuration mode for `PERSISTENT_2` which supports increasing metadata performance.
-     * `PERSISTENT_2` is available in a limited number of AWS Regions . For more information, and an
-     * up-to-date list of AWS Regions in which `PERSISTENT_2` is available, see [File system deployment
-     * options for FSx for
-     * Lustre](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types)
+     * require the highest levels of IOPS/throughput. `PERSISTENT_2` supports the SSD and
+     * Intelligent-Tiering storage classes. You can optionally specify a metadata configuration mode
+     * for `PERSISTENT_2` which supports increasing metadata performance. `PERSISTENT_2` is available
+     * in a limited number of AWS Regions . For more information, and an up-to-date list of AWS Regions
+     * in which `PERSISTENT_2` is available, see [Deployment and storage class options for FSx for
+     * Lustre file systems](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html)
      * in the *Amazon FSx for Lustre User Guide* .
      *
      *
@@ -2078,6 +2284,11 @@ public open class CfnFileSystem(
     public fun driveCacheType(): String? = unwrap(this).getDriveCacheType()
 
     /**
+     * (Optional) Specifies whether Elastic Fabric Adapter (EFA) and GPUDirect Storage (GDS) support
+     * is enabled for the Amazon FSx for Lustre file system.
+     *
+     * (Default = `false` )
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-efaenabled)
      */
     public fun efaEnabled(): Any? = unwrap(this).getEfaEnabled()
@@ -2143,6 +2354,9 @@ public open class CfnFileSystem(
     public fun importedFileChunkSize(): Number? = unwrap(this).getImportedFileChunkSize()
 
     /**
+     * The Lustre metadata performance configuration for the creation of an FSx for Lustre file
+     * system using a `PERSISTENT_2` deployment type.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-metadataconfiguration)
      */
     public fun metadataConfiguration(): Any? = unwrap(this).getMetadataConfiguration()
@@ -2168,14 +2382,20 @@ public open class CfnFileSystem(
     public fun perUnitStorageThroughput(): Number? = unwrap(this).getPerUnitStorageThroughput()
 
     /**
-     * A recurring weekly time, in the format `D:HH:MM` .
+     * Specifies the throughput of an FSx for Lustre file system using the Intelligent-Tiering
+     * storage class, measured in megabytes per second (MBps).
      *
-     * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-     * further details, see [the ISO-8601 spec as described on
-     * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
+     * Valid values are 4000 MBps or multiples of 4000 MBps. You pay for the amount of throughput
+     * that you provision.
      *
-     * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-     * hour.
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-throughputcapacity)
+     */
+    public fun throughputCapacity(): Number? = unwrap(this).getThroughputCapacity()
+
+    /**
+     * The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time
+     * zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with
+     * Sunday.
      *
      * For example, `1:05:00` specifies maintenance at 5 AM Monday.
      *
@@ -2278,6 +2498,31 @@ public open class CfnFileSystem(
       public fun dataCompressionType(dataCompressionType: String)
 
       /**
+       * @param dataReadCacheConfiguration Specifies the optional provisioned SSD read cache on FSx
+       * for Lustre file systems that use the Intelligent-Tiering storage class.
+       * Required when `StorageType` is set to `INTELLIGENT_TIERING` .
+       */
+      public fun dataReadCacheConfiguration(dataReadCacheConfiguration: IResolvable)
+
+      /**
+       * @param dataReadCacheConfiguration Specifies the optional provisioned SSD read cache on FSx
+       * for Lustre file systems that use the Intelligent-Tiering storage class.
+       * Required when `StorageType` is set to `INTELLIGENT_TIERING` .
+       */
+      public
+          fun dataReadCacheConfiguration(dataReadCacheConfiguration: DataReadCacheConfigurationProperty)
+
+      /**
+       * @param dataReadCacheConfiguration Specifies the optional provisioned SSD read cache on FSx
+       * for Lustre file systems that use the Intelligent-Tiering storage class.
+       * Required when `StorageType` is set to `INTELLIGENT_TIERING` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e74bf4f748a93937750c2f8d150b4633cb53438c90d2b24d0502aa67167a4a67")
+      public
+          fun dataReadCacheConfiguration(dataReadCacheConfiguration: DataReadCacheConfigurationProperty.Builder.() -> Unit)
+
+      /**
        * @param deploymentType (Optional) Choose `SCRATCH_1` and `SCRATCH_2` deployment types when
        * you need temporary storage and shorter-term processing of data.
        * The `SCRATCH_2` deployment type provides in-transit encryption of data and higher burst
@@ -2288,14 +2533,14 @@ public open class CfnFileSystem(
        * available in all AWS Regions in which FSx for Lustre is available.
        *
        * Choose `PERSISTENT_2` for longer-term storage and for latency-sensitive workloads that
-       * require the highest levels of IOPS/throughput. `PERSISTENT_2` supports SSD storage, and offers
-       * higher `PerUnitStorageThroughput` (up to 1000 MB/s/TiB). You can optionally specify a metadata
-       * configuration mode for `PERSISTENT_2` which supports increasing metadata performance.
-       * `PERSISTENT_2` is available in a limited number of AWS Regions . For more information, and an
-       * up-to-date list of AWS Regions in which `PERSISTENT_2` is available, see [File system
-       * deployment options for FSx for
-       * Lustre](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types)
-       * in the *Amazon FSx for Lustre User Guide* .
+       * require the highest levels of IOPS/throughput. `PERSISTENT_2` supports the SSD and
+       * Intelligent-Tiering storage classes. You can optionally specify a metadata configuration mode
+       * for `PERSISTENT_2` which supports increasing metadata performance. `PERSISTENT_2` is available
+       * in a limited number of AWS Regions . For more information, and an up-to-date list of AWS
+       * Regions in which `PERSISTENT_2` is available, see [Deployment and storage class options for
+       * FSx for Lustre file
+       * systems](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html) in the
+       * *Amazon FSx for Lustre User Guide* .
        *
        *
        * If you choose `PERSISTENT_2` , and you set `FileSystemTypeVersion` to `2.10` , the
@@ -2326,12 +2571,16 @@ public open class CfnFileSystem(
       public fun driveCacheType(driveCacheType: String)
 
       /**
-       * @param efaEnabled the value to be set.
+       * @param efaEnabled (Optional) Specifies whether Elastic Fabric Adapter (EFA) and GPUDirect
+       * Storage (GDS) support is enabled for the Amazon FSx for Lustre file system.
+       * (Default = `false` )
        */
       public fun efaEnabled(efaEnabled: Boolean)
 
       /**
-       * @param efaEnabled the value to be set.
+       * @param efaEnabled (Optional) Specifies whether Elastic Fabric Adapter (EFA) and GPUDirect
+       * Storage (GDS) support is enabled for the Amazon FSx for Lustre file system.
+       * (Default = `false` )
        */
       public fun efaEnabled(efaEnabled: IResolvable)
 
@@ -2385,17 +2634,20 @@ public open class CfnFileSystem(
       public fun importedFileChunkSize(importedFileChunkSize: Number)
 
       /**
-       * @param metadataConfiguration the value to be set.
+       * @param metadataConfiguration The Lustre metadata performance configuration for the creation
+       * of an FSx for Lustre file system using a `PERSISTENT_2` deployment type.
        */
       public fun metadataConfiguration(metadataConfiguration: IResolvable)
 
       /**
-       * @param metadataConfiguration the value to be set.
+       * @param metadataConfiguration The Lustre metadata performance configuration for the creation
+       * of an FSx for Lustre file system using a `PERSISTENT_2` deployment type.
        */
       public fun metadataConfiguration(metadataConfiguration: MetadataConfigurationProperty)
 
       /**
-       * @param metadataConfiguration the value to be set.
+       * @param metadataConfiguration The Lustre metadata performance configuration for the creation
+       * of an FSx for Lustre file system using a `PERSISTENT_2` deployment type.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7b1bcf8b5d5e207c49db638538a544c8de11b2cfd28342c58028855c26295682")
@@ -2420,14 +2672,17 @@ public open class CfnFileSystem(
       public fun perUnitStorageThroughput(perUnitStorageThroughput: Number)
 
       /**
-       * @param weeklyMaintenanceStartTime A recurring weekly time, in the format `D:HH:MM` .
-       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-       * further details, see [the ISO-8601 spec as described on
-       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-       *
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour.
-       *
+       * @param throughputCapacity Specifies the throughput of an FSx for Lustre file system using
+       * the Intelligent-Tiering storage class, measured in megabytes per second (MBps).
+       * Valid values are 4000 MBps or multiples of 4000 MBps. You pay for the amount of throughput
+       * that you provision.
+       */
+      public fun throughputCapacity(throughputCapacity: Number)
+
+      /**
+       * @param weeklyMaintenanceStartTime The preferred start time to perform weekly maintenance,
+       * formatted d:HH:MM in the UTC time zone, where d is the weekday number, from 1 through 7,
+       * beginning with Monday and ending with Sunday.
        * For example, `1:05:00` specifies maintenance at 5 AM Monday.
        */
       public fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String)
@@ -2540,6 +2795,37 @@ public open class CfnFileSystem(
       }
 
       /**
+       * @param dataReadCacheConfiguration Specifies the optional provisioned SSD read cache on FSx
+       * for Lustre file systems that use the Intelligent-Tiering storage class.
+       * Required when `StorageType` is set to `INTELLIGENT_TIERING` .
+       */
+      override fun dataReadCacheConfiguration(dataReadCacheConfiguration: IResolvable) {
+        cdkBuilder.dataReadCacheConfiguration(dataReadCacheConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param dataReadCacheConfiguration Specifies the optional provisioned SSD read cache on FSx
+       * for Lustre file systems that use the Intelligent-Tiering storage class.
+       * Required when `StorageType` is set to `INTELLIGENT_TIERING` .
+       */
+      override
+          fun dataReadCacheConfiguration(dataReadCacheConfiguration: DataReadCacheConfigurationProperty) {
+        cdkBuilder.dataReadCacheConfiguration(dataReadCacheConfiguration.let(DataReadCacheConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param dataReadCacheConfiguration Specifies the optional provisioned SSD read cache on FSx
+       * for Lustre file systems that use the Intelligent-Tiering storage class.
+       * Required when `StorageType` is set to `INTELLIGENT_TIERING` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e74bf4f748a93937750c2f8d150b4633cb53438c90d2b24d0502aa67167a4a67")
+      override
+          fun dataReadCacheConfiguration(dataReadCacheConfiguration: DataReadCacheConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          dataReadCacheConfiguration(DataReadCacheConfigurationProperty(dataReadCacheConfiguration))
+
+      /**
        * @param deploymentType (Optional) Choose `SCRATCH_1` and `SCRATCH_2` deployment types when
        * you need temporary storage and shorter-term processing of data.
        * The `SCRATCH_2` deployment type provides in-transit encryption of data and higher burst
@@ -2550,14 +2836,14 @@ public open class CfnFileSystem(
        * available in all AWS Regions in which FSx for Lustre is available.
        *
        * Choose `PERSISTENT_2` for longer-term storage and for latency-sensitive workloads that
-       * require the highest levels of IOPS/throughput. `PERSISTENT_2` supports SSD storage, and offers
-       * higher `PerUnitStorageThroughput` (up to 1000 MB/s/TiB). You can optionally specify a metadata
-       * configuration mode for `PERSISTENT_2` which supports increasing metadata performance.
-       * `PERSISTENT_2` is available in a limited number of AWS Regions . For more information, and an
-       * up-to-date list of AWS Regions in which `PERSISTENT_2` is available, see [File system
-       * deployment options for FSx for
-       * Lustre](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types)
-       * in the *Amazon FSx for Lustre User Guide* .
+       * require the highest levels of IOPS/throughput. `PERSISTENT_2` supports the SSD and
+       * Intelligent-Tiering storage classes. You can optionally specify a metadata configuration mode
+       * for `PERSISTENT_2` which supports increasing metadata performance. `PERSISTENT_2` is available
+       * in a limited number of AWS Regions . For more information, and an up-to-date list of AWS
+       * Regions in which `PERSISTENT_2` is available, see [Deployment and storage class options for
+       * FSx for Lustre file
+       * systems](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html) in the
+       * *Amazon FSx for Lustre User Guide* .
        *
        *
        * If you choose `PERSISTENT_2` , and you set `FileSystemTypeVersion` to `2.10` , the
@@ -2592,14 +2878,18 @@ public open class CfnFileSystem(
       }
 
       /**
-       * @param efaEnabled the value to be set.
+       * @param efaEnabled (Optional) Specifies whether Elastic Fabric Adapter (EFA) and GPUDirect
+       * Storage (GDS) support is enabled for the Amazon FSx for Lustre file system.
+       * (Default = `false` )
        */
       override fun efaEnabled(efaEnabled: Boolean) {
         cdkBuilder.efaEnabled(efaEnabled)
       }
 
       /**
-       * @param efaEnabled the value to be set.
+       * @param efaEnabled (Optional) Specifies whether Elastic Fabric Adapter (EFA) and GPUDirect
+       * Storage (GDS) support is enabled for the Amazon FSx for Lustre file system.
+       * (Default = `false` )
        */
       override fun efaEnabled(efaEnabled: IResolvable) {
         cdkBuilder.efaEnabled(efaEnabled.let(IResolvable.Companion::unwrap))
@@ -2661,21 +2951,24 @@ public open class CfnFileSystem(
       }
 
       /**
-       * @param metadataConfiguration the value to be set.
+       * @param metadataConfiguration The Lustre metadata performance configuration for the creation
+       * of an FSx for Lustre file system using a `PERSISTENT_2` deployment type.
        */
       override fun metadataConfiguration(metadataConfiguration: IResolvable) {
         cdkBuilder.metadataConfiguration(metadataConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param metadataConfiguration the value to be set.
+       * @param metadataConfiguration The Lustre metadata performance configuration for the creation
+       * of an FSx for Lustre file system using a `PERSISTENT_2` deployment type.
        */
       override fun metadataConfiguration(metadataConfiguration: MetadataConfigurationProperty) {
         cdkBuilder.metadataConfiguration(metadataConfiguration.let(MetadataConfigurationProperty.Companion::unwrap))
       }
 
       /**
-       * @param metadataConfiguration the value to be set.
+       * @param metadataConfiguration The Lustre metadata performance configuration for the creation
+       * of an FSx for Lustre file system using a `PERSISTENT_2` deployment type.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7b1bcf8b5d5e207c49db638538a544c8de11b2cfd28342c58028855c26295682")
@@ -2703,14 +2996,19 @@ public open class CfnFileSystem(
       }
 
       /**
-       * @param weeklyMaintenanceStartTime A recurring weekly time, in the format `D:HH:MM` .
-       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-       * further details, see [the ISO-8601 spec as described on
-       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-       *
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour.
-       *
+       * @param throughputCapacity Specifies the throughput of an FSx for Lustre file system using
+       * the Intelligent-Tiering storage class, measured in megabytes per second (MBps).
+       * Valid values are 4000 MBps or multiples of 4000 MBps. You pay for the amount of throughput
+       * that you provision.
+       */
+      override fun throughputCapacity(throughputCapacity: Number) {
+        cdkBuilder.throughputCapacity(throughputCapacity)
+      }
+
+      /**
+       * @param weeklyMaintenanceStartTime The preferred start time to perform weekly maintenance,
+       * formatted d:HH:MM in the UTC time zone, where d is the weekday number, from 1 through 7,
+       * beginning with Monday and ending with Sunday.
        * For example, `1:05:00` specifies maintenance at 5 AM Monday.
        */
       override fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
@@ -2815,6 +3113,16 @@ public open class CfnFileSystem(
       override fun dataCompressionType(): String? = unwrap(this).getDataCompressionType()
 
       /**
+       * Specifies the optional provisioned SSD read cache on FSx for Lustre file systems that use
+       * the Intelligent-Tiering storage class.
+       *
+       * Required when `StorageType` is set to `INTELLIGENT_TIERING` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-datareadcacheconfiguration)
+       */
+      override fun dataReadCacheConfiguration(): Any? = unwrap(this).getDataReadCacheConfiguration()
+
+      /**
        * (Optional) Choose `SCRATCH_1` and `SCRATCH_2` deployment types when you need temporary
        * storage and shorter-term processing of data.
        *
@@ -2826,14 +3134,14 @@ public open class CfnFileSystem(
        * available in all AWS Regions in which FSx for Lustre is available.
        *
        * Choose `PERSISTENT_2` for longer-term storage and for latency-sensitive workloads that
-       * require the highest levels of IOPS/throughput. `PERSISTENT_2` supports SSD storage, and offers
-       * higher `PerUnitStorageThroughput` (up to 1000 MB/s/TiB). You can optionally specify a metadata
-       * configuration mode for `PERSISTENT_2` which supports increasing metadata performance.
-       * `PERSISTENT_2` is available in a limited number of AWS Regions . For more information, and an
-       * up-to-date list of AWS Regions in which `PERSISTENT_2` is available, see [File system
-       * deployment options for FSx for
-       * Lustre](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types)
-       * in the *Amazon FSx for Lustre User Guide* .
+       * require the highest levels of IOPS/throughput. `PERSISTENT_2` supports the SSD and
+       * Intelligent-Tiering storage classes. You can optionally specify a metadata configuration mode
+       * for `PERSISTENT_2` which supports increasing metadata performance. `PERSISTENT_2` is available
+       * in a limited number of AWS Regions . For more information, and an up-to-date list of AWS
+       * Regions in which `PERSISTENT_2` is available, see [Deployment and storage class options for
+       * FSx for Lustre file
+       * systems](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html) in the
+       * *Amazon FSx for Lustre User Guide* .
        *
        *
        * If you choose `PERSISTENT_2` , and you set `FileSystemTypeVersion` to `2.10` , the
@@ -2869,6 +3177,11 @@ public open class CfnFileSystem(
       override fun driveCacheType(): String? = unwrap(this).getDriveCacheType()
 
       /**
+       * (Optional) Specifies whether Elastic Fabric Adapter (EFA) and GPUDirect Storage (GDS)
+       * support is enabled for the Amazon FSx for Lustre file system.
+       *
+       * (Default = `false` )
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-efaenabled)
        */
       override fun efaEnabled(): Any? = unwrap(this).getEfaEnabled()
@@ -2934,6 +3247,9 @@ public open class CfnFileSystem(
       override fun importedFileChunkSize(): Number? = unwrap(this).getImportedFileChunkSize()
 
       /**
+       * The Lustre metadata performance configuration for the creation of an FSx for Lustre file
+       * system using a `PERSISTENT_2` deployment type.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-metadataconfiguration)
        */
       override fun metadataConfiguration(): Any? = unwrap(this).getMetadataConfiguration()
@@ -2959,14 +3275,20 @@ public open class CfnFileSystem(
       override fun perUnitStorageThroughput(): Number? = unwrap(this).getPerUnitStorageThroughput()
 
       /**
-       * A recurring weekly time, in the format `D:HH:MM` .
+       * Specifies the throughput of an FSx for Lustre file system using the Intelligent-Tiering
+       * storage class, measured in megabytes per second (MBps).
        *
-       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-       * further details, see [the ISO-8601 spec as described on
-       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
+       * Valid values are 4000 MBps or multiples of 4000 MBps. You pay for the amount of throughput
+       * that you provision.
        *
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour.
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-throughputcapacity)
+       */
+      override fun throughputCapacity(): Number? = unwrap(this).getThroughputCapacity()
+
+      /**
+       * The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time
+       * zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with
+       * Sunday.
        *
        * For example, `1:05:00` specifies maintenance at 5 AM Monday.
        *
@@ -2995,6 +3317,9 @@ public open class CfnFileSystem(
   }
 
   /**
+   * The configuration that allows you to specify the performance of metadata operations for an FSx
+   * for Lustre file system.
+   *
    * Example:
    *
    * ```
@@ -3012,11 +3337,16 @@ public open class CfnFileSystem(
    */
   public interface MetadataConfigurationProperty {
     /**
+     * The number of Metadata IOPS provisioned for the file system.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-metadataconfiguration.html#cfn-fsx-filesystem-metadataconfiguration-iops)
      */
     public fun iops(): Number? = unwrap(this).getIops()
 
     /**
+     * Specifies whether the file system is using the AUTOMATIC setting of metadata IOPS or if it is
+     * using a USER_PROVISIONED value.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-metadataconfiguration.html#cfn-fsx-filesystem-metadataconfiguration-mode)
      */
     public fun mode(): String? = unwrap(this).getMode()
@@ -3027,12 +3357,13 @@ public open class CfnFileSystem(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param iops the value to be set.
+       * @param iops The number of Metadata IOPS provisioned for the file system.
        */
       public fun iops(iops: Number)
 
       /**
-       * @param mode the value to be set.
+       * @param mode Specifies whether the file system is using the AUTOMATIC setting of metadata
+       * IOPS or if it is using a USER_PROVISIONED value.
        */
       public fun mode(mode: String)
     }
@@ -3043,14 +3374,15 @@ public open class CfnFileSystem(
           software.amazon.awscdk.services.fsx.CfnFileSystem.MetadataConfigurationProperty.builder()
 
       /**
-       * @param iops the value to be set.
+       * @param iops The number of Metadata IOPS provisioned for the file system.
        */
       override fun iops(iops: Number) {
         cdkBuilder.iops(iops)
       }
 
       /**
-       * @param mode the value to be set.
+       * @param mode Specifies whether the file system is using the AUTOMATIC setting of metadata
+       * IOPS or if it is using a USER_PROVISIONED value.
        */
       override fun mode(mode: String) {
         cdkBuilder.mode(mode)
@@ -3066,11 +3398,16 @@ public open class CfnFileSystem(
     ) : CdkObject(cdkObject),
         MetadataConfigurationProperty {
       /**
+       * The number of Metadata IOPS provisioned for the file system.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-metadataconfiguration.html#cfn-fsx-filesystem-metadataconfiguration-iops)
        */
       override fun iops(): Number? = unwrap(this).getIops()
 
       /**
+       * Specifies whether the file system is using the AUTOMATIC setting of metadata IOPS or if it
+       * is using a USER_PROVISIONED value.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-metadataconfiguration.html#cfn-fsx-filesystem-metadataconfiguration-mode)
        */
       override fun mode(): String? = unwrap(this).getMode()
@@ -3412,14 +3749,9 @@ public open class CfnFileSystem(
         unwrap(this).getThroughputCapacityPerHaPair()
 
     /**
-     * A recurring weekly time, in the format `D:HH:MM` .
-     *
-     * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-     * further details, see [the ISO-8601 spec as described on
-     * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-     *
-     * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-     * hour.
+     * The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time
+     * zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with
+     * Sunday.
      *
      * For example, `1:05:00` specifies maintenance at 5 AM Monday.
      *
@@ -3603,14 +3935,9 @@ public open class CfnFileSystem(
       public fun throughputCapacityPerHaPair(throughputCapacityPerHaPair: Number)
 
       /**
-       * @param weeklyMaintenanceStartTime A recurring weekly time, in the format `D:HH:MM` .
-       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-       * further details, see [the ISO-8601 spec as described on
-       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-       *
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour.
-       *
+       * @param weeklyMaintenanceStartTime The preferred start time to perform weekly maintenance,
+       * formatted d:HH:MM in the UTC time zone, where d is the weekday number, from 1 through 7,
+       * beginning with Monday and ending with Sunday.
        * For example, `1:05:00` specifies maintenance at 5 AM Monday.
        */
       public fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String)
@@ -3818,14 +4145,9 @@ public open class CfnFileSystem(
       }
 
       /**
-       * @param weeklyMaintenanceStartTime A recurring weekly time, in the format `D:HH:MM` .
-       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-       * further details, see [the ISO-8601 spec as described on
-       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-       *
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour.
-       *
+       * @param weeklyMaintenanceStartTime The preferred start time to perform weekly maintenance,
+       * formatted d:HH:MM in the UTC time zone, where d is the weekday number, from 1 through 7,
+       * beginning with Monday and ending with Sunday.
        * For example, `1:05:00` specifies maintenance at 5 AM Monday.
        */
       override fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
@@ -4017,14 +4339,9 @@ public open class CfnFileSystem(
           unwrap(this).getThroughputCapacityPerHaPair()
 
       /**
-       * A recurring weekly time, in the format `D:HH:MM` .
-       *
-       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-       * further details, see [the ISO-8601 spec as described on
-       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-       *
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour.
+       * The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time
+       * zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with
+       * Sunday.
        *
        * For example, `1:05:00` specifies maintenance at 5 AM Monday.
        *
@@ -4199,7 +4516,8 @@ public open class CfnFileSystem(
      *
      * By default in the Amazon FSx API and Amazon FSx console, Amazon FSx selects an available /28
      * IP address range for you from one of the VPC's CIDR ranges. You can have overlapping endpoint IP
-     * addresses for file systems deployed in the same VPC/route tables.
+     * addresses for file systems deployed in the same VPC/route tables, as long as they don't overlap
+     * with any subnet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-openzfsconfiguration.html#cfn-fsx-filesystem-openzfsconfiguration-endpointipaddressrange)
      */
@@ -4226,6 +4544,9 @@ public open class CfnFileSystem(
     public fun preferredSubnetId(): String? = unwrap(this).getPreferredSubnetId()
 
     /**
+     * Specifies the optional provisioned SSD read cache on file systems that use the
+     * Intelligent-Tiering storage class.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-openzfsconfiguration.html#cfn-fsx-filesystem-openzfsconfiguration-readcacheconfiguration)
      */
     public fun readCacheConfiguration(): Any? = unwrap(this).getReadCacheConfiguration()
@@ -4256,7 +4577,9 @@ public open class CfnFileSystem(
      * Specifies the throughput of an Amazon FSx for OpenZFS file system, measured in megabytes per
      * second (MBps).
      *
-     * Valid values depend on the DeploymentType you choose, as follows:
+     * Required if you are creating a new file system.
+     *
+     * Valid values depend on the `DeploymentType` that you choose, as follows:
      *
      * * For `MULTI_AZ_1` and `SINGLE_AZ_2` , valid values are 160, 320, 640, 1280, 2560, 3840,
      * 5120, 7680, or 10240 MBps.
@@ -4269,14 +4592,9 @@ public open class CfnFileSystem(
     public fun throughputCapacity(): Number? = unwrap(this).getThroughputCapacity()
 
     /**
-     * A recurring weekly time, in the format `D:HH:MM` .
-     *
-     * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-     * further details, see [the ISO-8601 spec as described on
-     * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-     *
-     * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-     * hour.
+     * The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time
+     * zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with
+     * Sunday.
      *
      * For example, `1:05:00` specifies maintenance at 5 AM Monday.
      *
@@ -4413,7 +4731,8 @@ public open class CfnFileSystem(
        * endpoints to access your file system will be created.
        * By default in the Amazon FSx API and Amazon FSx console, Amazon FSx selects an available
        * /28 IP address range for you from one of the VPC's CIDR ranges. You can have overlapping
-       * endpoint IP addresses for file systems deployed in the same VPC/route tables.
+       * endpoint IP addresses for file systems deployed in the same VPC/route tables, as long as they
+       * don't overlap with any subnet.
        */
       public fun endpointIpAddressRange(endpointIpAddressRange: String)
 
@@ -4440,17 +4759,20 @@ public open class CfnFileSystem(
       public fun preferredSubnetId(preferredSubnetId: String)
 
       /**
-       * @param readCacheConfiguration the value to be set.
+       * @param readCacheConfiguration Specifies the optional provisioned SSD read cache on file
+       * systems that use the Intelligent-Tiering storage class.
        */
       public fun readCacheConfiguration(readCacheConfiguration: IResolvable)
 
       /**
-       * @param readCacheConfiguration the value to be set.
+       * @param readCacheConfiguration Specifies the optional provisioned SSD read cache on file
+       * systems that use the Intelligent-Tiering storage class.
        */
       public fun readCacheConfiguration(readCacheConfiguration: ReadCacheConfigurationProperty)
 
       /**
-       * @param readCacheConfiguration the value to be set.
+       * @param readCacheConfiguration Specifies the optional provisioned SSD read cache on file
+       * systems that use the Intelligent-Tiering storage class.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("aa52e1e86dd284e7a705961556a997d77f41728e5a90b20e5441db643303f691")
@@ -4502,7 +4824,9 @@ public open class CfnFileSystem(
       /**
        * @param throughputCapacity Specifies the throughput of an Amazon FSx for OpenZFS file
        * system, measured in megabytes per second (MBps).
-       * Valid values depend on the DeploymentType you choose, as follows:
+       * Required if you are creating a new file system.
+       *
+       * Valid values depend on the `DeploymentType` that you choose, as follows:
        *
        * * For `MULTI_AZ_1` and `SINGLE_AZ_2` , valid values are 160, 320, 640, 1280, 2560, 3840,
        * 5120, 7680, or 10240 MBps.
@@ -4513,14 +4837,9 @@ public open class CfnFileSystem(
       public fun throughputCapacity(throughputCapacity: Number)
 
       /**
-       * @param weeklyMaintenanceStartTime A recurring weekly time, in the format `D:HH:MM` .
-       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-       * further details, see [the ISO-8601 spec as described on
-       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-       *
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour.
-       *
+       * @param weeklyMaintenanceStartTime The preferred start time to perform weekly maintenance,
+       * formatted d:HH:MM in the UTC time zone, where d is the weekday number, from 1 through 7,
+       * beginning with Monday and ending with Sunday.
        * For example, `1:05:00` specifies maintenance at 5 AM Monday.
        */
       public fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String)
@@ -4674,7 +4993,8 @@ public open class CfnFileSystem(
        * endpoints to access your file system will be created.
        * By default in the Amazon FSx API and Amazon FSx console, Amazon FSx selects an available
        * /28 IP address range for you from one of the VPC's CIDR ranges. You can have overlapping
-       * endpoint IP addresses for file systems deployed in the same VPC/route tables.
+       * endpoint IP addresses for file systems deployed in the same VPC/route tables, as long as they
+       * don't overlap with any subnet.
        */
       override fun endpointIpAddressRange(endpointIpAddressRange: String) {
         cdkBuilder.endpointIpAddressRange(endpointIpAddressRange)
@@ -4707,21 +5027,24 @@ public open class CfnFileSystem(
       }
 
       /**
-       * @param readCacheConfiguration the value to be set.
+       * @param readCacheConfiguration Specifies the optional provisioned SSD read cache on file
+       * systems that use the Intelligent-Tiering storage class.
        */
       override fun readCacheConfiguration(readCacheConfiguration: IResolvable) {
         cdkBuilder.readCacheConfiguration(readCacheConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param readCacheConfiguration the value to be set.
+       * @param readCacheConfiguration Specifies the optional provisioned SSD read cache on file
+       * systems that use the Intelligent-Tiering storage class.
        */
       override fun readCacheConfiguration(readCacheConfiguration: ReadCacheConfigurationProperty) {
         cdkBuilder.readCacheConfiguration(readCacheConfiguration.let(ReadCacheConfigurationProperty.Companion::unwrap))
       }
 
       /**
-       * @param readCacheConfiguration the value to be set.
+       * @param readCacheConfiguration Specifies the optional provisioned SSD read cache on file
+       * systems that use the Intelligent-Tiering storage class.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("aa52e1e86dd284e7a705961556a997d77f41728e5a90b20e5441db643303f691")
@@ -4783,7 +5106,9 @@ public open class CfnFileSystem(
       /**
        * @param throughputCapacity Specifies the throughput of an Amazon FSx for OpenZFS file
        * system, measured in megabytes per second (MBps).
-       * Valid values depend on the DeploymentType you choose, as follows:
+       * Required if you are creating a new file system.
+       *
+       * Valid values depend on the `DeploymentType` that you choose, as follows:
        *
        * * For `MULTI_AZ_1` and `SINGLE_AZ_2` , valid values are 160, 320, 640, 1280, 2560, 3840,
        * 5120, 7680, or 10240 MBps.
@@ -4796,14 +5121,9 @@ public open class CfnFileSystem(
       }
 
       /**
-       * @param weeklyMaintenanceStartTime A recurring weekly time, in the format `D:HH:MM` .
-       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-       * further details, see [the ISO-8601 spec as described on
-       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-       *
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour.
-       *
+       * @param weeklyMaintenanceStartTime The preferred start time to perform weekly maintenance,
+       * formatted d:HH:MM in the UTC time zone, where d is the weekday number, from 1 through 7,
+       * beginning with Monday and ending with Sunday.
        * For example, `1:05:00` specifies maintenance at 5 AM Monday.
        */
       override fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
@@ -4913,7 +5233,8 @@ public open class CfnFileSystem(
        *
        * By default in the Amazon FSx API and Amazon FSx console, Amazon FSx selects an available
        * /28 IP address range for you from one of the VPC's CIDR ranges. You can have overlapping
-       * endpoint IP addresses for file systems deployed in the same VPC/route tables.
+       * endpoint IP addresses for file systems deployed in the same VPC/route tables, as long as they
+       * don't overlap with any subnet.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-openzfsconfiguration.html#cfn-fsx-filesystem-openzfsconfiguration-endpointipaddressrange)
        */
@@ -4940,6 +5261,9 @@ public open class CfnFileSystem(
       override fun preferredSubnetId(): String? = unwrap(this).getPreferredSubnetId()
 
       /**
+       * Specifies the optional provisioned SSD read cache on file systems that use the
+       * Intelligent-Tiering storage class.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-openzfsconfiguration.html#cfn-fsx-filesystem-openzfsconfiguration-readcacheconfiguration)
        */
       override fun readCacheConfiguration(): Any? = unwrap(this).getReadCacheConfiguration()
@@ -4970,7 +5294,9 @@ public open class CfnFileSystem(
        * Specifies the throughput of an Amazon FSx for OpenZFS file system, measured in megabytes
        * per second (MBps).
        *
-       * Valid values depend on the DeploymentType you choose, as follows:
+       * Required if you are creating a new file system.
+       *
+       * Valid values depend on the `DeploymentType` that you choose, as follows:
        *
        * * For `MULTI_AZ_1` and `SINGLE_AZ_2` , valid values are 160, 320, 640, 1280, 2560, 3840,
        * 5120, 7680, or 10240 MBps.
@@ -4983,14 +5309,9 @@ public open class CfnFileSystem(
       override fun throughputCapacity(): Number? = unwrap(this).getThroughputCapacity()
 
       /**
-       * A recurring weekly time, in the format `D:HH:MM` .
-       *
-       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-       * further details, see [the ISO-8601 spec as described on
-       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-       *
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour.
+       * The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time
+       * zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with
+       * Sunday.
        *
        * For example, `1:05:00` specifies maintenance at 5 AM Monday.
        *
@@ -5019,6 +5340,9 @@ public open class CfnFileSystem(
   }
 
   /**
+   * The configuration for the optional provisioned SSD read cache on Amazon FSx for OpenZFS file
+   * systems that use the Intelligent-Tiering storage class.
+   *
    * Example:
    *
    * ```
@@ -5036,11 +5360,23 @@ public open class CfnFileSystem(
    */
   public interface ReadCacheConfigurationProperty {
     /**
+     * Required if `SizingMode` is set to `USER_PROVISIONED` .
+     *
+     * Specifies the size of the file system's SSD read cache, in gibibytes (GiB).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-readcacheconfiguration.html#cfn-fsx-filesystem-readcacheconfiguration-sizegib)
      */
     public fun sizeGiB(): Number? = unwrap(this).getSizeGiB()
 
     /**
+     * Specifies how the provisioned SSD read cache is sized, as follows:.
+     *
+     * * Set to `NO_CACHE` if you do not want to use an SSD read cache with your Intelligent-Tiering
+     * file system.
+     * * Set to `USER_PROVISIONED` to specify the exact size of your SSD read cache.
+     * * Set to `PROPORTIONAL_TO_THROUGHPUT_CAPACITY` to have your SSD read cache automatically
+     * sized based on your throughput capacity.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-readcacheconfiguration.html#cfn-fsx-filesystem-readcacheconfiguration-sizingmode)
      */
     public fun sizingMode(): String? = unwrap(this).getSizingMode()
@@ -5051,12 +5387,18 @@ public open class CfnFileSystem(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param sizeGiB the value to be set.
+       * @param sizeGiB Required if `SizingMode` is set to `USER_PROVISIONED` .
+       * Specifies the size of the file system's SSD read cache, in gibibytes (GiB).
        */
       public fun sizeGiB(sizeGiB: Number)
 
       /**
-       * @param sizingMode the value to be set.
+       * @param sizingMode Specifies how the provisioned SSD read cache is sized, as follows:.
+       * * Set to `NO_CACHE` if you do not want to use an SSD read cache with your
+       * Intelligent-Tiering file system.
+       * * Set to `USER_PROVISIONED` to specify the exact size of your SSD read cache.
+       * * Set to `PROPORTIONAL_TO_THROUGHPUT_CAPACITY` to have your SSD read cache automatically
+       * sized based on your throughput capacity.
        */
       public fun sizingMode(sizingMode: String)
     }
@@ -5067,14 +5409,20 @@ public open class CfnFileSystem(
           software.amazon.awscdk.services.fsx.CfnFileSystem.ReadCacheConfigurationProperty.builder()
 
       /**
-       * @param sizeGiB the value to be set.
+       * @param sizeGiB Required if `SizingMode` is set to `USER_PROVISIONED` .
+       * Specifies the size of the file system's SSD read cache, in gibibytes (GiB).
        */
       override fun sizeGiB(sizeGiB: Number) {
         cdkBuilder.sizeGiB(sizeGiB)
       }
 
       /**
-       * @param sizingMode the value to be set.
+       * @param sizingMode Specifies how the provisioned SSD read cache is sized, as follows:.
+       * * Set to `NO_CACHE` if you do not want to use an SSD read cache with your
+       * Intelligent-Tiering file system.
+       * * Set to `USER_PROVISIONED` to specify the exact size of your SSD read cache.
+       * * Set to `PROPORTIONAL_TO_THROUGHPUT_CAPACITY` to have your SSD read cache automatically
+       * sized based on your throughput capacity.
        */
       override fun sizingMode(sizingMode: String) {
         cdkBuilder.sizingMode(sizingMode)
@@ -5090,11 +5438,23 @@ public open class CfnFileSystem(
     ) : CdkObject(cdkObject),
         ReadCacheConfigurationProperty {
       /**
+       * Required if `SizingMode` is set to `USER_PROVISIONED` .
+       *
+       * Specifies the size of the file system's SSD read cache, in gibibytes (GiB).
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-readcacheconfiguration.html#cfn-fsx-filesystem-readcacheconfiguration-sizegib)
        */
       override fun sizeGiB(): Number? = unwrap(this).getSizeGiB()
 
       /**
+       * Specifies how the provisioned SSD read cache is sized, as follows:.
+       *
+       * * Set to `NO_CACHE` if you do not want to use an SSD read cache with your
+       * Intelligent-Tiering file system.
+       * * Set to `USER_PROVISIONED` to specify the exact size of your SSD read cache.
+       * * Set to `PROPORTIONAL_TO_THROUGHPUT_CAPACITY` to have your SSD read cache automatically
+       * sized based on your throughput capacity.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-readcacheconfiguration.html#cfn-fsx-filesystem-readcacheconfiguration-sizingmode)
        */
       override fun sizingMode(): String? = unwrap(this).getSizingMode()
@@ -6201,16 +6561,9 @@ public open class CfnFileSystem(
     public fun throughputCapacity(): Number
 
     /**
-     * A recurring weekly time, in the format `D:HH:MM` .
-     *
-     * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-     * further details, see [the ISO-8601 spec as described on
-     * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-     *
-     * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-     * hour.
-     *
-     * For example, `1:05:00` specifies maintenance at 5 AM Monday.
+     * The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time
+     * zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with
+     * Sunday.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-weeklymaintenancestarttime)
      */
@@ -6447,15 +6800,9 @@ public open class CfnFileSystem(
       public fun throughputCapacity(throughputCapacity: Number)
 
       /**
-       * @param weeklyMaintenanceStartTime A recurring weekly time, in the format `D:HH:MM` .
-       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-       * further details, see [the ISO-8601 spec as described on
-       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-       *
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour.
-       *
-       * For example, `1:05:00` specifies maintenance at 5 AM Monday.
+       * @param weeklyMaintenanceStartTime The preferred start time to perform weekly maintenance,
+       * formatted d:HH:MM in the UTC time zone, where d is the weekday number, from 1 through 7,
+       * beginning with Monday and ending with Sunday.
        */
       public fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String)
     }
@@ -6725,15 +7072,9 @@ public open class CfnFileSystem(
       }
 
       /**
-       * @param weeklyMaintenanceStartTime A recurring weekly time, in the format `D:HH:MM` .
-       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-       * further details, see [the ISO-8601 spec as described on
-       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-       *
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour.
-       *
-       * For example, `1:05:00` specifies maintenance at 5 AM Monday.
+       * @param weeklyMaintenanceStartTime The preferred start time to perform weekly maintenance,
+       * formatted d:HH:MM in the UTC time zone, where d is the weekday number, from 1 through 7,
+       * beginning with Monday and ending with Sunday.
        */
       override fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
         cdkBuilder.weeklyMaintenanceStartTime(weeklyMaintenanceStartTime)
@@ -6904,16 +7245,9 @@ public open class CfnFileSystem(
       override fun throughputCapacity(): Number = unwrap(this).getThroughputCapacity()
 
       /**
-       * A recurring weekly time, in the format `D:HH:MM` .
-       *
-       * `D` is the day of the week, for which 1 represents Monday and 7 represents Sunday. For
-       * further details, see [the ISO-8601 spec as described on
-       * Wikipedia](https://docs.aws.amazon.com/https://en.wikipedia.org/wiki/ISO_week_date) .
-       *
-       * `HH` is the zero-padded hour of the day (0-23), and `MM` is the zero-padded minute of the
-       * hour.
-       *
-       * For example, `1:05:00` specifies maintenance at 5 AM Monday.
+       * The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time
+       * zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with
+       * Sunday.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html#cfn-fsx-filesystem-windowsconfiguration-weeklymaintenancestarttime)
        */

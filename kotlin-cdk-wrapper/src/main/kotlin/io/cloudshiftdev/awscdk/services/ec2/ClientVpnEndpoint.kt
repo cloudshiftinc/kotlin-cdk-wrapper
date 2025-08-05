@@ -16,7 +16,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * A client VPN connnection.
+ * A client VPN connection.
  *
  * Example:
  *
@@ -181,6 +181,40 @@ public open class ClientVpnEndpoint(
      * clients when a VPN session is established. 
      */
     public fun clientLoginBanner(clientLoginBanner: String)
+
+    /**
+     * Options for Client Route Enforcement.
+     *
+     * Client Route Enforcement is a feature of Client VPN that helps enforce administrator defined
+     * routes on devices connected through the VPN.
+     * This feature helps improve your security posture by ensuring that network traffic originating
+     * from a connected client is not inadvertently sent outside the VPN tunnel.
+     *
+     * Default: undefined - AWS Client VPN default setting is disable client route enforcement
+     *
+     * [Documentation](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-working-cre.html)
+     * @param clientRouteEnforcementOptions Options for Client Route Enforcement. 
+     */
+    public
+        fun clientRouteEnforcementOptions(clientRouteEnforcementOptions: ClientRouteEnforcementOptions)
+
+    /**
+     * Options for Client Route Enforcement.
+     *
+     * Client Route Enforcement is a feature of Client VPN that helps enforce administrator defined
+     * routes on devices connected through the VPN.
+     * This feature helps improve your security posture by ensuring that network traffic originating
+     * from a connected client is not inadvertently sent outside the VPN tunnel.
+     *
+     * Default: undefined - AWS Client VPN default setting is disable client route enforcement
+     *
+     * [Documentation](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-working-cre.html)
+     * @param clientRouteEnforcementOptions Options for Client Route Enforcement. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b37368e40aab835719faec3b877080a295154f17da5c92e37908fa46f1f56588")
+    public
+        fun clientRouteEnforcementOptions(clientRouteEnforcementOptions: ClientRouteEnforcementOptions.Builder.() -> Unit)
 
     /**
      * A brief description of the Client VPN endpoint.
@@ -431,6 +465,44 @@ public open class ClientVpnEndpoint(
     }
 
     /**
+     * Options for Client Route Enforcement.
+     *
+     * Client Route Enforcement is a feature of Client VPN that helps enforce administrator defined
+     * routes on devices connected through the VPN.
+     * This feature helps improve your security posture by ensuring that network traffic originating
+     * from a connected client is not inadvertently sent outside the VPN tunnel.
+     *
+     * Default: undefined - AWS Client VPN default setting is disable client route enforcement
+     *
+     * [Documentation](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-working-cre.html)
+     * @param clientRouteEnforcementOptions Options for Client Route Enforcement. 
+     */
+    override
+        fun clientRouteEnforcementOptions(clientRouteEnforcementOptions: ClientRouteEnforcementOptions) {
+      cdkBuilder.clientRouteEnforcementOptions(clientRouteEnforcementOptions.let(ClientRouteEnforcementOptions.Companion::unwrap))
+    }
+
+    /**
+     * Options for Client Route Enforcement.
+     *
+     * Client Route Enforcement is a feature of Client VPN that helps enforce administrator defined
+     * routes on devices connected through the VPN.
+     * This feature helps improve your security posture by ensuring that network traffic originating
+     * from a connected client is not inadvertently sent outside the VPN tunnel.
+     *
+     * Default: undefined - AWS Client VPN default setting is disable client route enforcement
+     *
+     * [Documentation](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-working-cre.html)
+     * @param clientRouteEnforcementOptions Options for Client Route Enforcement. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b37368e40aab835719faec3b877080a295154f17da5c92e37908fa46f1f56588")
+    override
+        fun clientRouteEnforcementOptions(clientRouteEnforcementOptions: ClientRouteEnforcementOptions.Builder.() -> Unit):
+        Unit =
+        clientRouteEnforcementOptions(ClientRouteEnforcementOptions(clientRouteEnforcementOptions))
+
+    /**
      * A brief description of the Client VPN endpoint.
      *
      * Default: - no description
@@ -634,6 +706,9 @@ public open class ClientVpnEndpoint(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ec2.ClientVpnEndpoint.PROPERTY_INJECTION_ID
+
     public fun fromEndpointAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

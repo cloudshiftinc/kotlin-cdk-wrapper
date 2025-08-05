@@ -119,6 +119,9 @@ public interface CfnListenerProps {
    *
    * You must provide exactly one certificate if the listener protocol is HTTPS or TLS.
    *
+   * For an HTTPS listener, update requires some interruptions. For a TLS listener, update requires
+   * no interruption.
+   *
    * To create a certificate list for a secure listener, use
    * [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
    * .
@@ -140,6 +143,8 @@ public interface CfnListenerProps {
 
   /**
    * The listener attributes.
+   *
+   * Attributes that you do not modify retain their current values.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
    */
@@ -184,14 +189,16 @@ public interface CfnListenerProps {
    * [HTTPS and TLS listeners] The security policy that defines which protocols and ciphers are
    * supported.
    *
-   * Updating the security policy can result in interruptions if the load balancer is handling a
-   * high volume of traffic.
-   *
    * For more information, see [Security
-   * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies)
+   * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/describe-ssl-policies.html)
    * in the *Application Load Balancers Guide* and [Security
-   * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/create-tls-listener.html#describe-ssl-policies)
+   * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/describe-ssl-policies.html)
    * in the *Network Load Balancers Guide* .
+   *
+   * [HTTPS listeners] Updating the security policy can result in interruptions if the load balancer
+   * is handling a high volume of traffic. To decrease the possibility of an interruption if your load
+   * balancer is handling a high volume of traffic, create an additional load balancer or request an
+   * LCU reservation.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-sslpolicy)
    */
@@ -218,6 +225,9 @@ public interface CfnListenerProps {
      * @param certificates The default SSL server certificate for a secure listener.
      * You must provide exactly one certificate if the listener protocol is HTTPS or TLS.
      *
+     * For an HTTPS listener, update requires some interruptions. For a TLS listener, update
+     * requires no interruption.
+     *
      * To create a certificate list for a secure listener, use
      * [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
      * .
@@ -228,6 +238,9 @@ public interface CfnListenerProps {
      * @param certificates The default SSL server certificate for a secure listener.
      * You must provide exactly one certificate if the listener protocol is HTTPS or TLS.
      *
+     * For an HTTPS listener, update requires some interruptions. For a TLS listener, update
+     * requires no interruption.
+     *
      * To create a certificate list for a secure listener, use
      * [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
      * .
@@ -237,6 +250,9 @@ public interface CfnListenerProps {
     /**
      * @param certificates The default SSL server certificate for a secure listener.
      * You must provide exactly one certificate if the listener protocol is HTTPS or TLS.
+     *
+     * For an HTTPS listener, update requires some interruptions. For a TLS listener, update
+     * requires no interruption.
      *
      * To create a certificate list for a secure listener, use
      * [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
@@ -273,16 +289,19 @@ public interface CfnListenerProps {
 
     /**
      * @param listenerAttributes The listener attributes.
+     * Attributes that you do not modify retain their current values.
      */
     public fun listenerAttributes(listenerAttributes: IResolvable)
 
     /**
      * @param listenerAttributes The listener attributes.
+     * Attributes that you do not modify retain their current values.
      */
     public fun listenerAttributes(listenerAttributes: List<Any>)
 
     /**
      * @param listenerAttributes The listener attributes.
+     * Attributes that you do not modify retain their current values.
      */
     public fun listenerAttributes(vararg listenerAttributes: Any)
 
@@ -327,14 +346,16 @@ public interface CfnListenerProps {
     /**
      * @param sslPolicy [HTTPS and TLS listeners] The security policy that defines which protocols
      * and ciphers are supported.
-     * Updating the security policy can result in interruptions if the load balancer is handling a
-     * high volume of traffic.
-     *
      * For more information, see [Security
-     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies)
+     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/describe-ssl-policies.html)
      * in the *Application Load Balancers Guide* and [Security
-     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/create-tls-listener.html#describe-ssl-policies)
+     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/describe-ssl-policies.html)
      * in the *Network Load Balancers Guide* .
+     *
+     * [HTTPS listeners] Updating the security policy can result in interruptions if the load
+     * balancer is handling a high volume of traffic. To decrease the possibility of an interruption if
+     * your load balancer is handling a high volume of traffic, create an additional load balancer or
+     * request an LCU reservation.
      */
     public fun sslPolicy(sslPolicy: String)
   }
@@ -362,6 +383,9 @@ public interface CfnListenerProps {
      * @param certificates The default SSL server certificate for a secure listener.
      * You must provide exactly one certificate if the listener protocol is HTTPS or TLS.
      *
+     * For an HTTPS listener, update requires some interruptions. For a TLS listener, update
+     * requires no interruption.
+     *
      * To create a certificate list for a secure listener, use
      * [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
      * .
@@ -374,6 +398,9 @@ public interface CfnListenerProps {
      * @param certificates The default SSL server certificate for a secure listener.
      * You must provide exactly one certificate if the listener protocol is HTTPS or TLS.
      *
+     * For an HTTPS listener, update requires some interruptions. For a TLS listener, update
+     * requires no interruption.
+     *
      * To create a certificate list for a secure listener, use
      * [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
      * .
@@ -385,6 +412,9 @@ public interface CfnListenerProps {
     /**
      * @param certificates The default SSL server certificate for a secure listener.
      * You must provide exactly one certificate if the listener protocol is HTTPS or TLS.
+     *
+     * For an HTTPS listener, update requires some interruptions. For a TLS listener, update
+     * requires no interruption.
      *
      * To create a certificate list for a secure listener, use
      * [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
@@ -426,6 +456,7 @@ public interface CfnListenerProps {
 
     /**
      * @param listenerAttributes The listener attributes.
+     * Attributes that you do not modify retain their current values.
      */
     override fun listenerAttributes(listenerAttributes: IResolvable) {
       cdkBuilder.listenerAttributes(listenerAttributes.let(IResolvable.Companion::unwrap))
@@ -433,6 +464,7 @@ public interface CfnListenerProps {
 
     /**
      * @param listenerAttributes The listener attributes.
+     * Attributes that you do not modify retain their current values.
      */
     override fun listenerAttributes(listenerAttributes: List<Any>) {
       cdkBuilder.listenerAttributes(listenerAttributes.map{CdkObjectWrappers.unwrap(it)})
@@ -440,6 +472,7 @@ public interface CfnListenerProps {
 
     /**
      * @param listenerAttributes The listener attributes.
+     * Attributes that you do not modify retain their current values.
      */
     override fun listenerAttributes(vararg listenerAttributes: Any): Unit =
         listenerAttributes(listenerAttributes.toList())
@@ -497,14 +530,16 @@ public interface CfnListenerProps {
     /**
      * @param sslPolicy [HTTPS and TLS listeners] The security policy that defines which protocols
      * and ciphers are supported.
-     * Updating the security policy can result in interruptions if the load balancer is handling a
-     * high volume of traffic.
-     *
      * For more information, see [Security
-     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies)
+     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/describe-ssl-policies.html)
      * in the *Application Load Balancers Guide* and [Security
-     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/create-tls-listener.html#describe-ssl-policies)
+     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/describe-ssl-policies.html)
      * in the *Network Load Balancers Guide* .
+     *
+     * [HTTPS listeners] Updating the security policy can result in interruptions if the load
+     * balancer is handling a high volume of traffic. To decrease the possibility of an interruption if
+     * your load balancer is handling a high volume of traffic, create an additional load balancer or
+     * request an LCU reservation.
      */
     override fun sslPolicy(sslPolicy: String) {
       cdkBuilder.sslPolicy(sslPolicy)
@@ -530,6 +565,9 @@ public interface CfnListenerProps {
      *
      * You must provide exactly one certificate if the listener protocol is HTTPS or TLS.
      *
+     * For an HTTPS listener, update requires some interruptions. For a TLS listener, update
+     * requires no interruption.
+     *
      * To create a certificate list for a secure listener, use
      * [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
      * .
@@ -551,6 +589,8 @@ public interface CfnListenerProps {
 
     /**
      * The listener attributes.
+     *
+     * Attributes that you do not modify retain their current values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
      */
@@ -595,14 +635,16 @@ public interface CfnListenerProps {
      * [HTTPS and TLS listeners] The security policy that defines which protocols and ciphers are
      * supported.
      *
-     * Updating the security policy can result in interruptions if the load balancer is handling a
-     * high volume of traffic.
-     *
      * For more information, see [Security
-     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies)
+     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/describe-ssl-policies.html)
      * in the *Application Load Balancers Guide* and [Security
-     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/create-tls-listener.html#describe-ssl-policies)
+     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/describe-ssl-policies.html)
      * in the *Network Load Balancers Guide* .
+     *
+     * [HTTPS listeners] Updating the security policy can result in interruptions if the load
+     * balancer is handling a high volume of traffic. To decrease the possibility of an interruption if
+     * your load balancer is handling a high volume of traffic, create an additional load balancer or
+     * request an LCU reservation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-sslpolicy)
      */

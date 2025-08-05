@@ -43,7 +43,7 @@ public interface ScalingInterval {
   /**
    * The lower bound of the interval.
    *
-   * The scaling adjustment will be applied if the metric is higher than this value.
+   * The scaling adjustment will be applied if the metric is higher than or equal this value.
    *
    * Default: Threshold automatically derived from neighbouring intervals
    */
@@ -78,7 +78,7 @@ public interface ScalingInterval {
 
     /**
      * @param lower The lower bound of the interval.
-     * The scaling adjustment will be applied if the metric is higher than this value.
+     * The scaling adjustment will be applied if the metric is higher than or equal this value.
      */
     public fun lower(lower: Number)
 
@@ -111,7 +111,7 @@ public interface ScalingInterval {
 
     /**
      * @param lower The lower bound of the interval.
-     * The scaling adjustment will be applied if the metric is higher than this value.
+     * The scaling adjustment will be applied if the metric is higher than or equal this value.
      */
     override fun lower(lower: Number) {
       cdkBuilder.lower(lower)
@@ -150,7 +150,7 @@ public interface ScalingInterval {
     /**
      * The lower bound of the interval.
      *
-     * The scaling adjustment will be applied if the metric is higher than this value.
+     * The scaling adjustment will be applied if the metric is higher than or equal this value.
      *
      * Default: Threshold automatically derived from neighbouring intervals
      */

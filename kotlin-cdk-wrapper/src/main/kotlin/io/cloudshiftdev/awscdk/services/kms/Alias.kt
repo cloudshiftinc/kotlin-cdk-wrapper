@@ -166,6 +166,30 @@ public open class Alias(
       unwrap(this).grantGenerateMac(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
+   * Grant sign permissions using this key to the given principal.
+   *
+   * @param grantee 
+   */
+  public override fun grantSign(grantee: IGrantable): Grant =
+      unwrap(this).grantSign(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+  /**
+   * Grant sign and verify permissions using this key to the given principal.
+   *
+   * @param grantee 
+   */
+  public override fun grantSignVerify(grantee: IGrantable): Grant =
+      unwrap(this).grantSignVerify(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+  /**
+   * Grant verify permissions using this key to the given principal.
+   *
+   * @param grantee 
+   */
+  public override fun grantVerify(grantee: IGrantable): Grant =
+      unwrap(this).grantVerify(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+  /**
    * Grant permissions to verifying MACs to the given principal.
    *
    * @param grantee 
@@ -271,6 +295,9 @@ public open class Alias(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.kms.Alias.PROPERTY_INJECTION_ID
+
     public fun fromAliasAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

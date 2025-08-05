@@ -17,8 +17,9 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Contains the identifiers for a group, a group member, and a `GroupMembership` object in the
- * identity store.
+ * Creates a relationship between a member and a group.
+ *
+ * The following identifiers must be specified: `GroupId` , `IdentityStoreId` , and `MemberId` .
  *
  * Example:
  *
@@ -147,8 +148,8 @@ public open class CfnGroupMembership(
     /**
      * An object containing the identifier of a group member.
      *
-     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
-     * that User as a group member.
+     * Setting the `MemberId` 's `UserId` field to a specific User's ID indicates that user is a
+     * member of the group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-memberid)
      * @param memberId An object containing the identifier of a group member. 
@@ -158,8 +159,8 @@ public open class CfnGroupMembership(
     /**
      * An object containing the identifier of a group member.
      *
-     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
-     * that User as a group member.
+     * Setting the `MemberId` 's `UserId` field to a specific User's ID indicates that user is a
+     * member of the group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-memberid)
      * @param memberId An object containing the identifier of a group member. 
@@ -169,8 +170,8 @@ public open class CfnGroupMembership(
     /**
      * An object containing the identifier of a group member.
      *
-     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
-     * that User as a group member.
+     * Setting the `MemberId` 's `UserId` field to a specific User's ID indicates that user is a
+     * member of the group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-memberid)
      * @param memberId An object containing the identifier of a group member. 
@@ -210,8 +211,8 @@ public open class CfnGroupMembership(
     /**
      * An object containing the identifier of a group member.
      *
-     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
-     * that User as a group member.
+     * Setting the `MemberId` 's `UserId` field to a specific User's ID indicates that user is a
+     * member of the group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-memberid)
      * @param memberId An object containing the identifier of a group member. 
@@ -223,8 +224,8 @@ public open class CfnGroupMembership(
     /**
      * An object containing the identifier of a group member.
      *
-     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
-     * that User as a group member.
+     * Setting the `MemberId` 's `UserId` field to a specific User's ID indicates that user is a
+     * member of the group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-memberid)
      * @param memberId An object containing the identifier of a group member. 
@@ -236,8 +237,8 @@ public open class CfnGroupMembership(
     /**
      * An object containing the identifier of a group member.
      *
-     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
-     * that User as a group member.
+     * Setting the `MemberId` 's `UserId` field to a specific User's ID indicates that user is a
+     * member of the group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-memberid)
      * @param memberId An object containing the identifier of a group member. 

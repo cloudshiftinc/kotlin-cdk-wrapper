@@ -46,6 +46,22 @@ public open class SingleValueWidget(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The AWS account ID where the metrics are located.
+     *
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     *
+     * Default: - Current account
+     *
+     * @param accountId The AWS account ID where the metrics are located. 
+     */
+    public fun accountId(accountId: String)
+
+    /**
      * The end of the time range to use for each widget independently from those of the dashboard.
      *
      * If you specify a value for end, you must also specify a value for start.
@@ -175,6 +191,24 @@ public open class SingleValueWidget(
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.SingleValueWidget.Builder =
         software.amazon.awscdk.services.cloudwatch.SingleValueWidget.Builder.create()
+
+    /**
+     * The AWS account ID where the metrics are located.
+     *
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     *
+     * Default: - Current account
+     *
+     * @param accountId The AWS account ID where the metrics are located. 
+     */
+    override fun accountId(accountId: String) {
+      cdkBuilder.accountId(accountId)
+    }
 
     /**
      * The end of the time range to use for each widget independently from those of the dashboard.

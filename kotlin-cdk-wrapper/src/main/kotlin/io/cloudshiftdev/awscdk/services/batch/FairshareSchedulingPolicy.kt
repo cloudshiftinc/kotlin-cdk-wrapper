@@ -312,6 +312,9 @@ public open class FairshareSchedulingPolicy(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.batch.FairshareSchedulingPolicy.PROPERTY_INJECTION_ID
+
     public fun fromFairshareSchedulingPolicyArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -2564,7 +2564,8 @@ public open class CfnFunction(
   }
 
   /**
-   * The [dead-letter queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq)
+   * The [dead-letter
+   * queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async-retain-records.html#invocation-dlq)
    * for failed asynchronous invocations.
    *
    * Example:
@@ -2691,7 +2692,7 @@ public open class CfnFunction(
        * If the value of the environment variable is a time or a duration, enclose the value in
        * quotes.
        */
-      public fun variables(variables: IResolvable)
+      public fun variables(variables: Map<String, String>)
 
       /**
        * @param variables Environment variable key-value pairs. For more information, see [Using
@@ -2700,7 +2701,7 @@ public open class CfnFunction(
        * If the value of the environment variable is a time or a duration, enclose the value in
        * quotes.
        */
-      public fun variables(variables: Map<String, String>)
+      public fun variables(variables: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -2715,8 +2716,8 @@ public open class CfnFunction(
        * If the value of the environment variable is a time or a duration, enclose the value in
        * quotes.
        */
-      override fun variables(variables: IResolvable) {
-        cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
+      override fun variables(variables: Map<String, String>) {
+        cdkBuilder.variables(variables)
       }
 
       /**
@@ -2726,8 +2727,8 @@ public open class CfnFunction(
        * If the value of the environment variable is a time or a duration, enclose the value in
        * quotes.
        */
-      override fun variables(variables: Map<String, String>) {
-        cdkBuilder.variables(variables)
+      override fun variables(variables: IResolvable) {
+        cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty =

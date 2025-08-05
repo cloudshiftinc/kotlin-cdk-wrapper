@@ -57,6 +57,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .locationUri("locationUri")
  * .name("name")
  * // the properties below are optional
+ * .deletionProtectionCheck("deletionProtectionCheck")
  * .description("description")
  * .kmsKeyIdentifier("kmsKeyIdentifier")
  * .retrievalRoleArn("retrievalRoleArn")
@@ -128,6 +129,18 @@ public open class CfnConfigurationProfile(
    */
   public override fun cdkTagManager(): TagManager =
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
+
+  /**
+   * A parameter to configure deletion protection.
+   */
+  public open fun deletionProtectionCheck(): String? = unwrap(this).getDeletionProtectionCheck()
+
+  /**
+   * A parameter to configure deletion protection.
+   */
+  public open fun deletionProtectionCheck(`value`: String) {
+    unwrap(this).setDeletionProtectionCheck(`value`)
+  }
 
   /**
    * A description of the configuration profile.
@@ -273,6 +286,31 @@ public open class CfnConfigurationProfile(
     public fun applicationId(applicationId: String)
 
     /**
+     * A parameter to configure deletion protection.
+     *
+     * Deletion protection prevents a user from deleting a configuration profile if your application
+     * has called either
+     * [GetLatestConfiguration](https://docs.aws.amazon.com/appconfig/2019-10-09/APIReference/API_appconfigdata_GetLatestConfiguration.html)
+     * or
+     * [GetConfiguration](https://docs.aws.amazon.com/appconfig/2019-10-09/APIReference/API_GetConfiguration.html)
+     * for the configuration profile during the specified interval.
+     *
+     * This parameter supports the following values:
+     *
+     * * `BYPASS` : Instructs AWS AppConfig to bypass the deletion protection check and delete a
+     * configuration profile even if deletion protection would have otherwise prevented it.
+     * * `APPLY` : Instructs the deletion protection check to run, even if deletion protection is
+     * disabled at the account level. `APPLY` also forces the deletion protection check to run against
+     * resources created in the past hour, which are normally excluded from deletion protection checks.
+     * * `ACCOUNT_DEFAULT` : The default setting, which instructs AWS AppConfig to implement the
+     * deletion protection value specified in the `UpdateAccountSettings` API.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html#cfn-appconfig-configurationprofile-deletionprotectioncheck)
+     * @param deletionProtectionCheck A parameter to configure deletion protection. 
+     */
+    public fun deletionProtectionCheck(deletionProtectionCheck: String)
+
+    /**
      * A description of the configuration profile.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html#cfn-appconfig-configurationprofile-description)
@@ -324,8 +362,9 @@ public open class CfnConfigurationProfile(
      * `LocationUri` .
      *
      *
-     * A retrieval role ARN is not required for configurations stored in the AWS AppConfig hosted
-     * configuration store. It is required for all other sources that store your configuration.
+     * A retrieval role ARN is not required for configurations stored in AWS CodePipeline or the AWS
+     * AppConfig hosted configuration store. It is required for all other sources that store your
+     * configuration.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html#cfn-appconfig-configurationprofile-retrievalrolearn)
@@ -417,6 +456,33 @@ public open class CfnConfigurationProfile(
     }
 
     /**
+     * A parameter to configure deletion protection.
+     *
+     * Deletion protection prevents a user from deleting a configuration profile if your application
+     * has called either
+     * [GetLatestConfiguration](https://docs.aws.amazon.com/appconfig/2019-10-09/APIReference/API_appconfigdata_GetLatestConfiguration.html)
+     * or
+     * [GetConfiguration](https://docs.aws.amazon.com/appconfig/2019-10-09/APIReference/API_GetConfiguration.html)
+     * for the configuration profile during the specified interval.
+     *
+     * This parameter supports the following values:
+     *
+     * * `BYPASS` : Instructs AWS AppConfig to bypass the deletion protection check and delete a
+     * configuration profile even if deletion protection would have otherwise prevented it.
+     * * `APPLY` : Instructs the deletion protection check to run, even if deletion protection is
+     * disabled at the account level. `APPLY` also forces the deletion protection check to run against
+     * resources created in the past hour, which are normally excluded from deletion protection checks.
+     * * `ACCOUNT_DEFAULT` : The default setting, which instructs AWS AppConfig to implement the
+     * deletion protection value specified in the `UpdateAccountSettings` API.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html#cfn-appconfig-configurationprofile-deletionprotectioncheck)
+     * @param deletionProtectionCheck A parameter to configure deletion protection. 
+     */
+    override fun deletionProtectionCheck(deletionProtectionCheck: String) {
+      cdkBuilder.deletionProtectionCheck(deletionProtectionCheck)
+    }
+
+    /**
      * A description of the configuration profile.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html#cfn-appconfig-configurationprofile-description)
@@ -476,8 +542,9 @@ public open class CfnConfigurationProfile(
      * `LocationUri` .
      *
      *
-     * A retrieval role ARN is not required for configurations stored in the AWS AppConfig hosted
-     * configuration store. It is required for all other sources that store your configuration.
+     * A retrieval role ARN is not required for configurations stored in AWS CodePipeline or the AWS
+     * AppConfig hosted configuration store. It is required for all other sources that store your
+     * configuration.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html#cfn-appconfig-configurationprofile-retrievalrolearn)

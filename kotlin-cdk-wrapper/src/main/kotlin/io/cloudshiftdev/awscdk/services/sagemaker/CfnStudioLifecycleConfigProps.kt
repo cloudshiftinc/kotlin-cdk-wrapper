@@ -52,7 +52,7 @@ public interface CfnStudioLifecycleConfigProps {
   public fun studioLifecycleConfigContent(): String
 
   /**
-   * The name of the Amazon SageMaker Studio Lifecycle Configuration.
+   * The name of the Amazon SageMaker AI Studio Lifecycle Configuration.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-studiolifecycleconfig.html#cfn-sagemaker-studiolifecycleconfig-studiolifecycleconfigname)
    */
@@ -87,7 +87,7 @@ public interface CfnStudioLifecycleConfigProps {
     public fun studioLifecycleConfigContent(studioLifecycleConfigContent: String)
 
     /**
-     * @param studioLifecycleConfigName The name of the Amazon SageMaker Studio Lifecycle
+     * @param studioLifecycleConfigName The name of the Amazon SageMaker AI Studio Lifecycle
      * Configuration. 
      */
     public fun studioLifecycleConfigName(studioLifecycleConfigName: String)
@@ -130,7 +130,7 @@ public interface CfnStudioLifecycleConfigProps {
     }
 
     /**
-     * @param studioLifecycleConfigName The name of the Amazon SageMaker Studio Lifecycle
+     * @param studioLifecycleConfigName The name of the Amazon SageMaker AI Studio Lifecycle
      * Configuration. 
      */
     override fun studioLifecycleConfigName(studioLifecycleConfigName: String) {
@@ -180,7 +180,7 @@ public interface CfnStudioLifecycleConfigProps {
         unwrap(this).getStudioLifecycleConfigContent()
 
     /**
-     * The name of the Amazon SageMaker Studio Lifecycle Configuration.
+     * The name of the Amazon SageMaker AI Studio Lifecycle Configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-studiolifecycleconfig.html#cfn-sagemaker-studiolifecycleconfig-studiolifecycleconfigname)
      */

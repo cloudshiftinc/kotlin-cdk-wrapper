@@ -17,25 +17,32 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Mesh mesh;
- * // Cloud Map service discovery is currently required for host ejection by outlier detection
- * Vpc vpc = new Vpc(this, "vpc");
- * PrivateDnsNamespace namespace = PrivateDnsNamespace.Builder.create(this, "test-namespace")
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+ * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.*;
+ * App app = new App();
+ * Stack stack = new Stack(app, "aws-servicediscovery-integ");
+ * Vpc vpc = Vpc.Builder.create(stack, "Vpc").maxAzs(2).build();
+ * PrivateDnsNamespace namespace = PrivateDnsNamespace.Builder.create(stack, "Namespace")
+ * .name("boobar.com")
  * .vpc(vpc)
- * .name("domain.local")
  * .build();
- * Service service = namespace.createService("Svc");
- * VirtualNode node = mesh.addVirtualNode("virtual-node", VirtualNodeBaseProps.builder()
- * .serviceDiscovery(ServiceDiscovery.cloudMap(service))
- * .listeners(List.of(VirtualNodeListener.http(HttpVirtualNodeListenerOptions.builder()
- * .outlierDetection(OutlierDetection.builder()
- * .baseEjectionDuration(Duration.seconds(10))
- * .interval(Duration.seconds(30))
- * .maxEjectionPercent(50)
- * .maxServerErrors(5)
- * .build())
- * .build())))
+ * Service service = namespace.createService("Service", DnsServiceProps.builder()
+ * .dnsRecordType(DnsRecordType.A_AAAA)
+ * .dnsTtl(Duration.seconds(30))
+ * .loadBalancer(true)
  * .build());
+ * ApplicationLoadBalancer loadbalancer = ApplicationLoadBalancer.Builder.create(stack,
+ * "LB").vpc(vpc).internetFacing(true).build();
+ * service.registerLoadBalancer("Loadbalancer", loadbalancer);
+ * Service arnService = namespace.createService("ArnService", DnsServiceProps.builder()
+ * .discoveryType(DiscoveryType.API)
+ * .build());
+ * arnService.registerNonIpInstance("NonIpInstance", NonIpInstanceBaseProps.builder()
+ * .customAttributes(Map.of("arn", "arn://"))
+ * .build());
+ * app.synth();
  * ```
  */
 public open class PrivateDnsNamespace(
@@ -200,6 +207,9 @@ public open class PrivateDnsNamespace(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace.PROPERTY_INJECTION_ID
+
     public fun fromPrivateDnsNamespaceAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

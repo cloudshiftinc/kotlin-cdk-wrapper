@@ -60,7 +60,7 @@ public open class StepScalingAction(
   )
 
   /**
-   * Add an adjusment interval to the ScalingAction.
+   * Add an adjustment interval to the ScalingAction.
    *
    * @param adjustment 
    */
@@ -69,7 +69,7 @@ public open class StepScalingAction(
   }
 
   /**
-   * Add an adjusment interval to the ScalingAction.
+   * Add an adjustment interval to the ScalingAction.
    *
    * @param adjustment 
    */

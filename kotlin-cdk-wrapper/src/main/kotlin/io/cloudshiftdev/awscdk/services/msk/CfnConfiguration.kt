@@ -19,7 +19,25 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html.
+ * Creates a new MSK configuration.
+ *
+ * To see an example of how to use this operation, first save the following text to a file and name
+ * the file `config-file.txt` .
+ *
+ * `auto.create.topics.enable = true zookeeper.connection.timeout.ms = 1000 log.roll.ms = 604800000`
+ *
+ * Now run the following Python 3.6 script in the folder where you saved `config-file.txt` . This
+ * script uses the properties specified in `config-file.txt` to create a configuration named
+ * `SalesClusterConfiguration` . This configuration can work with Apache Kafka versions 1.1.1 and
+ * 2.1.0.
+ *
+ * ```
+ * import boto3 client = boto3.client('kafka') config_file = open('config-file.txt', 'r')
+ * server_properties = config_file.read() response = client.create_configuration(
+ * Name='SalesClusterConfiguration', Description='The configuration to use on all sales clusters.',
+ * KafkaVersions=['1.1.1', '2.1.0'], ServerProperties=server_properties
+ * ) print(response)
+ * ```
  *
  * Example:
  *
@@ -64,35 +82,35 @@ public open class CfnConfiguration(
   )
 
   /**
-   *
+   * The Amazon Resource Name (ARN) of the configuration.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   *
+   * The time when the configuration revision was created.
    */
   public open fun attrLatestRevisionCreationTime(): String =
       unwrap(this).getAttrLatestRevisionCreationTime()
 
   /**
-   *
+   * The description of the configuration revision.
    */
   public open fun attrLatestRevisionDescription(): String =
       unwrap(this).getAttrLatestRevisionDescription()
 
   /**
-   *
+   * The revision number.
    */
   public open fun attrLatestRevisionRevision(): Number =
       unwrap(this).getAttrLatestRevisionRevision()
 
   /**
-   *
+   * The description of the configuration.
    */
   public open fun description(): String? = unwrap(this).getDescription()
 
   /**
-   *
+   * The description of the configuration.
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
@@ -108,45 +126,51 @@ public open class CfnConfiguration(
   }
 
   /**
-   *
+   * The [versions of Apache
+   * Kafka](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) with
+   * which you can use this MSK configuration.
    */
   public open fun kafkaVersionsList(): List<String> = unwrap(this).getKafkaVersionsList() ?:
       emptyList()
 
   /**
-   *
+   * The [versions of Apache
+   * Kafka](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) with
+   * which you can use this MSK configuration.
    */
   public open fun kafkaVersionsList(`value`: List<String>) {
     unwrap(this).setKafkaVersionsList(`value`)
   }
 
   /**
-   *
+   * The [versions of Apache
+   * Kafka](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) with
+   * which you can use this MSK configuration.
    */
   public open fun kafkaVersionsList(vararg `value`: String): Unit =
       kafkaVersionsList(`value`.toList())
 
   /**
-   *
+   * Latest revision of the MSK configuration.
    */
   public open fun latestRevision(): Any? = unwrap(this).getLatestRevision()
 
   /**
-   *
+   * Latest revision of the MSK configuration.
    */
   public open fun latestRevision(`value`: IResolvable) {
     unwrap(this).setLatestRevision(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   *
+   * Latest revision of the MSK configuration.
    */
   public open fun latestRevision(`value`: LatestRevisionProperty) {
     unwrap(this).setLatestRevision(`value`.let(LatestRevisionProperty.Companion::unwrap))
   }
 
   /**
-   *
+   * Latest revision of the MSK configuration.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("ff7fd235140ed3b9b780d2100e75ea7200fbe4458150e1be2c200f3f55992d89")
@@ -154,24 +178,26 @@ public open class CfnConfiguration(
       latestRevision(LatestRevisionProperty(`value`))
 
   /**
-   *
+   * The name of the configuration.
    */
   public open fun name(): String = unwrap(this).getName()
 
   /**
-   *
+   * The name of the configuration.
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
   }
 
   /**
-   *
+   * Contents of the `server.properties` file. When using the console, the SDK, or the AWS CLI , the
+   * contents of `server.properties` can be in plaintext.
    */
   public open fun serverProperties(): String = unwrap(this).getServerProperties()
 
   /**
-   *
+   * Contents of the `server.properties` file. When using the console, the SDK, or the AWS CLI , the
+   * contents of `server.properties` can be in plaintext.
    */
   public open fun serverProperties(`value`: String) {
     unwrap(this).setServerProperties(`value`)
@@ -183,52 +209,110 @@ public open class CfnConfiguration(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The description of the configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-description)
-     * @param description 
+     * @param description The description of the configuration. 
      */
     public fun description(description: String)
 
     /**
+     * The [versions of Apache
+     * Kafka](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) with
+     * which you can use this MSK configuration.
+     *
+     * When you update the `KafkaVersionsList` property, AWS CloudFormation recreates a new
+     * configuration with the updated property before deleting the old configuration. Such an update
+     * requires a [resource
+     * replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+     * . To successfully update `KafkaVersionsList` , you must also update the `Name` property in the
+     * same operation.
+     *
+     * If your configuration is attached with any clusters created using the AWS Management Console
+     * or AWS CLI , you'll need to manually delete the old configuration from the console after the
+     * update completes.
+     *
+     * For more information, see [Can’t update KafkaVersionsList in MSK
+     * configuration](https://docs.aws.amazon.com/msk/latest/developerguide/troubleshooting.html#troubleshoot-kafkaversionslist-cfn-update-failure)
+     * in the *Amazon MSK Developer Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-kafkaversionslist)
-     * @param kafkaVersionsList 
+     * @param kafkaVersionsList The [versions of Apache
+     * Kafka](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) with
+     * which you can use this MSK configuration. 
      */
     public fun kafkaVersionsList(kafkaVersionsList: List<String>)
 
     /**
+     * The [versions of Apache
+     * Kafka](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) with
+     * which you can use this MSK configuration.
+     *
+     * When you update the `KafkaVersionsList` property, AWS CloudFormation recreates a new
+     * configuration with the updated property before deleting the old configuration. Such an update
+     * requires a [resource
+     * replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+     * . To successfully update `KafkaVersionsList` , you must also update the `Name` property in the
+     * same operation.
+     *
+     * If your configuration is attached with any clusters created using the AWS Management Console
+     * or AWS CLI , you'll need to manually delete the old configuration from the console after the
+     * update completes.
+     *
+     * For more information, see [Can’t update KafkaVersionsList in MSK
+     * configuration](https://docs.aws.amazon.com/msk/latest/developerguide/troubleshooting.html#troubleshoot-kafkaversionslist-cfn-update-failure)
+     * in the *Amazon MSK Developer Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-kafkaversionslist)
-     * @param kafkaVersionsList 
+     * @param kafkaVersionsList The [versions of Apache
+     * Kafka](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) with
+     * which you can use this MSK configuration. 
      */
     public fun kafkaVersionsList(vararg kafkaVersionsList: String)
 
     /**
+     * Latest revision of the MSK configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-latestrevision)
-     * @param latestRevision 
+     * @param latestRevision Latest revision of the MSK configuration. 
      */
     public fun latestRevision(latestRevision: IResolvable)
 
     /**
+     * Latest revision of the MSK configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-latestrevision)
-     * @param latestRevision 
+     * @param latestRevision Latest revision of the MSK configuration. 
      */
     public fun latestRevision(latestRevision: LatestRevisionProperty)
 
     /**
+     * Latest revision of the MSK configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-latestrevision)
-     * @param latestRevision 
+     * @param latestRevision Latest revision of the MSK configuration. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5191f149a214eef0b3503b51de3a98cb0e8b852b1d529b6d7ab7c0d1f3e2e7c9")
     public fun latestRevision(latestRevision: LatestRevisionProperty.Builder.() -> Unit)
 
     /**
+     * The name of the configuration.
+     *
+     * Configuration names are strings that match the regex "^[0-9A-Za-z][0-9A-Za-z-]{0,}$".
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-name)
-     * @param name 
+     * @param name The name of the configuration. 
      */
     public fun name(name: String)
 
     /**
+     * Contents of the `server.properties` file. When using the console, the SDK, or the AWS CLI ,
+     * the contents of `server.properties` can be in plaintext.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-serverproperties)
-     * @param serverProperties 
+     * @param serverProperties Contents of the `server.properties` file. When using the console, the
+     * SDK, or the AWS CLI , the contents of `server.properties` can be in plaintext. 
      */
     public fun serverProperties(serverProperties: String)
   }
@@ -241,47 +325,97 @@ public open class CfnConfiguration(
         software.amazon.awscdk.services.msk.CfnConfiguration.Builder.create(scope, id)
 
     /**
+     * The description of the configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-description)
-     * @param description 
+     * @param description The description of the configuration. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
+     * The [versions of Apache
+     * Kafka](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) with
+     * which you can use this MSK configuration.
+     *
+     * When you update the `KafkaVersionsList` property, AWS CloudFormation recreates a new
+     * configuration with the updated property before deleting the old configuration. Such an update
+     * requires a [resource
+     * replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+     * . To successfully update `KafkaVersionsList` , you must also update the `Name` property in the
+     * same operation.
+     *
+     * If your configuration is attached with any clusters created using the AWS Management Console
+     * or AWS CLI , you'll need to manually delete the old configuration from the console after the
+     * update completes.
+     *
+     * For more information, see [Can’t update KafkaVersionsList in MSK
+     * configuration](https://docs.aws.amazon.com/msk/latest/developerguide/troubleshooting.html#troubleshoot-kafkaversionslist-cfn-update-failure)
+     * in the *Amazon MSK Developer Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-kafkaversionslist)
-     * @param kafkaVersionsList 
+     * @param kafkaVersionsList The [versions of Apache
+     * Kafka](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) with
+     * which you can use this MSK configuration. 
      */
     override fun kafkaVersionsList(kafkaVersionsList: List<String>) {
       cdkBuilder.kafkaVersionsList(kafkaVersionsList)
     }
 
     /**
+     * The [versions of Apache
+     * Kafka](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) with
+     * which you can use this MSK configuration.
+     *
+     * When you update the `KafkaVersionsList` property, AWS CloudFormation recreates a new
+     * configuration with the updated property before deleting the old configuration. Such an update
+     * requires a [resource
+     * replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+     * . To successfully update `KafkaVersionsList` , you must also update the `Name` property in the
+     * same operation.
+     *
+     * If your configuration is attached with any clusters created using the AWS Management Console
+     * or AWS CLI , you'll need to manually delete the old configuration from the console after the
+     * update completes.
+     *
+     * For more information, see [Can’t update KafkaVersionsList in MSK
+     * configuration](https://docs.aws.amazon.com/msk/latest/developerguide/troubleshooting.html#troubleshoot-kafkaversionslist-cfn-update-failure)
+     * in the *Amazon MSK Developer Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-kafkaversionslist)
-     * @param kafkaVersionsList 
+     * @param kafkaVersionsList The [versions of Apache
+     * Kafka](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) with
+     * which you can use this MSK configuration. 
      */
     override fun kafkaVersionsList(vararg kafkaVersionsList: String): Unit =
         kafkaVersionsList(kafkaVersionsList.toList())
 
     /**
+     * Latest revision of the MSK configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-latestrevision)
-     * @param latestRevision 
+     * @param latestRevision Latest revision of the MSK configuration. 
      */
     override fun latestRevision(latestRevision: IResolvable) {
       cdkBuilder.latestRevision(latestRevision.let(IResolvable.Companion::unwrap))
     }
 
     /**
+     * Latest revision of the MSK configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-latestrevision)
-     * @param latestRevision 
+     * @param latestRevision Latest revision of the MSK configuration. 
      */
     override fun latestRevision(latestRevision: LatestRevisionProperty) {
       cdkBuilder.latestRevision(latestRevision.let(LatestRevisionProperty.Companion::unwrap))
     }
 
     /**
+     * Latest revision of the MSK configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-latestrevision)
-     * @param latestRevision 
+     * @param latestRevision Latest revision of the MSK configuration. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5191f149a214eef0b3503b51de3a98cb0e8b852b1d529b6d7ab7c0d1f3e2e7c9")
@@ -289,16 +423,24 @@ public open class CfnConfiguration(
         latestRevision(LatestRevisionProperty(latestRevision))
 
     /**
+     * The name of the configuration.
+     *
+     * Configuration names are strings that match the regex "^[0-9A-Za-z][0-9A-Za-z-]{0,}$".
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-name)
-     * @param name 
+     * @param name The name of the configuration. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     /**
+     * Contents of the `server.properties` file. When using the console, the SDK, or the AWS CLI ,
+     * the contents of `server.properties` can be in plaintext.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-serverproperties)
-     * @param serverProperties 
+     * @param serverProperties Contents of the `server.properties` file. When using the console, the
+     * SDK, or the AWS CLI , the contents of `server.properties` can be in plaintext. 
      */
     override fun serverProperties(serverProperties: String) {
       cdkBuilder.serverProperties(serverProperties)
@@ -329,6 +471,8 @@ public open class CfnConfiguration(
   }
 
   /**
+   * Describes a configuration revision.
+   *
    * Example:
    *
    * ```
@@ -346,16 +490,22 @@ public open class CfnConfiguration(
    */
   public interface LatestRevisionProperty {
     /**
+     * The time when the configuration revision was created.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-configuration-latestrevision.html#cfn-msk-configuration-latestrevision-creationtime)
      */
     public fun creationTime(): String? = unwrap(this).getCreationTime()
 
     /**
+     * The description of the configuration revision.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-configuration-latestrevision.html#cfn-msk-configuration-latestrevision-description)
      */
     public fun description(): String? = unwrap(this).getDescription()
 
     /**
+     * The revision number.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-configuration-latestrevision.html#cfn-msk-configuration-latestrevision-revision)
      */
     public fun revision(): Number? = unwrap(this).getRevision()
@@ -366,17 +516,17 @@ public open class CfnConfiguration(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param creationTime the value to be set.
+       * @param creationTime The time when the configuration revision was created.
        */
       public fun creationTime(creationTime: String)
 
       /**
-       * @param description the value to be set.
+       * @param description The description of the configuration revision.
        */
       public fun description(description: String)
 
       /**
-       * @param revision the value to be set.
+       * @param revision The revision number.
        */
       public fun revision(revision: Number)
     }
@@ -387,21 +537,21 @@ public open class CfnConfiguration(
           software.amazon.awscdk.services.msk.CfnConfiguration.LatestRevisionProperty.builder()
 
       /**
-       * @param creationTime the value to be set.
+       * @param creationTime The time when the configuration revision was created.
        */
       override fun creationTime(creationTime: String) {
         cdkBuilder.creationTime(creationTime)
       }
 
       /**
-       * @param description the value to be set.
+       * @param description The description of the configuration revision.
        */
       override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
       /**
-       * @param revision the value to be set.
+       * @param revision The revision number.
        */
       override fun revision(revision: Number) {
         cdkBuilder.revision(revision)
@@ -417,16 +567,22 @@ public open class CfnConfiguration(
     ) : CdkObject(cdkObject),
         LatestRevisionProperty {
       /**
+       * The time when the configuration revision was created.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-configuration-latestrevision.html#cfn-msk-configuration-latestrevision-creationtime)
        */
       override fun creationTime(): String? = unwrap(this).getCreationTime()
 
       /**
+       * The description of the configuration revision.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-configuration-latestrevision.html#cfn-msk-configuration-latestrevision-description)
        */
       override fun description(): String? = unwrap(this).getDescription()
 
       /**
+       * The revision number.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-configuration-latestrevision.html#cfn-msk-configuration-latestrevision-revision)
        */
       override fun revision(): Number? = unwrap(this).getRevision()

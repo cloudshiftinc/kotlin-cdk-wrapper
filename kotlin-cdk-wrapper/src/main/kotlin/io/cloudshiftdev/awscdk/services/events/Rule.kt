@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.events
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -292,6 +293,17 @@ public open class Rule(
     public fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit)
 
     /**
+     * The role that is used for target invocation.
+     *
+     * Must be assumable by principal `events.amazonaws.com`.
+     *
+     * Default: - No role associated
+     *
+     * @param role The role that is used for target invocation. 
+     */
+    public fun role(role: IRole)
+
+    /**
      * A name for the rule.
      *
      * Default: AWS CloudFormation generates a unique physical ID.
@@ -430,6 +442,19 @@ public open class Rule(
         eventPattern(EventPattern(eventPattern))
 
     /**
+     * The role that is used for target invocation.
+     *
+     * Must be assumable by principal `events.amazonaws.com`.
+     *
+     * Default: - No role associated
+     *
+     * @param role The role that is used for target invocation. 
+     */
+    override fun role(role: IRole) {
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
+    }
+
+    /**
      * A name for the rule.
      *
      * Default: AWS CloudFormation generates a unique physical ID.
@@ -488,6 +513,9 @@ public open class Rule(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.events.Rule.PROPERTY_INJECTION_ID
+
     public fun fromEventRuleArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

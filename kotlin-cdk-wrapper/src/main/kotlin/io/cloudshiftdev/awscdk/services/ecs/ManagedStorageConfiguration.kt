@@ -18,18 +18,19 @@ import kotlin.Unit
  * Cluster cluster = Cluster.Builder.create(this, "Cluster")
  * .managedStorageConfiguration(ManagedStorageConfiguration.builder()
  * .fargateEphemeralStorageKmsKey(key)
+ * .kmsKey(key)
  * .build())
  * .build();
  * ```
  */
 public interface ManagedStorageConfiguration {
   /**
-   * KMS Key used to encrypt ECS Fargate ephemeral Storage.
+   * Customer KMS Key used to encrypt ECS Fargate ephemeral Storage.
    *
    * The configured KMS Key's policy will be modified to allow ECS to use the Key to encrypt the
    * ephemeral Storage for this cluster.
    *
-   * Default: No encryption will be applied
+   * Default: - Encrypted using AWS-managed key
    *
    * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-storage-encryption.html)
    */
@@ -37,16 +38,31 @@ public interface ManagedStorageConfiguration {
       unwrap(this).getFargateEphemeralStorageKmsKey()?.let(IKey::wrap)
 
   /**
+   * Customer KMS Key used to encrypt ECS managed Storage.
+   *
+   * Default: - Encrypted using AWS-managed key
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-managedstorageconfiguration.html#cfn-ecs-cluster-managedstorageconfiguration-kmskeyid)
+   */
+  public fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
+
+  /**
    * A builder for [ManagedStorageConfiguration]
    */
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param fargateEphemeralStorageKmsKey KMS Key used to encrypt ECS Fargate ephemeral Storage.
+     * @param fargateEphemeralStorageKmsKey Customer KMS Key used to encrypt ECS Fargate ephemeral
+     * Storage.
      * The configured KMS Key's policy will be modified to allow ECS to use the Key to encrypt the
      * ephemeral Storage for this cluster.
      */
     public fun fargateEphemeralStorageKmsKey(fargateEphemeralStorageKmsKey: IKey)
+
+    /**
+     * @param kmsKey Customer KMS Key used to encrypt ECS managed Storage.
+     */
+    public fun kmsKey(kmsKey: IKey)
   }
 
   private class BuilderImpl : Builder {
@@ -54,12 +70,20 @@ public interface ManagedStorageConfiguration {
         = software.amazon.awscdk.services.ecs.ManagedStorageConfiguration.builder()
 
     /**
-     * @param fargateEphemeralStorageKmsKey KMS Key used to encrypt ECS Fargate ephemeral Storage.
+     * @param fargateEphemeralStorageKmsKey Customer KMS Key used to encrypt ECS Fargate ephemeral
+     * Storage.
      * The configured KMS Key's policy will be modified to allow ECS to use the Key to encrypt the
      * ephemeral Storage for this cluster.
      */
     override fun fargateEphemeralStorageKmsKey(fargateEphemeralStorageKmsKey: IKey) {
       cdkBuilder.fargateEphemeralStorageKmsKey(fargateEphemeralStorageKmsKey.let(IKey.Companion::unwrap))
+    }
+
+    /**
+     * @param kmsKey Customer KMS Key used to encrypt ECS managed Storage.
+     */
+    override fun kmsKey(kmsKey: IKey) {
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.ManagedStorageConfiguration =
@@ -71,17 +95,26 @@ public interface ManagedStorageConfiguration {
   ) : CdkObject(cdkObject),
       ManagedStorageConfiguration {
     /**
-     * KMS Key used to encrypt ECS Fargate ephemeral Storage.
+     * Customer KMS Key used to encrypt ECS Fargate ephemeral Storage.
      *
      * The configured KMS Key's policy will be modified to allow ECS to use the Key to encrypt the
      * ephemeral Storage for this cluster.
      *
-     * Default: No encryption will be applied
+     * Default: - Encrypted using AWS-managed key
      *
      * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-storage-encryption.html)
      */
     override fun fargateEphemeralStorageKmsKey(): IKey? =
         unwrap(this).getFargateEphemeralStorageKmsKey()?.let(IKey::wrap)
+
+    /**
+     * Customer KMS Key used to encrypt ECS managed Storage.
+     *
+     * Default: - Encrypted using AWS-managed key
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-managedstorageconfiguration.html#cfn-ecs-cluster-managedstorageconfiguration-kmskeyid)
+     */
+    override fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
   }
 
   public companion object {

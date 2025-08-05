@@ -80,15 +80,15 @@ public open class CfnBrowserSettings(
   /**
    * Additional encryption context of the browser settings.
    */
-  public open fun additionalEncryptionContext(`value`: IResolvable) {
-    unwrap(this).setAdditionalEncryptionContext(`value`.let(IResolvable.Companion::unwrap))
+  public open fun additionalEncryptionContext(`value`: Map<String, String>) {
+    unwrap(this).setAdditionalEncryptionContext(`value`)
   }
 
   /**
    * Additional encryption context of the browser settings.
    */
-  public open fun additionalEncryptionContext(`value`: Map<String, String>) {
-    unwrap(this).setAdditionalEncryptionContext(`value`)
+  public open fun additionalEncryptionContext(`value`: IResolvable) {
+    unwrap(this).setAdditionalEncryptionContext(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -171,7 +171,7 @@ public open class CfnBrowserSettings(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-browsersettings.html#cfn-workspacesweb-browsersettings-additionalencryptioncontext)
      * @param additionalEncryptionContext Additional encryption context of the browser settings. 
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
+    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
     /**
      * Additional encryption context of the browser settings.
@@ -179,7 +179,7 @@ public open class CfnBrowserSettings(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-browsersettings.html#cfn-workspacesweb-browsersettings-additionalencryptioncontext)
      * @param additionalEncryptionContext Additional encryption context of the browser settings. 
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
     /**
      * A JSON string containing Chrome Enterprise policies that will be applied to all streaming
@@ -235,8 +235,8 @@ public open class CfnBrowserSettings(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-browsersettings.html#cfn-workspacesweb-browsersettings-additionalencryptioncontext)
      * @param additionalEncryptionContext Additional encryption context of the browser settings. 
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
+    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
     }
 
     /**
@@ -245,8 +245,8 @@ public open class CfnBrowserSettings(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-browsersettings.html#cfn-workspacesweb-browsersettings-additionalencryptioncontext)
      * @param additionalEncryptionContext Additional encryption context of the browser settings. 
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
     }
 
     /**

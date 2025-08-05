@@ -86,11 +86,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .emptyTargetResolutionMode("emptyTargetResolutionMode")
  * .build())
  * .experimentReportConfiguration(ExperimentTemplateExperimentReportConfigurationProperty.builder()
- * .dataSources(DataSourcesProperty.builder()
- * .cloudWatchDashboards(List.of(CloudWatchDashboardProperty.builder()
- * .dashboardIdentifier("dashboardIdentifier")
- * .build()))
- * .build())
  * .outputs(OutputsProperty.builder()
  * .experimentReportS3Configuration(ExperimentReportS3ConfigurationProperty.builder()
  * .bucketName("bucketName")
@@ -99,6 +94,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build())
  * // the properties below are optional
+ * .dataSources(DataSourcesProperty.builder()
+ * .cloudWatchDashboards(List.of(CloudWatchDashboardProperty.builder()
+ * .dashboardIdentifier("dashboardIdentifier")
+ * .build()))
+ * .build())
  * .postExperimentDuration("postExperimentDuration")
  * .preExperimentDuration("preExperimentDuration")
  * .build())
@@ -1225,12 +1225,12 @@ public open class CfnExperimentTemplate(
       /**
        * @param parameters The parameters for the action.
        */
-      public fun parameters(parameters: IResolvable)
+      public fun parameters(parameters: Map<String, String>)
 
       /**
        * @param parameters The parameters for the action.
        */
-      public fun parameters(parameters: Map<String, String>)
+      public fun parameters(parameters: IResolvable)
 
       /**
        * @param startAfter The name of the action that must be completed before the current action
@@ -1247,12 +1247,12 @@ public open class CfnExperimentTemplate(
       /**
        * @param targets The targets for the action.
        */
-      public fun targets(targets: IResolvable)
+      public fun targets(targets: Map<String, String>)
 
       /**
        * @param targets The targets for the action.
        */
-      public fun targets(targets: Map<String, String>)
+      public fun targets(targets: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1278,15 +1278,15 @@ public open class CfnExperimentTemplate(
       /**
        * @param parameters The parameters for the action.
        */
-      override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+      override fun parameters(parameters: Map<String, String>) {
+        cdkBuilder.parameters(parameters)
       }
 
       /**
        * @param parameters The parameters for the action.
        */
-      override fun parameters(parameters: Map<String, String>) {
-        cdkBuilder.parameters(parameters)
+      override fun parameters(parameters: IResolvable) {
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1306,15 +1306,15 @@ public open class CfnExperimentTemplate(
       /**
        * @param targets The targets for the action.
        */
-      override fun targets(targets: IResolvable) {
-        cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
+      override fun targets(targets: Map<String, String>) {
+        cdkBuilder.targets(targets)
       }
 
       /**
        * @param targets The targets for the action.
        */
-      override fun targets(targets: Map<String, String>) {
-        cdkBuilder.targets(targets)
+      override fun targets(targets: IResolvable) {
+        cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1507,11 +1507,6 @@ public open class CfnExperimentTemplate(
    * ExperimentTemplateExperimentReportConfigurationProperty
    * experimentTemplateExperimentReportConfigurationProperty =
    * ExperimentTemplateExperimentReportConfigurationProperty.builder()
-   * .dataSources(DataSourcesProperty.builder()
-   * .cloudWatchDashboards(List.of(CloudWatchDashboardProperty.builder()
-   * .dashboardIdentifier("dashboardIdentifier")
-   * .build()))
-   * .build())
    * .outputs(OutputsProperty.builder()
    * .experimentReportS3Configuration(ExperimentReportS3ConfigurationProperty.builder()
    * .bucketName("bucketName")
@@ -1520,6 +1515,11 @@ public open class CfnExperimentTemplate(
    * .build())
    * .build())
    * // the properties below are optional
+   * .dataSources(DataSourcesProperty.builder()
+   * .cloudWatchDashboards(List.of(CloudWatchDashboardProperty.builder()
+   * .dashboardIdentifier("dashboardIdentifier")
+   * .build()))
+   * .build())
    * .postExperimentDuration("postExperimentDuration")
    * .preExperimentDuration("preExperimentDuration")
    * .build();
@@ -1533,7 +1533,7 @@ public open class CfnExperimentTemplate(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration.html#cfn-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration-datasources)
      */
-    public fun dataSources(): Any
+    public fun dataSources(): Any? = unwrap(this).getDataSources()
 
     /**
      * The output destinations of the experiment report.
@@ -1562,17 +1562,17 @@ public open class CfnExperimentTemplate(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dataSources The data sources for the experiment report. 
+       * @param dataSources The data sources for the experiment report.
        */
       public fun dataSources(dataSources: IResolvable)
 
       /**
-       * @param dataSources The data sources for the experiment report. 
+       * @param dataSources The data sources for the experiment report.
        */
       public fun dataSources(dataSources: DataSourcesProperty)
 
       /**
-       * @param dataSources The data sources for the experiment report. 
+       * @param dataSources The data sources for the experiment report.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ced1ac539fa3a2d4676980970bb0151a18e16ccbbfc47024d65e8a097c8fcfef")
@@ -1615,21 +1615,21 @@ public open class CfnExperimentTemplate(
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentReportConfigurationProperty.builder()
 
       /**
-       * @param dataSources The data sources for the experiment report. 
+       * @param dataSources The data sources for the experiment report.
        */
       override fun dataSources(dataSources: IResolvable) {
         cdkBuilder.dataSources(dataSources.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param dataSources The data sources for the experiment report. 
+       * @param dataSources The data sources for the experiment report.
        */
       override fun dataSources(dataSources: DataSourcesProperty) {
         cdkBuilder.dataSources(dataSources.let(DataSourcesProperty.Companion::unwrap))
       }
 
       /**
-       * @param dataSources The data sources for the experiment report. 
+       * @param dataSources The data sources for the experiment report.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ced1ac539fa3a2d4676980970bb0151a18e16ccbbfc47024d65e8a097c8fcfef")
@@ -1688,7 +1688,7 @@ public open class CfnExperimentTemplate(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration.html#cfn-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration-datasources)
        */
-      override fun dataSources(): Any = unwrap(this).getDataSources()
+      override fun dataSources(): Any? = unwrap(this).getDataSources()
 
       /**
        * The output destinations of the experiment report.
@@ -2226,12 +2226,12 @@ public open class CfnExperimentTemplate(
       /**
        * @param parameters The parameters for the resource type.
        */
-      public fun parameters(parameters: IResolvable)
+      public fun parameters(parameters: Map<String, String>)
 
       /**
        * @param parameters The parameters for the resource type.
        */
-      public fun parameters(parameters: Map<String, String>)
+      public fun parameters(parameters: IResolvable)
 
       /**
        * @param resourceArns The Amazon Resource Names (ARNs) of the targets.
@@ -2246,12 +2246,12 @@ public open class CfnExperimentTemplate(
       /**
        * @param resourceTags The tags for the target resources.
        */
-      public fun resourceTags(resourceTags: IResolvable)
+      public fun resourceTags(resourceTags: Map<String, String>)
 
       /**
        * @param resourceTags The tags for the target resources.
        */
-      public fun resourceTags(resourceTags: Map<String, String>)
+      public fun resourceTags(resourceTags: IResolvable)
 
       /**
        * @param resourceType The resource type. 
@@ -2292,15 +2292,15 @@ public open class CfnExperimentTemplate(
       /**
        * @param parameters The parameters for the resource type.
        */
-      override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+      override fun parameters(parameters: Map<String, String>) {
+        cdkBuilder.parameters(parameters)
       }
 
       /**
        * @param parameters The parameters for the resource type.
        */
-      override fun parameters(parameters: Map<String, String>) {
-        cdkBuilder.parameters(parameters)
+      override fun parameters(parameters: IResolvable) {
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2319,15 +2319,15 @@ public open class CfnExperimentTemplate(
       /**
        * @param resourceTags The tags for the target resources.
        */
-      override fun resourceTags(resourceTags: IResolvable) {
-        cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
+      override fun resourceTags(resourceTags: Map<String, String>) {
+        cdkBuilder.resourceTags(resourceTags)
       }
 
       /**
        * @param resourceTags The tags for the target resources.
        */
-      override fun resourceTags(resourceTags: Map<String, String>) {
-        cdkBuilder.resourceTags(resourceTags)
+      override fun resourceTags(resourceTags: IResolvable) {
+        cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
       }
 
       /**

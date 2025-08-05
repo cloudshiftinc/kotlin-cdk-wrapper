@@ -286,6 +286,9 @@ public open class VirtualGateway(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.appmesh.VirtualGateway.PROPERTY_INJECTION_ID
+
     public fun fromVirtualGatewayArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -35,6 +35,15 @@ public open class MariaDbEngineVersion(
     public val VER_10_11: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_11)
 
+    public val VER_10_11_10: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_11_10)
+
+    public val VER_10_11_11: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_11_11)
+
+    public val VER_10_11_13: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_11_13)
+
     public val VER_10_11_4: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_11_4)
 
@@ -227,6 +236,15 @@ public open class MariaDbEngineVersion(
     public val VER_10_5_26: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_5_26)
 
+    public val VER_10_5_27: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_5_27)
+
+    public val VER_10_5_28: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_5_28)
+
+    public val VER_10_5_29: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_5_29)
+
     public val VER_10_5_8: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_5_8)
 
@@ -266,6 +284,15 @@ public open class MariaDbEngineVersion(
     public val VER_10_6_19: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_6_19)
 
+    public val VER_10_6_20: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_6_20)
+
+    public val VER_10_6_21: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_6_21)
+
+    public val VER_10_6_22: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_6_22)
+
     public val VER_10_6_5: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_6_5)
 
@@ -277,6 +304,15 @@ public open class MariaDbEngineVersion(
 
     public val VER_11_4_3: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_11_4_3)
+
+    public val VER_11_4_4: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_11_4_4)
+
+    public val VER_11_4_5: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_11_4_5)
+
+    public val VER_11_4_7: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_11_4_7)
 
     public fun of(mariaDbFullVersion: String, mariaDbMajorVersion: String): MariaDbEngineVersion =
         software.amazon.awscdk.services.rds.MariaDbEngineVersion.of(mariaDbFullVersion,

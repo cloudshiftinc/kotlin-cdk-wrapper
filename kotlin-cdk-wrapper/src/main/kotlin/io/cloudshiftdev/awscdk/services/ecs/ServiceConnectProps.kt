@@ -17,19 +17,24 @@ import kotlin.collections.List
  * ```
  * Cluster cluster;
  * TaskDefinition taskDefinition;
- * FargateService customService = FargateService.Builder.create(this, "CustomizedService")
+ * ContainerDefinitionOptions containerOptions;
+ * ContainerDefinition container = taskDefinition.addContainer("MyContainer", containerOptions);
+ * container.addPortMappings(PortMapping.builder()
+ * .name("api")
+ * .containerPort(8080)
+ * .build());
+ * cluster.addDefaultCloudMapNamespace(CloudMapNamespaceOptions.builder()
+ * .name("local")
+ * .build());
+ * FargateService service = FargateService.Builder.create(this, "Service")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
+ * .minHealthyPercent(100)
  * .serviceConnectConfiguration(ServiceConnectProps.builder()
- * .logDriver(LogDrivers.awsLogs(AwsLogDriverProps.builder()
- * .streamPrefix("sc-traffic")
- * .build()))
  * .services(List.of(ServiceConnectService.builder()
  * .portMappingName("api")
- * .dnsName("customized-api")
+ * .dnsName("http-api")
  * .port(80)
- * .ingressPortOverride(20040)
- * .discoveryName("custom")
  * .build()))
  * .build())
  * .build();

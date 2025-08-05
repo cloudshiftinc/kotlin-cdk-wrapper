@@ -22,6 +22,7 @@ import kotlin.collections.List
  * FargateService service = FargateService.Builder.create(this, "Service")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
+ * .minHealthyPercent(100)
  * .deploymentAlarms(DeploymentAlarmConfig.builder()
  * .alarmNames(List.of(elbAlarm.getAlarmName()))
  * .behavior(AlarmBehavior.ROLLBACK_ON_ALARM)

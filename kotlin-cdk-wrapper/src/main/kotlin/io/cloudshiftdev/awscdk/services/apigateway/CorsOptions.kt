@@ -72,8 +72,8 @@ public interface CorsOptions {
    * `[ * ]`.
    *
    * Responses will include the `Access-Control-Allow-Origin` response header.
-   * If `Cors.ALL_ORIGINS` is specified, the `Vary: Origin` response header will
-   * also be included.
+   * If specific origins are specified (not `Cors.ALL_ORIGINS`), the `Vary: Origin`
+   * response header will also be included.
    *
    * [Documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
    */
@@ -175,8 +175,8 @@ public interface CorsOptions {
      * `[ * ]`.
      *
      * Responses will include the `Access-Control-Allow-Origin` response header.
-     * If `Cors.ALL_ORIGINS` is specified, the `Vary: Origin` response header will
-     * also be included.
+     * If specific origins are specified (not `Cors.ALL_ORIGINS`), the `Vary: Origin`
+     * response header will also be included.
      */
     public fun allowOrigins(allowOrigins: List<String>)
 
@@ -187,8 +187,8 @@ public interface CorsOptions {
      * `[ * ]`.
      *
      * Responses will include the `Access-Control-Allow-Origin` response header.
-     * If `Cors.ALL_ORIGINS` is specified, the `Vary: Origin` response header will
-     * also be included.
+     * If specific origins are specified (not `Cors.ALL_ORIGINS`), the `Vary: Origin`
+     * response header will also be included.
      */
     public fun allowOrigins(vararg allowOrigins: String)
 
@@ -287,8 +287,8 @@ public interface CorsOptions {
      * `[ * ]`.
      *
      * Responses will include the `Access-Control-Allow-Origin` response header.
-     * If `Cors.ALL_ORIGINS` is specified, the `Vary: Origin` response header will
-     * also be included.
+     * If specific origins are specified (not `Cors.ALL_ORIGINS`), the `Vary: Origin`
+     * response header will also be included.
      */
     override fun allowOrigins(allowOrigins: List<String>) {
       cdkBuilder.allowOrigins(allowOrigins)
@@ -301,8 +301,8 @@ public interface CorsOptions {
      * `[ * ]`.
      *
      * Responses will include the `Access-Control-Allow-Origin` response header.
-     * If `Cors.ALL_ORIGINS` is specified, the `Vary: Origin` response header will
-     * also be included.
+     * If specific origins are specified (not `Cors.ALL_ORIGINS`), the `Vary: Origin`
+     * response header will also be included.
      */
     override fun allowOrigins(vararg allowOrigins: String): Unit =
         allowOrigins(allowOrigins.toList())
@@ -405,8 +405,8 @@ public interface CorsOptions {
      * `[ * ]`.
      *
      * Responses will include the `Access-Control-Allow-Origin` response header.
-     * If `Cors.ALL_ORIGINS` is specified, the `Vary: Origin` response header will
-     * also be included.
+     * If specific origins are specified (not `Cors.ALL_ORIGINS`), the `Vary: Origin`
+     * response header will also be included.
      *
      * [Documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
      */

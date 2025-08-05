@@ -22,6 +22,7 @@ import kotlin.collections.Map
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+ * Object onChange;
  * CfnVehicleProps cfnVehicleProps = CfnVehicleProps.builder()
  * .decoderManifestArn("decoderManifestArn")
  * .modelManifestArn("modelManifestArn")
@@ -30,6 +31,18 @@ import kotlin.collections.Map
  * .associationBehavior("associationBehavior")
  * .attributes(Map.of(
  * "attributesKey", "attributes"))
+ * .stateTemplates(List.of(StateTemplateAssociationProperty.builder()
+ * .identifier("identifier")
+ * .stateTemplateUpdateStrategy(StateTemplateUpdateStrategyProperty.builder()
+ * .onChange(onChange)
+ * .periodic(PeriodicStateTemplateUpdateStrategyProperty.builder()
+ * .stateTemplateUpdateRate(TimePeriodProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .build())
+ * .build())
+ * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -80,6 +93,15 @@ public interface CfnVehicleProps {
   public fun name(): String
 
   /**
+   * Associate state templates to track the state of the vehicle.
+   *
+   * State templates determine which signal updates the vehicle sends to the cloud.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-vehicle.html#cfn-iotfleetwise-vehicle-statetemplates)
+   */
+  public fun stateTemplates(): Any? = unwrap(this).getStateTemplates()
+
+  /**
    * Metadata which can be used to manage the vehicle.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-vehicle.html#cfn-iotfleetwise-vehicle-tags)
@@ -101,13 +123,13 @@ public interface CfnVehicleProps {
      * @param attributes Static information about a vehicle in a key-value pair.
      * For example: `"engine Type"` : `"v6"`
      */
-    public fun attributes(attributes: IResolvable)
+    public fun attributes(attributes: Map<String, String>)
 
     /**
      * @param attributes Static information about a vehicle in a key-value pair.
      * For example: `"engine Type"` : `"v6"`
      */
-    public fun attributes(attributes: Map<String, String>)
+    public fun attributes(attributes: IResolvable)
 
     /**
      * @param decoderManifestArn The Amazon Resource Name (ARN) of a decoder manifest associated
@@ -125,6 +147,24 @@ public interface CfnVehicleProps {
      * @param name The unique ID of the vehicle. 
      */
     public fun name(name: String)
+
+    /**
+     * @param stateTemplates Associate state templates to track the state of the vehicle.
+     * State templates determine which signal updates the vehicle sends to the cloud.
+     */
+    public fun stateTemplates(stateTemplates: IResolvable)
+
+    /**
+     * @param stateTemplates Associate state templates to track the state of the vehicle.
+     * State templates determine which signal updates the vehicle sends to the cloud.
+     */
+    public fun stateTemplates(stateTemplates: List<Any>)
+
+    /**
+     * @param stateTemplates Associate state templates to track the state of the vehicle.
+     * State templates determine which signal updates the vehicle sends to the cloud.
+     */
+    public fun stateTemplates(vararg stateTemplates: Any)
 
     /**
      * @param tags Metadata which can be used to manage the vehicle.
@@ -153,16 +193,16 @@ public interface CfnVehicleProps {
      * @param attributes Static information about a vehicle in a key-value pair.
      * For example: `"engine Type"` : `"v6"`
      */
-    override fun attributes(attributes: IResolvable) {
-      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
+    override fun attributes(attributes: Map<String, String>) {
+      cdkBuilder.attributes(attributes)
     }
 
     /**
      * @param attributes Static information about a vehicle in a key-value pair.
      * For example: `"engine Type"` : `"v6"`
      */
-    override fun attributes(attributes: Map<String, String>) {
-      cdkBuilder.attributes(attributes)
+    override fun attributes(attributes: IResolvable) {
+      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -187,6 +227,29 @@ public interface CfnVehicleProps {
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
+
+    /**
+     * @param stateTemplates Associate state templates to track the state of the vehicle.
+     * State templates determine which signal updates the vehicle sends to the cloud.
+     */
+    override fun stateTemplates(stateTemplates: IResolvable) {
+      cdkBuilder.stateTemplates(stateTemplates.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param stateTemplates Associate state templates to track the state of the vehicle.
+     * State templates determine which signal updates the vehicle sends to the cloud.
+     */
+    override fun stateTemplates(stateTemplates: List<Any>) {
+      cdkBuilder.stateTemplates(stateTemplates.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param stateTemplates Associate state templates to track the state of the vehicle.
+     * State templates determine which signal updates the vehicle sends to the cloud.
+     */
+    override fun stateTemplates(vararg stateTemplates: Any): Unit =
+        stateTemplates(stateTemplates.toList())
 
     /**
      * @param tags Metadata which can be used to manage the vehicle.
@@ -246,6 +309,15 @@ public interface CfnVehicleProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-vehicle.html#cfn-iotfleetwise-vehicle-name)
      */
     override fun name(): String = unwrap(this).getName()
+
+    /**
+     * Associate state templates to track the state of the vehicle.
+     *
+     * State templates determine which signal updates the vehicle sends to the cloud.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-vehicle.html#cfn-iotfleetwise-vehicle-statetemplates)
+     */
+    override fun stateTemplates(): Any? = unwrap(this).getStateTemplates()
 
     /**
      * Metadata which can be used to manage the vehicle.

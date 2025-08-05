@@ -12,12 +12,14 @@ import kotlin.String
  * Example:
  *
  * ```
- * SamlProvider provider = SamlProvider.Builder.create(this, "Provider")
- * .metadataDocument(SamlMetadataDocument.fromFile("/path/to/saml-metadata-document.xml"))
- * .build();
- * SamlPrincipal principal = new SamlPrincipal(provider, Map.of(
- * "StringEquals", Map.of(
- * "SAML:iss", "issuer")));
+ * vpc.addClientVpnEndpoint("Endpoint", ClientVpnEndpointOptions.builder()
+ * .cidr("10.100.0.0/16")
+ * .serverCertificateArn("arn:aws:acm:us-east-1:123456789012:certificate/server-certificate-id")
+ * // Mutual authentication
+ * .clientCertificateArn("arn:aws:acm:us-east-1:123456789012:certificate/client-certificate-id")
+ * // User-based authentication
+ * .userBasedAuthentication(ClientVpnUserBasedAuthentication.federated(samlProvider))
+ * .build());
  * ```
  */
 public abstract class SamlMetadataDocument(

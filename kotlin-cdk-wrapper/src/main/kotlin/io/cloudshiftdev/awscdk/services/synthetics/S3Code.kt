@@ -43,6 +43,7 @@ public open class S3Code(
    * @param _scope 
    * @param _handler 
    * @param _family 
+   * @param _runtimeName
    */
   public override fun bind(
     scope: Construct,
@@ -50,6 +51,23 @@ public open class S3Code(
     family: RuntimeFamily,
   ): CodeConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap), handler,
       family.let(RuntimeFamily.Companion::unwrap)).let(CodeConfig::wrap)
+
+  /**
+   * Called when the canary is initialized to allow this object to bind to the stack, add resources
+   * and have fun.
+   *
+   * @param _scope 
+   * @param _handler 
+   * @param _family 
+   * @param _runtimeName
+   */
+  public override fun bind(
+    scope: Construct,
+    handler: String,
+    family: RuntimeFamily,
+    runtimeName: String,
+  ): CodeConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap), handler,
+      family.let(RuntimeFamily.Companion::unwrap), runtimeName).let(CodeConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.S3Code): S3Code =

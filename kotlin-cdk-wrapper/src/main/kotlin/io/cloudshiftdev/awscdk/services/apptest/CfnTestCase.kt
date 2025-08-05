@@ -462,12 +462,12 @@ public open class CfnTestCase(
       /**
        * @param batchJobParameters The batch job parameters of the batch.
        */
-      public fun batchJobParameters(batchJobParameters: IResolvable)
+      public fun batchJobParameters(batchJobParameters: Map<String, String>)
 
       /**
        * @param batchJobParameters The batch job parameters of the batch.
        */
-      public fun batchJobParameters(batchJobParameters: Map<String, String>)
+      public fun batchJobParameters(batchJobParameters: IResolvable)
 
       /**
        * @param exportDataSetNames The export data set names of the batch.
@@ -495,15 +495,15 @@ public open class CfnTestCase(
       /**
        * @param batchJobParameters The batch job parameters of the batch.
        */
-      override fun batchJobParameters(batchJobParameters: IResolvable) {
-        cdkBuilder.batchJobParameters(batchJobParameters.let(IResolvable.Companion::unwrap))
+      override fun batchJobParameters(batchJobParameters: Map<String, String>) {
+        cdkBuilder.batchJobParameters(batchJobParameters)
       }
 
       /**
        * @param batchJobParameters The batch job parameters of the batch.
        */
-      override fun batchJobParameters(batchJobParameters: Map<String, String>) {
-        cdkBuilder.batchJobParameters(batchJobParameters)
+      override fun batchJobParameters(batchJobParameters: IResolvable) {
+        cdkBuilder.batchJobParameters(batchJobParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**

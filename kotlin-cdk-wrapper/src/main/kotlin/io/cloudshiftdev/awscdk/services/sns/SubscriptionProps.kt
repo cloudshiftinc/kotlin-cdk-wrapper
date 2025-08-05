@@ -18,7 +18,7 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.kinesisfirehose.alpha.DeliveryStream;
+ * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
  * DeliveryStream stream;
  * Topic topic = new Topic(this, "Topic");
  * Subscription.Builder.create(this, "Subscription")

@@ -28,24 +28,24 @@ import kotlin.jvm.JvmName
  * CfnDBInstanceProps cfnDBInstanceProps = CfnDBInstanceProps.builder()
  * .allocatedStorage("allocatedStorage")
  * .allowMajorVersionUpgrade(false)
+ * .applyImmediately(false)
  * .associatedRoles(List.of(DBInstanceRoleProperty.builder()
  * .featureName("featureName")
  * .roleArn("roleArn")
  * .build()))
  * .automaticBackupReplicationKmsKeyId("automaticBackupReplicationKmsKeyId")
  * .automaticBackupReplicationRegion("automaticBackupReplicationRegion")
+ * .automaticBackupReplicationRetentionPeriod(123)
  * .autoMinorVersionUpgrade(false)
  * .availabilityZone("availabilityZone")
  * .backupRetentionPeriod(123)
+ * .backupTarget("backupTarget")
  * .caCertificateIdentifier("caCertificateIdentifier")
- * .certificateDetails(CertificateDetailsProperty.builder()
- * .caIdentifier("caIdentifier")
- * .validTill("validTill")
- * .build())
  * .certificateRotationRestart(false)
  * .characterSetName("characterSetName")
  * .copyTagsToSnapshot(false)
  * .customIamInstanceProfile("customIamInstanceProfile")
+ * .databaseInsightsMode("databaseInsightsMode")
  * .dbClusterIdentifier("dbClusterIdentifier")
  * .dbClusterSnapshotIdentifier("dbClusterSnapshotIdentifier")
  * .dbInstanceClass("dbInstanceClass")
@@ -55,6 +55,7 @@ import kotlin.jvm.JvmName
  * .dbSecurityGroups(List.of("dbSecurityGroups"))
  * .dbSnapshotIdentifier("dbSnapshotIdentifier")
  * .dbSubnetGroupName("dbSubnetGroupName")
+ * .dbSystemId("dbSystemId")
  * .dedicatedLogVolume(false)
  * .deleteAutomatedBackups(false)
  * .deletionProtection(false)
@@ -67,11 +68,6 @@ import kotlin.jvm.JvmName
  * .enableCloudwatchLogsExports(List.of("enableCloudwatchLogsExports"))
  * .enableIamDatabaseAuthentication(false)
  * .enablePerformanceInsights(false)
- * .endpoint(EndpointProperty.builder()
- * .address("address")
- * .hostedZoneId("hostedZoneId")
- * .port("port")
- * .build())
  * .engine("engine")
  * .engineLifecycleSupport("engineLifecycleSupport")
  * .engineVersion("engineVersion")
@@ -216,6 +212,25 @@ public interface CfnDBInstanceProps {
   public fun allowMajorVersionUpgrade(): Any? = unwrap(this).getAllowMajorVersionUpgrade()
 
   /**
+   * Specifies whether changes to the DB instance and any pending modifications are applied
+   * immediately, regardless of the `PreferredMaintenanceWindow` setting.
+   *
+   * If set to `false` , changes are applied during the next maintenance window. Until RDS applies
+   * the changes, the DB instance remains in a drift state. As a result, the configuration doesn't
+   * fully reflect the requested modifications and temporarily diverges from the intended state.
+   *
+   * In addition to the settings described in [Modifying a DB
+   * instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+   * , this property also determines whether the DB instance reboots when a static parameter is
+   * modified in the associated DB parameter group.
+   *
+   * Default: `true`
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-applyimmediately)
+   */
+  public fun applyImmediately(): Any? = unwrap(this).getApplyImmediately()
+
+  /**
    * The AWS Identity and Access Management (IAM) roles associated with the DB instance.
    *
    * *Amazon Aurora*
@@ -254,6 +269,21 @@ public interface CfnDBInstanceProps {
    */
   public fun automaticBackupReplicationRegion(): String? =
       unwrap(this).getAutomaticBackupReplicationRegion()
+
+  /**
+   * The retention period for automated backups in a different AWS Region.
+   *
+   * Use this parameter to set a unique retention period that only applies to cross-Region automated
+   * backups. To enable automated backups in a different Region, specify a positive value for the
+   * `AutomaticBackupReplicationRegion` parameter.
+   *
+   * If not specified, this parameter defaults to the value of the `BackupRetentionPeriod`
+   * parameter. The maximum allowed value is 35.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-automaticbackupreplicationretentionperiod)
+   */
+  public fun automaticBackupReplicationRetentionPeriod(): Number? =
+      unwrap(this).getAutomaticBackupReplicationRetentionPeriod()
 
   /**
    * The Availability Zone (AZ) where the database will be created.
@@ -302,6 +332,25 @@ public interface CfnDBInstanceProps {
   public fun backupRetentionPeriod(): Number? = unwrap(this).getBackupRetentionPeriod()
 
   /**
+   * The location for storing automated backups and manual snapshots.
+   *
+   * Valid Values:
+   *
+   * * `local` (Dedicated Local Zone)
+   * * `outposts` ( AWS Outposts)
+   * * `region` ( AWS Region )
+   *
+   * Default: `region`
+   *
+   * For more information, see [Working with Amazon RDS on AWS
+   * Outposts](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html) in the
+   * *Amazon RDS User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-backuptarget)
+   */
+  public fun backupTarget(): String? = unwrap(this).getBackupTarget()
+
+  /**
    * The identifier of the CA certificate for this DB instance.
    *
    * For more information, see [Using SSL/TLS to encrypt a connection to a DB
@@ -313,13 +362,6 @@ public interface CfnDBInstanceProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-cacertificateidentifier)
    */
   public fun caCertificateIdentifier(): String? = unwrap(this).getCaCertificateIdentifier()
-
-  /**
-   * The details of the DB instance's server certificate.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-certificatedetails)
-   */
-  public fun certificateDetails(): Any? = unwrap(this).getCertificateDetails()
 
   /**
    * Specifies whether the DB instance is restarted when you rotate your SSL/TLS certificate.
@@ -396,6 +438,17 @@ public interface CfnDBInstanceProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-customiaminstanceprofile)
    */
   public fun customIamInstanceProfile(): String? = unwrap(this).getCustomIamInstanceProfile()
+
+  /**
+   * The mode of Database Insights to enable for the DB instance.
+   *
+   *
+   * Aurora DB instances inherit this value from the DB cluster, so you can't change this value.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-databaseinsightsmode)
+   */
+  public fun databaseInsightsMode(): String? = unwrap(this).getDatabaseInsightsMode()
 
   /**
    * The identifier of the DB cluster that this DB instance will belong to.
@@ -620,9 +673,11 @@ public interface CfnDBInstanceProps {
    * create the database and it rolls back the stack.
    *
    * Some DB instance properties aren't valid when you restore from a snapshot, such as the
-   * `MasterUsername` and `MasterUserPassword` properties. For information about the properties that
-   * you can specify, see the `RestoreDBInstanceFromDBSnapshot` action in the *Amazon RDS API
-   * Reference* .
+   * `MasterUsername` and `MasterUserPassword` properties, and the point-in-time recovery properties
+   * `RestoreTime` and `UseLatestRestorableTime` . For information about the properties that you can
+   * specify, see the
+   * [`RestoreDBInstanceFromDBSnapshot`](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_RestoreDBInstanceFromDBSnapshot.html)
+   * action in the *Amazon RDS API Reference* .
    *
    * After you restore a DB instance with a `DBSnapshotIdentifier` property, you must specify the
    * same `DBSnapshotIdentifier` property for any future updates to the DB instance. When you specify
@@ -661,7 +716,9 @@ public interface CfnDBInstanceProps {
    *
    * If you update this value, the new subnet group must be a subnet group in a new VPC.
    *
-   * If there's no DB subnet group, then the DB instance isn't a VPC DB instance.
+   * If you don't specify a DB subnet group, RDS uses the default DB subnet group if one exists. If
+   * a default DB subnet group does not exist, and you don't specify a `DBSubnetGroupName` , the DB
+   * instance fails to launch.
    *
    * For more information about using Amazon RDS in a VPC, see [Amazon VPC and Amazon
    * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon RDS User
@@ -673,6 +730,18 @@ public interface CfnDBInstanceProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-dbsubnetgroupname)
    */
   public fun dbSubnetGroupName(): String? = unwrap(this).getDbSubnetGroupName()
+
+  /**
+   * The Oracle system identifier (SID), which is the name of the Oracle database instance that
+   * manages your database files.
+   *
+   * In this context, the term "Oracle database instance" refers exclusively to the system global
+   * area (SGA) and Oracle background processes. If you don't specify a SID, the value defaults to
+   * `RDSCDB` . The Oracle SID is also the name of your CDB.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-dbsystemid)
+   */
+  public fun dbSystemId(): String? = unwrap(this).getDbSystemId()
 
   /**
    * Indicates whether the DB instance has a dedicated log volume (DLV) enabled.
@@ -863,17 +932,6 @@ public interface CfnDBInstanceProps {
   public fun enablePerformanceInsights(): Any? = unwrap(this).getEnablePerformanceInsights()
 
   /**
-   * The connection endpoint for the DB instance.
-   *
-   *
-   * The endpoint might not be shown for instances with the status of `creating` .
-   *
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-endpoint)
-   */
-  public fun endpoint(): Any? = unwrap(this).getEndpoint()
-
-  /**
    * The name of the database engine to use for this DB instance.
    *
    * Not every database engine is available in every AWS Region.
@@ -930,9 +988,10 @@ public interface CfnDBInstanceProps {
    *
    * You can use this setting to enroll your DB instance into Amazon RDS Extended Support. With RDS
    * Extended Support, you can run the selected major engine version on your DB instance past the end
-   * of standard support for that engine version. For more information, see [Using Amazon RDS Extended
-   * Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
-   * *Amazon RDS User Guide* .
+   * of standard support for that engine version. For more information, see [Amazon RDS Extended
+   * Support with Amazon
+   * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the *Amazon
+   * RDS User Guide* .
    *
    * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
    *
@@ -1279,10 +1338,8 @@ public interface CfnDBInstanceProps {
    *
    * You can't set the `AvailabilityZone` parameter if the DB instance is a Multi-AZ deployment.
    *
-   * This setting doesn't apply to the following DB instances:
-   *
-   * * Amazon Aurora (DB instance Availability Zones (AZs) are managed by the DB cluster.)
-   * * RDS Custom
+   * This setting doesn't apply to Amazon Aurora because the DB instance Availability Zones (AZs)
+   * are managed by the DB cluster.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-multiaz)
    */
@@ -1346,6 +1403,9 @@ public interface CfnDBInstanceProps {
 
   /**
    * The number of days to retain Performance Insights data.
+   *
+   * When creating a DB instance without enabling Performance Insights, you can't specify the
+   * parameter `PerformanceInsightsRetentionPeriod` .
    *
    * This setting doesn't apply to RDS Custom DB instances.
    *
@@ -1421,9 +1481,9 @@ public interface CfnDBInstanceProps {
    * Format: `ddd:hh24:mi-ddd:hh24:mi`
    *
    * The default is a 30-minute window selected at random from an 8-hour block of time for each AWS
-   * Region, occurring on a random day of the week. To see the time blocks available, see [Adjusting
-   * the Preferred DB Instance Maintenance
-   * Window](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow)
+   * Region, occurring on a random day of the week. To see the time blocks available, see [Maintaining
+   * a DB
+   * instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow)
    * in the *Amazon RDS User Guide.*
    *
    *
@@ -1634,8 +1694,9 @@ public interface CfnDBInstanceProps {
   public fun storageEncrypted(): Any? = unwrap(this).getStorageEncrypted()
 
   /**
-   * Specifies the storage throughput value for the DB instance. This setting applies only to the
-   * `gp3` storage type.
+   * Specifies the storage throughput value, in mebibyte per second (MiBps), for the DB instance.
+   *
+   * This setting applies only to the `gp3` storage type.
    *
    * This setting doesn't apply to RDS Custom or Amazon Aurora.
    *
@@ -1653,7 +1714,7 @@ public interface CfnDBInstanceProps {
    *
    * Valid Values: `gp2 | gp3 | io1 | io2 | standard`
    *
-   * Default: `io1` , if the `Iops` parameter is specified. Otherwise, `gp2` .
+   * Default: `io1` , if the `Iops` parameter is specified. Otherwise, `gp3` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-storagetype)
    */
@@ -1859,6 +1920,38 @@ public interface CfnDBInstanceProps {
     public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable)
 
     /**
+     * @param applyImmediately Specifies whether changes to the DB instance and any pending
+     * modifications are applied immediately, regardless of the `PreferredMaintenanceWindow` setting.
+     * If set to `false` , changes are applied during the next maintenance window. Until RDS applies
+     * the changes, the DB instance remains in a drift state. As a result, the configuration doesn't
+     * fully reflect the requested modifications and temporarily diverges from the intended state.
+     *
+     * In addition to the settings described in [Modifying a DB
+     * instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+     * , this property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     *
+     * Default: `true`
+     */
+    public fun applyImmediately(applyImmediately: Boolean)
+
+    /**
+     * @param applyImmediately Specifies whether changes to the DB instance and any pending
+     * modifications are applied immediately, regardless of the `PreferredMaintenanceWindow` setting.
+     * If set to `false` , changes are applied during the next maintenance window. Until RDS applies
+     * the changes, the DB instance remains in a drift state. As a result, the configuration doesn't
+     * fully reflect the requested modifications and temporarily diverges from the intended state.
+     *
+     * In addition to the settings described in [Modifying a DB
+     * instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+     * , this property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     *
+     * Default: `true`
+     */
+    public fun applyImmediately(applyImmediately: IResolvable)
+
+    /**
      * @param associatedRoles The AWS Identity and Access Management (IAM) roles associated with the
      * DB instance.
      * *Amazon Aurora*
@@ -1914,6 +2007,19 @@ public interface CfnDBInstanceProps {
     public fun automaticBackupReplicationRegion(automaticBackupReplicationRegion: String)
 
     /**
+     * @param automaticBackupReplicationRetentionPeriod The retention period for automated backups
+     * in a different AWS Region.
+     * Use this parameter to set a unique retention period that only applies to cross-Region
+     * automated backups. To enable automated backups in a different Region, specify a positive value
+     * for the `AutomaticBackupReplicationRegion` parameter.
+     *
+     * If not specified, this parameter defaults to the value of the `BackupRetentionPeriod`
+     * parameter. The maximum allowed value is 35.
+     */
+    public
+        fun automaticBackupReplicationRetentionPeriod(automaticBackupReplicationRetentionPeriod: Number)
+
+    /**
      * @param availabilityZone The Availability Zone (AZ) where the database will be created.
      * For information on AWS Regions and Availability Zones, see [Regions and Availability
      * Zones](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)
@@ -1954,6 +2060,22 @@ public interface CfnDBInstanceProps {
     public fun backupRetentionPeriod(backupRetentionPeriod: Number)
 
     /**
+     * @param backupTarget The location for storing automated backups and manual snapshots.
+     * Valid Values:
+     *
+     * * `local` (Dedicated Local Zone)
+     * * `outposts` ( AWS Outposts)
+     * * `region` ( AWS Region )
+     *
+     * Default: `region`
+     *
+     * For more information, see [Working with Amazon RDS on AWS
+     * Outposts](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html) in the
+     * *Amazon RDS User Guide* .
+     */
+    public fun backupTarget(backupTarget: String)
+
+    /**
      * @param caCertificateIdentifier The identifier of the CA certificate for this DB instance.
      * For more information, see [Using SSL/TLS to encrypt a connection to a DB
      * instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html) in the
@@ -1962,24 +2084,6 @@ public interface CfnDBInstanceProps {
      * the *Amazon Aurora User Guide* .
      */
     public fun caCertificateIdentifier(caCertificateIdentifier: String)
-
-    /**
-     * @param certificateDetails The details of the DB instance's server certificate.
-     */
-    public fun certificateDetails(certificateDetails: IResolvable)
-
-    /**
-     * @param certificateDetails The details of the DB instance's server certificate.
-     */
-    public fun certificateDetails(certificateDetails: CfnDBInstance.CertificateDetailsProperty)
-
-    /**
-     * @param certificateDetails The details of the DB instance's server certificate.
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("a28138b43a7cdc1c509818c0a0be65dc8ab95a94f0468fe9a64f453036e07923")
-    public
-        fun certificateDetails(certificateDetails: CfnDBInstance.CertificateDetailsProperty.Builder.() -> Unit)
 
     /**
      * @param certificateRotationRestart Specifies whether the DB instance is restarted when you
@@ -2083,6 +2187,13 @@ public interface CfnDBInstanceProps {
      * in the *Amazon RDS User Guide* .
      */
     public fun customIamInstanceProfile(customIamInstanceProfile: String)
+
+    /**
+     * @param databaseInsightsMode The mode of Database Insights to enable for the DB instance.
+     *
+     * Aurora DB instances inherit this value from the DB cluster, so you can't change this value.
+     */
+    public fun databaseInsightsMode(databaseInsightsMode: String)
 
     /**
      * @param dbClusterIdentifier The identifier of the DB cluster that this DB instance will belong
@@ -2332,9 +2443,11 @@ public interface CfnDBInstanceProps {
      * CloudFormation can't create the database and it rolls back the stack.
      *
      * Some DB instance properties aren't valid when you restore from a snapshot, such as the
-     * `MasterUsername` and `MasterUserPassword` properties. For information about the properties that
-     * you can specify, see the `RestoreDBInstanceFromDBSnapshot` action in the *Amazon RDS API
-     * Reference* .
+     * `MasterUsername` and `MasterUserPassword` properties, and the point-in-time recovery properties
+     * `RestoreTime` and `UseLatestRestorableTime` . For information about the properties that you can
+     * specify, see the
+     * [`RestoreDBInstanceFromDBSnapshot`](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_RestoreDBInstanceFromDBSnapshot.html)
+     * action in the *Amazon RDS API Reference* .
      *
      * After you restore a DB instance with a `DBSnapshotIdentifier` property, you must specify the
      * same `DBSnapshotIdentifier` property for any future updates to the DB instance. When you specify
@@ -2370,7 +2483,9 @@ public interface CfnDBInstanceProps {
      * @param dbSubnetGroupName A DB subnet group to associate with the DB instance.
      * If you update this value, the new subnet group must be a subnet group in a new VPC.
      *
-     * If there's no DB subnet group, then the DB instance isn't a VPC DB instance.
+     * If you don't specify a DB subnet group, RDS uses the default DB subnet group if one exists.
+     * If a default DB subnet group does not exist, and you don't specify a `DBSubnetGroupName` , the
+     * DB instance fails to launch.
      *
      * For more information about using Amazon RDS in a VPC, see [Amazon VPC and Amazon
      * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon RDS
@@ -2380,6 +2495,15 @@ public interface CfnDBInstanceProps {
      * the DB cluster. If specified, the setting must match the DB cluster setting.
      */
     public fun dbSubnetGroupName(dbSubnetGroupName: String)
+
+    /**
+     * @param dbSystemId The Oracle system identifier (SID), which is the name of the Oracle
+     * database instance that manages your database files.
+     * In this context, the term "Oracle database instance" refers exclusively to the system global
+     * area (SGA) and Oracle background processes. If you don't specify a SID, the value defaults to
+     * `RDSCDB` . The Oracle SID is also the name of your CDB.
+     */
+    public fun dbSystemId(dbSystemId: String)
 
     /**
      * @param dedicatedLogVolume Indicates whether the DB instance has a dedicated log volume (DLV)
@@ -2648,29 +2772,6 @@ public interface CfnDBInstanceProps {
     public fun enablePerformanceInsights(enablePerformanceInsights: IResolvable)
 
     /**
-     * @param endpoint The connection endpoint for the DB instance.
-     *
-     * The endpoint might not be shown for instances with the status of `creating` .
-     */
-    public fun endpoint(endpoint: IResolvable)
-
-    /**
-     * @param endpoint The connection endpoint for the DB instance.
-     *
-     * The endpoint might not be shown for instances with the status of `creating` .
-     */
-    public fun endpoint(endpoint: CfnDBInstance.EndpointProperty)
-
-    /**
-     * @param endpoint The connection endpoint for the DB instance.
-     *
-     * The endpoint might not be shown for instances with the status of `creating` .
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("7947e5819bba5c75904e4610cb293a5a01f8267d49b226670e67ad3e8b09537d")
-    public fun endpoint(endpoint: CfnDBInstance.EndpointProperty.Builder.() -> Unit)
-
-    /**
      * @param engine The name of the database engine to use for this DB instance.
      * Not every database engine is available in every AWS Region.
      *
@@ -2723,9 +2824,10 @@ public interface CfnDBInstanceProps {
      *
      * You can use this setting to enroll your DB instance into Amazon RDS Extended Support. With
      * RDS Extended Support, you can run the selected major engine version on your DB instance past the
-     * end of standard support for that engine version. For more information, see [Using Amazon RDS
-     * Extended Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html)
-     * in the *Amazon RDS User Guide* .
+     * end of standard support for that engine version. For more information, see [Amazon RDS Extended
+     * Support with Amazon
+     * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
+     * *Amazon RDS User Guide* .
      *
      * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
      *
@@ -3072,10 +3174,8 @@ public interface CfnDBInstanceProps {
      * @param multiAz Specifies whether the DB instance is a Multi-AZ deployment.
      * You can't set the `AvailabilityZone` parameter if the DB instance is a Multi-AZ deployment.
      *
-     * This setting doesn't apply to the following DB instances:
-     *
-     * * Amazon Aurora (DB instance Availability Zones (AZs) are managed by the DB cluster.)
-     * * RDS Custom
+     * This setting doesn't apply to Amazon Aurora because the DB instance Availability Zones (AZs)
+     * are managed by the DB cluster.
      */
     public fun multiAz(multiAz: Boolean)
 
@@ -3083,10 +3183,8 @@ public interface CfnDBInstanceProps {
      * @param multiAz Specifies whether the DB instance is a Multi-AZ deployment.
      * You can't set the `AvailabilityZone` parameter if the DB instance is a Multi-AZ deployment.
      *
-     * This setting doesn't apply to the following DB instances:
-     *
-     * * Amazon Aurora (DB instance Availability Zones (AZs) are managed by the DB cluster.)
-     * * RDS Custom
+     * This setting doesn't apply to Amazon Aurora because the DB instance Availability Zones (AZs)
+     * are managed by the DB cluster.
      */
     public fun multiAz(multiAz: IResolvable)
 
@@ -3139,6 +3237,9 @@ public interface CfnDBInstanceProps {
     /**
      * @param performanceInsightsRetentionPeriod The number of days to retain Performance Insights
      * data.
+     * When creating a DB instance without enabling Performance Insights, you can't specify the
+     * parameter `PerformanceInsightsRetentionPeriod` .
+     *
      * This setting doesn't apply to RDS Custom DB instances.
      *
      * Valid Values:
@@ -3205,8 +3306,8 @@ public interface CfnDBInstanceProps {
      *
      * The default is a 30-minute window selected at random from an 8-hour block of time for each
      * AWS Region, occurring on a random day of the week. To see the time blocks available, see
-     * [Adjusting the Preferred DB Instance Maintenance
-     * Window](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow)
+     * [Maintaining a DB
+     * instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow)
      * in the *Amazon RDS User Guide.*
      *
      *
@@ -3435,8 +3536,10 @@ public interface CfnDBInstanceProps {
     public fun storageEncrypted(storageEncrypted: IResolvable)
 
     /**
-     * @param storageThroughput Specifies the storage throughput value for the DB instance. This
-     * setting applies only to the `gp3` storage type.
+     * @param storageThroughput Specifies the storage throughput value, in mebibyte per second
+     * (MiBps), for the DB instance.
+     * This setting applies only to the `gp3` storage type.
+     *
      * This setting doesn't apply to RDS Custom or Amazon Aurora.
      */
     public fun storageThroughput(storageThroughput: Number)
@@ -3451,7 +3554,7 @@ public interface CfnDBInstanceProps {
      *
      * Valid Values: `gp2 | gp3 | io1 | io2 | standard`
      *
-     * Default: `io1` , if the `Iops` parameter is specified. Otherwise, `gp2` .
+     * Default: `io1` , if the `Iops` parameter is specified. Otherwise, `gp3` .
      */
     public fun storageType(storageType: String)
 
@@ -3713,6 +3816,42 @@ public interface CfnDBInstanceProps {
     }
 
     /**
+     * @param applyImmediately Specifies whether changes to the DB instance and any pending
+     * modifications are applied immediately, regardless of the `PreferredMaintenanceWindow` setting.
+     * If set to `false` , changes are applied during the next maintenance window. Until RDS applies
+     * the changes, the DB instance remains in a drift state. As a result, the configuration doesn't
+     * fully reflect the requested modifications and temporarily diverges from the intended state.
+     *
+     * In addition to the settings described in [Modifying a DB
+     * instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+     * , this property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     *
+     * Default: `true`
+     */
+    override fun applyImmediately(applyImmediately: Boolean) {
+      cdkBuilder.applyImmediately(applyImmediately)
+    }
+
+    /**
+     * @param applyImmediately Specifies whether changes to the DB instance and any pending
+     * modifications are applied immediately, regardless of the `PreferredMaintenanceWindow` setting.
+     * If set to `false` , changes are applied during the next maintenance window. Until RDS applies
+     * the changes, the DB instance remains in a drift state. As a result, the configuration doesn't
+     * fully reflect the requested modifications and temporarily diverges from the intended state.
+     *
+     * In addition to the settings described in [Modifying a DB
+     * instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+     * , this property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     *
+     * Default: `true`
+     */
+    override fun applyImmediately(applyImmediately: IResolvable) {
+      cdkBuilder.applyImmediately(applyImmediately.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
      * @param associatedRoles The AWS Identity and Access Management (IAM) roles associated with the
      * DB instance.
      * *Amazon Aurora*
@@ -3781,6 +3920,21 @@ public interface CfnDBInstanceProps {
     }
 
     /**
+     * @param automaticBackupReplicationRetentionPeriod The retention period for automated backups
+     * in a different AWS Region.
+     * Use this parameter to set a unique retention period that only applies to cross-Region
+     * automated backups. To enable automated backups in a different Region, specify a positive value
+     * for the `AutomaticBackupReplicationRegion` parameter.
+     *
+     * If not specified, this parameter defaults to the value of the `BackupRetentionPeriod`
+     * parameter. The maximum allowed value is 35.
+     */
+    override
+        fun automaticBackupReplicationRetentionPeriod(automaticBackupReplicationRetentionPeriod: Number) {
+      cdkBuilder.automaticBackupReplicationRetentionPeriod(automaticBackupReplicationRetentionPeriod)
+    }
+
+    /**
      * @param availabilityZone The Availability Zone (AZ) where the database will be created.
      * For information on AWS Regions and Availability Zones, see [Regions and Availability
      * Zones](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)
@@ -3825,6 +3979,24 @@ public interface CfnDBInstanceProps {
     }
 
     /**
+     * @param backupTarget The location for storing automated backups and manual snapshots.
+     * Valid Values:
+     *
+     * * `local` (Dedicated Local Zone)
+     * * `outposts` ( AWS Outposts)
+     * * `region` ( AWS Region )
+     *
+     * Default: `region`
+     *
+     * For more information, see [Working with Amazon RDS on AWS
+     * Outposts](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html) in the
+     * *Amazon RDS User Guide* .
+     */
+    override fun backupTarget(backupTarget: String) {
+      cdkBuilder.backupTarget(backupTarget)
+    }
+
+    /**
      * @param caCertificateIdentifier The identifier of the CA certificate for this DB instance.
      * For more information, see [Using SSL/TLS to encrypt a connection to a DB
      * instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html) in the
@@ -3835,29 +4007,6 @@ public interface CfnDBInstanceProps {
     override fun caCertificateIdentifier(caCertificateIdentifier: String) {
       cdkBuilder.caCertificateIdentifier(caCertificateIdentifier)
     }
-
-    /**
-     * @param certificateDetails The details of the DB instance's server certificate.
-     */
-    override fun certificateDetails(certificateDetails: IResolvable) {
-      cdkBuilder.certificateDetails(certificateDetails.let(IResolvable.Companion::unwrap))
-    }
-
-    /**
-     * @param certificateDetails The details of the DB instance's server certificate.
-     */
-    override fun certificateDetails(certificateDetails: CfnDBInstance.CertificateDetailsProperty) {
-      cdkBuilder.certificateDetails(certificateDetails.let(CfnDBInstance.CertificateDetailsProperty.Companion::unwrap))
-    }
-
-    /**
-     * @param certificateDetails The details of the DB instance's server certificate.
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("a28138b43a7cdc1c509818c0a0be65dc8ab95a94f0468fe9a64f453036e07923")
-    override
-        fun certificateDetails(certificateDetails: CfnDBInstance.CertificateDetailsProperty.Builder.() -> Unit):
-        Unit = certificateDetails(CfnDBInstance.CertificateDetailsProperty(certificateDetails))
 
     /**
      * @param certificateRotationRestart Specifies whether the DB instance is restarted when you
@@ -3972,6 +4121,15 @@ public interface CfnDBInstanceProps {
      */
     override fun customIamInstanceProfile(customIamInstanceProfile: String) {
       cdkBuilder.customIamInstanceProfile(customIamInstanceProfile)
+    }
+
+    /**
+     * @param databaseInsightsMode The mode of Database Insights to enable for the DB instance.
+     *
+     * Aurora DB instances inherit this value from the DB cluster, so you can't change this value.
+     */
+    override fun databaseInsightsMode(databaseInsightsMode: String) {
+      cdkBuilder.databaseInsightsMode(databaseInsightsMode)
     }
 
     /**
@@ -4237,9 +4395,11 @@ public interface CfnDBInstanceProps {
      * CloudFormation can't create the database and it rolls back the stack.
      *
      * Some DB instance properties aren't valid when you restore from a snapshot, such as the
-     * `MasterUsername` and `MasterUserPassword` properties. For information about the properties that
-     * you can specify, see the `RestoreDBInstanceFromDBSnapshot` action in the *Amazon RDS API
-     * Reference* .
+     * `MasterUsername` and `MasterUserPassword` properties, and the point-in-time recovery properties
+     * `RestoreTime` and `UseLatestRestorableTime` . For information about the properties that you can
+     * specify, see the
+     * [`RestoreDBInstanceFromDBSnapshot`](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_RestoreDBInstanceFromDBSnapshot.html)
+     * action in the *Amazon RDS API Reference* .
      *
      * After you restore a DB instance with a `DBSnapshotIdentifier` property, you must specify the
      * same `DBSnapshotIdentifier` property for any future updates to the DB instance. When you specify
@@ -4277,7 +4437,9 @@ public interface CfnDBInstanceProps {
      * @param dbSubnetGroupName A DB subnet group to associate with the DB instance.
      * If you update this value, the new subnet group must be a subnet group in a new VPC.
      *
-     * If there's no DB subnet group, then the DB instance isn't a VPC DB instance.
+     * If you don't specify a DB subnet group, RDS uses the default DB subnet group if one exists.
+     * If a default DB subnet group does not exist, and you don't specify a `DBSubnetGroupName` , the
+     * DB instance fails to launch.
      *
      * For more information about using Amazon RDS in a VPC, see [Amazon VPC and Amazon
      * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon RDS
@@ -4288,6 +4450,17 @@ public interface CfnDBInstanceProps {
      */
     override fun dbSubnetGroupName(dbSubnetGroupName: String) {
       cdkBuilder.dbSubnetGroupName(dbSubnetGroupName)
+    }
+
+    /**
+     * @param dbSystemId The Oracle system identifier (SID), which is the name of the Oracle
+     * database instance that manages your database files.
+     * In this context, the term "Oracle database instance" refers exclusively to the system global
+     * area (SGA) and Oracle background processes. If you don't specify a SID, the value defaults to
+     * `RDSCDB` . The Oracle SID is also the name of your CDB.
+     */
+    override fun dbSystemId(dbSystemId: String) {
+      cdkBuilder.dbSystemId(dbSystemId)
     }
 
     /**
@@ -4593,34 +4766,6 @@ public interface CfnDBInstanceProps {
     }
 
     /**
-     * @param endpoint The connection endpoint for the DB instance.
-     *
-     * The endpoint might not be shown for instances with the status of `creating` .
-     */
-    override fun endpoint(endpoint: IResolvable) {
-      cdkBuilder.endpoint(endpoint.let(IResolvable.Companion::unwrap))
-    }
-
-    /**
-     * @param endpoint The connection endpoint for the DB instance.
-     *
-     * The endpoint might not be shown for instances with the status of `creating` .
-     */
-    override fun endpoint(endpoint: CfnDBInstance.EndpointProperty) {
-      cdkBuilder.endpoint(endpoint.let(CfnDBInstance.EndpointProperty.Companion::unwrap))
-    }
-
-    /**
-     * @param endpoint The connection endpoint for the DB instance.
-     *
-     * The endpoint might not be shown for instances with the status of `creating` .
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("7947e5819bba5c75904e4610cb293a5a01f8267d49b226670e67ad3e8b09537d")
-    override fun endpoint(endpoint: CfnDBInstance.EndpointProperty.Builder.() -> Unit): Unit =
-        endpoint(CfnDBInstance.EndpointProperty(endpoint))
-
-    /**
      * @param engine The name of the database engine to use for this DB instance.
      * Not every database engine is available in every AWS Region.
      *
@@ -4675,9 +4820,10 @@ public interface CfnDBInstanceProps {
      *
      * You can use this setting to enroll your DB instance into Amazon RDS Extended Support. With
      * RDS Extended Support, you can run the selected major engine version on your DB instance past the
-     * end of standard support for that engine version. For more information, see [Using Amazon RDS
-     * Extended Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html)
-     * in the *Amazon RDS User Guide* .
+     * end of standard support for that engine version. For more information, see [Amazon RDS Extended
+     * Support with Amazon
+     * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
+     * *Amazon RDS User Guide* .
      *
      * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
      *
@@ -5053,10 +5199,8 @@ public interface CfnDBInstanceProps {
      * @param multiAz Specifies whether the DB instance is a Multi-AZ deployment.
      * You can't set the `AvailabilityZone` parameter if the DB instance is a Multi-AZ deployment.
      *
-     * This setting doesn't apply to the following DB instances:
-     *
-     * * Amazon Aurora (DB instance Availability Zones (AZs) are managed by the DB cluster.)
-     * * RDS Custom
+     * This setting doesn't apply to Amazon Aurora because the DB instance Availability Zones (AZs)
+     * are managed by the DB cluster.
      */
     override fun multiAz(multiAz: Boolean) {
       cdkBuilder.multiAz(multiAz)
@@ -5066,10 +5210,8 @@ public interface CfnDBInstanceProps {
      * @param multiAz Specifies whether the DB instance is a Multi-AZ deployment.
      * You can't set the `AvailabilityZone` parameter if the DB instance is a Multi-AZ deployment.
      *
-     * This setting doesn't apply to the following DB instances:
-     *
-     * * Amazon Aurora (DB instance Availability Zones (AZs) are managed by the DB cluster.)
-     * * RDS Custom
+     * This setting doesn't apply to Amazon Aurora because the DB instance Availability Zones (AZs)
+     * are managed by the DB cluster.
      */
     override fun multiAz(multiAz: IResolvable) {
       cdkBuilder.multiAz(multiAz.let(IResolvable.Companion::unwrap))
@@ -5132,6 +5274,9 @@ public interface CfnDBInstanceProps {
     /**
      * @param performanceInsightsRetentionPeriod The number of days to retain Performance Insights
      * data.
+     * When creating a DB instance without enabling Performance Insights, you can't specify the
+     * parameter `PerformanceInsightsRetentionPeriod` .
+     *
      * This setting doesn't apply to RDS Custom DB instances.
      *
      * Valid Values:
@@ -5204,8 +5349,8 @@ public interface CfnDBInstanceProps {
      *
      * The default is a 30-minute window selected at random from an 8-hour block of time for each
      * AWS Region, occurring on a random day of the week. To see the time blocks available, see
-     * [Adjusting the Preferred DB Instance Maintenance
-     * Window](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow)
+     * [Maintaining a DB
+     * instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow)
      * in the *Amazon RDS User Guide.*
      *
      *
@@ -5465,8 +5610,10 @@ public interface CfnDBInstanceProps {
     }
 
     /**
-     * @param storageThroughput Specifies the storage throughput value for the DB instance. This
-     * setting applies only to the `gp3` storage type.
+     * @param storageThroughput Specifies the storage throughput value, in mebibyte per second
+     * (MiBps), for the DB instance.
+     * This setting applies only to the `gp3` storage type.
+     *
      * This setting doesn't apply to RDS Custom or Amazon Aurora.
      */
     override fun storageThroughput(storageThroughput: Number) {
@@ -5483,7 +5630,7 @@ public interface CfnDBInstanceProps {
      *
      * Valid Values: `gp2 | gp3 | io1 | io2 | standard`
      *
-     * Default: `io1` , if the `Iops` parameter is specified. Otherwise, `gp2` .
+     * Default: `io1` , if the `Iops` parameter is specified. Otherwise, `gp3` .
      */
     override fun storageType(storageType: String) {
       cdkBuilder.storageType(storageType)
@@ -5754,6 +5901,25 @@ public interface CfnDBInstanceProps {
     override fun allowMajorVersionUpgrade(): Any? = unwrap(this).getAllowMajorVersionUpgrade()
 
     /**
+     * Specifies whether changes to the DB instance and any pending modifications are applied
+     * immediately, regardless of the `PreferredMaintenanceWindow` setting.
+     *
+     * If set to `false` , changes are applied during the next maintenance window. Until RDS applies
+     * the changes, the DB instance remains in a drift state. As a result, the configuration doesn't
+     * fully reflect the requested modifications and temporarily diverges from the intended state.
+     *
+     * In addition to the settings described in [Modifying a DB
+     * instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+     * , this property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     *
+     * Default: `true`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-applyimmediately)
+     */
+    override fun applyImmediately(): Any? = unwrap(this).getApplyImmediately()
+
+    /**
      * The AWS Identity and Access Management (IAM) roles associated with the DB instance.
      *
      * *Amazon Aurora*
@@ -5793,6 +5959,21 @@ public interface CfnDBInstanceProps {
      */
     override fun automaticBackupReplicationRegion(): String? =
         unwrap(this).getAutomaticBackupReplicationRegion()
+
+    /**
+     * The retention period for automated backups in a different AWS Region.
+     *
+     * Use this parameter to set a unique retention period that only applies to cross-Region
+     * automated backups. To enable automated backups in a different Region, specify a positive value
+     * for the `AutomaticBackupReplicationRegion` parameter.
+     *
+     * If not specified, this parameter defaults to the value of the `BackupRetentionPeriod`
+     * parameter. The maximum allowed value is 35.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-automaticbackupreplicationretentionperiod)
+     */
+    override fun automaticBackupReplicationRetentionPeriod(): Number? =
+        unwrap(this).getAutomaticBackupReplicationRetentionPeriod()
 
     /**
      * The Availability Zone (AZ) where the database will be created.
@@ -5841,6 +6022,25 @@ public interface CfnDBInstanceProps {
     override fun backupRetentionPeriod(): Number? = unwrap(this).getBackupRetentionPeriod()
 
     /**
+     * The location for storing automated backups and manual snapshots.
+     *
+     * Valid Values:
+     *
+     * * `local` (Dedicated Local Zone)
+     * * `outposts` ( AWS Outposts)
+     * * `region` ( AWS Region )
+     *
+     * Default: `region`
+     *
+     * For more information, see [Working with Amazon RDS on AWS
+     * Outposts](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html) in the
+     * *Amazon RDS User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-backuptarget)
+     */
+    override fun backupTarget(): String? = unwrap(this).getBackupTarget()
+
+    /**
      * The identifier of the CA certificate for this DB instance.
      *
      * For more information, see [Using SSL/TLS to encrypt a connection to a DB
@@ -5852,13 +6052,6 @@ public interface CfnDBInstanceProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-cacertificateidentifier)
      */
     override fun caCertificateIdentifier(): String? = unwrap(this).getCaCertificateIdentifier()
-
-    /**
-     * The details of the DB instance's server certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-certificatedetails)
-     */
-    override fun certificateDetails(): Any? = unwrap(this).getCertificateDetails()
 
     /**
      * Specifies whether the DB instance is restarted when you rotate your SSL/TLS certificate.
@@ -5935,6 +6128,17 @@ public interface CfnDBInstanceProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-customiaminstanceprofile)
      */
     override fun customIamInstanceProfile(): String? = unwrap(this).getCustomIamInstanceProfile()
+
+    /**
+     * The mode of Database Insights to enable for the DB instance.
+     *
+     *
+     * Aurora DB instances inherit this value from the DB cluster, so you can't change this value.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-databaseinsightsmode)
+     */
+    override fun databaseInsightsMode(): String? = unwrap(this).getDatabaseInsightsMode()
 
     /**
      * The identifier of the DB cluster that this DB instance will belong to.
@@ -6164,9 +6368,11 @@ public interface CfnDBInstanceProps {
      * CloudFormation can't create the database and it rolls back the stack.
      *
      * Some DB instance properties aren't valid when you restore from a snapshot, such as the
-     * `MasterUsername` and `MasterUserPassword` properties. For information about the properties that
-     * you can specify, see the `RestoreDBInstanceFromDBSnapshot` action in the *Amazon RDS API
-     * Reference* .
+     * `MasterUsername` and `MasterUserPassword` properties, and the point-in-time recovery properties
+     * `RestoreTime` and `UseLatestRestorableTime` . For information about the properties that you can
+     * specify, see the
+     * [`RestoreDBInstanceFromDBSnapshot`](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_RestoreDBInstanceFromDBSnapshot.html)
+     * action in the *Amazon RDS API Reference* .
      *
      * After you restore a DB instance with a `DBSnapshotIdentifier` property, you must specify the
      * same `DBSnapshotIdentifier` property for any future updates to the DB instance. When you specify
@@ -6205,7 +6411,9 @@ public interface CfnDBInstanceProps {
      *
      * If you update this value, the new subnet group must be a subnet group in a new VPC.
      *
-     * If there's no DB subnet group, then the DB instance isn't a VPC DB instance.
+     * If you don't specify a DB subnet group, RDS uses the default DB subnet group if one exists.
+     * If a default DB subnet group does not exist, and you don't specify a `DBSubnetGroupName` , the
+     * DB instance fails to launch.
      *
      * For more information about using Amazon RDS in a VPC, see [Amazon VPC and Amazon
      * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon RDS
@@ -6217,6 +6425,18 @@ public interface CfnDBInstanceProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-dbsubnetgroupname)
      */
     override fun dbSubnetGroupName(): String? = unwrap(this).getDbSubnetGroupName()
+
+    /**
+     * The Oracle system identifier (SID), which is the name of the Oracle database instance that
+     * manages your database files.
+     *
+     * In this context, the term "Oracle database instance" refers exclusively to the system global
+     * area (SGA) and Oracle background processes. If you don't specify a SID, the value defaults to
+     * `RDSCDB` . The Oracle SID is also the name of your CDB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-dbsystemid)
+     */
+    override fun dbSystemId(): String? = unwrap(this).getDbSystemId()
 
     /**
      * Indicates whether the DB instance has a dedicated log volume (DLV) enabled.
@@ -6408,17 +6628,6 @@ public interface CfnDBInstanceProps {
     override fun enablePerformanceInsights(): Any? = unwrap(this).getEnablePerformanceInsights()
 
     /**
-     * The connection endpoint for the DB instance.
-     *
-     *
-     * The endpoint might not be shown for instances with the status of `creating` .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-endpoint)
-     */
-    override fun endpoint(): Any? = unwrap(this).getEndpoint()
-
-    /**
      * The name of the database engine to use for this DB instance.
      *
      * Not every database engine is available in every AWS Region.
@@ -6475,9 +6684,10 @@ public interface CfnDBInstanceProps {
      *
      * You can use this setting to enroll your DB instance into Amazon RDS Extended Support. With
      * RDS Extended Support, you can run the selected major engine version on your DB instance past the
-     * end of standard support for that engine version. For more information, see [Using Amazon RDS
-     * Extended Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html)
-     * in the *Amazon RDS User Guide* .
+     * end of standard support for that engine version. For more information, see [Amazon RDS Extended
+     * Support with Amazon
+     * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
+     * *Amazon RDS User Guide* .
      *
      * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
      *
@@ -6824,10 +7034,8 @@ public interface CfnDBInstanceProps {
      *
      * You can't set the `AvailabilityZone` parameter if the DB instance is a Multi-AZ deployment.
      *
-     * This setting doesn't apply to the following DB instances:
-     *
-     * * Amazon Aurora (DB instance Availability Zones (AZs) are managed by the DB cluster.)
-     * * RDS Custom
+     * This setting doesn't apply to Amazon Aurora because the DB instance Availability Zones (AZs)
+     * are managed by the DB cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-multiaz)
      */
@@ -6892,6 +7100,9 @@ public interface CfnDBInstanceProps {
 
     /**
      * The number of days to retain Performance Insights data.
+     *
+     * When creating a DB instance without enabling Performance Insights, you can't specify the
+     * parameter `PerformanceInsightsRetentionPeriod` .
      *
      * This setting doesn't apply to RDS Custom DB instances.
      *
@@ -6969,8 +7180,8 @@ public interface CfnDBInstanceProps {
      *
      * The default is a 30-minute window selected at random from an 8-hour block of time for each
      * AWS Region, occurring on a random day of the week. To see the time blocks available, see
-     * [Adjusting the Preferred DB Instance Maintenance
-     * Window](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow)
+     * [Maintaining a DB
+     * instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow)
      * in the *Amazon RDS User Guide.*
      *
      *
@@ -7183,8 +7394,9 @@ public interface CfnDBInstanceProps {
     override fun storageEncrypted(): Any? = unwrap(this).getStorageEncrypted()
 
     /**
-     * Specifies the storage throughput value for the DB instance. This setting applies only to the
-     * `gp3` storage type.
+     * Specifies the storage throughput value, in mebibyte per second (MiBps), for the DB instance.
+     *
+     * This setting applies only to the `gp3` storage type.
      *
      * This setting doesn't apply to RDS Custom or Amazon Aurora.
      *
@@ -7203,7 +7415,7 @@ public interface CfnDBInstanceProps {
      *
      * Valid Values: `gp2 | gp3 | io1 | io2 | standard`
      *
-     * Default: `io1` , if the `Iops` parameter is specified. Otherwise, `gp2` .
+     * Default: `io1` , if the `Iops` parameter is specified. Otherwise, `gp3` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-storagetype)
      */

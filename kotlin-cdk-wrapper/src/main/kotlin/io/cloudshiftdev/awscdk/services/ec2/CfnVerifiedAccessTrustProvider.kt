@@ -45,6 +45,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .tenantId("tenantId")
  * .build())
  * .deviceTrustProviderType("deviceTrustProviderType")
+ * .nativeApplicationOidcOptions(NativeApplicationOidcOptionsProperty.builder()
+ * .authorizationEndpoint("authorizationEndpoint")
+ * .clientId("clientId")
+ * .clientSecret("clientSecret")
+ * .issuer("issuer")
+ * .publicSigningKeyEndpoint("publicSigningKeyEndpoint")
+ * .scope("scope")
+ * .tokenEndpoint("tokenEndpoint")
+ * .userInfoEndpoint("userInfoEndpoint")
+ * .build())
  * .oidcOptions(OidcOptionsProperty.builder()
  * .authorizationEndpoint("authorizationEndpoint")
  * .clientId("clientId")
@@ -164,6 +174,35 @@ public open class CfnVerifiedAccessTrustProvider(
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
+
+  /**
+   * The OpenID Connect (OIDC) options.
+   */
+  public open fun nativeApplicationOidcOptions(): Any? =
+      unwrap(this).getNativeApplicationOidcOptions()
+
+  /**
+   * The OpenID Connect (OIDC) options.
+   */
+  public open fun nativeApplicationOidcOptions(`value`: IResolvable) {
+    unwrap(this).setNativeApplicationOidcOptions(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The OpenID Connect (OIDC) options.
+   */
+  public open fun nativeApplicationOidcOptions(`value`: NativeApplicationOidcOptionsProperty) {
+    unwrap(this).setNativeApplicationOidcOptions(`value`.let(NativeApplicationOidcOptionsProperty.Companion::unwrap))
+  }
+
+  /**
+   * The OpenID Connect (OIDC) options.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("efd3a9688548d55ba735ecf9d82613d5cb2824c53b15fe12606d2eb78919b7e6")
+  public open
+      fun nativeApplicationOidcOptions(`value`: NativeApplicationOidcOptionsProperty.Builder.() -> Unit):
+      Unit = nativeApplicationOidcOptions(NativeApplicationOidcOptionsProperty(`value`))
 
   /**
    * The options for an OpenID Connect-compatible user-identity trust provider.
@@ -326,6 +365,34 @@ public open class CfnVerifiedAccessTrustProvider(
     public fun deviceTrustProviderType(deviceTrustProviderType: String)
 
     /**
+     * The OpenID Connect (OIDC) options.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions)
+     * @param nativeApplicationOidcOptions The OpenID Connect (OIDC) options. 
+     */
+    public fun nativeApplicationOidcOptions(nativeApplicationOidcOptions: IResolvable)
+
+    /**
+     * The OpenID Connect (OIDC) options.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions)
+     * @param nativeApplicationOidcOptions The OpenID Connect (OIDC) options. 
+     */
+    public
+        fun nativeApplicationOidcOptions(nativeApplicationOidcOptions: NativeApplicationOidcOptionsProperty)
+
+    /**
+     * The OpenID Connect (OIDC) options.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions)
+     * @param nativeApplicationOidcOptions The OpenID Connect (OIDC) options. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9a68801a774071764ed401a89a70e6ef874d0ba05791e2922572dd73b36c4d10")
+    public
+        fun nativeApplicationOidcOptions(nativeApplicationOidcOptions: NativeApplicationOidcOptionsProperty.Builder.() -> Unit)
+
+    /**
      * The options for an OpenID Connect-compatible user-identity trust provider.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html#cfn-ec2-verifiedaccesstrustprovider-oidcoptions)
@@ -479,6 +546,40 @@ public open class CfnVerifiedAccessTrustProvider(
     override fun deviceTrustProviderType(deviceTrustProviderType: String) {
       cdkBuilder.deviceTrustProviderType(deviceTrustProviderType)
     }
+
+    /**
+     * The OpenID Connect (OIDC) options.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions)
+     * @param nativeApplicationOidcOptions The OpenID Connect (OIDC) options. 
+     */
+    override fun nativeApplicationOidcOptions(nativeApplicationOidcOptions: IResolvable) {
+      cdkBuilder.nativeApplicationOidcOptions(nativeApplicationOidcOptions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The OpenID Connect (OIDC) options.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions)
+     * @param nativeApplicationOidcOptions The OpenID Connect (OIDC) options. 
+     */
+    override
+        fun nativeApplicationOidcOptions(nativeApplicationOidcOptions: NativeApplicationOidcOptionsProperty) {
+      cdkBuilder.nativeApplicationOidcOptions(nativeApplicationOidcOptions.let(NativeApplicationOidcOptionsProperty.Companion::unwrap))
+    }
+
+    /**
+     * The OpenID Connect (OIDC) options.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions)
+     * @param nativeApplicationOidcOptions The OpenID Connect (OIDC) options. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9a68801a774071764ed401a89a70e6ef874d0ba05791e2922572dd73b36c4d10")
+    override
+        fun nativeApplicationOidcOptions(nativeApplicationOidcOptions: NativeApplicationOidcOptionsProperty.Builder.() -> Unit):
+        Unit =
+        nativeApplicationOidcOptions(NativeApplicationOidcOptionsProperty(nativeApplicationOidcOptions))
 
     /**
      * The options for an OpenID Connect-compatible user-identity trust provider.
@@ -728,6 +829,280 @@ public open class CfnVerifiedAccessTrustProvider(
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty
+    }
+  }
+
+  /**
+   * Describes the OpenID Connect (OIDC) options.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * NativeApplicationOidcOptionsProperty nativeApplicationOidcOptionsProperty =
+   * NativeApplicationOidcOptionsProperty.builder()
+   * .authorizationEndpoint("authorizationEndpoint")
+   * .clientId("clientId")
+   * .clientSecret("clientSecret")
+   * .issuer("issuer")
+   * .publicSigningKeyEndpoint("publicSigningKeyEndpoint")
+   * .scope("scope")
+   * .tokenEndpoint("tokenEndpoint")
+   * .userInfoEndpoint("userInfoEndpoint")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html)
+   */
+  public interface NativeApplicationOidcOptionsProperty {
+    /**
+     * The authorization endpoint of the IdP.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions-authorizationendpoint)
+     */
+    public fun authorizationEndpoint(): String? = unwrap(this).getAuthorizationEndpoint()
+
+    /**
+     * The OAuth 2.0 client identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions-clientid)
+     */
+    public fun clientId(): String? = unwrap(this).getClientId()
+
+    /**
+     * The OAuth 2.0 client secret.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions-clientsecret)
+     */
+    public fun clientSecret(): String? = unwrap(this).getClientSecret()
+
+    /**
+     * The OIDC issuer identifier of the IdP.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions-issuer)
+     */
+    public fun issuer(): String? = unwrap(this).getIssuer()
+
+    /**
+     * The public signing key endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions-publicsigningkeyendpoint)
+     */
+    public fun publicSigningKeyEndpoint(): String? = unwrap(this).getPublicSigningKeyEndpoint()
+
+    /**
+     * The set of user claims to be requested from the IdP.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions-scope)
+     */
+    public fun scope(): String? = unwrap(this).getScope()
+
+    /**
+     * The token endpoint of the IdP.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions-tokenendpoint)
+     */
+    public fun tokenEndpoint(): String? = unwrap(this).getTokenEndpoint()
+
+    /**
+     * The user info endpoint of the IdP.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions-userinfoendpoint)
+     */
+    public fun userInfoEndpoint(): String? = unwrap(this).getUserInfoEndpoint()
+
+    /**
+     * A builder for [NativeApplicationOidcOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param authorizationEndpoint The authorization endpoint of the IdP.
+       */
+      public fun authorizationEndpoint(authorizationEndpoint: String)
+
+      /**
+       * @param clientId The OAuth 2.0 client identifier.
+       */
+      public fun clientId(clientId: String)
+
+      /**
+       * @param clientSecret The OAuth 2.0 client secret.
+       */
+      public fun clientSecret(clientSecret: String)
+
+      /**
+       * @param issuer The OIDC issuer identifier of the IdP.
+       */
+      public fun issuer(issuer: String)
+
+      /**
+       * @param publicSigningKeyEndpoint The public signing key endpoint.
+       */
+      public fun publicSigningKeyEndpoint(publicSigningKeyEndpoint: String)
+
+      /**
+       * @param scope The set of user claims to be requested from the IdP.
+       */
+      public fun scope(scope: String)
+
+      /**
+       * @param tokenEndpoint The token endpoint of the IdP.
+       */
+      public fun tokenEndpoint(tokenEndpoint: String)
+
+      /**
+       * @param userInfoEndpoint The user info endpoint of the IdP.
+       */
+      public fun userInfoEndpoint(userInfoEndpoint: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.NativeApplicationOidcOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.NativeApplicationOidcOptionsProperty.builder()
+
+      /**
+       * @param authorizationEndpoint The authorization endpoint of the IdP.
+       */
+      override fun authorizationEndpoint(authorizationEndpoint: String) {
+        cdkBuilder.authorizationEndpoint(authorizationEndpoint)
+      }
+
+      /**
+       * @param clientId The OAuth 2.0 client identifier.
+       */
+      override fun clientId(clientId: String) {
+        cdkBuilder.clientId(clientId)
+      }
+
+      /**
+       * @param clientSecret The OAuth 2.0 client secret.
+       */
+      override fun clientSecret(clientSecret: String) {
+        cdkBuilder.clientSecret(clientSecret)
+      }
+
+      /**
+       * @param issuer The OIDC issuer identifier of the IdP.
+       */
+      override fun issuer(issuer: String) {
+        cdkBuilder.issuer(issuer)
+      }
+
+      /**
+       * @param publicSigningKeyEndpoint The public signing key endpoint.
+       */
+      override fun publicSigningKeyEndpoint(publicSigningKeyEndpoint: String) {
+        cdkBuilder.publicSigningKeyEndpoint(publicSigningKeyEndpoint)
+      }
+
+      /**
+       * @param scope The set of user claims to be requested from the IdP.
+       */
+      override fun scope(scope: String) {
+        cdkBuilder.scope(scope)
+      }
+
+      /**
+       * @param tokenEndpoint The token endpoint of the IdP.
+       */
+      override fun tokenEndpoint(tokenEndpoint: String) {
+        cdkBuilder.tokenEndpoint(tokenEndpoint)
+      }
+
+      /**
+       * @param userInfoEndpoint The user info endpoint of the IdP.
+       */
+      override fun userInfoEndpoint(userInfoEndpoint: String) {
+        cdkBuilder.userInfoEndpoint(userInfoEndpoint)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.NativeApplicationOidcOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.NativeApplicationOidcOptionsProperty,
+    ) : CdkObject(cdkObject),
+        NativeApplicationOidcOptionsProperty {
+      /**
+       * The authorization endpoint of the IdP.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions-authorizationendpoint)
+       */
+      override fun authorizationEndpoint(): String? = unwrap(this).getAuthorizationEndpoint()
+
+      /**
+       * The OAuth 2.0 client identifier.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions-clientid)
+       */
+      override fun clientId(): String? = unwrap(this).getClientId()
+
+      /**
+       * The OAuth 2.0 client secret.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions-clientsecret)
+       */
+      override fun clientSecret(): String? = unwrap(this).getClientSecret()
+
+      /**
+       * The OIDC issuer identifier of the IdP.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions-issuer)
+       */
+      override fun issuer(): String? = unwrap(this).getIssuer()
+
+      /**
+       * The public signing key endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions-publicsigningkeyendpoint)
+       */
+      override fun publicSigningKeyEndpoint(): String? = unwrap(this).getPublicSigningKeyEndpoint()
+
+      /**
+       * The set of user claims to be requested from the IdP.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions-scope)
+       */
+      override fun scope(): String? = unwrap(this).getScope()
+
+      /**
+       * The token endpoint of the IdP.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions-tokenendpoint)
+       */
+      override fun tokenEndpoint(): String? = unwrap(this).getTokenEndpoint()
+
+      /**
+       * The user info endpoint of the IdP.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions-userinfoendpoint)
+       */
+      override fun userInfoEndpoint(): String? = unwrap(this).getUserInfoEndpoint()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NativeApplicationOidcOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.NativeApplicationOidcOptionsProperty):
+          NativeApplicationOidcOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NativeApplicationOidcOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NativeApplicationOidcOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.NativeApplicationOidcOptionsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.NativeApplicationOidcOptionsProperty
     }
   }
 

@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
+import kotlin.jvm.JvmName
 
 /**
  * Construction properties of a CodeBuild [Fleet].
@@ -36,6 +37,18 @@ public interface FleetProps {
    * Minimum value of 1.
    */
   public fun baseCapacity(): Number
+
+  /**
+   * The compute configuration of the compute fleet.
+   *
+   * This is only required if `computeType` is set to ATTRIBUTE_BASED.
+   *
+   * Default: - do not specify compute configuration
+   *
+   * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment-reserved-capacity.types)
+   */
+  public fun computeConfiguration(): ComputeConfiguration? =
+      unwrap(this).getComputeConfiguration()?.let(ComputeConfiguration::wrap)
 
   /**
    * The instance type of the compute fleet.
@@ -70,6 +83,20 @@ public interface FleetProps {
     public fun baseCapacity(baseCapacity: Number)
 
     /**
+     * @param computeConfiguration The compute configuration of the compute fleet.
+     * This is only required if `computeType` is set to ATTRIBUTE_BASED.
+     */
+    public fun computeConfiguration(computeConfiguration: ComputeConfiguration)
+
+    /**
+     * @param computeConfiguration The compute configuration of the compute fleet.
+     * This is only required if `computeType` is set to ATTRIBUTE_BASED.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9bd09276c80fca6ebda717a1aadcc0c0d64a62acf3e5cb9375a6cb2c9fe532a6")
+    public fun computeConfiguration(computeConfiguration: ComputeConfiguration.Builder.() -> Unit)
+
+    /**
      * @param computeType The instance type of the compute fleet. 
      */
     public fun computeType(computeType: FleetComputeType)
@@ -98,6 +125,24 @@ public interface FleetProps {
     override fun baseCapacity(baseCapacity: Number) {
       cdkBuilder.baseCapacity(baseCapacity)
     }
+
+    /**
+     * @param computeConfiguration The compute configuration of the compute fleet.
+     * This is only required if `computeType` is set to ATTRIBUTE_BASED.
+     */
+    override fun computeConfiguration(computeConfiguration: ComputeConfiguration) {
+      cdkBuilder.computeConfiguration(computeConfiguration.let(ComputeConfiguration.Companion::unwrap))
+    }
+
+    /**
+     * @param computeConfiguration The compute configuration of the compute fleet.
+     * This is only required if `computeType` is set to ATTRIBUTE_BASED.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9bd09276c80fca6ebda717a1aadcc0c0d64a62acf3e5cb9375a6cb2c9fe532a6")
+    override
+        fun computeConfiguration(computeConfiguration: ComputeConfiguration.Builder.() -> Unit):
+        Unit = computeConfiguration(ComputeConfiguration(computeConfiguration))
 
     /**
      * @param computeType The instance type of the compute fleet. 
@@ -135,6 +180,18 @@ public interface FleetProps {
      * Minimum value of 1.
      */
     override fun baseCapacity(): Number = unwrap(this).getBaseCapacity()
+
+    /**
+     * The compute configuration of the compute fleet.
+     *
+     * This is only required if `computeType` is set to ATTRIBUTE_BASED.
+     *
+     * Default: - do not specify compute configuration
+     *
+     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment-reserved-capacity.types)
+     */
+    override fun computeConfiguration(): ComputeConfiguration? =
+        unwrap(this).getComputeConfiguration()?.let(ComputeConfiguration::wrap)
 
     /**
      * The instance type of the compute fleet.

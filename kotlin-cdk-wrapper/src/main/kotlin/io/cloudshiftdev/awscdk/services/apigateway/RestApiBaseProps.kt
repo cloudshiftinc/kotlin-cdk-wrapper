@@ -25,6 +25,7 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.apigateway.*;
  * import io.cloudshiftdev.awscdk.services.certificatemanager.*;
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
  * import io.cloudshiftdev.awscdk.services.iam.*;
  * import io.cloudshiftdev.awscdk.services.s3.*;
  * IAccessLogDestination accessLogDestination;
@@ -32,6 +33,7 @@ import kotlin.jvm.JvmName
  * Bucket bucket;
  * Certificate certificate;
  * PolicyDocument policyDocument;
+ * VpcEndpoint vpcEndpoint;
  * RestApiBaseProps restApiBaseProps = RestApiBaseProps.builder()
  * .cloudWatchRole(false)
  * .cloudWatchRoleRemovalPolicy(RemovalPolicy.DESTROY)
@@ -84,6 +86,12 @@ import kotlin.jvm.JvmName
  * .build())
  * .securityPolicy(SecurityPolicy.TLS_1_0)
  * .build())
+ * .endpointConfiguration(EndpointConfiguration.builder()
+ * .types(List.of(EndpointType.EDGE))
+ * // the properties below are optional
+ * .ipAddressType(IpAddressType.IPV4)
+ * .vpcEndpoints(List.of(vpcEndpoint))
+ * .build())
  * .endpointExportName("endpointExportName")
  * .endpointTypes(List.of(EndpointType.EDGE))
  * .failOnWarnings(false)
@@ -107,7 +115,7 @@ public interface RestApiBaseProps {
    * The removal policy applied to the AWS CloudWatch role when this resource is removed from the
    * application.
    *
-   * Requires `cloudWatchRole` to be enabled.
+   * Requires `cloudWatchRole` to be enabled.
    *
    * Default: - RemovalPolicy.RETAIN
    */
@@ -175,6 +183,16 @@ public interface RestApiBaseProps {
    */
   public fun domainName(): DomainNameOptions? =
       unwrap(this).getDomainName()?.let(DomainNameOptions::wrap)
+
+  /**
+   * The EndpointConfiguration property type specifies the endpoint types of a REST API.
+   *
+   * Default: EndpointType.EDGE
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html)
+   */
+  public fun endpointConfiguration(): EndpointConfiguration? =
+      unwrap(this).getEndpointConfiguration()?.let(EndpointConfiguration::wrap)
 
   /**
    * Export name for the CfnOutput containing the API endpoint.
@@ -249,7 +267,7 @@ public interface RestApiBaseProps {
     /**
      * @param cloudWatchRoleRemovalPolicy The removal policy applied to the AWS CloudWatch role when
      * this resource is removed from the application.
-     * Requires `cloudWatchRole` to be enabled.
+     * Requires `cloudWatchRole` to be enabled.
      */
     public fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy)
 
@@ -315,6 +333,21 @@ public interface RestApiBaseProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b005a8e64494593376c5797cb7dd1cc0fb207fe86138fa9a0f2790f898ba9f1c")
     public fun domainName(domainName: DomainNameOptions.Builder.() -> Unit)
+
+    /**
+     * @param endpointConfiguration The EndpointConfiguration property type specifies the endpoint
+     * types of a REST API.
+     */
+    public fun endpointConfiguration(endpointConfiguration: EndpointConfiguration)
+
+    /**
+     * @param endpointConfiguration The EndpointConfiguration property type specifies the endpoint
+     * types of a REST API.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b20bae359cee5e7bac219f9abf9b39ae490fdba97cfb84eaa49e23aef14a5513")
+    public
+        fun endpointConfiguration(endpointConfiguration: EndpointConfiguration.Builder.() -> Unit)
 
     /**
      * @param endpointExportName Export name for the CfnOutput containing the API endpoint.
@@ -386,7 +419,7 @@ public interface RestApiBaseProps {
     /**
      * @param cloudWatchRoleRemovalPolicy The removal policy applied to the AWS CloudWatch role when
      * this resource is removed from the application.
-     * Requires `cloudWatchRole` to be enabled.
+     * Requires `cloudWatchRole` to be enabled.
      */
     override fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy) {
       cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
@@ -466,6 +499,24 @@ public interface RestApiBaseProps {
     @JvmName("b005a8e64494593376c5797cb7dd1cc0fb207fe86138fa9a0f2790f898ba9f1c")
     override fun domainName(domainName: DomainNameOptions.Builder.() -> Unit): Unit =
         domainName(DomainNameOptions(domainName))
+
+    /**
+     * @param endpointConfiguration The EndpointConfiguration property type specifies the endpoint
+     * types of a REST API.
+     */
+    override fun endpointConfiguration(endpointConfiguration: EndpointConfiguration) {
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfiguration.Companion::unwrap))
+    }
+
+    /**
+     * @param endpointConfiguration The EndpointConfiguration property type specifies the endpoint
+     * types of a REST API.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b20bae359cee5e7bac219f9abf9b39ae490fdba97cfb84eaa49e23aef14a5513")
+    override
+        fun endpointConfiguration(endpointConfiguration: EndpointConfiguration.Builder.() -> Unit):
+        Unit = endpointConfiguration(EndpointConfiguration(endpointConfiguration))
 
     /**
      * @param endpointExportName Export name for the CfnOutput containing the API endpoint.
@@ -558,7 +609,7 @@ public interface RestApiBaseProps {
      * The removal policy applied to the AWS CloudWatch role when this resource is removed from the
      * application.
      *
-     * Requires `cloudWatchRole` to be enabled.
+     * Requires `cloudWatchRole` to be enabled.
      *
      * Default: - RemovalPolicy.RETAIN
      */
@@ -626,6 +677,16 @@ public interface RestApiBaseProps {
      */
     override fun domainName(): DomainNameOptions? =
         unwrap(this).getDomainName()?.let(DomainNameOptions::wrap)
+
+    /**
+     * The EndpointConfiguration property type specifies the endpoint types of a REST API.
+     *
+     * Default: EndpointType.EDGE
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html)
+     */
+    override fun endpointConfiguration(): EndpointConfiguration? =
+        unwrap(this).getEndpointConfiguration()?.let(EndpointConfiguration::wrap)
 
     /**
      * Export name for the CfnOutput containing the API endpoint.

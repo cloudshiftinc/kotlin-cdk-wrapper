@@ -2147,10 +2147,11 @@ public open class CfnVolume(
     /**
      * A Boolean value indicating whether tags for the volume should be copied to snapshots.
      *
-     * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
-     * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify one
-     * or more tags, only the specified tags are copied to snapshots. If you specify one or more tags
-     * when creating the snapshot, no tags are copied from the volume, regardless of this value.
+     * This value defaults to `false` . If this value is set to `true` , and you do not specify any
+     * tags, all tags for the original volume are copied over to snapshots. If this value is set to
+     * `true` , and you do specify one or more tags, only the specified tags for the original volume
+     * are copied over to snapshots. If you specify one or more tags when creating a new snapshot, no
+     * tags are copied over from the original volume, regardless of this value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-copytagstosnapshots)
      */
@@ -2272,20 +2273,22 @@ public open class CfnVolume(
       /**
        * @param copyTagsToSnapshots A Boolean value indicating whether tags for the volume should be
        * copied to snapshots.
-       * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
-       * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify
-       * one or more tags, only the specified tags are copied to snapshots. If you specify one or more
-       * tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
+       * This value defaults to `false` . If this value is set to `true` , and you do not specify
+       * any tags, all tags for the original volume are copied over to snapshots. If this value is set
+       * to `true` , and you do specify one or more tags, only the specified tags for the original
+       * volume are copied over to snapshots. If you specify one or more tags when creating a new
+       * snapshot, no tags are copied over from the original volume, regardless of this value.
        */
       public fun copyTagsToSnapshots(copyTagsToSnapshots: Boolean)
 
       /**
        * @param copyTagsToSnapshots A Boolean value indicating whether tags for the volume should be
        * copied to snapshots.
-       * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
-       * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify
-       * one or more tags, only the specified tags are copied to snapshots. If you specify one or more
-       * tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
+       * This value defaults to `false` . If this value is set to `true` , and you do not specify
+       * any tags, all tags for the original volume are copied over to snapshots. If this value is set
+       * to `true` , and you do specify one or more tags, only the specified tags for the original
+       * volume are copied over to snapshots. If you specify one or more tags when creating a new
+       * snapshot, no tags are copied over from the original volume, regardless of this value.
        */
       public fun copyTagsToSnapshots(copyTagsToSnapshots: IResolvable)
 
@@ -2436,10 +2439,11 @@ public open class CfnVolume(
       /**
        * @param copyTagsToSnapshots A Boolean value indicating whether tags for the volume should be
        * copied to snapshots.
-       * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
-       * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify
-       * one or more tags, only the specified tags are copied to snapshots. If you specify one or more
-       * tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
+       * This value defaults to `false` . If this value is set to `true` , and you do not specify
+       * any tags, all tags for the original volume are copied over to snapshots. If this value is set
+       * to `true` , and you do specify one or more tags, only the specified tags for the original
+       * volume are copied over to snapshots. If you specify one or more tags when creating a new
+       * snapshot, no tags are copied over from the original volume, regardless of this value.
        */
       override fun copyTagsToSnapshots(copyTagsToSnapshots: Boolean) {
         cdkBuilder.copyTagsToSnapshots(copyTagsToSnapshots)
@@ -2448,10 +2452,11 @@ public open class CfnVolume(
       /**
        * @param copyTagsToSnapshots A Boolean value indicating whether tags for the volume should be
        * copied to snapshots.
-       * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
-       * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify
-       * one or more tags, only the specified tags are copied to snapshots. If you specify one or more
-       * tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
+       * This value defaults to `false` . If this value is set to `true` , and you do not specify
+       * any tags, all tags for the original volume are copied over to snapshots. If this value is set
+       * to `true` , and you do specify one or more tags, only the specified tags for the original
+       * volume are copied over to snapshots. If you specify one or more tags when creating a new
+       * snapshot, no tags are copied over from the original volume, regardless of this value.
        */
       override fun copyTagsToSnapshots(copyTagsToSnapshots: IResolvable) {
         cdkBuilder.copyTagsToSnapshots(copyTagsToSnapshots.let(IResolvable.Companion::unwrap))
@@ -2636,10 +2641,11 @@ public open class CfnVolume(
       /**
        * A Boolean value indicating whether tags for the volume should be copied to snapshots.
        *
-       * This value defaults to `false` . If it's set to `true` , all tags for the volume are copied
-       * to snapshots where the user doesn't specify tags. If this value is `true` , and you specify
-       * one or more tags, only the specified tags are copied to snapshots. If you specify one or more
-       * tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
+       * This value defaults to `false` . If this value is set to `true` , and you do not specify
+       * any tags, all tags for the original volume are copied over to snapshots. If this value is set
+       * to `true` , and you do specify one or more tags, only the specified tags for the original
+       * volume are copied over to snapshots. If you specify one or more tags when creating a new
+       * snapshot, no tags are copied over from the original volume, regardless of this value.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html#cfn-fsx-volume-openzfsconfiguration-copytagstosnapshots)
        */

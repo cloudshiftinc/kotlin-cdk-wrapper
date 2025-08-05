@@ -34,6 +34,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .enablePrefixForIpv6SourceNat("enablePrefixForIpv6SourceNat")
  * .enforceSecurityGroupInboundRulesOnPrivateLinkTraffic("enforceSecurityGroupInboundRulesOnPrivateLinkTraffic")
  * .ipAddressType("ipAddressType")
+ * .ipv4IpamPoolId("ipv4IpamPoolId")
  * .loadBalancerAttributes(List.of(LoadBalancerAttributeProperty.builder()
  * .key("key")
  * .value("value")
@@ -180,6 +181,18 @@ public open class CfnLoadBalancer(
    */
   public open fun ipAddressType(`value`: String) {
     unwrap(this).setIpAddressType(`value`)
+  }
+
+  /**
+   * The ID of the IPv4 IPAM pool.
+   */
+  public open fun ipv4IpamPoolId(): String? = unwrap(this).getIpv4IpamPoolId()
+
+  /**
+   * The ID of the IPv4 IPAM pool.
+   */
+  public open fun ipv4IpamPoolId(`value`: String) {
+    unwrap(this).setIpv4IpamPoolId(`value`)
   }
 
   /**
@@ -377,6 +390,11 @@ public open class CfnLoadBalancer(
      * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
      * Balancer through AWS PrivateLink .
      *
+     * The default is `on` .
+     *
+     * You can't configure this property on a Network Load Balancer unless you associated a security
+     * group with the load balancer when you created it.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-enforcesecuritygroupinboundrulesonprivatelinktraffic)
      * @param enforceSecurityGroupInboundRulesOnPrivateLinkTraffic Indicates whether to evaluate
      * inbound security group rules for traffic sent to a Network Load Balancer through AWS PrivateLink
@@ -405,7 +423,17 @@ public open class CfnLoadBalancer(
     public fun ipAddressType(ipAddressType: String)
 
     /**
+     * The ID of the IPv4 IPAM pool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-ipv4ipampoolid)
+     * @param ipv4IpamPoolId The ID of the IPv4 IPAM pool. 
+     */
+    public fun ipv4IpamPoolId(ipv4IpamPoolId: String)
+
+    /**
      * The load balancer attributes.
+     *
+     * Attributes that you do not modify retain their current values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes)
      * @param loadBalancerAttributes The load balancer attributes. 
@@ -415,6 +443,8 @@ public open class CfnLoadBalancer(
     /**
      * The load balancer attributes.
      *
+     * Attributes that you do not modify retain their current values.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes)
      * @param loadBalancerAttributes The load balancer attributes. 
      */
@@ -422,6 +452,8 @@ public open class CfnLoadBalancer(
 
     /**
      * The load balancer attributes.
+     *
+     * Attributes that you do not modify retain their current values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes)
      * @param loadBalancerAttributes The load balancer attributes. 
@@ -695,6 +727,11 @@ public open class CfnLoadBalancer(
      * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
      * Balancer through AWS PrivateLink .
      *
+     * The default is `on` .
+     *
+     * You can't configure this property on a Network Load Balancer unless you associated a security
+     * group with the load balancer when you created it.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-enforcesecuritygroupinboundrulesonprivatelinktraffic)
      * @param enforceSecurityGroupInboundRulesOnPrivateLinkTraffic Indicates whether to evaluate
      * inbound security group rules for traffic sent to a Network Load Balancer through AWS PrivateLink
@@ -727,7 +764,19 @@ public open class CfnLoadBalancer(
     }
 
     /**
+     * The ID of the IPv4 IPAM pool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-ipv4ipampoolid)
+     * @param ipv4IpamPoolId The ID of the IPv4 IPAM pool. 
+     */
+    override fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
+      cdkBuilder.ipv4IpamPoolId(ipv4IpamPoolId)
+    }
+
+    /**
      * The load balancer attributes.
+     *
+     * Attributes that you do not modify retain their current values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes)
      * @param loadBalancerAttributes The load balancer attributes. 
@@ -739,6 +788,8 @@ public open class CfnLoadBalancer(
     /**
      * The load balancer attributes.
      *
+     * Attributes that you do not modify retain their current values.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes)
      * @param loadBalancerAttributes The load balancer attributes. 
      */
@@ -748,6 +799,8 @@ public open class CfnLoadBalancer(
 
     /**
      * The load balancer attributes.
+     *
+     * Attributes that you do not modify retain their current values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes)
      * @param loadBalancerAttributes The load balancer attributes. 

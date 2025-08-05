@@ -20,22 +20,26 @@ import kotlin.Unit
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
  * Domain domain = Domain.Builder.create(this, "Domain")
- * .version(EngineVersion.OPENSEARCH_1_0)
- * .enforceHttps(true)
- * .nodeToNodeEncryption(true)
+ * .version(EngineVersion.OPENSEARCH_2_17)
  * .encryptionAtRest(EncryptionAtRestOptions.builder()
  * .enabled(true)
  * .build())
- * .fineGrainedAccessControl(AdvancedSecurityOptions.builder()
- * .masterUserName("master-user")
- * .samlAuthenticationEnabled(true)
- * .samlAuthenticationOptions(SAMLOptionsProperty.builder()
- * .idpEntityId("entity-id")
- * .idpMetadataContent("metadata-content-with-quotes-escaped")
+ * .nodeToNodeEncryption(true)
+ * .enforceHttps(true)
+ * .capacity(CapacityConfig.builder()
+ * .multiAzWithStandbyEnabled(false)
  * .build())
+ * .ebs(EbsOptions.builder()
+ * .enabled(true)
+ * .volumeSize(10)
  * .build())
  * .build();
+ * EventApi api = EventApi.Builder.create(this, "EventApiOpenSearch")
+ * .apiName("OpenSearchEventApi")
+ * .build();
+ * AppSyncOpenSearchDataSource dataSource = api.addOpenSearchDataSource("opensearchds", domain);
  * ```
  */
 public interface EncryptionAtRestOptions {

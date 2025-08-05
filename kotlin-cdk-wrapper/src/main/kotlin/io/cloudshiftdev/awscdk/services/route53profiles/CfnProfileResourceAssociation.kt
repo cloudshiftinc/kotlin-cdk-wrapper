@@ -58,7 +58,8 @@ public open class CfnProfileResourceAssociation(
   public open fun attrId(): String = unwrap(this).getAttrId()
 
   /**
-   * Resource type, such as a private hosted zone, or DNS Firewall rule group.
+   * Resource type, such as a private hosted zone, interface VPC endpoint, or DNS Firewall rule
+   * group.
    */
   public open fun attrResourceType(): String = unwrap(this).getAttrResourceType()
 

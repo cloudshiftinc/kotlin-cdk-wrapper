@@ -115,6 +115,9 @@ public open class VdmAttributes(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ses.VdmAttributes.PROPERTY_INJECTION_ID
+
     public fun fromVdmAttributesName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

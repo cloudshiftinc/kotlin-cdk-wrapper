@@ -38,6 +38,13 @@ public interface CfnHubProps {
    * By default, this is set to `true` , and new controls are enabled automatically. To not
    * automatically enable new controls, set this to `false` .
    *
+   * When you automatically enable new controls, you can interact with the controls in the console
+   * and programmatically immediately after release. However, automatically enabled controls have a
+   * temporary default status of `DISABLED` . It can take up to several days for Security Hub to
+   * process the control release and designate the control as `ENABLED` in your account. During the
+   * processing period, you can manually enable or disable a control, and Security Hub will maintain
+   * that designation regardless of whether you have `AutoEnableControls` set to `true` .
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-hub.html#cfn-securityhub-hub-autoenablecontrols)
    */
   public fun autoEnableControls(): Any? = unwrap(this).getAutoEnableControls()
@@ -95,6 +102,13 @@ public interface CfnHubProps {
      * standards that are enabled.
      * By default, this is set to `true` , and new controls are enabled automatically. To not
      * automatically enable new controls, set this to `false` .
+     *
+     * When you automatically enable new controls, you can interact with the controls in the console
+     * and programmatically immediately after release. However, automatically enabled controls have a
+     * temporary default status of `DISABLED` . It can take up to several days for Security Hub to
+     * process the control release and designate the control as `ENABLED` in your account. During the
+     * processing period, you can manually enable or disable a control, and Security Hub will maintain
+     * that designation regardless of whether you have `AutoEnableControls` set to `true` .
      */
     public fun autoEnableControls(autoEnableControls: Boolean)
 
@@ -103,6 +117,13 @@ public interface CfnHubProps {
      * standards that are enabled.
      * By default, this is set to `true` , and new controls are enabled automatically. To not
      * automatically enable new controls, set this to `false` .
+     *
+     * When you automatically enable new controls, you can interact with the controls in the console
+     * and programmatically immediately after release. However, automatically enabled controls have a
+     * temporary default status of `DISABLED` . It can take up to several days for Security Hub to
+     * process the control release and designate the control as `ENABLED` in your account. During the
+     * processing period, you can manually enable or disable a control, and Security Hub will maintain
+     * that designation regardless of whether you have `AutoEnableControls` set to `true` .
      */
     public fun autoEnableControls(autoEnableControls: IResolvable)
 
@@ -165,6 +186,13 @@ public interface CfnHubProps {
      * standards that are enabled.
      * By default, this is set to `true` , and new controls are enabled automatically. To not
      * automatically enable new controls, set this to `false` .
+     *
+     * When you automatically enable new controls, you can interact with the controls in the console
+     * and programmatically immediately after release. However, automatically enabled controls have a
+     * temporary default status of `DISABLED` . It can take up to several days for Security Hub to
+     * process the control release and designate the control as `ENABLED` in your account. During the
+     * processing period, you can manually enable or disable a control, and Security Hub will maintain
+     * that designation regardless of whether you have `AutoEnableControls` set to `true` .
      */
     override fun autoEnableControls(autoEnableControls: Boolean) {
       cdkBuilder.autoEnableControls(autoEnableControls)
@@ -175,6 +203,13 @@ public interface CfnHubProps {
      * standards that are enabled.
      * By default, this is set to `true` , and new controls are enabled automatically. To not
      * automatically enable new controls, set this to `false` .
+     *
+     * When you automatically enable new controls, you can interact with the controls in the console
+     * and programmatically immediately after release. However, automatically enabled controls have a
+     * temporary default status of `DISABLED` . It can take up to several days for Security Hub to
+     * process the control release and designate the control as `ENABLED` in your account. During the
+     * processing period, you can manually enable or disable a control, and Security Hub will maintain
+     * that designation regardless of whether you have `AutoEnableControls` set to `true` .
      */
     override fun autoEnableControls(autoEnableControls: IResolvable) {
       cdkBuilder.autoEnableControls(autoEnableControls.let(IResolvable.Companion::unwrap))
@@ -250,6 +285,13 @@ public interface CfnHubProps {
      *
      * By default, this is set to `true` , and new controls are enabled automatically. To not
      * automatically enable new controls, set this to `false` .
+     *
+     * When you automatically enable new controls, you can interact with the controls in the console
+     * and programmatically immediately after release. However, automatically enabled controls have a
+     * temporary default status of `DISABLED` . It can take up to several days for Security Hub to
+     * process the control release and designate the control as `ENABLED` in your account. During the
+     * processing period, you can manually enable or disable a control, and Security Hub will maintain
+     * that designation regardless of whether you have `AutoEnableControls` set to `true` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-hub.html#cfn-securityhub-hub-autoenablecontrols)
      */

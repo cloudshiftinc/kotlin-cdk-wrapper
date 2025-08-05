@@ -124,19 +124,19 @@ public open class CfnEnabledControl(
   public open fun parameters(vararg `value`: Any): Unit = parameters(`value`.toList())
 
   /**
-   * Tags to be applied to the enabled control.
+   * A set of tags to assign to the enabled control.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * Tags to be applied to the enabled control.
+   * A set of tags to assign to the enabled control.
    */
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * Tags to be applied to the enabled control.
+   * A set of tags to assign to the enabled control.
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
@@ -194,18 +194,18 @@ public open class CfnEnabledControl(
     public fun parameters(vararg parameters: Any)
 
     /**
-     * Tags to be applied to the enabled control.
+     * A set of tags to assign to the enabled control.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledcontrol.html#cfn-controltower-enabledcontrol-tags)
-     * @param tags Tags to be applied to the enabled control. 
+     * @param tags A set of tags to assign to the enabled control. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * Tags to be applied to the enabled control.
+     * A set of tags to assign to the enabled control.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledcontrol.html#cfn-controltower-enabledcontrol-tags)
-     * @param tags Tags to be applied to the enabled control. 
+     * @param tags A set of tags to assign to the enabled control. 
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -271,20 +271,20 @@ public open class CfnEnabledControl(
     override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
 
     /**
-     * Tags to be applied to the enabled control.
+     * A set of tags to assign to the enabled control.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledcontrol.html#cfn-controltower-enabledcontrol-tags)
-     * @param tags Tags to be applied to the enabled control. 
+     * @param tags A set of tags to assign to the enabled control. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * Tags to be applied to the enabled control.
+     * A set of tags to assign to the enabled control.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledcontrol.html#cfn-controltower-enabledcontrol-tags)
-     * @param tags Tags to be applied to the enabled control. 
+     * @param tags A set of tags to assign to the enabled control. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 

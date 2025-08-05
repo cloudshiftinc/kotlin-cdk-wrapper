@@ -64,9 +64,39 @@ public open class Source(
         software.amazon.awscdk.services.s3.deployment.Source.`data`(objectKey,
         `data`).let(ISource::wrap)
 
+    public fun `data`(
+      objectKey: String,
+      `data`: String,
+      markersConfig: MarkersConfig,
+    ): ISource = software.amazon.awscdk.services.s3.deployment.Source.`data`(objectKey, `data`,
+        markersConfig.let(MarkersConfig.Companion::unwrap)).let(ISource::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5751b70e1b1d7e262b0b7eae3b01b2623df99f145e5d66ebeba1384043fbb98a")
+    public fun `data`(
+      objectKey: String,
+      `data`: String,
+      markersConfig: MarkersConfig.Builder.() -> Unit,
+    ): ISource = `data`(objectKey, `data`, MarkersConfig(markersConfig))
+
     public fun jsonData(objectKey: String, obj: Any): ISource =
         software.amazon.awscdk.services.s3.deployment.Source.jsonData(objectKey,
         obj).let(ISource::wrap)
+
+    public fun jsonData(
+      objectKey: String,
+      obj: Any,
+      jsonProcessingOptions: JsonProcessingOptions,
+    ): ISource = software.amazon.awscdk.services.s3.deployment.Source.jsonData(objectKey, obj,
+        jsonProcessingOptions.let(JsonProcessingOptions.Companion::unwrap)).let(ISource::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("54fb6bce4fcea6a93cd3e2e8e028eea78cf8ded3ec7b28b8e233b0ced1d60a88")
+    public fun jsonData(
+      objectKey: String,
+      obj: Any,
+      jsonProcessingOptions: JsonProcessingOptions.Builder.() -> Unit,
+    ): ISource = jsonData(objectKey, obj, JsonProcessingOptions(jsonProcessingOptions))
 
     public fun yamlData(objectKey: String, obj: Any): ISource =
         software.amazon.awscdk.services.s3.deployment.Source.yamlData(objectKey,

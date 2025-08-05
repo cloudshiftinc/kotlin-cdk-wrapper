@@ -94,7 +94,7 @@ public interface CfnLaunchConfigurationProps {
    * By default, the block devices specified in the block device mapping for the AMI are used. For
    * more information, see [Block device
    * mappings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
-   * in the *Amazon EC2 User Guide for Linux Instances* .
+   * in the *Amazon EC2 User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-blockdevicemappings)
    */
@@ -124,7 +124,7 @@ public interface CfnLaunchConfigurationProps {
    * types. Additional fees are incurred when you enable EBS optimization for an instance type that is
    * not EBS-optimized by default. For more information, see [Amazon EBS-optimized
    * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the *Amazon
-   * EC2 User Guide for Linux Instances* .
+   * EC2 User Guide* .
    *
    * The default value is `false` .
    *
@@ -150,7 +150,7 @@ public interface CfnLaunchConfigurationProps {
    *
    * For more information, see [Find a Linux
    * AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html) in the *Amazon EC2
-   * User Guide for Linux Instances* .
+   * User Guide* .
    *
    * If you specify `InstanceId` , an `ImageId` is not required.
    *
@@ -192,7 +192,7 @@ public interface CfnLaunchConfigurationProps {
    *
    * For information about available instance types, see [Available instance
    * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes)
-   * in the *Amazon EC2 User Guide for Linux Instances* .
+   * in the *Amazon EC2 User Guide* .
    *
    * If you specify `InstanceId` , an `InstanceType` is not required.
    *
@@ -207,7 +207,7 @@ public interface CfnLaunchConfigurationProps {
    * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see
    * [User provided
    * kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the
-   * *Amazon EC2 User Guide for Linux Instances* .
+   * *Amazon EC2 User Guide* .
    *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-kernelid)
@@ -219,7 +219,7 @@ public interface CfnLaunchConfigurationProps {
    *
    * For more information, see [Amazon EC2 key pairs and Amazon EC2
    * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the *Amazon
-   * EC2 User Guide for Linux Instances* .
+   * EC2 User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-keyname)
    */
@@ -269,7 +269,7 @@ public interface CfnLaunchConfigurationProps {
    * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see
    * [User provided
    * kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the
-   * *Amazon EC2 User Guide for Linux Instances* .
+   * *Amazon EC2 User Guide* .
    *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-ramdiskid)
@@ -369,7 +369,7 @@ public interface CfnLaunchConfigurationProps {
      * By default, the block devices specified in the block device mapping for the AMI are used. For
      * more information, see [Block device
      * mappings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      */
     public fun blockDeviceMappings(blockDeviceMappings: IResolvable)
 
@@ -379,7 +379,7 @@ public interface CfnLaunchConfigurationProps {
      * By default, the block devices specified in the block device mapping for the AMI are used. For
      * more information, see [Block device
      * mappings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      */
     public fun blockDeviceMappings(blockDeviceMappings: List<Any>)
 
@@ -389,7 +389,7 @@ public interface CfnLaunchConfigurationProps {
      * By default, the block devices specified in the block device mapping for the AMI are used. For
      * more information, see [Block device
      * mappings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      */
     public fun blockDeviceMappings(vararg blockDeviceMappings: Any)
 
@@ -416,7 +416,7 @@ public interface CfnLaunchConfigurationProps {
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      * The default value is `false` .
      */
@@ -430,7 +430,7 @@ public interface CfnLaunchConfigurationProps {
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      * The default value is `false` .
      */
@@ -451,7 +451,7 @@ public interface CfnLaunchConfigurationProps {
      * registration. 
      * For more information, see [Find a Linux
      * AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html) in the *Amazon EC2
-     * User Guide for Linux Instances* .
+     * User Guide* .
      *
      * If you specify `InstanceId` , an `ImageId` is not required.
      */
@@ -498,7 +498,7 @@ public interface CfnLaunchConfigurationProps {
      * @param instanceType Specifies the instance type of the EC2 instance. 
      * For information about available instance types, see [Available instance
      * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      *
      * If you specify `InstanceId` , an `InstanceType` is not required.
      */
@@ -510,7 +510,7 @@ public interface CfnLaunchConfigurationProps {
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see
      * [User provided
      * kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      */
     public fun kernelId(kernelId: String)
 
@@ -518,7 +518,7 @@ public interface CfnLaunchConfigurationProps {
      * @param keyName The name of the key pair.
      * For more information, see [Amazon EC2 key pairs and Amazon EC2
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      */
     public fun keyName(keyName: String)
 
@@ -575,7 +575,7 @@ public interface CfnLaunchConfigurationProps {
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see
      * [User provided
      * kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      */
     public fun ramDiskId(ramDiskId: String)
 
@@ -682,7 +682,7 @@ public interface CfnLaunchConfigurationProps {
      * By default, the block devices specified in the block device mapping for the AMI are used. For
      * more information, see [Block device
      * mappings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      */
     override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
       cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable.Companion::unwrap))
@@ -694,7 +694,7 @@ public interface CfnLaunchConfigurationProps {
      * By default, the block devices specified in the block device mapping for the AMI are used. For
      * more information, see [Block device
      * mappings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      */
     override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
       cdkBuilder.blockDeviceMappings(blockDeviceMappings.map{CdkObjectWrappers.unwrap(it)})
@@ -706,7 +706,7 @@ public interface CfnLaunchConfigurationProps {
      * By default, the block devices specified in the block device mapping for the AMI are used. For
      * more information, see [Block device
      * mappings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      */
     override fun blockDeviceMappings(vararg blockDeviceMappings: Any): Unit =
         blockDeviceMappings(blockDeviceMappings.toList())
@@ -739,7 +739,7 @@ public interface CfnLaunchConfigurationProps {
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      * The default value is `false` .
      */
@@ -755,7 +755,7 @@ public interface CfnLaunchConfigurationProps {
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      * The default value is `false` .
      */
@@ -780,7 +780,7 @@ public interface CfnLaunchConfigurationProps {
      * registration. 
      * For more information, see [Find a Linux
      * AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html) in the *Amazon EC2
-     * User Guide for Linux Instances* .
+     * User Guide* .
      *
      * If you specify `InstanceId` , an `ImageId` is not required.
      */
@@ -835,7 +835,7 @@ public interface CfnLaunchConfigurationProps {
      * @param instanceType Specifies the instance type of the EC2 instance. 
      * For information about available instance types, see [Available instance
      * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      *
      * If you specify `InstanceId` , an `InstanceType` is not required.
      */
@@ -849,7 +849,7 @@ public interface CfnLaunchConfigurationProps {
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see
      * [User provided
      * kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      */
     override fun kernelId(kernelId: String) {
       cdkBuilder.kernelId(kernelId)
@@ -859,7 +859,7 @@ public interface CfnLaunchConfigurationProps {
      * @param keyName The name of the key pair.
      * For more information, see [Amazon EC2 key pairs and Amazon EC2
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      */
     override fun keyName(keyName: String) {
       cdkBuilder.keyName(keyName)
@@ -927,7 +927,7 @@ public interface CfnLaunchConfigurationProps {
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see
      * [User provided
      * kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      */
     override fun ramDiskId(ramDiskId: String) {
       cdkBuilder.ramDiskId(ramDiskId)
@@ -1026,7 +1026,7 @@ public interface CfnLaunchConfigurationProps {
      * By default, the block devices specified in the block device mapping for the AMI are used. For
      * more information, see [Block device
      * mappings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-blockdevicemappings)
      */
@@ -1056,7 +1056,7 @@ public interface CfnLaunchConfigurationProps {
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      * The default value is `false` .
      *
@@ -1082,7 +1082,7 @@ public interface CfnLaunchConfigurationProps {
      *
      * For more information, see [Find a Linux
      * AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html) in the *Amazon EC2
-     * User Guide for Linux Instances* .
+     * User Guide* .
      *
      * If you specify `InstanceId` , an `ImageId` is not required.
      *
@@ -1124,7 +1124,7 @@ public interface CfnLaunchConfigurationProps {
      *
      * For information about available instance types, see [Available instance
      * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      *
      * If you specify `InstanceId` , an `InstanceType` is not required.
      *
@@ -1139,7 +1139,7 @@ public interface CfnLaunchConfigurationProps {
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see
      * [User provided
      * kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-kernelid)
@@ -1151,7 +1151,7 @@ public interface CfnLaunchConfigurationProps {
      *
      * For more information, see [Amazon EC2 key pairs and Amazon EC2
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-keyname)
      */
@@ -1201,7 +1201,7 @@ public interface CfnLaunchConfigurationProps {
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see
      * [User provided
      * kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-ramdiskid)

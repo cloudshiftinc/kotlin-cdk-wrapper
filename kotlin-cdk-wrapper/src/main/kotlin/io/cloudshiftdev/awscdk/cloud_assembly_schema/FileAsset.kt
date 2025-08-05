@@ -37,6 +37,8 @@ import kotlin.jvm.JvmName
  * .packaging(FileAssetPackaging.FILE)
  * .path("path")
  * .build())
+ * // the properties below are optional
+ * .displayName("displayName")
  * .build();
  * ```
  */
@@ -45,6 +47,13 @@ public interface FileAsset {
    * Destinations for this file asset.
    */
   public fun destinations(): Map<String, FileDestination>
+
+  /**
+   * A display name for this asset.
+   *
+   * Default: - The identifier will be used as the display name
+   */
+  public fun displayName(): String? = unwrap(this).getDisplayName()
 
   /**
    * Source description for file assets.
@@ -60,6 +69,11 @@ public interface FileAsset {
      * @param destinations Destinations for this file asset. 
      */
     public fun destinations(destinations: Map<String, FileDestination>)
+
+    /**
+     * @param displayName A display name for this asset.
+     */
+    public fun displayName(displayName: String)
 
     /**
      * @param source Source description for file assets. 
@@ -83,6 +97,13 @@ public interface FileAsset {
      */
     override fun destinations(destinations: Map<String, FileDestination>) {
       cdkBuilder.destinations(destinations.mapValues{FileDestination.unwrap(it.value)})
+    }
+
+    /**
+     * @param displayName A display name for this asset.
+     */
+    override fun displayName(displayName: String) {
+      cdkBuilder.displayName(displayName)
     }
 
     /**
@@ -111,6 +132,13 @@ public interface FileAsset {
      */
     override fun destinations(): Map<String, FileDestination> =
         unwrap(this).getDestinations().mapValues{FileDestination.wrap(it.value)}
+
+    /**
+     * A display name for this asset.
+     *
+     * Default: - The identifier will be used as the display name
+     */
+    override fun displayName(): String? = unwrap(this).getDisplayName()
 
     /**
      * Source description for file assets.

@@ -29,10 +29,32 @@ import kotlin.jvm.JvmName
  * .loggingConfiguration(LoggingConfigurationProperty.builder()
  * .logGroupArn("logGroupArn")
  * .build())
+ * .queryLoggingConfiguration(QueryLoggingConfigurationProperty.builder()
+ * .destinations(List.of(LoggingDestinationProperty.builder()
+ * .cloudWatchLogs(CloudWatchLogDestinationProperty.builder()
+ * .logGroupArn("logGroupArn")
+ * .build())
+ * .filters(LoggingFilterProperty.builder()
+ * .qspThreshold(123)
+ * .build())
+ * .build()))
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .workspaceConfiguration(WorkspaceConfigurationProperty.builder()
+ * .limitsPerLabelSets(List.of(LimitsPerLabelSetProperty.builder()
+ * .labelSet(List.of(LabelProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .limits(LimitsPerLabelSetEntryProperty.builder()
+ * .maxSeries(123)
+ * .build())
+ * .build()))
+ * .retentionPeriodInDays(123)
+ * .build())
  * .build();
  * ```
  *
@@ -81,11 +103,23 @@ public interface CfnWorkspaceProps {
   public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
   /**
-   * Contains information about the logging configuration for the workspace.
+   * Contains information about the current rules and alerting logging configuration for the
+   * workspace.
+   *
+   *
+   * These logging configurations are only for rules and alerting logs.
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html#cfn-aps-workspace-loggingconfiguration)
    */
   public fun loggingConfiguration(): Any? = unwrap(this).getLoggingConfiguration()
+
+  /**
+   * The definition of logging configuration in an Amazon Managed Service for Prometheus workspace.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html#cfn-aps-workspace-queryloggingconfiguration)
+   */
+  public fun queryLoggingConfiguration(): Any? = unwrap(this).getQueryLoggingConfiguration()
 
   /**
    * The list of tag keys and values that are associated with the workspace.
@@ -93,6 +127,14 @@ public interface CfnWorkspaceProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html#cfn-aps-workspace-tags)
    */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * Use this structure to define label sets and the ingestion limits for time series that match
+   * label sets, and to specify the retention period of the workspace.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html#cfn-aps-workspace-workspaceconfiguration)
+   */
+  public fun workspaceConfiguration(): Any? = unwrap(this).getWorkspaceConfiguration()
 
   /**
    * A builder for [CfnWorkspaceProps]
@@ -132,25 +174,53 @@ public interface CfnWorkspaceProps {
     public fun kmsKeyArn(kmsKeyArn: String)
 
     /**
-     * @param loggingConfiguration Contains information about the logging configuration for the
-     * workspace.
+     * @param loggingConfiguration Contains information about the current rules and alerting logging
+     * configuration for the workspace.
+     *
+     * These logging configurations are only for rules and alerting logs.
      */
     public fun loggingConfiguration(loggingConfiguration: IResolvable)
 
     /**
-     * @param loggingConfiguration Contains information about the logging configuration for the
-     * workspace.
+     * @param loggingConfiguration Contains information about the current rules and alerting logging
+     * configuration for the workspace.
+     *
+     * These logging configurations are only for rules and alerting logs.
      */
     public fun loggingConfiguration(loggingConfiguration: CfnWorkspace.LoggingConfigurationProperty)
 
     /**
-     * @param loggingConfiguration Contains information about the logging configuration for the
-     * workspace.
+     * @param loggingConfiguration Contains information about the current rules and alerting logging
+     * configuration for the workspace.
+     *
+     * These logging configurations are only for rules and alerting logs.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("caa210e050853db0e7c94114d24a2c4ceb4d610e1ca6a3bdb14f252fb7616089")
     public
         fun loggingConfiguration(loggingConfiguration: CfnWorkspace.LoggingConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * @param queryLoggingConfiguration The definition of logging configuration in an Amazon Managed
+     * Service for Prometheus workspace.
+     */
+    public fun queryLoggingConfiguration(queryLoggingConfiguration: IResolvable)
+
+    /**
+     * @param queryLoggingConfiguration The definition of logging configuration in an Amazon Managed
+     * Service for Prometheus workspace.
+     */
+    public
+        fun queryLoggingConfiguration(queryLoggingConfiguration: CfnWorkspace.QueryLoggingConfigurationProperty)
+
+    /**
+     * @param queryLoggingConfiguration The definition of logging configuration in an Amazon Managed
+     * Service for Prometheus workspace.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("763311888e945fab2e46706b193fcf2851f52c808b77ad9e71f23ee62e5671ba")
+    public
+        fun queryLoggingConfiguration(queryLoggingConfiguration: CfnWorkspace.QueryLoggingConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param tags The list of tag keys and values that are associated with the workspace.
@@ -161,6 +231,31 @@ public interface CfnWorkspaceProps {
      * @param tags The list of tag keys and values that are associated with the workspace.
      */
     public fun tags(vararg tags: CfnTag)
+
+    /**
+     * @param workspaceConfiguration Use this structure to define label sets and the ingestion
+     * limits for time series that match label sets, and to specify the retention period of the
+     * workspace.
+     */
+    public fun workspaceConfiguration(workspaceConfiguration: IResolvable)
+
+    /**
+     * @param workspaceConfiguration Use this structure to define label sets and the ingestion
+     * limits for time series that match label sets, and to specify the retention period of the
+     * workspace.
+     */
+    public
+        fun workspaceConfiguration(workspaceConfiguration: CfnWorkspace.WorkspaceConfigurationProperty)
+
+    /**
+     * @param workspaceConfiguration Use this structure to define label sets and the ingestion
+     * limits for time series that match label sets, and to specify the retention period of the
+     * workspace.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("eec7930b83b1ef89984957dd61351b2b5a059ce658b21a003fa22fb88bd572b4")
+    public
+        fun workspaceConfiguration(workspaceConfiguration: CfnWorkspace.WorkspaceConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -206,16 +301,20 @@ public interface CfnWorkspaceProps {
     }
 
     /**
-     * @param loggingConfiguration Contains information about the logging configuration for the
-     * workspace.
+     * @param loggingConfiguration Contains information about the current rules and alerting logging
+     * configuration for the workspace.
+     *
+     * These logging configurations are only for rules and alerting logs.
      */
     override fun loggingConfiguration(loggingConfiguration: IResolvable) {
       cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param loggingConfiguration Contains information about the logging configuration for the
-     * workspace.
+     * @param loggingConfiguration Contains information about the current rules and alerting logging
+     * configuration for the workspace.
+     *
+     * These logging configurations are only for rules and alerting logs.
      */
     override
         fun loggingConfiguration(loggingConfiguration: CfnWorkspace.LoggingConfigurationProperty) {
@@ -223,14 +322,44 @@ public interface CfnWorkspaceProps {
     }
 
     /**
-     * @param loggingConfiguration Contains information about the logging configuration for the
-     * workspace.
+     * @param loggingConfiguration Contains information about the current rules and alerting logging
+     * configuration for the workspace.
+     *
+     * These logging configurations are only for rules and alerting logs.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("caa210e050853db0e7c94114d24a2c4ceb4d610e1ca6a3bdb14f252fb7616089")
     override
         fun loggingConfiguration(loggingConfiguration: CfnWorkspace.LoggingConfigurationProperty.Builder.() -> Unit):
         Unit = loggingConfiguration(CfnWorkspace.LoggingConfigurationProperty(loggingConfiguration))
+
+    /**
+     * @param queryLoggingConfiguration The definition of logging configuration in an Amazon Managed
+     * Service for Prometheus workspace.
+     */
+    override fun queryLoggingConfiguration(queryLoggingConfiguration: IResolvable) {
+      cdkBuilder.queryLoggingConfiguration(queryLoggingConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param queryLoggingConfiguration The definition of logging configuration in an Amazon Managed
+     * Service for Prometheus workspace.
+     */
+    override
+        fun queryLoggingConfiguration(queryLoggingConfiguration: CfnWorkspace.QueryLoggingConfigurationProperty) {
+      cdkBuilder.queryLoggingConfiguration(queryLoggingConfiguration.let(CfnWorkspace.QueryLoggingConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param queryLoggingConfiguration The definition of logging configuration in an Amazon Managed
+     * Service for Prometheus workspace.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("763311888e945fab2e46706b193fcf2851f52c808b77ad9e71f23ee62e5671ba")
+    override
+        fun queryLoggingConfiguration(queryLoggingConfiguration: CfnWorkspace.QueryLoggingConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        queryLoggingConfiguration(CfnWorkspace.QueryLoggingConfigurationProperty(queryLoggingConfiguration))
 
     /**
      * @param tags The list of tag keys and values that are associated with the workspace.
@@ -243,6 +372,37 @@ public interface CfnWorkspaceProps {
      * @param tags The list of tag keys and values that are associated with the workspace.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    /**
+     * @param workspaceConfiguration Use this structure to define label sets and the ingestion
+     * limits for time series that match label sets, and to specify the retention period of the
+     * workspace.
+     */
+    override fun workspaceConfiguration(workspaceConfiguration: IResolvable) {
+      cdkBuilder.workspaceConfiguration(workspaceConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param workspaceConfiguration Use this structure to define label sets and the ingestion
+     * limits for time series that match label sets, and to specify the retention period of the
+     * workspace.
+     */
+    override
+        fun workspaceConfiguration(workspaceConfiguration: CfnWorkspace.WorkspaceConfigurationProperty) {
+      cdkBuilder.workspaceConfiguration(workspaceConfiguration.let(CfnWorkspace.WorkspaceConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param workspaceConfiguration Use this structure to define label sets and the ingestion
+     * limits for time series that match label sets, and to specify the retention period of the
+     * workspace.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("eec7930b83b1ef89984957dd61351b2b5a059ce658b21a003fa22fb88bd572b4")
+    override
+        fun workspaceConfiguration(workspaceConfiguration: CfnWorkspace.WorkspaceConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        workspaceConfiguration(CfnWorkspace.WorkspaceConfigurationProperty(workspaceConfiguration))
 
     public fun build(): software.amazon.awscdk.services.aps.CfnWorkspaceProps = cdkBuilder.build()
   }
@@ -293,11 +453,24 @@ public interface CfnWorkspaceProps {
     override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
     /**
-     * Contains information about the logging configuration for the workspace.
+     * Contains information about the current rules and alerting logging configuration for the
+     * workspace.
+     *
+     *
+     * These logging configurations are only for rules and alerting logs.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html#cfn-aps-workspace-loggingconfiguration)
      */
     override fun loggingConfiguration(): Any? = unwrap(this).getLoggingConfiguration()
+
+    /**
+     * The definition of logging configuration in an Amazon Managed Service for Prometheus
+     * workspace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html#cfn-aps-workspace-queryloggingconfiguration)
+     */
+    override fun queryLoggingConfiguration(): Any? = unwrap(this).getQueryLoggingConfiguration()
 
     /**
      * The list of tag keys and values that are associated with the workspace.
@@ -305,6 +478,14 @@ public interface CfnWorkspaceProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html#cfn-aps-workspace-tags)
      */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * Use this structure to define label sets and the ingestion limits for time series that match
+     * label sets, and to specify the retention period of the workspace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html#cfn-aps-workspace-workspaceconfiguration)
+     */
+    override fun workspaceConfiguration(): Any? = unwrap(this).getWorkspaceConfiguration()
   }
 
   public companion object {

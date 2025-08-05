@@ -34,6 +34,7 @@ import kotlin.collections.Map
  * .isTemplate(false)
  * // the properties below are optional
  * .assetPublishingRoleArn("assetPublishingRoleArn")
+ * .displayName("displayName")
  * .build()))
  * .assumeRoleArn("assumeRoleArn")
  * .executionRoleArn("executionRoleArn")

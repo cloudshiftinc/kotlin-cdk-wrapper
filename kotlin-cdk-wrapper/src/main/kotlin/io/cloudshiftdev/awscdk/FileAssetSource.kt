@@ -23,6 +23,7 @@ import kotlin.collections.List
  * .sourceHash("sourceHash")
  * // the properties below are optional
  * .deployTime(false)
+ * .displayName("displayName")
  * .executable(List.of("executable"))
  * .fileName("fileName")
  * .packaging(FileAssetPackaging.ZIP_DIRECTORY)
@@ -46,6 +47,16 @@ public interface FileAssetSource {
    * Default: false
    */
   public fun deployTime(): Boolean? = unwrap(this).getDeployTime()
+
+  /**
+   * A display name for this asset.
+   *
+   * If supplied, the display name will be used in locations where the asset
+   * identifier is printed, like in the CLI progress information.
+   *
+   * Default: - The asset hash is used to display the asset
+   */
+  public fun displayName(): String? = unwrap(this).getDisplayName()
 
   /**
    * An external command that will produce the packaged asset.
@@ -103,6 +114,13 @@ public interface FileAssetSource {
     public fun deployTime(deployTime: Boolean)
 
     /**
+     * @param displayName A display name for this asset.
+     * If supplied, the display name will be used in locations where the asset
+     * identifier is printed, like in the CLI progress information.
+     */
+    public fun displayName(displayName: String)
+
+    /**
      * @param executable An external command that will produce the packaged asset.
      * The command should produce the location of a ZIP file on `stdout`.
      */
@@ -154,6 +172,15 @@ public interface FileAssetSource {
      */
     override fun deployTime(deployTime: Boolean) {
       cdkBuilder.deployTime(deployTime)
+    }
+
+    /**
+     * @param displayName A display name for this asset.
+     * If supplied, the display name will be used in locations where the asset
+     * identifier is printed, like in the CLI progress information.
+     */
+    override fun displayName(displayName: String) {
+      cdkBuilder.displayName(displayName)
     }
 
     /**
@@ -220,6 +247,16 @@ public interface FileAssetSource {
      * Default: false
      */
     override fun deployTime(): Boolean? = unwrap(this).getDeployTime()
+
+    /**
+     * A display name for this asset.
+     *
+     * If supplied, the display name will be used in locations where the asset
+     * identifier is printed, like in the CLI progress information.
+     *
+     * Default: - The asset hash is used to display the asset
+     */
+    override fun displayName(): String? = unwrap(this).getDisplayName()
 
     /**
      * An external command that will produce the packaged asset.

@@ -73,8 +73,8 @@ public open class CfnMicrosoftAD(
   /**
    * The alias for a directory.
    *
-   * For example: `d-12373a053a` or `alias4-mydirectory-12345abcgmzsk` (if you have the
-   * `CreateAlias` property set to true).
+   * For example: `alias4-mydirectory-12345abcgmzsk` (if you have the `CreateAlias` property set to
+   * true).
    */
   public open fun attrAlias(): String = unwrap(this).getAttrAlias()
 
@@ -84,7 +84,9 @@ public open class CfnMicrosoftAD(
   public open fun attrDnsIpAddresses(): List<String> = unwrap(this).getAttrDnsIpAddresses()
 
   /**
+   * The directory ID.
    *
+   * For example: `d-12373a053a` .
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 

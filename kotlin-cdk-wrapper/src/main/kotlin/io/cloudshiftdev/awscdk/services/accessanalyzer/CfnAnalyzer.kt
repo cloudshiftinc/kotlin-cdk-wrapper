@@ -38,6 +38,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .type("type")
  * // the properties below are optional
  * .analyzerConfiguration(AnalyzerConfigurationProperty.builder()
+ * .internalAccessConfiguration(InternalAccessConfigurationProperty.builder()
+ * .internalAccessAnalysisRule(InternalAccessAnalysisRuleProperty.builder()
+ * .inclusions(List.of(InternalAccessAnalysisRuleCriteriaProperty.builder()
+ * .accountIds(List.of("accountIds"))
+ * .resourceArns(List.of("resourceArns"))
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build()))
+ * .build())
+ * .build())
  * .unusedAccessConfiguration(UnusedAccessConfigurationProperty.builder()
  * .analysisRule(AnalysisRuleProperty.builder()
  * .exclusions(List.of(AnalysisRuleCriteriaProperty.builder()
@@ -316,8 +325,8 @@ public open class CfnAnalyzer(
     /**
      * The type represents the zone of trust for the analyzer.
      *
-     * *Allowed Values* : ACCOUNT | ORGANIZATION | ACCOUNT_UNUSED_ACCESS |
-     * ORGANIZATION_UNUSED_ACCESS
+     * *Allowed Values* : ACCOUNT | ORGANIZATION | ACCOUNT_UNUSED_ACCESS | ACCOUNT_INTERNAL_ACCESS |
+     * ORGANIZATION_INTERNAL_ACCESS | ORGANIZATION_UNUSED_ACCESS
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-type)
      * @param type The type represents the zone of trust for the analyzer. 
@@ -451,8 +460,8 @@ public open class CfnAnalyzer(
     /**
      * The type represents the zone of trust for the analyzer.
      *
-     * *Allowed Values* : ACCOUNT | ORGANIZATION | ACCOUNT_UNUSED_ACCESS |
-     * ORGANIZATION_UNUSED_ACCESS
+     * *Allowed Values* : ACCOUNT | ORGANIZATION | ACCOUNT_UNUSED_ACCESS | ACCOUNT_INTERNAL_ACCESS |
+     * ORGANIZATION_INTERNAL_ACCESS | ORGANIZATION_UNUSED_ACCESS
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-type)
      * @param type The type represents the zone of trust for the analyzer. 
@@ -869,6 +878,15 @@ public open class CfnAnalyzer(
    * import io.cloudshiftdev.awscdk.services.accessanalyzer.*;
    * AnalyzerConfigurationProperty analyzerConfigurationProperty =
    * AnalyzerConfigurationProperty.builder()
+   * .internalAccessConfiguration(InternalAccessConfigurationProperty.builder()
+   * .internalAccessAnalysisRule(InternalAccessAnalysisRuleProperty.builder()
+   * .inclusions(List.of(InternalAccessAnalysisRuleCriteriaProperty.builder()
+   * .accountIds(List.of("accountIds"))
+   * .resourceArns(List.of("resourceArns"))
+   * .resourceTypes(List.of("resourceTypes"))
+   * .build()))
+   * .build())
+   * .build())
    * .unusedAccessConfiguration(UnusedAccessConfigurationProperty.builder()
    * .analysisRule(AnalysisRuleProperty.builder()
    * .exclusions(List.of(AnalysisRuleCriteriaProperty.builder()
@@ -888,6 +906,16 @@ public open class CfnAnalyzer(
    */
   public interface AnalyzerConfigurationProperty {
     /**
+     * Specifies the configuration of an internal access analyzer for an AWS organization or
+     * account.
+     *
+     * This configuration determines how the analyzer evaluates access within your AWS environment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analyzerconfiguration.html#cfn-accessanalyzer-analyzer-analyzerconfiguration-internalaccessconfiguration)
+     */
+    public fun internalAccessConfiguration(): Any? = unwrap(this).getInternalAccessConfiguration()
+
+    /**
      * Specifies the configuration of an unused access analyzer for an AWS organization or account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analyzerconfiguration.html#cfn-accessanalyzer-analyzer-analyzerconfiguration-unusedaccessconfiguration)
@@ -899,6 +927,34 @@ public open class CfnAnalyzer(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param internalAccessConfiguration Specifies the configuration of an internal access
+       * analyzer for an AWS organization or account.
+       * This configuration determines how the analyzer evaluates access within your AWS
+       * environment.
+       */
+      public fun internalAccessConfiguration(internalAccessConfiguration: IResolvable)
+
+      /**
+       * @param internalAccessConfiguration Specifies the configuration of an internal access
+       * analyzer for an AWS organization or account.
+       * This configuration determines how the analyzer evaluates access within your AWS
+       * environment.
+       */
+      public
+          fun internalAccessConfiguration(internalAccessConfiguration: InternalAccessConfigurationProperty)
+
+      /**
+       * @param internalAccessConfiguration Specifies the configuration of an internal access
+       * analyzer for an AWS organization or account.
+       * This configuration determines how the analyzer evaluates access within your AWS
+       * environment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8cc145c26da8304cda8cffafa8bbb7bcd26ae82bf46a77fde334f099939dda90")
+      public
+          fun internalAccessConfiguration(internalAccessConfiguration: InternalAccessConfigurationProperty.Builder.() -> Unit)
+
       /**
        * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
        * for an AWS organization or account.
@@ -927,6 +983,40 @@ public open class CfnAnalyzer(
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty.Builder
           =
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty.builder()
+
+      /**
+       * @param internalAccessConfiguration Specifies the configuration of an internal access
+       * analyzer for an AWS organization or account.
+       * This configuration determines how the analyzer evaluates access within your AWS
+       * environment.
+       */
+      override fun internalAccessConfiguration(internalAccessConfiguration: IResolvable) {
+        cdkBuilder.internalAccessConfiguration(internalAccessConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param internalAccessConfiguration Specifies the configuration of an internal access
+       * analyzer for an AWS organization or account.
+       * This configuration determines how the analyzer evaluates access within your AWS
+       * environment.
+       */
+      override
+          fun internalAccessConfiguration(internalAccessConfiguration: InternalAccessConfigurationProperty) {
+        cdkBuilder.internalAccessConfiguration(internalAccessConfiguration.let(InternalAccessConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param internalAccessConfiguration Specifies the configuration of an internal access
+       * analyzer for an AWS organization or account.
+       * This configuration determines how the analyzer evaluates access within your AWS
+       * environment.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8cc145c26da8304cda8cffafa8bbb7bcd26ae82bf46a77fde334f099939dda90")
+      override
+          fun internalAccessConfiguration(internalAccessConfiguration: InternalAccessConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          internalAccessConfiguration(InternalAccessConfigurationProperty(internalAccessConfiguration))
 
       /**
        * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
@@ -965,6 +1055,18 @@ public open class CfnAnalyzer(
       cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty,
     ) : CdkObject(cdkObject),
         AnalyzerConfigurationProperty {
+      /**
+       * Specifies the configuration of an internal access analyzer for an AWS organization or
+       * account.
+       *
+       * This configuration determines how the analyzer evaluates access within your AWS
+       * environment.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analyzerconfiguration.html#cfn-accessanalyzer-analyzer-analyzerconfiguration-internalaccessconfiguration)
+       */
+      override fun internalAccessConfiguration(): Any? =
+          unwrap(this).getInternalAccessConfiguration()
+
       /**
        * Specifies the configuration of an unused access analyzer for an AWS organization or
        * account.
@@ -1366,6 +1468,540 @@ public open class CfnAnalyzer(
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty
+    }
+  }
+
+  /**
+   * The criteria for an analysis rule for an internal access analyzer.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.accessanalyzer.*;
+   * InternalAccessAnalysisRuleCriteriaProperty internalAccessAnalysisRuleCriteriaProperty =
+   * InternalAccessAnalysisRuleCriteriaProperty.builder()
+   * .accountIds(List.of("accountIds"))
+   * .resourceArns(List.of("resourceArns"))
+   * .resourceTypes(List.of("resourceTypes"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-internalaccessanalysisrulecriteria.html)
+   */
+  public interface InternalAccessAnalysisRuleCriteriaProperty {
+    /**
+     * A list of AWS account IDs to apply to the internal access analysis rule criteria.
+     *
+     * Account IDs can only be applied to the analysis rule criteria for organization-level
+     * analyzers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-internalaccessanalysisrulecriteria.html#cfn-accessanalyzer-analyzer-internalaccessanalysisrulecriteria-accountids)
+     */
+    public fun accountIds(): List<String> = unwrap(this).getAccountIds() ?: emptyList()
+
+    /**
+     * A list of resource ARNs to apply to the internal access analysis rule criteria.
+     *
+     * The analyzer will only generate findings for resources that match these ARNs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-internalaccessanalysisrulecriteria.html#cfn-accessanalyzer-analyzer-internalaccessanalysisrulecriteria-resourcearns)
+     */
+    public fun resourceArns(): List<String> = unwrap(this).getResourceArns() ?: emptyList()
+
+    /**
+     * A list of resource types to apply to the internal access analysis rule criteria.
+     *
+     * The analyzer will only generate findings for resources of these types. These resource types
+     * are currently supported for internal access analyzers:
+     *
+     * * `AWS::S3::Bucket`
+     * * `AWS::RDS::DBSnapshot`
+     * * `AWS::RDS::DBClusterSnapshot`
+     * * `AWS::S3Express::DirectoryBucket`
+     * * `AWS::DynamoDB::Table`
+     * * `AWS::DynamoDB::Stream`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-internalaccessanalysisrulecriteria.html#cfn-accessanalyzer-analyzer-internalaccessanalysisrulecriteria-resourcetypes)
+     */
+    public fun resourceTypes(): List<String> = unwrap(this).getResourceTypes() ?: emptyList()
+
+    /**
+     * A builder for [InternalAccessAnalysisRuleCriteriaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accountIds A list of AWS account IDs to apply to the internal access analysis rule
+       * criteria.
+       * Account IDs can only be applied to the analysis rule criteria for organization-level
+       * analyzers.
+       */
+      public fun accountIds(accountIds: List<String>)
+
+      /**
+       * @param accountIds A list of AWS account IDs to apply to the internal access analysis rule
+       * criteria.
+       * Account IDs can only be applied to the analysis rule criteria for organization-level
+       * analyzers.
+       */
+      public fun accountIds(vararg accountIds: String)
+
+      /**
+       * @param resourceArns A list of resource ARNs to apply to the internal access analysis rule
+       * criteria.
+       * The analyzer will only generate findings for resources that match these ARNs.
+       */
+      public fun resourceArns(resourceArns: List<String>)
+
+      /**
+       * @param resourceArns A list of resource ARNs to apply to the internal access analysis rule
+       * criteria.
+       * The analyzer will only generate findings for resources that match these ARNs.
+       */
+      public fun resourceArns(vararg resourceArns: String)
+
+      /**
+       * @param resourceTypes A list of resource types to apply to the internal access analysis rule
+       * criteria.
+       * The analyzer will only generate findings for resources of these types. These resource types
+       * are currently supported for internal access analyzers:
+       *
+       * * `AWS::S3::Bucket`
+       * * `AWS::RDS::DBSnapshot`
+       * * `AWS::RDS::DBClusterSnapshot`
+       * * `AWS::S3Express::DirectoryBucket`
+       * * `AWS::DynamoDB::Table`
+       * * `AWS::DynamoDB::Stream`
+       */
+      public fun resourceTypes(resourceTypes: List<String>)
+
+      /**
+       * @param resourceTypes A list of resource types to apply to the internal access analysis rule
+       * criteria.
+       * The analyzer will only generate findings for resources of these types. These resource types
+       * are currently supported for internal access analyzers:
+       *
+       * * `AWS::S3::Bucket`
+       * * `AWS::RDS::DBSnapshot`
+       * * `AWS::RDS::DBClusterSnapshot`
+       * * `AWS::S3Express::DirectoryBucket`
+       * * `AWS::DynamoDB::Table`
+       * * `AWS::DynamoDB::Stream`
+       */
+      public fun resourceTypes(vararg resourceTypes: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessAnalysisRuleCriteriaProperty.Builder
+          =
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessAnalysisRuleCriteriaProperty.builder()
+
+      /**
+       * @param accountIds A list of AWS account IDs to apply to the internal access analysis rule
+       * criteria.
+       * Account IDs can only be applied to the analysis rule criteria for organization-level
+       * analyzers.
+       */
+      override fun accountIds(accountIds: List<String>) {
+        cdkBuilder.accountIds(accountIds)
+      }
+
+      /**
+       * @param accountIds A list of AWS account IDs to apply to the internal access analysis rule
+       * criteria.
+       * Account IDs can only be applied to the analysis rule criteria for organization-level
+       * analyzers.
+       */
+      override fun accountIds(vararg accountIds: String): Unit = accountIds(accountIds.toList())
+
+      /**
+       * @param resourceArns A list of resource ARNs to apply to the internal access analysis rule
+       * criteria.
+       * The analyzer will only generate findings for resources that match these ARNs.
+       */
+      override fun resourceArns(resourceArns: List<String>) {
+        cdkBuilder.resourceArns(resourceArns)
+      }
+
+      /**
+       * @param resourceArns A list of resource ARNs to apply to the internal access analysis rule
+       * criteria.
+       * The analyzer will only generate findings for resources that match these ARNs.
+       */
+      override fun resourceArns(vararg resourceArns: String): Unit =
+          resourceArns(resourceArns.toList())
+
+      /**
+       * @param resourceTypes A list of resource types to apply to the internal access analysis rule
+       * criteria.
+       * The analyzer will only generate findings for resources of these types. These resource types
+       * are currently supported for internal access analyzers:
+       *
+       * * `AWS::S3::Bucket`
+       * * `AWS::RDS::DBSnapshot`
+       * * `AWS::RDS::DBClusterSnapshot`
+       * * `AWS::S3Express::DirectoryBucket`
+       * * `AWS::DynamoDB::Table`
+       * * `AWS::DynamoDB::Stream`
+       */
+      override fun resourceTypes(resourceTypes: List<String>) {
+        cdkBuilder.resourceTypes(resourceTypes)
+      }
+
+      /**
+       * @param resourceTypes A list of resource types to apply to the internal access analysis rule
+       * criteria.
+       * The analyzer will only generate findings for resources of these types. These resource types
+       * are currently supported for internal access analyzers:
+       *
+       * * `AWS::S3::Bucket`
+       * * `AWS::RDS::DBSnapshot`
+       * * `AWS::RDS::DBClusterSnapshot`
+       * * `AWS::S3Express::DirectoryBucket`
+       * * `AWS::DynamoDB::Table`
+       * * `AWS::DynamoDB::Stream`
+       */
+      override fun resourceTypes(vararg resourceTypes: String): Unit =
+          resourceTypes(resourceTypes.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessAnalysisRuleCriteriaProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessAnalysisRuleCriteriaProperty,
+    ) : CdkObject(cdkObject),
+        InternalAccessAnalysisRuleCriteriaProperty {
+      /**
+       * A list of AWS account IDs to apply to the internal access analysis rule criteria.
+       *
+       * Account IDs can only be applied to the analysis rule criteria for organization-level
+       * analyzers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-internalaccessanalysisrulecriteria.html#cfn-accessanalyzer-analyzer-internalaccessanalysisrulecriteria-accountids)
+       */
+      override fun accountIds(): List<String> = unwrap(this).getAccountIds() ?: emptyList()
+
+      /**
+       * A list of resource ARNs to apply to the internal access analysis rule criteria.
+       *
+       * The analyzer will only generate findings for resources that match these ARNs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-internalaccessanalysisrulecriteria.html#cfn-accessanalyzer-analyzer-internalaccessanalysisrulecriteria-resourcearns)
+       */
+      override fun resourceArns(): List<String> = unwrap(this).getResourceArns() ?: emptyList()
+
+      /**
+       * A list of resource types to apply to the internal access analysis rule criteria.
+       *
+       * The analyzer will only generate findings for resources of these types. These resource types
+       * are currently supported for internal access analyzers:
+       *
+       * * `AWS::S3::Bucket`
+       * * `AWS::RDS::DBSnapshot`
+       * * `AWS::RDS::DBClusterSnapshot`
+       * * `AWS::S3Express::DirectoryBucket`
+       * * `AWS::DynamoDB::Table`
+       * * `AWS::DynamoDB::Stream`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-internalaccessanalysisrulecriteria.html#cfn-accessanalyzer-analyzer-internalaccessanalysisrulecriteria-resourcetypes)
+       */
+      override fun resourceTypes(): List<String> = unwrap(this).getResourceTypes() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InternalAccessAnalysisRuleCriteriaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessAnalysisRuleCriteriaProperty):
+          InternalAccessAnalysisRuleCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InternalAccessAnalysisRuleCriteriaProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InternalAccessAnalysisRuleCriteriaProperty):
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessAnalysisRuleCriteriaProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessAnalysisRuleCriteriaProperty
+    }
+  }
+
+  /**
+   * Contains information about analysis rules for the internal access analyzer.
+   *
+   * Analysis rules determine which entities will generate findings based on the criteria you define
+   * when you create the rule.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.accessanalyzer.*;
+   * InternalAccessAnalysisRuleProperty internalAccessAnalysisRuleProperty =
+   * InternalAccessAnalysisRuleProperty.builder()
+   * .inclusions(List.of(InternalAccessAnalysisRuleCriteriaProperty.builder()
+   * .accountIds(List.of("accountIds"))
+   * .resourceArns(List.of("resourceArns"))
+   * .resourceTypes(List.of("resourceTypes"))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-internalaccessanalysisrule.html)
+   */
+  public interface InternalAccessAnalysisRuleProperty {
+    /**
+     * A list of rules for the internal access analyzer containing criteria to include in analysis.
+     *
+     * Only resources that meet the rule criteria will generate findings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-internalaccessanalysisrule.html#cfn-accessanalyzer-analyzer-internalaccessanalysisrule-inclusions)
+     */
+    public fun inclusions(): Any? = unwrap(this).getInclusions()
+
+    /**
+     * A builder for [InternalAccessAnalysisRuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param inclusions A list of rules for the internal access analyzer containing criteria to
+       * include in analysis.
+       * Only resources that meet the rule criteria will generate findings.
+       */
+      public fun inclusions(inclusions: IResolvable)
+
+      /**
+       * @param inclusions A list of rules for the internal access analyzer containing criteria to
+       * include in analysis.
+       * Only resources that meet the rule criteria will generate findings.
+       */
+      public fun inclusions(inclusions: List<Any>)
+
+      /**
+       * @param inclusions A list of rules for the internal access analyzer containing criteria to
+       * include in analysis.
+       * Only resources that meet the rule criteria will generate findings.
+       */
+      public fun inclusions(vararg inclusions: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessAnalysisRuleProperty.Builder
+          =
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessAnalysisRuleProperty.builder()
+
+      /**
+       * @param inclusions A list of rules for the internal access analyzer containing criteria to
+       * include in analysis.
+       * Only resources that meet the rule criteria will generate findings.
+       */
+      override fun inclusions(inclusions: IResolvable) {
+        cdkBuilder.inclusions(inclusions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param inclusions A list of rules for the internal access analyzer containing criteria to
+       * include in analysis.
+       * Only resources that meet the rule criteria will generate findings.
+       */
+      override fun inclusions(inclusions: List<Any>) {
+        cdkBuilder.inclusions(inclusions.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param inclusions A list of rules for the internal access analyzer containing criteria to
+       * include in analysis.
+       * Only resources that meet the rule criteria will generate findings.
+       */
+      override fun inclusions(vararg inclusions: Any): Unit = inclusions(inclusions.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessAnalysisRuleProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessAnalysisRuleProperty,
+    ) : CdkObject(cdkObject),
+        InternalAccessAnalysisRuleProperty {
+      /**
+       * A list of rules for the internal access analyzer containing criteria to include in
+       * analysis.
+       *
+       * Only resources that meet the rule criteria will generate findings.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-internalaccessanalysisrule.html#cfn-accessanalyzer-analyzer-internalaccessanalysisrule-inclusions)
+       */
+      override fun inclusions(): Any? = unwrap(this).getInclusions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InternalAccessAnalysisRuleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessAnalysisRuleProperty):
+          InternalAccessAnalysisRuleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InternalAccessAnalysisRuleProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InternalAccessAnalysisRuleProperty):
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessAnalysisRuleProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessAnalysisRuleProperty
+    }
+  }
+
+  /**
+   * Specifies the configuration of an internal access analyzer for an AWS organization or account.
+   *
+   * This configuration determines how the analyzer evaluates internal access within your AWS
+   * environment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.accessanalyzer.*;
+   * InternalAccessConfigurationProperty internalAccessConfigurationProperty =
+   * InternalAccessConfigurationProperty.builder()
+   * .internalAccessAnalysisRule(InternalAccessAnalysisRuleProperty.builder()
+   * .inclusions(List.of(InternalAccessAnalysisRuleCriteriaProperty.builder()
+   * .accountIds(List.of("accountIds"))
+   * .resourceArns(List.of("resourceArns"))
+   * .resourceTypes(List.of("resourceTypes"))
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-internalaccessconfiguration.html)
+   */
+  public interface InternalAccessConfigurationProperty {
+    /**
+     * Contains information about analysis rules for the internal access analyzer.
+     *
+     * These rules determine which resources and access patterns will be analyzed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-internalaccessconfiguration.html#cfn-accessanalyzer-analyzer-internalaccessconfiguration-internalaccessanalysisrule)
+     */
+    public fun internalAccessAnalysisRule(): Any? = unwrap(this).getInternalAccessAnalysisRule()
+
+    /**
+     * A builder for [InternalAccessConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param internalAccessAnalysisRule Contains information about analysis rules for the
+       * internal access analyzer.
+       * These rules determine which resources and access patterns will be analyzed.
+       */
+      public fun internalAccessAnalysisRule(internalAccessAnalysisRule: IResolvable)
+
+      /**
+       * @param internalAccessAnalysisRule Contains information about analysis rules for the
+       * internal access analyzer.
+       * These rules determine which resources and access patterns will be analyzed.
+       */
+      public
+          fun internalAccessAnalysisRule(internalAccessAnalysisRule: InternalAccessAnalysisRuleProperty)
+
+      /**
+       * @param internalAccessAnalysisRule Contains information about analysis rules for the
+       * internal access analyzer.
+       * These rules determine which resources and access patterns will be analyzed.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6d8a68552294bf0af8221c44be5d223425befc8c9d4059c220d475e96b1da097")
+      public
+          fun internalAccessAnalysisRule(internalAccessAnalysisRule: InternalAccessAnalysisRuleProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessConfigurationProperty.builder()
+
+      /**
+       * @param internalAccessAnalysisRule Contains information about analysis rules for the
+       * internal access analyzer.
+       * These rules determine which resources and access patterns will be analyzed.
+       */
+      override fun internalAccessAnalysisRule(internalAccessAnalysisRule: IResolvable) {
+        cdkBuilder.internalAccessAnalysisRule(internalAccessAnalysisRule.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param internalAccessAnalysisRule Contains information about analysis rules for the
+       * internal access analyzer.
+       * These rules determine which resources and access patterns will be analyzed.
+       */
+      override
+          fun internalAccessAnalysisRule(internalAccessAnalysisRule: InternalAccessAnalysisRuleProperty) {
+        cdkBuilder.internalAccessAnalysisRule(internalAccessAnalysisRule.let(InternalAccessAnalysisRuleProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param internalAccessAnalysisRule Contains information about analysis rules for the
+       * internal access analyzer.
+       * These rules determine which resources and access patterns will be analyzed.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6d8a68552294bf0af8221c44be5d223425befc8c9d4059c220d475e96b1da097")
+      override
+          fun internalAccessAnalysisRule(internalAccessAnalysisRule: InternalAccessAnalysisRuleProperty.Builder.() -> Unit):
+          Unit =
+          internalAccessAnalysisRule(InternalAccessAnalysisRuleProperty(internalAccessAnalysisRule))
+
+      public fun build():
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        InternalAccessConfigurationProperty {
+      /**
+       * Contains information about analysis rules for the internal access analyzer.
+       *
+       * These rules determine which resources and access patterns will be analyzed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-internalaccessconfiguration.html#cfn-accessanalyzer-analyzer-internalaccessconfiguration-internalaccessanalysisrule)
+       */
+      override fun internalAccessAnalysisRule(): Any? = unwrap(this).getInternalAccessAnalysisRule()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InternalAccessConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessConfigurationProperty):
+          InternalAccessConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InternalAccessConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InternalAccessConfigurationProperty):
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.InternalAccessConfigurationProperty
     }
   }
 

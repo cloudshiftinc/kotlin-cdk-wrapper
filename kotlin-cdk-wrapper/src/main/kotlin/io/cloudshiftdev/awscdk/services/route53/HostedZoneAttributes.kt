@@ -14,20 +14,35 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * App app;
- * Stack stack = Stack.Builder.create(app, "Stack")
- * .crossRegionReferences(true)
- * .env(Environment.builder()
- * .region("us-east-2")
+ * import io.cloudshiftdev.awscdk.services.certificatemanager.*;
+ * import io.cloudshiftdev.awscdk.services.route53.*;
+ * // hosted zone and route53 features
+ * String hostedZoneId;
+ * String zoneName = "example.com";
+ * String myDomainName = "api.example.com";
+ * Certificate certificate = Certificate.Builder.create(this,
+ * "cert").domainName(myDomainName).build();
+ * SchemaFile schema = SchemaFile.Builder.create().filePath("mySchemaFile").build();
+ * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
+ * .name("myApi")
+ * .definition(Definition.fromSchema(schema))
+ * .domainName(DomainOptions.builder()
+ * .certificate(certificate)
+ * .domainName(myDomainName)
  * .build())
  * .build();
- * HttpsRedirect.Builder.create(this, "Redirect")
- * .recordNames(List.of("foo.example.com"))
- * .targetDomain("bar.example.com")
- * .zone(HostedZone.fromHostedZoneAttributes(this, "HostedZone", HostedZoneAttributes.builder()
- * .hostedZoneId("ID")
- * .zoneName("example.com")
- * .build()))
+ * // hosted zone for adding appsync domain
+ * IHostedZone zone = HostedZone.fromHostedZoneAttributes(this, "HostedZone",
+ * HostedZoneAttributes.builder()
+ * .hostedZoneId(hostedZoneId)
+ * .zoneName(zoneName)
+ * .build());
+ * // create a cname to the appsync domain. will map to something like xxxx.cloudfront.net
+ * // create a cname to the appsync domain. will map to something like xxxx.cloudfront.net
+ * CnameRecord.Builder.create(this, "CnameApiRecord")
+ * .recordName("api")
+ * .zone(zone)
+ * .domainName(api.getAppSyncDomainName())
  * .build();
  * ```
  */

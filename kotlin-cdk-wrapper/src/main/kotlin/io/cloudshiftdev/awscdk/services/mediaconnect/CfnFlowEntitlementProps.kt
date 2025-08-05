@@ -70,8 +70,7 @@ public interface CfnFlowEntitlementProps {
   public fun description(): String
 
   /**
-   * The type of encryption that MediaConnect will use on the output that is associated with the
-   * entitlement.
+   * Information about the encryption of the flow.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-encryption)
    */
@@ -133,20 +132,17 @@ public interface CfnFlowEntitlementProps {
     public fun description(description: String)
 
     /**
-     * @param encryption The type of encryption that MediaConnect will use on the output that is
-     * associated with the entitlement.
+     * @param encryption Information about the encryption of the flow.
      */
     public fun encryption(encryption: IResolvable)
 
     /**
-     * @param encryption The type of encryption that MediaConnect will use on the output that is
-     * associated with the entitlement.
+     * @param encryption Information about the encryption of the flow.
      */
     public fun encryption(encryption: CfnFlowEntitlement.EncryptionProperty)
 
     /**
-     * @param encryption The type of encryption that MediaConnect will use on the output that is
-     * associated with the entitlement.
+     * @param encryption Information about the encryption of the flow.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9dbc636d06fdc06f25bba614880395d91ccedc0d4e14b939658c6397f2feb6ae")
@@ -209,24 +205,21 @@ public interface CfnFlowEntitlementProps {
     }
 
     /**
-     * @param encryption The type of encryption that MediaConnect will use on the output that is
-     * associated with the entitlement.
+     * @param encryption Information about the encryption of the flow.
      */
     override fun encryption(encryption: IResolvable) {
       cdkBuilder.encryption(encryption.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param encryption The type of encryption that MediaConnect will use on the output that is
-     * associated with the entitlement.
+     * @param encryption Information about the encryption of the flow.
      */
     override fun encryption(encryption: CfnFlowEntitlement.EncryptionProperty) {
       cdkBuilder.encryption(encryption.let(CfnFlowEntitlement.EncryptionProperty.Companion::unwrap))
     }
 
     /**
-     * @param encryption The type of encryption that MediaConnect will use on the output that is
-     * associated with the entitlement.
+     * @param encryption Information about the encryption of the flow.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9dbc636d06fdc06f25bba614880395d91ccedc0d4e14b939658c6397f2feb6ae")
@@ -304,8 +297,7 @@ public interface CfnFlowEntitlementProps {
     override fun description(): String = unwrap(this).getDescription()
 
     /**
-     * The type of encryption that MediaConnect will use on the output that is associated with the
-     * entitlement.
+     * Information about the encryption of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html#cfn-mediaconnect-flowentitlement-encryption)
      */

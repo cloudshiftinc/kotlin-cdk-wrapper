@@ -66,11 +66,14 @@ public interface CfnParameterProps {
    * The name of the parameter.
    *
    *
-   * The maximum length constraint listed below includes capacity for additional system attributes
-   * that aren't part of the name. The maximum length for a parameter name, including the full length
-   * of the parameter Amazon Resource Name (ARN), is 1011 characters. For example, the length of the
-   * following parameter name is 65 characters, not 20 characters:
-   * `arn:aws:ssm:us-east-2:111222333444:parameter/ExampleParameterName`
+   * The reported maximum length of 2048 characters for a parameter name includes 1037 characters
+   * that are reserved for internal use by Systems Manager . The maximum length for a parameter name
+   * that you specify is 1011 characters.
+   *
+   * This count of 1011 characters includes the characters in the ARN that precede the name you
+   * specify. This ARN length will vary depending on your partition and Region. For example, the
+   * following 45 characters count toward the 1011 character maximum for a parameter created in the US
+   * East (Ohio) Region: `arn:aws:ssm:us-east-2:111122223333:parameter/` .
    *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-name)
@@ -110,6 +113,10 @@ public interface CfnParameterProps {
 
   /**
    * The type of parameter.
+   *
+   *
+   * Parameters of type `SecureString` are not supported by AWS CloudFormation .
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-type)
    */
@@ -153,11 +160,14 @@ public interface CfnParameterProps {
     /**
      * @param name The name of the parameter.
      *
-     * The maximum length constraint listed below includes capacity for additional system attributes
-     * that aren't part of the name. The maximum length for a parameter name, including the full length
-     * of the parameter Amazon Resource Name (ARN), is 1011 characters. For example, the length of the
-     * following parameter name is 65 characters, not 20 characters:
-     * `arn:aws:ssm:us-east-2:111222333444:parameter/ExampleParameterName`
+     * The reported maximum length of 2048 characters for a parameter name includes 1037 characters
+     * that are reserved for internal use by Systems Manager . The maximum length for a parameter name
+     * that you specify is 1011 characters.
+     *
+     * This count of 1011 characters includes the characters in the ARN that precede the name you
+     * specify. This ARN length will vary depending on your partition and Region. For example, the
+     * following 45 characters count toward the 1011 character maximum for a parameter created in the
+     * US East (Ohio) Region: `arn:aws:ssm:us-east-2:111122223333:parameter/` .
      */
     public fun name(name: String)
 
@@ -186,6 +196,8 @@ public interface CfnParameterProps {
 
     /**
      * @param type The type of parameter. 
+     *
+     * Parameters of type `SecureString` are not supported by AWS CloudFormation .
      */
     public fun type(type: String)
 
@@ -229,11 +241,14 @@ public interface CfnParameterProps {
     /**
      * @param name The name of the parameter.
      *
-     * The maximum length constraint listed below includes capacity for additional system attributes
-     * that aren't part of the name. The maximum length for a parameter name, including the full length
-     * of the parameter Amazon Resource Name (ARN), is 1011 characters. For example, the length of the
-     * following parameter name is 65 characters, not 20 characters:
-     * `arn:aws:ssm:us-east-2:111222333444:parameter/ExampleParameterName`
+     * The reported maximum length of 2048 characters for a parameter name includes 1037 characters
+     * that are reserved for internal use by Systems Manager . The maximum length for a parameter name
+     * that you specify is 1011 characters.
+     *
+     * This count of 1011 characters includes the characters in the ARN that precede the name you
+     * specify. This ARN length will vary depending on your partition and Region. For example, the
+     * following 45 characters count toward the 1011 character maximum for a parameter created in the
+     * US East (Ohio) Region: `arn:aws:ssm:us-east-2:111122223333:parameter/` .
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -270,6 +285,8 @@ public interface CfnParameterProps {
 
     /**
      * @param type The type of parameter. 
+     *
+     * Parameters of type `SecureString` are not supported by AWS CloudFormation .
      */
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -322,11 +339,14 @@ public interface CfnParameterProps {
      * The name of the parameter.
      *
      *
-     * The maximum length constraint listed below includes capacity for additional system attributes
-     * that aren't part of the name. The maximum length for a parameter name, including the full length
-     * of the parameter Amazon Resource Name (ARN), is 1011 characters. For example, the length of the
-     * following parameter name is 65 characters, not 20 characters:
-     * `arn:aws:ssm:us-east-2:111222333444:parameter/ExampleParameterName`
+     * The reported maximum length of 2048 characters for a parameter name includes 1037 characters
+     * that are reserved for internal use by Systems Manager . The maximum length for a parameter name
+     * that you specify is 1011 characters.
+     *
+     * This count of 1011 characters includes the characters in the ARN that precede the name you
+     * specify. This ARN length will vary depending on your partition and Region. For example, the
+     * following 45 characters count toward the 1011 character maximum for a parameter created in the
+     * US East (Ohio) Region: `arn:aws:ssm:us-east-2:111122223333:parameter/` .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-name)
@@ -366,6 +386,10 @@ public interface CfnParameterProps {
 
     /**
      * The type of parameter.
+     *
+     *
+     * Parameters of type `SecureString` are not supported by AWS CloudFormation .
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-type)
      */

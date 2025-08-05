@@ -35,21 +35,17 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.certificatemanager.Certificate;
- * ICertificate certificate = Certificate.fromCertificateArn(this, "Cert",
- * "arn:aws:acm:us-east-1:123456:certificate/abcdefg");
- * NetworkLoadBalancedFargateService loadBalancedFargateService =
+ * Vpc vpc;
+ * SecurityGroup securityGroup;
+ * NetworkLoadBalancedFargateService queueProcessingFargateService =
  * NetworkLoadBalancedFargateService.Builder.create(this, "Service")
- * // The default value of listenerPort is 443 if you pass in listenerCertificate
- * // It is configured to port 4443 here
- * .listenerPort(4443)
- * .listenerCertificate(certificate)
+ * .vpc(vpc)
+ * .memoryLimitMiB(512)
  * .taskImageOptions(NetworkLoadBalancedTaskImageOptions.builder()
  * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
- * // The default value of containerPort is 443 if you pass in listenerCertificate
- * // It is configured to port 8443 here
- * .containerPort(8443)
  * .build())
+ * .minHealthyPercent(100)
+ * .securityGroups(List.of(securityGroup))
  * .build();
  * ```
  */

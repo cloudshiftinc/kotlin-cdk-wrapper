@@ -97,6 +97,26 @@ public open class UserPoolClient(
     public fun accessTokenValidity(accessTokenValidity: Duration)
 
     /**
+     * The analytics configuration for this client.
+     *
+     * Default: - no analytics configuration
+     *
+     * @param analytics The analytics configuration for this client. 
+     */
+    public fun analytics(analytics: AnalyticsConfiguration)
+
+    /**
+     * The analytics configuration for this client.
+     *
+     * Default: - no analytics configuration
+     *
+     * @param analytics The analytics configuration for this client. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2192fd65de970beae847349cad161ec2a289a5c16ce256fe89516415fa356ffb")
+    public fun analytics(analytics: AnalyticsConfiguration.Builder.() -> Unit)
+
+    /**
      * The set of OAuth authentication flows to enable on the client.
      *
      * Default: - If you don't specify a value, your user client supports ALLOW_REFRESH_TOKEN_AUTH,
@@ -328,6 +348,29 @@ public open class UserPoolClient(
     override fun accessTokenValidity(accessTokenValidity: Duration) {
       cdkBuilder.accessTokenValidity(accessTokenValidity.let(Duration.Companion::unwrap))
     }
+
+    /**
+     * The analytics configuration for this client.
+     *
+     * Default: - no analytics configuration
+     *
+     * @param analytics The analytics configuration for this client. 
+     */
+    override fun analytics(analytics: AnalyticsConfiguration) {
+      cdkBuilder.analytics(analytics.let(AnalyticsConfiguration.Companion::unwrap))
+    }
+
+    /**
+     * The analytics configuration for this client.
+     *
+     * Default: - no analytics configuration
+     *
+     * @param analytics The analytics configuration for this client. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2192fd65de970beae847349cad161ec2a289a5c16ce256fe89516415fa356ffb")
+    override fun analytics(analytics: AnalyticsConfiguration.Builder.() -> Unit): Unit =
+        analytics(AnalyticsConfiguration(analytics))
 
     /**
      * The set of OAuth authentication flows to enable on the client.
@@ -575,6 +618,9 @@ public open class UserPoolClient(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.cognito.UserPoolClient.PROPERTY_INJECTION_ID
+
     public fun fromUserPoolClientId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

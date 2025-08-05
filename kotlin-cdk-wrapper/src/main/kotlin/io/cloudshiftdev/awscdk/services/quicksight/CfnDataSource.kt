@@ -43,6 +43,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .domain("domain")
  * .build())
  * .athenaParameters(AthenaParametersProperty.builder()
+ * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+ * .enableIdentityPropagation(false)
+ * .build())
  * .roleArn("roleArn")
  * .workGroup("workGroup")
  * .build())
@@ -75,6 +78,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .database("database")
  * .host("host")
  * .port(123)
+ * // the properties below are optional
+ * .useServiceName(false)
  * .build())
  * .postgreSqlParameters(PostgreSqlParametersProperty.builder()
  * .database("database")
@@ -185,6 +190,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .domain("domain")
  * .build())
  * .athenaParameters(AthenaParametersProperty.builder()
+ * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+ * .enableIdentityPropagation(false)
+ * .build())
  * .roleArn("roleArn")
  * .workGroup("workGroup")
  * .build())
@@ -217,6 +225,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .database("database")
  * .host("host")
  * .port(123)
+ * // the properties below are optional
+ * .useServiceName(false)
  * .build())
  * .postgreSqlParameters(PostgreSqlParametersProperty.builder()
  * .database("database")
@@ -324,6 +334,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .domain("domain")
  * .build())
  * .athenaParameters(AthenaParametersProperty.builder()
+ * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+ * .enableIdentityPropagation(false)
+ * .build())
  * .roleArn("roleArn")
  * .workGroup("workGroup")
  * .build())
@@ -356,6 +369,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .database("database")
  * .host("host")
  * .port(123)
+ * // the properties below are optional
+ * .useServiceName(false)
  * .build())
  * .postgreSqlParameters(PostgreSqlParametersProperty.builder()
  * .database("database")
@@ -1687,6 +1702,9 @@ public open class CfnDataSource(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.quicksight.*;
    * AthenaParametersProperty athenaParametersProperty = AthenaParametersProperty.builder()
+   * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+   * .enableIdentityPropagation(false)
+   * .build())
    * .roleArn("roleArn")
    * .workGroup("workGroup")
    * .build();
@@ -1695,6 +1713,17 @@ public open class CfnDataSource(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-athenaparameters.html)
    */
   public interface AthenaParametersProperty {
+    /**
+     * An optional parameter that configures IAM Identity Center authentication to grant Amazon
+     * QuickSight access to your workgroup.
+     *
+     * This parameter can only be specified if your Amazon QuickSight account is configured with IAM
+     * Identity Center.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-athenaparameters.html#cfn-quicksight-datasource-athenaparameters-identitycenterconfiguration)
+     */
+    public fun identityCenterConfiguration(): Any? = unwrap(this).getIdentityCenterConfiguration()
+
     /**
      * Use the `RoleArn` structure to override an account-wide role for a specific Athena data
      * source.
@@ -1721,6 +1750,34 @@ public open class CfnDataSource(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param identityCenterConfiguration An optional parameter that configures IAM Identity
+       * Center authentication to grant Amazon QuickSight access to your workgroup.
+       * This parameter can only be specified if your Amazon QuickSight account is configured with
+       * IAM Identity Center.
+       */
+      public fun identityCenterConfiguration(identityCenterConfiguration: IResolvable)
+
+      /**
+       * @param identityCenterConfiguration An optional parameter that configures IAM Identity
+       * Center authentication to grant Amazon QuickSight access to your workgroup.
+       * This parameter can only be specified if your Amazon QuickSight account is configured with
+       * IAM Identity Center.
+       */
+      public
+          fun identityCenterConfiguration(identityCenterConfiguration: IdentityCenterConfigurationProperty)
+
+      /**
+       * @param identityCenterConfiguration An optional parameter that configures IAM Identity
+       * Center authentication to grant Amazon QuickSight access to your workgroup.
+       * This parameter can only be specified if your Amazon QuickSight account is configured with
+       * IAM Identity Center.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("be529dc2f98c2d4f19b65e5307eee670c5b8dd9305cb33953b13ff7e3189c1ae")
+      public
+          fun identityCenterConfiguration(identityCenterConfiguration: IdentityCenterConfigurationProperty.Builder.() -> Unit)
+
+      /**
        * @param roleArn Use the `RoleArn` structure to override an account-wide role for a specific
        * Athena data source.
        * For example, say an account administrator has turned off all Athena access with an
@@ -1741,6 +1798,40 @@ public open class CfnDataSource(
           software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty.Builder
           =
           software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty.builder()
+
+      /**
+       * @param identityCenterConfiguration An optional parameter that configures IAM Identity
+       * Center authentication to grant Amazon QuickSight access to your workgroup.
+       * This parameter can only be specified if your Amazon QuickSight account is configured with
+       * IAM Identity Center.
+       */
+      override fun identityCenterConfiguration(identityCenterConfiguration: IResolvable) {
+        cdkBuilder.identityCenterConfiguration(identityCenterConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param identityCenterConfiguration An optional parameter that configures IAM Identity
+       * Center authentication to grant Amazon QuickSight access to your workgroup.
+       * This parameter can only be specified if your Amazon QuickSight account is configured with
+       * IAM Identity Center.
+       */
+      override
+          fun identityCenterConfiguration(identityCenterConfiguration: IdentityCenterConfigurationProperty) {
+        cdkBuilder.identityCenterConfiguration(identityCenterConfiguration.let(IdentityCenterConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param identityCenterConfiguration An optional parameter that configures IAM Identity
+       * Center authentication to grant Amazon QuickSight access to your workgroup.
+       * This parameter can only be specified if your Amazon QuickSight account is configured with
+       * IAM Identity Center.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("be529dc2f98c2d4f19b65e5307eee670c5b8dd9305cb33953b13ff7e3189c1ae")
+      override
+          fun identityCenterConfiguration(identityCenterConfiguration: IdentityCenterConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          identityCenterConfiguration(IdentityCenterConfigurationProperty(identityCenterConfiguration))
 
       /**
        * @param roleArn Use the `RoleArn` structure to override an account-wide role for a specific
@@ -1770,6 +1861,18 @@ public open class CfnDataSource(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty,
     ) : CdkObject(cdkObject),
         AthenaParametersProperty {
+      /**
+       * An optional parameter that configures IAM Identity Center authentication to grant Amazon
+       * QuickSight access to your workgroup.
+       *
+       * This parameter can only be specified if your Amazon QuickSight account is configured with
+       * IAM Identity Center.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-athenaparameters.html#cfn-quicksight-datasource-athenaparameters-identitycenterconfiguration)
+       */
+      override fun identityCenterConfiguration(): Any? =
+          unwrap(this).getIdentityCenterConfiguration()
+
       /**
        * Use the `RoleArn` structure to override an account-wide role for a specific Athena data
        * source.
@@ -2114,6 +2217,9 @@ public open class CfnDataSource(
    * .domain("domain")
    * .build())
    * .athenaParameters(AthenaParametersProperty.builder()
+   * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+   * .enableIdentityPropagation(false)
+   * .build())
    * .roleArn("roleArn")
    * .workGroup("workGroup")
    * .build())
@@ -2146,6 +2252,8 @@ public open class CfnDataSource(
    * .database("database")
    * .host("host")
    * .port(123)
+   * // the properties below are optional
+   * .useServiceName(false)
    * .build())
    * .postgreSqlParameters(PostgreSqlParametersProperty.builder()
    * .database("database")
@@ -2480,6 +2588,9 @@ public open class CfnDataSource(
    * .domain("domain")
    * .build())
    * .athenaParameters(AthenaParametersProperty.builder()
+   * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+   * .enableIdentityPropagation(false)
+   * .build())
    * .roleArn("roleArn")
    * .workGroup("workGroup")
    * .build())
@@ -2512,6 +2623,8 @@ public open class CfnDataSource(
    * .database("database")
    * .host("host")
    * .port(123)
+   * // the properties below are optional
+   * .useServiceName(false)
    * .build())
    * .postgreSqlParameters(PostgreSqlParametersProperty.builder()
    * .database("database")
@@ -2935,6 +3048,9 @@ public open class CfnDataSource(
    * .domain("domain")
    * .build())
    * .athenaParameters(AthenaParametersProperty.builder()
+   * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+   * .enableIdentityPropagation(false)
+   * .build())
    * .roleArn("roleArn")
    * .workGroup("workGroup")
    * .build())
@@ -2967,6 +3083,8 @@ public open class CfnDataSource(
    * .database("database")
    * .host("host")
    * .port(123)
+   * // the properties below are optional
+   * .useServiceName(false)
    * .build())
    * .postgreSqlParameters(PostgreSqlParametersProperty.builder()
    * .database("database")
@@ -5067,6 +5185,8 @@ public open class CfnDataSource(
    * .database("database")
    * .host("host")
    * .port(123)
+   * // the properties below are optional
+   * .useServiceName(false)
    * .build();
    * ```
    *
@@ -5097,6 +5217,18 @@ public open class CfnDataSource(
     public fun port(): Number
 
     /**
+     * A Boolean value that indicates whether the `Database` uses a service name or an SID.
+     *
+     * If this value is left blank, the default value is `SID` . If this value is set to `false` ,
+     * the value is `SID` .
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-useservicename)
+     */
+    public fun useServiceName(): Any? = unwrap(this).getUseServiceName()
+
+    /**
      * A builder for [OracleParametersProperty]
      */
     @CdkDslMarker
@@ -5115,6 +5247,22 @@ public open class CfnDataSource(
        * @param port Port. 
        */
       public fun port(port: Number)
+
+      /**
+       * @param useServiceName A Boolean value that indicates whether the `Database` uses a service
+       * name or an SID.
+       * If this value is left blank, the default value is `SID` . If this value is set to `false` ,
+       * the value is `SID` .
+       */
+      public fun useServiceName(useServiceName: Boolean)
+
+      /**
+       * @param useServiceName A Boolean value that indicates whether the `Database` uses a service
+       * name or an SID.
+       * If this value is left blank, the default value is `SID` . If this value is set to `false` ,
+       * the value is `SID` .
+       */
+      public fun useServiceName(useServiceName: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -5142,6 +5290,26 @@ public open class CfnDataSource(
        */
       override fun port(port: Number) {
         cdkBuilder.port(port)
+      }
+
+      /**
+       * @param useServiceName A Boolean value that indicates whether the `Database` uses a service
+       * name or an SID.
+       * If this value is left blank, the default value is `SID` . If this value is set to `false` ,
+       * the value is `SID` .
+       */
+      override fun useServiceName(useServiceName: Boolean) {
+        cdkBuilder.useServiceName(useServiceName)
+      }
+
+      /**
+       * @param useServiceName A Boolean value that indicates whether the `Database` uses a service
+       * name or an SID.
+       * If this value is left blank, the default value is `SID` . If this value is set to `false` ,
+       * the value is `SID` .
+       */
+      override fun useServiceName(useServiceName: IResolvable) {
+        cdkBuilder.useServiceName(useServiceName.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -5175,6 +5343,18 @@ public open class CfnDataSource(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-port)
        */
       override fun port(): Number = unwrap(this).getPort()
+
+      /**
+       * A Boolean value that indicates whether the `Database` uses a service name or an SID.
+       *
+       * If this value is left blank, the default value is `SID` . If this value is set to `false` ,
+       * the value is `SID` .
+       *
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-useservicename)
+       */
+      override fun useServiceName(): Any? = unwrap(this).getUseServiceName()
     }
 
     public companion object {
@@ -6278,8 +6458,8 @@ public open class CfnDataSource(
      * (This is common.)
      * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
      * dashboard, template, or theme. (This is common.)
-     * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN. Use
-     * this option only to share resources (templates) across AWS accounts . (This is less common.)
+     * * The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN. Use this
+     * option only to share resources (templates) across AWS accounts . (This is less common.)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-resourcepermission.html#cfn-quicksight-datasource-resourcepermission-principal)
      */
@@ -6312,9 +6492,8 @@ public open class CfnDataSource(
        * (This is common.)
        * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
        * dashboard, template, or theme. (This is common.)
-       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
-       * Use this option only to share resources (templates) across AWS accounts . (This is less
-       * common.)
+       * * The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN. Use this
+       * option only to share resources (templates) across AWS accounts . (This is less common.)
        */
       public fun principal(principal: String)
 
@@ -6349,9 +6528,8 @@ public open class CfnDataSource(
        * (This is common.)
        * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
        * dashboard, template, or theme. (This is common.)
-       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
-       * Use this option only to share resources (templates) across AWS accounts . (This is less
-       * common.)
+       * * The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN. Use this
+       * option only to share resources (templates) across AWS accounts . (This is less common.)
        */
       override fun principal(principal: String) {
         cdkBuilder.principal(principal)
@@ -6387,9 +6565,8 @@ public open class CfnDataSource(
        * (This is common.)
        * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
        * dashboard, template, or theme. (This is common.)
-       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
-       * Use this option only to share resources (templates) across AWS accounts . (This is less
-       * common.)
+       * * The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN. Use this
+       * option only to share resources (templates) across AWS accounts . (This is less common.)
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-resourcepermission.html#cfn-quicksight-datasource-resourcepermission-principal)
        */

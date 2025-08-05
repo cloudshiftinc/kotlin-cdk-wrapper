@@ -149,6 +149,11 @@ public open class CfnFarm(
     /**
      * A description of the farm that helps identify what the farm is used for.
      *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
+     *
      * Default: - ""
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-farm.html#cfn-deadline-farm-description)
@@ -209,6 +214,11 @@ public open class CfnFarm(
 
     /**
      * A description of the farm that helps identify what the farm is used for.
+     *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
      *
      * Default: - ""
      *

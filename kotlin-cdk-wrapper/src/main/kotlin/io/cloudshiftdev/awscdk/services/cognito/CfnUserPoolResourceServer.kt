@@ -123,12 +123,12 @@ public open class CfnUserPoolResourceServer(
   public open fun scopes(vararg `value`: Any): Unit = scopes(`value`.toList())
 
   /**
-   * The user pool ID for the user pool.
+   * The ID of the user pool where you want to create a resource server.
    */
   public open fun userPoolId(): String = unwrap(this).getUserPoolId()
 
   /**
-   * The user pool ID for the user pool.
+   * The ID of the user pool where you want to create a resource server.
    */
   public open fun userPoolId(`value`: String) {
     unwrap(this).setUserPoolId(`value`)
@@ -193,10 +193,10 @@ public open class CfnUserPoolResourceServer(
     public fun scopes(vararg scopes: Any)
 
     /**
-     * The user pool ID for the user pool.
+     * The ID of the user pool where you want to create a resource server.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-userpoolid)
-     * @param userPoolId The user pool ID for the user pool. 
+     * @param userPoolId The ID of the user pool where you want to create a resource server. 
      */
     public fun userPoolId(userPoolId: String)
   }
@@ -271,10 +271,10 @@ public open class CfnUserPoolResourceServer(
     override fun scopes(vararg scopes: Any): Unit = scopes(scopes.toList())
 
     /**
-     * The user pool ID for the user pool.
+     * The ID of the user pool where you want to create a resource server.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-userpoolid)
-     * @param userPoolId The user pool ID for the user pool. 
+     * @param userPoolId The ID of the user pool where you want to create a resource server. 
      */
     override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
@@ -311,12 +311,6 @@ public open class CfnUserPoolResourceServer(
    * This data type is a member of `ResourceServerScopeType` . For more information, see [Scopes,
    * M2M, and API authorization with resource
    * servers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-define-resource-servers.html)
-   * .
-   *
-   * This data type is a request parameter of
-   * [CreateResourceServer](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateResourceServer.html)
-   * and a response parameter of
-   * [DescribeResourceServer](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeResourceServer.html)
    * .
    *
    * Example:

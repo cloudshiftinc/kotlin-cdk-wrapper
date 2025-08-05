@@ -14,11 +14,12 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The `AWS::CloudFormation::GuardHook` resource creates a Guard Hook with the specified attributes
- * within your CloudFormation template.
+ * The `AWS::CloudFormation::GuardHook` resource creates and activates a Guard Hook.
  *
- * Using the Guard domain specific language (DSL), you can author Hooks to evaluate your resources
- * before allowing stack creation, modification, or deletion. For more information, see [Guard
+ * Using the Guard domain specific language (DSL), you can author Guard Hooks to evaluate your
+ * resources before allowing stack operations.
+ *
+ * For more information, see [Guard
  * Hooks](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/guard-hooks.html) in
  * the *AWS CloudFormation Hooks User Guide* .
  *
@@ -61,6 +62,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build())
  * .targetFilters(TargetFiltersProperty.builder()
+ * .targets(List.of(HookTargetProperty.builder()
+ * .action("action")
+ * .invocationPoint("invocationPoint")
+ * .targetName("targetName")
+ * .build()))
+ * // the properties below are optional
  * .actions(List.of("actions"))
  * .invocationPoints(List.of("invocationPoints"))
  * .targetNames(List.of("targetNames"))
@@ -279,19 +286,19 @@ public open class CfnGuardHook(
       targetFilters(TargetFiltersProperty(`value`))
 
   /**
-   * Specifies which type of operation the Hook is run against.
+   * Specifies the list of operations the Hook is run against.
    */
   public open fun targetOperations(): List<String> = unwrap(this).getTargetOperations()
 
   /**
-   * Specifies which type of operation the Hook is run against.
+   * Specifies the list of operations the Hook is run against.
    */
   public open fun targetOperations(`value`: List<String>) {
     unwrap(this).setTargetOperations(`value`)
   }
 
   /**
-   * Specifies which type of operation the Hook is run against.
+   * Specifies the list of operations the Hook is run against.
    */
   public open fun targetOperations(vararg `value`: String): Unit =
       targetOperations(`value`.toList())
@@ -413,6 +420,15 @@ public open class CfnGuardHook(
     /**
      * Specifies the stack level filters for the Hook.
      *
+     * Example stack level filter in JSON:
+     *
+     * `"StackFilters": {"FilteringCriteria": "ALL", "StackNames": {"Exclude": [ "stack-1",
+     * "stack-2"]}}`
+     *
+     * Example stack level filter in YAML:
+     *
+     * `StackFilters: FilteringCriteria: ALL StackNames: Exclude: - stack-1 - stack-2`
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-guardhook.html#cfn-cloudformation-guardhook-stackfilters)
      * @param stackFilters Specifies the stack level filters for the Hook. 
      */
@@ -421,6 +437,15 @@ public open class CfnGuardHook(
     /**
      * Specifies the stack level filters for the Hook.
      *
+     * Example stack level filter in JSON:
+     *
+     * `"StackFilters": {"FilteringCriteria": "ALL", "StackNames": {"Exclude": [ "stack-1",
+     * "stack-2"]}}`
+     *
+     * Example stack level filter in YAML:
+     *
+     * `StackFilters: FilteringCriteria: ALL StackNames: Exclude: - stack-1 - stack-2`
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-guardhook.html#cfn-cloudformation-guardhook-stackfilters)
      * @param stackFilters Specifies the stack level filters for the Hook. 
      */
@@ -428,6 +453,15 @@ public open class CfnGuardHook(
 
     /**
      * Specifies the stack level filters for the Hook.
+     *
+     * Example stack level filter in JSON:
+     *
+     * `"StackFilters": {"FilteringCriteria": "ALL", "StackNames": {"Exclude": [ "stack-1",
+     * "stack-2"]}}`
+     *
+     * Example stack level filter in YAML:
+     *
+     * `StackFilters: FilteringCriteria: ALL StackNames: Exclude: - stack-1 - stack-2`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-guardhook.html#cfn-cloudformation-guardhook-stackfilters)
      * @param stackFilters Specifies the stack level filters for the Hook. 
@@ -439,6 +473,14 @@ public open class CfnGuardHook(
     /**
      * Specifies the target filters for the Hook.
      *
+     * Example target filter in JSON:
+     *
+     * `"TargetFilters": {"Actions": [ "Create", "Update", "Delete" ]}`
+     *
+     * Example target filter in YAML:
+     *
+     * `TargetFilters: Actions: - CREATE - UPDATE - DELETE`
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-guardhook.html#cfn-cloudformation-guardhook-targetfilters)
      * @param targetFilters Specifies the target filters for the Hook. 
      */
@@ -446,6 +488,14 @@ public open class CfnGuardHook(
 
     /**
      * Specifies the target filters for the Hook.
+     *
+     * Example target filter in JSON:
+     *
+     * `"TargetFilters": {"Actions": [ "Create", "Update", "Delete" ]}`
+     *
+     * Example target filter in YAML:
+     *
+     * `TargetFilters: Actions: - CREATE - UPDATE - DELETE`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-guardhook.html#cfn-cloudformation-guardhook-targetfilters)
      * @param targetFilters Specifies the target filters for the Hook. 
@@ -455,6 +505,14 @@ public open class CfnGuardHook(
     /**
      * Specifies the target filters for the Hook.
      *
+     * Example target filter in JSON:
+     *
+     * `"TargetFilters": {"Actions": [ "Create", "Update", "Delete" ]}`
+     *
+     * Example target filter in YAML:
+     *
+     * `TargetFilters: Actions: - CREATE - UPDATE - DELETE`
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-guardhook.html#cfn-cloudformation-guardhook-targetfilters)
      * @param targetFilters Specifies the target filters for the Hook. 
      */
@@ -463,22 +521,30 @@ public open class CfnGuardHook(
     public fun targetFilters(targetFilters: TargetFiltersProperty.Builder.() -> Unit)
 
     /**
-     * Specifies which type of operation the Hook is run against.
+     * Specifies the list of operations the Hook is run against.
+     *
+     * For more information, see [Hook
+     * targets](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-concepts.html#hook-terms-hook-target)
+     * in the *AWS CloudFormation Hooks User Guide* .
      *
      * Valid values: `STACK` | `RESOURCE` | `CHANGE_SET` | `CLOUD_CONTROL`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-guardhook.html#cfn-cloudformation-guardhook-targetoperations)
-     * @param targetOperations Specifies which type of operation the Hook is run against. 
+     * @param targetOperations Specifies the list of operations the Hook is run against. 
      */
     public fun targetOperations(targetOperations: List<String>)
 
     /**
-     * Specifies which type of operation the Hook is run against.
+     * Specifies the list of operations the Hook is run against.
+     *
+     * For more information, see [Hook
+     * targets](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-concepts.html#hook-terms-hook-target)
+     * in the *AWS CloudFormation Hooks User Guide* .
      *
      * Valid values: `STACK` | `RESOURCE` | `CHANGE_SET` | `CLOUD_CONTROL`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-guardhook.html#cfn-cloudformation-guardhook-targetoperations)
-     * @param targetOperations Specifies which type of operation the Hook is run against. 
+     * @param targetOperations Specifies the list of operations the Hook is run against. 
      */
     public fun targetOperations(vararg targetOperations: String)
   }
@@ -622,6 +688,15 @@ public open class CfnGuardHook(
     /**
      * Specifies the stack level filters for the Hook.
      *
+     * Example stack level filter in JSON:
+     *
+     * `"StackFilters": {"FilteringCriteria": "ALL", "StackNames": {"Exclude": [ "stack-1",
+     * "stack-2"]}}`
+     *
+     * Example stack level filter in YAML:
+     *
+     * `StackFilters: FilteringCriteria: ALL StackNames: Exclude: - stack-1 - stack-2`
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-guardhook.html#cfn-cloudformation-guardhook-stackfilters)
      * @param stackFilters Specifies the stack level filters for the Hook. 
      */
@@ -632,6 +707,15 @@ public open class CfnGuardHook(
     /**
      * Specifies the stack level filters for the Hook.
      *
+     * Example stack level filter in JSON:
+     *
+     * `"StackFilters": {"FilteringCriteria": "ALL", "StackNames": {"Exclude": [ "stack-1",
+     * "stack-2"]}}`
+     *
+     * Example stack level filter in YAML:
+     *
+     * `StackFilters: FilteringCriteria: ALL StackNames: Exclude: - stack-1 - stack-2`
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-guardhook.html#cfn-cloudformation-guardhook-stackfilters)
      * @param stackFilters Specifies the stack level filters for the Hook. 
      */
@@ -641,6 +725,15 @@ public open class CfnGuardHook(
 
     /**
      * Specifies the stack level filters for the Hook.
+     *
+     * Example stack level filter in JSON:
+     *
+     * `"StackFilters": {"FilteringCriteria": "ALL", "StackNames": {"Exclude": [ "stack-1",
+     * "stack-2"]}}`
+     *
+     * Example stack level filter in YAML:
+     *
+     * `StackFilters: FilteringCriteria: ALL StackNames: Exclude: - stack-1 - stack-2`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-guardhook.html#cfn-cloudformation-guardhook-stackfilters)
      * @param stackFilters Specifies the stack level filters for the Hook. 
@@ -653,6 +746,14 @@ public open class CfnGuardHook(
     /**
      * Specifies the target filters for the Hook.
      *
+     * Example target filter in JSON:
+     *
+     * `"TargetFilters": {"Actions": [ "Create", "Update", "Delete" ]}`
+     *
+     * Example target filter in YAML:
+     *
+     * `TargetFilters: Actions: - CREATE - UPDATE - DELETE`
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-guardhook.html#cfn-cloudformation-guardhook-targetfilters)
      * @param targetFilters Specifies the target filters for the Hook. 
      */
@@ -662,6 +763,14 @@ public open class CfnGuardHook(
 
     /**
      * Specifies the target filters for the Hook.
+     *
+     * Example target filter in JSON:
+     *
+     * `"TargetFilters": {"Actions": [ "Create", "Update", "Delete" ]}`
+     *
+     * Example target filter in YAML:
+     *
+     * `TargetFilters: Actions: - CREATE - UPDATE - DELETE`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-guardhook.html#cfn-cloudformation-guardhook-targetfilters)
      * @param targetFilters Specifies the target filters for the Hook. 
@@ -673,6 +782,14 @@ public open class CfnGuardHook(
     /**
      * Specifies the target filters for the Hook.
      *
+     * Example target filter in JSON:
+     *
+     * `"TargetFilters": {"Actions": [ "Create", "Update", "Delete" ]}`
+     *
+     * Example target filter in YAML:
+     *
+     * `TargetFilters: Actions: - CREATE - UPDATE - DELETE`
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-guardhook.html#cfn-cloudformation-guardhook-targetfilters)
      * @param targetFilters Specifies the target filters for the Hook. 
      */
@@ -682,24 +799,32 @@ public open class CfnGuardHook(
         targetFilters(TargetFiltersProperty(targetFilters))
 
     /**
-     * Specifies which type of operation the Hook is run against.
+     * Specifies the list of operations the Hook is run against.
+     *
+     * For more information, see [Hook
+     * targets](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-concepts.html#hook-terms-hook-target)
+     * in the *AWS CloudFormation Hooks User Guide* .
      *
      * Valid values: `STACK` | `RESOURCE` | `CHANGE_SET` | `CLOUD_CONTROL`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-guardhook.html#cfn-cloudformation-guardhook-targetoperations)
-     * @param targetOperations Specifies which type of operation the Hook is run against. 
+     * @param targetOperations Specifies the list of operations the Hook is run against. 
      */
     override fun targetOperations(targetOperations: List<String>) {
       cdkBuilder.targetOperations(targetOperations)
     }
 
     /**
-     * Specifies which type of operation the Hook is run against.
+     * Specifies the list of operations the Hook is run against.
+     *
+     * For more information, see [Hook
+     * targets](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-concepts.html#hook-terms-hook-target)
+     * in the *AWS CloudFormation Hooks User Guide* .
      *
      * Valid values: `STACK` | `RESOURCE` | `CHANGE_SET` | `CLOUD_CONTROL`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-guardhook.html#cfn-cloudformation-guardhook-targetoperations)
-     * @param targetOperations Specifies which type of operation the Hook is run against. 
+     * @param targetOperations Specifies the list of operations the Hook is run against. 
      */
     override fun targetOperations(vararg targetOperations: String): Unit =
         targetOperations(targetOperations.toList())
@@ -725,6 +850,146 @@ public open class CfnGuardHook(
 
     internal fun unwrap(wrapped: CfnGuardHook): software.amazon.awscdk.CfnGuardHook =
         wrapped.cdkObject as software.amazon.awscdk.CfnGuardHook
+  }
+
+  /**
+   * Hook targets are the destination where hooks will be invoked against.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.*;
+   * HookTargetProperty hookTargetProperty = HookTargetProperty.builder()
+   * .action("action")
+   * .invocationPoint("invocationPoint")
+   * .targetName("targetName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-guardhook-hooktarget.html)
+   */
+  public interface HookTargetProperty {
+    /**
+     * Target actions are the type of operation hooks will be executed at.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-guardhook-hooktarget.html#cfn-cloudformation-guardhook-hooktarget-action)
+     */
+    public fun action(): String
+
+    /**
+     * Invocation points are the point in provisioning workflow where hooks will be executed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-guardhook-hooktarget.html#cfn-cloudformation-guardhook-hooktarget-invocationpoint)
+     */
+    public fun invocationPoint(): String
+
+    /**
+     * Type name of hook target.
+     *
+     * Hook targets are the destination where hooks will be invoked against.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-guardhook-hooktarget.html#cfn-cloudformation-guardhook-hooktarget-targetname)
+     */
+    public fun targetName(): String
+
+    /**
+     * A builder for [HookTargetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param action Target actions are the type of operation hooks will be executed at. 
+       */
+      public fun action(action: String)
+
+      /**
+       * @param invocationPoint Invocation points are the point in provisioning workflow where hooks
+       * will be executed. 
+       */
+      public fun invocationPoint(invocationPoint: String)
+
+      /**
+       * @param targetName Type name of hook target. 
+       * Hook targets are the destination where hooks will be invoked against.
+       */
+      public fun targetName(targetName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.CfnGuardHook.HookTargetProperty.Builder =
+          software.amazon.awscdk.CfnGuardHook.HookTargetProperty.builder()
+
+      /**
+       * @param action Target actions are the type of operation hooks will be executed at. 
+       */
+      override fun action(action: String) {
+        cdkBuilder.action(action)
+      }
+
+      /**
+       * @param invocationPoint Invocation points are the point in provisioning workflow where hooks
+       * will be executed. 
+       */
+      override fun invocationPoint(invocationPoint: String) {
+        cdkBuilder.invocationPoint(invocationPoint)
+      }
+
+      /**
+       * @param targetName Type name of hook target. 
+       * Hook targets are the destination where hooks will be invoked against.
+       */
+      override fun targetName(targetName: String) {
+        cdkBuilder.targetName(targetName)
+      }
+
+      public fun build(): software.amazon.awscdk.CfnGuardHook.HookTargetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.CfnGuardHook.HookTargetProperty,
+    ) : CdkObject(cdkObject),
+        HookTargetProperty {
+      /**
+       * Target actions are the type of operation hooks will be executed at.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-guardhook-hooktarget.html#cfn-cloudformation-guardhook-hooktarget-action)
+       */
+      override fun action(): String = unwrap(this).getAction()
+
+      /**
+       * Invocation points are the point in provisioning workflow where hooks will be executed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-guardhook-hooktarget.html#cfn-cloudformation-guardhook-hooktarget-invocationpoint)
+       */
+      override fun invocationPoint(): String = unwrap(this).getInvocationPoint()
+
+      /**
+       * Type name of hook target.
+       *
+       * Hook targets are the destination where hooks will be invoked against.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-guardhook-hooktarget.html#cfn-cloudformation-guardhook-hooktarget-targetname)
+       */
+      override fun targetName(): String = unwrap(this).getTargetName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HookTargetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.CfnGuardHook.HookTargetProperty):
+          HookTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? HookTargetProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HookTargetProperty):
+          software.amazon.awscdk.CfnGuardHook.HookTargetProperty = (wrapped as CdkObject).cdkObject
+          as software.amazon.awscdk.CfnGuardHook.HookTargetProperty
+    }
   }
 
   /**
@@ -855,7 +1120,7 @@ public open class CfnGuardHook(
    */
   public interface S3LocationProperty {
     /**
-     * Specifies the S3 path to the file containing your Guard rules or input parameters (in the
+     * Specifies the S3 path to the file that contains your Guard rules or input parameters (in the
      * form `s3://&lt;bucket name&gt;/&lt;file name&gt;` ).
      *
      * For Guard rules, the object stored in S3 must have one of the following file extensions:
@@ -885,7 +1150,7 @@ public open class CfnGuardHook(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param uri Specifies the S3 path to the file containing your Guard rules or input
+       * @param uri Specifies the S3 path to the file that contains your Guard rules or input
        * parameters (in the form `s3://&lt;bucket name&gt;/&lt;file name&gt;` ). 
        * For Guard rules, the object stored in S3 must have one of the following file extensions:
        * `.guard` , `.zip` , or `.tar.gz` .
@@ -910,7 +1175,7 @@ public open class CfnGuardHook(
           software.amazon.awscdk.CfnGuardHook.S3LocationProperty.builder()
 
       /**
-       * @param uri Specifies the S3 path to the file containing your Guard rules or input
+       * @param uri Specifies the S3 path to the file that contains your Guard rules or input
        * parameters (in the form `s3://&lt;bucket name&gt;/&lt;file name&gt;` ). 
        * For Guard rules, the object stored in S3 must have one of the following file extensions:
        * `.guard` , `.zip` , or `.tar.gz` .
@@ -942,8 +1207,8 @@ public open class CfnGuardHook(
     ) : CdkObject(cdkObject),
         S3LocationProperty {
       /**
-       * Specifies the S3 path to the file containing your Guard rules or input parameters (in the
-       * form `s3://&lt;bucket name&gt;/&lt;file name&gt;` ).
+       * Specifies the S3 path to the file that contains your Guard rules or input parameters (in
+       * the form `s3://&lt;bucket name&gt;/&lt;file name&gt;` ).
        *
        * For Guard rules, the object stored in S3 must have one of the following file extensions:
        * `.guard` , `.zip` , or `.tar.gz` .
@@ -1510,7 +1775,7 @@ public open class CfnGuardHook(
    * The `TargetFilters` property type specifies the target filters for the Hook.
    *
    * For more information, see [AWS CloudFormation Hook target
-   * filters](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/specify-hook-configuration-targetfilters.html)
+   * filters](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-target-filtering.html)
    * .
    *
    * Example:
@@ -1520,6 +1785,12 @@ public open class CfnGuardHook(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.*;
    * TargetFiltersProperty targetFiltersProperty = TargetFiltersProperty.builder()
+   * .targets(List.of(HookTargetProperty.builder()
+   * .action("action")
+   * .invocationPoint("invocationPoint")
+   * .targetName("targetName")
+   * .build()))
+   * // the properties below are optional
    * .actions(List.of("actions"))
    * .invocationPoints(List.of("invocationPoints"))
    * .targetNames(List.of("targetNames"))
@@ -1549,6 +1820,13 @@ public open class CfnGuardHook(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-guardhook-targetfilters.html#cfn-cloudformation-guardhook-targetfilters-targetnames)
      */
     public fun targetNames(): List<String> = unwrap(this).getTargetNames() ?: emptyList()
+
+    /**
+     * List of hook targets.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-guardhook-targetfilters.html#cfn-cloudformation-guardhook-targetfilters-targets)
+     */
+    public fun targets(): Any
 
     /**
      * A builder for [TargetFiltersProperty]
@@ -1584,6 +1862,21 @@ public open class CfnGuardHook(
        * @param targetNames List of type names that the hook is going to target.
        */
       public fun targetNames(vararg targetNames: String)
+
+      /**
+       * @param targets List of hook targets. 
+       */
+      public fun targets(targets: IResolvable)
+
+      /**
+       * @param targets List of hook targets. 
+       */
+      public fun targets(targets: List<Any>)
+
+      /**
+       * @param targets List of hook targets. 
+       */
+      public fun targets(vararg targets: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1627,6 +1920,25 @@ public open class CfnGuardHook(
        */
       override fun targetNames(vararg targetNames: String): Unit = targetNames(targetNames.toList())
 
+      /**
+       * @param targets List of hook targets. 
+       */
+      override fun targets(targets: IResolvable) {
+        cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param targets List of hook targets. 
+       */
+      override fun targets(targets: List<Any>) {
+        cdkBuilder.targets(targets.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param targets List of hook targets. 
+       */
+      override fun targets(vararg targets: Any): Unit = targets(targets.toList())
+
       public fun build(): software.amazon.awscdk.CfnGuardHook.TargetFiltersProperty =
           cdkBuilder.build()
     }
@@ -1656,6 +1968,13 @@ public open class CfnGuardHook(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-guardhook-targetfilters.html#cfn-cloudformation-guardhook-targetfilters-targetnames)
        */
       override fun targetNames(): List<String> = unwrap(this).getTargetNames() ?: emptyList()
+
+      /**
+       * List of hook targets.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-guardhook-targetfilters.html#cfn-cloudformation-guardhook-targetfilters-targets)
+       */
+      override fun targets(): Any = unwrap(this).getTargets()
     }
 
     public companion object {

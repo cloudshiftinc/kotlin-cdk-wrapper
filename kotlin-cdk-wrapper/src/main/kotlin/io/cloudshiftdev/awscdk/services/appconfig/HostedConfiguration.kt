@@ -19,14 +19,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Application app = new Application(this, "MyApp");
- * Environment env = Environment.Builder.create(this, "MyEnv")
- * .application(app)
- * .build();
- * HostedConfiguration.Builder.create(this, "MyHostedConfig")
- * .application(app)
- * .deployTo(List.of(env))
+ * Application application;
+ * Function fn;
+ * HostedConfiguration.Builder.create(this, "MyHostedConfiguration")
+ * .application(application)
  * .content(ConfigurationContent.fromInlineText("This is my configuration content."))
+ * .validators(List.of(JsonSchemaValidator.fromFile("schema.json"),
+ * LambdaValidator.fromFunction(fn)))
  * .build();
  * ```
  */
@@ -65,6 +64,43 @@ public open class HostedConfiguration(
    */
   public override fun application(): IApplication =
       unwrap(this).getApplication().let(IApplication::wrap)
+
+  /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to an application.
+   *
+   * @param eventDestination The event that occurs during the extension. 
+   * @param options Options for the extension.
+   */
+  public override fun atDeploymentTick(eventDestination: IEventDestination) {
+    unwrap(this).atDeploymentTick(eventDestination.let(IEventDestination.Companion::unwrap))
+  }
+
+  /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to an application.
+   *
+   * @param eventDestination The event that occurs during the extension. 
+   * @param options Options for the extension.
+   */
+  public override fun atDeploymentTick(eventDestination: IEventDestination,
+      options: ExtensionOptions) {
+    unwrap(this).atDeploymentTick(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
+  }
+
+  /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to an application.
+   *
+   * @param eventDestination The event that occurs during the extension. 
+   * @param options Options for the extension.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("f8c201d364bd1348c470ff45a380b57e5cbcd5d83fb8aa9250995db9670d33c2")
+  public override fun atDeploymentTick(eventDestination: IEventDestination,
+      options: ExtensionOptions.Builder.() -> Unit): Unit = atDeploymentTick(eventDestination,
+      ExtensionOptions(options))
 
   /**
    * The Amazon Resource Name (ARN) of the configuration profile.
@@ -472,6 +508,21 @@ public open class HostedConfiguration(
     public fun content(content: ConfigurationContent)
 
     /**
+     * A parameter to configure deletion protection.
+     *
+     * Deletion protection prevents a user from deleting a configuration profile if your application
+     * has called
+     * either `GetLatestConfiguration` or `GetConfiguration` for the configuration profile during
+     * the specified interval.
+     *
+     * Default: DeletionProtectionCheck.ACCOUNT_DEFAULT
+     *
+     * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/deletion-protection.html)
+     * @param deletionProtectionCheck A parameter to configure deletion protection. 
+     */
+    public fun deletionProtectionCheck(deletionProtectionCheck: DeletionProtectionCheck)
+
+    /**
      * The list of environments to deploy the configuration to.
      *
      * If this parameter is not specified, then there will be no
@@ -528,6 +579,15 @@ public open class HostedConfiguration(
      * @param description The description of the configuration. 
      */
     public fun description(description: String)
+
+    /**
+     * The customer managed key to encrypt hosted configuration.
+     *
+     * Default: None
+     *
+     * @param kmsKey The customer managed key to encrypt hosted configuration. 
+     */
+    public fun kmsKey(kmsKey: IKey)
 
     /**
      * The latest version number of the hosted configuration.
@@ -610,6 +670,23 @@ public open class HostedConfiguration(
     }
 
     /**
+     * A parameter to configure deletion protection.
+     *
+     * Deletion protection prevents a user from deleting a configuration profile if your application
+     * has called
+     * either `GetLatestConfiguration` or `GetConfiguration` for the configuration profile during
+     * the specified interval.
+     *
+     * Default: DeletionProtectionCheck.ACCOUNT_DEFAULT
+     *
+     * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/deletion-protection.html)
+     * @param deletionProtectionCheck A parameter to configure deletion protection. 
+     */
+    override fun deletionProtectionCheck(deletionProtectionCheck: DeletionProtectionCheck) {
+      cdkBuilder.deletionProtectionCheck(deletionProtectionCheck.let(DeletionProtectionCheck.Companion::unwrap))
+    }
+
+    /**
      * The list of environments to deploy the configuration to.
      *
      * If this parameter is not specified, then there will be no
@@ -673,6 +750,17 @@ public open class HostedConfiguration(
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
+    }
+
+    /**
+     * The customer managed key to encrypt hosted configuration.
+     *
+     * Default: None
+     *
+     * @param kmsKey The customer managed key to encrypt hosted configuration. 
+     */
+    override fun kmsKey(kmsKey: IKey) {
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**

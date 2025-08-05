@@ -351,6 +351,9 @@ public open class CfnListener(
      *
      * You must provide exactly one certificate if the listener protocol is HTTPS or TLS.
      *
+     * For an HTTPS listener, update requires some interruptions. For a TLS listener, update
+     * requires no interruption.
+     *
      * To create a certificate list for a secure listener, use
      * [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
      * .
@@ -365,6 +368,9 @@ public open class CfnListener(
      *
      * You must provide exactly one certificate if the listener protocol is HTTPS or TLS.
      *
+     * For an HTTPS listener, update requires some interruptions. For a TLS listener, update
+     * requires no interruption.
+     *
      * To create a certificate list for a secure listener, use
      * [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
      * .
@@ -378,6 +384,9 @@ public open class CfnListener(
      * The default SSL server certificate for a secure listener.
      *
      * You must provide exactly one certificate if the listener protocol is HTTPS or TLS.
+     *
+     * For an HTTPS listener, update requires some interruptions. For a TLS listener, update
+     * requires no interruption.
      *
      * To create a certificate list for a secure listener, use
      * [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
@@ -430,6 +439,8 @@ public open class CfnListener(
     /**
      * The listener attributes.
      *
+     * Attributes that you do not modify retain their current values.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
      * @param listenerAttributes The listener attributes. 
      */
@@ -438,6 +449,8 @@ public open class CfnListener(
     /**
      * The listener attributes.
      *
+     * Attributes that you do not modify retain their current values.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
      * @param listenerAttributes The listener attributes. 
      */
@@ -445,6 +458,8 @@ public open class CfnListener(
 
     /**
      * The listener attributes.
+     *
+     * Attributes that you do not modify retain their current values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
      * @param listenerAttributes The listener attributes. 
@@ -513,14 +528,16 @@ public open class CfnListener(
      * [HTTPS and TLS listeners] The security policy that defines which protocols and ciphers are
      * supported.
      *
-     * Updating the security policy can result in interruptions if the load balancer is handling a
-     * high volume of traffic.
-     *
      * For more information, see [Security
-     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies)
+     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/describe-ssl-policies.html)
      * in the *Application Load Balancers Guide* and [Security
-     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/create-tls-listener.html#describe-ssl-policies)
+     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/describe-ssl-policies.html)
      * in the *Network Load Balancers Guide* .
+     *
+     * [HTTPS listeners] Updating the security policy can result in interruptions if the load
+     * balancer is handling a high volume of traffic. To decrease the possibility of an interruption if
+     * your load balancer is handling a high volume of traffic, create an additional load balancer or
+     * request an LCU reservation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-sslpolicy)
      * @param sslPolicy [HTTPS and TLS listeners] The security policy that defines which protocols
@@ -562,6 +579,9 @@ public open class CfnListener(
      *
      * You must provide exactly one certificate if the listener protocol is HTTPS or TLS.
      *
+     * For an HTTPS listener, update requires some interruptions. For a TLS listener, update
+     * requires no interruption.
+     *
      * To create a certificate list for a secure listener, use
      * [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
      * .
@@ -578,6 +598,9 @@ public open class CfnListener(
      *
      * You must provide exactly one certificate if the listener protocol is HTTPS or TLS.
      *
+     * For an HTTPS listener, update requires some interruptions. For a TLS listener, update
+     * requires no interruption.
+     *
      * To create a certificate list for a secure listener, use
      * [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
      * .
@@ -593,6 +616,9 @@ public open class CfnListener(
      * The default SSL server certificate for a secure listener.
      *
      * You must provide exactly one certificate if the listener protocol is HTTPS or TLS.
+     *
+     * For an HTTPS listener, update requires some interruptions. For a TLS listener, update
+     * requires no interruption.
      *
      * To create a certificate list for a secure listener, use
      * [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
@@ -650,6 +676,8 @@ public open class CfnListener(
     /**
      * The listener attributes.
      *
+     * Attributes that you do not modify retain their current values.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
      * @param listenerAttributes The listener attributes. 
      */
@@ -660,6 +688,8 @@ public open class CfnListener(
     /**
      * The listener attributes.
      *
+     * Attributes that you do not modify retain their current values.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
      * @param listenerAttributes The listener attributes. 
      */
@@ -669,6 +699,8 @@ public open class CfnListener(
 
     /**
      * The listener attributes.
+     *
+     * Attributes that you do not modify retain their current values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
      * @param listenerAttributes The listener attributes. 
@@ -749,14 +781,16 @@ public open class CfnListener(
      * [HTTPS and TLS listeners] The security policy that defines which protocols and ciphers are
      * supported.
      *
-     * Updating the security policy can result in interruptions if the load balancer is handling a
-     * high volume of traffic.
-     *
      * For more information, see [Security
-     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies)
+     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/describe-ssl-policies.html)
      * in the *Application Load Balancers Guide* and [Security
-     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/create-tls-listener.html#describe-ssl-policies)
+     * policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/describe-ssl-policies.html)
      * in the *Network Load Balancers Guide* .
+     *
+     * [HTTPS listeners] Updating the security policy can result in interruptions if the load
+     * balancer is handling a high volume of traffic. To decrease the possibility of an interruption if
+     * your load balancer is handling a high volume of traffic, create an additional load balancer or
+     * request an LCU reservation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-sslpolicy)
      * @param sslPolicy [HTTPS and TLS listeners] The security policy that defines which protocols
@@ -1492,14 +1526,14 @@ public open class CfnListener(
        * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
        * redirect request to the authorization endpoint.
        */
-      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable)
+      public
+          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>)
 
       /**
        * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
        * redirect request to the authorization endpoint.
        */
-      public
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>)
+      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable)
 
       /**
        * @param onUnauthenticatedRequest The behavior if the user is not authenticated. The
@@ -1557,17 +1591,17 @@ public open class CfnListener(
        * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
        * redirect request to the authorization endpoint.
        */
-      override fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
-        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams.let(IResolvable.Companion::unwrap))
+      override
+          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
+        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams)
       }
 
       /**
        * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
        * redirect request to the authorization endpoint.
        */
-      override
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
-        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams)
+      override fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
+        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1878,14 +1912,14 @@ public open class CfnListener(
        * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
        * redirect request to the authorization endpoint.
        */
-      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable)
+      public
+          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>)
 
       /**
        * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
        * redirect request to the authorization endpoint.
        */
-      public
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>)
+      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable)
 
       /**
        * @param authorizationEndpoint The authorization endpoint of the IdP. 
@@ -1977,17 +2011,17 @@ public open class CfnListener(
        * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
        * redirect request to the authorization endpoint.
        */
-      override fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
-        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams.let(IResolvable.Companion::unwrap))
+      override
+          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
+        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams)
       }
 
       /**
        * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
        * redirect request to the authorization endpoint.
        */
-      override
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
-        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams)
+      override fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
+        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2946,7 +2980,7 @@ public open class CfnListener(
   }
 
   /**
-   * Specifies the configuration information for mutual authentication.
+   * The mutual authentication configuration information.
    *
    * Example:
    *
@@ -2967,6 +3001,8 @@ public open class CfnListener(
    */
   public interface MutualAuthenticationProperty {
     /**
+     * Indicates whether trust store CA certificate names are advertised.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html#cfn-elasticloadbalancingv2-listener-mutualauthentication-advertisetruststorecanames)
      */
     public fun advertiseTrustStoreCaNames(): String? = unwrap(this).getAdvertiseTrustStoreCaNames()
@@ -3001,7 +3037,8 @@ public open class CfnListener(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param advertiseTrustStoreCaNames the value to be set.
+       * @param advertiseTrustStoreCaNames Indicates whether trust store CA certificate names are
+       * advertised.
        */
       public fun advertiseTrustStoreCaNames(advertiseTrustStoreCaNames: String)
 
@@ -3036,7 +3073,8 @@ public open class CfnListener(
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty.builder()
 
       /**
-       * @param advertiseTrustStoreCaNames the value to be set.
+       * @param advertiseTrustStoreCaNames Indicates whether trust store CA certificate names are
+       * advertised.
        */
       override fun advertiseTrustStoreCaNames(advertiseTrustStoreCaNames: String) {
         cdkBuilder.advertiseTrustStoreCaNames(advertiseTrustStoreCaNames)
@@ -3083,6 +3121,8 @@ public open class CfnListener(
     ) : CdkObject(cdkObject),
         MutualAuthenticationProperty {
       /**
+       * Indicates whether trust store CA certificate names are advertised.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-mutualauthentication.html#cfn-elasticloadbalancingv2-listener-mutualauthentication-advertisetruststorecanames)
        */
       override fun advertiseTrustStoreCaNames(): String? =
@@ -3432,7 +3472,8 @@ public open class CfnListener(
      * The time period, in seconds, during which requests from a client should be routed to the same
      * target group.
      *
-     * The range is 1-604800 seconds (7 days).
+     * The range is 1-604800 seconds (7 days). You must specify this value when enabling target
+     * group stickiness.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listener-targetgroupstickinessconfig-durationseconds)
      */
@@ -3453,7 +3494,8 @@ public open class CfnListener(
       /**
        * @param durationSeconds The time period, in seconds, during which requests from a client
        * should be routed to the same target group.
-       * The range is 1-604800 seconds (7 days).
+       * The range is 1-604800 seconds (7 days). You must specify this value when enabling target
+       * group stickiness.
        */
       public fun durationSeconds(durationSeconds: Number)
 
@@ -3477,7 +3519,8 @@ public open class CfnListener(
       /**
        * @param durationSeconds The time period, in seconds, during which requests from a client
        * should be routed to the same target group.
-       * The range is 1-604800 seconds (7 days).
+       * The range is 1-604800 seconds (7 days). You must specify this value when enabling target
+       * group stickiness.
        */
       override fun durationSeconds(durationSeconds: Number) {
         cdkBuilder.durationSeconds(durationSeconds)
@@ -3510,7 +3553,8 @@ public open class CfnListener(
        * The time period, in seconds, during which requests from a client should be routed to the
        * same target group.
        *
-       * The range is 1-604800 seconds (7 days).
+       * The range is 1-604800 seconds (7 days). You must specify this value when enabling target
+       * group stickiness.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listener-targetgroupstickinessconfig-durationseconds)
        */

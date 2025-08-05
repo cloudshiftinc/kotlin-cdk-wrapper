@@ -99,6 +99,11 @@ public interface CfnBotProps {
   public fun name(): String
 
   /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-bot.html#cfn-lex-bot-replication)
+   */
+  public fun replication(): Any? = unwrap(this).getReplication()
+
+  /**
    * The Amazon Resource Name (ARN) of the IAM role used to build and run the bot.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-bot.html#cfn-lex-bot-rolearn)
@@ -231,6 +236,23 @@ public interface CfnBotProps {
      * @param name The name of the bot locale. 
      */
     public fun name(name: String)
+
+    /**
+     * @param replication the value to be set.
+     */
+    public fun replication(replication: IResolvable)
+
+    /**
+     * @param replication the value to be set.
+     */
+    public fun replication(replication: CfnBot.ReplicationProperty)
+
+    /**
+     * @param replication the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("23e941ec6432c4d5fe33e925d70f3e5a5e0b5b78437c84ea0c2ce19211069075")
+    public fun replication(replication: CfnBot.ReplicationProperty.Builder.() -> Unit)
 
     /**
      * @param roleArn The Amazon Resource Name (ARN) of the IAM role used to build and run the bot. 
@@ -418,6 +440,28 @@ public interface CfnBotProps {
     }
 
     /**
+     * @param replication the value to be set.
+     */
+    override fun replication(replication: IResolvable) {
+      cdkBuilder.replication(replication.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param replication the value to be set.
+     */
+    override fun replication(replication: CfnBot.ReplicationProperty) {
+      cdkBuilder.replication(replication.let(CfnBot.ReplicationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param replication the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("23e941ec6432c4d5fe33e925d70f3e5a5e0b5b78437c84ea0c2ce19211069075")
+    override fun replication(replication: CfnBot.ReplicationProperty.Builder.() -> Unit): Unit =
+        replication(CfnBot.ReplicationProperty(replication))
+
+    /**
      * @param roleArn The Amazon Resource Name (ARN) of the IAM role used to build and run the bot. 
      */
     override fun roleArn(roleArn: String) {
@@ -562,6 +606,11 @@ public interface CfnBotProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-bot.html#cfn-lex-bot-name)
      */
     override fun name(): String = unwrap(this).getName()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-bot.html#cfn-lex-bot-replication)
+     */
+    override fun replication(): Any? = unwrap(this).getReplication()
 
     /**
      * The Amazon Resource Name (ARN) of the IAM role used to build and run the bot.

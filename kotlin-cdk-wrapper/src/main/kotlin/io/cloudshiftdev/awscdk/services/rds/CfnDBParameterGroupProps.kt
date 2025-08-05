@@ -109,7 +109,7 @@ public interface CfnDBParameterGroupProps {
   public fun family(): String
 
   /**
-   * An array of parameter names and values for the parameter update.
+   * A mapping of parameter names and values for the parameter update.
    *
    * You must specify at least one parameter name and value.
    *
@@ -203,7 +203,7 @@ public interface CfnDBParameterGroupProps {
     public fun family(family: String)
 
     /**
-     * @param parameters An array of parameter names and values for the parameter update.
+     * @param parameters A mapping of parameter names and values for the parameter update.
      * You must specify at least one parameter name and value.
      *
      * For more information about parameter groups, see [Working with parameter
@@ -302,7 +302,7 @@ public interface CfnDBParameterGroupProps {
     }
 
     /**
-     * @param parameters An array of parameter names and values for the parameter update.
+     * @param parameters A mapping of parameter names and values for the parameter update.
      * You must specify at least one parameter name and value.
      *
      * For more information about parameter groups, see [Working with parameter
@@ -411,7 +411,7 @@ public interface CfnDBParameterGroupProps {
     override fun family(): String = unwrap(this).getFamily()
 
     /**
-     * An array of parameter names and values for the parameter update.
+     * A mapping of parameter names and values for the parameter update.
      *
      * You must specify at least one parameter name and value.
      *

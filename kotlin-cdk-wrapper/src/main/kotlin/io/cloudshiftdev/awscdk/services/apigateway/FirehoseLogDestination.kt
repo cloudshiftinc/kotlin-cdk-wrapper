@@ -41,7 +41,7 @@ public open class FirehoseLogDestination(
   /**
    * Binds this destination to the Firehose delivery stream.
    *
-   * @param _stage 
+   * @param stage 
    */
   public override fun bind(stage: IStage): AccessLogDestinationConfig =
       unwrap(this).bind(stage.let(IStage.Companion::unwrap)).let(AccessLogDestinationConfig::wrap)

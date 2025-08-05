@@ -17,7 +17,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * The `AWS::ApiGateway::GatewayResponse` resource creates a gateway response for your API.
  *
- * For more information, see [API Gateway
+ * When you delete a stack containing this resource, your custom gateway responses are reset. For
+ * more information, see [API Gateway
  * Responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/customize-gateway-responses.html#api-gateway-gatewayResponse-definition)
  * in the *API Gateway Developer Guide* .
  *
@@ -88,16 +89,16 @@ public open class CfnGatewayResponse(
    * Response parameters (paths, query strings and headers) of the GatewayResponse as a
    * string-to-string map of key-value pairs.
    */
-  public open fun responseParameters(`value`: IResolvable) {
-    unwrap(this).setResponseParameters(`value`.let(IResolvable.Companion::unwrap))
+  public open fun responseParameters(`value`: Map<String, String>) {
+    unwrap(this).setResponseParameters(`value`)
   }
 
   /**
    * Response parameters (paths, query strings and headers) of the GatewayResponse as a
    * string-to-string map of key-value pairs.
    */
-  public open fun responseParameters(`value`: Map<String, String>) {
-    unwrap(this).setResponseParameters(`value`)
+  public open fun responseParameters(`value`: IResolvable) {
+    unwrap(this).setResponseParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -108,15 +109,15 @@ public open class CfnGatewayResponse(
   /**
    * Response templates of the GatewayResponse as a string-to-string map of key-value pairs.
    */
-  public open fun responseTemplates(`value`: IResolvable) {
-    unwrap(this).setResponseTemplates(`value`.let(IResolvable.Companion::unwrap))
+  public open fun responseTemplates(`value`: Map<String, String>) {
+    unwrap(this).setResponseTemplates(`value`)
   }
 
   /**
    * Response templates of the GatewayResponse as a string-to-string map of key-value pairs.
    */
-  public open fun responseTemplates(`value`: Map<String, String>) {
-    unwrap(this).setResponseTemplates(`value`)
+  public open fun responseTemplates(`value`: IResolvable) {
+    unwrap(this).setResponseTemplates(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -168,7 +169,7 @@ public open class CfnGatewayResponse(
      * @param responseParameters Response parameters (paths, query strings and headers) of the
      * GatewayResponse as a string-to-string map of key-value pairs. 
      */
-    public fun responseParameters(responseParameters: IResolvable)
+    public fun responseParameters(responseParameters: Map<String, String>)
 
     /**
      * Response parameters (paths, query strings and headers) of the GatewayResponse as a
@@ -178,16 +179,7 @@ public open class CfnGatewayResponse(
      * @param responseParameters Response parameters (paths, query strings and headers) of the
      * GatewayResponse as a string-to-string map of key-value pairs. 
      */
-    public fun responseParameters(responseParameters: Map<String, String>)
-
-    /**
-     * Response templates of the GatewayResponse as a string-to-string map of key-value pairs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html#cfn-apigateway-gatewayresponse-responsetemplates)
-     * @param responseTemplates Response templates of the GatewayResponse as a string-to-string map
-     * of key-value pairs. 
-     */
-    public fun responseTemplates(responseTemplates: IResolvable)
+    public fun responseParameters(responseParameters: IResolvable)
 
     /**
      * Response templates of the GatewayResponse as a string-to-string map of key-value pairs.
@@ -197,6 +189,15 @@ public open class CfnGatewayResponse(
      * of key-value pairs. 
      */
     public fun responseTemplates(responseTemplates: Map<String, String>)
+
+    /**
+     * Response templates of the GatewayResponse as a string-to-string map of key-value pairs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html#cfn-apigateway-gatewayresponse-responsetemplates)
+     * @param responseTemplates Response templates of the GatewayResponse as a string-to-string map
+     * of key-value pairs. 
+     */
+    public fun responseTemplates(responseTemplates: IResolvable)
 
     /**
      * The response type of the associated GatewayResponse.
@@ -238,8 +239,8 @@ public open class CfnGatewayResponse(
      * @param responseParameters Response parameters (paths, query strings and headers) of the
      * GatewayResponse as a string-to-string map of key-value pairs. 
      */
-    override fun responseParameters(responseParameters: IResolvable) {
-      cdkBuilder.responseParameters(responseParameters.let(IResolvable.Companion::unwrap))
+    override fun responseParameters(responseParameters: Map<String, String>) {
+      cdkBuilder.responseParameters(responseParameters)
     }
 
     /**
@@ -250,19 +251,8 @@ public open class CfnGatewayResponse(
      * @param responseParameters Response parameters (paths, query strings and headers) of the
      * GatewayResponse as a string-to-string map of key-value pairs. 
      */
-    override fun responseParameters(responseParameters: Map<String, String>) {
-      cdkBuilder.responseParameters(responseParameters)
-    }
-
-    /**
-     * Response templates of the GatewayResponse as a string-to-string map of key-value pairs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html#cfn-apigateway-gatewayresponse-responsetemplates)
-     * @param responseTemplates Response templates of the GatewayResponse as a string-to-string map
-     * of key-value pairs. 
-     */
-    override fun responseTemplates(responseTemplates: IResolvable) {
-      cdkBuilder.responseTemplates(responseTemplates.let(IResolvable.Companion::unwrap))
+    override fun responseParameters(responseParameters: IResolvable) {
+      cdkBuilder.responseParameters(responseParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -274,6 +264,17 @@ public open class CfnGatewayResponse(
      */
     override fun responseTemplates(responseTemplates: Map<String, String>) {
       cdkBuilder.responseTemplates(responseTemplates)
+    }
+
+    /**
+     * Response templates of the GatewayResponse as a string-to-string map of key-value pairs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html#cfn-apigateway-gatewayresponse-responsetemplates)
+     * @param responseTemplates Response templates of the GatewayResponse as a string-to-string map
+     * of key-value pairs. 
+     */
+    override fun responseTemplates(responseTemplates: IResolvable) {
+      cdkBuilder.responseTemplates(responseTemplates.let(IResolvable.Companion::unwrap))
     }
 
     /**

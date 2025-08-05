@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -38,7 +39,14 @@ import kotlin.jvm.JvmName
  * .objectCount(123)
  * .range(RangeProperty.builder()
  * .unit("unit")
+ * // the properties below are optional
+ * .timestampFormat("timestampFormat")
+ * .timestampSource("timestampSource")
  * .value(123)
+ * .valueRange(ValueRangeProperty.builder()
+ * .end(123)
+ * .start(123)
+ * .build())
  * .build())
  * .threshold(ThresholdProperty.builder()
  * .operator("operator")
@@ -51,6 +59,7 @@ import kotlin.jvm.JvmName
  * .key("key")
  * .value("value")
  * .build()))
+ * .useHistoricalData(false)
  * .build();
  * ```
  *
@@ -112,6 +121,14 @@ public interface CfnCalculatedAttributeDefinitionProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-calculatedattributedefinition.html#cfn-customerprofiles-calculatedattributedefinition-tags)
    */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * Whether historical data ingested before the Calculated Attribute was created should be included
+   * in calculations.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-calculatedattributedefinition.html#cfn-customerprofiles-calculatedattributedefinition-usehistoricaldata)
+   */
+  public fun useHistoricalData(): Any? = unwrap(this).getUseHistoricalData()
 
   /**
    * A builder for [CfnCalculatedAttributeDefinitionProps]
@@ -195,6 +212,18 @@ public interface CfnCalculatedAttributeDefinitionProps {
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(vararg tags: CfnTag)
+
+    /**
+     * @param useHistoricalData Whether historical data ingested before the Calculated Attribute was
+     * created should be included in calculations.
+     */
+    public fun useHistoricalData(useHistoricalData: Boolean)
+
+    /**
+     * @param useHistoricalData Whether historical data ingested before the Calculated Attribute was
+     * created should be included in calculations.
+     */
+    public fun useHistoricalData(useHistoricalData: IResolvable)
   }
 
   private class BuilderImpl : Builder {
@@ -304,6 +333,22 @@ public interface CfnCalculatedAttributeDefinitionProps {
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
+    /**
+     * @param useHistoricalData Whether historical data ingested before the Calculated Attribute was
+     * created should be included in calculations.
+     */
+    override fun useHistoricalData(useHistoricalData: Boolean) {
+      cdkBuilder.useHistoricalData(useHistoricalData)
+    }
+
+    /**
+     * @param useHistoricalData Whether historical data ingested before the Calculated Attribute was
+     * created should be included in calculations.
+     */
+    override fun useHistoricalData(useHistoricalData: IResolvable) {
+      cdkBuilder.useHistoricalData(useHistoricalData.let(IResolvable.Companion::unwrap))
+    }
+
     public fun build():
         software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinitionProps =
         cdkBuilder.build()
@@ -368,6 +413,14 @@ public interface CfnCalculatedAttributeDefinitionProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-calculatedattributedefinition.html#cfn-customerprofiles-calculatedattributedefinition-tags)
      */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * Whether historical data ingested before the Calculated Attribute was created should be
+     * included in calculations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-calculatedattributedefinition.html#cfn-customerprofiles-calculatedattributedefinition-usehistoricaldata)
+     */
+    override fun useHistoricalData(): Any? = unwrap(this).getUseHistoricalData()
   }
 
   public companion object {

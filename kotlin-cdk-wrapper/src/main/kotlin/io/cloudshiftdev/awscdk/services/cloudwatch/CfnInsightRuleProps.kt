@@ -3,9 +3,12 @@
 package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -24,6 +27,7 @@ import kotlin.collections.List
  * .ruleName("ruleName")
  * .ruleState("ruleState")
  * // the properties below are optional
+ * .applyOnTransformedLogs(false)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -34,6 +38,15 @@ import kotlin.collections.List
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html)
  */
 public interface CfnInsightRuleProps {
+  /**
+   * Determines whether the rules is evaluated on transformed versions of logs.
+   *
+   * Valid values are `TRUE` and `FALSE` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html#cfn-cloudwatch-insightrule-applyontransformedlogs)
+   */
+  public fun applyOnTransformedLogs(): Any? = unwrap(this).getApplyOnTransformedLogs()
+
   /**
    * The definition of the rule, as a JSON object.
    *
@@ -83,6 +96,20 @@ public interface CfnInsightRuleProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param applyOnTransformedLogs Determines whether the rules is evaluated on transformed
+     * versions of logs.
+     * Valid values are `TRUE` and `FALSE` .
+     */
+    public fun applyOnTransformedLogs(applyOnTransformedLogs: Boolean)
+
+    /**
+     * @param applyOnTransformedLogs Determines whether the rules is evaluated on transformed
+     * versions of logs.
+     * Valid values are `TRUE` and `FALSE` .
+     */
+    public fun applyOnTransformedLogs(applyOnTransformedLogs: IResolvable)
+
     /**
      * @param ruleBody The definition of the rule, as a JSON object. 
      * For details about the syntax, see [Contributor Insights Rule
@@ -134,6 +161,24 @@ public interface CfnInsightRuleProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.CfnInsightRuleProps.Builder =
         software.amazon.awscdk.services.cloudwatch.CfnInsightRuleProps.builder()
+
+    /**
+     * @param applyOnTransformedLogs Determines whether the rules is evaluated on transformed
+     * versions of logs.
+     * Valid values are `TRUE` and `FALSE` .
+     */
+    override fun applyOnTransformedLogs(applyOnTransformedLogs: Boolean) {
+      cdkBuilder.applyOnTransformedLogs(applyOnTransformedLogs)
+    }
+
+    /**
+     * @param applyOnTransformedLogs Determines whether the rules is evaluated on transformed
+     * versions of logs.
+     * Valid values are `TRUE` and `FALSE` .
+     */
+    override fun applyOnTransformedLogs(applyOnTransformedLogs: IResolvable) {
+      cdkBuilder.applyOnTransformedLogs(applyOnTransformedLogs.let(IResolvable.Companion::unwrap))
+    }
 
     /**
      * @param ruleBody The definition of the rule, as a JSON object. 
@@ -198,6 +243,15 @@ public interface CfnInsightRuleProps {
     cdkObject: software.amazon.awscdk.services.cloudwatch.CfnInsightRuleProps,
   ) : CdkObject(cdkObject),
       CfnInsightRuleProps {
+    /**
+     * Determines whether the rules is evaluated on transformed versions of logs.
+     *
+     * Valid values are `TRUE` and `FALSE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html#cfn-cloudwatch-insightrule-applyontransformedlogs)
+     */
+    override fun applyOnTransformedLogs(): Any? = unwrap(this).getApplyOnTransformedLogs()
+
     /**
      * The definition of the rule, as a JSON object.
      *

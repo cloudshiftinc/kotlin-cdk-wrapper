@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.jvm.JvmName
 
 /**
  * Properties for `AlbController`.
@@ -25,6 +26,10 @@ import kotlin.Unit
  * .cluster(cluster)
  * .version(albControllerVersion)
  * // the properties below are optional
+ * .additionalHelmChartValues(AlbControllerHelmChartOptions.builder()
+ * .enableWaf(false)
+ * .enableWafv2(false)
+ * .build())
  * .policy(policy)
  * .repository("repository")
  * .build();
@@ -41,6 +46,19 @@ public interface AlbControllerProps : AlbControllerOptions {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param additionalHelmChartValues Additional helm chart values for ALB controller.
+     */
+    public fun additionalHelmChartValues(additionalHelmChartValues: AlbControllerHelmChartOptions)
+
+    /**
+     * @param additionalHelmChartValues Additional helm chart values for ALB controller.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("10476094ba74ed9e86a8c4ed8d72cc4f8cb7411420058714ba63c175f3f32785")
+    public
+        fun additionalHelmChartValues(additionalHelmChartValues: AlbControllerHelmChartOptions.Builder.() -> Unit)
+
     /**
      * @param cluster [disable-awslint:ref-via-interface] Cluster to install the controller onto. 
      */
@@ -73,6 +91,23 @@ public interface AlbControllerProps : AlbControllerOptions {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.eks.AlbControllerProps.Builder =
         software.amazon.awscdk.services.eks.AlbControllerProps.builder()
+
+    /**
+     * @param additionalHelmChartValues Additional helm chart values for ALB controller.
+     */
+    override
+        fun additionalHelmChartValues(additionalHelmChartValues: AlbControllerHelmChartOptions) {
+      cdkBuilder.additionalHelmChartValues(additionalHelmChartValues.let(AlbControllerHelmChartOptions.Companion::unwrap))
+    }
+
+    /**
+     * @param additionalHelmChartValues Additional helm chart values for ALB controller.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("10476094ba74ed9e86a8c4ed8d72cc4f8cb7411420058714ba63c175f3f32785")
+    override
+        fun additionalHelmChartValues(additionalHelmChartValues: AlbControllerHelmChartOptions.Builder.() -> Unit):
+        Unit = additionalHelmChartValues(AlbControllerHelmChartOptions(additionalHelmChartValues))
 
     /**
      * @param cluster [disable-awslint:ref-via-interface] Cluster to install the controller onto. 
@@ -117,6 +152,14 @@ public interface AlbControllerProps : AlbControllerOptions {
     cdkObject: software.amazon.awscdk.services.eks.AlbControllerProps,
   ) : CdkObject(cdkObject),
       AlbControllerProps {
+    /**
+     * Additional helm chart values for ALB controller.
+     *
+     * Default: - no additional helm chart values
+     */
+    override fun additionalHelmChartValues(): AlbControllerHelmChartOptions? =
+        unwrap(this).getAdditionalHelmChartValues()?.let(AlbControllerHelmChartOptions::wrap)
+
     /**
      * [disable-awslint:ref-via-interface] Cluster to install the controller onto.
      */

@@ -469,20 +469,31 @@ public open class CfnDBProxyTargetGroup(
      *
      * Constraints:
      *
-     * * Must be between 0 and 3600.
+     * * Must be between 0 and 300.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-connectionborrowtimeout)
      */
     public fun connectionBorrowTimeout(): Number? = unwrap(this).getConnectionBorrowTimeout()
 
     /**
-     * One or more SQL statements for the proxy to run when opening each new database connection.
+     * Add an initialization query, or modify the current one.
      *
-     * Typically used with `SET` statements to make sure that each connection has identical settings
-     * such as time zone and character set. For multiple statements, use semicolons as the separator.
-     * You can also include multiple variables in a single `SET` statement, such as `SET x=1, y=2` .
+     * You can specify one or more SQL statements for the proxy to run when opening each new
+     * database connection. The setting is typically used with `SET` statements to make sure that each
+     * connection has identical settings. Make sure the query added here is valid. This is an optional
+     * field, so you can choose to leave it empty. For including multiple variables in a single SET
+     * statement, use a comma separator.
+     *
+     * For example: `SET variable1=value1, variable2=value2`
      *
      * Default: no initialization query
+     *
+     *
+     * Since you can access initialization query as part of target group configuration, it is not
+     * protected by authentication or cryptographic methods. Anyone with access to view or manage your
+     * proxy target group configuration can view the initialization query. You should not add sensitive
+     * data, such as passwords or long-lived encryption keys, to this option.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-initquery)
      */
@@ -560,19 +571,27 @@ public open class CfnDBProxyTargetGroup(
        *
        * Constraints:
        *
-       * * Must be between 0 and 3600.
+       * * Must be between 0 and 300.
        */
       public fun connectionBorrowTimeout(connectionBorrowTimeout: Number)
 
       /**
-       * @param initQuery One or more SQL statements for the proxy to run when opening each new
-       * database connection.
-       * Typically used with `SET` statements to make sure that each connection has identical
-       * settings such as time zone and character set. For multiple statements, use semicolons as the
-       * separator. You can also include multiple variables in a single `SET` statement, such as `SET
-       * x=1, y=2` .
+       * @param initQuery Add an initialization query, or modify the current one.
+       * You can specify one or more SQL statements for the proxy to run when opening each new
+       * database connection. The setting is typically used with `SET` statements to make sure that
+       * each connection has identical settings. Make sure the query added here is valid. This is an
+       * optional field, so you can choose to leave it empty. For including multiple variables in a
+       * single SET statement, use a comma separator.
+       *
+       * For example: `SET variable1=value1, variable2=value2`
        *
        * Default: no initialization query
+       *
+       *
+       * Since you can access initialization query as part of target group configuration, it is not
+       * protected by authentication or cryptographic methods. Anyone with access to view or manage
+       * your proxy target group configuration can view the initialization query. You should not add
+       * sensitive data, such as passwords or long-lived encryption keys, to this option.
        */
       public fun initQuery(initQuery: String)
 
@@ -654,21 +673,29 @@ public open class CfnDBProxyTargetGroup(
        *
        * Constraints:
        *
-       * * Must be between 0 and 3600.
+       * * Must be between 0 and 300.
        */
       override fun connectionBorrowTimeout(connectionBorrowTimeout: Number) {
         cdkBuilder.connectionBorrowTimeout(connectionBorrowTimeout)
       }
 
       /**
-       * @param initQuery One or more SQL statements for the proxy to run when opening each new
-       * database connection.
-       * Typically used with `SET` statements to make sure that each connection has identical
-       * settings such as time zone and character set. For multiple statements, use semicolons as the
-       * separator. You can also include multiple variables in a single `SET` statement, such as `SET
-       * x=1, y=2` .
+       * @param initQuery Add an initialization query, or modify the current one.
+       * You can specify one or more SQL statements for the proxy to run when opening each new
+       * database connection. The setting is typically used with `SET` statements to make sure that
+       * each connection has identical settings. Make sure the query added here is valid. This is an
+       * optional field, so you can choose to leave it empty. For including multiple variables in a
+       * single SET statement, use a comma separator.
+       *
+       * For example: `SET variable1=value1, variable2=value2`
        *
        * Default: no initialization query
+       *
+       *
+       * Since you can access initialization query as part of target group configuration, it is not
+       * protected by authentication or cryptographic methods. Anyone with access to view or manage
+       * your proxy target group configuration can view the initialization query. You should not add
+       * sensitive data, such as passwords or long-lived encryption keys, to this option.
        */
       override fun initQuery(initQuery: String) {
         cdkBuilder.initQuery(initQuery)
@@ -762,21 +789,31 @@ public open class CfnDBProxyTargetGroup(
        *
        * Constraints:
        *
-       * * Must be between 0 and 3600.
+       * * Must be between 0 and 300.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-connectionborrowtimeout)
        */
       override fun connectionBorrowTimeout(): Number? = unwrap(this).getConnectionBorrowTimeout()
 
       /**
-       * One or more SQL statements for the proxy to run when opening each new database connection.
+       * Add an initialization query, or modify the current one.
        *
-       * Typically used with `SET` statements to make sure that each connection has identical
-       * settings such as time zone and character set. For multiple statements, use semicolons as the
-       * separator. You can also include multiple variables in a single `SET` statement, such as `SET
-       * x=1, y=2` .
+       * You can specify one or more SQL statements for the proxy to run when opening each new
+       * database connection. The setting is typically used with `SET` statements to make sure that
+       * each connection has identical settings. Make sure the query added here is valid. This is an
+       * optional field, so you can choose to leave it empty. For including multiple variables in a
+       * single SET statement, use a comma separator.
+       *
+       * For example: `SET variable1=value1, variable2=value2`
        *
        * Default: no initialization query
+       *
+       *
+       * Since you can access initialization query as part of target group configuration, it is not
+       * protected by authentication or cryptographic methods. Anyone with access to view or manage
+       * your proxy target group configuration can view the initialization query. You should not add
+       * sensitive data, such as passwords or long-lived encryption keys, to this option.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-initquery)
        */

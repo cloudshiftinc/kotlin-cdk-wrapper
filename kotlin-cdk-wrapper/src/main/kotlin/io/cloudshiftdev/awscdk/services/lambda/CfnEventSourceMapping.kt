@@ -58,6 +58,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .amazonManagedKafkaEventSourceConfig(AmazonManagedKafkaEventSourceConfigProperty.builder()
  * .consumerGroupId("consumerGroupId")
+ * .schemaRegistryConfig(SchemaRegistryConfigProperty.builder()
+ * .accessConfigs(List.of(SchemaRegistryAccessConfigProperty.builder()
+ * .type("type")
+ * .uri("uri")
+ * .build()))
+ * .eventRecordFormat("eventRecordFormat")
+ * .schemaRegistryUri("schemaRegistryUri")
+ * .schemaValidationConfigs(List.of(SchemaValidationConfigProperty.builder()
+ * .attribute("attribute")
+ * .build()))
+ * .build())
  * .build())
  * .batchSize(123)
  * .bisectBatchOnFunctionError(false)
@@ -102,6 +113,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .selfManagedKafkaEventSourceConfig(SelfManagedKafkaEventSourceConfigProperty.builder()
  * .consumerGroupId("consumerGroupId")
+ * .schemaRegistryConfig(SchemaRegistryConfigProperty.builder()
+ * .accessConfigs(List.of(SchemaRegistryAccessConfigProperty.builder()
+ * .type("type")
+ * .uri("uri")
+ * .build()))
+ * .eventRecordFormat("eventRecordFormat")
+ * .schemaRegistryUri("schemaRegistryUri")
+ * .schemaValidationConfigs(List.of(SchemaValidationConfigProperty.builder()
+ * .attribute("attribute")
+ * .build()))
+ * .build())
  * .build())
  * .sourceAccessConfigurations(List.of(SourceAccessConfigurationProperty.builder()
  * .type("type")
@@ -805,6 +827,12 @@ public open class CfnEventSourceMapping(
      *
      * The default value is false.
      *
+     *
+     * When using `BisectBatchOnFunctionError` , check the `BatchSize` parameter in the `OnFailure`
+     * destination message's metadata. The `BatchSize` could be greater than 1 since Lambda
+     * consolidates failed messages metadata when writing to the `OnFailure` destination.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror)
      * @param bisectBatchOnFunctionError (Kinesis and DynamoDB Streams only) If the function returns
      * an error, split the batch in two and retry. 
@@ -816,6 +844,12 @@ public open class CfnEventSourceMapping(
      * and retry.
      *
      * The default value is false.
+     *
+     *
+     * When using `BisectBatchOnFunctionError` , check the `BatchSize` parameter in the `OnFailure`
+     * destination message's metadata. The `BatchSize` could be greater than 1 since Lambda
+     * consolidates failed messages metadata when writing to the `OnFailure` destination.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror)
      * @param bisectBatchOnFunctionError (Kinesis and DynamoDB Streams only) If the function returns
@@ -1478,6 +1512,12 @@ public open class CfnEventSourceMapping(
      *
      * The default value is false.
      *
+     *
+     * When using `BisectBatchOnFunctionError` , check the `BatchSize` parameter in the `OnFailure`
+     * destination message's metadata. The `BatchSize` could be greater than 1 since Lambda
+     * consolidates failed messages metadata when writing to the `OnFailure` destination.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror)
      * @param bisectBatchOnFunctionError (Kinesis and DynamoDB Streams only) If the function returns
      * an error, split the batch in two and retry. 
@@ -1491,6 +1531,12 @@ public open class CfnEventSourceMapping(
      * and retry.
      *
      * The default value is false.
+     *
+     *
+     * When using `BisectBatchOnFunctionError` , check the `BatchSize` parameter in the `OnFailure`
+     * destination message's metadata. The `BatchSize` could be greater than 1 since Lambda
+     * consolidates failed messages metadata when writing to the `OnFailure` destination.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror)
      * @param bisectBatchOnFunctionError (Kinesis and DynamoDB Streams only) If the function returns
@@ -2194,6 +2240,17 @@ public open class CfnEventSourceMapping(
    * AmazonManagedKafkaEventSourceConfigProperty amazonManagedKafkaEventSourceConfigProperty =
    * AmazonManagedKafkaEventSourceConfigProperty.builder()
    * .consumerGroupId("consumerGroupId")
+   * .schemaRegistryConfig(SchemaRegistryConfigProperty.builder()
+   * .accessConfigs(List.of(SchemaRegistryAccessConfigProperty.builder()
+   * .type("type")
+   * .uri("uri")
+   * .build()))
+   * .eventRecordFormat("eventRecordFormat")
+   * .schemaRegistryUri("schemaRegistryUri")
+   * .schemaValidationConfigs(List.of(SchemaValidationConfigProperty.builder()
+   * .attribute("attribute")
+   * .build()))
+   * .build())
    * .build();
    * ```
    *
@@ -2213,6 +2270,13 @@ public open class CfnEventSourceMapping(
     public fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
 
     /**
+     * Specific configuration settings for a Kafka schema registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-amazonmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-amazonmanagedkafkaeventsourceconfig-schemaregistryconfig)
+     */
+    public fun schemaRegistryConfig(): Any? = unwrap(this).getSchemaRegistryConfig()
+
+    /**
      * A builder for [AmazonManagedKafkaEventSourceConfigProperty]
      */
     @CdkDslMarker
@@ -2226,6 +2290,24 @@ public open class CfnEventSourceMapping(
        * .
        */
       public fun consumerGroupId(consumerGroupId: String)
+
+      /**
+       * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry.
+       */
+      public fun schemaRegistryConfig(schemaRegistryConfig: IResolvable)
+
+      /**
+       * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry.
+       */
+      public fun schemaRegistryConfig(schemaRegistryConfig: SchemaRegistryConfigProperty)
+
+      /**
+       * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fb1b46c9563a771cad305a1b367162f8ffa10b32b3b667fa6618083885b9dc19")
+      public
+          fun schemaRegistryConfig(schemaRegistryConfig: SchemaRegistryConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2245,6 +2327,29 @@ public open class CfnEventSourceMapping(
       override fun consumerGroupId(consumerGroupId: String) {
         cdkBuilder.consumerGroupId(consumerGroupId)
       }
+
+      /**
+       * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry.
+       */
+      override fun schemaRegistryConfig(schemaRegistryConfig: IResolvable) {
+        cdkBuilder.schemaRegistryConfig(schemaRegistryConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry.
+       */
+      override fun schemaRegistryConfig(schemaRegistryConfig: SchemaRegistryConfigProperty) {
+        cdkBuilder.schemaRegistryConfig(schemaRegistryConfig.let(SchemaRegistryConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fb1b46c9563a771cad305a1b367162f8ffa10b32b3b667fa6618083885b9dc19")
+      override
+          fun schemaRegistryConfig(schemaRegistryConfig: SchemaRegistryConfigProperty.Builder.() -> Unit):
+          Unit = schemaRegistryConfig(SchemaRegistryConfigProperty(schemaRegistryConfig))
 
       public fun build():
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty
@@ -2267,6 +2372,13 @@ public open class CfnEventSourceMapping(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-amazonmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-amazonmanagedkafkaeventsourceconfig-consumergroupid)
        */
       override fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
+
+      /**
+       * Specific configuration settings for a Kafka schema registry.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-amazonmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-amazonmanagedkafkaeventsourceconfig-schemaregistryconfig)
+       */
+      override fun schemaRegistryConfig(): Any? = unwrap(this).getSchemaRegistryConfig()
     }
 
     public companion object {
@@ -2290,6 +2402,10 @@ public open class CfnEventSourceMapping(
 
   /**
    * A configuration object that specifies the destination of an event after Lambda processes it.
+   *
+   * For more information, see [Adding a
+   * destination](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async-retain-records.html#invocation-async-destinations)
+   * .
    *
    * Example:
    *
@@ -2997,6 +3113,10 @@ public open class CfnEventSourceMapping(
   /**
    * A destination for events that failed processing.
    *
+   * For more information, see [Adding a
+   * destination](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async-retain-records.html#invocation-async-destinations)
+   * .
+   *
    * Example:
    *
    * ```
@@ -3336,6 +3456,493 @@ public open class CfnEventSourceMapping(
   }
 
   /**
+   * Specific access configuration settings that tell Lambda how to authenticate with your schema
+   * registry.
+   *
+   * If you're working with an AWS Glue schema registry, don't provide authentication details in
+   * this object. Instead, ensure that your execution role has the required permissions for Lambda to
+   * access your cluster.
+   *
+   * If you're working with a Confluent schema registry, choose the authentication method in the
+   * `Type` field, and provide the AWS Secrets Manager secret ARN in the `URI` field.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * SchemaRegistryAccessConfigProperty schemaRegistryAccessConfigProperty =
+   * SchemaRegistryAccessConfigProperty.builder()
+   * .type("type")
+   * .uri("uri")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemaregistryaccessconfig.html)
+   */
+  public interface SchemaRegistryAccessConfigProperty {
+    /**
+     * The type of authentication Lambda uses to access your schema registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemaregistryaccessconfig.html#cfn-lambda-eventsourcemapping-schemaregistryaccessconfig-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * The URI of the secret (Secrets Manager secret ARN) to authenticate with your schema registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemaregistryaccessconfig.html#cfn-lambda-eventsourcemapping-schemaregistryaccessconfig-uri)
+     */
+    public fun uri(): String? = unwrap(this).getUri()
+
+    /**
+     * A builder for [SchemaRegistryAccessConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type The type of authentication Lambda uses to access your schema registry.
+       */
+      public fun type(type: String)
+
+      /**
+       * @param uri The URI of the secret (Secrets Manager secret ARN) to authenticate with your
+       * schema registry.
+       */
+      public fun uri(uri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaRegistryAccessConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaRegistryAccessConfigProperty.builder()
+
+      /**
+       * @param type The type of authentication Lambda uses to access your schema registry.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param uri The URI of the secret (Secrets Manager secret ARN) to authenticate with your
+       * schema registry.
+       */
+      override fun uri(uri: String) {
+        cdkBuilder.uri(uri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaRegistryAccessConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaRegistryAccessConfigProperty,
+    ) : CdkObject(cdkObject),
+        SchemaRegistryAccessConfigProperty {
+      /**
+       * The type of authentication Lambda uses to access your schema registry.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemaregistryaccessconfig.html#cfn-lambda-eventsourcemapping-schemaregistryaccessconfig-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+
+      /**
+       * The URI of the secret (Secrets Manager secret ARN) to authenticate with your schema
+       * registry.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemaregistryaccessconfig.html#cfn-lambda-eventsourcemapping-schemaregistryaccessconfig-uri)
+       */
+      override fun uri(): String? = unwrap(this).getUri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SchemaRegistryAccessConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaRegistryAccessConfigProperty):
+          SchemaRegistryAccessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SchemaRegistryAccessConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SchemaRegistryAccessConfigProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaRegistryAccessConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaRegistryAccessConfigProperty
+    }
+  }
+
+  /**
+   * Specific configuration settings for a Kafka schema registry.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * SchemaRegistryConfigProperty schemaRegistryConfigProperty =
+   * SchemaRegistryConfigProperty.builder()
+   * .accessConfigs(List.of(SchemaRegistryAccessConfigProperty.builder()
+   * .type("type")
+   * .uri("uri")
+   * .build()))
+   * .eventRecordFormat("eventRecordFormat")
+   * .schemaRegistryUri("schemaRegistryUri")
+   * .schemaValidationConfigs(List.of(SchemaValidationConfigProperty.builder()
+   * .attribute("attribute")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemaregistryconfig.html)
+   */
+  public interface SchemaRegistryConfigProperty {
+    /**
+     * An array of access configuration objects that tell Lambda how to authenticate with your
+     * schema registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemaregistryconfig.html#cfn-lambda-eventsourcemapping-schemaregistryconfig-accessconfigs)
+     */
+    public fun accessConfigs(): Any? = unwrap(this).getAccessConfigs()
+
+    /**
+     * The record format that Lambda delivers to your function after schema validation.
+     *
+     * * Choose `JSON` to have Lambda deliver the record to your function as a standard JSON object.
+     * * Choose `SOURCE` to have Lambda deliver the record to your function in its original source
+     * format. Lambda removes all schema metadata, such as the schema ID, before sending the record to
+     * your function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemaregistryconfig.html#cfn-lambda-eventsourcemapping-schemaregistryconfig-eventrecordformat)
+     */
+    public fun eventRecordFormat(): String? = unwrap(this).getEventRecordFormat()
+
+    /**
+     * The URI for your schema registry. The correct URI format depends on the type of schema
+     * registry you're using.
+     *
+     * * For AWS Glue schema registries, use the ARN of the registry.
+     * * For Confluent schema registries, use the URL of the registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemaregistryconfig.html#cfn-lambda-eventsourcemapping-schemaregistryconfig-schemaregistryuri)
+     */
+    public fun schemaRegistryUri(): String? = unwrap(this).getSchemaRegistryUri()
+
+    /**
+     * An array of schema validation configuration objects, which tell Lambda the message attributes
+     * you want to validate and filter using your schema registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemaregistryconfig.html#cfn-lambda-eventsourcemapping-schemaregistryconfig-schemavalidationconfigs)
+     */
+    public fun schemaValidationConfigs(): Any? = unwrap(this).getSchemaValidationConfigs()
+
+    /**
+     * A builder for [SchemaRegistryConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accessConfigs An array of access configuration objects that tell Lambda how to
+       * authenticate with your schema registry.
+       */
+      public fun accessConfigs(accessConfigs: IResolvable)
+
+      /**
+       * @param accessConfigs An array of access configuration objects that tell Lambda how to
+       * authenticate with your schema registry.
+       */
+      public fun accessConfigs(accessConfigs: List<Any>)
+
+      /**
+       * @param accessConfigs An array of access configuration objects that tell Lambda how to
+       * authenticate with your schema registry.
+       */
+      public fun accessConfigs(vararg accessConfigs: Any)
+
+      /**
+       * @param eventRecordFormat The record format that Lambda delivers to your function after
+       * schema validation.
+       * * Choose `JSON` to have Lambda deliver the record to your function as a standard JSON
+       * object.
+       * * Choose `SOURCE` to have Lambda deliver the record to your function in its original source
+       * format. Lambda removes all schema metadata, such as the schema ID, before sending the record
+       * to your function.
+       */
+      public fun eventRecordFormat(eventRecordFormat: String)
+
+      /**
+       * @param schemaRegistryUri The URI for your schema registry. The correct URI format depends
+       * on the type of schema registry you're using.
+       * * For AWS Glue schema registries, use the ARN of the registry.
+       * * For Confluent schema registries, use the URL of the registry.
+       */
+      public fun schemaRegistryUri(schemaRegistryUri: String)
+
+      /**
+       * @param schemaValidationConfigs An array of schema validation configuration objects, which
+       * tell Lambda the message attributes you want to validate and filter using your schema registry.
+       */
+      public fun schemaValidationConfigs(schemaValidationConfigs: IResolvable)
+
+      /**
+       * @param schemaValidationConfigs An array of schema validation configuration objects, which
+       * tell Lambda the message attributes you want to validate and filter using your schema registry.
+       */
+      public fun schemaValidationConfigs(schemaValidationConfigs: List<Any>)
+
+      /**
+       * @param schemaValidationConfigs An array of schema validation configuration objects, which
+       * tell Lambda the message attributes you want to validate and filter using your schema registry.
+       */
+      public fun schemaValidationConfigs(vararg schemaValidationConfigs: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaRegistryConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaRegistryConfigProperty.builder()
+
+      /**
+       * @param accessConfigs An array of access configuration objects that tell Lambda how to
+       * authenticate with your schema registry.
+       */
+      override fun accessConfigs(accessConfigs: IResolvable) {
+        cdkBuilder.accessConfigs(accessConfigs.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param accessConfigs An array of access configuration objects that tell Lambda how to
+       * authenticate with your schema registry.
+       */
+      override fun accessConfigs(accessConfigs: List<Any>) {
+        cdkBuilder.accessConfigs(accessConfigs.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param accessConfigs An array of access configuration objects that tell Lambda how to
+       * authenticate with your schema registry.
+       */
+      override fun accessConfigs(vararg accessConfigs: Any): Unit =
+          accessConfigs(accessConfigs.toList())
+
+      /**
+       * @param eventRecordFormat The record format that Lambda delivers to your function after
+       * schema validation.
+       * * Choose `JSON` to have Lambda deliver the record to your function as a standard JSON
+       * object.
+       * * Choose `SOURCE` to have Lambda deliver the record to your function in its original source
+       * format. Lambda removes all schema metadata, such as the schema ID, before sending the record
+       * to your function.
+       */
+      override fun eventRecordFormat(eventRecordFormat: String) {
+        cdkBuilder.eventRecordFormat(eventRecordFormat)
+      }
+
+      /**
+       * @param schemaRegistryUri The URI for your schema registry. The correct URI format depends
+       * on the type of schema registry you're using.
+       * * For AWS Glue schema registries, use the ARN of the registry.
+       * * For Confluent schema registries, use the URL of the registry.
+       */
+      override fun schemaRegistryUri(schemaRegistryUri: String) {
+        cdkBuilder.schemaRegistryUri(schemaRegistryUri)
+      }
+
+      /**
+       * @param schemaValidationConfigs An array of schema validation configuration objects, which
+       * tell Lambda the message attributes you want to validate and filter using your schema registry.
+       */
+      override fun schemaValidationConfigs(schemaValidationConfigs: IResolvable) {
+        cdkBuilder.schemaValidationConfigs(schemaValidationConfigs.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param schemaValidationConfigs An array of schema validation configuration objects, which
+       * tell Lambda the message attributes you want to validate and filter using your schema registry.
+       */
+      override fun schemaValidationConfigs(schemaValidationConfigs: List<Any>) {
+        cdkBuilder.schemaValidationConfigs(schemaValidationConfigs.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param schemaValidationConfigs An array of schema validation configuration objects, which
+       * tell Lambda the message attributes you want to validate and filter using your schema registry.
+       */
+      override fun schemaValidationConfigs(vararg schemaValidationConfigs: Any): Unit =
+          schemaValidationConfigs(schemaValidationConfigs.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaRegistryConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaRegistryConfigProperty,
+    ) : CdkObject(cdkObject),
+        SchemaRegistryConfigProperty {
+      /**
+       * An array of access configuration objects that tell Lambda how to authenticate with your
+       * schema registry.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemaregistryconfig.html#cfn-lambda-eventsourcemapping-schemaregistryconfig-accessconfigs)
+       */
+      override fun accessConfigs(): Any? = unwrap(this).getAccessConfigs()
+
+      /**
+       * The record format that Lambda delivers to your function after schema validation.
+       *
+       * * Choose `JSON` to have Lambda deliver the record to your function as a standard JSON
+       * object.
+       * * Choose `SOURCE` to have Lambda deliver the record to your function in its original source
+       * format. Lambda removes all schema metadata, such as the schema ID, before sending the record
+       * to your function.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemaregistryconfig.html#cfn-lambda-eventsourcemapping-schemaregistryconfig-eventrecordformat)
+       */
+      override fun eventRecordFormat(): String? = unwrap(this).getEventRecordFormat()
+
+      /**
+       * The URI for your schema registry. The correct URI format depends on the type of schema
+       * registry you're using.
+       *
+       * * For AWS Glue schema registries, use the ARN of the registry.
+       * * For Confluent schema registries, use the URL of the registry.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemaregistryconfig.html#cfn-lambda-eventsourcemapping-schemaregistryconfig-schemaregistryuri)
+       */
+      override fun schemaRegistryUri(): String? = unwrap(this).getSchemaRegistryUri()
+
+      /**
+       * An array of schema validation configuration objects, which tell Lambda the message
+       * attributes you want to validate and filter using your schema registry.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemaregistryconfig.html#cfn-lambda-eventsourcemapping-schemaregistryconfig-schemavalidationconfigs)
+       */
+      override fun schemaValidationConfigs(): Any? = unwrap(this).getSchemaValidationConfigs()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SchemaRegistryConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaRegistryConfigProperty):
+          SchemaRegistryConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SchemaRegistryConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SchemaRegistryConfigProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaRegistryConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaRegistryConfigProperty
+    }
+  }
+
+  /**
+   * Specific schema validation configuration settings that tell Lambda the message attributes you
+   * want to validate and filter using your schema registry.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lambda.*;
+   * SchemaValidationConfigProperty schemaValidationConfigProperty =
+   * SchemaValidationConfigProperty.builder()
+   * .attribute("attribute")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemavalidationconfig.html)
+   */
+  public interface SchemaValidationConfigProperty {
+    /**
+     * The attributes you want your schema registry to validate and filter for.
+     *
+     * If you selected `JSON` as the `EventRecordFormat` , Lambda also deserializes the selected
+     * message attributes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemavalidationconfig.html#cfn-lambda-eventsourcemapping-schemavalidationconfig-attribute)
+     */
+    public fun attribute(): String? = unwrap(this).getAttribute()
+
+    /**
+     * A builder for [SchemaValidationConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attribute The attributes you want your schema registry to validate and filter for.
+       * If you selected `JSON` as the `EventRecordFormat` , Lambda also deserializes the selected
+       * message attributes.
+       */
+      public fun attribute(attribute: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaValidationConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaValidationConfigProperty.builder()
+
+      /**
+       * @param attribute The attributes you want your schema registry to validate and filter for.
+       * If you selected `JSON` as the `EventRecordFormat` , Lambda also deserializes the selected
+       * message attributes.
+       */
+      override fun attribute(attribute: String) {
+        cdkBuilder.attribute(attribute)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaValidationConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaValidationConfigProperty,
+    ) : CdkObject(cdkObject),
+        SchemaValidationConfigProperty {
+      /**
+       * The attributes you want your schema registry to validate and filter for.
+       *
+       * If you selected `JSON` as the `EventRecordFormat` , Lambda also deserializes the selected
+       * message attributes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-schemavalidationconfig.html#cfn-lambda-eventsourcemapping-schemavalidationconfig-attribute)
+       */
+      override fun attribute(): String? = unwrap(this).getAttribute()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SchemaValidationConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaValidationConfigProperty):
+          SchemaValidationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SchemaValidationConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SchemaValidationConfigProperty):
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaValidationConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SchemaValidationConfigProperty
+    }
+  }
+
+  /**
    * The self-managed Apache Kafka cluster for your event source.
    *
    * Example:
@@ -3468,6 +4075,17 @@ public open class CfnEventSourceMapping(
    * SelfManagedKafkaEventSourceConfigProperty selfManagedKafkaEventSourceConfigProperty =
    * SelfManagedKafkaEventSourceConfigProperty.builder()
    * .consumerGroupId("consumerGroupId")
+   * .schemaRegistryConfig(SchemaRegistryConfigProperty.builder()
+   * .accessConfigs(List.of(SchemaRegistryAccessConfigProperty.builder()
+   * .type("type")
+   * .uri("uri")
+   * .build()))
+   * .eventRecordFormat("eventRecordFormat")
+   * .schemaRegistryUri("schemaRegistryUri")
+   * .schemaValidationConfigs(List.of(SchemaValidationConfigProperty.builder()
+   * .attribute("attribute")
+   * .build()))
+   * .build())
    * .build();
    * ```
    *
@@ -3480,11 +4098,19 @@ public open class CfnEventSourceMapping(
      * The consumer group ID must be unique among all your Kafka event sources. After creating a
      * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
      * For more information, see [Customizable consumer group
-     * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id) .
+     * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka-process.html#services-smaa-topic-add)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig-consumergroupid)
      */
     public fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
+
+    /**
+     * Specific configuration settings for a Kafka schema registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig-schemaregistryconfig)
+     */
+    public fun schemaRegistryConfig(): Any? = unwrap(this).getSchemaRegistryConfig()
 
     /**
      * A builder for [SelfManagedKafkaEventSourceConfigProperty]
@@ -3496,10 +4122,28 @@ public open class CfnEventSourceMapping(
        * The consumer group ID must be unique among all your Kafka event sources. After creating a
        * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
        * For more information, see [Customizable consumer group
-       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id)
+       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka-process.html#services-smaa-topic-add)
        * .
        */
       public fun consumerGroupId(consumerGroupId: String)
+
+      /**
+       * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry.
+       */
+      public fun schemaRegistryConfig(schemaRegistryConfig: IResolvable)
+
+      /**
+       * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry.
+       */
+      public fun schemaRegistryConfig(schemaRegistryConfig: SchemaRegistryConfigProperty)
+
+      /**
+       * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b8c619e39be7a161e99b2035536e9355069d963b8c721cce67764ed1e4127e37")
+      public
+          fun schemaRegistryConfig(schemaRegistryConfig: SchemaRegistryConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3513,12 +4157,35 @@ public open class CfnEventSourceMapping(
        * The consumer group ID must be unique among all your Kafka event sources. After creating a
        * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
        * For more information, see [Customizable consumer group
-       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id)
+       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka-process.html#services-smaa-topic-add)
        * .
        */
       override fun consumerGroupId(consumerGroupId: String) {
         cdkBuilder.consumerGroupId(consumerGroupId)
       }
+
+      /**
+       * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry.
+       */
+      override fun schemaRegistryConfig(schemaRegistryConfig: IResolvable) {
+        cdkBuilder.schemaRegistryConfig(schemaRegistryConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry.
+       */
+      override fun schemaRegistryConfig(schemaRegistryConfig: SchemaRegistryConfigProperty) {
+        cdkBuilder.schemaRegistryConfig(schemaRegistryConfig.let(SchemaRegistryConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b8c619e39be7a161e99b2035536e9355069d963b8c721cce67764ed1e4127e37")
+      override
+          fun schemaRegistryConfig(schemaRegistryConfig: SchemaRegistryConfigProperty.Builder.() -> Unit):
+          Unit = schemaRegistryConfig(SchemaRegistryConfigProperty(schemaRegistryConfig))
 
       public fun build():
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty
@@ -3535,12 +4202,19 @@ public open class CfnEventSourceMapping(
        * The consumer group ID must be unique among all your Kafka event sources. After creating a
        * Kafka event source mapping with the consumer group ID specified, you cannot update this value.
        * For more information, see [Customizable consumer group
-       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id)
+       * ID](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka-process.html#services-smaa-topic-add)
        * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig-consumergroupid)
        */
       override fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
+
+      /**
+       * Specific configuration settings for a Kafka schema registry.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html#cfn-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig-schemaregistryconfig)
+       */
+      override fun schemaRegistryConfig(): Any? = unwrap(this).getSchemaRegistryConfig()
     }
 
     public companion object {

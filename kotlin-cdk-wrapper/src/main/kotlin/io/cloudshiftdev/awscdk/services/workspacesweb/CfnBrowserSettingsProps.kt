@@ -78,12 +78,12 @@ public interface CfnBrowserSettingsProps {
     /**
      * @param additionalEncryptionContext Additional encryption context of the browser settings.
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
+    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
     /**
      * @param additionalEncryptionContext Additional encryption context of the browser settings.
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
     /**
      * @param browserPolicy A JSON string containing Chrome Enterprise policies that will be applied
@@ -118,15 +118,15 @@ public interface CfnBrowserSettingsProps {
     /**
      * @param additionalEncryptionContext Additional encryption context of the browser settings.
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
+    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
     }
 
     /**
      * @param additionalEncryptionContext Additional encryption context of the browser settings.
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
     }
 
     /**

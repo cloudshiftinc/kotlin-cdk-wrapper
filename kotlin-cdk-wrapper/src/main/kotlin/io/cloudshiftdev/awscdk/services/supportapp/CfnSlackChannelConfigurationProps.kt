@@ -58,8 +58,7 @@ public interface CfnSlackChannelConfigurationProps {
   /**
    * The Amazon Resource Name (ARN) of the IAM role for this Slack channel configuration.
    *
-   * The AWS Support App uses this role to perform AWS Support and Service Quotas actions on your
-   * behalf.
+   * The  App uses this role to perform  and Service Quotas actions on your behalf.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-supportapp-slackchannelconfiguration.html#cfn-supportapp-slackchannelconfiguration-channelrolearn)
    */
@@ -125,8 +124,7 @@ public interface CfnSlackChannelConfigurationProps {
     /**
      * @param channelRoleArn The Amazon Resource Name (ARN) of the IAM role for this Slack channel
      * configuration. 
-     * The AWS Support App uses this role to perform AWS Support and Service Quotas actions on your
-     * behalf.
+     * The  App uses this role to perform  and Service Quotas actions on your behalf.
      */
     public fun channelRoleArn(channelRoleArn: String)
 
@@ -202,8 +200,7 @@ public interface CfnSlackChannelConfigurationProps {
     /**
      * @param channelRoleArn The Amazon Resource Name (ARN) of the IAM role for this Slack channel
      * configuration. 
-     * The AWS Support App uses this role to perform AWS Support and Service Quotas actions on your
-     * behalf.
+     * The  App uses this role to perform  and Service Quotas actions on your behalf.
      */
     override fun channelRoleArn(channelRoleArn: String) {
       cdkBuilder.channelRoleArn(channelRoleArn)
@@ -301,8 +298,7 @@ public interface CfnSlackChannelConfigurationProps {
     /**
      * The Amazon Resource Name (ARN) of the IAM role for this Slack channel configuration.
      *
-     * The AWS Support App uses this role to perform AWS Support and Service Quotas actions on your
-     * behalf.
+     * The  App uses this role to perform  and Service Quotas actions on your behalf.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-supportapp-slackchannelconfiguration.html#cfn-supportapp-slackchannelconfiguration-channelrolearn)
      */

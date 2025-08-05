@@ -74,6 +74,10 @@ public interface CfnHostedConfigurationVersionProps {
   /**
    * A description of the configuration.
    *
+   *
+   * Due to HTTP limitations, this field only supports ASCII characters.
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html#cfn-appconfig-hostedconfigurationversion-description)
    */
   public fun description(): String? = unwrap(this).getDescription()
@@ -129,6 +133,8 @@ public interface CfnHostedConfigurationVersionProps {
 
     /**
      * @param description A description of the configuration.
+     *
+     * Due to HTTP limitations, this field only supports ASCII characters.
      */
     public fun description(description: String)
 
@@ -187,6 +193,8 @@ public interface CfnHostedConfigurationVersionProps {
 
     /**
      * @param description A description of the configuration.
+     *
+     * Due to HTTP limitations, this field only supports ASCII characters.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -256,6 +264,10 @@ public interface CfnHostedConfigurationVersionProps {
 
     /**
      * A description of the configuration.
+     *
+     *
+     * Due to HTTP limitations, this field only supports ASCII characters.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html#cfn-appconfig-hostedconfigurationversion-description)
      */

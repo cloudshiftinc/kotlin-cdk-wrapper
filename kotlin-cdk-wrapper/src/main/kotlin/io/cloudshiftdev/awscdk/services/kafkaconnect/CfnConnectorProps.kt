@@ -128,6 +128,9 @@ public interface CfnConnectorProps {
   /**
    * The name of the connector.
    *
+   * The connector name must be unique and can include up to 128 characters. Valid characters you
+   * can include in a connector name are: a-z, A-Z, 0-9, and -.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-connectorname)
    */
   public fun connectorName(): String
@@ -228,12 +231,12 @@ public interface CfnConnectorProps {
     /**
      * @param connectorConfiguration The configuration of the connector. 
      */
-    public fun connectorConfiguration(connectorConfiguration: IResolvable)
+    public fun connectorConfiguration(connectorConfiguration: Map<String, String>)
 
     /**
      * @param connectorConfiguration The configuration of the connector. 
      */
-    public fun connectorConfiguration(connectorConfiguration: Map<String, String>)
+    public fun connectorConfiguration(connectorConfiguration: IResolvable)
 
     /**
      * @param connectorDescription The description of the connector.
@@ -242,6 +245,8 @@ public interface CfnConnectorProps {
 
     /**
      * @param connectorName The name of the connector. 
+     * The connector name must be unique and can include up to 128 characters. Valid characters you
+     * can include in a connector name are: a-z, A-Z, 0-9, and -.
      */
     public fun connectorName(connectorName: String)
 
@@ -420,15 +425,15 @@ public interface CfnConnectorProps {
     /**
      * @param connectorConfiguration The configuration of the connector. 
      */
-    override fun connectorConfiguration(connectorConfiguration: IResolvable) {
-      cdkBuilder.connectorConfiguration(connectorConfiguration.let(IResolvable.Companion::unwrap))
+    override fun connectorConfiguration(connectorConfiguration: Map<String, String>) {
+      cdkBuilder.connectorConfiguration(connectorConfiguration)
     }
 
     /**
      * @param connectorConfiguration The configuration of the connector. 
      */
-    override fun connectorConfiguration(connectorConfiguration: Map<String, String>) {
-      cdkBuilder.connectorConfiguration(connectorConfiguration)
+    override fun connectorConfiguration(connectorConfiguration: IResolvable) {
+      cdkBuilder.connectorConfiguration(connectorConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -440,6 +445,8 @@ public interface CfnConnectorProps {
 
     /**
      * @param connectorName The name of the connector. 
+     * The connector name must be unique and can include up to 128 characters. Valid characters you
+     * can include in a connector name are: a-z, A-Z, 0-9, and -.
      */
     override fun connectorName(connectorName: String) {
       cdkBuilder.connectorName(connectorName)
@@ -659,6 +666,9 @@ public interface CfnConnectorProps {
 
     /**
      * The name of the connector.
+     *
+     * The connector name must be unique and can include up to 128 characters. Valid characters you
+     * can include in a connector name are: a-z, A-Z, 0-9, and -.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-connectorname)
      */

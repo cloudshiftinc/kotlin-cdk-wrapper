@@ -1779,6 +1779,8 @@ public open class CfnIntegration(
     /**
      * Specifies the scheduled start time for a scheduled-trigger flow.
      *
+     * The value must be a date/time value in EPOCH format.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-scheduledtriggerproperties.html#cfn-customerprofiles-integration-scheduledtriggerproperties-schedulestarttime)
      */
     public fun scheduleStartTime(): Number? = unwrap(this).getScheduleStartTime()
@@ -1827,6 +1829,7 @@ public open class CfnIntegration(
 
       /**
        * @param scheduleStartTime Specifies the scheduled start time for a scheduled-trigger flow.
+       * The value must be a date/time value in EPOCH format.
        */
       public fun scheduleStartTime(scheduleStartTime: Number)
 
@@ -1884,6 +1887,7 @@ public open class CfnIntegration(
 
       /**
        * @param scheduleStartTime Specifies the scheduled start time for a scheduled-trigger flow.
+       * The value must be a date/time value in EPOCH format.
        */
       override fun scheduleStartTime(scheduleStartTime: Number) {
         cdkBuilder.scheduleStartTime(scheduleStartTime)
@@ -1947,6 +1951,8 @@ public open class CfnIntegration(
 
       /**
        * Specifies the scheduled start time for a scheduled-trigger flow.
+       *
+       * The value must be a date/time value in EPOCH format.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-scheduledtriggerproperties.html#cfn-customerprofiles-integration-scheduledtriggerproperties-schedulestarttime)
        */

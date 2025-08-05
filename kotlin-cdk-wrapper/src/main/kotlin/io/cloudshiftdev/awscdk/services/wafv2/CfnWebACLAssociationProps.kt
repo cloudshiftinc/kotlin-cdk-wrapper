@@ -14,12 +14,13 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.wafv2.*;
- * CfnWebACLAssociationProps cfnWebACLAssociationProps = CfnWebACLAssociationProps.builder()
- * .resourceArn("resourceArn")
- * .webAclArn("webAclArn")
+ * EventApi api;
+ * CfnWebACL webAcl;
+ * // Associate waf with Event API
+ * // Associate waf with Event API
+ * CfnWebACLAssociation.Builder.create(this, "WafAssociation")
+ * .resourceArn(api.getApiArn())
+ * .webAclArn(webAcl.getAttrArn())
  * .build();
  * ```
  *
@@ -43,6 +44,8 @@ public interface CfnWebACLAssociationProps {
    * :service/ *apprunner-service-name* / *apprunner-service-id*`
    * * For an AWS Verified Access instance: `arn: *partition* :ec2: *region* : *account-id*
    * :verified-access-instance/ *instance-id*`
+   * * For an AWS Amplify instance: `arn: *partition* :amplify: *region* : *account-id* :apps/
+   * *app-id*`
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webaclassociation.html#cfn-wafv2-webaclassociation-resourcearn)
    */
@@ -77,6 +80,8 @@ public interface CfnWebACLAssociationProps {
      * :service/ *apprunner-service-name* / *apprunner-service-id*`
      * * For an AWS Verified Access instance: `arn: *partition* :ec2: *region* : *account-id*
      * :verified-access-instance/ *instance-id*`
+     * * For an AWS Amplify instance: `arn: *partition* :amplify: *region* : *account-id* :apps/
+     * *app-id*`
      */
     public fun resourceArn(resourceArn: String)
 
@@ -108,6 +113,8 @@ public interface CfnWebACLAssociationProps {
      * :service/ *apprunner-service-name* / *apprunner-service-id*`
      * * For an AWS Verified Access instance: `arn: *partition* :ec2: *region* : *account-id*
      * :verified-access-instance/ *instance-id*`
+     * * For an AWS Amplify instance: `arn: *partition* :amplify: *region* : *account-id* :apps/
+     * *app-id*`
      */
     override fun resourceArn(resourceArn: String) {
       cdkBuilder.resourceArn(resourceArn)
@@ -146,6 +153,8 @@ public interface CfnWebACLAssociationProps {
      * :service/ *apprunner-service-name* / *apprunner-service-id*`
      * * For an AWS Verified Access instance: `arn: *partition* :ec2: *region* : *account-id*
      * :verified-access-instance/ *instance-id*`
+     * * For an AWS Amplify instance: `arn: *partition* :amplify: *region* : *account-id* :apps/
+     * *app-id*`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webaclassociation.html#cfn-wafv2-webaclassociation-resourcearn)
      */

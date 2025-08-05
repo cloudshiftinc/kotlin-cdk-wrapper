@@ -31,6 +31,7 @@ import kotlin.Unit
  * FargateService service = FargateService.Builder.create(this, "Service")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
+ * .minHealthyPercent(100)
  * .serviceConnectConfiguration(ServiceConnectProps.builder()
  * .services(List.of(ServiceConnectService.builder()
  * .portMappingName("api")

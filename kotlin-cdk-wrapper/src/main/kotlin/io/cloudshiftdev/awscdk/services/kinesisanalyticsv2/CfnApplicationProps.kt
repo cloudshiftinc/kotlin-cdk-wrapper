@@ -198,7 +198,7 @@ public interface CfnApplicationProps {
   public fun applicationDescription(): String? = unwrap(this).getApplicationDescription()
 
   /**
-   * Describes the maintenance configuration for the application.
+   * Specifies the maintenance window parameters for a Kinesis Data Analytics application.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration)
    */
@@ -282,21 +282,21 @@ public interface CfnApplicationProps {
     public fun applicationDescription(applicationDescription: String)
 
     /**
-     * @param applicationMaintenanceConfiguration Describes the maintenance configuration for the
-     * application.
+     * @param applicationMaintenanceConfiguration Specifies the maintenance window parameters for a
+     * Kinesis Data Analytics application.
      */
     public fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: IResolvable)
 
     /**
-     * @param applicationMaintenanceConfiguration Describes the maintenance configuration for the
-     * application.
+     * @param applicationMaintenanceConfiguration Specifies the maintenance window parameters for a
+     * Kinesis Data Analytics application.
      */
     public
         fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: CfnApplication.ApplicationMaintenanceConfigurationProperty)
 
     /**
-     * @param applicationMaintenanceConfiguration Describes the maintenance configuration for the
-     * application.
+     * @param applicationMaintenanceConfiguration Specifies the maintenance window parameters for a
+     * Kinesis Data Analytics application.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f6e8d4ae0d711726a391dceb350c3c6278c0987adacf55593e14fbe3d9f6b95b")
@@ -402,8 +402,8 @@ public interface CfnApplicationProps {
     }
 
     /**
-     * @param applicationMaintenanceConfiguration Describes the maintenance configuration for the
-     * application.
+     * @param applicationMaintenanceConfiguration Specifies the maintenance window parameters for a
+     * Kinesis Data Analytics application.
      */
     override
         fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: IResolvable) {
@@ -411,8 +411,8 @@ public interface CfnApplicationProps {
     }
 
     /**
-     * @param applicationMaintenanceConfiguration Describes the maintenance configuration for the
-     * application.
+     * @param applicationMaintenanceConfiguration Specifies the maintenance window parameters for a
+     * Kinesis Data Analytics application.
      */
     override
         fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: CfnApplication.ApplicationMaintenanceConfigurationProperty) {
@@ -420,8 +420,8 @@ public interface CfnApplicationProps {
     }
 
     /**
-     * @param applicationMaintenanceConfiguration Describes the maintenance configuration for the
-     * application.
+     * @param applicationMaintenanceConfiguration Specifies the maintenance window parameters for a
+     * Kinesis Data Analytics application.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f6e8d4ae0d711726a391dceb350c3c6278c0987adacf55593e14fbe3d9f6b95b")
@@ -530,7 +530,7 @@ public interface CfnApplicationProps {
     override fun applicationDescription(): String? = unwrap(this).getApplicationDescription()
 
     /**
-     * Describes the maintenance configuration for the application.
+     * Specifies the maintenance window parameters for a Kinesis Data Analytics application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration)
      */

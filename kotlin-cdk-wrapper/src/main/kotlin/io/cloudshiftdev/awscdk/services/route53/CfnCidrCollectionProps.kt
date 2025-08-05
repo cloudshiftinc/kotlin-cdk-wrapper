@@ -17,15 +17,21 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.route53.*;
- * CfnCidrCollectionProps cfnCidrCollectionProps = CfnCidrCollectionProps.builder()
- * .name("name")
- * // the properties below are optional
+ * HostedZone myZone;
+ * CfnCidrCollection cidrCollection = CfnCidrCollection.Builder.create(this, "CidrCollection")
+ * .name("test-collection")
  * .locations(List.of(LocationProperty.builder()
- * .cidrList(List.of("cidrList"))
- * .locationName("locationName")
+ * .cidrList(List.of("192.168.1.0/24"))
+ * .locationName("my_location")
+ * .build()))
+ * .build();
+ * ARecord.Builder.create(this, "CidrRoutingConfig")
+ * .zone(myZone)
+ * .target(RecordTarget.fromIpAddresses("1.2.3.4"))
+ * .setIdentifier("test")
+ * .cidrRoutingConfig(CidrRoutingConfig.create(CidrRoutingConfigProps.builder()
+ * .collectionId(cidrCollection.getAttrId())
+ * .locationName("test_location")
  * .build()))
  * .build();
  * ```

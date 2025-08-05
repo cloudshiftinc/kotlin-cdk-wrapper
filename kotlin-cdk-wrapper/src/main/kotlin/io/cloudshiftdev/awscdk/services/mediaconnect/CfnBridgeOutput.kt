@@ -62,12 +62,12 @@ public open class CfnBridgeOutput(
   )
 
   /**
-   * The ARN of the bridge that you want to describe.
+   * The Amazon Resource Name (ARN) of the bridge that you want to update.
    */
   public open fun bridgeArn(): String = unwrap(this).getBridgeArn()
 
   /**
-   * The ARN of the bridge that you want to describe.
+   * The Amazon Resource Name (ARN) of the bridge that you want to update.
    */
   public open fun bridgeArn(`value`: String) {
     unwrap(this).setBridgeArn(`value`)
@@ -95,26 +95,26 @@ public open class CfnBridgeOutput(
   }
 
   /**
-   * Add a network output to an existing bridge.
+   * The network output of the bridge.
    */
   public open fun networkOutput(): Any = unwrap(this).getNetworkOutput()
 
   /**
-   * Add a network output to an existing bridge.
+   * The network output of the bridge.
    */
   public open fun networkOutput(`value`: IResolvable) {
     unwrap(this).setNetworkOutput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Add a network output to an existing bridge.
+   * The network output of the bridge.
    */
   public open fun networkOutput(`value`: BridgeNetworkOutputProperty) {
     unwrap(this).setNetworkOutput(`value`.let(BridgeNetworkOutputProperty.Companion::unwrap))
   }
 
   /**
-   * Add a network output to an existing bridge.
+   * The network output of the bridge.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("06b513390b2dc3b8e9e4e7afeba95a6a219a46540554396680abdd2bf8350811")
@@ -127,10 +127,10 @@ public open class CfnBridgeOutput(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The ARN of the bridge that you want to describe.
+     * The Amazon Resource Name (ARN) of the bridge that you want to update.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html#cfn-mediaconnect-bridgeoutput-bridgearn)
-     * @param bridgeArn The ARN of the bridge that you want to describe. 
+     * @param bridgeArn The Amazon Resource Name (ARN) of the bridge that you want to update. 
      */
     public fun bridgeArn(bridgeArn: String)
 
@@ -145,26 +145,32 @@ public open class CfnBridgeOutput(
     public fun name(name: String)
 
     /**
-     * Add a network output to an existing bridge.
+     * The network output of the bridge.
+     *
+     * A network output is delivered to your premises.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html#cfn-mediaconnect-bridgeoutput-networkoutput)
-     * @param networkOutput Add a network output to an existing bridge. 
+     * @param networkOutput The network output of the bridge. 
      */
     public fun networkOutput(networkOutput: IResolvable)
 
     /**
-     * Add a network output to an existing bridge.
+     * The network output of the bridge.
+     *
+     * A network output is delivered to your premises.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html#cfn-mediaconnect-bridgeoutput-networkoutput)
-     * @param networkOutput Add a network output to an existing bridge. 
+     * @param networkOutput The network output of the bridge. 
      */
     public fun networkOutput(networkOutput: BridgeNetworkOutputProperty)
 
     /**
-     * Add a network output to an existing bridge.
+     * The network output of the bridge.
+     *
+     * A network output is delivered to your premises.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html#cfn-mediaconnect-bridgeoutput-networkoutput)
-     * @param networkOutput Add a network output to an existing bridge. 
+     * @param networkOutput The network output of the bridge. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("63c91da5424a8f4038ef57a0a4d6fbaa9b9de0f8567926eec46aad2a834a19d3")
@@ -179,10 +185,10 @@ public open class CfnBridgeOutput(
         software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput.Builder.create(scope, id)
 
     /**
-     * The ARN of the bridge that you want to describe.
+     * The Amazon Resource Name (ARN) of the bridge that you want to update.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html#cfn-mediaconnect-bridgeoutput-bridgearn)
-     * @param bridgeArn The ARN of the bridge that you want to describe. 
+     * @param bridgeArn The Amazon Resource Name (ARN) of the bridge that you want to update. 
      */
     override fun bridgeArn(bridgeArn: String) {
       cdkBuilder.bridgeArn(bridgeArn)
@@ -201,30 +207,36 @@ public open class CfnBridgeOutput(
     }
 
     /**
-     * Add a network output to an existing bridge.
+     * The network output of the bridge.
+     *
+     * A network output is delivered to your premises.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html#cfn-mediaconnect-bridgeoutput-networkoutput)
-     * @param networkOutput Add a network output to an existing bridge. 
+     * @param networkOutput The network output of the bridge. 
      */
     override fun networkOutput(networkOutput: IResolvable) {
       cdkBuilder.networkOutput(networkOutput.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Add a network output to an existing bridge.
+     * The network output of the bridge.
+     *
+     * A network output is delivered to your premises.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html#cfn-mediaconnect-bridgeoutput-networkoutput)
-     * @param networkOutput Add a network output to an existing bridge. 
+     * @param networkOutput The network output of the bridge. 
      */
     override fun networkOutput(networkOutput: BridgeNetworkOutputProperty) {
       cdkBuilder.networkOutput(networkOutput.let(BridgeNetworkOutputProperty.Companion::unwrap))
     }
 
     /**
-     * Add a network output to an existing bridge.
+     * The network output of the bridge.
+     *
+     * A network output is delivered to your premises.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html#cfn-mediaconnect-bridgeoutput-networkoutput)
-     * @param networkOutput Add a network output to an existing bridge. 
+     * @param networkOutput The network output of the bridge. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("63c91da5424a8f4038ef57a0a4d6fbaa9b9de0f8567926eec46aad2a834a19d3")
@@ -280,7 +292,7 @@ public open class CfnBridgeOutput(
    */
   public interface BridgeNetworkOutputProperty {
     /**
-     * The network output IP Address.
+     * The network output IP address.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgeoutput-bridgenetworkoutput.html#cfn-mediaconnect-bridgeoutput-bridgenetworkoutput-ipaddress)
      */
@@ -294,7 +306,7 @@ public open class CfnBridgeOutput(
     public fun networkName(): String
 
     /**
-     * The network output port.
+     * The network output's port.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgeoutput-bridgenetworkoutput.html#cfn-mediaconnect-bridgeoutput-bridgenetworkoutput-port)
      */
@@ -302,6 +314,11 @@ public open class CfnBridgeOutput(
 
     /**
      * The network output protocol.
+     *
+     *
+     * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+     * maintained for legacy purposes only.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgeoutput-bridgenetworkoutput.html#cfn-mediaconnect-bridgeoutput-bridgenetworkoutput-protocol)
      */
@@ -320,7 +337,7 @@ public open class CfnBridgeOutput(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param ipAddress The network output IP Address. 
+       * @param ipAddress The network output IP address. 
        */
       public fun ipAddress(ipAddress: String)
 
@@ -330,12 +347,15 @@ public open class CfnBridgeOutput(
       public fun networkName(networkName: String)
 
       /**
-       * @param port The network output port. 
+       * @param port The network output's port. 
        */
       public fun port(port: Number)
 
       /**
        * @param protocol The network output protocol. 
+       *
+       * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+       * maintained for legacy purposes only.
        */
       public fun protocol(protocol: String)
 
@@ -352,7 +372,7 @@ public open class CfnBridgeOutput(
           software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput.BridgeNetworkOutputProperty.builder()
 
       /**
-       * @param ipAddress The network output IP Address. 
+       * @param ipAddress The network output IP address. 
        */
       override fun ipAddress(ipAddress: String) {
         cdkBuilder.ipAddress(ipAddress)
@@ -366,7 +386,7 @@ public open class CfnBridgeOutput(
       }
 
       /**
-       * @param port The network output port. 
+       * @param port The network output's port. 
        */
       override fun port(port: Number) {
         cdkBuilder.port(port)
@@ -374,6 +394,9 @@ public open class CfnBridgeOutput(
 
       /**
        * @param protocol The network output protocol. 
+       *
+       * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+       * maintained for legacy purposes only.
        */
       override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
@@ -396,7 +419,7 @@ public open class CfnBridgeOutput(
     ) : CdkObject(cdkObject),
         BridgeNetworkOutputProperty {
       /**
-       * The network output IP Address.
+       * The network output IP address.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgeoutput-bridgenetworkoutput.html#cfn-mediaconnect-bridgeoutput-bridgenetworkoutput-ipaddress)
        */
@@ -410,7 +433,7 @@ public open class CfnBridgeOutput(
       override fun networkName(): String = unwrap(this).getNetworkName()
 
       /**
-       * The network output port.
+       * The network output's port.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgeoutput-bridgenetworkoutput.html#cfn-mediaconnect-bridgeoutput-bridgenetworkoutput-port)
        */
@@ -418,6 +441,11 @@ public open class CfnBridgeOutput(
 
       /**
        * The network output protocol.
+       *
+       *
+       * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+       * maintained for legacy purposes only.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgeoutput-bridgenetworkoutput.html#cfn-mediaconnect-bridgeoutput-bridgenetworkoutput-protocol)
        */

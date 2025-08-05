@@ -649,7 +649,7 @@ public open class CfnDeployment(
        * These stage variables are represented as a string-to-string map between stage variable
        * names and their values.
        */
-      public fun stageVariableOverrides(stageVariableOverrides: IResolvable)
+      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>)
 
       /**
        * @param stageVariableOverrides Stage variables overridden for a canary release deployment,
@@ -657,7 +657,7 @@ public open class CfnDeployment(
        * These stage variables are represented as a string-to-string map between stage variable
        * names and their values.
        */
-      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>)
+      public fun stageVariableOverrides(stageVariableOverrides: IResolvable)
 
       /**
        * @param useStageCache A Boolean flag to indicate whether the canary deployment uses the
@@ -690,8 +690,8 @@ public open class CfnDeployment(
        * These stage variables are represented as a string-to-string map between stage variable
        * names and their values.
        */
-      override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
-        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable.Companion::unwrap))
+      override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
+        cdkBuilder.stageVariableOverrides(stageVariableOverrides)
       }
 
       /**
@@ -700,8 +700,8 @@ public open class CfnDeployment(
        * These stage variables are represented as a string-to-string map between stage variable
        * names and their values.
        */
-      override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
-        cdkBuilder.stageVariableOverrides(stageVariableOverrides)
+      override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
+        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -837,7 +837,7 @@ public open class CfnDeployment(
        * release deployment. These stage variables are represented as a string-to-string map between
        * stage variable names and their values.
        */
-      public fun stageVariableOverrides(stageVariableOverrides: IResolvable)
+      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>)
 
       /**
        * @param stageVariableOverrides A stage variable overrides used for the canary release
@@ -846,7 +846,7 @@ public open class CfnDeployment(
        * release deployment. These stage variables are represented as a string-to-string map between
        * stage variable names and their values.
        */
-      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>)
+      public fun stageVariableOverrides(stageVariableOverrides: IResolvable)
 
       /**
        * @param useStageCache A Boolean flag to indicate whether the canary release deployment uses
@@ -882,8 +882,8 @@ public open class CfnDeployment(
        * release deployment. These stage variables are represented as a string-to-string map between
        * stage variable names and their values.
        */
-      override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
-        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable.Companion::unwrap))
+      override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
+        cdkBuilder.stageVariableOverrides(stageVariableOverrides)
       }
 
       /**
@@ -893,8 +893,8 @@ public open class CfnDeployment(
        * release deployment. These stage variables are represented as a string-to-string map between
        * stage variable names and their values.
        */
-      override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
-        cdkBuilder.stageVariableOverrides(stageVariableOverrides)
+      override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
+        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1856,14 +1856,14 @@ public open class CfnDeployment(
        * Variable names must consist of alphanumeric characters, and the values must match the
        * following regular expression: `[A-Za-z0-9-._~:/?#&amp;=,]+` .
        */
-      public fun variables(variables: IResolvable)
+      public fun variables(variables: Map<String, String>)
 
       /**
        * @param variables A map that defines the stage variables.
        * Variable names must consist of alphanumeric characters, and the values must match the
        * following regular expression: `[A-Za-z0-9-._~:/?#&amp;=,]+` .
        */
-      public fun variables(variables: Map<String, String>)
+      public fun variables(variables: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -2132,8 +2132,8 @@ public open class CfnDeployment(
        * Variable names must consist of alphanumeric characters, and the values must match the
        * following regular expression: `[A-Za-z0-9-._~:/?#&amp;=,]+` .
        */
-      override fun variables(variables: IResolvable) {
-        cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
+      override fun variables(variables: Map<String, String>) {
+        cdkBuilder.variables(variables)
       }
 
       /**
@@ -2141,8 +2141,8 @@ public open class CfnDeployment(
        * Variable names must consist of alphanumeric characters, and the values must match the
        * following regular expression: `[A-Za-z0-9-._~:/?#&amp;=,]+` .
        */
-      override fun variables(variables: Map<String, String>) {
-        cdkBuilder.variables(variables)
+      override fun variables(variables: IResolvable) {
+        cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

@@ -2614,13 +2614,13 @@ public open class CfnModelQualityJobDefinition(
        * @param environment Sets the environment variables in the container that the monitoring job
        * runs.
        */
-      public fun environment(environment: IResolvable)
+      public fun environment(environment: Map<String, String>)
 
       /**
        * @param environment Sets the environment variables in the container that the monitoring job
        * runs.
        */
-      public fun environment(environment: Map<String, String>)
+      public fun environment(environment: IResolvable)
 
       /**
        * @param imageUri The address of the container image that the monitoring job runs. 
@@ -2690,16 +2690,16 @@ public open class CfnModelQualityJobDefinition(
        * @param environment Sets the environment variables in the container that the monitoring job
        * runs.
        */
-      override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
+      override fun environment(environment: Map<String, String>) {
+        cdkBuilder.environment(environment)
       }
 
       /**
        * @param environment Sets the environment variables in the container that the monitoring job
        * runs.
        */
-      override fun environment(environment: Map<String, String>) {
-        cdkBuilder.environment(environment)
+      override fun environment(environment: IResolvable) {
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3345,7 +3345,7 @@ public open class CfnModelQualityJobDefinition(
    */
   public interface MonitoringOutputConfigProperty {
     /**
-     * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
+     * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker AI uses to encrypt the
      * model artifacts at rest using Amazon S3 server-side encryption.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelqualityjobdefinition-monitoringoutputconfig-kmskeyid)
@@ -3367,8 +3367,8 @@ public open class CfnModelQualityJobDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses
-       * to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
+       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker AI
+       * uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
        */
       public fun kmsKeyId(kmsKeyId: String)
 
@@ -3398,8 +3398,8 @@ public open class CfnModelQualityJobDefinition(
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty.builder()
 
       /**
-       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses
-       * to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
+       * @param kmsKeyId The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker AI
+       * uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
        */
       override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
@@ -3438,7 +3438,7 @@ public open class CfnModelQualityJobDefinition(
     ) : CdkObject(cdkObject),
         MonitoringOutputConfigProperty {
       /**
-       * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
+       * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker AI uses to encrypt the
        * model artifacts at rest using Amazon S3 server-side encryption.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelqualityjobdefinition-monitoringoutputconfig-kmskeyid)

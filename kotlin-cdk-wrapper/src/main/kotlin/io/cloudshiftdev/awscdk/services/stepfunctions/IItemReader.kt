@@ -40,8 +40,17 @@ public interface IItemReader {
 
   /**
    * Render the ItemReader as JSON object.
+   *
+   * @param queryLanguage
    */
   public fun render(): Any
+
+  /**
+   * Render the ItemReader as JSON object.
+   *
+   * @param queryLanguage
+   */
+  public fun render(queryLanguage: QueryLanguage): Any
 
   /**
    * The Amazon S3 API action that Step Functions must invoke depending on the specified dataset.
@@ -85,8 +94,18 @@ public interface IItemReader {
 
     /**
      * Render the ItemReader as JSON object.
+     *
+     * @param queryLanguage
      */
     override fun render(): Any = unwrap(this).render()
+
+    /**
+     * Render the ItemReader as JSON object.
+     *
+     * @param queryLanguage
+     */
+    override fun render(queryLanguage: QueryLanguage): Any =
+        unwrap(this).render(queryLanguage.let(QueryLanguage.Companion::unwrap))
 
     /**
      * The Amazon S3 API action that Step Functions must invoke depending on the specified dataset.

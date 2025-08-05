@@ -12,12 +12,14 @@ import kotlin.String
  * Example:
  *
  * ```
- * // Search for all events where the component field is equal to
- * // "HttpServer" and either error is true or the latency is higher
- * // than 1000.
- * JsonPattern pattern = FilterPattern.all(FilterPattern.stringValue("$.component", "=",
- * "HttpServer"), FilterPattern.any(FilterPattern.booleanValue("$.error", true),
- * FilterPattern.numberValue("$.latency", "&gt;", 1000)));
+ * MetricFilter.Builder.create(this, "MetricFilter")
+ * .logGroup(logGroup)
+ * .metricNamespace("MyApp")
+ * .metricName("Latency")
+ * .filterPattern(FilterPattern.all(FilterPattern.exists("$.latency"),
+ * FilterPattern.regexValue("$.message", "=", "bind: address already in use")))
+ * .metricValue("$.latency")
+ * .build();
  * ```
  */
 public abstract class JsonPattern(

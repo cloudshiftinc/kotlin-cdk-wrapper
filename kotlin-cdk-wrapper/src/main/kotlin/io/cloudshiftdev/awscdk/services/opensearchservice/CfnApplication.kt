@@ -22,7 +22,10 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Creates an OpenSearch Application.
+ * Creates an OpenSearch UI application.
+ *
+ * For more information, see [Using the OpenSearch user interface in Amazon OpenSearch
+ * Service](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/application.html) .
  *
  * Example:
  *
@@ -111,7 +114,7 @@ public open class CfnApplication(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   * Unique identifier for an OpenSearch application.
+   * The unique identifier of an OpenSearch application.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
@@ -146,38 +149,42 @@ public open class CfnApplication(
   public open fun dataSources(vararg `value`: Any): Unit = dataSources(`value`.toList())
 
   /**
-   * Endpoint URL of an OpenSearch Application.
+   * The endpoint URL of an OpenSearch application.
    */
   public open fun endpoint(): String? = unwrap(this).getEndpoint()
 
   /**
-   * Endpoint URL of an OpenSearch Application.
+   * The endpoint URL of an OpenSearch application.
    */
   public open fun endpoint(`value`: String) {
     unwrap(this).setEndpoint(`value`)
   }
 
   /**
-   * Container for IAM Identity Center Options settings.
+   * Settings container for integrating IAM Identity Center with OpenSearch UI applications, which
+   * enables enabling secure user authentication and access control across multiple data sources.
    */
   public open fun iamIdentityCenterOptions(): Any? = unwrap(this).getIamIdentityCenterOptions()
 
   /**
-   * Container for IAM Identity Center Options settings.
+   * Settings container for integrating IAM Identity Center with OpenSearch UI applications, which
+   * enables enabling secure user authentication and access control across multiple data sources.
    */
   public open fun iamIdentityCenterOptions(`value`: IResolvable) {
     unwrap(this).setIamIdentityCenterOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Container for IAM Identity Center Options settings.
+   * Settings container for integrating IAM Identity Center with OpenSearch UI applications, which
+   * enables enabling secure user authentication and access control across multiple data sources.
    */
   public open fun iamIdentityCenterOptions(`value`: IamIdentityCenterOptionsProperty) {
     unwrap(this).setIamIdentityCenterOptions(`value`.let(IamIdentityCenterOptionsProperty.Companion::unwrap))
   }
 
   /**
-   * Container for IAM Identity Center Options settings.
+   * Settings container for integrating IAM Identity Center with OpenSearch UI applications, which
+   * enables enabling secure user authentication and access control across multiple data sources.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("f0344eb8fcfdffc61e0fd5697f06a735f3bb88893b5b6a84568fdd4690d8168c")
@@ -195,12 +202,12 @@ public open class CfnApplication(
   }
 
   /**
-   * Name of an OpenSearch Application.
+   * The name of an OpenSearch application.
    */
   public open fun name(): String = unwrap(this).getName()
 
   /**
-   * Name of an OpenSearch Application.
+   * The name of an OpenSearch application.
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
@@ -277,34 +284,52 @@ public open class CfnApplication(
     public fun dataSources(vararg dataSources: Any)
 
     /**
-     * Endpoint URL of an OpenSearch Application.
+     * The endpoint URL of an OpenSearch application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-application.html#cfn-opensearchservice-application-endpoint)
-     * @param endpoint Endpoint URL of an OpenSearch Application. 
+     * @param endpoint The endpoint URL of an OpenSearch application. 
      */
     public fun endpoint(endpoint: String)
 
     /**
-     * Container for IAM Identity Center Options settings.
+     * Settings container for integrating IAM Identity Center with OpenSearch UI applications, which
+     * enables enabling secure user authentication and access control across multiple data sources.
+     *
+     * This setup supports single sign-on (SSO) through IAM Identity Center, allowing centralized
+     * user management.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-application.html#cfn-opensearchservice-application-iamidentitycenteroptions)
-     * @param iamIdentityCenterOptions Container for IAM Identity Center Options settings. 
+     * @param iamIdentityCenterOptions Settings container for integrating IAM Identity Center with
+     * OpenSearch UI applications, which enables enabling secure user authentication and access control
+     * across multiple data sources. 
      */
     public fun iamIdentityCenterOptions(iamIdentityCenterOptions: IResolvable)
 
     /**
-     * Container for IAM Identity Center Options settings.
+     * Settings container for integrating IAM Identity Center with OpenSearch UI applications, which
+     * enables enabling secure user authentication and access control across multiple data sources.
+     *
+     * This setup supports single sign-on (SSO) through IAM Identity Center, allowing centralized
+     * user management.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-application.html#cfn-opensearchservice-application-iamidentitycenteroptions)
-     * @param iamIdentityCenterOptions Container for IAM Identity Center Options settings. 
+     * @param iamIdentityCenterOptions Settings container for integrating IAM Identity Center with
+     * OpenSearch UI applications, which enables enabling secure user authentication and access control
+     * across multiple data sources. 
      */
     public fun iamIdentityCenterOptions(iamIdentityCenterOptions: IamIdentityCenterOptionsProperty)
 
     /**
-     * Container for IAM Identity Center Options settings.
+     * Settings container for integrating IAM Identity Center with OpenSearch UI applications, which
+     * enables enabling secure user authentication and access control across multiple data sources.
+     *
+     * This setup supports single sign-on (SSO) through IAM Identity Center, allowing centralized
+     * user management.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-application.html#cfn-opensearchservice-application-iamidentitycenteroptions)
-     * @param iamIdentityCenterOptions Container for IAM Identity Center Options settings. 
+     * @param iamIdentityCenterOptions Settings container for integrating IAM Identity Center with
+     * OpenSearch UI applications, which enables enabling secure user authentication and access control
+     * across multiple data sources. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("39751e6c0300cc31a3f34f46aff0cbad893d9492779fc1225fe6017a73350be3")
@@ -312,10 +337,10 @@ public open class CfnApplication(
         fun iamIdentityCenterOptions(iamIdentityCenterOptions: IamIdentityCenterOptionsProperty.Builder.() -> Unit)
 
     /**
-     * Name of an OpenSearch Application.
+     * The name of an OpenSearch application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-application.html#cfn-opensearchservice-application-name)
-     * @param name Name of an OpenSearch Application. 
+     * @param name The name of an OpenSearch application. 
      */
     public fun name(name: String)
 
@@ -400,30 +425,42 @@ public open class CfnApplication(
     override fun dataSources(vararg dataSources: Any): Unit = dataSources(dataSources.toList())
 
     /**
-     * Endpoint URL of an OpenSearch Application.
+     * The endpoint URL of an OpenSearch application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-application.html#cfn-opensearchservice-application-endpoint)
-     * @param endpoint Endpoint URL of an OpenSearch Application. 
+     * @param endpoint The endpoint URL of an OpenSearch application. 
      */
     override fun endpoint(endpoint: String) {
       cdkBuilder.endpoint(endpoint)
     }
 
     /**
-     * Container for IAM Identity Center Options settings.
+     * Settings container for integrating IAM Identity Center with OpenSearch UI applications, which
+     * enables enabling secure user authentication and access control across multiple data sources.
+     *
+     * This setup supports single sign-on (SSO) through IAM Identity Center, allowing centralized
+     * user management.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-application.html#cfn-opensearchservice-application-iamidentitycenteroptions)
-     * @param iamIdentityCenterOptions Container for IAM Identity Center Options settings. 
+     * @param iamIdentityCenterOptions Settings container for integrating IAM Identity Center with
+     * OpenSearch UI applications, which enables enabling secure user authentication and access control
+     * across multiple data sources. 
      */
     override fun iamIdentityCenterOptions(iamIdentityCenterOptions: IResolvable) {
       cdkBuilder.iamIdentityCenterOptions(iamIdentityCenterOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Container for IAM Identity Center Options settings.
+     * Settings container for integrating IAM Identity Center with OpenSearch UI applications, which
+     * enables enabling secure user authentication and access control across multiple data sources.
+     *
+     * This setup supports single sign-on (SSO) through IAM Identity Center, allowing centralized
+     * user management.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-application.html#cfn-opensearchservice-application-iamidentitycenteroptions)
-     * @param iamIdentityCenterOptions Container for IAM Identity Center Options settings. 
+     * @param iamIdentityCenterOptions Settings container for integrating IAM Identity Center with
+     * OpenSearch UI applications, which enables enabling secure user authentication and access control
+     * across multiple data sources. 
      */
     override
         fun iamIdentityCenterOptions(iamIdentityCenterOptions: IamIdentityCenterOptionsProperty) {
@@ -431,10 +468,16 @@ public open class CfnApplication(
     }
 
     /**
-     * Container for IAM Identity Center Options settings.
+     * Settings container for integrating IAM Identity Center with OpenSearch UI applications, which
+     * enables enabling secure user authentication and access control across multiple data sources.
+     *
+     * This setup supports single sign-on (SSO) through IAM Identity Center, allowing centralized
+     * user management.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-application.html#cfn-opensearchservice-application-iamidentitycenteroptions)
-     * @param iamIdentityCenterOptions Container for IAM Identity Center Options settings. 
+     * @param iamIdentityCenterOptions Settings container for integrating IAM Identity Center with
+     * OpenSearch UI applications, which enables enabling secure user authentication and access control
+     * across multiple data sources. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("39751e6c0300cc31a3f34f46aff0cbad893d9492779fc1225fe6017a73350be3")
@@ -443,10 +486,10 @@ public open class CfnApplication(
         Unit = iamIdentityCenterOptions(IamIdentityCenterOptionsProperty(iamIdentityCenterOptions))
 
     /**
-     * Name of an OpenSearch Application.
+     * The name of an OpenSearch application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-application.html#cfn-opensearchservice-application-name)
-     * @param name Name of an OpenSearch Application. 
+     * @param name The name of an OpenSearch application. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -496,7 +539,10 @@ public open class CfnApplication(
   }
 
   /**
-   * Configurations of the OpenSearch Application.
+   * Configuration settings for an OpenSearch application.
+   *
+   * For more information, see see [Using the OpenSearch user interface in Amazon OpenSearch
+   * Service](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/application.html) .
    *
    * Example:
    *
@@ -514,14 +560,14 @@ public open class CfnApplication(
    */
   public interface AppConfigProperty {
     /**
-     * Specify the item to configure, such as admin role for the OpenSearch Application.
+     * The configuration item to set, such as the admin role for the OpenSearch application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-application-appconfig.html#cfn-opensearchservice-application-appconfig-key)
      */
     public fun key(): String
 
     /**
-     * Specifies the value to configure for the key, such as an IAM user ARN.
+     * The value assigned to the configuration key, such as an IAM user ARN.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-application-appconfig.html#cfn-opensearchservice-application-appconfig-value)
      */
@@ -533,13 +579,13 @@ public open class CfnApplication(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param key Specify the item to configure, such as admin role for the OpenSearch
-       * Application. 
+       * @param key The configuration item to set, such as the admin role for the OpenSearch
+       * application. 
        */
       public fun key(key: String)
 
       /**
-       * @param value Specifies the value to configure for the key, such as an IAM user ARN. 
+       * @param value The value assigned to the configuration key, such as an IAM user ARN. 
        */
       public fun `value`(`value`: String)
     }
@@ -551,15 +597,15 @@ public open class CfnApplication(
           software.amazon.awscdk.services.opensearchservice.CfnApplication.AppConfigProperty.builder()
 
       /**
-       * @param key Specify the item to configure, such as admin role for the OpenSearch
-       * Application. 
+       * @param key The configuration item to set, such as the admin role for the OpenSearch
+       * application. 
        */
       override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
       /**
-       * @param value Specifies the value to configure for the key, such as an IAM user ARN. 
+       * @param value The value assigned to the configuration key, such as an IAM user ARN. 
        */
       override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
@@ -575,14 +621,14 @@ public open class CfnApplication(
     ) : CdkObject(cdkObject),
         AppConfigProperty {
       /**
-       * Specify the item to configure, such as admin role for the OpenSearch Application.
+       * The configuration item to set, such as the admin role for the OpenSearch application.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-application-appconfig.html#cfn-opensearchservice-application-appconfig-key)
        */
       override fun key(): String = unwrap(this).getKey()
 
       /**
-       * Specifies the value to configure for the key, such as an IAM user ARN.
+       * The value assigned to the configuration key, such as an IAM user ARN.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-application-appconfig.html#cfn-opensearchservice-application-appconfig-value)
        */
@@ -608,7 +654,7 @@ public open class CfnApplication(
   }
 
   /**
-   * Data sources that are associated with an OpenSearch Application.
+   * Data sources that are associated with an OpenSearch application.
    *
    * Example:
    *
@@ -719,7 +765,7 @@ public open class CfnApplication(
   }
 
   /**
-   * Settings for IAM Identity Center for an OpenSearch Application.
+   * Configuration settings for IAM Identity Center in an OpenSearch application.
    *
    * Example:
    *
@@ -739,7 +785,7 @@ public open class CfnApplication(
    */
   public interface IamIdentityCenterOptionsProperty {
     /**
-     * IAM Identity Center is enabled for the OpenSearch Application.
+     * Indicates whether IAM Identity Center is enabled for the OpenSearch application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-application-iamidentitycenteroptions.html#cfn-opensearchservice-application-iamidentitycenteroptions-enabled)
      */
@@ -754,8 +800,8 @@ public open class CfnApplication(
         unwrap(this).getIamIdentityCenterInstanceArn()
 
     /**
-     * Amazon Resource Name of the IAM Identity Center's Application created for the OpenSearch
-     * Application after enabling IAM Identity Center.
+     * The Amazon Resource Name (ARN) of the IAM role assigned to the IAM Identity Center
+     * application for the OpenSearch application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-application-iamidentitycenteroptions.html#cfn-opensearchservice-application-iamidentitycenteroptions-iamroleforidentitycenterapplicationarn)
      */
@@ -768,12 +814,14 @@ public open class CfnApplication(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enabled IAM Identity Center is enabled for the OpenSearch Application.
+       * @param enabled Indicates whether IAM Identity Center is enabled for the OpenSearch
+       * application.
        */
       public fun enabled(enabled: Boolean)
 
       /**
-       * @param enabled IAM Identity Center is enabled for the OpenSearch Application.
+       * @param enabled Indicates whether IAM Identity Center is enabled for the OpenSearch
+       * application.
        */
       public fun enabled(enabled: IResolvable)
 
@@ -783,9 +831,8 @@ public open class CfnApplication(
       public fun iamIdentityCenterInstanceArn(iamIdentityCenterInstanceArn: String)
 
       /**
-       * @param iamRoleForIdentityCenterApplicationArn Amazon Resource Name of the IAM Identity
-       * Center's Application created for the OpenSearch Application after enabling IAM Identity
-       * Center.
+       * @param iamRoleForIdentityCenterApplicationArn The Amazon Resource Name (ARN) of the IAM
+       * role assigned to the IAM Identity Center application for the OpenSearch application.
        */
       public
           fun iamRoleForIdentityCenterApplicationArn(iamRoleForIdentityCenterApplicationArn: String)
@@ -798,14 +845,16 @@ public open class CfnApplication(
           software.amazon.awscdk.services.opensearchservice.CfnApplication.IamIdentityCenterOptionsProperty.builder()
 
       /**
-       * @param enabled IAM Identity Center is enabled for the OpenSearch Application.
+       * @param enabled Indicates whether IAM Identity Center is enabled for the OpenSearch
+       * application.
        */
       override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
       /**
-       * @param enabled IAM Identity Center is enabled for the OpenSearch Application.
+       * @param enabled Indicates whether IAM Identity Center is enabled for the OpenSearch
+       * application.
        */
       override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
@@ -819,9 +868,8 @@ public open class CfnApplication(
       }
 
       /**
-       * @param iamRoleForIdentityCenterApplicationArn Amazon Resource Name of the IAM Identity
-       * Center's Application created for the OpenSearch Application after enabling IAM Identity
-       * Center.
+       * @param iamRoleForIdentityCenterApplicationArn The Amazon Resource Name (ARN) of the IAM
+       * role assigned to the IAM Identity Center application for the OpenSearch application.
        */
       override
           fun iamRoleForIdentityCenterApplicationArn(iamRoleForIdentityCenterApplicationArn: String) {
@@ -838,7 +886,7 @@ public open class CfnApplication(
     ) : CdkObject(cdkObject),
         IamIdentityCenterOptionsProperty {
       /**
-       * IAM Identity Center is enabled for the OpenSearch Application.
+       * Indicates whether IAM Identity Center is enabled for the OpenSearch application.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-application-iamidentitycenteroptions.html#cfn-opensearchservice-application-iamidentitycenteroptions-enabled)
        */
@@ -853,8 +901,8 @@ public open class CfnApplication(
           unwrap(this).getIamIdentityCenterInstanceArn()
 
       /**
-       * Amazon Resource Name of the IAM Identity Center's Application created for the OpenSearch
-       * Application after enabling IAM Identity Center.
+       * The Amazon Resource Name (ARN) of the IAM role assigned to the IAM Identity Center
+       * application for the OpenSearch application.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-application-iamidentitycenteroptions.html#cfn-opensearchservice-application-iamidentitycenteroptions-iamroleforidentitycenterapplicationarn)
        */

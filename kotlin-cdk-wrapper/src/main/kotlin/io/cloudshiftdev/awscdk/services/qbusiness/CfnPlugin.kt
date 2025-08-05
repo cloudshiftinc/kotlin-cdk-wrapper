@@ -1057,6 +1057,9 @@ public open class CfnPlugin(
    */
   public interface OAuth2ClientCredentialConfigurationProperty {
     /**
+     * The redirect URL required by the OAuth 2.0 protocol for Amazon Q Business to authenticate a
+     * plugin user through a third party authentication server.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-plugin-oauth2clientcredentialconfiguration.html#cfn-qbusiness-plugin-oauth2clientcredentialconfiguration-authorizationurl)
      */
     public fun authorizationUrl(): String? = unwrap(this).getAuthorizationUrl()
@@ -1078,6 +1081,9 @@ public open class CfnPlugin(
     public fun secretArn(): String
 
     /**
+     * The URL required by the OAuth 2.0 protocol to exchange an end user authorization code for an
+     * access token.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-plugin-oauth2clientcredentialconfiguration.html#cfn-qbusiness-plugin-oauth2clientcredentialconfiguration-tokenurl)
      */
     public fun tokenUrl(): String? = unwrap(this).getTokenUrl()
@@ -1088,7 +1094,8 @@ public open class CfnPlugin(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param authorizationUrl the value to be set.
+       * @param authorizationUrl The redirect URL required by the OAuth 2.0 protocol for Amazon Q
+       * Business to authenticate a plugin user through a third party authentication server.
        */
       public fun authorizationUrl(authorizationUrl: String)
 
@@ -1105,7 +1112,8 @@ public open class CfnPlugin(
       public fun secretArn(secretArn: String)
 
       /**
-       * @param tokenUrl the value to be set.
+       * @param tokenUrl The URL required by the OAuth 2.0 protocol to exchange an end user
+       * authorization code for an access token.
        */
       public fun tokenUrl(tokenUrl: String)
     }
@@ -1117,7 +1125,8 @@ public open class CfnPlugin(
           software.amazon.awscdk.services.qbusiness.CfnPlugin.OAuth2ClientCredentialConfigurationProperty.builder()
 
       /**
-       * @param authorizationUrl the value to be set.
+       * @param authorizationUrl The redirect URL required by the OAuth 2.0 protocol for Amazon Q
+       * Business to authenticate a plugin user through a third party authentication server.
        */
       override fun authorizationUrl(authorizationUrl: String) {
         cdkBuilder.authorizationUrl(authorizationUrl)
@@ -1140,7 +1149,8 @@ public open class CfnPlugin(
       }
 
       /**
-       * @param tokenUrl the value to be set.
+       * @param tokenUrl The URL required by the OAuth 2.0 protocol to exchange an end user
+       * authorization code for an access token.
        */
       override fun tokenUrl(tokenUrl: String) {
         cdkBuilder.tokenUrl(tokenUrl)
@@ -1156,6 +1166,9 @@ public open class CfnPlugin(
     ) : CdkObject(cdkObject),
         OAuth2ClientCredentialConfigurationProperty {
       /**
+       * The redirect URL required by the OAuth 2.0 protocol for Amazon Q Business to authenticate a
+       * plugin user through a third party authentication server.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-plugin-oauth2clientcredentialconfiguration.html#cfn-qbusiness-plugin-oauth2clientcredentialconfiguration-authorizationurl)
        */
       override fun authorizationUrl(): String? = unwrap(this).getAuthorizationUrl()
@@ -1177,6 +1190,9 @@ public open class CfnPlugin(
       override fun secretArn(): String = unwrap(this).getSecretArn()
 
       /**
+       * The URL required by the OAuth 2.0 protocol to exchange an end user authorization code for
+       * an access token.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-plugin-oauth2clientcredentialconfiguration.html#cfn-qbusiness-plugin-oauth2clientcredentialconfiguration-tokenurl)
        */
       override fun tokenUrl(): String? = unwrap(this).getTokenUrl()

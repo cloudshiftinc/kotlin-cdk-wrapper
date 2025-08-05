@@ -16,7 +16,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html.
+ * Create remote VPC connection.
  *
  * Example:
  *
@@ -77,19 +77,19 @@ public open class CfnVpcConnection(
   }
 
   /**
-   *
+   * The list of subnets in the client VPC to connect to.
    */
   public open fun clientSubnets(): List<String> = unwrap(this).getClientSubnets()
 
   /**
-   *
+   * The list of subnets in the client VPC to connect to.
    */
   public open fun clientSubnets(`value`: List<String>) {
     unwrap(this).setClientSubnets(`value`)
   }
 
   /**
-   *
+   * The list of subnets in the client VPC to connect to.
    */
   public open fun clientSubnets(vararg `value`: String): Unit = clientSubnets(`value`.toList())
 
@@ -103,19 +103,19 @@ public open class CfnVpcConnection(
   }
 
   /**
-   *
+   * The security groups to attach to the ENIs for the broker nodes.
    */
   public open fun securityGroups(): List<String> = unwrap(this).getSecurityGroups()
 
   /**
-   *
+   * The security groups to attach to the ENIs for the broker nodes.
    */
   public open fun securityGroups(`value`: List<String>) {
     unwrap(this).setSecurityGroups(`value`)
   }
 
   /**
-   *
+   * The security groups to attach to the ENIs for the broker nodes.
    */
   public open fun securityGroups(vararg `value`: String): Unit = securityGroups(`value`.toList())
 
@@ -125,36 +125,36 @@ public open class CfnVpcConnection(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * A key-value pair to associate with a resource.
+   * An arbitrary set of tags (key-value pairs) you specify while creating the VPC connection.
    */
   public open fun tagsRaw(): Map<String, String> = unwrap(this).getTagsRaw() ?: emptyMap()
 
   /**
-   * A key-value pair to associate with a resource.
+   * An arbitrary set of tags (key-value pairs) you specify while creating the VPC connection.
    */
   public open fun tagsRaw(`value`: Map<String, String>) {
     unwrap(this).setTagsRaw(`value`)
   }
 
   /**
-   * The Amazon Resource Name (ARN) of the target cluster.
+   * The Amazon Resource Name (ARN) of the cluster.
    */
   public open fun targetClusterArn(): String = unwrap(this).getTargetClusterArn()
 
   /**
-   * The Amazon Resource Name (ARN) of the target cluster.
+   * The Amazon Resource Name (ARN) of the cluster.
    */
   public open fun targetClusterArn(`value`: String) {
     unwrap(this).setTargetClusterArn(`value`)
   }
 
   /**
-   *
+   * The VPC ID of the remote client.
    */
   public open fun vpcId(): String = unwrap(this).getVpcId()
 
   /**
-   *
+   * The VPC ID of the remote client.
    */
   public open fun vpcId(`value`: String) {
     unwrap(this).setVpcId(`value`)
@@ -174,48 +174,59 @@ public open class CfnVpcConnection(
     public fun authentication(authentication: String)
 
     /**
+     * The list of subnets in the client VPC to connect to.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html#cfn-msk-vpcconnection-clientsubnets)
-     * @param clientSubnets 
+     * @param clientSubnets The list of subnets in the client VPC to connect to. 
      */
     public fun clientSubnets(clientSubnets: List<String>)
 
     /**
+     * The list of subnets in the client VPC to connect to.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html#cfn-msk-vpcconnection-clientsubnets)
-     * @param clientSubnets 
+     * @param clientSubnets The list of subnets in the client VPC to connect to. 
      */
     public fun clientSubnets(vararg clientSubnets: String)
 
     /**
+     * The security groups to attach to the ENIs for the broker nodes.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html#cfn-msk-vpcconnection-securitygroups)
-     * @param securityGroups 
+     * @param securityGroups The security groups to attach to the ENIs for the broker nodes. 
      */
     public fun securityGroups(securityGroups: List<String>)
 
     /**
+     * The security groups to attach to the ENIs for the broker nodes.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html#cfn-msk-vpcconnection-securitygroups)
-     * @param securityGroups 
+     * @param securityGroups The security groups to attach to the ENIs for the broker nodes. 
      */
     public fun securityGroups(vararg securityGroups: String)
 
     /**
-     * A key-value pair to associate with a resource.
+     * An arbitrary set of tags (key-value pairs) you specify while creating the VPC connection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html#cfn-msk-vpcconnection-tags)
-     * @param tags A key-value pair to associate with a resource. 
+     * @param tags An arbitrary set of tags (key-value pairs) you specify while creating the VPC
+     * connection. 
      */
     public fun tags(tags: Map<String, String>)
 
     /**
-     * The Amazon Resource Name (ARN) of the target cluster.
+     * The Amazon Resource Name (ARN) of the cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html#cfn-msk-vpcconnection-targetclusterarn)
-     * @param targetClusterArn The Amazon Resource Name (ARN) of the target cluster. 
+     * @param targetClusterArn The Amazon Resource Name (ARN) of the cluster. 
      */
     public fun targetClusterArn(targetClusterArn: String)
 
     /**
+     * The VPC ID of the remote client.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html#cfn-msk-vpcconnection-vpcid)
-     * @param vpcId 
+     * @param vpcId The VPC ID of the remote client. 
      */
     public fun vpcId(vpcId: String)
   }
@@ -238,58 +249,69 @@ public open class CfnVpcConnection(
     }
 
     /**
+     * The list of subnets in the client VPC to connect to.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html#cfn-msk-vpcconnection-clientsubnets)
-     * @param clientSubnets 
+     * @param clientSubnets The list of subnets in the client VPC to connect to. 
      */
     override fun clientSubnets(clientSubnets: List<String>) {
       cdkBuilder.clientSubnets(clientSubnets)
     }
 
     /**
+     * The list of subnets in the client VPC to connect to.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html#cfn-msk-vpcconnection-clientsubnets)
-     * @param clientSubnets 
+     * @param clientSubnets The list of subnets in the client VPC to connect to. 
      */
     override fun clientSubnets(vararg clientSubnets: String): Unit =
         clientSubnets(clientSubnets.toList())
 
     /**
+     * The security groups to attach to the ENIs for the broker nodes.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html#cfn-msk-vpcconnection-securitygroups)
-     * @param securityGroups 
+     * @param securityGroups The security groups to attach to the ENIs for the broker nodes. 
      */
     override fun securityGroups(securityGroups: List<String>) {
       cdkBuilder.securityGroups(securityGroups)
     }
 
     /**
+     * The security groups to attach to the ENIs for the broker nodes.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html#cfn-msk-vpcconnection-securitygroups)
-     * @param securityGroups 
+     * @param securityGroups The security groups to attach to the ENIs for the broker nodes. 
      */
     override fun securityGroups(vararg securityGroups: String): Unit =
         securityGroups(securityGroups.toList())
 
     /**
-     * A key-value pair to associate with a resource.
+     * An arbitrary set of tags (key-value pairs) you specify while creating the VPC connection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html#cfn-msk-vpcconnection-tags)
-     * @param tags A key-value pair to associate with a resource. 
+     * @param tags An arbitrary set of tags (key-value pairs) you specify while creating the VPC
+     * connection. 
      */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the target cluster.
+     * The Amazon Resource Name (ARN) of the cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html#cfn-msk-vpcconnection-targetclusterarn)
-     * @param targetClusterArn The Amazon Resource Name (ARN) of the target cluster. 
+     * @param targetClusterArn The Amazon Resource Name (ARN) of the cluster. 
      */
     override fun targetClusterArn(targetClusterArn: String) {
       cdkBuilder.targetClusterArn(targetClusterArn)
     }
 
     /**
+     * The VPC ID of the remote client.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html#cfn-msk-vpcconnection-vpcid)
-     * @param vpcId 
+     * @param vpcId The VPC ID of the remote client. 
      */
     override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)

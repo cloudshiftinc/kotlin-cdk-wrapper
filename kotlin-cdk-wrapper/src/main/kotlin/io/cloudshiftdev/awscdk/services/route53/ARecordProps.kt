@@ -17,14 +17,14 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+ * import io.cloudshiftdev.awscdk.regioninfo.RegionInfo;
  * HostedZone zone;
- * ApplicationLoadBalancer lb;
+ * String ebsEnvironmentUrl;
  * ARecord.Builder.create(this, "AliasRecord")
  * .zone(zone)
  * .target(RecordTarget.fromAlias(
- * new LoadBalancerTarget(lb, Map.of(
- * "evaluateTargetHealth", true))))
+ * new ElasticBeanstalkEnvironmentEndpointTarget(ebsEnvironmentUrl, Map.of(
+ * "hostedZoneId", RegionInfo.get("us-east-1").getEbsEnvEndpointHostedZoneId()))))
  * .build();
  * ```
  */
@@ -39,6 +39,14 @@ public interface ARecordProps : RecordSetOptions {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param cidrRoutingConfig The object that is specified in resource record set object when you
+     * are linking a resource record set to a CIDR location.
+     * A LocationName with an asterisk “*” can be used to create a default CIDR record. CollectionId
+     * is still required for default record.
+     */
+    public fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfig)
+
     /**
      * @param comment A comment to add on the record.
      */
@@ -143,6 +151,16 @@ public interface ARecordProps : RecordSetOptions {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.route53.ARecordProps.Builder =
         software.amazon.awscdk.services.route53.ARecordProps.builder()
+
+    /**
+     * @param cidrRoutingConfig The object that is specified in resource record set object when you
+     * are linking a resource record set to a CIDR location.
+     * A LocationName with an asterisk “*” can be used to create a default CIDR record. CollectionId
+     * is still required for default record.
+     */
+    override fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfig) {
+      cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(CidrRoutingConfig.Companion::unwrap))
+    }
 
     /**
      * @param comment A comment to add on the record.
@@ -275,6 +293,20 @@ public interface ARecordProps : RecordSetOptions {
     cdkObject: software.amazon.awscdk.services.route53.ARecordProps,
   ) : CdkObject(cdkObject),
       ARecordProps {
+    /**
+     * The object that is specified in resource record set object when you are linking a resource
+     * record set to a CIDR location.
+     *
+     * A LocationName with an asterisk “*” can be used to create a default CIDR record. CollectionId
+     * is still required for default record.
+     *
+     * Default: - No CIDR routing configured
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordset.html#cfn-route53-recordset-cidrroutingconfig)
+     */
+    override fun cidrRoutingConfig(): CidrRoutingConfig? =
+        unwrap(this).getCidrRoutingConfig()?.let(CidrRoutingConfig::wrap)
+
     /**
      * A comment to add on the record.
      *

@@ -61,8 +61,12 @@ public interface CfnRuleProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * Information about the exclude resource tags used to identify resources that are excluded by the
-   * retention rule.
+   * [Region-level retention rules only] Specifies the exclusion tags to use to identify resources
+   * that are to be excluded, or ignored, by a Region-level retention rule.
+   *
+   * Resources that have any of these tags are not retained by the retention rule upon deletion.
+   *
+   * You can't specify exclusion tags for tag-level retention rules.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rbin-rule.html#cfn-rbin-rule-excluderesourcetags)
    */
@@ -76,15 +80,29 @@ public interface CfnRuleProps {
   public fun lockConfiguration(): Any? = unwrap(this).getLockConfiguration()
 
   /**
-   * [Tag-level retention rules only] Information about the resource tags used to identify resources
-   * that are retained by the retention rule.
+   * [Tag-level retention rules only] Specifies the resource tags to use to identify resources that
+   * are to be retained by a tag-level retention rule.
+   *
+   * For tag-level retention rules, only deleted resources, of the specified resource type, that
+   * have one or more of the specified tag key and value pairs are retained. If a resource is deleted,
+   * but it does not have any of the specified tag key and value pairs, it is immediately deleted
+   * without being retained by the retention rule.
+   *
+   * You can add the same tag key and value pair to a maximum or five retention rules.
+   *
+   * To create a Region-level retention rule, omit this parameter. A Region-level retention rule
+   * does not have any resource tags specified. It retains all deleted resources of the specified
+   * resource type in the Region in which the rule is created, even if the resources are not tagged.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rbin-rule.html#cfn-rbin-rule-resourcetags)
    */
   public fun resourceTags(): Any? = unwrap(this).getResourceTags()
 
   /**
-   * The resource type retained by the retention rule.
+   * The resource type to be retained by the retention rule.
+   *
+   * Currently, only Amazon EBS snapshots and EBS-backed AMIs are supported. To retain snapshots,
+   * specify `EBS_SNAPSHOT` . To retain EBS-backed AMIs, specify `EC2_IMAGE` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rbin-rule.html#cfn-rbin-rule-resourcetype)
    */
@@ -107,7 +125,7 @@ public interface CfnRuleProps {
   public fun status(): String? = unwrap(this).getStatus()
 
   /**
-   * Information about the tags assigned to the retention rule.
+   * Information about the tags to assign to the retention rule.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rbin-rule.html#cfn-rbin-rule-tags)
    */
@@ -124,20 +142,32 @@ public interface CfnRuleProps {
     public fun description(description: String)
 
     /**
-     * @param excludeResourceTags Information about the exclude resource tags used to identify
-     * resources that are excluded by the retention rule.
+     * @param excludeResourceTags [Region-level retention rules only] Specifies the exclusion tags
+     * to use to identify resources that are to be excluded, or ignored, by a Region-level retention
+     * rule.
+     * Resources that have any of these tags are not retained by the retention rule upon deletion.
+     *
+     * You can't specify exclusion tags for tag-level retention rules.
      */
     public fun excludeResourceTags(excludeResourceTags: IResolvable)
 
     /**
-     * @param excludeResourceTags Information about the exclude resource tags used to identify
-     * resources that are excluded by the retention rule.
+     * @param excludeResourceTags [Region-level retention rules only] Specifies the exclusion tags
+     * to use to identify resources that are to be excluded, or ignored, by a Region-level retention
+     * rule.
+     * Resources that have any of these tags are not retained by the retention rule upon deletion.
+     *
+     * You can't specify exclusion tags for tag-level retention rules.
      */
     public fun excludeResourceTags(excludeResourceTags: List<Any>)
 
     /**
-     * @param excludeResourceTags Information about the exclude resource tags used to identify
-     * resources that are excluded by the retention rule.
+     * @param excludeResourceTags [Region-level retention rules only] Specifies the exclusion tags
+     * to use to identify resources that are to be excluded, or ignored, by a Region-level retention
+     * rule.
+     * Resources that have any of these tags are not retained by the retention rule upon deletion.
+     *
+     * You can't specify exclusion tags for tag-level retention rules.
      */
     public fun excludeResourceTags(vararg excludeResourceTags: Any)
 
@@ -159,25 +189,57 @@ public interface CfnRuleProps {
     public fun lockConfiguration(lockConfiguration: CfnRule.UnlockDelayProperty.Builder.() -> Unit)
 
     /**
-     * @param resourceTags [Tag-level retention rules only] Information about the resource tags used
-     * to identify resources that are retained by the retention rule.
+     * @param resourceTags [Tag-level retention rules only] Specifies the resource tags to use to
+     * identify resources that are to be retained by a tag-level retention rule.
+     * For tag-level retention rules, only deleted resources, of the specified resource type, that
+     * have one or more of the specified tag key and value pairs are retained. If a resource is
+     * deleted, but it does not have any of the specified tag key and value pairs, it is immediately
+     * deleted without being retained by the retention rule.
+     *
+     * You can add the same tag key and value pair to a maximum or five retention rules.
+     *
+     * To create a Region-level retention rule, omit this parameter. A Region-level retention rule
+     * does not have any resource tags specified. It retains all deleted resources of the specified
+     * resource type in the Region in which the rule is created, even if the resources are not tagged.
      */
     public fun resourceTags(resourceTags: IResolvable)
 
     /**
-     * @param resourceTags [Tag-level retention rules only] Information about the resource tags used
-     * to identify resources that are retained by the retention rule.
+     * @param resourceTags [Tag-level retention rules only] Specifies the resource tags to use to
+     * identify resources that are to be retained by a tag-level retention rule.
+     * For tag-level retention rules, only deleted resources, of the specified resource type, that
+     * have one or more of the specified tag key and value pairs are retained. If a resource is
+     * deleted, but it does not have any of the specified tag key and value pairs, it is immediately
+     * deleted without being retained by the retention rule.
+     *
+     * You can add the same tag key and value pair to a maximum or five retention rules.
+     *
+     * To create a Region-level retention rule, omit this parameter. A Region-level retention rule
+     * does not have any resource tags specified. It retains all deleted resources of the specified
+     * resource type in the Region in which the rule is created, even if the resources are not tagged.
      */
     public fun resourceTags(resourceTags: List<Any>)
 
     /**
-     * @param resourceTags [Tag-level retention rules only] Information about the resource tags used
-     * to identify resources that are retained by the retention rule.
+     * @param resourceTags [Tag-level retention rules only] Specifies the resource tags to use to
+     * identify resources that are to be retained by a tag-level retention rule.
+     * For tag-level retention rules, only deleted resources, of the specified resource type, that
+     * have one or more of the specified tag key and value pairs are retained. If a resource is
+     * deleted, but it does not have any of the specified tag key and value pairs, it is immediately
+     * deleted without being retained by the retention rule.
+     *
+     * You can add the same tag key and value pair to a maximum or five retention rules.
+     *
+     * To create a Region-level retention rule, omit this parameter. A Region-level retention rule
+     * does not have any resource tags specified. It retains all deleted resources of the specified
+     * resource type in the Region in which the rule is created, even if the resources are not tagged.
      */
     public fun resourceTags(vararg resourceTags: Any)
 
     /**
-     * @param resourceType The resource type retained by the retention rule. 
+     * @param resourceType The resource type to be retained by the retention rule. 
+     * Currently, only Amazon EBS snapshots and EBS-backed AMIs are supported. To retain snapshots,
+     * specify `EBS_SNAPSHOT` . To retain EBS-backed AMIs, specify `EC2_IMAGE` .
      */
     public fun resourceType(resourceType: String)
 
@@ -208,12 +270,12 @@ public interface CfnRuleProps {
     public fun status(status: String)
 
     /**
-     * @param tags Information about the tags assigned to the retention rule.
+     * @param tags Information about the tags to assign to the retention rule.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags Information about the tags assigned to the retention rule.
+     * @param tags Information about the tags to assign to the retention rule.
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -230,24 +292,36 @@ public interface CfnRuleProps {
     }
 
     /**
-     * @param excludeResourceTags Information about the exclude resource tags used to identify
-     * resources that are excluded by the retention rule.
+     * @param excludeResourceTags [Region-level retention rules only] Specifies the exclusion tags
+     * to use to identify resources that are to be excluded, or ignored, by a Region-level retention
+     * rule.
+     * Resources that have any of these tags are not retained by the retention rule upon deletion.
+     *
+     * You can't specify exclusion tags for tag-level retention rules.
      */
     override fun excludeResourceTags(excludeResourceTags: IResolvable) {
       cdkBuilder.excludeResourceTags(excludeResourceTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param excludeResourceTags Information about the exclude resource tags used to identify
-     * resources that are excluded by the retention rule.
+     * @param excludeResourceTags [Region-level retention rules only] Specifies the exclusion tags
+     * to use to identify resources that are to be excluded, or ignored, by a Region-level retention
+     * rule.
+     * Resources that have any of these tags are not retained by the retention rule upon deletion.
+     *
+     * You can't specify exclusion tags for tag-level retention rules.
      */
     override fun excludeResourceTags(excludeResourceTags: List<Any>) {
       cdkBuilder.excludeResourceTags(excludeResourceTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param excludeResourceTags Information about the exclude resource tags used to identify
-     * resources that are excluded by the retention rule.
+     * @param excludeResourceTags [Region-level retention rules only] Specifies the exclusion tags
+     * to use to identify resources that are to be excluded, or ignored, by a Region-level retention
+     * rule.
+     * Resources that have any of these tags are not retained by the retention rule upon deletion.
+     *
+     * You can't specify exclusion tags for tag-level retention rules.
      */
     override fun excludeResourceTags(vararg excludeResourceTags: Any): Unit =
         excludeResourceTags(excludeResourceTags.toList())
@@ -276,29 +350,61 @@ public interface CfnRuleProps {
         Unit = lockConfiguration(CfnRule.UnlockDelayProperty(lockConfiguration))
 
     /**
-     * @param resourceTags [Tag-level retention rules only] Information about the resource tags used
-     * to identify resources that are retained by the retention rule.
+     * @param resourceTags [Tag-level retention rules only] Specifies the resource tags to use to
+     * identify resources that are to be retained by a tag-level retention rule.
+     * For tag-level retention rules, only deleted resources, of the specified resource type, that
+     * have one or more of the specified tag key and value pairs are retained. If a resource is
+     * deleted, but it does not have any of the specified tag key and value pairs, it is immediately
+     * deleted without being retained by the retention rule.
+     *
+     * You can add the same tag key and value pair to a maximum or five retention rules.
+     *
+     * To create a Region-level retention rule, omit this parameter. A Region-level retention rule
+     * does not have any resource tags specified. It retains all deleted resources of the specified
+     * resource type in the Region in which the rule is created, even if the resources are not tagged.
      */
     override fun resourceTags(resourceTags: IResolvable) {
       cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param resourceTags [Tag-level retention rules only] Information about the resource tags used
-     * to identify resources that are retained by the retention rule.
+     * @param resourceTags [Tag-level retention rules only] Specifies the resource tags to use to
+     * identify resources that are to be retained by a tag-level retention rule.
+     * For tag-level retention rules, only deleted resources, of the specified resource type, that
+     * have one or more of the specified tag key and value pairs are retained. If a resource is
+     * deleted, but it does not have any of the specified tag key and value pairs, it is immediately
+     * deleted without being retained by the retention rule.
+     *
+     * You can add the same tag key and value pair to a maximum or five retention rules.
+     *
+     * To create a Region-level retention rule, omit this parameter. A Region-level retention rule
+     * does not have any resource tags specified. It retains all deleted resources of the specified
+     * resource type in the Region in which the rule is created, even if the resources are not tagged.
      */
     override fun resourceTags(resourceTags: List<Any>) {
       cdkBuilder.resourceTags(resourceTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param resourceTags [Tag-level retention rules only] Information about the resource tags used
-     * to identify resources that are retained by the retention rule.
+     * @param resourceTags [Tag-level retention rules only] Specifies the resource tags to use to
+     * identify resources that are to be retained by a tag-level retention rule.
+     * For tag-level retention rules, only deleted resources, of the specified resource type, that
+     * have one or more of the specified tag key and value pairs are retained. If a resource is
+     * deleted, but it does not have any of the specified tag key and value pairs, it is immediately
+     * deleted without being retained by the retention rule.
+     *
+     * You can add the same tag key and value pair to a maximum or five retention rules.
+     *
+     * To create a Region-level retention rule, omit this parameter. A Region-level retention rule
+     * does not have any resource tags specified. It retains all deleted resources of the specified
+     * resource type in the Region in which the rule is created, even if the resources are not tagged.
      */
     override fun resourceTags(vararg resourceTags: Any): Unit = resourceTags(resourceTags.toList())
 
     /**
-     * @param resourceType The resource type retained by the retention rule. 
+     * @param resourceType The resource type to be retained by the retention rule. 
+     * Currently, only Amazon EBS snapshots and EBS-backed AMIs are supported. To retain snapshots,
+     * specify `EBS_SNAPSHOT` . To retain EBS-backed AMIs, specify `EC2_IMAGE` .
      */
     override fun resourceType(resourceType: String) {
       cdkBuilder.resourceType(resourceType)
@@ -339,14 +445,14 @@ public interface CfnRuleProps {
     }
 
     /**
-     * @param tags Information about the tags assigned to the retention rule.
+     * @param tags Information about the tags to assign to the retention rule.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags Information about the tags assigned to the retention rule.
+     * @param tags Information about the tags to assign to the retention rule.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -365,8 +471,12 @@ public interface CfnRuleProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * Information about the exclude resource tags used to identify resources that are excluded by
-     * the retention rule.
+     * [Region-level retention rules only] Specifies the exclusion tags to use to identify resources
+     * that are to be excluded, or ignored, by a Region-level retention rule.
+     *
+     * Resources that have any of these tags are not retained by the retention rule upon deletion.
+     *
+     * You can't specify exclusion tags for tag-level retention rules.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rbin-rule.html#cfn-rbin-rule-excluderesourcetags)
      */
@@ -380,15 +490,29 @@ public interface CfnRuleProps {
     override fun lockConfiguration(): Any? = unwrap(this).getLockConfiguration()
 
     /**
-     * [Tag-level retention rules only] Information about the resource tags used to identify
-     * resources that are retained by the retention rule.
+     * [Tag-level retention rules only] Specifies the resource tags to use to identify resources
+     * that are to be retained by a tag-level retention rule.
+     *
+     * For tag-level retention rules, only deleted resources, of the specified resource type, that
+     * have one or more of the specified tag key and value pairs are retained. If a resource is
+     * deleted, but it does not have any of the specified tag key and value pairs, it is immediately
+     * deleted without being retained by the retention rule.
+     *
+     * You can add the same tag key and value pair to a maximum or five retention rules.
+     *
+     * To create a Region-level retention rule, omit this parameter. A Region-level retention rule
+     * does not have any resource tags specified. It retains all deleted resources of the specified
+     * resource type in the Region in which the rule is created, even if the resources are not tagged.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rbin-rule.html#cfn-rbin-rule-resourcetags)
      */
     override fun resourceTags(): Any? = unwrap(this).getResourceTags()
 
     /**
-     * The resource type retained by the retention rule.
+     * The resource type to be retained by the retention rule.
+     *
+     * Currently, only Amazon EBS snapshots and EBS-backed AMIs are supported. To retain snapshots,
+     * specify `EBS_SNAPSHOT` . To retain EBS-backed AMIs, specify `EC2_IMAGE` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rbin-rule.html#cfn-rbin-rule-resourcetype)
      */
@@ -411,7 +535,7 @@ public interface CfnRuleProps {
     override fun status(): String? = unwrap(this).getStatus()
 
     /**
-     * Information about the tags assigned to the retention rule.
+     * Information about the tags to assign to the retention rule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rbin-rule.html#cfn-rbin-rule-tags)
      */

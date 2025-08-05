@@ -44,14 +44,14 @@ public interface CfnTransitGatewayPeeringAttachmentProps {
   public fun peerAccountId(): String
 
   /**
-   * The Region of the transit gateway.
+   * The Region where the transit gateway that you want to create the peer for is located.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html#cfn-ec2-transitgatewaypeeringattachment-peerregion)
    */
   public fun peerRegion(): String
 
   /**
-   * The ID of the transit gateway.
+   * The ID of the transit gateway in the PeerRegion.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html#cfn-ec2-transitgatewaypeeringattachment-peertransitgatewayid)
    */
@@ -82,12 +82,13 @@ public interface CfnTransitGatewayPeeringAttachmentProps {
     public fun peerAccountId(peerAccountId: String)
 
     /**
-     * @param peerRegion The Region of the transit gateway. 
+     * @param peerRegion The Region where the transit gateway that you want to create the peer for
+     * is located. 
      */
     public fun peerRegion(peerRegion: String)
 
     /**
-     * @param peerTransitGatewayId The ID of the transit gateway. 
+     * @param peerTransitGatewayId The ID of the transit gateway in the PeerRegion. 
      */
     public fun peerTransitGatewayId(peerTransitGatewayId: String)
 
@@ -120,14 +121,15 @@ public interface CfnTransitGatewayPeeringAttachmentProps {
     }
 
     /**
-     * @param peerRegion The Region of the transit gateway. 
+     * @param peerRegion The Region where the transit gateway that you want to create the peer for
+     * is located. 
      */
     override fun peerRegion(peerRegion: String) {
       cdkBuilder.peerRegion(peerRegion)
     }
 
     /**
-     * @param peerTransitGatewayId The ID of the transit gateway. 
+     * @param peerTransitGatewayId The ID of the transit gateway in the PeerRegion. 
      */
     override fun peerTransitGatewayId(peerTransitGatewayId: String) {
       cdkBuilder.peerTransitGatewayId(peerTransitGatewayId)
@@ -168,14 +170,14 @@ public interface CfnTransitGatewayPeeringAttachmentProps {
     override fun peerAccountId(): String = unwrap(this).getPeerAccountId()
 
     /**
-     * The Region of the transit gateway.
+     * The Region where the transit gateway that you want to create the peer for is located.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html#cfn-ec2-transitgatewaypeeringattachment-peerregion)
      */
     override fun peerRegion(): String = unwrap(this).getPeerRegion()
 
     /**
-     * The ID of the transit gateway.
+     * The ID of the transit gateway in the PeerRegion.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html#cfn-ec2-transitgatewaypeeringattachment-peertransitgatewayid)
      */

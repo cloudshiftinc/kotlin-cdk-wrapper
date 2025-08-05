@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import io.cloudshiftdev.awscdk.services.kinesis.IStream
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -28,7 +29,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * "Stack").env(Environment.builder().region("us-west-2").build()).build();
  * TableV2 globalTable = TableV2.Builder.create(stack, "GlobalTable")
  * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
- * // applys to all replicas, i.e., us-west-2, us-east-1, us-east-2
+ * // applies to all replicas, i.e., us-west-2, us-east-1, us-east-2
  * .removalPolicy(RemovalPolicy.DESTROY)
  * .replicas(List.of(ReplicaTableProps.builder().region("us-east-1").build(),
  * ReplicaTableProps.builder().region("us-east-2").build()))
@@ -303,13 +304,39 @@ public open class TableV2(
     public fun partitionKey(partitionKey: Attribute.Builder.() -> Unit)
 
     /**
-     * Whether point-in-time recovery is enabled.
+     * (deprecated) Whether point-in-time recovery is enabled.
      *
-     * Default: false
+     * Default: false - point in time recovery is not enabled.
      *
+     * @deprecated use `pointInTimeRecoverySpecification` instead
      * @param pointInTimeRecovery Whether point-in-time recovery is enabled. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun pointInTimeRecovery(pointInTimeRecovery: Boolean)
+
+    /**
+     * Whether point-in-time recovery is enabled and recoveryPeriodInDays is set.
+     *
+     * Default: - point in time recovery is not enabled.
+     *
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set. 
+     */
+    public
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification)
+
+    /**
+     * Whether point-in-time recovery is enabled and recoveryPeriodInDays is set.
+     *
+     * Default: - point in time recovery is not enabled.
+     *
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f3fde7876f79a77a1e463af47d7786ae2c2a17c0d27eb4cce5bddbea3937742a")
+    public
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification.Builder.() -> Unit)
 
     /**
      * The removal policy applied to the table.
@@ -601,15 +628,45 @@ public open class TableV2(
         partitionKey(Attribute(partitionKey))
 
     /**
-     * Whether point-in-time recovery is enabled.
+     * (deprecated) Whether point-in-time recovery is enabled.
      *
-     * Default: false
+     * Default: false - point in time recovery is not enabled.
      *
+     * @deprecated use `pointInTimeRecoverySpecification` instead
      * @param pointInTimeRecovery Whether point-in-time recovery is enabled. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun pointInTimeRecovery(pointInTimeRecovery: Boolean) {
       cdkBuilder.pointInTimeRecovery(pointInTimeRecovery)
     }
+
+    /**
+     * Whether point-in-time recovery is enabled and recoveryPeriodInDays is set.
+     *
+     * Default: - point in time recovery is not enabled.
+     *
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set. 
+     */
+    override
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification) {
+      cdkBuilder.pointInTimeRecoverySpecification(pointInTimeRecoverySpecification.let(PointInTimeRecoverySpecification.Companion::unwrap))
+    }
+
+    /**
+     * Whether point-in-time recovery is enabled and recoveryPeriodInDays is set.
+     *
+     * Default: - point in time recovery is not enabled.
+     *
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f3fde7876f79a77a1e463af47d7786ae2c2a17c0d27eb4cce5bddbea3937742a")
+    override
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification.Builder.() -> Unit):
+        Unit =
+        pointInTimeRecoverySpecification(PointInTimeRecoverySpecification(pointInTimeRecoverySpecification))
 
     /**
      * The removal policy applied to the table.
@@ -777,6 +834,9 @@ public open class TableV2(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.dynamodb.TableV2.PROPERTY_INJECTION_ID
+
     public fun fromTableArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

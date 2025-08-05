@@ -451,10 +451,6 @@ public open class CfnConfigRule(
      * that can trigger an evaluation for the rule. If you do not specify a scope, evaluations are
      * triggered when any resource in the recording group changes.
      *
-     *
-     * The scope can be empty.
-     *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-scope)
      * @param scope Defines which resources can trigger an evaluation for the rule. 
      */
@@ -468,10 +464,6 @@ public open class CfnConfigRule(
      * that can trigger an evaluation for the rule. If you do not specify a scope, evaluations are
      * triggered when any resource in the recording group changes.
      *
-     *
-     * The scope can be empty.
-     *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-scope)
      * @param scope Defines which resources can trigger an evaluation for the rule. 
      */
@@ -484,10 +476,6 @@ public open class CfnConfigRule(
      * resource ID, or a combination of a tag key and value. Specify a scope to constrain the resources
      * that can trigger an evaluation for the rule. If you do not specify a scope, evaluations are
      * triggered when any resource in the recording group changes.
-     *
-     *
-     * The scope can be empty.
-     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-scope)
      * @param scope Defines which resources can trigger an evaluation for the rule. 
@@ -684,10 +672,6 @@ public open class CfnConfigRule(
      * that can trigger an evaluation for the rule. If you do not specify a scope, evaluations are
      * triggered when any resource in the recording group changes.
      *
-     *
-     * The scope can be empty.
-     *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-scope)
      * @param scope Defines which resources can trigger an evaluation for the rule. 
      */
@@ -703,10 +687,6 @@ public open class CfnConfigRule(
      * that can trigger an evaluation for the rule. If you do not specify a scope, evaluations are
      * triggered when any resource in the recording group changes.
      *
-     *
-     * The scope can be empty.
-     *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-scope)
      * @param scope Defines which resources can trigger an evaluation for the rule. 
      */
@@ -721,10 +701,6 @@ public open class CfnConfigRule(
      * resource ID, or a combination of a tag key and value. Specify a scope to constrain the resources
      * that can trigger an evaluation for the rule. If you do not specify a scope, evaluations are
      * triggered when any resource in the recording group changes.
-     *
-     *
-     * The scope can be empty.
-     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-scope)
      * @param scope Defines which resources can trigger an evaluation for the rule. 

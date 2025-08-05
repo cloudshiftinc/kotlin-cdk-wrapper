@@ -15,6 +15,7 @@ import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.servicediscovery.INamespace
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -28,25 +29,23 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * IVpc vpc = Vpc.fromLookup(this, "Vpc", VpcLookupOptions.builder()
- * .isDefault(true)
- * .build());
- * Cluster cluster = Cluster.Builder.create(this, "ECSCluster").vpc(vpc).build();
- * TaskDefinition taskDefinition = TaskDefinition.Builder.create(this, "TD")
- * .compatibility(Compatibility.FARGATE)
- * .cpu("256")
- * .memoryMiB("512")
+ * import io.cloudshiftdev.awscdk.Tags;
+ * Vpc vpc = Vpc.Builder.create(this, "Vpc").maxAzs(1).build();
+ * Cluster cluster = Cluster.Builder.create(this, "EcsCluster").vpc(vpc).build();
+ * FargateTaskDefinition taskDefinition = FargateTaskDefinition.Builder.create(this, "TaskDef")
+ * .memoryLimitMiB(512)
+ * .cpu(256)
  * .build();
- * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
- * .image(ContainerImage.fromRegistry("foo/bar"))
+ * taskDefinition.addContainer("WebContainer", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
  * .build());
- * EcsRunTask runTask = EcsRunTask.Builder.create(this, "Run")
- * .integrationPattern(IntegrationPattern.RUN_JOB)
+ * Tags.of(taskDefinition).add("my-tag", "my-tag-value");
+ * ScheduledFargateTask scheduledFargateTask = ScheduledFargateTask.Builder.create(this,
+ * "ScheduledFargateTask")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
- * .launchTarget(new EcsFargateLaunchTarget())
- * .cpu("1024")
- * .memoryMiB("1048")
+ * .schedule(Schedule.expression("rate(1 minute)"))
+ * .propagateTags(PropagatedTagSource.TASK_DEFINITION)
  * .build();
  * ```
  */
@@ -270,7 +269,7 @@ public open class Cluster(
   public override fun hasEc2Capacity(): Boolean = unwrap(this).getHasEc2Capacity()
 
   /**
-   * This method returns the specifed CloudWatch metric for this cluster.
+   * This method returns the specified CloudWatch metric for this cluster.
    *
    * @param metricName 
    * @param props
@@ -279,7 +278,7 @@ public open class Cluster(
       unwrap(this).metric(metricName).let(Metric::wrap)
 
   /**
-   * This method returns the specifed CloudWatch metric for this cluster.
+   * This method returns the specified CloudWatch metric for this cluster.
    *
    * @param metricName 
    * @param props
@@ -288,7 +287,7 @@ public open class Cluster(
       unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
-   * This method returns the specifed CloudWatch metric for this cluster.
+   * This method returns the specified CloudWatch metric for this cluster.
    *
    * @param metricName 
    * @param props
@@ -466,14 +465,25 @@ public open class Cluster(
     public fun clusterName(clusterName: String)
 
     /**
-     * If true CloudWatch Container Insights will be enabled for the cluster.
+     * (deprecated) If true CloudWatch Container Insights will be enabled for the cluster.
      *
      * Default: - Container Insights will be disabled for this cluster.
      *
+     * @deprecated See [containerInsightsV2 ]
      * @param containerInsights If true CloudWatch Container Insights will be enabled for the
      * cluster. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun containerInsights(containerInsights: Boolean)
+
+    /**
+     * The CloudWatch Container Insights configuration for the cluster.
+     *
+     * Default: [ContainerInsights.DISABLED ] This may be overridden by ECS account level settings.
+     *
+     * @param containerInsightsV2 The CloudWatch Container Insights configuration for the cluster. 
+     */
+    public fun containerInsightsV2(containerInsightsV2: ContainerInsights)
 
     /**
      * The service discovery namespace created in this cluster.
@@ -603,15 +613,28 @@ public open class Cluster(
     }
 
     /**
-     * If true CloudWatch Container Insights will be enabled for the cluster.
+     * (deprecated) If true CloudWatch Container Insights will be enabled for the cluster.
      *
      * Default: - Container Insights will be disabled for this cluster.
      *
+     * @deprecated See [containerInsightsV2 ]
      * @param containerInsights If true CloudWatch Container Insights will be enabled for the
      * cluster. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun containerInsights(containerInsights: Boolean) {
       cdkBuilder.containerInsights(containerInsights)
+    }
+
+    /**
+     * The CloudWatch Container Insights configuration for the cluster.
+     *
+     * Default: [ContainerInsights.DISABLED ] This may be overridden by ECS account level settings.
+     *
+     * @param containerInsightsV2 The CloudWatch Container Insights configuration for the cluster. 
+     */
+    override fun containerInsightsV2(containerInsightsV2: ContainerInsights) {
+      cdkBuilder.containerInsightsV2(containerInsightsV2.let(ContainerInsights.Companion::unwrap))
     }
 
     /**
@@ -718,6 +741,9 @@ public open class Cluster(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ecs.Cluster.PROPERTY_INJECTION_ID
+
     public fun fromClusterArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

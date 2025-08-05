@@ -610,6 +610,9 @@ public open class Role(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.iam.Role.PROPERTY_INJECTION_ID
+
     public fun customizeRoles(scope: CloudshiftdevConstructsConstruct) {
       software.amazon.awscdk.services.iam.Role.customizeRoles(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap))
     }
@@ -625,6 +628,22 @@ public open class Role(
     public fun customizeRoles(scope: CloudshiftdevConstructsConstruct,
         options: CustomizeRolesOptions.Builder.() -> Unit): Unit = customizeRoles(scope,
         CustomizeRolesOptions(options))
+
+    public fun fromLookup(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      options: RoleLookupOptions,
+    ): IRole =
+        software.amazon.awscdk.services.iam.Role.fromLookup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, options.let(RoleLookupOptions.Companion::unwrap)).let(IRole::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1224c7a8545dbdb341a1ceeec2f28474e3e0a925870c9737bfb1a712a3ed68c4")
+    public fun fromLookup(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      options: RoleLookupOptions.Builder.() -> Unit,
+    ): IRole = fromLookup(scope, id, RoleLookupOptions(options))
 
     public fun fromRoleArn(
       scope: CloudshiftdevConstructsConstruct,

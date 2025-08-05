@@ -608,8 +608,12 @@ public open class ManagedEc2EcsComputeEnvironment(
      *
      * If you specify a specific AMI, this property will be ignored.
      *
-     * Default: true
+     * Note: the CDK will never set this value by default, `false` will set by CFN.
+     * This is to avoid a deployment failure that occurs when this value is set.
      *
+     * Default: false
+     *
+     * [Documentation](https://github.com/aws/aws-cdk/issues/27054)
      * @param updateToLatestImageVersion Whether or not the AMI is updated to the latest one
      * supported by Batch when an infrastructure update occurs. 
      */
@@ -1023,8 +1027,12 @@ public open class ManagedEc2EcsComputeEnvironment(
      *
      * If you specify a specific AMI, this property will be ignored.
      *
-     * Default: true
+     * Note: the CDK will never set this value by default, `false` will set by CFN.
+     * This is to avoid a deployment failure that occurs when this value is set.
      *
+     * Default: false
+     *
+     * [Documentation](https://github.com/aws/aws-cdk/issues/27054)
      * @param updateToLatestImageVersion Whether or not the AMI is updated to the latest one
      * supported by Batch when an infrastructure update occurs. 
      */
@@ -1084,6 +1092,9 @@ public open class ManagedEc2EcsComputeEnvironment(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.batch.ManagedEc2EcsComputeEnvironment.PROPERTY_INJECTION_ID
+
     public fun fromManagedEc2EcsComputeEnvironmentArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

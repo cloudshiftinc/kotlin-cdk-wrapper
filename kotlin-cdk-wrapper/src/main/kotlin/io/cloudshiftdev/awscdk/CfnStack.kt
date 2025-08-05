@@ -17,29 +17,30 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * The `AWS::CloudFormation::Stack` resource nests a stack as a resource in a top-level template.
  *
+ * For more information, see [Nested
+ * stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html)
+ * in the *AWS CloudFormation User Guide* .
+ *
  * You can add output values from a nested stack within the containing template. You use the
- * [GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)
+ * [GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/intrinsic-function-reference-getatt.html)
  * function with the nested stack's logical name and the name of the output value in the nested stack
  * in the format `Outputs. *NestedStackOutputName*` .
  *
- *
  * We strongly recommend that updates to nested stacks are run from the parent stack.
- *
  *
  * When you apply template changes to update a top-level stack, CloudFormation updates the top-level
  * stack and initiates an update to its nested stacks. CloudFormation updates the resources of modified
- * nested stacks, but doesn't update the resources of unmodified nested stacks. For more information,
- * see [CloudFormation stack
- * updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)
- * .
+ * nested stacks, but doesn't update the resources of unmodified nested stacks.
  *
- *
- * You must acknowledge IAM capabilities for nested stacks that contain IAM resources. Also, verify
- * that you have cancel update stack permissions, which is required if an update rolls back. For more
+ * For stacks that contain IAM resources, you must acknowledge IAM capabilities. Also, make sure
+ * that you have cancel update stack permissions, which are required if an update rolls back. For more
  * information about IAM and CloudFormation , see [Controlling access with AWS Identity and Access
- * Management](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html)
- * . &gt; A subset of `AWS::CloudFormation::Stack` resource type properties listed below are available
- * to customers using AWS CloudFormation , AWS CDK , and AWS Cloud Control API to configure.
+ * Management](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/control-access-with-iam.html)
+ * in the *AWS CloudFormation User Guide* .
+ *
+ *
+ * A subset of `AWS::CloudFormation::Stack` resource type properties listed below are available to
+ * customers using CloudFormation , AWS CDK , and Cloud Control  to configure.
  *
  * * `NotificationARNs`
  * * `Parameters`
@@ -47,9 +48,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * * `TemplateURL`
  * * `TimeoutInMinutes`
  *
- * These properties can be configured only when using AWS Cloud Control API . This is because the
- * below properties are set by the parent stack, and thus cannot be configured using AWS CloudFormation
- * or AWS CDK but only AWS Cloud Control API .
+ * These properties can be configured only when using Cloud Control  . This is because the below
+ * properties are set by the parent stack, and thus cannot be configured using CloudFormation or AWS
+ * CDK but only Cloud Control  .
  *
  * * `Capabilities`
  * * `Description`
@@ -62,10 +63,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * * `StackStatusReason`
  * * `TemplateBody`
  *
- * Customers that configure `AWS::CloudFormation::Stack` using AWS CloudFormation and AWS CDK can do
- * so for nesting a CloudFormation stack as a resource in their top-level template.
+ * Customers that configure `AWS::CloudFormation::Stack` using CloudFormation and AWS CDK can do so
+ * for nesting a CloudFormation stack as a resource in their top-level template.
  *
- * These read-only properties can be accessed only when using AWS Cloud Control API .
+ * These read-only properties can be accessed only when using Cloud Control  .
  *
  * * `ChangeSetId`
  * * `CreationTime`
@@ -125,12 +126,12 @@ public open class CfnStack(
   )
 
   /**
-   * Returns the unique ID of the change set.
+   * Returns the unique identifier of the change set.
    */
   public open fun attrChangeSetId(): String = unwrap(this).getAttrChangeSetId()
 
   /**
-   * Returns The time at which the stack was created.
+   * Returns the time the stack was created.
    */
   public open fun attrCreationTime(): String = unwrap(this).getAttrCreationTime()
 
@@ -147,24 +148,15 @@ public open class CfnStack(
   public open fun attrOutputs(): IResolvable = unwrap(this).getAttrOutputs().let(IResolvable::wrap)
 
   /**
-   * For nested stacks--stacks created as resources for another stack--returns the stack ID of the
-   * direct parent of this stack.
+   * For nested stacks, returns the stack ID of the direct parent of this stack.
    *
    * For the first level of nested stacks, the root stack is also the parent stack.
-   *
-   * For more information, see [Working with Nested
-   * Stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html)
-   * in the *AWS CloudFormation User Guide* .
    */
   public open fun attrParentId(): String = unwrap(this).getAttrParentId()
 
   /**
-   * For nested stacks--stacks created as resources for another stack--returns the stack ID of the
-   * top-level stack to which the nested stack ultimately belongs.
-   *
-   * For more information, see [Working with Nested
-   * Stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html)
-   * in the *AWS CloudFormation User Guide* .
+   * For nested stacks, returns the stack ID of the top-level stack to which the nested stack
+   * ultimately belongs.
    */
   public open fun attrRootId(): String = unwrap(this).getAttrRootId()
 
@@ -216,16 +208,16 @@ public open class CfnStack(
    * The set value pairs that represent the parameters passed to CloudFormation when this nested
    * stack is created.
    */
-  public open fun parameters(`value`: IResolvable) {
-    unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
+  public open fun parameters(`value`: Map<String, String>) {
+    unwrap(this).setParameters(`value`)
   }
 
   /**
    * The set value pairs that represent the parameters passed to CloudFormation when this nested
    * stack is created.
    */
-  public open fun parameters(`value`: Map<String, String>) {
-    unwrap(this).setParameters(`value`)
+  public open fun parameters(`value`: IResolvable) {
+    unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -252,12 +244,12 @@ public open class CfnStack(
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   /**
-   * Location of file containing the template body.
+   * The URL of a file that contains the template body.
    */
   public open fun templateUrl(): String? = unwrap(this).getTemplateUrl()
 
   /**
-   * Location of file containing the template body.
+   * The URL of a file that contains the template body.
    */
   public open fun templateUrl(`value`: String) {
     unwrap(this).setTemplateUrl(`value`)
@@ -317,7 +309,7 @@ public open class CfnStack(
      * type `CommaDelimitedList` to nested stacks.
      *
      *
-     * Conditional. Required if the nested stack requires input parameters.
+     * Required if the nested stack requires input parameters.
      *
      * Whether an update causes interruptions depends on the resources that are being updated. An
      * update never causes a nested stack to be replaced.
@@ -326,7 +318,7 @@ public open class CfnStack(
      * @param parameters The set value pairs that represent the parameters passed to CloudFormation
      * when this nested stack is created. 
      */
-    public fun parameters(parameters: IResolvable)
+    public fun parameters(parameters: Map<String, String>)
 
     /**
      * The set value pairs that represent the parameters passed to CloudFormation when this nested
@@ -341,7 +333,7 @@ public open class CfnStack(
      * type `CommaDelimitedList` to nested stacks.
      *
      *
-     * Conditional. Required if the nested stack requires input parameters.
+     * Required if the nested stack requires input parameters.
      *
      * Whether an update causes interruptions depends on the resources that are being updated. An
      * update never causes a nested stack to be replaced.
@@ -350,7 +342,7 @@ public open class CfnStack(
      * @param parameters The set value pairs that represent the parameters passed to CloudFormation
      * when this nested stack is created. 
      */
-    public fun parameters(parameters: Map<String, String>)
+    public fun parameters(parameters: IResolvable)
 
     /**
      * Key-value pairs to associate with this stack.
@@ -375,17 +367,16 @@ public open class CfnStack(
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * Location of file containing the template body.
+     * The URL of a file that contains the template body.
      *
-     * The URL must point to a template (max size: 460,800 bytes) that's located in an Amazon S3
-     * bucket. For more information, see [Template
-     * anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html) .
+     * The URL must point to a template (max size: 1 MB) that's located in an Amazon S3 bucket. The
+     * location for an Amazon S3 bucket must start with `https://` .
      *
      * Whether an update causes interruptions depends on the resources that are being updated. An
      * update never causes a nested stack to be replaced.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html#cfn-cloudformation-stack-templateurl)
-     * @param templateUrl Location of file containing the template body. 
+     * @param templateUrl The URL of a file that contains the template body. 
      */
     public fun templateUrl(templateUrl: String)
 
@@ -453,7 +444,7 @@ public open class CfnStack(
      * type `CommaDelimitedList` to nested stacks.
      *
      *
-     * Conditional. Required if the nested stack requires input parameters.
+     * Required if the nested stack requires input parameters.
      *
      * Whether an update causes interruptions depends on the resources that are being updated. An
      * update never causes a nested stack to be replaced.
@@ -462,8 +453,8 @@ public open class CfnStack(
      * @param parameters The set value pairs that represent the parameters passed to CloudFormation
      * when this nested stack is created. 
      */
-    override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+    override fun parameters(parameters: Map<String, String>) {
+      cdkBuilder.parameters(parameters)
     }
 
     /**
@@ -479,7 +470,7 @@ public open class CfnStack(
      * type `CommaDelimitedList` to nested stacks.
      *
      *
-     * Conditional. Required if the nested stack requires input parameters.
+     * Required if the nested stack requires input parameters.
      *
      * Whether an update causes interruptions depends on the resources that are being updated. An
      * update never causes a nested stack to be replaced.
@@ -488,8 +479,8 @@ public open class CfnStack(
      * @param parameters The set value pairs that represent the parameters passed to CloudFormation
      * when this nested stack is created. 
      */
-    override fun parameters(parameters: Map<String, String>) {
-      cdkBuilder.parameters(parameters)
+    override fun parameters(parameters: IResolvable) {
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -517,17 +508,16 @@ public open class CfnStack(
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * Location of file containing the template body.
+     * The URL of a file that contains the template body.
      *
-     * The URL must point to a template (max size: 460,800 bytes) that's located in an Amazon S3
-     * bucket. For more information, see [Template
-     * anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html) .
+     * The URL must point to a template (max size: 1 MB) that's located in an Amazon S3 bucket. The
+     * location for an Amazon S3 bucket must start with `https://` .
      *
      * Whether an update causes interruptions depends on the resources that are being updated. An
      * update never causes a nested stack to be replaced.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html#cfn-cloudformation-stack-templateurl)
-     * @param templateUrl Location of file containing the template body. 
+     * @param templateUrl The URL of a file that contains the template body. 
      */
     override fun templateUrl(templateUrl: String) {
       cdkBuilder.templateUrl(templateUrl)

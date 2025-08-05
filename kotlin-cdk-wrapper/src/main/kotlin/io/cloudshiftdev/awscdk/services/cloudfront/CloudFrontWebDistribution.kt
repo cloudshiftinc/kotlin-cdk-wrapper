@@ -88,6 +88,12 @@ public open class CloudFrontWebDistribution(
   )
 
   /**
+   * (deprecated) The distribution ARN for this distribution.
+   */
+  @Deprecated(message = "deprecated in CDK")
+  public override fun distributionArn(): String = unwrap(this).getDistributionArn()
+
+  /**
    * (deprecated) The domain name created by CloudFront for this distribution.
    *
    * If you are using aliases for your distribution, this is the domainName your DNS records should
@@ -542,6 +548,9 @@ public open class CloudFrontWebDistribution(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.cloudfront.CloudFrontWebDistribution.PROPERTY_INJECTION_ID
+
     @Deprecated(message = "deprecated in CDK")
     public fun fromDistributionAttributes(
       scope: CloudshiftdevConstructsConstruct,

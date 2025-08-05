@@ -50,7 +50,7 @@ public interface CfnEmailAddressProps {
   public fun displayName(): String? = unwrap(this).getDisplayName()
 
   /**
-   * The email address with the instance, in [^\s&#64;]+&#64;[^\s&#64;]+.[^\s&#64;]+ format.
+   * The email address, including the domain.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-emailaddress.html#cfn-connect-emailaddress-emailaddress)
    */
@@ -64,7 +64,7 @@ public interface CfnEmailAddressProps {
   public fun instanceArn(): String
 
   /**
-   * One or more tags.
+   * An array of key-value pairs to apply to this resource.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-emailaddress.html#cfn-connect-emailaddress-tags)
    */
@@ -86,8 +86,7 @@ public interface CfnEmailAddressProps {
     public fun displayName(displayName: String)
 
     /**
-     * @param emailAddress The email address with the instance, in
-     * [^\s&#64;]+&#64;[^\s&#64;]+.[^\s&#64;]+ format. 
+     * @param emailAddress The email address, including the domain. 
      */
     public fun emailAddress(emailAddress: String)
 
@@ -97,12 +96,12 @@ public interface CfnEmailAddressProps {
     public fun instanceArn(instanceArn: String)
 
     /**
-     * @param tags One or more tags.
+     * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags One or more tags.
+     * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -126,8 +125,7 @@ public interface CfnEmailAddressProps {
     }
 
     /**
-     * @param emailAddress The email address with the instance, in
-     * [^\s&#64;]+&#64;[^\s&#64;]+.[^\s&#64;]+ format. 
+     * @param emailAddress The email address, including the domain. 
      */
     override fun emailAddress(emailAddress: String) {
       cdkBuilder.emailAddress(emailAddress)
@@ -141,14 +139,14 @@ public interface CfnEmailAddressProps {
     }
 
     /**
-     * @param tags One or more tags.
+     * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags One or more tags.
+     * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -175,7 +173,7 @@ public interface CfnEmailAddressProps {
     override fun displayName(): String? = unwrap(this).getDisplayName()
 
     /**
-     * The email address with the instance, in [^\s&#64;]+&#64;[^\s&#64;]+.[^\s&#64;]+ format.
+     * The email address, including the domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-emailaddress.html#cfn-connect-emailaddress-emailaddress)
      */
@@ -189,7 +187,7 @@ public interface CfnEmailAddressProps {
     override fun instanceArn(): String = unwrap(this).getInstanceArn()
 
     /**
-     * One or more tags.
+     * An array of key-value pairs to apply to this resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-emailaddress.html#cfn-connect-emailaddress-tags)
      */

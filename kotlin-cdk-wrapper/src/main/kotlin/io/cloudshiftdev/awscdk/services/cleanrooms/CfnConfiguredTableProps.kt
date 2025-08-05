@@ -27,9 +27,29 @@ import kotlin.jvm.JvmName
  * .analysisMethod("analysisMethod")
  * .name("name")
  * .tableReference(TableReferenceProperty.builder()
+ * .athena(AthenaTableReferenceProperty.builder()
+ * .databaseName("databaseName")
+ * .tableName("tableName")
+ * .workGroup("workGroup")
+ * // the properties below are optional
+ * .outputLocation("outputLocation")
+ * .build())
  * .glue(GlueTableReferenceProperty.builder()
  * .databaseName("databaseName")
  * .tableName("tableName")
+ * .build())
+ * .snowflake(SnowflakeTableReferenceProperty.builder()
+ * .accountIdentifier("accountIdentifier")
+ * .databaseName("databaseName")
+ * .schemaName("schemaName")
+ * .secretArn("secretArn")
+ * .tableName("tableName")
+ * .tableSchema(SnowflakeTableSchemaProperty.builder()
+ * .v1(List.of(SnowflakeTableSchemaV1Property.builder()
+ * .columnName("columnName")
+ * .columnType("columnType")
+ * .build()))
+ * .build())
  * .build())
  * .build())
  * // the properties below are optional
@@ -78,6 +98,7 @@ import kotlin.jvm.JvmName
  * .type("type")
  * .build()))
  * .description("description")
+ * .selectedAnalysisMethods(List.of("selectedAnalysisMethods"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -98,7 +119,11 @@ public interface CfnConfiguredTableProps {
   /**
    * The analysis method for the configured table.
    *
-   * The only valid value is currently `DIRECT_QUERY`.
+   * `DIRECT_QUERY` allows SQL queries to be run directly on this table.
+   *
+   * `DIRECT_JOB` allows PySpark jobs to be run directly on this table.
+   *
+   * `MULTIPLE` allows both SQL queries and PySpark jobs to be run directly on this table.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-analysismethod)
    */
@@ -124,6 +149,14 @@ public interface CfnConfiguredTableProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-name)
    */
   public fun name(): String
+
+  /**
+   * The selected analysis methods for the configured table.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-selectedanalysismethods)
+   */
+  public fun selectedAnalysisMethods(): List<String> = unwrap(this).getSelectedAnalysisMethods() ?:
+      emptyList()
 
   /**
    * The table that this configured table represents.
@@ -162,7 +195,11 @@ public interface CfnConfiguredTableProps {
 
     /**
      * @param analysisMethod The analysis method for the configured table. 
-     * The only valid value is currently `DIRECT_QUERY`.
+     * `DIRECT_QUERY` allows SQL queries to be run directly on this table.
+     *
+     * `DIRECT_JOB` allows PySpark jobs to be run directly on this table.
+     *
+     * `MULTIPLE` allows both SQL queries and PySpark jobs to be run directly on this table.
      */
     public fun analysisMethod(analysisMethod: String)
 
@@ -190,6 +227,16 @@ public interface CfnConfiguredTableProps {
      * @param name A name for the configured table. 
      */
     public fun name(name: String)
+
+    /**
+     * @param selectedAnalysisMethods The selected analysis methods for the configured table.
+     */
+    public fun selectedAnalysisMethods(selectedAnalysisMethods: List<String>)
+
+    /**
+     * @param selectedAnalysisMethods The selected analysis methods for the configured table.
+     */
+    public fun selectedAnalysisMethods(vararg selectedAnalysisMethods: String)
 
     /**
      * @param tableReference The table that this configured table represents. 
@@ -248,7 +295,11 @@ public interface CfnConfiguredTableProps {
 
     /**
      * @param analysisMethod The analysis method for the configured table. 
-     * The only valid value is currently `DIRECT_QUERY`.
+     * `DIRECT_QUERY` allows SQL queries to be run directly on this table.
+     *
+     * `DIRECT_JOB` allows PySpark jobs to be run directly on this table.
+     *
+     * `MULTIPLE` allows both SQL queries and PySpark jobs to be run directly on this table.
      */
     override fun analysisMethod(analysisMethod: String) {
       cdkBuilder.analysisMethod(analysisMethod)
@@ -287,6 +338,19 @@ public interface CfnConfiguredTableProps {
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
+
+    /**
+     * @param selectedAnalysisMethods The selected analysis methods for the configured table.
+     */
+    override fun selectedAnalysisMethods(selectedAnalysisMethods: List<String>) {
+      cdkBuilder.selectedAnalysisMethods(selectedAnalysisMethods)
+    }
+
+    /**
+     * @param selectedAnalysisMethods The selected analysis methods for the configured table.
+     */
+    override fun selectedAnalysisMethods(vararg selectedAnalysisMethods: String): Unit =
+        selectedAnalysisMethods(selectedAnalysisMethods.toList())
 
     /**
      * @param tableReference The table that this configured table represents. 
@@ -347,7 +411,11 @@ public interface CfnConfiguredTableProps {
     /**
      * The analysis method for the configured table.
      *
-     * The only valid value is currently `DIRECT_QUERY`.
+     * `DIRECT_QUERY` allows SQL queries to be run directly on this table.
+     *
+     * `DIRECT_JOB` allows PySpark jobs to be run directly on this table.
+     *
+     * `MULTIPLE` allows both SQL queries and PySpark jobs to be run directly on this table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-analysismethod)
      */
@@ -373,6 +441,14 @@ public interface CfnConfiguredTableProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-name)
      */
     override fun name(): String = unwrap(this).getName()
+
+    /**
+     * The selected analysis methods for the configured table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-selectedanalysismethods)
+     */
+    override fun selectedAnalysisMethods(): List<String> = unwrap(this).getSelectedAnalysisMethods()
+        ?: emptyList()
 
     /**
      * The table that this configured table represents.

@@ -1,0 +1,673 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
+
+import io.cloudshiftdev.awscdk.Duration
+import io.cloudshiftdev.awscdk.Stack
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
+import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
+import io.cloudshiftdev.awscdk.services.stepfunctions.QueryLanguage
+import io.cloudshiftdev.awscdk.services.stepfunctions.TaskInput
+import io.cloudshiftdev.awscdk.services.stepfunctions.Timeout
+import kotlin.Any
+import kotlin.Deprecated
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Map
+import kotlin.jvm.JvmName
+
+/**
+ * Properties for calling an HTTP API Endpoint using JSONPath.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
+ * import io.cloudshiftdev.awscdk.services.stepfunctions.tasks.*;
+ * Object assign;
+ * Object resultSelector;
+ * Stack stack;
+ * TaskInput taskInput;
+ * TaskRole taskRole;
+ * Timeout timeout;
+ * CallApiGatewayHttpApiEndpointJsonPathProps callApiGatewayHttpApiEndpointJsonPathProps =
+ * CallApiGatewayHttpApiEndpointJsonPathProps.builder()
+ * .apiId("apiId")
+ * .apiStack(stack)
+ * .method(HttpMethod.GET)
+ * // the properties below are optional
+ * .apiPath("apiPath")
+ * .assign(Map.of(
+ * "assignKey", assign))
+ * .authType(AuthType.NO_AUTH)
+ * .comment("comment")
+ * .credentials(Credentials.builder()
+ * .role(taskRole)
+ * .build())
+ * .headers(taskInput)
+ * .heartbeat(Duration.minutes(30))
+ * .heartbeatTimeout(timeout)
+ * .inputPath("inputPath")
+ * .integrationPattern(IntegrationPattern.REQUEST_RESPONSE)
+ * .outputPath("outputPath")
+ * .queryLanguage(QueryLanguage.JSON_PATH)
+ * .queryParameters(taskInput)
+ * .requestBody(taskInput)
+ * .resultPath("resultPath")
+ * .resultSelector(Map.of(
+ * "resultSelectorKey", resultSelector))
+ * .stageName("stageName")
+ * .stateName("stateName")
+ * .taskTimeout(timeout)
+ * .timeout(Duration.minutes(30))
+ * .build();
+ * ```
+ */
+public interface CallApiGatewayHttpApiEndpointJsonPathProps :
+    CallApiGatewayEndpointJsonPathBaseProps, CallApiGatewayHttpApiEndpointOptions {
+  /**
+   * A builder for [CallApiGatewayHttpApiEndpointJsonPathProps]
+   */
+  @CdkDslMarker
+  public interface Builder {
+    /**
+     * @param apiId The Id of the API to call. 
+     */
+    public fun apiId(apiId: String)
+
+    /**
+     * @param apiPath Path parameters appended after API endpoint.
+     */
+    public fun apiPath(apiPath: String)
+
+    /**
+     * @param apiStack The Stack in which the API is defined. 
+     */
+    public fun apiStack(apiStack: Stack)
+
+    /**
+     * @param assign Workflow variables to store in this step.
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     */
+    public fun assign(assign: Map<String, Any>)
+
+    /**
+     * @param authType Authentication methods.
+     */
+    public fun authType(authType: AuthType)
+
+    /**
+     * @param comment A comment describing this state.
+     */
+    public fun comment(comment: String)
+
+    /**
+     * @param credentials Credentials for an IAM Role that the State Machine assumes for executing
+     * the task.
+     * This enables cross-account resource invocations.
+     */
+    public fun credentials(credentials: Credentials)
+
+    /**
+     * @param credentials Credentials for an IAM Role that the State Machine assumes for executing
+     * the task.
+     * This enables cross-account resource invocations.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f949157ebb276a1e5aa837ef75364f53518fd75ca26e574193ac591642cdcb98")
+    public fun credentials(credentials: Credentials.Builder.() -> Unit)
+
+    /**
+     * @param headers HTTP request information that does not relate to contents of the request.
+     */
+    public fun headers(headers: TaskInput)
+
+    /**
+     * @param heartbeat Timeout for the heartbeat.
+     * @deprecated use `heartbeatTimeout`
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun heartbeat(heartbeat: Duration)
+
+    /**
+     * @param heartbeatTimeout Timeout for the heartbeat.
+     * [disable-awslint:duration-prop-type] is needed because all props interface in
+     * aws-stepfunctions-tasks extend this interface
+     */
+    public fun heartbeatTimeout(heartbeatTimeout: Timeout)
+
+    /**
+     * @param inputPath JSONPath expression to select part of the state to be the input to this
+     * state.
+     * May also be the special value JsonPath.DISCARD, which will cause the effective
+     * input to be the empty object {}.
+     */
+    public fun inputPath(inputPath: String)
+
+    /**
+     * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
+     * States Language.
+     * You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
+     */
+    public fun integrationPattern(integrationPattern: IntegrationPattern)
+
+    /**
+     * @param method Http method for the API. 
+     */
+    public fun method(method: HttpMethod)
+
+    /**
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state.
+     * May also be the special value JsonPath.DISCARD, which will cause the effective
+     * output to be the empty object {}.
+     */
+    public fun outputPath(outputPath: String)
+
+    /**
+     * @param queryLanguage The name of the query language used by the state.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
+
+    /**
+     * @param queryParameters Query strings attatched to end of request.
+     */
+    public fun queryParameters(queryParameters: TaskInput)
+
+    /**
+     * @param requestBody HTTP Request body.
+     */
+    public fun requestBody(requestBody: TaskInput)
+
+    /**
+     * @param resultPath JSONPath expression to indicate where to inject the state's output.
+     * May also be the special value JsonPath.DISCARD, which will cause the state's
+     * input to become its output.
+     */
+    public fun resultPath(resultPath: String)
+
+    /**
+     * @param resultSelector The JSON that will replace the state's raw result and become the
+     * effective result before ResultPath is applied.
+     * You can use ResultSelector to create a payload with values that are static
+     * or selected from the state's raw result.
+     */
+    public fun resultSelector(resultSelector: Map<String, Any>)
+
+    /**
+     * @param stageName Name of the stage where the API is deployed to in API Gateway.
+     */
+    public fun stageName(stageName: String)
+
+    /**
+     * @param stateName Optional name for this state.
+     */
+    public fun stateName(stateName: String)
+
+    /**
+     * @param taskTimeout Timeout for the task.
+     * [disable-awslint:duration-prop-type] is needed because all props interface in
+     * aws-stepfunctions-tasks extend this interface
+     */
+    public fun taskTimeout(taskTimeout: Timeout)
+
+    /**
+     * @param timeout Timeout for the task.
+     * @deprecated use `taskTimeout`
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun timeout(timeout: Duration)
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder:
+        software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpointJsonPathProps.Builder
+        =
+        software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpointJsonPathProps.builder()
+
+    /**
+     * @param apiId The Id of the API to call. 
+     */
+    override fun apiId(apiId: String) {
+      cdkBuilder.apiId(apiId)
+    }
+
+    /**
+     * @param apiPath Path parameters appended after API endpoint.
+     */
+    override fun apiPath(apiPath: String) {
+      cdkBuilder.apiPath(apiPath)
+    }
+
+    /**
+     * @param apiStack The Stack in which the API is defined. 
+     */
+    override fun apiStack(apiStack: Stack) {
+      cdkBuilder.apiStack(apiStack.let(Stack.Companion::unwrap))
+    }
+
+    /**
+     * @param assign Workflow variables to store in this step.
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * @param authType Authentication methods.
+     */
+    override fun authType(authType: AuthType) {
+      cdkBuilder.authType(authType.let(AuthType.Companion::unwrap))
+    }
+
+    /**
+     * @param comment A comment describing this state.
+     */
+    override fun comment(comment: String) {
+      cdkBuilder.comment(comment)
+    }
+
+    /**
+     * @param credentials Credentials for an IAM Role that the State Machine assumes for executing
+     * the task.
+     * This enables cross-account resource invocations.
+     */
+    override fun credentials(credentials: Credentials) {
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
+    }
+
+    /**
+     * @param credentials Credentials for an IAM Role that the State Machine assumes for executing
+     * the task.
+     * This enables cross-account resource invocations.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f949157ebb276a1e5aa837ef75364f53518fd75ca26e574193ac591642cdcb98")
+    override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
+        credentials(Credentials(credentials))
+
+    /**
+     * @param headers HTTP request information that does not relate to contents of the request.
+     */
+    override fun headers(headers: TaskInput) {
+      cdkBuilder.headers(headers.let(TaskInput.Companion::unwrap))
+    }
+
+    /**
+     * @param heartbeat Timeout for the heartbeat.
+     * @deprecated use `heartbeatTimeout`
+     */
+    @Deprecated(message = "deprecated in CDK")
+    override fun heartbeat(heartbeat: Duration) {
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * @param heartbeatTimeout Timeout for the heartbeat.
+     * [disable-awslint:duration-prop-type] is needed because all props interface in
+     * aws-stepfunctions-tasks extend this interface
+     */
+    override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
+    }
+
+    /**
+     * @param inputPath JSONPath expression to select part of the state to be the input to this
+     * state.
+     * May also be the special value JsonPath.DISCARD, which will cause the effective
+     * input to be the empty object {}.
+     */
+    override fun inputPath(inputPath: String) {
+      cdkBuilder.inputPath(inputPath)
+    }
+
+    /**
+     * @param integrationPattern AWS Step Functions integrates with services directly in the Amazon
+     * States Language.
+     * You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
+     */
+    override fun integrationPattern(integrationPattern: IntegrationPattern) {
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
+    }
+
+    /**
+     * @param method Http method for the API. 
+     */
+    override fun method(method: HttpMethod) {
+      cdkBuilder.method(method.let(HttpMethod.Companion::unwrap))
+    }
+
+    /**
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state.
+     * May also be the special value JsonPath.DISCARD, which will cause the effective
+     * output to be the empty object {}.
+     */
+    override fun outputPath(outputPath: String) {
+      cdkBuilder.outputPath(outputPath)
+    }
+
+    /**
+     * @param queryLanguage The name of the query language used by the state.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
+    }
+
+    /**
+     * @param queryParameters Query strings attatched to end of request.
+     */
+    override fun queryParameters(queryParameters: TaskInput) {
+      cdkBuilder.queryParameters(queryParameters.let(TaskInput.Companion::unwrap))
+    }
+
+    /**
+     * @param requestBody HTTP Request body.
+     */
+    override fun requestBody(requestBody: TaskInput) {
+      cdkBuilder.requestBody(requestBody.let(TaskInput.Companion::unwrap))
+    }
+
+    /**
+     * @param resultPath JSONPath expression to indicate where to inject the state's output.
+     * May also be the special value JsonPath.DISCARD, which will cause the state's
+     * input to become its output.
+     */
+    override fun resultPath(resultPath: String) {
+      cdkBuilder.resultPath(resultPath)
+    }
+
+    /**
+     * @param resultSelector The JSON that will replace the state's raw result and become the
+     * effective result before ResultPath is applied.
+     * You can use ResultSelector to create a payload with values that are static
+     * or selected from the state's raw result.
+     */
+    override fun resultSelector(resultSelector: Map<String, Any>) {
+      cdkBuilder.resultSelector(resultSelector.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * @param stageName Name of the stage where the API is deployed to in API Gateway.
+     */
+    override fun stageName(stageName: String) {
+      cdkBuilder.stageName(stageName)
+    }
+
+    /**
+     * @param stateName Optional name for this state.
+     */
+    override fun stateName(stateName: String) {
+      cdkBuilder.stateName(stateName)
+    }
+
+    /**
+     * @param taskTimeout Timeout for the task.
+     * [disable-awslint:duration-prop-type] is needed because all props interface in
+     * aws-stepfunctions-tasks extend this interface
+     */
+    override fun taskTimeout(taskTimeout: Timeout) {
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
+    }
+
+    /**
+     * @param timeout Timeout for the task.
+     * @deprecated use `taskTimeout`
+     */
+    @Deprecated(message = "deprecated in CDK")
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
+    }
+
+    public fun build():
+        software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpointJsonPathProps
+        = cdkBuilder.build()
+  }
+
+  private class Wrapper(
+    cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpointJsonPathProps,
+  ) : CdkObject(cdkObject),
+      CallApiGatewayHttpApiEndpointJsonPathProps {
+    /**
+     * The Id of the API to call.
+     */
+    override fun apiId(): String = unwrap(this).getApiId()
+
+    /**
+     * Path parameters appended after API endpoint.
+     *
+     * Default: - No path
+     */
+    override fun apiPath(): String? = unwrap(this).getApiPath()
+
+    /**
+     * The Stack in which the API is defined.
+     */
+    override fun apiStack(): Stack = unwrap(this).getApiStack().let(Stack::wrap)
+
+    /**
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     */
+    override fun assign(): Map<String, Any> = unwrap(this).getAssign() ?: emptyMap()
+
+    /**
+     * Authentication methods.
+     *
+     * Default: AuthType.NO_AUTH
+     */
+    override fun authType(): AuthType? = unwrap(this).getAuthType()?.let(AuthType::wrap)
+
+    /**
+     * A comment describing this state.
+     *
+     * Default: No comment
+     */
+    override fun comment(): String? = unwrap(this).getComment()
+
+    /**
+     * Credentials for an IAM Role that the State Machine assumes for executing the task.
+     *
+     * This enables cross-account resource invocations.
+     *
+     * Default: - None (Task is executed using the State Machine's execution role)
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-access-cross-acct-resources.html)
+     */
+    override fun credentials(): Credentials? = unwrap(this).getCredentials()?.let(Credentials::wrap)
+
+    /**
+     * HTTP request information that does not relate to contents of the request.
+     *
+     * Default: - No headers
+     */
+    override fun headers(): TaskInput? = unwrap(this).getHeaders()?.let(TaskInput::wrap)
+
+    /**
+     * (deprecated) Timeout for the heartbeat.
+     *
+     * Default: - None
+     *
+     * @deprecated use `heartbeatTimeout`
+     */
+    @Deprecated(message = "deprecated in CDK")
+    override fun heartbeat(): Duration? = unwrap(this).getHeartbeat()?.let(Duration::wrap)
+
+    /**
+     * Timeout for the heartbeat.
+     *
+     * [disable-awslint:duration-prop-type] is needed because all props interface in
+     * aws-stepfunctions-tasks extend this interface
+     *
+     * Default: - None
+     */
+    override fun heartbeatTimeout(): Timeout? =
+        unwrap(this).getHeartbeatTimeout()?.let(Timeout::wrap)
+
+    /**
+     * JSONPath expression to select part of the state to be the input to this state.
+     *
+     * May also be the special value JsonPath.DISCARD, which will cause the effective
+     * input to be the empty object {}.
+     *
+     * Default: $
+     */
+    override fun inputPath(): String? = unwrap(this).getInputPath()
+
+    /**
+     * AWS Step Functions integrates with services directly in the Amazon States Language.
+     *
+     * You can control these AWS services using service integration patterns.
+     *
+     * Depending on the AWS Service, the Service Integration Pattern availability will vary.
+     *
+     * Default: - `IntegrationPattern.REQUEST_RESPONSE` for most tasks.
+     * `IntegrationPattern.RUN_JOB` for the following exceptions:
+     * `BatchSubmitJob`, `EmrAddStep`, `EmrCreateCluster`, `EmrTerminationCluster`, and
+     * `EmrContainersStartJobRun`.
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-supported-services.html)
+     */
+    override fun integrationPattern(): IntegrationPattern? =
+        unwrap(this).getIntegrationPattern()?.let(IntegrationPattern::wrap)
+
+    /**
+     * Http method for the API.
+     */
+    override fun method(): HttpMethod = unwrap(this).getMethod().let(HttpMethod::wrap)
+
+    /**
+     * JSONPath expression to select part of the state to be the output to this state.
+     *
+     * May also be the special value JsonPath.DISCARD, which will cause the effective
+     * output to be the empty object {}.
+     *
+     * Default: $
+     */
+    override fun outputPath(): String? = unwrap(this).getOutputPath()
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     */
+    override fun queryLanguage(): QueryLanguage? =
+        unwrap(this).getQueryLanguage()?.let(QueryLanguage::wrap)
+
+    /**
+     * Query strings attatched to end of request.
+     *
+     * Default: - No query parameters
+     */
+    override fun queryParameters(): TaskInput? =
+        unwrap(this).getQueryParameters()?.let(TaskInput::wrap)
+
+    /**
+     * HTTP Request body.
+     *
+     * Default: - No request body
+     */
+    override fun requestBody(): TaskInput? = unwrap(this).getRequestBody()?.let(TaskInput::wrap)
+
+    /**
+     * JSONPath expression to indicate where to inject the state's output.
+     *
+     * May also be the special value JsonPath.DISCARD, which will cause the state's
+     * input to become its output.
+     *
+     * Default: $
+     */
+    override fun resultPath(): String? = unwrap(this).getResultPath()
+
+    /**
+     * The JSON that will replace the state's raw result and become the effective result before
+     * ResultPath is applied.
+     *
+     * You can use ResultSelector to create a payload with values that are static
+     * or selected from the state's raw result.
+     *
+     * Default: - None
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-inputpath-params.html#input-output-resultselector)
+     */
+    override fun resultSelector(): Map<String, Any> = unwrap(this).getResultSelector() ?: emptyMap()
+
+    /**
+     * Name of the stage where the API is deployed to in API Gateway.
+     *
+     * Default: '$default'
+     */
+    override fun stageName(): String? = unwrap(this).getStageName()
+
+    /**
+     * Optional name for this state.
+     *
+     * Default: - The construct ID will be used as state name
+     */
+    override fun stateName(): String? = unwrap(this).getStateName()
+
+    /**
+     * Timeout for the task.
+     *
+     * [disable-awslint:duration-prop-type] is needed because all props interface in
+     * aws-stepfunctions-tasks extend this interface
+     *
+     * Default: - None
+     */
+    override fun taskTimeout(): Timeout? = unwrap(this).getTaskTimeout()?.let(Timeout::wrap)
+
+    /**
+     * (deprecated) Timeout for the task.
+     *
+     * Default: - None
+     *
+     * @deprecated use `taskTimeout`
+     */
+    @Deprecated(message = "deprecated in CDK")
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+  }
+
+  public companion object {
+    public operator fun invoke(block: Builder.() -> Unit = {}):
+        CallApiGatewayHttpApiEndpointJsonPathProps {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
+    }
+
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpointJsonPathProps):
+        CallApiGatewayHttpApiEndpointJsonPathProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CallApiGatewayHttpApiEndpointJsonPathProps ?: Wrapper(cdkObject)
+
+    internal fun unwrap(wrapped: CallApiGatewayHttpApiEndpointJsonPathProps):
+        software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpointJsonPathProps
+        = (wrapped as CdkObject).cdkObject as
+        software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpointJsonPathProps
+  }
+}

@@ -10,6 +10,7 @@ import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 
 /**
  * Source information.
@@ -29,6 +30,9 @@ import kotlin.collections.Map
  * // the properties below are optional
  * .markers(Map.of(
  * "markersKey", markers))
+ * .markersConfig(MarkersConfig.builder()
+ * .jsonEscape(false)
+ * .build())
  * .build();
  * ```
  */
@@ -44,6 +48,14 @@ public interface SourceConfig {
    * Default: - no markers
    */
   public fun markers(): Map<String, Any> = unwrap(this).getMarkers() ?: emptyMap()
+
+  /**
+   * A configuration for markers substitution strategy.
+   *
+   * Default: - no configuration
+   */
+  public fun markersConfig(): MarkersConfig? =
+      unwrap(this).getMarkersConfig()?.let(MarkersConfig::wrap)
 
   /**
    * An S3 object key in the source bucket that points to a zip file.
@@ -64,6 +76,18 @@ public interface SourceConfig {
      * @param markers A set of markers to substitute in the source content.
      */
     public fun markers(markers: Map<String, Any>)
+
+    /**
+     * @param markersConfig A configuration for markers substitution strategy.
+     */
+    public fun markersConfig(markersConfig: MarkersConfig)
+
+    /**
+     * @param markersConfig A configuration for markers substitution strategy.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e6b8bd1863d7cfaae53da27b7a3174c58d92b5eb0d45e44f25cd0042f9217b4d")
+    public fun markersConfig(markersConfig: MarkersConfig.Builder.() -> Unit)
 
     /**
      * @param zipObjectKey An S3 object key in the source bucket that points to a zip file. 
@@ -88,6 +112,21 @@ public interface SourceConfig {
     override fun markers(markers: Map<String, Any>) {
       cdkBuilder.markers(markers.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
+
+    /**
+     * @param markersConfig A configuration for markers substitution strategy.
+     */
+    override fun markersConfig(markersConfig: MarkersConfig) {
+      cdkBuilder.markersConfig(markersConfig.let(MarkersConfig.Companion::unwrap))
+    }
+
+    /**
+     * @param markersConfig A configuration for markers substitution strategy.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e6b8bd1863d7cfaae53da27b7a3174c58d92b5eb0d45e44f25cd0042f9217b4d")
+    override fun markersConfig(markersConfig: MarkersConfig.Builder.() -> Unit): Unit =
+        markersConfig(MarkersConfig(markersConfig))
 
     /**
      * @param zipObjectKey An S3 object key in the source bucket that points to a zip file. 
@@ -115,6 +154,14 @@ public interface SourceConfig {
      * Default: - no markers
      */
     override fun markers(): Map<String, Any> = unwrap(this).getMarkers() ?: emptyMap()
+
+    /**
+     * A configuration for markers substitution strategy.
+     *
+     * Default: - no configuration
+     */
+    override fun markersConfig(): MarkersConfig? =
+        unwrap(this).getMarkersConfig()?.let(MarkersConfig::wrap)
 
     /**
      * An S3 object key in the source bucket that points to a zip file.

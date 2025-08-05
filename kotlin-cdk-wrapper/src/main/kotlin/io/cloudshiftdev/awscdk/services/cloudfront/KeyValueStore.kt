@@ -148,6 +148,9 @@ public open class KeyValueStore(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.cloudfront.KeyValueStore.PROPERTY_INJECTION_ID
+
     public fun fromKeyValueStoreArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

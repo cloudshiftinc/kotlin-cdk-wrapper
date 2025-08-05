@@ -84,15 +84,15 @@ public open class CfnIpAccessSettings(
   /**
    * Additional encryption context of the IP access settings.
    */
-  public open fun additionalEncryptionContext(`value`: IResolvable) {
-    unwrap(this).setAdditionalEncryptionContext(`value`.let(IResolvable.Companion::unwrap))
+  public open fun additionalEncryptionContext(`value`: Map<String, String>) {
+    unwrap(this).setAdditionalEncryptionContext(`value`)
   }
 
   /**
    * Additional encryption context of the IP access settings.
    */
-  public open fun additionalEncryptionContext(`value`: Map<String, String>) {
-    unwrap(this).setAdditionalEncryptionContext(`value`)
+  public open fun additionalEncryptionContext(`value`: IResolvable) {
+    unwrap(this).setAdditionalEncryptionContext(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -214,7 +214,7 @@ public open class CfnIpAccessSettings(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-ipaccesssettings.html#cfn-workspacesweb-ipaccesssettings-additionalencryptioncontext)
      * @param additionalEncryptionContext Additional encryption context of the IP access settings. 
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
+    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
     /**
      * Additional encryption context of the IP access settings.
@@ -222,7 +222,7 @@ public open class CfnIpAccessSettings(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-ipaccesssettings.html#cfn-workspacesweb-ipaccesssettings-additionalencryptioncontext)
      * @param additionalEncryptionContext Additional encryption context of the IP access settings. 
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
     /**
      * The custom managed key of the IP access settings.
@@ -309,8 +309,8 @@ public open class CfnIpAccessSettings(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-ipaccesssettings.html#cfn-workspacesweb-ipaccesssettings-additionalencryptioncontext)
      * @param additionalEncryptionContext Additional encryption context of the IP access settings. 
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
+    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
     }
 
     /**
@@ -319,8 +319,8 @@ public open class CfnIpAccessSettings(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-ipaccesssettings.html#cfn-workspacesweb-ipaccesssettings-additionalencryptioncontext)
      * @param additionalEncryptionContext Additional encryption context of the IP access settings. 
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
     }
 
     /**

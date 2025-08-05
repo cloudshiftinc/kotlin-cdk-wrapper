@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.codepipeline
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.IResource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -37,13 +38,16 @@ import kotlin.jvm.JvmName
  * .provider("provider")
  * // the properties below are optional
  * .account("account")
+ * .commands(List.of("commands"))
  * .inputs(List.of(artifact))
  * .outputs(List.of(artifact))
+ * .outputVariables(List.of("outputVariables"))
  * .owner("owner")
  * .region("region")
  * .resource(resource)
  * .role(role)
  * .runOrder(123)
+ * .timeout(Duration.minutes(30))
  * .variablesNamespace("variablesNamespace")
  * .version("version")
  * .build();
@@ -81,9 +85,23 @@ public interface ActionProperties {
   public fun category(): ActionCategory
 
   /**
+   * Shell commands for the Commands action to run.
+   *
+   * Default: - no commands
+   */
+  public fun commands(): List<String> = unwrap(this).getCommands() ?: emptyList()
+
+  /**
    *
    */
   public fun inputs(): List<Artifact> = unwrap(this).getInputs()?.map(Artifact::wrap) ?: emptyList()
+
+  /**
+   * The names of the variables in your environment that you want to export.
+   *
+   * Default: - no output variables
+   */
+  public fun outputVariables(): List<String> = unwrap(this).getOutputVariables() ?: emptyList()
 
   /**
    *
@@ -134,6 +152,20 @@ public interface ActionProperties {
    * https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
    */
   public fun runOrder(): Number? = unwrap(this).getRunOrder()
+
+  /**
+   * A timeout duration that can be applied against the ActionType’s default timeout value specified
+   * in Quotas for AWS CodePipeline.
+   *
+   * This attribute is available only to the `ManualApprovalAction`.
+   *
+   * It is configurable up to 86400 minutes (60 days) with a minimum value of 5 minutes.
+   *
+   * Default: - default timeout value defined by each ActionType
+   *
+   * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html)
+   */
+  public fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
   /**
    * The name of the namespace to use for variables emitted by this action.
@@ -188,6 +220,16 @@ public interface ActionProperties {
     public fun category(category: ActionCategory)
 
     /**
+     * @param commands Shell commands for the Commands action to run.
+     */
+    public fun commands(commands: List<String>)
+
+    /**
+     * @param commands Shell commands for the Commands action to run.
+     */
+    public fun commands(vararg commands: String)
+
+    /**
      * @param inputs the value to be set.
      */
     public fun inputs(inputs: List<Artifact>)
@@ -196,6 +238,18 @@ public interface ActionProperties {
      * @param inputs the value to be set.
      */
     public fun inputs(vararg inputs: Artifact)
+
+    /**
+     * @param outputVariables The names of the variables in your environment that you want to
+     * export.
+     */
+    public fun outputVariables(outputVariables: List<String>)
+
+    /**
+     * @param outputVariables The names of the variables in your environment that you want to
+     * export.
+     */
+    public fun outputVariables(vararg outputVariables: String)
 
     /**
      * @param outputs the value to be set.
@@ -245,6 +299,15 @@ public interface ActionProperties {
      * https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
      */
     public fun runOrder(runOrder: Number)
+
+    /**
+     * @param timeout A timeout duration that can be applied against the ActionType’s default
+     * timeout value specified in Quotas for AWS CodePipeline.
+     * This attribute is available only to the `ManualApprovalAction`.
+     *
+     * It is configurable up to 86400 minutes (60 days) with a minimum value of 5 minutes.
+     */
+    public fun timeout(timeout: Duration)
 
     /**
      * @param variablesNamespace The name of the namespace to use for variables emitted by this
@@ -307,6 +370,18 @@ public interface ActionProperties {
     }
 
     /**
+     * @param commands Shell commands for the Commands action to run.
+     */
+    override fun commands(commands: List<String>) {
+      cdkBuilder.commands(commands)
+    }
+
+    /**
+     * @param commands Shell commands for the Commands action to run.
+     */
+    override fun commands(vararg commands: String): Unit = commands(commands.toList())
+
+    /**
      * @param inputs the value to be set.
      */
     override fun inputs(inputs: List<Artifact>) {
@@ -317,6 +392,21 @@ public interface ActionProperties {
      * @param inputs the value to be set.
      */
     override fun inputs(vararg inputs: Artifact): Unit = inputs(inputs.toList())
+
+    /**
+     * @param outputVariables The names of the variables in your environment that you want to
+     * export.
+     */
+    override fun outputVariables(outputVariables: List<String>) {
+      cdkBuilder.outputVariables(outputVariables)
+    }
+
+    /**
+     * @param outputVariables The names of the variables in your environment that you want to
+     * export.
+     */
+    override fun outputVariables(vararg outputVariables: String): Unit =
+        outputVariables(outputVariables.toList())
 
     /**
      * @param outputs the value to be set.
@@ -382,6 +472,17 @@ public interface ActionProperties {
     }
 
     /**
+     * @param timeout A timeout duration that can be applied against the ActionType’s default
+     * timeout value specified in Quotas for AWS CodePipeline.
+     * This attribute is available only to the `ManualApprovalAction`.
+     *
+     * It is configurable up to 86400 minutes (60 days) with a minimum value of 5 minutes.
+     */
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
+    }
+
+    /**
      * @param variablesNamespace The name of the namespace to use for variables emitted by this
      * action.
      */
@@ -436,10 +537,24 @@ public interface ActionProperties {
     override fun category(): ActionCategory = unwrap(this).getCategory().let(ActionCategory::wrap)
 
     /**
+     * Shell commands for the Commands action to run.
+     *
+     * Default: - no commands
+     */
+    override fun commands(): List<String> = unwrap(this).getCommands() ?: emptyList()
+
+    /**
      *
      */
     override fun inputs(): List<Artifact> = unwrap(this).getInputs()?.map(Artifact::wrap) ?:
         emptyList()
+
+    /**
+     * The names of the variables in your environment that you want to export.
+     *
+     * Default: - no output variables
+     */
+    override fun outputVariables(): List<String> = unwrap(this).getOutputVariables() ?: emptyList()
 
     /**
      *
@@ -490,6 +605,20 @@ public interface ActionProperties {
      * https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
      */
     override fun runOrder(): Number? = unwrap(this).getRunOrder()
+
+    /**
+     * A timeout duration that can be applied against the ActionType’s default timeout value
+     * specified in Quotas for AWS CodePipeline.
+     *
+     * This attribute is available only to the `ManualApprovalAction`.
+     *
+     * It is configurable up to 86400 minutes (60 days) with a minimum value of 5 minutes.
+     *
+     * Default: - default timeout value defined by each ActionType
+     *
+     * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html)
+     */
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
     /**
      * The name of the namespace to use for variables emitted by this action.

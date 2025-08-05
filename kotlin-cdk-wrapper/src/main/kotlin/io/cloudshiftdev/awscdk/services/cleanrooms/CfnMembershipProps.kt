@@ -26,6 +26,16 @@ import kotlin.jvm.JvmName
  * .collaborationIdentifier("collaborationIdentifier")
  * .queryLogStatus("queryLogStatus")
  * // the properties below are optional
+ * .defaultJobResultConfiguration(MembershipProtectedJobResultConfigurationProperty.builder()
+ * .outputConfiguration(MembershipProtectedJobOutputConfigurationProperty.builder()
+ * .s3(ProtectedJobS3OutputConfigurationInputProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .keyPrefix("keyPrefix")
+ * .build())
+ * .build())
+ * .roleArn("roleArn")
+ * .build())
  * .defaultResultConfiguration(MembershipProtectedQueryResultConfigurationProperty.builder()
  * .outputConfiguration(MembershipProtectedQueryOutputConfigurationProperty.builder()
  * .s3(ProtectedQueryS3OutputConfigurationProperty.builder()
@@ -39,9 +49,22 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .roleArn("roleArn")
  * .build())
+ * .jobLogStatus("jobLogStatus")
  * .paymentConfiguration(MembershipPaymentConfigurationProperty.builder()
  * .queryCompute(MembershipQueryComputePaymentConfigProperty.builder()
  * .isResponsible(false)
+ * .build())
+ * // the properties below are optional
+ * .jobCompute(MembershipJobComputePaymentConfigProperty.builder()
+ * .isResponsible(false)
+ * .build())
+ * .machineLearning(MembershipMLPaymentConfigProperty.builder()
+ * .modelInference(MembershipModelInferencePaymentConfigProperty.builder()
+ * .isResponsible(false)
+ * .build())
+ * .modelTraining(MembershipModelTrainingPaymentConfigProperty.builder()
+ * .isResponsible(false)
+ * .build())
  * .build())
  * .build())
  * .tags(List.of(CfnTag.builder()
@@ -62,12 +85,29 @@ public interface CfnMembershipProps {
   public fun collaborationIdentifier(): String
 
   /**
+   * The default job result configuration for the membership.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-defaultjobresultconfiguration)
+   */
+  public fun defaultJobResultConfiguration(): Any? = unwrap(this).getDefaultJobResultConfiguration()
+
+  /**
    * The default protected query result configuration as specified by the member who can receive
    * results.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-defaultresultconfiguration)
    */
   public fun defaultResultConfiguration(): Any? = unwrap(this).getDefaultResultConfiguration()
+
+  /**
+   * An indicator as to whether job logging has been enabled or disabled for the collaboration.
+   *
+   * When `ENABLED` , AWS Clean Rooms logs details about jobs run within this collaboration and
+   * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-joblogstatus)
+   */
+  public fun jobLogStatus(): String? = unwrap(this).getJobLogStatus()
 
   /**
    * The payment responsibilities accepted by the collaboration member.
@@ -78,6 +118,9 @@ public interface CfnMembershipProps {
 
   /**
    * An indicator as to whether query logging has been enabled or disabled for the membership.
+   *
+   * When `ENABLED` , AWS Clean Rooms logs details about queries run within this collaboration and
+   * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-querylogstatus)
    */
@@ -105,6 +148,25 @@ public interface CfnMembershipProps {
     public fun collaborationIdentifier(collaborationIdentifier: String)
 
     /**
+     * @param defaultJobResultConfiguration The default job result configuration for the membership.
+     */
+    public fun defaultJobResultConfiguration(defaultJobResultConfiguration: IResolvable)
+
+    /**
+     * @param defaultJobResultConfiguration The default job result configuration for the membership.
+     */
+    public
+        fun defaultJobResultConfiguration(defaultJobResultConfiguration: CfnMembership.MembershipProtectedJobResultConfigurationProperty)
+
+    /**
+     * @param defaultJobResultConfiguration The default job result configuration for the membership.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d0a9553e85b63ca6b7ad28226822eafd634229a01e596da7bb30ab3873eafaea")
+    public
+        fun defaultJobResultConfiguration(defaultJobResultConfiguration: CfnMembership.MembershipProtectedJobResultConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * @param defaultResultConfiguration The default protected query result configuration as
      * specified by the member who can receive results.
      */
@@ -125,6 +187,14 @@ public interface CfnMembershipProps {
     @JvmName("012db4d184f0a697c1ea154824cad0a173b6cb0e21adb37afcb6d7d25a436166")
     public
         fun defaultResultConfiguration(defaultResultConfiguration: CfnMembership.MembershipProtectedQueryResultConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * @param jobLogStatus An indicator as to whether job logging has been enabled or disabled for
+     * the collaboration.
+     * When `ENABLED` , AWS Clean Rooms logs details about jobs run within this collaboration and
+     * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
+     */
+    public fun jobLogStatus(jobLogStatus: String)
 
     /**
      * @param paymentConfiguration The payment responsibilities accepted by the collaboration
@@ -151,6 +221,8 @@ public interface CfnMembershipProps {
     /**
      * @param queryLogStatus An indicator as to whether query logging has been enabled or disabled
      * for the membership. 
+     * When `ENABLED` , AWS Clean Rooms logs details about queries run within this collaboration and
+     * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
      */
     public fun queryLogStatus(queryLogStatus: String)
 
@@ -183,6 +255,31 @@ public interface CfnMembershipProps {
     }
 
     /**
+     * @param defaultJobResultConfiguration The default job result configuration for the membership.
+     */
+    override fun defaultJobResultConfiguration(defaultJobResultConfiguration: IResolvable) {
+      cdkBuilder.defaultJobResultConfiguration(defaultJobResultConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param defaultJobResultConfiguration The default job result configuration for the membership.
+     */
+    override
+        fun defaultJobResultConfiguration(defaultJobResultConfiguration: CfnMembership.MembershipProtectedJobResultConfigurationProperty) {
+      cdkBuilder.defaultJobResultConfiguration(defaultJobResultConfiguration.let(CfnMembership.MembershipProtectedJobResultConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param defaultJobResultConfiguration The default job result configuration for the membership.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d0a9553e85b63ca6b7ad28226822eafd634229a01e596da7bb30ab3873eafaea")
+    override
+        fun defaultJobResultConfiguration(defaultJobResultConfiguration: CfnMembership.MembershipProtectedJobResultConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        defaultJobResultConfiguration(CfnMembership.MembershipProtectedJobResultConfigurationProperty(defaultJobResultConfiguration))
+
+    /**
      * @param defaultResultConfiguration The default protected query result configuration as
      * specified by the member who can receive results.
      */
@@ -209,6 +306,16 @@ public interface CfnMembershipProps {
         fun defaultResultConfiguration(defaultResultConfiguration: CfnMembership.MembershipProtectedQueryResultConfigurationProperty.Builder.() -> Unit):
         Unit =
         defaultResultConfiguration(CfnMembership.MembershipProtectedQueryResultConfigurationProperty(defaultResultConfiguration))
+
+    /**
+     * @param jobLogStatus An indicator as to whether job logging has been enabled or disabled for
+     * the collaboration.
+     * When `ENABLED` , AWS Clean Rooms logs details about jobs run within this collaboration and
+     * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
+     */
+    override fun jobLogStatus(jobLogStatus: String) {
+      cdkBuilder.jobLogStatus(jobLogStatus)
+    }
 
     /**
      * @param paymentConfiguration The payment responsibilities accepted by the collaboration
@@ -241,6 +348,8 @@ public interface CfnMembershipProps {
     /**
      * @param queryLogStatus An indicator as to whether query logging has been enabled or disabled
      * for the membership. 
+     * When `ENABLED` , AWS Clean Rooms logs details about queries run within this collaboration and
+     * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
      */
     override fun queryLogStatus(queryLogStatus: String) {
       cdkBuilder.queryLogStatus(queryLogStatus)
@@ -280,12 +389,30 @@ public interface CfnMembershipProps {
     override fun collaborationIdentifier(): String = unwrap(this).getCollaborationIdentifier()
 
     /**
+     * The default job result configuration for the membership.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-defaultjobresultconfiguration)
+     */
+    override fun defaultJobResultConfiguration(): Any? =
+        unwrap(this).getDefaultJobResultConfiguration()
+
+    /**
      * The default protected query result configuration as specified by the member who can receive
      * results.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-defaultresultconfiguration)
      */
     override fun defaultResultConfiguration(): Any? = unwrap(this).getDefaultResultConfiguration()
+
+    /**
+     * An indicator as to whether job logging has been enabled or disabled for the collaboration.
+     *
+     * When `ENABLED` , AWS Clean Rooms logs details about jobs run within this collaboration and
+     * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-joblogstatus)
+     */
+    override fun jobLogStatus(): String? = unwrap(this).getJobLogStatus()
 
     /**
      * The payment responsibilities accepted by the collaboration member.
@@ -296,6 +423,9 @@ public interface CfnMembershipProps {
 
     /**
      * An indicator as to whether query logging has been enabled or disabled for the membership.
+     *
+     * When `ENABLED` , AWS Clean Rooms logs details about queries run within this collaboration and
+     * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-querylogstatus)
      */

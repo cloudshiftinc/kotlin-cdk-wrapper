@@ -43,6 +43,9 @@ import kotlin.jvm.JvmName
  * .expression("expression")
  * // the properties below are optional
  * .durationInSeconds("durationInSeconds")
+ * .retryConfig(RetryConfigProperty.builder()
+ * .maxRetries(123)
+ * .build())
  * .build())
  * // the properties below are optional
  * .artifactConfig(ArtifactConfigProperty.builder()
@@ -52,6 +55,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .build())
  * .deleteLambdaResourcesOnCanaryDeletion(false)
+ * .dryRunAndUpdate(false)
  * .failureRetentionPeriod(123)
  * .provisionedResourceCleanup("provisionedResourceCleanup")
  * .resourcesToReplicateTags(List.of("resourcesToReplicateTags"))
@@ -59,6 +63,7 @@ import kotlin.jvm.JvmName
  * .activeTracing(false)
  * .environmentVariables(Map.of(
  * "environmentVariablesKey", "environmentVariables"))
+ * .ephemeralStorage(123)
  * .memoryInMb(123)
  * .timeoutInSeconds(123)
  * .build())
@@ -81,6 +86,7 @@ import kotlin.jvm.JvmName
  * .securityGroupIds(List.of("securityGroupIds"))
  * .subnetIds(List.of("subnetIds"))
  * // the properties below are optional
+ * .ipv6AllowedForDualStack(false)
  * .vpcId("vpcId")
  * .build())
  * .build();
@@ -132,6 +138,24 @@ public interface CfnCanaryProps {
       unwrap(this).getDeleteLambdaResourcesOnCanaryDeletion()
 
   /**
+   * Specifies whether to perform a dry run before updating the canary.
+   *
+   * If set to `true` , CloudFormation will execute a dry run to validate the changes before
+   * applying them to the canary. If the dry run succeeds, the canary will be updated with the changes.
+   * If the dry run fails, the CloudFormation deployment will fail with the dry run’s failure reason.
+   *
+   * If set to `false` or omitted, the canary will be updated directly without first performing a
+   * dry run. The default value is `false` .
+   *
+   * For more information, see [Performing safe canary
+   * updates](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/performing-safe-canary-upgrades.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-dryrunandupdate)
+   */
+  public fun dryRunAndUpdate(): Any? = unwrap(this).getDryRunAndUpdate()
+
+  /**
    * The ARN of the IAM role to be used to run the canary.
    *
    * This role must already exist, and must include `lambda.amazonaws.com` as a principal in the
@@ -153,6 +177,10 @@ public interface CfnCanaryProps {
    * The number of days to retain data about failed runs of this canary.
    *
    * If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
+   *
+   * This setting affects the range of information returned by
+   * [GetCanaryRuns](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_GetCanaryRuns.html)
+   * , as well as the range of information displayed in the Synthetics console.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-failureretentionperiod)
    */
@@ -245,6 +273,10 @@ public interface CfnCanaryProps {
    * The number of days to retain data about successful runs of this canary.
    *
    * If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
+   *
+   * This setting affects the range of information returned by
+   * [GetCanaryRuns](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_GetCanaryRuns.html)
+   * , as well as the range of information displayed in the Synthetics console.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-successretentionperiod)
    */
@@ -360,6 +392,38 @@ public interface CfnCanaryProps {
         fun deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion: IResolvable)
 
     /**
+     * @param dryRunAndUpdate Specifies whether to perform a dry run before updating the canary.
+     * If set to `true` , CloudFormation will execute a dry run to validate the changes before
+     * applying them to the canary. If the dry run succeeds, the canary will be updated with the
+     * changes. If the dry run fails, the CloudFormation deployment will fail with the dry run’s
+     * failure reason.
+     *
+     * If set to `false` or omitted, the canary will be updated directly without first performing a
+     * dry run. The default value is `false` .
+     *
+     * For more information, see [Performing safe canary
+     * updates](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/performing-safe-canary-upgrades.html)
+     * .
+     */
+    public fun dryRunAndUpdate(dryRunAndUpdate: Boolean)
+
+    /**
+     * @param dryRunAndUpdate Specifies whether to perform a dry run before updating the canary.
+     * If set to `true` , CloudFormation will execute a dry run to validate the changes before
+     * applying them to the canary. If the dry run succeeds, the canary will be updated with the
+     * changes. If the dry run fails, the CloudFormation deployment will fail with the dry run’s
+     * failure reason.
+     *
+     * If set to `false` or omitted, the canary will be updated directly without first performing a
+     * dry run. The default value is `false` .
+     *
+     * For more information, see [Performing safe canary
+     * updates](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/performing-safe-canary-upgrades.html)
+     * .
+     */
+    public fun dryRunAndUpdate(dryRunAndUpdate: IResolvable)
+
+    /**
      * @param executionRoleArn The ARN of the IAM role to be used to run the canary. 
      * This role must already exist, and must include `lambda.amazonaws.com` as a principal in the
      * trust policy. The role must also have the following permissions:
@@ -378,6 +442,10 @@ public interface CfnCanaryProps {
      * @param failureRetentionPeriod The number of days to retain data about failed runs of this
      * canary.
      * If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
+     *
+     * This setting affects the range of information returned by
+     * [GetCanaryRuns](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_GetCanaryRuns.html)
+     * , as well as the range of information displayed in the Synthetics console.
      */
     public fun failureRetentionPeriod(failureRetentionPeriod: Number)
 
@@ -498,6 +566,10 @@ public interface CfnCanaryProps {
      * @param successRetentionPeriod The number of days to retain data about successful runs of this
      * canary.
      * If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
+     *
+     * This setting affects the range of information returned by
+     * [GetCanaryRuns](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_GetCanaryRuns.html)
+     * , as well as the range of information displayed in the Synthetics console.
      */
     public fun successRetentionPeriod(successRetentionPeriod: Number)
 
@@ -664,6 +736,42 @@ public interface CfnCanaryProps {
     }
 
     /**
+     * @param dryRunAndUpdate Specifies whether to perform a dry run before updating the canary.
+     * If set to `true` , CloudFormation will execute a dry run to validate the changes before
+     * applying them to the canary. If the dry run succeeds, the canary will be updated with the
+     * changes. If the dry run fails, the CloudFormation deployment will fail with the dry run’s
+     * failure reason.
+     *
+     * If set to `false` or omitted, the canary will be updated directly without first performing a
+     * dry run. The default value is `false` .
+     *
+     * For more information, see [Performing safe canary
+     * updates](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/performing-safe-canary-upgrades.html)
+     * .
+     */
+    override fun dryRunAndUpdate(dryRunAndUpdate: Boolean) {
+      cdkBuilder.dryRunAndUpdate(dryRunAndUpdate)
+    }
+
+    /**
+     * @param dryRunAndUpdate Specifies whether to perform a dry run before updating the canary.
+     * If set to `true` , CloudFormation will execute a dry run to validate the changes before
+     * applying them to the canary. If the dry run succeeds, the canary will be updated with the
+     * changes. If the dry run fails, the CloudFormation deployment will fail with the dry run’s
+     * failure reason.
+     *
+     * If set to `false` or omitted, the canary will be updated directly without first performing a
+     * dry run. The default value is `false` .
+     *
+     * For more information, see [Performing safe canary
+     * updates](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/performing-safe-canary-upgrades.html)
+     * .
+     */
+    override fun dryRunAndUpdate(dryRunAndUpdate: IResolvable) {
+      cdkBuilder.dryRunAndUpdate(dryRunAndUpdate.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
      * @param executionRoleArn The ARN of the IAM role to be used to run the canary. 
      * This role must already exist, and must include `lambda.amazonaws.com` as a principal in the
      * trust policy. The role must also have the following permissions:
@@ -684,6 +792,10 @@ public interface CfnCanaryProps {
      * @param failureRetentionPeriod The number of days to retain data about failed runs of this
      * canary.
      * If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
+     *
+     * This setting affects the range of information returned by
+     * [GetCanaryRuns](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_GetCanaryRuns.html)
+     * , as well as the range of information displayed in the Synthetics console.
      */
     override fun failureRetentionPeriod(failureRetentionPeriod: Number) {
       cdkBuilder.failureRetentionPeriod(failureRetentionPeriod)
@@ -829,6 +941,10 @@ public interface CfnCanaryProps {
      * @param successRetentionPeriod The number of days to retain data about successful runs of this
      * canary.
      * If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
+     *
+     * This setting affects the range of information returned by
+     * [GetCanaryRuns](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_GetCanaryRuns.html)
+     * , as well as the range of information displayed in the Synthetics console.
      */
     override fun successRetentionPeriod(successRetentionPeriod: Number) {
       cdkBuilder.successRetentionPeriod(successRetentionPeriod)
@@ -960,6 +1076,25 @@ public interface CfnCanaryProps {
         unwrap(this).getDeleteLambdaResourcesOnCanaryDeletion()
 
     /**
+     * Specifies whether to perform a dry run before updating the canary.
+     *
+     * If set to `true` , CloudFormation will execute a dry run to validate the changes before
+     * applying them to the canary. If the dry run succeeds, the canary will be updated with the
+     * changes. If the dry run fails, the CloudFormation deployment will fail with the dry run’s
+     * failure reason.
+     *
+     * If set to `false` or omitted, the canary will be updated directly without first performing a
+     * dry run. The default value is `false` .
+     *
+     * For more information, see [Performing safe canary
+     * updates](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/performing-safe-canary-upgrades.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-dryrunandupdate)
+     */
+    override fun dryRunAndUpdate(): Any? = unwrap(this).getDryRunAndUpdate()
+
+    /**
      * The ARN of the IAM role to be used to run the canary.
      *
      * This role must already exist, and must include `lambda.amazonaws.com` as a principal in the
@@ -981,6 +1116,10 @@ public interface CfnCanaryProps {
      * The number of days to retain data about failed runs of this canary.
      *
      * If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
+     *
+     * This setting affects the range of information returned by
+     * [GetCanaryRuns](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_GetCanaryRuns.html)
+     * , as well as the range of information displayed in the Synthetics console.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-failureretentionperiod)
      */
@@ -1075,6 +1214,10 @@ public interface CfnCanaryProps {
      * The number of days to retain data about successful runs of this canary.
      *
      * If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
+     *
+     * This setting affects the range of information returned by
+     * [GetCanaryRuns](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_GetCanaryRuns.html)
+     * , as well as the range of information displayed in the Synthetics console.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-successretentionperiod)
      */

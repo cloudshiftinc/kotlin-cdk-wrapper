@@ -75,6 +75,25 @@ public interface AddBehaviorOptions {
       ?: emptyList()
 
   /**
+   * Enables your CloudFront distribution to receive gRPC requests and to proxy them directly to
+   * your origins.
+   *
+   * If the `enableGrpc` is set to true, the following restrictions apply:
+   *
+   * * The `allowedMethods` property must be `AllowedMethods.ALLOW_ALL` to include POST method
+   * because gRPC only supports POST method.
+   * * The `httpVersion` property must be `HttpVersion.HTTP2` or `HttpVersion.HTTP2_AND_3` because
+   * gRPC only supports versions including HTTP/2.
+   * * The `edgeLambdas` property can't be specified because gRPC is not supported with
+   * Lambda&#64;Edge.
+   *
+   * Default: false
+   *
+   * [Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-using-grpc.html)
+   */
+  public fun enableGrpc(): Boolean? = unwrap(this).getEnableGrpc()
+
+  /**
    * The CloudFront functions to invoke before serving the contents.
    *
    * Default: - no functions will be invoked
@@ -177,6 +196,20 @@ public interface AddBehaviorOptions {
      * @param edgeLambdas The Lambda&#64;Edge functions to invoke before serving the contents.
      */
     public fun edgeLambdas(vararg edgeLambdas: EdgeLambda)
+
+    /**
+     * @param enableGrpc Enables your CloudFront distribution to receive gRPC requests and to proxy
+     * them directly to your origins.
+     * If the `enableGrpc` is set to true, the following restrictions apply:
+     *
+     * * The `allowedMethods` property must be `AllowedMethods.ALLOW_ALL` to include POST method
+     * because gRPC only supports POST method.
+     * * The `httpVersion` property must be `HttpVersion.HTTP2` or `HttpVersion.HTTP2_AND_3` because
+     * gRPC only supports versions including HTTP/2.
+     * * The `edgeLambdas` property can't be specified because gRPC is not supported with
+     * Lambda&#64;Edge.
+     */
+    public fun enableGrpc(enableGrpc: Boolean)
 
     /**
      * @param functionAssociations The CloudFront functions to invoke before serving the contents.
@@ -282,6 +315,22 @@ public interface AddBehaviorOptions {
      */
     override fun edgeLambdas(vararg edgeLambdas: EdgeLambda): Unit =
         edgeLambdas(edgeLambdas.toList())
+
+    /**
+     * @param enableGrpc Enables your CloudFront distribution to receive gRPC requests and to proxy
+     * them directly to your origins.
+     * If the `enableGrpc` is set to true, the following restrictions apply:
+     *
+     * * The `allowedMethods` property must be `AllowedMethods.ALLOW_ALL` to include POST method
+     * because gRPC only supports POST method.
+     * * The `httpVersion` property must be `HttpVersion.HTTP2` or `HttpVersion.HTTP2_AND_3` because
+     * gRPC only supports versions including HTTP/2.
+     * * The `edgeLambdas` property can't be specified because gRPC is not supported with
+     * Lambda&#64;Edge.
+     */
+    override fun enableGrpc(enableGrpc: Boolean) {
+      cdkBuilder.enableGrpc(enableGrpc)
+    }
 
     /**
      * @param functionAssociations The CloudFront functions to invoke before serving the contents.
@@ -409,6 +458,25 @@ public interface AddBehaviorOptions {
      */
     override fun edgeLambdas(): List<EdgeLambda> =
         unwrap(this).getEdgeLambdas()?.map(EdgeLambda::wrap) ?: emptyList()
+
+    /**
+     * Enables your CloudFront distribution to receive gRPC requests and to proxy them directly to
+     * your origins.
+     *
+     * If the `enableGrpc` is set to true, the following restrictions apply:
+     *
+     * * The `allowedMethods` property must be `AllowedMethods.ALLOW_ALL` to include POST method
+     * because gRPC only supports POST method.
+     * * The `httpVersion` property must be `HttpVersion.HTTP2` or `HttpVersion.HTTP2_AND_3` because
+     * gRPC only supports versions including HTTP/2.
+     * * The `edgeLambdas` property can't be specified because gRPC is not supported with
+     * Lambda&#64;Edge.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-using-grpc.html)
+     */
+    override fun enableGrpc(): Boolean? = unwrap(this).getEnableGrpc()
 
     /**
      * The CloudFront functions to invoke before serving the contents.

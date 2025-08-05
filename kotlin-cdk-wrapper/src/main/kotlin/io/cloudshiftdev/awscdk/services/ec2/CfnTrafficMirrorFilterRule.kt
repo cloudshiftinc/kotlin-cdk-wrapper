@@ -84,9 +84,10 @@ public open class CfnTrafficMirrorFilterRule(
   )
 
   /**
-   *
+   * The ID of the Traffic Mirror rule.
    */
-  public open fun attrId(): String = unwrap(this).getAttrId()
+  public open fun attrTrafficMirrorFilterRuleId(): String =
+      unwrap(this).getAttrTrafficMirrorFilterRuleId()
 
   /**
    * Tag Manager which manages the tags for this resource.

@@ -36,6 +36,7 @@ import kotlin.jvm.JvmName
  * .contactPrePassDurationSeconds(123)
  * .streamsKmsKey(StreamsKmsKeyProperty.builder()
  * .kmsAliasArn("kmsAliasArn")
+ * .kmsAliasName("kmsAliasName")
  * .kmsKeyArn("kmsKeyArn")
  * .build())
  * .streamsKmsRole("streamsKmsRole")

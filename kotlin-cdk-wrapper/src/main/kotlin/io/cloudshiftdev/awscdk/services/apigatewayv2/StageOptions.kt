@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Map
 import kotlin.jvm.JvmName
 
 /**
@@ -21,15 +22,20 @@ import kotlin.jvm.JvmName
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
+ * IAccessLogSettings accessLogSettings;
  * DomainName domainName;
  * StageOptions stageOptions = StageOptions.builder()
+ * .accessLogSettings(accessLogSettings)
  * .autoDeploy(false)
  * .description("description")
+ * .detailedMetricsEnabled(false)
  * .domainMapping(DomainMappingOptions.builder()
  * .domainName(domainName)
  * // the properties below are optional
  * .mappingKey("mappingKey")
  * .build())
+ * .stageVariables(Map.of(
+ * "stageVariablesKey", "stageVariables"))
  * .throttle(ThrottleSettings.builder()
  * .burstLimit(123)
  * .rateLimit(123)
@@ -38,6 +44,14 @@ import kotlin.jvm.JvmName
  * ```
  */
 public interface StageOptions {
+  /**
+   * Settings for access logging.
+   *
+   * Default: - No access logging
+   */
+  public fun accessLogSettings(): IAccessLogSettings? =
+      unwrap(this).getAccessLogSettings()?.let(IAccessLogSettings::wrap)
+
   /**
    * Whether updates to an API automatically trigger a new deployment.
    *
@@ -53,12 +67,31 @@ public interface StageOptions {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
+   * Specifies whether detailed metrics are enabled.
+   *
+   * Default: false
+   */
+  public fun detailedMetricsEnabled(): Boolean? = unwrap(this).getDetailedMetricsEnabled()
+
+  /**
    * The options for custom domain and api mapping.
    *
    * Default: - no custom domain and api mapping configuration
    */
   public fun domainMapping(): DomainMappingOptions? =
       unwrap(this).getDomainMapping()?.let(DomainMappingOptions::wrap)
+
+  /**
+   * Stage variables for the stage. These are key-value pairs that you can define and use in your
+   * API routes.
+   *
+   * The allowed characters for variable names and the required pattern for variable values are
+   * specified here:
+   * https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-apigateway-stage.html#cfn-apigateway-stage-variables
+   *
+   * Default: - No stage variables
+   */
+  public fun stageVariables(): Map<String, String> = unwrap(this).getStageVariables() ?: emptyMap()
 
   /**
    * Throttle settings for the routes of this stage.
@@ -73,6 +106,11 @@ public interface StageOptions {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param accessLogSettings Settings for access logging.
+     */
+    public fun accessLogSettings(accessLogSettings: IAccessLogSettings)
+
+    /**
      * @param autoDeploy Whether updates to an API automatically trigger a new deployment.
      */
     public fun autoDeploy(autoDeploy: Boolean)
@@ -81,6 +119,11 @@ public interface StageOptions {
      * @param description The description for the API stage.
      */
     public fun description(description: String)
+
+    /**
+     * @param detailedMetricsEnabled Specifies whether detailed metrics are enabled.
+     */
+    public fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean)
 
     /**
      * @param domainMapping The options for custom domain and api mapping.
@@ -93,6 +136,15 @@ public interface StageOptions {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ca35995823fd1e7d71d17e3e276cc2db56d83031c23094c4aa49cde7fa0393e0")
     public fun domainMapping(domainMapping: DomainMappingOptions.Builder.() -> Unit)
+
+    /**
+     * @param stageVariables Stage variables for the stage. These are key-value pairs that you can
+     * define and use in your API routes.
+     * The allowed characters for variable names and the required pattern for variable values are
+     * specified here:
+     * https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-apigateway-stage.html#cfn-apigateway-stage-variables
+     */
+    public fun stageVariables(stageVariables: Map<String, String>)
 
     /**
      * @param throttle Throttle settings for the routes of this stage.
@@ -112,6 +164,13 @@ public interface StageOptions {
         software.amazon.awscdk.services.apigatewayv2.StageOptions.builder()
 
     /**
+     * @param accessLogSettings Settings for access logging.
+     */
+    override fun accessLogSettings(accessLogSettings: IAccessLogSettings) {
+      cdkBuilder.accessLogSettings(accessLogSettings.let(IAccessLogSettings.Companion::unwrap))
+    }
+
+    /**
      * @param autoDeploy Whether updates to an API automatically trigger a new deployment.
      */
     override fun autoDeploy(autoDeploy: Boolean) {
@@ -123,6 +182,13 @@ public interface StageOptions {
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
+    }
+
+    /**
+     * @param detailedMetricsEnabled Specifies whether detailed metrics are enabled.
+     */
+    override fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean) {
+      cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled)
     }
 
     /**
@@ -139,6 +205,17 @@ public interface StageOptions {
     @JvmName("ca35995823fd1e7d71d17e3e276cc2db56d83031c23094c4aa49cde7fa0393e0")
     override fun domainMapping(domainMapping: DomainMappingOptions.Builder.() -> Unit): Unit =
         domainMapping(DomainMappingOptions(domainMapping))
+
+    /**
+     * @param stageVariables Stage variables for the stage. These are key-value pairs that you can
+     * define and use in your API routes.
+     * The allowed characters for variable names and the required pattern for variable values are
+     * specified here:
+     * https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-apigateway-stage.html#cfn-apigateway-stage-variables
+     */
+    override fun stageVariables(stageVariables: Map<String, String>) {
+      cdkBuilder.stageVariables(stageVariables)
+    }
 
     /**
      * @param throttle Throttle settings for the routes of this stage.
@@ -164,6 +241,14 @@ public interface StageOptions {
   ) : CdkObject(cdkObject),
       StageOptions {
     /**
+     * Settings for access logging.
+     *
+     * Default: - No access logging
+     */
+    override fun accessLogSettings(): IAccessLogSettings? =
+        unwrap(this).getAccessLogSettings()?.let(IAccessLogSettings::wrap)
+
+    /**
      * Whether updates to an API automatically trigger a new deployment.
      *
      * Default: false
@@ -178,12 +263,32 @@ public interface StageOptions {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
+     * Specifies whether detailed metrics are enabled.
+     *
+     * Default: false
+     */
+    override fun detailedMetricsEnabled(): Boolean? = unwrap(this).getDetailedMetricsEnabled()
+
+    /**
      * The options for custom domain and api mapping.
      *
      * Default: - no custom domain and api mapping configuration
      */
     override fun domainMapping(): DomainMappingOptions? =
         unwrap(this).getDomainMapping()?.let(DomainMappingOptions::wrap)
+
+    /**
+     * Stage variables for the stage. These are key-value pairs that you can define and use in your
+     * API routes.
+     *
+     * The allowed characters for variable names and the required pattern for variable values are
+     * specified here:
+     * https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-apigateway-stage.html#cfn-apigateway-stage-variables
+     *
+     * Default: - No stage variables
+     */
+    override fun stageVariables(): Map<String, String> = unwrap(this).getStageVariables() ?:
+        emptyMap()
 
     /**
      * Throttle settings for the routes of this stage.

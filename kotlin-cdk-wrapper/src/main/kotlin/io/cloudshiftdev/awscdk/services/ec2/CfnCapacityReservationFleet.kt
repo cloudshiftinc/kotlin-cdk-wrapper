@@ -6,6 +6,8 @@ import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -65,7 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCapacityReservationFleet(
   cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet,
 ) : CfnResource(cdkObject),
-    IInspectable {
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -106,6 +109,12 @@ public open class CfnCapacityReservationFleet(
    */
   public open fun attrCapacityReservationFleetId(): String =
       unwrap(this).getAttrCapacityReservationFleetId()
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * The date and time at which the Capacity Reservation Fleet expires.
@@ -209,26 +218,21 @@ public open class CfnCapacityReservationFleet(
   /**
    * The tags to assign to the Capacity Reservation Fleet.
    */
-  public open fun tagSpecifications(): Any? = unwrap(this).getTagSpecifications()
+  public open fun tagSpecifications(): List<TagSpecificationProperty> =
+      unwrap(this).getTagSpecifications()?.map(TagSpecificationProperty::wrap) ?: emptyList()
 
   /**
    * The tags to assign to the Capacity Reservation Fleet.
    */
-  public open fun tagSpecifications(`value`: IResolvable) {
-    unwrap(this).setTagSpecifications(`value`.let(IResolvable.Companion::unwrap))
+  public open fun tagSpecifications(`value`: List<TagSpecificationProperty>) {
+    unwrap(this).setTagSpecifications(`value`.map(TagSpecificationProperty.Companion::unwrap))
   }
 
   /**
    * The tags to assign to the Capacity Reservation Fleet.
    */
-  public open fun tagSpecifications(`value`: List<Any>) {
-    unwrap(this).setTagSpecifications(`value`.map{CdkObjectWrappers.unwrap(it)})
-  }
-
-  /**
-   * The tags to assign to the Capacity Reservation Fleet.
-   */
-  public open fun tagSpecifications(vararg `value`: Any): Unit = tagSpecifications(`value`.toList())
+  public open fun tagSpecifications(vararg `value`: TagSpecificationProperty): Unit =
+      tagSpecifications(`value`.toList())
 
   /**
    * Indicates the tenancy of the Capacity Reservation Fleet.
@@ -392,7 +396,7 @@ public open class CfnCapacityReservationFleet(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html#cfn-ec2-capacityreservationfleet-tagspecifications)
      * @param tagSpecifications The tags to assign to the Capacity Reservation Fleet. 
      */
-    public fun tagSpecifications(tagSpecifications: IResolvable)
+    public fun tagSpecifications(tagSpecifications: List<TagSpecificationProperty>)
 
     /**
      * The tags to assign to the Capacity Reservation Fleet.
@@ -402,17 +406,7 @@ public open class CfnCapacityReservationFleet(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html#cfn-ec2-capacityreservationfleet-tagspecifications)
      * @param tagSpecifications The tags to assign to the Capacity Reservation Fleet. 
      */
-    public fun tagSpecifications(tagSpecifications: List<Any>)
-
-    /**
-     * The tags to assign to the Capacity Reservation Fleet.
-     *
-     * The tags are automatically assigned to the Capacity Reservations in the Fleet.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html#cfn-ec2-capacityreservationfleet-tagspecifications)
-     * @param tagSpecifications The tags to assign to the Capacity Reservation Fleet. 
-     */
-    public fun tagSpecifications(vararg tagSpecifications: Any)
+    public fun tagSpecifications(vararg tagSpecifications: TagSpecificationProperty)
 
     /**
      * Indicates the tenancy of the Capacity Reservation Fleet.
@@ -606,8 +600,8 @@ public open class CfnCapacityReservationFleet(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html#cfn-ec2-capacityreservationfleet-tagspecifications)
      * @param tagSpecifications The tags to assign to the Capacity Reservation Fleet. 
      */
-    override fun tagSpecifications(tagSpecifications: IResolvable) {
-      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
+    override fun tagSpecifications(tagSpecifications: List<TagSpecificationProperty>) {
+      cdkBuilder.tagSpecifications(tagSpecifications.map(TagSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -618,19 +612,7 @@ public open class CfnCapacityReservationFleet(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html#cfn-ec2-capacityreservationfleet-tagspecifications)
      * @param tagSpecifications The tags to assign to the Capacity Reservation Fleet. 
      */
-    override fun tagSpecifications(tagSpecifications: List<Any>) {
-      cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
-    }
-
-    /**
-     * The tags to assign to the Capacity Reservation Fleet.
-     *
-     * The tags are automatically assigned to the Capacity Reservations in the Fleet.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html#cfn-ec2-capacityreservationfleet-tagspecifications)
-     * @param tagSpecifications The tags to assign to the Capacity Reservation Fleet. 
-     */
-    override fun tagSpecifications(vararg tagSpecifications: Any): Unit =
+    override fun tagSpecifications(vararg tagSpecifications: TagSpecificationProperty): Unit =
         tagSpecifications(tagSpecifications.toList())
 
     /**

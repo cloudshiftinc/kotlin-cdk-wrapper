@@ -25,6 +25,7 @@ import kotlin.collections.List
  * // the properties below are optional
  * .additionalAccounts(List.of("additionalAccounts"))
  * .filterInArns(List.of("filterInArns"))
+ * .filterOutArns(List.of("filterOutArns"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -49,6 +50,13 @@ public interface CfnNetworkInsightsAnalysisProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsanalysis.html#cfn-ec2-networkinsightsanalysis-filterinarns)
    */
   public fun filterInArns(): List<String> = unwrap(this).getFilterInArns() ?: emptyList()
+
+  /**
+   * The Amazon Resource Names (ARN) of the resources that the path must ignore.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsanalysis.html#cfn-ec2-networkinsightsanalysis-filteroutarns)
+   */
+  public fun filterOutArns(): List<String> = unwrap(this).getFilterOutArns() ?: emptyList()
 
   /**
    * The ID of the path.
@@ -92,6 +100,18 @@ public interface CfnNetworkInsightsAnalysisProps {
      * traverse.
      */
     public fun filterInArns(vararg filterInArns: String)
+
+    /**
+     * @param filterOutArns The Amazon Resource Names (ARN) of the resources that the path must
+     * ignore.
+     */
+    public fun filterOutArns(filterOutArns: List<String>)
+
+    /**
+     * @param filterOutArns The Amazon Resource Names (ARN) of the resources that the path must
+     * ignore.
+     */
+    public fun filterOutArns(vararg filterOutArns: String)
 
     /**
      * @param networkInsightsPathId The ID of the path. 
@@ -145,6 +165,21 @@ public interface CfnNetworkInsightsAnalysisProps {
         filterInArns(filterInArns.toList())
 
     /**
+     * @param filterOutArns The Amazon Resource Names (ARN) of the resources that the path must
+     * ignore.
+     */
+    override fun filterOutArns(filterOutArns: List<String>) {
+      cdkBuilder.filterOutArns(filterOutArns)
+    }
+
+    /**
+     * @param filterOutArns The Amazon Resource Names (ARN) of the resources that the path must
+     * ignore.
+     */
+    override fun filterOutArns(vararg filterOutArns: String): Unit =
+        filterOutArns(filterOutArns.toList())
+
+    /**
      * @param networkInsightsPathId The ID of the path. 
      */
     override fun networkInsightsPathId(networkInsightsPathId: String) {
@@ -185,6 +220,13 @@ public interface CfnNetworkInsightsAnalysisProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsanalysis.html#cfn-ec2-networkinsightsanalysis-filterinarns)
      */
     override fun filterInArns(): List<String> = unwrap(this).getFilterInArns() ?: emptyList()
+
+    /**
+     * The Amazon Resource Names (ARN) of the resources that the path must ignore.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsanalysis.html#cfn-ec2-networkinsightsanalysis-filteroutarns)
+     */
+    override fun filterOutArns(): List<String> = unwrap(this).getFilterOutArns() ?: emptyList()
 
     /**
      * The ID of the path.

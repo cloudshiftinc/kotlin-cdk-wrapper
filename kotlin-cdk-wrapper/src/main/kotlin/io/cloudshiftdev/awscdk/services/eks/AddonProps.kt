@@ -5,9 +5,11 @@ package io.cloudshiftdev.awscdk.services.eks
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Map
 
 /**
  * Properties for creating an Amazon EKS Add-On.
@@ -18,11 +20,13 @@ import kotlin.Unit
  * Cluster cluster;
  * Addon.Builder.create(this, "Addon")
  * .cluster(cluster)
- * .addonName("aws-guardduty-agent")
- * .addonVersion("v1.6.1")
+ * .addonName("coredns")
+ * .addonVersion("v1.11.4-eksbuild.2")
  * // whether to preserve the add-on software on your cluster but Amazon EKS stops managing any
  * settings for the add-on.
  * .preserveOnDelete(false)
+ * .configurationValues(Map.of(
+ * "replicaCount", 2))
  * .build();
  * ```
  */
@@ -35,7 +39,7 @@ public interface AddonProps {
   /**
    * Version of the Add-On.
    *
-   * You can check all available versions with describe-addon-versons.
+   * You can check all available versions with describe-addon-versions.
    * For example, this lists all available versions for the `eks-pod-identity-agent` addon:
    * $ aws eks describe-addon-versions --addon-name eks-pod-identity-agent \
    * --query 'addons[*].addonVersions[*].addonVersion'
@@ -48,6 +52,14 @@ public interface AddonProps {
    * The EKS cluster the Add-On is associated with.
    */
   public fun cluster(): ICluster
+
+  /**
+   * The configuration values for the Add-on.
+   *
+   * Default: - Use default configuration.
+   */
+  public fun configurationValues(): Map<String, Any> = unwrap(this).getConfigurationValues() ?:
+      emptyMap()
 
   /**
    * Specifying this option preserves the add-on software on your cluster but Amazon EKS stops
@@ -71,7 +83,7 @@ public interface AddonProps {
 
     /**
      * @param addonVersion Version of the Add-On.
-     * You can check all available versions with describe-addon-versons.
+     * You can check all available versions with describe-addon-versions.
      * For example, this lists all available versions for the `eks-pod-identity-agent` addon:
      * $ aws eks describe-addon-versions --addon-name eks-pod-identity-agent \
      * --query 'addons[*].addonVersions[*].addonVersion'
@@ -82,6 +94,11 @@ public interface AddonProps {
      * @param cluster The EKS cluster the Add-On is associated with. 
      */
     public fun cluster(cluster: ICluster)
+
+    /**
+     * @param configurationValues The configuration values for the Add-on.
+     */
+    public fun configurationValues(configurationValues: Map<String, Any>)
 
     /**
      * @param preserveOnDelete Specifying this option preserves the add-on software on your cluster
@@ -104,7 +121,7 @@ public interface AddonProps {
 
     /**
      * @param addonVersion Version of the Add-On.
-     * You can check all available versions with describe-addon-versons.
+     * You can check all available versions with describe-addon-versions.
      * For example, this lists all available versions for the `eks-pod-identity-agent` addon:
      * $ aws eks describe-addon-versions --addon-name eks-pod-identity-agent \
      * --query 'addons[*].addonVersions[*].addonVersion'
@@ -118,6 +135,13 @@ public interface AddonProps {
      */
     override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
+    }
+
+    /**
+     * @param configurationValues The configuration values for the Add-on.
+     */
+    override fun configurationValues(configurationValues: Map<String, Any>) {
+      cdkBuilder.configurationValues(configurationValues.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -144,7 +168,7 @@ public interface AddonProps {
     /**
      * Version of the Add-On.
      *
-     * You can check all available versions with describe-addon-versons.
+     * You can check all available versions with describe-addon-versions.
      * For example, this lists all available versions for the `eks-pod-identity-agent` addon:
      * $ aws eks describe-addon-versions --addon-name eks-pod-identity-agent \
      * --query 'addons[*].addonVersions[*].addonVersion'
@@ -157,6 +181,14 @@ public interface AddonProps {
      * The EKS cluster the Add-On is associated with.
      */
     override fun cluster(): ICluster = unwrap(this).getCluster().let(ICluster::wrap)
+
+    /**
+     * The configuration values for the Add-on.
+     *
+     * Default: - Use default configuration.
+     */
+    override fun configurationValues(): Map<String, Any> = unwrap(this).getConfigurationValues() ?:
+        emptyMap()
 
     /**
      * Specifying this option preserves the add-on software on your cluster but Amazon EKS stops

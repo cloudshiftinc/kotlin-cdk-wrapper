@@ -130,7 +130,7 @@ public interface StandardAttributes {
       unwrap(this).getPhoneNumber()?.let(StandardAttribute::wrap)
 
   /**
-   * The user's preffered username, different from the immutable user name.
+   * The user's preferred username, different from the immutable user name.
    *
    * Default: - see the defaults under `StandardAttribute`
    */
@@ -320,13 +320,13 @@ public interface StandardAttributes {
     public fun phoneNumber(phoneNumber: StandardAttribute.Builder.() -> Unit)
 
     /**
-     * @param preferredUsername The user's preffered username, different from the immutable user
+     * @param preferredUsername The user's preferred username, different from the immutable user
      * name.
      */
     public fun preferredUsername(preferredUsername: StandardAttribute)
 
     /**
-     * @param preferredUsername The user's preffered username, different from the immutable user
+     * @param preferredUsername The user's preferred username, different from the immutable user
      * name.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -569,7 +569,7 @@ public interface StandardAttributes {
         phoneNumber(StandardAttribute(phoneNumber))
 
     /**
-     * @param preferredUsername The user's preffered username, different from the immutable user
+     * @param preferredUsername The user's preferred username, different from the immutable user
      * name.
      */
     override fun preferredUsername(preferredUsername: StandardAttribute) {
@@ -577,7 +577,7 @@ public interface StandardAttributes {
     }
 
     /**
-     * @param preferredUsername The user's preffered username, different from the immutable user
+     * @param preferredUsername The user's preferred username, different from the immutable user
      * name.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -749,7 +749,7 @@ public interface StandardAttributes {
         unwrap(this).getPhoneNumber()?.let(StandardAttribute::wrap)
 
     /**
-     * The user's preffered username, different from the immutable user name.
+     * The user's preferred username, different from the immutable user name.
      *
      * Default: - see the defaults under `StandardAttribute`
      */

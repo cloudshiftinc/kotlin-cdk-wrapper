@@ -371,6 +371,16 @@ public enum class WindowsVersion(
   WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_STANDARD(software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_STANDARD),
   WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_STANDARD(software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_STANDARD),
   WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_ENTERPRISE(software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_ENTERPRISE),
+  WINDOWS_SERVER_2025_CHINESE_SIMPLIFIED_FULL_BASE(software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_CHINESE_SIMPLIFIED_FULL_BASE),
+  WINDOWS_SERVER_2025_CHINESE_TRADITIONAL_FULL_BASE(software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_CHINESE_TRADITIONAL_FULL_BASE),
+  WINDOWS_SERVER_2025_ENGLISH_CORE_BASE(software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_CORE_BASE),
+  WINDOWS_SERVER_2025_ENGLISH_FULL_BASE(software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_FULL_BASE),
+  WINDOWS_SERVER_2025_ENGLISH_FULL_SQL_2022_ENTERPRISE(software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_FULL_SQL_2022_ENTERPRISE),
+  WINDOWS_SERVER_2025_ENGLISH_FULL_SQL_2022_EXPRESS(software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_FULL_SQL_2022_EXPRESS),
+  WINDOWS_SERVER_2025_ENGLISH_FULL_SQL_2022_STANDARD(software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_FULL_SQL_2022_STANDARD),
+  WINDOWS_SERVER_2025_ENGLISH_FULL_SQL_2022_WEB(software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_FULL_SQL_2022_WEB),
+  WINDOWS_SERVER_2025_JAPANESE_FULL_BASE(software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_JAPANESE_FULL_BASE),
+  WINDOWS_SERVER_2025_KOREAN_FULL_BASE(software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_KOREAN_FULL_BASE),
   ;
 
   public companion object {
@@ -1108,6 +1118,26 @@ public enum class WindowsVersion(
           WindowsVersion.WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_STANDARD
       software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_ENTERPRISE ->
           WindowsVersion.WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_ENTERPRISE
+      software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_CHINESE_SIMPLIFIED_FULL_BASE ->
+          WindowsVersion.WINDOWS_SERVER_2025_CHINESE_SIMPLIFIED_FULL_BASE
+      software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_CHINESE_TRADITIONAL_FULL_BASE ->
+          WindowsVersion.WINDOWS_SERVER_2025_CHINESE_TRADITIONAL_FULL_BASE
+      software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_CORE_BASE ->
+          WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_CORE_BASE
+      software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_FULL_BASE ->
+          WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_FULL_BASE
+      software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_FULL_SQL_2022_ENTERPRISE ->
+          WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_FULL_SQL_2022_ENTERPRISE
+      software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_FULL_SQL_2022_EXPRESS ->
+          WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_FULL_SQL_2022_EXPRESS
+      software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_FULL_SQL_2022_STANDARD ->
+          WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_FULL_SQL_2022_STANDARD
+      software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_FULL_SQL_2022_WEB ->
+          WindowsVersion.WINDOWS_SERVER_2025_ENGLISH_FULL_SQL_2022_WEB
+      software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_JAPANESE_FULL_BASE ->
+          WindowsVersion.WINDOWS_SERVER_2025_JAPANESE_FULL_BASE
+      software.amazon.awscdk.services.ec2.WindowsVersion.WINDOWS_SERVER_2025_KOREAN_FULL_BASE ->
+          WindowsVersion.WINDOWS_SERVER_2025_KOREAN_FULL_BASE
     }
 
     internal fun unwrap(wrapped: WindowsVersion): software.amazon.awscdk.services.ec2.WindowsVersion

@@ -17,15 +17,16 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Bucket myBucket = new Bucket(this, "myBucket");
+ * import io.cloudshiftdev.awscdk.services.kms.*;
+ * Key myKmsKey = new Key(this, "myKMSKey");
+ * Bucket myBucket = Bucket.Builder.create(this, "mySSEKMSEncryptedBucket")
+ * .encryption(BucketEncryption.KMS)
+ * .encryptionKey(myKmsKey)
+ * .objectOwnership(ObjectOwnership.BUCKET_OWNER_ENFORCED)
+ * .build();
  * Distribution.Builder.create(this, "myDist")
  * .defaultBehavior(BehaviorOptions.builder()
- * .origin(OriginGroup.Builder.create()
- * .primaryOrigin(S3BucketOrigin.withOriginAccessControl(myBucket))
- * .fallbackOrigin(new HttpOrigin("www.example.com"))
- * // optional, defaults to: 500, 502, 503 and 504
- * .fallbackStatusCodes(List.of(404))
- * .build())
+ * .origin(S3BucketOrigin.withOriginAccessControl(myBucket))
  * .build())
  * .build();
  * ```

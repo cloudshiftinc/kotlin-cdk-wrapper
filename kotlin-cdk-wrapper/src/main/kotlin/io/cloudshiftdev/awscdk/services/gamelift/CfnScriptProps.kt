@@ -57,10 +57,10 @@ public interface CfnScriptProps {
    * stored.
    *
    * The storage location must specify the Amazon S3 bucket name, the zip file name (the "key"), and
-   * a role ARN that allows Amazon GameLift to access the Amazon S3 storage location. The S3 bucket
-   * must be in the same Region where you want to create a new script. By default, Amazon GameLift
-   * uploads the latest version of the zip file; if you have S3 object versioning turned on, you can
-   * use the `ObjectVersion` parameter to specify an earlier version.
+   * a role ARN that allows Amazon GameLift Servers to access the Amazon S3 storage location. The S3
+   * bucket must be in the same Region where you want to create a new script. By default, Amazon
+   * GameLift Servers uploads the latest version of the zip file; if you have S3 object versioning
+   * turned on, you can use the `ObjectVersion` parameter to specify an earlier version.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html#cfn-gamelift-script-storagelocation)
    */
@@ -104,10 +104,10 @@ public interface CfnScriptProps {
      * @param storageLocation The location of the Amazon S3 bucket where a zipped file containing
      * your Realtime scripts is stored. 
      * The storage location must specify the Amazon S3 bucket name, the zip file name (the "key"),
-     * and a role ARN that allows Amazon GameLift to access the Amazon S3 storage location. The S3
-     * bucket must be in the same Region where you want to create a new script. By default, Amazon
-     * GameLift uploads the latest version of the zip file; if you have S3 object versioning turned on,
-     * you can use the `ObjectVersion` parameter to specify an earlier version.
+     * and a role ARN that allows Amazon GameLift Servers to access the Amazon S3 storage location. The
+     * S3 bucket must be in the same Region where you want to create a new script. By default, Amazon
+     * GameLift Servers uploads the latest version of the zip file; if you have S3 object versioning
+     * turned on, you can use the `ObjectVersion` parameter to specify an earlier version.
      */
     public fun storageLocation(storageLocation: IResolvable)
 
@@ -115,10 +115,10 @@ public interface CfnScriptProps {
      * @param storageLocation The location of the Amazon S3 bucket where a zipped file containing
      * your Realtime scripts is stored. 
      * The storage location must specify the Amazon S3 bucket name, the zip file name (the "key"),
-     * and a role ARN that allows Amazon GameLift to access the Amazon S3 storage location. The S3
-     * bucket must be in the same Region where you want to create a new script. By default, Amazon
-     * GameLift uploads the latest version of the zip file; if you have S3 object versioning turned on,
-     * you can use the `ObjectVersion` parameter to specify an earlier version.
+     * and a role ARN that allows Amazon GameLift Servers to access the Amazon S3 storage location. The
+     * S3 bucket must be in the same Region where you want to create a new script. By default, Amazon
+     * GameLift Servers uploads the latest version of the zip file; if you have S3 object versioning
+     * turned on, you can use the `ObjectVersion` parameter to specify an earlier version.
      */
     public fun storageLocation(storageLocation: CfnScript.S3LocationProperty)
 
@@ -126,10 +126,10 @@ public interface CfnScriptProps {
      * @param storageLocation The location of the Amazon S3 bucket where a zipped file containing
      * your Realtime scripts is stored. 
      * The storage location must specify the Amazon S3 bucket name, the zip file name (the "key"),
-     * and a role ARN that allows Amazon GameLift to access the Amazon S3 storage location. The S3
-     * bucket must be in the same Region where you want to create a new script. By default, Amazon
-     * GameLift uploads the latest version of the zip file; if you have S3 object versioning turned on,
-     * you can use the `ObjectVersion` parameter to specify an earlier version.
+     * and a role ARN that allows Amazon GameLift Servers to access the Amazon S3 storage location. The
+     * S3 bucket must be in the same Region where you want to create a new script. By default, Amazon
+     * GameLift Servers uploads the latest version of the zip file; if you have S3 object versioning
+     * turned on, you can use the `ObjectVersion` parameter to specify an earlier version.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("715c4a858d3fad5f13e3d17193800e45a54d32471d0572a79dee0cffe9affb66")
@@ -180,10 +180,10 @@ public interface CfnScriptProps {
      * @param storageLocation The location of the Amazon S3 bucket where a zipped file containing
      * your Realtime scripts is stored. 
      * The storage location must specify the Amazon S3 bucket name, the zip file name (the "key"),
-     * and a role ARN that allows Amazon GameLift to access the Amazon S3 storage location. The S3
-     * bucket must be in the same Region where you want to create a new script. By default, Amazon
-     * GameLift uploads the latest version of the zip file; if you have S3 object versioning turned on,
-     * you can use the `ObjectVersion` parameter to specify an earlier version.
+     * and a role ARN that allows Amazon GameLift Servers to access the Amazon S3 storage location. The
+     * S3 bucket must be in the same Region where you want to create a new script. By default, Amazon
+     * GameLift Servers uploads the latest version of the zip file; if you have S3 object versioning
+     * turned on, you can use the `ObjectVersion` parameter to specify an earlier version.
      */
     override fun storageLocation(storageLocation: IResolvable) {
       cdkBuilder.storageLocation(storageLocation.let(IResolvable.Companion::unwrap))
@@ -193,10 +193,10 @@ public interface CfnScriptProps {
      * @param storageLocation The location of the Amazon S3 bucket where a zipped file containing
      * your Realtime scripts is stored. 
      * The storage location must specify the Amazon S3 bucket name, the zip file name (the "key"),
-     * and a role ARN that allows Amazon GameLift to access the Amazon S3 storage location. The S3
-     * bucket must be in the same Region where you want to create a new script. By default, Amazon
-     * GameLift uploads the latest version of the zip file; if you have S3 object versioning turned on,
-     * you can use the `ObjectVersion` parameter to specify an earlier version.
+     * and a role ARN that allows Amazon GameLift Servers to access the Amazon S3 storage location. The
+     * S3 bucket must be in the same Region where you want to create a new script. By default, Amazon
+     * GameLift Servers uploads the latest version of the zip file; if you have S3 object versioning
+     * turned on, you can use the `ObjectVersion` parameter to specify an earlier version.
      */
     override fun storageLocation(storageLocation: CfnScript.S3LocationProperty) {
       cdkBuilder.storageLocation(storageLocation.let(CfnScript.S3LocationProperty.Companion::unwrap))
@@ -206,10 +206,10 @@ public interface CfnScriptProps {
      * @param storageLocation The location of the Amazon S3 bucket where a zipped file containing
      * your Realtime scripts is stored. 
      * The storage location must specify the Amazon S3 bucket name, the zip file name (the "key"),
-     * and a role ARN that allows Amazon GameLift to access the Amazon S3 storage location. The S3
-     * bucket must be in the same Region where you want to create a new script. By default, Amazon
-     * GameLift uploads the latest version of the zip file; if you have S3 object versioning turned on,
-     * you can use the `ObjectVersion` parameter to specify an earlier version.
+     * and a role ARN that allows Amazon GameLift Servers to access the Amazon S3 storage location. The
+     * S3 bucket must be in the same Region where you want to create a new script. By default, Amazon
+     * GameLift Servers uploads the latest version of the zip file; if you have S3 object versioning
+     * turned on, you can use the `ObjectVersion` parameter to specify an earlier version.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("715c4a858d3fad5f13e3d17193800e45a54d32471d0572a79dee0cffe9affb66")
@@ -269,10 +269,10 @@ public interface CfnScriptProps {
      * stored.
      *
      * The storage location must specify the Amazon S3 bucket name, the zip file name (the "key"),
-     * and a role ARN that allows Amazon GameLift to access the Amazon S3 storage location. The S3
-     * bucket must be in the same Region where you want to create a new script. By default, Amazon
-     * GameLift uploads the latest version of the zip file; if you have S3 object versioning turned on,
-     * you can use the `ObjectVersion` parameter to specify an earlier version.
+     * and a role ARN that allows Amazon GameLift Servers to access the Amazon S3 storage location. The
+     * S3 bucket must be in the same Region where you want to create a new script. By default, Amazon
+     * GameLift Servers uploads the latest version of the zip file; if you have S3 object versioning
+     * turned on, you can use the `ObjectVersion` parameter to specify an earlier version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html#cfn-gamelift-script-storagelocation)
      */

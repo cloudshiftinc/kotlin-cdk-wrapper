@@ -51,7 +51,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .actionFailurePolicy("actionFailurePolicy")
  * .build())
+ * .deliverToQBusiness(DeliverToQBusinessActionProperty.builder()
+ * .applicationId("applicationId")
+ * .indexId("indexId")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .actionFailurePolicy("actionFailurePolicy")
+ * .build())
  * .drop(drop)
+ * .publishToSns(SnsActionProperty.builder()
+ * .roleArn("roleArn")
+ * .topicArn("topicArn")
+ * // the properties below are optional
+ * .actionFailurePolicy("actionFailurePolicy")
+ * .encoding("encoding")
+ * .payloadType("payloadType")
+ * .build())
  * .relay(RelayActionProperty.builder()
  * .relay("relay")
  * // the properties below are optional
@@ -79,7 +94,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .conditions(List.of(RuleConditionProperty.builder()
  * .booleanExpression(RuleBooleanExpressionProperty.builder()
  * .evaluate(RuleBooleanToEvaluateProperty.builder()
+ * .analysis(AnalysisProperty.builder()
+ * .analyzer("analyzer")
+ * .resultField("resultField")
+ * .build())
  * .attribute("attribute")
+ * .isInAddressList(RuleIsInAddressListProperty.builder()
+ * .addressLists(List.of("addressLists"))
+ * .attribute("attribute")
+ * .build())
  * .build())
  * .operator("operator")
  * .build())
@@ -103,6 +126,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .stringExpression(RuleStringExpressionProperty.builder()
  * .evaluate(RuleStringToEvaluateProperty.builder()
+ * .analysis(AnalysisProperty.builder()
+ * .analyzer("analyzer")
+ * .resultField("resultField")
+ * .build())
  * .attribute("attribute")
  * .mimeHeaderAttribute("mimeHeaderAttribute")
  * .build())
@@ -125,7 +152,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .unless(List.of(RuleConditionProperty.builder()
  * .booleanExpression(RuleBooleanExpressionProperty.builder()
  * .evaluate(RuleBooleanToEvaluateProperty.builder()
+ * .analysis(AnalysisProperty.builder()
+ * .analyzer("analyzer")
+ * .resultField("resultField")
+ * .build())
  * .attribute("attribute")
+ * .isInAddressList(RuleIsInAddressListProperty.builder()
+ * .addressLists(List.of("addressLists"))
+ * .attribute("attribute")
+ * .build())
  * .build())
  * .operator("operator")
  * .build())
@@ -149,6 +184,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .stringExpression(RuleStringExpressionProperty.builder()
  * .evaluate(RuleStringToEvaluateProperty.builder()
+ * .analysis(AnalysisProperty.builder()
+ * .analyzer("analyzer")
+ * .resultField("resultField")
+ * .build())
  * .attribute("attribute")
  * .mimeHeaderAttribute("mimeHeaderAttribute")
  * .build())
@@ -940,6 +979,207 @@ public open class CfnMailManagerRuleSet(
   }
 
   /**
+   * The action to deliver incoming emails to an Amazon Q Business application for indexing.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * DeliverToQBusinessActionProperty deliverToQBusinessActionProperty =
+   * DeliverToQBusinessActionProperty.builder()
+   * .applicationId("applicationId")
+   * .indexId("indexId")
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .actionFailurePolicy("actionFailurePolicy")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-delivertoqbusinessaction.html)
+   */
+  public interface DeliverToQBusinessActionProperty {
+    /**
+     * A policy that states what to do in the case of failure.
+     *
+     * The action will fail if there are configuration errors. For example, the specified
+     * application has been deleted or the role lacks necessary permissions to call the
+     * `qbusiness:BatchPutDocument` API.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-delivertoqbusinessaction.html#cfn-ses-mailmanagerruleset-delivertoqbusinessaction-actionfailurepolicy)
+     */
+    public fun actionFailurePolicy(): String? = unwrap(this).getActionFailurePolicy()
+
+    /**
+     * The unique identifier of the Amazon Q Business application instance where the email content
+     * will be delivered.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-delivertoqbusinessaction.html#cfn-ses-mailmanagerruleset-delivertoqbusinessaction-applicationid)
+     */
+    public fun applicationId(): String
+
+    /**
+     * The identifier of the knowledge base index within the Amazon Q Business application where the
+     * email content will be stored and indexed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-delivertoqbusinessaction.html#cfn-ses-mailmanagerruleset-delivertoqbusinessaction-indexid)
+     */
+    public fun indexId(): String
+
+    /**
+     * The Amazon Resource Name (ARN) of the IAM Role to use while delivering to Amazon Q Business.
+     *
+     * This role must have access to the `qbusiness:BatchPutDocument` API for the given application
+     * and index.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-delivertoqbusinessaction.html#cfn-ses-mailmanagerruleset-delivertoqbusinessaction-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [DeliverToQBusinessActionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param actionFailurePolicy A policy that states what to do in the case of failure.
+       * The action will fail if there are configuration errors. For example, the specified
+       * application has been deleted or the role lacks necessary permissions to call the
+       * `qbusiness:BatchPutDocument` API.
+       */
+      public fun actionFailurePolicy(actionFailurePolicy: String)
+
+      /**
+       * @param applicationId The unique identifier of the Amazon Q Business application instance
+       * where the email content will be delivered. 
+       */
+      public fun applicationId(applicationId: String)
+
+      /**
+       * @param indexId The identifier of the knowledge base index within the Amazon Q Business
+       * application where the email content will be stored and indexed. 
+       */
+      public fun indexId(indexId: String)
+
+      /**
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM Role to use while delivering to
+       * Amazon Q Business. 
+       * This role must have access to the `qbusiness:BatchPutDocument` API for the given
+       * application and index.
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.DeliverToQBusinessActionProperty.Builder
+          =
+          software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.DeliverToQBusinessActionProperty.builder()
+
+      /**
+       * @param actionFailurePolicy A policy that states what to do in the case of failure.
+       * The action will fail if there are configuration errors. For example, the specified
+       * application has been deleted or the role lacks necessary permissions to call the
+       * `qbusiness:BatchPutDocument` API.
+       */
+      override fun actionFailurePolicy(actionFailurePolicy: String) {
+        cdkBuilder.actionFailurePolicy(actionFailurePolicy)
+      }
+
+      /**
+       * @param applicationId The unique identifier of the Amazon Q Business application instance
+       * where the email content will be delivered. 
+       */
+      override fun applicationId(applicationId: String) {
+        cdkBuilder.applicationId(applicationId)
+      }
+
+      /**
+       * @param indexId The identifier of the knowledge base index within the Amazon Q Business
+       * application where the email content will be stored and indexed. 
+       */
+      override fun indexId(indexId: String) {
+        cdkBuilder.indexId(indexId)
+      }
+
+      /**
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM Role to use while delivering to
+       * Amazon Q Business. 
+       * This role must have access to the `qbusiness:BatchPutDocument` API for the given
+       * application and index.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.DeliverToQBusinessActionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.DeliverToQBusinessActionProperty,
+    ) : CdkObject(cdkObject),
+        DeliverToQBusinessActionProperty {
+      /**
+       * A policy that states what to do in the case of failure.
+       *
+       * The action will fail if there are configuration errors. For example, the specified
+       * application has been deleted or the role lacks necessary permissions to call the
+       * `qbusiness:BatchPutDocument` API.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-delivertoqbusinessaction.html#cfn-ses-mailmanagerruleset-delivertoqbusinessaction-actionfailurepolicy)
+       */
+      override fun actionFailurePolicy(): String? = unwrap(this).getActionFailurePolicy()
+
+      /**
+       * The unique identifier of the Amazon Q Business application instance where the email content
+       * will be delivered.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-delivertoqbusinessaction.html#cfn-ses-mailmanagerruleset-delivertoqbusinessaction-applicationid)
+       */
+      override fun applicationId(): String = unwrap(this).getApplicationId()
+
+      /**
+       * The identifier of the knowledge base index within the Amazon Q Business application where
+       * the email content will be stored and indexed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-delivertoqbusinessaction.html#cfn-ses-mailmanagerruleset-delivertoqbusinessaction-indexid)
+       */
+      override fun indexId(): String = unwrap(this).getIndexId()
+
+      /**
+       * The Amazon Resource Name (ARN) of the IAM Role to use while delivering to Amazon Q
+       * Business.
+       *
+       * This role must have access to the `qbusiness:BatchPutDocument` API for the given
+       * application and index.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-delivertoqbusinessaction.html#cfn-ses-mailmanagerruleset-delivertoqbusinessaction-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DeliverToQBusinessActionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.DeliverToQBusinessActionProperty):
+          DeliverToQBusinessActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeliverToQBusinessActionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeliverToQBusinessActionProperty):
+          software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.DeliverToQBusinessActionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.DeliverToQBusinessActionProperty
+    }
+  }
+
+  /**
    * The action relays the email via SMTP to another specific SMTP server.
    *
    * Example:
@@ -1223,7 +1463,22 @@ public open class CfnMailManagerRuleSet(
    * // the properties below are optional
    * .actionFailurePolicy("actionFailurePolicy")
    * .build())
+   * .deliverToQBusiness(DeliverToQBusinessActionProperty.builder()
+   * .applicationId("applicationId")
+   * .indexId("indexId")
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .actionFailurePolicy("actionFailurePolicy")
+   * .build())
    * .drop(drop)
+   * .publishToSns(SnsActionProperty.builder()
+   * .roleArn("roleArn")
+   * .topicArn("topicArn")
+   * // the properties below are optional
+   * .actionFailurePolicy("actionFailurePolicy")
+   * .encoding("encoding")
+   * .payloadType("payloadType")
+   * .build())
    * .relay(RelayActionProperty.builder()
    * .relay("relay")
    * // the properties below are optional
@@ -1278,11 +1533,26 @@ public open class CfnMailManagerRuleSet(
     public fun deliverToMailbox(): Any? = unwrap(this).getDeliverToMailbox()
 
     /**
+     * This action delivers an email to an Amazon Q Business application for ingestion into its
+     * knowledge base.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-ruleaction.html#cfn-ses-mailmanagerruleset-ruleaction-delivertoqbusiness)
+     */
+    public fun deliverToQBusiness(): Any? = unwrap(this).getDeliverToQBusiness()
+
+    /**
      * This action terminates the evaluation of rules in the rule set.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-ruleaction.html#cfn-ses-mailmanagerruleset-ruleaction-drop)
      */
     public fun drop(): Any? = unwrap(this).getDrop()
+
+    /**
+     * This action publishes the email content to an Amazon SNS topic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-ruleaction.html#cfn-ses-mailmanagerruleset-ruleaction-publishtosns)
+     */
+    public fun publishToSns(): Any? = unwrap(this).getPublishToSns()
 
     /**
      * This action relays the email to another SMTP server.
@@ -1376,9 +1646,47 @@ public open class CfnMailManagerRuleSet(
           fun deliverToMailbox(deliverToMailbox: DeliverToMailboxActionProperty.Builder.() -> Unit)
 
       /**
+       * @param deliverToQBusiness This action delivers an email to an Amazon Q Business application
+       * for ingestion into its knowledge base.
+       */
+      public fun deliverToQBusiness(deliverToQBusiness: IResolvable)
+
+      /**
+       * @param deliverToQBusiness This action delivers an email to an Amazon Q Business application
+       * for ingestion into its knowledge base.
+       */
+      public fun deliverToQBusiness(deliverToQBusiness: DeliverToQBusinessActionProperty)
+
+      /**
+       * @param deliverToQBusiness This action delivers an email to an Amazon Q Business application
+       * for ingestion into its knowledge base.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("92ea393512949e29f4e195f934c0c0fbe8012c7c2e59a0af9c90afc7286523f3")
+      public
+          fun deliverToQBusiness(deliverToQBusiness: DeliverToQBusinessActionProperty.Builder.() -> Unit)
+
+      /**
        * @param drop This action terminates the evaluation of rules in the rule set.
        */
       public fun drop(drop: Any)
+
+      /**
+       * @param publishToSns This action publishes the email content to an Amazon SNS topic.
+       */
+      public fun publishToSns(publishToSns: IResolvable)
+
+      /**
+       * @param publishToSns This action publishes the email content to an Amazon SNS topic.
+       */
+      public fun publishToSns(publishToSns: SnsActionProperty)
+
+      /**
+       * @param publishToSns This action publishes the email content to an Amazon SNS topic.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7770e794e3616e0ef690f4e4c4a2533c341cd2d1eea35cbd1886ba1762525419")
+      public fun publishToSns(publishToSns: SnsActionProperty.Builder.() -> Unit)
 
       /**
        * @param relay This action relays the email to another SMTP server.
@@ -1532,11 +1840,59 @@ public open class CfnMailManagerRuleSet(
           Unit = deliverToMailbox(DeliverToMailboxActionProperty(deliverToMailbox))
 
       /**
+       * @param deliverToQBusiness This action delivers an email to an Amazon Q Business application
+       * for ingestion into its knowledge base.
+       */
+      override fun deliverToQBusiness(deliverToQBusiness: IResolvable) {
+        cdkBuilder.deliverToQBusiness(deliverToQBusiness.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param deliverToQBusiness This action delivers an email to an Amazon Q Business application
+       * for ingestion into its knowledge base.
+       */
+      override fun deliverToQBusiness(deliverToQBusiness: DeliverToQBusinessActionProperty) {
+        cdkBuilder.deliverToQBusiness(deliverToQBusiness.let(DeliverToQBusinessActionProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param deliverToQBusiness This action delivers an email to an Amazon Q Business application
+       * for ingestion into its knowledge base.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("92ea393512949e29f4e195f934c0c0fbe8012c7c2e59a0af9c90afc7286523f3")
+      override
+          fun deliverToQBusiness(deliverToQBusiness: DeliverToQBusinessActionProperty.Builder.() -> Unit):
+          Unit = deliverToQBusiness(DeliverToQBusinessActionProperty(deliverToQBusiness))
+
+      /**
        * @param drop This action terminates the evaluation of rules in the rule set.
        */
       override fun drop(drop: Any) {
         cdkBuilder.drop(drop)
       }
+
+      /**
+       * @param publishToSns This action publishes the email content to an Amazon SNS topic.
+       */
+      override fun publishToSns(publishToSns: IResolvable) {
+        cdkBuilder.publishToSns(publishToSns.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param publishToSns This action publishes the email content to an Amazon SNS topic.
+       */
+      override fun publishToSns(publishToSns: SnsActionProperty) {
+        cdkBuilder.publishToSns(publishToSns.let(SnsActionProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param publishToSns This action publishes the email content to an Amazon SNS topic.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7770e794e3616e0ef690f4e4c4a2533c341cd2d1eea35cbd1886ba1762525419")
+      override fun publishToSns(publishToSns: SnsActionProperty.Builder.() -> Unit): Unit =
+          publishToSns(SnsActionProperty(publishToSns))
 
       /**
        * @param relay This action relays the email to another SMTP server.
@@ -1665,11 +2021,26 @@ public open class CfnMailManagerRuleSet(
       override fun deliverToMailbox(): Any? = unwrap(this).getDeliverToMailbox()
 
       /**
+       * This action delivers an email to an Amazon Q Business application for ingestion into its
+       * knowledge base.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-ruleaction.html#cfn-ses-mailmanagerruleset-ruleaction-delivertoqbusiness)
+       */
+      override fun deliverToQBusiness(): Any? = unwrap(this).getDeliverToQBusiness()
+
+      /**
        * This action terminates the evaluation of rules in the rule set.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-ruleaction.html#cfn-ses-mailmanagerruleset-ruleaction-drop)
        */
       override fun drop(): Any? = unwrap(this).getDrop()
+
+      /**
+       * This action publishes the email content to an Amazon SNS topic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-ruleaction.html#cfn-ses-mailmanagerruleset-ruleaction-publishtosns)
+       */
+      override fun publishToSns(): Any? = unwrap(this).getPublishToSns()
 
       /**
        * This action relays the email to another SMTP server.
@@ -1730,7 +2101,15 @@ public open class CfnMailManagerRuleSet(
    * RuleBooleanExpressionProperty ruleBooleanExpressionProperty =
    * RuleBooleanExpressionProperty.builder()
    * .evaluate(RuleBooleanToEvaluateProperty.builder()
+   * .analysis(AnalysisProperty.builder()
+   * .analyzer("analyzer")
+   * .resultField("resultField")
+   * .build())
    * .attribute("attribute")
+   * .isInAddressList(RuleIsInAddressListProperty.builder()
+   * .addressLists(List.of("addressLists"))
+   * .attribute("attribute")
+   * .build())
    * .build())
    * .operator("operator")
    * .build();
@@ -1869,7 +2248,15 @@ public open class CfnMailManagerRuleSet(
    * import io.cloudshiftdev.awscdk.services.ses.*;
    * RuleBooleanToEvaluateProperty ruleBooleanToEvaluateProperty =
    * RuleBooleanToEvaluateProperty.builder()
+   * .analysis(AnalysisProperty.builder()
+   * .analyzer("analyzer")
+   * .resultField("resultField")
+   * .build())
    * .attribute("attribute")
+   * .isInAddressList(RuleIsInAddressListProperty.builder()
+   * .addressLists(List.of("addressLists"))
+   * .attribute("attribute")
+   * .build())
    * .build();
    * ```
    *
@@ -1877,11 +2264,26 @@ public open class CfnMailManagerRuleSet(
    */
   public interface RuleBooleanToEvaluateProperty {
     /**
+     * The Add On ARN and its returned value to evaluate in a boolean condition expression.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-rulebooleantoevaluate.html#cfn-ses-mailmanagerruleset-rulebooleantoevaluate-analysis)
+     */
+    public fun analysis(): Any? = unwrap(this).getAnalysis()
+
+    /**
      * The boolean type representing the allowed attribute types for an email.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-rulebooleantoevaluate.html#cfn-ses-mailmanagerruleset-rulebooleantoevaluate-attribute)
      */
-    public fun attribute(): String
+    public fun attribute(): String? = unwrap(this).getAttribute()
+
+    /**
+     * The structure representing the address lists and address list attribute that will be used in
+     * evaluation of boolean expression.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-rulebooleantoevaluate.html#cfn-ses-mailmanagerruleset-rulebooleantoevaluate-isinaddresslist)
+     */
+    public fun isInAddressList(): Any? = unwrap(this).getIsInAddressList()
 
     /**
      * A builder for [RuleBooleanToEvaluateProperty]
@@ -1889,9 +2291,49 @@ public open class CfnMailManagerRuleSet(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param attribute The boolean type representing the allowed attribute types for an email. 
+       * @param analysis The Add On ARN and its returned value to evaluate in a boolean condition
+       * expression.
+       */
+      public fun analysis(analysis: IResolvable)
+
+      /**
+       * @param analysis The Add On ARN and its returned value to evaluate in a boolean condition
+       * expression.
+       */
+      public fun analysis(analysis: AnalysisProperty)
+
+      /**
+       * @param analysis The Add On ARN and its returned value to evaluate in a boolean condition
+       * expression.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a1e3e6036e73edde2a60739cc6e5f30cb4679a82f115fc71275fb979bdd15919")
+      public fun analysis(analysis: AnalysisProperty.Builder.() -> Unit)
+
+      /**
+       * @param attribute The boolean type representing the allowed attribute types for an email.
        */
       public fun attribute(attribute: String)
+
+      /**
+       * @param isInAddressList The structure representing the address lists and address list
+       * attribute that will be used in evaluation of boolean expression.
+       */
+      public fun isInAddressList(isInAddressList: IResolvable)
+
+      /**
+       * @param isInAddressList The structure representing the address lists and address list
+       * attribute that will be used in evaluation of boolean expression.
+       */
+      public fun isInAddressList(isInAddressList: RuleIsInAddressListProperty)
+
+      /**
+       * @param isInAddressList The structure representing the address lists and address list
+       * attribute that will be used in evaluation of boolean expression.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("22ccbeab5094f0c8e372b642fda680a263a0584e98292b7958c8b23e22480cf5")
+      public fun isInAddressList(isInAddressList: RuleIsInAddressListProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1901,11 +2343,61 @@ public open class CfnMailManagerRuleSet(
           software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.RuleBooleanToEvaluateProperty.builder()
 
       /**
-       * @param attribute The boolean type representing the allowed attribute types for an email. 
+       * @param analysis The Add On ARN and its returned value to evaluate in a boolean condition
+       * expression.
+       */
+      override fun analysis(analysis: IResolvable) {
+        cdkBuilder.analysis(analysis.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param analysis The Add On ARN and its returned value to evaluate in a boolean condition
+       * expression.
+       */
+      override fun analysis(analysis: AnalysisProperty) {
+        cdkBuilder.analysis(analysis.let(AnalysisProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param analysis The Add On ARN and its returned value to evaluate in a boolean condition
+       * expression.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a1e3e6036e73edde2a60739cc6e5f30cb4679a82f115fc71275fb979bdd15919")
+      override fun analysis(analysis: AnalysisProperty.Builder.() -> Unit): Unit =
+          analysis(AnalysisProperty(analysis))
+
+      /**
+       * @param attribute The boolean type representing the allowed attribute types for an email.
        */
       override fun attribute(attribute: String) {
         cdkBuilder.attribute(attribute)
       }
+
+      /**
+       * @param isInAddressList The structure representing the address lists and address list
+       * attribute that will be used in evaluation of boolean expression.
+       */
+      override fun isInAddressList(isInAddressList: IResolvable) {
+        cdkBuilder.isInAddressList(isInAddressList.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param isInAddressList The structure representing the address lists and address list
+       * attribute that will be used in evaluation of boolean expression.
+       */
+      override fun isInAddressList(isInAddressList: RuleIsInAddressListProperty) {
+        cdkBuilder.isInAddressList(isInAddressList.let(RuleIsInAddressListProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param isInAddressList The structure representing the address lists and address list
+       * attribute that will be used in evaluation of boolean expression.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("22ccbeab5094f0c8e372b642fda680a263a0584e98292b7958c8b23e22480cf5")
+      override fun isInAddressList(isInAddressList: RuleIsInAddressListProperty.Builder.() -> Unit):
+          Unit = isInAddressList(RuleIsInAddressListProperty(isInAddressList))
 
       public fun build():
           software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.RuleBooleanToEvaluateProperty =
@@ -1917,11 +2409,26 @@ public open class CfnMailManagerRuleSet(
     ) : CdkObject(cdkObject),
         RuleBooleanToEvaluateProperty {
       /**
+       * The Add On ARN and its returned value to evaluate in a boolean condition expression.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-rulebooleantoevaluate.html#cfn-ses-mailmanagerruleset-rulebooleantoevaluate-analysis)
+       */
+      override fun analysis(): Any? = unwrap(this).getAnalysis()
+
+      /**
        * The boolean type representing the allowed attribute types for an email.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-rulebooleantoevaluate.html#cfn-ses-mailmanagerruleset-rulebooleantoevaluate-attribute)
        */
-      override fun attribute(): String = unwrap(this).getAttribute()
+      override fun attribute(): String? = unwrap(this).getAttribute()
+
+      /**
+       * The structure representing the address lists and address list attribute that will be used
+       * in evaluation of boolean expression.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-rulebooleantoevaluate.html#cfn-ses-mailmanagerruleset-rulebooleantoevaluate-isinaddresslist)
+       */
+      override fun isInAddressList(): Any? = unwrap(this).getIsInAddressList()
     }
 
     public companion object {
@@ -1960,7 +2467,15 @@ public open class CfnMailManagerRuleSet(
    * RuleConditionProperty ruleConditionProperty = RuleConditionProperty.builder()
    * .booleanExpression(RuleBooleanExpressionProperty.builder()
    * .evaluate(RuleBooleanToEvaluateProperty.builder()
+   * .analysis(AnalysisProperty.builder()
+   * .analyzer("analyzer")
+   * .resultField("resultField")
+   * .build())
    * .attribute("attribute")
+   * .isInAddressList(RuleIsInAddressListProperty.builder()
+   * .addressLists(List.of("addressLists"))
+   * .attribute("attribute")
+   * .build())
    * .build())
    * .operator("operator")
    * .build())
@@ -1984,6 +2499,10 @@ public open class CfnMailManagerRuleSet(
    * .build())
    * .stringExpression(RuleStringExpressionProperty.builder()
    * .evaluate(RuleStringToEvaluateProperty.builder()
+   * .analysis(AnalysisProperty.builder()
+   * .analyzer("analyzer")
+   * .resultField("resultField")
+   * .build())
    * .attribute("attribute")
    * .mimeHeaderAttribute("mimeHeaderAttribute")
    * .build())
@@ -2829,6 +3348,128 @@ public open class CfnMailManagerRuleSet(
   }
 
   /**
+   * The structure type for a boolean condition that provides the address lists and address list
+   * attribute to evaluate.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * RuleIsInAddressListProperty ruleIsInAddressListProperty = RuleIsInAddressListProperty.builder()
+   * .addressLists(List.of("addressLists"))
+   * .attribute("attribute")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-ruleisinaddresslist.html)
+   */
+  public interface RuleIsInAddressListProperty {
+    /**
+     * The address lists that will be used for evaluation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-ruleisinaddresslist.html#cfn-ses-mailmanagerruleset-ruleisinaddresslist-addresslists)
+     */
+    public fun addressLists(): List<String>
+
+    /**
+     * The email attribute that needs to be evaluated against the address list.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-ruleisinaddresslist.html#cfn-ses-mailmanagerruleset-ruleisinaddresslist-attribute)
+     */
+    public fun attribute(): String
+
+    /**
+     * A builder for [RuleIsInAddressListProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param addressLists The address lists that will be used for evaluation. 
+       */
+      public fun addressLists(addressLists: List<String>)
+
+      /**
+       * @param addressLists The address lists that will be used for evaluation. 
+       */
+      public fun addressLists(vararg addressLists: String)
+
+      /**
+       * @param attribute The email attribute that needs to be evaluated against the address list. 
+       */
+      public fun attribute(attribute: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.RuleIsInAddressListProperty.Builder
+          =
+          software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.RuleIsInAddressListProperty.builder()
+
+      /**
+       * @param addressLists The address lists that will be used for evaluation. 
+       */
+      override fun addressLists(addressLists: List<String>) {
+        cdkBuilder.addressLists(addressLists)
+      }
+
+      /**
+       * @param addressLists The address lists that will be used for evaluation. 
+       */
+      override fun addressLists(vararg addressLists: String): Unit =
+          addressLists(addressLists.toList())
+
+      /**
+       * @param attribute The email attribute that needs to be evaluated against the address list. 
+       */
+      override fun attribute(attribute: String) {
+        cdkBuilder.attribute(attribute)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.RuleIsInAddressListProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.RuleIsInAddressListProperty,
+    ) : CdkObject(cdkObject),
+        RuleIsInAddressListProperty {
+      /**
+       * The address lists that will be used for evaluation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-ruleisinaddresslist.html#cfn-ses-mailmanagerruleset-ruleisinaddresslist-addresslists)
+       */
+      override fun addressLists(): List<String> = unwrap(this).getAddressLists()
+
+      /**
+       * The email attribute that needs to be evaluated against the address list.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-ruleisinaddresslist.html#cfn-ses-mailmanagerruleset-ruleisinaddresslist-attribute)
+       */
+      override fun attribute(): String = unwrap(this).getAttribute()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RuleIsInAddressListProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.RuleIsInAddressListProperty):
+          RuleIsInAddressListProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RuleIsInAddressListProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RuleIsInAddressListProperty):
+          software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.RuleIsInAddressListProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.RuleIsInAddressListProperty
+    }
+  }
+
+  /**
    * A number expression to match numeric conditions with integers from the incoming email.
    *
    * Example:
@@ -3112,7 +3753,22 @@ public open class CfnMailManagerRuleSet(
    * // the properties below are optional
    * .actionFailurePolicy("actionFailurePolicy")
    * .build())
+   * .deliverToQBusiness(DeliverToQBusinessActionProperty.builder()
+   * .applicationId("applicationId")
+   * .indexId("indexId")
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .actionFailurePolicy("actionFailurePolicy")
+   * .build())
    * .drop(drop)
+   * .publishToSns(SnsActionProperty.builder()
+   * .roleArn("roleArn")
+   * .topicArn("topicArn")
+   * // the properties below are optional
+   * .actionFailurePolicy("actionFailurePolicy")
+   * .encoding("encoding")
+   * .payloadType("payloadType")
+   * .build())
    * .relay(RelayActionProperty.builder()
    * .relay("relay")
    * // the properties below are optional
@@ -3140,7 +3796,15 @@ public open class CfnMailManagerRuleSet(
    * .conditions(List.of(RuleConditionProperty.builder()
    * .booleanExpression(RuleBooleanExpressionProperty.builder()
    * .evaluate(RuleBooleanToEvaluateProperty.builder()
+   * .analysis(AnalysisProperty.builder()
+   * .analyzer("analyzer")
+   * .resultField("resultField")
+   * .build())
    * .attribute("attribute")
+   * .isInAddressList(RuleIsInAddressListProperty.builder()
+   * .addressLists(List.of("addressLists"))
+   * .attribute("attribute")
+   * .build())
    * .build())
    * .operator("operator")
    * .build())
@@ -3164,6 +3828,10 @@ public open class CfnMailManagerRuleSet(
    * .build())
    * .stringExpression(RuleStringExpressionProperty.builder()
    * .evaluate(RuleStringToEvaluateProperty.builder()
+   * .analysis(AnalysisProperty.builder()
+   * .analyzer("analyzer")
+   * .resultField("resultField")
+   * .build())
    * .attribute("attribute")
    * .mimeHeaderAttribute("mimeHeaderAttribute")
    * .build())
@@ -3186,7 +3854,15 @@ public open class CfnMailManagerRuleSet(
    * .unless(List.of(RuleConditionProperty.builder()
    * .booleanExpression(RuleBooleanExpressionProperty.builder()
    * .evaluate(RuleBooleanToEvaluateProperty.builder()
+   * .analysis(AnalysisProperty.builder()
+   * .analyzer("analyzer")
+   * .resultField("resultField")
+   * .build())
    * .attribute("attribute")
+   * .isInAddressList(RuleIsInAddressListProperty.builder()
+   * .addressLists(List.of("addressLists"))
+   * .attribute("attribute")
+   * .build())
    * .build())
    * .operator("operator")
    * .build())
@@ -3210,6 +3886,10 @@ public open class CfnMailManagerRuleSet(
    * .build())
    * .stringExpression(RuleStringExpressionProperty.builder()
    * .evaluate(RuleStringToEvaluateProperty.builder()
+   * .analysis(AnalysisProperty.builder()
+   * .analyzer("analyzer")
+   * .resultField("resultField")
+   * .build())
    * .attribute("attribute")
    * .mimeHeaderAttribute("mimeHeaderAttribute")
    * .build())
@@ -3497,6 +4177,10 @@ public open class CfnMailManagerRuleSet(
    * RuleStringExpressionProperty ruleStringExpressionProperty =
    * RuleStringExpressionProperty.builder()
    * .evaluate(RuleStringToEvaluateProperty.builder()
+   * .analysis(AnalysisProperty.builder()
+   * .analyzer("analyzer")
+   * .resultField("resultField")
+   * .build())
    * .attribute("attribute")
    * .mimeHeaderAttribute("mimeHeaderAttribute")
    * .build())
@@ -3705,6 +4389,10 @@ public open class CfnMailManagerRuleSet(
    * import io.cloudshiftdev.awscdk.services.ses.*;
    * RuleStringToEvaluateProperty ruleStringToEvaluateProperty =
    * RuleStringToEvaluateProperty.builder()
+   * .analysis(AnalysisProperty.builder()
+   * .analyzer("analyzer")
+   * .resultField("resultField")
+   * .build())
    * .attribute("attribute")
    * .mimeHeaderAttribute("mimeHeaderAttribute")
    * .build();
@@ -3713,6 +4401,13 @@ public open class CfnMailManagerRuleSet(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-rulestringtoevaluate.html)
    */
   public interface RuleStringToEvaluateProperty {
+    /**
+     * The Add On ARN and its returned value to evaluate in a string condition expression.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-rulestringtoevaluate.html#cfn-ses-mailmanagerruleset-rulestringtoevaluate-analysis)
+     */
+    public fun analysis(): Any? = unwrap(this).getAnalysis()
+
     /**
      * The email attribute to evaluate in a string condition expression.
      *
@@ -3733,6 +4428,26 @@ public open class CfnMailManagerRuleSet(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param analysis The Add On ARN and its returned value to evaluate in a string condition
+       * expression.
+       */
+      public fun analysis(analysis: IResolvable)
+
+      /**
+       * @param analysis The Add On ARN and its returned value to evaluate in a string condition
+       * expression.
+       */
+      public fun analysis(analysis: AnalysisProperty)
+
+      /**
+       * @param analysis The Add On ARN and its returned value to evaluate in a string condition
+       * expression.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bb1bd5fef6eb3a80329b002ff9c86ae3ea9f7f91bfa1840051e4176f0231ecbd")
+      public fun analysis(analysis: AnalysisProperty.Builder.() -> Unit)
+
+      /**
        * @param attribute The email attribute to evaluate in a string condition expression.
        */
       public fun attribute(attribute: String)
@@ -3749,6 +4464,31 @@ public open class CfnMailManagerRuleSet(
           software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.RuleStringToEvaluateProperty.Builder
           =
           software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.RuleStringToEvaluateProperty.builder()
+
+      /**
+       * @param analysis The Add On ARN and its returned value to evaluate in a string condition
+       * expression.
+       */
+      override fun analysis(analysis: IResolvable) {
+        cdkBuilder.analysis(analysis.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param analysis The Add On ARN and its returned value to evaluate in a string condition
+       * expression.
+       */
+      override fun analysis(analysis: AnalysisProperty) {
+        cdkBuilder.analysis(analysis.let(AnalysisProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param analysis The Add On ARN and its returned value to evaluate in a string condition
+       * expression.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bb1bd5fef6eb3a80329b002ff9c86ae3ea9f7f91bfa1840051e4176f0231ecbd")
+      override fun analysis(analysis: AnalysisProperty.Builder.() -> Unit): Unit =
+          analysis(AnalysisProperty(analysis))
 
       /**
        * @param attribute The email attribute to evaluate in a string condition expression.
@@ -3774,6 +4514,13 @@ public open class CfnMailManagerRuleSet(
       cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.RuleStringToEvaluateProperty,
     ) : CdkObject(cdkObject),
         RuleStringToEvaluateProperty {
+      /**
+       * The Add On ARN and its returned value to evaluate in a string condition expression.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-rulestringtoevaluate.html#cfn-ses-mailmanagerruleset-rulestringtoevaluate-analysis)
+       */
+      override fun analysis(): Any? = unwrap(this).getAnalysis()
+
       /**
        * The email attribute to evaluate in a string condition expression.
        *
@@ -4499,6 +5246,245 @@ public open class CfnMailManagerRuleSet(
           software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.SendActionProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.SendActionProperty
+    }
+  }
+
+  /**
+   * The action to publish the email content to an Amazon SNS topic.
+   *
+   * When executed, this action will send the email as a notification to the specified SNS topic.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * SnsActionProperty snsActionProperty = SnsActionProperty.builder()
+   * .roleArn("roleArn")
+   * .topicArn("topicArn")
+   * // the properties below are optional
+   * .actionFailurePolicy("actionFailurePolicy")
+   * .encoding("encoding")
+   * .payloadType("payloadType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-snsaction.html)
+   */
+  public interface SnsActionProperty {
+    /**
+     * A policy that states what to do in the case of failure.
+     *
+     * The action will fail if there are configuration errors. For example, specified SNS topic has
+     * been deleted or the role lacks necessary permissions to call the `sns:Publish` API.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-snsaction.html#cfn-ses-mailmanagerruleset-snsaction-actionfailurepolicy)
+     */
+    public fun actionFailurePolicy(): String? = unwrap(this).getActionFailurePolicy()
+
+    /**
+     * The encoding to use for the email within the Amazon SNS notification.
+     *
+     * The default value is `UTF-8` . Use `BASE64` if you need to preserve all special characters,
+     * especially when the original message uses a different encoding format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-snsaction.html#cfn-ses-mailmanagerruleset-snsaction-encoding)
+     */
+    public fun encoding(): String? = unwrap(this).getEncoding()
+
+    /**
+     * The expected payload type within the Amazon SNS notification.
+     *
+     * `CONTENT` attempts to publish the full email content with 20KB of headers content. `HEADERS`
+     * extracts up to 100KB of header content to include in the notification, email content will not be
+     * included to the notification. The default value is `CONTENT` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-snsaction.html#cfn-ses-mailmanagerruleset-snsaction-payloadtype)
+     */
+    public fun payloadType(): String? = unwrap(this).getPayloadType()
+
+    /**
+     * The Amazon Resource Name (ARN) of the IAM Role to use while writing to Amazon SNS.
+     *
+     * This role must have access to the `sns:Publish` API for the given topic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-snsaction.html#cfn-ses-mailmanagerruleset-snsaction-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon SNS Topic to which notification for the email
+     * received will be published.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-snsaction.html#cfn-ses-mailmanagerruleset-snsaction-topicarn)
+     */
+    public fun topicArn(): String
+
+    /**
+     * A builder for [SnsActionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param actionFailurePolicy A policy that states what to do in the case of failure.
+       * The action will fail if there are configuration errors. For example, specified SNS topic
+       * has been deleted or the role lacks necessary permissions to call the `sns:Publish` API.
+       */
+      public fun actionFailurePolicy(actionFailurePolicy: String)
+
+      /**
+       * @param encoding The encoding to use for the email within the Amazon SNS notification.
+       * The default value is `UTF-8` . Use `BASE64` if you need to preserve all special characters,
+       * especially when the original message uses a different encoding format.
+       */
+      public fun encoding(encoding: String)
+
+      /**
+       * @param payloadType The expected payload type within the Amazon SNS notification.
+       * `CONTENT` attempts to publish the full email content with 20KB of headers content.
+       * `HEADERS` extracts up to 100KB of header content to include in the notification, email content
+       * will not be included to the notification. The default value is `CONTENT` .
+       */
+      public fun payloadType(payloadType: String)
+
+      /**
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM Role to use while writing to
+       * Amazon SNS. 
+       * This role must have access to the `sns:Publish` API for the given topic.
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS Topic to which
+       * notification for the email received will be published. 
+       */
+      public fun topicArn(topicArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.SnsActionProperty.Builder =
+          software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.SnsActionProperty.builder()
+
+      /**
+       * @param actionFailurePolicy A policy that states what to do in the case of failure.
+       * The action will fail if there are configuration errors. For example, specified SNS topic
+       * has been deleted or the role lacks necessary permissions to call the `sns:Publish` API.
+       */
+      override fun actionFailurePolicy(actionFailurePolicy: String) {
+        cdkBuilder.actionFailurePolicy(actionFailurePolicy)
+      }
+
+      /**
+       * @param encoding The encoding to use for the email within the Amazon SNS notification.
+       * The default value is `UTF-8` . Use `BASE64` if you need to preserve all special characters,
+       * especially when the original message uses a different encoding format.
+       */
+      override fun encoding(encoding: String) {
+        cdkBuilder.encoding(encoding)
+      }
+
+      /**
+       * @param payloadType The expected payload type within the Amazon SNS notification.
+       * `CONTENT` attempts to publish the full email content with 20KB of headers content.
+       * `HEADERS` extracts up to 100KB of header content to include in the notification, email content
+       * will not be included to the notification. The default value is `CONTENT` .
+       */
+      override fun payloadType(payloadType: String) {
+        cdkBuilder.payloadType(payloadType)
+      }
+
+      /**
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM Role to use while writing to
+       * Amazon SNS. 
+       * This role must have access to the `sns:Publish` API for the given topic.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS Topic to which
+       * notification for the email received will be published. 
+       */
+      override fun topicArn(topicArn: String) {
+        cdkBuilder.topicArn(topicArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.SnsActionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.SnsActionProperty,
+    ) : CdkObject(cdkObject),
+        SnsActionProperty {
+      /**
+       * A policy that states what to do in the case of failure.
+       *
+       * The action will fail if there are configuration errors. For example, specified SNS topic
+       * has been deleted or the role lacks necessary permissions to call the `sns:Publish` API.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-snsaction.html#cfn-ses-mailmanagerruleset-snsaction-actionfailurepolicy)
+       */
+      override fun actionFailurePolicy(): String? = unwrap(this).getActionFailurePolicy()
+
+      /**
+       * The encoding to use for the email within the Amazon SNS notification.
+       *
+       * The default value is `UTF-8` . Use `BASE64` if you need to preserve all special characters,
+       * especially when the original message uses a different encoding format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-snsaction.html#cfn-ses-mailmanagerruleset-snsaction-encoding)
+       */
+      override fun encoding(): String? = unwrap(this).getEncoding()
+
+      /**
+       * The expected payload type within the Amazon SNS notification.
+       *
+       * `CONTENT` attempts to publish the full email content with 20KB of headers content.
+       * `HEADERS` extracts up to 100KB of header content to include in the notification, email content
+       * will not be included to the notification. The default value is `CONTENT` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-snsaction.html#cfn-ses-mailmanagerruleset-snsaction-payloadtype)
+       */
+      override fun payloadType(): String? = unwrap(this).getPayloadType()
+
+      /**
+       * The Amazon Resource Name (ARN) of the IAM Role to use while writing to Amazon SNS.
+       *
+       * This role must have access to the `sns:Publish` API for the given topic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-snsaction.html#cfn-ses-mailmanagerruleset-snsaction-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Amazon SNS Topic to which notification for the email
+       * received will be published.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-snsaction.html#cfn-ses-mailmanagerruleset-snsaction-topicarn)
+       */
+      override fun topicArn(): String = unwrap(this).getTopicArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SnsActionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.SnsActionProperty):
+          SnsActionProperty = CdkObjectWrappers.wrap(cdkObject) as? SnsActionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SnsActionProperty):
+          software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.SnsActionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.SnsActionProperty
     }
   }
 }

@@ -45,6 +45,7 @@ import kotlin.collections.List
  * .singleSelectOptions(List.of("singleSelectOptions"))
  * .build()))
  * .name("name")
+ * .selfAssignContactFlowArn("selfAssignContactFlowArn")
  * .status("status")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -119,6 +120,13 @@ public interface CfnTaskTemplateProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-tasktemplate.html#cfn-connect-tasktemplate-name)
    */
   public fun name(): String? = unwrap(this).getName()
+
+  /**
+   * The Amazon Resource Name (ARN) of the flow.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-tasktemplate.html#cfn-connect-tasktemplate-selfassigncontactflowarn)
+   */
+  public fun selfAssignContactFlowArn(): String? = unwrap(this).getSelfAssignContactFlowArn()
 
   /**
    * The status of the task template.
@@ -209,6 +217,11 @@ public interface CfnTaskTemplateProps {
      * @param name The name of the task template.
      */
     public fun name(name: String)
+
+    /**
+     * @param selfAssignContactFlowArn The Amazon Resource Name (ARN) of the flow.
+     */
+    public fun selfAssignContactFlowArn(selfAssignContactFlowArn: String)
 
     /**
      * @param status The status of the task template.
@@ -322,6 +335,13 @@ public interface CfnTaskTemplateProps {
     }
 
     /**
+     * @param selfAssignContactFlowArn The Amazon Resource Name (ARN) of the flow.
+     */
+    override fun selfAssignContactFlowArn(selfAssignContactFlowArn: String) {
+      cdkBuilder.selfAssignContactFlowArn(selfAssignContactFlowArn)
+    }
+
+    /**
      * @param status The status of the task template.
      */
     override fun status(status: String) {
@@ -412,6 +432,13 @@ public interface CfnTaskTemplateProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-tasktemplate.html#cfn-connect-tasktemplate-name)
      */
     override fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The Amazon Resource Name (ARN) of the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-tasktemplate.html#cfn-connect-tasktemplate-selfassigncontactflowarn)
+     */
+    override fun selfAssignContactFlowArn(): String? = unwrap(this).getSelfAssignContactFlowArn()
 
     /**
      * The status of the task template.

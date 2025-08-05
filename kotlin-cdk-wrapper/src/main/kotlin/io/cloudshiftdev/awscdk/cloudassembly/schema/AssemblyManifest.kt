@@ -15,6 +15,8 @@ public interface AssemblyManifest {
   public fun artifacts(): Map<String, ArtifactManifest> =
       unwrap(this).getArtifacts()?.mapValues{ArtifactManifest.wrap(it.value)} ?: emptyMap()
 
+  public fun minimumCliVersion(): String? = unwrap(this).getMinimumCliVersion()
+
   public fun missing(): List<MissingContext> = unwrap(this).getMissing()?.map(MissingContext::wrap)
       ?: emptyList()
 
@@ -25,6 +27,8 @@ public interface AssemblyManifest {
   @CdkDslMarker
   public interface Builder {
     public fun artifacts(artifacts: Map<String, ArtifactManifest>)
+
+    public fun minimumCliVersion(minimumCliVersion: String)
 
     public fun missing(missing: List<MissingContext>)
 
@@ -45,6 +49,10 @@ public interface AssemblyManifest {
 
     override fun artifacts(artifacts: Map<String, ArtifactManifest>) {
       cdkBuilder.artifacts(artifacts.mapValues{ArtifactManifest.unwrap(it.value)})
+    }
+
+    override fun minimumCliVersion(minimumCliVersion: String) {
+      cdkBuilder.minimumCliVersion(minimumCliVersion)
     }
 
     override fun missing(missing: List<MissingContext>) {
@@ -76,6 +84,8 @@ public interface AssemblyManifest {
       AssemblyManifest {
     override fun artifacts(): Map<String, ArtifactManifest> =
         unwrap(this).getArtifacts()?.mapValues{ArtifactManifest.wrap(it.value)} ?: emptyMap()
+
+    override fun minimumCliVersion(): String? = unwrap(this).getMinimumCliVersion()
 
     override fun missing(): List<MissingContext> =
         unwrap(this).getMissing()?.map(MissingContext::wrap) ?: emptyList()

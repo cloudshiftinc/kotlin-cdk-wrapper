@@ -22,7 +22,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.kinesisfirehose.alpha.DeliveryStream;
+ * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
  * DeliveryStream stream;
  * Topic topic = new Topic(this, "Topic");
  * Subscription.Builder.create(this, "Subscription")
@@ -318,6 +318,9 @@ public open class Subscription(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.sns.Subscription.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

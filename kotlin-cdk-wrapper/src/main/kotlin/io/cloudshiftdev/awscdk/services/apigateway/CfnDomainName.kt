@@ -24,6 +24,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * The `AWS::ApiGateway::DomainName` resource specifies a public custom domain name for your API in
  * API Gateway.
  *
+ * To create a custom domain name for private APIs, use
+ * [AWS::ApiGateway::DomainNameV2](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html)
+ * .
+ *
  * You can use a custom domain name to provide a URL that's more intuitive and easier to recall. For
  * more information about using custom domain names, see [Set up Custom Domain Name for an API in API
  * Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html) in
@@ -39,6 +43,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .certificateArn("certificateArn")
  * .domainName("domainName")
  * .endpointConfiguration(EndpointConfigurationProperty.builder()
+ * .ipAddressType("ipAddressType")
  * .types(List.of("types"))
  * .build())
  * .mutualTlsAuthentication(MutualTlsAuthenticationProperty.builder()
@@ -47,6 +52,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .ownershipVerificationCertificateArn("ownershipVerificationCertificateArn")
  * .regionalCertificateArn("regionalCertificateArn")
+ * .routingMode("routingMode")
  * .securityPolicy("securityPolicy")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -102,6 +108,11 @@ public open class CfnDomainName(
       unwrap(this).getAttrDistributionHostedZoneId()
 
   /**
+   * The ARN of the domain name.
+   */
+  public open fun attrDomainNameArn(): String = unwrap(this).getAttrDomainNameArn()
+
+  /**
    * The domain name associated with the regional endpoint for this custom domain name.
    *
    * You set up this association by adding a DNS record that points the custom domain name to this
@@ -141,26 +152,30 @@ public open class CfnDomainName(
   }
 
   /**
-   * The endpoint configuration of this DomainName showing the endpoint types of the domain name.
+   * The endpoint configuration of this DomainName showing the endpoint types and IP address types
+   * of the domain name.
    */
   public open fun endpointConfiguration(): Any? = unwrap(this).getEndpointConfiguration()
 
   /**
-   * The endpoint configuration of this DomainName showing the endpoint types of the domain name.
+   * The endpoint configuration of this DomainName showing the endpoint types and IP address types
+   * of the domain name.
    */
   public open fun endpointConfiguration(`value`: IResolvable) {
     unwrap(this).setEndpointConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The endpoint configuration of this DomainName showing the endpoint types of the domain name.
+   * The endpoint configuration of this DomainName showing the endpoint types and IP address types
+   * of the domain name.
    */
   public open fun endpointConfiguration(`value`: EndpointConfigurationProperty) {
     unwrap(this).setEndpointConfiguration(`value`.let(EndpointConfigurationProperty.Companion::unwrap))
   }
 
   /**
-   * The endpoint configuration of this DomainName showing the endpoint types of the domain name.
+   * The endpoint configuration of this DomainName showing the endpoint types and IP address types
+   * of the domain name.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("896c8399b94c0c0d9d1335e8895a3932831259d754bbb201b7d7ed1986da51b4")
@@ -232,6 +247,18 @@ public open class CfnDomainName(
   }
 
   /**
+   * The routing mode for this domain name.
+   */
+  public open fun routingMode(): String? = unwrap(this).getRoutingMode()
+
+  /**
+   * The routing mode for this domain name.
+   */
+  public open fun routingMode(`value`: String) {
+    unwrap(this).setRoutingMode(`value`)
+  }
+
+  /**
    * The Transport Layer Security (TLS) version + cipher suite for this DomainName.
    */
   public open fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
@@ -293,29 +320,32 @@ public open class CfnDomainName(
     public fun domainName(domainName: String)
 
     /**
-     * The endpoint configuration of this DomainName showing the endpoint types of the domain name.
+     * The endpoint configuration of this DomainName showing the endpoint types and IP address types
+     * of the domain name.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-endpointconfiguration)
      * @param endpointConfiguration The endpoint configuration of this DomainName showing the
-     * endpoint types of the domain name. 
+     * endpoint types and IP address types of the domain name. 
      */
     public fun endpointConfiguration(endpointConfiguration: IResolvable)
 
     /**
-     * The endpoint configuration of this DomainName showing the endpoint types of the domain name.
+     * The endpoint configuration of this DomainName showing the endpoint types and IP address types
+     * of the domain name.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-endpointconfiguration)
      * @param endpointConfiguration The endpoint configuration of this DomainName showing the
-     * endpoint types of the domain name. 
+     * endpoint types and IP address types of the domain name. 
      */
     public fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty)
 
     /**
-     * The endpoint configuration of this DomainName showing the endpoint types of the domain name.
+     * The endpoint configuration of this DomainName showing the endpoint types and IP address types
+     * of the domain name.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-endpointconfiguration)
      * @param endpointConfiguration The endpoint configuration of this DomainName showing the
-     * endpoint types of the domain name. 
+     * endpoint types and IP address types of the domain name. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0ba0f08964b74a867e691b3526f84082d1f0fb5692be8fe83804feb0d341d2f7")
@@ -386,6 +416,19 @@ public open class CfnDomainName(
     public fun regionalCertificateArn(regionalCertificateArn: String)
 
     /**
+     * The routing mode for this domain name.
+     *
+     * The routing mode determines how API Gateway sends traffic from your custom domain name to
+     * your public APIs.
+     *
+     * Default: - "BASE_PATH_MAPPING_ONLY"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-routingmode)
+     * @param routingMode The routing mode for this domain name. 
+     */
+    public fun routingMode(routingMode: String)
+
+    /**
      * The Transport Layer Security (TLS) version + cipher suite for this DomainName.
      *
      * The valid values are `TLS_1_0` and `TLS_1_2` .
@@ -450,33 +493,36 @@ public open class CfnDomainName(
     }
 
     /**
-     * The endpoint configuration of this DomainName showing the endpoint types of the domain name.
+     * The endpoint configuration of this DomainName showing the endpoint types and IP address types
+     * of the domain name.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-endpointconfiguration)
      * @param endpointConfiguration The endpoint configuration of this DomainName showing the
-     * endpoint types of the domain name. 
+     * endpoint types and IP address types of the domain name. 
      */
     override fun endpointConfiguration(endpointConfiguration: IResolvable) {
       cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The endpoint configuration of this DomainName showing the endpoint types of the domain name.
+     * The endpoint configuration of this DomainName showing the endpoint types and IP address types
+     * of the domain name.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-endpointconfiguration)
      * @param endpointConfiguration The endpoint configuration of this DomainName showing the
-     * endpoint types of the domain name. 
+     * endpoint types and IP address types of the domain name. 
      */
     override fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty) {
       cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfigurationProperty.Companion::unwrap))
     }
 
     /**
-     * The endpoint configuration of this DomainName showing the endpoint types of the domain name.
+     * The endpoint configuration of this DomainName showing the endpoint types and IP address types
+     * of the domain name.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-endpointconfiguration)
      * @param endpointConfiguration The endpoint configuration of this DomainName showing the
-     * endpoint types of the domain name. 
+     * endpoint types and IP address types of the domain name. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0ba0f08964b74a867e691b3526f84082d1f0fb5692be8fe83804feb0d341d2f7")
@@ -557,6 +603,21 @@ public open class CfnDomainName(
     }
 
     /**
+     * The routing mode for this domain name.
+     *
+     * The routing mode determines how API Gateway sends traffic from your custom domain name to
+     * your public APIs.
+     *
+     * Default: - "BASE_PATH_MAPPING_ONLY"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-routingmode)
+     * @param routingMode The routing mode for this domain name. 
+     */
+    override fun routingMode(routingMode: String) {
+      cdkBuilder.routingMode(routingMode)
+    }
+
+    /**
      * The Transport Layer Security (TLS) version + cipher suite for this DomainName.
      *
      * The valid values are `TLS_1_0` and `TLS_1_2` .
@@ -617,8 +678,8 @@ public open class CfnDomainName(
   }
 
   /**
-   * The `EndpointConfiguration` property type specifies the endpoint types of an Amazon API Gateway
-   * domain name.
+   * The `EndpointConfiguration` property type specifies the endpoint types and IP address types of
+   * an Amazon API Gateway domain name.
    *
    * `EndpointConfiguration` is a property of the
    * [AWS::ApiGateway::DomainName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html)
@@ -632,6 +693,7 @@ public open class CfnDomainName(
    * import io.cloudshiftdev.awscdk.services.apigateway.*;
    * EndpointConfigurationProperty endpointConfigurationProperty =
    * EndpointConfigurationProperty.builder()
+   * .ipAddressType("ipAddressType")
    * .types(List.of("types"))
    * .build();
    * ```
@@ -639,6 +701,17 @@ public open class CfnDomainName(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-endpointconfiguration.html)
    */
   public interface EndpointConfigurationProperty {
+    /**
+     * The IP address types that can invoke this DomainName.
+     *
+     * Use `ipv4` to allow only IPv4 addresses to invoke this DomainName, or use `dualstack` to
+     * allow both IPv4 and IPv6 addresses to invoke this DomainName. For the `PRIVATE` endpoint type,
+     * only `dualstack` is supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-endpointconfiguration.html#cfn-apigateway-domainname-endpointconfiguration-ipaddresstype)
+     */
+    public fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+
     /**
      * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
      *
@@ -655,6 +728,14 @@ public open class CfnDomainName(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param ipAddressType The IP address types that can invoke this DomainName.
+       * Use `ipv4` to allow only IPv4 addresses to invoke this DomainName, or use `dualstack` to
+       * allow both IPv4 and IPv6 addresses to invoke this DomainName. For the `PRIVATE` endpoint type,
+       * only `dualstack` is supported.
+       */
+      public fun ipAddressType(ipAddressType: String)
+
       /**
        * @param types A list of endpoint types of an API (RestApi) or its custom domain name
        * (DomainName).
@@ -679,6 +760,16 @@ public open class CfnDomainName(
           software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty.Builder
           =
           software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty.builder()
+
+      /**
+       * @param ipAddressType The IP address types that can invoke this DomainName.
+       * Use `ipv4` to allow only IPv4 addresses to invoke this DomainName, or use `dualstack` to
+       * allow both IPv4 and IPv6 addresses to invoke this DomainName. For the `PRIVATE` endpoint type,
+       * only `dualstack` is supported.
+       */
+      override fun ipAddressType(ipAddressType: String) {
+        cdkBuilder.ipAddressType(ipAddressType)
+      }
 
       /**
        * @param types A list of endpoint types of an API (RestApi) or its custom domain name
@@ -709,6 +800,17 @@ public open class CfnDomainName(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty,
     ) : CdkObject(cdkObject),
         EndpointConfigurationProperty {
+      /**
+       * The IP address types that can invoke this DomainName.
+       *
+       * Use `ipv4` to allow only IPv4 addresses to invoke this DomainName, or use `dualstack` to
+       * allow both IPv4 and IPv6 addresses to invoke this DomainName. For the `PRIVATE` endpoint type,
+       * only `dualstack` is supported.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-endpointconfiguration.html#cfn-apigateway-domainname-endpointconfiguration-ipaddresstype)
+       */
+      override fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+
       /**
        * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
        *

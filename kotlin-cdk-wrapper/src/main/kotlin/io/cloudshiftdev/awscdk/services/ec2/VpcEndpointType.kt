@@ -7,6 +7,9 @@ public enum class VpcEndpointType(
 ) {
   INTERFACE(software.amazon.awscdk.services.ec2.VpcEndpointType.INTERFACE),
   GATEWAY(software.amazon.awscdk.services.ec2.VpcEndpointType.GATEWAY),
+  GATEWAYLOADBALANCER(software.amazon.awscdk.services.ec2.VpcEndpointType.GATEWAYLOADBALANCER),
+  SERVICENETWORK(software.amazon.awscdk.services.ec2.VpcEndpointType.SERVICENETWORK),
+  RESOURCE(software.amazon.awscdk.services.ec2.VpcEndpointType.RESOURCE),
   ;
 
   public companion object {
@@ -14,6 +17,11 @@ public enum class VpcEndpointType(
         VpcEndpointType = when (cdkObject) {
       software.amazon.awscdk.services.ec2.VpcEndpointType.INTERFACE -> VpcEndpointType.INTERFACE
       software.amazon.awscdk.services.ec2.VpcEndpointType.GATEWAY -> VpcEndpointType.GATEWAY
+      software.amazon.awscdk.services.ec2.VpcEndpointType.GATEWAYLOADBALANCER ->
+          VpcEndpointType.GATEWAYLOADBALANCER
+      software.amazon.awscdk.services.ec2.VpcEndpointType.SERVICENETWORK ->
+          VpcEndpointType.SERVICENETWORK
+      software.amazon.awscdk.services.ec2.VpcEndpointType.RESOURCE -> VpcEndpointType.RESOURCE
     }
 
     internal fun unwrap(wrapped: VpcEndpointType):

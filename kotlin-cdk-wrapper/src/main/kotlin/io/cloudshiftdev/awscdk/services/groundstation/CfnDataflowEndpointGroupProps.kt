@@ -100,6 +100,11 @@ public interface CfnDataflowEndpointGroupProps {
   /**
    * List of Endpoint Details, containing address and port for each endpoint.
    *
+   * All dataflow endpoints within a single dataflow endpoint group must be of the same type. You
+   * cannot mix AWS Ground Station Agent endpoints with Dataflow endpoints in the same group. If your
+   * use case requires both types of endpoints, you must create separate dataflow endpoint groups for
+   * each type.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html#cfn-groundstation-dataflowendpointgroup-endpointdetails)
    */
   public fun endpointDetails(): Any
@@ -135,18 +140,30 @@ public interface CfnDataflowEndpointGroupProps {
     /**
      * @param endpointDetails List of Endpoint Details, containing address and port for each
      * endpoint. 
+     * All dataflow endpoints within a single dataflow endpoint group must be of the same type. You
+     * cannot mix AWS Ground Station Agent endpoints with Dataflow endpoints in the same group. If your
+     * use case requires both types of endpoints, you must create separate dataflow endpoint groups for
+     * each type.
      */
     public fun endpointDetails(endpointDetails: IResolvable)
 
     /**
      * @param endpointDetails List of Endpoint Details, containing address and port for each
      * endpoint. 
+     * All dataflow endpoints within a single dataflow endpoint group must be of the same type. You
+     * cannot mix AWS Ground Station Agent endpoints with Dataflow endpoints in the same group. If your
+     * use case requires both types of endpoints, you must create separate dataflow endpoint groups for
+     * each type.
      */
     public fun endpointDetails(endpointDetails: List<Any>)
 
     /**
      * @param endpointDetails List of Endpoint Details, containing address and port for each
      * endpoint. 
+     * All dataflow endpoints within a single dataflow endpoint group must be of the same type. You
+     * cannot mix AWS Ground Station Agent endpoints with Dataflow endpoints in the same group. If your
+     * use case requires both types of endpoints, you must create separate dataflow endpoint groups for
+     * each type.
      */
     public fun endpointDetails(vararg endpointDetails: Any)
 
@@ -189,6 +206,10 @@ public interface CfnDataflowEndpointGroupProps {
     /**
      * @param endpointDetails List of Endpoint Details, containing address and port for each
      * endpoint. 
+     * All dataflow endpoints within a single dataflow endpoint group must be of the same type. You
+     * cannot mix AWS Ground Station Agent endpoints with Dataflow endpoints in the same group. If your
+     * use case requires both types of endpoints, you must create separate dataflow endpoint groups for
+     * each type.
      */
     override fun endpointDetails(endpointDetails: IResolvable) {
       cdkBuilder.endpointDetails(endpointDetails.let(IResolvable.Companion::unwrap))
@@ -197,6 +218,10 @@ public interface CfnDataflowEndpointGroupProps {
     /**
      * @param endpointDetails List of Endpoint Details, containing address and port for each
      * endpoint. 
+     * All dataflow endpoints within a single dataflow endpoint group must be of the same type. You
+     * cannot mix AWS Ground Station Agent endpoints with Dataflow endpoints in the same group. If your
+     * use case requires both types of endpoints, you must create separate dataflow endpoint groups for
+     * each type.
      */
     override fun endpointDetails(endpointDetails: List<Any>) {
       cdkBuilder.endpointDetails(endpointDetails.map{CdkObjectWrappers.unwrap(it)})
@@ -205,6 +230,10 @@ public interface CfnDataflowEndpointGroupProps {
     /**
      * @param endpointDetails List of Endpoint Details, containing address and port for each
      * endpoint. 
+     * All dataflow endpoints within a single dataflow endpoint group must be of the same type. You
+     * cannot mix AWS Ground Station Agent endpoints with Dataflow endpoints in the same group. If your
+     * use case requires both types of endpoints, you must create separate dataflow endpoint groups for
+     * each type.
      */
     override fun endpointDetails(vararg endpointDetails: Any): Unit =
         endpointDetails(endpointDetails.toList())
@@ -255,6 +284,11 @@ public interface CfnDataflowEndpointGroupProps {
 
     /**
      * List of Endpoint Details, containing address and port for each endpoint.
+     *
+     * All dataflow endpoints within a single dataflow endpoint group must be of the same type. You
+     * cannot mix AWS Ground Station Agent endpoints with Dataflow endpoints in the same group. If your
+     * use case requires both types of endpoints, you must create separate dataflow endpoint groups for
+     * each type.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html#cfn-groundstation-dataflowendpointgroup-endpointdetails)
      */

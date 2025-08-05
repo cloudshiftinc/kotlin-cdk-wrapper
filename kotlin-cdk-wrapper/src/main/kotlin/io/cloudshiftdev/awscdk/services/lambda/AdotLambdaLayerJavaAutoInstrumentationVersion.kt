@@ -51,6 +51,9 @@ public open class AdotLambdaLayerJavaAutoInstrumentationVersion(
     public val V1_32_0: AdotLambdaLayerJavaAutoInstrumentationVersion =
         AdotLambdaLayerJavaAutoInstrumentationVersion.wrap(software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaAutoInstrumentationVersion.V1_32_0)
 
+    public val V1_32_0_1: AdotLambdaLayerJavaAutoInstrumentationVersion =
+        AdotLambdaLayerJavaAutoInstrumentationVersion.wrap(software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaAutoInstrumentationVersion.V1_32_0_1)
+
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaAutoInstrumentationVersion):
         AdotLambdaLayerJavaAutoInstrumentationVersion =

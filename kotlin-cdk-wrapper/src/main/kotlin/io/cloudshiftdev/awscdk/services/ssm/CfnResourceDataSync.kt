@@ -113,7 +113,7 @@ public open class CfnResourceDataSync(
   )
 
   /**
-   * The name of the resource data sync.
+   *
    */
   public open fun attrSyncName(): String = unwrap(this).getAttrSyncName()
 

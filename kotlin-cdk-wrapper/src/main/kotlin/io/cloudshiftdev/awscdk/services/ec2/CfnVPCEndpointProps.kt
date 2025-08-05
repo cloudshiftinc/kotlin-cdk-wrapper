@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.ec2
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -11,6 +12,7 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a `CfnVPCEndpoint`.
@@ -23,14 +25,26 @@ import kotlin.collections.List
  * import io.cloudshiftdev.awscdk.services.ec2.*;
  * Object policyDocument;
  * CfnVPCEndpointProps cfnVPCEndpointProps = CfnVPCEndpointProps.builder()
- * .serviceName("serviceName")
  * .vpcId("vpcId")
  * // the properties below are optional
+ * .dnsOptions(DnsOptionsSpecificationProperty.builder()
+ * .dnsRecordIpType("dnsRecordIpType")
+ * .privateDnsOnlyForInboundResolverEndpoint("privateDnsOnlyForInboundResolverEndpoint")
+ * .build())
+ * .ipAddressType("ipAddressType")
  * .policyDocument(policyDocument)
  * .privateDnsEnabled(false)
+ * .resourceConfigurationArn("resourceConfigurationArn")
  * .routeTableIds(List.of("routeTableIds"))
  * .securityGroupIds(List.of("securityGroupIds"))
+ * .serviceName("serviceName")
+ * .serviceNetworkArn("serviceNetworkArn")
+ * .serviceRegion("serviceRegion")
  * .subnetIds(List.of("subnetIds"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .vpcEndpointType("vpcEndpointType")
  * .build();
  * ```
@@ -38,6 +52,20 @@ import kotlin.collections.List
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html)
  */
 public interface CfnVPCEndpointProps {
+  /**
+   * Describes the DNS options for an endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-dnsoptions)
+   */
+  public fun dnsOptions(): Any? = unwrap(this).getDnsOptions()
+
+  /**
+   * The supported IP address types.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-ipaddresstype)
+   */
+  public fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+
   /**
    * An endpoint policy, which controls access to the service from the VPC.
    *
@@ -79,6 +107,13 @@ public interface CfnVPCEndpointProps {
   public fun privateDnsEnabled(): Any? = unwrap(this).getPrivateDnsEnabled()
 
   /**
+   * The Amazon Resource Name (ARN) of the resource configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-resourceconfigurationarn)
+   */
+  public fun resourceConfigurationArn(): String? = unwrap(this).getResourceConfigurationArn()
+
+  /**
    * The IDs of the route tables.
    *
    * Routing is supported only for gateway endpoints.
@@ -102,7 +137,21 @@ public interface CfnVPCEndpointProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-servicename)
    */
-  public fun serviceName(): String
+  public fun serviceName(): String? = unwrap(this).getServiceName()
+
+  /**
+   * The Amazon Resource Name (ARN) of the service network.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-servicenetworkarn)
+   */
+  public fun serviceNetworkArn(): String? = unwrap(this).getServiceNetworkArn()
+
+  /**
+   * Describes a Region.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-serviceregion)
+   */
+  public fun serviceRegion(): String? = unwrap(this).getServiceRegion()
 
   /**
    * The IDs of the subnets in which to create endpoint network interfaces.
@@ -114,6 +163,13 @@ public interface CfnVPCEndpointProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-subnetids)
    */
   public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+
+  /**
+   * The tags to associate with the endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
    * The type of endpoint.
@@ -136,6 +192,29 @@ public interface CfnVPCEndpointProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param dnsOptions Describes the DNS options for an endpoint.
+     */
+    public fun dnsOptions(dnsOptions: IResolvable)
+
+    /**
+     * @param dnsOptions Describes the DNS options for an endpoint.
+     */
+    public fun dnsOptions(dnsOptions: CfnVPCEndpoint.DnsOptionsSpecificationProperty)
+
+    /**
+     * @param dnsOptions Describes the DNS options for an endpoint.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("4db53d0810db06a30a4b67c4d458827536098bd6ca896582a68d26aa0531e1f6")
+    public
+        fun dnsOptions(dnsOptions: CfnVPCEndpoint.DnsOptionsSpecificationProperty.Builder.() -> Unit)
+
+    /**
+     * @param ipAddressType The supported IP address types.
+     */
+    public fun ipAddressType(ipAddressType: String)
+
     /**
      * @param policyDocument An endpoint policy, which controls access to the service from the VPC.
      * The default endpoint policy allows full access to the service. Endpoint policies are
@@ -192,6 +271,11 @@ public interface CfnVPCEndpointProps {
     public fun privateDnsEnabled(privateDnsEnabled: IResolvable)
 
     /**
+     * @param resourceConfigurationArn The Amazon Resource Name (ARN) of the resource configuration.
+     */
+    public fun resourceConfigurationArn(resourceConfigurationArn: String)
+
+    /**
      * @param routeTableIds The IDs of the route tables.
      * Routing is supported only for gateway endpoints.
      */
@@ -220,9 +304,19 @@ public interface CfnVPCEndpointProps {
     public fun securityGroupIds(vararg securityGroupIds: String)
 
     /**
-     * @param serviceName The name of the endpoint service. 
+     * @param serviceName The name of the endpoint service.
      */
     public fun serviceName(serviceName: String)
+
+    /**
+     * @param serviceNetworkArn The Amazon Resource Name (ARN) of the service network.
+     */
+    public fun serviceNetworkArn(serviceNetworkArn: String)
+
+    /**
+     * @param serviceRegion Describes a Region.
+     */
+    public fun serviceRegion(serviceRegion: String)
 
     /**
      * @param subnetIds The IDs of the subnets in which to create endpoint network interfaces.
@@ -241,6 +335,16 @@ public interface CfnVPCEndpointProps {
     public fun subnetIds(vararg subnetIds: String)
 
     /**
+     * @param tags The tags to associate with the endpoint.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags The tags to associate with the endpoint.
+     */
+    public fun tags(vararg tags: CfnTag)
+
+    /**
      * @param vpcEndpointType The type of endpoint.
      * Default: Gateway
      */
@@ -255,6 +359,36 @@ public interface CfnVPCEndpointProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVPCEndpointProps.Builder =
         software.amazon.awscdk.services.ec2.CfnVPCEndpointProps.builder()
+
+    /**
+     * @param dnsOptions Describes the DNS options for an endpoint.
+     */
+    override fun dnsOptions(dnsOptions: IResolvable) {
+      cdkBuilder.dnsOptions(dnsOptions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param dnsOptions Describes the DNS options for an endpoint.
+     */
+    override fun dnsOptions(dnsOptions: CfnVPCEndpoint.DnsOptionsSpecificationProperty) {
+      cdkBuilder.dnsOptions(dnsOptions.let(CfnVPCEndpoint.DnsOptionsSpecificationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param dnsOptions Describes the DNS options for an endpoint.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("4db53d0810db06a30a4b67c4d458827536098bd6ca896582a68d26aa0531e1f6")
+    override
+        fun dnsOptions(dnsOptions: CfnVPCEndpoint.DnsOptionsSpecificationProperty.Builder.() -> Unit):
+        Unit = dnsOptions(CfnVPCEndpoint.DnsOptionsSpecificationProperty(dnsOptions))
+
+    /**
+     * @param ipAddressType The supported IP address types.
+     */
+    override fun ipAddressType(ipAddressType: String) {
+      cdkBuilder.ipAddressType(ipAddressType)
+    }
 
     /**
      * @param policyDocument An endpoint policy, which controls access to the service from the VPC.
@@ -318,6 +452,13 @@ public interface CfnVPCEndpointProps {
     }
 
     /**
+     * @param resourceConfigurationArn The Amazon Resource Name (ARN) of the resource configuration.
+     */
+    override fun resourceConfigurationArn(resourceConfigurationArn: String) {
+      cdkBuilder.resourceConfigurationArn(resourceConfigurationArn)
+    }
+
+    /**
      * @param routeTableIds The IDs of the route tables.
      * Routing is supported only for gateway endpoints.
      */
@@ -352,10 +493,24 @@ public interface CfnVPCEndpointProps {
         securityGroupIds(securityGroupIds.toList())
 
     /**
-     * @param serviceName The name of the endpoint service. 
+     * @param serviceName The name of the endpoint service.
      */
     override fun serviceName(serviceName: String) {
       cdkBuilder.serviceName(serviceName)
+    }
+
+    /**
+     * @param serviceNetworkArn The Amazon Resource Name (ARN) of the service network.
+     */
+    override fun serviceNetworkArn(serviceNetworkArn: String) {
+      cdkBuilder.serviceNetworkArn(serviceNetworkArn)
+    }
+
+    /**
+     * @param serviceRegion Describes a Region.
+     */
+    override fun serviceRegion(serviceRegion: String) {
+      cdkBuilder.serviceRegion(serviceRegion)
     }
 
     /**
@@ -375,6 +530,18 @@ public interface CfnVPCEndpointProps {
      * you can specify only one subnet.
      */
     override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
+    /**
+     * @param tags The tags to associate with the endpoint.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags The tags to associate with the endpoint.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
      * @param vpcEndpointType The type of endpoint.
@@ -398,6 +565,20 @@ public interface CfnVPCEndpointProps {
     cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointProps,
   ) : CdkObject(cdkObject),
       CfnVPCEndpointProps {
+    /**
+     * Describes the DNS options for an endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-dnsoptions)
+     */
+    override fun dnsOptions(): Any? = unwrap(this).getDnsOptions()
+
+    /**
+     * The supported IP address types.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-ipaddresstype)
+     */
+    override fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+
     /**
      * An endpoint policy, which controls access to the service from the VPC.
      *
@@ -441,6 +622,13 @@ public interface CfnVPCEndpointProps {
     override fun privateDnsEnabled(): Any? = unwrap(this).getPrivateDnsEnabled()
 
     /**
+     * The Amazon Resource Name (ARN) of the resource configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-resourceconfigurationarn)
+     */
+    override fun resourceConfigurationArn(): String? = unwrap(this).getResourceConfigurationArn()
+
+    /**
      * The IDs of the route tables.
      *
      * Routing is supported only for gateway endpoints.
@@ -465,7 +653,21 @@ public interface CfnVPCEndpointProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-servicename)
      */
-    override fun serviceName(): String = unwrap(this).getServiceName()
+    override fun serviceName(): String? = unwrap(this).getServiceName()
+
+    /**
+     * The Amazon Resource Name (ARN) of the service network.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-servicenetworkarn)
+     */
+    override fun serviceNetworkArn(): String? = unwrap(this).getServiceNetworkArn()
+
+    /**
+     * Describes a Region.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-serviceregion)
+     */
+    override fun serviceRegion(): String? = unwrap(this).getServiceRegion()
 
     /**
      * The IDs of the subnets in which to create endpoint network interfaces.
@@ -477,6 +679,13 @@ public interface CfnVPCEndpointProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-subnetids)
      */
     override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+
+    /**
+     * The tags to associate with the endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
      * The type of endpoint.

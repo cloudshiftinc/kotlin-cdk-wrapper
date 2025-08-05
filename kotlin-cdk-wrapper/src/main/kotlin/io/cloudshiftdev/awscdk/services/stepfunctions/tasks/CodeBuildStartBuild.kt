@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.services.codebuild.BuildEnvironmentVariable
 import io.cloudshiftdev.awscdk.services.codebuild.IProject
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
+import io.cloudshiftdev.awscdk.services.stepfunctions.QueryLanguage
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBase
 import io.cloudshiftdev.awscdk.services.stepfunctions.Timeout
 import kotlin.Any
@@ -74,11 +75,24 @@ public open class CodeBuildStartBuild(
   @CdkDslMarker
   public interface Builder {
     /**
-     * An optional description for this state.
+     * Workflow variables to store in this step.
      *
-     * Default: - No comment
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
      *
-     * @param comment An optional description for this state. 
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    public fun assign(assign: Map<String, Any>)
+
+    /**
+     * A comment describing this state.
+     *
+     * Default: No comment
+     *
+     * @param comment A comment describing this state. 
      */
     public fun comment(comment: String)
 
@@ -150,7 +164,7 @@ public open class CodeBuildStartBuild(
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      *
      * @param inputPath JSONPath expression to select part of the state to be the input to this
      * state. 
@@ -176,18 +190,33 @@ public open class CodeBuildStartBuild(
     public fun integrationPattern(integrationPattern: IntegrationPattern)
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      *
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state. 
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state. 
      */
     public fun outputPath(outputPath: String)
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    public fun outputs(outputs: Any)
 
     /**
      * CodeBuild project to start.
@@ -197,12 +226,24 @@ public open class CodeBuildStartBuild(
     public fun project(project: IProject)
 
     /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
+
+    /**
      * JSONPath expression to indicate where to inject the state's output.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      *
      * @param resultPath JSONPath expression to indicate where to inject the state's output. 
      */
@@ -266,11 +307,26 @@ public open class CodeBuildStartBuild(
         id)
 
     /**
-     * An optional description for this state.
+     * Workflow variables to store in this step.
      *
-     * Default: - No comment
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
      *
-     * @param comment An optional description for this state. 
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * A comment describing this state.
+     *
+     * Default: No comment
+     *
+     * @param comment A comment describing this state. 
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -353,7 +409,7 @@ public open class CodeBuildStartBuild(
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      *
      * @param inputPath JSONPath expression to select part of the state to be the input to this
      * state. 
@@ -383,19 +439,36 @@ public open class CodeBuildStartBuild(
     }
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      *
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state. 
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state. 
      */
     override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
+    }
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    override fun outputs(outputs: Any) {
+      cdkBuilder.outputs(outputs)
     }
 
     /**
@@ -408,12 +481,26 @@ public open class CodeBuildStartBuild(
     }
 
     /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
+    }
+
+    /**
      * JSONPath expression to indicate where to inject the state's output.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      *
      * @param resultPath JSONPath expression to indicate where to inject the state's output. 
      */
@@ -481,6 +568,40 @@ public open class CodeBuildStartBuild(
   }
 
   public companion object {
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: CodeBuildStartBuildJsonPathProps,
+    ): CodeBuildStartBuild =
+        software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuild.jsonPath(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        props.let(CodeBuildStartBuildJsonPathProps.Companion::unwrap)).let(CodeBuildStartBuild::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c64819535284b4b4022f2b6820c8853ea824c6fd0426d5a9a80cba31cd1e393a")
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: CodeBuildStartBuildJsonPathProps.Builder.() -> Unit,
+    ): CodeBuildStartBuild = jsonPath(scope, id, CodeBuildStartBuildJsonPathProps(props))
+
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: CodeBuildStartBuildJsonataProps,
+    ): CodeBuildStartBuild =
+        software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuild.jsonata(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        props.let(CodeBuildStartBuildJsonataProps.Companion::unwrap)).let(CodeBuildStartBuild::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("27ab5de7e178a76220bef733aafa0574093990d5a513cbc0e3fdd856f5a81413")
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: CodeBuildStartBuildJsonataProps.Builder.() -> Unit,
+    ): CodeBuildStartBuild = jsonata(scope, id, CodeBuildStartBuildJsonataProps(props))
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

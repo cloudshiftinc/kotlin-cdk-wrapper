@@ -172,6 +172,11 @@ public open class CfnBroker(
   public open fun attrConfigurationRevision(): Number = unwrap(this).getAttrConfigurationRevision()
 
   /**
+   *
+   */
+  public open fun attrConsoleUrLs(): List<String> = unwrap(this).getAttrConsoleUrLs()
+
+  /**
    * Required.
    *
    * The unique ID that Amazon MQ generates for the configuration.

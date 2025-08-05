@@ -13,8 +13,7 @@ import kotlin.String
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.kinesisfirehose.alpha.*;
- * import io.cloudshiftdev.awscdk.services.kinesisfirehose.destinations.alpha.*;
+ * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
  * LogGroup logGroupDestination = LogGroup.Builder.create(this, "LogGroupLambdaAudit")
  * .logGroupName("auditDestinationForCDK")
  * .build();

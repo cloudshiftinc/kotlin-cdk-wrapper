@@ -68,7 +68,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .bannerText("bannerText")
  * .build())
+ * .clientRouteEnforcementOptions(ClientRouteEnforcementOptionsProperty.builder()
+ * .enforced(false)
+ * .build())
  * .description("description")
+ * .disconnectOnSessionTimeout(false)
  * .dnsServers(List.of("dnsServers"))
  * .securityGroupIds(List.of("securityGroupIds"))
  * .selfServicePortal("selfServicePortal")
@@ -211,6 +215,39 @@ public open class CfnClientVpnEndpoint(
       Unit = clientLoginBannerOptions(ClientLoginBannerOptionsProperty(`value`))
 
   /**
+   * Client route enforcement is a feature of the Client VPN service that helps enforce
+   * administrator defined routes on devices connected through the VPN.
+   */
+  public open fun clientRouteEnforcementOptions(): Any? =
+      unwrap(this).getClientRouteEnforcementOptions()
+
+  /**
+   * Client route enforcement is a feature of the Client VPN service that helps enforce
+   * administrator defined routes on devices connected through the VPN.
+   */
+  public open fun clientRouteEnforcementOptions(`value`: IResolvable) {
+    unwrap(this).setClientRouteEnforcementOptions(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Client route enforcement is a feature of the Client VPN service that helps enforce
+   * administrator defined routes on devices connected through the VPN.
+   */
+  public open fun clientRouteEnforcementOptions(`value`: ClientRouteEnforcementOptionsProperty) {
+    unwrap(this).setClientRouteEnforcementOptions(`value`.let(ClientRouteEnforcementOptionsProperty.Companion::unwrap))
+  }
+
+  /**
+   * Client route enforcement is a feature of the Client VPN service that helps enforce
+   * administrator defined routes on devices connected through the VPN.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("5bef10ad6df8851733e0332afe163724584b29205f069899de4cb074bdcd65c6")
+  public open
+      fun clientRouteEnforcementOptions(`value`: ClientRouteEnforcementOptionsProperty.Builder.() -> Unit):
+      Unit = clientRouteEnforcementOptions(ClientRouteEnforcementOptionsProperty(`value`))
+
+  /**
    * Information about the client connection logging options.
    */
   public open fun connectionLogOptions(): Any = unwrap(this).getConnectionLogOptions()
@@ -247,6 +284,28 @@ public open class CfnClientVpnEndpoint(
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
+  }
+
+  /**
+   * Indicates whether the client VPN session is disconnected after the maximum
+   * `sessionTimeoutHours` is reached.
+   */
+  public open fun disconnectOnSessionTimeout(): Any? = unwrap(this).getDisconnectOnSessionTimeout()
+
+  /**
+   * Indicates whether the client VPN session is disconnected after the maximum
+   * `sessionTimeoutHours` is reached.
+   */
+  public open fun disconnectOnSessionTimeout(`value`: Boolean) {
+    unwrap(this).setDisconnectOnSessionTimeout(`value`)
+  }
+
+  /**
+   * Indicates whether the client VPN session is disconnected after the maximum
+   * `sessionTimeoutHours` is reached.
+   */
+  public open fun disconnectOnSessionTimeout(`value`: IResolvable) {
+    unwrap(this).setDisconnectOnSessionTimeout(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -519,6 +578,64 @@ public open class CfnClientVpnEndpoint(
         fun clientLoginBannerOptions(clientLoginBannerOptions: ClientLoginBannerOptionsProperty.Builder.() -> Unit)
 
     /**
+     * Client route enforcement is a feature of the Client VPN service that helps enforce
+     * administrator defined routes on devices connected through the VPN.
+     *
+     * T his feature helps improve your security posture by ensuring that network traffic
+     * originating from a connected client is not inadvertently sent outside the VPN tunnel.
+     *
+     * Client route enforcement works by monitoring the route table of a connected device for
+     * routing policy changes to the VPN connection. If the feature detects any VPN routing policy
+     * modifications, it will automatically force an update to the route table, reverting it back to
+     * the expected route configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-clientrouteenforcementoptions)
+     * @param clientRouteEnforcementOptions Client route enforcement is a feature of the Client VPN
+     * service that helps enforce administrator defined routes on devices connected through the VPN. 
+     */
+    public fun clientRouteEnforcementOptions(clientRouteEnforcementOptions: IResolvable)
+
+    /**
+     * Client route enforcement is a feature of the Client VPN service that helps enforce
+     * administrator defined routes on devices connected through the VPN.
+     *
+     * T his feature helps improve your security posture by ensuring that network traffic
+     * originating from a connected client is not inadvertently sent outside the VPN tunnel.
+     *
+     * Client route enforcement works by monitoring the route table of a connected device for
+     * routing policy changes to the VPN connection. If the feature detects any VPN routing policy
+     * modifications, it will automatically force an update to the route table, reverting it back to
+     * the expected route configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-clientrouteenforcementoptions)
+     * @param clientRouteEnforcementOptions Client route enforcement is a feature of the Client VPN
+     * service that helps enforce administrator defined routes on devices connected through the VPN. 
+     */
+    public
+        fun clientRouteEnforcementOptions(clientRouteEnforcementOptions: ClientRouteEnforcementOptionsProperty)
+
+    /**
+     * Client route enforcement is a feature of the Client VPN service that helps enforce
+     * administrator defined routes on devices connected through the VPN.
+     *
+     * T his feature helps improve your security posture by ensuring that network traffic
+     * originating from a connected client is not inadvertently sent outside the VPN tunnel.
+     *
+     * Client route enforcement works by monitoring the route table of a connected device for
+     * routing policy changes to the VPN connection. If the feature detects any VPN routing policy
+     * modifications, it will automatically force an update to the route table, reverting it back to
+     * the expected route configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-clientrouteenforcementoptions)
+     * @param clientRouteEnforcementOptions Client route enforcement is a feature of the Client VPN
+     * service that helps enforce administrator defined routes on devices connected through the VPN. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8426b5c85dd5139771358064773fee5072c3dd50e8def7a60e1d8cf317073c4a")
+    public
+        fun clientRouteEnforcementOptions(clientRouteEnforcementOptions: ClientRouteEnforcementOptionsProperty.Builder.() -> Unit)
+
+    /**
      * Information about the client connection logging options.
      *
      * If you enable client connection logging, data about client connections is sent to a
@@ -576,6 +693,32 @@ public open class CfnClientVpnEndpoint(
      * @param description A brief description of the Client VPN endpoint. 
      */
     public fun description(description: String)
+
+    /**
+     * Indicates whether the client VPN session is disconnected after the maximum
+     * `sessionTimeoutHours` is reached.
+     *
+     * If `true` , users are prompted to reconnect client VPN. If `false` , client VPN attempts to
+     * reconnect automatically. The default value is `true` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-disconnectonsessiontimeout)
+     * @param disconnectOnSessionTimeout Indicates whether the client VPN session is disconnected
+     * after the maximum `sessionTimeoutHours` is reached. 
+     */
+    public fun disconnectOnSessionTimeout(disconnectOnSessionTimeout: Boolean)
+
+    /**
+     * Indicates whether the client VPN session is disconnected after the maximum
+     * `sessionTimeoutHours` is reached.
+     *
+     * If `true` , users are prompted to reconnect client VPN. If `false` , client VPN attempts to
+     * reconnect automatically. The default value is `true` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-disconnectonsessiontimeout)
+     * @param disconnectOnSessionTimeout Indicates whether the client VPN session is disconnected
+     * after the maximum `sessionTimeoutHours` is reached. 
+     */
+    public fun disconnectOnSessionTimeout(disconnectOnSessionTimeout: IResolvable)
 
     /**
      * Information about the DNS servers to be used for DNS resolution.
@@ -871,6 +1014,70 @@ public open class CfnClientVpnEndpoint(
         Unit = clientLoginBannerOptions(ClientLoginBannerOptionsProperty(clientLoginBannerOptions))
 
     /**
+     * Client route enforcement is a feature of the Client VPN service that helps enforce
+     * administrator defined routes on devices connected through the VPN.
+     *
+     * T his feature helps improve your security posture by ensuring that network traffic
+     * originating from a connected client is not inadvertently sent outside the VPN tunnel.
+     *
+     * Client route enforcement works by monitoring the route table of a connected device for
+     * routing policy changes to the VPN connection. If the feature detects any VPN routing policy
+     * modifications, it will automatically force an update to the route table, reverting it back to
+     * the expected route configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-clientrouteenforcementoptions)
+     * @param clientRouteEnforcementOptions Client route enforcement is a feature of the Client VPN
+     * service that helps enforce administrator defined routes on devices connected through the VPN. 
+     */
+    override fun clientRouteEnforcementOptions(clientRouteEnforcementOptions: IResolvable) {
+      cdkBuilder.clientRouteEnforcementOptions(clientRouteEnforcementOptions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Client route enforcement is a feature of the Client VPN service that helps enforce
+     * administrator defined routes on devices connected through the VPN.
+     *
+     * T his feature helps improve your security posture by ensuring that network traffic
+     * originating from a connected client is not inadvertently sent outside the VPN tunnel.
+     *
+     * Client route enforcement works by monitoring the route table of a connected device for
+     * routing policy changes to the VPN connection. If the feature detects any VPN routing policy
+     * modifications, it will automatically force an update to the route table, reverting it back to
+     * the expected route configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-clientrouteenforcementoptions)
+     * @param clientRouteEnforcementOptions Client route enforcement is a feature of the Client VPN
+     * service that helps enforce administrator defined routes on devices connected through the VPN. 
+     */
+    override
+        fun clientRouteEnforcementOptions(clientRouteEnforcementOptions: ClientRouteEnforcementOptionsProperty) {
+      cdkBuilder.clientRouteEnforcementOptions(clientRouteEnforcementOptions.let(ClientRouteEnforcementOptionsProperty.Companion::unwrap))
+    }
+
+    /**
+     * Client route enforcement is a feature of the Client VPN service that helps enforce
+     * administrator defined routes on devices connected through the VPN.
+     *
+     * T his feature helps improve your security posture by ensuring that network traffic
+     * originating from a connected client is not inadvertently sent outside the VPN tunnel.
+     *
+     * Client route enforcement works by monitoring the route table of a connected device for
+     * routing policy changes to the VPN connection. If the feature detects any VPN routing policy
+     * modifications, it will automatically force an update to the route table, reverting it back to
+     * the expected route configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-clientrouteenforcementoptions)
+     * @param clientRouteEnforcementOptions Client route enforcement is a feature of the Client VPN
+     * service that helps enforce administrator defined routes on devices connected through the VPN. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8426b5c85dd5139771358064773fee5072c3dd50e8def7a60e1d8cf317073c4a")
+    override
+        fun clientRouteEnforcementOptions(clientRouteEnforcementOptions: ClientRouteEnforcementOptionsProperty.Builder.() -> Unit):
+        Unit =
+        clientRouteEnforcementOptions(ClientRouteEnforcementOptionsProperty(clientRouteEnforcementOptions))
+
+    /**
      * Information about the client connection logging options.
      *
      * If you enable client connection logging, data about client connections is sent to a
@@ -934,6 +1141,36 @@ public open class CfnClientVpnEndpoint(
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
+    }
+
+    /**
+     * Indicates whether the client VPN session is disconnected after the maximum
+     * `sessionTimeoutHours` is reached.
+     *
+     * If `true` , users are prompted to reconnect client VPN. If `false` , client VPN attempts to
+     * reconnect automatically. The default value is `true` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-disconnectonsessiontimeout)
+     * @param disconnectOnSessionTimeout Indicates whether the client VPN session is disconnected
+     * after the maximum `sessionTimeoutHours` is reached. 
+     */
+    override fun disconnectOnSessionTimeout(disconnectOnSessionTimeout: Boolean) {
+      cdkBuilder.disconnectOnSessionTimeout(disconnectOnSessionTimeout)
+    }
+
+    /**
+     * Indicates whether the client VPN session is disconnected after the maximum
+     * `sessionTimeoutHours` is reached.
+     *
+     * If `true` , users are prompted to reconnect client VPN. If `false` , client VPN attempts to
+     * reconnect automatically. The default value is `true` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-disconnectonsessiontimeout)
+     * @param disconnectOnSessionTimeout Indicates whether the client VPN session is disconnected
+     * after the maximum `sessionTimeoutHours` is reached. 
+     */
+    override fun disconnectOnSessionTimeout(disconnectOnSessionTimeout: IResolvable) {
+      cdkBuilder.disconnectOnSessionTimeout(disconnectOnSessionTimeout.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1845,6 +2082,144 @@ public open class CfnClientVpnEndpoint(
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientLoginBannerOptionsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientLoginBannerOptionsProperty
+    }
+  }
+
+  /**
+   * Client Route Enforcement is a feature of Client VPN that helps enforce administrator defined
+   * routes on devices connected through the VPN.
+   *
+   * This feature helps improve your security posture by ensuring that network traffic originating
+   * from a connected client is not inadvertently sent outside the VPN tunnel.
+   *
+   * Client Route Enforcement works by monitoring the route table of a connected device for routing
+   * policy changes to the VPN connection. If the feature detects any VPN routing policy modifications,
+   * it will automatically force an update to the route table, reverting it back to the expected route
+   * configurations.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * ClientRouteEnforcementOptionsProperty clientRouteEnforcementOptionsProperty =
+   * ClientRouteEnforcementOptionsProperty.builder()
+   * .enforced(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientrouteenforcementoptions.html)
+   */
+  public interface ClientRouteEnforcementOptionsProperty {
+    /**
+     * Enable or disable Client Route Enforcement.
+     *
+     * The state can either be `true` (enabled) or `false` (disabled). The default is `false` .
+     *
+     * Valid values: `true | false`
+     *
+     * Default value: `false`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientrouteenforcementoptions.html#cfn-ec2-clientvpnendpoint-clientrouteenforcementoptions-enforced)
+     */
+    public fun enforced(): Any? = unwrap(this).getEnforced()
+
+    /**
+     * A builder for [ClientRouteEnforcementOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enforced Enable or disable Client Route Enforcement.
+       * The state can either be `true` (enabled) or `false` (disabled). The default is `false` .
+       *
+       * Valid values: `true | false`
+       *
+       * Default value: `false`
+       */
+      public fun enforced(enforced: Boolean)
+
+      /**
+       * @param enforced Enable or disable Client Route Enforcement.
+       * The state can either be `true` (enabled) or `false` (disabled). The default is `false` .
+       *
+       * Valid values: `true | false`
+       *
+       * Default value: `false`
+       */
+      public fun enforced(enforced: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientRouteEnforcementOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientRouteEnforcementOptionsProperty.builder()
+
+      /**
+       * @param enforced Enable or disable Client Route Enforcement.
+       * The state can either be `true` (enabled) or `false` (disabled). The default is `false` .
+       *
+       * Valid values: `true | false`
+       *
+       * Default value: `false`
+       */
+      override fun enforced(enforced: Boolean) {
+        cdkBuilder.enforced(enforced)
+      }
+
+      /**
+       * @param enforced Enable or disable Client Route Enforcement.
+       * The state can either be `true` (enabled) or `false` (disabled). The default is `false` .
+       *
+       * Valid values: `true | false`
+       *
+       * Default value: `false`
+       */
+      override fun enforced(enforced: IResolvable) {
+        cdkBuilder.enforced(enforced.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientRouteEnforcementOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientRouteEnforcementOptionsProperty,
+    ) : CdkObject(cdkObject),
+        ClientRouteEnforcementOptionsProperty {
+      /**
+       * Enable or disable Client Route Enforcement.
+       *
+       * The state can either be `true` (enabled) or `false` (disabled). The default is `false` .
+       *
+       * Valid values: `true | false`
+       *
+       * Default value: `false`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientrouteenforcementoptions.html#cfn-ec2-clientvpnendpoint-clientrouteenforcementoptions-enforced)
+       */
+      override fun enforced(): Any? = unwrap(this).getEnforced()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ClientRouteEnforcementOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientRouteEnforcementOptionsProperty):
+          ClientRouteEnforcementOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClientRouteEnforcementOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClientRouteEnforcementOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientRouteEnforcementOptionsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientRouteEnforcementOptionsProperty
     }
   }
 

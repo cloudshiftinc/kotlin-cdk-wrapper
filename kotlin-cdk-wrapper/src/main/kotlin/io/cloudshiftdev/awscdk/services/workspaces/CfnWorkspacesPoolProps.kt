@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -36,6 +37,7 @@ import kotlin.jvm.JvmName
  * .settingsGroup("settingsGroup")
  * .build())
  * .description("description")
+ * .runningMode("runningMode")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -94,10 +96,17 @@ public interface CfnWorkspacesPoolProps {
   public fun poolName(): String
 
   /**
-   * The tags for the pool.
+   * The running mode of the pool.
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspacespool.html#cfn-workspaces-workspacespool-tags)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspacespool.html#cfn-workspaces-workspacespool-runningmode)
    */
+  public fun runningMode(): String? = unwrap(this).getRunningMode()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspacespool.html#cfn-workspaces-workspacespool-tags)
+   * @deprecated this property has been deprecated
+   */
+  @Deprecated(message = "deprecated in CDK")
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
@@ -173,13 +182,22 @@ public interface CfnWorkspacesPoolProps {
     public fun poolName(poolName: String)
 
     /**
-     * @param tags The tags for the pool.
+     * @param runningMode The running mode of the pool.
      */
+    public fun runningMode(runningMode: String)
+
+    /**
+     * @param tags the value to be set.
+     * @deprecated this property has been deprecated
+     */
+    @Deprecated(message = "deprecated in CDK")
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags The tags for the pool.
+     * @param tags the value to be set.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun tags(vararg tags: CfnTag)
 
     /**
@@ -294,15 +312,26 @@ public interface CfnWorkspacesPoolProps {
     }
 
     /**
-     * @param tags The tags for the pool.
+     * @param runningMode The running mode of the pool.
      */
+    override fun runningMode(runningMode: String) {
+      cdkBuilder.runningMode(runningMode)
+    }
+
+    /**
+     * @param tags the value to be set.
+     * @deprecated this property has been deprecated
+     */
+    @Deprecated(message = "deprecated in CDK")
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags The tags for the pool.
+     * @param tags the value to be set.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
@@ -391,10 +420,17 @@ public interface CfnWorkspacesPoolProps {
     override fun poolName(): String = unwrap(this).getPoolName()
 
     /**
-     * The tags for the pool.
+     * The running mode of the pool.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspacespool.html#cfn-workspaces-workspacespool-tags)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspacespool.html#cfn-workspaces-workspacespool-runningmode)
      */
+    override fun runningMode(): String? = unwrap(this).getRunningMode()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspacespool.html#cfn-workspaces-workspacespool-tags)
+     * @deprecated this property has been deprecated
+     */
+    @Deprecated(message = "deprecated in CDK")
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**

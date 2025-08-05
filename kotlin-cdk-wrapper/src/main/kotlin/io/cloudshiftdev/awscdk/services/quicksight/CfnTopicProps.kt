@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.quicksight
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -10,6 +11,7 @@ import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a `CfnTopic`.
@@ -22,6 +24,9 @@ import kotlin.collections.List
  * import io.cloudshiftdev.awscdk.services.quicksight.*;
  * CfnTopicProps cfnTopicProps = CfnTopicProps.builder()
  * .awsAccountId("awsAccountId")
+ * .configOptions(TopicConfigOptionsProperty.builder()
+ * .qBusinessInsightsEnabled(false)
+ * .build())
  * .dataSets(List.of(DatasetMetadataProperty.builder()
  * .datasetArn("datasetArn")
  * // the properties below are optional
@@ -223,7 +228,12 @@ import kotlin.collections.List
  * .build()))
  * .build()))
  * .description("description")
+ * .folderArns(List.of("folderArns"))
  * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .topicId("topicId")
  * .userExperienceVersion("userExperienceVersion")
  * .build();
@@ -240,6 +250,13 @@ public interface CfnTopicProps {
   public fun awsAccountId(): String? = unwrap(this).getAwsAccountId()
 
   /**
+   * Configuration options for a `Topic` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-configoptions)
+   */
+  public fun configOptions(): Any? = unwrap(this).getConfigOptions()
+
+  /**
    * The data sets that the topic is associated with.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-datasets)
@@ -254,11 +271,21 @@ public interface CfnTopicProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-folderarns)
+   */
+  public fun folderArns(): List<String> = unwrap(this).getFolderArns() ?: emptyList()
+
+  /**
    * The name of the topic.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-name)
    */
   public fun name(): String? = unwrap(this).getName()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
    * The ID for the topic.
@@ -287,6 +314,23 @@ public interface CfnTopicProps {
     public fun awsAccountId(awsAccountId: String)
 
     /**
+     * @param configOptions Configuration options for a `Topic` .
+     */
+    public fun configOptions(configOptions: IResolvable)
+
+    /**
+     * @param configOptions Configuration options for a `Topic` .
+     */
+    public fun configOptions(configOptions: CfnTopic.TopicConfigOptionsProperty)
+
+    /**
+     * @param configOptions Configuration options for a `Topic` .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("47ca79b247db060b990e0e5b4635b47a81b4ee72e9d9a8fdfee8bfd85e85f71a")
+    public fun configOptions(configOptions: CfnTopic.TopicConfigOptionsProperty.Builder.() -> Unit)
+
+    /**
      * @param dataSets The data sets that the topic is associated with.
      */
     public fun dataSets(dataSets: IResolvable)
@@ -307,9 +351,29 @@ public interface CfnTopicProps {
     public fun description(description: String)
 
     /**
+     * @param folderArns the value to be set.
+     */
+    public fun folderArns(folderArns: List<String>)
+
+    /**
+     * @param folderArns the value to be set.
+     */
+    public fun folderArns(vararg folderArns: String)
+
+    /**
      * @param name The name of the topic.
      */
     public fun name(name: String)
+
+    /**
+     * @param tags the value to be set.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags the value to be set.
+     */
+    public fun tags(vararg tags: CfnTag)
 
     /**
      * @param topicId The ID for the topic.
@@ -333,6 +397,29 @@ public interface CfnTopicProps {
     override fun awsAccountId(awsAccountId: String) {
       cdkBuilder.awsAccountId(awsAccountId)
     }
+
+    /**
+     * @param configOptions Configuration options for a `Topic` .
+     */
+    override fun configOptions(configOptions: IResolvable) {
+      cdkBuilder.configOptions(configOptions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param configOptions Configuration options for a `Topic` .
+     */
+    override fun configOptions(configOptions: CfnTopic.TopicConfigOptionsProperty) {
+      cdkBuilder.configOptions(configOptions.let(CfnTopic.TopicConfigOptionsProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param configOptions Configuration options for a `Topic` .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("47ca79b247db060b990e0e5b4635b47a81b4ee72e9d9a8fdfee8bfd85e85f71a")
+    override
+        fun configOptions(configOptions: CfnTopic.TopicConfigOptionsProperty.Builder.() -> Unit):
+        Unit = configOptions(CfnTopic.TopicConfigOptionsProperty(configOptions))
 
     /**
      * @param dataSets The data sets that the topic is associated with.
@@ -361,11 +448,35 @@ public interface CfnTopicProps {
     }
 
     /**
+     * @param folderArns the value to be set.
+     */
+    override fun folderArns(folderArns: List<String>) {
+      cdkBuilder.folderArns(folderArns)
+    }
+
+    /**
+     * @param folderArns the value to be set.
+     */
+    override fun folderArns(vararg folderArns: String): Unit = folderArns(folderArns.toList())
+
+    /**
      * @param name The name of the topic.
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
+
+    /**
+     * @param tags the value to be set.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags the value to be set.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
      * @param topicId The ID for the topic.
@@ -398,6 +509,13 @@ public interface CfnTopicProps {
     override fun awsAccountId(): String? = unwrap(this).getAwsAccountId()
 
     /**
+     * Configuration options for a `Topic` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-configoptions)
+     */
+    override fun configOptions(): Any? = unwrap(this).getConfigOptions()
+
+    /**
      * The data sets that the topic is associated with.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-datasets)
@@ -412,11 +530,21 @@ public interface CfnTopicProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-folderarns)
+     */
+    override fun folderArns(): List<String> = unwrap(this).getFolderArns() ?: emptyList()
+
+    /**
      * The name of the topic.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-name)
      */
     override fun name(): String? = unwrap(this).getName()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
      * The ID for the topic.

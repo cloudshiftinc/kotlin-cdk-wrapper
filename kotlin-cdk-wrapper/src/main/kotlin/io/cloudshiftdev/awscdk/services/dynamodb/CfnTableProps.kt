@@ -105,6 +105,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty.builder()
  * .pointInTimeRecoveryEnabled(false)
+ * .recoveryPeriodInDays(123)
  * .build())
  * .provisionedThroughput(ProvisionedThroughputProperty.builder()
  * .readCapacityUnits(123)
@@ -165,13 +166,14 @@ public interface CfnTableProps {
    *
    * Valid values include:
    *
-   * * `PROVISIONED` - We recommend using `PROVISIONED` for predictable workloads. `PROVISIONED`
-   * sets the billing mode to [Provisioned
-   * Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.ProvisionedThroughput.Manual)
+   * * `PAY_PER_REQUEST` - We recommend using `PAY_PER_REQUEST` for most DynamoDB workloads.
+   * `PAY_PER_REQUEST` sets the billing mode to [On-demand capacity
+   * mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/on-demand-capacity-mode.html)
    * .
-   * * `PAY_PER_REQUEST` - We recommend using `PAY_PER_REQUEST` for unpredictable workloads.
-   * `PAY_PER_REQUEST` sets the billing mode to [On-Demand
-   * Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.OnDemand)
+   * * `PROVISIONED` - We recommend using `PROVISIONED` for steady workloads with predictable growth
+   * where capacity requirements can be reliably forecasted. `PROVISIONED` sets the billing mode to
+   * [Provisioned capacity
+   * mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/provisioned-capacity-mode.html)
    * .
    *
    * If not specified, the default is `PROVISIONED` .
@@ -305,20 +307,21 @@ public interface CfnTableProps {
   public fun provisionedThroughput(): Any? = unwrap(this).getProvisionedThroughput()
 
   /**
-   * A resource-based policy document that contains permissions to add to the specified table.
+   * An AWS resource-based policy document in JSON format that will be attached to the table.
    *
-   * In a CloudFormation template, you can provide the policy in JSON or YAML format because
-   * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information about
-   * resource-based policies, see [Using resource-based policies for
-   * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
-   * and [Resource-based policy
-   * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+   * When you attach a resource-based policy while creating a table, the policy application is
+   * *strongly consistent* .
    *
-   * When you attach a resource-based policy while creating a table, the policy creation is
-   * *strongly consistent* . For information about the considerations that you should keep in mind
-   * while attaching a resource-based policy, see [Resource-based policy
+   * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts
+   * whitespaces when calculating the size of a policy against this limit. For a full list of all
+   * considerations that apply for resource-based policies, see [Resource-based policy
    * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
    * .
+   *
+   *
+   * You need to specify the `CreateTable` and `PutResourcePolicy` IAM actions for authorizing a
+   * user to create a table with a resource-based policy.
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
    */
@@ -439,13 +442,14 @@ public interface CfnTableProps {
      * manage capacity.
      * Valid values include:
      *
-     * * `PROVISIONED` - We recommend using `PROVISIONED` for predictable workloads. `PROVISIONED`
-     * sets the billing mode to [Provisioned
-     * Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.ProvisionedThroughput.Manual)
+     * * `PAY_PER_REQUEST` - We recommend using `PAY_PER_REQUEST` for most DynamoDB workloads.
+     * `PAY_PER_REQUEST` sets the billing mode to [On-demand capacity
+     * mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/on-demand-capacity-mode.html)
      * .
-     * * `PAY_PER_REQUEST` - We recommend using `PAY_PER_REQUEST` for unpredictable workloads.
-     * `PAY_PER_REQUEST` sets the billing mode to [On-Demand
-     * Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.OnDemand)
+     * * `PROVISIONED` - We recommend using `PROVISIONED` for steady workloads with predictable
+     * growth where capacity requirements can be reliably forecasted. `PROVISIONED` sets the billing
+     * mode to [Provisioned capacity
+     * mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/provisioned-capacity-mode.html)
      * .
      *
      * If not specified, the default is `PROVISIONED` .
@@ -757,56 +761,56 @@ public interface CfnTableProps {
         fun provisionedThroughput(provisionedThroughput: CfnTable.ProvisionedThroughputProperty.Builder.() -> Unit)
 
     /**
-     * @param resourcePolicy A resource-based policy document that contains permissions to add to
-     * the specified table.
-     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
-     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
-     * about resource-based policies, see [Using resource-based policies for
-     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
-     * and [Resource-based policy
-     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     * @param resourcePolicy An AWS resource-based policy document in JSON format that will be
+     * attached to the table.
+     * When you attach a resource-based policy while creating a table, the policy application is
+     * *strongly consistent* .
      *
-     * When you attach a resource-based policy while creating a table, the policy creation is
-     * *strongly consistent* . For information about the considerations that you should keep in mind
-     * while attaching a resource-based policy, see [Resource-based policy
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts
+     * whitespaces when calculating the size of a policy against this limit. For a full list of all
+     * considerations that apply for resource-based policies, see [Resource-based policy
      * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
      * .
+     *
+     *
+     * You need to specify the `CreateTable` and `PutResourcePolicy` IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
      */
     public fun resourcePolicy(resourcePolicy: IResolvable)
 
     /**
-     * @param resourcePolicy A resource-based policy document that contains permissions to add to
-     * the specified table.
-     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
-     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
-     * about resource-based policies, see [Using resource-based policies for
-     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
-     * and [Resource-based policy
-     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     * @param resourcePolicy An AWS resource-based policy document in JSON format that will be
+     * attached to the table.
+     * When you attach a resource-based policy while creating a table, the policy application is
+     * *strongly consistent* .
      *
-     * When you attach a resource-based policy while creating a table, the policy creation is
-     * *strongly consistent* . For information about the considerations that you should keep in mind
-     * while attaching a resource-based policy, see [Resource-based policy
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts
+     * whitespaces when calculating the size of a policy against this limit. For a full list of all
+     * considerations that apply for resource-based policies, see [Resource-based policy
      * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
      * .
+     *
+     *
+     * You need to specify the `CreateTable` and `PutResourcePolicy` IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
      */
     public fun resourcePolicy(resourcePolicy: CfnTable.ResourcePolicyProperty)
 
     /**
-     * @param resourcePolicy A resource-based policy document that contains permissions to add to
-     * the specified table.
-     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
-     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
-     * about resource-based policies, see [Using resource-based policies for
-     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
-     * and [Resource-based policy
-     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     * @param resourcePolicy An AWS resource-based policy document in JSON format that will be
+     * attached to the table.
+     * When you attach a resource-based policy while creating a table, the policy application is
+     * *strongly consistent* .
      *
-     * When you attach a resource-based policy while creating a table, the policy creation is
-     * *strongly consistent* . For information about the considerations that you should keep in mind
-     * while attaching a resource-based policy, see [Resource-based policy
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts
+     * whitespaces when calculating the size of a policy against this limit. For a full list of all
+     * considerations that apply for resource-based policies, see [Resource-based policy
      * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
      * .
+     *
+     *
+     * You need to specify the `CreateTable` and `PutResourcePolicy` IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("10e80221d99cc74afc329f0fd4a910679ebd3c01b9d358a32301040ee1b08a26")
@@ -985,13 +989,14 @@ public interface CfnTableProps {
      * manage capacity.
      * Valid values include:
      *
-     * * `PROVISIONED` - We recommend using `PROVISIONED` for predictable workloads. `PROVISIONED`
-     * sets the billing mode to [Provisioned
-     * Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.ProvisionedThroughput.Manual)
+     * * `PAY_PER_REQUEST` - We recommend using `PAY_PER_REQUEST` for most DynamoDB workloads.
+     * `PAY_PER_REQUEST` sets the billing mode to [On-demand capacity
+     * mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/on-demand-capacity-mode.html)
      * .
-     * * `PAY_PER_REQUEST` - We recommend using `PAY_PER_REQUEST` for unpredictable workloads.
-     * `PAY_PER_REQUEST` sets the billing mode to [On-Demand
-     * Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.OnDemand)
+     * * `PROVISIONED` - We recommend using `PROVISIONED` for steady workloads with predictable
+     * growth where capacity requirements can be reliably forecasted. `PROVISIONED` sets the billing
+     * mode to [Provisioned capacity
+     * mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/provisioned-capacity-mode.html)
      * .
      *
      * If not specified, the default is `PROVISIONED` .
@@ -1358,60 +1363,60 @@ public interface CfnTableProps {
         Unit = provisionedThroughput(CfnTable.ProvisionedThroughputProperty(provisionedThroughput))
 
     /**
-     * @param resourcePolicy A resource-based policy document that contains permissions to add to
-     * the specified table.
-     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
-     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
-     * about resource-based policies, see [Using resource-based policies for
-     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
-     * and [Resource-based policy
-     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     * @param resourcePolicy An AWS resource-based policy document in JSON format that will be
+     * attached to the table.
+     * When you attach a resource-based policy while creating a table, the policy application is
+     * *strongly consistent* .
      *
-     * When you attach a resource-based policy while creating a table, the policy creation is
-     * *strongly consistent* . For information about the considerations that you should keep in mind
-     * while attaching a resource-based policy, see [Resource-based policy
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts
+     * whitespaces when calculating the size of a policy against this limit. For a full list of all
+     * considerations that apply for resource-based policies, see [Resource-based policy
      * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
      * .
+     *
+     *
+     * You need to specify the `CreateTable` and `PutResourcePolicy` IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
      */
     override fun resourcePolicy(resourcePolicy: IResolvable) {
       cdkBuilder.resourcePolicy(resourcePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param resourcePolicy A resource-based policy document that contains permissions to add to
-     * the specified table.
-     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
-     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
-     * about resource-based policies, see [Using resource-based policies for
-     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
-     * and [Resource-based policy
-     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     * @param resourcePolicy An AWS resource-based policy document in JSON format that will be
+     * attached to the table.
+     * When you attach a resource-based policy while creating a table, the policy application is
+     * *strongly consistent* .
      *
-     * When you attach a resource-based policy while creating a table, the policy creation is
-     * *strongly consistent* . For information about the considerations that you should keep in mind
-     * while attaching a resource-based policy, see [Resource-based policy
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts
+     * whitespaces when calculating the size of a policy against this limit. For a full list of all
+     * considerations that apply for resource-based policies, see [Resource-based policy
      * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
      * .
+     *
+     *
+     * You need to specify the `CreateTable` and `PutResourcePolicy` IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
      */
     override fun resourcePolicy(resourcePolicy: CfnTable.ResourcePolicyProperty) {
       cdkBuilder.resourcePolicy(resourcePolicy.let(CfnTable.ResourcePolicyProperty.Companion::unwrap))
     }
 
     /**
-     * @param resourcePolicy A resource-based policy document that contains permissions to add to
-     * the specified table.
-     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
-     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
-     * about resource-based policies, see [Using resource-based policies for
-     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
-     * and [Resource-based policy
-     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     * @param resourcePolicy An AWS resource-based policy document in JSON format that will be
+     * attached to the table.
+     * When you attach a resource-based policy while creating a table, the policy application is
+     * *strongly consistent* .
      *
-     * When you attach a resource-based policy while creating a table, the policy creation is
-     * *strongly consistent* . For information about the considerations that you should keep in mind
-     * while attaching a resource-based policy, see [Resource-based policy
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts
+     * whitespaces when calculating the size of a policy against this limit. For a full list of all
+     * considerations that apply for resource-based policies, see [Resource-based policy
      * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
      * .
+     *
+     *
+     * You need to specify the `CreateTable` and `PutResourcePolicy` IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("10e80221d99cc74afc329f0fd4a910679ebd3c01b9d358a32301040ee1b08a26")
@@ -1595,13 +1600,14 @@ public interface CfnTableProps {
      *
      * Valid values include:
      *
-     * * `PROVISIONED` - We recommend using `PROVISIONED` for predictable workloads. `PROVISIONED`
-     * sets the billing mode to [Provisioned
-     * Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.ProvisionedThroughput.Manual)
+     * * `PAY_PER_REQUEST` - We recommend using `PAY_PER_REQUEST` for most DynamoDB workloads.
+     * `PAY_PER_REQUEST` sets the billing mode to [On-demand capacity
+     * mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/on-demand-capacity-mode.html)
      * .
-     * * `PAY_PER_REQUEST` - We recommend using `PAY_PER_REQUEST` for unpredictable workloads.
-     * `PAY_PER_REQUEST` sets the billing mode to [On-Demand
-     * Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.OnDemand)
+     * * `PROVISIONED` - We recommend using `PROVISIONED` for steady workloads with predictable
+     * growth where capacity requirements can be reliably forecasted. `PROVISIONED` sets the billing
+     * mode to [Provisioned capacity
+     * mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/provisioned-capacity-mode.html)
      * .
      *
      * If not specified, the default is `PROVISIONED` .
@@ -1736,20 +1742,21 @@ public interface CfnTableProps {
     override fun provisionedThroughput(): Any? = unwrap(this).getProvisionedThroughput()
 
     /**
-     * A resource-based policy document that contains permissions to add to the specified table.
+     * An AWS resource-based policy document in JSON format that will be attached to the table.
      *
-     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
-     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
-     * about resource-based policies, see [Using resource-based policies for
-     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
-     * and [Resource-based policy
-     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     * When you attach a resource-based policy while creating a table, the policy application is
+     * *strongly consistent* .
      *
-     * When you attach a resource-based policy while creating a table, the policy creation is
-     * *strongly consistent* . For information about the considerations that you should keep in mind
-     * while attaching a resource-based policy, see [Resource-based policy
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts
+     * whitespaces when calculating the size of a policy against this limit. For a full list of all
+     * considerations that apply for resource-based policies, see [Resource-based policy
      * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
      * .
+     *
+     *
+     * You need to specify the `CreateTable` and `PutResourcePolicy` IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
      */

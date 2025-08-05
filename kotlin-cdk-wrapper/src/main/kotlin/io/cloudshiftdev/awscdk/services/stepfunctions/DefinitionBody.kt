@@ -15,16 +15,20 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.kms.*;
- * import io.cloudshiftdev.awscdk.*;
- * Key kmsKey = new Key(this, "Key");
- * StateMachine stateMachine = StateMachine.Builder.create(this,
- * "StateMachineWithCMKEncryptionConfiguration")
- * .stateMachineName("StateMachineWithCMKEncryptionConfiguration")
- * .definitionBody(DefinitionBody.fromChainable(Chain.start(new Pass(this, "Pass"))))
- * .stateMachineType(StateMachineType.STANDARD)
- * .encryptionConfiguration(new CustomerManagedEncryptionConfiguration(kmsKey,
- * Duration.seconds(60)))
+ * Pass jsonata = Pass.jsonata(this, "JSONata");
+ * Pass jsonPath = Pass.jsonPath(this, "JSONPath");
+ * Chain definition = jsonata.next(jsonPath);
+ * StateMachine.Builder.create(this, "MixedStateMachine")
+ * // queryLanguage: sfn.QueryLanguage.JSON_PATH, // default
+ * .definitionBody(DefinitionBody.fromChainable(definition))
+ * .build();
+ * // This throws an error. If JSONata is specified at the top level, JSONPath cannot be used in the
+ * state machine definition.
+ * // This throws an error. If JSONata is specified at the top level, JSONPath cannot be used in the
+ * state machine definition.
+ * StateMachine.Builder.create(this, "JSONataOnlyStateMachine")
+ * .queryLanguage(QueryLanguage.JSONATA)
+ * .definitionBody(DefinitionBody.fromChainable(definition))
  * .build();
  * ```
  */

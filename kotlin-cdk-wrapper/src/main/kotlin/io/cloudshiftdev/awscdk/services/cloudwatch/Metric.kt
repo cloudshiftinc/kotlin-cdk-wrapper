@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.constructs.Construct
 import io.cloudshiftdev.constructs.IConstruct
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.collections.List
@@ -33,12 +34,23 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Function fn;
- * Metric minuteErrorRate = fn.metricErrors(MetricOptions.builder()
- * .statistic(Stats.AVERAGE)
- * .period(Duration.minutes(1))
- * .label("Lambda failure rate")
- * .build());
+ * // Create a metric
+ * Metric metric = Metric.Builder.create()
+ * .namespace("AWS/EC2")
+ * .metricName("CPUUtilization")
+ * .statistic("Average")
+ * .period(Duration.minutes(5))
+ * .build();
+ * // Create an anomaly detection alarm
+ * AnomalyDetectionAlarm alarm = AnomalyDetectionAlarm.Builder.create(this, "AnomalyAlarm")
+ * .metric(metric)
+ * .evaluationPeriods(1)
+ * // Number of standard deviations for the band (default: 2)
+ * .stdDevs(2)
+ * // Alarm outside on either side of the band, or just below or above it (default: outside)
+ * .comparisonOperator(ComparisonOperator.LESS_THAN_LOWER_OR_GREATER_THAN_UPPER_THRESHOLD)
+ * .alarmDescription("Alarm when metric is outside the expected band")
+ * .build();
  * ```
  */
 public open class Metric(
@@ -120,6 +132,11 @@ public open class Metric(
   public open fun dimensions(): Map<String, Any> = unwrap(this).getDimensions() ?: emptyMap()
 
   /**
+   * Unique identifier for this metric when used in dashboard widgets.
+   */
+  public open fun id(): String? = unwrap(this).getId()
+
+  /**
    * Label for this metric when added to a Graph in a Dashboard.
    */
   public open fun label(): String? = unwrap(this).getLabel()
@@ -159,6 +176,11 @@ public open class Metric(
    * Unit of the metric.
    */
   public open fun unit(): Unit? = unwrap(this).getUnit()?.let(Unit::wrap)
+
+  /**
+   * Whether this metric should be visible in dashboard graphs.
+   */
+  public open fun visible(): Boolean? = unwrap(this).getVisible()
 
   /**
    * (deprecated) Warnings attached to this metric.
@@ -230,6 +252,19 @@ public open class Metric(
     public fun dimensionsMap(dimensionsMap: Map<String, String>)
 
     /**
+     * Unique identifier for this metric when used in dashboard widgets.
+     *
+     * The id can be used as a variable to represent this metric in math expressions.
+     * Valid characters are letters, numbers, and underscore. The first character
+     * must be a lowercase letter.
+     *
+     * Default: - No ID
+     *
+     * @param id Unique identifier for this metric when used in dashboard widgets. 
+     */
+    public fun id(id: String)
+
+    /**
      * Label for this metric when added to a Graph in a Dashboard.
      *
      * You can use [dynamic
@@ -283,6 +318,24 @@ public open class Metric(
     public fun region(region: String)
 
     /**
+     * Account of the stack this metric is attached to.
+     *
+     * Default: - Deployment account.
+     *
+     * @param stackAccount Account of the stack this metric is attached to. 
+     */
+    public fun stackAccount(stackAccount: String)
+
+    /**
+     * Region of the stack this metric is attached to.
+     *
+     * Default: - Deployment region.
+     *
+     * @param stackRegion Region of the stack this metric is attached to. 
+     */
+    public fun stackRegion(stackRegion: String)
+
+    /**
      * What function to use for aggregating.
      *
      * Use the `aws_cloudwatch.Stats` helper class to construct valid input strings.
@@ -324,6 +377,18 @@ public open class Metric(
      * @param unit Unit used to filter the metric stream. 
      */
     public fun unit(unit: Unit)
+
+    /**
+     * Whether this metric should be visible in dashboard graphs.
+     *
+     * Setting this to false is useful when you want to hide raw metrics
+     * that are used in math expressions, and show only the expression results.
+     *
+     * Default: true
+     *
+     * @param visible Whether this metric should be visible in dashboard graphs. 
+     */
+    public fun visible(visible: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -363,6 +428,21 @@ public open class Metric(
      */
     override fun dimensionsMap(dimensionsMap: Map<String, String>) {
       cdkBuilder.dimensionsMap(dimensionsMap)
+    }
+
+    /**
+     * Unique identifier for this metric when used in dashboard widgets.
+     *
+     * The id can be used as a variable to represent this metric in math expressions.
+     * Valid characters are letters, numbers, and underscore. The first character
+     * must be a lowercase letter.
+     *
+     * Default: - No ID
+     *
+     * @param id Unique identifier for this metric when used in dashboard widgets. 
+     */
+    override fun id(id: String) {
+      cdkBuilder.id(id)
     }
 
     /**
@@ -429,6 +509,28 @@ public open class Metric(
     }
 
     /**
+     * Account of the stack this metric is attached to.
+     *
+     * Default: - Deployment account.
+     *
+     * @param stackAccount Account of the stack this metric is attached to. 
+     */
+    override fun stackAccount(stackAccount: String) {
+      cdkBuilder.stackAccount(stackAccount)
+    }
+
+    /**
+     * Region of the stack this metric is attached to.
+     *
+     * Default: - Deployment region.
+     *
+     * @param stackRegion Region of the stack this metric is attached to. 
+     */
+    override fun stackRegion(stackRegion: String) {
+      cdkBuilder.stackRegion(stackRegion)
+    }
+
+    /**
      * What function to use for aggregating.
      *
      * Use the `aws_cloudwatch.Stats` helper class to construct valid input strings.
@@ -475,10 +577,32 @@ public open class Metric(
       cdkBuilder.unit(unit.let(Unit.Companion::unwrap))
     }
 
+    /**
+     * Whether this metric should be visible in dashboard graphs.
+     *
+     * Setting this to false is useful when you want to hide raw metrics
+     * that are used in math expressions, and show only the expression results.
+     *
+     * Default: true
+     *
+     * @param visible Whether this metric should be visible in dashboard graphs. 
+     */
+    override fun visible(visible: Boolean) {
+      cdkBuilder.visible(visible)
+    }
+
     public fun build(): software.amazon.awscdk.services.cloudwatch.Metric = cdkBuilder.build()
   }
 
   public companion object {
+    public fun anomalyDetectionFor(props: AnomalyDetectionMetricOptions): MathExpression =
+        software.amazon.awscdk.services.cloudwatch.Metric.anomalyDetectionFor(props.let(AnomalyDetectionMetricOptions.Companion::unwrap)).let(MathExpression::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d8b654cec6632cd9b85cb3fd0f62cbba2891d6d14134886df4e9b6f0ed808e08")
+    public fun anomalyDetectionFor(props: AnomalyDetectionMetricOptions.Builder.() -> kotlin.Unit):
+        MathExpression = anomalyDetectionFor(AnomalyDetectionMetricOptions(props))
+
     public fun grantPutMetricData(grantee: IGrantable): Grant =
         software.amazon.awscdk.services.cloudwatch.Metric.grantPutMetricData(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 

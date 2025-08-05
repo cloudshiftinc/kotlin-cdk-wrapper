@@ -485,7 +485,7 @@ public open class CfnLaunchConfiguration(
      * By default, the block devices specified in the block device mapping for the AMI are used. For
      * more information, see [Block device
      * mappings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-blockdevicemappings)
      * @param blockDeviceMappings The block device mapping entries that define the block devices to
@@ -500,7 +500,7 @@ public open class CfnLaunchConfiguration(
      * By default, the block devices specified in the block device mapping for the AMI are used. For
      * more information, see [Block device
      * mappings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-blockdevicemappings)
      * @param blockDeviceMappings The block device mapping entries that define the block devices to
@@ -515,7 +515,7 @@ public open class CfnLaunchConfiguration(
      * By default, the block devices specified in the block device mapping for the AMI are used. For
      * more information, see [Block device
      * mappings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-blockdevicemappings)
      * @param blockDeviceMappings The block device mapping entries that define the block devices to
@@ -556,7 +556,7 @@ public open class CfnLaunchConfiguration(
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      * The default value is `false` .
      *
@@ -575,7 +575,7 @@ public open class CfnLaunchConfiguration(
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      * The default value is `false` .
      *
@@ -605,7 +605,7 @@ public open class CfnLaunchConfiguration(
      *
      * For more information, see [Find a Linux
      * AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html) in the *Amazon EC2
-     * User Guide for Linux Instances* .
+     * User Guide* .
      *
      * If you specify `InstanceId` , an `ImageId` is not required.
      *
@@ -673,7 +673,7 @@ public open class CfnLaunchConfiguration(
      *
      * For information about available instance types, see [Available instance
      * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      *
      * If you specify `InstanceId` , an `InstanceType` is not required.
      *
@@ -689,7 +689,7 @@ public open class CfnLaunchConfiguration(
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see
      * [User provided
      * kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-kernelid)
@@ -702,7 +702,7 @@ public open class CfnLaunchConfiguration(
      *
      * For more information, see [Amazon EC2 key pairs and Amazon EC2
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-keyname)
      * @param keyName The name of the key pair. 
@@ -782,7 +782,7 @@ public open class CfnLaunchConfiguration(
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see
      * [User provided
      * kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-ramdiskid)
@@ -925,7 +925,7 @@ public open class CfnLaunchConfiguration(
      * By default, the block devices specified in the block device mapping for the AMI are used. For
      * more information, see [Block device
      * mappings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-blockdevicemappings)
      * @param blockDeviceMappings The block device mapping entries that define the block devices to
@@ -942,7 +942,7 @@ public open class CfnLaunchConfiguration(
      * By default, the block devices specified in the block device mapping for the AMI are used. For
      * more information, see [Block device
      * mappings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-blockdevicemappings)
      * @param blockDeviceMappings The block device mapping entries that define the block devices to
@@ -959,7 +959,7 @@ public open class CfnLaunchConfiguration(
      * By default, the block devices specified in the block device mapping for the AMI are used. For
      * more information, see [Block device
      * mappings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-blockdevicemappings)
      * @param blockDeviceMappings The block device mapping entries that define the block devices to
@@ -1006,7 +1006,7 @@ public open class CfnLaunchConfiguration(
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      * The default value is `false` .
      *
@@ -1027,7 +1027,7 @@ public open class CfnLaunchConfiguration(
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      * The default value is `false` .
      *
@@ -1061,7 +1061,7 @@ public open class CfnLaunchConfiguration(
      *
      * For more information, see [Find a Linux
      * AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html) in the *Amazon EC2
-     * User Guide for Linux Instances* .
+     * User Guide* .
      *
      * If you specify `InstanceId` , an `ImageId` is not required.
      *
@@ -1137,7 +1137,7 @@ public open class CfnLaunchConfiguration(
      *
      * For information about available instance types, see [Available instance
      * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      *
      * If you specify `InstanceId` , an `InstanceType` is not required.
      *
@@ -1155,7 +1155,7 @@ public open class CfnLaunchConfiguration(
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see
      * [User provided
      * kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-kernelid)
@@ -1170,7 +1170,7 @@ public open class CfnLaunchConfiguration(
      *
      * For more information, see [Amazon EC2 key pairs and Amazon EC2
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-keyname)
      * @param keyName The name of the key pair. 
@@ -1261,7 +1261,7 @@ public open class CfnLaunchConfiguration(
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see
      * [User provided
      * kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-ramdiskid)
@@ -1420,7 +1420,7 @@ public open class CfnLaunchConfiguration(
      *
      * For more information, see [Device naming on Linux
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      *
      * To define a block device mapping, set the device name and exactly one of the following
@@ -1469,7 +1469,7 @@ public open class CfnLaunchConfiguration(
        * ). 
        * For more information, see [Device naming on Linux
        * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html) in the
-       * *Amazon EC2 User Guide for Linux Instances* .
+       * *Amazon EC2 User Guide* .
        *
        *
        * To define a block device mapping, set the device name and exactly one of the following
@@ -1530,7 +1530,7 @@ public open class CfnLaunchConfiguration(
        * ). 
        * For more information, see [Device naming on Linux
        * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html) in the
-       * *Amazon EC2 User Guide for Linux Instances* .
+       * *Amazon EC2 User Guide* .
        *
        *
        * To define a block device mapping, set the device name and exactly one of the following
@@ -1606,7 +1606,7 @@ public open class CfnLaunchConfiguration(
        *
        * For more information, see [Device naming on Linux
        * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html) in the
-       * *Amazon EC2 User Guide for Linux Instances* .
+       * *Amazon EC2 User Guide* .
        *
        *
        * To define a block device mapping, set the device name and exactly one of the following

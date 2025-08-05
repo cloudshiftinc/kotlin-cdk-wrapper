@@ -66,7 +66,7 @@ public interface MathExpressionOptions {
   public fun label(): String? = unwrap(this).getLabel()
 
   /**
-   * The period over which the expression's statistics are applied.
+   * The period over which the math expression's statistics are applied.
    *
    * This period overrides all periods in the metrics used in this
    * math expression.
@@ -132,7 +132,7 @@ public interface MathExpressionOptions {
     public fun label(label: String)
 
     /**
-     * @param period The period over which the expression's statistics are applied.
+     * @param period The period over which the math expression's statistics are applied.
      * This period overrides all periods in the metrics used in this
      * math expression.
      */
@@ -193,7 +193,7 @@ public interface MathExpressionOptions {
     }
 
     /**
-     * @param period The period over which the expression's statistics are applied.
+     * @param period The period over which the math expression's statistics are applied.
      * This period overrides all periods in the metrics used in this
      * math expression.
      */
@@ -264,7 +264,7 @@ public interface MathExpressionOptions {
     override fun label(): String? = unwrap(this).getLabel()
 
     /**
-     * The period over which the expression's statistics are applied.
+     * The period over which the math expression's statistics are applied.
      *
      * This period overrides all periods in the metrics used in this
      * math expression.

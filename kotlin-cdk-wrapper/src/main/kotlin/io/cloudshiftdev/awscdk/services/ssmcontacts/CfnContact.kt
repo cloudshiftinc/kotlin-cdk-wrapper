@@ -3,8 +3,11 @@
 package io.cloudshiftdev.awscdk.services.ssmcontacts
 
 import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -50,6 +53,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build()))
  * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -58,7 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnContact(
   cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContact,
 ) : CfnResource(cdkObject),
-    IInspectable {
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -92,6 +100,12 @@ public open class CfnContact(
    * `arn:aws:ssm-contacts:us-west-2:123456789012:contact/contactalias` .
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * The full name of the contact or escalation plan.
@@ -137,6 +151,23 @@ public open class CfnContact(
    * A list of stages.
    */
   public open fun plan(vararg `value`: Any): Unit = plan(`value`.toList())
+
+  /**
+   *
+   */
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   *
+   */
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
    * The type of contact.
@@ -203,6 +234,18 @@ public open class CfnContact(
      * @param plan A list of stages. 
      */
     public fun plan(vararg plan: Any)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-tags)
+     * @param tags 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-tags)
+     * @param tags 
+     */
+    public fun tags(vararg tags: CfnTag)
 
     /**
      * The type of contact.
@@ -280,6 +323,20 @@ public open class CfnContact(
      * @param plan A list of stages. 
      */
     override fun plan(vararg plan: Any): Unit = plan(plan.toList())
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-tags)
+     * @param tags 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-tags)
+     * @param tags 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
      * The type of contact.

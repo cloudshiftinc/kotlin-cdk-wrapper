@@ -37,7 +37,8 @@ public interface CfnResolverConfigProps {
   public fun autodefinedReverseFlag(): String
 
   /**
-   * The ID of the Amazon Virtual Private Cloud VPC that you're configuring Resolver for.
+   * The ID of the Amazon Virtual Private Cloud VPC or a Route 53 Profile that you're configuring
+   * Resolver for.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverconfig.html#cfn-route53resolver-resolverconfig-resourceid)
    */
@@ -56,8 +57,8 @@ public interface CfnResolverConfigProps {
     public fun autodefinedReverseFlag(autodefinedReverseFlag: String)
 
     /**
-     * @param resourceId The ID of the Amazon Virtual Private Cloud VPC that you're configuring
-     * Resolver for. 
+     * @param resourceId The ID of the Amazon Virtual Private Cloud VPC or a Route 53 Profile that
+     * you're configuring Resolver for. 
      */
     public fun resourceId(resourceId: String)
   }
@@ -77,8 +78,8 @@ public interface CfnResolverConfigProps {
     }
 
     /**
-     * @param resourceId The ID of the Amazon Virtual Private Cloud VPC that you're configuring
-     * Resolver for. 
+     * @param resourceId The ID of the Amazon Virtual Private Cloud VPC or a Route 53 Profile that
+     * you're configuring Resolver for. 
      */
     override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
@@ -103,7 +104,8 @@ public interface CfnResolverConfigProps {
     override fun autodefinedReverseFlag(): String = unwrap(this).getAutodefinedReverseFlag()
 
     /**
-     * The ID of the Amazon Virtual Private Cloud VPC that you're configuring Resolver for.
+     * The ID of the Amazon Virtual Private Cloud VPC or a Route 53 Profile that you're configuring
+     * Resolver for.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverconfig.html#cfn-route53resolver-resolverconfig-resourceid)
      */

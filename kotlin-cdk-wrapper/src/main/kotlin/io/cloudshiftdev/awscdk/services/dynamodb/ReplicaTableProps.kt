@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import io.cloudshiftdev.awscdk.services.kinesis.IStream
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -44,7 +45,7 @@ public interface ReplicaTableProps : TableOptionsV2 {
       ?: emptyMap()
 
   /**
-   * The maxium read request units.
+   * The maximum read request units.
    *
    * Note: This can only be configured if the primary table billing is PAY_PER_REQUEST.
    *
@@ -94,15 +95,33 @@ public interface ReplicaTableProps : TableOptionsV2 {
     public fun kinesisStream(kinesisStream: IStream)
 
     /**
-     * @param maxReadRequestUnits The maxium read request units.
+     * @param maxReadRequestUnits The maximum read request units.
      * Note: This can only be configured if the primary table billing is PAY_PER_REQUEST.
      */
     public fun maxReadRequestUnits(maxReadRequestUnits: Number)
 
     /**
      * @param pointInTimeRecovery Whether point-in-time recovery is enabled.
+     * @deprecated use `pointInTimeRecoverySpecification` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun pointInTimeRecovery(pointInTimeRecovery: Boolean)
+
+    /**
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set.
+     */
+    public
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification)
+
+    /**
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e89a3af2b68cb8f5de0eea5de315f2e13e0f69f751e5d9430eba55e3288269fe")
+    public
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification.Builder.() -> Unit)
 
     /**
      * @param readCapacity The read capacity.
@@ -178,7 +197,7 @@ public interface ReplicaTableProps : TableOptionsV2 {
     }
 
     /**
-     * @param maxReadRequestUnits The maxium read request units.
+     * @param maxReadRequestUnits The maximum read request units.
      * Note: This can only be configured if the primary table billing is PAY_PER_REQUEST.
      */
     override fun maxReadRequestUnits(maxReadRequestUnits: Number) {
@@ -187,10 +206,32 @@ public interface ReplicaTableProps : TableOptionsV2 {
 
     /**
      * @param pointInTimeRecovery Whether point-in-time recovery is enabled.
+     * @deprecated use `pointInTimeRecoverySpecification` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun pointInTimeRecovery(pointInTimeRecovery: Boolean) {
       cdkBuilder.pointInTimeRecovery(pointInTimeRecovery)
     }
+
+    /**
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set.
+     */
+    override
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification) {
+      cdkBuilder.pointInTimeRecoverySpecification(pointInTimeRecoverySpecification.let(PointInTimeRecoverySpecification.Companion::unwrap))
+    }
+
+    /**
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e89a3af2b68cb8f5de0eea5de315f2e13e0f69f751e5d9430eba55e3288269fe")
+    override
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification.Builder.() -> Unit):
+        Unit =
+        pointInTimeRecoverySpecification(PointInTimeRecoverySpecification(pointInTimeRecoverySpecification))
 
     /**
      * @param readCapacity The read capacity.
@@ -280,7 +321,7 @@ public interface ReplicaTableProps : TableOptionsV2 {
     override fun kinesisStream(): IStream? = unwrap(this).getKinesisStream()?.let(IStream::wrap)
 
     /**
-     * The maxium read request units.
+     * The maximum read request units.
      *
      * Note: This can only be configured if the primary table billing is PAY_PER_REQUEST.
      *
@@ -289,11 +330,22 @@ public interface ReplicaTableProps : TableOptionsV2 {
     override fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
 
     /**
-     * Whether point-in-time recovery is enabled.
+     * (deprecated) Whether point-in-time recovery is enabled.
      *
-     * Default: false
+     * Default: false - point in time recovery is not enabled.
+     *
+     * @deprecated use `pointInTimeRecoverySpecification` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun pointInTimeRecovery(): Boolean? = unwrap(this).getPointInTimeRecovery()
+
+    /**
+     * Whether point-in-time recovery is enabled and recoveryPeriodInDays is set.
+     *
+     * Default: - point in time recovery is not enabled.
+     */
+    override fun pointInTimeRecoverySpecification(): PointInTimeRecoverySpecification? =
+        unwrap(this).getPointInTimeRecoverySpecification()?.let(PointInTimeRecoverySpecification::wrap)
 
     /**
      * The read capacity.

@@ -24,7 +24,6 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.services.datazone.*;
  * CfnDataSourceProps cfnDataSourceProps = CfnDataSourceProps.builder()
  * .domainIdentifier("domainIdentifier")
- * .environmentIdentifier("environmentIdentifier")
  * .name("name")
  * .projectIdentifier("projectIdentifier")
  * .type("type")
@@ -49,20 +48,10 @@ import kotlin.jvm.JvmName
  * .build()))
  * // the properties below are optional
  * .autoImportDataQualityResult(false)
+ * .catalogName("catalogName")
  * .dataAccessRole("dataAccessRole")
  * .build())
  * .redshiftRunConfiguration(RedshiftRunConfigurationInputProperty.builder()
- * .redshiftCredentialConfiguration(RedshiftCredentialConfigurationProperty.builder()
- * .secretManagerArn("secretManagerArn")
- * .build())
- * .redshiftStorage(RedshiftStorageProperty.builder()
- * .redshiftClusterSource(RedshiftClusterStorageProperty.builder()
- * .clusterName("clusterName")
- * .build())
- * .redshiftServerlessSource(RedshiftServerlessStorageProperty.builder()
- * .workgroupName("workgroupName")
- * .build())
- * .build())
  * .relationalFilterConfigurations(List.of(RelationalFilterConfigurationProperty.builder()
  * .databaseName("databaseName")
  * // the properties below are optional
@@ -74,10 +63,27 @@ import kotlin.jvm.JvmName
  * .build()))
  * // the properties below are optional
  * .dataAccessRole("dataAccessRole")
+ * .redshiftCredentialConfiguration(RedshiftCredentialConfigurationProperty.builder()
+ * .secretManagerArn("secretManagerArn")
+ * .build())
+ * .redshiftStorage(RedshiftStorageProperty.builder()
+ * .redshiftClusterSource(RedshiftClusterStorageProperty.builder()
+ * .clusterName("clusterName")
+ * .build())
+ * .redshiftServerlessSource(RedshiftServerlessStorageProperty.builder()
+ * .workgroupName("workgroupName")
  * .build())
  * .build())
+ * .build())
+ * .sageMakerRunConfiguration(SageMakerRunConfigurationInputProperty.builder()
+ * .trackingAssets(Map.of(
+ * "trackingAssetsKey", List.of("trackingAssets")))
+ * .build())
+ * .build())
+ * .connectionIdentifier("connectionIdentifier")
  * .description("description")
  * .enableSetting("enableSetting")
+ * .environmentIdentifier("environmentIdentifier")
  * .publishOnImport(false)
  * .recommendation(RecommendationConfigurationProperty.builder()
  * .enableBusinessNameGeneration(false)
@@ -107,6 +113,14 @@ public interface CfnDataSourceProps {
   public fun configuration(): Any? = unwrap(this).getConfiguration()
 
   /**
+   * The unique identifier of a connection used to fetch relevant parameters from connection during
+   * Datasource run.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-connectionidentifier)
+   */
+  public fun connectionIdentifier(): String? = unwrap(this).getConnectionIdentifier()
+
+  /**
    * The description of the data source.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-description)
@@ -133,7 +147,7 @@ public interface CfnDataSourceProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-environmentidentifier)
    */
-  public fun environmentIdentifier(): String
+  public fun environmentIdentifier(): String? = unwrap(this).getEnvironmentIdentifier()
 
   /**
    * The name of the data source.
@@ -173,6 +187,10 @@ public interface CfnDataSourceProps {
 
   /**
    * The type of the data source.
+   *
+   * In Amazon DataZone, you can use data sources to import technical metadata of assets (data) from
+   * the source databases or data warehouses into Amazon DataZone. In the current release of Amazon
+   * DataZone, you can create and run data sources for AWS Glue and Amazon Redshift.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-type)
    */
@@ -220,6 +238,12 @@ public interface CfnDataSourceProps {
         fun configuration(configuration: CfnDataSource.DataSourceConfigurationInputProperty.Builder.() -> Unit)
 
     /**
+     * @param connectionIdentifier The unique identifier of a connection used to fetch relevant
+     * parameters from connection during Datasource run.
+     */
+    public fun connectionIdentifier(connectionIdentifier: String)
+
+    /**
      * @param description The description of the data source.
      */
     public fun description(description: String)
@@ -237,7 +261,7 @@ public interface CfnDataSourceProps {
 
     /**
      * @param environmentIdentifier The unique identifier of the Amazon DataZone environment to
-     * which the data source publishes assets. 
+     * which the data source publishes assets.
      */
     public fun environmentIdentifier(environmentIdentifier: String)
 
@@ -304,6 +328,9 @@ public interface CfnDataSourceProps {
 
     /**
      * @param type The type of the data source. 
+     * In Amazon DataZone, you can use data sources to import technical metadata of assets (data)
+     * from the source databases or data warehouses into Amazon DataZone. In the current release of
+     * Amazon DataZone, you can create and run data sources for AWS Glue and Amazon Redshift.
      */
     public fun type(type: String)
   }
@@ -359,6 +386,14 @@ public interface CfnDataSourceProps {
         Unit = configuration(CfnDataSource.DataSourceConfigurationInputProperty(configuration))
 
     /**
+     * @param connectionIdentifier The unique identifier of a connection used to fetch relevant
+     * parameters from connection during Datasource run.
+     */
+    override fun connectionIdentifier(connectionIdentifier: String) {
+      cdkBuilder.connectionIdentifier(connectionIdentifier)
+    }
+
+    /**
      * @param description The description of the data source.
      */
     override fun description(description: String) {
@@ -382,7 +417,7 @@ public interface CfnDataSourceProps {
 
     /**
      * @param environmentIdentifier The unique identifier of the Amazon DataZone environment to
-     * which the data source publishes assets. 
+     * which the data source publishes assets.
      */
     override fun environmentIdentifier(environmentIdentifier: String) {
       cdkBuilder.environmentIdentifier(environmentIdentifier)
@@ -469,6 +504,9 @@ public interface CfnDataSourceProps {
 
     /**
      * @param type The type of the data source. 
+     * In Amazon DataZone, you can use data sources to import technical metadata of assets (data)
+     * from the source databases or data warehouses into Amazon DataZone. In the current release of
+     * Amazon DataZone, you can create and run data sources for AWS Glue and Amazon Redshift.
      */
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -497,6 +535,14 @@ public interface CfnDataSourceProps {
     override fun configuration(): Any? = unwrap(this).getConfiguration()
 
     /**
+     * The unique identifier of a connection used to fetch relevant parameters from connection
+     * during Datasource run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-connectionidentifier)
+     */
+    override fun connectionIdentifier(): String? = unwrap(this).getConnectionIdentifier()
+
+    /**
      * The description of the data source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-description)
@@ -523,7 +569,7 @@ public interface CfnDataSourceProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-environmentidentifier)
      */
-    override fun environmentIdentifier(): String = unwrap(this).getEnvironmentIdentifier()
+    override fun environmentIdentifier(): String? = unwrap(this).getEnvironmentIdentifier()
 
     /**
      * The name of the data source.
@@ -563,6 +609,10 @@ public interface CfnDataSourceProps {
 
     /**
      * The type of the data source.
+     *
+     * In Amazon DataZone, you can use data sources to import technical metadata of assets (data)
+     * from the source databases or data warehouses into Amazon DataZone. In the current release of
+     * Amazon DataZone, you can create and run data sources for AWS Glue and Amazon Redshift.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-type)
      */

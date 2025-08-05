@@ -563,6 +563,9 @@ public open class ApplicationListener(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener.PROPERTY_INJECTION_ID
+
     public fun fromApplicationListenerAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

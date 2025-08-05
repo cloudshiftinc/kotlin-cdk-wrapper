@@ -11,15 +11,14 @@ import kotlin.String
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.*;
  * Canary canary = Canary.Builder.create(this, "MyCanary")
  * .schedule(Schedule.rate(Duration.minutes(5)))
  * .test(Test.custom(CustomTestOptions.builder()
  * .code(Code.fromAsset(join(__dirname, "canary")))
  * .handler("index.handler")
  * .build()))
- * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
- * .memory(Size.mebibytes(1024))
+ * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_7_0)
+ * .resourcesToReplicateTags(List.of(ResourceToReplicateTags.LAMBDA_FUNCTION))
  * .build();
  * ```
  */
@@ -42,6 +41,12 @@ public open class Runtime(
   public open fun name(): String = unwrap(this).getName()
 
   public companion object {
+    public val SYNTHETICS_NODEJS_PLAYWRIGHT_1_0: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_NODEJS_PLAYWRIGHT_1_0)
+
+    public val SYNTHETICS_NODEJS_PLAYWRIGHT_2_0: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_NODEJS_PLAYWRIGHT_2_0)
+
     public val SYNTHETICS_NODEJS_PUPPETEER_3_5: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_NODEJS_PUPPETEER_3_5)
 
@@ -113,6 +118,18 @@ public open class Runtime(
 
     public val SYNTHETICS_PYTHON_SELENIUM_4_0: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_PYTHON_SELENIUM_4_0)
+
+    public val SYNTHETICS_PYTHON_SELENIUM_4_1: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_PYTHON_SELENIUM_4_1)
+
+    public val SYNTHETICS_PYTHON_SELENIUM_5_0: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_PYTHON_SELENIUM_5_0)
+
+    public val SYNTHETICS_PYTHON_SELENIUM_5_1: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_PYTHON_SELENIUM_5_1)
+
+    public val SYNTHETICS_PYTHON_SELENIUM_6_0: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_PYTHON_SELENIUM_6_0)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.Runtime): Runtime =
         Runtime(cdkObject)

@@ -9,7 +9,9 @@ import io.cloudshiftdev.awscdk.services.events.IRule
 import io.cloudshiftdev.awscdk.services.events.IRuleTarget
 import io.cloudshiftdev.awscdk.services.events.RuleTargetConfig
 import io.cloudshiftdev.awscdk.services.events.RuleTargetInput
+import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -81,6 +83,16 @@ public open class SnsTopic(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Specifies whether an IAM role should be used to publish to the topic.
+     *
+     * Default: - true if `role` is provided, false otherwise
+     *
+     * @param authorizeUsingRole Specifies whether an IAM role should be used to publish to the
+     * topic. 
+     */
+    public fun authorizeUsingRole(authorizeUsingRole: Boolean)
+
+    /**
      * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a
      * dead-letter
      * queue](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html#dlq-considerations).
@@ -134,6 +146,15 @@ public open class SnsTopic(
      * 
      */
     public fun retryAttempts(retryAttempts: Number)
+
+    /**
+     * The IAM role to be used to publish to the topic.
+     *
+     * Default: - a new role will be created if `authorizeUsingRole` is true
+     *
+     * @param role The IAM role to be used to publish to the topic. 
+     */
+    public fun role(role: IRole)
   }
 
   private class BuilderImpl(
@@ -141,6 +162,18 @@ public open class SnsTopic(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.events.targets.SnsTopic.Builder =
         software.amazon.awscdk.services.events.targets.SnsTopic.Builder.create(topic)
+
+    /**
+     * Specifies whether an IAM role should be used to publish to the topic.
+     *
+     * Default: - true if `role` is provided, false otherwise
+     *
+     * @param authorizeUsingRole Specifies whether an IAM role should be used to publish to the
+     * topic. 
+     */
+    override fun authorizeUsingRole(authorizeUsingRole: Boolean) {
+      cdkBuilder.authorizeUsingRole(authorizeUsingRole)
+    }
 
     /**
      * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a
@@ -203,6 +236,17 @@ public open class SnsTopic(
      */
     override fun retryAttempts(retryAttempts: Number) {
       cdkBuilder.retryAttempts(retryAttempts)
+    }
+
+    /**
+     * The IAM role to be used to publish to the topic.
+     *
+     * Default: - a new role will be created if `authorizeUsingRole` is true
+     *
+     * @param role The IAM role to be used to publish to the topic. 
+     */
+    override fun role(role: IRole) {
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.events.targets.SnsTopic = cdkBuilder.build()

@@ -199,8 +199,18 @@ public open class Parallel(
 
   /**
    * Return the Amazon States Language object for this state.
+   *
+   * @param topLevelQueryLanguage
    */
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
+
+  /**
+   * Return the Amazon States Language object for this state.
+   *
+   * @param topLevelQueryLanguage
+   */
+  public override fun toStateJson(topLevelQueryLanguage: QueryLanguage): ObjectNode =
+      unwrap(this).toStateJson(topLevelQueryLanguage.let(QueryLanguage.Companion::unwrap))
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.Parallel].
@@ -208,11 +218,36 @@ public open class Parallel(
   @CdkDslMarker
   public interface Builder {
     /**
-     * An optional description for this state.
+     * Parameters pass a collection of key-value pairs, either static values or JSONata expressions
+     * that select from the input.
+     *
+     * Default: No arguments
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/transforming-data.html)
+     * @param arguments Parameters pass a collection of key-value pairs, either static values or
+     * JSONata expressions that select from the input. 
+     */
+    public fun arguments(arguments: Map<String, Any>)
+
+    /**
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    public fun assign(assign: Map<String, Any>)
+
+    /**
+     * A comment describing this state.
      *
      * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     public fun comment(comment: String)
 
@@ -241,6 +276,46 @@ public open class Parallel(
      * state. 
      */
     public fun outputPath(outputPath: String)
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    public fun outputs(outputs: Any)
+
+    /**
+     * Parameters pass a collection of key-value pairs, either static values or JSONPath expressions
+     * that select from the input.
+     *
+     * Default: No parameters
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-inputpath-params.html#input-output-parameters)
+     * @param parameters Parameters pass a collection of key-value pairs, either static values or
+     * JSONPath expressions that select from the input. 
+     */
+    public fun parameters(parameters: Map<String, Any>)
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
 
     /**
      * JSONPath expression to indicate where to inject the state's output.
@@ -287,11 +362,40 @@ public open class Parallel(
         software.amazon.awscdk.services.stepfunctions.Parallel.Builder.create(scope, id)
 
     /**
-     * An optional description for this state.
+     * Parameters pass a collection of key-value pairs, either static values or JSONata expressions
+     * that select from the input.
+     *
+     * Default: No arguments
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/transforming-data.html)
+     * @param arguments Parameters pass a collection of key-value pairs, either static values or
+     * JSONata expressions that select from the input. 
+     */
+    override fun arguments(arguments: Map<String, Any>) {
+      cdkBuilder.arguments(arguments.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * A comment describing this state.
      *
      * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -325,6 +429,52 @@ public open class Parallel(
      */
     override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
+    }
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    override fun outputs(outputs: Any) {
+      cdkBuilder.outputs(outputs)
+    }
+
+    /**
+     * Parameters pass a collection of key-value pairs, either static values or JSONPath expressions
+     * that select from the input.
+     *
+     * Default: No parameters
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-inputpath-params.html#input-output-parameters)
+     * @param parameters Parameters pass a collection of key-value pairs, either static values or
+     * JSONPath expressions that select from the input. 
+     */
+    override fun parameters(parameters: Map<String, Any>) {
+      cdkBuilder.parameters(parameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
     }
 
     /**
@@ -373,6 +523,46 @@ public open class Parallel(
   }
 
   public companion object {
+    public fun jsonPath(scope: CloudshiftdevConstructsConstruct, id: String): Parallel =
+        software.amazon.awscdk.services.stepfunctions.Parallel.jsonPath(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id).let(Parallel::wrap)
+
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: ParallelJsonPathProps,
+    ): Parallel =
+        software.amazon.awscdk.services.stepfunctions.Parallel.jsonPath(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, props.let(ParallelJsonPathProps.Companion::unwrap)).let(Parallel::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a58b1c4ed75721329614e1f0ef841264b5b31cdf2d3c014f376b094fab382f28")
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: ParallelJsonPathProps.Builder.() -> Unit,
+    ): Parallel = jsonPath(scope, id, ParallelJsonPathProps(props))
+
+    public fun jsonata(scope: CloudshiftdevConstructsConstruct, id: String): Parallel =
+        software.amazon.awscdk.services.stepfunctions.Parallel.jsonata(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id).let(Parallel::wrap)
+
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: ParallelJsonataProps,
+    ): Parallel =
+        software.amazon.awscdk.services.stepfunctions.Parallel.jsonata(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, props.let(ParallelJsonataProps.Companion::unwrap)).let(Parallel::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8de2de6fd6ea70fa2a1710d64f94f882dfb08f10bb3d5d1ab673499a9b9cdaa7")
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: ParallelJsonataProps.Builder.() -> Unit,
+    ): Parallel = jsonata(scope, id, ParallelJsonataProps(props))
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

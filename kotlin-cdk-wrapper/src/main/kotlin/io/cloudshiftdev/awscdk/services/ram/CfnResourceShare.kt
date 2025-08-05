@@ -103,11 +103,6 @@ public open class CfnResourceShare(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   *
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
-
-  /**
    * Examines the CloudFormation resource and discloses attributes.
    *
    * @param inspector tree inspector to collect and process attributes. 
@@ -201,19 +196,22 @@ public open class CfnResourceShare(
   public open fun resourceArns(vararg `value`: String): Unit = resourceArns(`value`.toList())
 
   /**
-   *
+   * Specifies from which source accounts the service principal has access to the resources in this
+   * resource share.
    */
   public open fun sources(): List<String> = unwrap(this).getSources() ?: emptyList()
 
   /**
-   *
+   * Specifies from which source accounts the service principal has access to the resources in this
+   * resource share.
    */
   public open fun sources(`value`: List<String>) {
     unwrap(this).setSources(`value`)
   }
 
   /**
-   *
+   * Specifies from which source accounts the service principal has access to the resources in this
+   * resource share.
    */
   public open fun sources(vararg `value`: String): Unit = sources(`value`.toList())
 
@@ -380,14 +378,22 @@ public open class CfnResourceShare(
     public fun resourceArns(vararg resourceArns: String)
 
     /**
+     * Specifies from which source accounts the service principal has access to the resources in
+     * this resource share.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html#cfn-ram-resourceshare-sources)
-     * @param sources 
+     * @param sources Specifies from which source accounts the service principal has access to the
+     * resources in this resource share. 
      */
     public fun sources(sources: List<String>)
 
     /**
+     * Specifies from which source accounts the service principal has access to the resources in
+     * this resource share.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html#cfn-ram-resourceshare-sources)
-     * @param sources 
+     * @param sources Specifies from which source accounts the service principal has access to the
+     * resources in this resource share. 
      */
     public fun sources(vararg sources: String)
 
@@ -568,16 +574,24 @@ public open class CfnResourceShare(
         resourceArns(resourceArns.toList())
 
     /**
+     * Specifies from which source accounts the service principal has access to the resources in
+     * this resource share.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html#cfn-ram-resourceshare-sources)
-     * @param sources 
+     * @param sources Specifies from which source accounts the service principal has access to the
+     * resources in this resource share. 
      */
     override fun sources(sources: List<String>) {
       cdkBuilder.sources(sources)
     }
 
     /**
+     * Specifies from which source accounts the service principal has access to the resources in
+     * this resource share.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html#cfn-ram-resourceshare-sources)
-     * @param sources 
+     * @param sources Specifies from which source accounts the service principal has access to the
+     * resources in this resource share. 
      */
     override fun sources(vararg sources: String): Unit = sources(sources.toList())
 

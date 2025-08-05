@@ -34,16 +34,16 @@ public interface CfnModuleVersionProps {
   public fun moduleName(): String
 
   /**
-   * A URL to the S3 bucket containing the package that contains the template fragment and schema
-   * files for the module version to register.
+   * A URL to the S3 bucket for the package that contains the template fragment and schema files for
+   * the module version to register.
+   *
+   * For more information, see [Module structure and
+   * requirements](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules-structure.html)
+   * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
    *
    *
-   * The user registering the module version must be able to access the module package in the S3
-   * bucket. That's, the user needs to have
-   * [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for
-   * the package. For more information, see [Actions, Resources, and Condition Keys for Amazon
-   * S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity and
-   * Access Management User Guide* .
+   * To register the module version, you must have `s3:GetObject` permissions to access the S3
+   * objects.
    *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html#cfn-cloudformation-moduleversion-modulepackage)
@@ -61,15 +61,15 @@ public interface CfnModuleVersionProps {
     public fun moduleName(moduleName: String)
 
     /**
-     * @param modulePackage A URL to the S3 bucket containing the package that contains the template
+     * @param modulePackage A URL to the S3 bucket for the package that contains the template
      * fragment and schema files for the module version to register. 
+     * For more information, see [Module structure and
+     * requirements](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules-structure.html)
+     * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
      *
-     * The user registering the module version must be able to access the module package in the S3
-     * bucket. That's, the user needs to have
-     * [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for
-     * the package. For more information, see [Actions, Resources, and Condition Keys for Amazon
-     * S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity
-     * and Access Management User Guide* .
+     *
+     * To register the module version, you must have `s3:GetObject` permissions to access the S3
+     * objects.
      */
     public fun modulePackage(modulePackage: String)
   }
@@ -87,15 +87,15 @@ public interface CfnModuleVersionProps {
     }
 
     /**
-     * @param modulePackage A URL to the S3 bucket containing the package that contains the template
+     * @param modulePackage A URL to the S3 bucket for the package that contains the template
      * fragment and schema files for the module version to register. 
+     * For more information, see [Module structure and
+     * requirements](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules-structure.html)
+     * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
      *
-     * The user registering the module version must be able to access the module package in the S3
-     * bucket. That's, the user needs to have
-     * [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for
-     * the package. For more information, see [Actions, Resources, and Condition Keys for Amazon
-     * S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity
-     * and Access Management User Guide* .
+     *
+     * To register the module version, you must have `s3:GetObject` permissions to access the S3
+     * objects.
      */
     override fun modulePackage(modulePackage: String) {
       cdkBuilder.modulePackage(modulePackage)
@@ -117,16 +117,16 @@ public interface CfnModuleVersionProps {
     override fun moduleName(): String = unwrap(this).getModuleName()
 
     /**
-     * A URL to the S3 bucket containing the package that contains the template fragment and schema
-     * files for the module version to register.
+     * A URL to the S3 bucket for the package that contains the template fragment and schema files
+     * for the module version to register.
+     *
+     * For more information, see [Module structure and
+     * requirements](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules-structure.html)
+     * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
      *
      *
-     * The user registering the module version must be able to access the module package in the S3
-     * bucket. That's, the user needs to have
-     * [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for
-     * the package. For more information, see [Actions, Resources, and Condition Keys for Amazon
-     * S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity
-     * and Access Management User Guide* .
+     * To register the module version, you must have `s3:GetObject` permissions to access the S3
+     * objects.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html#cfn-cloudformation-moduleversion-modulepackage)

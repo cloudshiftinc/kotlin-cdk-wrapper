@@ -41,6 +41,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .tempDirectory(S3LocationProperty.builder()
  * .bucket("bucket")
  * // the properties below are optional
+ * .bucketOwner("bucketOwner")
  * .key("key")
  * .build())
  * .build())
@@ -51,6 +52,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .tempDirectory(S3LocationProperty.builder()
  * .bucket("bucket")
  * // the properties below are optional
+ * .bucketOwner("bucketOwner")
  * .key("key")
  * .build())
  * .build())
@@ -60,6 +62,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .s3InputDefinition(S3LocationProperty.builder()
  * .bucket("bucket")
  * // the properties below are optional
+ * .bucketOwner("bucketOwner")
  * .key("key")
  * .build())
  * .build())
@@ -117,6 +120,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .pathParameterName("pathParameterName")
  * .build()))
  * .build())
+ * .source("source")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -266,6 +270,18 @@ public open class CfnDataset(
       pathOptions(PathOptionsProperty(`value`))
 
   /**
+   * The location of the data for the dataset, either Amazon S3 or the AWS Glue Data Catalog .
+   */
+  public open fun source(): String? = unwrap(this).getSource()
+
+  /**
+   * The location of the data for the dataset, either Amazon S3 or the AWS Glue Data Catalog .
+   */
+  public open fun source(`value`: String) {
+    unwrap(this).setSource(`value`)
+  }
+
+  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
@@ -398,6 +414,15 @@ public open class CfnDataset(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3ee845b91bbaf56745c111be9c1c7fc34dd4099fd53d16d1a5ed80e500402178")
     public fun pathOptions(pathOptions: PathOptionsProperty.Builder.() -> Unit)
+
+    /**
+     * The location of the data for the dataset, either Amazon S3 or the AWS Glue Data Catalog .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-dataset.html#cfn-databrew-dataset-source)
+     * @param source The location of the data for the dataset, either Amazon S3 or the AWS Glue Data
+     * Catalog . 
+     */
+    public fun source(source: String)
 
     /**
      * Metadata tags that have been applied to the dataset.
@@ -546,6 +571,17 @@ public open class CfnDataset(
     @JvmName("3ee845b91bbaf56745c111be9c1c7fc34dd4099fd53d16d1a5ed80e500402178")
     override fun pathOptions(pathOptions: PathOptionsProperty.Builder.() -> Unit): Unit =
         pathOptions(PathOptionsProperty(pathOptions))
+
+    /**
+     * The location of the data for the dataset, either Amazon S3 or the AWS Glue Data Catalog .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-dataset.html#cfn-databrew-dataset-source)
+     * @param source The location of the data for the dataset, either Amazon S3 or the AWS Glue Data
+     * Catalog . 
+     */
+    override fun source(source: String) {
+      cdkBuilder.source(source)
+    }
 
     /**
      * Metadata tags that have been applied to the dataset.
@@ -740,6 +776,7 @@ public open class CfnDataset(
    * .tempDirectory(S3LocationProperty.builder()
    * .bucket("bucket")
    * // the properties below are optional
+   * .bucketOwner("bucketOwner")
    * .key("key")
    * .build())
    * .build();
@@ -952,6 +989,7 @@ public open class CfnDataset(
    * .tempDirectory(S3LocationProperty.builder()
    * .bucket("bucket")
    * // the properties below are optional
+   * .bucketOwner("bucketOwner")
    * .key("key")
    * .build())
    * .build();
@@ -1674,12 +1712,6 @@ public open class CfnDataset(
        * @param sheetIndexes One or more sheet numbers in the Excel file that will be included in
        * the dataset.
        */
-      public fun sheetIndexes(sheetIndexes: IResolvable)
-
-      /**
-       * @param sheetIndexes One or more sheet numbers in the Excel file that will be included in
-       * the dataset.
-       */
       public fun sheetIndexes(sheetIndexes: List<Number>)
 
       /**
@@ -1687,6 +1719,12 @@ public open class CfnDataset(
        * the dataset.
        */
       public fun sheetIndexes(vararg sheetIndexes: Number)
+
+      /**
+       * @param sheetIndexes One or more sheet numbers in the Excel file that will be included in
+       * the dataset.
+       */
+      public fun sheetIndexes(sheetIndexes: IResolvable)
 
       /**
        * @param sheetNames One or more named sheets in the Excel file that will be included in the
@@ -1728,14 +1766,6 @@ public open class CfnDataset(
        * @param sheetIndexes One or more sheet numbers in the Excel file that will be included in
        * the dataset.
        */
-      override fun sheetIndexes(sheetIndexes: IResolvable) {
-        cdkBuilder.sheetIndexes(sheetIndexes.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param sheetIndexes One or more sheet numbers in the Excel file that will be included in
-       * the dataset.
-       */
       override fun sheetIndexes(sheetIndexes: List<Number>) {
         cdkBuilder.sheetIndexes(sheetIndexes)
       }
@@ -1746,6 +1776,14 @@ public open class CfnDataset(
        */
       override fun sheetIndexes(vararg sheetIndexes: Number): Unit =
           sheetIndexes(sheetIndexes.toList())
+
+      /**
+       * @param sheetIndexes One or more sheet numbers in the Excel file that will be included in
+       * the dataset.
+       */
+      override fun sheetIndexes(sheetIndexes: IResolvable) {
+        cdkBuilder.sheetIndexes(sheetIndexes.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param sheetNames One or more named sheets in the Excel file that will be included in the
@@ -2477,6 +2515,7 @@ public open class CfnDataset(
    * .tempDirectory(S3LocationProperty.builder()
    * .bucket("bucket")
    * // the properties below are optional
+   * .bucketOwner("bucketOwner")
    * .key("key")
    * .build())
    * .build())
@@ -2487,6 +2526,7 @@ public open class CfnDataset(
    * .tempDirectory(S3LocationProperty.builder()
    * .bucket("bucket")
    * // the properties below are optional
+   * .bucketOwner("bucketOwner")
    * .key("key")
    * .build())
    * .build())
@@ -2496,6 +2536,7 @@ public open class CfnDataset(
    * .s3InputDefinition(S3LocationProperty.builder()
    * .bucket("bucket")
    * // the properties below are optional
+   * .bucketOwner("bucketOwner")
    * .key("key")
    * .build())
    * .build();
@@ -3387,6 +3428,7 @@ public open class CfnDataset(
    * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
    * .bucket("bucket")
    * // the properties below are optional
+   * .bucketOwner("bucketOwner")
    * .key("key")
    * .build();
    * ```
@@ -3400,6 +3442,13 @@ public open class CfnDataset(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html#cfn-databrew-dataset-s3location-bucket)
      */
     public fun bucket(): String
+
+    /**
+     * The AWS account ID of the bucket owner.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html#cfn-databrew-dataset-s3location-bucketowner)
+     */
+    public fun bucketOwner(): String? = unwrap(this).getBucketOwner()
 
     /**
      * The unique name of the object in the bucket.
@@ -3419,6 +3468,11 @@ public open class CfnDataset(
       public fun bucket(bucket: String)
 
       /**
+       * @param bucketOwner The AWS account ID of the bucket owner.
+       */
+      public fun bucketOwner(bucketOwner: String)
+
+      /**
        * @param key The unique name of the object in the bucket.
        */
       public fun key(key: String)
@@ -3434,6 +3488,13 @@ public open class CfnDataset(
        */
       override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
+      }
+
+      /**
+       * @param bucketOwner The AWS account ID of the bucket owner.
+       */
+      override fun bucketOwner(bucketOwner: String) {
+        cdkBuilder.bucketOwner(bucketOwner)
       }
 
       /**
@@ -3457,6 +3518,13 @@ public open class CfnDataset(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html#cfn-databrew-dataset-s3location-bucket)
        */
       override fun bucket(): String = unwrap(this).getBucket()
+
+      /**
+       * The AWS account ID of the bucket owner.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html#cfn-databrew-dataset-s3location-bucketowner)
+       */
+      override fun bucketOwner(): String? = unwrap(this).getBucketOwner()
 
       /**
        * The unique name of the object in the bucket.

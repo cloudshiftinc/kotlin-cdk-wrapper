@@ -11,11 +11,13 @@ import kotlin.String
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.cdk.lambdalayer.kubectl.v33.KubectlV33Layer;
  * // or
  * Vpc vpc;
  * Cluster.Builder.create(this, "MyCluster")
  * .kubectlMemory(Size.gibibytes(4))
- * .version(KubernetesVersion.V1_31)
+ * .version(KubernetesVersion.V1_33)
+ * .kubectlLayer(new KubectlV33Layer(this, "kubectl"))
  * .build();
  * Cluster.fromClusterAttributes(this, "MyCluster", ClusterAttributes.builder()
  * .kubectlMemory(Size.gibibytes(4))
@@ -88,6 +90,12 @@ public open class KubernetesVersion(
 
     public val V1_31: KubernetesVersion =
         KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_31)
+
+    public val V1_32: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_32)
+
+    public val V1_33: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_33)
 
     public fun of(version: String): KubernetesVersion =
         software.amazon.awscdk.services.eks.KubernetesVersion.of(version).let(KubernetesVersion::wrap)

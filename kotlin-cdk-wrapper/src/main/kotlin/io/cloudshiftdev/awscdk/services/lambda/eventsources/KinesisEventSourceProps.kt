@@ -123,7 +123,8 @@ public interface KinesisEventSourceProps : StreamEventSourceProps {
     public fun metricsConfig(metricsConfig: MetricsConfig.Builder.() -> Unit)
 
     /**
-     * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+     * @param onFailure An Amazon S3, Amazon SQS queue or Amazon SNS topic destination for discarded
+     * records.
      */
     public fun onFailure(onFailure: IEventSourceDlq)
 
@@ -162,11 +163,10 @@ public interface KinesisEventSourceProps : StreamEventSourceProps {
     public fun reportBatchItemFailures(reportBatchItemFailures: Boolean)
 
     /**
-     * @param retryAttempts Maximum number of retry attempts Valid Range: * Minimum value of 0 *
-     * Maximum value of 10000.
-     * The default value is -1, which sets the maximum number of retries to infinite.
-     * When MaximumRetryAttempts is infinite, Lambda retries failed records until
-     * the record expires in the event source.
+     * @param retryAttempts Maximum number of retry attempts.
+     * Set to -1 for infinite retries (until the record expires in the event source).
+     *
+     * Valid Range: -1 (infinite) or 0 to 10000
      */
     public fun retryAttempts(retryAttempts: Number)
 
@@ -286,7 +286,8 @@ public interface KinesisEventSourceProps : StreamEventSourceProps {
         metricsConfig(MetricsConfig(metricsConfig))
 
     /**
-     * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+     * @param onFailure An Amazon S3, Amazon SQS queue or Amazon SNS topic destination for discarded
+     * records.
      */
     override fun onFailure(onFailure: IEventSourceDlq) {
       cdkBuilder.onFailure(onFailure.let(IEventSourceDlq.Companion::unwrap))
@@ -334,11 +335,10 @@ public interface KinesisEventSourceProps : StreamEventSourceProps {
     }
 
     /**
-     * @param retryAttempts Maximum number of retry attempts Valid Range: * Minimum value of 0 *
-     * Maximum value of 10000.
-     * The default value is -1, which sets the maximum number of retries to infinite.
-     * When MaximumRetryAttempts is infinite, Lambda retries failed records until
-     * the record expires in the event source.
+     * @param retryAttempts Maximum number of retry attempts.
+     * Set to -1 for infinite retries (until the record expires in the event source).
+     *
+     * Valid Range: -1 (infinite) or 0 to 10000
      */
     override fun retryAttempts(retryAttempts: Number) {
       cdkBuilder.retryAttempts(retryAttempts)
@@ -463,7 +463,7 @@ public interface KinesisEventSourceProps : StreamEventSourceProps {
         unwrap(this).getMetricsConfig()?.let(MetricsConfig::wrap)
 
     /**
-     * An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+     * An Amazon S3, Amazon SQS queue or Amazon SNS topic destination for discarded records.
      *
      * Default: - discarded records are ignored
      */
@@ -503,13 +503,13 @@ public interface KinesisEventSourceProps : StreamEventSourceProps {
     override fun reportBatchItemFailures(): Boolean? = unwrap(this).getReportBatchItemFailures()
 
     /**
-     * Maximum number of retry attempts Valid Range: * Minimum value of 0 * Maximum value of 10000.
+     * Maximum number of retry attempts.
      *
-     * The default value is -1, which sets the maximum number of retries to infinite.
-     * When MaximumRetryAttempts is infinite, Lambda retries failed records until
-     * the record expires in the event source.
+     * Set to -1 for infinite retries (until the record expires in the event source).
      *
-     * Default: -1
+     * Valid Range: -1 (infinite) or 0 to 10000
+     *
+     * Default: -1 (infinite retries)
      */
     override fun retryAttempts(): Number? = unwrap(this).getRetryAttempts()
 

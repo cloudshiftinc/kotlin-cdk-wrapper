@@ -11,6 +11,7 @@ import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a `CfnChannelNamespace`.
@@ -27,6 +28,28 @@ import kotlin.collections.List
  * // the properties below are optional
  * .codeHandlers("codeHandlers")
  * .codeS3Location("codeS3Location")
+ * .handlerConfigs(HandlerConfigsProperty.builder()
+ * .onPublish(HandlerConfigProperty.builder()
+ * .behavior("behavior")
+ * .integration(IntegrationProperty.builder()
+ * .dataSourceName("dataSourceName")
+ * // the properties below are optional
+ * .lambdaConfig(LambdaConfigProperty.builder()
+ * .invokeType("invokeType")
+ * .build())
+ * .build())
+ * .build())
+ * .onSubscribe(HandlerConfigProperty.builder()
+ * .behavior("behavior")
+ * .integration(IntegrationProperty.builder()
+ * .dataSourceName("dataSourceName")
+ * // the properties below are optional
+ * .lambdaConfig(LambdaConfigProperty.builder()
+ * .invokeType("invokeType")
+ * .build())
+ * .build())
+ * .build())
+ * .build())
  * .publishAuthModes(List.of(AuthModeProperty.builder()
  * .authType("authType")
  * .build()))
@@ -64,6 +87,13 @@ public interface CfnChannelNamespaceProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-channelnamespace.html#cfn-appsync-channelnamespace-codes3location)
    */
   public fun codeS3Location(): String? = unwrap(this).getCodeS3Location()
+
+  /**
+   * The configuration for the `OnPublish` and `OnSubscribe` handlers.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-channelnamespace.html#cfn-appsync-channelnamespace-handlerconfigs)
+   */
+  public fun handlerConfigs(): Any? = unwrap(this).getHandlerConfigs()
 
   /**
    * The name of the channel namespace.
@@ -119,6 +149,24 @@ public interface CfnChannelNamespaceProps {
      * @param codeS3Location The Amazon S3 endpoint where the code is located.
      */
     public fun codeS3Location(codeS3Location: String)
+
+    /**
+     * @param handlerConfigs The configuration for the `OnPublish` and `OnSubscribe` handlers.
+     */
+    public fun handlerConfigs(handlerConfigs: IResolvable)
+
+    /**
+     * @param handlerConfigs The configuration for the `OnPublish` and `OnSubscribe` handlers.
+     */
+    public fun handlerConfigs(handlerConfigs: CfnChannelNamespace.HandlerConfigsProperty)
+
+    /**
+     * @param handlerConfigs The configuration for the `OnPublish` and `OnSubscribe` handlers.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3e0b6d196c417ec031f04e2d96de4dcaf2f15ddc15c8a10d49e04538982bc105")
+    public
+        fun handlerConfigs(handlerConfigs: CfnChannelNamespace.HandlerConfigsProperty.Builder.() -> Unit)
 
     /**
      * @param name The name of the channel namespace. 
@@ -204,6 +252,29 @@ public interface CfnChannelNamespaceProps {
     override fun codeS3Location(codeS3Location: String) {
       cdkBuilder.codeS3Location(codeS3Location)
     }
+
+    /**
+     * @param handlerConfigs The configuration for the `OnPublish` and `OnSubscribe` handlers.
+     */
+    override fun handlerConfigs(handlerConfigs: IResolvable) {
+      cdkBuilder.handlerConfigs(handlerConfigs.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param handlerConfigs The configuration for the `OnPublish` and `OnSubscribe` handlers.
+     */
+    override fun handlerConfigs(handlerConfigs: CfnChannelNamespace.HandlerConfigsProperty) {
+      cdkBuilder.handlerConfigs(handlerConfigs.let(CfnChannelNamespace.HandlerConfigsProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param handlerConfigs The configuration for the `OnPublish` and `OnSubscribe` handlers.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3e0b6d196c417ec031f04e2d96de4dcaf2f15ddc15c8a10d49e04538982bc105")
+    override
+        fun handlerConfigs(handlerConfigs: CfnChannelNamespace.HandlerConfigsProperty.Builder.() -> Unit):
+        Unit = handlerConfigs(CfnChannelNamespace.HandlerConfigsProperty(handlerConfigs))
 
     /**
      * @param name The name of the channel namespace. 
@@ -306,6 +377,13 @@ public interface CfnChannelNamespaceProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-channelnamespace.html#cfn-appsync-channelnamespace-codes3location)
      */
     override fun codeS3Location(): String? = unwrap(this).getCodeS3Location()
+
+    /**
+     * The configuration for the `OnPublish` and `OnSubscribe` handlers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-channelnamespace.html#cfn-appsync-channelnamespace-handlerconfigs)
+     */
+    override fun handlerConfigs(): Any? = unwrap(this).getHandlerConfigs()
 
     /**
      * The name of the channel namespace.

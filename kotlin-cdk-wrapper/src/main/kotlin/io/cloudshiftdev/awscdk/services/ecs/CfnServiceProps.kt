@@ -38,12 +38,19 @@ import kotlin.jvm.JvmName
  * .enable(false)
  * .rollback(false)
  * .build())
+ * .bakeTimeInMinutes(123)
  * .deploymentCircuitBreaker(DeploymentCircuitBreakerProperty.builder()
  * .enable(false)
  * .rollback(false)
  * .build())
+ * .lifecycleHooks(List.of(DeploymentLifecycleHookProperty.builder()
+ * .hookTargetArn("hookTargetArn")
+ * .lifecycleStages(List.of("lifecycleStages"))
+ * .roleArn("roleArn")
+ * .build()))
  * .maximumPercent(123)
  * .minimumHealthyPercent(123)
+ * .strategy("strategy")
  * .build())
  * .deploymentController(DeploymentControllerProperty.builder()
  * .type("type")
@@ -54,6 +61,13 @@ import kotlin.jvm.JvmName
  * .healthCheckGracePeriodSeconds(123)
  * .launchType("launchType")
  * .loadBalancers(List.of(LoadBalancerProperty.builder()
+ * .advancedConfiguration(AdvancedConfigurationProperty.builder()
+ * .alternateTargetGroupArn("alternateTargetGroupArn")
+ * // the properties below are optional
+ * .productionListenerRule("productionListenerRule")
+ * .roleArn("roleArn")
+ * .testListenerRule("testListenerRule")
+ * .build())
  * .containerName("containerName")
  * .containerPort(123)
  * .loadBalancerName("loadBalancerName")
@@ -100,6 +114,15 @@ import kotlin.jvm.JvmName
  * .port(123)
  * // the properties below are optional
  * .dnsName("dnsName")
+ * .testTrafficRules(ServiceConnectTestTrafficRulesProperty.builder()
+ * .header(ServiceConnectTestTrafficRulesHeaderProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .value(ServiceConnectTestTrafficRulesHeaderValueProperty.builder()
+ * .exact("exact")
+ * .build())
+ * .build())
+ * .build())
  * .build()))
  * .discoveryName("discoveryName")
  * .ingressPortOverride(123)
@@ -151,6 +174,7 @@ import kotlin.jvm.JvmName
  * .build()))
  * .build()))
  * .throughput(123)
+ * .volumeInitializationRate(123)
  * .volumeType("volumeType")
  * .build())
  * .build()))
@@ -170,7 +194,7 @@ public interface CfnServiceProps {
    *
    * For more information, see [Balancing an Amazon ECS service across Availability
    * Zones](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html) in
-   * the *Amazon Elastic Container Service Developer Guide* .
+   * the **Amazon Elastic Container Service Developer Guide** .
    *
    * Default: - "DISABLED"
    *
@@ -185,7 +209,12 @@ public interface CfnServiceProps {
    * `capacityProviderStrategy` or `launchType` is specified, the `defaultCapacityProviderStrategy` for
    * the cluster is used.
    *
-   * A capacity provider strategy may contain a maximum of 6 capacity providers.
+   * A capacity provider strategy can contain a maximum of 20 capacity providers.
+   *
+   *
+   * To remove this property from your service resource, specify an empty
+   * `CapacityProviderStrategyItem` array.
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy)
    */
@@ -211,8 +240,6 @@ public interface CfnServiceProps {
   /**
    * The deployment controller to use for the service.
    *
-   * If no deployment controller is specified, the default value of `ECS` is used.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-deploymentcontroller)
    */
   public fun deploymentController(): Any? = unwrap(this).getDeploymentController()
@@ -237,7 +264,7 @@ public interface CfnServiceProps {
    * resources](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html) in the
    * *Amazon Elastic Container Service Developer Guide* .
    *
-   * When you use Amazon ECS managed tags, you need to set the `propagateTags` request parameter.
+   * When you use Amazon ECS managed tags, you must set the `propagateTags` request parameter.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-enableecsmanagedtags)
    */
@@ -290,6 +317,10 @@ public interface CfnServiceProps {
    * Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html)
    * in the *Amazon Elastic Container Service Developer Guide* .
    *
+   *
+   * To remove this property from your service resource, specify an empty `LoadBalancer` array.
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-loadbalancers)
    */
   public fun loadBalancers(): Any? = unwrap(this).getLoadBalancers()
@@ -313,6 +344,11 @@ public interface CfnServiceProps {
    * You can specify a maximum of 10 constraints for each task. This limit includes constraints in
    * the task definition and those specified at runtime.
    *
+   *
+   * To remove this property from your service resource, specify an empty `PlacementConstraint`
+   * array.
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementconstraints)
    */
   public fun placementConstraints(): Any? = unwrap(this).getPlacementConstraints()
@@ -321,6 +357,10 @@ public interface CfnServiceProps {
    * The placement strategy objects to use for tasks in your service.
    *
    * You can specify a maximum of 5 strategy rules for each service.
+   *
+   *
+   * To remove this property from your service resource, specify an empty `PlacementStrategy` array.
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementstrategies)
    */
@@ -456,7 +496,8 @@ public interface CfnServiceProps {
    *
    *
    * Each service may be associated with one service registry. Multiple service registries for each
-   * service isn't supported.
+   * service isn't supported. &gt; To remove this property from your service resource, specify an empty
+   * `ServiceRegistry` array.
    *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-serviceregistries)
@@ -505,6 +546,11 @@ public interface CfnServiceProps {
    *
    * Currently, the only supported volume type is an Amazon EBS volume.
    *
+   *
+   * To remove this property from your service resource, specify an empty
+   * `ServiceVolumeConfiguration` array.
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-volumeconfigurations)
    */
   public fun volumeConfigurations(): Any? = unwrap(this).getVolumeConfigurations()
@@ -526,7 +572,7 @@ public interface CfnServiceProps {
      * the service.
      * For more information, see [Balancing an Amazon ECS service across Availability
      * Zones](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html) in
-     * the *Amazon Elastic Container Service Developer Guide* .
+     * the **Amazon Elastic Container Service Developer Guide** .
      */
     public fun availabilityZoneRebalancing(availabilityZoneRebalancing: String)
 
@@ -536,7 +582,11 @@ public interface CfnServiceProps {
      * no `capacityProviderStrategy` or `launchType` is specified, the
      * `defaultCapacityProviderStrategy` for the cluster is used.
      *
-     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * A capacity provider strategy can contain a maximum of 20 capacity providers.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `CapacityProviderStrategyItem` array.
      */
     public fun capacityProviderStrategy(capacityProviderStrategy: IResolvable)
 
@@ -546,7 +596,11 @@ public interface CfnServiceProps {
      * no `capacityProviderStrategy` or `launchType` is specified, the
      * `defaultCapacityProviderStrategy` for the cluster is used.
      *
-     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * A capacity provider strategy can contain a maximum of 20 capacity providers.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `CapacityProviderStrategyItem` array.
      */
     public fun capacityProviderStrategy(capacityProviderStrategy: List<Any>)
 
@@ -556,7 +610,11 @@ public interface CfnServiceProps {
      * no `capacityProviderStrategy` or `launchType` is specified, the
      * `defaultCapacityProviderStrategy` for the cluster is used.
      *
-     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * A capacity provider strategy can contain a maximum of 20 capacity providers.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `CapacityProviderStrategyItem` array.
      */
     public fun capacityProviderStrategy(vararg capacityProviderStrategy: Any)
 
@@ -591,19 +649,16 @@ public interface CfnServiceProps {
 
     /**
      * @param deploymentController The deployment controller to use for the service.
-     * If no deployment controller is specified, the default value of `ECS` is used.
      */
     public fun deploymentController(deploymentController: IResolvable)
 
     /**
      * @param deploymentController The deployment controller to use for the service.
-     * If no deployment controller is specified, the default value of `ECS` is used.
      */
     public fun deploymentController(deploymentController: CfnService.DeploymentControllerProperty)
 
     /**
      * @param deploymentController The deployment controller to use for the service.
-     * If no deployment controller is specified, the default value of `ECS` is used.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9cf4ceefc364272b19ad3045427442333d4cfedfa588102902f59c07d2bde3ac")
@@ -627,7 +682,7 @@ public interface CfnServiceProps {
      * resources](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html) in
      * the *Amazon Elastic Container Service Developer Guide* .
      *
-     * When you use Amazon ECS managed tags, you need to set the `propagateTags` request parameter.
+     * When you use Amazon ECS managed tags, you must set the `propagateTags` request parameter.
      */
     public fun enableEcsManagedTags(enableEcsManagedTags: Boolean)
 
@@ -638,7 +693,7 @@ public interface CfnServiceProps {
      * resources](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html) in
      * the *Amazon Elastic Container Service Developer Guide* .
      *
-     * When you use Amazon ECS managed tags, you need to set the `propagateTags` request parameter.
+     * When you use Amazon ECS managed tags, you must set the `propagateTags` request parameter.
      */
     public fun enableEcsManagedTags(enableEcsManagedTags: IResolvable)
 
@@ -688,6 +743,9 @@ public interface CfnServiceProps {
      * Load
      * Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     *
+     * To remove this property from your service resource, specify an empty `LoadBalancer` array.
      */
     public fun loadBalancers(loadBalancers: IResolvable)
 
@@ -698,6 +756,9 @@ public interface CfnServiceProps {
      * Load
      * Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     *
+     * To remove this property from your service resource, specify an empty `LoadBalancer` array.
      */
     public fun loadBalancers(loadBalancers: List<Any>)
 
@@ -708,6 +769,9 @@ public interface CfnServiceProps {
      * Load
      * Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     *
+     * To remove this property from your service resource, specify an empty `LoadBalancer` array.
      */
     public fun loadBalancers(vararg loadBalancers: Any)
 
@@ -749,6 +813,10 @@ public interface CfnServiceProps {
      * service.
      * You can specify a maximum of 10 constraints for each task. This limit includes constraints in
      * the task definition and those specified at runtime.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementConstraint`
+     * array.
      */
     public fun placementConstraints(placementConstraints: IResolvable)
 
@@ -757,6 +825,10 @@ public interface CfnServiceProps {
      * service.
      * You can specify a maximum of 10 constraints for each task. This limit includes constraints in
      * the task definition and those specified at runtime.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementConstraint`
+     * array.
      */
     public fun placementConstraints(placementConstraints: List<Any>)
 
@@ -765,24 +837,40 @@ public interface CfnServiceProps {
      * service.
      * You can specify a maximum of 10 constraints for each task. This limit includes constraints in
      * the task definition and those specified at runtime.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementConstraint`
+     * array.
      */
     public fun placementConstraints(vararg placementConstraints: Any)
 
     /**
      * @param placementStrategies The placement strategy objects to use for tasks in your service.
      * You can specify a maximum of 5 strategy rules for each service.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementStrategy`
+     * array.
      */
     public fun placementStrategies(placementStrategies: IResolvable)
 
     /**
      * @param placementStrategies The placement strategy objects to use for tasks in your service.
      * You can specify a maximum of 5 strategy rules for each service.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementStrategy`
+     * array.
      */
     public fun placementStrategies(placementStrategies: List<Any>)
 
     /**
      * @param placementStrategies The placement strategy objects to use for tasks in your service.
      * You can specify a maximum of 5 strategy rules for each service.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementStrategy`
+     * array.
      */
     public fun placementStrategies(vararg placementStrategies: Any)
 
@@ -926,7 +1014,8 @@ public interface CfnServiceProps {
      * discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) .
      *
      * Each service may be associated with one service registry. Multiple service registries for
-     * each service isn't supported.
+     * each service isn't supported. &gt; To remove this property from your service resource, specify
+     * an empty `ServiceRegistry` array.
      */
     public fun serviceRegistries(serviceRegistries: IResolvable)
 
@@ -936,7 +1025,8 @@ public interface CfnServiceProps {
      * discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) .
      *
      * Each service may be associated with one service registry. Multiple service registries for
-     * each service isn't supported.
+     * each service isn't supported. &gt; To remove this property from your service resource, specify
+     * an empty `ServiceRegistry` array.
      */
     public fun serviceRegistries(serviceRegistries: List<Any>)
 
@@ -946,7 +1036,8 @@ public interface CfnServiceProps {
      * discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) .
      *
      * Each service may be associated with one service registry. Multiple service registries for
-     * each service isn't supported.
+     * each service isn't supported. &gt; To remove this property from your service resource, specify
+     * an empty `ServiceRegistry` array.
      */
     public fun serviceRegistries(vararg serviceRegistries: Any)
 
@@ -1003,6 +1094,10 @@ public interface CfnServiceProps {
      * @param volumeConfigurations The configuration for a volume specified in the task definition
      * as a volume that is configured at launch time.
      * Currently, the only supported volume type is an Amazon EBS volume.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `ServiceVolumeConfiguration` array.
      */
     public fun volumeConfigurations(volumeConfigurations: IResolvable)
 
@@ -1010,6 +1105,10 @@ public interface CfnServiceProps {
      * @param volumeConfigurations The configuration for a volume specified in the task definition
      * as a volume that is configured at launch time.
      * Currently, the only supported volume type is an Amazon EBS volume.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `ServiceVolumeConfiguration` array.
      */
     public fun volumeConfigurations(volumeConfigurations: List<Any>)
 
@@ -1017,6 +1116,10 @@ public interface CfnServiceProps {
      * @param volumeConfigurations The configuration for a volume specified in the task definition
      * as a volume that is configured at launch time.
      * Currently, the only supported volume type is an Amazon EBS volume.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `ServiceVolumeConfiguration` array.
      */
     public fun volumeConfigurations(vararg volumeConfigurations: Any)
 
@@ -1045,7 +1148,7 @@ public interface CfnServiceProps {
      * the service.
      * For more information, see [Balancing an Amazon ECS service across Availability
      * Zones](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html) in
-     * the *Amazon Elastic Container Service Developer Guide* .
+     * the **Amazon Elastic Container Service Developer Guide** .
      */
     override fun availabilityZoneRebalancing(availabilityZoneRebalancing: String) {
       cdkBuilder.availabilityZoneRebalancing(availabilityZoneRebalancing)
@@ -1057,7 +1160,11 @@ public interface CfnServiceProps {
      * no `capacityProviderStrategy` or `launchType` is specified, the
      * `defaultCapacityProviderStrategy` for the cluster is used.
      *
-     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * A capacity provider strategy can contain a maximum of 20 capacity providers.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `CapacityProviderStrategyItem` array.
      */
     override fun capacityProviderStrategy(capacityProviderStrategy: IResolvable) {
       cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.let(IResolvable.Companion::unwrap))
@@ -1069,7 +1176,11 @@ public interface CfnServiceProps {
      * no `capacityProviderStrategy` or `launchType` is specified, the
      * `defaultCapacityProviderStrategy` for the cluster is used.
      *
-     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * A capacity provider strategy can contain a maximum of 20 capacity providers.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `CapacityProviderStrategyItem` array.
      */
     override fun capacityProviderStrategy(capacityProviderStrategy: List<Any>) {
       cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.map{CdkObjectWrappers.unwrap(it)})
@@ -1081,7 +1192,11 @@ public interface CfnServiceProps {
      * no `capacityProviderStrategy` or `launchType` is specified, the
      * `defaultCapacityProviderStrategy` for the cluster is used.
      *
-     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * A capacity provider strategy can contain a maximum of 20 capacity providers.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `CapacityProviderStrategyItem` array.
      */
     override fun capacityProviderStrategy(vararg capacityProviderStrategy: Any): Unit =
         capacityProviderStrategy(capacityProviderStrategy.toList())
@@ -1125,7 +1240,6 @@ public interface CfnServiceProps {
 
     /**
      * @param deploymentController The deployment controller to use for the service.
-     * If no deployment controller is specified, the default value of `ECS` is used.
      */
     override fun deploymentController(deploymentController: IResolvable) {
       cdkBuilder.deploymentController(deploymentController.let(IResolvable.Companion::unwrap))
@@ -1133,7 +1247,6 @@ public interface CfnServiceProps {
 
     /**
      * @param deploymentController The deployment controller to use for the service.
-     * If no deployment controller is specified, the default value of `ECS` is used.
      */
     override
         fun deploymentController(deploymentController: CfnService.DeploymentControllerProperty) {
@@ -1142,7 +1255,6 @@ public interface CfnServiceProps {
 
     /**
      * @param deploymentController The deployment controller to use for the service.
-     * If no deployment controller is specified, the default value of `ECS` is used.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9cf4ceefc364272b19ad3045427442333d4cfedfa588102902f59c07d2bde3ac")
@@ -1169,7 +1281,7 @@ public interface CfnServiceProps {
      * resources](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html) in
      * the *Amazon Elastic Container Service Developer Guide* .
      *
-     * When you use Amazon ECS managed tags, you need to set the `propagateTags` request parameter.
+     * When you use Amazon ECS managed tags, you must set the `propagateTags` request parameter.
      */
     override fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
       cdkBuilder.enableEcsManagedTags(enableEcsManagedTags)
@@ -1182,7 +1294,7 @@ public interface CfnServiceProps {
      * resources](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html) in
      * the *Amazon Elastic Container Service Developer Guide* .
      *
-     * When you use Amazon ECS managed tags, you need to set the `propagateTags` request parameter.
+     * When you use Amazon ECS managed tags, you must set the `propagateTags` request parameter.
      */
     override fun enableEcsManagedTags(enableEcsManagedTags: IResolvable) {
       cdkBuilder.enableEcsManagedTags(enableEcsManagedTags.let(IResolvable.Companion::unwrap))
@@ -1242,6 +1354,9 @@ public interface CfnServiceProps {
      * Load
      * Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     *
+     * To remove this property from your service resource, specify an empty `LoadBalancer` array.
      */
     override fun loadBalancers(loadBalancers: IResolvable) {
       cdkBuilder.loadBalancers(loadBalancers.let(IResolvable.Companion::unwrap))
@@ -1254,6 +1369,9 @@ public interface CfnServiceProps {
      * Load
      * Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     *
+     * To remove this property from your service resource, specify an empty `LoadBalancer` array.
      */
     override fun loadBalancers(loadBalancers: List<Any>) {
       cdkBuilder.loadBalancers(loadBalancers.map{CdkObjectWrappers.unwrap(it)})
@@ -1266,6 +1384,9 @@ public interface CfnServiceProps {
      * Load
      * Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     *
+     * To remove this property from your service resource, specify an empty `LoadBalancer` array.
      */
     override fun loadBalancers(vararg loadBalancers: Any): Unit =
         loadBalancers(loadBalancers.toList())
@@ -1314,6 +1435,10 @@ public interface CfnServiceProps {
      * service.
      * You can specify a maximum of 10 constraints for each task. This limit includes constraints in
      * the task definition and those specified at runtime.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementConstraint`
+     * array.
      */
     override fun placementConstraints(placementConstraints: IResolvable) {
       cdkBuilder.placementConstraints(placementConstraints.let(IResolvable.Companion::unwrap))
@@ -1324,6 +1449,10 @@ public interface CfnServiceProps {
      * service.
      * You can specify a maximum of 10 constraints for each task. This limit includes constraints in
      * the task definition and those specified at runtime.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementConstraint`
+     * array.
      */
     override fun placementConstraints(placementConstraints: List<Any>) {
       cdkBuilder.placementConstraints(placementConstraints.map{CdkObjectWrappers.unwrap(it)})
@@ -1334,6 +1463,10 @@ public interface CfnServiceProps {
      * service.
      * You can specify a maximum of 10 constraints for each task. This limit includes constraints in
      * the task definition and those specified at runtime.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementConstraint`
+     * array.
      */
     override fun placementConstraints(vararg placementConstraints: Any): Unit =
         placementConstraints(placementConstraints.toList())
@@ -1341,6 +1474,10 @@ public interface CfnServiceProps {
     /**
      * @param placementStrategies The placement strategy objects to use for tasks in your service.
      * You can specify a maximum of 5 strategy rules for each service.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementStrategy`
+     * array.
      */
     override fun placementStrategies(placementStrategies: IResolvable) {
       cdkBuilder.placementStrategies(placementStrategies.let(IResolvable.Companion::unwrap))
@@ -1349,6 +1486,10 @@ public interface CfnServiceProps {
     /**
      * @param placementStrategies The placement strategy objects to use for tasks in your service.
      * You can specify a maximum of 5 strategy rules for each service.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementStrategy`
+     * array.
      */
     override fun placementStrategies(placementStrategies: List<Any>) {
       cdkBuilder.placementStrategies(placementStrategies.map{CdkObjectWrappers.unwrap(it)})
@@ -1357,6 +1498,10 @@ public interface CfnServiceProps {
     /**
      * @param placementStrategies The placement strategy objects to use for tasks in your service.
      * You can specify a maximum of 5 strategy rules for each service.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementStrategy`
+     * array.
      */
     override fun placementStrategies(vararg placementStrategies: Any): Unit =
         placementStrategies(placementStrategies.toList())
@@ -1517,7 +1662,8 @@ public interface CfnServiceProps {
      * discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) .
      *
      * Each service may be associated with one service registry. Multiple service registries for
-     * each service isn't supported.
+     * each service isn't supported. &gt; To remove this property from your service resource, specify
+     * an empty `ServiceRegistry` array.
      */
     override fun serviceRegistries(serviceRegistries: IResolvable) {
       cdkBuilder.serviceRegistries(serviceRegistries.let(IResolvable.Companion::unwrap))
@@ -1529,7 +1675,8 @@ public interface CfnServiceProps {
      * discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) .
      *
      * Each service may be associated with one service registry. Multiple service registries for
-     * each service isn't supported.
+     * each service isn't supported. &gt; To remove this property from your service resource, specify
+     * an empty `ServiceRegistry` array.
      */
     override fun serviceRegistries(serviceRegistries: List<Any>) {
       cdkBuilder.serviceRegistries(serviceRegistries.map{CdkObjectWrappers.unwrap(it)})
@@ -1541,7 +1688,8 @@ public interface CfnServiceProps {
      * discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) .
      *
      * Each service may be associated with one service registry. Multiple service registries for
-     * each service isn't supported.
+     * each service isn't supported. &gt; To remove this property from your service resource, specify
+     * an empty `ServiceRegistry` array.
      */
     override fun serviceRegistries(vararg serviceRegistries: Any): Unit =
         serviceRegistries(serviceRegistries.toList())
@@ -1603,6 +1751,10 @@ public interface CfnServiceProps {
      * @param volumeConfigurations The configuration for a volume specified in the task definition
      * as a volume that is configured at launch time.
      * Currently, the only supported volume type is an Amazon EBS volume.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `ServiceVolumeConfiguration` array.
      */
     override fun volumeConfigurations(volumeConfigurations: IResolvable) {
       cdkBuilder.volumeConfigurations(volumeConfigurations.let(IResolvable.Companion::unwrap))
@@ -1612,6 +1764,10 @@ public interface CfnServiceProps {
      * @param volumeConfigurations The configuration for a volume specified in the task definition
      * as a volume that is configured at launch time.
      * Currently, the only supported volume type is an Amazon EBS volume.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `ServiceVolumeConfiguration` array.
      */
     override fun volumeConfigurations(volumeConfigurations: List<Any>) {
       cdkBuilder.volumeConfigurations(volumeConfigurations.map{CdkObjectWrappers.unwrap(it)})
@@ -1621,6 +1777,10 @@ public interface CfnServiceProps {
      * @param volumeConfigurations The configuration for a volume specified in the task definition
      * as a volume that is configured at launch time.
      * Currently, the only supported volume type is an Amazon EBS volume.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `ServiceVolumeConfiguration` array.
      */
     override fun volumeConfigurations(vararg volumeConfigurations: Any): Unit =
         volumeConfigurations(volumeConfigurations.toList())
@@ -1657,7 +1817,7 @@ public interface CfnServiceProps {
      *
      * For more information, see [Balancing an Amazon ECS service across Availability
      * Zones](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html) in
-     * the *Amazon Elastic Container Service Developer Guide* .
+     * the **Amazon Elastic Container Service Developer Guide** .
      *
      * Default: - "DISABLED"
      *
@@ -1673,7 +1833,12 @@ public interface CfnServiceProps {
      * no `capacityProviderStrategy` or `launchType` is specified, the
      * `defaultCapacityProviderStrategy` for the cluster is used.
      *
-     * A capacity provider strategy may contain a maximum of 6 capacity providers.
+     * A capacity provider strategy can contain a maximum of 20 capacity providers.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `CapacityProviderStrategyItem` array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy)
      */
@@ -1700,8 +1865,6 @@ public interface CfnServiceProps {
     /**
      * The deployment controller to use for the service.
      *
-     * If no deployment controller is specified, the default value of `ECS` is used.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-deploymentcontroller)
      */
     override fun deploymentController(): Any? = unwrap(this).getDeploymentController()
@@ -1726,7 +1889,7 @@ public interface CfnServiceProps {
      * resources](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html) in
      * the *Amazon Elastic Container Service Developer Guide* .
      *
-     * When you use Amazon ECS managed tags, you need to set the `propagateTags` request parameter.
+     * When you use Amazon ECS managed tags, you must set the `propagateTags` request parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-enableecsmanagedtags)
      */
@@ -1780,6 +1943,10 @@ public interface CfnServiceProps {
      * Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
      *
+     *
+     * To remove this property from your service resource, specify an empty `LoadBalancer` array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-loadbalancers)
      */
     override fun loadBalancers(): Any? = unwrap(this).getLoadBalancers()
@@ -1803,6 +1970,11 @@ public interface CfnServiceProps {
      * You can specify a maximum of 10 constraints for each task. This limit includes constraints in
      * the task definition and those specified at runtime.
      *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementConstraint`
+     * array.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementconstraints)
      */
     override fun placementConstraints(): Any? = unwrap(this).getPlacementConstraints()
@@ -1811,6 +1983,11 @@ public interface CfnServiceProps {
      * The placement strategy objects to use for tasks in your service.
      *
      * You can specify a maximum of 5 strategy rules for each service.
+     *
+     *
+     * To remove this property from your service resource, specify an empty `PlacementStrategy`
+     * array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementstrategies)
      */
@@ -1947,7 +2124,8 @@ public interface CfnServiceProps {
      *
      *
      * Each service may be associated with one service registry. Multiple service registries for
-     * each service isn't supported.
+     * each service isn't supported. &gt; To remove this property from your service resource, specify
+     * an empty `ServiceRegistry` array.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-serviceregistries)
@@ -1995,6 +2173,11 @@ public interface CfnServiceProps {
      * configured at launch time.
      *
      * Currently, the only supported volume type is an Amazon EBS volume.
+     *
+     *
+     * To remove this property from your service resource, specify an empty
+     * `ServiceVolumeConfiguration` array.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-volumeconfigurations)
      */

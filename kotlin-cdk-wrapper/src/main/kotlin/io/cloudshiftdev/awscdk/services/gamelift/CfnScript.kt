@@ -207,10 +207,10 @@ public open class CfnScript(
      * stored.
      *
      * The storage location must specify the Amazon S3 bucket name, the zip file name (the "key"),
-     * and a role ARN that allows Amazon GameLift to access the Amazon S3 storage location. The S3
-     * bucket must be in the same Region where you want to create a new script. By default, Amazon
-     * GameLift uploads the latest version of the zip file; if you have S3 object versioning turned on,
-     * you can use the `ObjectVersion` parameter to specify an earlier version.
+     * and a role ARN that allows Amazon GameLift Servers to access the Amazon S3 storage location. The
+     * S3 bucket must be in the same Region where you want to create a new script. By default, Amazon
+     * GameLift Servers uploads the latest version of the zip file; if you have S3 object versioning
+     * turned on, you can use the `ObjectVersion` parameter to specify an earlier version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html#cfn-gamelift-script-storagelocation)
      * @param storageLocation The location of the Amazon S3 bucket where a zipped file containing
@@ -223,10 +223,10 @@ public open class CfnScript(
      * stored.
      *
      * The storage location must specify the Amazon S3 bucket name, the zip file name (the "key"),
-     * and a role ARN that allows Amazon GameLift to access the Amazon S3 storage location. The S3
-     * bucket must be in the same Region where you want to create a new script. By default, Amazon
-     * GameLift uploads the latest version of the zip file; if you have S3 object versioning turned on,
-     * you can use the `ObjectVersion` parameter to specify an earlier version.
+     * and a role ARN that allows Amazon GameLift Servers to access the Amazon S3 storage location. The
+     * S3 bucket must be in the same Region where you want to create a new script. By default, Amazon
+     * GameLift Servers uploads the latest version of the zip file; if you have S3 object versioning
+     * turned on, you can use the `ObjectVersion` parameter to specify an earlier version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html#cfn-gamelift-script-storagelocation)
      * @param storageLocation The location of the Amazon S3 bucket where a zipped file containing
@@ -239,10 +239,10 @@ public open class CfnScript(
      * stored.
      *
      * The storage location must specify the Amazon S3 bucket name, the zip file name (the "key"),
-     * and a role ARN that allows Amazon GameLift to access the Amazon S3 storage location. The S3
-     * bucket must be in the same Region where you want to create a new script. By default, Amazon
-     * GameLift uploads the latest version of the zip file; if you have S3 object versioning turned on,
-     * you can use the `ObjectVersion` parameter to specify an earlier version.
+     * and a role ARN that allows Amazon GameLift Servers to access the Amazon S3 storage location. The
+     * S3 bucket must be in the same Region where you want to create a new script. By default, Amazon
+     * GameLift Servers uploads the latest version of the zip file; if you have S3 object versioning
+     * turned on, you can use the `ObjectVersion` parameter to specify an earlier version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html#cfn-gamelift-script-storagelocation)
      * @param storageLocation The location of the Amazon S3 bucket where a zipped file containing
@@ -317,10 +317,10 @@ public open class CfnScript(
      * stored.
      *
      * The storage location must specify the Amazon S3 bucket name, the zip file name (the "key"),
-     * and a role ARN that allows Amazon GameLift to access the Amazon S3 storage location. The S3
-     * bucket must be in the same Region where you want to create a new script. By default, Amazon
-     * GameLift uploads the latest version of the zip file; if you have S3 object versioning turned on,
-     * you can use the `ObjectVersion` parameter to specify an earlier version.
+     * and a role ARN that allows Amazon GameLift Servers to access the Amazon S3 storage location. The
+     * S3 bucket must be in the same Region where you want to create a new script. By default, Amazon
+     * GameLift Servers uploads the latest version of the zip file; if you have S3 object versioning
+     * turned on, you can use the `ObjectVersion` parameter to specify an earlier version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html#cfn-gamelift-script-storagelocation)
      * @param storageLocation The location of the Amazon S3 bucket where a zipped file containing
@@ -335,10 +335,10 @@ public open class CfnScript(
      * stored.
      *
      * The storage location must specify the Amazon S3 bucket name, the zip file name (the "key"),
-     * and a role ARN that allows Amazon GameLift to access the Amazon S3 storage location. The S3
-     * bucket must be in the same Region where you want to create a new script. By default, Amazon
-     * GameLift uploads the latest version of the zip file; if you have S3 object versioning turned on,
-     * you can use the `ObjectVersion` parameter to specify an earlier version.
+     * and a role ARN that allows Amazon GameLift Servers to access the Amazon S3 storage location. The
+     * S3 bucket must be in the same Region where you want to create a new script. By default, Amazon
+     * GameLift Servers uploads the latest version of the zip file; if you have S3 object versioning
+     * turned on, you can use the `ObjectVersion` parameter to specify an earlier version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html#cfn-gamelift-script-storagelocation)
      * @param storageLocation The location of the Amazon S3 bucket where a zipped file containing
@@ -353,10 +353,10 @@ public open class CfnScript(
      * stored.
      *
      * The storage location must specify the Amazon S3 bucket name, the zip file name (the "key"),
-     * and a role ARN that allows Amazon GameLift to access the Amazon S3 storage location. The S3
-     * bucket must be in the same Region where you want to create a new script. By default, Amazon
-     * GameLift uploads the latest version of the zip file; if you have S3 object versioning turned on,
-     * you can use the `ObjectVersion` parameter to specify an earlier version.
+     * and a role ARN that allows Amazon GameLift Servers to access the Amazon S3 storage location. The
+     * S3 bucket must be in the same Region where you want to create a new script. By default, Amazon
+     * GameLift Servers uploads the latest version of the zip file; if you have S3 object versioning
+     * turned on, you can use the `ObjectVersion` parameter to specify an earlier version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html#cfn-gamelift-script-storagelocation)
      * @param storageLocation The location of the Amazon S3 bucket where a zipped file containing
@@ -460,8 +460,8 @@ public open class CfnScript(
      * An Amazon S3 bucket identifier. Thename of the S3 bucket.
      *
      *
-     * Amazon GameLift doesn't support uploading from Amazon S3 buckets with names that contain a
-     * dot (.).
+     * Amazon GameLift Servers doesn't support uploading from Amazon S3 buckets with names that
+     * contain a dot (.).
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-script-s3location.html#cfn-gamelift-script-s3location-bucket)
@@ -478,9 +478,9 @@ public open class CfnScript(
     /**
      * The version of the file, if object versioning is turned on for the bucket.
      *
-     * Amazon GameLift uses this information when retrieving files from an S3 bucket that you own.
-     * Use this parameter to specify a specific version of the file. If not set, the latest version of
-     * the file is retrieved.
+     * Amazon GameLift Servers uses this information when retrieving files from an S3 bucket that
+     * you own. Use this parameter to specify a specific version of the file. If not set, the latest
+     * version of the file is retrieved.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-script-s3location.html#cfn-gamelift-script-s3location-objectversion)
      */
@@ -489,7 +489,7 @@ public open class CfnScript(
     /**
      * The Amazon Resource Name (
      * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) for an IAM role that
-     * allows Amazon GameLift to access the S3 bucket.
+     * allows Amazon GameLift Servers to access the S3 bucket.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-script-s3location.html#cfn-gamelift-script-s3location-rolearn)
      */
@@ -503,8 +503,8 @@ public open class CfnScript(
       /**
        * @param bucket An Amazon S3 bucket identifier. Thename of the S3 bucket. 
        *
-       * Amazon GameLift doesn't support uploading from Amazon S3 buckets with names that contain a
-       * dot (.).
+       * Amazon GameLift Servers doesn't support uploading from Amazon S3 buckets with names that
+       * contain a dot (.).
        */
       public fun bucket(bucket: String)
 
@@ -516,16 +516,16 @@ public open class CfnScript(
       /**
        * @param objectVersion The version of the file, if object versioning is turned on for the
        * bucket.
-       * Amazon GameLift uses this information when retrieving files from an S3 bucket that you own.
-       * Use this parameter to specify a specific version of the file. If not set, the latest version
-       * of the file is retrieved.
+       * Amazon GameLift Servers uses this information when retrieving files from an S3 bucket that
+       * you own. Use this parameter to specify a specific version of the file. If not set, the latest
+       * version of the file is retrieved.
        */
       public fun objectVersion(objectVersion: String)
 
       /**
        * @param roleArn The Amazon Resource Name (
        * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) for an IAM role
-       * that allows Amazon GameLift to access the S3 bucket. 
+       * that allows Amazon GameLift Servers to access the S3 bucket. 
        */
       public fun roleArn(roleArn: String)
     }
@@ -538,8 +538,8 @@ public open class CfnScript(
       /**
        * @param bucket An Amazon S3 bucket identifier. Thename of the S3 bucket. 
        *
-       * Amazon GameLift doesn't support uploading from Amazon S3 buckets with names that contain a
-       * dot (.).
+       * Amazon GameLift Servers doesn't support uploading from Amazon S3 buckets with names that
+       * contain a dot (.).
        */
       override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
@@ -555,9 +555,9 @@ public open class CfnScript(
       /**
        * @param objectVersion The version of the file, if object versioning is turned on for the
        * bucket.
-       * Amazon GameLift uses this information when retrieving files from an S3 bucket that you own.
-       * Use this parameter to specify a specific version of the file. If not set, the latest version
-       * of the file is retrieved.
+       * Amazon GameLift Servers uses this information when retrieving files from an S3 bucket that
+       * you own. Use this parameter to specify a specific version of the file. If not set, the latest
+       * version of the file is retrieved.
        */
       override fun objectVersion(objectVersion: String) {
         cdkBuilder.objectVersion(objectVersion)
@@ -566,7 +566,7 @@ public open class CfnScript(
       /**
        * @param roleArn The Amazon Resource Name (
        * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) for an IAM role
-       * that allows Amazon GameLift to access the S3 bucket. 
+       * that allows Amazon GameLift Servers to access the S3 bucket. 
        */
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
@@ -584,8 +584,8 @@ public open class CfnScript(
        * An Amazon S3 bucket identifier. Thename of the S3 bucket.
        *
        *
-       * Amazon GameLift doesn't support uploading from Amazon S3 buckets with names that contain a
-       * dot (.).
+       * Amazon GameLift Servers doesn't support uploading from Amazon S3 buckets with names that
+       * contain a dot (.).
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-script-s3location.html#cfn-gamelift-script-s3location-bucket)
@@ -602,9 +602,9 @@ public open class CfnScript(
       /**
        * The version of the file, if object versioning is turned on for the bucket.
        *
-       * Amazon GameLift uses this information when retrieving files from an S3 bucket that you own.
-       * Use this parameter to specify a specific version of the file. If not set, the latest version
-       * of the file is retrieved.
+       * Amazon GameLift Servers uses this information when retrieving files from an S3 bucket that
+       * you own. Use this parameter to specify a specific version of the file. If not set, the latest
+       * version of the file is retrieved.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-script-s3location.html#cfn-gamelift-script-s3location-objectversion)
        */
@@ -613,7 +613,7 @@ public open class CfnScript(
       /**
        * The Amazon Resource Name (
        * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) for an IAM role
-       * that allows Amazon GameLift to access the S3 bucket.
+       * that allows Amazon GameLift Servers to access the S3 bucket.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-script-s3location.html#cfn-gamelift-script-s3location-rolearn)
        */

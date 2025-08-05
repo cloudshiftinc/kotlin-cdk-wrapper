@@ -35,7 +35,7 @@ public open class UserPoolDomainTarget(
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
    *
-   * @param _record 
+   * @param record 
    * @param _zone
    */
   public override fun bind(record: IRecordSet): AliasRecordTargetConfig =
@@ -44,7 +44,7 @@ public open class UserPoolDomainTarget(
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
    *
-   * @param _record 
+   * @param record 
    * @param _zone
    */
   public override fun bind(record: IRecordSet, zone: IHostedZone): AliasRecordTargetConfig =

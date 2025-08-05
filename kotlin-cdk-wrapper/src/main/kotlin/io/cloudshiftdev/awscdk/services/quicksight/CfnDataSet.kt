@@ -90,6 +90,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build()))
  * .dataSetRefreshProperties(DataSetRefreshPropertiesProperty.builder()
+ * .failureConfiguration(RefreshFailureConfigurationProperty.builder()
+ * .emailAlert(RefreshFailureEmailAlertProperty.builder()
+ * .alertStatus("alertStatus")
+ * .build())
+ * .build())
  * .refreshConfiguration(RefreshConfigurationProperty.builder()
  * .incrementalRefresh(IncrementalRefreshProperty.builder()
  * .lookbackWindow(LookbackWindowProperty.builder()
@@ -153,6 +158,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .renameColumnOperation(RenameColumnOperationProperty.builder()
  * .columnName("columnName")
+ * // the properties below are optional
  * .newColumnName("newColumnName")
  * .build())
  * .tagColumnOperation(TagColumnOperationProperty.builder()
@@ -188,6 +194,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build()))
  * .name("name")
+ * .performanceConfiguration(PerformanceConfigurationProperty.builder()
+ * .uniqueKeys(List.of(UniqueKeyProperty.builder()
+ * .columnNames(List.of("columnNames"))
+ * .build()))
+ * .build())
  * .permissions(List.of(ResourcePermissionProperty.builder()
  * .actions(List.of("actions"))
  * .principal("principal")
@@ -221,13 +232,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .s3Source(S3SourceProperty.builder()
  * .dataSourceArn("dataSourceArn")
+ * // the properties below are optional
  * .inputColumns(List.of(InputColumnProperty.builder()
  * .name("name")
  * .type("type")
  * // the properties below are optional
  * .subType("subType")
  * .build()))
- * // the properties below are optional
  * .uploadSettings(UploadSettingsProperty.builder()
  * .containsHeader(false)
  * .delimiter("delimiter")
@@ -261,6 +272,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .key("key")
  * .value("value")
  * .build()))
+ * .useAs("useAs")
  * .build();
  * ```
  *
@@ -594,6 +606,34 @@ public open class CfnDataSet(
   }
 
   /**
+   * The performance optimization configuration of a dataset.
+   */
+  public open fun performanceConfiguration(): Any? = unwrap(this).getPerformanceConfiguration()
+
+  /**
+   * The performance optimization configuration of a dataset.
+   */
+  public open fun performanceConfiguration(`value`: IResolvable) {
+    unwrap(this).setPerformanceConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The performance optimization configuration of a dataset.
+   */
+  public open fun performanceConfiguration(`value`: PerformanceConfigurationProperty) {
+    unwrap(this).setPerformanceConfiguration(`value`.let(PerformanceConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The performance optimization configuration of a dataset.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("80f8eddb781091b83f4824efd621b0a1aeb3cc58b4c5fe02062f33926721a676")
+  public open
+      fun performanceConfiguration(`value`: PerformanceConfigurationProperty.Builder.() -> Unit):
+      Unit = performanceConfiguration(PerformanceConfigurationProperty(`value`))
+
+  /**
    * A list of resource permissions on the dataset.
    */
   public open fun permissions(): Any? = unwrap(this).getPermissions()
@@ -716,6 +756,18 @@ public open class CfnDataSet(
    * Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
+  /**
+   * The usage of the dataset.
+   */
+  public open fun useAs(): String? = unwrap(this).getUseAs()
+
+  /**
+   * The usage of the dataset.
+   */
+  public open fun useAs(`value`: String) {
+    unwrap(this).setUseAs(`value`)
+  }
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.quicksight.CfnDataSet].
@@ -984,6 +1036,33 @@ public open class CfnDataSet(
     public fun name(name: String)
 
     /**
+     * The performance optimization configuration of a dataset.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-performanceconfiguration)
+     * @param performanceConfiguration The performance optimization configuration of a dataset. 
+     */
+    public fun performanceConfiguration(performanceConfiguration: IResolvable)
+
+    /**
+     * The performance optimization configuration of a dataset.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-performanceconfiguration)
+     * @param performanceConfiguration The performance optimization configuration of a dataset. 
+     */
+    public fun performanceConfiguration(performanceConfiguration: PerformanceConfigurationProperty)
+
+    /**
+     * The performance optimization configuration of a dataset.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-performanceconfiguration)
+     * @param performanceConfiguration The performance optimization configuration of a dataset. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5ae0539f51b3b88d60422d818fa424d386ace193a890c3ff2237fdd640203eba")
+    public
+        fun performanceConfiguration(performanceConfiguration: PerformanceConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * A list of resource permissions on the dataset.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-permissions)
@@ -1104,6 +1183,14 @@ public open class CfnDataSet(
      * the dataset. 
      */
     public fun tags(vararg tags: CfnTag)
+
+    /**
+     * The usage of the dataset.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-useas)
+     * @param useAs The usage of the dataset. 
+     */
+    public fun useAs(useAs: String)
   }
 
   private class BuilderImpl(
@@ -1424,6 +1511,39 @@ public open class CfnDataSet(
     }
 
     /**
+     * The performance optimization configuration of a dataset.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-performanceconfiguration)
+     * @param performanceConfiguration The performance optimization configuration of a dataset. 
+     */
+    override fun performanceConfiguration(performanceConfiguration: IResolvable) {
+      cdkBuilder.performanceConfiguration(performanceConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The performance optimization configuration of a dataset.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-performanceconfiguration)
+     * @param performanceConfiguration The performance optimization configuration of a dataset. 
+     */
+    override
+        fun performanceConfiguration(performanceConfiguration: PerformanceConfigurationProperty) {
+      cdkBuilder.performanceConfiguration(performanceConfiguration.let(PerformanceConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The performance optimization configuration of a dataset.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-performanceconfiguration)
+     * @param performanceConfiguration The performance optimization configuration of a dataset. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5ae0539f51b3b88d60422d818fa424d386ace193a890c3ff2237fdd640203eba")
+    override
+        fun performanceConfiguration(performanceConfiguration: PerformanceConfigurationProperty.Builder.() -> Unit):
+        Unit = performanceConfiguration(PerformanceConfigurationProperty(performanceConfiguration))
+
+    /**
      * A list of resource permissions on the dataset.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-permissions)
@@ -1567,6 +1687,16 @@ public open class CfnDataSet(
      * the dataset. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    /**
+     * The usage of the dataset.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-useas)
+     * @param useAs The usage of the dataset. 
+     */
+    override fun useAs(useAs: String) {
+      cdkBuilder.useAs(useAs)
+    }
 
     public fun build(): software.amazon.awscdk.services.quicksight.CfnDataSet = cdkBuilder.build()
   }
@@ -2144,7 +2274,7 @@ public open class CfnDataSet(
     public fun columnNames(): List<String> = unwrap(this).getColumnNames() ?: emptyList()
 
     /**
-     * An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or groups.
+     * An array of Amazon Resource Names (ARNs) for QuickSight users or groups.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-columnlevelpermissionrule.html#cfn-quicksight-dataset-columnlevelpermissionrule-principals)
      */
@@ -2166,14 +2296,12 @@ public open class CfnDataSet(
       public fun columnNames(vararg columnNames: String)
 
       /**
-       * @param principals An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or
-       * groups.
+       * @param principals An array of Amazon Resource Names (ARNs) for QuickSight users or groups.
        */
       public fun principals(principals: List<String>)
 
       /**
-       * @param principals An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or
-       * groups.
+       * @param principals An array of Amazon Resource Names (ARNs) for QuickSight users or groups.
        */
       public fun principals(vararg principals: String)
     }
@@ -2197,16 +2325,14 @@ public open class CfnDataSet(
       override fun columnNames(vararg columnNames: String): Unit = columnNames(columnNames.toList())
 
       /**
-       * @param principals An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or
-       * groups.
+       * @param principals An array of Amazon Resource Names (ARNs) for QuickSight users or groups.
        */
       override fun principals(principals: List<String>) {
         cdkBuilder.principals(principals)
       }
 
       /**
-       * @param principals An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or
-       * groups.
+       * @param principals An array of Amazon Resource Names (ARNs) for QuickSight users or groups.
        */
       override fun principals(vararg principals: String): Unit = principals(principals.toList())
 
@@ -2227,7 +2353,7 @@ public open class CfnDataSet(
       override fun columnNames(): List<String> = unwrap(this).getColumnNames() ?: emptyList()
 
       /**
-       * An array of Amazon Resource Names (ARNs) for Amazon QuickSight users or groups.
+       * An array of Amazon Resource Names (ARNs) for QuickSight users or groups.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-columnlevelpermissionrule.html#cfn-quicksight-dataset-columnlevelpermissionrule-principals)
        */
@@ -2423,7 +2549,7 @@ public open class CfnDataSet(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-createcolumnsoperation.html#cfn-quicksight-dataset-createcolumnsoperation-columns)
      */
-    public fun columns(): Any
+    public fun columns(): Any? = unwrap(this).getColumns()
 
     /**
      * A builder for [CreateColumnsOperationProperty]
@@ -2431,17 +2557,17 @@ public open class CfnDataSet(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param columns Calculated columns to create. 
+       * @param columns Calculated columns to create.
        */
       public fun columns(columns: IResolvable)
 
       /**
-       * @param columns Calculated columns to create. 
+       * @param columns Calculated columns to create.
        */
       public fun columns(columns: List<Any>)
 
       /**
-       * @param columns Calculated columns to create. 
+       * @param columns Calculated columns to create.
        */
       public fun columns(vararg columns: Any)
     }
@@ -2453,21 +2579,21 @@ public open class CfnDataSet(
           software.amazon.awscdk.services.quicksight.CfnDataSet.CreateColumnsOperationProperty.builder()
 
       /**
-       * @param columns Calculated columns to create. 
+       * @param columns Calculated columns to create.
        */
       override fun columns(columns: IResolvable) {
         cdkBuilder.columns(columns.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param columns Calculated columns to create. 
+       * @param columns Calculated columns to create.
        */
       override fun columns(columns: List<Any>) {
         cdkBuilder.columns(columns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param columns Calculated columns to create. 
+       * @param columns Calculated columns to create.
        */
       override fun columns(vararg columns: Any): Unit = columns(columns.toList())
 
@@ -2485,7 +2611,7 @@ public open class CfnDataSet(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-createcolumnsoperation.html#cfn-quicksight-dataset-createcolumnsoperation-columns)
        */
-      override fun columns(): Any = unwrap(this).getColumns()
+      override fun columns(): Any? = unwrap(this).getColumns()
     }
 
     public companion object {
@@ -2707,6 +2833,11 @@ public open class CfnDataSet(
    * import io.cloudshiftdev.awscdk.services.quicksight.*;
    * DataSetRefreshPropertiesProperty dataSetRefreshPropertiesProperty =
    * DataSetRefreshPropertiesProperty.builder()
+   * .failureConfiguration(RefreshFailureConfigurationProperty.builder()
+   * .emailAlert(RefreshFailureEmailAlertProperty.builder()
+   * .alertStatus("alertStatus")
+   * .build())
+   * .build())
    * .refreshConfiguration(RefreshConfigurationProperty.builder()
    * .incrementalRefresh(IncrementalRefreshProperty.builder()
    * .lookbackWindow(LookbackWindowProperty.builder()
@@ -2723,11 +2854,18 @@ public open class CfnDataSet(
    */
   public interface DataSetRefreshPropertiesProperty {
     /**
+     * The failure configuration for a dataset.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-datasetrefreshproperties.html#cfn-quicksight-dataset-datasetrefreshproperties-failureconfiguration)
+     */
+    public fun failureConfiguration(): Any? = unwrap(this).getFailureConfiguration()
+
+    /**
      * The refresh configuration for a dataset.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-datasetrefreshproperties.html#cfn-quicksight-dataset-datasetrefreshproperties-refreshconfiguration)
      */
-    public fun refreshConfiguration(): Any
+    public fun refreshConfiguration(): Any? = unwrap(this).getRefreshConfiguration()
 
     /**
      * A builder for [DataSetRefreshPropertiesProperty]
@@ -2735,17 +2873,35 @@ public open class CfnDataSet(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param refreshConfiguration The refresh configuration for a dataset. 
+       * @param failureConfiguration The failure configuration for a dataset.
+       */
+      public fun failureConfiguration(failureConfiguration: IResolvable)
+
+      /**
+       * @param failureConfiguration The failure configuration for a dataset.
+       */
+      public fun failureConfiguration(failureConfiguration: RefreshFailureConfigurationProperty)
+
+      /**
+       * @param failureConfiguration The failure configuration for a dataset.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("df21edab4ed7d63ab6518912e474fbdd01a1827c8c58df09d7fff939eb426b01")
+      public
+          fun failureConfiguration(failureConfiguration: RefreshFailureConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param refreshConfiguration The refresh configuration for a dataset.
        */
       public fun refreshConfiguration(refreshConfiguration: IResolvable)
 
       /**
-       * @param refreshConfiguration The refresh configuration for a dataset. 
+       * @param refreshConfiguration The refresh configuration for a dataset.
        */
       public fun refreshConfiguration(refreshConfiguration: RefreshConfigurationProperty)
 
       /**
-       * @param refreshConfiguration The refresh configuration for a dataset. 
+       * @param refreshConfiguration The refresh configuration for a dataset.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d891b94496204b23a10ded06cb3c53dc1ea32e4458deafff5a702f6b82b61370")
@@ -2760,21 +2916,44 @@ public open class CfnDataSet(
           software.amazon.awscdk.services.quicksight.CfnDataSet.DataSetRefreshPropertiesProperty.builder()
 
       /**
-       * @param refreshConfiguration The refresh configuration for a dataset. 
+       * @param failureConfiguration The failure configuration for a dataset.
+       */
+      override fun failureConfiguration(failureConfiguration: IResolvable) {
+        cdkBuilder.failureConfiguration(failureConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param failureConfiguration The failure configuration for a dataset.
+       */
+      override fun failureConfiguration(failureConfiguration: RefreshFailureConfigurationProperty) {
+        cdkBuilder.failureConfiguration(failureConfiguration.let(RefreshFailureConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param failureConfiguration The failure configuration for a dataset.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("df21edab4ed7d63ab6518912e474fbdd01a1827c8c58df09d7fff939eb426b01")
+      override
+          fun failureConfiguration(failureConfiguration: RefreshFailureConfigurationProperty.Builder.() -> Unit):
+          Unit = failureConfiguration(RefreshFailureConfigurationProperty(failureConfiguration))
+
+      /**
+       * @param refreshConfiguration The refresh configuration for a dataset.
        */
       override fun refreshConfiguration(refreshConfiguration: IResolvable) {
         cdkBuilder.refreshConfiguration(refreshConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param refreshConfiguration The refresh configuration for a dataset. 
+       * @param refreshConfiguration The refresh configuration for a dataset.
        */
       override fun refreshConfiguration(refreshConfiguration: RefreshConfigurationProperty) {
         cdkBuilder.refreshConfiguration(refreshConfiguration.let(RefreshConfigurationProperty.Companion::unwrap))
       }
 
       /**
-       * @param refreshConfiguration The refresh configuration for a dataset. 
+       * @param refreshConfiguration The refresh configuration for a dataset.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d891b94496204b23a10ded06cb3c53dc1ea32e4458deafff5a702f6b82b61370")
@@ -2792,11 +2971,18 @@ public open class CfnDataSet(
     ) : CdkObject(cdkObject),
         DataSetRefreshPropertiesProperty {
       /**
+       * The failure configuration for a dataset.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-datasetrefreshproperties.html#cfn-quicksight-dataset-datasetrefreshproperties-failureconfiguration)
+       */
+      override fun failureConfiguration(): Any? = unwrap(this).getFailureConfiguration()
+
+      /**
        * The refresh configuration for a dataset.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-datasetrefreshproperties.html#cfn-quicksight-dataset-datasetrefreshproperties-refreshconfiguration)
        */
-      override fun refreshConfiguration(): Any = unwrap(this).getRefreshConfiguration()
+      override fun refreshConfiguration(): Any? = unwrap(this).getRefreshConfiguration()
     }
 
     public companion object {
@@ -3671,17 +3857,17 @@ public open class CfnDataSet(
       /**
        * @param staticValues A list of static default values for a given decimal parameter.
        */
-      public fun staticValues(staticValues: IResolvable)
-
-      /**
-       * @param staticValues A list of static default values for a given decimal parameter.
-       */
       public fun staticValues(staticValues: List<Number>)
 
       /**
        * @param staticValues A list of static default values for a given decimal parameter.
        */
       public fun staticValues(vararg staticValues: Number)
+
+      /**
+       * @param staticValues A list of static default values for a given decimal parameter.
+       */
+      public fun staticValues(staticValues: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -3689,13 +3875,6 @@ public open class CfnDataSet(
           software.amazon.awscdk.services.quicksight.CfnDataSet.DecimalDatasetParameterDefaultValuesProperty.Builder
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.DecimalDatasetParameterDefaultValuesProperty.builder()
-
-      /**
-       * @param staticValues A list of static default values for a given decimal parameter.
-       */
-      override fun staticValues(staticValues: IResolvable) {
-        cdkBuilder.staticValues(staticValues.let(IResolvable.Companion::unwrap))
-      }
 
       /**
        * @param staticValues A list of static default values for a given decimal parameter.
@@ -3709,6 +3888,13 @@ public open class CfnDataSet(
        */
       override fun staticValues(vararg staticValues: Number): Unit =
           staticValues(staticValues.toList())
+
+      /**
+       * @param staticValues A list of static default values for a given decimal parameter.
+       */
+      override fun staticValues(staticValues: IResolvable) {
+        cdkBuilder.staticValues(staticValues.let(IResolvable.Companion::unwrap))
+      }
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnDataSet.DecimalDatasetParameterDefaultValuesProperty
@@ -4768,17 +4954,17 @@ public open class CfnDataSet(
       /**
        * @param staticValues A list of static default values for a given integer parameter.
        */
-      public fun staticValues(staticValues: IResolvable)
-
-      /**
-       * @param staticValues A list of static default values for a given integer parameter.
-       */
       public fun staticValues(staticValues: List<Number>)
 
       /**
        * @param staticValues A list of static default values for a given integer parameter.
        */
       public fun staticValues(vararg staticValues: Number)
+
+      /**
+       * @param staticValues A list of static default values for a given integer parameter.
+       */
+      public fun staticValues(staticValues: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -4786,13 +4972,6 @@ public open class CfnDataSet(
           software.amazon.awscdk.services.quicksight.CfnDataSet.IntegerDatasetParameterDefaultValuesProperty.Builder
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.IntegerDatasetParameterDefaultValuesProperty.builder()
-
-      /**
-       * @param staticValues A list of static default values for a given integer parameter.
-       */
-      override fun staticValues(staticValues: IResolvable) {
-        cdkBuilder.staticValues(staticValues.let(IResolvable.Companion::unwrap))
-      }
 
       /**
        * @param staticValues A list of static default values for a given integer parameter.
@@ -4806,6 +4985,13 @@ public open class CfnDataSet(
        */
       override fun staticValues(vararg staticValues: Number): Unit =
           staticValues(staticValues.toList())
+
+      /**
+       * @param staticValues A list of static default values for a given integer parameter.
+       */
+      override fun staticValues(staticValues: IResolvable) {
+        cdkBuilder.staticValues(staticValues.let(IResolvable.Companion::unwrap))
+      }
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnDataSet.IntegerDatasetParameterDefaultValuesProperty
@@ -5357,7 +5543,7 @@ public open class CfnDataSet(
      * A value that indicates that a row in a table is uniquely identified by the columns in a join
      * key.
      *
-     * This is used by Amazon QuickSight to optimize query performance.
+     * This is used by QuickSight to optimize query performance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-joinkeyproperties.html#cfn-quicksight-dataset-joinkeyproperties-uniquekey)
      */
@@ -5371,14 +5557,14 @@ public open class CfnDataSet(
       /**
        * @param uniqueKey A value that indicates that a row in a table is uniquely identified by the
        * columns in a join key.
-       * This is used by Amazon QuickSight to optimize query performance.
+       * This is used by QuickSight to optimize query performance.
        */
       public fun uniqueKey(uniqueKey: Boolean)
 
       /**
        * @param uniqueKey A value that indicates that a row in a table is uniquely identified by the
        * columns in a join key.
-       * This is used by Amazon QuickSight to optimize query performance.
+       * This is used by QuickSight to optimize query performance.
        */
       public fun uniqueKey(uniqueKey: IResolvable)
     }
@@ -5391,7 +5577,7 @@ public open class CfnDataSet(
       /**
        * @param uniqueKey A value that indicates that a row in a table is uniquely identified by the
        * columns in a join key.
-       * This is used by Amazon QuickSight to optimize query performance.
+       * This is used by QuickSight to optimize query performance.
        */
       override fun uniqueKey(uniqueKey: Boolean) {
         cdkBuilder.uniqueKey(uniqueKey)
@@ -5400,7 +5586,7 @@ public open class CfnDataSet(
       /**
        * @param uniqueKey A value that indicates that a row in a table is uniquely identified by the
        * columns in a join key.
-       * This is used by Amazon QuickSight to optimize query performance.
+       * This is used by QuickSight to optimize query performance.
        */
       override fun uniqueKey(uniqueKey: IResolvable) {
         cdkBuilder.uniqueKey(uniqueKey.let(IResolvable.Companion::unwrap))
@@ -5419,7 +5605,7 @@ public open class CfnDataSet(
        * A value that indicates that a row in a table is uniquely identified by the columns in a
        * join key.
        *
-       * This is used by Amazon QuickSight to optimize query performance.
+       * This is used by QuickSight to optimize query performance.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-joinkeyproperties.html#cfn-quicksight-dataset-joinkeyproperties-uniquekey)
        */
@@ -5494,6 +5680,7 @@ public open class CfnDataSet(
    * .build())
    * .renameColumnOperation(RenameColumnOperationProperty.builder()
    * .columnName("columnName")
+   * // the properties below are optional
    * .newColumnName("newColumnName")
    * .build())
    * .tagColumnOperation(TagColumnOperationProperty.builder()
@@ -6107,11 +6294,6 @@ public open class CfnDataSet(
       /**
        * @param decimalStaticValues A list of static default values for a given decimal parameter.
        */
-      public fun decimalStaticValues(decimalStaticValues: IResolvable)
-
-      /**
-       * @param decimalStaticValues A list of static default values for a given decimal parameter.
-       */
       public fun decimalStaticValues(decimalStaticValues: List<Number>)
 
       /**
@@ -6120,9 +6302,9 @@ public open class CfnDataSet(
       public fun decimalStaticValues(vararg decimalStaticValues: Number)
 
       /**
-       * @param integerStaticValues A list of static default values for a given integer parameter.
+       * @param decimalStaticValues A list of static default values for a given decimal parameter.
        */
-      public fun integerStaticValues(integerStaticValues: IResolvable)
+      public fun decimalStaticValues(decimalStaticValues: IResolvable)
 
       /**
        * @param integerStaticValues A list of static default values for a given integer parameter.
@@ -6133,6 +6315,11 @@ public open class CfnDataSet(
        * @param integerStaticValues A list of static default values for a given integer parameter.
        */
       public fun integerStaticValues(vararg integerStaticValues: Number)
+
+      /**
+       * @param integerStaticValues A list of static default values for a given integer parameter.
+       */
+      public fun integerStaticValues(integerStaticValues: IResolvable)
 
       /**
        * @param stringStaticValues A list of static default values for a given string parameter.
@@ -6170,13 +6357,6 @@ public open class CfnDataSet(
       /**
        * @param decimalStaticValues A list of static default values for a given decimal parameter.
        */
-      override fun decimalStaticValues(decimalStaticValues: IResolvable) {
-        cdkBuilder.decimalStaticValues(decimalStaticValues.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param decimalStaticValues A list of static default values for a given decimal parameter.
-       */
       override fun decimalStaticValues(decimalStaticValues: List<Number>) {
         cdkBuilder.decimalStaticValues(decimalStaticValues)
       }
@@ -6188,10 +6368,10 @@ public open class CfnDataSet(
           decimalStaticValues(decimalStaticValues.toList())
 
       /**
-       * @param integerStaticValues A list of static default values for a given integer parameter.
+       * @param decimalStaticValues A list of static default values for a given decimal parameter.
        */
-      override fun integerStaticValues(integerStaticValues: IResolvable) {
-        cdkBuilder.integerStaticValues(integerStaticValues.let(IResolvable.Companion::unwrap))
+      override fun decimalStaticValues(decimalStaticValues: IResolvable) {
+        cdkBuilder.decimalStaticValues(decimalStaticValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6206,6 +6386,13 @@ public open class CfnDataSet(
        */
       override fun integerStaticValues(vararg integerStaticValues: Number): Unit =
           integerStaticValues(integerStaticValues.toList())
+
+      /**
+       * @param integerStaticValues A list of static default values for a given integer parameter.
+       */
+      override fun integerStaticValues(integerStaticValues: IResolvable) {
+        cdkBuilder.integerStaticValues(integerStaticValues.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param stringStaticValues A list of static default values for a given string parameter.
@@ -6616,6 +6803,108 @@ public open class CfnDataSet(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * PerformanceConfigurationProperty performanceConfigurationProperty =
+   * PerformanceConfigurationProperty.builder()
+   * .uniqueKeys(List.of(UniqueKeyProperty.builder()
+   * .columnNames(List.of("columnNames"))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-performanceconfiguration.html)
+   */
+  public interface PerformanceConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-performanceconfiguration.html#cfn-quicksight-dataset-performanceconfiguration-uniquekeys)
+     */
+    public fun uniqueKeys(): Any? = unwrap(this).getUniqueKeys()
+
+    /**
+     * A builder for [PerformanceConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param uniqueKeys the value to be set.
+       */
+      public fun uniqueKeys(uniqueKeys: IResolvable)
+
+      /**
+       * @param uniqueKeys the value to be set.
+       */
+      public fun uniqueKeys(uniqueKeys: List<Any>)
+
+      /**
+       * @param uniqueKeys the value to be set.
+       */
+      public fun uniqueKeys(vararg uniqueKeys: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSet.PerformanceConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSet.PerformanceConfigurationProperty.builder()
+
+      /**
+       * @param uniqueKeys the value to be set.
+       */
+      override fun uniqueKeys(uniqueKeys: IResolvable) {
+        cdkBuilder.uniqueKeys(uniqueKeys.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param uniqueKeys the value to be set.
+       */
+      override fun uniqueKeys(uniqueKeys: List<Any>) {
+        cdkBuilder.uniqueKeys(uniqueKeys.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param uniqueKeys the value to be set.
+       */
+      override fun uniqueKeys(vararg uniqueKeys: Any): Unit = uniqueKeys(uniqueKeys.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSet.PerformanceConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.PerformanceConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        PerformanceConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-performanceconfiguration.html#cfn-quicksight-dataset-performanceconfiguration-uniquekeys)
+       */
+      override fun uniqueKeys(): Any? = unwrap(this).getUniqueKeys()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PerformanceConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.PerformanceConfigurationProperty):
+          PerformanceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PerformanceConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PerformanceConfigurationProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSet.PerformanceConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSet.PerformanceConfigurationProperty
+    }
+  }
+
+  /**
    * A view of a data source that contains information about the shape of the data in the underlying
    * source.
    *
@@ -6656,13 +6945,13 @@ public open class CfnDataSet(
    * .build())
    * .s3Source(S3SourceProperty.builder()
    * .dataSourceArn("dataSourceArn")
+   * // the properties below are optional
    * .inputColumns(List.of(InputColumnProperty.builder()
    * .name("name")
    * .type("type")
    * // the properties below are optional
    * .subType("subType")
    * .build()))
-   * // the properties below are optional
    * .uploadSettings(UploadSettingsProperty.builder()
    * .containsHeader(false)
    * .delimiter("delimiter")
@@ -7090,6 +7379,204 @@ public open class CfnDataSet(
   }
 
   /**
+   * The failure configuration of a dataset.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * RefreshFailureConfigurationProperty refreshFailureConfigurationProperty =
+   * RefreshFailureConfigurationProperty.builder()
+   * .emailAlert(RefreshFailureEmailAlertProperty.builder()
+   * .alertStatus("alertStatus")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-refreshfailureconfiguration.html)
+   */
+  public interface RefreshFailureConfigurationProperty {
+    /**
+     * The email alert configuration for a dataset refresh failure.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-refreshfailureconfiguration.html#cfn-quicksight-dataset-refreshfailureconfiguration-emailalert)
+     */
+    public fun emailAlert(): Any? = unwrap(this).getEmailAlert()
+
+    /**
+     * A builder for [RefreshFailureConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param emailAlert The email alert configuration for a dataset refresh failure.
+       */
+      public fun emailAlert(emailAlert: IResolvable)
+
+      /**
+       * @param emailAlert The email alert configuration for a dataset refresh failure.
+       */
+      public fun emailAlert(emailAlert: RefreshFailureEmailAlertProperty)
+
+      /**
+       * @param emailAlert The email alert configuration for a dataset refresh failure.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ece6dd2e34a98a9ba77ef9f0e246096a5290ae0c0acdaba700c19d136556fa9d")
+      public fun emailAlert(emailAlert: RefreshFailureEmailAlertProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshFailureConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshFailureConfigurationProperty.builder()
+
+      /**
+       * @param emailAlert The email alert configuration for a dataset refresh failure.
+       */
+      override fun emailAlert(emailAlert: IResolvable) {
+        cdkBuilder.emailAlert(emailAlert.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param emailAlert The email alert configuration for a dataset refresh failure.
+       */
+      override fun emailAlert(emailAlert: RefreshFailureEmailAlertProperty) {
+        cdkBuilder.emailAlert(emailAlert.let(RefreshFailureEmailAlertProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param emailAlert The email alert configuration for a dataset refresh failure.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ece6dd2e34a98a9ba77ef9f0e246096a5290ae0c0acdaba700c19d136556fa9d")
+      override fun emailAlert(emailAlert: RefreshFailureEmailAlertProperty.Builder.() -> Unit): Unit
+          = emailAlert(RefreshFailureEmailAlertProperty(emailAlert))
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshFailureConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshFailureConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        RefreshFailureConfigurationProperty {
+      /**
+       * The email alert configuration for a dataset refresh failure.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-refreshfailureconfiguration.html#cfn-quicksight-dataset-refreshfailureconfiguration-emailalert)
+       */
+      override fun emailAlert(): Any? = unwrap(this).getEmailAlert()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RefreshFailureConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshFailureConfigurationProperty):
+          RefreshFailureConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RefreshFailureConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RefreshFailureConfigurationProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshFailureConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshFailureConfigurationProperty
+    }
+  }
+
+  /**
+   * The configuration settings for the email alerts that are sent when a dataset refresh fails.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * RefreshFailureEmailAlertProperty refreshFailureEmailAlertProperty =
+   * RefreshFailureEmailAlertProperty.builder()
+   * .alertStatus("alertStatus")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-refreshfailureemailalert.html)
+   */
+  public interface RefreshFailureEmailAlertProperty {
+    /**
+     * The status value that determines if email alerts are sent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-refreshfailureemailalert.html#cfn-quicksight-dataset-refreshfailureemailalert-alertstatus)
+     */
+    public fun alertStatus(): String? = unwrap(this).getAlertStatus()
+
+    /**
+     * A builder for [RefreshFailureEmailAlertProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param alertStatus The status value that determines if email alerts are sent.
+       */
+      public fun alertStatus(alertStatus: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshFailureEmailAlertProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshFailureEmailAlertProperty.builder()
+
+      /**
+       * @param alertStatus The status value that determines if email alerts are sent.
+       */
+      override fun alertStatus(alertStatus: String) {
+        cdkBuilder.alertStatus(alertStatus)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshFailureEmailAlertProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshFailureEmailAlertProperty,
+    ) : CdkObject(cdkObject),
+        RefreshFailureEmailAlertProperty {
+      /**
+       * The status value that determines if email alerts are sent.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-refreshfailureemailalert.html#cfn-quicksight-dataset-refreshfailureemailalert-alertstatus)
+       */
+      override fun alertStatus(): String? = unwrap(this).getAlertStatus()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RefreshFailureEmailAlertProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshFailureEmailAlertProperty):
+          RefreshFailureEmailAlertProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RefreshFailureEmailAlertProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RefreshFailureEmailAlertProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshFailureEmailAlertProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshFailureEmailAlertProperty
+    }
+  }
+
+  /**
    * A physical table type for relational data sources.
    *
    * Example:
@@ -7326,6 +7813,7 @@ public open class CfnDataSet(
    * RenameColumnOperationProperty renameColumnOperationProperty =
    * RenameColumnOperationProperty.builder()
    * .columnName("columnName")
+   * // the properties below are optional
    * .newColumnName("newColumnName")
    * .build();
    * ```
@@ -7345,7 +7833,7 @@ public open class CfnDataSet(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-renamecolumnoperation.html#cfn-quicksight-dataset-renamecolumnoperation-newcolumnname)
      */
-    public fun newColumnName(): String
+    public fun newColumnName(): String? = unwrap(this).getNewColumnName()
 
     /**
      * A builder for [RenameColumnOperationProperty]
@@ -7358,7 +7846,7 @@ public open class CfnDataSet(
       public fun columnName(columnName: String)
 
       /**
-       * @param newColumnName The new name for the column. 
+       * @param newColumnName The new name for the column.
        */
       public fun newColumnName(newColumnName: String)
     }
@@ -7377,7 +7865,7 @@ public open class CfnDataSet(
       }
 
       /**
-       * @param newColumnName The new name for the column. 
+       * @param newColumnName The new name for the column.
        */
       override fun newColumnName(newColumnName: String) {
         cdkBuilder.newColumnName(newColumnName)
@@ -7404,7 +7892,7 @@ public open class CfnDataSet(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-renamecolumnoperation.html#cfn-quicksight-dataset-renamecolumnoperation-newcolumnname)
        */
-      override fun newColumnName(): String = unwrap(this).getNewColumnName()
+      override fun newColumnName(): String? = unwrap(this).getNewColumnName()
     }
 
     public companion object {
@@ -7457,8 +7945,8 @@ public open class CfnDataSet(
      * (This is common.)
      * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
      * dashboard, template, or theme. (This is common.)
-     * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN. Use
-     * this option only to share resources (templates) across AWS accounts . (This is less common.)
+     * * The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN. Use this
+     * option only to share resources (templates) across AWS accounts . (This is less common.)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-resourcepermission.html#cfn-quicksight-dataset-resourcepermission-principal)
      */
@@ -7486,9 +7974,8 @@ public open class CfnDataSet(
        * (This is common.)
        * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
        * dashboard, template, or theme. (This is common.)
-       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
-       * Use this option only to share resources (templates) across AWS accounts . (This is less
-       * common.)
+       * * The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN. Use this
+       * option only to share resources (templates) across AWS accounts . (This is less common.)
        */
       public fun principal(principal: String)
     }
@@ -7517,9 +8004,8 @@ public open class CfnDataSet(
        * (This is common.)
        * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
        * dashboard, template, or theme. (This is common.)
-       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
-       * Use this option only to share resources (templates) across AWS accounts . (This is less
-       * common.)
+       * * The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN. Use this
+       * option only to share resources (templates) across AWS accounts . (This is less common.)
        */
       override fun principal(principal: String) {
         cdkBuilder.principal(principal)
@@ -7548,9 +8034,8 @@ public open class CfnDataSet(
        * (This is common.)
        * * The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis,
        * dashboard, template, or theme. (This is common.)
-       * * The ARN of an AWS account root: This is an IAM ARN rather than a Amazon QuickSight ARN.
-       * Use this option only to share resources (templates) across AWS accounts . (This is less
-       * common.)
+       * * The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN. Use this
+       * option only to share resources (templates) across AWS accounts . (This is less common.)
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-resourcepermission.html#cfn-quicksight-dataset-resourcepermission-principal)
        */
@@ -8192,13 +8677,13 @@ public open class CfnDataSet(
    * import io.cloudshiftdev.awscdk.services.quicksight.*;
    * S3SourceProperty s3SourceProperty = S3SourceProperty.builder()
    * .dataSourceArn("dataSourceArn")
+   * // the properties below are optional
    * .inputColumns(List.of(InputColumnProperty.builder()
    * .name("name")
    * .type("type")
    * // the properties below are optional
    * .subType("subType")
    * .build()))
-   * // the properties below are optional
    * .uploadSettings(UploadSettingsProperty.builder()
    * .containsHeader(false)
    * .delimiter("delimiter")
@@ -8228,7 +8713,7 @@ public open class CfnDataSet(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-s3source.html#cfn-quicksight-dataset-s3source-inputcolumns)
      */
-    public fun inputColumns(): Any
+    public fun inputColumns(): Any? = unwrap(this).getInputColumns()
 
     /**
      * Information about the format for the S3 source file or files.
@@ -8248,21 +8733,21 @@ public open class CfnDataSet(
       public fun dataSourceArn(dataSourceArn: String)
 
       /**
-       * @param inputColumns A physical table type for an S3 data source. 
+       * @param inputColumns A physical table type for an S3 data source.
        *
        * For files that aren't JSON, only `STRING` data types are supported in input columns.
        */
       public fun inputColumns(inputColumns: IResolvable)
 
       /**
-       * @param inputColumns A physical table type for an S3 data source. 
+       * @param inputColumns A physical table type for an S3 data source.
        *
        * For files that aren't JSON, only `STRING` data types are supported in input columns.
        */
       public fun inputColumns(inputColumns: List<Any>)
 
       /**
-       * @param inputColumns A physical table type for an S3 data source. 
+       * @param inputColumns A physical table type for an S3 data source.
        *
        * For files that aren't JSON, only `STRING` data types are supported in input columns.
        */
@@ -8299,7 +8784,7 @@ public open class CfnDataSet(
       }
 
       /**
-       * @param inputColumns A physical table type for an S3 data source. 
+       * @param inputColumns A physical table type for an S3 data source.
        *
        * For files that aren't JSON, only `STRING` data types are supported in input columns.
        */
@@ -8308,7 +8793,7 @@ public open class CfnDataSet(
       }
 
       /**
-       * @param inputColumns A physical table type for an S3 data source. 
+       * @param inputColumns A physical table type for an S3 data source.
        *
        * For files that aren't JSON, only `STRING` data types are supported in input columns.
        */
@@ -8317,7 +8802,7 @@ public open class CfnDataSet(
       }
 
       /**
-       * @param inputColumns A physical table type for an S3 data source. 
+       * @param inputColumns A physical table type for an S3 data source.
        *
        * For files that aren't JSON, only `STRING` data types are supported in input columns.
        */
@@ -8370,7 +8855,7 @@ public open class CfnDataSet(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-s3source.html#cfn-quicksight-dataset-s3source-inputcolumns)
        */
-      override fun inputColumns(): Any = unwrap(this).getInputColumns()
+      override fun inputColumns(): Any? = unwrap(this).getInputColumns()
 
       /**
        * Information about the format for the S3 source file or files.
@@ -8896,6 +9381,7 @@ public open class CfnDataSet(
    * .build())
    * .renameColumnOperation(RenameColumnOperationProperty.builder()
    * .columnName("columnName")
+   * // the properties below are optional
    * .newColumnName("newColumnName")
    * .build())
    * .tagColumnOperation(TagColumnOperationProperty.builder()
@@ -9436,6 +9922,91 @@ public open class CfnDataSet(
           software.amazon.awscdk.services.quicksight.CfnDataSet.TransformOperationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.quicksight.CfnDataSet.TransformOperationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * UniqueKeyProperty uniqueKeyProperty = UniqueKeyProperty.builder()
+   * .columnNames(List.of("columnNames"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-uniquekey.html)
+   */
+  public interface UniqueKeyProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-uniquekey.html#cfn-quicksight-dataset-uniquekey-columnnames)
+     */
+    public fun columnNames(): List<String>
+
+    /**
+     * A builder for [UniqueKeyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param columnNames the value to be set. 
+       */
+      public fun columnNames(columnNames: List<String>)
+
+      /**
+       * @param columnNames the value to be set. 
+       */
+      public fun columnNames(vararg columnNames: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSet.UniqueKeyProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnDataSet.UniqueKeyProperty.builder()
+
+      /**
+       * @param columnNames the value to be set. 
+       */
+      override fun columnNames(columnNames: List<String>) {
+        cdkBuilder.columnNames(columnNames)
+      }
+
+      /**
+       * @param columnNames the value to be set. 
+       */
+      override fun columnNames(vararg columnNames: String): Unit = columnNames(columnNames.toList())
+
+      public fun build(): software.amazon.awscdk.services.quicksight.CfnDataSet.UniqueKeyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.UniqueKeyProperty,
+    ) : CdkObject(cdkObject),
+        UniqueKeyProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-uniquekey.html#cfn-quicksight-dataset-uniquekey-columnnames)
+       */
+      override fun columnNames(): List<String> = unwrap(this).getColumnNames()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): UniqueKeyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.UniqueKeyProperty):
+          UniqueKeyProperty = CdkObjectWrappers.wrap(cdkObject) as? UniqueKeyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: UniqueKeyProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSet.UniqueKeyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSet.UniqueKeyProperty
     }
   }
 

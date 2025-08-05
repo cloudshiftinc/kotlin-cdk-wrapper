@@ -29,6 +29,17 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .amazonManagedKafkaEventSourceConfig(AmazonManagedKafkaEventSourceConfigProperty.builder()
  * .consumerGroupId("consumerGroupId")
+ * .schemaRegistryConfig(SchemaRegistryConfigProperty.builder()
+ * .accessConfigs(List.of(SchemaRegistryAccessConfigProperty.builder()
+ * .type("type")
+ * .uri("uri")
+ * .build()))
+ * .eventRecordFormat("eventRecordFormat")
+ * .schemaRegistryUri("schemaRegistryUri")
+ * .schemaValidationConfigs(List.of(SchemaValidationConfigProperty.builder()
+ * .attribute("attribute")
+ * .build()))
+ * .build())
  * .build())
  * .batchSize(123)
  * .bisectBatchOnFunctionError(false)
@@ -73,6 +84,17 @@ import kotlin.jvm.JvmName
  * .build())
  * .selfManagedKafkaEventSourceConfig(SelfManagedKafkaEventSourceConfigProperty.builder()
  * .consumerGroupId("consumerGroupId")
+ * .schemaRegistryConfig(SchemaRegistryConfigProperty.builder()
+ * .accessConfigs(List.of(SchemaRegistryAccessConfigProperty.builder()
+ * .type("type")
+ * .uri("uri")
+ * .build()))
+ * .eventRecordFormat("eventRecordFormat")
+ * .schemaRegistryUri("schemaRegistryUri")
+ * .schemaValidationConfigs(List.of(SchemaValidationConfigProperty.builder()
+ * .attribute("attribute")
+ * .build()))
+ * .build())
  * .build())
  * .sourceAccessConfigurations(List.of(SourceAccessConfigurationProperty.builder()
  * .type("type")
@@ -126,6 +148,12 @@ public interface CfnEventSourceMappingProps {
    * and retry.
    *
    * The default value is false.
+   *
+   *
+   * When using `BisectBatchOnFunctionError` , check the `BatchSize` parameter in the `OnFailure`
+   * destination message's metadata. The `BatchSize` could be greater than 1 since Lambda consolidates
+   * failed messages metadata when writing to the `OnFailure` destination.
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror)
    */
@@ -439,6 +467,11 @@ public interface CfnEventSourceMappingProps {
      * @param bisectBatchOnFunctionError (Kinesis and DynamoDB Streams only) If the function returns
      * an error, split the batch in two and retry.
      * The default value is false.
+     *
+     *
+     * When using `BisectBatchOnFunctionError` , check the `BatchSize` parameter in the `OnFailure`
+     * destination message's metadata. The `BatchSize` could be greater than 1 since Lambda
+     * consolidates failed messages metadata when writing to the `OnFailure` destination.
      */
     public fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: Boolean)
 
@@ -446,6 +479,11 @@ public interface CfnEventSourceMappingProps {
      * @param bisectBatchOnFunctionError (Kinesis and DynamoDB Streams only) If the function returns
      * an error, split the batch in two and retry.
      * The default value is false.
+     *
+     *
+     * When using `BisectBatchOnFunctionError` , check the `BatchSize` parameter in the `OnFailure`
+     * destination message's metadata. The `BatchSize` could be greater than 1 since Lambda
+     * consolidates failed messages metadata when writing to the `OnFailure` destination.
      */
     public fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: IResolvable)
 
@@ -894,6 +932,11 @@ public interface CfnEventSourceMappingProps {
      * @param bisectBatchOnFunctionError (Kinesis and DynamoDB Streams only) If the function returns
      * an error, split the batch in two and retry.
      * The default value is false.
+     *
+     *
+     * When using `BisectBatchOnFunctionError` , check the `BatchSize` parameter in the `OnFailure`
+     * destination message's metadata. The `BatchSize` could be greater than 1 since Lambda
+     * consolidates failed messages metadata when writing to the `OnFailure` destination.
      */
     override fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: Boolean) {
       cdkBuilder.bisectBatchOnFunctionError(bisectBatchOnFunctionError)
@@ -903,6 +946,11 @@ public interface CfnEventSourceMappingProps {
      * @param bisectBatchOnFunctionError (Kinesis and DynamoDB Streams only) If the function returns
      * an error, split the batch in two and retry.
      * The default value is false.
+     *
+     *
+     * When using `BisectBatchOnFunctionError` , check the `BatchSize` parameter in the `OnFailure`
+     * destination message's metadata. The `BatchSize` could be greater than 1 since Lambda
+     * consolidates failed messages metadata when writing to the `OnFailure` destination.
      */
     override fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: IResolvable) {
       cdkBuilder.bisectBatchOnFunctionError(bisectBatchOnFunctionError.let(IResolvable.Companion::unwrap))
@@ -1420,6 +1468,12 @@ public interface CfnEventSourceMappingProps {
      * and retry.
      *
      * The default value is false.
+     *
+     *
+     * When using `BisectBatchOnFunctionError` , check the `BatchSize` parameter in the `OnFailure`
+     * destination message's metadata. The `BatchSize` could be greater than 1 since Lambda
+     * consolidates failed messages metadata when writing to the `OnFailure` destination.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror)
      */

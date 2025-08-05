@@ -19,18 +19,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * identity pools. Identity pools can make decisions about the IAM role to assign based on groups:
  * users get credentials for the role associated with their highest-priority group.
  *
- * This data type is a response parameter of
- * [AdminListGroupsForUser](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminListGroupsForUser.html)
- * ,
- * [CreateGroup](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateGroup.html)
- * ,
- * [GetGroup](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetGroup.html)
- * ,
- * [ListGroups](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_ListGroups.html)
- * , and
- * [UpdateGroup](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateGroup.html)
- * .
- *
  * Example:
  *
  * ```
@@ -70,24 +58,24 @@ public open class CfnUserPoolGroup(
   )
 
   /**
-   * A string containing the description of the group.
+   * A description of the group that you're creating.
    */
   public open fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * A string containing the description of the group.
+   * A description of the group that you're creating.
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
   }
 
   /**
-   * The name of the group.
+   * A name for the group.
    */
   public open fun groupName(): String? = unwrap(this).getGroupName()
 
   /**
-   * The name of the group.
+   * A name for the group.
    */
   public open fun groupName(`value`: String) {
     unwrap(this).setGroupName(`value`)
@@ -117,24 +105,24 @@ public open class CfnUserPoolGroup(
   }
 
   /**
-   * The role Amazon Resource Name (ARN) for the group.
+   * The Amazon Resource Name (ARN) for the IAM role that you want to associate with the group.
    */
   public open fun roleArn(): String? = unwrap(this).getRoleArn()
 
   /**
-   * The role Amazon Resource Name (ARN) for the group.
+   * The Amazon Resource Name (ARN) for the IAM role that you want to associate with the group.
    */
   public open fun roleArn(`value`: String) {
     unwrap(this).setRoleArn(`value`)
   }
 
   /**
-   * The user pool ID for the user pool.
+   * The ID of the user pool where you want to create a user group.
    */
   public open fun userPoolId(): String = unwrap(this).getUserPoolId()
 
   /**
-   * The user pool ID for the user pool.
+   * The ID of the user pool where you want to create a user group.
    */
   public open fun userPoolId(`value`: String) {
     unwrap(this).setUserPoolId(`value`)
@@ -146,20 +134,20 @@ public open class CfnUserPoolGroup(
   @CdkDslMarker
   public interface Builder {
     /**
-     * A string containing the description of the group.
+     * A description of the group that you're creating.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-description)
-     * @param description A string containing the description of the group. 
+     * @param description A description of the group that you're creating. 
      */
     public fun description(description: String)
 
     /**
-     * The name of the group.
+     * A name for the group.
      *
-     * Must be unique.
+     * This name must be unique in your user pool.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-groupname)
-     * @param groupName The name of the group. 
+     * @param groupName A name for the group. 
      */
     public fun groupName(groupName: String)
 
@@ -186,18 +174,24 @@ public open class CfnUserPoolGroup(
     public fun precedence(precedence: Number)
 
     /**
-     * The role Amazon Resource Name (ARN) for the group.
+     * The Amazon Resource Name (ARN) for the IAM role that you want to associate with the group.
+     *
+     * A group role primarily declares a preferred role for the credentials that you get from an
+     * identity pool. Amazon Cognito ID tokens have a `cognito:preferred_role` claim that presents the
+     * highest-precedence group that a user belongs to. Both ID and access tokens also contain a
+     * `cognito:groups` claim that list all the groups that a user is a member of.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-rolearn)
-     * @param roleArn The role Amazon Resource Name (ARN) for the group. 
+     * @param roleArn The Amazon Resource Name (ARN) for the IAM role that you want to associate
+     * with the group. 
      */
     public fun roleArn(roleArn: String)
 
     /**
-     * The user pool ID for the user pool.
+     * The ID of the user pool where you want to create a user group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-userpoolid)
-     * @param userPoolId The user pool ID for the user pool. 
+     * @param userPoolId The ID of the user pool where you want to create a user group. 
      */
     public fun userPoolId(userPoolId: String)
   }
@@ -210,22 +204,22 @@ public open class CfnUserPoolGroup(
         software.amazon.awscdk.services.cognito.CfnUserPoolGroup.Builder.create(scope, id)
 
     /**
-     * A string containing the description of the group.
+     * A description of the group that you're creating.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-description)
-     * @param description A string containing the description of the group. 
+     * @param description A description of the group that you're creating. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
-     * The name of the group.
+     * A name for the group.
      *
-     * Must be unique.
+     * This name must be unique in your user pool.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-groupname)
-     * @param groupName The name of the group. 
+     * @param groupName A name for the group. 
      */
     override fun groupName(groupName: String) {
       cdkBuilder.groupName(groupName)
@@ -256,20 +250,26 @@ public open class CfnUserPoolGroup(
     }
 
     /**
-     * The role Amazon Resource Name (ARN) for the group.
+     * The Amazon Resource Name (ARN) for the IAM role that you want to associate with the group.
+     *
+     * A group role primarily declares a preferred role for the credentials that you get from an
+     * identity pool. Amazon Cognito ID tokens have a `cognito:preferred_role` claim that presents the
+     * highest-precedence group that a user belongs to. Both ID and access tokens also contain a
+     * `cognito:groups` claim that list all the groups that a user is a member of.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-rolearn)
-     * @param roleArn The role Amazon Resource Name (ARN) for the group. 
+     * @param roleArn The Amazon Resource Name (ARN) for the IAM role that you want to associate
+     * with the group. 
      */
     override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
     /**
-     * The user pool ID for the user pool.
+     * The ID of the user pool where you want to create a user group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-userpoolid)
-     * @param userPoolId The user pool ID for the user pool. 
+     * @param userPoolId The ID of the user pool where you want to create a user group. 
      */
     override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)

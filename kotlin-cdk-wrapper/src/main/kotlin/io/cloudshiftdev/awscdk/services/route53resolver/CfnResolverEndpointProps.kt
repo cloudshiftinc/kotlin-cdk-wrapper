@@ -51,6 +51,8 @@ public interface CfnResolverEndpointProps {
    *
    * * `INBOUND` : allows DNS queries to your VPC from your network
    * * `OUTBOUND` : allows DNS queries from your VPC to your network
+   * * `INBOUND_DELEGATION` : Resolver delegates queries to Route 53 private hosted zones from your
+   * network.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-direction)
    */
@@ -93,7 +95,7 @@ public interface CfnResolverEndpointProps {
   public fun preferredInstanceType(): String? = unwrap(this).getPreferredInstanceType()
 
   /**
-   * Protocols used for the endpoint. DoH-FIPS is applicable for inbound endpoints only.
+   * Protocols used for the endpoint. DoH-FIPS is applicable for a default inbound endpoints only.
    *
    * For an inbound endpoint you can apply the protocols as follows:
    *
@@ -103,6 +105,8 @@ public interface CfnResolverEndpointProps {
    * * DoH alone.
    * * DoH-FIPS alone.
    * * None, which is treated as Do53.
+   *
+   * For a delegation inbound endpoint you can use Do53 only.
    *
    * For an outbound endpoint you can apply the protocols as follows:
    *
@@ -151,6 +155,8 @@ public interface CfnResolverEndpointProps {
      * queries:. 
      * * `INBOUND` : allows DNS queries to your VPC from your network
      * * `OUTBOUND` : allows DNS queries from your VPC to your network
+     * * `INBOUND_DELEGATION` : Resolver delegates queries to Route 53 private hosted zones from
+     * your network.
      */
     public fun direction(direction: String)
 
@@ -201,8 +207,8 @@ public interface CfnResolverEndpointProps {
     public fun preferredInstanceType(preferredInstanceType: String)
 
     /**
-     * @param protocols Protocols used for the endpoint. DoH-FIPS is applicable for inbound
-     * endpoints only.
+     * @param protocols Protocols used for the endpoint. DoH-FIPS is applicable for a default
+     * inbound endpoints only.
      * For an inbound endpoint you can apply the protocols as follows:
      *
      * * Do53 and DoH in combination.
@@ -211,6 +217,8 @@ public interface CfnResolverEndpointProps {
      * * DoH alone.
      * * DoH-FIPS alone.
      * * None, which is treated as Do53.
+     *
+     * For a delegation inbound endpoint you can use Do53 only.
      *
      * For an outbound endpoint you can apply the protocols as follows:
      *
@@ -222,8 +230,8 @@ public interface CfnResolverEndpointProps {
     public fun protocols(protocols: List<String>)
 
     /**
-     * @param protocols Protocols used for the endpoint. DoH-FIPS is applicable for inbound
-     * endpoints only.
+     * @param protocols Protocols used for the endpoint. DoH-FIPS is applicable for a default
+     * inbound endpoints only.
      * For an inbound endpoint you can apply the protocols as follows:
      *
      * * Do53 and DoH in combination.
@@ -232,6 +240,8 @@ public interface CfnResolverEndpointProps {
      * * DoH alone.
      * * DoH-FIPS alone.
      * * None, which is treated as Do53.
+     *
+     * For a delegation inbound endpoint you can use Do53 only.
      *
      * For an outbound endpoint you can apply the protocols as follows:
      *
@@ -288,6 +298,8 @@ public interface CfnResolverEndpointProps {
      * queries:. 
      * * `INBOUND` : allows DNS queries to your VPC from your network
      * * `OUTBOUND` : allows DNS queries from your VPC to your network
+     * * `INBOUND_DELEGATION` : Resolver delegates queries to Route 53 private hosted zones from
+     * your network.
      */
     override fun direction(direction: String) {
       cdkBuilder.direction(direction)
@@ -350,8 +362,8 @@ public interface CfnResolverEndpointProps {
     }
 
     /**
-     * @param protocols Protocols used for the endpoint. DoH-FIPS is applicable for inbound
-     * endpoints only.
+     * @param protocols Protocols used for the endpoint. DoH-FIPS is applicable for a default
+     * inbound endpoints only.
      * For an inbound endpoint you can apply the protocols as follows:
      *
      * * Do53 and DoH in combination.
@@ -360,6 +372,8 @@ public interface CfnResolverEndpointProps {
      * * DoH alone.
      * * DoH-FIPS alone.
      * * None, which is treated as Do53.
+     *
+     * For a delegation inbound endpoint you can use Do53 only.
      *
      * For an outbound endpoint you can apply the protocols as follows:
      *
@@ -373,8 +387,8 @@ public interface CfnResolverEndpointProps {
     }
 
     /**
-     * @param protocols Protocols used for the endpoint. DoH-FIPS is applicable for inbound
-     * endpoints only.
+     * @param protocols Protocols used for the endpoint. DoH-FIPS is applicable for a default
+     * inbound endpoints only.
      * For an inbound endpoint you can apply the protocols as follows:
      *
      * * Do53 and DoH in combination.
@@ -383,6 +397,8 @@ public interface CfnResolverEndpointProps {
      * * DoH alone.
      * * DoH-FIPS alone.
      * * None, which is treated as Do53.
+     *
+     * For a delegation inbound endpoint you can use Do53 only.
      *
      * For an outbound endpoint you can apply the protocols as follows:
      *
@@ -448,6 +464,8 @@ public interface CfnResolverEndpointProps {
      *
      * * `INBOUND` : allows DNS queries to your VPC from your network
      * * `OUTBOUND` : allows DNS queries from your VPC to your network
+     * * `INBOUND_DELEGATION` : Resolver delegates queries to Route 53 private hosted zones from
+     * your network.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-direction)
      */
@@ -490,7 +508,7 @@ public interface CfnResolverEndpointProps {
     override fun preferredInstanceType(): String? = unwrap(this).getPreferredInstanceType()
 
     /**
-     * Protocols used for the endpoint. DoH-FIPS is applicable for inbound endpoints only.
+     * Protocols used for the endpoint. DoH-FIPS is applicable for a default inbound endpoints only.
      *
      * For an inbound endpoint you can apply the protocols as follows:
      *
@@ -500,6 +518,8 @@ public interface CfnResolverEndpointProps {
      * * DoH alone.
      * * DoH-FIPS alone.
      * * None, which is treated as Do53.
+     *
+     * For a delegation inbound endpoint you can use Do53 only.
      *
      * For an outbound endpoint you can apply the protocols as follows:
      *

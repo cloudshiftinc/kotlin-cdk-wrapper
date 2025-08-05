@@ -98,6 +98,7 @@ import kotlin.jvm.JvmName
  * .softLimit(123)
  * .build()))
  * .user("user")
+ * .versionConsistency(VersionConsistency.ENABLED)
  * .workingDirectory("workingDirectory")
  * .build();
  * ```
@@ -445,6 +446,15 @@ public interface ContainerDefinitionProps : ContainerDefinitionOptions {
      * the --user option to docker run.
      */
     public fun user(user: String)
+
+    /**
+     * @param versionConsistency Specifies whether Amazon ECS will resolve the container image tag
+     * provided in the container definition to an image digest.
+     * If you set the value for a container as disabled, Amazon ECS will
+     * not resolve the provided container image tag to a digest and will use the
+     * original image URI specified in the container definition for deployment.
+     */
+    public fun versionConsistency(versionConsistency: VersionConsistency)
 
     /**
      * @param workingDirectory The working directory in which to run commands inside the container.
@@ -873,6 +883,17 @@ public interface ContainerDefinitionProps : ContainerDefinitionOptions {
     }
 
     /**
+     * @param versionConsistency Specifies whether Amazon ECS will resolve the container image tag
+     * provided in the container definition to an image digest.
+     * If you set the value for a container as disabled, Amazon ECS will
+     * not resolve the provided container image tag to a digest and will use the
+     * original image URI specified in the container definition for deployment.
+     */
+    override fun versionConsistency(versionConsistency: VersionConsistency) {
+      cdkBuilder.versionConsistency(versionConsistency.let(VersionConsistency.Companion::unwrap))
+    }
+
+    /**
      * @param workingDirectory The working directory in which to run commands inside the container.
      */
     override fun workingDirectory(workingDirectory: String) {
@@ -1246,6 +1267,22 @@ public interface ContainerDefinitionProps : ContainerDefinitionOptions {
      * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#ContainerDefinition-user)
      */
     override fun user(): String? = unwrap(this).getUser()
+
+    /**
+     * Specifies whether Amazon ECS will resolve the container image tag provided in the container
+     * definition to an image digest.
+     *
+     * If you set the value for a container as disabled, Amazon ECS will
+     * not resolve the provided container image tag to a digest and will use the
+     * original image URI specified in the container definition for deployment.
+     *
+     * Default: VersionConsistency.DISABLED if `image` is a CDK asset, VersionConsistency.ENABLED
+     * otherwise
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-versionconsistency)
+     */
+    override fun versionConsistency(): VersionConsistency? =
+        unwrap(this).getVersionConsistency()?.let(VersionConsistency::wrap)
 
     /**
      * The working directory in which to run commands inside the container.

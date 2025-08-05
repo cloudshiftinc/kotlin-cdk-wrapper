@@ -32,13 +32,30 @@ import kotlin.jvm.JvmName
  * .inputStrength("inputStrength")
  * .outputStrength("outputStrength")
  * .type("type")
+ * // the properties below are optional
+ * .inputAction("inputAction")
+ * .inputEnabled(false)
+ * .inputModalities(List.of("inputModalities"))
+ * .outputAction("outputAction")
+ * .outputEnabled(false)
+ * .outputModalities(List.of("outputModalities"))
  * .build()))
+ * // the properties below are optional
+ * .contentFiltersTierConfig(ContentFiltersTierConfigProperty.builder()
+ * .tierName("tierName")
+ * .build())
  * .build())
  * .contextualGroundingPolicyConfig(ContextualGroundingPolicyConfigProperty.builder()
  * .filtersConfig(List.of(ContextualGroundingFilterConfigProperty.builder()
  * .threshold(123)
  * .type("type")
+ * // the properties below are optional
+ * .action("action")
+ * .enabled(false)
  * .build()))
+ * .build())
+ * .crossRegionConfig(GuardrailCrossRegionConfigProperty.builder()
+ * .guardrailProfileArn("guardrailProfileArn")
  * .build())
  * .description("description")
  * .kmsKeyArn("kmsKeyArn")
@@ -46,6 +63,11 @@ import kotlin.jvm.JvmName
  * .piiEntitiesConfig(List.of(PiiEntityConfigProperty.builder()
  * .action("action")
  * .type("type")
+ * // the properties below are optional
+ * .inputAction("inputAction")
+ * .inputEnabled(false)
+ * .outputAction("outputAction")
+ * .outputEnabled(false)
  * .build()))
  * .regexesConfig(List.of(RegexConfigProperty.builder()
  * .action("action")
@@ -53,6 +75,10 @@ import kotlin.jvm.JvmName
  * .pattern("pattern")
  * // the properties below are optional
  * .description("description")
+ * .inputAction("inputAction")
+ * .inputEnabled(false)
+ * .outputAction("outputAction")
+ * .outputEnabled(false)
  * .build()))
  * .build())
  * .tags(List.of(CfnTag.builder()
@@ -66,14 +92,32 @@ import kotlin.jvm.JvmName
  * .type("type")
  * // the properties below are optional
  * .examples(List.of("examples"))
+ * .inputAction("inputAction")
+ * .inputEnabled(false)
+ * .outputAction("outputAction")
+ * .outputEnabled(false)
  * .build()))
+ * // the properties below are optional
+ * .topicsTierConfig(TopicsTierConfigProperty.builder()
+ * .tierName("tierName")
+ * .build())
  * .build())
  * .wordPolicyConfig(WordPolicyConfigProperty.builder()
  * .managedWordListsConfig(List.of(ManagedWordsConfigProperty.builder()
  * .type("type")
+ * // the properties below are optional
+ * .inputAction("inputAction")
+ * .inputEnabled(false)
+ * .outputAction("outputAction")
+ * .outputEnabled(false)
  * .build()))
  * .wordsConfig(List.of(WordConfigProperty.builder()
  * .text("text")
+ * // the properties below are optional
+ * .inputAction("inputAction")
+ * .inputEnabled(false)
+ * .outputAction("outputAction")
+ * .outputEnabled(false)
  * .build()))
  * .build())
  * .build();
@@ -110,6 +154,20 @@ public interface CfnGuardrailProps {
    */
   public fun contextualGroundingPolicyConfig(): Any? =
       unwrap(this).getContextualGroundingPolicyConfig()
+
+  /**
+   * The system-defined guardrail profile that you're using with your guardrail.
+   *
+   * Guardrail profiles define the destination AWS Regions where guardrail inference requests can be
+   * automatically routed. Using guardrail profiles helps maintain guardrail performance and
+   * reliability when demand increases.
+   *
+   * For more information, see the [Amazon Bedrock User
+   * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-crossregionconfig)
+   */
+  public fun crossRegionConfig(): Any? = unwrap(this).getCrossRegionConfig()
 
   /**
    * A description of the guardrail.
@@ -213,6 +271,45 @@ public interface CfnGuardrailProps {
     @JvmName("89ba7bd404745ce6d658d412796eebcd10533b9d6092cf55a3fb98fe06496ce3")
     public
         fun contextualGroundingPolicyConfig(contextualGroundingPolicyConfig: CfnGuardrail.ContextualGroundingPolicyConfigProperty.Builder.() -> Unit)
+
+    /**
+     * @param crossRegionConfig The system-defined guardrail profile that you're using with your
+     * guardrail.
+     * Guardrail profiles define the destination AWS Regions where guardrail inference requests can
+     * be automatically routed. Using guardrail profiles helps maintain guardrail performance and
+     * reliability when demand increases.
+     *
+     * For more information, see the [Amazon Bedrock User
+     * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+     */
+    public fun crossRegionConfig(crossRegionConfig: IResolvable)
+
+    /**
+     * @param crossRegionConfig The system-defined guardrail profile that you're using with your
+     * guardrail.
+     * Guardrail profiles define the destination AWS Regions where guardrail inference requests can
+     * be automatically routed. Using guardrail profiles helps maintain guardrail performance and
+     * reliability when demand increases.
+     *
+     * For more information, see the [Amazon Bedrock User
+     * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+     */
+    public fun crossRegionConfig(crossRegionConfig: CfnGuardrail.GuardrailCrossRegionConfigProperty)
+
+    /**
+     * @param crossRegionConfig The system-defined guardrail profile that you're using with your
+     * guardrail.
+     * Guardrail profiles define the destination AWS Regions where guardrail inference requests can
+     * be automatically routed. Using guardrail profiles helps maintain guardrail performance and
+     * reliability when demand increases.
+     *
+     * For more information, see the [Amazon Bedrock User
+     * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("113a1ec1cae68bb7fd61ea3c43d0a1179d6e420d88a7d26f1932d6a8e37a4428")
+    public
+        fun crossRegionConfig(crossRegionConfig: CfnGuardrail.GuardrailCrossRegionConfigProperty.Builder.() -> Unit)
 
     /**
      * @param description A description of the guardrail.
@@ -367,6 +464,51 @@ public interface CfnGuardrailProps {
         contextualGroundingPolicyConfig(CfnGuardrail.ContextualGroundingPolicyConfigProperty(contextualGroundingPolicyConfig))
 
     /**
+     * @param crossRegionConfig The system-defined guardrail profile that you're using with your
+     * guardrail.
+     * Guardrail profiles define the destination AWS Regions where guardrail inference requests can
+     * be automatically routed. Using guardrail profiles helps maintain guardrail performance and
+     * reliability when demand increases.
+     *
+     * For more information, see the [Amazon Bedrock User
+     * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+     */
+    override fun crossRegionConfig(crossRegionConfig: IResolvable) {
+      cdkBuilder.crossRegionConfig(crossRegionConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param crossRegionConfig The system-defined guardrail profile that you're using with your
+     * guardrail.
+     * Guardrail profiles define the destination AWS Regions where guardrail inference requests can
+     * be automatically routed. Using guardrail profiles helps maintain guardrail performance and
+     * reliability when demand increases.
+     *
+     * For more information, see the [Amazon Bedrock User
+     * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+     */
+    override
+        fun crossRegionConfig(crossRegionConfig: CfnGuardrail.GuardrailCrossRegionConfigProperty) {
+      cdkBuilder.crossRegionConfig(crossRegionConfig.let(CfnGuardrail.GuardrailCrossRegionConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param crossRegionConfig The system-defined guardrail profile that you're using with your
+     * guardrail.
+     * Guardrail profiles define the destination AWS Regions where guardrail inference requests can
+     * be automatically routed. Using guardrail profiles helps maintain guardrail performance and
+     * reliability when demand increases.
+     *
+     * For more information, see the [Amazon Bedrock User
+     * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("113a1ec1cae68bb7fd61ea3c43d0a1179d6e420d88a7d26f1932d6a8e37a4428")
+    override
+        fun crossRegionConfig(crossRegionConfig: CfnGuardrail.GuardrailCrossRegionConfigProperty.Builder.() -> Unit):
+        Unit = crossRegionConfig(CfnGuardrail.GuardrailCrossRegionConfigProperty(crossRegionConfig))
+
+    /**
      * @param description A description of the guardrail.
      */
     override fun description(description: String) {
@@ -509,6 +651,20 @@ public interface CfnGuardrailProps {
      */
     override fun contextualGroundingPolicyConfig(): Any? =
         unwrap(this).getContextualGroundingPolicyConfig()
+
+    /**
+     * The system-defined guardrail profile that you're using with your guardrail.
+     *
+     * Guardrail profiles define the destination AWS Regions where guardrail inference requests can
+     * be automatically routed. Using guardrail profiles helps maintain guardrail performance and
+     * reliability when demand increases.
+     *
+     * For more information, see the [Amazon Bedrock User
+     * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-crossregionconfig)
+     */
+    override fun crossRegionConfig(): Any? = unwrap(this).getCrossRegionConfig()
 
     /**
      * A description of the guardrail.

@@ -264,6 +264,9 @@ public open class UserPoolIdentityProviderGoogle(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

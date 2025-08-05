@@ -169,6 +169,9 @@ public open class CodeSigningConfig(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.lambda.CodeSigningConfig.PROPERTY_INJECTION_ID
+
     public fun fromCodeSigningConfigArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

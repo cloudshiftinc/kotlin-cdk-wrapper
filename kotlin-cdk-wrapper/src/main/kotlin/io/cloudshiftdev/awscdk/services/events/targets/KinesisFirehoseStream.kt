@@ -15,7 +15,7 @@ import io.cloudshiftdev.awscdk.services.kinesisfirehose.CfnDeliveryStream as Clo
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream as AmazonAwscdkServicesKinesisfirehoseCfnDeliveryStream
 
 /**
- * (deprecated) Customize the Firehose Stream Event Target.
+ * (deprecated) Customize the Amazon Data Firehose Stream Event Target.
  *
  * Example:
  *

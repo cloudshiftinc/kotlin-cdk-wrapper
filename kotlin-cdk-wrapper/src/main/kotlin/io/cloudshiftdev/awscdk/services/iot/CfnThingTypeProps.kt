@@ -49,10 +49,7 @@ import kotlin.jvm.JvmName
  */
 public interface CfnThingTypeProps {
   /**
-   * Deprecates a thing type.
-   *
-   * You can not associate new things with deprecated thing type. You cannot update
-   * `ThingTypeProperties` if the thing type is deprecated.
+   * Deprecates a thing type. You can not associate new things with deprecated thing type.
    *
    * Requires permission to access the
    * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
@@ -93,10 +90,8 @@ public interface CfnThingTypeProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param deprecateThingType Deprecates a thing type.
-     * You can not associate new things with deprecated thing type. You cannot update
-     * `ThingTypeProperties` if the thing type is deprecated.
-     *
+     * @param deprecateThingType Deprecates a thing type. You can not associate new things with
+     * deprecated thing type.
      * Requires permission to access the
      * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
      * action.
@@ -104,10 +99,8 @@ public interface CfnThingTypeProps {
     public fun deprecateThingType(deprecateThingType: Boolean)
 
     /**
-     * @param deprecateThingType Deprecates a thing type.
-     * You can not associate new things with deprecated thing type. You cannot update
-     * `ThingTypeProperties` if the thing type is deprecated.
-     *
+     * @param deprecateThingType Deprecates a thing type. You can not associate new things with
+     * deprecated thing type.
      * Requires permission to access the
      * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
      * action.
@@ -162,10 +155,8 @@ public interface CfnThingTypeProps {
         software.amazon.awscdk.services.iot.CfnThingTypeProps.builder()
 
     /**
-     * @param deprecateThingType Deprecates a thing type.
-     * You can not associate new things with deprecated thing type. You cannot update
-     * `ThingTypeProperties` if the thing type is deprecated.
-     *
+     * @param deprecateThingType Deprecates a thing type. You can not associate new things with
+     * deprecated thing type.
      * Requires permission to access the
      * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
      * action.
@@ -175,10 +166,8 @@ public interface CfnThingTypeProps {
     }
 
     /**
-     * @param deprecateThingType Deprecates a thing type.
-     * You can not associate new things with deprecated thing type. You cannot update
-     * `ThingTypeProperties` if the thing type is deprecated.
-     *
+     * @param deprecateThingType Deprecates a thing type. You can not associate new things with
+     * deprecated thing type.
      * Requires permission to access the
      * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
      * action.
@@ -247,10 +236,7 @@ public interface CfnThingTypeProps {
   ) : CdkObject(cdkObject),
       CfnThingTypeProps {
     /**
-     * Deprecates a thing type.
-     *
-     * You can not associate new things with deprecated thing type. You cannot update
-     * `ThingTypeProperties` if the thing type is deprecated.
+     * Deprecates a thing type. You can not associate new things with deprecated thing type.
      *
      * Requires permission to access the
      * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)

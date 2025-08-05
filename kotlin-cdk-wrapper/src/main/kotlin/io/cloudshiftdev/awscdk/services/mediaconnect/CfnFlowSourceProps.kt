@@ -65,25 +65,27 @@ import kotlin.jvm.JvmName
  */
 public interface CfnFlowSourceProps {
   /**
-   * The type of encryption that is used on the content ingested from the source.
+   * The type of encryption that is used on the content ingested from this source.
+   *
+   * Allowable encryption types: static-key.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-decryption)
    */
   public fun decryption(): Any? = unwrap(this).getDecryption()
 
   /**
-   * A description of the source.
+   * A description for the source.
    *
-   * This description is not visible outside of the current AWS account.
+   * This value is not used or seen outside of the current MediaConnect account.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-description)
    */
   public fun description(): String
 
   /**
-   * The ARN of the entitlement that allows you to subscribe to the flow.
+   * The ARN of the entitlement that allows you to subscribe to this flow.
    *
-   * The entitlement is set by the content originator, and the ARN is generated as part of the
+   * The entitlement is set by the flow originator, and the ARN is generated as part of the
    * originator's flow.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-entitlementarn)
@@ -100,7 +102,7 @@ public interface CfnFlowSourceProps {
   public fun flowArn(): String? = unwrap(this).getFlowArn()
 
   /**
-   * The source configuration for cloud flows receiving a stream from a bridge.
+   * The bridge's source.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-gatewaybridgesource)
    */
@@ -116,7 +118,7 @@ public interface CfnFlowSourceProps {
   public fun ingestPort(): Number? = unwrap(this).getIngestPort()
 
   /**
-   * The maximum bitrate for RIST, RTP, and RTP-FEC streams.
+   * The smoothing max bitrate (in bps) for RIST, RTP, and RTP-FEC streams.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-maxbitrate)
    */
@@ -203,17 +205,17 @@ public interface CfnFlowSourceProps {
   public fun streamId(): String? = unwrap(this).getStreamId()
 
   /**
-   * The name of the VPC interface that you want to send your output to.
+   * The name of the VPC interface to use for this source.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-vpcinterfacename)
    */
   public fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
 
   /**
-   * The range of IP addresses that are allowed to contribute content to your source.
+   * The range of IP addresses that should be allowed to contribute content to your source.
    *
-   * Format the IP addresses as a Classless Inter-Domain Routing (CIDR) block; for example,
-   * 10.0.0.0/16.
+   * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for
+   * example, 10.0.0.0/16.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-whitelistcidr)
    */
@@ -225,34 +227,37 @@ public interface CfnFlowSourceProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param decryption The type of encryption that is used on the content ingested from the
+     * @param decryption The type of encryption that is used on the content ingested from this
      * source.
+     * Allowable encryption types: static-key.
      */
     public fun decryption(decryption: IResolvable)
 
     /**
-     * @param decryption The type of encryption that is used on the content ingested from the
+     * @param decryption The type of encryption that is used on the content ingested from this
      * source.
+     * Allowable encryption types: static-key.
      */
     public fun decryption(decryption: CfnFlowSource.EncryptionProperty)
 
     /**
-     * @param decryption The type of encryption that is used on the content ingested from the
+     * @param decryption The type of encryption that is used on the content ingested from this
      * source.
+     * Allowable encryption types: static-key.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3f0976742db86495e5476f81a237be48492ec425993aeaf16c967a70445457db")
     public fun decryption(decryption: CfnFlowSource.EncryptionProperty.Builder.() -> Unit)
 
     /**
-     * @param description A description of the source. 
-     * This description is not visible outside of the current AWS account.
+     * @param description A description for the source. 
+     * This value is not used or seen outside of the current MediaConnect account.
      */
     public fun description(description: String)
 
     /**
-     * @param entitlementArn The ARN of the entitlement that allows you to subscribe to the flow.
-     * The entitlement is set by the content originator, and the ARN is generated as part of the
+     * @param entitlementArn The ARN of the entitlement that allows you to subscribe to this flow.
+     * The entitlement is set by the flow originator, and the ARN is generated as part of the
      * originator's flow.
      */
     public fun entitlementArn(entitlementArn: String)
@@ -264,20 +269,17 @@ public interface CfnFlowSourceProps {
     public fun flowArn(flowArn: String)
 
     /**
-     * @param gatewayBridgeSource The source configuration for cloud flows receiving a stream from a
-     * bridge.
+     * @param gatewayBridgeSource The bridge's source.
      */
     public fun gatewayBridgeSource(gatewayBridgeSource: IResolvable)
 
     /**
-     * @param gatewayBridgeSource The source configuration for cloud flows receiving a stream from a
-     * bridge.
+     * @param gatewayBridgeSource The bridge's source.
      */
     public fun gatewayBridgeSource(gatewayBridgeSource: CfnFlowSource.GatewayBridgeSourceProperty)
 
     /**
-     * @param gatewayBridgeSource The source configuration for cloud flows receiving a stream from a
-     * bridge.
+     * @param gatewayBridgeSource The bridge's source.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("269657b8a09c3885e667977a7b2e75de5100021b63bd0633dd13f7f80860882c")
@@ -291,7 +293,7 @@ public interface CfnFlowSourceProps {
     public fun ingestPort(ingestPort: Number)
 
     /**
-     * @param maxBitrate The maximum bitrate for RIST, RTP, and RTP-FEC streams.
+     * @param maxBitrate The smoothing max bitrate (in bps) for RIST, RTP, and RTP-FEC streams.
      */
     public fun maxBitrate(maxBitrate: Number)
 
@@ -357,15 +359,15 @@ public interface CfnFlowSourceProps {
     public fun streamId(streamId: String)
 
     /**
-     * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+     * @param vpcInterfaceName The name of the VPC interface to use for this source.
      */
     public fun vpcInterfaceName(vpcInterfaceName: String)
 
     /**
-     * @param whitelistCidr The range of IP addresses that are allowed to contribute content to your
-     * source.
-     * Format the IP addresses as a Classless Inter-Domain Routing (CIDR) block; for example,
-     * 10.0.0.0/16.
+     * @param whitelistCidr The range of IP addresses that should be allowed to contribute content
+     * to your source.
+     * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block;
+     * for example, 10.0.0.0/16.
      */
     public fun whitelistCidr(whitelistCidr: String)
   }
@@ -375,24 +377,27 @@ public interface CfnFlowSourceProps {
         = software.amazon.awscdk.services.mediaconnect.CfnFlowSourceProps.builder()
 
     /**
-     * @param decryption The type of encryption that is used on the content ingested from the
+     * @param decryption The type of encryption that is used on the content ingested from this
      * source.
+     * Allowable encryption types: static-key.
      */
     override fun decryption(decryption: IResolvable) {
       cdkBuilder.decryption(decryption.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param decryption The type of encryption that is used on the content ingested from the
+     * @param decryption The type of encryption that is used on the content ingested from this
      * source.
+     * Allowable encryption types: static-key.
      */
     override fun decryption(decryption: CfnFlowSource.EncryptionProperty) {
       cdkBuilder.decryption(decryption.let(CfnFlowSource.EncryptionProperty.Companion::unwrap))
     }
 
     /**
-     * @param decryption The type of encryption that is used on the content ingested from the
+     * @param decryption The type of encryption that is used on the content ingested from this
      * source.
+     * Allowable encryption types: static-key.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3f0976742db86495e5476f81a237be48492ec425993aeaf16c967a70445457db")
@@ -400,16 +405,16 @@ public interface CfnFlowSourceProps {
         decryption(CfnFlowSource.EncryptionProperty(decryption))
 
     /**
-     * @param description A description of the source. 
-     * This description is not visible outside of the current AWS account.
+     * @param description A description for the source. 
+     * This value is not used or seen outside of the current MediaConnect account.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
-     * @param entitlementArn The ARN of the entitlement that allows you to subscribe to the flow.
-     * The entitlement is set by the content originator, and the ARN is generated as part of the
+     * @param entitlementArn The ARN of the entitlement that allows you to subscribe to this flow.
+     * The entitlement is set by the flow originator, and the ARN is generated as part of the
      * originator's flow.
      */
     override fun entitlementArn(entitlementArn: String) {
@@ -425,16 +430,14 @@ public interface CfnFlowSourceProps {
     }
 
     /**
-     * @param gatewayBridgeSource The source configuration for cloud flows receiving a stream from a
-     * bridge.
+     * @param gatewayBridgeSource The bridge's source.
      */
     override fun gatewayBridgeSource(gatewayBridgeSource: IResolvable) {
       cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param gatewayBridgeSource The source configuration for cloud flows receiving a stream from a
-     * bridge.
+     * @param gatewayBridgeSource The bridge's source.
      */
     override
         fun gatewayBridgeSource(gatewayBridgeSource: CfnFlowSource.GatewayBridgeSourceProperty) {
@@ -442,8 +445,7 @@ public interface CfnFlowSourceProps {
     }
 
     /**
-     * @param gatewayBridgeSource The source configuration for cloud flows receiving a stream from a
-     * bridge.
+     * @param gatewayBridgeSource The bridge's source.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("269657b8a09c3885e667977a7b2e75de5100021b63bd0633dd13f7f80860882c")
@@ -460,7 +462,7 @@ public interface CfnFlowSourceProps {
     }
 
     /**
-     * @param maxBitrate The maximum bitrate for RIST, RTP, and RTP-FEC streams.
+     * @param maxBitrate The smoothing max bitrate (in bps) for RIST, RTP, and RTP-FEC streams.
      */
     override fun maxBitrate(maxBitrate: Number) {
       cdkBuilder.maxBitrate(maxBitrate)
@@ -546,17 +548,17 @@ public interface CfnFlowSourceProps {
     }
 
     /**
-     * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+     * @param vpcInterfaceName The name of the VPC interface to use for this source.
      */
     override fun vpcInterfaceName(vpcInterfaceName: String) {
       cdkBuilder.vpcInterfaceName(vpcInterfaceName)
     }
 
     /**
-     * @param whitelistCidr The range of IP addresses that are allowed to contribute content to your
-     * source.
-     * Format the IP addresses as a Classless Inter-Domain Routing (CIDR) block; for example,
-     * 10.0.0.0/16.
+     * @param whitelistCidr The range of IP addresses that should be allowed to contribute content
+     * to your source.
+     * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block;
+     * for example, 10.0.0.0/16.
      */
     override fun whitelistCidr(whitelistCidr: String) {
       cdkBuilder.whitelistCidr(whitelistCidr)
@@ -571,25 +573,27 @@ public interface CfnFlowSourceProps {
   ) : CdkObject(cdkObject),
       CfnFlowSourceProps {
     /**
-     * The type of encryption that is used on the content ingested from the source.
+     * The type of encryption that is used on the content ingested from this source.
+     *
+     * Allowable encryption types: static-key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-decryption)
      */
     override fun decryption(): Any? = unwrap(this).getDecryption()
 
     /**
-     * A description of the source.
+     * A description for the source.
      *
-     * This description is not visible outside of the current AWS account.
+     * This value is not used or seen outside of the current MediaConnect account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-description)
      */
     override fun description(): String = unwrap(this).getDescription()
 
     /**
-     * The ARN of the entitlement that allows you to subscribe to the flow.
+     * The ARN of the entitlement that allows you to subscribe to this flow.
      *
-     * The entitlement is set by the content originator, and the ARN is generated as part of the
+     * The entitlement is set by the flow originator, and the ARN is generated as part of the
      * originator's flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-entitlementarn)
@@ -606,7 +610,7 @@ public interface CfnFlowSourceProps {
     override fun flowArn(): String? = unwrap(this).getFlowArn()
 
     /**
-     * The source configuration for cloud flows receiving a stream from a bridge.
+     * The bridge's source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-gatewaybridgesource)
      */
@@ -622,7 +626,7 @@ public interface CfnFlowSourceProps {
     override fun ingestPort(): Number? = unwrap(this).getIngestPort()
 
     /**
-     * The maximum bitrate for RIST, RTP, and RTP-FEC streams.
+     * The smoothing max bitrate (in bps) for RIST, RTP, and RTP-FEC streams.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-maxbitrate)
      */
@@ -710,17 +714,17 @@ public interface CfnFlowSourceProps {
     override fun streamId(): String? = unwrap(this).getStreamId()
 
     /**
-     * The name of the VPC interface that you want to send your output to.
+     * The name of the VPC interface to use for this source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-vpcinterfacename)
      */
     override fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
 
     /**
-     * The range of IP addresses that are allowed to contribute content to your source.
+     * The range of IP addresses that should be allowed to contribute content to your source.
      *
-     * Format the IP addresses as a Classless Inter-Domain Routing (CIDR) block; for example,
-     * 10.0.0.0/16.
+     * These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block;
+     * for example, 10.0.0.0/16.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-whitelistcidr)
      */

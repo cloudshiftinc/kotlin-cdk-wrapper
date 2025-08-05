@@ -47,6 +47,9 @@ public open class SourceAccessConfigurationType(
     public val SERVER_ROOT_CA_CERTIFICATE: SourceAccessConfigurationType =
         SourceAccessConfigurationType.wrap(software.amazon.awscdk.services.lambda.SourceAccessConfigurationType.SERVER_ROOT_CA_CERTIFICATE)
 
+    public val VIRTUAL_HOST: SourceAccessConfigurationType =
+        SourceAccessConfigurationType.wrap(software.amazon.awscdk.services.lambda.SourceAccessConfigurationType.VIRTUAL_HOST)
+
     public val VPC_SECURITY_GROUP: SourceAccessConfigurationType =
         SourceAccessConfigurationType.wrap(software.amazon.awscdk.services.lambda.SourceAccessConfigurationType.VPC_SECURITY_GROUP)
 

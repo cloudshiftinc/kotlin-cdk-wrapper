@@ -90,8 +90,8 @@ public open class CfnIdentityProvider(
    *
    * The following list describes the provider detail keys for each identity provider type.
    */
-  public open fun identityProviderDetails(`value`: IResolvable) {
-    unwrap(this).setIdentityProviderDetails(`value`.let(IResolvable.Companion::unwrap))
+  public open fun identityProviderDetails(`value`: Map<String, String>) {
+    unwrap(this).setIdentityProviderDetails(`value`)
   }
 
   /**
@@ -99,8 +99,8 @@ public open class CfnIdentityProvider(
    *
    * The following list describes the provider detail keys for each identity provider type.
    */
-  public open fun identityProviderDetails(`value`: Map<String, String>) {
-    unwrap(this).setIdentityProviderDetails(`value`)
+  public open fun identityProviderDetails(`value`: IResolvable) {
+    unwrap(this).setIdentityProviderDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -210,7 +210,7 @@ public open class CfnIdentityProvider(
      * @param identityProviderDetails The identity provider details. The following list describes
      * the provider detail keys for each identity provider type. 
      */
-    public fun identityProviderDetails(identityProviderDetails: IResolvable)
+    public fun identityProviderDetails(identityProviderDetails: Map<String, String>)
 
     /**
      * The identity provider details. The following list describes the provider detail keys for each
@@ -252,7 +252,7 @@ public open class CfnIdentityProvider(
      * @param identityProviderDetails The identity provider details. The following list describes
      * the provider detail keys for each identity provider type. 
      */
-    public fun identityProviderDetails(identityProviderDetails: Map<String, String>)
+    public fun identityProviderDetails(identityProviderDetails: IResolvable)
 
     /**
      * The identity provider name.
@@ -339,8 +339,8 @@ public open class CfnIdentityProvider(
      * @param identityProviderDetails The identity provider details. The following list describes
      * the provider detail keys for each identity provider type. 
      */
-    override fun identityProviderDetails(identityProviderDetails: IResolvable) {
-      cdkBuilder.identityProviderDetails(identityProviderDetails.let(IResolvable.Companion::unwrap))
+    override fun identityProviderDetails(identityProviderDetails: Map<String, String>) {
+      cdkBuilder.identityProviderDetails(identityProviderDetails)
     }
 
     /**
@@ -383,8 +383,8 @@ public open class CfnIdentityProvider(
      * @param identityProviderDetails The identity provider details. The following list describes
      * the provider detail keys for each identity provider type. 
      */
-    override fun identityProviderDetails(identityProviderDetails: Map<String, String>) {
-      cdkBuilder.identityProviderDetails(identityProviderDetails)
+    override fun identityProviderDetails(identityProviderDetails: IResolvable) {
+      cdkBuilder.identityProviderDetails(identityProviderDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**

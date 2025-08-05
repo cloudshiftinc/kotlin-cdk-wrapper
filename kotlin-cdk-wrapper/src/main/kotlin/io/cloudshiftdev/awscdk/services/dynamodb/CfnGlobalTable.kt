@@ -44,45 +44,46 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * replica) are asynchronous, and require that the IAM Principal is valid until they complete. You
  * should not delete the Principal (user or IAM role) until CloudFormation has finished updating your
  * stack.
+ * * `application-autoscaling:DeleteScalingPolicy`
+ * * `application-autoscaling:DeleteScheduledAction`
+ * * `application-autoscaling:DeregisterScalableTarget`
+ * * `application-autoscaling:DescribeScalableTargets`
+ * * `application-autoscaling:DescribeScalingPolicies`
+ * * `application-autoscaling:PutScalingPolicy`
+ * * `application-autoscaling:PutScheduledAction`
+ * * `application-autoscaling:RegisterScalableTarget`
+ * * `dynamodb:BatchWriteItem`
+ * * `dynamodb:CreateGlobalTableWitness`
  * * `dynamodb:CreateTable`
- * * `dynamodb:UpdateTable`
+ * * `dynamodb:CreateTableReplica`
+ * * `dynamodb:DeleteGlobalTableWitness`
+ * * `dynamodb:DeleteItem`
  * * `dynamodb:DeleteTable`
+ * * `dynamodb:DeleteTableReplica`
  * * `dynamodb:DescribeContinuousBackups`
  * * `dynamodb:DescribeContributorInsights`
  * * `dynamodb:DescribeTable`
  * * `dynamodb:DescribeTableReplicaAutoScaling`
  * * `dynamodb:DescribeTimeToLive`
- * * `dynamodb:ListTables`
- * * `dynamodb:UpdateTimeToLive`
- * * `dynamodb:UpdateContributorInsights`
- * * `dynamodb:UpdateContinuousBackups`
- * * `dynamodb:ListTagsOfResource`
- * * `dynamodb:TagResource`
- * * `dynamodb:UntagResource`
- * * `dynamodb:BatchWriteItem`
- * * `dynamodb:CreateTableReplica`
- * * `dynamodb:DeleteItem`
- * * `dynamodb:DeleteTableReplica`
  * * `dynamodb:DisableKinesisStreamingDestination`
  * * `dynamodb:EnableKinesisStreamingDestination`
  * * `dynamodb:GetItem`
+ * * `dynamodb:ListTables`
+ * * `dynamodb:ListTagsOfResource`
  * * `dynamodb:PutItem`
  * * `dynamodb:Query`
  * * `dynamodb:Scan`
+ * * `dynamodb:TagResource`
+ * * `dynamodb:UntagResource`
+ * * `dynamodb:UpdateContinuousBackups`
+ * * `dynamodb:UpdateContributorInsights`
  * * `dynamodb:UpdateItem`
- * * `dynamodb:DescribeTableReplicaAutoScaling`
+ * * `dynamodb:UpdateTable`
  * * `dynamodb:UpdateTableReplicaAutoScaling`
+ * * `dynamodb:UpdateTimeToLive`
  * * `iam:CreateServiceLinkedRole`
  * * `kms:CreateGrant`
  * * `kms:DescribeKey`
- * * `application-autoscaling:DeleteScalingPolicy`
- * * `application-autoscaling:DeleteScheduledAction`
- * * `application-autoscaling:DeregisterScalableTarget`
- * * `application-autoscaling:DescribeScalingPolicies`
- * * `application-autoscaling:DescribeScalableTargets`
- * * `application-autoscaling:PutScalingPolicy`
- * * `application-autoscaling:PutScheduledAction`
- * * `application-autoscaling:RegisterScalableTarget`
  * * When using provisioned billing mode, CloudFormation will create an auto scaling policy on each
  * of your replicas to control their write capacities. You must configure this policy using the
  * `WriteProvisionedThroughputSettings` property. CloudFormation will ensure that all replicas have the
@@ -158,6 +159,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty.builder()
  * .pointInTimeRecoveryEnabled(false)
+ * .recoveryPeriodInDays(123)
  * .build())
  * .readOnDemandThroughputSettings(ReadOnDemandThroughputSettingsProperty.builder()
  * .maxReadRequestUnits(123)
@@ -231,6 +233,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build())
  * .build()))
+ * .globalTableWitnesses(List.of(GlobalTableWitnessProperty.builder()
+ * .region("region")
+ * .build()))
  * .localSecondaryIndexes(List.of(LocalSecondaryIndexProperty.builder()
  * .indexName("indexName")
  * .keySchema(List.of(KeySchemaProperty.builder()
@@ -242,6 +247,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .projectionType("projectionType")
  * .build())
  * .build()))
+ * .multiRegionConsistency("multiRegionConsistency")
  * .sseSpecification(SSESpecificationProperty.builder()
  * .sseEnabled(false)
  * // the properties below are optional
@@ -395,6 +401,31 @@ public open class CfnGlobalTable(
       globalSecondaryIndexes(`value`.toList())
 
   /**
+   * The list of witnesses of the MRSC global table.
+   */
+  public open fun globalTableWitnesses(): Any? = unwrap(this).getGlobalTableWitnesses()
+
+  /**
+   * The list of witnesses of the MRSC global table.
+   */
+  public open fun globalTableWitnesses(`value`: IResolvable) {
+    unwrap(this).setGlobalTableWitnesses(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The list of witnesses of the MRSC global table.
+   */
+  public open fun globalTableWitnesses(`value`: List<Any>) {
+    unwrap(this).setGlobalTableWitnesses(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * The list of witnesses of the MRSC global table.
+   */
+  public open fun globalTableWitnesses(vararg `value`: Any): Unit =
+      globalTableWitnesses(`value`.toList())
+
+  /**
    * Examines the CloudFormation resource and discloses attributes.
    *
    * @param inspector tree inspector to collect and process attributes. 
@@ -451,6 +482,18 @@ public open class CfnGlobalTable(
    */
   public open fun localSecondaryIndexes(vararg `value`: Any): Unit =
       localSecondaryIndexes(`value`.toList())
+
+  /**
+   * Specifies the consistency mode for a new global table.
+   */
+  public open fun multiRegionConsistency(): String? = unwrap(this).getMultiRegionConsistency()
+
+  /**
+   * Specifies the consistency mode for a new global table.
+   */
+  public open fun multiRegionConsistency(`value`: String) {
+    unwrap(this).setMultiRegionConsistency(`value`)
+  }
 
   /**
    * Specifies the list of replicas for your global table.
@@ -760,6 +803,36 @@ public open class CfnGlobalTable(
     public fun globalSecondaryIndexes(vararg globalSecondaryIndexes: Any)
 
     /**
+     * The list of witnesses of the MRSC global table.
+     *
+     * Only one witness Region can be configured per MRSC global table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-globaltablewitnesses)
+     * @param globalTableWitnesses The list of witnesses of the MRSC global table. 
+     */
+    public fun globalTableWitnesses(globalTableWitnesses: IResolvable)
+
+    /**
+     * The list of witnesses of the MRSC global table.
+     *
+     * Only one witness Region can be configured per MRSC global table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-globaltablewitnesses)
+     * @param globalTableWitnesses The list of witnesses of the MRSC global table. 
+     */
+    public fun globalTableWitnesses(globalTableWitnesses: List<Any>)
+
+    /**
+     * The list of witnesses of the MRSC global table.
+     *
+     * Only one witness Region can be configured per MRSC global table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-globaltablewitnesses)
+     * @param globalTableWitnesses The list of witnesses of the MRSC global table. 
+     */
+    public fun globalTableWitnesses(vararg globalTableWitnesses: Any)
+
+    /**
      * Specifies the attributes that make up the primary key for the table.
      *
      * The attributes in the `KeySchema` property must also be defined in the `AttributeDefinitions`
@@ -829,6 +902,24 @@ public open class CfnGlobalTable(
     public fun localSecondaryIndexes(vararg localSecondaryIndexes: Any)
 
     /**
+     * Specifies the consistency mode for a new global table.
+     *
+     * You can specify one of the following consistency modes:
+     *
+     * * `EVENTUAL` : Configures a new global table for multi-Region eventual consistency (MREC).
+     * * `STRONG` : Configures a new global table for multi-Region strong consistency (MRSC).
+     *
+     * If you don't specify this field, the global table consistency mode defaults to `EVENTUAL` .
+     * For more information about global tables consistency modes, see [Consistency
+     * modes](https://docs.aws.amazon.com/V2globaltables_HowItWorks.html#V2globaltables_HowItWorks.consistency-modes)
+     * in DynamoDB developer guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-multiregionconsistency)
+     * @param multiRegionConsistency Specifies the consistency mode for a new global table. 
+     */
+    public fun multiRegionConsistency(multiRegionConsistency: String)
+
+    /**
      * Specifies the list of replicas for your global table.
      *
      * The list must contain at least one element, the region where the stack defining the global
@@ -848,6 +939,8 @@ public open class CfnGlobalTable(
      *
      * You can create a new global table with as many replicas as needed. You can add or remove
      * replicas after table creation, but you can only add or remove a single replica in each update.
+     * For Multi-Region Strong Consistency (MRSC), you can add or remove up to 3 replicas, or 2
+     * replicas plus a witness Region.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-replicas)
      * @param replicas Specifies the list of replicas for your global table. 
@@ -874,6 +967,8 @@ public open class CfnGlobalTable(
      *
      * You can create a new global table with as many replicas as needed. You can add or remove
      * replicas after table creation, but you can only add or remove a single replica in each update.
+     * For Multi-Region Strong Consistency (MRSC), you can add or remove up to 3 replicas, or 2
+     * replicas plus a witness Region.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-replicas)
      * @param replicas Specifies the list of replicas for your global table. 
@@ -900,6 +995,8 @@ public open class CfnGlobalTable(
      *
      * You can create a new global table with as many replicas as needed. You can add or remove
      * replicas after table creation, but you can only add or remove a single replica in each update.
+     * For Multi-Region Strong Consistency (MRSC), you can add or remove up to 3 replicas, or 2
+     * replicas plus a witness Region.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-replicas)
      * @param replicas Specifies the list of replicas for your global table. 
@@ -948,7 +1045,9 @@ public open class CfnGlobalTable(
      * Specifies the streams settings on your global table.
      *
      * You must provide a value for this property if your global table contains more than one
-     * replica. You can only change the streams settings if your global table has only one replica.
+     * replica. You can only change the streams settings if your global table has only one replica. For
+     * Multi-Region Strong Consistency (MRSC), you do not need to provide a value for this property and
+     * can change the settings at any time.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-streamspecification)
      * @param streamSpecification Specifies the streams settings on your global table. 
@@ -959,7 +1058,9 @@ public open class CfnGlobalTable(
      * Specifies the streams settings on your global table.
      *
      * You must provide a value for this property if your global table contains more than one
-     * replica. You can only change the streams settings if your global table has only one replica.
+     * replica. You can only change the streams settings if your global table has only one replica. For
+     * Multi-Region Strong Consistency (MRSC), you do not need to provide a value for this property and
+     * can change the settings at any time.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-streamspecification)
      * @param streamSpecification Specifies the streams settings on your global table. 
@@ -970,7 +1071,9 @@ public open class CfnGlobalTable(
      * Specifies the streams settings on your global table.
      *
      * You must provide a value for this property if your global table contains more than one
-     * replica. You can only change the streams settings if your global table has only one replica.
+     * replica. You can only change the streams settings if your global table has only one replica. For
+     * Multi-Region Strong Consistency (MRSC), you do not need to provide a value for this property and
+     * can change the settings at any time.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-streamspecification)
      * @param streamSpecification Specifies the streams settings on your global table. 
@@ -1263,6 +1366,41 @@ public open class CfnGlobalTable(
         globalSecondaryIndexes(globalSecondaryIndexes.toList())
 
     /**
+     * The list of witnesses of the MRSC global table.
+     *
+     * Only one witness Region can be configured per MRSC global table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-globaltablewitnesses)
+     * @param globalTableWitnesses The list of witnesses of the MRSC global table. 
+     */
+    override fun globalTableWitnesses(globalTableWitnesses: IResolvable) {
+      cdkBuilder.globalTableWitnesses(globalTableWitnesses.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The list of witnesses of the MRSC global table.
+     *
+     * Only one witness Region can be configured per MRSC global table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-globaltablewitnesses)
+     * @param globalTableWitnesses The list of witnesses of the MRSC global table. 
+     */
+    override fun globalTableWitnesses(globalTableWitnesses: List<Any>) {
+      cdkBuilder.globalTableWitnesses(globalTableWitnesses.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * The list of witnesses of the MRSC global table.
+     *
+     * Only one witness Region can be configured per MRSC global table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-globaltablewitnesses)
+     * @param globalTableWitnesses The list of witnesses of the MRSC global table. 
+     */
+    override fun globalTableWitnesses(vararg globalTableWitnesses: Any): Unit =
+        globalTableWitnesses(globalTableWitnesses.toList())
+
+    /**
      * Specifies the attributes that make up the primary key for the table.
      *
      * The attributes in the `KeySchema` property must also be defined in the `AttributeDefinitions`
@@ -1341,6 +1479,26 @@ public open class CfnGlobalTable(
         localSecondaryIndexes(localSecondaryIndexes.toList())
 
     /**
+     * Specifies the consistency mode for a new global table.
+     *
+     * You can specify one of the following consistency modes:
+     *
+     * * `EVENTUAL` : Configures a new global table for multi-Region eventual consistency (MREC).
+     * * `STRONG` : Configures a new global table for multi-Region strong consistency (MRSC).
+     *
+     * If you don't specify this field, the global table consistency mode defaults to `EVENTUAL` .
+     * For more information about global tables consistency modes, see [Consistency
+     * modes](https://docs.aws.amazon.com/V2globaltables_HowItWorks.html#V2globaltables_HowItWorks.consistency-modes)
+     * in DynamoDB developer guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-multiregionconsistency)
+     * @param multiRegionConsistency Specifies the consistency mode for a new global table. 
+     */
+    override fun multiRegionConsistency(multiRegionConsistency: String) {
+      cdkBuilder.multiRegionConsistency(multiRegionConsistency)
+    }
+
+    /**
      * Specifies the list of replicas for your global table.
      *
      * The list must contain at least one element, the region where the stack defining the global
@@ -1360,6 +1518,8 @@ public open class CfnGlobalTable(
      *
      * You can create a new global table with as many replicas as needed. You can add or remove
      * replicas after table creation, but you can only add or remove a single replica in each update.
+     * For Multi-Region Strong Consistency (MRSC), you can add or remove up to 3 replicas, or 2
+     * replicas plus a witness Region.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-replicas)
      * @param replicas Specifies the list of replicas for your global table. 
@@ -1388,6 +1548,8 @@ public open class CfnGlobalTable(
      *
      * You can create a new global table with as many replicas as needed. You can add or remove
      * replicas after table creation, but you can only add or remove a single replica in each update.
+     * For Multi-Region Strong Consistency (MRSC), you can add or remove up to 3 replicas, or 2
+     * replicas plus a witness Region.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-replicas)
      * @param replicas Specifies the list of replicas for your global table. 
@@ -1416,6 +1578,8 @@ public open class CfnGlobalTable(
      *
      * You can create a new global table with as many replicas as needed. You can add or remove
      * replicas after table creation, but you can only add or remove a single replica in each update.
+     * For Multi-Region Strong Consistency (MRSC), you can add or remove up to 3 replicas, or 2
+     * replicas plus a witness Region.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-replicas)
      * @param replicas Specifies the list of replicas for your global table. 
@@ -1469,7 +1633,9 @@ public open class CfnGlobalTable(
      * Specifies the streams settings on your global table.
      *
      * You must provide a value for this property if your global table contains more than one
-     * replica. You can only change the streams settings if your global table has only one replica.
+     * replica. You can only change the streams settings if your global table has only one replica. For
+     * Multi-Region Strong Consistency (MRSC), you do not need to provide a value for this property and
+     * can change the settings at any time.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-streamspecification)
      * @param streamSpecification Specifies the streams settings on your global table. 
@@ -1482,7 +1648,9 @@ public open class CfnGlobalTable(
      * Specifies the streams settings on your global table.
      *
      * You must provide a value for this property if your global table contains more than one
-     * replica. You can only change the streams settings if your global table has only one replica.
+     * replica. You can only change the streams settings if your global table has only one replica. For
+     * Multi-Region Strong Consistency (MRSC), you do not need to provide a value for this property and
+     * can change the settings at any time.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-streamspecification)
      * @param streamSpecification Specifies the streams settings on your global table. 
@@ -1495,7 +1663,9 @@ public open class CfnGlobalTable(
      * Specifies the streams settings on your global table.
      *
      * You must provide a value for this property if your global table contains more than one
-     * replica. You can only change the streams settings if your global table has only one replica.
+     * replica. You can only change the streams settings if your global table has only one replica. For
+     * Multi-Region Strong Consistency (MRSC), you do not need to provide a value for this property and
+     * can change the settings at any time.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-streamspecification)
      * @param streamSpecification Specifies the streams settings on your global table. 
@@ -2816,6 +2986,100 @@ public open class CfnGlobalTable(
   }
 
   /**
+   * The witness Region for the MRSC global table.
+   *
+   * A MRSC global table can be configured with either three replicas, or with two replicas and one
+   * witness.
+   *
+   * The witness must be in a different Region than the replicas and within the same Region set:
+   *
+   * * US Region set: US East (N. Virginia), US East (Ohio), US West (Oregon)
+   * * EU Region set: Europe (Ireland), Europe (London), Europe (Paris), Europe (Frankfurt)
+   * * AP Region set: Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Osaka)
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * GlobalTableWitnessProperty globalTableWitnessProperty = GlobalTableWitnessProperty.builder()
+   * .region("region")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globaltablewitness.html)
+   */
+  public interface GlobalTableWitnessProperty {
+    /**
+     * The name of the AWS Region that serves as a witness for the MRSC global table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globaltablewitness.html#cfn-dynamodb-globaltable-globaltablewitness-region)
+     */
+    public fun region(): String? = unwrap(this).getRegion()
+
+    /**
+     * A builder for [GlobalTableWitnessProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param region The name of the AWS Region that serves as a witness for the MRSC global
+       * table.
+       */
+      public fun region(region: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalTableWitnessProperty.Builder
+          =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalTableWitnessProperty.builder()
+
+      /**
+       * @param region The name of the AWS Region that serves as a witness for the MRSC global
+       * table.
+       */
+      override fun region(region: String) {
+        cdkBuilder.region(region)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalTableWitnessProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalTableWitnessProperty,
+    ) : CdkObject(cdkObject),
+        GlobalTableWitnessProperty {
+      /**
+       * The name of the AWS Region that serves as a witness for the MRSC global table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globaltablewitness.html#cfn-dynamodb-globaltable-globaltablewitness-region)
+       */
+      override fun region(): String? = unwrap(this).getRegion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GlobalTableWitnessProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalTableWitnessProperty):
+          GlobalTableWitnessProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GlobalTableWitnessProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GlobalTableWitnessProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalTableWitnessProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalTableWitnessProperty
+    }
+  }
+
+  /**
    * Represents *a single element* of a key schema.
    *
    * A key schema specifies the attributes that make up the primary key of a table, or the key
@@ -3415,6 +3679,7 @@ public open class CfnGlobalTable(
    * PointInTimeRecoverySpecificationProperty pointInTimeRecoverySpecificationProperty =
    * PointInTimeRecoverySpecificationProperty.builder()
    * .pointInTimeRecoveryEnabled(false)
+   * .recoveryPeriodInDays(123)
    * .build();
    * ```
    *
@@ -3427,6 +3692,16 @@ public open class CfnGlobalTable(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-pointintimerecoveryspecification.html#cfn-dynamodb-globaltable-pointintimerecoveryspecification-pointintimerecoveryenabled)
      */
     public fun pointInTimeRecoveryEnabled(): Any? = unwrap(this).getPointInTimeRecoveryEnabled()
+
+    /**
+     * The number of preceding days for which continuous backups are taken and maintained.
+     *
+     * Your table data is only recoverable to any point-in-time from within the configured recovery
+     * period. This parameter is optional. If no value is provided, the value will default to 35.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-pointintimerecoveryspecification.html#cfn-dynamodb-globaltable-pointintimerecoveryspecification-recoveryperiodindays)
+     */
+    public fun recoveryPeriodInDays(): Number? = unwrap(this).getRecoveryPeriodInDays()
 
     /**
      * A builder for [PointInTimeRecoverySpecificationProperty]
@@ -3444,6 +3719,15 @@ public open class CfnGlobalTable(
        * (true) or disabled (false) on the table.
        */
       public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable)
+
+      /**
+       * @param recoveryPeriodInDays The number of preceding days for which continuous backups are
+       * taken and maintained.
+       * Your table data is only recoverable to any point-in-time from within the configured
+       * recovery period. This parameter is optional. If no value is provided, the value will default
+       * to 35.
+       */
+      public fun recoveryPeriodInDays(recoveryPeriodInDays: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3468,6 +3752,17 @@ public open class CfnGlobalTable(
         cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled.let(IResolvable.Companion::unwrap))
       }
 
+      /**
+       * @param recoveryPeriodInDays The number of preceding days for which continuous backups are
+       * taken and maintained.
+       * Your table data is only recoverable to any point-in-time from within the configured
+       * recovery period. This parameter is optional. If no value is provided, the value will default
+       * to 35.
+       */
+      override fun recoveryPeriodInDays(recoveryPeriodInDays: Number) {
+        cdkBuilder.recoveryPeriodInDays(recoveryPeriodInDays)
+      }
+
       public fun build():
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty
           = cdkBuilder.build()
@@ -3484,6 +3779,17 @@ public open class CfnGlobalTable(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-pointintimerecoveryspecification.html#cfn-dynamodb-globaltable-pointintimerecoveryspecification-pointintimerecoveryenabled)
        */
       override fun pointInTimeRecoveryEnabled(): Any? = unwrap(this).getPointInTimeRecoveryEnabled()
+
+      /**
+       * The number of preceding days for which continuous backups are taken and maintained.
+       *
+       * Your table data is only recoverable to any point-in-time from within the configured
+       * recovery period. This parameter is optional. If no value is provided, the value will default
+       * to 35.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-pointintimerecoveryspecification.html#cfn-dynamodb-globaltable-pointintimerecoveryspecification-recoveryperiodindays)
+       */
+      override fun recoveryPeriodInDays(): Number? = unwrap(this).getRecoveryPeriodInDays()
     }
 
     public companion object {
@@ -3529,9 +3835,12 @@ public open class CfnGlobalTable(
     /**
      * Represents the non-key attribute names which will be projected into the index.
      *
-     * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-     * local secondary indexes, must not exceed 100. If you project the same attribute into two
-     * different indexes, this counts as two distinct attributes when determining the total.
+     * For global and local secondary indexes, the total count of `NonKeyAttributes` summed across
+     * all of the secondary indexes, must not exceed 100. If you project the same attribute into two
+     * different indexes, this counts as two distinct attributes when determining the total. This limit
+     * only applies when you specify the ProjectionType of `INCLUDE` . You still can specify the
+     * ProjectionType of `ALL` to project all attributes from the source table, even if the table has
+     * more than 100 attributes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-projection.html#cfn-dynamodb-globaltable-projection-nonkeyattributes)
      */
@@ -3559,18 +3868,24 @@ public open class CfnGlobalTable(
       /**
        * @param nonKeyAttributes Represents the non-key attribute names which will be projected into
        * the index.
-       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-       * local secondary indexes, must not exceed 100. If you project the same attribute into two
-       * different indexes, this counts as two distinct attributes when determining the total.
+       * For global and local secondary indexes, the total count of `NonKeyAttributes` summed across
+       * all of the secondary indexes, must not exceed 100. If you project the same attribute into two
+       * different indexes, this counts as two distinct attributes when determining the total. This
+       * limit only applies when you specify the ProjectionType of `INCLUDE` . You still can specify
+       * the ProjectionType of `ALL` to project all attributes from the source table, even if the table
+       * has more than 100 attributes.
        */
       public fun nonKeyAttributes(nonKeyAttributes: List<String>)
 
       /**
        * @param nonKeyAttributes Represents the non-key attribute names which will be projected into
        * the index.
-       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-       * local secondary indexes, must not exceed 100. If you project the same attribute into two
-       * different indexes, this counts as two distinct attributes when determining the total.
+       * For global and local secondary indexes, the total count of `NonKeyAttributes` summed across
+       * all of the secondary indexes, must not exceed 100. If you project the same attribute into two
+       * different indexes, this counts as two distinct attributes when determining the total. This
+       * limit only applies when you specify the ProjectionType of `INCLUDE` . You still can specify
+       * the ProjectionType of `ALL` to project all attributes from the source table, even if the table
+       * has more than 100 attributes.
        */
       public fun nonKeyAttributes(vararg nonKeyAttributes: String)
 
@@ -3594,9 +3909,12 @@ public open class CfnGlobalTable(
       /**
        * @param nonKeyAttributes Represents the non-key attribute names which will be projected into
        * the index.
-       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-       * local secondary indexes, must not exceed 100. If you project the same attribute into two
-       * different indexes, this counts as two distinct attributes when determining the total.
+       * For global and local secondary indexes, the total count of `NonKeyAttributes` summed across
+       * all of the secondary indexes, must not exceed 100. If you project the same attribute into two
+       * different indexes, this counts as two distinct attributes when determining the total. This
+       * limit only applies when you specify the ProjectionType of `INCLUDE` . You still can specify
+       * the ProjectionType of `ALL` to project all attributes from the source table, even if the table
+       * has more than 100 attributes.
        */
       override fun nonKeyAttributes(nonKeyAttributes: List<String>) {
         cdkBuilder.nonKeyAttributes(nonKeyAttributes)
@@ -3605,9 +3923,12 @@ public open class CfnGlobalTable(
       /**
        * @param nonKeyAttributes Represents the non-key attribute names which will be projected into
        * the index.
-       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-       * local secondary indexes, must not exceed 100. If you project the same attribute into two
-       * different indexes, this counts as two distinct attributes when determining the total.
+       * For global and local secondary indexes, the total count of `NonKeyAttributes` summed across
+       * all of the secondary indexes, must not exceed 100. If you project the same attribute into two
+       * different indexes, this counts as two distinct attributes when determining the total. This
+       * limit only applies when you specify the ProjectionType of `INCLUDE` . You still can specify
+       * the ProjectionType of `ALL` to project all attributes from the source table, even if the table
+       * has more than 100 attributes.
        */
       override fun nonKeyAttributes(vararg nonKeyAttributes: String): Unit =
           nonKeyAttributes(nonKeyAttributes.toList())
@@ -3636,9 +3957,12 @@ public open class CfnGlobalTable(
       /**
        * Represents the non-key attribute names which will be projected into the index.
        *
-       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-       * local secondary indexes, must not exceed 100. If you project the same attribute into two
-       * different indexes, this counts as two distinct attributes when determining the total.
+       * For global and local secondary indexes, the total count of `NonKeyAttributes` summed across
+       * all of the secondary indexes, must not exceed 100. If you project the same attribute into two
+       * different indexes, this counts as two distinct attributes when determining the total. This
+       * limit only applies when you specify the ProjectionType of `INCLUDE` . You still can specify
+       * the ProjectionType of `ALL` to project all attributes from the source table, even if the table
+       * has more than 100 attributes.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-projection.html#cfn-dynamodb-globaltable-projection-nonkeyattributes)
        */
@@ -4464,6 +4788,7 @@ public open class CfnGlobalTable(
    * .build())
    * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty.builder()
    * .pointInTimeRecoveryEnabled(false)
+   * .recoveryPeriodInDays(123)
    * .build())
    * .readOnDemandThroughputSettings(ReadOnDemandThroughputSettingsProperty.builder()
    * .maxReadRequestUnits(123)
@@ -5972,11 +6297,13 @@ public open class CfnGlobalTable(
   }
 
   /**
-   * Represents the DynamoDB Streams configuration for a table in DynamoDB.
+   * Represents the DynamoDB Streams configuration for a table in DynamoDB .
    *
-   * You can only modify this value if your `AWS::DynamoDB::GlobalTable` contains only one entry in
-   * `Replicas` . You must specify a value for this property if your `AWS::DynamoDB::GlobalTable`
-   * contains more than one replica.
+   * You can only modify this value for a `AWS::DynamoDB::GlobalTable` resource configured for
+   * multi-Region eventual consistency (MREC, the default) if that resource contains only one entry in
+   * `Replicas` . You must specify a value for this property for a `AWS::DynamoDB::GlobalTable`
+   * resource configured for MREC with more than one entry in `Replicas` . For Multi-Region Strong
+   * Consistency (MRSC), Streams are not required and can be changed for existing tables.
    *
    * Example:
    *

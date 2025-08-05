@@ -25,6 +25,11 @@ import kotlin.collections.List
  * .applicationId("applicationId")
  * .applicationType("applicationType")
  * // the properties below are optional
+ * .componentsInfo(List.of(ComponentInfoProperty.builder()
+ * .componentType("componentType")
+ * .ec2InstanceId("ec2InstanceId")
+ * .sid("sid")
+ * .build()))
  * .credentials(List.of(CredentialProperty.builder()
  * .credentialType("credentialType")
  * .databaseName("databaseName")
@@ -57,6 +62,14 @@ public interface CfnApplicationProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-applicationtype)
    */
   public fun applicationType(): String
+
+  /**
+   * This is an optional parameter for component details to which the SAP ABAP application is
+   * attached, such as Web Dispatcher.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-componentsinfo)
+   */
+  public fun componentsInfo(): Any? = unwrap(this).getComponentsInfo()
 
   /**
    * The credentials of the SAP application.
@@ -114,6 +127,24 @@ public interface CfnApplicationProps {
      * @param applicationType The type of the application. 
      */
     public fun applicationType(applicationType: String)
+
+    /**
+     * @param componentsInfo This is an optional parameter for component details to which the SAP
+     * ABAP application is attached, such as Web Dispatcher.
+     */
+    public fun componentsInfo(componentsInfo: IResolvable)
+
+    /**
+     * @param componentsInfo This is an optional parameter for component details to which the SAP
+     * ABAP application is attached, such as Web Dispatcher.
+     */
+    public fun componentsInfo(componentsInfo: List<Any>)
+
+    /**
+     * @param componentsInfo This is an optional parameter for component details to which the SAP
+     * ABAP application is attached, such as Web Dispatcher.
+     */
+    public fun componentsInfo(vararg componentsInfo: Any)
 
     /**
      * @param credentials The credentials of the SAP application.
@@ -184,6 +215,29 @@ public interface CfnApplicationProps {
     override fun applicationType(applicationType: String) {
       cdkBuilder.applicationType(applicationType)
     }
+
+    /**
+     * @param componentsInfo This is an optional parameter for component details to which the SAP
+     * ABAP application is attached, such as Web Dispatcher.
+     */
+    override fun componentsInfo(componentsInfo: IResolvable) {
+      cdkBuilder.componentsInfo(componentsInfo.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param componentsInfo This is an optional parameter for component details to which the SAP
+     * ABAP application is attached, such as Web Dispatcher.
+     */
+    override fun componentsInfo(componentsInfo: List<Any>) {
+      cdkBuilder.componentsInfo(componentsInfo.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param componentsInfo This is an optional parameter for component details to which the SAP
+     * ABAP application is attached, such as Web Dispatcher.
+     */
+    override fun componentsInfo(vararg componentsInfo: Any): Unit =
+        componentsInfo(componentsInfo.toList())
 
     /**
      * @param credentials The credentials of the SAP application.
@@ -270,6 +324,14 @@ public interface CfnApplicationProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-applicationtype)
      */
     override fun applicationType(): String = unwrap(this).getApplicationType()
+
+    /**
+     * This is an optional parameter for component details to which the SAP ABAP application is
+     * attached, such as Web Dispatcher.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-componentsinfo)
+     */
+    override fun componentsInfo(): Any? = unwrap(this).getComponentsInfo()
 
     /**
      * The credentials of the SAP application.

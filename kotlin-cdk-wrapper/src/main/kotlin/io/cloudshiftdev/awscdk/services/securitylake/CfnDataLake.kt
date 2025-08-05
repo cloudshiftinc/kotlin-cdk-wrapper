@@ -38,6 +38,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * more information, see the [Amazon Security Lake User
  * Guide](https://docs.aws.amazon.com//security-lake/latest/userguide/what-is-security-lake.html) .
  *
+ *
+ * If you use this template to create multiple data lakes in different AWS Regions , and more than
+ * one of your data lakes include an
+ * [AWS::SecurityLake::AwsLogSource](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-resource-securitylake-awslogsource.html)
+ * resource, then you must deploy these data lakes sequentially. This is required because data lakes
+ * operate globally, and `AwsLogSource` resources must be deployed one at a time.
+ *
+ *
  * Example:
  *
  * ```
@@ -1193,7 +1201,10 @@ public open class CfnDataLake(
      * The list of storage classes that you can choose from based on the data access, resiliency,
      * and cost requirements of your workloads.
      *
-     * The default storage class is S3 Standard.
+     * The default storage class is *S3 Standard* . For information about other storage classes, see
+     * [Setting the storage class of an
+     * object](https://docs.aws.amazon.com/AmazonS3/latest/userguide/sc-howtoset.html) in the *Amazon
+     * S3 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securitylake-datalake-transitions.html#cfn-securitylake-datalake-transitions-storageclass)
      */
@@ -1213,7 +1224,10 @@ public open class CfnDataLake(
       /**
        * @param storageClass The list of storage classes that you can choose from based on the data
        * access, resiliency, and cost requirements of your workloads.
-       * The default storage class is S3 Standard.
+       * The default storage class is *S3 Standard* . For information about other storage classes,
+       * see [Setting the storage class of an
+       * object](https://docs.aws.amazon.com/AmazonS3/latest/userguide/sc-howtoset.html) in the *Amazon
+       * S3 User Guide* .
        */
       public fun storageClass(storageClass: String)
     }
@@ -1234,7 +1248,10 @@ public open class CfnDataLake(
       /**
        * @param storageClass The list of storage classes that you can choose from based on the data
        * access, resiliency, and cost requirements of your workloads.
-       * The default storage class is S3 Standard.
+       * The default storage class is *S3 Standard* . For information about other storage classes,
+       * see [Setting the storage class of an
+       * object](https://docs.aws.amazon.com/AmazonS3/latest/userguide/sc-howtoset.html) in the *Amazon
+       * S3 User Guide* .
        */
       override fun storageClass(storageClass: String) {
         cdkBuilder.storageClass(storageClass)
@@ -1261,7 +1278,10 @@ public open class CfnDataLake(
        * The list of storage classes that you can choose from based on the data access, resiliency,
        * and cost requirements of your workloads.
        *
-       * The default storage class is S3 Standard.
+       * The default storage class is *S3 Standard* . For information about other storage classes,
+       * see [Setting the storage class of an
+       * object](https://docs.aws.amazon.com/AmazonS3/latest/userguide/sc-howtoset.html) in the *Amazon
+       * S3 User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securitylake-datalake-transitions.html#cfn-securitylake-datalake-transitions-storageclass)
        */

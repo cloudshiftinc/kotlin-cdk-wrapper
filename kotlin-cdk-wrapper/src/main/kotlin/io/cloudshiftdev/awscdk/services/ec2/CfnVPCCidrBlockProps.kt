@@ -18,6 +18,7 @@ import kotlin.Unit
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.cdk.lambdalayer.kubectl.v33.KubectlV33Layer;
  * Vpc vpc;
  * public void associateSubnetWithV6Cidr(Vpc vpc, Number count, ISubnet subnet) {
  * CfnSubnet cfnSubnet = (CfnSubnet)subnet.getNode().getDefaultChild();
@@ -40,10 +41,11 @@ import kotlin.Unit
  * subnetcount = subnetcount + 1;
  * }
  * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
- * .version(KubernetesVersion.V1_31)
+ * .version(KubernetesVersion.V1_33)
  * .vpc(vpc)
  * .ipFamily(IpFamily.IP_V6)
  * .vpcSubnets(List.of(SubnetSelection.builder().subnets(vpc.getPublicSubnets()).build()))
+ * .kubectlLayer(new KubectlV33Layer(this, "kubectl"))
  * .build();
  * ```
  *
@@ -97,6 +99,20 @@ public interface CfnVPCCidrBlockProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-ipv6cidrblock)
    */
   public fun ipv6CidrBlock(): String? = unwrap(this).getIpv6CidrBlock()
+
+  /**
+   * The name of the location from which we advertise the IPV6 CIDR block.
+   *
+   * Use this parameter to limit the CIDR block to this location.
+   *
+   * You must set `AmazonProvidedIpv6CidrBlock` to `true` to use this parameter.
+   *
+   * You can have one IPv6 CIDR block association per network border group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-ipv6cidrblocknetworkbordergroup)
+   */
+  public fun ipv6CidrBlockNetworkBorderGroup(): String? =
+      unwrap(this).getIpv6CidrBlockNetworkBorderGroup()
 
   /**
    * Associates a CIDR allocated from an IPv6 IPAM pool to a VPC.
@@ -184,6 +200,17 @@ public interface CfnVPCCidrBlockProps {
     public fun ipv6CidrBlock(ipv6CidrBlock: String)
 
     /**
+     * @param ipv6CidrBlockNetworkBorderGroup The name of the location from which we advertise the
+     * IPV6 CIDR block.
+     * Use this parameter to limit the CIDR block to this location.
+     *
+     * You must set `AmazonProvidedIpv6CidrBlock` to `true` to use this parameter.
+     *
+     * You can have one IPv6 CIDR block association per network border group.
+     */
+    public fun ipv6CidrBlockNetworkBorderGroup(ipv6CidrBlockNetworkBorderGroup: String)
+
+    /**
      * @param ipv6IpamPoolId Associates a CIDR allocated from an IPv6 IPAM pool to a VPC.
      * For more information about Amazon VPC IP Address Manager (IPAM), see [What is
      * IPAM?](https://docs.aws.amazon.com//vpc/latest/ipam/what-is-it-ipam.html) in the *Amazon VPC
@@ -268,6 +295,19 @@ public interface CfnVPCCidrBlockProps {
      */
     override fun ipv6CidrBlock(ipv6CidrBlock: String) {
       cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
+    }
+
+    /**
+     * @param ipv6CidrBlockNetworkBorderGroup The name of the location from which we advertise the
+     * IPV6 CIDR block.
+     * Use this parameter to limit the CIDR block to this location.
+     *
+     * You must set `AmazonProvidedIpv6CidrBlock` to `true` to use this parameter.
+     *
+     * You can have one IPv6 CIDR block association per network border group.
+     */
+    override fun ipv6CidrBlockNetworkBorderGroup(ipv6CidrBlockNetworkBorderGroup: String) {
+      cdkBuilder.ipv6CidrBlockNetworkBorderGroup(ipv6CidrBlockNetworkBorderGroup)
     }
 
     /**
@@ -361,6 +401,20 @@ public interface CfnVPCCidrBlockProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-ipv6cidrblock)
      */
     override fun ipv6CidrBlock(): String? = unwrap(this).getIpv6CidrBlock()
+
+    /**
+     * The name of the location from which we advertise the IPV6 CIDR block.
+     *
+     * Use this parameter to limit the CIDR block to this location.
+     *
+     * You must set `AmazonProvidedIpv6CidrBlock` to `true` to use this parameter.
+     *
+     * You can have one IPv6 CIDR block association per network border group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-ipv6cidrblocknetworkbordergroup)
+     */
+    override fun ipv6CidrBlockNetworkBorderGroup(): String? =
+        unwrap(this).getIpv6CidrBlockNetworkBorderGroup()
 
     /**
      * Associates a CIDR allocated from an IPv6 IPAM pool to a VPC.

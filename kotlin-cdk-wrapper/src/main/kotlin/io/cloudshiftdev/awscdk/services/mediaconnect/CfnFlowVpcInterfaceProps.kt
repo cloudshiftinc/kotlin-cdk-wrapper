@@ -38,9 +38,9 @@ public interface CfnFlowVpcInterfaceProps {
   public fun flowArn(): String
 
   /**
-   * The name of the VPC Interface.
+   * The name for the VPC interface.
    *
-   * This value must be unique within the current flow.
+   * This name must be unique within the flow.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html#cfn-mediaconnect-flowvpcinterface-name)
    */
@@ -55,9 +55,7 @@ public interface CfnFlowVpcInterfaceProps {
   public fun roleArn(): String
 
   /**
-   * The VPC security groups that you want MediaConnect to use for your VPC configuration.
-   *
-   * You must include at least one security group in the request.
+   * A virtual firewall to control inbound and outbound traffic.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html#cfn-mediaconnect-flowvpcinterface-securitygroupids)
    */
@@ -69,10 +67,9 @@ public interface CfnFlowVpcInterfaceProps {
    * A range of IP addresses in your VPC. When you create your VPC, you specify a range of IPv4
    * addresses for the VPC in the form of a Classless Inter-Domain Routing (CIDR) block; for example,
    * 10.0.0.0/16. This is the primary CIDR block for your VPC. When you create a subnet for your VPC,
-   * you specify the CIDR block for the subnet, which is a subset of the VPC CIDR block.
-   *
-   * The subnets that you use across all VPC interfaces on the flow must be in the same Availability
-   * Zone as the flow.
+   * you specify the CIDR block for the subnet, which is a subset of the VPC CIDR block. The subnets
+   * that you use across all VPC interfaces on the flow must be in the same Availability Zone as the
+   * flow.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html#cfn-mediaconnect-flowvpcinterface-subnetid)
    */
@@ -89,8 +86,8 @@ public interface CfnFlowVpcInterfaceProps {
     public fun flowArn(flowArn: String)
 
     /**
-     * @param name The name of the VPC Interface. 
-     * This value must be unique within the current flow.
+     * @param name The name for the VPC interface. 
+     * This name must be unique within the flow.
      */
     public fun name(name: String)
 
@@ -101,16 +98,12 @@ public interface CfnFlowVpcInterfaceProps {
     public fun roleArn(roleArn: String)
 
     /**
-     * @param securityGroupIds The VPC security groups that you want MediaConnect to use for your
-     * VPC configuration. 
-     * You must include at least one security group in the request.
+     * @param securityGroupIds A virtual firewall to control inbound and outbound traffic. 
      */
     public fun securityGroupIds(securityGroupIds: List<String>)
 
     /**
-     * @param securityGroupIds The VPC security groups that you want MediaConnect to use for your
-     * VPC configuration. 
-     * You must include at least one security group in the request.
+     * @param securityGroupIds A virtual firewall to control inbound and outbound traffic. 
      */
     public fun securityGroupIds(vararg securityGroupIds: String)
 
@@ -119,10 +112,9 @@ public interface CfnFlowVpcInterfaceProps {
      * A range of IP addresses in your VPC. When you create your VPC, you specify a range of IPv4
      * addresses for the VPC in the form of a Classless Inter-Domain Routing (CIDR) block; for example,
      * 10.0.0.0/16. This is the primary CIDR block for your VPC. When you create a subnet for your VPC,
-     * you specify the CIDR block for the subnet, which is a subset of the VPC CIDR block.
-     *
-     * The subnets that you use across all VPC interfaces on the flow must be in the same
-     * Availability Zone as the flow.
+     * you specify the CIDR block for the subnet, which is a subset of the VPC CIDR block. The subnets
+     * that you use across all VPC interfaces on the flow must be in the same Availability Zone as the
+     * flow.
      */
     public fun subnetId(subnetId: String)
   }
@@ -140,8 +132,8 @@ public interface CfnFlowVpcInterfaceProps {
     }
 
     /**
-     * @param name The name of the VPC Interface. 
-     * This value must be unique within the current flow.
+     * @param name The name for the VPC interface. 
+     * This name must be unique within the flow.
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -156,18 +148,14 @@ public interface CfnFlowVpcInterfaceProps {
     }
 
     /**
-     * @param securityGroupIds The VPC security groups that you want MediaConnect to use for your
-     * VPC configuration. 
-     * You must include at least one security group in the request.
+     * @param securityGroupIds A virtual firewall to control inbound and outbound traffic. 
      */
     override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
     /**
-     * @param securityGroupIds The VPC security groups that you want MediaConnect to use for your
-     * VPC configuration. 
-     * You must include at least one security group in the request.
+     * @param securityGroupIds A virtual firewall to control inbound and outbound traffic. 
      */
     override fun securityGroupIds(vararg securityGroupIds: String): Unit =
         securityGroupIds(securityGroupIds.toList())
@@ -177,10 +165,9 @@ public interface CfnFlowVpcInterfaceProps {
      * A range of IP addresses in your VPC. When you create your VPC, you specify a range of IPv4
      * addresses for the VPC in the form of a Classless Inter-Domain Routing (CIDR) block; for example,
      * 10.0.0.0/16. This is the primary CIDR block for your VPC. When you create a subnet for your VPC,
-     * you specify the CIDR block for the subnet, which is a subset of the VPC CIDR block.
-     *
-     * The subnets that you use across all VPC interfaces on the flow must be in the same
-     * Availability Zone as the flow.
+     * you specify the CIDR block for the subnet, which is a subset of the VPC CIDR block. The subnets
+     * that you use across all VPC interfaces on the flow must be in the same Availability Zone as the
+     * flow.
      */
     override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
@@ -202,9 +189,9 @@ public interface CfnFlowVpcInterfaceProps {
     override fun flowArn(): String = unwrap(this).getFlowArn()
 
     /**
-     * The name of the VPC Interface.
+     * The name for the VPC interface.
      *
-     * This value must be unique within the current flow.
+     * This name must be unique within the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html#cfn-mediaconnect-flowvpcinterface-name)
      */
@@ -219,9 +206,7 @@ public interface CfnFlowVpcInterfaceProps {
     override fun roleArn(): String = unwrap(this).getRoleArn()
 
     /**
-     * The VPC security groups that you want MediaConnect to use for your VPC configuration.
-     *
-     * You must include at least one security group in the request.
+     * A virtual firewall to control inbound and outbound traffic.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html#cfn-mediaconnect-flowvpcinterface-securitygroupids)
      */
@@ -233,10 +218,9 @@ public interface CfnFlowVpcInterfaceProps {
      * A range of IP addresses in your VPC. When you create your VPC, you specify a range of IPv4
      * addresses for the VPC in the form of a Classless Inter-Domain Routing (CIDR) block; for example,
      * 10.0.0.0/16. This is the primary CIDR block for your VPC. When you create a subnet for your VPC,
-     * you specify the CIDR block for the subnet, which is a subset of the VPC CIDR block.
-     *
-     * The subnets that you use across all VPC interfaces on the flow must be in the same
-     * Availability Zone as the flow.
+     * you specify the CIDR block for the subnet, which is a subset of the VPC CIDR block. The subnets
+     * that you use across all VPC interfaces on the flow must be in the same Availability Zone as the
+     * flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html#cfn-mediaconnect-flowvpcinterface-subnetid)
      */

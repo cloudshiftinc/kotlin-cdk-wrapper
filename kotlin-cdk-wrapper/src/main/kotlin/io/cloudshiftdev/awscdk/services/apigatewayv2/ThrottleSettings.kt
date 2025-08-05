@@ -14,12 +14,14 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
- * ThrottleSettings throttleSettings = ThrottleSettings.builder()
- * .burstLimit(123)
- * .rateLimit(123)
+ * HttpApi api;
+ * HttpStage.Builder.create(this, "Stage")
+ * .httpApi(api)
+ * .throttle(ThrottleSettings.builder()
+ * .rateLimit(1000)
+ * .burstLimit(1000)
+ * .build())
+ * .detailedMetricsEnabled(true)
  * .build();
  * ```
  */

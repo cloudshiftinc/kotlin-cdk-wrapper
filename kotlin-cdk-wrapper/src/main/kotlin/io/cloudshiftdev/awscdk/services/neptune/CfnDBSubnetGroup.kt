@@ -63,11 +63,6 @@ public open class CfnDBSubnetGroup(
   )
 
   /**
-   *
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
-
-  /**
    * Provides the description of the DB subnet group.
    */
   public open fun dbSubnetGroupDescription(): String = unwrap(this).getDbSubnetGroupDescription()

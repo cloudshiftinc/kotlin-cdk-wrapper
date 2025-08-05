@@ -26,6 +26,7 @@ import kotlin.jvm.JvmName
  * .certificateArn("certificateArn")
  * .domainName("domainName")
  * .endpointConfiguration(EndpointConfigurationProperty.builder()
+ * .ipAddressType("ipAddressType")
  * .types(List.of("types"))
  * .build())
  * .mutualTlsAuthentication(MutualTlsAuthenticationProperty.builder()
@@ -34,6 +35,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .ownershipVerificationCertificateArn("ownershipVerificationCertificateArn")
  * .regionalCertificateArn("regionalCertificateArn")
+ * .routingMode("routingMode")
  * .securityPolicy("securityPolicy")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -63,7 +65,8 @@ public interface CfnDomainNameProps {
   public fun domainName(): String? = unwrap(this).getDomainName()
 
   /**
-   * The endpoint configuration of this DomainName showing the endpoint types of the domain name.
+   * The endpoint configuration of this DomainName showing the endpoint types and IP address types
+   * of the domain name.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-endpointconfiguration)
    */
@@ -99,6 +102,18 @@ public interface CfnDomainNameProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-regionalcertificatearn)
    */
   public fun regionalCertificateArn(): String? = unwrap(this).getRegionalCertificateArn()
+
+  /**
+   * The routing mode for this domain name.
+   *
+   * The routing mode determines how API Gateway sends traffic from your custom domain name to your
+   * public APIs.
+   *
+   * Default: - "BASE_PATH_MAPPING_ONLY"
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-routingmode)
+   */
+  public fun routingMode(): String? = unwrap(this).getRoutingMode()
 
   /**
    * The Transport Layer Security (TLS) version + cipher suite for this DomainName.
@@ -138,20 +153,20 @@ public interface CfnDomainNameProps {
 
     /**
      * @param endpointConfiguration The endpoint configuration of this DomainName showing the
-     * endpoint types of the domain name.
+     * endpoint types and IP address types of the domain name.
      */
     public fun endpointConfiguration(endpointConfiguration: IResolvable)
 
     /**
      * @param endpointConfiguration The endpoint configuration of this DomainName showing the
-     * endpoint types of the domain name.
+     * endpoint types and IP address types of the domain name.
      */
     public
         fun endpointConfiguration(endpointConfiguration: CfnDomainName.EndpointConfigurationProperty)
 
     /**
      * @param endpointConfiguration The endpoint configuration of this DomainName showing the
-     * endpoint types of the domain name.
+     * endpoint types and IP address types of the domain name.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9545139855e9992f03a82cc2b0e5a20d51b5a0111d1d159fad158643616bcc0c")
@@ -202,6 +217,13 @@ public interface CfnDomainNameProps {
     public fun regionalCertificateArn(regionalCertificateArn: String)
 
     /**
+     * @param routingMode The routing mode for this domain name.
+     * The routing mode determines how API Gateway sends traffic from your custom domain name to
+     * your public APIs.
+     */
+    public fun routingMode(routingMode: String)
+
+    /**
      * @param securityPolicy The Transport Layer Security (TLS) version + cipher suite for this
      * DomainName.
      * The valid values are `TLS_1_0` and `TLS_1_2` .
@@ -244,7 +266,7 @@ public interface CfnDomainNameProps {
 
     /**
      * @param endpointConfiguration The endpoint configuration of this DomainName showing the
-     * endpoint types of the domain name.
+     * endpoint types and IP address types of the domain name.
      */
     override fun endpointConfiguration(endpointConfiguration: IResolvable) {
       cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable.Companion::unwrap))
@@ -252,7 +274,7 @@ public interface CfnDomainNameProps {
 
     /**
      * @param endpointConfiguration The endpoint configuration of this DomainName showing the
-     * endpoint types of the domain name.
+     * endpoint types and IP address types of the domain name.
      */
     override
         fun endpointConfiguration(endpointConfiguration: CfnDomainName.EndpointConfigurationProperty) {
@@ -261,7 +283,7 @@ public interface CfnDomainNameProps {
 
     /**
      * @param endpointConfiguration The endpoint configuration of this DomainName showing the
-     * endpoint types of the domain name.
+     * endpoint types and IP address types of the domain name.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9545139855e9992f03a82cc2b0e5a20d51b5a0111d1d159fad158643616bcc0c")
@@ -324,6 +346,15 @@ public interface CfnDomainNameProps {
     }
 
     /**
+     * @param routingMode The routing mode for this domain name.
+     * The routing mode determines how API Gateway sends traffic from your custom domain name to
+     * your public APIs.
+     */
+    override fun routingMode(routingMode: String) {
+      cdkBuilder.routingMode(routingMode)
+    }
+
+    /**
      * @param securityPolicy The Transport Layer Security (TLS) version + cipher suite for this
      * DomainName.
      * The valid values are `TLS_1_0` and `TLS_1_2` .
@@ -372,7 +403,8 @@ public interface CfnDomainNameProps {
     override fun domainName(): String? = unwrap(this).getDomainName()
 
     /**
-     * The endpoint configuration of this DomainName showing the endpoint types of the domain name.
+     * The endpoint configuration of this DomainName showing the endpoint types and IP address types
+     * of the domain name.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-endpointconfiguration)
      */
@@ -408,6 +440,18 @@ public interface CfnDomainNameProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-regionalcertificatearn)
      */
     override fun regionalCertificateArn(): String? = unwrap(this).getRegionalCertificateArn()
+
+    /**
+     * The routing mode for this domain name.
+     *
+     * The routing mode determines how API Gateway sends traffic from your custom domain name to
+     * your public APIs.
+     *
+     * Default: - "BASE_PATH_MAPPING_ONLY"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-routingmode)
+     */
+    override fun routingMode(): String? = unwrap(this).getRoutingMode()
 
     /**
      * The Transport Layer Security (TLS) version + cipher suite for this DomainName.

@@ -30,6 +30,8 @@ public enum class EventType(
   OBJECT_TAGGING_PUT(software.amazon.awscdk.services.s3.EventType.OBJECT_TAGGING_PUT),
   OBJECT_TAGGING_DELETE(software.amazon.awscdk.services.s3.EventType.OBJECT_TAGGING_DELETE),
   OBJECT_ACL_PUT(software.amazon.awscdk.services.s3.EventType.OBJECT_ACL_PUT),
+  OBJECT_RESTORE(software.amazon.awscdk.services.s3.EventType.OBJECT_RESTORE),
+  REPLICATION(software.amazon.awscdk.services.s3.EventType.REPLICATION),
   ;
 
   public companion object {
@@ -81,6 +83,8 @@ public enum class EventType(
       software.amazon.awscdk.services.s3.EventType.OBJECT_TAGGING_DELETE ->
           EventType.OBJECT_TAGGING_DELETE
       software.amazon.awscdk.services.s3.EventType.OBJECT_ACL_PUT -> EventType.OBJECT_ACL_PUT
+      software.amazon.awscdk.services.s3.EventType.OBJECT_RESTORE -> EventType.OBJECT_RESTORE
+      software.amazon.awscdk.services.s3.EventType.REPLICATION -> EventType.REPLICATION
     }
 
     internal fun unwrap(wrapped: EventType): software.amazon.awscdk.services.s3.EventType =

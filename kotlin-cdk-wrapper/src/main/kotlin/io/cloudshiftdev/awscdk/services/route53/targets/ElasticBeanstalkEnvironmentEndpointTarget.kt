@@ -19,13 +19,14 @@ import kotlin.String
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.regioninfo.RegionInfo;
  * HostedZone zone;
  * String ebsEnvironmentUrl;
  * ARecord.Builder.create(this, "AliasRecord")
  * .zone(zone)
  * .target(RecordTarget.fromAlias(
  * new ElasticBeanstalkEnvironmentEndpointTarget(ebsEnvironmentUrl, Map.of(
- * "evaluateTargetHealth", true))))
+ * "hostedZoneId", RegionInfo.get("us-east-1").getEbsEnvEndpointHostedZoneId()))))
  * .build();
  * ```
  */
@@ -45,7 +46,7 @@ public open class ElasticBeanstalkEnvironmentEndpointTarget(
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
    *
-   * @param _record 
+   * @param record 
    * @param _zone
    */
   public override fun bind(record: IRecordSet): AliasRecordTargetConfig =
@@ -54,7 +55,7 @@ public open class ElasticBeanstalkEnvironmentEndpointTarget(
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
    *
-   * @param _record 
+   * @param record 
    * @param _zone
    */
   public override fun bind(record: IRecordSet, zone: IHostedZone): AliasRecordTargetConfig =

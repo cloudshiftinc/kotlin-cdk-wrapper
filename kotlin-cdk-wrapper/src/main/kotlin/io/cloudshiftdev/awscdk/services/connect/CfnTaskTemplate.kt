@@ -53,6 +53,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .singleSelectOptions(List.of("singleSelectOptions"))
  * .build()))
  * .name("name")
+ * .selfAssignContactFlowArn("selfAssignContactFlowArn")
  * .status("status")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -221,6 +222,18 @@ public open class CfnTaskTemplate(
   }
 
   /**
+   * The Amazon Resource Name (ARN) of the flow.
+   */
+  public open fun selfAssignContactFlowArn(): String? = unwrap(this).getSelfAssignContactFlowArn()
+
+  /**
+   * The Amazon Resource Name (ARN) of the flow.
+   */
+  public open fun selfAssignContactFlowArn(`value`: String) {
+    unwrap(this).setSelfAssignContactFlowArn(`value`)
+  }
+
+  /**
    * The status of the task template.
    */
   public open fun status(): String? = unwrap(this).getStatus()
@@ -373,6 +386,14 @@ public open class CfnTaskTemplate(
      * @param name The name of the task template. 
      */
     public fun name(name: String)
+
+    /**
+     * The Amazon Resource Name (ARN) of the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-tasktemplate.html#cfn-connect-tasktemplate-selfassigncontactflowarn)
+     * @param selfAssignContactFlowArn The Amazon Resource Name (ARN) of the flow. 
+     */
+    public fun selfAssignContactFlowArn(selfAssignContactFlowArn: String)
 
     /**
      * The status of the task template.
@@ -538,6 +559,16 @@ public open class CfnTaskTemplate(
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * The Amazon Resource Name (ARN) of the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-tasktemplate.html#cfn-connect-tasktemplate-selfassigncontactflowarn)
+     * @param selfAssignContactFlowArn The Amazon Resource Name (ARN) of the flow. 
+     */
+    override fun selfAssignContactFlowArn(selfAssignContactFlowArn: String) {
+      cdkBuilder.selfAssignContactFlowArn(selfAssignContactFlowArn)
     }
 
     /**

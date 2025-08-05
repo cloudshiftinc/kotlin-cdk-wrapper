@@ -58,6 +58,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .value("value")
  * .build()))
  * .userSettings(UserSettingsProperty.builder()
+ * .autoMountHomeEfs("autoMountHomeEfs")
  * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
  * .appLifecycleManagement(AppLifecycleManagementProperty.builder()
  * .idleSettings(IdleSettingsProperty.builder()
@@ -67,6 +68,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .minIdleTimeoutInMinutes(123)
  * .build())
  * .build())
+ * .builtInLifecycleConfigArn("builtInLifecycleConfigArn")
  * .customImages(List.of(CustomImageProperty.builder()
  * .appImageConfigName("appImageConfigName")
  * .imageName("imageName")
@@ -87,6 +89,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .fileSystemPath("fileSystemPath")
  * .build())
+ * .fSxLustreFileSystemConfig(FSxLustreFileSystemConfigProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * // the properties below are optional
+ * .fileSystemPath("fileSystemPath")
+ * .build())
  * .build()))
  * .customPosixUserConfig(CustomPosixUserConfigProperty.builder()
  * .gid(123)
@@ -103,6 +110,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .minIdleTimeoutInMinutes(123)
  * .build())
  * .build())
+ * .builtInLifecycleConfigArn("builtInLifecycleConfigArn")
  * .codeRepositories(List.of(CodeRepositoryProperty.builder()
  * .repositoryUrl("repositoryUrl")
  * .build()))
@@ -163,7 +171,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .studioWebPortal("studioWebPortal")
  * .studioWebPortalSettings(StudioWebPortalSettingsProperty.builder()
  * .hiddenAppTypes(List.of("hiddenAppTypes"))
+ * .hiddenInstanceTypes(List.of("hiddenInstanceTypes"))
  * .hiddenMlTools(List.of("hiddenMlTools"))
+ * .hiddenSageMakerImageVersionAliases(List.of(HiddenSageMakerImageProperty.builder()
+ * .sageMakerImageName("sageMakerImageName")
+ * .versionAliases(List.of("versionAliases"))
+ * .build()))
  * .build())
  * .build())
  * .build();
@@ -694,6 +707,7 @@ public open class CfnUserProfile(
    * .minIdleTimeoutInMinutes(123)
    * .build())
    * .build())
+   * .builtInLifecycleConfigArn("builtInLifecycleConfigArn")
    * .customImages(List.of(CustomImageProperty.builder()
    * .appImageConfigName("appImageConfigName")
    * .imageName("imageName")
@@ -719,6 +733,15 @@ public open class CfnUserProfile(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-codeeditorappsettings.html#cfn-sagemaker-userprofile-codeeditorappsettings-applifecyclemanagement)
      */
     public fun appLifecycleManagement(): Any? = unwrap(this).getAppLifecycleManagement()
+
+    /**
+     * The lifecycle configuration that runs before the default lifecycle configuration.
+     *
+     * It can override changes made in the default lifecycle configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-codeeditorappsettings.html#cfn-sagemaker-userprofile-codeeditorappsettings-builtinlifecycleconfigarn)
+     */
+    public fun builtInLifecycleConfigArn(): String? = unwrap(this).getBuiltInLifecycleConfigArn()
 
     /**
      * A list of custom SageMaker images that are configured to run as a Code Editor app.
@@ -768,6 +791,13 @@ public open class CfnUserProfile(
       @JvmName("114b94f11f0b3bd78cc1a75be83a1ee6fa0ca8ed64f69ad43241f252a96fc512")
       public
           fun appLifecycleManagement(appLifecycleManagement: AppLifecycleManagementProperty.Builder.() -> Unit)
+
+      /**
+       * @param builtInLifecycleConfigArn The lifecycle configuration that runs before the default
+       * lifecycle configuration.
+       * It can override changes made in the default lifecycle configuration.
+       */
+      public fun builtInLifecycleConfigArn(builtInLifecycleConfigArn: String)
 
       /**
        * @param customImages A list of custom SageMaker images that are configured to run as a Code
@@ -853,6 +883,15 @@ public open class CfnUserProfile(
           Unit = appLifecycleManagement(AppLifecycleManagementProperty(appLifecycleManagement))
 
       /**
+       * @param builtInLifecycleConfigArn The lifecycle configuration that runs before the default
+       * lifecycle configuration.
+       * It can override changes made in the default lifecycle configuration.
+       */
+      override fun builtInLifecycleConfigArn(builtInLifecycleConfigArn: String) {
+        cdkBuilder.builtInLifecycleConfigArn(builtInLifecycleConfigArn)
+      }
+
+      /**
        * @param customImages A list of custom SageMaker images that are configured to run as a Code
        * Editor app.
        */
@@ -933,6 +972,16 @@ public open class CfnUserProfile(
       override fun appLifecycleManagement(): Any? = unwrap(this).getAppLifecycleManagement()
 
       /**
+       * The lifecycle configuration that runs before the default lifecycle configuration.
+       *
+       * It can override changes made in the default lifecycle configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-codeeditorappsettings.html#cfn-sagemaker-userprofile-codeeditorappsettings-builtinlifecycleconfigarn)
+       */
+      override fun builtInLifecycleConfigArn(): String? =
+          unwrap(this).getBuiltInLifecycleConfigArn()
+
+      /**
        * A list of custom SageMaker images that are configured to run as a Code Editor app.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-codeeditorappsettings.html#cfn-sagemaker-userprofile-codeeditorappsettings-customimages)
@@ -975,7 +1024,7 @@ public open class CfnUserProfile(
   }
 
   /**
-   * A Git repository that SageMaker automatically displays to users for cloning in the
+   * A Git repository that SageMaker AI automatically displays to users for cloning in the
    * JupyterServer application.
    *
    * Example:
@@ -1059,9 +1108,9 @@ public open class CfnUserProfile(
 
   /**
    * The settings for assigning a custom file system to a user profile or space for an Amazon
-   * SageMaker Domain.
+   * SageMaker AI Domain.
    *
-   * Permitted users can access this file system in Amazon SageMaker Studio.
+   * Permitted users can access this file system in Amazon SageMaker AI Studio.
    *
    * Example:
    *
@@ -1072,6 +1121,11 @@ public open class CfnUserProfile(
    * CustomFileSystemConfigProperty customFileSystemConfigProperty =
    * CustomFileSystemConfigProperty.builder()
    * .efsFileSystemConfig(EFSFileSystemConfigProperty.builder()
+   * .fileSystemId("fileSystemId")
+   * // the properties below are optional
+   * .fileSystemPath("fileSystemPath")
+   * .build())
+   * .fSxLustreFileSystemConfig(FSxLustreFileSystemConfigProperty.builder()
    * .fileSystemId("fileSystemId")
    * // the properties below are optional
    * .fileSystemPath("fileSystemPath")
@@ -1088,6 +1142,13 @@ public open class CfnUserProfile(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-customfilesystemconfig.html#cfn-sagemaker-userprofile-customfilesystemconfig-efsfilesystemconfig)
      */
     public fun efsFileSystemConfig(): Any? = unwrap(this).getEfsFileSystemConfig()
+
+    /**
+     * The settings for a custom Amazon FSx for Lustre file system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-customfilesystemconfig.html#cfn-sagemaker-userprofile-customfilesystemconfig-fsxlustrefilesystemconfig)
+     */
+    public fun fSxLustreFileSystemConfig(): Any? = unwrap(this).getFSxLustreFileSystemConfig()
 
     /**
      * A builder for [CustomFileSystemConfigProperty]
@@ -1111,6 +1172,28 @@ public open class CfnUserProfile(
       @JvmName("32bba1122425d0b2900bd6169c3662001a98f9fbf51fd7db107ffd697088db00")
       public
           fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param fSxLustreFileSystemConfig The settings for a custom Amazon FSx for Lustre file
+       * system.
+       */
+      public fun fSxLustreFileSystemConfig(fSxLustreFileSystemConfig: IResolvable)
+
+      /**
+       * @param fSxLustreFileSystemConfig The settings for a custom Amazon FSx for Lustre file
+       * system.
+       */
+      public
+          fun fSxLustreFileSystemConfig(fSxLustreFileSystemConfig: FSxLustreFileSystemConfigProperty)
+
+      /**
+       * @param fSxLustreFileSystemConfig The settings for a custom Amazon FSx for Lustre file
+       * system.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("21f6f77846f55d7a1cf422ace302d12bdb9ff224ae9ab3b792503e2597c642d1")
+      public
+          fun fSxLustreFileSystemConfig(fSxLustreFileSystemConfig: FSxLustreFileSystemConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1142,6 +1225,34 @@ public open class CfnUserProfile(
           fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty.Builder.() -> Unit):
           Unit = efsFileSystemConfig(EFSFileSystemConfigProperty(efsFileSystemConfig))
 
+      /**
+       * @param fSxLustreFileSystemConfig The settings for a custom Amazon FSx for Lustre file
+       * system.
+       */
+      override fun fSxLustreFileSystemConfig(fSxLustreFileSystemConfig: IResolvable) {
+        cdkBuilder.fSxLustreFileSystemConfig(fSxLustreFileSystemConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param fSxLustreFileSystemConfig The settings for a custom Amazon FSx for Lustre file
+       * system.
+       */
+      override
+          fun fSxLustreFileSystemConfig(fSxLustreFileSystemConfig: FSxLustreFileSystemConfigProperty) {
+        cdkBuilder.fSxLustreFileSystemConfig(fSxLustreFileSystemConfig.let(FSxLustreFileSystemConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param fSxLustreFileSystemConfig The settings for a custom Amazon FSx for Lustre file
+       * system.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("21f6f77846f55d7a1cf422ace302d12bdb9ff224ae9ab3b792503e2597c642d1")
+      override
+          fun fSxLustreFileSystemConfig(fSxLustreFileSystemConfig: FSxLustreFileSystemConfigProperty.Builder.() -> Unit):
+          Unit =
+          fSxLustreFileSystemConfig(FSxLustreFileSystemConfigProperty(fSxLustreFileSystemConfig))
+
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.CustomFileSystemConfigProperty =
           cdkBuilder.build()
@@ -1157,6 +1268,13 @@ public open class CfnUserProfile(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-customfilesystemconfig.html#cfn-sagemaker-userprofile-customfilesystemconfig-efsfilesystemconfig)
        */
       override fun efsFileSystemConfig(): Any? = unwrap(this).getEfsFileSystemConfig()
+
+      /**
+       * The settings for a custom Amazon FSx for Lustre file system.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-customfilesystemconfig.html#cfn-sagemaker-userprofile-customfilesystemconfig-fsxlustrefilesystemconfig)
+       */
+      override fun fSxLustreFileSystemConfig(): Any? = unwrap(this).getFSxLustreFileSystemConfig()
     }
 
     public companion object {
@@ -1178,9 +1296,9 @@ public open class CfnUserProfile(
   }
 
   /**
-   * A custom SageMaker image.
+   * A custom SageMaker AI image.
    *
-   * For more information, see [Bring your own SageMaker
+   * For more information, see [Bring your own SageMaker AI
    * image](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html) .
    *
    * Example:
@@ -1669,7 +1787,7 @@ public open class CfnUserProfile(
 
   /**
    * The settings for assigning a custom Amazon EFS file system to a user profile or space for an
-   * Amazon SageMaker Domain.
+   * Amazon SageMaker AI Domain.
    *
    * Example:
    *
@@ -1695,7 +1813,7 @@ public open class CfnUserProfile(
     public fun fileSystemId(): String
 
     /**
-     * The path to the file system directory that is accessible in Amazon SageMaker Studio.
+     * The path to the file system directory that is accessible in Amazon SageMaker AI Studio.
      *
      * Permitted users can access only this directory and below.
      *
@@ -1715,7 +1833,7 @@ public open class CfnUserProfile(
 
       /**
        * @param fileSystemPath The path to the file system directory that is accessible in Amazon
-       * SageMaker Studio.
+       * SageMaker AI Studio.
        * Permitted users can access only this directory and below.
        */
       public fun fileSystemPath(fileSystemPath: String)
@@ -1736,7 +1854,7 @@ public open class CfnUserProfile(
 
       /**
        * @param fileSystemPath The path to the file system directory that is accessible in Amazon
-       * SageMaker Studio.
+       * SageMaker AI Studio.
        * Permitted users can access only this directory and below.
        */
       override fun fileSystemPath(fileSystemPath: String) {
@@ -1760,7 +1878,7 @@ public open class CfnUserProfile(
       override fun fileSystemId(): String = unwrap(this).getFileSystemId()
 
       /**
-       * The path to the file system directory that is accessible in Amazon SageMaker Studio.
+       * The path to the file system directory that is accessible in Amazon SageMaker AI Studio.
        *
        * Permitted users can access only this directory and below.
        *
@@ -1784,6 +1902,256 @@ public open class CfnUserProfile(
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.EFSFileSystemConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.EFSFileSystemConfigProperty
+    }
+  }
+
+  /**
+   * The settings for assigning a custom Amazon FSx for Lustre file system to a user profile or
+   * space for an Amazon SageMaker Domain.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * FSxLustreFileSystemConfigProperty fSxLustreFileSystemConfigProperty =
+   * FSxLustreFileSystemConfigProperty.builder()
+   * .fileSystemId("fileSystemId")
+   * // the properties below are optional
+   * .fileSystemPath("fileSystemPath")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-fsxlustrefilesystemconfig.html)
+   */
+  public interface FSxLustreFileSystemConfigProperty {
+    /**
+     * The globally unique, 17-digit, ID of the file system, assigned by Amazon FSx for Lustre.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-fsxlustrefilesystemconfig.html#cfn-sagemaker-userprofile-fsxlustrefilesystemconfig-filesystemid)
+     */
+    public fun fileSystemId(): String
+
+    /**
+     * The path to the file system directory that is accessible in Amazon SageMaker Studio.
+     *
+     * Permitted users can access only this directory and below.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-fsxlustrefilesystemconfig.html#cfn-sagemaker-userprofile-fsxlustrefilesystemconfig-filesystempath)
+     */
+    public fun fileSystemPath(): String? = unwrap(this).getFileSystemPath()
+
+    /**
+     * A builder for [FSxLustreFileSystemConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fileSystemId The globally unique, 17-digit, ID of the file system, assigned by
+       * Amazon FSx for Lustre. 
+       */
+      public fun fileSystemId(fileSystemId: String)
+
+      /**
+       * @param fileSystemPath The path to the file system directory that is accessible in Amazon
+       * SageMaker Studio.
+       * Permitted users can access only this directory and below.
+       */
+      public fun fileSystemPath(fileSystemPath: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.FSxLustreFileSystemConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.FSxLustreFileSystemConfigProperty.builder()
+
+      /**
+       * @param fileSystemId The globally unique, 17-digit, ID of the file system, assigned by
+       * Amazon FSx for Lustre. 
+       */
+      override fun fileSystemId(fileSystemId: String) {
+        cdkBuilder.fileSystemId(fileSystemId)
+      }
+
+      /**
+       * @param fileSystemPath The path to the file system directory that is accessible in Amazon
+       * SageMaker Studio.
+       * Permitted users can access only this directory and below.
+       */
+      override fun fileSystemPath(fileSystemPath: String) {
+        cdkBuilder.fileSystemPath(fileSystemPath)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.FSxLustreFileSystemConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.FSxLustreFileSystemConfigProperty,
+    ) : CdkObject(cdkObject),
+        FSxLustreFileSystemConfigProperty {
+      /**
+       * The globally unique, 17-digit, ID of the file system, assigned by Amazon FSx for Lustre.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-fsxlustrefilesystemconfig.html#cfn-sagemaker-userprofile-fsxlustrefilesystemconfig-filesystemid)
+       */
+      override fun fileSystemId(): String = unwrap(this).getFileSystemId()
+
+      /**
+       * The path to the file system directory that is accessible in Amazon SageMaker Studio.
+       *
+       * Permitted users can access only this directory and below.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-fsxlustrefilesystemconfig.html#cfn-sagemaker-userprofile-fsxlustrefilesystemconfig-filesystempath)
+       */
+      override fun fileSystemPath(): String? = unwrap(this).getFileSystemPath()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          FSxLustreFileSystemConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.FSxLustreFileSystemConfigProperty):
+          FSxLustreFileSystemConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FSxLustreFileSystemConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FSxLustreFileSystemConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.FSxLustreFileSystemConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.FSxLustreFileSystemConfigProperty
+    }
+  }
+
+  /**
+   * The SageMaker images that are hidden from the Studio user interface.
+   *
+   * You must specify the SageMaker image name and version aliases.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * HiddenSageMakerImageProperty hiddenSageMakerImageProperty =
+   * HiddenSageMakerImageProperty.builder()
+   * .sageMakerImageName("sageMakerImageName")
+   * .versionAliases(List.of("versionAliases"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-hiddensagemakerimage.html)
+   */
+  public interface HiddenSageMakerImageProperty {
+    /**
+     * The SageMaker image name that you are hiding from the Studio user interface.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-hiddensagemakerimage.html#cfn-sagemaker-userprofile-hiddensagemakerimage-sagemakerimagename)
+     */
+    public fun sageMakerImageName(): String? = unwrap(this).getSageMakerImageName()
+
+    /**
+     * The version aliases you are hiding from the Studio user interface.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-hiddensagemakerimage.html#cfn-sagemaker-userprofile-hiddensagemakerimage-versionaliases)
+     */
+    public fun versionAliases(): List<String> = unwrap(this).getVersionAliases() ?: emptyList()
+
+    /**
+     * A builder for [HiddenSageMakerImageProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sageMakerImageName The SageMaker image name that you are hiding from the Studio user
+       * interface.
+       */
+      public fun sageMakerImageName(sageMakerImageName: String)
+
+      /**
+       * @param versionAliases The version aliases you are hiding from the Studio user interface.
+       */
+      public fun versionAliases(versionAliases: List<String>)
+
+      /**
+       * @param versionAliases The version aliases you are hiding from the Studio user interface.
+       */
+      public fun versionAliases(vararg versionAliases: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.HiddenSageMakerImageProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.HiddenSageMakerImageProperty.builder()
+
+      /**
+       * @param sageMakerImageName The SageMaker image name that you are hiding from the Studio user
+       * interface.
+       */
+      override fun sageMakerImageName(sageMakerImageName: String) {
+        cdkBuilder.sageMakerImageName(sageMakerImageName)
+      }
+
+      /**
+       * @param versionAliases The version aliases you are hiding from the Studio user interface.
+       */
+      override fun versionAliases(versionAliases: List<String>) {
+        cdkBuilder.versionAliases(versionAliases)
+      }
+
+      /**
+       * @param versionAliases The version aliases you are hiding from the Studio user interface.
+       */
+      override fun versionAliases(vararg versionAliases: String): Unit =
+          versionAliases(versionAliases.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.HiddenSageMakerImageProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.HiddenSageMakerImageProperty,
+    ) : CdkObject(cdkObject),
+        HiddenSageMakerImageProperty {
+      /**
+       * The SageMaker image name that you are hiding from the Studio user interface.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-hiddensagemakerimage.html#cfn-sagemaker-userprofile-hiddensagemakerimage-sagemakerimagename)
+       */
+      override fun sageMakerImageName(): String? = unwrap(this).getSageMakerImageName()
+
+      /**
+       * The version aliases you are hiding from the Studio user interface.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-hiddensagemakerimage.html#cfn-sagemaker-userprofile-hiddensagemakerimage-versionaliases)
+       */
+      override fun versionAliases(): List<String> = unwrap(this).getVersionAliases() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HiddenSageMakerImageProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.HiddenSageMakerImageProperty):
+          HiddenSageMakerImageProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HiddenSageMakerImageProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HiddenSageMakerImageProperty):
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.HiddenSageMakerImageProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.HiddenSageMakerImageProperty
     }
   }
 
@@ -1977,6 +2345,7 @@ public open class CfnUserProfile(
    * .minIdleTimeoutInMinutes(123)
    * .build())
    * .build())
+   * .builtInLifecycleConfigArn("builtInLifecycleConfigArn")
    * .codeRepositories(List.of(CodeRepositoryProperty.builder()
    * .repositoryUrl("repositoryUrl")
    * .build()))
@@ -2005,6 +2374,15 @@ public open class CfnUserProfile(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-jupyterlabappsettings.html#cfn-sagemaker-userprofile-jupyterlabappsettings-applifecyclemanagement)
      */
     public fun appLifecycleManagement(): Any? = unwrap(this).getAppLifecycleManagement()
+
+    /**
+     * The lifecycle configuration that runs before the default lifecycle configuration.
+     *
+     * It can override changes made in the default lifecycle configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-jupyterlabappsettings.html#cfn-sagemaker-userprofile-jupyterlabappsettings-builtinlifecycleconfigarn)
+     */
+    public fun builtInLifecycleConfigArn(): String? = unwrap(this).getBuiltInLifecycleConfigArn()
 
     /**
      * A list of Git repositories that SageMaker automatically displays to users for cloning in the
@@ -2065,6 +2443,13 @@ public open class CfnUserProfile(
       @JvmName("a1fd009218e52d4f1525aa7699036c6876e258a096e3ba5327c1564723cd3fd3")
       public
           fun appLifecycleManagement(appLifecycleManagement: AppLifecycleManagementProperty.Builder.() -> Unit)
+
+      /**
+       * @param builtInLifecycleConfigArn The lifecycle configuration that runs before the default
+       * lifecycle configuration.
+       * It can override changes made in the default lifecycle configuration.
+       */
+      public fun builtInLifecycleConfigArn(builtInLifecycleConfigArn: String)
 
       /**
        * @param codeRepositories A list of Git repositories that SageMaker automatically displays to
@@ -2170,6 +2555,15 @@ public open class CfnUserProfile(
           Unit = appLifecycleManagement(AppLifecycleManagementProperty(appLifecycleManagement))
 
       /**
+       * @param builtInLifecycleConfigArn The lifecycle configuration that runs before the default
+       * lifecycle configuration.
+       * It can override changes made in the default lifecycle configuration.
+       */
+      override fun builtInLifecycleConfigArn(builtInLifecycleConfigArn: String) {
+        cdkBuilder.builtInLifecycleConfigArn(builtInLifecycleConfigArn)
+      }
+
+      /**
        * @param codeRepositories A list of Git repositories that SageMaker automatically displays to
        * users for cloning in the JupyterLab application.
        */
@@ -2273,6 +2667,16 @@ public open class CfnUserProfile(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-jupyterlabappsettings.html#cfn-sagemaker-userprofile-jupyterlabappsettings-applifecyclemanagement)
        */
       override fun appLifecycleManagement(): Any? = unwrap(this).getAppLifecycleManagement()
+
+      /**
+       * The lifecycle configuration that runs before the default lifecycle configuration.
+       *
+       * It can override changes made in the default lifecycle configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-jupyterlabappsettings.html#cfn-sagemaker-userprofile-jupyterlabappsettings-builtinlifecycleconfigarn)
+       */
+      override fun builtInLifecycleConfigArn(): String? =
+          unwrap(this).getBuiltInLifecycleConfigArn()
 
       /**
        * A list of Git repositories that SageMaker automatically displays to users for cloning in
@@ -2557,18 +2961,24 @@ public open class CfnUserProfile(
    */
   public interface KernelGatewayAppSettingsProperty {
     /**
-     * A list of custom SageMaker images that are configured to run as a KernelGateway app.
+     * A list of custom SageMaker AI images that are configured to run as a KernelGateway app.
+     *
+     * The maximum number of custom images are as follows.
+     *
+     * * On a domain level: 200
+     * * On a space level: 5
+     * * On a user profile level: 5
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-kernelgatewayappsettings.html#cfn-sagemaker-userprofile-kernelgatewayappsettings-customimages)
      */
     public fun customImages(): Any? = unwrap(this).getCustomImages()
 
     /**
-     * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
-     * used by the KernelGateway app.
+     * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker AI
+     * image used by the KernelGateway app.
      *
      *
-     * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
+     * The Amazon SageMaker AI Studio UI does not use the default instance type value set here. The
      * default instance type set here is used when Apps are created using the AWS CLI or AWS
      * CloudFormation and the instance type parameter value is not passed.
      *
@@ -2596,49 +3006,64 @@ public open class CfnUserProfile(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * @param customImages A list of custom SageMaker AI images that are configured to run as a
        * KernelGateway app.
+       * The maximum number of custom images are as follows.
+       *
+       * * On a domain level: 200
+       * * On a space level: 5
+       * * On a user profile level: 5
        */
       public fun customImages(customImages: IResolvable)
 
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * @param customImages A list of custom SageMaker AI images that are configured to run as a
        * KernelGateway app.
+       * The maximum number of custom images are as follows.
+       *
+       * * On a domain level: 200
+       * * On a space level: 5
+       * * On a user profile level: 5
        */
       public fun customImages(customImages: List<Any>)
 
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * @param customImages A list of custom SageMaker AI images that are configured to run as a
        * KernelGateway app.
+       * The maximum number of custom images are as follows.
+       *
+       * * On a domain level: 200
+       * * On a space level: 5
+       * * On a user profile level: 5
        */
       public fun customImages(vararg customImages: Any)
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
+       * the default SageMaker AI image used by the KernelGateway app.
        *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * The Amazon SageMaker AI Studio UI does not use the default instance type value set here.
+       * The default instance type set here is used when Apps are created using the AWS CLI or AWS
        * CloudFormation and the instance type parameter value is not passed.
        */
       public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
+       * the default SageMaker AI image used by the KernelGateway app.
        *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * The Amazon SageMaker AI Studio UI does not use the default instance type value set here.
+       * The default instance type set here is used when Apps are created using the AWS CLI or AWS
        * CloudFormation and the instance type parameter value is not passed.
        */
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
+       * the default SageMaker AI image used by the KernelGateway app.
        *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * The Amazon SageMaker AI Studio UI does not use the default instance type value set here.
+       * The default instance type set here is used when Apps are created using the AWS CLI or AWS
        * CloudFormation and the instance type parameter value is not passed.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -2669,34 +3094,49 @@ public open class CfnUserProfile(
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.KernelGatewayAppSettingsProperty.builder()
 
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * @param customImages A list of custom SageMaker AI images that are configured to run as a
        * KernelGateway app.
+       * The maximum number of custom images are as follows.
+       *
+       * * On a domain level: 200
+       * * On a space level: 5
+       * * On a user profile level: 5
        */
       override fun customImages(customImages: IResolvable) {
         cdkBuilder.customImages(customImages.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * @param customImages A list of custom SageMaker AI images that are configured to run as a
        * KernelGateway app.
+       * The maximum number of custom images are as follows.
+       *
+       * * On a domain level: 200
+       * * On a space level: 5
+       * * On a user profile level: 5
        */
       override fun customImages(customImages: List<Any>) {
         cdkBuilder.customImages(customImages.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param customImages A list of custom SageMaker images that are configured to run as a
+       * @param customImages A list of custom SageMaker AI images that are configured to run as a
        * KernelGateway app.
+       * The maximum number of custom images are as follows.
+       *
+       * * On a domain level: 200
+       * * On a space level: 5
+       * * On a user profile level: 5
        */
       override fun customImages(vararg customImages: Any): Unit =
           customImages(customImages.toList())
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
+       * the default SageMaker AI image used by the KernelGateway app.
        *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * The Amazon SageMaker AI Studio UI does not use the default instance type value set here.
+       * The default instance type set here is used when Apps are created using the AWS CLI or AWS
        * CloudFormation and the instance type parameter value is not passed.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
@@ -2705,10 +3145,10 @@ public open class CfnUserProfile(
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
+       * the default SageMaker AI image used by the KernelGateway app.
        *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * The Amazon SageMaker AI Studio UI does not use the default instance type value set here.
+       * The default instance type set here is used when Apps are created using the AWS CLI or AWS
        * CloudFormation and the instance type parameter value is not passed.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
@@ -2717,10 +3157,10 @@ public open class CfnUserProfile(
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
-       * the default SageMaker image used by the KernelGateway app.
+       * the default SageMaker AI image used by the KernelGateway app.
        *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * The Amazon SageMaker AI Studio UI does not use the default instance type value set here.
+       * The default instance type set here is used when Apps are created using the AWS CLI or AWS
        * CloudFormation and the instance type parameter value is not passed.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -2758,19 +3198,25 @@ public open class CfnUserProfile(
     ) : CdkObject(cdkObject),
         KernelGatewayAppSettingsProperty {
       /**
-       * A list of custom SageMaker images that are configured to run as a KernelGateway app.
+       * A list of custom SageMaker AI images that are configured to run as a KernelGateway app.
+       *
+       * The maximum number of custom images are as follows.
+       *
+       * * On a domain level: 200
+       * * On a space level: 5
+       * * On a user profile level: 5
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-kernelgatewayappsettings.html#cfn-sagemaker-userprofile-kernelgatewayappsettings-customimages)
        */
       override fun customImages(): Any? = unwrap(this).getCustomImages()
 
       /**
-       * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
-       * used by the KernelGateway app.
+       * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker AI
+       * image used by the KernelGateway app.
        *
        *
-       * The Amazon SageMaker Studio UI does not use the default instance type value set here. The
-       * default instance type set here is used when Apps are created using the AWS CLI or AWS
+       * The Amazon SageMaker AI Studio UI does not use the default instance type value set here.
+       * The default instance type set here is used when Apps are created using the AWS CLI or AWS
        * CloudFormation and the instance type parameter value is not passed.
        *
        *
@@ -2937,8 +3383,16 @@ public open class CfnUserProfile(
   }
 
   /**
-   * Specifies the ARN's of a SageMaker image and SageMaker image version, and the instance type
-   * that the version runs on.
+   * Specifies the ARN's of a SageMaker AI image and SageMaker AI image version, and the instance
+   * type that the version runs on.
+   *
+   *
+   * When both `SageMakerImageVersionArn` and `SageMakerImageArn` are passed,
+   * `SageMakerImageVersionArn` is used. Any updates to `SageMakerImageArn` will not take effect if
+   * `SageMakerImageVersionArn` already exists in the `ResourceSpec` because `SageMakerImageVersionArn`
+   * always takes precedence. To clear the value set for `SageMakerImageVersionArn` , pass `None` as
+   * the value.
+   *
    *
    * Example:
    *
@@ -2979,7 +3433,7 @@ public open class CfnUserProfile(
     public fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
 
     /**
-     * The ARN of the SageMaker image that the image version belongs to.
+     * The ARN of the SageMaker AI image that the image version belongs to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-resourcespec.html#cfn-sagemaker-userprofile-resourcespec-sagemakerimagearn)
      */
@@ -2987,6 +3441,8 @@ public open class CfnUserProfile(
 
     /**
      * The ARN of the image version created on the instance.
+     *
+     * To clear the value set for `SageMakerImageVersionArn` , pass `None` as the value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-resourcespec.html#cfn-sagemaker-userprofile-resourcespec-sagemakerimageversionarn)
      */
@@ -3014,12 +3470,14 @@ public open class CfnUserProfile(
       public fun lifecycleConfigArn(lifecycleConfigArn: String)
 
       /**
-       * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
+       * @param sageMakerImageArn The ARN of the SageMaker AI image that the image version belongs
+       * to.
        */
       public fun sageMakerImageArn(sageMakerImageArn: String)
 
       /**
        * @param sageMakerImageVersionArn The ARN of the image version created on the instance.
+       * To clear the value set for `SageMakerImageVersionArn` , pass `None` as the value.
        */
       public fun sageMakerImageVersionArn(sageMakerImageVersionArn: String)
     }
@@ -3050,7 +3508,8 @@ public open class CfnUserProfile(
       }
 
       /**
-       * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
+       * @param sageMakerImageArn The ARN of the SageMaker AI image that the image version belongs
+       * to.
        */
       override fun sageMakerImageArn(sageMakerImageArn: String) {
         cdkBuilder.sageMakerImageArn(sageMakerImageArn)
@@ -3058,6 +3517,7 @@ public open class CfnUserProfile(
 
       /**
        * @param sageMakerImageVersionArn The ARN of the image version created on the instance.
+       * To clear the value set for `SageMakerImageVersionArn` , pass `None` as the value.
        */
       override fun sageMakerImageVersionArn(sageMakerImageVersionArn: String) {
         cdkBuilder.sageMakerImageVersionArn(sageMakerImageVersionArn)
@@ -3094,7 +3554,7 @@ public open class CfnUserProfile(
       override fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
 
       /**
-       * The ARN of the SageMaker image that the image version belongs to.
+       * The ARN of the SageMaker AI image that the image version belongs to.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-resourcespec.html#cfn-sagemaker-userprofile-resourcespec-sagemakerimagearn)
        */
@@ -3102,6 +3562,8 @@ public open class CfnUserProfile(
 
       /**
        * The ARN of the image version created on the instance.
+       *
+       * To clear the value set for `SageMakerImageVersionArn` , pass `None` as the value.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-resourcespec.html#cfn-sagemaker-userprofile-resourcespec-sagemakerimageversionarn)
        */
@@ -3299,7 +3761,12 @@ public open class CfnUserProfile(
    * StudioWebPortalSettingsProperty studioWebPortalSettingsProperty =
    * StudioWebPortalSettingsProperty.builder()
    * .hiddenAppTypes(List.of("hiddenAppTypes"))
+   * .hiddenInstanceTypes(List.of("hiddenInstanceTypes"))
    * .hiddenMlTools(List.of("hiddenMlTools"))
+   * .hiddenSageMakerImageVersionAliases(List.of(HiddenSageMakerImageProperty.builder()
+   * .sageMakerImageName("sageMakerImageName")
+   * .versionAliases(List.of("versionAliases"))
+   * .build()))
    * .build();
    * ```
    *
@@ -3316,11 +3783,27 @@ public open class CfnUserProfile(
     public fun hiddenAppTypes(): List<String> = unwrap(this).getHiddenAppTypes() ?: emptyList()
 
     /**
+     * The instance types you are hiding from the Studio user interface.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-studiowebportalsettings.html#cfn-sagemaker-userprofile-studiowebportalsettings-hiddeninstancetypes)
+     */
+    public fun hiddenInstanceTypes(): List<String> = unwrap(this).getHiddenInstanceTypes() ?:
+        emptyList()
+
+    /**
      * The machine learning tools that are hidden from the Studio left navigation pane.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-studiowebportalsettings.html#cfn-sagemaker-userprofile-studiowebportalsettings-hiddenmltools)
      */
     public fun hiddenMlTools(): List<String> = unwrap(this).getHiddenMlTools() ?: emptyList()
+
+    /**
+     * The version aliases you are hiding from the Studio user interface.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-studiowebportalsettings.html#cfn-sagemaker-userprofile-studiowebportalsettings-hiddensagemakerimageversionaliases)
+     */
+    public fun hiddenSageMakerImageVersionAliases(): Any? =
+        unwrap(this).getHiddenSageMakerImageVersionAliases()
 
     /**
      * A builder for [StudioWebPortalSettingsProperty]
@@ -3342,6 +3825,18 @@ public open class CfnUserProfile(
       public fun hiddenAppTypes(vararg hiddenAppTypes: String)
 
       /**
+       * @param hiddenInstanceTypes The instance types you are hiding from the Studio user
+       * interface.
+       */
+      public fun hiddenInstanceTypes(hiddenInstanceTypes: List<String>)
+
+      /**
+       * @param hiddenInstanceTypes The instance types you are hiding from the Studio user
+       * interface.
+       */
+      public fun hiddenInstanceTypes(vararg hiddenInstanceTypes: String)
+
+      /**
        * @param hiddenMlTools The machine learning tools that are hidden from the Studio left
        * navigation pane.
        */
@@ -3352,6 +3847,24 @@ public open class CfnUserProfile(
        * navigation pane.
        */
       public fun hiddenMlTools(vararg hiddenMlTools: String)
+
+      /**
+       * @param hiddenSageMakerImageVersionAliases The version aliases you are hiding from the
+       * Studio user interface.
+       */
+      public fun hiddenSageMakerImageVersionAliases(hiddenSageMakerImageVersionAliases: IResolvable)
+
+      /**
+       * @param hiddenSageMakerImageVersionAliases The version aliases you are hiding from the
+       * Studio user interface.
+       */
+      public fun hiddenSageMakerImageVersionAliases(hiddenSageMakerImageVersionAliases: List<Any>)
+
+      /**
+       * @param hiddenSageMakerImageVersionAliases The version aliases you are hiding from the
+       * Studio user interface.
+       */
+      public fun hiddenSageMakerImageVersionAliases(vararg hiddenSageMakerImageVersionAliases: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3378,6 +3891,21 @@ public open class CfnUserProfile(
           hiddenAppTypes(hiddenAppTypes.toList())
 
       /**
+       * @param hiddenInstanceTypes The instance types you are hiding from the Studio user
+       * interface.
+       */
+      override fun hiddenInstanceTypes(hiddenInstanceTypes: List<String>) {
+        cdkBuilder.hiddenInstanceTypes(hiddenInstanceTypes)
+      }
+
+      /**
+       * @param hiddenInstanceTypes The instance types you are hiding from the Studio user
+       * interface.
+       */
+      override fun hiddenInstanceTypes(vararg hiddenInstanceTypes: String): Unit =
+          hiddenInstanceTypes(hiddenInstanceTypes.toList())
+
+      /**
        * @param hiddenMlTools The machine learning tools that are hidden from the Studio left
        * navigation pane.
        */
@@ -3391,6 +3919,32 @@ public open class CfnUserProfile(
        */
       override fun hiddenMlTools(vararg hiddenMlTools: String): Unit =
           hiddenMlTools(hiddenMlTools.toList())
+
+      /**
+       * @param hiddenSageMakerImageVersionAliases The version aliases you are hiding from the
+       * Studio user interface.
+       */
+      override
+          fun hiddenSageMakerImageVersionAliases(hiddenSageMakerImageVersionAliases: IResolvable) {
+        cdkBuilder.hiddenSageMakerImageVersionAliases(hiddenSageMakerImageVersionAliases.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param hiddenSageMakerImageVersionAliases The version aliases you are hiding from the
+       * Studio user interface.
+       */
+      override
+          fun hiddenSageMakerImageVersionAliases(hiddenSageMakerImageVersionAliases: List<Any>) {
+        cdkBuilder.hiddenSageMakerImageVersionAliases(hiddenSageMakerImageVersionAliases.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param hiddenSageMakerImageVersionAliases The version aliases you are hiding from the
+       * Studio user interface.
+       */
+      override fun hiddenSageMakerImageVersionAliases(vararg
+          hiddenSageMakerImageVersionAliases: Any): Unit =
+          hiddenSageMakerImageVersionAliases(hiddenSageMakerImageVersionAliases.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.StudioWebPortalSettingsProperty =
@@ -3411,11 +3965,27 @@ public open class CfnUserProfile(
       override fun hiddenAppTypes(): List<String> = unwrap(this).getHiddenAppTypes() ?: emptyList()
 
       /**
+       * The instance types you are hiding from the Studio user interface.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-studiowebportalsettings.html#cfn-sagemaker-userprofile-studiowebportalsettings-hiddeninstancetypes)
+       */
+      override fun hiddenInstanceTypes(): List<String> = unwrap(this).getHiddenInstanceTypes() ?:
+          emptyList()
+
+      /**
        * The machine learning tools that are hidden from the Studio left navigation pane.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-studiowebportalsettings.html#cfn-sagemaker-userprofile-studiowebportalsettings-hiddenmltools)
        */
       override fun hiddenMlTools(): List<String> = unwrap(this).getHiddenMlTools() ?: emptyList()
+
+      /**
+       * The version aliases you are hiding from the Studio user interface.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-studiowebportalsettings.html#cfn-sagemaker-userprofile-studiowebportalsettings-hiddensagemakerimageversionaliases)
+       */
+      override fun hiddenSageMakerImageVersionAliases(): Any? =
+          unwrap(this).getHiddenSageMakerImageVersionAliases()
     }
 
     public companion object {
@@ -3456,6 +4026,7 @@ public open class CfnUserProfile(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
    * UserSettingsProperty userSettingsProperty = UserSettingsProperty.builder()
+   * .autoMountHomeEfs("autoMountHomeEfs")
    * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
    * .appLifecycleManagement(AppLifecycleManagementProperty.builder()
    * .idleSettings(IdleSettingsProperty.builder()
@@ -3465,6 +4036,7 @@ public open class CfnUserProfile(
    * .minIdleTimeoutInMinutes(123)
    * .build())
    * .build())
+   * .builtInLifecycleConfigArn("builtInLifecycleConfigArn")
    * .customImages(List.of(CustomImageProperty.builder()
    * .appImageConfigName("appImageConfigName")
    * .imageName("imageName")
@@ -3485,6 +4057,11 @@ public open class CfnUserProfile(
    * // the properties below are optional
    * .fileSystemPath("fileSystemPath")
    * .build())
+   * .fSxLustreFileSystemConfig(FSxLustreFileSystemConfigProperty.builder()
+   * .fileSystemId("fileSystemId")
+   * // the properties below are optional
+   * .fileSystemPath("fileSystemPath")
+   * .build())
    * .build()))
    * .customPosixUserConfig(CustomPosixUserConfigProperty.builder()
    * .gid(123)
@@ -3501,6 +4078,7 @@ public open class CfnUserProfile(
    * .minIdleTimeoutInMinutes(123)
    * .build())
    * .build())
+   * .builtInLifecycleConfigArn("builtInLifecycleConfigArn")
    * .codeRepositories(List.of(CodeRepositoryProperty.builder()
    * .repositoryUrl("repositoryUrl")
    * .build()))
@@ -3561,7 +4139,12 @@ public open class CfnUserProfile(
    * .studioWebPortal("studioWebPortal")
    * .studioWebPortalSettings(StudioWebPortalSettingsProperty.builder()
    * .hiddenAppTypes(List.of("hiddenAppTypes"))
+   * .hiddenInstanceTypes(List.of("hiddenInstanceTypes"))
    * .hiddenMlTools(List.of("hiddenMlTools"))
+   * .hiddenSageMakerImageVersionAliases(List.of(HiddenSageMakerImageProperty.builder()
+   * .sageMakerImageName("sageMakerImageName")
+   * .versionAliases(List.of("versionAliases"))
+   * .build()))
    * .build())
    * .build();
    * ```
@@ -3569,6 +4152,19 @@ public open class CfnUserProfile(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-usersettings.html)
    */
   public interface UserSettingsProperty {
+    /**
+     * Indicates whether auto-mounting of an EFS volume is supported for the user profile.
+     *
+     * The `DefaultAsDomain` value is only supported for user profiles. Do not use the
+     * `DefaultAsDomain` value when setting this parameter for a domain.
+     *
+     * SageMaker applies this setting only to private spaces that the user creates in the domain.
+     * SageMaker doesn't apply this setting to shared spaces.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-usersettings.html#cfn-sagemaker-userprofile-usersettings-automounthomeefs)
+     */
+    public fun autoMountHomeEfs(): String? = unwrap(this).getAutoMountHomeEfs()
+
     /**
      * The Code Editor application settings.
      *
@@ -3582,7 +4178,7 @@ public open class CfnUserProfile(
     /**
      * The settings for assigning a custom file system to a user profile.
      *
-     * Permitted users can access this file system in Amazon SageMaker Studio.
+     * Permitted users can access this file system in Amazon SageMaker AI Studio.
      *
      * SageMaker applies these settings only to private spaces that the user creates in the domain.
      * SageMaker doesn't apply these settings to shared spaces.
@@ -3664,9 +4260,9 @@ public open class CfnUserProfile(
      * Required when the `CreateDomain.AppNetworkAccessType` parameter is set to `VpcOnly` , unless
      * specified as part of the `DefaultUserSettings` for the domain.
      *
-     * Amazon SageMaker adds a security group to allow NFS traffic from Amazon SageMaker Studio.
-     * Therefore, the number of security groups that you can specify is one less than the maximum
-     * number shown.
+     * Amazon SageMaker AI adds a security group to allow NFS traffic from Amazon SageMaker AI
+     * Studio. Therefore, the number of security groups that you can specify is one less than the
+     * maximum number shown.
      *
      * SageMaker applies these settings only to private spaces that the user creates in the domain.
      * SageMaker doesn't apply these settings to shared spaces.
@@ -3676,7 +4272,7 @@ public open class CfnUserProfile(
     public fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
     /**
-     * Specifies options for sharing Amazon SageMaker Studio notebooks.
+     * Specifies options for sharing Amazon SageMaker AI Studio notebooks.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-usersettings.html#cfn-sagemaker-userprofile-usersettings-sharingsettings)
      */
@@ -3718,6 +4314,17 @@ public open class CfnUserProfile(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param autoMountHomeEfs Indicates whether auto-mounting of an EFS volume is supported for
+       * the user profile.
+       * The `DefaultAsDomain` value is only supported for user profiles. Do not use the
+       * `DefaultAsDomain` value when setting this parameter for a domain.
+       *
+       * SageMaker applies this setting only to private spaces that the user creates in the domain.
+       * SageMaker doesn't apply this setting to shared spaces.
+       */
+      public fun autoMountHomeEfs(autoMountHomeEfs: String)
+
+      /**
        * @param codeEditorAppSettings The Code Editor application settings.
        * SageMaker applies these settings only to private spaces that the user creates in the
        * domain. SageMaker doesn't apply these settings to shared spaces.
@@ -3744,7 +4351,7 @@ public open class CfnUserProfile(
       /**
        * @param customFileSystemConfigs The settings for assigning a custom file system to a user
        * profile.
-       * Permitted users can access this file system in Amazon SageMaker Studio.
+       * Permitted users can access this file system in Amazon SageMaker AI Studio.
        *
        * SageMaker applies these settings only to private spaces that the user creates in the
        * domain. SageMaker doesn't apply these settings to shared spaces.
@@ -3754,7 +4361,7 @@ public open class CfnUserProfile(
       /**
        * @param customFileSystemConfigs The settings for assigning a custom file system to a user
        * profile.
-       * Permitted users can access this file system in Amazon SageMaker Studio.
+       * Permitted users can access this file system in Amazon SageMaker AI Studio.
        *
        * SageMaker applies these settings only to private spaces that the user creates in the
        * domain. SageMaker doesn't apply these settings to shared spaces.
@@ -3764,7 +4371,7 @@ public open class CfnUserProfile(
       /**
        * @param customFileSystemConfigs The settings for assigning a custom file system to a user
        * profile.
-       * Permitted users can access this file system in Amazon SageMaker Studio.
+       * Permitted users can access this file system in Amazon SageMaker AI Studio.
        *
        * SageMaker applies these settings only to private spaces that the user creates in the
        * domain. SageMaker doesn't apply these settings to shared spaces.
@@ -3907,9 +4514,9 @@ public open class CfnUserProfile(
        * Required when the `CreateDomain.AppNetworkAccessType` parameter is set to `VpcOnly` ,
        * unless specified as part of the `DefaultUserSettings` for the domain.
        *
-       * Amazon SageMaker adds a security group to allow NFS traffic from Amazon SageMaker Studio.
-       * Therefore, the number of security groups that you can specify is one less than the maximum
-       * number shown.
+       * Amazon SageMaker AI adds a security group to allow NFS traffic from Amazon SageMaker AI
+       * Studio. Therefore, the number of security groups that you can specify is one less than the
+       * maximum number shown.
        *
        * SageMaker applies these settings only to private spaces that the user creates in the
        * domain. SageMaker doesn't apply these settings to shared spaces.
@@ -3925,9 +4532,9 @@ public open class CfnUserProfile(
        * Required when the `CreateDomain.AppNetworkAccessType` parameter is set to `VpcOnly` ,
        * unless specified as part of the `DefaultUserSettings` for the domain.
        *
-       * Amazon SageMaker adds a security group to allow NFS traffic from Amazon SageMaker Studio.
-       * Therefore, the number of security groups that you can specify is one less than the maximum
-       * number shown.
+       * Amazon SageMaker AI adds a security group to allow NFS traffic from Amazon SageMaker AI
+       * Studio. Therefore, the number of security groups that you can specify is one less than the
+       * maximum number shown.
        *
        * SageMaker applies these settings only to private spaces that the user creates in the
        * domain. SageMaker doesn't apply these settings to shared spaces.
@@ -3935,17 +4542,17 @@ public open class CfnUserProfile(
       public fun securityGroups(vararg securityGroups: String)
 
       /**
-       * @param sharingSettings Specifies options for sharing Amazon SageMaker Studio notebooks.
+       * @param sharingSettings Specifies options for sharing Amazon SageMaker AI Studio notebooks.
        */
       public fun sharingSettings(sharingSettings: IResolvable)
 
       /**
-       * @param sharingSettings Specifies options for sharing Amazon SageMaker Studio notebooks.
+       * @param sharingSettings Specifies options for sharing Amazon SageMaker AI Studio notebooks.
        */
       public fun sharingSettings(sharingSettings: SharingSettingsProperty)
 
       /**
-       * @param sharingSettings Specifies options for sharing Amazon SageMaker Studio notebooks.
+       * @param sharingSettings Specifies options for sharing Amazon SageMaker AI Studio notebooks.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("041646d4ca819762daa2e604bf5173280d6a4a5ac08a172dba6a4d4a589d8f15")
@@ -4013,6 +4620,19 @@ public open class CfnUserProfile(
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.UserSettingsProperty.builder()
 
       /**
+       * @param autoMountHomeEfs Indicates whether auto-mounting of an EFS volume is supported for
+       * the user profile.
+       * The `DefaultAsDomain` value is only supported for user profiles. Do not use the
+       * `DefaultAsDomain` value when setting this parameter for a domain.
+       *
+       * SageMaker applies this setting only to private spaces that the user creates in the domain.
+       * SageMaker doesn't apply this setting to shared spaces.
+       */
+      override fun autoMountHomeEfs(autoMountHomeEfs: String) {
+        cdkBuilder.autoMountHomeEfs(autoMountHomeEfs)
+      }
+
+      /**
        * @param codeEditorAppSettings The Code Editor application settings.
        * SageMaker applies these settings only to private spaces that the user creates in the
        * domain. SageMaker doesn't apply these settings to shared spaces.
@@ -4044,7 +4664,7 @@ public open class CfnUserProfile(
       /**
        * @param customFileSystemConfigs The settings for assigning a custom file system to a user
        * profile.
-       * Permitted users can access this file system in Amazon SageMaker Studio.
+       * Permitted users can access this file system in Amazon SageMaker AI Studio.
        *
        * SageMaker applies these settings only to private spaces that the user creates in the
        * domain. SageMaker doesn't apply these settings to shared spaces.
@@ -4056,7 +4676,7 @@ public open class CfnUserProfile(
       /**
        * @param customFileSystemConfigs The settings for assigning a custom file system to a user
        * profile.
-       * Permitted users can access this file system in Amazon SageMaker Studio.
+       * Permitted users can access this file system in Amazon SageMaker AI Studio.
        *
        * SageMaker applies these settings only to private spaces that the user creates in the
        * domain. SageMaker doesn't apply these settings to shared spaces.
@@ -4068,7 +4688,7 @@ public open class CfnUserProfile(
       /**
        * @param customFileSystemConfigs The settings for assigning a custom file system to a user
        * profile.
-       * Permitted users can access this file system in Amazon SageMaker Studio.
+       * Permitted users can access this file system in Amazon SageMaker AI Studio.
        *
        * SageMaker applies these settings only to private spaces that the user creates in the
        * domain. SageMaker doesn't apply these settings to shared spaces.
@@ -4244,9 +4864,9 @@ public open class CfnUserProfile(
        * Required when the `CreateDomain.AppNetworkAccessType` parameter is set to `VpcOnly` ,
        * unless specified as part of the `DefaultUserSettings` for the domain.
        *
-       * Amazon SageMaker adds a security group to allow NFS traffic from Amazon SageMaker Studio.
-       * Therefore, the number of security groups that you can specify is one less than the maximum
-       * number shown.
+       * Amazon SageMaker AI adds a security group to allow NFS traffic from Amazon SageMaker AI
+       * Studio. Therefore, the number of security groups that you can specify is one less than the
+       * maximum number shown.
        *
        * SageMaker applies these settings only to private spaces that the user creates in the
        * domain. SageMaker doesn't apply these settings to shared spaces.
@@ -4264,9 +4884,9 @@ public open class CfnUserProfile(
        * Required when the `CreateDomain.AppNetworkAccessType` parameter is set to `VpcOnly` ,
        * unless specified as part of the `DefaultUserSettings` for the domain.
        *
-       * Amazon SageMaker adds a security group to allow NFS traffic from Amazon SageMaker Studio.
-       * Therefore, the number of security groups that you can specify is one less than the maximum
-       * number shown.
+       * Amazon SageMaker AI adds a security group to allow NFS traffic from Amazon SageMaker AI
+       * Studio. Therefore, the number of security groups that you can specify is one less than the
+       * maximum number shown.
        *
        * SageMaker applies these settings only to private spaces that the user creates in the
        * domain. SageMaker doesn't apply these settings to shared spaces.
@@ -4275,21 +4895,21 @@ public open class CfnUserProfile(
           securityGroups(securityGroups.toList())
 
       /**
-       * @param sharingSettings Specifies options for sharing Amazon SageMaker Studio notebooks.
+       * @param sharingSettings Specifies options for sharing Amazon SageMaker AI Studio notebooks.
        */
       override fun sharingSettings(sharingSettings: IResolvable) {
         cdkBuilder.sharingSettings(sharingSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param sharingSettings Specifies options for sharing Amazon SageMaker Studio notebooks.
+       * @param sharingSettings Specifies options for sharing Amazon SageMaker AI Studio notebooks.
        */
       override fun sharingSettings(sharingSettings: SharingSettingsProperty) {
         cdkBuilder.sharingSettings(sharingSettings.let(SharingSettingsProperty.Companion::unwrap))
       }
 
       /**
-       * @param sharingSettings Specifies options for sharing Amazon SageMaker Studio notebooks.
+       * @param sharingSettings Specifies options for sharing Amazon SageMaker AI Studio notebooks.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("041646d4ca819762daa2e604bf5173280d6a4a5ac08a172dba6a4d4a589d8f15")
@@ -4374,6 +4994,19 @@ public open class CfnUserProfile(
     ) : CdkObject(cdkObject),
         UserSettingsProperty {
       /**
+       * Indicates whether auto-mounting of an EFS volume is supported for the user profile.
+       *
+       * The `DefaultAsDomain` value is only supported for user profiles. Do not use the
+       * `DefaultAsDomain` value when setting this parameter for a domain.
+       *
+       * SageMaker applies this setting only to private spaces that the user creates in the domain.
+       * SageMaker doesn't apply this setting to shared spaces.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-usersettings.html#cfn-sagemaker-userprofile-usersettings-automounthomeefs)
+       */
+      override fun autoMountHomeEfs(): String? = unwrap(this).getAutoMountHomeEfs()
+
+      /**
        * The Code Editor application settings.
        *
        * SageMaker applies these settings only to private spaces that the user creates in the
@@ -4386,7 +5019,7 @@ public open class CfnUserProfile(
       /**
        * The settings for assigning a custom file system to a user profile.
        *
-       * Permitted users can access this file system in Amazon SageMaker Studio.
+       * Permitted users can access this file system in Amazon SageMaker AI Studio.
        *
        * SageMaker applies these settings only to private spaces that the user creates in the
        * domain. SageMaker doesn't apply these settings to shared spaces.
@@ -4469,9 +5102,9 @@ public open class CfnUserProfile(
        * Required when the `CreateDomain.AppNetworkAccessType` parameter is set to `VpcOnly` ,
        * unless specified as part of the `DefaultUserSettings` for the domain.
        *
-       * Amazon SageMaker adds a security group to allow NFS traffic from Amazon SageMaker Studio.
-       * Therefore, the number of security groups that you can specify is one less than the maximum
-       * number shown.
+       * Amazon SageMaker AI adds a security group to allow NFS traffic from Amazon SageMaker AI
+       * Studio. Therefore, the number of security groups that you can specify is one less than the
+       * maximum number shown.
        *
        * SageMaker applies these settings only to private spaces that the user creates in the
        * domain. SageMaker doesn't apply these settings to shared spaces.
@@ -4481,7 +5114,7 @@ public open class CfnUserProfile(
       override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
       /**
-       * Specifies options for sharing Amazon SageMaker Studio notebooks.
+       * Specifies options for sharing Amazon SageMaker AI Studio notebooks.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-usersettings.html#cfn-sagemaker-userprofile-usersettings-sharingsettings)
        */

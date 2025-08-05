@@ -169,6 +169,53 @@ public open class CfnBucket(
   public open fun attrDualStackDomainName(): String = unwrap(this).getAttrDualStackDomainName()
 
   /**
+   * The destination information for the S3 Metadata configuration.
+   */
+  public open fun attrMetadataConfigurationDestination(): IResolvable =
+      unwrap(this).getAttrMetadataConfigurationDestination().let(IResolvable::wrap)
+
+  /**
+   * The Amazon Resource Name (ARN) for the inventory table.
+   */
+  public open fun attrMetadataConfigurationInventoryTableConfigurationTableArn(): String =
+      unwrap(this).getAttrMetadataConfigurationInventoryTableConfigurationTableArn()
+
+  /**
+   * The name of the inventory table.
+   */
+  public open fun attrMetadataConfigurationInventoryTableConfigurationTableName(): String =
+      unwrap(this).getAttrMetadataConfigurationInventoryTableConfigurationTableName()
+
+  /**
+   * The Amazon Resource Name (ARN) for the journal table.
+   */
+  public open fun attrMetadataConfigurationJournalTableConfigurationTableArn(): String =
+      unwrap(this).getAttrMetadataConfigurationJournalTableConfigurationTableArn()
+
+  /**
+   * The name of the journal table.
+   */
+  public open fun attrMetadataConfigurationJournalTableConfigurationTableName(): String =
+      unwrap(this).getAttrMetadataConfigurationJournalTableConfigurationTableName()
+
+  /**
+   * The Amazon Resource Name (ARN) for the metadata table in the metadata table configuration.
+   *
+   * The specified metadata table name must be unique within the `aws_s3_metadata` namespace in the
+   * destination table bucket.
+   */
+  public open fun attrMetadataTableConfigurationS3TablesDestinationTableArn(): String =
+      unwrap(this).getAttrMetadataTableConfigurationS3TablesDestinationTableArn()
+
+  /**
+   * The table bucket namespace for the metadata table in your metadata table configuration.
+   *
+   * This value is always `aws_s3_metadata` .
+   */
+  public open fun attrMetadataTableConfigurationS3TablesDestinationTableNamespace(): String =
+      unwrap(this).getAttrMetadataTableConfigurationS3TablesDestinationTableNamespace()
+
+  /**
    * Returns the regional domain name of the specified bucket.
    *
    * Example: `DOC-EXAMPLE-BUCKET.s3.us-east-2.amazonaws.com`
@@ -294,26 +341,26 @@ public open class CfnBucket(
       intelligentTieringConfigurations(`value`.toList())
 
   /**
-   * Specifies the inventory configuration for an Amazon S3 bucket.
+   * Specifies the S3 Inventory configuration for an Amazon S3 bucket.
    */
   public open fun inventoryConfigurations(): Any? = unwrap(this).getInventoryConfigurations()
 
   /**
-   * Specifies the inventory configuration for an Amazon S3 bucket.
+   * Specifies the S3 Inventory configuration for an Amazon S3 bucket.
    */
   public open fun inventoryConfigurations(`value`: IResolvable) {
     unwrap(this).setInventoryConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Specifies the inventory configuration for an Amazon S3 bucket.
+   * Specifies the S3 Inventory configuration for an Amazon S3 bucket.
    */
   public open fun inventoryConfigurations(`value`: List<Any>) {
     unwrap(this).setInventoryConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * Specifies the inventory configuration for an Amazon S3 bucket.
+   * Specifies the S3 Inventory configuration for an Amazon S3 bucket.
    */
   public open fun inventoryConfigurations(vararg `value`: Any): Unit =
       inventoryConfigurations(`value`.toList())
@@ -372,6 +419,61 @@ public open class CfnBucket(
   @JvmName("d9326b8150b42b4ed6e8c7a63f01a53d21bbe4f4bd488a22508df622e6020266")
   public open fun loggingConfiguration(`value`: LoggingConfigurationProperty.Builder.() -> Unit):
       Unit = loggingConfiguration(LoggingConfigurationProperty(`value`))
+
+  /**
+   * The S3 Metadata configuration for a general purpose bucket.
+   */
+  public open fun metadataConfiguration(): Any? = unwrap(this).getMetadataConfiguration()
+
+  /**
+   * The S3 Metadata configuration for a general purpose bucket.
+   */
+  public open fun metadataConfiguration(`value`: IResolvable) {
+    unwrap(this).setMetadataConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The S3 Metadata configuration for a general purpose bucket.
+   */
+  public open fun metadataConfiguration(`value`: MetadataConfigurationProperty) {
+    unwrap(this).setMetadataConfiguration(`value`.let(MetadataConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The S3 Metadata configuration for a general purpose bucket.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("6963872725ee110da455bd19ce1403daafdc23095fd10d6729c1492d525efab0")
+  public open fun metadataConfiguration(`value`: MetadataConfigurationProperty.Builder.() -> Unit):
+      Unit = metadataConfiguration(MetadataConfigurationProperty(`value`))
+
+  /**
+   * The metadata table configuration of an Amazon S3 general purpose bucket.
+   */
+  public open fun metadataTableConfiguration(): Any? = unwrap(this).getMetadataTableConfiguration()
+
+  /**
+   * The metadata table configuration of an Amazon S3 general purpose bucket.
+   */
+  public open fun metadataTableConfiguration(`value`: IResolvable) {
+    unwrap(this).setMetadataTableConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The metadata table configuration of an Amazon S3 general purpose bucket.
+   */
+  public open fun metadataTableConfiguration(`value`: MetadataTableConfigurationProperty) {
+    unwrap(this).setMetadataTableConfiguration(`value`.let(MetadataTableConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The metadata table configuration of an Amazon S3 general purpose bucket.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("3a19f9486600a174722e26881732e13bfd869ade339bfd275e60729e37524c06")
+  public open
+      fun metadataTableConfiguration(`value`: MetadataTableConfigurationProperty.Builder.() -> Unit):
+      Unit = metadataTableConfiguration(MetadataTableConfigurationProperty(`value`))
 
   /**
    * Specifies a metrics configuration for the CloudWatch request metrics (specified by the metrics
@@ -807,8 +909,8 @@ public open class CfnBucket(
      * dashes (-) and must follow [Amazon S3 bucket restrictions and
      * limitations](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html) . For more
      * information, see [Rules for naming Amazon S3
-     * buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html#bucketnamingrules)
-     * in the *Amazon S3 User Guide* .
+     * buckets](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) in the
+     * *Amazon S3 User Guide* .
      *
      *
      * If you specify a name, you can't perform updates that require replacement of this resource.
@@ -890,41 +992,41 @@ public open class CfnBucket(
     public fun intelligentTieringConfigurations(vararg intelligentTieringConfigurations: Any)
 
     /**
-     * Specifies the inventory configuration for an Amazon S3 bucket.
+     * Specifies the S3 Inventory configuration for an Amazon S3 bucket.
      *
      * For more information, see [GET Bucket
      * inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in
      * the *Amazon S3 API Reference* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-inventoryconfigurations)
-     * @param inventoryConfigurations Specifies the inventory configuration for an Amazon S3 bucket.
-     * 
+     * @param inventoryConfigurations Specifies the S3 Inventory configuration for an Amazon S3
+     * bucket. 
      */
     public fun inventoryConfigurations(inventoryConfigurations: IResolvable)
 
     /**
-     * Specifies the inventory configuration for an Amazon S3 bucket.
+     * Specifies the S3 Inventory configuration for an Amazon S3 bucket.
      *
      * For more information, see [GET Bucket
      * inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in
      * the *Amazon S3 API Reference* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-inventoryconfigurations)
-     * @param inventoryConfigurations Specifies the inventory configuration for an Amazon S3 bucket.
-     * 
+     * @param inventoryConfigurations Specifies the S3 Inventory configuration for an Amazon S3
+     * bucket. 
      */
     public fun inventoryConfigurations(inventoryConfigurations: List<Any>)
 
     /**
-     * Specifies the inventory configuration for an Amazon S3 bucket.
+     * Specifies the S3 Inventory configuration for an Amazon S3 bucket.
      *
      * For more information, see [GET Bucket
      * inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in
      * the *Amazon S3 API Reference* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-inventoryconfigurations)
-     * @param inventoryConfigurations Specifies the inventory configuration for an Amazon S3 bucket.
-     * 
+     * @param inventoryConfigurations Specifies the S3 Inventory configuration for an Amazon S3
+     * bucket. 
      */
     public fun inventoryConfigurations(vararg inventoryConfigurations: Any)
 
@@ -996,6 +1098,64 @@ public open class CfnBucket(
     @JvmName("d26fd90a1e29625730bec9f94c832ce940d1445ab8f90af03bce65f699e92002")
     public
         fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * The S3 Metadata configuration for a general purpose bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-metadataconfiguration)
+     * @param metadataConfiguration The S3 Metadata configuration for a general purpose bucket. 
+     */
+    public fun metadataConfiguration(metadataConfiguration: IResolvable)
+
+    /**
+     * The S3 Metadata configuration for a general purpose bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-metadataconfiguration)
+     * @param metadataConfiguration The S3 Metadata configuration for a general purpose bucket. 
+     */
+    public fun metadataConfiguration(metadataConfiguration: MetadataConfigurationProperty)
+
+    /**
+     * The S3 Metadata configuration for a general purpose bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-metadataconfiguration)
+     * @param metadataConfiguration The S3 Metadata configuration for a general purpose bucket. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5fa513a59ff219b6504f41c6d278d42faa6bdd4eeb78b339656d5a329d27de1f")
+    public
+        fun metadataConfiguration(metadataConfiguration: MetadataConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * The metadata table configuration of an Amazon S3 general purpose bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-metadatatableconfiguration)
+     * @param metadataTableConfiguration The metadata table configuration of an Amazon S3 general
+     * purpose bucket. 
+     */
+    public fun metadataTableConfiguration(metadataTableConfiguration: IResolvable)
+
+    /**
+     * The metadata table configuration of an Amazon S3 general purpose bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-metadatatableconfiguration)
+     * @param metadataTableConfiguration The metadata table configuration of an Amazon S3 general
+     * purpose bucket. 
+     */
+    public
+        fun metadataTableConfiguration(metadataTableConfiguration: MetadataTableConfigurationProperty)
+
+    /**
+     * The metadata table configuration of an Amazon S3 general purpose bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-metadatatableconfiguration)
+     * @param metadataTableConfiguration The metadata table configuration of an Amazon S3 general
+     * purpose bucket. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2bc2c55ecdddb6e31969f1d7cf7f6437e8219eaef79f48ff7868a4731f305253")
+    public
+        fun metadataTableConfiguration(metadataTableConfiguration: MetadataTableConfigurationProperty.Builder.() -> Unit)
 
     /**
      * Specifies a metrics configuration for the CloudWatch request metrics (specified by the
@@ -1569,8 +1729,8 @@ public open class CfnBucket(
      * dashes (-) and must follow [Amazon S3 bucket restrictions and
      * limitations](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html) . For more
      * information, see [Rules for naming Amazon S3
-     * buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html#bucketnamingrules)
-     * in the *Amazon S3 User Guide* .
+     * buckets](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) in the
+     * *Amazon S3 User Guide* .
      *
      *
      * If you specify a name, you can't perform updates that require replacement of this resource.
@@ -1664,45 +1824,45 @@ public open class CfnBucket(
         Unit = intelligentTieringConfigurations(intelligentTieringConfigurations.toList())
 
     /**
-     * Specifies the inventory configuration for an Amazon S3 bucket.
+     * Specifies the S3 Inventory configuration for an Amazon S3 bucket.
      *
      * For more information, see [GET Bucket
      * inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in
      * the *Amazon S3 API Reference* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-inventoryconfigurations)
-     * @param inventoryConfigurations Specifies the inventory configuration for an Amazon S3 bucket.
-     * 
+     * @param inventoryConfigurations Specifies the S3 Inventory configuration for an Amazon S3
+     * bucket. 
      */
     override fun inventoryConfigurations(inventoryConfigurations: IResolvable) {
       cdkBuilder.inventoryConfigurations(inventoryConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Specifies the inventory configuration for an Amazon S3 bucket.
+     * Specifies the S3 Inventory configuration for an Amazon S3 bucket.
      *
      * For more information, see [GET Bucket
      * inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in
      * the *Amazon S3 API Reference* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-inventoryconfigurations)
-     * @param inventoryConfigurations Specifies the inventory configuration for an Amazon S3 bucket.
-     * 
+     * @param inventoryConfigurations Specifies the S3 Inventory configuration for an Amazon S3
+     * bucket. 
      */
     override fun inventoryConfigurations(inventoryConfigurations: List<Any>) {
       cdkBuilder.inventoryConfigurations(inventoryConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * Specifies the inventory configuration for an Amazon S3 bucket.
+     * Specifies the S3 Inventory configuration for an Amazon S3 bucket.
      *
      * For more information, see [GET Bucket
      * inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in
      * the *Amazon S3 API Reference* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-inventoryconfigurations)
-     * @param inventoryConfigurations Specifies the inventory configuration for an Amazon S3 bucket.
-     * 
+     * @param inventoryConfigurations Specifies the S3 Inventory configuration for an Amazon S3
+     * bucket. 
      */
     override fun inventoryConfigurations(vararg inventoryConfigurations: Any): Unit =
         inventoryConfigurations(inventoryConfigurations.toList())
@@ -1785,6 +1945,75 @@ public open class CfnBucket(
     override
         fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty.Builder.() -> Unit):
         Unit = loggingConfiguration(LoggingConfigurationProperty(loggingConfiguration))
+
+    /**
+     * The S3 Metadata configuration for a general purpose bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-metadataconfiguration)
+     * @param metadataConfiguration The S3 Metadata configuration for a general purpose bucket. 
+     */
+    override fun metadataConfiguration(metadataConfiguration: IResolvable) {
+      cdkBuilder.metadataConfiguration(metadataConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The S3 Metadata configuration for a general purpose bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-metadataconfiguration)
+     * @param metadataConfiguration The S3 Metadata configuration for a general purpose bucket. 
+     */
+    override fun metadataConfiguration(metadataConfiguration: MetadataConfigurationProperty) {
+      cdkBuilder.metadataConfiguration(metadataConfiguration.let(MetadataConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The S3 Metadata configuration for a general purpose bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-metadataconfiguration)
+     * @param metadataConfiguration The S3 Metadata configuration for a general purpose bucket. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5fa513a59ff219b6504f41c6d278d42faa6bdd4eeb78b339656d5a329d27de1f")
+    override
+        fun metadataConfiguration(metadataConfiguration: MetadataConfigurationProperty.Builder.() -> Unit):
+        Unit = metadataConfiguration(MetadataConfigurationProperty(metadataConfiguration))
+
+    /**
+     * The metadata table configuration of an Amazon S3 general purpose bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-metadatatableconfiguration)
+     * @param metadataTableConfiguration The metadata table configuration of an Amazon S3 general
+     * purpose bucket. 
+     */
+    override fun metadataTableConfiguration(metadataTableConfiguration: IResolvable) {
+      cdkBuilder.metadataTableConfiguration(metadataTableConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The metadata table configuration of an Amazon S3 general purpose bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-metadatatableconfiguration)
+     * @param metadataTableConfiguration The metadata table configuration of an Amazon S3 general
+     * purpose bucket. 
+     */
+    override
+        fun metadataTableConfiguration(metadataTableConfiguration: MetadataTableConfigurationProperty) {
+      cdkBuilder.metadataTableConfiguration(metadataTableConfiguration.let(MetadataTableConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The metadata table configuration of an Amazon S3 general purpose bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-metadatatableconfiguration)
+     * @param metadataTableConfiguration The metadata table configuration of an Amazon S3 general
+     * purpose bucket. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2bc2c55ecdddb6e31969f1d7cf7f6437e8219eaef79f48ff7868a4731f305253")
+    override
+        fun metadataTableConfiguration(metadataTableConfiguration: MetadataTableConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        metadataTableConfiguration(MetadataTableConfigurationProperty(metadataTableConfiguration))
 
     /**
      * Specifies a metrics configuration for the CloudWatch request metrics (specified by the
@@ -4628,7 +4857,7 @@ public open class CfnBucket(
   }
 
   /**
-   * Specifies the inventory configuration for an Amazon S3 bucket.
+   * Specifies the S3 Inventory configuration for an Amazon S3 bucket.
    *
    * For more information, see [GET Bucket
    * inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in
@@ -4966,6 +5195,451 @@ public open class CfnBucket(
   }
 
   /**
+   * The inventory table configuration for an S3 Metadata configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * InventoryTableConfigurationProperty inventoryTableConfigurationProperty =
+   * InventoryTableConfigurationProperty.builder()
+   * .configurationState("configurationState")
+   * // the properties below are optional
+   * .encryptionConfiguration(MetadataTableEncryptionConfigurationProperty.builder()
+   * .sseAlgorithm("sseAlgorithm")
+   * // the properties below are optional
+   * .kmsKeyArn("kmsKeyArn")
+   * .build())
+   * .tableArn("tableArn")
+   * .tableName("tableName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventorytableconfiguration.html)
+   */
+  public interface InventoryTableConfigurationProperty {
+    /**
+     * The configuration state of the inventory table, indicating whether the inventory table is
+     * enabled or disabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventorytableconfiguration.html#cfn-s3-bucket-inventorytableconfiguration-configurationstate)
+     */
+    public fun configurationState(): String
+
+    /**
+     * The encryption configuration for the inventory table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventorytableconfiguration.html#cfn-s3-bucket-inventorytableconfiguration-encryptionconfiguration)
+     */
+    public fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
+
+    /**
+     * The Amazon Resource Name (ARN) for the inventory table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventorytableconfiguration.html#cfn-s3-bucket-inventorytableconfiguration-tablearn)
+     */
+    public fun tableArn(): String? = unwrap(this).getTableArn()
+
+    /**
+     * The name of the inventory table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventorytableconfiguration.html#cfn-s3-bucket-inventorytableconfiguration-tablename)
+     */
+    public fun tableName(): String? = unwrap(this).getTableName()
+
+    /**
+     * A builder for [InventoryTableConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param configurationState The configuration state of the inventory table, indicating
+       * whether the inventory table is enabled or disabled. 
+       */
+      public fun configurationState(configurationState: String)
+
+      /**
+       * @param encryptionConfiguration The encryption configuration for the inventory table.
+       */
+      public fun encryptionConfiguration(encryptionConfiguration: IResolvable)
+
+      /**
+       * @param encryptionConfiguration The encryption configuration for the inventory table.
+       */
+      public
+          fun encryptionConfiguration(encryptionConfiguration: MetadataTableEncryptionConfigurationProperty)
+
+      /**
+       * @param encryptionConfiguration The encryption configuration for the inventory table.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f18118ae62aae44ed0894517fca0e7f9c4e8e2b2a5434b672dc5f904e6de2ae5")
+      public
+          fun encryptionConfiguration(encryptionConfiguration: MetadataTableEncryptionConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param tableArn The Amazon Resource Name (ARN) for the inventory table.
+       */
+      public fun tableArn(tableArn: String)
+
+      /**
+       * @param tableName The name of the inventory table.
+       */
+      public fun tableName(tableName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnBucket.InventoryTableConfigurationProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnBucket.InventoryTableConfigurationProperty.builder()
+
+      /**
+       * @param configurationState The configuration state of the inventory table, indicating
+       * whether the inventory table is enabled or disabled. 
+       */
+      override fun configurationState(configurationState: String) {
+        cdkBuilder.configurationState(configurationState)
+      }
+
+      /**
+       * @param encryptionConfiguration The encryption configuration for the inventory table.
+       */
+      override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param encryptionConfiguration The encryption configuration for the inventory table.
+       */
+      override
+          fun encryptionConfiguration(encryptionConfiguration: MetadataTableEncryptionConfigurationProperty) {
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(MetadataTableEncryptionConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param encryptionConfiguration The encryption configuration for the inventory table.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f18118ae62aae44ed0894517fca0e7f9c4e8e2b2a5434b672dc5f904e6de2ae5")
+      override
+          fun encryptionConfiguration(encryptionConfiguration: MetadataTableEncryptionConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          encryptionConfiguration(MetadataTableEncryptionConfigurationProperty(encryptionConfiguration))
+
+      /**
+       * @param tableArn The Amazon Resource Name (ARN) for the inventory table.
+       */
+      override fun tableArn(tableArn: String) {
+        cdkBuilder.tableArn(tableArn)
+      }
+
+      /**
+       * @param tableName The name of the inventory table.
+       */
+      override fun tableName(tableName: String) {
+        cdkBuilder.tableName(tableName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.s3.CfnBucket.InventoryTableConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.InventoryTableConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        InventoryTableConfigurationProperty {
+      /**
+       * The configuration state of the inventory table, indicating whether the inventory table is
+       * enabled or disabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventorytableconfiguration.html#cfn-s3-bucket-inventorytableconfiguration-configurationstate)
+       */
+      override fun configurationState(): String = unwrap(this).getConfigurationState()
+
+      /**
+       * The encryption configuration for the inventory table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventorytableconfiguration.html#cfn-s3-bucket-inventorytableconfiguration-encryptionconfiguration)
+       */
+      override fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
+
+      /**
+       * The Amazon Resource Name (ARN) for the inventory table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventorytableconfiguration.html#cfn-s3-bucket-inventorytableconfiguration-tablearn)
+       */
+      override fun tableArn(): String? = unwrap(this).getTableArn()
+
+      /**
+       * The name of the inventory table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventorytableconfiguration.html#cfn-s3-bucket-inventorytableconfiguration-tablename)
+       */
+      override fun tableName(): String? = unwrap(this).getTableName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InventoryTableConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.InventoryTableConfigurationProperty):
+          InventoryTableConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InventoryTableConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InventoryTableConfigurationProperty):
+          software.amazon.awscdk.services.s3.CfnBucket.InventoryTableConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnBucket.InventoryTableConfigurationProperty
+    }
+  }
+
+  /**
+   * The journal table configuration for an S3 Metadata configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * JournalTableConfigurationProperty journalTableConfigurationProperty =
+   * JournalTableConfigurationProperty.builder()
+   * .recordExpiration(RecordExpirationProperty.builder()
+   * .expiration("expiration")
+   * // the properties below are optional
+   * .days(123)
+   * .build())
+   * // the properties below are optional
+   * .encryptionConfiguration(MetadataTableEncryptionConfigurationProperty.builder()
+   * .sseAlgorithm("sseAlgorithm")
+   * // the properties below are optional
+   * .kmsKeyArn("kmsKeyArn")
+   * .build())
+   * .tableArn("tableArn")
+   * .tableName("tableName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-journaltableconfiguration.html)
+   */
+  public interface JournalTableConfigurationProperty {
+    /**
+     * The encryption configuration for the journal table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-journaltableconfiguration.html#cfn-s3-bucket-journaltableconfiguration-encryptionconfiguration)
+     */
+    public fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
+
+    /**
+     * The journal table record expiration settings for the journal table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-journaltableconfiguration.html#cfn-s3-bucket-journaltableconfiguration-recordexpiration)
+     */
+    public fun recordExpiration(): Any
+
+    /**
+     * The Amazon Resource Name (ARN) for the journal table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-journaltableconfiguration.html#cfn-s3-bucket-journaltableconfiguration-tablearn)
+     */
+    public fun tableArn(): String? = unwrap(this).getTableArn()
+
+    /**
+     * The name of the journal table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-journaltableconfiguration.html#cfn-s3-bucket-journaltableconfiguration-tablename)
+     */
+    public fun tableName(): String? = unwrap(this).getTableName()
+
+    /**
+     * A builder for [JournalTableConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param encryptionConfiguration The encryption configuration for the journal table.
+       */
+      public fun encryptionConfiguration(encryptionConfiguration: IResolvable)
+
+      /**
+       * @param encryptionConfiguration The encryption configuration for the journal table.
+       */
+      public
+          fun encryptionConfiguration(encryptionConfiguration: MetadataTableEncryptionConfigurationProperty)
+
+      /**
+       * @param encryptionConfiguration The encryption configuration for the journal table.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5da49128f03cbee39e5e17d9622d26349e3cc06d769f14bd12c412c652d14fae")
+      public
+          fun encryptionConfiguration(encryptionConfiguration: MetadataTableEncryptionConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param recordExpiration The journal table record expiration settings for the journal table.
+       * 
+       */
+      public fun recordExpiration(recordExpiration: IResolvable)
+
+      /**
+       * @param recordExpiration The journal table record expiration settings for the journal table.
+       * 
+       */
+      public fun recordExpiration(recordExpiration: RecordExpirationProperty)
+
+      /**
+       * @param recordExpiration The journal table record expiration settings for the journal table.
+       * 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bd8430e88af140530abcdf6f9b85e3338bf19e4dede01603bfd09cf8b2b3ced4")
+      public fun recordExpiration(recordExpiration: RecordExpirationProperty.Builder.() -> Unit)
+
+      /**
+       * @param tableArn The Amazon Resource Name (ARN) for the journal table.
+       */
+      public fun tableArn(tableArn: String)
+
+      /**
+       * @param tableName The name of the journal table.
+       */
+      public fun tableName(tableName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnBucket.JournalTableConfigurationProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnBucket.JournalTableConfigurationProperty.builder()
+
+      /**
+       * @param encryptionConfiguration The encryption configuration for the journal table.
+       */
+      override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param encryptionConfiguration The encryption configuration for the journal table.
+       */
+      override
+          fun encryptionConfiguration(encryptionConfiguration: MetadataTableEncryptionConfigurationProperty) {
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(MetadataTableEncryptionConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param encryptionConfiguration The encryption configuration for the journal table.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5da49128f03cbee39e5e17d9622d26349e3cc06d769f14bd12c412c652d14fae")
+      override
+          fun encryptionConfiguration(encryptionConfiguration: MetadataTableEncryptionConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          encryptionConfiguration(MetadataTableEncryptionConfigurationProperty(encryptionConfiguration))
+
+      /**
+       * @param recordExpiration The journal table record expiration settings for the journal table.
+       * 
+       */
+      override fun recordExpiration(recordExpiration: IResolvable) {
+        cdkBuilder.recordExpiration(recordExpiration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param recordExpiration The journal table record expiration settings for the journal table.
+       * 
+       */
+      override fun recordExpiration(recordExpiration: RecordExpirationProperty) {
+        cdkBuilder.recordExpiration(recordExpiration.let(RecordExpirationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param recordExpiration The journal table record expiration settings for the journal table.
+       * 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bd8430e88af140530abcdf6f9b85e3338bf19e4dede01603bfd09cf8b2b3ced4")
+      override fun recordExpiration(recordExpiration: RecordExpirationProperty.Builder.() -> Unit):
+          Unit = recordExpiration(RecordExpirationProperty(recordExpiration))
+
+      /**
+       * @param tableArn The Amazon Resource Name (ARN) for the journal table.
+       */
+      override fun tableArn(tableArn: String) {
+        cdkBuilder.tableArn(tableArn)
+      }
+
+      /**
+       * @param tableName The name of the journal table.
+       */
+      override fun tableName(tableName: String) {
+        cdkBuilder.tableName(tableName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.s3.CfnBucket.JournalTableConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.JournalTableConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        JournalTableConfigurationProperty {
+      /**
+       * The encryption configuration for the journal table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-journaltableconfiguration.html#cfn-s3-bucket-journaltableconfiguration-encryptionconfiguration)
+       */
+      override fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
+
+      /**
+       * The journal table record expiration settings for the journal table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-journaltableconfiguration.html#cfn-s3-bucket-journaltableconfiguration-recordexpiration)
+       */
+      override fun recordExpiration(): Any = unwrap(this).getRecordExpiration()
+
+      /**
+       * The Amazon Resource Name (ARN) for the journal table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-journaltableconfiguration.html#cfn-s3-bucket-journaltableconfiguration-tablearn)
+       */
+      override fun tableArn(): String? = unwrap(this).getTableArn()
+
+      /**
+       * The name of the journal table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-journaltableconfiguration.html#cfn-s3-bucket-journaltableconfiguration-tablename)
+       */
+      override fun tableName(): String? = unwrap(this).getTableName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          JournalTableConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.JournalTableConfigurationProperty):
+          JournalTableConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JournalTableConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JournalTableConfigurationProperty):
+          software.amazon.awscdk.services.s3.CfnBucket.JournalTableConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnBucket.JournalTableConfigurationProperty
+    }
+  }
+
+  /**
    * Describes the AWS Lambda functions to invoke and the events for which to invoke them.
    *
    * Example:
@@ -5256,6 +5930,24 @@ public open class CfnBucket(
     public fun rules(): Any
 
     /**
+     * Indicates which default minimum object size behavior is applied to the lifecycle
+     * configuration.
+     *
+     *
+     * This parameter applies to general purpose buckets only. It isn't supported for directory
+     * bucket lifecycle configurations.
+     *
+     *
+     * * `all_storage_classes_128K` - Objects smaller than 128 KB will not transition to any storage
+     * class by default.
+     * * `varies_by_storage_class` - Objects smaller than 128 KB will transition to Glacier Flexible
+     * Retrieval or Glacier Deep Archive storage classes. By default, all other storage classes will
+     * prevent transitions smaller than 128 KB.
+     *
+     * To customize the minimum object size for any transition you can add a filter that specifies a
+     * custom `ObjectSizeGreaterThan` or `ObjectSizeLessThan` in the body of your transition rule.
+     * Custom filters always take precedence over the default transition behavior.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfiguration.html#cfn-s3-bucket-lifecycleconfiguration-transitiondefaultminimumobjectsize)
      */
     public fun transitionDefaultMinimumObjectSize(): String? =
@@ -5282,7 +5974,22 @@ public open class CfnBucket(
       public fun rules(vararg rules: Any)
 
       /**
-       * @param transitionDefaultMinimumObjectSize the value to be set.
+       * @param transitionDefaultMinimumObjectSize Indicates which default minimum object size
+       * behavior is applied to the lifecycle configuration.
+       *
+       * This parameter applies to general purpose buckets only. It isn't supported for directory
+       * bucket lifecycle configurations.
+       *
+       *
+       * * `all_storage_classes_128K` - Objects smaller than 128 KB will not transition to any
+       * storage class by default.
+       * * `varies_by_storage_class` - Objects smaller than 128 KB will transition to Glacier
+       * Flexible Retrieval or Glacier Deep Archive storage classes. By default, all other storage
+       * classes will prevent transitions smaller than 128 KB.
+       *
+       * To customize the minimum object size for any transition you can add a filter that specifies
+       * a custom `ObjectSizeGreaterThan` or `ObjectSizeLessThan` in the body of your transition rule.
+       * Custom filters always take precedence over the default transition behavior.
        */
       public fun transitionDefaultMinimumObjectSize(transitionDefaultMinimumObjectSize: String)
     }
@@ -5312,7 +6019,22 @@ public open class CfnBucket(
       override fun rules(vararg rules: Any): Unit = rules(rules.toList())
 
       /**
-       * @param transitionDefaultMinimumObjectSize the value to be set.
+       * @param transitionDefaultMinimumObjectSize Indicates which default minimum object size
+       * behavior is applied to the lifecycle configuration.
+       *
+       * This parameter applies to general purpose buckets only. It isn't supported for directory
+       * bucket lifecycle configurations.
+       *
+       *
+       * * `all_storage_classes_128K` - Objects smaller than 128 KB will not transition to any
+       * storage class by default.
+       * * `varies_by_storage_class` - Objects smaller than 128 KB will transition to Glacier
+       * Flexible Retrieval or Glacier Deep Archive storage classes. By default, all other storage
+       * classes will prevent transitions smaller than 128 KB.
+       *
+       * To customize the minimum object size for any transition you can add a filter that specifies
+       * a custom `ObjectSizeGreaterThan` or `ObjectSizeLessThan` in the body of your transition rule.
+       * Custom filters always take precedence over the default transition behavior.
        */
       override fun transitionDefaultMinimumObjectSize(transitionDefaultMinimumObjectSize: String) {
         cdkBuilder.transitionDefaultMinimumObjectSize(transitionDefaultMinimumObjectSize)
@@ -5335,6 +6057,24 @@ public open class CfnBucket(
       override fun rules(): Any = unwrap(this).getRules()
 
       /**
+       * Indicates which default minimum object size behavior is applied to the lifecycle
+       * configuration.
+       *
+       *
+       * This parameter applies to general purpose buckets only. It isn't supported for directory
+       * bucket lifecycle configurations.
+       *
+       *
+       * * `all_storage_classes_128K` - Objects smaller than 128 KB will not transition to any
+       * storage class by default.
+       * * `varies_by_storage_class` - Objects smaller than 128 KB will transition to Glacier
+       * Flexible Retrieval or Glacier Deep Archive storage classes. By default, all other storage
+       * classes will prevent transitions smaller than 128 KB.
+       *
+       * To customize the minimum object size for any transition you can add a filter that specifies
+       * a custom `ObjectSizeGreaterThan` or `ObjectSizeLessThan` in the body of your transition rule.
+       * Custom filters always take precedence over the default transition behavior.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfiguration.html#cfn-s3-bucket-lifecycleconfiguration-transitiondefaultminimumobjectsize)
        */
       override fun transitionDefaultMinimumObjectSize(): String? =
@@ -5569,6 +6309,743 @@ public open class CfnBucket(
           software.amazon.awscdk.services.s3.CfnBucket.LoggingConfigurationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.s3.CfnBucket.LoggingConfigurationProperty
+    }
+  }
+
+  /**
+   * Creates a V2 Amazon S3 Metadata configuration of a general purpose bucket.
+   *
+   * For more information, see [Accelerating data discovery with S3
+   * Metadata](https://docs.aws.amazon.com/AmazonS3/latest/userguide/metadata-tables-overview.html) in
+   * the *Amazon S3 User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * MetadataConfigurationProperty metadataConfigurationProperty =
+   * MetadataConfigurationProperty.builder()
+   * .journalTableConfiguration(JournalTableConfigurationProperty.builder()
+   * .recordExpiration(RecordExpirationProperty.builder()
+   * .expiration("expiration")
+   * // the properties below are optional
+   * .days(123)
+   * .build())
+   * // the properties below are optional
+   * .encryptionConfiguration(MetadataTableEncryptionConfigurationProperty.builder()
+   * .sseAlgorithm("sseAlgorithm")
+   * // the properties below are optional
+   * .kmsKeyArn("kmsKeyArn")
+   * .build())
+   * .tableArn("tableArn")
+   * .tableName("tableName")
+   * .build())
+   * // the properties below are optional
+   * .destination(MetadataDestinationProperty.builder()
+   * .tableBucketType("tableBucketType")
+   * // the properties below are optional
+   * .tableBucketArn("tableBucketArn")
+   * .tableNamespace("tableNamespace")
+   * .build())
+   * .inventoryTableConfiguration(InventoryTableConfigurationProperty.builder()
+   * .configurationState("configurationState")
+   * // the properties below are optional
+   * .encryptionConfiguration(MetadataTableEncryptionConfigurationProperty.builder()
+   * .sseAlgorithm("sseAlgorithm")
+   * // the properties below are optional
+   * .kmsKeyArn("kmsKeyArn")
+   * .build())
+   * .tableArn("tableArn")
+   * .tableName("tableName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadataconfiguration.html)
+   */
+  public interface MetadataConfigurationProperty {
+    /**
+     * The destination information for the S3 Metadata configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadataconfiguration.html#cfn-s3-bucket-metadataconfiguration-destination)
+     */
+    public fun destination(): Any? = unwrap(this).getDestination()
+
+    /**
+     * The inventory table configuration for a metadata configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadataconfiguration.html#cfn-s3-bucket-metadataconfiguration-inventorytableconfiguration)
+     */
+    public fun inventoryTableConfiguration(): Any? = unwrap(this).getInventoryTableConfiguration()
+
+    /**
+     * The journal table configuration for a metadata configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadataconfiguration.html#cfn-s3-bucket-metadataconfiguration-journaltableconfiguration)
+     */
+    public fun journalTableConfiguration(): Any
+
+    /**
+     * A builder for [MetadataConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destination The destination information for the S3 Metadata configuration.
+       */
+      public fun destination(destination: IResolvable)
+
+      /**
+       * @param destination The destination information for the S3 Metadata configuration.
+       */
+      public fun destination(destination: MetadataDestinationProperty)
+
+      /**
+       * @param destination The destination information for the S3 Metadata configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("04f6757bb9764f38869391a7f7495db802e5fca1298808e5d05089ec3e3476dd")
+      public fun destination(destination: MetadataDestinationProperty.Builder.() -> Unit)
+
+      /**
+       * @param inventoryTableConfiguration The inventory table configuration for a metadata
+       * configuration.
+       */
+      public fun inventoryTableConfiguration(inventoryTableConfiguration: IResolvable)
+
+      /**
+       * @param inventoryTableConfiguration The inventory table configuration for a metadata
+       * configuration.
+       */
+      public
+          fun inventoryTableConfiguration(inventoryTableConfiguration: InventoryTableConfigurationProperty)
+
+      /**
+       * @param inventoryTableConfiguration The inventory table configuration for a metadata
+       * configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4429f38c84017ce7d5965d685cf4c64e81d274c1184b8ec1013712a4a13118a8")
+      public
+          fun inventoryTableConfiguration(inventoryTableConfiguration: InventoryTableConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param journalTableConfiguration The journal table configuration for a metadata
+       * configuration. 
+       */
+      public fun journalTableConfiguration(journalTableConfiguration: IResolvable)
+
+      /**
+       * @param journalTableConfiguration The journal table configuration for a metadata
+       * configuration. 
+       */
+      public
+          fun journalTableConfiguration(journalTableConfiguration: JournalTableConfigurationProperty)
+
+      /**
+       * @param journalTableConfiguration The journal table configuration for a metadata
+       * configuration. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5fdcb4f2f00644897f7c56c1956828b1d9a1fb3094f91c1bf47ece6e8f0fadff")
+      public
+          fun journalTableConfiguration(journalTableConfiguration: JournalTableConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataConfigurationProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataConfigurationProperty.builder()
+
+      /**
+       * @param destination The destination information for the S3 Metadata configuration.
+       */
+      override fun destination(destination: IResolvable) {
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param destination The destination information for the S3 Metadata configuration.
+       */
+      override fun destination(destination: MetadataDestinationProperty) {
+        cdkBuilder.destination(destination.let(MetadataDestinationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param destination The destination information for the S3 Metadata configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("04f6757bb9764f38869391a7f7495db802e5fca1298808e5d05089ec3e3476dd")
+      override fun destination(destination: MetadataDestinationProperty.Builder.() -> Unit): Unit =
+          destination(MetadataDestinationProperty(destination))
+
+      /**
+       * @param inventoryTableConfiguration The inventory table configuration for a metadata
+       * configuration.
+       */
+      override fun inventoryTableConfiguration(inventoryTableConfiguration: IResolvable) {
+        cdkBuilder.inventoryTableConfiguration(inventoryTableConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param inventoryTableConfiguration The inventory table configuration for a metadata
+       * configuration.
+       */
+      override
+          fun inventoryTableConfiguration(inventoryTableConfiguration: InventoryTableConfigurationProperty) {
+        cdkBuilder.inventoryTableConfiguration(inventoryTableConfiguration.let(InventoryTableConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param inventoryTableConfiguration The inventory table configuration for a metadata
+       * configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4429f38c84017ce7d5965d685cf4c64e81d274c1184b8ec1013712a4a13118a8")
+      override
+          fun inventoryTableConfiguration(inventoryTableConfiguration: InventoryTableConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          inventoryTableConfiguration(InventoryTableConfigurationProperty(inventoryTableConfiguration))
+
+      /**
+       * @param journalTableConfiguration The journal table configuration for a metadata
+       * configuration. 
+       */
+      override fun journalTableConfiguration(journalTableConfiguration: IResolvable) {
+        cdkBuilder.journalTableConfiguration(journalTableConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param journalTableConfiguration The journal table configuration for a metadata
+       * configuration. 
+       */
+      override
+          fun journalTableConfiguration(journalTableConfiguration: JournalTableConfigurationProperty) {
+        cdkBuilder.journalTableConfiguration(journalTableConfiguration.let(JournalTableConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param journalTableConfiguration The journal table configuration for a metadata
+       * configuration. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5fdcb4f2f00644897f7c56c1956828b1d9a1fb3094f91c1bf47ece6e8f0fadff")
+      override
+          fun journalTableConfiguration(journalTableConfiguration: JournalTableConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          journalTableConfiguration(JournalTableConfigurationProperty(journalTableConfiguration))
+
+      public fun build(): software.amazon.awscdk.services.s3.CfnBucket.MetadataConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.MetadataConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        MetadataConfigurationProperty {
+      /**
+       * The destination information for the S3 Metadata configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadataconfiguration.html#cfn-s3-bucket-metadataconfiguration-destination)
+       */
+      override fun destination(): Any? = unwrap(this).getDestination()
+
+      /**
+       * The inventory table configuration for a metadata configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadataconfiguration.html#cfn-s3-bucket-metadataconfiguration-inventorytableconfiguration)
+       */
+      override fun inventoryTableConfiguration(): Any? =
+          unwrap(this).getInventoryTableConfiguration()
+
+      /**
+       * The journal table configuration for a metadata configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadataconfiguration.html#cfn-s3-bucket-metadataconfiguration-journaltableconfiguration)
+       */
+      override fun journalTableConfiguration(): Any = unwrap(this).getJournalTableConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetadataConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.MetadataConfigurationProperty):
+          MetadataConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetadataConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetadataConfigurationProperty):
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataConfigurationProperty
+    }
+  }
+
+  /**
+   * The destination information for the S3 Metadata configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * MetadataDestinationProperty metadataDestinationProperty = MetadataDestinationProperty.builder()
+   * .tableBucketType("tableBucketType")
+   * // the properties below are optional
+   * .tableBucketArn("tableBucketArn")
+   * .tableNamespace("tableNamespace")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadatadestination.html)
+   */
+  public interface MetadataDestinationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the table bucket where the metadata configuration is
+     * stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadatadestination.html#cfn-s3-bucket-metadatadestination-tablebucketarn)
+     */
+    public fun tableBucketArn(): String? = unwrap(this).getTableBucketArn()
+
+    /**
+     * The type of the table bucket where the metadata configuration is stored.
+     *
+     * The `aws` value indicates an AWS managed table bucket, and the `customer` value indicates a
+     * customer-managed table bucket. V2 metadata configurations are stored in AWS managed table
+     * buckets, and V1 metadata configurations are stored in customer-managed table buckets.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadatadestination.html#cfn-s3-bucket-metadatadestination-tablebuckettype)
+     */
+    public fun tableBucketType(): String
+
+    /**
+     * The namespace in the table bucket where the metadata tables for a metadata configuration are
+     * stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadatadestination.html#cfn-s3-bucket-metadatadestination-tablenamespace)
+     */
+    public fun tableNamespace(): String? = unwrap(this).getTableNamespace()
+
+    /**
+     * A builder for [MetadataDestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param tableBucketArn The Amazon Resource Name (ARN) of the table bucket where the metadata
+       * configuration is stored.
+       */
+      public fun tableBucketArn(tableBucketArn: String)
+
+      /**
+       * @param tableBucketType The type of the table bucket where the metadata configuration is
+       * stored. 
+       * The `aws` value indicates an AWS managed table bucket, and the `customer` value indicates a
+       * customer-managed table bucket. V2 metadata configurations are stored in AWS managed table
+       * buckets, and V1 metadata configurations are stored in customer-managed table buckets.
+       */
+      public fun tableBucketType(tableBucketType: String)
+
+      /**
+       * @param tableNamespace The namespace in the table bucket where the metadata tables for a
+       * metadata configuration are stored.
+       */
+      public fun tableNamespace(tableNamespace: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataDestinationProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataDestinationProperty.builder()
+
+      /**
+       * @param tableBucketArn The Amazon Resource Name (ARN) of the table bucket where the metadata
+       * configuration is stored.
+       */
+      override fun tableBucketArn(tableBucketArn: String) {
+        cdkBuilder.tableBucketArn(tableBucketArn)
+      }
+
+      /**
+       * @param tableBucketType The type of the table bucket where the metadata configuration is
+       * stored. 
+       * The `aws` value indicates an AWS managed table bucket, and the `customer` value indicates a
+       * customer-managed table bucket. V2 metadata configurations are stored in AWS managed table
+       * buckets, and V1 metadata configurations are stored in customer-managed table buckets.
+       */
+      override fun tableBucketType(tableBucketType: String) {
+        cdkBuilder.tableBucketType(tableBucketType)
+      }
+
+      /**
+       * @param tableNamespace The namespace in the table bucket where the metadata tables for a
+       * metadata configuration are stored.
+       */
+      override fun tableNamespace(tableNamespace: String) {
+        cdkBuilder.tableNamespace(tableNamespace)
+      }
+
+      public fun build(): software.amazon.awscdk.services.s3.CfnBucket.MetadataDestinationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.MetadataDestinationProperty,
+    ) : CdkObject(cdkObject),
+        MetadataDestinationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the table bucket where the metadata configuration is
+       * stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadatadestination.html#cfn-s3-bucket-metadatadestination-tablebucketarn)
+       */
+      override fun tableBucketArn(): String? = unwrap(this).getTableBucketArn()
+
+      /**
+       * The type of the table bucket where the metadata configuration is stored.
+       *
+       * The `aws` value indicates an AWS managed table bucket, and the `customer` value indicates a
+       * customer-managed table bucket. V2 metadata configurations are stored in AWS managed table
+       * buckets, and V1 metadata configurations are stored in customer-managed table buckets.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadatadestination.html#cfn-s3-bucket-metadatadestination-tablebuckettype)
+       */
+      override fun tableBucketType(): String = unwrap(this).getTableBucketType()
+
+      /**
+       * The namespace in the table bucket where the metadata tables for a metadata configuration
+       * are stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadatadestination.html#cfn-s3-bucket-metadatadestination-tablenamespace)
+       */
+      override fun tableNamespace(): String? = unwrap(this).getTableNamespace()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetadataDestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.MetadataDestinationProperty):
+          MetadataDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetadataDestinationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetadataDestinationProperty):
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataDestinationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataDestinationProperty
+    }
+  }
+
+  /**
+   * We recommend that you create your S3 Metadata configurations by using the V2
+   * [MetadataConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-properties-s3-bucket-metadataconfiguration.html)
+   * resource type. We no longer recommend using the V1 `MetadataTableConfiguration` resource type.
+   * &gt;  &gt; If you created your S3 Metadata configuration before July 15, 2025, we recommend that
+   * you delete and re-create your configuration by using the
+   * [MetadataConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-properties-s3-bucket-metadataconfiguration.html)
+   * resource type so that you can expire journal table records and create a live inventory table.
+   *
+   * Creates a V1 S3 Metadata configuration for a general purpose bucket. For more information, see
+   * [Accelerating data discovery with S3
+   * Metadata](https://docs.aws.amazon.com/AmazonS3/latest/userguide/metadata-tables-overview.html) in
+   * the *Amazon S3 User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * MetadataTableConfigurationProperty metadataTableConfigurationProperty =
+   * MetadataTableConfigurationProperty.builder()
+   * .s3TablesDestination(S3TablesDestinationProperty.builder()
+   * .tableBucketArn("tableBucketArn")
+   * .tableName("tableName")
+   * // the properties below are optional
+   * .tableArn("tableArn")
+   * .tableNamespace("tableNamespace")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadatatableconfiguration.html)
+   */
+  public interface MetadataTableConfigurationProperty {
+    /**
+     * The destination information for the metadata table configuration.
+     *
+     * The destination table bucket must be in the same Region and AWS account as the general
+     * purpose bucket. The specified metadata table name must be unique within the `aws_s3_metadata`
+     * namespace in the destination table bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadatatableconfiguration.html#cfn-s3-bucket-metadatatableconfiguration-s3tablesdestination)
+     */
+    public fun s3TablesDestination(): Any
+
+    /**
+     * A builder for [MetadataTableConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3TablesDestination The destination information for the metadata table
+       * configuration. 
+       * The destination table bucket must be in the same Region and AWS account as the general
+       * purpose bucket. The specified metadata table name must be unique within the `aws_s3_metadata`
+       * namespace in the destination table bucket.
+       */
+      public fun s3TablesDestination(s3TablesDestination: IResolvable)
+
+      /**
+       * @param s3TablesDestination The destination information for the metadata table
+       * configuration. 
+       * The destination table bucket must be in the same Region and AWS account as the general
+       * purpose bucket. The specified metadata table name must be unique within the `aws_s3_metadata`
+       * namespace in the destination table bucket.
+       */
+      public fun s3TablesDestination(s3TablesDestination: S3TablesDestinationProperty)
+
+      /**
+       * @param s3TablesDestination The destination information for the metadata table
+       * configuration. 
+       * The destination table bucket must be in the same Region and AWS account as the general
+       * purpose bucket. The specified metadata table name must be unique within the `aws_s3_metadata`
+       * namespace in the destination table bucket.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b823cd30f16b5b8eaa14652f30272a38480428b7b2561fa265b8564445f565cc")
+      public
+          fun s3TablesDestination(s3TablesDestination: S3TablesDestinationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataTableConfigurationProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataTableConfigurationProperty.builder()
+
+      /**
+       * @param s3TablesDestination The destination information for the metadata table
+       * configuration. 
+       * The destination table bucket must be in the same Region and AWS account as the general
+       * purpose bucket. The specified metadata table name must be unique within the `aws_s3_metadata`
+       * namespace in the destination table bucket.
+       */
+      override fun s3TablesDestination(s3TablesDestination: IResolvable) {
+        cdkBuilder.s3TablesDestination(s3TablesDestination.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param s3TablesDestination The destination information for the metadata table
+       * configuration. 
+       * The destination table bucket must be in the same Region and AWS account as the general
+       * purpose bucket. The specified metadata table name must be unique within the `aws_s3_metadata`
+       * namespace in the destination table bucket.
+       */
+      override fun s3TablesDestination(s3TablesDestination: S3TablesDestinationProperty) {
+        cdkBuilder.s3TablesDestination(s3TablesDestination.let(S3TablesDestinationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param s3TablesDestination The destination information for the metadata table
+       * configuration. 
+       * The destination table bucket must be in the same Region and AWS account as the general
+       * purpose bucket. The specified metadata table name must be unique within the `aws_s3_metadata`
+       * namespace in the destination table bucket.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b823cd30f16b5b8eaa14652f30272a38480428b7b2561fa265b8564445f565cc")
+      override
+          fun s3TablesDestination(s3TablesDestination: S3TablesDestinationProperty.Builder.() -> Unit):
+          Unit = s3TablesDestination(S3TablesDestinationProperty(s3TablesDestination))
+
+      public fun build():
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataTableConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.MetadataTableConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        MetadataTableConfigurationProperty {
+      /**
+       * The destination information for the metadata table configuration.
+       *
+       * The destination table bucket must be in the same Region and AWS account as the general
+       * purpose bucket. The specified metadata table name must be unique within the `aws_s3_metadata`
+       * namespace in the destination table bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadatatableconfiguration.html#cfn-s3-bucket-metadatatableconfiguration-s3tablesdestination)
+       */
+      override fun s3TablesDestination(): Any = unwrap(this).getS3TablesDestination()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MetadataTableConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.MetadataTableConfigurationProperty):
+          MetadataTableConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetadataTableConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetadataTableConfigurationProperty):
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataTableConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataTableConfigurationProperty
+    }
+  }
+
+  /**
+   * The encryption settings for an S3 Metadata journal table or inventory table configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * MetadataTableEncryptionConfigurationProperty metadataTableEncryptionConfigurationProperty =
+   * MetadataTableEncryptionConfigurationProperty.builder()
+   * .sseAlgorithm("sseAlgorithm")
+   * // the properties below are optional
+   * .kmsKeyArn("kmsKeyArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadatatableencryptionconfiguration.html)
+   */
+  public interface MetadataTableEncryptionConfigurationProperty {
+    /**
+     * If server-side encryption with AWS Key Management Service ( AWS KMS ) keys (SSE-KMS) is
+     * specified, you must also specify the KMS key Amazon Resource Name (ARN).
+     *
+     * You must specify a customer-managed KMS key that's located in the same Region as the general
+     * purpose bucket that corresponds to the metadata table configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadatatableencryptionconfiguration.html#cfn-s3-bucket-metadatatableencryptionconfiguration-kmskeyarn)
+     */
+    public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+
+    /**
+     * The encryption type specified for a metadata table.
+     *
+     * To specify server-side encryption with AWS Key Management Service ( AWS KMS ) keys (SSE-KMS),
+     * use the `aws:kms` value. To specify server-side encryption with Amazon S3 managed keys (SSE-S3),
+     * use the `AES256` value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadatatableencryptionconfiguration.html#cfn-s3-bucket-metadatatableencryptionconfiguration-ssealgorithm)
+     */
+    public fun sseAlgorithm(): String
+
+    /**
+     * A builder for [MetadataTableEncryptionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKeyArn If server-side encryption with AWS Key Management Service ( AWS KMS ) keys
+       * (SSE-KMS) is specified, you must also specify the KMS key Amazon Resource Name (ARN).
+       * You must specify a customer-managed KMS key that's located in the same Region as the
+       * general purpose bucket that corresponds to the metadata table configuration.
+       */
+      public fun kmsKeyArn(kmsKeyArn: String)
+
+      /**
+       * @param sseAlgorithm The encryption type specified for a metadata table. 
+       * To specify server-side encryption with AWS Key Management Service ( AWS KMS ) keys
+       * (SSE-KMS), use the `aws:kms` value. To specify server-side encryption with Amazon S3 managed
+       * keys (SSE-S3), use the `AES256` value.
+       */
+      public fun sseAlgorithm(sseAlgorithm: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataTableEncryptionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataTableEncryptionConfigurationProperty.builder()
+
+      /**
+       * @param kmsKeyArn If server-side encryption with AWS Key Management Service ( AWS KMS ) keys
+       * (SSE-KMS) is specified, you must also specify the KMS key Amazon Resource Name (ARN).
+       * You must specify a customer-managed KMS key that's located in the same Region as the
+       * general purpose bucket that corresponds to the metadata table configuration.
+       */
+      override fun kmsKeyArn(kmsKeyArn: String) {
+        cdkBuilder.kmsKeyArn(kmsKeyArn)
+      }
+
+      /**
+       * @param sseAlgorithm The encryption type specified for a metadata table. 
+       * To specify server-side encryption with AWS Key Management Service ( AWS KMS ) keys
+       * (SSE-KMS), use the `aws:kms` value. To specify server-side encryption with Amazon S3 managed
+       * keys (SSE-S3), use the `AES256` value.
+       */
+      override fun sseAlgorithm(sseAlgorithm: String) {
+        cdkBuilder.sseAlgorithm(sseAlgorithm)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataTableEncryptionConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.MetadataTableEncryptionConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        MetadataTableEncryptionConfigurationProperty {
+      /**
+       * If server-side encryption with AWS Key Management Service ( AWS KMS ) keys (SSE-KMS) is
+       * specified, you must also specify the KMS key Amazon Resource Name (ARN).
+       *
+       * You must specify a customer-managed KMS key that's located in the same Region as the
+       * general purpose bucket that corresponds to the metadata table configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadatatableencryptionconfiguration.html#cfn-s3-bucket-metadatatableencryptionconfiguration-kmskeyarn)
+       */
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+
+      /**
+       * The encryption type specified for a metadata table.
+       *
+       * To specify server-side encryption with AWS Key Management Service ( AWS KMS ) keys
+       * (SSE-KMS), use the `aws:kms` value. To specify server-side encryption with Amazon S3 managed
+       * keys (SSE-S3), use the `AES256` value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metadatatableencryptionconfiguration.html#cfn-s3-bucket-metadatatableencryptionconfiguration-ssealgorithm)
+       */
+      override fun sseAlgorithm(): String = unwrap(this).getSseAlgorithm()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MetadataTableEncryptionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.MetadataTableEncryptionConfigurationProperty):
+          MetadataTableEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetadataTableEncryptionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetadataTableEncryptionConfigurationProperty):
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataTableEncryptionConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnBucket.MetadataTableEncryptionConfigurationProperty
     }
   }
 
@@ -8067,6 +9544,136 @@ public open class CfnBucket(
   }
 
   /**
+   * The journal table record expiration settings for a journal table in an S3 Metadata
+   * configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * RecordExpirationProperty recordExpirationProperty = RecordExpirationProperty.builder()
+   * .expiration("expiration")
+   * // the properties below are optional
+   * .days(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-recordexpiration.html)
+   */
+  public interface RecordExpirationProperty {
+    /**
+     * If you enable journal table record expiration, you can set the number of days to retain your
+     * journal table records.
+     *
+     * Journal table records must be retained for a minimum of 7 days. To set this value, specify
+     * any whole number from `7` to `2147483647` . For example, to retain your journal table records
+     * for one year, set this value to `365` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-recordexpiration.html#cfn-s3-bucket-recordexpiration-days)
+     */
+    public fun days(): Number? = unwrap(this).getDays()
+
+    /**
+     * Specifies whether journal table record expiration is enabled or disabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-recordexpiration.html#cfn-s3-bucket-recordexpiration-expiration)
+     */
+    public fun expiration(): String
+
+    /**
+     * A builder for [RecordExpirationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param days If you enable journal table record expiration, you can set the number of days
+       * to retain your journal table records.
+       * Journal table records must be retained for a minimum of 7 days. To set this value, specify
+       * any whole number from `7` to `2147483647` . For example, to retain your journal table records
+       * for one year, set this value to `365` .
+       */
+      public fun days(days: Number)
+
+      /**
+       * @param expiration Specifies whether journal table record expiration is enabled or disabled.
+       * 
+       */
+      public fun expiration(expiration: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnBucket.RecordExpirationProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnBucket.RecordExpirationProperty.builder()
+
+      /**
+       * @param days If you enable journal table record expiration, you can set the number of days
+       * to retain your journal table records.
+       * Journal table records must be retained for a minimum of 7 days. To set this value, specify
+       * any whole number from `7` to `2147483647` . For example, to retain your journal table records
+       * for one year, set this value to `365` .
+       */
+      override fun days(days: Number) {
+        cdkBuilder.days(days)
+      }
+
+      /**
+       * @param expiration Specifies whether journal table record expiration is enabled or disabled.
+       * 
+       */
+      override fun expiration(expiration: String) {
+        cdkBuilder.expiration(expiration)
+      }
+
+      public fun build(): software.amazon.awscdk.services.s3.CfnBucket.RecordExpirationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RecordExpirationProperty,
+    ) : CdkObject(cdkObject),
+        RecordExpirationProperty {
+      /**
+       * If you enable journal table record expiration, you can set the number of days to retain
+       * your journal table records.
+       *
+       * Journal table records must be retained for a minimum of 7 days. To set this value, specify
+       * any whole number from `7` to `2147483647` . For example, to retain your journal table records
+       * for one year, set this value to `365` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-recordexpiration.html#cfn-s3-bucket-recordexpiration-days)
+       */
+      override fun days(): Number? = unwrap(this).getDays()
+
+      /**
+       * Specifies whether journal table record expiration is enabled or disabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-recordexpiration.html#cfn-s3-bucket-recordexpiration-expiration)
+       */
+      override fun expiration(): String = unwrap(this).getExpiration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RecordExpirationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RecordExpirationProperty):
+          RecordExpirationProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordExpirationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RecordExpirationProperty):
+          software.amazon.awscdk.services.s3.CfnBucket.RecordExpirationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnBucket.RecordExpirationProperty
+    }
+  }
+
+  /**
    * Specifies the redirect behavior of all requests to a website endpoint of an Amazon S3 bucket.
    *
    * Example:
@@ -8893,6 +10500,8 @@ public open class CfnBucket(
      * replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html)
      * action in the *Amazon S3 API Reference* .
      *
+     * `FSX_OPENZFS` is not an accepted value when replicating objects.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationdestination.html#cfn-s3-bucket-replicationdestination-storageclass)
      */
     public fun storageClass(): String? = unwrap(this).getStorageClass()
@@ -9025,6 +10634,8 @@ public open class CfnBucket(
        * For valid values, see the `StorageClass` element of the [PUT Bucket
        * replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html)
        * action in the *Amazon S3 API Reference* .
+       *
+       * `FSX_OPENZFS` is not an accepted value when replicating objects.
        */
       public fun storageClass(storageClass: String)
     }
@@ -9183,6 +10794,8 @@ public open class CfnBucket(
        * For valid values, see the `StorageClass` element of the [PUT Bucket
        * replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html)
        * action in the *Amazon S3 API Reference* .
+       *
+       * `FSX_OPENZFS` is not an accepted value when replicating objects.
        */
       override fun storageClass(storageClass: String) {
         cdkBuilder.storageClass(storageClass)
@@ -9267,6 +10880,8 @@ public open class CfnBucket(
        * For valid values, see the `StorageClass` element of the [PUT Bucket
        * replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html)
        * action in the *Amazon S3 API Reference* .
+       *
+       * `FSX_OPENZFS` is not an accepted value when replicating objects.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationdestination.html#cfn-s3-bucket-replicationdestination-storageclass)
        */
@@ -10751,7 +12366,7 @@ public open class CfnBucket(
      *
      * For example, to redirect requests for `ExamplePage.html` , the key prefix will be
      * `ExamplePage.html` . To redirect request for all pages with the prefix `docs/` , the key prefix
-     * will be `/docs` , which identifies all objects in the docs/ folder.
+     * will be `docs/` , which identifies all objects in the docs/ folder.
      *
      * Required when the parent element `Condition` is specified and sibling
      * `HttpErrorCodeReturnedEquals` is not specified. If both conditions are specified, both must be
@@ -10780,7 +12395,7 @@ public open class CfnBucket(
        * @param keyPrefixEquals The object key name prefix when the redirect is applied.
        * For example, to redirect requests for `ExamplePage.html` , the key prefix will be
        * `ExamplePage.html` . To redirect request for all pages with the prefix `docs/` , the key
-       * prefix will be `/docs` , which identifies all objects in the docs/ folder.
+       * prefix will be `docs/` , which identifies all objects in the docs/ folder.
        *
        * Required when the parent element `Condition` is specified and sibling
        * `HttpErrorCodeReturnedEquals` is not specified. If both conditions are specified, both must be
@@ -10810,7 +12425,7 @@ public open class CfnBucket(
        * @param keyPrefixEquals The object key name prefix when the redirect is applied.
        * For example, to redirect requests for `ExamplePage.html` , the key prefix will be
        * `ExamplePage.html` . To redirect request for all pages with the prefix `docs/` , the key
-       * prefix will be `/docs` , which identifies all objects in the docs/ folder.
+       * prefix will be `docs/` , which identifies all objects in the docs/ folder.
        *
        * Required when the parent element `Condition` is specified and sibling
        * `HttpErrorCodeReturnedEquals` is not specified. If both conditions are specified, both must be
@@ -10847,7 +12462,7 @@ public open class CfnBucket(
        *
        * For example, to redirect requests for `ExamplePage.html` , the key prefix will be
        * `ExamplePage.html` . To redirect request for all pages with the prefix `docs/` , the key
-       * prefix will be `/docs` , which identifies all objects in the docs/ folder.
+       * prefix will be `docs/` , which identifies all objects in the docs/ folder.
        *
        * Required when the parent element `Condition` is specified and sibling
        * `HttpErrorCodeReturnedEquals` is not specified. If both conditions are specified, both must be
@@ -11379,7 +12994,7 @@ public open class CfnBucket(
        * an expiration and transition time, you must use the same time unit for both properties (either
        * in days or by date). The expiration time must also be later than the transition time.
        */
-      public fun expirationDate(expirationDate: IResolvable)
+      public fun expirationDate(expirationDate: Instant)
 
       /**
        * @param expirationDate Indicates when objects are deleted from Amazon S3 and Amazon S3
@@ -11388,7 +13003,7 @@ public open class CfnBucket(
        * an expiration and transition time, you must use the same time unit for both properties (either
        * in days or by date). The expiration time must also be later than the transition time.
        */
-      public fun expirationDate(expirationDate: Instant)
+      public fun expirationDate(expirationDate: IResolvable)
 
       /**
        * @param expirationInDays Indicates the number of days after creation when objects are
@@ -11670,8 +13285,8 @@ public open class CfnBucket(
        * an expiration and transition time, you must use the same time unit for both properties (either
        * in days or by date). The expiration time must also be later than the transition time.
        */
-      override fun expirationDate(expirationDate: IResolvable) {
-        cdkBuilder.expirationDate(expirationDate.let(IResolvable.Companion::unwrap))
+      override fun expirationDate(expirationDate: Instant) {
+        cdkBuilder.expirationDate(expirationDate)
       }
 
       /**
@@ -11681,8 +13296,8 @@ public open class CfnBucket(
        * an expiration and transition time, you must use the same time unit for both properties (either
        * in days or by date). The expiration time must also be later than the transition time.
        */
-      override fun expirationDate(expirationDate: Instant) {
-        cdkBuilder.expirationDate(expirationDate)
+      override fun expirationDate(expirationDate: IResolvable) {
+        cdkBuilder.expirationDate(expirationDate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12294,6 +13909,217 @@ public open class CfnBucket(
   }
 
   /**
+   * The destination information for a V1 S3 Metadata configuration.
+   *
+   * The destination table bucket must be in the same Region and AWS account as the general purpose
+   * bucket. The specified metadata table name must be unique within the `aws_s3_metadata` namespace in
+   * the destination table bucket.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.s3.*;
+   * S3TablesDestinationProperty s3TablesDestinationProperty = S3TablesDestinationProperty.builder()
+   * .tableBucketArn("tableBucketArn")
+   * .tableName("tableName")
+   * // the properties below are optional
+   * .tableArn("tableArn")
+   * .tableNamespace("tableNamespace")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-s3tablesdestination.html)
+   */
+  public interface S3TablesDestinationProperty {
+    /**
+     * The Amazon Resource Name (ARN) for the metadata table in the metadata table configuration.
+     *
+     * The specified metadata table name must be unique within the `aws_s3_metadata` namespace in
+     * the destination table bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-s3tablesdestination.html#cfn-s3-bucket-s3tablesdestination-tablearn)
+     */
+    public fun tableArn(): String? = unwrap(this).getTableArn()
+
+    /**
+     * The Amazon Resource Name (ARN) for the table bucket that's specified as the destination in
+     * the metadata table configuration.
+     *
+     * The destination table bucket must be in the same Region and AWS account as the general
+     * purpose bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-s3tablesdestination.html#cfn-s3-bucket-s3tablesdestination-tablebucketarn)
+     */
+    public fun tableBucketArn(): String
+
+    /**
+     * The name for the metadata table in your metadata table configuration.
+     *
+     * The specified metadata table name must be unique within the `aws_s3_metadata` namespace in
+     * the destination table bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-s3tablesdestination.html#cfn-s3-bucket-s3tablesdestination-tablename)
+     */
+    public fun tableName(): String
+
+    /**
+     * The table bucket namespace for the metadata table in your metadata table configuration.
+     *
+     * This value is always `aws_s3_metadata` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-s3tablesdestination.html#cfn-s3-bucket-s3tablesdestination-tablenamespace)
+     */
+    public fun tableNamespace(): String? = unwrap(this).getTableNamespace()
+
+    /**
+     * A builder for [S3TablesDestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param tableArn The Amazon Resource Name (ARN) for the metadata table in the metadata table
+       * configuration.
+       * The specified metadata table name must be unique within the `aws_s3_metadata` namespace in
+       * the destination table bucket.
+       */
+      public fun tableArn(tableArn: String)
+
+      /**
+       * @param tableBucketArn The Amazon Resource Name (ARN) for the table bucket that's specified
+       * as the destination in the metadata table configuration. 
+       * The destination table bucket must be in the same Region and AWS account as the general
+       * purpose bucket.
+       */
+      public fun tableBucketArn(tableBucketArn: String)
+
+      /**
+       * @param tableName The name for the metadata table in your metadata table configuration. 
+       * The specified metadata table name must be unique within the `aws_s3_metadata` namespace in
+       * the destination table bucket.
+       */
+      public fun tableName(tableName: String)
+
+      /**
+       * @param tableNamespace The table bucket namespace for the metadata table in your metadata
+       * table configuration.
+       * This value is always `aws_s3_metadata` .
+       */
+      public fun tableNamespace(tableNamespace: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.s3.CfnBucket.S3TablesDestinationProperty.Builder =
+          software.amazon.awscdk.services.s3.CfnBucket.S3TablesDestinationProperty.builder()
+
+      /**
+       * @param tableArn The Amazon Resource Name (ARN) for the metadata table in the metadata table
+       * configuration.
+       * The specified metadata table name must be unique within the `aws_s3_metadata` namespace in
+       * the destination table bucket.
+       */
+      override fun tableArn(tableArn: String) {
+        cdkBuilder.tableArn(tableArn)
+      }
+
+      /**
+       * @param tableBucketArn The Amazon Resource Name (ARN) for the table bucket that's specified
+       * as the destination in the metadata table configuration. 
+       * The destination table bucket must be in the same Region and AWS account as the general
+       * purpose bucket.
+       */
+      override fun tableBucketArn(tableBucketArn: String) {
+        cdkBuilder.tableBucketArn(tableBucketArn)
+      }
+
+      /**
+       * @param tableName The name for the metadata table in your metadata table configuration. 
+       * The specified metadata table name must be unique within the `aws_s3_metadata` namespace in
+       * the destination table bucket.
+       */
+      override fun tableName(tableName: String) {
+        cdkBuilder.tableName(tableName)
+      }
+
+      /**
+       * @param tableNamespace The table bucket namespace for the metadata table in your metadata
+       * table configuration.
+       * This value is always `aws_s3_metadata` .
+       */
+      override fun tableNamespace(tableNamespace: String) {
+        cdkBuilder.tableNamespace(tableNamespace)
+      }
+
+      public fun build(): software.amazon.awscdk.services.s3.CfnBucket.S3TablesDestinationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.s3.CfnBucket.S3TablesDestinationProperty,
+    ) : CdkObject(cdkObject),
+        S3TablesDestinationProperty {
+      /**
+       * The Amazon Resource Name (ARN) for the metadata table in the metadata table configuration.
+       *
+       * The specified metadata table name must be unique within the `aws_s3_metadata` namespace in
+       * the destination table bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-s3tablesdestination.html#cfn-s3-bucket-s3tablesdestination-tablearn)
+       */
+      override fun tableArn(): String? = unwrap(this).getTableArn()
+
+      /**
+       * The Amazon Resource Name (ARN) for the table bucket that's specified as the destination in
+       * the metadata table configuration.
+       *
+       * The destination table bucket must be in the same Region and AWS account as the general
+       * purpose bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-s3tablesdestination.html#cfn-s3-bucket-s3tablesdestination-tablebucketarn)
+       */
+      override fun tableBucketArn(): String = unwrap(this).getTableBucketArn()
+
+      /**
+       * The name for the metadata table in your metadata table configuration.
+       *
+       * The specified metadata table name must be unique within the `aws_s3_metadata` namespace in
+       * the destination table bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-s3tablesdestination.html#cfn-s3-bucket-s3tablesdestination-tablename)
+       */
+      override fun tableName(): String = unwrap(this).getTableName()
+
+      /**
+       * The table bucket namespace for the metadata table in your metadata table configuration.
+       *
+       * This value is always `aws_s3_metadata` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-s3tablesdestination.html#cfn-s3-bucket-s3tablesdestination-tablenamespace)
+       */
+      override fun tableNamespace(): String? = unwrap(this).getTableNamespace()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3TablesDestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.S3TablesDestinationProperty):
+          S3TablesDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3TablesDestinationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3TablesDestinationProperty):
+          software.amazon.awscdk.services.s3.CfnBucket.S3TablesDestinationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.s3.CfnBucket.S3TablesDestinationProperty
+    }
+  }
+
+  /**
    * Describes the default server-side encryption to apply to new objects in the bucket.
    *
    * If a PUT Object request doesn't specify any server-side encryption, this default encryption
@@ -12308,7 +14134,7 @@ public open class CfnBucket(
    * for SSE-KMS.
    * * *Directory buckets* - Your SSE-KMS configuration can only support 1 [customer managed
    * key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#customer-cmk) per
-   * directory bucket for the lifetime of the bucket. The [AWS managed
+   * directory bucket's lifetime. The [AWS managed
    * key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk) (
    * `aws/s3` ) isn't supported.
    * * *Directory buckets* - For directory buckets, there are only two supported options for
@@ -13216,6 +15042,10 @@ public open class CfnBucket(
   /**
    * Specifies tags to use to identify a subset of objects for an Amazon S3 bucket.
    *
+   * For more information, see [Categorizing your storage using
+   * tags](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-tagging.html) in the *Amazon
+   * Simple Storage Service User Guide* .
+   *
    * Example:
    *
    * ```
@@ -13856,7 +15686,14 @@ public open class CfnBucket(
      * Indicates the number of days after creation when objects are transitioned to the specified
      * storage class.
      *
-     * The value must be a positive integer.
+     * If the specified storage class is `INTELLIGENT_TIERING` , `GLACIER_IR` , `GLACIER` , or
+     * `DEEP_ARCHIVE` , valid values are `0` or positive integers. If the specified storage class is
+     * `STANDARD_IA` or `ONEZONE_IA` , valid values are positive integers greater than `30` . Be aware
+     * that some storage classes have a minimum storage duration and that you're charged for
+     * transitioning objects before their minimum storage duration. For more information, see
+     * [Constraints and considerations for
+     * transitions](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-transition-general-considerations.html#lifecycle-configuration-constraints)
+     * in the *Amazon S3 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-transition.html#cfn-s3-bucket-transition-transitionindays)
      */
@@ -13877,19 +15714,26 @@ public open class CfnBucket(
        * class.
        * The date value must be in ISO 8601 format. The time is always midnight UTC.
        */
-      public fun transitionDate(transitionDate: IResolvable)
+      public fun transitionDate(transitionDate: Instant)
 
       /**
        * @param transitionDate Indicates when objects are transitioned to the specified storage
        * class.
        * The date value must be in ISO 8601 format. The time is always midnight UTC.
        */
-      public fun transitionDate(transitionDate: Instant)
+      public fun transitionDate(transitionDate: IResolvable)
 
       /**
        * @param transitionInDays Indicates the number of days after creation when objects are
        * transitioned to the specified storage class.
-       * The value must be a positive integer.
+       * If the specified storage class is `INTELLIGENT_TIERING` , `GLACIER_IR` , `GLACIER` , or
+       * `DEEP_ARCHIVE` , valid values are `0` or positive integers. If the specified storage class is
+       * `STANDARD_IA` or `ONEZONE_IA` , valid values are positive integers greater than `30` . Be
+       * aware that some storage classes have a minimum storage duration and that you're charged for
+       * transitioning objects before their minimum storage duration. For more information, see
+       * [Constraints and considerations for
+       * transitions](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-transition-general-considerations.html#lifecycle-configuration-constraints)
+       * in the *Amazon S3 User Guide* .
        */
       public fun transitionInDays(transitionInDays: Number)
     }
@@ -13911,8 +15755,8 @@ public open class CfnBucket(
        * class.
        * The date value must be in ISO 8601 format. The time is always midnight UTC.
        */
-      override fun transitionDate(transitionDate: IResolvable) {
-        cdkBuilder.transitionDate(transitionDate.let(IResolvable.Companion::unwrap))
+      override fun transitionDate(transitionDate: Instant) {
+        cdkBuilder.transitionDate(transitionDate)
       }
 
       /**
@@ -13920,14 +15764,21 @@ public open class CfnBucket(
        * class.
        * The date value must be in ISO 8601 format. The time is always midnight UTC.
        */
-      override fun transitionDate(transitionDate: Instant) {
-        cdkBuilder.transitionDate(transitionDate)
+      override fun transitionDate(transitionDate: IResolvable) {
+        cdkBuilder.transitionDate(transitionDate.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param transitionInDays Indicates the number of days after creation when objects are
        * transitioned to the specified storage class.
-       * The value must be a positive integer.
+       * If the specified storage class is `INTELLIGENT_TIERING` , `GLACIER_IR` , `GLACIER` , or
+       * `DEEP_ARCHIVE` , valid values are `0` or positive integers. If the specified storage class is
+       * `STANDARD_IA` or `ONEZONE_IA` , valid values are positive integers greater than `30` . Be
+       * aware that some storage classes have a minimum storage duration and that you're charged for
+       * transitioning objects before their minimum storage duration. For more information, see
+       * [Constraints and considerations for
+       * transitions](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-transition-general-considerations.html#lifecycle-configuration-constraints)
+       * in the *Amazon S3 User Guide* .
        */
       override fun transitionInDays(transitionInDays: Number) {
         cdkBuilder.transitionInDays(transitionInDays)
@@ -13961,7 +15812,14 @@ public open class CfnBucket(
        * Indicates the number of days after creation when objects are transitioned to the specified
        * storage class.
        *
-       * The value must be a positive integer.
+       * If the specified storage class is `INTELLIGENT_TIERING` , `GLACIER_IR` , `GLACIER` , or
+       * `DEEP_ARCHIVE` , valid values are `0` or positive integers. If the specified storage class is
+       * `STANDARD_IA` or `ONEZONE_IA` , valid values are positive integers greater than `30` . Be
+       * aware that some storage classes have a minimum storage duration and that you're charged for
+       * transitioning objects before their minimum storage duration. For more information, see
+       * [Constraints and considerations for
+       * transitions](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-transition-general-considerations.html#lifecycle-configuration-constraints)
+       * in the *Amazon S3 User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-transition.html#cfn-s3-bucket-transition-transitionindays)
        */

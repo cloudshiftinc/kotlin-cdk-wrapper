@@ -22,14 +22,11 @@ import kotlin.jvm.JvmName
  *
  * ```
  * UserPool.Builder.create(this, "myuserpool")
- * // ...
- * .selfSignUpEnabled(true)
- * .userVerification(UserVerificationConfig.builder()
- * .emailSubject("Verify your email for our awesome app!")
- * .emailBody("Thanks for signing up to our awesome app! Your verification code is {####}")
- * .emailStyle(VerificationEmailStyle.CODE)
- * .smsMessage("Thanks for signing up to our awesome app! Your verification code is {####}")
+ * .signInPolicy(SignInPolicy.builder()
+ * .allowedFirstAuthFactors(AllowedFirstAuthFactors.builder().password(true).passkey(true).build())
  * .build())
+ * .passkeyRelyingPartyId("auth.example.com")
+ * .passkeyUserVerification(PasskeyUserVerification.REQUIRED)
  * .build();
  * ```
  */
@@ -47,7 +44,8 @@ public interface UserPoolProps {
    *
    * Default: - no value
    *
-   * @deprecated Advanced Security Mode is deprecated in favor of user pool feature plans.
+   * @deprecated Advanced Security Mode is deprecated due to user pool feature plans. Use
+   * StandardThreatProtectionMode and CustomThreatProtectionMode to set Thread Protection level.
    */
   @Deprecated(message = "deprecated in CDK")
   public fun advancedSecurityMode(): AdvancedSecurityMode? =
@@ -82,6 +80,18 @@ public interface UserPoolProps {
    * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-custom-sender-triggers.html)
    */
   public fun customSenderKmsKey(): IKey? = unwrap(this).getCustomSenderKmsKey()?.let(IKey::wrap)
+
+  /**
+   * The Type of Threat Protection Enabled for Custom Authentication.
+   *
+   * This feature only functions if your FeaturePlan is set to FeaturePlan.PLUS
+   *
+   * Default: - no value
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-userpooladdons.html)
+   */
+  public fun customThreatProtectionMode(): CustomThreatProtectionMode? =
+      unwrap(this).getCustomThreatProtectionMode()?.let(CustomThreatProtectionMode::wrap)
 
   /**
    * Indicates whether the user pool should have deletion protection enabled.
@@ -177,6 +187,32 @@ public interface UserPoolProps {
       unwrap(this).getMfaSecondFactor()?.let(MfaSecondFactor::wrap)
 
   /**
+   * The authentication domain that passkey providers must use as a relying party (RP) in their
+   * configuration.
+   *
+   * Under the following conditions, the passkey relying party ID must be the fully-qualified domain
+   * name of your custom domain:
+   *
+   * * The user pool is configured for passkey authentication.
+   * * The user pool has a custom domain, whether or not it also has a prefix domain.
+   * * Your application performs authentication with managed login or the classic hosted UI.
+   *
+   * Default: - No authentication domain
+   */
+  public fun passkeyRelyingPartyId(): String? = unwrap(this).getPasskeyRelyingPartyId()
+
+  /**
+   * Your user-pool treatment for MFA with a passkey.
+   *
+   * You can override other MFA options and require passkey MFA, or you can set it as preferred.
+   * When passkey MFA is preferred, the hosted UI encourages users to register a passkey at sign-in.
+   *
+   * Default: - Cognito default setting is PasskeyUserVerification.PREFERRED
+   */
+  public fun passkeyUserVerification(): PasskeyUserVerification? =
+      unwrap(this).getPasskeyUserVerification()?.let(PasskeyUserVerification::wrap)
+
+  /**
    * Password policy for this user pool.
    *
    * Default: - see defaults on each property of PasswordPolicy.
@@ -231,6 +267,13 @@ public interface UserPoolProps {
   public fun signInCaseSensitive(): Boolean? = unwrap(this).getSignInCaseSensitive()
 
   /**
+   * Sign-in policy for this user pool.
+   *
+   * Default: - see defaults on each property of SignInPolicy.
+   */
+  public fun signInPolicy(): SignInPolicy? = unwrap(this).getSignInPolicy()?.let(SignInPolicy::wrap)
+
+  /**
    * The IAM role that Cognito will assume while sending SMS messages.
    *
    * Default: - a new IAM role is created.
@@ -272,6 +315,18 @@ public interface UserPoolProps {
       unwrap(this).getStandardAttributes()?.let(StandardAttributes::wrap)
 
   /**
+   * The Type of Threat Protection Enabled for Standard Authentication.
+   *
+   * This feature only functions if your FeaturePlan is set to FeaturePlan.PLUS
+   *
+   * Default: - StandardThreatProtectionMode.NO_ENFORCEMENT
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-userpooladdons.html)
+   */
+  public fun standardThreatProtectionMode(): StandardThreatProtectionMode? =
+      unwrap(this).getStandardThreatProtectionMode()?.let(StandardThreatProtectionMode::wrap)
+
+  /**
    * Configuration around admins signing up users into a user pool.
    *
    * Default: - see defaults in UserInvitationConfig.
@@ -308,7 +363,8 @@ public interface UserPoolProps {
 
     /**
      * @param advancedSecurityMode The user pool's Advanced Security Mode.
-     * @deprecated Advanced Security Mode is deprecated in favor of user pool feature plans.
+     * @deprecated Advanced Security Mode is deprecated due to user pool feature plans. Use
+     * StandardThreatProtectionMode and CustomThreatProtectionMode to set Thread Protection level.
      */
     @Deprecated(message = "deprecated in CDK")
     public fun advancedSecurityMode(advancedSecurityMode: AdvancedSecurityMode)
@@ -340,6 +396,13 @@ public interface UserPoolProps {
      * authorization codes that Amazon Cognito generates.
      */
     public fun customSenderKmsKey(customSenderKmsKey: IKey)
+
+    /**
+     * @param customThreatProtectionMode The Type of Threat Protection Enabled for Custom
+     * Authentication.
+     * This feature only functions if your FeaturePlan is set to FeaturePlan.PLUS
+     */
+    public fun customThreatProtectionMode(customThreatProtectionMode: CustomThreatProtectionMode)
 
     /**
      * @param deletionProtection Indicates whether the user pool should have deletion protection
@@ -432,6 +495,26 @@ public interface UserPoolProps {
     public fun mfaSecondFactor(mfaSecondFactor: MfaSecondFactor.Builder.() -> Unit)
 
     /**
+     * @param passkeyRelyingPartyId The authentication domain that passkey providers must use as a
+     * relying party (RP) in their configuration.
+     * Under the following conditions, the passkey relying party ID must be the fully-qualified
+     * domain name of your custom domain:
+     *
+     * * The user pool is configured for passkey authentication.
+     * * The user pool has a custom domain, whether or not it also has a prefix domain.
+     * * Your application performs authentication with managed login or the classic hosted UI.
+     */
+    public fun passkeyRelyingPartyId(passkeyRelyingPartyId: String)
+
+    /**
+     * @param passkeyUserVerification Your user-pool treatment for MFA with a passkey.
+     * You can override other MFA options and require passkey MFA, or you can set it as preferred.
+     * When passkey MFA is preferred, the hosted UI encourages users to register a passkey at
+     * sign-in.
+     */
+    public fun passkeyUserVerification(passkeyUserVerification: PasskeyUserVerification)
+
+    /**
      * @param passwordPolicy Password policy for this user pool.
      */
     public fun passwordPolicy(passwordPolicy: PasswordPolicy)
@@ -494,6 +577,18 @@ public interface UserPoolProps {
     public fun signInCaseSensitive(signInCaseSensitive: Boolean)
 
     /**
+     * @param signInPolicy Sign-in policy for this user pool.
+     */
+    public fun signInPolicy(signInPolicy: SignInPolicy)
+
+    /**
+     * @param signInPolicy Sign-in policy for this user pool.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("cf089274b231d7e2db39cc1752e2cdae62b3404f482ad129297b29a450c918bf")
+    public fun signInPolicy(signInPolicy: SignInPolicy.Builder.() -> Unit)
+
+    /**
      * @param smsRole The IAM role that Cognito will assume while sending SMS messages.
      */
     public fun smsRole(smsRole: IRole)
@@ -531,6 +626,14 @@ public interface UserPoolProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3a2715b7948228a46279c9333a4055c40ab1580e1a61e60dd6a8d822fb787658")
     public fun standardAttributes(standardAttributes: StandardAttributes.Builder.() -> Unit)
+
+    /**
+     * @param standardThreatProtectionMode The Type of Threat Protection Enabled for Standard
+     * Authentication.
+     * This feature only functions if your FeaturePlan is set to FeaturePlan.PLUS
+     */
+    public
+        fun standardThreatProtectionMode(standardThreatProtectionMode: StandardThreatProtectionMode)
 
     /**
      * @param userInvitation Configuration around admins signing up users into a user pool.
@@ -577,7 +680,8 @@ public interface UserPoolProps {
 
     /**
      * @param advancedSecurityMode The user pool's Advanced Security Mode.
-     * @deprecated Advanced Security Mode is deprecated in favor of user pool feature plans.
+     * @deprecated Advanced Security Mode is deprecated due to user pool feature plans. Use
+     * StandardThreatProtectionMode and CustomThreatProtectionMode to set Thread Protection level.
      */
     @Deprecated(message = "deprecated in CDK")
     override fun advancedSecurityMode(advancedSecurityMode: AdvancedSecurityMode) {
@@ -617,6 +721,16 @@ public interface UserPoolProps {
      */
     override fun customSenderKmsKey(customSenderKmsKey: IKey) {
       cdkBuilder.customSenderKmsKey(customSenderKmsKey.let(IKey.Companion::unwrap))
+    }
+
+    /**
+     * @param customThreatProtectionMode The Type of Threat Protection Enabled for Custom
+     * Authentication.
+     * This feature only functions if your FeaturePlan is set to FeaturePlan.PLUS
+     */
+    override
+        fun customThreatProtectionMode(customThreatProtectionMode: CustomThreatProtectionMode) {
+      cdkBuilder.customThreatProtectionMode(customThreatProtectionMode.let(CustomThreatProtectionMode.Companion::unwrap))
     }
 
     /**
@@ -734,6 +848,30 @@ public interface UserPoolProps {
         mfaSecondFactor(MfaSecondFactor(mfaSecondFactor))
 
     /**
+     * @param passkeyRelyingPartyId The authentication domain that passkey providers must use as a
+     * relying party (RP) in their configuration.
+     * Under the following conditions, the passkey relying party ID must be the fully-qualified
+     * domain name of your custom domain:
+     *
+     * * The user pool is configured for passkey authentication.
+     * * The user pool has a custom domain, whether or not it also has a prefix domain.
+     * * Your application performs authentication with managed login or the classic hosted UI.
+     */
+    override fun passkeyRelyingPartyId(passkeyRelyingPartyId: String) {
+      cdkBuilder.passkeyRelyingPartyId(passkeyRelyingPartyId)
+    }
+
+    /**
+     * @param passkeyUserVerification Your user-pool treatment for MFA with a passkey.
+     * You can override other MFA options and require passkey MFA, or you can set it as preferred.
+     * When passkey MFA is preferred, the hosted UI encourages users to register a passkey at
+     * sign-in.
+     */
+    override fun passkeyUserVerification(passkeyUserVerification: PasskeyUserVerification) {
+      cdkBuilder.passkeyUserVerification(passkeyUserVerification.let(PasskeyUserVerification.Companion::unwrap))
+    }
+
+    /**
      * @param passwordPolicy Password policy for this user pool.
      */
     override fun passwordPolicy(passwordPolicy: PasswordPolicy) {
@@ -808,6 +946,21 @@ public interface UserPoolProps {
     }
 
     /**
+     * @param signInPolicy Sign-in policy for this user pool.
+     */
+    override fun signInPolicy(signInPolicy: SignInPolicy) {
+      cdkBuilder.signInPolicy(signInPolicy.let(SignInPolicy.Companion::unwrap))
+    }
+
+    /**
+     * @param signInPolicy Sign-in policy for this user pool.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("cf089274b231d7e2db39cc1752e2cdae62b3404f482ad129297b29a450c918bf")
+    override fun signInPolicy(signInPolicy: SignInPolicy.Builder.() -> Unit): Unit =
+        signInPolicy(SignInPolicy(signInPolicy))
+
+    /**
      * @param smsRole The IAM role that Cognito will assume while sending SMS messages.
      */
     override fun smsRole(smsRole: IRole) {
@@ -854,6 +1007,16 @@ public interface UserPoolProps {
     @JvmName("3a2715b7948228a46279c9333a4055c40ab1580e1a61e60dd6a8d822fb787658")
     override fun standardAttributes(standardAttributes: StandardAttributes.Builder.() -> Unit): Unit
         = standardAttributes(StandardAttributes(standardAttributes))
+
+    /**
+     * @param standardThreatProtectionMode The Type of Threat Protection Enabled for Standard
+     * Authentication.
+     * This feature only functions if your FeaturePlan is set to FeaturePlan.PLUS
+     */
+    override
+        fun standardThreatProtectionMode(standardThreatProtectionMode: StandardThreatProtectionMode) {
+      cdkBuilder.standardThreatProtectionMode(standardThreatProtectionMode.let(StandardThreatProtectionMode.Companion::unwrap))
+    }
 
     /**
      * @param userInvitation Configuration around admins signing up users into a user pool.
@@ -914,7 +1077,8 @@ public interface UserPoolProps {
      *
      * Default: - no value
      *
-     * @deprecated Advanced Security Mode is deprecated in favor of user pool feature plans.
+     * @deprecated Advanced Security Mode is deprecated due to user pool feature plans. Use
+     * StandardThreatProtectionMode and CustomThreatProtectionMode to set Thread Protection level.
      */
     @Deprecated(message = "deprecated in CDK")
     override fun advancedSecurityMode(): AdvancedSecurityMode? =
@@ -949,6 +1113,18 @@ public interface UserPoolProps {
      * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-custom-sender-triggers.html)
      */
     override fun customSenderKmsKey(): IKey? = unwrap(this).getCustomSenderKmsKey()?.let(IKey::wrap)
+
+    /**
+     * The Type of Threat Protection Enabled for Custom Authentication.
+     *
+     * This feature only functions if your FeaturePlan is set to FeaturePlan.PLUS
+     *
+     * Default: - no value
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-userpooladdons.html)
+     */
+    override fun customThreatProtectionMode(): CustomThreatProtectionMode? =
+        unwrap(this).getCustomThreatProtectionMode()?.let(CustomThreatProtectionMode::wrap)
 
     /**
      * Indicates whether the user pool should have deletion protection enabled.
@@ -1045,6 +1221,33 @@ public interface UserPoolProps {
         unwrap(this).getMfaSecondFactor()?.let(MfaSecondFactor::wrap)
 
     /**
+     * The authentication domain that passkey providers must use as a relying party (RP) in their
+     * configuration.
+     *
+     * Under the following conditions, the passkey relying party ID must be the fully-qualified
+     * domain name of your custom domain:
+     *
+     * * The user pool is configured for passkey authentication.
+     * * The user pool has a custom domain, whether or not it also has a prefix domain.
+     * * Your application performs authentication with managed login or the classic hosted UI.
+     *
+     * Default: - No authentication domain
+     */
+    override fun passkeyRelyingPartyId(): String? = unwrap(this).getPasskeyRelyingPartyId()
+
+    /**
+     * Your user-pool treatment for MFA with a passkey.
+     *
+     * You can override other MFA options and require passkey MFA, or you can set it as preferred.
+     * When passkey MFA is preferred, the hosted UI encourages users to register a passkey at
+     * sign-in.
+     *
+     * Default: - Cognito default setting is PasskeyUserVerification.PREFERRED
+     */
+    override fun passkeyUserVerification(): PasskeyUserVerification? =
+        unwrap(this).getPasskeyUserVerification()?.let(PasskeyUserVerification::wrap)
+
+    /**
      * Password policy for this user pool.
      *
      * Default: - see defaults on each property of PasswordPolicy.
@@ -1099,6 +1302,14 @@ public interface UserPoolProps {
     override fun signInCaseSensitive(): Boolean? = unwrap(this).getSignInCaseSensitive()
 
     /**
+     * Sign-in policy for this user pool.
+     *
+     * Default: - see defaults on each property of SignInPolicy.
+     */
+    override fun signInPolicy(): SignInPolicy? =
+        unwrap(this).getSignInPolicy()?.let(SignInPolicy::wrap)
+
+    /**
      * The IAM role that Cognito will assume while sending SMS messages.
      *
      * Default: - a new IAM role is created.
@@ -1138,6 +1349,18 @@ public interface UserPoolProps {
      */
     override fun standardAttributes(): StandardAttributes? =
         unwrap(this).getStandardAttributes()?.let(StandardAttributes::wrap)
+
+    /**
+     * The Type of Threat Protection Enabled for Standard Authentication.
+     *
+     * This feature only functions if your FeaturePlan is set to FeaturePlan.PLUS
+     *
+     * Default: - StandardThreatProtectionMode.NO_ENFORCEMENT
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-userpooladdons.html)
+     */
+    override fun standardThreatProtectionMode(): StandardThreatProtectionMode? =
+        unwrap(this).getStandardThreatProtectionMode()?.let(StandardThreatProtectionMode::wrap)
 
     /**
      * Configuration around admins signing up users into a user pool.

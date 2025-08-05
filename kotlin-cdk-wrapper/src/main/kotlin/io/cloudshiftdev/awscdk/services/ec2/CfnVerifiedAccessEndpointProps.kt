@@ -25,27 +25,53 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.services.ec2.*;
  * CfnVerifiedAccessEndpointProps cfnVerifiedAccessEndpointProps =
  * CfnVerifiedAccessEndpointProps.builder()
- * .applicationDomain("applicationDomain")
  * .attachmentType("attachmentType")
- * .domainCertificateArn("domainCertificateArn")
- * .endpointDomainPrefix("endpointDomainPrefix")
  * .endpointType("endpointType")
  * .verifiedAccessGroupId("verifiedAccessGroupId")
  * // the properties below are optional
+ * .applicationDomain("applicationDomain")
+ * .cidrOptions(CidrOptionsProperty.builder()
+ * .cidr("cidr")
+ * .portRanges(List.of(PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
+ * .protocol("protocol")
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
  * .description("description")
+ * .domainCertificateArn("domainCertificateArn")
+ * .endpointDomainPrefix("endpointDomainPrefix")
  * .loadBalancerOptions(LoadBalancerOptionsProperty.builder()
  * .loadBalancerArn("loadBalancerArn")
  * .port(123)
+ * .portRanges(List.of(PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
  * .protocol("protocol")
  * .subnetIds(List.of("subnetIds"))
  * .build())
  * .networkInterfaceOptions(NetworkInterfaceOptionsProperty.builder()
  * .networkInterfaceId("networkInterfaceId")
  * .port(123)
+ * .portRanges(List.of(PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
  * .protocol("protocol")
  * .build())
  * .policyDocument("policyDocument")
  * .policyEnabled(false)
+ * .rdsOptions(RdsOptionsProperty.builder()
+ * .port(123)
+ * .protocol("protocol")
+ * .rdsDbClusterArn("rdsDbClusterArn")
+ * .rdsDbInstanceArn("rdsDbInstanceArn")
+ * .rdsDbProxyArn("rdsDbProxyArn")
+ * .rdsEndpoint("rdsEndpoint")
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
  * .securityGroupIds(List.of("securityGroupIds"))
  * .sseSpecification(SseSpecificationProperty.builder()
  * .customerManagedKeyEnabled(false)
@@ -66,7 +92,7 @@ public interface CfnVerifiedAccessEndpointProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-applicationdomain)
    */
-  public fun applicationDomain(): String
+  public fun applicationDomain(): String? = unwrap(this).getApplicationDomain()
 
   /**
    * The type of attachment used to provide connectivity between the AWS Verified Access endpoint
@@ -75,6 +101,13 @@ public interface CfnVerifiedAccessEndpointProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-attachmenttype)
    */
   public fun attachmentType(): String
+
+  /**
+   * The options for a CIDR endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-cidroptions)
+   */
+  public fun cidrOptions(): Any? = unwrap(this).getCidrOptions()
 
   /**
    * A description for the AWS Verified Access endpoint.
@@ -88,14 +121,14 @@ public interface CfnVerifiedAccessEndpointProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-domaincertificatearn)
    */
-  public fun domainCertificateArn(): String
+  public fun domainCertificateArn(): String? = unwrap(this).getDomainCertificateArn()
 
   /**
    * A custom identifier that is prepended to the DNS name that is generated for the endpoint.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-endpointdomainprefix)
    */
-  public fun endpointDomainPrefix(): String
+  public fun endpointDomainPrefix(): String? = unwrap(this).getEndpointDomainPrefix()
 
   /**
    * The type of AWS Verified Access endpoint.
@@ -136,6 +169,13 @@ public interface CfnVerifiedAccessEndpointProps {
   public fun policyEnabled(): Any? = unwrap(this).getPolicyEnabled()
 
   /**
+   * The options for an RDS endpoint.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-rdsoptions)
+   */
+  public fun rdsOptions(): Any? = unwrap(this).getRdsOptions()
+
+  /**
    * The IDs of the security groups for the endpoint.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-securitygroupids)
@@ -169,7 +209,7 @@ public interface CfnVerifiedAccessEndpointProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param applicationDomain The DNS name for users to reach your application. 
+     * @param applicationDomain The DNS name for users to reach your application.
      */
     public fun applicationDomain(applicationDomain: String)
 
@@ -180,19 +220,37 @@ public interface CfnVerifiedAccessEndpointProps {
     public fun attachmentType(attachmentType: String)
 
     /**
+     * @param cidrOptions The options for a CIDR endpoint.
+     */
+    public fun cidrOptions(cidrOptions: IResolvable)
+
+    /**
+     * @param cidrOptions The options for a CIDR endpoint.
+     */
+    public fun cidrOptions(cidrOptions: CfnVerifiedAccessEndpoint.CidrOptionsProperty)
+
+    /**
+     * @param cidrOptions The options for a CIDR endpoint.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("23277a7186b881091549915b510d2f54fa1987fc0c21af57610d4daa699558c4")
+    public
+        fun cidrOptions(cidrOptions: CfnVerifiedAccessEndpoint.CidrOptionsProperty.Builder.() -> Unit)
+
+    /**
      * @param description A description for the AWS Verified Access endpoint.
      */
     public fun description(description: String)
 
     /**
      * @param domainCertificateArn The ARN of a public TLS/SSL certificate imported into or created
-     * with ACM. 
+     * with ACM.
      */
     public fun domainCertificateArn(domainCertificateArn: String)
 
     /**
      * @param endpointDomainPrefix A custom identifier that is prepended to the DNS name that is
-     * generated for the endpoint. 
+     * generated for the endpoint.
      */
     public fun endpointDomainPrefix(endpointDomainPrefix: String)
 
@@ -260,6 +318,24 @@ public interface CfnVerifiedAccessEndpointProps {
     public fun policyEnabled(policyEnabled: IResolvable)
 
     /**
+     * @param rdsOptions The options for an RDS endpoint.
+     */
+    public fun rdsOptions(rdsOptions: IResolvable)
+
+    /**
+     * @param rdsOptions The options for an RDS endpoint.
+     */
+    public fun rdsOptions(rdsOptions: CfnVerifiedAccessEndpoint.RdsOptionsProperty)
+
+    /**
+     * @param rdsOptions The options for an RDS endpoint.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3e2e5ea65766a11e967568c62250f2201832e38025f12e0adb8e2bb8f23ebf73")
+    public
+        fun rdsOptions(rdsOptions: CfnVerifiedAccessEndpoint.RdsOptionsProperty.Builder.() -> Unit)
+
+    /**
      * @param securityGroupIds The IDs of the security groups for the endpoint.
      */
     public fun securityGroupIds(securityGroupIds: List<String>)
@@ -310,7 +386,7 @@ public interface CfnVerifiedAccessEndpointProps {
         software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpointProps.builder()
 
     /**
-     * @param applicationDomain The DNS name for users to reach your application. 
+     * @param applicationDomain The DNS name for users to reach your application.
      */
     override fun applicationDomain(applicationDomain: String) {
       cdkBuilder.applicationDomain(applicationDomain)
@@ -325,6 +401,29 @@ public interface CfnVerifiedAccessEndpointProps {
     }
 
     /**
+     * @param cidrOptions The options for a CIDR endpoint.
+     */
+    override fun cidrOptions(cidrOptions: IResolvable) {
+      cdkBuilder.cidrOptions(cidrOptions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param cidrOptions The options for a CIDR endpoint.
+     */
+    override fun cidrOptions(cidrOptions: CfnVerifiedAccessEndpoint.CidrOptionsProperty) {
+      cdkBuilder.cidrOptions(cidrOptions.let(CfnVerifiedAccessEndpoint.CidrOptionsProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param cidrOptions The options for a CIDR endpoint.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("23277a7186b881091549915b510d2f54fa1987fc0c21af57610d4daa699558c4")
+    override
+        fun cidrOptions(cidrOptions: CfnVerifiedAccessEndpoint.CidrOptionsProperty.Builder.() -> Unit):
+        Unit = cidrOptions(CfnVerifiedAccessEndpoint.CidrOptionsProperty(cidrOptions))
+
+    /**
      * @param description A description for the AWS Verified Access endpoint.
      */
     override fun description(description: String) {
@@ -333,7 +432,7 @@ public interface CfnVerifiedAccessEndpointProps {
 
     /**
      * @param domainCertificateArn The ARN of a public TLS/SSL certificate imported into or created
-     * with ACM. 
+     * with ACM.
      */
     override fun domainCertificateArn(domainCertificateArn: String) {
       cdkBuilder.domainCertificateArn(domainCertificateArn)
@@ -341,7 +440,7 @@ public interface CfnVerifiedAccessEndpointProps {
 
     /**
      * @param endpointDomainPrefix A custom identifier that is prepended to the DNS name that is
-     * generated for the endpoint. 
+     * generated for the endpoint.
      */
     override fun endpointDomainPrefix(endpointDomainPrefix: String) {
       cdkBuilder.endpointDomainPrefix(endpointDomainPrefix)
@@ -431,6 +530,29 @@ public interface CfnVerifiedAccessEndpointProps {
     }
 
     /**
+     * @param rdsOptions The options for an RDS endpoint.
+     */
+    override fun rdsOptions(rdsOptions: IResolvable) {
+      cdkBuilder.rdsOptions(rdsOptions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param rdsOptions The options for an RDS endpoint.
+     */
+    override fun rdsOptions(rdsOptions: CfnVerifiedAccessEndpoint.RdsOptionsProperty) {
+      cdkBuilder.rdsOptions(rdsOptions.let(CfnVerifiedAccessEndpoint.RdsOptionsProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param rdsOptions The options for an RDS endpoint.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3e2e5ea65766a11e967568c62250f2201832e38025f12e0adb8e2bb8f23ebf73")
+    override
+        fun rdsOptions(rdsOptions: CfnVerifiedAccessEndpoint.RdsOptionsProperty.Builder.() -> Unit):
+        Unit = rdsOptions(CfnVerifiedAccessEndpoint.RdsOptionsProperty(rdsOptions))
+
+    /**
      * @param securityGroupIds The IDs of the security groups for the endpoint.
      */
     override fun securityGroupIds(securityGroupIds: List<String>) {
@@ -500,7 +622,7 @@ public interface CfnVerifiedAccessEndpointProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-applicationdomain)
      */
-    override fun applicationDomain(): String = unwrap(this).getApplicationDomain()
+    override fun applicationDomain(): String? = unwrap(this).getApplicationDomain()
 
     /**
      * The type of attachment used to provide connectivity between the AWS Verified Access endpoint
@@ -509,6 +631,13 @@ public interface CfnVerifiedAccessEndpointProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-attachmenttype)
      */
     override fun attachmentType(): String = unwrap(this).getAttachmentType()
+
+    /**
+     * The options for a CIDR endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-cidroptions)
+     */
+    override fun cidrOptions(): Any? = unwrap(this).getCidrOptions()
 
     /**
      * A description for the AWS Verified Access endpoint.
@@ -522,14 +651,14 @@ public interface CfnVerifiedAccessEndpointProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-domaincertificatearn)
      */
-    override fun domainCertificateArn(): String = unwrap(this).getDomainCertificateArn()
+    override fun domainCertificateArn(): String? = unwrap(this).getDomainCertificateArn()
 
     /**
      * A custom identifier that is prepended to the DNS name that is generated for the endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-endpointdomainprefix)
      */
-    override fun endpointDomainPrefix(): String = unwrap(this).getEndpointDomainPrefix()
+    override fun endpointDomainPrefix(): String? = unwrap(this).getEndpointDomainPrefix()
 
     /**
      * The type of AWS Verified Access endpoint.
@@ -569,6 +698,13 @@ public interface CfnVerifiedAccessEndpointProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-policyenabled)
      */
     override fun policyEnabled(): Any? = unwrap(this).getPolicyEnabled()
+
+    /**
+     * The options for an RDS endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-rdsoptions)
+     */
+    override fun rdsOptions(): Any? = unwrap(this).getRdsOptions()
 
     /**
      * The IDs of the security groups for the endpoint.

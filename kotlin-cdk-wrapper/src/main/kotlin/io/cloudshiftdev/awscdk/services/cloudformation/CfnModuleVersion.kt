@@ -13,22 +13,21 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Registers the specified version of the module with the CloudFormation service.
+ * The `AWS::CloudFormation::ModuleVersion` resource registers the specified version of the module
+ * with the CloudFormation registry.
  *
  * Registering a module makes it available for use in CloudFormation templates in your AWS account
  * and Region.
  *
- * To specify a module version as the default version, use the
- * `[`AWS::CloudFormation::ModuleDefaultVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)`
- * resource.
+ * For more information, see [Create reusable resource configurations that can be included across
+ * templates with CloudFormation
+ * modules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/modules.html) in the
+ * *CloudFormation User Guide* .
  *
- * For more information using modules, see [Using modules to encapsulate and reuse resource
- * configurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/modules.html) and
- * [Registering
- * extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-register)
- * in the *CloudFormation User Guide* . For information on developing modules, see [Developing
- * modules](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules.html) in the
- * *CloudFormation CLI User Guide* .
+ * For information about the CloudFormation registry, see [Managing extensions with the
+ * CloudFormation
+ * registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html) in the *AWS
+ * CloudFormation User Guide* .
  *
  * Example:
  *
@@ -65,12 +64,12 @@ public open class CfnModuleVersion(
   )
 
   /**
-   * The Amazon Resource Name (ARN) of the extension.
+   * The Amazon Resource Name (ARN) of the module.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   * The description of the extension.
+   * The description of the module.
    */
   public open fun attrDescription(): String = unwrap(this).getAttrDescription()
 
@@ -80,7 +79,7 @@ public open class CfnModuleVersion(
   public open fun attrDocumentationUrl(): String = unwrap(this).getAttrDocumentationUrl()
 
   /**
-   * Whether the specified extension version is set as the default version.
+   * Whether the specified module version is set as the default version.
    *
    * This applies only to private extensions you have registered in your account, and extensions
    * published by AWS . For public third-party extensions, whether they are activated in your account,
@@ -90,16 +89,12 @@ public open class CfnModuleVersion(
       unwrap(this).getAttrIsDefaultVersion().let(IResolvable::wrap)
 
   /**
-   * The schema that defines the extension.
-   *
-   * For more information about extension schemas, see [Resource type
-   * schema](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html)
-   * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
+   * The schema that defines the module.
    */
   public open fun attrSchema(): String = unwrap(this).getAttrSchema()
 
   /**
-   * When the specified private extension version was registered or activated in your account.
+   * When the specified private module version was registered or activated in your account.
    */
   public open fun attrTimeCreated(): String = unwrap(this).getAttrTimeCreated()
 
@@ -109,13 +104,12 @@ public open class CfnModuleVersion(
   public open fun attrVersionId(): String = unwrap(this).getAttrVersionId()
 
   /**
-   * The scope at which the extension is visible and usable in CloudFormation operations.
+   * The visibility level that determines who can see and use this module in CloudFormation
+   * operations:.
    *
-   * Valid values include:
-   *
-   * * `PRIVATE` : The extension is only visible and usable within the account in which it is
-   * registered. CloudFormation marks any extensions you register as `PRIVATE` .
-   * * `PUBLIC` : The extension is publicly visible and usable within any AWS account.
+   * * `PRIVATE` : The module is only visible and usable within the account where it was registered.
+   * CloudFormation automatically marks any modules you register as `PRIVATE` .
+   * * `PUBLIC` : The module is publicly visible and usable within any AWS account.
    */
   public open fun attrVisibility(): String = unwrap(this).getAttrVisibility()
 
@@ -141,14 +135,14 @@ public open class CfnModuleVersion(
   }
 
   /**
-   * A URL to the S3 bucket containing the package that contains the template fragment and schema
-   * files for the module version to register.
+   * A URL to the S3 bucket for the package that contains the template fragment and schema files for
+   * the module version to register.
    */
   public open fun modulePackage(): String = unwrap(this).getModulePackage()
 
   /**
-   * A URL to the S3 bucket containing the package that contains the template fragment and schema
-   * files for the module version to register.
+   * A URL to the S3 bucket for the package that contains the template fragment and schema files for
+   * the module version to register.
    */
   public open fun modulePackage(`value`: String) {
     unwrap(this).setModulePackage(`value`)
@@ -168,20 +162,20 @@ public open class CfnModuleVersion(
     public fun moduleName(moduleName: String)
 
     /**
-     * A URL to the S3 bucket containing the package that contains the template fragment and schema
-     * files for the module version to register.
+     * A URL to the S3 bucket for the package that contains the template fragment and schema files
+     * for the module version to register.
+     *
+     * For more information, see [Module structure and
+     * requirements](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules-structure.html)
+     * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
      *
      *
-     * The user registering the module version must be able to access the module package in the S3
-     * bucket. That's, the user needs to have
-     * [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for
-     * the package. For more information, see [Actions, Resources, and Condition Keys for Amazon
-     * S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity
-     * and Access Management User Guide* .
+     * To register the module version, you must have `s3:GetObject` permissions to access the S3
+     * objects.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html#cfn-cloudformation-moduleversion-modulepackage)
-     * @param modulePackage A URL to the S3 bucket containing the package that contains the template
+     * @param modulePackage A URL to the S3 bucket for the package that contains the template
      * fragment and schema files for the module version to register. 
      */
     public fun modulePackage(modulePackage: String)
@@ -205,20 +199,20 @@ public open class CfnModuleVersion(
     }
 
     /**
-     * A URL to the S3 bucket containing the package that contains the template fragment and schema
-     * files for the module version to register.
+     * A URL to the S3 bucket for the package that contains the template fragment and schema files
+     * for the module version to register.
+     *
+     * For more information, see [Module structure and
+     * requirements](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules-structure.html)
+     * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
      *
      *
-     * The user registering the module version must be able to access the module package in the S3
-     * bucket. That's, the user needs to have
-     * [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for
-     * the package. For more information, see [Actions, Resources, and Condition Keys for Amazon
-     * S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity
-     * and Access Management User Guide* .
+     * To register the module version, you must have `s3:GetObject` permissions to access the S3
+     * objects.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html#cfn-cloudformation-moduleversion-modulepackage)
-     * @param modulePackage A URL to the S3 bucket containing the package that contains the template
+     * @param modulePackage A URL to the S3 bucket for the package that contains the template
      * fragment and schema files for the module version to register. 
      */
     override fun modulePackage(modulePackage: String) {

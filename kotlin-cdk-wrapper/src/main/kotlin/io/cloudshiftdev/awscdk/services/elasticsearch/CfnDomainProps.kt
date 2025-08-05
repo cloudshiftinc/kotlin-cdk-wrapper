@@ -294,7 +294,7 @@ public interface CfnDomainProps {
      * parameters](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html#createdomain-configure-advanced-options)
      * in the *Amazon OpenSearch Service Developer Guide* .
      */
-    public fun advancedOptions(advancedOptions: IResolvable)
+    public fun advancedOptions(advancedOptions: Map<String, String>)
 
     /**
      * @param advancedOptions Additional options to specify for the OpenSearch Service domain.
@@ -302,7 +302,7 @@ public interface CfnDomainProps {
      * parameters](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html#createdomain-configure-advanced-options)
      * in the *Amazon OpenSearch Service Developer Guide* .
      */
-    public fun advancedOptions(advancedOptions: Map<String, String>)
+    public fun advancedOptions(advancedOptions: IResolvable)
 
     /**
      * @param advancedSecurityOptions Specifies options for fine-grained access control.
@@ -614,8 +614,8 @@ public interface CfnDomainProps {
      * parameters](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html#createdomain-configure-advanced-options)
      * in the *Amazon OpenSearch Service Developer Guide* .
      */
-    override fun advancedOptions(advancedOptions: IResolvable) {
-      cdkBuilder.advancedOptions(advancedOptions.let(IResolvable.Companion::unwrap))
+    override fun advancedOptions(advancedOptions: Map<String, String>) {
+      cdkBuilder.advancedOptions(advancedOptions)
     }
 
     /**
@@ -624,8 +624,8 @@ public interface CfnDomainProps {
      * parameters](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html#createdomain-configure-advanced-options)
      * in the *Amazon OpenSearch Service Developer Guide* .
      */
-    override fun advancedOptions(advancedOptions: Map<String, String>) {
-      cdkBuilder.advancedOptions(advancedOptions)
+    override fun advancedOptions(advancedOptions: IResolvable) {
+      cdkBuilder.advancedOptions(advancedOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -10,6 +10,7 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -72,8 +73,18 @@ public open class Pass(
 
   /**
    * Return the Amazon States Language object for this state.
+   *
+   * @param topLevelQueryLanguage
    */
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
+
+  /**
+   * Return the Amazon States Language object for this state.
+   *
+   * @param topLevelQueryLanguage
+   */
+  public override fun toStateJson(topLevelQueryLanguage: QueryLanguage): ObjectNode =
+      unwrap(this).toStateJson(topLevelQueryLanguage.let(QueryLanguage.Companion::unwrap))
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.Pass].
@@ -81,11 +92,24 @@ public open class Pass(
   @CdkDslMarker
   public interface Builder {
     /**
-     * An optional description for this state.
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    public fun assign(assign: Map<String, Any>)
+
+    /**
+     * A comment describing this state.
      *
      * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     public fun comment(comment: String)
 
@@ -116,6 +140,22 @@ public open class Pass(
     public fun outputPath(outputPath: String)
 
     /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    public fun outputs(outputs: Any)
+
+    /**
      * Parameters pass a collection of key-value pairs, either static values or JSONPath expressions
      * that select from the input.
      *
@@ -126,6 +166,18 @@ public open class Pass(
      * JSONPath expressions that select from the input. 
      */
     public fun parameters(parameters: Map<String, Any>)
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
 
     /**
      * If given, treat as the result of this operation.
@@ -168,11 +220,26 @@ public open class Pass(
         software.amazon.awscdk.services.stepfunctions.Pass.Builder.create(scope, id)
 
     /**
-     * An optional description for this state.
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * A comment describing this state.
      *
      * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -209,6 +276,24 @@ public open class Pass(
     }
 
     /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    override fun outputs(outputs: Any) {
+      cdkBuilder.outputs(outputs)
+    }
+
+    /**
      * Parameters pass a collection of key-value pairs, either static values or JSONPath expressions
      * that select from the input.
      *
@@ -220,6 +305,20 @@ public open class Pass(
      */
     override fun parameters(parameters: Map<String, Any>) {
       cdkBuilder.parameters(parameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
     }
 
     /**
@@ -264,6 +363,46 @@ public open class Pass(
   }
 
   public companion object {
+    public fun jsonPath(scope: CloudshiftdevConstructsConstruct, id: String): Pass =
+        software.amazon.awscdk.services.stepfunctions.Pass.jsonPath(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id).let(Pass::wrap)
+
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: PassJsonPathProps,
+    ): Pass =
+        software.amazon.awscdk.services.stepfunctions.Pass.jsonPath(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, props.let(PassJsonPathProps.Companion::unwrap)).let(Pass::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7838f0e69e273c22e41f36b3a9b6d503327ec5757f90e0542e2f91cca713d6c0")
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: PassJsonPathProps.Builder.() -> Unit,
+    ): Pass = jsonPath(scope, id, PassJsonPathProps(props))
+
+    public fun jsonata(scope: CloudshiftdevConstructsConstruct, id: String): Pass =
+        software.amazon.awscdk.services.stepfunctions.Pass.jsonata(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id).let(Pass::wrap)
+
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: PassJsonataProps,
+    ): Pass =
+        software.amazon.awscdk.services.stepfunctions.Pass.jsonata(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, props.let(PassJsonataProps.Companion::unwrap)).let(Pass::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("554b2294742b6baefd6a90188819dc7d6d821a19aeae59ccdef1ac184d2edc13")
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: PassJsonataProps.Builder.() -> Unit,
+    ): Pass = jsonata(scope, id, PassJsonataProps(props))
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

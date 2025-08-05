@@ -1881,12 +1881,12 @@ public open class CfnSolution(
       /**
        * @param algorithmHyperParameters Lists the algorithm hyperparameters and their values.
        */
-      public fun algorithmHyperParameters(algorithmHyperParameters: IResolvable)
+      public fun algorithmHyperParameters(algorithmHyperParameters: Map<String, String>)
 
       /**
        * @param algorithmHyperParameters Lists the algorithm hyperparameters and their values.
        */
-      public fun algorithmHyperParameters(algorithmHyperParameters: Map<String, String>)
+      public fun algorithmHyperParameters(algorithmHyperParameters: IResolvable)
 
       /**
        * @param autoMlConfig The
@@ -1904,13 +1904,13 @@ public open class CfnSolution(
       /**
        * @param featureTransformationParameters Lists the feature transformation parameters.
        */
-      public fun featureTransformationParameters(featureTransformationParameters: IResolvable)
+      public
+          fun featureTransformationParameters(featureTransformationParameters: Map<String, String>)
 
       /**
        * @param featureTransformationParameters Lists the feature transformation parameters.
        */
-      public
-          fun featureTransformationParameters(featureTransformationParameters: Map<String, String>)
+      public fun featureTransformationParameters(featureTransformationParameters: IResolvable)
 
       /**
        * @param hpoConfig Describes the properties for hyperparameter optimization (HPO).
@@ -1926,15 +1926,15 @@ public open class CfnSolution(
       /**
        * @param algorithmHyperParameters Lists the algorithm hyperparameters and their values.
        */
-      override fun algorithmHyperParameters(algorithmHyperParameters: IResolvable) {
-        cdkBuilder.algorithmHyperParameters(algorithmHyperParameters.let(IResolvable.Companion::unwrap))
+      override fun algorithmHyperParameters(algorithmHyperParameters: Map<String, String>) {
+        cdkBuilder.algorithmHyperParameters(algorithmHyperParameters)
       }
 
       /**
        * @param algorithmHyperParameters Lists the algorithm hyperparameters and their values.
        */
-      override fun algorithmHyperParameters(algorithmHyperParameters: Map<String, String>) {
-        cdkBuilder.algorithmHyperParameters(algorithmHyperParameters)
+      override fun algorithmHyperParameters(algorithmHyperParameters: IResolvable) {
+        cdkBuilder.algorithmHyperParameters(algorithmHyperParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1957,16 +1957,16 @@ public open class CfnSolution(
       /**
        * @param featureTransformationParameters Lists the feature transformation parameters.
        */
-      override fun featureTransformationParameters(featureTransformationParameters: IResolvable) {
-        cdkBuilder.featureTransformationParameters(featureTransformationParameters.let(IResolvable.Companion::unwrap))
+      override
+          fun featureTransformationParameters(featureTransformationParameters: Map<String, String>) {
+        cdkBuilder.featureTransformationParameters(featureTransformationParameters)
       }
 
       /**
        * @param featureTransformationParameters Lists the feature transformation parameters.
        */
-      override
-          fun featureTransformationParameters(featureTransformationParameters: Map<String, String>) {
-        cdkBuilder.featureTransformationParameters(featureTransformationParameters)
+      override fun featureTransformationParameters(featureTransformationParameters: IResolvable) {
+        cdkBuilder.featureTransformationParameters(featureTransformationParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**

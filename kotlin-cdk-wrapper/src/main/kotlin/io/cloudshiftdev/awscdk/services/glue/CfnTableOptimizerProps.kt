@@ -27,6 +27,22 @@ import kotlin.jvm.JvmName
  * .tableOptimizerConfiguration(TableOptimizerConfigurationProperty.builder()
  * .enabled(false)
  * .roleArn("roleArn")
+ * // the properties below are optional
+ * .orphanFileDeletionConfiguration(OrphanFileDeletionConfigurationProperty.builder()
+ * .icebergConfiguration(IcebergConfigurationProperty.builder()
+ * .location("location")
+ * .orphanFileRetentionPeriodInDays(123)
+ * .build())
+ * .build())
+ * .retentionConfiguration(RetentionConfigurationProperty.builder()
+ * .icebergConfiguration(IcebergConfigurationProperty.builder()
+ * .location("location")
+ * .orphanFileRetentionPeriodInDays(123)
+ * .build())
+ * .build())
+ * .vpcConfiguration(VpcConfigurationProperty.builder()
+ * .glueConnectionName("glueConnectionName")
+ * .build())
  * .build())
  * .type("type")
  * .build();
@@ -68,9 +84,11 @@ public interface CfnTableOptimizerProps {
   public fun tableOptimizerConfiguration(): Any
 
   /**
-   * The type of table optimizer.
+   * The type of table optimizer. The valid values are:.
    *
-   * Currently, the only valid value is compaction.
+   * * compaction - for managing compaction with a table optimizer.
+   * * retention - for managing the retention of snapshot with a table optimizer.
+   * * orphan_file_deletion - for managing the deletion of orphan files with a table optimizer.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-tableoptimizer.html#cfn-glue-tableoptimizer-type)
    */
@@ -118,8 +136,10 @@ public interface CfnTableOptimizerProps {
         fun tableOptimizerConfiguration(tableOptimizerConfiguration: CfnTableOptimizer.TableOptimizerConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * @param type The type of table optimizer. 
-     * Currently, the only valid value is compaction.
+     * @param type The type of table optimizer. The valid values are:. 
+     * * compaction - for managing compaction with a table optimizer.
+     * * retention - for managing the retention of snapshot with a table optimizer.
+     * * orphan_file_deletion - for managing the deletion of orphan files with a table optimizer.
      */
     public fun type(type: String)
   }
@@ -177,8 +197,10 @@ public interface CfnTableOptimizerProps {
         tableOptimizerConfiguration(CfnTableOptimizer.TableOptimizerConfigurationProperty(tableOptimizerConfiguration))
 
     /**
-     * @param type The type of table optimizer. 
-     * Currently, the only valid value is compaction.
+     * @param type The type of table optimizer. The valid values are:. 
+     * * compaction - for managing compaction with a table optimizer.
+     * * retention - for managing the retention of snapshot with a table optimizer.
+     * * orphan_file_deletion - for managing the deletion of orphan files with a table optimizer.
      */
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -225,9 +247,11 @@ public interface CfnTableOptimizerProps {
     override fun tableOptimizerConfiguration(): Any = unwrap(this).getTableOptimizerConfiguration()
 
     /**
-     * The type of table optimizer.
+     * The type of table optimizer. The valid values are:.
      *
-     * Currently, the only valid value is compaction.
+     * * compaction - for managing compaction with a table optimizer.
+     * * retention - for managing the retention of snapshot with a table optimizer.
+     * * orphan_file_deletion - for managing the deletion of orphan files with a table optimizer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-tableoptimizer.html#cfn-glue-tableoptimizer-type)
      */

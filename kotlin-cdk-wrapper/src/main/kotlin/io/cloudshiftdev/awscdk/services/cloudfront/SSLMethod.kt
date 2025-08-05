@@ -7,6 +7,7 @@ public enum class SSLMethod(
 ) {
   SNI(software.amazon.awscdk.services.cloudfront.SSLMethod.SNI),
   VIP(software.amazon.awscdk.services.cloudfront.SSLMethod.VIP),
+  STATIC_IP(software.amazon.awscdk.services.cloudfront.SSLMethod.STATIC_IP),
   ;
 
   public companion object {
@@ -14,6 +15,7 @@ public enum class SSLMethod(
         when (cdkObject) {
       software.amazon.awscdk.services.cloudfront.SSLMethod.SNI -> SSLMethod.SNI
       software.amazon.awscdk.services.cloudfront.SSLMethod.VIP -> SSLMethod.VIP
+      software.amazon.awscdk.services.cloudfront.SSLMethod.STATIC_IP -> SSLMethod.STATIC_IP
     }
 
     internal fun unwrap(wrapped: SSLMethod): software.amazon.awscdk.services.cloudfront.SSLMethod =

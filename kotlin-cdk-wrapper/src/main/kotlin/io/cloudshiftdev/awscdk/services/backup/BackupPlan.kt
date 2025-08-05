@@ -240,6 +240,9 @@ public open class BackupPlan(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.backup.BackupPlan.PROPERTY_INJECTION_ID
+
     public fun daily35DayRetention(scope: CloudshiftdevConstructsConstruct, id: String): BackupPlan
         =
         software.amazon.awscdk.services.backup.BackupPlan.daily35DayRetention(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),

@@ -795,14 +795,14 @@ public open class CfnInstanceFleetConfig(
        * that represent the settings that you want to change in the configuration file.
        * Duplicates not allowed.
        */
-      public fun configurationProperties(configurationProperties: IResolvable)
+      public fun configurationProperties(configurationProperties: Map<String, String>)
 
       /**
        * @param configurationProperties Within a configuration classification, a set of properties
        * that represent the settings that you want to change in the configuration file.
        * Duplicates not allowed.
        */
-      public fun configurationProperties(configurationProperties: Map<String, String>)
+      public fun configurationProperties(configurationProperties: IResolvable)
 
       /**
        * @param configurations A list of additional configurations to apply within a configuration
@@ -840,8 +840,8 @@ public open class CfnInstanceFleetConfig(
        * that represent the settings that you want to change in the configuration file.
        * Duplicates not allowed.
        */
-      override fun configurationProperties(configurationProperties: IResolvable) {
-        cdkBuilder.configurationProperties(configurationProperties.let(IResolvable.Companion::unwrap))
+      override fun configurationProperties(configurationProperties: Map<String, String>) {
+        cdkBuilder.configurationProperties(configurationProperties)
       }
 
       /**
@@ -849,8 +849,8 @@ public open class CfnInstanceFleetConfig(
        * that represent the settings that you want to change in the configuration file.
        * Duplicates not allowed.
        */
-      override fun configurationProperties(configurationProperties: Map<String, String>) {
-        cdkBuilder.configurationProperties(configurationProperties)
+      override fun configurationProperties(configurationProperties: IResolvable) {
+        cdkBuilder.configurationProperties(configurationProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1134,6 +1134,9 @@ public open class CfnInstanceFleetConfig(
     /**
      * Indicates whether an Amazon EBS volume is EBS-optimized.
      *
+     * The default is false. You should explicitly set this value to true to enable the Amazon
+     * EBS-optimized setting for an EC2 instance.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ebsconfiguration.html#cfn-emr-instancefleetconfig-ebsconfiguration-ebsoptimized)
      */
     public fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
@@ -1163,11 +1166,15 @@ public open class CfnInstanceFleetConfig(
 
       /**
        * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
+       * The default is false. You should explicitly set this value to true to enable the Amazon
+       * EBS-optimized setting for an EC2 instance.
        */
       public fun ebsOptimized(ebsOptimized: Boolean)
 
       /**
        * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
+       * The default is false. You should explicitly set this value to true to enable the Amazon
+       * EBS-optimized setting for an EC2 instance.
        */
       public fun ebsOptimized(ebsOptimized: IResolvable)
     }
@@ -1203,6 +1210,8 @@ public open class CfnInstanceFleetConfig(
 
       /**
        * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
+       * The default is false. You should explicitly set this value to true to enable the Amazon
+       * EBS-optimized setting for an EC2 instance.
        */
       override fun ebsOptimized(ebsOptimized: Boolean) {
         cdkBuilder.ebsOptimized(ebsOptimized)
@@ -1210,6 +1219,8 @@ public open class CfnInstanceFleetConfig(
 
       /**
        * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
+       * The default is false. You should explicitly set this value to true to enable the Amazon
+       * EBS-optimized setting for an EC2 instance.
        */
       override fun ebsOptimized(ebsOptimized: IResolvable) {
         cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable.Companion::unwrap))
@@ -1233,6 +1244,9 @@ public open class CfnInstanceFleetConfig(
 
       /**
        * Indicates whether an Amazon EBS volume is EBS-optimized.
+       *
+       * The default is false. You should explicitly set this value to true to enable the Amazon
+       * EBS-optimized setting for an EC2 instance.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ebsconfiguration.html#cfn-emr-instancefleetconfig-ebsconfiguration-ebsoptimized)
        */

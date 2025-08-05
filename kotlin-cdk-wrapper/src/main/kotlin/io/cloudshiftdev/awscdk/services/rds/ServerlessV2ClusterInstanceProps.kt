@@ -42,7 +42,7 @@ public interface ServerlessV2ClusterInstanceProps : ClusterInstanceOptions {
    *
    * * true: The serverless v2 reader will scale to match the writer instance (provisioned or
    * serverless)
-   * * false: The serverless v2 reader will scale with the read workfload on the instance
+   * * false: The serverless v2 reader will scale with the read workload on the instance
    *
    * Default: false
    */
@@ -60,10 +60,33 @@ public interface ServerlessV2ClusterInstanceProps : ClusterInstanceOptions {
     public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: Boolean)
 
     /**
+     * @param applyImmediately Specifies whether changes to the DB instance and any pending
+     * modifications are applied immediately, regardless of the `preferredMaintenanceWindow` setting.
+     * If set to `false`, changes are applied during the next maintenance window.
+     *
+     * Until RDS applies the changes, the DB instance remains in a drift state.
+     * As a result, the configuration doesn't fully reflect the requested modifications and
+     * temporarily diverges from the intended state.
+     *
+     * This property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     */
+    public fun applyImmediately(applyImmediately: Boolean)
+
+    /**
      * @param autoMinorVersionUpgrade Whether to enable automatic upgrade of minor version for the
      * DB instance.
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
+
+    /**
+     * @param availabilityZone The Availability Zone (AZ) where the database will be created.
+     * For Amazon Aurora, each Aurora DB cluster hosts copies of its storage in three separate
+     * Availability Zones.
+     * Specify one of these Availability Zones. Aurora automatically chooses an appropriate
+     * Availability Zone if you don't specify one.
+     */
+    public fun availabilityZone(availabilityZone: String)
 
     /**
      * @param caCertificate The identifier of the CA certificate for this DB cluster's instances.
@@ -140,7 +163,7 @@ public interface ServerlessV2ClusterInstanceProps : ClusterInstanceOptions {
      *
      * * true: The serverless v2 reader will scale to match the writer instance (provisioned or
      * serverless)
-     * * false: The serverless v2 reader will scale with the read workfload on the instance
+     * * false: The serverless v2 reader will scale with the read workload on the instance
      */
     public fun scaleWithWriter(scaleWithWriter: Boolean)
   }
@@ -159,11 +182,38 @@ public interface ServerlessV2ClusterInstanceProps : ClusterInstanceOptions {
     }
 
     /**
+     * @param applyImmediately Specifies whether changes to the DB instance and any pending
+     * modifications are applied immediately, regardless of the `preferredMaintenanceWindow` setting.
+     * If set to `false`, changes are applied during the next maintenance window.
+     *
+     * Until RDS applies the changes, the DB instance remains in a drift state.
+     * As a result, the configuration doesn't fully reflect the requested modifications and
+     * temporarily diverges from the intended state.
+     *
+     * This property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     */
+    override fun applyImmediately(applyImmediately: Boolean) {
+      cdkBuilder.applyImmediately(applyImmediately)
+    }
+
+    /**
      * @param autoMinorVersionUpgrade Whether to enable automatic upgrade of minor version for the
      * DB instance.
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
+    }
+
+    /**
+     * @param availabilityZone The Availability Zone (AZ) where the database will be created.
+     * For Amazon Aurora, each Aurora DB cluster hosts copies of its storage in three separate
+     * Availability Zones.
+     * Specify one of these Availability Zones. Aurora automatically chooses an appropriate
+     * Availability Zone if you don't specify one.
+     */
+    override fun availabilityZone(availabilityZone: String) {
+      cdkBuilder.availabilityZone(availabilityZone)
     }
 
     /**
@@ -262,7 +312,7 @@ public interface ServerlessV2ClusterInstanceProps : ClusterInstanceOptions {
      *
      * * true: The serverless v2 reader will scale to match the writer instance (provisioned or
      * serverless)
-     * * false: The serverless v2 reader will scale with the read workfload on the instance
+     * * false: The serverless v2 reader will scale with the read workload on the instance
      */
     override fun scaleWithWriter(scaleWithWriter: Boolean) {
       cdkBuilder.scaleWithWriter(scaleWithWriter)
@@ -284,11 +334,44 @@ public interface ServerlessV2ClusterInstanceProps : ClusterInstanceOptions {
     override fun allowMajorVersionUpgrade(): Boolean? = unwrap(this).getAllowMajorVersionUpgrade()
 
     /**
+     * Specifies whether changes to the DB instance and any pending modifications are applied
+     * immediately, regardless of the `preferredMaintenanceWindow` setting.
+     *
+     * If set to `false`, changes are applied during the next maintenance window.
+     *
+     * Until RDS applies the changes, the DB instance remains in a drift state.
+     * As a result, the configuration doesn't fully reflect the requested modifications and
+     * temporarily diverges from the intended state.
+     *
+     * This property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     *
+     * Default: - Changes will be applied immediately
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Modifying.html)
+     */
+    override fun applyImmediately(): Boolean? = unwrap(this).getApplyImmediately()
+
+    /**
      * Whether to enable automatic upgrade of minor version for the DB instance.
      *
      * Default: - true
      */
     override fun autoMinorVersionUpgrade(): Boolean? = unwrap(this).getAutoMinorVersionUpgrade()
+
+    /**
+     * The Availability Zone (AZ) where the database will be created.
+     *
+     * For Amazon Aurora, each Aurora DB cluster hosts copies of its storage in three separate
+     * Availability Zones.
+     * Specify one of these Availability Zones. Aurora automatically chooses an appropriate
+     * Availability Zone if you don't specify one.
+     *
+     * Default: - A random, system-chosen Availability Zone in the endpointʼs AWS Region.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.RegionsAndAvailabilityZones.html)
+     */
+    override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
     /**
      * The identifier of the CA certificate for this DB cluster's instances.
@@ -439,7 +522,7 @@ public interface ServerlessV2ClusterInstanceProps : ClusterInstanceOptions {
      *
      * * true: The serverless v2 reader will scale to match the writer instance (provisioned or
      * serverless)
-     * * false: The serverless v2 reader will scale with the read workfload on the instance
+     * * false: The serverless v2 reader will scale with the read workload on the instance
      *
      * Default: false
      */

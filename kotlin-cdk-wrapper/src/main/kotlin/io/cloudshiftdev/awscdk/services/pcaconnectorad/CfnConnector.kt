@@ -36,6 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .directoryId("directoryId")
  * .vpcInformation(VpcInformationProperty.builder()
  * .securityGroupIds(List.of("securityGroupIds"))
+ * // the properties below are optional
+ * .ipAddressType("ipAddressType")
  * .build())
  * // the properties below are optional
  * .tags(Map.of(
@@ -313,12 +315,21 @@ public open class CfnConnector(
    * import io.cloudshiftdev.awscdk.services.pcaconnectorad.*;
    * VpcInformationProperty vpcInformationProperty = VpcInformationProperty.builder()
    * .securityGroupIds(List.of("securityGroupIds"))
+   * // the properties below are optional
+   * .ipAddressType("ipAddressType")
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-connector-vpcinformation.html)
    */
   public interface VpcInformationProperty {
+    /**
+     * The VPC IP address type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-connector-vpcinformation.html#cfn-pcaconnectorad-connector-vpcinformation-ipaddresstype)
+     */
+    public fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+
     /**
      * The security groups used with the connector.
      *
@@ -333,6 +344,11 @@ public open class CfnConnector(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param ipAddressType The VPC IP address type.
+       */
+      public fun ipAddressType(ipAddressType: String)
+
       /**
        * @param securityGroupIds The security groups used with the connector. 
        * You can use a maximum of 4 security groups with a connector.
@@ -351,6 +367,13 @@ public open class CfnConnector(
           software.amazon.awscdk.services.pcaconnectorad.CfnConnector.VpcInformationProperty.Builder
           =
           software.amazon.awscdk.services.pcaconnectorad.CfnConnector.VpcInformationProperty.builder()
+
+      /**
+       * @param ipAddressType The VPC IP address type.
+       */
+      override fun ipAddressType(ipAddressType: String) {
+        cdkBuilder.ipAddressType(ipAddressType)
+      }
 
       /**
        * @param securityGroupIds The security groups used with the connector. 
@@ -376,6 +399,13 @@ public open class CfnConnector(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnConnector.VpcInformationProperty,
     ) : CdkObject(cdkObject),
         VpcInformationProperty {
+      /**
+       * The VPC IP address type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pcaconnectorad-connector-vpcinformation.html#cfn-pcaconnectorad-connector-vpcinformation-ipaddresstype)
+       */
+      override fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+
       /**
        * The security groups used with the connector.
        *

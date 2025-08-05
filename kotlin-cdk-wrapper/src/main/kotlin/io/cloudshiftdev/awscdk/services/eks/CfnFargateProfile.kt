@@ -25,7 +25,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * You must have at least one Fargate profile in a cluster to be able to run pods on Fargate.
  *
  * The Fargate profile allows an administrator to declare which pods run on Fargate and specify
- * which pods run on which Fargate profile. This declaration is done through the profile’s selectors.
+ * which pods run on which Fargate profile. This declaration is done through the profile's selectors.
  * Each profile can have up to five selectors that contain a namespace and labels. A namespace is
  * required for every selector. The label field consists of multiple optional key-value pairs. Pods
  * that match the selectors are scheduled on Fargate. If a to-be-scheduled pod matches any of the

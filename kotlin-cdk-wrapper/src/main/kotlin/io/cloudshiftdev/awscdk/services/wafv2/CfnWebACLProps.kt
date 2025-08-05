@@ -87,6 +87,20 @@ public interface CfnWebACLProps {
   public fun customResponseBodies(): Any? = unwrap(this).getCustomResponseBodies()
 
   /**
+   * Specifies data protection to apply to the web request data for the web ACL.
+   *
+   * This is a web ACL level data protection option.
+   *
+   * The data protection that you configure for the web ACL alters the data that's available for any
+   * other data collection activity, including your AWS WAF logging destinations, web ACL request
+   * sampling, and Amazon Security Lake data collection and management. Your other option for data
+   * protection is in the logging configuration, which only affects logging.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-dataprotectionconfig)
+   */
+  public fun dataProtectionConfig(): Any? = unwrap(this).getDataProtectionConfig()
+
+  /**
    * The action to perform if none of the `Rules` contained in the `WebACL` match.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-defaultaction)
@@ -110,6 +124,14 @@ public interface CfnWebACLProps {
   public fun name(): String? = unwrap(this).getName()
 
   /**
+   * Configures the level of DDoS protection that applies to web ACLs associated with Application
+   * Load Balancers.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-onsourceddosprotectionconfig)
+   */
+  public fun onSourceDDoSProtectionConfig(): Any? = unwrap(this).getOnSourceDDoSProtectionConfig()
+
+  /**
    * The rule statements used to identify the web requests that you want to manage.
    *
    * Each rule includes one top-level statement that AWS WAF uses to identify matching web requests,
@@ -122,9 +144,10 @@ public interface CfnWebACLProps {
   /**
    * Specifies whether this is for an Amazon CloudFront distribution or for a regional application.
    *
-   * A regional application can be an Application Load Balancer (ALB), an Amazon API Gateway REST
-   * API, an AWS AppSync GraphQL API, an Amazon Cognito user pool, an AWS App Runner service, or an AWS
-   * Verified Access instance. Valid Values are `CLOUDFRONT` and `REGIONAL` .
+   * For an AWS Amplify application, use `CLOUDFRONT` . A regional application can be an Application
+   * Load Balancer (ALB), an Amazon API Gateway REST API, an AWS AppSync GraphQL API, an Amazon Cognito
+   * user pool, an AWS App Runner service, or an AWS Verified Access instance. Valid Values are
+   * `CLOUDFRONT` and `REGIONAL` .
    *
    *
    * For `CLOUDFRONT` , you must create your WAFv2 resources in the US East (N. Virginia) Region,
@@ -318,6 +341,45 @@ public interface CfnWebACLProps {
     public fun customResponseBodies(customResponseBodies: Map<String, Any>)
 
     /**
+     * @param dataProtectionConfig Specifies data protection to apply to the web request data for
+     * the web ACL.
+     * This is a web ACL level data protection option.
+     *
+     * The data protection that you configure for the web ACL alters the data that's available for
+     * any other data collection activity, including your AWS WAF logging destinations, web ACL request
+     * sampling, and Amazon Security Lake data collection and management. Your other option for data
+     * protection is in the logging configuration, which only affects logging.
+     */
+    public fun dataProtectionConfig(dataProtectionConfig: IResolvable)
+
+    /**
+     * @param dataProtectionConfig Specifies data protection to apply to the web request data for
+     * the web ACL.
+     * This is a web ACL level data protection option.
+     *
+     * The data protection that you configure for the web ACL alters the data that's available for
+     * any other data collection activity, including your AWS WAF logging destinations, web ACL request
+     * sampling, and Amazon Security Lake data collection and management. Your other option for data
+     * protection is in the logging configuration, which only affects logging.
+     */
+    public fun dataProtectionConfig(dataProtectionConfig: CfnWebACL.DataProtectionConfigProperty)
+
+    /**
+     * @param dataProtectionConfig Specifies data protection to apply to the web request data for
+     * the web ACL.
+     * This is a web ACL level data protection option.
+     *
+     * The data protection that you configure for the web ACL alters the data that's available for
+     * any other data collection activity, including your AWS WAF logging destinations, web ACL request
+     * sampling, and Amazon Security Lake data collection and management. Your other option for data
+     * protection is in the logging configuration, which only affects logging.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("47317afc36e98fec4f38ce41911f1ea81edd578c6a897637128b67a8f83d58d0")
+    public
+        fun dataProtectionConfig(dataProtectionConfig: CfnWebACL.DataProtectionConfigProperty.Builder.() -> Unit)
+
+    /**
      * @param defaultAction The action to perform if none of the `Rules` contained in the `WebACL`
      * match. 
      */
@@ -349,6 +411,28 @@ public interface CfnWebACLProps {
     public fun name(name: String)
 
     /**
+     * @param onSourceDDoSProtectionConfig Configures the level of DDoS protection that applies to
+     * web ACLs associated with Application Load Balancers.
+     */
+    public fun onSourceDDoSProtectionConfig(onSourceDDoSProtectionConfig: IResolvable)
+
+    /**
+     * @param onSourceDDoSProtectionConfig Configures the level of DDoS protection that applies to
+     * web ACLs associated with Application Load Balancers.
+     */
+    public
+        fun onSourceDDoSProtectionConfig(onSourceDDoSProtectionConfig: CfnWebACL.OnSourceDDoSProtectionConfigProperty)
+
+    /**
+     * @param onSourceDDoSProtectionConfig Configures the level of DDoS protection that applies to
+     * web ACLs associated with Application Load Balancers.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3fdb7797862d46f9b855650b748602b1c207b1cfbd78cdc25eef698c9a0bee8d")
+    public
+        fun onSourceDDoSProtectionConfig(onSourceDDoSProtectionConfig: CfnWebACL.OnSourceDDoSProtectionConfigProperty.Builder.() -> Unit)
+
+    /**
      * @param rules The rule statements used to identify the web requests that you want to manage.
      * Each rule includes one top-level statement that AWS WAF uses to identify matching web
      * requests, and parameters that govern how AWS WAF handles them.
@@ -372,9 +456,10 @@ public interface CfnWebACLProps {
     /**
      * @param scope Specifies whether this is for an Amazon CloudFront distribution or for a
      * regional application. 
-     * A regional application can be an Application Load Balancer (ALB), an Amazon API Gateway REST
-     * API, an AWS AppSync GraphQL API, an Amazon Cognito user pool, an AWS App Runner service, or an
-     * AWS Verified Access instance. Valid Values are `CLOUDFRONT` and `REGIONAL` .
+     * For an AWS Amplify application, use `CLOUDFRONT` . A regional application can be an
+     * Application Load Balancer (ALB), an Amazon API Gateway REST API, an AWS AppSync GraphQL API, an
+     * Amazon Cognito user pool, an AWS App Runner service, or an AWS Verified Access instance. Valid
+     * Values are `CLOUDFRONT` and `REGIONAL` .
      *
      *
      * For `CLOUDFRONT` , you must create your WAFv2 resources in the US East (N. Virginia) Region,
@@ -614,6 +699,51 @@ public interface CfnWebACLProps {
     }
 
     /**
+     * @param dataProtectionConfig Specifies data protection to apply to the web request data for
+     * the web ACL.
+     * This is a web ACL level data protection option.
+     *
+     * The data protection that you configure for the web ACL alters the data that's available for
+     * any other data collection activity, including your AWS WAF logging destinations, web ACL request
+     * sampling, and Amazon Security Lake data collection and management. Your other option for data
+     * protection is in the logging configuration, which only affects logging.
+     */
+    override fun dataProtectionConfig(dataProtectionConfig: IResolvable) {
+      cdkBuilder.dataProtectionConfig(dataProtectionConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param dataProtectionConfig Specifies data protection to apply to the web request data for
+     * the web ACL.
+     * This is a web ACL level data protection option.
+     *
+     * The data protection that you configure for the web ACL alters the data that's available for
+     * any other data collection activity, including your AWS WAF logging destinations, web ACL request
+     * sampling, and Amazon Security Lake data collection and management. Your other option for data
+     * protection is in the logging configuration, which only affects logging.
+     */
+    override
+        fun dataProtectionConfig(dataProtectionConfig: CfnWebACL.DataProtectionConfigProperty) {
+      cdkBuilder.dataProtectionConfig(dataProtectionConfig.let(CfnWebACL.DataProtectionConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param dataProtectionConfig Specifies data protection to apply to the web request data for
+     * the web ACL.
+     * This is a web ACL level data protection option.
+     *
+     * The data protection that you configure for the web ACL alters the data that's available for
+     * any other data collection activity, including your AWS WAF logging destinations, web ACL request
+     * sampling, and Amazon Security Lake data collection and management. Your other option for data
+     * protection is in the logging configuration, which only affects logging.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("47317afc36e98fec4f38ce41911f1ea81edd578c6a897637128b67a8f83d58d0")
+    override
+        fun dataProtectionConfig(dataProtectionConfig: CfnWebACL.DataProtectionConfigProperty.Builder.() -> Unit):
+        Unit = dataProtectionConfig(CfnWebACL.DataProtectionConfigProperty(dataProtectionConfig))
+
+    /**
      * @param defaultAction The action to perform if none of the `Rules` contained in the `WebACL`
      * match. 
      */
@@ -654,6 +784,34 @@ public interface CfnWebACLProps {
     }
 
     /**
+     * @param onSourceDDoSProtectionConfig Configures the level of DDoS protection that applies to
+     * web ACLs associated with Application Load Balancers.
+     */
+    override fun onSourceDDoSProtectionConfig(onSourceDDoSProtectionConfig: IResolvable) {
+      cdkBuilder.onSourceDDoSProtectionConfig(onSourceDDoSProtectionConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param onSourceDDoSProtectionConfig Configures the level of DDoS protection that applies to
+     * web ACLs associated with Application Load Balancers.
+     */
+    override
+        fun onSourceDDoSProtectionConfig(onSourceDDoSProtectionConfig: CfnWebACL.OnSourceDDoSProtectionConfigProperty) {
+      cdkBuilder.onSourceDDoSProtectionConfig(onSourceDDoSProtectionConfig.let(CfnWebACL.OnSourceDDoSProtectionConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param onSourceDDoSProtectionConfig Configures the level of DDoS protection that applies to
+     * web ACLs associated with Application Load Balancers.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3fdb7797862d46f9b855650b748602b1c207b1cfbd78cdc25eef698c9a0bee8d")
+    override
+        fun onSourceDDoSProtectionConfig(onSourceDDoSProtectionConfig: CfnWebACL.OnSourceDDoSProtectionConfigProperty.Builder.() -> Unit):
+        Unit =
+        onSourceDDoSProtectionConfig(CfnWebACL.OnSourceDDoSProtectionConfigProperty(onSourceDDoSProtectionConfig))
+
+    /**
      * @param rules The rule statements used to identify the web requests that you want to manage.
      * Each rule includes one top-level statement that AWS WAF uses to identify matching web
      * requests, and parameters that govern how AWS WAF handles them.
@@ -681,9 +839,10 @@ public interface CfnWebACLProps {
     /**
      * @param scope Specifies whether this is for an Amazon CloudFront distribution or for a
      * regional application. 
-     * A regional application can be an Application Load Balancer (ALB), an Amazon API Gateway REST
-     * API, an AWS AppSync GraphQL API, an Amazon Cognito user pool, an AWS App Runner service, or an
-     * AWS Verified Access instance. Valid Values are `CLOUDFRONT` and `REGIONAL` .
+     * For an AWS Amplify application, use `CLOUDFRONT` . A regional application can be an
+     * Application Load Balancer (ALB), an Amazon API Gateway REST API, an AWS AppSync GraphQL API, an
+     * Amazon Cognito user pool, an AWS App Runner service, or an AWS Verified Access instance. Valid
+     * Values are `CLOUDFRONT` and `REGIONAL` .
      *
      *
      * For `CLOUDFRONT` , you must create your WAFv2 resources in the US East (N. Virginia) Region,
@@ -841,6 +1000,20 @@ public interface CfnWebACLProps {
     override fun customResponseBodies(): Any? = unwrap(this).getCustomResponseBodies()
 
     /**
+     * Specifies data protection to apply to the web request data for the web ACL.
+     *
+     * This is a web ACL level data protection option.
+     *
+     * The data protection that you configure for the web ACL alters the data that's available for
+     * any other data collection activity, including your AWS WAF logging destinations, web ACL request
+     * sampling, and Amazon Security Lake data collection and management. Your other option for data
+     * protection is in the logging configuration, which only affects logging.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-dataprotectionconfig)
+     */
+    override fun dataProtectionConfig(): Any? = unwrap(this).getDataProtectionConfig()
+
+    /**
      * The action to perform if none of the `Rules` contained in the `WebACL` match.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-defaultaction)
@@ -864,6 +1037,15 @@ public interface CfnWebACLProps {
     override fun name(): String? = unwrap(this).getName()
 
     /**
+     * Configures the level of DDoS protection that applies to web ACLs associated with Application
+     * Load Balancers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-onsourceddosprotectionconfig)
+     */
+    override fun onSourceDDoSProtectionConfig(): Any? =
+        unwrap(this).getOnSourceDDoSProtectionConfig()
+
+    /**
      * The rule statements used to identify the web requests that you want to manage.
      *
      * Each rule includes one top-level statement that AWS WAF uses to identify matching web
@@ -877,9 +1059,10 @@ public interface CfnWebACLProps {
      * Specifies whether this is for an Amazon CloudFront distribution or for a regional
      * application.
      *
-     * A regional application can be an Application Load Balancer (ALB), an Amazon API Gateway REST
-     * API, an AWS AppSync GraphQL API, an Amazon Cognito user pool, an AWS App Runner service, or an
-     * AWS Verified Access instance. Valid Values are `CLOUDFRONT` and `REGIONAL` .
+     * For an AWS Amplify application, use `CLOUDFRONT` . A regional application can be an
+     * Application Load Balancer (ALB), an Amazon API Gateway REST API, an AWS AppSync GraphQL API, an
+     * Amazon Cognito user pool, an AWS App Runner service, or an AWS Verified Access instance. Valid
+     * Values are `CLOUDFRONT` and `REGIONAL` .
      *
      *
      * For `CLOUDFRONT` , you must create your WAFv2 resources in the US East (N. Virginia) Region,

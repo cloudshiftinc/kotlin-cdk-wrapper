@@ -48,7 +48,7 @@ public open class Integration(
    * Can be overridden by subclasses to allow the integration to interact with the method being
    * integrated, access the REST API object, method ARNs, etc.
    *
-   * @param _method 
+   * @param method 
    */
   public open fun bind(method: Method): IntegrationConfig =
       unwrap(this).bind(method.let(Method.Companion::unwrap)).let(IntegrationConfig::wrap)

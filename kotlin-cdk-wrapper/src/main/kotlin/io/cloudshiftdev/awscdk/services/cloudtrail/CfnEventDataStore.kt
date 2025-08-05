@@ -47,6 +47,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .name("name")
  * .build()))
  * .billingMode("billingMode")
+ * .contextKeySelectors(List.of(ContextKeySelectorProperty.builder()
+ * .equalTo(List.of("equalTo"))
+ * .type("type")
+ * .build()))
  * .federationEnabled(false)
  * .federationRoleArn("federationRoleArn")
  * .ingestionEnabled(false)
@@ -55,6 +59,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .insightType("insightType")
  * .build()))
  * .kmsKeyId("kmsKeyId")
+ * .maxEventSize("maxEventSize")
  * .multiRegionEnabled(false)
  * .name("name")
  * .organizationEnabled(false)
@@ -155,6 +160,31 @@ public open class CfnEventDataStore(
   public open fun billingMode(`value`: String) {
     unwrap(this).setBillingMode(`value`)
   }
+
+  /**
+   * The list of context key selectors that are configured for the event data store.
+   */
+  public open fun contextKeySelectors(): Any? = unwrap(this).getContextKeySelectors()
+
+  /**
+   * The list of context key selectors that are configured for the event data store.
+   */
+  public open fun contextKeySelectors(`value`: IResolvable) {
+    unwrap(this).setContextKeySelectors(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The list of context key selectors that are configured for the event data store.
+   */
+  public open fun contextKeySelectors(`value`: List<Any>) {
+    unwrap(this).setContextKeySelectors(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * The list of context key selectors that are configured for the event data store.
+   */
+  public open fun contextKeySelectors(vararg `value`: Any): Unit =
+      contextKeySelectors(`value`.toList())
 
   /**
    * Indicates if [Lake query
@@ -274,6 +304,18 @@ public open class CfnEventDataStore(
    */
   public open fun kmsKeyId(`value`: String) {
     unwrap(this).setKmsKeyId(`value`)
+  }
+
+  /**
+   * The maximum allowed size for events to be stored in the specified event data store.
+   */
+  public open fun maxEventSize(): String? = unwrap(this).getMaxEventSize()
+
+  /**
+   * The maximum allowed size for events to be stored in the specified event data store.
+   */
+  public open fun maxEventSize(`value`: String) {
+    unwrap(this).setMaxEventSize(`value`)
   }
 
   /**
@@ -500,6 +542,33 @@ public open class CfnEventDataStore(
     public fun billingMode(billingMode: String)
 
     /**
+     * The list of context key selectors that are configured for the event data store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-contextkeyselectors)
+     * @param contextKeySelectors The list of context key selectors that are configured for the
+     * event data store. 
+     */
+    public fun contextKeySelectors(contextKeySelectors: IResolvable)
+
+    /**
+     * The list of context key selectors that are configured for the event data store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-contextkeyselectors)
+     * @param contextKeySelectors The list of context key selectors that are configured for the
+     * event data store. 
+     */
+    public fun contextKeySelectors(contextKeySelectors: List<Any>)
+
+    /**
+     * The list of context key selectors that are configured for the event data store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-contextkeyselectors)
+     * @param contextKeySelectors The list of context key selectors that are configured for the
+     * event data store. 
+     */
+    public fun contextKeySelectors(vararg contextKeySelectors: Any)
+
+    /**
      * Indicates if [Lake query
      * federation](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-federation.html) is
      * enabled. By default, Lake query federation is disabled. You cannot delete an event data store if
@@ -659,6 +728,17 @@ public open class CfnEventDataStore(
      * CloudTrail. 
      */
     public fun kmsKeyId(kmsKeyId: String)
+
+    /**
+     * The maximum allowed size for events to be stored in the specified event data store.
+     *
+     * If you are using context key selectors, MaxEventSize must be set to Large.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-maxeventsize)
+     * @param maxEventSize The maximum allowed size for events to be stored in the specified event
+     * data store. 
+     */
+    public fun maxEventSize(maxEventSize: String)
 
     /**
      * Specifies whether the event data store includes events from all Regions, or only from the
@@ -896,6 +976,38 @@ public open class CfnEventDataStore(
     }
 
     /**
+     * The list of context key selectors that are configured for the event data store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-contextkeyselectors)
+     * @param contextKeySelectors The list of context key selectors that are configured for the
+     * event data store. 
+     */
+    override fun contextKeySelectors(contextKeySelectors: IResolvable) {
+      cdkBuilder.contextKeySelectors(contextKeySelectors.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The list of context key selectors that are configured for the event data store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-contextkeyselectors)
+     * @param contextKeySelectors The list of context key selectors that are configured for the
+     * event data store. 
+     */
+    override fun contextKeySelectors(contextKeySelectors: List<Any>) {
+      cdkBuilder.contextKeySelectors(contextKeySelectors.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * The list of context key selectors that are configured for the event data store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-contextkeyselectors)
+     * @param contextKeySelectors The list of context key selectors that are configured for the
+     * event data store. 
+     */
+    override fun contextKeySelectors(vararg contextKeySelectors: Any): Unit =
+        contextKeySelectors(contextKeySelectors.toList())
+
+    /**
      * Indicates if [Lake query
      * federation](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-federation.html) is
      * enabled. By default, Lake query federation is disabled. You cannot delete an event data store if
@@ -1073,6 +1185,19 @@ public open class CfnEventDataStore(
      */
     override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
+    }
+
+    /**
+     * The maximum allowed size for events to be stored in the specified event data store.
+     *
+     * If you are using context key selectors, MaxEventSize must be set to Large.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-maxeventsize)
+     * @param maxEventSize The maximum allowed size for events to be stored in the specified event
+     * data store. 
+     */
+    override fun maxEventSize(maxEventSize: String) {
+      cdkBuilder.maxEventSize(maxEventSize)
     }
 
     /**
@@ -1262,23 +1387,16 @@ public open class CfnEventDataStore(
    * *Supported CloudTrail event record fields for data events*
    *
    * * `eventCategory` (required)
-   * * `resources.type` (required)
-   * * `readOnly`
    * * `eventName`
-   * * `resources.ARN`
-   *
-   * The following additional fields are available for event data stores:
-   *
    * * `eventSource`
    * * `eventType`
+   * * `resources.ARN`
+   * * `resources.type` (required)
+   * * `readOnly`
    * * `sessionCredentialFromConsole`
    * * `userIdentity.arn`
    *
    * *Supported CloudTrail event record fields for network activity events*
-   *
-   *
-   * Network activity events is in preview release for CloudTrail and is subject to change.
-   *
    *
    * * `eventCategory` (required)
    * * `eventSource` (required)
@@ -1491,9 +1609,8 @@ public open class CfnEventDataStore(
      * `eventSource` , and `readOnly` . The following additional fields are available for event data
      * stores: `eventName` , `eventType` , `sessionCredentialFromConsole` , and `userIdentity.arn` .
      *
-     * For CloudTrail data events, supported fields include `eventCategory` (required),
-     * `resources.type` (required), `eventName` , `readOnly` , and `resources.ARN` . The following
-     * additional fields are available for event data stores: `eventSource` , `eventType` ,
+     * For CloudTrail data events, supported fields include `eventCategory` (required), `eventName`
+     * , `eventSource` , `eventType` , `resources.type` (required), `readOnly` , `resources.ARN` ,
      * `sessionCredentialFromConsole` , and `userIdentity.arn` .
      *
      * For CloudTrail network activity events, supported fields include `eventCategory` (required),
@@ -1502,31 +1619,37 @@ public open class CfnEventDataStore(
      * For event data stores for CloudTrail Insights events, AWS Config configuration items, Audit
      * Manager evidence, or events outside of AWS , the only supported field is `eventCategory` .
      *
+     *
+     * Selectors don't support the use of wildcards like `*` . To match multiple values with a
+     * single condition, you may use `StartsWith` , `EndsWith` , `NotStartsWith` , or `NotEndsWith` to
+     * explicitly match the beginning or end of the event field.
+     *
+     *
      * * *`readOnly`* - This is an optional field that is only used for management events and data
      * events. This field can be set to `Equals` with a value of `true` or `false` . If you do not add
      * this field, CloudTrail logs both `read` and `write` events. A value of `true` logs only `read`
      * events. A value of `false` logs only `write` events.
-     * * *`eventSource`* - This field is only used for management events, data events (for event
-     * data stores only), and network activity events.
+     * * *`eventSource`* - This field is only used for management events, data events, and network
+     * activity events.
      *
      * For management events for trails, this is an optional field that can be set to `NotEquals`
      * `kms.amazonaws.com` to exclude KMS management events, or `NotEquals` `rdsdata.amazonaws.com` to
      * exclude RDS management events.
      *
-     * For management and data events for event data stores, you can use it to include or exclude
+     * For data events for trails, this is an optional field that you can use to include or exclude
      * any event source and can use any operator.
+     *
+     * For management and data events for event data stores, this is an optional field that you can
+     * use to include or exclude any event source and can use any operator.
      *
      * For network activity events, this is a required field that only uses the `Equals` operator.
      * Set this field to the event source for which you want to log network activity events. If you
      * want to log network activity events for multiple event sources, you must create a separate field
-     * selector for each event source.
+     * selector for each event source. For a list of services supporting network activity events, see
+     * [Logging network activity
+     * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-network-events-with-cloudtrail.html)
+     * in the *AWS CloudTrail User Guide* .
      *
-     * The following are valid values for network activity events:
-     *
-     * * `cloudtrail.amazonaws.com`
-     * * `ec2.amazonaws.com`
-     * * `kms.amazonaws.com`
-     * * `secretsmanager.amazonaws.com`
      * * *`eventName`* - This is an optional field that is only used for data events, management
      * events (for event data stores only), and network activity events. You can use any operator with
      * `eventName` . You can use it to ﬁlter in or ﬁlter out specific events. You can have multiple
@@ -1542,18 +1665,19 @@ public open class CfnEventDataStore(
      * * For AWS Config configuration items, the value must be `ConfigurationItem` .
      * * For Audit Manager evidence, the value must be `Evidence` .
      * * For events outside of AWS , the value must be `ActivityAuditLog` .
-     * * *`eventType`* - This is an optional field available only for event data stores, which is
-     * used to filter management and data events on the event type. For information about available
-     * event types, see [CloudTrail record
+     * * *`eventType`* - For event data stores, this is an optional field available for event data
+     * stores to filter management and data events on the event type. For trails, this is an optional
+     * field to filter data events on the event type. For information about available event types, see
+     * [CloudTrail record
      * contents](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-record-contents.html#ct-event-type)
      * in the *AWS CloudTrail user guide* .
      * * *`errorCode`* - This ﬁeld is only used to filter CloudTrail network activity events and is
      * optional. This is the error code to filter on. Currently, the only valid `errorCode` is
      * `VpceAccessDenied` . `errorCode` can only use the `Equals` operator.
-     * * *`sessionCredentialFromConsole`* - This is an optional field available only for event data
-     * stores, which is used to filter management and data events based on whether the events
-     * originated from an AWS Management Console session. `sessionCredentialFromConsole` can only use
-     * the `Equals` and `NotEquals` operators.
+     * * *`sessionCredentialFromConsole`* - For event data stores, this is an optional field used to
+     * filter management and data events based on whether the events originated from an AWS Management
+     * Console session. For trails, this is an optional field used to filter data events.
+     * `sessionCredentialFromConsole` can only use the `Equals` and `NotEquals` operators.
      * * *`resources.type`* - This ﬁeld is required for CloudTrail data events. `resources.type` can
      * only use the `Equals` operator.
      *
@@ -1570,19 +1694,19 @@ public open class CfnEventDataStore(
      * value of resources.type. To log all data events for all objects in a specific S3 bucket, use the
      * `StartsWith` operator, and include only the bucket ARN as the matching value.
      *
-     * For information about filtering data events on the `resources.ARN` field, see [Filtering data
-     * events by
-     * resources.ARN](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/filtering-data-events.html#filtering-data-events-resourcearn)
-     * in the *AWS CloudTrail User Guide* .
+     * For more information about the ARN formats of data event resources, see [Actions, resources,
+     * and condition keys for AWS
+     * services](https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html)
+     * in the *Service Authorization Reference* .
      *
      *
      * You can't use the `resources.ARN` field to filter resource types that do not have ARNs.
      *
      *
-     * * *`userIdentity.arn`* - This is an optional field available only for event data stores,
-     * which is used to filter management and data events on the userIdentity ARN. You can use any
-     * operator with `userIdentity.arn` . For more information on the userIdentity element, see
-     * [CloudTrail userIdentity
+     * * *`userIdentity.arn`* - For event data stores, this is an optional field used to filter
+     * management and data events for actions taken by specific IAM identities. For trails, this is an
+     * optional field used to filter data events. You can use any operator with `userIdentity.arn` .
+     * For more information on the userIdentity element, see [CloudTrail userIdentity
      * element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)
      * in the *AWS CloudTrail User Guide* .
      * * *`vpcEndpointId`* - This ﬁeld is only used to filter CloudTrail network activity events and
@@ -1669,9 +1793,8 @@ public open class CfnEventDataStore(
        * stores: `eventName` , `eventType` , `sessionCredentialFromConsole` , and `userIdentity.arn` .
        *
        * For CloudTrail data events, supported fields include `eventCategory` (required),
-       * `resources.type` (required), `eventName` , `readOnly` , and `resources.ARN` . The following
-       * additional fields are available for event data stores: `eventSource` , `eventType` ,
-       * `sessionCredentialFromConsole` , and `userIdentity.arn` .
+       * `eventName` , `eventSource` , `eventType` , `resources.type` (required), `readOnly` ,
+       * `resources.ARN` , `sessionCredentialFromConsole` , and `userIdentity.arn` .
        *
        * For CloudTrail network activity events, supported fields include `eventCategory`
        * (required), `eventSource` (required), `eventName` , `errorCode` , and `vpcEndpointId` .
@@ -1679,31 +1802,37 @@ public open class CfnEventDataStore(
        * For event data stores for CloudTrail Insights events, AWS Config configuration items, Audit
        * Manager evidence, or events outside of AWS , the only supported field is `eventCategory` .
        *
+       *
+       * Selectors don't support the use of wildcards like `*` . To match multiple values with a
+       * single condition, you may use `StartsWith` , `EndsWith` , `NotStartsWith` , or `NotEndsWith`
+       * to explicitly match the beginning or end of the event field.
+       *
+       *
        * * *`readOnly`* - This is an optional field that is only used for management events and data
        * events. This field can be set to `Equals` with a value of `true` or `false` . If you do not
        * add this field, CloudTrail logs both `read` and `write` events. A value of `true` logs only
        * `read` events. A value of `false` logs only `write` events.
-       * * *`eventSource`* - This field is only used for management events, data events (for event
-       * data stores only), and network activity events.
+       * * *`eventSource`* - This field is only used for management events, data events, and network
+       * activity events.
        *
        * For management events for trails, this is an optional field that can be set to `NotEquals`
        * `kms.amazonaws.com` to exclude KMS management events, or `NotEquals` `rdsdata.amazonaws.com`
        * to exclude RDS management events.
        *
-       * For management and data events for event data stores, you can use it to include or exclude
-       * any event source and can use any operator.
+       * For data events for trails, this is an optional field that you can use to include or
+       * exclude any event source and can use any operator.
+       *
+       * For management and data events for event data stores, this is an optional field that you
+       * can use to include or exclude any event source and can use any operator.
        *
        * For network activity events, this is a required field that only uses the `Equals` operator.
        * Set this field to the event source for which you want to log network activity events. If you
        * want to log network activity events for multiple event sources, you must create a separate
-       * field selector for each event source.
+       * field selector for each event source. For a list of services supporting network activity
+       * events, see [Logging network activity
+       * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-network-events-with-cloudtrail.html)
+       * in the *AWS CloudTrail User Guide* .
        *
-       * The following are valid values for network activity events:
-       *
-       * * `cloudtrail.amazonaws.com`
-       * * `ec2.amazonaws.com`
-       * * `kms.amazonaws.com`
-       * * `secretsmanager.amazonaws.com`
        * * *`eventName`* - This is an optional field that is only used for data events, management
        * events (for event data stores only), and network activity events. You can use any operator
        * with `eventName` . You can use it to ﬁlter in or ﬁlter out specific events. You can have
@@ -1719,18 +1848,19 @@ public open class CfnEventDataStore(
        * * For AWS Config configuration items, the value must be `ConfigurationItem` .
        * * For Audit Manager evidence, the value must be `Evidence` .
        * * For events outside of AWS , the value must be `ActivityAuditLog` .
-       * * *`eventType`* - This is an optional field available only for event data stores, which is
-       * used to filter management and data events on the event type. For information about available
-       * event types, see [CloudTrail record
+       * * *`eventType`* - For event data stores, this is an optional field available for event data
+       * stores to filter management and data events on the event type. For trails, this is an optional
+       * field to filter data events on the event type. For information about available event types,
+       * see [CloudTrail record
        * contents](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-record-contents.html#ct-event-type)
        * in the *AWS CloudTrail user guide* .
        * * *`errorCode`* - This ﬁeld is only used to filter CloudTrail network activity events and
        * is optional. This is the error code to filter on. Currently, the only valid `errorCode` is
        * `VpceAccessDenied` . `errorCode` can only use the `Equals` operator.
-       * * *`sessionCredentialFromConsole`* - This is an optional field available only for event
-       * data stores, which is used to filter management and data events based on whether the events
-       * originated from an AWS Management Console session. `sessionCredentialFromConsole` can only use
-       * the `Equals` and `NotEquals` operators.
+       * * *`sessionCredentialFromConsole`* - For event data stores, this is an optional field used
+       * to filter management and data events based on whether the events originated from an AWS
+       * Management Console session. For trails, this is an optional field used to filter data events.
+       * `sessionCredentialFromConsole` can only use the `Equals` and `NotEquals` operators.
        * * *`resources.type`* - This ﬁeld is required for CloudTrail data events. `resources.type`
        * can only use the `Equals` operator.
        *
@@ -1747,19 +1877,19 @@ public open class CfnEventDataStore(
        * value of resources.type. To log all data events for all objects in a specific S3 bucket, use
        * the `StartsWith` operator, and include only the bucket ARN as the matching value.
        *
-       * For information about filtering data events on the `resources.ARN` field, see [Filtering
-       * data events by
-       * resources.ARN](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/filtering-data-events.html#filtering-data-events-resourcearn)
-       * in the *AWS CloudTrail User Guide* .
+       * For more information about the ARN formats of data event resources, see [Actions,
+       * resources, and condition keys for AWS
+       * services](https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html)
+       * in the *Service Authorization Reference* .
        *
        *
        * You can't use the `resources.ARN` field to filter resource types that do not have ARNs.
        *
        *
-       * * *`userIdentity.arn`* - This is an optional field available only for event data stores,
-       * which is used to filter management and data events on the userIdentity ARN. You can use any
-       * operator with `userIdentity.arn` . For more information on the userIdentity element, see
-       * [CloudTrail userIdentity
+       * * *`userIdentity.arn`* - For event data stores, this is an optional field used to filter
+       * management and data events for actions taken by specific IAM identities. For trails, this is
+       * an optional field used to filter data events. You can use any operator with `userIdentity.arn`
+       * . For more information on the userIdentity element, see [CloudTrail userIdentity
        * element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)
        * in the *AWS CloudTrail User Guide* .
        * * *`vpcEndpointId`* - This ﬁeld is only used to filter CloudTrail network activity events
@@ -1866,9 +1996,8 @@ public open class CfnEventDataStore(
        * stores: `eventName` , `eventType` , `sessionCredentialFromConsole` , and `userIdentity.arn` .
        *
        * For CloudTrail data events, supported fields include `eventCategory` (required),
-       * `resources.type` (required), `eventName` , `readOnly` , and `resources.ARN` . The following
-       * additional fields are available for event data stores: `eventSource` , `eventType` ,
-       * `sessionCredentialFromConsole` , and `userIdentity.arn` .
+       * `eventName` , `eventSource` , `eventType` , `resources.type` (required), `readOnly` ,
+       * `resources.ARN` , `sessionCredentialFromConsole` , and `userIdentity.arn` .
        *
        * For CloudTrail network activity events, supported fields include `eventCategory`
        * (required), `eventSource` (required), `eventName` , `errorCode` , and `vpcEndpointId` .
@@ -1876,31 +2005,37 @@ public open class CfnEventDataStore(
        * For event data stores for CloudTrail Insights events, AWS Config configuration items, Audit
        * Manager evidence, or events outside of AWS , the only supported field is `eventCategory` .
        *
+       *
+       * Selectors don't support the use of wildcards like `*` . To match multiple values with a
+       * single condition, you may use `StartsWith` , `EndsWith` , `NotStartsWith` , or `NotEndsWith`
+       * to explicitly match the beginning or end of the event field.
+       *
+       *
        * * *`readOnly`* - This is an optional field that is only used for management events and data
        * events. This field can be set to `Equals` with a value of `true` or `false` . If you do not
        * add this field, CloudTrail logs both `read` and `write` events. A value of `true` logs only
        * `read` events. A value of `false` logs only `write` events.
-       * * *`eventSource`* - This field is only used for management events, data events (for event
-       * data stores only), and network activity events.
+       * * *`eventSource`* - This field is only used for management events, data events, and network
+       * activity events.
        *
        * For management events for trails, this is an optional field that can be set to `NotEquals`
        * `kms.amazonaws.com` to exclude KMS management events, or `NotEquals` `rdsdata.amazonaws.com`
        * to exclude RDS management events.
        *
-       * For management and data events for event data stores, you can use it to include or exclude
-       * any event source and can use any operator.
+       * For data events for trails, this is an optional field that you can use to include or
+       * exclude any event source and can use any operator.
+       *
+       * For management and data events for event data stores, this is an optional field that you
+       * can use to include or exclude any event source and can use any operator.
        *
        * For network activity events, this is a required field that only uses the `Equals` operator.
        * Set this field to the event source for which you want to log network activity events. If you
        * want to log network activity events for multiple event sources, you must create a separate
-       * field selector for each event source.
+       * field selector for each event source. For a list of services supporting network activity
+       * events, see [Logging network activity
+       * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-network-events-with-cloudtrail.html)
+       * in the *AWS CloudTrail User Guide* .
        *
-       * The following are valid values for network activity events:
-       *
-       * * `cloudtrail.amazonaws.com`
-       * * `ec2.amazonaws.com`
-       * * `kms.amazonaws.com`
-       * * `secretsmanager.amazonaws.com`
        * * *`eventName`* - This is an optional field that is only used for data events, management
        * events (for event data stores only), and network activity events. You can use any operator
        * with `eventName` . You can use it to ﬁlter in or ﬁlter out specific events. You can have
@@ -1916,18 +2051,19 @@ public open class CfnEventDataStore(
        * * For AWS Config configuration items, the value must be `ConfigurationItem` .
        * * For Audit Manager evidence, the value must be `Evidence` .
        * * For events outside of AWS , the value must be `ActivityAuditLog` .
-       * * *`eventType`* - This is an optional field available only for event data stores, which is
-       * used to filter management and data events on the event type. For information about available
-       * event types, see [CloudTrail record
+       * * *`eventType`* - For event data stores, this is an optional field available for event data
+       * stores to filter management and data events on the event type. For trails, this is an optional
+       * field to filter data events on the event type. For information about available event types,
+       * see [CloudTrail record
        * contents](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-record-contents.html#ct-event-type)
        * in the *AWS CloudTrail user guide* .
        * * *`errorCode`* - This ﬁeld is only used to filter CloudTrail network activity events and
        * is optional. This is the error code to filter on. Currently, the only valid `errorCode` is
        * `VpceAccessDenied` . `errorCode` can only use the `Equals` operator.
-       * * *`sessionCredentialFromConsole`* - This is an optional field available only for event
-       * data stores, which is used to filter management and data events based on whether the events
-       * originated from an AWS Management Console session. `sessionCredentialFromConsole` can only use
-       * the `Equals` and `NotEquals` operators.
+       * * *`sessionCredentialFromConsole`* - For event data stores, this is an optional field used
+       * to filter management and data events based on whether the events originated from an AWS
+       * Management Console session. For trails, this is an optional field used to filter data events.
+       * `sessionCredentialFromConsole` can only use the `Equals` and `NotEquals` operators.
        * * *`resources.type`* - This ﬁeld is required for CloudTrail data events. `resources.type`
        * can only use the `Equals` operator.
        *
@@ -1944,19 +2080,19 @@ public open class CfnEventDataStore(
        * value of resources.type. To log all data events for all objects in a specific S3 bucket, use
        * the `StartsWith` operator, and include only the bucket ARN as the matching value.
        *
-       * For information about filtering data events on the `resources.ARN` field, see [Filtering
-       * data events by
-       * resources.ARN](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/filtering-data-events.html#filtering-data-events-resourcearn)
-       * in the *AWS CloudTrail User Guide* .
+       * For more information about the ARN formats of data event resources, see [Actions,
+       * resources, and condition keys for AWS
+       * services](https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html)
+       * in the *Service Authorization Reference* .
        *
        *
        * You can't use the `resources.ARN` field to filter resource types that do not have ARNs.
        *
        *
-       * * *`userIdentity.arn`* - This is an optional field available only for event data stores,
-       * which is used to filter management and data events on the userIdentity ARN. You can use any
-       * operator with `userIdentity.arn` . For more information on the userIdentity element, see
-       * [CloudTrail userIdentity
+       * * *`userIdentity.arn`* - For event data stores, this is an optional field used to filter
+       * management and data events for actions taken by specific IAM identities. For trails, this is
+       * an optional field used to filter data events. You can use any operator with `userIdentity.arn`
+       * . For more information on the userIdentity element, see [CloudTrail userIdentity
        * element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)
        * in the *AWS CloudTrail User Guide* .
        * * *`vpcEndpointId`* - This ﬁeld is only used to filter CloudTrail network activity events
@@ -2064,9 +2200,8 @@ public open class CfnEventDataStore(
        * stores: `eventName` , `eventType` , `sessionCredentialFromConsole` , and `userIdentity.arn` .
        *
        * For CloudTrail data events, supported fields include `eventCategory` (required),
-       * `resources.type` (required), `eventName` , `readOnly` , and `resources.ARN` . The following
-       * additional fields are available for event data stores: `eventSource` , `eventType` ,
-       * `sessionCredentialFromConsole` , and `userIdentity.arn` .
+       * `eventName` , `eventSource` , `eventType` , `resources.type` (required), `readOnly` ,
+       * `resources.ARN` , `sessionCredentialFromConsole` , and `userIdentity.arn` .
        *
        * For CloudTrail network activity events, supported fields include `eventCategory`
        * (required), `eventSource` (required), `eventName` , `errorCode` , and `vpcEndpointId` .
@@ -2074,31 +2209,37 @@ public open class CfnEventDataStore(
        * For event data stores for CloudTrail Insights events, AWS Config configuration items, Audit
        * Manager evidence, or events outside of AWS , the only supported field is `eventCategory` .
        *
+       *
+       * Selectors don't support the use of wildcards like `*` . To match multiple values with a
+       * single condition, you may use `StartsWith` , `EndsWith` , `NotStartsWith` , or `NotEndsWith`
+       * to explicitly match the beginning or end of the event field.
+       *
+       *
        * * *`readOnly`* - This is an optional field that is only used for management events and data
        * events. This field can be set to `Equals` with a value of `true` or `false` . If you do not
        * add this field, CloudTrail logs both `read` and `write` events. A value of `true` logs only
        * `read` events. A value of `false` logs only `write` events.
-       * * *`eventSource`* - This field is only used for management events, data events (for event
-       * data stores only), and network activity events.
+       * * *`eventSource`* - This field is only used for management events, data events, and network
+       * activity events.
        *
        * For management events for trails, this is an optional field that can be set to `NotEquals`
        * `kms.amazonaws.com` to exclude KMS management events, or `NotEquals` `rdsdata.amazonaws.com`
        * to exclude RDS management events.
        *
-       * For management and data events for event data stores, you can use it to include or exclude
-       * any event source and can use any operator.
+       * For data events for trails, this is an optional field that you can use to include or
+       * exclude any event source and can use any operator.
+       *
+       * For management and data events for event data stores, this is an optional field that you
+       * can use to include or exclude any event source and can use any operator.
        *
        * For network activity events, this is a required field that only uses the `Equals` operator.
        * Set this field to the event source for which you want to log network activity events. If you
        * want to log network activity events for multiple event sources, you must create a separate
-       * field selector for each event source.
+       * field selector for each event source. For a list of services supporting network activity
+       * events, see [Logging network activity
+       * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-network-events-with-cloudtrail.html)
+       * in the *AWS CloudTrail User Guide* .
        *
-       * The following are valid values for network activity events:
-       *
-       * * `cloudtrail.amazonaws.com`
-       * * `ec2.amazonaws.com`
-       * * `kms.amazonaws.com`
-       * * `secretsmanager.amazonaws.com`
        * * *`eventName`* - This is an optional field that is only used for data events, management
        * events (for event data stores only), and network activity events. You can use any operator
        * with `eventName` . You can use it to ﬁlter in or ﬁlter out specific events. You can have
@@ -2114,18 +2255,19 @@ public open class CfnEventDataStore(
        * * For AWS Config configuration items, the value must be `ConfigurationItem` .
        * * For Audit Manager evidence, the value must be `Evidence` .
        * * For events outside of AWS , the value must be `ActivityAuditLog` .
-       * * *`eventType`* - This is an optional field available only for event data stores, which is
-       * used to filter management and data events on the event type. For information about available
-       * event types, see [CloudTrail record
+       * * *`eventType`* - For event data stores, this is an optional field available for event data
+       * stores to filter management and data events on the event type. For trails, this is an optional
+       * field to filter data events on the event type. For information about available event types,
+       * see [CloudTrail record
        * contents](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-record-contents.html#ct-event-type)
        * in the *AWS CloudTrail user guide* .
        * * *`errorCode`* - This ﬁeld is only used to filter CloudTrail network activity events and
        * is optional. This is the error code to filter on. Currently, the only valid `errorCode` is
        * `VpceAccessDenied` . `errorCode` can only use the `Equals` operator.
-       * * *`sessionCredentialFromConsole`* - This is an optional field available only for event
-       * data stores, which is used to filter management and data events based on whether the events
-       * originated from an AWS Management Console session. `sessionCredentialFromConsole` can only use
-       * the `Equals` and `NotEquals` operators.
+       * * *`sessionCredentialFromConsole`* - For event data stores, this is an optional field used
+       * to filter management and data events based on whether the events originated from an AWS
+       * Management Console session. For trails, this is an optional field used to filter data events.
+       * `sessionCredentialFromConsole` can only use the `Equals` and `NotEquals` operators.
        * * *`resources.type`* - This ﬁeld is required for CloudTrail data events. `resources.type`
        * can only use the `Equals` operator.
        *
@@ -2142,19 +2284,19 @@ public open class CfnEventDataStore(
        * value of resources.type. To log all data events for all objects in a specific S3 bucket, use
        * the `StartsWith` operator, and include only the bucket ARN as the matching value.
        *
-       * For information about filtering data events on the `resources.ARN` field, see [Filtering
-       * data events by
-       * resources.ARN](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/filtering-data-events.html#filtering-data-events-resourcearn)
-       * in the *AWS CloudTrail User Guide* .
+       * For more information about the ARN formats of data event resources, see [Actions,
+       * resources, and condition keys for AWS
+       * services](https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html)
+       * in the *Service Authorization Reference* .
        *
        *
        * You can't use the `resources.ARN` field to filter resource types that do not have ARNs.
        *
        *
-       * * *`userIdentity.arn`* - This is an optional field available only for event data stores,
-       * which is used to filter management and data events on the userIdentity ARN. You can use any
-       * operator with `userIdentity.arn` . For more information on the userIdentity element, see
-       * [CloudTrail userIdentity
+       * * *`userIdentity.arn`* - For event data stores, this is an optional field used to filter
+       * management and data events for actions taken by specific IAM identities. For trails, this is
+       * an optional field used to filter data events. You can use any operator with `userIdentity.arn`
+       * . For more information on the userIdentity element, see [CloudTrail userIdentity
        * element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)
        * in the *AWS CloudTrail User Guide* .
        * * *`vpcEndpointId`* - This ﬁeld is only used to filter CloudTrail network activity events
@@ -2213,6 +2355,136 @@ public open class CfnEventDataStore(
           software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedFieldSelectorProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedFieldSelectorProperty
+    }
+  }
+
+  /**
+   * An object that contains information types to be included in CloudTrail enriched events.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cloudtrail.*;
+   * ContextKeySelectorProperty contextKeySelectorProperty = ContextKeySelectorProperty.builder()
+   * .equalTo(List.of("equalTo"))
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-contextkeyselector.html)
+   */
+  public interface ContextKeySelectorProperty {
+    /**
+     * A list of keys defined by Type to be included in CloudTrail enriched events.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-contextkeyselector.html#cfn-cloudtrail-eventdatastore-contextkeyselector-equals)
+     */
+    public fun equalTo(): List<String>
+
+    /**
+     * Specifies the type of the event record field in ContextKeySelector.
+     *
+     * Valid values include RequestContext, TagContext.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-contextkeyselector.html#cfn-cloudtrail-eventdatastore-contextkeyselector-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [ContextKeySelectorProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param equalTo A list of keys defined by Type to be included in CloudTrail enriched events.
+       * 
+       */
+      public fun equalTo(equalTo: List<String>)
+
+      /**
+       * @param equalTo A list of keys defined by Type to be included in CloudTrail enriched events.
+       * 
+       */
+      public fun equalTo(vararg equalTo: String)
+
+      /**
+       * @param type Specifies the type of the event record field in ContextKeySelector. 
+       * Valid values include RequestContext, TagContext.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.ContextKeySelectorProperty.Builder
+          =
+          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.ContextKeySelectorProperty.builder()
+
+      /**
+       * @param equalTo A list of keys defined by Type to be included in CloudTrail enriched events.
+       * 
+       */
+      override fun equalTo(equalTo: List<String>) {
+        cdkBuilder.equalTo(equalTo)
+      }
+
+      /**
+       * @param equalTo A list of keys defined by Type to be included in CloudTrail enriched events.
+       * 
+       */
+      override fun equalTo(vararg equalTo: String): Unit = equalTo(equalTo.toList())
+
+      /**
+       * @param type Specifies the type of the event record field in ContextKeySelector. 
+       * Valid values include RequestContext, TagContext.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.ContextKeySelectorProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.ContextKeySelectorProperty,
+    ) : CdkObject(cdkObject),
+        ContextKeySelectorProperty {
+      /**
+       * A list of keys defined by Type to be included in CloudTrail enriched events.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-contextkeyselector.html#cfn-cloudtrail-eventdatastore-contextkeyselector-equals)
+       */
+      override fun equalTo(): List<String> = unwrap(this).getEqualTo()
+
+      /**
+       * Specifies the type of the event record field in ContextKeySelector.
+       *
+       * Valid values include RequestContext, TagContext.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-contextkeyselector.html#cfn-cloudtrail-eventdatastore-contextkeyselector-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ContextKeySelectorProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.ContextKeySelectorProperty):
+          ContextKeySelectorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContextKeySelectorProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ContextKeySelectorProperty):
+          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.ContextKeySelectorProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.ContextKeySelectorProperty
     }
   }
 

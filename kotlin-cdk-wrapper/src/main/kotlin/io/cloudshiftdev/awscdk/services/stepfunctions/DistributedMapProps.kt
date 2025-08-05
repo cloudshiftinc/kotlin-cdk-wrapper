@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -34,7 +35,29 @@ import kotlin.jvm.JvmName
  * distributedMap.itemProcessor(new Pass(this, "Pass"));
  * ```
  */
-public interface DistributedMapProps : MapBaseProps {
+public interface DistributedMapProps : MapBaseProps, MapBaseOptions, MapBaseJsonPathOptions,
+    MapBaseJsonataOptions {
+  /**
+   * Workflow variables to store in this step.
+   *
+   * Using workflow variables, you can store data in a step and retrieve that data in future steps.
+   *
+   * Default: - Not assign variables
+   *
+   * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+   */
+  public override fun assign(): Map<String, Any> = unwrap(this).getAssign() ?: emptyMap()
+
+  /**
+   * JSONPath expression to select part of the state to be the input to this state.
+   *
+   * May also be the special value JsonPath.DISCARD, which will cause the effective
+   * input to be the empty object {}.
+   *
+   * Default: $
+   */
+  public override fun inputPath(): String? = unwrap(this).getInputPath()
+
   /**
    * Specifies to process a group of items in a single child workflow execution.
    *
@@ -50,6 +73,41 @@ public interface DistributedMapProps : MapBaseProps {
    * Default: - No itemReader
    */
   public fun itemReader(): IItemReader? = unwrap(this).getItemReader()?.let(IItemReader::wrap)
+
+  /**
+   * The JSON that you want to override your default iteration input (mutually exclusive  with
+   * `parameters` and `jsonataItemSelector`).
+   *
+   * Default: $
+   *
+   * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-itemselector.html)
+   */
+  public override fun itemSelector(): Map<String, Any> = unwrap(this).getItemSelector() ?:
+      emptyMap()
+
+  /**
+   * The array that the Map state will iterate over.
+   *
+   * Default: - The state input as is.
+   */
+  public override fun items(): ProvideItems? = unwrap(this).getItems()?.let(ProvideItems::wrap)
+
+  /**
+   * JSONPath expression to select the array to iterate over.
+   *
+   * Default: $
+   */
+  public override fun itemsPath(): String? = unwrap(this).getItemsPath()
+
+  /**
+   * Jsonata expression that evaluates to a JSON array to override your default iteration input
+   * (mutually exclusive with `parameters` and `itemSelector`).
+   *
+   * Example value: `{% {\"foo\": \"foo\", \"input\": $states.input} %}`
+   *
+   * Default: $
+   */
+  public override fun jsonataItemSelector(): String? = unwrap(this).getJsonataItemSelector()
 
   /**
    * Label.
@@ -73,11 +131,96 @@ public interface DistributedMapProps : MapBaseProps {
       unwrap(this).getMapExecutionType()?.let(StateMachineType::wrap)
 
   /**
-   * Configuration for S3 location in which to save Map Run results.
+   * MaxConcurrency.
+   *
+   * An upper bound on the number of iterations you want running at once.
+   *
+   * Default: - full concurrency
+   *
+   * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-asl-use-map-state-inline.html#map-state-inline-additional-fields)
+   */
+  public override fun maxConcurrency(): Number? = unwrap(this).getMaxConcurrency()
+
+  /**
+   * MaxConcurrencyPath.
+   *
+   * A JsonPath that specifies the maximum concurrency dynamically from the state input.
+   *
+   * Default: - full concurrency
+   *
+   * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-asl-use-map-state-inline.html#map-state-inline-additional-fields)
+   */
+  public override fun maxConcurrencyPath(): String? = unwrap(this).getMaxConcurrencyPath()
+
+  /**
+   * JSONPath expression to select part of the state to be the output to this state.
+   *
+   * May also be the special value JsonPath.DISCARD, which will cause the effective
+   * output to be the empty object {}.
+   *
+   * Default: $
+   */
+  public override fun outputPath(): String? = unwrap(this).getOutputPath()
+
+  /**
+   * Used to specify and transform output from the state.
+   *
+   * When specified, the value overrides the state output default.
+   * The output field accepts any JSON value (object, array, string, number, boolean, null).
+   * Any string value, including those inside objects or arrays,
+   * will be evaluated as JSONata if surrounded by {% %} characters.
+   * Output also accepts a JSONata expression directly.
+   *
+   * Default: - $states.result or $states.errorOutput
+   *
+   * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+   */
+  public override fun outputs(): Any? = unwrap(this).getOutputs()
+
+  /**
+   * JSONPath expression to indicate where to inject the state's output.
+   *
+   * May also be the special value JsonPath.DISCARD, which will cause the state's
+   * input to become its output.
+   *
+   * Default: $
+   */
+  public override fun resultPath(): String? = unwrap(this).getResultPath()
+
+  /**
+   * The JSON that will replace the state's raw result and become the effective result before
+   * ResultPath is applied.
+   *
+   * You can use ResultSelector to create a payload with values that are static
+   * or selected from the state's raw result.
+   *
+   * Default: - None
+   *
+   * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-inputpath-params.html#input-output-resultselector)
+   */
+  public override fun resultSelector(): Map<String, Any> = unwrap(this).getResultSelector() ?:
+      emptyMap()
+
+  /**
+   * (deprecated) Configuration for S3 location in which to save Map Run results.
    *
    * Default: - No resultWriter
+   *
+   * @deprecated Use [resultWriterV2 ]
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun resultWriter(): ResultWriter? = unwrap(this).getResultWriter()?.let(ResultWriter::wrap)
+
+  /**
+   * Configuration for S3 location in which to save Map Run results Enable
+   * "&#64;aws-cdk/aws-stepfunctions:useDistributedMapResultWriterV2" feature in the context to use
+   * resultWriterV2 Example:
+   * stack.node.setContext("&#64;aws-cdk/aws-stepfunctions:useDistributedMapResultWriterV2", true);
+   *
+   * Default: - No resultWriterV2
+   */
+  public fun resultWriterV2(): ResultWriterV2? =
+      unwrap(this).getResultWriterV2()?.let(ResultWriterV2::wrap)
 
   /**
    * ToleratedFailureCount.
@@ -122,7 +265,14 @@ public interface DistributedMapProps : MapBaseProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param comment An optional description for this state.
+     * @param assign Workflow variables to store in this step.
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     */
+    public fun assign(assign: Map<String, Any>)
+
+    /**
+     * @param comment A comment describing this state.
      */
     public fun comment(comment: String)
 
@@ -156,14 +306,26 @@ public interface DistributedMapProps : MapBaseProps {
 
     /**
      * @param itemSelector The JSON that you want to override your default iteration input (mutually
-     * exclusive  with `parameters`).
+     * exclusive  with `parameters` and `jsonataItemSelector`).
      */
     public fun itemSelector(itemSelector: Map<String, Any>)
+
+    /**
+     * @param items The array that the Map state will iterate over.
+     */
+    public fun items(items: ProvideItems)
 
     /**
      * @param itemsPath JSONPath expression to select the array to iterate over.
      */
     public fun itemsPath(itemsPath: String)
+
+    /**
+     * @param jsonataItemSelector Jsonata expression that evaluates to a JSON array to override your
+     * default iteration input (mutually exclusive with `parameters` and `itemSelector`).
+     * Example value: `{% {\"foo\": \"foo\", \"input\": $states.input} %}`
+     */
+    public fun jsonataItemSelector(jsonataItemSelector: String)
 
     /**
      * @param label Label.
@@ -200,6 +362,23 @@ public interface DistributedMapProps : MapBaseProps {
     public fun outputPath(outputPath: String)
 
     /**
+     * @param outputs Used to specify and transform output from the state.
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     */
+    public fun outputs(outputs: Any)
+
+    /**
+     * @param queryLanguage The name of the query language used by the state.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
+
+    /**
      * @param resultPath JSONPath expression to indicate where to inject the state's output.
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
@@ -216,15 +395,37 @@ public interface DistributedMapProps : MapBaseProps {
 
     /**
      * @param resultWriter Configuration for S3 location in which to save Map Run results.
+     * @deprecated Use [resultWriterV2 ]
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun resultWriter(resultWriter: ResultWriter)
 
     /**
      * @param resultWriter Configuration for S3 location in which to save Map Run results.
+     * @deprecated Use [resultWriterV2 ]
      */
+    @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1f1bea22b30405e0038adacd4b7e46eac1ba1932a0e4516c754b509f597dc076")
     public fun resultWriter(resultWriter: ResultWriter.Builder.() -> Unit)
+
+    /**
+     * @param resultWriterV2 Configuration for S3 location in which to save Map Run results Enable
+     * "&#64;aws-cdk/aws-stepfunctions:useDistributedMapResultWriterV2" feature in the context to use
+     * resultWriterV2 Example:
+     * stack.node.setContext("&#64;aws-cdk/aws-stepfunctions:useDistributedMapResultWriterV2", true);.
+     */
+    public fun resultWriterV2(resultWriterV2: ResultWriterV2)
+
+    /**
+     * @param resultWriterV2 Configuration for S3 location in which to save Map Run results Enable
+     * "&#64;aws-cdk/aws-stepfunctions:useDistributedMapResultWriterV2" feature in the context to use
+     * resultWriterV2 Example:
+     * stack.node.setContext("&#64;aws-cdk/aws-stepfunctions:useDistributedMapResultWriterV2", true);.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9b68bf173568131ec3134c4d408003970efaf6a97d11c99eca90f885ddb94818")
+    public fun resultWriterV2(resultWriterV2: ResultWriterV2.Builder.() -> Unit)
 
     /**
      * @param stateName Optional name for this state.
@@ -262,7 +463,16 @@ public interface DistributedMapProps : MapBaseProps {
         software.amazon.awscdk.services.stepfunctions.DistributedMapProps.builder()
 
     /**
-     * @param comment An optional description for this state.
+     * @param assign Workflow variables to store in this step.
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * @param comment A comment describing this state.
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -305,10 +515,17 @@ public interface DistributedMapProps : MapBaseProps {
 
     /**
      * @param itemSelector The JSON that you want to override your default iteration input (mutually
-     * exclusive  with `parameters`).
+     * exclusive  with `parameters` and `jsonataItemSelector`).
      */
     override fun itemSelector(itemSelector: Map<String, Any>) {
       cdkBuilder.itemSelector(itemSelector.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * @param items The array that the Map state will iterate over.
+     */
+    override fun items(items: ProvideItems) {
+      cdkBuilder.items(items.let(ProvideItems.Companion::unwrap))
     }
 
     /**
@@ -316,6 +533,15 @@ public interface DistributedMapProps : MapBaseProps {
      */
     override fun itemsPath(itemsPath: String) {
       cdkBuilder.itemsPath(itemsPath)
+    }
+
+    /**
+     * @param jsonataItemSelector Jsonata expression that evaluates to a JSON array to override your
+     * default iteration input (mutually exclusive with `parameters` and `itemSelector`).
+     * Example value: `{% {\"foo\": \"foo\", \"input\": $states.input} %}`
+     */
+    override fun jsonataItemSelector(jsonataItemSelector: String) {
+      cdkBuilder.jsonataItemSelector(jsonataItemSelector)
     }
 
     /**
@@ -363,6 +589,27 @@ public interface DistributedMapProps : MapBaseProps {
     }
 
     /**
+     * @param outputs Used to specify and transform output from the state.
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     */
+    override fun outputs(outputs: Any) {
+      cdkBuilder.outputs(outputs)
+    }
+
+    /**
+     * @param queryLanguage The name of the query language used by the state.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
+    }
+
+    /**
      * @param resultPath JSONPath expression to indicate where to inject the state's output.
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
@@ -383,18 +630,43 @@ public interface DistributedMapProps : MapBaseProps {
 
     /**
      * @param resultWriter Configuration for S3 location in which to save Map Run results.
+     * @deprecated Use [resultWriterV2 ]
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun resultWriter(resultWriter: ResultWriter) {
       cdkBuilder.resultWriter(resultWriter.let(ResultWriter.Companion::unwrap))
     }
 
     /**
      * @param resultWriter Configuration for S3 location in which to save Map Run results.
+     * @deprecated Use [resultWriterV2 ]
      */
+    @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1f1bea22b30405e0038adacd4b7e46eac1ba1932a0e4516c754b509f597dc076")
     override fun resultWriter(resultWriter: ResultWriter.Builder.() -> Unit): Unit =
         resultWriter(ResultWriter(resultWriter))
+
+    /**
+     * @param resultWriterV2 Configuration for S3 location in which to save Map Run results Enable
+     * "&#64;aws-cdk/aws-stepfunctions:useDistributedMapResultWriterV2" feature in the context to use
+     * resultWriterV2 Example:
+     * stack.node.setContext("&#64;aws-cdk/aws-stepfunctions:useDistributedMapResultWriterV2", true);.
+     */
+    override fun resultWriterV2(resultWriterV2: ResultWriterV2) {
+      cdkBuilder.resultWriterV2(resultWriterV2.let(ResultWriterV2.Companion::unwrap))
+    }
+
+    /**
+     * @param resultWriterV2 Configuration for S3 location in which to save Map Run results Enable
+     * "&#64;aws-cdk/aws-stepfunctions:useDistributedMapResultWriterV2" feature in the context to use
+     * resultWriterV2 Example:
+     * stack.node.setContext("&#64;aws-cdk/aws-stepfunctions:useDistributedMapResultWriterV2", true);.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9b68bf173568131ec3134c4d408003970efaf6a97d11c99eca90f885ddb94818")
+    override fun resultWriterV2(resultWriterV2: ResultWriterV2.Builder.() -> Unit): Unit =
+        resultWriterV2(ResultWriterV2(resultWriterV2))
 
     /**
      * @param stateName Optional name for this state.
@@ -444,7 +716,19 @@ public interface DistributedMapProps : MapBaseProps {
   ) : CdkObject(cdkObject),
       DistributedMapProps {
     /**
-     * An optional description for this state.
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     */
+    override fun assign(): Map<String, Any> = unwrap(this).getAssign() ?: emptyMap()
+
+    /**
+     * A comment describing this state.
      *
      * Default: No comment
      */
@@ -478,7 +762,7 @@ public interface DistributedMapProps : MapBaseProps {
 
     /**
      * The JSON that you want to override your default iteration input (mutually exclusive  with
-     * `parameters`).
+     * `parameters` and `jsonataItemSelector`).
      *
      * Default: $
      *
@@ -487,11 +771,28 @@ public interface DistributedMapProps : MapBaseProps {
     override fun itemSelector(): Map<String, Any> = unwrap(this).getItemSelector() ?: emptyMap()
 
     /**
+     * The array that the Map state will iterate over.
+     *
+     * Default: - The state input as is.
+     */
+    override fun items(): ProvideItems? = unwrap(this).getItems()?.let(ProvideItems::wrap)
+
+    /**
      * JSONPath expression to select the array to iterate over.
      *
      * Default: $
      */
     override fun itemsPath(): String? = unwrap(this).getItemsPath()
+
+    /**
+     * Jsonata expression that evaluates to a JSON array to override your default iteration input
+     * (mutually exclusive with `parameters` and `itemSelector`).
+     *
+     * Example value: `{% {\"foo\": \"foo\", \"input\": $states.input} %}`
+     *
+     * Default: $
+     */
+    override fun jsonataItemSelector(): String? = unwrap(this).getJsonataItemSelector()
 
     /**
      * Label.
@@ -547,6 +848,32 @@ public interface DistributedMapProps : MapBaseProps {
     override fun outputPath(): String? = unwrap(this).getOutputPath()
 
     /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     */
+    override fun outputs(): Any? = unwrap(this).getOutputs()
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     */
+    override fun queryLanguage(): QueryLanguage? =
+        unwrap(this).getQueryLanguage()?.let(QueryLanguage::wrap)
+
+    /**
      * JSONPath expression to indicate where to inject the state's output.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the state's
@@ -570,12 +897,26 @@ public interface DistributedMapProps : MapBaseProps {
     override fun resultSelector(): Map<String, Any> = unwrap(this).getResultSelector() ?: emptyMap()
 
     /**
-     * Configuration for S3 location in which to save Map Run results.
+     * (deprecated) Configuration for S3 location in which to save Map Run results.
      *
      * Default: - No resultWriter
+     *
+     * @deprecated Use [resultWriterV2 ]
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun resultWriter(): ResultWriter? =
         unwrap(this).getResultWriter()?.let(ResultWriter::wrap)
+
+    /**
+     * Configuration for S3 location in which to save Map Run results Enable
+     * "&#64;aws-cdk/aws-stepfunctions:useDistributedMapResultWriterV2" feature in the context to use
+     * resultWriterV2 Example:
+     * stack.node.setContext("&#64;aws-cdk/aws-stepfunctions:useDistributedMapResultWriterV2", true);
+     *
+     * Default: - No resultWriterV2
+     */
+    override fun resultWriterV2(): ResultWriterV2? =
+        unwrap(this).getResultWriterV2()?.let(ResultWriterV2::wrap)
 
     /**
      * Optional name for this state.

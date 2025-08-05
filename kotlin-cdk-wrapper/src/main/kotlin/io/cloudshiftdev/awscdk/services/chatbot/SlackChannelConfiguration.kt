@@ -501,6 +501,9 @@ public open class SlackChannelConfiguration(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.chatbot.SlackChannelConfiguration.PROPERTY_INJECTION_ID
+
     public fun fromSlackChannelConfigurationArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

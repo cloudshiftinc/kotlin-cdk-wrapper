@@ -7,6 +7,7 @@ public enum class ServerSideEncryption(
 ) {
   AES_256(software.amazon.awscdk.services.s3.deployment.ServerSideEncryption.AES_256),
   AWS_KMS(software.amazon.awscdk.services.s3.deployment.ServerSideEncryption.AWS_KMS),
+  AWS_KMS_DSSE(software.amazon.awscdk.services.s3.deployment.ServerSideEncryption.AWS_KMS_DSSE),
   ;
 
   public companion object {
@@ -17,6 +18,8 @@ public enum class ServerSideEncryption(
           ServerSideEncryption.AES_256
       software.amazon.awscdk.services.s3.deployment.ServerSideEncryption.AWS_KMS ->
           ServerSideEncryption.AWS_KMS
+      software.amazon.awscdk.services.s3.deployment.ServerSideEncryption.AWS_KMS_DSSE ->
+          ServerSideEncryption.AWS_KMS_DSSE
     }
 
     internal fun unwrap(wrapped: ServerSideEncryption):

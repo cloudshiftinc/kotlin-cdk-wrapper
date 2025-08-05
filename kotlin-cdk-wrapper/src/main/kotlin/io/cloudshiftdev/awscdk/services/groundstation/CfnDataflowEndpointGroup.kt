@@ -241,6 +241,11 @@ public open class CfnDataflowEndpointGroup(
     /**
      * List of Endpoint Details, containing address and port for each endpoint.
      *
+     * All dataflow endpoints within a single dataflow endpoint group must be of the same type. You
+     * cannot mix AWS Ground Station Agent endpoints with Dataflow endpoints in the same group. If your
+     * use case requires both types of endpoints, you must create separate dataflow endpoint groups for
+     * each type.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html#cfn-groundstation-dataflowendpointgroup-endpointdetails)
      * @param endpointDetails List of Endpoint Details, containing address and port for each
      * endpoint. 
@@ -250,6 +255,11 @@ public open class CfnDataflowEndpointGroup(
     /**
      * List of Endpoint Details, containing address and port for each endpoint.
      *
+     * All dataflow endpoints within a single dataflow endpoint group must be of the same type. You
+     * cannot mix AWS Ground Station Agent endpoints with Dataflow endpoints in the same group. If your
+     * use case requires both types of endpoints, you must create separate dataflow endpoint groups for
+     * each type.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html#cfn-groundstation-dataflowendpointgroup-endpointdetails)
      * @param endpointDetails List of Endpoint Details, containing address and port for each
      * endpoint. 
@@ -258,6 +268,11 @@ public open class CfnDataflowEndpointGroup(
 
     /**
      * List of Endpoint Details, containing address and port for each endpoint.
+     *
+     * All dataflow endpoints within a single dataflow endpoint group must be of the same type. You
+     * cannot mix AWS Ground Station Agent endpoints with Dataflow endpoints in the same group. If your
+     * use case requires both types of endpoints, you must create separate dataflow endpoint groups for
+     * each type.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html#cfn-groundstation-dataflowendpointgroup-endpointdetails)
      * @param endpointDetails List of Endpoint Details, containing address and port for each
@@ -324,6 +339,11 @@ public open class CfnDataflowEndpointGroup(
     /**
      * List of Endpoint Details, containing address and port for each endpoint.
      *
+     * All dataflow endpoints within a single dataflow endpoint group must be of the same type. You
+     * cannot mix AWS Ground Station Agent endpoints with Dataflow endpoints in the same group. If your
+     * use case requires both types of endpoints, you must create separate dataflow endpoint groups for
+     * each type.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html#cfn-groundstation-dataflowendpointgroup-endpointdetails)
      * @param endpointDetails List of Endpoint Details, containing address and port for each
      * endpoint. 
@@ -335,6 +355,11 @@ public open class CfnDataflowEndpointGroup(
     /**
      * List of Endpoint Details, containing address and port for each endpoint.
      *
+     * All dataflow endpoints within a single dataflow endpoint group must be of the same type. You
+     * cannot mix AWS Ground Station Agent endpoints with Dataflow endpoints in the same group. If your
+     * use case requires both types of endpoints, you must create separate dataflow endpoint groups for
+     * each type.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html#cfn-groundstation-dataflowendpointgroup-endpointdetails)
      * @param endpointDetails List of Endpoint Details, containing address and port for each
      * endpoint. 
@@ -345,6 +370,11 @@ public open class CfnDataflowEndpointGroup(
 
     /**
      * List of Endpoint Details, containing address and port for each endpoint.
+     *
+     * All dataflow endpoints within a single dataflow endpoint group must be of the same type. You
+     * cannot mix AWS Ground Station Agent endpoints with Dataflow endpoints in the same group. If your
+     * use case requires both types of endpoints, you must create separate dataflow endpoint groups for
+     * each type.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html#cfn-groundstation-dataflowendpointgroup-endpointdetails)
      * @param endpointDetails List of Endpoint Details, containing address and port for each

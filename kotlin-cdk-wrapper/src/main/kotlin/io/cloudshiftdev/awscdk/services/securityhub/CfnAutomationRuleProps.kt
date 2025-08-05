@@ -24,8 +24,6 @@ import kotlin.jvm.JvmName
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.securityhub.*;
- * Object id;
- * Object updatedBy;
  * CfnAutomationRuleProps cfnAutomationRuleProps = CfnAutomationRuleProps.builder()
  * .actions(List.of(AutomationRulesActionProperty.builder()
  * .findingFieldsUpdate(AutomationRulesFindingFieldsUpdateProperty.builder()
@@ -33,10 +31,10 @@ import kotlin.jvm.JvmName
  * .criticality(123)
  * .note(NoteUpdateProperty.builder()
  * .text("text")
- * .updatedBy(updatedBy)
+ * .updatedBy("updatedBy")
  * .build())
  * .relatedFindings(List.of(RelatedFindingProperty.builder()
- * .id(id)
+ * .id("id")
  * .productArn("productArn")
  * .build()))
  * .severity(SeverityUpdateProperty.builder()

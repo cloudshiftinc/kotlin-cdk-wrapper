@@ -38,8 +38,8 @@ import kotlin.collections.List
  */
 public interface CfnLocationFSxWindowsProps {
   /**
-   * Specifies the name of the Microsoft Active Directory domain that the FSx for Windows File
-   * Server file system belongs to.
+   * Specifies the name of the Windows domain that the FSx for Windows File Server file system
+   * belongs to.
    *
    * If you have multiple Active Directory domains in your environment, configuring this parameter
    * makes sure that DataSync connects to the right file system.
@@ -113,8 +113,8 @@ public interface CfnLocationFSxWindowsProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param domain Specifies the name of the Microsoft Active Directory domain that the FSx for
-     * Windows File Server file system belongs to.
+     * @param domain Specifies the name of the Windows domain that the FSx for Windows File Server
+     * file system belongs to.
      * If you have multiple Active Directory domains in your environment, configuring this parameter
      * makes sure that DataSync connects to the right file system.
      */
@@ -190,8 +190,8 @@ public interface CfnLocationFSxWindowsProps {
         software.amazon.awscdk.services.datasync.CfnLocationFSxWindowsProps.builder()
 
     /**
-     * @param domain Specifies the name of the Microsoft Active Directory domain that the FSx for
-     * Windows File Server file system belongs to.
+     * @param domain Specifies the name of the Windows domain that the FSx for Windows File Server
+     * file system belongs to.
      * If you have multiple Active Directory domains in your environment, configuring this parameter
      * makes sure that DataSync connects to the right file system.
      */
@@ -284,8 +284,8 @@ public interface CfnLocationFSxWindowsProps {
   ) : CdkObject(cdkObject),
       CfnLocationFSxWindowsProps {
     /**
-     * Specifies the name of the Microsoft Active Directory domain that the FSx for Windows File
-     * Server file system belongs to.
+     * Specifies the name of the Windows domain that the FSx for Windows File Server file system
+     * belongs to.
      *
      * If you have multiple Active Directory domains in your environment, configuring this parameter
      * makes sure that DataSync connects to the right file system.

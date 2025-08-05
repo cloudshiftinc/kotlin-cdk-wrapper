@@ -303,6 +303,9 @@ public open class Resource(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.apigateway.Resource.PROPERTY_INJECTION_ID
+
     public fun fromResourceAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

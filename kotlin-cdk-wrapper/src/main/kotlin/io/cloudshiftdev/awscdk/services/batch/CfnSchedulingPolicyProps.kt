@@ -40,14 +40,14 @@ import kotlin.jvm.JvmName
  */
 public interface CfnSchedulingPolicyProps {
   /**
-   * The fair share policy of the scheduling policy.
+   * The fair-share scheduling policy details.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html#cfn-batch-schedulingpolicy-fairsharepolicy)
    */
   public fun fairsharePolicy(): Any? = unwrap(this).getFairsharePolicy()
 
   /**
-   * The name of the scheduling policy.
+   * The name of the fair-share scheduling policy.
    *
    * It can be up to 128 letters long. It can contain uppercase and lowercase letters, numbers,
    * hyphens (-), and underscores (_).
@@ -79,17 +79,17 @@ public interface CfnSchedulingPolicyProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param fairsharePolicy The fair share policy of the scheduling policy.
+     * @param fairsharePolicy The fair-share scheduling policy details.
      */
     public fun fairsharePolicy(fairsharePolicy: IResolvable)
 
     /**
-     * @param fairsharePolicy The fair share policy of the scheduling policy.
+     * @param fairsharePolicy The fair-share scheduling policy details.
      */
     public fun fairsharePolicy(fairsharePolicy: CfnSchedulingPolicy.FairsharePolicyProperty)
 
     /**
-     * @param fairsharePolicy The fair share policy of the scheduling policy.
+     * @param fairsharePolicy The fair-share scheduling policy details.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5208ec93f1f69db8e5e6bef25ca273523bb4a089e117da667d8fcef734b8c62e")
@@ -97,7 +97,7 @@ public interface CfnSchedulingPolicyProps {
         fun fairsharePolicy(fairsharePolicy: CfnSchedulingPolicy.FairsharePolicyProperty.Builder.() -> Unit)
 
     /**
-     * @param name The name of the scheduling policy.
+     * @param name The name of the fair-share scheduling policy.
      * It can be up to 128 letters long. It can contain uppercase and lowercase letters, numbers,
      * hyphens (-), and underscores (_).
      */
@@ -123,21 +123,21 @@ public interface CfnSchedulingPolicyProps {
         software.amazon.awscdk.services.batch.CfnSchedulingPolicyProps.builder()
 
     /**
-     * @param fairsharePolicy The fair share policy of the scheduling policy.
+     * @param fairsharePolicy The fair-share scheduling policy details.
      */
     override fun fairsharePolicy(fairsharePolicy: IResolvable) {
       cdkBuilder.fairsharePolicy(fairsharePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param fairsharePolicy The fair share policy of the scheduling policy.
+     * @param fairsharePolicy The fair-share scheduling policy details.
      */
     override fun fairsharePolicy(fairsharePolicy: CfnSchedulingPolicy.FairsharePolicyProperty) {
       cdkBuilder.fairsharePolicy(fairsharePolicy.let(CfnSchedulingPolicy.FairsharePolicyProperty.Companion::unwrap))
     }
 
     /**
-     * @param fairsharePolicy The fair share policy of the scheduling policy.
+     * @param fairsharePolicy The fair-share scheduling policy details.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5208ec93f1f69db8e5e6bef25ca273523bb4a089e117da667d8fcef734b8c62e")
@@ -146,7 +146,7 @@ public interface CfnSchedulingPolicyProps {
         Unit = fairsharePolicy(CfnSchedulingPolicy.FairsharePolicyProperty(fairsharePolicy))
 
     /**
-     * @param name The name of the scheduling policy.
+     * @param name The name of the fair-share scheduling policy.
      * It can be up to 128 letters long. It can contain uppercase and lowercase letters, numbers,
      * hyphens (-), and underscores (_).
      */
@@ -179,14 +179,14 @@ public interface CfnSchedulingPolicyProps {
   ) : CdkObject(cdkObject),
       CfnSchedulingPolicyProps {
     /**
-     * The fair share policy of the scheduling policy.
+     * The fair-share scheduling policy details.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html#cfn-batch-schedulingpolicy-fairsharepolicy)
      */
     override fun fairsharePolicy(): Any? = unwrap(this).getFairsharePolicy()
 
     /**
-     * The name of the scheduling policy.
+     * The name of the fair-share scheduling policy.
      *
      * It can be up to 128 letters long. It can contain uppercase and lowercase letters, numbers,
      * hyphens (-), and underscores (_).

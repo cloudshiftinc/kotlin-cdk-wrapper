@@ -46,6 +46,22 @@ public open class LogQueryWidget(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The AWS account ID where the log groups are located.
+     *
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     *
+     * Default: - Current account
+     *
+     * @param accountId The AWS account ID where the log groups are located. 
+     */
+    public fun accountId(accountId: String)
+
+    /**
      * Height of the widget.
      *
      * Default: 6
@@ -67,6 +83,15 @@ public open class LogQueryWidget(
      * @param logGroupNames Names of log groups to query. 
      */
     public fun logGroupNames(vararg logGroupNames: String)
+
+    /**
+     * The query language to use for the query.
+     *
+     * Default: LogQueryLanguage.LOGS_INSIGHTS
+     *
+     * @param queryLanguage The query language to use for the query. 
+     */
+    public fun queryLanguage(queryLanguage: LogQueryLanguage)
 
     /**
      * A sequence of lines to use to build the query.
@@ -144,6 +169,24 @@ public open class LogQueryWidget(
         software.amazon.awscdk.services.cloudwatch.LogQueryWidget.Builder.create()
 
     /**
+     * The AWS account ID where the log groups are located.
+     *
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     *
+     * Default: - Current account
+     *
+     * @param accountId The AWS account ID where the log groups are located. 
+     */
+    override fun accountId(accountId: String) {
+      cdkBuilder.accountId(accountId)
+    }
+
+    /**
      * Height of the widget.
      *
      * Default: 6
@@ -170,6 +213,17 @@ public open class LogQueryWidget(
      */
     override fun logGroupNames(vararg logGroupNames: String): Unit =
         logGroupNames(logGroupNames.toList())
+
+    /**
+     * The query language to use for the query.
+     *
+     * Default: LogQueryLanguage.LOGS_INSIGHTS
+     *
+     * @param queryLanguage The query language to use for the query. 
+     */
+    override fun queryLanguage(queryLanguage: LogQueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(LogQueryLanguage.Companion::unwrap))
+    }
 
     /**
      * A sequence of lines to use to build the query.

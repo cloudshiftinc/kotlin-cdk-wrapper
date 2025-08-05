@@ -63,7 +63,7 @@ public interface CfnDataRepositoryAssociationProps {
   /**
    * The path to the Amazon S3 data repository that will be linked to the file system.
    *
-   * The path can be an S3 bucket or prefix in the format `s3://bucket-name/prefix/` . This path
+   * The path can be an S3 bucket or prefix in the format `s3://myBucket/myPrefix/` . This path
    * specifies where in the S3 data repository files will be imported from or exported to.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-datarepositoryassociation.html#cfn-fsx-datarepositoryassociation-datarepositorypath)
@@ -155,7 +155,7 @@ public interface CfnDataRepositoryAssociationProps {
     /**
      * @param dataRepositoryPath The path to the Amazon S3 data repository that will be linked to
      * the file system. 
-     * The path can be an S3 bucket or prefix in the format `s3://bucket-name/prefix/` . This path
+     * The path can be an S3 bucket or prefix in the format `s3://myBucket/myPrefix/` . This path
      * specifies where in the S3 data repository files will be imported from or exported to.
      */
     public fun dataRepositoryPath(dataRepositoryPath: String)
@@ -263,7 +263,7 @@ public interface CfnDataRepositoryAssociationProps {
     /**
      * @param dataRepositoryPath The path to the Amazon S3 data repository that will be linked to
      * the file system. 
-     * The path can be an S3 bucket or prefix in the format `s3://bucket-name/prefix/` . This path
+     * The path can be an S3 bucket or prefix in the format `s3://myBucket/myPrefix/` . This path
      * specifies where in the S3 data repository files will be imported from or exported to.
      */
     override fun dataRepositoryPath(dataRepositoryPath: String) {
@@ -380,7 +380,7 @@ public interface CfnDataRepositoryAssociationProps {
     /**
      * The path to the Amazon S3 data repository that will be linked to the file system.
      *
-     * The path can be an S3 bucket or prefix in the format `s3://bucket-name/prefix/` . This path
+     * The path can be an S3 bucket or prefix in the format `s3://myBucket/myPrefix/` . This path
      * specifies where in the S3 data repository files will be imported from or exported to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-datarepositoryassociation.html#cfn-fsx-datarepositoryassociation-datarepositorypath)

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.backup
 
 import io.cloudshiftdev.awscdk.Duration
+import io.cloudshiftdev.awscdk.TimeZone
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.events.Schedule
@@ -157,6 +158,15 @@ public open class BackupPlanRule(
     public fun scheduleExpression(scheduleExpression: Schedule)
 
     /**
+     * The timezone in which the schedule expression is set.
+     *
+     * Default: - UTC
+     *
+     * @param scheduleExpressionTimezone The timezone in which the schedule expression is set. 
+     */
+    public fun scheduleExpressionTimezone(scheduleExpressionTimezone: TimeZone)
+
+    /**
      * The duration after a backup is scheduled before a job is canceled if it doesn't start
      * successfully.
      *
@@ -298,6 +308,17 @@ public open class BackupPlanRule(
      */
     override fun scheduleExpression(scheduleExpression: Schedule) {
       cdkBuilder.scheduleExpression(scheduleExpression.let(Schedule.Companion::unwrap))
+    }
+
+    /**
+     * The timezone in which the schedule expression is set.
+     *
+     * Default: - UTC
+     *
+     * @param scheduleExpressionTimezone The timezone in which the schedule expression is set. 
+     */
+    override fun scheduleExpressionTimezone(scheduleExpressionTimezone: TimeZone) {
+      cdkBuilder.scheduleExpressionTimezone(scheduleExpressionTimezone.let(TimeZone.Companion::unwrap))
     }
 
     /**

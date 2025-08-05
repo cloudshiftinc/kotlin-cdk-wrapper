@@ -16,8 +16,9 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * You can optionally create a run group to limit the compute resources for the runs that you add to
- * the group.
+ * Creates a run group to limit the compute resources for the runs that are added to the group.
+ *
+ * Returns an ARN, ID, and tags for the run group.
  *
  * Example:
  *

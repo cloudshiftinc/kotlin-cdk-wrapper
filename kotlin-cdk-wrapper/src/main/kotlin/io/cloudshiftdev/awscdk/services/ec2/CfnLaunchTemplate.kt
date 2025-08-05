@@ -937,6 +937,7 @@ public open class CfnLaunchTemplate(
    * .kmsKeyId("kmsKeyId")
    * .snapshotId("snapshotId")
    * .throughput(123)
+   * .volumeInitializationRate(123)
    * .volumeSize(123)
    * .volumeType("volumeType")
    * .build())
@@ -1659,7 +1660,8 @@ public open class CfnLaunchTemplate(
      * Indicates whether to enable the instance for AMD SEV-SNP.
      *
      * AMD SEV-SNP is supported with M6a, R6a, and C6a instance types only. For more information,
-     * see [AMD SEV-SNP](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html) .
+     * see [AMD SEV-SNP for Amazon EC2
+     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpuoptions.html#cfn-ec2-launchtemplate-cpuoptions-amdsevsnp)
      */
@@ -1690,7 +1692,8 @@ public open class CfnLaunchTemplate(
       /**
        * @param amdSevSnp Indicates whether to enable the instance for AMD SEV-SNP.
        * AMD SEV-SNP is supported with M6a, R6a, and C6a instance types only. For more information,
-       * see [AMD SEV-SNP](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html) .
+       * see [AMD SEV-SNP for Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html) .
        */
       public fun amdSevSnp(amdSevSnp: String)
 
@@ -1715,7 +1718,8 @@ public open class CfnLaunchTemplate(
       /**
        * @param amdSevSnp Indicates whether to enable the instance for AMD SEV-SNP.
        * AMD SEV-SNP is supported with M6a, R6a, and C6a instance types only. For more information,
-       * see [AMD SEV-SNP](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html) .
+       * see [AMD SEV-SNP for Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html) .
        */
       override fun amdSevSnp(amdSevSnp: String) {
         cdkBuilder.amdSevSnp(amdSevSnp)
@@ -1749,7 +1753,8 @@ public open class CfnLaunchTemplate(
        * Indicates whether to enable the instance for AMD SEV-SNP.
        *
        * AMD SEV-SNP is supported with M6a, R6a, and C6a instance types only. For more information,
-       * see [AMD SEV-SNP](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html) .
+       * see [AMD SEV-SNP for Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html) .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpuoptions.html#cfn-ec2-launchtemplate-cpuoptions-amdsevsnp)
        */
@@ -1792,6 +1797,9 @@ public open class CfnLaunchTemplate(
   }
 
   /**
+   * Specifies the CPU performance to consider when using an instance family as the baseline
+   * reference.
+   *
    * Example:
    *
    * ```
@@ -1809,10 +1817,11 @@ public open class CfnLaunchTemplate(
    */
   public interface CpuProperty {
     /**
-     * A list of references to be used as baseline for the CPU performance.
+     * The instance family to use as the baseline reference for CPU performance.
      *
-     * Currently, you can only specify a single reference across different instance type variations
-     * such as CPU manufacturers, architectures etc.
+     * All instance types that match your specified attributes are compared against the CPU
+     * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+     * differences.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpu.html#cfn-ec2-launchtemplate-cpu-references)
      */
@@ -1824,23 +1833,26 @@ public open class CfnLaunchTemplate(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param references A list of references to be used as baseline for the CPU performance.
-       * Currently, you can only specify a single reference across different instance type
-       * variations such as CPU manufacturers, architectures etc.
+       * @param references The instance family to use as the baseline reference for CPU performance.
+       * All instance types that match your specified attributes are compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
        */
       public fun references(references: IResolvable)
 
       /**
-       * @param references A list of references to be used as baseline for the CPU performance.
-       * Currently, you can only specify a single reference across different instance type
-       * variations such as CPU manufacturers, architectures etc.
+       * @param references The instance family to use as the baseline reference for CPU performance.
+       * All instance types that match your specified attributes are compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
        */
       public fun references(references: List<Any>)
 
       /**
-       * @param references A list of references to be used as baseline for the CPU performance.
-       * Currently, you can only specify a single reference across different instance type
-       * variations such as CPU manufacturers, architectures etc.
+       * @param references The instance family to use as the baseline reference for CPU performance.
+       * All instance types that match your specified attributes are compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
        */
       public fun references(vararg references: Any)
     }
@@ -1851,27 +1863,30 @@ public open class CfnLaunchTemplate(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuProperty.builder()
 
       /**
-       * @param references A list of references to be used as baseline for the CPU performance.
-       * Currently, you can only specify a single reference across different instance type
-       * variations such as CPU manufacturers, architectures etc.
+       * @param references The instance family to use as the baseline reference for CPU performance.
+       * All instance types that match your specified attributes are compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
        */
       override fun references(references: IResolvable) {
         cdkBuilder.references(references.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param references A list of references to be used as baseline for the CPU performance.
-       * Currently, you can only specify a single reference across different instance type
-       * variations such as CPU manufacturers, architectures etc.
+       * @param references The instance family to use as the baseline reference for CPU performance.
+       * All instance types that match your specified attributes are compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
        */
       override fun references(references: List<Any>) {
         cdkBuilder.references(references.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param references A list of references to be used as baseline for the CPU performance.
-       * Currently, you can only specify a single reference across different instance type
-       * variations such as CPU manufacturers, architectures etc.
+       * @param references The instance family to use as the baseline reference for CPU performance.
+       * All instance types that match your specified attributes are compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
        */
       override fun references(vararg references: Any): Unit = references(references.toList())
 
@@ -1884,10 +1899,11 @@ public open class CfnLaunchTemplate(
     ) : CdkObject(cdkObject),
         CpuProperty {
       /**
-       * A list of references to be used as baseline for the CPU performance.
+       * The instance family to use as the baseline reference for CPU performance.
        *
-       * Currently, you can only specify a single reference across different instance type
-       * variations such as CPU manufacturers, architectures etc.
+       * All instance types that match your specified attributes are compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpu.html#cfn-ec2-launchtemplate-cpu-references)
        */
@@ -2023,6 +2039,7 @@ public open class CfnLaunchTemplate(
    * .kmsKeyId("kmsKeyId")
    * .snapshotId("snapshotId")
    * .throughput(123)
+   * .volumeInitializationRate(123)
    * .volumeSize(123)
    * .volumeType("volumeType")
    * .build();
@@ -2062,8 +2079,8 @@ public open class CfnLaunchTemplate(
      * * `io2` : 100 - 256,000 IOPS
      *
      * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
-     * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
-     * . On other instances, you can achieve performance up to 32,000 IOPS.
+     * System](https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html) . On
+     * other instances, you can achieve performance up to 32,000 IOPS.
      *
      * This parameter is supported for `io1` , `io2` , and `gp3` volumes only.
      *
@@ -2094,6 +2111,36 @@ public open class CfnLaunchTemplate(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-throughput)
      */
     public fun throughput(): Number? = unwrap(this).getThroughput()
+
+    /**
+     * Specifies the Amazon EBS Provisioned Rate for Volume Initialization (volume initialization
+     * rate), in MiB/s, at which to download the snapshot blocks from Amazon S3 to the volume.
+     *
+     * This is also known as *volume initialization* . Specifying a volume initialization rate
+     * ensures that the volume is initialized at a predictable and consistent rate after creation.
+     *
+     * This parameter is supported only for volumes created from snapshots. Omit this parameter if:
+     *
+     * * You want to create the volume using fast snapshot restore. You must specify a snapshot that
+     * is enabled for fast snapshot restore. In this case, the volume is fully initialized at creation.
+     *
+     *
+     * If you specify a snapshot that is enabled for fast snapshot restore and a volume
+     * initialization rate, the volume will be initialized at the specified rate instead of fast
+     * snapshot restore.
+     *
+     *
+     * * You want to create a volume that is initialized at the default rate.
+     *
+     * For more information, see [Initialize Amazon EBS
+     * volumes](https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html) in the *Amazon
+     * EC2 User Guide* .
+     *
+     * Valid range: 100 - 300 MiB/s
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-volumeinitializationrate)
+     */
+    public fun volumeInitializationRate(): Number? = unwrap(this).getVolumeInitializationRate()
 
     /**
      * The size of the volume, in GiBs.
@@ -2166,8 +2213,8 @@ public open class CfnLaunchTemplate(
        * * `io2` : 100 - 256,000 IOPS
        *
        * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
-       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
-       * . On other instances, you can achieve performance up to 32,000 IOPS.
+       * System](https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html) . On
+       * other instances, you can achieve performance up to 32,000 IOPS.
        *
        * This parameter is supported for `io1` , `io2` , and `gp3` volumes only.
        */
@@ -2190,6 +2237,36 @@ public open class CfnLaunchTemplate(
        * Valid Range: Minimum value of 125. Maximum value of 1000.
        */
       public fun throughput(throughput: Number)
+
+      /**
+       * @param volumeInitializationRate Specifies the Amazon EBS Provisioned Rate for Volume
+       * Initialization (volume initialization rate), in MiB/s, at which to download the snapshot
+       * blocks from Amazon S3 to the volume.
+       * This is also known as *volume initialization* . Specifying a volume initialization rate
+       * ensures that the volume is initialized at a predictable and consistent rate after creation.
+       *
+       * This parameter is supported only for volumes created from snapshots. Omit this parameter
+       * if:
+       *
+       * * You want to create the volume using fast snapshot restore. You must specify a snapshot
+       * that is enabled for fast snapshot restore. In this case, the volume is fully initialized at
+       * creation.
+       *
+       *
+       * If you specify a snapshot that is enabled for fast snapshot restore and a volume
+       * initialization rate, the volume will be initialized at the specified rate instead of fast
+       * snapshot restore.
+       *
+       *
+       * * You want to create a volume that is initialized at the default rate.
+       *
+       * For more information, see [Initialize Amazon EBS
+       * volumes](https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html) in the
+       * *Amazon EC2 User Guide* .
+       *
+       * Valid range: 100 - 300 MiB/s
+       */
+      public fun volumeInitializationRate(volumeInitializationRate: Number)
 
       /**
        * @param volumeSize The size of the volume, in GiBs.
@@ -2265,8 +2342,8 @@ public open class CfnLaunchTemplate(
        * * `io2` : 100 - 256,000 IOPS
        *
        * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
-       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
-       * . On other instances, you can achieve performance up to 32,000 IOPS.
+       * System](https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html) . On
+       * other instances, you can achieve performance up to 32,000 IOPS.
        *
        * This parameter is supported for `io1` , `io2` , and `gp3` volumes only.
        */
@@ -2296,6 +2373,38 @@ public open class CfnLaunchTemplate(
        */
       override fun throughput(throughput: Number) {
         cdkBuilder.throughput(throughput)
+      }
+
+      /**
+       * @param volumeInitializationRate Specifies the Amazon EBS Provisioned Rate for Volume
+       * Initialization (volume initialization rate), in MiB/s, at which to download the snapshot
+       * blocks from Amazon S3 to the volume.
+       * This is also known as *volume initialization* . Specifying a volume initialization rate
+       * ensures that the volume is initialized at a predictable and consistent rate after creation.
+       *
+       * This parameter is supported only for volumes created from snapshots. Omit this parameter
+       * if:
+       *
+       * * You want to create the volume using fast snapshot restore. You must specify a snapshot
+       * that is enabled for fast snapshot restore. In this case, the volume is fully initialized at
+       * creation.
+       *
+       *
+       * If you specify a snapshot that is enabled for fast snapshot restore and a volume
+       * initialization rate, the volume will be initialized at the specified rate instead of fast
+       * snapshot restore.
+       *
+       *
+       * * You want to create a volume that is initialized at the default rate.
+       *
+       * For more information, see [Initialize Amazon EBS
+       * volumes](https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html) in the
+       * *Amazon EC2 User Guide* .
+       *
+       * Valid range: 100 - 300 MiB/s
+       */
+      override fun volumeInitializationRate(volumeInitializationRate: Number) {
+        cdkBuilder.volumeInitializationRate(volumeInitializationRate)
       }
 
       /**
@@ -2362,8 +2471,8 @@ public open class CfnLaunchTemplate(
        * * `io2` : 100 - 256,000 IOPS
        *
        * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
-       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
-       * . On other instances, you can achieve performance up to 32,000 IOPS.
+       * System](https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html) . On
+       * other instances, you can achieve performance up to 32,000 IOPS.
        *
        * This parameter is supported for `io1` , `io2` , and `gp3` volumes only.
        *
@@ -2394,6 +2503,38 @@ public open class CfnLaunchTemplate(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-throughput)
        */
       override fun throughput(): Number? = unwrap(this).getThroughput()
+
+      /**
+       * Specifies the Amazon EBS Provisioned Rate for Volume Initialization (volume initialization
+       * rate), in MiB/s, at which to download the snapshot blocks from Amazon S3 to the volume.
+       *
+       * This is also known as *volume initialization* . Specifying a volume initialization rate
+       * ensures that the volume is initialized at a predictable and consistent rate after creation.
+       *
+       * This parameter is supported only for volumes created from snapshots. Omit this parameter
+       * if:
+       *
+       * * You want to create the volume using fast snapshot restore. You must specify a snapshot
+       * that is enabled for fast snapshot restore. In this case, the volume is fully initialized at
+       * creation.
+       *
+       *
+       * If you specify a snapshot that is enabled for fast snapshot restore and a volume
+       * initialization rate, the volume will be initialized at the specified rate instead of fast
+       * snapshot restore.
+       *
+       *
+       * * You want to create a volume that is initialized at the default rate.
+       *
+       * For more information, see [Initialize Amazon EBS
+       * volumes](https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html) in the
+       * *Amazon EC2 User Guide* .
+       *
+       * Valid range: 100 - 300 MiB/s
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-volumeinitializationrate)
+       */
+      override fun volumeInitializationRate(): Number? = unwrap(this).getVolumeInitializationRate()
 
       /**
        * The size of the volume, in GiBs.
@@ -2441,9 +2582,6 @@ public open class CfnLaunchTemplate(
 
   /**
    * Amazon Elastic Graphics reached end of life on January 8, 2024.
-   *
-   * For workloads that require graphics acceleration, we recommend that you use Amazon EC2 G4ad,
-   * G4dn, or G5 instances.
    *
    * Specifies a specification for an Elastic GPU for an Amazon EC2 launch template.
    *
@@ -3471,8 +3609,9 @@ public open class CfnLaunchTemplate(
     /**
      * The accelerator types that must be on the instance type.
      *
-     * * For instance types with GPU accelerators, specify `gpu` .
      * * For instance types with FPGA accelerators, specify `fpga` .
+     * * For instance types with GPU accelerators, specify `gpu` .
+     * * For instance types with Inference accelerators, specify `inference` .
      *
      * Default: Any accelerator type
      *
@@ -3943,8 +4082,9 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param acceleratorTypes The accelerator types that must be on the instance type.
-       * * For instance types with GPU accelerators, specify `gpu` .
        * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with Inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -3952,8 +4092,9 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param acceleratorTypes The accelerator types that must be on the instance type.
-       * * For instance types with GPU accelerators, specify `gpu` .
        * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with Inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -4620,8 +4761,9 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param acceleratorTypes The accelerator types that must be on the instance type.
-       * * For instance types with GPU accelerators, specify `gpu` .
        * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with Inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -4631,8 +4773,9 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param acceleratorTypes The accelerator types that must be on the instance type.
-       * * For instance types with GPU accelerators, specify `gpu` .
        * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with Inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -5301,8 +5444,9 @@ public open class CfnLaunchTemplate(
       /**
        * The accelerator types that must be on the instance type.
        *
-       * * For instance types with GPU accelerators, specify `gpu` .
        * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with Inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        *
@@ -5978,6 +6122,7 @@ public open class CfnLaunchTemplate(
    * .kmsKeyId("kmsKeyId")
    * .snapshotId("snapshotId")
    * .throughput(123)
+   * .volumeInitializationRate(123)
    * .volumeSize(123)
    * .volumeType("volumeType")
    * .build())
@@ -6152,6 +6297,9 @@ public open class CfnLaunchTemplate(
    * .secondaryPrivateIpAddressCount(123)
    * .subnetId("subnetId")
    * .build()))
+   * .networkPerformanceOptions(NetworkPerformanceOptionsProperty.builder()
+   * .bandwidthWeighting("bandwidthWeighting")
+   * .build())
    * .placement(PlacementProperty.builder()
    * .affinity("affinity")
    * .availabilityZone("availabilityZone")
@@ -6207,9 +6355,9 @@ public open class CfnLaunchTemplate(
     /**
      * The CPU options for the instance.
      *
-     * For more information, see [Optimize CPU
-     * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in the
-     * *Amazon EC2 User Guide* .
+     * For more information, see [CPU options for Amazon EC2
+     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
+     * the *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions)
      */
@@ -6227,8 +6375,8 @@ public open class CfnLaunchTemplate(
     /**
      * Indicates whether to enable the instance for stop protection.
      *
-     * For more information, see [Enable stop protection for your
-     * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in the
+     * For more information, see [Enable stop protection for your EC2
+     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in the
      * *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-disableapistop)
@@ -6236,13 +6384,11 @@ public open class CfnLaunchTemplate(
     public fun disableApiStop(): Any? = unwrap(this).getDisableApiStop()
 
     /**
-     * If you set this parameter to `true` , you can't terminate the instance using the Amazon EC2
-     * console, CLI, or API;
+     * Indicates whether termination protection is enabled for the instance.
      *
-     * otherwise, you can. To change this attribute after launch, use
-     * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)
-     * . Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate` , you can
-     * terminate the instance by running the shutdown command from the instance.
+     * The default is `false` , which means that you can terminate the instance using the Amazon EC2
+     * console, command line tools, or API. You can enable termination protection when you launch an
+     * instance, while the instance is running, or while the instance is stopped.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-disableapitermination)
      */
@@ -6263,8 +6409,7 @@ public open class CfnLaunchTemplate(
      * Deprecated.
      *
      *
-     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
-     * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     * Amazon Elastic Graphics reached end of life on January 8, 2024.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-elasticgpuspecifications)
@@ -6280,15 +6425,6 @@ public open class CfnLaunchTemplate(
      *
      * You cannot specify accelerators from different generations in the same request.
      *
-     *
-     * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference (EI),
-     * and will help current customers migrate their workloads to options that offer better price and
-     * performance. After April 15, 2023, new customers will not be able to launch instances with
-     * Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who
-     * have used Amazon EI at least once during the past 30-day period are considered current customers
-     * and will be able to continue using the service.
-     *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-elasticinferenceaccelerators)
      */
     public fun elasticInferenceAccelerators(): Any? = unwrap(this).getElasticInferenceAccelerators()
@@ -6296,7 +6432,7 @@ public open class CfnLaunchTemplate(
     /**
      * Indicates whether the instance is enabled for AWS Nitro Enclaves.
      *
-     * For more information, see [What is AWS Nitro
+     * For more information, see [What is Nitro
      * Enclaves?](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html) in the *AWS
      * Nitro Enclaves User Guide* .
      *
@@ -6466,9 +6602,9 @@ public open class CfnLaunchTemplate(
     /**
      * The metadata options for the instance.
      *
-     * For more information, see [Instance metadata and user
-     * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-     * *Amazon EC2 User Guide* .
+     * For more information, see [Configure the Instance Metadata Service
+     * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html)
+     * in the *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions)
      */
@@ -6487,6 +6623,17 @@ public open class CfnLaunchTemplate(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-networkinterfaces)
      */
     public fun networkInterfaces(): Any? = unwrap(this).getNetworkInterfaces()
+
+    /**
+     * The settings for the network performance options for the instance.
+     *
+     * For more information, see [EC2 instance bandwidth weighting
+     * configuration](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configure-bandwidth-weighting.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-networkperformanceoptions)
+     */
+    public fun networkPerformanceOptions(): Any? = unwrap(this).getNetworkPerformanceOptions()
 
     /**
      * The placement for the instance.
@@ -6560,16 +6707,16 @@ public open class CfnLaunchTemplate(
      * The user data to make available to the instance.
      *
      * You must provide base64-encoded text. User data is limited to 16 KB. For more information,
-     * see [Run commands on your Amazon EC2 instance at
-     * launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) in the *Amazon EC2
+     * see [Run commands when you launch an EC2 instance with user data
+     * input](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) in the *Amazon EC2
      * User Guide* .
      *
      * If you are creating the launch template for use with AWS Batch , the user data must be
      * provided in the [MIME multi-part archive
      * format](https://docs.aws.amazon.com/https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive)
      * . For more information, see [Amazon EC2 user data in launch
-     * templates](https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html) in the *AWS
-     * Batch User Guide* .
+     * templates](https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html#lt-user-data)
+     * in the *AWS Batch User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-userdata)
      */
@@ -6625,24 +6772,24 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param cpuOptions The CPU options for the instance.
-       * For more information, see [Optimize CPU
-       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
+       * For more information, see [CPU options for Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
        * the *Amazon EC2 User Guide* .
        */
       public fun cpuOptions(cpuOptions: IResolvable)
 
       /**
        * @param cpuOptions The CPU options for the instance.
-       * For more information, see [Optimize CPU
-       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
+       * For more information, see [CPU options for Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
        * the *Amazon EC2 User Guide* .
        */
       public fun cpuOptions(cpuOptions: CpuOptionsProperty)
 
       /**
        * @param cpuOptions The CPU options for the instance.
-       * For more information, see [Optimize CPU
-       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
+       * For more information, see [CPU options for Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
        * the *Amazon EC2 User Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -6672,37 +6819,35 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param disableApiStop Indicates whether to enable the instance for stop protection.
-       * For more information, see [Enable stop protection for your
-       * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in the
-       * *Amazon EC2 User Guide* .
+       * For more information, see [Enable stop protection for your EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in
+       * the *Amazon EC2 User Guide* .
        */
       public fun disableApiStop(disableApiStop: Boolean)
 
       /**
        * @param disableApiStop Indicates whether to enable the instance for stop protection.
-       * For more information, see [Enable stop protection for your
-       * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in the
-       * *Amazon EC2 User Guide* .
+       * For more information, see [Enable stop protection for your EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in
+       * the *Amazon EC2 User Guide* .
        */
       public fun disableApiStop(disableApiStop: IResolvable)
 
       /**
-       * @param disableApiTermination If you set this parameter to `true` , you can't terminate the
-       * instance using the Amazon EC2 console, CLI, or API;.
-       * otherwise, you can. To change this attribute after launch, use
-       * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)
-       * . Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate` , you can
-       * terminate the instance by running the shutdown command from the instance.
+       * @param disableApiTermination Indicates whether termination protection is enabled for the
+       * instance.
+       * The default is `false` , which means that you can terminate the instance using the Amazon
+       * EC2 console, command line tools, or API. You can enable termination protection when you launch
+       * an instance, while the instance is running, or while the instance is stopped.
        */
       public fun disableApiTermination(disableApiTermination: Boolean)
 
       /**
-       * @param disableApiTermination If you set this parameter to `true` , you can't terminate the
-       * instance using the Amazon EC2 console, CLI, or API;.
-       * otherwise, you can. To change this attribute after launch, use
-       * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)
-       * . Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate` , you can
-       * terminate the instance by running the shutdown command from the instance.
+       * @param disableApiTermination Indicates whether termination protection is enabled for the
+       * instance.
+       * The default is `false` , which means that you can terminate the instance using the Amazon
+       * EC2 console, command line tools, or API. You can enable termination protection when you launch
+       * an instance, while the instance is running, or while the instance is stopped.
        */
       public fun disableApiTermination(disableApiTermination: IResolvable)
 
@@ -6727,24 +6872,21 @@ public open class CfnLaunchTemplate(
       /**
        * @param elasticGpuSpecifications Deprecated.
        *
-       * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
-       * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+       * Amazon Elastic Graphics reached end of life on January 8, 2024.
        */
       public fun elasticGpuSpecifications(elasticGpuSpecifications: IResolvable)
 
       /**
        * @param elasticGpuSpecifications Deprecated.
        *
-       * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
-       * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+       * Amazon Elastic Graphics reached end of life on January 8, 2024.
        */
       public fun elasticGpuSpecifications(elasticGpuSpecifications: List<Any>)
 
       /**
        * @param elasticGpuSpecifications Deprecated.
        *
-       * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
-       * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+       * Amazon Elastic Graphics reached end of life on January 8, 2024.
        */
       public fun elasticGpuSpecifications(vararg elasticGpuSpecifications: Any)
 
@@ -6755,14 +6897,6 @@ public open class CfnLaunchTemplate(
        * Deep Learning (DL) inference workloads.
        *
        * You cannot specify accelerators from different generations in the same request.
-       *
-       *
-       * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference
-       * (EI), and will help current customers migrate their workloads to options that offer better
-       * price and performance. After April 15, 2023, new customers will not be able to launch
-       * instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However,
-       * customers who have used Amazon EI at least once during the past 30-day period are considered
-       * current customers and will be able to continue using the service.
        */
       public fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable)
 
@@ -6773,14 +6907,6 @@ public open class CfnLaunchTemplate(
        * Deep Learning (DL) inference workloads.
        *
        * You cannot specify accelerators from different generations in the same request.
-       *
-       *
-       * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference
-       * (EI), and will help current customers migrate their workloads to options that offer better
-       * price and performance. After April 15, 2023, new customers will not be able to launch
-       * instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However,
-       * customers who have used Amazon EI at least once during the past 30-day period are considered
-       * current customers and will be able to continue using the service.
        */
       public fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>)
 
@@ -6791,20 +6917,12 @@ public open class CfnLaunchTemplate(
        * Deep Learning (DL) inference workloads.
        *
        * You cannot specify accelerators from different generations in the same request.
-       *
-       *
-       * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference
-       * (EI), and will help current customers migrate their workloads to options that offer better
-       * price and performance. After April 15, 2023, new customers will not be able to launch
-       * instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However,
-       * customers who have used Amazon EI at least once during the past 30-day period are considered
-       * current customers and will be able to continue using the service.
        */
       public fun elasticInferenceAccelerators(vararg elasticInferenceAccelerators: Any)
 
       /**
        * @param enclaveOptions Indicates whether the instance is enabled for AWS Nitro Enclaves.
-       * For more information, see [What is AWS Nitro
+       * For more information, see [What is Nitro
        * Enclaves?](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html) in the *AWS
        * Nitro Enclaves User Guide* .
        *
@@ -6814,7 +6932,7 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param enclaveOptions Indicates whether the instance is enabled for AWS Nitro Enclaves.
-       * For more information, see [What is AWS Nitro
+       * For more information, see [What is Nitro
        * Enclaves?](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html) in the *AWS
        * Nitro Enclaves User Guide* .
        *
@@ -6824,7 +6942,7 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param enclaveOptions Indicates whether the instance is enabled for AWS Nitro Enclaves.
-       * For more information, see [What is AWS Nitro
+       * For more information, see [What is Nitro
        * Enclaves?](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html) in the *AWS
        * Nitro Enclaves User Guide* .
        *
@@ -7128,25 +7246,25 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param metadataOptions The metadata options for the instance.
-       * For more information, see [Instance metadata and user
-       * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-       * *Amazon EC2 User Guide* .
+       * For more information, see [Configure the Instance Metadata Service
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html)
+       * in the *Amazon EC2 User Guide* .
        */
       public fun metadataOptions(metadataOptions: IResolvable)
 
       /**
        * @param metadataOptions The metadata options for the instance.
-       * For more information, see [Instance metadata and user
-       * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-       * *Amazon EC2 User Guide* .
+       * For more information, see [Configure the Instance Metadata Service
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html)
+       * in the *Amazon EC2 User Guide* .
        */
       public fun metadataOptions(metadataOptions: MetadataOptionsProperty)
 
       /**
        * @param metadataOptions The metadata options for the instance.
-       * For more information, see [Instance metadata and user
-       * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-       * *Amazon EC2 User Guide* .
+       * For more information, see [Configure the Instance Metadata Service
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html)
+       * in the *Amazon EC2 User Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac7fc838a77a9a6a23cb745f94ea114a1de9fd91a5d1d8d5c34039bb5f711bb2")
@@ -7183,6 +7301,37 @@ public open class CfnLaunchTemplate(
        * @param networkInterfaces The network interfaces for the instance.
        */
       public fun networkInterfaces(vararg networkInterfaces: Any)
+
+      /**
+       * @param networkPerformanceOptions The settings for the network performance options for the
+       * instance.
+       * For more information, see [EC2 instance bandwidth weighting
+       * configuration](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configure-bandwidth-weighting.html)
+       * .
+       */
+      public fun networkPerformanceOptions(networkPerformanceOptions: IResolvable)
+
+      /**
+       * @param networkPerformanceOptions The settings for the network performance options for the
+       * instance.
+       * For more information, see [EC2 instance bandwidth weighting
+       * configuration](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configure-bandwidth-weighting.html)
+       * .
+       */
+      public
+          fun networkPerformanceOptions(networkPerformanceOptions: NetworkPerformanceOptionsProperty)
+
+      /**
+       * @param networkPerformanceOptions The settings for the network performance options for the
+       * instance.
+       * For more information, see [EC2 instance bandwidth weighting
+       * configuration](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configure-bandwidth-weighting.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4853429453d14747df8487d1379df896661769cc0b9b96c17a9959c89513476b")
+      public
+          fun networkPerformanceOptions(networkPerformanceOptions: NetworkPerformanceOptionsProperty.Builder.() -> Unit)
 
       /**
        * @param placement The placement for the instance.
@@ -7307,16 +7456,16 @@ public open class CfnLaunchTemplate(
       /**
        * @param userData The user data to make available to the instance.
        * You must provide base64-encoded text. User data is limited to 16 KB. For more information,
-       * see [Run commands on your Amazon EC2 instance at
-       * launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) in the *Amazon EC2
+       * see [Run commands when you launch an EC2 instance with user data
+       * input](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) in the *Amazon EC2
        * User Guide* .
        *
        * If you are creating the launch template for use with AWS Batch , the user data must be
        * provided in the [MIME multi-part archive
        * format](https://docs.aws.amazon.com/https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive)
        * . For more information, see [Amazon EC2 user data in launch
-       * templates](https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html) in the
-       * *AWS Batch User Guide* .
+       * templates](https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html#lt-user-data)
+       * in the *AWS Batch User Guide* .
        */
       public fun userData(userData: String)
     }
@@ -7382,8 +7531,8 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param cpuOptions The CPU options for the instance.
-       * For more information, see [Optimize CPU
-       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
+       * For more information, see [CPU options for Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
        * the *Amazon EC2 User Guide* .
        */
       override fun cpuOptions(cpuOptions: IResolvable) {
@@ -7392,8 +7541,8 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param cpuOptions The CPU options for the instance.
-       * For more information, see [Optimize CPU
-       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
+       * For more information, see [CPU options for Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
        * the *Amazon EC2 User Guide* .
        */
       override fun cpuOptions(cpuOptions: CpuOptionsProperty) {
@@ -7402,8 +7551,8 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param cpuOptions The CPU options for the instance.
-       * For more information, see [Optimize CPU
-       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
+       * For more information, see [CPU options for Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
        * the *Amazon EC2 User Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -7439,9 +7588,9 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param disableApiStop Indicates whether to enable the instance for stop protection.
-       * For more information, see [Enable stop protection for your
-       * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in the
-       * *Amazon EC2 User Guide* .
+       * For more information, see [Enable stop protection for your EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in
+       * the *Amazon EC2 User Guide* .
        */
       override fun disableApiStop(disableApiStop: Boolean) {
         cdkBuilder.disableApiStop(disableApiStop)
@@ -7449,33 +7598,31 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param disableApiStop Indicates whether to enable the instance for stop protection.
-       * For more information, see [Enable stop protection for your
-       * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in the
-       * *Amazon EC2 User Guide* .
+       * For more information, see [Enable stop protection for your EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in
+       * the *Amazon EC2 User Guide* .
        */
       override fun disableApiStop(disableApiStop: IResolvable) {
         cdkBuilder.disableApiStop(disableApiStop.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param disableApiTermination If you set this parameter to `true` , you can't terminate the
-       * instance using the Amazon EC2 console, CLI, or API;.
-       * otherwise, you can. To change this attribute after launch, use
-       * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)
-       * . Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate` , you can
-       * terminate the instance by running the shutdown command from the instance.
+       * @param disableApiTermination Indicates whether termination protection is enabled for the
+       * instance.
+       * The default is `false` , which means that you can terminate the instance using the Amazon
+       * EC2 console, command line tools, or API. You can enable termination protection when you launch
+       * an instance, while the instance is running, or while the instance is stopped.
        */
       override fun disableApiTermination(disableApiTermination: Boolean) {
         cdkBuilder.disableApiTermination(disableApiTermination)
       }
 
       /**
-       * @param disableApiTermination If you set this parameter to `true` , you can't terminate the
-       * instance using the Amazon EC2 console, CLI, or API;.
-       * otherwise, you can. To change this attribute after launch, use
-       * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)
-       * . Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate` , you can
-       * terminate the instance by running the shutdown command from the instance.
+       * @param disableApiTermination Indicates whether termination protection is enabled for the
+       * instance.
+       * The default is `false` , which means that you can terminate the instance using the Amazon
+       * EC2 console, command line tools, or API. You can enable termination protection when you launch
+       * an instance, while the instance is running, or while the instance is stopped.
        */
       override fun disableApiTermination(disableApiTermination: IResolvable) {
         cdkBuilder.disableApiTermination(disableApiTermination.let(IResolvable.Companion::unwrap))
@@ -7506,8 +7653,7 @@ public open class CfnLaunchTemplate(
       /**
        * @param elasticGpuSpecifications Deprecated.
        *
-       * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
-       * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+       * Amazon Elastic Graphics reached end of life on January 8, 2024.
        */
       override fun elasticGpuSpecifications(elasticGpuSpecifications: IResolvable) {
         cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications.let(IResolvable.Companion::unwrap))
@@ -7516,8 +7662,7 @@ public open class CfnLaunchTemplate(
       /**
        * @param elasticGpuSpecifications Deprecated.
        *
-       * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
-       * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+       * Amazon Elastic Graphics reached end of life on January 8, 2024.
        */
       override fun elasticGpuSpecifications(elasticGpuSpecifications: List<Any>) {
         cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications.map{CdkObjectWrappers.unwrap(it)})
@@ -7526,8 +7671,7 @@ public open class CfnLaunchTemplate(
       /**
        * @param elasticGpuSpecifications Deprecated.
        *
-       * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
-       * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+       * Amazon Elastic Graphics reached end of life on January 8, 2024.
        */
       override fun elasticGpuSpecifications(vararg elasticGpuSpecifications: Any): Unit =
           elasticGpuSpecifications(elasticGpuSpecifications.toList())
@@ -7539,14 +7683,6 @@ public open class CfnLaunchTemplate(
        * Deep Learning (DL) inference workloads.
        *
        * You cannot specify accelerators from different generations in the same request.
-       *
-       *
-       * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference
-       * (EI), and will help current customers migrate their workloads to options that offer better
-       * price and performance. After April 15, 2023, new customers will not be able to launch
-       * instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However,
-       * customers who have used Amazon EI at least once during the past 30-day period are considered
-       * current customers and will be able to continue using the service.
        */
       override fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable) {
         cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.let(IResolvable.Companion::unwrap))
@@ -7559,14 +7695,6 @@ public open class CfnLaunchTemplate(
        * Deep Learning (DL) inference workloads.
        *
        * You cannot specify accelerators from different generations in the same request.
-       *
-       *
-       * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference
-       * (EI), and will help current customers migrate their workloads to options that offer better
-       * price and performance. After April 15, 2023, new customers will not be able to launch
-       * instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However,
-       * customers who have used Amazon EI at least once during the past 30-day period are considered
-       * current customers and will be able to continue using the service.
        */
       override fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>) {
         cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.map{CdkObjectWrappers.unwrap(it)})
@@ -7579,21 +7707,13 @@ public open class CfnLaunchTemplate(
        * Deep Learning (DL) inference workloads.
        *
        * You cannot specify accelerators from different generations in the same request.
-       *
-       *
-       * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference
-       * (EI), and will help current customers migrate their workloads to options that offer better
-       * price and performance. After April 15, 2023, new customers will not be able to launch
-       * instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However,
-       * customers who have used Amazon EI at least once during the past 30-day period are considered
-       * current customers and will be able to continue using the service.
        */
       override fun elasticInferenceAccelerators(vararg elasticInferenceAccelerators: Any): Unit =
           elasticInferenceAccelerators(elasticInferenceAccelerators.toList())
 
       /**
        * @param enclaveOptions Indicates whether the instance is enabled for AWS Nitro Enclaves.
-       * For more information, see [What is AWS Nitro
+       * For more information, see [What is Nitro
        * Enclaves?](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html) in the *AWS
        * Nitro Enclaves User Guide* .
        *
@@ -7605,7 +7725,7 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param enclaveOptions Indicates whether the instance is enabled for AWS Nitro Enclaves.
-       * For more information, see [What is AWS Nitro
+       * For more information, see [What is Nitro
        * Enclaves?](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html) in the *AWS
        * Nitro Enclaves User Guide* .
        *
@@ -7617,7 +7737,7 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param enclaveOptions Indicates whether the instance is enabled for AWS Nitro Enclaves.
-       * For more information, see [What is AWS Nitro
+       * For more information, see [What is Nitro
        * Enclaves?](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html) in the *AWS
        * Nitro Enclaves User Guide* .
        *
@@ -7962,9 +8082,9 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param metadataOptions The metadata options for the instance.
-       * For more information, see [Instance metadata and user
-       * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-       * *Amazon EC2 User Guide* .
+       * For more information, see [Configure the Instance Metadata Service
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html)
+       * in the *Amazon EC2 User Guide* .
        */
       override fun metadataOptions(metadataOptions: IResolvable) {
         cdkBuilder.metadataOptions(metadataOptions.let(IResolvable.Companion::unwrap))
@@ -7972,9 +8092,9 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param metadataOptions The metadata options for the instance.
-       * For more information, see [Instance metadata and user
-       * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-       * *Amazon EC2 User Guide* .
+       * For more information, see [Configure the Instance Metadata Service
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html)
+       * in the *Amazon EC2 User Guide* .
        */
       override fun metadataOptions(metadataOptions: MetadataOptionsProperty) {
         cdkBuilder.metadataOptions(metadataOptions.let(MetadataOptionsProperty.Companion::unwrap))
@@ -7982,9 +8102,9 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param metadataOptions The metadata options for the instance.
-       * For more information, see [Instance metadata and user
-       * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-       * *Amazon EC2 User Guide* .
+       * For more information, see [Configure the Instance Metadata Service
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html)
+       * in the *Amazon EC2 User Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac7fc838a77a9a6a23cb745f94ea114a1de9fd91a5d1d8d5c34039bb5f711bb2")
@@ -8032,6 +8152,43 @@ public open class CfnLaunchTemplate(
        */
       override fun networkInterfaces(vararg networkInterfaces: Any): Unit =
           networkInterfaces(networkInterfaces.toList())
+
+      /**
+       * @param networkPerformanceOptions The settings for the network performance options for the
+       * instance.
+       * For more information, see [EC2 instance bandwidth weighting
+       * configuration](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configure-bandwidth-weighting.html)
+       * .
+       */
+      override fun networkPerformanceOptions(networkPerformanceOptions: IResolvable) {
+        cdkBuilder.networkPerformanceOptions(networkPerformanceOptions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param networkPerformanceOptions The settings for the network performance options for the
+       * instance.
+       * For more information, see [EC2 instance bandwidth weighting
+       * configuration](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configure-bandwidth-weighting.html)
+       * .
+       */
+      override
+          fun networkPerformanceOptions(networkPerformanceOptions: NetworkPerformanceOptionsProperty) {
+        cdkBuilder.networkPerformanceOptions(networkPerformanceOptions.let(NetworkPerformanceOptionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param networkPerformanceOptions The settings for the network performance options for the
+       * instance.
+       * For more information, see [EC2 instance bandwidth weighting
+       * configuration](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configure-bandwidth-weighting.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4853429453d14747df8487d1379df896661769cc0b9b96c17a9959c89513476b")
+      override
+          fun networkPerformanceOptions(networkPerformanceOptions: NetworkPerformanceOptionsProperty.Builder.() -> Unit):
+          Unit =
+          networkPerformanceOptions(NetworkPerformanceOptionsProperty(networkPerformanceOptions))
 
       /**
        * @param placement The placement for the instance.
@@ -8179,16 +8336,16 @@ public open class CfnLaunchTemplate(
       /**
        * @param userData The user data to make available to the instance.
        * You must provide base64-encoded text. User data is limited to 16 KB. For more information,
-       * see [Run commands on your Amazon EC2 instance at
-       * launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) in the *Amazon EC2
+       * see [Run commands when you launch an EC2 instance with user data
+       * input](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) in the *Amazon EC2
        * User Guide* .
        *
        * If you are creating the launch template for use with AWS Batch , the user data must be
        * provided in the [MIME multi-part archive
        * format](https://docs.aws.amazon.com/https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive)
        * . For more information, see [Amazon EC2 user data in launch
-       * templates](https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html) in the
-       * *AWS Batch User Guide* .
+       * templates](https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html#lt-user-data)
+       * in the *AWS Batch User Guide* .
        */
       override fun userData(userData: String) {
         cdkBuilder.userData(userData)
@@ -8225,8 +8382,8 @@ public open class CfnLaunchTemplate(
       /**
        * The CPU options for the instance.
        *
-       * For more information, see [Optimize CPU
-       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
+       * For more information, see [CPU options for Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
        * the *Amazon EC2 User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions)
@@ -8245,22 +8402,20 @@ public open class CfnLaunchTemplate(
       /**
        * Indicates whether to enable the instance for stop protection.
        *
-       * For more information, see [Enable stop protection for your
-       * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in the
-       * *Amazon EC2 User Guide* .
+       * For more information, see [Enable stop protection for your EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in
+       * the *Amazon EC2 User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-disableapistop)
        */
       override fun disableApiStop(): Any? = unwrap(this).getDisableApiStop()
 
       /**
-       * If you set this parameter to `true` , you can't terminate the instance using the Amazon EC2
-       * console, CLI, or API;
+       * Indicates whether termination protection is enabled for the instance.
        *
-       * otherwise, you can. To change this attribute after launch, use
-       * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)
-       * . Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate` , you can
-       * terminate the instance by running the shutdown command from the instance.
+       * The default is `false` , which means that you can terminate the instance using the Amazon
+       * EC2 console, command line tools, or API. You can enable termination protection when you launch
+       * an instance, while the instance is running, or while the instance is stopped.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-disableapitermination)
        */
@@ -8282,8 +8437,7 @@ public open class CfnLaunchTemplate(
        * Deprecated.
        *
        *
-       * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
-       * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+       * Amazon Elastic Graphics reached end of life on January 8, 2024.
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-elasticgpuspecifications)
@@ -8299,15 +8453,6 @@ public open class CfnLaunchTemplate(
        *
        * You cannot specify accelerators from different generations in the same request.
        *
-       *
-       * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference
-       * (EI), and will help current customers migrate their workloads to options that offer better
-       * price and performance. After April 15, 2023, new customers will not be able to launch
-       * instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However,
-       * customers who have used Amazon EI at least once during the past 30-day period are considered
-       * current customers and will be able to continue using the service.
-       *
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-elasticinferenceaccelerators)
        */
       override fun elasticInferenceAccelerators(): Any? =
@@ -8316,7 +8461,7 @@ public open class CfnLaunchTemplate(
       /**
        * Indicates whether the instance is enabled for AWS Nitro Enclaves.
        *
-       * For more information, see [What is AWS Nitro
+       * For more information, see [What is Nitro
        * Enclaves?](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html) in the *AWS
        * Nitro Enclaves User Guide* .
        *
@@ -8487,9 +8632,9 @@ public open class CfnLaunchTemplate(
       /**
        * The metadata options for the instance.
        *
-       * For more information, see [Instance metadata and user
-       * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-       * *Amazon EC2 User Guide* .
+       * For more information, see [Configure the Instance Metadata Service
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html)
+       * in the *Amazon EC2 User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions)
        */
@@ -8508,6 +8653,17 @@ public open class CfnLaunchTemplate(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-networkinterfaces)
        */
       override fun networkInterfaces(): Any? = unwrap(this).getNetworkInterfaces()
+
+      /**
+       * The settings for the network performance options for the instance.
+       *
+       * For more information, see [EC2 instance bandwidth weighting
+       * configuration](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configure-bandwidth-weighting.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-networkperformanceoptions)
+       */
+      override fun networkPerformanceOptions(): Any? = unwrap(this).getNetworkPerformanceOptions()
 
       /**
        * The placement for the instance.
@@ -8582,16 +8738,16 @@ public open class CfnLaunchTemplate(
        * The user data to make available to the instance.
        *
        * You must provide base64-encoded text. User data is limited to 16 KB. For more information,
-       * see [Run commands on your Amazon EC2 instance at
-       * launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) in the *Amazon EC2
+       * see [Run commands when you launch an EC2 instance with user data
+       * input](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) in the *Amazon EC2
        * User Guide* .
        *
        * If you are creating the launch template for use with AWS Batch , the user data must be
        * provided in the [MIME multi-part archive
        * format](https://docs.aws.amazon.com/https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive)
        * . For more information, see [Amazon EC2 user data in launch
-       * templates](https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html) in the
-       * *AWS Batch User Guide* .
+       * templates](https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html#lt-user-data)
+       * in the *AWS Batch User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-userdata)
        */
@@ -8617,6 +8773,8 @@ public open class CfnLaunchTemplate(
   }
 
   /**
+   * Amazon Elastic Inference is no longer available.
+   *
    * Specifies an elastic inference accelerator.
    *
    * `LaunchTemplateElasticInferenceAccelerator` is a property of [AWS::EC2::LaunchTemplate
@@ -9384,9 +9542,8 @@ public open class CfnLaunchTemplate(
      * Set to `enabled` to allow access to instance tags from the instance metadata.
      *
      * Set to `disabled` to turn off access to instance tags from the instance metadata. For more
-     * information, see [Work with instance tags using the instance
-     * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)
-     * .
+     * information, see [View tags for your EC2 instances using instance
+     * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/work-with-tags-in-IMDS.html) .
      *
      * Default: `disabled`
      *
@@ -9446,9 +9603,8 @@ public open class CfnLaunchTemplate(
        * @param instanceMetadataTags Set to `enabled` to allow access to instance tags from the
        * instance metadata.
        * Set to `disabled` to turn off access to instance tags from the instance metadata. For more
-       * information, see [Work with instance tags using the instance
-       * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)
-       * .
+       * information, see [View tags for your EC2 instances using instance
+       * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/work-with-tags-in-IMDS.html) .
        *
        * Default: `disabled`
        */
@@ -9515,9 +9671,8 @@ public open class CfnLaunchTemplate(
        * @param instanceMetadataTags Set to `enabled` to allow access to instance tags from the
        * instance metadata.
        * Set to `disabled` to turn off access to instance tags from the instance metadata. For more
-       * information, see [Work with instance tags using the instance
-       * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)
-       * .
+       * information, see [View tags for your EC2 instances using instance
+       * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/work-with-tags-in-IMDS.html) .
        *
        * Default: `disabled`
        */
@@ -9592,9 +9747,8 @@ public open class CfnLaunchTemplate(
        * Set to `enabled` to allow access to instance tags from the instance metadata.
        *
        * Set to `disabled` to turn off access to instance tags from the instance metadata. For more
-       * information, see [Work with instance tags using the instance
-       * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)
-       * .
+       * information, see [View tags for your EC2 instances using instance
+       * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/work-with-tags-in-IMDS.html) .
        *
        * Default: `disabled`
        *
@@ -10094,9 +10248,13 @@ public open class CfnLaunchTemplate(
     /**
      * The device index for the network interface attachment.
      *
-     * Each network interface requires a device index. If you create a launch template that includes
-     * secondary network interfaces but not a primary network interface, then you must add a primary
-     * network interface as a launch parameter when you launch an instance from the template.
+     * The primary network interface has a device index of 0. If the network interface is of type
+     * `interface` , you must specify a device index.
+     *
+     * If you create a launch template that includes secondary network interfaces but no primary
+     * network interface, and you specify it using the `LaunchTemplate` property of
+     * `AWS::EC2::Instance` , then you must include a primary network interface using the
+     * `NetworkInterfaces` property of `AWS::EC2::Instance` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html#cfn-ec2-launchtemplate-networkinterface-deviceindex)
      */
@@ -10120,8 +10278,9 @@ public open class CfnLaunchTemplate(
      * The type of network interface.
      *
      * To create an Elastic Fabric Adapter (EFA), specify `efa` or `efa` . For more information, see
-     * [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the
-     * *Amazon EC2 User Guide* .
+     * [Elastic Fabric Adapter for AI/ML and HPC workloads on Amazon
+     * EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon EC2 User
+     * Guide* .
      *
      * If you are not creating an EFA, specify `interface` or omit this parameter.
      *
@@ -10333,9 +10492,13 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param deviceIndex The device index for the network interface attachment.
-       * Each network interface requires a device index. If you create a launch template that
-       * includes secondary network interfaces but not a primary network interface, then you must add a
-       * primary network interface as a launch parameter when you launch an instance from the template.
+       * The primary network interface has a device index of 0. If the network interface is of type
+       * `interface` , you must specify a device index.
+       *
+       * If you create a launch template that includes secondary network interfaces but no primary
+       * network interface, and you specify it using the `LaunchTemplate` property of
+       * `AWS::EC2::Instance` , then you must include a primary network interface using the
+       * `NetworkInterfaces` property of `AWS::EC2::Instance` .
        */
       public fun deviceIndex(deviceIndex: Number)
 
@@ -10370,8 +10533,9 @@ public open class CfnLaunchTemplate(
       /**
        * @param interfaceType The type of network interface.
        * To create an Elastic Fabric Adapter (EFA), specify `efa` or `efa` . For more information,
-       * see [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in
-       * the *Amazon EC2 User Guide* .
+       * see [Elastic Fabric Adapter for AI/ML and HPC workloads on Amazon
+       * EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon EC2 User
+       * Guide* .
        *
        * If you are not creating an EFA, specify `interface` or omit this parameter.
        *
@@ -10628,9 +10792,13 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param deviceIndex The device index for the network interface attachment.
-       * Each network interface requires a device index. If you create a launch template that
-       * includes secondary network interfaces but not a primary network interface, then you must add a
-       * primary network interface as a launch parameter when you launch an instance from the template.
+       * The primary network interface has a device index of 0. If the network interface is of type
+       * `interface` , you must specify a device index.
+       *
+       * If you create a launch template that includes secondary network interfaces but no primary
+       * network interface, and you specify it using the `LaunchTemplate` property of
+       * `AWS::EC2::Instance` , then you must include a primary network interface using the
+       * `NetworkInterfaces` property of `AWS::EC2::Instance` .
        */
       override fun deviceIndex(deviceIndex: Number) {
         cdkBuilder.deviceIndex(deviceIndex)
@@ -10674,8 +10842,9 @@ public open class CfnLaunchTemplate(
       /**
        * @param interfaceType The type of network interface.
        * To create an Elastic Fabric Adapter (EFA), specify `efa` or `efa` . For more information,
-       * see [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in
-       * the *Amazon EC2 User Guide* .
+       * see [Elastic Fabric Adapter for AI/ML and HPC workloads on Amazon
+       * EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon EC2 User
+       * Guide* .
        *
        * If you are not creating an EFA, specify `interface` or omit this parameter.
        *
@@ -10925,9 +11094,13 @@ public open class CfnLaunchTemplate(
       /**
        * The device index for the network interface attachment.
        *
-       * Each network interface requires a device index. If you create a launch template that
-       * includes secondary network interfaces but not a primary network interface, then you must add a
-       * primary network interface as a launch parameter when you launch an instance from the template.
+       * The primary network interface has a device index of 0. If the network interface is of type
+       * `interface` , you must specify a device index.
+       *
+       * If you create a launch template that includes secondary network interfaces but no primary
+       * network interface, and you specify it using the `LaunchTemplate` property of
+       * `AWS::EC2::Instance` , then you must include a primary network interface using the
+       * `NetworkInterfaces` property of `AWS::EC2::Instance` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html#cfn-ec2-launchtemplate-networkinterface-deviceindex)
        */
@@ -10951,8 +11124,9 @@ public open class CfnLaunchTemplate(
        * The type of network interface.
        *
        * To create an Elastic Fabric Adapter (EFA), specify `efa` or `efa` . For more information,
-       * see [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in
-       * the *Amazon EC2 User Guide* .
+       * see [Elastic Fabric Adapter for AI/ML and HPC workloads on Amazon
+       * EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon EC2 User
+       * Guide* .
        *
        * If you are not creating an EFA, specify `interface` or omit this parameter.
        *
@@ -11094,6 +11268,120 @@ public open class CfnLaunchTemplate(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceProperty
+    }
+  }
+
+  /**
+   * Contains settings for the network performance options for the instance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * NetworkPerformanceOptionsProperty networkPerformanceOptionsProperty =
+   * NetworkPerformanceOptionsProperty.builder()
+   * .bandwidthWeighting("bandwidthWeighting")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkperformanceoptions.html)
+   */
+  public interface NetworkPerformanceOptionsProperty {
+    /**
+     * Specify the bandwidth weighting option to boost the associated type of baseline bandwidth, as
+     * follows:.
+     *
+     * * **default** - This option uses the standard bandwidth configuration for your instance type.
+     * * **vpc-1** - This option boosts your networking baseline bandwidth and reduces your EBS
+     * baseline bandwidth.
+     * * **ebs-1** - This option boosts your EBS baseline bandwidth and reduces your networking
+     * baseline bandwidth.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkperformanceoptions.html#cfn-ec2-launchtemplate-networkperformanceoptions-bandwidthweighting)
+     */
+    public fun bandwidthWeighting(): String? = unwrap(this).getBandwidthWeighting()
+
+    /**
+     * A builder for [NetworkPerformanceOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bandwidthWeighting Specify the bandwidth weighting option to boost the associated
+       * type of baseline bandwidth, as follows:.
+       * * **default** - This option uses the standard bandwidth configuration for your instance
+       * type.
+       * * **vpc-1** - This option boosts your networking baseline bandwidth and reduces your EBS
+       * baseline bandwidth.
+       * * **ebs-1** - This option boosts your EBS baseline bandwidth and reduces your networking
+       * baseline bandwidth.
+       */
+      public fun bandwidthWeighting(bandwidthWeighting: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkPerformanceOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkPerformanceOptionsProperty.builder()
+
+      /**
+       * @param bandwidthWeighting Specify the bandwidth weighting option to boost the associated
+       * type of baseline bandwidth, as follows:.
+       * * **default** - This option uses the standard bandwidth configuration for your instance
+       * type.
+       * * **vpc-1** - This option boosts your networking baseline bandwidth and reduces your EBS
+       * baseline bandwidth.
+       * * **ebs-1** - This option boosts your EBS baseline bandwidth and reduces your networking
+       * baseline bandwidth.
+       */
+      override fun bandwidthWeighting(bandwidthWeighting: String) {
+        cdkBuilder.bandwidthWeighting(bandwidthWeighting)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkPerformanceOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkPerformanceOptionsProperty,
+    ) : CdkObject(cdkObject),
+        NetworkPerformanceOptionsProperty {
+      /**
+       * Specify the bandwidth weighting option to boost the associated type of baseline bandwidth,
+       * as follows:.
+       *
+       * * **default** - This option uses the standard bandwidth configuration for your instance
+       * type.
+       * * **vpc-1** - This option boosts your networking baseline bandwidth and reduces your EBS
+       * baseline bandwidth.
+       * * **ebs-1** - This option boosts your EBS baseline bandwidth and reduces your networking
+       * baseline bandwidth.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkperformanceoptions.html#cfn-ec2-launchtemplate-networkperformanceoptions-bandwidthweighting)
+       */
+      override fun bandwidthWeighting(): String? = unwrap(this).getBandwidthWeighting()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NetworkPerformanceOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkPerformanceOptionsProperty):
+          NetworkPerformanceOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkPerformanceOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkPerformanceOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkPerformanceOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkPerformanceOptionsProperty
     }
   }
 
@@ -11772,6 +12060,8 @@ public open class CfnLaunchTemplate(
   }
 
   /**
+   * Specifies an instance family to use as the baseline reference for CPU performance.
+   *
    * Example:
    *
    * ```
@@ -11787,10 +12077,31 @@ public open class CfnLaunchTemplate(
    */
   public interface ReferenceProperty {
     /**
-     * The instance family to refer.
+     * The instance family to use as a baseline reference.
      *
-     * Ensure that you specify the correct family name. For example, C6i and C6g are valid values,
-     * but C6 is not.
+     *
+     * Ensure that you specify the correct value for the instance family. The instance family is
+     * everything before the period ( `.` ) in the instance type name. For example, in the instance
+     * type `c6i.large` , the instance family is `c6i` , not `c6` . For more information, see [Amazon
+     * EC2 instance type naming
+     * conventions](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-type-names.html) in
+     * *Amazon EC2 Instance Types* .
+     *
+     *
+     * The following instance families are *not supported* for performance protection:
+     *
+     * * `c1`
+     * * `g3` | `g3s`
+     * * `hpc7g`
+     * * `m1` | `m2`
+     * * `mac1` | `mac2` | `mac2-m1ultra` | `mac2-m2` | `mac2-m2pro`
+     * * `p3dn` | `p4d` | `p5`
+     * * `t1`
+     * * `u-12tb1` | `u-18tb1` | `u-24tb1` | `u-3tb1` | `u-6tb1` | `u-9tb1` | `u7i-12tb` |
+     * `u7in-16tb` | `u7in-24tb` | `u7in-32tb`
+     *
+     * If you enable performance protection by specifying a supported instance family, the returned
+     * instance types will exclude the above unsupported instance families.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-reference.html#cfn-ec2-launchtemplate-reference-instancefamily)
      */
@@ -11802,9 +12113,30 @@ public open class CfnLaunchTemplate(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param instanceFamily The instance family to refer.
-       * Ensure that you specify the correct family name. For example, C6i and C6g are valid values,
-       * but C6 is not.
+       * @param instanceFamily The instance family to use as a baseline reference.
+       *
+       * Ensure that you specify the correct value for the instance family. The instance family is
+       * everything before the period ( `.` ) in the instance type name. For example, in the instance
+       * type `c6i.large` , the instance family is `c6i` , not `c6` . For more information, see [Amazon
+       * EC2 instance type naming
+       * conventions](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-type-names.html) in
+       * *Amazon EC2 Instance Types* .
+       *
+       *
+       * The following instance families are *not supported* for performance protection:
+       *
+       * * `c1`
+       * * `g3` | `g3s`
+       * * `hpc7g`
+       * * `m1` | `m2`
+       * * `mac1` | `mac2` | `mac2-m1ultra` | `mac2-m2` | `mac2-m2pro`
+       * * `p3dn` | `p4d` | `p5`
+       * * `t1`
+       * * `u-12tb1` | `u-18tb1` | `u-24tb1` | `u-3tb1` | `u-6tb1` | `u-9tb1` | `u7i-12tb` |
+       * `u7in-16tb` | `u7in-24tb` | `u7in-32tb`
+       *
+       * If you enable performance protection by specifying a supported instance family, the
+       * returned instance types will exclude the above unsupported instance families.
        */
       public fun instanceFamily(instanceFamily: String)
     }
@@ -11815,9 +12147,30 @@ public open class CfnLaunchTemplate(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ReferenceProperty.builder()
 
       /**
-       * @param instanceFamily The instance family to refer.
-       * Ensure that you specify the correct family name. For example, C6i and C6g are valid values,
-       * but C6 is not.
+       * @param instanceFamily The instance family to use as a baseline reference.
+       *
+       * Ensure that you specify the correct value for the instance family. The instance family is
+       * everything before the period ( `.` ) in the instance type name. For example, in the instance
+       * type `c6i.large` , the instance family is `c6i` , not `c6` . For more information, see [Amazon
+       * EC2 instance type naming
+       * conventions](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-type-names.html) in
+       * *Amazon EC2 Instance Types* .
+       *
+       *
+       * The following instance families are *not supported* for performance protection:
+       *
+       * * `c1`
+       * * `g3` | `g3s`
+       * * `hpc7g`
+       * * `m1` | `m2`
+       * * `mac1` | `mac2` | `mac2-m1ultra` | `mac2-m2` | `mac2-m2pro`
+       * * `p3dn` | `p4d` | `p5`
+       * * `t1`
+       * * `u-12tb1` | `u-18tb1` | `u-24tb1` | `u-3tb1` | `u-6tb1` | `u-9tb1` | `u7i-12tb` |
+       * `u7in-16tb` | `u7in-24tb` | `u7in-32tb`
+       *
+       * If you enable performance protection by specifying a supported instance family, the
+       * returned instance types will exclude the above unsupported instance families.
        */
       override fun instanceFamily(instanceFamily: String) {
         cdkBuilder.instanceFamily(instanceFamily)
@@ -11832,10 +12185,31 @@ public open class CfnLaunchTemplate(
     ) : CdkObject(cdkObject),
         ReferenceProperty {
       /**
-       * The instance family to refer.
+       * The instance family to use as a baseline reference.
        *
-       * Ensure that you specify the correct family name. For example, C6i and C6g are valid values,
-       * but C6 is not.
+       *
+       * Ensure that you specify the correct value for the instance family. The instance family is
+       * everything before the period ( `.` ) in the instance type name. For example, in the instance
+       * type `c6i.large` , the instance family is `c6i` , not `c6` . For more information, see [Amazon
+       * EC2 instance type naming
+       * conventions](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-type-names.html) in
+       * *Amazon EC2 Instance Types* .
+       *
+       *
+       * The following instance families are *not supported* for performance protection:
+       *
+       * * `c1`
+       * * `g3` | `g3s`
+       * * `hpc7g`
+       * * `m1` | `m2`
+       * * `mac1` | `mac2` | `mac2-m1ultra` | `mac2-m2` | `mac2-m2pro`
+       * * `p3dn` | `p4d` | `p5`
+       * * `t1`
+       * * `u-12tb1` | `u-18tb1` | `u-24tb1` | `u-3tb1` | `u-6tb1` | `u-9tb1` | `u7i-12tb` |
+       * `u7in-16tb` | `u7in-24tb` | `u7in-32tb`
+       *
+       * If you enable performance protection by specifying a supported instance family, the
+       * returned instance types will exclude the above unsupported instance families.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-reference.html#cfn-ec2-launchtemplate-reference-instancefamily)
        */
@@ -11903,10 +12277,12 @@ public open class CfnLaunchTemplate(
         unwrap(this).getInstanceInterruptionBehavior()
 
     /**
-     * The maximum hourly price you're willing to pay for the Spot Instances.
+     * The maximum hourly price you're willing to pay for a Spot Instance.
      *
      * We do not recommend using this parameter because it can lead to increased interruptions. If
-     * you do not specify this parameter, you will pay the current Spot price.
+     * you do not specify this parameter, you will pay the current Spot price. If you do specify this
+     * parameter, it must be more than USD $0.001. Specifying a value below USD $0.001 will result in
+     * an `InvalidParameterValue` error message when the launch template is used to launch an instance.
      *
      *
      * If you specify a maximum price, your Spot Instances will be interrupted more frequently than
@@ -11960,9 +12336,12 @@ public open class CfnLaunchTemplate(
       public fun instanceInterruptionBehavior(instanceInterruptionBehavior: String)
 
       /**
-       * @param maxPrice The maximum hourly price you're willing to pay for the Spot Instances.
+       * @param maxPrice The maximum hourly price you're willing to pay for a Spot Instance.
        * We do not recommend using this parameter because it can lead to increased interruptions. If
-       * you do not specify this parameter, you will pay the current Spot price.
+       * you do not specify this parameter, you will pay the current Spot price. If you do specify this
+       * parameter, it must be more than USD $0.001. Specifying a value below USD $0.001 will result in
+       * an `InvalidParameterValue` error message when the launch template is used to launch an
+       * instance.
        *
        *
        * If you specify a maximum price, your Spot Instances will be interrupted more frequently
@@ -12012,9 +12391,12 @@ public open class CfnLaunchTemplate(
       }
 
       /**
-       * @param maxPrice The maximum hourly price you're willing to pay for the Spot Instances.
+       * @param maxPrice The maximum hourly price you're willing to pay for a Spot Instance.
        * We do not recommend using this parameter because it can lead to increased interruptions. If
-       * you do not specify this parameter, you will pay the current Spot price.
+       * you do not specify this parameter, you will pay the current Spot price. If you do specify this
+       * parameter, it must be more than USD $0.001. Specifying a value below USD $0.001 will result in
+       * an `InvalidParameterValue` error message when the launch template is used to launch an
+       * instance.
        *
        *
        * If you specify a maximum price, your Spot Instances will be interrupted more frequently
@@ -12074,10 +12456,13 @@ public open class CfnLaunchTemplate(
           unwrap(this).getInstanceInterruptionBehavior()
 
       /**
-       * The maximum hourly price you're willing to pay for the Spot Instances.
+       * The maximum hourly price you're willing to pay for a Spot Instance.
        *
        * We do not recommend using this parameter because it can lead to increased interruptions. If
-       * you do not specify this parameter, you will pay the current Spot price.
+       * you do not specify this parameter, you will pay the current Spot price. If you do specify this
+       * parameter, it must be more than USD $0.001. Specifying a value below USD $0.001 will result in
+       * an `InvalidParameterValue` error message when the launch template is used to launch an
+       * instance.
        *
        *
        * If you specify a maximum price, your Spot Instances will be interrupted more frequently

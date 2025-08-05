@@ -57,7 +57,7 @@ public interface CfnHostedZoneProps {
    *
    * For information about using tags for cost allocation, see [Using Cost Allocation
    * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
-   * *AWS Billing and Cost Management User Guide* .
+   * *Billing and Cost Management User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzonetags)
    */
@@ -230,7 +230,7 @@ public interface CfnHostedZoneProps {
      * @param hostedZoneTags Adds, edits, or deletes tags for a health check or a hosted zone.
      * For information about using tags for cost allocation, see [Using Cost Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
-     * *AWS Billing and Cost Management User Guide* .
+     * *Billing and Cost Management User Guide* .
      */
     public fun hostedZoneTags(hostedZoneTags: List<CfnHostedZone.HostedZoneTagProperty>)
 
@@ -238,7 +238,7 @@ public interface CfnHostedZoneProps {
      * @param hostedZoneTags Adds, edits, or deletes tags for a health check or a hosted zone.
      * For information about using tags for cost allocation, see [Using Cost Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
-     * *AWS Billing and Cost Management User Guide* .
+     * *Billing and Cost Management User Guide* .
      */
     public fun hostedZoneTags(vararg hostedZoneTags: CfnHostedZone.HostedZoneTagProperty)
 
@@ -633,7 +633,7 @@ public interface CfnHostedZoneProps {
      * @param hostedZoneTags Adds, edits, or deletes tags for a health check or a hosted zone.
      * For information about using tags for cost allocation, see [Using Cost Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
-     * *AWS Billing and Cost Management User Guide* .
+     * *Billing and Cost Management User Guide* .
      */
     override fun hostedZoneTags(hostedZoneTags: List<CfnHostedZone.HostedZoneTagProperty>) {
       cdkBuilder.hostedZoneTags(hostedZoneTags.map(CfnHostedZone.HostedZoneTagProperty.Companion::unwrap))
@@ -643,7 +643,7 @@ public interface CfnHostedZoneProps {
      * @param hostedZoneTags Adds, edits, or deletes tags for a health check or a hosted zone.
      * For information about using tags for cost allocation, see [Using Cost Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
-     * *AWS Billing and Cost Management User Guide* .
+     * *Billing and Cost Management User Guide* .
      */
     override fun hostedZoneTags(vararg hostedZoneTags: CfnHostedZone.HostedZoneTagProperty): Unit =
         hostedZoneTags(hostedZoneTags.toList())
@@ -1037,7 +1037,7 @@ public interface CfnHostedZoneProps {
      *
      * For information about using tags for cost allocation, see [Using Cost Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
-     * *AWS Billing and Cost Management User Guide* .
+     * *Billing and Cost Management User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzonetags)
      */

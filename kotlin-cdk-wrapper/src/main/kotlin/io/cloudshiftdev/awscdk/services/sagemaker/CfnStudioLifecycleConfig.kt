@@ -16,7 +16,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Creates a new Amazon SageMaker Studio Lifecycle Configuration.
+ * Creates a new Amazon SageMaker AI Studio Lifecycle Configuration.
  *
  * Example:
  *
@@ -108,12 +108,12 @@ public open class CfnStudioLifecycleConfig(
   }
 
   /**
-   * The name of the Amazon SageMaker Studio Lifecycle Configuration.
+   * The name of the Amazon SageMaker AI Studio Lifecycle Configuration.
    */
   public open fun studioLifecycleConfigName(): String = unwrap(this).getStudioLifecycleConfigName()
 
   /**
-   * The name of the Amazon SageMaker Studio Lifecycle Configuration.
+   * The name of the Amazon SageMaker AI Studio Lifecycle Configuration.
    */
   public open fun studioLifecycleConfigName(`value`: String) {
     unwrap(this).setStudioLifecycleConfigName(`value`)
@@ -162,10 +162,10 @@ public open class CfnStudioLifecycleConfig(
     public fun studioLifecycleConfigContent(studioLifecycleConfigContent: String)
 
     /**
-     * The name of the Amazon SageMaker Studio Lifecycle Configuration.
+     * The name of the Amazon SageMaker AI Studio Lifecycle Configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-studiolifecycleconfig.html#cfn-sagemaker-studiolifecycleconfig-studiolifecycleconfigname)
-     * @param studioLifecycleConfigName The name of the Amazon SageMaker Studio Lifecycle
+     * @param studioLifecycleConfigName The name of the Amazon SageMaker AI Studio Lifecycle
      * Configuration. 
      */
     public fun studioLifecycleConfigName(studioLifecycleConfigName: String)
@@ -226,10 +226,10 @@ public open class CfnStudioLifecycleConfig(
     }
 
     /**
-     * The name of the Amazon SageMaker Studio Lifecycle Configuration.
+     * The name of the Amazon SageMaker AI Studio Lifecycle Configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-studiolifecycleconfig.html#cfn-sagemaker-studiolifecycleconfig-studiolifecycleconfigname)
-     * @param studioLifecycleConfigName The name of the Amazon SageMaker Studio Lifecycle
+     * @param studioLifecycleConfigName The name of the Amazon SageMaker AI Studio Lifecycle
      * Configuration. 
      */
     override fun studioLifecycleConfigName(studioLifecycleConfigName: String) {

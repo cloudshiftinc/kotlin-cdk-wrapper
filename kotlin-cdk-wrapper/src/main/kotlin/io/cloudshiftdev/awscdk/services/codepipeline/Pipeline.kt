@@ -666,6 +666,16 @@ public open class Pipeline(
     public fun triggers(vararg triggers: TriggerProps)
 
     /**
+     * Use pipeline service role for actions if no action role configured.
+     *
+     * Default: - false
+     *
+     * @param usePipelineRoleForActions Use pipeline service role for actions if no action role
+     * configured. 
+     */
+    public fun usePipelineRoleForActions(usePipelineRoleForActions: Boolean)
+
+    /**
      * A list that defines the pipeline variables for a pipeline resource.
      *
      * `variables` can only be used when `pipelineType` is set to `PipelineType.V2`.
@@ -893,6 +903,18 @@ public open class Pipeline(
     override fun triggers(vararg triggers: TriggerProps): Unit = triggers(triggers.toList())
 
     /**
+     * Use pipeline service role for actions if no action role configured.
+     *
+     * Default: - false
+     *
+     * @param usePipelineRoleForActions Use pipeline service role for actions if no action role
+     * configured. 
+     */
+    override fun usePipelineRoleForActions(usePipelineRoleForActions: Boolean) {
+      cdkBuilder.usePipelineRoleForActions(usePipelineRoleForActions)
+    }
+
+    /**
      * A list that defines the pipeline variables for a pipeline resource.
      *
      * `variables` can only be used when `pipelineType` is set to `PipelineType.V2`.
@@ -922,6 +944,9 @@ public open class Pipeline(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.codepipeline.Pipeline.PROPERTY_INJECTION_ID
+
     public fun fromPipelineArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

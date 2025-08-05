@@ -67,6 +67,43 @@ public open class SourcedConfiguration(
       unwrap(this).getApplication().let(IApplication::wrap)
 
   /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to an application.
+   *
+   * @param eventDestination The event that occurs during the extension. 
+   * @param options Options for the extension.
+   */
+  public override fun atDeploymentTick(eventDestination: IEventDestination) {
+    unwrap(this).atDeploymentTick(eventDestination.let(IEventDestination.Companion::unwrap))
+  }
+
+  /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to an application.
+   *
+   * @param eventDestination The event that occurs during the extension. 
+   * @param options Options for the extension.
+   */
+  public override fun atDeploymentTick(eventDestination: IEventDestination,
+      options: ExtensionOptions) {
+    unwrap(this).atDeploymentTick(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
+  }
+
+  /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to an application.
+   *
+   * @param eventDestination The event that occurs during the extension. 
+   * @param options Options for the extension.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("f8c201d364bd1348c470ff45a380b57e5cbcd5d83fb8aa9250995db9670d33c2")
+  public override fun atDeploymentTick(eventDestination: IEventDestination,
+      options: ExtensionOptions.Builder.() -> Unit): Unit = atDeploymentTick(eventDestination,
+      ExtensionOptions(options))
+
+  /**
    * The Amazon Resource Name (ARN) of the configuration profile.
    */
   public open fun configurationProfileArn(): String = unwrap(this).getConfigurationProfileArn()
@@ -459,6 +496,21 @@ public open class SourcedConfiguration(
     public fun application(application: IApplication)
 
     /**
+     * A parameter to configure deletion protection.
+     *
+     * Deletion protection prevents a user from deleting a configuration profile if your application
+     * has called
+     * either `GetLatestConfiguration` or `GetConfiguration` for the configuration profile during
+     * the specified interval.
+     *
+     * Default: DeletionProtectionCheck.ACCOUNT_DEFAULT
+     *
+     * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/deletion-protection.html)
+     * @param deletionProtectionCheck A parameter to configure deletion protection. 
+     */
+    public fun deletionProtectionCheck(deletionProtectionCheck: DeletionProtectionCheck)
+
+    /**
      * The list of environments to deploy the configuration to.
      *
      * If this parameter is not specified, then there will be no
@@ -596,6 +648,23 @@ public open class SourcedConfiguration(
      */
     override fun application(application: IApplication) {
       cdkBuilder.application(application.let(IApplication.Companion::unwrap))
+    }
+
+    /**
+     * A parameter to configure deletion protection.
+     *
+     * Deletion protection prevents a user from deleting a configuration profile if your application
+     * has called
+     * either `GetLatestConfiguration` or `GetConfiguration` for the configuration profile during
+     * the specified interval.
+     *
+     * Default: DeletionProtectionCheck.ACCOUNT_DEFAULT
+     *
+     * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/deletion-protection.html)
+     * @param deletionProtectionCheck A parameter to configure deletion protection. 
+     */
+    override fun deletionProtectionCheck(deletionProtectionCheck: DeletionProtectionCheck) {
+      cdkBuilder.deletionProtectionCheck(deletionProtectionCheck.let(DeletionProtectionCheck.Companion::unwrap))
     }
 
     /**

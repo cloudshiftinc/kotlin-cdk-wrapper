@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.autoscaling.IAutoScalingGroup
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -168,7 +169,9 @@ public interface AsgCapacityProviderProps : AddAutoScalingGroupCapacityOptions {
     /**
      * @param canContainersAccessInstanceRole Specifies whether the containers can access the
      * container instance role.
+     * @deprecated See https://github.com/aws/aws-cdk/discussions/32609
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun canContainersAccessInstanceRole(canContainersAccessInstanceRole: Boolean)
 
     /**
@@ -293,7 +296,9 @@ public interface AsgCapacityProviderProps : AddAutoScalingGroupCapacityOptions {
     /**
      * @param canContainersAccessInstanceRole Specifies whether the containers can access the
      * container instance role.
+     * @deprecated See https://github.com/aws/aws-cdk/discussions/32609
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun canContainersAccessInstanceRole(canContainersAccessInstanceRole: Boolean) {
       cdkBuilder.canContainersAccessInstanceRole(canContainersAccessInstanceRole)
     }
@@ -443,10 +448,13 @@ public interface AsgCapacityProviderProps : AddAutoScalingGroupCapacityOptions {
         unwrap(this).getAutoScalingGroup().let(IAutoScalingGroup::wrap)
 
     /**
-     * Specifies whether the containers can access the container instance role.
+     * (deprecated) Specifies whether the containers can access the container instance role.
      *
-     * Default: false
+     * Default: true if
+     *
+     * @deprecated See https://github.com/aws/aws-cdk/discussions/32609
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun canContainersAccessInstanceRole(): Boolean? =
         unwrap(this).getCanContainersAccessInstanceRole()
 

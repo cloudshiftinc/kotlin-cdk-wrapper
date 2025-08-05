@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Map
 import kotlin.jvm.JvmName
 
 /**
@@ -24,6 +25,18 @@ import kotlin.jvm.JvmName
  * .filterAction("filterAction")
  * .filterCriteria(FilterCriteriaProperty.builder()
  * .awsAccountId(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build()))
+ * .codeVulnerabilityDetectorName(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build()))
+ * .codeVulnerabilityDetectorTags(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build()))
+ * .codeVulnerabilityFilePath(List.of(StringFilterProperty.builder()
  * .comparison("comparison")
  * .value("value")
  * .build()))
@@ -71,6 +84,14 @@ import kotlin.jvm.JvmName
  * .comparison("comparison")
  * .value("value")
  * .build()))
+ * .epssScore(List.of(NumberFilterProperty.builder()
+ * .lowerInclusive(123)
+ * .upperInclusive(123)
+ * .build()))
+ * .exploitAvailable(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build()))
  * .findingArn(List.of(StringFilterProperty.builder()
  * .comparison("comparison")
  * .value("value")
@@ -87,9 +108,33 @@ import kotlin.jvm.JvmName
  * .endInclusive(123)
  * .startInclusive(123)
  * .build()))
+ * .fixAvailable(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build()))
  * .inspectorScore(List.of(NumberFilterProperty.builder()
  * .lowerInclusive(123)
  * .upperInclusive(123)
+ * .build()))
+ * .lambdaFunctionExecutionRoleArn(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build()))
+ * .lambdaFunctionLastModifiedAt(List.of(DateFilterProperty.builder()
+ * .endInclusive(123)
+ * .startInclusive(123)
+ * .build()))
+ * .lambdaFunctionLayers(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build()))
+ * .lambdaFunctionName(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build()))
+ * .lambdaFunctionRuntime(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
  * .build()))
  * .lastObservedAt(List.of(DateFilterProperty.builder()
  * .endInclusive(123)
@@ -154,11 +199,19 @@ import kotlin.jvm.JvmName
  * .lowerInclusive(123)
  * .upperInclusive(123)
  * .build())
+ * .filePath(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build())
  * .name(StringFilterProperty.builder()
  * .comparison("comparison")
  * .value("value")
  * .build())
  * .release(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build())
+ * .sourceLambdaLayerArn(StringFilterProperty.builder()
  * .comparison("comparison")
  * .value("value")
  * .build())
@@ -175,6 +228,8 @@ import kotlin.jvm.JvmName
  * .name("name")
  * // the properties below are optional
  * .description("description")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
  * .build();
  * ```
  *
@@ -208,6 +263,13 @@ public interface CfnFilterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-filter.html#cfn-inspectorv2-filter-name)
    */
   public fun name(): String
+
+  /**
+   * The tags attached to the filter.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-filter.html#cfn-inspectorv2-filter-tags)
+   */
+  public fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
   /**
    * A builder for [CfnFilterProps]
@@ -245,6 +307,11 @@ public interface CfnFilterProps {
      * @param name The name of the filter. 
      */
     public fun name(name: String)
+
+    /**
+     * @param tags The tags attached to the filter.
+     */
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl : Builder {
@@ -295,6 +362,13 @@ public interface CfnFilterProps {
       cdkBuilder.name(name)
     }
 
+    /**
+     * @param tags The tags attached to the filter.
+     */
+    override fun tags(tags: Map<String, String>) {
+      cdkBuilder.tags(tags)
+    }
+
     public fun build(): software.amazon.awscdk.services.inspectorv2.CfnFilterProps =
         cdkBuilder.build()
   }
@@ -330,6 +404,13 @@ public interface CfnFilterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-filter.html#cfn-inspectorv2-filter-name)
      */
     override fun name(): String = unwrap(this).getName()
+
+    /**
+     * The tags attached to the filter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-filter.html#cfn-inspectorv2-filter-tags)
+     */
+    override fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
   }
 
   public companion object {

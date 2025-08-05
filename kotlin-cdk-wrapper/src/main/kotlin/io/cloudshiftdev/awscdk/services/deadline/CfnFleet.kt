@@ -75,6 +75,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * // the properties below are optional
  * .storageProfileId("storageProfileId")
+ * .tagPropagationMode("tagPropagationMode")
  * .build())
  * .serviceManagedEc2(ServiceManagedEc2FleetConfigurationProperty.builder()
  * .instanceCapabilities(ServiceManagedEc2InstanceCapabilitiesProperty.builder()
@@ -125,6 +126,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .instanceMarketOptions(ServiceManagedEc2InstanceMarketOptionsProperty.builder()
  * .type("type")
  * .build())
+ * // the properties below are optional
+ * .storageProfileId("storageProfileId")
  * .build())
  * .build())
  * .displayName("displayName")
@@ -133,6 +136,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .roleArn("roleArn")
  * // the properties below are optional
  * .description("description")
+ * .hostConfiguration(HostConfigurationProperty.builder()
+ * .scriptBody("scriptBody")
+ * // the properties below are optional
+ * .scriptTimeoutSeconds(123)
+ * .build())
  * .minWorkerCount(123)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -260,6 +268,37 @@ public open class CfnFleet(
   }
 
   /**
+   * Provides a script that runs as a worker is starting up that you can use to provide additional
+   * configuration for workers in your fleet.
+   */
+  public open fun hostConfiguration(): Any? = unwrap(this).getHostConfiguration()
+
+  /**
+   * Provides a script that runs as a worker is starting up that you can use to provide additional
+   * configuration for workers in your fleet.
+   */
+  public open fun hostConfiguration(`value`: IResolvable) {
+    unwrap(this).setHostConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Provides a script that runs as a worker is starting up that you can use to provide additional
+   * configuration for workers in your fleet.
+   */
+  public open fun hostConfiguration(`value`: HostConfigurationProperty) {
+    unwrap(this).setHostConfiguration(`value`.let(HostConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * Provides a script that runs as a worker is starting up that you can use to provide additional
+   * configuration for workers in your fleet.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("226bbdaaf0021f28171b13a6fd5a0331d956c2a497c148b0954989d9117fd2e2")
+  public open fun hostConfiguration(`value`: HostConfigurationProperty.Builder.() -> Unit): Unit =
+      hostConfiguration(HostConfigurationProperty(`value`))
+
+  /**
    * Examines the CloudFormation resource and discloses attributes.
    *
    * @param inspector tree inspector to collect and process attributes. 
@@ -355,6 +394,11 @@ public open class CfnFleet(
     /**
      * A description that helps identify what the fleet is used for.
      *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
+     *
      * Default: - ""
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-description)
@@ -382,6 +426,50 @@ public open class CfnFleet(
      * @param farmId The farm ID. 
      */
     public fun farmId(farmId: String)
+
+    /**
+     * Provides a script that runs as a worker is starting up that you can use to provide additional
+     * configuration for workers in your fleet.
+     *
+     * To remove a script from a fleet, use the
+     * [UpdateFleet](https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateFleet.html)
+     * operation with the `hostConfiguration` `scriptBody` parameter set to an empty string ("").
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-hostconfiguration)
+     * @param hostConfiguration Provides a script that runs as a worker is starting up that you can
+     * use to provide additional configuration for workers in your fleet. 
+     */
+    public fun hostConfiguration(hostConfiguration: IResolvable)
+
+    /**
+     * Provides a script that runs as a worker is starting up that you can use to provide additional
+     * configuration for workers in your fleet.
+     *
+     * To remove a script from a fleet, use the
+     * [UpdateFleet](https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateFleet.html)
+     * operation with the `hostConfiguration` `scriptBody` parameter set to an empty string ("").
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-hostconfiguration)
+     * @param hostConfiguration Provides a script that runs as a worker is starting up that you can
+     * use to provide additional configuration for workers in your fleet. 
+     */
+    public fun hostConfiguration(hostConfiguration: HostConfigurationProperty)
+
+    /**
+     * Provides a script that runs as a worker is starting up that you can use to provide additional
+     * configuration for workers in your fleet.
+     *
+     * To remove a script from a fleet, use the
+     * [UpdateFleet](https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateFleet.html)
+     * operation with the `hostConfiguration` `scriptBody` parameter set to an empty string ("").
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-hostconfiguration)
+     * @param hostConfiguration Provides a script that runs as a worker is starting up that you can
+     * use to provide additional configuration for workers in your fleet. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("42e41e6bcf9cb1a2690edbd20cc59e14eebd7a44637db5f6d925f9aaabd3e372")
+    public fun hostConfiguration(hostConfiguration: HostConfigurationProperty.Builder.() -> Unit)
 
     /**
      * The maximum number of workers specified in the fleet.
@@ -473,6 +561,11 @@ public open class CfnFleet(
     /**
      * A description that helps identify what the fleet is used for.
      *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
+     *
      * Default: - ""
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-description)
@@ -506,6 +599,55 @@ public open class CfnFleet(
     override fun farmId(farmId: String) {
       cdkBuilder.farmId(farmId)
     }
+
+    /**
+     * Provides a script that runs as a worker is starting up that you can use to provide additional
+     * configuration for workers in your fleet.
+     *
+     * To remove a script from a fleet, use the
+     * [UpdateFleet](https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateFleet.html)
+     * operation with the `hostConfiguration` `scriptBody` parameter set to an empty string ("").
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-hostconfiguration)
+     * @param hostConfiguration Provides a script that runs as a worker is starting up that you can
+     * use to provide additional configuration for workers in your fleet. 
+     */
+    override fun hostConfiguration(hostConfiguration: IResolvable) {
+      cdkBuilder.hostConfiguration(hostConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Provides a script that runs as a worker is starting up that you can use to provide additional
+     * configuration for workers in your fleet.
+     *
+     * To remove a script from a fleet, use the
+     * [UpdateFleet](https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateFleet.html)
+     * operation with the `hostConfiguration` `scriptBody` parameter set to an empty string ("").
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-hostconfiguration)
+     * @param hostConfiguration Provides a script that runs as a worker is starting up that you can
+     * use to provide additional configuration for workers in your fleet. 
+     */
+    override fun hostConfiguration(hostConfiguration: HostConfigurationProperty) {
+      cdkBuilder.hostConfiguration(hostConfiguration.let(HostConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * Provides a script that runs as a worker is starting up that you can use to provide additional
+     * configuration for workers in your fleet.
+     *
+     * To remove a script from a fleet, use the
+     * [UpdateFleet](https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateFleet.html)
+     * operation with the `hostConfiguration` `scriptBody` parameter set to an empty string ("").
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-hostconfiguration)
+     * @param hostConfiguration Provides a script that runs as a worker is starting up that you can
+     * use to provide additional configuration for workers in your fleet. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("42e41e6bcf9cb1a2690edbd20cc59e14eebd7a44637db5f6d925f9aaabd3e372")
+    override fun hostConfiguration(hostConfiguration: HostConfigurationProperty.Builder.() -> Unit):
+        Unit = hostConfiguration(HostConfigurationProperty(hostConfiguration))
 
     /**
      * The maximum number of workers specified in the fleet.
@@ -915,7 +1057,7 @@ public open class CfnFleet(
     /**
      * The name of the chip used by the GPU accelerator.
      *
-     * If you specify `l4` as the name of the accelerator, you must specify `latest` or `grid:r550`
+     * If you specify `l4` as the name of the accelerator, you must specify `latest` or `grid:r570`
      * as the runtime.
      *
      * The available GPU accelerators are:
@@ -937,8 +1079,8 @@ public open class CfnFleet(
      *
      * * `latest` - Use the latest runtime available for the chip. If you specify `latest` and a new
      * version of the runtime is released, the new version of the runtime is used.
-     * * `grid:r550` - [NVIDIA vGPU software
-     * 17](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/17.0/index.html)
+     * * `grid:r570` - [NVIDIA vGPU software
+     * 18](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/18.0/index.html)
      * * `grid:r535` - [NVIDIA vGPU software
      * 16](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/16.0/index.html)
      *
@@ -958,7 +1100,7 @@ public open class CfnFleet(
       /**
        * @param name The name of the chip used by the GPU accelerator. 
        * If you specify `l4` as the name of the accelerator, you must specify `latest` or
-       * `grid:r550` as the runtime.
+       * `grid:r570` as the runtime.
        *
        * The available GPU accelerators are:
        *
@@ -976,8 +1118,8 @@ public open class CfnFleet(
        *
        * * `latest` - Use the latest runtime available for the chip. If you specify `latest` and a
        * new version of the runtime is released, the new version of the runtime is used.
-       * * `grid:r550` - [NVIDIA vGPU software
-       * 17](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/17.0/index.html)
+       * * `grid:r570` - [NVIDIA vGPU software
+       * 18](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/18.0/index.html)
        * * `grid:r535` - [NVIDIA vGPU software
        * 16](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/16.0/index.html)
        *
@@ -996,7 +1138,7 @@ public open class CfnFleet(
       /**
        * @param name The name of the chip used by the GPU accelerator. 
        * If you specify `l4` as the name of the accelerator, you must specify `latest` or
-       * `grid:r550` as the runtime.
+       * `grid:r570` as the runtime.
        *
        * The available GPU accelerators are:
        *
@@ -1016,8 +1158,8 @@ public open class CfnFleet(
        *
        * * `latest` - Use the latest runtime available for the chip. If you specify `latest` and a
        * new version of the runtime is released, the new version of the runtime is used.
-       * * `grid:r550` - [NVIDIA vGPU software
-       * 17](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/17.0/index.html)
+       * * `grid:r570` - [NVIDIA vGPU software
+       * 18](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/18.0/index.html)
        * * `grid:r535` - [NVIDIA vGPU software
        * 16](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/16.0/index.html)
        *
@@ -1042,7 +1184,7 @@ public open class CfnFleet(
        * The name of the chip used by the GPU accelerator.
        *
        * If you specify `l4` as the name of the accelerator, you must specify `latest` or
-       * `grid:r550` as the runtime.
+       * `grid:r570` as the runtime.
        *
        * The available GPU accelerators are:
        *
@@ -1063,8 +1205,8 @@ public open class CfnFleet(
        *
        * * `latest` - Use the latest runtime available for the chip. If you specify `latest` and a
        * new version of the runtime is released, the new version of the runtime is used.
-       * * `grid:r550` - [NVIDIA vGPU software
-       * 17](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/17.0/index.html)
+       * * `grid:r570` - [NVIDIA vGPU software
+       * 18](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/18.0/index.html)
        * * `grid:r535` - [NVIDIA vGPU software
        * 16](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/16.0/index.html)
        *
@@ -1258,6 +1400,7 @@ public open class CfnFleet(
    * .build())
    * // the properties below are optional
    * .storageProfileId("storageProfileId")
+   * .tagPropagationMode("tagPropagationMode")
    * .build();
    * ```
    *
@@ -1277,6 +1420,20 @@ public open class CfnFleet(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-customermanagedfleetconfiguration.html#cfn-deadline-fleet-customermanagedfleetconfiguration-storageprofileid)
      */
     public fun storageProfileId(): String? = unwrap(this).getStorageProfileId()
+
+    /**
+     * Specifies whether tags associated with a fleet are attached to workers when the worker is
+     * launched.
+     *
+     * When the `tagPropagationMode` is set to `PROPAGATE_TAGS_TO_WORKERS_AT_LAUNCH` any tag
+     * associated with a fleet is attached to workers when they launch. If the tags for a fleet change,
+     * the tags associated with running workers *do not* change.
+     *
+     * If you don't specify `tagPropagationMode` , the default is `NO_PROPAGATION` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-customermanagedfleetconfiguration.html#cfn-deadline-fleet-customermanagedfleetconfiguration-tagpropagationmode)
+     */
+    public fun tagPropagationMode(): String? = unwrap(this).getTagPropagationMode()
 
     /**
      * The worker capabilities for a customer managed fleet configuration.
@@ -1299,6 +1456,17 @@ public open class CfnFleet(
        * @param storageProfileId The storage profile ID.
        */
       public fun storageProfileId(storageProfileId: String)
+
+      /**
+       * @param tagPropagationMode Specifies whether tags associated with a fleet are attached to
+       * workers when the worker is launched.
+       * When the `tagPropagationMode` is set to `PROPAGATE_TAGS_TO_WORKERS_AT_LAUNCH` any tag
+       * associated with a fleet is attached to workers when they launch. If the tags for a fleet
+       * change, the tags associated with running workers *do not* change.
+       *
+       * If you don't specify `tagPropagationMode` , the default is `NO_PROPAGATION` .
+       */
+      public fun tagPropagationMode(tagPropagationMode: String)
 
       /**
        * @param workerCapabilities The worker capabilities for a customer managed fleet
@@ -1340,6 +1508,19 @@ public open class CfnFleet(
        */
       override fun storageProfileId(storageProfileId: String) {
         cdkBuilder.storageProfileId(storageProfileId)
+      }
+
+      /**
+       * @param tagPropagationMode Specifies whether tags associated with a fleet are attached to
+       * workers when the worker is launched.
+       * When the `tagPropagationMode` is set to `PROPAGATE_TAGS_TO_WORKERS_AT_LAUNCH` any tag
+       * associated with a fleet is attached to workers when they launch. If the tags for a fleet
+       * change, the tags associated with running workers *do not* change.
+       *
+       * If you don't specify `tagPropagationMode` , the default is `NO_PROPAGATION` .
+       */
+      override fun tagPropagationMode(tagPropagationMode: String) {
+        cdkBuilder.tagPropagationMode(tagPropagationMode)
       }
 
       /**
@@ -1391,6 +1572,20 @@ public open class CfnFleet(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-customermanagedfleetconfiguration.html#cfn-deadline-fleet-customermanagedfleetconfiguration-storageprofileid)
        */
       override fun storageProfileId(): String? = unwrap(this).getStorageProfileId()
+
+      /**
+       * Specifies whether tags associated with a fleet are attached to workers when the worker is
+       * launched.
+       *
+       * When the `tagPropagationMode` is set to `PROPAGATE_TAGS_TO_WORKERS_AT_LAUNCH` any tag
+       * associated with a fleet is attached to workers when they launch. If the tags for a fleet
+       * change, the tags associated with running workers *do not* change.
+       *
+       * If you don't specify `tagPropagationMode` , the default is `NO_PROPAGATION` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-customermanagedfleetconfiguration.html#cfn-deadline-fleet-customermanagedfleetconfiguration-tagpropagationmode)
+       */
+      override fun tagPropagationMode(): String? = unwrap(this).getTagPropagationMode()
 
       /**
        * The worker capabilities for a customer managed fleet configuration.
@@ -2543,6 +2738,7 @@ public open class CfnFleet(
    * .build())
    * // the properties below are optional
    * .storageProfileId("storageProfileId")
+   * .tagPropagationMode("tagPropagationMode")
    * .build())
    * .serviceManagedEc2(ServiceManagedEc2FleetConfigurationProperty.builder()
    * .instanceCapabilities(ServiceManagedEc2InstanceCapabilitiesProperty.builder()
@@ -2593,6 +2789,8 @@ public open class CfnFleet(
    * .instanceMarketOptions(ServiceManagedEc2InstanceMarketOptionsProperty.builder()
    * .type("type")
    * .build())
+   * // the properties below are optional
+   * .storageProfileId("storageProfileId")
    * .build())
    * .build();
    * ```
@@ -2753,6 +2951,215 @@ public open class CfnFleet(
           software.amazon.awscdk.services.deadline.CfnFleet.FleetConfigurationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.deadline.CfnFleet.FleetConfigurationProperty
+    }
+  }
+
+  /**
+   * Provides a script that runs as a worker is starting up that you can use to provide additional
+   * configuration for workers in your fleet.
+   *
+   * To remove a script from a fleet, use the
+   * [UpdateFleet](https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateFleet.html)
+   * operation with the `hostConfiguration` `scriptBody` parameter set to an empty string ("").
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.deadline.*;
+   * HostConfigurationProperty hostConfigurationProperty = HostConfigurationProperty.builder()
+   * .scriptBody("scriptBody")
+   * // the properties below are optional
+   * .scriptTimeoutSeconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-hostconfiguration.html)
+   */
+  public interface HostConfigurationProperty {
+    /**
+     * The text of the script that runs as a worker is starting up that you can use to provide
+     * additional configuration for workers in your fleet.
+     *
+     * The script runs after a worker enters the `STARTING` state and before the worker processes
+     * tasks.
+     *
+     * For more information about using the script, see [Run scripts as an administrator to
+     * configure
+     * workers](https://docs.aws.amazon.com/deadline-cloud/latest/developerguide/smf-admin.html) in the
+     * *Deadline Cloud Developer Guide* .
+     *
+     *
+     * The script runs as an administrative user ( `sudo root` on Linux, as an Administrator on
+     * Windows).
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-hostconfiguration.html#cfn-deadline-fleet-hostconfiguration-scriptbody)
+     */
+    public fun scriptBody(): String
+
+    /**
+     * The maximum time that the host configuration can run.
+     *
+     * If the timeout expires, the worker enters the `NOT RESPONDING` state and shuts down. You are
+     * charged for the time that the worker is running the host configuration script.
+     *
+     *
+     * You should configure your fleet for a maximum of one worker while testing your host
+     * configuration script to avoid starting additional workers.
+     *
+     *
+     * The default is 300 seconds (5 minutes).
+     *
+     * Default: - 300
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-hostconfiguration.html#cfn-deadline-fleet-hostconfiguration-scripttimeoutseconds)
+     */
+    public fun scriptTimeoutSeconds(): Number? = unwrap(this).getScriptTimeoutSeconds()
+
+    /**
+     * A builder for [HostConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param scriptBody The text of the script that runs as a worker is starting up that you can
+       * use to provide additional configuration for workers in your fleet. 
+       * The script runs after a worker enters the `STARTING` state and before the worker processes
+       * tasks.
+       *
+       * For more information about using the script, see [Run scripts as an administrator to
+       * configure
+       * workers](https://docs.aws.amazon.com/deadline-cloud/latest/developerguide/smf-admin.html) in
+       * the *Deadline Cloud Developer Guide* .
+       *
+       *
+       * The script runs as an administrative user ( `sudo root` on Linux, as an Administrator on
+       * Windows).
+       */
+      public fun scriptBody(scriptBody: String)
+
+      /**
+       * @param scriptTimeoutSeconds The maximum time that the host configuration can run.
+       * If the timeout expires, the worker enters the `NOT RESPONDING` state and shuts down. You
+       * are charged for the time that the worker is running the host configuration script.
+       *
+       *
+       * You should configure your fleet for a maximum of one worker while testing your host
+       * configuration script to avoid starting additional workers.
+       *
+       *
+       * The default is 300 seconds (5 minutes).
+       */
+      public fun scriptTimeoutSeconds(scriptTimeoutSeconds: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.deadline.CfnFleet.HostConfigurationProperty.Builder =
+          software.amazon.awscdk.services.deadline.CfnFleet.HostConfigurationProperty.builder()
+
+      /**
+       * @param scriptBody The text of the script that runs as a worker is starting up that you can
+       * use to provide additional configuration for workers in your fleet. 
+       * The script runs after a worker enters the `STARTING` state and before the worker processes
+       * tasks.
+       *
+       * For more information about using the script, see [Run scripts as an administrator to
+       * configure
+       * workers](https://docs.aws.amazon.com/deadline-cloud/latest/developerguide/smf-admin.html) in
+       * the *Deadline Cloud Developer Guide* .
+       *
+       *
+       * The script runs as an administrative user ( `sudo root` on Linux, as an Administrator on
+       * Windows).
+       */
+      override fun scriptBody(scriptBody: String) {
+        cdkBuilder.scriptBody(scriptBody)
+      }
+
+      /**
+       * @param scriptTimeoutSeconds The maximum time that the host configuration can run.
+       * If the timeout expires, the worker enters the `NOT RESPONDING` state and shuts down. You
+       * are charged for the time that the worker is running the host configuration script.
+       *
+       *
+       * You should configure your fleet for a maximum of one worker while testing your host
+       * configuration script to avoid starting additional workers.
+       *
+       *
+       * The default is 300 seconds (5 minutes).
+       */
+      override fun scriptTimeoutSeconds(scriptTimeoutSeconds: Number) {
+        cdkBuilder.scriptTimeoutSeconds(scriptTimeoutSeconds)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.deadline.CfnFleet.HostConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.HostConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        HostConfigurationProperty {
+      /**
+       * The text of the script that runs as a worker is starting up that you can use to provide
+       * additional configuration for workers in your fleet.
+       *
+       * The script runs after a worker enters the `STARTING` state and before the worker processes
+       * tasks.
+       *
+       * For more information about using the script, see [Run scripts as an administrator to
+       * configure
+       * workers](https://docs.aws.amazon.com/deadline-cloud/latest/developerguide/smf-admin.html) in
+       * the *Deadline Cloud Developer Guide* .
+       *
+       *
+       * The script runs as an administrative user ( `sudo root` on Linux, as an Administrator on
+       * Windows).
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-hostconfiguration.html#cfn-deadline-fleet-hostconfiguration-scriptbody)
+       */
+      override fun scriptBody(): String = unwrap(this).getScriptBody()
+
+      /**
+       * The maximum time that the host configuration can run.
+       *
+       * If the timeout expires, the worker enters the `NOT RESPONDING` state and shuts down. You
+       * are charged for the time that the worker is running the host configuration script.
+       *
+       *
+       * You should configure your fleet for a maximum of one worker while testing your host
+       * configuration script to avoid starting additional workers.
+       *
+       *
+       * The default is 300 seconds (5 minutes).
+       *
+       * Default: - 300
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-hostconfiguration.html#cfn-deadline-fleet-hostconfiguration-scripttimeoutseconds)
+       */
+      override fun scriptTimeoutSeconds(): Number? = unwrap(this).getScriptTimeoutSeconds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HostConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.HostConfigurationProperty):
+          HostConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HostConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HostConfigurationProperty):
+          software.amazon.awscdk.services.deadline.CfnFleet.HostConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.deadline.CfnFleet.HostConfigurationProperty
     }
   }
 
@@ -2924,6 +3331,8 @@ public open class CfnFleet(
    * .instanceMarketOptions(ServiceManagedEc2InstanceMarketOptionsProperty.builder()
    * .type("type")
    * .build())
+   * // the properties below are optional
+   * .storageProfileId("storageProfileId")
    * .build();
    * ```
    *
@@ -2943,6 +3352,13 @@ public open class CfnFleet(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-servicemanagedec2fleetconfiguration.html#cfn-deadline-fleet-servicemanagedec2fleetconfiguration-instancemarketoptions)
      */
     public fun instanceMarketOptions(): Any
+
+    /**
+     * The storage profile ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-servicemanagedec2fleetconfiguration.html#cfn-deadline-fleet-servicemanagedec2fleetconfiguration-storageprofileid)
+     */
+    public fun storageProfileId(): String? = unwrap(this).getStorageProfileId()
 
     /**
      * A builder for [ServiceManagedEc2FleetConfigurationProperty]
@@ -2986,6 +3402,11 @@ public open class CfnFleet(
       @JvmName("7ccca052bddc943b20eef3f5b5ff5ed066efa9fcd9acb4a31fa9fc36c3728ef3")
       public
           fun instanceMarketOptions(instanceMarketOptions: ServiceManagedEc2InstanceMarketOptionsProperty.Builder.() -> Unit)
+
+      /**
+       * @param storageProfileId The storage profile ID.
+       */
+      public fun storageProfileId(storageProfileId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3044,6 +3465,13 @@ public open class CfnFleet(
           Unit =
           instanceMarketOptions(ServiceManagedEc2InstanceMarketOptionsProperty(instanceMarketOptions))
 
+      /**
+       * @param storageProfileId The storage profile ID.
+       */
+      override fun storageProfileId(storageProfileId: String) {
+        cdkBuilder.storageProfileId(storageProfileId)
+      }
+
       public fun build():
           software.amazon.awscdk.services.deadline.CfnFleet.ServiceManagedEc2FleetConfigurationProperty
           = cdkBuilder.build()
@@ -3066,6 +3494,13 @@ public open class CfnFleet(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-servicemanagedec2fleetconfiguration.html#cfn-deadline-fleet-servicemanagedec2fleetconfiguration-instancemarketoptions)
        */
       override fun instanceMarketOptions(): Any = unwrap(this).getInstanceMarketOptions()
+
+      /**
+       * The storage profile ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-servicemanagedec2fleetconfiguration.html#cfn-deadline-fleet-servicemanagedec2fleetconfiguration-storageprofileid)
+       */
+      override fun storageProfileId(): String? = unwrap(this).getStorageProfileId()
     }
 
     public companion object {

@@ -33,42 +33,26 @@ import kotlin.collections.Map
  */
 public interface CfnStreamingImageProps {
   /**
-   * A human-readable description of the streaming image.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html#cfn-nimblestudio-streamingimage-description)
    */
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * The ID of an EC2 machine image with which to create the streaming image.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html#cfn-nimblestudio-streamingimage-ec2imageid)
    */
   public fun ec2ImageId(): String
 
   /**
-   * A friendly name for a streaming image resource.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html#cfn-nimblestudio-streamingimage-name)
    */
   public fun name(): String
 
   /**
-   * The unique identifier for a studio resource.
-   *
-   * In Nimble Studio, all other resources are contained in a studio resource.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html#cfn-nimblestudio-streamingimage-studioid)
    */
   public fun studioId(): String
 
   /**
-   * An array of key-value pairs to apply to this resource.
-   *
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html#cfn-nimblestudio-streamingimage-tags)
    */
   public fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
@@ -79,31 +63,27 @@ public interface CfnStreamingImageProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param description A human-readable description of the streaming image.
+     * @param description the value to be set.
      */
     public fun description(description: String)
 
     /**
-     * @param ec2ImageId The ID of an EC2 machine image with which to create the streaming image. 
+     * @param ec2ImageId the value to be set. 
      */
     public fun ec2ImageId(ec2ImageId: String)
 
     /**
-     * @param name A friendly name for a streaming image resource. 
+     * @param name the value to be set. 
      */
     public fun name(name: String)
 
     /**
-     * @param studioId The unique identifier for a studio resource. 
-     * In Nimble Studio, all other resources are contained in a studio resource.
+     * @param studioId the value to be set. 
      */
     public fun studioId(studioId: String)
 
     /**
-     * @param tags An array of key-value pairs to apply to this resource.
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
+     * @param tags the value to be set.
      */
     public fun tags(tags: Map<String, String>)
   }
@@ -114,39 +94,35 @@ public interface CfnStreamingImageProps {
         software.amazon.awscdk.services.nimblestudio.CfnStreamingImageProps.builder()
 
     /**
-     * @param description A human-readable description of the streaming image.
+     * @param description the value to be set.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
-     * @param ec2ImageId The ID of an EC2 machine image with which to create the streaming image. 
+     * @param ec2ImageId the value to be set. 
      */
     override fun ec2ImageId(ec2ImageId: String) {
       cdkBuilder.ec2ImageId(ec2ImageId)
     }
 
     /**
-     * @param name A friendly name for a streaming image resource. 
+     * @param name the value to be set. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     /**
-     * @param studioId The unique identifier for a studio resource. 
-     * In Nimble Studio, all other resources are contained in a studio resource.
+     * @param studioId the value to be set. 
      */
     override fun studioId(studioId: String) {
       cdkBuilder.studioId(studioId)
     }
 
     /**
-     * @param tags An array of key-value pairs to apply to this resource.
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
+     * @param tags the value to be set.
      */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
@@ -161,42 +137,26 @@ public interface CfnStreamingImageProps {
   ) : CdkObject(cdkObject),
       CfnStreamingImageProps {
     /**
-     * A human-readable description of the streaming image.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html#cfn-nimblestudio-streamingimage-description)
      */
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * The ID of an EC2 machine image with which to create the streaming image.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html#cfn-nimblestudio-streamingimage-ec2imageid)
      */
     override fun ec2ImageId(): String = unwrap(this).getEc2ImageId()
 
     /**
-     * A friendly name for a streaming image resource.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html#cfn-nimblestudio-streamingimage-name)
      */
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * The unique identifier for a studio resource.
-     *
-     * In Nimble Studio, all other resources are contained in a studio resource.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html#cfn-nimblestudio-streamingimage-studioid)
      */
     override fun studioId(): String = unwrap(this).getStudioId()
 
     /**
-     * An array of key-value pairs to apply to this resource.
-     *
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html#cfn-nimblestudio-streamingimage-tags)
      */
     override fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()

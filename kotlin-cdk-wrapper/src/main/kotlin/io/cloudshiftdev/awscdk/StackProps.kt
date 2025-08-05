@@ -163,6 +163,14 @@ public interface StackProps {
       unwrap(this).getPermissionsBoundary()?.let(PermissionsBoundary::wrap)
 
   /**
+   * A list of IPropertyInjector attached to this Stack.
+   *
+   * Default: - no PropertyInjectors
+   */
+  public fun propertyInjectors(): List<IPropertyInjector> =
+      unwrap(this).getPropertyInjectors()?.map(IPropertyInjector::wrap) ?: emptyList()
+
+  /**
    * Name to deploy the stack with.
    *
    * Default: - Derived from construct path.
@@ -200,7 +208,15 @@ public interface StackProps {
       unwrap(this).getSynthesizer()?.let(IStackSynthesizer::wrap)
 
   /**
-   * Stack tags that will be applied to all the taggable resources and the stack itself.
+   * Tags that will be applied to the Stack.
+   *
+   * These tags are applied to the CloudFormation Stack itself. They will not
+   * appear in the CloudFormation template.
+   *
+   * However, at deployment time, CloudFormation will apply these tags to all
+   * resources in the stack that support tagging. You will not be able to exempt
+   * resources from tagging (using the `excludeResourceTypes` property of
+   * `Tags.of(...).add()`) for tags applied in this way.
    *
    * Default: {}
    */
@@ -302,6 +318,16 @@ public interface StackProps {
     public fun permissionsBoundary(permissionsBoundary: PermissionsBoundary)
 
     /**
+     * @param propertyInjectors A list of IPropertyInjector attached to this Stack.
+     */
+    public fun propertyInjectors(propertyInjectors: List<IPropertyInjector>)
+
+    /**
+     * @param propertyInjectors A list of IPropertyInjector attached to this Stack.
+     */
+    public fun propertyInjectors(vararg propertyInjectors: IPropertyInjector)
+
+    /**
      * @param stackName Name to deploy the stack with.
      */
     public fun stackName(stackName: String)
@@ -330,8 +356,14 @@ public interface StackProps {
     public fun synthesizer(synthesizer: IStackSynthesizer)
 
     /**
-     * @param tags Stack tags that will be applied to all the taggable resources and the stack
-     * itself.
+     * @param tags Tags that will be applied to the Stack.
+     * These tags are applied to the CloudFormation Stack itself. They will not
+     * appear in the CloudFormation template.
+     *
+     * However, at deployment time, CloudFormation will apply these tags to all
+     * resources in the stack that support tagging. You will not be able to exempt
+     * resources from tagging (using the `excludeResourceTypes` property of
+     * `Tags.of(...).add()`) for tags applied in this way.
      */
     public fun tags(tags: Map<String, String>)
 
@@ -442,6 +474,19 @@ public interface StackProps {
     }
 
     /**
+     * @param propertyInjectors A list of IPropertyInjector attached to this Stack.
+     */
+    override fun propertyInjectors(propertyInjectors: List<IPropertyInjector>) {
+      cdkBuilder.propertyInjectors(propertyInjectors.map(IPropertyInjector.Companion::unwrap))
+    }
+
+    /**
+     * @param propertyInjectors A list of IPropertyInjector attached to this Stack.
+     */
+    override fun propertyInjectors(vararg propertyInjectors: IPropertyInjector): Unit =
+        propertyInjectors(propertyInjectors.toList())
+
+    /**
      * @param stackName Name to deploy the stack with.
      */
     override fun stackName(stackName: String) {
@@ -476,8 +521,14 @@ public interface StackProps {
     }
 
     /**
-     * @param tags Stack tags that will be applied to all the taggable resources and the stack
-     * itself.
+     * @param tags Tags that will be applied to the Stack.
+     * These tags are applied to the CloudFormation Stack itself. They will not
+     * appear in the CloudFormation template.
+     *
+     * However, at deployment time, CloudFormation will apply these tags to all
+     * resources in the stack that support tagging. You will not be able to exempt
+     * resources from tagging (using the `excludeResourceTypes` property of
+     * `Tags.of(...).add()`) for tags applied in this way.
      */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
@@ -618,6 +669,14 @@ public interface StackProps {
         unwrap(this).getPermissionsBoundary()?.let(PermissionsBoundary::wrap)
 
     /**
+     * A list of IPropertyInjector attached to this Stack.
+     *
+     * Default: - no PropertyInjectors
+     */
+    override fun propertyInjectors(): List<IPropertyInjector> =
+        unwrap(this).getPropertyInjectors()?.map(IPropertyInjector::wrap) ?: emptyList()
+
+    /**
      * Name to deploy the stack with.
      *
      * Default: - Derived from construct path.
@@ -656,7 +715,15 @@ public interface StackProps {
         unwrap(this).getSynthesizer()?.let(IStackSynthesizer::wrap)
 
     /**
-     * Stack tags that will be applied to all the taggable resources and the stack itself.
+     * Tags that will be applied to the Stack.
+     *
+     * These tags are applied to the CloudFormation Stack itself. They will not
+     * appear in the CloudFormation template.
+     *
+     * However, at deployment time, CloudFormation will apply these tags to all
+     * resources in the stack that support tagging. You will not be able to exempt
+     * resources from tagging (using the `excludeResourceTypes` property of
+     * `Tags.of(...).add()`) for tags applied in this way.
      *
      * Default: {}
      */

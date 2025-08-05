@@ -72,19 +72,19 @@ public open class CfnUserPoolIdentityProvider(
   }
 
   /**
-   * A list of IdP identifiers.
+   * An array of IdP identifiers, for example `"IdPIdentifiers": [ "MyIdP", "MyIdP2" ]` .
    */
   public open fun idpIdentifiers(): List<String> = unwrap(this).getIdpIdentifiers() ?: emptyList()
 
   /**
-   * A list of IdP identifiers.
+   * An array of IdP identifiers, for example `"IdPIdentifiers": [ "MyIdP", "MyIdP2" ]` .
    */
   public open fun idpIdentifiers(`value`: List<String>) {
     unwrap(this).setIdpIdentifiers(`value`)
   }
 
   /**
-   * A list of IdP identifiers.
+   * An array of IdP identifiers, for example `"IdPIdentifiers": [ "MyIdP", "MyIdP2" ]` .
    */
   public open fun idpIdentifiers(vararg `value`: String): Unit = idpIdentifiers(`value`.toList())
 
@@ -110,36 +110,36 @@ public open class CfnUserPoolIdentityProvider(
   }
 
   /**
-   * The IdP name.
+   * The name that you want to assign to the IdP.
    */
   public open fun providerName(): String = unwrap(this).getProviderName()
 
   /**
-   * The IdP name.
+   * The name that you want to assign to the IdP.
    */
   public open fun providerName(`value`: String) {
     unwrap(this).setProviderName(`value`)
   }
 
   /**
-   * The IdP type.
+   * The type of IdP that you want to add.
    */
   public open fun providerType(): String = unwrap(this).getProviderType()
 
   /**
-   * The IdP type.
+   * The type of IdP that you want to add.
    */
   public open fun providerType(`value`: String) {
     unwrap(this).setProviderType(`value`)
   }
 
   /**
-   * The user pool ID.
+   * The Id of the user pool where you want to create an IdP.
    */
   public open fun userPoolId(): String = unwrap(this).getUserPoolId()
 
   /**
-   * The user pool ID.
+   * The Id of the user pool where you want to create an IdP.
    */
   public open fun userPoolId(`value`: String) {
     unwrap(this).setUserPoolId(`value`)
@@ -153,6 +153,9 @@ public open class CfnUserPoolIdentityProvider(
     /**
      * A mapping of IdP attributes to standard and custom user pool attributes.
      *
+     * Specify a user pool attribute as the key of the key-value pair, and the IdP attribute claim
+     * name as the value.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-attributemapping)
      * @param attributeMapping A mapping of IdP attributes to standard and custom user pool
      * attributes. 
@@ -160,18 +163,36 @@ public open class CfnUserPoolIdentityProvider(
     public fun attributeMapping(attributeMapping: Any)
 
     /**
-     * A list of IdP identifiers.
+     * An array of IdP identifiers, for example `"IdPIdentifiers": [ "MyIdP", "MyIdP2" ]` .
+     *
+     * Identifiers are friendly names that you can pass in the `idp_identifier` query parameter of
+     * requests to the [Authorize
+     * endpoint](https://docs.aws.amazon.com/cognito/latest/developerguide/authorization-endpoint.html)
+     * to silently redirect to sign-in with the associated IdP. Identifiers in a domain format also
+     * enable the use of [email-address matching with SAML
+     * providers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-managing-saml-idp-naming.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-idpidentifiers)
-     * @param idpIdentifiers A list of IdP identifiers. 
+     * @param idpIdentifiers An array of IdP identifiers, for example `"IdPIdentifiers": [ "MyIdP",
+     * "MyIdP2" ]` . 
      */
     public fun idpIdentifiers(idpIdentifiers: List<String>)
 
     /**
-     * A list of IdP identifiers.
+     * An array of IdP identifiers, for example `"IdPIdentifiers": [ "MyIdP", "MyIdP2" ]` .
+     *
+     * Identifiers are friendly names that you can pass in the `idp_identifier` query parameter of
+     * requests to the [Authorize
+     * endpoint](https://docs.aws.amazon.com/cognito/latest/developerguide/authorization-endpoint.html)
+     * to silently redirect to sign-in with the associated IdP. Identifiers in a domain format also
+     * enable the use of [email-address matching with SAML
+     * providers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-managing-saml-idp-naming.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-idpidentifiers)
-     * @param idpIdentifiers A list of IdP identifiers. 
+     * @param idpIdentifiers An array of IdP identifiers, for example `"IdPIdentifiers": [ "MyIdP",
+     * "MyIdP2" ]` . 
      */
     public fun idpIdentifiers(vararg idpIdentifiers: String)
 
@@ -269,26 +290,34 @@ public open class CfnUserPoolIdentityProvider(
     public fun providerDetails(providerDetails: Any)
 
     /**
-     * The IdP name.
+     * The name that you want to assign to the IdP.
+     *
+     * You can pass the identity provider name in the `identity_provider` query parameter of
+     * requests to the [Authorize
+     * endpoint](https://docs.aws.amazon.com/cognito/latest/developerguide/authorization-endpoint.html)
+     * to silently redirect to sign-in with the associated IdP.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-providername)
-     * @param providerName The IdP name. 
+     * @param providerName The name that you want to assign to the IdP. 
      */
     public fun providerName(providerName: String)
 
     /**
-     * The IdP type.
+     * The type of IdP that you want to add.
+     *
+     * Amazon Cognito supports OIDC, SAML 2.0, Login With Amazon, Sign In With Apple, Google, and
+     * Facebook IdPs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-providertype)
-     * @param providerType The IdP type. 
+     * @param providerType The type of IdP that you want to add. 
      */
     public fun providerType(providerType: String)
 
     /**
-     * The user pool ID.
+     * The Id of the user pool where you want to create an IdP.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-userpoolid)
-     * @param userPoolId The user pool ID. 
+     * @param userPoolId The Id of the user pool where you want to create an IdP. 
      */
     public fun userPoolId(userPoolId: String)
   }
@@ -305,6 +334,9 @@ public open class CfnUserPoolIdentityProvider(
     /**
      * A mapping of IdP attributes to standard and custom user pool attributes.
      *
+     * Specify a user pool attribute as the key of the key-value pair, and the IdP attribute claim
+     * name as the value.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-attributemapping)
      * @param attributeMapping A mapping of IdP attributes to standard and custom user pool
      * attributes. 
@@ -314,20 +346,38 @@ public open class CfnUserPoolIdentityProvider(
     }
 
     /**
-     * A list of IdP identifiers.
+     * An array of IdP identifiers, for example `"IdPIdentifiers": [ "MyIdP", "MyIdP2" ]` .
+     *
+     * Identifiers are friendly names that you can pass in the `idp_identifier` query parameter of
+     * requests to the [Authorize
+     * endpoint](https://docs.aws.amazon.com/cognito/latest/developerguide/authorization-endpoint.html)
+     * to silently redirect to sign-in with the associated IdP. Identifiers in a domain format also
+     * enable the use of [email-address matching with SAML
+     * providers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-managing-saml-idp-naming.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-idpidentifiers)
-     * @param idpIdentifiers A list of IdP identifiers. 
+     * @param idpIdentifiers An array of IdP identifiers, for example `"IdPIdentifiers": [ "MyIdP",
+     * "MyIdP2" ]` . 
      */
     override fun idpIdentifiers(idpIdentifiers: List<String>) {
       cdkBuilder.idpIdentifiers(idpIdentifiers)
     }
 
     /**
-     * A list of IdP identifiers.
+     * An array of IdP identifiers, for example `"IdPIdentifiers": [ "MyIdP", "MyIdP2" ]` .
+     *
+     * Identifiers are friendly names that you can pass in the `idp_identifier` query parameter of
+     * requests to the [Authorize
+     * endpoint](https://docs.aws.amazon.com/cognito/latest/developerguide/authorization-endpoint.html)
+     * to silently redirect to sign-in with the associated IdP. Identifiers in a domain format also
+     * enable the use of [email-address matching with SAML
+     * providers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-managing-saml-idp-naming.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-idpidentifiers)
-     * @param idpIdentifiers A list of IdP identifiers. 
+     * @param idpIdentifiers An array of IdP identifiers, for example `"IdPIdentifiers": [ "MyIdP",
+     * "MyIdP2" ]` . 
      */
     override fun idpIdentifiers(vararg idpIdentifiers: String): Unit =
         idpIdentifiers(idpIdentifiers.toList())
@@ -428,30 +478,38 @@ public open class CfnUserPoolIdentityProvider(
     }
 
     /**
-     * The IdP name.
+     * The name that you want to assign to the IdP.
+     *
+     * You can pass the identity provider name in the `identity_provider` query parameter of
+     * requests to the [Authorize
+     * endpoint](https://docs.aws.amazon.com/cognito/latest/developerguide/authorization-endpoint.html)
+     * to silently redirect to sign-in with the associated IdP.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-providername)
-     * @param providerName The IdP name. 
+     * @param providerName The name that you want to assign to the IdP. 
      */
     override fun providerName(providerName: String) {
       cdkBuilder.providerName(providerName)
     }
 
     /**
-     * The IdP type.
+     * The type of IdP that you want to add.
+     *
+     * Amazon Cognito supports OIDC, SAML 2.0, Login With Amazon, Sign In With Apple, Google, and
+     * Facebook IdPs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-providertype)
-     * @param providerType The IdP type. 
+     * @param providerType The type of IdP that you want to add. 
      */
     override fun providerType(providerType: String) {
       cdkBuilder.providerType(providerType)
     }
 
     /**
-     * The user pool ID.
+     * The Id of the user pool where you want to create an IdP.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-userpoolid)
-     * @param userPoolId The user pool ID. 
+     * @param userPoolId The Id of the user pool where you want to create an IdP. 
      */
     override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)

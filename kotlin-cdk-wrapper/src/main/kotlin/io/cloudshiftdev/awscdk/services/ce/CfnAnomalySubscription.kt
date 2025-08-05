@@ -5,6 +5,8 @@ package io.cloudshiftdev.awscdk.services.ce
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -67,7 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAnomalySubscription(
   cdkObject: software.amazon.awscdk.services.ce.CfnAnomalySubscription,
 ) : CfnResource(cdkObject),
-    IInspectable {
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -93,6 +96,12 @@ public open class CfnAnomalySubscription(
    * The `AnomalySubscription` Amazon Resource Name (ARN).
    */
   public open fun attrSubscriptionArn(): String = unwrap(this).getAttrSubscriptionArn()
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * The frequency that anomaly notifications are sent.
@@ -135,26 +144,21 @@ public open class CfnAnomalySubscription(
   /**
    * Tags to assign to subscription.
    */
-  public open fun resourceTags(): Any? = unwrap(this).getResourceTags()
+  public open fun resourceTags(): List<ResourceTagProperty> =
+      unwrap(this).getResourceTags()?.map(ResourceTagProperty::wrap) ?: emptyList()
 
   /**
    * Tags to assign to subscription.
    */
-  public open fun resourceTags(`value`: IResolvable) {
-    unwrap(this).setResourceTags(`value`.let(IResolvable.Companion::unwrap))
+  public open fun resourceTags(`value`: List<ResourceTagProperty>) {
+    unwrap(this).setResourceTags(`value`.map(ResourceTagProperty.Companion::unwrap))
   }
 
   /**
    * Tags to assign to subscription.
    */
-  public open fun resourceTags(`value`: List<Any>) {
-    unwrap(this).setResourceTags(`value`.map{CdkObjectWrappers.unwrap(it)})
-  }
-
-  /**
-   * Tags to assign to subscription.
-   */
-  public open fun resourceTags(vararg `value`: Any): Unit = resourceTags(`value`.toList())
+  public open fun resourceTags(vararg `value`: ResourceTagProperty): Unit =
+      resourceTags(`value`.toList())
 
   /**
    * A list of subscribers to notify.
@@ -273,7 +277,7 @@ public open class CfnAnomalySubscription(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalysubscription.html#cfn-ce-anomalysubscription-resourcetags)
      * @param resourceTags Tags to assign to subscription. 
      */
-    public fun resourceTags(resourceTags: IResolvable)
+    public fun resourceTags(resourceTags: List<ResourceTagProperty>)
 
     /**
      * Tags to assign to subscription.
@@ -281,15 +285,7 @@ public open class CfnAnomalySubscription(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalysubscription.html#cfn-ce-anomalysubscription-resourcetags)
      * @param resourceTags Tags to assign to subscription. 
      */
-    public fun resourceTags(resourceTags: List<Any>)
-
-    /**
-     * Tags to assign to subscription.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalysubscription.html#cfn-ce-anomalysubscription-resourcetags)
-     * @param resourceTags Tags to assign to subscription. 
-     */
-    public fun resourceTags(vararg resourceTags: Any)
+    public fun resourceTags(vararg resourceTags: ResourceTagProperty)
 
     /**
      * A list of subscribers to notify.
@@ -421,8 +417,8 @@ public open class CfnAnomalySubscription(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalysubscription.html#cfn-ce-anomalysubscription-resourcetags)
      * @param resourceTags Tags to assign to subscription. 
      */
-    override fun resourceTags(resourceTags: IResolvable) {
-      cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
+    override fun resourceTags(resourceTags: List<ResourceTagProperty>) {
+      cdkBuilder.resourceTags(resourceTags.map(ResourceTagProperty.Companion::unwrap))
     }
 
     /**
@@ -431,17 +427,8 @@ public open class CfnAnomalySubscription(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalysubscription.html#cfn-ce-anomalysubscription-resourcetags)
      * @param resourceTags Tags to assign to subscription. 
      */
-    override fun resourceTags(resourceTags: List<Any>) {
-      cdkBuilder.resourceTags(resourceTags.map{CdkObjectWrappers.unwrap(it)})
-    }
-
-    /**
-     * Tags to assign to subscription.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalysubscription.html#cfn-ce-anomalysubscription-resourcetags)
-     * @param resourceTags Tags to assign to subscription. 
-     */
-    override fun resourceTags(vararg resourceTags: Any): Unit = resourceTags(resourceTags.toList())
+    override fun resourceTags(vararg resourceTags: ResourceTagProperty): Unit =
+        resourceTags(resourceTags.toList())
 
     /**
      * A list of subscribers to notify.

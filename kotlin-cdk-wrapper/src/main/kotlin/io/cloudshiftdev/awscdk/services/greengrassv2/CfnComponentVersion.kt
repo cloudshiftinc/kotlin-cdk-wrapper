@@ -602,7 +602,7 @@ public open class CfnComponentVersion(
        * component](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html)
        * in the *AWS IoT Greengrass V2 Developer Guide* .
        */
-      public fun attributes(attributes: IResolvable)
+      public fun attributes(attributes: Map<String, String>)
 
       /**
        * @param attributes A dictionary of attributes for the platform.
@@ -612,7 +612,7 @@ public open class CfnComponentVersion(
        * component](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html)
        * in the *AWS IoT Greengrass V2 Developer Guide* .
        */
-      public fun attributes(attributes: Map<String, String>)
+      public fun attributes(attributes: IResolvable)
 
       /**
        * @param name The friendly name of the platform. This name helps you identify the platform.
@@ -636,8 +636,8 @@ public open class CfnComponentVersion(
        * component](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html)
        * in the *AWS IoT Greengrass V2 Developer Guide* .
        */
-      override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
+      override fun attributes(attributes: Map<String, String>) {
+        cdkBuilder.attributes(attributes)
       }
 
       /**
@@ -648,8 +648,8 @@ public open class CfnComponentVersion(
        * component](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html)
        * in the *AWS IoT Greengrass V2 Developer Guide* .
        */
-      override fun attributes(attributes: Map<String, String>) {
-        cdkBuilder.attributes(attributes)
+      override fun attributes(attributes: IResolvable) {
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1414,13 +1414,13 @@ public open class CfnComponentVersion(
        * @param environmentVariables The map of environment variables that are available to the
        * Lambda function when it runs.
        */
-      public fun environmentVariables(environmentVariables: IResolvable)
+      public fun environmentVariables(environmentVariables: Map<String, String>)
 
       /**
        * @param environmentVariables The map of environment variables that are available to the
        * Lambda function when it runs.
        */
-      public fun environmentVariables(environmentVariables: Map<String, String>)
+      public fun environmentVariables(environmentVariables: IResolvable)
 
       /**
        * @param eventSources The list of event sources to which to subscribe to receive work
@@ -1550,16 +1550,16 @@ public open class CfnComponentVersion(
        * @param environmentVariables The map of environment variables that are available to the
        * Lambda function when it runs.
        */
-      override fun environmentVariables(environmentVariables: IResolvable) {
-        cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
+      override fun environmentVariables(environmentVariables: Map<String, String>) {
+        cdkBuilder.environmentVariables(environmentVariables)
       }
 
       /**
        * @param environmentVariables The map of environment variables that are available to the
        * Lambda function when it runs.
        */
-      override fun environmentVariables(environmentVariables: Map<String, String>) {
-        cdkBuilder.environmentVariables(environmentVariables)
+      override fun environmentVariables(environmentVariables: IResolvable) {
+        cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -693,7 +693,7 @@ public open class CfnHoursOfOperation(
   }
 
   /**
-   * Contains information about the hours of operation override.
+   * Information about the hours of operation override config: day, start time, and end time.
    *
    * Example:
    *
@@ -726,14 +726,14 @@ public open class CfnHoursOfOperation(
     public fun day(): String
 
     /**
-     * The start time or end time for an an hours of operation override.
+     * The end time that your contact center closes if overrides are applied.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverrideconfig.html#cfn-connect-hoursofoperation-hoursofoperationoverrideconfig-endtime)
      */
     public fun endTime(): Any
 
     /**
-     * The start time or end time for an an hours of operation override.
+     * The start time when your contact center opens if overrides are applied.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverrideconfig.html#cfn-connect-hoursofoperation-hoursofoperationoverrideconfig-starttime)
      */
@@ -750,34 +750,34 @@ public open class CfnHoursOfOperation(
       public fun day(day: String)
 
       /**
-       * @param endTime The start time or end time for an an hours of operation override. 
+       * @param endTime The end time that your contact center closes if overrides are applied. 
        */
       public fun endTime(endTime: IResolvable)
 
       /**
-       * @param endTime The start time or end time for an an hours of operation override. 
+       * @param endTime The end time that your contact center closes if overrides are applied. 
        */
       public fun endTime(endTime: OverrideTimeSliceProperty)
 
       /**
-       * @param endTime The start time or end time for an an hours of operation override. 
+       * @param endTime The end time that your contact center closes if overrides are applied. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("24090d47896334564f65e788bd5db72825a46e8438cbbced4de30203a73db964")
       public fun endTime(endTime: OverrideTimeSliceProperty.Builder.() -> Unit)
 
       /**
-       * @param startTime The start time or end time for an an hours of operation override. 
+       * @param startTime The start time when your contact center opens if overrides are applied. 
        */
       public fun startTime(startTime: IResolvable)
 
       /**
-       * @param startTime The start time or end time for an an hours of operation override. 
+       * @param startTime The start time when your contact center opens if overrides are applied. 
        */
       public fun startTime(startTime: OverrideTimeSliceProperty)
 
       /**
-       * @param startTime The start time or end time for an an hours of operation override. 
+       * @param startTime The start time when your contact center opens if overrides are applied. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4a53be39462dabc179e9e25f7570e7c6c9c0c44be2fec0f7229fbf6e15122b17")
@@ -798,21 +798,21 @@ public open class CfnHoursOfOperation(
       }
 
       /**
-       * @param endTime The start time or end time for an an hours of operation override. 
+       * @param endTime The end time that your contact center closes if overrides are applied. 
        */
       override fun endTime(endTime: IResolvable) {
         cdkBuilder.endTime(endTime.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param endTime The start time or end time for an an hours of operation override. 
+       * @param endTime The end time that your contact center closes if overrides are applied. 
        */
       override fun endTime(endTime: OverrideTimeSliceProperty) {
         cdkBuilder.endTime(endTime.let(OverrideTimeSliceProperty.Companion::unwrap))
       }
 
       /**
-       * @param endTime The start time or end time for an an hours of operation override. 
+       * @param endTime The end time that your contact center closes if overrides are applied. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("24090d47896334564f65e788bd5db72825a46e8438cbbced4de30203a73db964")
@@ -820,21 +820,21 @@ public open class CfnHoursOfOperation(
           endTime(OverrideTimeSliceProperty(endTime))
 
       /**
-       * @param startTime The start time or end time for an an hours of operation override. 
+       * @param startTime The start time when your contact center opens if overrides are applied. 
        */
       override fun startTime(startTime: IResolvable) {
         cdkBuilder.startTime(startTime.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param startTime The start time or end time for an an hours of operation override. 
+       * @param startTime The start time when your contact center opens if overrides are applied. 
        */
       override fun startTime(startTime: OverrideTimeSliceProperty) {
         cdkBuilder.startTime(startTime.let(OverrideTimeSliceProperty.Companion::unwrap))
       }
 
       /**
-       * @param startTime The start time or end time for an an hours of operation override. 
+       * @param startTime The start time when your contact center opens if overrides are applied. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4a53be39462dabc179e9e25f7570e7c6c9c0c44be2fec0f7229fbf6e15122b17")
@@ -858,14 +858,14 @@ public open class CfnHoursOfOperation(
       override fun day(): String = unwrap(this).getDay()
 
       /**
-       * The start time or end time for an an hours of operation override.
+       * The end time that your contact center closes if overrides are applied.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverrideconfig.html#cfn-connect-hoursofoperation-hoursofoperationoverrideconfig-endtime)
        */
       override fun endTime(): Any = unwrap(this).getEndTime()
 
       /**
-       * The start time or end time for an an hours of operation override.
+       * The start time when your contact center opens if overrides are applied.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverrideconfig.html#cfn-connect-hoursofoperation-hoursofoperationoverrideconfig-starttime)
        */
@@ -892,7 +892,7 @@ public open class CfnHoursOfOperation(
   }
 
   /**
-   * Overrides attached to the hours of operation.
+   * Information about the hours of operations override.
    *
    * Example:
    *
@@ -940,7 +940,7 @@ public open class CfnHoursOfOperation(
     public fun effectiveTill(): String
 
     /**
-     * The Resource Identifier for the hours of operation override.
+     * The identifier for the hours of operation override.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverride.html#cfn-connect-hoursofoperation-hoursofoperationoverride-hoursofoperationoverrideid)
      */
@@ -985,8 +985,7 @@ public open class CfnHoursOfOperation(
       public fun effectiveTill(effectiveTill: String)
 
       /**
-       * @param hoursOfOperationOverrideId The Resource Identifier for the hours of operation
-       * override.
+       * @param hoursOfOperationOverrideId The identifier for the hours of operation override.
        */
       public fun hoursOfOperationOverrideId(hoursOfOperationOverrideId: String)
 
@@ -1042,8 +1041,7 @@ public open class CfnHoursOfOperation(
       }
 
       /**
-       * @param hoursOfOperationOverrideId The Resource Identifier for the hours of operation
-       * override.
+       * @param hoursOfOperationOverrideId The identifier for the hours of operation override.
        */
       override fun hoursOfOperationOverrideId(hoursOfOperationOverrideId: String) {
         cdkBuilder.hoursOfOperationOverrideId(hoursOfOperationOverrideId)
@@ -1110,7 +1108,7 @@ public open class CfnHoursOfOperation(
       override fun effectiveTill(): String = unwrap(this).getEffectiveTill()
 
       /**
-       * The Resource Identifier for the hours of operation override.
+       * The identifier for the hours of operation override.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverride.html#cfn-connect-hoursofoperation-hoursofoperationoverride-hoursofoperationoverrideid)
        */
@@ -1271,7 +1269,7 @@ public open class CfnHoursOfOperation(
   }
 
   /**
-   * The start time or end time for an an hours of operation override.
+   * The start time or end time for an hours of operation override.
    *
    * Example:
    *

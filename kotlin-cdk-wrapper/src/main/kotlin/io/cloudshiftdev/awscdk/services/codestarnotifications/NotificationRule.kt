@@ -306,6 +306,9 @@ public open class NotificationRule(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.codestarnotifications.NotificationRule.PROPERTY_INJECTION_ID
+
     public fun fromNotificationRuleArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

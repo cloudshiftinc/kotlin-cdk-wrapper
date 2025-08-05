@@ -734,6 +734,8 @@ public open class CfnRule(
     /**
      * The HTTP response code.
      *
+     * Only `404` and `500` status codes are supported.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-fixedresponse.html#cfn-vpclattice-rule-fixedresponse-statuscode)
      */
     public fun statusCode(): Number
@@ -745,6 +747,7 @@ public open class CfnRule(
     public interface Builder {
       /**
        * @param statusCode The HTTP response code. 
+       * Only `404` and `500` status codes are supported.
        */
       public fun statusCode(statusCode: Number)
     }
@@ -756,6 +759,7 @@ public open class CfnRule(
 
       /**
        * @param statusCode The HTTP response code. 
+       * Only `404` and `500` status codes are supported.
        */
       override fun statusCode(statusCode: Number) {
         cdkBuilder.statusCode(statusCode)
@@ -771,6 +775,8 @@ public open class CfnRule(
         FixedResponseProperty {
       /**
        * The HTTP response code.
+       *
+       * Only `404` and `500` status codes are supported.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-fixedresponse.html#cfn-vpclattice-rule-fixedresponse-statuscode)
        */

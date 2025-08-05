@@ -94,6 +94,9 @@ public abstract class Condition(
     public fun isTimestamp(variable: String): Condition =
         software.amazon.awscdk.services.stepfunctions.Condition.isTimestamp(variable).let(Condition::wrap)
 
+    public fun jsonata(condition: String): Condition =
+        software.amazon.awscdk.services.stepfunctions.Condition.jsonata(condition).let(Condition::wrap)
+
     public fun not(condition: Condition): Condition =
         software.amazon.awscdk.services.stepfunctions.Condition.not(condition.let(Condition.Companion::unwrap)).let(Condition::wrap)
 

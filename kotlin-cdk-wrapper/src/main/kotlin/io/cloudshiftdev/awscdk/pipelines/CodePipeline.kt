@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.pipelines
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.codebuild.IProject
 import io.cloudshiftdev.awscdk.services.codepipeline.Pipeline
+import io.cloudshiftdev.awscdk.services.codepipeline.PipelineType
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Boolean
@@ -85,6 +86,12 @@ public open class CodePipeline(
   public open fun synthProject(): IProject = unwrap(this).getSynthProject().let(IProject::wrap)
 
   /**
+   * Allow pipeline service role used for actions if no action role configured instead of creating a
+   * new role for each action.
+   */
+  public open fun usePipelineRoleForActions(): Boolean = unwrap(this).getUsePipelineRoleForActions()
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.pipelines.CodePipeline].
    */
   @CdkDslMarker
@@ -122,7 +129,23 @@ public open class CodePipeline(
         fun assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults: CodeBuildOptions.Builder.() -> Unit)
 
     /**
-     * CDK CLI version to use in self-mutation and asset publishing steps.
+     * CDK CLI version to use in asset publishing steps.
+     *
+     * If you want to lock the `cdk-assets` version used in the pipeline, by steps
+     * that are automatically generated for you, specify the version here.
+     *
+     * We recommend you do not specify this value, as not specifying it always
+     * uses the latest CLI version which is backwards compatible with old versions.
+     *
+     * Default: - Latest version
+     *
+     * [Documentation](https://www.npmjs.com/package/cdk-assets)
+     * @param cdkAssetsCliVersion CDK CLI version to use in asset publishing steps. 
+     */
+    public fun cdkAssetsCliVersion(cdkAssetsCliVersion: String)
+
+    /**
+     * CDK CLI version to use in self-mutation step.
      *
      * If you want to lock the CDK CLI version used in the pipeline, by steps
      * that are automatically generated for you, specify the version here.
@@ -142,7 +165,7 @@ public open class CodePipeline(
      *
      * Default: - Latest version
      *
-     * @param cliVersion CDK CLI version to use in self-mutation and asset publishing steps. 
+     * @param cliVersion CDK CLI version to use in self-mutation step. 
      */
     public fun cliVersion(cliVersion: String)
 
@@ -302,6 +325,17 @@ public open class CodePipeline(
     public fun pipelineName(pipelineName: String)
 
     /**
+     * Type of the pipeline.
+     *
+     * Default: - PipelineType.V2 if the feature flag `CODEPIPELINE_DEFAULT_PIPELINE_TYPE_TO_V2`
+     * is true, PipelineType.V1 otherwise
+     *
+     * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html)
+     * @param pipelineType Type of the pipeline. 
+     */
+    public fun pipelineType(pipelineType: PipelineType)
+
+    /**
      * Publish assets in multiple CodeBuild projects.
      *
      * If set to false, use one Project per type to publish all assets.
@@ -422,6 +456,16 @@ public open class CodePipeline(
      * @param useChangeSets Deploy every stack by creating a change set and executing it. 
      */
     public fun useChangeSets(useChangeSets: Boolean)
+
+    /**
+     * Use pipeline service role for actions if no action role configured.
+     *
+     * Default: - false
+     *
+     * @param usePipelineRoleForActions Use pipeline service role for actions if no action role
+     * configured. 
+     */
+    public fun usePipelineRoleForActions(usePipelineRoleForActions: Boolean)
   }
 
   private class BuilderImpl(
@@ -470,7 +514,25 @@ public open class CodePipeline(
         Unit = assetPublishingCodeBuildDefaults(CodeBuildOptions(assetPublishingCodeBuildDefaults))
 
     /**
-     * CDK CLI version to use in self-mutation and asset publishing steps.
+     * CDK CLI version to use in asset publishing steps.
+     *
+     * If you want to lock the `cdk-assets` version used in the pipeline, by steps
+     * that are automatically generated for you, specify the version here.
+     *
+     * We recommend you do not specify this value, as not specifying it always
+     * uses the latest CLI version which is backwards compatible with old versions.
+     *
+     * Default: - Latest version
+     *
+     * [Documentation](https://www.npmjs.com/package/cdk-assets)
+     * @param cdkAssetsCliVersion CDK CLI version to use in asset publishing steps. 
+     */
+    override fun cdkAssetsCliVersion(cdkAssetsCliVersion: String) {
+      cdkBuilder.cdkAssetsCliVersion(cdkAssetsCliVersion)
+    }
+
+    /**
+     * CDK CLI version to use in self-mutation step.
      *
      * If you want to lock the CDK CLI version used in the pipeline, by steps
      * that are automatically generated for you, specify the version here.
@@ -490,7 +552,7 @@ public open class CodePipeline(
      *
      * Default: - Latest version
      *
-     * @param cliVersion CDK CLI version to use in self-mutation and asset publishing steps. 
+     * @param cliVersion CDK CLI version to use in self-mutation step. 
      */
     override fun cliVersion(cliVersion: String) {
       cdkBuilder.cliVersion(cliVersion)
@@ -673,6 +735,19 @@ public open class CodePipeline(
     }
 
     /**
+     * Type of the pipeline.
+     *
+     * Default: - PipelineType.V2 if the feature flag `CODEPIPELINE_DEFAULT_PIPELINE_TYPE_TO_V2`
+     * is true, PipelineType.V1 otherwise
+     *
+     * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html)
+     * @param pipelineType Type of the pipeline. 
+     */
+    override fun pipelineType(pipelineType: PipelineType) {
+      cdkBuilder.pipelineType(pipelineType.let(PipelineType.Companion::unwrap))
+    }
+
+    /**
      * Publish assets in multiple CodeBuild projects.
      *
      * If set to false, use one Project per type to publish all assets.
@@ -811,6 +886,18 @@ public open class CodePipeline(
      */
     override fun useChangeSets(useChangeSets: Boolean) {
       cdkBuilder.useChangeSets(useChangeSets)
+    }
+
+    /**
+     * Use pipeline service role for actions if no action role configured.
+     *
+     * Default: - false
+     *
+     * @param usePipelineRoleForActions Use pipeline service role for actions if no action role
+     * configured. 
+     */
+    override fun usePipelineRoleForActions(usePipelineRoleForActions: Boolean) {
+      cdkBuilder.usePipelineRoleForActions(usePipelineRoleForActions)
     }
 
     public fun build(): software.amazon.awscdk.pipelines.CodePipeline = cdkBuilder.build()

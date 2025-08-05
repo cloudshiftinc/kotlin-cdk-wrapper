@@ -5,7 +5,9 @@ package io.cloudshiftdev.awscdk.services.apigateway
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
 import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
+import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -106,6 +108,32 @@ public open class RestApi(
       RequestValidatorOptions(props))
 
   /**
+   * Adds a statement to the resource policy associated with this rest api.
+   *
+   * A resource policy will be automatically created upon the first call to `addToResourcePolicy`.
+   *
+   * Note that this does not work with imported rest api.
+   *
+   * @param statement The policy statement to add. 
+   */
+  public override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
+      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
+
+  /**
+   * Adds a statement to the resource policy associated with this rest api.
+   *
+   * A resource policy will be automatically created upon the first call to `addToResourcePolicy`.
+   *
+   * Note that this does not work with imported rest api.
+   *
+   * @param statement The policy statement to add. 
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("b93f8258425594b02debe63f0c120f198512d8431f5ae67b7fb7780e34fcbae2")
+  public override fun addToResourcePolicy(statement: PolicyStatement.Builder.() -> Unit):
+      AddToResourcePolicyResult = addToResourcePolicy(PolicyStatement(statement))
+
+  /**
    * The list of methods bound to this RestApi.
    */
   public open fun methods(): List<Method> = unwrap(this).getMethods().map(Method::wrap)
@@ -187,7 +215,7 @@ public open class RestApi(
      * The removal policy applied to the AWS CloudWatch role when this resource is removed from the
      * application.
      *
-     * Requires `cloudWatchRole` to be enabled.
+     * Requires `cloudWatchRole` to be enabled.
      *
      * Default: - RemovalPolicy.RETAIN
      *
@@ -600,7 +628,7 @@ public open class RestApi(
      * The removal policy applied to the AWS CloudWatch role when this resource is removed from the
      * application.
      *
-     * Requires `cloudWatchRole` to be enabled.
+     * Requires `cloudWatchRole` to be enabled.
      *
      * Default: - RemovalPolicy.RETAIN
      *
@@ -991,6 +1019,9 @@ public open class RestApi(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.apigateway.RestApi.PROPERTY_INJECTION_ID
+
     public fun fromRestApiAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

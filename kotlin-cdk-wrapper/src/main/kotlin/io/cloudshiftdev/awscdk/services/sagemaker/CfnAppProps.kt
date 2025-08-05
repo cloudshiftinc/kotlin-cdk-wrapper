@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -28,6 +29,7 @@ import kotlin.jvm.JvmName
  * .domainId("domainId")
  * .userProfileName("userProfileName")
  * // the properties below are optional
+ * .recoveryMode(false)
  * .resourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
  * .lifecycleConfigArn("lifecycleConfigArn")
@@ -64,6 +66,13 @@ public interface CfnAppProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html#cfn-sagemaker-app-domainid)
    */
   public fun domainId(): String
+
+  /**
+   * Indicates whether the application is launched in recovery mode.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html#cfn-sagemaker-app-recoverymode)
+   */
+  public fun recoveryMode(): Any? = unwrap(this).getRecoveryMode()
 
   /**
    * Specifies the ARNs of a SageMaker image and SageMaker image version, and the instance type that
@@ -110,6 +119,16 @@ public interface CfnAppProps {
      * @param domainId The domain ID. 
      */
     public fun domainId(domainId: String)
+
+    /**
+     * @param recoveryMode Indicates whether the application is launched in recovery mode.
+     */
+    public fun recoveryMode(recoveryMode: Boolean)
+
+    /**
+     * @param recoveryMode Indicates whether the application is launched in recovery mode.
+     */
+    public fun recoveryMode(recoveryMode: IResolvable)
 
     /**
      * @param resourceSpec Specifies the ARNs of a SageMaker image and SageMaker image version, and
@@ -176,6 +195,20 @@ public interface CfnAppProps {
      */
     override fun domainId(domainId: String) {
       cdkBuilder.domainId(domainId)
+    }
+
+    /**
+     * @param recoveryMode Indicates whether the application is launched in recovery mode.
+     */
+    override fun recoveryMode(recoveryMode: Boolean) {
+      cdkBuilder.recoveryMode(recoveryMode)
+    }
+
+    /**
+     * @param recoveryMode Indicates whether the application is launched in recovery mode.
+     */
+    override fun recoveryMode(recoveryMode: IResolvable) {
+      cdkBuilder.recoveryMode(recoveryMode.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -255,6 +288,13 @@ public interface CfnAppProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html#cfn-sagemaker-app-domainid)
      */
     override fun domainId(): String = unwrap(this).getDomainId()
+
+    /**
+     * Indicates whether the application is launched in recovery mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html#cfn-sagemaker-app-recoverymode)
+     */
+    override fun recoveryMode(): Any? = unwrap(this).getRecoveryMode()
 
     /**
      * Specifies the ARNs of a SageMaker image and SageMaker image version, and the instance type

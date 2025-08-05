@@ -248,6 +248,39 @@ public open class CfnDeliveryStream(
   }
 
   /**
+   * The structure that configures parameters such as `ThroughputHintInMBs` for a stream configured
+   * with Direct PUT as a source.
+   */
+  public open fun directPutSourceConfiguration(): Any? =
+      unwrap(this).getDirectPutSourceConfiguration()
+
+  /**
+   * The structure that configures parameters such as `ThroughputHintInMBs` for a stream configured
+   * with Direct PUT as a source.
+   */
+  public open fun directPutSourceConfiguration(`value`: IResolvable) {
+    unwrap(this).setDirectPutSourceConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The structure that configures parameters such as `ThroughputHintInMBs` for a stream configured
+   * with Direct PUT as a source.
+   */
+  public open fun directPutSourceConfiguration(`value`: DirectPutSourceConfigurationProperty) {
+    unwrap(this).setDirectPutSourceConfiguration(`value`.let(DirectPutSourceConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The structure that configures parameters such as `ThroughputHintInMBs` for a stream configured
+   * with Direct PUT as a source.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("14aa88175966094c201c7b6eaed97c501693de3742645c64407c79a19d471388")
+  public open
+      fun directPutSourceConfiguration(`value`: DirectPutSourceConfigurationProperty.Builder.() -> Unit):
+      Unit = directPutSourceConfiguration(DirectPutSourceConfigurationProperty(`value`))
+
+  /**
    * An Amazon ES destination for the delivery stream.
    */
   public open fun elasticsearchDestinationConfiguration(): Any? =
@@ -761,6 +794,40 @@ public open class CfnDeliveryStream(
      * 
      */
     public fun deliveryStreamType(deliveryStreamType: String)
+
+    /**
+     * The structure that configures parameters such as `ThroughputHintInMBs` for a stream
+     * configured with Direct PUT as a source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-directputsourceconfiguration)
+     * @param directPutSourceConfiguration The structure that configures parameters such as
+     * `ThroughputHintInMBs` for a stream configured with Direct PUT as a source. 
+     */
+    public fun directPutSourceConfiguration(directPutSourceConfiguration: IResolvable)
+
+    /**
+     * The structure that configures parameters such as `ThroughputHintInMBs` for a stream
+     * configured with Direct PUT as a source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-directputsourceconfiguration)
+     * @param directPutSourceConfiguration The structure that configures parameters such as
+     * `ThroughputHintInMBs` for a stream configured with Direct PUT as a source. 
+     */
+    public
+        fun directPutSourceConfiguration(directPutSourceConfiguration: DirectPutSourceConfigurationProperty)
+
+    /**
+     * The structure that configures parameters such as `ThroughputHintInMBs` for a stream
+     * configured with Direct PUT as a source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-directputsourceconfiguration)
+     * @param directPutSourceConfiguration The structure that configures parameters such as
+     * `ThroughputHintInMBs` for a stream configured with Direct PUT as a source. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("eeb88c1be6fee3e30f2ee0b3166a9c9a8025903f70bbef7cc833a783fdb17ded")
+    public
+        fun directPutSourceConfiguration(directPutSourceConfiguration: DirectPutSourceConfigurationProperty.Builder.() -> Unit)
 
     /**
      * An Amazon ES destination for the delivery stream.
@@ -1443,6 +1510,46 @@ public open class CfnDeliveryStream(
     override fun deliveryStreamType(deliveryStreamType: String) {
       cdkBuilder.deliveryStreamType(deliveryStreamType)
     }
+
+    /**
+     * The structure that configures parameters such as `ThroughputHintInMBs` for a stream
+     * configured with Direct PUT as a source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-directputsourceconfiguration)
+     * @param directPutSourceConfiguration The structure that configures parameters such as
+     * `ThroughputHintInMBs` for a stream configured with Direct PUT as a source. 
+     */
+    override fun directPutSourceConfiguration(directPutSourceConfiguration: IResolvable) {
+      cdkBuilder.directPutSourceConfiguration(directPutSourceConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The structure that configures parameters such as `ThroughputHintInMBs` for a stream
+     * configured with Direct PUT as a source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-directputsourceconfiguration)
+     * @param directPutSourceConfiguration The structure that configures parameters such as
+     * `ThroughputHintInMBs` for a stream configured with Direct PUT as a source. 
+     */
+    override
+        fun directPutSourceConfiguration(directPutSourceConfiguration: DirectPutSourceConfigurationProperty) {
+      cdkBuilder.directPutSourceConfiguration(directPutSourceConfiguration.let(DirectPutSourceConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The structure that configures parameters such as `ThroughputHintInMBs` for a stream
+     * configured with Direct PUT as a source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-directputsourceconfiguration)
+     * @param directPutSourceConfiguration The structure that configures parameters such as
+     * `ThroughputHintInMBs` for a stream configured with Direct PUT as a source. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("eeb88c1be6fee3e30f2ee0b3166a9c9a8025903f70bbef7cc833a783fdb17ded")
+    override
+        fun directPutSourceConfiguration(directPutSourceConfiguration: DirectPutSourceConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        directPutSourceConfiguration(DirectPutSourceConfigurationProperty(directPutSourceConfiguration))
 
     /**
      * An Amazon ES destination for the delivery stream.
@@ -4163,6 +4270,7 @@ public open class CfnDeliveryStream(
    * CatalogConfigurationProperty catalogConfigurationProperty =
    * CatalogConfigurationProperty.builder()
    * .catalogArn("catalogArn")
+   * .warehouseLocation("warehouseLocation")
    * .build();
    * ```
    *
@@ -4179,6 +4287,16 @@ public open class CfnDeliveryStream(
     public fun catalogArn(): String? = unwrap(this).getCatalogArn()
 
     /**
+     * The warehouse location for Apache Iceberg tables. You must configure this when schema
+     * evolution and table creation is enabled.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-catalogconfiguration.html#cfn-kinesisfirehose-deliverystream-catalogconfiguration-warehouselocation)
+     */
+    public fun warehouseLocation(): String? = unwrap(this).getWarehouseLocation()
+
+    /**
      * A builder for [CatalogConfigurationProperty]
      */
     @CdkDslMarker
@@ -4189,6 +4307,13 @@ public open class CfnDeliveryStream(
        * You must specify the ARN in the format `arn:aws:glue:region:account-id:catalog` .
        */
       public fun catalogArn(catalogArn: String)
+
+      /**
+       * @param warehouseLocation The warehouse location for Apache Iceberg tables. You must
+       * configure this when schema evolution and table creation is enabled.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun warehouseLocation(warehouseLocation: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4204,6 +4329,15 @@ public open class CfnDeliveryStream(
        */
       override fun catalogArn(catalogArn: String) {
         cdkBuilder.catalogArn(catalogArn)
+      }
+
+      /**
+       * @param warehouseLocation The warehouse location for Apache Iceberg tables. You must
+       * configure this when schema evolution and table creation is enabled.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun warehouseLocation(warehouseLocation: String) {
+        cdkBuilder.warehouseLocation(warehouseLocation)
       }
 
       public fun build():
@@ -4223,6 +4357,16 @@ public open class CfnDeliveryStream(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-catalogconfiguration.html#cfn-kinesisfirehose-deliverystream-catalogconfiguration-catalogarn)
        */
       override fun catalogArn(): String? = unwrap(this).getCatalogArn()
+
+      /**
+       * The warehouse location for Apache Iceberg tables. You must configure this when schema
+       * evolution and table creation is enabled.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-catalogconfiguration.html#cfn-kinesisfirehose-deliverystream-catalogconfiguration-warehouselocation)
+       */
+      override fun warehouseLocation(): String? = unwrap(this).getWarehouseLocation()
     }
 
     public companion object {
@@ -6731,6 +6875,11 @@ public open class CfnDeliveryStream(
    * .destinationDatabaseName("destinationDatabaseName")
    * .destinationTableName("destinationTableName")
    * // the properties below are optional
+   * .partitionSpec(PartitionSpecProperty.builder()
+   * .identity(List.of(PartitionFieldProperty.builder()
+   * .sourceName("sourceName")
+   * .build()))
+   * .build())
    * .s3ErrorOutputPrefix("s3ErrorOutputPrefix")
    * .uniqueKeys(List.of("uniqueKeys"))
    * .build();
@@ -6752,6 +6901,15 @@ public open class CfnDeliveryStream(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-destinationtableconfiguration.html#cfn-kinesisfirehose-deliverystream-destinationtableconfiguration-destinationtablename)
      */
     public fun destinationTableName(): String
+
+    /**
+     * The partition spec configuration for a table that is used by automatic table creation.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-destinationtableconfiguration.html#cfn-kinesisfirehose-deliverystream-destinationtableconfiguration-partitionspec)
+     */
+    public fun partitionSpec(): Any? = unwrap(this).getPartitionSpec()
 
     /**
      * The table specific S3 error output prefix.
@@ -6787,6 +6945,29 @@ public open class CfnDeliveryStream(
        * @param destinationTableName Specifies the name of the Apache Iceberg Table. 
        */
       public fun destinationTableName(destinationTableName: String)
+
+      /**
+       * @param partitionSpec The partition spec configuration for a table that is used by automatic
+       * table creation.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun partitionSpec(partitionSpec: IResolvable)
+
+      /**
+       * @param partitionSpec The partition spec configuration for a table that is used by automatic
+       * table creation.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun partitionSpec(partitionSpec: PartitionSpecProperty)
+
+      /**
+       * @param partitionSpec The partition spec configuration for a table that is used by automatic
+       * table creation.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("202a045c813200bbb46a2f034fc7c8fe135eebb3db54b793c17fc3580c1089cb")
+      public fun partitionSpec(partitionSpec: PartitionSpecProperty.Builder.() -> Unit)
 
       /**
        * @param s3ErrorOutputPrefix The table specific S3 error output prefix.
@@ -6829,6 +7010,34 @@ public open class CfnDeliveryStream(
       override fun destinationTableName(destinationTableName: String) {
         cdkBuilder.destinationTableName(destinationTableName)
       }
+
+      /**
+       * @param partitionSpec The partition spec configuration for a table that is used by automatic
+       * table creation.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun partitionSpec(partitionSpec: IResolvable) {
+        cdkBuilder.partitionSpec(partitionSpec.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param partitionSpec The partition spec configuration for a table that is used by automatic
+       * table creation.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun partitionSpec(partitionSpec: PartitionSpecProperty) {
+        cdkBuilder.partitionSpec(partitionSpec.let(PartitionSpecProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param partitionSpec The partition spec configuration for a table that is used by automatic
+       * table creation.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("202a045c813200bbb46a2f034fc7c8fe135eebb3db54b793c17fc3580c1089cb")
+      override fun partitionSpec(partitionSpec: PartitionSpecProperty.Builder.() -> Unit): Unit =
+          partitionSpec(PartitionSpecProperty(partitionSpec))
 
       /**
        * @param s3ErrorOutputPrefix The table specific S3 error output prefix.
@@ -6879,6 +7088,15 @@ public open class CfnDeliveryStream(
       override fun destinationTableName(): String = unwrap(this).getDestinationTableName()
 
       /**
+       * The partition spec configuration for a table that is used by automatic table creation.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-destinationtableconfiguration.html#cfn-kinesisfirehose-deliverystream-destinationtableconfiguration-partitionspec)
+       */
+      override fun partitionSpec(): Any? = unwrap(this).getPartitionSpec()
+
+      /**
        * The table specific S3 error output prefix.
        *
        * All the errors that occurred while delivering to this table will be prefixed with this
@@ -6915,6 +7133,110 @@ public open class CfnDeliveryStream(
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DestinationTableConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DestinationTableConfigurationProperty
+    }
+  }
+
+  /**
+   * The structure that configures parameters such as `ThroughputHintInMBs` for a stream configured
+   * with Direct PUT as a source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
+   * DirectPutSourceConfigurationProperty directPutSourceConfigurationProperty =
+   * DirectPutSourceConfigurationProperty.builder()
+   * .throughputHintInMBs(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-directputsourceconfiguration.html)
+   */
+  public interface DirectPutSourceConfigurationProperty {
+    /**
+     * The value that you configure for this parameter is for information purpose only and does not
+     * affect Firehose delivery throughput limit.
+     *
+     * You can use the [Firehose Limits
+     * form](https://docs.aws.amazon.com/https://support.console.aws.amazon.com/support/home#/case/create%3FissueType=service-limit-increase%26limitType=kinesis-firehose-limits)
+     * to request a throughput limit increase.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-directputsourceconfiguration.html#cfn-kinesisfirehose-deliverystream-directputsourceconfiguration-throughputhintinmbs)
+     */
+    public fun throughputHintInMBs(): Number? = unwrap(this).getThroughputHintInMBs()
+
+    /**
+     * A builder for [DirectPutSourceConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param throughputHintInMBs The value that you configure for this parameter is for
+       * information purpose only and does not affect Firehose delivery throughput limit.
+       * You can use the [Firehose Limits
+       * form](https://docs.aws.amazon.com/https://support.console.aws.amazon.com/support/home#/case/create%3FissueType=service-limit-increase%26limitType=kinesis-firehose-limits)
+       * to request a throughput limit increase.
+       */
+      public fun throughputHintInMBs(throughputHintInMBs: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DirectPutSourceConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DirectPutSourceConfigurationProperty.builder()
+
+      /**
+       * @param throughputHintInMBs The value that you configure for this parameter is for
+       * information purpose only and does not affect Firehose delivery throughput limit.
+       * You can use the [Firehose Limits
+       * form](https://docs.aws.amazon.com/https://support.console.aws.amazon.com/support/home#/case/create%3FissueType=service-limit-increase%26limitType=kinesis-firehose-limits)
+       * to request a throughput limit increase.
+       */
+      override fun throughputHintInMBs(throughputHintInMBs: Number) {
+        cdkBuilder.throughputHintInMBs(throughputHintInMBs)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DirectPutSourceConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DirectPutSourceConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        DirectPutSourceConfigurationProperty {
+      /**
+       * The value that you configure for this parameter is for information purpose only and does
+       * not affect Firehose delivery throughput limit.
+       *
+       * You can use the [Firehose Limits
+       * form](https://docs.aws.amazon.com/https://support.console.aws.amazon.com/support/home#/case/create%3FissueType=service-limit-increase%26limitType=kinesis-firehose-limits)
+       * to request a throughput limit increase.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-directputsourceconfiguration.html#cfn-kinesisfirehose-deliverystream-directputsourceconfiguration-throughputhintinmbs)
+       */
+      override fun throughputHintInMBs(): Number? = unwrap(this).getThroughputHintInMBs()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DirectPutSourceConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DirectPutSourceConfigurationProperty):
+          DirectPutSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DirectPutSourceConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DirectPutSourceConfigurationProperty):
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DirectPutSourceConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DirectPutSourceConfigurationProperty
     }
   }
 
@@ -10685,6 +11007,7 @@ public open class CfnDeliveryStream(
    * IcebergDestinationConfigurationProperty.builder()
    * .catalogConfiguration(CatalogConfigurationProperty.builder()
    * .catalogArn("catalogArn")
+   * .warehouseLocation("warehouseLocation")
    * .build())
    * .roleArn("roleArn")
    * .s3Configuration(S3DestinationConfigurationProperty.builder()
@@ -10711,6 +11034,7 @@ public open class CfnDeliveryStream(
    * .prefix("prefix")
    * .build())
    * // the properties below are optional
+   * .appendOnly(false)
    * .bufferingHints(BufferingHintsProperty.builder()
    * .intervalInSeconds(123)
    * .sizeInMBs(123)
@@ -10724,6 +11048,11 @@ public open class CfnDeliveryStream(
    * .destinationDatabaseName("destinationDatabaseName")
    * .destinationTableName("destinationTableName")
    * // the properties below are optional
+   * .partitionSpec(PartitionSpecProperty.builder()
+   * .identity(List.of(PartitionFieldProperty.builder()
+   * .sourceName("sourceName")
+   * .build()))
+   * .build())
    * .s3ErrorOutputPrefix("s3ErrorOutputPrefix")
    * .uniqueKeys(List.of("uniqueKeys"))
    * .build()))
@@ -10742,12 +11071,32 @@ public open class CfnDeliveryStream(
    * .durationInSeconds(123)
    * .build())
    * .s3BackupMode("s3BackupMode")
+   * .schemaEvolutionConfiguration(SchemaEvolutionConfigurationProperty.builder()
+   * .enabled(false)
+   * .build())
+   * .tableCreationConfiguration(TableCreationConfigurationProperty.builder()
+   * .enabled(false)
+   * .build())
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html)
    */
   public interface IcebergDestinationConfigurationProperty {
+    /**
+     * Describes whether all incoming data for this delivery stream will be append only (inserts
+     * only and not for updates and deletes) for Iceberg delivery.
+     *
+     * This feature is only applicable for Apache Iceberg Tables.
+     *
+     * The default value is false. If you set this value to true, Firehose automatically increases
+     * the throughput limit of a stream based on the throttling levels of the stream. If you set this
+     * parameter to true for a stream with updates and deletes, you will see out of order delivery.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-appendonly)
+     */
+    public fun appendOnly(): Any? = unwrap(this).getAppendOnly()
+
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-bufferinghints)
      */
@@ -10809,10 +11158,50 @@ public open class CfnDeliveryStream(
     public fun s3Configuration(): Any
 
     /**
+     * The configuration to enable automatic schema evolution.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-schemaevolutionconfiguration)
+     */
+    public fun schemaEvolutionConfiguration(): Any? = unwrap(this).getSchemaEvolutionConfiguration()
+
+    /**
+     * The configuration to enable automatic table creation.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-tablecreationconfiguration)
+     */
+    public fun tableCreationConfiguration(): Any? = unwrap(this).getTableCreationConfiguration()
+
+    /**
      * A builder for [IcebergDestinationConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param appendOnly Describes whether all incoming data for this delivery stream will be
+       * append only (inserts only and not for updates and deletes) for Iceberg delivery.
+       * This feature is only applicable for Apache Iceberg Tables.
+       *
+       * The default value is false. If you set this value to true, Firehose automatically increases
+       * the throughput limit of a stream based on the throttling levels of the stream. If you set this
+       * parameter to true for a stream with updates and deletes, you will see out of order delivery.
+       */
+      public fun appendOnly(appendOnly: Boolean)
+
+      /**
+       * @param appendOnly Describes whether all incoming data for this delivery stream will be
+       * append only (inserts only and not for updates and deletes) for Iceberg delivery.
+       * This feature is only applicable for Apache Iceberg Tables.
+       *
+       * The default value is false. If you set this value to true, Firehose automatically increases
+       * the throughput limit of a stream based on the throttling levels of the stream. If you set this
+       * parameter to true for a stream with updates and deletes, you will see out of order delivery.
+       */
+      public fun appendOnly(appendOnly: IResolvable)
+
       /**
        * @param bufferingHints the value to be set.
        */
@@ -10955,6 +11344,50 @@ public open class CfnDeliveryStream(
       @JvmName("456dfe0e8c99ec6049a34c44559d3aecc04f3c8ea1224d0c3bc47cae6d2aec63")
       public
           fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param schemaEvolutionConfiguration The configuration to enable automatic schema evolution.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun schemaEvolutionConfiguration(schemaEvolutionConfiguration: IResolvable)
+
+      /**
+       * @param schemaEvolutionConfiguration The configuration to enable automatic schema evolution.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public
+          fun schemaEvolutionConfiguration(schemaEvolutionConfiguration: SchemaEvolutionConfigurationProperty)
+
+      /**
+       * @param schemaEvolutionConfiguration The configuration to enable automatic schema evolution.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("55495bb4db3a4d97f53a06b7a4bbbf2462c75fd912ce37c225fe5ccb6a9bf717")
+      public
+          fun schemaEvolutionConfiguration(schemaEvolutionConfiguration: SchemaEvolutionConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param tableCreationConfiguration The configuration to enable automatic table creation.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun tableCreationConfiguration(tableCreationConfiguration: IResolvable)
+
+      /**
+       * @param tableCreationConfiguration The configuration to enable automatic table creation.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public
+          fun tableCreationConfiguration(tableCreationConfiguration: TableCreationConfigurationProperty)
+
+      /**
+       * @param tableCreationConfiguration The configuration to enable automatic table creation.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("370a4fe0f8b4e825cd4c1f328dd491508d5f237480d3bb9eec50762f78ba550c")
+      public
+          fun tableCreationConfiguration(tableCreationConfiguration: TableCreationConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -10962,6 +11395,32 @@ public open class CfnDeliveryStream(
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.IcebergDestinationConfigurationProperty.Builder
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.IcebergDestinationConfigurationProperty.builder()
+
+      /**
+       * @param appendOnly Describes whether all incoming data for this delivery stream will be
+       * append only (inserts only and not for updates and deletes) for Iceberg delivery.
+       * This feature is only applicable for Apache Iceberg Tables.
+       *
+       * The default value is false. If you set this value to true, Firehose automatically increases
+       * the throughput limit of a stream based on the throttling levels of the stream. If you set this
+       * parameter to true for a stream with updates and deletes, you will see out of order delivery.
+       */
+      override fun appendOnly(appendOnly: Boolean) {
+        cdkBuilder.appendOnly(appendOnly)
+      }
+
+      /**
+       * @param appendOnly Describes whether all incoming data for this delivery stream will be
+       * append only (inserts only and not for updates and deletes) for Iceberg delivery.
+       * This feature is only applicable for Apache Iceberg Tables.
+       *
+       * The default value is false. If you set this value to true, Firehose automatically increases
+       * the throughput limit of a stream based on the throttling levels of the stream. If you set this
+       * parameter to true for a stream with updates and deletes, you will see out of order delivery.
+       */
+      override fun appendOnly(appendOnly: IResolvable) {
+        cdkBuilder.appendOnly(appendOnly.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param bufferingHints the value to be set.
@@ -11148,6 +11607,62 @@ public open class CfnDeliveryStream(
           fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit):
           Unit = s3Configuration(S3DestinationConfigurationProperty(s3Configuration))
 
+      /**
+       * @param schemaEvolutionConfiguration The configuration to enable automatic schema evolution.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun schemaEvolutionConfiguration(schemaEvolutionConfiguration: IResolvable) {
+        cdkBuilder.schemaEvolutionConfiguration(schemaEvolutionConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param schemaEvolutionConfiguration The configuration to enable automatic schema evolution.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override
+          fun schemaEvolutionConfiguration(schemaEvolutionConfiguration: SchemaEvolutionConfigurationProperty) {
+        cdkBuilder.schemaEvolutionConfiguration(schemaEvolutionConfiguration.let(SchemaEvolutionConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param schemaEvolutionConfiguration The configuration to enable automatic schema evolution.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("55495bb4db3a4d97f53a06b7a4bbbf2462c75fd912ce37c225fe5ccb6a9bf717")
+      override
+          fun schemaEvolutionConfiguration(schemaEvolutionConfiguration: SchemaEvolutionConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          schemaEvolutionConfiguration(SchemaEvolutionConfigurationProperty(schemaEvolutionConfiguration))
+
+      /**
+       * @param tableCreationConfiguration The configuration to enable automatic table creation.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun tableCreationConfiguration(tableCreationConfiguration: IResolvable) {
+        cdkBuilder.tableCreationConfiguration(tableCreationConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param tableCreationConfiguration The configuration to enable automatic table creation.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override
+          fun tableCreationConfiguration(tableCreationConfiguration: TableCreationConfigurationProperty) {
+        cdkBuilder.tableCreationConfiguration(tableCreationConfiguration.let(TableCreationConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param tableCreationConfiguration The configuration to enable automatic table creation.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("370a4fe0f8b4e825cd4c1f328dd491508d5f237480d3bb9eec50762f78ba550c")
+      override
+          fun tableCreationConfiguration(tableCreationConfiguration: TableCreationConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          tableCreationConfiguration(TableCreationConfigurationProperty(tableCreationConfiguration))
+
       public fun build():
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.IcebergDestinationConfigurationProperty
           = cdkBuilder.build()
@@ -11157,6 +11672,20 @@ public open class CfnDeliveryStream(
       cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.IcebergDestinationConfigurationProperty,
     ) : CdkObject(cdkObject),
         IcebergDestinationConfigurationProperty {
+      /**
+       * Describes whether all incoming data for this delivery stream will be append only (inserts
+       * only and not for updates and deletes) for Iceberg delivery.
+       *
+       * This feature is only applicable for Apache Iceberg Tables.
+       *
+       * The default value is false. If you set this value to true, Firehose automatically increases
+       * the throughput limit of a stream based on the throttling levels of the stream. If you set this
+       * parameter to true for a stream with updates and deletes, you will see out of order delivery.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-appendonly)
+       */
+      override fun appendOnly(): Any? = unwrap(this).getAppendOnly()
+
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-bufferinghints)
        */
@@ -11216,6 +11745,25 @@ public open class CfnDeliveryStream(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-s3configuration)
        */
       override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
+
+      /**
+       * The configuration to enable automatic schema evolution.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-schemaevolutionconfiguration)
+       */
+      override fun schemaEvolutionConfiguration(): Any? =
+          unwrap(this).getSchemaEvolutionConfiguration()
+
+      /**
+       * The configuration to enable automatic table creation.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-tablecreationconfiguration)
+       */
+      override fun tableCreationConfiguration(): Any? = unwrap(this).getTableCreationConfiguration()
     }
 
     public companion object {
@@ -11899,7 +12447,7 @@ public open class CfnDeliveryStream(
        * is a Hive keyword. If you have a JSON key named `timestamp` , set this parameter to `{"ts":
        * "timestamp"}` to map this key to a column named `ts` .
        */
-      public fun columnToJsonKeyMappings(columnToJsonKeyMappings: IResolvable)
+      public fun columnToJsonKeyMappings(columnToJsonKeyMappings: Map<String, String>)
 
       /**
        * @param columnToJsonKeyMappings Maps column names to JSON keys that aren't identical to the
@@ -11908,7 +12456,7 @@ public open class CfnDeliveryStream(
        * is a Hive keyword. If you have a JSON key named `timestamp` , set this parameter to `{"ts":
        * "timestamp"}` to map this key to a column named `ts` .
        */
-      public fun columnToJsonKeyMappings(columnToJsonKeyMappings: Map<String, String>)
+      public fun columnToJsonKeyMappings(columnToJsonKeyMappings: IResolvable)
 
       /**
        * @param convertDotsInJsonKeysToUnderscores When set to `true` , specifies that the names of
@@ -11962,8 +12510,8 @@ public open class CfnDeliveryStream(
        * is a Hive keyword. If you have a JSON key named `timestamp` , set this parameter to `{"ts":
        * "timestamp"}` to map this key to a column named `ts` .
        */
-      override fun columnToJsonKeyMappings(columnToJsonKeyMappings: IResolvable) {
-        cdkBuilder.columnToJsonKeyMappings(columnToJsonKeyMappings.let(IResolvable.Companion::unwrap))
+      override fun columnToJsonKeyMappings(columnToJsonKeyMappings: Map<String, String>) {
+        cdkBuilder.columnToJsonKeyMappings(columnToJsonKeyMappings)
       }
 
       /**
@@ -11973,8 +12521,8 @@ public open class CfnDeliveryStream(
        * is a Hive keyword. If you have a JSON key named `timestamp` , set this parameter to `{"ts":
        * "timestamp"}` to map this key to a column named `ts` .
        */
-      override fun columnToJsonKeyMappings(columnToJsonKeyMappings: Map<String, String>) {
-        cdkBuilder.columnToJsonKeyMappings(columnToJsonKeyMappings)
+      override fun columnToJsonKeyMappings(columnToJsonKeyMappings: IResolvable) {
+        cdkBuilder.columnToJsonKeyMappings(columnToJsonKeyMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12994,6 +13542,248 @@ public open class CfnDeliveryStream(
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ParquetSerDeProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ParquetSerDeProperty
+    }
+  }
+
+  /**
+   * Represents a single field in a `PartitionSpec` .
+   *
+   * Amazon Data Firehose is in preview release and is subject to change.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
+   * PartitionFieldProperty partitionFieldProperty = PartitionFieldProperty.builder()
+   * .sourceName("sourceName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-partitionfield.html)
+   */
+  public interface PartitionFieldProperty {
+    /**
+     * The column name to be configured in partition spec.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-partitionfield.html#cfn-kinesisfirehose-deliverystream-partitionfield-sourcename)
+     */
+    public fun sourceName(): String
+
+    /**
+     * A builder for [PartitionFieldProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sourceName The column name to be configured in partition spec. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun sourceName(sourceName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.PartitionFieldProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.PartitionFieldProperty.builder()
+
+      /**
+       * @param sourceName The column name to be configured in partition spec. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun sourceName(sourceName: String) {
+        cdkBuilder.sourceName(sourceName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.PartitionFieldProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.PartitionFieldProperty,
+    ) : CdkObject(cdkObject),
+        PartitionFieldProperty {
+      /**
+       * The column name to be configured in partition spec.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-partitionfield.html#cfn-kinesisfirehose-deliverystream-partitionfield-sourcename)
+       */
+      override fun sourceName(): String = unwrap(this).getSourceName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PartitionFieldProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.PartitionFieldProperty):
+          PartitionFieldProperty = CdkObjectWrappers.wrap(cdkObject) as? PartitionFieldProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PartitionFieldProperty):
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.PartitionFieldProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.PartitionFieldProperty
+    }
+  }
+
+  /**
+   * Represents how to produce partition data for a table.
+   *
+   * Partition data is produced by transforming columns in a table. Each column transform is
+   * represented by a named `PartitionField` .
+   *
+   * Here is an example of the schema in JSON.
+   *
+   * `"partitionSpec": { "identity": [ {"sourceName": "column1"}, {"sourceName": "column2"},
+   * {"sourceName": "column3"} ] }`
+   *
+   * Amazon Data Firehose is in preview release and is subject to change.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
+   * PartitionSpecProperty partitionSpecProperty = PartitionSpecProperty.builder()
+   * .identity(List.of(PartitionFieldProperty.builder()
+   * .sourceName("sourceName")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-partitionspec.html)
+   */
+  public interface PartitionSpecProperty {
+    /**
+     * List of identity
+     * [transforms](https://docs.aws.amazon.com/https://iceberg.apache.org/spec/#partition-transforms)
+     * that performs an identity transformation. The transform takes the source value, and does not
+     * modify it. Result type is the source type.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-partitionspec.html#cfn-kinesisfirehose-deliverystream-partitionspec-identity)
+     */
+    public fun identity(): Any? = unwrap(this).getIdentity()
+
+    /**
+     * A builder for [PartitionSpecProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param identity List of identity
+       * [transforms](https://docs.aws.amazon.com/https://iceberg.apache.org/spec/#partition-transforms)
+       * that performs an identity transformation. The transform takes the source value, and does not
+       * modify it. Result type is the source type.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun identity(identity: IResolvable)
+
+      /**
+       * @param identity List of identity
+       * [transforms](https://docs.aws.amazon.com/https://iceberg.apache.org/spec/#partition-transforms)
+       * that performs an identity transformation. The transform takes the source value, and does not
+       * modify it. Result type is the source type.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun identity(identity: List<Any>)
+
+      /**
+       * @param identity List of identity
+       * [transforms](https://docs.aws.amazon.com/https://iceberg.apache.org/spec/#partition-transforms)
+       * that performs an identity transformation. The transform takes the source value, and does not
+       * modify it. Result type is the source type.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun identity(vararg identity: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.PartitionSpecProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.PartitionSpecProperty.builder()
+
+      /**
+       * @param identity List of identity
+       * [transforms](https://docs.aws.amazon.com/https://iceberg.apache.org/spec/#partition-transforms)
+       * that performs an identity transformation. The transform takes the source value, and does not
+       * modify it. Result type is the source type.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun identity(identity: IResolvable) {
+        cdkBuilder.identity(identity.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param identity List of identity
+       * [transforms](https://docs.aws.amazon.com/https://iceberg.apache.org/spec/#partition-transforms)
+       * that performs an identity transformation. The transform takes the source value, and does not
+       * modify it. Result type is the source type.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun identity(identity: List<Any>) {
+        cdkBuilder.identity(identity.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param identity List of identity
+       * [transforms](https://docs.aws.amazon.com/https://iceberg.apache.org/spec/#partition-transforms)
+       * that performs an identity transformation. The transform takes the source value, and does not
+       * modify it. Result type is the source type.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun identity(vararg identity: Any): Unit = identity(identity.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.PartitionSpecProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.PartitionSpecProperty,
+    ) : CdkObject(cdkObject),
+        PartitionSpecProperty {
+      /**
+       * List of identity
+       * [transforms](https://docs.aws.amazon.com/https://iceberg.apache.org/spec/#partition-transforms)
+       * that performs an identity transformation. The transform takes the source value, and does not
+       * modify it. Result type is the source type.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-partitionspec.html#cfn-kinesisfirehose-deliverystream-partitionspec-identity)
+       */
+      override fun identity(): Any? = unwrap(this).getIdentity()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PartitionSpecProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.PartitionSpecProperty):
+          PartitionSpecProperty = CdkObjectWrappers.wrap(cdkObject) as? PartitionSpecProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PartitionSpecProperty):
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.PartitionSpecProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.PartitionSpecProperty
     }
   }
 
@@ -15192,6 +15982,113 @@ public open class CfnDeliveryStream(
   }
 
   /**
+   * The configuration to enable schema evolution.
+   *
+   * Amazon Data Firehose is in preview release and is subject to change.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
+   * SchemaEvolutionConfigurationProperty schemaEvolutionConfigurationProperty =
+   * SchemaEvolutionConfigurationProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-schemaevolutionconfiguration.html)
+   */
+  public interface SchemaEvolutionConfigurationProperty {
+    /**
+     * Specify whether you want to enable schema evolution.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-schemaevolutionconfiguration.html#cfn-kinesisfirehose-deliverystream-schemaevolutionconfiguration-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [SchemaEvolutionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Specify whether you want to enable schema evolution.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specify whether you want to enable schema evolution.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SchemaEvolutionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SchemaEvolutionConfigurationProperty.builder()
+
+      /**
+       * @param enabled Specify whether you want to enable schema evolution.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Specify whether you want to enable schema evolution.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SchemaEvolutionConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SchemaEvolutionConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        SchemaEvolutionConfigurationProperty {
+      /**
+       * Specify whether you want to enable schema evolution.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-schemaevolutionconfiguration.html#cfn-kinesisfirehose-deliverystream-schemaevolutionconfiguration-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SchemaEvolutionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SchemaEvolutionConfigurationProperty):
+          SchemaEvolutionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SchemaEvolutionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SchemaEvolutionConfigurationProperty):
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SchemaEvolutionConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SchemaEvolutionConfigurationProperty
+    }
+  }
+
+  /**
    * The structure that defines how Firehose accesses the secret.
    *
    * Example:
@@ -15945,8 +16842,6 @@ public open class CfnDeliveryStream(
     public fun privateKey(): String? = unwrap(this).getPrivateKey()
 
     /**
-     * Specifies configuration for Snowflake.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-snowflakedestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-snowflakedestinationconfiguration-processingconfiguration)
      */
     public fun processingConfiguration(): Any? = unwrap(this).getProcessingConfiguration()
@@ -16134,17 +17029,17 @@ public open class CfnDeliveryStream(
       public fun privateKey(privateKey: String)
 
       /**
-       * @param processingConfiguration Specifies configuration for Snowflake.
+       * @param processingConfiguration the value to be set.
        */
       public fun processingConfiguration(processingConfiguration: IResolvable)
 
       /**
-       * @param processingConfiguration Specifies configuration for Snowflake.
+       * @param processingConfiguration the value to be set.
        */
       public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty)
 
       /**
-       * @param processingConfiguration Specifies configuration for Snowflake.
+       * @param processingConfiguration the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f4b7c9eba4d19077ec65fc84e44e03de2e061dd971541a78967a3eb994b65cfc")
@@ -16426,14 +17321,14 @@ public open class CfnDeliveryStream(
       }
 
       /**
-       * @param processingConfiguration Specifies configuration for Snowflake.
+       * @param processingConfiguration the value to be set.
        */
       override fun processingConfiguration(processingConfiguration: IResolvable) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param processingConfiguration Specifies configuration for Snowflake.
+       * @param processingConfiguration the value to be set.
        */
       override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
@@ -16441,7 +17336,7 @@ public open class CfnDeliveryStream(
       }
 
       /**
-       * @param processingConfiguration Specifies configuration for Snowflake.
+       * @param processingConfiguration the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f4b7c9eba4d19077ec65fc84e44e03de2e061dd971541a78967a3eb994b65cfc")
@@ -16727,8 +17622,6 @@ public open class CfnDeliveryStream(
       override fun privateKey(): String? = unwrap(this).getPrivateKey()
 
       /**
-       * Specifies configuration for Snowflake.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-snowflakedestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-snowflakedestinationconfiguration-processingconfiguration)
        */
       override fun processingConfiguration(): Any? = unwrap(this).getProcessingConfiguration()
@@ -18041,6 +18934,113 @@ public open class CfnDeliveryStream(
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkRetryOptionsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkRetryOptionsProperty
+    }
+  }
+
+  /**
+   * The configuration to enable automatic table creation.
+   *
+   * Amazon Data Firehose is in preview release and is subject to change.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
+   * TableCreationConfigurationProperty tableCreationConfigurationProperty =
+   * TableCreationConfigurationProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-tablecreationconfiguration.html)
+   */
+  public interface TableCreationConfigurationProperty {
+    /**
+     * Specify whether you want to enable automatic table creation.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-tablecreationconfiguration.html#cfn-kinesisfirehose-deliverystream-tablecreationconfiguration-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [TableCreationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Specify whether you want to enable automatic table creation.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specify whether you want to enable automatic table creation.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.TableCreationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.TableCreationConfigurationProperty.builder()
+
+      /**
+       * @param enabled Specify whether you want to enable automatic table creation.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Specify whether you want to enable automatic table creation.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.TableCreationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.TableCreationConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        TableCreationConfigurationProperty {
+      /**
+       * Specify whether you want to enable automatic table creation.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-tablecreationconfiguration.html#cfn-kinesisfirehose-deliverystream-tablecreationconfiguration-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          TableCreationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.TableCreationConfigurationProperty):
+          TableCreationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TableCreationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TableCreationConfigurationProperty):
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.TableCreationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.TableCreationConfigurationProperty
     }
   }
 

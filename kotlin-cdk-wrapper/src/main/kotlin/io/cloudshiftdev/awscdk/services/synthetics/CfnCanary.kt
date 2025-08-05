@@ -32,6 +32,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * load time data, screenshots of the UI, logs, and metrics. You can set up a canary to run
  * continuously or just once.
  *
+ * Canaries are automated scripts that run at specified intervals against an endpoint. They include
+ * Python or Node.js code to create a Lambda function. This code needs to be packaged in a certain way,
+ * depending on the language. For more information, see [Writing a canary
+ * script](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_WritingCanary.html)
+ * .
+ *
  * To create canaries, you must have the `CloudWatchSyntheticsFullAccess` policy. If you are
  * creating a new IAM role for the canary, you also need the the `iam:CreateRole` , `iam:CreatePolicy`
  * and `iam:AttachRolePolicy` permissions. For more information, see [Necessary Roles and
@@ -68,6 +74,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .expression("expression")
  * // the properties below are optional
  * .durationInSeconds("durationInSeconds")
+ * .retryConfig(RetryConfigProperty.builder()
+ * .maxRetries(123)
+ * .build())
  * .build())
  * // the properties below are optional
  * .artifactConfig(ArtifactConfigProperty.builder()
@@ -77,6 +86,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build())
  * .deleteLambdaResourcesOnCanaryDeletion(false)
+ * .dryRunAndUpdate(false)
  * .failureRetentionPeriod(123)
  * .provisionedResourceCleanup("provisionedResourceCleanup")
  * .resourcesToReplicateTags(List.of("resourcesToReplicateTags"))
@@ -84,6 +94,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .activeTracing(false)
  * .environmentVariables(Map.of(
  * "environmentVariablesKey", "environmentVariables"))
+ * .ephemeralStorage(123)
  * .memoryInMb(123)
  * .timeoutInSeconds(123)
  * .build())
@@ -106,6 +117,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .securityGroupIds(List.of("securityGroupIds"))
  * .subnetIds(List.of("subnetIds"))
  * // the properties below are optional
+ * .ipv6AllowedForDualStack(false)
  * .vpcId("vpcId")
  * .build())
  * .build();
@@ -247,6 +259,25 @@ public open class CfnCanary(
   @Deprecated(message = "deprecated in CDK")
   public open fun deleteLambdaResourcesOnCanaryDeletion(`value`: IResolvable) {
     unwrap(this).setDeleteLambdaResourcesOnCanaryDeletion(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Specifies whether to perform a dry run before updating the canary.
+   */
+  public open fun dryRunAndUpdate(): Any? = unwrap(this).getDryRunAndUpdate()
+
+  /**
+   * Specifies whether to perform a dry run before updating the canary.
+   */
+  public open fun dryRunAndUpdate(`value`: Boolean) {
+    unwrap(this).setDryRunAndUpdate(`value`)
+  }
+
+  /**
+   * Specifies whether to perform a dry run before updating the canary.
+   */
+  public open fun dryRunAndUpdate(`value`: IResolvable) {
+    unwrap(this).setDryRunAndUpdate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -639,6 +670,46 @@ public open class CfnCanary(
         fun deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion: IResolvable)
 
     /**
+     * Specifies whether to perform a dry run before updating the canary.
+     *
+     * If set to `true` , CloudFormation will execute a dry run to validate the changes before
+     * applying them to the canary. If the dry run succeeds, the canary will be updated with the
+     * changes. If the dry run fails, the CloudFormation deployment will fail with the dry run’s
+     * failure reason.
+     *
+     * If set to `false` or omitted, the canary will be updated directly without first performing a
+     * dry run. The default value is `false` .
+     *
+     * For more information, see [Performing safe canary
+     * updates](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/performing-safe-canary-upgrades.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-dryrunandupdate)
+     * @param dryRunAndUpdate Specifies whether to perform a dry run before updating the canary. 
+     */
+    public fun dryRunAndUpdate(dryRunAndUpdate: Boolean)
+
+    /**
+     * Specifies whether to perform a dry run before updating the canary.
+     *
+     * If set to `true` , CloudFormation will execute a dry run to validate the changes before
+     * applying them to the canary. If the dry run succeeds, the canary will be updated with the
+     * changes. If the dry run fails, the CloudFormation deployment will fail with the dry run’s
+     * failure reason.
+     *
+     * If set to `false` or omitted, the canary will be updated directly without first performing a
+     * dry run. The default value is `false` .
+     *
+     * For more information, see [Performing safe canary
+     * updates](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/performing-safe-canary-upgrades.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-dryrunandupdate)
+     * @param dryRunAndUpdate Specifies whether to perform a dry run before updating the canary. 
+     */
+    public fun dryRunAndUpdate(dryRunAndUpdate: IResolvable)
+
+    /**
      * The ARN of the IAM role to be used to run the canary.
      *
      * This role must already exist, and must include `lambda.amazonaws.com` as a principal in the
@@ -661,6 +732,10 @@ public open class CfnCanary(
      * The number of days to retain data about failed runs of this canary.
      *
      * If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
+     *
+     * This setting affects the range of information returned by
+     * [GetCanaryRuns](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_GetCanaryRuns.html)
+     * , as well as the range of information displayed in the Synthetics console.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-failureretentionperiod)
      * @param failureRetentionPeriod The number of days to retain data about failed runs of this
@@ -840,6 +915,10 @@ public open class CfnCanary(
      * The number of days to retain data about successful runs of this canary.
      *
      * If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
+     *
+     * This setting affects the range of information returned by
+     * [GetCanaryRuns](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_GetCanaryRuns.html)
+     * , as well as the range of information displayed in the Synthetics console.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-successretentionperiod)
      * @param successRetentionPeriod The number of days to retain data about successful runs of this
@@ -1082,6 +1161,50 @@ public open class CfnCanary(
     }
 
     /**
+     * Specifies whether to perform a dry run before updating the canary.
+     *
+     * If set to `true` , CloudFormation will execute a dry run to validate the changes before
+     * applying them to the canary. If the dry run succeeds, the canary will be updated with the
+     * changes. If the dry run fails, the CloudFormation deployment will fail with the dry run’s
+     * failure reason.
+     *
+     * If set to `false` or omitted, the canary will be updated directly without first performing a
+     * dry run. The default value is `false` .
+     *
+     * For more information, see [Performing safe canary
+     * updates](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/performing-safe-canary-upgrades.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-dryrunandupdate)
+     * @param dryRunAndUpdate Specifies whether to perform a dry run before updating the canary. 
+     */
+    override fun dryRunAndUpdate(dryRunAndUpdate: Boolean) {
+      cdkBuilder.dryRunAndUpdate(dryRunAndUpdate)
+    }
+
+    /**
+     * Specifies whether to perform a dry run before updating the canary.
+     *
+     * If set to `true` , CloudFormation will execute a dry run to validate the changes before
+     * applying them to the canary. If the dry run succeeds, the canary will be updated with the
+     * changes. If the dry run fails, the CloudFormation deployment will fail with the dry run’s
+     * failure reason.
+     *
+     * If set to `false` or omitted, the canary will be updated directly without first performing a
+     * dry run. The default value is `false` .
+     *
+     * For more information, see [Performing safe canary
+     * updates](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/performing-safe-canary-upgrades.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-dryrunandupdate)
+     * @param dryRunAndUpdate Specifies whether to perform a dry run before updating the canary. 
+     */
+    override fun dryRunAndUpdate(dryRunAndUpdate: IResolvable) {
+      cdkBuilder.dryRunAndUpdate(dryRunAndUpdate.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
      * The ARN of the IAM role to be used to run the canary.
      *
      * This role must already exist, and must include `lambda.amazonaws.com` as a principal in the
@@ -1106,6 +1229,10 @@ public open class CfnCanary(
      * The number of days to retain data about failed runs of this canary.
      *
      * If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
+     *
+     * This setting affects the range of information returned by
+     * [GetCanaryRuns](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_GetCanaryRuns.html)
+     * , as well as the range of information displayed in the Synthetics console.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-failureretentionperiod)
      * @param failureRetentionPeriod The number of days to retain data about failed runs of this
@@ -1310,6 +1437,10 @@ public open class CfnCanary(
      * The number of days to retain data about successful runs of this canary.
      *
      * If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
+     *
+     * This setting affects the range of information returned by
+     * [GetCanaryRuns](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_GetCanaryRuns.html)
+     * , as well as the range of information displayed in the Synthetics console.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-successretentionperiod)
      * @param successRetentionPeriod The number of days to retain data about successful runs of this
@@ -1829,7 +1960,7 @@ public open class CfnCanary(
     public fun s3Bucket(): String? = unwrap(this).getS3Bucket()
 
     /**
-     * The S3 key of your script.
+     * The Amazon S3 key of your script.
      *
      * For more information, see [Working with Amazon S3
      * Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html) .
@@ -1839,7 +1970,7 @@ public open class CfnCanary(
     public fun s3Key(): String? = unwrap(this).getS3Key()
 
     /**
-     * The S3 version ID of your script.
+     * The Amazon S3 version ID of your script.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3objectversion)
      */
@@ -1884,14 +2015,14 @@ public open class CfnCanary(
       public fun s3Bucket(s3Bucket: String)
 
       /**
-       * @param s3Key The S3 key of your script.
+       * @param s3Key The Amazon S3 key of your script.
        * For more information, see [Working with Amazon S3
        * Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html) .
        */
       public fun s3Key(s3Key: String)
 
       /**
-       * @param s3ObjectVersion The S3 version ID of your script.
+       * @param s3ObjectVersion The Amazon S3 version ID of your script.
        */
       public fun s3ObjectVersion(s3ObjectVersion: String)
 
@@ -1935,7 +2066,7 @@ public open class CfnCanary(
       }
 
       /**
-       * @param s3Key The S3 key of your script.
+       * @param s3Key The Amazon S3 key of your script.
        * For more information, see [Working with Amazon S3
        * Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html) .
        */
@@ -1944,7 +2075,7 @@ public open class CfnCanary(
       }
 
       /**
-       * @param s3ObjectVersion The S3 version ID of your script.
+       * @param s3ObjectVersion The Amazon S3 version ID of your script.
        */
       override fun s3ObjectVersion(s3ObjectVersion: String) {
         cdkBuilder.s3ObjectVersion(s3ObjectVersion)
@@ -1998,7 +2129,7 @@ public open class CfnCanary(
       override fun s3Bucket(): String? = unwrap(this).getS3Bucket()
 
       /**
-       * The S3 key of your script.
+       * The Amazon S3 key of your script.
        *
        * For more information, see [Working with Amazon S3
        * Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html) .
@@ -2008,7 +2139,7 @@ public open class CfnCanary(
       override fun s3Key(): String? = unwrap(this).getS3Key()
 
       /**
-       * The S3 version ID of your script.
+       * The Amazon S3 version ID of your script.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-s3objectversion)
        */
@@ -2049,6 +2180,93 @@ public open class CfnCanary(
   }
 
   /**
+   * The canary's retry configuration information.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.synthetics.*;
+   * RetryConfigProperty retryConfigProperty = RetryConfigProperty.builder()
+   * .maxRetries(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-retryconfig.html)
+   */
+  public interface RetryConfigProperty {
+    /**
+     * The maximum number of retries.
+     *
+     * The value must be less than or equal to two.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-retryconfig.html#cfn-synthetics-canary-retryconfig-maxretries)
+     */
+    public fun maxRetries(): Number
+
+    /**
+     * A builder for [RetryConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxRetries The maximum number of retries. 
+       * The value must be less than or equal to two.
+       */
+      public fun maxRetries(maxRetries: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.synthetics.CfnCanary.RetryConfigProperty.Builder =
+          software.amazon.awscdk.services.synthetics.CfnCanary.RetryConfigProperty.builder()
+
+      /**
+       * @param maxRetries The maximum number of retries. 
+       * The value must be less than or equal to two.
+       */
+      override fun maxRetries(maxRetries: Number) {
+        cdkBuilder.maxRetries(maxRetries)
+      }
+
+      public fun build(): software.amazon.awscdk.services.synthetics.CfnCanary.RetryConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.RetryConfigProperty,
+    ) : CdkObject(cdkObject),
+        RetryConfigProperty {
+      /**
+       * The maximum number of retries.
+       *
+       * The value must be less than or equal to two.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-retryconfig.html#cfn-synthetics-canary-retryconfig-maxretries)
+       */
+      override fun maxRetries(): Number = unwrap(this).getMaxRetries()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RetryConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.RetryConfigProperty):
+          RetryConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? RetryConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RetryConfigProperty):
+          software.amazon.awscdk.services.synthetics.CfnCanary.RetryConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.synthetics.CfnCanary.RetryConfigProperty
+    }
+  }
+
+  /**
    * A structure that contains input information for a canary run.
    *
    * This structure is required.
@@ -2063,6 +2281,7 @@ public open class CfnCanary(
    * .activeTracing(false)
    * .environmentVariables(Map.of(
    * "environmentVariablesKey", "environmentVariables"))
+   * .ephemeralStorage(123)
    * .memoryInMb(123)
    * .timeoutInSeconds(123)
    * .build();
@@ -2104,6 +2323,18 @@ public open class CfnCanary(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-runconfig.html#cfn-synthetics-canary-runconfig-environmentvariables)
      */
     public fun environmentVariables(): Any? = unwrap(this).getEnvironmentVariables()
+
+    /**
+     * Specifies the amount of ephemeral storage (in MB) to allocate for the canary run during
+     * execution.
+     *
+     * This temporary storage is used for storing canary run artifacts (which are uploaded to an
+     * Amazon S3 bucket at the end of the run), and any canary browser operations. This temporary
+     * storage is cleared after the run is completed. Default storage value is 1024 MB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-runconfig.html#cfn-synthetics-canary-runconfig-ephemeralstorage)
+     */
+    public fun ephemeralStorage(): Number? = unwrap(this).getEphemeralStorage()
 
     /**
      * The maximum amount of memory that the canary can use while running.
@@ -2173,7 +2404,7 @@ public open class CfnCanary(
        * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-runtime)
        * .
        */
-      public fun environmentVariables(environmentVariables: IResolvable)
+      public fun environmentVariables(environmentVariables: Map<String, String>)
 
       /**
        * @param environmentVariables Specifies the keys and values to use for any environment
@@ -2189,7 +2420,16 @@ public open class CfnCanary(
        * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-runtime)
        * .
        */
-      public fun environmentVariables(environmentVariables: Map<String, String>)
+      public fun environmentVariables(environmentVariables: IResolvable)
+
+      /**
+       * @param ephemeralStorage Specifies the amount of ephemeral storage (in MB) to allocate for
+       * the canary run during execution.
+       * This temporary storage is used for storing canary run artifacts (which are uploaded to an
+       * Amazon S3 bucket at the end of the run), and any canary browser operations. This temporary
+       * storage is cleared after the run is completed. Default storage value is 1024 MB.
+       */
+      public fun ephemeralStorage(ephemeralStorage: Number)
 
       /**
        * @param memoryInMb The maximum amount of memory that the canary can use while running.
@@ -2258,8 +2498,8 @@ public open class CfnCanary(
        * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-runtime)
        * .
        */
-      override fun environmentVariables(environmentVariables: IResolvable) {
-        cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
+      override fun environmentVariables(environmentVariables: Map<String, String>) {
+        cdkBuilder.environmentVariables(environmentVariables)
       }
 
       /**
@@ -2276,8 +2516,19 @@ public open class CfnCanary(
        * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-runtime)
        * .
        */
-      override fun environmentVariables(environmentVariables: Map<String, String>) {
-        cdkBuilder.environmentVariables(environmentVariables)
+      override fun environmentVariables(environmentVariables: IResolvable) {
+        cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ephemeralStorage Specifies the amount of ephemeral storage (in MB) to allocate for
+       * the canary run during execution.
+       * This temporary storage is used for storing canary run artifacts (which are uploaded to an
+       * Amazon S3 bucket at the end of the run), and any canary browser operations. This temporary
+       * storage is cleared after the run is completed. Default storage value is 1024 MB.
+       */
+      override fun ephemeralStorage(ephemeralStorage: Number) {
+        cdkBuilder.ephemeralStorage(ephemeralStorage)
       }
 
       /**
@@ -2341,6 +2592,18 @@ public open class CfnCanary(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-runconfig.html#cfn-synthetics-canary-runconfig-environmentvariables)
        */
       override fun environmentVariables(): Any? = unwrap(this).getEnvironmentVariables()
+
+      /**
+       * Specifies the amount of ephemeral storage (in MB) to allocate for the canary run during
+       * execution.
+       *
+       * This temporary storage is used for storing canary run artifacts (which are uploaded to an
+       * Amazon S3 bucket at the end of the run), and any canary browser operations. This temporary
+       * storage is cleared after the run is completed. Default storage value is 1024 MB.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-runconfig.html#cfn-synthetics-canary-runconfig-ephemeralstorage)
+       */
+      override fun ephemeralStorage(): Number? = unwrap(this).getEphemeralStorage()
 
       /**
        * The maximum amount of memory that the canary can use while running.
@@ -2532,6 +2795,9 @@ public open class CfnCanary(
    * .expression("expression")
    * // the properties below are optional
    * .durationInSeconds("durationInSeconds")
+   * .retryConfig(RetryConfigProperty.builder()
+   * .maxRetries(123)
+   * .build())
    * .build();
    * ```
    *
@@ -2573,6 +2839,13 @@ public open class CfnCanary(
     public fun expression(): String
 
     /**
+     * The canary's retry configuration information.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html#cfn-synthetics-canary-schedule-retryconfig)
+     */
+    public fun retryConfig(): Any? = unwrap(this).getRetryConfig()
+
+    /**
      * A builder for [ScheduleProperty]
      */
     @CdkDslMarker
@@ -2605,6 +2878,23 @@ public open class CfnCanary(
        * .
        */
       public fun expression(expression: String)
+
+      /**
+       * @param retryConfig The canary's retry configuration information.
+       */
+      public fun retryConfig(retryConfig: IResolvable)
+
+      /**
+       * @param retryConfig The canary's retry configuration information.
+       */
+      public fun retryConfig(retryConfig: RetryConfigProperty)
+
+      /**
+       * @param retryConfig The canary's retry configuration information.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3b83fed0cc7a7df047bdaab78d6172d318c5c403fea3b564b67c6f3e5a39c679")
+      public fun retryConfig(retryConfig: RetryConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2644,6 +2934,28 @@ public open class CfnCanary(
       override fun expression(expression: String) {
         cdkBuilder.expression(expression)
       }
+
+      /**
+       * @param retryConfig The canary's retry configuration information.
+       */
+      override fun retryConfig(retryConfig: IResolvable) {
+        cdkBuilder.retryConfig(retryConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param retryConfig The canary's retry configuration information.
+       */
+      override fun retryConfig(retryConfig: RetryConfigProperty) {
+        cdkBuilder.retryConfig(retryConfig.let(RetryConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param retryConfig The canary's retry configuration information.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3b83fed0cc7a7df047bdaab78d6172d318c5c403fea3b564b67c6f3e5a39c679")
+      override fun retryConfig(retryConfig: RetryConfigProperty.Builder.() -> Unit): Unit =
+          retryConfig(RetryConfigProperty(retryConfig))
 
       public fun build(): software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty =
           cdkBuilder.build()
@@ -2686,6 +2998,13 @@ public open class CfnCanary(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html#cfn-synthetics-canary-schedule-expression)
        */
       override fun expression(): String = unwrap(this).getExpression()
+
+      /**
+       * The canary's retry configuration information.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html#cfn-synthetics-canary-schedule-retryconfig)
+       */
+      override fun retryConfig(): Any? = unwrap(this).getRetryConfig()
     }
 
     public companion object {
@@ -2724,6 +3043,7 @@ public open class CfnCanary(
    * .securityGroupIds(List.of("securityGroupIds"))
    * .subnetIds(List.of("subnetIds"))
    * // the properties below are optional
+   * .ipv6AllowedForDualStack(false)
    * .vpcId("vpcId")
    * .build();
    * ```
@@ -2731,6 +3051,16 @@ public open class CfnCanary(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-vpcconfig.html)
    */
   public interface VPCConfigProperty {
+    /**
+     * Set this to `true` to allow outbound IPv6 traffic on VPC canaries that are connected to
+     * dual-stack subnets.
+     *
+     * The default is `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-vpcconfig.html#cfn-synthetics-canary-vpcconfig-ipv6allowedfordualstack)
+     */
+    public fun ipv6AllowedForDualStack(): Any? = unwrap(this).getIpv6AllowedForDualStack()
+
     /**
      * The IDs of the security groups for this canary.
      *
@@ -2757,6 +3087,20 @@ public open class CfnCanary(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param ipv6AllowedForDualStack Set this to `true` to allow outbound IPv6 traffic on VPC
+       * canaries that are connected to dual-stack subnets.
+       * The default is `false` .
+       */
+      public fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: Boolean)
+
+      /**
+       * @param ipv6AllowedForDualStack Set this to `true` to allow outbound IPv6 traffic on VPC
+       * canaries that are connected to dual-stack subnets.
+       * The default is `false` .
+       */
+      public fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: IResolvable)
+
       /**
        * @param securityGroupIds The IDs of the security groups for this canary. 
        */
@@ -2787,6 +3131,24 @@ public open class CfnCanary(
       private val cdkBuilder:
           software.amazon.awscdk.services.synthetics.CfnCanary.VPCConfigProperty.Builder =
           software.amazon.awscdk.services.synthetics.CfnCanary.VPCConfigProperty.builder()
+
+      /**
+       * @param ipv6AllowedForDualStack Set this to `true` to allow outbound IPv6 traffic on VPC
+       * canaries that are connected to dual-stack subnets.
+       * The default is `false` .
+       */
+      override fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: Boolean) {
+        cdkBuilder.ipv6AllowedForDualStack(ipv6AllowedForDualStack)
+      }
+
+      /**
+       * @param ipv6AllowedForDualStack Set this to `true` to allow outbound IPv6 traffic on VPC
+       * canaries that are connected to dual-stack subnets.
+       * The default is `false` .
+       */
+      override fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: IResolvable) {
+        cdkBuilder.ipv6AllowedForDualStack(ipv6AllowedForDualStack.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param securityGroupIds The IDs of the security groups for this canary. 
@@ -2828,6 +3190,16 @@ public open class CfnCanary(
       cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.VPCConfigProperty,
     ) : CdkObject(cdkObject),
         VPCConfigProperty {
+      /**
+       * Set this to `true` to allow outbound IPv6 traffic on VPC canaries that are connected to
+       * dual-stack subnets.
+       *
+       * The default is `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-vpcconfig.html#cfn-synthetics-canary-vpcconfig-ipv6allowedfordualstack)
+       */
+      override fun ipv6AllowedForDualStack(): Any? = unwrap(this).getIpv6AllowedForDualStack()
+
       /**
        * The IDs of the security groups for this canary.
        *

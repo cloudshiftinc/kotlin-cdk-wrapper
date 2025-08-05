@@ -36,6 +36,9 @@ import kotlin.jvm.JvmName
  * .enabled(false)
  * .idleTimeoutMinutes(123)
  * .build())
+ * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+ * .identityCenterInstanceArn("identityCenterInstanceArn")
+ * .build())
  * .imageConfiguration(ImageConfigurationInputProperty.builder()
  * .imageUri("imageUri")
  * .build())
@@ -77,6 +80,9 @@ import kotlin.jvm.JvmName
  * .enabled(false)
  * .encryptionKeyArn("encryptionKeyArn")
  * .build())
+ * .prometheusMonitoringConfiguration(PrometheusMonitoringConfigurationProperty.builder()
+ * .remoteWriteUrl("remoteWriteUrl")
+ * .build())
  * .s3MonitoringConfiguration(S3MonitoringConfigurationProperty.builder()
  * .encryptionKeyArn("encryptionKeyArn")
  * .logUri("logUri")
@@ -94,6 +100,10 @@ import kotlin.jvm.JvmName
  * .properties(Map.of(
  * "propertiesKey", "properties"))
  * .build()))
+ * .schedulerConfiguration(SchedulerConfigurationProperty.builder()
+ * .maxConcurrentRuns(123)
+ * .queueTimeoutMinutes(123)
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -131,6 +141,17 @@ public interface CfnApplicationProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-autostopconfiguration)
    */
   public fun autoStopConfiguration(): Any? = unwrap(this).getAutoStopConfiguration()
+
+  /**
+   * A configuration specification to be used when provisioning an application.
+   *
+   * A configuration consists of a classification, properties, and optional nested configurations. A
+   * classification refers to an application-specific configuration file. Properties are the settings
+   * you want to change in that file.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-identitycenterconfiguration)
+   */
+  public fun identityCenterConfiguration(): Any? = unwrap(this).getIdentityCenterConfiguration()
 
   /**
    * The image configuration applied to all worker types.
@@ -210,6 +231,15 @@ public interface CfnApplicationProps {
   public fun runtimeConfiguration(): Any? = unwrap(this).getRuntimeConfiguration()
 
   /**
+   * The scheduler configuration for batch and streaming jobs running on this application.
+   *
+   * Supported with release labels emr-7.0.0 and above.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-schedulerconfiguration)
+   */
+  public fun schedulerConfiguration(): Any? = unwrap(this).getSchedulerConfiguration()
+
+  /**
    * The tags assigned to the application.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-tags)
@@ -283,6 +313,37 @@ public interface CfnApplicationProps {
     @JvmName("500de897cc0a94d16dfca0ecba731277b538dc74743b3d5fc3facb0a078777c1")
     public
         fun autoStopConfiguration(autoStopConfiguration: CfnApplication.AutoStopConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * @param identityCenterConfiguration A configuration specification to be used when provisioning
+     * an application.
+     * A configuration consists of a classification, properties, and optional nested configurations.
+     * A classification refers to an application-specific configuration file. Properties are the
+     * settings you want to change in that file.
+     */
+    public fun identityCenterConfiguration(identityCenterConfiguration: IResolvable)
+
+    /**
+     * @param identityCenterConfiguration A configuration specification to be used when provisioning
+     * an application.
+     * A configuration consists of a classification, properties, and optional nested configurations.
+     * A classification refers to an application-specific configuration file. Properties are the
+     * settings you want to change in that file.
+     */
+    public
+        fun identityCenterConfiguration(identityCenterConfiguration: CfnApplication.IdentityCenterConfigurationProperty)
+
+    /**
+     * @param identityCenterConfiguration A configuration specification to be used when provisioning
+     * an application.
+     * A configuration consists of a classification, properties, and optional nested configurations.
+     * A classification refers to an application-specific configuration file. Properties are the
+     * settings you want to change in that file.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("38786173388fed0347b12746fa43ffbc022eebe3792631edb87eb3e525a9a436")
+    public
+        fun identityCenterConfiguration(identityCenterConfiguration: CfnApplication.IdentityCenterConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param imageConfiguration The image configuration applied to all worker types.
@@ -464,6 +525,31 @@ public interface CfnApplicationProps {
     public fun runtimeConfiguration(vararg runtimeConfiguration: Any)
 
     /**
+     * @param schedulerConfiguration The scheduler configuration for batch and streaming jobs
+     * running on this application.
+     * Supported with release labels emr-7.0.0 and above.
+     */
+    public fun schedulerConfiguration(schedulerConfiguration: IResolvable)
+
+    /**
+     * @param schedulerConfiguration The scheduler configuration for batch and streaming jobs
+     * running on this application.
+     * Supported with release labels emr-7.0.0 and above.
+     */
+    public
+        fun schedulerConfiguration(schedulerConfiguration: CfnApplication.SchedulerConfigurationProperty)
+
+    /**
+     * @param schedulerConfiguration The scheduler configuration for batch and streaming jobs
+     * running on this application.
+     * Supported with release labels emr-7.0.0 and above.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("98d60313c7445a72799510ca437b0171b994828d0d8353684e5b5cd4a5c86a16")
+    public
+        fun schedulerConfiguration(schedulerConfiguration: CfnApplication.SchedulerConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * @param tags The tags assigned to the application.
      */
     public fun tags(tags: List<CfnTag>)
@@ -556,6 +642,43 @@ public interface CfnApplicationProps {
         fun autoStopConfiguration(autoStopConfiguration: CfnApplication.AutoStopConfigurationProperty.Builder.() -> Unit):
         Unit =
         autoStopConfiguration(CfnApplication.AutoStopConfigurationProperty(autoStopConfiguration))
+
+    /**
+     * @param identityCenterConfiguration A configuration specification to be used when provisioning
+     * an application.
+     * A configuration consists of a classification, properties, and optional nested configurations.
+     * A classification refers to an application-specific configuration file. Properties are the
+     * settings you want to change in that file.
+     */
+    override fun identityCenterConfiguration(identityCenterConfiguration: IResolvable) {
+      cdkBuilder.identityCenterConfiguration(identityCenterConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param identityCenterConfiguration A configuration specification to be used when provisioning
+     * an application.
+     * A configuration consists of a classification, properties, and optional nested configurations.
+     * A classification refers to an application-specific configuration file. Properties are the
+     * settings you want to change in that file.
+     */
+    override
+        fun identityCenterConfiguration(identityCenterConfiguration: CfnApplication.IdentityCenterConfigurationProperty) {
+      cdkBuilder.identityCenterConfiguration(identityCenterConfiguration.let(CfnApplication.IdentityCenterConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param identityCenterConfiguration A configuration specification to be used when provisioning
+     * an application.
+     * A configuration consists of a classification, properties, and optional nested configurations.
+     * A classification refers to an application-specific configuration file. Properties are the
+     * settings you want to change in that file.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("38786173388fed0347b12746fa43ffbc022eebe3792631edb87eb3e525a9a436")
+    override
+        fun identityCenterConfiguration(identityCenterConfiguration: CfnApplication.IdentityCenterConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        identityCenterConfiguration(CfnApplication.IdentityCenterConfigurationProperty(identityCenterConfiguration))
 
     /**
      * @param imageConfiguration The image configuration applied to all worker types.
@@ -780,6 +903,37 @@ public interface CfnApplicationProps {
         runtimeConfiguration(runtimeConfiguration.toList())
 
     /**
+     * @param schedulerConfiguration The scheduler configuration for batch and streaming jobs
+     * running on this application.
+     * Supported with release labels emr-7.0.0 and above.
+     */
+    override fun schedulerConfiguration(schedulerConfiguration: IResolvable) {
+      cdkBuilder.schedulerConfiguration(schedulerConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param schedulerConfiguration The scheduler configuration for batch and streaming jobs
+     * running on this application.
+     * Supported with release labels emr-7.0.0 and above.
+     */
+    override
+        fun schedulerConfiguration(schedulerConfiguration: CfnApplication.SchedulerConfigurationProperty) {
+      cdkBuilder.schedulerConfiguration(schedulerConfiguration.let(CfnApplication.SchedulerConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param schedulerConfiguration The scheduler configuration for batch and streaming jobs
+     * running on this application.
+     * Supported with release labels emr-7.0.0 and above.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("98d60313c7445a72799510ca437b0171b994828d0d8353684e5b5cd4a5c86a16")
+    override
+        fun schedulerConfiguration(schedulerConfiguration: CfnApplication.SchedulerConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        schedulerConfiguration(CfnApplication.SchedulerConfigurationProperty(schedulerConfiguration))
+
+    /**
      * @param tags The tags assigned to the application.
      */
     override fun tags(tags: List<CfnTag>) {
@@ -841,6 +995,17 @@ public interface CfnApplicationProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-autostopconfiguration)
      */
     override fun autoStopConfiguration(): Any? = unwrap(this).getAutoStopConfiguration()
+
+    /**
+     * A configuration specification to be used when provisioning an application.
+     *
+     * A configuration consists of a classification, properties, and optional nested configurations.
+     * A classification refers to an application-specific configuration file. Properties are the
+     * settings you want to change in that file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-identitycenterconfiguration)
+     */
+    override fun identityCenterConfiguration(): Any? = unwrap(this).getIdentityCenterConfiguration()
 
     /**
      * The image configuration applied to all worker types.
@@ -919,6 +1084,15 @@ public interface CfnApplicationProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-runtimeconfiguration)
      */
     override fun runtimeConfiguration(): Any? = unwrap(this).getRuntimeConfiguration()
+
+    /**
+     * The scheduler configuration for batch and streaming jobs running on this application.
+     *
+     * Supported with release labels emr-7.0.0 and above.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-schedulerconfiguration)
+     */
+    override fun schedulerConfiguration(): Any? = unwrap(this).getSchedulerConfiguration()
 
     /**
      * The tags assigned to the application.

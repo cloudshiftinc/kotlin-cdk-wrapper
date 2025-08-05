@@ -26,6 +26,7 @@ import kotlin.Unit
  * .isTemplate(false)
  * // the properties below are optional
  * .assetPublishingRoleArn("assetPublishingRoleArn")
+ * .displayName("displayName")
  * .build();
  * ```
  */
@@ -59,6 +60,13 @@ public interface StackAsset {
    * Type of asset to publish.
    */
   public fun assetType(): AssetType
+
+  /**
+   * The display name of this asset.
+   *
+   * Default: - Use some generated string as display name
+   */
+  public fun displayName(): String? = unwrap(this).getDisplayName()
 
   /**
    * Does this asset represent the CloudFormation template for the stack.
@@ -98,6 +106,11 @@ public interface StackAsset {
      * @param assetType Type of asset to publish. 
      */
     public fun assetType(assetType: AssetType)
+
+    /**
+     * @param displayName The display name of this asset.
+     */
+    public fun displayName(displayName: String)
 
     /**
      * @param isTemplate Does this asset represent the CloudFormation template for the stack. 
@@ -147,6 +160,13 @@ public interface StackAsset {
     }
 
     /**
+     * @param displayName The display name of this asset.
+     */
+    override fun displayName(displayName: String) {
+      cdkBuilder.displayName(displayName)
+    }
+
+    /**
      * @param isTemplate Does this asset represent the CloudFormation template for the stack. 
      */
     override fun isTemplate(isTemplate: Boolean) {
@@ -189,6 +209,13 @@ public interface StackAsset {
      * Type of asset to publish.
      */
     override fun assetType(): AssetType = unwrap(this).getAssetType().let(AssetType::wrap)
+
+    /**
+     * The display name of this asset.
+     *
+     * Default: - Use some generated string as display name
+     */
+    override fun displayName(): String? = unwrap(this).getDisplayName()
 
     /**
      * Does this asset represent the CloudFormation template for the stack.

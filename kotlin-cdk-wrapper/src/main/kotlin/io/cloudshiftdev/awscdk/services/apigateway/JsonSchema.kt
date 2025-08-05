@@ -57,8 +57,7 @@ public interface JsonSchema {
   /**
    *
    */
-  public fun additionalItems(): List<JsonSchema> =
-      unwrap(this).getAdditionalItems()?.map(JsonSchema::wrap) ?: emptyList()
+  public fun additionalItems(): Any? = unwrap(this).getAdditionalItems()
 
   /**
    *
@@ -251,12 +250,19 @@ public interface JsonSchema {
     /**
      * @param additionalItems the value to be set.
      */
-    public fun additionalItems(additionalItems: List<JsonSchema>)
+    public fun additionalItems(additionalItems: Boolean)
 
     /**
      * @param additionalItems the value to be set.
      */
-    public fun additionalItems(vararg additionalItems: JsonSchema)
+    public fun additionalItems(additionalItems: JsonSchema)
+
+    /**
+     * @param additionalItems the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d2758a520c1ea2b3e21de65d7e50e31d56c3f389801d6a90595d0955e9397d59")
+    public fun additionalItems(additionalItems: Builder.() -> Unit)
 
     /**
      * @param additionalProperties the value to be set.
@@ -536,15 +542,24 @@ public interface JsonSchema {
     /**
      * @param additionalItems the value to be set.
      */
-    override fun additionalItems(additionalItems: List<JsonSchema>) {
-      cdkBuilder.additionalItems(additionalItems.map(JsonSchema.Companion::unwrap))
+    override fun additionalItems(additionalItems: Boolean) {
+      cdkBuilder.additionalItems(additionalItems)
     }
 
     /**
      * @param additionalItems the value to be set.
      */
-    override fun additionalItems(vararg additionalItems: JsonSchema): Unit =
-        additionalItems(additionalItems.toList())
+    override fun additionalItems(additionalItems: JsonSchema) {
+      cdkBuilder.additionalItems(additionalItems.let(JsonSchema.Companion::unwrap))
+    }
+
+    /**
+     * @param additionalItems the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d2758a520c1ea2b3e21de65d7e50e31d56c3f389801d6a90595d0955e9397d59")
+    override fun additionalItems(additionalItems: Builder.() -> Unit): Unit =
+        additionalItems(JsonSchema(additionalItems))
 
     /**
      * @param additionalProperties the value to be set.
@@ -906,8 +921,7 @@ public interface JsonSchema {
     /**
      *
      */
-    override fun additionalItems(): List<JsonSchema> =
-        unwrap(this).getAdditionalItems()?.map(JsonSchema::wrap) ?: emptyList()
+    override fun additionalItems(): Any? = unwrap(this).getAdditionalItems()
 
     /**
      *

@@ -8,6 +8,7 @@ public enum class FileSystemType(
   EXT3(software.amazon.awscdk.services.ecs.FileSystemType.EXT3),
   EXT4(software.amazon.awscdk.services.ecs.FileSystemType.EXT4),
   XFS(software.amazon.awscdk.services.ecs.FileSystemType.XFS),
+  NTFS(software.amazon.awscdk.services.ecs.FileSystemType.NTFS),
   ;
 
   public companion object {
@@ -16,6 +17,7 @@ public enum class FileSystemType(
       software.amazon.awscdk.services.ecs.FileSystemType.EXT3 -> FileSystemType.EXT3
       software.amazon.awscdk.services.ecs.FileSystemType.EXT4 -> FileSystemType.EXT4
       software.amazon.awscdk.services.ecs.FileSystemType.XFS -> FileSystemType.XFS
+      software.amazon.awscdk.services.ecs.FileSystemType.NTFS -> FileSystemType.NTFS
     }
 
     internal fun unwrap(wrapped: FileSystemType): software.amazon.awscdk.services.ecs.FileSystemType

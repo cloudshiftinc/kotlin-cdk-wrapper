@@ -89,6 +89,11 @@ public interface CfnSubscriptionProps {
    * * `MessageAttributes` (default) - The filter is applied on the message attributes.
    * * `MessageBody` - The filter is applied on the message body.
    *
+   *
+   * `Null` is not a valid value for `FilterPolicyScope` . To delete a filter policy, delete the
+   * `FilterPolicy` property but keep `FilterPolicyScope` property as is.
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-filterpolicyscope)
    */
   public fun filterPolicyScope(): String? = unwrap(this).getFilterPolicyScope()
@@ -220,6 +225,10 @@ public interface CfnSubscriptionProps {
      * the following string value types:.
      * * `MessageAttributes` (default) - The filter is applied on the message attributes.
      * * `MessageBody` - The filter is applied on the message body.
+     *
+     *
+     * `Null` is not a valid value for `FilterPolicyScope` . To delete a filter policy, delete the
+     * `FilterPolicy` property but keep `FilterPolicyScope` property as is.
      */
     public fun filterPolicyScope(filterPolicyScope: String)
 
@@ -348,6 +357,10 @@ public interface CfnSubscriptionProps {
      * the following string value types:.
      * * `MessageAttributes` (default) - The filter is applied on the message attributes.
      * * `MessageBody` - The filter is applied on the message body.
+     *
+     *
+     * `Null` is not a valid value for `FilterPolicyScope` . To delete a filter policy, delete the
+     * `FilterPolicy` property but keep `FilterPolicyScope` property as is.
      */
     override fun filterPolicyScope(filterPolicyScope: String) {
       cdkBuilder.filterPolicyScope(filterPolicyScope)
@@ -501,6 +514,11 @@ public interface CfnSubscriptionProps {
      *
      * * `MessageAttributes` (default) - The filter is applied on the message attributes.
      * * `MessageBody` - The filter is applied on the message body.
+     *
+     *
+     * `Null` is not a valid value for `FilterPolicyScope` . To delete a filter policy, delete the
+     * `FilterPolicy` property but keep `FilterPolicyScope` property as is.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-filterpolicyscope)
      */

@@ -280,14 +280,14 @@ public interface CfnLayerProps {
      * attributes.
      * To create a cluster layer, set the `EcsClusterArn` attribute to the cluster's ARN.
      */
-    public fun attributes(attributes: IResolvable)
+    public fun attributes(attributes: Map<String, String>)
 
     /**
      * @param attributes One or more user-defined key-value pairs to be added to the stack
      * attributes.
      * To create a cluster layer, set the `EcsClusterArn` attribute to the cluster's ARN.
      */
-    public fun attributes(attributes: Map<String, String>)
+    public fun attributes(attributes: IResolvable)
 
     /**
      * @param autoAssignElasticIps Whether to automatically assign an [Elastic IP
@@ -538,8 +538,8 @@ public interface CfnLayerProps {
      * attributes.
      * To create a cluster layer, set the `EcsClusterArn` attribute to the cluster's ARN.
      */
-    override fun attributes(attributes: IResolvable) {
-      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
+    override fun attributes(attributes: Map<String, String>) {
+      cdkBuilder.attributes(attributes)
     }
 
     /**
@@ -547,8 +547,8 @@ public interface CfnLayerProps {
      * attributes.
      * To create a cluster layer, set the `EcsClusterArn` attribute to the cluster's ARN.
      */
-    override fun attributes(attributes: Map<String, String>) {
-      cdkBuilder.attributes(attributes)
+    override fun attributes(attributes: IResolvable) {
+      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
     }
 
     /**

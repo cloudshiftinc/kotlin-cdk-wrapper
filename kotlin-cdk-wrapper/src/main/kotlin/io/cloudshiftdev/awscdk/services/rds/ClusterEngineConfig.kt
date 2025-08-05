@@ -23,6 +23,7 @@ import kotlin.jvm.JvmName
  * .features(ClusterEngineFeatures.builder()
  * .s3Export("s3Export")
  * .s3Import("s3Import")
+ * .serverlessV2AutoPauseSupported(false)
  * .build())
  * .parameterGroup(parameterGroup)
  * .port(123)

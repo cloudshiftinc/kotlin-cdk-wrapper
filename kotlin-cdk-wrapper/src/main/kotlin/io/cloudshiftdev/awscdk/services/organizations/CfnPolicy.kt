@@ -27,7 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * If the request includes tags, then the requester must have the `organizations:TagResource`
  * permission.
  *
- * This operation can be called only from the organization's management account.
+ * This operation can be called only from the organization's management account or a member account
+ * designated as a delegated administrator.
  *
  *
  * Before you can create a policy of a given type, you must first [enable that policy
@@ -228,9 +229,11 @@ public open class CfnPolicy(
      * policy document:
      *
      * * Service control policies: 5,120 characters
+     * * Resource control policies: 5,120 characters
+     * * Declarative policies: 10,000 characters
      * * Backup policies: 10,000 characters
      * * Tag policies: 10,000 characters
-     * * Chatbot policies: 10,000 characters
+     * * Chat applications policies: 10,000 characters
      * * AI services opt-out policies: 2,500 characters
      *
      * For more information about Organizations service quotas, see [Quotas for AWS
@@ -387,9 +390,11 @@ public open class CfnPolicy(
      * policy document:
      *
      * * Service control policies: 5,120 characters
+     * * Resource control policies: 5,120 characters
+     * * Declarative policies: 10,000 characters
      * * Backup policies: 10,000 characters
      * * Tag policies: 10,000 characters
-     * * Chatbot policies: 10,000 characters
+     * * Chat applications policies: 10,000 characters
      * * AI services opt-out policies: 2,500 characters
      *
      * For more information about Organizations service quotas, see [Quotas for AWS

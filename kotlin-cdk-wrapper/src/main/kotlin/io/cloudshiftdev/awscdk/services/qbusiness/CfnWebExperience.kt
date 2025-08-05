@@ -32,6 +32,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnWebExperience cfnWebExperience = CfnWebExperience.Builder.create(this, "MyCfnWebExperience")
  * .applicationId("applicationId")
  * // the properties below are optional
+ * .browserExtensionConfiguration(BrowserExtensionConfigurationProperty.builder()
+ * .enabledBrowserExtensions(List.of("enabledBrowserExtensions"))
+ * .build())
  * .customizationConfiguration(CustomizationConfigurationProperty.builder()
  * .customCssUrl("customCssUrl")
  * .faviconUrl("faviconUrl")
@@ -128,32 +131,65 @@ public open class CfnWebExperience(
   public open fun attrWebExperienceId(): String = unwrap(this).getAttrWebExperienceId()
 
   /**
+   * The container for browser extension configuration for an Amazon Q Business web experience.
+   */
+  public open fun browserExtensionConfiguration(): Any? =
+      unwrap(this).getBrowserExtensionConfiguration()
+
+  /**
+   * The container for browser extension configuration for an Amazon Q Business web experience.
+   */
+  public open fun browserExtensionConfiguration(`value`: IResolvable) {
+    unwrap(this).setBrowserExtensionConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The container for browser extension configuration for an Amazon Q Business web experience.
+   */
+  public open fun browserExtensionConfiguration(`value`: BrowserExtensionConfigurationProperty) {
+    unwrap(this).setBrowserExtensionConfiguration(`value`.let(BrowserExtensionConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The container for browser extension configuration for an Amazon Q Business web experience.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("a50ee576a82d3cec2a60e85afd6b7f31f3443f613b98afca837e26b12b93c46e")
+  public open
+      fun browserExtensionConfiguration(`value`: BrowserExtensionConfigurationProperty.Builder.() -> Unit):
+      Unit = browserExtensionConfiguration(BrowserExtensionConfigurationProperty(`value`))
+
+  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun cdkTagManager(): TagManager =
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
-   *
+   * Contains the configuration information to customize the logo, font, and color of an Amazon Q
+   * Business web experience with individual files for each property or a CSS file for them all.
    */
   public open fun customizationConfiguration(): Any? = unwrap(this).getCustomizationConfiguration()
 
   /**
-   *
+   * Contains the configuration information to customize the logo, font, and color of an Amazon Q
+   * Business web experience with individual files for each property or a CSS file for them all.
    */
   public open fun customizationConfiguration(`value`: IResolvable) {
     unwrap(this).setCustomizationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   *
+   * Contains the configuration information to customize the logo, font, and color of an Amazon Q
+   * Business web experience with individual files for each property or a CSS file for them all.
    */
   public open fun customizationConfiguration(`value`: CustomizationConfigurationProperty) {
     unwrap(this).setCustomizationConfiguration(`value`.let(CustomizationConfigurationProperty.Companion::unwrap))
   }
 
   /**
-   *
+   * Contains the configuration information to customize the logo, font, and color of an Amazon Q
+   * Business web experience with individual files for each property or a CSS file for them all.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("cd438925c058fb89b57a1002e11dd96013916d4e20da8cc90a9451bd77858c2d")
@@ -311,21 +347,67 @@ public open class CfnWebExperience(
     public fun applicationId(applicationId: String)
 
     /**
+     * The container for browser extension configuration for an Amazon Q Business web experience.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-browserextensionconfiguration)
+     * @param browserExtensionConfiguration The container for browser extension configuration for an
+     * Amazon Q Business web experience. 
+     */
+    public fun browserExtensionConfiguration(browserExtensionConfiguration: IResolvable)
+
+    /**
+     * The container for browser extension configuration for an Amazon Q Business web experience.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-browserextensionconfiguration)
+     * @param browserExtensionConfiguration The container for browser extension configuration for an
+     * Amazon Q Business web experience. 
+     */
+    public
+        fun browserExtensionConfiguration(browserExtensionConfiguration: BrowserExtensionConfigurationProperty)
+
+    /**
+     * The container for browser extension configuration for an Amazon Q Business web experience.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-browserextensionconfiguration)
+     * @param browserExtensionConfiguration The container for browser extension configuration for an
+     * Amazon Q Business web experience. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e845ddd776caadfa2dfddc4bf239ef1bc46fcece2a55b462c8ecd81b2b01b702")
+    public
+        fun browserExtensionConfiguration(browserExtensionConfiguration: BrowserExtensionConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * Contains the configuration information to customize the logo, font, and color of an Amazon Q
+     * Business web experience with individual files for each property or a CSS file for them all.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-customizationconfiguration)
-     * @param customizationConfiguration 
+     * @param customizationConfiguration Contains the configuration information to customize the
+     * logo, font, and color of an Amazon Q Business web experience with individual files for each
+     * property or a CSS file for them all. 
      */
     public fun customizationConfiguration(customizationConfiguration: IResolvable)
 
     /**
+     * Contains the configuration information to customize the logo, font, and color of an Amazon Q
+     * Business web experience with individual files for each property or a CSS file for them all.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-customizationconfiguration)
-     * @param customizationConfiguration 
+     * @param customizationConfiguration Contains the configuration information to customize the
+     * logo, font, and color of an Amazon Q Business web experience with individual files for each
+     * property or a CSS file for them all. 
      */
     public
         fun customizationConfiguration(customizationConfiguration: CustomizationConfigurationProperty)
 
     /**
+     * Contains the configuration information to customize the logo, font, and color of an Amazon Q
+     * Business web experience with individual files for each property or a CSS file for them all.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-customizationconfiguration)
-     * @param customizationConfiguration 
+     * @param customizationConfiguration Contains the configuration information to customize the
+     * logo, font, and color of an Amazon Q Business web experience with individual files for each
+     * property or a CSS file for them all. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5e091b886c1d83980f87f168f9f54ac61e4317268adf9472b32d5730d4dffa1b")
@@ -493,16 +575,63 @@ public open class CfnWebExperience(
     }
 
     /**
+     * The container for browser extension configuration for an Amazon Q Business web experience.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-browserextensionconfiguration)
+     * @param browserExtensionConfiguration The container for browser extension configuration for an
+     * Amazon Q Business web experience. 
+     */
+    override fun browserExtensionConfiguration(browserExtensionConfiguration: IResolvable) {
+      cdkBuilder.browserExtensionConfiguration(browserExtensionConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The container for browser extension configuration for an Amazon Q Business web experience.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-browserextensionconfiguration)
+     * @param browserExtensionConfiguration The container for browser extension configuration for an
+     * Amazon Q Business web experience. 
+     */
+    override
+        fun browserExtensionConfiguration(browserExtensionConfiguration: BrowserExtensionConfigurationProperty) {
+      cdkBuilder.browserExtensionConfiguration(browserExtensionConfiguration.let(BrowserExtensionConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The container for browser extension configuration for an Amazon Q Business web experience.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-browserextensionconfiguration)
+     * @param browserExtensionConfiguration The container for browser extension configuration for an
+     * Amazon Q Business web experience. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e845ddd776caadfa2dfddc4bf239ef1bc46fcece2a55b462c8ecd81b2b01b702")
+    override
+        fun browserExtensionConfiguration(browserExtensionConfiguration: BrowserExtensionConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        browserExtensionConfiguration(BrowserExtensionConfigurationProperty(browserExtensionConfiguration))
+
+    /**
+     * Contains the configuration information to customize the logo, font, and color of an Amazon Q
+     * Business web experience with individual files for each property or a CSS file for them all.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-customizationconfiguration)
-     * @param customizationConfiguration 
+     * @param customizationConfiguration Contains the configuration information to customize the
+     * logo, font, and color of an Amazon Q Business web experience with individual files for each
+     * property or a CSS file for them all. 
      */
     override fun customizationConfiguration(customizationConfiguration: IResolvable) {
       cdkBuilder.customizationConfiguration(customizationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
+     * Contains the configuration information to customize the logo, font, and color of an Amazon Q
+     * Business web experience with individual files for each property or a CSS file for them all.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-customizationconfiguration)
-     * @param customizationConfiguration 
+     * @param customizationConfiguration Contains the configuration information to customize the
+     * logo, font, and color of an Amazon Q Business web experience with individual files for each
+     * property or a CSS file for them all. 
      */
     override
         fun customizationConfiguration(customizationConfiguration: CustomizationConfigurationProperty) {
@@ -510,8 +639,13 @@ public open class CfnWebExperience(
     }
 
     /**
+     * Contains the configuration information to customize the logo, font, and color of an Amazon Q
+     * Business web experience with individual files for each property or a CSS file for them all.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-customizationconfiguration)
-     * @param customizationConfiguration 
+     * @param customizationConfiguration Contains the configuration information to customize the
+     * logo, font, and color of an Amazon Q Business web experience with individual files for each
+     * property or a CSS file for them all. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5e091b886c1d83980f87f168f9f54ac61e4317268adf9472b32d5730d4dffa1b")
@@ -708,6 +842,142 @@ public open class CfnWebExperience(
   }
 
   /**
+   * The container for browser extension configuration for an Amazon Q Business web experience.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.qbusiness.*;
+   * BrowserExtensionConfigurationProperty browserExtensionConfigurationProperty =
+   * BrowserExtensionConfigurationProperty.builder()
+   * .enabledBrowserExtensions(List.of("enabledBrowserExtensions"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-browserextensionconfiguration.html)
+   */
+  public interface BrowserExtensionConfigurationProperty {
+    /**
+     * Specify the browser extensions allowed for your Amazon Q web experience.
+     *
+     * * `CHROME` — Enables the extension for Chromium-based browsers (Google Chrome, Microsoft
+     * Edge, Opera, etc.).
+     * * `FIREFOX` — Enables the extension for Mozilla Firefox.
+     * * `CHROME` and `FIREFOX` — Enable the extension for Chromium-based browsers and Mozilla
+     * Firefox.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-browserextensionconfiguration.html#cfn-qbusiness-webexperience-browserextensionconfiguration-enabledbrowserextensions)
+     */
+    public fun enabledBrowserExtensions(): List<String>
+
+    /**
+     * A builder for [BrowserExtensionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabledBrowserExtensions Specify the browser extensions allowed for your Amazon Q
+       * web experience. 
+       * * `CHROME` — Enables the extension for Chromium-based browsers (Google Chrome, Microsoft
+       * Edge, Opera, etc.).
+       * * `FIREFOX` — Enables the extension for Mozilla Firefox.
+       * * `CHROME` and `FIREFOX` — Enable the extension for Chromium-based browsers and Mozilla
+       * Firefox.
+       */
+      public fun enabledBrowserExtensions(enabledBrowserExtensions: List<String>)
+
+      /**
+       * @param enabledBrowserExtensions Specify the browser extensions allowed for your Amazon Q
+       * web experience. 
+       * * `CHROME` — Enables the extension for Chromium-based browsers (Google Chrome, Microsoft
+       * Edge, Opera, etc.).
+       * * `FIREFOX` — Enables the extension for Mozilla Firefox.
+       * * `CHROME` and `FIREFOX` — Enable the extension for Chromium-based browsers and Mozilla
+       * Firefox.
+       */
+      public fun enabledBrowserExtensions(vararg enabledBrowserExtensions: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.BrowserExtensionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.BrowserExtensionConfigurationProperty.builder()
+
+      /**
+       * @param enabledBrowserExtensions Specify the browser extensions allowed for your Amazon Q
+       * web experience. 
+       * * `CHROME` — Enables the extension for Chromium-based browsers (Google Chrome, Microsoft
+       * Edge, Opera, etc.).
+       * * `FIREFOX` — Enables the extension for Mozilla Firefox.
+       * * `CHROME` and `FIREFOX` — Enable the extension for Chromium-based browsers and Mozilla
+       * Firefox.
+       */
+      override fun enabledBrowserExtensions(enabledBrowserExtensions: List<String>) {
+        cdkBuilder.enabledBrowserExtensions(enabledBrowserExtensions)
+      }
+
+      /**
+       * @param enabledBrowserExtensions Specify the browser extensions allowed for your Amazon Q
+       * web experience. 
+       * * `CHROME` — Enables the extension for Chromium-based browsers (Google Chrome, Microsoft
+       * Edge, Opera, etc.).
+       * * `FIREFOX` — Enables the extension for Mozilla Firefox.
+       * * `CHROME` and `FIREFOX` — Enable the extension for Chromium-based browsers and Mozilla
+       * Firefox.
+       */
+      override fun enabledBrowserExtensions(vararg enabledBrowserExtensions: String): Unit =
+          enabledBrowserExtensions(enabledBrowserExtensions.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.BrowserExtensionConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.qbusiness.CfnWebExperience.BrowserExtensionConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        BrowserExtensionConfigurationProperty {
+      /**
+       * Specify the browser extensions allowed for your Amazon Q web experience.
+       *
+       * * `CHROME` — Enables the extension for Chromium-based browsers (Google Chrome, Microsoft
+       * Edge, Opera, etc.).
+       * * `FIREFOX` — Enables the extension for Mozilla Firefox.
+       * * `CHROME` and `FIREFOX` — Enable the extension for Chromium-based browsers and Mozilla
+       * Firefox.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-browserextensionconfiguration.html#cfn-qbusiness-webexperience-browserextensionconfiguration-enabledbrowserextensions)
+       */
+      override fun enabledBrowserExtensions(): List<String> =
+          unwrap(this).getEnabledBrowserExtensions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BrowserExtensionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.qbusiness.CfnWebExperience.BrowserExtensionConfigurationProperty):
+          BrowserExtensionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BrowserExtensionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BrowserExtensionConfigurationProperty):
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.BrowserExtensionConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.BrowserExtensionConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains the configuration information to customize the logo, font, and color of an Amazon Q
+   * Business web experience with individual files for each property or a CSS file for them all.
+   *
    * Example:
    *
    * ```
@@ -727,21 +997,29 @@ public open class CfnWebExperience(
    */
   public interface CustomizationConfigurationProperty {
     /**
+     * Provides the URL where the custom CSS file is hosted for an Amazon Q web experience.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html#cfn-qbusiness-webexperience-customizationconfiguration-customcssurl)
      */
     public fun customCssUrl(): String? = unwrap(this).getCustomCssUrl()
 
     /**
+     * Provides the URL where the custom favicon file is hosted for an Amazon Q web experience.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html#cfn-qbusiness-webexperience-customizationconfiguration-faviconurl)
      */
     public fun faviconUrl(): String? = unwrap(this).getFaviconUrl()
 
     /**
+     * Provides the URL where the custom font file is hosted for an Amazon Q web experience.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html#cfn-qbusiness-webexperience-customizationconfiguration-fonturl)
      */
     public fun fontUrl(): String? = unwrap(this).getFontUrl()
 
     /**
+     * Provides the URL where the custom logo file is hosted for an Amazon Q web experience.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html#cfn-qbusiness-webexperience-customizationconfiguration-logourl)
      */
     public fun logoUrl(): String? = unwrap(this).getLogoUrl()
@@ -752,22 +1030,26 @@ public open class CfnWebExperience(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param customCssUrl the value to be set.
+       * @param customCssUrl Provides the URL where the custom CSS file is hosted for an Amazon Q
+       * web experience.
        */
       public fun customCssUrl(customCssUrl: String)
 
       /**
-       * @param faviconUrl the value to be set.
+       * @param faviconUrl Provides the URL where the custom favicon file is hosted for an Amazon Q
+       * web experience.
        */
       public fun faviconUrl(faviconUrl: String)
 
       /**
-       * @param fontUrl the value to be set.
+       * @param fontUrl Provides the URL where the custom font file is hosted for an Amazon Q web
+       * experience.
        */
       public fun fontUrl(fontUrl: String)
 
       /**
-       * @param logoUrl the value to be set.
+       * @param logoUrl Provides the URL where the custom logo file is hosted for an Amazon Q web
+       * experience.
        */
       public fun logoUrl(logoUrl: String)
     }
@@ -779,28 +1061,32 @@ public open class CfnWebExperience(
           software.amazon.awscdk.services.qbusiness.CfnWebExperience.CustomizationConfigurationProperty.builder()
 
       /**
-       * @param customCssUrl the value to be set.
+       * @param customCssUrl Provides the URL where the custom CSS file is hosted for an Amazon Q
+       * web experience.
        */
       override fun customCssUrl(customCssUrl: String) {
         cdkBuilder.customCssUrl(customCssUrl)
       }
 
       /**
-       * @param faviconUrl the value to be set.
+       * @param faviconUrl Provides the URL where the custom favicon file is hosted for an Amazon Q
+       * web experience.
        */
       override fun faviconUrl(faviconUrl: String) {
         cdkBuilder.faviconUrl(faviconUrl)
       }
 
       /**
-       * @param fontUrl the value to be set.
+       * @param fontUrl Provides the URL where the custom font file is hosted for an Amazon Q web
+       * experience.
        */
       override fun fontUrl(fontUrl: String) {
         cdkBuilder.fontUrl(fontUrl)
       }
 
       /**
-       * @param logoUrl the value to be set.
+       * @param logoUrl Provides the URL where the custom logo file is hosted for an Amazon Q web
+       * experience.
        */
       override fun logoUrl(logoUrl: String) {
         cdkBuilder.logoUrl(logoUrl)
@@ -816,21 +1102,29 @@ public open class CfnWebExperience(
     ) : CdkObject(cdkObject),
         CustomizationConfigurationProperty {
       /**
+       * Provides the URL where the custom CSS file is hosted for an Amazon Q web experience.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html#cfn-qbusiness-webexperience-customizationconfiguration-customcssurl)
        */
       override fun customCssUrl(): String? = unwrap(this).getCustomCssUrl()
 
       /**
+       * Provides the URL where the custom favicon file is hosted for an Amazon Q web experience.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html#cfn-qbusiness-webexperience-customizationconfiguration-faviconurl)
        */
       override fun faviconUrl(): String? = unwrap(this).getFaviconUrl()
 
       /**
+       * Provides the URL where the custom font file is hosted for an Amazon Q web experience.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html#cfn-qbusiness-webexperience-customizationconfiguration-fonturl)
        */
       override fun fontUrl(): String? = unwrap(this).getFontUrl()
 
       /**
+       * Provides the URL where the custom logo file is hosted for an Amazon Q web experience.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html#cfn-qbusiness-webexperience-customizationconfiguration-logourl)
        */
       override fun logoUrl(): String? = unwrap(this).getLogoUrl()
@@ -881,11 +1175,17 @@ public open class CfnWebExperience(
    */
   public interface IdentityProviderConfigurationProperty {
     /**
+     * The OIDC-compliant identity provider (IdP) used to authenticate end users of an Amazon Q
+     * Business web experience.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-identityproviderconfiguration.html#cfn-qbusiness-webexperience-identityproviderconfiguration-openidconnectconfiguration)
      */
     public fun openIdConnectConfiguration(): Any? = unwrap(this).getOpenIdConnectConfiguration()
 
     /**
+     * The SAML 2.0-compliant identity provider (IdP) used to authenticate end users of an Amazon Q
+     * Business web experience.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-identityproviderconfiguration.html#cfn-qbusiness-webexperience-identityproviderconfiguration-samlconfiguration)
      */
     public fun samlConfiguration(): Any? = unwrap(this).getSamlConfiguration()
@@ -896,18 +1196,21 @@ public open class CfnWebExperience(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param openIdConnectConfiguration the value to be set.
+       * @param openIdConnectConfiguration The OIDC-compliant identity provider (IdP) used to
+       * authenticate end users of an Amazon Q Business web experience.
        */
       public fun openIdConnectConfiguration(openIdConnectConfiguration: IResolvable)
 
       /**
-       * @param openIdConnectConfiguration the value to be set.
+       * @param openIdConnectConfiguration The OIDC-compliant identity provider (IdP) used to
+       * authenticate end users of an Amazon Q Business web experience.
        */
       public
           fun openIdConnectConfiguration(openIdConnectConfiguration: OpenIDConnectProviderConfigurationProperty)
 
       /**
-       * @param openIdConnectConfiguration the value to be set.
+       * @param openIdConnectConfiguration The OIDC-compliant identity provider (IdP) used to
+       * authenticate end users of an Amazon Q Business web experience.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2a5e15aacb6e057d775f92d0dea96c2517fb15bad90a175296f59f1b6e7d293c")
@@ -915,17 +1218,20 @@ public open class CfnWebExperience(
           fun openIdConnectConfiguration(openIdConnectConfiguration: OpenIDConnectProviderConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param samlConfiguration the value to be set.
+       * @param samlConfiguration The SAML 2.0-compliant identity provider (IdP) used to
+       * authenticate end users of an Amazon Q Business web experience.
        */
       public fun samlConfiguration(samlConfiguration: IResolvable)
 
       /**
-       * @param samlConfiguration the value to be set.
+       * @param samlConfiguration The SAML 2.0-compliant identity provider (IdP) used to
+       * authenticate end users of an Amazon Q Business web experience.
        */
       public fun samlConfiguration(samlConfiguration: SamlProviderConfigurationProperty)
 
       /**
-       * @param samlConfiguration the value to be set.
+       * @param samlConfiguration The SAML 2.0-compliant identity provider (IdP) used to
+       * authenticate end users of an Amazon Q Business web experience.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a6826baa48b87c9780151c121965349b66056e067eb48f76d86201bd065e3909")
@@ -940,14 +1246,16 @@ public open class CfnWebExperience(
           software.amazon.awscdk.services.qbusiness.CfnWebExperience.IdentityProviderConfigurationProperty.builder()
 
       /**
-       * @param openIdConnectConfiguration the value to be set.
+       * @param openIdConnectConfiguration The OIDC-compliant identity provider (IdP) used to
+       * authenticate end users of an Amazon Q Business web experience.
        */
       override fun openIdConnectConfiguration(openIdConnectConfiguration: IResolvable) {
         cdkBuilder.openIdConnectConfiguration(openIdConnectConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param openIdConnectConfiguration the value to be set.
+       * @param openIdConnectConfiguration The OIDC-compliant identity provider (IdP) used to
+       * authenticate end users of an Amazon Q Business web experience.
        */
       override
           fun openIdConnectConfiguration(openIdConnectConfiguration: OpenIDConnectProviderConfigurationProperty) {
@@ -955,7 +1263,8 @@ public open class CfnWebExperience(
       }
 
       /**
-       * @param openIdConnectConfiguration the value to be set.
+       * @param openIdConnectConfiguration The OIDC-compliant identity provider (IdP) used to
+       * authenticate end users of an Amazon Q Business web experience.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2a5e15aacb6e057d775f92d0dea96c2517fb15bad90a175296f59f1b6e7d293c")
@@ -965,21 +1274,24 @@ public open class CfnWebExperience(
           openIdConnectConfiguration(OpenIDConnectProviderConfigurationProperty(openIdConnectConfiguration))
 
       /**
-       * @param samlConfiguration the value to be set.
+       * @param samlConfiguration The SAML 2.0-compliant identity provider (IdP) used to
+       * authenticate end users of an Amazon Q Business web experience.
        */
       override fun samlConfiguration(samlConfiguration: IResolvable) {
         cdkBuilder.samlConfiguration(samlConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param samlConfiguration the value to be set.
+       * @param samlConfiguration The SAML 2.0-compliant identity provider (IdP) used to
+       * authenticate end users of an Amazon Q Business web experience.
        */
       override fun samlConfiguration(samlConfiguration: SamlProviderConfigurationProperty) {
         cdkBuilder.samlConfiguration(samlConfiguration.let(SamlProviderConfigurationProperty.Companion::unwrap))
       }
 
       /**
-       * @param samlConfiguration the value to be set.
+       * @param samlConfiguration The SAML 2.0-compliant identity provider (IdP) used to
+       * authenticate end users of an Amazon Q Business web experience.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a6826baa48b87c9780151c121965349b66056e067eb48f76d86201bd065e3909")
@@ -997,11 +1309,17 @@ public open class CfnWebExperience(
     ) : CdkObject(cdkObject),
         IdentityProviderConfigurationProperty {
       /**
+       * The OIDC-compliant identity provider (IdP) used to authenticate end users of an Amazon Q
+       * Business web experience.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-identityproviderconfiguration.html#cfn-qbusiness-webexperience-identityproviderconfiguration-openidconnectconfiguration)
        */
       override fun openIdConnectConfiguration(): Any? = unwrap(this).getOpenIdConnectConfiguration()
 
       /**
+       * The SAML 2.0-compliant identity provider (IdP) used to authenticate end users of an Amazon
+       * Q Business web experience.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-identityproviderconfiguration.html#cfn-qbusiness-webexperience-identityproviderconfiguration-samlconfiguration)
        */
       override fun samlConfiguration(): Any? = unwrap(this).getSamlConfiguration()

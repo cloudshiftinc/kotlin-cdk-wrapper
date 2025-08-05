@@ -27,8 +27,11 @@ import kotlin.jvm.JvmName
  * .name("name")
  * // the properties below are optional
  * .description("description")
+ * .domainVersion("domainVersion")
  * .kmsKeyIdentifier("kmsKeyIdentifier")
+ * .serviceRole("serviceRole")
  * .singleSignOn(SingleSignOnProperty.builder()
+ * .idcInstanceArn("idcInstanceArn")
  * .type("type")
  * .userAssignment("userAssignment")
  * .build())
@@ -59,6 +62,13 @@ public interface CfnDomainProps {
   public fun domainExecutionRole(): String
 
   /**
+   * The domain version.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-domain.html#cfn-datazone-domain-domainversion)
+   */
+  public fun domainVersion(): String? = unwrap(this).getDomainVersion()
+
+  /**
    * The identifier of the AWS Key Management Service (KMS) key that is used to encrypt the Amazon
    * DataZone domain, metadata, and reporting data.
    *
@@ -72,6 +82,13 @@ public interface CfnDomainProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-domain.html#cfn-datazone-domain-name)
    */
   public fun name(): String
+
+  /**
+   * The service role of the domain.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-domain.html#cfn-datazone-domain-servicerole)
+   */
+  public fun serviceRole(): String? = unwrap(this).getServiceRole()
 
   /**
    * The single sign-on details in Amazon DataZone.
@@ -106,6 +123,11 @@ public interface CfnDomainProps {
     public fun domainExecutionRole(domainExecutionRole: String)
 
     /**
+     * @param domainVersion The domain version.
+     */
+    public fun domainVersion(domainVersion: String)
+
+    /**
      * @param kmsKeyIdentifier The identifier of the AWS Key Management Service (KMS) key that is
      * used to encrypt the Amazon DataZone domain, metadata, and reporting data.
      */
@@ -115,6 +137,11 @@ public interface CfnDomainProps {
      * @param name The name of the Amazon DataZone domain. 
      */
     public fun name(name: String)
+
+    /**
+     * @param serviceRole The service role of the domain.
+     */
+    public fun serviceRole(serviceRole: String)
 
     /**
      * @param singleSignOn The single sign-on details in Amazon DataZone.
@@ -166,6 +193,13 @@ public interface CfnDomainProps {
     }
 
     /**
+     * @param domainVersion The domain version.
+     */
+    override fun domainVersion(domainVersion: String) {
+      cdkBuilder.domainVersion(domainVersion)
+    }
+
+    /**
      * @param kmsKeyIdentifier The identifier of the AWS Key Management Service (KMS) key that is
      * used to encrypt the Amazon DataZone domain, metadata, and reporting data.
      */
@@ -178,6 +212,13 @@ public interface CfnDomainProps {
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * @param serviceRole The service role of the domain.
+     */
+    override fun serviceRole(serviceRole: String) {
+      cdkBuilder.serviceRole(serviceRole)
     }
 
     /**
@@ -239,6 +280,13 @@ public interface CfnDomainProps {
     override fun domainExecutionRole(): String = unwrap(this).getDomainExecutionRole()
 
     /**
+     * The domain version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-domain.html#cfn-datazone-domain-domainversion)
+     */
+    override fun domainVersion(): String? = unwrap(this).getDomainVersion()
+
+    /**
      * The identifier of the AWS Key Management Service (KMS) key that is used to encrypt the Amazon
      * DataZone domain, metadata, and reporting data.
      *
@@ -252,6 +300,13 @@ public interface CfnDomainProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-domain.html#cfn-datazone-domain-name)
      */
     override fun name(): String = unwrap(this).getName()
+
+    /**
+     * The service role of the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-domain.html#cfn-datazone-domain-servicerole)
+     */
+    override fun serviceRole(): String? = unwrap(this).getServiceRole()
 
     /**
      * The single sign-on details in Amazon DataZone.

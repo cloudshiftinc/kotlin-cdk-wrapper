@@ -1254,6 +1254,17 @@ public open class CfnReceiptRule(
   }
 
   /**
+   * When included in a receipt rule, this action parses the received message and starts an email
+   * contact in Amazon Connect on your behalf.
+   *
+   *
+   * When you receive emails, the maximum email size (including headers) is 40 MB. Additionally,
+   * emails may only have up to 10 attachments. Emails larger than 40 MB or with more than 10
+   * attachments will be bounced.
+   *
+   *
+   * We recommend that you configure this action via Amazon Connect.
+   *
    * Example:
    *
    * ```
@@ -1270,11 +1281,23 @@ public open class CfnReceiptRule(
    */
   public interface ConnectActionProperty {
     /**
+     * The Amazon Resource Name (ARN) of the IAM role to be used by Amazon Simple Email Service
+     * while starting email contacts to the Amazon Connect instance.
+     *
+     * This role should have permission to invoke `connect:StartEmailContact` for the given Amazon
+     * Connect instance.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-connectaction.html#cfn-ses-receiptrule-connectaction-iamrolearn)
      */
     public fun iamRoleArn(): String
 
     /**
+     * The Amazon Resource Name (ARN) for the Amazon Connect instance that Amazon SES integrates
+     * with for starting email contacts.
+     *
+     * For more information about Amazon Connect instances, see the [Amazon Connect Administrator
+     * Guide](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-instances.html)
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-connectaction.html#cfn-ses-receiptrule-connectaction-instancearn)
      */
     public fun instanceArn(): String
@@ -1285,12 +1308,18 @@ public open class CfnReceiptRule(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param iamRoleArn the value to be set. 
+       * @param iamRoleArn The Amazon Resource Name (ARN) of the IAM role to be used by Amazon
+       * Simple Email Service while starting email contacts to the Amazon Connect instance. 
+       * This role should have permission to invoke `connect:StartEmailContact` for the given Amazon
+       * Connect instance.
        */
       public fun iamRoleArn(iamRoleArn: String)
 
       /**
-       * @param instanceArn the value to be set. 
+       * @param instanceArn The Amazon Resource Name (ARN) for the Amazon Connect instance that
+       * Amazon SES integrates with for starting email contacts. 
+       * For more information about Amazon Connect instances, see the [Amazon Connect Administrator
+       * Guide](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-instances.html)
        */
       public fun instanceArn(instanceArn: String)
     }
@@ -1301,14 +1330,20 @@ public open class CfnReceiptRule(
           software.amazon.awscdk.services.ses.CfnReceiptRule.ConnectActionProperty.builder()
 
       /**
-       * @param iamRoleArn the value to be set. 
+       * @param iamRoleArn The Amazon Resource Name (ARN) of the IAM role to be used by Amazon
+       * Simple Email Service while starting email contacts to the Amazon Connect instance. 
+       * This role should have permission to invoke `connect:StartEmailContact` for the given Amazon
+       * Connect instance.
        */
       override fun iamRoleArn(iamRoleArn: String) {
         cdkBuilder.iamRoleArn(iamRoleArn)
       }
 
       /**
-       * @param instanceArn the value to be set. 
+       * @param instanceArn The Amazon Resource Name (ARN) for the Amazon Connect instance that
+       * Amazon SES integrates with for starting email contacts. 
+       * For more information about Amazon Connect instances, see the [Amazon Connect Administrator
+       * Guide](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-instances.html)
        */
       override fun instanceArn(instanceArn: String) {
         cdkBuilder.instanceArn(instanceArn)
@@ -1323,11 +1358,23 @@ public open class CfnReceiptRule(
     ) : CdkObject(cdkObject),
         ConnectActionProperty {
       /**
+       * The Amazon Resource Name (ARN) of the IAM role to be used by Amazon Simple Email Service
+       * while starting email contacts to the Amazon Connect instance.
+       *
+       * This role should have permission to invoke `connect:StartEmailContact` for the given Amazon
+       * Connect instance.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-connectaction.html#cfn-ses-receiptrule-connectaction-iamrolearn)
        */
       override fun iamRoleArn(): String = unwrap(this).getIamRoleArn()
 
       /**
+       * The Amazon Resource Name (ARN) for the Amazon Connect instance that Amazon SES integrates
+       * with for starting email contacts.
+       *
+       * For more information about Amazon Connect instances, see the [Amazon Connect Administrator
+       * Guide](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-instances.html)
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-connectaction.html#cfn-ses-receiptrule-connectaction-instancearn)
        */
       override fun instanceArn(): String = unwrap(this).getInstanceArn()
@@ -2408,27 +2455,9 @@ public open class CfnReceiptRule(
   }
 
   /**
-   * When included in a receipt rule, this action publishes a notification to Amazon Simple
-   * Notification Service (Amazon SNS).
+   * The action to publish the email content to an Amazon SNS topic.
    *
-   * This action includes a complete copy of the email content in the Amazon SNS notifications.
-   * Amazon SNS notifications for all other actions simply provide information about the email. They do
-   * not include the email content itself.
-   *
-   * If you own the Amazon SNS topic, you don't need to do anything to give Amazon SES permission to
-   * publish emails to it. However, if you don't own the Amazon SNS topic, you need to attach a policy
-   * to the topic to give Amazon SES permissions to access it. For information about giving
-   * permissions, see the [Amazon SES Developer
-   * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-permissions.html) .
-   *
-   *
-   * You can only publish emails that are 150 KB or less (including the header) to Amazon SNS.
-   * Larger emails bounce. If you anticipate emails larger than 150 KB, use the S3 action instead.
-   *
-   *
-   * For information about using a receipt rule to publish an Amazon SNS notification, see the
-   * [Amazon SES Developer
-   * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-action-sns.html) .
+   * When executed, this action will send the email as a notification to the specified SNS topic.
    *
    * Example:
    *
@@ -2448,23 +2477,16 @@ public open class CfnReceiptRule(
     /**
      * The encoding to use for the email within the Amazon SNS notification.
      *
-     * UTF-8 is easier to use, but may not preserve all special characters when a message was
-     * encoded with a different encoding format. Base64 preserves all special characters. The default
-     * value is UTF-8.
+     * The default value is `UTF-8` . Use `BASE64` if you need to preserve all special characters,
+     * especially when the original message uses a different encoding format.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-snsaction.html#cfn-ses-receiptrule-snsaction-encoding)
      */
     public fun encoding(): String? = unwrap(this).getEncoding()
 
     /**
-     * The Amazon Resource Name (ARN) of the Amazon SNS topic to notify.
-     *
-     * You can find the ARN of a topic by using the
-     * [ListTopics](https://docs.aws.amazon.com/sns/latest/api/API_ListTopics.html) operation in Amazon
-     * SNS.
-     *
-     * For more information about Amazon SNS topics, see the [Amazon SNS Developer
-     * Guide](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html) .
+     * The Amazon Resource Name (ARN) of the Amazon SNS Topic to which notification for the email
+     * received will be published.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-snsaction.html#cfn-ses-receiptrule-snsaction-topicarn)
      */
@@ -2477,20 +2499,14 @@ public open class CfnReceiptRule(
     public interface Builder {
       /**
        * @param encoding The encoding to use for the email within the Amazon SNS notification.
-       * UTF-8 is easier to use, but may not preserve all special characters when a message was
-       * encoded with a different encoding format. Base64 preserves all special characters. The default
-       * value is UTF-8.
+       * The default value is `UTF-8` . Use `BASE64` if you need to preserve all special characters,
+       * especially when the original message uses a different encoding format.
        */
       public fun encoding(encoding: String)
 
       /**
-       * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic to notify.
-       * You can find the ARN of a topic by using the
-       * [ListTopics](https://docs.aws.amazon.com/sns/latest/api/API_ListTopics.html) operation in
-       * Amazon SNS.
-       *
-       * For more information about Amazon SNS topics, see the [Amazon SNS Developer
-       * Guide](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html) .
+       * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS Topic to which
+       * notification for the email received will be published.
        */
       public fun topicArn(topicArn: String)
     }
@@ -2502,22 +2518,16 @@ public open class CfnReceiptRule(
 
       /**
        * @param encoding The encoding to use for the email within the Amazon SNS notification.
-       * UTF-8 is easier to use, but may not preserve all special characters when a message was
-       * encoded with a different encoding format. Base64 preserves all special characters. The default
-       * value is UTF-8.
+       * The default value is `UTF-8` . Use `BASE64` if you need to preserve all special characters,
+       * especially when the original message uses a different encoding format.
        */
       override fun encoding(encoding: String) {
         cdkBuilder.encoding(encoding)
       }
 
       /**
-       * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic to notify.
-       * You can find the ARN of a topic by using the
-       * [ListTopics](https://docs.aws.amazon.com/sns/latest/api/API_ListTopics.html) operation in
-       * Amazon SNS.
-       *
-       * For more information about Amazon SNS topics, see the [Amazon SNS Developer
-       * Guide](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html) .
+       * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS Topic to which
+       * notification for the email received will be published.
        */
       override fun topicArn(topicArn: String) {
         cdkBuilder.topicArn(topicArn)
@@ -2534,23 +2544,16 @@ public open class CfnReceiptRule(
       /**
        * The encoding to use for the email within the Amazon SNS notification.
        *
-       * UTF-8 is easier to use, but may not preserve all special characters when a message was
-       * encoded with a different encoding format. Base64 preserves all special characters. The default
-       * value is UTF-8.
+       * The default value is `UTF-8` . Use `BASE64` if you need to preserve all special characters,
+       * especially when the original message uses a different encoding format.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-snsaction.html#cfn-ses-receiptrule-snsaction-encoding)
        */
       override fun encoding(): String? = unwrap(this).getEncoding()
 
       /**
-       * The Amazon Resource Name (ARN) of the Amazon SNS topic to notify.
-       *
-       * You can find the ARN of a topic by using the
-       * [ListTopics](https://docs.aws.amazon.com/sns/latest/api/API_ListTopics.html) operation in
-       * Amazon SNS.
-       *
-       * For more information about Amazon SNS topics, see the [Amazon SNS Developer
-       * Guide](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html) .
+       * The Amazon Resource Name (ARN) of the Amazon SNS Topic to which notification for the email
+       * received will be published.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-snsaction.html#cfn-ses-receiptrule-snsaction-topicarn)
        */

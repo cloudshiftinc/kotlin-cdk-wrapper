@@ -100,6 +100,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .licenseSpecifications(List.of(LicenseSpecificationProperty.builder()
  * .licenseConfigurationArn("licenseConfigurationArn")
  * .build()))
+ * .metadataOptions(MetadataOptionsProperty.builder()
+ * .httpEndpoint("httpEndpoint")
+ * .httpProtocolIpv6("httpProtocolIpv6")
+ * .httpPutResponseHopLimit(123)
+ * .httpTokens("httpTokens")
+ * .instanceMetadataTags("instanceMetadataTags")
+ * .build())
  * .monitoring(false)
  * .networkInterfaces(List.of(NetworkInterfaceProperty.builder()
  * .deviceIndex("deviceIndex")
@@ -108,6 +115,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .associatePublicIpAddress(false)
  * .deleteOnTermination(false)
  * .description("description")
+ * .enaSrdSpecification(EnaSrdSpecificationProperty.builder()
+ * .enaSrdEnabled(false)
+ * .enaSrdUdpSpecification(EnaSrdUdpSpecificationProperty.builder()
+ * .enaSrdUdpEnabled(false)
+ * .build())
+ * .build())
  * .groupSet(List.of("groupSet"))
  * .ipv6AddressCount(123)
  * .ipv6Addresses(List.of(InstanceIpv6AddressProperty.builder()
@@ -352,22 +365,19 @@ public open class CfnInstance(
       = creditSpecification(CreditSpecificationProperty(`value`))
 
   /**
-   * If you set this parameter to `true` , you can't terminate the instance using the Amazon EC2
-   * console, CLI, or API;
+   * Indicates whether termination protection is enabled for the instance.
    */
   public open fun disableApiTermination(): Any? = unwrap(this).getDisableApiTermination()
 
   /**
-   * If you set this parameter to `true` , you can't terminate the instance using the Amazon EC2
-   * console, CLI, or API;
+   * Indicates whether termination protection is enabled for the instance.
    */
   public open fun disableApiTermination(`value`: Boolean) {
     unwrap(this).setDisableApiTermination(`value`)
   }
 
   /**
-   * If you set this parameter to `true` , you can't terminate the instance using the Amazon EC2
-   * console, CLI, or API;
+   * Indicates whether termination protection is enabled for the instance.
    */
   public open fun disableApiTermination(`value`: IResolvable) {
     unwrap(this).setDisableApiTermination(`value`.let(IResolvable.Companion::unwrap))
@@ -646,18 +656,16 @@ public open class CfnInstance(
   /**
    * The name of the key pair.
    *
-   * You can create a key pair using
-   * [CreateKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateKeyPair.html) or
-   * [ImportKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportKeyPair.html) .
+   * For more information, see [Create a key pair for your EC2
+   * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html) .
    */
   public open fun keyName(): String? = unwrap(this).getKeyName()
 
   /**
    * The name of the key pair.
    *
-   * You can create a key pair using
-   * [CreateKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateKeyPair.html) or
-   * [ImportKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportKeyPair.html) .
+   * For more information, see [Create a key pair for your EC2
+   * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html) .
    */
   public open fun keyName(`value`: String) {
     unwrap(this).setKeyName(`value`)
@@ -714,6 +722,33 @@ public open class CfnInstance(
    */
   public open fun licenseSpecifications(vararg `value`: Any): Unit =
       licenseSpecifications(`value`.toList())
+
+  /**
+   * The metadata options for the instance.
+   */
+  public open fun metadataOptions(): Any? = unwrap(this).getMetadataOptions()
+
+  /**
+   * The metadata options for the instance.
+   */
+  public open fun metadataOptions(`value`: IResolvable) {
+    unwrap(this).setMetadataOptions(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The metadata options for the instance.
+   */
+  public open fun metadataOptions(`value`: MetadataOptionsProperty) {
+    unwrap(this).setMetadataOptions(`value`.let(MetadataOptionsProperty.Companion::unwrap))
+  }
+
+  /**
+   * The metadata options for the instance.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("721394f21bbb0d38855ad4743e9756bcdf03f7bca5e5d6af324e5c983b9d2ab7")
+  public open fun metadataOptions(`value`: MetadataOptionsProperty.Builder.() -> Unit): Unit =
+      metadataOptions(MetadataOptionsProperty(`value`))
 
   /**
    * Specifies whether detailed monitoring is enabled for the instance.
@@ -816,23 +851,23 @@ public open class CfnInstance(
   }
 
   /**
-   * Indicates whether to assign the tags from the instance to all of the volumes attached to the
-   * instance at launch.
+   * Indicates whether to assign the tags specified in the `Tags` property to the volumes specified
+   * in the `BlockDeviceMappings` property.
    */
   public open fun propagateTagsToVolumeOnCreation(): Any? =
       unwrap(this).getPropagateTagsToVolumeOnCreation()
 
   /**
-   * Indicates whether to assign the tags from the instance to all of the volumes attached to the
-   * instance at launch.
+   * Indicates whether to assign the tags specified in the `Tags` property to the volumes specified
+   * in the `BlockDeviceMappings` property.
    */
   public open fun propagateTagsToVolumeOnCreation(`value`: Boolean) {
     unwrap(this).setPropagateTagsToVolumeOnCreation(`value`)
   }
 
   /**
-   * Indicates whether to assign the tags from the instance to all of the volumes attached to the
-   * instance at launch.
+   * Indicates whether to assign the tags specified in the `Tags` property to the volumes specified
+   * in the `BlockDeviceMappings` property.
    */
   public open fun propagateTagsToVolumeOnCreation(`value`: IResolvable) {
     unwrap(this).setPropagateTagsToVolumeOnCreation(`value`.let(IResolvable.Companion::unwrap))
@@ -1257,36 +1292,28 @@ public open class CfnInstance(
         fun creditSpecification(creditSpecification: CreditSpecificationProperty.Builder.() -> Unit)
 
     /**
-     * If you set this parameter to `true` , you can't terminate the instance using the Amazon EC2
-     * console, CLI, or API;
+     * Indicates whether termination protection is enabled for the instance.
      *
-     * otherwise, you can. To change this attribute after launch, use
-     * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)
-     * . Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate` , you can
-     * terminate the instance by running the shutdown command from the instance.
-     *
-     * Default: `false`
+     * The default is `false` , which means that you can terminate the instance using the Amazon EC2
+     * console, command line tools, or API. You can enable termination protection when you launch an
+     * instance, while the instance is running, or while the instance is stopped.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-disableapitermination)
-     * @param disableApiTermination If you set this parameter to `true` , you can't terminate the
-     * instance using the Amazon EC2 console, CLI, or API;. 
+     * @param disableApiTermination Indicates whether termination protection is enabled for the
+     * instance. 
      */
     public fun disableApiTermination(disableApiTermination: Boolean)
 
     /**
-     * If you set this parameter to `true` , you can't terminate the instance using the Amazon EC2
-     * console, CLI, or API;
+     * Indicates whether termination protection is enabled for the instance.
      *
-     * otherwise, you can. To change this attribute after launch, use
-     * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)
-     * . Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate` , you can
-     * terminate the instance by running the shutdown command from the instance.
-     *
-     * Default: `false`
+     * The default is `false` , which means that you can terminate the instance using the Amazon EC2
+     * console, command line tools, or API. You can enable termination protection when you launch an
+     * instance, while the instance is running, or while the instance is stopped.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-disableapitermination)
-     * @param disableApiTermination If you set this parameter to `true` , you can't terminate the
-     * instance using the Amazon EC2 console, CLI, or API;. 
+     * @param disableApiTermination Indicates whether termination protection is enabled for the
+     * instance. 
      */
     public fun disableApiTermination(disableApiTermination: IResolvable)
 
@@ -1627,10 +1654,8 @@ public open class CfnInstance(
     public fun kernelId(kernelId: String)
 
     /**
-     * The name of the key pair. You can create a key pair using
-     * [CreateKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateKeyPair.html)
-     * or
-     * [ImportKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportKeyPair.html) .
+     * The name of the key pair. For more information, see [Create a key pair for your EC2
+     * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html) .
      *
      *
      * If you do not specify a key pair, you can't connect to the instance unless you choose an AMI
@@ -1638,11 +1663,8 @@ public open class CfnInstance(
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-keyname)
-     * @param keyName The name of the key pair. You can create a key pair using
-     * [CreateKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateKeyPair.html)
-     * or
-     * [ImportKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportKeyPair.html) .
-     * 
+     * @param keyName The name of the key pair. For more information, see [Create a key pair for
+     * your EC2 instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html) . 
      */
     public fun keyName(keyName: String)
 
@@ -1705,6 +1727,32 @@ public open class CfnInstance(
      * @param licenseSpecifications The license configurations. 
      */
     public fun licenseSpecifications(vararg licenseSpecifications: Any)
+
+    /**
+     * The metadata options for the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-metadataoptions)
+     * @param metadataOptions The metadata options for the instance. 
+     */
+    public fun metadataOptions(metadataOptions: IResolvable)
+
+    /**
+     * The metadata options for the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-metadataoptions)
+     * @param metadataOptions The metadata options for the instance. 
+     */
+    public fun metadataOptions(metadataOptions: MetadataOptionsProperty)
+
+    /**
+     * The metadata options for the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-metadataoptions)
+     * @param metadataOptions The metadata options for the instance. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("405dd7b96f6dcf046aa2f8277da10fc7d2d800254ca7a1390674172b8454fa6f")
+    public fun metadataOptions(metadataOptions: MetadataOptionsProperty.Builder.() -> Unit)
 
     /**
      * Specifies whether detailed monitoring is enabled for the instance.
@@ -1846,30 +1894,28 @@ public open class CfnInstance(
     public fun privateIpAddress(privateIpAddress: String)
 
     /**
-     * Indicates whether to assign the tags from the instance to all of the volumes attached to the
-     * instance at launch.
+     * Indicates whether to assign the tags specified in the `Tags` property to the volumes
+     * specified in the `BlockDeviceMappings` property.
      *
-     * If you specify `true` and you assign tags to the instance, those tags are automatically
-     * assigned to all of the volumes that you attach to the instance at launch. If you specify `false`
-     * , those tags are not assigned to the attached volumes.
+     * Note that using this feature does not assign the tags to volumes that are created separately
+     * and then attached using `AWS::EC2::VolumeAttachment` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-propagatetagstovolumeoncreation)
-     * @param propagateTagsToVolumeOnCreation Indicates whether to assign the tags from the instance
-     * to all of the volumes attached to the instance at launch. 
+     * @param propagateTagsToVolumeOnCreation Indicates whether to assign the tags specified in the
+     * `Tags` property to the volumes specified in the `BlockDeviceMappings` property. 
      */
     public fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: Boolean)
 
     /**
-     * Indicates whether to assign the tags from the instance to all of the volumes attached to the
-     * instance at launch.
+     * Indicates whether to assign the tags specified in the `Tags` property to the volumes
+     * specified in the `BlockDeviceMappings` property.
      *
-     * If you specify `true` and you assign tags to the instance, those tags are automatically
-     * assigned to all of the volumes that you attach to the instance at launch. If you specify `false`
-     * , those tags are not assigned to the attached volumes.
+     * Note that using this feature does not assign the tags to volumes that are created separately
+     * and then attached using `AWS::EC2::VolumeAttachment` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-propagatetagstovolumeoncreation)
-     * @param propagateTagsToVolumeOnCreation Indicates whether to assign the tags from the instance
-     * to all of the volumes attached to the instance at launch. 
+     * @param propagateTagsToVolumeOnCreation Indicates whether to assign the tags specified in the
+     * `Tags` property to the volumes specified in the `BlockDeviceMappings` property. 
      */
     public fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: IResolvable)
 
@@ -2373,38 +2419,30 @@ public open class CfnInstance(
         Unit = creditSpecification(CreditSpecificationProperty(creditSpecification))
 
     /**
-     * If you set this parameter to `true` , you can't terminate the instance using the Amazon EC2
-     * console, CLI, or API;
+     * Indicates whether termination protection is enabled for the instance.
      *
-     * otherwise, you can. To change this attribute after launch, use
-     * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)
-     * . Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate` , you can
-     * terminate the instance by running the shutdown command from the instance.
-     *
-     * Default: `false`
+     * The default is `false` , which means that you can terminate the instance using the Amazon EC2
+     * console, command line tools, or API. You can enable termination protection when you launch an
+     * instance, while the instance is running, or while the instance is stopped.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-disableapitermination)
-     * @param disableApiTermination If you set this parameter to `true` , you can't terminate the
-     * instance using the Amazon EC2 console, CLI, or API;. 
+     * @param disableApiTermination Indicates whether termination protection is enabled for the
+     * instance. 
      */
     override fun disableApiTermination(disableApiTermination: Boolean) {
       cdkBuilder.disableApiTermination(disableApiTermination)
     }
 
     /**
-     * If you set this parameter to `true` , you can't terminate the instance using the Amazon EC2
-     * console, CLI, or API;
+     * Indicates whether termination protection is enabled for the instance.
      *
-     * otherwise, you can. To change this attribute after launch, use
-     * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)
-     * . Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate` , you can
-     * terminate the instance by running the shutdown command from the instance.
-     *
-     * Default: `false`
+     * The default is `false` , which means that you can terminate the instance using the Amazon EC2
+     * console, command line tools, or API. You can enable termination protection when you launch an
+     * instance, while the instance is running, or while the instance is stopped.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-disableapitermination)
-     * @param disableApiTermination If you set this parameter to `true` , you can't terminate the
-     * instance using the Amazon EC2 console, CLI, or API;. 
+     * @param disableApiTermination Indicates whether termination protection is enabled for the
+     * instance. 
      */
     override fun disableApiTermination(disableApiTermination: IResolvable) {
       cdkBuilder.disableApiTermination(disableApiTermination.let(IResolvable.Companion::unwrap))
@@ -2793,10 +2831,8 @@ public open class CfnInstance(
     }
 
     /**
-     * The name of the key pair. You can create a key pair using
-     * [CreateKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateKeyPair.html)
-     * or
-     * [ImportKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportKeyPair.html) .
+     * The name of the key pair. For more information, see [Create a key pair for your EC2
+     * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html) .
      *
      *
      * If you do not specify a key pair, you can't connect to the instance unless you choose an AMI
@@ -2804,11 +2840,8 @@ public open class CfnInstance(
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-keyname)
-     * @param keyName The name of the key pair. You can create a key pair using
-     * [CreateKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateKeyPair.html)
-     * or
-     * [ImportKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportKeyPair.html) .
-     * 
+     * @param keyName The name of the key pair. For more information, see [Create a key pair for
+     * your EC2 instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html) . 
      */
     override fun keyName(keyName: String) {
       cdkBuilder.keyName(keyName)
@@ -2883,6 +2916,37 @@ public open class CfnInstance(
      */
     override fun licenseSpecifications(vararg licenseSpecifications: Any): Unit =
         licenseSpecifications(licenseSpecifications.toList())
+
+    /**
+     * The metadata options for the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-metadataoptions)
+     * @param metadataOptions The metadata options for the instance. 
+     */
+    override fun metadataOptions(metadataOptions: IResolvable) {
+      cdkBuilder.metadataOptions(metadataOptions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The metadata options for the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-metadataoptions)
+     * @param metadataOptions The metadata options for the instance. 
+     */
+    override fun metadataOptions(metadataOptions: MetadataOptionsProperty) {
+      cdkBuilder.metadataOptions(metadataOptions.let(MetadataOptionsProperty.Companion::unwrap))
+    }
+
+    /**
+     * The metadata options for the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-metadataoptions)
+     * @param metadataOptions The metadata options for the instance. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("405dd7b96f6dcf046aa2f8277da10fc7d2d800254ca7a1390674172b8454fa6f")
+    override fun metadataOptions(metadataOptions: MetadataOptionsProperty.Builder.() -> Unit): Unit
+        = metadataOptions(MetadataOptionsProperty(metadataOptions))
 
     /**
      * Specifies whether detailed monitoring is enabled for the instance.
@@ -3042,32 +3106,30 @@ public open class CfnInstance(
     }
 
     /**
-     * Indicates whether to assign the tags from the instance to all of the volumes attached to the
-     * instance at launch.
+     * Indicates whether to assign the tags specified in the `Tags` property to the volumes
+     * specified in the `BlockDeviceMappings` property.
      *
-     * If you specify `true` and you assign tags to the instance, those tags are automatically
-     * assigned to all of the volumes that you attach to the instance at launch. If you specify `false`
-     * , those tags are not assigned to the attached volumes.
+     * Note that using this feature does not assign the tags to volumes that are created separately
+     * and then attached using `AWS::EC2::VolumeAttachment` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-propagatetagstovolumeoncreation)
-     * @param propagateTagsToVolumeOnCreation Indicates whether to assign the tags from the instance
-     * to all of the volumes attached to the instance at launch. 
+     * @param propagateTagsToVolumeOnCreation Indicates whether to assign the tags specified in the
+     * `Tags` property to the volumes specified in the `BlockDeviceMappings` property. 
      */
     override fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: Boolean) {
       cdkBuilder.propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation)
     }
 
     /**
-     * Indicates whether to assign the tags from the instance to all of the volumes attached to the
-     * instance at launch.
+     * Indicates whether to assign the tags specified in the `Tags` property to the volumes
+     * specified in the `BlockDeviceMappings` property.
      *
-     * If you specify `true` and you assign tags to the instance, those tags are automatically
-     * assigned to all of the volumes that you attach to the instance at launch. If you specify `false`
-     * , those tags are not assigned to the attached volumes.
+     * Note that using this feature does not assign the tags to volumes that are created separately
+     * and then attached using `AWS::EC2::VolumeAttachment` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-propagatetagstovolumeoncreation)
-     * @param propagateTagsToVolumeOnCreation Indicates whether to assign the tags from the instance
-     * to all of the volumes attached to the instance at launch. 
+     * @param propagateTagsToVolumeOnCreation Indicates whether to assign the tags specified in the
+     * `Tags` property to the volumes specified in the `BlockDeviceMappings` property. 
      */
     override fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: IResolvable) {
       cdkBuilder.propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation.let(IResolvable.Companion::unwrap))
@@ -4839,9 +4901,6 @@ public open class CfnInstance(
   /**
    * Amazon Elastic Graphics reached end of life on January 8, 2024.
    *
-   * For workloads that require graphics acceleration, we recommend that you use Amazon EC2 G4ad,
-   * G4dn, or G5 instances.
-   *
    * Specifies the type of Elastic GPU. An Elastic GPU is a GPU resource that you can attach to your
    * Amazon EC2 instance to accelerate the graphics performance of your applications.
    *
@@ -4930,6 +4989,8 @@ public open class CfnInstance(
   }
 
   /**
+   * Amazon Elastic Inference is no longer available.
+   *
    * Specifies the Elastic Inference Accelerator for the instance.
    *
    * `ElasticInferenceAccelerator` is a property of the
@@ -5053,6 +5114,280 @@ public open class CfnInstance(
           software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty
+    }
+  }
+
+  /**
+   * ENA Express uses AWS Scalable Reliable Datagram (SRD) technology to increase the maximum
+   * bandwidth used per stream and minimize tail latency of network traffic between EC2 instances.
+   *
+   * With ENA Express, you can communicate between two EC2 instances in the same subnet within the
+   * same account, or in different accounts. Both sending and receiving instances must have ENA Express
+   * enabled.
+   *
+   * To improve the reliability of network packet delivery, ENA Express reorders network packets on
+   * the receiving end by default. However, some UDP-based applications are designed to handle network
+   * packets that are out of order to reduce the overhead for packet delivery at the network layer.
+   * When ENA Express is enabled, you can specify whether UDP network traffic uses it.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * EnaSrdSpecificationProperty enaSrdSpecificationProperty = EnaSrdSpecificationProperty.builder()
+   * .enaSrdEnabled(false)
+   * .enaSrdUdpSpecification(EnaSrdUdpSpecificationProperty.builder()
+   * .enaSrdUdpEnabled(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-enasrdspecification.html)
+   */
+  public interface EnaSrdSpecificationProperty {
+    /**
+     * Indicates whether ENA Express is enabled for the network interface.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-enasrdspecification.html#cfn-ec2-instance-enasrdspecification-enasrdenabled)
+     */
+    public fun enaSrdEnabled(): Any? = unwrap(this).getEnaSrdEnabled()
+
+    /**
+     * Configures ENA Express for UDP network traffic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-enasrdspecification.html#cfn-ec2-instance-enasrdspecification-enasrdudpspecification)
+     */
+    public fun enaSrdUdpSpecification(): Any? = unwrap(this).getEnaSrdUdpSpecification()
+
+    /**
+     * A builder for [EnaSrdSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enaSrdEnabled Indicates whether ENA Express is enabled for the network interface.
+       */
+      public fun enaSrdEnabled(enaSrdEnabled: Boolean)
+
+      /**
+       * @param enaSrdEnabled Indicates whether ENA Express is enabled for the network interface.
+       */
+      public fun enaSrdEnabled(enaSrdEnabled: IResolvable)
+
+      /**
+       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
+       */
+      public fun enaSrdUdpSpecification(enaSrdUdpSpecification: IResolvable)
+
+      /**
+       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
+       */
+      public fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty)
+
+      /**
+       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("43fd418ce50fec23bd70016ea2d196d947ba59c20ef9f754356621d3af4f8b34")
+      public
+          fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.EnaSrdSpecificationProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.EnaSrdSpecificationProperty.builder()
+
+      /**
+       * @param enaSrdEnabled Indicates whether ENA Express is enabled for the network interface.
+       */
+      override fun enaSrdEnabled(enaSrdEnabled: Boolean) {
+        cdkBuilder.enaSrdEnabled(enaSrdEnabled)
+      }
+
+      /**
+       * @param enaSrdEnabled Indicates whether ENA Express is enabled for the network interface.
+       */
+      override fun enaSrdEnabled(enaSrdEnabled: IResolvable) {
+        cdkBuilder.enaSrdEnabled(enaSrdEnabled.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
+       */
+      override fun enaSrdUdpSpecification(enaSrdUdpSpecification: IResolvable) {
+        cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
+       */
+      override fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty) {
+        cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(EnaSrdUdpSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("43fd418ce50fec23bd70016ea2d196d947ba59c20ef9f754356621d3af4f8b34")
+      override
+          fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty.Builder.() -> Unit):
+          Unit = enaSrdUdpSpecification(EnaSrdUdpSpecificationProperty(enaSrdUdpSpecification))
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.EnaSrdSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EnaSrdSpecificationProperty,
+    ) : CdkObject(cdkObject),
+        EnaSrdSpecificationProperty {
+      /**
+       * Indicates whether ENA Express is enabled for the network interface.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-enasrdspecification.html#cfn-ec2-instance-enasrdspecification-enasrdenabled)
+       */
+      override fun enaSrdEnabled(): Any? = unwrap(this).getEnaSrdEnabled()
+
+      /**
+       * Configures ENA Express for UDP network traffic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-enasrdspecification.html#cfn-ec2-instance-enasrdspecification-enasrdudpspecification)
+       */
+      override fun enaSrdUdpSpecification(): Any? = unwrap(this).getEnaSrdUdpSpecification()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EnaSrdSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EnaSrdSpecificationProperty):
+          EnaSrdSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnaSrdSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EnaSrdSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.EnaSrdSpecificationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnInstance.EnaSrdSpecificationProperty
+    }
+  }
+
+  /**
+   * ENA Express is compatible with both TCP and UDP transport protocols.
+   *
+   * When it's enabled, TCP traffic automatically uses it. However, some UDP-based applications are
+   * designed to handle network packets that are out of order, without a need for retransmission, such
+   * as live video broadcasting or other near-real-time applications. For UDP traffic, you can specify
+   * whether to use ENA Express, based on your application environment needs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * EnaSrdUdpSpecificationProperty enaSrdUdpSpecificationProperty =
+   * EnaSrdUdpSpecificationProperty.builder()
+   * .enaSrdUdpEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-enasrdudpspecification.html)
+   */
+  public interface EnaSrdUdpSpecificationProperty {
+    /**
+     * Indicates whether UDP traffic to and from the instance uses ENA Express.
+     *
+     * To specify this setting, you must first enable ENA Express.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-enasrdudpspecification.html#cfn-ec2-instance-enasrdudpspecification-enasrdudpenabled)
+     */
+    public fun enaSrdUdpEnabled(): Any? = unwrap(this).getEnaSrdUdpEnabled()
+
+    /**
+     * A builder for [EnaSrdUdpSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
+       * Express.
+       * To specify this setting, you must first enable ENA Express.
+       */
+      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean)
+
+      /**
+       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
+       * Express.
+       * To specify this setting, you must first enable ENA Express.
+       */
+      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.EnaSrdUdpSpecificationProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.EnaSrdUdpSpecificationProperty.builder()
+
+      /**
+       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
+       * Express.
+       * To specify this setting, you must first enable ENA Express.
+       */
+      override fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean) {
+        cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled)
+      }
+
+      /**
+       * @param enaSrdUdpEnabled Indicates whether UDP traffic to and from the instance uses ENA
+       * Express.
+       * To specify this setting, you must first enable ENA Express.
+       */
+      override fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable) {
+        cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.EnaSrdUdpSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EnaSrdUdpSpecificationProperty,
+    ) : CdkObject(cdkObject),
+        EnaSrdUdpSpecificationProperty {
+      /**
+       * Indicates whether UDP traffic to and from the instance uses ENA Express.
+       *
+       * To specify this setting, you must first enable ENA Express.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-enasrdudpspecification.html#cfn-ec2-instance-enasrdudpspecification-enasrdudpenabled)
+       */
+      override fun enaSrdUdpEnabled(): Any? = unwrap(this).getEnaSrdUdpEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EnaSrdUdpSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EnaSrdUdpSpecificationProperty):
+          EnaSrdUdpSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnaSrdUdpSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EnaSrdUdpSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.EnaSrdUdpSpecificationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnInstance.EnaSrdUdpSpecificationProperty
     }
   }
 
@@ -5691,6 +6026,319 @@ public open class CfnInstance(
   }
 
   /**
+   * Specifies the metadata options for the instance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * MetadataOptionsProperty metadataOptionsProperty = MetadataOptionsProperty.builder()
+   * .httpEndpoint("httpEndpoint")
+   * .httpProtocolIpv6("httpProtocolIpv6")
+   * .httpPutResponseHopLimit(123)
+   * .httpTokens("httpTokens")
+   * .instanceMetadataTags("instanceMetadataTags")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-metadataoptions.html)
+   */
+  public interface MetadataOptionsProperty {
+    /**
+     * Enables or disables the HTTP metadata endpoint on your instances.
+     *
+     * If you specify a value of `disabled` , you cannot access your instance metadata.
+     *
+     * Default: `enabled`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-metadataoptions.html#cfn-ec2-instance-metadataoptions-httpendpoint)
+     */
+    public fun httpEndpoint(): String? = unwrap(this).getHttpEndpoint()
+
+    /**
+     * Enables or disables the IPv6 endpoint for the instance metadata service.
+     *
+     * Default: `disabled`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-metadataoptions.html#cfn-ec2-instance-metadataoptions-httpprotocolipv6)
+     */
+    public fun httpProtocolIpv6(): String? = unwrap(this).getHttpProtocolIpv6()
+
+    /**
+     * The maximum number of hops that the metadata token can travel.
+     *
+     * Possible values: Integers from 1 to 64
+     *
+     * Default: - 1
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-metadataoptions.html#cfn-ec2-instance-metadataoptions-httpputresponsehoplimit)
+     */
+    public fun httpPutResponseHopLimit(): Number? = unwrap(this).getHttpPutResponseHopLimit()
+
+    /**
+     * Indicates whether IMDSv2 is required.
+     *
+     * * `optional` - IMDSv2 is optional, which means that you can use either IMDSv2 or IMDSv1.
+     * * `required` - IMDSv2 is required, which means that IMDSv1 is disabled, and you must use
+     * IMDSv2.
+     *
+     * Default:
+     *
+     * * If the value of `ImdsSupport` for the Amazon Machine Image (AMI) for your instance is
+     * `v2.0` and the account level default is set to `no-preference` , the default is `required` .
+     * * If the value of `ImdsSupport` for the Amazon Machine Image (AMI) for your instance is
+     * `v2.0` , but the account level default is set to `V1 or V2` , the default is `optional` .
+     *
+     * The default value can also be affected by other combinations of parameters. For more
+     * information, see [Order of precedence for instance metadata
+     * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence)
+     * in the *Amazon EC2 User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-metadataoptions.html#cfn-ec2-instance-metadataoptions-httptokens)
+     */
+    public fun httpTokens(): String? = unwrap(this).getHttpTokens()
+
+    /**
+     * Set to `enabled` to allow access to instance tags from the instance metadata.
+     *
+     * Set to `disabled` to turn off access to instance tags from the instance metadata. For more
+     * information, see [Work with instance tags using the instance
+     * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)
+     * .
+     *
+     * Default: `disabled`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-metadataoptions.html#cfn-ec2-instance-metadataoptions-instancemetadatatags)
+     */
+    public fun instanceMetadataTags(): String? = unwrap(this).getInstanceMetadataTags()
+
+    /**
+     * A builder for [MetadataOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param httpEndpoint Enables or disables the HTTP metadata endpoint on your instances.
+       * If you specify a value of `disabled` , you cannot access your instance metadata.
+       *
+       * Default: `enabled`
+       */
+      public fun httpEndpoint(httpEndpoint: String)
+
+      /**
+       * @param httpProtocolIpv6 Enables or disables the IPv6 endpoint for the instance metadata
+       * service.
+       * Default: `disabled`
+       */
+      public fun httpProtocolIpv6(httpProtocolIpv6: String)
+
+      /**
+       * @param httpPutResponseHopLimit The maximum number of hops that the metadata token can
+       * travel.
+       * Possible values: Integers from 1 to 64
+       */
+      public fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number)
+
+      /**
+       * @param httpTokens Indicates whether IMDSv2 is required.
+       * * `optional` - IMDSv2 is optional, which means that you can use either IMDSv2 or IMDSv1.
+       * * `required` - IMDSv2 is required, which means that IMDSv1 is disabled, and you must use
+       * IMDSv2.
+       *
+       * Default:
+       *
+       * * If the value of `ImdsSupport` for the Amazon Machine Image (AMI) for your instance is
+       * `v2.0` and the account level default is set to `no-preference` , the default is `required` .
+       * * If the value of `ImdsSupport` for the Amazon Machine Image (AMI) for your instance is
+       * `v2.0` , but the account level default is set to `V1 or V2` , the default is `optional` .
+       *
+       * The default value can also be affected by other combinations of parameters. For more
+       * information, see [Order of precedence for instance metadata
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence)
+       * in the *Amazon EC2 User Guide* .
+       */
+      public fun httpTokens(httpTokens: String)
+
+      /**
+       * @param instanceMetadataTags Set to `enabled` to allow access to instance tags from the
+       * instance metadata.
+       * Set to `disabled` to turn off access to instance tags from the instance metadata. For more
+       * information, see [Work with instance tags using the instance
+       * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)
+       * .
+       *
+       * Default: `disabled`
+       */
+      public fun instanceMetadataTags(instanceMetadataTags: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.MetadataOptionsProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.MetadataOptionsProperty.builder()
+
+      /**
+       * @param httpEndpoint Enables or disables the HTTP metadata endpoint on your instances.
+       * If you specify a value of `disabled` , you cannot access your instance metadata.
+       *
+       * Default: `enabled`
+       */
+      override fun httpEndpoint(httpEndpoint: String) {
+        cdkBuilder.httpEndpoint(httpEndpoint)
+      }
+
+      /**
+       * @param httpProtocolIpv6 Enables or disables the IPv6 endpoint for the instance metadata
+       * service.
+       * Default: `disabled`
+       */
+      override fun httpProtocolIpv6(httpProtocolIpv6: String) {
+        cdkBuilder.httpProtocolIpv6(httpProtocolIpv6)
+      }
+
+      /**
+       * @param httpPutResponseHopLimit The maximum number of hops that the metadata token can
+       * travel.
+       * Possible values: Integers from 1 to 64
+       */
+      override fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number) {
+        cdkBuilder.httpPutResponseHopLimit(httpPutResponseHopLimit)
+      }
+
+      /**
+       * @param httpTokens Indicates whether IMDSv2 is required.
+       * * `optional` - IMDSv2 is optional, which means that you can use either IMDSv2 or IMDSv1.
+       * * `required` - IMDSv2 is required, which means that IMDSv1 is disabled, and you must use
+       * IMDSv2.
+       *
+       * Default:
+       *
+       * * If the value of `ImdsSupport` for the Amazon Machine Image (AMI) for your instance is
+       * `v2.0` and the account level default is set to `no-preference` , the default is `required` .
+       * * If the value of `ImdsSupport` for the Amazon Machine Image (AMI) for your instance is
+       * `v2.0` , but the account level default is set to `V1 or V2` , the default is `optional` .
+       *
+       * The default value can also be affected by other combinations of parameters. For more
+       * information, see [Order of precedence for instance metadata
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence)
+       * in the *Amazon EC2 User Guide* .
+       */
+      override fun httpTokens(httpTokens: String) {
+        cdkBuilder.httpTokens(httpTokens)
+      }
+
+      /**
+       * @param instanceMetadataTags Set to `enabled` to allow access to instance tags from the
+       * instance metadata.
+       * Set to `disabled` to turn off access to instance tags from the instance metadata. For more
+       * information, see [Work with instance tags using the instance
+       * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)
+       * .
+       *
+       * Default: `disabled`
+       */
+      override fun instanceMetadataTags(instanceMetadataTags: String) {
+        cdkBuilder.instanceMetadataTags(instanceMetadataTags)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.MetadataOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.MetadataOptionsProperty,
+    ) : CdkObject(cdkObject),
+        MetadataOptionsProperty {
+      /**
+       * Enables or disables the HTTP metadata endpoint on your instances.
+       *
+       * If you specify a value of `disabled` , you cannot access your instance metadata.
+       *
+       * Default: `enabled`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-metadataoptions.html#cfn-ec2-instance-metadataoptions-httpendpoint)
+       */
+      override fun httpEndpoint(): String? = unwrap(this).getHttpEndpoint()
+
+      /**
+       * Enables or disables the IPv6 endpoint for the instance metadata service.
+       *
+       * Default: `disabled`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-metadataoptions.html#cfn-ec2-instance-metadataoptions-httpprotocolipv6)
+       */
+      override fun httpProtocolIpv6(): String? = unwrap(this).getHttpProtocolIpv6()
+
+      /**
+       * The maximum number of hops that the metadata token can travel.
+       *
+       * Possible values: Integers from 1 to 64
+       *
+       * Default: - 1
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-metadataoptions.html#cfn-ec2-instance-metadataoptions-httpputresponsehoplimit)
+       */
+      override fun httpPutResponseHopLimit(): Number? = unwrap(this).getHttpPutResponseHopLimit()
+
+      /**
+       * Indicates whether IMDSv2 is required.
+       *
+       * * `optional` - IMDSv2 is optional, which means that you can use either IMDSv2 or IMDSv1.
+       * * `required` - IMDSv2 is required, which means that IMDSv1 is disabled, and you must use
+       * IMDSv2.
+       *
+       * Default:
+       *
+       * * If the value of `ImdsSupport` for the Amazon Machine Image (AMI) for your instance is
+       * `v2.0` and the account level default is set to `no-preference` , the default is `required` .
+       * * If the value of `ImdsSupport` for the Amazon Machine Image (AMI) for your instance is
+       * `v2.0` , but the account level default is set to `V1 or V2` , the default is `optional` .
+       *
+       * The default value can also be affected by other combinations of parameters. For more
+       * information, see [Order of precedence for instance metadata
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence)
+       * in the *Amazon EC2 User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-metadataoptions.html#cfn-ec2-instance-metadataoptions-httptokens)
+       */
+      override fun httpTokens(): String? = unwrap(this).getHttpTokens()
+
+      /**
+       * Set to `enabled` to allow access to instance tags from the instance metadata.
+       *
+       * Set to `disabled` to turn off access to instance tags from the instance metadata. For more
+       * information, see [Work with instance tags using the instance
+       * metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)
+       * .
+       *
+       * Default: `disabled`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-metadataoptions.html#cfn-ec2-instance-metadataoptions-instancemetadatatags)
+       */
+      override fun instanceMetadataTags(): String? = unwrap(this).getInstanceMetadataTags()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetadataOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.MetadataOptionsProperty):
+          MetadataOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? MetadataOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetadataOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.MetadataOptionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnInstance.MetadataOptionsProperty
+    }
+  }
+
+  /**
    * Specifies a network interface that is to be attached to an instance.
    *
    * You can create a network interface when launching an instance. For an example, see the
@@ -5716,6 +6364,12 @@ public open class CfnInstance(
    * .associatePublicIpAddress(false)
    * .deleteOnTermination(false)
    * .description("description")
+   * .enaSrdSpecification(EnaSrdSpecificationProperty.builder()
+   * .enaSrdEnabled(false)
+   * .enaSrdUdpSpecification(EnaSrdUdpSpecificationProperty.builder()
+   * .enaSrdUdpEnabled(false)
+   * .build())
+   * .build())
    * .groupSet(List.of("groupSet"))
    * .ipv6AddressCount(123)
    * .ipv6Addresses(List.of(InstanceIpv6AddressProperty.builder()
@@ -5791,6 +6445,13 @@ public open class CfnInstance(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-networkinterface.html#cfn-ec2-instance-networkinterface-deviceindex)
      */
     public fun deviceIndex(): String
+
+    /**
+     * Configures ENA Express for UDP network traffic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-networkinterface.html#cfn-ec2-instance-networkinterface-enasrdspecification)
+     */
+    public fun enaSrdSpecification(): Any? = unwrap(this).getEnaSrdSpecification()
 
     /**
      * The IDs of the security groups for the network interface.
@@ -5945,6 +6606,24 @@ public open class CfnInstance(
        * index.
        */
       public fun deviceIndex(deviceIndex: String)
+
+      /**
+       * @param enaSrdSpecification Configures ENA Express for UDP network traffic.
+       */
+      public fun enaSrdSpecification(enaSrdSpecification: IResolvable)
+
+      /**
+       * @param enaSrdSpecification Configures ENA Express for UDP network traffic.
+       */
+      public fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty)
+
+      /**
+       * @param enaSrdSpecification Configures ENA Express for UDP network traffic.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("def8a897d4f2590c99f30689d34615a361c1ad5031da4461a72961130b15dca1")
+      public
+          fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty.Builder.() -> Unit)
 
       /**
        * @param groupSet The IDs of the security groups for the network interface.
@@ -6133,6 +6812,29 @@ public open class CfnInstance(
       }
 
       /**
+       * @param enaSrdSpecification Configures ENA Express for UDP network traffic.
+       */
+      override fun enaSrdSpecification(enaSrdSpecification: IResolvable) {
+        cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param enaSrdSpecification Configures ENA Express for UDP network traffic.
+       */
+      override fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty) {
+        cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(EnaSrdSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param enaSrdSpecification Configures ENA Express for UDP network traffic.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("def8a897d4f2590c99f30689d34615a361c1ad5031da4461a72961130b15dca1")
+      override
+          fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty.Builder.() -> Unit):
+          Unit = enaSrdSpecification(EnaSrdSpecificationProperty(enaSrdSpecification))
+
+      /**
        * @param groupSet The IDs of the security groups for the network interface.
        * Applies only if creating a network interface when launching an instance.
        */
@@ -6307,6 +7009,13 @@ public open class CfnInstance(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-networkinterface.html#cfn-ec2-instance-networkinterface-deviceindex)
        */
       override fun deviceIndex(): String = unwrap(this).getDeviceIndex()
+
+      /**
+       * Configures ENA Express for UDP network traffic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-networkinterface.html#cfn-ec2-instance-networkinterface-enasrdspecification)
+       */
+      override fun enaSrdSpecification(): Any? = unwrap(this).getEnaSrdSpecification()
 
       /**
        * The IDs of the security groups for the network interface.

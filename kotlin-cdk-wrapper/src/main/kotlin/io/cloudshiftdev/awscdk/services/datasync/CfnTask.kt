@@ -391,42 +391,42 @@ public open class CfnTask(
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   /**
-   * Specifies one of the following task modes for your data transfer:.
+   * The task mode that you're using.
    */
   public open fun taskMode(): String? = unwrap(this).getTaskMode()
 
   /**
-   * Specifies one of the following task modes for your data transfer:.
+   * The task mode that you're using.
    */
   public open fun taskMode(`value`: String) {
     unwrap(this).setTaskMode(`value`)
   }
 
   /**
-   * Specifies how you want to configure a task report, which provides detailed information about
-   * your DataSync transfer.
+   * The configuration of your task report, which provides detailed information about your DataSync
+   * transfer.
    */
   public open fun taskReportConfig(): Any? = unwrap(this).getTaskReportConfig()
 
   /**
-   * Specifies how you want to configure a task report, which provides detailed information about
-   * your DataSync transfer.
+   * The configuration of your task report, which provides detailed information about your DataSync
+   * transfer.
    */
   public open fun taskReportConfig(`value`: IResolvable) {
     unwrap(this).setTaskReportConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Specifies how you want to configure a task report, which provides detailed information about
-   * your DataSync transfer.
+   * The configuration of your task report, which provides detailed information about your DataSync
+   * transfer.
    */
   public open fun taskReportConfig(`value`: TaskReportConfigProperty) {
     unwrap(this).setTaskReportConfig(`value`.let(TaskReportConfigProperty.Companion::unwrap))
   }
 
   /**
-   * Specifies how you want to configure a task report, which provides detailed information about
-   * your DataSync transfer.
+   * The configuration of your task report, which provides detailed information about your DataSync
+   * transfer.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("9703490283b3a1cc2736578162b15b5832eeb2283c5e3d073cac56246de9aae5")
@@ -691,84 +691,52 @@ public open class CfnTask(
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * Specifies one of the following task modes for your data transfer:.
+     * The task mode that you're using.
      *
-     * * `ENHANCED` - Transfer virtually unlimited numbers of objects with higher performance than
-     * Basic mode. Enhanced mode tasks optimize the data transfer process by listing, preparing,
-     * transferring, and verifying data in parallel. Enhanced mode is currently available for transfers
-     * between Amazon S3 locations.
-     *
-     *
-     * To create an Enhanced mode task, the IAM role that you use to call the `CreateTask` operation
-     * must have the `iam:CreateServiceLinkedRole` permission.
-     *
-     *
-     * * `BASIC` (default) - Transfer files or objects between AWS storage and all other supported
-     * DataSync locations. Basic mode tasks are subject to
-     * [quotas](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-limits.html) on the
-     * number of files, objects, and directories in a dataset. Basic mode sequentially prepares,
-     * transfers, and verifies data, making it slower than Enhanced mode for most workloads.
-     *
-     * For more information, see [Understanding task mode
-     * differences](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html#task-mode-differences)
-     * .
+     * For more information, see [Choosing a task mode for your data
+     * transfer](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskmode)
-     * @param taskMode Specifies one of the following task modes for your data transfer:. 
+     * @param taskMode The task mode that you're using. 
      */
     public fun taskMode(taskMode: String)
 
     /**
-     * Specifies how you want to configure a task report, which provides detailed information about
-     * your DataSync transfer.
+     * The configuration of your task report, which provides detailed information about your
+     * DataSync transfer.
      *
      * For more information, see [Monitoring your DataSync transfers with task
      * reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
      *
-     * When using this parameter, your caller identity (the role that you're using DataSync with)
-     * must have the `iam:PassRole` permission. The
-     * [AWSDataSyncFullAccess](https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess)
-     * policy includes this permission.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskreportconfig)
-     * @param taskReportConfig Specifies how you want to configure a task report, which provides
-     * detailed information about your DataSync transfer. 
+     * @param taskReportConfig The configuration of your task report, which provides detailed
+     * information about your DataSync transfer. 
      */
     public fun taskReportConfig(taskReportConfig: IResolvable)
 
     /**
-     * Specifies how you want to configure a task report, which provides detailed information about
-     * your DataSync transfer.
+     * The configuration of your task report, which provides detailed information about your
+     * DataSync transfer.
      *
      * For more information, see [Monitoring your DataSync transfers with task
      * reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
      *
-     * When using this parameter, your caller identity (the role that you're using DataSync with)
-     * must have the `iam:PassRole` permission. The
-     * [AWSDataSyncFullAccess](https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess)
-     * policy includes this permission.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskreportconfig)
-     * @param taskReportConfig Specifies how you want to configure a task report, which provides
-     * detailed information about your DataSync transfer. 
+     * @param taskReportConfig The configuration of your task report, which provides detailed
+     * information about your DataSync transfer. 
      */
     public fun taskReportConfig(taskReportConfig: TaskReportConfigProperty)
 
     /**
-     * Specifies how you want to configure a task report, which provides detailed information about
-     * your DataSync transfer.
+     * The configuration of your task report, which provides detailed information about your
+     * DataSync transfer.
      *
      * For more information, see [Monitoring your DataSync transfers with task
      * reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
      *
-     * When using this parameter, your caller identity (the role that you're using DataSync with)
-     * must have the `iam:PassRole` permission. The
-     * [AWSDataSyncFullAccess](https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess)
-     * policy includes this permission.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskreportconfig)
-     * @param taskReportConfig Specifies how you want to configure a task report, which provides
-     * detailed information about your DataSync transfer. 
+     * @param taskReportConfig The configuration of your task report, which provides detailed
+     * information about your DataSync transfer. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("be882d8209e6a0c57067438e1607b0d0fe8570513ca4471839eb30502477f1ca")
@@ -1068,90 +1036,58 @@ public open class CfnTask(
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * Specifies one of the following task modes for your data transfer:.
+     * The task mode that you're using.
      *
-     * * `ENHANCED` - Transfer virtually unlimited numbers of objects with higher performance than
-     * Basic mode. Enhanced mode tasks optimize the data transfer process by listing, preparing,
-     * transferring, and verifying data in parallel. Enhanced mode is currently available for transfers
-     * between Amazon S3 locations.
-     *
-     *
-     * To create an Enhanced mode task, the IAM role that you use to call the `CreateTask` operation
-     * must have the `iam:CreateServiceLinkedRole` permission.
-     *
-     *
-     * * `BASIC` (default) - Transfer files or objects between AWS storage and all other supported
-     * DataSync locations. Basic mode tasks are subject to
-     * [quotas](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-limits.html) on the
-     * number of files, objects, and directories in a dataset. Basic mode sequentially prepares,
-     * transfers, and verifies data, making it slower than Enhanced mode for most workloads.
-     *
-     * For more information, see [Understanding task mode
-     * differences](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html#task-mode-differences)
-     * .
+     * For more information, see [Choosing a task mode for your data
+     * transfer](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskmode)
-     * @param taskMode Specifies one of the following task modes for your data transfer:. 
+     * @param taskMode The task mode that you're using. 
      */
     override fun taskMode(taskMode: String) {
       cdkBuilder.taskMode(taskMode)
     }
 
     /**
-     * Specifies how you want to configure a task report, which provides detailed information about
-     * your DataSync transfer.
+     * The configuration of your task report, which provides detailed information about your
+     * DataSync transfer.
      *
      * For more information, see [Monitoring your DataSync transfers with task
      * reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
      *
-     * When using this parameter, your caller identity (the role that you're using DataSync with)
-     * must have the `iam:PassRole` permission. The
-     * [AWSDataSyncFullAccess](https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess)
-     * policy includes this permission.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskreportconfig)
-     * @param taskReportConfig Specifies how you want to configure a task report, which provides
-     * detailed information about your DataSync transfer. 
+     * @param taskReportConfig The configuration of your task report, which provides detailed
+     * information about your DataSync transfer. 
      */
     override fun taskReportConfig(taskReportConfig: IResolvable) {
       cdkBuilder.taskReportConfig(taskReportConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Specifies how you want to configure a task report, which provides detailed information about
-     * your DataSync transfer.
+     * The configuration of your task report, which provides detailed information about your
+     * DataSync transfer.
      *
      * For more information, see [Monitoring your DataSync transfers with task
      * reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
      *
-     * When using this parameter, your caller identity (the role that you're using DataSync with)
-     * must have the `iam:PassRole` permission. The
-     * [AWSDataSyncFullAccess](https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess)
-     * policy includes this permission.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskreportconfig)
-     * @param taskReportConfig Specifies how you want to configure a task report, which provides
-     * detailed information about your DataSync transfer. 
+     * @param taskReportConfig The configuration of your task report, which provides detailed
+     * information about your DataSync transfer. 
      */
     override fun taskReportConfig(taskReportConfig: TaskReportConfigProperty) {
       cdkBuilder.taskReportConfig(taskReportConfig.let(TaskReportConfigProperty.Companion::unwrap))
     }
 
     /**
-     * Specifies how you want to configure a task report, which provides detailed information about
-     * your DataSync transfer.
+     * The configuration of your task report, which provides detailed information about your
+     * DataSync transfer.
      *
      * For more information, see [Monitoring your DataSync transfers with task
      * reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
      *
-     * When using this parameter, your caller identity (the role that you're using DataSync with)
-     * must have the `iam:PassRole` permission. The
-     * [AWSDataSyncFullAccess](https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess)
-     * policy includes this permission.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskreportconfig)
-     * @param taskReportConfig Specifies how you want to configure a task report, which provides
-     * detailed information about your DataSync transfer. 
+     * @param taskReportConfig The configuration of your task report, which provides detailed
+     * information about your DataSync transfer. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("be882d8209e6a0c57067438e1607b0d0fe8570513ca4471839eb30502477f1ca")
@@ -1182,7 +1118,11 @@ public open class CfnTask(
   }
 
   /**
-   * The reporting level for the deleted section of your DataSync task report.
+   * Specifies the level of reporting for the files, objects, and directories that Datasync
+   * attempted to delete in your destination location.
+   *
+   * This only applies if you configure your task to delete data in the destination that isn't in
+   * the source.
    *
    * Example:
    *
@@ -1202,9 +1142,6 @@ public open class CfnTask(
      * Specifies whether you want your task report to include only what went wrong with your
      * transfer or a list of what succeeded and didn't.
      *
-     * * `ERRORS_ONLY` : A report shows what DataSync was unable to delete.
-     * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to delete.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-deleted.html#cfn-datasync-task-deleted-reportlevel)
      */
     public fun reportLevel(): String? = unwrap(this).getReportLevel()
@@ -1217,8 +1154,6 @@ public open class CfnTask(
       /**
        * @param reportLevel Specifies whether you want your task report to include only what went
        * wrong with your transfer or a list of what succeeded and didn't.
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to delete.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to delete.
        */
       public fun reportLevel(reportLevel: String)
     }
@@ -1231,8 +1166,6 @@ public open class CfnTask(
       /**
        * @param reportLevel Specifies whether you want your task report to include only what went
        * wrong with your transfer or a list of what succeeded and didn't.
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to delete.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to delete.
        */
       override fun reportLevel(reportLevel: String) {
         cdkBuilder.reportLevel(reportLevel)
@@ -1249,9 +1182,6 @@ public open class CfnTask(
       /**
        * Specifies whether you want your task report to include only what went wrong with your
        * transfer or a list of what succeeded and didn't.
-       *
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to delete.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to delete.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-deleted.html#cfn-datasync-task-deleted-reportlevel)
        */
@@ -1276,8 +1206,7 @@ public open class CfnTask(
   }
 
   /**
-   * Specifies where DataSync uploads your [task
-   * report](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
+   * Specifies where DataSync uploads your task report.
    *
    * Example:
    *
@@ -1776,10 +1705,6 @@ public open class CfnTask(
   /**
    * Specifies the S3 bucket where you're hosting the manifest that you want AWS DataSync to use.
    *
-   * For more information and configuration examples, see [Specifying what DataSync transfers by
-   * using a
-   * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html) .
-   *
    * Example:
    *
    * ```
@@ -1802,10 +1727,6 @@ public open class CfnTask(
      * Specifies the AWS Identity and Access Management (IAM) role that allows DataSync to access
      * your manifest.
      *
-     * For more information, see [Providing DataSync access to your
-     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-access)
-     * .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfigsources3.html#cfn-datasync-task-manifestconfigsources3-bucketaccessrolearn)
      */
     public fun bucketAccessRoleArn(): String? = unwrap(this).getBucketAccessRoleArn()
@@ -1813,16 +1734,12 @@ public open class CfnTask(
     /**
      * Specifies the Amazon S3 object key of your manifest.
      *
-     * This can include a prefix (for example, `prefix/my-manifest.csv` ).
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfigsources3.html#cfn-datasync-task-manifestconfigsources3-manifestobjectpath)
      */
     public fun manifestObjectPath(): String? = unwrap(this).getManifestObjectPath()
 
     /**
      * Specifies the object version ID of the manifest that you want DataSync to use.
-     *
-     * If you don't set this, DataSync uses the latest version of the object.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfigsources3.html#cfn-datasync-task-manifestconfigsources3-manifestobjectversionid)
      */
@@ -1843,22 +1760,17 @@ public open class CfnTask(
       /**
        * @param bucketAccessRoleArn Specifies the AWS Identity and Access Management (IAM) role that
        * allows DataSync to access your manifest.
-       * For more information, see [Providing DataSync access to your
-       * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-access)
-       * .
        */
       public fun bucketAccessRoleArn(bucketAccessRoleArn: String)
 
       /**
        * @param manifestObjectPath Specifies the Amazon S3 object key of your manifest.
-       * This can include a prefix (for example, `prefix/my-manifest.csv` ).
        */
       public fun manifestObjectPath(manifestObjectPath: String)
 
       /**
        * @param manifestObjectVersionId Specifies the object version ID of the manifest that you
        * want DataSync to use.
-       * If you don't set this, DataSync uses the latest version of the object.
        */
       public fun manifestObjectVersionId(manifestObjectVersionId: String)
 
@@ -1877,9 +1789,6 @@ public open class CfnTask(
       /**
        * @param bucketAccessRoleArn Specifies the AWS Identity and Access Management (IAM) role that
        * allows DataSync to access your manifest.
-       * For more information, see [Providing DataSync access to your
-       * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-access)
-       * .
        */
       override fun bucketAccessRoleArn(bucketAccessRoleArn: String) {
         cdkBuilder.bucketAccessRoleArn(bucketAccessRoleArn)
@@ -1887,7 +1796,6 @@ public open class CfnTask(
 
       /**
        * @param manifestObjectPath Specifies the Amazon S3 object key of your manifest.
-       * This can include a prefix (for example, `prefix/my-manifest.csv` ).
        */
       override fun manifestObjectPath(manifestObjectPath: String) {
         cdkBuilder.manifestObjectPath(manifestObjectPath)
@@ -1896,7 +1804,6 @@ public open class CfnTask(
       /**
        * @param manifestObjectVersionId Specifies the object version ID of the manifest that you
        * want DataSync to use.
-       * If you don't set this, DataSync uses the latest version of the object.
        */
       override fun manifestObjectVersionId(manifestObjectVersionId: String) {
         cdkBuilder.manifestObjectVersionId(manifestObjectVersionId)
@@ -1923,10 +1830,6 @@ public open class CfnTask(
        * Specifies the AWS Identity and Access Management (IAM) role that allows DataSync to access
        * your manifest.
        *
-       * For more information, see [Providing DataSync access to your
-       * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-access)
-       * .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfigsources3.html#cfn-datasync-task-manifestconfigsources3-bucketaccessrolearn)
        */
       override fun bucketAccessRoleArn(): String? = unwrap(this).getBucketAccessRoleArn()
@@ -1934,16 +1837,12 @@ public open class CfnTask(
       /**
        * Specifies the Amazon S3 object key of your manifest.
        *
-       * This can include a prefix (for example, `prefix/my-manifest.csv` ).
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfigsources3.html#cfn-datasync-task-manifestconfigsources3-manifestobjectpath)
        */
       override fun manifestObjectPath(): String? = unwrap(this).getManifestObjectPath()
 
       /**
        * Specifies the object version ID of the manifest that you want DataSync to use.
-       *
-       * If you don't set this, DataSync uses the latest version of the object.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfigsources3.html#cfn-datasync-task-manifestconfigsources3-manifestobjectversionid)
        */
@@ -3163,7 +3062,7 @@ public open class CfnTask(
    * Customizes the reporting level for aspects of your task report.
    *
    * For example, your report might generally only include errors, but you could specify that you
-   * want a list of successes and errors just for the files that DataSync attempted to delete in your
+   * want a list of successes and errors just for the files that Datasync attempted to delete in your
    * destination location.
    *
    * Example:
@@ -3192,19 +3091,18 @@ public open class CfnTask(
    */
   public interface OverridesProperty {
     /**
-     * Specifies the level of reporting for the files, objects, and directories that DataSync
+     * Specifies the level of reporting for the files, objects, and directories that Datasync
      * attempted to delete in your destination location.
      *
-     * This only applies if you [configure your
-     * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
-     * data in the destination that isn't in the source.
+     * This only applies if you configure your task to delete data in the destination that isn't in
+     * the source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-deleted)
      */
     public fun deleted(): Any? = unwrap(this).getDeleted()
 
     /**
-     * Specifies the level of reporting for the files, objects, and directories that DataSync
+     * Specifies the level of reporting for the files, objects, and directories that Datasync
      * attempted to skip during your transfer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-skipped)
@@ -3212,7 +3110,7 @@ public open class CfnTask(
     public fun skipped(): Any? = unwrap(this).getSkipped()
 
     /**
-     * Specifies the level of reporting for the files, objects, and directories that DataSync
+     * Specifies the level of reporting for the files, objects, and directories that Datasync
      * attempted to transfer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-transferred)
@@ -3220,8 +3118,11 @@ public open class CfnTask(
     public fun transferred(): Any? = unwrap(this).getTransferred()
 
     /**
-     * Specifies the level of reporting for the files, objects, and directories that DataSync
-     * attempted to verify during your transfer.
+     * Specifies the level of reporting for the files, objects, and directories that Datasync
+     * attempted to verify at the end of your transfer.
+     *
+     * This only applies if you configure your task to verify data during and after the transfer
+     * (which Datasync does by default)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-verified)
      */
@@ -3234,28 +3135,25 @@ public open class CfnTask(
     public interface Builder {
       /**
        * @param deleted Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to delete in your destination location.
-       * This only applies if you [configure your
-       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
-       * data in the destination that isn't in the source.
+       * that Datasync attempted to delete in your destination location.
+       * This only applies if you configure your task to delete data in the destination that isn't
+       * in the source.
        */
       public fun deleted(deleted: IResolvable)
 
       /**
        * @param deleted Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to delete in your destination location.
-       * This only applies if you [configure your
-       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
-       * data in the destination that isn't in the source.
+       * that Datasync attempted to delete in your destination location.
+       * This only applies if you configure your task to delete data in the destination that isn't
+       * in the source.
        */
       public fun deleted(deleted: DeletedProperty)
 
       /**
        * @param deleted Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to delete in your destination location.
-       * This only applies if you [configure your
-       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
-       * data in the destination that isn't in the source.
+       * that Datasync attempted to delete in your destination location.
+       * This only applies if you configure your task to delete data in the destination that isn't
+       * in the source.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("178ba2b5cf2ea2064355ea97986f3eb26a133c25410c0cd8a534e038d634e103")
@@ -3263,19 +3161,19 @@ public open class CfnTask(
 
       /**
        * @param skipped Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to skip during your transfer.
+       * that Datasync attempted to skip during your transfer.
        */
       public fun skipped(skipped: IResolvable)
 
       /**
        * @param skipped Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to skip during your transfer.
+       * that Datasync attempted to skip during your transfer.
        */
       public fun skipped(skipped: SkippedProperty)
 
       /**
        * @param skipped Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to skip during your transfer.
+       * that Datasync attempted to skip during your transfer.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7a8634100c7e7679d1298a9e8c62ef0e782009db9965eb037d9f30f19f4dec76")
@@ -3283,19 +3181,19 @@ public open class CfnTask(
 
       /**
        * @param transferred Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to transfer.
+       * that Datasync attempted to transfer.
        */
       public fun transferred(transferred: IResolvable)
 
       /**
        * @param transferred Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to transfer.
+       * that Datasync attempted to transfer.
        */
       public fun transferred(transferred: TransferredProperty)
 
       /**
        * @param transferred Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to transfer.
+       * that Datasync attempted to transfer.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("867ccf2419e9301cde6a783a341d38eb0896e2ac7c58c19f1fb9e34a7bc656f3")
@@ -3303,19 +3201,25 @@ public open class CfnTask(
 
       /**
        * @param verified Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to verify during your transfer.
+       * that Datasync attempted to verify at the end of your transfer.
+       * This only applies if you configure your task to verify data during and after the transfer
+       * (which Datasync does by default)
        */
       public fun verified(verified: IResolvable)
 
       /**
        * @param verified Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to verify during your transfer.
+       * that Datasync attempted to verify at the end of your transfer.
+       * This only applies if you configure your task to verify data during and after the transfer
+       * (which Datasync does by default)
        */
       public fun verified(verified: VerifiedProperty)
 
       /**
        * @param verified Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to verify during your transfer.
+       * that Datasync attempted to verify at the end of your transfer.
+       * This only applies if you configure your task to verify data during and after the transfer
+       * (which Datasync does by default)
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6de5119e7772a304c44a8d224fb786e3b2b3c6fb013deaf42c69720fd3212640")
@@ -3329,10 +3233,9 @@ public open class CfnTask(
 
       /**
        * @param deleted Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to delete in your destination location.
-       * This only applies if you [configure your
-       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
-       * data in the destination that isn't in the source.
+       * that Datasync attempted to delete in your destination location.
+       * This only applies if you configure your task to delete data in the destination that isn't
+       * in the source.
        */
       override fun deleted(deleted: IResolvable) {
         cdkBuilder.deleted(deleted.let(IResolvable.Companion::unwrap))
@@ -3340,10 +3243,9 @@ public open class CfnTask(
 
       /**
        * @param deleted Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to delete in your destination location.
-       * This only applies if you [configure your
-       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
-       * data in the destination that isn't in the source.
+       * that Datasync attempted to delete in your destination location.
+       * This only applies if you configure your task to delete data in the destination that isn't
+       * in the source.
        */
       override fun deleted(deleted: DeletedProperty) {
         cdkBuilder.deleted(deleted.let(DeletedProperty.Companion::unwrap))
@@ -3351,10 +3253,9 @@ public open class CfnTask(
 
       /**
        * @param deleted Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to delete in your destination location.
-       * This only applies if you [configure your
-       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
-       * data in the destination that isn't in the source.
+       * that Datasync attempted to delete in your destination location.
+       * This only applies if you configure your task to delete data in the destination that isn't
+       * in the source.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("178ba2b5cf2ea2064355ea97986f3eb26a133c25410c0cd8a534e038d634e103")
@@ -3363,7 +3264,7 @@ public open class CfnTask(
 
       /**
        * @param skipped Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to skip during your transfer.
+       * that Datasync attempted to skip during your transfer.
        */
       override fun skipped(skipped: IResolvable) {
         cdkBuilder.skipped(skipped.let(IResolvable.Companion::unwrap))
@@ -3371,7 +3272,7 @@ public open class CfnTask(
 
       /**
        * @param skipped Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to skip during your transfer.
+       * that Datasync attempted to skip during your transfer.
        */
       override fun skipped(skipped: SkippedProperty) {
         cdkBuilder.skipped(skipped.let(SkippedProperty.Companion::unwrap))
@@ -3379,7 +3280,7 @@ public open class CfnTask(
 
       /**
        * @param skipped Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to skip during your transfer.
+       * that Datasync attempted to skip during your transfer.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7a8634100c7e7679d1298a9e8c62ef0e782009db9965eb037d9f30f19f4dec76")
@@ -3388,7 +3289,7 @@ public open class CfnTask(
 
       /**
        * @param transferred Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to transfer.
+       * that Datasync attempted to transfer.
        */
       override fun transferred(transferred: IResolvable) {
         cdkBuilder.transferred(transferred.let(IResolvable.Companion::unwrap))
@@ -3396,7 +3297,7 @@ public open class CfnTask(
 
       /**
        * @param transferred Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to transfer.
+       * that Datasync attempted to transfer.
        */
       override fun transferred(transferred: TransferredProperty) {
         cdkBuilder.transferred(transferred.let(TransferredProperty.Companion::unwrap))
@@ -3404,7 +3305,7 @@ public open class CfnTask(
 
       /**
        * @param transferred Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to transfer.
+       * that Datasync attempted to transfer.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("867ccf2419e9301cde6a783a341d38eb0896e2ac7c58c19f1fb9e34a7bc656f3")
@@ -3413,7 +3314,9 @@ public open class CfnTask(
 
       /**
        * @param verified Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to verify during your transfer.
+       * that Datasync attempted to verify at the end of your transfer.
+       * This only applies if you configure your task to verify data during and after the transfer
+       * (which Datasync does by default)
        */
       override fun verified(verified: IResolvable) {
         cdkBuilder.verified(verified.let(IResolvable.Companion::unwrap))
@@ -3421,7 +3324,9 @@ public open class CfnTask(
 
       /**
        * @param verified Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to verify during your transfer.
+       * that Datasync attempted to verify at the end of your transfer.
+       * This only applies if you configure your task to verify data during and after the transfer
+       * (which Datasync does by default)
        */
       override fun verified(verified: VerifiedProperty) {
         cdkBuilder.verified(verified.let(VerifiedProperty.Companion::unwrap))
@@ -3429,7 +3334,9 @@ public open class CfnTask(
 
       /**
        * @param verified Specifies the level of reporting for the files, objects, and directories
-       * that DataSync attempted to verify during your transfer.
+       * that Datasync attempted to verify at the end of your transfer.
+       * This only applies if you configure your task to verify data during and after the transfer
+       * (which Datasync does by default)
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6de5119e7772a304c44a8d224fb786e3b2b3c6fb013deaf42c69720fd3212640")
@@ -3445,19 +3352,18 @@ public open class CfnTask(
     ) : CdkObject(cdkObject),
         OverridesProperty {
       /**
-       * Specifies the level of reporting for the files, objects, and directories that DataSync
+       * Specifies the level of reporting for the files, objects, and directories that Datasync
        * attempted to delete in your destination location.
        *
-       * This only applies if you [configure your
-       * task](https://docs.aws.amazon.com/datasync/latest/userguide/configure-metadata.html) to delete
-       * data in the destination that isn't in the source.
+       * This only applies if you configure your task to delete data in the destination that isn't
+       * in the source.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-deleted)
        */
       override fun deleted(): Any? = unwrap(this).getDeleted()
 
       /**
-       * Specifies the level of reporting for the files, objects, and directories that DataSync
+       * Specifies the level of reporting for the files, objects, and directories that Datasync
        * attempted to skip during your transfer.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-skipped)
@@ -3465,7 +3371,7 @@ public open class CfnTask(
       override fun skipped(): Any? = unwrap(this).getSkipped()
 
       /**
-       * Specifies the level of reporting for the files, objects, and directories that DataSync
+       * Specifies the level of reporting for the files, objects, and directories that Datasync
        * attempted to transfer.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-transferred)
@@ -3473,8 +3379,11 @@ public open class CfnTask(
       override fun transferred(): Any? = unwrap(this).getTransferred()
 
       /**
-       * Specifies the level of reporting for the files, objects, and directories that DataSync
-       * attempted to verify during your transfer.
+       * Specifies the level of reporting for the files, objects, and directories that Datasync
+       * attempted to verify at the end of your transfer.
+       *
+       * This only applies if you configure your task to verify data during and after the transfer
+       * (which Datasync does by default)
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-overrides.html#cfn-datasync-task-overrides-verified)
        */
@@ -3616,7 +3525,8 @@ public open class CfnTask(
   }
 
   /**
-   * The reporting level for the skipped section of your DataSync task report.
+   * Specifies the level of reporting for the files, objects, and directories that Datasync
+   * attempted to skip during your transfer.
    *
    * Example:
    *
@@ -3636,9 +3546,6 @@ public open class CfnTask(
      * Specifies whether you want your task report to include only what went wrong with your
      * transfer or a list of what succeeded and didn't.
      *
-     * * `ERRORS_ONLY` : A report shows what DataSync was unable to skip.
-     * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to skip.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-skipped.html#cfn-datasync-task-skipped-reportlevel)
      */
     public fun reportLevel(): String? = unwrap(this).getReportLevel()
@@ -3651,8 +3558,6 @@ public open class CfnTask(
       /**
        * @param reportLevel Specifies whether you want your task report to include only what went
        * wrong with your transfer or a list of what succeeded and didn't.
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to skip.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to skip.
        */
       public fun reportLevel(reportLevel: String)
     }
@@ -3665,8 +3570,6 @@ public open class CfnTask(
       /**
        * @param reportLevel Specifies whether you want your task report to include only what went
        * wrong with your transfer or a list of what succeeded and didn't.
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to skip.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to skip.
        */
       override fun reportLevel(reportLevel: String) {
         cdkBuilder.reportLevel(reportLevel)
@@ -3683,9 +3586,6 @@ public open class CfnTask(
       /**
        * Specifies whether you want your task report to include only what went wrong with your
        * transfer or a list of what succeeded and didn't.
-       *
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to skip.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to skip.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-skipped.html#cfn-datasync-task-skipped-reportlevel)
        */
@@ -3710,11 +3610,7 @@ public open class CfnTask(
   }
 
   /**
-   * Specifies the manifest that you want AWS DataSync to use and where it's hosted.
-   *
-   * For more information and configuration examples, see [Specifying what DataSync transfers by
-   * using a
-   * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html) .
+   * Specifies the manifest that you want DataSync to use and where it's hosted.
    *
    * Example:
    *
@@ -3736,7 +3632,7 @@ public open class CfnTask(
    */
   public interface SourceProperty {
     /**
-     * Specifies the S3 bucket where you're hosting your manifest.
+     * Specifies the S3 bucket where you're hosting the manifest that you want AWS DataSync to use.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-source.html#cfn-datasync-task-source-s3)
      */
@@ -3748,17 +3644,20 @@ public open class CfnTask(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param s3 Specifies the S3 bucket where you're hosting your manifest.
+       * @param s3 Specifies the S3 bucket where you're hosting the manifest that you want AWS
+       * DataSync to use.
        */
       public fun s3(s3: IResolvable)
 
       /**
-       * @param s3 Specifies the S3 bucket where you're hosting your manifest.
+       * @param s3 Specifies the S3 bucket where you're hosting the manifest that you want AWS
+       * DataSync to use.
        */
       public fun s3(s3: ManifestConfigSourceS3Property)
 
       /**
-       * @param s3 Specifies the S3 bucket where you're hosting your manifest.
+       * @param s3 Specifies the S3 bucket where you're hosting the manifest that you want AWS
+       * DataSync to use.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2c84797c8e89c694150a127c56ebc9c607a228975717c44e723edbef68f83f08")
@@ -3771,21 +3670,24 @@ public open class CfnTask(
           software.amazon.awscdk.services.datasync.CfnTask.SourceProperty.builder()
 
       /**
-       * @param s3 Specifies the S3 bucket where you're hosting your manifest.
+       * @param s3 Specifies the S3 bucket where you're hosting the manifest that you want AWS
+       * DataSync to use.
        */
       override fun s3(s3: IResolvable) {
         cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param s3 Specifies the S3 bucket where you're hosting your manifest.
+       * @param s3 Specifies the S3 bucket where you're hosting the manifest that you want AWS
+       * DataSync to use.
        */
       override fun s3(s3: ManifestConfigSourceS3Property) {
         cdkBuilder.s3(s3.let(ManifestConfigSourceS3Property.Companion::unwrap))
       }
 
       /**
-       * @param s3 Specifies the S3 bucket where you're hosting your manifest.
+       * @param s3 Specifies the S3 bucket where you're hosting the manifest that you want AWS
+       * DataSync to use.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2c84797c8e89c694150a127c56ebc9c607a228975717c44e723edbef68f83f08")
@@ -3801,7 +3703,8 @@ public open class CfnTask(
     ) : CdkObject(cdkObject),
         SourceProperty {
       /**
-       * Specifies the S3 bucket where you're hosting your manifest.
+       * Specifies the S3 bucket where you're hosting the manifest that you want AWS DataSync to
+       * use.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-source.html#cfn-datasync-task-source-s3)
        */
@@ -4250,12 +4153,12 @@ public open class CfnTask(
      * Specifies whether to enable or disable your task schedule.
      *
      * Your schedule is enabled by default, but there can be situations where you need to disable
-     * it. For example, you might need to perform maintenance on a storage system before you can begin
-     * a recurring DataSync transfer.
+     * it. For example, you might need to pause a recurring transfer to fix an issue with your task or
+     * perform maintenance on your storage system.
      *
      * DataSync might disable your schedule automatically if your task fails repeatedly with the
-     * same error. For more information, see the [*DataSync User
-     * Guide*](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html#pause-task-schedule)
+     * same error. For more information, see
+     * [TaskScheduleDetails](https://docs.aws.amazon.com/datasync/latest/userguide/API_TaskScheduleDetails.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskschedule.html#cfn-datasync-task-taskschedule-status)
@@ -4289,12 +4192,12 @@ public open class CfnTask(
       /**
        * @param status Specifies whether to enable or disable your task schedule.
        * Your schedule is enabled by default, but there can be situations where you need to disable
-       * it. For example, you might need to perform maintenance on a storage system before you can
-       * begin a recurring DataSync transfer.
+       * it. For example, you might need to pause a recurring transfer to fix an issue with your task
+       * or perform maintenance on your storage system.
        *
        * DataSync might disable your schedule automatically if your task fails repeatedly with the
-       * same error. For more information, see the [*DataSync User
-       * Guide*](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html#pause-task-schedule)
+       * same error. For more information, see
+       * [TaskScheduleDetails](https://docs.aws.amazon.com/datasync/latest/userguide/API_TaskScheduleDetails.html)
        * .
        */
       public fun status(status: String)
@@ -4329,12 +4232,12 @@ public open class CfnTask(
       /**
        * @param status Specifies whether to enable or disable your task schedule.
        * Your schedule is enabled by default, but there can be situations where you need to disable
-       * it. For example, you might need to perform maintenance on a storage system before you can
-       * begin a recurring DataSync transfer.
+       * it. For example, you might need to pause a recurring transfer to fix an issue with your task
+       * or perform maintenance on your storage system.
        *
        * DataSync might disable your schedule automatically if your task fails repeatedly with the
-       * same error. For more information, see the [*DataSync User
-       * Guide*](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html#pause-task-schedule)
+       * same error. For more information, see
+       * [TaskScheduleDetails](https://docs.aws.amazon.com/datasync/latest/userguide/API_TaskScheduleDetails.html)
        * .
        */
       override fun status(status: String) {
@@ -4375,12 +4278,12 @@ public open class CfnTask(
        * Specifies whether to enable or disable your task schedule.
        *
        * Your schedule is enabled by default, but there can be situations where you need to disable
-       * it. For example, you might need to perform maintenance on a storage system before you can
-       * begin a recurring DataSync transfer.
+       * it. For example, you might need to pause a recurring transfer to fix an issue with your task
+       * or perform maintenance on your storage system.
        *
        * DataSync might disable your schedule automatically if your task fails repeatedly with the
-       * same error. For more information, see the [*DataSync User
-       * Guide*](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html#pause-task-schedule)
+       * same error. For more information, see
+       * [TaskScheduleDetails](https://docs.aws.amazon.com/datasync/latest/userguide/API_TaskScheduleDetails.html)
        * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskschedule.html#cfn-datasync-task-taskschedule-status)
@@ -4407,7 +4310,8 @@ public open class CfnTask(
   }
 
   /**
-   * The reporting level for the transferred section of your DataSync task report.
+   * Specifies the level of reporting for the files, objects, and directories that Datasync
+   * attempted to transfer.
    *
    * Example:
    *
@@ -4427,9 +4331,6 @@ public open class CfnTask(
      * Specifies whether you want your task report to include only what went wrong with your
      * transfer or a list of what succeeded and didn't.
      *
-     * * `ERRORS_ONLY` : A report shows what DataSync was unable to transfer.
-     * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to transfer.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-transferred.html#cfn-datasync-task-transferred-reportlevel)
      */
     public fun reportLevel(): String? = unwrap(this).getReportLevel()
@@ -4442,8 +4343,6 @@ public open class CfnTask(
       /**
        * @param reportLevel Specifies whether you want your task report to include only what went
        * wrong with your transfer or a list of what succeeded and didn't.
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to transfer.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to transfer.
        */
       public fun reportLevel(reportLevel: String)
     }
@@ -4456,8 +4355,6 @@ public open class CfnTask(
       /**
        * @param reportLevel Specifies whether you want your task report to include only what went
        * wrong with your transfer or a list of what succeeded and didn't.
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to transfer.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to transfer.
        */
       override fun reportLevel(reportLevel: String) {
         cdkBuilder.reportLevel(reportLevel)
@@ -4474,9 +4371,6 @@ public open class CfnTask(
       /**
        * Specifies whether you want your task report to include only what went wrong with your
        * transfer or a list of what succeeded and didn't.
-       *
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to transfer.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to transfer.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-transferred.html#cfn-datasync-task-transferred-reportlevel)
        */
@@ -4502,7 +4396,11 @@ public open class CfnTask(
   }
 
   /**
-   * The reporting level for the verified section of your DataSync task report.
+   * Specifies the level of reporting for the files, objects, and directories that Datasync
+   * attempted to verify at the end of your transfer.
+   *
+   * This only applies if you configure your task to verify data during and after the transfer
+   * (which Datasync does by default)
    *
    * Example:
    *
@@ -4522,9 +4420,6 @@ public open class CfnTask(
      * Specifies whether you want your task report to include only what went wrong with your
      * transfer or a list of what succeeded and didn't.
      *
-     * * `ERRORS_ONLY` : A report shows what DataSync was unable to verify.
-     * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to verify.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-verified.html#cfn-datasync-task-verified-reportlevel)
      */
     public fun reportLevel(): String? = unwrap(this).getReportLevel()
@@ -4537,8 +4432,6 @@ public open class CfnTask(
       /**
        * @param reportLevel Specifies whether you want your task report to include only what went
        * wrong with your transfer or a list of what succeeded and didn't.
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to verify.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to verify.
        */
       public fun reportLevel(reportLevel: String)
     }
@@ -4551,8 +4444,6 @@ public open class CfnTask(
       /**
        * @param reportLevel Specifies whether you want your task report to include only what went
        * wrong with your transfer or a list of what succeeded and didn't.
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to verify.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to verify.
        */
       override fun reportLevel(reportLevel: String) {
         cdkBuilder.reportLevel(reportLevel)
@@ -4569,9 +4460,6 @@ public open class CfnTask(
       /**
        * Specifies whether you want your task report to include only what went wrong with your
        * transfer or a list of what succeeded and didn't.
-       *
-       * * `ERRORS_ONLY` : A report shows what DataSync was unable to verify.
-       * * `SUCCESSES_AND_ERRORS` : A report shows what DataSync was able and unable to verify.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-verified.html#cfn-datasync-task-verified-reportlevel)
        */

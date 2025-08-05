@@ -27,11 +27,13 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.cdk.lambdalayer.kubectl.v33.KubectlV33Layer;
  * // or
  * Vpc vpc;
  * Cluster.Builder.create(this, "MyCluster")
  * .kubectlMemory(Size.gibibytes(4))
- * .version(KubernetesVersion.V1_31)
+ * .version(KubernetesVersion.V1_33)
+ * .kubectlLayer(new KubectlV33Layer(this, "kubectl"))
  * .build();
  * Cluster.fromClusterAttributes(this, "MyCluster", ClusterAttributes.builder()
  * .kubectlMemory(Size.gibibytes(4))
@@ -52,6 +54,21 @@ public interface ClusterProps : ClusterOptions {
    */
   public fun bootstrapClusterCreatorAdminPermissions(): Boolean? =
       unwrap(this).getBootstrapClusterCreatorAdminPermissions()
+
+  /**
+   * If you set this value to False when creating a cluster, the default networking add-ons will not
+   * be installed.
+   *
+   * The default networking addons include vpc-cni, coredns, and kube-proxy.
+   * Use this option when you plan to install third-party alternative add-ons or self-manage the
+   * default networking add-ons.
+   *
+   * Changing this value after the cluster has been created will result in the cluster being
+   * replaced.
+   *
+   * Default: true
+   */
+  public fun bootstrapSelfManagedAddons(): Boolean? = unwrap(this).getBootstrapSelfManagedAddons()
 
   /**
    * Number of instances to allocate as an initial capacity for this cluster.
@@ -141,6 +158,18 @@ public interface ClusterProps : ClusterOptions {
         fun bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions: Boolean)
 
     /**
+     * @param bootstrapSelfManagedAddons If you set this value to False when creating a cluster, the
+     * default networking add-ons will not be installed.
+     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * Use this option when you plan to install third-party alternative add-ons or self-manage the
+     * default networking add-ons.
+     *
+     * Changing this value after the cluster has been created will result in the cluster being
+     * replaced.
+     */
+    public fun bootstrapSelfManagedAddons(bootstrapSelfManagedAddons: Boolean)
+
+    /**
      * @param clusterHandlerEnvironment Custom environment variables when interacting with the EKS
      * endpoint to manage the cluster lifecycle.
      */
@@ -222,12 +251,11 @@ public interface ClusterProps : ClusterOptions {
     public fun kubectlLambdaRole(kubectlLambdaRole: IRole)
 
     /**
-     * @param kubectlLayer An AWS Lambda Layer which includes `kubectl` and Helm.
+     * @param kubectlLayer An AWS Lambda Layer which includes `kubectl` and Helm. 
      * This layer is used by the kubectl handler to apply manifests and install
      * helm charts. You must pick an appropriate releases of one of the
      * `&#64;aws-cdk/layer-kubectl-vXX` packages, that works with the version of
-     * Kubernetes you have chosen. If you don't supply this value `kubectl`
-     * 1.20 will be used, but that version is most likely too old.
+     * Kubernetes you have chosen.
      *
      * The handler expects the layer to include the following executables:
      *
@@ -279,7 +307,10 @@ public interface ClusterProps : ClusterOptions {
      * @param outputConfigCommand Determines whether a CloudFormation output with the `aws eks
      * update-kubeconfig` command will be synthesized.
      * This command will include
-     * the cluster name and, if applicable, the ARN of the masters IAM role.
+     * the cluster name and the ARN of the masters IAM role.
+     *
+     * Note: If mastersRole is not specified, this property will be ignored and no config command
+     * will be emitted.
      */
     public fun outputConfigCommand(outputConfigCommand: Boolean)
 
@@ -303,6 +334,30 @@ public interface ClusterProps : ClusterOptions {
      * when issuing the `kubectl apply` operation with the `--prune` switch.
      */
     public fun prune(prune: Boolean)
+
+    /**
+     * @param remoteNodeNetworks IPv4 CIDR blocks defining the expected address range of hybrid
+     * nodes that will join the cluster.
+     */
+    public fun remoteNodeNetworks(remoteNodeNetworks: List<RemoteNodeNetwork>)
+
+    /**
+     * @param remoteNodeNetworks IPv4 CIDR blocks defining the expected address range of hybrid
+     * nodes that will join the cluster.
+     */
+    public fun remoteNodeNetworks(vararg remoteNodeNetworks: RemoteNodeNetwork)
+
+    /**
+     * @param remotePodNetworks IPv4 CIDR blocks for Pods running Kubernetes webhooks on hybrid
+     * nodes.
+     */
+    public fun remotePodNetworks(remotePodNetworks: List<RemotePodNetwork>)
+
+    /**
+     * @param remotePodNetworks IPv4 CIDR blocks for Pods running Kubernetes webhooks on hybrid
+     * nodes.
+     */
+    public fun remotePodNetworks(vararg remotePodNetworks: RemotePodNetwork)
 
     /**
      * @param role Role that provides permissions for the Kubernetes control plane to make calls to
@@ -404,6 +459,20 @@ public interface ClusterProps : ClusterOptions {
     override
         fun bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions: Boolean) {
       cdkBuilder.bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions)
+    }
+
+    /**
+     * @param bootstrapSelfManagedAddons If you set this value to False when creating a cluster, the
+     * default networking add-ons will not be installed.
+     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * Use this option when you plan to install third-party alternative add-ons or self-manage the
+     * default networking add-ons.
+     *
+     * Changing this value after the cluster has been created will result in the cluster being
+     * replaced.
+     */
+    override fun bootstrapSelfManagedAddons(bootstrapSelfManagedAddons: Boolean) {
+      cdkBuilder.bootstrapSelfManagedAddons(bootstrapSelfManagedAddons)
     }
 
     /**
@@ -513,12 +582,11 @@ public interface ClusterProps : ClusterOptions {
     }
 
     /**
-     * @param kubectlLayer An AWS Lambda Layer which includes `kubectl` and Helm.
+     * @param kubectlLayer An AWS Lambda Layer which includes `kubectl` and Helm. 
      * This layer is used by the kubectl handler to apply manifests and install
      * helm charts. You must pick an appropriate releases of one of the
      * `&#64;aws-cdk/layer-kubectl-vXX` packages, that works with the version of
-     * Kubernetes you have chosen. If you don't supply this value `kubectl`
-     * 1.20 will be used, but that version is most likely too old.
+     * Kubernetes you have chosen.
      *
      * The handler expects the layer to include the following executables:
      *
@@ -580,7 +648,10 @@ public interface ClusterProps : ClusterOptions {
      * @param outputConfigCommand Determines whether a CloudFormation output with the `aws eks
      * update-kubeconfig` command will be synthesized.
      * This command will include
-     * the cluster name and, if applicable, the ARN of the masters IAM role.
+     * the cluster name and the ARN of the masters IAM role.
+     *
+     * Note: If mastersRole is not specified, this property will be ignored and no config command
+     * will be emitted.
      */
     override fun outputConfigCommand(outputConfigCommand: Boolean) {
       cdkBuilder.outputConfigCommand(outputConfigCommand)
@@ -612,6 +683,36 @@ public interface ClusterProps : ClusterOptions {
     override fun prune(prune: Boolean) {
       cdkBuilder.prune(prune)
     }
+
+    /**
+     * @param remoteNodeNetworks IPv4 CIDR blocks defining the expected address range of hybrid
+     * nodes that will join the cluster.
+     */
+    override fun remoteNodeNetworks(remoteNodeNetworks: List<RemoteNodeNetwork>) {
+      cdkBuilder.remoteNodeNetworks(remoteNodeNetworks.map(RemoteNodeNetwork.Companion::unwrap))
+    }
+
+    /**
+     * @param remoteNodeNetworks IPv4 CIDR blocks defining the expected address range of hybrid
+     * nodes that will join the cluster.
+     */
+    override fun remoteNodeNetworks(vararg remoteNodeNetworks: RemoteNodeNetwork): Unit =
+        remoteNodeNetworks(remoteNodeNetworks.toList())
+
+    /**
+     * @param remotePodNetworks IPv4 CIDR blocks for Pods running Kubernetes webhooks on hybrid
+     * nodes.
+     */
+    override fun remotePodNetworks(remotePodNetworks: List<RemotePodNetwork>) {
+      cdkBuilder.remotePodNetworks(remotePodNetworks.map(RemotePodNetwork.Companion::unwrap))
+    }
+
+    /**
+     * @param remotePodNetworks IPv4 CIDR blocks for Pods running Kubernetes webhooks on hybrid
+     * nodes.
+     */
+    override fun remotePodNetworks(vararg remotePodNetworks: RemotePodNetwork): Unit =
+        remotePodNetworks(remotePodNetworks.toList())
 
     /**
      * @param role Role that provides permissions for the Kubernetes control plane to make calls to
@@ -734,6 +835,22 @@ public interface ClusterProps : ClusterOptions {
         unwrap(this).getBootstrapClusterCreatorAdminPermissions()
 
     /**
+     * If you set this value to False when creating a cluster, the default networking add-ons will
+     * not be installed.
+     *
+     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * Use this option when you plan to install third-party alternative add-ons or self-manage the
+     * default networking add-ons.
+     *
+     * Changing this value after the cluster has been created will result in the cluster being
+     * replaced.
+     *
+     * Default: true
+     */
+    override fun bootstrapSelfManagedAddons(): Boolean? =
+        unwrap(this).getBootstrapSelfManagedAddons()
+
+    /**
      * Custom environment variables when interacting with the EKS endpoint to manage the cluster
      * lifecycle.
      *
@@ -852,8 +969,7 @@ public interface ClusterProps : ClusterOptions {
      * This layer is used by the kubectl handler to apply manifests and install
      * helm charts. You must pick an appropriate releases of one of the
      * `&#64;aws-cdk/layer-kubectl-vXX` packages, that works with the version of
-     * Kubernetes you have chosen. If you don't supply this value `kubectl`
-     * 1.20 will be used, but that version is most likely too old.
+     * Kubernetes you have chosen.
      *
      * The handler expects the layer to include the following executables:
      *
@@ -861,11 +977,9 @@ public interface ClusterProps : ClusterOptions {
      * /opt/helm/helm
      * /opt/kubectl/kubectl
      * ```
-     *
-     * Default: - a default layer with Kubectl 1.20.
      */
-    override fun kubectlLayer(): ILayerVersion? =
-        unwrap(this).getKubectlLayer()?.let(ILayerVersion::wrap)
+    override fun kubectlLayer(): ILayerVersion =
+        unwrap(this).getKubectlLayer().let(ILayerVersion::wrap)
 
     /**
      * Amount of memory to allocate to the provider's lambda function.
@@ -919,9 +1033,14 @@ public interface ClusterProps : ClusterOptions {
      * be synthesized.
      *
      * This command will include
-     * the cluster name and, if applicable, the ARN of the masters IAM role.
+     * the cluster name and the ARN of the masters IAM role.
+     *
+     * Note: If mastersRole is not specified, this property will be ignored and no config command
+     * will be emitted.
      *
      * Default: true
+     *
+     * [Documentation](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_eks-readme.html#masters-role)
      */
     override fun outputConfigCommand(): Boolean? = unwrap(this).getOutputConfigCommand()
 
@@ -952,6 +1071,23 @@ public interface ClusterProps : ClusterOptions {
      * Default: true
      */
     override fun prune(): Boolean? = unwrap(this).getPrune()
+
+    /**
+     * IPv4 CIDR blocks defining the expected address range of hybrid nodes that will join the
+     * cluster.
+     *
+     * Default: - none
+     */
+    override fun remoteNodeNetworks(): List<RemoteNodeNetwork> =
+        unwrap(this).getRemoteNodeNetworks()?.map(RemoteNodeNetwork::wrap) ?: emptyList()
+
+    /**
+     * IPv4 CIDR blocks for Pods running Kubernetes webhooks on hybrid nodes.
+     *
+     * Default: - none
+     */
+    override fun remotePodNetworks(): List<RemotePodNetwork> =
+        unwrap(this).getRemotePodNetworks()?.map(RemotePodNetwork::wrap) ?: emptyList()
 
     /**
      * Role that provides permissions for the Kubernetes control plane to make calls to AWS API

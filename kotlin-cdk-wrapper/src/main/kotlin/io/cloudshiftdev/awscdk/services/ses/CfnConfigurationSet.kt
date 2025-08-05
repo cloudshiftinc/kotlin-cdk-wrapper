@@ -68,6 +68,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .trackingOptions(TrackingOptionsProperty.builder()
  * .customRedirectDomain("customRedirectDomain")
+ * .httpsPolicy("httpsPolicy")
  * .build())
  * .vdmOptions(VdmOptionsProperty.builder()
  * .dashboardOptions(DashboardOptionsProperty.builder()
@@ -1532,6 +1533,7 @@ public open class CfnConfigurationSet(
    * import io.cloudshiftdev.awscdk.services.ses.*;
    * TrackingOptionsProperty trackingOptionsProperty = TrackingOptionsProperty.builder()
    * .customRedirectDomain("customRedirectDomain")
+   * .httpsPolicy("httpsPolicy")
    * .build();
    * ```
    *
@@ -1547,6 +1549,13 @@ public open class CfnConfigurationSet(
     public fun customRedirectDomain(): String? = unwrap(this).getCustomRedirectDomain()
 
     /**
+     * The https policy to use for tracking open and click events.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-trackingoptions.html#cfn-ses-configurationset-trackingoptions-httpspolicy)
+     */
+    public fun httpsPolicy(): String? = unwrap(this).getHttpsPolicy()
+
+    /**
      * A builder for [TrackingOptionsProperty]
      */
     @CdkDslMarker
@@ -1556,6 +1565,11 @@ public open class CfnConfigurationSet(
        * to the Amazon SES event tracking domain.
        */
       public fun customRedirectDomain(customRedirectDomain: String)
+
+      /**
+       * @param httpsPolicy The https policy to use for tracking open and click events.
+       */
+      public fun httpsPolicy(httpsPolicy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1569,6 +1583,13 @@ public open class CfnConfigurationSet(
        */
       override fun customRedirectDomain(customRedirectDomain: String) {
         cdkBuilder.customRedirectDomain(customRedirectDomain)
+      }
+
+      /**
+       * @param httpsPolicy The https policy to use for tracking open and click events.
+       */
+      override fun httpsPolicy(httpsPolicy: String) {
+        cdkBuilder.httpsPolicy(httpsPolicy)
       }
 
       public fun build():
@@ -1587,6 +1608,13 @@ public open class CfnConfigurationSet(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-trackingoptions.html#cfn-ses-configurationset-trackingoptions-customredirectdomain)
        */
       override fun customRedirectDomain(): String? = unwrap(this).getCustomRedirectDomain()
+
+      /**
+       * The https policy to use for tracking open and click events.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-trackingoptions.html#cfn-ses-configurationset-trackingoptions-httpspolicy)
+       */
+      override fun httpsPolicy(): String? = unwrap(this).getHttpsPolicy()
     }
 
     public companion object {

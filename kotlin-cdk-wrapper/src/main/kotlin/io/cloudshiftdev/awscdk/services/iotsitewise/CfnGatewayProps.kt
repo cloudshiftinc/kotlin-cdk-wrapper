@@ -30,6 +30,8 @@ import kotlin.jvm.JvmName
  * .build())
  * .greengrassV2(GreengrassV2Property.builder()
  * .coreDeviceThingName("coreDeviceThingName")
+ * // the properties below are optional
+ * .coreDeviceOperatingSystem("coreDeviceOperatingSystem")
  * .build())
  * .siemensIe(SiemensIEProperty.builder()
  * .iotCoreThingName("iotCoreThingName")
@@ -41,6 +43,7 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .capabilityConfiguration("capabilityConfiguration")
  * .build()))
+ * .gatewayVersion("gatewayVersion")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -78,6 +81,13 @@ public interface CfnGatewayProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html#cfn-iotsitewise-gateway-gatewayplatform)
    */
   public fun gatewayPlatform(): Any
+
+  /**
+   * The version of the gateway you want to create.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html#cfn-iotsitewise-gateway-gatewayversion)
+   */
+  public fun gatewayVersion(): String? = unwrap(this).getGatewayVersion()
 
   /**
    * A list of key-value pairs that contain metadata for the gateway.
@@ -150,6 +160,11 @@ public interface CfnGatewayProps {
     @JvmName("daef7b497712a2c38abe2d8815aa9b78513e87f677531eb68e104625fd5cfd0a")
     public
         fun gatewayPlatform(gatewayPlatform: CfnGateway.GatewayPlatformProperty.Builder.() -> Unit)
+
+    /**
+     * @param gatewayVersion The version of the gateway you want to create.
+     */
+    public fun gatewayVersion(gatewayVersion: String)
 
     /**
      * @param tags A list of key-value pairs that contain metadata for the gateway.
@@ -241,6 +256,13 @@ public interface CfnGatewayProps {
         Unit = gatewayPlatform(CfnGateway.GatewayPlatformProperty(gatewayPlatform))
 
     /**
+     * @param gatewayVersion The version of the gateway you want to create.
+     */
+    override fun gatewayVersion(gatewayVersion: String) {
+      cdkBuilder.gatewayVersion(gatewayVersion)
+    }
+
+    /**
      * @param tags A list of key-value pairs that contain metadata for the gateway.
      * For more information, see [Tagging your AWS IoT SiteWise
      * resources](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html) in the
@@ -293,6 +315,13 @@ public interface CfnGatewayProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html#cfn-iotsitewise-gateway-gatewayplatform)
      */
     override fun gatewayPlatform(): Any = unwrap(this).getGatewayPlatform()
+
+    /**
+     * The version of the gateway you want to create.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html#cfn-iotsitewise-gateway-gatewayversion)
+     */
+    override fun gatewayVersion(): String? = unwrap(this).getGatewayVersion()
 
     /**
      * A list of key-value pairs that contain metadata for the gateway.

@@ -15,14 +15,22 @@ import kotlin.Unit
  *
  * ```
  * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
  * App app = new App();
  * Stack stack = Stack.Builder.create(app,
  * "Stack").env(Environment.builder().region("us-west-2").build()).build();
  * TableV2 globalTable = TableV2.Builder.create(stack, "GlobalTable")
  * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
- * .replicas(List.of(ReplicaTableProps.builder().region("us-east-1").build()))
+ * .replicas(List.of(ReplicaTableProps.builder().region("us-east-1").build(),
+ * ReplicaTableProps.builder().region("us-east-2").build()))
  * .build();
- * globalTable.addReplica(ReplicaTableProps.builder().region("us-east-2").deletionProtection(true).build());
+ * // metric is only for the table in us-west-2
+ * Metric metric = globalTable.metricConsumedReadCapacityUnits();
+ * Alarm.Builder.create(this, "Alarm")
+ * .metric(metric)
+ * .evaluationPeriods(1)
+ * .threshold(1)
+ * .build();
  * ```
  */
 public interface Environment {

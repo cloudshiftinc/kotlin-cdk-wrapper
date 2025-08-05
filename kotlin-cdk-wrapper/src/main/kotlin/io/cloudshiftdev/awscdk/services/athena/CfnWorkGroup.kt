@@ -60,6 +60,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .selectedEngineVersion("selectedEngineVersion")
  * .build())
  * .executionRole("executionRole")
+ * .managedQueryResultsConfiguration(ManagedQueryResultsConfigurationProperty.builder()
+ * .enabled(false)
+ * .encryptionConfiguration(ManagedStorageEncryptionConfigurationProperty.builder()
+ * .kmsKey("kmsKey")
+ * .build())
+ * .build())
  * .publishCloudWatchMetricsEnabled(false)
  * .requesterPaysEnabled(false)
  * .resultConfiguration(ResultConfigurationProperty.builder()
@@ -87,6 +93,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .selectedEngineVersion("selectedEngineVersion")
  * .build())
  * .executionRole("executionRole")
+ * .managedQueryResultsConfiguration(ManagedQueryResultsConfigurationProperty.builder()
+ * .enabled(false)
+ * .encryptionConfiguration(ManagedStorageEncryptionConfigurationProperty.builder()
+ * .kmsKey("kmsKey")
+ * .build())
+ * .build())
  * .publishCloudWatchMetricsEnabled(false)
  * .removeBytesScannedCutoffPerQuery(false)
  * .removeCustomerContentEncryptionConfiguration(false)
@@ -1252,6 +1264,289 @@ public open class CfnWorkGroup(
   }
 
   /**
+   * The configuration for storing results in Athena owned storage, which includes whether this
+   * feature is enabled;
+   *
+   * whether encryption configuration, if any, is used for encrypting query results.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.athena.*;
+   * ManagedQueryResultsConfigurationProperty managedQueryResultsConfigurationProperty =
+   * ManagedQueryResultsConfigurationProperty.builder()
+   * .enabled(false)
+   * .encryptionConfiguration(ManagedStorageEncryptionConfigurationProperty.builder()
+   * .kmsKey("kmsKey")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-managedqueryresultsconfiguration.html)
+   */
+  public interface ManagedQueryResultsConfigurationProperty {
+    /**
+     * If set to true, allows you to store query results in Athena owned storage.
+     *
+     * If set to false, workgroup member stores query results in location specified under
+     * `ResultConfiguration$OutputLocation` . The default is false. A workgroup cannot have the
+     * `ResultConfiguration$OutputLocation` parameter when you set this field to true.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-managedqueryresultsconfiguration.html#cfn-athena-workgroup-managedqueryresultsconfiguration-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * If you encrypt query and calculation results in Athena owned storage, this field indicates
+     * the encryption option (for example, SSE_KMS or CSE_KMS) and key information.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-managedqueryresultsconfiguration.html#cfn-athena-workgroup-managedqueryresultsconfiguration-encryptionconfiguration)
+     */
+    public fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
+
+    /**
+     * A builder for [ManagedQueryResultsConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled If set to true, allows you to store query results in Athena owned storage.
+       * If set to false, workgroup member stores query results in location specified under
+       * `ResultConfiguration$OutputLocation` . The default is false. A workgroup cannot have the
+       * `ResultConfiguration$OutputLocation` parameter when you set this field to true.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled If set to true, allows you to store query results in Athena owned storage.
+       * If set to false, workgroup member stores query results in location specified under
+       * `ResultConfiguration$OutputLocation` . The default is false. A workgroup cannot have the
+       * `ResultConfiguration$OutputLocation` parameter when you set this field to true.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param encryptionConfiguration If you encrypt query and calculation results in Athena owned
+       * storage, this field indicates the encryption option (for example, SSE_KMS or CSE_KMS) and key
+       * information.
+       */
+      public fun encryptionConfiguration(encryptionConfiguration: IResolvable)
+
+      /**
+       * @param encryptionConfiguration If you encrypt query and calculation results in Athena owned
+       * storage, this field indicates the encryption option (for example, SSE_KMS or CSE_KMS) and key
+       * information.
+       */
+      public
+          fun encryptionConfiguration(encryptionConfiguration: ManagedStorageEncryptionConfigurationProperty)
+
+      /**
+       * @param encryptionConfiguration If you encrypt query and calculation results in Athena owned
+       * storage, this field indicates the encryption option (for example, SSE_KMS or CSE_KMS) and key
+       * information.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ec85e7b60e4ac61d582b1d0556eb9095d404776d34ac5c4a6f5f83ec3be0e5ae")
+      public
+          fun encryptionConfiguration(encryptionConfiguration: ManagedStorageEncryptionConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.athena.CfnWorkGroup.ManagedQueryResultsConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.athena.CfnWorkGroup.ManagedQueryResultsConfigurationProperty.builder()
+
+      /**
+       * @param enabled If set to true, allows you to store query results in Athena owned storage.
+       * If set to false, workgroup member stores query results in location specified under
+       * `ResultConfiguration$OutputLocation` . The default is false. A workgroup cannot have the
+       * `ResultConfiguration$OutputLocation` parameter when you set this field to true.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled If set to true, allows you to store query results in Athena owned storage.
+       * If set to false, workgroup member stores query results in location specified under
+       * `ResultConfiguration$OutputLocation` . The default is false. A workgroup cannot have the
+       * `ResultConfiguration$OutputLocation` parameter when you set this field to true.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param encryptionConfiguration If you encrypt query and calculation results in Athena owned
+       * storage, this field indicates the encryption option (for example, SSE_KMS or CSE_KMS) and key
+       * information.
+       */
+      override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param encryptionConfiguration If you encrypt query and calculation results in Athena owned
+       * storage, this field indicates the encryption option (for example, SSE_KMS or CSE_KMS) and key
+       * information.
+       */
+      override
+          fun encryptionConfiguration(encryptionConfiguration: ManagedStorageEncryptionConfigurationProperty) {
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(ManagedStorageEncryptionConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param encryptionConfiguration If you encrypt query and calculation results in Athena owned
+       * storage, this field indicates the encryption option (for example, SSE_KMS or CSE_KMS) and key
+       * information.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ec85e7b60e4ac61d582b1d0556eb9095d404776d34ac5c4a6f5f83ec3be0e5ae")
+      override
+          fun encryptionConfiguration(encryptionConfiguration: ManagedStorageEncryptionConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          encryptionConfiguration(ManagedStorageEncryptionConfigurationProperty(encryptionConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.athena.CfnWorkGroup.ManagedQueryResultsConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.ManagedQueryResultsConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ManagedQueryResultsConfigurationProperty {
+      /**
+       * If set to true, allows you to store query results in Athena owned storage.
+       *
+       * If set to false, workgroup member stores query results in location specified under
+       * `ResultConfiguration$OutputLocation` . The default is false. A workgroup cannot have the
+       * `ResultConfiguration$OutputLocation` parameter when you set this field to true.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-managedqueryresultsconfiguration.html#cfn-athena-workgroup-managedqueryresultsconfiguration-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * If you encrypt query and calculation results in Athena owned storage, this field indicates
+       * the encryption option (for example, SSE_KMS or CSE_KMS) and key information.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-managedqueryresultsconfiguration.html#cfn-athena-workgroup-managedqueryresultsconfiguration-encryptionconfiguration)
+       */
+      override fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ManagedQueryResultsConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.ManagedQueryResultsConfigurationProperty):
+          ManagedQueryResultsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ManagedQueryResultsConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ManagedQueryResultsConfigurationProperty):
+          software.amazon.awscdk.services.athena.CfnWorkGroup.ManagedQueryResultsConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.athena.CfnWorkGroup.ManagedQueryResultsConfigurationProperty
+    }
+  }
+
+  /**
+   * Indicates the encryption configuration for Athena Managed Storage.
+   *
+   * If not setting this field, Managed Storage will encrypt the query results with Athena's
+   * encryption key
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.athena.*;
+   * ManagedStorageEncryptionConfigurationProperty managedStorageEncryptionConfigurationProperty =
+   * ManagedStorageEncryptionConfigurationProperty.builder()
+   * .kmsKey("kmsKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-managedstorageencryptionconfiguration.html)
+   */
+  public interface ManagedStorageEncryptionConfigurationProperty {
+    /**
+     * For SSE-KMS and CSE-KMS, this is the KMS key ARN or ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-managedstorageencryptionconfiguration.html#cfn-athena-workgroup-managedstorageencryptionconfiguration-kmskey)
+     */
+    public fun kmsKey(): String? = unwrap(this).getKmsKey()
+
+    /**
+     * A builder for [ManagedStorageEncryptionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKey For SSE-KMS and CSE-KMS, this is the KMS key ARN or ID.
+       */
+      public fun kmsKey(kmsKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.athena.CfnWorkGroup.ManagedStorageEncryptionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.athena.CfnWorkGroup.ManagedStorageEncryptionConfigurationProperty.builder()
+
+      /**
+       * @param kmsKey For SSE-KMS and CSE-KMS, this is the KMS key ARN or ID.
+       */
+      override fun kmsKey(kmsKey: String) {
+        cdkBuilder.kmsKey(kmsKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.athena.CfnWorkGroup.ManagedStorageEncryptionConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.ManagedStorageEncryptionConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ManagedStorageEncryptionConfigurationProperty {
+      /**
+       * For SSE-KMS and CSE-KMS, this is the KMS key ARN or ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-managedstorageencryptionconfiguration.html#cfn-athena-workgroup-managedstorageencryptionconfiguration-kmskey)
+       */
+      override fun kmsKey(): String? = unwrap(this).getKmsKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ManagedStorageEncryptionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.ManagedStorageEncryptionConfigurationProperty):
+          ManagedStorageEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ManagedStorageEncryptionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ManagedStorageEncryptionConfigurationProperty):
+          software.amazon.awscdk.services.athena.CfnWorkGroup.ManagedStorageEncryptionConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.athena.CfnWorkGroup.ManagedStorageEncryptionConfigurationProperty
+    }
+  }
+
+  /**
    * The location in Amazon S3 where query and calculation results are stored and the encryption
    * option, if any, used for query and calculation results.
    *
@@ -2296,6 +2591,12 @@ public open class CfnWorkGroup(
    * .selectedEngineVersion("selectedEngineVersion")
    * .build())
    * .executionRole("executionRole")
+   * .managedQueryResultsConfiguration(ManagedQueryResultsConfigurationProperty.builder()
+   * .enabled(false)
+   * .encryptionConfiguration(ManagedStorageEncryptionConfigurationProperty.builder()
+   * .kmsKey("kmsKey")
+   * .build())
+   * .build())
    * .publishCloudWatchMetricsEnabled(false)
    * .requesterPaysEnabled(false)
    * .resultConfiguration(ResultConfigurationProperty.builder()
@@ -2374,6 +2675,17 @@ public open class CfnWorkGroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-executionrole)
      */
     public fun executionRole(): String? = unwrap(this).getExecutionRole()
+
+    /**
+     * The configuration for storing results in Athena owned storage, which includes whether this
+     * feature is enabled;
+     *
+     * whether encryption configuration, if any, is used for encrypting query results.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-managedqueryresultsconfiguration)
+     */
+    public fun managedQueryResultsConfiguration(): Any? =
+        unwrap(this).getManagedQueryResultsConfiguration()
 
     /**
      * Indicates that the Amazon CloudWatch metrics are enabled for the workgroup.
@@ -2496,6 +2808,31 @@ public open class CfnWorkGroup(
        * This property applies only to Spark-enabled workgroups in Athena.
        */
       public fun executionRole(executionRole: String)
+
+      /**
+       * @param managedQueryResultsConfiguration The configuration for storing results in Athena
+       * owned storage, which includes whether this feature is enabled;.
+       * whether encryption configuration, if any, is used for encrypting query results.
+       */
+      public fun managedQueryResultsConfiguration(managedQueryResultsConfiguration: IResolvable)
+
+      /**
+       * @param managedQueryResultsConfiguration The configuration for storing results in Athena
+       * owned storage, which includes whether this feature is enabled;.
+       * whether encryption configuration, if any, is used for encrypting query results.
+       */
+      public
+          fun managedQueryResultsConfiguration(managedQueryResultsConfiguration: ManagedQueryResultsConfigurationProperty)
+
+      /**
+       * @param managedQueryResultsConfiguration The configuration for storing results in Athena
+       * owned storage, which includes whether this feature is enabled;.
+       * whether encryption configuration, if any, is used for encrypting query results.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ecb1a07bbf99fc2dda155636c1e64fdbd1bac45d6624b1b5d0e4cb9851fd19b5")
+      public
+          fun managedQueryResultsConfiguration(managedQueryResultsConfiguration: ManagedQueryResultsConfigurationProperty.Builder.() -> Unit)
 
       /**
        * @param publishCloudWatchMetricsEnabled Indicates that the Amazon CloudWatch metrics are
@@ -2671,6 +3008,37 @@ public open class CfnWorkGroup(
       }
 
       /**
+       * @param managedQueryResultsConfiguration The configuration for storing results in Athena
+       * owned storage, which includes whether this feature is enabled;.
+       * whether encryption configuration, if any, is used for encrypting query results.
+       */
+      override fun managedQueryResultsConfiguration(managedQueryResultsConfiguration: IResolvable) {
+        cdkBuilder.managedQueryResultsConfiguration(managedQueryResultsConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param managedQueryResultsConfiguration The configuration for storing results in Athena
+       * owned storage, which includes whether this feature is enabled;.
+       * whether encryption configuration, if any, is used for encrypting query results.
+       */
+      override
+          fun managedQueryResultsConfiguration(managedQueryResultsConfiguration: ManagedQueryResultsConfigurationProperty) {
+        cdkBuilder.managedQueryResultsConfiguration(managedQueryResultsConfiguration.let(ManagedQueryResultsConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param managedQueryResultsConfiguration The configuration for storing results in Athena
+       * owned storage, which includes whether this feature is enabled;.
+       * whether encryption configuration, if any, is used for encrypting query results.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ecb1a07bbf99fc2dda155636c1e64fdbd1bac45d6624b1b5d0e4cb9851fd19b5")
+      override
+          fun managedQueryResultsConfiguration(managedQueryResultsConfiguration: ManagedQueryResultsConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          managedQueryResultsConfiguration(ManagedQueryResultsConfigurationProperty(managedQueryResultsConfiguration))
+
+      /**
        * @param publishCloudWatchMetricsEnabled Indicates that the Amazon CloudWatch metrics are
        * enabled for the workgroup.
        */
@@ -2814,6 +3182,17 @@ public open class CfnWorkGroup(
       override fun executionRole(): String? = unwrap(this).getExecutionRole()
 
       /**
+       * The configuration for storing results in Athena owned storage, which includes whether this
+       * feature is enabled;
+       *
+       * whether encryption configuration, if any, is used for encrypting query results.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-managedqueryresultsconfiguration)
+       */
+      override fun managedQueryResultsConfiguration(): Any? =
+          unwrap(this).getManagedQueryResultsConfiguration()
+
+      /**
        * Indicates that the Amazon CloudWatch metrics are enabled for the workgroup.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-publishcloudwatchmetricsenabled)
@@ -2891,6 +3270,12 @@ public open class CfnWorkGroup(
    * .selectedEngineVersion("selectedEngineVersion")
    * .build())
    * .executionRole("executionRole")
+   * .managedQueryResultsConfiguration(ManagedQueryResultsConfigurationProperty.builder()
+   * .enabled(false)
+   * .encryptionConfiguration(ManagedStorageEncryptionConfigurationProperty.builder()
+   * .kmsKey("kmsKey")
+   * .build())
+   * .build())
    * .publishCloudWatchMetricsEnabled(false)
    * .removeBytesScannedCutoffPerQuery(false)
    * .removeCustomerContentEncryptionConfiguration(false)
@@ -2964,6 +3349,16 @@ public open class CfnWorkGroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-executionrole)
      */
     public fun executionRole(): String? = unwrap(this).getExecutionRole()
+
+    /**
+     * The configuration for the managed query results and encryption option.
+     *
+     * ResultConfiguration and ManagedQueryResultsConfiguration cannot be set at the same time
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-managedqueryresultsconfiguration)
+     */
+    public fun managedQueryResultsConfiguration(): Any? =
+        unwrap(this).getManagedQueryResultsConfiguration()
 
     /**
      * Indicates that the Amazon CloudWatch metrics are enabled for the workgroup.
@@ -3083,6 +3478,31 @@ public open class CfnWorkGroup(
        * @param executionRole Execution Role ARN required to run Athena Spark Calculations.
        */
       public fun executionRole(executionRole: String)
+
+      /**
+       * @param managedQueryResultsConfiguration The configuration for the managed query results and
+       * encryption option.
+       * ResultConfiguration and ManagedQueryResultsConfiguration cannot be set at the same time
+       */
+      public fun managedQueryResultsConfiguration(managedQueryResultsConfiguration: IResolvable)
+
+      /**
+       * @param managedQueryResultsConfiguration The configuration for the managed query results and
+       * encryption option.
+       * ResultConfiguration and ManagedQueryResultsConfiguration cannot be set at the same time
+       */
+      public
+          fun managedQueryResultsConfiguration(managedQueryResultsConfiguration: ManagedQueryResultsConfigurationProperty)
+
+      /**
+       * @param managedQueryResultsConfiguration The configuration for the managed query results and
+       * encryption option.
+       * ResultConfiguration and ManagedQueryResultsConfiguration cannot be set at the same time
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3831ce400185dd57774edfad68967b4684748a619b7f3d0b1a69777870b536ff")
+      public
+          fun managedQueryResultsConfiguration(managedQueryResultsConfiguration: ManagedQueryResultsConfigurationProperty.Builder.() -> Unit)
 
       /**
        * @param publishCloudWatchMetricsEnabled Indicates that the Amazon CloudWatch metrics are
@@ -3261,6 +3681,37 @@ public open class CfnWorkGroup(
       }
 
       /**
+       * @param managedQueryResultsConfiguration The configuration for the managed query results and
+       * encryption option.
+       * ResultConfiguration and ManagedQueryResultsConfiguration cannot be set at the same time
+       */
+      override fun managedQueryResultsConfiguration(managedQueryResultsConfiguration: IResolvable) {
+        cdkBuilder.managedQueryResultsConfiguration(managedQueryResultsConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param managedQueryResultsConfiguration The configuration for the managed query results and
+       * encryption option.
+       * ResultConfiguration and ManagedQueryResultsConfiguration cannot be set at the same time
+       */
+      override
+          fun managedQueryResultsConfiguration(managedQueryResultsConfiguration: ManagedQueryResultsConfigurationProperty) {
+        cdkBuilder.managedQueryResultsConfiguration(managedQueryResultsConfiguration.let(ManagedQueryResultsConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param managedQueryResultsConfiguration The configuration for the managed query results and
+       * encryption option.
+       * ResultConfiguration and ManagedQueryResultsConfiguration cannot be set at the same time
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3831ce400185dd57774edfad68967b4684748a619b7f3d0b1a69777870b536ff")
+      override
+          fun managedQueryResultsConfiguration(managedQueryResultsConfiguration: ManagedQueryResultsConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          managedQueryResultsConfiguration(ManagedQueryResultsConfigurationProperty(managedQueryResultsConfiguration))
+
+      /**
        * @param publishCloudWatchMetricsEnabled Indicates that the Amazon CloudWatch metrics are
        * enabled for the workgroup.
        */
@@ -3416,6 +3867,16 @@ public open class CfnWorkGroup(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-executionrole)
        */
       override fun executionRole(): String? = unwrap(this).getExecutionRole()
+
+      /**
+       * The configuration for the managed query results and encryption option.
+       *
+       * ResultConfiguration and ManagedQueryResultsConfiguration cannot be set at the same time
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-managedqueryresultsconfiguration)
+       */
+      override fun managedQueryResultsConfiguration(): Any? =
+          unwrap(this).getManagedQueryResultsConfiguration()
 
       /**
        * Indicates that the Amazon CloudWatch metrics are enabled for the workgroup.

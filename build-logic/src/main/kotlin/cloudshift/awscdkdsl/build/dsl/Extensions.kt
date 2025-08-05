@@ -17,7 +17,7 @@ import com.squareup.kotlinpoet.asTypeName
 
 internal object Annotations {
     val Deprecated =
-        AnnotationSpec.builder(Deprecated::class.asTypeName())
+        AnnotationSpec.builder(kotlin.Deprecated::class.asTypeName())
             .addMember("message = %S", "deprecated in CDK")
             .build()
 }

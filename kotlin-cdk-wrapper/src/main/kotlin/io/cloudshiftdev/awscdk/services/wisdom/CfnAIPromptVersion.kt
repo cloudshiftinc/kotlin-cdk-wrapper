@@ -78,7 +78,7 @@ public open class CfnAIPromptVersion(
   }
 
   /**
-   *
+   * The ARN of the AI prompt.
    */
   public open fun attrAiPromptArn(): String = unwrap(this).getAttrAiPromptArn()
 

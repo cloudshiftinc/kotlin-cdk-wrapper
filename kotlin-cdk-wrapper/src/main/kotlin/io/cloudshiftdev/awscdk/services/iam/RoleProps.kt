@@ -17,18 +17,19 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * // Option 3: Create a new role that allows the account root principal to assume. Add this role in
- * the `system:masters` and witch to this role from the AWS console.
- * Cluster cluster;
- * Role consoleReadOnlyRole = Role.Builder.create(this, "ConsoleReadOnlyRole")
- * .assumedBy(new ArnPrincipal("arn_for_trusted_principal"))
+ * Role lambdaRole = Role.Builder.create(this, "Role")
+ * .assumedBy(new ServicePrincipal("lambda.amazonaws.com"))
+ * .description("Example role...")
  * .build();
- * consoleReadOnlyRole.addToPolicy(PolicyStatement.Builder.create()
- * .actions(List.of("eks:AccessKubernetesApi", "eks:Describe*", "eks:List*"))
- * .resources(List.of(cluster.getClusterArn()))
- * .build());
- * // Add this role to system:masters RBAC group
- * cluster.awsAuth.addMastersRole(consoleReadOnlyRole);
+ * Stream stream = Stream.Builder.create(this, "MyEncryptedStream")
+ * .encryption(StreamEncryption.KMS)
+ * .build();
+ * StreamConsumer streamConsumer = StreamConsumer.Builder.create(this, "MyStreamConsumer")
+ * .streamConsumerName("MyStreamConsumer")
+ * .stream(stream)
+ * .build();
+ * // give lambda permissions to read stream via the stream consumer
+ * streamConsumer.grantRead(lambdaRole);
  * ```
  */
 public interface RoleProps {

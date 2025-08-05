@@ -13,11 +13,15 @@ import kotlin.jvm.JvmName
 public interface DockerImageAsset {
   public fun destinations(): Map<String, DockerImageDestination>
 
+  public fun displayName(): String? = unwrap(this).getDisplayName()
+
   public fun source(): DockerImageSource
 
   @CdkDslMarker
   public interface Builder {
     public fun destinations(destinations: Map<String, DockerImageDestination>)
+
+    public fun displayName(displayName: String)
 
     public fun source(source: DockerImageSource)
 
@@ -32,6 +36,10 @@ public interface DockerImageAsset {
 
     override fun destinations(destinations: Map<String, DockerImageDestination>) {
       cdkBuilder.destinations(destinations.mapValues{DockerImageDestination.unwrap(it.value)})
+    }
+
+    override fun displayName(displayName: String) {
+      cdkBuilder.displayName(displayName)
     }
 
     override fun source(source: DockerImageSource) {
@@ -53,6 +61,8 @@ public interface DockerImageAsset {
       DockerImageAsset {
     override fun destinations(): Map<String, DockerImageDestination> =
         unwrap(this).getDestinations().mapValues{DockerImageDestination.wrap(it.value)}
+
+    override fun displayName(): String? = unwrap(this).getDisplayName()
 
     override fun source(): DockerImageSource = unwrap(this).getSource().let(DockerImageSource::wrap)
   }

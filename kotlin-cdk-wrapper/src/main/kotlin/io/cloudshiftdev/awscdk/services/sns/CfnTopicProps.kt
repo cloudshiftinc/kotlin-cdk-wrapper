@@ -36,6 +36,7 @@ import kotlin.collections.List
  * .successFeedbackSampleRate("successFeedbackSampleRate")
  * .build()))
  * .displayName("displayName")
+ * .fifoThroughputScope("fifoThroughputScope")
  * .fifoTopic(false)
  * .kmsMasterKeyId("kmsMasterKeyId")
  * .signatureVersion("signatureVersion")
@@ -120,6 +121,15 @@ public interface CfnTopicProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-displayname)
    */
   public fun displayName(): String? = unwrap(this).getDisplayName()
+
+  /**
+   * Specifies the throughput quota and deduplication behavior to apply for the FIFO topic.
+   *
+   * Valid values are `Topic` or `MessageGroup` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-fifothroughputscope)
+   */
+  public fun fifoThroughputScope(): String? = unwrap(this).getFifoThroughputScope()
 
   /**
    * Set to true to create a FIFO topic.
@@ -310,6 +320,13 @@ public interface CfnTopicProps {
      * spaces, and tabs.
      */
     public fun displayName(displayName: String)
+
+    /**
+     * @param fifoThroughputScope Specifies the throughput quota and deduplication behavior to apply
+     * for the FIFO topic.
+     * Valid values are `Topic` or `MessageGroup` .
+     */
+    public fun fifoThroughputScope(fifoThroughputScope: String)
 
     /**
      * @param fifoTopic Set to true to create a FIFO topic.
@@ -527,6 +544,15 @@ public interface CfnTopicProps {
     }
 
     /**
+     * @param fifoThroughputScope Specifies the throughput quota and deduplication behavior to apply
+     * for the FIFO topic.
+     * Valid values are `Topic` or `MessageGroup` .
+     */
+    override fun fifoThroughputScope(fifoThroughputScope: String) {
+      cdkBuilder.fifoThroughputScope(fifoThroughputScope)
+    }
+
+    /**
      * @param fifoTopic Set to true to create a FIFO topic.
      */
     override fun fifoTopic(fifoTopic: Boolean) {
@@ -718,6 +744,15 @@ public interface CfnTopicProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-displayname)
      */
     override fun displayName(): String? = unwrap(this).getDisplayName()
+
+    /**
+     * Specifies the throughput quota and deduplication behavior to apply for the FIFO topic.
+     *
+     * Valid values are `Topic` or `MessageGroup` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-fifothroughputscope)
+     */
+    override fun fifoThroughputScope(): String? = unwrap(this).getFifoThroughputScope()
 
     /**
      * Set to true to create a FIFO topic.

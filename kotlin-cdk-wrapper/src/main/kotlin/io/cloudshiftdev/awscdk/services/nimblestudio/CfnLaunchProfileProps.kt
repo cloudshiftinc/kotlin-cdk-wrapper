@@ -66,66 +66,41 @@ import kotlin.jvm.JvmName
  */
 public interface CfnLaunchProfileProps {
   /**
-   * A human-readable description of the launch profile.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-description)
    */
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * Unique identifiers for a collection of EC2 subnets.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-ec2subnetids)
    */
   public fun ec2SubnetIds(): List<String>
 
   /**
-   * The version number of the protocol that is used by the launch profile.
-   *
-   * The only valid version is "2021-03-31".
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-launchprofileprotocolversions)
    */
   public fun launchProfileProtocolVersions(): List<String>
 
   /**
-   * A friendly name for the launch profile.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-name)
    */
   public fun name(): String
 
   /**
-   * A configuration for a streaming session.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-streamconfiguration)
    */
   public fun streamConfiguration(): Any
 
   /**
-   * Unique identifiers for a collection of studio components that can be used with this launch
-   * profile.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-studiocomponentids)
    */
   public fun studioComponentIds(): List<String>
 
   /**
-   * The unique identifier for a studio resource.
-   *
-   * In Nimble Studio, all other resources are contained in a studio resource.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-studioid)
    */
   public fun studioId(): String
 
   /**
-   * An array of key-value pairs to apply to this resource.
-   *
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-tags)
    */
   public fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
@@ -136,52 +111,48 @@ public interface CfnLaunchProfileProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param description A human-readable description of the launch profile.
+     * @param description the value to be set.
      */
     public fun description(description: String)
 
     /**
-     * @param ec2SubnetIds Unique identifiers for a collection of EC2 subnets. 
+     * @param ec2SubnetIds the value to be set. 
      */
     public fun ec2SubnetIds(ec2SubnetIds: List<String>)
 
     /**
-     * @param ec2SubnetIds Unique identifiers for a collection of EC2 subnets. 
+     * @param ec2SubnetIds the value to be set. 
      */
     public fun ec2SubnetIds(vararg ec2SubnetIds: String)
 
     /**
-     * @param launchProfileProtocolVersions The version number of the protocol that is used by the
-     * launch profile. 
-     * The only valid version is "2021-03-31".
+     * @param launchProfileProtocolVersions the value to be set. 
      */
     public fun launchProfileProtocolVersions(launchProfileProtocolVersions: List<String>)
 
     /**
-     * @param launchProfileProtocolVersions The version number of the protocol that is used by the
-     * launch profile. 
-     * The only valid version is "2021-03-31".
+     * @param launchProfileProtocolVersions the value to be set. 
      */
     public fun launchProfileProtocolVersions(vararg launchProfileProtocolVersions: String)
 
     /**
-     * @param name A friendly name for the launch profile. 
+     * @param name the value to be set. 
      */
     public fun name(name: String)
 
     /**
-     * @param streamConfiguration A configuration for a streaming session. 
+     * @param streamConfiguration the value to be set. 
      */
     public fun streamConfiguration(streamConfiguration: IResolvable)
 
     /**
-     * @param streamConfiguration A configuration for a streaming session. 
+     * @param streamConfiguration the value to be set. 
      */
     public
         fun streamConfiguration(streamConfiguration: CfnLaunchProfile.StreamConfigurationProperty)
 
     /**
-     * @param streamConfiguration A configuration for a streaming session. 
+     * @param streamConfiguration the value to be set. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1e89e2675aaf68f9e3ab063388960cfad7ee36672343e686bb07cbd5d83c5d40")
@@ -189,28 +160,22 @@ public interface CfnLaunchProfileProps {
         fun streamConfiguration(streamConfiguration: CfnLaunchProfile.StreamConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * @param studioComponentIds Unique identifiers for a collection of studio components that can
-     * be used with this launch profile. 
+     * @param studioComponentIds the value to be set. 
      */
     public fun studioComponentIds(studioComponentIds: List<String>)
 
     /**
-     * @param studioComponentIds Unique identifiers for a collection of studio components that can
-     * be used with this launch profile. 
+     * @param studioComponentIds the value to be set. 
      */
     public fun studioComponentIds(vararg studioComponentIds: String)
 
     /**
-     * @param studioId The unique identifier for a studio resource. 
-     * In Nimble Studio, all other resources are contained in a studio resource.
+     * @param studioId the value to be set. 
      */
     public fun studioId(studioId: String)
 
     /**
-     * @param tags An array of key-value pairs to apply to this resource.
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
+     * @param tags the value to be set.
      */
     public fun tags(tags: Map<String, String>)
   }
@@ -221,58 +186,54 @@ public interface CfnLaunchProfileProps {
         software.amazon.awscdk.services.nimblestudio.CfnLaunchProfileProps.builder()
 
     /**
-     * @param description A human-readable description of the launch profile.
+     * @param description the value to be set.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
-     * @param ec2SubnetIds Unique identifiers for a collection of EC2 subnets. 
+     * @param ec2SubnetIds the value to be set. 
      */
     override fun ec2SubnetIds(ec2SubnetIds: List<String>) {
       cdkBuilder.ec2SubnetIds(ec2SubnetIds)
     }
 
     /**
-     * @param ec2SubnetIds Unique identifiers for a collection of EC2 subnets. 
+     * @param ec2SubnetIds the value to be set. 
      */
     override fun ec2SubnetIds(vararg ec2SubnetIds: String): Unit =
         ec2SubnetIds(ec2SubnetIds.toList())
 
     /**
-     * @param launchProfileProtocolVersions The version number of the protocol that is used by the
-     * launch profile. 
-     * The only valid version is "2021-03-31".
+     * @param launchProfileProtocolVersions the value to be set. 
      */
     override fun launchProfileProtocolVersions(launchProfileProtocolVersions: List<String>) {
       cdkBuilder.launchProfileProtocolVersions(launchProfileProtocolVersions)
     }
 
     /**
-     * @param launchProfileProtocolVersions The version number of the protocol that is used by the
-     * launch profile. 
-     * The only valid version is "2021-03-31".
+     * @param launchProfileProtocolVersions the value to be set. 
      */
     override fun launchProfileProtocolVersions(vararg launchProfileProtocolVersions: String): Unit =
         launchProfileProtocolVersions(launchProfileProtocolVersions.toList())
 
     /**
-     * @param name A friendly name for the launch profile. 
+     * @param name the value to be set. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     /**
-     * @param streamConfiguration A configuration for a streaming session. 
+     * @param streamConfiguration the value to be set. 
      */
     override fun streamConfiguration(streamConfiguration: IResolvable) {
       cdkBuilder.streamConfiguration(streamConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param streamConfiguration A configuration for a streaming session. 
+     * @param streamConfiguration the value to be set. 
      */
     override
         fun streamConfiguration(streamConfiguration: CfnLaunchProfile.StreamConfigurationProperty) {
@@ -280,7 +241,7 @@ public interface CfnLaunchProfileProps {
     }
 
     /**
-     * @param streamConfiguration A configuration for a streaming session. 
+     * @param streamConfiguration the value to be set. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1e89e2675aaf68f9e3ab063388960cfad7ee36672343e686bb07cbd5d83c5d40")
@@ -290,33 +251,27 @@ public interface CfnLaunchProfileProps {
         streamConfiguration(CfnLaunchProfile.StreamConfigurationProperty(streamConfiguration))
 
     /**
-     * @param studioComponentIds Unique identifiers for a collection of studio components that can
-     * be used with this launch profile. 
+     * @param studioComponentIds the value to be set. 
      */
     override fun studioComponentIds(studioComponentIds: List<String>) {
       cdkBuilder.studioComponentIds(studioComponentIds)
     }
 
     /**
-     * @param studioComponentIds Unique identifiers for a collection of studio components that can
-     * be used with this launch profile. 
+     * @param studioComponentIds the value to be set. 
      */
     override fun studioComponentIds(vararg studioComponentIds: String): Unit =
         studioComponentIds(studioComponentIds.toList())
 
     /**
-     * @param studioId The unique identifier for a studio resource. 
-     * In Nimble Studio, all other resources are contained in a studio resource.
+     * @param studioId the value to be set. 
      */
     override fun studioId(studioId: String) {
       cdkBuilder.studioId(studioId)
     }
 
     /**
-     * @param tags An array of key-value pairs to apply to this resource.
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
+     * @param tags the value to be set.
      */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
@@ -331,67 +286,42 @@ public interface CfnLaunchProfileProps {
   ) : CdkObject(cdkObject),
       CfnLaunchProfileProps {
     /**
-     * A human-readable description of the launch profile.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-description)
      */
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * Unique identifiers for a collection of EC2 subnets.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-ec2subnetids)
      */
     override fun ec2SubnetIds(): List<String> = unwrap(this).getEc2SubnetIds()
 
     /**
-     * The version number of the protocol that is used by the launch profile.
-     *
-     * The only valid version is "2021-03-31".
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-launchprofileprotocolversions)
      */
     override fun launchProfileProtocolVersions(): List<String> =
         unwrap(this).getLaunchProfileProtocolVersions()
 
     /**
-     * A friendly name for the launch profile.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-name)
      */
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * A configuration for a streaming session.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-streamconfiguration)
      */
     override fun streamConfiguration(): Any = unwrap(this).getStreamConfiguration()
 
     /**
-     * Unique identifiers for a collection of studio components that can be used with this launch
-     * profile.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-studiocomponentids)
      */
     override fun studioComponentIds(): List<String> = unwrap(this).getStudioComponentIds()
 
     /**
-     * The unique identifier for a studio resource.
-     *
-     * In Nimble Studio, all other resources are contained in a studio resource.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-studioid)
      */
     override fun studioId(): String = unwrap(this).getStudioId()
 
     /**
-     * An array of key-value pairs to apply to this resource.
-     *
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html#cfn-nimblestudio-launchprofile-tags)
      */
     override fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()

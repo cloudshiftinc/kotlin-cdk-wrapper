@@ -337,7 +337,8 @@ public open class CfnTransitGateway(
     /**
      * Enable or disable automatic association with the default association route table.
      *
-     * Enabled by default.
+     * Enabled by default. If `DefaultRouteTableAssociation` is set to enable, AWS Transit Gateway
+     * will create the default transit gateway route table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-defaultroutetableassociation)
      * @param defaultRouteTableAssociation Enable or disable automatic association with the default
@@ -348,7 +349,8 @@ public open class CfnTransitGateway(
     /**
      * Enable or disable automatic propagation of routes to the default propagation route table.
      *
-     * Enabled by default.
+     * Enabled by default. If `DefaultRouteTablePropagation` is set to enable, AWS Transit Gateway
+     * will create the default transit gateway route table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-defaultroutetablepropagation)
      * @param defaultRouteTablePropagation Enable or disable automatic propagation of routes to the
@@ -498,7 +500,8 @@ public open class CfnTransitGateway(
     /**
      * Enable or disable automatic association with the default association route table.
      *
-     * Enabled by default.
+     * Enabled by default. If `DefaultRouteTableAssociation` is set to enable, AWS Transit Gateway
+     * will create the default transit gateway route table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-defaultroutetableassociation)
      * @param defaultRouteTableAssociation Enable or disable automatic association with the default
@@ -511,7 +514,8 @@ public open class CfnTransitGateway(
     /**
      * Enable or disable automatic propagation of routes to the default propagation route table.
      *
-     * Enabled by default.
+     * Enabled by default. If `DefaultRouteTablePropagation` is set to enable, AWS Transit Gateway
+     * will create the default transit gateway route table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-defaultroutetablepropagation)
      * @param defaultRouteTablePropagation Enable or disable automatic propagation of routes to the

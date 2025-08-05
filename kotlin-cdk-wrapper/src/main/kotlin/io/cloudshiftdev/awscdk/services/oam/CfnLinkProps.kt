@@ -54,6 +54,12 @@ public interface CfnLinkProps {
    * `mariagarcia&#64;example.com`
    * * `$AccountEmailNoDomain` is an email address without the domain name, such as `mariagarcia`
    *
+   *
+   * In the  and  Regions, the only supported option is to use custom labels, and the `$AccountName`
+   * , `$AccountEmail` , and `$AccountEmailNoDomain` variables all resolve as *account-id* instead of
+   * the specified variable.
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-labeltemplate)
    */
   public fun labelTemplate(): String? = unwrap(this).getLabelTemplate()
@@ -112,6 +118,11 @@ public interface CfnLinkProps {
      * * `$AccountEmail` is a globally-unique email address, which includes the email domain, such
      * as `mariagarcia&#64;example.com`
      * * `$AccountEmailNoDomain` is an email address without the domain name, such as `mariagarcia`
+     *
+     *
+     * In the  and  Regions, the only supported option is to use custom labels, and the
+     * `$AccountName` , `$AccountEmail` , and `$AccountEmailNoDomain` variables all resolve as
+     * *account-id* instead of the specified variable.
      */
     public fun labelTemplate(labelTemplate: String)
 
@@ -186,6 +197,11 @@ public interface CfnLinkProps {
      * * `$AccountEmail` is a globally-unique email address, which includes the email domain, such
      * as `mariagarcia&#64;example.com`
      * * `$AccountEmailNoDomain` is an email address without the domain name, such as `mariagarcia`
+     *
+     *
+     * In the  and  Regions, the only supported option is to use custom labels, and the
+     * `$AccountName` , `$AccountEmail` , and `$AccountEmailNoDomain` variables all resolve as
+     * *account-id* instead of the specified variable.
      */
     override fun labelTemplate(labelTemplate: String) {
       cdkBuilder.labelTemplate(labelTemplate)
@@ -277,6 +293,12 @@ public interface CfnLinkProps {
      * * `$AccountEmail` is a globally-unique email address, which includes the email domain, such
      * as `mariagarcia&#64;example.com`
      * * `$AccountEmailNoDomain` is an email address without the domain name, such as `mariagarcia`
+     *
+     *
+     * In the  and  Regions, the only supported option is to use custom labels, and the
+     * `$AccountName` , `$AccountEmail` , and `$AccountEmailNoDomain` variables all resolve as
+     * *account-id* instead of the specified variable.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-labeltemplate)
      */

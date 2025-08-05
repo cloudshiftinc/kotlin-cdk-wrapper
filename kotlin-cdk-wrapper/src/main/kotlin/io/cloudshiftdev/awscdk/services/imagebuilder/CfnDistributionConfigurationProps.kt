@@ -49,6 +49,12 @@ import kotlin.collections.Map
  * .setDefaultVersion(false)
  * .build()))
  * .licenseConfigurationArns(List.of("licenseConfigurationArns"))
+ * .ssmParameterConfigurations(List.of(SsmParameterConfigurationProperty.builder()
+ * .parameterName("parameterName")
+ * // the properties below are optional
+ * .amiAccountId("amiAccountId")
+ * .dataType("dataType")
+ * .build()))
  * .build()))
  * .name("name")
  * // the properties below are optional

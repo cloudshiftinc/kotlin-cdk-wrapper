@@ -341,7 +341,9 @@ public interface CfnClusterProps {
   /**
    * If `true` , the data in the cluster is encrypted at rest.
    *
-   * Default: false
+   * If you set the value on this parameter to `false` , the request will fail.
+   *
+   * Default: true
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-encrypted)
    */
@@ -599,6 +601,8 @@ public interface CfnClusterProps {
 
   /**
    * If `true` , the cluster can be accessed from a public network.
+   *
+   * Default: false
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-publiclyaccessible)
    */
@@ -946,13 +950,17 @@ public interface CfnClusterProps {
 
     /**
      * @param encrypted If `true` , the data in the cluster is encrypted at rest.
-     * Default: false
+     * If you set the value on this parameter to `false` , the request will fail.
+     *
+     * Default: true
      */
     public fun encrypted(encrypted: Boolean)
 
     /**
      * @param encrypted If `true` , the data in the cluster is encrypted at rest.
-     * Default: false
+     * If you set the value on this parameter to `false` , the request will fail.
+     *
+     * Default: true
      */
     public fun encrypted(encrypted: IResolvable)
 
@@ -1226,11 +1234,13 @@ public interface CfnClusterProps {
 
     /**
      * @param publiclyAccessible If `true` , the cluster can be accessed from a public network.
+     * Default: false
      */
     public fun publiclyAccessible(publiclyAccessible: Boolean)
 
     /**
      * @param publiclyAccessible If `true` , the cluster can be accessed from a public network.
+     * Default: false
      */
     public fun publiclyAccessible(publiclyAccessible: IResolvable)
 
@@ -1625,7 +1635,9 @@ public interface CfnClusterProps {
 
     /**
      * @param encrypted If `true` , the data in the cluster is encrypted at rest.
-     * Default: false
+     * If you set the value on this parameter to `false` , the request will fail.
+     *
+     * Default: true
      */
     override fun encrypted(encrypted: Boolean) {
       cdkBuilder.encrypted(encrypted)
@@ -1633,7 +1645,9 @@ public interface CfnClusterProps {
 
     /**
      * @param encrypted If `true` , the data in the cluster is encrypted at rest.
-     * Default: false
+     * If you set the value on this parameter to `false` , the request will fail.
+     *
+     * Default: true
      */
     override fun encrypted(encrypted: IResolvable) {
       cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
@@ -1961,6 +1975,7 @@ public interface CfnClusterProps {
 
     /**
      * @param publiclyAccessible If `true` , the cluster can be accessed from a public network.
+     * Default: false
      */
     override fun publiclyAccessible(publiclyAccessible: Boolean) {
       cdkBuilder.publiclyAccessible(publiclyAccessible)
@@ -1968,6 +1983,7 @@ public interface CfnClusterProps {
 
     /**
      * @param publiclyAccessible If `true` , the cluster can be accessed from a public network.
+     * Default: false
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
       cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
@@ -2354,7 +2370,9 @@ public interface CfnClusterProps {
     /**
      * If `true` , the data in the cluster is encrypted at rest.
      *
-     * Default: false
+     * If you set the value on this parameter to `false` , the request will fail.
+     *
+     * Default: true
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-encrypted)
      */
@@ -2615,6 +2633,8 @@ public interface CfnClusterProps {
 
     /**
      * If `true` , the cluster can be accessed from a public network.
+     *
+     * Default: false
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-publiclyaccessible)
      */

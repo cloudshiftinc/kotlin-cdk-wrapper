@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Boolean
 import kotlin.Deprecated
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -26,30 +27,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.autoscaling.AutoScalingGroup;
- * AutoScalingGroup asg;
  * Vpc vpc;
- * // Create the load balancer in a VPC. 'internetFacing' is 'false'
- * // by default, which creates an internal load balancer.
+ * SecurityGroup securityGroup1 = SecurityGroup.Builder.create(this,
+ * "SecurityGroup1").vpc(vpc).build();
  * ApplicationLoadBalancer lb = ApplicationLoadBalancer.Builder.create(this, "LB")
  * .vpc(vpc)
  * .internetFacing(true)
+ * .securityGroup(securityGroup1)
  * .build();
- * // Add a listener and open up the load balancer's security group
- * // to the world.
- * ApplicationListener listener = lb.addListener("Listener", BaseApplicationListenerProps.builder()
- * .port(80)
- * // 'open: true' is the default, you can leave it out if you want. Set it
- * // to 'false' and use `listener.connections` if you want to be selective
- * // about who can access the load balancer.
- * .open(true)
- * .build());
- * // Create an AutoScaling group and add it as a load balancing
- * // target to the listener.
- * listener.addTargets("ApplicationFleet", AddApplicationTargetsProps.builder()
- * .port(8080)
- * .targets(List.of(asg))
- * .build());
+ * SecurityGroup securityGroup2 = SecurityGroup.Builder.create(this,
+ * "SecurityGroup2").vpc(vpc).build();
+ * lb.addSecurityGroup(securityGroup2);
  * ```
  */
 public open class ApplicationLoadBalancer(
@@ -137,6 +125,17 @@ public open class ApplicationLoadBalancer(
 
   /**
    * The IP Address Type for this load balancer.
+   *
+   * If the
+   * `&#64;aws-cdk/aws-elasticloadbalancingV2:albDualstackWithoutPublicIpv4SecurityGroupRulesDefault`
+   * feature flag is set (the default for new projects), and `addListener()` is called with `open:
+   * true`,
+   * the load balancer's security group will automatically include both IPv4 and IPv6 ingress rules
+   * when using `IpAddressType.DUAL_STACK_WITHOUT_PUBLIC_IPV4`.
+   *
+   * For existing projects that only have IPv4 rules, you can opt-in to IPv6 ingress rules
+   * by enabling the feature flag in your cdk.json file. Note that enabling this feature flag
+   * will modify existing security group rules.
    */
   public override fun ipAddressType(): IpAddressType? =
       unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
@@ -1312,6 +1311,16 @@ public open class ApplicationLoadBalancer(
     public fun loadBalancerName(loadBalancerName: String)
 
     /**
+     * The minimum capacity (LCU) for a load balancer.
+     *
+     * Default: undefined - ELB default is 0 LCU
+     *
+     * [Documentation](https://exampleloadbalancer.com/ondemand_capacity_reservation_calculator.html)
+     * @param minimumCapacityUnit The minimum capacity (LCU) for a load balancer. 
+     */
+    public fun minimumCapacityUnit(minimumCapacityUnit: Number)
+
+    /**
      * Indicates whether the Application Load Balancer should preserve the host header in the HTTP
      * request and send it to the target without any change.
      *
@@ -1553,6 +1562,18 @@ public open class ApplicationLoadBalancer(
     }
 
     /**
+     * The minimum capacity (LCU) for a load balancer.
+     *
+     * Default: undefined - ELB default is 0 LCU
+     *
+     * [Documentation](https://exampleloadbalancer.com/ondemand_capacity_reservation_calculator.html)
+     * @param minimumCapacityUnit The minimum capacity (LCU) for a load balancer. 
+     */
+    override fun minimumCapacityUnit(minimumCapacityUnit: Number) {
+      cdkBuilder.minimumCapacityUnit(minimumCapacityUnit)
+    }
+
+    /**
      * Indicates whether the Application Load Balancer should preserve the host header in the HTTP
      * request and send it to the target without any change.
      *
@@ -1677,6 +1698,9 @@ public open class ApplicationLoadBalancer(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer.PROPERTY_INJECTION_ID
+
     public fun fromApplicationLoadBalancerAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

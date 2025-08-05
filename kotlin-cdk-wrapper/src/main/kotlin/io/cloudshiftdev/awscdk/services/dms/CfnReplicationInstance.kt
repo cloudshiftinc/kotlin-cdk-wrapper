@@ -39,6 +39,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .allowMajorVersionUpgrade(false)
  * .autoMinorVersionUpgrade(false)
  * .availabilityZone("availabilityZone")
+ * .dnsNameServers("dnsNameServers")
  * .engineVersion("engineVersion")
  * .kmsKeyId("kmsKeyId")
  * .multiAz(false)
@@ -159,6 +160,20 @@ public open class CfnReplicationInstance(
    */
   public open fun availabilityZone(`value`: String) {
     unwrap(this).setAvailabilityZone(`value`)
+  }
+
+  /**
+   * A list of custom DNS name servers supported for the replication instance to access your
+   * on-premise source or target database.
+   */
+  public open fun dnsNameServers(): String? = unwrap(this).getDnsNameServers()
+
+  /**
+   * A list of custom DNS name servers supported for the replication instance to access your
+   * on-premise source or target database.
+   */
+  public open fun dnsNameServers(`value`: String) {
+    unwrap(this).setDnsNameServers(`value`)
   }
 
   /**
@@ -443,6 +458,20 @@ public open class CfnReplicationInstance(
      * in. 
      */
     public fun availabilityZone(availabilityZone: String)
+
+    /**
+     * A list of custom DNS name servers supported for the replication instance to access your
+     * on-premise source or target database.
+     *
+     * This list overrides the default name servers supported by the replication instance. You can
+     * specify a comma-separated list of internet addresses for up to four on-premise DNS name servers.
+     * For example: `"1.1.1.1,2.2.2.2,3.3.3.3,4.4.4.4"`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-dnsnameservers)
+     * @param dnsNameServers A list of custom DNS name servers supported for the replication
+     * instance to access your on-premise source or target database. 
+     */
+    public fun dnsNameServers(dnsNameServers: String)
 
     /**
      * The engine version number of the replication instance.
@@ -736,6 +765,22 @@ public open class CfnReplicationInstance(
      */
     override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
+    }
+
+    /**
+     * A list of custom DNS name servers supported for the replication instance to access your
+     * on-premise source or target database.
+     *
+     * This list overrides the default name servers supported by the replication instance. You can
+     * specify a comma-separated list of internet addresses for up to four on-premise DNS name servers.
+     * For example: `"1.1.1.1,2.2.2.2,3.3.3.3,4.4.4.4"`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-dnsnameservers)
+     * @param dnsNameServers A list of custom DNS name servers supported for the replication
+     * instance to access your on-premise source or target database. 
+     */
+    override fun dnsNameServers(dnsNameServers: String) {
+      cdkBuilder.dnsNameServers(dnsNameServers)
     }
 
     /**

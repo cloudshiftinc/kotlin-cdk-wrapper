@@ -296,6 +296,9 @@ public open class Certificate(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.certificatemanager.Certificate.PROPERTY_INJECTION_ID
+
     public fun fromCertificateArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

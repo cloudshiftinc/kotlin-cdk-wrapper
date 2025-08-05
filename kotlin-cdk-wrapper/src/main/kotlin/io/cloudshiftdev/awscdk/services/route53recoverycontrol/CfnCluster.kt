@@ -33,6 +33,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnCluster cfnCluster = CfnCluster.Builder.create(this, "MyCfnCluster")
  * .name("name")
  * // the properties below are optional
+ * .networkType("networkType")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -106,6 +107,18 @@ public open class CfnCluster(
   }
 
   /**
+   * The network-type can either be IPV4 or DUALSTACK.
+   */
+  public open fun networkType(): String? = unwrap(this).getNetworkType()
+
+  /**
+   * The network-type can either be IPV4 or DUALSTACK.
+   */
+  public open fun networkType(`value`: String) {
+    unwrap(this).setNetworkType(`value`)
+  }
+
+  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
@@ -145,6 +158,14 @@ public open class CfnCluster(
     public fun name(name: String)
 
     /**
+     * The network-type can either be IPV4 or DUALSTACK.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html#cfn-route53recoverycontrol-cluster-networktype)
+     * @param networkType The network-type can either be IPV4 or DUALSTACK. 
+     */
+    public fun networkType(networkType: String)
+
+    /**
      * The tags associated with the cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html#cfn-route53recoverycontrol-cluster-tags)
@@ -180,6 +201,16 @@ public open class CfnCluster(
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * The network-type can either be IPV4 or DUALSTACK.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html#cfn-route53recoverycontrol-cluster-networktype)
+     * @param networkType The network-type can either be IPV4 or DUALSTACK. 
+     */
+    override fun networkType(networkType: String) {
+      cdkBuilder.networkType(networkType)
     }
 
     /**

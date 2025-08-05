@@ -28,6 +28,7 @@ import kotlin.collections.List
  * ConfigurationProps configurationProps = ConfigurationProps.builder()
  * .application(application)
  * // the properties below are optional
+ * .deletionProtectionCheck(DeletionProtectionCheck.ACCOUNT_DEFAULT)
  * .deploymentKey(key)
  * .deploymentStrategy(deploymentStrategy)
  * .deployTo(List.of(environment))
@@ -53,6 +54,15 @@ public interface ConfigurationProps : ConfigurationOptions {
      * @param application The application associated with the configuration. 
      */
     public fun application(application: IApplication)
+
+    /**
+     * @param deletionProtectionCheck A parameter to configure deletion protection.
+     * Deletion protection prevents a user from deleting a configuration profile if your application
+     * has called
+     * either `GetLatestConfiguration` or `GetConfiguration` for the configuration profile during
+     * the specified interval.
+     */
+    public fun deletionProtectionCheck(deletionProtectionCheck: DeletionProtectionCheck)
 
     /**
      * @param deployTo The list of environments to deploy the configuration to.
@@ -119,6 +129,17 @@ public interface ConfigurationProps : ConfigurationOptions {
      */
     override fun application(application: IApplication) {
       cdkBuilder.application(application.let(IApplication.Companion::unwrap))
+    }
+
+    /**
+     * @param deletionProtectionCheck A parameter to configure deletion protection.
+     * Deletion protection prevents a user from deleting a configuration profile if your application
+     * has called
+     * either `GetLatestConfiguration` or `GetConfiguration` for the configuration profile during
+     * the specified interval.
+     */
+    override fun deletionProtectionCheck(deletionProtectionCheck: DeletionProtectionCheck) {
+      cdkBuilder.deletionProtectionCheck(deletionProtectionCheck.let(DeletionProtectionCheck.Companion::unwrap))
     }
 
     /**
@@ -202,6 +223,21 @@ public interface ConfigurationProps : ConfigurationOptions {
      * The application associated with the configuration.
      */
     override fun application(): IApplication = unwrap(this).getApplication().let(IApplication::wrap)
+
+    /**
+     * A parameter to configure deletion protection.
+     *
+     * Deletion protection prevents a user from deleting a configuration profile if your application
+     * has called
+     * either `GetLatestConfiguration` or `GetConfiguration` for the configuration profile during
+     * the specified interval.
+     *
+     * Default: DeletionProtectionCheck.ACCOUNT_DEFAULT
+     *
+     * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/deletion-protection.html)
+     */
+    override fun deletionProtectionCheck(): DeletionProtectionCheck? =
+        unwrap(this).getDeletionProtectionCheck()?.let(DeletionProtectionCheck::wrap)
 
     /**
      * The list of environments to deploy the configuration to.

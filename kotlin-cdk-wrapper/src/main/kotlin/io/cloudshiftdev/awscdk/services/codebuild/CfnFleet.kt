@@ -35,6 +35,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .baseCapacity(123)
  * .computeConfiguration(ComputeConfigurationProperty.builder()
  * .disk(123)
+ * .instanceType("instanceType")
  * .machineType("machineType")
  * .memory(123)
  * .vCpu(123)
@@ -359,7 +360,8 @@ public open class CfnFleet(
     /**
      * The compute configuration of the compute fleet.
      *
-     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` or
+     * `CUSTOM_INSTANCE_TYPE` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration)
      * @param computeConfiguration The compute configuration of the compute fleet. 
@@ -369,7 +371,8 @@ public open class CfnFleet(
     /**
      * The compute configuration of the compute fleet.
      *
-     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` or
+     * `CUSTOM_INSTANCE_TYPE` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration)
      * @param computeConfiguration The compute configuration of the compute fleet. 
@@ -379,7 +382,8 @@ public open class CfnFleet(
     /**
      * The compute configuration of the compute fleet.
      *
-     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` or
+     * `CUSTOM_INSTANCE_TYPE` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration)
      * @param computeConfiguration The compute configuration of the compute fleet. 
@@ -671,7 +675,8 @@ public open class CfnFleet(
     /**
      * The compute configuration of the compute fleet.
      *
-     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` or
+     * `CUSTOM_INSTANCE_TYPE` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration)
      * @param computeConfiguration The compute configuration of the compute fleet. 
@@ -683,7 +688,8 @@ public open class CfnFleet(
     /**
      * The compute configuration of the compute fleet.
      *
-     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` or
+     * `CUSTOM_INSTANCE_TYPE` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration)
      * @param computeConfiguration The compute configuration of the compute fleet. 
@@ -695,7 +701,8 @@ public open class CfnFleet(
     /**
      * The compute configuration of the compute fleet.
      *
-     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` or
+     * `CUSTOM_INSTANCE_TYPE` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration)
      * @param computeConfiguration The compute configuration of the compute fleet. 
@@ -1021,7 +1028,7 @@ public open class CfnFleet(
    * Contains compute attributes.
    *
    * These attributes only need be specified when your project's or fleet's `computeType` is set to
-   * `ATTRIBUTE_BASED_COMPUTE` .
+   * `ATTRIBUTE_BASED_COMPUTE` or `CUSTOM_INSTANCE_TYPE` .
    *
    * Example:
    *
@@ -1032,6 +1039,7 @@ public open class CfnFleet(
    * ComputeConfigurationProperty computeConfigurationProperty =
    * ComputeConfigurationProperty.builder()
    * .disk(123)
+   * .instanceType("instanceType")
    * .machineType("machineType")
    * .memory(123)
    * .vCpu(123)
@@ -1047,6 +1055,13 @@ public open class CfnFleet(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-disk)
      */
     public fun disk(): Number? = unwrap(this).getDisk()
+
+    /**
+     * The EC2 instance type to be launched in your fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-instancetype)
+     */
+    public fun instanceType(): String? = unwrap(this).getInstanceType()
 
     /**
      * The machine type of the instance type included in your fleet.
@@ -1080,6 +1095,11 @@ public open class CfnFleet(
       public fun disk(disk: Number)
 
       /**
+       * @param instanceType The EC2 instance type to be launched in your fleet.
+       */
+      public fun instanceType(instanceType: String)
+
+      /**
        * @param machineType The machine type of the instance type included in your fleet.
        */
       public fun machineType(machineType: String)
@@ -1105,6 +1125,13 @@ public open class CfnFleet(
        */
       override fun disk(disk: Number) {
         cdkBuilder.disk(disk)
+      }
+
+      /**
+       * @param instanceType The EC2 instance type to be launched in your fleet.
+       */
+      override fun instanceType(instanceType: String) {
+        cdkBuilder.instanceType(instanceType)
       }
 
       /**
@@ -1143,6 +1170,13 @@ public open class CfnFleet(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-disk)
        */
       override fun disk(): Number? = unwrap(this).getDisk()
+
+      /**
+       * The EC2 instance type to be launched in your fleet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-instancetype)
+       */
+      override fun instanceType(): String? = unwrap(this).getInstanceType()
 
       /**
        * The machine type of the instance type included in your fleet.

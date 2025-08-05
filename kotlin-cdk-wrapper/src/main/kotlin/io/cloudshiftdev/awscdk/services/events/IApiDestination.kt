@@ -21,6 +21,14 @@ public interface IApiDestination : IResource {
   public fun apiDestinationArn(): String
 
   /**
+   * The Amazon Resource Name (ARN) of an API destination in resource format, so it can be used in
+   * the Resource element of IAM permission policy statements.
+   *
+   * [Documentation](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridge.html#amazoneventbridge-resources-for-iam-policies)
+   */
+  public fun apiDestinationArnForPolicy(): String? = unwrap(this).getApiDestinationArnForPolicy()
+
+  /**
    * The Name of the Api Destination created.
    */
   public fun apiDestinationName(): String
@@ -33,6 +41,15 @@ public interface IApiDestination : IResource {
      * The ARN of the Api Destination created.
      */
     override fun apiDestinationArn(): String = unwrap(this).getApiDestinationArn()
+
+    /**
+     * The Amazon Resource Name (ARN) of an API destination in resource format, so it can be used in
+     * the Resource element of IAM permission policy statements.
+     *
+     * [Documentation](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridge.html#amazoneventbridge-resources-for-iam-policies)
+     */
+    override fun apiDestinationArnForPolicy(): String? =
+        unwrap(this).getApiDestinationArnForPolicy()
 
     /**
      * The Name of the Api Destination created.

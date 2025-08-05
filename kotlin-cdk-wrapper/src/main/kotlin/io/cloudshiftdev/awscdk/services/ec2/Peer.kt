@@ -24,7 +24,7 @@ import kotlin.String
  * Vpc vpc;
  * Cluster cluster = Cluster.Builder.create(this, "Cluster")
  * .clusterName("myCluster")
- * .kafkaVersion(KafkaVersion.V2_8_1)
+ * .kafkaVersion(KafkaVersion.V4_0_X_KRAFT)
  * .vpc(vpc)
  * .build();
  * cluster.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.tcp(2181));

@@ -13,7 +13,8 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Applies an Amazon S3 bucket policy to an Amazon S3 directory bucket.
+ * The `AWS::S3Express::BucketPolicy` resource defines an Amazon S3 bucket policy to an Amazon S3
+ * directory bucket.
  *
  * * **Permissions** - If you are using an identity other than the root user of the AWS account that
  * owns the bucket, the calling identity must both have the required permissions on the specified

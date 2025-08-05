@@ -26,7 +26,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * For more information, see [Managing Your Costs with
  * Budgets](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html)
- * in the *AWS Billing and Cost Management User Guide* .
+ * in the *Billing and Cost Management User Guide* .
  *
  * Example:
  *

@@ -94,9 +94,9 @@ public open class Stack(
    * check that it is a concrete value an not an unresolved token. If this
    * value is an unresolved token (`Token.isUnresolved(stack.account)` returns
    * `true`), this implies that the user wishes that this stack will synthesize
-   * into a **account-agnostic template**. In this case, your code should either
+   * into an **account-agnostic template**. In this case, your code should either
    * fail (throw an error, emit a synth error using `Annotations.of(construct).addError()`) or
-   * implement some other region-agnostic behavior.
+   * implement some other account-agnostic behavior.
    */
   public open fun account(): String = unwrap(this).getAccount()
 
@@ -137,6 +137,19 @@ public open class Stack(
    */
   public open fun addMetadata(key: String, `value`: Any) {
     unwrap(this).addMetadata(key, `value`)
+  }
+
+  /**
+   * Configure a stack tag.
+   *
+   * At deploy time, CloudFormation will automatically apply all stack tags to all resources in the
+   * stack.
+   *
+   * @param tagName 
+   * @param tagValue 
+   */
+  public open fun addStackTag(tagName: String, tagValue: String) {
+    unwrap(this).addStackTag(tagName, tagValue)
   }
 
   /**
@@ -613,6 +626,18 @@ public open class Stack(
       unwrap(this).regionalFact(factName, defaultValue)
 
   /**
+   * Remove a stack tag.
+   *
+   * At deploy time, CloudFormation will automatically apply all stack tags to all resources in the
+   * stack.
+   *
+   * @param tagName 
+   */
+  public open fun removeStackTag(tagName: String) {
+    unwrap(this).removeStackTag(tagName)
+  }
+
+  /**
    * Rename a generated logical identities.
    *
    * To modify the naming scheme strategy, extend the `Stack` class and
@@ -990,6 +1015,24 @@ public open class Stack(
     public fun permissionsBoundary(permissionsBoundary: PermissionsBoundary)
 
     /**
+     * A list of IPropertyInjector attached to this Stack.
+     *
+     * Default: - no PropertyInjectors
+     *
+     * @param propertyInjectors A list of IPropertyInjector attached to this Stack. 
+     */
+    public fun propertyInjectors(propertyInjectors: List<IPropertyInjector>)
+
+    /**
+     * A list of IPropertyInjector attached to this Stack.
+     *
+     * Default: - no PropertyInjectors
+     *
+     * @param propertyInjectors A list of IPropertyInjector attached to this Stack. 
+     */
+    public fun propertyInjectors(vararg propertyInjectors: IPropertyInjector)
+
+    /**
      * Name to deploy the stack with.
      *
      * Default: - Derived from construct path.
@@ -1033,12 +1076,19 @@ public open class Stack(
     public fun synthesizer(synthesizer: IStackSynthesizer)
 
     /**
-     * Stack tags that will be applied to all the taggable resources and the stack itself.
+     * Tags that will be applied to the Stack.
+     *
+     * These tags are applied to the CloudFormation Stack itself. They will not
+     * appear in the CloudFormation template.
+     *
+     * However, at deployment time, CloudFormation will apply these tags to all
+     * resources in the stack that support tagging. You will not be able to exempt
+     * resources from tagging (using the `excludeResourceTypes` property of
+     * `Tags.of(...).add()`) for tags applied in this way.
      *
      * Default: {}
      *
-     * @param tags Stack tags that will be applied to all the taggable resources and the stack
-     * itself. 
+     * @param tags Tags that will be applied to the Stack. 
      */
     public fun tags(tags: Map<String, String>)
 
@@ -1293,6 +1343,27 @@ public open class Stack(
     }
 
     /**
+     * A list of IPropertyInjector attached to this Stack.
+     *
+     * Default: - no PropertyInjectors
+     *
+     * @param propertyInjectors A list of IPropertyInjector attached to this Stack. 
+     */
+    override fun propertyInjectors(propertyInjectors: List<IPropertyInjector>) {
+      cdkBuilder.propertyInjectors(propertyInjectors.map(IPropertyInjector.Companion::unwrap))
+    }
+
+    /**
+     * A list of IPropertyInjector attached to this Stack.
+     *
+     * Default: - no PropertyInjectors
+     *
+     * @param propertyInjectors A list of IPropertyInjector attached to this Stack. 
+     */
+    override fun propertyInjectors(vararg propertyInjectors: IPropertyInjector): Unit =
+        propertyInjectors(propertyInjectors.toList())
+
+    /**
      * Name to deploy the stack with.
      *
      * Default: - Derived from construct path.
@@ -1342,12 +1413,19 @@ public open class Stack(
     }
 
     /**
-     * Stack tags that will be applied to all the taggable resources and the stack itself.
+     * Tags that will be applied to the Stack.
+     *
+     * These tags are applied to the CloudFormation Stack itself. They will not
+     * appear in the CloudFormation template.
+     *
+     * However, at deployment time, CloudFormation will apply these tags to all
+     * resources in the stack that support tagging. You will not be able to exempt
+     * resources from tagging (using the `excludeResourceTypes` property of
+     * `Tags.of(...).add()`) for tags applied in this way.
      *
      * Default: {}
      *
-     * @param tags Stack tags that will be applied to all the taggable resources and the stack
-     * itself. 
+     * @param tags Tags that will be applied to the Stack. 
      */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)

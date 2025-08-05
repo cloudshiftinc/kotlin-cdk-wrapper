@@ -16,18 +16,33 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.glue.*;
- * CfnRegistryProps cfnRegistryProps = CfnRegistryProps.builder()
- * .name("name")
- * // the properties below are optional
- * .description("description")
- * .tags(List.of(CfnTag.builder()
- * .key("key")
- * .value("value")
- * .build()))
+ * import io.cloudshiftdev.awscdk.services.glue.CfnRegistry;
+ * import io.cloudshiftdev.awscdk.services.lambda.eventsources.ManagedKafkaEventSource;
+ * import io.cloudshiftdev.awscdk.services.lambda.eventsources.GlueSchemaRegistry;
+ * // Your MSK cluster arn
+ * String clusterArn;
+ * Function myFunction;
+ * // The Kafka topic you want to subscribe to
+ * String topic = "some-cool-topic";
+ * // Your Glue Schema Registry
+ * CfnRegistry glueRegistry = CfnRegistry.Builder.create(this, "Registry")
+ * .name("schema-registry")
+ * .description("Schema registry for event source")
  * .build();
+ * myFunction.addEventSource(ManagedKafkaEventSource.Builder.create()
+ * .clusterArn(clusterArn)
+ * .topic(topic)
+ * .startingPosition(StartingPosition.TRIM_HORIZON)
+ * .provisionedPollerConfig(ProvisionedPollerConfig.builder()
+ * .minimumPollers(1)
+ * .maximumPollers(3)
+ * .build())
+ * .schemaRegistryConfig(GlueSchemaRegistry.Builder.create()
+ * .schemaRegistry(glueRegistry)
+ * .eventRecordFormat(EventRecordFormat.JSON)
+ * .schemaValidationConfigs(List.of(KafkaSchemaValidationConfig.builder().attribute(KafkaSchemaValidationAttribute.KEY).build()))
+ * .build())
+ * .build());
  * ```
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html)

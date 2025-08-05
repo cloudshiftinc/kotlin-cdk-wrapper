@@ -50,6 +50,25 @@ import kotlin.jvm.JvmName
  * .build())
  * .build())
  * // the properties below are optional
+ * .deploymentConfig(InferenceComponentDeploymentConfigProperty.builder()
+ * .autoRollbackConfiguration(AutoRollbackConfigurationProperty.builder()
+ * .alarms(List.of(AlarmProperty.builder()
+ * .alarmName("alarmName")
+ * .build()))
+ * .build())
+ * .rollingUpdatePolicy(InferenceComponentRollingUpdatePolicyProperty.builder()
+ * .maximumBatchSize(InferenceComponentCapacitySizeProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .maximumExecutionTimeoutInSeconds(123)
+ * .rollbackMaximumBatchSize(InferenceComponentCapacitySizeProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .waitIntervalInSeconds(123)
+ * .build())
+ * .build())
  * .endpointArn("endpointArn")
  * .inferenceComponentName("inferenceComponentName")
  * .runtimeConfig(InferenceComponentRuntimeConfigProperty.builder()
@@ -68,6 +87,14 @@ import kotlin.jvm.JvmName
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html)
  */
 public interface CfnInferenceComponentProps {
+  /**
+   * The deployment configuration for an endpoint, which contains the desired deployment strategy
+   * and rollback configurations.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-deploymentconfig)
+   */
+  public fun deploymentConfig(): Any? = unwrap(this).getDeploymentConfig()
+
   /**
    * The Amazon Resource Name (ARN) of the endpoint that hosts the inference component.
    *
@@ -122,6 +149,28 @@ public interface CfnInferenceComponentProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param deploymentConfig The deployment configuration for an endpoint, which contains the
+     * desired deployment strategy and rollback configurations.
+     */
+    public fun deploymentConfig(deploymentConfig: IResolvable)
+
+    /**
+     * @param deploymentConfig The deployment configuration for an endpoint, which contains the
+     * desired deployment strategy and rollback configurations.
+     */
+    public
+        fun deploymentConfig(deploymentConfig: CfnInferenceComponent.InferenceComponentDeploymentConfigProperty)
+
+    /**
+     * @param deploymentConfig The deployment configuration for an endpoint, which contains the
+     * desired deployment strategy and rollback configurations.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3346079ec595bc32a7ee2b680c9e788e73f2cfc11054488745dd291cab67b40e")
+    public
+        fun deploymentConfig(deploymentConfig: CfnInferenceComponent.InferenceComponentDeploymentConfigProperty.Builder.() -> Unit)
+
     /**
      * @param endpointArn The Amazon Resource Name (ARN) of the endpoint that hosts the inference
      * component.
@@ -196,6 +245,34 @@ public interface CfnInferenceComponentProps {
     private val cdkBuilder:
         software.amazon.awscdk.services.sagemaker.CfnInferenceComponentProps.Builder =
         software.amazon.awscdk.services.sagemaker.CfnInferenceComponentProps.builder()
+
+    /**
+     * @param deploymentConfig The deployment configuration for an endpoint, which contains the
+     * desired deployment strategy and rollback configurations.
+     */
+    override fun deploymentConfig(deploymentConfig: IResolvable) {
+      cdkBuilder.deploymentConfig(deploymentConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param deploymentConfig The deployment configuration for an endpoint, which contains the
+     * desired deployment strategy and rollback configurations.
+     */
+    override
+        fun deploymentConfig(deploymentConfig: CfnInferenceComponent.InferenceComponentDeploymentConfigProperty) {
+      cdkBuilder.deploymentConfig(deploymentConfig.let(CfnInferenceComponent.InferenceComponentDeploymentConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param deploymentConfig The deployment configuration for an endpoint, which contains the
+     * desired deployment strategy and rollback configurations.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3346079ec595bc32a7ee2b680c9e788e73f2cfc11054488745dd291cab67b40e")
+    override
+        fun deploymentConfig(deploymentConfig: CfnInferenceComponent.InferenceComponentDeploymentConfigProperty.Builder.() -> Unit):
+        Unit =
+        deploymentConfig(CfnInferenceComponent.InferenceComponentDeploymentConfigProperty(deploymentConfig))
 
     /**
      * @param endpointArn The Amazon Resource Name (ARN) of the endpoint that hosts the inference
@@ -296,6 +373,14 @@ public interface CfnInferenceComponentProps {
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponentProps,
   ) : CdkObject(cdkObject),
       CfnInferenceComponentProps {
+    /**
+     * The deployment configuration for an endpoint, which contains the desired deployment strategy
+     * and rollback configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-deploymentconfig)
+     */
+    override fun deploymentConfig(): Any? = unwrap(this).getDeploymentConfig()
+
     /**
      * The Amazon Resource Name (ARN) of the endpoint that hosts the inference component.
      *

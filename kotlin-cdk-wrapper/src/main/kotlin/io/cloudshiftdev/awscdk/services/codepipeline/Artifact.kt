@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.s3.Location
 import kotlin.Any
 import kotlin.String
+import kotlin.collections.List
 
 /**
  * An output artifact of an action.
@@ -15,32 +16,29 @@ import kotlin.String
  * Example:
  *
  * ```
- * // later:
- * PipelineProject project;
- * LambdaInvokeAction lambdaInvokeAction = LambdaInvokeAction.Builder.create()
- * .actionName("Lambda")
- * .lambda(Function.Builder.create(this, "Func")
- * .runtime(Runtime.NODEJS_LATEST)
- * .handler("index.handler")
- * .code(Code.fromInline("\n        const { CodePipeline } =
- * require('&#64;aws-sdk/client-codepipeline');\n\n        exports.handler = async function(event,
- * context) {\n            const codepipeline = new AWS.CodePipeline();\n            await
- * codepipeline.putJobSuccessResult({\n                jobId: event['CodePipeline.job'].id,\n          
- *      outputVariables: {\n                    MY_VAR: \"some value\",\n                },\n          
- *  });\n        }\n    "))
- * .build())
- * .variablesNamespace("MyNamespace")
- * .build();
+ * Pipeline pipeline;
  * Artifact sourceOutput = new Artifact();
- * CodeBuildAction.Builder.create()
- * .actionName("CodeBuild")
- * .project(project)
- * .input(sourceOutput)
- * .environmentVariables(Map.of(
- * "MyVar", BuildEnvironmentVariable.builder()
- * .value(lambdaInvokeAction.variable("MY_VAR"))
- * .build()))
+ * CodeStarConnectionsSourceAction sourceAction = CodeStarConnectionsSourceAction.Builder.create()
+ * .actionName("CodeStarConnectionsSourceAction")
+ * .output(sourceOutput)
+ * .connectionArn("your-connection-arn")
+ * .owner("your-owner")
+ * .repo("your-repo")
  * .build();
+ * Artifact scanOutput = new Artifact();
+ * InspectorSourceCodeScanAction scanAction = InspectorSourceCodeScanAction.Builder.create()
+ * .actionName("InspectorSourceCodeScanAction")
+ * .input(sourceOutput)
+ * .output(scanOutput)
+ * .build();
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("Source")
+ * .actions(List.of(sourceAction))
+ * .build());
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("Scan")
+ * .actions(List.of(scanAction))
+ * .build());
  * ```
  */
 public open class Artifact(
@@ -52,6 +50,17 @@ public open class Artifact(
   public constructor(artifactName: String) :
       this(software.amazon.awscdk.services.codepipeline.Artifact(artifactName)
   )
+
+  public constructor(artifactName: String, artifactFiles: List<String>) :
+      this(software.amazon.awscdk.services.codepipeline.Artifact(artifactName, artifactFiles)
+  )
+
+  /**
+   * The file paths that you want to export as the output artifact for the action.
+   *
+   * This property can only be used in artifacts for `CommandsAction`.
+   */
+  public open fun artifactFiles(): List<String> = unwrap(this).getArtifactFiles() ?: emptyList()
 
   /**
    *
@@ -128,6 +137,10 @@ public open class Artifact(
   public companion object {
     public fun artifact(name: String): Artifact =
         software.amazon.awscdk.services.codepipeline.Artifact.artifact(name).let(Artifact::wrap)
+
+    public fun artifact(name: String, files: List<String>): Artifact =
+        software.amazon.awscdk.services.codepipeline.Artifact.artifact(name,
+        files).let(Artifact::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.Artifact): Artifact =
         Artifact(cdkObject)

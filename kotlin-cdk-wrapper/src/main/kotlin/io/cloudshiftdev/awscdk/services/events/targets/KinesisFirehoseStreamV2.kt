@@ -12,8 +12,8 @@ import kotlin.String
 import kotlin.Unit
 
 /**
- * Customize the Firehose Stream Event Target V2 to support L2 Kinesis Delivery Stream instead of L1
- * Cfn Kinesis Delivery Stream.
+ * Customize the Amazon Data Firehose Stream Event Target V2 to support L2 Amazon Data Firehose
+ * Delivery Stream instead of L1 Cfn Firehose Delivery Stream.
  *
  * Example:
  *

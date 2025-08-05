@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
+import io.cloudshiftdev.awscdk.services.elasticloadbalancing.LoadBalancer
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -22,17 +23,25 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Cluster cluster;
- * TaskDefinition taskDefinition;
  * Vpc vpc;
- * Ec2Service service = Ec2Service.Builder.create(this,
- * "Service").cluster(cluster).taskDefinition(taskDefinition).build();
- * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB").vpc(vpc).build();
- * lb.addListener(LoadBalancerListener.builder().externalPort(80).build());
- * lb.addTarget(service.loadBalancerTarget(LoadBalancerTargetOptions.builder()
- * .containerName("MyContainer")
- * .containerPort(80)
- * .build()));
+ * // Create an ECS cluster
+ * Cluster cluster = Cluster.Builder.create(this, "Cluster").vpc(vpc).build();
+ * // Add capacity to it
+ * cluster.addCapacity("DefaultAutoScalingGroupCapacity", AddCapacityOptions.builder()
+ * .instanceType(new InstanceType("t2.xlarge"))
+ * .desiredCapacity(3)
+ * .build());
+ * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("DefaultContainer", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .memoryLimitMiB(512)
+ * .build());
+ * // Instantiate an Amazon ECS Service
+ * Ec2Service ecsService = Ec2Service.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .minHealthyPercent(100)
+ * .build();
  * ```
  */
 public open class Ec2Service(
@@ -84,6 +93,17 @@ public open class Ec2Service(
   }
 
   /**
+   * Registers the service as a target of a Classic Load Balancer (CLB).
+   *
+   * Don't call this. Call `loadBalancer.addTarget()` instead.
+   *
+   * @param loadBalancer 
+   */
+  public override fun attachToClassicLB(loadBalancer: LoadBalancer) {
+    unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer.Companion::unwrap))
+  }
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.Ec2Service].
    */
   @CdkDslMarker
@@ -101,6 +121,22 @@ public open class Ec2Service(
      * public IP address. 
      */
     public fun assignPublicIp(assignPublicIp: Boolean)
+
+    /**
+     * Whether to use Availability Zone rebalancing for the service.
+     *
+     * If enabled: `maxHealthyPercent` must be greater than 100; `daemon` must be false; if there
+     * are any `placementStrategies`, the first must be "spread across Availability Zones"; there
+     * must be no `placementConstraints` using `attribute:ecs.availability-zone`, and the
+     * service must not be a target of a Classic Load Balancer.
+     *
+     * Default: AvailabilityZoneRebalancing.DISABLED
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html)
+     * @param availabilityZoneRebalancing Whether to use Availability Zone rebalancing for the
+     * service. 
+     */
+    public fun availabilityZoneRebalancing(availabilityZoneRebalancing: AvailabilityZoneRebalancing)
 
     /**
      * A list of Capacity Provider strategies used to place a service.
@@ -531,6 +567,25 @@ public open class Ec2Service(
      */
     override fun assignPublicIp(assignPublicIp: Boolean) {
       cdkBuilder.assignPublicIp(assignPublicIp)
+    }
+
+    /**
+     * Whether to use Availability Zone rebalancing for the service.
+     *
+     * If enabled: `maxHealthyPercent` must be greater than 100; `daemon` must be false; if there
+     * are any `placementStrategies`, the first must be "spread across Availability Zones"; there
+     * must be no `placementConstraints` using `attribute:ecs.availability-zone`, and the
+     * service must not be a target of a Classic Load Balancer.
+     *
+     * Default: AvailabilityZoneRebalancing.DISABLED
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html)
+     * @param availabilityZoneRebalancing Whether to use Availability Zone rebalancing for the
+     * service. 
+     */
+    override
+        fun availabilityZoneRebalancing(availabilityZoneRebalancing: AvailabilityZoneRebalancing) {
+      cdkBuilder.availabilityZoneRebalancing(availabilityZoneRebalancing.let(AvailabilityZoneRebalancing.Companion::unwrap))
     }
 
     /**
@@ -1002,6 +1057,9 @@ public open class Ec2Service(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ecs.Ec2Service.PROPERTY_INJECTION_ID
+
     public fun fromEc2ServiceArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

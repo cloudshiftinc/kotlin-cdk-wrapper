@@ -49,6 +49,9 @@ public open class AdotLambdaLayerJavaSdkVersion(
     public val V1_32_0: AdotLambdaLayerJavaSdkVersion =
         AdotLambdaLayerJavaSdkVersion.wrap(software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaSdkVersion.V1_32_0)
 
+    public val V1_32_0_1: AdotLambdaLayerJavaSdkVersion =
+        AdotLambdaLayerJavaSdkVersion.wrap(software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaSdkVersion.V1_32_0_1)
+
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaSdkVersion):
         AdotLambdaLayerJavaSdkVersion = AdotLambdaLayerJavaSdkVersion(cdkObject)

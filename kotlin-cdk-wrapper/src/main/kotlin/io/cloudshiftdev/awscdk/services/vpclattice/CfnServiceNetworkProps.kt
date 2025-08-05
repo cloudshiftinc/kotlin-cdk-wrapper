@@ -65,6 +65,8 @@ public interface CfnServiceNetworkProps {
   public fun name(): String? = unwrap(this).getName()
 
   /**
+   * Specify if the service network should be enabled for sharing.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-sharingconfig)
    */
   public fun sharingConfig(): Any? = unwrap(this).getSharingConfig()
@@ -100,17 +102,17 @@ public interface CfnServiceNetworkProps {
     public fun name(name: String)
 
     /**
-     * @param sharingConfig the value to be set.
+     * @param sharingConfig Specify if the service network should be enabled for sharing.
      */
     public fun sharingConfig(sharingConfig: IResolvable)
 
     /**
-     * @param sharingConfig the value to be set.
+     * @param sharingConfig Specify if the service network should be enabled for sharing.
      */
     public fun sharingConfig(sharingConfig: CfnServiceNetwork.SharingConfigProperty)
 
     /**
-     * @param sharingConfig the value to be set.
+     * @param sharingConfig Specify if the service network should be enabled for sharing.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d994dbc6c74e05db188f67e20b9698ee2959f26500d57649d04cdef547b25cdd")
@@ -156,21 +158,21 @@ public interface CfnServiceNetworkProps {
     }
 
     /**
-     * @param sharingConfig the value to be set.
+     * @param sharingConfig Specify if the service network should be enabled for sharing.
      */
     override fun sharingConfig(sharingConfig: IResolvable) {
       cdkBuilder.sharingConfig(sharingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param sharingConfig the value to be set.
+     * @param sharingConfig Specify if the service network should be enabled for sharing.
      */
     override fun sharingConfig(sharingConfig: CfnServiceNetwork.SharingConfigProperty) {
       cdkBuilder.sharingConfig(sharingConfig.let(CfnServiceNetwork.SharingConfigProperty.Companion::unwrap))
     }
 
     /**
-     * @param sharingConfig the value to be set.
+     * @param sharingConfig Specify if the service network should be enabled for sharing.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d994dbc6c74e05db188f67e20b9698ee2959f26500d57649d04cdef547b25cdd")
@@ -225,6 +227,8 @@ public interface CfnServiceNetworkProps {
     override fun name(): String? = unwrap(this).getName()
 
     /**
+     * Specify if the service network should be enabled for sharing.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-sharingconfig)
      */
     override fun sharingConfig(): Any? = unwrap(this).getSharingConfig()

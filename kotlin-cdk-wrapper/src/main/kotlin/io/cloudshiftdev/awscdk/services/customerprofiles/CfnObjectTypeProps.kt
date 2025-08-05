@@ -46,6 +46,7 @@ import kotlin.collections.List
  * .standardIdentifiers(List.of("standardIdentifiers"))
  * .build()))
  * .build()))
+ * .maxProfileObjectCount(123)
  * .sourceLastUpdatedTimestampFormat("sourceLastUpdatedTimestampFormat")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -114,6 +115,13 @@ public interface CfnObjectTypeProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html#cfn-customerprofiles-objecttype-keys)
    */
   public fun keys(): Any? = unwrap(this).getKeys()
+
+  /**
+   * The amount of profile object max count assigned to the object type.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html#cfn-customerprofiles-objecttype-maxprofileobjectcount)
+   */
+  public fun maxProfileObjectCount(): Number? = unwrap(this).getMaxProfileObjectCount()
 
   /**
    * The name of the profile object type.
@@ -223,6 +231,12 @@ public interface CfnObjectTypeProps {
      * profile.
      */
     public fun keys(vararg keys: Any)
+
+    /**
+     * @param maxProfileObjectCount The amount of profile object max count assigned to the object
+     * type.
+     */
+    public fun maxProfileObjectCount(maxProfileObjectCount: Number)
 
     /**
      * @param objectTypeName The name of the profile object type. 
@@ -351,6 +365,14 @@ public interface CfnObjectTypeProps {
     override fun keys(vararg keys: Any): Unit = keys(keys.toList())
 
     /**
+     * @param maxProfileObjectCount The amount of profile object max count assigned to the object
+     * type.
+     */
+    override fun maxProfileObjectCount(maxProfileObjectCount: Number) {
+      cdkBuilder.maxProfileObjectCount(maxProfileObjectCount)
+    }
+
+    /**
      * @param objectTypeName The name of the profile object type. 
      */
     override fun objectTypeName(objectTypeName: String) {
@@ -449,6 +471,13 @@ public interface CfnObjectTypeProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html#cfn-customerprofiles-objecttype-keys)
      */
     override fun keys(): Any? = unwrap(this).getKeys()
+
+    /**
+     * The amount of profile object max count assigned to the object type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html#cfn-customerprofiles-objecttype-maxprofileobjectcount)
+     */
+    override fun maxProfileObjectCount(): Number? = unwrap(this).getMaxProfileObjectCount()
 
     /**
      * The name of the profile object type.

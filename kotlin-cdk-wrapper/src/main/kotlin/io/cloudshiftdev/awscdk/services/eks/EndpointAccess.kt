@@ -12,9 +12,11 @@ import kotlin.String
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.cdk.lambdalayer.kubectl.v33.KubectlV33Layer;
  * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
- * .version(KubernetesVersion.V1_31)
- * .endpointAccess(EndpointAccess.PRIVATE)
+ * .version(KubernetesVersion.V1_33)
+ * .endpointAccess(EndpointAccess.PRIVATE) // No access outside of your VPC.
+ * .kubectlLayer(new KubectlV33Layer(this, "kubectl"))
  * .build();
  * ```
  */

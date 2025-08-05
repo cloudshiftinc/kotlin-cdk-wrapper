@@ -282,13 +282,6 @@ public interface CfnServerProps {
   /**
    * The service role that the AWS OpsWorks CM service backend uses to work with your account.
    *
-   * Although the AWS OpsWorks management console typically creates the service role for you, if you
-   * are using the AWS CLI or API commands, run the service-role-creation.yaml AWS CloudFormation
-   * template, located at
-   * https://s3.amazonaws.com/opsworks-cm-us-east-1-prod-default-assets/misc/opsworks-cm-roles.yaml.
-   * This template creates a CloudFormation stack that includes the service role and instance profile
-   * that you need.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-servicerolearn)
    */
   public fun serviceRoleArn(): String
@@ -582,12 +575,6 @@ public interface CfnServerProps {
     /**
      * @param serviceRoleArn The service role that the AWS OpsWorks CM service backend uses to work
      * with your account. 
-     * Although the AWS OpsWorks management console typically creates the service role for you, if
-     * you are using the AWS CLI or API commands, run the service-role-creation.yaml AWS CloudFormation
-     * template, located at
-     * https://s3.amazonaws.com/opsworks-cm-us-east-1-prod-default-assets/misc/opsworks-cm-roles.yaml.
-     * This template creates a CloudFormation stack that includes the service role and instance profile
-     * that you need.
      */
     public fun serviceRoleArn(serviceRoleArn: String)
 
@@ -941,12 +928,6 @@ public interface CfnServerProps {
     /**
      * @param serviceRoleArn The service role that the AWS OpsWorks CM service backend uses to work
      * with your account. 
-     * Although the AWS OpsWorks management console typically creates the service role for you, if
-     * you are using the AWS CLI or API commands, run the service-role-creation.yaml AWS CloudFormation
-     * template, located at
-     * https://s3.amazonaws.com/opsworks-cm-us-east-1-prod-default-assets/misc/opsworks-cm-roles.yaml.
-     * This template creates a CloudFormation stack that includes the service role and instance profile
-     * that you need.
      */
     override fun serviceRoleArn(serviceRoleArn: String) {
       cdkBuilder.serviceRoleArn(serviceRoleArn)
@@ -1237,13 +1218,6 @@ public interface CfnServerProps {
 
     /**
      * The service role that the AWS OpsWorks CM service backend uses to work with your account.
-     *
-     * Although the AWS OpsWorks management console typically creates the service role for you, if
-     * you are using the AWS CLI or API commands, run the service-role-creation.yaml AWS CloudFormation
-     * template, located at
-     * https://s3.amazonaws.com/opsworks-cm-us-east-1-prod-default-assets/misc/opsworks-cm-roles.yaml.
-     * This template creates a CloudFormation stack that includes the service role and instance profile
-     * that you need.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-servicerolearn)
      */

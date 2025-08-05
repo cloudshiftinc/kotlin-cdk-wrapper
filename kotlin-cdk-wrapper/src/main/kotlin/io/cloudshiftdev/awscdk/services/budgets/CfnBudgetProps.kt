@@ -21,6 +21,7 @@ import kotlin.jvm.JvmName
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.budgets.*;
  * Object costFilters;
+ * ExpressionProperty expressionProperty_;
  * Object plannedBudgetLimits;
  * CfnBudgetProps cfnBudgetProps = CfnBudgetProps.builder()
  * .budget(BudgetDataProperty.builder()
@@ -53,6 +54,27 @@ import kotlin.jvm.JvmName
  * .useAmortized(false)
  * .useBlended(false)
  * .build())
+ * .filterExpression(ExpressionProperty.builder()
+ * .and(List.of(expressionProperty_))
+ * .costCategories(CostCategoryValuesProperty.builder()
+ * .key("key")
+ * .matchOptions(List.of("matchOptions"))
+ * .values(List.of("values"))
+ * .build())
+ * .dimensions(ExpressionDimensionValuesProperty.builder()
+ * .key("key")
+ * .matchOptions(List.of("matchOptions"))
+ * .values(List.of("values"))
+ * .build())
+ * .not(expressionProperty_)
+ * .or(List.of(expressionProperty_))
+ * .tags(TagValuesProperty.builder()
+ * .key("key")
+ * .matchOptions(List.of("matchOptions"))
+ * .values(List.of("values"))
+ * .build())
+ * .build())
+ * .metrics(List.of("metrics"))
  * .plannedBudgetLimits(plannedBudgetLimits)
  * .timePeriod(TimePeriodProperty.builder()
  * .end("end")

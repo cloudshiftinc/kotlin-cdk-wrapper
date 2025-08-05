@@ -28,6 +28,7 @@ import kotlin.Unit
  * .certificates(List.of(certificate))
  * // mTLS settings
  * .mutualAuthentication(MutualAuthentication.builder()
+ * .advertiseTrustStoreCaNames(true)
  * .ignoreClientCertificateExpiry(false)
  * .mutualAuthenticationMode(MutualAuthenticationMode.VERIFY)
  * .trustStore(trustStore)
@@ -38,6 +39,13 @@ import kotlin.Unit
  * ```
  */
 public interface MutualAuthentication {
+  /**
+   * Indicates whether trust store CA names are advertised.
+   *
+   * Default: false
+   */
+  public fun advertiseTrustStoreCaNames(): Boolean? = unwrap(this).getAdvertiseTrustStoreCaNames()
+
   /**
    * Indicates whether expired client certificates are ignored.
    *
@@ -71,6 +79,11 @@ public interface MutualAuthentication {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param advertiseTrustStoreCaNames Indicates whether trust store CA names are advertised.
+     */
+    public fun advertiseTrustStoreCaNames(advertiseTrustStoreCaNames: Boolean)
+
+    /**
      * @param ignoreClientCertificateExpiry Indicates whether expired client certificates are
      * ignored.
      * Cannot be used with MutualAuthenticationMode.OFF or MutualAuthenticationMode.PASS_THROUGH
@@ -93,6 +106,13 @@ public interface MutualAuthentication {
     private val cdkBuilder:
         software.amazon.awscdk.services.elasticloadbalancingv2.MutualAuthentication.Builder =
         software.amazon.awscdk.services.elasticloadbalancingv2.MutualAuthentication.builder()
+
+    /**
+     * @param advertiseTrustStoreCaNames Indicates whether trust store CA names are advertised.
+     */
+    override fun advertiseTrustStoreCaNames(advertiseTrustStoreCaNames: Boolean) {
+      cdkBuilder.advertiseTrustStoreCaNames(advertiseTrustStoreCaNames)
+    }
 
     /**
      * @param ignoreClientCertificateExpiry Indicates whether expired client certificates are
@@ -126,6 +146,14 @@ public interface MutualAuthentication {
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.MutualAuthentication,
   ) : CdkObject(cdkObject),
       MutualAuthentication {
+    /**
+     * Indicates whether trust store CA names are advertised.
+     *
+     * Default: false
+     */
+    override fun advertiseTrustStoreCaNames(): Boolean? =
+        unwrap(this).getAdvertiseTrustStoreCaNames()
+
     /**
      * Indicates whether expired client certificates are ignored.
      *

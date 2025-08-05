@@ -224,6 +224,9 @@ public open class VpcLink(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.apigatewayv2.VpcLink.PROPERTY_INJECTION_ID
+
     public fun fromVpcLinkAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

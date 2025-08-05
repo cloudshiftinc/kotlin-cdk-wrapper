@@ -16,6 +16,10 @@ import kotlin.jvm.JvmName
  *
  * ```
  * Stream stream = new Stream(this, "MyStream");
+ * StreamConsumer streamConsumer = StreamConsumer.Builder.create(this, "MyStreamConsumer")
+ * .streamConsumerName("MyStreamConsumer")
+ * .stream(stream)
+ * .build();
  * // create a custom policy document
  * PolicyDocument policyDocument = PolicyDocument.Builder.create()
  * .assignSids(true)
@@ -26,10 +30,16 @@ import kotlin.jvm.JvmName
  * .principals(List.of(new AnyPrincipal()))
  * .build()))
  * .build();
- * // create a resource policy manually
- * // create a resource policy manually
+ * // create a stream resource policy manually
+ * // create a stream resource policy manually
  * ResourcePolicy.Builder.create(this, "ResourcePolicy")
  * .stream(stream)
+ * .policyDocument(policyDocument)
+ * .build();
+ * // create a stream consumer resource policy manually
+ * // create a stream consumer resource policy manually
+ * ResourcePolicy.Builder.create(this, "ResourcePolicy")
+ * .streamConsumer(streamConsumer)
  * .policyDocument(policyDocument)
  * .build();
  * ```
@@ -45,8 +55,22 @@ public interface ResourcePolicyProps {
 
   /**
    * The stream this policy applies to.
+   *
+   * Note: only one of `stream` and `streamConsumer` must be set.
+   *
+   * Default: - policy is not associated to a stream
    */
-  public fun stream(): IStream
+  public fun stream(): IStream? = unwrap(this).getStream()?.let(IStream::wrap)
+
+  /**
+   * The stream consumer this policy applies to.
+   *
+   * Note: only one of `stream` and `streamConsumer` must be set.
+   *
+   * Default: - policy is not associated to a consumer
+   */
+  public fun streamConsumer(): IStreamConsumer? =
+      unwrap(this).getStreamConsumer()?.let(IStreamConsumer::wrap)
 
   /**
    * A builder for [ResourcePolicyProps]
@@ -66,9 +90,16 @@ public interface ResourcePolicyProps {
     public fun policyDocument(policyDocument: PolicyDocument.Builder.() -> Unit)
 
     /**
-     * @param stream The stream this policy applies to. 
+     * @param stream The stream this policy applies to.
+     * Note: only one of `stream` and `streamConsumer` must be set.
      */
     public fun stream(stream: IStream)
+
+    /**
+     * @param streamConsumer The stream consumer this policy applies to.
+     * Note: only one of `stream` and `streamConsumer` must be set.
+     */
+    public fun streamConsumer(streamConsumer: IStreamConsumer)
   }
 
   private class BuilderImpl : Builder {
@@ -91,10 +122,19 @@ public interface ResourcePolicyProps {
         policyDocument(PolicyDocument(policyDocument))
 
     /**
-     * @param stream The stream this policy applies to. 
+     * @param stream The stream this policy applies to.
+     * Note: only one of `stream` and `streamConsumer` must be set.
      */
     override fun stream(stream: IStream) {
       cdkBuilder.stream(stream.let(IStream.Companion::unwrap))
+    }
+
+    /**
+     * @param streamConsumer The stream consumer this policy applies to.
+     * Note: only one of `stream` and `streamConsumer` must be set.
+     */
+    override fun streamConsumer(streamConsumer: IStreamConsumer) {
+      cdkBuilder.streamConsumer(streamConsumer.let(IStreamConsumer.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.kinesis.ResourcePolicyProps =
@@ -115,8 +155,22 @@ public interface ResourcePolicyProps {
 
     /**
      * The stream this policy applies to.
+     *
+     * Note: only one of `stream` and `streamConsumer` must be set.
+     *
+     * Default: - policy is not associated to a stream
      */
-    override fun stream(): IStream = unwrap(this).getStream().let(IStream::wrap)
+    override fun stream(): IStream? = unwrap(this).getStream()?.let(IStream::wrap)
+
+    /**
+     * The stream consumer this policy applies to.
+     *
+     * Note: only one of `stream` and `streamConsumer` must be set.
+     *
+     * Default: - policy is not associated to a consumer
+     */
+    override fun streamConsumer(): IStreamConsumer? =
+        unwrap(this).getStreamConsumer()?.let(IStreamConsumer::wrap)
   }
 
   public companion object {

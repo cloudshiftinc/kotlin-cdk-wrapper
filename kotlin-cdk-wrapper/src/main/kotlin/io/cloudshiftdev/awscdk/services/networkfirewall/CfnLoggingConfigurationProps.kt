@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -32,6 +33,7 @@ import kotlin.jvm.JvmName
  * .build()))
  * .build())
  * // the properties below are optional
+ * .enableMonitoringDashboard(false)
  * .firewallName("firewallName")
  * .build();
  * ```
@@ -39,6 +41,11 @@ import kotlin.jvm.JvmName
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html)
  */
 public interface CfnLoggingConfigurationProps {
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-enablemonitoringdashboard)
+   */
+  public fun enableMonitoringDashboard(): Any? = unwrap(this).getEnableMonitoringDashboard()
+
   /**
    * The Amazon Resource Name (ARN) of the `Firewall` that the logging configuration is associated
    * with.
@@ -70,6 +77,16 @@ public interface CfnLoggingConfigurationProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param enableMonitoringDashboard the value to be set.
+     */
+    public fun enableMonitoringDashboard(enableMonitoringDashboard: Boolean)
+
+    /**
+     * @param enableMonitoringDashboard the value to be set.
+     */
+    public fun enableMonitoringDashboard(enableMonitoringDashboard: IResolvable)
+
     /**
      * @param firewallArn The Amazon Resource Name (ARN) of the `Firewall` that the logging
      * configuration is associated with. 
@@ -111,6 +128,20 @@ public interface CfnLoggingConfigurationProps {
     private val cdkBuilder:
         software.amazon.awscdk.services.networkfirewall.CfnLoggingConfigurationProps.Builder =
         software.amazon.awscdk.services.networkfirewall.CfnLoggingConfigurationProps.builder()
+
+    /**
+     * @param enableMonitoringDashboard the value to be set.
+     */
+    override fun enableMonitoringDashboard(enableMonitoringDashboard: Boolean) {
+      cdkBuilder.enableMonitoringDashboard(enableMonitoringDashboard)
+    }
+
+    /**
+     * @param enableMonitoringDashboard the value to be set.
+     */
+    override fun enableMonitoringDashboard(enableMonitoringDashboard: IResolvable) {
+      cdkBuilder.enableMonitoringDashboard(enableMonitoringDashboard.let(IResolvable.Companion::unwrap))
+    }
 
     /**
      * @param firewallArn The Amazon Resource Name (ARN) of the `Firewall` that the logging
@@ -166,6 +197,11 @@ public interface CfnLoggingConfigurationProps {
     cdkObject: software.amazon.awscdk.services.networkfirewall.CfnLoggingConfigurationProps,
   ) : CdkObject(cdkObject),
       CfnLoggingConfigurationProps {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-enablemonitoringdashboard)
+     */
+    override fun enableMonitoringDashboard(): Any? = unwrap(this).getEnableMonitoringDashboard()
+
     /**
      * The Amazon Resource Name (ARN) of the `Firewall` that the logging configuration is associated
      * with.

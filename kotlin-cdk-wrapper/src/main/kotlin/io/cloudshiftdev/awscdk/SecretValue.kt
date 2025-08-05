@@ -43,15 +43,21 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * IPublicHostedZone myHostedZone;
- * EmailIdentity.Builder.create(this, "Identity")
- * .identity(Identity.publicHostedZone(myHostedZone))
- * .dkimIdentity(DkimIdentity.byoDkim(ByoDkimOptions.builder()
- * .privateKey(SecretValue.secretsManager("dkim-private-key"))
- * .publicKey("...base64-encoded-public-key...")
- * .selector("selector")
- * .build()))
+ * // Read the secret from Secrets Manager
+ * Pipeline pipeline = new Pipeline(this, "MyPipeline");
+ * Artifact sourceOutput = new Artifact();
+ * GitHubSourceAction sourceAction = GitHubSourceAction.Builder.create()
+ * .actionName("GitHub_Source")
+ * .owner("awslabs")
+ * .repo("aws-cdk")
+ * .oauthToken(SecretValue.secretsManager("my-github-token"))
+ * .output(sourceOutput)
+ * .branch("develop")
  * .build();
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("Source")
+ * .actions(List.of(sourceAction))
+ * .build());
  * ```
  */
 public open class SecretValue(

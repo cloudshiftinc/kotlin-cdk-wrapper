@@ -117,15 +117,15 @@ public open class CfnStateMachine(
   /**
    *
    */
-  public open fun definitionSubstitutions(`value`: IResolvable) {
-    unwrap(this).setDefinitionSubstitutions(`value`.let(IResolvable.Companion::unwrap))
+  public open fun definitionSubstitutions(`value`: Map<String, String>) {
+    unwrap(this).setDefinitionSubstitutions(`value`)
   }
 
   /**
    *
    */
-  public open fun definitionSubstitutions(`value`: Map<String, String>) {
-    unwrap(this).setDefinitionSubstitutions(`value`)
+  public open fun definitionSubstitutions(`value`: IResolvable) {
+    unwrap(this).setDefinitionSubstitutions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -370,13 +370,13 @@ public open class CfnStateMachine(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-definitionsubstitutions)
      * @param definitionSubstitutions 
      */
-    public fun definitionSubstitutions(definitionSubstitutions: IResolvable)
+    public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>)
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-definitionsubstitutions)
      * @param definitionSubstitutions 
      */
-    public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>)
+    public fun definitionSubstitutions(definitionSubstitutions: IResolvable)
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-definitionuri)
@@ -544,16 +544,16 @@ public open class CfnStateMachine(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-definitionsubstitutions)
      * @param definitionSubstitutions 
      */
-    override fun definitionSubstitutions(definitionSubstitutions: IResolvable) {
-      cdkBuilder.definitionSubstitutions(definitionSubstitutions.let(IResolvable.Companion::unwrap))
+    override fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
+      cdkBuilder.definitionSubstitutions(definitionSubstitutions)
     }
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html#cfn-serverless-statemachine-definitionsubstitutions)
      * @param definitionSubstitutions 
      */
-    override fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
-      cdkBuilder.definitionSubstitutions(definitionSubstitutions)
+    override fun definitionSubstitutions(definitionSubstitutions: IResolvable) {
+      cdkBuilder.definitionSubstitutions(definitionSubstitutions.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -20,7 +20,7 @@ import kotlin.Unit
  * "Stack").env(Environment.builder().region("us-west-2").build()).build();
  * TableV2 globalTable = TableV2.Builder.create(stack, "GlobalTable")
  * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
- * // applys to all replicas, i.e., us-west-2, us-east-1, us-east-2
+ * // applies to all replicas, i.e., us-west-2, us-east-1, us-east-2
  * .removalPolicy(RemovalPolicy.DESTROY)
  * .replicas(List.of(ReplicaTableProps.builder().region("us-east-1").build(),
  * ReplicaTableProps.builder().region("us-east-2").build()))

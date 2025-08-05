@@ -34,6 +34,7 @@ import kotlin.jvm.JvmName
  * .desiredCapacity(123)
  * .build())
  * .kmsKeyId("kmsKeyId")
+ * .networkType("networkType")
  * .preferredMaintenanceWindow("preferredMaintenanceWindow")
  * .publiclyAccessible(false)
  * .securityGroupIds(List.of("securityGroupIds"))
@@ -104,6 +105,13 @@ public interface CfnEnvironmentProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-m2-environment.html#cfn-m2-environment-name)
    */
   public fun name(): String
+
+  /**
+   * The network type supported by the runtime environment.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-m2-environment.html#cfn-m2-environment-networktype)
+   */
+  public fun networkType(): String? = unwrap(this).getNetworkType()
 
   /**
    * Configures the maintenance window that you want for the runtime environment.
@@ -210,6 +218,11 @@ public interface CfnEnvironmentProps {
      * @param name The name of the runtime environment. 
      */
     public fun name(name: String)
+
+    /**
+     * @param networkType The network type supported by the runtime environment.
+     */
+    public fun networkType(networkType: String)
 
     /**
      * @param preferredMaintenanceWindow Configures the maintenance window that you want for the
@@ -347,6 +360,13 @@ public interface CfnEnvironmentProps {
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * @param networkType The network type supported by the runtime environment.
+     */
+    override fun networkType(networkType: String) {
+      cdkBuilder.networkType(networkType)
     }
 
     /**
@@ -488,6 +508,13 @@ public interface CfnEnvironmentProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-m2-environment.html#cfn-m2-environment-name)
      */
     override fun name(): String = unwrap(this).getName()
+
+    /**
+     * The network type supported by the runtime environment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-m2-environment.html#cfn-m2-environment-networktype)
+     */
+    override fun networkType(): String? = unwrap(this).getNetworkType()
 
     /**
      * Configures the maintenance window that you want for the runtime environment.

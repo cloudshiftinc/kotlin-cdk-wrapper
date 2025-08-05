@@ -47,6 +47,7 @@ import kotlin.jvm.JvmName
  * "TEST_ENVIRONMENT_VARIABLE2", "test environment variable 2 value"))
  * .maxScalingCapacity(5)
  * .containerName("test")
+ * .minHealthyPercent(100)
  * .build();
  * ```
  */

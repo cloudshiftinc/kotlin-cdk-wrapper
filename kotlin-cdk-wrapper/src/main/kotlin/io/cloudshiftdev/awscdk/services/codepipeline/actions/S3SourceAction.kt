@@ -19,23 +19,26 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.cloudtrail.*;
  * Bucket sourceBucket;
- * Artifact sourceOutput = new Artifact();
+ * // later:
+ * PipelineProject project;
  * String key = "some/key.zip";
- * Trail trail = new Trail(this, "CloudTrail");
- * trail.addS3EventSelector(List.of(S3EventSelector.builder()
- * .bucket(sourceBucket)
- * .objectPrefix(key)
- * .build()), AddEventSelectorOptions.builder()
- * .readWriteType(ReadWriteType.WRITE_ONLY)
- * .build());
+ * Artifact sourceOutput = new Artifact();
  * S3SourceAction sourceAction = S3SourceAction.Builder.create()
  * .actionName("S3Source")
  * .bucketKey(key)
  * .bucket(sourceBucket)
  * .output(sourceOutput)
- * .trigger(S3Trigger.EVENTS)
+ * .variablesNamespace("MyNamespace")
+ * .build();
+ * CodeBuildAction.Builder.create()
+ * .actionName("CodeBuild")
+ * .project(project)
+ * .input(sourceOutput)
+ * .environmentVariables(Map.of(
+ * "VERSION_ID", BuildEnvironmentVariable.builder()
+ * .value(sourceAction.getVariables().getVersionId())
+ * .build()))
  * .build();
  * ```
  */

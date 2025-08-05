@@ -85,26 +85,26 @@ public open class CfnSchedulingPolicy(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   * The fair share policy of the scheduling policy.
+   * The fair-share scheduling policy details.
    */
   public open fun fairsharePolicy(): Any? = unwrap(this).getFairsharePolicy()
 
   /**
-   * The fair share policy of the scheduling policy.
+   * The fair-share scheduling policy details.
    */
   public open fun fairsharePolicy(`value`: IResolvable) {
     unwrap(this).setFairsharePolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The fair share policy of the scheduling policy.
+   * The fair-share scheduling policy details.
    */
   public open fun fairsharePolicy(`value`: FairsharePolicyProperty) {
     unwrap(this).setFairsharePolicy(`value`.let(FairsharePolicyProperty.Companion::unwrap))
   }
 
   /**
-   * The fair share policy of the scheduling policy.
+   * The fair-share scheduling policy details.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("a351e3ec9e4a92bd34a05454d73a1044d587269089d010ef3a12a679161e4dd8")
@@ -121,12 +121,12 @@ public open class CfnSchedulingPolicy(
   }
 
   /**
-   * The name of the scheduling policy.
+   * The name of the fair-share scheduling policy.
    */
   public open fun name(): String? = unwrap(this).getName()
 
   /**
-   * The name of the scheduling policy.
+   * The name of the fair-share scheduling policy.
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
@@ -157,39 +157,39 @@ public open class CfnSchedulingPolicy(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The fair share policy of the scheduling policy.
+     * The fair-share scheduling policy details.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html#cfn-batch-schedulingpolicy-fairsharepolicy)
-     * @param fairsharePolicy The fair share policy of the scheduling policy. 
+     * @param fairsharePolicy The fair-share scheduling policy details. 
      */
     public fun fairsharePolicy(fairsharePolicy: IResolvable)
 
     /**
-     * The fair share policy of the scheduling policy.
+     * The fair-share scheduling policy details.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html#cfn-batch-schedulingpolicy-fairsharepolicy)
-     * @param fairsharePolicy The fair share policy of the scheduling policy. 
+     * @param fairsharePolicy The fair-share scheduling policy details. 
      */
     public fun fairsharePolicy(fairsharePolicy: FairsharePolicyProperty)
 
     /**
-     * The fair share policy of the scheduling policy.
+     * The fair-share scheduling policy details.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html#cfn-batch-schedulingpolicy-fairsharepolicy)
-     * @param fairsharePolicy The fair share policy of the scheduling policy. 
+     * @param fairsharePolicy The fair-share scheduling policy details. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("62f06a0b5b52fb1318708cc740c9dcf623307c96501bdeface2fff8746888e96")
     public fun fairsharePolicy(fairsharePolicy: FairsharePolicyProperty.Builder.() -> Unit)
 
     /**
-     * The name of the scheduling policy.
+     * The name of the fair-share scheduling policy.
      *
      * It can be up to 128 letters long. It can contain uppercase and lowercase letters, numbers,
      * hyphens (-), and underscores (_).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html#cfn-batch-schedulingpolicy-name)
-     * @param name The name of the scheduling policy. 
+     * @param name The name of the fair-share scheduling policy. 
      */
     public fun name(name: String)
 
@@ -221,30 +221,30 @@ public open class CfnSchedulingPolicy(
         software.amazon.awscdk.services.batch.CfnSchedulingPolicy.Builder.create(scope, id)
 
     /**
-     * The fair share policy of the scheduling policy.
+     * The fair-share scheduling policy details.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html#cfn-batch-schedulingpolicy-fairsharepolicy)
-     * @param fairsharePolicy The fair share policy of the scheduling policy. 
+     * @param fairsharePolicy The fair-share scheduling policy details. 
      */
     override fun fairsharePolicy(fairsharePolicy: IResolvable) {
       cdkBuilder.fairsharePolicy(fairsharePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The fair share policy of the scheduling policy.
+     * The fair-share scheduling policy details.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html#cfn-batch-schedulingpolicy-fairsharepolicy)
-     * @param fairsharePolicy The fair share policy of the scheduling policy. 
+     * @param fairsharePolicy The fair-share scheduling policy details. 
      */
     override fun fairsharePolicy(fairsharePolicy: FairsharePolicyProperty) {
       cdkBuilder.fairsharePolicy(fairsharePolicy.let(FairsharePolicyProperty.Companion::unwrap))
     }
 
     /**
-     * The fair share policy of the scheduling policy.
+     * The fair-share scheduling policy details.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html#cfn-batch-schedulingpolicy-fairsharepolicy)
-     * @param fairsharePolicy The fair share policy of the scheduling policy. 
+     * @param fairsharePolicy The fair-share scheduling policy details. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("62f06a0b5b52fb1318708cc740c9dcf623307c96501bdeface2fff8746888e96")
@@ -252,13 +252,13 @@ public open class CfnSchedulingPolicy(
         = fairsharePolicy(FairsharePolicyProperty(fairsharePolicy))
 
     /**
-     * The name of the scheduling policy.
+     * The name of the fair-share scheduling policy.
      *
      * It can be up to 128 letters long. It can contain uppercase and lowercase letters, numbers,
      * hyphens (-), and underscores (_).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html#cfn-batch-schedulingpolicy-name)
-     * @param name The name of the scheduling policy. 
+     * @param name The name of the fair-share scheduling policy. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -311,7 +311,7 @@ public open class CfnSchedulingPolicy(
   }
 
   /**
-   * The fair share policy for a scheduling policy.
+   * The fair-share scheduling policy details.
    *
    * Example:
    *
@@ -333,18 +333,18 @@ public open class CfnSchedulingPolicy(
    */
   public interface FairsharePolicyProperty {
     /**
-     * A value used to reserve some of the available maximum vCPU for fair share identifiers that
-     * aren't already used.
+     * A value used to reserve some of the available maximum vCPU for share identifiers that aren't
+     * already used.
      *
      * The reserved ratio is `( *computeReservation* /100)^ *ActiveFairShares*` where
-     * `*ActiveFairShares*` is the number of active fair share identifiers.
+     * `*ActiveFairShares*` is the number of active share identifiers.
      *
      * For example, a `computeReservation` value of 50 indicates that AWS Batch reserves 50% of the
-     * maximum available vCPU if there's only one fair share identifier. It reserves 25% if there are
-     * two fair share identifiers. It reserves 12.5% if there are three fair share identifiers. A
+     * maximum available vCPU if there's only one share identifier. It reserves 25% if there are two
+     * share identifiers. It reserves 12.5% if there are three share identifiers. A
      * `computeReservation` value of 25 indicates that AWS Batch should reserve 25% of the maximum
-     * available vCPU if there's only one fair share identifier, 6.25% if there are two fair share
-     * identifiers, and 1.56% if there are three fair share identifiers.
+     * available vCPU if there's only one share identifier, 6.25% if there are two fair share
+     * identifiers, and 1.56% if there are three share identifiers.
      *
      * The minimum value is 0 and the maximum value is 99.
      *
@@ -353,22 +353,26 @@ public open class CfnSchedulingPolicy(
     public fun computeReservation(): Number? = unwrap(this).getComputeReservation()
 
     /**
-     * The amount of time (in seconds) to use to calculate a fair share percentage for each fair
-     * share identifier in use.
+     * The amount of time (in seconds) to use to calculate a fair-share percentage for each share
+     * identifier in use.
      *
-     * A value of zero (0) indicates that only current usage is measured. The decay allows for more
-     * recently run jobs to have more weight than jobs that ran earlier. The maximum supported value is
-     * 604800 (1 week).
+     * A value of zero (0) indicates the default minimum time window (600 seconds). The maximum
+     * supported value is 604800 (1 week).
+     *
+     * The decay allows for more recently run jobs to have more weight than jobs that ran earlier.
+     * Consider adjusting this number if you have jobs that (on average) run longer than ten minutes,
+     * or a large difference in job count or job run times between share identifiers, and the
+     * allocation of resources doesn't meet your needs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-fairsharepolicy.html#cfn-batch-schedulingpolicy-fairsharepolicy-sharedecayseconds)
      */
     public fun shareDecaySeconds(): Number? = unwrap(this).getShareDecaySeconds()
 
     /**
-     * An array of `SharedIdentifier` objects that contain the weights for the fair share
-     * identifiers for the fair share policy.
+     * An array of `SharedIdentifier` objects that contain the weights for the share identifiers for
+     * the fair-share policy.
      *
-     * Fair share identifiers that aren't included have a default weight of `1.0` .
+     * Share identifiers that aren't included have a default weight of `1.0` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-fairsharepolicy.html#cfn-batch-schedulingpolicy-fairsharepolicy-sharedistribution)
      */
@@ -381,48 +385,52 @@ public open class CfnSchedulingPolicy(
     public interface Builder {
       /**
        * @param computeReservation A value used to reserve some of the available maximum vCPU for
-       * fair share identifiers that aren't already used.
+       * share identifiers that aren't already used.
        * The reserved ratio is `( *computeReservation* /100)^ *ActiveFairShares*` where
-       * `*ActiveFairShares*` is the number of active fair share identifiers.
+       * `*ActiveFairShares*` is the number of active share identifiers.
        *
        * For example, a `computeReservation` value of 50 indicates that AWS Batch reserves 50% of
-       * the maximum available vCPU if there's only one fair share identifier. It reserves 25% if there
-       * are two fair share identifiers. It reserves 12.5% if there are three fair share identifiers. A
+       * the maximum available vCPU if there's only one share identifier. It reserves 25% if there are
+       * two share identifiers. It reserves 12.5% if there are three share identifiers. A
        * `computeReservation` value of 25 indicates that AWS Batch should reserve 25% of the maximum
-       * available vCPU if there's only one fair share identifier, 6.25% if there are two fair share
-       * identifiers, and 1.56% if there are three fair share identifiers.
+       * available vCPU if there's only one share identifier, 6.25% if there are two fair share
+       * identifiers, and 1.56% if there are three share identifiers.
        *
        * The minimum value is 0 and the maximum value is 99.
        */
       public fun computeReservation(computeReservation: Number)
 
       /**
-       * @param shareDecaySeconds The amount of time (in seconds) to use to calculate a fair share
-       * percentage for each fair share identifier in use.
-       * A value of zero (0) indicates that only current usage is measured. The decay allows for
-       * more recently run jobs to have more weight than jobs that ran earlier. The maximum supported
-       * value is 604800 (1 week).
+       * @param shareDecaySeconds The amount of time (in seconds) to use to calculate a fair-share
+       * percentage for each share identifier in use.
+       * A value of zero (0) indicates the default minimum time window (600 seconds). The maximum
+       * supported value is 604800 (1 week).
+       *
+       * The decay allows for more recently run jobs to have more weight than jobs that ran earlier.
+       * Consider adjusting this number if you have jobs that (on average) run longer than ten minutes,
+       * or a large difference in job count or job run times between share identifiers, and the
+       * allocation of resources doesn't meet your needs.
        */
       public fun shareDecaySeconds(shareDecaySeconds: Number)
 
       /**
        * @param shareDistribution An array of `SharedIdentifier` objects that contain the weights
-       * for the fair share identifiers for the fair share policy.
-       * Fair share identifiers that aren't included have a default weight of `1.0` .
+       * for the share identifiers for the fair-share policy.
+       * Share identifiers that aren't included have a default weight of `1.0` .
        */
       public fun shareDistribution(shareDistribution: IResolvable)
 
       /**
        * @param shareDistribution An array of `SharedIdentifier` objects that contain the weights
-       * for the fair share identifiers for the fair share policy.
-       * Fair share identifiers that aren't included have a default weight of `1.0` .
+       * for the share identifiers for the fair-share policy.
+       * Share identifiers that aren't included have a default weight of `1.0` .
        */
       public fun shareDistribution(shareDistribution: List<Any>)
 
       /**
        * @param shareDistribution An array of `SharedIdentifier` objects that contain the weights
-       * for the fair share identifiers for the fair share policy.
-       * Fair share identifiers that aren't included have a default weight of `1.0` .
+       * for the share identifiers for the fair-share policy.
+       * Share identifiers that aren't included have a default weight of `1.0` .
        */
       public fun shareDistribution(vararg shareDistribution: Any)
     }
@@ -435,16 +443,16 @@ public open class CfnSchedulingPolicy(
 
       /**
        * @param computeReservation A value used to reserve some of the available maximum vCPU for
-       * fair share identifiers that aren't already used.
+       * share identifiers that aren't already used.
        * The reserved ratio is `( *computeReservation* /100)^ *ActiveFairShares*` where
-       * `*ActiveFairShares*` is the number of active fair share identifiers.
+       * `*ActiveFairShares*` is the number of active share identifiers.
        *
        * For example, a `computeReservation` value of 50 indicates that AWS Batch reserves 50% of
-       * the maximum available vCPU if there's only one fair share identifier. It reserves 25% if there
-       * are two fair share identifiers. It reserves 12.5% if there are three fair share identifiers. A
+       * the maximum available vCPU if there's only one share identifier. It reserves 25% if there are
+       * two share identifiers. It reserves 12.5% if there are three share identifiers. A
        * `computeReservation` value of 25 indicates that AWS Batch should reserve 25% of the maximum
-       * available vCPU if there's only one fair share identifier, 6.25% if there are two fair share
-       * identifiers, and 1.56% if there are three fair share identifiers.
+       * available vCPU if there's only one share identifier, 6.25% if there are two fair share
+       * identifiers, and 1.56% if there are three share identifiers.
        *
        * The minimum value is 0 and the maximum value is 99.
        */
@@ -453,11 +461,15 @@ public open class CfnSchedulingPolicy(
       }
 
       /**
-       * @param shareDecaySeconds The amount of time (in seconds) to use to calculate a fair share
-       * percentage for each fair share identifier in use.
-       * A value of zero (0) indicates that only current usage is measured. The decay allows for
-       * more recently run jobs to have more weight than jobs that ran earlier. The maximum supported
-       * value is 604800 (1 week).
+       * @param shareDecaySeconds The amount of time (in seconds) to use to calculate a fair-share
+       * percentage for each share identifier in use.
+       * A value of zero (0) indicates the default minimum time window (600 seconds). The maximum
+       * supported value is 604800 (1 week).
+       *
+       * The decay allows for more recently run jobs to have more weight than jobs that ran earlier.
+       * Consider adjusting this number if you have jobs that (on average) run longer than ten minutes,
+       * or a large difference in job count or job run times between share identifiers, and the
+       * allocation of resources doesn't meet your needs.
        */
       override fun shareDecaySeconds(shareDecaySeconds: Number) {
         cdkBuilder.shareDecaySeconds(shareDecaySeconds)
@@ -465,8 +477,8 @@ public open class CfnSchedulingPolicy(
 
       /**
        * @param shareDistribution An array of `SharedIdentifier` objects that contain the weights
-       * for the fair share identifiers for the fair share policy.
-       * Fair share identifiers that aren't included have a default weight of `1.0` .
+       * for the share identifiers for the fair-share policy.
+       * Share identifiers that aren't included have a default weight of `1.0` .
        */
       override fun shareDistribution(shareDistribution: IResolvable) {
         cdkBuilder.shareDistribution(shareDistribution.let(IResolvable.Companion::unwrap))
@@ -474,8 +486,8 @@ public open class CfnSchedulingPolicy(
 
       /**
        * @param shareDistribution An array of `SharedIdentifier` objects that contain the weights
-       * for the fair share identifiers for the fair share policy.
-       * Fair share identifiers that aren't included have a default weight of `1.0` .
+       * for the share identifiers for the fair-share policy.
+       * Share identifiers that aren't included have a default weight of `1.0` .
        */
       override fun shareDistribution(shareDistribution: List<Any>) {
         cdkBuilder.shareDistribution(shareDistribution.map{CdkObjectWrappers.unwrap(it)})
@@ -483,8 +495,8 @@ public open class CfnSchedulingPolicy(
 
       /**
        * @param shareDistribution An array of `SharedIdentifier` objects that contain the weights
-       * for the fair share identifiers for the fair share policy.
-       * Fair share identifiers that aren't included have a default weight of `1.0` .
+       * for the share identifiers for the fair-share policy.
+       * Share identifiers that aren't included have a default weight of `1.0` .
        */
       override fun shareDistribution(vararg shareDistribution: Any): Unit =
           shareDistribution(shareDistribution.toList())
@@ -499,18 +511,18 @@ public open class CfnSchedulingPolicy(
     ) : CdkObject(cdkObject),
         FairsharePolicyProperty {
       /**
-       * A value used to reserve some of the available maximum vCPU for fair share identifiers that
+       * A value used to reserve some of the available maximum vCPU for share identifiers that
        * aren't already used.
        *
        * The reserved ratio is `( *computeReservation* /100)^ *ActiveFairShares*` where
-       * `*ActiveFairShares*` is the number of active fair share identifiers.
+       * `*ActiveFairShares*` is the number of active share identifiers.
        *
        * For example, a `computeReservation` value of 50 indicates that AWS Batch reserves 50% of
-       * the maximum available vCPU if there's only one fair share identifier. It reserves 25% if there
-       * are two fair share identifiers. It reserves 12.5% if there are three fair share identifiers. A
+       * the maximum available vCPU if there's only one share identifier. It reserves 25% if there are
+       * two share identifiers. It reserves 12.5% if there are three share identifiers. A
        * `computeReservation` value of 25 indicates that AWS Batch should reserve 25% of the maximum
-       * available vCPU if there's only one fair share identifier, 6.25% if there are two fair share
-       * identifiers, and 1.56% if there are three fair share identifiers.
+       * available vCPU if there's only one share identifier, 6.25% if there are two fair share
+       * identifiers, and 1.56% if there are three share identifiers.
        *
        * The minimum value is 0 and the maximum value is 99.
        *
@@ -519,22 +531,26 @@ public open class CfnSchedulingPolicy(
       override fun computeReservation(): Number? = unwrap(this).getComputeReservation()
 
       /**
-       * The amount of time (in seconds) to use to calculate a fair share percentage for each fair
-       * share identifier in use.
+       * The amount of time (in seconds) to use to calculate a fair-share percentage for each share
+       * identifier in use.
        *
-       * A value of zero (0) indicates that only current usage is measured. The decay allows for
-       * more recently run jobs to have more weight than jobs that ran earlier. The maximum supported
-       * value is 604800 (1 week).
+       * A value of zero (0) indicates the default minimum time window (600 seconds). The maximum
+       * supported value is 604800 (1 week).
+       *
+       * The decay allows for more recently run jobs to have more weight than jobs that ran earlier.
+       * Consider adjusting this number if you have jobs that (on average) run longer than ten minutes,
+       * or a large difference in job count or job run times between share identifiers, and the
+       * allocation of resources doesn't meet your needs.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-fairsharepolicy.html#cfn-batch-schedulingpolicy-fairsharepolicy-sharedecayseconds)
        */
       override fun shareDecaySeconds(): Number? = unwrap(this).getShareDecaySeconds()
 
       /**
-       * An array of `SharedIdentifier` objects that contain the weights for the fair share
-       * identifiers for the fair share policy.
+       * An array of `SharedIdentifier` objects that contain the weights for the share identifiers
+       * for the fair-share policy.
        *
-       * Fair share identifiers that aren't included have a default weight of `1.0` .
+       * Share identifiers that aren't included have a default weight of `1.0` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-fairsharepolicy.html#cfn-batch-schedulingpolicy-fairsharepolicy-sharedistribution)
        */
@@ -560,9 +576,9 @@ public open class CfnSchedulingPolicy(
   }
 
   /**
-   * Specifies the weights for the fair share identifiers for the fair share policy.
+   * Specifies the weights for the share identifiers for the fair-share policy.
    *
-   * Fair share identifiers that aren't included have a default weight of `1.0` .
+   * Share identifiers that aren't included have a default weight of `1.0` .
    *
    * Example:
    *
@@ -580,14 +596,14 @@ public open class CfnSchedulingPolicy(
    */
   public interface ShareAttributesProperty {
     /**
-     * A fair share identifier or fair share identifier prefix.
+     * A share identifier or share identifier prefix.
      *
      * If the string ends with an asterisk (*), this entry specifies the weight factor to use for
-     * fair share identifiers that start with that prefix. The list of fair share identifiers in a fair
-     * share policy can't overlap. For example, you can't have one that specifies a `shareIdentifier`
-     * of `UserA*` and another that specifies a `shareIdentifier` of `UserA-1` .
+     * share identifiers that start with that prefix. The list of share identifiers in a fair-share
+     * policy can't overlap. For example, you can't have one that specifies a `shareIdentifier` of
+     * `UserA*` and another that specifies a `shareIdentifier` of `UserA-1` .
      *
-     * There can be no more than 500 fair share identifiers active in a job queue.
+     * There can be no more than 500 share identifiers active in a job queue.
      *
      * The string is limited to 255 alphanumeric characters, and can be followed by an asterisk (*).
      *
@@ -596,7 +612,7 @@ public open class CfnSchedulingPolicy(
     public fun shareIdentifier(): String? = unwrap(this).getShareIdentifier()
 
     /**
-     * The weight factor for the fair share identifier.
+     * The weight factor for the share identifier.
      *
      * The default value is 1.0. A lower value has a higher priority for compute resources. For
      * example, jobs that use a share identifier with a weight factor of 0.125 (1/8) get 8 times the
@@ -614,13 +630,13 @@ public open class CfnSchedulingPolicy(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param shareIdentifier A fair share identifier or fair share identifier prefix.
+       * @param shareIdentifier A share identifier or share identifier prefix.
        * If the string ends with an asterisk (*), this entry specifies the weight factor to use for
-       * fair share identifiers that start with that prefix. The list of fair share identifiers in a
-       * fair share policy can't overlap. For example, you can't have one that specifies a
-       * `shareIdentifier` of `UserA*` and another that specifies a `shareIdentifier` of `UserA-1` .
+       * share identifiers that start with that prefix. The list of share identifiers in a fair-share
+       * policy can't overlap. For example, you can't have one that specifies a `shareIdentifier` of
+       * `UserA*` and another that specifies a `shareIdentifier` of `UserA-1` .
        *
-       * There can be no more than 500 fair share identifiers active in a job queue.
+       * There can be no more than 500 share identifiers active in a job queue.
        *
        * The string is limited to 255 alphanumeric characters, and can be followed by an asterisk
        * (*).
@@ -628,7 +644,7 @@ public open class CfnSchedulingPolicy(
       public fun shareIdentifier(shareIdentifier: String)
 
       /**
-       * @param weightFactor The weight factor for the fair share identifier.
+       * @param weightFactor The weight factor for the share identifier.
        * The default value is 1.0. A lower value has a higher priority for compute resources. For
        * example, jobs that use a share identifier with a weight factor of 0.125 (1/8) get 8 times the
        * compute resources of jobs that use a share identifier with a weight factor of 1.
@@ -645,13 +661,13 @@ public open class CfnSchedulingPolicy(
           software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty.builder()
 
       /**
-       * @param shareIdentifier A fair share identifier or fair share identifier prefix.
+       * @param shareIdentifier A share identifier or share identifier prefix.
        * If the string ends with an asterisk (*), this entry specifies the weight factor to use for
-       * fair share identifiers that start with that prefix. The list of fair share identifiers in a
-       * fair share policy can't overlap. For example, you can't have one that specifies a
-       * `shareIdentifier` of `UserA*` and another that specifies a `shareIdentifier` of `UserA-1` .
+       * share identifiers that start with that prefix. The list of share identifiers in a fair-share
+       * policy can't overlap. For example, you can't have one that specifies a `shareIdentifier` of
+       * `UserA*` and another that specifies a `shareIdentifier` of `UserA-1` .
        *
-       * There can be no more than 500 fair share identifiers active in a job queue.
+       * There can be no more than 500 share identifiers active in a job queue.
        *
        * The string is limited to 255 alphanumeric characters, and can be followed by an asterisk
        * (*).
@@ -661,7 +677,7 @@ public open class CfnSchedulingPolicy(
       }
 
       /**
-       * @param weightFactor The weight factor for the fair share identifier.
+       * @param weightFactor The weight factor for the share identifier.
        * The default value is 1.0. A lower value has a higher priority for compute resources. For
        * example, jobs that use a share identifier with a weight factor of 0.125 (1/8) get 8 times the
        * compute resources of jobs that use a share identifier with a weight factor of 1.
@@ -682,14 +698,14 @@ public open class CfnSchedulingPolicy(
     ) : CdkObject(cdkObject),
         ShareAttributesProperty {
       /**
-       * A fair share identifier or fair share identifier prefix.
+       * A share identifier or share identifier prefix.
        *
        * If the string ends with an asterisk (*), this entry specifies the weight factor to use for
-       * fair share identifiers that start with that prefix. The list of fair share identifiers in a
-       * fair share policy can't overlap. For example, you can't have one that specifies a
-       * `shareIdentifier` of `UserA*` and another that specifies a `shareIdentifier` of `UserA-1` .
+       * share identifiers that start with that prefix. The list of share identifiers in a fair-share
+       * policy can't overlap. For example, you can't have one that specifies a `shareIdentifier` of
+       * `UserA*` and another that specifies a `shareIdentifier` of `UserA-1` .
        *
-       * There can be no more than 500 fair share identifiers active in a job queue.
+       * There can be no more than 500 share identifiers active in a job queue.
        *
        * The string is limited to 255 alphanumeric characters, and can be followed by an asterisk
        * (*).
@@ -699,7 +715,7 @@ public open class CfnSchedulingPolicy(
       override fun shareIdentifier(): String? = unwrap(this).getShareIdentifier()
 
       /**
-       * The weight factor for the fair share identifier.
+       * The weight factor for the share identifier.
        *
        * The default value is 1.0. A lower value has a higher priority for compute resources. For
        * example, jobs that use a share identifier with a weight factor of 0.125 (1/8) get 8 times the

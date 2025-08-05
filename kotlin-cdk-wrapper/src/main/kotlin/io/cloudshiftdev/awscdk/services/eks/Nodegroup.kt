@@ -41,6 +41,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .capacityType(CapacityType.SPOT)
  * .desiredSize(123)
  * .diskSize(123)
+ * .enableNodeAutoRepair(false)
  * .forceUpdate(false)
  * .instanceTypes(List.of(instanceType))
  * .labels(Map.of(
@@ -177,6 +178,18 @@ public open class Nodegroup(
      * @param diskSize The root device disk size (in GiB) for your node group instances. 
      */
     public fun diskSize(diskSize: Number)
+
+    /**
+     * Specifies whether to enable node auto repair for the node group.
+     *
+     * Node auto repair is disabled by default.
+     *
+     * Default: - disabled
+     *
+     * [Documentation](https://docs.aws.amazon.com/eks/latest/userguide/node-health.html#node-auto-repair)
+     * @param enableNodeAutoRepair Specifies whether to enable node auto repair for the node group. 
+     */
+    public fun enableNodeAutoRepair(enableNodeAutoRepair: Boolean)
 
     /**
      * Force the update if the existing node group's pods are unable to be drained due to a pod
@@ -511,6 +524,20 @@ public open class Nodegroup(
     }
 
     /**
+     * Specifies whether to enable node auto repair for the node group.
+     *
+     * Node auto repair is disabled by default.
+     *
+     * Default: - disabled
+     *
+     * [Documentation](https://docs.aws.amazon.com/eks/latest/userguide/node-health.html#node-auto-repair)
+     * @param enableNodeAutoRepair Specifies whether to enable node auto repair for the node group. 
+     */
+    override fun enableNodeAutoRepair(enableNodeAutoRepair: Boolean) {
+      cdkBuilder.enableNodeAutoRepair(enableNodeAutoRepair)
+    }
+
+    /**
      * Force the update if the existing node group's pods are unable to be drained due to a pod
      * disruption budget issue.
      *
@@ -809,6 +836,9 @@ public open class Nodegroup(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.eks.Nodegroup.PROPERTY_INJECTION_ID
+
     public fun fromNodegroupName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -78,6 +78,8 @@ public interface CfnClusterProps {
   /**
    * The instance groups of the SageMaker HyperPod cluster.
    *
+   * To delete an instance group, remove it from the array.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-instancegroups)
    */
   public fun instanceGroups(): Any
@@ -145,16 +147,19 @@ public interface CfnClusterProps {
 
     /**
      * @param instanceGroups The instance groups of the SageMaker HyperPod cluster. 
+     * To delete an instance group, remove it from the array.
      */
     public fun instanceGroups(instanceGroups: IResolvable)
 
     /**
      * @param instanceGroups The instance groups of the SageMaker HyperPod cluster. 
+     * To delete an instance group, remove it from the array.
      */
     public fun instanceGroups(instanceGroups: List<Any>)
 
     /**
      * @param instanceGroups The instance groups of the SageMaker HyperPod cluster. 
+     * To delete an instance group, remove it from the array.
      */
     public fun instanceGroups(vararg instanceGroups: Any)
 
@@ -262,6 +267,7 @@ public interface CfnClusterProps {
 
     /**
      * @param instanceGroups The instance groups of the SageMaker HyperPod cluster. 
+     * To delete an instance group, remove it from the array.
      */
     override fun instanceGroups(instanceGroups: IResolvable) {
       cdkBuilder.instanceGroups(instanceGroups.let(IResolvable.Companion::unwrap))
@@ -269,6 +275,7 @@ public interface CfnClusterProps {
 
     /**
      * @param instanceGroups The instance groups of the SageMaker HyperPod cluster. 
+     * To delete an instance group, remove it from the array.
      */
     override fun instanceGroups(instanceGroups: List<Any>) {
       cdkBuilder.instanceGroups(instanceGroups.map{CdkObjectWrappers.unwrap(it)})
@@ -276,6 +283,7 @@ public interface CfnClusterProps {
 
     /**
      * @param instanceGroups The instance groups of the SageMaker HyperPod cluster. 
+     * To delete an instance group, remove it from the array.
      */
     override fun instanceGroups(vararg instanceGroups: Any): Unit =
         instanceGroups(instanceGroups.toList())
@@ -401,6 +409,8 @@ public interface CfnClusterProps {
 
     /**
      * The instance groups of the SageMaker HyperPod cluster.
+     *
+     * To delete an instance group, remove it from the array.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-instancegroups)
      */

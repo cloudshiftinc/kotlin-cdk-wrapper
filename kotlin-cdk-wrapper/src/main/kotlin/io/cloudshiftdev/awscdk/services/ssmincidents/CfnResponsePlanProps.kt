@@ -90,7 +90,7 @@ public interface CfnResponsePlanProps {
   public fun actions(): Any? = unwrap(this).getActions()
 
   /**
-   * The AWS Chatbot chat channel used for collaboration during an incident.
+   * The  chat channel used for collaboration during an incident.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-chatchannel)
    */
@@ -164,17 +164,17 @@ public interface CfnResponsePlanProps {
     public fun actions(vararg actions: Any)
 
     /**
-     * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident.
+     * @param chatChannel The  chat channel used for collaboration during an incident.
      */
     public fun chatChannel(chatChannel: IResolvable)
 
     /**
-     * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident.
+     * @param chatChannel The  chat channel used for collaboration during an incident.
      */
     public fun chatChannel(chatChannel: CfnResponsePlan.ChatChannelProperty)
 
     /**
-     * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident.
+     * @param chatChannel The  chat channel used for collaboration during an incident.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("43097ab621c7f3f9b4e2fec17b4f12692ff9cfe2bed21f3ca63a5c5d8cc11cee")
@@ -277,21 +277,21 @@ public interface CfnResponsePlanProps {
     override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
     /**
-     * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident.
+     * @param chatChannel The  chat channel used for collaboration during an incident.
      */
     override fun chatChannel(chatChannel: IResolvable) {
       cdkBuilder.chatChannel(chatChannel.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident.
+     * @param chatChannel The  chat channel used for collaboration during an incident.
      */
     override fun chatChannel(chatChannel: CfnResponsePlan.ChatChannelProperty) {
       cdkBuilder.chatChannel(chatChannel.let(CfnResponsePlan.ChatChannelProperty.Companion::unwrap))
     }
 
     /**
-     * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident.
+     * @param chatChannel The  chat channel used for collaboration during an incident.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("43097ab621c7f3f9b4e2fec17b4f12692ff9cfe2bed21f3ca63a5c5d8cc11cee")
@@ -402,7 +402,7 @@ public interface CfnResponsePlanProps {
     override fun actions(): Any? = unwrap(this).getActions()
 
     /**
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The  chat channel used for collaboration during an incident.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-chatchannel)
      */

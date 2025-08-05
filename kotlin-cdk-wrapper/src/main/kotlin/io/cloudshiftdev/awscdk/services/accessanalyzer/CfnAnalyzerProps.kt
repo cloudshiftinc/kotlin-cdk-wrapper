@@ -26,6 +26,15 @@ import kotlin.jvm.JvmName
  * .type("type")
  * // the properties below are optional
  * .analyzerConfiguration(AnalyzerConfigurationProperty.builder()
+ * .internalAccessConfiguration(InternalAccessConfigurationProperty.builder()
+ * .internalAccessAnalysisRule(InternalAccessAnalysisRuleProperty.builder()
+ * .inclusions(List.of(InternalAccessAnalysisRuleCriteriaProperty.builder()
+ * .accountIds(List.of("accountIds"))
+ * .resourceArns(List.of("resourceArns"))
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build()))
+ * .build())
+ * .build())
  * .unusedAccessConfiguration(UnusedAccessConfigurationProperty.builder()
  * .analysisRule(AnalysisRuleProperty.builder()
  * .exclusions(List.of(AnalysisRuleCriteriaProperty.builder()
@@ -102,7 +111,8 @@ public interface CfnAnalyzerProps {
   /**
    * The type represents the zone of trust for the analyzer.
    *
-   * *Allowed Values* : ACCOUNT | ORGANIZATION | ACCOUNT_UNUSED_ACCESS | ORGANIZATION_UNUSED_ACCESS
+   * *Allowed Values* : ACCOUNT | ORGANIZATION | ACCOUNT_UNUSED_ACCESS | ACCOUNT_INTERNAL_ACCESS |
+   * ORGANIZATION_INTERNAL_ACCESS | ORGANIZATION_UNUSED_ACCESS
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-type)
    */
@@ -184,8 +194,8 @@ public interface CfnAnalyzerProps {
 
     /**
      * @param type The type represents the zone of trust for the analyzer. 
-     * *Allowed Values* : ACCOUNT | ORGANIZATION | ACCOUNT_UNUSED_ACCESS |
-     * ORGANIZATION_UNUSED_ACCESS
+     * *Allowed Values* : ACCOUNT | ORGANIZATION | ACCOUNT_UNUSED_ACCESS | ACCOUNT_INTERNAL_ACCESS |
+     * ORGANIZATION_INTERNAL_ACCESS | ORGANIZATION_UNUSED_ACCESS
      */
     public fun type(type: String)
   }
@@ -279,8 +289,8 @@ public interface CfnAnalyzerProps {
 
     /**
      * @param type The type represents the zone of trust for the analyzer. 
-     * *Allowed Values* : ACCOUNT | ORGANIZATION | ACCOUNT_UNUSED_ACCESS |
-     * ORGANIZATION_UNUSED_ACCESS
+     * *Allowed Values* : ACCOUNT | ORGANIZATION | ACCOUNT_UNUSED_ACCESS | ACCOUNT_INTERNAL_ACCESS |
+     * ORGANIZATION_INTERNAL_ACCESS | ORGANIZATION_UNUSED_ACCESS
      */
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -336,8 +346,8 @@ public interface CfnAnalyzerProps {
     /**
      * The type represents the zone of trust for the analyzer.
      *
-     * *Allowed Values* : ACCOUNT | ORGANIZATION | ACCOUNT_UNUSED_ACCESS |
-     * ORGANIZATION_UNUSED_ACCESS
+     * *Allowed Values* : ACCOUNT | ORGANIZATION | ACCOUNT_UNUSED_ACCESS | ACCOUNT_INTERNAL_ACCESS |
+     * ORGANIZATION_INTERNAL_ACCESS | ORGANIZATION_UNUSED_ACCESS
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-type)
      */

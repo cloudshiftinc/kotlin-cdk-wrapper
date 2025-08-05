@@ -264,6 +264,9 @@ public open class AppsyncFunction(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.appsync.AppsyncFunction.PROPERTY_INJECTION_ID
+
     public fun fromAppsyncFunctionAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

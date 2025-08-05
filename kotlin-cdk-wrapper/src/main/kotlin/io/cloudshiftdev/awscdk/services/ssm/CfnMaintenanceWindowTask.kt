@@ -161,26 +161,26 @@ public open class CfnMaintenanceWindowTask(
   }
 
   /**
-   * Information about an Amazon S3 bucket to write Run Command task-level logs to.
+   * `LoggingInfo` has been deprecated.
    */
   public open fun loggingInfo(): Any? = unwrap(this).getLoggingInfo()
 
   /**
-   * Information about an Amazon S3 bucket to write Run Command task-level logs to.
+   * `LoggingInfo` has been deprecated.
    */
   public open fun loggingInfo(`value`: IResolvable) {
     unwrap(this).setLoggingInfo(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Information about an Amazon S3 bucket to write Run Command task-level logs to.
+   * `LoggingInfo` has been deprecated.
    */
   public open fun loggingInfo(`value`: LoggingInfoProperty) {
     unwrap(this).setLoggingInfo(`value`.let(LoggingInfoProperty.Companion::unwrap))
   }
 
   /**
-   * Information about an Amazon S3 bucket to write Run Command task-level logs to.
+   * `LoggingInfo` has been deprecated.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("cbba0f3c66e7a2938dee48fc664fc6682760e4935297faa77eeff3c4469f1157")
@@ -314,12 +314,12 @@ public open class CfnMaintenanceWindowTask(
       Unit = taskInvocationParameters(TaskInvocationParametersProperty(`value`))
 
   /**
-   * The parameters to pass to the task when it runs.
+   * `TaskParameters` has been deprecated.
    */
   public open fun taskParameters(): Any? = unwrap(this).getTaskParameters()
 
   /**
-   * The parameters to pass to the task when it runs.
+   * `TaskParameters` has been deprecated.
    */
   public open fun taskParameters(`value`: Any) {
     unwrap(this).setTaskParameters(`value`)
@@ -373,56 +373,53 @@ public open class CfnMaintenanceWindowTask(
     public fun description(description: String)
 
     /**
-     * Information about an Amazon S3 bucket to write Run Command task-level logs to.
+     * `LoggingInfo` has been deprecated.
      *
-     *
-     * `LoggingInfo` has been deprecated. To specify an Amazon S3 bucket to contain logs for Run
-     * Command tasks, instead use the `OutputS3BucketName` and `OutputS3KeyPrefix` options in the
-     * `TaskInvocationParameters` structure. For information about how Systems Manager handles these
-     * options for the supported maintenance window task types, see [AWS ::SSM::MaintenanceWindowTask
+     * To specify an Amazon S3 bucket to contain logs for Run Command tasks, instead use the
+     * `OutputS3BucketName` and `OutputS3KeyPrefix` options in the `TaskInvocationParameters`
+     * structure. For information about how Systems Manager handles these options for the supported
+     * maintenance window task types, see [AWS ::SSM::MaintenanceWindowTask
      * MaintenanceWindowRunCommandParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)
      * .
      *
+     * Information about an Amazon S3 bucket to write Run Command task-level logs to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-logginginfo)
-     * @param loggingInfo Information about an Amazon S3 bucket to write Run Command task-level logs
-     * to. 
+     * @param loggingInfo `LoggingInfo` has been deprecated. 
      */
     public fun loggingInfo(loggingInfo: IResolvable)
 
     /**
-     * Information about an Amazon S3 bucket to write Run Command task-level logs to.
+     * `LoggingInfo` has been deprecated.
      *
-     *
-     * `LoggingInfo` has been deprecated. To specify an Amazon S3 bucket to contain logs for Run
-     * Command tasks, instead use the `OutputS3BucketName` and `OutputS3KeyPrefix` options in the
-     * `TaskInvocationParameters` structure. For information about how Systems Manager handles these
-     * options for the supported maintenance window task types, see [AWS ::SSM::MaintenanceWindowTask
+     * To specify an Amazon S3 bucket to contain logs for Run Command tasks, instead use the
+     * `OutputS3BucketName` and `OutputS3KeyPrefix` options in the `TaskInvocationParameters`
+     * structure. For information about how Systems Manager handles these options for the supported
+     * maintenance window task types, see [AWS ::SSM::MaintenanceWindowTask
      * MaintenanceWindowRunCommandParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)
      * .
      *
+     * Information about an Amazon S3 bucket to write Run Command task-level logs to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-logginginfo)
-     * @param loggingInfo Information about an Amazon S3 bucket to write Run Command task-level logs
-     * to. 
+     * @param loggingInfo `LoggingInfo` has been deprecated. 
      */
     public fun loggingInfo(loggingInfo: LoggingInfoProperty)
 
     /**
-     * Information about an Amazon S3 bucket to write Run Command task-level logs to.
+     * `LoggingInfo` has been deprecated.
      *
-     *
-     * `LoggingInfo` has been deprecated. To specify an Amazon S3 bucket to contain logs for Run
-     * Command tasks, instead use the `OutputS3BucketName` and `OutputS3KeyPrefix` options in the
-     * `TaskInvocationParameters` structure. For information about how Systems Manager handles these
-     * options for the supported maintenance window task types, see [AWS ::SSM::MaintenanceWindowTask
+     * To specify an Amazon S3 bucket to contain logs for Run Command tasks, instead use the
+     * `OutputS3BucketName` and `OutputS3KeyPrefix` options in the `TaskInvocationParameters`
+     * structure. For information about how Systems Manager handles these options for the supported
+     * maintenance window task types, see [AWS ::SSM::MaintenanceWindowTask
      * MaintenanceWindowRunCommandParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)
      * .
      *
+     * Information about an Amazon S3 bucket to write Run Command task-level logs to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-logginginfo)
-     * @param loggingInfo Information about an Amazon S3 bucket to write Run Command task-level logs
-     * to. 
+     * @param loggingInfo `LoggingInfo` has been deprecated. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fdbf17c449fb922feebcb1dff803691433d401a752d8933a05ec06cdd103c753")
@@ -622,19 +619,18 @@ public open class CfnMaintenanceWindowTask(
         fun taskInvocationParameters(taskInvocationParameters: TaskInvocationParametersProperty.Builder.() -> Unit)
 
     /**
-     * The parameters to pass to the task when it runs.
+     * `TaskParameters` has been deprecated.
      *
-     *
-     * `TaskParameters` has been deprecated. To specify parameters to pass to a task when it runs,
-     * instead use the `Parameters` option in the `TaskInvocationParameters` structure. For information
-     * about how Systems Manager handles these options for the supported maintenance window task types,
-     * see
+     * To specify parameters to pass to a task when it runs, instead use the `Parameters` option in
+     * the `TaskInvocationParameters` structure. For information about how Systems Manager handles
+     * these options for the supported maintenance window task types, see
      * [MaintenanceWindowTaskInvocationParameters](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_MaintenanceWindowTaskInvocationParameters.html)
      * .
      *
+     * The parameters to pass to the task when it runs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-taskparameters)
-     * @param taskParameters The parameters to pass to the task when it runs. 
+     * @param taskParameters `TaskParameters` has been deprecated. 
      */
     public fun taskParameters(taskParameters: Any)
 
@@ -687,60 +683,57 @@ public open class CfnMaintenanceWindowTask(
     }
 
     /**
-     * Information about an Amazon S3 bucket to write Run Command task-level logs to.
+     * `LoggingInfo` has been deprecated.
      *
-     *
-     * `LoggingInfo` has been deprecated. To specify an Amazon S3 bucket to contain logs for Run
-     * Command tasks, instead use the `OutputS3BucketName` and `OutputS3KeyPrefix` options in the
-     * `TaskInvocationParameters` structure. For information about how Systems Manager handles these
-     * options for the supported maintenance window task types, see [AWS ::SSM::MaintenanceWindowTask
+     * To specify an Amazon S3 bucket to contain logs for Run Command tasks, instead use the
+     * `OutputS3BucketName` and `OutputS3KeyPrefix` options in the `TaskInvocationParameters`
+     * structure. For information about how Systems Manager handles these options for the supported
+     * maintenance window task types, see [AWS ::SSM::MaintenanceWindowTask
      * MaintenanceWindowRunCommandParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)
      * .
      *
+     * Information about an Amazon S3 bucket to write Run Command task-level logs to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-logginginfo)
-     * @param loggingInfo Information about an Amazon S3 bucket to write Run Command task-level logs
-     * to. 
+     * @param loggingInfo `LoggingInfo` has been deprecated. 
      */
     override fun loggingInfo(loggingInfo: IResolvable) {
       cdkBuilder.loggingInfo(loggingInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Information about an Amazon S3 bucket to write Run Command task-level logs to.
+     * `LoggingInfo` has been deprecated.
      *
-     *
-     * `LoggingInfo` has been deprecated. To specify an Amazon S3 bucket to contain logs for Run
-     * Command tasks, instead use the `OutputS3BucketName` and `OutputS3KeyPrefix` options in the
-     * `TaskInvocationParameters` structure. For information about how Systems Manager handles these
-     * options for the supported maintenance window task types, see [AWS ::SSM::MaintenanceWindowTask
+     * To specify an Amazon S3 bucket to contain logs for Run Command tasks, instead use the
+     * `OutputS3BucketName` and `OutputS3KeyPrefix` options in the `TaskInvocationParameters`
+     * structure. For information about how Systems Manager handles these options for the supported
+     * maintenance window task types, see [AWS ::SSM::MaintenanceWindowTask
      * MaintenanceWindowRunCommandParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)
      * .
      *
+     * Information about an Amazon S3 bucket to write Run Command task-level logs to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-logginginfo)
-     * @param loggingInfo Information about an Amazon S3 bucket to write Run Command task-level logs
-     * to. 
+     * @param loggingInfo `LoggingInfo` has been deprecated. 
      */
     override fun loggingInfo(loggingInfo: LoggingInfoProperty) {
       cdkBuilder.loggingInfo(loggingInfo.let(LoggingInfoProperty.Companion::unwrap))
     }
 
     /**
-     * Information about an Amazon S3 bucket to write Run Command task-level logs to.
+     * `LoggingInfo` has been deprecated.
      *
-     *
-     * `LoggingInfo` has been deprecated. To specify an Amazon S3 bucket to contain logs for Run
-     * Command tasks, instead use the `OutputS3BucketName` and `OutputS3KeyPrefix` options in the
-     * `TaskInvocationParameters` structure. For information about how Systems Manager handles these
-     * options for the supported maintenance window task types, see [AWS ::SSM::MaintenanceWindowTask
+     * To specify an Amazon S3 bucket to contain logs for Run Command tasks, instead use the
+     * `OutputS3BucketName` and `OutputS3KeyPrefix` options in the `TaskInvocationParameters`
+     * structure. For information about how Systems Manager handles these options for the supported
+     * maintenance window task types, see [AWS ::SSM::MaintenanceWindowTask
      * MaintenanceWindowRunCommandParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)
      * .
      *
+     * Information about an Amazon S3 bucket to write Run Command task-level logs to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-logginginfo)
-     * @param loggingInfo Information about an Amazon S3 bucket to write Run Command task-level logs
-     * to. 
+     * @param loggingInfo `LoggingInfo` has been deprecated. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fdbf17c449fb922feebcb1dff803691433d401a752d8933a05ec06cdd103c753")
@@ -963,19 +956,18 @@ public open class CfnMaintenanceWindowTask(
         Unit = taskInvocationParameters(TaskInvocationParametersProperty(taskInvocationParameters))
 
     /**
-     * The parameters to pass to the task when it runs.
+     * `TaskParameters` has been deprecated.
      *
-     *
-     * `TaskParameters` has been deprecated. To specify parameters to pass to a task when it runs,
-     * instead use the `Parameters` option in the `TaskInvocationParameters` structure. For information
-     * about how Systems Manager handles these options for the supported maintenance window task types,
-     * see
+     * To specify parameters to pass to a task when it runs, instead use the `Parameters` option in
+     * the `TaskInvocationParameters` structure. For information about how Systems Manager handles
+     * these options for the supported maintenance window task types, see
      * [MaintenanceWindowTaskInvocationParameters](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_MaintenanceWindowTaskInvocationParameters.html)
      * .
      *
+     * The parameters to pass to the task when it runs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-taskparameters)
-     * @param taskParameters The parameters to pass to the task when it runs. 
+     * @param taskParameters `TaskParameters` has been deprecated. 
      */
     override fun taskParameters(taskParameters: Any) {
       cdkBuilder.taskParameters(taskParameters)
@@ -1176,21 +1168,21 @@ public open class CfnMaintenanceWindowTask(
   }
 
   /**
+   * `LoggingInfo` has been deprecated.
+   *
+   * To specify an Amazon S3 bucket to contain logs, instead use the `OutputS3BucketName` and
+   * `OutputS3KeyPrefix` options in the `TaskInvocationParameters` structure. For information about how
+   * Systems Manager handles these options for the supported maintenance window task types, see [AWS
+   * ::SSM::MaintenanceWindowTask
+   * MaintenanceWindowRunCommandParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)
+   * .
+   *
    * The `LoggingInfo` property type specifies information about the Amazon S3 bucket to write
    * instance-level logs to.
    *
    * `LoggingInfo` is a property of the
    * [AWS::SSM::MaintenanceWindowTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html)
    * resource.
-   *
-   *
-   * `LoggingInfo` has been deprecated. To specify an Amazon S3 bucket to contain logs, instead use
-   * the `OutputS3BucketName` and `OutputS3KeyPrefix` options in the `TaskInvocationParameters`
-   * structure. For information about how Systems Manager handles these options for the supported
-   * maintenance window task types, see [AWS ::SSM::MaintenanceWindowTask
-   * MaintenanceWindowRunCommandParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)
-   * .
-   *
    *
    * Example:
    *

@@ -50,6 +50,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .description("description")
  * .eventSourceName("eventSourceName")
  * .kmsKeyIdentifier("kmsKeyIdentifier")
+ * .logConfig(LogConfigProperty.builder()
+ * .includeDetail("includeDetail")
+ * .level("level")
+ * .build())
  * .policy(policy)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -184,6 +188,33 @@ public open class CfnEventBus(
   }
 
   /**
+   * The logging configuration settings for the event bus.
+   */
+  public open fun logConfig(): Any? = unwrap(this).getLogConfig()
+
+  /**
+   * The logging configuration settings for the event bus.
+   */
+  public open fun logConfig(`value`: IResolvable) {
+    unwrap(this).setLogConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The logging configuration settings for the event bus.
+   */
+  public open fun logConfig(`value`: LogConfigProperty) {
+    unwrap(this).setLogConfig(`value`.let(LogConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * The logging configuration settings for the event bus.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("ed40f9cf014c45ce4fd7a51d77b5cfe25cc34af50926c400e2346213ccb27595")
+  public open fun logConfig(`value`: LogConfigProperty.Builder.() -> Unit): Unit =
+      logConfig(LogConfigProperty(`value`))
+
+  /**
    * The name of the new event bus.
    */
   public open fun name(): String = unwrap(this).getName()
@@ -302,28 +333,31 @@ public open class CfnEventBus(
      * If you do not specify a customer managed key identifier, EventBridge uses an AWS owned key to
      * encrypt events on the event bus.
      *
-     * For more information, see [Managing
-     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS
-     * Key Management Service Developer Guide* .
+     * For more information, see [Identify and view
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
      *
      *
-     * Archives and schema discovery are not supported for event buses encrypted using a customer
-     * managed key. EventBridge returns an error if:
+     * Schema discovery is not supported for event buses encrypted using a customer managed key.
+     * EventBridge returns an error if:
      *
-     * * You call
-     * `[CreateArchive](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateArchive.html)`
-     * on an event bus set to use a customer managed key for encryption.
      * * You call
      * `[CreateDiscoverer](https://docs.aws.amazon.com/eventbridge/latest/schema-reference/v1-discoverers.html#CreateDiscoverer)`
      * on an event bus set to use a customer managed key for encryption.
      * * You call
      * `[UpdatedEventBus](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UpdatedEventBus.html)`
-     * to set a customer managed key on an event bus with an archives or schema discovery enabled.
+     * to set a customer managed key on an event bus with schema discovery enabled.
      *
-     * To enable archives or schema discovery on an event bus, choose to use an AWS owned key . For
-     * more information, see [Data encryption in
-     * EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption.html) in the
-     * *Amazon EventBridge User Guide* .
+     * To enable schema discovery on an event bus, choose to use an AWS owned key . For more
+     * information, see [Encrypting
+     * events](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption-event-bus-cmkey.html)
+     * in the *Amazon EventBridge User Guide* . &gt; If you have specified that EventBridge use a
+     * customer managed key for encrypting the source event bus, we strongly recommend you also specify
+     * a customer managed key for any archives for the event bus as well.
+     *
+     * For more information, see [Encrypting
+     * archives](https://docs.aws.amazon.com/eventbridge/latest/userguide/encryption-archives.html) in
+     * the *Amazon EventBridge User Guide* .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-kmskeyidentifier)
@@ -331,6 +365,41 @@ public open class CfnEventBus(
      * use, if you choose to use a customer managed key to encrypt events on this event bus. 
      */
     public fun kmsKeyIdentifier(kmsKeyIdentifier: String)
+
+    /**
+     * The logging configuration settings for the event bus.
+     *
+     * For more information, see [Configuring logs for event
+     * buses](https://docs.aws.amazon.com/eb-event-bus-logs.html) in the *EventBridge User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-logconfig)
+     * @param logConfig The logging configuration settings for the event bus. 
+     */
+    public fun logConfig(logConfig: IResolvable)
+
+    /**
+     * The logging configuration settings for the event bus.
+     *
+     * For more information, see [Configuring logs for event
+     * buses](https://docs.aws.amazon.com/eb-event-bus-logs.html) in the *EventBridge User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-logconfig)
+     * @param logConfig The logging configuration settings for the event bus. 
+     */
+    public fun logConfig(logConfig: LogConfigProperty)
+
+    /**
+     * The logging configuration settings for the event bus.
+     *
+     * For more information, see [Configuring logs for event
+     * buses](https://docs.aws.amazon.com/eb-event-bus-logs.html) in the *EventBridge User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-logconfig)
+     * @param logConfig The logging configuration settings for the event bus. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0b06ca052f0d9b027cadf8d1e13b15d5a864f3c03f6516e5b6d0bd3636e88257")
+    public fun logConfig(logConfig: LogConfigProperty.Builder.() -> Unit)
 
     /**
      * The name of the new event bus.
@@ -461,28 +530,31 @@ public open class CfnEventBus(
      * If you do not specify a customer managed key identifier, EventBridge uses an AWS owned key to
      * encrypt events on the event bus.
      *
-     * For more information, see [Managing
-     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS
-     * Key Management Service Developer Guide* .
+     * For more information, see [Identify and view
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
      *
      *
-     * Archives and schema discovery are not supported for event buses encrypted using a customer
-     * managed key. EventBridge returns an error if:
+     * Schema discovery is not supported for event buses encrypted using a customer managed key.
+     * EventBridge returns an error if:
      *
-     * * You call
-     * `[CreateArchive](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateArchive.html)`
-     * on an event bus set to use a customer managed key for encryption.
      * * You call
      * `[CreateDiscoverer](https://docs.aws.amazon.com/eventbridge/latest/schema-reference/v1-discoverers.html#CreateDiscoverer)`
      * on an event bus set to use a customer managed key for encryption.
      * * You call
      * `[UpdatedEventBus](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UpdatedEventBus.html)`
-     * to set a customer managed key on an event bus with an archives or schema discovery enabled.
+     * to set a customer managed key on an event bus with schema discovery enabled.
      *
-     * To enable archives or schema discovery on an event bus, choose to use an AWS owned key . For
-     * more information, see [Data encryption in
-     * EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption.html) in the
-     * *Amazon EventBridge User Guide* .
+     * To enable schema discovery on an event bus, choose to use an AWS owned key . For more
+     * information, see [Encrypting
+     * events](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption-event-bus-cmkey.html)
+     * in the *Amazon EventBridge User Guide* . &gt; If you have specified that EventBridge use a
+     * customer managed key for encrypting the source event bus, we strongly recommend you also specify
+     * a customer managed key for any archives for the event bus as well.
+     *
+     * For more information, see [Encrypting
+     * archives](https://docs.aws.amazon.com/eventbridge/latest/userguide/encryption-archives.html) in
+     * the *Amazon EventBridge User Guide* .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-kmskeyidentifier)
@@ -492,6 +564,46 @@ public open class CfnEventBus(
     override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
       cdkBuilder.kmsKeyIdentifier(kmsKeyIdentifier)
     }
+
+    /**
+     * The logging configuration settings for the event bus.
+     *
+     * For more information, see [Configuring logs for event
+     * buses](https://docs.aws.amazon.com/eb-event-bus-logs.html) in the *EventBridge User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-logconfig)
+     * @param logConfig The logging configuration settings for the event bus. 
+     */
+    override fun logConfig(logConfig: IResolvable) {
+      cdkBuilder.logConfig(logConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The logging configuration settings for the event bus.
+     *
+     * For more information, see [Configuring logs for event
+     * buses](https://docs.aws.amazon.com/eb-event-bus-logs.html) in the *EventBridge User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-logconfig)
+     * @param logConfig The logging configuration settings for the event bus. 
+     */
+    override fun logConfig(logConfig: LogConfigProperty) {
+      cdkBuilder.logConfig(logConfig.let(LogConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * The logging configuration settings for the event bus.
+     *
+     * For more information, see [Configuring logs for event
+     * buses](https://docs.aws.amazon.com/eb-event-bus-logs.html) in the *EventBridge User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-logconfig)
+     * @param logConfig The logging configuration settings for the event bus. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0b06ca052f0d9b027cadf8d1e13b15d5a864f3c03f6516e5b6d0bd3636e88257")
+    override fun logConfig(logConfig: LogConfigProperty.Builder.() -> Unit): Unit =
+        logConfig(LogConfigProperty(logConfig))
 
     /**
      * The name of the new event bus.
@@ -647,6 +759,163 @@ public open class CfnEventBus(
           software.amazon.awscdk.services.events.CfnEventBus.DeadLetterConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.events.CfnEventBus.DeadLetterConfigProperty
+    }
+  }
+
+  /**
+   * The logging configuration settings for the event bus.
+   *
+   * For more information, see [Configuring logs for event
+   * buses](https://docs.aws.amazon.com/eb-event-bus-logs.html) in the *EventBridge User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * LogConfigProperty logConfigProperty = LogConfigProperty.builder()
+   * .includeDetail("includeDetail")
+   * .level("level")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-eventbus-logconfig.html)
+   */
+  public interface LogConfigProperty {
+    /**
+     * Whether EventBridge include detailed event information in the records it generates.
+     *
+     * Detailed data can be useful for troubleshooting and debugging. This information includes
+     * details of the event itself, as well as target details.
+     *
+     * For more information, see [Including detail data in event bus
+     * logs](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus-logs.html#eb-event-logs-data)
+     * in the *EventBridge User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-eventbus-logconfig.html#cfn-events-eventbus-logconfig-includedetail)
+     */
+    public fun includeDetail(): String? = unwrap(this).getIncludeDetail()
+
+    /**
+     * The level of logging detail to include. This applies to all log destinations for the event
+     * bus.
+     *
+     * For more information, see [Specifying event bus log
+     * level](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus-logs.html#eb-event-bus-logs-level)
+     * in the *EventBridge User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-eventbus-logconfig.html#cfn-events-eventbus-logconfig-level)
+     */
+    public fun level(): String? = unwrap(this).getLevel()
+
+    /**
+     * A builder for [LogConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param includeDetail Whether EventBridge include detailed event information in the records
+       * it generates.
+       * Detailed data can be useful for troubleshooting and debugging. This information includes
+       * details of the event itself, as well as target details.
+       *
+       * For more information, see [Including detail data in event bus
+       * logs](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus-logs.html#eb-event-logs-data)
+       * in the *EventBridge User Guide* .
+       */
+      public fun includeDetail(includeDetail: String)
+
+      /**
+       * @param level The level of logging detail to include. This applies to all log destinations
+       * for the event bus.
+       * For more information, see [Specifying event bus log
+       * level](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus-logs.html#eb-event-bus-logs-level)
+       * in the *EventBridge User Guide* .
+       */
+      public fun level(level: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnEventBus.LogConfigProperty.Builder =
+          software.amazon.awscdk.services.events.CfnEventBus.LogConfigProperty.builder()
+
+      /**
+       * @param includeDetail Whether EventBridge include detailed event information in the records
+       * it generates.
+       * Detailed data can be useful for troubleshooting and debugging. This information includes
+       * details of the event itself, as well as target details.
+       *
+       * For more information, see [Including detail data in event bus
+       * logs](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus-logs.html#eb-event-logs-data)
+       * in the *EventBridge User Guide* .
+       */
+      override fun includeDetail(includeDetail: String) {
+        cdkBuilder.includeDetail(includeDetail)
+      }
+
+      /**
+       * @param level The level of logging detail to include. This applies to all log destinations
+       * for the event bus.
+       * For more information, see [Specifying event bus log
+       * level](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus-logs.html#eb-event-bus-logs-level)
+       * in the *EventBridge User Guide* .
+       */
+      override fun level(level: String) {
+        cdkBuilder.level(level)
+      }
+
+      public fun build(): software.amazon.awscdk.services.events.CfnEventBus.LogConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.events.CfnEventBus.LogConfigProperty,
+    ) : CdkObject(cdkObject),
+        LogConfigProperty {
+      /**
+       * Whether EventBridge include detailed event information in the records it generates.
+       *
+       * Detailed data can be useful for troubleshooting and debugging. This information includes
+       * details of the event itself, as well as target details.
+       *
+       * For more information, see [Including detail data in event bus
+       * logs](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus-logs.html#eb-event-logs-data)
+       * in the *EventBridge User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-eventbus-logconfig.html#cfn-events-eventbus-logconfig-includedetail)
+       */
+      override fun includeDetail(): String? = unwrap(this).getIncludeDetail()
+
+      /**
+       * The level of logging detail to include. This applies to all log destinations for the event
+       * bus.
+       *
+       * For more information, see [Specifying event bus log
+       * level](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus-logs.html#eb-event-bus-logs-level)
+       * in the *EventBridge User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-eventbus-logconfig.html#cfn-events-eventbus-logconfig-level)
+       */
+      override fun level(): String? = unwrap(this).getLevel()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LogConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnEventBus.LogConfigProperty):
+          LogConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? LogConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LogConfigProperty):
+          software.amazon.awscdk.services.events.CfnEventBus.LogConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnEventBus.LogConfigProperty
     }
   }
 }

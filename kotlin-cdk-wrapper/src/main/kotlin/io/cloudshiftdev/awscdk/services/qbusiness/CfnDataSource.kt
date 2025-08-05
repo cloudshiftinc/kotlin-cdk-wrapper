@@ -100,6 +100,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .s3BucketName("s3BucketName")
  * .build())
  * .build())
+ * .mediaExtractionConfiguration(MediaExtractionConfigurationProperty.builder()
+ * .audioExtractionConfiguration(AudioExtractionConfigurationProperty.builder()
+ * .audioExtractionStatus("audioExtractionStatus")
+ * .build())
+ * .imageExtractionConfiguration(ImageExtractionConfigurationProperty.builder()
+ * .imageExtractionStatus("imageExtractionStatus")
+ * .build())
+ * .videoExtractionConfiguration(VideoExtractionConfigurationProperty.builder()
+ * .videoExtractionStatus("videoExtractionStatus")
+ * .build())
+ * .build())
  * .roleArn("roleArn")
  * .syncSchedule("syncSchedule")
  * .tags(List.of(CfnTag.builder()
@@ -276,6 +287,35 @@ public open class CfnDataSource(
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
+
+  /**
+   * The configuration for extracting information from media in documents.
+   */
+  public open fun mediaExtractionConfiguration(): Any? =
+      unwrap(this).getMediaExtractionConfiguration()
+
+  /**
+   * The configuration for extracting information from media in documents.
+   */
+  public open fun mediaExtractionConfiguration(`value`: IResolvable) {
+    unwrap(this).setMediaExtractionConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The configuration for extracting information from media in documents.
+   */
+  public open fun mediaExtractionConfiguration(`value`: MediaExtractionConfigurationProperty) {
+    unwrap(this).setMediaExtractionConfiguration(`value`.let(MediaExtractionConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The configuration for extracting information from media in documents.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("db6ff4af79c179ead6a681a2d85c486708bfd0b3c627d46804a7f8892f501ec4")
+  public open
+      fun mediaExtractionConfiguration(`value`: MediaExtractionConfigurationProperty.Builder.() -> Unit):
+      Unit = mediaExtractionConfiguration(MediaExtractionConfigurationProperty(`value`))
 
   /**
    * The Amazon Resource Name (ARN) of an IAM role with permission to access the data source and
@@ -467,6 +507,37 @@ public open class CfnDataSource(
      * @param indexId The identifier of the index the data source is attached to. 
      */
     public fun indexId(indexId: String)
+
+    /**
+     * The configuration for extracting information from media in documents.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-datasource.html#cfn-qbusiness-datasource-mediaextractionconfiguration)
+     * @param mediaExtractionConfiguration The configuration for extracting information from media
+     * in documents. 
+     */
+    public fun mediaExtractionConfiguration(mediaExtractionConfiguration: IResolvable)
+
+    /**
+     * The configuration for extracting information from media in documents.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-datasource.html#cfn-qbusiness-datasource-mediaextractionconfiguration)
+     * @param mediaExtractionConfiguration The configuration for extracting information from media
+     * in documents. 
+     */
+    public
+        fun mediaExtractionConfiguration(mediaExtractionConfiguration: MediaExtractionConfigurationProperty)
+
+    /**
+     * The configuration for extracting information from media in documents.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-datasource.html#cfn-qbusiness-datasource-mediaextractionconfiguration)
+     * @param mediaExtractionConfiguration The configuration for extracting information from media
+     * in documents. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("adc100552d422aacc658e91e2258a06e0cc228af87cac8daa5105047e02a1aca")
+    public
+        fun mediaExtractionConfiguration(mediaExtractionConfiguration: MediaExtractionConfigurationProperty.Builder.() -> Unit)
 
     /**
      * The Amazon Resource Name (ARN) of an IAM role with permission to access the data source and
@@ -695,6 +766,43 @@ public open class CfnDataSource(
     }
 
     /**
+     * The configuration for extracting information from media in documents.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-datasource.html#cfn-qbusiness-datasource-mediaextractionconfiguration)
+     * @param mediaExtractionConfiguration The configuration for extracting information from media
+     * in documents. 
+     */
+    override fun mediaExtractionConfiguration(mediaExtractionConfiguration: IResolvable) {
+      cdkBuilder.mediaExtractionConfiguration(mediaExtractionConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The configuration for extracting information from media in documents.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-datasource.html#cfn-qbusiness-datasource-mediaextractionconfiguration)
+     * @param mediaExtractionConfiguration The configuration for extracting information from media
+     * in documents. 
+     */
+    override
+        fun mediaExtractionConfiguration(mediaExtractionConfiguration: MediaExtractionConfigurationProperty) {
+      cdkBuilder.mediaExtractionConfiguration(mediaExtractionConfiguration.let(MediaExtractionConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The configuration for extracting information from media in documents.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-datasource.html#cfn-qbusiness-datasource-mediaextractionconfiguration)
+     * @param mediaExtractionConfiguration The configuration for extracting information from media
+     * in documents. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("adc100552d422aacc658e91e2258a06e0cc228af87cac8daa5105047e02a1aca")
+    override
+        fun mediaExtractionConfiguration(mediaExtractionConfiguration: MediaExtractionConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        mediaExtractionConfiguration(MediaExtractionConfigurationProperty(mediaExtractionConfiguration))
+
+    /**
      * The Amazon Resource Name (ARN) of an IAM role with permission to access the data source and
      * required resources.
      *
@@ -819,6 +927,94 @@ public open class CfnDataSource(
     internal fun unwrap(wrapped: CfnDataSource):
         software.amazon.awscdk.services.qbusiness.CfnDataSource = wrapped.cdkObject as
         software.amazon.awscdk.services.qbusiness.CfnDataSource
+  }
+
+  /**
+   * Configuration settings for audio content extraction and processing.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.qbusiness.*;
+   * AudioExtractionConfigurationProperty audioExtractionConfigurationProperty =
+   * AudioExtractionConfigurationProperty.builder()
+   * .audioExtractionStatus("audioExtractionStatus")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-audioextractionconfiguration.html)
+   */
+  public interface AudioExtractionConfigurationProperty {
+    /**
+     * The status of audio extraction (ENABLED or DISABLED) for processing audio content from files.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-audioextractionconfiguration.html#cfn-qbusiness-datasource-audioextractionconfiguration-audioextractionstatus)
+     */
+    public fun audioExtractionStatus(): String
+
+    /**
+     * A builder for [AudioExtractionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param audioExtractionStatus The status of audio extraction (ENABLED or DISABLED) for
+       * processing audio content from files. 
+       */
+      public fun audioExtractionStatus(audioExtractionStatus: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.AudioExtractionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.AudioExtractionConfigurationProperty.builder()
+
+      /**
+       * @param audioExtractionStatus The status of audio extraction (ENABLED or DISABLED) for
+       * processing audio content from files. 
+       */
+      override fun audioExtractionStatus(audioExtractionStatus: String) {
+        cdkBuilder.audioExtractionStatus(audioExtractionStatus)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.AudioExtractionConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.qbusiness.CfnDataSource.AudioExtractionConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        AudioExtractionConfigurationProperty {
+      /**
+       * The status of audio extraction (ENABLED or DISABLED) for processing audio content from
+       * files.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-audioextractionconfiguration.html#cfn-qbusiness-datasource-audioextractionconfiguration-audioextractionstatus)
+       */
+      override fun audioExtractionStatus(): String = unwrap(this).getAudioExtractionStatus()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AudioExtractionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.qbusiness.CfnDataSource.AudioExtractionConfigurationProperty):
+          AudioExtractionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioExtractionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AudioExtractionConfigurationProperty):
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.AudioExtractionConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.AudioExtractionConfigurationProperty
+    }
   }
 
   /**
@@ -2066,11 +2262,11 @@ public open class CfnDataSource(
     public fun invocationCondition(): Any? = unwrap(this).getInvocationCondition()
 
     /**
-     * The Amazon Resource Name (ARN) of a role with permission to run a Lambda function during
-     * ingestion.
+     * The Amazon Resource Name (ARN) of the Lambda function during ingestion.
      *
-     * For more information, see [IAM roles for Custom Document Enrichment
-     * (CDE)](https://docs.aws.amazon.com/amazonq/latest/business-use-dg/iam-roles.html#cde-iam-role) .
+     * For more information, see [Using Lambda functions for Amazon Q Business document
+     * enrichment](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/cde-lambda-operations.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-hookconfiguration.html#cfn-qbusiness-datasource-hookconfiguration-lambdaarn)
      */
@@ -2127,10 +2323,9 @@ public open class CfnDataSource(
           fun invocationCondition(invocationCondition: DocumentAttributeConditionProperty.Builder.() -> Unit)
 
       /**
-       * @param lambdaArn The Amazon Resource Name (ARN) of a role with permission to run a Lambda
-       * function during ingestion.
-       * For more information, see [IAM roles for Custom Document Enrichment
-       * (CDE)](https://docs.aws.amazon.com/amazonq/latest/business-use-dg/iam-roles.html#cde-iam-role)
+       * @param lambdaArn The Amazon Resource Name (ARN) of the Lambda function during ingestion.
+       * For more information, see [Using Lambda functions for Amazon Q Business document
+       * enrichment](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/cde-lambda-operations.html)
        * .
        */
       public fun lambdaArn(lambdaArn: String)
@@ -2188,10 +2383,9 @@ public open class CfnDataSource(
           Unit = invocationCondition(DocumentAttributeConditionProperty(invocationCondition))
 
       /**
-       * @param lambdaArn The Amazon Resource Name (ARN) of a role with permission to run a Lambda
-       * function during ingestion.
-       * For more information, see [IAM roles for Custom Document Enrichment
-       * (CDE)](https://docs.aws.amazon.com/amazonq/latest/business-use-dg/iam-roles.html#cde-iam-role)
+       * @param lambdaArn The Amazon Resource Name (ARN) of the Lambda function during ingestion.
+       * For more information, see [Using Lambda functions for Amazon Q Business document
+       * enrichment](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/cde-lambda-operations.html)
        * .
        */
       override fun lambdaArn(lambdaArn: String) {
@@ -2238,11 +2432,10 @@ public open class CfnDataSource(
       override fun invocationCondition(): Any? = unwrap(this).getInvocationCondition()
 
       /**
-       * The Amazon Resource Name (ARN) of a role with permission to run a Lambda function during
-       * ingestion.
+       * The Amazon Resource Name (ARN) of the Lambda function during ingestion.
        *
-       * For more information, see [IAM roles for Custom Document Enrichment
-       * (CDE)](https://docs.aws.amazon.com/amazonq/latest/business-use-dg/iam-roles.html#cde-iam-role)
+       * For more information, see [Using Lambda functions for Amazon Q Business document
+       * enrichment](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/cde-lambda-operations.html)
        * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-hookconfiguration.html#cfn-qbusiness-datasource-hookconfiguration-lambdaarn)
@@ -2286,6 +2479,97 @@ public open class CfnDataSource(
           software.amazon.awscdk.services.qbusiness.CfnDataSource.HookConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.qbusiness.CfnDataSource.HookConfigurationProperty
+    }
+  }
+
+  /**
+   * The configuration for extracting semantic meaning from images in documents.
+   *
+   * For more information, see [Extracting semantic meaning from images and
+   * visuals](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/extracting-meaning-from-images.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.qbusiness.*;
+   * ImageExtractionConfigurationProperty imageExtractionConfigurationProperty =
+   * ImageExtractionConfigurationProperty.builder()
+   * .imageExtractionStatus("imageExtractionStatus")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-imageextractionconfiguration.html)
+   */
+  public interface ImageExtractionConfigurationProperty {
+    /**
+     * Specify whether to extract semantic meaning from images and visuals from documents.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-imageextractionconfiguration.html#cfn-qbusiness-datasource-imageextractionconfiguration-imageextractionstatus)
+     */
+    public fun imageExtractionStatus(): String
+
+    /**
+     * A builder for [ImageExtractionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param imageExtractionStatus Specify whether to extract semantic meaning from images and
+       * visuals from documents. 
+       */
+      public fun imageExtractionStatus(imageExtractionStatus: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.ImageExtractionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.ImageExtractionConfigurationProperty.builder()
+
+      /**
+       * @param imageExtractionStatus Specify whether to extract semantic meaning from images and
+       * visuals from documents. 
+       */
+      override fun imageExtractionStatus(imageExtractionStatus: String) {
+        cdkBuilder.imageExtractionStatus(imageExtractionStatus)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.ImageExtractionConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.qbusiness.CfnDataSource.ImageExtractionConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ImageExtractionConfigurationProperty {
+      /**
+       * Specify whether to extract semantic meaning from images and visuals from documents.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-imageextractionconfiguration.html#cfn-qbusiness-datasource-imageextractionconfiguration-imageextractionstatus)
+       */
+      override fun imageExtractionStatus(): String = unwrap(this).getImageExtractionStatus()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ImageExtractionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.qbusiness.CfnDataSource.ImageExtractionConfigurationProperty):
+          ImageExtractionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ImageExtractionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ImageExtractionConfigurationProperty):
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.ImageExtractionConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.ImageExtractionConfigurationProperty
     }
   }
 
@@ -2536,6 +2820,382 @@ public open class CfnDataSource(
           software.amazon.awscdk.services.qbusiness.CfnDataSource.InlineDocumentEnrichmentConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.qbusiness.CfnDataSource.InlineDocumentEnrichmentConfigurationProperty
+    }
+  }
+
+  /**
+   * The configuration for extracting information from media in documents.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.qbusiness.*;
+   * MediaExtractionConfigurationProperty mediaExtractionConfigurationProperty =
+   * MediaExtractionConfigurationProperty.builder()
+   * .audioExtractionConfiguration(AudioExtractionConfigurationProperty.builder()
+   * .audioExtractionStatus("audioExtractionStatus")
+   * .build())
+   * .imageExtractionConfiguration(ImageExtractionConfigurationProperty.builder()
+   * .imageExtractionStatus("imageExtractionStatus")
+   * .build())
+   * .videoExtractionConfiguration(VideoExtractionConfigurationProperty.builder()
+   * .videoExtractionStatus("videoExtractionStatus")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-mediaextractionconfiguration.html)
+   */
+  public interface MediaExtractionConfigurationProperty {
+    /**
+     * Configuration settings for extracting and processing audio content from media files.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-mediaextractionconfiguration.html#cfn-qbusiness-datasource-mediaextractionconfiguration-audioextractionconfiguration)
+     */
+    public fun audioExtractionConfiguration(): Any? = unwrap(this).getAudioExtractionConfiguration()
+
+    /**
+     * The configuration for extracting semantic meaning from images in documents.
+     *
+     * For more information, see [Extracting semantic meaning from images and
+     * visuals](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/extracting-meaning-from-images.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-mediaextractionconfiguration.html#cfn-qbusiness-datasource-mediaextractionconfiguration-imageextractionconfiguration)
+     */
+    public fun imageExtractionConfiguration(): Any? = unwrap(this).getImageExtractionConfiguration()
+
+    /**
+     * Configuration settings for extracting and processing video content from media files.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-mediaextractionconfiguration.html#cfn-qbusiness-datasource-mediaextractionconfiguration-videoextractionconfiguration)
+     */
+    public fun videoExtractionConfiguration(): Any? = unwrap(this).getVideoExtractionConfiguration()
+
+    /**
+     * A builder for [MediaExtractionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param audioExtractionConfiguration Configuration settings for extracting and processing
+       * audio content from media files.
+       */
+      public fun audioExtractionConfiguration(audioExtractionConfiguration: IResolvable)
+
+      /**
+       * @param audioExtractionConfiguration Configuration settings for extracting and processing
+       * audio content from media files.
+       */
+      public
+          fun audioExtractionConfiguration(audioExtractionConfiguration: AudioExtractionConfigurationProperty)
+
+      /**
+       * @param audioExtractionConfiguration Configuration settings for extracting and processing
+       * audio content from media files.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("dc018733725a05f09b5952e3e5f4e086de00c9dcf7457fc218cc668e49f82418")
+      public
+          fun audioExtractionConfiguration(audioExtractionConfiguration: AudioExtractionConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param imageExtractionConfiguration The configuration for extracting semantic meaning from
+       * images in documents.
+       * For more information, see [Extracting semantic meaning from images and
+       * visuals](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/extracting-meaning-from-images.html)
+       * .
+       */
+      public fun imageExtractionConfiguration(imageExtractionConfiguration: IResolvable)
+
+      /**
+       * @param imageExtractionConfiguration The configuration for extracting semantic meaning from
+       * images in documents.
+       * For more information, see [Extracting semantic meaning from images and
+       * visuals](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/extracting-meaning-from-images.html)
+       * .
+       */
+      public
+          fun imageExtractionConfiguration(imageExtractionConfiguration: ImageExtractionConfigurationProperty)
+
+      /**
+       * @param imageExtractionConfiguration The configuration for extracting semantic meaning from
+       * images in documents.
+       * For more information, see [Extracting semantic meaning from images and
+       * visuals](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/extracting-meaning-from-images.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("850cfd3d96a11ea9bb009694417ad9b935a2008dc544c22b77abe5b6b58cb0b8")
+      public
+          fun imageExtractionConfiguration(imageExtractionConfiguration: ImageExtractionConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param videoExtractionConfiguration Configuration settings for extracting and processing
+       * video content from media files.
+       */
+      public fun videoExtractionConfiguration(videoExtractionConfiguration: IResolvable)
+
+      /**
+       * @param videoExtractionConfiguration Configuration settings for extracting and processing
+       * video content from media files.
+       */
+      public
+          fun videoExtractionConfiguration(videoExtractionConfiguration: VideoExtractionConfigurationProperty)
+
+      /**
+       * @param videoExtractionConfiguration Configuration settings for extracting and processing
+       * video content from media files.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("88516075712e00f717497000ad72ef6cf859e0560175c1b37ca6a7b6260cae0d")
+      public
+          fun videoExtractionConfiguration(videoExtractionConfiguration: VideoExtractionConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.MediaExtractionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.MediaExtractionConfigurationProperty.builder()
+
+      /**
+       * @param audioExtractionConfiguration Configuration settings for extracting and processing
+       * audio content from media files.
+       */
+      override fun audioExtractionConfiguration(audioExtractionConfiguration: IResolvable) {
+        cdkBuilder.audioExtractionConfiguration(audioExtractionConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param audioExtractionConfiguration Configuration settings for extracting and processing
+       * audio content from media files.
+       */
+      override
+          fun audioExtractionConfiguration(audioExtractionConfiguration: AudioExtractionConfigurationProperty) {
+        cdkBuilder.audioExtractionConfiguration(audioExtractionConfiguration.let(AudioExtractionConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param audioExtractionConfiguration Configuration settings for extracting and processing
+       * audio content from media files.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("dc018733725a05f09b5952e3e5f4e086de00c9dcf7457fc218cc668e49f82418")
+      override
+          fun audioExtractionConfiguration(audioExtractionConfiguration: AudioExtractionConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          audioExtractionConfiguration(AudioExtractionConfigurationProperty(audioExtractionConfiguration))
+
+      /**
+       * @param imageExtractionConfiguration The configuration for extracting semantic meaning from
+       * images in documents.
+       * For more information, see [Extracting semantic meaning from images and
+       * visuals](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/extracting-meaning-from-images.html)
+       * .
+       */
+      override fun imageExtractionConfiguration(imageExtractionConfiguration: IResolvable) {
+        cdkBuilder.imageExtractionConfiguration(imageExtractionConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param imageExtractionConfiguration The configuration for extracting semantic meaning from
+       * images in documents.
+       * For more information, see [Extracting semantic meaning from images and
+       * visuals](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/extracting-meaning-from-images.html)
+       * .
+       */
+      override
+          fun imageExtractionConfiguration(imageExtractionConfiguration: ImageExtractionConfigurationProperty) {
+        cdkBuilder.imageExtractionConfiguration(imageExtractionConfiguration.let(ImageExtractionConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param imageExtractionConfiguration The configuration for extracting semantic meaning from
+       * images in documents.
+       * For more information, see [Extracting semantic meaning from images and
+       * visuals](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/extracting-meaning-from-images.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("850cfd3d96a11ea9bb009694417ad9b935a2008dc544c22b77abe5b6b58cb0b8")
+      override
+          fun imageExtractionConfiguration(imageExtractionConfiguration: ImageExtractionConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          imageExtractionConfiguration(ImageExtractionConfigurationProperty(imageExtractionConfiguration))
+
+      /**
+       * @param videoExtractionConfiguration Configuration settings for extracting and processing
+       * video content from media files.
+       */
+      override fun videoExtractionConfiguration(videoExtractionConfiguration: IResolvable) {
+        cdkBuilder.videoExtractionConfiguration(videoExtractionConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param videoExtractionConfiguration Configuration settings for extracting and processing
+       * video content from media files.
+       */
+      override
+          fun videoExtractionConfiguration(videoExtractionConfiguration: VideoExtractionConfigurationProperty) {
+        cdkBuilder.videoExtractionConfiguration(videoExtractionConfiguration.let(VideoExtractionConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param videoExtractionConfiguration Configuration settings for extracting and processing
+       * video content from media files.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("88516075712e00f717497000ad72ef6cf859e0560175c1b37ca6a7b6260cae0d")
+      override
+          fun videoExtractionConfiguration(videoExtractionConfiguration: VideoExtractionConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          videoExtractionConfiguration(VideoExtractionConfigurationProperty(videoExtractionConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.MediaExtractionConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.qbusiness.CfnDataSource.MediaExtractionConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        MediaExtractionConfigurationProperty {
+      /**
+       * Configuration settings for extracting and processing audio content from media files.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-mediaextractionconfiguration.html#cfn-qbusiness-datasource-mediaextractionconfiguration-audioextractionconfiguration)
+       */
+      override fun audioExtractionConfiguration(): Any? =
+          unwrap(this).getAudioExtractionConfiguration()
+
+      /**
+       * The configuration for extracting semantic meaning from images in documents.
+       *
+       * For more information, see [Extracting semantic meaning from images and
+       * visuals](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/extracting-meaning-from-images.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-mediaextractionconfiguration.html#cfn-qbusiness-datasource-mediaextractionconfiguration-imageextractionconfiguration)
+       */
+      override fun imageExtractionConfiguration(): Any? =
+          unwrap(this).getImageExtractionConfiguration()
+
+      /**
+       * Configuration settings for extracting and processing video content from media files.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-mediaextractionconfiguration.html#cfn-qbusiness-datasource-mediaextractionconfiguration-videoextractionconfiguration)
+       */
+      override fun videoExtractionConfiguration(): Any? =
+          unwrap(this).getVideoExtractionConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MediaExtractionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.qbusiness.CfnDataSource.MediaExtractionConfigurationProperty):
+          MediaExtractionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MediaExtractionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MediaExtractionConfigurationProperty):
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.MediaExtractionConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.MediaExtractionConfigurationProperty
+    }
+  }
+
+  /**
+   * Configuration settings for video content extraction and processing.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.qbusiness.*;
+   * VideoExtractionConfigurationProperty videoExtractionConfigurationProperty =
+   * VideoExtractionConfigurationProperty.builder()
+   * .videoExtractionStatus("videoExtractionStatus")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-videoextractionconfiguration.html)
+   */
+  public interface VideoExtractionConfigurationProperty {
+    /**
+     * The status of video extraction (ENABLED or DISABLED) for processing video content from files.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-videoextractionconfiguration.html#cfn-qbusiness-datasource-videoextractionconfiguration-videoextractionstatus)
+     */
+    public fun videoExtractionStatus(): String
+
+    /**
+     * A builder for [VideoExtractionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param videoExtractionStatus The status of video extraction (ENABLED or DISABLED) for
+       * processing video content from files. 
+       */
+      public fun videoExtractionStatus(videoExtractionStatus: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.VideoExtractionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.VideoExtractionConfigurationProperty.builder()
+
+      /**
+       * @param videoExtractionStatus The status of video extraction (ENABLED or DISABLED) for
+       * processing video content from files. 
+       */
+      override fun videoExtractionStatus(videoExtractionStatus: String) {
+        cdkBuilder.videoExtractionStatus(videoExtractionStatus)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.VideoExtractionConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.qbusiness.CfnDataSource.VideoExtractionConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        VideoExtractionConfigurationProperty {
+      /**
+       * The status of video extraction (ENABLED or DISABLED) for processing video content from
+       * files.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-datasource-videoextractionconfiguration.html#cfn-qbusiness-datasource-videoextractionconfiguration-videoextractionstatus)
+       */
+      override fun videoExtractionStatus(): String = unwrap(this).getVideoExtractionStatus()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VideoExtractionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.qbusiness.CfnDataSource.VideoExtractionConfigurationProperty):
+          VideoExtractionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VideoExtractionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VideoExtractionConfigurationProperty):
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.VideoExtractionConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.qbusiness.CfnDataSource.VideoExtractionConfigurationProperty
     }
   }
 }

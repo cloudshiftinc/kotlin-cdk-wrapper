@@ -12,14 +12,13 @@ import kotlin.String
  * Example:
  *
  * ```
- * Application app = new Application(this, "MyApp");
- * Environment env = Environment.Builder.create(this, "MyEnv")
- * .application(app)
- * .build();
- * HostedConfiguration.Builder.create(this, "MyHostedConfig")
- * .application(app)
- * .deployTo(List.of(env))
+ * Application application;
+ * Function fn;
+ * HostedConfiguration.Builder.create(this, "MyHostedConfiguration")
+ * .application(application)
  * .content(ConfigurationContent.fromInlineText("This is my configuration content."))
+ * .validators(List.of(JsonSchemaValidator.fromFile("schema.json"),
+ * LambdaValidator.fromFunction(fn)))
  * .build();
  * ```
  */

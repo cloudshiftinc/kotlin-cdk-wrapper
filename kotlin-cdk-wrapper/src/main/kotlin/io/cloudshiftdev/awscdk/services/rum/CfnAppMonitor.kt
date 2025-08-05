@@ -42,7 +42,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.rum.*;
  * CfnAppMonitor cfnAppMonitor = CfnAppMonitor.Builder.create(this, "MyCfnAppMonitor")
- * .domain("domain")
  * .name("name")
  * // the properties below are optional
  * .appMonitorConfiguration(AppMonitorConfigurationProperty.builder()
@@ -76,6 +75,20 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .status("status")
  * .build())
  * .cwLogEnabled(false)
+ * .deobfuscationConfiguration(DeobfuscationConfigurationProperty.builder()
+ * .javaScriptSourceMaps(JavaScriptSourceMapsProperty.builder()
+ * .status("status")
+ * // the properties below are optional
+ * .s3Uri("s3Uri")
+ * .build())
+ * .build())
+ * .domain("domain")
+ * .domainList(List.of("domainList"))
+ * .resourcePolicy(ResourcePolicyProperty.builder()
+ * .policyDocument("policyDocument")
+ * // the properties below are optional
+ * .policyRevisionId("policyRevisionId")
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -186,9 +199,41 @@ public open class CfnAppMonitor(
   }
 
   /**
+   * A structure that contains the configuration for how an app monitor can deobfuscate stack
+   * traces.
+   */
+  public open fun deobfuscationConfiguration(): Any? = unwrap(this).getDeobfuscationConfiguration()
+
+  /**
+   * A structure that contains the configuration for how an app monitor can deobfuscate stack
+   * traces.
+   */
+  public open fun deobfuscationConfiguration(`value`: IResolvable) {
+    unwrap(this).setDeobfuscationConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * A structure that contains the configuration for how an app monitor can deobfuscate stack
+   * traces.
+   */
+  public open fun deobfuscationConfiguration(`value`: DeobfuscationConfigurationProperty) {
+    unwrap(this).setDeobfuscationConfiguration(`value`.let(DeobfuscationConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * A structure that contains the configuration for how an app monitor can deobfuscate stack
+   * traces.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("3ff1275cbe4f305988cf9191e2a63ce744c78d0265b352dd3c7f4dca53d16037")
+  public open
+      fun deobfuscationConfiguration(`value`: DeobfuscationConfigurationProperty.Builder.() -> Unit):
+      Unit = deobfuscationConfiguration(DeobfuscationConfigurationProperty(`value`))
+
+  /**
    * The top-level internet domain name for which your application has administrative authority.
    */
-  public open fun domain(): String = unwrap(this).getDomain()
+  public open fun domain(): String? = unwrap(this).getDomain()
 
   /**
    * The top-level internet domain name for which your application has administrative authority.
@@ -196,6 +241,29 @@ public open class CfnAppMonitor(
   public open fun domain(`value`: String) {
     unwrap(this).setDomain(`value`)
   }
+
+  /**
+   * List the domain names for which your application has administrative authority.
+   *
+   * This parameter or the `Domain` parameter is required.
+   */
+  public open fun domainList(): List<String> = unwrap(this).getDomainList() ?: emptyList()
+
+  /**
+   * List the domain names for which your application has administrative authority.
+   *
+   * This parameter or the `Domain` parameter is required.
+   */
+  public open fun domainList(`value`: List<String>) {
+    unwrap(this).setDomainList(`value`)
+  }
+
+  /**
+   * List the domain names for which your application has administrative authority.
+   *
+   * This parameter or the `Domain` parameter is required.
+   */
+  public open fun domainList(vararg `value`: String): Unit = domainList(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -217,6 +285,37 @@ public open class CfnAppMonitor(
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
   }
+
+  /**
+   * Use this structure to assign a resource-based policy to a CloudWatch RUM app monitor to control
+   * access to it.
+   */
+  public open fun resourcePolicy(): Any? = unwrap(this).getResourcePolicy()
+
+  /**
+   * Use this structure to assign a resource-based policy to a CloudWatch RUM app monitor to control
+   * access to it.
+   */
+  public open fun resourcePolicy(`value`: IResolvable) {
+    unwrap(this).setResourcePolicy(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Use this structure to assign a resource-based policy to a CloudWatch RUM app monitor to control
+   * access to it.
+   */
+  public open fun resourcePolicy(`value`: ResourcePolicyProperty) {
+    unwrap(this).setResourcePolicy(`value`.let(ResourcePolicyProperty.Companion::unwrap))
+  }
+
+  /**
+   * Use this structure to assign a resource-based policy to a CloudWatch RUM app monitor to control
+   * access to it.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("f5e83b434325deb47c02e3dc28bf9db0451b5c67420c15f9dffec31e70aedd97")
+  public open fun resourcePolicy(`value`: ResourcePolicyProperty.Builder.() -> Unit): Unit =
+      resourcePolicy(ResourcePolicyProperty(`value`))
 
   /**
    * Tag Manager which manages the tags for this resource.
@@ -372,15 +471,75 @@ public open class CfnAppMonitor(
     public fun cwLogEnabled(cwLogEnabled: IResolvable)
 
     /**
+     * A structure that contains the configuration for how an app monitor can deobfuscate stack
+     * traces.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-deobfuscationconfiguration)
+     * @param deobfuscationConfiguration A structure that contains the configuration for how an app
+     * monitor can deobfuscate stack traces. 
+     */
+    public fun deobfuscationConfiguration(deobfuscationConfiguration: IResolvable)
+
+    /**
+     * A structure that contains the configuration for how an app monitor can deobfuscate stack
+     * traces.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-deobfuscationconfiguration)
+     * @param deobfuscationConfiguration A structure that contains the configuration for how an app
+     * monitor can deobfuscate stack traces. 
+     */
+    public
+        fun deobfuscationConfiguration(deobfuscationConfiguration: DeobfuscationConfigurationProperty)
+
+    /**
+     * A structure that contains the configuration for how an app monitor can deobfuscate stack
+     * traces.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-deobfuscationconfiguration)
+     * @param deobfuscationConfiguration A structure that contains the configuration for how an app
+     * monitor can deobfuscate stack traces. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7b789d6f6d7d41d2c74bdbeda79ad60627bdc0f45b3fb0a7fb4d93e44316b943")
+    public
+        fun deobfuscationConfiguration(deobfuscationConfiguration: DeobfuscationConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * The top-level internet domain name for which your application has administrative authority.
      *
-     *
+     * This parameter or the `DomainList` parameter is required.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-domain)
      * @param domain The top-level internet domain name for which your application has
      * administrative authority. 
      */
     public fun domain(domain: String)
+
+    /**
+     * List the domain names for which your application has administrative authority. This parameter
+     * or the `Domain` parameter is required.
+     *
+     * You can have a minimum of 1 and a maximum of 5 `Domain` under `DomainList` . Each `Domain`
+     * must be a minimum length of 1 and a maximum of 253 characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-domainlist)
+     * @param domainList List the domain names for which your application has administrative
+     * authority. This parameter or the `Domain` parameter is required. 
+     */
+    public fun domainList(domainList: List<String>)
+
+    /**
+     * List the domain names for which your application has administrative authority. This parameter
+     * or the `Domain` parameter is required.
+     *
+     * You can have a minimum of 1 and a maximum of 5 `Domain` under `DomainList` . Each `Domain`
+     * must be a minimum length of 1 and a maximum of 253 characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-domainlist)
+     * @param domainList List the domain names for which your application has administrative
+     * authority. This parameter or the `Domain` parameter is required. 
+     */
+    public fun domainList(vararg domainList: String)
 
     /**
      * A name for the app monitor.
@@ -391,6 +550,56 @@ public open class CfnAppMonitor(
      * @param name A name for the app monitor. 
      */
     public fun name(name: String)
+
+    /**
+     * Use this structure to assign a resource-based policy to a CloudWatch RUM app monitor to
+     * control access to it.
+     *
+     * Each app monitor can have one resource-based policy. The maximum size of the policy is 4 KB.
+     * To learn more about using resource policies with RUM, see [Using resource-based policies with
+     * CloudWatch
+     * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-resourcepolicy)
+     * @param resourcePolicy Use this structure to assign a resource-based policy to a CloudWatch
+     * RUM app monitor to control access to it. 
+     */
+    public fun resourcePolicy(resourcePolicy: IResolvable)
+
+    /**
+     * Use this structure to assign a resource-based policy to a CloudWatch RUM app monitor to
+     * control access to it.
+     *
+     * Each app monitor can have one resource-based policy. The maximum size of the policy is 4 KB.
+     * To learn more about using resource policies with RUM, see [Using resource-based policies with
+     * CloudWatch
+     * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-resourcepolicy)
+     * @param resourcePolicy Use this structure to assign a resource-based policy to a CloudWatch
+     * RUM app monitor to control access to it. 
+     */
+    public fun resourcePolicy(resourcePolicy: ResourcePolicyProperty)
+
+    /**
+     * Use this structure to assign a resource-based policy to a CloudWatch RUM app monitor to
+     * control access to it.
+     *
+     * Each app monitor can have one resource-based policy. The maximum size of the policy is 4 KB.
+     * To learn more about using resource policies with RUM, see [Using resource-based policies with
+     * CloudWatch
+     * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-resourcepolicy)
+     * @param resourcePolicy Use this structure to assign a resource-based policy to a CloudWatch
+     * RUM app monitor to control access to it. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f6ca895565ec3b79bb0b9ade3ab3078ff28b0c672344c31826066099a4fe84f3")
+    public fun resourcePolicy(resourcePolicy: ResourcePolicyProperty.Builder.() -> Unit)
 
     /**
      * Assigns one or more tags (key-value pairs) to the app monitor.
@@ -580,9 +789,49 @@ public open class CfnAppMonitor(
     }
 
     /**
+     * A structure that contains the configuration for how an app monitor can deobfuscate stack
+     * traces.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-deobfuscationconfiguration)
+     * @param deobfuscationConfiguration A structure that contains the configuration for how an app
+     * monitor can deobfuscate stack traces. 
+     */
+    override fun deobfuscationConfiguration(deobfuscationConfiguration: IResolvable) {
+      cdkBuilder.deobfuscationConfiguration(deobfuscationConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * A structure that contains the configuration for how an app monitor can deobfuscate stack
+     * traces.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-deobfuscationconfiguration)
+     * @param deobfuscationConfiguration A structure that contains the configuration for how an app
+     * monitor can deobfuscate stack traces. 
+     */
+    override
+        fun deobfuscationConfiguration(deobfuscationConfiguration: DeobfuscationConfigurationProperty) {
+      cdkBuilder.deobfuscationConfiguration(deobfuscationConfiguration.let(DeobfuscationConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * A structure that contains the configuration for how an app monitor can deobfuscate stack
+     * traces.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-deobfuscationconfiguration)
+     * @param deobfuscationConfiguration A structure that contains the configuration for how an app
+     * monitor can deobfuscate stack traces. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7b789d6f6d7d41d2c74bdbeda79ad60627bdc0f45b3fb0a7fb4d93e44316b943")
+    override
+        fun deobfuscationConfiguration(deobfuscationConfiguration: DeobfuscationConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        deobfuscationConfiguration(DeobfuscationConfigurationProperty(deobfuscationConfiguration))
+
+    /**
      * The top-level internet domain name for which your application has administrative authority.
      *
-     *
+     * This parameter or the `DomainList` parameter is required.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-domain)
      * @param domain The top-level internet domain name for which your application has
@@ -591,6 +840,34 @@ public open class CfnAppMonitor(
     override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
+
+    /**
+     * List the domain names for which your application has administrative authority. This parameter
+     * or the `Domain` parameter is required.
+     *
+     * You can have a minimum of 1 and a maximum of 5 `Domain` under `DomainList` . Each `Domain`
+     * must be a minimum length of 1 and a maximum of 253 characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-domainlist)
+     * @param domainList List the domain names for which your application has administrative
+     * authority. This parameter or the `Domain` parameter is required. 
+     */
+    override fun domainList(domainList: List<String>) {
+      cdkBuilder.domainList(domainList)
+    }
+
+    /**
+     * List the domain names for which your application has administrative authority. This parameter
+     * or the `Domain` parameter is required.
+     *
+     * You can have a minimum of 1 and a maximum of 5 `Domain` under `DomainList` . Each `Domain`
+     * must be a minimum length of 1 and a maximum of 253 characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-domainlist)
+     * @param domainList List the domain names for which your application has administrative
+     * authority. This parameter or the `Domain` parameter is required. 
+     */
+    override fun domainList(vararg domainList: String): Unit = domainList(domainList.toList())
 
     /**
      * A name for the app monitor.
@@ -603,6 +880,61 @@ public open class CfnAppMonitor(
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
+
+    /**
+     * Use this structure to assign a resource-based policy to a CloudWatch RUM app monitor to
+     * control access to it.
+     *
+     * Each app monitor can have one resource-based policy. The maximum size of the policy is 4 KB.
+     * To learn more about using resource policies with RUM, see [Using resource-based policies with
+     * CloudWatch
+     * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-resourcepolicy)
+     * @param resourcePolicy Use this structure to assign a resource-based policy to a CloudWatch
+     * RUM app monitor to control access to it. 
+     */
+    override fun resourcePolicy(resourcePolicy: IResolvable) {
+      cdkBuilder.resourcePolicy(resourcePolicy.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Use this structure to assign a resource-based policy to a CloudWatch RUM app monitor to
+     * control access to it.
+     *
+     * Each app monitor can have one resource-based policy. The maximum size of the policy is 4 KB.
+     * To learn more about using resource policies with RUM, see [Using resource-based policies with
+     * CloudWatch
+     * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-resourcepolicy)
+     * @param resourcePolicy Use this structure to assign a resource-based policy to a CloudWatch
+     * RUM app monitor to control access to it. 
+     */
+    override fun resourcePolicy(resourcePolicy: ResourcePolicyProperty) {
+      cdkBuilder.resourcePolicy(resourcePolicy.let(ResourcePolicyProperty.Companion::unwrap))
+    }
+
+    /**
+     * Use this structure to assign a resource-based policy to a CloudWatch RUM app monitor to
+     * control access to it.
+     *
+     * Each app monitor can have one resource-based policy. The maximum size of the policy is 4 KB.
+     * To learn more about using resource policies with RUM, see [Using resource-based policies with
+     * CloudWatch
+     * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-resourcepolicy)
+     * @param resourcePolicy Use this structure to assign a resource-based policy to a CloudWatch
+     * RUM app monitor to control access to it. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f6ca895565ec3b79bb0b9ade3ab3078ff28b0c672344c31826066099a4fe84f3")
+    override fun resourcePolicy(resourcePolicy: ResourcePolicyProperty.Builder.() -> Unit): Unit =
+        resourcePolicy(ResourcePolicyProperty(resourcePolicy))
 
     /**
      * Assigns one or more tags (key-value pairs) to the app monitor.
@@ -1359,6 +1691,259 @@ public open class CfnAppMonitor(
   }
 
   /**
+   * A structure that contains the configuration for how an app monitor can deobfuscate stack
+   * traces.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.rum.*;
+   * DeobfuscationConfigurationProperty deobfuscationConfigurationProperty =
+   * DeobfuscationConfigurationProperty.builder()
+   * .javaScriptSourceMaps(JavaScriptSourceMapsProperty.builder()
+   * .status("status")
+   * // the properties below are optional
+   * .s3Uri("s3Uri")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-deobfuscationconfiguration.html)
+   */
+  public interface DeobfuscationConfigurationProperty {
+    /**
+     * A structure that contains the configuration for how an app monitor can unminify JavaScript
+     * error stack traces using source maps.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-deobfuscationconfiguration.html#cfn-rum-appmonitor-deobfuscationconfiguration-javascriptsourcemaps)
+     */
+    public fun javaScriptSourceMaps(): Any? = unwrap(this).getJavaScriptSourceMaps()
+
+    /**
+     * A builder for [DeobfuscationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param javaScriptSourceMaps A structure that contains the configuration for how an app
+       * monitor can unminify JavaScript error stack traces using source maps.
+       */
+      public fun javaScriptSourceMaps(javaScriptSourceMaps: IResolvable)
+
+      /**
+       * @param javaScriptSourceMaps A structure that contains the configuration for how an app
+       * monitor can unminify JavaScript error stack traces using source maps.
+       */
+      public fun javaScriptSourceMaps(javaScriptSourceMaps: JavaScriptSourceMapsProperty)
+
+      /**
+       * @param javaScriptSourceMaps A structure that contains the configuration for how an app
+       * monitor can unminify JavaScript error stack traces using source maps.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("da1b9288bbd7b0cb7af3e2f7ae1f8b393ec0f0a96a0d94bf8f1820bbc66acce6")
+      public
+          fun javaScriptSourceMaps(javaScriptSourceMaps: JavaScriptSourceMapsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.rum.CfnAppMonitor.DeobfuscationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.rum.CfnAppMonitor.DeobfuscationConfigurationProperty.builder()
+
+      /**
+       * @param javaScriptSourceMaps A structure that contains the configuration for how an app
+       * monitor can unminify JavaScript error stack traces using source maps.
+       */
+      override fun javaScriptSourceMaps(javaScriptSourceMaps: IResolvable) {
+        cdkBuilder.javaScriptSourceMaps(javaScriptSourceMaps.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param javaScriptSourceMaps A structure that contains the configuration for how an app
+       * monitor can unminify JavaScript error stack traces using source maps.
+       */
+      override fun javaScriptSourceMaps(javaScriptSourceMaps: JavaScriptSourceMapsProperty) {
+        cdkBuilder.javaScriptSourceMaps(javaScriptSourceMaps.let(JavaScriptSourceMapsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param javaScriptSourceMaps A structure that contains the configuration for how an app
+       * monitor can unminify JavaScript error stack traces using source maps.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("da1b9288bbd7b0cb7af3e2f7ae1f8b393ec0f0a96a0d94bf8f1820bbc66acce6")
+      override
+          fun javaScriptSourceMaps(javaScriptSourceMaps: JavaScriptSourceMapsProperty.Builder.() -> Unit):
+          Unit = javaScriptSourceMaps(JavaScriptSourceMapsProperty(javaScriptSourceMaps))
+
+      public fun build():
+          software.amazon.awscdk.services.rum.CfnAppMonitor.DeobfuscationConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.DeobfuscationConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        DeobfuscationConfigurationProperty {
+      /**
+       * A structure that contains the configuration for how an app monitor can unminify JavaScript
+       * error stack traces using source maps.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-deobfuscationconfiguration.html#cfn-rum-appmonitor-deobfuscationconfiguration-javascriptsourcemaps)
+       */
+      override fun javaScriptSourceMaps(): Any? = unwrap(this).getJavaScriptSourceMaps()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DeobfuscationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.DeobfuscationConfigurationProperty):
+          DeobfuscationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeobfuscationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeobfuscationConfigurationProperty):
+          software.amazon.awscdk.services.rum.CfnAppMonitor.DeobfuscationConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.rum.CfnAppMonitor.DeobfuscationConfigurationProperty
+    }
+  }
+
+  /**
+   * A structure that contains the configuration for how an app monitor can unminify JavaScript
+   * error stack traces using source maps.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.rum.*;
+   * JavaScriptSourceMapsProperty javaScriptSourceMapsProperty =
+   * JavaScriptSourceMapsProperty.builder()
+   * .status("status")
+   * // the properties below are optional
+   * .s3Uri("s3Uri")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-javascriptsourcemaps.html)
+   */
+  public interface JavaScriptSourceMapsProperty {
+    /**
+     * The S3Uri of the bucket or folder that stores the source map files.
+     *
+     * It is required if status is ENABLED.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-javascriptsourcemaps.html#cfn-rum-appmonitor-javascriptsourcemaps-s3uri)
+     */
+    public fun s3Uri(): String? = unwrap(this).getS3Uri()
+
+    /**
+     * Specifies whether JavaScript error stack traces should be unminified for this app monitor.
+     *
+     * The default is for JavaScript error stack trace unminification to be `DISABLED` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-javascriptsourcemaps.html#cfn-rum-appmonitor-javascriptsourcemaps-status)
+     */
+    public fun status(): String
+
+    /**
+     * A builder for [JavaScriptSourceMapsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3Uri The S3Uri of the bucket or folder that stores the source map files.
+       * It is required if status is ENABLED.
+       */
+      public fun s3Uri(s3Uri: String)
+
+      /**
+       * @param status Specifies whether JavaScript error stack traces should be unminified for this
+       * app monitor. 
+       * The default is for JavaScript error stack trace unminification to be `DISABLED` .
+       */
+      public fun status(status: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.rum.CfnAppMonitor.JavaScriptSourceMapsProperty.Builder =
+          software.amazon.awscdk.services.rum.CfnAppMonitor.JavaScriptSourceMapsProperty.builder()
+
+      /**
+       * @param s3Uri The S3Uri of the bucket or folder that stores the source map files.
+       * It is required if status is ENABLED.
+       */
+      override fun s3Uri(s3Uri: String) {
+        cdkBuilder.s3Uri(s3Uri)
+      }
+
+      /**
+       * @param status Specifies whether JavaScript error stack traces should be unminified for this
+       * app monitor. 
+       * The default is for JavaScript error stack trace unminification to be `DISABLED` .
+       */
+      override fun status(status: String) {
+        cdkBuilder.status(status)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.rum.CfnAppMonitor.JavaScriptSourceMapsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.JavaScriptSourceMapsProperty,
+    ) : CdkObject(cdkObject),
+        JavaScriptSourceMapsProperty {
+      /**
+       * The S3Uri of the bucket or folder that stores the source map files.
+       *
+       * It is required if status is ENABLED.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-javascriptsourcemaps.html#cfn-rum-appmonitor-javascriptsourcemaps-s3uri)
+       */
+      override fun s3Uri(): String? = unwrap(this).getS3Uri()
+
+      /**
+       * Specifies whether JavaScript error stack traces should be unminified for this app monitor.
+       *
+       * The default is for JavaScript error stack trace unminification to be `DISABLED` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-javascriptsourcemaps.html#cfn-rum-appmonitor-javascriptsourcemaps-status)
+       */
+      override fun status(): String = unwrap(this).getStatus()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JavaScriptSourceMapsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.JavaScriptSourceMapsProperty):
+          JavaScriptSourceMapsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JavaScriptSourceMapsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JavaScriptSourceMapsProperty):
+          software.amazon.awscdk.services.rum.CfnAppMonitor.JavaScriptSourceMapsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.rum.CfnAppMonitor.JavaScriptSourceMapsProperty
+    }
+  }
+
+  /**
    * Specifies one custom metric or extended metric that you want the CloudWatch RUM app monitor to
    * send to a destination.
    *
@@ -1492,7 +2077,7 @@ public open class CfnAppMonitor(
        * field is used only if the metric destination is `CloudWatch` . If the metric destination is
        * `Evidently` , the value of `DimensionKeys` is ignored.
        */
-      public fun dimensionKeys(dimensionKeys: IResolvable)
+      public fun dimensionKeys(dimensionKeys: Map<String, String>)
 
       /**
        * @param dimensionKeys This field is a map of field paths to dimension names.
@@ -1500,7 +2085,7 @@ public open class CfnAppMonitor(
        * field is used only if the metric destination is `CloudWatch` . If the metric destination is
        * `Evidently` , the value of `DimensionKeys` is ignored.
        */
-      public fun dimensionKeys(dimensionKeys: Map<String, String>)
+      public fun dimensionKeys(dimensionKeys: IResolvable)
 
       /**
        * @param eventPattern The pattern that defines the metric.
@@ -1549,8 +2134,8 @@ public open class CfnAppMonitor(
        * field is used only if the metric destination is `CloudWatch` . If the metric destination is
        * `Evidently` , the value of `DimensionKeys` is ignored.
        */
-      override fun dimensionKeys(dimensionKeys: IResolvable) {
-        cdkBuilder.dimensionKeys(dimensionKeys.let(IResolvable.Companion::unwrap))
+      override fun dimensionKeys(dimensionKeys: Map<String, String>) {
+        cdkBuilder.dimensionKeys(dimensionKeys)
       }
 
       /**
@@ -1559,8 +2144,8 @@ public open class CfnAppMonitor(
        * field is used only if the metric destination is `CloudWatch` . If the metric destination is
        * `Evidently` , the value of `DimensionKeys` is ignored.
        */
-      override fun dimensionKeys(dimensionKeys: Map<String, String>) {
-        cdkBuilder.dimensionKeys(dimensionKeys)
+      override fun dimensionKeys(dimensionKeys: IResolvable) {
+        cdkBuilder.dimensionKeys(dimensionKeys.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1942,6 +2527,168 @@ public open class CfnAppMonitor(
           software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty
+    }
+  }
+
+  /**
+   * Use this structure to assign a resource-based policy to a CloudWatch RUM app monitor to control
+   * access to it.
+   *
+   * Each app monitor can have one resource-based policy. The maximum size of the policy is 4 KB. To
+   * learn more about using resource policies with RUM, see [Using resource-based policies with
+   * CloudWatch
+   * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.rum.*;
+   * ResourcePolicyProperty resourcePolicyProperty = ResourcePolicyProperty.builder()
+   * .policyDocument("policyDocument")
+   * // the properties below are optional
+   * .policyRevisionId("policyRevisionId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-resourcepolicy.html)
+   */
+  public interface ResourcePolicyProperty {
+    /**
+     * The JSON to use as the resource policy.
+     *
+     * The document can be up to 4 KB in size. For more information about the contents and syntax
+     * for this policy, see [Using resource-based policies with CloudWatch
+     * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-resourcepolicy.html#cfn-rum-appmonitor-resourcepolicy-policydocument)
+     */
+    public fun policyDocument(): String
+
+    /**
+     * A string value that you can use to conditionally update your policy.
+     *
+     * You can provide the revision ID of your existing policy to make mutating requests against
+     * that policy.
+     *
+     * When you assign a policy revision ID, then later requests about that policy will be rejected
+     * with an `InvalidPolicyRevisionIdException` error if they don't provide the correct current
+     * revision ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-resourcepolicy.html#cfn-rum-appmonitor-resourcepolicy-policyrevisionid)
+     */
+    public fun policyRevisionId(): String? = unwrap(this).getPolicyRevisionId()
+
+    /**
+     * A builder for [ResourcePolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param policyDocument The JSON to use as the resource policy. 
+       * The document can be up to 4 KB in size. For more information about the contents and syntax
+       * for this policy, see [Using resource-based policies with CloudWatch
+       * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+       * .
+       */
+      public fun policyDocument(policyDocument: String)
+
+      /**
+       * @param policyRevisionId A string value that you can use to conditionally update your
+       * policy.
+       * You can provide the revision ID of your existing policy to make mutating requests against
+       * that policy.
+       *
+       * When you assign a policy revision ID, then later requests about that policy will be
+       * rejected with an `InvalidPolicyRevisionIdException` error if they don't provide the correct
+       * current revision ID.
+       */
+      public fun policyRevisionId(policyRevisionId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.rum.CfnAppMonitor.ResourcePolicyProperty.Builder =
+          software.amazon.awscdk.services.rum.CfnAppMonitor.ResourcePolicyProperty.builder()
+
+      /**
+       * @param policyDocument The JSON to use as the resource policy. 
+       * The document can be up to 4 KB in size. For more information about the contents and syntax
+       * for this policy, see [Using resource-based policies with CloudWatch
+       * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+       * .
+       */
+      override fun policyDocument(policyDocument: String) {
+        cdkBuilder.policyDocument(policyDocument)
+      }
+
+      /**
+       * @param policyRevisionId A string value that you can use to conditionally update your
+       * policy.
+       * You can provide the revision ID of your existing policy to make mutating requests against
+       * that policy.
+       *
+       * When you assign a policy revision ID, then later requests about that policy will be
+       * rejected with an `InvalidPolicyRevisionIdException` error if they don't provide the correct
+       * current revision ID.
+       */
+      override fun policyRevisionId(policyRevisionId: String) {
+        cdkBuilder.policyRevisionId(policyRevisionId)
+      }
+
+      public fun build(): software.amazon.awscdk.services.rum.CfnAppMonitor.ResourcePolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.ResourcePolicyProperty,
+    ) : CdkObject(cdkObject),
+        ResourcePolicyProperty {
+      /**
+       * The JSON to use as the resource policy.
+       *
+       * The document can be up to 4 KB in size. For more information about the contents and syntax
+       * for this policy, see [Using resource-based policies with CloudWatch
+       * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-resourcepolicy.html#cfn-rum-appmonitor-resourcepolicy-policydocument)
+       */
+      override fun policyDocument(): String = unwrap(this).getPolicyDocument()
+
+      /**
+       * A string value that you can use to conditionally update your policy.
+       *
+       * You can provide the revision ID of your existing policy to make mutating requests against
+       * that policy.
+       *
+       * When you assign a policy revision ID, then later requests about that policy will be
+       * rejected with an `InvalidPolicyRevisionIdException` error if they don't provide the correct
+       * current revision ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-resourcepolicy.html#cfn-rum-appmonitor-resourcepolicy-policyrevisionid)
+       */
+      override fun policyRevisionId(): String? = unwrap(this).getPolicyRevisionId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResourcePolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.ResourcePolicyProperty):
+          ResourcePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourcePolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResourcePolicyProperty):
+          software.amazon.awscdk.services.rum.CfnAppMonitor.ResourcePolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.rum.CfnAppMonitor.ResourcePolicyProperty
     }
   }
 }

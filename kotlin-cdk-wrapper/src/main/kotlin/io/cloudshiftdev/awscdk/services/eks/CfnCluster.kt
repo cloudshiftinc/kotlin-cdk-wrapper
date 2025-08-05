@@ -39,7 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * You can use the `endpointPublicAccess` and `endpointPrivateAccess` parameters to enable or
  * disable public and private access to your cluster's Kubernetes API server endpoint. By default,
- * public access is enabled, and private access is disabled. For more information, see [Amazon EKS
+ * public access is enabled, and private access is disabled. The endpoint domain name and IP address
+ * family depends on the value of the `ipFamily` for the cluster. For more information, see [Amazon EKS
  * Cluster Endpoint Access
  * Control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the **Amazon EKS
  * User Guide** .
@@ -96,6 +97,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .resources(List.of("resources"))
  * .build()))
+ * .force(false)
  * .kubernetesNetworkConfig(KubernetesNetworkConfigProperty.builder()
  * .elasticLoadBalancing(ElasticLoadBalancingProperty.builder()
  * .enabled(false)
@@ -333,6 +335,25 @@ public open class CfnCluster(
    * The encryption configuration for the cluster.
    */
   public open fun encryptionConfig(vararg `value`: Any): Unit = encryptionConfig(`value`.toList())
+
+  /**
+   * Set this value to `true` to override upgrade-blocking readiness checks when updating a cluster.
+   */
+  public open fun force(): Any? = unwrap(this).getForce()
+
+  /**
+   * Set this value to `true` to override upgrade-blocking readiness checks when updating a cluster.
+   */
+  public open fun force(`value`: Boolean) {
+    unwrap(this).setForce(`value`)
+  }
+
+  /**
+   * Set this value to `true` to override upgrade-blocking readiness checks when updating a cluster.
+   */
+  public open fun force(`value`: IResolvable) {
+    unwrap(this).setForce(`value`.let(IResolvable.Companion::unwrap))
+  }
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -660,7 +681,7 @@ public open class CfnCluster(
      * If you set this value to `False` when creating a cluster, the default networking add-ons will
      * not be installed.
      *
-     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * The default networking add-ons include `vpc-cni` , `coredns` , and `kube-proxy` .
      *
      * Use this option when you plan to install third-party alternative add-ons or self-manage the
      * default networking add-ons.
@@ -675,7 +696,7 @@ public open class CfnCluster(
      * If you set this value to `False` when creating a cluster, the default networking add-ons will
      * not be installed.
      *
-     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * The default networking add-ons include `vpc-cni` , `coredns` , and `kube-proxy` .
      *
      * Use this option when you plan to install third-party alternative add-ons or self-manage the
      * default networking add-ons.
@@ -691,7 +712,7 @@ public open class CfnCluster(
      *
      * For example, if the capability is enabled or disabled. If the compute capability is enabled,
      * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
-     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     * information, see EKS Auto Mode compute capability in the *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig)
      * @param computeConfig Indicates the current configuration of the compute capability on your
@@ -704,7 +725,7 @@ public open class CfnCluster(
      *
      * For example, if the capability is enabled or disabled. If the compute capability is enabled,
      * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
-     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     * information, see EKS Auto Mode compute capability in the *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig)
      * @param computeConfig Indicates the current configuration of the compute capability on your
@@ -717,7 +738,7 @@ public open class CfnCluster(
      *
      * For example, if the capability is enabled or disabled. If the compute capability is enabled,
      * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
-     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     * information, see EKS Auto Mode compute capability in the *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig)
      * @param computeConfig Indicates the current configuration of the compute capability on your
@@ -750,6 +771,30 @@ public open class CfnCluster(
      * @param encryptionConfig The encryption configuration for the cluster. 
      */
     public fun encryptionConfig(vararg encryptionConfig: Any)
+
+    /**
+     * Set this value to `true` to override upgrade-blocking readiness checks when updating a
+     * cluster.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-force)
+     * @param force Set this value to `true` to override upgrade-blocking readiness checks when
+     * updating a cluster. 
+     */
+    public fun force(force: Boolean)
+
+    /**
+     * Set this value to `true` to override upgrade-blocking readiness checks when updating a
+     * cluster.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-force)
+     * @param force Set this value to `true` to override upgrade-blocking readiness checks when
+     * updating a cluster. 
+     */
+    public fun force(force: IResolvable)
 
     /**
      * The Kubernetes network configuration for the cluster.
@@ -855,7 +900,7 @@ public open class CfnCluster(
     /**
      * The configuration in the cluster for EKS Hybrid Nodes.
      *
-     * You can't change or update this configuration after the cluster is created.
+     * You can add, change, or remove this configuration after the cluster is created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-remotenetworkconfig)
      * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes. 
@@ -865,7 +910,7 @@ public open class CfnCluster(
     /**
      * The configuration in the cluster for EKS Hybrid Nodes.
      *
-     * You can't change or update this configuration after the cluster is created.
+     * You can add, change, or remove this configuration after the cluster is created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-remotenetworkconfig)
      * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes. 
@@ -875,7 +920,7 @@ public open class CfnCluster(
     /**
      * The configuration in the cluster for EKS Hybrid Nodes.
      *
-     * You can't change or update this configuration after the cluster is created.
+     * You can add, change, or remove this configuration after the cluster is created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-remotenetworkconfig)
      * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes. 
@@ -958,7 +1003,7 @@ public open class CfnCluster(
      *
      * For example, if the capability is enabled or disabled. If the block storage capability is
      * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
-     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     * information, see EKS Auto Mode block storage capability in the *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-storageconfig)
      * @param storageConfig Indicates the current configuration of the block storage capability on
@@ -972,7 +1017,7 @@ public open class CfnCluster(
      *
      * For example, if the capability is enabled or disabled. If the block storage capability is
      * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
-     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     * information, see EKS Auto Mode block storage capability in the *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-storageconfig)
      * @param storageConfig Indicates the current configuration of the block storage capability on
@@ -986,7 +1031,7 @@ public open class CfnCluster(
      *
      * For example, if the capability is enabled or disabled. If the block storage capability is
      * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
-     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     * information, see EKS Auto Mode block storage capability in the *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-storageconfig)
      * @param storageConfig Indicates the current configuration of the block storage capability on
@@ -1039,8 +1084,8 @@ public open class CfnCluster(
     /**
      * This value indicates if extended support is enabled or disabled for the cluster.
      *
-     * [Learn more about EKS Extended Support in the EKS User
-     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+     * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-upgradepolicy)
      * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
@@ -1051,8 +1096,8 @@ public open class CfnCluster(
     /**
      * This value indicates if extended support is enabled or disabled for the cluster.
      *
-     * [Learn more about EKS Extended Support in the EKS User
-     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+     * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-upgradepolicy)
      * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
@@ -1063,8 +1108,8 @@ public open class CfnCluster(
     /**
      * This value indicates if extended support is enabled or disabled for the cluster.
      *
-     * [Learn more about EKS Extended Support in the EKS User
-     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+     * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-upgradepolicy)
      * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
@@ -1157,7 +1202,7 @@ public open class CfnCluster(
      * If you set this value to `False` when creating a cluster, the default networking add-ons will
      * not be installed.
      *
-     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * The default networking add-ons include `vpc-cni` , `coredns` , and `kube-proxy` .
      *
      * Use this option when you plan to install third-party alternative add-ons or self-manage the
      * default networking add-ons.
@@ -1174,7 +1219,7 @@ public open class CfnCluster(
      * If you set this value to `False` when creating a cluster, the default networking add-ons will
      * not be installed.
      *
-     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * The default networking add-ons include `vpc-cni` , `coredns` , and `kube-proxy` .
      *
      * Use this option when you plan to install third-party alternative add-ons or self-manage the
      * default networking add-ons.
@@ -1192,7 +1237,7 @@ public open class CfnCluster(
      *
      * For example, if the capability is enabled or disabled. If the compute capability is enabled,
      * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
-     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     * information, see EKS Auto Mode compute capability in the *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig)
      * @param computeConfig Indicates the current configuration of the compute capability on your
@@ -1207,7 +1252,7 @@ public open class CfnCluster(
      *
      * For example, if the capability is enabled or disabled. If the compute capability is enabled,
      * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
-     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     * information, see EKS Auto Mode compute capability in the *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig)
      * @param computeConfig Indicates the current configuration of the compute capability on your
@@ -1222,7 +1267,7 @@ public open class CfnCluster(
      *
      * For example, if the capability is enabled or disabled. If the compute capability is enabled,
      * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
-     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     * information, see EKS Auto Mode compute capability in the *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig)
      * @param computeConfig Indicates the current configuration of the compute capability on your
@@ -1261,6 +1306,34 @@ public open class CfnCluster(
      */
     override fun encryptionConfig(vararg encryptionConfig: Any): Unit =
         encryptionConfig(encryptionConfig.toList())
+
+    /**
+     * Set this value to `true` to override upgrade-blocking readiness checks when updating a
+     * cluster.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-force)
+     * @param force Set this value to `true` to override upgrade-blocking readiness checks when
+     * updating a cluster. 
+     */
+    override fun force(force: Boolean) {
+      cdkBuilder.force(force)
+    }
+
+    /**
+     * Set this value to `true` to override upgrade-blocking readiness checks when updating a
+     * cluster.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-force)
+     * @param force Set this value to `true` to override upgrade-blocking readiness checks when
+     * updating a cluster. 
+     */
+    override fun force(force: IResolvable) {
+      cdkBuilder.force(force.let(IResolvable.Companion::unwrap))
+    }
 
     /**
      * The Kubernetes network configuration for the cluster.
@@ -1383,7 +1456,7 @@ public open class CfnCluster(
     /**
      * The configuration in the cluster for EKS Hybrid Nodes.
      *
-     * You can't change or update this configuration after the cluster is created.
+     * You can add, change, or remove this configuration after the cluster is created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-remotenetworkconfig)
      * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes. 
@@ -1395,7 +1468,7 @@ public open class CfnCluster(
     /**
      * The configuration in the cluster for EKS Hybrid Nodes.
      *
-     * You can't change or update this configuration after the cluster is created.
+     * You can add, change, or remove this configuration after the cluster is created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-remotenetworkconfig)
      * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes. 
@@ -1407,7 +1480,7 @@ public open class CfnCluster(
     /**
      * The configuration in the cluster for EKS Hybrid Nodes.
      *
-     * You can't change or update this configuration after the cluster is created.
+     * You can add, change, or remove this configuration after the cluster is created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-remotenetworkconfig)
      * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes. 
@@ -1499,7 +1572,7 @@ public open class CfnCluster(
      *
      * For example, if the capability is enabled or disabled. If the block storage capability is
      * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
-     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     * information, see EKS Auto Mode block storage capability in the *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-storageconfig)
      * @param storageConfig Indicates the current configuration of the block storage capability on
@@ -1515,7 +1588,7 @@ public open class CfnCluster(
      *
      * For example, if the capability is enabled or disabled. If the block storage capability is
      * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
-     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     * information, see EKS Auto Mode block storage capability in the *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-storageconfig)
      * @param storageConfig Indicates the current configuration of the block storage capability on
@@ -1531,7 +1604,7 @@ public open class CfnCluster(
      *
      * For example, if the capability is enabled or disabled. If the block storage capability is
      * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
-     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     * information, see EKS Auto Mode block storage capability in the *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-storageconfig)
      * @param storageConfig Indicates the current configuration of the block storage capability on
@@ -1587,8 +1660,8 @@ public open class CfnCluster(
     /**
      * This value indicates if extended support is enabled or disabled for the cluster.
      *
-     * [Learn more about EKS Extended Support in the EKS User
-     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+     * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-upgradepolicy)
      * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
@@ -1601,8 +1674,8 @@ public open class CfnCluster(
     /**
      * This value indicates if extended support is enabled or disabled for the cluster.
      *
-     * [Learn more about EKS Extended Support in the EKS User
-     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+     * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-upgradepolicy)
      * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
@@ -1615,8 +1688,8 @@ public open class CfnCluster(
     /**
      * This value indicates if extended support is enabled or disabled for the cluster.
      *
-     * [Learn more about EKS Extended Support in the EKS User
-     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+     * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-upgradepolicy)
      * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
@@ -1857,7 +1930,7 @@ public open class CfnCluster(
    *
    * For example, if the capability is enabled or disabled. If the block storage capability is
    * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
-   * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+   * information, see EKS Auto Mode block storage capability in the *Amazon EKS User Guide* .
    *
    * Example:
    *
@@ -2115,7 +2188,11 @@ public open class CfnCluster(
   }
 
   /**
-   * Todo: add description.
+   * Indicates the current configuration of the compute capability on your EKS Auto Mode cluster.
+   *
+   * For example, if the capability is enabled or disabled. If the compute capability is enabled,
+   * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
+   * information, see EKS Auto Mode compute capability in the *Amazon EKS User Guide* .
    *
    * Example:
    *
@@ -2134,21 +2211,31 @@ public open class CfnCluster(
    */
   public interface ComputeConfigProperty {
     /**
-     * Todo: add description.
+     * Request to enable or disable the compute capability on your EKS Auto Mode cluster.
+     *
+     * If the compute capability is enabled, EKS Auto Mode will create and delete EC2 Managed
+     * Instances in your AWS account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-computeconfig.html#cfn-eks-cluster-computeconfig-enabled)
      */
     public fun enabled(): Any? = unwrap(this).getEnabled()
 
     /**
-     * Todo: add description.
+     * Configuration for node pools that defines the compute resources for your EKS Auto Mode
+     * cluster.
+     *
+     * For more information, see EKS Auto Mode Node Pools in the *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-computeconfig.html#cfn-eks-cluster-computeconfig-nodepools)
      */
     public fun nodePools(): List<String> = unwrap(this).getNodePools() ?: emptyList()
 
     /**
-     * Todo: add description.
+     * The ARN of the IAM Role EKS will assign to EC2 Managed Instances in your EKS Auto Mode
+     * cluster.
+     *
+     * This value cannot be changed after the compute capability of EKS Auto Mode is enabled. For
+     * more information, see the IAM Reference in the *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-computeconfig.html#cfn-eks-cluster-computeconfig-noderolearn)
      */
@@ -2160,27 +2247,40 @@ public open class CfnCluster(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enabled Todo: add description.
+       * @param enabled Request to enable or disable the compute capability on your EKS Auto Mode
+       * cluster.
+       * If the compute capability is enabled, EKS Auto Mode will create and delete EC2 Managed
+       * Instances in your AWS account.
        */
       public fun enabled(enabled: Boolean)
 
       /**
-       * @param enabled Todo: add description.
+       * @param enabled Request to enable or disable the compute capability on your EKS Auto Mode
+       * cluster.
+       * If the compute capability is enabled, EKS Auto Mode will create and delete EC2 Managed
+       * Instances in your AWS account.
        */
       public fun enabled(enabled: IResolvable)
 
       /**
-       * @param nodePools Todo: add description.
+       * @param nodePools Configuration for node pools that defines the compute resources for your
+       * EKS Auto Mode cluster.
+       * For more information, see EKS Auto Mode Node Pools in the *Amazon EKS User Guide* .
        */
       public fun nodePools(nodePools: List<String>)
 
       /**
-       * @param nodePools Todo: add description.
+       * @param nodePools Configuration for node pools that defines the compute resources for your
+       * EKS Auto Mode cluster.
+       * For more information, see EKS Auto Mode Node Pools in the *Amazon EKS User Guide* .
        */
       public fun nodePools(vararg nodePools: String)
 
       /**
-       * @param nodeRoleArn Todo: add description.
+       * @param nodeRoleArn The ARN of the IAM Role EKS will assign to EC2 Managed Instances in your
+       * EKS Auto Mode cluster.
+       * This value cannot be changed after the compute capability of EKS Auto Mode is enabled. For
+       * more information, see the IAM Reference in the *Amazon EKS User Guide* .
        */
       public fun nodeRoleArn(nodeRoleArn: String)
     }
@@ -2191,33 +2291,46 @@ public open class CfnCluster(
           software.amazon.awscdk.services.eks.CfnCluster.ComputeConfigProperty.builder()
 
       /**
-       * @param enabled Todo: add description.
+       * @param enabled Request to enable or disable the compute capability on your EKS Auto Mode
+       * cluster.
+       * If the compute capability is enabled, EKS Auto Mode will create and delete EC2 Managed
+       * Instances in your AWS account.
        */
       override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
       /**
-       * @param enabled Todo: add description.
+       * @param enabled Request to enable or disable the compute capability on your EKS Auto Mode
+       * cluster.
+       * If the compute capability is enabled, EKS Auto Mode will create and delete EC2 Managed
+       * Instances in your AWS account.
        */
       override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param nodePools Todo: add description.
+       * @param nodePools Configuration for node pools that defines the compute resources for your
+       * EKS Auto Mode cluster.
+       * For more information, see EKS Auto Mode Node Pools in the *Amazon EKS User Guide* .
        */
       override fun nodePools(nodePools: List<String>) {
         cdkBuilder.nodePools(nodePools)
       }
 
       /**
-       * @param nodePools Todo: add description.
+       * @param nodePools Configuration for node pools that defines the compute resources for your
+       * EKS Auto Mode cluster.
+       * For more information, see EKS Auto Mode Node Pools in the *Amazon EKS User Guide* .
        */
       override fun nodePools(vararg nodePools: String): Unit = nodePools(nodePools.toList())
 
       /**
-       * @param nodeRoleArn Todo: add description.
+       * @param nodeRoleArn The ARN of the IAM Role EKS will assign to EC2 Managed Instances in your
+       * EKS Auto Mode cluster.
+       * This value cannot be changed after the compute capability of EKS Auto Mode is enabled. For
+       * more information, see the IAM Reference in the *Amazon EKS User Guide* .
        */
       override fun nodeRoleArn(nodeRoleArn: String) {
         cdkBuilder.nodeRoleArn(nodeRoleArn)
@@ -2232,21 +2345,31 @@ public open class CfnCluster(
     ) : CdkObject(cdkObject),
         ComputeConfigProperty {
       /**
-       * Todo: add description.
+       * Request to enable or disable the compute capability on your EKS Auto Mode cluster.
+       *
+       * If the compute capability is enabled, EKS Auto Mode will create and delete EC2 Managed
+       * Instances in your AWS account.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-computeconfig.html#cfn-eks-cluster-computeconfig-enabled)
        */
       override fun enabled(): Any? = unwrap(this).getEnabled()
 
       /**
-       * Todo: add description.
+       * Configuration for node pools that defines the compute resources for your EKS Auto Mode
+       * cluster.
+       *
+       * For more information, see EKS Auto Mode Node Pools in the *Amazon EKS User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-computeconfig.html#cfn-eks-cluster-computeconfig-nodepools)
        */
       override fun nodePools(): List<String> = unwrap(this).getNodePools() ?: emptyList()
 
       /**
-       * Todo: add description.
+       * The ARN of the IAM Role EKS will assign to EC2 Managed Instances in your EKS Auto Mode
+       * cluster.
+       *
+       * This value cannot be changed after the compute capability of EKS Auto Mode is enabled. For
+       * more information, see the IAM Reference in the *Amazon EKS User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-computeconfig.html#cfn-eks-cluster-computeconfig-noderolearn)
        */
@@ -2277,7 +2400,7 @@ public open class CfnCluster(
    *
    * For more information, see [Capacity
    * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
-   * in the Amazon EKS User Guide.
+   * in the *Amazon EKS User Guide* .
    *
    * Example:
    *
@@ -2372,7 +2495,7 @@ public open class CfnCluster(
    * cluster.
    *
    * For example, if the capability is enabled or disabled. For more information, see EKS Auto Mode
-   * load balancing capability in the EKS User Guide.
+   * load balancing capability in the *Amazon EKS User Guide* .
    *
    * Example:
    *
@@ -2663,7 +2786,10 @@ public open class CfnCluster(
    */
   public interface KubernetesNetworkConfigProperty {
     /**
-     * Todo: add description.
+     * Request to enable or disable the load balancing capability on your EKS Auto Mode cluster.
+     *
+     * For more information, see EKS Auto Mode load balancing capability in the *Amazon EKS User
+     * Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-elasticloadbalancing)
      */
@@ -2680,8 +2806,8 @@ public open class CfnCluster(
      * You can only specify `ipv6` for `1.21` and later clusters that use version `1.10.1` or later
      * of the Amazon VPC CNI add-on. If you specify `ipv6` , then ensure that your VPC meets the
      * requirements listed in the considerations listed in [Assigning IPv6 addresses to pods and
-     * services](https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html) in the Amazon EKS User
-     * Guide. Kubernetes assigns services `IPv6` addresses from the unique local address range
+     * services](https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html) in the *Amazon EKS
+     * User Guide* . Kubernetes assigns services `IPv6` addresses from the unique local address range
      * `(fc00::/7)` . You can't specify a custom `IPv6` CIDR block. Pod addresses are assigned from the
      * subnet's `IPv6` CIDR.
      *
@@ -2728,17 +2854,26 @@ public open class CfnCluster(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param elasticLoadBalancing Todo: add description.
+       * @param elasticLoadBalancing Request to enable or disable the load balancing capability on
+       * your EKS Auto Mode cluster.
+       * For more information, see EKS Auto Mode load balancing capability in the *Amazon EKS User
+       * Guide* .
        */
       public fun elasticLoadBalancing(elasticLoadBalancing: IResolvable)
 
       /**
-       * @param elasticLoadBalancing Todo: add description.
+       * @param elasticLoadBalancing Request to enable or disable the load balancing capability on
+       * your EKS Auto Mode cluster.
+       * For more information, see EKS Auto Mode load balancing capability in the *Amazon EKS User
+       * Guide* .
        */
       public fun elasticLoadBalancing(elasticLoadBalancing: ElasticLoadBalancingProperty)
 
       /**
-       * @param elasticLoadBalancing Todo: add description.
+       * @param elasticLoadBalancing Request to enable or disable the load balancing capability on
+       * your EKS Auto Mode cluster.
+       * For more information, see EKS Auto Mode load balancing capability in the *Amazon EKS User
+       * Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6c691f0f94e1c194795d057626fc8d0954e91bc977c406e36222ff6309c3614a")
@@ -2757,8 +2892,8 @@ public open class CfnCluster(
        * You can only specify `ipv6` for `1.21` and later clusters that use version `1.10.1` or
        * later of the Amazon VPC CNI add-on. If you specify `ipv6` , then ensure that your VPC meets
        * the requirements listed in the considerations listed in [Assigning IPv6 addresses to pods and
-       * services](https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html) in the Amazon EKS
-       * User Guide. Kubernetes assigns services `IPv6` addresses from the unique local address range
+       * services](https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html) in the *Amazon EKS
+       * User Guide* . Kubernetes assigns services `IPv6` addresses from the unique local address range
        * `(fc00::/7)` . You can't specify a custom `IPv6` CIDR block. Pod addresses are assigned from
        * the subnet's `IPv6` CIDR.
        */
@@ -2799,21 +2934,30 @@ public open class CfnCluster(
           software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty.builder()
 
       /**
-       * @param elasticLoadBalancing Todo: add description.
+       * @param elasticLoadBalancing Request to enable or disable the load balancing capability on
+       * your EKS Auto Mode cluster.
+       * For more information, see EKS Auto Mode load balancing capability in the *Amazon EKS User
+       * Guide* .
        */
       override fun elasticLoadBalancing(elasticLoadBalancing: IResolvable) {
         cdkBuilder.elasticLoadBalancing(elasticLoadBalancing.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param elasticLoadBalancing Todo: add description.
+       * @param elasticLoadBalancing Request to enable or disable the load balancing capability on
+       * your EKS Auto Mode cluster.
+       * For more information, see EKS Auto Mode load balancing capability in the *Amazon EKS User
+       * Guide* .
        */
       override fun elasticLoadBalancing(elasticLoadBalancing: ElasticLoadBalancingProperty) {
         cdkBuilder.elasticLoadBalancing(elasticLoadBalancing.let(ElasticLoadBalancingProperty.Companion::unwrap))
       }
 
       /**
-       * @param elasticLoadBalancing Todo: add description.
+       * @param elasticLoadBalancing Request to enable or disable the load balancing capability on
+       * your EKS Auto Mode cluster.
+       * For more information, see EKS Auto Mode load balancing capability in the *Amazon EKS User
+       * Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6c691f0f94e1c194795d057626fc8d0954e91bc977c406e36222ff6309c3614a")
@@ -2833,8 +2977,8 @@ public open class CfnCluster(
        * You can only specify `ipv6` for `1.21` and later clusters that use version `1.10.1` or
        * later of the Amazon VPC CNI add-on. If you specify `ipv6` , then ensure that your VPC meets
        * the requirements listed in the considerations listed in [Assigning IPv6 addresses to pods and
-       * services](https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html) in the Amazon EKS
-       * User Guide. Kubernetes assigns services `IPv6` addresses from the unique local address range
+       * services](https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html) in the *Amazon EKS
+       * User Guide* . Kubernetes assigns services `IPv6` addresses from the unique local address range
        * `(fc00::/7)` . You can't specify a custom `IPv6` CIDR block. Pod addresses are assigned from
        * the subnet's `IPv6` CIDR.
        */
@@ -2884,7 +3028,10 @@ public open class CfnCluster(
     ) : CdkObject(cdkObject),
         KubernetesNetworkConfigProperty {
       /**
-       * Todo: add description.
+       * Request to enable or disable the load balancing capability on your EKS Auto Mode cluster.
+       *
+       * For more information, see EKS Auto Mode load balancing capability in the *Amazon EKS User
+       * Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-elasticloadbalancing)
        */
@@ -2902,8 +3049,8 @@ public open class CfnCluster(
        * You can only specify `ipv6` for `1.21` and later clusters that use version `1.10.1` or
        * later of the Amazon VPC CNI add-on. If you specify `ipv6` , then ensure that your VPC meets
        * the requirements listed in the considerations listed in [Assigning IPv6 addresses to pods and
-       * services](https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html) in the Amazon EKS
-       * User Guide. Kubernetes assigns services `IPv6` addresses from the unique local address range
+       * services](https://docs.aws.amazon.com/eks/latest/userguide/cni-ipv6.html) in the *Amazon EKS
+       * User Guide* . Kubernetes assigns services `IPv6` addresses from the unique local address range
        * `(fc00::/7)` . You can't specify a custom `IPv6` CIDR block. Pod addresses are assigned from
        * the subnet's `IPv6` CIDR.
        *
@@ -3547,8 +3694,9 @@ public open class CfnCluster(
   }
 
   /**
-   * Configuration fields for specifying on-premises node and pod CIDRs that are external to the VPC
-   * passed during cluster creation.
+   * The configuration in the cluster for EKS Hybrid Nodes.
+   *
+   * You can add, change, or remove this configuration after the cluster is created.
    *
    * Example:
    *
@@ -3571,14 +3719,50 @@ public open class CfnCluster(
    */
   public interface RemoteNetworkConfigProperty {
     /**
-     * Network configuration of nodes run on-premises with EKS Hybrid Nodes.
+     * The list of network CIDRs that can contain hybrid nodes.
+     *
+     * These CIDR blocks define the expected IP address range of the hybrid nodes that join the
+     * cluster. These blocks are typically determined by your network administrator.
+     *
+     * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+     * `10.2.0.0/16` ).
+     *
+     * It must satisfy the following requirements:
+     *
+     * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
+     * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+     * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources, or
+     * the block of the Kubernetes service IP range.
+     * * Each block must have a route to the VPC that uses the VPC CIDR blocks, not public IPs or
+     * Elastic IPs. There are many options including AWS Transit Gateway , AWS Site-to-Site VPN , or
+     * AWS Direct Connect .
+     * * Each host must allow outbound connection to the EKS cluster control plane on TCP ports
+     * `443` and `10250` .
+     * * Each host must allow inbound connection from the EKS cluster control plane on TCP port
+     * 10250 for logs, exec and port-forward operations.
+     * * Each host must allow TCP and UDP network connectivity to and from other hosts that are
+     * running `CoreDNS` on UDP port `53` for service and pod DNS names.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotenetworkconfig.html#cfn-eks-cluster-remotenetworkconfig-remotenodenetworks)
      */
     public fun remoteNodeNetworks(): Any
 
     /**
-     * Network configuration of pods run on-premises with EKS Hybrid Nodes.
+     * The list of network CIDRs that can contain pods that run Kubernetes webhooks on hybrid nodes.
+     *
+     * These CIDR blocks are determined by configuring your Container Network Interface (CNI)
+     * plugin. We recommend the Calico CNI or Cilium CNI. Note that the Amazon VPC CNI plugin for
+     * Kubernetes isn't available for on-premises and edge locations.
+     *
+     * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+     * `10.2.0.0/16` ).
+     *
+     * It must satisfy the following requirements:
+     *
+     * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
+     * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+     * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources, or
+     * the block of the Kubernetes service IP range.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotenetworkconfig.html#cfn-eks-cluster-remotenetworkconfig-remotepodnetworks)
      */
@@ -3590,38 +3774,137 @@ public open class CfnCluster(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param remoteNodeNetworks Network configuration of nodes run on-premises with EKS Hybrid
-       * Nodes. 
+       * @param remoteNodeNetworks The list of network CIDRs that can contain hybrid nodes. 
+       * These CIDR blocks define the expected IP address range of the hybrid nodes that join the
+       * cluster. These blocks are typically determined by your network administrator.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       * * Each block must have a route to the VPC that uses the VPC CIDR blocks, not public IPs or
+       * Elastic IPs. There are many options including AWS Transit Gateway , AWS Site-to-Site VPN , or
+       * AWS Direct Connect .
+       * * Each host must allow outbound connection to the EKS cluster control plane on TCP ports
+       * `443` and `10250` .
+       * * Each host must allow inbound connection from the EKS cluster control plane on TCP port
+       * 10250 for logs, exec and port-forward operations.
+       * * Each host must allow TCP and UDP network connectivity to and from other hosts that are
+       * running `CoreDNS` on UDP port `53` for service and pod DNS names.
        */
       public fun remoteNodeNetworks(remoteNodeNetworks: IResolvable)
 
       /**
-       * @param remoteNodeNetworks Network configuration of nodes run on-premises with EKS Hybrid
-       * Nodes. 
+       * @param remoteNodeNetworks The list of network CIDRs that can contain hybrid nodes. 
+       * These CIDR blocks define the expected IP address range of the hybrid nodes that join the
+       * cluster. These blocks are typically determined by your network administrator.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       * * Each block must have a route to the VPC that uses the VPC CIDR blocks, not public IPs or
+       * Elastic IPs. There are many options including AWS Transit Gateway , AWS Site-to-Site VPN , or
+       * AWS Direct Connect .
+       * * Each host must allow outbound connection to the EKS cluster control plane on TCP ports
+       * `443` and `10250` .
+       * * Each host must allow inbound connection from the EKS cluster control plane on TCP port
+       * 10250 for logs, exec and port-forward operations.
+       * * Each host must allow TCP and UDP network connectivity to and from other hosts that are
+       * running `CoreDNS` on UDP port `53` for service and pod DNS names.
        */
       public fun remoteNodeNetworks(remoteNodeNetworks: List<Any>)
 
       /**
-       * @param remoteNodeNetworks Network configuration of nodes run on-premises with EKS Hybrid
-       * Nodes. 
+       * @param remoteNodeNetworks The list of network CIDRs that can contain hybrid nodes. 
+       * These CIDR blocks define the expected IP address range of the hybrid nodes that join the
+       * cluster. These blocks are typically determined by your network administrator.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       * * Each block must have a route to the VPC that uses the VPC CIDR blocks, not public IPs or
+       * Elastic IPs. There are many options including AWS Transit Gateway , AWS Site-to-Site VPN , or
+       * AWS Direct Connect .
+       * * Each host must allow outbound connection to the EKS cluster control plane on TCP ports
+       * `443` and `10250` .
+       * * Each host must allow inbound connection from the EKS cluster control plane on TCP port
+       * 10250 for logs, exec and port-forward operations.
+       * * Each host must allow TCP and UDP network connectivity to and from other hosts that are
+       * running `CoreDNS` on UDP port `53` for service and pod DNS names.
        */
       public fun remoteNodeNetworks(vararg remoteNodeNetworks: Any)
 
       /**
-       * @param remotePodNetworks Network configuration of pods run on-premises with EKS Hybrid
-       * Nodes.
+       * @param remotePodNetworks The list of network CIDRs that can contain pods that run
+       * Kubernetes webhooks on hybrid nodes.
+       * These CIDR blocks are determined by configuring your Container Network Interface (CNI)
+       * plugin. We recommend the Calico CNI or Cilium CNI. Note that the Amazon VPC CNI plugin for
+       * Kubernetes isn't available for on-premises and edge locations.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
        */
       public fun remotePodNetworks(remotePodNetworks: IResolvable)
 
       /**
-       * @param remotePodNetworks Network configuration of pods run on-premises with EKS Hybrid
-       * Nodes.
+       * @param remotePodNetworks The list of network CIDRs that can contain pods that run
+       * Kubernetes webhooks on hybrid nodes.
+       * These CIDR blocks are determined by configuring your Container Network Interface (CNI)
+       * plugin. We recommend the Calico CNI or Cilium CNI. Note that the Amazon VPC CNI plugin for
+       * Kubernetes isn't available for on-premises and edge locations.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
        */
       public fun remotePodNetworks(remotePodNetworks: List<Any>)
 
       /**
-       * @param remotePodNetworks Network configuration of pods run on-premises with EKS Hybrid
-       * Nodes.
+       * @param remotePodNetworks The list of network CIDRs that can contain pods that run
+       * Kubernetes webhooks on hybrid nodes.
+       * These CIDR blocks are determined by configuring your Container Network Interface (CNI)
+       * plugin. We recommend the Calico CNI or Cilium CNI. Note that the Amazon VPC CNI plugin for
+       * Kubernetes isn't available for on-premises and edge locations.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
        */
       public fun remotePodNetworks(vararg remotePodNetworks: Any)
     }
@@ -3632,47 +3915,146 @@ public open class CfnCluster(
           software.amazon.awscdk.services.eks.CfnCluster.RemoteNetworkConfigProperty.builder()
 
       /**
-       * @param remoteNodeNetworks Network configuration of nodes run on-premises with EKS Hybrid
-       * Nodes. 
+       * @param remoteNodeNetworks The list of network CIDRs that can contain hybrid nodes. 
+       * These CIDR blocks define the expected IP address range of the hybrid nodes that join the
+       * cluster. These blocks are typically determined by your network administrator.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       * * Each block must have a route to the VPC that uses the VPC CIDR blocks, not public IPs or
+       * Elastic IPs. There are many options including AWS Transit Gateway , AWS Site-to-Site VPN , or
+       * AWS Direct Connect .
+       * * Each host must allow outbound connection to the EKS cluster control plane on TCP ports
+       * `443` and `10250` .
+       * * Each host must allow inbound connection from the EKS cluster control plane on TCP port
+       * 10250 for logs, exec and port-forward operations.
+       * * Each host must allow TCP and UDP network connectivity to and from other hosts that are
+       * running `CoreDNS` on UDP port `53` for service and pod DNS names.
        */
       override fun remoteNodeNetworks(remoteNodeNetworks: IResolvable) {
         cdkBuilder.remoteNodeNetworks(remoteNodeNetworks.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param remoteNodeNetworks Network configuration of nodes run on-premises with EKS Hybrid
-       * Nodes. 
+       * @param remoteNodeNetworks The list of network CIDRs that can contain hybrid nodes. 
+       * These CIDR blocks define the expected IP address range of the hybrid nodes that join the
+       * cluster. These blocks are typically determined by your network administrator.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       * * Each block must have a route to the VPC that uses the VPC CIDR blocks, not public IPs or
+       * Elastic IPs. There are many options including AWS Transit Gateway , AWS Site-to-Site VPN , or
+       * AWS Direct Connect .
+       * * Each host must allow outbound connection to the EKS cluster control plane on TCP ports
+       * `443` and `10250` .
+       * * Each host must allow inbound connection from the EKS cluster control plane on TCP port
+       * 10250 for logs, exec and port-forward operations.
+       * * Each host must allow TCP and UDP network connectivity to and from other hosts that are
+       * running `CoreDNS` on UDP port `53` for service and pod DNS names.
        */
       override fun remoteNodeNetworks(remoteNodeNetworks: List<Any>) {
         cdkBuilder.remoteNodeNetworks(remoteNodeNetworks.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param remoteNodeNetworks Network configuration of nodes run on-premises with EKS Hybrid
-       * Nodes. 
+       * @param remoteNodeNetworks The list of network CIDRs that can contain hybrid nodes. 
+       * These CIDR blocks define the expected IP address range of the hybrid nodes that join the
+       * cluster. These blocks are typically determined by your network administrator.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       * * Each block must have a route to the VPC that uses the VPC CIDR blocks, not public IPs or
+       * Elastic IPs. There are many options including AWS Transit Gateway , AWS Site-to-Site VPN , or
+       * AWS Direct Connect .
+       * * Each host must allow outbound connection to the EKS cluster control plane on TCP ports
+       * `443` and `10250` .
+       * * Each host must allow inbound connection from the EKS cluster control plane on TCP port
+       * 10250 for logs, exec and port-forward operations.
+       * * Each host must allow TCP and UDP network connectivity to and from other hosts that are
+       * running `CoreDNS` on UDP port `53` for service and pod DNS names.
        */
       override fun remoteNodeNetworks(vararg remoteNodeNetworks: Any): Unit =
           remoteNodeNetworks(remoteNodeNetworks.toList())
 
       /**
-       * @param remotePodNetworks Network configuration of pods run on-premises with EKS Hybrid
-       * Nodes.
+       * @param remotePodNetworks The list of network CIDRs that can contain pods that run
+       * Kubernetes webhooks on hybrid nodes.
+       * These CIDR blocks are determined by configuring your Container Network Interface (CNI)
+       * plugin. We recommend the Calico CNI or Cilium CNI. Note that the Amazon VPC CNI plugin for
+       * Kubernetes isn't available for on-premises and edge locations.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
        */
       override fun remotePodNetworks(remotePodNetworks: IResolvable) {
         cdkBuilder.remotePodNetworks(remotePodNetworks.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param remotePodNetworks Network configuration of pods run on-premises with EKS Hybrid
-       * Nodes.
+       * @param remotePodNetworks The list of network CIDRs that can contain pods that run
+       * Kubernetes webhooks on hybrid nodes.
+       * These CIDR blocks are determined by configuring your Container Network Interface (CNI)
+       * plugin. We recommend the Calico CNI or Cilium CNI. Note that the Amazon VPC CNI plugin for
+       * Kubernetes isn't available for on-premises and edge locations.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
        */
       override fun remotePodNetworks(remotePodNetworks: List<Any>) {
         cdkBuilder.remotePodNetworks(remotePodNetworks.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param remotePodNetworks Network configuration of pods run on-premises with EKS Hybrid
-       * Nodes.
+       * @param remotePodNetworks The list of network CIDRs that can contain pods that run
+       * Kubernetes webhooks on hybrid nodes.
+       * These CIDR blocks are determined by configuring your Container Network Interface (CNI)
+       * plugin. We recommend the Calico CNI or Cilium CNI. Note that the Amazon VPC CNI plugin for
+       * Kubernetes isn't available for on-premises and edge locations.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
        */
       override fun remotePodNetworks(vararg remotePodNetworks: Any): Unit =
           remotePodNetworks(remotePodNetworks.toList())
@@ -3686,14 +4068,51 @@ public open class CfnCluster(
     ) : CdkObject(cdkObject),
         RemoteNetworkConfigProperty {
       /**
-       * Network configuration of nodes run on-premises with EKS Hybrid Nodes.
+       * The list of network CIDRs that can contain hybrid nodes.
+       *
+       * These CIDR blocks define the expected IP address range of the hybrid nodes that join the
+       * cluster. These blocks are typically determined by your network administrator.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       * * Each block must have a route to the VPC that uses the VPC CIDR blocks, not public IPs or
+       * Elastic IPs. There are many options including AWS Transit Gateway , AWS Site-to-Site VPN , or
+       * AWS Direct Connect .
+       * * Each host must allow outbound connection to the EKS cluster control plane on TCP ports
+       * `443` and `10250` .
+       * * Each host must allow inbound connection from the EKS cluster control plane on TCP port
+       * 10250 for logs, exec and port-forward operations.
+       * * Each host must allow TCP and UDP network connectivity to and from other hosts that are
+       * running `CoreDNS` on UDP port `53` for service and pod DNS names.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotenetworkconfig.html#cfn-eks-cluster-remotenetworkconfig-remotenodenetworks)
        */
       override fun remoteNodeNetworks(): Any = unwrap(this).getRemoteNodeNetworks()
 
       /**
-       * Network configuration of pods run on-premises with EKS Hybrid Nodes.
+       * The list of network CIDRs that can contain pods that run Kubernetes webhooks on hybrid
+       * nodes.
+       *
+       * These CIDR blocks are determined by configuring your Container Network Interface (CNI)
+       * plugin. We recommend the Calico CNI or Cilium CNI. Note that the Amazon VPC CNI plugin for
+       * Kubernetes isn't available for on-premises and edge locations.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotenetworkconfig.html#cfn-eks-cluster-remotenetworkconfig-remotepodnetworks)
        */
@@ -3729,7 +4148,7 @@ public open class CfnCluster(
    *
    * It must satisfy the following requirements:
    *
-   * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+   * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
    * maximum allowed size is /8. Publicly-routable addresses aren't supported.
    * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources, or
    * the block of the Kubernetes service IP range.
@@ -3768,7 +4187,7 @@ public open class CfnCluster(
      *
      * It must satisfy the following requirements:
      *
-     * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+     * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
      * maximum allowed size is /8. Publicly-routable addresses aren't supported.
      * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources, or
      * the block of the Kubernetes service IP range.
@@ -3801,7 +4220,7 @@ public open class CfnCluster(
        *
        * It must satisfy the following requirements:
        *
-       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
        * maximum allowed size is /8. Publicly-routable addresses aren't supported.
        * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
        * or the block of the Kubernetes service IP range.
@@ -3827,7 +4246,7 @@ public open class CfnCluster(
        *
        * It must satisfy the following requirements:
        *
-       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
        * maximum allowed size is /8. Publicly-routable addresses aren't supported.
        * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
        * or the block of the Kubernetes service IP range.
@@ -3859,7 +4278,7 @@ public open class CfnCluster(
        *
        * It must satisfy the following requirements:
        *
-       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
        * maximum allowed size is /8. Publicly-routable addresses aren't supported.
        * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
        * or the block of the Kubernetes service IP range.
@@ -3887,7 +4306,7 @@ public open class CfnCluster(
        *
        * It must satisfy the following requirements:
        *
-       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
        * maximum allowed size is /8. Publicly-routable addresses aren't supported.
        * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
        * or the block of the Kubernetes service IP range.
@@ -3922,7 +4341,7 @@ public open class CfnCluster(
        *
        * It must satisfy the following requirements:
        *
-       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
        * maximum allowed size is /8. Publicly-routable addresses aren't supported.
        * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
        * or the block of the Kubernetes service IP range.
@@ -3971,7 +4390,7 @@ public open class CfnCluster(
    *
    * It must satisfy the following requirements:
    *
-   * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+   * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
    * maximum allowed size is /8. Publicly-routable addresses aren't supported.
    * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources, or
    * the block of the Kubernetes service IP range.
@@ -4002,7 +4421,7 @@ public open class CfnCluster(
      *
      * It must satisfy the following requirements:
      *
-     * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+     * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
      * maximum allowed size is /8. Publicly-routable addresses aren't supported.
      * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources, or
      * the block of the Kubernetes service IP range.
@@ -4028,7 +4447,7 @@ public open class CfnCluster(
        *
        * It must satisfy the following requirements:
        *
-       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
        * maximum allowed size is /8. Publicly-routable addresses aren't supported.
        * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
        * or the block of the Kubernetes service IP range.
@@ -4047,7 +4466,7 @@ public open class CfnCluster(
        *
        * It must satisfy the following requirements:
        *
-       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
        * maximum allowed size is /8. Publicly-routable addresses aren't supported.
        * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
        * or the block of the Kubernetes service IP range.
@@ -4072,7 +4491,7 @@ public open class CfnCluster(
        *
        * It must satisfy the following requirements:
        *
-       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
        * maximum allowed size is /8. Publicly-routable addresses aren't supported.
        * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
        * or the block of the Kubernetes service IP range.
@@ -4093,7 +4512,7 @@ public open class CfnCluster(
        *
        * It must satisfy the following requirements:
        *
-       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
        * maximum allowed size is /8. Publicly-routable addresses aren't supported.
        * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
        * or the block of the Kubernetes service IP range.
@@ -4120,7 +4539,7 @@ public open class CfnCluster(
        *
        * It must satisfy the following requirements:
        *
-       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /32,
        * maximum allowed size is /8. Publicly-routable addresses aren't supported.
        * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
        * or the block of the Kubernetes service IP range.
@@ -4187,10 +4606,9 @@ public open class CfnCluster(
      * private VPC endpoint. The default value for this parameter is `false` , which disables private
      * access for your Kubernetes API server. If you disable private access and you have nodes or AWS
      * Fargate pods in the cluster, then ensure that `publicAccessCidrs` includes the necessary CIDR
-     * blocks for communication with the nodes or Fargate pods. For more information, see [Amazon EKS
-     * cluster endpoint access
-     * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the **Amazon
-     * EKS User Guide** .
+     * blocks for communication with the nodes or Fargate pods. For more information, see [Cluster API
+     * server endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+     * **Amazon EKS User Guide** .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-endpointprivateaccess)
      */
@@ -4202,9 +4620,10 @@ public open class CfnCluster(
      *
      * If you disable public access, your cluster's Kubernetes API server can only receive requests
      * from within the cluster VPC. The default value for this parameter is `true` , which enables
-     * public access for your Kubernetes API server. For more information, see [Amazon EKS cluster
-     * endpoint access control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html)
-     * in the **Amazon EKS User Guide** .
+     * public access for your Kubernetes API server. The endpoint domain name and IP address family
+     * depends on the value of the `ipFamily` for the cluster. For more information, see [Cluster API
+     * server endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+     * **Amazon EKS User Guide** .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-endpointpublicaccess)
      */
@@ -4215,11 +4634,15 @@ public open class CfnCluster(
      * endpoint.
      *
      * Communication to the endpoint from addresses outside of the CIDR blocks that you specify is
-     * denied. The default value is `0.0.0.0/0` . If you've disabled private endpoint access, make sure
-     * that you specify the necessary CIDR blocks for every node and AWS Fargate `Pod` in the cluster.
-     * For more information, see [Amazon EKS cluster endpoint access
-     * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the **Amazon
-     * EKS User Guide** .
+     * denied. The default value is `0.0.0.0/0` and additionally `::/0` for dual-stack `IPv6` clusters.
+     * If you've disabled private endpoint access, make sure that you specify the necessary CIDR blocks
+     * for every node and AWS Fargate `Pod` in the cluster. For more information, see [Cluster API
+     * server endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+     * **Amazon EKS User Guide** .
+     *
+     * Note that the public endpoints are dual-stack for only `IPv6` clusters that are made after
+     * October 2024. You can't add `IPv6` CIDR blocks to `IPv4` clusters or `IPv6` clusters that were
+     * made before October 2024.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-publicaccesscidrs)
      */
@@ -4264,8 +4687,8 @@ public open class CfnCluster(
        * private access for your Kubernetes API server. If you disable private access and you have
        * nodes or AWS Fargate pods in the cluster, then ensure that `publicAccessCidrs` includes the
        * necessary CIDR blocks for communication with the nodes or Fargate pods. For more information,
-       * see [Amazon EKS cluster endpoint access
-       * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+       * see [Cluster API server
+       * endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
        * **Amazon EKS User Guide** .
        */
       public fun endpointPrivateAccess(endpointPrivateAccess: Boolean)
@@ -4278,8 +4701,8 @@ public open class CfnCluster(
        * private access for your Kubernetes API server. If you disable private access and you have
        * nodes or AWS Fargate pods in the cluster, then ensure that `publicAccessCidrs` includes the
        * necessary CIDR blocks for communication with the nodes or Fargate pods. For more information,
-       * see [Amazon EKS cluster endpoint access
-       * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+       * see [Cluster API server
+       * endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
        * **Amazon EKS User Guide** .
        */
       public fun endpointPrivateAccess(endpointPrivateAccess: IResolvable)
@@ -4289,9 +4712,10 @@ public open class CfnCluster(
        * cluster's Kubernetes API server endpoint.
        * If you disable public access, your cluster's Kubernetes API server can only receive
        * requests from within the cluster VPC. The default value for this parameter is `true` , which
-       * enables public access for your Kubernetes API server. For more information, see [Amazon EKS
-       * cluster endpoint access
-       * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+       * enables public access for your Kubernetes API server. The endpoint domain name and IP address
+       * family depends on the value of the `ipFamily` for the cluster. For more information, see
+       * [Cluster API server
+       * endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
        * **Amazon EKS User Guide** .
        */
       public fun endpointPublicAccess(endpointPublicAccess: Boolean)
@@ -4301,9 +4725,10 @@ public open class CfnCluster(
        * cluster's Kubernetes API server endpoint.
        * If you disable public access, your cluster's Kubernetes API server can only receive
        * requests from within the cluster VPC. The default value for this parameter is `true` , which
-       * enables public access for your Kubernetes API server. For more information, see [Amazon EKS
-       * cluster endpoint access
-       * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+       * enables public access for your Kubernetes API server. The endpoint domain name and IP address
+       * family depends on the value of the `ipFamily` for the cluster. For more information, see
+       * [Cluster API server
+       * endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
        * **Amazon EKS User Guide** .
        */
       public fun endpointPublicAccess(endpointPublicAccess: IResolvable)
@@ -4312,11 +4737,16 @@ public open class CfnCluster(
        * @param publicAccessCidrs The CIDR blocks that are allowed access to your cluster's public
        * Kubernetes API server endpoint.
        * Communication to the endpoint from addresses outside of the CIDR blocks that you specify is
-       * denied. The default value is `0.0.0.0/0` . If you've disabled private endpoint access, make
-       * sure that you specify the necessary CIDR blocks for every node and AWS Fargate `Pod` in the
-       * cluster. For more information, see [Amazon EKS cluster endpoint access
-       * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+       * denied. The default value is `0.0.0.0/0` and additionally `::/0` for dual-stack `IPv6`
+       * clusters. If you've disabled private endpoint access, make sure that you specify the necessary
+       * CIDR blocks for every node and AWS Fargate `Pod` in the cluster. For more information, see
+       * [Cluster API server
+       * endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
        * **Amazon EKS User Guide** .
+       *
+       * Note that the public endpoints are dual-stack for only `IPv6` clusters that are made after
+       * October 2024. You can't add `IPv6` CIDR blocks to `IPv4` clusters or `IPv6` clusters that were
+       * made before October 2024.
        */
       public fun publicAccessCidrs(publicAccessCidrs: List<String>)
 
@@ -4324,11 +4754,16 @@ public open class CfnCluster(
        * @param publicAccessCidrs The CIDR blocks that are allowed access to your cluster's public
        * Kubernetes API server endpoint.
        * Communication to the endpoint from addresses outside of the CIDR blocks that you specify is
-       * denied. The default value is `0.0.0.0/0` . If you've disabled private endpoint access, make
-       * sure that you specify the necessary CIDR blocks for every node and AWS Fargate `Pod` in the
-       * cluster. For more information, see [Amazon EKS cluster endpoint access
-       * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+       * denied. The default value is `0.0.0.0/0` and additionally `::/0` for dual-stack `IPv6`
+       * clusters. If you've disabled private endpoint access, make sure that you specify the necessary
+       * CIDR blocks for every node and AWS Fargate `Pod` in the cluster. For more information, see
+       * [Cluster API server
+       * endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
        * **Amazon EKS User Guide** .
+       *
+       * Note that the public endpoints are dual-stack for only `IPv6` clusters that are made after
+       * October 2024. You can't add `IPv6` CIDR blocks to `IPv4` clusters or `IPv6` clusters that were
+       * made before October 2024.
        */
       public fun publicAccessCidrs(vararg publicAccessCidrs: String)
 
@@ -4384,8 +4819,8 @@ public open class CfnCluster(
        * private access for your Kubernetes API server. If you disable private access and you have
        * nodes or AWS Fargate pods in the cluster, then ensure that `publicAccessCidrs` includes the
        * necessary CIDR blocks for communication with the nodes or Fargate pods. For more information,
-       * see [Amazon EKS cluster endpoint access
-       * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+       * see [Cluster API server
+       * endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
        * **Amazon EKS User Guide** .
        */
       override fun endpointPrivateAccess(endpointPrivateAccess: Boolean) {
@@ -4400,8 +4835,8 @@ public open class CfnCluster(
        * private access for your Kubernetes API server. If you disable private access and you have
        * nodes or AWS Fargate pods in the cluster, then ensure that `publicAccessCidrs` includes the
        * necessary CIDR blocks for communication with the nodes or Fargate pods. For more information,
-       * see [Amazon EKS cluster endpoint access
-       * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+       * see [Cluster API server
+       * endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
        * **Amazon EKS User Guide** .
        */
       override fun endpointPrivateAccess(endpointPrivateAccess: IResolvable) {
@@ -4413,9 +4848,10 @@ public open class CfnCluster(
        * cluster's Kubernetes API server endpoint.
        * If you disable public access, your cluster's Kubernetes API server can only receive
        * requests from within the cluster VPC. The default value for this parameter is `true` , which
-       * enables public access for your Kubernetes API server. For more information, see [Amazon EKS
-       * cluster endpoint access
-       * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+       * enables public access for your Kubernetes API server. The endpoint domain name and IP address
+       * family depends on the value of the `ipFamily` for the cluster. For more information, see
+       * [Cluster API server
+       * endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
        * **Amazon EKS User Guide** .
        */
       override fun endpointPublicAccess(endpointPublicAccess: Boolean) {
@@ -4427,9 +4863,10 @@ public open class CfnCluster(
        * cluster's Kubernetes API server endpoint.
        * If you disable public access, your cluster's Kubernetes API server can only receive
        * requests from within the cluster VPC. The default value for this parameter is `true` , which
-       * enables public access for your Kubernetes API server. For more information, see [Amazon EKS
-       * cluster endpoint access
-       * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+       * enables public access for your Kubernetes API server. The endpoint domain name and IP address
+       * family depends on the value of the `ipFamily` for the cluster. For more information, see
+       * [Cluster API server
+       * endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
        * **Amazon EKS User Guide** .
        */
       override fun endpointPublicAccess(endpointPublicAccess: IResolvable) {
@@ -4440,11 +4877,16 @@ public open class CfnCluster(
        * @param publicAccessCidrs The CIDR blocks that are allowed access to your cluster's public
        * Kubernetes API server endpoint.
        * Communication to the endpoint from addresses outside of the CIDR blocks that you specify is
-       * denied. The default value is `0.0.0.0/0` . If you've disabled private endpoint access, make
-       * sure that you specify the necessary CIDR blocks for every node and AWS Fargate `Pod` in the
-       * cluster. For more information, see [Amazon EKS cluster endpoint access
-       * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+       * denied. The default value is `0.0.0.0/0` and additionally `::/0` for dual-stack `IPv6`
+       * clusters. If you've disabled private endpoint access, make sure that you specify the necessary
+       * CIDR blocks for every node and AWS Fargate `Pod` in the cluster. For more information, see
+       * [Cluster API server
+       * endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
        * **Amazon EKS User Guide** .
+       *
+       * Note that the public endpoints are dual-stack for only `IPv6` clusters that are made after
+       * October 2024. You can't add `IPv6` CIDR blocks to `IPv4` clusters or `IPv6` clusters that were
+       * made before October 2024.
        */
       override fun publicAccessCidrs(publicAccessCidrs: List<String>) {
         cdkBuilder.publicAccessCidrs(publicAccessCidrs)
@@ -4454,11 +4896,16 @@ public open class CfnCluster(
        * @param publicAccessCidrs The CIDR blocks that are allowed access to your cluster's public
        * Kubernetes API server endpoint.
        * Communication to the endpoint from addresses outside of the CIDR blocks that you specify is
-       * denied. The default value is `0.0.0.0/0` . If you've disabled private endpoint access, make
-       * sure that you specify the necessary CIDR blocks for every node and AWS Fargate `Pod` in the
-       * cluster. For more information, see [Amazon EKS cluster endpoint access
-       * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+       * denied. The default value is `0.0.0.0/0` and additionally `::/0` for dual-stack `IPv6`
+       * clusters. If you've disabled private endpoint access, make sure that you specify the necessary
+       * CIDR blocks for every node and AWS Fargate `Pod` in the cluster. For more information, see
+       * [Cluster API server
+       * endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
        * **Amazon EKS User Guide** .
+       *
+       * Note that the public endpoints are dual-stack for only `IPv6` clusters that are made after
+       * October 2024. You can't add `IPv6` CIDR blocks to `IPv4` clusters or `IPv6` clusters that were
+       * made before October 2024.
        */
       override fun publicAccessCidrs(vararg publicAccessCidrs: String): Unit =
           publicAccessCidrs(publicAccessCidrs.toList())
@@ -4523,8 +4970,8 @@ public open class CfnCluster(
        * private access for your Kubernetes API server. If you disable private access and you have
        * nodes or AWS Fargate pods in the cluster, then ensure that `publicAccessCidrs` includes the
        * necessary CIDR blocks for communication with the nodes or Fargate pods. For more information,
-       * see [Amazon EKS cluster endpoint access
-       * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+       * see [Cluster API server
+       * endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
        * **Amazon EKS User Guide** .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-endpointprivateaccess)
@@ -4537,9 +4984,10 @@ public open class CfnCluster(
        *
        * If you disable public access, your cluster's Kubernetes API server can only receive
        * requests from within the cluster VPC. The default value for this parameter is `true` , which
-       * enables public access for your Kubernetes API server. For more information, see [Amazon EKS
-       * cluster endpoint access
-       * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+       * enables public access for your Kubernetes API server. The endpoint domain name and IP address
+       * family depends on the value of the `ipFamily` for the cluster. For more information, see
+       * [Cluster API server
+       * endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
        * **Amazon EKS User Guide** .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-endpointpublicaccess)
@@ -4551,11 +4999,16 @@ public open class CfnCluster(
        * endpoint.
        *
        * Communication to the endpoint from addresses outside of the CIDR blocks that you specify is
-       * denied. The default value is `0.0.0.0/0` . If you've disabled private endpoint access, make
-       * sure that you specify the necessary CIDR blocks for every node and AWS Fargate `Pod` in the
-       * cluster. For more information, see [Amazon EKS cluster endpoint access
-       * control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
+       * denied. The default value is `0.0.0.0/0` and additionally `::/0` for dual-stack `IPv6`
+       * clusters. If you've disabled private endpoint access, make sure that you specify the necessary
+       * CIDR blocks for every node and AWS Fargate `Pod` in the cluster. For more information, see
+       * [Cluster API server
+       * endpoint](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the
        * **Amazon EKS User Guide** .
+       *
+       * Note that the public endpoints are dual-stack for only `IPv6` clusters that are made after
+       * October 2024. You can't add `IPv6` CIDR blocks to `IPv4` clusters or `IPv6` clusters that were
+       * made before October 2024.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-publicaccesscidrs)
        */
@@ -4608,7 +5061,10 @@ public open class CfnCluster(
   }
 
   /**
-   * Todo: add description.
+   * Request to update the configuration of the storage capability of your EKS Auto Mode cluster.
+   *
+   * For example, enable the capability. For more information, see EKS Auto Mode block storage
+   * capability in the *Amazon EKS User Guide* .
    *
    * Example:
    *
@@ -4627,7 +5083,7 @@ public open class CfnCluster(
    */
   public interface StorageConfigProperty {
     /**
-     * Todo: add description.
+     * Request to configure EBS Block Storage settings for your EKS Auto Mode cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-storageconfig.html#cfn-eks-cluster-storageconfig-blockstorage)
      */
@@ -4639,17 +5095,20 @@ public open class CfnCluster(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param blockStorage Todo: add description.
+       * @param blockStorage Request to configure EBS Block Storage settings for your EKS Auto Mode
+       * cluster.
        */
       public fun blockStorage(blockStorage: IResolvable)
 
       /**
-       * @param blockStorage Todo: add description.
+       * @param blockStorage Request to configure EBS Block Storage settings for your EKS Auto Mode
+       * cluster.
        */
       public fun blockStorage(blockStorage: BlockStorageProperty)
 
       /**
-       * @param blockStorage Todo: add description.
+       * @param blockStorage Request to configure EBS Block Storage settings for your EKS Auto Mode
+       * cluster.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5320a834ec88a1f139ade6a04f4d1aacb18bb2dbc976bc8d190fc7851e9b3ba1")
@@ -4662,21 +5121,24 @@ public open class CfnCluster(
           software.amazon.awscdk.services.eks.CfnCluster.StorageConfigProperty.builder()
 
       /**
-       * @param blockStorage Todo: add description.
+       * @param blockStorage Request to configure EBS Block Storage settings for your EKS Auto Mode
+       * cluster.
        */
       override fun blockStorage(blockStorage: IResolvable) {
         cdkBuilder.blockStorage(blockStorage.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param blockStorage Todo: add description.
+       * @param blockStorage Request to configure EBS Block Storage settings for your EKS Auto Mode
+       * cluster.
        */
       override fun blockStorage(blockStorage: BlockStorageProperty) {
         cdkBuilder.blockStorage(blockStorage.let(BlockStorageProperty.Companion::unwrap))
       }
 
       /**
-       * @param blockStorage Todo: add description.
+       * @param blockStorage Request to configure EBS Block Storage settings for your EKS Auto Mode
+       * cluster.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5320a834ec88a1f139ade6a04f4d1aacb18bb2dbc976bc8d190fc7851e9b3ba1")
@@ -4692,7 +5154,7 @@ public open class CfnCluster(
     ) : CdkObject(cdkObject),
         StorageConfigProperty {
       /**
-       * Todo: add description.
+       * Request to configure EBS Block Storage settings for your EKS Auto Mode cluster.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-storageconfig.html#cfn-eks-cluster-storageconfig-blockstorage)
        */
@@ -4718,7 +5180,14 @@ public open class CfnCluster(
   }
 
   /**
-   * An object representing the Upgrade Policy to use for the cluster.
+   * The support policy to use for the cluster.
+   *
+   * Extended support allows you to remain on specific Kubernetes versions for longer. Clusters in
+   * extended support have higher costs. The default value is `EXTENDED` . Use `STANDARD` to disable
+   * extended support.
+   *
+   * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+   * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
    *
    * Example:
    *
@@ -4735,7 +5204,14 @@ public open class CfnCluster(
    */
   public interface UpgradePolicyProperty {
     /**
-     * Specify the support type for your cluster.
+     * If the cluster is set to `EXTENDED` , it will enter extended support at the end of standard
+     * support.
+     *
+     * If the cluster is set to `STANDARD` , it will be automatically upgraded at the end of
+     * standard support.
+     *
+     * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+     * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-upgradepolicy.html#cfn-eks-cluster-upgradepolicy-supporttype)
      */
@@ -4747,7 +5223,13 @@ public open class CfnCluster(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param supportType Specify the support type for your cluster.
+       * @param supportType If the cluster is set to `EXTENDED` , it will enter extended support at
+       * the end of standard support.
+       * If the cluster is set to `STANDARD` , it will be automatically upgraded at the end of
+       * standard support.
+       *
+       * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+       * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
        */
       public fun supportType(supportType: String)
     }
@@ -4758,7 +5240,13 @@ public open class CfnCluster(
           software.amazon.awscdk.services.eks.CfnCluster.UpgradePolicyProperty.builder()
 
       /**
-       * @param supportType Specify the support type for your cluster.
+       * @param supportType If the cluster is set to `EXTENDED` , it will enter extended support at
+       * the end of standard support.
+       * If the cluster is set to `STANDARD` , it will be automatically upgraded at the end of
+       * standard support.
+       *
+       * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+       * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
        */
       override fun supportType(supportType: String) {
         cdkBuilder.supportType(supportType)
@@ -4773,7 +5261,14 @@ public open class CfnCluster(
     ) : CdkObject(cdkObject),
         UpgradePolicyProperty {
       /**
-       * Specify the support type for your cluster.
+       * If the cluster is set to `EXTENDED` , it will enter extended support at the end of standard
+       * support.
+       *
+       * If the cluster is set to `STANDARD` , it will be automatically upgraded at the end of
+       * standard support.
+       *
+       * [Learn more about EKS Extended Support in the *Amazon EKS User Guide*
+       * .](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-upgradepolicy.html#cfn-eks-cluster-upgradepolicy-supporttype)
        */

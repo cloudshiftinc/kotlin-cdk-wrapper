@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
+import kotlin.String
 import kotlin.Unit
 
 /**
@@ -80,6 +81,12 @@ public interface AmazonLinux2ImageSsmParameterProps : AmazonLinuxImageSsmParamet
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key.
+     */
+    public fun additionalCacheKey(additionalCacheKey: String)
+
+    /**
      * @param cachedInContext Whether the AMI ID is cached to be stable between deployments.
      * By default, the newest image is used on each deployment. This will cause
      * instances to be replaced whenever a new version is released, and may cause
@@ -132,6 +139,14 @@ public interface AmazonLinux2ImageSsmParameterProps : AmazonLinuxImageSsmParamet
     private val cdkBuilder:
         software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameterProps.Builder =
         software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameterProps.builder()
+
+    /**
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key.
+     */
+    override fun additionalCacheKey(additionalCacheKey: String) {
+      cdkBuilder.additionalCacheKey(additionalCacheKey)
+    }
 
     /**
      * @param cachedInContext Whether the AMI ID is cached to be stable between deployments.
@@ -203,6 +218,13 @@ public interface AmazonLinux2ImageSsmParameterProps : AmazonLinuxImageSsmParamet
     cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameterProps,
   ) : CdkObject(cdkObject),
       AmazonLinux2ImageSsmParameterProps {
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     */
+    override fun additionalCacheKey(): String? = unwrap(this).getAdditionalCacheKey()
+
     /**
      * Whether the AMI ID is cached to be stable between deployments.
      *

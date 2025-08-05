@@ -58,6 +58,12 @@ public open class ApiDestination(
   public override fun apiDestinationArn(): String = unwrap(this).getApiDestinationArn()
 
   /**
+   * The Amazon Resource Name (ARN) of an API destination in resource format.
+   */
+  public override fun apiDestinationArnForPolicy(): String? =
+      unwrap(this).getApiDestinationArnForPolicy()
+
+  /**
    * The Name of the Api Destination created.
    */
   public override fun apiDestinationName(): String = unwrap(this).getApiDestinationName()
@@ -198,6 +204,9 @@ public open class ApiDestination(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.events.ApiDestination.PROPERTY_INJECTION_ID
+
     public fun fromApiDestinationAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

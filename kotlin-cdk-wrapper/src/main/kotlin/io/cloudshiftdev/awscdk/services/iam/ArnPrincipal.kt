@@ -16,15 +16,15 @@ import kotlin.String
  * ```
  * // Option 2: create your custom mastersRole with scoped assumeBy arn as the Cluster prop. Switch
  * to this role from the AWS console.
- * import io.cloudshiftdev.awscdk.cdk.lambdalayer.kubectl.v31.KubectlV31Layer;
+ * import io.cloudshiftdev.awscdk.cdk.lambdalayer.kubectl.v33.KubectlV33Layer;
  * Vpc vpc;
  * Role mastersRole = Role.Builder.create(this, "MastersRole")
  * .assumedBy(new ArnPrincipal("arn_for_trusted_principal"))
  * .build();
  * Cluster cluster = Cluster.Builder.create(this, "EksCluster")
  * .vpc(vpc)
- * .version(KubernetesVersion.V1_31)
- * .kubectlLayer(new KubectlV31Layer(this, "KubectlLayer"))
+ * .version(KubernetesVersion.V1_33)
+ * .kubectlLayer(new KubectlV33Layer(this, "KubectlLayer"))
  * .mastersRole(mastersRole)
  * .build();
  * mastersRole.addToPolicy(PolicyStatement.Builder.create()

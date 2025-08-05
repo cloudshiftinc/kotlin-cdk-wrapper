@@ -1162,7 +1162,7 @@ public open class CfnPipeline(
        * The existing attributes remain in the message, so if you want to remove the originals, use
        * "RemoveAttributeActivity".
        */
-      public fun attributes(attributes: IResolvable)
+      public fun attributes(attributes: Map<String, String>)
 
       /**
        * @param attributes A list of 1-50 "AttributeNameMapping" objects that map an existing
@@ -1171,7 +1171,7 @@ public open class CfnPipeline(
        * The existing attributes remain in the message, so if you want to remove the originals, use
        * "RemoveAttributeActivity".
        */
-      public fun attributes(attributes: Map<String, String>)
+      public fun attributes(attributes: IResolvable)
 
       /**
        * @param name The name of the 'addAttributes' activity. 
@@ -1196,8 +1196,8 @@ public open class CfnPipeline(
        * The existing attributes remain in the message, so if you want to remove the originals, use
        * "RemoveAttributeActivity".
        */
-      override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
+      override fun attributes(attributes: Map<String, String>) {
+        cdkBuilder.attributes(attributes)
       }
 
       /**
@@ -1207,8 +1207,8 @@ public open class CfnPipeline(
        * The existing attributes remain in the message, so if you want to remove the originals, use
        * "RemoveAttributeActivity".
        */
-      override fun attributes(attributes: Map<String, String>) {
-        cdkBuilder.attributes(attributes)
+      override fun attributes(attributes: IResolvable) {
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       /**

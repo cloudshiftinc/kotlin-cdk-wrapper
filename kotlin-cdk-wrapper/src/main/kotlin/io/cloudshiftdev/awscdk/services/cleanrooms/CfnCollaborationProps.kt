@@ -24,26 +24,30 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
  * CfnCollaborationProps cfnCollaborationProps = CfnCollaborationProps.builder()
  * .creatorDisplayName("creatorDisplayName")
- * .creatorMemberAbilities(List.of("creatorMemberAbilities"))
  * .description("description")
- * .members(List.of(MemberSpecificationProperty.builder()
- * .accountId("accountId")
- * .displayName("displayName")
- * .memberAbilities(List.of("memberAbilities"))
- * // the properties below are optional
- * .paymentConfiguration(PaymentConfigurationProperty.builder()
- * .queryCompute(QueryComputePaymentConfigProperty.builder()
- * .isResponsible(false)
- * .build())
- * .build())
- * .build()))
  * .name("name")
  * .queryLogStatus("queryLogStatus")
  * // the properties below are optional
  * .analyticsEngine("analyticsEngine")
+ * .creatorMemberAbilities(List.of("creatorMemberAbilities"))
+ * .creatorMlMemberAbilities(MLMemberAbilitiesProperty.builder()
+ * .customMlMemberAbilities(List.of("customMlMemberAbilities"))
+ * .build())
  * .creatorPaymentConfiguration(PaymentConfigurationProperty.builder()
  * .queryCompute(QueryComputePaymentConfigProperty.builder()
  * .isResponsible(false)
+ * .build())
+ * // the properties below are optional
+ * .jobCompute(JobComputePaymentConfigProperty.builder()
+ * .isResponsible(false)
+ * .build())
+ * .machineLearning(MLPaymentConfigProperty.builder()
+ * .modelInference(ModelInferencePaymentConfigProperty.builder()
+ * .isResponsible(false)
+ * .build())
+ * .modelTraining(ModelTrainingPaymentConfigProperty.builder()
+ * .isResponsible(false)
+ * .build())
  * .build())
  * .build())
  * .dataEncryptionMetadata(DataEncryptionMetadataProperty.builder()
@@ -52,6 +56,33 @@ import kotlin.jvm.JvmName
  * .allowJoinsOnColumnsWithDifferentNames(false)
  * .preserveNulls(false)
  * .build())
+ * .jobLogStatus("jobLogStatus")
+ * .members(List.of(MemberSpecificationProperty.builder()
+ * .accountId("accountId")
+ * .displayName("displayName")
+ * // the properties below are optional
+ * .memberAbilities(List.of("memberAbilities"))
+ * .mlMemberAbilities(MLMemberAbilitiesProperty.builder()
+ * .customMlMemberAbilities(List.of("customMlMemberAbilities"))
+ * .build())
+ * .paymentConfiguration(PaymentConfigurationProperty.builder()
+ * .queryCompute(QueryComputePaymentConfigProperty.builder()
+ * .isResponsible(false)
+ * .build())
+ * // the properties below are optional
+ * .jobCompute(JobComputePaymentConfigProperty.builder()
+ * .isResponsible(false)
+ * .build())
+ * .machineLearning(MLPaymentConfigProperty.builder()
+ * .modelInference(ModelInferencePaymentConfigProperty.builder()
+ * .isResponsible(false)
+ * .build())
+ * .modelTraining(ModelTrainingPaymentConfigProperty.builder()
+ * .isResponsible(false)
+ * .build())
+ * .build())
+ * .build())
+ * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -64,6 +95,10 @@ import kotlin.jvm.JvmName
 public interface CfnCollaborationProps {
   /**
    * The analytics engine for the collaboration.
+   *
+   *
+   * After July 16, 2025, the `CLEAN_ROOMS_SQL` parameter will no longer be available.
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-analyticsengine)
    */
@@ -79,11 +114,19 @@ public interface CfnCollaborationProps {
   /**
    * The abilities granted to the collaboration creator.
    *
-   * *Allowed values* `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
+   * *Allowed values* `CAN_QUERY` | `CAN_RECEIVE_RESULTS` | `CAN_RUN_JOB`
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-creatormemberabilities)
    */
-  public fun creatorMemberAbilities(): List<String>
+  public fun creatorMemberAbilities(): List<String> = unwrap(this).getCreatorMemberAbilities() ?:
+      emptyList()
+
+  /**
+   * The ML member abilities for a collaboration member.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-creatormlmemberabilities)
+   */
+  public fun creatorMlMemberAbilities(): Any? = unwrap(this).getCreatorMlMemberAbilities()
 
   /**
    * An object representing the collaboration member's payment responsibilities set by the
@@ -108,13 +151,23 @@ public interface CfnCollaborationProps {
   public fun description(): String
 
   /**
+   * An indicator as to whether job logging has been enabled or disabled for the collaboration.
+   *
+   * When `ENABLED` , AWS Clean Rooms logs details about jobs run within this collaboration and
+   * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-joblogstatus)
+   */
+  public fun jobLogStatus(): String? = unwrap(this).getJobLogStatus()
+
+  /**
    * A list of initial members, not including the creator.
    *
    * This list is immutable.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-members)
    */
-  public fun members(): Any
+  public fun members(): Any? = unwrap(this).getMembers()
 
   /**
    * A human-readable identifier provided by the collaboration owner.
@@ -127,6 +180,9 @@ public interface CfnCollaborationProps {
 
   /**
    * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+   *
+   * When `ENABLED` , AWS Clean Rooms logs details about queries run within this collaboration and
+   * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-querylogstatus)
    */
@@ -150,6 +206,8 @@ public interface CfnCollaborationProps {
   public interface Builder {
     /**
      * @param analyticsEngine The analytics engine for the collaboration.
+     *
+     * After July 16, 2025, the `CLEAN_ROOMS_SQL` parameter will no longer be available.
      */
     public fun analyticsEngine(analyticsEngine: String)
 
@@ -159,16 +217,35 @@ public interface CfnCollaborationProps {
     public fun creatorDisplayName(creatorDisplayName: String)
 
     /**
-     * @param creatorMemberAbilities The abilities granted to the collaboration creator. 
-     * *Allowed values* `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
+     * @param creatorMemberAbilities The abilities granted to the collaboration creator.
+     * *Allowed values* `CAN_QUERY` | `CAN_RECEIVE_RESULTS` | `CAN_RUN_JOB`
      */
     public fun creatorMemberAbilities(creatorMemberAbilities: List<String>)
 
     /**
-     * @param creatorMemberAbilities The abilities granted to the collaboration creator. 
-     * *Allowed values* `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
+     * @param creatorMemberAbilities The abilities granted to the collaboration creator.
+     * *Allowed values* `CAN_QUERY` | `CAN_RECEIVE_RESULTS` | `CAN_RUN_JOB`
      */
     public fun creatorMemberAbilities(vararg creatorMemberAbilities: String)
+
+    /**
+     * @param creatorMlMemberAbilities The ML member abilities for a collaboration member.
+     */
+    public fun creatorMlMemberAbilities(creatorMlMemberAbilities: IResolvable)
+
+    /**
+     * @param creatorMlMemberAbilities The ML member abilities for a collaboration member.
+     */
+    public
+        fun creatorMlMemberAbilities(creatorMlMemberAbilities: CfnCollaboration.MLMemberAbilitiesProperty)
+
+    /**
+     * @param creatorMlMemberAbilities The ML member abilities for a collaboration member.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ca707deb47b35cbd877c2b2bee51b938409b2a62ffcffb2dc8457f92dbb3d9e8")
+    public
+        fun creatorMlMemberAbilities(creatorMlMemberAbilities: CfnCollaboration.MLMemberAbilitiesProperty.Builder.() -> Unit)
 
     /**
      * @param creatorPaymentConfiguration An object representing the collaboration member's payment
@@ -220,19 +297,27 @@ public interface CfnCollaborationProps {
     public fun description(description: String)
 
     /**
-     * @param members A list of initial members, not including the creator. 
+     * @param jobLogStatus An indicator as to whether job logging has been enabled or disabled for
+     * the collaboration.
+     * When `ENABLED` , AWS Clean Rooms logs details about jobs run within this collaboration and
+     * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
+     */
+    public fun jobLogStatus(jobLogStatus: String)
+
+    /**
+     * @param members A list of initial members, not including the creator.
      * This list is immutable.
      */
     public fun members(members: IResolvable)
 
     /**
-     * @param members A list of initial members, not including the creator. 
+     * @param members A list of initial members, not including the creator.
      * This list is immutable.
      */
     public fun members(members: List<Any>)
 
     /**
-     * @param members A list of initial members, not including the creator. 
+     * @param members A list of initial members, not including the creator.
      * This list is immutable.
      */
     public fun members(vararg members: Any)
@@ -246,6 +331,8 @@ public interface CfnCollaborationProps {
     /**
      * @param queryLogStatus An indicator as to whether query logging has been enabled or disabled
      * for the collaboration. 
+     * When `ENABLED` , AWS Clean Rooms logs details about queries run within this collaboration and
+     * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
      */
     public fun queryLogStatus(queryLogStatus: String)
 
@@ -272,6 +359,8 @@ public interface CfnCollaborationProps {
 
     /**
      * @param analyticsEngine The analytics engine for the collaboration.
+     *
+     * After July 16, 2025, the `CLEAN_ROOMS_SQL` parameter will no longer be available.
      */
     override fun analyticsEngine(analyticsEngine: String) {
       cdkBuilder.analyticsEngine(analyticsEngine)
@@ -285,19 +374,44 @@ public interface CfnCollaborationProps {
     }
 
     /**
-     * @param creatorMemberAbilities The abilities granted to the collaboration creator. 
-     * *Allowed values* `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
+     * @param creatorMemberAbilities The abilities granted to the collaboration creator.
+     * *Allowed values* `CAN_QUERY` | `CAN_RECEIVE_RESULTS` | `CAN_RUN_JOB`
      */
     override fun creatorMemberAbilities(creatorMemberAbilities: List<String>) {
       cdkBuilder.creatorMemberAbilities(creatorMemberAbilities)
     }
 
     /**
-     * @param creatorMemberAbilities The abilities granted to the collaboration creator. 
-     * *Allowed values* `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
+     * @param creatorMemberAbilities The abilities granted to the collaboration creator.
+     * *Allowed values* `CAN_QUERY` | `CAN_RECEIVE_RESULTS` | `CAN_RUN_JOB`
      */
     override fun creatorMemberAbilities(vararg creatorMemberAbilities: String): Unit =
         creatorMemberAbilities(creatorMemberAbilities.toList())
+
+    /**
+     * @param creatorMlMemberAbilities The ML member abilities for a collaboration member.
+     */
+    override fun creatorMlMemberAbilities(creatorMlMemberAbilities: IResolvable) {
+      cdkBuilder.creatorMlMemberAbilities(creatorMlMemberAbilities.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param creatorMlMemberAbilities The ML member abilities for a collaboration member.
+     */
+    override
+        fun creatorMlMemberAbilities(creatorMlMemberAbilities: CfnCollaboration.MLMemberAbilitiesProperty) {
+      cdkBuilder.creatorMlMemberAbilities(creatorMlMemberAbilities.let(CfnCollaboration.MLMemberAbilitiesProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param creatorMlMemberAbilities The ML member abilities for a collaboration member.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ca707deb47b35cbd877c2b2bee51b938409b2a62ffcffb2dc8457f92dbb3d9e8")
+    override
+        fun creatorMlMemberAbilities(creatorMlMemberAbilities: CfnCollaboration.MLMemberAbilitiesProperty.Builder.() -> Unit):
+        Unit =
+        creatorMlMemberAbilities(CfnCollaboration.MLMemberAbilitiesProperty(creatorMlMemberAbilities))
 
     /**
      * @param creatorPaymentConfiguration An object representing the collaboration member's payment
@@ -363,7 +477,17 @@ public interface CfnCollaborationProps {
     }
 
     /**
-     * @param members A list of initial members, not including the creator. 
+     * @param jobLogStatus An indicator as to whether job logging has been enabled or disabled for
+     * the collaboration.
+     * When `ENABLED` , AWS Clean Rooms logs details about jobs run within this collaboration and
+     * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
+     */
+    override fun jobLogStatus(jobLogStatus: String) {
+      cdkBuilder.jobLogStatus(jobLogStatus)
+    }
+
+    /**
+     * @param members A list of initial members, not including the creator.
      * This list is immutable.
      */
     override fun members(members: IResolvable) {
@@ -371,7 +495,7 @@ public interface CfnCollaborationProps {
     }
 
     /**
-     * @param members A list of initial members, not including the creator. 
+     * @param members A list of initial members, not including the creator.
      * This list is immutable.
      */
     override fun members(members: List<Any>) {
@@ -379,7 +503,7 @@ public interface CfnCollaborationProps {
     }
 
     /**
-     * @param members A list of initial members, not including the creator. 
+     * @param members A list of initial members, not including the creator.
      * This list is immutable.
      */
     override fun members(vararg members: Any): Unit = members(members.toList())
@@ -395,6 +519,8 @@ public interface CfnCollaborationProps {
     /**
      * @param queryLogStatus An indicator as to whether query logging has been enabled or disabled
      * for the collaboration. 
+     * When `ENABLED` , AWS Clean Rooms logs details about queries run within this collaboration and
+     * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
      */
     override fun queryLogStatus(queryLogStatus: String) {
       cdkBuilder.queryLogStatus(queryLogStatus)
@@ -429,6 +555,10 @@ public interface CfnCollaborationProps {
     /**
      * The analytics engine for the collaboration.
      *
+     *
+     * After July 16, 2025, the `CLEAN_ROOMS_SQL` parameter will no longer be available.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-analyticsengine)
      */
     override fun analyticsEngine(): String? = unwrap(this).getAnalyticsEngine()
@@ -443,11 +573,19 @@ public interface CfnCollaborationProps {
     /**
      * The abilities granted to the collaboration creator.
      *
-     * *Allowed values* `CAN_QUERY` | `CAN_RECEIVE_RESULTS`
+     * *Allowed values* `CAN_QUERY` | `CAN_RECEIVE_RESULTS` | `CAN_RUN_JOB`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-creatormemberabilities)
      */
     override fun creatorMemberAbilities(): List<String> = unwrap(this).getCreatorMemberAbilities()
+        ?: emptyList()
+
+    /**
+     * The ML member abilities for a collaboration member.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-creatormlmemberabilities)
+     */
+    override fun creatorMlMemberAbilities(): Any? = unwrap(this).getCreatorMlMemberAbilities()
 
     /**
      * An object representing the collaboration member's payment responsibilities set by the
@@ -472,13 +610,23 @@ public interface CfnCollaborationProps {
     override fun description(): String = unwrap(this).getDescription()
 
     /**
+     * An indicator as to whether job logging has been enabled or disabled for the collaboration.
+     *
+     * When `ENABLED` , AWS Clean Rooms logs details about jobs run within this collaboration and
+     * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-joblogstatus)
+     */
+    override fun jobLogStatus(): String? = unwrap(this).getJobLogStatus()
+
+    /**
      * A list of initial members, not including the creator.
      *
      * This list is immutable.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-members)
      */
-    override fun members(): Any = unwrap(this).getMembers()
+    override fun members(): Any? = unwrap(this).getMembers()
 
     /**
      * A human-readable identifier provided by the collaboration owner.
@@ -491,6 +639,9 @@ public interface CfnCollaborationProps {
 
     /**
      * An indicator as to whether query logging has been enabled or disabled for the collaboration.
+     *
+     * When `ENABLED` , AWS Clean Rooms logs details about queries run within this collaboration and
+     * those logs can be viewed in Amazon CloudWatch Logs. The default value is `DISABLED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-querylogstatus)
      */

@@ -80,25 +80,25 @@ public interface CfnGatewayResponseProps {
      * @param responseParameters Response parameters (paths, query strings and headers) of the
      * GatewayResponse as a string-to-string map of key-value pairs.
      */
-    public fun responseParameters(responseParameters: IResolvable)
+    public fun responseParameters(responseParameters: Map<String, String>)
 
     /**
      * @param responseParameters Response parameters (paths, query strings and headers) of the
      * GatewayResponse as a string-to-string map of key-value pairs.
      */
-    public fun responseParameters(responseParameters: Map<String, String>)
-
-    /**
-     * @param responseTemplates Response templates of the GatewayResponse as a string-to-string map
-     * of key-value pairs.
-     */
-    public fun responseTemplates(responseTemplates: IResolvable)
+    public fun responseParameters(responseParameters: IResolvable)
 
     /**
      * @param responseTemplates Response templates of the GatewayResponse as a string-to-string map
      * of key-value pairs.
      */
     public fun responseTemplates(responseTemplates: Map<String, String>)
+
+    /**
+     * @param responseTemplates Response templates of the GatewayResponse as a string-to-string map
+     * of key-value pairs.
+     */
+    public fun responseTemplates(responseTemplates: IResolvable)
 
     /**
      * @param responseType The response type of the associated GatewayResponse. 
@@ -125,24 +125,16 @@ public interface CfnGatewayResponseProps {
      * @param responseParameters Response parameters (paths, query strings and headers) of the
      * GatewayResponse as a string-to-string map of key-value pairs.
      */
-    override fun responseParameters(responseParameters: IResolvable) {
-      cdkBuilder.responseParameters(responseParameters.let(IResolvable.Companion::unwrap))
+    override fun responseParameters(responseParameters: Map<String, String>) {
+      cdkBuilder.responseParameters(responseParameters)
     }
 
     /**
      * @param responseParameters Response parameters (paths, query strings and headers) of the
      * GatewayResponse as a string-to-string map of key-value pairs.
      */
-    override fun responseParameters(responseParameters: Map<String, String>) {
-      cdkBuilder.responseParameters(responseParameters)
-    }
-
-    /**
-     * @param responseTemplates Response templates of the GatewayResponse as a string-to-string map
-     * of key-value pairs.
-     */
-    override fun responseTemplates(responseTemplates: IResolvable) {
-      cdkBuilder.responseTemplates(responseTemplates.let(IResolvable.Companion::unwrap))
+    override fun responseParameters(responseParameters: IResolvable) {
+      cdkBuilder.responseParameters(responseParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -151,6 +143,14 @@ public interface CfnGatewayResponseProps {
      */
     override fun responseTemplates(responseTemplates: Map<String, String>) {
       cdkBuilder.responseTemplates(responseTemplates)
+    }
+
+    /**
+     * @param responseTemplates Response templates of the GatewayResponse as a string-to-string map
+     * of key-value pairs.
+     */
+    override fun responseTemplates(responseTemplates: IResolvable) {
+      cdkBuilder.responseTemplates(responseTemplates.let(IResolvable.Companion::unwrap))
     }
 
     /**

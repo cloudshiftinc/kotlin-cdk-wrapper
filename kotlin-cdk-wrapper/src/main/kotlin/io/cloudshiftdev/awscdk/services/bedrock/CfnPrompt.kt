@@ -37,6 +37,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.bedrock.*;
+ * Object additionalModelRequestFields;
+ * Object any;
+ * Object auto;
+ * Object json;
  * CfnPrompt cfnPrompt = CfnPrompt.Builder.create(this, "MyCfnPrompt")
  * .name("name")
  * // the properties below are optional
@@ -48,7 +52,54 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .variants(List.of(PromptVariantProperty.builder()
  * .name("name")
  * .templateConfiguration(PromptTemplateConfigurationProperty.builder()
+ * .chat(ChatPromptTemplateConfigurationProperty.builder()
+ * .messages(List.of(MessageProperty.builder()
+ * .content(List.of(ContentBlockProperty.builder()
+ * .cachePoint(CachePointBlockProperty.builder()
+ * .type("type")
+ * .build())
+ * .text("text")
+ * .build()))
+ * .role("role")
+ * .build()))
+ * // the properties below are optional
+ * .inputVariables(List.of(PromptInputVariableProperty.builder()
+ * .name("name")
+ * .build()))
+ * .system(List.of(SystemContentBlockProperty.builder()
+ * .cachePoint(CachePointBlockProperty.builder()
+ * .type("type")
+ * .build())
+ * .text("text")
+ * .build()))
+ * .toolConfiguration(ToolConfigurationProperty.builder()
+ * .tools(List.of(ToolProperty.builder()
+ * .cachePoint(CachePointBlockProperty.builder()
+ * .type("type")
+ * .build())
+ * .toolSpec(ToolSpecificationProperty.builder()
+ * .inputSchema(ToolInputSchemaProperty.builder()
+ * .json(json)
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .toolChoice(ToolChoiceProperty.builder()
+ * .any(any)
+ * .auto(auto)
+ * .tool(SpecificToolChoiceProperty.builder()
+ * .name("name")
+ * .build())
+ * .build())
+ * .build())
+ * .build())
  * .text(TextPromptTemplateConfigurationProperty.builder()
+ * .cachePoint(CachePointBlockProperty.builder()
+ * .type("type")
+ * .build())
  * .inputVariables(List.of(PromptInputVariableProperty.builder()
  * .name("name")
  * .build()))
@@ -63,6 +114,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .templateType("templateType")
  * // the properties below are optional
+ * .additionalModelRequestFields(additionalModelRequestFields)
+ * .genAiResource(PromptGenAiResourceProperty.builder()
+ * .agent(PromptAgentResourceProperty.builder()
+ * .agentIdentifier("agentIdentifier")
+ * .build())
+ * .build())
  * .inferenceConfiguration(PromptInferenceConfigurationProperty.builder()
  * .text(PromptModelInferenceConfigurationProperty.builder()
  * .maxTokens(123)
@@ -71,6 +128,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .topP(123)
  * .build())
  * .build())
+ * .metadata(List.of(PromptMetadataEntryProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .modelId("modelId")
  * .build()))
  * .build();
@@ -431,6 +492,933 @@ public open class CfnPrompt(
   }
 
   /**
+   * Defines a section of content to be cached for reuse in subsequent API calls.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * CachePointBlockProperty cachePointBlockProperty = CachePointBlockProperty.builder()
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-cachepointblock.html)
+   */
+  public interface CachePointBlockProperty {
+    /**
+     * Specifies the type of cache point within the CachePointBlock.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-cachepointblock.html#cfn-bedrock-prompt-cachepointblock-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [CachePointBlockProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type Specifies the type of cache point within the CachePointBlock. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnPrompt.CachePointBlockProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnPrompt.CachePointBlockProperty.builder()
+
+      /**
+       * @param type Specifies the type of cache point within the CachePointBlock. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.bedrock.CfnPrompt.CachePointBlockProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.CachePointBlockProperty,
+    ) : CdkObject(cdkObject),
+        CachePointBlockProperty {
+      /**
+       * Specifies the type of cache point within the CachePointBlock.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-cachepointblock.html#cfn-bedrock-prompt-cachepointblock-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CachePointBlockProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.CachePointBlockProperty):
+          CachePointBlockProperty = CdkObjectWrappers.wrap(cdkObject) as? CachePointBlockProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CachePointBlockProperty):
+          software.amazon.awscdk.services.bedrock.CfnPrompt.CachePointBlockProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnPrompt.CachePointBlockProperty
+    }
+  }
+
+  /**
+   * Contains configurations to use a prompt in a conversational format.
+   *
+   * For more information, see [Create a prompt using Prompt
+   * management](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-create.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object any;
+   * Object auto;
+   * Object json;
+   * ChatPromptTemplateConfigurationProperty chatPromptTemplateConfigurationProperty =
+   * ChatPromptTemplateConfigurationProperty.builder()
+   * .messages(List.of(MessageProperty.builder()
+   * .content(List.of(ContentBlockProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
+   * .text("text")
+   * .build()))
+   * .role("role")
+   * .build()))
+   * // the properties below are optional
+   * .inputVariables(List.of(PromptInputVariableProperty.builder()
+   * .name("name")
+   * .build()))
+   * .system(List.of(SystemContentBlockProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
+   * .text("text")
+   * .build()))
+   * .toolConfiguration(ToolConfigurationProperty.builder()
+   * .tools(List.of(ToolProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
+   * .toolSpec(ToolSpecificationProperty.builder()
+   * .inputSchema(ToolInputSchemaProperty.builder()
+   * .json(json)
+   * .build())
+   * .name("name")
+   * // the properties below are optional
+   * .description("description")
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .toolChoice(ToolChoiceProperty.builder()
+   * .any(any)
+   * .auto(auto)
+   * .tool(SpecificToolChoiceProperty.builder()
+   * .name("name")
+   * .build())
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-chatprompttemplateconfiguration.html)
+   */
+  public interface ChatPromptTemplateConfigurationProperty {
+    /**
+     * An array of the variables in the prompt template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-chatprompttemplateconfiguration.html#cfn-bedrock-prompt-chatprompttemplateconfiguration-inputvariables)
+     */
+    public fun inputVariables(): Any? = unwrap(this).getInputVariables()
+
+    /**
+     * Contains messages in the chat for the prompt.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-chatprompttemplateconfiguration.html#cfn-bedrock-prompt-chatprompttemplateconfiguration-messages)
+     */
+    public fun messages(): Any
+
+    /**
+     * Contains system prompts to provide context to the model or to describe how it should behave.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-chatprompttemplateconfiguration.html#cfn-bedrock-prompt-chatprompttemplateconfiguration-system)
+     */
+    public fun system(): Any? = unwrap(this).getSystem()
+
+    /**
+     * Configuration information for the tools that the model can use when generating a response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-chatprompttemplateconfiguration.html#cfn-bedrock-prompt-chatprompttemplateconfiguration-toolconfiguration)
+     */
+    public fun toolConfiguration(): Any? = unwrap(this).getToolConfiguration()
+
+    /**
+     * A builder for [ChatPromptTemplateConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param inputVariables An array of the variables in the prompt template.
+       */
+      public fun inputVariables(inputVariables: IResolvable)
+
+      /**
+       * @param inputVariables An array of the variables in the prompt template.
+       */
+      public fun inputVariables(inputVariables: List<Any>)
+
+      /**
+       * @param inputVariables An array of the variables in the prompt template.
+       */
+      public fun inputVariables(vararg inputVariables: Any)
+
+      /**
+       * @param messages Contains messages in the chat for the prompt. 
+       */
+      public fun messages(messages: IResolvable)
+
+      /**
+       * @param messages Contains messages in the chat for the prompt. 
+       */
+      public fun messages(messages: List<Any>)
+
+      /**
+       * @param messages Contains messages in the chat for the prompt. 
+       */
+      public fun messages(vararg messages: Any)
+
+      /**
+       * @param system Contains system prompts to provide context to the model or to describe how it
+       * should behave.
+       */
+      public fun system(system: IResolvable)
+
+      /**
+       * @param system Contains system prompts to provide context to the model or to describe how it
+       * should behave.
+       */
+      public fun system(system: List<Any>)
+
+      /**
+       * @param system Contains system prompts to provide context to the model or to describe how it
+       * should behave.
+       */
+      public fun system(vararg system: Any)
+
+      /**
+       * @param toolConfiguration Configuration information for the tools that the model can use
+       * when generating a response.
+       */
+      public fun toolConfiguration(toolConfiguration: IResolvable)
+
+      /**
+       * @param toolConfiguration Configuration information for the tools that the model can use
+       * when generating a response.
+       */
+      public fun toolConfiguration(toolConfiguration: ToolConfigurationProperty)
+
+      /**
+       * @param toolConfiguration Configuration information for the tools that the model can use
+       * when generating a response.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9b7327d579dcc2c127ef6fcc5375ce16bd15a7e6451d92b02f17baf5b63b15ed")
+      public fun toolConfiguration(toolConfiguration: ToolConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ChatPromptTemplateConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ChatPromptTemplateConfigurationProperty.builder()
+
+      /**
+       * @param inputVariables An array of the variables in the prompt template.
+       */
+      override fun inputVariables(inputVariables: IResolvable) {
+        cdkBuilder.inputVariables(inputVariables.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param inputVariables An array of the variables in the prompt template.
+       */
+      override fun inputVariables(inputVariables: List<Any>) {
+        cdkBuilder.inputVariables(inputVariables.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param inputVariables An array of the variables in the prompt template.
+       */
+      override fun inputVariables(vararg inputVariables: Any): Unit =
+          inputVariables(inputVariables.toList())
+
+      /**
+       * @param messages Contains messages in the chat for the prompt. 
+       */
+      override fun messages(messages: IResolvable) {
+        cdkBuilder.messages(messages.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param messages Contains messages in the chat for the prompt. 
+       */
+      override fun messages(messages: List<Any>) {
+        cdkBuilder.messages(messages.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param messages Contains messages in the chat for the prompt. 
+       */
+      override fun messages(vararg messages: Any): Unit = messages(messages.toList())
+
+      /**
+       * @param system Contains system prompts to provide context to the model or to describe how it
+       * should behave.
+       */
+      override fun system(system: IResolvable) {
+        cdkBuilder.system(system.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param system Contains system prompts to provide context to the model or to describe how it
+       * should behave.
+       */
+      override fun system(system: List<Any>) {
+        cdkBuilder.system(system.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param system Contains system prompts to provide context to the model or to describe how it
+       * should behave.
+       */
+      override fun system(vararg system: Any): Unit = system(system.toList())
+
+      /**
+       * @param toolConfiguration Configuration information for the tools that the model can use
+       * when generating a response.
+       */
+      override fun toolConfiguration(toolConfiguration: IResolvable) {
+        cdkBuilder.toolConfiguration(toolConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param toolConfiguration Configuration information for the tools that the model can use
+       * when generating a response.
+       */
+      override fun toolConfiguration(toolConfiguration: ToolConfigurationProperty) {
+        cdkBuilder.toolConfiguration(toolConfiguration.let(ToolConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param toolConfiguration Configuration information for the tools that the model can use
+       * when generating a response.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9b7327d579dcc2c127ef6fcc5375ce16bd15a7e6451d92b02f17baf5b63b15ed")
+      override
+          fun toolConfiguration(toolConfiguration: ToolConfigurationProperty.Builder.() -> Unit):
+          Unit = toolConfiguration(ToolConfigurationProperty(toolConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ChatPromptTemplateConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.ChatPromptTemplateConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ChatPromptTemplateConfigurationProperty {
+      /**
+       * An array of the variables in the prompt template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-chatprompttemplateconfiguration.html#cfn-bedrock-prompt-chatprompttemplateconfiguration-inputvariables)
+       */
+      override fun inputVariables(): Any? = unwrap(this).getInputVariables()
+
+      /**
+       * Contains messages in the chat for the prompt.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-chatprompttemplateconfiguration.html#cfn-bedrock-prompt-chatprompttemplateconfiguration-messages)
+       */
+      override fun messages(): Any = unwrap(this).getMessages()
+
+      /**
+       * Contains system prompts to provide context to the model or to describe how it should
+       * behave.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-chatprompttemplateconfiguration.html#cfn-bedrock-prompt-chatprompttemplateconfiguration-system)
+       */
+      override fun system(): Any? = unwrap(this).getSystem()
+
+      /**
+       * Configuration information for the tools that the model can use when generating a response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-chatprompttemplateconfiguration.html#cfn-bedrock-prompt-chatprompttemplateconfiguration-toolconfiguration)
+       */
+      override fun toolConfiguration(): Any? = unwrap(this).getToolConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ChatPromptTemplateConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.ChatPromptTemplateConfigurationProperty):
+          ChatPromptTemplateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ChatPromptTemplateConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ChatPromptTemplateConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ChatPromptTemplateConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ChatPromptTemplateConfigurationProperty
+    }
+  }
+
+  /**
+   * A block of content for a message that you pass to, or receive from, a model with the
+   * [Converse](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html) or
+   * [ConverseStream](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ConverseStream.html)
+   * API operations.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * ContentBlockProperty contentBlockProperty = ContentBlockProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
+   * .text("text")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-contentblock.html)
+   */
+  public interface ContentBlockProperty {
+    /**
+     * CachePoint to include in the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-contentblock.html#cfn-bedrock-prompt-contentblock-cachepoint)
+     */
+    public fun cachePoint(): Any? = unwrap(this).getCachePoint()
+
+    /**
+     * Text to include in the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-contentblock.html#cfn-bedrock-prompt-contentblock-text)
+     */
+    public fun text(): String? = unwrap(this).getText()
+
+    /**
+     * A builder for [ContentBlockProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cachePoint CachePoint to include in the message.
+       */
+      public fun cachePoint(cachePoint: IResolvable)
+
+      /**
+       * @param cachePoint CachePoint to include in the message.
+       */
+      public fun cachePoint(cachePoint: CachePointBlockProperty)
+
+      /**
+       * @param cachePoint CachePoint to include in the message.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("802ad111cbb03da785d41abbe224f32a79ff773df5ecf5a36a839d2c6d8f876a")
+      public fun cachePoint(cachePoint: CachePointBlockProperty.Builder.() -> Unit)
+
+      /**
+       * @param text Text to include in the message.
+       */
+      public fun text(text: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ContentBlockProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ContentBlockProperty.builder()
+
+      /**
+       * @param cachePoint CachePoint to include in the message.
+       */
+      override fun cachePoint(cachePoint: IResolvable) {
+        cdkBuilder.cachePoint(cachePoint.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param cachePoint CachePoint to include in the message.
+       */
+      override fun cachePoint(cachePoint: CachePointBlockProperty) {
+        cdkBuilder.cachePoint(cachePoint.let(CachePointBlockProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param cachePoint CachePoint to include in the message.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("802ad111cbb03da785d41abbe224f32a79ff773df5ecf5a36a839d2c6d8f876a")
+      override fun cachePoint(cachePoint: CachePointBlockProperty.Builder.() -> Unit): Unit =
+          cachePoint(CachePointBlockProperty(cachePoint))
+
+      /**
+       * @param text Text to include in the message.
+       */
+      override fun text(text: String) {
+        cdkBuilder.text(text)
+      }
+
+      public fun build(): software.amazon.awscdk.services.bedrock.CfnPrompt.ContentBlockProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.ContentBlockProperty,
+    ) : CdkObject(cdkObject),
+        ContentBlockProperty {
+      /**
+       * CachePoint to include in the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-contentblock.html#cfn-bedrock-prompt-contentblock-cachepoint)
+       */
+      override fun cachePoint(): Any? = unwrap(this).getCachePoint()
+
+      /**
+       * Text to include in the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-contentblock.html#cfn-bedrock-prompt-contentblock-text)
+       */
+      override fun text(): String? = unwrap(this).getText()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ContentBlockProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.ContentBlockProperty):
+          ContentBlockProperty = CdkObjectWrappers.wrap(cdkObject) as? ContentBlockProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ContentBlockProperty):
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ContentBlockProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ContentBlockProperty
+    }
+  }
+
+  /**
+   * A message input, or returned from, a call to
+   * [Converse](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html) or
+   * [ConverseStream](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ConverseStream.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * MessageProperty messageProperty = MessageProperty.builder()
+   * .content(List.of(ContentBlockProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
+   * .text("text")
+   * .build()))
+   * .role("role")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-message.html)
+   */
+  public interface MessageProperty {
+    /**
+     * The message content. Note the following restrictions:.
+     *
+     * * You can include up to 20 images. Each image's size, height, and width must be no more than
+     * 3.75 MB, 8000 px, and 8000 px, respectively.
+     * * You can include up to five documents. Each document's size must be no more than 4.5 MB.
+     * * If you include a `ContentBlock` with a `document` field in the array, you must also include
+     * a `ContentBlock` with a `text` field.
+     * * You can only include images and documents if the `role` is `user` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-message.html#cfn-bedrock-prompt-message-content)
+     */
+    public fun content(): Any
+
+    /**
+     * The role that the message plays in the message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-message.html#cfn-bedrock-prompt-message-role)
+     */
+    public fun role(): String
+
+    /**
+     * A builder for [MessageProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param content The message content. Note the following restrictions:. 
+       * * You can include up to 20 images. Each image's size, height, and width must be no more
+       * than 3.75 MB, 8000 px, and 8000 px, respectively.
+       * * You can include up to five documents. Each document's size must be no more than 4.5 MB.
+       * * If you include a `ContentBlock` with a `document` field in the array, you must also
+       * include a `ContentBlock` with a `text` field.
+       * * You can only include images and documents if the `role` is `user` .
+       */
+      public fun content(content: IResolvable)
+
+      /**
+       * @param content The message content. Note the following restrictions:. 
+       * * You can include up to 20 images. Each image's size, height, and width must be no more
+       * than 3.75 MB, 8000 px, and 8000 px, respectively.
+       * * You can include up to five documents. Each document's size must be no more than 4.5 MB.
+       * * If you include a `ContentBlock` with a `document` field in the array, you must also
+       * include a `ContentBlock` with a `text` field.
+       * * You can only include images and documents if the `role` is `user` .
+       */
+      public fun content(content: List<Any>)
+
+      /**
+       * @param content The message content. Note the following restrictions:. 
+       * * You can include up to 20 images. Each image's size, height, and width must be no more
+       * than 3.75 MB, 8000 px, and 8000 px, respectively.
+       * * You can include up to five documents. Each document's size must be no more than 4.5 MB.
+       * * If you include a `ContentBlock` with a `document` field in the array, you must also
+       * include a `ContentBlock` with a `text` field.
+       * * You can only include images and documents if the `role` is `user` .
+       */
+      public fun content(vararg content: Any)
+
+      /**
+       * @param role The role that the message plays in the message. 
+       */
+      public fun role(role: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnPrompt.MessageProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnPrompt.MessageProperty.builder()
+
+      /**
+       * @param content The message content. Note the following restrictions:. 
+       * * You can include up to 20 images. Each image's size, height, and width must be no more
+       * than 3.75 MB, 8000 px, and 8000 px, respectively.
+       * * You can include up to five documents. Each document's size must be no more than 4.5 MB.
+       * * If you include a `ContentBlock` with a `document` field in the array, you must also
+       * include a `ContentBlock` with a `text` field.
+       * * You can only include images and documents if the `role` is `user` .
+       */
+      override fun content(content: IResolvable) {
+        cdkBuilder.content(content.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param content The message content. Note the following restrictions:. 
+       * * You can include up to 20 images. Each image's size, height, and width must be no more
+       * than 3.75 MB, 8000 px, and 8000 px, respectively.
+       * * You can include up to five documents. Each document's size must be no more than 4.5 MB.
+       * * If you include a `ContentBlock` with a `document` field in the array, you must also
+       * include a `ContentBlock` with a `text` field.
+       * * You can only include images and documents if the `role` is `user` .
+       */
+      override fun content(content: List<Any>) {
+        cdkBuilder.content(content.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param content The message content. Note the following restrictions:. 
+       * * You can include up to 20 images. Each image's size, height, and width must be no more
+       * than 3.75 MB, 8000 px, and 8000 px, respectively.
+       * * You can include up to five documents. Each document's size must be no more than 4.5 MB.
+       * * If you include a `ContentBlock` with a `document` field in the array, you must also
+       * include a `ContentBlock` with a `text` field.
+       * * You can only include images and documents if the `role` is `user` .
+       */
+      override fun content(vararg content: Any): Unit = content(content.toList())
+
+      /**
+       * @param role The role that the message plays in the message. 
+       */
+      override fun role(role: String) {
+        cdkBuilder.role(role)
+      }
+
+      public fun build(): software.amazon.awscdk.services.bedrock.CfnPrompt.MessageProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.MessageProperty,
+    ) : CdkObject(cdkObject),
+        MessageProperty {
+      /**
+       * The message content. Note the following restrictions:.
+       *
+       * * You can include up to 20 images. Each image's size, height, and width must be no more
+       * than 3.75 MB, 8000 px, and 8000 px, respectively.
+       * * You can include up to five documents. Each document's size must be no more than 4.5 MB.
+       * * If you include a `ContentBlock` with a `document` field in the array, you must also
+       * include a `ContentBlock` with a `text` field.
+       * * You can only include images and documents if the `role` is `user` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-message.html#cfn-bedrock-prompt-message-content)
+       */
+      override fun content(): Any = unwrap(this).getContent()
+
+      /**
+       * The role that the message plays in the message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-message.html#cfn-bedrock-prompt-message-role)
+       */
+      override fun role(): String = unwrap(this).getRole()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MessageProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.MessageProperty):
+          MessageProperty = CdkObjectWrappers.wrap(cdkObject) as? MessageProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MessageProperty):
+          software.amazon.awscdk.services.bedrock.CfnPrompt.MessageProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.bedrock.CfnPrompt.MessageProperty
+    }
+  }
+
+  /**
+   * Contains specifications for an Amazon Bedrock agent with which to use the prompt.
+   *
+   * For more information, see [Create a prompt using Prompt
+   * management](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-create.html)
+   * and [Automate tasks in your application using conversational
+   * agents](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * PromptAgentResourceProperty promptAgentResourceProperty = PromptAgentResourceProperty.builder()
+   * .agentIdentifier("agentIdentifier")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptagentresource.html)
+   */
+  public interface PromptAgentResourceProperty {
+    /**
+     * The ARN of the agent with which to use the prompt.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptagentresource.html#cfn-bedrock-prompt-promptagentresource-agentidentifier)
+     */
+    public fun agentIdentifier(): String
+
+    /**
+     * A builder for [PromptAgentResourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param agentIdentifier The ARN of the agent with which to use the prompt. 
+       */
+      public fun agentIdentifier(agentIdentifier: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnPrompt.PromptAgentResourceProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnPrompt.PromptAgentResourceProperty.builder()
+
+      /**
+       * @param agentIdentifier The ARN of the agent with which to use the prompt. 
+       */
+      override fun agentIdentifier(agentIdentifier: String) {
+        cdkBuilder.agentIdentifier(agentIdentifier)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnPrompt.PromptAgentResourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.PromptAgentResourceProperty,
+    ) : CdkObject(cdkObject),
+        PromptAgentResourceProperty {
+      /**
+       * The ARN of the agent with which to use the prompt.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptagentresource.html#cfn-bedrock-prompt-promptagentresource-agentidentifier)
+       */
+      override fun agentIdentifier(): String = unwrap(this).getAgentIdentifier()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PromptAgentResourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.PromptAgentResourceProperty):
+          PromptAgentResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PromptAgentResourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PromptAgentResourceProperty):
+          software.amazon.awscdk.services.bedrock.CfnPrompt.PromptAgentResourceProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnPrompt.PromptAgentResourceProperty
+    }
+  }
+
+  /**
+   * Contains specifications for a generative AI resource with which to use the prompt.
+   *
+   * For more information, see [Create a prompt using Prompt
+   * management](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-create.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * PromptGenAiResourceProperty promptGenAiResourceProperty = PromptGenAiResourceProperty.builder()
+   * .agent(PromptAgentResourceProperty.builder()
+   * .agentIdentifier("agentIdentifier")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptgenairesource.html)
+   */
+  public interface PromptGenAiResourceProperty {
+    /**
+     * Specifies an Amazon Bedrock agent with which to use the prompt.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptgenairesource.html#cfn-bedrock-prompt-promptgenairesource-agent)
+     */
+    public fun agent(): Any
+
+    /**
+     * A builder for [PromptGenAiResourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param agent Specifies an Amazon Bedrock agent with which to use the prompt. 
+       */
+      public fun agent(agent: IResolvable)
+
+      /**
+       * @param agent Specifies an Amazon Bedrock agent with which to use the prompt. 
+       */
+      public fun agent(agent: PromptAgentResourceProperty)
+
+      /**
+       * @param agent Specifies an Amazon Bedrock agent with which to use the prompt. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("07035640727828abe87d9faf0d8f841465f54ea980e49bcc4278c27d6c2973ab")
+      public fun agent(agent: PromptAgentResourceProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnPrompt.PromptGenAiResourceProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnPrompt.PromptGenAiResourceProperty.builder()
+
+      /**
+       * @param agent Specifies an Amazon Bedrock agent with which to use the prompt. 
+       */
+      override fun agent(agent: IResolvable) {
+        cdkBuilder.agent(agent.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param agent Specifies an Amazon Bedrock agent with which to use the prompt. 
+       */
+      override fun agent(agent: PromptAgentResourceProperty) {
+        cdkBuilder.agent(agent.let(PromptAgentResourceProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param agent Specifies an Amazon Bedrock agent with which to use the prompt. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("07035640727828abe87d9faf0d8f841465f54ea980e49bcc4278c27d6c2973ab")
+      override fun agent(agent: PromptAgentResourceProperty.Builder.() -> Unit): Unit =
+          agent(PromptAgentResourceProperty(agent))
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnPrompt.PromptGenAiResourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.PromptGenAiResourceProperty,
+    ) : CdkObject(cdkObject),
+        PromptGenAiResourceProperty {
+      /**
+       * Specifies an Amazon Bedrock agent with which to use the prompt.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptgenairesource.html#cfn-bedrock-prompt-promptgenairesource-agent)
+       */
+      override fun agent(): Any = unwrap(this).getAgent()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PromptGenAiResourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.PromptGenAiResourceProperty):
+          PromptGenAiResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PromptGenAiResourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PromptGenAiResourceProperty):
+          software.amazon.awscdk.services.bedrock.CfnPrompt.PromptGenAiResourceProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnPrompt.PromptGenAiResourceProperty
+    }
+  }
+
+  /**
    * Contains inference configurations for the prompt.
    *
    * Example:
@@ -626,6 +1614,118 @@ public open class CfnPrompt(
           software.amazon.awscdk.services.bedrock.CfnPrompt.PromptInputVariableProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.bedrock.CfnPrompt.PromptInputVariableProperty
+    }
+  }
+
+  /**
+   * Contains a key-value pair that defines a metadata tag and value to attach to a prompt variant.
+   *
+   * For more information, see [Create a prompt using Prompt
+   * management](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-create.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * PromptMetadataEntryProperty promptMetadataEntryProperty = PromptMetadataEntryProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptmetadataentry.html)
+   */
+  public interface PromptMetadataEntryProperty {
+    /**
+     * The key of a metadata tag for a prompt variant.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptmetadataentry.html#cfn-bedrock-prompt-promptmetadataentry-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value of a metadata tag for a prompt variant.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptmetadataentry.html#cfn-bedrock-prompt-promptmetadataentry-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [PromptMetadataEntryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The key of a metadata tag for a prompt variant. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value of a metadata tag for a prompt variant. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnPrompt.PromptMetadataEntryProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnPrompt.PromptMetadataEntryProperty.builder()
+
+      /**
+       * @param key The key of a metadata tag for a prompt variant. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value of a metadata tag for a prompt variant. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnPrompt.PromptMetadataEntryProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.PromptMetadataEntryProperty,
+    ) : CdkObject(cdkObject),
+        PromptMetadataEntryProperty {
+      /**
+       * The key of a metadata tag for a prompt variant.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptmetadataentry.html#cfn-bedrock-prompt-promptmetadataentry-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value of a metadata tag for a prompt variant.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptmetadataentry.html#cfn-bedrock-prompt-promptmetadataentry-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PromptMetadataEntryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.PromptMetadataEntryProperty):
+          PromptMetadataEntryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PromptMetadataEntryProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PromptMetadataEntryProperty):
+          software.amazon.awscdk.services.bedrock.CfnPrompt.PromptMetadataEntryProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnPrompt.PromptMetadataEntryProperty
     }
   }
 
@@ -837,9 +1937,59 @@ public open class CfnPrompt(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object any;
+   * Object auto;
+   * Object json;
    * PromptTemplateConfigurationProperty promptTemplateConfigurationProperty =
    * PromptTemplateConfigurationProperty.builder()
+   * .chat(ChatPromptTemplateConfigurationProperty.builder()
+   * .messages(List.of(MessageProperty.builder()
+   * .content(List.of(ContentBlockProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
+   * .text("text")
+   * .build()))
+   * .role("role")
+   * .build()))
+   * // the properties below are optional
+   * .inputVariables(List.of(PromptInputVariableProperty.builder()
+   * .name("name")
+   * .build()))
+   * .system(List.of(SystemContentBlockProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
+   * .text("text")
+   * .build()))
+   * .toolConfiguration(ToolConfigurationProperty.builder()
+   * .tools(List.of(ToolProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
+   * .toolSpec(ToolSpecificationProperty.builder()
+   * .inputSchema(ToolInputSchemaProperty.builder()
+   * .json(json)
+   * .build())
+   * .name("name")
+   * // the properties below are optional
+   * .description("description")
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .toolChoice(ToolChoiceProperty.builder()
+   * .any(any)
+   * .auto(auto)
+   * .tool(SpecificToolChoiceProperty.builder()
+   * .name("name")
+   * .build())
+   * .build())
+   * .build())
+   * .build())
    * .text(TextPromptTemplateConfigurationProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
    * .inputVariables(List.of(PromptInputVariableProperty.builder()
    * .name("name")
    * .build()))
@@ -858,11 +2008,18 @@ public open class CfnPrompt(
    */
   public interface PromptTemplateConfigurationProperty {
     /**
+     * Contains configurations to use the prompt in a conversational format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-prompttemplateconfiguration.html#cfn-bedrock-prompt-prompttemplateconfiguration-chat)
+     */
+    public fun chat(): Any? = unwrap(this).getChat()
+
+    /**
      * Contains configurations for the text in a message for a prompt.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-prompttemplateconfiguration.html#cfn-bedrock-prompt-prompttemplateconfiguration-text)
      */
-    public fun text(): Any
+    public fun text(): Any? = unwrap(this).getText()
 
     /**
      * A builder for [PromptTemplateConfigurationProperty]
@@ -870,17 +2027,34 @@ public open class CfnPrompt(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param text Contains configurations for the text in a message for a prompt. 
+       * @param chat Contains configurations to use the prompt in a conversational format.
+       */
+      public fun chat(chat: IResolvable)
+
+      /**
+       * @param chat Contains configurations to use the prompt in a conversational format.
+       */
+      public fun chat(chat: ChatPromptTemplateConfigurationProperty)
+
+      /**
+       * @param chat Contains configurations to use the prompt in a conversational format.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa06a65be432cfcda6c594ce36fef50f96cf8b0ff934f14654adce0ddcb6de6e")
+      public fun chat(chat: ChatPromptTemplateConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param text Contains configurations for the text in a message for a prompt.
        */
       public fun text(text: IResolvable)
 
       /**
-       * @param text Contains configurations for the text in a message for a prompt. 
+       * @param text Contains configurations for the text in a message for a prompt.
        */
       public fun text(text: TextPromptTemplateConfigurationProperty)
 
       /**
-       * @param text Contains configurations for the text in a message for a prompt. 
+       * @param text Contains configurations for the text in a message for a prompt.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("554107c324cc7377756d6996f21ba0e9883d0fe2fecc8d558b6268f3effb0fa1")
@@ -894,21 +2068,43 @@ public open class CfnPrompt(
           software.amazon.awscdk.services.bedrock.CfnPrompt.PromptTemplateConfigurationProperty.builder()
 
       /**
-       * @param text Contains configurations for the text in a message for a prompt. 
+       * @param chat Contains configurations to use the prompt in a conversational format.
+       */
+      override fun chat(chat: IResolvable) {
+        cdkBuilder.chat(chat.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param chat Contains configurations to use the prompt in a conversational format.
+       */
+      override fun chat(chat: ChatPromptTemplateConfigurationProperty) {
+        cdkBuilder.chat(chat.let(ChatPromptTemplateConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param chat Contains configurations to use the prompt in a conversational format.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa06a65be432cfcda6c594ce36fef50f96cf8b0ff934f14654adce0ddcb6de6e")
+      override fun chat(chat: ChatPromptTemplateConfigurationProperty.Builder.() -> Unit): Unit =
+          chat(ChatPromptTemplateConfigurationProperty(chat))
+
+      /**
+       * @param text Contains configurations for the text in a message for a prompt.
        */
       override fun text(text: IResolvable) {
         cdkBuilder.text(text.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param text Contains configurations for the text in a message for a prompt. 
+       * @param text Contains configurations for the text in a message for a prompt.
        */
       override fun text(text: TextPromptTemplateConfigurationProperty) {
         cdkBuilder.text(text.let(TextPromptTemplateConfigurationProperty.Companion::unwrap))
       }
 
       /**
-       * @param text Contains configurations for the text in a message for a prompt. 
+       * @param text Contains configurations for the text in a message for a prompt.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("554107c324cc7377756d6996f21ba0e9883d0fe2fecc8d558b6268f3effb0fa1")
@@ -925,11 +2121,18 @@ public open class CfnPrompt(
     ) : CdkObject(cdkObject),
         PromptTemplateConfigurationProperty {
       /**
+       * Contains configurations to use the prompt in a conversational format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-prompttemplateconfiguration.html#cfn-bedrock-prompt-prompttemplateconfiguration-chat)
+       */
+      override fun chat(): Any? = unwrap(this).getChat()
+
+      /**
        * Contains configurations for the text in a message for a prompt.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-prompttemplateconfiguration.html#cfn-bedrock-prompt-prompttemplateconfiguration-text)
        */
-      override fun text(): Any = unwrap(this).getText()
+      override fun text(): Any? = unwrap(this).getText()
     }
 
     public companion object {
@@ -960,10 +2163,61 @@ public open class CfnPrompt(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object additionalModelRequestFields;
+   * Object any;
+   * Object auto;
+   * Object json;
    * PromptVariantProperty promptVariantProperty = PromptVariantProperty.builder()
    * .name("name")
    * .templateConfiguration(PromptTemplateConfigurationProperty.builder()
+   * .chat(ChatPromptTemplateConfigurationProperty.builder()
+   * .messages(List.of(MessageProperty.builder()
+   * .content(List.of(ContentBlockProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
+   * .text("text")
+   * .build()))
+   * .role("role")
+   * .build()))
+   * // the properties below are optional
+   * .inputVariables(List.of(PromptInputVariableProperty.builder()
+   * .name("name")
+   * .build()))
+   * .system(List.of(SystemContentBlockProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
+   * .text("text")
+   * .build()))
+   * .toolConfiguration(ToolConfigurationProperty.builder()
+   * .tools(List.of(ToolProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
+   * .toolSpec(ToolSpecificationProperty.builder()
+   * .inputSchema(ToolInputSchemaProperty.builder()
+   * .json(json)
+   * .build())
+   * .name("name")
+   * // the properties below are optional
+   * .description("description")
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .toolChoice(ToolChoiceProperty.builder()
+   * .any(any)
+   * .auto(auto)
+   * .tool(SpecificToolChoiceProperty.builder()
+   * .name("name")
+   * .build())
+   * .build())
+   * .build())
+   * .build())
    * .text(TextPromptTemplateConfigurationProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
    * .inputVariables(List.of(PromptInputVariableProperty.builder()
    * .name("name")
    * .build()))
@@ -978,6 +2232,12 @@ public open class CfnPrompt(
    * .build())
    * .templateType("templateType")
    * // the properties below are optional
+   * .additionalModelRequestFields(additionalModelRequestFields)
+   * .genAiResource(PromptGenAiResourceProperty.builder()
+   * .agent(PromptAgentResourceProperty.builder()
+   * .agentIdentifier("agentIdentifier")
+   * .build())
+   * .build())
    * .inferenceConfiguration(PromptInferenceConfigurationProperty.builder()
    * .text(PromptModelInferenceConfigurationProperty.builder()
    * .maxTokens(123)
@@ -986,6 +2246,10 @@ public open class CfnPrompt(
    * .topP(123)
    * .build())
    * .build())
+   * .metadata(List.of(PromptMetadataEntryProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
    * .modelId("modelId")
    * .build();
    * ```
@@ -994,11 +2258,38 @@ public open class CfnPrompt(
    */
   public interface PromptVariantProperty {
     /**
+     * Contains model-specific inference configurations that aren't in the `inferenceConfiguration`
+     * field.
+     *
+     * To see model-specific inference parameters, see [Inference request parameters and response
+     * fields for foundation
+     * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptvariant.html#cfn-bedrock-prompt-promptvariant-additionalmodelrequestfields)
+     */
+    public fun additionalModelRequestFields(): Any? = unwrap(this).getAdditionalModelRequestFields()
+
+    /**
+     * Specifies a generative AI resource with which to use the prompt.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptvariant.html#cfn-bedrock-prompt-promptvariant-genairesource)
+     */
+    public fun genAiResource(): Any? = unwrap(this).getGenAiResource()
+
+    /**
      * Contains inference configurations for the prompt variant.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptvariant.html#cfn-bedrock-prompt-promptvariant-inferenceconfiguration)
      */
     public fun inferenceConfiguration(): Any? = unwrap(this).getInferenceConfiguration()
+
+    /**
+     * An array of objects, each containing a key-value pair that defines a metadata tag and value
+     * to attach to a prompt variant.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptvariant.html#cfn-bedrock-prompt-promptvariant-metadata)
+     */
+    public fun metadata(): Any? = unwrap(this).getMetadata()
 
     /**
      * The unique identifier of the model or [inference
@@ -1036,6 +2327,32 @@ public open class CfnPrompt(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param additionalModelRequestFields Contains model-specific inference configurations that
+       * aren't in the `inferenceConfiguration` field.
+       * To see model-specific inference parameters, see [Inference request parameters and response
+       * fields for foundation
+       * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
+       */
+      public fun additionalModelRequestFields(additionalModelRequestFields: Any)
+
+      /**
+       * @param genAiResource Specifies a generative AI resource with which to use the prompt.
+       */
+      public fun genAiResource(genAiResource: IResolvable)
+
+      /**
+       * @param genAiResource Specifies a generative AI resource with which to use the prompt.
+       */
+      public fun genAiResource(genAiResource: PromptGenAiResourceProperty)
+
+      /**
+       * @param genAiResource Specifies a generative AI resource with which to use the prompt.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4b94e499b2bbcab03317ec53d4ce3623cac83270c591930a7443f087853aa453")
+      public fun genAiResource(genAiResource: PromptGenAiResourceProperty.Builder.() -> Unit)
+
+      /**
        * @param inferenceConfiguration Contains inference configurations for the prompt variant.
        */
       public fun inferenceConfiguration(inferenceConfiguration: IResolvable)
@@ -1053,6 +2370,24 @@ public open class CfnPrompt(
       @JvmName("90dbe0e59146cb52dc591b153c5872cdeeb89cca8ca46eb283039cb48af6d817")
       public
           fun inferenceConfiguration(inferenceConfiguration: PromptInferenceConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param metadata An array of objects, each containing a key-value pair that defines a
+       * metadata tag and value to attach to a prompt variant.
+       */
+      public fun metadata(metadata: IResolvable)
+
+      /**
+       * @param metadata An array of objects, each containing a key-value pair that defines a
+       * metadata tag and value to attach to a prompt variant.
+       */
+      public fun metadata(metadata: List<Any>)
+
+      /**
+       * @param metadata An array of objects, each containing a key-value pair that defines a
+       * metadata tag and value to attach to a prompt variant.
+       */
+      public fun metadata(vararg metadata: Any)
 
       /**
        * @param modelId The unique identifier of the model or [inference
@@ -1096,6 +2431,39 @@ public open class CfnPrompt(
           software.amazon.awscdk.services.bedrock.CfnPrompt.PromptVariantProperty.builder()
 
       /**
+       * @param additionalModelRequestFields Contains model-specific inference configurations that
+       * aren't in the `inferenceConfiguration` field.
+       * To see model-specific inference parameters, see [Inference request parameters and response
+       * fields for foundation
+       * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
+       */
+      override fun additionalModelRequestFields(additionalModelRequestFields: Any) {
+        cdkBuilder.additionalModelRequestFields(additionalModelRequestFields)
+      }
+
+      /**
+       * @param genAiResource Specifies a generative AI resource with which to use the prompt.
+       */
+      override fun genAiResource(genAiResource: IResolvable) {
+        cdkBuilder.genAiResource(genAiResource.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param genAiResource Specifies a generative AI resource with which to use the prompt.
+       */
+      override fun genAiResource(genAiResource: PromptGenAiResourceProperty) {
+        cdkBuilder.genAiResource(genAiResource.let(PromptGenAiResourceProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param genAiResource Specifies a generative AI resource with which to use the prompt.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4b94e499b2bbcab03317ec53d4ce3623cac83270c591930a7443f087853aa453")
+      override fun genAiResource(genAiResource: PromptGenAiResourceProperty.Builder.() -> Unit):
+          Unit = genAiResource(PromptGenAiResourceProperty(genAiResource))
+
+      /**
        * @param inferenceConfiguration Contains inference configurations for the prompt variant.
        */
       override fun inferenceConfiguration(inferenceConfiguration: IResolvable) {
@@ -1119,6 +2487,28 @@ public open class CfnPrompt(
           fun inferenceConfiguration(inferenceConfiguration: PromptInferenceConfigurationProperty.Builder.() -> Unit):
           Unit =
           inferenceConfiguration(PromptInferenceConfigurationProperty(inferenceConfiguration))
+
+      /**
+       * @param metadata An array of objects, each containing a key-value pair that defines a
+       * metadata tag and value to attach to a prompt variant.
+       */
+      override fun metadata(metadata: IResolvable) {
+        cdkBuilder.metadata(metadata.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param metadata An array of objects, each containing a key-value pair that defines a
+       * metadata tag and value to attach to a prompt variant.
+       */
+      override fun metadata(metadata: List<Any>) {
+        cdkBuilder.metadata(metadata.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param metadata An array of objects, each containing a key-value pair that defines a
+       * metadata tag and value to attach to a prompt variant.
+       */
+      override fun metadata(vararg metadata: Any): Unit = metadata(metadata.toList())
 
       /**
        * @param modelId The unique identifier of the model or [inference
@@ -1176,11 +2566,39 @@ public open class CfnPrompt(
     ) : CdkObject(cdkObject),
         PromptVariantProperty {
       /**
+       * Contains model-specific inference configurations that aren't in the
+       * `inferenceConfiguration` field.
+       *
+       * To see model-specific inference parameters, see [Inference request parameters and response
+       * fields for foundation
+       * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptvariant.html#cfn-bedrock-prompt-promptvariant-additionalmodelrequestfields)
+       */
+      override fun additionalModelRequestFields(): Any? =
+          unwrap(this).getAdditionalModelRequestFields()
+
+      /**
+       * Specifies a generative AI resource with which to use the prompt.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptvariant.html#cfn-bedrock-prompt-promptvariant-genairesource)
+       */
+      override fun genAiResource(): Any? = unwrap(this).getGenAiResource()
+
+      /**
        * Contains inference configurations for the prompt variant.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptvariant.html#cfn-bedrock-prompt-promptvariant-inferenceconfiguration)
        */
       override fun inferenceConfiguration(): Any? = unwrap(this).getInferenceConfiguration()
+
+      /**
+       * An array of objects, each containing a key-value pair that defines a metadata tag and value
+       * to attach to a prompt variant.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-promptvariant.html#cfn-bedrock-prompt-promptvariant-metadata)
+       */
+      override fun metadata(): Any? = unwrap(this).getMetadata()
 
       /**
        * The unique identifier of the model or [inference
@@ -1232,6 +2650,237 @@ public open class CfnPrompt(
   }
 
   /**
+   * The model must request a specific tool.
+   *
+   * For example, `{"tool" : {"name" : "Your tool name"}}` . For more information, see [Call a tool
+   * with the Converse API](https://docs.aws.amazon.com/bedrock/latest/userguide/tool-use.html) in the
+   * Amazon Bedrock User Guide
+   *
+   *
+   * This field is only supported by Anthropic Claude 3 models.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * SpecificToolChoiceProperty specificToolChoiceProperty = SpecificToolChoiceProperty.builder()
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-specifictoolchoice.html)
+   */
+  public interface SpecificToolChoiceProperty {
+    /**
+     * The name of the tool that the model must request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-specifictoolchoice.html#cfn-bedrock-prompt-specifictoolchoice-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [SpecificToolChoiceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the tool that the model must request. 
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnPrompt.SpecificToolChoiceProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnPrompt.SpecificToolChoiceProperty.builder()
+
+      /**
+       * @param name The name of the tool that the model must request. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnPrompt.SpecificToolChoiceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.SpecificToolChoiceProperty,
+    ) : CdkObject(cdkObject),
+        SpecificToolChoiceProperty {
+      /**
+       * The name of the tool that the model must request.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-specifictoolchoice.html#cfn-bedrock-prompt-specifictoolchoice-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SpecificToolChoiceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.SpecificToolChoiceProperty):
+          SpecificToolChoiceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SpecificToolChoiceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SpecificToolChoiceProperty):
+          software.amazon.awscdk.services.bedrock.CfnPrompt.SpecificToolChoiceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnPrompt.SpecificToolChoiceProperty
+    }
+  }
+
+  /**
+   * Contains configurations for instructions to provide the model for how to handle input.
+   *
+   * To learn more, see [Using the Converse
+   * API](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-call.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * SystemContentBlockProperty systemContentBlockProperty = SystemContentBlockProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
+   * .text("text")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-systemcontentblock.html)
+   */
+  public interface SystemContentBlockProperty {
+    /**
+     * CachePoint to include in the system prompt.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-systemcontentblock.html#cfn-bedrock-prompt-systemcontentblock-cachepoint)
+     */
+    public fun cachePoint(): Any? = unwrap(this).getCachePoint()
+
+    /**
+     * A system prompt for the model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-systemcontentblock.html#cfn-bedrock-prompt-systemcontentblock-text)
+     */
+    public fun text(): String? = unwrap(this).getText()
+
+    /**
+     * A builder for [SystemContentBlockProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cachePoint CachePoint to include in the system prompt.
+       */
+      public fun cachePoint(cachePoint: IResolvable)
+
+      /**
+       * @param cachePoint CachePoint to include in the system prompt.
+       */
+      public fun cachePoint(cachePoint: CachePointBlockProperty)
+
+      /**
+       * @param cachePoint CachePoint to include in the system prompt.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a2ca21cc0d446c1ad898ee6513dacdf2927773dcac13b2af4bd1d15142fbc690")
+      public fun cachePoint(cachePoint: CachePointBlockProperty.Builder.() -> Unit)
+
+      /**
+       * @param text A system prompt for the model.
+       */
+      public fun text(text: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnPrompt.SystemContentBlockProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnPrompt.SystemContentBlockProperty.builder()
+
+      /**
+       * @param cachePoint CachePoint to include in the system prompt.
+       */
+      override fun cachePoint(cachePoint: IResolvable) {
+        cdkBuilder.cachePoint(cachePoint.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param cachePoint CachePoint to include in the system prompt.
+       */
+      override fun cachePoint(cachePoint: CachePointBlockProperty) {
+        cdkBuilder.cachePoint(cachePoint.let(CachePointBlockProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param cachePoint CachePoint to include in the system prompt.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a2ca21cc0d446c1ad898ee6513dacdf2927773dcac13b2af4bd1d15142fbc690")
+      override fun cachePoint(cachePoint: CachePointBlockProperty.Builder.() -> Unit): Unit =
+          cachePoint(CachePointBlockProperty(cachePoint))
+
+      /**
+       * @param text A system prompt for the model.
+       */
+      override fun text(text: String) {
+        cdkBuilder.text(text)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnPrompt.SystemContentBlockProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.SystemContentBlockProperty,
+    ) : CdkObject(cdkObject),
+        SystemContentBlockProperty {
+      /**
+       * CachePoint to include in the system prompt.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-systemcontentblock.html#cfn-bedrock-prompt-systemcontentblock-cachepoint)
+       */
+      override fun cachePoint(): Any? = unwrap(this).getCachePoint()
+
+      /**
+       * A system prompt for the model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-systemcontentblock.html#cfn-bedrock-prompt-systemcontentblock-text)
+       */
+      override fun text(): String? = unwrap(this).getText()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SystemContentBlockProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.SystemContentBlockProperty):
+          SystemContentBlockProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SystemContentBlockProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SystemContentBlockProperty):
+          software.amazon.awscdk.services.bedrock.CfnPrompt.SystemContentBlockProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnPrompt.SystemContentBlockProperty
+    }
+  }
+
+  /**
    * Contains configurations for a text prompt template.
    *
    * To include a variable, enclose a word in double curly braces as in `{{variable}}` .
@@ -1244,6 +2893,9 @@ public open class CfnPrompt(
    * import io.cloudshiftdev.awscdk.services.bedrock.*;
    * TextPromptTemplateConfigurationProperty textPromptTemplateConfigurationProperty =
    * TextPromptTemplateConfigurationProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
    * .inputVariables(List.of(PromptInputVariableProperty.builder()
    * .name("name")
    * .build()))
@@ -1260,6 +2912,13 @@ public open class CfnPrompt(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-textprompttemplateconfiguration.html)
    */
   public interface TextPromptTemplateConfigurationProperty {
+    /**
+     * A cache checkpoint within a template configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-textprompttemplateconfiguration.html#cfn-bedrock-prompt-textprompttemplateconfiguration-cachepoint)
+     */
+    public fun cachePoint(): Any? = unwrap(this).getCachePoint()
+
     /**
      * An array of the variables in the prompt template.
      *
@@ -1286,6 +2945,23 @@ public open class CfnPrompt(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param cachePoint A cache checkpoint within a template configuration.
+       */
+      public fun cachePoint(cachePoint: IResolvable)
+
+      /**
+       * @param cachePoint A cache checkpoint within a template configuration.
+       */
+      public fun cachePoint(cachePoint: CachePointBlockProperty)
+
+      /**
+       * @param cachePoint A cache checkpoint within a template configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8627a5b0270ca941bc36e1a187085260f1c4e700cca08f9af5ead95f57f39802")
+      public fun cachePoint(cachePoint: CachePointBlockProperty.Builder.() -> Unit)
+
       /**
        * @param inputVariables An array of the variables in the prompt template.
        */
@@ -1329,6 +3005,28 @@ public open class CfnPrompt(
           software.amazon.awscdk.services.bedrock.CfnPrompt.TextPromptTemplateConfigurationProperty.Builder
           =
           software.amazon.awscdk.services.bedrock.CfnPrompt.TextPromptTemplateConfigurationProperty.builder()
+
+      /**
+       * @param cachePoint A cache checkpoint within a template configuration.
+       */
+      override fun cachePoint(cachePoint: IResolvable) {
+        cdkBuilder.cachePoint(cachePoint.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param cachePoint A cache checkpoint within a template configuration.
+       */
+      override fun cachePoint(cachePoint: CachePointBlockProperty) {
+        cdkBuilder.cachePoint(cachePoint.let(CachePointBlockProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param cachePoint A cache checkpoint within a template configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8627a5b0270ca941bc36e1a187085260f1c4e700cca08f9af5ead95f57f39802")
+      override fun cachePoint(cachePoint: CachePointBlockProperty.Builder.() -> Unit): Unit =
+          cachePoint(CachePointBlockProperty(cachePoint))
 
       /**
        * @param inputVariables An array of the variables in the prompt template.
@@ -1388,6 +3086,13 @@ public open class CfnPrompt(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.TextPromptTemplateConfigurationProperty,
     ) : CdkObject(cdkObject),
         TextPromptTemplateConfigurationProperty {
+      /**
+       * A cache checkpoint within a template configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-textprompttemplateconfiguration.html#cfn-bedrock-prompt-textprompttemplateconfiguration-cachepoint)
+       */
+      override fun cachePoint(): Any? = unwrap(this).getCachePoint()
+
       /**
        * An array of the variables in the prompt template.
        *
@@ -1562,6 +3267,823 @@ public open class CfnPrompt(
           software.amazon.awscdk.services.bedrock.CfnPrompt.TextS3LocationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.bedrock.CfnPrompt.TextS3LocationProperty
+    }
+  }
+
+  /**
+   * Determines which tools the model should request in a call to `Converse` or `ConverseStream` .
+   *
+   * For more information, see [Call a tool with the Converse
+   * API](https://docs.aws.amazon.com/bedrock/latest/userguide/tool-use.html) in the Amazon Bedrock
+   * User Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object any;
+   * Object auto;
+   * ToolChoiceProperty toolChoiceProperty = ToolChoiceProperty.builder()
+   * .any(any)
+   * .auto(auto)
+   * .tool(SpecificToolChoiceProperty.builder()
+   * .name("name")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolchoice.html)
+   */
+  public interface ToolChoiceProperty {
+    /**
+     * The model must request at least one tool (no text is generated).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolchoice.html#cfn-bedrock-prompt-toolchoice-any)
+     */
+    public fun any(): Any? = unwrap(this).getAny()
+
+    /**
+     * (Default).
+     *
+     * The Model automatically decides if a tool should be called or whether to generate text
+     * instead.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolchoice.html#cfn-bedrock-prompt-toolchoice-auto)
+     */
+    public fun auto(): Any? = unwrap(this).getAuto()
+
+    /**
+     * The Model must request the specified tool.
+     *
+     * Only supported by Anthropic Claude 3 and Amazon Nova models.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolchoice.html#cfn-bedrock-prompt-toolchoice-tool)
+     */
+    public fun tool(): Any? = unwrap(this).getTool()
+
+    /**
+     * A builder for [ToolChoiceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param any The model must request at least one tool (no text is generated).
+       */
+      public fun any(any: Any)
+
+      /**
+       * @param auto (Default).
+       * The Model automatically decides if a tool should be called or whether to generate text
+       * instead.
+       */
+      public fun auto(auto: Any)
+
+      /**
+       * @param tool The Model must request the specified tool.
+       * Only supported by Anthropic Claude 3 and Amazon Nova models.
+       */
+      public fun tool(tool: IResolvable)
+
+      /**
+       * @param tool The Model must request the specified tool.
+       * Only supported by Anthropic Claude 3 and Amazon Nova models.
+       */
+      public fun tool(tool: SpecificToolChoiceProperty)
+
+      /**
+       * @param tool The Model must request the specified tool.
+       * Only supported by Anthropic Claude 3 and Amazon Nova models.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b269324d91b6f03d0e89ab47693345fe860a6a70750631c27eedb5421febdcc0")
+      public fun tool(tool: SpecificToolChoiceProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolChoiceProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolChoiceProperty.builder()
+
+      /**
+       * @param any The model must request at least one tool (no text is generated).
+       */
+      override fun any(any: Any) {
+        cdkBuilder.any(any)
+      }
+
+      /**
+       * @param auto (Default).
+       * The Model automatically decides if a tool should be called or whether to generate text
+       * instead.
+       */
+      override fun auto(auto: Any) {
+        cdkBuilder.auto(auto)
+      }
+
+      /**
+       * @param tool The Model must request the specified tool.
+       * Only supported by Anthropic Claude 3 and Amazon Nova models.
+       */
+      override fun tool(tool: IResolvable) {
+        cdkBuilder.tool(tool.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param tool The Model must request the specified tool.
+       * Only supported by Anthropic Claude 3 and Amazon Nova models.
+       */
+      override fun tool(tool: SpecificToolChoiceProperty) {
+        cdkBuilder.tool(tool.let(SpecificToolChoiceProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param tool The Model must request the specified tool.
+       * Only supported by Anthropic Claude 3 and Amazon Nova models.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b269324d91b6f03d0e89ab47693345fe860a6a70750631c27eedb5421febdcc0")
+      override fun tool(tool: SpecificToolChoiceProperty.Builder.() -> Unit): Unit =
+          tool(SpecificToolChoiceProperty(tool))
+
+      public fun build(): software.amazon.awscdk.services.bedrock.CfnPrompt.ToolChoiceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.ToolChoiceProperty,
+    ) : CdkObject(cdkObject),
+        ToolChoiceProperty {
+      /**
+       * The model must request at least one tool (no text is generated).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolchoice.html#cfn-bedrock-prompt-toolchoice-any)
+       */
+      override fun any(): Any? = unwrap(this).getAny()
+
+      /**
+       * (Default).
+       *
+       * The Model automatically decides if a tool should be called or whether to generate text
+       * instead.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolchoice.html#cfn-bedrock-prompt-toolchoice-auto)
+       */
+      override fun auto(): Any? = unwrap(this).getAuto()
+
+      /**
+       * The Model must request the specified tool.
+       *
+       * Only supported by Anthropic Claude 3 and Amazon Nova models.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolchoice.html#cfn-bedrock-prompt-toolchoice-tool)
+       */
+      override fun tool(): Any? = unwrap(this).getTool()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ToolChoiceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.ToolChoiceProperty):
+          ToolChoiceProperty = CdkObjectWrappers.wrap(cdkObject) as? ToolChoiceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ToolChoiceProperty):
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolChoiceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolChoiceProperty
+    }
+  }
+
+  /**
+   * Configuration information for the tools that you pass to a model.
+   *
+   * For more information, see [Tool use (function
+   * calling)](https://docs.aws.amazon.com/bedrock/latest/userguide/tool-use.html) in the Amazon
+   * Bedrock User Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object any;
+   * Object auto;
+   * Object json;
+   * ToolConfigurationProperty toolConfigurationProperty = ToolConfigurationProperty.builder()
+   * .tools(List.of(ToolProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
+   * .toolSpec(ToolSpecificationProperty.builder()
+   * .inputSchema(ToolInputSchemaProperty.builder()
+   * .json(json)
+   * .build())
+   * .name("name")
+   * // the properties below are optional
+   * .description("description")
+   * .build())
+   * .build()))
+   * // the properties below are optional
+   * .toolChoice(ToolChoiceProperty.builder()
+   * .any(any)
+   * .auto(auto)
+   * .tool(SpecificToolChoiceProperty.builder()
+   * .name("name")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolconfiguration.html)
+   */
+  public interface ToolConfigurationProperty {
+    /**
+     * If supported by model, forces the model to request a tool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolconfiguration.html#cfn-bedrock-prompt-toolconfiguration-toolchoice)
+     */
+    public fun toolChoice(): Any? = unwrap(this).getToolChoice()
+
+    /**
+     * An array of tools that you want to pass to a model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolconfiguration.html#cfn-bedrock-prompt-toolconfiguration-tools)
+     */
+    public fun tools(): Any
+
+    /**
+     * A builder for [ToolConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param toolChoice If supported by model, forces the model to request a tool.
+       */
+      public fun toolChoice(toolChoice: IResolvable)
+
+      /**
+       * @param toolChoice If supported by model, forces the model to request a tool.
+       */
+      public fun toolChoice(toolChoice: ToolChoiceProperty)
+
+      /**
+       * @param toolChoice If supported by model, forces the model to request a tool.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b66b7aea1cfd9c3595a6ac9939fab9f3de78f6fb6bf9213862f17be23406ee72")
+      public fun toolChoice(toolChoice: ToolChoiceProperty.Builder.() -> Unit)
+
+      /**
+       * @param tools An array of tools that you want to pass to a model. 
+       */
+      public fun tools(tools: IResolvable)
+
+      /**
+       * @param tools An array of tools that you want to pass to a model. 
+       */
+      public fun tools(tools: List<Any>)
+
+      /**
+       * @param tools An array of tools that you want to pass to a model. 
+       */
+      public fun tools(vararg tools: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolConfigurationProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolConfigurationProperty.builder()
+
+      /**
+       * @param toolChoice If supported by model, forces the model to request a tool.
+       */
+      override fun toolChoice(toolChoice: IResolvable) {
+        cdkBuilder.toolChoice(toolChoice.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param toolChoice If supported by model, forces the model to request a tool.
+       */
+      override fun toolChoice(toolChoice: ToolChoiceProperty) {
+        cdkBuilder.toolChoice(toolChoice.let(ToolChoiceProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param toolChoice If supported by model, forces the model to request a tool.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b66b7aea1cfd9c3595a6ac9939fab9f3de78f6fb6bf9213862f17be23406ee72")
+      override fun toolChoice(toolChoice: ToolChoiceProperty.Builder.() -> Unit): Unit =
+          toolChoice(ToolChoiceProperty(toolChoice))
+
+      /**
+       * @param tools An array of tools that you want to pass to a model. 
+       */
+      override fun tools(tools: IResolvable) {
+        cdkBuilder.tools(tools.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param tools An array of tools that you want to pass to a model. 
+       */
+      override fun tools(tools: List<Any>) {
+        cdkBuilder.tools(tools.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param tools An array of tools that you want to pass to a model. 
+       */
+      override fun tools(vararg tools: Any): Unit = tools(tools.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.ToolConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ToolConfigurationProperty {
+      /**
+       * If supported by model, forces the model to request a tool.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolconfiguration.html#cfn-bedrock-prompt-toolconfiguration-toolchoice)
+       */
+      override fun toolChoice(): Any? = unwrap(this).getToolChoice()
+
+      /**
+       * An array of tools that you want to pass to a model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolconfiguration.html#cfn-bedrock-prompt-toolconfiguration-tools)
+       */
+      override fun tools(): Any = unwrap(this).getTools()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ToolConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.ToolConfigurationProperty):
+          ToolConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ToolConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ToolConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolConfigurationProperty
+    }
+  }
+
+  /**
+   * The schema for the tool.
+   *
+   * The top level schema type must be `object` . For more information, see [Call a tool with the
+   * Converse API](https://docs.aws.amazon.com/bedrock/latest/userguide/tool-use.html) in the Amazon
+   * Bedrock User Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object json;
+   * ToolInputSchemaProperty toolInputSchemaProperty = ToolInputSchemaProperty.builder()
+   * .json(json)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolinputschema.html)
+   */
+  public interface ToolInputSchemaProperty {
+    /**
+     * The JSON schema for the tool.
+     *
+     * For more information, see [JSON Schema
+     * Reference](https://docs.aws.amazon.com/https://json-schema.org/understanding-json-schema/reference)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolinputschema.html#cfn-bedrock-prompt-toolinputschema-json)
+     */
+    public fun json(): Any
+
+    /**
+     * A builder for [ToolInputSchemaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param json The JSON schema for the tool. 
+       * For more information, see [JSON Schema
+       * Reference](https://docs.aws.amazon.com/https://json-schema.org/understanding-json-schema/reference)
+       * .
+       */
+      public fun json(json: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolInputSchemaProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolInputSchemaProperty.builder()
+
+      /**
+       * @param json The JSON schema for the tool. 
+       * For more information, see [JSON Schema
+       * Reference](https://docs.aws.amazon.com/https://json-schema.org/understanding-json-schema/reference)
+       * .
+       */
+      override fun json(json: Any) {
+        cdkBuilder.json(json)
+      }
+
+      public fun build(): software.amazon.awscdk.services.bedrock.CfnPrompt.ToolInputSchemaProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.ToolInputSchemaProperty,
+    ) : CdkObject(cdkObject),
+        ToolInputSchemaProperty {
+      /**
+       * The JSON schema for the tool.
+       *
+       * For more information, see [JSON Schema
+       * Reference](https://docs.aws.amazon.com/https://json-schema.org/understanding-json-schema/reference)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolinputschema.html#cfn-bedrock-prompt-toolinputschema-json)
+       */
+      override fun json(): Any = unwrap(this).getJson()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ToolInputSchemaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.ToolInputSchemaProperty):
+          ToolInputSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? ToolInputSchemaProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ToolInputSchemaProperty):
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolInputSchemaProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolInputSchemaProperty
+    }
+  }
+
+  /**
+   * Information about a tool that you can use with the Converse API.
+   *
+   * For more information, see [Call a tool with the Converse
+   * API](https://docs.aws.amazon.com/bedrock/latest/userguide/tool-use.html) in the Amazon Bedrock
+   * User Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object json;
+   * ToolProperty toolProperty = ToolProperty.builder()
+   * .cachePoint(CachePointBlockProperty.builder()
+   * .type("type")
+   * .build())
+   * .toolSpec(ToolSpecificationProperty.builder()
+   * .inputSchema(ToolInputSchemaProperty.builder()
+   * .json(json)
+   * .build())
+   * .name("name")
+   * // the properties below are optional
+   * .description("description")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-tool.html)
+   */
+  public interface ToolProperty {
+    /**
+     * CachePoint to include in the tool configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-tool.html#cfn-bedrock-prompt-tool-cachepoint)
+     */
+    public fun cachePoint(): Any? = unwrap(this).getCachePoint()
+
+    /**
+     * The specfication for the tool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-tool.html#cfn-bedrock-prompt-tool-toolspec)
+     */
+    public fun toolSpec(): Any? = unwrap(this).getToolSpec()
+
+    /**
+     * A builder for [ToolProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cachePoint CachePoint to include in the tool configuration.
+       */
+      public fun cachePoint(cachePoint: IResolvable)
+
+      /**
+       * @param cachePoint CachePoint to include in the tool configuration.
+       */
+      public fun cachePoint(cachePoint: CachePointBlockProperty)
+
+      /**
+       * @param cachePoint CachePoint to include in the tool configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4563dc757f5b1b51a2739a04affdce617f25046cb8bb8ab37ac1fa9c19d8d38c")
+      public fun cachePoint(cachePoint: CachePointBlockProperty.Builder.() -> Unit)
+
+      /**
+       * @param toolSpec The specfication for the tool.
+       */
+      public fun toolSpec(toolSpec: IResolvable)
+
+      /**
+       * @param toolSpec The specfication for the tool.
+       */
+      public fun toolSpec(toolSpec: ToolSpecificationProperty)
+
+      /**
+       * @param toolSpec The specfication for the tool.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7296accfb07767eef6305e8e80e21e8de5e298a15d3edea480ee1dd3a200235e")
+      public fun toolSpec(toolSpec: ToolSpecificationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.services.bedrock.CfnPrompt.ToolProperty.Builder
+          = software.amazon.awscdk.services.bedrock.CfnPrompt.ToolProperty.builder()
+
+      /**
+       * @param cachePoint CachePoint to include in the tool configuration.
+       */
+      override fun cachePoint(cachePoint: IResolvable) {
+        cdkBuilder.cachePoint(cachePoint.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param cachePoint CachePoint to include in the tool configuration.
+       */
+      override fun cachePoint(cachePoint: CachePointBlockProperty) {
+        cdkBuilder.cachePoint(cachePoint.let(CachePointBlockProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param cachePoint CachePoint to include in the tool configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4563dc757f5b1b51a2739a04affdce617f25046cb8bb8ab37ac1fa9c19d8d38c")
+      override fun cachePoint(cachePoint: CachePointBlockProperty.Builder.() -> Unit): Unit =
+          cachePoint(CachePointBlockProperty(cachePoint))
+
+      /**
+       * @param toolSpec The specfication for the tool.
+       */
+      override fun toolSpec(toolSpec: IResolvable) {
+        cdkBuilder.toolSpec(toolSpec.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param toolSpec The specfication for the tool.
+       */
+      override fun toolSpec(toolSpec: ToolSpecificationProperty) {
+        cdkBuilder.toolSpec(toolSpec.let(ToolSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param toolSpec The specfication for the tool.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7296accfb07767eef6305e8e80e21e8de5e298a15d3edea480ee1dd3a200235e")
+      override fun toolSpec(toolSpec: ToolSpecificationProperty.Builder.() -> Unit): Unit =
+          toolSpec(ToolSpecificationProperty(toolSpec))
+
+      public fun build(): software.amazon.awscdk.services.bedrock.CfnPrompt.ToolProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.ToolProperty,
+    ) : CdkObject(cdkObject),
+        ToolProperty {
+      /**
+       * CachePoint to include in the tool configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-tool.html#cfn-bedrock-prompt-tool-cachepoint)
+       */
+      override fun cachePoint(): Any? = unwrap(this).getCachePoint()
+
+      /**
+       * The specfication for the tool.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-tool.html#cfn-bedrock-prompt-tool-toolspec)
+       */
+      override fun toolSpec(): Any? = unwrap(this).getToolSpec()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ToolProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.ToolProperty):
+          ToolProperty = CdkObjectWrappers.wrap(cdkObject) as? ToolProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ToolProperty):
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.bedrock.CfnPrompt.ToolProperty
+    }
+  }
+
+  /**
+   * The specification for the tool.
+   *
+   * For more information, see [Call a tool with the Converse
+   * API](https://docs.aws.amazon.com/bedrock/latest/userguide/tool-use.html) in the Amazon Bedrock
+   * User Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object json;
+   * ToolSpecificationProperty toolSpecificationProperty = ToolSpecificationProperty.builder()
+   * .inputSchema(ToolInputSchemaProperty.builder()
+   * .json(json)
+   * .build())
+   * .name("name")
+   * // the properties below are optional
+   * .description("description")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolspecification.html)
+   */
+  public interface ToolSpecificationProperty {
+    /**
+     * The description for the tool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolspecification.html#cfn-bedrock-prompt-toolspecification-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The input schema for the tool in JSON format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolspecification.html#cfn-bedrock-prompt-toolspecification-inputschema)
+     */
+    public fun inputSchema(): Any
+
+    /**
+     * The name for the tool.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolspecification.html#cfn-bedrock-prompt-toolspecification-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [ToolSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param description The description for the tool.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param inputSchema The input schema for the tool in JSON format. 
+       */
+      public fun inputSchema(inputSchema: IResolvable)
+
+      /**
+       * @param inputSchema The input schema for the tool in JSON format. 
+       */
+      public fun inputSchema(inputSchema: ToolInputSchemaProperty)
+
+      /**
+       * @param inputSchema The input schema for the tool in JSON format. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d85770264862f16ac5f23c6dc4cdd2338aa1533554193c3557871fe81a672a8e")
+      public fun inputSchema(inputSchema: ToolInputSchemaProperty.Builder.() -> Unit)
+
+      /**
+       * @param name The name for the tool. 
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolSpecificationProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolSpecificationProperty.builder()
+
+      /**
+       * @param description The description for the tool.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param inputSchema The input schema for the tool in JSON format. 
+       */
+      override fun inputSchema(inputSchema: IResolvable) {
+        cdkBuilder.inputSchema(inputSchema.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param inputSchema The input schema for the tool in JSON format. 
+       */
+      override fun inputSchema(inputSchema: ToolInputSchemaProperty) {
+        cdkBuilder.inputSchema(inputSchema.let(ToolInputSchemaProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param inputSchema The input schema for the tool in JSON format. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d85770264862f16ac5f23c6dc4cdd2338aa1533554193c3557871fe81a672a8e")
+      override fun inputSchema(inputSchema: ToolInputSchemaProperty.Builder.() -> Unit): Unit =
+          inputSchema(ToolInputSchemaProperty(inputSchema))
+
+      /**
+       * @param name The name for the tool. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.ToolSpecificationProperty,
+    ) : CdkObject(cdkObject),
+        ToolSpecificationProperty {
+      /**
+       * The description for the tool.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolspecification.html#cfn-bedrock-prompt-toolspecification-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * The input schema for the tool in JSON format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolspecification.html#cfn-bedrock-prompt-toolspecification-inputschema)
+       */
+      override fun inputSchema(): Any = unwrap(this).getInputSchema()
+
+      /**
+       * The name for the tool.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-prompt-toolspecification.html#cfn-bedrock-prompt-toolspecification-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ToolSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnPrompt.ToolSpecificationProperty):
+          ToolSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ToolSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ToolSpecificationProperty):
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolSpecificationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnPrompt.ToolSpecificationProperty
     }
   }
 }

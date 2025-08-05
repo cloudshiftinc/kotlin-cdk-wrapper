@@ -83,9 +83,9 @@ public interface CfnRepositoryCreationTemplateProps {
   /**
    * The tag mutability setting for the repository.
    *
-   * If this parameter is omitted, the default setting of MUTABLE will be used which will allow
-   * image tags to be overwritten. If IMMUTABLE is specified, all image tags within the repository will
-   * be immutable which will prevent them from being overwritten.
+   * If this parameter is omitted, the default setting of `MUTABLE` will be used which will allow
+   * image tags to be overwritten. If `IMMUTABLE` is specified, all image tags within the repository
+   * will be immutable which will prevent them from being overwritten.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-imagetagmutability)
    */
@@ -106,7 +106,7 @@ public interface CfnRepositoryCreationTemplateProps {
   public fun prefix(): String
 
   /**
-   * he repository policy to apply to repositories created using the template.
+   * The repository policy to apply to repositories created using the template.
    *
    * A repository policy is a permissions policy associated with a repository to control access
    * permissions.
@@ -182,8 +182,8 @@ public interface CfnRepositoryCreationTemplateProps {
 
     /**
      * @param imageTagMutability The tag mutability setting for the repository.
-     * If this parameter is omitted, the default setting of MUTABLE will be used which will allow
-     * image tags to be overwritten. If IMMUTABLE is specified, all image tags within the repository
+     * If this parameter is omitted, the default setting of `MUTABLE` will be used which will allow
+     * image tags to be overwritten. If `IMMUTABLE` is specified, all image tags within the repository
      * will be immutable which will prevent them from being overwritten.
      */
     public fun imageTagMutability(imageTagMutability: String)
@@ -201,7 +201,7 @@ public interface CfnRepositoryCreationTemplateProps {
     public fun prefix(prefix: String)
 
     /**
-     * @param repositoryPolicy he repository policy to apply to repositories created using the
+     * @param repositoryPolicy The repository policy to apply to repositories created using the
      * template.
      * A repository policy is a permissions policy associated with a repository to control access
      * permissions.
@@ -304,8 +304,8 @@ public interface CfnRepositoryCreationTemplateProps {
 
     /**
      * @param imageTagMutability The tag mutability setting for the repository.
-     * If this parameter is omitted, the default setting of MUTABLE will be used which will allow
-     * image tags to be overwritten. If IMMUTABLE is specified, all image tags within the repository
+     * If this parameter is omitted, the default setting of `MUTABLE` will be used which will allow
+     * image tags to be overwritten. If `IMMUTABLE` is specified, all image tags within the repository
      * will be immutable which will prevent them from being overwritten.
      */
     override fun imageTagMutability(imageTagMutability: String) {
@@ -329,7 +329,7 @@ public interface CfnRepositoryCreationTemplateProps {
     }
 
     /**
-     * @param repositoryPolicy he repository policy to apply to repositories created using the
+     * @param repositoryPolicy The repository policy to apply to repositories created using the
      * template.
      * A repository policy is a permissions policy associated with a repository to control access
      * permissions.
@@ -415,8 +415,8 @@ public interface CfnRepositoryCreationTemplateProps {
     /**
      * The tag mutability setting for the repository.
      *
-     * If this parameter is omitted, the default setting of MUTABLE will be used which will allow
-     * image tags to be overwritten. If IMMUTABLE is specified, all image tags within the repository
+     * If this parameter is omitted, the default setting of `MUTABLE` will be used which will allow
+     * image tags to be overwritten. If `IMMUTABLE` is specified, all image tags within the repository
      * will be immutable which will prevent them from being overwritten.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-imagetagmutability)
@@ -438,7 +438,7 @@ public interface CfnRepositoryCreationTemplateProps {
     override fun prefix(): String = unwrap(this).getPrefix()
 
     /**
-     * he repository policy to apply to repositories created using the template.
+     * The repository policy to apply to repositories created using the template.
      *
      * A repository policy is a permissions policy associated with a repository to control access
      * permissions.

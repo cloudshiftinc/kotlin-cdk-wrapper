@@ -291,6 +291,9 @@ public open class LayerVersion(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.lambda.LayerVersion.PROPERTY_INJECTION_ID
+
     public fun fromLayerVersionArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

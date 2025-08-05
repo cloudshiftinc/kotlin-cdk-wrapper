@@ -2,11 +2,13 @@
 
 package io.cloudshiftdev.awscdk.services.ec2
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 
 /**
  * Properties for defining a `CfnHost`.
@@ -27,6 +29,10 @@ import kotlin.Unit
  * .instanceFamily("instanceFamily")
  * .instanceType("instanceType")
  * .outpostArn("outpostArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -109,6 +115,13 @@ public interface CfnHostProps {
   public fun outpostArn(): String? = unwrap(this).getOutpostArn()
 
   /**
+   * Any tags assigned to the Dedicated Host.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
    * A builder for [CfnHostProps]
    */
   @CdkDslMarker
@@ -170,6 +183,16 @@ public interface CfnHostProps {
      * Host is allocated.
      */
     public fun outpostArn(outpostArn: String)
+
+    /**
+     * @param tags Any tags assigned to the Dedicated Host.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags Any tags assigned to the Dedicated Host.
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl : Builder {
@@ -249,6 +272,18 @@ public interface CfnHostProps {
     override fun outpostArn(outpostArn: String) {
       cdkBuilder.outpostArn(outpostArn)
     }
+
+    /**
+     * @param tags Any tags assigned to the Dedicated Host.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags Any tags assigned to the Dedicated Host.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnHostProps = cdkBuilder.build()
   }
@@ -331,6 +366,13 @@ public interface CfnHostProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-outpostarn)
      */
     override fun outpostArn(): String? = unwrap(this).getOutpostArn()
+
+    /**
+     * Any tags assigned to the Dedicated Host.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 
   public companion object {

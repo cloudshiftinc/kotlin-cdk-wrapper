@@ -181,6 +181,9 @@ public open class HttpNamespace(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.servicediscovery.HttpNamespace.PROPERTY_INJECTION_ID
+
     public fun fromHttpNamespaceAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

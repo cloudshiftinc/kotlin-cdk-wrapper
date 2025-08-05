@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.services.sns.ITopic
 import kotlin.String
 import kotlin.Unit
 
@@ -21,6 +22,7 @@ import kotlin.Unit
  * CodePipeline pipeline;
  * MyApplicationStage preprod = new MyApplicationStage(this, "PreProd");
  * MyApplicationStage prod = new MyApplicationStage(this, "Prod");
+ * Topic topic = new Topic(this, "ChangeApprovalTopic");
  * pipeline.addStage(preprod, AddStageOpts.builder()
  * .post(List.of(
  * ShellStep.Builder.create("Validate Endpoint")
@@ -28,7 +30,12 @@ import kotlin.Unit
  * .build()))
  * .build());
  * pipeline.addStage(prod, AddStageOpts.builder()
- * .pre(List.of(new ManualApprovalStep("PromoteToProd")))
+ * .pre(List.of(ManualApprovalStep.Builder.create("PromoteToProd")
+ * //All options below are optional
+ * .comment("Please validate changes")
+ * .reviewUrl("https://my.webservice.com/")
+ * .notificationTopic(topic)
+ * .build()))
  * .build());
  * ```
  */
@@ -55,6 +62,21 @@ public open class ManualApprovalStep(
   public open fun comment(): String? = unwrap(this).getComment()
 
   /**
+   * Optional SNS topic to send notifications.
+   *
+   * Default: - No notifications
+   */
+  public open fun notificationTopic(): ITopic? =
+      unwrap(this).getNotificationTopic()?.let(ITopic::wrap)
+
+  /**
+   * The URL for review associated with this manual approval.
+   *
+   * Default: - No URL
+   */
+  public open fun reviewUrl(): String? = unwrap(this).getReviewUrl()
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.pipelines.ManualApprovalStep].
    */
   @CdkDslMarker
@@ -67,6 +89,25 @@ public open class ManualApprovalStep(
      * @param comment The comment to display with this manual approval. 
      */
     public fun comment(comment: String)
+
+    /**
+     * Optional SNS topic to send notifications to when an approval is pending.
+     *
+     * Default: - No notifications
+     *
+     * @param notificationTopic Optional SNS topic to send notifications to when an approval is
+     * pending. 
+     */
+    public fun notificationTopic(notificationTopic: ITopic)
+
+    /**
+     * The URL for review associated with this manual approval.
+     *
+     * Default: - No URL
+     *
+     * @param reviewUrl The URL for review associated with this manual approval. 
+     */
+    public fun reviewUrl(reviewUrl: String)
   }
 
   private class BuilderImpl(
@@ -84,6 +125,29 @@ public open class ManualApprovalStep(
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
+    }
+
+    /**
+     * Optional SNS topic to send notifications to when an approval is pending.
+     *
+     * Default: - No notifications
+     *
+     * @param notificationTopic Optional SNS topic to send notifications to when an approval is
+     * pending. 
+     */
+    override fun notificationTopic(notificationTopic: ITopic) {
+      cdkBuilder.notificationTopic(notificationTopic.let(ITopic.Companion::unwrap))
+    }
+
+    /**
+     * The URL for review associated with this manual approval.
+     *
+     * Default: - No URL
+     *
+     * @param reviewUrl The URL for review associated with this manual approval. 
+     */
+    override fun reviewUrl(reviewUrl: String) {
+      cdkBuilder.reviewUrl(reviewUrl)
     }
 
     public fun build(): software.amazon.awscdk.pipelines.ManualApprovalStep = cdkBuilder.build()

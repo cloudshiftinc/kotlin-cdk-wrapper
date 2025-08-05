@@ -31,6 +31,7 @@ import kotlin.jvm.JvmName
  * .loggingRole("loggingRole")
  * .securityPolicyName("securityPolicyName")
  * .sftpConfig(SftpConfigProperty.builder()
+ * .maxConcurrentConnections(123)
  * .trustedHostKeys(List.of("trustedHostKeys"))
  * .userSecretId("userSecretId")
  * .build())

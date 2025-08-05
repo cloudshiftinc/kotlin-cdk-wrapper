@@ -25,7 +25,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * ```
  * import io.cloudshiftdev.awscdk.services.inspector.*;
- * CfnAssessmentTemplate assessmentTemplate;
+ * CfnAssessmentTemplate cfnAssessmentTemplate;
+ * IAssessmentTemplate assessmentTemplate = AssessmentTemplate.fromCfnAssessmentTemplate(this,
+ * "MyAssessmentTemplate", cfnAssessmentTemplate);
  * Schedule.Builder.create(this, "Schedule")
  * .schedule(ScheduleExpression.rate(Duration.minutes(60)))
  * .target(new InspectorStartAssessmentRun(assessmentTemplate))

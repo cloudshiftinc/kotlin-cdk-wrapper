@@ -629,6 +629,9 @@ public open class ServerlessCluster(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.rds.ServerlessCluster.PROPERTY_INJECTION_ID
+
     public fun fromServerlessClusterAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

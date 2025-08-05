@@ -377,6 +377,9 @@ public open class CustomRule(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.config.CustomRule.PROPERTY_INJECTION_ID
+
     public fun fromConfigRuleName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

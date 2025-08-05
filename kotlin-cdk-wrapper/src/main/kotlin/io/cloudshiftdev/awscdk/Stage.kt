@@ -28,16 +28,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * ```
  * CodePipeline pipeline;
- * MyApplicationStage preprod = new MyApplicationStage(this, "PreProd");
- * MyApplicationStage prod = new MyApplicationStage(this, "Prod");
- * pipeline.addStage(preprod, AddStageOpts.builder()
- * .post(List.of(
- * ShellStep.Builder.create("Validate Endpoint")
- * .commands(List.of("curl -Ssf https://my.webservice.com/"))
- * .build()))
+ * Wave europeWave = pipeline.addWave("Europe");
+ * europeWave.addStage(
+ * MyApplicationStage.Builder.create(this, "Ireland")
+ * .env(Environment.builder().region("eu-west-1").build())
  * .build());
- * pipeline.addStage(prod, AddStageOpts.builder()
- * .pre(List.of(new ManualApprovalStep("PromoteToProd")))
+ * europeWave.addStage(
+ * MyApplicationStage.Builder.create(this, "Germany")
+ * .env(Environment.builder().region("eu-central-1").build())
  * .build());
  * ```
  */
@@ -253,6 +251,20 @@ public open class Stage(
      * Options for applying a permissions boundary to all IAM Roles and Users created within this
      * Stage.
      *
+     * Be aware that this feature uses Aspects, and the Aspects are applied at the
+     * Stack level with a priority of `MUTATING` (if the feature flag
+     * `&#64;aws-cdk/core:aspectPrioritiesMutating` is set) or `DEFAULT` (if the flag
+     * is not set). This is relevant if you are both using your own Aspects to
+     * assign Permissions Boundaries, as well as specifying this property.  The
+     * Aspect added by this property will overwrite the Permissions Boundary
+     * assigned by your own Aspect if both: (a) your Aspect has a lower or equal
+     * priority to the automatic Aspect, and (b) your Aspect is applied *above*
+     * the Stack level.  If either of those conditions are not true, your own
+     * Aspect will win.
+     *
+     * We recommend assigning Permissions Boundaries only using the provided APIs,
+     * and not using custom Aspects.
+     *
      * Default: - no permissions boundary is applied
      *
      * @param permissionsBoundary Options for applying a permissions boundary to all IAM Roles and
@@ -283,6 +295,24 @@ public open class Stage(
      * @param policyValidationBeta1 Validation plugins to run during synthesis. 
      */
     public fun policyValidationBeta1(vararg policyValidationBeta1: IPolicyValidationPluginBeta1)
+
+    /**
+     * A list of IPropertyInjector attached to this Stage.
+     *
+     * Default: - no PropertyInjectors
+     *
+     * @param propertyInjectors A list of IPropertyInjector attached to this Stage. 
+     */
+    public fun propertyInjectors(propertyInjectors: List<IPropertyInjector>)
+
+    /**
+     * A list of IPropertyInjector attached to this Stage.
+     *
+     * Default: - no PropertyInjectors
+     *
+     * @param propertyInjectors A list of IPropertyInjector attached to this Stage. 
+     */
+    public fun propertyInjectors(vararg propertyInjectors: IPropertyInjector)
 
     /**
      * Name of this stage.
@@ -400,6 +430,20 @@ public open class Stage(
      * Options for applying a permissions boundary to all IAM Roles and Users created within this
      * Stage.
      *
+     * Be aware that this feature uses Aspects, and the Aspects are applied at the
+     * Stack level with a priority of `MUTATING` (if the feature flag
+     * `&#64;aws-cdk/core:aspectPrioritiesMutating` is set) or `DEFAULT` (if the flag
+     * is not set). This is relevant if you are both using your own Aspects to
+     * assign Permissions Boundaries, as well as specifying this property.  The
+     * Aspect added by this property will overwrite the Permissions Boundary
+     * assigned by your own Aspect if both: (a) your Aspect has a lower or equal
+     * priority to the automatic Aspect, and (b) your Aspect is applied *above*
+     * the Stack level.  If either of those conditions are not true, your own
+     * Aspect will win.
+     *
+     * We recommend assigning Permissions Boundaries only using the provided APIs,
+     * and not using custom Aspects.
+     *
      * Default: - no permissions boundary is applied
      *
      * @param permissionsBoundary Options for applying a permissions boundary to all IAM Roles and
@@ -435,6 +479,27 @@ public open class Stage(
      */
     override fun policyValidationBeta1(vararg policyValidationBeta1: IPolicyValidationPluginBeta1):
         Unit = policyValidationBeta1(policyValidationBeta1.toList())
+
+    /**
+     * A list of IPropertyInjector attached to this Stage.
+     *
+     * Default: - no PropertyInjectors
+     *
+     * @param propertyInjectors A list of IPropertyInjector attached to this Stage. 
+     */
+    override fun propertyInjectors(propertyInjectors: List<IPropertyInjector>) {
+      cdkBuilder.propertyInjectors(propertyInjectors.map(IPropertyInjector.Companion::unwrap))
+    }
+
+    /**
+     * A list of IPropertyInjector attached to this Stage.
+     *
+     * Default: - no PropertyInjectors
+     *
+     * @param propertyInjectors A list of IPropertyInjector attached to this Stage. 
+     */
+    override fun propertyInjectors(vararg propertyInjectors: IPropertyInjector): Unit =
+        propertyInjectors(propertyInjectors.toList())
 
     /**
      * Name of this stage.

@@ -575,8 +575,6 @@ public open class CfnTopicRule(
     /**
      * The name of the rule.
      *
-     * *Pattern* : `^[a-zA-Z0-9_]+$`
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html#cfn-iot-topicrule-rulename)
      * @param ruleName The name of the rule. 
      */
@@ -650,8 +648,6 @@ public open class CfnTopicRule(
 
     /**
      * The name of the rule.
-     *
-     * *Pattern* : `^[a-zA-Z0-9_]+$`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html#cfn-iot-topicrule-rulename)
      * @param ruleName The name of the rule. 
@@ -5581,12 +5577,12 @@ public open class CfnTopicRule(
       /**
        * @param clientProperties Properties of the Apache Kafka producer client. 
        */
-      public fun clientProperties(clientProperties: IResolvable)
+      public fun clientProperties(clientProperties: Map<String, String>)
 
       /**
        * @param clientProperties Properties of the Apache Kafka producer client. 
        */
-      public fun clientProperties(clientProperties: Map<String, String>)
+      public fun clientProperties(clientProperties: IResolvable)
 
       /**
        * @param destinationArn The ARN of Kafka action's VPC `TopicRuleDestination` . 
@@ -5632,15 +5628,15 @@ public open class CfnTopicRule(
       /**
        * @param clientProperties Properties of the Apache Kafka producer client. 
        */
-      override fun clientProperties(clientProperties: IResolvable) {
-        cdkBuilder.clientProperties(clientProperties.let(IResolvable.Companion::unwrap))
+      override fun clientProperties(clientProperties: Map<String, String>) {
+        cdkBuilder.clientProperties(clientProperties)
       }
 
       /**
        * @param clientProperties Properties of the Apache Kafka producer client. 
        */
-      override fun clientProperties(clientProperties: Map<String, String>) {
-        cdkBuilder.clientProperties(clientProperties)
+      override fun clientProperties(clientProperties: IResolvable) {
+        cdkBuilder.clientProperties(clientProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**

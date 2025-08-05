@@ -36,6 +36,10 @@ import kotlin.jvm.JvmName
  * .copyTagsToBackups(false)
  * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
  * .dataCompressionType("dataCompressionType")
+ * .dataReadCacheConfiguration(DataReadCacheConfigurationProperty.builder()
+ * .sizeGiB(123)
+ * .sizingMode("sizingMode")
+ * .build())
  * .deploymentType("deploymentType")
  * .driveCacheType("driveCacheType")
  * .efaEnabled(false)
@@ -47,6 +51,7 @@ import kotlin.jvm.JvmName
  * .mode("mode")
  * .build())
  * .perUnitStorageThroughput(123)
+ * .throughputCapacity(123)
  * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
  * .build())
  * .ontapConfiguration(OntapConfigurationProperty.builder()
@@ -206,12 +211,18 @@ public interface CfnFileSystemProps {
    * * Amazon FSx for OpenZFS
    * * Amazon FSx for Windows File Server
    *
+   * If this ID isn't specified, the Amazon FSx-managed key for your account is used. For more
+   * information, see [Encrypt](https://docs.aws.amazon.com//kms/latest/APIReference/API_Encrypt.html)
+   * in the *AWS Key Management Service API Reference* .
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-kmskeyid)
    */
   public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
   /**
    * The Lustre configuration for the file system being created.
+   *
+   * This configuration is required if the `FileSystemType` is set to `LUSTRE` .
    *
    *
    * The following parameters are not supported when creating Lustre file systems with a data
@@ -230,12 +241,16 @@ public interface CfnFileSystemProps {
   /**
    * The ONTAP configuration properties of the FSx for ONTAP file system that you are creating.
    *
+   * This configuration is required if the `FileSystemType` is set to `ONTAP` .
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-ontapconfiguration)
    */
   public fun ontapConfiguration(): Any? = unwrap(this).getOntapConfiguration()
 
   /**
    * The Amazon FSx for OpenZFS configuration properties for the file system that you are creating.
+   *
+   * This configuration is required if the `FileSystemType` is set to `OPENZFS` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-openzfsconfiguration)
    */
@@ -298,17 +313,18 @@ public interface CfnFileSystemProps {
    *
    * * Set to `SSD` to use solid state drive storage. SSD is supported on all Windows, Lustre,
    * ONTAP, and OpenZFS deployment types.
-   * * Set to `HDD` to use hard disk drive storage. HDD is supported on `SINGLE_AZ_2` and
+   * * Set to `HDD` to use hard disk drive storage, which is supported on `SINGLE_AZ_2` and
    * `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT_1` Lustre file system
    * deployment types.
    * * Set to `INTELLIGENT_TIERING` to use fully elastic, intelligently-tiered storage.
-   * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment type.
+   * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment type
+   * and for Lustre file systems with the Persistent_2 deployment type.
    *
    * Default value is `SSD` . For more information, see [Storage type
    * options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options)
-   * in the *FSx for Windows File Server User Guide* , [Multiple storage
-   * options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options) in the
-   * *FSx for Lustre User Guide* , and [Working with
+   * in the *FSx for Windows File Server User Guide* , [FSx for Lustre storage
+   * classes](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-storage-classes)
+   * in the *FSx for Lustre User Guide* , and [Working with
    * Intelligent-Tiering](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance-intelligent-tiering)
    * in the *Amazon FSx for OpenZFS User Guide* .
    *
@@ -350,7 +366,7 @@ public interface CfnFileSystemProps {
   /**
    * The configuration object for the Microsoft Windows file system you are creating.
    *
-   * This value is required if `FileSystemType` is set to `WINDOWS` .
+   * This configuration is required if `FileSystemType` is set to `WINDOWS` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-windowsconfiguration)
    */
@@ -408,11 +424,18 @@ public interface CfnFileSystemProps {
      * * Amazon FSx for NetApp ONTAP
      * * Amazon FSx for OpenZFS
      * * Amazon FSx for Windows File Server
+     *
+     * If this ID isn't specified, the Amazon FSx-managed key for your account is used. For more
+     * information, see
+     * [Encrypt](https://docs.aws.amazon.com//kms/latest/APIReference/API_Encrypt.html) in the *AWS Key
+     * Management Service API Reference* .
      */
     public fun kmsKeyId(kmsKeyId: String)
 
     /**
      * @param lustreConfiguration The Lustre configuration for the file system being created.
+     * This configuration is required if the `FileSystemType` is set to `LUSTRE` .
+     *
      *
      * The following parameters are not supported when creating Lustre file systems with a data
      * repository association.
@@ -426,6 +449,8 @@ public interface CfnFileSystemProps {
 
     /**
      * @param lustreConfiguration The Lustre configuration for the file system being created.
+     * This configuration is required if the `FileSystemType` is set to `LUSTRE` .
+     *
      *
      * The following parameters are not supported when creating Lustre file systems with a data
      * repository association.
@@ -439,6 +464,8 @@ public interface CfnFileSystemProps {
 
     /**
      * @param lustreConfiguration The Lustre configuration for the file system being created.
+     * This configuration is required if the `FileSystemType` is set to `LUSTRE` .
+     *
      *
      * The following parameters are not supported when creating Lustre file systems with a data
      * repository association.
@@ -456,18 +483,21 @@ public interface CfnFileSystemProps {
     /**
      * @param ontapConfiguration The ONTAP configuration properties of the FSx for ONTAP file system
      * that you are creating.
+     * This configuration is required if the `FileSystemType` is set to `ONTAP` .
      */
     public fun ontapConfiguration(ontapConfiguration: IResolvable)
 
     /**
      * @param ontapConfiguration The ONTAP configuration properties of the FSx for ONTAP file system
      * that you are creating.
+     * This configuration is required if the `FileSystemType` is set to `ONTAP` .
      */
     public fun ontapConfiguration(ontapConfiguration: CfnFileSystem.OntapConfigurationProperty)
 
     /**
      * @param ontapConfiguration The ONTAP configuration properties of the FSx for ONTAP file system
      * that you are creating.
+     * This configuration is required if the `FileSystemType` is set to `ONTAP` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("969662ef7196eeedb20d8965ca0b9c9017c9c1850c7292c9c8c3768e47b730ee")
@@ -477,12 +507,14 @@ public interface CfnFileSystemProps {
     /**
      * @param openZfsConfiguration The Amazon FSx for OpenZFS configuration properties for the file
      * system that you are creating.
+     * This configuration is required if the `FileSystemType` is set to `OPENZFS` .
      */
     public fun openZfsConfiguration(openZfsConfiguration: IResolvable)
 
     /**
      * @param openZfsConfiguration The Amazon FSx for OpenZFS configuration properties for the file
      * system that you are creating.
+     * This configuration is required if the `FileSystemType` is set to `OPENZFS` .
      */
     public
         fun openZfsConfiguration(openZfsConfiguration: CfnFileSystem.OpenZFSConfigurationProperty)
@@ -490,6 +522,7 @@ public interface CfnFileSystemProps {
     /**
      * @param openZfsConfiguration The Amazon FSx for OpenZFS configuration properties for the file
      * system that you are creating.
+     * This configuration is required if the `FileSystemType` is set to `OPENZFS` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b2cfc7b987460a27f9cd662be0c3ed29f7de877ab35232f42a0449bb34c8e627")
@@ -557,18 +590,18 @@ public interface CfnFileSystemProps {
      *
      * * Set to `SSD` to use solid state drive storage. SSD is supported on all Windows, Lustre,
      * ONTAP, and OpenZFS deployment types.
-     * * Set to `HDD` to use hard disk drive storage. HDD is supported on `SINGLE_AZ_2` and
+     * * Set to `HDD` to use hard disk drive storage, which is supported on `SINGLE_AZ_2` and
      * `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT_1` Lustre file system
      * deployment types.
      * * Set to `INTELLIGENT_TIERING` to use fully elastic, intelligently-tiered storage.
-     * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment
-     * type.
+     * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment type
+     * and for Lustre file systems with the Persistent_2 deployment type.
      *
      * Default value is `SSD` . For more information, see [Storage type
      * options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options)
-     * in the *FSx for Windows File Server User Guide* , [Multiple storage
-     * options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options) in the
-     * *FSx for Lustre User Guide* , and [Working with
+     * in the *FSx for Windows File Server User Guide* , [FSx for Lustre storage
+     * classes](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-storage-classes)
+     * in the *FSx for Lustre User Guide* , and [Working with
      * Intelligent-Tiering](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance-intelligent-tiering)
      * in the *Amazon FSx for OpenZFS User Guide* .
      */
@@ -629,14 +662,14 @@ public interface CfnFileSystemProps {
     /**
      * @param windowsConfiguration The configuration object for the Microsoft Windows file system
      * you are creating.
-     * This value is required if `FileSystemType` is set to `WINDOWS` .
+     * This configuration is required if `FileSystemType` is set to `WINDOWS` .
      */
     public fun windowsConfiguration(windowsConfiguration: IResolvable)
 
     /**
      * @param windowsConfiguration The configuration object for the Microsoft Windows file system
      * you are creating.
-     * This value is required if `FileSystemType` is set to `WINDOWS` .
+     * This configuration is required if `FileSystemType` is set to `WINDOWS` .
      */
     public
         fun windowsConfiguration(windowsConfiguration: CfnFileSystem.WindowsConfigurationProperty)
@@ -644,7 +677,7 @@ public interface CfnFileSystemProps {
     /**
      * @param windowsConfiguration The configuration object for the Microsoft Windows file system
      * you are creating.
-     * This value is required if `FileSystemType` is set to `WINDOWS` .
+     * This configuration is required if `FileSystemType` is set to `WINDOWS` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e8c519948299082c85c0be491844cb6b0e13d5b8b453446a7c4f85863f7a63b3")
@@ -709,6 +742,11 @@ public interface CfnFileSystemProps {
      * * Amazon FSx for NetApp ONTAP
      * * Amazon FSx for OpenZFS
      * * Amazon FSx for Windows File Server
+     *
+     * If this ID isn't specified, the Amazon FSx-managed key for your account is used. For more
+     * information, see
+     * [Encrypt](https://docs.aws.amazon.com//kms/latest/APIReference/API_Encrypt.html) in the *AWS Key
+     * Management Service API Reference* .
      */
     override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
@@ -716,6 +754,8 @@ public interface CfnFileSystemProps {
 
     /**
      * @param lustreConfiguration The Lustre configuration for the file system being created.
+     * This configuration is required if the `FileSystemType` is set to `LUSTRE` .
+     *
      *
      * The following parameters are not supported when creating Lustre file systems with a data
      * repository association.
@@ -731,6 +771,8 @@ public interface CfnFileSystemProps {
 
     /**
      * @param lustreConfiguration The Lustre configuration for the file system being created.
+     * This configuration is required if the `FileSystemType` is set to `LUSTRE` .
+     *
      *
      * The following parameters are not supported when creating Lustre file systems with a data
      * repository association.
@@ -747,6 +789,8 @@ public interface CfnFileSystemProps {
 
     /**
      * @param lustreConfiguration The Lustre configuration for the file system being created.
+     * This configuration is required if the `FileSystemType` is set to `LUSTRE` .
+     *
      *
      * The following parameters are not supported when creating Lustre file systems with a data
      * repository association.
@@ -765,6 +809,7 @@ public interface CfnFileSystemProps {
     /**
      * @param ontapConfiguration The ONTAP configuration properties of the FSx for ONTAP file system
      * that you are creating.
+     * This configuration is required if the `FileSystemType` is set to `ONTAP` .
      */
     override fun ontapConfiguration(ontapConfiguration: IResolvable) {
       cdkBuilder.ontapConfiguration(ontapConfiguration.let(IResolvable.Companion::unwrap))
@@ -773,6 +818,7 @@ public interface CfnFileSystemProps {
     /**
      * @param ontapConfiguration The ONTAP configuration properties of the FSx for ONTAP file system
      * that you are creating.
+     * This configuration is required if the `FileSystemType` is set to `ONTAP` .
      */
     override fun ontapConfiguration(ontapConfiguration: CfnFileSystem.OntapConfigurationProperty) {
       cdkBuilder.ontapConfiguration(ontapConfiguration.let(CfnFileSystem.OntapConfigurationProperty.Companion::unwrap))
@@ -781,6 +827,7 @@ public interface CfnFileSystemProps {
     /**
      * @param ontapConfiguration The ONTAP configuration properties of the FSx for ONTAP file system
      * that you are creating.
+     * This configuration is required if the `FileSystemType` is set to `ONTAP` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("969662ef7196eeedb20d8965ca0b9c9017c9c1850c7292c9c8c3768e47b730ee")
@@ -791,6 +838,7 @@ public interface CfnFileSystemProps {
     /**
      * @param openZfsConfiguration The Amazon FSx for OpenZFS configuration properties for the file
      * system that you are creating.
+     * This configuration is required if the `FileSystemType` is set to `OPENZFS` .
      */
     override fun openZfsConfiguration(openZfsConfiguration: IResolvable) {
       cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(IResolvable.Companion::unwrap))
@@ -799,6 +847,7 @@ public interface CfnFileSystemProps {
     /**
      * @param openZfsConfiguration The Amazon FSx for OpenZFS configuration properties for the file
      * system that you are creating.
+     * This configuration is required if the `FileSystemType` is set to `OPENZFS` .
      */
     override
         fun openZfsConfiguration(openZfsConfiguration: CfnFileSystem.OpenZFSConfigurationProperty) {
@@ -808,6 +857,7 @@ public interface CfnFileSystemProps {
     /**
      * @param openZfsConfiguration The Amazon FSx for OpenZFS configuration properties for the file
      * system that you are creating.
+     * This configuration is required if the `FileSystemType` is set to `OPENZFS` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b2cfc7b987460a27f9cd662be0c3ed29f7de877ab35232f42a0449bb34c8e627")
@@ -882,18 +932,18 @@ public interface CfnFileSystemProps {
      *
      * * Set to `SSD` to use solid state drive storage. SSD is supported on all Windows, Lustre,
      * ONTAP, and OpenZFS deployment types.
-     * * Set to `HDD` to use hard disk drive storage. HDD is supported on `SINGLE_AZ_2` and
+     * * Set to `HDD` to use hard disk drive storage, which is supported on `SINGLE_AZ_2` and
      * `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT_1` Lustre file system
      * deployment types.
      * * Set to `INTELLIGENT_TIERING` to use fully elastic, intelligently-tiered storage.
-     * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment
-     * type.
+     * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment type
+     * and for Lustre file systems with the Persistent_2 deployment type.
      *
      * Default value is `SSD` . For more information, see [Storage type
      * options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options)
-     * in the *FSx for Windows File Server User Guide* , [Multiple storage
-     * options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options) in the
-     * *FSx for Lustre User Guide* , and [Working with
+     * in the *FSx for Windows File Server User Guide* , [FSx for Lustre storage
+     * classes](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-storage-classes)
+     * in the *FSx for Lustre User Guide* , and [Working with
      * Intelligent-Tiering](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance-intelligent-tiering)
      * in the *Amazon FSx for OpenZFS User Guide* .
      */
@@ -960,7 +1010,7 @@ public interface CfnFileSystemProps {
     /**
      * @param windowsConfiguration The configuration object for the Microsoft Windows file system
      * you are creating.
-     * This value is required if `FileSystemType` is set to `WINDOWS` .
+     * This configuration is required if `FileSystemType` is set to `WINDOWS` .
      */
     override fun windowsConfiguration(windowsConfiguration: IResolvable) {
       cdkBuilder.windowsConfiguration(windowsConfiguration.let(IResolvable.Companion::unwrap))
@@ -969,7 +1019,7 @@ public interface CfnFileSystemProps {
     /**
      * @param windowsConfiguration The configuration object for the Microsoft Windows file system
      * you are creating.
-     * This value is required if `FileSystemType` is set to `WINDOWS` .
+     * This configuration is required if `FileSystemType` is set to `WINDOWS` .
      */
     override
         fun windowsConfiguration(windowsConfiguration: CfnFileSystem.WindowsConfigurationProperty) {
@@ -979,7 +1029,7 @@ public interface CfnFileSystemProps {
     /**
      * @param windowsConfiguration The configuration object for the Microsoft Windows file system
      * you are creating.
-     * This value is required if `FileSystemType` is set to `WINDOWS` .
+     * This configuration is required if `FileSystemType` is set to `WINDOWS` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e8c519948299082c85c0be491844cb6b0e13d5b8b453446a7c4f85863f7a63b3")
@@ -1052,12 +1102,19 @@ public interface CfnFileSystemProps {
      * * Amazon FSx for OpenZFS
      * * Amazon FSx for Windows File Server
      *
+     * If this ID isn't specified, the Amazon FSx-managed key for your account is used. For more
+     * information, see
+     * [Encrypt](https://docs.aws.amazon.com//kms/latest/APIReference/API_Encrypt.html) in the *AWS Key
+     * Management Service API Reference* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-kmskeyid)
      */
     override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
     /**
      * The Lustre configuration for the file system being created.
+     *
+     * This configuration is required if the `FileSystemType` is set to `LUSTRE` .
      *
      *
      * The following parameters are not supported when creating Lustre file systems with a data
@@ -1076,6 +1133,8 @@ public interface CfnFileSystemProps {
     /**
      * The ONTAP configuration properties of the FSx for ONTAP file system that you are creating.
      *
+     * This configuration is required if the `FileSystemType` is set to `ONTAP` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-ontapconfiguration)
      */
     override fun ontapConfiguration(): Any? = unwrap(this).getOntapConfiguration()
@@ -1083,6 +1142,8 @@ public interface CfnFileSystemProps {
     /**
      * The Amazon FSx for OpenZFS configuration properties for the file system that you are
      * creating.
+     *
+     * This configuration is required if the `FileSystemType` is set to `OPENZFS` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-openzfsconfiguration)
      */
@@ -1147,18 +1208,18 @@ public interface CfnFileSystemProps {
      *
      * * Set to `SSD` to use solid state drive storage. SSD is supported on all Windows, Lustre,
      * ONTAP, and OpenZFS deployment types.
-     * * Set to `HDD` to use hard disk drive storage. HDD is supported on `SINGLE_AZ_2` and
+     * * Set to `HDD` to use hard disk drive storage, which is supported on `SINGLE_AZ_2` and
      * `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT_1` Lustre file system
      * deployment types.
      * * Set to `INTELLIGENT_TIERING` to use fully elastic, intelligently-tiered storage.
-     * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment
-     * type.
+     * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment type
+     * and for Lustre file systems with the Persistent_2 deployment type.
      *
      * Default value is `SSD` . For more information, see [Storage type
      * options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options)
-     * in the *FSx for Windows File Server User Guide* , [Multiple storage
-     * options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options) in the
-     * *FSx for Lustre User Guide* , and [Working with
+     * in the *FSx for Windows File Server User Guide* , [FSx for Lustre storage
+     * classes](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-storage-classes)
+     * in the *FSx for Lustre User Guide* , and [Working with
      * Intelligent-Tiering](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance-intelligent-tiering)
      * in the *Amazon FSx for OpenZFS User Guide* .
      *
@@ -1200,7 +1261,7 @@ public interface CfnFileSystemProps {
     /**
      * The configuration object for the Microsoft Windows file system you are creating.
      *
-     * This value is required if `FileSystemType` is set to `WINDOWS` .
+     * This configuration is required if `FileSystemType` is set to `WINDOWS` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-windowsconfiguration)
      */

@@ -50,6 +50,7 @@ import kotlin.jvm.JvmName
  * .entryPoint(List.of("entry", "point"))
  * .build())
  * .desiredCount(2)
+ * .minHealthyPercent(100)
  * .build();
  * ```
  */
@@ -408,8 +409,8 @@ public interface ApplicationLoadBalancedEc2ServiceProps : ApplicationLoadBalance
 
     /**
      * @param redirectHttp Specifies whether the load balancer should redirect traffic on port 80 to
-     * port 443 to support HTTP-&gt;HTTPS redirects This is only valid if the protocol of the ALB is
-     * HTTPS.
+     * the [listenerPort] to support HTTP->HTTPS redirects.
+     * This is only valid if the protocol of the ALB is HTTPS.
      */
     public fun redirectHttp(redirectHttp: Boolean)
 
@@ -802,8 +803,8 @@ public interface ApplicationLoadBalancedEc2ServiceProps : ApplicationLoadBalance
 
     /**
      * @param redirectHttp Specifies whether the load balancer should redirect traffic on port 80 to
-     * port 443 to support HTTP-&gt;HTTPS redirects This is only valid if the protocol of the ALB is
-     * HTTPS.
+     * the [listenerPort] to support HTTP->HTTPS redirects.
+     * This is only valid if the protocol of the ALB is HTTPS.
      */
     override fun redirectHttp(redirectHttp: Boolean) {
       cdkBuilder.redirectHttp(redirectHttp)
@@ -1187,8 +1188,10 @@ public interface ApplicationLoadBalancedEc2ServiceProps : ApplicationLoadBalance
         unwrap(this).getRecordType()?.let(ApplicationLoadBalancedServiceRecordType::wrap)
 
     /**
-     * Specifies whether the load balancer should redirect traffic on port 80 to port 443 to support
-     * HTTP-&gt;HTTPS redirects This is only valid if the protocol of the ALB is HTTPS.
+     * Specifies whether the load balancer should redirect traffic on port 80 to the [listenerPort]
+     * to support HTTP->HTTPS redirects.
+     *
+     * This is only valid if the protocol of the ALB is HTTPS.
      *
      * Default: false
      */

@@ -294,6 +294,9 @@ public open class UsagePlan(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.apigateway.UsagePlan.PROPERTY_INJECTION_ID
+
     public fun fromUsagePlanId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

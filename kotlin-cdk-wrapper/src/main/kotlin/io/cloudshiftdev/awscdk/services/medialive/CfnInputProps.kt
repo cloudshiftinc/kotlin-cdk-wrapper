@@ -48,6 +48,25 @@ import kotlin.jvm.JvmName
  * .build())
  * .name("name")
  * .roleArn("roleArn")
+ * .sdiSources(List.of("sdiSources"))
+ * .smpte2110ReceiverGroupSettings(Smpte2110ReceiverGroupSettingsProperty.builder()
+ * .smpte2110ReceiverGroups(List.of(Smpte2110ReceiverGroupProperty.builder()
+ * .sdpSettings(Smpte2110ReceiverGroupSdpSettingsProperty.builder()
+ * .ancillarySdps(List.of(InputSdpLocationProperty.builder()
+ * .mediaIndex(123)
+ * .sdpUrl("sdpUrl")
+ * .build()))
+ * .audioSdps(List.of(InputSdpLocationProperty.builder()
+ * .mediaIndex(123)
+ * .sdpUrl("sdpUrl")
+ * .build()))
+ * .videoSdp(InputSdpLocationProperty.builder()
+ * .mediaIndex(123)
+ * .sdpUrl("sdpUrl")
+ * .build())
+ * .build())
+ * .build()))
+ * .build())
  * .sources(List.of(InputSourceRequestProperty.builder()
  * .passwordParam("passwordParam")
  * .url("url")
@@ -132,6 +151,17 @@ public interface CfnInputProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-rolearn)
    */
   public fun roleArn(): String? = unwrap(this).getRoleArn()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-sdisources)
+   */
+  public fun sdiSources(): List<String> = unwrap(this).getSdiSources() ?: emptyList()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-smpte2110receivergroupsettings)
+   */
+  public fun smpte2110ReceiverGroupSettings(): Any? =
+      unwrap(this).getSmpte2110ReceiverGroupSettings()
 
   /**
    * Settings that apply only if the input is a pull type of input.
@@ -264,6 +294,35 @@ public interface CfnInputProps {
      * This doesn't apply to other types of inputs. The role is identified by its ARN.
      */
     public fun roleArn(roleArn: String)
+
+    /**
+     * @param sdiSources the value to be set.
+     */
+    public fun sdiSources(sdiSources: List<String>)
+
+    /**
+     * @param sdiSources the value to be set.
+     */
+    public fun sdiSources(vararg sdiSources: String)
+
+    /**
+     * @param smpte2110ReceiverGroupSettings the value to be set.
+     */
+    public fun smpte2110ReceiverGroupSettings(smpte2110ReceiverGroupSettings: IResolvable)
+
+    /**
+     * @param smpte2110ReceiverGroupSettings the value to be set.
+     */
+    public
+        fun smpte2110ReceiverGroupSettings(smpte2110ReceiverGroupSettings: CfnInput.Smpte2110ReceiverGroupSettingsProperty)
+
+    /**
+     * @param smpte2110ReceiverGroupSettings the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9fee0336bea6c6f63124125058e81443ef6d83389628bb238a334fb35755b8d3")
+    public
+        fun smpte2110ReceiverGroupSettings(smpte2110ReceiverGroupSettings: CfnInput.Smpte2110ReceiverGroupSettingsProperty.Builder.() -> Unit)
 
     /**
      * @param sources Settings that apply only if the input is a pull type of input.
@@ -454,6 +513,43 @@ public interface CfnInputProps {
     }
 
     /**
+     * @param sdiSources the value to be set.
+     */
+    override fun sdiSources(sdiSources: List<String>) {
+      cdkBuilder.sdiSources(sdiSources)
+    }
+
+    /**
+     * @param sdiSources the value to be set.
+     */
+    override fun sdiSources(vararg sdiSources: String): Unit = sdiSources(sdiSources.toList())
+
+    /**
+     * @param smpte2110ReceiverGroupSettings the value to be set.
+     */
+    override fun smpte2110ReceiverGroupSettings(smpte2110ReceiverGroupSettings: IResolvable) {
+      cdkBuilder.smpte2110ReceiverGroupSettings(smpte2110ReceiverGroupSettings.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param smpte2110ReceiverGroupSettings the value to be set.
+     */
+    override
+        fun smpte2110ReceiverGroupSettings(smpte2110ReceiverGroupSettings: CfnInput.Smpte2110ReceiverGroupSettingsProperty) {
+      cdkBuilder.smpte2110ReceiverGroupSettings(smpte2110ReceiverGroupSettings.let(CfnInput.Smpte2110ReceiverGroupSettingsProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param smpte2110ReceiverGroupSettings the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9fee0336bea6c6f63124125058e81443ef6d83389628bb238a334fb35755b8d3")
+    override
+        fun smpte2110ReceiverGroupSettings(smpte2110ReceiverGroupSettings: CfnInput.Smpte2110ReceiverGroupSettingsProperty.Builder.() -> Unit):
+        Unit =
+        smpte2110ReceiverGroupSettings(CfnInput.Smpte2110ReceiverGroupSettingsProperty(smpte2110ReceiverGroupSettings))
+
+    /**
      * @param sources Settings that apply only if the input is a pull type of input.
      */
     override fun sources(sources: IResolvable) {
@@ -596,6 +692,17 @@ public interface CfnInputProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-rolearn)
      */
     override fun roleArn(): String? = unwrap(this).getRoleArn()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-sdisources)
+     */
+    override fun sdiSources(): List<String> = unwrap(this).getSdiSources() ?: emptyList()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-smpte2110receivergroupsettings)
+     */
+    override fun smpte2110ReceiverGroupSettings(): Any? =
+        unwrap(this).getSmpte2110ReceiverGroupSettings()
 
     /**
      * Settings that apply only if the input is a pull type of input.

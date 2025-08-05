@@ -38,6 +38,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .build())
  * .name("name")
+ * .networkType("networkType")
  * .organization("organization")
  * .password("password")
  * .port(123)
@@ -129,6 +130,13 @@ public interface CfnInfluxDBInstanceProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbinstance.html#cfn-timestream-influxdbinstance-name)
    */
   public fun name(): String? = unwrap(this).getName()
+
+  /**
+   * Network type of the InfluxDB Instance.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbinstance.html#cfn-timestream-influxdbinstance-networktype)
+   */
+  public fun networkType(): String? = unwrap(this).getNetworkType()
 
   /**
    * The name of the initial organization for the initial admin user in InfluxDB.
@@ -282,6 +290,11 @@ public interface CfnInfluxDBInstanceProps {
      * per customer and per region.
      */
     public fun name(name: String)
+
+    /**
+     * @param networkType Network type of the InfluxDB Instance.
+     */
+    public fun networkType(networkType: String)
 
     /**
      * @param organization The name of the initial organization for the initial admin user in
@@ -457,6 +470,13 @@ public interface CfnInfluxDBInstanceProps {
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * @param networkType Network type of the InfluxDB Instance.
+     */
+    override fun networkType(networkType: String) {
+      cdkBuilder.networkType(networkType)
     }
 
     /**
@@ -637,6 +657,13 @@ public interface CfnInfluxDBInstanceProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbinstance.html#cfn-timestream-influxdbinstance-name)
      */
     override fun name(): String? = unwrap(this).getName()
+
+    /**
+     * Network type of the InfluxDB Instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbinstance.html#cfn-timestream-influxdbinstance-networktype)
+     */
+    override fun networkType(): String? = unwrap(this).getNetworkType()
 
     /**
      * The name of the initial organization for the initial admin user in InfluxDB.

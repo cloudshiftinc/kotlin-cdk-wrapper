@@ -21,23 +21,26 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.kms.*;
- * Artifact sourceOutput = new Artifact();
- * Bucket targetBucket = new Bucket(this, "MyBucket");
- * IKey key = Key.Builder.create(this, "EnvVarEncryptKey")
- * .description("sample key")
- * .build();
- * Pipeline pipeline = new Pipeline(this, "MyPipeline");
- * S3DeployAction deployAction = S3DeployAction.Builder.create()
- * .actionName("S3Deploy")
- * .bucket(targetBucket)
- * .input(sourceOutput)
- * .encryptionKey(key)
- * .build();
- * IStage deployStage = pipeline.addStage(StageOptions.builder()
- * .stageName("Deploy")
- * .actions(List.of(deployAction))
+ * Key cmk = Key.Builder.create(this, "cmk").build();
+ * BedrockFoundationModel claudeModel = BedrockFoundationModel.ANTHROPIC_CLAUDE_SONNET_V1_0;
+ * IPromptVariant variant1 = PromptVariant.text(TextPromptVariantProps.builder()
+ * .variantName("variant1")
+ * .model(claudeModel)
+ * .promptVariables(List.of("topic"))
+ * .promptText("This is my first text prompt. Please summarize our conversation on: {{topic}}.")
+ * .inferenceConfiguration(PromptInferenceConfiguration.text(PromptInferenceConfigurationProps.builder()
+ * .temperature(1)
+ * .topP(0.999)
+ * .maxTokens(2000)
+ * .build()))
  * .build());
+ * Prompt prompt1 = Prompt.Builder.create(this, "prompt1")
+ * .promptName("prompt1")
+ * .description("my first prompt")
+ * .defaultVariant(variant1)
+ * .variants(List.of(variant1))
+ * .kmsKey(cmk)
+ * .build();
  * ```
  */
 public interface KeyProps {

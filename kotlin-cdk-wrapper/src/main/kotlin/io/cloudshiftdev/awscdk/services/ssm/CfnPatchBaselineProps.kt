@@ -43,6 +43,7 @@ import kotlin.jvm.JvmName
  * .approvedPatches(List.of("approvedPatches"))
  * .approvedPatchesComplianceLevel("approvedPatchesComplianceLevel")
  * .approvedPatchesEnableNonSecurity(false)
+ * .availableSecurityUpdatesComplianceStatus("availableSecurityUpdatesComplianceStatus")
  * .defaultBaseline(false)
  * .description("description")
  * .globalFilters(PatchFilterGroupProperty.builder()
@@ -116,9 +117,19 @@ public interface CfnPatchBaselineProps {
       unwrap(this).getApprovedPatchesEnableNonSecurity()
 
   /**
-   * Set the baseline as default baseline.
+   * The compliance status for vendor recommended security updates that are not approved by this
+   * patch baseline.
    *
-   * Only registering to default patch baseline is allowed.
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-availablesecurityupdatescompliancestatus)
+   */
+  public fun availableSecurityUpdatesComplianceStatus(): String? =
+      unwrap(this).getAvailableSecurityUpdatesComplianceStatus()
+
+  /**
+   * Indicates whether this is the default baseline.
+   *
+   * AWS Systems Manager supports creating multiple default patch baselines. For example, you can
+   * create a default patch baseline for each operating system.
    *
    * Default: - false
    *
@@ -290,14 +301,23 @@ public interface CfnPatchBaselineProps {
     public fun approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity: IResolvable)
 
     /**
-     * @param defaultBaseline Set the baseline as default baseline.
-     * Only registering to default patch baseline is allowed.
+     * @param availableSecurityUpdatesComplianceStatus The compliance status for vendor recommended
+     * security updates that are not approved by this patch baseline.
+     */
+    public
+        fun availableSecurityUpdatesComplianceStatus(availableSecurityUpdatesComplianceStatus: String)
+
+    /**
+     * @param defaultBaseline Indicates whether this is the default baseline.
+     * AWS Systems Manager supports creating multiple default patch baselines. For example, you can
+     * create a default patch baseline for each operating system.
      */
     public fun defaultBaseline(defaultBaseline: Boolean)
 
     /**
-     * @param defaultBaseline Set the baseline as default baseline.
-     * Only registering to default patch baseline is allowed.
+     * @param defaultBaseline Indicates whether this is the default baseline.
+     * AWS Systems Manager supports creating multiple default patch baselines. For example, you can
+     * create a default patch baseline for each operating system.
      */
     public fun defaultBaseline(defaultBaseline: IResolvable)
 
@@ -510,16 +530,27 @@ public interface CfnPatchBaselineProps {
     }
 
     /**
-     * @param defaultBaseline Set the baseline as default baseline.
-     * Only registering to default patch baseline is allowed.
+     * @param availableSecurityUpdatesComplianceStatus The compliance status for vendor recommended
+     * security updates that are not approved by this patch baseline.
+     */
+    override
+        fun availableSecurityUpdatesComplianceStatus(availableSecurityUpdatesComplianceStatus: String) {
+      cdkBuilder.availableSecurityUpdatesComplianceStatus(availableSecurityUpdatesComplianceStatus)
+    }
+
+    /**
+     * @param defaultBaseline Indicates whether this is the default baseline.
+     * AWS Systems Manager supports creating multiple default patch baselines. For example, you can
+     * create a default patch baseline for each operating system.
      */
     override fun defaultBaseline(defaultBaseline: Boolean) {
       cdkBuilder.defaultBaseline(defaultBaseline)
     }
 
     /**
-     * @param defaultBaseline Set the baseline as default baseline.
-     * Only registering to default patch baseline is allowed.
+     * @param defaultBaseline Indicates whether this is the default baseline.
+     * AWS Systems Manager supports creating multiple default patch baselines. For example, you can
+     * create a default patch baseline for each operating system.
      */
     override fun defaultBaseline(defaultBaseline: IResolvable) {
       cdkBuilder.defaultBaseline(defaultBaseline.let(IResolvable.Companion::unwrap))
@@ -735,9 +766,19 @@ public interface CfnPatchBaselineProps {
         unwrap(this).getApprovedPatchesEnableNonSecurity()
 
     /**
-     * Set the baseline as default baseline.
+     * The compliance status for vendor recommended security updates that are not approved by this
+     * patch baseline.
      *
-     * Only registering to default patch baseline is allowed.
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-availablesecurityupdatescompliancestatus)
+     */
+    override fun availableSecurityUpdatesComplianceStatus(): String? =
+        unwrap(this).getAvailableSecurityUpdatesComplianceStatus()
+
+    /**
+     * Indicates whether this is the default baseline.
+     *
+     * AWS Systems Manager supports creating multiple default patch baselines. For example, you can
+     * create a default patch baseline for each operating system.
      *
      * Default: - false
      *

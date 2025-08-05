@@ -29,6 +29,7 @@ import kotlin.collections.List
  * // the properties below are optional
  * .bucket(bucket)
  * .bucketNamePath("bucketNamePath")
+ * .csvDelimiter(CsvDelimiter.COMMA)
  * .csvHeaders(csvHeaders)
  * .maxItems(123)
  * .build();
@@ -58,6 +59,12 @@ public open class S3CsvItemReader(
   public override fun bucketNamePath(): String? = unwrap(this).getBucketNamePath()
 
   /**
+   * Delimiter used in CSV file.
+   */
+  public open fun csvDelimiter(): CsvDelimiter? =
+      unwrap(this).getCsvDelimiter()?.let(CsvDelimiter::wrap)
+
+  /**
    * CSV headers configuration.
    */
   public open fun csvHeaders(): CsvHeaders = unwrap(this).getCsvHeaders().let(CsvHeaders::wrap)
@@ -82,8 +89,18 @@ public open class S3CsvItemReader(
 
   /**
    * Renders the ItemReader configuration as JSON object.
+   *
+   * @param queryLanguage
    */
   public override fun render(): Any = unwrap(this).render()
+
+  /**
+   * Renders the ItemReader configuration as JSON object.
+   *
+   * @param queryLanguage
+   */
+  public override fun render(queryLanguage: QueryLanguage): Any =
+      unwrap(this).render(queryLanguage.let(QueryLanguage.Companion::unwrap))
 
   /**
    * ARN for the `getObject` method of the S3 API This API method is used to iterate all objects in
@@ -125,6 +142,15 @@ public open class S3CsvItemReader(
      * to iterate over, as JsonPath. 
      */
     public fun bucketNamePath(bucketNamePath: String)
+
+    /**
+     * Delimiter used in a CSV file.
+     *
+     * Default: undefined - Default setting is COMMA.
+     *
+     * @param csvDelimiter Delimiter used in a CSV file. 
+     */
+    public fun csvDelimiter(csvDelimiter: CsvDelimiter)
 
     /**
      * CSV file header configuration.
@@ -181,6 +207,17 @@ public open class S3CsvItemReader(
      */
     override fun bucketNamePath(bucketNamePath: String) {
       cdkBuilder.bucketNamePath(bucketNamePath)
+    }
+
+    /**
+     * Delimiter used in a CSV file.
+     *
+     * Default: undefined - Default setting is COMMA.
+     *
+     * @param csvDelimiter Delimiter used in a CSV file. 
+     */
+    override fun csvDelimiter(csvDelimiter: CsvDelimiter) {
+      cdkBuilder.csvDelimiter(csvDelimiter.let(CsvDelimiter.Companion::unwrap))
     }
 
     /**

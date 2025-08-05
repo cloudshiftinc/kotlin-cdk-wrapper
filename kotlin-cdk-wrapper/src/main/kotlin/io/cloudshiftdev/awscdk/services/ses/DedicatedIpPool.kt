@@ -124,6 +124,9 @@ public open class DedicatedIpPool(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ses.DedicatedIpPool.PROPERTY_INJECTION_ID
+
     public fun fromDedicatedIpPoolName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

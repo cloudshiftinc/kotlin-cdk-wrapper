@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
+import kotlin.jvm.JvmName
 
 /**
  * Interface for service connect Service props.
@@ -20,6 +21,10 @@ import kotlin.Unit
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.ecs.*;
+ * import io.cloudshiftdev.awscdk.services.iam.*;
+ * import io.cloudshiftdev.awscdk.services.kms.*;
+ * Key key;
+ * Role role;
  * ServiceConnectService serviceConnectService = ServiceConnectService.builder()
  * .portMappingName("portMappingName")
  * // the properties below are optional
@@ -29,6 +34,11 @@ import kotlin.Unit
  * .ingressPortOverride(123)
  * .perRequestTimeout(Duration.minutes(30))
  * .port(123)
+ * .tls(ServiceConnectTlsConfiguration.builder()
+ * .awsPcaAuthorityArn("awsPcaAuthorityArn")
+ * .kmsKey(key)
+ * .role(role)
+ * .build())
  * .build();
  * ```
  */
@@ -104,6 +114,14 @@ public interface ServiceConnectService {
   public fun portMappingName(): String
 
   /**
+   * A reference to an object that represents a Transport Layer Security (TLS) configuration.
+   *
+   * Default: - none
+   */
+  public fun tls(): ServiceConnectTlsConfiguration? =
+      unwrap(this).getTls()?.let(ServiceConnectTlsConfiguration::wrap)
+
+  /**
    * A builder for [ServiceConnectService]
    */
   @CdkDslMarker
@@ -161,6 +179,20 @@ public interface ServiceConnectService {
      * be used for this service connect service. 
      */
     public fun portMappingName(portMappingName: String)
+
+    /**
+     * @param tls A reference to an object that represents a Transport Layer Security (TLS)
+     * configuration.
+     */
+    public fun tls(tls: ServiceConnectTlsConfiguration)
+
+    /**
+     * @param tls A reference to an object that represents a Transport Layer Security (TLS)
+     * configuration.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8cf2cf6c23d101985fed37842b246d7dd488ca71988b15f639721cee273632b4")
+    public fun tls(tls: ServiceConnectTlsConfiguration.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -234,6 +266,23 @@ public interface ServiceConnectService {
     override fun portMappingName(portMappingName: String) {
       cdkBuilder.portMappingName(portMappingName)
     }
+
+    /**
+     * @param tls A reference to an object that represents a Transport Layer Security (TLS)
+     * configuration.
+     */
+    override fun tls(tls: ServiceConnectTlsConfiguration) {
+      cdkBuilder.tls(tls.let(ServiceConnectTlsConfiguration.Companion::unwrap))
+    }
+
+    /**
+     * @param tls A reference to an object that represents a Transport Layer Security (TLS)
+     * configuration.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8cf2cf6c23d101985fed37842b246d7dd488ca71988b15f639721cee273632b4")
+    override fun tls(tls: ServiceConnectTlsConfiguration.Builder.() -> Unit): Unit =
+        tls(ServiceConnectTlsConfiguration(tls))
 
     public fun build(): software.amazon.awscdk.services.ecs.ServiceConnectService =
         cdkBuilder.build()
@@ -312,6 +361,14 @@ public interface ServiceConnectService {
      * connect service.
      */
     override fun portMappingName(): String = unwrap(this).getPortMappingName()
+
+    /**
+     * A reference to an object that represents a Transport Layer Security (TLS) configuration.
+     *
+     * Default: - none
+     */
+    override fun tls(): ServiceConnectTlsConfiguration? =
+        unwrap(this).getTls()?.let(ServiceConnectTlsConfiguration::wrap)
   }
 
   public companion object {

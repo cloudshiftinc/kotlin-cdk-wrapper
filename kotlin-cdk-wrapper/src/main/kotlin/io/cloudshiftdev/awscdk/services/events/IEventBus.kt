@@ -70,8 +70,18 @@ public interface IEventBus : IResource {
    * rules.
    *
    * @param grantee The principal (no-op if undefined). 
+   * @param sid The Statement ID used if we need to add a trust policy on the event bus.
    */
   public fun grantPutEventsTo(grantee: IGrantable): Grant
+
+  /**
+   * Grants an IAM Principal to send custom events to the eventBus so that they can be matched to
+   * rules.
+   *
+   * @param grantee The principal (no-op if undefined). 
+   * @param sid The Statement ID used if we need to add a trust policy on the event bus.
+   */
+  public fun grantPutEventsTo(grantee: IGrantable, sid: String): Grant
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.IEventBus,
@@ -159,9 +169,21 @@ public interface IEventBus : IResource {
      * rules.
      *
      * @param grantee The principal (no-op if undefined). 
+     * @param sid The Statement ID used if we need to add a trust policy on the event bus.
      */
     override fun grantPutEventsTo(grantee: IGrantable): Grant =
         unwrap(this).grantPutEventsTo(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+    /**
+     * Grants an IAM Principal to send custom events to the eventBus so that they can be matched to
+     * rules.
+     *
+     * @param grantee The principal (no-op if undefined). 
+     * @param sid The Statement ID used if we need to add a trust policy on the event bus.
+     */
+    override fun grantPutEventsTo(grantee: IGrantable, sid: String): Grant =
+        unwrap(this).grantPutEventsTo(grantee.let(IGrantable.Companion::unwrap),
+        sid).let(Grant::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

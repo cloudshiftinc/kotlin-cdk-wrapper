@@ -7,6 +7,7 @@ public enum class DefaultInstanceTenancy(
 ) {
   DEFAULT(software.amazon.awscdk.services.ec2.DefaultInstanceTenancy.DEFAULT),
   DEDICATED(software.amazon.awscdk.services.ec2.DefaultInstanceTenancy.DEDICATED),
+  HOST(software.amazon.awscdk.services.ec2.DefaultInstanceTenancy.HOST),
   ;
 
   public companion object {
@@ -16,6 +17,7 @@ public enum class DefaultInstanceTenancy(
           DefaultInstanceTenancy.DEFAULT
       software.amazon.awscdk.services.ec2.DefaultInstanceTenancy.DEDICATED ->
           DefaultInstanceTenancy.DEDICATED
+      software.amazon.awscdk.services.ec2.DefaultInstanceTenancy.HOST -> DefaultInstanceTenancy.HOST
     }
 
     internal fun unwrap(wrapped: DefaultInstanceTenancy):

@@ -29,7 +29,9 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .options(VpcOptionsProperty.builder()
  * .applianceModeSupport(false)
+ * .dnsSupport(false)
  * .ipv6Support(false)
+ * .securityGroupReferencingSupport(false)
  * .build())
  * .proposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChangeProperty.builder()
  * .attachmentPolicyRuleNumber(123)

@@ -42,6 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .greengrassV2(GreengrassV2Property.builder()
  * .coreDeviceThingName("coreDeviceThingName")
+ * // the properties below are optional
+ * .coreDeviceOperatingSystem("coreDeviceOperatingSystem")
  * .build())
  * .siemensIe(SiemensIEProperty.builder()
  * .iotCoreThingName("iotCoreThingName")
@@ -53,6 +55,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .capabilityConfiguration("capabilityConfiguration")
  * .build()))
+ * .gatewayVersion("gatewayVersion")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -151,6 +154,18 @@ public open class CfnGateway(
   @JvmName("402fb47c15f58a9bbd48df590bf23601325404ee9bb7bbef81ee10a687daa8ed")
   public open fun gatewayPlatform(`value`: GatewayPlatformProperty.Builder.() -> Unit): Unit =
       gatewayPlatform(GatewayPlatformProperty(`value`))
+
+  /**
+   * The version of the gateway you want to create.
+   */
+  public open fun gatewayVersion(): String? = unwrap(this).getGatewayVersion()
+
+  /**
+   * The version of the gateway you want to create.
+   */
+  public open fun gatewayVersion(`value`: String) {
+    unwrap(this).setGatewayVersion(`value`)
+  }
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -270,6 +285,14 @@ public open class CfnGateway(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("67a83972075c055807843f542cb36a800b44e870144de9ea23f8102a70a276ed")
     public fun gatewayPlatform(gatewayPlatform: GatewayPlatformProperty.Builder.() -> Unit)
+
+    /**
+     * The version of the gateway you want to create.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html#cfn-iotsitewise-gateway-gatewayversion)
+     * @param gatewayVersion The version of the gateway you want to create. 
+     */
+    public fun gatewayVersion(gatewayVersion: String)
 
     /**
      * A list of key-value pairs that contain metadata for the gateway.
@@ -398,6 +421,16 @@ public open class CfnGateway(
         = gatewayPlatform(GatewayPlatformProperty(gatewayPlatform))
 
     /**
+     * The version of the gateway you want to create.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html#cfn-iotsitewise-gateway-gatewayversion)
+     * @param gatewayVersion The version of the gateway you want to create. 
+     */
+    override fun gatewayVersion(gatewayVersion: String) {
+      cdkBuilder.gatewayVersion(gatewayVersion)
+    }
+
+    /**
      * A list of key-value pairs that contain metadata for the gateway.
      *
      * For more information, see [Tagging your AWS IoT SiteWise
@@ -480,9 +513,8 @@ public open class CfnGateway(
     /**
      * The namespace of the capability configuration.
      *
-     * For example, if you configure OPC-UA sources from the AWS IoT SiteWise console, your OPC-UA
-     * capability configuration has the namespace `iotsitewise:opcuacollector:version` , where
-     * `version` is a number such as `1` .
+     * For example, if you configure OPC UA sources for an MQTT-enabled gateway, your OPC-UA
+     * capability configuration has the namespace `iotsitewise:opcuacollector:3` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html#cfn-iotsitewise-gateway-gatewaycapabilitysummary-capabilitynamespace)
      */
@@ -504,9 +536,8 @@ public open class CfnGateway(
 
       /**
        * @param capabilityNamespace The namespace of the capability configuration. 
-       * For example, if you configure OPC-UA sources from the AWS IoT SiteWise console, your OPC-UA
-       * capability configuration has the namespace `iotsitewise:opcuacollector:version` , where
-       * `version` is a number such as `1` .
+       * For example, if you configure OPC UA sources for an MQTT-enabled gateway, your OPC-UA
+       * capability configuration has the namespace `iotsitewise:opcuacollector:3` .
        */
       public fun capabilityNamespace(capabilityNamespace: String)
     }
@@ -530,9 +561,8 @@ public open class CfnGateway(
 
       /**
        * @param capabilityNamespace The namespace of the capability configuration. 
-       * For example, if you configure OPC-UA sources from the AWS IoT SiteWise console, your OPC-UA
-       * capability configuration has the namespace `iotsitewise:opcuacollector:version` , where
-       * `version` is a number such as `1` .
+       * For example, if you configure OPC UA sources for an MQTT-enabled gateway, your OPC-UA
+       * capability configuration has the namespace `iotsitewise:opcuacollector:3` .
        */
       override fun capabilityNamespace(capabilityNamespace: String) {
         cdkBuilder.capabilityNamespace(capabilityNamespace)
@@ -561,9 +591,8 @@ public open class CfnGateway(
       /**
        * The namespace of the capability configuration.
        *
-       * For example, if you configure OPC-UA sources from the AWS IoT SiteWise console, your OPC-UA
-       * capability configuration has the namespace `iotsitewise:opcuacollector:version` , where
-       * `version` is a number such as `1` .
+       * For example, if you configure OPC UA sources for an MQTT-enabled gateway, your OPC-UA
+       * capability configuration has the namespace `iotsitewise:opcuacollector:3` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html#cfn-iotsitewise-gateway-gatewaycapabilitysummary-capabilitynamespace)
        */
@@ -589,7 +618,17 @@ public open class CfnGateway(
   }
 
   /**
-   * Contains a gateway's platform information.
+   * The gateway's platform configuration. You can only specify one platform type in a gateway.
+   *
+   * (Legacy only) For Greengrass V1 gateways, specify the `greengrass` parameter with a valid
+   * Greengrass group ARN.
+   *
+   * For Greengrass V2 gateways, specify the `greengrassV2` parameter with a valid core device thing
+   * name. If creating a V3 gateway ( `gatewayVersion=3` ), you must also specify the
+   * `coreDeviceOperatingSystem` .
+   *
+   * For Siemens Industrial Edge gateways, specify the `siemensIE` parameter with a valid IoT Core
+   * thing name.
    *
    * Example:
    *
@@ -603,6 +642,8 @@ public open class CfnGateway(
    * .build())
    * .greengrassV2(GreengrassV2Property.builder()
    * .coreDeviceThingName("coreDeviceThingName")
+   * // the properties below are optional
+   * .coreDeviceOperatingSystem("coreDeviceOperatingSystem")
    * .build())
    * .siemensIe(SiemensIEProperty.builder()
    * .iotCoreThingName("iotCoreThingName")
@@ -614,8 +655,6 @@ public open class CfnGateway(
    */
   public interface GatewayPlatformProperty {
     /**
-     * A gateway that runs on AWS IoT Greengrass .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewayplatform.html#cfn-iotsitewise-gateway-gatewayplatform-greengrass)
      */
     public fun greengrass(): Any? = unwrap(this).getGreengrass()
@@ -628,7 +667,7 @@ public open class CfnGateway(
     public fun greengrassV2(): Any? = unwrap(this).getGreengrassV2()
 
     /**
-     * A AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge Device.
+     * An AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge Device.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewayplatform.html#cfn-iotsitewise-gateway-gatewayplatform-siemensie)
      */
@@ -640,17 +679,17 @@ public open class CfnGateway(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param greengrass A gateway that runs on AWS IoT Greengrass .
+       * @param greengrass the value to be set.
        */
       public fun greengrass(greengrass: IResolvable)
 
       /**
-       * @param greengrass A gateway that runs on AWS IoT Greengrass .
+       * @param greengrass the value to be set.
        */
       public fun greengrass(greengrass: GreengrassProperty)
 
       /**
-       * @param greengrass A gateway that runs on AWS IoT Greengrass .
+       * @param greengrass the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("565ec39735a4f1c8211fba5c507ef3bd4c8f5c3104cbe93f8ca532f41baac3da")
@@ -674,19 +713,19 @@ public open class CfnGateway(
       public fun greengrassV2(greengrassV2: GreengrassV2Property.Builder.() -> Unit)
 
       /**
-       * @param siemensIe A AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
+       * @param siemensIe An AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
        * Device.
        */
       public fun siemensIe(siemensIe: IResolvable)
 
       /**
-       * @param siemensIe A AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
+       * @param siemensIe An AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
        * Device.
        */
       public fun siemensIe(siemensIe: SiemensIEProperty)
 
       /**
-       * @param siemensIe A AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
+       * @param siemensIe An AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
        * Device.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -700,21 +739,21 @@ public open class CfnGateway(
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayPlatformProperty.builder()
 
       /**
-       * @param greengrass A gateway that runs on AWS IoT Greengrass .
+       * @param greengrass the value to be set.
        */
       override fun greengrass(greengrass: IResolvable) {
         cdkBuilder.greengrass(greengrass.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param greengrass A gateway that runs on AWS IoT Greengrass .
+       * @param greengrass the value to be set.
        */
       override fun greengrass(greengrass: GreengrassProperty) {
         cdkBuilder.greengrass(greengrass.let(GreengrassProperty.Companion::unwrap))
       }
 
       /**
-       * @param greengrass A gateway that runs on AWS IoT Greengrass .
+       * @param greengrass the value to be set.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("565ec39735a4f1c8211fba5c507ef3bd4c8f5c3104cbe93f8ca532f41baac3da")
@@ -744,7 +783,7 @@ public open class CfnGateway(
           greengrassV2(GreengrassV2Property(greengrassV2))
 
       /**
-       * @param siemensIe A AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
+       * @param siemensIe An AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
        * Device.
        */
       override fun siemensIe(siemensIe: IResolvable) {
@@ -752,7 +791,7 @@ public open class CfnGateway(
       }
 
       /**
-       * @param siemensIe A AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
+       * @param siemensIe An AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
        * Device.
        */
       override fun siemensIe(siemensIe: SiemensIEProperty) {
@@ -760,7 +799,7 @@ public open class CfnGateway(
       }
 
       /**
-       * @param siemensIe A AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
+       * @param siemensIe An AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
        * Device.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -778,8 +817,6 @@ public open class CfnGateway(
     ) : CdkObject(cdkObject),
         GatewayPlatformProperty {
       /**
-       * A gateway that runs on AWS IoT Greengrass .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewayplatform.html#cfn-iotsitewise-gateway-gatewayplatform-greengrass)
        */
       override fun greengrass(): Any? = unwrap(this).getGreengrass()
@@ -792,7 +829,7 @@ public open class CfnGateway(
       override fun greengrassV2(): Any? = unwrap(this).getGreengrassV2()
 
       /**
-       * A AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge Device.
+       * An AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge Device.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewayplatform.html#cfn-iotsitewise-gateway-gatewayplatform-siemensie)
        */
@@ -818,14 +855,6 @@ public open class CfnGateway(
   }
 
   /**
-   * Contains details for a gateway that runs on AWS IoT Greengrass .
-   *
-   * To create a gateway that runs on AWS IoT Greengrass , you must add the IoT SiteWise connector
-   * to a Greengrass group and deploy it. Your Greengrass group must also have permissions to upload
-   * data to AWS IoT SiteWise . For more information, see [Ingesting data using a
-   * gateway](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/gateway-connector.html) in the
-   * *AWS IoT SiteWise User Guide* .
-   *
    * Example:
    *
    * ```
@@ -841,12 +870,6 @@ public open class CfnGateway(
    */
   public interface GreengrassProperty {
     /**
-     * The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the
-     * Greengrass group. For more information about how to find a group's ARN, see
-     * [ListGroups](https://docs.aws.amazon.com/greengrass/v1/apireference/listgroups-get.html) and
-     * [GetGroup](https://docs.aws.amazon.com/greengrass/v1/apireference/getgroup-get.html) in the *AWS
-     * IoT Greengrass V1 API Reference* .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrass.html#cfn-iotsitewise-gateway-greengrass-grouparn)
      */
     public fun groupArn(): String
@@ -857,12 +880,7 @@ public open class CfnGateway(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param groupArn The
-       * [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the
-       * Greengrass group. For more information about how to find a group's ARN, see
-       * [ListGroups](https://docs.aws.amazon.com/greengrass/v1/apireference/listgroups-get.html) and
-       * [GetGroup](https://docs.aws.amazon.com/greengrass/v1/apireference/getgroup-get.html) in the
-       * *AWS IoT Greengrass V1 API Reference* . 
+       * @param groupArn the value to be set. 
        */
       public fun groupArn(groupArn: String)
     }
@@ -873,12 +891,7 @@ public open class CfnGateway(
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty.builder()
 
       /**
-       * @param groupArn The
-       * [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the
-       * Greengrass group. For more information about how to find a group's ARN, see
-       * [ListGroups](https://docs.aws.amazon.com/greengrass/v1/apireference/listgroups-get.html) and
-       * [GetGroup](https://docs.aws.amazon.com/greengrass/v1/apireference/getgroup-get.html) in the
-       * *AWS IoT Greengrass V1 API Reference* . 
+       * @param groupArn the value to be set. 
        */
       override fun groupArn(groupArn: String) {
         cdkBuilder.groupArn(groupArn)
@@ -893,12 +906,6 @@ public open class CfnGateway(
     ) : CdkObject(cdkObject),
         GreengrassProperty {
       /**
-       * The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of
-       * the Greengrass group. For more information about how to find a group's ARN, see
-       * [ListGroups](https://docs.aws.amazon.com/greengrass/v1/apireference/listgroups-get.html) and
-       * [GetGroup](https://docs.aws.amazon.com/greengrass/v1/apireference/getgroup-get.html) in the
-       * *AWS IoT Greengrass V1 API Reference* .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrass.html#cfn-iotsitewise-gateway-greengrass-grouparn)
        */
       override fun groupArn(): String = unwrap(this).getGroupArn()
@@ -940,12 +947,21 @@ public open class CfnGateway(
    * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
    * GreengrassV2Property greengrassV2Property = GreengrassV2Property.builder()
    * .coreDeviceThingName("coreDeviceThingName")
+   * // the properties below are optional
+   * .coreDeviceOperatingSystem("coreDeviceOperatingSystem")
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrassv2.html)
    */
   public interface GreengrassV2Property {
+    /**
+     * The operating system of the core device in AWS IoT Greengrass V2.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrassv2.html#cfn-iotsitewise-gateway-greengrassv2-coredeviceoperatingsystem)
+     */
+    public fun coreDeviceOperatingSystem(): String? = unwrap(this).getCoreDeviceOperatingSystem()
+
     /**
      * The name of the AWS IoT thing for your AWS IoT Greengrass V2 core device.
      *
@@ -959,6 +975,12 @@ public open class CfnGateway(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param coreDeviceOperatingSystem The operating system of the core device in AWS IoT
+       * Greengrass V2.
+       */
+      public fun coreDeviceOperatingSystem(coreDeviceOperatingSystem: String)
+
+      /**
        * @param coreDeviceThingName The name of the AWS IoT thing for your AWS IoT Greengrass V2
        * core device. 
        */
@@ -969,6 +991,14 @@ public open class CfnGateway(
       private val cdkBuilder:
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property.builder()
+
+      /**
+       * @param coreDeviceOperatingSystem The operating system of the core device in AWS IoT
+       * Greengrass V2.
+       */
+      override fun coreDeviceOperatingSystem(coreDeviceOperatingSystem: String) {
+        cdkBuilder.coreDeviceOperatingSystem(coreDeviceOperatingSystem)
+      }
 
       /**
        * @param coreDeviceThingName The name of the AWS IoT thing for your AWS IoT Greengrass V2
@@ -987,6 +1017,14 @@ public open class CfnGateway(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property,
     ) : CdkObject(cdkObject),
         GreengrassV2Property {
+      /**
+       * The operating system of the core device in AWS IoT Greengrass V2.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-greengrassv2.html#cfn-iotsitewise-gateway-greengrassv2-coredeviceoperatingsystem)
+       */
+      override fun coreDeviceOperatingSystem(): String? =
+          unwrap(this).getCoreDeviceOperatingSystem()
+
       /**
        * The name of the AWS IoT thing for your AWS IoT Greengrass V2 core device.
        *

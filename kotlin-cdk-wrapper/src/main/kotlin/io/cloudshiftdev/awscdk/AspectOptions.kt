@@ -24,11 +24,12 @@ import kotlin.Unit
  */
 public interface AspectOptions {
   /**
-   * The priority value to apply on an Aspect.
+   * The priority value to apply on an Aspect. Priority must be a non-negative integer.
    *
-   * Priority must be a non-negative integer.
+   * Aspects that have same priority value are not guaranteed to be
+   * executed in a consistent order.
    *
-   * Default: - AspectPriority.DEFAULT
+   * Default: AspectPriority.DEFAULT
    */
   public fun priority(): Number? = unwrap(this).getPriority()
 
@@ -38,8 +39,10 @@ public interface AspectOptions {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param priority The priority value to apply on an Aspect.
-     * Priority must be a non-negative integer.
+     * @param priority The priority value to apply on an Aspect. Priority must be a non-negative
+     * integer.
+     * Aspects that have same priority value are not guaranteed to be
+     * executed in a consistent order.
      */
     public fun priority(priority: Number)
   }
@@ -49,8 +52,10 @@ public interface AspectOptions {
         software.amazon.awscdk.AspectOptions.builder()
 
     /**
-     * @param priority The priority value to apply on an Aspect.
-     * Priority must be a non-negative integer.
+     * @param priority The priority value to apply on an Aspect. Priority must be a non-negative
+     * integer.
+     * Aspects that have same priority value are not guaranteed to be
+     * executed in a consistent order.
      */
     override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
@@ -64,11 +69,12 @@ public interface AspectOptions {
   ) : CdkObject(cdkObject),
       AspectOptions {
     /**
-     * The priority value to apply on an Aspect.
+     * The priority value to apply on an Aspect. Priority must be a non-negative integer.
      *
-     * Priority must be a non-negative integer.
+     * Aspects that have same priority value are not guaranteed to be
+     * executed in a consistent order.
      *
-     * Default: - AspectPriority.DEFAULT
+     * Default: AspectPriority.DEFAULT
      */
     override fun priority(): Number? = unwrap(this).getPriority()
   }

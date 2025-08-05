@@ -73,78 +73,52 @@ import kotlin.jvm.JvmName
  */
 public interface CfnStudioComponentProps {
   /**
-   * The configuration of the studio component, based on component type.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-configuration)
    */
   public fun configuration(): Any? = unwrap(this).getConfiguration()
 
   /**
-   * A human-readable description for the studio component resource.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-description)
    */
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * The EC2 security groups that control access to the studio component.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-ec2securitygroupids)
    */
   public fun ec2SecurityGroupIds(): List<String> = unwrap(this).getEc2SecurityGroupIds() ?:
       emptyList()
 
   /**
-   * Initialization scripts for studio components.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-initializationscripts)
    */
   public fun initializationScripts(): Any? = unwrap(this).getInitializationScripts()
 
   /**
-   * A friendly name for the studio component resource.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-name)
    */
   public fun name(): String
 
   /**
-   * Parameters for the studio component scripts.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-scriptparameters)
    */
   public fun scriptParameters(): Any? = unwrap(this).getScriptParameters()
 
   /**
-   * The unique identifier for a studio resource.
-   *
-   * In Nimble Studio, all other resources are contained in a studio resource.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-studioid)
    */
   public fun studioId(): String
 
   /**
-   * The specific subtype of a studio component.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-subtype)
    */
   public fun subtype(): String? = unwrap(this).getSubtype()
 
   /**
-   * An array of key-value pairs to apply to this resource.
-   *
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-tags)
    */
   public fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
   /**
-   * The type of the studio component.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-type)
    */
   public fun type(): String
@@ -155,17 +129,17 @@ public interface CfnStudioComponentProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param configuration The configuration of the studio component, based on component type.
+     * @param configuration the value to be set.
      */
     public fun configuration(configuration: IResolvable)
 
     /**
-     * @param configuration The configuration of the studio component, based on component type.
+     * @param configuration the value to be set.
      */
     public fun configuration(configuration: CfnStudioComponent.StudioComponentConfigurationProperty)
 
     /**
-     * @param configuration The configuration of the studio component, based on component type.
+     * @param configuration the value to be set.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0d3ae6329dcd29294cb05a8362f31818aa25fdd3b66bb5ebc7c23386e83b61c5")
@@ -173,78 +147,72 @@ public interface CfnStudioComponentProps {
         fun configuration(configuration: CfnStudioComponent.StudioComponentConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * @param description A human-readable description for the studio component resource.
+     * @param description the value to be set.
      */
     public fun description(description: String)
 
     /**
-     * @param ec2SecurityGroupIds The EC2 security groups that control access to the studio
-     * component.
+     * @param ec2SecurityGroupIds the value to be set.
      */
     public fun ec2SecurityGroupIds(ec2SecurityGroupIds: List<String>)
 
     /**
-     * @param ec2SecurityGroupIds The EC2 security groups that control access to the studio
-     * component.
+     * @param ec2SecurityGroupIds the value to be set.
      */
     public fun ec2SecurityGroupIds(vararg ec2SecurityGroupIds: String)
 
     /**
-     * @param initializationScripts Initialization scripts for studio components.
+     * @param initializationScripts the value to be set.
      */
     public fun initializationScripts(initializationScripts: IResolvable)
 
     /**
-     * @param initializationScripts Initialization scripts for studio components.
+     * @param initializationScripts the value to be set.
      */
     public fun initializationScripts(initializationScripts: List<Any>)
 
     /**
-     * @param initializationScripts Initialization scripts for studio components.
+     * @param initializationScripts the value to be set.
      */
     public fun initializationScripts(vararg initializationScripts: Any)
 
     /**
-     * @param name A friendly name for the studio component resource. 
+     * @param name the value to be set. 
      */
     public fun name(name: String)
 
     /**
-     * @param scriptParameters Parameters for the studio component scripts.
+     * @param scriptParameters the value to be set.
      */
     public fun scriptParameters(scriptParameters: IResolvable)
 
     /**
-     * @param scriptParameters Parameters for the studio component scripts.
+     * @param scriptParameters the value to be set.
      */
     public fun scriptParameters(scriptParameters: List<Any>)
 
     /**
-     * @param scriptParameters Parameters for the studio component scripts.
+     * @param scriptParameters the value to be set.
      */
     public fun scriptParameters(vararg scriptParameters: Any)
 
     /**
-     * @param studioId The unique identifier for a studio resource. 
-     * In Nimble Studio, all other resources are contained in a studio resource.
+     * @param studioId the value to be set. 
      */
     public fun studioId(studioId: String)
 
     /**
-     * @param subtype The specific subtype of a studio component.
+     * @param subtype the value to be set.
      */
     public fun subtype(subtype: String)
 
     /**
-     * @param tags An array of key-value pairs to apply to this resource.
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
+     * @param tags the value to be set.
      */
     public fun tags(tags: Map<String, String>)
 
     /**
-     * @param type The type of the studio component. 
+     * @param type the value to be set. 
      */
     public fun type(type: String)
   }
@@ -255,14 +223,14 @@ public interface CfnStudioComponentProps {
         software.amazon.awscdk.services.nimblestudio.CfnStudioComponentProps.builder()
 
     /**
-     * @param configuration The configuration of the studio component, based on component type.
+     * @param configuration the value to be set.
      */
     override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param configuration The configuration of the studio component, based on component type.
+     * @param configuration the value to be set.
      */
     override
         fun configuration(configuration: CfnStudioComponent.StudioComponentConfigurationProperty) {
@@ -270,7 +238,7 @@ public interface CfnStudioComponentProps {
     }
 
     /**
-     * @param configuration The configuration of the studio component, based on component type.
+     * @param configuration the value to be set.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0d3ae6329dcd29294cb05a8362f31818aa25fdd3b66bb5ebc7c23386e83b61c5")
@@ -279,101 +247,95 @@ public interface CfnStudioComponentProps {
         Unit = configuration(CfnStudioComponent.StudioComponentConfigurationProperty(configuration))
 
     /**
-     * @param description A human-readable description for the studio component resource.
+     * @param description the value to be set.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
-     * @param ec2SecurityGroupIds The EC2 security groups that control access to the studio
-     * component.
+     * @param ec2SecurityGroupIds the value to be set.
      */
     override fun ec2SecurityGroupIds(ec2SecurityGroupIds: List<String>) {
       cdkBuilder.ec2SecurityGroupIds(ec2SecurityGroupIds)
     }
 
     /**
-     * @param ec2SecurityGroupIds The EC2 security groups that control access to the studio
-     * component.
+     * @param ec2SecurityGroupIds the value to be set.
      */
     override fun ec2SecurityGroupIds(vararg ec2SecurityGroupIds: String): Unit =
         ec2SecurityGroupIds(ec2SecurityGroupIds.toList())
 
     /**
-     * @param initializationScripts Initialization scripts for studio components.
+     * @param initializationScripts the value to be set.
      */
     override fun initializationScripts(initializationScripts: IResolvable) {
       cdkBuilder.initializationScripts(initializationScripts.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param initializationScripts Initialization scripts for studio components.
+     * @param initializationScripts the value to be set.
      */
     override fun initializationScripts(initializationScripts: List<Any>) {
       cdkBuilder.initializationScripts(initializationScripts.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param initializationScripts Initialization scripts for studio components.
+     * @param initializationScripts the value to be set.
      */
     override fun initializationScripts(vararg initializationScripts: Any): Unit =
         initializationScripts(initializationScripts.toList())
 
     /**
-     * @param name A friendly name for the studio component resource. 
+     * @param name the value to be set. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     /**
-     * @param scriptParameters Parameters for the studio component scripts.
+     * @param scriptParameters the value to be set.
      */
     override fun scriptParameters(scriptParameters: IResolvable) {
       cdkBuilder.scriptParameters(scriptParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param scriptParameters Parameters for the studio component scripts.
+     * @param scriptParameters the value to be set.
      */
     override fun scriptParameters(scriptParameters: List<Any>) {
       cdkBuilder.scriptParameters(scriptParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param scriptParameters Parameters for the studio component scripts.
+     * @param scriptParameters the value to be set.
      */
     override fun scriptParameters(vararg scriptParameters: Any): Unit =
         scriptParameters(scriptParameters.toList())
 
     /**
-     * @param studioId The unique identifier for a studio resource. 
-     * In Nimble Studio, all other resources are contained in a studio resource.
+     * @param studioId the value to be set. 
      */
     override fun studioId(studioId: String) {
       cdkBuilder.studioId(studioId)
     }
 
     /**
-     * @param subtype The specific subtype of a studio component.
+     * @param subtype the value to be set.
      */
     override fun subtype(subtype: String) {
       cdkBuilder.subtype(subtype)
     }
 
     /**
-     * @param tags An array of key-value pairs to apply to this resource.
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
+     * @param tags the value to be set.
      */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
     /**
-     * @param type The type of the studio component. 
+     * @param type the value to be set. 
      */
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -388,78 +350,52 @@ public interface CfnStudioComponentProps {
   ) : CdkObject(cdkObject),
       CfnStudioComponentProps {
     /**
-     * The configuration of the studio component, based on component type.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-configuration)
      */
     override fun configuration(): Any? = unwrap(this).getConfiguration()
 
     /**
-     * A human-readable description for the studio component resource.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-description)
      */
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * The EC2 security groups that control access to the studio component.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-ec2securitygroupids)
      */
     override fun ec2SecurityGroupIds(): List<String> = unwrap(this).getEc2SecurityGroupIds() ?:
         emptyList()
 
     /**
-     * Initialization scripts for studio components.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-initializationscripts)
      */
     override fun initializationScripts(): Any? = unwrap(this).getInitializationScripts()
 
     /**
-     * A friendly name for the studio component resource.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-name)
      */
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * Parameters for the studio component scripts.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-scriptparameters)
      */
     override fun scriptParameters(): Any? = unwrap(this).getScriptParameters()
 
     /**
-     * The unique identifier for a studio resource.
-     *
-     * In Nimble Studio, all other resources are contained in a studio resource.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-studioid)
      */
     override fun studioId(): String = unwrap(this).getStudioId()
 
     /**
-     * The specific subtype of a studio component.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-subtype)
      */
     override fun subtype(): String? = unwrap(this).getSubtype()
 
     /**
-     * An array of key-value pairs to apply to this resource.
-     *
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-tags)
      */
     override fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
     /**
-     * The type of the studio component.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-type)
      */
     override fun type(): String = unwrap(this).getType()

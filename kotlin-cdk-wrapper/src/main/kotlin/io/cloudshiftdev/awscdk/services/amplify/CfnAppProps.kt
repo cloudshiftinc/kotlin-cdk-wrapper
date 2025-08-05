@@ -56,6 +56,7 @@ import kotlin.jvm.JvmName
  * .cacheConfig(CacheConfigProperty.builder()
  * .type("type")
  * .build())
+ * .computeRoleArn("computeRoleArn")
  * .customHeaders("customHeaders")
  * .customRules(List.of(CustomRuleProperty.builder()
  * .source("source")
@@ -71,6 +72,9 @@ import kotlin.jvm.JvmName
  * .value("value")
  * .build()))
  * .iamServiceRole("iamServiceRole")
+ * .jobConfig(JobConfigProperty.builder()
+ * .buildComputeType("buildComputeType")
+ * .build())
  * .oauthToken("oauthToken")
  * .platform("platform")
  * .repository("repository")
@@ -140,6 +144,19 @@ public interface CfnAppProps {
   public fun cacheConfig(): Any? = unwrap(this).getCacheConfig()
 
   /**
+   * The Amazon Resource Name (ARN) of the IAM role for an SSR app.
+   *
+   * The Compute role allows the Amplify Hosting compute service to securely access specific AWS
+   * resources based on the role's permissions. For more information about the SSR Compute role, see
+   * [Adding an SSR Compute
+   * role](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-SSR-compute-role.html) in the
+   * *Amplify User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-computerolearn)
+   */
+  public fun computeRoleArn(): String? = unwrap(this).getComputeRoleArn()
+
+  /**
    * The custom HTTP headers for an Amplify app.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-customheaders)
@@ -187,6 +204,13 @@ public interface CfnAppProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-iamservicerole)
    */
   public fun iamServiceRole(): String? = unwrap(this).getIamServiceRole()
+
+  /**
+   * The configuration details that apply to the jobs for an Amplify app.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-jobconfig)
+   */
+  public fun jobConfig(): Any? = unwrap(this).getJobConfig()
 
   /**
    * The name of the Amplify app.
@@ -342,6 +366,16 @@ public interface CfnAppProps {
     public fun cacheConfig(cacheConfig: CfnApp.CacheConfigProperty.Builder.() -> Unit)
 
     /**
+     * @param computeRoleArn The Amazon Resource Name (ARN) of the IAM role for an SSR app.
+     * The Compute role allows the Amplify Hosting compute service to securely access specific AWS
+     * resources based on the role's permissions. For more information about the SSR Compute role, see
+     * [Adding an SSR Compute
+     * role](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-SSR-compute-role.html) in the
+     * *Amplify User Guide* .
+     */
+    public fun computeRoleArn(computeRoleArn: String)
+
+    /**
      * @param customHeaders The custom HTTP headers for an Amplify app.
      */
     public fun customHeaders(customHeaders: String)
@@ -410,6 +444,23 @@ public interface CfnAppProps {
      * Resource Name (ARN) of the Amplify app.
      */
     public fun iamServiceRole(iamServiceRole: String)
+
+    /**
+     * @param jobConfig The configuration details that apply to the jobs for an Amplify app.
+     */
+    public fun jobConfig(jobConfig: IResolvable)
+
+    /**
+     * @param jobConfig The configuration details that apply to the jobs for an Amplify app.
+     */
+    public fun jobConfig(jobConfig: CfnApp.JobConfigProperty)
+
+    /**
+     * @param jobConfig The configuration details that apply to the jobs for an Amplify app.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("274bec184caa77b352b9e7e03716d7c2e19fc38828eda69e30b63ed74f3969af")
+    public fun jobConfig(jobConfig: CfnApp.JobConfigProperty.Builder.() -> Unit)
 
     /**
      * @param name The name of the Amplify app. 
@@ -579,6 +630,18 @@ public interface CfnAppProps {
         cacheConfig(CfnApp.CacheConfigProperty(cacheConfig))
 
     /**
+     * @param computeRoleArn The Amazon Resource Name (ARN) of the IAM role for an SSR app.
+     * The Compute role allows the Amplify Hosting compute service to securely access specific AWS
+     * resources based on the role's permissions. For more information about the SSR Compute role, see
+     * [Adding an SSR Compute
+     * role](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-SSR-compute-role.html) in the
+     * *Amplify User Guide* .
+     */
+    override fun computeRoleArn(computeRoleArn: String) {
+      cdkBuilder.computeRoleArn(computeRoleArn)
+    }
+
+    /**
      * @param customHeaders The custom HTTP headers for an Amplify app.
      */
     override fun customHeaders(customHeaders: String) {
@@ -666,6 +729,28 @@ public interface CfnAppProps {
     override fun iamServiceRole(iamServiceRole: String) {
       cdkBuilder.iamServiceRole(iamServiceRole)
     }
+
+    /**
+     * @param jobConfig The configuration details that apply to the jobs for an Amplify app.
+     */
+    override fun jobConfig(jobConfig: IResolvable) {
+      cdkBuilder.jobConfig(jobConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param jobConfig The configuration details that apply to the jobs for an Amplify app.
+     */
+    override fun jobConfig(jobConfig: CfnApp.JobConfigProperty) {
+      cdkBuilder.jobConfig(jobConfig.let(CfnApp.JobConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param jobConfig The configuration details that apply to the jobs for an Amplify app.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("274bec184caa77b352b9e7e03716d7c2e19fc38828eda69e30b63ed74f3969af")
+    override fun jobConfig(jobConfig: CfnApp.JobConfigProperty.Builder.() -> Unit): Unit =
+        jobConfig(CfnApp.JobConfigProperty(jobConfig))
 
     /**
      * @param name The name of the Amplify app. 
@@ -793,6 +878,19 @@ public interface CfnAppProps {
     override fun cacheConfig(): Any? = unwrap(this).getCacheConfig()
 
     /**
+     * The Amazon Resource Name (ARN) of the IAM role for an SSR app.
+     *
+     * The Compute role allows the Amplify Hosting compute service to securely access specific AWS
+     * resources based on the role's permissions. For more information about the SSR Compute role, see
+     * [Adding an SSR Compute
+     * role](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-SSR-compute-role.html) in the
+     * *Amplify User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-computerolearn)
+     */
+    override fun computeRoleArn(): String? = unwrap(this).getComputeRoleArn()
+
+    /**
      * The custom HTTP headers for an Amplify app.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-customheaders)
@@ -840,6 +938,13 @@ public interface CfnAppProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-iamservicerole)
      */
     override fun iamServiceRole(): String? = unwrap(this).getIamServiceRole()
+
+    /**
+     * The configuration details that apply to the jobs for an Amplify app.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-jobconfig)
+     */
+    override fun jobConfig(): Any? = unwrap(this).getJobConfig()
 
     /**
      * The name of the Amplify app.

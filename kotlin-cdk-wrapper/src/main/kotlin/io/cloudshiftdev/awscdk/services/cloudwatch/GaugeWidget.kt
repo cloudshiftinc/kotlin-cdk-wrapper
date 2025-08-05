@@ -60,6 +60,22 @@ public open class GaugeWidget(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The AWS account ID where the metrics are located.
+     *
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     *
+     * Default: - Current account
+     *
+     * @param accountId The AWS account ID where the metrics are located. 
+     */
+    public fun accountId(accountId: String)
+
+    /**
      * Annotations for the left Y axis.
      *
      * Default: - No annotations
@@ -243,6 +259,24 @@ public open class GaugeWidget(
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.GaugeWidget.Builder =
         software.amazon.awscdk.services.cloudwatch.GaugeWidget.Builder.create()
+
+    /**
+     * The AWS account ID where the metrics are located.
+     *
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     *
+     * Default: - Current account
+     *
+     * @param accountId The AWS account ID where the metrics are located. 
+     */
+    override fun accountId(accountId: String) {
+      cdkBuilder.accountId(accountId)
+    }
 
     /**
      * Annotations for the left Y axis.

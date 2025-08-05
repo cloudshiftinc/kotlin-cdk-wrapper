@@ -48,7 +48,24 @@ public open class Tags(
   cdkObject: software.amazon.awscdk.Tags,
 ) : CdkObject(cdkObject) {
   /**
-   * add tags to the node of a construct and all its the taggable children.
+   * Add tags to the node of a construct and all its the taggable children.
+   *
+   * <h2>Tagging and CloudFormation Stacks</h2>
+   *
+   * If the feature flag `&#64;aws-cdk/core:explicitStackTags` is set to `true`
+   * (recommended modern behavior), Stacks will not automatically be tagged.
+   * Stack tags should be configured on Stacks directly (preferred), or
+   * you must explicitly include the resource type `aws:cdk:stack` in the
+   * `includeResourceTypes` array.
+   *
+   * If the feature flag is set to `false` (legacy behavior) then both Stacks
+   * and resources in the indicated scope will both be tagged by default, which
+   * leads to tags being applied twice (once in the template, and then once
+   * again automatically by CloudFormation as part of the stack deployment).
+   * That behavior leads to loss of control as `excludeResourceTypes` will
+   * prevent tags from appearing in the template, but they will still be
+   * applied to the Stack and hence CloudFormation will still apply them
+   * to the resource.
    *
    * @param key 
    * @param value 
@@ -59,7 +76,24 @@ public open class Tags(
   }
 
   /**
-   * add tags to the node of a construct and all its the taggable children.
+   * Add tags to the node of a construct and all its the taggable children.
+   *
+   * <h2>Tagging and CloudFormation Stacks</h2>
+   *
+   * If the feature flag `&#64;aws-cdk/core:explicitStackTags` is set to `true`
+   * (recommended modern behavior), Stacks will not automatically be tagged.
+   * Stack tags should be configured on Stacks directly (preferred), or
+   * you must explicitly include the resource type `aws:cdk:stack` in the
+   * `includeResourceTypes` array.
+   *
+   * If the feature flag is set to `false` (legacy behavior) then both Stacks
+   * and resources in the indicated scope will both be tagged by default, which
+   * leads to tags being applied twice (once in the template, and then once
+   * again automatically by CloudFormation as part of the stack deployment).
+   * That behavior leads to loss of control as `excludeResourceTypes` will
+   * prevent tags from appearing in the template, but they will still be
+   * applied to the Stack and hence CloudFormation will still apply them
+   * to the resource.
    *
    * @param key 
    * @param value 
@@ -74,7 +108,24 @@ public open class Tags(
   }
 
   /**
-   * add tags to the node of a construct and all its the taggable children.
+   * Add tags to the node of a construct and all its the taggable children.
+   *
+   * <h2>Tagging and CloudFormation Stacks</h2>
+   *
+   * If the feature flag `&#64;aws-cdk/core:explicitStackTags` is set to `true`
+   * (recommended modern behavior), Stacks will not automatically be tagged.
+   * Stack tags should be configured on Stacks directly (preferred), or
+   * you must explicitly include the resource type `aws:cdk:stack` in the
+   * `includeResourceTypes` array.
+   *
+   * If the feature flag is set to `false` (legacy behavior) then both Stacks
+   * and resources in the indicated scope will both be tagged by default, which
+   * leads to tags being applied twice (once in the template, and then once
+   * again automatically by CloudFormation as part of the stack deployment).
+   * That behavior leads to loss of control as `excludeResourceTypes` will
+   * prevent tags from appearing in the template, but they will still be
+   * applied to the Stack and hence CloudFormation will still apply them
+   * to the resource.
    *
    * @param key 
    * @param value 

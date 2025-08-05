@@ -21,10 +21,17 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Creates a domain that contains all Amazon Connect Voice ID data, such as speakers, fraudsters,
- * customer audio, and voiceprints.
+ * End of support notice: On May 20, 2026, AWS will end support for Amazon Connect Voice ID.
  *
- * Every domain is created with a default watchlist that fraudsters can be a part of.
+ * After May 20, 2026, you will no longer be able to access Voice ID on the Amazon Connect console,
+ * access Voice ID features on the Amazon Connect admin website or Contact Control Panel, or access
+ * Voice ID resources. For more information, visit [Amazon Connect Voice ID end of
+ * support](https://docs.aws.amazon.com/connect/latest/adminguide/amazonconnect-voiceid-end-of-support.html)
+ * .
+ *
+ * Creates a domain that contains all Amazon Connect Voice ID data, such as speakers, fraudsters,
+ * customer audio, and voiceprints. Every domain is created with a default watchlist that fraudsters
+ * can be a part of.
  *
  * Example:
  *
@@ -345,6 +352,14 @@ public open class CfnDomain(
   }
 
   /**
+   * End of support notice: On May 20, 2026, AWS will end support for Amazon Connect Voice ID.
+   *
+   * After May 20, 2026, you will no longer be able to access Voice ID on the Amazon Connect
+   * console, access Voice ID features on the Amazon Connect admin website or Contact Control Panel, or
+   * access Voice ID resources. For more information, visit [Amazon Connect Voice ID end of
+   * support](https://docs.aws.amazon.com/connect/latest/adminguide/amazonconnect-voiceid-end-of-support.html)
+   * .
+   *
    * The configuration containing information about the customer managed key used for encrypting
    * customer data.
    *

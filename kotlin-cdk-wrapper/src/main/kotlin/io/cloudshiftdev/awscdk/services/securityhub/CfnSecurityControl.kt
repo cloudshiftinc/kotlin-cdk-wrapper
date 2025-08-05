@@ -620,17 +620,17 @@ public open class CfnSecurityControl(
       /**
        * @param integerList A control parameter that is a list of integers.
        */
-      public fun integerList(integerList: IResolvable)
-
-      /**
-       * @param integerList A control parameter that is a list of integers.
-       */
       public fun integerList(integerList: List<Number>)
 
       /**
        * @param integerList A control parameter that is a list of integers.
        */
       public fun integerList(vararg integerList: Number)
+
+      /**
+       * @param integerList A control parameter that is a list of integers.
+       */
+      public fun integerList(integerList: IResolvable)
 
       /**
        * @param string A control parameter that is a string.
@@ -704,13 +704,6 @@ public open class CfnSecurityControl(
       /**
        * @param integerList A control parameter that is a list of integers.
        */
-      override fun integerList(integerList: IResolvable) {
-        cdkBuilder.integerList(integerList.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param integerList A control parameter that is a list of integers.
-       */
       override fun integerList(integerList: List<Number>) {
         cdkBuilder.integerList(integerList)
       }
@@ -719,6 +712,13 @@ public open class CfnSecurityControl(
        * @param integerList A control parameter that is a list of integers.
        */
       override fun integerList(vararg integerList: Number): Unit = integerList(integerList.toList())
+
+      /**
+       * @param integerList A control parameter that is a list of integers.
+       */
+      override fun integerList(integerList: IResolvable) {
+        cdkBuilder.integerList(integerList.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param string A control parameter that is a string.

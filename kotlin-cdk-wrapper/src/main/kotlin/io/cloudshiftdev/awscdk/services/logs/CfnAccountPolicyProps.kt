@@ -91,6 +91,24 @@ public interface CfnAccountPolicyProps {
    * distribution. This property is only applicable when the destination is an Kinesis Data Streams
    * data stream.
    *
+   * *Field index policy*
+   *
+   * A field index filter policy can include the following attribute in a JSON block:
+   *
+   * * *Fields* The array of field indexes to create.
+   *
+   * The following is an example of an index policy document that creates two indexes, `RequestId`
+   * and `TransactionId` .
+   *
+   * `"policyDocument": "{ \"Fields\": [ \"RequestId\", \"TransactionId\" ] }"`
+   *
+   * *Transformer policy*
+   *
+   * A transformer policy must include one JSON block with the array of processors and their
+   * configurations. For more information about available processors, see [Processors that you can
+   * use](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html#CloudWatch-Logs-Transformation-Processors)
+   * .
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-accountpolicy.html#cfn-logs-accountpolicy-policydocument)
    */
   public fun policyDocument(): String
@@ -116,26 +134,31 @@ public interface CfnAccountPolicyProps {
    * applies to all log groups in the account.
    *
    * If you omit this parameter, the default of `ALL` is used. To scope down a subscription filter
-   * policy to a subset of log groups, use the `selectionCriteria` parameter.
+   * policy to a subset of log groups, use the `SelectionCriteria` parameter.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-accountpolicy.html#cfn-logs-accountpolicy-scope)
    */
   public fun scope(): String? = unwrap(this).getScope()
 
   /**
-   * Use this parameter to apply a subscription filter policy to a subset of log groups in the
-   * account.
+   * Use this parameter to apply the new policy to a subset of log groups in the account.
    *
-   * Currently, the only supported filter is `LogGroupName NOT IN []` . The `selectionCriteria`
-   * string can be up to 25KB in length. The length is determined by using its UTF-8 bytes.
+   * You need to specify `SelectionCriteria` only when you specify `SUBSCRIPTION_FILTER_POLICY` ,
+   * `FIELD_INDEX_POLICY` or `TRANSFORMER_POLICY` for `PolicyType` .
    *
-   * Using the `selectionCriteria` parameter is useful to help prevent infinite loops. For more
-   * information, see [Log recursion
+   * If `PolicyType` is `SUBSCRIPTION_FILTER_POLICY` , the only supported `SelectionCriteria` filter
+   * is `LogGroupName NOT IN []`
+   *
+   * If `PolicyType` is `FIELD_INDEX_POLICY` or `TRANSFORMER_POLICY` , the only supported
+   * `SelectionCriteria` filter is `LogGroupNamePrefix`
+   *
+   * The `SelectionCriteria` string can be up to 25KB in length. The length is determined by using
+   * its UTF-8 bytes.
+   *
+   * Using the `SelectionCriteria` parameter with `SUBSCRIPTION_FILTER_POLICY` is useful to help
+   * prevent infinite loops. For more information, see [Log recursion
    * prevention](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Subscriptions-recursion-prevention.html)
    * .
-   *
-   * Specifing `selectionCriteria` is valid only when you specify `SUBSCRIPTION_FILTER_POLICY` for
-   * `policyType` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-accountpolicy.html#cfn-logs-accountpolicy-selectioncriteria)
    */
@@ -206,6 +229,24 @@ public interface CfnAccountPolicyProps {
      * data is grouped by log stream, but the grouping can be set to `Random` for a more even
      * distribution. This property is only applicable when the destination is an Kinesis Data Streams
      * data stream.
+     *
+     * *Field index policy*
+     *
+     * A field index filter policy can include the following attribute in a JSON block:
+     *
+     * * *Fields* The array of field indexes to create.
+     *
+     * The following is an example of an index policy document that creates two indexes, `RequestId`
+     * and `TransactionId` .
+     *
+     * `"policyDocument": "{ \"Fields\": [ \"RequestId\", \"TransactionId\" ] }"`
+     *
+     * *Transformer policy*
+     *
+     * A transformer policy must include one JSON block with the array of processors and their
+     * configurations. For more information about available processors, see [Processors that you can
+     * use](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html#CloudWatch-Logs-Transformation-Processors)
+     * .
      */
     public fun policyDocument(policyDocument: String)
 
@@ -224,23 +265,29 @@ public interface CfnAccountPolicyProps {
      * @param scope Currently the only valid value for this parameter is `ALL` , which specifies
      * that the policy applies to all log groups in the account.
      * If you omit this parameter, the default of `ALL` is used. To scope down a subscription filter
-     * policy to a subset of log groups, use the `selectionCriteria` parameter.
+     * policy to a subset of log groups, use the `SelectionCriteria` parameter.
      */
     public fun scope(scope: String)
 
     /**
-     * @param selectionCriteria Use this parameter to apply a subscription filter policy to a subset
-     * of log groups in the account.
-     * Currently, the only supported filter is `LogGroupName NOT IN []` . The `selectionCriteria`
-     * string can be up to 25KB in length. The length is determined by using its UTF-8 bytes.
+     * @param selectionCriteria Use this parameter to apply the new policy to a subset of log groups
+     * in the account.
+     * You need to specify `SelectionCriteria` only when you specify `SUBSCRIPTION_FILTER_POLICY` ,
+     * `FIELD_INDEX_POLICY` or `TRANSFORMER_POLICY` for `PolicyType` .
      *
-     * Using the `selectionCriteria` parameter is useful to help prevent infinite loops. For more
-     * information, see [Log recursion
+     * If `PolicyType` is `SUBSCRIPTION_FILTER_POLICY` , the only supported `SelectionCriteria`
+     * filter is `LogGroupName NOT IN []`
+     *
+     * If `PolicyType` is `FIELD_INDEX_POLICY` or `TRANSFORMER_POLICY` , the only supported
+     * `SelectionCriteria` filter is `LogGroupNamePrefix`
+     *
+     * The `SelectionCriteria` string can be up to 25KB in length. The length is determined by using
+     * its UTF-8 bytes.
+     *
+     * Using the `SelectionCriteria` parameter with `SUBSCRIPTION_FILTER_POLICY` is useful to help
+     * prevent infinite loops. For more information, see [Log recursion
      * prevention](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Subscriptions-recursion-prevention.html)
      * .
-     *
-     * Specifing `selectionCriteria` is valid only when you specify `SUBSCRIPTION_FILTER_POLICY` for
-     * `policyType` .
      */
     public fun selectionCriteria(selectionCriteria: String)
   }
@@ -309,6 +356,24 @@ public interface CfnAccountPolicyProps {
      * data is grouped by log stream, but the grouping can be set to `Random` for a more even
      * distribution. This property is only applicable when the destination is an Kinesis Data Streams
      * data stream.
+     *
+     * *Field index policy*
+     *
+     * A field index filter policy can include the following attribute in a JSON block:
+     *
+     * * *Fields* The array of field indexes to create.
+     *
+     * The following is an example of an index policy document that creates two indexes, `RequestId`
+     * and `TransactionId` .
+     *
+     * `"policyDocument": "{ \"Fields\": [ \"RequestId\", \"TransactionId\" ] }"`
+     *
+     * *Transformer policy*
+     *
+     * A transformer policy must include one JSON block with the array of processors and their
+     * configurations. For more information about available processors, see [Processors that you can
+     * use](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html#CloudWatch-Logs-Transformation-Processors)
+     * .
      */
     override fun policyDocument(policyDocument: String) {
       cdkBuilder.policyDocument(policyDocument)
@@ -333,25 +398,31 @@ public interface CfnAccountPolicyProps {
      * @param scope Currently the only valid value for this parameter is `ALL` , which specifies
      * that the policy applies to all log groups in the account.
      * If you omit this parameter, the default of `ALL` is used. To scope down a subscription filter
-     * policy to a subset of log groups, use the `selectionCriteria` parameter.
+     * policy to a subset of log groups, use the `SelectionCriteria` parameter.
      */
     override fun scope(scope: String) {
       cdkBuilder.scope(scope)
     }
 
     /**
-     * @param selectionCriteria Use this parameter to apply a subscription filter policy to a subset
-     * of log groups in the account.
-     * Currently, the only supported filter is `LogGroupName NOT IN []` . The `selectionCriteria`
-     * string can be up to 25KB in length. The length is determined by using its UTF-8 bytes.
+     * @param selectionCriteria Use this parameter to apply the new policy to a subset of log groups
+     * in the account.
+     * You need to specify `SelectionCriteria` only when you specify `SUBSCRIPTION_FILTER_POLICY` ,
+     * `FIELD_INDEX_POLICY` or `TRANSFORMER_POLICY` for `PolicyType` .
      *
-     * Using the `selectionCriteria` parameter is useful to help prevent infinite loops. For more
-     * information, see [Log recursion
+     * If `PolicyType` is `SUBSCRIPTION_FILTER_POLICY` , the only supported `SelectionCriteria`
+     * filter is `LogGroupName NOT IN []`
+     *
+     * If `PolicyType` is `FIELD_INDEX_POLICY` or `TRANSFORMER_POLICY` , the only supported
+     * `SelectionCriteria` filter is `LogGroupNamePrefix`
+     *
+     * The `SelectionCriteria` string can be up to 25KB in length. The length is determined by using
+     * its UTF-8 bytes.
+     *
+     * Using the `SelectionCriteria` parameter with `SUBSCRIPTION_FILTER_POLICY` is useful to help
+     * prevent infinite loops. For more information, see [Log recursion
      * prevention](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Subscriptions-recursion-prevention.html)
      * .
-     *
-     * Specifing `selectionCriteria` is valid only when you specify `SUBSCRIPTION_FILTER_POLICY` for
-     * `policyType` .
      */
     override fun selectionCriteria(selectionCriteria: String) {
       cdkBuilder.selectionCriteria(selectionCriteria)
@@ -427,6 +498,24 @@ public interface CfnAccountPolicyProps {
      * distribution. This property is only applicable when the destination is an Kinesis Data Streams
      * data stream.
      *
+     * *Field index policy*
+     *
+     * A field index filter policy can include the following attribute in a JSON block:
+     *
+     * * *Fields* The array of field indexes to create.
+     *
+     * The following is an example of an index policy document that creates two indexes, `RequestId`
+     * and `TransactionId` .
+     *
+     * `"policyDocument": "{ \"Fields\": [ \"RequestId\", \"TransactionId\" ] }"`
+     *
+     * *Transformer policy*
+     *
+     * A transformer policy must include one JSON block with the array of processors and their
+     * configurations. For more information about available processors, see [Processors that you can
+     * use](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html#CloudWatch-Logs-Transformation-Processors)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-accountpolicy.html#cfn-logs-accountpolicy-policydocument)
      */
     override fun policyDocument(): String = unwrap(this).getPolicyDocument()
@@ -452,26 +541,31 @@ public interface CfnAccountPolicyProps {
      * applies to all log groups in the account.
      *
      * If you omit this parameter, the default of `ALL` is used. To scope down a subscription filter
-     * policy to a subset of log groups, use the `selectionCriteria` parameter.
+     * policy to a subset of log groups, use the `SelectionCriteria` parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-accountpolicy.html#cfn-logs-accountpolicy-scope)
      */
     override fun scope(): String? = unwrap(this).getScope()
 
     /**
-     * Use this parameter to apply a subscription filter policy to a subset of log groups in the
-     * account.
+     * Use this parameter to apply the new policy to a subset of log groups in the account.
      *
-     * Currently, the only supported filter is `LogGroupName NOT IN []` . The `selectionCriteria`
-     * string can be up to 25KB in length. The length is determined by using its UTF-8 bytes.
+     * You need to specify `SelectionCriteria` only when you specify `SUBSCRIPTION_FILTER_POLICY` ,
+     * `FIELD_INDEX_POLICY` or `TRANSFORMER_POLICY` for `PolicyType` .
      *
-     * Using the `selectionCriteria` parameter is useful to help prevent infinite loops. For more
-     * information, see [Log recursion
+     * If `PolicyType` is `SUBSCRIPTION_FILTER_POLICY` , the only supported `SelectionCriteria`
+     * filter is `LogGroupName NOT IN []`
+     *
+     * If `PolicyType` is `FIELD_INDEX_POLICY` or `TRANSFORMER_POLICY` , the only supported
+     * `SelectionCriteria` filter is `LogGroupNamePrefix`
+     *
+     * The `SelectionCriteria` string can be up to 25KB in length. The length is determined by using
+     * its UTF-8 bytes.
+     *
+     * Using the `SelectionCriteria` parameter with `SUBSCRIPTION_FILTER_POLICY` is useful to help
+     * prevent infinite loops. For more information, see [Log recursion
      * prevention](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Subscriptions-recursion-prevention.html)
      * .
-     *
-     * Specifing `selectionCriteria` is valid only when you specify `SUBSCRIPTION_FILTER_POLICY` for
-     * `policyType` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-accountpolicy.html#cfn-logs-accountpolicy-selectioncriteria)
      */

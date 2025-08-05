@@ -43,6 +43,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .smtpPassword("smtpPassword")
  * .build())
  * .ingressPointName("ingressPointName")
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .privateNetworkConfiguration(PrivateNetworkConfigurationProperty.builder()
+ * .vpcEndpointId("vpcEndpointId")
+ * .build())
+ * .publicNetworkConfiguration(PublicNetworkConfigurationProperty.builder()
+ * .ipType("ipType")
+ * .build())
+ * .build())
  * .statusToUpdate("statusToUpdate")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -152,6 +160,33 @@ public open class CfnMailManagerIngressPoint(
   }
 
   /**
+   * The network type (IPv4-only, Dual-Stack, PrivateLink) of the ingress endpoint resource.
+   */
+  public open fun networkConfiguration(): Any? = unwrap(this).getNetworkConfiguration()
+
+  /**
+   * The network type (IPv4-only, Dual-Stack, PrivateLink) of the ingress endpoint resource.
+   */
+  public open fun networkConfiguration(`value`: IResolvable) {
+    unwrap(this).setNetworkConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The network type (IPv4-only, Dual-Stack, PrivateLink) of the ingress endpoint resource.
+   */
+  public open fun networkConfiguration(`value`: NetworkConfigurationProperty) {
+    unwrap(this).setNetworkConfiguration(`value`.let(NetworkConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The network type (IPv4-only, Dual-Stack, PrivateLink) of the ingress endpoint resource.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("41e9aa8b82ca584543ba5c02aa0016a5cb517e429de2d42b3c2c082664d23f94")
+  public open fun networkConfiguration(`value`: NetworkConfigurationProperty.Builder.() -> Unit):
+      Unit = networkConfiguration(NetworkConfigurationProperty(`value`))
+
+  /**
    * The identifier of an existing rule set that you attach to an ingress endpoint resource.
    */
   public open fun ruleSetId(): String = unwrap(this).getRuleSetId()
@@ -258,6 +293,36 @@ public open class CfnMailManagerIngressPoint(
     public fun ingressPointName(ingressPointName: String)
 
     /**
+     * The network type (IPv4-only, Dual-Stack, PrivateLink) of the ingress endpoint resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-mailmanageringresspoint.html#cfn-ses-mailmanageringresspoint-networkconfiguration)
+     * @param networkConfiguration The network type (IPv4-only, Dual-Stack, PrivateLink) of the
+     * ingress endpoint resource. 
+     */
+    public fun networkConfiguration(networkConfiguration: IResolvable)
+
+    /**
+     * The network type (IPv4-only, Dual-Stack, PrivateLink) of the ingress endpoint resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-mailmanageringresspoint.html#cfn-ses-mailmanageringresspoint-networkconfiguration)
+     * @param networkConfiguration The network type (IPv4-only, Dual-Stack, PrivateLink) of the
+     * ingress endpoint resource. 
+     */
+    public fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty)
+
+    /**
+     * The network type (IPv4-only, Dual-Stack, PrivateLink) of the ingress endpoint resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-mailmanageringresspoint.html#cfn-ses-mailmanageringresspoint-networkconfiguration)
+     * @param networkConfiguration The network type (IPv4-only, Dual-Stack, PrivateLink) of the
+     * ingress endpoint resource. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d22238cd9fbf14cc084c69fd100e7936f7c474676e788a6a8ee8dd5f76ecb27d")
+    public
+        fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * The identifier of an existing rule set that you attach to an ingress endpoint resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-mailmanageringresspoint.html#cfn-ses-mailmanageringresspoint-rulesetid)
@@ -362,6 +427,41 @@ public open class CfnMailManagerIngressPoint(
     override fun ingressPointName(ingressPointName: String) {
       cdkBuilder.ingressPointName(ingressPointName)
     }
+
+    /**
+     * The network type (IPv4-only, Dual-Stack, PrivateLink) of the ingress endpoint resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-mailmanageringresspoint.html#cfn-ses-mailmanageringresspoint-networkconfiguration)
+     * @param networkConfiguration The network type (IPv4-only, Dual-Stack, PrivateLink) of the
+     * ingress endpoint resource. 
+     */
+    override fun networkConfiguration(networkConfiguration: IResolvable) {
+      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The network type (IPv4-only, Dual-Stack, PrivateLink) of the ingress endpoint resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-mailmanageringresspoint.html#cfn-ses-mailmanageringresspoint-networkconfiguration)
+     * @param networkConfiguration The network type (IPv4-only, Dual-Stack, PrivateLink) of the
+     * ingress endpoint resource. 
+     */
+    override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
+      cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The network type (IPv4-only, Dual-Stack, PrivateLink) of the ingress endpoint resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-mailmanageringresspoint.html#cfn-ses-mailmanageringresspoint-networkconfiguration)
+     * @param networkConfiguration The network type (IPv4-only, Dual-Stack, PrivateLink) of the
+     * ingress endpoint resource. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d22238cd9fbf14cc084c69fd100e7936f7c474676e788a6a8ee8dd5f76ecb27d")
+    override
+        fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty.Builder.() -> Unit):
+        Unit = networkConfiguration(NetworkConfigurationProperty(networkConfiguration))
 
     /**
      * The identifier of an existing rule set that you attach to an ingress endpoint resource.
@@ -566,6 +666,376 @@ public open class CfnMailManagerIngressPoint(
           software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.IngressPointConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.IngressPointConfigurationProperty
+    }
+  }
+
+  /**
+   * The network type (IPv4-only, Dual-Stack, PrivateLink) of the ingress endpoint resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * NetworkConfigurationProperty networkConfigurationProperty =
+   * NetworkConfigurationProperty.builder()
+   * .privateNetworkConfiguration(PrivateNetworkConfigurationProperty.builder()
+   * .vpcEndpointId("vpcEndpointId")
+   * .build())
+   * .publicNetworkConfiguration(PublicNetworkConfigurationProperty.builder()
+   * .ipType("ipType")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanageringresspoint-networkconfiguration.html)
+   */
+  public interface NetworkConfigurationProperty {
+    /**
+     * Specifies the network configuration for the private ingress point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanageringresspoint-networkconfiguration.html#cfn-ses-mailmanageringresspoint-networkconfiguration-privatenetworkconfiguration)
+     */
+    public fun privateNetworkConfiguration(): Any? = unwrap(this).getPrivateNetworkConfiguration()
+
+    /**
+     * Specifies the network configuration for the public ingress point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanageringresspoint-networkconfiguration.html#cfn-ses-mailmanageringresspoint-networkconfiguration-publicnetworkconfiguration)
+     */
+    public fun publicNetworkConfiguration(): Any? = unwrap(this).getPublicNetworkConfiguration()
+
+    /**
+     * A builder for [NetworkConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param privateNetworkConfiguration Specifies the network configuration for the private
+       * ingress point.
+       */
+      public fun privateNetworkConfiguration(privateNetworkConfiguration: IResolvable)
+
+      /**
+       * @param privateNetworkConfiguration Specifies the network configuration for the private
+       * ingress point.
+       */
+      public
+          fun privateNetworkConfiguration(privateNetworkConfiguration: PrivateNetworkConfigurationProperty)
+
+      /**
+       * @param privateNetworkConfiguration Specifies the network configuration for the private
+       * ingress point.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2e678f81ef12f26d2e6cd0f714aa634b68d89cb38cf8ecef6ca41746bcf21645")
+      public
+          fun privateNetworkConfiguration(privateNetworkConfiguration: PrivateNetworkConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param publicNetworkConfiguration Specifies the network configuration for the public
+       * ingress point.
+       */
+      public fun publicNetworkConfiguration(publicNetworkConfiguration: IResolvable)
+
+      /**
+       * @param publicNetworkConfiguration Specifies the network configuration for the public
+       * ingress point.
+       */
+      public
+          fun publicNetworkConfiguration(publicNetworkConfiguration: PublicNetworkConfigurationProperty)
+
+      /**
+       * @param publicNetworkConfiguration Specifies the network configuration for the public
+       * ingress point.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9856fb9bd36f12927cbca165f6368b57aeb47e55c5656f5dcf5ccd4e4cad6b6f")
+      public
+          fun publicNetworkConfiguration(publicNetworkConfiguration: PublicNetworkConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.NetworkConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.NetworkConfigurationProperty.builder()
+
+      /**
+       * @param privateNetworkConfiguration Specifies the network configuration for the private
+       * ingress point.
+       */
+      override fun privateNetworkConfiguration(privateNetworkConfiguration: IResolvable) {
+        cdkBuilder.privateNetworkConfiguration(privateNetworkConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param privateNetworkConfiguration Specifies the network configuration for the private
+       * ingress point.
+       */
+      override
+          fun privateNetworkConfiguration(privateNetworkConfiguration: PrivateNetworkConfigurationProperty) {
+        cdkBuilder.privateNetworkConfiguration(privateNetworkConfiguration.let(PrivateNetworkConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param privateNetworkConfiguration Specifies the network configuration for the private
+       * ingress point.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2e678f81ef12f26d2e6cd0f714aa634b68d89cb38cf8ecef6ca41746bcf21645")
+      override
+          fun privateNetworkConfiguration(privateNetworkConfiguration: PrivateNetworkConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          privateNetworkConfiguration(PrivateNetworkConfigurationProperty(privateNetworkConfiguration))
+
+      /**
+       * @param publicNetworkConfiguration Specifies the network configuration for the public
+       * ingress point.
+       */
+      override fun publicNetworkConfiguration(publicNetworkConfiguration: IResolvable) {
+        cdkBuilder.publicNetworkConfiguration(publicNetworkConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param publicNetworkConfiguration Specifies the network configuration for the public
+       * ingress point.
+       */
+      override
+          fun publicNetworkConfiguration(publicNetworkConfiguration: PublicNetworkConfigurationProperty) {
+        cdkBuilder.publicNetworkConfiguration(publicNetworkConfiguration.let(PublicNetworkConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param publicNetworkConfiguration Specifies the network configuration for the public
+       * ingress point.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9856fb9bd36f12927cbca165f6368b57aeb47e55c5656f5dcf5ccd4e4cad6b6f")
+      override
+          fun publicNetworkConfiguration(publicNetworkConfiguration: PublicNetworkConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          publicNetworkConfiguration(PublicNetworkConfigurationProperty(publicNetworkConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.NetworkConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.NetworkConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        NetworkConfigurationProperty {
+      /**
+       * Specifies the network configuration for the private ingress point.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanageringresspoint-networkconfiguration.html#cfn-ses-mailmanageringresspoint-networkconfiguration-privatenetworkconfiguration)
+       */
+      override fun privateNetworkConfiguration(): Any? =
+          unwrap(this).getPrivateNetworkConfiguration()
+
+      /**
+       * Specifies the network configuration for the public ingress point.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanageringresspoint-networkconfiguration.html#cfn-ses-mailmanageringresspoint-networkconfiguration-publicnetworkconfiguration)
+       */
+      override fun publicNetworkConfiguration(): Any? = unwrap(this).getPublicNetworkConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.NetworkConfigurationProperty):
+          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkConfigurationProperty):
+          software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.NetworkConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.NetworkConfigurationProperty
+    }
+  }
+
+  /**
+   * Specifies the network configuration for the private ingress point.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * PrivateNetworkConfigurationProperty privateNetworkConfigurationProperty =
+   * PrivateNetworkConfigurationProperty.builder()
+   * .vpcEndpointId("vpcEndpointId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanageringresspoint-privatenetworkconfiguration.html)
+   */
+  public interface PrivateNetworkConfigurationProperty {
+    /**
+     * The identifier of the VPC endpoint to associate with this private ingress point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanageringresspoint-privatenetworkconfiguration.html#cfn-ses-mailmanageringresspoint-privatenetworkconfiguration-vpcendpointid)
+     */
+    public fun vpcEndpointId(): String
+
+    /**
+     * A builder for [PrivateNetworkConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param vpcEndpointId The identifier of the VPC endpoint to associate with this private
+       * ingress point. 
+       */
+      public fun vpcEndpointId(vpcEndpointId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.PrivateNetworkConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.PrivateNetworkConfigurationProperty.builder()
+
+      /**
+       * @param vpcEndpointId The identifier of the VPC endpoint to associate with this private
+       * ingress point. 
+       */
+      override fun vpcEndpointId(vpcEndpointId: String) {
+        cdkBuilder.vpcEndpointId(vpcEndpointId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.PrivateNetworkConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.PrivateNetworkConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        PrivateNetworkConfigurationProperty {
+      /**
+       * The identifier of the VPC endpoint to associate with this private ingress point.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanageringresspoint-privatenetworkconfiguration.html#cfn-ses-mailmanageringresspoint-privatenetworkconfiguration-vpcendpointid)
+       */
+      override fun vpcEndpointId(): String = unwrap(this).getVpcEndpointId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PrivateNetworkConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.PrivateNetworkConfigurationProperty):
+          PrivateNetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateNetworkConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrivateNetworkConfigurationProperty):
+          software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.PrivateNetworkConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.PrivateNetworkConfigurationProperty
+    }
+  }
+
+  /**
+   * Specifies the network configuration for the public ingress point.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * PublicNetworkConfigurationProperty publicNetworkConfigurationProperty =
+   * PublicNetworkConfigurationProperty.builder()
+   * .ipType("ipType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanageringresspoint-publicnetworkconfiguration.html)
+   */
+  public interface PublicNetworkConfigurationProperty {
+    /**
+     * The IP address type for the public ingress point.
+     *
+     * Valid values are IPV4 and DUAL_STACK.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanageringresspoint-publicnetworkconfiguration.html#cfn-ses-mailmanageringresspoint-publicnetworkconfiguration-iptype)
+     */
+    public fun ipType(): String
+
+    /**
+     * A builder for [PublicNetworkConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ipType The IP address type for the public ingress point. 
+       * Valid values are IPV4 and DUAL_STACK.
+       */
+      public fun ipType(ipType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.PublicNetworkConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.PublicNetworkConfigurationProperty.builder()
+
+      /**
+       * @param ipType The IP address type for the public ingress point. 
+       * Valid values are IPV4 and DUAL_STACK.
+       */
+      override fun ipType(ipType: String) {
+        cdkBuilder.ipType(ipType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.PublicNetworkConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.PublicNetworkConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        PublicNetworkConfigurationProperty {
+      /**
+       * The IP address type for the public ingress point.
+       *
+       * Valid values are IPV4 and DUAL_STACK.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanageringresspoint-publicnetworkconfiguration.html#cfn-ses-mailmanageringresspoint-publicnetworkconfiguration-iptype)
+       */
+      override fun ipType(): String = unwrap(this).getIpType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PublicNetworkConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.PublicNetworkConfigurationProperty):
+          PublicNetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PublicNetworkConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PublicNetworkConfigurationProperty):
+          software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.PublicNetworkConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnMailManagerIngressPoint.PublicNetworkConfigurationProperty
     }
   }
 }

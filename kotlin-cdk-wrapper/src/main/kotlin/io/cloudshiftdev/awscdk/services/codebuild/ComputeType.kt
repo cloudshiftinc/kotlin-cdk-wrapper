@@ -15,6 +15,7 @@ public enum class ComputeType(
   LAMBDA_4GB(software.amazon.awscdk.services.codebuild.ComputeType.LAMBDA_4GB),
   LAMBDA_8GB(software.amazon.awscdk.services.codebuild.ComputeType.LAMBDA_8GB),
   LAMBDA_10GB(software.amazon.awscdk.services.codebuild.ComputeType.LAMBDA_10GB),
+  ATTRIBUTE_BASED(software.amazon.awscdk.services.codebuild.ComputeType.ATTRIBUTE_BASED),
   ;
 
   public companion object {
@@ -30,6 +31,8 @@ public enum class ComputeType(
       software.amazon.awscdk.services.codebuild.ComputeType.LAMBDA_4GB -> ComputeType.LAMBDA_4GB
       software.amazon.awscdk.services.codebuild.ComputeType.LAMBDA_8GB -> ComputeType.LAMBDA_8GB
       software.amazon.awscdk.services.codebuild.ComputeType.LAMBDA_10GB -> ComputeType.LAMBDA_10GB
+      software.amazon.awscdk.services.codebuild.ComputeType.ATTRIBUTE_BASED ->
+          ComputeType.ATTRIBUTE_BASED
     }
 
     internal fun unwrap(wrapped: ComputeType): software.amazon.awscdk.services.codebuild.ComputeType

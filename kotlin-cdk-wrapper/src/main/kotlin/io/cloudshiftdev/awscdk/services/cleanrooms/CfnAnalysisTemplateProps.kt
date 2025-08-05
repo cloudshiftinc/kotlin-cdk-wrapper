@@ -27,6 +27,22 @@ import kotlin.jvm.JvmName
  * .membershipIdentifier("membershipIdentifier")
  * .name("name")
  * .source(AnalysisSourceProperty.builder()
+ * .artifacts(AnalysisTemplateArtifactsProperty.builder()
+ * .entryPoint(AnalysisTemplateArtifactProperty.builder()
+ * .location(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .build())
+ * .build())
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .additionalArtifacts(List.of(AnalysisTemplateArtifactProperty.builder()
+ * .location(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .build())
+ * .build()))
+ * .build())
  * .text("text")
  * .build())
  * // the properties below are optional
@@ -37,6 +53,20 @@ import kotlin.jvm.JvmName
  * .defaultValue("defaultValue")
  * .build()))
  * .description("description")
+ * .schema(AnalysisSchemaProperty.builder()
+ * .referencedTables(List.of("referencedTables"))
+ * .build())
+ * .sourceMetadata(AnalysisSourceMetadataProperty.builder()
+ * .artifacts(AnalysisTemplateArtifactMetadataProperty.builder()
+ * .entryPointHash(HashProperty.builder()
+ * .sha256("sha256")
+ * .build())
+ * // the properties below are optional
+ * .additionalArtifactHashes(List.of(HashProperty.builder()
+ * .sha256("sha256")
+ * .build()))
+ * .build())
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -83,11 +113,25 @@ public interface CfnAnalysisTemplateProps {
   public fun name(): String
 
   /**
+   * The entire schema object.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-analysistemplate.html#cfn-cleanrooms-analysistemplate-schema)
+   */
+  public fun schema(): Any? = unwrap(this).getSchema()
+
+  /**
    * The source of the analysis template.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-analysistemplate.html#cfn-cleanrooms-analysistemplate-source)
    */
   public fun source(): Any
+
+  /**
+   * The source metadata for the analysis template.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-analysistemplate.html#cfn-cleanrooms-analysistemplate-sourcemetadata)
+   */
+  public fun sourceMetadata(): Any? = unwrap(this).getSourceMetadata()
 
   /**
    * An optional label that you can assign to a resource when you create it.
@@ -141,6 +185,23 @@ public interface CfnAnalysisTemplateProps {
     public fun name(name: String)
 
     /**
+     * @param schema The entire schema object.
+     */
+    public fun schema(schema: IResolvable)
+
+    /**
+     * @param schema The entire schema object.
+     */
+    public fun schema(schema: CfnAnalysisTemplate.AnalysisSchemaProperty)
+
+    /**
+     * @param schema The entire schema object.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("40203d9a73fe74217243d2de4dee20042286da6553adcabd030f3c81e6ce04d7")
+    public fun schema(schema: CfnAnalysisTemplate.AnalysisSchemaProperty.Builder.() -> Unit)
+
+    /**
      * @param source The source of the analysis template. 
      */
     public fun source(source: IResolvable)
@@ -156,6 +217,24 @@ public interface CfnAnalysisTemplateProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7d318518d69866fb3b317dab255838a7b0f145eb57d564ae2fcf7d5c65a790eb")
     public fun source(source: CfnAnalysisTemplate.AnalysisSourceProperty.Builder.() -> Unit)
+
+    /**
+     * @param sourceMetadata The source metadata for the analysis template.
+     */
+    public fun sourceMetadata(sourceMetadata: IResolvable)
+
+    /**
+     * @param sourceMetadata The source metadata for the analysis template.
+     */
+    public fun sourceMetadata(sourceMetadata: CfnAnalysisTemplate.AnalysisSourceMetadataProperty)
+
+    /**
+     * @param sourceMetadata The source metadata for the analysis template.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e8209928b948aa4cae7a7fc72fe7645644f1a720e43c1bad4728afb3b8b039d9")
+    public
+        fun sourceMetadata(sourceMetadata: CfnAnalysisTemplate.AnalysisSourceMetadataProperty.Builder.() -> Unit)
 
     /**
      * @param tags An optional label that you can assign to a resource when you create it.
@@ -228,6 +307,28 @@ public interface CfnAnalysisTemplateProps {
     }
 
     /**
+     * @param schema The entire schema object.
+     */
+    override fun schema(schema: IResolvable) {
+      cdkBuilder.schema(schema.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param schema The entire schema object.
+     */
+    override fun schema(schema: CfnAnalysisTemplate.AnalysisSchemaProperty) {
+      cdkBuilder.schema(schema.let(CfnAnalysisTemplate.AnalysisSchemaProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param schema The entire schema object.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("40203d9a73fe74217243d2de4dee20042286da6553adcabd030f3c81e6ce04d7")
+    override fun schema(schema: CfnAnalysisTemplate.AnalysisSchemaProperty.Builder.() -> Unit): Unit
+        = schema(CfnAnalysisTemplate.AnalysisSchemaProperty(schema))
+
+    /**
      * @param source The source of the analysis template. 
      */
     override fun source(source: IResolvable) {
@@ -248,6 +349,30 @@ public interface CfnAnalysisTemplateProps {
     @JvmName("7d318518d69866fb3b317dab255838a7b0f145eb57d564ae2fcf7d5c65a790eb")
     override fun source(source: CfnAnalysisTemplate.AnalysisSourceProperty.Builder.() -> Unit): Unit
         = source(CfnAnalysisTemplate.AnalysisSourceProperty(source))
+
+    /**
+     * @param sourceMetadata The source metadata for the analysis template.
+     */
+    override fun sourceMetadata(sourceMetadata: IResolvable) {
+      cdkBuilder.sourceMetadata(sourceMetadata.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param sourceMetadata The source metadata for the analysis template.
+     */
+    override
+        fun sourceMetadata(sourceMetadata: CfnAnalysisTemplate.AnalysisSourceMetadataProperty) {
+      cdkBuilder.sourceMetadata(sourceMetadata.let(CfnAnalysisTemplate.AnalysisSourceMetadataProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param sourceMetadata The source metadata for the analysis template.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e8209928b948aa4cae7a7fc72fe7645644f1a720e43c1bad4728afb3b8b039d9")
+    override
+        fun sourceMetadata(sourceMetadata: CfnAnalysisTemplate.AnalysisSourceMetadataProperty.Builder.() -> Unit):
+        Unit = sourceMetadata(CfnAnalysisTemplate.AnalysisSourceMetadataProperty(sourceMetadata))
 
     /**
      * @param tags An optional label that you can assign to a resource when you create it.
@@ -311,11 +436,25 @@ public interface CfnAnalysisTemplateProps {
     override fun name(): String = unwrap(this).getName()
 
     /**
+     * The entire schema object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-analysistemplate.html#cfn-cleanrooms-analysistemplate-schema)
+     */
+    override fun schema(): Any? = unwrap(this).getSchema()
+
+    /**
      * The source of the analysis template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-analysistemplate.html#cfn-cleanrooms-analysistemplate-source)
      */
     override fun source(): Any = unwrap(this).getSource()
+
+    /**
+     * The source metadata for the analysis template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-analysistemplate.html#cfn-cleanrooms-analysistemplate-sourcemetadata)
+     */
+    override fun sourceMetadata(): Any? = unwrap(this).getSourceMetadata()
 
     /**
      * An optional label that you can assign to a resource when you create it.

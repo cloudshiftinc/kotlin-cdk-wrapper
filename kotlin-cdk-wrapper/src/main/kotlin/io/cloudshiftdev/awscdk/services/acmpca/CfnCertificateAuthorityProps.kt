@@ -65,18 +65,19 @@ public interface CfnCertificateAuthorityProps {
   public fun keyAlgorithm(): String
 
   /**
-   * Specifies a cryptographic key management compliance standard used for handling CA keys.
+   * Specifies a cryptographic key management compliance standard for handling and protecting CA
+   * keys.
    *
    * Default: FIPS_140_2_LEVEL_3_OR_HIGHER
    *
    *
-   * Some AWS Regions do not support the default. When creating a CA in these Regions, you must
-   * provide `FIPS_140_2_LEVEL_2_OR_HIGHER` as the argument for `KeyStorageSecurityStandard` . Failure
-   * to do this results in an `InvalidArgsException` with the message, "A certificate authority cannot
+   * Some AWS Regions don't support the default value. When you create a CA in these Regions, you
+   * must use `CCPC_LEVEL_1_OR_HIGHER` for the `KeyStorageSecurityStandard` parameter. If you don't,
+   * the operation returns an `InvalidArgsException` with this message: "A certificate authority cannot
    * be created in this region with the specified security standard."
    *
-   * For information about security standard support in various Regions, see [Storage and security
-   * compliance of AWS Private CA private
+   * For information about security standard support in different AWS Regions, see [Storage and
+   * security compliance of AWS Private CA private
    * keys](https://docs.aws.amazon.com/privateca/latest/userguide/data-protection.html#private-keys) .
    *
    *
@@ -175,17 +176,17 @@ public interface CfnCertificateAuthorityProps {
 
     /**
      * @param keyStorageSecurityStandard Specifies a cryptographic key management compliance
-     * standard used for handling CA keys.
+     * standard for handling and protecting CA keys.
      * Default: FIPS_140_2_LEVEL_3_OR_HIGHER
      *
      *
-     * Some AWS Regions do not support the default. When creating a CA in these Regions, you must
-     * provide `FIPS_140_2_LEVEL_2_OR_HIGHER` as the argument for `KeyStorageSecurityStandard` .
-     * Failure to do this results in an `InvalidArgsException` with the message, "A certificate
-     * authority cannot be created in this region with the specified security standard."
+     * Some AWS Regions don't support the default value. When you create a CA in these Regions, you
+     * must use `CCPC_LEVEL_1_OR_HIGHER` for the `KeyStorageSecurityStandard` parameter. If you don't,
+     * the operation returns an `InvalidArgsException` with this message: "A certificate authority
+     * cannot be created in this region with the specified security standard."
      *
-     * For information about security standard support in various Regions, see [Storage and security
-     * compliance of AWS Private CA private
+     * For information about security standard support in different AWS Regions, see [Storage and
+     * security compliance of AWS Private CA private
      * keys](https://docs.aws.amazon.com/privateca/latest/userguide/data-protection.html#private-keys)
      * .
      */
@@ -318,17 +319,17 @@ public interface CfnCertificateAuthorityProps {
 
     /**
      * @param keyStorageSecurityStandard Specifies a cryptographic key management compliance
-     * standard used for handling CA keys.
+     * standard for handling and protecting CA keys.
      * Default: FIPS_140_2_LEVEL_3_OR_HIGHER
      *
      *
-     * Some AWS Regions do not support the default. When creating a CA in these Regions, you must
-     * provide `FIPS_140_2_LEVEL_2_OR_HIGHER` as the argument for `KeyStorageSecurityStandard` .
-     * Failure to do this results in an `InvalidArgsException` with the message, "A certificate
-     * authority cannot be created in this region with the specified security standard."
+     * Some AWS Regions don't support the default value. When you create a CA in these Regions, you
+     * must use `CCPC_LEVEL_1_OR_HIGHER` for the `KeyStorageSecurityStandard` parameter. If you don't,
+     * the operation returns an `InvalidArgsException` with this message: "A certificate authority
+     * cannot be created in this region with the specified security standard."
      *
-     * For information about security standard support in various Regions, see [Storage and security
-     * compliance of AWS Private CA private
+     * For information about security standard support in different AWS Regions, see [Storage and
+     * security compliance of AWS Private CA private
      * keys](https://docs.aws.amazon.com/privateca/latest/userguide/data-protection.html#private-keys)
      * .
      */
@@ -466,18 +467,19 @@ public interface CfnCertificateAuthorityProps {
     override fun keyAlgorithm(): String = unwrap(this).getKeyAlgorithm()
 
     /**
-     * Specifies a cryptographic key management compliance standard used for handling CA keys.
+     * Specifies a cryptographic key management compliance standard for handling and protecting CA
+     * keys.
      *
      * Default: FIPS_140_2_LEVEL_3_OR_HIGHER
      *
      *
-     * Some AWS Regions do not support the default. When creating a CA in these Regions, you must
-     * provide `FIPS_140_2_LEVEL_2_OR_HIGHER` as the argument for `KeyStorageSecurityStandard` .
-     * Failure to do this results in an `InvalidArgsException` with the message, "A certificate
-     * authority cannot be created in this region with the specified security standard."
+     * Some AWS Regions don't support the default value. When you create a CA in these Regions, you
+     * must use `CCPC_LEVEL_1_OR_HIGHER` for the `KeyStorageSecurityStandard` parameter. If you don't,
+     * the operation returns an `InvalidArgsException` with this message: "A certificate authority
+     * cannot be created in this region with the specified security standard."
      *
-     * For information about security standard support in various Regions, see [Storage and security
-     * compliance of AWS Private CA private
+     * For information about security standard support in different AWS Regions, see [Storage and
+     * security compliance of AWS Private CA private
      * keys](https://docs.aws.amazon.com/privateca/latest/userguide/data-protection.html#private-keys)
      * .
      *

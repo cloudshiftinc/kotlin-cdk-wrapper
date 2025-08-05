@@ -20,13 +20,11 @@ import kotlin.jvm.JvmName
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.lambda.*;
- * Object policy;
  * CfnVersionProps cfnVersionProps = CfnVersionProps.builder()
  * .functionName("functionName")
  * // the properties below are optional
  * .codeSha256("codeSha256")
  * .description("description")
- * .policy(policy)
  * .provisionedConcurrencyConfig(ProvisionedConcurrencyConfigurationProperty.builder()
  * .provisionedConcurrentExecutions(123)
  * .build())
@@ -76,13 +74,6 @@ public interface CfnVersionProps {
   public fun functionName(): String
 
   /**
-   * The resource policy of your function.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-policy)
-   */
-  public fun policy(): Any? = unwrap(this).getPolicy()
-
-  /**
    * Specifies a provisioned concurrency configuration for a function's version.
    *
    * Updates are not supported for this property.
@@ -129,11 +120,6 @@ public interface CfnVersionProps {
      * is limited to 64 characters in length.
      */
     public fun functionName(functionName: String)
-
-    /**
-     * @param policy The resource policy of your function.
-     */
-    public fun policy(policy: Any)
 
     /**
      * @param provisionedConcurrencyConfig Specifies a provisioned concurrency configuration for a
@@ -213,13 +199,6 @@ public interface CfnVersionProps {
      */
     override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
-    }
-
-    /**
-     * @param policy The resource policy of your function.
-     */
-    override fun policy(policy: Any) {
-      cdkBuilder.policy(policy)
     }
 
     /**
@@ -315,13 +294,6 @@ public interface CfnVersionProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-functionname)
      */
     override fun functionName(): String = unwrap(this).getFunctionName()
-
-    /**
-     * The resource policy of your function.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-policy)
-     */
-    override fun policy(): Any? = unwrap(this).getPolicy()
 
     /**
      * Specifies a provisioned concurrency configuration for a function's version.

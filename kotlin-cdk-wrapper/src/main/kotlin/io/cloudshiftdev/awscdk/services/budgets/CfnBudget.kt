@@ -26,7 +26,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * creates, replaces, or deletes budgets for Billing and Cost Management. For more information, see
  * [Managing Your Costs with
  * Budgets](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html)
- * in the *AWS Billing and Cost Management User Guide* .
+ * in the *Billing and Cost Management User Guide* .
  *
  * Example:
  *
@@ -35,6 +35,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.budgets.*;
  * Object costFilters;
+ * ExpressionProperty expressionProperty_;
  * Object plannedBudgetLimits;
  * CfnBudget cfnBudget = CfnBudget.Builder.create(this, "MyCfnBudget")
  * .budget(BudgetDataProperty.builder()
@@ -67,6 +68,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .useAmortized(false)
  * .useBlended(false)
  * .build())
+ * .filterExpression(ExpressionProperty.builder()
+ * .and(List.of(expressionProperty_))
+ * .costCategories(CostCategoryValuesProperty.builder()
+ * .key("key")
+ * .matchOptions(List.of("matchOptions"))
+ * .values(List.of("values"))
+ * .build())
+ * .dimensions(ExpressionDimensionValuesProperty.builder()
+ * .key("key")
+ * .matchOptions(List.of("matchOptions"))
+ * .values(List.of("values"))
+ * .build())
+ * .not(expressionProperty_)
+ * .or(List.of(expressionProperty_))
+ * .tags(TagValuesProperty.builder()
+ * .key("key")
+ * .matchOptions(List.of("matchOptions"))
+ * .values(List.of("values"))
+ * .build())
+ * .build())
+ * .metrics(List.of("metrics"))
  * .plannedBudgetLimits(plannedBudgetLimits)
  * .timePeriod(TimePeriodProperty.builder()
  * .end("end")
@@ -610,6 +632,7 @@ public open class CfnBudget(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.budgets.*;
    * Object costFilters;
+   * ExpressionProperty expressionProperty_;
    * Object plannedBudgetLimits;
    * BudgetDataProperty budgetDataProperty = BudgetDataProperty.builder()
    * .budgetType("budgetType")
@@ -641,6 +664,27 @@ public open class CfnBudget(
    * .useAmortized(false)
    * .useBlended(false)
    * .build())
+   * .filterExpression(ExpressionProperty.builder()
+   * .and(List.of(expressionProperty_))
+   * .costCategories(CostCategoryValuesProperty.builder()
+   * .key("key")
+   * .matchOptions(List.of("matchOptions"))
+   * .values(List.of("values"))
+   * .build())
+   * .dimensions(ExpressionDimensionValuesProperty.builder()
+   * .key("key")
+   * .matchOptions(List.of("matchOptions"))
+   * .values(List.of("values"))
+   * .build())
+   * .not(expressionProperty_)
+   * .or(List.of(expressionProperty_))
+   * .tags(TagValuesProperty.builder()
+   * .key("key")
+   * .matchOptions(List.of("matchOptions"))
+   * .values(List.of("values"))
+   * .build())
+   * .build())
+   * .metrics(List.of("metrics"))
    * .plannedBudgetLimits(plannedBudgetLimits)
    * .timePeriod(TimePeriodProperty.builder()
    * .end("end")
@@ -719,6 +763,16 @@ public open class CfnBudget(
     public fun costTypes(): Any? = unwrap(this).getCostTypes()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html#cfn-budgets-budget-budgetdata-filterexpression)
+     */
+    public fun filterExpression(): Any? = unwrap(this).getFilterExpression()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html#cfn-budgets-budget-budgetdata-metrics)
+     */
+    public fun metrics(): List<String> = unwrap(this).getMetrics() ?: emptyList()
+
+    /**
      * A map containing multiple `BudgetLimit` , including current or future limits.
      *
      * `PlannedBudgetLimits` is available for cost or usage budget and supports both monthly and
@@ -762,7 +816,7 @@ public open class CfnBudget(
      * start date defaults to the start of the chosen time period (MONTHLY, QUARTERLY, or ANNUALLY).
      * For example, if you create your budget on January 24, 2019, choose `MONTHLY` , and don't set a
      * start date, the start date defaults to `01/01/19 00:00 UTC` . The defaults are the same for the
-     * AWS Billing and Cost Management console and the API.
+     * Billing and Cost Management console and the API.
      *
      * You can change your start date with the `UpdateBudget` operation.
      *
@@ -889,6 +943,33 @@ public open class CfnBudget(
       public fun costTypes(costTypes: CostTypesProperty.Builder.() -> Unit)
 
       /**
+       * @param filterExpression the value to be set.
+       */
+      public fun filterExpression(filterExpression: IResolvable)
+
+      /**
+       * @param filterExpression the value to be set.
+       */
+      public fun filterExpression(filterExpression: ExpressionProperty)
+
+      /**
+       * @param filterExpression the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("538b139ab682e4f588a9a95cfda1d13d928ddb209a9fe387a0822ec247e1b2c8")
+      public fun filterExpression(filterExpression: ExpressionProperty.Builder.() -> Unit)
+
+      /**
+       * @param metrics the value to be set.
+       */
+      public fun metrics(metrics: List<String>)
+
+      /**
+       * @param metrics the value to be set.
+       */
+      public fun metrics(vararg metrics: String)
+
+      /**
        * @param plannedBudgetLimits A map containing multiple `BudgetLimit` , including current or
        * future limits.
        * `PlannedBudgetLimits` is available for cost or usage budget and supports both monthly and
@@ -929,7 +1010,7 @@ public open class CfnBudget(
        * the start date defaults to the start of the chosen time period (MONTHLY, QUARTERLY, or
        * ANNUALLY). For example, if you create your budget on January 24, 2019, choose `MONTHLY` , and
        * don't set a start date, the start date defaults to `01/01/19 00:00 UTC` . The defaults are the
-       * same for the AWS Billing and Cost Management console and the API.
+       * same for the Billing and Cost Management console and the API.
        *
        * You can change your start date with the `UpdateBudget` operation.
        *
@@ -947,7 +1028,7 @@ public open class CfnBudget(
        * the start date defaults to the start of the chosen time period (MONTHLY, QUARTERLY, or
        * ANNUALLY). For example, if you create your budget on January 24, 2019, choose `MONTHLY` , and
        * don't set a start date, the start date defaults to `01/01/19 00:00 UTC` . The defaults are the
-       * same for the AWS Billing and Cost Management console and the API.
+       * same for the Billing and Cost Management console and the API.
        *
        * You can change your start date with the `UpdateBudget` operation.
        *
@@ -965,7 +1046,7 @@ public open class CfnBudget(
        * the start date defaults to the start of the chosen time period (MONTHLY, QUARTERLY, or
        * ANNUALLY). For example, if you create your budget on January 24, 2019, choose `MONTHLY` , and
        * don't set a start date, the start date defaults to `01/01/19 00:00 UTC` . The defaults are the
-       * same for the AWS Billing and Cost Management console and the API.
+       * same for the Billing and Cost Management console and the API.
        *
        * You can change your start date with the `UpdateBudget` operation.
        *
@@ -1112,6 +1193,40 @@ public open class CfnBudget(
           costTypes(CostTypesProperty(costTypes))
 
       /**
+       * @param filterExpression the value to be set.
+       */
+      override fun filterExpression(filterExpression: IResolvable) {
+        cdkBuilder.filterExpression(filterExpression.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param filterExpression the value to be set.
+       */
+      override fun filterExpression(filterExpression: ExpressionProperty) {
+        cdkBuilder.filterExpression(filterExpression.let(ExpressionProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param filterExpression the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("538b139ab682e4f588a9a95cfda1d13d928ddb209a9fe387a0822ec247e1b2c8")
+      override fun filterExpression(filterExpression: ExpressionProperty.Builder.() -> Unit): Unit =
+          filterExpression(ExpressionProperty(filterExpression))
+
+      /**
+       * @param metrics the value to be set.
+       */
+      override fun metrics(metrics: List<String>) {
+        cdkBuilder.metrics(metrics)
+      }
+
+      /**
+       * @param metrics the value to be set.
+       */
+      override fun metrics(vararg metrics: String): Unit = metrics(metrics.toList())
+
+      /**
        * @param plannedBudgetLimits A map containing multiple `BudgetLimit` , including current or
        * future limits.
        * `PlannedBudgetLimits` is available for cost or usage budget and supports both monthly and
@@ -1154,7 +1269,7 @@ public open class CfnBudget(
        * the start date defaults to the start of the chosen time period (MONTHLY, QUARTERLY, or
        * ANNUALLY). For example, if you create your budget on January 24, 2019, choose `MONTHLY` , and
        * don't set a start date, the start date defaults to `01/01/19 00:00 UTC` . The defaults are the
-       * same for the AWS Billing and Cost Management console and the API.
+       * same for the Billing and Cost Management console and the API.
        *
        * You can change your start date with the `UpdateBudget` operation.
        *
@@ -1174,7 +1289,7 @@ public open class CfnBudget(
        * the start date defaults to the start of the chosen time period (MONTHLY, QUARTERLY, or
        * ANNUALLY). For example, if you create your budget on January 24, 2019, choose `MONTHLY` , and
        * don't set a start date, the start date defaults to `01/01/19 00:00 UTC` . The defaults are the
-       * same for the AWS Billing and Cost Management console and the API.
+       * same for the Billing and Cost Management console and the API.
        *
        * You can change your start date with the `UpdateBudget` operation.
        *
@@ -1194,7 +1309,7 @@ public open class CfnBudget(
        * the start date defaults to the start of the chosen time period (MONTHLY, QUARTERLY, or
        * ANNUALLY). For example, if you create your budget on January 24, 2019, choose `MONTHLY` , and
        * don't set a start date, the start date defaults to `01/01/19 00:00 UTC` . The defaults are the
-       * same for the AWS Billing and Cost Management console and the API.
+       * same for the Billing and Cost Management console and the API.
        *
        * You can change your start date with the `UpdateBudget` operation.
        *
@@ -1289,6 +1404,16 @@ public open class CfnBudget(
       override fun costTypes(): Any? = unwrap(this).getCostTypes()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html#cfn-budgets-budget-budgetdata-filterexpression)
+       */
+      override fun filterExpression(): Any? = unwrap(this).getFilterExpression()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html#cfn-budgets-budget-budgetdata-metrics)
+       */
+      override fun metrics(): List<String> = unwrap(this).getMetrics() ?: emptyList()
+
+      /**
        * A map containing multiple `BudgetLimit` , including current or future limits.
        *
        * `PlannedBudgetLimits` is available for cost or usage budget and supports both monthly and
@@ -1332,7 +1457,7 @@ public open class CfnBudget(
        * the start date defaults to the start of the chosen time period (MONTHLY, QUARTERLY, or
        * ANNUALLY). For example, if you create your budget on January 24, 2019, choose `MONTHLY` , and
        * don't set a start date, the start date defaults to `01/01/19 00:00 UTC` . The defaults are the
-       * same for the AWS Billing and Cost Management console and the API.
+       * same for the Billing and Cost Management console and the API.
        *
        * You can change your start date with the `UpdateBudget` operation.
        *
@@ -1368,6 +1493,163 @@ public open class CfnBudget(
           software.amazon.awscdk.services.budgets.CfnBudget.BudgetDataProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.budgets.CfnBudget.BudgetDataProperty
+    }
+  }
+
+  /**
+   * The cost category values used for filtering the costs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.budgets.*;
+   * CostCategoryValuesProperty costCategoryValuesProperty = CostCategoryValuesProperty.builder()
+   * .key("key")
+   * .matchOptions(List.of("matchOptions"))
+   * .values(List.of("values"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costcategoryvalues.html)
+   */
+  public interface CostCategoryValuesProperty {
+    /**
+     * The unique name of the cost category.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costcategoryvalues.html#cfn-budgets-budget-costcategoryvalues-key)
+     */
+    public fun key(): String? = unwrap(this).getKey()
+
+    /**
+     * The match options that you can use to filter your results.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costcategoryvalues.html#cfn-budgets-budget-costcategoryvalues-matchoptions)
+     */
+    public fun matchOptions(): List<String> = unwrap(this).getMatchOptions() ?: emptyList()
+
+    /**
+     * The specific value of the cost category.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costcategoryvalues.html#cfn-budgets-budget-costcategoryvalues-values)
+     */
+    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+
+    /**
+     * A builder for [CostCategoryValuesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The unique name of the cost category.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param matchOptions The match options that you can use to filter your results.
+       */
+      public fun matchOptions(matchOptions: List<String>)
+
+      /**
+       * @param matchOptions The match options that you can use to filter your results.
+       */
+      public fun matchOptions(vararg matchOptions: String)
+
+      /**
+       * @param values The specific value of the cost category.
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values The specific value of the cost category.
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.budgets.CfnBudget.CostCategoryValuesProperty.Builder =
+          software.amazon.awscdk.services.budgets.CfnBudget.CostCategoryValuesProperty.builder()
+
+      /**
+       * @param key The unique name of the cost category.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param matchOptions The match options that you can use to filter your results.
+       */
+      override fun matchOptions(matchOptions: List<String>) {
+        cdkBuilder.matchOptions(matchOptions)
+      }
+
+      /**
+       * @param matchOptions The match options that you can use to filter your results.
+       */
+      override fun matchOptions(vararg matchOptions: String): Unit =
+          matchOptions(matchOptions.toList())
+
+      /**
+       * @param values The specific value of the cost category.
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values The specific value of the cost category.
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.budgets.CfnBudget.CostCategoryValuesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.CostCategoryValuesProperty,
+    ) : CdkObject(cdkObject),
+        CostCategoryValuesProperty {
+      /**
+       * The unique name of the cost category.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costcategoryvalues.html#cfn-budgets-budget-costcategoryvalues-key)
+       */
+      override fun key(): String? = unwrap(this).getKey()
+
+      /**
+       * The match options that you can use to filter your results.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costcategoryvalues.html#cfn-budgets-budget-costcategoryvalues-matchoptions)
+       */
+      override fun matchOptions(): List<String> = unwrap(this).getMatchOptions() ?: emptyList()
+
+      /**
+       * The specific value of the cost category.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costcategoryvalues.html#cfn-budgets-budget-costcategoryvalues-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CostCategoryValuesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.CostCategoryValuesProperty):
+          CostCategoryValuesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CostCategoryValuesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CostCategoryValuesProperty):
+          software.amazon.awscdk.services.budgets.CfnBudget.CostCategoryValuesProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.budgets.CfnBudget.CostCategoryValuesProperty
     }
   }
 
@@ -1950,6 +2232,548 @@ public open class CfnBudget(
           software.amazon.awscdk.services.budgets.CfnBudget.CostTypesProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.budgets.CfnBudget.CostTypesProperty
+    }
+  }
+
+  /**
+   * Contains the specifications for the filters to use for your request.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.budgets.*;
+   * ExpressionDimensionValuesProperty expressionDimensionValuesProperty =
+   * ExpressionDimensionValuesProperty.builder()
+   * .key("key")
+   * .matchOptions(List.of("matchOptions"))
+   * .values(List.of("values"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expressiondimensionvalues.html)
+   */
+  public interface ExpressionDimensionValuesProperty {
+    /**
+     * The name of the dimension that you want to filter on.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expressiondimensionvalues.html#cfn-budgets-budget-expressiondimensionvalues-key)
+     */
+    public fun key(): String? = unwrap(this).getKey()
+
+    /**
+     * The match options that you can use to filter your results.
+     *
+     * You can specify only one of these values in the array.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expressiondimensionvalues.html#cfn-budgets-budget-expressiondimensionvalues-matchoptions)
+     */
+    public fun matchOptions(): List<String> = unwrap(this).getMatchOptions() ?: emptyList()
+
+    /**
+     * The metadata values you can specify to filter upon, so that the results all match at least
+     * one of the specified values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expressiondimensionvalues.html#cfn-budgets-budget-expressiondimensionvalues-values)
+     */
+    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+
+    /**
+     * A builder for [ExpressionDimensionValuesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The name of the dimension that you want to filter on.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param matchOptions The match options that you can use to filter your results.
+       * You can specify only one of these values in the array.
+       */
+      public fun matchOptions(matchOptions: List<String>)
+
+      /**
+       * @param matchOptions The match options that you can use to filter your results.
+       * You can specify only one of these values in the array.
+       */
+      public fun matchOptions(vararg matchOptions: String)
+
+      /**
+       * @param values The metadata values you can specify to filter upon, so that the results all
+       * match at least one of the specified values.
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values The metadata values you can specify to filter upon, so that the results all
+       * match at least one of the specified values.
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.budgets.CfnBudget.ExpressionDimensionValuesProperty.Builder
+          =
+          software.amazon.awscdk.services.budgets.CfnBudget.ExpressionDimensionValuesProperty.builder()
+
+      /**
+       * @param key The name of the dimension that you want to filter on.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param matchOptions The match options that you can use to filter your results.
+       * You can specify only one of these values in the array.
+       */
+      override fun matchOptions(matchOptions: List<String>) {
+        cdkBuilder.matchOptions(matchOptions)
+      }
+
+      /**
+       * @param matchOptions The match options that you can use to filter your results.
+       * You can specify only one of these values in the array.
+       */
+      override fun matchOptions(vararg matchOptions: String): Unit =
+          matchOptions(matchOptions.toList())
+
+      /**
+       * @param values The metadata values you can specify to filter upon, so that the results all
+       * match at least one of the specified values.
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values The metadata values you can specify to filter upon, so that the results all
+       * match at least one of the specified values.
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.budgets.CfnBudget.ExpressionDimensionValuesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.ExpressionDimensionValuesProperty,
+    ) : CdkObject(cdkObject),
+        ExpressionDimensionValuesProperty {
+      /**
+       * The name of the dimension that you want to filter on.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expressiondimensionvalues.html#cfn-budgets-budget-expressiondimensionvalues-key)
+       */
+      override fun key(): String? = unwrap(this).getKey()
+
+      /**
+       * The match options that you can use to filter your results.
+       *
+       * You can specify only one of these values in the array.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expressiondimensionvalues.html#cfn-budgets-budget-expressiondimensionvalues-matchoptions)
+       */
+      override fun matchOptions(): List<String> = unwrap(this).getMatchOptions() ?: emptyList()
+
+      /**
+       * The metadata values you can specify to filter upon, so that the results all match at least
+       * one of the specified values.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expressiondimensionvalues.html#cfn-budgets-budget-expressiondimensionvalues-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ExpressionDimensionValuesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.ExpressionDimensionValuesProperty):
+          ExpressionDimensionValuesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExpressionDimensionValuesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExpressionDimensionValuesProperty):
+          software.amazon.awscdk.services.budgets.CfnBudget.ExpressionDimensionValuesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.budgets.CfnBudget.ExpressionDimensionValuesProperty
+    }
+  }
+
+  /**
+   * Use Expression to filter in various Budgets APIs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.budgets.*;
+   * ExpressionProperty expressionProperty_;
+   * ExpressionProperty expressionProperty = ExpressionProperty.builder()
+   * .and(List.of(expressionProperty_))
+   * .costCategories(CostCategoryValuesProperty.builder()
+   * .key("key")
+   * .matchOptions(List.of("matchOptions"))
+   * .values(List.of("values"))
+   * .build())
+   * .dimensions(ExpressionDimensionValuesProperty.builder()
+   * .key("key")
+   * .matchOptions(List.of("matchOptions"))
+   * .values(List.of("values"))
+   * .build())
+   * .not(expressionProperty_)
+   * .or(List.of(expressionProperty_))
+   * .tags(TagValuesProperty.builder()
+   * .key("key")
+   * .matchOptions(List.of("matchOptions"))
+   * .values(List.of("values"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expression.html)
+   */
+  public interface ExpressionProperty {
+    /**
+     * Return results that match both Dimension objects.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expression.html#cfn-budgets-budget-expression-and)
+     */
+    public fun and(): Any? = unwrap(this).getAnd()
+
+    /**
+     * The filter that's based on CostCategoryValues.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expression.html#cfn-budgets-budget-expression-costcategories)
+     */
+    public fun costCategories(): Any? = unwrap(this).getCostCategories()
+
+    /**
+     * The specific Dimension to use for Expression.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expression.html#cfn-budgets-budget-expression-dimensions)
+     */
+    public fun dimensions(): Any? = unwrap(this).getDimensions()
+
+    /**
+     * Return results that don't match a Dimension object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expression.html#cfn-budgets-budget-expression-not)
+     */
+    public fun not(): Any? = unwrap(this).getNot()
+
+    /**
+     * Return results that match either Dimension object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expression.html#cfn-budgets-budget-expression-or)
+     */
+    public fun or(): Any? = unwrap(this).getOr()
+
+    /**
+     * The specific Tag to use for Expression.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expression.html#cfn-budgets-budget-expression-tags)
+     */
+    public fun tags(): TagValuesProperty? = unwrap(this).getTags()?.let(TagValuesProperty::wrap)
+
+    /**
+     * A builder for [ExpressionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param and Return results that match both Dimension objects.
+       */
+      public fun and(and: IResolvable)
+
+      /**
+       * @param and Return results that match both Dimension objects.
+       */
+      public fun and(and: List<Any>)
+
+      /**
+       * @param and Return results that match both Dimension objects.
+       */
+      public fun and(vararg and: Any)
+
+      /**
+       * @param costCategories The filter that's based on CostCategoryValues.
+       */
+      public fun costCategories(costCategories: IResolvable)
+
+      /**
+       * @param costCategories The filter that's based on CostCategoryValues.
+       */
+      public fun costCategories(costCategories: CostCategoryValuesProperty)
+
+      /**
+       * @param costCategories The filter that's based on CostCategoryValues.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bdb26239ffba1aa5879d0f14b0c68782f123be4e3a0a4cf93dccef30bb1da692")
+      public fun costCategories(costCategories: CostCategoryValuesProperty.Builder.() -> Unit)
+
+      /**
+       * @param dimensions The specific Dimension to use for Expression.
+       */
+      public fun dimensions(dimensions: IResolvable)
+
+      /**
+       * @param dimensions The specific Dimension to use for Expression.
+       */
+      public fun dimensions(dimensions: ExpressionDimensionValuesProperty)
+
+      /**
+       * @param dimensions The specific Dimension to use for Expression.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("de01ce5ef2dc3fe7ec45d887c436b71cd17b46a46773de5b6b8579adb5cbadbb")
+      public fun dimensions(dimensions: ExpressionDimensionValuesProperty.Builder.() -> Unit)
+
+      /**
+       * @param not Return results that don't match a Dimension object.
+       */
+      public fun not(not: IResolvable)
+
+      /**
+       * @param not Return results that don't match a Dimension object.
+       */
+      public fun not(not: ExpressionProperty)
+
+      /**
+       * @param not Return results that don't match a Dimension object.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0f9997e70b188a35b73658418abfc24acf08cca352cefed60399176d437a1c1e")
+      public fun not(not: Builder.() -> Unit)
+
+      /**
+       * @param or Return results that match either Dimension object.
+       */
+      public fun or(or: IResolvable)
+
+      /**
+       * @param or Return results that match either Dimension object.
+       */
+      public fun or(or: List<Any>)
+
+      /**
+       * @param or Return results that match either Dimension object.
+       */
+      public fun or(vararg or: Any)
+
+      /**
+       * @param tags The specific Tag to use for Expression.
+       */
+      public fun tags(tags: TagValuesProperty)
+
+      /**
+       * @param tags The specific Tag to use for Expression.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("56538b17eed32974a5782ab561074c9cafa29c365b31f068038821a0ff9718b3")
+      public fun tags(tags: TagValuesProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.budgets.CfnBudget.ExpressionProperty.Builder =
+          software.amazon.awscdk.services.budgets.CfnBudget.ExpressionProperty.builder()
+
+      /**
+       * @param and Return results that match both Dimension objects.
+       */
+      override fun and(and: IResolvable) {
+        cdkBuilder.and(and.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param and Return results that match both Dimension objects.
+       */
+      override fun and(and: List<Any>) {
+        cdkBuilder.and(and.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param and Return results that match both Dimension objects.
+       */
+      override fun and(vararg and: Any): Unit = and(and.toList())
+
+      /**
+       * @param costCategories The filter that's based on CostCategoryValues.
+       */
+      override fun costCategories(costCategories: IResolvable) {
+        cdkBuilder.costCategories(costCategories.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param costCategories The filter that's based on CostCategoryValues.
+       */
+      override fun costCategories(costCategories: CostCategoryValuesProperty) {
+        cdkBuilder.costCategories(costCategories.let(CostCategoryValuesProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param costCategories The filter that's based on CostCategoryValues.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bdb26239ffba1aa5879d0f14b0c68782f123be4e3a0a4cf93dccef30bb1da692")
+      override fun costCategories(costCategories: CostCategoryValuesProperty.Builder.() -> Unit):
+          Unit = costCategories(CostCategoryValuesProperty(costCategories))
+
+      /**
+       * @param dimensions The specific Dimension to use for Expression.
+       */
+      override fun dimensions(dimensions: IResolvable) {
+        cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param dimensions The specific Dimension to use for Expression.
+       */
+      override fun dimensions(dimensions: ExpressionDimensionValuesProperty) {
+        cdkBuilder.dimensions(dimensions.let(ExpressionDimensionValuesProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param dimensions The specific Dimension to use for Expression.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("de01ce5ef2dc3fe7ec45d887c436b71cd17b46a46773de5b6b8579adb5cbadbb")
+      override fun dimensions(dimensions: ExpressionDimensionValuesProperty.Builder.() -> Unit):
+          Unit = dimensions(ExpressionDimensionValuesProperty(dimensions))
+
+      /**
+       * @param not Return results that don't match a Dimension object.
+       */
+      override fun not(not: IResolvable) {
+        cdkBuilder.not(not.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param not Return results that don't match a Dimension object.
+       */
+      override fun not(not: ExpressionProperty) {
+        cdkBuilder.not(not.let(ExpressionProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param not Return results that don't match a Dimension object.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0f9997e70b188a35b73658418abfc24acf08cca352cefed60399176d437a1c1e")
+      override fun not(not: Builder.() -> Unit): Unit = not(ExpressionProperty(not))
+
+      /**
+       * @param or Return results that match either Dimension object.
+       */
+      override fun or(or: IResolvable) {
+        cdkBuilder.or(or.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param or Return results that match either Dimension object.
+       */
+      override fun or(or: List<Any>) {
+        cdkBuilder.or(or.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param or Return results that match either Dimension object.
+       */
+      override fun or(vararg or: Any): Unit = or(or.toList())
+
+      /**
+       * @param tags The specific Tag to use for Expression.
+       */
+      override fun tags(tags: TagValuesProperty) {
+        cdkBuilder.tags(tags.let(TagValuesProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param tags The specific Tag to use for Expression.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("56538b17eed32974a5782ab561074c9cafa29c365b31f068038821a0ff9718b3")
+      override fun tags(tags: TagValuesProperty.Builder.() -> Unit): Unit =
+          tags(TagValuesProperty(tags))
+
+      public fun build(): software.amazon.awscdk.services.budgets.CfnBudget.ExpressionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.ExpressionProperty,
+    ) : CdkObject(cdkObject),
+        ExpressionProperty {
+      /**
+       * Return results that match both Dimension objects.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expression.html#cfn-budgets-budget-expression-and)
+       */
+      override fun and(): Any? = unwrap(this).getAnd()
+
+      /**
+       * The filter that's based on CostCategoryValues.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expression.html#cfn-budgets-budget-expression-costcategories)
+       */
+      override fun costCategories(): Any? = unwrap(this).getCostCategories()
+
+      /**
+       * The specific Dimension to use for Expression.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expression.html#cfn-budgets-budget-expression-dimensions)
+       */
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
+
+      /**
+       * Return results that don't match a Dimension object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expression.html#cfn-budgets-budget-expression-not)
+       */
+      override fun not(): Any? = unwrap(this).getNot()
+
+      /**
+       * Return results that match either Dimension object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expression.html#cfn-budgets-budget-expression-or)
+       */
+      override fun or(): Any? = unwrap(this).getOr()
+
+      /**
+       * The specific Tag to use for Expression.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-expression.html#cfn-budgets-budget-expression-tags)
+       */
+      override fun tags(): TagValuesProperty? = unwrap(this).getTags()?.let(TagValuesProperty::wrap)
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ExpressionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.ExpressionProperty):
+          ExpressionProperty = CdkObjectWrappers.wrap(cdkObject) as? ExpressionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExpressionProperty):
+          software.amazon.awscdk.services.budgets.CfnBudget.ExpressionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.budgets.CfnBudget.ExpressionProperty
     }
   }
 
@@ -2811,6 +3635,162 @@ public open class CfnBudget(
   }
 
   /**
+   * The values that are available for a tag.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.budgets.*;
+   * TagValuesProperty tagValuesProperty = TagValuesProperty.builder()
+   * .key("key")
+   * .matchOptions(List.of("matchOptions"))
+   * .values(List.of("values"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-tagvalues.html)
+   */
+  public interface TagValuesProperty {
+    /**
+     * The key for the tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-tagvalues.html#cfn-budgets-budget-tagvalues-key)
+     */
+    public fun key(): String? = unwrap(this).getKey()
+
+    /**
+     * The match options that you can use to filter your results.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-tagvalues.html#cfn-budgets-budget-tagvalues-matchoptions)
+     */
+    public fun matchOptions(): List<String> = unwrap(this).getMatchOptions() ?: emptyList()
+
+    /**
+     * The specific value of the tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-tagvalues.html#cfn-budgets-budget-tagvalues-values)
+     */
+    public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+
+    /**
+     * A builder for [TagValuesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The key for the tag.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param matchOptions The match options that you can use to filter your results.
+       */
+      public fun matchOptions(matchOptions: List<String>)
+
+      /**
+       * @param matchOptions The match options that you can use to filter your results.
+       */
+      public fun matchOptions(vararg matchOptions: String)
+
+      /**
+       * @param values The specific value of the tag.
+       */
+      public fun values(values: List<String>)
+
+      /**
+       * @param values The specific value of the tag.
+       */
+      public fun values(vararg values: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.budgets.CfnBudget.TagValuesProperty.Builder =
+          software.amazon.awscdk.services.budgets.CfnBudget.TagValuesProperty.builder()
+
+      /**
+       * @param key The key for the tag.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param matchOptions The match options that you can use to filter your results.
+       */
+      override fun matchOptions(matchOptions: List<String>) {
+        cdkBuilder.matchOptions(matchOptions)
+      }
+
+      /**
+       * @param matchOptions The match options that you can use to filter your results.
+       */
+      override fun matchOptions(vararg matchOptions: String): Unit =
+          matchOptions(matchOptions.toList())
+
+      /**
+       * @param values The specific value of the tag.
+       */
+      override fun values(values: List<String>) {
+        cdkBuilder.values(values)
+      }
+
+      /**
+       * @param values The specific value of the tag.
+       */
+      override fun values(vararg values: String): Unit = values(values.toList())
+
+      public fun build(): software.amazon.awscdk.services.budgets.CfnBudget.TagValuesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.TagValuesProperty,
+    ) : CdkObject(cdkObject),
+        TagValuesProperty {
+      /**
+       * The key for the tag.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-tagvalues.html#cfn-budgets-budget-tagvalues-key)
+       */
+      override fun key(): String? = unwrap(this).getKey()
+
+      /**
+       * The match options that you can use to filter your results.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-tagvalues.html#cfn-budgets-budget-tagvalues-matchoptions)
+       */
+      override fun matchOptions(): List<String> = unwrap(this).getMatchOptions() ?: emptyList()
+
+      /**
+       * The specific value of the tag.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-tagvalues.html#cfn-budgets-budget-tagvalues-values)
+       */
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TagValuesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.TagValuesProperty):
+          TagValuesProperty = CdkObjectWrappers.wrap(cdkObject) as? TagValuesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TagValuesProperty):
+          software.amazon.awscdk.services.budgets.CfnBudget.TagValuesProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.budgets.CfnBudget.TagValuesProperty
+    }
+  }
+
+  /**
    * The period of time that is covered by a budget.
    *
    * The period has a start date and an end date. The start date must come before the end date.
@@ -2835,7 +3815,7 @@ public open class CfnBudget(
      * The end date for a budget.
      *
      * If you didn't specify an end date, AWS set your end date to `06/15/87 00:00 UTC` . The
-     * defaults are the same for the AWS Billing and Cost Management console and the API.
+     * defaults are the same for the Billing and Cost Management console and the API.
      *
      * After the end date, AWS deletes the budget and all the associated notifications and
      * subscribers. You can change your end date with the `UpdateBudget` operation.
@@ -2850,8 +3830,8 @@ public open class CfnBudget(
      * If you created your budget and didn't specify a start date, the start date defaults to the
      * start of the chosen time period (MONTHLY, QUARTERLY, or ANNUALLY). For example, if you create
      * your budget on January 24, 2019, choose `MONTHLY` , and don't set a start date, the start date
-     * defaults to `01/01/19 00:00 UTC` . The defaults are the same for the AWS Billing and Cost
-     * Management console and the API.
+     * defaults to `01/01/19 00:00 UTC` . The defaults are the same for the Billing and Cost Management
+     * console and the API.
      *
      * You can change your start date with the `UpdateBudget` operation.
      *
@@ -2874,7 +3854,7 @@ public open class CfnBudget(
       /**
        * @param end The end date for a budget.
        * If you didn't specify an end date, AWS set your end date to `06/15/87 00:00 UTC` . The
-       * defaults are the same for the AWS Billing and Cost Management console and the API.
+       * defaults are the same for the Billing and Cost Management console and the API.
        *
        * After the end date, AWS deletes the budget and all the associated notifications and
        * subscribers. You can change your end date with the `UpdateBudget` operation.
@@ -2886,7 +3866,7 @@ public open class CfnBudget(
        * If you created your budget and didn't specify a start date, the start date defaults to the
        * start of the chosen time period (MONTHLY, QUARTERLY, or ANNUALLY). For example, if you create
        * your budget on January 24, 2019, choose `MONTHLY` , and don't set a start date, the start date
-       * defaults to `01/01/19 00:00 UTC` . The defaults are the same for the AWS Billing and Cost
+       * defaults to `01/01/19 00:00 UTC` . The defaults are the same for the Billing and Cost
        * Management console and the API.
        *
        * You can change your start date with the `UpdateBudget` operation.
@@ -2909,7 +3889,7 @@ public open class CfnBudget(
       /**
        * @param end The end date for a budget.
        * If you didn't specify an end date, AWS set your end date to `06/15/87 00:00 UTC` . The
-       * defaults are the same for the AWS Billing and Cost Management console and the API.
+       * defaults are the same for the Billing and Cost Management console and the API.
        *
        * After the end date, AWS deletes the budget and all the associated notifications and
        * subscribers. You can change your end date with the `UpdateBudget` operation.
@@ -2923,7 +3903,7 @@ public open class CfnBudget(
        * If you created your budget and didn't specify a start date, the start date defaults to the
        * start of the chosen time period (MONTHLY, QUARTERLY, or ANNUALLY). For example, if you create
        * your budget on January 24, 2019, choose `MONTHLY` , and don't set a start date, the start date
-       * defaults to `01/01/19 00:00 UTC` . The defaults are the same for the AWS Billing and Cost
+       * defaults to `01/01/19 00:00 UTC` . The defaults are the same for the Billing and Cost
        * Management console and the API.
        *
        * You can change your start date with the `UpdateBudget` operation.
@@ -2951,7 +3931,7 @@ public open class CfnBudget(
        * The end date for a budget.
        *
        * If you didn't specify an end date, AWS set your end date to `06/15/87 00:00 UTC` . The
-       * defaults are the same for the AWS Billing and Cost Management console and the API.
+       * defaults are the same for the Billing and Cost Management console and the API.
        *
        * After the end date, AWS deletes the budget and all the associated notifications and
        * subscribers. You can change your end date with the `UpdateBudget` operation.
@@ -2966,7 +3946,7 @@ public open class CfnBudget(
        * If you created your budget and didn't specify a start date, the start date defaults to the
        * start of the chosen time period (MONTHLY, QUARTERLY, or ANNUALLY). For example, if you create
        * your budget on January 24, 2019, choose `MONTHLY` , and don't set a start date, the start date
-       * defaults to `01/01/19 00:00 UTC` . The defaults are the same for the AWS Billing and Cost
+       * defaults to `01/01/19 00:00 UTC` . The defaults are the same for the Billing and Cost
        * Management console and the API.
        *
        * You can change your start date with the `UpdateBudget` operation.

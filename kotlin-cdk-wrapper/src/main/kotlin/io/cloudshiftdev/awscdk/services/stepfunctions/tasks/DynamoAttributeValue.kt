@@ -49,6 +49,9 @@ public open class DynamoAttributeValue(
     public fun booleanFromJsonPath(`value`: String): DynamoAttributeValue =
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.booleanFromJsonPath(`value`).let(DynamoAttributeValue::wrap)
 
+    public fun booleanFromJsonata(`value`: String): DynamoAttributeValue =
+        software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.booleanFromJsonata(`value`).let(DynamoAttributeValue::wrap)
+
     public fun fromBinary(`value`: String): DynamoAttributeValue =
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.fromBinary(`value`).let(DynamoAttributeValue::wrap)
 
@@ -94,8 +97,14 @@ public open class DynamoAttributeValue(
     public fun listFromJsonPath(`value`: String): DynamoAttributeValue =
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.listFromJsonPath(`value`).let(DynamoAttributeValue::wrap)
 
+    public fun listFromJsonata(`value`: String): DynamoAttributeValue =
+        software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.listFromJsonata(`value`).let(DynamoAttributeValue::wrap)
+
     public fun mapFromJsonPath(`value`: String): DynamoAttributeValue =
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.mapFromJsonPath(`value`).let(DynamoAttributeValue::wrap)
+
+    public fun mapFromJsonata(`value`: String): DynamoAttributeValue =
+        software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.mapFromJsonata(`value`).let(DynamoAttributeValue::wrap)
 
     public fun numberFromString(`value`: String): DynamoAttributeValue =
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.numberFromString(`value`).let(DynamoAttributeValue::wrap)

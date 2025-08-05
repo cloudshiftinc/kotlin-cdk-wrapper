@@ -179,15 +179,15 @@ public open class CfnConnector(
   /**
    * The configuration of the connector.
    */
-  public open fun connectorConfiguration(`value`: IResolvable) {
-    unwrap(this).setConnectorConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  public open fun connectorConfiguration(`value`: Map<String, String>) {
+    unwrap(this).setConnectorConfiguration(`value`)
   }
 
   /**
    * The configuration of the connector.
    */
-  public open fun connectorConfiguration(`value`: Map<String, String>) {
-    unwrap(this).setConnectorConfiguration(`value`)
+  public open fun connectorConfiguration(`value`: IResolvable) {
+    unwrap(this).setConnectorConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -468,7 +468,7 @@ public open class CfnConnector(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-connectorconfiguration)
      * @param connectorConfiguration The configuration of the connector. 
      */
-    public fun connectorConfiguration(connectorConfiguration: IResolvable)
+    public fun connectorConfiguration(connectorConfiguration: Map<String, String>)
 
     /**
      * The configuration of the connector.
@@ -476,7 +476,7 @@ public open class CfnConnector(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-connectorconfiguration)
      * @param connectorConfiguration The configuration of the connector. 
      */
-    public fun connectorConfiguration(connectorConfiguration: Map<String, String>)
+    public fun connectorConfiguration(connectorConfiguration: IResolvable)
 
     /**
      * The description of the connector.
@@ -488,6 +488,9 @@ public open class CfnConnector(
 
     /**
      * The name of the connector.
+     *
+     * The connector name must be unique and can include up to 128 characters. Valid characters you
+     * can include in a connector name are: a-z, A-Z, 0-9, and -.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-connectorname)
      * @param connectorName The name of the connector. 
@@ -758,8 +761,8 @@ public open class CfnConnector(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-connectorconfiguration)
      * @param connectorConfiguration The configuration of the connector. 
      */
-    override fun connectorConfiguration(connectorConfiguration: IResolvable) {
-      cdkBuilder.connectorConfiguration(connectorConfiguration.let(IResolvable.Companion::unwrap))
+    override fun connectorConfiguration(connectorConfiguration: Map<String, String>) {
+      cdkBuilder.connectorConfiguration(connectorConfiguration)
     }
 
     /**
@@ -768,8 +771,8 @@ public open class CfnConnector(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-connectorconfiguration)
      * @param connectorConfiguration The configuration of the connector. 
      */
-    override fun connectorConfiguration(connectorConfiguration: Map<String, String>) {
-      cdkBuilder.connectorConfiguration(connectorConfiguration)
+    override fun connectorConfiguration(connectorConfiguration: IResolvable) {
+      cdkBuilder.connectorConfiguration(connectorConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -784,6 +787,9 @@ public open class CfnConnector(
 
     /**
      * The name of the connector.
+     *
+     * The connector name must be unique and can include up to 128 characters. Valid characters you
+     * can include in a connector name are: a-z, A-Z, 0-9, and -.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-connectorname)
      * @param connectorName The name of the connector. 
@@ -3026,7 +3032,7 @@ public open class CfnConnector(
    */
   public interface VpcProperty {
     /**
-     * The security groups for the connector.
+     * The security group IDs for the connector.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-vpc.html#cfn-kafkaconnect-connector-vpc-securitygroups)
      */
@@ -3045,12 +3051,12 @@ public open class CfnConnector(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param securityGroups The security groups for the connector. 
+       * @param securityGroups The security group IDs for the connector. 
        */
       public fun securityGroups(securityGroups: List<String>)
 
       /**
-       * @param securityGroups The security groups for the connector. 
+       * @param securityGroups The security group IDs for the connector. 
        */
       public fun securityGroups(vararg securityGroups: String)
 
@@ -3071,14 +3077,14 @@ public open class CfnConnector(
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty.builder()
 
       /**
-       * @param securityGroups The security groups for the connector. 
+       * @param securityGroups The security group IDs for the connector. 
        */
       override fun securityGroups(securityGroups: List<String>) {
         cdkBuilder.securityGroups(securityGroups)
       }
 
       /**
-       * @param securityGroups The security groups for the connector. 
+       * @param securityGroups The security group IDs for the connector. 
        */
       override fun securityGroups(vararg securityGroups: String): Unit =
           securityGroups(securityGroups.toList())
@@ -3104,7 +3110,7 @@ public open class CfnConnector(
     ) : CdkObject(cdkObject),
         VpcProperty {
       /**
-       * The security groups for the connector.
+       * The security group IDs for the connector.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-vpc.html#cfn-kafkaconnect-connector-vpc-securitygroups)
        */

@@ -24,7 +24,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * RestApi api;
  * RateLimitedApiKey key = RateLimitedApiKey.Builder.create(this, "rate-limited-api-key")
  * .customerId("hello-customer")
- * .stages(List.of(api.getDeploymentStage()))
+ * .apiStages(List.of(UsagePlanPerApiStage.builder().stage(api.getDeploymentStage()).build()))
  * .quota(QuotaSettings.builder()
  * .limit(10000)
  * .period(Period.MONTH)
@@ -111,6 +111,11 @@ public open class RateLimitedApiKey(
     /**
      * API Stages to be associated with the RateLimitedApiKey.
      *
+     * If you already prepared UsagePlan resource explicitly, you should use `stages` property.
+     * If you prefer to prepare UsagePlan resource implicitly via RateLimitedApiKey,
+     * or you should specify throttle settings at each stage individually, you should use
+     * `apiStages` property.
+     *
      * Default: none
      *
      * @param apiStages API Stages to be associated with the RateLimitedApiKey. 
@@ -119,6 +124,11 @@ public open class RateLimitedApiKey(
 
     /**
      * API Stages to be associated with the RateLimitedApiKey.
+     *
+     * If you already prepared UsagePlan resource explicitly, you should use `stages` property.
+     * If you prefer to prepare UsagePlan resource implicitly via RateLimitedApiKey,
+     * or you should specify throttle settings at each stage individually, you should use
+     * `apiStages` property.
      *
      * Default: none
      *
@@ -355,6 +365,11 @@ public open class RateLimitedApiKey(
     /**
      * API Stages to be associated with the RateLimitedApiKey.
      *
+     * If you already prepared UsagePlan resource explicitly, you should use `stages` property.
+     * If you prefer to prepare UsagePlan resource implicitly via RateLimitedApiKey,
+     * or you should specify throttle settings at each stage individually, you should use
+     * `apiStages` property.
+     *
      * Default: none
      *
      * @param apiStages API Stages to be associated with the RateLimitedApiKey. 
@@ -365,6 +380,11 @@ public open class RateLimitedApiKey(
 
     /**
      * API Stages to be associated with the RateLimitedApiKey.
+     *
+     * If you already prepared UsagePlan resource explicitly, you should use `stages` property.
+     * If you prefer to prepare UsagePlan resource implicitly via RateLimitedApiKey,
+     * or you should specify throttle settings at each stage individually, you should use
+     * `apiStages` property.
      *
      * Default: none
      *
@@ -610,6 +630,9 @@ public open class RateLimitedApiKey(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.apigateway.RateLimitedApiKey.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

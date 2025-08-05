@@ -32,6 +32,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .applicationId("applicationId")
  * .applicationType("applicationType")
  * // the properties below are optional
+ * .componentsInfo(List.of(ComponentInfoProperty.builder()
+ * .componentType("componentType")
+ * .ec2InstanceId("ec2InstanceId")
+ * .sid("sid")
+ * .build()))
  * .credentials(List.of(CredentialProperty.builder()
  * .credentialType("credentialType")
  * .databaseName("databaseName")
@@ -99,6 +104,34 @@ public open class CfnApplication(
    * The Amazon Resource Name of the SAP application.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
+
+  /**
+   * This is an optional parameter for component details to which the SAP ABAP application is
+   * attached, such as Web Dispatcher.
+   */
+  public open fun componentsInfo(): Any? = unwrap(this).getComponentsInfo()
+
+  /**
+   * This is an optional parameter for component details to which the SAP ABAP application is
+   * attached, such as Web Dispatcher.
+   */
+  public open fun componentsInfo(`value`: IResolvable) {
+    unwrap(this).setComponentsInfo(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * This is an optional parameter for component details to which the SAP ABAP application is
+   * attached, such as Web Dispatcher.
+   */
+  public open fun componentsInfo(`value`: List<Any>) {
+    unwrap(this).setComponentsInfo(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * This is an optional parameter for component details to which the SAP ABAP application is
+   * attached, such as Web Dispatcher.
+   */
+  public open fun componentsInfo(vararg `value`: Any): Unit = componentsInfo(`value`.toList())
 
   /**
    * The credentials of the SAP application.
@@ -231,6 +264,36 @@ public open class CfnApplication(
     public fun applicationType(applicationType: String)
 
     /**
+     * This is an optional parameter for component details to which the SAP ABAP application is
+     * attached, such as Web Dispatcher.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-componentsinfo)
+     * @param componentsInfo This is an optional parameter for component details to which the SAP
+     * ABAP application is attached, such as Web Dispatcher. 
+     */
+    public fun componentsInfo(componentsInfo: IResolvable)
+
+    /**
+     * This is an optional parameter for component details to which the SAP ABAP application is
+     * attached, such as Web Dispatcher.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-componentsinfo)
+     * @param componentsInfo This is an optional parameter for component details to which the SAP
+     * ABAP application is attached, such as Web Dispatcher. 
+     */
+    public fun componentsInfo(componentsInfo: List<Any>)
+
+    /**
+     * This is an optional parameter for component details to which the SAP ABAP application is
+     * attached, such as Web Dispatcher.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-componentsinfo)
+     * @param componentsInfo This is an optional parameter for component details to which the SAP
+     * ABAP application is attached, such as Web Dispatcher. 
+     */
+    public fun componentsInfo(vararg componentsInfo: Any)
+
+    /**
      * The credentials of the SAP application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-credentials)
@@ -337,6 +400,41 @@ public open class CfnApplication(
     override fun applicationType(applicationType: String) {
       cdkBuilder.applicationType(applicationType)
     }
+
+    /**
+     * This is an optional parameter for component details to which the SAP ABAP application is
+     * attached, such as Web Dispatcher.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-componentsinfo)
+     * @param componentsInfo This is an optional parameter for component details to which the SAP
+     * ABAP application is attached, such as Web Dispatcher. 
+     */
+    override fun componentsInfo(componentsInfo: IResolvable) {
+      cdkBuilder.componentsInfo(componentsInfo.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * This is an optional parameter for component details to which the SAP ABAP application is
+     * attached, such as Web Dispatcher.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-componentsinfo)
+     * @param componentsInfo This is an optional parameter for component details to which the SAP
+     * ABAP application is attached, such as Web Dispatcher. 
+     */
+    override fun componentsInfo(componentsInfo: List<Any>) {
+      cdkBuilder.componentsInfo(componentsInfo.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * This is an optional parameter for component details to which the SAP ABAP application is
+     * attached, such as Web Dispatcher.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-componentsinfo)
+     * @param componentsInfo This is an optional parameter for component details to which the SAP
+     * ABAP application is attached, such as Web Dispatcher. 
+     */
+    override fun componentsInfo(vararg componentsInfo: Any): Unit =
+        componentsInfo(componentsInfo.toList())
 
     /**
      * The credentials of the SAP application.
@@ -455,6 +553,163 @@ public open class CfnApplication(
     internal fun unwrap(wrapped: CfnApplication):
         software.amazon.awscdk.services.systemsmanagersap.CfnApplication = wrapped.cdkObject as
         software.amazon.awscdk.services.systemsmanagersap.CfnApplication
+  }
+
+  /**
+   * This is information about the component of your SAP application, such as Web Dispatcher.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.systemsmanagersap.*;
+   * ComponentInfoProperty componentInfoProperty = ComponentInfoProperty.builder()
+   * .componentType("componentType")
+   * .ec2InstanceId("ec2InstanceId")
+   * .sid("sid")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-systemsmanagersap-application-componentinfo.html)
+   */
+  public interface ComponentInfoProperty {
+    /**
+     * This string is the type of the component.
+     *
+     * Accepted value is `WD` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-systemsmanagersap-application-componentinfo.html#cfn-systemsmanagersap-application-componentinfo-componenttype)
+     */
+    public fun componentType(): String? = unwrap(this).getComponentType()
+
+    /**
+     * This is the Amazon EC2 instance on which your SAP component is running.
+     *
+     * Accepted values are alphanumeric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-systemsmanagersap-application-componentinfo.html#cfn-systemsmanagersap-application-componentinfo-ec2instanceid)
+     */
+    public fun ec2InstanceId(): String? = unwrap(this).getEc2InstanceId()
+
+    /**
+     * This string is the SAP System ID of the component.
+     *
+     * Accepted values are alphanumeric.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-systemsmanagersap-application-componentinfo.html#cfn-systemsmanagersap-application-componentinfo-sid)
+     */
+    public fun sid(): String? = unwrap(this).getSid()
+
+    /**
+     * A builder for [ComponentInfoProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param componentType This string is the type of the component.
+       * Accepted value is `WD` .
+       */
+      public fun componentType(componentType: String)
+
+      /**
+       * @param ec2InstanceId This is the Amazon EC2 instance on which your SAP component is
+       * running.
+       * Accepted values are alphanumeric.
+       */
+      public fun ec2InstanceId(ec2InstanceId: String)
+
+      /**
+       * @param sid This string is the SAP System ID of the component.
+       * Accepted values are alphanumeric.
+       */
+      public fun sid(sid: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.systemsmanagersap.CfnApplication.ComponentInfoProperty.Builder
+          =
+          software.amazon.awscdk.services.systemsmanagersap.CfnApplication.ComponentInfoProperty.builder()
+
+      /**
+       * @param componentType This string is the type of the component.
+       * Accepted value is `WD` .
+       */
+      override fun componentType(componentType: String) {
+        cdkBuilder.componentType(componentType)
+      }
+
+      /**
+       * @param ec2InstanceId This is the Amazon EC2 instance on which your SAP component is
+       * running.
+       * Accepted values are alphanumeric.
+       */
+      override fun ec2InstanceId(ec2InstanceId: String) {
+        cdkBuilder.ec2InstanceId(ec2InstanceId)
+      }
+
+      /**
+       * @param sid This string is the SAP System ID of the component.
+       * Accepted values are alphanumeric.
+       */
+      override fun sid(sid: String) {
+        cdkBuilder.sid(sid)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.systemsmanagersap.CfnApplication.ComponentInfoProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.systemsmanagersap.CfnApplication.ComponentInfoProperty,
+    ) : CdkObject(cdkObject),
+        ComponentInfoProperty {
+      /**
+       * This string is the type of the component.
+       *
+       * Accepted value is `WD` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-systemsmanagersap-application-componentinfo.html#cfn-systemsmanagersap-application-componentinfo-componenttype)
+       */
+      override fun componentType(): String? = unwrap(this).getComponentType()
+
+      /**
+       * This is the Amazon EC2 instance on which your SAP component is running.
+       *
+       * Accepted values are alphanumeric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-systemsmanagersap-application-componentinfo.html#cfn-systemsmanagersap-application-componentinfo-ec2instanceid)
+       */
+      override fun ec2InstanceId(): String? = unwrap(this).getEc2InstanceId()
+
+      /**
+       * This string is the SAP System ID of the component.
+       *
+       * Accepted values are alphanumeric.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-systemsmanagersap-application-componentinfo.html#cfn-systemsmanagersap-application-componentinfo-sid)
+       */
+      override fun sid(): String? = unwrap(this).getSid()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ComponentInfoProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.systemsmanagersap.CfnApplication.ComponentInfoProperty):
+          ComponentInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? ComponentInfoProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComponentInfoProperty):
+          software.amazon.awscdk.services.systemsmanagersap.CfnApplication.ComponentInfoProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.systemsmanagersap.CfnApplication.ComponentInfoProperty
+    }
   }
 
   /**

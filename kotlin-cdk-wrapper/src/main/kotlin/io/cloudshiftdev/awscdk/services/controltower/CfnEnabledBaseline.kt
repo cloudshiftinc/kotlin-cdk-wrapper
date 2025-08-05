@@ -20,7 +20,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * This resource represents a `Baseline` that has been applied to a target.
+ * Definition of AWS::ControlTower::EnabledBaseline Resource Type.
  *
  * Example:
  *
@@ -70,7 +70,7 @@ public open class CfnEnabledBaseline(
   )
 
   /**
-   * The ARN of the `EnabledBaseline` resource.
+   *
    */
   public open fun attrEnabledBaselineIdentifier(): String =
       unwrap(this).getAttrEnabledBaselineIdentifier()
@@ -115,43 +115,43 @@ public open class CfnEnabledBaseline(
   }
 
   /**
-   * Parameters that are applied when enabling this `Baseline` .
+   * Shows the parameters that are applied when enabling this `Baseline` .
    */
   public open fun parameters(): Any? = unwrap(this).getParameters()
 
   /**
-   * Parameters that are applied when enabling this `Baseline` .
+   * Shows the parameters that are applied when enabling this `Baseline` .
    */
   public open fun parameters(`value`: IResolvable) {
     unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Parameters that are applied when enabling this `Baseline` .
+   * Shows the parameters that are applied when enabling this `Baseline` .
    */
   public open fun parameters(`value`: List<Any>) {
     unwrap(this).setParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * Parameters that are applied when enabling this `Baseline` .
+   * Shows the parameters that are applied when enabling this `Baseline` .
    */
   public open fun parameters(vararg `value`: Any): Unit = parameters(`value`.toList())
 
   /**
-   * Tags associated with input to `EnableBaseline` .
+   *
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * Tags associated with input to `EnableBaseline` .
+   *
    */
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * Tags associated with input to `EnableBaseline` .
+   *
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
@@ -190,48 +190,38 @@ public open class CfnEnabledBaseline(
     public fun baselineVersion(baselineVersion: String)
 
     /**
-     * Parameters that are applied when enabling this `Baseline` .
-     *
-     * These parameters configure the behavior of the baseline.
+     * Shows the parameters that are applied when enabling this `Baseline` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledbaseline.html#cfn-controltower-enabledbaseline-parameters)
-     * @param parameters Parameters that are applied when enabling this `Baseline` . 
+     * @param parameters Shows the parameters that are applied when enabling this `Baseline` . 
      */
     public fun parameters(parameters: IResolvable)
 
     /**
-     * Parameters that are applied when enabling this `Baseline` .
-     *
-     * These parameters configure the behavior of the baseline.
+     * Shows the parameters that are applied when enabling this `Baseline` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledbaseline.html#cfn-controltower-enabledbaseline-parameters)
-     * @param parameters Parameters that are applied when enabling this `Baseline` . 
+     * @param parameters Shows the parameters that are applied when enabling this `Baseline` . 
      */
     public fun parameters(parameters: List<Any>)
 
     /**
-     * Parameters that are applied when enabling this `Baseline` .
-     *
-     * These parameters configure the behavior of the baseline.
+     * Shows the parameters that are applied when enabling this `Baseline` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledbaseline.html#cfn-controltower-enabledbaseline-parameters)
-     * @param parameters Parameters that are applied when enabling this `Baseline` . 
+     * @param parameters Shows the parameters that are applied when enabling this `Baseline` . 
      */
     public fun parameters(vararg parameters: Any)
 
     /**
-     * Tags associated with input to `EnableBaseline` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledbaseline.html#cfn-controltower-enabledbaseline-tags)
-     * @param tags Tags associated with input to `EnableBaseline` . 
+     * @param tags 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * Tags associated with input to `EnableBaseline` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledbaseline.html#cfn-controltower-enabledbaseline-tags)
-     * @param tags Tags associated with input to `EnableBaseline` . 
+     * @param tags 
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -273,54 +263,44 @@ public open class CfnEnabledBaseline(
     }
 
     /**
-     * Parameters that are applied when enabling this `Baseline` .
-     *
-     * These parameters configure the behavior of the baseline.
+     * Shows the parameters that are applied when enabling this `Baseline` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledbaseline.html#cfn-controltower-enabledbaseline-parameters)
-     * @param parameters Parameters that are applied when enabling this `Baseline` . 
+     * @param parameters Shows the parameters that are applied when enabling this `Baseline` . 
      */
     override fun parameters(parameters: IResolvable) {
       cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Parameters that are applied when enabling this `Baseline` .
-     *
-     * These parameters configure the behavior of the baseline.
+     * Shows the parameters that are applied when enabling this `Baseline` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledbaseline.html#cfn-controltower-enabledbaseline-parameters)
-     * @param parameters Parameters that are applied when enabling this `Baseline` . 
+     * @param parameters Shows the parameters that are applied when enabling this `Baseline` . 
      */
     override fun parameters(parameters: List<Any>) {
       cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * Parameters that are applied when enabling this `Baseline` .
-     *
-     * These parameters configure the behavior of the baseline.
+     * Shows the parameters that are applied when enabling this `Baseline` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledbaseline.html#cfn-controltower-enabledbaseline-parameters)
-     * @param parameters Parameters that are applied when enabling this `Baseline` . 
+     * @param parameters Shows the parameters that are applied when enabling this `Baseline` . 
      */
     override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
 
     /**
-     * Tags associated with input to `EnableBaseline` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledbaseline.html#cfn-controltower-enabledbaseline-tags)
-     * @param tags Tags associated with input to `EnableBaseline` . 
+     * @param tags 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * Tags associated with input to `EnableBaseline` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledbaseline.html#cfn-controltower-enabledbaseline-tags)
-     * @param tags Tags associated with input to `EnableBaseline` . 
+     * @param tags 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -360,8 +340,6 @@ public open class CfnEnabledBaseline(
   }
 
   /**
-   * A key-value parameter to an `EnabledBaseline` resource.
-   *
    * Example:
    *
    * ```
@@ -379,15 +357,11 @@ public open class CfnEnabledBaseline(
    */
   public interface ParameterProperty {
     /**
-     * A string denoting the parameter key.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-controltower-enabledbaseline-parameter.html#cfn-controltower-enabledbaseline-parameter-key)
      */
     public fun key(): String? = unwrap(this).getKey()
 
     /**
-     * A low-level `Document` object of any type (for example, a Java Object).
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-controltower-enabledbaseline-parameter.html#cfn-controltower-enabledbaseline-parameter-value)
      */
     public fun `value`(): Any? = unwrap(this).getValue()
@@ -398,12 +372,12 @@ public open class CfnEnabledBaseline(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param key A string denoting the parameter key.
+       * @param key the value to be set.
        */
       public fun key(key: String)
 
       /**
-       * @param value A low-level `Document` object of any type (for example, a Java Object).
+       * @param value the value to be set.
        */
       public fun `value`(`value`: Any)
     }
@@ -415,14 +389,14 @@ public open class CfnEnabledBaseline(
           software.amazon.awscdk.services.controltower.CfnEnabledBaseline.ParameterProperty.builder()
 
       /**
-       * @param key A string denoting the parameter key.
+       * @param key the value to be set.
        */
       override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
       /**
-       * @param value A low-level `Document` object of any type (for example, a Java Object).
+       * @param value the value to be set.
        */
       override fun `value`(`value`: Any) {
         cdkBuilder.`value`(`value`)
@@ -438,15 +412,11 @@ public open class CfnEnabledBaseline(
     ) : CdkObject(cdkObject),
         ParameterProperty {
       /**
-       * A string denoting the parameter key.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-controltower-enabledbaseline-parameter.html#cfn-controltower-enabledbaseline-parameter-key)
        */
       override fun key(): String? = unwrap(this).getKey()
 
       /**
-       * A low-level `Document` object of any type (for example, a Java Object).
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-controltower-enabledbaseline-parameter.html#cfn-controltower-enabledbaseline-parameter-value)
        */
       override fun `value`(): Any? = unwrap(this).getValue()

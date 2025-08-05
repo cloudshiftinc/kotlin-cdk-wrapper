@@ -342,16 +342,16 @@ public open class CfnStage(
    * A map (string-to-string map) that defines the stage variables, where the variable name is the
    * key and the variable value is the value.
    */
-  public open fun variables(`value`: IResolvable) {
-    unwrap(this).setVariables(`value`.let(IResolvable.Companion::unwrap))
+  public open fun variables(`value`: Map<String, String>) {
+    unwrap(this).setVariables(`value`)
   }
 
   /**
    * A map (string-to-string map) that defines the stage variables, where the variable name is the
    * key and the variable value is the value.
    */
-  public open fun variables(`value`: Map<String, String>) {
-    unwrap(this).setVariables(`value`)
+  public open fun variables(`value`: IResolvable) {
+    unwrap(this).setVariables(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -582,7 +582,7 @@ public open class CfnStage(
      * @param variables A map (string-to-string map) that defines the stage variables, where the
      * variable name is the key and the variable value is the value. 
      */
-    public fun variables(variables: IResolvable)
+    public fun variables(variables: Map<String, String>)
 
     /**
      * A map (string-to-string map) that defines the stage variables, where the variable name is the
@@ -595,7 +595,7 @@ public open class CfnStage(
      * @param variables A map (string-to-string map) that defines the stage variables, where the
      * variable name is the key and the variable value is the value. 
      */
-    public fun variables(variables: Map<String, String>)
+    public fun variables(variables: IResolvable)
   }
 
   private class BuilderImpl(
@@ -867,8 +867,8 @@ public open class CfnStage(
      * @param variables A map (string-to-string map) that defines the stage variables, where the
      * variable name is the key and the variable value is the value. 
      */
-    override fun variables(variables: IResolvable) {
-      cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
+    override fun variables(variables: Map<String, String>) {
+      cdkBuilder.variables(variables)
     }
 
     /**
@@ -882,8 +882,8 @@ public open class CfnStage(
      * @param variables A map (string-to-string map) that defines the stage variables, where the
      * variable name is the key and the variable value is the value. 
      */
-    override fun variables(variables: Map<String, String>) {
-      cdkBuilder.variables(variables)
+    override fun variables(variables: IResolvable) {
+      cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.CfnStage = cdkBuilder.build()
@@ -1124,7 +1124,7 @@ public open class CfnStage(
        * These stage variables are represented as a string-to-string map between stage variable
        * names and their values.
        */
-      public fun stageVariableOverrides(stageVariableOverrides: IResolvable)
+      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>)
 
       /**
        * @param stageVariableOverrides Stage variables overridden for a canary release deployment,
@@ -1132,7 +1132,7 @@ public open class CfnStage(
        * These stage variables are represented as a string-to-string map between stage variable
        * names and their values.
        */
-      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>)
+      public fun stageVariableOverrides(stageVariableOverrides: IResolvable)
 
       /**
        * @param useStageCache A Boolean flag to indicate whether the canary deployment uses the
@@ -1172,8 +1172,8 @@ public open class CfnStage(
        * These stage variables are represented as a string-to-string map between stage variable
        * names and their values.
        */
-      override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
-        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable.Companion::unwrap))
+      override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
+        cdkBuilder.stageVariableOverrides(stageVariableOverrides)
       }
 
       /**
@@ -1182,8 +1182,8 @@ public open class CfnStage(
        * These stage variables are represented as a string-to-string map between stage variable
        * names and their values.
        */
-      override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
-        cdkBuilder.stageVariableOverrides(stageVariableOverrides)
+      override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
+        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable.Companion::unwrap))
       }
 
       /**

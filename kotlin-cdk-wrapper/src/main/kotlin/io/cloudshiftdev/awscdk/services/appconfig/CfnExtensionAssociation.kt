@@ -141,15 +141,15 @@ public open class CfnExtensionAssociation(
   /**
    * The parameter names and values defined in the extensions.
    */
-  public open fun parameters(`value`: IResolvable) {
-    unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
+  public open fun parameters(`value`: Map<String, String>) {
+    unwrap(this).setParameters(`value`)
   }
 
   /**
    * The parameter names and values defined in the extensions.
    */
-  public open fun parameters(`value`: Map<String, String>) {
-    unwrap(this).setParameters(`value`)
+  public open fun parameters(`value`: IResolvable) {
+    unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -219,7 +219,7 @@ public open class CfnExtensionAssociation(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-extensionassociation.html#cfn-appconfig-extensionassociation-parameters)
      * @param parameters The parameter names and values defined in the extensions. 
      */
-    public fun parameters(parameters: IResolvable)
+    public fun parameters(parameters: Map<String, String>)
 
     /**
      * The parameter names and values defined in the extensions.
@@ -229,7 +229,7 @@ public open class CfnExtensionAssociation(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-extensionassociation.html#cfn-appconfig-extensionassociation-parameters)
      * @param parameters The parameter names and values defined in the extensions. 
      */
-    public fun parameters(parameters: Map<String, String>)
+    public fun parameters(parameters: IResolvable)
 
     /**
      * The ARN of an application, configuration profile, or environment.
@@ -303,8 +303,8 @@ public open class CfnExtensionAssociation(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-extensionassociation.html#cfn-appconfig-extensionassociation-parameters)
      * @param parameters The parameter names and values defined in the extensions. 
      */
-    override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+    override fun parameters(parameters: Map<String, String>) {
+      cdkBuilder.parameters(parameters)
     }
 
     /**
@@ -315,8 +315,8 @@ public open class CfnExtensionAssociation(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-extensionassociation.html#cfn-appconfig-extensionassociation-parameters)
      * @param parameters The parameter names and values defined in the extensions. 
      */
-    override fun parameters(parameters: Map<String, String>) {
-      cdkBuilder.parameters(parameters)
+    override fun parameters(parameters: IResolvable) {
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**

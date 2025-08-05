@@ -364,8 +364,10 @@ public interface ApplicationLoadBalancedServiceBaseProps {
       unwrap(this).getRecordType()?.let(ApplicationLoadBalancedServiceRecordType::wrap)
 
   /**
-   * Specifies whether the load balancer should redirect traffic on port 80 to port 443 to support
-   * HTTP-&gt;HTTPS redirects This is only valid if the protocol of the ALB is HTTPS.
+   * Specifies whether the load balancer should redirect traffic on port 80 to the [listenerPort] to
+   * support HTTP->HTTPS redirects.
+   *
+   * This is only valid if the protocol of the ALB is HTTPS.
    *
    * Default: false
    */
@@ -619,8 +621,8 @@ public interface ApplicationLoadBalancedServiceBaseProps {
 
     /**
      * @param redirectHttp Specifies whether the load balancer should redirect traffic on port 80 to
-     * port 443 to support HTTP-&gt;HTTPS redirects This is only valid if the protocol of the ALB is
-     * HTTPS.
+     * the [listenerPort] to support HTTP->HTTPS redirects.
+     * This is only valid if the protocol of the ALB is HTTPS.
      */
     public fun redirectHttp(redirectHttp: Boolean)
 
@@ -924,8 +926,8 @@ public interface ApplicationLoadBalancedServiceBaseProps {
 
     /**
      * @param redirectHttp Specifies whether the load balancer should redirect traffic on port 80 to
-     * port 443 to support HTTP-&gt;HTTPS redirects This is only valid if the protocol of the ALB is
-     * HTTPS.
+     * the [listenerPort] to support HTTP->HTTPS redirects.
+     * This is only valid if the protocol of the ALB is HTTPS.
      */
     override fun redirectHttp(redirectHttp: Boolean) {
       cdkBuilder.redirectHttp(redirectHttp)
@@ -1229,8 +1231,10 @@ public interface ApplicationLoadBalancedServiceBaseProps {
         unwrap(this).getRecordType()?.let(ApplicationLoadBalancedServiceRecordType::wrap)
 
     /**
-     * Specifies whether the load balancer should redirect traffic on port 80 to port 443 to support
-     * HTTP-&gt;HTTPS redirects This is only valid if the protocol of the ALB is HTTPS.
+     * Specifies whether the load balancer should redirect traffic on port 80 to the [listenerPort]
+     * to support HTTP->HTTPS redirects.
+     *
+     * This is only valid if the protocol of the ALB is HTTPS.
      *
      * Default: false
      */

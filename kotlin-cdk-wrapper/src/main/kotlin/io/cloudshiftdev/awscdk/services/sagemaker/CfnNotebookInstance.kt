@@ -145,12 +145,12 @@ public open class CfnNotebookInstance(
   }
 
   /**
-   * Sets whether SageMaker provides internet access to the notebook instance.
+   * Sets whether SageMaker AI provides internet access to the notebook instance.
    */
   public open fun directInternetAccess(): String? = unwrap(this).getDirectInternetAccess()
 
   /**
-   * Sets whether SageMaker provides internet access to the notebook instance.
+   * Sets whether SageMaker AI provides internet access to the notebook instance.
    */
   public open fun directInternetAccess(`value`: String) {
     unwrap(this).setDirectInternetAccess(`value`)
@@ -209,13 +209,13 @@ public open class CfnNotebookInstance(
   }
 
   /**
-   * The Amazon Resource Name (ARN) of a AWS Key Management Service key that SageMaker uses to
+   * The Amazon Resource Name (ARN) of a AWS Key Management Service key that SageMaker AI uses to
    * encrypt data on the storage volume attached to your notebook instance.
    */
   public open fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
   /**
-   * The Amazon Resource Name (ARN) of a AWS Key Management Service key that SageMaker uses to
+   * The Amazon Resource Name (ARN) of a AWS Key Management Service key that SageMaker AI uses to
    * encrypt data on the storage volume attached to your notebook instance.
    */
   public open fun kmsKeyId(`value`: String) {
@@ -259,14 +259,14 @@ public open class CfnNotebookInstance(
   }
 
   /**
-   * When you send any requests to AWS resources from the notebook instance, SageMaker assumes this
-   * role to perform tasks on your behalf.
+   * When you send any requests to AWS resources from the notebook instance, SageMaker AI assumes
+   * this role to perform tasks on your behalf.
    */
   public open fun roleArn(): String = unwrap(this).getRoleArn()
 
   /**
-   * When you send any requests to AWS resources from the notebook instance, SageMaker assumes this
-   * role to perform tasks on your behalf.
+   * When you send any requests to AWS resources from the notebook instance, SageMaker AI assumes
+   * this role to perform tasks on your behalf.
    */
   public open fun roleArn(`value`: String) {
     unwrap(this).setRoleArn(`value`)
@@ -403,8 +403,8 @@ public open class CfnNotebookInstance(
      * CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any
      * other Git repository. These repositories are cloned at the same level as the default repository
      * of your notebook instance. For more information, see [Associating Git Repositories with
-     * SageMaker Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html)
-     * .
+     * SageMaker AI Notebook
+     * Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-additionalcoderepositories)
      * @param additionalCodeRepositories An array of up to three Git repositories associated with
@@ -420,8 +420,8 @@ public open class CfnNotebookInstance(
      * CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any
      * other Git repository. These repositories are cloned at the same level as the default repository
      * of your notebook instance. For more information, see [Associating Git Repositories with
-     * SageMaker Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html)
-     * .
+     * SageMaker AI Notebook
+     * Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-additionalcoderepositories)
      * @param additionalCodeRepositories An array of up to three Git repositories associated with
@@ -436,8 +436,8 @@ public open class CfnNotebookInstance(
      * URL of a Git repository in [AWS
      * CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any
      * other Git repository. When you open a notebook instance, it opens in the directory that contains
-     * this repository. For more information, see [Associating Git Repositories with SageMaker Notebook
-     * Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html) .
+     * this repository. For more information, see [Associating Git Repositories with SageMaker AI
+     * Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-defaultcoderepository)
      * @param defaultCodeRepository The Git repository associated with the notebook instance as its
@@ -446,10 +446,10 @@ public open class CfnNotebookInstance(
     public fun defaultCodeRepository(defaultCodeRepository: String)
 
     /**
-     * Sets whether SageMaker provides internet access to the notebook instance.
+     * Sets whether SageMaker AI provides internet access to the notebook instance.
      *
      * If you set this to `Disabled` this notebook instance is able to access resources only in your
-     * VPC, and is not be able to connect to SageMaker training and endpoint services unless you
+     * VPC, and is not be able to connect to SageMaker AI training and endpoint services unless you
      * configure a NAT Gateway in your VPC.
      *
      * For more information, see [Notebook Instances Are Internet-Enabled by
@@ -458,8 +458,8 @@ public open class CfnNotebookInstance(
      * `SubnetId` parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-directinternetaccess)
-     * @param directInternetAccess Sets whether SageMaker provides internet access to the notebook
-     * instance. 
+     * @param directInternetAccess Sets whether SageMaker AI provides internet access to the
+     * notebook instance. 
      */
     public fun directInternetAccess(directInternetAccess: String)
 
@@ -509,7 +509,7 @@ public open class CfnNotebookInstance(
     public fun instanceType(instanceType: String)
 
     /**
-     * The Amazon Resource Name (ARN) of a AWS Key Management Service key that SageMaker uses to
+     * The Amazon Resource Name (ARN) of a AWS Key Management Service key that SageMaker AI uses to
      * encrypt data on the storage volume attached to your notebook instance.
      *
      * The KMS key you provide must be enabled. For information, see [Enabling and Disabling
@@ -518,7 +518,7 @@ public open class CfnNotebookInstance(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-kmskeyid)
      * @param kmsKeyId The Amazon Resource Name (ARN) of a AWS Key Management Service key that
-     * SageMaker uses to encrypt data on the storage volume attached to your notebook instance. 
+     * SageMaker AI uses to encrypt data on the storage volume attached to your notebook instance. 
      */
     public fun kmsKeyId(kmsKeyId: String)
 
@@ -553,22 +553,22 @@ public open class CfnNotebookInstance(
     public fun platformIdentifier(platformIdentifier: String)
 
     /**
-     * When you send any requests to AWS resources from the notebook instance, SageMaker assumes
+     * When you send any requests to AWS resources from the notebook instance, SageMaker AI assumes
      * this role to perform tasks on your behalf.
      *
-     * You must grant this role necessary permissions so SageMaker can perform these tasks. The
-     * policy must allow the SageMaker service principal (sagemaker.amazonaws.com) permissions to
-     * assume this role. For more information, see [SageMaker
+     * You must grant this role necessary permissions so SageMaker AI can perform these tasks. The
+     * policy must allow the SageMaker AI service principal (sagemaker.amazonaws.com) permissions to
+     * assume this role. For more information, see [SageMaker AI
      * Roles](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html) .
      *
      *
-     * To be able to pass this role to SageMaker, the caller of this API must have the
+     * To be able to pass this role to SageMaker AI, the caller of this API must have the
      * `iam:PassRole` permission.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-rolearn)
      * @param roleArn When you send any requests to AWS resources from the notebook instance,
-     * SageMaker assumes this role to perform tasks on your behalf. 
+     * SageMaker AI assumes this role to perform tasks on your behalf. 
      */
     public fun roleArn(roleArn: String)
 
@@ -719,8 +719,8 @@ public open class CfnNotebookInstance(
      * CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any
      * other Git repository. These repositories are cloned at the same level as the default repository
      * of your notebook instance. For more information, see [Associating Git Repositories with
-     * SageMaker Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html)
-     * .
+     * SageMaker AI Notebook
+     * Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-additionalcoderepositories)
      * @param additionalCodeRepositories An array of up to three Git repositories associated with
@@ -738,8 +738,8 @@ public open class CfnNotebookInstance(
      * CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any
      * other Git repository. These repositories are cloned at the same level as the default repository
      * of your notebook instance. For more information, see [Associating Git Repositories with
-     * SageMaker Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html)
-     * .
+     * SageMaker AI Notebook
+     * Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-additionalcoderepositories)
      * @param additionalCodeRepositories An array of up to three Git repositories associated with
@@ -755,8 +755,8 @@ public open class CfnNotebookInstance(
      * URL of a Git repository in [AWS
      * CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any
      * other Git repository. When you open a notebook instance, it opens in the directory that contains
-     * this repository. For more information, see [Associating Git Repositories with SageMaker Notebook
-     * Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html) .
+     * this repository. For more information, see [Associating Git Repositories with SageMaker AI
+     * Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-defaultcoderepository)
      * @param defaultCodeRepository The Git repository associated with the notebook instance as its
@@ -767,10 +767,10 @@ public open class CfnNotebookInstance(
     }
 
     /**
-     * Sets whether SageMaker provides internet access to the notebook instance.
+     * Sets whether SageMaker AI provides internet access to the notebook instance.
      *
      * If you set this to `Disabled` this notebook instance is able to access resources only in your
-     * VPC, and is not be able to connect to SageMaker training and endpoint services unless you
+     * VPC, and is not be able to connect to SageMaker AI training and endpoint services unless you
      * configure a NAT Gateway in your VPC.
      *
      * For more information, see [Notebook Instances Are Internet-Enabled by
@@ -779,8 +779,8 @@ public open class CfnNotebookInstance(
      * `SubnetId` parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-directinternetaccess)
-     * @param directInternetAccess Sets whether SageMaker provides internet access to the notebook
-     * instance. 
+     * @param directInternetAccess Sets whether SageMaker AI provides internet access to the
+     * notebook instance. 
      */
     override fun directInternetAccess(directInternetAccess: String) {
       cdkBuilder.directInternetAccess(directInternetAccess)
@@ -840,7 +840,7 @@ public open class CfnNotebookInstance(
     }
 
     /**
-     * The Amazon Resource Name (ARN) of a AWS Key Management Service key that SageMaker uses to
+     * The Amazon Resource Name (ARN) of a AWS Key Management Service key that SageMaker AI uses to
      * encrypt data on the storage volume attached to your notebook instance.
      *
      * The KMS key you provide must be enabled. For information, see [Enabling and Disabling
@@ -849,7 +849,7 @@ public open class CfnNotebookInstance(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-kmskeyid)
      * @param kmsKeyId The Amazon Resource Name (ARN) of a AWS Key Management Service key that
-     * SageMaker uses to encrypt data on the storage volume attached to your notebook instance. 
+     * SageMaker AI uses to encrypt data on the storage volume attached to your notebook instance. 
      */
     override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
@@ -892,22 +892,22 @@ public open class CfnNotebookInstance(
     }
 
     /**
-     * When you send any requests to AWS resources from the notebook instance, SageMaker assumes
+     * When you send any requests to AWS resources from the notebook instance, SageMaker AI assumes
      * this role to perform tasks on your behalf.
      *
-     * You must grant this role necessary permissions so SageMaker can perform these tasks. The
-     * policy must allow the SageMaker service principal (sagemaker.amazonaws.com) permissions to
-     * assume this role. For more information, see [SageMaker
+     * You must grant this role necessary permissions so SageMaker AI can perform these tasks. The
+     * policy must allow the SageMaker AI service principal (sagemaker.amazonaws.com) permissions to
+     * assume this role. For more information, see [SageMaker AI
      * Roles](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html) .
      *
      *
-     * To be able to pass this role to SageMaker, the caller of this API must have the
+     * To be able to pass this role to SageMaker AI, the caller of this API must have the
      * `iam:PassRole` permission.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html#cfn-sagemaker-notebookinstance-rolearn)
      * @param roleArn When you send any requests to AWS resources from the notebook instance,
-     * SageMaker assumes this role to perform tasks on your behalf. 
+     * SageMaker AI assumes this role to perform tasks on your behalf. 
      */
     override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)

@@ -30,8 +30,10 @@ import kotlin.Unit
 public interface LogOptions {
   /**
    * The log group where the execution history events will be logged.
+   *
+   * Default: No log group. Required if your log level is not set to OFF.
    */
-  public fun destination(): ILogGroup
+  public fun destination(): ILogGroup? = unwrap(this).getDestination()?.let(ILogGroup::wrap)
 
   /**
    * Determines whether execution data is included in your log.
@@ -53,7 +55,7 @@ public interface LogOptions {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param destination The log group where the execution history events will be logged. 
+     * @param destination The log group where the execution history events will be logged.
      */
     public fun destination(destination: ILogGroup)
 
@@ -73,7 +75,7 @@ public interface LogOptions {
         software.amazon.awscdk.services.stepfunctions.LogOptions.builder()
 
     /**
-     * @param destination The log group where the execution history events will be logged. 
+     * @param destination The log group where the execution history events will be logged.
      */
     override fun destination(destination: ILogGroup) {
       cdkBuilder.destination(destination.let(ILogGroup.Companion::unwrap))
@@ -103,8 +105,10 @@ public interface LogOptions {
       LogOptions {
     /**
      * The log group where the execution history events will be logged.
+     *
+     * Default: No log group. Required if your log level is not set to OFF.
      */
-    override fun destination(): ILogGroup = unwrap(this).getDestination().let(ILogGroup::wrap)
+    override fun destination(): ILogGroup? = unwrap(this).getDestination()?.let(ILogGroup::wrap)
 
     /**
      * Determines whether execution data is included in your log.

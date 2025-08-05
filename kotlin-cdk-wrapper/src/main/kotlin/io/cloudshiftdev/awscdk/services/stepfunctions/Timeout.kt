@@ -27,6 +27,11 @@ public abstract class Timeout(
   cdkObject: software.amazon.awscdk.services.stepfunctions.Timeout,
 ) : CdkObject(cdkObject) {
   /**
+   * JSONata expression for this timeout.
+   */
+  public open fun jsonataExpression(): String? = unwrap(this).getJsonataExpression()
+
+  /**
    * Path for this timeout.
    */
   public open fun path(): String? = unwrap(this).getPath()
@@ -46,6 +51,9 @@ public abstract class Timeout(
 
     public fun duration(duration: Duration): Timeout =
         software.amazon.awscdk.services.stepfunctions.Timeout.duration(duration.let(Duration.Companion::unwrap)).let(Timeout::wrap)
+
+    public fun jsonata(jsonataExpression: String): Timeout =
+        software.amazon.awscdk.services.stepfunctions.Timeout.jsonata(jsonataExpression).let(Timeout::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.Timeout): Timeout =
         CdkObjectWrappers.wrap(cdkObject) as? Timeout ?: Wrapper(cdkObject)

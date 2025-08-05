@@ -306,6 +306,8 @@ public open class CfnScalableTarget(
      * .
      * * Amazon ElastiCache replication group - The resource type is `replication-group` and the
      * unique identifier is the replication group name. Example: `replication-group/mycluster` .
+     * * Amazon ElastiCache cache cluster - The resource type is `cache-cluster` and the unique
+     * identifier is the cache cluster name. Example: `cache-cluster/mycluster` .
      * * Neptune cluster - The resource type is `cluster` and the unique identifier is the cluster
      * name. Example: `cluster:mycluster` .
      * * SageMaker serverless endpoint - The resource type is `variant` and the unique identifier is
@@ -377,6 +379,8 @@ public open class CfnScalableTarget(
      * Keyspaces table.
      * * `kafka:broker-storage:VolumeSize` - The provisioned volume size (in GiB) for brokers in an
      * Amazon MSK cluster.
+     * * `elasticache:cache-cluster:Nodes` - The number of nodes for an Amazon ElastiCache cache
+     * cluster.
      * * `elasticache:replication-group:NodeGroups` - The number of node groups for an Amazon
      * ElastiCache replication group.
      * * `elasticache:replication-group:Replicas` - The number of replicas per node group for an
@@ -581,6 +585,8 @@ public open class CfnScalableTarget(
      * .
      * * Amazon ElastiCache replication group - The resource type is `replication-group` and the
      * unique identifier is the replication group name. Example: `replication-group/mycluster` .
+     * * Amazon ElastiCache cache cluster - The resource type is `cache-cluster` and the unique
+     * identifier is the cache cluster name. Example: `cache-cluster/mycluster` .
      * * Neptune cluster - The resource type is `cluster` and the unique identifier is the cluster
      * name. Example: `cluster:mycluster` .
      * * SageMaker serverless endpoint - The resource type is `variant` and the unique identifier is
@@ -656,6 +662,8 @@ public open class CfnScalableTarget(
      * Keyspaces table.
      * * `kafka:broker-storage:VolumeSize` - The provisioned volume size (in GiB) for brokers in an
      * Amazon MSK cluster.
+     * * `elasticache:cache-cluster:Nodes` - The number of nodes for an Amazon ElastiCache cache
+     * cluster.
      * * `elasticache:replication-group:NodeGroups` - The number of node groups for an Amazon
      * ElastiCache replication group.
      * * `elasticache:replication-group:Replicas` - The number of replicas per node group for an
@@ -1041,12 +1049,12 @@ public open class CfnScalableTarget(
       /**
        * @param endTime The date and time that the action is scheduled to end, in UTC.
        */
-      public fun endTime(endTime: IResolvable)
+      public fun endTime(endTime: Instant)
 
       /**
        * @param endTime The date and time that the action is scheduled to end, in UTC.
        */
-      public fun endTime(endTime: Instant)
+      public fun endTime(endTime: IResolvable)
 
       /**
        * @param scalableTargetAction The new minimum and maximum capacity.
@@ -1108,12 +1116,12 @@ public open class CfnScalableTarget(
       /**
        * @param startTime The date and time that the action is scheduled to begin, in UTC.
        */
-      public fun startTime(startTime: IResolvable)
+      public fun startTime(startTime: Instant)
 
       /**
        * @param startTime The date and time that the action is scheduled to begin, in UTC.
        */
-      public fun startTime(startTime: Instant)
+      public fun startTime(startTime: IResolvable)
 
       /**
        * @param timezone The time zone used when referring to the date and time of a scheduled
@@ -1131,15 +1139,15 @@ public open class CfnScalableTarget(
       /**
        * @param endTime The date and time that the action is scheduled to end, in UTC.
        */
-      override fun endTime(endTime: IResolvable) {
-        cdkBuilder.endTime(endTime.let(IResolvable.Companion::unwrap))
+      override fun endTime(endTime: Instant) {
+        cdkBuilder.endTime(endTime)
       }
 
       /**
        * @param endTime The date and time that the action is scheduled to end, in UTC.
        */
-      override fun endTime(endTime: Instant) {
-        cdkBuilder.endTime(endTime)
+      override fun endTime(endTime: IResolvable) {
+        cdkBuilder.endTime(endTime.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1211,15 +1219,15 @@ public open class CfnScalableTarget(
       /**
        * @param startTime The date and time that the action is scheduled to begin, in UTC.
        */
-      override fun startTime(startTime: IResolvable) {
-        cdkBuilder.startTime(startTime.let(IResolvable.Companion::unwrap))
+      override fun startTime(startTime: Instant) {
+        cdkBuilder.startTime(startTime)
       }
 
       /**
        * @param startTime The date and time that the action is scheduled to begin, in UTC.
        */
-      override fun startTime(startTime: Instant) {
-        cdkBuilder.startTime(startTime)
+      override fun startTime(startTime: IResolvable) {
+        cdkBuilder.startTime(startTime.let(IResolvable.Companion::unwrap))
       }
 
       /**

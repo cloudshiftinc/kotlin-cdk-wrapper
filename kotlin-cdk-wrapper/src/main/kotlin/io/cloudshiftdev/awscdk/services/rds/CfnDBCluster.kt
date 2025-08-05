@@ -108,6 +108,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .backupRetentionPeriod(123)
  * .clusterScalabilityType("clusterScalabilityType")
  * .copyTagsToSnapshot(false)
+ * .databaseInsightsMode("databaseInsightsMode")
  * .databaseName("databaseName")
  * .dbClusterIdentifier("dbClusterIdentifier")
  * .dbClusterInstanceClass("dbClusterInstanceClass")
@@ -115,6 +116,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .dbInstanceParameterGroupName("dbInstanceParameterGroupName")
  * .dbSubnetGroupName("dbSubnetGroupName")
  * .dbSystemId("dbSystemId")
+ * .deleteAutomatedBackups(false)
  * .deletionProtection(false)
  * .domain("domain")
  * .domainIamRoleName("domainIamRoleName")
@@ -161,6 +163,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .serverlessV2ScalingConfiguration(ServerlessV2ScalingConfigurationProperty.builder()
  * .maxCapacity(123)
  * .minCapacity(123)
+ * .secondsUntilAutoPause(123)
  * .build())
  * .snapshotIdentifier("snapshotIdentifier")
  * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
@@ -425,6 +428,18 @@ public open class CfnDBCluster(
   }
 
   /**
+   * The mode of Database Insights to enable for the DB cluster.
+   */
+  public open fun databaseInsightsMode(): String? = unwrap(this).getDatabaseInsightsMode()
+
+  /**
+   * The mode of Database Insights to enable for the DB cluster.
+   */
+  public open fun databaseInsightsMode(`value`: String) {
+    unwrap(this).setDatabaseInsightsMode(`value`)
+  }
+
+  /**
    * The name of your database.
    */
   public open fun databaseName(): String? = unwrap(this).getDatabaseName()
@@ -516,6 +531,25 @@ public open class CfnDBCluster(
    */
   public open fun dbSystemId(`value`: String) {
     unwrap(this).setDbSystemId(`value`)
+  }
+
+  /**
+   * Specifies whether to remove automated backups immediately after the DB cluster is deleted.
+   */
+  public open fun deleteAutomatedBackups(): Any? = unwrap(this).getDeleteAutomatedBackups()
+
+  /**
+   * Specifies whether to remove automated backups immediately after the DB cluster is deleted.
+   */
+  public open fun deleteAutomatedBackups(`value`: Boolean) {
+    unwrap(this).setDeleteAutomatedBackups(`value`)
+  }
+
+  /**
+   * Specifies whether to remove automated backups immediately after the DB cluster is deleted.
+   */
+  public open fun deleteAutomatedBackups(`value`: IResolvable) {
+    unwrap(this).setDeleteAutomatedBackups(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1293,7 +1327,12 @@ public open class CfnDBCluster(
      *
      * By default, minor engine upgrades are applied automatically.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB cluster.
+     *
+     * For more information about automatic minor version upgrades, see [Automatically upgrading the
+     * minor engine
+     * version](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-autominorversionupgrade)
      * @param autoMinorVersionUpgrade Specifies whether minor engine upgrades are applied
@@ -1307,7 +1346,12 @@ public open class CfnDBCluster(
      *
      * By default, minor engine upgrades are applied automatically.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB cluster.
+     *
+     * For more information about automatic minor version upgrades, see [Automatically upgrading the
+     * minor engine
+     * version](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-autominorversionupgrade)
      * @param autoMinorVersionUpgrade Specifies whether minor engine upgrades are applied
@@ -1389,6 +1433,10 @@ public open class CfnDBCluster(
      * to create a DB shard group for horizontal scaling (sharding) capabilities. When set to
      * `standard` (the default), the cluster uses normal DB instance creation.
      *
+     * *Important:* Automated backup retention isn't supported with Aurora Limitless Database
+     * clusters. If you set this property to `limitless` , you cannot set `DeleteAutomatedBackups` to
+     * `false` . To create a backup, use manual snapshots instead.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-clusterscalabilitytype)
      * @param clusterScalabilityType Specifies the scalability mode of the Aurora DB cluster. 
      */
@@ -1421,6 +1469,19 @@ public open class CfnDBCluster(
      * to snapshots of the DB cluster. 
      */
     public fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable)
+
+    /**
+     * The mode of Database Insights to enable for the DB cluster.
+     *
+     * If you set this value to `advanced` , you must also set the `PerformanceInsightsEnabled`
+     * parameter to `true` and the `PerformanceInsightsRetentionPeriod` parameter to 465.
+     *
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-databaseinsightsmode)
+     * @param databaseInsightsMode The mode of Database Insights to enable for the DB cluster. 
+     */
+    public fun databaseInsightsMode(databaseInsightsMode: String)
 
     /**
      * The name of your database.
@@ -1546,6 +1607,32 @@ public open class CfnDBCluster(
      * @param dbSystemId Reserved for future use. 
      */
     public fun dbSystemId(dbSystemId: String)
+
+    /**
+     * Specifies whether to remove automated backups immediately after the DB cluster is deleted.
+     *
+     * This parameter isn't case-sensitive. The default is to remove automated backups immediately
+     * after the DB cluster is deleted, unless the AWS Backup policy specifies a point-in-time restore
+     * rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-deleteautomatedbackups)
+     * @param deleteAutomatedBackups Specifies whether to remove automated backups immediately after
+     * the DB cluster is deleted. 
+     */
+    public fun deleteAutomatedBackups(deleteAutomatedBackups: Boolean)
+
+    /**
+     * Specifies whether to remove automated backups immediately after the DB cluster is deleted.
+     *
+     * This parameter isn't case-sensitive. The default is to remove automated backups immediately
+     * after the DB cluster is deleted, unless the AWS Backup policy specifies a point-in-time restore
+     * rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-deleteautomatedbackups)
+     * @param deleteAutomatedBackups Specifies whether to remove automated backups immediately after
+     * the DB cluster is deleted. 
+     */
+    public fun deleteAutomatedBackups(deleteAutomatedBackups: IResolvable)
 
     /**
      * A value that indicates whether the DB cluster has deletion protection enabled.
@@ -1701,11 +1788,6 @@ public open class CfnDBCluster(
      * running SQL queries on the DB cluster. You can also query your database from inside the RDS
      * console with the RDS query editor.
      *
-     * RDS Data API is supported with the following DB clusters:
-     *
-     * * Aurora PostgreSQL Serverless v2 and provisioned
-     * * Aurora PostgreSQL and Aurora MySQL Serverless v1
-     *
      * For more information, see [Using RDS Data
      * API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon
      * Aurora User Guide* .
@@ -1725,11 +1807,6 @@ public open class CfnDBCluster(
      * When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for
      * running SQL queries on the DB cluster. You can also query your database from inside the RDS
      * console with the RDS query editor.
-     *
-     * RDS Data API is supported with the following DB clusters:
-     *
-     * * Aurora PostgreSQL Serverless v2 and provisioned
-     * * Aurora PostgreSQL and Aurora MySQL Serverless v1
      *
      * For more information, see [Using RDS Data
      * API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon
@@ -1839,11 +1916,11 @@ public open class CfnDBCluster(
      * Extended Support, you can run the selected major engine version on your DB cluster past the end
      * of standard support for that engine version. For more information, see the following sections:
      *
-     * * Amazon Aurora - [Using Amazon RDS Extended
-     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+     * * Amazon Aurora - [Amazon RDS Extended Support with Amazon
+     * Aurora](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
      * the *Amazon Aurora User Guide*
-     * * Amazon RDS - [Using Amazon RDS Extended
-     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
+     * * Amazon RDS - [Amazon RDS Extended Support with Amazon
+     * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
      * *Amazon RDS User Guide*
      *
      * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
@@ -2080,6 +2157,14 @@ public open class CfnDBCluster(
     /**
      * The secret managed by RDS in AWS Secrets Manager for the master user password.
      *
+     *
+     * When you restore a DB cluster from a snapshot, Amazon RDS generates a new secret instead of
+     * reusing the secret specified in the `SecretArn` property. This ensures that the restored DB
+     * cluster is securely managed with a dedicated secret. To maintain consistent integration with
+     * your application, you might need to update resource configurations to reference the newly
+     * created secret.
+     *
+     *
      * For more information, see [Password management with AWS Secrets
      * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the
      * *Amazon RDS User Guide* and [Password management with AWS Secrets
@@ -2095,6 +2180,14 @@ public open class CfnDBCluster(
     /**
      * The secret managed by RDS in AWS Secrets Manager for the master user password.
      *
+     *
+     * When you restore a DB cluster from a snapshot, Amazon RDS generates a new secret instead of
+     * reusing the secret specified in the `SecretArn` property. This ensures that the restored DB
+     * cluster is securely managed with a dedicated secret. To maintain consistent integration with
+     * your application, you might need to update resource configurations to reference the newly
+     * created secret.
+     *
+     *
      * For more information, see [Password management with AWS Secrets
      * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the
      * *Amazon RDS User Guide* and [Password management with AWS Secrets
@@ -2109,6 +2202,14 @@ public open class CfnDBCluster(
 
     /**
      * The secret managed by RDS in AWS Secrets Manager for the master user password.
+     *
+     *
+     * When you restore a DB cluster from a snapshot, Amazon RDS generates a new secret instead of
+     * reusing the secret specified in the `SecretArn` property. This ensures that the restored DB
+     * cluster is securely managed with a dedicated secret. To maintain consistent integration with
+     * your application, you might need to update resource configurations to reference the newly
+     * created secret.
+     *
      *
      * For more information, see [Password management with AWS Secrets
      * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the
@@ -2150,7 +2251,7 @@ public open class CfnDBCluster(
      * If `MonitoringRoleArn` is specified, also set `MonitoringInterval` to a value other than `0`
      * .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * Valid Values: `0 | 1 | 5 | 10 | 15 | 30 | 60`
      *
@@ -2174,7 +2275,7 @@ public open class CfnDBCluster(
      * If `MonitoringInterval` is set to a value other than `0` , supply a `MonitoringRoleArn`
      * value.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-monitoringrolearn)
      * @param monitoringRoleArn The Amazon Resource Name (ARN) for the IAM role that permits RDS to
@@ -2211,7 +2312,7 @@ public open class CfnDBCluster(
      * Insights](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html) in the
      * *Amazon RDS User Guide* .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-performanceinsightsenabled)
      * @param performanceInsightsEnabled Specifies whether to turn on Performance Insights for the
@@ -2226,7 +2327,7 @@ public open class CfnDBCluster(
      * Insights](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html) in the
      * *Amazon RDS User Guide* .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-performanceinsightsenabled)
      * @param performanceInsightsEnabled Specifies whether to turn on Performance Insights for the
@@ -2243,7 +2344,7 @@ public open class CfnDBCluster(
      * default KMS key. There is a default KMS key for your AWS account . Your AWS account has a
      * different default KMS key for each AWS Region .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-performanceinsightskmskeyid)
      * @param performanceInsightsKmsKeyId The AWS KMS key identifier for encryption of Performance
@@ -2254,7 +2355,10 @@ public open class CfnDBCluster(
     /**
      * The number of days to retain Performance Insights data.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * When creating a DB cluster without enabling Performance Insights, you can't specify the
+     * parameter `PerformanceInsightsRetentionPeriod` .
+     *
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * Valid Values:
      *
@@ -2328,8 +2432,8 @@ public open class CfnDBCluster(
      *
      * The default is a 30-minute window selected at random from an 8-hour block of time for each
      * AWS Region, occurring on a random day of the week. To see the time blocks available, see
-     * [Adjusting the Preferred DB Cluster Maintenance
-     * Window](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora)
+     * [Maintaining an Amazon Aurora DB
+     * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora)
      * in the *Amazon Aurora User Guide.*
      *
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -2608,6 +2712,8 @@ public open class CfnDBCluster(
      * Constraints:
      *
      * * Must match the identifier of an existing DBCluster.
+     * * Cannot be specified if `SourceDbClusterResourceId` is specified. You must specify either
+     * `SourceDBClusterIdentifier` or `SourceDbClusterResourceId` , but not both.
      *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      *
@@ -2883,7 +2989,12 @@ public open class CfnDBCluster(
      *
      * By default, minor engine upgrades are applied automatically.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB cluster.
+     *
+     * For more information about automatic minor version upgrades, see [Automatically upgrading the
+     * minor engine
+     * version](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-autominorversionupgrade)
      * @param autoMinorVersionUpgrade Specifies whether minor engine upgrades are applied
@@ -2899,7 +3010,12 @@ public open class CfnDBCluster(
      *
      * By default, minor engine upgrades are applied automatically.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB cluster.
+     *
+     * For more information about automatic minor version upgrades, see [Automatically upgrading the
+     * minor engine
+     * version](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-autominorversionupgrade)
      * @param autoMinorVersionUpgrade Specifies whether minor engine upgrades are applied
@@ -2990,6 +3106,10 @@ public open class CfnDBCluster(
      * to create a DB shard group for horizontal scaling (sharding) capabilities. When set to
      * `standard` (the default), the cluster uses normal DB instance creation.
      *
+     * *Important:* Automated backup retention isn't supported with Aurora Limitless Database
+     * clusters. If you set this property to `limitless` , you cannot set `DeleteAutomatedBackups` to
+     * `false` . To create a backup, use manual snapshots instead.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-clusterscalabilitytype)
      * @param clusterScalabilityType Specifies the scalability mode of the Aurora DB cluster. 
      */
@@ -3027,6 +3147,21 @@ public open class CfnDBCluster(
      */
     override fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
       cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The mode of Database Insights to enable for the DB cluster.
+     *
+     * If you set this value to `advanced` , you must also set the `PerformanceInsightsEnabled`
+     * parameter to `true` and the `PerformanceInsightsRetentionPeriod` parameter to 465.
+     *
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-databaseinsightsmode)
+     * @param databaseInsightsMode The mode of Database Insights to enable for the DB cluster. 
+     */
+    override fun databaseInsightsMode(databaseInsightsMode: String) {
+      cdkBuilder.databaseInsightsMode(databaseInsightsMode)
     }
 
     /**
@@ -3166,6 +3301,36 @@ public open class CfnDBCluster(
      */
     override fun dbSystemId(dbSystemId: String) {
       cdkBuilder.dbSystemId(dbSystemId)
+    }
+
+    /**
+     * Specifies whether to remove automated backups immediately after the DB cluster is deleted.
+     *
+     * This parameter isn't case-sensitive. The default is to remove automated backups immediately
+     * after the DB cluster is deleted, unless the AWS Backup policy specifies a point-in-time restore
+     * rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-deleteautomatedbackups)
+     * @param deleteAutomatedBackups Specifies whether to remove automated backups immediately after
+     * the DB cluster is deleted. 
+     */
+    override fun deleteAutomatedBackups(deleteAutomatedBackups: Boolean) {
+      cdkBuilder.deleteAutomatedBackups(deleteAutomatedBackups)
+    }
+
+    /**
+     * Specifies whether to remove automated backups immediately after the DB cluster is deleted.
+     *
+     * This parameter isn't case-sensitive. The default is to remove automated backups immediately
+     * after the DB cluster is deleted, unless the AWS Backup policy specifies a point-in-time restore
+     * rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-deleteautomatedbackups)
+     * @param deleteAutomatedBackups Specifies whether to remove automated backups immediately after
+     * the DB cluster is deleted. 
+     */
+    override fun deleteAutomatedBackups(deleteAutomatedBackups: IResolvable) {
+      cdkBuilder.deleteAutomatedBackups(deleteAutomatedBackups.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3337,11 +3502,6 @@ public open class CfnDBCluster(
      * running SQL queries on the DB cluster. You can also query your database from inside the RDS
      * console with the RDS query editor.
      *
-     * RDS Data API is supported with the following DB clusters:
-     *
-     * * Aurora PostgreSQL Serverless v2 and provisioned
-     * * Aurora PostgreSQL and Aurora MySQL Serverless v1
-     *
      * For more information, see [Using RDS Data
      * API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon
      * Aurora User Guide* .
@@ -3363,11 +3523,6 @@ public open class CfnDBCluster(
      * When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for
      * running SQL queries on the DB cluster. You can also query your database from inside the RDS
      * console with the RDS query editor.
-     *
-     * RDS Data API is supported with the following DB clusters:
-     *
-     * * Aurora PostgreSQL Serverless v2 and provisioned
-     * * Aurora PostgreSQL and Aurora MySQL Serverless v1
      *
      * For more information, see [Using RDS Data
      * API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon
@@ -3489,11 +3644,11 @@ public open class CfnDBCluster(
      * Extended Support, you can run the selected major engine version on your DB cluster past the end
      * of standard support for that engine version. For more information, see the following sections:
      *
-     * * Amazon Aurora - [Using Amazon RDS Extended
-     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+     * * Amazon Aurora - [Amazon RDS Extended Support with Amazon
+     * Aurora](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
      * the *Amazon Aurora User Guide*
-     * * Amazon RDS - [Using Amazon RDS Extended
-     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
+     * * Amazon RDS - [Amazon RDS Extended Support with Amazon
+     * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
      * *Amazon RDS User Guide*
      *
      * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
@@ -3748,6 +3903,14 @@ public open class CfnDBCluster(
     /**
      * The secret managed by RDS in AWS Secrets Manager for the master user password.
      *
+     *
+     * When you restore a DB cluster from a snapshot, Amazon RDS generates a new secret instead of
+     * reusing the secret specified in the `SecretArn` property. This ensures that the restored DB
+     * cluster is securely managed with a dedicated secret. To maintain consistent integration with
+     * your application, you might need to update resource configurations to reference the newly
+     * created secret.
+     *
+     *
      * For more information, see [Password management with AWS Secrets
      * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the
      * *Amazon RDS User Guide* and [Password management with AWS Secrets
@@ -3765,6 +3928,14 @@ public open class CfnDBCluster(
     /**
      * The secret managed by RDS in AWS Secrets Manager for the master user password.
      *
+     *
+     * When you restore a DB cluster from a snapshot, Amazon RDS generates a new secret instead of
+     * reusing the secret specified in the `SecretArn` property. This ensures that the restored DB
+     * cluster is securely managed with a dedicated secret. To maintain consistent integration with
+     * your application, you might need to update resource configurations to reference the newly
+     * created secret.
+     *
+     *
      * For more information, see [Password management with AWS Secrets
      * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the
      * *Amazon RDS User Guide* and [Password management with AWS Secrets
@@ -3781,6 +3952,14 @@ public open class CfnDBCluster(
 
     /**
      * The secret managed by RDS in AWS Secrets Manager for the master user password.
+     *
+     *
+     * When you restore a DB cluster from a snapshot, Amazon RDS generates a new secret instead of
+     * reusing the secret specified in the `SecretArn` property. This ensures that the restored DB
+     * cluster is securely managed with a dedicated secret. To maintain consistent integration with
+     * your application, you might need to update resource configurations to reference the newly
+     * created secret.
+     *
      *
      * For more information, see [Password management with AWS Secrets
      * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the
@@ -3825,7 +4004,7 @@ public open class CfnDBCluster(
      * If `MonitoringRoleArn` is specified, also set `MonitoringInterval` to a value other than `0`
      * .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * Valid Values: `0 | 1 | 5 | 10 | 15 | 30 | 60`
      *
@@ -3851,7 +4030,7 @@ public open class CfnDBCluster(
      * If `MonitoringInterval` is set to a value other than `0` , supply a `MonitoringRoleArn`
      * value.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-monitoringrolearn)
      * @param monitoringRoleArn The Amazon Resource Name (ARN) for the IAM role that permits RDS to
@@ -3892,7 +4071,7 @@ public open class CfnDBCluster(
      * Insights](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html) in the
      * *Amazon RDS User Guide* .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-performanceinsightsenabled)
      * @param performanceInsightsEnabled Specifies whether to turn on Performance Insights for the
@@ -3909,7 +4088,7 @@ public open class CfnDBCluster(
      * Insights](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html) in the
      * *Amazon RDS User Guide* .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-performanceinsightsenabled)
      * @param performanceInsightsEnabled Specifies whether to turn on Performance Insights for the
@@ -3928,7 +4107,7 @@ public open class CfnDBCluster(
      * default KMS key. There is a default KMS key for your AWS account . Your AWS account has a
      * different default KMS key for each AWS Region .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-performanceinsightskmskeyid)
      * @param performanceInsightsKmsKeyId The AWS KMS key identifier for encryption of Performance
@@ -3941,7 +4120,10 @@ public open class CfnDBCluster(
     /**
      * The number of days to retain Performance Insights data.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * When creating a DB cluster without enabling Performance Insights, you can't specify the
+     * parameter `PerformanceInsightsRetentionPeriod` .
+     *
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * Valid Values:
      *
@@ -4021,8 +4203,8 @@ public open class CfnDBCluster(
      *
      * The default is a 30-minute window selected at random from an 8-hour block of time for each
      * AWS Region, occurring on a random day of the week. To see the time blocks available, see
-     * [Adjusting the Preferred DB Cluster Maintenance
-     * Window](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora)
+     * [Maintaining an Amazon Aurora DB
+     * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora)
      * in the *Amazon Aurora User Guide.*
      *
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -4326,6 +4508,8 @@ public open class CfnDBCluster(
      * Constraints:
      *
      * * Must match the identifier of an existing DBCluster.
+     * * Cannot be specified if `SourceDbClusterResourceId` is specified. You must specify either
+     * `SourceDBClusterIdentifier` or `SourceDbClusterResourceId` , but not both.
      *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      *
@@ -5494,6 +5678,7 @@ public open class CfnDBCluster(
    * ServerlessV2ScalingConfigurationProperty.builder()
    * .maxCapacity(123)
    * .minCapacity(123)
+   * .secondsUntilAutoPause(123)
    * .build();
    * ```
    *
@@ -5535,6 +5720,17 @@ public open class CfnDBCluster(
     public fun minCapacity(): Number? = unwrap(this).getMinCapacity()
 
     /**
+     * Specifies the number of seconds an Aurora Serverless v2 DB instance must be idle before
+     * Aurora attempts to automatically pause it.
+     *
+     * Specify a value between 300 seconds (five minutes) and 86,400 seconds (one day). The default
+     * is 300 seconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration-secondsuntilautopause)
+     */
+    public fun secondsUntilAutoPause(): Number? = unwrap(this).getSecondsUntilAutoPause()
+
+    /**
      * A builder for [ServerlessV2ScalingConfigurationProperty]
      */
     @CdkDslMarker
@@ -5567,6 +5763,14 @@ public open class CfnDBCluster(
        * smallest value that you can use is 0.5.
        */
       public fun minCapacity(minCapacity: Number)
+
+      /**
+       * @param secondsUntilAutoPause Specifies the number of seconds an Aurora Serverless v2 DB
+       * instance must be idle before Aurora attempts to automatically pause it.
+       * Specify a value between 300 seconds (five minutes) and 86,400 seconds (one day). The
+       * default is 300 seconds.
+       */
+      public fun secondsUntilAutoPause(secondsUntilAutoPause: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -5606,6 +5810,16 @@ public open class CfnDBCluster(
        */
       override fun minCapacity(minCapacity: Number) {
         cdkBuilder.minCapacity(minCapacity)
+      }
+
+      /**
+       * @param secondsUntilAutoPause Specifies the number of seconds an Aurora Serverless v2 DB
+       * instance must be idle before Aurora attempts to automatically pause it.
+       * Specify a value between 300 seconds (five minutes) and 86,400 seconds (one day). The
+       * default is 300 seconds.
+       */
+      override fun secondsUntilAutoPause(secondsUntilAutoPause: Number) {
+        cdkBuilder.secondsUntilAutoPause(secondsUntilAutoPause)
       }
 
       public fun build():
@@ -5651,6 +5865,17 @@ public open class CfnDBCluster(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration-mincapacity)
        */
       override fun minCapacity(): Number? = unwrap(this).getMinCapacity()
+
+      /**
+       * Specifies the number of seconds an Aurora Serverless v2 DB instance must be idle before
+       * Aurora attempts to automatically pause it.
+       *
+       * Specify a value between 300 seconds (five minutes) and 86,400 seconds (one day). The
+       * default is 300 seconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration-secondsuntilautopause)
+       */
+      override fun secondsUntilAutoPause(): Number? = unwrap(this).getSecondsUntilAutoPause()
     }
 
     public companion object {

@@ -15,8 +15,7 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.kinesisfirehose.alpha.*;
- * import io.cloudshiftdev.awscdk.services.kinesisfirehose.destinations.alpha.*;
+ * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
  * LogGroup logGroupDestination = LogGroup.Builder.create(this, "LogGroupLambdaAudit")
  * .logGroupName("auditDestinationForCDK")
  * .build();
@@ -58,14 +57,14 @@ public open class DataProtectionPolicy(
   @CdkDslMarker
   public interface Builder {
     /**
-     * Amazon Kinesis Data Firehose delivery stream to send audit findings to.
+     * Amazon Data Firehose delivery stream to send audit findings to.
      *
      * The delivery stream must already exist.
      *
      * Default: - no firehose delivery stream audit destination
      *
-     * @param deliveryStreamNameAuditDestination Amazon Kinesis Data Firehose delivery stream to
-     * send audit findings to. 
+     * @param deliveryStreamNameAuditDestination Amazon Data Firehose delivery stream to send audit
+     * findings to. 
      */
     public fun deliveryStreamNameAuditDestination(deliveryStreamNameAuditDestination: String)
 
@@ -139,14 +138,14 @@ public open class DataProtectionPolicy(
         software.amazon.awscdk.services.logs.DataProtectionPolicy.Builder.create()
 
     /**
-     * Amazon Kinesis Data Firehose delivery stream to send audit findings to.
+     * Amazon Data Firehose delivery stream to send audit findings to.
      *
      * The delivery stream must already exist.
      *
      * Default: - no firehose delivery stream audit destination
      *
-     * @param deliveryStreamNameAuditDestination Amazon Kinesis Data Firehose delivery stream to
-     * send audit findings to. 
+     * @param deliveryStreamNameAuditDestination Amazon Data Firehose delivery stream to send audit
+     * findings to. 
      */
     override fun deliveryStreamNameAuditDestination(deliveryStreamNameAuditDestination: String) {
       cdkBuilder.deliveryStreamNameAuditDestination(deliveryStreamNameAuditDestination)

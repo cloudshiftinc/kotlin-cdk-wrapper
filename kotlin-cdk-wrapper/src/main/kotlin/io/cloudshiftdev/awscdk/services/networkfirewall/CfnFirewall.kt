@@ -46,6 +46,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .deleteProtection(false)
  * .description("description")
+ * .enabledAnalysisTypes(List.of("enabledAnalysisTypes"))
  * .firewallPolicyChangeProtection(false)
  * .subnetChangeProtection(false)
  * .tags(List.of(CfnTag.builder()
@@ -130,6 +131,25 @@ public open class CfnFirewall(
   }
 
   /**
+   * An optional setting indicating the specific traffic analysis types to enable on the firewall.
+   */
+  public open fun enabledAnalysisTypes(): List<String> = unwrap(this).getEnabledAnalysisTypes() ?:
+      emptyList()
+
+  /**
+   * An optional setting indicating the specific traffic analysis types to enable on the firewall.
+   */
+  public open fun enabledAnalysisTypes(`value`: List<String>) {
+    unwrap(this).setEnabledAnalysisTypes(`value`)
+  }
+
+  /**
+   * An optional setting indicating the specific traffic analysis types to enable on the firewall.
+   */
+  public open fun enabledAnalysisTypes(vararg `value`: String): Unit =
+      enabledAnalysisTypes(`value`.toList())
+
+  /**
    * The descriptive name of the firewall.
    */
   public open fun firewallName(): String = unwrap(this).getFirewallName()
@@ -208,26 +228,26 @@ public open class CfnFirewall(
   }
 
   /**
-   * The public subnets that Network Firewall is using for the firewall.
+   * The primary public subnets that Network Firewall is using for the firewall.
    */
   public open fun subnetMappings(): Any = unwrap(this).getSubnetMappings()
 
   /**
-   * The public subnets that Network Firewall is using for the firewall.
+   * The primary public subnets that Network Firewall is using for the firewall.
    */
   public open fun subnetMappings(`value`: IResolvable) {
     unwrap(this).setSubnetMappings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The public subnets that Network Firewall is using for the firewall.
+   * The primary public subnets that Network Firewall is using for the firewall.
    */
   public open fun subnetMappings(`value`: List<Any>) {
     unwrap(this).setSubnetMappings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * The public subnets that Network Firewall is using for the firewall.
+   * The primary public subnets that Network Firewall is using for the firewall.
    */
   public open fun subnetMappings(vararg `value`: Any): Unit = subnetMappings(`value`.toList())
 
@@ -302,6 +322,24 @@ public open class CfnFirewall(
      * @param description A description of the firewall. 
      */
     public fun description(description: String)
+
+    /**
+     * An optional setting indicating the specific traffic analysis types to enable on the firewall.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-enabledanalysistypes)
+     * @param enabledAnalysisTypes An optional setting indicating the specific traffic analysis
+     * types to enable on the firewall. 
+     */
+    public fun enabledAnalysisTypes(enabledAnalysisTypes: List<String>)
+
+    /**
+     * An optional setting indicating the specific traffic analysis types to enable on the firewall.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-enabledanalysistypes)
+     * @param enabledAnalysisTypes An optional setting indicating the specific traffic analysis
+     * types to enable on the firewall. 
+     */
+    public fun enabledAnalysisTypes(vararg enabledAnalysisTypes: String)
 
     /**
      * The descriptive name of the firewall.
@@ -379,32 +417,68 @@ public open class CfnFirewall(
     public fun subnetChangeProtection(subnetChangeProtection: IResolvable)
 
     /**
-     * The public subnets that Network Firewall is using for the firewall.
+     * The primary public subnets that Network Firewall is using for the firewall.
      *
-     * Each subnet must belong to a different Availability Zone.
+     * Network Firewall creates a firewall endpoint in each subnet. Create a subnet mapping for each
+     * Availability Zone where you want to use the firewall.
+     *
+     * These subnets are all defined for a single, primary VPC, and each must belong to a different
+     * Availability Zone. Each of these subnets establishes the availability of the firewall in its
+     * Availability Zone.
+     *
+     * In addition to these subnets, you can define other endpoints for the firewall in
+     * `VpcEndpointAssociation` resources. You can define these additional endpoints for any VPC, and
+     * for any of the Availability Zones where the firewall resource already has a subnet mapping. VPC
+     * endpoint associations give you the ability to protect multiple VPCs using a single firewall, and
+     * to define multiple firewall endpoints for a VPC in a single Availability Zone.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-subnetmappings)
-     * @param subnetMappings The public subnets that Network Firewall is using for the firewall. 
+     * @param subnetMappings The primary public subnets that Network Firewall is using for the
+     * firewall. 
      */
     public fun subnetMappings(subnetMappings: IResolvable)
 
     /**
-     * The public subnets that Network Firewall is using for the firewall.
+     * The primary public subnets that Network Firewall is using for the firewall.
      *
-     * Each subnet must belong to a different Availability Zone.
+     * Network Firewall creates a firewall endpoint in each subnet. Create a subnet mapping for each
+     * Availability Zone where you want to use the firewall.
+     *
+     * These subnets are all defined for a single, primary VPC, and each must belong to a different
+     * Availability Zone. Each of these subnets establishes the availability of the firewall in its
+     * Availability Zone.
+     *
+     * In addition to these subnets, you can define other endpoints for the firewall in
+     * `VpcEndpointAssociation` resources. You can define these additional endpoints for any VPC, and
+     * for any of the Availability Zones where the firewall resource already has a subnet mapping. VPC
+     * endpoint associations give you the ability to protect multiple VPCs using a single firewall, and
+     * to define multiple firewall endpoints for a VPC in a single Availability Zone.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-subnetmappings)
-     * @param subnetMappings The public subnets that Network Firewall is using for the firewall. 
+     * @param subnetMappings The primary public subnets that Network Firewall is using for the
+     * firewall. 
      */
     public fun subnetMappings(subnetMappings: List<Any>)
 
     /**
-     * The public subnets that Network Firewall is using for the firewall.
+     * The primary public subnets that Network Firewall is using for the firewall.
      *
-     * Each subnet must belong to a different Availability Zone.
+     * Network Firewall creates a firewall endpoint in each subnet. Create a subnet mapping for each
+     * Availability Zone where you want to use the firewall.
+     *
+     * These subnets are all defined for a single, primary VPC, and each must belong to a different
+     * Availability Zone. Each of these subnets establishes the availability of the firewall in its
+     * Availability Zone.
+     *
+     * In addition to these subnets, you can define other endpoints for the firewall in
+     * `VpcEndpointAssociation` resources. You can define these additional endpoints for any VPC, and
+     * for any of the Availability Zones where the firewall resource already has a subnet mapping. VPC
+     * endpoint associations give you the ability to protect multiple VPCs using a single firewall, and
+     * to define multiple firewall endpoints for a VPC in a single Availability Zone.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-subnetmappings)
-     * @param subnetMappings The public subnets that Network Firewall is using for the firewall. 
+     * @param subnetMappings The primary public subnets that Network Firewall is using for the
+     * firewall. 
      */
     public fun subnetMappings(vararg subnetMappings: Any)
 
@@ -487,6 +561,27 @@ public open class CfnFirewall(
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
+
+    /**
+     * An optional setting indicating the specific traffic analysis types to enable on the firewall.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-enabledanalysistypes)
+     * @param enabledAnalysisTypes An optional setting indicating the specific traffic analysis
+     * types to enable on the firewall. 
+     */
+    override fun enabledAnalysisTypes(enabledAnalysisTypes: List<String>) {
+      cdkBuilder.enabledAnalysisTypes(enabledAnalysisTypes)
+    }
+
+    /**
+     * An optional setting indicating the specific traffic analysis types to enable on the firewall.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-enabledanalysistypes)
+     * @param enabledAnalysisTypes An optional setting indicating the specific traffic analysis
+     * types to enable on the firewall. 
+     */
+    override fun enabledAnalysisTypes(vararg enabledAnalysisTypes: String): Unit =
+        enabledAnalysisTypes(enabledAnalysisTypes.toList())
 
     /**
      * The descriptive name of the firewall.
@@ -576,36 +671,72 @@ public open class CfnFirewall(
     }
 
     /**
-     * The public subnets that Network Firewall is using for the firewall.
+     * The primary public subnets that Network Firewall is using for the firewall.
      *
-     * Each subnet must belong to a different Availability Zone.
+     * Network Firewall creates a firewall endpoint in each subnet. Create a subnet mapping for each
+     * Availability Zone where you want to use the firewall.
+     *
+     * These subnets are all defined for a single, primary VPC, and each must belong to a different
+     * Availability Zone. Each of these subnets establishes the availability of the firewall in its
+     * Availability Zone.
+     *
+     * In addition to these subnets, you can define other endpoints for the firewall in
+     * `VpcEndpointAssociation` resources. You can define these additional endpoints for any VPC, and
+     * for any of the Availability Zones where the firewall resource already has a subnet mapping. VPC
+     * endpoint associations give you the ability to protect multiple VPCs using a single firewall, and
+     * to define multiple firewall endpoints for a VPC in a single Availability Zone.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-subnetmappings)
-     * @param subnetMappings The public subnets that Network Firewall is using for the firewall. 
+     * @param subnetMappings The primary public subnets that Network Firewall is using for the
+     * firewall. 
      */
     override fun subnetMappings(subnetMappings: IResolvable) {
       cdkBuilder.subnetMappings(subnetMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The public subnets that Network Firewall is using for the firewall.
+     * The primary public subnets that Network Firewall is using for the firewall.
      *
-     * Each subnet must belong to a different Availability Zone.
+     * Network Firewall creates a firewall endpoint in each subnet. Create a subnet mapping for each
+     * Availability Zone where you want to use the firewall.
+     *
+     * These subnets are all defined for a single, primary VPC, and each must belong to a different
+     * Availability Zone. Each of these subnets establishes the availability of the firewall in its
+     * Availability Zone.
+     *
+     * In addition to these subnets, you can define other endpoints for the firewall in
+     * `VpcEndpointAssociation` resources. You can define these additional endpoints for any VPC, and
+     * for any of the Availability Zones where the firewall resource already has a subnet mapping. VPC
+     * endpoint associations give you the ability to protect multiple VPCs using a single firewall, and
+     * to define multiple firewall endpoints for a VPC in a single Availability Zone.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-subnetmappings)
-     * @param subnetMappings The public subnets that Network Firewall is using for the firewall. 
+     * @param subnetMappings The primary public subnets that Network Firewall is using for the
+     * firewall. 
      */
     override fun subnetMappings(subnetMappings: List<Any>) {
       cdkBuilder.subnetMappings(subnetMappings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * The public subnets that Network Firewall is using for the firewall.
+     * The primary public subnets that Network Firewall is using for the firewall.
      *
-     * Each subnet must belong to a different Availability Zone.
+     * Network Firewall creates a firewall endpoint in each subnet. Create a subnet mapping for each
+     * Availability Zone where you want to use the firewall.
+     *
+     * These subnets are all defined for a single, primary VPC, and each must belong to a different
+     * Availability Zone. Each of these subnets establishes the availability of the firewall in its
+     * Availability Zone.
+     *
+     * In addition to these subnets, you can define other endpoints for the firewall in
+     * `VpcEndpointAssociation` resources. You can define these additional endpoints for any VPC, and
+     * for any of the Availability Zones where the firewall resource already has a subnet mapping. VPC
+     * endpoint associations give you the ability to protect multiple VPCs using a single firewall, and
+     * to define multiple firewall endpoints for a VPC in a single Availability Zone.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-subnetmappings)
-     * @param subnetMappings The public subnets that Network Firewall is using for the firewall. 
+     * @param subnetMappings The primary public subnets that Network Firewall is using for the
+     * firewall. 
      */
     override fun subnetMappings(vararg subnetMappings: Any): Unit =
         subnetMappings(subnetMappings.toList())

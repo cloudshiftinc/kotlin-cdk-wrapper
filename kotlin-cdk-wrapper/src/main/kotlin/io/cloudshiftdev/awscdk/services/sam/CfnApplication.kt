@@ -135,15 +135,15 @@ public open class CfnApplication(
   /**
    *
    */
-  public open fun parameters(`value`: IResolvable) {
-    unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
+  public open fun parameters(`value`: Map<String, String>) {
+    unwrap(this).setParameters(`value`)
   }
 
   /**
    *
    */
-  public open fun parameters(`value`: Map<String, String>) {
-    unwrap(this).setParameters(`value`)
+  public open fun parameters(`value`: IResolvable) {
+    unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -222,13 +222,13 @@ public open class CfnApplication(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-application.html#cfn-serverless-application-parameters)
      * @param parameters 
      */
-    public fun parameters(parameters: IResolvable)
+    public fun parameters(parameters: Map<String, String>)
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-application.html#cfn-serverless-application-parameters)
      * @param parameters 
      */
-    public fun parameters(parameters: Map<String, String>)
+    public fun parameters(parameters: IResolvable)
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-application.html#cfn-serverless-application-tags)
@@ -302,16 +302,16 @@ public open class CfnApplication(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-application.html#cfn-serverless-application-parameters)
      * @param parameters 
      */
-    override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+    override fun parameters(parameters: Map<String, String>) {
+      cdkBuilder.parameters(parameters)
     }
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-application.html#cfn-serverless-application-parameters)
      * @param parameters 
      */
-    override fun parameters(parameters: Map<String, String>) {
-      cdkBuilder.parameters(parameters)
+    override fun parameters(parameters: IResolvable) {
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**

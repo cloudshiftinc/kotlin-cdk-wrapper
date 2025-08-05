@@ -2,11 +2,13 @@
 
 package io.cloudshiftdev.awscdk.services.route53resolver
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 
 /**
  * Properties for defining a `CfnResolverQueryLoggingConfig`.
@@ -21,6 +23,10 @@ import kotlin.Unit
  * CfnResolverQueryLoggingConfigProps.builder()
  * .destinationArn("destinationArn")
  * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -43,6 +49,13 @@ public interface CfnResolverQueryLoggingConfigProps {
   public fun name(): String? = unwrap(this).getName()
 
   /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfig.html#cfn-route53resolver-resolverqueryloggingconfig-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
    * A builder for [CfnResolverQueryLoggingConfigProps]
    */
   @CdkDslMarker
@@ -57,6 +70,16 @@ public interface CfnResolverQueryLoggingConfigProps {
      * @param name The name of the query logging configuration.
      */
     public fun name(name: String)
+
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl : Builder {
@@ -78,6 +101,18 @@ public interface CfnResolverQueryLoggingConfigProps {
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
+
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build():
         software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigProps =
@@ -102,6 +137,13 @@ public interface CfnResolverQueryLoggingConfigProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfig.html#cfn-route53resolver-resolverqueryloggingconfig-name)
      */
     override fun name(): String? = unwrap(this).getName()
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfig.html#cfn-route53resolver-resolverqueryloggingconfig-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 
   public companion object {

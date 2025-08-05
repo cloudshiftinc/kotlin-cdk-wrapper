@@ -357,6 +357,9 @@ public open class CustomPolicy(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.config.CustomPolicy.PROPERTY_INJECTION_ID
+
     public fun fromConfigRuleName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

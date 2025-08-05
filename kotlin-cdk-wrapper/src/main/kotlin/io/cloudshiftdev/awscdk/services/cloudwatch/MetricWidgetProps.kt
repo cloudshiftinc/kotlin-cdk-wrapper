@@ -19,6 +19,7 @@ import kotlin.Unit
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
  * MetricWidgetProps metricWidgetProps = MetricWidgetProps.builder()
+ * .accountId("accountId")
  * .height(123)
  * .region("region")
  * .title("title")
@@ -27,6 +28,20 @@ import kotlin.Unit
  * ```
  */
 public interface MetricWidgetProps {
+  /**
+   * The AWS account ID where the metrics are located.
+   *
+   * This enables cross-account functionality for CloudWatch dashboards.
+   * Before using this feature, ensure that proper cross-account sharing is configured
+   * between the monitoring account and source account.
+   *
+   * For more information, see:
+   * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+   *
+   * Default: - Current account
+   */
+  public fun accountId(): String? = unwrap(this).getAccountId()
+
   /**
    * Height of the widget.
    *
@@ -62,6 +77,17 @@ public interface MetricWidgetProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param accountId The AWS account ID where the metrics are located.
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     */
+    public fun accountId(accountId: String)
+
+    /**
      * @param height Height of the widget.
      */
     public fun height(height: Number)
@@ -85,6 +111,19 @@ public interface MetricWidgetProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.MetricWidgetProps.Builder =
         software.amazon.awscdk.services.cloudwatch.MetricWidgetProps.builder()
+
+    /**
+     * @param accountId The AWS account ID where the metrics are located.
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     */
+    override fun accountId(accountId: String) {
+      cdkBuilder.accountId(accountId)
+    }
 
     /**
      * @param height Height of the widget.
@@ -122,6 +161,20 @@ public interface MetricWidgetProps {
     cdkObject: software.amazon.awscdk.services.cloudwatch.MetricWidgetProps,
   ) : CdkObject(cdkObject),
       MetricWidgetProps {
+    /**
+     * The AWS account ID where the metrics are located.
+     *
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     *
+     * Default: - Current account
+     */
+    override fun accountId(): String? = unwrap(this).getAccountId()
+
     /**
      * Height of the widget.
      *

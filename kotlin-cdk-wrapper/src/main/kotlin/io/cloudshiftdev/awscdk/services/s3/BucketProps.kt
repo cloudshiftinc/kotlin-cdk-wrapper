@@ -19,17 +19,18 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.kms.*;
- * Key myKmsKey = new Key(this, "myKMSKey");
- * Bucket myBucket = Bucket.Builder.create(this, "mySSEKMSEncryptedBucket")
- * .encryption(BucketEncryption.KMS)
- * .encryptionKey(myKmsKey)
+ * Bucket accessLogsBucket = Bucket.Builder.create(this, "AccessLogsBucket")
  * .objectOwnership(ObjectOwnership.BUCKET_OWNER_ENFORCED)
  * .build();
- * Distribution.Builder.create(this, "myDist")
- * .defaultBehavior(BehaviorOptions.builder()
- * .origin(S3BucketOrigin.withOriginAccessControl(myBucket))
- * .build())
+ * accessLogsBucket.addToResourcePolicy(
+ * PolicyStatement.Builder.create()
+ * .actions(List.of("s3:*"))
+ * .resources(List.of(accessLogsBucket.getBucketArn(), accessLogsBucket.arnForObjects("*")))
+ * .principals(List.of(new AnyPrincipal()))
+ * .build());
+ * Bucket bucket = Bucket.Builder.create(this, "MyBucket")
+ * .serverAccessLogsBucket(accessLogsBucket)
+ * .serverAccessLogsPrefix("logs")
  * .build();
  * ```
  */
@@ -110,8 +111,7 @@ public interface BucketProps {
    * If you choose KMS, you can specify a KMS key via `encryptionKey`. If
    * encryption key is not specified, a key will automatically be created.
    *
-   * Default: - `KMS` if `encryptionKey` is specified, or `UNENCRYPTED` otherwise.
-   * But if `UNENCRYPTED` is specified, the bucket will be encrypted as `S3_MANAGED` automatically.
+   * Default: - `KMS` if `encryptionKey` is specified, or `S3_MANAGED` otherwise.
    */
   public fun encryption(): BucketEncryption? =
       unwrap(this).getEncryption()?.let(BucketEncryption::wrap)
@@ -146,7 +146,7 @@ public interface BucketProps {
   public fun eventBridgeEnabled(): Boolean? = unwrap(this).getEventBridgeEnabled()
 
   /**
-   * Inteligent Tiering Configurations.
+   * Intelligent Tiering Configurations.
    *
    * Default: No Intelligent Tiiering Configurations.
    *
@@ -264,6 +264,23 @@ public interface BucketProps {
    */
   public fun removalPolicy(): RemovalPolicy? =
       unwrap(this).getRemovalPolicy()?.let(RemovalPolicy::wrap)
+
+  /**
+   * The role to be used by the replication.
+   *
+   * When setting this property, you must also set `replicationRules`.
+   *
+   * Default: - a new role will be created.
+   */
+  public fun replicationRole(): IRole? = unwrap(this).getReplicationRole()?.let(IRole::wrap)
+
+  /**
+   * A container for one or more replication rules.
+   *
+   * Default: - No replication
+   */
+  public fun replicationRules(): List<ReplicationRule> =
+      unwrap(this).getReplicationRules()?.map(ReplicationRule::wrap) ?: emptyList()
 
   /**
    * Destination bucket for the server access logs.
@@ -451,13 +468,13 @@ public interface BucketProps {
     public fun eventBridgeEnabled(eventBridgeEnabled: Boolean)
 
     /**
-     * @param intelligentTieringConfigurations Inteligent Tiering Configurations.
+     * @param intelligentTieringConfigurations Intelligent Tiering Configurations.
      */
     public
         fun intelligentTieringConfigurations(intelligentTieringConfigurations: List<IntelligentTieringConfiguration>)
 
     /**
-     * @param intelligentTieringConfigurations Inteligent Tiering Configurations.
+     * @param intelligentTieringConfigurations Intelligent Tiering Configurations.
      */
     public fun intelligentTieringConfigurations(vararg
         intelligentTieringConfigurations: IntelligentTieringConfiguration)
@@ -539,6 +556,22 @@ public interface BucketProps {
      * @param removalPolicy Policy to apply when the bucket is removed from this stack.
      */
     public fun removalPolicy(removalPolicy: RemovalPolicy)
+
+    /**
+     * @param replicationRole The role to be used by the replication.
+     * When setting this property, you must also set `replicationRules`.
+     */
+    public fun replicationRole(replicationRole: IRole)
+
+    /**
+     * @param replicationRules A container for one or more replication rules.
+     */
+    public fun replicationRules(replicationRules: List<ReplicationRule>)
+
+    /**
+     * @param replicationRules A container for one or more replication rules.
+     */
+    public fun replicationRules(vararg replicationRules: ReplicationRule)
 
     /**
      * @param serverAccessLogsBucket Destination bucket for the server access logs.
@@ -737,7 +770,7 @@ public interface BucketProps {
     }
 
     /**
-     * @param intelligentTieringConfigurations Inteligent Tiering Configurations.
+     * @param intelligentTieringConfigurations Intelligent Tiering Configurations.
      */
     override
         fun intelligentTieringConfigurations(intelligentTieringConfigurations: List<IntelligentTieringConfiguration>) {
@@ -745,7 +778,7 @@ public interface BucketProps {
     }
 
     /**
-     * @param intelligentTieringConfigurations Inteligent Tiering Configurations.
+     * @param intelligentTieringConfigurations Intelligent Tiering Configurations.
      */
     override fun intelligentTieringConfigurations(vararg
         intelligentTieringConfigurations: IntelligentTieringConfiguration): Unit =
@@ -852,6 +885,27 @@ public interface BucketProps {
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
+
+    /**
+     * @param replicationRole The role to be used by the replication.
+     * When setting this property, you must also set `replicationRules`.
+     */
+    override fun replicationRole(replicationRole: IRole) {
+      cdkBuilder.replicationRole(replicationRole.let(IRole.Companion::unwrap))
+    }
+
+    /**
+     * @param replicationRules A container for one or more replication rules.
+     */
+    override fun replicationRules(replicationRules: List<ReplicationRule>) {
+      cdkBuilder.replicationRules(replicationRules.map(ReplicationRule.Companion::unwrap))
+    }
+
+    /**
+     * @param replicationRules A container for one or more replication rules.
+     */
+    override fun replicationRules(vararg replicationRules: ReplicationRule): Unit =
+        replicationRules(replicationRules.toList())
 
     /**
      * @param serverAccessLogsBucket Destination bucket for the server access logs.
@@ -1040,9 +1094,7 @@ public interface BucketProps {
      * If you choose KMS, you can specify a KMS key via `encryptionKey`. If
      * encryption key is not specified, a key will automatically be created.
      *
-     * Default: - `KMS` if `encryptionKey` is specified, or `UNENCRYPTED` otherwise.
-     * But if `UNENCRYPTED` is specified, the bucket will be encrypted as `S3_MANAGED`
-     * automatically.
+     * Default: - `KMS` if `encryptionKey` is specified, or `S3_MANAGED` otherwise.
      */
     override fun encryption(): BucketEncryption? =
         unwrap(this).getEncryption()?.let(BucketEncryption::wrap)
@@ -1077,7 +1129,7 @@ public interface BucketProps {
     override fun eventBridgeEnabled(): Boolean? = unwrap(this).getEventBridgeEnabled()
 
     /**
-     * Inteligent Tiering Configurations.
+     * Intelligent Tiering Configurations.
      *
      * Default: No Intelligent Tiiering Configurations.
      *
@@ -1195,6 +1247,23 @@ public interface BucketProps {
      */
     override fun removalPolicy(): RemovalPolicy? =
         unwrap(this).getRemovalPolicy()?.let(RemovalPolicy::wrap)
+
+    /**
+     * The role to be used by the replication.
+     *
+     * When setting this property, you must also set `replicationRules`.
+     *
+     * Default: - a new role will be created.
+     */
+    override fun replicationRole(): IRole? = unwrap(this).getReplicationRole()?.let(IRole::wrap)
+
+    /**
+     * A container for one or more replication rules.
+     *
+     * Default: - No replication
+     */
+    override fun replicationRules(): List<ReplicationRule> =
+        unwrap(this).getReplicationRules()?.map(ReplicationRule::wrap) ?: emptyList()
 
     /**
      * Destination bucket for the server access logs.

@@ -2073,7 +2073,15 @@ public open class CfnCluster(
    */
   public interface ManagedStorageConfigurationProperty {
     /**
-     * Specify the AWS Key Management Service key ID for the Fargate ephemeral storage.
+     * Specify the AWS Key Management Service key ID for Fargate ephemeral storage.
+     *
+     * When you specify a `fargateEphemeralStorageKmsKeyId` , AWS Fargate uses the key to encrypt
+     * data at rest in ephemeral storage. For more information about Fargate ephemeral storage
+     * encryption, see [Customer managed keys for AWS Fargate ephemeral storage for Amazon
+     * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-storage-encryption.html)
+     * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     * The key must be a single Region key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-managedstorageconfiguration.html#cfn-ecs-cluster-managedstorageconfiguration-fargateephemeralstoragekmskeyid)
      */
@@ -2081,7 +2089,16 @@ public open class CfnCluster(
         unwrap(this).getFargateEphemeralStorageKmsKeyId()
 
     /**
-     * Specify a AWS Key Management Service key ID to encrypt the managed storage.
+     * Specify a AWS Key Management Service key ID to encrypt Amazon ECS managed storage.
+     *
+     * When you specify a `kmsKeyId` , Amazon ECS uses the key to encrypt data volumes managed by
+     * Amazon ECS that are attached to tasks in the cluster. The following data volumes are managed by
+     * Amazon ECS: Amazon EBS. For more information about encryption of Amazon EBS volumes attached to
+     * Amazon ECS tasks, see [Encrypt data stored in Amazon EBS volumes for Amazon
+     * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-kms-encryption.html) in the
+     * *Amazon Elastic Container Service Developer Guide* .
+     *
+     * The key must be a single Region key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-managedstorageconfiguration.html#cfn-ecs-cluster-managedstorageconfiguration-kmskeyid)
      */
@@ -2094,12 +2111,28 @@ public open class CfnCluster(
     public interface Builder {
       /**
        * @param fargateEphemeralStorageKmsKeyId Specify the AWS Key Management Service key ID for
-       * the Fargate ephemeral storage.
+       * Fargate ephemeral storage.
+       * When you specify a `fargateEphemeralStorageKmsKeyId` , AWS Fargate uses the key to encrypt
+       * data at rest in ephemeral storage. For more information about Fargate ephemeral storage
+       * encryption, see [Customer managed keys for AWS Fargate ephemeral storage for Amazon
+       * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-storage-encryption.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * The key must be a single Region key.
        */
       public fun fargateEphemeralStorageKmsKeyId(fargateEphemeralStorageKmsKeyId: String)
 
       /**
-       * @param kmsKeyId Specify a AWS Key Management Service key ID to encrypt the managed storage.
+       * @param kmsKeyId Specify a AWS Key Management Service key ID to encrypt Amazon ECS managed
+       * storage.
+       * When you specify a `kmsKeyId` , Amazon ECS uses the key to encrypt data volumes managed by
+       * Amazon ECS that are attached to tasks in the cluster. The following data volumes are managed
+       * by Amazon ECS: Amazon EBS. For more information about encryption of Amazon EBS volumes
+       * attached to Amazon ECS tasks, see [Encrypt data stored in Amazon EBS volumes for Amazon
+       * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-kms-encryption.html) in
+       * the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * The key must be a single Region key.
        */
       public fun kmsKeyId(kmsKeyId: String)
     }
@@ -2112,14 +2145,30 @@ public open class CfnCluster(
 
       /**
        * @param fargateEphemeralStorageKmsKeyId Specify the AWS Key Management Service key ID for
-       * the Fargate ephemeral storage.
+       * Fargate ephemeral storage.
+       * When you specify a `fargateEphemeralStorageKmsKeyId` , AWS Fargate uses the key to encrypt
+       * data at rest in ephemeral storage. For more information about Fargate ephemeral storage
+       * encryption, see [Customer managed keys for AWS Fargate ephemeral storage for Amazon
+       * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-storage-encryption.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * The key must be a single Region key.
        */
       override fun fargateEphemeralStorageKmsKeyId(fargateEphemeralStorageKmsKeyId: String) {
         cdkBuilder.fargateEphemeralStorageKmsKeyId(fargateEphemeralStorageKmsKeyId)
       }
 
       /**
-       * @param kmsKeyId Specify a AWS Key Management Service key ID to encrypt the managed storage.
+       * @param kmsKeyId Specify a AWS Key Management Service key ID to encrypt Amazon ECS managed
+       * storage.
+       * When you specify a `kmsKeyId` , Amazon ECS uses the key to encrypt data volumes managed by
+       * Amazon ECS that are attached to tasks in the cluster. The following data volumes are managed
+       * by Amazon ECS: Amazon EBS. For more information about encryption of Amazon EBS volumes
+       * attached to Amazon ECS tasks, see [Encrypt data stored in Amazon EBS volumes for Amazon
+       * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-kms-encryption.html) in
+       * the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * The key must be a single Region key.
        */
       override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
@@ -2135,7 +2184,15 @@ public open class CfnCluster(
     ) : CdkObject(cdkObject),
         ManagedStorageConfigurationProperty {
       /**
-       * Specify the AWS Key Management Service key ID for the Fargate ephemeral storage.
+       * Specify the AWS Key Management Service key ID for Fargate ephemeral storage.
+       *
+       * When you specify a `fargateEphemeralStorageKmsKeyId` , AWS Fargate uses the key to encrypt
+       * data at rest in ephemeral storage. For more information about Fargate ephemeral storage
+       * encryption, see [Customer managed keys for AWS Fargate ephemeral storage for Amazon
+       * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-storage-encryption.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * The key must be a single Region key.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-managedstorageconfiguration.html#cfn-ecs-cluster-managedstorageconfiguration-fargateephemeralstoragekmskeyid)
        */
@@ -2143,7 +2200,16 @@ public open class CfnCluster(
           unwrap(this).getFargateEphemeralStorageKmsKeyId()
 
       /**
-       * Specify a AWS Key Management Service key ID to encrypt the managed storage.
+       * Specify a AWS Key Management Service key ID to encrypt Amazon ECS managed storage.
+       *
+       * When you specify a `kmsKeyId` , Amazon ECS uses the key to encrypt data volumes managed by
+       * Amazon ECS that are attached to tasks in the cluster. The following data volumes are managed
+       * by Amazon ECS: Amazon EBS. For more information about encryption of Amazon EBS volumes
+       * attached to Amazon ECS tasks, see [Encrypt data stored in Amazon EBS volumes for Amazon
+       * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-kms-encryption.html) in
+       * the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * The key must be a single Region key.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-managedstorageconfiguration.html#cfn-ecs-cluster-managedstorageconfiguration-kmskeyid)
        */
@@ -2206,7 +2272,7 @@ public open class CfnCluster(
      * used when you create a service and don't specify a Service Connect configuration.
      *
      * The namespace name can include up to 1024 characters. The name is case-sensitive. The name
-     * can't include hyphens (-), tilde (~), greater than (&gt;), less than (&lt;), or slash (/).
+     * can't include greater than (&gt;), less than (&lt;), double quotation marks ("), or slash (/).
      *
      * If you enter an existing namespace name or ARN, then that namespace will be used. Any
      * namespace type is supported. The namespace must be in this account and this AWS Region.
@@ -2238,7 +2304,7 @@ public open class CfnCluster(
        * namespace that's used when you create a service and don't specify a Service Connect
        * configuration.
        * The namespace name can include up to 1024 characters. The name is case-sensitive. The name
-       * can't include hyphens (-), tilde (~), greater than (&gt;), less than (&lt;), or slash (/).
+       * can't include greater than (&gt;), less than (&lt;), double quotation marks ("), or slash (/).
        *
        * If you enter an existing namespace name or ARN, then that namespace will be used. Any
        * namespace type is supported. The namespace must be in this account and this AWS Region.
@@ -2269,7 +2335,7 @@ public open class CfnCluster(
        * namespace that's used when you create a service and don't specify a Service Connect
        * configuration.
        * The namespace name can include up to 1024 characters. The name is case-sensitive. The name
-       * can't include hyphens (-), tilde (~), greater than (&gt;), less than (&lt;), or slash (/).
+       * can't include greater than (&gt;), less than (&lt;), double quotation marks ("), or slash (/).
        *
        * If you enter an existing namespace name or ARN, then that namespace will be used. Any
        * namespace type is supported. The namespace must be in this account and this AWS Region.
@@ -2305,7 +2371,7 @@ public open class CfnCluster(
        * used when you create a service and don't specify a Service Connect configuration.
        *
        * The namespace name can include up to 1024 characters. The name is case-sensitive. The name
-       * can't include hyphens (-), tilde (~), greater than (&gt;), less than (&lt;), or slash (/).
+       * can't include greater than (&gt;), less than (&lt;), double quotation marks ("), or slash (/).
        *
        * If you enter an existing namespace name or ARN, then that namespace will be used. Any
        * namespace type is supported. The namespace must be in this account and this AWS Region.

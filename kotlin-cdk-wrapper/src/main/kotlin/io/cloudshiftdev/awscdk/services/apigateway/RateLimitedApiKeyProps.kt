@@ -21,7 +21,7 @@ import kotlin.jvm.JvmName
  * RestApi api;
  * RateLimitedApiKey key = RateLimitedApiKey.Builder.create(this, "rate-limited-api-key")
  * .customerId("hello-customer")
- * .stages(List.of(api.getDeploymentStage()))
+ * .apiStages(List.of(UsagePlanPerApiStage.builder().stage(api.getDeploymentStage()).build()))
  * .quota(QuotaSettings.builder()
  * .limit(10000)
  * .period(Period.MONTH)
@@ -32,6 +32,11 @@ import kotlin.jvm.JvmName
 public interface RateLimitedApiKeyProps : ApiKeyProps {
   /**
    * API Stages to be associated with the RateLimitedApiKey.
+   *
+   * If you already prepared UsagePlan resource explicitly, you should use `stages` property.
+   * If you prefer to prepare UsagePlan resource implicitly via RateLimitedApiKey,
+   * or you should specify throttle settings at each stage individually, you should use `apiStages`
+   * property.
    *
    * Default: none
    */
@@ -66,11 +71,19 @@ public interface RateLimitedApiKeyProps : ApiKeyProps {
 
     /**
      * @param apiStages API Stages to be associated with the RateLimitedApiKey.
+     * If you already prepared UsagePlan resource explicitly, you should use `stages` property.
+     * If you prefer to prepare UsagePlan resource implicitly via RateLimitedApiKey,
+     * or you should specify throttle settings at each stage individually, you should use
+     * `apiStages` property.
      */
     public fun apiStages(apiStages: List<UsagePlanPerApiStage>)
 
     /**
      * @param apiStages API Stages to be associated with the RateLimitedApiKey.
+     * If you already prepared UsagePlan resource explicitly, you should use `stages` property.
+     * If you prefer to prepare UsagePlan resource implicitly via RateLimitedApiKey,
+     * or you should specify throttle settings at each stage individually, you should use
+     * `apiStages` property.
      */
     public fun apiStages(vararg apiStages: UsagePlanPerApiStage)
 
@@ -212,6 +225,10 @@ public interface RateLimitedApiKeyProps : ApiKeyProps {
 
     /**
      * @param apiStages API Stages to be associated with the RateLimitedApiKey.
+     * If you already prepared UsagePlan resource explicitly, you should use `stages` property.
+     * If you prefer to prepare UsagePlan resource implicitly via RateLimitedApiKey,
+     * or you should specify throttle settings at each stage individually, you should use
+     * `apiStages` property.
      */
     override fun apiStages(apiStages: List<UsagePlanPerApiStage>) {
       cdkBuilder.apiStages(apiStages.map(UsagePlanPerApiStage.Companion::unwrap))
@@ -219,6 +236,10 @@ public interface RateLimitedApiKeyProps : ApiKeyProps {
 
     /**
      * @param apiStages API Stages to be associated with the RateLimitedApiKey.
+     * If you already prepared UsagePlan resource explicitly, you should use `stages` property.
+     * If you prefer to prepare UsagePlan resource implicitly via RateLimitedApiKey,
+     * or you should specify throttle settings at each stage individually, you should use
+     * `apiStages` property.
      */
     override fun apiStages(vararg apiStages: UsagePlanPerApiStage): Unit =
         apiStages(apiStages.toList())
@@ -392,6 +413,11 @@ public interface RateLimitedApiKeyProps : ApiKeyProps {
 
     /**
      * API Stages to be associated with the RateLimitedApiKey.
+     *
+     * If you already prepared UsagePlan resource explicitly, you should use `stages` property.
+     * If you prefer to prepare UsagePlan resource implicitly via RateLimitedApiKey,
+     * or you should specify throttle settings at each stage individually, you should use
+     * `apiStages` property.
      *
      * Default: none
      */

@@ -142,6 +142,9 @@ public open class EcsDeploymentConfig(
     public val LINEAR_10_PERCENT_EVERY_3_MINUTES: IEcsDeploymentConfig =
         IEcsDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig.LINEAR_10_PERCENT_EVERY_3_MINUTES)
 
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig.PROPERTY_INJECTION_ID
+
     public fun fromEcsDeploymentConfigName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

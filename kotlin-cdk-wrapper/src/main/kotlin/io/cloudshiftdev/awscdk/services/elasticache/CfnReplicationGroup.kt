@@ -350,12 +350,12 @@ public open class CfnReplicationGroup(
   }
 
   /**
-   * Enabled or Disabled.
+   * The mode can be enabled or disabled.
    */
   public open fun clusterMode(): String? = unwrap(this).getClusterMode()
 
   /**
-   * Enabled or Disabled.
+   * The mode can be enabled or disabled.
    */
   public open fun clusterMode(`value`: String) {
     unwrap(this).setClusterMode(`value`)
@@ -841,10 +841,6 @@ public open class CfnReplicationGroup(
     /**
      * A flag that enables encryption at rest when set to `true` .
      *
-     * You cannot modify the value of `AtRestEncryptionEnabled` after the replication group is
-     * created. To enable encryption at rest on a replication group you must set
-     * `AtRestEncryptionEnabled` to `true` when you create the replication group.
-     *
      * *Required:* Only available when creating a replication group in an Amazon VPC using Redis OSS
      * version `3.2.6` or `4.x` onward.
      *
@@ -857,10 +853,6 @@ public open class CfnReplicationGroup(
 
     /**
      * A flag that enables encryption at rest when set to `true` .
-     *
-     * You cannot modify the value of `AtRestEncryptionEnabled` after the replication group is
-     * created. To enable encryption at rest on a replication group you must set
-     * `AtRestEncryptionEnabled` to `true` when you create the replication group.
      *
      * *Required:* Only available when creating a replication group in an Amazon VPC using Redis OSS
      * version `3.2.6` or `4.x` onward.
@@ -1091,17 +1083,17 @@ public open class CfnReplicationGroup(
     public fun cacheSubnetGroupName(cacheSubnetGroupName: String)
 
     /**
-     * Enabled or Disabled.
+     * The mode can be enabled or disabled.
      *
-     * To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Valkey or Redis OSS clients to connect using both
+     * To change the cluster mode from disabled to enabled, you must first set the cluster mode to
+     * compatible. The compatible mode allows your Valkey or Redis OSS clients to connect using both
      * cluster mode enabled and cluster mode disabled. After you migrate all Valkey or Redis OSS
      * clients to use cluster mode enabled, you can then complete cluster mode configuration and set
-     * the cluster mode to Enabled. For more information, see [Modify cluster
+     * the cluster mode to enabled. For more information, see [Modify cluster
      * mode](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/modify-cluster-mode.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-clustermode)
-     * @param clusterMode Enabled or Disabled. 
+     * @param clusterMode The mode can be enabled or disabled. 
      */
     public fun clusterMode(clusterMode: String)
 
@@ -1626,20 +1618,14 @@ public open class CfnReplicationGroup(
     /**
      * A flag that enables in-transit encryption when set to `true` .
      *
-     * You cannot modify the value of `TransitEncryptionEnabled` after the cluster is created. To
-     * enable in-transit encryption on a cluster you must set `TransitEncryptionEnabled` to `true` when
-     * you create a cluster.
-     *
-     * This parameter is valid only if the `Engine` parameter is `redis` , the `EngineVersion`
-     * parameter is `3.2.6` or `4.x` onward, and the cluster is being created in an Amazon VPC.
+     * This parameter is only available when creating a replication group in an Amazon VPC using
+     * Valkey version `7.2` and above, Redis OSS version `3.2.6` , or Redis OSS version `4.x` and
+     * above, and the cluster is being created in an Amazon VPC.
      *
      * If you enable in-transit encryption, you must also specify a value for `CacheSubnetGroup` .
      *
      *
-     * * TransitEncryptionEnabled is only available when creating a replication group in an Amazon
-     * VPC using Valkey version `7.2` and above, Redis OSS version `3.2.6` , or Redis OSS version `4.x`
-     * and above.
-     * * TransitEncryptionEnabled is required when creating a new valkey replication group.
+     * TransitEncryptionEnabled is required when creating a new valkey replication group.
      *
      *
      * Default: `false`
@@ -1658,20 +1644,14 @@ public open class CfnReplicationGroup(
     /**
      * A flag that enables in-transit encryption when set to `true` .
      *
-     * You cannot modify the value of `TransitEncryptionEnabled` after the cluster is created. To
-     * enable in-transit encryption on a cluster you must set `TransitEncryptionEnabled` to `true` when
-     * you create a cluster.
-     *
-     * This parameter is valid only if the `Engine` parameter is `redis` , the `EngineVersion`
-     * parameter is `3.2.6` or `4.x` onward, and the cluster is being created in an Amazon VPC.
+     * This parameter is only available when creating a replication group in an Amazon VPC using
+     * Valkey version `7.2` and above, Redis OSS version `3.2.6` , or Redis OSS version `4.x` and
+     * above, and the cluster is being created in an Amazon VPC.
      *
      * If you enable in-transit encryption, you must also specify a value for `CacheSubnetGroup` .
      *
      *
-     * * TransitEncryptionEnabled is only available when creating a replication group in an Amazon
-     * VPC using Valkey version `7.2` and above, Redis OSS version `3.2.6` , or Redis OSS version `4.x`
-     * and above.
-     * * TransitEncryptionEnabled is required when creating a new valkey replication group.
+     * TransitEncryptionEnabled is required when creating a new valkey replication group.
      *
      *
      * Default: `false`
@@ -1735,10 +1715,6 @@ public open class CfnReplicationGroup(
     /**
      * A flag that enables encryption at rest when set to `true` .
      *
-     * You cannot modify the value of `AtRestEncryptionEnabled` after the replication group is
-     * created. To enable encryption at rest on a replication group you must set
-     * `AtRestEncryptionEnabled` to `true` when you create the replication group.
-     *
      * *Required:* Only available when creating a replication group in an Amazon VPC using Redis OSS
      * version `3.2.6` or `4.x` onward.
      *
@@ -1753,10 +1729,6 @@ public open class CfnReplicationGroup(
 
     /**
      * A flag that enables encryption at rest when set to `true` .
-     *
-     * You cannot modify the value of `AtRestEncryptionEnabled` after the replication group is
-     * created. To enable encryption at rest on a replication group you must set
-     * `AtRestEncryptionEnabled` to `true` when you create the replication group.
      *
      * *Required:* Only available when creating a replication group in an Amazon VPC using Redis OSS
      * version `3.2.6` or `4.x` onward.
@@ -2008,17 +1980,17 @@ public open class CfnReplicationGroup(
     }
 
     /**
-     * Enabled or Disabled.
+     * The mode can be enabled or disabled.
      *
-     * To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Valkey or Redis OSS clients to connect using both
+     * To change the cluster mode from disabled to enabled, you must first set the cluster mode to
+     * compatible. The compatible mode allows your Valkey or Redis OSS clients to connect using both
      * cluster mode enabled and cluster mode disabled. After you migrate all Valkey or Redis OSS
      * clients to use cluster mode enabled, you can then complete cluster mode configuration and set
-     * the cluster mode to Enabled. For more information, see [Modify cluster
+     * the cluster mode to enabled. For more information, see [Modify cluster
      * mode](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/modify-cluster-mode.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-clustermode)
-     * @param clusterMode Enabled or Disabled. 
+     * @param clusterMode The mode can be enabled or disabled. 
      */
     override fun clusterMode(clusterMode: String) {
       cdkBuilder.clusterMode(clusterMode)
@@ -2612,20 +2584,14 @@ public open class CfnReplicationGroup(
     /**
      * A flag that enables in-transit encryption when set to `true` .
      *
-     * You cannot modify the value of `TransitEncryptionEnabled` after the cluster is created. To
-     * enable in-transit encryption on a cluster you must set `TransitEncryptionEnabled` to `true` when
-     * you create a cluster.
-     *
-     * This parameter is valid only if the `Engine` parameter is `redis` , the `EngineVersion`
-     * parameter is `3.2.6` or `4.x` onward, and the cluster is being created in an Amazon VPC.
+     * This parameter is only available when creating a replication group in an Amazon VPC using
+     * Valkey version `7.2` and above, Redis OSS version `3.2.6` , or Redis OSS version `4.x` and
+     * above, and the cluster is being created in an Amazon VPC.
      *
      * If you enable in-transit encryption, you must also specify a value for `CacheSubnetGroup` .
      *
      *
-     * * TransitEncryptionEnabled is only available when creating a replication group in an Amazon
-     * VPC using Valkey version `7.2` and above, Redis OSS version `3.2.6` , or Redis OSS version `4.x`
-     * and above.
-     * * TransitEncryptionEnabled is required when creating a new valkey replication group.
+     * TransitEncryptionEnabled is required when creating a new valkey replication group.
      *
      *
      * Default: `false`
@@ -2646,20 +2612,14 @@ public open class CfnReplicationGroup(
     /**
      * A flag that enables in-transit encryption when set to `true` .
      *
-     * You cannot modify the value of `TransitEncryptionEnabled` after the cluster is created. To
-     * enable in-transit encryption on a cluster you must set `TransitEncryptionEnabled` to `true` when
-     * you create a cluster.
-     *
-     * This parameter is valid only if the `Engine` parameter is `redis` , the `EngineVersion`
-     * parameter is `3.2.6` or `4.x` onward, and the cluster is being created in an Amazon VPC.
+     * This parameter is only available when creating a replication group in an Amazon VPC using
+     * Valkey version `7.2` and above, Redis OSS version `3.2.6` , or Redis OSS version `4.x` and
+     * above, and the cluster is being created in an Amazon VPC.
      *
      * If you enable in-transit encryption, you must also specify a value for `CacheSubnetGroup` .
      *
      *
-     * * TransitEncryptionEnabled is only available when creating a replication group in an Amazon
-     * VPC using Valkey version `7.2` and above, Redis OSS version `3.2.6` , or Redis OSS version `4.x`
-     * and above.
-     * * TransitEncryptionEnabled is required when creating a new valkey replication group.
+     * TransitEncryptionEnabled is required when creating a new valkey replication group.
      *
      *
      * Default: `false`

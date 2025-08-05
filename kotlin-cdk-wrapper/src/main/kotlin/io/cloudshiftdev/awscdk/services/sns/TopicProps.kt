@@ -19,7 +19,8 @@ import kotlin.collections.List
  *
  * ```
  * Topic topic = Topic.Builder.create(this, "MyTopic")
- * .tracingConfig(TracingConfig.ACTIVE)
+ * .fifo(true)
+ * .fifoThroughputScope(FifoThroughputScope.TOPIC)
  * .build();
  * ```
  */
@@ -56,6 +57,16 @@ public interface TopicProps {
    * Default: None
    */
   public fun fifo(): Boolean? = unwrap(this).getFifo()
+
+  /**
+   * Specifies the throughput quota and deduplication behavior to apply for the FIFO topic.
+   *
+   * You can only set this property when `fifo` is `true`.
+   *
+   * Default: undefined - SNS default setting is FifoThroughputScope.TOPIC
+   */
+  public fun fifoThroughputScope(): FifoThroughputScope? =
+      unwrap(this).getFifoThroughputScope()?.let(FifoThroughputScope::wrap)
 
   /**
    * The list of delivery status logging configurations for the topic.
@@ -147,6 +158,13 @@ public interface TopicProps {
     public fun fifo(fifo: Boolean)
 
     /**
+     * @param fifoThroughputScope Specifies the throughput quota and deduplication behavior to apply
+     * for the FIFO topic.
+     * You can only set this property when `fifo` is `true`.
+     */
+    public fun fifoThroughputScope(fifoThroughputScope: FifoThroughputScope)
+
+    /**
      * @param loggingConfigs The list of delivery status logging configurations for the topic.
      */
     public fun loggingConfigs(loggingConfigs: List<LoggingConfig>)
@@ -221,6 +239,15 @@ public interface TopicProps {
      */
     override fun fifo(fifo: Boolean) {
       cdkBuilder.fifo(fifo)
+    }
+
+    /**
+     * @param fifoThroughputScope Specifies the throughput quota and deduplication behavior to apply
+     * for the FIFO topic.
+     * You can only set this property when `fifo` is `true`.
+     */
+    override fun fifoThroughputScope(fifoThroughputScope: FifoThroughputScope) {
+      cdkBuilder.fifoThroughputScope(fifoThroughputScope.let(FifoThroughputScope.Companion::unwrap))
     }
 
     /**
@@ -316,6 +343,16 @@ public interface TopicProps {
      * Default: None
      */
     override fun fifo(): Boolean? = unwrap(this).getFifo()
+
+    /**
+     * Specifies the throughput quota and deduplication behavior to apply for the FIFO topic.
+     *
+     * You can only set this property when `fifo` is `true`.
+     *
+     * Default: undefined - SNS default setting is FifoThroughputScope.TOPIC
+     */
+    override fun fifoThroughputScope(): FifoThroughputScope? =
+        unwrap(this).getFifoThroughputScope()?.let(FifoThroughputScope::wrap)
 
     /**
      * The list of delivery status logging configurations for the topic.

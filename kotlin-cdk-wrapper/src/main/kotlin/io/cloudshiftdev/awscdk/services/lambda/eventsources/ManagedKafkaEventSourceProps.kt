@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.lambda.IEventSourceDlq
+import io.cloudshiftdev.awscdk.services.lambda.ISchemaRegistry
 import io.cloudshiftdev.awscdk.services.lambda.StartingPosition
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import kotlin.Any
@@ -83,7 +84,7 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
      * @param consumerGroupId The identifier for the Kafka consumer group to join.
      * The consumer group ID must be unique among all your Kafka event sources. After creating a
      * Kafka event source mapping with the consumer group ID specified, you cannot update this value. 
-     * The value must have a lenght between 1 and 200 and full the pattern '[a-zA-Z0-9-/
+     * The value must have a length between 1 and 200 and full the pattern '[a-zA-Z0-9-/
      * *:_+=.&#64;-]*'.
      */
     public fun consumerGroupId(consumerGroupId: String)
@@ -141,6 +142,11 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
         fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig.Builder.() -> Unit)
 
     /**
+     * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry.
+     */
+    public fun schemaRegistryConfig(schemaRegistryConfig: ISchemaRegistry)
+
+    /**
      * @param secret The secret with the Kafka credentials, see
      * https://docs.aws.amazon.com/msk/latest/developerguide/msk-password.html for details This field
      * is required if your Kafka brokers are accessed over the Internet.
@@ -151,6 +157,11 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
      * @param startingPosition Where to begin consuming the stream. 
      */
     public fun startingPosition(startingPosition: StartingPosition)
+
+    /**
+     * @param startingPositionTimestamp The time from which to start reading, in Unix time seconds.
+     */
+    public fun startingPositionTimestamp(startingPositionTimestamp: Number)
 
     /**
      * @param topic The Kafka topic to subscribe to. 
@@ -192,7 +203,7 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
      * @param consumerGroupId The identifier for the Kafka consumer group to join.
      * The consumer group ID must be unique among all your Kafka event sources. After creating a
      * Kafka event source mapping with the consumer group ID specified, you cannot update this value. 
-     * The value must have a lenght between 1 and 200 and full the pattern '[a-zA-Z0-9-/
+     * The value must have a length between 1 and 200 and full the pattern '[a-zA-Z0-9-/
      * *:_+=.&#64;-]*'.
      */
     override fun consumerGroupId(consumerGroupId: String) {
@@ -265,6 +276,13 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
         Unit = provisionedPollerConfig(ProvisionedPollerConfig(provisionedPollerConfig))
 
     /**
+     * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry.
+     */
+    override fun schemaRegistryConfig(schemaRegistryConfig: ISchemaRegistry) {
+      cdkBuilder.schemaRegistryConfig(schemaRegistryConfig.let(ISchemaRegistry.Companion::unwrap))
+    }
+
+    /**
      * @param secret The secret with the Kafka credentials, see
      * https://docs.aws.amazon.com/msk/latest/developerguide/msk-password.html for details This field
      * is required if your Kafka brokers are accessed over the Internet.
@@ -278,6 +296,13 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
      */
     override fun startingPosition(startingPosition: StartingPosition) {
       cdkBuilder.startingPosition(startingPosition.let(StartingPosition.Companion::unwrap))
+    }
+
+    /**
+     * @param startingPositionTimestamp The time from which to start reading, in Unix time seconds.
+     */
+    override fun startingPositionTimestamp(startingPositionTimestamp: Number) {
+      cdkBuilder.startingPositionTimestamp(startingPositionTimestamp)
     }
 
     /**
@@ -326,7 +351,7 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
      *
      * The consumer group ID must be unique among all your Kafka event sources. After creating a
      * Kafka event source mapping with the consumer group ID specified, you cannot update this value. 
-     * The value must have a lenght between 1 and 200 and full the pattern '[a-zA-Z0-9-/
+     * The value must have a length between 1 and 200 and full the pattern '[a-zA-Z0-9-/
      * *:_+=.&#64;-]*'.
      *
      * Default: - none
@@ -395,6 +420,14 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
         unwrap(this).getProvisionedPollerConfig()?.let(ProvisionedPollerConfig::wrap)
 
     /**
+     * Specific configuration settings for a Kafka schema registry.
+     *
+     * Default: - none
+     */
+    override fun schemaRegistryConfig(): ISchemaRegistry? =
+        unwrap(this).getSchemaRegistryConfig()?.let(ISchemaRegistry::wrap)
+
+    /**
      * The secret with the Kafka credentials, see
      * https://docs.aws.amazon.com/msk/latest/developerguide/msk-password.html for details This field
      * is required if your Kafka brokers are accessed over the Internet.
@@ -408,6 +441,13 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
      */
     override fun startingPosition(): StartingPosition =
         unwrap(this).getStartingPosition().let(StartingPosition::wrap)
+
+    /**
+     * The time from which to start reading, in Unix time seconds.
+     *
+     * Default: - no timestamp
+     */
+    override fun startingPositionTimestamp(): Number? = unwrap(this).getStartingPositionTimestamp()
 
     /**
      * The Kafka topic to subscribe to.

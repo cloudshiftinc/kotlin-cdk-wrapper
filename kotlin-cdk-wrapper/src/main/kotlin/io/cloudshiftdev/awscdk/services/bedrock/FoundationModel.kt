@@ -17,8 +17,13 @@ import kotlin.String
  * FoundationModelIdentifier.AMAZON_TITAN_TEXT_G1_EXPRESS_V1);
  * BedrockInvokeModel task = BedrockInvokeModel.Builder.create(this, "Prompt Model")
  * .model(model)
- * .input(BedrockInvokeModelInputProps.builder().s3InputUri(JsonPath.stringAt("$.prompt")).build())
- * .output(BedrockInvokeModelOutputProps.builder().s3OutputUri(JsonPath.stringAt("$.prompt")).build())
+ * .body(TaskInput.fromObject(Map.of(
+ * "inputText", "Generate a list of five first names.",
+ * "textGenerationConfig", Map.of(
+ * "maxTokenCount", 100,
+ * "temperature", 1))))
+ * .resultSelector(Map.of(
+ * "names", JsonPath.stringAt("$.Body.results[0].outputText")))
  * .build();
  * ```
  *

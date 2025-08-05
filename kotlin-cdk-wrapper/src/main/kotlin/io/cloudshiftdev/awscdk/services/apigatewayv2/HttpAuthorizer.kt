@@ -333,6 +333,9 @@ public open class HttpAuthorizer(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.apigatewayv2.HttpAuthorizer.PROPERTY_INJECTION_ID
+
     public fun fromHttpAuthorizerAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

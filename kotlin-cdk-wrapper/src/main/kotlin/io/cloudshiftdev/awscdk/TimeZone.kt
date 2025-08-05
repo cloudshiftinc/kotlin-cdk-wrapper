@@ -13,24 +13,22 @@ import kotlin.String
  * Example:
  *
  * ```
- * LambdaInvoke target;
- * Schedule rateBasedSchedule = Schedule.Builder.create(this, "Schedule")
- * .schedule(ScheduleExpression.rate(Duration.minutes(10)))
- * .target(target)
- * .description("This is a test rate-based schedule")
- * .build();
- * Schedule cronBasedSchedule = Schedule.Builder.create(this, "Schedule")
- * .schedule(ScheduleExpression.cron(CronOptionsWithTimezone.builder()
- * .minute("0")
- * .hour("23")
- * .day("20")
- * .month("11")
- * .timeZone(TimeZone.AMERICA_NEW_YORK)
- * .build()))
- * .target(target)
- * .description("This is a test cron-based schedule that will run at 11:00 PM, on day 20 of the
- * month, only in November in New York timezone")
- * .build();
+ * import io.cloudshiftdev.awscdk.TimeZone;
+ * SomeScalableResource resource;
+ * ScalableAttribute capacity = resource.autoScaleCapacity(new Caps()
+ * .minCapacity(1)
+ * .maxCapacity(50)
+ * );
+ * capacity.scaleOnSchedule("PrescaleInTheMorning", ScalingSchedule.builder()
+ * .schedule(Schedule.cron(CronOptions.builder().hour("8").minute("0").build()))
+ * .minCapacity(20)
+ * .timeZone(TimeZone.AMERICA_DENVER)
+ * .build());
+ * capacity.scaleOnSchedule("AllowDownscalingAtNight", ScalingSchedule.builder()
+ * .schedule(Schedule.cron(CronOptions.builder().hour("20").minute("0").build()))
+ * .minCapacity(1)
+ * .timeZone(TimeZone.AMERICA_DENVER)
+ * .build());
  * ```
  */
 public open class TimeZone(

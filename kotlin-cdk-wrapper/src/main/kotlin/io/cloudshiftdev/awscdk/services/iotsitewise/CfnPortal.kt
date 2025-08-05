@@ -775,7 +775,9 @@ public open class CfnPortal(
    */
   public interface PortalTypeEntryProperty {
     /**
-     * List of enabled Tools for a certain portal.
+     * The array of tools associated with the specified portal type.
+     *
+     * The possible values are `ASSISTANT` and `DASHBOARD` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-portal-portaltypeentry.html#cfn-iotsitewise-portal-portaltypeentry-portaltools)
      */
@@ -787,12 +789,14 @@ public open class CfnPortal(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param portalTools List of enabled Tools for a certain portal. 
+       * @param portalTools The array of tools associated with the specified portal type. 
+       * The possible values are `ASSISTANT` and `DASHBOARD` .
        */
       public fun portalTools(portalTools: List<String>)
 
       /**
-       * @param portalTools List of enabled Tools for a certain portal. 
+       * @param portalTools The array of tools associated with the specified portal type. 
+       * The possible values are `ASSISTANT` and `DASHBOARD` .
        */
       public fun portalTools(vararg portalTools: String)
     }
@@ -803,14 +807,16 @@ public open class CfnPortal(
           software.amazon.awscdk.services.iotsitewise.CfnPortal.PortalTypeEntryProperty.builder()
 
       /**
-       * @param portalTools List of enabled Tools for a certain portal. 
+       * @param portalTools The array of tools associated with the specified portal type. 
+       * The possible values are `ASSISTANT` and `DASHBOARD` .
        */
       override fun portalTools(portalTools: List<String>) {
         cdkBuilder.portalTools(portalTools)
       }
 
       /**
-       * @param portalTools List of enabled Tools for a certain portal. 
+       * @param portalTools The array of tools associated with the specified portal type. 
+       * The possible values are `ASSISTANT` and `DASHBOARD` .
        */
       override fun portalTools(vararg portalTools: String): Unit = portalTools(portalTools.toList())
 
@@ -824,7 +830,9 @@ public open class CfnPortal(
     ) : CdkObject(cdkObject),
         PortalTypeEntryProperty {
       /**
-       * List of enabled Tools for a certain portal.
+       * The array of tools associated with the specified portal type.
+       *
+       * The possible values are `ASSISTANT` and `DASHBOARD` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-portal-portaltypeentry.html#cfn-iotsitewise-portal-portaltypeentry-portaltools)
        */

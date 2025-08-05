@@ -20,7 +20,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Use a web ACL association to define an association between a web ACL and a regional application
  * resource, to protect the resource. A regional application can be an Application Load Balancer (ALB),
  * an Amazon API Gateway REST API, an AWS AppSync GraphQL API, an Amazon Cognito user pool, an AWS App
- * Runner service, or an AWS Verified Access instance.
+ * Runner service, an AWS Amplify application, or an AWS Verified Access instance.
  *
  * For Amazon CloudFront , don't use this resource. Instead, use your CloudFront distribution
  * configuration. To associate a web ACL with a distribution, provide the Amazon Resource Name (ARN) of
@@ -57,13 +57,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.wafv2.*;
- * CfnWebACLAssociation cfnWebACLAssociation = CfnWebACLAssociation.Builder.create(this,
- * "MyCfnWebACLAssociation")
- * .resourceArn("resourceArn")
- * .webAclArn("webAclArn")
+ * EventApi api;
+ * CfnWebACL webAcl;
+ * // Associate waf with Event API
+ * // Associate waf with Event API
+ * CfnWebACLAssociation.Builder.create(this, "WafAssociation")
+ * .resourceArn(api.getApiArn())
+ * .webAclArn(webAcl.getAttrArn())
  * .build();
  * ```
  *
@@ -144,6 +144,8 @@ public open class CfnWebACLAssociation(
      * :service/ *apprunner-service-name* / *apprunner-service-id*`
      * * For an AWS Verified Access instance: `arn: *partition* :ec2: *region* : *account-id*
      * :verified-access-instance/ *instance-id*`
+     * * For an AWS Amplify instance: `arn: *partition* :amplify: *region* : *account-id* :apps/
+     * *app-id*`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webaclassociation.html#cfn-wafv2-webaclassociation-resourcearn)
      * @param resourceArn The Amazon Resource Name (ARN) of the resource to associate with the web
@@ -185,6 +187,8 @@ public open class CfnWebACLAssociation(
      * :service/ *apprunner-service-name* / *apprunner-service-id*`
      * * For an AWS Verified Access instance: `arn: *partition* :ec2: *region* : *account-id*
      * :verified-access-instance/ *instance-id*`
+     * * For an AWS Amplify instance: `arn: *partition* :amplify: *region* : *account-id* :apps/
+     * *app-id*`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webaclassociation.html#cfn-wafv2-webaclassociation-resourcearn)
      * @param resourceArn The Amazon Resource Name (ARN) of the resource to associate with the web

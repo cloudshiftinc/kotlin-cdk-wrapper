@@ -62,7 +62,7 @@ public interface CfnStackProps {
    * `CommaDelimitedList` to nested stacks.
    *
    *
-   * Conditional. Required if the nested stack requires input parameters.
+   * Required if the nested stack requires input parameters.
    *
    * Whether an update causes interruptions depends on the resources that are being updated. An
    * update never causes a nested stack to be replaced.
@@ -82,11 +82,10 @@ public interface CfnStackProps {
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * Location of file containing the template body.
+   * The URL of a file that contains the template body.
    *
-   * The URL must point to a template (max size: 460,800 bytes) that's located in an Amazon S3
-   * bucket. For more information, see [Template
-   * anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html) .
+   * The URL must point to a template (max size: 1 MB) that's located in an Amazon S3 bucket. The
+   * location for an Amazon S3 bucket must start with `https://` .
    *
    * Whether an update causes interruptions depends on the resources that are being updated. An
    * update never causes a nested stack to be replaced.
@@ -142,12 +141,12 @@ public interface CfnStackProps {
      * type `CommaDelimitedList` to nested stacks.
      *
      *
-     * Conditional. Required if the nested stack requires input parameters.
+     * Required if the nested stack requires input parameters.
      *
      * Whether an update causes interruptions depends on the resources that are being updated. An
      * update never causes a nested stack to be replaced.
      */
-    public fun parameters(parameters: IResolvable)
+    public fun parameters(parameters: Map<String, String>)
 
     /**
      * @param parameters The set value pairs that represent the parameters passed to CloudFormation
@@ -161,12 +160,12 @@ public interface CfnStackProps {
      * type `CommaDelimitedList` to nested stacks.
      *
      *
-     * Conditional. Required if the nested stack requires input parameters.
+     * Required if the nested stack requires input parameters.
      *
      * Whether an update causes interruptions depends on the resources that are being updated. An
      * update never causes a nested stack to be replaced.
      */
-    public fun parameters(parameters: Map<String, String>)
+    public fun parameters(parameters: IResolvable)
 
     /**
      * @param tags Key-value pairs to associate with this stack.
@@ -183,10 +182,9 @@ public interface CfnStackProps {
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * @param templateUrl Location of file containing the template body.
-     * The URL must point to a template (max size: 460,800 bytes) that's located in an Amazon S3
-     * bucket. For more information, see [Template
-     * anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html) .
+     * @param templateUrl The URL of a file that contains the template body.
+     * The URL must point to a template (max size: 1 MB) that's located in an Amazon S3 bucket. The
+     * location for an Amazon S3 bucket must start with `https://` .
      *
      * Whether an update causes interruptions depends on the resources that are being updated. An
      * update never causes a nested stack to be replaced.
@@ -240,13 +238,13 @@ public interface CfnStackProps {
      * type `CommaDelimitedList` to nested stacks.
      *
      *
-     * Conditional. Required if the nested stack requires input parameters.
+     * Required if the nested stack requires input parameters.
      *
      * Whether an update causes interruptions depends on the resources that are being updated. An
      * update never causes a nested stack to be replaced.
      */
-    override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+    override fun parameters(parameters: Map<String, String>) {
+      cdkBuilder.parameters(parameters)
     }
 
     /**
@@ -261,13 +259,13 @@ public interface CfnStackProps {
      * type `CommaDelimitedList` to nested stacks.
      *
      *
-     * Conditional. Required if the nested stack requires input parameters.
+     * Required if the nested stack requires input parameters.
      *
      * Whether an update causes interruptions depends on the resources that are being updated. An
      * update never causes a nested stack to be replaced.
      */
-    override fun parameters(parameters: Map<String, String>) {
-      cdkBuilder.parameters(parameters)
+    override fun parameters(parameters: IResolvable) {
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -287,10 +285,9 @@ public interface CfnStackProps {
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * @param templateUrl Location of file containing the template body.
-     * The URL must point to a template (max size: 460,800 bytes) that's located in an Amazon S3
-     * bucket. For more information, see [Template
-     * anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html) .
+     * @param templateUrl The URL of a file that contains the template body.
+     * The URL must point to a template (max size: 1 MB) that's located in an Amazon S3 bucket. The
+     * location for an Amazon S3 bucket must start with `https://` .
      *
      * Whether an update causes interruptions depends on the resources that are being updated. An
      * update never causes a nested stack to be replaced.
@@ -346,7 +343,7 @@ public interface CfnStackProps {
      * type `CommaDelimitedList` to nested stacks.
      *
      *
-     * Conditional. Required if the nested stack requires input parameters.
+     * Required if the nested stack requires input parameters.
      *
      * Whether an update causes interruptions depends on the resources that are being updated. An
      * update never causes a nested stack to be replaced.
@@ -366,11 +363,10 @@ public interface CfnStackProps {
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
-     * Location of file containing the template body.
+     * The URL of a file that contains the template body.
      *
-     * The URL must point to a template (max size: 460,800 bytes) that's located in an Amazon S3
-     * bucket. For more information, see [Template
-     * anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html) .
+     * The URL must point to a template (max size: 1 MB) that's located in an Amazon S3 bucket. The
+     * location for an Amazon S3 bucket must start with `https://` .
      *
      * Whether an update causes interruptions depends on the resources that are being updated. An
      * update never causes a nested stack to be replaced.

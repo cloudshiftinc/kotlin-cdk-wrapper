@@ -11,8 +11,13 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * Bucket bucket = Bucket.Builder.create(this, "MyBlockedBucket")
+ * import io.cloudshiftdev.awscdk.RemovalPolicy;
+ * Bucket.Builder.create(scope, "Bucket")
  * .blockPublicAccess(BlockPublicAccess.BLOCK_ALL)
+ * .encryption(BucketEncryption.S3_MANAGED)
+ * .enforceSSL(true)
+ * .versioned(true)
+ * .removalPolicy(RemovalPolicy.RETAIN)
  * .build();
  * ```
  */
@@ -163,6 +168,9 @@ public open class BlockPublicAccess(
   public companion object {
     public val BLOCK_ACLS: BlockPublicAccess =
         BlockPublicAccess.wrap(software.amazon.awscdk.services.s3.BlockPublicAccess.BLOCK_ACLS)
+
+    public val BLOCK_ACLS_ONLY: BlockPublicAccess =
+        BlockPublicAccess.wrap(software.amazon.awscdk.services.s3.BlockPublicAccess.BLOCK_ACLS_ONLY)
 
     public val BLOCK_ALL: BlockPublicAccess =
         BlockPublicAccess.wrap(software.amazon.awscdk.services.s3.BlockPublicAccess.BLOCK_ALL)

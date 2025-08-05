@@ -5,10 +5,13 @@ package io.cloudshiftdev.awscdk.services.eks
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.ITaggableV2
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -33,10 +36,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .roleArn("roleArn")
  * .serviceAccount("serviceAccount")
  * // the properties below are optional
+ * .disableSessionTags(false)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .targetRoleArn("targetRoleArn")
  * .build();
  * ```
  *
@@ -74,6 +79,21 @@ public open class CfnPodIdentityAssociation(
   public open fun attrAssociationId(): String = unwrap(this).getAttrAssociationId()
 
   /**
+   * The unique identifier for this EKS Pod Identity association for a target IAM role.
+   *
+   * You put this value in the trust policy of the target role, in a `Condition` to match the
+   * `sts.ExternalId` . This ensures that the target role can only be assumed by this association. This
+   * prevents the *confused deputy problem* . For more information about the confused deputy problem,
+   * see [The confused deputy
+   * problem](https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html) in the *IAM User
+   * Guide* .
+   *
+   * If you want to use the same target role with multiple associations or other roles, use
+   * independent statements in the trust policy to allow `sts:AssumeRole` access from each role.
+   */
+  public open fun attrExternalId(): String = unwrap(this).getAttrExternalId()
+
+  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun cdkTagManager(): TagManager =
@@ -89,6 +109,31 @@ public open class CfnPodIdentityAssociation(
    */
   public open fun clusterName(`value`: String) {
     unwrap(this).setClusterName(`value`)
+  }
+
+  /**
+   * The state of the automatic sessions tags.
+   *
+   * The value of *true* disables these tags.
+   */
+  public open fun disableSessionTags(): Any? = unwrap(this).getDisableSessionTags()
+
+  /**
+   * The state of the automatic sessions tags.
+   *
+   * The value of *true* disables these tags.
+   */
+  public open fun disableSessionTags(`value`: Boolean) {
+    unwrap(this).setDisableSessionTags(`value`)
+  }
+
+  /**
+   * The state of the automatic sessions tags.
+   *
+   * The value of *true* disables these tags.
+   */
+  public open fun disableSessionTags(`value`: IResolvable) {
+    unwrap(this).setDisableSessionTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -156,6 +201,18 @@ public open class CfnPodIdentityAssociation(
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
+   * The Amazon Resource Name (ARN) of the target IAM role to associate with the service account.
+   */
+  public open fun targetRoleArn(): String? = unwrap(this).getTargetRoleArn()
+
+  /**
+   * The Amazon Resource Name (ARN) of the target IAM role to associate with the service account.
+   */
+  public open fun targetRoleArn(`value`: String) {
+    unwrap(this).setTargetRoleArn(`value`)
+  }
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.eks.CfnPodIdentityAssociation].
    */
   @CdkDslMarker
@@ -169,9 +226,43 @@ public open class CfnPodIdentityAssociation(
     public fun clusterName(clusterName: String)
 
     /**
+     * The state of the automatic sessions tags. The value of *true* disables these tags.
+     *
+     * EKS Pod Identity adds a pre-defined set of session tags when it assumes the role. You can use
+     * these tags to author a single role that can work across resources by allowing access to AWS
+     * resources based on matching tags. By default, EKS Pod Identity attaches six tags, including tags
+     * for cluster name, namespace, and service account name. For the list of tags added by EKS Pod
+     * Identity, see [List of session tags added by EKS Pod
+     * Identity](https://docs.aws.amazon.com/eks/latest/userguide/pod-id-abac.html#pod-id-abac-tags) in
+     * the *Amazon EKS User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html#cfn-eks-podidentityassociation-disablesessiontags)
+     * @param disableSessionTags The state of the automatic sessions tags. The value of *true*
+     * disables these tags. 
+     */
+    public fun disableSessionTags(disableSessionTags: Boolean)
+
+    /**
+     * The state of the automatic sessions tags. The value of *true* disables these tags.
+     *
+     * EKS Pod Identity adds a pre-defined set of session tags when it assumes the role. You can use
+     * these tags to author a single role that can work across resources by allowing access to AWS
+     * resources based on matching tags. By default, EKS Pod Identity attaches six tags, including tags
+     * for cluster name, namespace, and service account name. For the list of tags added by EKS Pod
+     * Identity, see [List of session tags added by EKS Pod
+     * Identity](https://docs.aws.amazon.com/eks/latest/userguide/pod-id-abac.html#pod-id-abac-tags) in
+     * the *Amazon EKS User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html#cfn-eks-podidentityassociation-disablesessiontags)
+     * @param disableSessionTags The state of the automatic sessions tags. The value of *true*
+     * disables these tags. 
+     */
+    public fun disableSessionTags(disableSessionTags: IResolvable)
+
+    /**
      * The name of the Kubernetes namespace inside the cluster to create the association in.
      *
-     * The service account and the pods that use the service account must be in this namespace.
+     * The service account and the Pods that use the service account must be in this namespace.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html#cfn-eks-podidentityassociation-namespace)
      * @param namespace The name of the Kubernetes namespace inside the cluster to create the
@@ -183,7 +274,7 @@ public open class CfnPodIdentityAssociation(
      * The Amazon Resource Name (ARN) of the IAM role to associate with the service account.
      *
      * The EKS Pod Identity agent manages credentials to assume this role for applications in the
-     * containers in the pods that use this service account.
+     * containers in the Pods that use this service account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html#cfn-eks-podidentityassociation-rolearn)
      * @param roleArn The Amazon Resource Name (ARN) of the IAM role to associate with the service
@@ -242,6 +333,18 @@ public open class CfnPodIdentityAssociation(
      * @param tags Metadata that assists with categorization and organization. 
      */
     public fun tags(vararg tags: CfnTag)
+
+    /**
+     * The Amazon Resource Name (ARN) of the target IAM role to associate with the service account.
+     *
+     * This role is assumed by using the EKS Pod Identity association role, then the credentials for
+     * this role are injected into the Pod.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html#cfn-eks-podidentityassociation-targetrolearn)
+     * @param targetRoleArn The Amazon Resource Name (ARN) of the target IAM role to associate with
+     * the service account. 
+     */
+    public fun targetRoleArn(targetRoleArn: String)
   }
 
   private class BuilderImpl(
@@ -262,9 +365,47 @@ public open class CfnPodIdentityAssociation(
     }
 
     /**
+     * The state of the automatic sessions tags. The value of *true* disables these tags.
+     *
+     * EKS Pod Identity adds a pre-defined set of session tags when it assumes the role. You can use
+     * these tags to author a single role that can work across resources by allowing access to AWS
+     * resources based on matching tags. By default, EKS Pod Identity attaches six tags, including tags
+     * for cluster name, namespace, and service account name. For the list of tags added by EKS Pod
+     * Identity, see [List of session tags added by EKS Pod
+     * Identity](https://docs.aws.amazon.com/eks/latest/userguide/pod-id-abac.html#pod-id-abac-tags) in
+     * the *Amazon EKS User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html#cfn-eks-podidentityassociation-disablesessiontags)
+     * @param disableSessionTags The state of the automatic sessions tags. The value of *true*
+     * disables these tags. 
+     */
+    override fun disableSessionTags(disableSessionTags: Boolean) {
+      cdkBuilder.disableSessionTags(disableSessionTags)
+    }
+
+    /**
+     * The state of the automatic sessions tags. The value of *true* disables these tags.
+     *
+     * EKS Pod Identity adds a pre-defined set of session tags when it assumes the role. You can use
+     * these tags to author a single role that can work across resources by allowing access to AWS
+     * resources based on matching tags. By default, EKS Pod Identity attaches six tags, including tags
+     * for cluster name, namespace, and service account name. For the list of tags added by EKS Pod
+     * Identity, see [List of session tags added by EKS Pod
+     * Identity](https://docs.aws.amazon.com/eks/latest/userguide/pod-id-abac.html#pod-id-abac-tags) in
+     * the *Amazon EKS User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html#cfn-eks-podidentityassociation-disablesessiontags)
+     * @param disableSessionTags The state of the automatic sessions tags. The value of *true*
+     * disables these tags. 
+     */
+    override fun disableSessionTags(disableSessionTags: IResolvable) {
+      cdkBuilder.disableSessionTags(disableSessionTags.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
      * The name of the Kubernetes namespace inside the cluster to create the association in.
      *
-     * The service account and the pods that use the service account must be in this namespace.
+     * The service account and the Pods that use the service account must be in this namespace.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html#cfn-eks-podidentityassociation-namespace)
      * @param namespace The name of the Kubernetes namespace inside the cluster to create the
@@ -278,7 +419,7 @@ public open class CfnPodIdentityAssociation(
      * The Amazon Resource Name (ARN) of the IAM role to associate with the service account.
      *
      * The EKS Pod Identity agent manages credentials to assume this role for applications in the
-     * containers in the pods that use this service account.
+     * containers in the Pods that use this service account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html#cfn-eks-podidentityassociation-rolearn)
      * @param roleArn The Amazon Resource Name (ARN) of the IAM role to associate with the service
@@ -343,6 +484,20 @@ public open class CfnPodIdentityAssociation(
      * @param tags Metadata that assists with categorization and organization. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    /**
+     * The Amazon Resource Name (ARN) of the target IAM role to associate with the service account.
+     *
+     * This role is assumed by using the EKS Pod Identity association role, then the credentials for
+     * this role are injected into the Pod.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-podidentityassociation.html#cfn-eks-podidentityassociation-targetrolearn)
+     * @param targetRoleArn The Amazon Resource Name (ARN) of the target IAM role to associate with
+     * the service account. 
+     */
+    override fun targetRoleArn(targetRoleArn: String) {
+      cdkBuilder.targetRoleArn(targetRoleArn)
+    }
 
     public fun build(): software.amazon.awscdk.services.eks.CfnPodIdentityAssociation =
         cdkBuilder.build()

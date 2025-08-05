@@ -54,7 +54,7 @@ public interface AwsCustomResourceProps {
   public fun functionName(): String? = unwrap(this).getFunctionName()
 
   /**
-   * Whether to install the latest AWS SDK v2.
+   * Whether to install the latest AWS SDK v3.
    *
    * If not specified, this uses whatever JavaScript SDK version is the default in
    * AWS Lambda at the time of execution.
@@ -170,6 +170,20 @@ public interface AwsCustomResourceProps {
   public fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
   /**
+   * The maximum time that can elapse before a custom resource operation times out.
+   *
+   * You should not need to set this property. It is intended to allow quick turnaround
+   * even if the implementor of the custom resource forgets to include a `try/catch`.
+   * We have included the `try/catch`, and AWS service calls usually do not take an hour
+   * to complete.
+   *
+   * The value must be between 1 second and 3600 seconds.
+   *
+   * Default: Duration.seconds(3600)
+   */
+  public fun serviceTimeout(): Duration? = unwrap(this).getServiceTimeout()?.let(Duration::wrap)
+
+  /**
    * The timeout for the singleton Lambda function implementing this custom resource.
    *
    * Default: Duration.minutes(2)
@@ -208,7 +222,7 @@ public interface AwsCustomResourceProps {
     public fun functionName(functionName: String)
 
     /**
-     * @param installLatestAwsSdk Whether to install the latest AWS SDK v2.
+     * @param installLatestAwsSdk Whether to install the latest AWS SDK v3.
      * If not specified, this uses whatever JavaScript SDK version is the default in
      * AWS Lambda at the time of execution.
      *
@@ -315,6 +329,18 @@ public interface AwsCustomResourceProps {
     public fun role(role: IRole)
 
     /**
+     * @param serviceTimeout The maximum time that can elapse before a custom resource operation
+     * times out.
+     * You should not need to set this property. It is intended to allow quick turnaround
+     * even if the implementor of the custom resource forgets to include a `try/catch`.
+     * We have included the `try/catch`, and AWS service calls usually do not take an hour
+     * to complete.
+     *
+     * The value must be between 1 second and 3600 seconds.
+     */
+    public fun serviceTimeout(serviceTimeout: Duration)
+
+    /**
      * @param timeout The timeout for the singleton Lambda function implementing this custom
      * resource.
      */
@@ -357,7 +383,7 @@ public interface AwsCustomResourceProps {
     }
 
     /**
-     * @param installLatestAwsSdk Whether to install the latest AWS SDK v2.
+     * @param installLatestAwsSdk Whether to install the latest AWS SDK v3.
      * If not specified, this uses whatever JavaScript SDK version is the default in
      * AWS Lambda at the time of execution.
      *
@@ -489,6 +515,20 @@ public interface AwsCustomResourceProps {
     }
 
     /**
+     * @param serviceTimeout The maximum time that can elapse before a custom resource operation
+     * times out.
+     * You should not need to set this property. It is intended to allow quick turnaround
+     * even if the implementor of the custom resource forgets to include a `try/catch`.
+     * We have included the `try/catch`, and AWS service calls usually do not take an hour
+     * to complete.
+     *
+     * The value must be between 1 second and 3600 seconds.
+     */
+    override fun serviceTimeout(serviceTimeout: Duration) {
+      cdkBuilder.serviceTimeout(serviceTimeout.let(Duration.Companion::unwrap))
+    }
+
+    /**
      * @param timeout The timeout for the singleton Lambda function implementing this custom
      * resource.
      */
@@ -542,7 +582,7 @@ public interface AwsCustomResourceProps {
     override fun functionName(): String? = unwrap(this).getFunctionName()
 
     /**
-     * Whether to install the latest AWS SDK v2.
+     * Whether to install the latest AWS SDK v3.
      *
      * If not specified, this uses whatever JavaScript SDK version is the default in
      * AWS Lambda at the time of execution.
@@ -657,6 +697,20 @@ public interface AwsCustomResourceProps {
      * Default: - a new role is created
      */
     override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
+
+    /**
+     * The maximum time that can elapse before a custom resource operation times out.
+     *
+     * You should not need to set this property. It is intended to allow quick turnaround
+     * even if the implementor of the custom resource forgets to include a `try/catch`.
+     * We have included the `try/catch`, and AWS service calls usually do not take an hour
+     * to complete.
+     *
+     * The value must be between 1 second and 3600 seconds.
+     *
+     * Default: Duration.seconds(3600)
+     */
+    override fun serviceTimeout(): Duration? = unwrap(this).getServiceTimeout()?.let(Duration::wrap)
 
     /**
      * The timeout for the singleton Lambda function implementing this custom resource.

@@ -652,11 +652,6 @@ public open class CfnMultiplexprogram(
       /**
        * @param audioPids the value to be set.
        */
-      public fun audioPids(audioPids: IResolvable)
-
-      /**
-       * @param audioPids the value to be set.
-       */
       public fun audioPids(audioPids: List<Number>)
 
       /**
@@ -665,9 +660,9 @@ public open class CfnMultiplexprogram(
       public fun audioPids(vararg audioPids: Number)
 
       /**
-       * @param dvbSubPids the value to be set.
+       * @param audioPids the value to be set.
        */
-      public fun dvbSubPids(dvbSubPids: IResolvable)
+      public fun audioPids(audioPids: IResolvable)
 
       /**
        * @param dvbSubPids the value to be set.
@@ -678,6 +673,11 @@ public open class CfnMultiplexprogram(
        * @param dvbSubPids the value to be set.
        */
       public fun dvbSubPids(vararg dvbSubPids: Number)
+
+      /**
+       * @param dvbSubPids the value to be set.
+       */
+      public fun dvbSubPids(dvbSubPids: IResolvable)
 
       /**
        * @param dvbTeletextPid the value to be set.
@@ -697,17 +697,17 @@ public open class CfnMultiplexprogram(
       /**
        * @param klvDataPids the value to be set.
        */
-      public fun klvDataPids(klvDataPids: IResolvable)
-
-      /**
-       * @param klvDataPids the value to be set.
-       */
       public fun klvDataPids(klvDataPids: List<Number>)
 
       /**
        * @param klvDataPids the value to be set.
        */
       public fun klvDataPids(vararg klvDataPids: Number)
+
+      /**
+       * @param klvDataPids the value to be set.
+       */
+      public fun klvDataPids(klvDataPids: IResolvable)
 
       /**
        * @param pcrPid the value to be set.
@@ -727,17 +727,17 @@ public open class CfnMultiplexprogram(
       /**
        * @param scte27Pids the value to be set.
        */
-      public fun scte27Pids(scte27Pids: IResolvable)
-
-      /**
-       * @param scte27Pids the value to be set.
-       */
       public fun scte27Pids(scte27Pids: List<Number>)
 
       /**
        * @param scte27Pids the value to be set.
        */
       public fun scte27Pids(vararg scte27Pids: Number)
+
+      /**
+       * @param scte27Pids the value to be set.
+       */
+      public fun scte27Pids(scte27Pids: IResolvable)
 
       /**
        * @param scte35Pid the value to be set.
@@ -764,13 +764,6 @@ public open class CfnMultiplexprogram(
       /**
        * @param audioPids the value to be set.
        */
-      override fun audioPids(audioPids: IResolvable) {
-        cdkBuilder.audioPids(audioPids.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param audioPids the value to be set.
-       */
       override fun audioPids(audioPids: List<Number>) {
         cdkBuilder.audioPids(audioPids)
       }
@@ -781,10 +774,10 @@ public open class CfnMultiplexprogram(
       override fun audioPids(vararg audioPids: Number): Unit = audioPids(audioPids.toList())
 
       /**
-       * @param dvbSubPids the value to be set.
+       * @param audioPids the value to be set.
        */
-      override fun dvbSubPids(dvbSubPids: IResolvable) {
-        cdkBuilder.dvbSubPids(dvbSubPids.let(IResolvable.Companion::unwrap))
+      override fun audioPids(audioPids: IResolvable) {
+        cdkBuilder.audioPids(audioPids.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -798,6 +791,13 @@ public open class CfnMultiplexprogram(
        * @param dvbSubPids the value to be set.
        */
       override fun dvbSubPids(vararg dvbSubPids: Number): Unit = dvbSubPids(dvbSubPids.toList())
+
+      /**
+       * @param dvbSubPids the value to be set.
+       */
+      override fun dvbSubPids(dvbSubPids: IResolvable) {
+        cdkBuilder.dvbSubPids(dvbSubPids.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param dvbTeletextPid the value to be set.
@@ -823,13 +823,6 @@ public open class CfnMultiplexprogram(
       /**
        * @param klvDataPids the value to be set.
        */
-      override fun klvDataPids(klvDataPids: IResolvable) {
-        cdkBuilder.klvDataPids(klvDataPids.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param klvDataPids the value to be set.
-       */
       override fun klvDataPids(klvDataPids: List<Number>) {
         cdkBuilder.klvDataPids(klvDataPids)
       }
@@ -838,6 +831,13 @@ public open class CfnMultiplexprogram(
        * @param klvDataPids the value to be set.
        */
       override fun klvDataPids(vararg klvDataPids: Number): Unit = klvDataPids(klvDataPids.toList())
+
+      /**
+       * @param klvDataPids the value to be set.
+       */
+      override fun klvDataPids(klvDataPids: IResolvable) {
+        cdkBuilder.klvDataPids(klvDataPids.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param pcrPid the value to be set.
@@ -863,13 +863,6 @@ public open class CfnMultiplexprogram(
       /**
        * @param scte27Pids the value to be set.
        */
-      override fun scte27Pids(scte27Pids: IResolvable) {
-        cdkBuilder.scte27Pids(scte27Pids.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param scte27Pids the value to be set.
-       */
       override fun scte27Pids(scte27Pids: List<Number>) {
         cdkBuilder.scte27Pids(scte27Pids)
       }
@@ -878,6 +871,13 @@ public open class CfnMultiplexprogram(
        * @param scte27Pids the value to be set.
        */
       override fun scte27Pids(vararg scte27Pids: Number): Unit = scte27Pids(scte27Pids.toList())
+
+      /**
+       * @param scte27Pids the value to be set.
+       */
+      override fun scte27Pids(scte27Pids: IResolvable) {
+        cdkBuilder.scte27Pids(scte27Pids.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param scte35Pid the value to be set.

@@ -858,6 +858,9 @@ public open class Trail(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.cloudtrail.Trail.PROPERTY_INJECTION_ID
+
     public fun onEvent(scope: CloudshiftdevConstructsConstruct, id: String): Rule =
         software.amazon.awscdk.services.cloudtrail.Trail.onEvent(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id).let(Rule::wrap)

@@ -145,7 +145,10 @@ public interface CfnContainerRecipeProps {
   public fun name(): String
 
   /**
-   * The base image for the container recipe.
+   * The base image for customizations specified in the container recipe.
+   *
+   * This can contain an Image Builder image resource ARN or a container image URI, for example
+   * `amazonlinux:latest` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-parentimage)
    */
@@ -294,7 +297,9 @@ public interface CfnContainerRecipeProps {
     public fun name(name: String)
 
     /**
-     * @param parentImage The base image for the container recipe. 
+     * @param parentImage The base image for customizations specified in the container recipe. 
+     * This can contain an Image Builder image resource ARN or a container image URI, for example
+     * `amazonlinux:latest` .
      */
     public fun parentImage(parentImage: String)
 
@@ -469,7 +474,9 @@ public interface CfnContainerRecipeProps {
     }
 
     /**
-     * @param parentImage The base image for the container recipe. 
+     * @param parentImage The base image for customizations specified in the container recipe. 
+     * This can contain an Image Builder image resource ARN or a container image URI, for example
+     * `amazonlinux:latest` .
      */
     override fun parentImage(parentImage: String) {
       cdkBuilder.parentImage(parentImage)
@@ -626,7 +633,10 @@ public interface CfnContainerRecipeProps {
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * The base image for the container recipe.
+     * The base image for customizations specified in the container recipe.
+     *
+     * This can contain an Image Builder image resource ARN or a container image URI, for example
+     * `amazonlinux:latest` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-parentimage)
      */

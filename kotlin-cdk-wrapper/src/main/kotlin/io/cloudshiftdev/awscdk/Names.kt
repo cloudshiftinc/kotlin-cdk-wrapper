@@ -22,6 +22,9 @@ public open class Names(
     public fun nodeUniqueId(node: Node): String =
         software.amazon.awscdk.Names.nodeUniqueId(node.let(Node.Companion::unwrap))
 
+    public fun stackRelativeConstructPath(construct: IConstruct): String =
+        software.amazon.awscdk.Names.stackRelativeConstructPath(construct.let(IConstruct.Companion::unwrap))
+
     public fun uniqueId(construct: IConstruct): String =
         software.amazon.awscdk.Names.uniqueId(construct.let(IConstruct.Companion::unwrap))
 

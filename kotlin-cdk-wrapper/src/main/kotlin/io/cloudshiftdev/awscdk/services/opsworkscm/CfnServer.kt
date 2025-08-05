@@ -127,7 +127,12 @@ public open class CfnServer(
   public open fun attrEndpoint(): String = unwrap(this).getAttrEndpoint()
 
   /**
-   * The name of the server.
+   * The ID of the server.
+   */
+  public open fun attrId(): String = unwrap(this).getAttrId()
+
+  /**
+   *
    */
   public open fun attrServerName(): String = unwrap(this).getAttrServerName()
 
@@ -817,13 +822,6 @@ public open class CfnServer(
     /**
      * The service role that the AWS OpsWorks CM service backend uses to work with your account.
      *
-     * Although the AWS OpsWorks management console typically creates the service role for you, if
-     * you are using the AWS CLI or API commands, run the service-role-creation.yaml AWS CloudFormation
-     * template, located at
-     * https://s3.amazonaws.com/opsworks-cm-us-east-1-prod-default-assets/misc/opsworks-cm-roles.yaml.
-     * This template creates a CloudFormation stack that includes the service role and instance profile
-     * that you need.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-servicerolearn)
      * @param serviceRoleArn The service role that the AWS OpsWorks CM service backend uses to work
      * with your account. 
@@ -1303,13 +1301,6 @@ public open class CfnServer(
 
     /**
      * The service role that the AWS OpsWorks CM service backend uses to work with your account.
-     *
-     * Although the AWS OpsWorks management console typically creates the service role for you, if
-     * you are using the AWS CLI or API commands, run the service-role-creation.yaml AWS CloudFormation
-     * template, located at
-     * https://s3.amazonaws.com/opsworks-cm-us-east-1-prod-default-assets/misc/opsworks-cm-roles.yaml.
-     * This template creates a CloudFormation stack that includes the service role and instance profile
-     * that you need.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-servicerolearn)
      * @param serviceRoleArn The service role that the AWS OpsWorks CM service backend uses to work

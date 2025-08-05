@@ -34,6 +34,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .name("name")
  * // the properties below are optional
+ * .securityConfigurationId("securityConfigurationId")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -57,6 +58,13 @@ public interface CfnVirtualClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html#cfn-emrcontainers-virtualcluster-name)
    */
   public fun name(): String
+
+  /**
+   * The ID of the security configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html#cfn-emrcontainers-virtualcluster-securityconfigurationid)
+   */
+  public fun securityConfigurationId(): String? = unwrap(this).getSecurityConfigurationId()
 
   /**
    * An array of key-value pairs to apply to this resource.
@@ -96,6 +104,11 @@ public interface CfnVirtualClusterProps {
      * @param name The name of the virtual cluster. 
      */
     public fun name(name: String)
+
+    /**
+     * @param securityConfigurationId The ID of the security configuration.
+     */
+    public fun securityConfigurationId(securityConfigurationId: String)
 
     /**
      * @param tags An array of key-value pairs to apply to this resource.
@@ -150,6 +163,13 @@ public interface CfnVirtualClusterProps {
     }
 
     /**
+     * @param securityConfigurationId The ID of the security configuration.
+     */
+    override fun securityConfigurationId(securityConfigurationId: String) {
+      cdkBuilder.securityConfigurationId(securityConfigurationId)
+    }
+
+    /**
      * @param tags An array of key-value pairs to apply to this resource.
      * For more information, see
      * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -188,6 +208,13 @@ public interface CfnVirtualClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html#cfn-emrcontainers-virtualcluster-name)
      */
     override fun name(): String = unwrap(this).getName()
+
+    /**
+     * The ID of the security configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html#cfn-emrcontainers-virtualcluster-securityconfigurationid)
+     */
+    override fun securityConfigurationId(): String? = unwrap(this).getSecurityConfigurationId()
 
     /**
      * An array of key-value pairs to apply to this resource.

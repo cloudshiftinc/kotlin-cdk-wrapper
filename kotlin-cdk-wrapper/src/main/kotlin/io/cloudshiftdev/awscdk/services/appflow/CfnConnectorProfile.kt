@@ -3651,12 +3651,12 @@ public open class CfnConnectorProfile(
       /**
        * @param credentialsMap A map that holds custom authentication credentials.
        */
-      public fun credentialsMap(credentialsMap: IResolvable)
+      public fun credentialsMap(credentialsMap: Map<String, String>)
 
       /**
        * @param credentialsMap A map that holds custom authentication credentials.
        */
-      public fun credentialsMap(credentialsMap: Map<String, String>)
+      public fun credentialsMap(credentialsMap: IResolvable)
 
       /**
        * @param customAuthenticationType The custom authentication type that the connector uses. 
@@ -3673,15 +3673,15 @@ public open class CfnConnectorProfile(
       /**
        * @param credentialsMap A map that holds custom authentication credentials.
        */
-      override fun credentialsMap(credentialsMap: IResolvable) {
-        cdkBuilder.credentialsMap(credentialsMap.let(IResolvable.Companion::unwrap))
+      override fun credentialsMap(credentialsMap: Map<String, String>) {
+        cdkBuilder.credentialsMap(credentialsMap)
       }
 
       /**
        * @param credentialsMap A map that holds custom authentication credentials.
        */
-      override fun credentialsMap(credentialsMap: Map<String, String>) {
-        cdkBuilder.credentialsMap(credentialsMap)
+      override fun credentialsMap(credentialsMap: IResolvable) {
+        cdkBuilder.credentialsMap(credentialsMap.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4133,13 +4133,13 @@ public open class CfnConnectorProfile(
        * @param profileProperties A map of properties that are required to create a profile for the
        * custom connector.
        */
-      public fun profileProperties(profileProperties: IResolvable)
+      public fun profileProperties(profileProperties: Map<String, String>)
 
       /**
        * @param profileProperties A map of properties that are required to create a profile for the
        * custom connector.
        */
-      public fun profileProperties(profileProperties: Map<String, String>)
+      public fun profileProperties(profileProperties: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -4174,16 +4174,16 @@ public open class CfnConnectorProfile(
        * @param profileProperties A map of properties that are required to create a profile for the
        * custom connector.
        */
-      override fun profileProperties(profileProperties: IResolvable) {
-        cdkBuilder.profileProperties(profileProperties.let(IResolvable.Companion::unwrap))
+      override fun profileProperties(profileProperties: Map<String, String>) {
+        cdkBuilder.profileProperties(profileProperties)
       }
 
       /**
        * @param profileProperties A map of properties that are required to create a profile for the
        * custom connector.
        */
-      override fun profileProperties(profileProperties: Map<String, String>) {
-        cdkBuilder.profileProperties(profileProperties)
+      override fun profileProperties(profileProperties: IResolvable) {
+        cdkBuilder.profileProperties(profileProperties.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -5690,7 +5690,7 @@ public open class CfnConnectorProfile(
        * Use this parameter to provide any additional details that the connector requires to
        * authenticate your request.
        */
-      public fun tokenUrlCustomProperties(tokenUrlCustomProperties: IResolvable)
+      public fun tokenUrlCustomProperties(tokenUrlCustomProperties: Map<String, String>)
 
       /**
        * @param tokenUrlCustomProperties Associates your token URL with a map of properties that you
@@ -5698,7 +5698,7 @@ public open class CfnConnectorProfile(
        * Use this parameter to provide any additional details that the connector requires to
        * authenticate your request.
        */
-      public fun tokenUrlCustomProperties(tokenUrlCustomProperties: Map<String, String>)
+      public fun tokenUrlCustomProperties(tokenUrlCustomProperties: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -5728,8 +5728,8 @@ public open class CfnConnectorProfile(
        * Use this parameter to provide any additional details that the connector requires to
        * authenticate your request.
        */
-      override fun tokenUrlCustomProperties(tokenUrlCustomProperties: IResolvable) {
-        cdkBuilder.tokenUrlCustomProperties(tokenUrlCustomProperties.let(IResolvable.Companion::unwrap))
+      override fun tokenUrlCustomProperties(tokenUrlCustomProperties: Map<String, String>) {
+        cdkBuilder.tokenUrlCustomProperties(tokenUrlCustomProperties)
       }
 
       /**
@@ -5738,8 +5738,8 @@ public open class CfnConnectorProfile(
        * Use this parameter to provide any additional details that the connector requires to
        * authenticate your request.
        */
-      override fun tokenUrlCustomProperties(tokenUrlCustomProperties: Map<String, String>) {
-        cdkBuilder.tokenUrlCustomProperties(tokenUrlCustomProperties)
+      override fun tokenUrlCustomProperties(tokenUrlCustomProperties: IResolvable) {
+        cdkBuilder.tokenUrlCustomProperties(tokenUrlCustomProperties.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

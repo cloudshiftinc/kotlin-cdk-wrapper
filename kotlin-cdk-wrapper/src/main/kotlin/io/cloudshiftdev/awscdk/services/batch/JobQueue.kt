@@ -407,6 +407,9 @@ public open class JobQueue(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.batch.JobQueue.PROPERTY_INJECTION_ID
+
     public fun fromJobQueueArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

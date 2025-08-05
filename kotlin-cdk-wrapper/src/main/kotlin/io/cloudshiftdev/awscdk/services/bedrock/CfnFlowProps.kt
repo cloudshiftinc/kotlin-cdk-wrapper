@@ -21,9 +21,12 @@ import kotlin.jvm.JvmName
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.bedrock.*;
+ * Object additionalModelRequestFields;
  * Object collector;
+ * FlowDefinitionProperty flowDefinitionProperty_;
  * Object input;
  * Object iterator;
+ * Object loopInput;
  * Object output;
  * CfnFlowProps cfnFlowProps = CfnFlowProps.builder()
  * .executionRoleArn("executionRoleArn")
@@ -63,6 +66,10 @@ import kotlin.jvm.JvmName
  * .expression("expression")
  * .build()))
  * .build())
+ * .inlineCode(InlineCodeFlowNodeConfigurationProperty.builder()
+ * .code("code")
+ * .language("language")
+ * .build())
  * .input(input)
  * .iterator(iterator)
  * .knowledgeBase(KnowledgeBaseFlowNodeConfigurationProperty.builder()
@@ -72,7 +79,61 @@ import kotlin.jvm.JvmName
  * .guardrailIdentifier("guardrailIdentifier")
  * .guardrailVersion("guardrailVersion")
  * .build())
+ * .inferenceConfiguration(PromptInferenceConfigurationProperty.builder()
+ * .text(PromptModelInferenceConfigurationProperty.builder()
+ * .maxTokens(123)
+ * .stopSequences(List.of("stopSequences"))
+ * .temperature(123)
+ * .topP(123)
+ * .build())
+ * .build())
  * .modelId("modelId")
+ * .numberOfResults(123)
+ * .orchestrationConfiguration(KnowledgeBaseOrchestrationConfigurationProperty.builder()
+ * .additionalModelRequestFields(additionalModelRequestFields)
+ * .inferenceConfig(PromptInferenceConfigurationProperty.builder()
+ * .text(PromptModelInferenceConfigurationProperty.builder()
+ * .maxTokens(123)
+ * .stopSequences(List.of("stopSequences"))
+ * .temperature(123)
+ * .topP(123)
+ * .build())
+ * .build())
+ * .performanceConfig(PerformanceConfigurationProperty.builder()
+ * .latency("latency")
+ * .build())
+ * .promptTemplate(KnowledgeBasePromptTemplateProperty.builder()
+ * .textPromptTemplate("textPromptTemplate")
+ * .build())
+ * .build())
+ * .promptTemplate(KnowledgeBasePromptTemplateProperty.builder()
+ * .textPromptTemplate("textPromptTemplate")
+ * .build())
+ * .rerankingConfiguration(VectorSearchRerankingConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .bedrockRerankingConfiguration(VectorSearchBedrockRerankingConfigurationProperty.builder()
+ * .modelConfiguration(VectorSearchBedrockRerankingModelConfigurationProperty.builder()
+ * .modelArn("modelArn")
+ * // the properties below are optional
+ * .additionalModelRequestFields(additionalModelRequestFields)
+ * .build())
+ * // the properties below are optional
+ * .metadataConfiguration(MetadataConfigurationForRerankingProperty.builder()
+ * .selectionMode("selectionMode")
+ * // the properties below are optional
+ * .selectiveModeConfiguration(RerankingMetadataSelectiveModeConfigurationProperty.builder()
+ * .fieldsToExclude(List.of(FieldForRerankingProperty.builder()
+ * .fieldName("fieldName")
+ * .build()))
+ * .fieldsToInclude(List.of(FieldForRerankingProperty.builder()
+ * .fieldName("fieldName")
+ * .build()))
+ * .build())
+ * .build())
+ * .numberOfRerankedResults(123)
+ * .build())
+ * .build())
  * .build())
  * .lambdaFunction(LambdaFunctionFlowNodeConfigurationProperty.builder()
  * .lambdaArn("lambdaArn")
@@ -81,6 +142,19 @@ import kotlin.jvm.JvmName
  * .botAliasArn("botAliasArn")
  * .localeId("localeId")
  * .build())
+ * .loop(LoopFlowNodeConfigurationProperty.builder()
+ * .definition(flowDefinitionProperty_)
+ * .build())
+ * .loopController(LoopControllerFlowNodeConfigurationProperty.builder()
+ * .continueCondition(FlowConditionProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .expression("expression")
+ * .build())
+ * // the properties below are optional
+ * .maxIterations(123)
+ * .build())
+ * .loopInput(loopInput)
  * .output(output)
  * .prompt(PromptFlowNodeConfigurationProperty.builder()
  * .sourceConfiguration(PromptFlowNodeSourceConfigurationProperty.builder()
@@ -135,6 +209,8 @@ import kotlin.jvm.JvmName
  * .expression("expression")
  * .name("name")
  * .type("type")
+ * // the properties below are optional
+ * .category("category")
  * .build()))
  * .outputs(List.of(FlowNodeOutputProperty.builder()
  * .name("name")
@@ -360,12 +436,12 @@ public interface CfnFlowProps {
     /**
      * @param testAliasTags A map of tag keys and values.
      */
-    public fun testAliasTags(testAliasTags: IResolvable)
+    public fun testAliasTags(testAliasTags: Map<String, String>)
 
     /**
      * @param testAliasTags A map of tag keys and values.
      */
-    public fun testAliasTags(testAliasTags: Map<String, String>)
+    public fun testAliasTags(testAliasTags: IResolvable)
   }
 
   private class BuilderImpl : Builder {
@@ -501,15 +577,15 @@ public interface CfnFlowProps {
     /**
      * @param testAliasTags A map of tag keys and values.
      */
-    override fun testAliasTags(testAliasTags: IResolvable) {
-      cdkBuilder.testAliasTags(testAliasTags.let(IResolvable.Companion::unwrap))
+    override fun testAliasTags(testAliasTags: Map<String, String>) {
+      cdkBuilder.testAliasTags(testAliasTags)
     }
 
     /**
      * @param testAliasTags A map of tag keys and values.
      */
-    override fun testAliasTags(testAliasTags: Map<String, String>) {
-      cdkBuilder.testAliasTags(testAliasTags)
+    override fun testAliasTags(testAliasTags: IResolvable) {
+      cdkBuilder.testAliasTags(testAliasTags.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.bedrock.CfnFlowProps = cdkBuilder.build()

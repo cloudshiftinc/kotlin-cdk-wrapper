@@ -71,9 +71,14 @@ public interface CommonClusterOptions {
    * synthesized.
    *
    * This command will include
-   * the cluster name and, if applicable, the ARN of the masters IAM role.
+   * the cluster name and the ARN of the masters IAM role.
+   *
+   * Note: If mastersRole is not specified, this property will be ignored and no config command will
+   * be emitted.
    *
    * Default: true
+   *
+   * [Documentation](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_eks-readme.html#masters-role)
    */
   public fun outputConfigCommand(): Boolean? = unwrap(this).getOutputConfigCommand()
 
@@ -138,7 +143,10 @@ public interface CommonClusterOptions {
      * @param outputConfigCommand Determines whether a CloudFormation output with the `aws eks
      * update-kubeconfig` command will be synthesized.
      * This command will include
-     * the cluster name and, if applicable, the ARN of the masters IAM role.
+     * the cluster name and the ARN of the masters IAM role.
+     *
+     * Note: If mastersRole is not specified, this property will be ignored and no config command
+     * will be emitted.
      */
     public fun outputConfigCommand(outputConfigCommand: Boolean)
 
@@ -203,7 +211,10 @@ public interface CommonClusterOptions {
      * @param outputConfigCommand Determines whether a CloudFormation output with the `aws eks
      * update-kubeconfig` command will be synthesized.
      * This command will include
-     * the cluster name and, if applicable, the ARN of the masters IAM role.
+     * the cluster name and the ARN of the masters IAM role.
+     *
+     * Note: If mastersRole is not specified, this property will be ignored and no config command
+     * will be emitted.
      */
     override fun outputConfigCommand(outputConfigCommand: Boolean) {
       cdkBuilder.outputConfigCommand(outputConfigCommand)
@@ -284,9 +295,14 @@ public interface CommonClusterOptions {
      * be synthesized.
      *
      * This command will include
-     * the cluster name and, if applicable, the ARN of the masters IAM role.
+     * the cluster name and the ARN of the masters IAM role.
+     *
+     * Note: If mastersRole is not specified, this property will be ignored and no config command
+     * will be emitted.
      *
      * Default: true
+     *
+     * [Documentation](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_eks-readme.html#masters-role)
      */
     override fun outputConfigCommand(): Boolean? = unwrap(this).getOutputConfigCommand()
 

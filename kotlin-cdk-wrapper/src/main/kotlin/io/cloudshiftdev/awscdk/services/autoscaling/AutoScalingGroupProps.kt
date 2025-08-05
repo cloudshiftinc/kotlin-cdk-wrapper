@@ -31,18 +31,13 @@ import kotlin.jvm.JvmName
  *
  * ```
  * Vpc vpc;
- * InstanceType instanceType;
- * IMachineImage machineImage;
+ * SecurityGroup mySecurityGroup = SecurityGroup.Builder.create(this,
+ * "SecurityGroup").vpc(vpc).build();
  * AutoScalingGroup.Builder.create(this, "ASG")
  * .vpc(vpc)
- * .instanceType(instanceType)
- * .machineImage(machineImage)
- * // ...
- * .init(CloudFormationInit.fromElements(InitFile.fromString("/etc/my_instance", "This got written
- * during instance startup")))
- * .signals(Signals.waitForAll(SignalsOptions.builder()
- * .timeout(Duration.minutes(10))
- * .build()))
+ * .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.MICRO))
+ * .machineImage(MachineImage.latestAmazonLinux2())
+ * .securityGroup(mySecurityGroup)
  * .build();
  * ```
  */
@@ -122,6 +117,13 @@ public interface AutoScalingGroupProps : CommonAutoScalingGroupProps {
    * [Documentation](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-maintenance-policy.html)
    */
   public fun maxHealthyPercentage(): Number? = unwrap(this).getMaxHealthyPercentage()
+
+  /**
+   * Whether safety guardrail should be enforced when migrating to the launch template.
+   *
+   * Default: false
+   */
+  public fun migrateToLaunchTemplate(): Boolean? = unwrap(this).getMigrateToLaunchTemplate()
 
   /**
    * Specifies the lower threshold as a percentage of the desired capacity of the Auto Scaling
@@ -237,6 +239,13 @@ public interface AutoScalingGroupProps : CommonAutoScalingGroupProps {
     public fun autoScalingGroupName(autoScalingGroupName: String)
 
     /**
+     * @param azCapacityDistributionStrategy The strategy for distributing instances across
+     * Availability Zones.
+     */
+    public
+        fun azCapacityDistributionStrategy(azCapacityDistributionStrategy: CapacityDistributionStrategy)
+
+    /**
      * @param blockDevices Specifies how block devices are exposed to the instance. You can specify
      * virtual devices and EBS volumes.
      * Each instance that is launched has an associated root device volume,
@@ -319,8 +328,16 @@ public interface AutoScalingGroupProps : CommonAutoScalingGroupProps {
 
     /**
      * @param healthCheck Configuration for health checks.
+     * @deprecated Use `healthChecks` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun healthCheck(healthCheck: HealthCheck)
+
+    /**
+     * @param healthChecks Configuration for EC2 or additional health checks.
+     * Even when using `HealthChecks.withAdditionalChecks()`, the EC2 type is implicitly included.
+     */
+    public fun healthChecks(healthChecks: HealthChecks)
 
     /**
      * @param ignoreUnmodifiedSizeProperties If the ASG has scheduled actions, don't reset unchanged
@@ -448,6 +465,12 @@ public interface AutoScalingGroupProps : CommonAutoScalingGroupProps {
      * leave this property undefined.
      */
     public fun maxInstanceLifetime(maxInstanceLifetime: Duration)
+
+    /**
+     * @param migrateToLaunchTemplate Whether safety guardrail should be enforced when migrating to
+     * the launch template.
+     */
+    public fun migrateToLaunchTemplate(migrateToLaunchTemplate: Boolean)
 
     /**
      * @param minCapacity Minimum number of instances in the fleet.
@@ -674,6 +697,15 @@ public interface AutoScalingGroupProps : CommonAutoScalingGroupProps {
     }
 
     /**
+     * @param azCapacityDistributionStrategy The strategy for distributing instances across
+     * Availability Zones.
+     */
+    override
+        fun azCapacityDistributionStrategy(azCapacityDistributionStrategy: CapacityDistributionStrategy) {
+      cdkBuilder.azCapacityDistributionStrategy(azCapacityDistributionStrategy.let(CapacityDistributionStrategy.Companion::unwrap))
+    }
+
+    /**
      * @param blockDevices Specifies how block devices are exposed to the instance. You can specify
      * virtual devices and EBS volumes.
      * Each instance that is launched has an associated root device volume,
@@ -770,9 +802,19 @@ public interface AutoScalingGroupProps : CommonAutoScalingGroupProps {
 
     /**
      * @param healthCheck Configuration for health checks.
+     * @deprecated Use `healthChecks` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun healthCheck(healthCheck: HealthCheck) {
       cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
+    }
+
+    /**
+     * @param healthChecks Configuration for EC2 or additional health checks.
+     * Even when using `HealthChecks.withAdditionalChecks()`, the EC2 type is implicitly included.
+     */
+    override fun healthChecks(healthChecks: HealthChecks) {
+      cdkBuilder.healthChecks(healthChecks.let(HealthChecks.Companion::unwrap))
     }
 
     /**
@@ -925,6 +967,14 @@ public interface AutoScalingGroupProps : CommonAutoScalingGroupProps {
      */
     override fun maxInstanceLifetime(maxInstanceLifetime: Duration) {
       cdkBuilder.maxInstanceLifetime(maxInstanceLifetime.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * @param migrateToLaunchTemplate Whether safety guardrail should be enforced when migrating to
+     * the launch template.
+     */
+    override fun migrateToLaunchTemplate(migrateToLaunchTemplate: Boolean) {
+      cdkBuilder.migrateToLaunchTemplate(migrateToLaunchTemplate)
     }
 
     /**
@@ -1194,6 +1244,14 @@ public interface AutoScalingGroupProps : CommonAutoScalingGroupProps {
     override fun autoScalingGroupName(): String? = unwrap(this).getAutoScalingGroupName()
 
     /**
+     * The strategy for distributing instances across Availability Zones.
+     *
+     * Default: None
+     */
+    override fun azCapacityDistributionStrategy(): CapacityDistributionStrategy? =
+        unwrap(this).getAzCapacityDistributionStrategy()?.let(CapacityDistributionStrategy::wrap)
+
+    /**
      * Specifies how block devices are exposed to the instance. You can specify virtual devices and
      * EBS volumes.
      *
@@ -1282,11 +1340,26 @@ public interface AutoScalingGroupProps : CommonAutoScalingGroupProps {
         unwrap(this).getGroupMetrics()?.map(GroupMetrics::wrap) ?: emptyList()
 
     /**
-     * Configuration for health checks.
+     * (deprecated) Configuration for health checks.
      *
      * Default: - HealthCheck.ec2 with no grace period
+     *
+     * @deprecated Use `healthChecks` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun healthCheck(): HealthCheck? = unwrap(this).getHealthCheck()?.let(HealthCheck::wrap)
+
+    /**
+     * Configuration for EC2 or additional health checks.
+     *
+     * Even when using `HealthChecks.withAdditionalChecks()`, the EC2 type is implicitly included.
+     *
+     * Default: - EC2 type with no grace period
+     *
+     * [Documentation](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-health-checks.html)
+     */
+    override fun healthChecks(): HealthChecks? =
+        unwrap(this).getHealthChecks()?.let(HealthChecks::wrap)
 
     /**
      * If the ASG has scheduled actions, don't reset unchanged group sizes.
@@ -1454,6 +1527,13 @@ public interface AutoScalingGroupProps : CommonAutoScalingGroupProps {
      */
     override fun maxInstanceLifetime(): Duration? =
         unwrap(this).getMaxInstanceLifetime()?.let(Duration::wrap)
+
+    /**
+     * Whether safety guardrail should be enforced when migrating to the launch template.
+     *
+     * Default: false
+     */
+    override fun migrateToLaunchTemplate(): Boolean? = unwrap(this).getMigrateToLaunchTemplate()
 
     /**
      * Minimum number of instances in the fleet.

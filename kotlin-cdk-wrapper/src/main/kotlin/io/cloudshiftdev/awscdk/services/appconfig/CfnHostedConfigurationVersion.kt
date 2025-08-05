@@ -217,6 +217,10 @@ public open class CfnHostedConfigurationVersion(
     /**
      * A description of the configuration.
      *
+     *
+     * Due to HTTP limitations, this field only supports ASCII characters.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html#cfn-appconfig-hostedconfigurationversion-description)
      * @param description A description of the configuration. 
      */
@@ -304,6 +308,10 @@ public open class CfnHostedConfigurationVersion(
 
     /**
      * A description of the configuration.
+     *
+     *
+     * Due to HTTP limitations, this field only supports ASCII characters.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html#cfn-appconfig-hostedconfigurationversion-description)
      * @param description A description of the configuration. 

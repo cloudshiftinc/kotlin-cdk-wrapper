@@ -161,6 +161,9 @@ public open class BucketPolicy(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.s3.BucketPolicy.PROPERTY_INJECTION_ID
+
     public fun fromCfnBucketPolicy(cfnBucketPolicy: CfnBucketPolicy): BucketPolicy =
         software.amazon.awscdk.services.s3.BucketPolicy.fromCfnBucketPolicy(cfnBucketPolicy.let(CfnBucketPolicy.Companion::unwrap)).let(BucketPolicy::wrap)
 

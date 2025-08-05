@@ -17,14 +17,13 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * Application app = new Application(this, "MyApp");
- * Environment env = Environment.Builder.create(this, "MyEnv")
- * .application(app)
- * .build();
- * HostedConfiguration.Builder.create(this, "MyHostedConfig")
- * .application(app)
- * .deployTo(List.of(env))
+ * Application application;
+ * Function fn;
+ * HostedConfiguration.Builder.create(this, "MyHostedConfiguration")
+ * .application(application)
  * .content(ConfigurationContent.fromInlineText("This is my configuration content."))
+ * .validators(List.of(JsonSchemaValidator.fromFile("schema.json"),
+ * LambdaValidator.fromFunction(fn)))
  * .build();
  * ```
  */
@@ -33,6 +32,13 @@ public interface HostedConfigurationProps : ConfigurationProps {
    * The content of the hosted configuration.
    */
   public fun content(): ConfigurationContent
+
+  /**
+   * The customer managed key to encrypt hosted configuration.
+   *
+   * Default: None
+   */
+  public fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
 
   /**
    * The latest version number of the hosted configuration.
@@ -62,6 +68,15 @@ public interface HostedConfigurationProps : ConfigurationProps {
      * @param content The content of the hosted configuration. 
      */
     public fun content(content: ConfigurationContent)
+
+    /**
+     * @param deletionProtectionCheck A parameter to configure deletion protection.
+     * Deletion protection prevents a user from deleting a configuration profile if your application
+     * has called
+     * either `GetLatestConfiguration` or `GetConfiguration` for the configuration profile during
+     * the specified interval.
+     */
+    public fun deletionProtectionCheck(deletionProtectionCheck: DeletionProtectionCheck)
 
     /**
      * @param deployTo The list of environments to deploy the configuration to.
@@ -97,6 +112,11 @@ public interface HostedConfigurationProps : ConfigurationProps {
      * @param description The description of the configuration.
      */
     public fun description(description: String)
+
+    /**
+     * @param kmsKey The customer managed key to encrypt hosted configuration.
+     */
+    public fun kmsKey(kmsKey: IKey)
 
     /**
      * @param latestVersionNumber The latest version number of the hosted configuration.
@@ -149,6 +169,17 @@ public interface HostedConfigurationProps : ConfigurationProps {
     }
 
     /**
+     * @param deletionProtectionCheck A parameter to configure deletion protection.
+     * Deletion protection prevents a user from deleting a configuration profile if your application
+     * has called
+     * either `GetLatestConfiguration` or `GetConfiguration` for the configuration profile during
+     * the specified interval.
+     */
+    override fun deletionProtectionCheck(deletionProtectionCheck: DeletionProtectionCheck) {
+      cdkBuilder.deletionProtectionCheck(deletionProtectionCheck.let(DeletionProtectionCheck.Companion::unwrap))
+    }
+
+    /**
      * @param deployTo The list of environments to deploy the configuration to.
      * If this parameter is not specified, then there will be no
      * deployment created alongside this configuration.
@@ -189,6 +220,13 @@ public interface HostedConfigurationProps : ConfigurationProps {
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
+    }
+
+    /**
+     * @param kmsKey The customer managed key to encrypt hosted configuration.
+     */
+    override fun kmsKey(kmsKey: IKey) {
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -251,6 +289,21 @@ public interface HostedConfigurationProps : ConfigurationProps {
         unwrap(this).getContent().let(ConfigurationContent::wrap)
 
     /**
+     * A parameter to configure deletion protection.
+     *
+     * Deletion protection prevents a user from deleting a configuration profile if your application
+     * has called
+     * either `GetLatestConfiguration` or `GetConfiguration` for the configuration profile during
+     * the specified interval.
+     *
+     * Default: DeletionProtectionCheck.ACCOUNT_DEFAULT
+     *
+     * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/deletion-protection.html)
+     */
+    override fun deletionProtectionCheck(): DeletionProtectionCheck? =
+        unwrap(this).getDeletionProtectionCheck()?.let(DeletionProtectionCheck::wrap)
+
+    /**
      * The list of environments to deploy the configuration to.
      *
      * If this parameter is not specified, then there will be no
@@ -286,6 +339,13 @@ public interface HostedConfigurationProps : ConfigurationProps {
      * Default: - No description.
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The customer managed key to encrypt hosted configuration.
+     *
+     * Default: None
+     */
+    override fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
 
     /**
      * The latest version number of the hosted configuration.

@@ -33,10 +33,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnDeployment cfnDeployment = CfnDeployment.Builder.create(this, "MyCfnDeployment")
  * .deploymentPatternName("deploymentPatternName")
  * .name("name")
- * .specifications(Map.of(
- * "specificationsKey", "specifications"))
  * .workloadName("workloadName")
  * // the properties below are optional
+ * .specifications(Map.of(
+ * "specificationsKey", "specifications"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -139,20 +139,20 @@ public open class CfnDeployment(
   /**
    * The settings specified for the deployment.
    */
-  public open fun specifications(): Any = unwrap(this).getSpecifications()
-
-  /**
-   * The settings specified for the deployment.
-   */
-  public open fun specifications(`value`: IResolvable) {
-    unwrap(this).setSpecifications(`value`.let(IResolvable.Companion::unwrap))
-  }
+  public open fun specifications(): Any? = unwrap(this).getSpecifications()
 
   /**
    * The settings specified for the deployment.
    */
   public open fun specifications(`value`: Map<String, String>) {
     unwrap(this).setSpecifications(`value`)
+  }
+
+  /**
+   * The settings specified for the deployment.
+   */
+  public open fun specifications(`value`: IResolvable) {
+    unwrap(this).setSpecifications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -219,7 +219,7 @@ public open class CfnDeployment(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-launchwizard-deployment.html#cfn-launchwizard-deployment-specifications)
      * @param specifications The settings specified for the deployment. 
      */
-    public fun specifications(specifications: IResolvable)
+    public fun specifications(specifications: Map<String, String>)
 
     /**
      * The settings specified for the deployment.
@@ -235,7 +235,7 @@ public open class CfnDeployment(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-launchwizard-deployment.html#cfn-launchwizard-deployment-specifications)
      * @param specifications The settings specified for the deployment. 
      */
-    public fun specifications(specifications: Map<String, String>)
+    public fun specifications(specifications: IResolvable)
 
     /**
      * Information about the tags attached to a deployment.
@@ -303,8 +303,8 @@ public open class CfnDeployment(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-launchwizard-deployment.html#cfn-launchwizard-deployment-specifications)
      * @param specifications The settings specified for the deployment. 
      */
-    override fun specifications(specifications: IResolvable) {
-      cdkBuilder.specifications(specifications.let(IResolvable.Companion::unwrap))
+    override fun specifications(specifications: Map<String, String>) {
+      cdkBuilder.specifications(specifications)
     }
 
     /**
@@ -321,8 +321,8 @@ public open class CfnDeployment(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-launchwizard-deployment.html#cfn-launchwizard-deployment-specifications)
      * @param specifications The settings specified for the deployment. 
      */
-    override fun specifications(specifications: Map<String, String>) {
-      cdkBuilder.specifications(specifications)
+    override fun specifications(specifications: IResolvable) {
+      cdkBuilder.specifications(specifications.let(IResolvable.Companion::unwrap))
     }
 
     /**

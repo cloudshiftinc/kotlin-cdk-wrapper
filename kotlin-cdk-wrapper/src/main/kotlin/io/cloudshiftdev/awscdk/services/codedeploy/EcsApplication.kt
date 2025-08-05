@@ -93,6 +93,9 @@ public open class EcsApplication(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.codedeploy.EcsApplication.PROPERTY_INJECTION_ID
+
     public fun fromEcsApplicationArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

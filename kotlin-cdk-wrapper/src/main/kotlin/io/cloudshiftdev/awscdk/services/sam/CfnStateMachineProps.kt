@@ -136,12 +136,12 @@ public interface CfnStateMachineProps {
     /**
      * @param definitionSubstitutions the value to be set.
      */
-    public fun definitionSubstitutions(definitionSubstitutions: IResolvable)
+    public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>)
 
     /**
      * @param definitionSubstitutions the value to be set.
      */
-    public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>)
+    public fun definitionSubstitutions(definitionSubstitutions: IResolvable)
 
     /**
      * @param definitionUri the value to be set.
@@ -281,15 +281,15 @@ public interface CfnStateMachineProps {
     /**
      * @param definitionSubstitutions the value to be set.
      */
-    override fun definitionSubstitutions(definitionSubstitutions: IResolvable) {
-      cdkBuilder.definitionSubstitutions(definitionSubstitutions.let(IResolvable.Companion::unwrap))
+    override fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
+      cdkBuilder.definitionSubstitutions(definitionSubstitutions)
     }
 
     /**
      * @param definitionSubstitutions the value to be set.
      */
-    override fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
-      cdkBuilder.definitionSubstitutions(definitionSubstitutions)
+    override fun definitionSubstitutions(definitionSubstitutions: IResolvable) {
+      cdkBuilder.definitionSubstitutions(definitionSubstitutions.let(IResolvable.Companion::unwrap))
     }
 
     /**

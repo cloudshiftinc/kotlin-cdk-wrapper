@@ -131,6 +131,17 @@ public interface GaugeWidgetProps : MetricWidgetProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param accountId The AWS account ID where the metrics are located.
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     */
+    public fun accountId(accountId: String)
+
+    /**
      * @param annotations Annotations for the left Y axis.
      */
     public fun annotations(annotations: List<HorizontalAnnotation>)
@@ -240,6 +251,19 @@ public interface GaugeWidgetProps : MetricWidgetProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.GaugeWidgetProps.Builder =
         software.amazon.awscdk.services.cloudwatch.GaugeWidgetProps.builder()
+
+    /**
+     * @param accountId The AWS account ID where the metrics are located.
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     */
+    override fun accountId(accountId: String) {
+      cdkBuilder.accountId(accountId)
+    }
 
     /**
      * @param annotations Annotations for the left Y axis.
@@ -385,6 +409,20 @@ public interface GaugeWidgetProps : MetricWidgetProps {
     cdkObject: software.amazon.awscdk.services.cloudwatch.GaugeWidgetProps,
   ) : CdkObject(cdkObject),
       GaugeWidgetProps {
+    /**
+     * The AWS account ID where the metrics are located.
+     *
+     * This enables cross-account functionality for CloudWatch dashboards.
+     * Before using this feature, ensure that proper cross-account sharing is configured
+     * between the monitoring account and source account.
+     *
+     * For more information, see:
+     * https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html
+     *
+     * Default: - Current account
+     */
+    override fun accountId(): String? = unwrap(this).getAccountId()
+
     /**
      * Annotations for the left Y axis.
      *

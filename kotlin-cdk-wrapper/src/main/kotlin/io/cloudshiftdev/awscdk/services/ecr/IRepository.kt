@@ -216,6 +216,13 @@ public interface IRepository : IResource {
       options: OnImageScanCompletedOptions.Builder.() -> Unit): Rule
 
   /**
+   * The URI of this repository's registry:.
+   *
+   * ACCOUNT.dkr.ecr.REGION.amazonaws.com
+   */
+  public fun registryUri(): String
+
+  /**
    * The ARN of the repository.
    */
   public fun repositoryArn(): String
@@ -545,6 +552,13 @@ public interface IRepository : IResource {
     override fun onImageScanCompleted(id: String,
         options: OnImageScanCompletedOptions.Builder.() -> Unit): Rule = onImageScanCompleted(id,
         OnImageScanCompletedOptions(options))
+
+    /**
+     * The URI of this repository's registry:.
+     *
+     * ACCOUNT.dkr.ecr.REGION.amazonaws.com
+     */
+    override fun registryUri(): String = unwrap(this).getRegistryUri()
 
     /**
      * The ARN of the repository.

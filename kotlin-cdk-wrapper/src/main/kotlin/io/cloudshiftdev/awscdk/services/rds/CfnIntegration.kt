@@ -78,16 +78,16 @@ public open class CfnIntegration(
    * An optional set of non-secret key–value pairs that contains additional contextual information
    * about the data.
    */
-  public open fun additionalEncryptionContext(`value`: IResolvable) {
-    unwrap(this).setAdditionalEncryptionContext(`value`.let(IResolvable.Companion::unwrap))
+  public open fun additionalEncryptionContext(`value`: Map<String, String>) {
+    unwrap(this).setAdditionalEncryptionContext(`value`)
   }
 
   /**
    * An optional set of non-secret key–value pairs that contains additional contextual information
    * about the data.
    */
-  public open fun additionalEncryptionContext(`value`: Map<String, String>) {
-    unwrap(this).setAdditionalEncryptionContext(`value`)
+  public open fun additionalEncryptionContext(`value`: IResolvable) {
+    unwrap(this).setAdditionalEncryptionContext(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -225,7 +225,7 @@ public open class CfnIntegration(
      * @param additionalEncryptionContext An optional set of non-secret key–value pairs that
      * contains additional contextual information about the data. 
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
+    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
     /**
      * An optional set of non-secret key–value pairs that contains additional contextual information
@@ -241,7 +241,7 @@ public open class CfnIntegration(
      * @param additionalEncryptionContext An optional set of non-secret key–value pairs that
      * contains additional contextual information about the data. 
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
     /**
      * Data filters for the integration.
@@ -338,8 +338,8 @@ public open class CfnIntegration(
      * @param additionalEncryptionContext An optional set of non-secret key–value pairs that
      * contains additional contextual information about the data. 
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
+    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
     }
 
     /**
@@ -356,8 +356,8 @@ public open class CfnIntegration(
      * @param additionalEncryptionContext An optional set of non-secret key–value pairs that
      * contains additional contextual information about the data. 
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -7,7 +7,7 @@ import kotlin.Any
 import kotlin.Boolean
 
 /**
- * Helper to check if an error is a SynthesisErrors.
+ * Helper to check if an error is of a certain type.
  *
  * Example:
  *
@@ -25,7 +25,17 @@ public open class Errors(
   )
 
   public companion object {
+    public fun isAssertionError(x: Any): Boolean = software.amazon.awscdk.Errors.isAssertionError(x)
+
+    public fun isAssumptionError(x: Any): Boolean =
+        software.amazon.awscdk.Errors.isAssumptionError(x)
+
+    public fun isCloudAssemblyError(x: Any): Boolean =
+        software.amazon.awscdk.Errors.isCloudAssemblyError(x)
+
     public fun isConstructError(x: Any): Boolean = software.amazon.awscdk.Errors.isConstructError(x)
+
+    public fun isExecutionError(x: Any): Boolean = software.amazon.awscdk.Errors.isExecutionError(x)
 
     public fun isValidationError(x: Any): Boolean =
         software.amazon.awscdk.Errors.isValidationError(x)

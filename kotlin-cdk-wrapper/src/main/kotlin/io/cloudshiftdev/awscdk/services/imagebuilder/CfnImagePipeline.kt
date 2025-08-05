@@ -1261,7 +1261,7 @@ public open class CfnImagePipeline(
      * The maximum time in minutes that tests are permitted to run.
      *
      *
-     * The timeout attribute is not currently active. This value is ignored.
+     * The timeout property is not currently active. This value is ignored.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration-timeoutminutes)
@@ -1288,7 +1288,7 @@ public open class CfnImagePipeline(
       /**
        * @param timeoutMinutes The maximum time in minutes that tests are permitted to run.
        *
-       * The timeout attribute is not currently active. This value is ignored.
+       * The timeout property is not currently active. This value is ignored.
        */
       public fun timeoutMinutes(timeoutMinutes: Number)
     }
@@ -1318,7 +1318,7 @@ public open class CfnImagePipeline(
       /**
        * @param timeoutMinutes The maximum time in minutes that tests are permitted to run.
        *
-       * The timeout attribute is not currently active. This value is ignored.
+       * The timeout property is not currently active. This value is ignored.
        */
       override fun timeoutMinutes(timeoutMinutes: Number) {
         cdkBuilder.timeoutMinutes(timeoutMinutes)
@@ -1346,7 +1346,7 @@ public open class CfnImagePipeline(
        * The maximum time in minutes that tests are permitted to run.
        *
        *
-       * The timeout attribute is not currently active. This value is ignored.
+       * The timeout property is not currently active. This value is ignored.
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration-timeoutminutes)

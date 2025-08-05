@@ -23,24 +23,22 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * S3SourceAction sourceAction;
- * Artifact sourceOutput;
- * Bucket deployBucket;
- * Pipeline.Builder.create(this, "Pipeline")
- * .stages(List.of(StageProps.builder()
- * .stageName("Source")
- * .actions(List.of(sourceAction))
- * .build(), StageProps.builder()
- * .stageName("Deploy")
- * .actions(List.of(
- * S3DeployAction.Builder.create()
+ * Artifact sourceArtifact;
+ * Artifact outputArtifact;
+ * CommandsAction commandsAction = CommandsAction.Builder.create()
+ * .actionName("Commands")
+ * .commands(List.of("export MY_OUTPUT=my-key"))
+ * .input(sourceArtifact)
+ * .output(outputArtifact)
+ * .outputVariables(List.of("MY_OUTPUT", "CODEBUILD_BUILD_ID"))
+ * .build();
+ * // Deploy action
+ * S3DeployAction deployAction = S3DeployAction.Builder.create()
  * .actionName("DeployAction")
- * // can reference the variables
- * .objectKey(String.format("%s.txt", sourceAction.getVariables().getVersionId()))
- * .input(sourceOutput)
- * .bucket(deployBucket)
- * .build()))
- * .build()))
+ * .extract(true)
+ * .input(outputArtifact)
+ * .bucket(new Bucket(this, "DeployBucket"))
+ * .objectKey(commandsAction.variable("MY_OUTPUT"))
  * .build();
  * ```
  */

@@ -17,26 +17,28 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * LogGroup logGroup;
- * MetricFilter mf = MetricFilter.Builder.create(this, "MetricFilter")
- * .logGroup(logGroup)
- * .metricNamespace("MyApp")
- * .metricName("Latency")
- * .filterPattern(FilterPattern.exists("$.latency"))
- * .metricValue("$.latency")
- * .dimensions(Map.of(
- * "ErrorCode", "$.errorCode"))
- * .unit(Unit.MILLISECONDS)
+ * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
+ * Alias alias;
+ * // or add alarms to an existing group
+ * Alias blueGreenAlias;
+ * Alarm alarm = Alarm.Builder.create(this, "Errors")
+ * .comparisonOperator(ComparisonOperator.GREATER_THAN_THRESHOLD)
+ * .threshold(1)
+ * .evaluationPeriods(1)
+ * .metric(alias.metricErrors())
  * .build();
- * //expose a metric from the metric filter
- * Metric metric = mf.metric();
- * //you can use the metric to create a new alarm
- * //you can use the metric to create a new alarm
- * Alarm.Builder.create(this, "alarm from metric filter")
- * .metric(metric)
- * .threshold(100)
- * .evaluationPeriods(2)
+ * LambdaDeploymentGroup deploymentGroup = LambdaDeploymentGroup.Builder.create(this,
+ * "BlueGreenDeployment")
+ * .alias(alias)
+ * .deploymentConfig(LambdaDeploymentConfig.LINEAR_10PERCENT_EVERY_1MINUTE)
+ * .alarms(List.of(alarm))
  * .build();
+ * deploymentGroup.addAlarm(Alarm.Builder.create(this, "BlueGreenErrors")
+ * .comparisonOperator(ComparisonOperator.GREATER_THAN_THRESHOLD)
+ * .threshold(1)
+ * .evaluationPeriods(1)
+ * .metric(blueGreenAlias.metricErrors())
+ * .build());
  * ```
  */
 public open class Alarm(
@@ -340,6 +342,12 @@ public open class Alarm(
   }
 
   public companion object {
+    public val ANOMALY_DETECTION_NO_THRESHOLD: Number =
+        software.amazon.awscdk.services.cloudwatch.Alarm.ANOMALY_DETECTION_NO_THRESHOLD
+
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.cloudwatch.Alarm.PROPERTY_INJECTION_ID
+
     public fun fromAlarmArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

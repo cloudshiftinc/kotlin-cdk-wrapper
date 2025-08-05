@@ -22,6 +22,7 @@ import kotlin.Unit
  * .topicArn("topicArn")
  * // the properties below are optional
  * .contentBasedDeduplication(false)
+ * .keyArn("keyArn")
  * .build();
  * ```
  */
@@ -34,6 +35,13 @@ public interface TopicAttributes {
    * Default: false
    */
   public fun contentBasedDeduplication(): Boolean? = unwrap(this).getContentBasedDeduplication()
+
+  /**
+   * KMS encryption key, if this topic is server-side encrypted by a KMS key.
+   *
+   * Default: - None
+   */
+  public fun keyArn(): String? = unwrap(this).getKeyArn()
 
   /**
    * The ARN of the SNS topic.
@@ -52,6 +60,11 @@ public interface TopicAttributes {
     public fun contentBasedDeduplication(contentBasedDeduplication: Boolean)
 
     /**
+     * @param keyArn KMS encryption key, if this topic is server-side encrypted by a KMS key.
+     */
+    public fun keyArn(keyArn: String)
+
+    /**
      * @param topicArn The ARN of the SNS topic. 
      */
     public fun topicArn(topicArn: String)
@@ -67,6 +80,13 @@ public interface TopicAttributes {
      */
     override fun contentBasedDeduplication(contentBasedDeduplication: Boolean) {
       cdkBuilder.contentBasedDeduplication(contentBasedDeduplication)
+    }
+
+    /**
+     * @param keyArn KMS encryption key, if this topic is server-side encrypted by a KMS key.
+     */
+    override fun keyArn(keyArn: String) {
+      cdkBuilder.keyArn(keyArn)
     }
 
     /**
@@ -91,6 +111,13 @@ public interface TopicAttributes {
      * Default: false
      */
     override fun contentBasedDeduplication(): Boolean? = unwrap(this).getContentBasedDeduplication()
+
+    /**
+     * KMS encryption key, if this topic is server-side encrypted by a KMS key.
+     *
+     * Default: - None
+     */
+    override fun keyArn(): String? = unwrap(this).getKeyArn()
 
     /**
      * The ARN of the SNS topic.

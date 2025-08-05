@@ -196,12 +196,14 @@ public open class CfnIndex(
       documentMetadataConfigurations(`value`.toList())
 
   /**
-   * Indicates whether the index is a Enterprise Edition index or a Developer Edition index.
+   * Indicates whether the index is a Enterprise Edition index, a Developer Edition index, or a
+   * GenAI Enterprise Edition index.
    */
   public open fun edition(): String = unwrap(this).getEdition()
 
   /**
-   * Indicates whether the index is a Enterprise Edition index or a Developer Edition index.
+   * Indicates whether the index is a Enterprise Edition index, a Developer Edition index, or a
+   * GenAI Enterprise Edition index.
    */
   public open fun edition(`value`: String) {
     unwrap(this).setEdition(`value`)
@@ -421,13 +423,12 @@ public open class CfnIndex(
     public fun documentMetadataConfigurations(vararg documentMetadataConfigurations: Any)
 
     /**
-     * Indicates whether the index is a Enterprise Edition index or a Developer Edition index.
-     *
-     * Valid values are `DEVELOPER_EDITION` and `ENTERPRISE_EDITION` .
+     * Indicates whether the index is a Enterprise Edition index, a Developer Edition index, or a
+     * GenAI Enterprise Edition index.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-index.html#cfn-kendra-index-edition)
-     * @param edition Indicates whether the index is a Enterprise Edition index or a Developer
-     * Edition index. 
+     * @param edition Indicates whether the index is a Enterprise Edition index, a Developer Edition
+     * index, or a GenAI Enterprise Edition index. 
      */
     public fun edition(edition: String)
 
@@ -662,13 +663,12 @@ public open class CfnIndex(
         documentMetadataConfigurations(documentMetadataConfigurations.toList())
 
     /**
-     * Indicates whether the index is a Enterprise Edition index or a Developer Edition index.
-     *
-     * Valid values are `DEVELOPER_EDITION` and `ENTERPRISE_EDITION` .
+     * Indicates whether the index is a Enterprise Edition index, a Developer Edition index, or a
+     * GenAI Enterprise Edition index.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-index.html#cfn-kendra-index-edition)
-     * @param edition Indicates whether the index is a Enterprise Edition index or a Developer
-     * Edition index. 
+     * @param edition Indicates whether the index is a Enterprise Edition index, a Developer Edition
+     * index, or a GenAI Enterprise Edition index. 
      */
     override fun edition(edition: String) {
       cdkBuilder.edition(edition)

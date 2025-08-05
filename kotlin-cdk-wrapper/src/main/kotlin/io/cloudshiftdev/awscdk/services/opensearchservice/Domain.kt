@@ -1142,7 +1142,7 @@ public open class Domain(
     /**
      * The minimum TLS version required for traffic to the domain.
      *
-     * Default: - TLSSecurityPolicy.TLS_1_0
+     * Default: - TLSSecurityPolicy.TLS_1_2
      *
      * @param tlsSecurityPolicy The minimum TLS version required for traffic to the domain. 
      */
@@ -1696,7 +1696,7 @@ public open class Domain(
     /**
      * The minimum TLS version required for traffic to the domain.
      *
-     * Default: - TLSSecurityPolicy.TLS_1_0
+     * Default: - TLSSecurityPolicy.TLS_1_2
      *
      * @param tlsSecurityPolicy The minimum TLS version required for traffic to the domain. 
      */
@@ -1813,6 +1813,9 @@ public open class Domain(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.opensearchservice.Domain.PROPERTY_INJECTION_ID
+
     public fun fromDomainAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

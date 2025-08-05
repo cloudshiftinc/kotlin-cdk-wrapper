@@ -72,9 +72,9 @@ public interface CfnSecurityGroupProps {
   public fun groupDescription(): String
 
   /**
-   * The name of the security group.
+   * The name of the security group. Names are case-insensitive and must be unique within the VPC.
    *
-   * Constraints: Up to 255 characters in length. Cannot start with `sg-` .
+   * Constraints: Up to 255 characters in length. Can't start with `sg-` .
    *
    * Valid characters: a-z, A-Z, 0-9, spaces, and ._-:/()#,&#64;[]+=&amp;;{}!$*
    *
@@ -85,16 +85,12 @@ public interface CfnSecurityGroupProps {
   /**
    * The outbound rules associated with the security group.
    *
-   * There is a short interruption during which you cannot connect to the security group.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-securitygroupegress)
    */
   public fun securityGroupEgress(): Any? = unwrap(this).getSecurityGroupEgress()
 
   /**
    * The inbound rules associated with the security group.
-   *
-   * There is a short interruption during which you cannot connect to the security group.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-securitygroupingress)
    */
@@ -131,8 +127,9 @@ public interface CfnSecurityGroupProps {
     public fun groupDescription(groupDescription: String)
 
     /**
-     * @param groupName The name of the security group.
-     * Constraints: Up to 255 characters in length. Cannot start with `sg-` .
+     * @param groupName The name of the security group. Names are case-insensitive and must be
+     * unique within the VPC.
+     * Constraints: Up to 255 characters in length. Can't start with `sg-` .
      *
      * Valid characters: a-z, A-Z, 0-9, spaces, and ._-:/()#,&#64;[]+=&amp;;{}!$*
      */
@@ -140,37 +137,31 @@ public interface CfnSecurityGroupProps {
 
     /**
      * @param securityGroupEgress The outbound rules associated with the security group.
-     * There is a short interruption during which you cannot connect to the security group.
      */
     public fun securityGroupEgress(securityGroupEgress: IResolvable)
 
     /**
      * @param securityGroupEgress The outbound rules associated with the security group.
-     * There is a short interruption during which you cannot connect to the security group.
      */
     public fun securityGroupEgress(securityGroupEgress: List<Any>)
 
     /**
      * @param securityGroupEgress The outbound rules associated with the security group.
-     * There is a short interruption during which you cannot connect to the security group.
      */
     public fun securityGroupEgress(vararg securityGroupEgress: Any)
 
     /**
      * @param securityGroupIngress The inbound rules associated with the security group.
-     * There is a short interruption during which you cannot connect to the security group.
      */
     public fun securityGroupIngress(securityGroupIngress: IResolvable)
 
     /**
      * @param securityGroupIngress The inbound rules associated with the security group.
-     * There is a short interruption during which you cannot connect to the security group.
      */
     public fun securityGroupIngress(securityGroupIngress: List<Any>)
 
     /**
      * @param securityGroupIngress The inbound rules associated with the security group.
-     * There is a short interruption during which you cannot connect to the security group.
      */
     public fun securityGroupIngress(vararg securityGroupIngress: Any)
 
@@ -207,8 +198,9 @@ public interface CfnSecurityGroupProps {
     }
 
     /**
-     * @param groupName The name of the security group.
-     * Constraints: Up to 255 characters in length. Cannot start with `sg-` .
+     * @param groupName The name of the security group. Names are case-insensitive and must be
+     * unique within the VPC.
+     * Constraints: Up to 255 characters in length. Can't start with `sg-` .
      *
      * Valid characters: a-z, A-Z, 0-9, spaces, and ._-:/()#,&#64;[]+=&amp;;{}!$*
      */
@@ -218,7 +210,6 @@ public interface CfnSecurityGroupProps {
 
     /**
      * @param securityGroupEgress The outbound rules associated with the security group.
-     * There is a short interruption during which you cannot connect to the security group.
      */
     override fun securityGroupEgress(securityGroupEgress: IResolvable) {
       cdkBuilder.securityGroupEgress(securityGroupEgress.let(IResolvable.Companion::unwrap))
@@ -226,7 +217,6 @@ public interface CfnSecurityGroupProps {
 
     /**
      * @param securityGroupEgress The outbound rules associated with the security group.
-     * There is a short interruption during which you cannot connect to the security group.
      */
     override fun securityGroupEgress(securityGroupEgress: List<Any>) {
       cdkBuilder.securityGroupEgress(securityGroupEgress.map{CdkObjectWrappers.unwrap(it)})
@@ -234,14 +224,12 @@ public interface CfnSecurityGroupProps {
 
     /**
      * @param securityGroupEgress The outbound rules associated with the security group.
-     * There is a short interruption during which you cannot connect to the security group.
      */
     override fun securityGroupEgress(vararg securityGroupEgress: Any): Unit =
         securityGroupEgress(securityGroupEgress.toList())
 
     /**
      * @param securityGroupIngress The inbound rules associated with the security group.
-     * There is a short interruption during which you cannot connect to the security group.
      */
     override fun securityGroupIngress(securityGroupIngress: IResolvable) {
       cdkBuilder.securityGroupIngress(securityGroupIngress.let(IResolvable.Companion::unwrap))
@@ -249,7 +237,6 @@ public interface CfnSecurityGroupProps {
 
     /**
      * @param securityGroupIngress The inbound rules associated with the security group.
-     * There is a short interruption during which you cannot connect to the security group.
      */
     override fun securityGroupIngress(securityGroupIngress: List<Any>) {
       cdkBuilder.securityGroupIngress(securityGroupIngress.map{CdkObjectWrappers.unwrap(it)})
@@ -257,7 +244,6 @@ public interface CfnSecurityGroupProps {
 
     /**
      * @param securityGroupIngress The inbound rules associated with the security group.
-     * There is a short interruption during which you cannot connect to the security group.
      */
     override fun securityGroupIngress(vararg securityGroupIngress: Any): Unit =
         securityGroupIngress(securityGroupIngress.toList())
@@ -303,9 +289,9 @@ public interface CfnSecurityGroupProps {
     override fun groupDescription(): String = unwrap(this).getGroupDescription()
 
     /**
-     * The name of the security group.
+     * The name of the security group. Names are case-insensitive and must be unique within the VPC.
      *
-     * Constraints: Up to 255 characters in length. Cannot start with `sg-` .
+     * Constraints: Up to 255 characters in length. Can't start with `sg-` .
      *
      * Valid characters: a-z, A-Z, 0-9, spaces, and ._-:/()#,&#64;[]+=&amp;;{}!$*
      *
@@ -316,16 +302,12 @@ public interface CfnSecurityGroupProps {
     /**
      * The outbound rules associated with the security group.
      *
-     * There is a short interruption during which you cannot connect to the security group.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-securitygroupegress)
      */
     override fun securityGroupEgress(): Any? = unwrap(this).getSecurityGroupEgress()
 
     /**
      * The inbound rules associated with the security group.
-     *
-     * There is a short interruption during which you cannot connect to the security group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-securitygroupingress)
      */

@@ -58,6 +58,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .description("description")
  * .disableExecuteApiEndpoint(false)
  * .endpointConfiguration(EndpointConfigurationProperty.builder()
+ * .ipAddressType("ipAddressType")
  * .types(List.of("types"))
  * .vpcEndpointIds(List.of("vpcEndpointIds"))
  * .build())
@@ -231,26 +232,26 @@ public open class CfnRestApi(
   }
 
   /**
-   * A list of the endpoint types of the API.
+   * A list of the endpoint types and IP address types of the API.
    */
   public open fun endpointConfiguration(): Any? = unwrap(this).getEndpointConfiguration()
 
   /**
-   * A list of the endpoint types of the API.
+   * A list of the endpoint types and IP address types of the API.
    */
   public open fun endpointConfiguration(`value`: IResolvable) {
     unwrap(this).setEndpointConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * A list of the endpoint types of the API.
+   * A list of the endpoint types and IP address types of the API.
    */
   public open fun endpointConfiguration(`value`: EndpointConfigurationProperty) {
     unwrap(this).setEndpointConfiguration(`value`.let(EndpointConfigurationProperty.Companion::unwrap))
   }
 
   /**
-   * A list of the endpoint types of the API.
+   * A list of the endpoint types and IP address types of the API.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("96464e0753a5a8f1d671a4b9b2c059840d9694ece3a10e89fd4bbaf933a87cc5")
@@ -334,15 +335,15 @@ public open class CfnRestApi(
   /**
    * Custom header parameters as part of the request.
    */
-  public open fun parameters(`value`: IResolvable) {
-    unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
+  public open fun parameters(`value`: Map<String, String>) {
+    unwrap(this).setParameters(`value`)
   }
 
   /**
    * Custom header parameters as part of the request.
    */
-  public open fun parameters(`value`: Map<String, String>) {
-    unwrap(this).setParameters(`value`)
+  public open fun parameters(`value`: IResolvable) {
+    unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -502,35 +503,35 @@ public open class CfnRestApi(
     public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable)
 
     /**
-     * A list of the endpoint types of the API.
+     * A list of the endpoint types and IP address types of the API.
      *
      * Use this property when creating an API. When importing an existing API, specify the endpoint
      * configuration types using the `Parameters` property.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-endpointconfiguration)
-     * @param endpointConfiguration A list of the endpoint types of the API. 
+     * @param endpointConfiguration A list of the endpoint types and IP address types of the API. 
      */
     public fun endpointConfiguration(endpointConfiguration: IResolvable)
 
     /**
-     * A list of the endpoint types of the API.
+     * A list of the endpoint types and IP address types of the API.
      *
      * Use this property when creating an API. When importing an existing API, specify the endpoint
      * configuration types using the `Parameters` property.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-endpointconfiguration)
-     * @param endpointConfiguration A list of the endpoint types of the API. 
+     * @param endpointConfiguration A list of the endpoint types and IP address types of the API. 
      */
     public fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty)
 
     /**
-     * A list of the endpoint types of the API.
+     * A list of the endpoint types and IP address types of the API.
      *
      * Use this property when creating an API. When importing an existing API, specify the endpoint
      * configuration types using the `Parameters` property.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-endpointconfiguration)
-     * @param endpointConfiguration A list of the endpoint types of the API. 
+     * @param endpointConfiguration A list of the endpoint types and IP address types of the API. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("111e703782ee9ff24896853eb6d31839e80c2f1b678f7a83c77fc256a7b2d65a")
@@ -622,7 +623,7 @@ public open class CfnRestApi(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-parameters)
      * @param parameters Custom header parameters as part of the request. 
      */
-    public fun parameters(parameters: IResolvable)
+    public fun parameters(parameters: Map<String, String>)
 
     /**
      * Custom header parameters as part of the request.
@@ -635,7 +636,7 @@ public open class CfnRestApi(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-parameters)
      * @param parameters Custom header parameters as part of the request. 
      */
-    public fun parameters(parameters: Map<String, String>)
+    public fun parameters(parameters: IResolvable)
 
     /**
      * A policy document that contains the permissions for the `RestApi` resource.
@@ -815,39 +816,39 @@ public open class CfnRestApi(
     }
 
     /**
-     * A list of the endpoint types of the API.
+     * A list of the endpoint types and IP address types of the API.
      *
      * Use this property when creating an API. When importing an existing API, specify the endpoint
      * configuration types using the `Parameters` property.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-endpointconfiguration)
-     * @param endpointConfiguration A list of the endpoint types of the API. 
+     * @param endpointConfiguration A list of the endpoint types and IP address types of the API. 
      */
     override fun endpointConfiguration(endpointConfiguration: IResolvable) {
       cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * A list of the endpoint types of the API.
+     * A list of the endpoint types and IP address types of the API.
      *
      * Use this property when creating an API. When importing an existing API, specify the endpoint
      * configuration types using the `Parameters` property.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-endpointconfiguration)
-     * @param endpointConfiguration A list of the endpoint types of the API. 
+     * @param endpointConfiguration A list of the endpoint types and IP address types of the API. 
      */
     override fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty) {
       cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfigurationProperty.Companion::unwrap))
     }
 
     /**
-     * A list of the endpoint types of the API.
+     * A list of the endpoint types and IP address types of the API.
      *
      * Use this property when creating an API. When importing an existing API, specify the endpoint
      * configuration types using the `Parameters` property.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-endpointconfiguration)
-     * @param endpointConfiguration A list of the endpoint types of the API. 
+     * @param endpointConfiguration A list of the endpoint types and IP address types of the API. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("111e703782ee9ff24896853eb6d31839e80c2f1b678f7a83c77fc256a7b2d65a")
@@ -950,8 +951,8 @@ public open class CfnRestApi(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-parameters)
      * @param parameters Custom header parameters as part of the request. 
      */
-    override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+    override fun parameters(parameters: Map<String, String>) {
+      cdkBuilder.parameters(parameters)
     }
 
     /**
@@ -965,8 +966,8 @@ public open class CfnRestApi(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-parameters)
      * @param parameters Custom header parameters as part of the request. 
      */
-    override fun parameters(parameters: Map<String, String>) {
-      cdkBuilder.parameters(parameters)
+    override fun parameters(parameters: IResolvable) {
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1030,7 +1031,8 @@ public open class CfnRestApi(
   }
 
   /**
-   * The `EndpointConfiguration` property type specifies the endpoint types of a REST API.
+   * The `EndpointConfiguration` property type specifies the endpoint types and IP address types of
+   * a REST API.
    *
    * `EndpointConfiguration` is a property of the
    * [AWS::ApiGateway::RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html)
@@ -1044,6 +1046,7 @@ public open class CfnRestApi(
    * import io.cloudshiftdev.awscdk.services.apigateway.*;
    * EndpointConfigurationProperty endpointConfigurationProperty =
    * EndpointConfigurationProperty.builder()
+   * .ipAddressType("ipAddressType")
    * .types(List.of("types"))
    * .vpcEndpointIds(List.of("vpcEndpointIds"))
    * .build();
@@ -1052,6 +1055,17 @@ public open class CfnRestApi(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html)
    */
   public interface EndpointConfigurationProperty {
+    /**
+     * The IP address types that can invoke an API (RestApi).
+     *
+     * Use `ipv4` to allow only IPv4 addresses to invoke an API, or use `dualstack` to allow both
+     * IPv4 and IPv6 addresses to invoke an API. For the `PRIVATE` endpoint type, only `dualstack` is
+     * supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html#cfn-apigateway-restapi-endpointconfiguration-ipaddresstype)
+     */
+    public fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+
     /**
      * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
      *
@@ -1077,6 +1091,14 @@ public open class CfnRestApi(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param ipAddressType The IP address types that can invoke an API (RestApi).
+       * Use `ipv4` to allow only IPv4 addresses to invoke an API, or use `dualstack` to allow both
+       * IPv4 and IPv6 addresses to invoke an API. For the `PRIVATE` endpoint type, only `dualstack` is
+       * supported.
+       */
+      public fun ipAddressType(ipAddressType: String)
+
       /**
        * @param types A list of endpoint types of an API (RestApi) or its custom domain name
        * (DomainName).
@@ -1115,6 +1137,16 @@ public open class CfnRestApi(
           software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty.Builder
           =
           software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty.builder()
+
+      /**
+       * @param ipAddressType The IP address types that can invoke an API (RestApi).
+       * Use `ipv4` to allow only IPv4 addresses to invoke an API, or use `dualstack` to allow both
+       * IPv4 and IPv6 addresses to invoke an API. For the `PRIVATE` endpoint type, only `dualstack` is
+       * supported.
+       */
+      override fun ipAddressType(ipAddressType: String) {
+        cdkBuilder.ipAddressType(ipAddressType)
+      }
 
       /**
        * @param types A list of endpoint types of an API (RestApi) or its custom domain name
@@ -1162,6 +1194,17 @@ public open class CfnRestApi(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty,
     ) : CdkObject(cdkObject),
         EndpointConfigurationProperty {
+      /**
+       * The IP address types that can invoke an API (RestApi).
+       *
+       * Use `ipv4` to allow only IPv4 addresses to invoke an API, or use `dualstack` to allow both
+       * IPv4 and IPv6 addresses to invoke an API. For the `PRIVATE` endpoint type, only `dualstack` is
+       * supported.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html#cfn-apigateway-restapi-endpointconfiguration-ipaddresstype)
+       */
+      override fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+
       /**
        * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
        *

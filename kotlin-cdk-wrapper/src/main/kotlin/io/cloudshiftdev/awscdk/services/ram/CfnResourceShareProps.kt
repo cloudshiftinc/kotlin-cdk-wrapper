@@ -99,6 +99,9 @@ public interface CfnResourceShareProps {
   public fun resourceArns(): List<String> = unwrap(this).getResourceArns() ?: emptyList()
 
   /**
+   * Specifies from which source accounts the service principal has access to the resources in this
+   * resource share.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html#cfn-ram-resourceshare-sources)
    */
   public fun sources(): List<String> = unwrap(this).getSources() ?: emptyList()
@@ -207,12 +210,14 @@ public interface CfnResourceShareProps {
     public fun resourceArns(vararg resourceArns: String)
 
     /**
-     * @param sources the value to be set.
+     * @param sources Specifies from which source accounts the service principal has access to the
+     * resources in this resource share.
      */
     public fun sources(sources: List<String>)
 
     /**
-     * @param sources the value to be set.
+     * @param sources Specifies from which source accounts the service principal has access to the
+     * resources in this resource share.
      */
     public fun sources(vararg sources: String)
 
@@ -337,14 +342,16 @@ public interface CfnResourceShareProps {
         resourceArns(resourceArns.toList())
 
     /**
-     * @param sources the value to be set.
+     * @param sources Specifies from which source accounts the service principal has access to the
+     * resources in this resource share.
      */
     override fun sources(sources: List<String>) {
       cdkBuilder.sources(sources)
     }
 
     /**
-     * @param sources the value to be set.
+     * @param sources Specifies from which source accounts the service principal has access to the
+     * resources in this resource share.
      */
     override fun sources(vararg sources: String): Unit = sources(sources.toList())
 
@@ -429,6 +436,9 @@ public interface CfnResourceShareProps {
     override fun resourceArns(): List<String> = unwrap(this).getResourceArns() ?: emptyList()
 
     /**
+     * Specifies from which source accounts the service principal has access to the resources in
+     * this resource share.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html#cfn-ram-resourceshare-sources)
      */
     override fun sources(): List<String> = unwrap(this).getSources() ?: emptyList()

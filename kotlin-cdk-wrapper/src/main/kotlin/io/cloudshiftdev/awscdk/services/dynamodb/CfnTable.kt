@@ -132,6 +132,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty.builder()
  * .pointInTimeRecoveryEnabled(false)
+ * .recoveryPeriodInDays(123)
  * .build())
  * .provisionedThroughput(ProvisionedThroughputProperty.builder()
  * .readCapacityUnits(123)
@@ -532,26 +533,26 @@ public open class CfnTable(
       Unit = provisionedThroughput(ProvisionedThroughputProperty(`value`))
 
   /**
-   * A resource-based policy document that contains permissions to add to the specified table.
+   * An AWS resource-based policy document in JSON format that will be attached to the table.
    */
   public open fun resourcePolicy(): Any? = unwrap(this).getResourcePolicy()
 
   /**
-   * A resource-based policy document that contains permissions to add to the specified table.
+   * An AWS resource-based policy document in JSON format that will be attached to the table.
    */
   public open fun resourcePolicy(`value`: IResolvable) {
     unwrap(this).setResourcePolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * A resource-based policy document that contains permissions to add to the specified table.
+   * An AWS resource-based policy document in JSON format that will be attached to the table.
    */
   public open fun resourcePolicy(`value`: ResourcePolicyProperty) {
     unwrap(this).setResourcePolicy(`value`.let(ResourcePolicyProperty.Companion::unwrap))
   }
 
   /**
-   * A resource-based policy document that contains permissions to add to the specified table.
+   * An AWS resource-based policy document in JSON format that will be attached to the table.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("08606eacfa4d59bd31a6a176c75c87a142cf509f2e116f3e127589c67b99cada")
@@ -773,13 +774,14 @@ public open class CfnTable(
      *
      * Valid values include:
      *
-     * * `PROVISIONED` - We recommend using `PROVISIONED` for predictable workloads. `PROVISIONED`
-     * sets the billing mode to [Provisioned
-     * Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.ProvisionedThroughput.Manual)
+     * * `PAY_PER_REQUEST` - We recommend using `PAY_PER_REQUEST` for most DynamoDB workloads.
+     * `PAY_PER_REQUEST` sets the billing mode to [On-demand capacity
+     * mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/on-demand-capacity-mode.html)
      * .
-     * * `PAY_PER_REQUEST` - We recommend using `PAY_PER_REQUEST` for unpredictable workloads.
-     * `PAY_PER_REQUEST` sets the billing mode to [On-Demand
-     * Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.OnDemand)
+     * * `PROVISIONED` - We recommend using `PROVISIONED` for steady workloads with predictable
+     * growth where capacity requirements can be reliably forecasted. `PROVISIONED` sets the billing
+     * mode to [Provisioned capacity
+     * mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/provisioned-capacity-mode.html)
      * .
      *
      * If not specified, the default is `PROVISIONED` .
@@ -1216,68 +1218,71 @@ public open class CfnTable(
         fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit)
 
     /**
-     * A resource-based policy document that contains permissions to add to the specified table.
+     * An AWS resource-based policy document in JSON format that will be attached to the table.
      *
-     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
-     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
-     * about resource-based policies, see [Using resource-based policies for
-     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
-     * and [Resource-based policy
-     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     * When you attach a resource-based policy while creating a table, the policy application is
+     * *strongly consistent* .
      *
-     * When you attach a resource-based policy while creating a table, the policy creation is
-     * *strongly consistent* . For information about the considerations that you should keep in mind
-     * while attaching a resource-based policy, see [Resource-based policy
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts
+     * whitespaces when calculating the size of a policy against this limit. For a full list of all
+     * considerations that apply for resource-based policies, see [Resource-based policy
      * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
      * .
      *
+     *
+     * You need to specify the `CreateTable` and `PutResourcePolicy` IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
-     * @param resourcePolicy A resource-based policy document that contains permissions to add to
-     * the specified table. 
+     * @param resourcePolicy An AWS resource-based policy document in JSON format that will be
+     * attached to the table. 
      */
     public fun resourcePolicy(resourcePolicy: IResolvable)
 
     /**
-     * A resource-based policy document that contains permissions to add to the specified table.
+     * An AWS resource-based policy document in JSON format that will be attached to the table.
      *
-     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
-     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
-     * about resource-based policies, see [Using resource-based policies for
-     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
-     * and [Resource-based policy
-     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     * When you attach a resource-based policy while creating a table, the policy application is
+     * *strongly consistent* .
      *
-     * When you attach a resource-based policy while creating a table, the policy creation is
-     * *strongly consistent* . For information about the considerations that you should keep in mind
-     * while attaching a resource-based policy, see [Resource-based policy
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts
+     * whitespaces when calculating the size of a policy against this limit. For a full list of all
+     * considerations that apply for resource-based policies, see [Resource-based policy
      * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
      * .
      *
+     *
+     * You need to specify the `CreateTable` and `PutResourcePolicy` IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
-     * @param resourcePolicy A resource-based policy document that contains permissions to add to
-     * the specified table. 
+     * @param resourcePolicy An AWS resource-based policy document in JSON format that will be
+     * attached to the table. 
      */
     public fun resourcePolicy(resourcePolicy: ResourcePolicyProperty)
 
     /**
-     * A resource-based policy document that contains permissions to add to the specified table.
+     * An AWS resource-based policy document in JSON format that will be attached to the table.
      *
-     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
-     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
-     * about resource-based policies, see [Using resource-based policies for
-     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
-     * and [Resource-based policy
-     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     * When you attach a resource-based policy while creating a table, the policy application is
+     * *strongly consistent* .
      *
-     * When you attach a resource-based policy while creating a table, the policy creation is
-     * *strongly consistent* . For information about the considerations that you should keep in mind
-     * while attaching a resource-based policy, see [Resource-based policy
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts
+     * whitespaces when calculating the size of a policy against this limit. For a full list of all
+     * considerations that apply for resource-based policies, see [Resource-based policy
      * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
      * .
      *
+     *
+     * You need to specify the `CreateTable` and `PutResourcePolicy` IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
-     * @param resourcePolicy A resource-based policy document that contains permissions to add to
-     * the specified table. 
+     * @param resourcePolicy An AWS resource-based policy document in JSON format that will be
+     * attached to the table. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0a78d8d20b3bf8b2664ee8129dc273fe9e78e2cc8324253d2f108f34f7327bea")
@@ -1534,13 +1539,14 @@ public open class CfnTable(
      *
      * Valid values include:
      *
-     * * `PROVISIONED` - We recommend using `PROVISIONED` for predictable workloads. `PROVISIONED`
-     * sets the billing mode to [Provisioned
-     * Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.ProvisionedThroughput.Manual)
+     * * `PAY_PER_REQUEST` - We recommend using `PAY_PER_REQUEST` for most DynamoDB workloads.
+     * `PAY_PER_REQUEST` sets the billing mode to [On-demand capacity
+     * mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/on-demand-capacity-mode.html)
      * .
-     * * `PAY_PER_REQUEST` - We recommend using `PAY_PER_REQUEST` for unpredictable workloads.
-     * `PAY_PER_REQUEST` sets the billing mode to [On-Demand
-     * Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.OnDemand)
+     * * `PROVISIONED` - We recommend using `PROVISIONED` for steady workloads with predictable
+     * growth where capacity requirements can be reliably forecasted. `PROVISIONED` sets the billing
+     * mode to [Provisioned capacity
+     * mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/provisioned-capacity-mode.html)
      * .
      *
      * If not specified, the default is `PROVISIONED` .
@@ -2032,72 +2038,75 @@ public open class CfnTable(
         Unit = provisionedThroughput(ProvisionedThroughputProperty(provisionedThroughput))
 
     /**
-     * A resource-based policy document that contains permissions to add to the specified table.
+     * An AWS resource-based policy document in JSON format that will be attached to the table.
      *
-     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
-     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
-     * about resource-based policies, see [Using resource-based policies for
-     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
-     * and [Resource-based policy
-     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     * When you attach a resource-based policy while creating a table, the policy application is
+     * *strongly consistent* .
      *
-     * When you attach a resource-based policy while creating a table, the policy creation is
-     * *strongly consistent* . For information about the considerations that you should keep in mind
-     * while attaching a resource-based policy, see [Resource-based policy
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts
+     * whitespaces when calculating the size of a policy against this limit. For a full list of all
+     * considerations that apply for resource-based policies, see [Resource-based policy
      * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
      * .
      *
+     *
+     * You need to specify the `CreateTable` and `PutResourcePolicy` IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
-     * @param resourcePolicy A resource-based policy document that contains permissions to add to
-     * the specified table. 
+     * @param resourcePolicy An AWS resource-based policy document in JSON format that will be
+     * attached to the table. 
      */
     override fun resourcePolicy(resourcePolicy: IResolvable) {
       cdkBuilder.resourcePolicy(resourcePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * A resource-based policy document that contains permissions to add to the specified table.
+     * An AWS resource-based policy document in JSON format that will be attached to the table.
      *
-     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
-     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
-     * about resource-based policies, see [Using resource-based policies for
-     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
-     * and [Resource-based policy
-     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     * When you attach a resource-based policy while creating a table, the policy application is
+     * *strongly consistent* .
      *
-     * When you attach a resource-based policy while creating a table, the policy creation is
-     * *strongly consistent* . For information about the considerations that you should keep in mind
-     * while attaching a resource-based policy, see [Resource-based policy
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts
+     * whitespaces when calculating the size of a policy against this limit. For a full list of all
+     * considerations that apply for resource-based policies, see [Resource-based policy
      * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
      * .
      *
+     *
+     * You need to specify the `CreateTable` and `PutResourcePolicy` IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
-     * @param resourcePolicy A resource-based policy document that contains permissions to add to
-     * the specified table. 
+     * @param resourcePolicy An AWS resource-based policy document in JSON format that will be
+     * attached to the table. 
      */
     override fun resourcePolicy(resourcePolicy: ResourcePolicyProperty) {
       cdkBuilder.resourcePolicy(resourcePolicy.let(ResourcePolicyProperty.Companion::unwrap))
     }
 
     /**
-     * A resource-based policy document that contains permissions to add to the specified table.
+     * An AWS resource-based policy document in JSON format that will be attached to the table.
      *
-     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
-     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
-     * about resource-based policies, see [Using resource-based policies for
-     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
-     * and [Resource-based policy
-     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     * When you attach a resource-based policy while creating a table, the policy application is
+     * *strongly consistent* .
      *
-     * When you attach a resource-based policy while creating a table, the policy creation is
-     * *strongly consistent* . For information about the considerations that you should keep in mind
-     * while attaching a resource-based policy, see [Resource-based policy
+     * The maximum size supported for a resource-based policy document is 20 KB. DynamoDB counts
+     * whitespaces when calculating the size of a policy against this limit. For a full list of all
+     * considerations that apply for resource-based policies, see [Resource-based policy
      * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
      * .
      *
+     *
+     * You need to specify the `CreateTable` and `PutResourcePolicy` IAM actions for authorizing a
+     * user to create a table with a resource-based policy.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
-     * @param resourcePolicy A resource-based policy document that contains permissions to add to
-     * the specified table. 
+     * @param resourcePolicy An AWS resource-based policy document in JSON format that will be
+     * attached to the table. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0a78d8d20b3bf8b2664ee8129dc273fe9e78e2cc8324253d2f108f34f7327bea")
@@ -2790,7 +2799,8 @@ public open class CfnTable(
      * The maximum number of read and write units for the specified global secondary index.
      *
      * If you use this parameter, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits` ,
-     * or both.
+     * or both. You must use either `OnDemandThroughput` or `ProvisionedThroughput` based on your
+     * table's capacity mode.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-globalsecondaryindex.html#cfn-dynamodb-table-globalsecondaryindex-ondemandthroughput)
      */
@@ -2809,6 +2819,9 @@ public open class CfnTable(
 
     /**
      * Represents the provisioned throughput settings for the specified global secondary index.
+     *
+     * You must use either `OnDemandThroughput` or `ProvisionedThroughput` based on your table's
+     * capacity mode.
      *
      * For current minimum and maximum provisioned throughput values, see [Service, Account, and
      * Table Quotas](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in
@@ -2908,7 +2921,8 @@ public open class CfnTable(
        * @param onDemandThroughput The maximum number of read and write units for the specified
        * global secondary index.
        * If you use this parameter, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits`
-       * , or both.
+       * , or both. You must use either `OnDemandThroughput` or `ProvisionedThroughput` based on your
+       * table's capacity mode.
        */
       public fun onDemandThroughput(onDemandThroughput: IResolvable)
 
@@ -2916,7 +2930,8 @@ public open class CfnTable(
        * @param onDemandThroughput The maximum number of read and write units for the specified
        * global secondary index.
        * If you use this parameter, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits`
-       * , or both.
+       * , or both. You must use either `OnDemandThroughput` or `ProvisionedThroughput` based on your
+       * table's capacity mode.
        */
       public fun onDemandThroughput(onDemandThroughput: OnDemandThroughputProperty)
 
@@ -2924,7 +2939,8 @@ public open class CfnTable(
        * @param onDemandThroughput The maximum number of read and write units for the specified
        * global secondary index.
        * If you use this parameter, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits`
-       * , or both.
+       * , or both. You must use either `OnDemandThroughput` or `ProvisionedThroughput` based on your
+       * table's capacity mode.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cae04943fcb210d89eebb92f56cb35dc3b451709e92e9481802f625359c0f6ef")
@@ -2960,6 +2976,9 @@ public open class CfnTable(
       /**
        * @param provisionedThroughput Represents the provisioned throughput settings for the
        * specified global secondary index.
+       * You must use either `OnDemandThroughput` or `ProvisionedThroughput` based on your table's
+       * capacity mode.
+       *
        * For current minimum and maximum provisioned throughput values, see [Service, Account, and
        * Table Quotas](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in
        * the *Amazon DynamoDB Developer Guide* .
@@ -2969,6 +2988,9 @@ public open class CfnTable(
       /**
        * @param provisionedThroughput Represents the provisioned throughput settings for the
        * specified global secondary index.
+       * You must use either `OnDemandThroughput` or `ProvisionedThroughput` based on your table's
+       * capacity mode.
+       *
        * For current minimum and maximum provisioned throughput values, see [Service, Account, and
        * Table Quotas](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in
        * the *Amazon DynamoDB Developer Guide* .
@@ -2978,6 +3000,9 @@ public open class CfnTable(
       /**
        * @param provisionedThroughput Represents the provisioned throughput settings for the
        * specified global secondary index.
+       * You must use either `OnDemandThroughput` or `ProvisionedThroughput` based on your table's
+       * capacity mode.
+       *
        * For current minimum and maximum provisioned throughput values, see [Service, Account, and
        * Table Quotas](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in
        * the *Amazon DynamoDB Developer Guide* .
@@ -3105,7 +3130,8 @@ public open class CfnTable(
        * @param onDemandThroughput The maximum number of read and write units for the specified
        * global secondary index.
        * If you use this parameter, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits`
-       * , or both.
+       * , or both. You must use either `OnDemandThroughput` or `ProvisionedThroughput` based on your
+       * table's capacity mode.
        */
       override fun onDemandThroughput(onDemandThroughput: IResolvable) {
         cdkBuilder.onDemandThroughput(onDemandThroughput.let(IResolvable.Companion::unwrap))
@@ -3115,7 +3141,8 @@ public open class CfnTable(
        * @param onDemandThroughput The maximum number of read and write units for the specified
        * global secondary index.
        * If you use this parameter, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits`
-       * , or both.
+       * , or both. You must use either `OnDemandThroughput` or `ProvisionedThroughput` based on your
+       * table's capacity mode.
        */
       override fun onDemandThroughput(onDemandThroughput: OnDemandThroughputProperty) {
         cdkBuilder.onDemandThroughput(onDemandThroughput.let(OnDemandThroughputProperty.Companion::unwrap))
@@ -3125,7 +3152,8 @@ public open class CfnTable(
        * @param onDemandThroughput The maximum number of read and write units for the specified
        * global secondary index.
        * If you use this parameter, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits`
-       * , or both.
+       * , or both. You must use either `OnDemandThroughput` or `ProvisionedThroughput` based on your
+       * table's capacity mode.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cae04943fcb210d89eebb92f56cb35dc3b451709e92e9481802f625359c0f6ef")
@@ -3167,6 +3195,9 @@ public open class CfnTable(
       /**
        * @param provisionedThroughput Represents the provisioned throughput settings for the
        * specified global secondary index.
+       * You must use either `OnDemandThroughput` or `ProvisionedThroughput` based on your table's
+       * capacity mode.
+       *
        * For current minimum and maximum provisioned throughput values, see [Service, Account, and
        * Table Quotas](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in
        * the *Amazon DynamoDB Developer Guide* .
@@ -3178,6 +3209,9 @@ public open class CfnTable(
       /**
        * @param provisionedThroughput Represents the provisioned throughput settings for the
        * specified global secondary index.
+       * You must use either `OnDemandThroughput` or `ProvisionedThroughput` based on your table's
+       * capacity mode.
+       *
        * For current minimum and maximum provisioned throughput values, see [Service, Account, and
        * Table Quotas](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in
        * the *Amazon DynamoDB Developer Guide* .
@@ -3189,6 +3223,9 @@ public open class CfnTable(
       /**
        * @param provisionedThroughput Represents the provisioned throughput settings for the
        * specified global secondary index.
+       * You must use either `OnDemandThroughput` or `ProvisionedThroughput` based on your table's
+       * capacity mode.
+       *
        * For current minimum and maximum provisioned throughput values, see [Service, Account, and
        * Table Quotas](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in
        * the *Amazon DynamoDB Developer Guide* .
@@ -3279,7 +3316,8 @@ public open class CfnTable(
        * The maximum number of read and write units for the specified global secondary index.
        *
        * If you use this parameter, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits`
-       * , or both.
+       * , or both. You must use either `OnDemandThroughput` or `ProvisionedThroughput` based on your
+       * table's capacity mode.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-globalsecondaryindex.html#cfn-dynamodb-table-globalsecondaryindex-ondemandthroughput)
        */
@@ -3298,6 +3336,9 @@ public open class CfnTable(
 
       /**
        * Represents the provisioned throughput settings for the specified global secondary index.
+       *
+       * You must use either `OnDemandThroughput` or `ProvisionedThroughput` based on your table's
+       * capacity mode.
        *
        * For current minimum and maximum provisioned throughput values, see [Service, Account, and
        * Table Quotas](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in
@@ -4452,6 +4493,7 @@ public open class CfnTable(
    * PointInTimeRecoverySpecificationProperty pointInTimeRecoverySpecificationProperty =
    * PointInTimeRecoverySpecificationProperty.builder()
    * .pointInTimeRecoveryEnabled(false)
+   * .recoveryPeriodInDays(123)
    * .build();
    * ```
    *
@@ -4464,6 +4506,16 @@ public open class CfnTable(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-pointintimerecoveryspecification.html#cfn-dynamodb-table-pointintimerecoveryspecification-pointintimerecoveryenabled)
      */
     public fun pointInTimeRecoveryEnabled(): Any? = unwrap(this).getPointInTimeRecoveryEnabled()
+
+    /**
+     * The number of preceding days for which continuous backups are taken and maintained.
+     *
+     * Your table data is only recoverable to any point-in-time from within the configured recovery
+     * period. This parameter is optional. If no value is provided, the value will default to 35.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-pointintimerecoveryspecification.html#cfn-dynamodb-table-pointintimerecoveryspecification-recoveryperiodindays)
+     */
+    public fun recoveryPeriodInDays(): Number? = unwrap(this).getRecoveryPeriodInDays()
 
     /**
      * A builder for [PointInTimeRecoverySpecificationProperty]
@@ -4481,6 +4533,15 @@ public open class CfnTable(
        * (true) or disabled (false) on the table.
        */
       public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable)
+
+      /**
+       * @param recoveryPeriodInDays The number of preceding days for which continuous backups are
+       * taken and maintained.
+       * Your table data is only recoverable to any point-in-time from within the configured
+       * recovery period. This parameter is optional. If no value is provided, the value will default
+       * to 35.
+       */
+      public fun recoveryPeriodInDays(recoveryPeriodInDays: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -4505,6 +4566,17 @@ public open class CfnTable(
         cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled.let(IResolvable.Companion::unwrap))
       }
 
+      /**
+       * @param recoveryPeriodInDays The number of preceding days for which continuous backups are
+       * taken and maintained.
+       * Your table data is only recoverable to any point-in-time from within the configured
+       * recovery period. This parameter is optional. If no value is provided, the value will default
+       * to 35.
+       */
+      override fun recoveryPeriodInDays(recoveryPeriodInDays: Number) {
+        cdkBuilder.recoveryPeriodInDays(recoveryPeriodInDays)
+      }
+
       public fun build():
           software.amazon.awscdk.services.dynamodb.CfnTable.PointInTimeRecoverySpecificationProperty
           = cdkBuilder.build()
@@ -4521,6 +4593,17 @@ public open class CfnTable(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-pointintimerecoveryspecification.html#cfn-dynamodb-table-pointintimerecoveryspecification-pointintimerecoveryenabled)
        */
       override fun pointInTimeRecoveryEnabled(): Any? = unwrap(this).getPointInTimeRecoveryEnabled()
+
+      /**
+       * The number of preceding days for which continuous backups are taken and maintained.
+       *
+       * Your table data is only recoverable to any point-in-time from within the configured
+       * recovery period. This parameter is optional. If no value is provided, the value will default
+       * to 35.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-pointintimerecoveryspecification.html#cfn-dynamodb-table-pointintimerecoveryspecification-recoveryperiodindays)
+       */
+      override fun recoveryPeriodInDays(): Number? = unwrap(this).getRecoveryPeriodInDays()
     }
 
     public companion object {
@@ -4566,9 +4649,12 @@ public open class CfnTable(
     /**
      * Represents the non-key attribute names which will be projected into the index.
      *
-     * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-     * local secondary indexes, must not exceed 100. If you project the same attribute into two
-     * different indexes, this counts as two distinct attributes when determining the total.
+     * For global and local secondary indexes, the total count of `NonKeyAttributes` summed across
+     * all of the secondary indexes, must not exceed 100. If you project the same attribute into two
+     * different indexes, this counts as two distinct attributes when determining the total. This limit
+     * only applies when you specify the ProjectionType of `INCLUDE` . You still can specify the
+     * ProjectionType of `ALL` to project all attributes from the source table, even if the table has
+     * more than 100 attributes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-projection.html#cfn-dynamodb-table-projection-nonkeyattributes)
      */
@@ -4596,18 +4682,24 @@ public open class CfnTable(
       /**
        * @param nonKeyAttributes Represents the non-key attribute names which will be projected into
        * the index.
-       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-       * local secondary indexes, must not exceed 100. If you project the same attribute into two
-       * different indexes, this counts as two distinct attributes when determining the total.
+       * For global and local secondary indexes, the total count of `NonKeyAttributes` summed across
+       * all of the secondary indexes, must not exceed 100. If you project the same attribute into two
+       * different indexes, this counts as two distinct attributes when determining the total. This
+       * limit only applies when you specify the ProjectionType of `INCLUDE` . You still can specify
+       * the ProjectionType of `ALL` to project all attributes from the source table, even if the table
+       * has more than 100 attributes.
        */
       public fun nonKeyAttributes(nonKeyAttributes: List<String>)
 
       /**
        * @param nonKeyAttributes Represents the non-key attribute names which will be projected into
        * the index.
-       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-       * local secondary indexes, must not exceed 100. If you project the same attribute into two
-       * different indexes, this counts as two distinct attributes when determining the total.
+       * For global and local secondary indexes, the total count of `NonKeyAttributes` summed across
+       * all of the secondary indexes, must not exceed 100. If you project the same attribute into two
+       * different indexes, this counts as two distinct attributes when determining the total. This
+       * limit only applies when you specify the ProjectionType of `INCLUDE` . You still can specify
+       * the ProjectionType of `ALL` to project all attributes from the source table, even if the table
+       * has more than 100 attributes.
        */
       public fun nonKeyAttributes(vararg nonKeyAttributes: String)
 
@@ -4631,9 +4723,12 @@ public open class CfnTable(
       /**
        * @param nonKeyAttributes Represents the non-key attribute names which will be projected into
        * the index.
-       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-       * local secondary indexes, must not exceed 100. If you project the same attribute into two
-       * different indexes, this counts as two distinct attributes when determining the total.
+       * For global and local secondary indexes, the total count of `NonKeyAttributes` summed across
+       * all of the secondary indexes, must not exceed 100. If you project the same attribute into two
+       * different indexes, this counts as two distinct attributes when determining the total. This
+       * limit only applies when you specify the ProjectionType of `INCLUDE` . You still can specify
+       * the ProjectionType of `ALL` to project all attributes from the source table, even if the table
+       * has more than 100 attributes.
        */
       override fun nonKeyAttributes(nonKeyAttributes: List<String>) {
         cdkBuilder.nonKeyAttributes(nonKeyAttributes)
@@ -4642,9 +4737,12 @@ public open class CfnTable(
       /**
        * @param nonKeyAttributes Represents the non-key attribute names which will be projected into
        * the index.
-       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-       * local secondary indexes, must not exceed 100. If you project the same attribute into two
-       * different indexes, this counts as two distinct attributes when determining the total.
+       * For global and local secondary indexes, the total count of `NonKeyAttributes` summed across
+       * all of the secondary indexes, must not exceed 100. If you project the same attribute into two
+       * different indexes, this counts as two distinct attributes when determining the total. This
+       * limit only applies when you specify the ProjectionType of `INCLUDE` . You still can specify
+       * the ProjectionType of `ALL` to project all attributes from the source table, even if the table
+       * has more than 100 attributes.
        */
       override fun nonKeyAttributes(vararg nonKeyAttributes: String): Unit =
           nonKeyAttributes(nonKeyAttributes.toList())
@@ -4673,9 +4771,12 @@ public open class CfnTable(
       /**
        * Represents the non-key attribute names which will be projected into the index.
        *
-       * For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the
-       * local secondary indexes, must not exceed 100. If you project the same attribute into two
-       * different indexes, this counts as two distinct attributes when determining the total.
+       * For global and local secondary indexes, the total count of `NonKeyAttributes` summed across
+       * all of the secondary indexes, must not exceed 100. If you project the same attribute into two
+       * different indexes, this counts as two distinct attributes when determining the total. This
+       * limit only applies when you specify the ProjectionType of `INCLUDE` . You still can specify
+       * the ProjectionType of `ALL` to project all attributes from the source table, even if the table
+       * has more than 100 attributes.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-projection.html#cfn-dynamodb-table-projection-nonkeyattributes)
        */

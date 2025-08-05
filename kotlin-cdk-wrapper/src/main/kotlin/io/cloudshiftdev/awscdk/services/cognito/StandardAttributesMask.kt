@@ -18,8 +18,8 @@ import kotlin.Unit
  * ```
  * UserPool pool = new UserPool(this, "Pool");
  * ClientAttributes clientWriteAttributes = (new
- * ClientAttributes()).withStandardAttributes(StandardAttributesMask.builder().fullname(true).email(true).build()).withCustomAttributes("favouritePizza",
- * "favouriteBeverage");
+ * ClientAttributes()).withStandardAttributes(StandardAttributesMask.builder().fullname(true).email(true).build()).withCustomAttributes("favoritePizza",
+ * "favoriteBeverage");
  * ClientAttributes clientReadAttributes =
  * clientWriteAttributes.withStandardAttributes(StandardAttributesMask.builder().emailVerified(true).build()).withCustomAttributes("pointsEarned");
  * pool.addClient("app-client", UserPoolClientOptions.builder()
@@ -129,7 +129,7 @@ public interface StandardAttributesMask {
   public fun phoneNumberVerified(): Boolean? = unwrap(this).getPhoneNumberVerified()
 
   /**
-   * The user's preffered username, different from the immutable user name.
+   * The user's preferred username, different from the immutable user name.
    *
    * Default: false
    */
@@ -240,7 +240,7 @@ public interface StandardAttributesMask {
     public fun phoneNumberVerified(phoneNumberVerified: Boolean)
 
     /**
-     * @param preferredUsername The user's preffered username, different from the immutable user
+     * @param preferredUsername The user's preferred username, different from the immutable user
      * name.
      */
     public fun preferredUsername(preferredUsername: Boolean)
@@ -370,7 +370,7 @@ public interface StandardAttributesMask {
     }
 
     /**
-     * @param preferredUsername The user's preffered username, different from the immutable user
+     * @param preferredUsername The user's preferred username, different from the immutable user
      * name.
      */
     override fun preferredUsername(preferredUsername: Boolean) {
@@ -512,7 +512,7 @@ public interface StandardAttributesMask {
     override fun phoneNumberVerified(): Boolean? = unwrap(this).getPhoneNumberVerified()
 
     /**
-     * The user's preffered username, different from the immutable user name.
+     * The user's preferred username, different from the immutable user name.
      *
      * Default: false
      */

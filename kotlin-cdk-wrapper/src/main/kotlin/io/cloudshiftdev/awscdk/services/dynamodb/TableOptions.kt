@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -57,8 +58,14 @@ import kotlin.jvm.JvmName
  * .maxReadRequestUnits(123)
  * .maxWriteRequestUnits(123)
  * .pointInTimeRecovery(false)
+ * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecification.builder()
+ * .pointInTimeRecoveryEnabled(false)
+ * // the properties below are optional
+ * .recoveryPeriodInDays(123)
+ * .build())
  * .readCapacity(123)
  * .removalPolicy(RemovalPolicy.DESTROY)
+ * .replicaRemovalPolicy(RemovalPolicy.DESTROY)
  * .replicationRegions(List.of("replicationRegions"))
  * .replicationTimeout(Duration.minutes(30))
  * .resourcePolicy(policyDocument)
@@ -165,11 +172,22 @@ public interface TableOptions : SchemaOptions {
   public fun maxWriteRequestUnits(): Number? = unwrap(this).getMaxWriteRequestUnits()
 
   /**
-   * Whether point-in-time recovery is enabled.
+   * (deprecated) Whether point-in-time recovery is enabled.
    *
-   * Default: - point-in-time recovery is disabled
+   * Default: false - point in time recovery is not enabled.
+   *
+   * @deprecated use `pointInTimeRecoverySpecification` instead
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun pointInTimeRecovery(): Boolean? = unwrap(this).getPointInTimeRecovery()
+
+  /**
+   * Whether point-in-time recovery is enabled and recoveryPeriodInDays is set.
+   *
+   * Default: - point in time recovery is not enabled.
+   */
+  public fun pointInTimeRecoverySpecification(): PointInTimeRecoverySpecification? =
+      unwrap(this).getPointInTimeRecoverySpecification()?.let(PointInTimeRecoverySpecification::wrap)
 
   /**
    * The read capacity for the table.
@@ -190,6 +208,14 @@ public interface TableOptions : SchemaOptions {
    */
   public fun removalPolicy(): RemovalPolicy? =
       unwrap(this).getRemovalPolicy()?.let(RemovalPolicy::wrap)
+
+  /**
+   * The removal policy to apply to the DynamoDB replica tables.
+   *
+   * Default: undefined - use DynamoDB Table's removal policy
+   */
+  public fun replicaRemovalPolicy(): RemovalPolicy? =
+      unwrap(this).getReplicaRemovalPolicy()?.let(RemovalPolicy::wrap)
 
   /**
    * Regions where replica tables will be created.
@@ -379,8 +405,26 @@ public interface TableOptions : SchemaOptions {
 
     /**
      * @param pointInTimeRecovery Whether point-in-time recovery is enabled.
+     * @deprecated use `pointInTimeRecoverySpecification` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun pointInTimeRecovery(pointInTimeRecovery: Boolean)
+
+    /**
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set.
+     */
+    public
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification)
+
+    /**
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c7324fd90b32a493259d7ae2a137a523bf254a2f9624f350cab92142c432abdd")
+    public
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification.Builder.() -> Unit)
 
     /**
      * @param readCapacity The read capacity for the table.
@@ -395,6 +439,11 @@ public interface TableOptions : SchemaOptions {
      * @param removalPolicy The removal policy to apply to the DynamoDB Table.
      */
     public fun removalPolicy(removalPolicy: RemovalPolicy)
+
+    /**
+     * @param replicaRemovalPolicy The removal policy to apply to the DynamoDB replica tables.
+     */
+    public fun replicaRemovalPolicy(replicaRemovalPolicy: RemovalPolicy)
 
     /**
      * @param replicationRegions Regions where replica tables will be created.
@@ -606,10 +655,32 @@ public interface TableOptions : SchemaOptions {
 
     /**
      * @param pointInTimeRecovery Whether point-in-time recovery is enabled.
+     * @deprecated use `pointInTimeRecoverySpecification` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun pointInTimeRecovery(pointInTimeRecovery: Boolean) {
       cdkBuilder.pointInTimeRecovery(pointInTimeRecovery)
     }
+
+    /**
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set.
+     */
+    override
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification) {
+      cdkBuilder.pointInTimeRecoverySpecification(pointInTimeRecoverySpecification.let(PointInTimeRecoverySpecification.Companion::unwrap))
+    }
+
+    /**
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c7324fd90b32a493259d7ae2a137a523bf254a2f9624f350cab92142c432abdd")
+    override
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification.Builder.() -> Unit):
+        Unit =
+        pointInTimeRecoverySpecification(PointInTimeRecoverySpecification(pointInTimeRecoverySpecification))
 
     /**
      * @param readCapacity The read capacity for the table.
@@ -627,6 +698,13 @@ public interface TableOptions : SchemaOptions {
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
+    }
+
+    /**
+     * @param replicaRemovalPolicy The removal policy to apply to the DynamoDB replica tables.
+     */
+    override fun replicaRemovalPolicy(replicaRemovalPolicy: RemovalPolicy) {
+      cdkBuilder.replicaRemovalPolicy(replicaRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -853,11 +931,22 @@ public interface TableOptions : SchemaOptions {
     override fun partitionKey(): Attribute = unwrap(this).getPartitionKey().let(Attribute::wrap)
 
     /**
-     * Whether point-in-time recovery is enabled.
+     * (deprecated) Whether point-in-time recovery is enabled.
      *
-     * Default: - point-in-time recovery is disabled
+     * Default: false - point in time recovery is not enabled.
+     *
+     * @deprecated use `pointInTimeRecoverySpecification` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun pointInTimeRecovery(): Boolean? = unwrap(this).getPointInTimeRecovery()
+
+    /**
+     * Whether point-in-time recovery is enabled and recoveryPeriodInDays is set.
+     *
+     * Default: - point in time recovery is not enabled.
+     */
+    override fun pointInTimeRecoverySpecification(): PointInTimeRecoverySpecification? =
+        unwrap(this).getPointInTimeRecoverySpecification()?.let(PointInTimeRecoverySpecification::wrap)
 
     /**
      * The read capacity for the table.
@@ -878,6 +967,14 @@ public interface TableOptions : SchemaOptions {
      */
     override fun removalPolicy(): RemovalPolicy? =
         unwrap(this).getRemovalPolicy()?.let(RemovalPolicy::wrap)
+
+    /**
+     * The removal policy to apply to the DynamoDB replica tables.
+     *
+     * Default: undefined - use DynamoDB Table's removal policy
+     */
+    override fun replicaRemovalPolicy(): RemovalPolicy? =
+        unwrap(this).getReplicaRemovalPolicy()?.let(RemovalPolicy::wrap)
 
     /**
      * Regions where replica tables will be created.

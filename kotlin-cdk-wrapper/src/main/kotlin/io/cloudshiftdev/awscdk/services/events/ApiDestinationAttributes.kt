@@ -18,9 +18,15 @@ import kotlin.Unit
  * "arn:aws:events:us-east-1:123456789012:event-bus/EventBusName",
  * "arn:aws:secretsmanager:us-east-1:123456789012:secret:SecretName-f3gDy9");
  * String apiDestinationArn =
+ * "arn:aws:events:us-east-1:123456789012:api-destination/DestinationName/11111111-1111-1111-1111-111111111111";
+ * String apiDestinationArnForPolicy =
  * "arn:aws:events:us-east-1:123456789012:api-destination/DestinationName";
  * ApiDestination destination = ApiDestination.fromApiDestinationAttributes(this, "Destination",
- * ApiDestinationAttributes.builder().apiDestinationArn(apiDestinationArn).connection(connection).build());
+ * ApiDestinationAttributes.builder()
+ * .apiDestinationArn(apiDestinationArn)
+ * .connection(connection)
+ * .apiDestinationArnForPolicy(apiDestinationArnForPolicy)
+ * .build());
  * Rule rule = Rule.Builder.create(this, "OtherRule")
  * .schedule(Schedule.rate(Duration.minutes(10)))
  * .targets(List.of(new ApiDestination(destination)))
@@ -32,6 +38,13 @@ public interface ApiDestinationAttributes {
    * The ARN of the Api Destination.
    */
   public fun apiDestinationArn(): String
+
+  /**
+   * The Amazon Resource Name (ARN) of an API destination in resource format.
+   *
+   * Default: undefined - Imported API destination does not have ARN in resource format
+   */
+  public fun apiDestinationArnForPolicy(): String? = unwrap(this).getApiDestinationArnForPolicy()
 
   /**
    * The Connection to associate with the Api Destination.
@@ -49,6 +62,12 @@ public interface ApiDestinationAttributes {
     public fun apiDestinationArn(apiDestinationArn: String)
 
     /**
+     * @param apiDestinationArnForPolicy The Amazon Resource Name (ARN) of an API destination in
+     * resource format.
+     */
+    public fun apiDestinationArnForPolicy(apiDestinationArnForPolicy: String)
+
+    /**
      * @param connection The Connection to associate with the Api Destination. 
      */
     public fun connection(connection: IConnection)
@@ -63,6 +82,14 @@ public interface ApiDestinationAttributes {
      */
     override fun apiDestinationArn(apiDestinationArn: String) {
       cdkBuilder.apiDestinationArn(apiDestinationArn)
+    }
+
+    /**
+     * @param apiDestinationArnForPolicy The Amazon Resource Name (ARN) of an API destination in
+     * resource format.
+     */
+    override fun apiDestinationArnForPolicy(apiDestinationArnForPolicy: String) {
+      cdkBuilder.apiDestinationArnForPolicy(apiDestinationArnForPolicy)
     }
 
     /**
@@ -84,6 +111,14 @@ public interface ApiDestinationAttributes {
      * The ARN of the Api Destination.
      */
     override fun apiDestinationArn(): String = unwrap(this).getApiDestinationArn()
+
+    /**
+     * The Amazon Resource Name (ARN) of an API destination in resource format.
+     *
+     * Default: undefined - Imported API destination does not have ARN in resource format
+     */
+    override fun apiDestinationArnForPolicy(): String? =
+        unwrap(this).getApiDestinationArnForPolicy()
 
     /**
      * The Connection to associate with the Api Destination.

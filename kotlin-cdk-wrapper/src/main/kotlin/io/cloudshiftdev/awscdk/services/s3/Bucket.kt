@@ -199,6 +199,18 @@ public open class Bucket(
   }
 
   /**
+   * Role used to set up permissions on this bucket for replication.
+   */
+  public override fun replicationRoleArn(): String? = unwrap(this).getReplicationRoleArn()
+
+  /**
+   * Role used to set up permissions on this bucket for replication.
+   */
+  public override fun replicationRoleArn(`value`: String) {
+    unwrap(this).setReplicationRoleArn(`value`)
+  }
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.s3.Bucket].
    */
   @CdkDslMarker
@@ -313,9 +325,7 @@ public open class Bucket(
      * If you choose KMS, you can specify a KMS key via `encryptionKey`. If
      * encryption key is not specified, a key will automatically be created.
      *
-     * Default: - `KMS` if `encryptionKey` is specified, or `UNENCRYPTED` otherwise.
-     * But if `UNENCRYPTED` is specified, the bucket will be encrypted as `S3_MANAGED`
-     * automatically.
+     * Default: - `KMS` if `encryptionKey` is specified, or `S3_MANAGED` otherwise.
      *
      * @param encryption The kind of server-side encryption to apply to this bucket. 
      */
@@ -357,23 +367,23 @@ public open class Bucket(
     public fun eventBridgeEnabled(eventBridgeEnabled: Boolean)
 
     /**
-     * Inteligent Tiering Configurations.
+     * Intelligent Tiering Configurations.
      *
      * Default: No Intelligent Tiiering Configurations.
      *
      * [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/intelligent-tiering.html)
-     * @param intelligentTieringConfigurations Inteligent Tiering Configurations. 
+     * @param intelligentTieringConfigurations Intelligent Tiering Configurations. 
      */
     public
         fun intelligentTieringConfigurations(intelligentTieringConfigurations: List<IntelligentTieringConfiguration>)
 
     /**
-     * Inteligent Tiering Configurations.
+     * Intelligent Tiering Configurations.
      *
      * Default: No Intelligent Tiiering Configurations.
      *
      * [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/intelligent-tiering.html)
-     * @param intelligentTieringConfigurations Inteligent Tiering Configurations. 
+     * @param intelligentTieringConfigurations Intelligent Tiering Configurations. 
      */
     public fun intelligentTieringConfigurations(vararg
         intelligentTieringConfigurations: IntelligentTieringConfiguration)
@@ -525,6 +535,35 @@ public open class Bucket(
      * @param removalPolicy Policy to apply when the bucket is removed from this stack. 
      */
     public fun removalPolicy(removalPolicy: RemovalPolicy)
+
+    /**
+     * The role to be used by the replication.
+     *
+     * When setting this property, you must also set `replicationRules`.
+     *
+     * Default: - a new role will be created.
+     *
+     * @param replicationRole The role to be used by the replication. 
+     */
+    public fun replicationRole(replicationRole: IRole)
+
+    /**
+     * A container for one or more replication rules.
+     *
+     * Default: - No replication
+     *
+     * @param replicationRules A container for one or more replication rules. 
+     */
+    public fun replicationRules(replicationRules: List<ReplicationRule>)
+
+    /**
+     * A container for one or more replication rules.
+     *
+     * Default: - No replication
+     *
+     * @param replicationRules A container for one or more replication rules. 
+     */
+    public fun replicationRules(vararg replicationRules: ReplicationRule)
 
     /**
      * Destination bucket for the server access logs.
@@ -797,9 +836,7 @@ public open class Bucket(
      * If you choose KMS, you can specify a KMS key via `encryptionKey`. If
      * encryption key is not specified, a key will automatically be created.
      *
-     * Default: - `KMS` if `encryptionKey` is specified, or `UNENCRYPTED` otherwise.
-     * But if `UNENCRYPTED` is specified, the bucket will be encrypted as `S3_MANAGED`
-     * automatically.
+     * Default: - `KMS` if `encryptionKey` is specified, or `S3_MANAGED` otherwise.
      *
      * @param encryption The kind of server-side encryption to apply to this bucket. 
      */
@@ -849,12 +886,12 @@ public open class Bucket(
     }
 
     /**
-     * Inteligent Tiering Configurations.
+     * Intelligent Tiering Configurations.
      *
      * Default: No Intelligent Tiiering Configurations.
      *
      * [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/intelligent-tiering.html)
-     * @param intelligentTieringConfigurations Inteligent Tiering Configurations. 
+     * @param intelligentTieringConfigurations Intelligent Tiering Configurations. 
      */
     override
         fun intelligentTieringConfigurations(intelligentTieringConfigurations: List<IntelligentTieringConfiguration>) {
@@ -862,12 +899,12 @@ public open class Bucket(
     }
 
     /**
-     * Inteligent Tiering Configurations.
+     * Intelligent Tiering Configurations.
      *
      * Default: No Intelligent Tiiering Configurations.
      *
      * [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/intelligent-tiering.html)
-     * @param intelligentTieringConfigurations Inteligent Tiering Configurations. 
+     * @param intelligentTieringConfigurations Intelligent Tiering Configurations. 
      */
     override fun intelligentTieringConfigurations(vararg
         intelligentTieringConfigurations: IntelligentTieringConfiguration): Unit =
@@ -1046,6 +1083,40 @@ public open class Bucket(
     }
 
     /**
+     * The role to be used by the replication.
+     *
+     * When setting this property, you must also set `replicationRules`.
+     *
+     * Default: - a new role will be created.
+     *
+     * @param replicationRole The role to be used by the replication. 
+     */
+    override fun replicationRole(replicationRole: IRole) {
+      cdkBuilder.replicationRole(replicationRole.let(IRole.Companion::unwrap))
+    }
+
+    /**
+     * A container for one or more replication rules.
+     *
+     * Default: - No replication
+     *
+     * @param replicationRules A container for one or more replication rules. 
+     */
+    override fun replicationRules(replicationRules: List<ReplicationRule>) {
+      cdkBuilder.replicationRules(replicationRules.map(ReplicationRule.Companion::unwrap))
+    }
+
+    /**
+     * A container for one or more replication rules.
+     *
+     * Default: - No replication
+     *
+     * @param replicationRules A container for one or more replication rules. 
+     */
+    override fun replicationRules(vararg replicationRules: ReplicationRule): Unit =
+        replicationRules(replicationRules.toList())
+
+    /**
      * Destination bucket for the server access logs.
      *
      * Default: - If "serverAccessLogsPrefix" undefined - access logs disabled, otherwise - log to
@@ -1211,6 +1282,9 @@ public open class Bucket(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.s3.Bucket.PROPERTY_INJECTION_ID
+
     public fun fromBucketArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

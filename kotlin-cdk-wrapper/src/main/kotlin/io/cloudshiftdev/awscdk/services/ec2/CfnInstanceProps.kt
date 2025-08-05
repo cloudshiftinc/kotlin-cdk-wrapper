@@ -87,6 +87,13 @@ import kotlin.jvm.JvmName
  * .licenseSpecifications(List.of(LicenseSpecificationProperty.builder()
  * .licenseConfigurationArn("licenseConfigurationArn")
  * .build()))
+ * .metadataOptions(MetadataOptionsProperty.builder()
+ * .httpEndpoint("httpEndpoint")
+ * .httpProtocolIpv6("httpProtocolIpv6")
+ * .httpPutResponseHopLimit(123)
+ * .httpTokens("httpTokens")
+ * .instanceMetadataTags("instanceMetadataTags")
+ * .build())
  * .monitoring(false)
  * .networkInterfaces(List.of(NetworkInterfaceProperty.builder()
  * .deviceIndex("deviceIndex")
@@ -95,6 +102,12 @@ import kotlin.jvm.JvmName
  * .associatePublicIpAddress(false)
  * .deleteOnTermination(false)
  * .description("description")
+ * .enaSrdSpecification(EnaSrdSpecificationProperty.builder()
+ * .enaSrdEnabled(false)
+ * .enaSrdUdpSpecification(EnaSrdUdpSpecificationProperty.builder()
+ * .enaSrdUdpEnabled(false)
+ * .build())
+ * .build())
  * .groupSet(List.of("groupSet"))
  * .ipv6AddressCount(123)
  * .ipv6Addresses(List.of(InstanceIpv6AddressProperty.builder()
@@ -232,15 +245,11 @@ public interface CfnInstanceProps {
   public fun creditSpecification(): Any? = unwrap(this).getCreditSpecification()
 
   /**
-   * If you set this parameter to `true` , you can't terminate the instance using the Amazon EC2
-   * console, CLI, or API;
+   * Indicates whether termination protection is enabled for the instance.
    *
-   * otherwise, you can. To change this attribute after launch, use
-   * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)
-   * . Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate` , you can terminate
-   * the instance by running the shutdown command from the instance.
-   *
-   * Default: `false`
+   * The default is `false` , which means that you can terminate the instance using the Amazon EC2
+   * console, command line tools, or API. You can enable termination protection when you launch an
+   * instance, while the instance is running, or while the instance is stopped.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-disableapitermination)
    */
@@ -412,9 +421,8 @@ public interface CfnInstanceProps {
   public fun kernelId(): String? = unwrap(this).getKernelId()
 
   /**
-   * The name of the key pair. You can create a key pair using
-   * [CreateKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateKeyPair.html) or
-   * [ImportKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportKeyPair.html) .
+   * The name of the key pair. For more information, see [Create a key pair for your EC2
+   * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html) .
    *
    *
    * If you do not specify a key pair, you can't connect to the instance unless you choose an AMI
@@ -441,6 +449,13 @@ public interface CfnInstanceProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-licensespecifications)
    */
   public fun licenseSpecifications(): Any? = unwrap(this).getLicenseSpecifications()
+
+  /**
+   * The metadata options for the instance.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-metadataoptions)
+   */
+  public fun metadataOptions(): Any? = unwrap(this).getMetadataOptions()
 
   /**
    * Specifies whether detailed monitoring is enabled for the instance.
@@ -507,12 +522,11 @@ public interface CfnInstanceProps {
   public fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
 
   /**
-   * Indicates whether to assign the tags from the instance to all of the volumes attached to the
-   * instance at launch.
+   * Indicates whether to assign the tags specified in the `Tags` property to the volumes specified
+   * in the `BlockDeviceMappings` property.
    *
-   * If you specify `true` and you assign tags to the instance, those tags are automatically
-   * assigned to all of the volumes that you attach to the instance at launch. If you specify `false` ,
-   * those tags are not assigned to the attached volumes.
+   * Note that using this feature does not assign the tags to volumes that are created separately
+   * and then attached using `AWS::EC2::VolumeAttachment` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-propagatetagstovolumeoncreation)
    */
@@ -803,26 +817,20 @@ public interface CfnInstanceProps {
         fun creditSpecification(creditSpecification: CfnInstance.CreditSpecificationProperty.Builder.() -> Unit)
 
     /**
-     * @param disableApiTermination If you set this parameter to `true` , you can't terminate the
-     * instance using the Amazon EC2 console, CLI, or API;.
-     * otherwise, you can. To change this attribute after launch, use
-     * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)
-     * . Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate` , you can
-     * terminate the instance by running the shutdown command from the instance.
-     *
-     * Default: `false`
+     * @param disableApiTermination Indicates whether termination protection is enabled for the
+     * instance.
+     * The default is `false` , which means that you can terminate the instance using the Amazon EC2
+     * console, command line tools, or API. You can enable termination protection when you launch an
+     * instance, while the instance is running, or while the instance is stopped.
      */
     public fun disableApiTermination(disableApiTermination: Boolean)
 
     /**
-     * @param disableApiTermination If you set this parameter to `true` , you can't terminate the
-     * instance using the Amazon EC2 console, CLI, or API;.
-     * otherwise, you can. To change this attribute after launch, use
-     * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)
-     * . Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate` , you can
-     * terminate the instance by running the shutdown command from the instance.
-     *
-     * Default: `false`
+     * @param disableApiTermination Indicates whether termination protection is enabled for the
+     * instance.
+     * The default is `false` , which means that you can terminate the instance using the Amazon EC2
+     * console, command line tools, or API. You can enable termination protection when you launch an
+     * instance, while the instance is running, or while the instance is stopped.
      */
     public fun disableApiTermination(disableApiTermination: IResolvable)
 
@@ -1053,10 +1061,8 @@ public interface CfnInstanceProps {
     public fun kernelId(kernelId: String)
 
     /**
-     * @param keyName The name of the key pair. You can create a key pair using
-     * [CreateKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateKeyPair.html)
-     * or
-     * [ImportKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportKeyPair.html) .
+     * @param keyName The name of the key pair. For more information, see [Create a key pair for
+     * your EC2 instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html) .
      *
      * If you do not specify a key pair, you can't connect to the instance unless you choose an AMI
      * that is configured to allow users another way to log in.
@@ -1101,6 +1107,24 @@ public interface CfnInstanceProps {
      * @param licenseSpecifications The license configurations.
      */
     public fun licenseSpecifications(vararg licenseSpecifications: Any)
+
+    /**
+     * @param metadataOptions The metadata options for the instance.
+     */
+    public fun metadataOptions(metadataOptions: IResolvable)
+
+    /**
+     * @param metadataOptions The metadata options for the instance.
+     */
+    public fun metadataOptions(metadataOptions: CfnInstance.MetadataOptionsProperty)
+
+    /**
+     * @param metadataOptions The metadata options for the instance.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c09fccb26634c8e735ede91344cf8c3f1f8cbcecff18b005b6e1602568c11615")
+    public
+        fun metadataOptions(metadataOptions: CfnInstance.MetadataOptionsProperty.Builder.() -> Unit)
 
     /**
      * @param monitoring Specifies whether detailed monitoring is enabled for the instance.
@@ -1203,20 +1227,18 @@ public interface CfnInstanceProps {
     public fun privateIpAddress(privateIpAddress: String)
 
     /**
-     * @param propagateTagsToVolumeOnCreation Indicates whether to assign the tags from the instance
-     * to all of the volumes attached to the instance at launch.
-     * If you specify `true` and you assign tags to the instance, those tags are automatically
-     * assigned to all of the volumes that you attach to the instance at launch. If you specify `false`
-     * , those tags are not assigned to the attached volumes.
+     * @param propagateTagsToVolumeOnCreation Indicates whether to assign the tags specified in the
+     * `Tags` property to the volumes specified in the `BlockDeviceMappings` property.
+     * Note that using this feature does not assign the tags to volumes that are created separately
+     * and then attached using `AWS::EC2::VolumeAttachment` .
      */
     public fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: Boolean)
 
     /**
-     * @param propagateTagsToVolumeOnCreation Indicates whether to assign the tags from the instance
-     * to all of the volumes attached to the instance at launch.
-     * If you specify `true` and you assign tags to the instance, those tags are automatically
-     * assigned to all of the volumes that you attach to the instance at launch. If you specify `false`
-     * , those tags are not assigned to the attached volumes.
+     * @param propagateTagsToVolumeOnCreation Indicates whether to assign the tags specified in the
+     * `Tags` property to the volumes specified in the `BlockDeviceMappings` property.
+     * Note that using this feature does not assign the tags to volumes that are created separately
+     * and then attached using `AWS::EC2::VolumeAttachment` .
      */
     public fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: IResolvable)
 
@@ -1568,28 +1590,22 @@ public interface CfnInstanceProps {
         Unit = creditSpecification(CfnInstance.CreditSpecificationProperty(creditSpecification))
 
     /**
-     * @param disableApiTermination If you set this parameter to `true` , you can't terminate the
-     * instance using the Amazon EC2 console, CLI, or API;.
-     * otherwise, you can. To change this attribute after launch, use
-     * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)
-     * . Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate` , you can
-     * terminate the instance by running the shutdown command from the instance.
-     *
-     * Default: `false`
+     * @param disableApiTermination Indicates whether termination protection is enabled for the
+     * instance.
+     * The default is `false` , which means that you can terminate the instance using the Amazon EC2
+     * console, command line tools, or API. You can enable termination protection when you launch an
+     * instance, while the instance is running, or while the instance is stopped.
      */
     override fun disableApiTermination(disableApiTermination: Boolean) {
       cdkBuilder.disableApiTermination(disableApiTermination)
     }
 
     /**
-     * @param disableApiTermination If you set this parameter to `true` , you can't terminate the
-     * instance using the Amazon EC2 console, CLI, or API;.
-     * otherwise, you can. To change this attribute after launch, use
-     * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)
-     * . Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate` , you can
-     * terminate the instance by running the shutdown command from the instance.
-     *
-     * Default: `false`
+     * @param disableApiTermination Indicates whether termination protection is enabled for the
+     * instance.
+     * The default is `false` , which means that you can terminate the instance using the Amazon EC2
+     * console, command line tools, or API. You can enable termination protection when you launch an
+     * instance, while the instance is running, or while the instance is stopped.
      */
     override fun disableApiTermination(disableApiTermination: IResolvable) {
       cdkBuilder.disableApiTermination(disableApiTermination.let(IResolvable.Companion::unwrap))
@@ -1868,10 +1884,8 @@ public interface CfnInstanceProps {
     }
 
     /**
-     * @param keyName The name of the key pair. You can create a key pair using
-     * [CreateKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateKeyPair.html)
-     * or
-     * [ImportKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportKeyPair.html) .
+     * @param keyName The name of the key pair. For more information, see [Create a key pair for
+     * your EC2 instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html) .
      *
      * If you do not specify a key pair, you can't connect to the instance unless you choose an AMI
      * that is configured to allow users another way to log in.
@@ -1928,6 +1942,29 @@ public interface CfnInstanceProps {
      */
     override fun licenseSpecifications(vararg licenseSpecifications: Any): Unit =
         licenseSpecifications(licenseSpecifications.toList())
+
+    /**
+     * @param metadataOptions The metadata options for the instance.
+     */
+    override fun metadataOptions(metadataOptions: IResolvable) {
+      cdkBuilder.metadataOptions(metadataOptions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param metadataOptions The metadata options for the instance.
+     */
+    override fun metadataOptions(metadataOptions: CfnInstance.MetadataOptionsProperty) {
+      cdkBuilder.metadataOptions(metadataOptions.let(CfnInstance.MetadataOptionsProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param metadataOptions The metadata options for the instance.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c09fccb26634c8e735ede91344cf8c3f1f8cbcecff18b005b6e1602568c11615")
+    override
+        fun metadataOptions(metadataOptions: CfnInstance.MetadataOptionsProperty.Builder.() -> Unit):
+        Unit = metadataOptions(CfnInstance.MetadataOptionsProperty(metadataOptions))
 
     /**
      * @param monitoring Specifies whether detailed monitoring is enabled for the instance.
@@ -2049,22 +2086,20 @@ public interface CfnInstanceProps {
     }
 
     /**
-     * @param propagateTagsToVolumeOnCreation Indicates whether to assign the tags from the instance
-     * to all of the volumes attached to the instance at launch.
-     * If you specify `true` and you assign tags to the instance, those tags are automatically
-     * assigned to all of the volumes that you attach to the instance at launch. If you specify `false`
-     * , those tags are not assigned to the attached volumes.
+     * @param propagateTagsToVolumeOnCreation Indicates whether to assign the tags specified in the
+     * `Tags` property to the volumes specified in the `BlockDeviceMappings` property.
+     * Note that using this feature does not assign the tags to volumes that are created separately
+     * and then attached using `AWS::EC2::VolumeAttachment` .
      */
     override fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: Boolean) {
       cdkBuilder.propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation)
     }
 
     /**
-     * @param propagateTagsToVolumeOnCreation Indicates whether to assign the tags from the instance
-     * to all of the volumes attached to the instance at launch.
-     * If you specify `true` and you assign tags to the instance, those tags are automatically
-     * assigned to all of the volumes that you attach to the instance at launch. If you specify `false`
-     * , those tags are not assigned to the attached volumes.
+     * @param propagateTagsToVolumeOnCreation Indicates whether to assign the tags specified in the
+     * `Tags` property to the volumes specified in the `BlockDeviceMappings` property.
+     * Note that using this feature does not assign the tags to volumes that are created separately
+     * and then attached using `AWS::EC2::VolumeAttachment` .
      */
     override fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: IResolvable) {
       cdkBuilder.propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation.let(IResolvable.Companion::unwrap))
@@ -2361,15 +2396,11 @@ public interface CfnInstanceProps {
     override fun creditSpecification(): Any? = unwrap(this).getCreditSpecification()
 
     /**
-     * If you set this parameter to `true` , you can't terminate the instance using the Amazon EC2
-     * console, CLI, or API;
+     * Indicates whether termination protection is enabled for the instance.
      *
-     * otherwise, you can. To change this attribute after launch, use
-     * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html)
-     * . Alternatively, if you set `InstanceInitiatedShutdownBehavior` to `terminate` , you can
-     * terminate the instance by running the shutdown command from the instance.
-     *
-     * Default: `false`
+     * The default is `false` , which means that you can terminate the instance using the Amazon EC2
+     * console, command line tools, or API. You can enable termination protection when you launch an
+     * instance, while the instance is running, or while the instance is stopped.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-disableapitermination)
      */
@@ -2543,10 +2574,8 @@ public interface CfnInstanceProps {
     override fun kernelId(): String? = unwrap(this).getKernelId()
 
     /**
-     * The name of the key pair. You can create a key pair using
-     * [CreateKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateKeyPair.html)
-     * or
-     * [ImportKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportKeyPair.html) .
+     * The name of the key pair. For more information, see [Create a key pair for your EC2
+     * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html) .
      *
      *
      * If you do not specify a key pair, you can't connect to the instance unless you choose an AMI
@@ -2573,6 +2602,13 @@ public interface CfnInstanceProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-licensespecifications)
      */
     override fun licenseSpecifications(): Any? = unwrap(this).getLicenseSpecifications()
+
+    /**
+     * The metadata options for the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-metadataoptions)
+     */
+    override fun metadataOptions(): Any? = unwrap(this).getMetadataOptions()
 
     /**
      * Specifies whether detailed monitoring is enabled for the instance.
@@ -2639,12 +2675,11 @@ public interface CfnInstanceProps {
     override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
 
     /**
-     * Indicates whether to assign the tags from the instance to all of the volumes attached to the
-     * instance at launch.
+     * Indicates whether to assign the tags specified in the `Tags` property to the volumes
+     * specified in the `BlockDeviceMappings` property.
      *
-     * If you specify `true` and you assign tags to the instance, those tags are automatically
-     * assigned to all of the volumes that you attach to the instance at launch. If you specify `false`
-     * , those tags are not assigned to the attached volumes.
+     * Note that using this feature does not assign the tags to volumes that are created separately
+     * and then attached using `AWS::EC2::VolumeAttachment` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-propagatetagstovolumeoncreation)
      */

@@ -79,6 +79,7 @@ import kotlin.jvm.JvmName
  * .tags(tags)
  * .webserverAccessMode("webserverAccessMode")
  * .weeklyMaintenanceWindowStart("weeklyMaintenanceWindowStart")
+ * .workerReplacementStrategy("workerReplacementStrategy")
  * .build();
  * ```
  *
@@ -104,7 +105,7 @@ public interface CfnEnvironmentProps {
    * some service interruption before taking effect.
    *
    * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2` |
-   * `2.8.1` | `2.9.2` (latest)
+   * `2.8.1` | `2.9.2` | `2.10.1` (latest)
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowversion)
    */
@@ -134,8 +135,9 @@ public interface CfnEnvironmentProps {
   /**
    * The environment class type.
    *
-   * Valid values: `mw1.small` , `mw1.medium` , `mw1.large` . To learn more, see [Amazon MWAA
-   * environment class](https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html) .
+   * Valid values: `mw1.micro` , `mw1.small` , `mw1.medium` , `mw1.large` , `mw1.1large` , and
+   * `mw1.2large` . To learn more, see [Amazon MWAA environment
+   * class](https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html) .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-environmentclass)
    */
@@ -284,7 +286,8 @@ public interface CfnEnvironmentProps {
   /**
    * The number of schedulers that you want to run in your environment. Valid values:.
    *
-   * * *v2* - Accepts between 2 to 5. Defaults to 2.
+   * * *v2* - For environments larger than mw1.micro, accepts values from 2 to 5. Defaults to 2 for
+   * all environment sizes except mw1.micro, which defaults to 1.
    * * *v1* - Accepts 1.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-schedulers)
@@ -373,6 +376,18 @@ public interface CfnEnvironmentProps {
       unwrap(this).getWeeklyMaintenanceWindowStart()
 
   /**
+   * The worker replacement strategy to use when updating the environment.
+   *
+   * Valid values: `FORCED`, `GRACEFUL`. FORCED means Apache Airflow workers will be stopped and
+   * replaced without waiting for tasks to complete before an update. GRACEFUL means Apache Airflow
+   * workers will be able to complete running tasks for up to 12 hours during an update before being
+   * stopped and replaced.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-workerreplacementstrategy)
+   */
+  public fun workerReplacementStrategy(): String? = unwrap(this).getWorkerReplacementStrategy()
+
+  /**
    * A builder for [CfnEnvironmentProps]
    */
   @CdkDslMarker
@@ -393,7 +408,7 @@ public interface CfnEnvironmentProps {
      * requires some service interruption before taking effect.
      *
      * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2` |
-     * `2.8.1` | `2.9.2` (latest)
+     * `2.8.1` | `2.9.2` | `2.10.1` (latest)
      */
     public fun airflowVersion(airflowVersion: String)
 
@@ -414,8 +429,9 @@ public interface CfnEnvironmentProps {
 
     /**
      * @param environmentClass The environment class type.
-     * Valid values: `mw1.small` , `mw1.medium` , `mw1.large` . To learn more, see [Amazon MWAA
-     * environment class](https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html) .
+     * Valid values: `mw1.micro` , `mw1.small` , `mw1.medium` , `mw1.large` , `mw1.1large` , and
+     * `mw1.2large` . To learn more, see [Amazon MWAA environment
+     * class](https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html) .
      */
     public fun environmentClass(environmentClass: String)
 
@@ -572,7 +588,8 @@ public interface CfnEnvironmentProps {
     /**
      * @param schedulers The number of schedulers that you want to run in your environment. Valid
      * values:.
-     * * *v2* - Accepts between 2 to 5. Defaults to 2.
+     * * *v2* - For environments larger than mw1.micro, accepts values from 2 to 5. Defaults to 2
+     * for all environment sizes except mw1.micro, which defaults to 1.
      * * *v1* - Accepts 1.
      */
     public fun schedulers(schedulers: Number)
@@ -639,6 +656,16 @@ public interface CfnEnvironmentProps {
      * * MON|TUE|WED|THU|FRI|SAT|SUN:([01]\d|2[0-3]):(00|30)
      */
     public fun weeklyMaintenanceWindowStart(weeklyMaintenanceWindowStart: String)
+
+    /**
+     * @param workerReplacementStrategy The worker replacement strategy to use when updating the
+     * environment.
+     * Valid values: `FORCED`, `GRACEFUL`. FORCED means Apache Airflow workers will be stopped and
+     * replaced without waiting for tasks to complete before an update. GRACEFUL means Apache Airflow
+     * workers will be able to complete running tasks for up to 12 hours during an update before being
+     * stopped and replaced.
+     */
+    public fun workerReplacementStrategy(workerReplacementStrategy: String)
   }
 
   private class BuilderImpl : Builder {
@@ -663,7 +690,7 @@ public interface CfnEnvironmentProps {
      * requires some service interruption before taking effect.
      *
      * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2` |
-     * `2.8.1` | `2.9.2` (latest)
+     * `2.8.1` | `2.9.2` | `2.10.1` (latest)
      */
     override fun airflowVersion(airflowVersion: String) {
       cdkBuilder.airflowVersion(airflowVersion)
@@ -690,8 +717,9 @@ public interface CfnEnvironmentProps {
 
     /**
      * @param environmentClass The environment class type.
-     * Valid values: `mw1.small` , `mw1.medium` , `mw1.large` . To learn more, see [Amazon MWAA
-     * environment class](https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html) .
+     * Valid values: `mw1.micro` , `mw1.small` , `mw1.medium` , `mw1.large` , `mw1.1large` , and
+     * `mw1.2large` . To learn more, see [Amazon MWAA environment
+     * class](https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html) .
      */
     override fun environmentClass(environmentClass: String) {
       cdkBuilder.environmentClass(environmentClass)
@@ -884,7 +912,8 @@ public interface CfnEnvironmentProps {
     /**
      * @param schedulers The number of schedulers that you want to run in your environment. Valid
      * values:.
-     * * *v2* - Accepts between 2 to 5. Defaults to 2.
+     * * *v2* - For environments larger than mw1.micro, accepts values from 2 to 5. Defaults to 2
+     * for all environment sizes except mw1.micro, which defaults to 1.
      * * *v1* - Accepts 1.
      */
     override fun schedulers(schedulers: Number) {
@@ -966,6 +995,18 @@ public interface CfnEnvironmentProps {
       cdkBuilder.weeklyMaintenanceWindowStart(weeklyMaintenanceWindowStart)
     }
 
+    /**
+     * @param workerReplacementStrategy The worker replacement strategy to use when updating the
+     * environment.
+     * Valid values: `FORCED`, `GRACEFUL`. FORCED means Apache Airflow workers will be stopped and
+     * replaced without waiting for tasks to complete before an update. GRACEFUL means Apache Airflow
+     * workers will be able to complete running tasks for up to 12 hours during an update before being
+     * stopped and replaced.
+     */
+    override fun workerReplacementStrategy(workerReplacementStrategy: String) {
+      cdkBuilder.workerReplacementStrategy(workerReplacementStrategy)
+    }
+
     public fun build(): software.amazon.awscdk.services.mwaa.CfnEnvironmentProps =
         cdkBuilder.build()
   }
@@ -993,7 +1034,7 @@ public interface CfnEnvironmentProps {
      * requires some service interruption before taking effect.
      *
      * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2` |
-     * `2.8.1` | `2.9.2` (latest)
+     * `2.8.1` | `2.9.2` | `2.10.1` (latest)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowversion)
      */
@@ -1023,8 +1064,9 @@ public interface CfnEnvironmentProps {
     /**
      * The environment class type.
      *
-     * Valid values: `mw1.small` , `mw1.medium` , `mw1.large` . To learn more, see [Amazon MWAA
-     * environment class](https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html) .
+     * Valid values: `mw1.micro` , `mw1.small` , `mw1.medium` , `mw1.large` , `mw1.1large` , and
+     * `mw1.2large` . To learn more, see [Amazon MWAA environment
+     * class](https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-environmentclass)
      */
@@ -1178,7 +1220,8 @@ public interface CfnEnvironmentProps {
     /**
      * The number of schedulers that you want to run in your environment. Valid values:.
      *
-     * * *v2* - Accepts between 2 to 5. Defaults to 2.
+     * * *v2* - For environments larger than mw1.micro, accepts values from 2 to 5. Defaults to 2
+     * for all environment sizes except mw1.micro, which defaults to 1.
      * * *v1* - Accepts 1.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-schedulers)
@@ -1266,6 +1309,18 @@ public interface CfnEnvironmentProps {
      */
     override fun weeklyMaintenanceWindowStart(): String? =
         unwrap(this).getWeeklyMaintenanceWindowStart()
+
+    /**
+     * The worker replacement strategy to use when updating the environment.
+     *
+     * Valid values: `FORCED`, `GRACEFUL`. FORCED means Apache Airflow workers will be stopped and
+     * replaced without waiting for tasks to complete before an update. GRACEFUL means Apache Airflow
+     * workers will be able to complete running tasks for up to 12 hours during an update before being
+     * stopped and replaced.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-workerreplacementstrategy)
+     */
+    override fun workerReplacementStrategy(): String? = unwrap(this).getWorkerReplacementStrategy()
   }
 
   public companion object {

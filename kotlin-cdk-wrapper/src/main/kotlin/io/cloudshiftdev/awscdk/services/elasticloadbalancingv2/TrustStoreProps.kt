@@ -29,6 +29,7 @@ import kotlin.Unit
  * .certificates(List.of(certificate))
  * // mTLS settings
  * .mutualAuthentication(MutualAuthentication.builder()
+ * .advertiseTrustStoreCaNames(true)
  * .ignoreClientCertificateExpiry(false)
  * .mutualAuthenticationMode(MutualAuthenticationMode.VERIFY)
  * .trustStore(trustStore)

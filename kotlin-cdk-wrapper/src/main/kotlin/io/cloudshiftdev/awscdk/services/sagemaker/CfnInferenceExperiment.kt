@@ -980,8 +980,8 @@ public open class CfnInferenceExperiment(
   /**
    * Configuration specifying how to treat different headers.
    *
-   * If no headers are specified Amazon SageMaker will by default base64 encode when capturing the
-   * data.
+   * If no headers are specified Amazon SageMaker AI will by default base64 encode when capturing
+   * the data.
    *
    * Example:
    *
@@ -1000,7 +1000,7 @@ public open class CfnInferenceExperiment(
    */
   public interface CaptureContentTypeHeaderProperty {
     /**
-     * The list of all content type headers that Amazon SageMaker will treat as CSV and capture
+     * The list of all content type headers that Amazon SageMaker AI will treat as CSV and capture
      * accordingly.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-capturecontenttypeheader.html#cfn-sagemaker-inferenceexperiment-capturecontenttypeheader-csvcontenttypes)
@@ -1008,7 +1008,7 @@ public open class CfnInferenceExperiment(
     public fun csvContentTypes(): List<String> = unwrap(this).getCsvContentTypes() ?: emptyList()
 
     /**
-     * The list of all content type headers that SageMaker will treat as JSON and capture
+     * The list of all content type headers that SageMaker AI will treat as JSON and capture
      * accordingly.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-capturecontenttypeheader.html#cfn-sagemaker-inferenceexperiment-capturecontenttypeheader-jsoncontenttypes)
@@ -1021,26 +1021,26 @@ public open class CfnInferenceExperiment(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param csvContentTypes The list of all content type headers that Amazon SageMaker will
+       * @param csvContentTypes The list of all content type headers that Amazon SageMaker AI will
        * treat as CSV and capture accordingly.
        */
       public fun csvContentTypes(csvContentTypes: List<String>)
 
       /**
-       * @param csvContentTypes The list of all content type headers that Amazon SageMaker will
+       * @param csvContentTypes The list of all content type headers that Amazon SageMaker AI will
        * treat as CSV and capture accordingly.
        */
       public fun csvContentTypes(vararg csvContentTypes: String)
 
       /**
-       * @param jsonContentTypes The list of all content type headers that SageMaker will treat as
-       * JSON and capture accordingly.
+       * @param jsonContentTypes The list of all content type headers that SageMaker AI will treat
+       * as JSON and capture accordingly.
        */
       public fun jsonContentTypes(jsonContentTypes: List<String>)
 
       /**
-       * @param jsonContentTypes The list of all content type headers that SageMaker will treat as
-       * JSON and capture accordingly.
+       * @param jsonContentTypes The list of all content type headers that SageMaker AI will treat
+       * as JSON and capture accordingly.
        */
       public fun jsonContentTypes(vararg jsonContentTypes: String)
     }
@@ -1052,7 +1052,7 @@ public open class CfnInferenceExperiment(
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty.builder()
 
       /**
-       * @param csvContentTypes The list of all content type headers that Amazon SageMaker will
+       * @param csvContentTypes The list of all content type headers that Amazon SageMaker AI will
        * treat as CSV and capture accordingly.
        */
       override fun csvContentTypes(csvContentTypes: List<String>) {
@@ -1060,23 +1060,23 @@ public open class CfnInferenceExperiment(
       }
 
       /**
-       * @param csvContentTypes The list of all content type headers that Amazon SageMaker will
+       * @param csvContentTypes The list of all content type headers that Amazon SageMaker AI will
        * treat as CSV and capture accordingly.
        */
       override fun csvContentTypes(vararg csvContentTypes: String): Unit =
           csvContentTypes(csvContentTypes.toList())
 
       /**
-       * @param jsonContentTypes The list of all content type headers that SageMaker will treat as
-       * JSON and capture accordingly.
+       * @param jsonContentTypes The list of all content type headers that SageMaker AI will treat
+       * as JSON and capture accordingly.
        */
       override fun jsonContentTypes(jsonContentTypes: List<String>) {
         cdkBuilder.jsonContentTypes(jsonContentTypes)
       }
 
       /**
-       * @param jsonContentTypes The list of all content type headers that SageMaker will treat as
-       * JSON and capture accordingly.
+       * @param jsonContentTypes The list of all content type headers that SageMaker AI will treat
+       * as JSON and capture accordingly.
        */
       override fun jsonContentTypes(vararg jsonContentTypes: String): Unit =
           jsonContentTypes(jsonContentTypes.toList())
@@ -1091,7 +1091,7 @@ public open class CfnInferenceExperiment(
     ) : CdkObject(cdkObject),
         CaptureContentTypeHeaderProperty {
       /**
-       * The list of all content type headers that Amazon SageMaker will treat as CSV and capture
+       * The list of all content type headers that Amazon SageMaker AI will treat as CSV and capture
        * accordingly.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-capturecontenttypeheader.html#cfn-sagemaker-inferenceexperiment-capturecontenttypeheader-csvcontenttypes)
@@ -1100,7 +1100,7 @@ public open class CfnInferenceExperiment(
           emptyList()
 
       /**
-       * The list of all content type headers that SageMaker will treat as JSON and capture
+       * The list of all content type headers that SageMaker AI will treat as JSON and capture
        * accordingly.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-capturecontenttypeheader.html#cfn-sagemaker-inferenceexperiment-capturecontenttypeheader-jsoncontenttypes)

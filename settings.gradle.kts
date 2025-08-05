@@ -8,8 +8,8 @@ pluginManagement {
     }
     includeBuild("build-logic")
     repositories {
-        maven("https://cache-redirector.jetbrains.com/plugins.gradle.org")
-        maven("https://cache-redirector.jetbrains.com/repo1.maven.org/maven2")
+        gradlePluginPortal()
+        mavenCentral()
     }
 }
 
@@ -20,7 +20,9 @@ plugins {
 
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories { maven("https://cache-redirector.jetbrains.com/repo1.maven.org/maven2") }
+    repositories {
+        mavenCentral()
+    }
 }
 
 include(":kotlin-cdk-wrapper")

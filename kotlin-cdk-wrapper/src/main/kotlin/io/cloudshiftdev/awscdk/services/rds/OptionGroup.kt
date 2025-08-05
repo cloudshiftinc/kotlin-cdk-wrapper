@@ -221,6 +221,9 @@ public open class OptionGroup(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.rds.OptionGroup.PROPERTY_INJECTION_ID
+
     public fun fromOptionGroupName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

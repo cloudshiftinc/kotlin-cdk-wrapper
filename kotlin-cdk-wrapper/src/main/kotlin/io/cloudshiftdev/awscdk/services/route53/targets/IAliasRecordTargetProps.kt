@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.route53.targets
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
+import kotlin.String
 
 /**
  * Properties the alias record target.
@@ -17,6 +18,13 @@ public interface IAliasRecordTargetProps {
    */
   public fun evaluateTargetHealth(): Boolean? = unwrap(this).getEvaluateTargetHealth()
 
+  /**
+   * Target Hosted zone ID.
+   *
+   * Default: - hosted zone ID for the EBS endpoint will be retrieved based on the stack's region.
+   */
+  public fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
+
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.targets.IAliasRecordTargetProps,
   ) : CdkObject(cdkObject),
@@ -27,6 +35,13 @@ public interface IAliasRecordTargetProps {
      * Default: - no health check configuration
      */
     override fun evaluateTargetHealth(): Boolean? = unwrap(this).getEvaluateTargetHealth()
+
+    /**
+     * Target Hosted zone ID.
+     *
+     * Default: - hosted zone ID for the EBS endpoint will be retrieved based on the stack's region.
+     */
+    override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
   }
 
   public companion object {

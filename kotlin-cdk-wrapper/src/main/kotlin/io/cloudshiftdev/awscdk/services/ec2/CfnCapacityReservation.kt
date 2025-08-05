@@ -6,6 +6,8 @@ import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -34,11 +36,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.ec2.*;
  * CfnCapacityReservation cfnCapacityReservation = CfnCapacityReservation.Builder.create(this,
  * "MyCfnCapacityReservation")
- * .availabilityZone("availabilityZone")
  * .instanceCount(123)
  * .instancePlatform("instancePlatform")
  * .instanceType("instanceType")
  * // the properties below are optional
+ * .availabilityZone("availabilityZone")
+ * .availabilityZoneId("availabilityZoneId")
  * .ebsOptimized(false)
  * .endDate("endDate")
  * .endDateType("endDateType")
@@ -63,7 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCapacityReservation(
   cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservation,
 ) : CfnResource(cdkObject),
-    IInspectable {
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -97,6 +101,45 @@ public open class CfnCapacityReservation(
       unwrap(this).getAttrAvailableInstanceCount()
 
   /**
+   *
+   */
+  public open fun attrCapacityAllocationSet(): IResolvable =
+      unwrap(this).getAttrCapacityAllocationSet().let(IResolvable::wrap)
+
+  /**
+   * The Amazon Resource Name (ARN) of the Capacity Reservation.
+   */
+  public open fun attrCapacityReservationArn(): String =
+      unwrap(this).getAttrCapacityReservationArn()
+
+  /**
+   * The ID of the Capacity Reservation Fleet to which the Capacity Reservation belongs.
+   *
+   * Only valid for Capacity Reservations that were created by a Capacity Reservation Fleet.
+   */
+  public open fun attrCapacityReservationFleetId(): String =
+      unwrap(this).getAttrCapacityReservationFleetId()
+
+  /**
+   *
+   */
+  public open fun attrCommitmentInfo(): IResolvable =
+      unwrap(this).getAttrCommitmentInfo().let(IResolvable::wrap)
+
+  /**
+   * The date and time at which the Capacity Reservation was created.
+   */
+  public open fun attrCreateDate(): String = unwrap(this).getAttrCreateDate()
+
+  /**
+   * The delivery method for a future-dated Capacity Reservation.
+   *
+   * `incremental` indicates that the requested capacity is delivered in addition to any running
+   * instances and reserved capacity that you have in your account at the requested date and time.
+   */
+  public open fun attrDeliveryPreference(): String = unwrap(this).getAttrDeliveryPreference()
+
+  /**
    * The ID of the Capacity Reservation.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
@@ -107,6 +150,52 @@ public open class CfnCapacityReservation(
    * For example: `m4.large` .
    */
   public open fun attrInstanceType(): String = unwrap(this).getAttrInstanceType()
+
+  /**
+   * The ID of the AWS account that owns the Capacity Reservation.
+   */
+  public open fun attrOwnerId(): String = unwrap(this).getAttrOwnerId()
+
+  /**
+   * The type of Capacity Reservation.
+   */
+  public open fun attrReservationType(): String = unwrap(this).getAttrReservationType()
+
+  /**
+   * The date and time at which the Capacity Reservation was started.
+   */
+  public open fun attrStartDate(): String = unwrap(this).getAttrStartDate()
+
+  /**
+   * The current state of the Capacity Reservation. A Capacity Reservation can be in one of the
+   * following states:.
+   *
+   * * `active` - The capacity is available for use.
+   * * `expired` - The Capacity Reservation expired automatically at the date and time specified in
+   * your reservation request. The reserved capacity is no longer available for your use.
+   * * `cancelled` - The Capacity Reservation was canceled. The reserved capacity is no longer
+   * available for your use.
+   * * `pending` - The Capacity Reservation request was successful but the capacity provisioning is
+   * still pending.
+   * * `failed` - The Capacity Reservation request has failed. A request can fail due to request
+   * parameters that are not valid, capacity constraints, or instance limit constraints. You can view a
+   * failed request for 60 minutes.
+   * * `scheduled` - ( *Future-dated Capacity Reservations* ) The future-dated Capacity Reservation
+   * request was approved and the Capacity Reservation is scheduled for delivery on the requested start
+   * date.
+   * * `payment-pending` - ( *Capacity Blocks* ) The upfront payment has not been processed yet.
+   * * `payment-failed` - ( *Capacity Blocks* ) The upfront payment was not processed in the 12-hour
+   * time frame. Your Capacity Block was released.
+   * * `assessing` - ( *Future-dated Capacity Reservations* ) Amazon EC2 is assessing your request
+   * for a future-dated Capacity Reservation.
+   * * `delayed` - ( *Future-dated Capacity Reservations* ) Amazon EC2 encountered a delay in
+   * provisioning the requested future-dated Capacity Reservation. Amazon EC2 is unable to deliver the
+   * requested capacity by the requested start date and time.
+   * * `unsupported` - ( *Future-dated Capacity Reservations* ) Amazon EC2 can't support the
+   * future-dated Capacity Reservation request due to capacity constraints. You can view unsupported
+   * requests for 30 days. The Capacity Reservation will not be delivered.
+   */
+  public open fun attrState(): String = unwrap(this).getAttrState()
 
   /**
    * Returns the tenancy of the Capacity Reservation.
@@ -125,7 +214,7 @@ public open class CfnCapacityReservation(
   /**
    * The Availability Zone in which to create the Capacity Reservation.
    */
-  public open fun availabilityZone(): String = unwrap(this).getAvailabilityZone()
+  public open fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
   /**
    * The Availability Zone in which to create the Capacity Reservation.
@@ -133,6 +222,24 @@ public open class CfnCapacityReservation(
   public open fun availabilityZone(`value`: String) {
     unwrap(this).setAvailabilityZone(`value`)
   }
+
+  /**
+   * The Availability Zone ID of the Capacity Reservation.
+   */
+  public open fun availabilityZoneId(): String? = unwrap(this).getAvailabilityZoneId()
+
+  /**
+   * The Availability Zone ID of the Capacity Reservation.
+   */
+  public open fun availabilityZoneId(`value`: String) {
+    unwrap(this).setAvailabilityZoneId(`value`)
+  }
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * Indicates whether the Capacity Reservation supports EBS-optimized instances.
@@ -284,26 +391,21 @@ public open class CfnCapacityReservation(
   /**
    * The tags to apply to the Capacity Reservation during launch.
    */
-  public open fun tagSpecifications(): Any? = unwrap(this).getTagSpecifications()
+  public open fun tagSpecifications(): List<TagSpecificationProperty> =
+      unwrap(this).getTagSpecifications()?.map(TagSpecificationProperty::wrap) ?: emptyList()
 
   /**
    * The tags to apply to the Capacity Reservation during launch.
    */
-  public open fun tagSpecifications(`value`: IResolvable) {
-    unwrap(this).setTagSpecifications(`value`.let(IResolvable.Companion::unwrap))
+  public open fun tagSpecifications(`value`: List<TagSpecificationProperty>) {
+    unwrap(this).setTagSpecifications(`value`.map(TagSpecificationProperty.Companion::unwrap))
   }
 
   /**
    * The tags to apply to the Capacity Reservation during launch.
    */
-  public open fun tagSpecifications(`value`: List<Any>) {
-    unwrap(this).setTagSpecifications(`value`.map{CdkObjectWrappers.unwrap(it)})
-  }
-
-  /**
-   * The tags to apply to the Capacity Reservation during launch.
-   */
-  public open fun tagSpecifications(vararg `value`: Any): Unit = tagSpecifications(`value`.toList())
+  public open fun tagSpecifications(vararg `value`: TagSpecificationProperty): Unit =
+      tagSpecifications(`value`.toList())
 
   /**
    * Indicates the tenancy of the Capacity Reservation.
@@ -348,6 +450,14 @@ public open class CfnCapacityReservation(
      * @param availabilityZone The Availability Zone in which to create the Capacity Reservation. 
      */
     public fun availabilityZone(availabilityZone: String)
+
+    /**
+     * The Availability Zone ID of the Capacity Reservation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-availabilityzoneid)
+     * @param availabilityZoneId The Availability Zone ID of the Capacity Reservation. 
+     */
+    public fun availabilityZoneId(availabilityZoneId: String)
 
     /**
      * Indicates whether the Capacity Reservation supports EBS-optimized instances.
@@ -432,9 +542,9 @@ public open class CfnCapacityReservation(
      * The number of instances for which to reserve capacity.
      *
      *
-     * You can request future-dated Capacity Reservations for an instance count with a minimum of
-     * 100 VPUs. For example, if you request a future-dated Capacity Reservation for `m5.xlarge`
-     * instances, you must request at least 25 instances ( *25 * m5.xlarge = 100 vCPUs* ).
+     * You can request future-dated Capacity Reservations for an instance count with a minimum of 64
+     * vCPUs. For example, if you request a future-dated Capacity Reservation for `m5.xlarge`
+     * instances, you must request at least 25 instances ( *16 * m5.xlarge = 64 vCPUs* ).
      *
      *
      * Valid range: 1 - 1000
@@ -480,8 +590,8 @@ public open class CfnCapacityReservation(
      * The instance type for which to reserve capacity.
      *
      *
-     * You can request future-dated Capacity Reservations for instance types in the C, M, R, I, and
-     * T instance families only.
+     * You can request future-dated Capacity Reservations for instance types in the C, M, R, I, T,
+     * and G instance families only.
      *
      *
      * For more information, see [Instance
@@ -522,7 +632,7 @@ public open class CfnCapacityReservation(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-tagspecifications)
      * @param tagSpecifications The tags to apply to the Capacity Reservation during launch. 
      */
-    public fun tagSpecifications(tagSpecifications: IResolvable)
+    public fun tagSpecifications(tagSpecifications: List<TagSpecificationProperty>)
 
     /**
      * The tags to apply to the Capacity Reservation during launch.
@@ -530,15 +640,7 @@ public open class CfnCapacityReservation(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-tagspecifications)
      * @param tagSpecifications The tags to apply to the Capacity Reservation during launch. 
      */
-    public fun tagSpecifications(tagSpecifications: List<Any>)
-
-    /**
-     * The tags to apply to the Capacity Reservation during launch.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-tagspecifications)
-     * @param tagSpecifications The tags to apply to the Capacity Reservation during launch. 
-     */
-    public fun tagSpecifications(vararg tagSpecifications: Any)
+    public fun tagSpecifications(vararg tagSpecifications: TagSpecificationProperty)
 
     /**
      * Indicates the tenancy of the Capacity Reservation. A Capacity Reservation can have one of the
@@ -591,6 +693,16 @@ public open class CfnCapacityReservation(
      */
     override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
+    }
+
+    /**
+     * The Availability Zone ID of the Capacity Reservation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-availabilityzoneid)
+     * @param availabilityZoneId The Availability Zone ID of the Capacity Reservation. 
+     */
+    override fun availabilityZoneId(availabilityZoneId: String) {
+      cdkBuilder.availabilityZoneId(availabilityZoneId)
     }
 
     /**
@@ -688,9 +800,9 @@ public open class CfnCapacityReservation(
      * The number of instances for which to reserve capacity.
      *
      *
-     * You can request future-dated Capacity Reservations for an instance count with a minimum of
-     * 100 VPUs. For example, if you request a future-dated Capacity Reservation for `m5.xlarge`
-     * instances, you must request at least 25 instances ( *25 * m5.xlarge = 100 vCPUs* ).
+     * You can request future-dated Capacity Reservations for an instance count with a minimum of 64
+     * vCPUs. For example, if you request a future-dated Capacity Reservation for `m5.xlarge`
+     * instances, you must request at least 25 instances ( *16 * m5.xlarge = 64 vCPUs* ).
      *
      *
      * Valid range: 1 - 1000
@@ -742,8 +854,8 @@ public open class CfnCapacityReservation(
      * The instance type for which to reserve capacity.
      *
      *
-     * You can request future-dated Capacity Reservations for instance types in the C, M, R, I, and
-     * T instance families only.
+     * You can request future-dated Capacity Reservations for instance types in the C, M, R, I, T,
+     * and G instance families only.
      *
      *
      * For more information, see [Instance
@@ -790,8 +902,8 @@ public open class CfnCapacityReservation(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-tagspecifications)
      * @param tagSpecifications The tags to apply to the Capacity Reservation during launch. 
      */
-    override fun tagSpecifications(tagSpecifications: IResolvable) {
-      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
+    override fun tagSpecifications(tagSpecifications: List<TagSpecificationProperty>) {
+      cdkBuilder.tagSpecifications(tagSpecifications.map(TagSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -800,17 +912,7 @@ public open class CfnCapacityReservation(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-tagspecifications)
      * @param tagSpecifications The tags to apply to the Capacity Reservation during launch. 
      */
-    override fun tagSpecifications(tagSpecifications: List<Any>) {
-      cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
-    }
-
-    /**
-     * The tags to apply to the Capacity Reservation during launch.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-tagspecifications)
-     * @param tagSpecifications The tags to apply to the Capacity Reservation during launch. 
-     */
-    override fun tagSpecifications(vararg tagSpecifications: Any): Unit =
+    override fun tagSpecifications(vararg tagSpecifications: TagSpecificationProperty): Unit =
         tagSpecifications(tagSpecifications.toList())
 
     /**
@@ -875,6 +977,258 @@ public open class CfnCapacityReservation(
     internal fun unwrap(wrapped: CfnCapacityReservation):
         software.amazon.awscdk.services.ec2.CfnCapacityReservation = wrapped.cdkObject as
         software.amazon.awscdk.services.ec2.CfnCapacityReservation
+  }
+
+  /**
+   * Information about instance capacity usage for a Capacity Reservation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * CapacityAllocationProperty capacityAllocationProperty = CapacityAllocationProperty.builder()
+   * .allocationType("allocationType")
+   * .count(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservation-capacityallocation.html)
+   */
+  public interface CapacityAllocationProperty {
+    /**
+     * The usage type.
+     *
+     * `used` indicates that the instance capacity is in use by instances that are running in the
+     * Capacity Reservation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservation-capacityallocation.html#cfn-ec2-capacityreservation-capacityallocation-allocationtype)
+     */
+    public fun allocationType(): String? = unwrap(this).getAllocationType()
+
+    /**
+     * The amount of instance capacity associated with the usage.
+     *
+     * For example a value of `4` indicates that instance capacity for 4 instances is currently in
+     * use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservation-capacityallocation.html#cfn-ec2-capacityreservation-capacityallocation-count)
+     */
+    public fun count(): Number? = unwrap(this).getCount()
+
+    /**
+     * A builder for [CapacityAllocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param allocationType The usage type.
+       * `used` indicates that the instance capacity is in use by instances that are running in the
+       * Capacity Reservation.
+       */
+      public fun allocationType(allocationType: String)
+
+      /**
+       * @param count The amount of instance capacity associated with the usage.
+       * For example a value of `4` indicates that instance capacity for 4 instances is currently in
+       * use.
+       */
+      public fun count(count: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnCapacityReservation.CapacityAllocationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnCapacityReservation.CapacityAllocationProperty.builder()
+
+      /**
+       * @param allocationType The usage type.
+       * `used` indicates that the instance capacity is in use by instances that are running in the
+       * Capacity Reservation.
+       */
+      override fun allocationType(allocationType: String) {
+        cdkBuilder.allocationType(allocationType)
+      }
+
+      /**
+       * @param count The amount of instance capacity associated with the usage.
+       * For example a value of `4` indicates that instance capacity for 4 instances is currently in
+       * use.
+       */
+      override fun count(count: Number) {
+        cdkBuilder.count(count)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnCapacityReservation.CapacityAllocationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservation.CapacityAllocationProperty,
+    ) : CdkObject(cdkObject),
+        CapacityAllocationProperty {
+      /**
+       * The usage type.
+       *
+       * `used` indicates that the instance capacity is in use by instances that are running in the
+       * Capacity Reservation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservation-capacityallocation.html#cfn-ec2-capacityreservation-capacityallocation-allocationtype)
+       */
+      override fun allocationType(): String? = unwrap(this).getAllocationType()
+
+      /**
+       * The amount of instance capacity associated with the usage.
+       *
+       * For example a value of `4` indicates that instance capacity for 4 instances is currently in
+       * use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservation-capacityallocation.html#cfn-ec2-capacityreservation-capacityallocation-count)
+       */
+      override fun count(): Number? = unwrap(this).getCount()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CapacityAllocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservation.CapacityAllocationProperty):
+          CapacityAllocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityAllocationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CapacityAllocationProperty):
+          software.amazon.awscdk.services.ec2.CfnCapacityReservation.CapacityAllocationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnCapacityReservation.CapacityAllocationProperty
+    }
+  }
+
+  /**
+   * Information about your commitment for a future-dated Capacity Reservation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * CommitmentInfoProperty commitmentInfoProperty = CommitmentInfoProperty.builder()
+   * .commitmentEndDate("commitmentEndDate")
+   * .committedInstanceCount(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservation-commitmentinfo.html)
+   */
+  public interface CommitmentInfoProperty {
+    /**
+     * The date and time at which the commitment duration expires, in the ISO8601 format in the UTC
+     * time zone ( `YYYY-MM-DDThh:mm:ss.sssZ` ). You can't decrease the instance count or cancel the
+     * Capacity Reservation before this date and time.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservation-commitmentinfo.html#cfn-ec2-capacityreservation-commitmentinfo-commitmentenddate)
+     */
+    public fun commitmentEndDate(): String? = unwrap(this).getCommitmentEndDate()
+
+    /**
+     * The instance capacity that you committed to when you requested the future-dated Capacity
+     * Reservation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservation-commitmentinfo.html#cfn-ec2-capacityreservation-commitmentinfo-committedinstancecount)
+     */
+    public fun committedInstanceCount(): Number? = unwrap(this).getCommittedInstanceCount()
+
+    /**
+     * A builder for [CommitmentInfoProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param commitmentEndDate The date and time at which the commitment duration expires, in the
+       * ISO8601 format in the UTC time zone ( `YYYY-MM-DDThh:mm:ss.sssZ` ). You can't decrease the
+       * instance count or cancel the Capacity Reservation before this date and time.
+       */
+      public fun commitmentEndDate(commitmentEndDate: String)
+
+      /**
+       * @param committedInstanceCount The instance capacity that you committed to when you
+       * requested the future-dated Capacity Reservation.
+       */
+      public fun committedInstanceCount(committedInstanceCount: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnCapacityReservation.CommitmentInfoProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnCapacityReservation.CommitmentInfoProperty.builder()
+
+      /**
+       * @param commitmentEndDate The date and time at which the commitment duration expires, in the
+       * ISO8601 format in the UTC time zone ( `YYYY-MM-DDThh:mm:ss.sssZ` ). You can't decrease the
+       * instance count or cancel the Capacity Reservation before this date and time.
+       */
+      override fun commitmentEndDate(commitmentEndDate: String) {
+        cdkBuilder.commitmentEndDate(commitmentEndDate)
+      }
+
+      /**
+       * @param committedInstanceCount The instance capacity that you committed to when you
+       * requested the future-dated Capacity Reservation.
+       */
+      override fun committedInstanceCount(committedInstanceCount: Number) {
+        cdkBuilder.committedInstanceCount(committedInstanceCount)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnCapacityReservation.CommitmentInfoProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservation.CommitmentInfoProperty,
+    ) : CdkObject(cdkObject),
+        CommitmentInfoProperty {
+      /**
+       * The date and time at which the commitment duration expires, in the ISO8601 format in the
+       * UTC time zone ( `YYYY-MM-DDThh:mm:ss.sssZ` ). You can't decrease the instance count or cancel
+       * the Capacity Reservation before this date and time.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservation-commitmentinfo.html#cfn-ec2-capacityreservation-commitmentinfo-commitmentenddate)
+       */
+      override fun commitmentEndDate(): String? = unwrap(this).getCommitmentEndDate()
+
+      /**
+       * The instance capacity that you committed to when you requested the future-dated Capacity
+       * Reservation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservation-commitmentinfo.html#cfn-ec2-capacityreservation-commitmentinfo-committedinstancecount)
+       */
+      override fun committedInstanceCount(): Number? = unwrap(this).getCommittedInstanceCount()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CommitmentInfoProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservation.CommitmentInfoProperty):
+          CommitmentInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? CommitmentInfoProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CommitmentInfoProperty):
+          software.amazon.awscdk.services.ec2.CfnCapacityReservation.CommitmentInfoProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnCapacityReservation.CommitmentInfoProperty
+    }
   }
 
   /**

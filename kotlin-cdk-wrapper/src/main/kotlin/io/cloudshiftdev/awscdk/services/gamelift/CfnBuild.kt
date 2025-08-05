@@ -3,8 +3,11 @@
 package io.cloudshiftdev.awscdk.services.gamelift
 
 import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -12,6 +15,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
@@ -40,6 +44,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .objectVersion("objectVersion")
  * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .version("version")
  * .build();
  * ```
@@ -49,7 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBuild(
   cdkObject: software.amazon.awscdk.services.gamelift.CfnBuild,
 ) : CfnResource(cdkObject),
-    IInspectable {
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.gamelift.CfnBuild(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -72,9 +81,25 @@ public open class CfnBuild(
   )
 
   /**
+   * The Amazon Resource Name (
+   * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) that is assigned to a
+   * Amazon GameLift Servers build resource and uniquely identifies it. ARNs are unique across all
+   * Regions. Format is
+   * `arn:aws:gamelift:&lt;region&gt;::build/build-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912` . In a
+   * GameLift build ARN, the resource ID matches the *BuildId* value.
+   */
+  public open fun attrBuildArn(): String = unwrap(this).getAttrBuildArn()
+
+  /**
    * A unique identifier for the build.
    */
   public open fun attrBuildId(): String = unwrap(this).getAttrBuildId()
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -110,12 +135,14 @@ public open class CfnBuild(
   }
 
   /**
-   * A server SDK version you used when integrating your game server build with Amazon GameLift.
+   * A server SDK version you used when integrating your game server build with Amazon GameLift
+   * Servers.
    */
   public open fun serverSdkVersion(): String? = unwrap(this).getServerSdkVersion()
 
   /**
-   * A server SDK version you used when integrating your game server build with Amazon GameLift.
+   * A server SDK version you used when integrating your game server build with Amazon GameLift
+   * Servers.
    */
   public open fun serverSdkVersion(`value`: String) {
     unwrap(this).setServerSdkVersion(`value`)
@@ -147,6 +174,23 @@ public open class CfnBuild(
   @JvmName("d2cbba7b376908e2d546d1d9aa71a8d7a34c0870fd121f09463c749ed41027af")
   public open fun storageLocation(`value`: StorageLocationProperty.Builder.() -> Unit): Unit =
       storageLocation(StorageLocationProperty(`value`))
+
+  /**
+   * An array of key-value pairs to apply to this resource.
+   */
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * An array of key-value pairs to apply to this resource.
+   */
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
+  }
+
+  /**
+   * An array of key-value pairs to apply to this resource.
+   */
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
    * Version information that is associated with this build.
@@ -185,10 +229,10 @@ public open class CfnBuild(
      *
      *
      * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
-     * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
-     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the
-     * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
-     * GameLift server SDK version
+     * Linux 2 FAQs](https://docs.aws.amazon.com/amazon-linux-2/faqs/) . For game servers that are
+     * hosted on AL2 and use server SDK version 4.x for Amazon GameLift Servers, first update the game
+     * server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to server SDK
+     * version
      * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
      *
      *
@@ -198,15 +242,16 @@ public open class CfnBuild(
     public fun operatingSystem(operatingSystem: String)
 
     /**
-     * A server SDK version you used when integrating your game server build with Amazon GameLift.
+     * A server SDK version you used when integrating your game server build with Amazon GameLift
+     * Servers.
      *
      * For more information see [Integrate games with custom game
      * servers](https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html)
-     * . By default Amazon GameLift sets this value to `4.0.2` .
+     * . By default Amazon GameLift Servers sets this value to `4.0.2` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-serversdkversion)
      * @param serverSdkVersion A server SDK version you used when integrating your game server build
-     * with Amazon GameLift. 
+     * with Amazon GameLift Servers. 
      */
     public fun serverSdkVersion(serverSdkVersion: String)
 
@@ -215,11 +260,11 @@ public open class CfnBuild(
      *
      * Use this parameter only when creating a build with files stored in an Amazon S3 bucket that
      * you own. The storage location must specify an Amazon S3 bucket name and key. The location must
-     * also specify a role ARN that you set up to allow Amazon GameLift to access your Amazon S3
-     * bucket. The S3 bucket and your new build must be in the same Region.
+     * also specify a role ARN that you set up to allow Amazon GameLift Servers to access your Amazon
+     * S3 bucket. The S3 bucket and your new build must be in the same Region.
      *
      * If a `StorageLocation` is specified, the size of your file can be found in your Amazon S3
-     * bucket. Amazon GameLift will report a `SizeOnDisk` of 0.
+     * bucket. Amazon GameLift Servers will report a `SizeOnDisk` of 0.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-storagelocation)
      * @param storageLocation Information indicating where your game build files are stored. 
@@ -231,11 +276,11 @@ public open class CfnBuild(
      *
      * Use this parameter only when creating a build with files stored in an Amazon S3 bucket that
      * you own. The storage location must specify an Amazon S3 bucket name and key. The location must
-     * also specify a role ARN that you set up to allow Amazon GameLift to access your Amazon S3
-     * bucket. The S3 bucket and your new build must be in the same Region.
+     * also specify a role ARN that you set up to allow Amazon GameLift Servers to access your Amazon
+     * S3 bucket. The S3 bucket and your new build must be in the same Region.
      *
      * If a `StorageLocation` is specified, the size of your file can be found in your Amazon S3
-     * bucket. Amazon GameLift will report a `SizeOnDisk` of 0.
+     * bucket. Amazon GameLift Servers will report a `SizeOnDisk` of 0.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-storagelocation)
      * @param storageLocation Information indicating where your game build files are stored. 
@@ -247,11 +292,11 @@ public open class CfnBuild(
      *
      * Use this parameter only when creating a build with files stored in an Amazon S3 bucket that
      * you own. The storage location must specify an Amazon S3 bucket name and key. The location must
-     * also specify a role ARN that you set up to allow Amazon GameLift to access your Amazon S3
-     * bucket. The S3 bucket and your new build must be in the same Region.
+     * also specify a role ARN that you set up to allow Amazon GameLift Servers to access your Amazon
+     * S3 bucket. The S3 bucket and your new build must be in the same Region.
      *
      * If a `StorageLocation` is specified, the size of your file can be found in your Amazon S3
-     * bucket. Amazon GameLift will report a `SizeOnDisk` of 0.
+     * bucket. Amazon GameLift Servers will report a `SizeOnDisk` of 0.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-storagelocation)
      * @param storageLocation Information indicating where your game build files are stored. 
@@ -259,6 +304,22 @@ public open class CfnBuild(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2d5c1888cb6aea4a915f59edee556ca7c9485511849194e4c2886604f2c122cd")
     public fun storageLocation(storageLocation: StorageLocationProperty.Builder.() -> Unit)
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
+    public fun tags(vararg tags: CfnTag)
 
     /**
      * Version information that is associated with this build.
@@ -300,10 +361,10 @@ public open class CfnBuild(
      *
      *
      * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
-     * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
-     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the
-     * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
-     * GameLift server SDK version
+     * Linux 2 FAQs](https://docs.aws.amazon.com/amazon-linux-2/faqs/) . For game servers that are
+     * hosted on AL2 and use server SDK version 4.x for Amazon GameLift Servers, first update the game
+     * server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to server SDK
+     * version
      * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
      *
      *
@@ -315,15 +376,16 @@ public open class CfnBuild(
     }
 
     /**
-     * A server SDK version you used when integrating your game server build with Amazon GameLift.
+     * A server SDK version you used when integrating your game server build with Amazon GameLift
+     * Servers.
      *
      * For more information see [Integrate games with custom game
      * servers](https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-custom-intro.html)
-     * . By default Amazon GameLift sets this value to `4.0.2` .
+     * . By default Amazon GameLift Servers sets this value to `4.0.2` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-serversdkversion)
      * @param serverSdkVersion A server SDK version you used when integrating your game server build
-     * with Amazon GameLift. 
+     * with Amazon GameLift Servers. 
      */
     override fun serverSdkVersion(serverSdkVersion: String) {
       cdkBuilder.serverSdkVersion(serverSdkVersion)
@@ -334,11 +396,11 @@ public open class CfnBuild(
      *
      * Use this parameter only when creating a build with files stored in an Amazon S3 bucket that
      * you own. The storage location must specify an Amazon S3 bucket name and key. The location must
-     * also specify a role ARN that you set up to allow Amazon GameLift to access your Amazon S3
-     * bucket. The S3 bucket and your new build must be in the same Region.
+     * also specify a role ARN that you set up to allow Amazon GameLift Servers to access your Amazon
+     * S3 bucket. The S3 bucket and your new build must be in the same Region.
      *
      * If a `StorageLocation` is specified, the size of your file can be found in your Amazon S3
-     * bucket. Amazon GameLift will report a `SizeOnDisk` of 0.
+     * bucket. Amazon GameLift Servers will report a `SizeOnDisk` of 0.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-storagelocation)
      * @param storageLocation Information indicating where your game build files are stored. 
@@ -352,11 +414,11 @@ public open class CfnBuild(
      *
      * Use this parameter only when creating a build with files stored in an Amazon S3 bucket that
      * you own. The storage location must specify an Amazon S3 bucket name and key. The location must
-     * also specify a role ARN that you set up to allow Amazon GameLift to access your Amazon S3
-     * bucket. The S3 bucket and your new build must be in the same Region.
+     * also specify a role ARN that you set up to allow Amazon GameLift Servers to access your Amazon
+     * S3 bucket. The S3 bucket and your new build must be in the same Region.
      *
      * If a `StorageLocation` is specified, the size of your file can be found in your Amazon S3
-     * bucket. Amazon GameLift will report a `SizeOnDisk` of 0.
+     * bucket. Amazon GameLift Servers will report a `SizeOnDisk` of 0.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-storagelocation)
      * @param storageLocation Information indicating where your game build files are stored. 
@@ -370,11 +432,11 @@ public open class CfnBuild(
      *
      * Use this parameter only when creating a build with files stored in an Amazon S3 bucket that
      * you own. The storage location must specify an Amazon S3 bucket name and key. The location must
-     * also specify a role ARN that you set up to allow Amazon GameLift to access your Amazon S3
-     * bucket. The S3 bucket and your new build must be in the same Region.
+     * also specify a role ARN that you set up to allow Amazon GameLift Servers to access your Amazon
+     * S3 bucket. The S3 bucket and your new build must be in the same Region.
      *
      * If a `StorageLocation` is specified, the size of your file can be found in your Amazon S3
-     * bucket. Amazon GameLift will report a `SizeOnDisk` of 0.
+     * bucket. Amazon GameLift Servers will report a `SizeOnDisk` of 0.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-storagelocation)
      * @param storageLocation Information indicating where your game build files are stored. 
@@ -383,6 +445,24 @@ public open class CfnBuild(
     @JvmName("2d5c1888cb6aea4a915f59edee556ca7c9485511849194e4c2886604f2c122cd")
     override fun storageLocation(storageLocation: StorageLocationProperty.Builder.() -> Unit): Unit
         = storageLocation(StorageLocationProperty(storageLocation))
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
      * Version information that is associated with this build.
@@ -464,7 +544,7 @@ public open class CfnBuild(
      * S3 bucket.
      *
      * Use this parameter to specify a specific version. If this parameter isn't set, Amazon
-     * GameLift retrieves the latest version of the file.
+     * GameLift Servers retrieves the latest version of the file.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html#cfn-gamelift-build-storagelocation-objectversion)
      */
@@ -499,7 +579,7 @@ public open class CfnBuild(
        * @param objectVersion A version of a stored file to retrieve, if the object versioning
        * feature is turned on for the S3 bucket.
        * Use this parameter to specify a specific version. If this parameter isn't set, Amazon
-       * GameLift retrieves the latest version of the file.
+       * GameLift Servers retrieves the latest version of the file.
        */
       public fun objectVersion(objectVersion: String)
 
@@ -535,7 +615,7 @@ public open class CfnBuild(
        * @param objectVersion A version of a stored file to retrieve, if the object versioning
        * feature is turned on for the S3 bucket.
        * Use this parameter to specify a specific version. If this parameter isn't set, Amazon
-       * GameLift retrieves the latest version of the file.
+       * GameLift Servers retrieves the latest version of the file.
        */
       override fun objectVersion(objectVersion: String) {
         cdkBuilder.objectVersion(objectVersion)
@@ -580,7 +660,7 @@ public open class CfnBuild(
        * the S3 bucket.
        *
        * Use this parameter to specify a specific version. If this parameter isn't set, Amazon
-       * GameLift retrieves the latest version of the file.
+       * GameLift Servers retrieves the latest version of the file.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-build-storagelocation.html#cfn-gamelift-build-storagelocation-objectversion)
        */

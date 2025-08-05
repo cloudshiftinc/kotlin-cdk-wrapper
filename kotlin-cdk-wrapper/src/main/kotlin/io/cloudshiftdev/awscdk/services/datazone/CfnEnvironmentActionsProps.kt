@@ -37,7 +37,7 @@ import kotlin.jvm.JvmName
  */
 public interface CfnEnvironmentActionsProps {
   /**
-   * The description of the Amazon DataZone environment action.
+   * The environment action description.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentactions.html#cfn-datazone-environmentactions-description)
    */
@@ -72,7 +72,7 @@ public interface CfnEnvironmentActionsProps {
   public fun name(): String
 
   /**
-   * The parameters of the console link specified as part of the environment action.
+   * The parameters of the environment action.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentactions.html#cfn-datazone-environmentactions-parameters)
    */
@@ -84,7 +84,7 @@ public interface CfnEnvironmentActionsProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param description The description of the Amazon DataZone environment action.
+     * @param description The environment action description.
      */
     public fun description(description: String)
 
@@ -109,20 +109,17 @@ public interface CfnEnvironmentActionsProps {
     public fun name(name: String)
 
     /**
-     * @param parameters The parameters of the console link specified as part of the environment
-     * action.
+     * @param parameters The parameters of the environment action.
      */
     public fun parameters(parameters: IResolvable)
 
     /**
-     * @param parameters The parameters of the console link specified as part of the environment
-     * action.
+     * @param parameters The parameters of the environment action.
      */
     public fun parameters(parameters: CfnEnvironmentActions.AwsConsoleLinkParametersProperty)
 
     /**
-     * @param parameters The parameters of the console link specified as part of the environment
-     * action.
+     * @param parameters The parameters of the environment action.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("06e5e6d7c978e3cc4891b551f5d1024828f275b8604828aaf41f605e844c13fb")
@@ -136,7 +133,7 @@ public interface CfnEnvironmentActionsProps {
         software.amazon.awscdk.services.datazone.CfnEnvironmentActionsProps.builder()
 
     /**
-     * @param description The description of the Amazon DataZone environment action.
+     * @param description The environment action description.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -171,24 +168,21 @@ public interface CfnEnvironmentActionsProps {
     }
 
     /**
-     * @param parameters The parameters of the console link specified as part of the environment
-     * action.
+     * @param parameters The parameters of the environment action.
      */
     override fun parameters(parameters: IResolvable) {
       cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param parameters The parameters of the console link specified as part of the environment
-     * action.
+     * @param parameters The parameters of the environment action.
      */
     override fun parameters(parameters: CfnEnvironmentActions.AwsConsoleLinkParametersProperty) {
       cdkBuilder.parameters(parameters.let(CfnEnvironmentActions.AwsConsoleLinkParametersProperty.Companion::unwrap))
     }
 
     /**
-     * @param parameters The parameters of the console link specified as part of the environment
-     * action.
+     * @param parameters The parameters of the environment action.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("06e5e6d7c978e3cc4891b551f5d1024828f275b8604828aaf41f605e844c13fb")
@@ -205,7 +199,7 @@ public interface CfnEnvironmentActionsProps {
   ) : CdkObject(cdkObject),
       CfnEnvironmentActionsProps {
     /**
-     * The description of the Amazon DataZone environment action.
+     * The environment action description.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentactions.html#cfn-datazone-environmentactions-description)
      */
@@ -240,7 +234,7 @@ public interface CfnEnvironmentActionsProps {
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * The parameters of the console link specified as part of the environment action.
+     * The parameters of the environment action.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentactions.html#cfn-datazone-environmentactions-parameters)
      */

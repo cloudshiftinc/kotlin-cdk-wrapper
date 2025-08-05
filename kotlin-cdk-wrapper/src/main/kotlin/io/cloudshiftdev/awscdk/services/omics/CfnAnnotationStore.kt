@@ -900,12 +900,12 @@ public open class CfnAnnotationStore(
       /**
        * @param formatToHeader The store's header key to column name mapping.
        */
-      public fun formatToHeader(formatToHeader: IResolvable)
+      public fun formatToHeader(formatToHeader: Map<String, String>)
 
       /**
        * @param formatToHeader The store's header key to column name mapping.
        */
-      public fun formatToHeader(formatToHeader: Map<String, String>)
+      public fun formatToHeader(formatToHeader: IResolvable)
 
       /**
        * @param schema The schema of an annotation store.
@@ -928,15 +928,15 @@ public open class CfnAnnotationStore(
       /**
        * @param formatToHeader The store's header key to column name mapping.
        */
-      override fun formatToHeader(formatToHeader: IResolvable) {
-        cdkBuilder.formatToHeader(formatToHeader.let(IResolvable.Companion::unwrap))
+      override fun formatToHeader(formatToHeader: Map<String, String>) {
+        cdkBuilder.formatToHeader(formatToHeader)
       }
 
       /**
        * @param formatToHeader The store's header key to column name mapping.
        */
-      override fun formatToHeader(formatToHeader: Map<String, String>) {
-        cdkBuilder.formatToHeader(formatToHeader)
+      override fun formatToHeader(formatToHeader: IResolvable) {
+        cdkBuilder.formatToHeader(formatToHeader.let(IResolvable.Companion::unwrap))
       }
 
       /**

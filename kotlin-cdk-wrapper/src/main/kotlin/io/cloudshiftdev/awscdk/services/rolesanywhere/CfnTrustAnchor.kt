@@ -825,14 +825,14 @@ public open class CfnTrustAnchor(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-source.html#cfn-rolesanywhere-trustanchor-source-sourcedata)
      */
-    public fun sourceData(): Any? = unwrap(this).getSourceData()
+    public fun sourceData(): Any
 
     /**
      * The type of the TrustAnchor.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-source.html#cfn-rolesanywhere-trustanchor-source-sourcetype)
      */
-    public fun sourceType(): String? = unwrap(this).getSourceType()
+    public fun sourceType(): String
 
     /**
      * A builder for [SourceProperty]
@@ -841,26 +841,26 @@ public open class CfnTrustAnchor(
     public interface Builder {
       /**
        * @param sourceData A union object representing the data field of the TrustAnchor depending
-       * on its type.
+       * on its type. 
        */
       public fun sourceData(sourceData: IResolvable)
 
       /**
        * @param sourceData A union object representing the data field of the TrustAnchor depending
-       * on its type.
+       * on its type. 
        */
       public fun sourceData(sourceData: SourceDataProperty)
 
       /**
        * @param sourceData A union object representing the data field of the TrustAnchor depending
-       * on its type.
+       * on its type. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("67dcf808ea62ad5bd45b3233e85ec02737844c3fe2796855e264f638ead6bc52")
       public fun sourceData(sourceData: SourceDataProperty.Builder.() -> Unit)
 
       /**
-       * @param sourceType The type of the TrustAnchor.
+       * @param sourceType The type of the TrustAnchor. 
        */
       public fun sourceType(sourceType: String)
     }
@@ -872,7 +872,7 @@ public open class CfnTrustAnchor(
 
       /**
        * @param sourceData A union object representing the data field of the TrustAnchor depending
-       * on its type.
+       * on its type. 
        */
       override fun sourceData(sourceData: IResolvable) {
         cdkBuilder.sourceData(sourceData.let(IResolvable.Companion::unwrap))
@@ -880,7 +880,7 @@ public open class CfnTrustAnchor(
 
       /**
        * @param sourceData A union object representing the data field of the TrustAnchor depending
-       * on its type.
+       * on its type. 
        */
       override fun sourceData(sourceData: SourceDataProperty) {
         cdkBuilder.sourceData(sourceData.let(SourceDataProperty.Companion::unwrap))
@@ -888,7 +888,7 @@ public open class CfnTrustAnchor(
 
       /**
        * @param sourceData A union object representing the data field of the TrustAnchor depending
-       * on its type.
+       * on its type. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("67dcf808ea62ad5bd45b3233e85ec02737844c3fe2796855e264f638ead6bc52")
@@ -896,7 +896,7 @@ public open class CfnTrustAnchor(
           sourceData(SourceDataProperty(sourceData))
 
       /**
-       * @param sourceType The type of the TrustAnchor.
+       * @param sourceType The type of the TrustAnchor. 
        */
       override fun sourceType(sourceType: String) {
         cdkBuilder.sourceType(sourceType)
@@ -916,14 +916,14 @@ public open class CfnTrustAnchor(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-source.html#cfn-rolesanywhere-trustanchor-source-sourcedata)
        */
-      override fun sourceData(): Any? = unwrap(this).getSourceData()
+      override fun sourceData(): Any = unwrap(this).getSourceData()
 
       /**
        * The type of the TrustAnchor.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-source.html#cfn-rolesanywhere-trustanchor-source-sourcetype)
        */
-      override fun sourceType(): String? = unwrap(this).getSourceType()
+      override fun sourceType(): String = unwrap(this).getSourceType()
     }
 
     public companion object {

@@ -122,15 +122,15 @@ public interface CfnNotificationRuleProps {
   public fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
   /**
-   * The Amazon Resource Name (ARN) of the Amazon SNS topic or AWS Chatbot client.
+   * The Amazon Resource Name (ARN) of the Amazon SNS topic or  client.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-targetaddress)
    */
   public fun targetAddress(): String? = unwrap(this).getTargetAddress()
 
   /**
-   * A list of Amazon Resource Names (ARNs) of Amazon SNS topics and AWS Chatbot clients to
-   * associate with the notification rule.
+   * A list of Amazon Resource Names (ARNs) of Amazon SNS topics and  clients to associate with the
+   * notification rule.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-targets)
    */
@@ -206,26 +206,25 @@ public interface CfnNotificationRuleProps {
     public fun tags(tags: Map<String, String>)
 
     /**
-     * @param targetAddress The Amazon Resource Name (ARN) of the Amazon SNS topic or AWS Chatbot
-     * client.
+     * @param targetAddress The Amazon Resource Name (ARN) of the Amazon SNS topic or  client.
      */
     public fun targetAddress(targetAddress: String)
 
     /**
-     * @param targets A list of Amazon Resource Names (ARNs) of Amazon SNS topics and AWS Chatbot
-     * clients to associate with the notification rule. 
+     * @param targets A list of Amazon Resource Names (ARNs) of Amazon SNS topics and  clients to
+     * associate with the notification rule. 
      */
     public fun targets(targets: IResolvable)
 
     /**
-     * @param targets A list of Amazon Resource Names (ARNs) of Amazon SNS topics and AWS Chatbot
-     * clients to associate with the notification rule. 
+     * @param targets A list of Amazon Resource Names (ARNs) of Amazon SNS topics and  clients to
+     * associate with the notification rule. 
      */
     public fun targets(targets: List<Any>)
 
     /**
-     * @param targets A list of Amazon Resource Names (ARNs) of Amazon SNS topics and AWS Chatbot
-     * clients to associate with the notification rule. 
+     * @param targets A list of Amazon Resource Names (ARNs) of Amazon SNS topics and  clients to
+     * associate with the notification rule. 
      */
     public fun targets(vararg targets: Any)
   }
@@ -317,32 +316,31 @@ public interface CfnNotificationRuleProps {
     }
 
     /**
-     * @param targetAddress The Amazon Resource Name (ARN) of the Amazon SNS topic or AWS Chatbot
-     * client.
+     * @param targetAddress The Amazon Resource Name (ARN) of the Amazon SNS topic or  client.
      */
     override fun targetAddress(targetAddress: String) {
       cdkBuilder.targetAddress(targetAddress)
     }
 
     /**
-     * @param targets A list of Amazon Resource Names (ARNs) of Amazon SNS topics and AWS Chatbot
-     * clients to associate with the notification rule. 
+     * @param targets A list of Amazon Resource Names (ARNs) of Amazon SNS topics and  clients to
+     * associate with the notification rule. 
      */
     override fun targets(targets: IResolvable) {
       cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param targets A list of Amazon Resource Names (ARNs) of Amazon SNS topics and AWS Chatbot
-     * clients to associate with the notification rule. 
+     * @param targets A list of Amazon Resource Names (ARNs) of Amazon SNS topics and  clients to
+     * associate with the notification rule. 
      */
     override fun targets(targets: List<Any>) {
       cdkBuilder.targets(targets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param targets A list of Amazon Resource Names (ARNs) of Amazon SNS topics and AWS Chatbot
-     * clients to associate with the notification rule. 
+     * @param targets A list of Amazon Resource Names (ARNs) of Amazon SNS topics and  clients to
+     * associate with the notification rule. 
      */
     override fun targets(vararg targets: Any): Unit = targets(targets.toList())
 
@@ -434,15 +432,15 @@ public interface CfnNotificationRuleProps {
     override fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
     /**
-     * The Amazon Resource Name (ARN) of the Amazon SNS topic or AWS Chatbot client.
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic or  client.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-targetaddress)
      */
     override fun targetAddress(): String? = unwrap(this).getTargetAddress()
 
     /**
-     * A list of Amazon Resource Names (ARNs) of Amazon SNS topics and AWS Chatbot clients to
-     * associate with the notification rule.
+     * A list of Amazon Resource Names (ARNs) of Amazon SNS topics and  clients to associate with
+     * the notification rule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-targets)
      */

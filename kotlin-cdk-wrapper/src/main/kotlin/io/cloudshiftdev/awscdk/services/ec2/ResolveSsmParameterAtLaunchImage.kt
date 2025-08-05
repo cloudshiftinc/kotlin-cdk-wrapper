@@ -25,6 +25,7 @@ import kotlin.Unit
  * UserData userData;
  * ResolveSsmParameterAtLaunchImage resolveSsmParameterAtLaunchImage =
  * ResolveSsmParameterAtLaunchImage.Builder.create("parameterName")
+ * .additionalCacheKey("additionalCacheKey")
  * .cachedInContext(false)
  * .os(OperatingSystemType.LINUX)
  * .parameterVersion("parameterVersion")
@@ -73,6 +74,16 @@ public open class ResolveSsmParameterAtLaunchImage(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     *
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key. 
+     */
+    public fun additionalCacheKey(additionalCacheKey: String)
+
     /**
      * Whether the AMI ID is cached to be stable between deployments.
      *
@@ -130,6 +141,18 @@ public open class ResolveSsmParameterAtLaunchImage(
     private val cdkBuilder:
         software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage.Builder =
         software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage.Builder.create(parameterName)
+
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     *
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key. 
+     */
+    override fun additionalCacheKey(additionalCacheKey: String) {
+      cdkBuilder.additionalCacheKey(additionalCacheKey)
+    }
 
     /**
      * Whether the AMI ID is cached to be stable between deployments.

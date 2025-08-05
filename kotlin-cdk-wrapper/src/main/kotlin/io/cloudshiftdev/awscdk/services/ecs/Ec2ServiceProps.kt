@@ -21,17 +21,25 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Cluster cluster;
- * TaskDefinition taskDefinition;
  * Vpc vpc;
- * Ec2Service service = Ec2Service.Builder.create(this,
- * "Service").cluster(cluster).taskDefinition(taskDefinition).build();
- * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB").vpc(vpc).build();
- * lb.addListener(LoadBalancerListener.builder().externalPort(80).build());
- * lb.addTarget(service.loadBalancerTarget(LoadBalancerTargetOptions.builder()
- * .containerName("MyContainer")
- * .containerPort(80)
- * .build()));
+ * // Create an ECS cluster
+ * Cluster cluster = Cluster.Builder.create(this, "Cluster").vpc(vpc).build();
+ * // Add capacity to it
+ * cluster.addCapacity("DefaultAutoScalingGroupCapacity", AddCapacityOptions.builder()
+ * .instanceType(new InstanceType("t2.xlarge"))
+ * .desiredCapacity(3)
+ * .build());
+ * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("DefaultContainer", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .memoryLimitMiB(512)
+ * .build());
+ * // Instantiate an Amazon ECS Service
+ * Ec2Service ecsService = Ec2Service.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .minHealthyPercent(100)
+ * .build();
  * ```
  */
 public interface Ec2ServiceProps : BaseServiceOptions {
@@ -45,6 +53,21 @@ public interface Ec2ServiceProps : BaseServiceOptions {
    * Default: false
    */
   public fun assignPublicIp(): Boolean? = unwrap(this).getAssignPublicIp()
+
+  /**
+   * Whether to use Availability Zone rebalancing for the service.
+   *
+   * If enabled: `maxHealthyPercent` must be greater than 100; `daemon` must be false; if there
+   * are any `placementStrategies`, the first must be "spread across Availability Zones"; there
+   * must be no `placementConstraints` using `attribute:ecs.availability-zone`, and the
+   * service must not be a target of a Classic Load Balancer.
+   *
+   * Default: AvailabilityZoneRebalancing.DISABLED
+   *
+   * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html)
+   */
+  public fun availabilityZoneRebalancing(): AvailabilityZoneRebalancing? =
+      unwrap(this).getAvailabilityZoneRebalancing()?.let(AvailabilityZoneRebalancing::wrap)
 
   /**
    * Specifies whether the service will use the daemon scheduling strategy.
@@ -126,6 +149,16 @@ public interface Ec2ServiceProps : BaseServiceOptions {
      * This property is only used for tasks that use the awsvpc network mode.
      */
     public fun assignPublicIp(assignPublicIp: Boolean)
+
+    /**
+     * @param availabilityZoneRebalancing Whether to use Availability Zone rebalancing for the
+     * service.
+     * If enabled: `maxHealthyPercent` must be greater than 100; `daemon` must be false; if there
+     * are any `placementStrategies`, the first must be "spread across Availability Zones"; there
+     * must be no `placementConstraints` using `attribute:ecs.availability-zone`, and the
+     * service must not be a target of a Classic Load Balancer.
+     */
+    public fun availabilityZoneRebalancing(availabilityZoneRebalancing: AvailabilityZoneRebalancing)
 
     /**
      * @param capacityProviderStrategies A list of Capacity Provider strategies used to place a
@@ -386,6 +419,19 @@ public interface Ec2ServiceProps : BaseServiceOptions {
      */
     override fun assignPublicIp(assignPublicIp: Boolean) {
       cdkBuilder.assignPublicIp(assignPublicIp)
+    }
+
+    /**
+     * @param availabilityZoneRebalancing Whether to use Availability Zone rebalancing for the
+     * service.
+     * If enabled: `maxHealthyPercent` must be greater than 100; `daemon` must be false; if there
+     * are any `placementStrategies`, the first must be "spread across Availability Zones"; there
+     * must be no `placementConstraints` using `attribute:ecs.availability-zone`, and the
+     * service must not be a target of a Classic Load Balancer.
+     */
+    override
+        fun availabilityZoneRebalancing(availabilityZoneRebalancing: AvailabilityZoneRebalancing) {
+      cdkBuilder.availabilityZoneRebalancing(availabilityZoneRebalancing.let(AvailabilityZoneRebalancing.Companion::unwrap))
     }
 
     /**
@@ -708,6 +754,21 @@ public interface Ec2ServiceProps : BaseServiceOptions {
      * Default: false
      */
     override fun assignPublicIp(): Boolean? = unwrap(this).getAssignPublicIp()
+
+    /**
+     * Whether to use Availability Zone rebalancing for the service.
+     *
+     * If enabled: `maxHealthyPercent` must be greater than 100; `daemon` must be false; if there
+     * are any `placementStrategies`, the first must be "spread across Availability Zones"; there
+     * must be no `placementConstraints` using `attribute:ecs.availability-zone`, and the
+     * service must not be a target of a Classic Load Balancer.
+     *
+     * Default: AvailabilityZoneRebalancing.DISABLED
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html)
+     */
+    override fun availabilityZoneRebalancing(): AvailabilityZoneRebalancing? =
+        unwrap(this).getAvailabilityZoneRebalancing()?.let(AvailabilityZoneRebalancing::wrap)
 
     /**
      * A list of Capacity Provider strategies used to place a service.

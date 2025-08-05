@@ -12,10 +12,12 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -39,6 +41,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .flowVersion("flowVersion")
  * .build()))
  * // the properties below are optional
+ * .concurrencyConfiguration(FlowAliasConcurrencyConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .maxConcurrency(123)
+ * .build())
  * .description("description")
  * .tags(Map.of(
  * "tagsKey", "tags"))
@@ -98,6 +105,34 @@ public open class CfnFlowAlias(
    */
   public override fun cdkTagManager(): TagManager =
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
+
+  /**
+   * The configuration that specifies how nodes in the flow are executed concurrently.
+   */
+  public open fun concurrencyConfiguration(): Any? = unwrap(this).getConcurrencyConfiguration()
+
+  /**
+   * The configuration that specifies how nodes in the flow are executed concurrently.
+   */
+  public open fun concurrencyConfiguration(`value`: IResolvable) {
+    unwrap(this).setConcurrencyConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The configuration that specifies how nodes in the flow are executed concurrently.
+   */
+  public open fun concurrencyConfiguration(`value`: FlowAliasConcurrencyConfigurationProperty) {
+    unwrap(this).setConcurrencyConfiguration(`value`.let(FlowAliasConcurrencyConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The configuration that specifies how nodes in the flow are executed concurrently.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("7294f0d81edce0fe235c6c25f0a3c67989c7e9cca5e461c0ec0a08146de8cbed")
+  public open
+      fun concurrencyConfiguration(`value`: FlowAliasConcurrencyConfigurationProperty.Builder.() -> Unit):
+      Unit = concurrencyConfiguration(FlowAliasConcurrencyConfigurationProperty(`value`))
 
   /**
    * A description of the alias.
@@ -191,6 +226,37 @@ public open class CfnFlowAlias(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The configuration that specifies how nodes in the flow are executed concurrently.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-flowalias.html#cfn-bedrock-flowalias-concurrencyconfiguration)
+     * @param concurrencyConfiguration The configuration that specifies how nodes in the flow are
+     * executed concurrently. 
+     */
+    public fun concurrencyConfiguration(concurrencyConfiguration: IResolvable)
+
+    /**
+     * The configuration that specifies how nodes in the flow are executed concurrently.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-flowalias.html#cfn-bedrock-flowalias-concurrencyconfiguration)
+     * @param concurrencyConfiguration The configuration that specifies how nodes in the flow are
+     * executed concurrently. 
+     */
+    public
+        fun concurrencyConfiguration(concurrencyConfiguration: FlowAliasConcurrencyConfigurationProperty)
+
+    /**
+     * The configuration that specifies how nodes in the flow are executed concurrently.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-flowalias.html#cfn-bedrock-flowalias-concurrencyconfiguration)
+     * @param concurrencyConfiguration The configuration that specifies how nodes in the flow are
+     * executed concurrently. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("97315cedaa6ed6210ed0ff85f94e51a090ef9ee2edc5028aefbd534d8193f921")
+    public
+        fun concurrencyConfiguration(concurrencyConfiguration: FlowAliasConcurrencyConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * A description of the alias.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-flowalias.html#cfn-bedrock-flowalias-description)
@@ -269,6 +335,43 @@ public open class CfnFlowAlias(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.bedrock.CfnFlowAlias.Builder =
         software.amazon.awscdk.services.bedrock.CfnFlowAlias.Builder.create(scope, id)
+
+    /**
+     * The configuration that specifies how nodes in the flow are executed concurrently.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-flowalias.html#cfn-bedrock-flowalias-concurrencyconfiguration)
+     * @param concurrencyConfiguration The configuration that specifies how nodes in the flow are
+     * executed concurrently. 
+     */
+    override fun concurrencyConfiguration(concurrencyConfiguration: IResolvable) {
+      cdkBuilder.concurrencyConfiguration(concurrencyConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The configuration that specifies how nodes in the flow are executed concurrently.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-flowalias.html#cfn-bedrock-flowalias-concurrencyconfiguration)
+     * @param concurrencyConfiguration The configuration that specifies how nodes in the flow are
+     * executed concurrently. 
+     */
+    override
+        fun concurrencyConfiguration(concurrencyConfiguration: FlowAliasConcurrencyConfigurationProperty) {
+      cdkBuilder.concurrencyConfiguration(concurrencyConfiguration.let(FlowAliasConcurrencyConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The configuration that specifies how nodes in the flow are executed concurrently.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-flowalias.html#cfn-bedrock-flowalias-concurrencyconfiguration)
+     * @param concurrencyConfiguration The configuration that specifies how nodes in the flow are
+     * executed concurrently. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("97315cedaa6ed6210ed0ff85f94e51a090ef9ee2edc5028aefbd534d8193f921")
+    override
+        fun concurrencyConfiguration(concurrencyConfiguration: FlowAliasConcurrencyConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        concurrencyConfiguration(FlowAliasConcurrencyConfigurationProperty(concurrencyConfiguration))
 
     /**
      * A description of the alias.
@@ -376,6 +479,141 @@ public open class CfnFlowAlias(
 
     internal fun unwrap(wrapped: CfnFlowAlias): software.amazon.awscdk.services.bedrock.CfnFlowAlias
         = wrapped.cdkObject as software.amazon.awscdk.services.bedrock.CfnFlowAlias
+  }
+
+  /**
+   * Determines how multiple nodes in a flow can run in parallel.
+   *
+   * Running nodes concurrently can improve your flow's performance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * FlowAliasConcurrencyConfigurationProperty flowAliasConcurrencyConfigurationProperty =
+   * FlowAliasConcurrencyConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .maxConcurrency(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowalias-flowaliasconcurrencyconfiguration.html)
+   */
+  public interface FlowAliasConcurrencyConfigurationProperty {
+    /**
+     * The maximum number of nodes that can be executed concurrently in the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowalias-flowaliasconcurrencyconfiguration.html#cfn-bedrock-flowalias-flowaliasconcurrencyconfiguration-maxconcurrency)
+     */
+    public fun maxConcurrency(): Number? = unwrap(this).getMaxConcurrency()
+
+    /**
+     * The type of concurrency to use for parallel node execution. Specify one of the following
+     * options:.
+     *
+     * * `Automatic` - Amazon Bedrock determines which nodes can be executed in parallel based on
+     * the flow definition and its dependencies.
+     * * `Manual` - You specify which nodes can be executed in parallel.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowalias-flowaliasconcurrencyconfiguration.html#cfn-bedrock-flowalias-flowaliasconcurrencyconfiguration-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [FlowAliasConcurrencyConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxConcurrency The maximum number of nodes that can be executed concurrently in the
+       * flow.
+       */
+      public fun maxConcurrency(maxConcurrency: Number)
+
+      /**
+       * @param type The type of concurrency to use for parallel node execution. Specify one of the
+       * following options:. 
+       * * `Automatic` - Amazon Bedrock determines which nodes can be executed in parallel based on
+       * the flow definition and its dependencies.
+       * * `Manual` - You specify which nodes can be executed in parallel.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnFlowAlias.FlowAliasConcurrencyConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnFlowAlias.FlowAliasConcurrencyConfigurationProperty.builder()
+
+      /**
+       * @param maxConcurrency The maximum number of nodes that can be executed concurrently in the
+       * flow.
+       */
+      override fun maxConcurrency(maxConcurrency: Number) {
+        cdkBuilder.maxConcurrency(maxConcurrency)
+      }
+
+      /**
+       * @param type The type of concurrency to use for parallel node execution. Specify one of the
+       * following options:. 
+       * * `Automatic` - Amazon Bedrock determines which nodes can be executed in parallel based on
+       * the flow definition and its dependencies.
+       * * `Manual` - You specify which nodes can be executed in parallel.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnFlowAlias.FlowAliasConcurrencyConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnFlowAlias.FlowAliasConcurrencyConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        FlowAliasConcurrencyConfigurationProperty {
+      /**
+       * The maximum number of nodes that can be executed concurrently in the flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowalias-flowaliasconcurrencyconfiguration.html#cfn-bedrock-flowalias-flowaliasconcurrencyconfiguration-maxconcurrency)
+       */
+      override fun maxConcurrency(): Number? = unwrap(this).getMaxConcurrency()
+
+      /**
+       * The type of concurrency to use for parallel node execution. Specify one of the following
+       * options:.
+       *
+       * * `Automatic` - Amazon Bedrock determines which nodes can be executed in parallel based on
+       * the flow definition and its dependencies.
+       * * `Manual` - You specify which nodes can be executed in parallel.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowalias-flowaliasconcurrencyconfiguration.html#cfn-bedrock-flowalias-flowaliasconcurrencyconfiguration-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          FlowAliasConcurrencyConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnFlowAlias.FlowAliasConcurrencyConfigurationProperty):
+          FlowAliasConcurrencyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FlowAliasConcurrencyConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FlowAliasConcurrencyConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnFlowAlias.FlowAliasConcurrencyConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnFlowAlias.FlowAliasConcurrencyConfigurationProperty
+    }
   }
 
   /**

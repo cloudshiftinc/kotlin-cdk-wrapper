@@ -7,7 +7,9 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.RuleTargetInput
+import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
 
@@ -20,12 +22,19 @@ import kotlin.Unit
  * Rule onCommitRule;
  * Topic topic;
  * onCommitRule.addTarget(SnsTopic.Builder.create(topic)
- * .message(RuleTargetInput.fromText(String.format("A commit was pushed to the repository %s on
- * branch %s", ReferenceEvent.getRepositoryName(), ReferenceEvent.getReferenceName())))
+ * .message(RuleTargetInput.fromObject(Map.of(
+ * "DataType", String.format("custom_%s", EventField.fromPath("$.detail-type")))))
  * .build());
  * ```
  */
 public interface SnsTopicProps : TargetBaseProps {
+  /**
+   * Specifies whether an IAM role should be used to publish to the topic.
+   *
+   * Default: - true if `role` is provided, false otherwise
+   */
+  public fun authorizeUsingRole(): Boolean? = unwrap(this).getAuthorizeUsingRole()
+
   /**
    * The message to send to the topic.
    *
@@ -34,10 +43,23 @@ public interface SnsTopicProps : TargetBaseProps {
   public fun message(): RuleTargetInput? = unwrap(this).getMessage()?.let(RuleTargetInput::wrap)
 
   /**
+   * The IAM role to be used to publish to the topic.
+   *
+   * Default: - a new role will be created if `authorizeUsingRole` is true
+   */
+  public fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
+
+  /**
    * A builder for [SnsTopicProps]
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param authorizeUsingRole Specifies whether an IAM role should be used to publish to the
+     * topic.
+     */
+    public fun authorizeUsingRole(authorizeUsingRole: Boolean)
+
     /**
      * @param deadLetterQueue The SQS queue to be used as deadLetterQueue. Check out the
      * [considerations for using a dead-letter
@@ -69,11 +91,24 @@ public interface SnsTopicProps : TargetBaseProps {
      * Maximum value of 185.
      */
     public fun retryAttempts(retryAttempts: Number)
+
+    /**
+     * @param role The IAM role to be used to publish to the topic.
+     */
+    public fun role(role: IRole)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.events.targets.SnsTopicProps.Builder =
         software.amazon.awscdk.services.events.targets.SnsTopicProps.builder()
+
+    /**
+     * @param authorizeUsingRole Specifies whether an IAM role should be used to publish to the
+     * topic.
+     */
+    override fun authorizeUsingRole(authorizeUsingRole: Boolean) {
+      cdkBuilder.authorizeUsingRole(authorizeUsingRole)
+    }
 
     /**
      * @param deadLetterQueue The SQS queue to be used as deadLetterQueue. Check out the
@@ -115,6 +150,13 @@ public interface SnsTopicProps : TargetBaseProps {
       cdkBuilder.retryAttempts(retryAttempts)
     }
 
+    /**
+     * @param role The IAM role to be used to publish to the topic.
+     */
+    override fun role(role: IRole) {
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
+    }
+
     public fun build(): software.amazon.awscdk.services.events.targets.SnsTopicProps =
         cdkBuilder.build()
   }
@@ -123,6 +165,13 @@ public interface SnsTopicProps : TargetBaseProps {
     cdkObject: software.amazon.awscdk.services.events.targets.SnsTopicProps,
   ) : CdkObject(cdkObject),
       SnsTopicProps {
+    /**
+     * Specifies whether an IAM role should be used to publish to the topic.
+     *
+     * Default: - true if `role` is provided, false otherwise
+     */
+    override fun authorizeUsingRole(): Boolean? = unwrap(this).getAuthorizeUsingRole()
+
     /**
      * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a
      * dead-letter
@@ -164,6 +213,13 @@ public interface SnsTopicProps : TargetBaseProps {
      * Default: 185
      */
     override fun retryAttempts(): Number? = unwrap(this).getRetryAttempts()
+
+    /**
+     * The IAM role to be used to publish to the topic.
+     *
+     * Default: - a new role will be created if `authorizeUsingRole` is true
+     */
+    override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
   }
 
   public companion object {

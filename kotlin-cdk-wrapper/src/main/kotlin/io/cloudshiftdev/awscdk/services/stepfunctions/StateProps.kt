@@ -19,14 +19,22 @@ import kotlin.collections.Map
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
+ * Object arguments_;
+ * Object assign;
+ * Object outputs;
  * Object parameters;
  * Object resultSelector;
  * StateProps stateProps = StateProps.builder()
+ * .arguments(arguments_)
+ * .assign(Map.of(
+ * "assignKey", assign))
  * .comment("comment")
  * .inputPath("inputPath")
  * .outputPath("outputPath")
+ * .outputs(outputs)
  * .parameters(Map.of(
  * "parametersKey", parameters))
+ * .queryLanguage(QueryLanguage.JSON_PATH)
  * .resultPath("resultPath")
  * .resultSelector(Map.of(
  * "resultSelectorKey", resultSelector))
@@ -34,34 +42,8 @@ import kotlin.collections.Map
  * .build();
  * ```
  */
-public interface StateProps {
-  /**
-   * A comment describing this state.
-   *
-   * Default: No comment
-   */
-  public fun comment(): String? = unwrap(this).getComment()
-
-  /**
-   * JSONPath expression to select part of the state to be the input to this state.
-   *
-   * May also be the special value JsonPath.DISCARD, which will cause the effective
-   * input to be the empty object {}.
-   *
-   * Default: $
-   */
-  public fun inputPath(): String? = unwrap(this).getInputPath()
-
-  /**
-   * JSONPath expression to select part of the state to be the output to this state.
-   *
-   * May also be the special value JsonPath.DISCARD, which will cause the effective
-   * output to be the empty object {}.
-   *
-   * Default: $
-   */
-  public fun outputPath(): String? = unwrap(this).getOutputPath()
-
+public interface StateProps : StateBaseProps, JsonPathCommonOptions, JsonataStateOptions,
+    AssignableStateOptions {
   /**
    * Parameters pass a collection of key-value pairs, either static values or JSONPath expressions
    * that select from the input.
@@ -96,17 +78,23 @@ public interface StateProps {
   public fun resultSelector(): Map<String, Any> = unwrap(this).getResultSelector() ?: emptyMap()
 
   /**
-   * Optional name for this state.
-   *
-   * Default: - The construct ID will be used as state name
-   */
-  public fun stateName(): String? = unwrap(this).getStateName()
-
-  /**
    * A builder for [StateProps]
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param arguments Parameters pass a collection of key-value pairs, either static values or
+     * JSONata expressions that select from the input.
+     */
+    public fun arguments(arguments: Any)
+
+    /**
+     * @param assign Workflow variables to store in this step.
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     */
+    public fun assign(assign: Map<String, Any>)
+
     /**
      * @param comment A comment describing this state.
      */
@@ -129,10 +117,27 @@ public interface StateProps {
     public fun outputPath(outputPath: String)
 
     /**
+     * @param outputs Used to specify and transform output from the state.
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     */
+    public fun outputs(outputs: Any)
+
+    /**
      * @param parameters Parameters pass a collection of key-value pairs, either static values or
      * JSONPath expressions that select from the input.
      */
     public fun parameters(parameters: Map<String, Any>)
+
+    /**
+     * @param queryLanguage The name of the query language used by the state.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
 
     /**
      * @param resultPath JSONPath expression to indicate where to inject the state's output.
@@ -158,6 +163,23 @@ public interface StateProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.StateProps.Builder =
         software.amazon.awscdk.services.stepfunctions.StateProps.builder()
+
+    /**
+     * @param arguments Parameters pass a collection of key-value pairs, either static values or
+     * JSONata expressions that select from the input.
+     */
+    override fun arguments(arguments: Any) {
+      cdkBuilder.arguments(arguments)
+    }
+
+    /**
+     * @param assign Workflow variables to store in this step.
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
 
     /**
      * @param comment A comment describing this state.
@@ -187,11 +209,32 @@ public interface StateProps {
     }
 
     /**
+     * @param outputs Used to specify and transform output from the state.
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     */
+    override fun outputs(outputs: Any) {
+      cdkBuilder.outputs(outputs)
+    }
+
+    /**
      * @param parameters Parameters pass a collection of key-value pairs, either static values or
      * JSONPath expressions that select from the input.
      */
     override fun parameters(parameters: Map<String, Any>) {
       cdkBuilder.parameters(parameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * @param queryLanguage The name of the query language used by the state.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
     }
 
     /**
@@ -229,6 +272,28 @@ public interface StateProps {
   ) : CdkObject(cdkObject),
       StateProps {
     /**
+     * Parameters pass a collection of key-value pairs, either static values or JSONata expressions
+     * that select from the input.
+     *
+     * Default: - No arguments
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/transforming-data.html)
+     */
+    override fun arguments(): Any? = unwrap(this).getArguments()
+
+    /**
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     */
+    override fun assign(): Map<String, Any> = unwrap(this).getAssign() ?: emptyMap()
+
+    /**
      * A comment describing this state.
      *
      * Default: No comment
@@ -256,6 +321,21 @@ public interface StateProps {
     override fun outputPath(): String? = unwrap(this).getOutputPath()
 
     /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     */
+    override fun outputs(): Any? = unwrap(this).getOutputs()
+
+    /**
      * Parameters pass a collection of key-value pairs, either static values or JSONPath expressions
      * that select from the input.
      *
@@ -264,6 +344,17 @@ public interface StateProps {
      * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-inputpath-params.html#input-output-parameters)
      */
     override fun parameters(): Map<String, Any> = unwrap(this).getParameters() ?: emptyMap()
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     */
+    override fun queryLanguage(): QueryLanguage? =
+        unwrap(this).getQueryLanguage()?.let(QueryLanguage::wrap)
 
     /**
      * JSONPath expression to indicate where to inject the state's output.

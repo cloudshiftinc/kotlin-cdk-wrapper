@@ -12,9 +12,12 @@ import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -36,7 +39,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .channelName("channelName")
  * // the properties below are optional
  * .description("description")
+ * .inputSwitchConfiguration(InputSwitchConfigurationProperty.builder()
+ * .mqcsInputSwitching(false)
+ * .build())
  * .inputType("inputType")
+ * .outputHeaderConfiguration(OutputHeaderConfigurationProperty.builder()
+ * .publishMqcs(false)
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -73,12 +82,12 @@ public open class CfnChannel(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   * The timestamp of the ccreation of the channel.
+   * The timestamp of the creation of the channel.
    */
   public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
 
   /**
-   *
+   * The ingest domain URL where the source stream should be sent.
    */
   public open fun attrIngestEndpointUrls(): List<String> = unwrap(this).getAttrIngestEndpointUrls()
 
@@ -136,6 +145,38 @@ public open class CfnChannel(
   }
 
   /**
+   * The configuration for input switching based on the media quality confidence score (MQCS) as
+   * provided from AWS Elemental MediaLive.
+   */
+  public open fun inputSwitchConfiguration(): Any? = unwrap(this).getInputSwitchConfiguration()
+
+  /**
+   * The configuration for input switching based on the media quality confidence score (MQCS) as
+   * provided from AWS Elemental MediaLive.
+   */
+  public open fun inputSwitchConfiguration(`value`: IResolvable) {
+    unwrap(this).setInputSwitchConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The configuration for input switching based on the media quality confidence score (MQCS) as
+   * provided from AWS Elemental MediaLive.
+   */
+  public open fun inputSwitchConfiguration(`value`: InputSwitchConfigurationProperty) {
+    unwrap(this).setInputSwitchConfiguration(`value`.let(InputSwitchConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The configuration for input switching based on the media quality confidence score (MQCS) as
+   * provided from AWS Elemental MediaLive.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("e9986a54d46f0acc19b9c96644727dde6fb5a29b00a0899271f862a0ada43153")
+  public open
+      fun inputSwitchConfiguration(`value`: InputSwitchConfigurationProperty.Builder.() -> Unit):
+      Unit = inputSwitchConfiguration(InputSwitchConfigurationProperty(`value`))
+
+  /**
    * The input type will be an immutable field which will be used to define whether the channel will
    * allow CMAF ingest or HLS ingest.
    */
@@ -159,19 +200,51 @@ public open class CfnChannel(
   }
 
   /**
-   * The tags associated with the channel.
+   * The settings for what common media server data (CMSD) headers AWS Elemental MediaPackage
+   * includes in responses to the CDN.
+   */
+  public open fun outputHeaderConfiguration(): Any? = unwrap(this).getOutputHeaderConfiguration()
+
+  /**
+   * The settings for what common media server data (CMSD) headers AWS Elemental MediaPackage
+   * includes in responses to the CDN.
+   */
+  public open fun outputHeaderConfiguration(`value`: IResolvable) {
+    unwrap(this).setOutputHeaderConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The settings for what common media server data (CMSD) headers AWS Elemental MediaPackage
+   * includes in responses to the CDN.
+   */
+  public open fun outputHeaderConfiguration(`value`: OutputHeaderConfigurationProperty) {
+    unwrap(this).setOutputHeaderConfiguration(`value`.let(OutputHeaderConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The settings for what common media server data (CMSD) headers AWS Elemental MediaPackage
+   * includes in responses to the CDN.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("fd4837f76898d1547ccf787131713bf906a5bb6357f9f5c5065e098387ec3af4")
+  public open
+      fun outputHeaderConfiguration(`value`: OutputHeaderConfigurationProperty.Builder.() -> Unit):
+      Unit = outputHeaderConfiguration(OutputHeaderConfigurationProperty(`value`))
+
+  /**
+   *
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * The tags associated with the channel.
+   *
    */
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * The tags associated with the channel.
+   *
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
@@ -206,6 +279,39 @@ public open class CfnChannel(
     public fun description(description: String)
 
     /**
+     * The configuration for input switching based on the media quality confidence score (MQCS) as
+     * provided from AWS Elemental MediaLive.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-inputswitchconfiguration)
+     * @param inputSwitchConfiguration The configuration for input switching based on the media
+     * quality confidence score (MQCS) as provided from AWS Elemental MediaLive. 
+     */
+    public fun inputSwitchConfiguration(inputSwitchConfiguration: IResolvable)
+
+    /**
+     * The configuration for input switching based on the media quality confidence score (MQCS) as
+     * provided from AWS Elemental MediaLive.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-inputswitchconfiguration)
+     * @param inputSwitchConfiguration The configuration for input switching based on the media
+     * quality confidence score (MQCS) as provided from AWS Elemental MediaLive. 
+     */
+    public fun inputSwitchConfiguration(inputSwitchConfiguration: InputSwitchConfigurationProperty)
+
+    /**
+     * The configuration for input switching based on the media quality confidence score (MQCS) as
+     * provided from AWS Elemental MediaLive.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-inputswitchconfiguration)
+     * @param inputSwitchConfiguration The configuration for input switching based on the media
+     * quality confidence score (MQCS) as provided from AWS Elemental MediaLive. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d9337f9553574d19ff2b85a9456edafb419ab1e4236a18cdaa58ff17c0022422")
+    public
+        fun inputSwitchConfiguration(inputSwitchConfiguration: InputSwitchConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * The input type will be an immutable field which will be used to define whether the channel
      * will allow CMAF ingest or HLS ingest.
      *
@@ -224,18 +330,48 @@ public open class CfnChannel(
     public fun inputType(inputType: String)
 
     /**
-     * The tags associated with the channel.
+     * The settings for what common media server data (CMSD) headers AWS Elemental MediaPackage
+     * includes in responses to the CDN.
      *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-outputheaderconfiguration)
+     * @param outputHeaderConfiguration The settings for what common media server data (CMSD)
+     * headers AWS Elemental MediaPackage includes in responses to the CDN. 
+     */
+    public fun outputHeaderConfiguration(outputHeaderConfiguration: IResolvable)
+
+    /**
+     * The settings for what common media server data (CMSD) headers AWS Elemental MediaPackage
+     * includes in responses to the CDN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-outputheaderconfiguration)
+     * @param outputHeaderConfiguration The settings for what common media server data (CMSD)
+     * headers AWS Elemental MediaPackage includes in responses to the CDN. 
+     */
+    public
+        fun outputHeaderConfiguration(outputHeaderConfiguration: OutputHeaderConfigurationProperty)
+
+    /**
+     * The settings for what common media server data (CMSD) headers AWS Elemental MediaPackage
+     * includes in responses to the CDN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-outputheaderconfiguration)
+     * @param outputHeaderConfiguration The settings for what common media server data (CMSD)
+     * headers AWS Elemental MediaPackage includes in responses to the CDN. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1c23dd63c66b679fdabb9360a2330295c0d58d35efd4f4b12079b99643a7085a")
+    public
+        fun outputHeaderConfiguration(outputHeaderConfiguration: OutputHeaderConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-tags)
-     * @param tags The tags associated with the channel. 
+     * @param tags 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * The tags associated with the channel.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-tags)
-     * @param tags The tags associated with the channel. 
+     * @param tags 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -279,6 +415,45 @@ public open class CfnChannel(
     }
 
     /**
+     * The configuration for input switching based on the media quality confidence score (MQCS) as
+     * provided from AWS Elemental MediaLive.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-inputswitchconfiguration)
+     * @param inputSwitchConfiguration The configuration for input switching based on the media
+     * quality confidence score (MQCS) as provided from AWS Elemental MediaLive. 
+     */
+    override fun inputSwitchConfiguration(inputSwitchConfiguration: IResolvable) {
+      cdkBuilder.inputSwitchConfiguration(inputSwitchConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The configuration for input switching based on the media quality confidence score (MQCS) as
+     * provided from AWS Elemental MediaLive.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-inputswitchconfiguration)
+     * @param inputSwitchConfiguration The configuration for input switching based on the media
+     * quality confidence score (MQCS) as provided from AWS Elemental MediaLive. 
+     */
+    override
+        fun inputSwitchConfiguration(inputSwitchConfiguration: InputSwitchConfigurationProperty) {
+      cdkBuilder.inputSwitchConfiguration(inputSwitchConfiguration.let(InputSwitchConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The configuration for input switching based on the media quality confidence score (MQCS) as
+     * provided from AWS Elemental MediaLive.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-inputswitchconfiguration)
+     * @param inputSwitchConfiguration The configuration for input switching based on the media
+     * quality confidence score (MQCS) as provided from AWS Elemental MediaLive. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d9337f9553574d19ff2b85a9456edafb419ab1e4236a18cdaa58ff17c0022422")
+    override
+        fun inputSwitchConfiguration(inputSwitchConfiguration: InputSwitchConfigurationProperty.Builder.() -> Unit):
+        Unit = inputSwitchConfiguration(InputSwitchConfigurationProperty(inputSwitchConfiguration))
+
+    /**
      * The input type will be an immutable field which will be used to define whether the channel
      * will allow CMAF ingest or HLS ingest.
      *
@@ -299,20 +474,56 @@ public open class CfnChannel(
     }
 
     /**
-     * The tags associated with the channel.
+     * The settings for what common media server data (CMSD) headers AWS Elemental MediaPackage
+     * includes in responses to the CDN.
      *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-outputheaderconfiguration)
+     * @param outputHeaderConfiguration The settings for what common media server data (CMSD)
+     * headers AWS Elemental MediaPackage includes in responses to the CDN. 
+     */
+    override fun outputHeaderConfiguration(outputHeaderConfiguration: IResolvable) {
+      cdkBuilder.outputHeaderConfiguration(outputHeaderConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The settings for what common media server data (CMSD) headers AWS Elemental MediaPackage
+     * includes in responses to the CDN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-outputheaderconfiguration)
+     * @param outputHeaderConfiguration The settings for what common media server data (CMSD)
+     * headers AWS Elemental MediaPackage includes in responses to the CDN. 
+     */
+    override
+        fun outputHeaderConfiguration(outputHeaderConfiguration: OutputHeaderConfigurationProperty) {
+      cdkBuilder.outputHeaderConfiguration(outputHeaderConfiguration.let(OutputHeaderConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The settings for what common media server data (CMSD) headers AWS Elemental MediaPackage
+     * includes in responses to the CDN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-outputheaderconfiguration)
+     * @param outputHeaderConfiguration The settings for what common media server data (CMSD)
+     * headers AWS Elemental MediaPackage includes in responses to the CDN. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1c23dd63c66b679fdabb9360a2330295c0d58d35efd4f4b12079b99643a7085a")
+    override
+        fun outputHeaderConfiguration(outputHeaderConfiguration: OutputHeaderConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        outputHeaderConfiguration(OutputHeaderConfigurationProperty(outputHeaderConfiguration))
+
+    /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-tags)
-     * @param tags The tags associated with the channel. 
+     * @param tags 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * The tags associated with the channel.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-tags)
-     * @param tags The tags associated with the channel. 
+     * @param tags 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -447,6 +658,225 @@ public open class CfnChannel(
           software.amazon.awscdk.services.mediapackagev2.CfnChannel.IngestEndpointProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediapackagev2.CfnChannel.IngestEndpointProperty
+    }
+  }
+
+  /**
+   * The configuration for input switching based on the media quality confidence score (MQCS) as
+   * provided from AWS Elemental MediaLive.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * InputSwitchConfigurationProperty inputSwitchConfigurationProperty =
+   * InputSwitchConfigurationProperty.builder()
+   * .mqcsInputSwitching(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-channel-inputswitchconfiguration.html)
+   */
+  public interface InputSwitchConfigurationProperty {
+    /**
+     * When true, AWS Elemental MediaPackage performs input switching based on the MQCS.
+     *
+     * Default is true. This setting is valid only when `InputType` is `CMAF` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-channel-inputswitchconfiguration.html#cfn-mediapackagev2-channel-inputswitchconfiguration-mqcsinputswitching)
+     */
+    public fun mqcsInputSwitching(): Any? = unwrap(this).getMqcsInputSwitching()
+
+    /**
+     * A builder for [InputSwitchConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param mqcsInputSwitching When true, AWS Elemental MediaPackage performs input switching
+       * based on the MQCS.
+       * Default is true. This setting is valid only when `InputType` is `CMAF` .
+       */
+      public fun mqcsInputSwitching(mqcsInputSwitching: Boolean)
+
+      /**
+       * @param mqcsInputSwitching When true, AWS Elemental MediaPackage performs input switching
+       * based on the MQCS.
+       * Default is true. This setting is valid only when `InputType` is `CMAF` .
+       */
+      public fun mqcsInputSwitching(mqcsInputSwitching: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnChannel.InputSwitchConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnChannel.InputSwitchConfigurationProperty.builder()
+
+      /**
+       * @param mqcsInputSwitching When true, AWS Elemental MediaPackage performs input switching
+       * based on the MQCS.
+       * Default is true. This setting is valid only when `InputType` is `CMAF` .
+       */
+      override fun mqcsInputSwitching(mqcsInputSwitching: Boolean) {
+        cdkBuilder.mqcsInputSwitching(mqcsInputSwitching)
+      }
+
+      /**
+       * @param mqcsInputSwitching When true, AWS Elemental MediaPackage performs input switching
+       * based on the MQCS.
+       * Default is true. This setting is valid only when `InputType` is `CMAF` .
+       */
+      override fun mqcsInputSwitching(mqcsInputSwitching: IResolvable) {
+        cdkBuilder.mqcsInputSwitching(mqcsInputSwitching.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnChannel.InputSwitchConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannel.InputSwitchConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        InputSwitchConfigurationProperty {
+      /**
+       * When true, AWS Elemental MediaPackage performs input switching based on the MQCS.
+       *
+       * Default is true. This setting is valid only when `InputType` is `CMAF` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-channel-inputswitchconfiguration.html#cfn-mediapackagev2-channel-inputswitchconfiguration-mqcsinputswitching)
+       */
+      override fun mqcsInputSwitching(): Any? = unwrap(this).getMqcsInputSwitching()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputSwitchConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannel.InputSwitchConfigurationProperty):
+          InputSwitchConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputSwitchConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputSwitchConfigurationProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnChannel.InputSwitchConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnChannel.InputSwitchConfigurationProperty
+    }
+  }
+
+  /**
+   * The settings for what common media server data (CMSD) headers AWS Elemental MediaPackage
+   * includes in responses to the CDN.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * OutputHeaderConfigurationProperty outputHeaderConfigurationProperty =
+   * OutputHeaderConfigurationProperty.builder()
+   * .publishMqcs(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-channel-outputheaderconfiguration.html)
+   */
+  public interface OutputHeaderConfigurationProperty {
+    /**
+     * When true, AWS Elemental MediaPackage includes the MQCS in responses to the CDN.
+     *
+     * This setting is valid only when `InputType` is `CMAF` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-channel-outputheaderconfiguration.html#cfn-mediapackagev2-channel-outputheaderconfiguration-publishmqcs)
+     */
+    public fun publishMqcs(): Any? = unwrap(this).getPublishMqcs()
+
+    /**
+     * A builder for [OutputHeaderConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param publishMqcs When true, AWS Elemental MediaPackage includes the MQCS in responses to
+       * the CDN.
+       * This setting is valid only when `InputType` is `CMAF` .
+       */
+      public fun publishMqcs(publishMqcs: Boolean)
+
+      /**
+       * @param publishMqcs When true, AWS Elemental MediaPackage includes the MQCS in responses to
+       * the CDN.
+       * This setting is valid only when `InputType` is `CMAF` .
+       */
+      public fun publishMqcs(publishMqcs: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnChannel.OutputHeaderConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnChannel.OutputHeaderConfigurationProperty.builder()
+
+      /**
+       * @param publishMqcs When true, AWS Elemental MediaPackage includes the MQCS in responses to
+       * the CDN.
+       * This setting is valid only when `InputType` is `CMAF` .
+       */
+      override fun publishMqcs(publishMqcs: Boolean) {
+        cdkBuilder.publishMqcs(publishMqcs)
+      }
+
+      /**
+       * @param publishMqcs When true, AWS Elemental MediaPackage includes the MQCS in responses to
+       * the CDN.
+       * This setting is valid only when `InputType` is `CMAF` .
+       */
+      override fun publishMqcs(publishMqcs: IResolvable) {
+        cdkBuilder.publishMqcs(publishMqcs.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnChannel.OutputHeaderConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannel.OutputHeaderConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        OutputHeaderConfigurationProperty {
+      /**
+       * When true, AWS Elemental MediaPackage includes the MQCS in responses to the CDN.
+       *
+       * This setting is valid only when `InputType` is `CMAF` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-channel-outputheaderconfiguration.html#cfn-mediapackagev2-channel-outputheaderconfiguration-publishmqcs)
+       */
+      override fun publishMqcs(): Any? = unwrap(this).getPublishMqcs()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OutputHeaderConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannel.OutputHeaderConfigurationProperty):
+          OutputHeaderConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OutputHeaderConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OutputHeaderConfigurationProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnChannel.OutputHeaderConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnChannel.OutputHeaderConfigurationProperty
     }
   }
 }

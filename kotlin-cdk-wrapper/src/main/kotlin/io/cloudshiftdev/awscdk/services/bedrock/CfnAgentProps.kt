@@ -24,6 +24,7 @@ import kotlin.jvm.JvmName
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.bedrock.*;
+ * Object additionalModelRequestFields;
  * CfnAgentProps cfnAgentProps = CfnAgentProps.builder()
  * .agentName("agentName")
  * // the properties below are optional
@@ -55,14 +56,30 @@ import kotlin.jvm.JvmName
  * .description("description")
  * .required(false)
  * .build()))
+ * .requireConfirmation("requireConfirmation")
  * .build()))
  * .build())
  * .parentActionGroupSignature("parentActionGroupSignature")
  * .skipResourceInUseCheckOnDelete(false)
  * .build()))
+ * .agentCollaboration("agentCollaboration")
+ * .agentCollaborators(List.of(AgentCollaboratorProperty.builder()
+ * .agentDescriptor(AgentDescriptorProperty.builder()
+ * .aliasArn("aliasArn")
+ * .build())
+ * .collaborationInstruction("collaborationInstruction")
+ * .collaboratorName("collaboratorName")
+ * // the properties below are optional
+ * .relayConversationHistory("relayConversationHistory")
+ * .build()))
  * .agentResourceRoleArn("agentResourceRoleArn")
  * .autoPrepare(false)
  * .customerEncryptionKeyArn("customerEncryptionKeyArn")
+ * .customOrchestration(CustomOrchestrationProperty.builder()
+ * .executor(OrchestrationExecutorProperty.builder()
+ * .lambda("lambda")
+ * .build())
+ * .build())
  * .description("description")
  * .foundationModel("foundationModel")
  * .guardrailConfiguration(GuardrailConfigurationProperty.builder()
@@ -77,9 +94,19 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .knowledgeBaseState("knowledgeBaseState")
  * .build()))
+ * .memoryConfiguration(MemoryConfigurationProperty.builder()
+ * .enabledMemoryTypes(List.of("enabledMemoryTypes"))
+ * .sessionSummaryConfiguration(SessionSummaryConfigurationProperty.builder()
+ * .maxRecentSessions(123)
+ * .build())
+ * .storageDays(123)
+ * .build())
+ * .orchestrationType("orchestrationType")
  * .promptOverrideConfiguration(PromptOverrideConfigurationProperty.builder()
  * .promptConfigurations(List.of(PromptConfigurationProperty.builder()
+ * .additionalModelRequestFields(additionalModelRequestFields)
  * .basePromptTemplate("basePromptTemplate")
+ * .foundationModel("foundationModel")
  * .inferenceConfiguration(InferenceConfigurationProperty.builder()
  * .maximumLength(123)
  * .stopSequences(List.of("stopSequences"))
@@ -114,6 +141,20 @@ public interface CfnAgentProps {
   public fun actionGroups(): Any? = unwrap(this).getActionGroups()
 
   /**
+   * The agent's collaboration settings.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-agentcollaboration)
+   */
+  public fun agentCollaboration(): String? = unwrap(this).getAgentCollaboration()
+
+  /**
+   * List of Agent Collaborators.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-agentcollaborators)
+   */
+  public fun agentCollaborators(): Any? = unwrap(this).getAgentCollaborators()
+
+  /**
    * The name of the agent.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-agentname)
@@ -140,6 +181,13 @@ public interface CfnAgentProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-autoprepare)
    */
   public fun autoPrepare(): Any? = unwrap(this).getAutoPrepare()
+
+  /**
+   * Contains custom orchestration configurations for the agent.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-customorchestration)
+   */
+  public fun customOrchestration(): Any? = unwrap(this).getCustomOrchestration()
 
   /**
    * The Amazon Resource Name (ARN) of the AWS KMS key that encrypts the agent.
@@ -194,6 +242,20 @@ public interface CfnAgentProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-knowledgebases)
    */
   public fun knowledgeBases(): Any? = unwrap(this).getKnowledgeBases()
+
+  /**
+   * Contains memory configuration for the agent.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-memoryconfiguration)
+   */
+  public fun memoryConfiguration(): Any? = unwrap(this).getMemoryConfiguration()
+
+  /**
+   * Specifies the orchestration strategy for the agent.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-orchestrationtype)
+   */
+  public fun orchestrationType(): String? = unwrap(this).getOrchestrationType()
 
   /**
    * Contains configurations to override prompt templates in different parts of an agent sequence.
@@ -264,6 +326,26 @@ public interface CfnAgentProps {
     public fun actionGroups(vararg actionGroups: Any)
 
     /**
+     * @param agentCollaboration The agent's collaboration settings.
+     */
+    public fun agentCollaboration(agentCollaboration: String)
+
+    /**
+     * @param agentCollaborators List of Agent Collaborators.
+     */
+    public fun agentCollaborators(agentCollaborators: IResolvable)
+
+    /**
+     * @param agentCollaborators List of Agent Collaborators.
+     */
+    public fun agentCollaborators(agentCollaborators: List<Any>)
+
+    /**
+     * @param agentCollaborators List of Agent Collaborators.
+     */
+    public fun agentCollaborators(vararg agentCollaborators: Any)
+
+    /**
      * @param agentName The name of the agent. 
      */
     public fun agentName(agentName: String)
@@ -289,6 +371,24 @@ public interface CfnAgentProps {
      * this value is `false` .
      */
     public fun autoPrepare(autoPrepare: IResolvable)
+
+    /**
+     * @param customOrchestration Contains custom orchestration configurations for the agent.
+     */
+    public fun customOrchestration(customOrchestration: IResolvable)
+
+    /**
+     * @param customOrchestration Contains custom orchestration configurations for the agent.
+     */
+    public fun customOrchestration(customOrchestration: CfnAgent.CustomOrchestrationProperty)
+
+    /**
+     * @param customOrchestration Contains custom orchestration configurations for the agent.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("be59ddfcd5c9ee6203d73b5dc31216aa457844ef60d7b6e49d1bdf59a3347736")
+    public
+        fun customOrchestration(customOrchestration: CfnAgent.CustomOrchestrationProperty.Builder.() -> Unit)
 
     /**
      * @param customerEncryptionKeyArn The Amazon Resource Name (ARN) of the AWS KMS key that
@@ -356,6 +456,29 @@ public interface CfnAgentProps {
     public fun knowledgeBases(vararg knowledgeBases: Any)
 
     /**
+     * @param memoryConfiguration Contains memory configuration for the agent.
+     */
+    public fun memoryConfiguration(memoryConfiguration: IResolvable)
+
+    /**
+     * @param memoryConfiguration Contains memory configuration for the agent.
+     */
+    public fun memoryConfiguration(memoryConfiguration: CfnAgent.MemoryConfigurationProperty)
+
+    /**
+     * @param memoryConfiguration Contains memory configuration for the agent.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("77b68623e39ed43bcd4fccda746fefe93d0622c34855325de94274a16ed0808e")
+    public
+        fun memoryConfiguration(memoryConfiguration: CfnAgent.MemoryConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * @param orchestrationType Specifies the orchestration strategy for the agent.
+     */
+    public fun orchestrationType(orchestrationType: String)
+
+    /**
      * @param promptOverrideConfiguration Contains configurations to override prompt templates in
      * different parts of an agent sequence.
      * For more information, see [Advanced
@@ -415,7 +538,7 @@ public interface CfnAgentProps {
      * * [Tagging best
      * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
      */
-    public fun testAliasTags(testAliasTags: IResolvable)
+    public fun testAliasTags(testAliasTags: Map<String, String>)
 
     /**
      * @param testAliasTags Metadata that you can assign to a resource as key-value pairs. For more
@@ -425,7 +548,7 @@ public interface CfnAgentProps {
      * * [Tagging best
      * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
      */
-    public fun testAliasTags(testAliasTags: Map<String, String>)
+    public fun testAliasTags(testAliasTags: IResolvable)
   }
 
   private class BuilderImpl : Builder {
@@ -450,6 +573,33 @@ public interface CfnAgentProps {
      * @param actionGroups The action groups that belong to an agent.
      */
     override fun actionGroups(vararg actionGroups: Any): Unit = actionGroups(actionGroups.toList())
+
+    /**
+     * @param agentCollaboration The agent's collaboration settings.
+     */
+    override fun agentCollaboration(agentCollaboration: String) {
+      cdkBuilder.agentCollaboration(agentCollaboration)
+    }
+
+    /**
+     * @param agentCollaborators List of Agent Collaborators.
+     */
+    override fun agentCollaborators(agentCollaborators: IResolvable) {
+      cdkBuilder.agentCollaborators(agentCollaborators.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param agentCollaborators List of Agent Collaborators.
+     */
+    override fun agentCollaborators(agentCollaborators: List<Any>) {
+      cdkBuilder.agentCollaborators(agentCollaborators.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param agentCollaborators List of Agent Collaborators.
+     */
+    override fun agentCollaborators(vararg agentCollaborators: Any): Unit =
+        agentCollaborators(agentCollaborators.toList())
 
     /**
      * @param agentName The name of the agent. 
@@ -485,6 +635,29 @@ public interface CfnAgentProps {
     override fun autoPrepare(autoPrepare: IResolvable) {
       cdkBuilder.autoPrepare(autoPrepare.let(IResolvable.Companion::unwrap))
     }
+
+    /**
+     * @param customOrchestration Contains custom orchestration configurations for the agent.
+     */
+    override fun customOrchestration(customOrchestration: IResolvable) {
+      cdkBuilder.customOrchestration(customOrchestration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param customOrchestration Contains custom orchestration configurations for the agent.
+     */
+    override fun customOrchestration(customOrchestration: CfnAgent.CustomOrchestrationProperty) {
+      cdkBuilder.customOrchestration(customOrchestration.let(CfnAgent.CustomOrchestrationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param customOrchestration Contains custom orchestration configurations for the agent.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("be59ddfcd5c9ee6203d73b5dc31216aa457844ef60d7b6e49d1bdf59a3347736")
+    override
+        fun customOrchestration(customOrchestration: CfnAgent.CustomOrchestrationProperty.Builder.() -> Unit):
+        Unit = customOrchestration(CfnAgent.CustomOrchestrationProperty(customOrchestration))
 
     /**
      * @param customerEncryptionKeyArn The Amazon Resource Name (ARN) of the AWS KMS key that
@@ -573,6 +746,36 @@ public interface CfnAgentProps {
         knowledgeBases(knowledgeBases.toList())
 
     /**
+     * @param memoryConfiguration Contains memory configuration for the agent.
+     */
+    override fun memoryConfiguration(memoryConfiguration: IResolvable) {
+      cdkBuilder.memoryConfiguration(memoryConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param memoryConfiguration Contains memory configuration for the agent.
+     */
+    override fun memoryConfiguration(memoryConfiguration: CfnAgent.MemoryConfigurationProperty) {
+      cdkBuilder.memoryConfiguration(memoryConfiguration.let(CfnAgent.MemoryConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param memoryConfiguration Contains memory configuration for the agent.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("77b68623e39ed43bcd4fccda746fefe93d0622c34855325de94274a16ed0808e")
+    override
+        fun memoryConfiguration(memoryConfiguration: CfnAgent.MemoryConfigurationProperty.Builder.() -> Unit):
+        Unit = memoryConfiguration(CfnAgent.MemoryConfigurationProperty(memoryConfiguration))
+
+    /**
+     * @param orchestrationType Specifies the orchestration strategy for the agent.
+     */
+    override fun orchestrationType(orchestrationType: String) {
+      cdkBuilder.orchestrationType(orchestrationType)
+    }
+
+    /**
      * @param promptOverrideConfiguration Contains configurations to override prompt templates in
      * different parts of an agent sequence.
      * For more information, see [Advanced
@@ -644,8 +847,8 @@ public interface CfnAgentProps {
      * * [Tagging best
      * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
      */
-    override fun testAliasTags(testAliasTags: IResolvable) {
-      cdkBuilder.testAliasTags(testAliasTags.let(IResolvable.Companion::unwrap))
+    override fun testAliasTags(testAliasTags: Map<String, String>) {
+      cdkBuilder.testAliasTags(testAliasTags)
     }
 
     /**
@@ -656,8 +859,8 @@ public interface CfnAgentProps {
      * * [Tagging best
      * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
      */
-    override fun testAliasTags(testAliasTags: Map<String, String>) {
-      cdkBuilder.testAliasTags(testAliasTags)
+    override fun testAliasTags(testAliasTags: IResolvable) {
+      cdkBuilder.testAliasTags(testAliasTags.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.bedrock.CfnAgentProps = cdkBuilder.build()
@@ -673,6 +876,20 @@ public interface CfnAgentProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-actiongroups)
      */
     override fun actionGroups(): Any? = unwrap(this).getActionGroups()
+
+    /**
+     * The agent's collaboration settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-agentcollaboration)
+     */
+    override fun agentCollaboration(): String? = unwrap(this).getAgentCollaboration()
+
+    /**
+     * List of Agent Collaborators.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-agentcollaborators)
+     */
+    override fun agentCollaborators(): Any? = unwrap(this).getAgentCollaborators()
 
     /**
      * The name of the agent.
@@ -701,6 +918,13 @@ public interface CfnAgentProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-autoprepare)
      */
     override fun autoPrepare(): Any? = unwrap(this).getAutoPrepare()
+
+    /**
+     * Contains custom orchestration configurations for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-customorchestration)
+     */
+    override fun customOrchestration(): Any? = unwrap(this).getCustomOrchestration()
 
     /**
      * The Amazon Resource Name (ARN) of the AWS KMS key that encrypts the agent.
@@ -755,6 +979,20 @@ public interface CfnAgentProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-knowledgebases)
      */
     override fun knowledgeBases(): Any? = unwrap(this).getKnowledgeBases()
+
+    /**
+     * Contains memory configuration for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-memoryconfiguration)
+     */
+    override fun memoryConfiguration(): Any? = unwrap(this).getMemoryConfiguration()
+
+    /**
+     * Specifies the orchestration strategy for the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-orchestrationtype)
+     */
+    override fun orchestrationType(): String? = unwrap(this).getOrchestrationType()
 
     /**
      * Contains configurations to override prompt templates in different parts of an agent sequence.

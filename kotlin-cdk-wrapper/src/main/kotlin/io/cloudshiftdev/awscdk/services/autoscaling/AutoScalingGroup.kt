@@ -53,14 +53,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Cluster cluster;
- * AutoScalingGroup asg;
- * ICluster importedCluster = Cluster.fromClusterAttributes(this, "ImportedCluster",
- * ClusterAttributes.builder()
- * .clusterName(cluster.getClusterName())
- * .clusterSecurityGroupId(cluster.getClusterSecurityGroupId())
- * .build());
- * importedCluster.connectAutoScalingGroupCapacity(asg, AutoScalingGroupOptions.builder().build());
+ * Vpc vpc;
+ * SecurityGroup mySecurityGroup = SecurityGroup.Builder.create(this,
+ * "SecurityGroup").vpc(vpc).build();
+ * AutoScalingGroup.Builder.create(this, "ASG")
+ * .vpc(vpc)
+ * .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.MICRO))
+ * .machineImage(MachineImage.latestAmazonLinux2())
+ * .securityGroup(mySecurityGroup)
+ * .build();
  * ```
  */
 public open class AutoScalingGroup(
@@ -522,6 +523,17 @@ public open class AutoScalingGroup(
     public fun autoScalingGroupName(autoScalingGroupName: String)
 
     /**
+     * The strategy for distributing instances across Availability Zones.
+     *
+     * Default: None
+     *
+     * @param azCapacityDistributionStrategy The strategy for distributing instances across
+     * Availability Zones. 
+     */
+    public
+        fun azCapacityDistributionStrategy(azCapacityDistributionStrategy: CapacityDistributionStrategy)
+
+    /**
      * Specifies how block devices are exposed to the instance. You can specify virtual devices and
      * EBS volumes.
      *
@@ -652,13 +664,27 @@ public open class AutoScalingGroup(
     public fun groupMetrics(vararg groupMetrics: GroupMetrics)
 
     /**
-     * Configuration for health checks.
+     * (deprecated) Configuration for health checks.
      *
      * Default: - HealthCheck.ec2 with no grace period
      *
+     * @deprecated Use `healthChecks` instead
      * @param healthCheck Configuration for health checks. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun healthCheck(healthCheck: HealthCheck)
+
+    /**
+     * Configuration for EC2 or additional health checks.
+     *
+     * Even when using `HealthChecks.withAdditionalChecks()`, the EC2 type is implicitly included.
+     *
+     * Default: - EC2 type with no grace period
+     *
+     * [Documentation](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-health-checks.html)
+     * @param healthChecks Configuration for EC2 or additional health checks. 
+     */
+    public fun healthChecks(healthChecks: HealthChecks)
 
     /**
      * If the ASG has scheduled actions, don't reset unchanged group sizes.
@@ -855,6 +881,16 @@ public open class AutoScalingGroup(
      * @param maxInstanceLifetime The maximum amount of time that an instance can be in service. 
      */
     public fun maxInstanceLifetime(maxInstanceLifetime: Duration)
+
+    /**
+     * Whether safety guardrail should be enforced when migrating to the launch template.
+     *
+     * Default: false
+     *
+     * @param migrateToLaunchTemplate Whether safety guardrail should be enforced when migrating to
+     * the launch template. 
+     */
+    public fun migrateToLaunchTemplate(migrateToLaunchTemplate: Boolean)
 
     /**
      * Minimum number of instances in the fleet.
@@ -1213,6 +1249,19 @@ public open class AutoScalingGroup(
     }
 
     /**
+     * The strategy for distributing instances across Availability Zones.
+     *
+     * Default: None
+     *
+     * @param azCapacityDistributionStrategy The strategy for distributing instances across
+     * Availability Zones. 
+     */
+    override
+        fun azCapacityDistributionStrategy(azCapacityDistributionStrategy: CapacityDistributionStrategy) {
+      cdkBuilder.azCapacityDistributionStrategy(azCapacityDistributionStrategy.let(CapacityDistributionStrategy.Companion::unwrap))
+    }
+
+    /**
      * Specifies how block devices are exposed to the instance. You can specify virtual devices and
      * EBS volumes.
      *
@@ -1357,14 +1406,30 @@ public open class AutoScalingGroup(
         groupMetrics(groupMetrics.toList())
 
     /**
-     * Configuration for health checks.
+     * (deprecated) Configuration for health checks.
      *
      * Default: - HealthCheck.ec2 with no grace period
      *
+     * @deprecated Use `healthChecks` instead
      * @param healthCheck Configuration for health checks. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun healthCheck(healthCheck: HealthCheck) {
       cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
+    }
+
+    /**
+     * Configuration for EC2 or additional health checks.
+     *
+     * Even when using `HealthChecks.withAdditionalChecks()`, the EC2 type is implicitly included.
+     *
+     * Default: - EC2 type with no grace period
+     *
+     * [Documentation](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-health-checks.html)
+     * @param healthChecks Configuration for EC2 or additional health checks. 
+     */
+    override fun healthChecks(healthChecks: HealthChecks) {
+      cdkBuilder.healthChecks(healthChecks.let(HealthChecks.Companion::unwrap))
     }
 
     /**
@@ -1586,6 +1651,18 @@ public open class AutoScalingGroup(
      */
     override fun maxInstanceLifetime(maxInstanceLifetime: Duration) {
       cdkBuilder.maxInstanceLifetime(maxInstanceLifetime.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * Whether safety guardrail should be enforced when migrating to the launch template.
+     *
+     * Default: false
+     *
+     * @param migrateToLaunchTemplate Whether safety guardrail should be enforced when migrating to
+     * the launch template. 
+     */
+    override fun migrateToLaunchTemplate(migrateToLaunchTemplate: Boolean) {
+      cdkBuilder.migrateToLaunchTemplate(migrateToLaunchTemplate)
     }
 
     /**
@@ -1939,6 +2016,9 @@ public open class AutoScalingGroup(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.autoscaling.AutoScalingGroup.PROPERTY_INJECTION_ID
+
     public fun fromAutoScalingGroupName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

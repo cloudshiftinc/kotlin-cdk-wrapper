@@ -1538,17 +1538,17 @@ public open class CfnVirtualGateway(
       /**
        * @param ports One or more ports that the policy is enforced for.
        */
-      public fun ports(ports: IResolvable)
-
-      /**
-       * @param ports One or more ports that the policy is enforced for.
-       */
       public fun ports(ports: List<Number>)
 
       /**
        * @param ports One or more ports that the policy is enforced for.
        */
       public fun ports(vararg ports: Number)
+
+      /**
+       * @param ports One or more ports that the policy is enforced for.
+       */
+      public fun ports(ports: IResolvable)
 
       /**
        * @param validation A reference to an object that represents a Transport Layer Security (TLS)
@@ -1623,13 +1623,6 @@ public open class CfnVirtualGateway(
       /**
        * @param ports One or more ports that the policy is enforced for.
        */
-      override fun ports(ports: IResolvable) {
-        cdkBuilder.ports(ports.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param ports One or more ports that the policy is enforced for.
-       */
       override fun ports(ports: List<Number>) {
         cdkBuilder.ports(ports)
       }
@@ -1638,6 +1631,13 @@ public open class CfnVirtualGateway(
        * @param ports One or more ports that the policy is enforced for.
        */
       override fun ports(vararg ports: Number): Unit = ports(ports.toList())
+
+      /**
+       * @param ports One or more ports that the policy is enforced for.
+       */
+      override fun ports(ports: IResolvable) {
+        cdkBuilder.ports(ports.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param validation A reference to an object that represents a Transport Layer Security (TLS)

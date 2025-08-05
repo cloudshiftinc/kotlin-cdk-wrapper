@@ -18,11 +18,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * ConfigurationSet.Builder.create(this, "ConfigurationSetWithVdmOptions")
- * .vdmOptions(VdmOptions.builder()
- * .engagementMetrics(true)
- * .optimizedSharedDelivery(true)
- * .build())
+ * ConfigurationSet.Builder.create(this, "ConfigurationSet")
+ * .customTrackingRedirectDomain("track.cdk.dev")
+ * .customTrackingHttpsPolicy(HttpsPolicy.REQUIRE)
  * .build();
  * ```
  */
@@ -92,6 +90,15 @@ public open class ConfigurationSet(
      * @param configurationSetName A name for the configuration set. 
      */
     public fun configurationSetName(configurationSetName: String)
+
+    /**
+     * The https policy to use for tracking open and click events.
+     *
+     * Default: - HttpsPolicy.OPTIONAL if customTrackingRedirectDomain is set, otherwise undefined
+     *
+     * @param customTrackingHttpsPolicy The https policy to use for tracking open and click events. 
+     */
+    public fun customTrackingHttpsPolicy(customTrackingHttpsPolicy: HttpsPolicy)
 
     /**
      * The custom subdomain that is used to redirect email recipients to the Amazon SES event
@@ -222,6 +229,17 @@ public open class ConfigurationSet(
      */
     override fun configurationSetName(configurationSetName: String) {
       cdkBuilder.configurationSetName(configurationSetName)
+    }
+
+    /**
+     * The https policy to use for tracking open and click events.
+     *
+     * Default: - HttpsPolicy.OPTIONAL if customTrackingRedirectDomain is set, otherwise undefined
+     *
+     * @param customTrackingHttpsPolicy The https policy to use for tracking open and click events. 
+     */
+    override fun customTrackingHttpsPolicy(customTrackingHttpsPolicy: HttpsPolicy) {
+      cdkBuilder.customTrackingHttpsPolicy(customTrackingHttpsPolicy.let(HttpsPolicy.Companion::unwrap))
     }
 
     /**
@@ -359,6 +377,9 @@ public open class ConfigurationSet(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ses.ConfigurationSet.PROPERTY_INJECTION_ID
+
     public fun fromConfigurationSetName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

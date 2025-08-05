@@ -24,9 +24,13 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.services.datasync.*;
  * CfnLocationSMBProps cfnLocationSMBProps = CfnLocationSMBProps.builder()
  * .agentArns(List.of("agentArns"))
- * .user("user")
  * // the properties below are optional
+ * .authenticationType("authenticationType")
+ * .dnsIpAddresses(List.of("dnsIpAddresses"))
  * .domain("domain")
+ * .kerberosKeytab("kerberosKeytab")
+ * .kerberosKrb5Conf("kerberosKrb5Conf")
+ * .kerberosPrincipal("kerberosPrincipal")
  * .mountOptions(MountOptionsProperty.builder()
  * .version("version")
  * .build())
@@ -37,6 +41,7 @@ import kotlin.jvm.JvmName
  * .key("key")
  * .value("value")
  * .build()))
+ * .user("user")
  * .build();
  * ```
  *
@@ -44,21 +49,78 @@ import kotlin.jvm.JvmName
  */
 public interface CfnLocationSMBProps {
   /**
-   * The Amazon Resource Names (ARNs) of agents to use for a Server Message Block (SMB) location.
+   * Specifies the DataSync agent (or agents) that can connect to your SMB file server.
+   *
+   * You specify an agent by using its Amazon Resource Name (ARN).
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-agentarns)
    */
   public fun agentArns(): List<String>
 
   /**
-   * Specifies the name of the Active Directory domain that your SMB file server belongs to.
+   * The authentication mode used to determine identity of user.
    *
-   * If you have multiple Active Directory domains in your environment, configuring this parameter
-   * makes sure that DataSync connects to the right file server.
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-authenticationtype)
+   */
+  public fun authenticationType(): String? = unwrap(this).getAuthenticationType()
+
+  /**
+   * Specifies the IPv4 addresses for the DNS servers that your SMB file server belongs to.
+   *
+   * This parameter applies only if AuthenticationType is set to KERBEROS. If you have multiple
+   * domains in your environment, configuring this parameter makes sure that DataSync connects to the
+   * right SMB file server.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-dnsipaddresses)
+   */
+  public fun dnsIpAddresses(): List<String> = unwrap(this).getDnsIpAddresses() ?: emptyList()
+
+  /**
+   * Specifies the Windows domain name that your SMB file server belongs to.
+   *
+   * This parameter applies only if `AuthenticationType` is set to `NTLM` .
+   *
+   * If you have multiple domains in your environment, configuring this parameter makes sure that
+   * DataSync connects to the right file server.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-domain)
    */
   public fun domain(): String? = unwrap(this).getDomain()
+
+  /**
+   * The Base64 string representation of the Keytab file.
+   *
+   * Specifies your Kerberos key table (keytab) file, which includes mappings between your service
+   * principal name (SPN) and encryption keys. To avoid task execution errors, make sure that the SPN
+   * in the keytab file matches exactly what you specify for KerberosPrincipal and in your krb5.conf
+   * file.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-kerberoskeytab)
+   */
+  public fun kerberosKeytab(): String? = unwrap(this).getKerberosKeytab()
+
+  /**
+   * The string representation of the Krb5Conf file, or the presigned URL to access the Krb5.conf
+   * file within an S3 bucket. Specifies a Kerberos configuration file (krb5.conf) that defines your
+   * Kerberos realm configuration. To avoid task execution errors, make sure that the service principal
+   * name (SPN) in the krb5.conf file matches exactly what you specify for KerberosPrincipal and in
+   * your keytab file.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-kerberoskrb5conf)
+   */
+  public fun kerberosKrb5Conf(): String? = unwrap(this).getKerberosKrb5Conf()
+
+  /**
+   * Specifies a service principal name (SPN), which is an identity in your Kerberos realm that has
+   * permission to access the files, folders, and file metadata in your SMB file server.
+   *
+   * SPNs are case sensitive and must include a prepended cifs/. For example, an SPN might look like
+   * cifs/kerberosuser&#64;EXAMPLE.COM. Your task execution will fail if the SPN that you provide for
+   * this parameter doesn't match exactly what's in your keytab or krb5.conf files.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-kerberosprincipal)
+   */
+  public fun kerberosPrincipal(): String? = unwrap(this).getKerberosPrincipal()
 
   /**
    * Specifies the version of the SMB protocol that DataSync uses to access your SMB file server.
@@ -68,19 +130,21 @@ public interface CfnLocationSMBProps {
   public fun mountOptions(): Any? = unwrap(this).getMountOptions()
 
   /**
-   * The password of the user who can mount the share and has the permissions to access files and
-   * folders in the SMB share.
+   * Specifies the password of the user who can mount your SMB file server and has permission to
+   * access the files and folders involved in your transfer.
+   *
+   * This parameter applies only if `AuthenticationType` is set to `NTLM` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-password)
    */
   public fun password(): String? = unwrap(this).getPassword()
 
   /**
-   * Specifies the Domain Name Service (DNS) name or IP address of the SMB file server that your
-   * DataSync agent will mount.
+   * Specifies the domain name or IP address (IPv4 or IPv6) of the SMB file server that your
+   * DataSync agent connects to.
    *
    *
-   * You can't specify an IP version 6 (IPv6) address.
+   * If you're using Kerberos authentication, you must specify a domain name.
    *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-serverhostname)
@@ -88,23 +152,16 @@ public interface CfnLocationSMBProps {
   public fun serverHostname(): String? = unwrap(this).getServerHostname()
 
   /**
-   * The subdirectory in the SMB file system that is used to read data from the SMB source location
-   * or write data to the SMB destination.
+   * Specifies the name of the share exported by your SMB file server where DataSync will read or
+   * write data.
    *
-   * The SMB path should be a path that's exported by the SMB server, or a subdirectory of that
-   * path. The path should be such that it can be mounted by other SMB clients in your network.
+   * You can include a subdirectory in the share path (for example, `/path/to/subdirectory` ). Make
+   * sure that other SMB clients in your network can also mount this path.
    *
-   *
-   * `Subdirectory` must be specified with forward slashes. For example, `/path/to/folder` .
-   *
-   *
-   * To transfer all the data in the folder you specified, DataSync must have permissions to mount
-   * the SMB share, as well as to access all the data in that share. To ensure this, either make sure
-   * that the user name and password specified belongs to the user who can mount the share, and who has
-   * the appropriate permissions for all of the files and directories that you want DataSync to access,
-   * or use credentials of a member of the Backup Operators group to mount the share. Doing either one
-   * enables the agent to access the data. For the agent to access directories, you must additionally
-   * enable all execute access.
+   * To copy all data in the subdirectory, DataSync must be able to mount the SMB share and access
+   * all of its data. For more information, see [Providing DataSync access to SMB file
+   * servers](https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html#configuring-smb-permissions)
+   * .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-subdirectory)
    */
@@ -120,16 +177,19 @@ public interface CfnLocationSMBProps {
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * The user who can mount the share and has the permissions to access files and folders in the SMB
-   * share.
+   * Specifies the user that can mount and access the files, folders, and file metadata in your SMB
+   * file server.
    *
-   * For information about choosing a user name that ensures sufficient permissions to files,
-   * folders, and metadata, see
-   * [user](https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html#SMBuser) .
+   * This parameter applies only if `AuthenticationType` is set to `NTLM` .
+   *
+   * For information about choosing a user with the right level of access for your transfer, see
+   * [Providing DataSync access to SMB file
+   * servers](https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html#configuring-smb-permissions)
+   * .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-user)
    */
-  public fun user(): String
+  public fun user(): String? = unwrap(this).getUser()
 
   /**
    * A builder for [CfnLocationSMBProps]
@@ -137,24 +197,78 @@ public interface CfnLocationSMBProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param agentArns The Amazon Resource Names (ARNs) of agents to use for a Server Message Block
-     * (SMB) location. 
+     * @param agentArns Specifies the DataSync agent (or agents) that can connect to your SMB file
+     * server. 
+     * You specify an agent by using its Amazon Resource Name (ARN).
      */
     public fun agentArns(agentArns: List<String>)
 
     /**
-     * @param agentArns The Amazon Resource Names (ARNs) of agents to use for a Server Message Block
-     * (SMB) location. 
+     * @param agentArns Specifies the DataSync agent (or agents) that can connect to your SMB file
+     * server. 
+     * You specify an agent by using its Amazon Resource Name (ARN).
      */
     public fun agentArns(vararg agentArns: String)
 
     /**
-     * @param domain Specifies the name of the Active Directory domain that your SMB file server
-     * belongs to.
-     * If you have multiple Active Directory domains in your environment, configuring this parameter
-     * makes sure that DataSync connects to the right file server.
+     * @param authenticationType The authentication mode used to determine identity of user.
+     */
+    public fun authenticationType(authenticationType: String)
+
+    /**
+     * @param dnsIpAddresses Specifies the IPv4 addresses for the DNS servers that your SMB file
+     * server belongs to.
+     * This parameter applies only if AuthenticationType is set to KERBEROS. If you have multiple
+     * domains in your environment, configuring this parameter makes sure that DataSync connects to the
+     * right SMB file server.
+     */
+    public fun dnsIpAddresses(dnsIpAddresses: List<String>)
+
+    /**
+     * @param dnsIpAddresses Specifies the IPv4 addresses for the DNS servers that your SMB file
+     * server belongs to.
+     * This parameter applies only if AuthenticationType is set to KERBEROS. If you have multiple
+     * domains in your environment, configuring this parameter makes sure that DataSync connects to the
+     * right SMB file server.
+     */
+    public fun dnsIpAddresses(vararg dnsIpAddresses: String)
+
+    /**
+     * @param domain Specifies the Windows domain name that your SMB file server belongs to.
+     * This parameter applies only if `AuthenticationType` is set to `NTLM` .
+     *
+     * If you have multiple domains in your environment, configuring this parameter makes sure that
+     * DataSync connects to the right file server.
      */
     public fun domain(domain: String)
+
+    /**
+     * @param kerberosKeytab The Base64 string representation of the Keytab file.
+     * Specifies your Kerberos key table (keytab) file, which includes mappings between your service
+     * principal name (SPN) and encryption keys. To avoid task execution errors, make sure that the SPN
+     * in the keytab file matches exactly what you specify for KerberosPrincipal and in your krb5.conf
+     * file.
+     */
+    public fun kerberosKeytab(kerberosKeytab: String)
+
+    /**
+     * @param kerberosKrb5Conf The string representation of the Krb5Conf file, or the presigned URL
+     * to access the Krb5.conf file within an S3 bucket. Specifies a Kerberos configuration file
+     * (krb5.conf) that defines your Kerberos realm configuration. To avoid task execution errors, make
+     * sure that the service principal name (SPN) in the krb5.conf file matches exactly what you
+     * specify for KerberosPrincipal and in your keytab file.
+     */
+    public fun kerberosKrb5Conf(kerberosKrb5Conf: String)
+
+    /**
+     * @param kerberosPrincipal Specifies a service principal name (SPN), which is an identity in
+     * your Kerberos realm that has permission to access the files, folders, and file metadata in your
+     * SMB file server.
+     * SPNs are case sensitive and must include a prepended cifs/. For example, an SPN might look
+     * like cifs/kerberosuser&#64;EXAMPLE.COM. Your task execution will fail if the SPN that you
+     * provide for this parameter doesn't match exactly what's in your keytab or krb5.conf files.
+     */
+    public fun kerberosPrincipal(kerberosPrincipal: String)
 
     /**
      * @param mountOptions Specifies the version of the SMB protocol that DataSync uses to access
@@ -177,36 +291,30 @@ public interface CfnLocationSMBProps {
     public fun mountOptions(mountOptions: CfnLocationSMB.MountOptionsProperty.Builder.() -> Unit)
 
     /**
-     * @param password The password of the user who can mount the share and has the permissions to
-     * access files and folders in the SMB share.
+     * @param password Specifies the password of the user who can mount your SMB file server and has
+     * permission to access the files and folders involved in your transfer.
+     * This parameter applies only if `AuthenticationType` is set to `NTLM` .
      */
     public fun password(password: String)
 
     /**
-     * @param serverHostname Specifies the Domain Name Service (DNS) name or IP address of the SMB
-     * file server that your DataSync agent will mount.
+     * @param serverHostname Specifies the domain name or IP address (IPv4 or IPv6) of the SMB file
+     * server that your DataSync agent connects to.
      *
-     * You can't specify an IP version 6 (IPv6) address.
+     * If you're using Kerberos authentication, you must specify a domain name.
      */
     public fun serverHostname(serverHostname: String)
 
     /**
-     * @param subdirectory The subdirectory in the SMB file system that is used to read data from
-     * the SMB source location or write data to the SMB destination.
-     * The SMB path should be a path that's exported by the SMB server, or a subdirectory of that
-     * path. The path should be such that it can be mounted by other SMB clients in your network.
+     * @param subdirectory Specifies the name of the share exported by your SMB file server where
+     * DataSync will read or write data.
+     * You can include a subdirectory in the share path (for example, `/path/to/subdirectory` ).
+     * Make sure that other SMB clients in your network can also mount this path.
      *
-     *
-     * `Subdirectory` must be specified with forward slashes. For example, `/path/to/folder` .
-     *
-     *
-     * To transfer all the data in the folder you specified, DataSync must have permissions to mount
-     * the SMB share, as well as to access all the data in that share. To ensure this, either make sure
-     * that the user name and password specified belongs to the user who can mount the share, and who
-     * has the appropriate permissions for all of the files and directories that you want DataSync to
-     * access, or use credentials of a member of the Backup Operators group to mount the share. Doing
-     * either one enables the agent to access the data. For the agent to access directories, you must
-     * additionally enable all execute access.
+     * To copy all data in the subdirectory, DataSync must be able to mount the SMB share and access
+     * all of its data. For more information, see [Providing DataSync access to SMB file
+     * servers](https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html#configuring-smb-permissions)
+     * .
      */
     public fun subdirectory(subdirectory: String)
 
@@ -225,11 +333,14 @@ public interface CfnLocationSMBProps {
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * @param user The user who can mount the share and has the permissions to access files and
-     * folders in the SMB share. 
-     * For information about choosing a user name that ensures sufficient permissions to files,
-     * folders, and metadata, see
-     * [user](https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html#SMBuser) .
+     * @param user Specifies the user that can mount and access the files, folders, and file
+     * metadata in your SMB file server.
+     * This parameter applies only if `AuthenticationType` is set to `NTLM` .
+     *
+     * For information about choosing a user with the right level of access for your transfer, see
+     * [Providing DataSync access to SMB file
+     * servers](https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html#configuring-smb-permissions)
+     * .
      */
     public fun user(user: String)
   }
@@ -239,27 +350,92 @@ public interface CfnLocationSMBProps {
         software.amazon.awscdk.services.datasync.CfnLocationSMBProps.builder()
 
     /**
-     * @param agentArns The Amazon Resource Names (ARNs) of agents to use for a Server Message Block
-     * (SMB) location. 
+     * @param agentArns Specifies the DataSync agent (or agents) that can connect to your SMB file
+     * server. 
+     * You specify an agent by using its Amazon Resource Name (ARN).
      */
     override fun agentArns(agentArns: List<String>) {
       cdkBuilder.agentArns(agentArns)
     }
 
     /**
-     * @param agentArns The Amazon Resource Names (ARNs) of agents to use for a Server Message Block
-     * (SMB) location. 
+     * @param agentArns Specifies the DataSync agent (or agents) that can connect to your SMB file
+     * server. 
+     * You specify an agent by using its Amazon Resource Name (ARN).
      */
     override fun agentArns(vararg agentArns: String): Unit = agentArns(agentArns.toList())
 
     /**
-     * @param domain Specifies the name of the Active Directory domain that your SMB file server
-     * belongs to.
-     * If you have multiple Active Directory domains in your environment, configuring this parameter
-     * makes sure that DataSync connects to the right file server.
+     * @param authenticationType The authentication mode used to determine identity of user.
+     */
+    override fun authenticationType(authenticationType: String) {
+      cdkBuilder.authenticationType(authenticationType)
+    }
+
+    /**
+     * @param dnsIpAddresses Specifies the IPv4 addresses for the DNS servers that your SMB file
+     * server belongs to.
+     * This parameter applies only if AuthenticationType is set to KERBEROS. If you have multiple
+     * domains in your environment, configuring this parameter makes sure that DataSync connects to the
+     * right SMB file server.
+     */
+    override fun dnsIpAddresses(dnsIpAddresses: List<String>) {
+      cdkBuilder.dnsIpAddresses(dnsIpAddresses)
+    }
+
+    /**
+     * @param dnsIpAddresses Specifies the IPv4 addresses for the DNS servers that your SMB file
+     * server belongs to.
+     * This parameter applies only if AuthenticationType is set to KERBEROS. If you have multiple
+     * domains in your environment, configuring this parameter makes sure that DataSync connects to the
+     * right SMB file server.
+     */
+    override fun dnsIpAddresses(vararg dnsIpAddresses: String): Unit =
+        dnsIpAddresses(dnsIpAddresses.toList())
+
+    /**
+     * @param domain Specifies the Windows domain name that your SMB file server belongs to.
+     * This parameter applies only if `AuthenticationType` is set to `NTLM` .
+     *
+     * If you have multiple domains in your environment, configuring this parameter makes sure that
+     * DataSync connects to the right file server.
      */
     override fun domain(domain: String) {
       cdkBuilder.domain(domain)
+    }
+
+    /**
+     * @param kerberosKeytab The Base64 string representation of the Keytab file.
+     * Specifies your Kerberos key table (keytab) file, which includes mappings between your service
+     * principal name (SPN) and encryption keys. To avoid task execution errors, make sure that the SPN
+     * in the keytab file matches exactly what you specify for KerberosPrincipal and in your krb5.conf
+     * file.
+     */
+    override fun kerberosKeytab(kerberosKeytab: String) {
+      cdkBuilder.kerberosKeytab(kerberosKeytab)
+    }
+
+    /**
+     * @param kerberosKrb5Conf The string representation of the Krb5Conf file, or the presigned URL
+     * to access the Krb5.conf file within an S3 bucket. Specifies a Kerberos configuration file
+     * (krb5.conf) that defines your Kerberos realm configuration. To avoid task execution errors, make
+     * sure that the service principal name (SPN) in the krb5.conf file matches exactly what you
+     * specify for KerberosPrincipal and in your keytab file.
+     */
+    override fun kerberosKrb5Conf(kerberosKrb5Conf: String) {
+      cdkBuilder.kerberosKrb5Conf(kerberosKrb5Conf)
+    }
+
+    /**
+     * @param kerberosPrincipal Specifies a service principal name (SPN), which is an identity in
+     * your Kerberos realm that has permission to access the files, folders, and file metadata in your
+     * SMB file server.
+     * SPNs are case sensitive and must include a prepended cifs/. For example, an SPN might look
+     * like cifs/kerberosuser&#64;EXAMPLE.COM. Your task execution will fail if the SPN that you
+     * provide for this parameter doesn't match exactly what's in your keytab or krb5.conf files.
+     */
+    override fun kerberosPrincipal(kerberosPrincipal: String) {
+      cdkBuilder.kerberosPrincipal(kerberosPrincipal)
     }
 
     /**
@@ -288,40 +464,34 @@ public interface CfnLocationSMBProps {
         Unit = mountOptions(CfnLocationSMB.MountOptionsProperty(mountOptions))
 
     /**
-     * @param password The password of the user who can mount the share and has the permissions to
-     * access files and folders in the SMB share.
+     * @param password Specifies the password of the user who can mount your SMB file server and has
+     * permission to access the files and folders involved in your transfer.
+     * This parameter applies only if `AuthenticationType` is set to `NTLM` .
      */
     override fun password(password: String) {
       cdkBuilder.password(password)
     }
 
     /**
-     * @param serverHostname Specifies the Domain Name Service (DNS) name or IP address of the SMB
-     * file server that your DataSync agent will mount.
+     * @param serverHostname Specifies the domain name or IP address (IPv4 or IPv6) of the SMB file
+     * server that your DataSync agent connects to.
      *
-     * You can't specify an IP version 6 (IPv6) address.
+     * If you're using Kerberos authentication, you must specify a domain name.
      */
     override fun serverHostname(serverHostname: String) {
       cdkBuilder.serverHostname(serverHostname)
     }
 
     /**
-     * @param subdirectory The subdirectory in the SMB file system that is used to read data from
-     * the SMB source location or write data to the SMB destination.
-     * The SMB path should be a path that's exported by the SMB server, or a subdirectory of that
-     * path. The path should be such that it can be mounted by other SMB clients in your network.
+     * @param subdirectory Specifies the name of the share exported by your SMB file server where
+     * DataSync will read or write data.
+     * You can include a subdirectory in the share path (for example, `/path/to/subdirectory` ).
+     * Make sure that other SMB clients in your network can also mount this path.
      *
-     *
-     * `Subdirectory` must be specified with forward slashes. For example, `/path/to/folder` .
-     *
-     *
-     * To transfer all the data in the folder you specified, DataSync must have permissions to mount
-     * the SMB share, as well as to access all the data in that share. To ensure this, either make sure
-     * that the user name and password specified belongs to the user who can mount the share, and who
-     * has the appropriate permissions for all of the files and directories that you want DataSync to
-     * access, or use credentials of a member of the Backup Operators group to mount the share. Doing
-     * either one enables the agent to access the data. For the agent to access directories, you must
-     * additionally enable all execute access.
+     * To copy all data in the subdirectory, DataSync must be able to mount the SMB share and access
+     * all of its data. For more information, see [Providing DataSync access to SMB file
+     * servers](https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html#configuring-smb-permissions)
+     * .
      */
     override fun subdirectory(subdirectory: String) {
       cdkBuilder.subdirectory(subdirectory)
@@ -344,11 +514,14 @@ public interface CfnLocationSMBProps {
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * @param user The user who can mount the share and has the permissions to access files and
-     * folders in the SMB share. 
-     * For information about choosing a user name that ensures sufficient permissions to files,
-     * folders, and metadata, see
-     * [user](https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html#SMBuser) .
+     * @param user Specifies the user that can mount and access the files, folders, and file
+     * metadata in your SMB file server.
+     * This parameter applies only if `AuthenticationType` is set to `NTLM` .
+     *
+     * For information about choosing a user with the right level of access for your transfer, see
+     * [Providing DataSync access to SMB file
+     * servers](https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html#configuring-smb-permissions)
+     * .
      */
     override fun user(user: String) {
       cdkBuilder.user(user)
@@ -363,21 +536,78 @@ public interface CfnLocationSMBProps {
   ) : CdkObject(cdkObject),
       CfnLocationSMBProps {
     /**
-     * The Amazon Resource Names (ARNs) of agents to use for a Server Message Block (SMB) location.
+     * Specifies the DataSync agent (or agents) that can connect to your SMB file server.
+     *
+     * You specify an agent by using its Amazon Resource Name (ARN).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-agentarns)
      */
     override fun agentArns(): List<String> = unwrap(this).getAgentArns()
 
     /**
-     * Specifies the name of the Active Directory domain that your SMB file server belongs to.
+     * The authentication mode used to determine identity of user.
      *
-     * If you have multiple Active Directory domains in your environment, configuring this parameter
-     * makes sure that DataSync connects to the right file server.
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-authenticationtype)
+     */
+    override fun authenticationType(): String? = unwrap(this).getAuthenticationType()
+
+    /**
+     * Specifies the IPv4 addresses for the DNS servers that your SMB file server belongs to.
+     *
+     * This parameter applies only if AuthenticationType is set to KERBEROS. If you have multiple
+     * domains in your environment, configuring this parameter makes sure that DataSync connects to the
+     * right SMB file server.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-dnsipaddresses)
+     */
+    override fun dnsIpAddresses(): List<String> = unwrap(this).getDnsIpAddresses() ?: emptyList()
+
+    /**
+     * Specifies the Windows domain name that your SMB file server belongs to.
+     *
+     * This parameter applies only if `AuthenticationType` is set to `NTLM` .
+     *
+     * If you have multiple domains in your environment, configuring this parameter makes sure that
+     * DataSync connects to the right file server.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-domain)
      */
     override fun domain(): String? = unwrap(this).getDomain()
+
+    /**
+     * The Base64 string representation of the Keytab file.
+     *
+     * Specifies your Kerberos key table (keytab) file, which includes mappings between your service
+     * principal name (SPN) and encryption keys. To avoid task execution errors, make sure that the SPN
+     * in the keytab file matches exactly what you specify for KerberosPrincipal and in your krb5.conf
+     * file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-kerberoskeytab)
+     */
+    override fun kerberosKeytab(): String? = unwrap(this).getKerberosKeytab()
+
+    /**
+     * The string representation of the Krb5Conf file, or the presigned URL to access the Krb5.conf
+     * file within an S3 bucket. Specifies a Kerberos configuration file (krb5.conf) that defines your
+     * Kerberos realm configuration. To avoid task execution errors, make sure that the service
+     * principal name (SPN) in the krb5.conf file matches exactly what you specify for
+     * KerberosPrincipal and in your keytab file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-kerberoskrb5conf)
+     */
+    override fun kerberosKrb5Conf(): String? = unwrap(this).getKerberosKrb5Conf()
+
+    /**
+     * Specifies a service principal name (SPN), which is an identity in your Kerberos realm that
+     * has permission to access the files, folders, and file metadata in your SMB file server.
+     *
+     * SPNs are case sensitive and must include a prepended cifs/. For example, an SPN might look
+     * like cifs/kerberosuser&#64;EXAMPLE.COM. Your task execution will fail if the SPN that you
+     * provide for this parameter doesn't match exactly what's in your keytab or krb5.conf files.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-kerberosprincipal)
+     */
+    override fun kerberosPrincipal(): String? = unwrap(this).getKerberosPrincipal()
 
     /**
      * Specifies the version of the SMB protocol that DataSync uses to access your SMB file server.
@@ -387,19 +617,21 @@ public interface CfnLocationSMBProps {
     override fun mountOptions(): Any? = unwrap(this).getMountOptions()
 
     /**
-     * The password of the user who can mount the share and has the permissions to access files and
-     * folders in the SMB share.
+     * Specifies the password of the user who can mount your SMB file server and has permission to
+     * access the files and folders involved in your transfer.
+     *
+     * This parameter applies only if `AuthenticationType` is set to `NTLM` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-password)
      */
     override fun password(): String? = unwrap(this).getPassword()
 
     /**
-     * Specifies the Domain Name Service (DNS) name or IP address of the SMB file server that your
-     * DataSync agent will mount.
+     * Specifies the domain name or IP address (IPv4 or IPv6) of the SMB file server that your
+     * DataSync agent connects to.
      *
      *
-     * You can't specify an IP version 6 (IPv6) address.
+     * If you're using Kerberos authentication, you must specify a domain name.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-serverhostname)
@@ -407,23 +639,16 @@ public interface CfnLocationSMBProps {
     override fun serverHostname(): String? = unwrap(this).getServerHostname()
 
     /**
-     * The subdirectory in the SMB file system that is used to read data from the SMB source
-     * location or write data to the SMB destination.
+     * Specifies the name of the share exported by your SMB file server where DataSync will read or
+     * write data.
      *
-     * The SMB path should be a path that's exported by the SMB server, or a subdirectory of that
-     * path. The path should be such that it can be mounted by other SMB clients in your network.
+     * You can include a subdirectory in the share path (for example, `/path/to/subdirectory` ).
+     * Make sure that other SMB clients in your network can also mount this path.
      *
-     *
-     * `Subdirectory` must be specified with forward slashes. For example, `/path/to/folder` .
-     *
-     *
-     * To transfer all the data in the folder you specified, DataSync must have permissions to mount
-     * the SMB share, as well as to access all the data in that share. To ensure this, either make sure
-     * that the user name and password specified belongs to the user who can mount the share, and who
-     * has the appropriate permissions for all of the files and directories that you want DataSync to
-     * access, or use credentials of a member of the Backup Operators group to mount the share. Doing
-     * either one enables the agent to access the data. For the agent to access directories, you must
-     * additionally enable all execute access.
+     * To copy all data in the subdirectory, DataSync must be able to mount the SMB share and access
+     * all of its data. For more information, see [Providing DataSync access to SMB file
+     * servers](https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html#configuring-smb-permissions)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-subdirectory)
      */
@@ -439,16 +664,19 @@ public interface CfnLocationSMBProps {
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
-     * The user who can mount the share and has the permissions to access files and folders in the
-     * SMB share.
+     * Specifies the user that can mount and access the files, folders, and file metadata in your
+     * SMB file server.
      *
-     * For information about choosing a user name that ensures sufficient permissions to files,
-     * folders, and metadata, see
-     * [user](https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html#SMBuser) .
+     * This parameter applies only if `AuthenticationType` is set to `NTLM` .
+     *
+     * For information about choosing a user with the right level of access for your transfer, see
+     * [Providing DataSync access to SMB file
+     * servers](https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html#configuring-smb-permissions)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-user)
      */
-    override fun user(): String = unwrap(this).getUser()
+    override fun user(): String? = unwrap(this).getUser()
   }
 
   public companion object {

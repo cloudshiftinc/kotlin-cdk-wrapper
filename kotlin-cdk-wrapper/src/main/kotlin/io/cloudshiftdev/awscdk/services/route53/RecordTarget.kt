@@ -12,12 +12,14 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.cloudfront.*;
- * HostedZone myZone;
- * CloudFrontWebDistribution distribution;
- * AaaaRecord.Builder.create(this, "Alias")
- * .zone(myZone)
- * .target(RecordTarget.fromAlias(new CloudFrontTarget(distribution)))
+ * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
+ * HostedZone zone;
+ * DomainName domainName;
+ * ARecord.Builder.create(this, "AliasRecord")
+ * .zone(zone)
+ * .target(RecordTarget.fromAlias(new
+ * ApiGatewayv2DomainProperties(domainName.getRegionalDomainName(),
+ * domainName.getRegionalHostedZoneId())))
  * .build();
  * ```
  */

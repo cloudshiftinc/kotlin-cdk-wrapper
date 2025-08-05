@@ -205,6 +205,9 @@ public open class SubnetGroup(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.rds.SubnetGroup.PROPERTY_INJECTION_ID
+
     public fun fromSubnetGroupName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

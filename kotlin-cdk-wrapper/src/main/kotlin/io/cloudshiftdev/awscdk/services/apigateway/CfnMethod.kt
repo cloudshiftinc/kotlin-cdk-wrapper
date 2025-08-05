@@ -262,16 +262,16 @@ public open class CfnMethod(
    * A key-value map specifying data schemas, represented by Model resources, (as the mapped value)
    * of the request payloads of given content types (as the mapping key).
    */
-  public open fun requestModels(`value`: IResolvable) {
-    unwrap(this).setRequestModels(`value`.let(IResolvable.Companion::unwrap))
+  public open fun requestModels(`value`: Map<String, String>) {
+    unwrap(this).setRequestModels(`value`)
   }
 
   /**
    * A key-value map specifying data schemas, represented by Model resources, (as the mapped value)
    * of the request payloads of given content types (as the mapping key).
    */
-  public open fun requestModels(`value`: Map<String, String>) {
-    unwrap(this).setRequestModels(`value`)
+  public open fun requestModels(`value`: IResolvable) {
+    unwrap(this).setRequestModels(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -492,7 +492,7 @@ public open class CfnMethod(
      * @param requestModels A key-value map specifying data schemas, represented by Model resources,
      * (as the mapped value) of the request payloads of given content types (as the mapping key). 
      */
-    public fun requestModels(requestModels: IResolvable)
+    public fun requestModels(requestModels: Map<String, String>)
 
     /**
      * A key-value map specifying data schemas, represented by Model resources, (as the mapped
@@ -502,7 +502,7 @@ public open class CfnMethod(
      * @param requestModels A key-value map specifying data schemas, represented by Model resources,
      * (as the mapped value) of the request payloads of given content types (as the mapping key). 
      */
-    public fun requestModels(requestModels: Map<String, String>)
+    public fun requestModels(requestModels: IResolvable)
 
     /**
      * A key-value map defining required or optional method request parameters that can be accepted
@@ -750,8 +750,8 @@ public open class CfnMethod(
      * @param requestModels A key-value map specifying data schemas, represented by Model resources,
      * (as the mapped value) of the request payloads of given content types (as the mapping key). 
      */
-    override fun requestModels(requestModels: IResolvable) {
-      cdkBuilder.requestModels(requestModels.let(IResolvable.Companion::unwrap))
+    override fun requestModels(requestModels: Map<String, String>) {
+      cdkBuilder.requestModels(requestModels)
     }
 
     /**
@@ -762,8 +762,8 @@ public open class CfnMethod(
      * @param requestModels A key-value map specifying data schemas, represented by Model resources,
      * (as the mapped value) of the request payloads of given content types (as the mapping key). 
      */
-    override fun requestModels(requestModels: Map<String, String>) {
-      cdkBuilder.requestModels(requestModels)
+    override fun requestModels(requestModels: IResolvable) {
+      cdkBuilder.requestModels(requestModels.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1035,7 +1035,8 @@ public open class CfnMethod(
     /**
      * Custom timeout between 50 and 29,000 milliseconds.
      *
-     * The default value is 29,000 milliseconds or 29 seconds.
+     * The default value is 29,000 milliseconds or 29 seconds. You can increase the default value to
+     * longer than 29 seconds for Regional or private APIs only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-integration.html#cfn-apigateway-method-integration-timeoutinmillis)
      */
@@ -1189,7 +1190,7 @@ public open class CfnMethod(
        * pattern of `method.request.{location}.{name}` , where `location` is `querystring` , `path` ,
        * or `header` and `name` must be a valid and unique method request parameter name.
        */
-      public fun requestParameters(requestParameters: IResolvable)
+      public fun requestParameters(requestParameters: Map<String, String>)
 
       /**
        * @param requestParameters A key-value map specifying request parameters that are passed from
@@ -1200,14 +1201,7 @@ public open class CfnMethod(
        * pattern of `method.request.{location}.{name}` , where `location` is `querystring` , `path` ,
        * or `header` and `name` must be a valid and unique method request parameter name.
        */
-      public fun requestParameters(requestParameters: Map<String, String>)
-
-      /**
-       * @param requestTemplates Represents a map of Velocity templates that are applied on the
-       * request payload based on the value of the Content-Type header sent by the client.
-       * The content type value is the key in this map, and the template (as a String) is the value.
-       */
-      public fun requestTemplates(requestTemplates: IResolvable)
+      public fun requestParameters(requestParameters: IResolvable)
 
       /**
        * @param requestTemplates Represents a map of Velocity templates that are applied on the
@@ -1217,8 +1211,16 @@ public open class CfnMethod(
       public fun requestTemplates(requestTemplates: Map<String, String>)
 
       /**
+       * @param requestTemplates Represents a map of Velocity templates that are applied on the
+       * request payload based on the value of the Content-Type header sent by the client.
+       * The content type value is the key in this map, and the template (as a String) is the value.
+       */
+      public fun requestTemplates(requestTemplates: IResolvable)
+
+      /**
        * @param timeoutInMillis Custom timeout between 50 and 29,000 milliseconds.
-       * The default value is 29,000 milliseconds or 29 seconds.
+       * The default value is 29,000 milliseconds or 29 seconds. You can increase the default value
+       * to longer than 29 seconds for Regional or private APIs only.
        */
       public fun timeoutInMillis(timeoutInMillis: Number)
 
@@ -1388,8 +1390,8 @@ public open class CfnMethod(
        * pattern of `method.request.{location}.{name}` , where `location` is `querystring` , `path` ,
        * or `header` and `name` must be a valid and unique method request parameter name.
        */
-      override fun requestParameters(requestParameters: IResolvable) {
-        cdkBuilder.requestParameters(requestParameters.let(IResolvable.Companion::unwrap))
+      override fun requestParameters(requestParameters: Map<String, String>) {
+        cdkBuilder.requestParameters(requestParameters)
       }
 
       /**
@@ -1401,17 +1403,8 @@ public open class CfnMethod(
        * pattern of `method.request.{location}.{name}` , where `location` is `querystring` , `path` ,
        * or `header` and `name` must be a valid and unique method request parameter name.
        */
-      override fun requestParameters(requestParameters: Map<String, String>) {
-        cdkBuilder.requestParameters(requestParameters)
-      }
-
-      /**
-       * @param requestTemplates Represents a map of Velocity templates that are applied on the
-       * request payload based on the value of the Content-Type header sent by the client.
-       * The content type value is the key in this map, and the template (as a String) is the value.
-       */
-      override fun requestTemplates(requestTemplates: IResolvable) {
-        cdkBuilder.requestTemplates(requestTemplates.let(IResolvable.Companion::unwrap))
+      override fun requestParameters(requestParameters: IResolvable) {
+        cdkBuilder.requestParameters(requestParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1424,8 +1417,18 @@ public open class CfnMethod(
       }
 
       /**
+       * @param requestTemplates Represents a map of Velocity templates that are applied on the
+       * request payload based on the value of the Content-Type header sent by the client.
+       * The content type value is the key in this map, and the template (as a String) is the value.
+       */
+      override fun requestTemplates(requestTemplates: IResolvable) {
+        cdkBuilder.requestTemplates(requestTemplates.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
        * @param timeoutInMillis Custom timeout between 50 and 29,000 milliseconds.
-       * The default value is 29,000 milliseconds or 29 seconds.
+       * The default value is 29,000 milliseconds or 29 seconds. You can increase the default value
+       * to longer than 29 seconds for Regional or private APIs only.
        */
       override fun timeoutInMillis(timeoutInMillis: Number) {
         cdkBuilder.timeoutInMillis(timeoutInMillis)
@@ -1608,7 +1611,8 @@ public open class CfnMethod(
       /**
        * Custom timeout between 50 and 29,000 milliseconds.
        *
-       * The default value is 29,000 milliseconds or 29 seconds.
+       * The default value is 29,000 milliseconds or 29 seconds. You can increase the default value
+       * to longer than 29 seconds for Regional or private APIs only.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-integration.html#cfn-apigateway-method-integration-timeoutinmillis)
        */
@@ -1783,7 +1787,7 @@ public open class CfnMethod(
        * `integration.response.body.{JSON-expression}` , where `name` is a valid and unique response
        * header name and `JSON-expression` is a valid JSON expression without the `$` prefix.
        */
-      public fun responseParameters(responseParameters: IResolvable)
+      public fun responseParameters(responseParameters: Map<String, String>)
 
       /**
        * @param responseParameters A key-value map specifying response parameters that are passed to
@@ -1796,15 +1800,7 @@ public open class CfnMethod(
        * `integration.response.body.{JSON-expression}` , where `name` is a valid and unique response
        * header name and `JSON-expression` is a valid JSON expression without the `$` prefix.
        */
-      public fun responseParameters(responseParameters: Map<String, String>)
-
-      /**
-       * @param responseTemplates Specifies the templates used to transform the integration response
-       * body.
-       * Response templates are represented as a key/value map, with a content-type as the key and a
-       * template as the value.
-       */
-      public fun responseTemplates(responseTemplates: IResolvable)
+      public fun responseParameters(responseParameters: IResolvable)
 
       /**
        * @param responseTemplates Specifies the templates used to transform the integration response
@@ -1813,6 +1809,14 @@ public open class CfnMethod(
        * template as the value.
        */
       public fun responseTemplates(responseTemplates: Map<String, String>)
+
+      /**
+       * @param responseTemplates Specifies the templates used to transform the integration response
+       * body.
+       * Response templates are represented as a key/value map, with a content-type as the key and a
+       * template as the value.
+       */
+      public fun responseTemplates(responseTemplates: IResolvable)
 
       /**
        * @param selectionPattern Specifies the regular expression (regex) pattern used to choose an
@@ -1860,8 +1864,8 @@ public open class CfnMethod(
        * `integration.response.body.{JSON-expression}` , where `name` is a valid and unique response
        * header name and `JSON-expression` is a valid JSON expression without the `$` prefix.
        */
-      override fun responseParameters(responseParameters: IResolvable) {
-        cdkBuilder.responseParameters(responseParameters.let(IResolvable.Companion::unwrap))
+      override fun responseParameters(responseParameters: Map<String, String>) {
+        cdkBuilder.responseParameters(responseParameters)
       }
 
       /**
@@ -1875,18 +1879,8 @@ public open class CfnMethod(
        * `integration.response.body.{JSON-expression}` , where `name` is a valid and unique response
        * header name and `JSON-expression` is a valid JSON expression without the `$` prefix.
        */
-      override fun responseParameters(responseParameters: Map<String, String>) {
-        cdkBuilder.responseParameters(responseParameters)
-      }
-
-      /**
-       * @param responseTemplates Specifies the templates used to transform the integration response
-       * body.
-       * Response templates are represented as a key/value map, with a content-type as the key and a
-       * template as the value.
-       */
-      override fun responseTemplates(responseTemplates: IResolvable) {
-        cdkBuilder.responseTemplates(responseTemplates.let(IResolvable.Companion::unwrap))
+      override fun responseParameters(responseParameters: IResolvable) {
+        cdkBuilder.responseParameters(responseParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1897,6 +1891,16 @@ public open class CfnMethod(
        */
       override fun responseTemplates(responseTemplates: Map<String, String>) {
         cdkBuilder.responseTemplates(responseTemplates)
+      }
+
+      /**
+       * @param responseTemplates Specifies the templates used to transform the integration response
+       * body.
+       * Response templates are represented as a key/value map, with a content-type as the key and a
+       * template as the value.
+       */
+      override fun responseTemplates(responseTemplates: IResolvable) {
+        cdkBuilder.responseTemplates(responseTemplates.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2080,14 +2084,14 @@ public open class CfnMethod(
        * Response models are represented as a key/value map, with a content-type as the key and a
        * Model name as the value.
        */
-      public fun responseModels(responseModels: IResolvable)
+      public fun responseModels(responseModels: Map<String, String>)
 
       /**
        * @param responseModels Specifies the Model resources used for the response's content-type.
        * Response models are represented as a key/value map, with a content-type as the key and a
        * Model name as the value.
        */
-      public fun responseModels(responseModels: Map<String, String>)
+      public fun responseModels(responseModels: IResolvable)
 
       /**
        * @param responseParameters A key-value map specifying required or optional response
@@ -2137,8 +2141,8 @@ public open class CfnMethod(
        * Response models are represented as a key/value map, with a content-type as the key and a
        * Model name as the value.
        */
-      override fun responseModels(responseModels: IResolvable) {
-        cdkBuilder.responseModels(responseModels.let(IResolvable.Companion::unwrap))
+      override fun responseModels(responseModels: Map<String, String>) {
+        cdkBuilder.responseModels(responseModels)
       }
 
       /**
@@ -2146,8 +2150,8 @@ public open class CfnMethod(
        * Response models are represented as a key/value map, with a content-type as the key and a
        * Model name as the value.
        */
-      override fun responseModels(responseModels: Map<String, String>) {
-        cdkBuilder.responseModels(responseModels)
+      override fun responseModels(responseModels: IResolvable) {
+        cdkBuilder.responseModels(responseModels.let(IResolvable.Companion::unwrap))
       }
 
       /**

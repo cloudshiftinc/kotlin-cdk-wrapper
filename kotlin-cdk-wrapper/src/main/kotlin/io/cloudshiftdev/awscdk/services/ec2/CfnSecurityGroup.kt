@@ -23,13 +23,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * Specifies a security group.
  *
- * To create a security group, use the
- * [VpcId](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html#cfn-ec2-securitygroup-vpcid)
- * property to specify the VPC for which to create the security group.
+ * You must specify ingress rules to allow inbound traffic. By default, no inbound traffic is
+ * allowed.
  *
- * If you do not specify an egress rule, we add egress rules that allow IPv4 and IPv6 traffic on all
- * ports and protocols to any destination. We do not add these rules if you specify your own egress
- * rules.
+ * When you create a security group, if you do not add egress rules, we add egress rules that allow
+ * all outbound IPv4 and IPv6 traffic. Otherwise, we do not add them. After the security group is
+ * created, if you remove all egress rules that you added, we do not add egress rules, so no outbound
+ * traffic is allowed.
+ *
+ * If you modify a rule, CloudFormation removes the existing rule and then adds a new rule. There is
+ * a brief period when neither the original rule or the new rule exists, so the corresponding traffic
+ * is dropped.
  *
  * This type supports updates. For more information about updating stacks, see [AWS CloudFormation
  * Stacks
@@ -141,11 +145,15 @@ public open class CfnSecurityGroup(
 
   /**
    * The name of the security group.
+   *
+   * Names are case-insensitive and must be unique within the VPC.
    */
   public open fun groupName(): String? = unwrap(this).getGroupName()
 
   /**
    * The name of the security group.
+   *
+   * Names are case-insensitive and must be unique within the VPC.
    */
   public open fun groupName(`value`: String) {
     unwrap(this).setGroupName(`value`)
@@ -263,21 +271,20 @@ public open class CfnSecurityGroup(
     public fun groupDescription(groupDescription: String)
 
     /**
-     * The name of the security group.
+     * The name of the security group. Names are case-insensitive and must be unique within the VPC.
      *
-     * Constraints: Up to 255 characters in length. Cannot start with `sg-` .
+     * Constraints: Up to 255 characters in length. Can't start with `sg-` .
      *
      * Valid characters: a-z, A-Z, 0-9, spaces, and ._-:/()#,&#64;[]+=&amp;;{}!$*
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-groupname)
-     * @param groupName The name of the security group. 
+     * @param groupName The name of the security group. Names are case-insensitive and must be
+     * unique within the VPC. 
      */
     public fun groupName(groupName: String)
 
     /**
      * The outbound rules associated with the security group.
-     *
-     * There is a short interruption during which you cannot connect to the security group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-securitygroupegress)
      * @param securityGroupEgress The outbound rules associated with the security group. 
@@ -287,8 +294,6 @@ public open class CfnSecurityGroup(
     /**
      * The outbound rules associated with the security group.
      *
-     * There is a short interruption during which you cannot connect to the security group.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-securitygroupegress)
      * @param securityGroupEgress The outbound rules associated with the security group. 
      */
@@ -296,8 +301,6 @@ public open class CfnSecurityGroup(
 
     /**
      * The outbound rules associated with the security group.
-     *
-     * There is a short interruption during which you cannot connect to the security group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-securitygroupegress)
      * @param securityGroupEgress The outbound rules associated with the security group. 
@@ -307,8 +310,6 @@ public open class CfnSecurityGroup(
     /**
      * The inbound rules associated with the security group.
      *
-     * There is a short interruption during which you cannot connect to the security group.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-securitygroupingress)
      * @param securityGroupIngress The inbound rules associated with the security group. 
      */
@@ -317,8 +318,6 @@ public open class CfnSecurityGroup(
     /**
      * The inbound rules associated with the security group.
      *
-     * There is a short interruption during which you cannot connect to the security group.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-securitygroupingress)
      * @param securityGroupIngress The inbound rules associated with the security group. 
      */
@@ -326,8 +325,6 @@ public open class CfnSecurityGroup(
 
     /**
      * The inbound rules associated with the security group.
-     *
-     * There is a short interruption during which you cannot connect to the security group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-securitygroupingress)
      * @param securityGroupIngress The inbound rules associated with the security group. 
@@ -384,14 +381,15 @@ public open class CfnSecurityGroup(
     }
 
     /**
-     * The name of the security group.
+     * The name of the security group. Names are case-insensitive and must be unique within the VPC.
      *
-     * Constraints: Up to 255 characters in length. Cannot start with `sg-` .
+     * Constraints: Up to 255 characters in length. Can't start with `sg-` .
      *
      * Valid characters: a-z, A-Z, 0-9, spaces, and ._-:/()#,&#64;[]+=&amp;;{}!$*
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-groupname)
-     * @param groupName The name of the security group. 
+     * @param groupName The name of the security group. Names are case-insensitive and must be
+     * unique within the VPC. 
      */
     override fun groupName(groupName: String) {
       cdkBuilder.groupName(groupName)
@@ -399,8 +397,6 @@ public open class CfnSecurityGroup(
 
     /**
      * The outbound rules associated with the security group.
-     *
-     * There is a short interruption during which you cannot connect to the security group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-securitygroupegress)
      * @param securityGroupEgress The outbound rules associated with the security group. 
@@ -412,8 +408,6 @@ public open class CfnSecurityGroup(
     /**
      * The outbound rules associated with the security group.
      *
-     * There is a short interruption during which you cannot connect to the security group.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-securitygroupegress)
      * @param securityGroupEgress The outbound rules associated with the security group. 
      */
@@ -424,8 +418,6 @@ public open class CfnSecurityGroup(
     /**
      * The outbound rules associated with the security group.
      *
-     * There is a short interruption during which you cannot connect to the security group.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-securitygroupegress)
      * @param securityGroupEgress The outbound rules associated with the security group. 
      */
@@ -434,8 +426,6 @@ public open class CfnSecurityGroup(
 
     /**
      * The inbound rules associated with the security group.
-     *
-     * There is a short interruption during which you cannot connect to the security group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-securitygroupingress)
      * @param securityGroupIngress The inbound rules associated with the security group. 
@@ -447,8 +437,6 @@ public open class CfnSecurityGroup(
     /**
      * The inbound rules associated with the security group.
      *
-     * There is a short interruption during which you cannot connect to the security group.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-securitygroupingress)
      * @param securityGroupIngress The inbound rules associated with the security group. 
      */
@@ -458,8 +446,6 @@ public open class CfnSecurityGroup(
 
     /**
      * The inbound rules associated with the security group.
-     *
-     * There is a short interruption during which you cannot connect to the security group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html#cfn-ec2-securitygroup-securitygroupingress)
      * @param securityGroupIngress The inbound rules associated with the security group. 

@@ -10,6 +10,7 @@ public enum class ArtifactType(
   CDK_TREE(software.amazon.awscdk.cloudassembly.schema.ArtifactType.CDK_TREE),
   ASSET_MANIFEST(software.amazon.awscdk.cloudassembly.schema.ArtifactType.ASSET_MANIFEST),
   NESTED_CLOUD_ASSEMBLY(software.amazon.awscdk.cloudassembly.schema.ArtifactType.NESTED_CLOUD_ASSEMBLY),
+  FEATURE_FLAG_REPORT(software.amazon.awscdk.cloudassembly.schema.ArtifactType.FEATURE_FLAG_REPORT),
   ;
 
   public companion object {
@@ -23,6 +24,8 @@ public enum class ArtifactType(
           ArtifactType.ASSET_MANIFEST
       software.amazon.awscdk.cloudassembly.schema.ArtifactType.NESTED_CLOUD_ASSEMBLY ->
           ArtifactType.NESTED_CLOUD_ASSEMBLY
+      software.amazon.awscdk.cloudassembly.schema.ArtifactType.FEATURE_FLAG_REPORT ->
+          ArtifactType.FEATURE_FLAG_REPORT
     }
 
     internal fun unwrap(wrapped: ArtifactType):

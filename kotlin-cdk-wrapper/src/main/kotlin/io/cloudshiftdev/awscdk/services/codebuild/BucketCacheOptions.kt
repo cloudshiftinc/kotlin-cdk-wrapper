@@ -12,15 +12,65 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.codebuild.*;
- * BucketCacheOptions bucketCacheOptions = BucketCacheOptions.builder()
- * .prefix("prefix")
+ * Bucket sourceBucket;
+ * Bucket myCachingBucket;
+ * Project.Builder.create(this, "ProjectA")
+ * .source(Source.s3(S3SourceProps.builder()
+ * .bucket(sourceBucket)
+ * .path("path/to/source-a.zip")
+ * .build()))
+ * // configure the same bucket and path prefix
+ * .cache(Cache.bucket(myCachingBucket, BucketCacheOptions.builder()
+ * .prefix("cache")
+ * // use the same cache namespace
+ * .cacheNamespace("cache-namespace")
+ * .build()))
+ * .buildSpec(BuildSpec.fromObject(Map.of(
+ * "version", "0.2",
+ * "phases", Map.of(
+ * "build", Map.of(
+ * "commands", List.of("..."))),
+ * // specify the same cache key and paths
+ * "cache", Map.of(
+ * "key", "unique-key",
+ * "paths", List.of("/root/cachedir/ **&#47;*")))))
+ * .build();
+ * Project.Builder.create(this, "ProjectB")
+ * .source(Source.s3(S3SourceProps.builder()
+ * .bucket(sourceBucket)
+ * .path("path/to/source-b.zip")
+ * .build()))
+ * // configure the same bucket and path prefix
+ * .cache(Cache.bucket(myCachingBucket, BucketCacheOptions.builder()
+ * .prefix("cache")
+ * // use the same cache namespace
+ * .cacheNamespace("cache-namespace")
+ * .build()))
+ * .buildSpec(BuildSpec.fromObject(Map.of(
+ * "version", "0.2",
+ * "phases", Map.of(
+ * "build", Map.of(
+ * "commands", List.of("..."))),
+ * // specify the same cache key and paths
+ * "cache", Map.of(
+ * "key", "unique-key",
+ * "paths", List.of("/root/cachedir/ **&#47;*")))))
  * .build();
  * ```
  */
 public interface BucketCacheOptions {
+  /**
+   * Defines the scope of the cache.
+   *
+   * You can use this namespace to share a cache across multiple projects.
+   *
+   * Default: undefined - No cache namespace, which means that the cache is not shared across
+   * multiple projects.
+   *
+   * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/caching-s3.html#caching-s3-sharing)
+   */
+  public fun cacheNamespace(): String? = unwrap(this).getCacheNamespace()
+
   /**
    * The prefix to use to store the cache in the bucket.
    */
@@ -32,6 +82,12 @@ public interface BucketCacheOptions {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param cacheNamespace Defines the scope of the cache.
+     * You can use this namespace to share a cache across multiple projects.
+     */
+    public fun cacheNamespace(cacheNamespace: String)
+
+    /**
      * @param prefix The prefix to use to store the cache in the bucket.
      */
     public fun prefix(prefix: String)
@@ -40,6 +96,14 @@ public interface BucketCacheOptions {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.BucketCacheOptions.Builder =
         software.amazon.awscdk.services.codebuild.BucketCacheOptions.builder()
+
+    /**
+     * @param cacheNamespace Defines the scope of the cache.
+     * You can use this namespace to share a cache across multiple projects.
+     */
+    override fun cacheNamespace(cacheNamespace: String) {
+      cdkBuilder.cacheNamespace(cacheNamespace)
+    }
 
     /**
      * @param prefix The prefix to use to store the cache in the bucket.
@@ -56,6 +120,18 @@ public interface BucketCacheOptions {
     cdkObject: software.amazon.awscdk.services.codebuild.BucketCacheOptions,
   ) : CdkObject(cdkObject),
       BucketCacheOptions {
+    /**
+     * Defines the scope of the cache.
+     *
+     * You can use this namespace to share a cache across multiple projects.
+     *
+     * Default: undefined - No cache namespace, which means that the cache is not shared across
+     * multiple projects.
+     *
+     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/caching-s3.html#caching-s3-sharing)
+     */
+    override fun cacheNamespace(): String? = unwrap(this).getCacheNamespace()
+
     /**
      * The prefix to use to store the cache in the bucket.
      */

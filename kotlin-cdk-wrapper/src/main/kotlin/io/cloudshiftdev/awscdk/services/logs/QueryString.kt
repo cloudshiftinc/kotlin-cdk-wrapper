@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.logs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
@@ -24,6 +25,8 @@ import kotlin.collections.List
  * \"&lt;*&gt;: *\" as differentLoggingType, differentLoggingMessage"))
  * .filterStatements(List.of("loggingType = \"ERROR\"", "loggingMessage = \"A very strange error
  * occurred!\""))
+ * .statsStatements(List.of("count(loggingMessage) as loggingErrors",
+ * "count(differentLoggingMessage) as differentLoggingErrors"))
  * .sort("&#64;timestamp desc")
  * .limit(20)
  * .build())
@@ -42,6 +45,17 @@ public open class QueryString(
 
   public constructor(props: QueryStringProps.Builder.() -> Unit) : this(QueryStringProps(props)
   )
+
+  /**
+   * If the props for the query string have both stats and statsStatements.
+   */
+  public open fun hasStatsAndStatsStatements(): Boolean =
+      unwrap(this).getHasStatsAndStatsStatements()
+
+  /**
+   * Length of statsStatements.
+   */
+  public open fun statsStatementsLength(): Number? = unwrap(this).getStatsStatementsLength()
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.logs.QueryString].
@@ -182,13 +196,46 @@ public open class QueryString(
     public fun sort(sort: String)
 
     /**
-     * Uses log field values to calculate aggregate statistics.
+     * (deprecated) A single statement for using log field values to calculate aggregate statistics.
      *
      * Default: - no stats in QueryString
      *
-     * @param stats Uses log field values to calculate aggregate statistics. 
+     * @deprecated Use `statsStatements` instead
+     * @param stats A single statement for using log field values to calculate aggregate statistics.
+     * 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun stats(stats: String)
+
+    /**
+     * An array of one or more statements for calculating aggregate statistics.
+     *
+     * CloudWatch Logs Insights supports up to two stats commands in a single query.
+     * Each provided statement generates a separate stats line in the query string.
+     *
+     * Note: If provided, this property overrides any value provided for the `stats` property.
+     *
+     * Default: - no stats in QueryString
+     *
+     * @param statsStatements An array of one or more statements for calculating aggregate
+     * statistics. 
+     */
+    public fun statsStatements(statsStatements: List<String>)
+
+    /**
+     * An array of one or more statements for calculating aggregate statistics.
+     *
+     * CloudWatch Logs Insights supports up to two stats commands in a single query.
+     * Each provided statement generates a separate stats line in the query string.
+     *
+     * Note: If provided, this property overrides any value provided for the `stats` property.
+     *
+     * Default: - no stats in QueryString
+     *
+     * @param statsStatements An array of one or more statements for calculating aggregate
+     * statistics. 
+     */
+    public fun statsStatements(vararg statsStatements: String)
   }
 
   private class BuilderImpl : Builder {
@@ -347,15 +394,51 @@ public open class QueryString(
     }
 
     /**
-     * Uses log field values to calculate aggregate statistics.
+     * (deprecated) A single statement for using log field values to calculate aggregate statistics.
      *
      * Default: - no stats in QueryString
      *
-     * @param stats Uses log field values to calculate aggregate statistics. 
+     * @deprecated Use `statsStatements` instead
+     * @param stats A single statement for using log field values to calculate aggregate statistics.
+     * 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun stats(stats: String) {
       cdkBuilder.stats(stats)
     }
+
+    /**
+     * An array of one or more statements for calculating aggregate statistics.
+     *
+     * CloudWatch Logs Insights supports up to two stats commands in a single query.
+     * Each provided statement generates a separate stats line in the query string.
+     *
+     * Note: If provided, this property overrides any value provided for the `stats` property.
+     *
+     * Default: - no stats in QueryString
+     *
+     * @param statsStatements An array of one or more statements for calculating aggregate
+     * statistics. 
+     */
+    override fun statsStatements(statsStatements: List<String>) {
+      cdkBuilder.statsStatements(statsStatements)
+    }
+
+    /**
+     * An array of one or more statements for calculating aggregate statistics.
+     *
+     * CloudWatch Logs Insights supports up to two stats commands in a single query.
+     * Each provided statement generates a separate stats line in the query string.
+     *
+     * Note: If provided, this property overrides any value provided for the `stats` property.
+     *
+     * Default: - no stats in QueryString
+     *
+     * @param statsStatements An array of one or more statements for calculating aggregate
+     * statistics. 
+     */
+    override fun statsStatements(vararg statsStatements: String): Unit =
+        statsStatements(statsStatements.toList())
 
     public fun build(): software.amazon.awscdk.services.logs.QueryString = cdkBuilder.build()
   }

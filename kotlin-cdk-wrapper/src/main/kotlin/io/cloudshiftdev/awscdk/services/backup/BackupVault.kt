@@ -378,6 +378,9 @@ public open class BackupVault(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.backup.BackupVault.PROPERTY_INJECTION_ID
+
     public fun fromBackupVaultArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

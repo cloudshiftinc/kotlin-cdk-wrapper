@@ -100,6 +100,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .status("status")
  * .title("title")
  * // the properties below are optional
+ * .autoEvaluationConfiguration(AutoEvaluationConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
  * .description("description")
  * .scoringStrategy(ScoringStrategyProperty.builder()
  * .mode("mode")
@@ -139,6 +142,35 @@ public open class CfnEvaluationForm(
    * The Amazon Resource Name (ARN) of the evaluation form.
    */
   public open fun attrEvaluationFormArn(): String = unwrap(this).getAttrEvaluationFormArn()
+
+  /**
+   *
+   */
+  public open fun autoEvaluationConfiguration(): Any? =
+      unwrap(this).getAutoEvaluationConfiguration()
+
+  /**
+   *
+   */
+  public open fun autoEvaluationConfiguration(`value`: IResolvable) {
+    unwrap(this).setAutoEvaluationConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  public open fun autoEvaluationConfiguration(`value`: AutoEvaluationConfigurationProperty) {
+    unwrap(this).setAutoEvaluationConfiguration(`value`.let(AutoEvaluationConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("f38b0840056b515398477c78146039db0e2870e45007a14cf5d5c6d303aac74d")
+  public open
+      fun autoEvaluationConfiguration(`value`: AutoEvaluationConfigurationProperty.Builder.() -> Unit):
+      Unit = autoEvaluationConfiguration(AutoEvaluationConfigurationProperty(`value`))
 
   /**
    * The description of the evaluation form.
@@ -277,6 +309,28 @@ public open class CfnEvaluationForm(
   @CdkDslMarker
   public interface Builder {
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-evaluationform.html#cfn-connect-evaluationform-autoevaluationconfiguration)
+     * @param autoEvaluationConfiguration 
+     */
+    public fun autoEvaluationConfiguration(autoEvaluationConfiguration: IResolvable)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-evaluationform.html#cfn-connect-evaluationform-autoevaluationconfiguration)
+     * @param autoEvaluationConfiguration 
+     */
+    public
+        fun autoEvaluationConfiguration(autoEvaluationConfiguration: AutoEvaluationConfigurationProperty)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-evaluationform.html#cfn-connect-evaluationform-autoevaluationconfiguration)
+     * @param autoEvaluationConfiguration 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("43da913f7ff45d04dd0e4b9221502099d767dfd18b5f269aeada054135ae5a81")
+    public
+        fun autoEvaluationConfiguration(autoEvaluationConfiguration: AutoEvaluationConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * The description of the evaluation form.
      *
      * *Length Constraints* : Minimum length of 0. Maximum length of 1024.
@@ -412,6 +466,34 @@ public open class CfnEvaluationForm(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnEvaluationForm.Builder =
         software.amazon.awscdk.services.connect.CfnEvaluationForm.Builder.create(scope, id)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-evaluationform.html#cfn-connect-evaluationform-autoevaluationconfiguration)
+     * @param autoEvaluationConfiguration 
+     */
+    override fun autoEvaluationConfiguration(autoEvaluationConfiguration: IResolvable) {
+      cdkBuilder.autoEvaluationConfiguration(autoEvaluationConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-evaluationform.html#cfn-connect-evaluationform-autoevaluationconfiguration)
+     * @param autoEvaluationConfiguration 
+     */
+    override
+        fun autoEvaluationConfiguration(autoEvaluationConfiguration: AutoEvaluationConfigurationProperty) {
+      cdkBuilder.autoEvaluationConfiguration(autoEvaluationConfiguration.let(AutoEvaluationConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-evaluationform.html#cfn-connect-evaluationform-autoevaluationconfiguration)
+     * @param autoEvaluationConfiguration 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("43da913f7ff45d04dd0e4b9221502099d767dfd18b5f269aeada054135ae5a81")
+    override
+        fun autoEvaluationConfiguration(autoEvaluationConfiguration: AutoEvaluationConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        autoEvaluationConfiguration(AutoEvaluationConfigurationProperty(autoEvaluationConfiguration))
 
     /**
      * The description of the evaluation form.
@@ -584,6 +666,97 @@ public open class CfnEvaluationForm(
     internal fun unwrap(wrapped: CfnEvaluationForm):
         software.amazon.awscdk.services.connect.CfnEvaluationForm = wrapped.cdkObject as
         software.amazon.awscdk.services.connect.CfnEvaluationForm
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * AutoEvaluationConfigurationProperty autoEvaluationConfigurationProperty =
+   * AutoEvaluationConfigurationProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-autoevaluationconfiguration.html)
+   */
+  public interface AutoEvaluationConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-autoevaluationconfiguration.html#cfn-connect-evaluationform-autoevaluationconfiguration-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [AutoEvaluationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled the value to be set.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled the value to be set.
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.AutoEvaluationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.AutoEvaluationConfigurationProperty.builder()
+
+      /**
+       * @param enabled the value to be set.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled the value to be set.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.AutoEvaluationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.AutoEvaluationConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        AutoEvaluationConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-autoevaluationconfiguration.html#cfn-connect-evaluationform-autoevaluationconfiguration-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AutoEvaluationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.AutoEvaluationConfigurationProperty):
+          AutoEvaluationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoEvaluationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AutoEvaluationConfigurationProperty):
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.AutoEvaluationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnEvaluationForm.AutoEvaluationConfigurationProperty
+    }
   }
 
   /**
@@ -1008,7 +1181,7 @@ public open class CfnEvaluationForm(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionautomation.html#cfn-connect-evaluationform-evaluationformnumericquestionautomation-propertyvalue)
      */
-    public fun propertyValue(): Any
+    public fun propertyValue(): Any? = unwrap(this).getPropertyValue()
 
     /**
      * A builder for [EvaluationFormNumericQuestionAutomationProperty]
@@ -1016,17 +1189,17 @@ public open class CfnEvaluationForm(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param propertyValue The property value of the automation. 
+       * @param propertyValue The property value of the automation.
        */
       public fun propertyValue(propertyValue: IResolvable)
 
       /**
-       * @param propertyValue The property value of the automation. 
+       * @param propertyValue The property value of the automation.
        */
       public fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty)
 
       /**
-       * @param propertyValue The property value of the automation. 
+       * @param propertyValue The property value of the automation.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c1b7fb14f46a5514785021373b865ef90fc264cc00a77fd4e30965d5c7f300a6")
@@ -1041,21 +1214,21 @@ public open class CfnEvaluationForm(
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty.builder()
 
       /**
-       * @param propertyValue The property value of the automation. 
+       * @param propertyValue The property value of the automation.
        */
       override fun propertyValue(propertyValue: IResolvable) {
         cdkBuilder.propertyValue(propertyValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param propertyValue The property value of the automation. 
+       * @param propertyValue The property value of the automation.
        */
       override fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty) {
         cdkBuilder.propertyValue(propertyValue.let(NumericQuestionPropertyValueAutomationProperty.Companion::unwrap))
       }
 
       /**
-       * @param propertyValue The property value of the automation. 
+       * @param propertyValue The property value of the automation.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c1b7fb14f46a5514785021373b865ef90fc264cc00a77fd4e30965d5c7f300a6")
@@ -1077,7 +1250,7 @@ public open class CfnEvaluationForm(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionautomation.html#cfn-connect-evaluationform-evaluationformnumericquestionautomation-propertyvalue)
        */
-      override fun propertyValue(): Any = unwrap(this).getPropertyValue()
+      override fun propertyValue(): Any? = unwrap(this).getPropertyValue()
     }
 
     public companion object {

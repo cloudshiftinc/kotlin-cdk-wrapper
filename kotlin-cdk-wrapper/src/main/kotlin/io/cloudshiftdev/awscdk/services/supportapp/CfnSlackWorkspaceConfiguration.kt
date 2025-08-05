@@ -21,7 +21,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * * The team ID for the Slack workspace
  * * The version ID of the resource to use with AWS CloudFormation
  *
- * For more information, see the following topics in the *AWS Support User Guide* :
+ * For more information, see the following topics in the *User Guide* :
  *
  * * [AWS Support App in
  * Slack](https://docs.aws.amazon.com/awssupport/latest/user/aws-support-app-for-slack.html)

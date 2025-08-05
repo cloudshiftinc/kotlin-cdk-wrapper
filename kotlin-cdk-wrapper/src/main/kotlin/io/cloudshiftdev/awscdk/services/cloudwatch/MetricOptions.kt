@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Boolean
 import kotlin.String
 import kotlin.collections.Map
 
@@ -56,6 +57,14 @@ public interface MetricOptions : CommonMetricOptions {
     public fun dimensionsMap(dimensionsMap: Map<String, String>)
 
     /**
+     * @param id Unique identifier for this metric when used in dashboard widgets.
+     * The id can be used as a variable to represent this metric in math expressions.
+     * Valid characters are letters, numbers, and underscore. The first character
+     * must be a lowercase letter.
+     */
+    public fun id(id: String)
+
+    /**
      * @param label Label for this metric when added to a Graph in a Dashboard.
      * You can use [dynamic
      * labels](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/graph-dynamic-labels.html)
@@ -80,6 +89,16 @@ public interface MetricOptions : CommonMetricOptions {
      * @param region Region which this metric comes from.
      */
     public fun region(region: String)
+
+    /**
+     * @param stackAccount Account of the stack this metric is attached to.
+     */
+    public fun stackAccount(stackAccount: String)
+
+    /**
+     * @param stackRegion Region of the stack this metric is attached to.
+     */
+    public fun stackRegion(stackRegion: String)
 
     /**
      * @param statistic What function to use for aggregating.
@@ -113,6 +132,13 @@ public interface MetricOptions : CommonMetricOptions {
      * CloudWatch does not honor this property for graphs.
      */
     public fun unit(unit: Unit)
+
+    /**
+     * @param visible Whether this metric should be visible in dashboard graphs.
+     * Setting this to false is useful when you want to hide raw metrics
+     * that are used in math expressions, and show only the expression results.
+     */
+    public fun visible(visible: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -139,6 +165,16 @@ public interface MetricOptions : CommonMetricOptions {
      */
     override fun dimensionsMap(dimensionsMap: Map<String, String>) {
       cdkBuilder.dimensionsMap(dimensionsMap)
+    }
+
+    /**
+     * @param id Unique identifier for this metric when used in dashboard widgets.
+     * The id can be used as a variable to represent this metric in math expressions.
+     * Valid characters are letters, numbers, and underscore. The first character
+     * must be a lowercase letter.
+     */
+    override fun id(id: String) {
+      cdkBuilder.id(id)
     }
 
     /**
@@ -171,6 +207,20 @@ public interface MetricOptions : CommonMetricOptions {
      */
     override fun region(region: String) {
       cdkBuilder.region(region)
+    }
+
+    /**
+     * @param stackAccount Account of the stack this metric is attached to.
+     */
+    override fun stackAccount(stackAccount: String) {
+      cdkBuilder.stackAccount(stackAccount)
+    }
+
+    /**
+     * @param stackRegion Region of the stack this metric is attached to.
+     */
+    override fun stackRegion(stackRegion: String) {
+      cdkBuilder.stackRegion(stackRegion)
     }
 
     /**
@@ -210,6 +260,15 @@ public interface MetricOptions : CommonMetricOptions {
       cdkBuilder.unit(unit.let(Unit.Companion::unwrap))
     }
 
+    /**
+     * @param visible Whether this metric should be visible in dashboard graphs.
+     * Setting this to false is useful when you want to hide raw metrics
+     * that are used in math expressions, and show only the expression results.
+     */
+    override fun visible(visible: Boolean) {
+      cdkBuilder.visible(visible)
+    }
+
     public fun build(): software.amazon.awscdk.services.cloudwatch.MetricOptions =
         cdkBuilder.build()
   }
@@ -240,6 +299,17 @@ public interface MetricOptions : CommonMetricOptions {
      */
     override fun dimensionsMap(): Map<String, String> = unwrap(this).getDimensionsMap() ?:
         emptyMap()
+
+    /**
+     * Unique identifier for this metric when used in dashboard widgets.
+     *
+     * The id can be used as a variable to represent this metric in math expressions.
+     * Valid characters are letters, numbers, and underscore. The first character
+     * must be a lowercase letter.
+     *
+     * Default: - No ID
+     */
+    override fun id(): String? = unwrap(this).getId()
 
     /**
      * Label for this metric when added to a Graph in a Dashboard.
@@ -273,6 +343,20 @@ public interface MetricOptions : CommonMetricOptions {
      * Default: - Deployment region.
      */
     override fun region(): String? = unwrap(this).getRegion()
+
+    /**
+     * Account of the stack this metric is attached to.
+     *
+     * Default: - Deployment account.
+     */
+    override fun stackAccount(): String? = unwrap(this).getStackAccount()
+
+    /**
+     * Region of the stack this metric is attached to.
+     *
+     * Default: - Deployment region.
+     */
+    override fun stackRegion(): String? = unwrap(this).getStackRegion()
 
     /**
      * What function to use for aggregating.
@@ -312,6 +396,16 @@ public interface MetricOptions : CommonMetricOptions {
      * Default: - All metric datums in the given metric stream
      */
     override fun unit(): Unit? = unwrap(this).getUnit()?.let(Unit::wrap)
+
+    /**
+     * Whether this metric should be visible in dashboard graphs.
+     *
+     * Setting this to false is useful when you want to hide raw metrics
+     * that are used in math expressions, and show only the expression results.
+     *
+     * Default: true
+     */
+    override fun visible(): Boolean? = unwrap(this).getVisible()
   }
 
   public companion object {

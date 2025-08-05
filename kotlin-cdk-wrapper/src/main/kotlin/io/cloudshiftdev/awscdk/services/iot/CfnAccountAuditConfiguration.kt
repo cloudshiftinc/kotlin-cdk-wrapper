@@ -49,6 +49,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .conflictingClientIdsCheck(AuditCheckConfigurationProperty.builder()
  * .enabled(false)
  * .build())
+ * .deviceCertificateAgeCheck(DeviceCertAgeAuditCheckConfigurationProperty.builder()
+ * .configuration(CertAgeCheckCustomConfigurationProperty.builder()
+ * .certAgeThresholdInDays("certAgeThresholdInDays")
+ * .build())
+ * .enabled(false)
+ * .build())
  * .deviceCertificateExpiringCheck(AuditCheckConfigurationProperty.builder()
  * .enabled(false)
  * .build())
@@ -243,7 +249,7 @@ public open class CfnAccountAuditConfiguration(
      * You can't disable a check if it's used by any scheduled audit. You must delete the check from
      * the scheduled audit or delete the scheduled audit itself to disable the check.
      *
-     * For more information on avialbe auidt checks see [AWS::IoT::AccountAuditConfiguration
+     * For more information on available audit checks see [AWS::IoT::AccountAuditConfiguration
      * AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-accountauditconfiguration.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations)
@@ -264,7 +270,7 @@ public open class CfnAccountAuditConfiguration(
      * You can't disable a check if it's used by any scheduled audit. You must delete the check from
      * the scheduled audit or delete the scheduled audit itself to disable the check.
      *
-     * For more information on avialbe auidt checks see [AWS::IoT::AccountAuditConfiguration
+     * For more information on available audit checks see [AWS::IoT::AccountAuditConfiguration
      * AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-accountauditconfiguration.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations)
@@ -285,7 +291,7 @@ public open class CfnAccountAuditConfiguration(
      * You can't disable a check if it's used by any scheduled audit. You must delete the check from
      * the scheduled audit or delete the scheduled audit itself to disable the check.
      *
-     * For more information on avialbe auidt checks see [AWS::IoT::AccountAuditConfiguration
+     * For more information on available audit checks see [AWS::IoT::AccountAuditConfiguration
      * AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-accountauditconfiguration.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations)
@@ -373,7 +379,7 @@ public open class CfnAccountAuditConfiguration(
      * You can't disable a check if it's used by any scheduled audit. You must delete the check from
      * the scheduled audit or delete the scheduled audit itself to disable the check.
      *
-     * For more information on avialbe auidt checks see [AWS::IoT::AccountAuditConfiguration
+     * For more information on available audit checks see [AWS::IoT::AccountAuditConfiguration
      * AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-accountauditconfiguration.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations)
@@ -396,7 +402,7 @@ public open class CfnAccountAuditConfiguration(
      * You can't disable a check if it's used by any scheduled audit. You must delete the check from
      * the scheduled audit or delete the scheduled audit itself to disable the check.
      *
-     * For more information on avialbe auidt checks see [AWS::IoT::AccountAuditConfiguration
+     * For more information on available audit checks see [AWS::IoT::AccountAuditConfiguration
      * AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-accountauditconfiguration.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations)
@@ -420,7 +426,7 @@ public open class CfnAccountAuditConfiguration(
      * You can't disable a check if it's used by any scheduled audit. You must delete the check from
      * the scheduled audit or delete the scheduled audit itself to disable the check.
      *
-     * For more information on avialbe auidt checks see [AWS::IoT::AccountAuditConfiguration
+     * For more information on available audit checks see [AWS::IoT::AccountAuditConfiguration
      * AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-accountauditconfiguration.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations)
@@ -629,6 +635,12 @@ public open class CfnAccountAuditConfiguration(
    * .conflictingClientIdsCheck(AuditCheckConfigurationProperty.builder()
    * .enabled(false)
    * .build())
+   * .deviceCertificateAgeCheck(DeviceCertAgeAuditCheckConfigurationProperty.builder()
+   * .configuration(CertAgeCheckCustomConfigurationProperty.builder()
+   * .certAgeThresholdInDays("certAgeThresholdInDays")
+   * .build())
+   * .enabled(false)
+   * .build())
    * .deviceCertificateExpiringCheck(AuditCheckConfigurationProperty.builder()
    * .enabled(false)
    * .build())
@@ -711,9 +723,19 @@ public open class CfnAccountAuditConfiguration(
     public fun conflictingClientIdsCheck(): Any? = unwrap(this).getConflictingClientIdsCheck()
 
     /**
+     * Checks when a device certificate has been active for a number of days greater than or equal
+     * to the number you specify.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-devicecertificateagecheck)
+     */
+    public fun deviceCertificateAgeCheck(): Any? = unwrap(this).getDeviceCertificateAgeCheck()
+
+    /**
      * Checks if a device certificate is expiring.
      *
-     * This check applies to device certificates expiring within 30 days or that have expired.
+     * By default, this check applies to device certificates expiring within 30 days or that have
+     * expired. You can modify this threshold by configuring the
+     * DeviceCertExpirationAuditCheckConfiguration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-devicecertificateexpiringcheck)
      */
@@ -927,21 +949,49 @@ public open class CfnAccountAuditConfiguration(
           fun conflictingClientIdsCheck(conflictingClientIdsCheck: AuditCheckConfigurationProperty.Builder.() -> Unit)
 
       /**
+       * @param deviceCertificateAgeCheck Checks when a device certificate has been active for a
+       * number of days greater than or equal to the number you specify.
+       */
+      public fun deviceCertificateAgeCheck(deviceCertificateAgeCheck: IResolvable)
+
+      /**
+       * @param deviceCertificateAgeCheck Checks when a device certificate has been active for a
+       * number of days greater than or equal to the number you specify.
+       */
+      public
+          fun deviceCertificateAgeCheck(deviceCertificateAgeCheck: DeviceCertAgeAuditCheckConfigurationProperty)
+
+      /**
+       * @param deviceCertificateAgeCheck Checks when a device certificate has been active for a
+       * number of days greater than or equal to the number you specify.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5151a29c3c326af3c750460eed761090d072c908e066a296960f914e8bec398f")
+      public
+          fun deviceCertificateAgeCheck(deviceCertificateAgeCheck: DeviceCertAgeAuditCheckConfigurationProperty.Builder.() -> Unit)
+
+      /**
        * @param deviceCertificateExpiringCheck Checks if a device certificate is expiring.
-       * This check applies to device certificates expiring within 30 days or that have expired.
+       * By default, this check applies to device certificates expiring within 30 days or that have
+       * expired. You can modify this threshold by configuring the
+       * DeviceCertExpirationAuditCheckConfiguration.
        */
       public fun deviceCertificateExpiringCheck(deviceCertificateExpiringCheck: IResolvable)
 
       /**
        * @param deviceCertificateExpiringCheck Checks if a device certificate is expiring.
-       * This check applies to device certificates expiring within 30 days or that have expired.
+       * By default, this check applies to device certificates expiring within 30 days or that have
+       * expired. You can modify this threshold by configuring the
+       * DeviceCertExpirationAuditCheckConfiguration.
        */
       public
           fun deviceCertificateExpiringCheck(deviceCertificateExpiringCheck: AuditCheckConfigurationProperty)
 
       /**
        * @param deviceCertificateExpiringCheck Checks if a device certificate is expiring.
-       * This check applies to device certificates expiring within 30 days or that have expired.
+       * By default, this check applies to device certificates expiring within 30 days or that have
+       * expired. You can modify this threshold by configuring the
+       * DeviceCertExpirationAuditCheckConfiguration.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9814c5ca0741b1b13ae05eda9e8c60d0d330ac2f6ab0cc7544949b75cdee9ad8")
@@ -1340,8 +1390,38 @@ public open class CfnAccountAuditConfiguration(
           conflictingClientIdsCheck(AuditCheckConfigurationProperty(conflictingClientIdsCheck))
 
       /**
+       * @param deviceCertificateAgeCheck Checks when a device certificate has been active for a
+       * number of days greater than or equal to the number you specify.
+       */
+      override fun deviceCertificateAgeCheck(deviceCertificateAgeCheck: IResolvable) {
+        cdkBuilder.deviceCertificateAgeCheck(deviceCertificateAgeCheck.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param deviceCertificateAgeCheck Checks when a device certificate has been active for a
+       * number of days greater than or equal to the number you specify.
+       */
+      override
+          fun deviceCertificateAgeCheck(deviceCertificateAgeCheck: DeviceCertAgeAuditCheckConfigurationProperty) {
+        cdkBuilder.deviceCertificateAgeCheck(deviceCertificateAgeCheck.let(DeviceCertAgeAuditCheckConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param deviceCertificateAgeCheck Checks when a device certificate has been active for a
+       * number of days greater than or equal to the number you specify.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5151a29c3c326af3c750460eed761090d072c908e066a296960f914e8bec398f")
+      override
+          fun deviceCertificateAgeCheck(deviceCertificateAgeCheck: DeviceCertAgeAuditCheckConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          deviceCertificateAgeCheck(DeviceCertAgeAuditCheckConfigurationProperty(deviceCertificateAgeCheck))
+
+      /**
        * @param deviceCertificateExpiringCheck Checks if a device certificate is expiring.
-       * This check applies to device certificates expiring within 30 days or that have expired.
+       * By default, this check applies to device certificates expiring within 30 days or that have
+       * expired. You can modify this threshold by configuring the
+       * DeviceCertExpirationAuditCheckConfiguration.
        */
       override fun deviceCertificateExpiringCheck(deviceCertificateExpiringCheck: IResolvable) {
         cdkBuilder.deviceCertificateExpiringCheck(deviceCertificateExpiringCheck.let(IResolvable.Companion::unwrap))
@@ -1349,7 +1429,9 @@ public open class CfnAccountAuditConfiguration(
 
       /**
        * @param deviceCertificateExpiringCheck Checks if a device certificate is expiring.
-       * This check applies to device certificates expiring within 30 days or that have expired.
+       * By default, this check applies to device certificates expiring within 30 days or that have
+       * expired. You can modify this threshold by configuring the
+       * DeviceCertExpirationAuditCheckConfiguration.
        */
       override
           fun deviceCertificateExpiringCheck(deviceCertificateExpiringCheck: AuditCheckConfigurationProperty) {
@@ -1358,7 +1440,9 @@ public open class CfnAccountAuditConfiguration(
 
       /**
        * @param deviceCertificateExpiringCheck Checks if a device certificate is expiring.
-       * This check applies to device certificates expiring within 30 days or that have expired.
+       * By default, this check applies to device certificates expiring within 30 days or that have
+       * expired. You can modify this threshold by configuring the
+       * DeviceCertExpirationAuditCheckConfiguration.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9814c5ca0741b1b13ae05eda9e8c60d0d330ac2f6ab0cc7544949b75cdee9ad8")
@@ -1739,9 +1823,19 @@ public open class CfnAccountAuditConfiguration(
       override fun conflictingClientIdsCheck(): Any? = unwrap(this).getConflictingClientIdsCheck()
 
       /**
+       * Checks when a device certificate has been active for a number of days greater than or equal
+       * to the number you specify.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-devicecertificateagecheck)
+       */
+      override fun deviceCertificateAgeCheck(): Any? = unwrap(this).getDeviceCertificateAgeCheck()
+
+      /**
        * Checks if a device certificate is expiring.
        *
-       * This check applies to device certificates expiring within 30 days or that have expired.
+       * By default, this check applies to device certificates expiring within 30 days or that have
+       * expired. You can modify this threshold by configuring the
+       * DeviceCertExpirationAuditCheckConfiguration.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-devicecertificateexpiringcheck)
        */
@@ -2130,6 +2224,276 @@ public open class CfnAccountAuditConfiguration(
           software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetProperty
+    }
+  }
+
+  /**
+   * Configuration structure containing settings for the device certificate age check.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * CertAgeCheckCustomConfigurationProperty certAgeCheckCustomConfigurationProperty =
+   * CertAgeCheckCustomConfigurationProperty.builder()
+   * .certAgeThresholdInDays("certAgeThresholdInDays")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-certagecheckcustomconfiguration.html)
+   */
+  public interface CertAgeCheckCustomConfigurationProperty {
+    /**
+     * The number of days that defines when a device certificate is considered to have aged.
+     *
+     * The check will report a finding if a certificate has been active for a number of days greater
+     * than or equal to this threshold value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-certagecheckcustomconfiguration.html#cfn-iot-accountauditconfiguration-certagecheckcustomconfiguration-certagethresholdindays)
+     */
+    public fun certAgeThresholdInDays(): String? = unwrap(this).getCertAgeThresholdInDays()
+
+    /**
+     * A builder for [CertAgeCheckCustomConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certAgeThresholdInDays The number of days that defines when a device certificate is
+       * considered to have aged.
+       * The check will report a finding if a certificate has been active for a number of days
+       * greater than or equal to this threshold value.
+       */
+      public fun certAgeThresholdInDays(certAgeThresholdInDays: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.CertAgeCheckCustomConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.CertAgeCheckCustomConfigurationProperty.builder()
+
+      /**
+       * @param certAgeThresholdInDays The number of days that defines when a device certificate is
+       * considered to have aged.
+       * The check will report a finding if a certificate has been active for a number of days
+       * greater than or equal to this threshold value.
+       */
+      override fun certAgeThresholdInDays(certAgeThresholdInDays: String) {
+        cdkBuilder.certAgeThresholdInDays(certAgeThresholdInDays)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.CertAgeCheckCustomConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.CertAgeCheckCustomConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        CertAgeCheckCustomConfigurationProperty {
+      /**
+       * The number of days that defines when a device certificate is considered to have aged.
+       *
+       * The check will report a finding if a certificate has been active for a number of days
+       * greater than or equal to this threshold value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-certagecheckcustomconfiguration.html#cfn-iot-accountauditconfiguration-certagecheckcustomconfiguration-certagethresholdindays)
+       */
+      override fun certAgeThresholdInDays(): String? = unwrap(this).getCertAgeThresholdInDays()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CertAgeCheckCustomConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.CertAgeCheckCustomConfigurationProperty):
+          CertAgeCheckCustomConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CertAgeCheckCustomConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CertAgeCheckCustomConfigurationProperty):
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.CertAgeCheckCustomConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.CertAgeCheckCustomConfigurationProperty
+    }
+  }
+
+  /**
+   * Configuration for the device certificate age audit check.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * DeviceCertAgeAuditCheckConfigurationProperty deviceCertAgeAuditCheckConfigurationProperty =
+   * DeviceCertAgeAuditCheckConfigurationProperty.builder()
+   * .configuration(CertAgeCheckCustomConfigurationProperty.builder()
+   * .certAgeThresholdInDays("certAgeThresholdInDays")
+   * .build())
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-devicecertageauditcheckconfiguration.html)
+   */
+  public interface DeviceCertAgeAuditCheckConfigurationProperty {
+    /**
+     * Configuration settings for the device certificate age check, including the threshold in days
+     * for certificate age.
+     *
+     * This configuration is of type `CertAgeCheckCustomConfiguration` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-devicecertageauditcheckconfiguration.html#cfn-iot-accountauditconfiguration-devicecertageauditcheckconfiguration-configuration)
+     */
+    public fun configuration(): Any? = unwrap(this).getConfiguration()
+
+    /**
+     * True if this audit check is enabled for this account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-devicecertageauditcheckconfiguration.html#cfn-iot-accountauditconfiguration-devicecertageauditcheckconfiguration-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [DeviceCertAgeAuditCheckConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param configuration Configuration settings for the device certificate age check, including
+       * the threshold in days for certificate age.
+       * This configuration is of type `CertAgeCheckCustomConfiguration` .
+       */
+      public fun configuration(configuration: IResolvable)
+
+      /**
+       * @param configuration Configuration settings for the device certificate age check, including
+       * the threshold in days for certificate age.
+       * This configuration is of type `CertAgeCheckCustomConfiguration` .
+       */
+      public fun configuration(configuration: CertAgeCheckCustomConfigurationProperty)
+
+      /**
+       * @param configuration Configuration settings for the device certificate age check, including
+       * the threshold in days for certificate age.
+       * This configuration is of type `CertAgeCheckCustomConfiguration` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f8cd2bddb6535ce1091288a7a4c29595e4dfd7f72eb16d874c586aa86721e88c")
+      public
+          fun configuration(configuration: CertAgeCheckCustomConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param enabled True if this audit check is enabled for this account.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled True if this audit check is enabled for this account.
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.DeviceCertAgeAuditCheckConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.DeviceCertAgeAuditCheckConfigurationProperty.builder()
+
+      /**
+       * @param configuration Configuration settings for the device certificate age check, including
+       * the threshold in days for certificate age.
+       * This configuration is of type `CertAgeCheckCustomConfiguration` .
+       */
+      override fun configuration(configuration: IResolvable) {
+        cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param configuration Configuration settings for the device certificate age check, including
+       * the threshold in days for certificate age.
+       * This configuration is of type `CertAgeCheckCustomConfiguration` .
+       */
+      override fun configuration(configuration: CertAgeCheckCustomConfigurationProperty) {
+        cdkBuilder.configuration(configuration.let(CertAgeCheckCustomConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param configuration Configuration settings for the device certificate age check, including
+       * the threshold in days for certificate age.
+       * This configuration is of type `CertAgeCheckCustomConfiguration` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f8cd2bddb6535ce1091288a7a4c29595e4dfd7f72eb16d874c586aa86721e88c")
+      override
+          fun configuration(configuration: CertAgeCheckCustomConfigurationProperty.Builder.() -> Unit):
+          Unit = configuration(CertAgeCheckCustomConfigurationProperty(configuration))
+
+      /**
+       * @param enabled True if this audit check is enabled for this account.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled True if this audit check is enabled for this account.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.DeviceCertAgeAuditCheckConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.DeviceCertAgeAuditCheckConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        DeviceCertAgeAuditCheckConfigurationProperty {
+      /**
+       * Configuration settings for the device certificate age check, including the threshold in
+       * days for certificate age.
+       *
+       * This configuration is of type `CertAgeCheckCustomConfiguration` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-devicecertageauditcheckconfiguration.html#cfn-iot-accountauditconfiguration-devicecertageauditcheckconfiguration-configuration)
+       */
+      override fun configuration(): Any? = unwrap(this).getConfiguration()
+
+      /**
+       * True if this audit check is enabled for this account.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-devicecertageauditcheckconfiguration.html#cfn-iot-accountauditconfiguration-devicecertageauditcheckconfiguration-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DeviceCertAgeAuditCheckConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.DeviceCertAgeAuditCheckConfigurationProperty):
+          DeviceCertAgeAuditCheckConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeviceCertAgeAuditCheckConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DeviceCertAgeAuditCheckConfigurationProperty):
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.DeviceCertAgeAuditCheckConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.DeviceCertAgeAuditCheckConfigurationProperty
     }
   }
 }

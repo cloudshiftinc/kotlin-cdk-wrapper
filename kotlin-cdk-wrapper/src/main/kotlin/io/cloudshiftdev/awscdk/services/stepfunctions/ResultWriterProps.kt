@@ -6,53 +6,61 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 
 /**
- * Interface for Result Writer configuration properties.
+ * (deprecated) Interface for Result Writer configuration props.
  *
  * Example:
  *
  * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.s3.*;
- * // create a bucket
- * Bucket bucket = new Bucket(this, "Bucket");
- * DistributedMap distributedMap = DistributedMap.Builder.create(this, "Distributed Map State")
- * .resultWriter(ResultWriter.Builder.create()
+ * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
+ * Bucket bucket;
+ * ResultWriterProps resultWriterProps = ResultWriterProps.builder()
  * .bucket(bucket)
- * .prefix("my-prefix")
- * .build())
+ * // the properties below are optional
+ * .prefix("prefix")
  * .build();
- * distributedMap.itemProcessor(new Pass(this, "Pass State"));
  * ```
+ *
+ * @deprecated use [ResultWriterV2Props ] instead
  */
 public interface ResultWriterProps {
   /**
-   * S3 Bucket in which to save Map Run results.
+   * (deprecated) S3 Bucket in which to save Map Run results.
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun bucket(): IBucket
 
   /**
-   * S3 prefix in which to save Map Run results.
+   * (deprecated) S3 prefix in which to save Map Run results.
    *
    * Default: - No prefix
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun prefix(): String? = unwrap(this).getPrefix()
 
   /**
    * A builder for [ResultWriterProps]
    */
   @CdkDslMarker
+  @Deprecated(message = "deprecated in CDK")
   public interface Builder {
     /**
      * @param bucket S3 Bucket in which to save Map Run results. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun bucket(bucket: IBucket)
 
     /**
      * @param prefix S3 prefix in which to save Map Run results.
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun prefix(prefix: String)
   }
 
@@ -63,6 +71,7 @@ public interface ResultWriterProps {
     /**
      * @param bucket S3 Bucket in which to save Map Run results. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
@@ -70,6 +79,7 @@ public interface ResultWriterProps {
     /**
      * @param prefix S3 prefix in which to save Map Run results.
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun prefix(prefix: String) {
       cdkBuilder.prefix(prefix)
     }
@@ -83,15 +93,17 @@ public interface ResultWriterProps {
   ) : CdkObject(cdkObject),
       ResultWriterProps {
     /**
-     * S3 Bucket in which to save Map Run results.
+     * (deprecated) S3 Bucket in which to save Map Run results.
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
 
     /**
-     * S3 prefix in which to save Map Run results.
+     * (deprecated) S3 prefix in which to save Map Run results.
      *
      * Default: - No prefix
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun prefix(): String? = unwrap(this).getPrefix()
   }
 

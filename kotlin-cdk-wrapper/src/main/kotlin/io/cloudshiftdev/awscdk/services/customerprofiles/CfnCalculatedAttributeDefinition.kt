@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -46,7 +47,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .objectCount(123)
  * .range(RangeProperty.builder()
  * .unit("unit")
+ * // the properties below are optional
+ * .timestampFormat("timestampFormat")
+ * .timestampSource("timestampSource")
  * .value(123)
+ * .valueRange(ValueRangeProperty.builder()
+ * .end(123)
+ * .start(123)
+ * .build())
  * .build())
  * .threshold(ThresholdProperty.builder()
  * .operator("operator")
@@ -59,6 +67,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .key("key")
  * .value("value")
  * .build()))
+ * .useHistoricalData(false)
  * .build();
  * ```
  *
@@ -94,6 +103,17 @@ public open class CfnCalculatedAttributeDefinition(
    * The timestamp of when the calculated attribute definition was most recently edited.
    */
   public open fun attrLastUpdatedAt(): String = unwrap(this).getAttrLastUpdatedAt()
+
+  /**
+   * The readiness status of the calculated attribute.
+   */
+  public open fun attrReadiness(): IResolvable =
+      unwrap(this).getAttrReadiness().let(IResolvable::wrap)
+
+  /**
+   * Status of the Calculated Attribute creation (whether all historical data has been indexed.).
+   */
+  public open fun attrStatus(): String = unwrap(this).getAttrStatus()
 
   /**
    * Mathematical expression and a list of attribute items specified in that expression.
@@ -242,6 +262,28 @@ public open class CfnCalculatedAttributeDefinition(
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
+   * Whether historical data ingested before the Calculated Attribute was created should be included
+   * in calculations.
+   */
+  public open fun useHistoricalData(): Any? = unwrap(this).getUseHistoricalData()
+
+  /**
+   * Whether historical data ingested before the Calculated Attribute was created should be included
+   * in calculations.
+   */
+  public open fun useHistoricalData(`value`: Boolean) {
+    unwrap(this).setUseHistoricalData(`value`)
+  }
+
+  /**
+   * Whether historical data ingested before the Calculated Attribute was created should be included
+   * in calculations.
+   */
+  public open fun useHistoricalData(`value`: IResolvable) {
+    unwrap(this).setUseHistoricalData(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition].
    */
@@ -360,6 +402,26 @@ public open class CfnCalculatedAttributeDefinition(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     public fun tags(vararg tags: CfnTag)
+
+    /**
+     * Whether historical data ingested before the Calculated Attribute was created should be
+     * included in calculations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-calculatedattributedefinition.html#cfn-customerprofiles-calculatedattributedefinition-usehistoricaldata)
+     * @param useHistoricalData Whether historical data ingested before the Calculated Attribute was
+     * created should be included in calculations. 
+     */
+    public fun useHistoricalData(useHistoricalData: Boolean)
+
+    /**
+     * Whether historical data ingested before the Calculated Attribute was created should be
+     * included in calculations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-calculatedattributedefinition.html#cfn-customerprofiles-calculatedattributedefinition-usehistoricaldata)
+     * @param useHistoricalData Whether historical data ingested before the Calculated Attribute was
+     * created should be included in calculations. 
+     */
+    public fun useHistoricalData(useHistoricalData: IResolvable)
   }
 
   private class BuilderImpl(
@@ -506,6 +568,30 @@ public open class CfnCalculatedAttributeDefinition(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    /**
+     * Whether historical data ingested before the Calculated Attribute was created should be
+     * included in calculations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-calculatedattributedefinition.html#cfn-customerprofiles-calculatedattributedefinition-usehistoricaldata)
+     * @param useHistoricalData Whether historical data ingested before the Calculated Attribute was
+     * created should be included in calculations. 
+     */
+    override fun useHistoricalData(useHistoricalData: Boolean) {
+      cdkBuilder.useHistoricalData(useHistoricalData)
+    }
+
+    /**
+     * Whether historical data ingested before the Calculated Attribute was created should be
+     * included in calculations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-calculatedattributedefinition.html#cfn-customerprofiles-calculatedattributedefinition-usehistoricaldata)
+     * @param useHistoricalData Whether historical data ingested before the Calculated Attribute was
+     * created should be included in calculations. 
+     */
+    override fun useHistoricalData(useHistoricalData: IResolvable) {
+      cdkBuilder.useHistoricalData(useHistoricalData.let(IResolvable.Companion::unwrap))
+    }
 
     public fun build():
         software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition =
@@ -784,7 +870,14 @@ public open class CfnCalculatedAttributeDefinition(
    * .objectCount(123)
    * .range(RangeProperty.builder()
    * .unit("unit")
+   * // the properties below are optional
+   * .timestampFormat("timestampFormat")
+   * .timestampSource("timestampSource")
    * .value(123)
+   * .valueRange(ValueRangeProperty.builder()
+   * .end(123)
+   * .start(123)
+   * .build())
    * .build())
    * .threshold(ThresholdProperty.builder()
    * .operator("operator")
@@ -979,13 +1072,44 @@ public open class CfnCalculatedAttributeDefinition(
    * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
    * RangeProperty rangeProperty = RangeProperty.builder()
    * .unit("unit")
+   * // the properties below are optional
+   * .timestampFormat("timestampFormat")
+   * .timestampSource("timestampSource")
    * .value(123)
+   * .valueRange(ValueRangeProperty.builder()
+   * .end(123)
+   * .start(123)
+   * .build())
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html)
    */
   public interface RangeProperty {
+    /**
+     * The format the timestamp field in your JSON object is specified.
+     *
+     * This value should be one of EPOCHMILLI (for Unix epoch timestamps with second/millisecond
+     * level precision) or ISO_8601 (following ISO_8601 format with second/millisecond level precision,
+     * with an optional offset of Z or in the format HH:MM or HHMM.). E.g. if your object type is
+     * MyType and source JSON is {"generatedAt": {"timestamp": "2001-07-04T12:08:56.235-0700"}}, then
+     * TimestampFormat should be "ISO_8601"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html#cfn-customerprofiles-calculatedattributedefinition-range-timestampformat)
+     */
+    public fun timestampFormat(): String? = unwrap(this).getTimestampFormat()
+
+    /**
+     * An expression specifying the field in your JSON object from which the date should be parsed.
+     *
+     * The expression should follow the structure of "{ObjectTypeName.<Location of timestamp field
+     * in JSON pointer format>}". E.g. if your object type is MyType and source JSON is {"generatedAt":
+     * {"timestamp": "1737587945945"}}, then TimestampSource should be "{MyType.generatedAt.timestamp}"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html#cfn-customerprofiles-calculatedattributedefinition-range-timestampsource)
+     */
+    public fun timestampSource(): String? = unwrap(this).getTimestampSource()
+
     /**
      * The unit of time.
      *
@@ -998,7 +1122,18 @@ public open class CfnCalculatedAttributeDefinition(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html#cfn-customerprofiles-calculatedattributedefinition-range-value)
      */
-    public fun `value`(): Number
+    public fun `value`(): Number? = unwrap(this).getValue()
+
+    /**
+     * A structure letting customers specify a relative time window over which over which data is
+     * included in the Calculated Attribute.
+     *
+     * Use positive numbers to indicate that the endpoint is in the past, and negative numbers to
+     * indicate it is in the future. ValueRange overrides Value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html#cfn-customerprofiles-calculatedattributedefinition-range-valuerange)
+     */
+    public fun valueRange(): Any? = unwrap(this).getValueRange()
 
     /**
      * A builder for [RangeProperty]
@@ -1006,14 +1141,60 @@ public open class CfnCalculatedAttributeDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param timestampFormat The format the timestamp field in your JSON object is specified.
+       * This value should be one of EPOCHMILLI (for Unix epoch timestamps with second/millisecond
+       * level precision) or ISO_8601 (following ISO_8601 format with second/millisecond level
+       * precision, with an optional offset of Z or in the format HH:MM or HHMM.). E.g. if your object
+       * type is MyType and source JSON is {"generatedAt": {"timestamp":
+       * "2001-07-04T12:08:56.235-0700"}}, then TimestampFormat should be "ISO_8601"
+       */
+      public fun timestampFormat(timestampFormat: String)
+
+      /**
+       * @param timestampSource An expression specifying the field in your JSON object from which
+       * the date should be parsed.
+       * The expression should follow the structure of "{ObjectTypeName.<Location of timestamp field
+       * in JSON pointer format>}". E.g. if your object type is MyType and source JSON is
+       * {"generatedAt": {"timestamp": "1737587945945"}}, then TimestampSource should be
+       * "{MyType.generatedAt.timestamp}"
+       */
+      public fun timestampSource(timestampSource: String)
+
+      /**
        * @param unit The unit of time. 
        */
       public fun unit(unit: String)
 
       /**
-       * @param value The amount of time of the specified unit. 
+       * @param value The amount of time of the specified unit.
        */
       public fun `value`(`value`: Number)
+
+      /**
+       * @param valueRange A structure letting customers specify a relative time window over which
+       * over which data is included in the Calculated Attribute.
+       * Use positive numbers to indicate that the endpoint is in the past, and negative numbers to
+       * indicate it is in the future. ValueRange overrides Value.
+       */
+      public fun valueRange(valueRange: IResolvable)
+
+      /**
+       * @param valueRange A structure letting customers specify a relative time window over which
+       * over which data is included in the Calculated Attribute.
+       * Use positive numbers to indicate that the endpoint is in the past, and negative numbers to
+       * indicate it is in the future. ValueRange overrides Value.
+       */
+      public fun valueRange(valueRange: ValueRangeProperty)
+
+      /**
+       * @param valueRange A structure letting customers specify a relative time window over which
+       * over which data is included in the Calculated Attribute.
+       * Use positive numbers to indicate that the endpoint is in the past, and negative numbers to
+       * indicate it is in the future. ValueRange overrides Value.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("136c9bf4603872b209c10a3e093aa863b6197a045446c8cfeb4e1072662c24bb")
+      public fun valueRange(valueRange: ValueRangeProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1023,6 +1204,30 @@ public open class CfnCalculatedAttributeDefinition(
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty.builder()
 
       /**
+       * @param timestampFormat The format the timestamp field in your JSON object is specified.
+       * This value should be one of EPOCHMILLI (for Unix epoch timestamps with second/millisecond
+       * level precision) or ISO_8601 (following ISO_8601 format with second/millisecond level
+       * precision, with an optional offset of Z or in the format HH:MM or HHMM.). E.g. if your object
+       * type is MyType and source JSON is {"generatedAt": {"timestamp":
+       * "2001-07-04T12:08:56.235-0700"}}, then TimestampFormat should be "ISO_8601"
+       */
+      override fun timestampFormat(timestampFormat: String) {
+        cdkBuilder.timestampFormat(timestampFormat)
+      }
+
+      /**
+       * @param timestampSource An expression specifying the field in your JSON object from which
+       * the date should be parsed.
+       * The expression should follow the structure of "{ObjectTypeName.<Location of timestamp field
+       * in JSON pointer format>}". E.g. if your object type is MyType and source JSON is
+       * {"generatedAt": {"timestamp": "1737587945945"}}, then TimestampSource should be
+       * "{MyType.generatedAt.timestamp}"
+       */
+      override fun timestampSource(timestampSource: String) {
+        cdkBuilder.timestampSource(timestampSource)
+      }
+
+      /**
        * @param unit The unit of time. 
        */
       override fun unit(unit: String) {
@@ -1030,11 +1235,42 @@ public open class CfnCalculatedAttributeDefinition(
       }
 
       /**
-       * @param value The amount of time of the specified unit. 
+       * @param value The amount of time of the specified unit.
        */
       override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
+
+      /**
+       * @param valueRange A structure letting customers specify a relative time window over which
+       * over which data is included in the Calculated Attribute.
+       * Use positive numbers to indicate that the endpoint is in the past, and negative numbers to
+       * indicate it is in the future. ValueRange overrides Value.
+       */
+      override fun valueRange(valueRange: IResolvable) {
+        cdkBuilder.valueRange(valueRange.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param valueRange A structure letting customers specify a relative time window over which
+       * over which data is included in the Calculated Attribute.
+       * Use positive numbers to indicate that the endpoint is in the past, and negative numbers to
+       * indicate it is in the future. ValueRange overrides Value.
+       */
+      override fun valueRange(valueRange: ValueRangeProperty) {
+        cdkBuilder.valueRange(valueRange.let(ValueRangeProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param valueRange A structure letting customers specify a relative time window over which
+       * over which data is included in the Calculated Attribute.
+       * Use positive numbers to indicate that the endpoint is in the past, and negative numbers to
+       * indicate it is in the future. ValueRange overrides Value.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("136c9bf4603872b209c10a3e093aa863b6197a045446c8cfeb4e1072662c24bb")
+      override fun valueRange(valueRange: ValueRangeProperty.Builder.() -> Unit): Unit =
+          valueRange(ValueRangeProperty(valueRange))
 
       public fun build():
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty
@@ -1045,6 +1281,32 @@ public open class CfnCalculatedAttributeDefinition(
       cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty,
     ) : CdkObject(cdkObject),
         RangeProperty {
+      /**
+       * The format the timestamp field in your JSON object is specified.
+       *
+       * This value should be one of EPOCHMILLI (for Unix epoch timestamps with second/millisecond
+       * level precision) or ISO_8601 (following ISO_8601 format with second/millisecond level
+       * precision, with an optional offset of Z or in the format HH:MM or HHMM.). E.g. if your object
+       * type is MyType and source JSON is {"generatedAt": {"timestamp":
+       * "2001-07-04T12:08:56.235-0700"}}, then TimestampFormat should be "ISO_8601"
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html#cfn-customerprofiles-calculatedattributedefinition-range-timestampformat)
+       */
+      override fun timestampFormat(): String? = unwrap(this).getTimestampFormat()
+
+      /**
+       * An expression specifying the field in your JSON object from which the date should be
+       * parsed.
+       *
+       * The expression should follow the structure of "{ObjectTypeName.<Location of timestamp field
+       * in JSON pointer format>}". E.g. if your object type is MyType and source JSON is
+       * {"generatedAt": {"timestamp": "1737587945945"}}, then TimestampSource should be
+       * "{MyType.generatedAt.timestamp}"
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html#cfn-customerprofiles-calculatedattributedefinition-range-timestampsource)
+       */
+      override fun timestampSource(): String? = unwrap(this).getTimestampSource()
+
       /**
        * The unit of time.
        *
@@ -1057,7 +1319,18 @@ public open class CfnCalculatedAttributeDefinition(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html#cfn-customerprofiles-calculatedattributedefinition-range-value)
        */
-      override fun `value`(): Number = unwrap(this).getValue()
+      override fun `value`(): Number? = unwrap(this).getValue()
+
+      /**
+       * A structure letting customers specify a relative time window over which over which data is
+       * included in the Calculated Attribute.
+       *
+       * Use positive numbers to indicate that the endpoint is in the past, and negative numbers to
+       * indicate it is in the future. ValueRange overrides Value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html#cfn-customerprofiles-calculatedattributedefinition-range-valuerange)
+       */
+      override fun valueRange(): Any? = unwrap(this).getValueRange()
     }
 
     public companion object {
@@ -1074,6 +1347,119 @@ public open class CfnCalculatedAttributeDefinition(
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty
+    }
+  }
+
+  /**
+   * Information indicating if the Calculated Attribute is ready for use by confirming all
+   * historical data has been processed and reflected.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
+   * ReadinessProperty readinessProperty = ReadinessProperty.builder()
+   * .message("message")
+   * .progressPercentage(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-readiness.html)
+   */
+  public interface ReadinessProperty {
+    /**
+     * Any customer messaging.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-readiness.html#cfn-customerprofiles-calculatedattributedefinition-readiness-message)
+     */
+    public fun message(): String? = unwrap(this).getMessage()
+
+    /**
+     * Approximately how far the Calculated Attribute creation is from completion.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-readiness.html#cfn-customerprofiles-calculatedattributedefinition-readiness-progresspercentage)
+     */
+    public fun progressPercentage(): Number? = unwrap(this).getProgressPercentage()
+
+    /**
+     * A builder for [ReadinessProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param message Any customer messaging.
+       */
+      public fun message(message: String)
+
+      /**
+       * @param progressPercentage Approximately how far the Calculated Attribute creation is from
+       * completion.
+       */
+      public fun progressPercentage(progressPercentage: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ReadinessProperty.Builder
+          =
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ReadinessProperty.builder()
+
+      /**
+       * @param message Any customer messaging.
+       */
+      override fun message(message: String) {
+        cdkBuilder.message(message)
+      }
+
+      /**
+       * @param progressPercentage Approximately how far the Calculated Attribute creation is from
+       * completion.
+       */
+      override fun progressPercentage(progressPercentage: Number) {
+        cdkBuilder.progressPercentage(progressPercentage)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ReadinessProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ReadinessProperty,
+    ) : CdkObject(cdkObject),
+        ReadinessProperty {
+      /**
+       * Any customer messaging.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-readiness.html#cfn-customerprofiles-calculatedattributedefinition-readiness-message)
+       */
+      override fun message(): String? = unwrap(this).getMessage()
+
+      /**
+       * Approximately how far the Calculated Attribute creation is from completion.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-readiness.html#cfn-customerprofiles-calculatedattributedefinition-readiness-progresspercentage)
+       */
+      override fun progressPercentage(): Number? = unwrap(this).getProgressPercentage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReadinessProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ReadinessProperty):
+          ReadinessProperty = CdkObjectWrappers.wrap(cdkObject) as? ReadinessProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReadinessProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ReadinessProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ReadinessProperty
     }
   }
 
@@ -1184,6 +1570,140 @@ public open class CfnCalculatedAttributeDefinition(
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty
+    }
+  }
+
+  /**
+   * A structure letting customers specify a relative time window over which over which data is
+   * included in the Calculated Attribute.
+   *
+   * Use positive numbers to indicate that the endpoint is in the past, and negative numbers to
+   * indicate it is in the future. ValueRange overrides Value.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.customerprofiles.*;
+   * ValueRangeProperty valueRangeProperty = ValueRangeProperty.builder()
+   * .end(123)
+   * .start(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-valuerange.html)
+   */
+  public interface ValueRangeProperty {
+    /**
+     * The ending point for this overridden range.
+     *
+     * Positive numbers indicate how many days in the past data should be included, and negative
+     * numbers indicate how many days in the future.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-valuerange.html#cfn-customerprofiles-calculatedattributedefinition-valuerange-end)
+     */
+    public fun end(): Number
+
+    /**
+     * The starting point for this overridden range.
+     *
+     * Positive numbers indicate how many days in the past data should be included, and negative
+     * numbers indicate how many days in the future.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-valuerange.html#cfn-customerprofiles-calculatedattributedefinition-valuerange-start)
+     */
+    public fun start(): Number
+
+    /**
+     * A builder for [ValueRangeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param end The ending point for this overridden range. 
+       * Positive numbers indicate how many days in the past data should be included, and negative
+       * numbers indicate how many days in the future.
+       */
+      public fun end(end: Number)
+
+      /**
+       * @param start The starting point for this overridden range. 
+       * Positive numbers indicate how many days in the past data should be included, and negative
+       * numbers indicate how many days in the future.
+       */
+      public fun start(start: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ValueRangeProperty.Builder
+          =
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ValueRangeProperty.builder()
+
+      /**
+       * @param end The ending point for this overridden range. 
+       * Positive numbers indicate how many days in the past data should be included, and negative
+       * numbers indicate how many days in the future.
+       */
+      override fun end(end: Number) {
+        cdkBuilder.end(end)
+      }
+
+      /**
+       * @param start The starting point for this overridden range. 
+       * Positive numbers indicate how many days in the past data should be included, and negative
+       * numbers indicate how many days in the future.
+       */
+      override fun start(start: Number) {
+        cdkBuilder.start(start)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ValueRangeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ValueRangeProperty,
+    ) : CdkObject(cdkObject),
+        ValueRangeProperty {
+      /**
+       * The ending point for this overridden range.
+       *
+       * Positive numbers indicate how many days in the past data should be included, and negative
+       * numbers indicate how many days in the future.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-valuerange.html#cfn-customerprofiles-calculatedattributedefinition-valuerange-end)
+       */
+      override fun end(): Number = unwrap(this).getEnd()
+
+      /**
+       * The starting point for this overridden range.
+       *
+       * Positive numbers indicate how many days in the past data should be included, and negative
+       * numbers indicate how many days in the future.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-valuerange.html#cfn-customerprofiles-calculatedattributedefinition-valuerange-start)
+       */
+      override fun start(): Number = unwrap(this).getStart()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ValueRangeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ValueRangeProperty):
+          ValueRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? ValueRangeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ValueRangeProperty):
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ValueRangeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ValueRangeProperty
     }
   }
 }

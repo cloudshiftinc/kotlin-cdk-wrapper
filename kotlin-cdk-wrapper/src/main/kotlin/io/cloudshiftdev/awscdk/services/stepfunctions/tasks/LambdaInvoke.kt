@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
+import io.cloudshiftdev.awscdk.services.stepfunctions.QueryLanguage
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskInput
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBase
 import io.cloudshiftdev.awscdk.services.stepfunctions.Timeout
@@ -28,15 +29,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * ```
  * Function fn;
- * LambdaInvoke.Builder.create(this, "Invoke with empty object as payload")
+ * LambdaInvoke.Builder.create(this, "Invoke with callback")
  * .lambdaFunction(fn)
- * .payload(TaskInput.fromObject(Map.of()))
- * .build();
- * // use the output of fn as input
- * // use the output of fn as input
- * LambdaInvoke.Builder.create(this, "Invoke with payload field in the state input")
- * .lambdaFunction(fn)
- * .payload(TaskInput.fromJsonPathAt("$.Payload"))
+ * .integrationPattern(IntegrationPattern.WAIT_FOR_TASK_TOKEN)
+ * .payload(TaskInput.fromObject(Map.of(
+ * "token", JsonPath.getTaskToken(),
+ * "input", JsonPath.stringAt("$.someField"))))
  * .build();
  * ```
  *
@@ -67,6 +65,19 @@ public open class LambdaInvoke(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    public fun assign(assign: Map<String, Any>)
+
+    /**
      * Up to 3583 bytes of base64-encoded data about the invoking client to pass to the function.
      *
      * Default: - No context
@@ -77,11 +88,11 @@ public open class LambdaInvoke(
     public fun clientContext(clientContext: String)
 
     /**
-     * An optional description for this state.
+     * A comment describing this state.
      *
-     * Default: - No comment
+     * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     public fun comment(comment: String)
 
@@ -142,7 +153,7 @@ public open class LambdaInvoke(
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      *
      * @param inputPath JSONPath expression to select part of the state to be the input to this
      * state. 
@@ -184,23 +195,38 @@ public open class LambdaInvoke(
     public fun lambdaFunction(lambdaFunction: IFunction)
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      *
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state. 
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state. 
      */
     public fun outputPath(outputPath: String)
 
     /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    public fun outputs(outputs: Any)
+
+    /**
      * The JSON that will be supplied as input to the Lambda function.
      *
-     * Default: - The state input (JSON path '$')
+     * Default: - The state input (JSONata: '{% $states.input %}', JSONPath: '$')
      *
      * @param payload The JSON that will be supplied as input to the Lambda function. 
      */
@@ -238,12 +264,24 @@ public open class LambdaInvoke(
     public fun qualifier(qualifier: String)
 
     /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
+
+    /**
      * JSONPath expression to indicate where to inject the state's output.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      *
      * @param resultPath JSONPath expression to indicate where to inject the state's output. 
      */
@@ -320,6 +358,21 @@ public open class LambdaInvoke(
         = software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvoke.Builder.create(scope, id)
 
     /**
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
      * Up to 3583 bytes of base64-encoded data about the invoking client to pass to the function.
      *
      * Default: - No context
@@ -332,11 +385,11 @@ public open class LambdaInvoke(
     }
 
     /**
-     * An optional description for this state.
+     * A comment describing this state.
      *
-     * Default: - No comment
+     * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -406,7 +459,7 @@ public open class LambdaInvoke(
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      *
      * @param inputPath JSONPath expression to select part of the state to be the input to this
      * state. 
@@ -456,25 +509,42 @@ public open class LambdaInvoke(
     }
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      *
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state. 
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state. 
      */
     override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
     }
 
     /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    override fun outputs(outputs: Any) {
+      cdkBuilder.outputs(outputs)
+    }
+
+    /**
      * The JSON that will be supplied as input to the Lambda function.
      *
-     * Default: - The state input (JSON path '$')
+     * Default: - The state input (JSONata: '{% $states.input %}', JSONPath: '$')
      *
      * @param payload The JSON that will be supplied as input to the Lambda function. 
      */
@@ -518,12 +588,26 @@ public open class LambdaInvoke(
     }
 
     /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
+    }
+
+    /**
      * JSONPath expression to indicate where to inject the state's output.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      *
      * @param resultPath JSONPath expression to indicate where to inject the state's output. 
      */
@@ -608,6 +692,38 @@ public open class LambdaInvoke(
   }
 
   public companion object {
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: LambdaInvokeJsonPathProps,
+    ): LambdaInvoke =
+        software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvoke.jsonPath(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, props.let(LambdaInvokeJsonPathProps.Companion::unwrap)).let(LambdaInvoke::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a109822f38e38c640ecdb630370ac2e4a96d44d44792e13bde4f00af7bb9fca4")
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: LambdaInvokeJsonPathProps.Builder.() -> Unit,
+    ): LambdaInvoke = jsonPath(scope, id, LambdaInvokeJsonPathProps(props))
+
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: LambdaInvokeJsonataProps,
+    ): LambdaInvoke =
+        software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvoke.jsonata(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, props.let(LambdaInvokeJsonataProps.Companion::unwrap)).let(LambdaInvoke::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("36634aa2cc31280a37e3ae5afe9b5a42ca3124d0596be5df3aed38e99a3d734c")
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: LambdaInvokeJsonataProps.Builder.() -> Unit,
+    ): LambdaInvoke = jsonata(scope, id, LambdaInvokeJsonataProps(props))
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

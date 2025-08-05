@@ -106,6 +106,43 @@ public open class Environment(
   public override fun applicationId(): String = unwrap(this).getApplicationId()
 
   /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to an application.
+   *
+   * @param eventDestination 
+   * @param options
+   */
+  public override fun atDeploymentTick(eventDestination: IEventDestination) {
+    unwrap(this).atDeploymentTick(eventDestination.let(IEventDestination.Companion::unwrap))
+  }
+
+  /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to an application.
+   *
+   * @param eventDestination 
+   * @param options
+   */
+  public override fun atDeploymentTick(eventDestination: IEventDestination,
+      options: ExtensionOptions) {
+    unwrap(this).atDeploymentTick(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
+  }
+
+  /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to an application.
+   *
+   * @param eventDestination 
+   * @param options
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("f8c201d364bd1348c470ff45a380b57e5cbcd5d83fb8aa9250995db9670d33c2")
+  public override fun atDeploymentTick(eventDestination: IEventDestination,
+      options: ExtensionOptions.Builder.() -> Unit): Unit = atDeploymentTick(eventDestination,
+      ExtensionOptions(options))
+
+  /**
    * The description of the environment.
    */
   public override fun description(): String? = unwrap(this).getDescription()
@@ -470,6 +507,16 @@ public open class Environment(
     public fun application(application: IApplication)
 
     /**
+     * A property to prevent accidental deletion of active environments.
+     *
+     * Default: undefined - AppConfig default is ACCOUNT_DEFAULT
+     *
+     * @param deletionProtectionCheck A property to prevent accidental deletion of active
+     * environments. 
+     */
+    public fun deletionProtectionCheck(deletionProtectionCheck: DeletionProtectionCheck)
+
+    /**
      * The description of the environment.
      *
      * Default: - No description.
@@ -523,6 +570,18 @@ public open class Environment(
     }
 
     /**
+     * A property to prevent accidental deletion of active environments.
+     *
+     * Default: undefined - AppConfig default is ACCOUNT_DEFAULT
+     *
+     * @param deletionProtectionCheck A property to prevent accidental deletion of active
+     * environments. 
+     */
+    override fun deletionProtectionCheck(deletionProtectionCheck: DeletionProtectionCheck) {
+      cdkBuilder.deletionProtectionCheck(deletionProtectionCheck.let(DeletionProtectionCheck.Companion::unwrap))
+    }
+
+    /**
      * The description of the environment.
      *
      * Default: - No description.
@@ -568,6 +627,9 @@ public open class Environment(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.appconfig.Environment.PROPERTY_INJECTION_ID
+
     public fun fromEnvironmentArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

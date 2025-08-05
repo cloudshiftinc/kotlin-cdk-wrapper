@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.backup
 
 import io.cloudshiftdev.awscdk.Duration
+import io.cloudshiftdev.awscdk.TimeZone
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -114,6 +115,14 @@ public interface BackupPlanRuleProps {
       unwrap(this).getScheduleExpression()?.let(Schedule::wrap)
 
   /**
+   * The timezone in which the schedule expression is set.
+   *
+   * Default: - UTC
+   */
+  public fun scheduleExpressionTimezone(): TimeZone? =
+      unwrap(this).getScheduleExpressionTimezone()?.let(TimeZone::wrap)
+
+  /**
    * The duration after a backup is scheduled before a job is canceled if it doesn't start
    * successfully.
    *
@@ -188,6 +197,11 @@ public interface BackupPlanRuleProps {
      * job.
      */
     public fun scheduleExpression(scheduleExpression: Schedule)
+
+    /**
+     * @param scheduleExpressionTimezone The timezone in which the schedule expression is set.
+     */
+    public fun scheduleExpressionTimezone(scheduleExpressionTimezone: TimeZone)
 
     /**
      * @param startWindow The duration after a backup is scheduled before a job is canceled if it
@@ -280,6 +294,13 @@ public interface BackupPlanRuleProps {
      */
     override fun scheduleExpression(scheduleExpression: Schedule) {
       cdkBuilder.scheduleExpression(scheduleExpression.let(Schedule.Companion::unwrap))
+    }
+
+    /**
+     * @param scheduleExpressionTimezone The timezone in which the schedule expression is set.
+     */
+    override fun scheduleExpressionTimezone(scheduleExpressionTimezone: TimeZone) {
+      cdkBuilder.scheduleExpressionTimezone(scheduleExpressionTimezone.let(TimeZone.Companion::unwrap))
     }
 
     /**
@@ -381,6 +402,14 @@ public interface BackupPlanRuleProps {
      */
     override fun scheduleExpression(): Schedule? =
         unwrap(this).getScheduleExpression()?.let(Schedule::wrap)
+
+    /**
+     * The timezone in which the schedule expression is set.
+     *
+     * Default: - UTC
+     */
+    override fun scheduleExpressionTimezone(): TimeZone? =
+        unwrap(this).getScheduleExpressionTimezone()?.let(TimeZone::wrap)
 
     /**
      * The duration after a backup is scheduled before a job is canceled if it doesn't start

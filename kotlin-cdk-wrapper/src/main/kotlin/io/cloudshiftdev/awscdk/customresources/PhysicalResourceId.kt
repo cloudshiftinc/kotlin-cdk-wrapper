@@ -11,24 +11,22 @@ import kotlin.String
  * Example:
  *
  * ```
- * AwsCustomResource getParameter = AwsCustomResource.Builder.create(this,
- * "AssociateVPCWithHostedZone")
+ * String crossAccountRoleArn = "arn:aws:iam::OTHERACCOUNT:role/CrossAccountRoleName"; // arn of
+ * role deployed in separate account
+ * String callRegion = "us-west-1"; // sdk call to be made in specified region (optional)
+ * // sdk call to be made in specified region (optional)
+ * AwsCustomResource.Builder.create(this, "CrossAccount")
  * .onCreate(AwsSdkCall.builder()
- * .assumedRoleArn("arn:aws:iam::OTHERACCOUNT:role/CrossAccount/ManageHostedZoneConnections")
- * .service("Route53")
- * .action("AssociateVPCWithHostedZone")
- * .parameters(Map.of(
- * "HostedZoneId", "hz-123",
- * "VPC", Map.of(
- * "VPCId", "vpc-123",
- * "VPCRegion", "region-for-vpc")))
- * .physicalResourceId(PhysicalResourceId.of("${vpcStack.SharedVpc.VpcId}-${vpcStack.Region}-${PrivateHostedZone.HostedZoneId}"))
+ * .assumedRoleArn(crossAccountRoleArn)
+ * .region(callRegion) // optional
+ * .service("sts")
+ * .action("GetCallerIdentity")
+ * .physicalResourceId(PhysicalResourceId.of("id"))
  * .build())
- * //Will ignore any resource and use the assumedRoleArn as resource and 'sts:AssumeRole' for
- * service:action
- * .policy(AwsCustomResourcePolicy.fromSdkCalls(SdkCallsPolicyOptions.builder()
- * .resources(AwsCustomResourcePolicy.ANY_RESOURCE)
- * .build()))
+ * .policy(AwsCustomResourcePolicy.fromStatements(List.of(PolicyStatement.fromJson(Map.of(
+ * "Effect", "Allow",
+ * "Action", "sts:AssumeRole",
+ * "Resource", crossAccountRoleArn)))))
  * .build();
  * ```
  */

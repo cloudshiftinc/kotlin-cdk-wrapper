@@ -98,12 +98,12 @@ public interface CfnIpAccessSettingsProps {
     /**
      * @param additionalEncryptionContext Additional encryption context of the IP access settings.
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
+    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
     /**
      * @param additionalEncryptionContext Additional encryption context of the IP access settings.
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
     /**
      * @param customerManagedKey The custom managed key of the IP access settings.
@@ -157,15 +157,15 @@ public interface CfnIpAccessSettingsProps {
     /**
      * @param additionalEncryptionContext Additional encryption context of the IP access settings.
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
+    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
     }
 
     /**
      * @param additionalEncryptionContext Additional encryption context of the IP access settings.
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
     }
 
     /**

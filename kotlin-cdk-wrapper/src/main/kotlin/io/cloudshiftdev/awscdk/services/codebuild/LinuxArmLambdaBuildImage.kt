@@ -99,11 +99,23 @@ public open class LinuxArmLambdaBuildImage(
     public val AMAZON_LINUX_2023_DOTNET_8: IBuildImage =
         IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxArmLambdaBuildImage.AMAZON_LINUX_2023_DOTNET_8)
 
+    public val AMAZON_LINUX_2023_GO_1_24: IBuildImage =
+        IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxArmLambdaBuildImage.AMAZON_LINUX_2023_GO_1_24)
+
     public val AMAZON_LINUX_2023_NODE_20: IBuildImage =
         IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxArmLambdaBuildImage.AMAZON_LINUX_2023_NODE_20)
 
+    public val AMAZON_LINUX_2023_NODE_22: IBuildImage =
+        IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxArmLambdaBuildImage.AMAZON_LINUX_2023_NODE_22)
+
     public val AMAZON_LINUX_2023_PYTHON_3_12: IBuildImage =
         IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxArmLambdaBuildImage.AMAZON_LINUX_2023_PYTHON_3_12)
+
+    public val AMAZON_LINUX_2023_PYTHON_3_13: IBuildImage =
+        IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxArmLambdaBuildImage.AMAZON_LINUX_2023_PYTHON_3_13)
+
+    public val AMAZON_LINUX_2023_RUBY_3_4: IBuildImage =
+        IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxArmLambdaBuildImage.AMAZON_LINUX_2023_RUBY_3_4)
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.LinuxArmLambdaBuildImage):

@@ -49,6 +49,7 @@ import kotlin.jvm.JvmName
  * .taskImageOptions(ApplicationLoadBalancedTaskImageOptions.builder()
  * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
  * .build())
+ * .minHealthyPercent(100)
  * .build();
  * ScalableTaskCount scalableTarget =
  * loadBalancedFargateService.service.autoScaleTaskCount(EnableScalingProps.builder()
@@ -71,6 +72,23 @@ public interface ApplicationLoadBalancedFargateServiceProps :
    * Default: false
    */
   public fun assignPublicIp(): Boolean? = unwrap(this).getAssignPublicIp()
+
+  /**
+   * The minimum number of CPU units to reserve for the container.
+   *
+   * Default: - No minimum CPU units reserved.
+   */
+  public fun containerCpu(): Number? = unwrap(this).getContainerCpu()
+
+  /**
+   * The amount (in MiB) of memory to present to the container.
+   *
+   * If your container attempts to exceed the allocated memory, the container
+   * is terminated.
+   *
+   * Default: - No memory limit.
+   */
+  public fun containerMemoryLimitMiB(): Number? = unwrap(this).getContainerMemoryLimitMiB()
 
   /**
    * The health check command and associated configuration parameters for the container.
@@ -164,6 +182,18 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * both cluster and vpc.
      */
     public fun cluster(cluster: ICluster)
+
+    /**
+     * @param containerCpu The minimum number of CPU units to reserve for the container.
+     */
+    public fun containerCpu(containerCpu: Number)
+
+    /**
+     * @param containerMemoryLimitMiB The amount (in MiB) of memory to present to the container.
+     * If your container attempts to exceed the allocated memory, the container
+     * is terminated.
+     */
+    public fun containerMemoryLimitMiB(containerMemoryLimitMiB: Number)
 
     /**
      * @param cpu The number of cpu units used by the task.
@@ -389,8 +419,8 @@ public interface ApplicationLoadBalancedFargateServiceProps :
 
     /**
      * @param redirectHttp Specifies whether the load balancer should redirect traffic on port 80 to
-     * port 443 to support HTTP-&gt;HTTPS redirects This is only valid if the protocol of the ALB is
-     * HTTPS.
+     * the [listenerPort] to support HTTP->HTTPS redirects.
+     * This is only valid if the protocol of the ALB is HTTPS.
      */
     public fun redirectHttp(redirectHttp: Boolean)
 
@@ -560,6 +590,22 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      */
     override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
+    }
+
+    /**
+     * @param containerCpu The minimum number of CPU units to reserve for the container.
+     */
+    override fun containerCpu(containerCpu: Number) {
+      cdkBuilder.containerCpu(containerCpu)
+    }
+
+    /**
+     * @param containerMemoryLimitMiB The amount (in MiB) of memory to present to the container.
+     * If your container attempts to exceed the allocated memory, the container
+     * is terminated.
+     */
+    override fun containerMemoryLimitMiB(containerMemoryLimitMiB: Number) {
+      cdkBuilder.containerMemoryLimitMiB(containerMemoryLimitMiB)
     }
 
     /**
@@ -839,8 +885,8 @@ public interface ApplicationLoadBalancedFargateServiceProps :
 
     /**
      * @param redirectHttp Specifies whether the load balancer should redirect traffic on port 80 to
-     * port 443 to support HTTP-&gt;HTTPS redirects This is only valid if the protocol of the ALB is
-     * HTTPS.
+     * the [listenerPort] to support HTTP->HTTPS redirects.
+     * This is only valid if the protocol of the ALB is HTTPS.
      */
     override fun redirectHttp(redirectHttp: Boolean) {
       cdkBuilder.redirectHttp(redirectHttp)
@@ -1019,6 +1065,23 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * created for you.
      */
     override fun cluster(): ICluster? = unwrap(this).getCluster()?.let(ICluster::wrap)
+
+    /**
+     * The minimum number of CPU units to reserve for the container.
+     *
+     * Default: - No minimum CPU units reserved.
+     */
+    override fun containerCpu(): Number? = unwrap(this).getContainerCpu()
+
+    /**
+     * The amount (in MiB) of memory to present to the container.
+     *
+     * If your container attempts to exceed the allocated memory, the container
+     * is terminated.
+     *
+     * Default: - No memory limit.
+     */
+    override fun containerMemoryLimitMiB(): Number? = unwrap(this).getContainerMemoryLimitMiB()
 
     /**
      * The number of cpu units used by the task.
@@ -1294,8 +1357,10 @@ public interface ApplicationLoadBalancedFargateServiceProps :
         unwrap(this).getRecordType()?.let(ApplicationLoadBalancedServiceRecordType::wrap)
 
     /**
-     * Specifies whether the load balancer should redirect traffic on port 80 to port 443 to support
-     * HTTP-&gt;HTTPS redirects This is only valid if the protocol of the ALB is HTTPS.
+     * Specifies whether the load balancer should redirect traffic on port 80 to the [listenerPort]
+     * to support HTTP->HTTPS redirects.
+     *
+     * This is only valid if the protocol of the ALB is HTTPS.
      *
      * Default: false
      */

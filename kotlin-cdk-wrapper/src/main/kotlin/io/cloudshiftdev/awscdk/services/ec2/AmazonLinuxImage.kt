@@ -64,6 +64,16 @@ public open class AmazonLinuxImage(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     *
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key. 
+     */
+    public fun additionalCacheKey(additionalCacheKey: String)
+
+    /**
      * Whether the AMI ID is cached to be stable between deployments.
      *
      * By default, the newest image is used on each deployment. This will cause
@@ -153,6 +163,18 @@ public open class AmazonLinuxImage(
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.AmazonLinuxImage.Builder =
         software.amazon.awscdk.services.ec2.AmazonLinuxImage.Builder.create()
+
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     *
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key. 
+     */
+    override fun additionalCacheKey(additionalCacheKey: String) {
+      cdkBuilder.additionalCacheKey(additionalCacheKey)
+    }
 
     /**
      * Whether the AMI ID is cached to be stable between deployments.

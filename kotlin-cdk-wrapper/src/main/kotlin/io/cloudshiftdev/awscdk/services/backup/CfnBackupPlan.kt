@@ -58,6 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build()))
  * .enableContinuousBackup(false)
+ * .indexActions(List.of(IndexActionsResourceTypeProperty.builder()
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build()))
  * .lifecycle(LifecycleResourceTypeProperty.builder()
  * .deleteAfterDays(123)
  * .moveToColdStorageAfterDays(123)
@@ -504,6 +507,9 @@ public open class CfnBackupPlan(
    * .build())
    * .build()))
    * .enableContinuousBackup(false)
+   * .indexActions(List.of(IndexActionsResourceTypeProperty.builder()
+   * .resourceTypes(List.of("resourceTypes"))
+   * .build()))
    * .lifecycle(LifecycleResourceTypeProperty.builder()
    * .deleteAfterDays(123)
    * .moveToColdStorageAfterDays(123)
@@ -724,6 +730,9 @@ public open class CfnBackupPlan(
    * .build())
    * .build()))
    * .enableContinuousBackup(false)
+   * .indexActions(List.of(IndexActionsResourceTypeProperty.builder()
+   * .resourceTypes(List.of("resourceTypes"))
+   * .build()))
    * .lifecycle(LifecycleResourceTypeProperty.builder()
    * .deleteAfterDays(123)
    * .moveToColdStorageAfterDays(123)
@@ -761,6 +770,20 @@ public open class CfnBackupPlan(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-enablecontinuousbackup)
      */
     public fun enableContinuousBackup(): Any? = unwrap(this).getEnableContinuousBackup()
+
+    /**
+     * There can up to one IndexAction in each BackupRule, as each backup can have 0 or 1 backup
+     * index associated with it.
+     *
+     * Within the array is ResourceTypes. Only 1 resource type will be accepted for each BackupRule.
+     * Valid values:
+     *
+     * * `EBS` for Amazon Elastic Block Store
+     * * `S3` for Amazon Simple Storage Service (Amazon S3)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-indexactions)
+     */
+    public fun indexActions(): Any? = unwrap(this).getIndexActions()
 
     /**
      * The lifecycle defines when a protected resource is transitioned to cold storage and when it
@@ -863,6 +886,39 @@ public open class CfnBackupPlan(
       public fun enableContinuousBackup(enableContinuousBackup: IResolvable)
 
       /**
+       * @param indexActions There can up to one IndexAction in each BackupRule, as each backup can
+       * have 0 or 1 backup index associated with it.
+       * Within the array is ResourceTypes. Only 1 resource type will be accepted for each
+       * BackupRule. Valid values:
+       *
+       * * `EBS` for Amazon Elastic Block Store
+       * * `S3` for Amazon Simple Storage Service (Amazon S3)
+       */
+      public fun indexActions(indexActions: IResolvable)
+
+      /**
+       * @param indexActions There can up to one IndexAction in each BackupRule, as each backup can
+       * have 0 or 1 backup index associated with it.
+       * Within the array is ResourceTypes. Only 1 resource type will be accepted for each
+       * BackupRule. Valid values:
+       *
+       * * `EBS` for Amazon Elastic Block Store
+       * * `S3` for Amazon Simple Storage Service (Amazon S3)
+       */
+      public fun indexActions(indexActions: List<Any>)
+
+      /**
+       * @param indexActions There can up to one IndexAction in each BackupRule, as each backup can
+       * have 0 or 1 backup index associated with it.
+       * Within the array is ResourceTypes. Only 1 resource type will be accepted for each
+       * BackupRule. Valid values:
+       *
+       * * `EBS` for Amazon Elastic Block Store
+       * * `S3` for Amazon Simple Storage Service (Amazon S3)
+       */
+      public fun indexActions(vararg indexActions: Any)
+
+      /**
        * @param lifecycle The lifecycle defines when a protected resource is transitioned to cold
        * storage and when it expires.
        * AWS Backup transitions and expires backups automatically according to the lifecycle that
@@ -891,12 +947,12 @@ public open class CfnBackupPlan(
       /**
        * @param recoveryPointTags The tags to assign to the resources.
        */
-      public fun recoveryPointTags(recoveryPointTags: IResolvable)
+      public fun recoveryPointTags(recoveryPointTags: Map<String, String>)
 
       /**
        * @param recoveryPointTags The tags to assign to the resources.
        */
-      public fun recoveryPointTags(recoveryPointTags: Map<String, String>)
+      public fun recoveryPointTags(recoveryPointTags: IResolvable)
 
       /**
        * @param ruleName A display name for a backup rule. 
@@ -982,6 +1038,44 @@ public open class CfnBackupPlan(
       }
 
       /**
+       * @param indexActions There can up to one IndexAction in each BackupRule, as each backup can
+       * have 0 or 1 backup index associated with it.
+       * Within the array is ResourceTypes. Only 1 resource type will be accepted for each
+       * BackupRule. Valid values:
+       *
+       * * `EBS` for Amazon Elastic Block Store
+       * * `S3` for Amazon Simple Storage Service (Amazon S3)
+       */
+      override fun indexActions(indexActions: IResolvable) {
+        cdkBuilder.indexActions(indexActions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param indexActions There can up to one IndexAction in each BackupRule, as each backup can
+       * have 0 or 1 backup index associated with it.
+       * Within the array is ResourceTypes. Only 1 resource type will be accepted for each
+       * BackupRule. Valid values:
+       *
+       * * `EBS` for Amazon Elastic Block Store
+       * * `S3` for Amazon Simple Storage Service (Amazon S3)
+       */
+      override fun indexActions(indexActions: List<Any>) {
+        cdkBuilder.indexActions(indexActions.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param indexActions There can up to one IndexAction in each BackupRule, as each backup can
+       * have 0 or 1 backup index associated with it.
+       * Within the array is ResourceTypes. Only 1 resource type will be accepted for each
+       * BackupRule. Valid values:
+       *
+       * * `EBS` for Amazon Elastic Block Store
+       * * `S3` for Amazon Simple Storage Service (Amazon S3)
+       */
+      override fun indexActions(vararg indexActions: Any): Unit =
+          indexActions(indexActions.toList())
+
+      /**
        * @param lifecycle The lifecycle defines when a protected resource is transitioned to cold
        * storage and when it expires.
        * AWS Backup transitions and expires backups automatically according to the lifecycle that
@@ -1015,15 +1109,15 @@ public open class CfnBackupPlan(
       /**
        * @param recoveryPointTags The tags to assign to the resources.
        */
-      override fun recoveryPointTags(recoveryPointTags: IResolvable) {
-        cdkBuilder.recoveryPointTags(recoveryPointTags.let(IResolvable.Companion::unwrap))
+      override fun recoveryPointTags(recoveryPointTags: Map<String, String>) {
+        cdkBuilder.recoveryPointTags(recoveryPointTags)
       }
 
       /**
        * @param recoveryPointTags The tags to assign to the resources.
        */
-      override fun recoveryPointTags(recoveryPointTags: Map<String, String>) {
-        cdkBuilder.recoveryPointTags(recoveryPointTags)
+      override fun recoveryPointTags(recoveryPointTags: IResolvable) {
+        cdkBuilder.recoveryPointTags(recoveryPointTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1098,6 +1192,20 @@ public open class CfnBackupPlan(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-enablecontinuousbackup)
        */
       override fun enableContinuousBackup(): Any? = unwrap(this).getEnableContinuousBackup()
+
+      /**
+       * There can up to one IndexAction in each BackupRule, as each backup can have 0 or 1 backup
+       * index associated with it.
+       *
+       * Within the array is ResourceTypes. Only 1 resource type will be accepted for each
+       * BackupRule. Valid values:
+       *
+       * * `EBS` for Amazon Elastic Block Store
+       * * `S3` for Amazon Simple Storage Service (Amazon S3)
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-indexactions)
+       */
+      override fun indexActions(): Any? = unwrap(this).getIndexActions()
 
       /**
        * The lifecycle defines when a protected resource is transitioned to cold storage and when it
@@ -1389,6 +1497,127 @@ public open class CfnBackupPlan(
   }
 
   /**
+   * Specifies index actions.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.backup.*;
+   * IndexActionsResourceTypeProperty indexActionsResourceTypeProperty =
+   * IndexActionsResourceTypeProperty.builder()
+   * .resourceTypes(List.of("resourceTypes"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-indexactionsresourcetype.html)
+   */
+  public interface IndexActionsResourceTypeProperty {
+    /**
+     * 0 or 1 index action will be accepted for each BackupRule.
+     *
+     * Valid values:
+     *
+     * * `EBS` for Amazon Elastic Block Store
+     * * `S3` for Amazon Simple Storage Service (Amazon S3)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-indexactionsresourcetype.html#cfn-backup-backupplan-indexactionsresourcetype-resourcetypes)
+     */
+    public fun resourceTypes(): List<String> = unwrap(this).getResourceTypes() ?: emptyList()
+
+    /**
+     * A builder for [IndexActionsResourceTypeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceTypes 0 or 1 index action will be accepted for each BackupRule.
+       * Valid values:
+       *
+       * * `EBS` for Amazon Elastic Block Store
+       * * `S3` for Amazon Simple Storage Service (Amazon S3)
+       */
+      public fun resourceTypes(resourceTypes: List<String>)
+
+      /**
+       * @param resourceTypes 0 or 1 index action will be accepted for each BackupRule.
+       * Valid values:
+       *
+       * * `EBS` for Amazon Elastic Block Store
+       * * `S3` for Amazon Simple Storage Service (Amazon S3)
+       */
+      public fun resourceTypes(vararg resourceTypes: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.backup.CfnBackupPlan.IndexActionsResourceTypeProperty.Builder
+          =
+          software.amazon.awscdk.services.backup.CfnBackupPlan.IndexActionsResourceTypeProperty.builder()
+
+      /**
+       * @param resourceTypes 0 or 1 index action will be accepted for each BackupRule.
+       * Valid values:
+       *
+       * * `EBS` for Amazon Elastic Block Store
+       * * `S3` for Amazon Simple Storage Service (Amazon S3)
+       */
+      override fun resourceTypes(resourceTypes: List<String>) {
+        cdkBuilder.resourceTypes(resourceTypes)
+      }
+
+      /**
+       * @param resourceTypes 0 or 1 index action will be accepted for each BackupRule.
+       * Valid values:
+       *
+       * * `EBS` for Amazon Elastic Block Store
+       * * `S3` for Amazon Simple Storage Service (Amazon S3)
+       */
+      override fun resourceTypes(vararg resourceTypes: String): Unit =
+          resourceTypes(resourceTypes.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.backup.CfnBackupPlan.IndexActionsResourceTypeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.IndexActionsResourceTypeProperty,
+    ) : CdkObject(cdkObject),
+        IndexActionsResourceTypeProperty {
+      /**
+       * 0 or 1 index action will be accepted for each BackupRule.
+       *
+       * Valid values:
+       *
+       * * `EBS` for Amazon Elastic Block Store
+       * * `S3` for Amazon Simple Storage Service (Amazon S3)
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-indexactionsresourcetype.html#cfn-backup-backupplan-indexactionsresourcetype-resourcetypes)
+       */
+      override fun resourceTypes(): List<String> = unwrap(this).getResourceTypes() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IndexActionsResourceTypeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.IndexActionsResourceTypeProperty):
+          IndexActionsResourceTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IndexActionsResourceTypeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IndexActionsResourceTypeProperty):
+          software.amazon.awscdk.services.backup.CfnBackupPlan.IndexActionsResourceTypeProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.backup.CfnBackupPlan.IndexActionsResourceTypeProperty
+    }
+  }
+
+  /**
    * Specifies an object containing an array of `Transition` objects that determine how long in days
    * before a recovery point transitions to cold storage or is deleted.
    *
@@ -1410,16 +1639,17 @@ public open class CfnBackupPlan(
    */
   public interface LifecycleResourceTypeProperty {
     /**
-     * Specifies the number of days after creation that a recovery point is deleted.
+     * The number of days after creation that a recovery point is deleted.
      *
-     * Must be greater than `MoveToColdStorageAfterDays` .
+     * This value must be at least 90 days after the number of days specified in
+     * `MoveToColdStorageAfterDays` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-lifecycleresourcetype.html#cfn-backup-backupplan-lifecycleresourcetype-deleteafterdays)
      */
     public fun deleteAfterDays(): Number? = unwrap(this).getDeleteAfterDays()
 
     /**
-     * Specifies the number of days after creation that a recovery point is moved to cold storage.
+     * The number of days after creation that a recovery point is moved to cold storage.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-lifecycleresourcetype.html#cfn-backup-backupplan-lifecycleresourcetype-movetocoldstorageafterdays)
      */
@@ -1440,15 +1670,15 @@ public open class CfnBackupPlan(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param deleteAfterDays Specifies the number of days after creation that a recovery point is
-       * deleted.
-       * Must be greater than `MoveToColdStorageAfterDays` .
+       * @param deleteAfterDays The number of days after creation that a recovery point is deleted.
+       * This value must be at least 90 days after the number of days specified in
+       * `MoveToColdStorageAfterDays` .
        */
       public fun deleteAfterDays(deleteAfterDays: Number)
 
       /**
-       * @param moveToColdStorageAfterDays Specifies the number of days after creation that a
-       * recovery point is moved to cold storage.
+       * @param moveToColdStorageAfterDays The number of days after creation that a recovery point
+       * is moved to cold storage.
        */
       public fun moveToColdStorageAfterDays(moveToColdStorageAfterDays: Number)
 
@@ -1475,17 +1705,17 @@ public open class CfnBackupPlan(
           software.amazon.awscdk.services.backup.CfnBackupPlan.LifecycleResourceTypeProperty.builder()
 
       /**
-       * @param deleteAfterDays Specifies the number of days after creation that a recovery point is
-       * deleted.
-       * Must be greater than `MoveToColdStorageAfterDays` .
+       * @param deleteAfterDays The number of days after creation that a recovery point is deleted.
+       * This value must be at least 90 days after the number of days specified in
+       * `MoveToColdStorageAfterDays` .
        */
       override fun deleteAfterDays(deleteAfterDays: Number) {
         cdkBuilder.deleteAfterDays(deleteAfterDays)
       }
 
       /**
-       * @param moveToColdStorageAfterDays Specifies the number of days after creation that a
-       * recovery point is moved to cold storage.
+       * @param moveToColdStorageAfterDays The number of days after creation that a recovery point
+       * is moved to cold storage.
        */
       override fun moveToColdStorageAfterDays(moveToColdStorageAfterDays: Number) {
         cdkBuilder.moveToColdStorageAfterDays(moveToColdStorageAfterDays)
@@ -1521,16 +1751,17 @@ public open class CfnBackupPlan(
     ) : CdkObject(cdkObject),
         LifecycleResourceTypeProperty {
       /**
-       * Specifies the number of days after creation that a recovery point is deleted.
+       * The number of days after creation that a recovery point is deleted.
        *
-       * Must be greater than `MoveToColdStorageAfterDays` .
+       * This value must be at least 90 days after the number of days specified in
+       * `MoveToColdStorageAfterDays` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-lifecycleresourcetype.html#cfn-backup-backupplan-lifecycleresourcetype-deleteafterdays)
        */
       override fun deleteAfterDays(): Number? = unwrap(this).getDeleteAfterDays()
 
       /**
-       * Specifies the number of days after creation that a recovery point is moved to cold storage.
+       * The number of days after creation that a recovery point is moved to cold storage.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-lifecycleresourcetype.html#cfn-backup-backupplan-lifecycleresourcetype-movetocoldstorageafterdays)
        */

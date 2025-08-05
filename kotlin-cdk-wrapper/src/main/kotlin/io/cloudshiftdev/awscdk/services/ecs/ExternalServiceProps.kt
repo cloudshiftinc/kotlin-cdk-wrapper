@@ -22,14 +22,35 @@ import kotlin.jvm.JvmName
  * ```
  * Cluster cluster;
  * TaskDefinition taskDefinition;
- * ExternalService service = ExternalService.Builder.create(this, "Service")
+ * Ec2Service.Builder.create(this, "Ec2Service")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
- * .desiredCount(5)
+ * .daemon(true)
+ * .build();
+ * ExternalService.Builder.create(this, "ExternalService")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .daemon(true)
  * .build();
  * ```
  */
 public interface ExternalServiceProps : BaseServiceOptions {
+  /**
+   * By default, service use REPLICA scheduling strategy, this parameter enable DAEMON scheduling
+   * strategy.
+   *
+   * If true, the service scheduler deploys exactly one task on each container instance in your
+   * cluster.
+   *
+   * When you are using this strategy, do not specify a desired number of tasks or any task
+   * placement strategies.
+   * Tasks using the Fargate launch type or the CODE_DEPLOY or EXTERNAL deployment controller types
+   * don't support the DAEMON scheduling strategy.
+   *
+   * Default: false
+   */
+  public fun daemon(): Boolean? = unwrap(this).getDaemon()
+
   /**
    * The security groups to associate with the service.
    *
@@ -100,6 +121,19 @@ public interface ExternalServiceProps : BaseServiceOptions {
      * @param cluster The name of the cluster that hosts the service. 
      */
     public fun cluster(cluster: ICluster)
+
+    /**
+     * @param daemon By default, service use REPLICA scheduling strategy, this parameter enable
+     * DAEMON scheduling strategy.
+     * If true, the service scheduler deploys exactly one task on each container instance in your
+     * cluster.
+     *
+     * When you are using this strategy, do not specify a desired number of tasks or any task
+     * placement strategies.
+     * Tasks using the Fargate launch type or the CODE_DEPLOY or EXTERNAL deployment controller
+     * types don't support the DAEMON scheduling strategy.
+     */
+    public fun daemon(daemon: Boolean)
 
     /**
      * @param deploymentAlarms The alarm(s) to monitor during deployment, and behavior to apply if
@@ -300,6 +334,21 @@ public interface ExternalServiceProps : BaseServiceOptions {
      */
     override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
+    }
+
+    /**
+     * @param daemon By default, service use REPLICA scheduling strategy, this parameter enable
+     * DAEMON scheduling strategy.
+     * If true, the service scheduler deploys exactly one task on each container instance in your
+     * cluster.
+     *
+     * When you are using this strategy, do not specify a desired number of tasks or any task
+     * placement strategies.
+     * Tasks using the Fargate launch type or the CODE_DEPLOY or EXTERNAL deployment controller
+     * types don't support the DAEMON scheduling strategy.
+     */
+    override fun daemon(daemon: Boolean) {
+      cdkBuilder.daemon(daemon)
     }
 
     /**
@@ -514,6 +563,22 @@ public interface ExternalServiceProps : BaseServiceOptions {
      * The name of the cluster that hosts the service.
      */
     override fun cluster(): ICluster = unwrap(this).getCluster().let(ICluster::wrap)
+
+    /**
+     * By default, service use REPLICA scheduling strategy, this parameter enable DAEMON scheduling
+     * strategy.
+     *
+     * If true, the service scheduler deploys exactly one task on each container instance in your
+     * cluster.
+     *
+     * When you are using this strategy, do not specify a desired number of tasks or any task
+     * placement strategies.
+     * Tasks using the Fargate launch type or the CODE_DEPLOY or EXTERNAL deployment controller
+     * types don't support the DAEMON scheduling strategy.
+     *
+     * Default: false
+     */
+    override fun daemon(): Boolean? = unwrap(this).getDaemon()
 
     /**
      * The alarm(s) to monitor during deployment, and behavior to apply if at least one enters a

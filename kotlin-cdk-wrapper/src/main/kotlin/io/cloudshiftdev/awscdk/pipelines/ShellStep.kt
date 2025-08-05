@@ -18,15 +18,24 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * Pipeline codePipeline;
- * Artifact sourceArtifact = new Artifact("MySourceArtifact");
- * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
- * .codePipeline(codePipeline)
- * .synth(ShellStep.Builder.create("Synth")
- * .input(CodePipelineFileSet.fromArtifact(sourceArtifact))
- * .commands(List.of("npm ci", "npm run build", "npx cdk synth"))
- * .build())
- * .build();
+ * CodePipeline pipeline;
+ * MyApplicationStage preprod = new MyApplicationStage(this, "PreProd");
+ * MyApplicationStage prod = new MyApplicationStage(this, "Prod");
+ * Topic topic = new Topic(this, "ChangeApprovalTopic");
+ * pipeline.addStage(preprod, AddStageOpts.builder()
+ * .post(List.of(
+ * ShellStep.Builder.create("Validate Endpoint")
+ * .commands(List.of("curl -Ssf https://my.webservice.com/"))
+ * .build()))
+ * .build());
+ * pipeline.addStage(prod, AddStageOpts.builder()
+ * .pre(List.of(ManualApprovalStep.Builder.create("PromoteToProd")
+ * //All options below are optional
+ * .comment("Please validate changes")
+ * .reviewUrl("https://my.webservice.com/")
+ * .notificationTopic(topic)
+ * .build()))
+ * .build());
  * ```
  */
 public open class ShellStep(

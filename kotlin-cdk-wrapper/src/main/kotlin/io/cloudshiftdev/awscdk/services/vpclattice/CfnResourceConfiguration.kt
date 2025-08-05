@@ -22,7 +22,10 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * VpcLattice ResourceConfiguration CFN resource.
+ * Creates a resource configuration.
+ *
+ * A resource configuration defines a specific resource. You can associate a resource configuration
+ * with a service network or a VPC endpoint.
  *
  * Example:
  *
@@ -32,16 +35,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.vpclattice.*;
  * CfnResourceConfiguration cfnResourceConfiguration = CfnResourceConfiguration.Builder.create(this,
  * "MyCfnResourceConfiguration")
- * .allowAssociationToSharableServiceNetwork(false)
  * .name("name")
+ * .resourceConfigurationType("resourceConfigurationType")
+ * // the properties below are optional
+ * .allowAssociationToSharableServiceNetwork(false)
  * .portRanges(List.of("portRanges"))
  * .protocolType("protocolType")
  * .resourceConfigurationAuthType("resourceConfigurationAuthType")
  * .resourceConfigurationDefinition(ResourceConfigurationDefinitionProperty.builder()
+ * .arnResource("arnResource")
+ * .dnsResource(DnsResourceProperty.builder()
+ * .domainName("domainName")
+ * .ipAddressType("ipAddressType")
+ * .build())
  * .ipResource("ipResource")
  * .build())
  * .resourceConfigurationGroupId("resourceConfigurationGroupId")
- * .resourceConfigurationType("resourceConfigurationType")
  * .resourceGatewayId("resourceGatewayId")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -57,11 +66,6 @@ public open class CfnResourceConfiguration(
 ) : CfnResource(cdkObject),
     IInspectable,
     ITaggableV2 {
-  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.vpclattice.CfnResourceConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
-      id)
-  )
-
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -79,32 +83,32 @@ public open class CfnResourceConfiguration(
   )
 
   /**
-   *
+   * Specifies whether the resource configuration can be associated with a sharable service network.
    */
   public open fun allowAssociationToSharableServiceNetwork(): Any? =
       unwrap(this).getAllowAssociationToSharableServiceNetwork()
 
   /**
-   *
+   * Specifies whether the resource configuration can be associated with a sharable service network.
    */
   public open fun allowAssociationToSharableServiceNetwork(`value`: Boolean) {
     unwrap(this).setAllowAssociationToSharableServiceNetwork(`value`)
   }
 
   /**
-   *
+   * Specifies whether the resource configuration can be associated with a sharable service network.
    */
   public open fun allowAssociationToSharableServiceNetwork(`value`: IResolvable) {
     unwrap(this).setAllowAssociationToSharableServiceNetwork(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   *
+   * The Amazon Resource Name (ARN) of the resource configuration.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   *
+   * The ID of the resource configuration.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
@@ -124,74 +128,77 @@ public open class CfnResourceConfiguration(
   }
 
   /**
-   *
+   * The name of the resource configuration.
    */
-  public open fun name(): String? = unwrap(this).getName()
+  public open fun name(): String = unwrap(this).getName()
 
   /**
-   *
+   * The name of the resource configuration.
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
   }
 
   /**
-   *
+   * (SINGLE, GROUP, CHILD) The TCP port ranges that a consumer can use to access a resource
+   * configuration (for example: 1-65535).
    */
   public open fun portRanges(): List<String> = unwrap(this).getPortRanges() ?: emptyList()
 
   /**
-   *
+   * (SINGLE, GROUP, CHILD) The TCP port ranges that a consumer can use to access a resource
+   * configuration (for example: 1-65535).
    */
   public open fun portRanges(`value`: List<String>) {
     unwrap(this).setPortRanges(`value`)
   }
 
   /**
-   *
+   * (SINGLE, GROUP, CHILD) The TCP port ranges that a consumer can use to access a resource
+   * configuration (for example: 1-65535).
    */
   public open fun portRanges(vararg `value`: String): Unit = portRanges(`value`.toList())
 
   /**
-   *
+   * (SINGLE, GROUP) The protocol accepted by the resource configuration.
    */
   public open fun protocolType(): String? = unwrap(this).getProtocolType()
 
   /**
-   *
+   * (SINGLE, GROUP) The protocol accepted by the resource configuration.
    */
   public open fun protocolType(`value`: String) {
     unwrap(this).setProtocolType(`value`)
   }
 
   /**
-   *
+   * The auth type for the resource configuration.
    */
   public open fun resourceConfigurationAuthType(): String? =
       unwrap(this).getResourceConfigurationAuthType()
 
   /**
-   *
+   * The auth type for the resource configuration.
    */
   public open fun resourceConfigurationAuthType(`value`: String) {
     unwrap(this).setResourceConfigurationAuthType(`value`)
   }
 
   /**
-   *
+   * Identifies the resource configuration in one of the following ways:.
    */
   public open fun resourceConfigurationDefinition(): Any? =
       unwrap(this).getResourceConfigurationDefinition()
 
   /**
-   *
+   * Identifies the resource configuration in one of the following ways:.
    */
   public open fun resourceConfigurationDefinition(`value`: IResolvable) {
     unwrap(this).setResourceConfigurationDefinition(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   *
+   * Identifies the resource configuration in one of the following ways:.
    */
   public open
       fun resourceConfigurationDefinition(`value`: ResourceConfigurationDefinitionProperty) {
@@ -199,7 +206,7 @@ public open class CfnResourceConfiguration(
   }
 
   /**
-   *
+   * Identifies the resource configuration in one of the following ways:.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("753683cdec356a2d940832d84eda5f41fd22df800f700cc5bf19398b18462fa1")
@@ -208,56 +215,60 @@ public open class CfnResourceConfiguration(
       Unit = resourceConfigurationDefinition(ResourceConfigurationDefinitionProperty(`value`))
 
   /**
-   *
+   * The ID of the group resource configuration.
    */
   public open fun resourceConfigurationGroupId(): String? =
       unwrap(this).getResourceConfigurationGroupId()
 
   /**
-   *
+   * The ID of the group resource configuration.
    */
   public open fun resourceConfigurationGroupId(`value`: String) {
     unwrap(this).setResourceConfigurationGroupId(`value`)
   }
 
   /**
+   * The type of resource configuration.
    *
+   * A resource configuration can be one of the following types:.
    */
-  public open fun resourceConfigurationType(): String? = unwrap(this).getResourceConfigurationType()
+  public open fun resourceConfigurationType(): String = unwrap(this).getResourceConfigurationType()
 
   /**
+   * The type of resource configuration.
    *
+   * A resource configuration can be one of the following types:.
    */
   public open fun resourceConfigurationType(`value`: String) {
     unwrap(this).setResourceConfigurationType(`value`)
   }
 
   /**
-   *
+   * The ID of the resource gateway.
    */
   public open fun resourceGatewayId(): String? = unwrap(this).getResourceGatewayId()
 
   /**
-   *
+   * The ID of the resource gateway.
    */
   public open fun resourceGatewayId(`value`: String) {
     unwrap(this).setResourceGatewayId(`value`)
   }
 
   /**
-   *
+   * The tags for the resource configuration.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   *
+   * The tags for the resource configuration.
    */
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   *
+   * The tags for the resource configuration.
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
@@ -267,65 +278,115 @@ public open class CfnResourceConfiguration(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Specifies whether the resource configuration can be associated with a sharable service
+     * network.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-allowassociationtosharableservicenetwork)
-     * @param allowAssociationToSharableServiceNetwork 
+     * @param allowAssociationToSharableServiceNetwork Specifies whether the resource configuration
+     * can be associated with a sharable service network. 
      */
     public
         fun allowAssociationToSharableServiceNetwork(allowAssociationToSharableServiceNetwork: Boolean)
 
     /**
+     * Specifies whether the resource configuration can be associated with a sharable service
+     * network.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-allowassociationtosharableservicenetwork)
-     * @param allowAssociationToSharableServiceNetwork 
+     * @param allowAssociationToSharableServiceNetwork Specifies whether the resource configuration
+     * can be associated with a sharable service network. 
      */
     public
         fun allowAssociationToSharableServiceNetwork(allowAssociationToSharableServiceNetwork: IResolvable)
 
     /**
+     * The name of the resource configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-name)
-     * @param name 
+     * @param name The name of the resource configuration. 
      */
     public fun name(name: String)
 
     /**
+     * (SINGLE, GROUP, CHILD) The TCP port ranges that a consumer can use to access a resource
+     * configuration (for example: 1-65535).
+     *
+     * You can separate port ranges using commas (for example: 1,2,22-30).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-portranges)
-     * @param portRanges 
+     * @param portRanges (SINGLE, GROUP, CHILD) The TCP port ranges that a consumer can use to
+     * access a resource configuration (for example: 1-65535). 
      */
     public fun portRanges(portRanges: List<String>)
 
     /**
+     * (SINGLE, GROUP, CHILD) The TCP port ranges that a consumer can use to access a resource
+     * configuration (for example: 1-65535).
+     *
+     * You can separate port ranges using commas (for example: 1,2,22-30).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-portranges)
-     * @param portRanges 
+     * @param portRanges (SINGLE, GROUP, CHILD) The TCP port ranges that a consumer can use to
+     * access a resource configuration (for example: 1-65535). 
      */
     public fun portRanges(vararg portRanges: String)
 
     /**
+     * (SINGLE, GROUP) The protocol accepted by the resource configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-protocoltype)
-     * @param protocolType 
+     * @param protocolType (SINGLE, GROUP) The protocol accepted by the resource configuration. 
      */
     public fun protocolType(protocolType: String)
 
     /**
+     * The auth type for the resource configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationauthtype)
-     * @param resourceConfigurationAuthType 
+     * @param resourceConfigurationAuthType The auth type for the resource configuration. 
      */
     public fun resourceConfigurationAuthType(resourceConfigurationAuthType: String)
 
     /**
+     * Identifies the resource configuration in one of the following ways:.
+     *
+     * * *Amazon Resource Name (ARN)* - Supported resource-types that are provisioned by AWS
+     * services, such as RDS databases, can be identified by their ARN.
+     * * *Domain name* - Any domain name that is publicly resolvable.
+     * * *IP address* - For IPv4 and IPv6, only IP addresses in the VPC are supported.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationdefinition)
-     * @param resourceConfigurationDefinition 
+     * @param resourceConfigurationDefinition Identifies the resource configuration in one of the
+     * following ways:. 
      */
     public fun resourceConfigurationDefinition(resourceConfigurationDefinition: IResolvable)
 
     /**
+     * Identifies the resource configuration in one of the following ways:.
+     *
+     * * *Amazon Resource Name (ARN)* - Supported resource-types that are provisioned by AWS
+     * services, such as RDS databases, can be identified by their ARN.
+     * * *Domain name* - Any domain name that is publicly resolvable.
+     * * *IP address* - For IPv4 and IPv6, only IP addresses in the VPC are supported.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationdefinition)
-     * @param resourceConfigurationDefinition 
+     * @param resourceConfigurationDefinition Identifies the resource configuration in one of the
+     * following ways:. 
      */
     public
         fun resourceConfigurationDefinition(resourceConfigurationDefinition: ResourceConfigurationDefinitionProperty)
 
     /**
+     * Identifies the resource configuration in one of the following ways:.
+     *
+     * * *Amazon Resource Name (ARN)* - Supported resource-types that are provisioned by AWS
+     * services, such as RDS databases, can be identified by their ARN.
+     * * *Domain name* - Any domain name that is publicly resolvable.
+     * * *IP address* - For IPv4 and IPv6, only IP addresses in the VPC are supported.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationdefinition)
-     * @param resourceConfigurationDefinition 
+     * @param resourceConfigurationDefinition Identifies the resource configuration in one of the
+     * following ways:. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("43cc195d1c74e028240ae8c6de32449e5ef4a8c655009bf2c3d73b88f2266a0a")
@@ -333,32 +394,50 @@ public open class CfnResourceConfiguration(
         fun resourceConfigurationDefinition(resourceConfigurationDefinition: ResourceConfigurationDefinitionProperty.Builder.() -> Unit)
 
     /**
+     * The ID of the group resource configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationgroupid)
-     * @param resourceConfigurationGroupId 
+     * @param resourceConfigurationGroupId The ID of the group resource configuration. 
      */
     public fun resourceConfigurationGroupId(resourceConfigurationGroupId: String)
 
     /**
+     * The type of resource configuration. A resource configuration can be one of the following
+     * types:.
+     *
+     * * *SINGLE* - A single resource.
+     * * *GROUP* - A group of resources. You must create a group resource configuration before you
+     * create a child resource configuration.
+     * * *CHILD* - A single resource that is part of a group resource configuration.
+     * * *ARN* - An AWS resource.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationtype)
-     * @param resourceConfigurationType 
+     * @param resourceConfigurationType The type of resource configuration. A resource configuration
+     * can be one of the following types:. 
      */
     public fun resourceConfigurationType(resourceConfigurationType: String)
 
     /**
+     * The ID of the resource gateway.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-resourcegatewayid)
-     * @param resourceGatewayId 
+     * @param resourceGatewayId The ID of the resource gateway. 
      */
     public fun resourceGatewayId(resourceGatewayId: String)
 
     /**
+     * The tags for the resource configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-tags)
-     * @param tags 
+     * @param tags The tags for the resource configuration. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
+     * The tags for the resource configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-tags)
-     * @param tags 
+     * @param tags The tags for the resource configuration. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -373,8 +452,12 @@ public open class CfnResourceConfiguration(
         id)
 
     /**
+     * Specifies whether the resource configuration can be associated with a sharable service
+     * network.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-allowassociationtosharableservicenetwork)
-     * @param allowAssociationToSharableServiceNetwork 
+     * @param allowAssociationToSharableServiceNetwork Specifies whether the resource configuration
+     * can be associated with a sharable service network. 
      */
     override
         fun allowAssociationToSharableServiceNetwork(allowAssociationToSharableServiceNetwork: Boolean) {
@@ -382,8 +465,12 @@ public open class CfnResourceConfiguration(
     }
 
     /**
+     * Specifies whether the resource configuration can be associated with a sharable service
+     * network.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-allowassociationtosharableservicenetwork)
-     * @param allowAssociationToSharableServiceNetwork 
+     * @param allowAssociationToSharableServiceNetwork Specifies whether the resource configuration
+     * can be associated with a sharable service network. 
      */
     override
         fun allowAssociationToSharableServiceNetwork(allowAssociationToSharableServiceNetwork: IResolvable) {
@@ -391,54 +478,88 @@ public open class CfnResourceConfiguration(
     }
 
     /**
+     * The name of the resource configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-name)
-     * @param name 
+     * @param name The name of the resource configuration. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     /**
+     * (SINGLE, GROUP, CHILD) The TCP port ranges that a consumer can use to access a resource
+     * configuration (for example: 1-65535).
+     *
+     * You can separate port ranges using commas (for example: 1,2,22-30).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-portranges)
-     * @param portRanges 
+     * @param portRanges (SINGLE, GROUP, CHILD) The TCP port ranges that a consumer can use to
+     * access a resource configuration (for example: 1-65535). 
      */
     override fun portRanges(portRanges: List<String>) {
       cdkBuilder.portRanges(portRanges)
     }
 
     /**
+     * (SINGLE, GROUP, CHILD) The TCP port ranges that a consumer can use to access a resource
+     * configuration (for example: 1-65535).
+     *
+     * You can separate port ranges using commas (for example: 1,2,22-30).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-portranges)
-     * @param portRanges 
+     * @param portRanges (SINGLE, GROUP, CHILD) The TCP port ranges that a consumer can use to
+     * access a resource configuration (for example: 1-65535). 
      */
     override fun portRanges(vararg portRanges: String): Unit = portRanges(portRanges.toList())
 
     /**
+     * (SINGLE, GROUP) The protocol accepted by the resource configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-protocoltype)
-     * @param protocolType 
+     * @param protocolType (SINGLE, GROUP) The protocol accepted by the resource configuration. 
      */
     override fun protocolType(protocolType: String) {
       cdkBuilder.protocolType(protocolType)
     }
 
     /**
+     * The auth type for the resource configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationauthtype)
-     * @param resourceConfigurationAuthType 
+     * @param resourceConfigurationAuthType The auth type for the resource configuration. 
      */
     override fun resourceConfigurationAuthType(resourceConfigurationAuthType: String) {
       cdkBuilder.resourceConfigurationAuthType(resourceConfigurationAuthType)
     }
 
     /**
+     * Identifies the resource configuration in one of the following ways:.
+     *
+     * * *Amazon Resource Name (ARN)* - Supported resource-types that are provisioned by AWS
+     * services, such as RDS databases, can be identified by their ARN.
+     * * *Domain name* - Any domain name that is publicly resolvable.
+     * * *IP address* - For IPv4 and IPv6, only IP addresses in the VPC are supported.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationdefinition)
-     * @param resourceConfigurationDefinition 
+     * @param resourceConfigurationDefinition Identifies the resource configuration in one of the
+     * following ways:. 
      */
     override fun resourceConfigurationDefinition(resourceConfigurationDefinition: IResolvable) {
       cdkBuilder.resourceConfigurationDefinition(resourceConfigurationDefinition.let(IResolvable.Companion::unwrap))
     }
 
     /**
+     * Identifies the resource configuration in one of the following ways:.
+     *
+     * * *Amazon Resource Name (ARN)* - Supported resource-types that are provisioned by AWS
+     * services, such as RDS databases, can be identified by their ARN.
+     * * *Domain name* - Any domain name that is publicly resolvable.
+     * * *IP address* - For IPv4 and IPv6, only IP addresses in the VPC are supported.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationdefinition)
-     * @param resourceConfigurationDefinition 
+     * @param resourceConfigurationDefinition Identifies the resource configuration in one of the
+     * following ways:. 
      */
     override
         fun resourceConfigurationDefinition(resourceConfigurationDefinition: ResourceConfigurationDefinitionProperty) {
@@ -446,8 +567,16 @@ public open class CfnResourceConfiguration(
     }
 
     /**
+     * Identifies the resource configuration in one of the following ways:.
+     *
+     * * *Amazon Resource Name (ARN)* - Supported resource-types that are provisioned by AWS
+     * services, such as RDS databases, can be identified by their ARN.
+     * * *Domain name* - Any domain name that is publicly resolvable.
+     * * *IP address* - For IPv4 and IPv6, only IP addresses in the VPC are supported.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationdefinition)
-     * @param resourceConfigurationDefinition 
+     * @param resourceConfigurationDefinition Identifies the resource configuration in one of the
+     * following ways:. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("43cc195d1c74e028240ae8c6de32449e5ef4a8c655009bf2c3d73b88f2266a0a")
@@ -457,40 +586,58 @@ public open class CfnResourceConfiguration(
         resourceConfigurationDefinition(ResourceConfigurationDefinitionProperty(resourceConfigurationDefinition))
 
     /**
+     * The ID of the group resource configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationgroupid)
-     * @param resourceConfigurationGroupId 
+     * @param resourceConfigurationGroupId The ID of the group resource configuration. 
      */
     override fun resourceConfigurationGroupId(resourceConfigurationGroupId: String) {
       cdkBuilder.resourceConfigurationGroupId(resourceConfigurationGroupId)
     }
 
     /**
+     * The type of resource configuration. A resource configuration can be one of the following
+     * types:.
+     *
+     * * *SINGLE* - A single resource.
+     * * *GROUP* - A group of resources. You must create a group resource configuration before you
+     * create a child resource configuration.
+     * * *CHILD* - A single resource that is part of a group resource configuration.
+     * * *ARN* - An AWS resource.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationtype)
-     * @param resourceConfigurationType 
+     * @param resourceConfigurationType The type of resource configuration. A resource configuration
+     * can be one of the following types:. 
      */
     override fun resourceConfigurationType(resourceConfigurationType: String) {
       cdkBuilder.resourceConfigurationType(resourceConfigurationType)
     }
 
     /**
+     * The ID of the resource gateway.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-resourcegatewayid)
-     * @param resourceGatewayId 
+     * @param resourceGatewayId The ID of the resource gateway. 
      */
     override fun resourceGatewayId(resourceGatewayId: String) {
       cdkBuilder.resourceGatewayId(resourceGatewayId)
     }
 
     /**
+     * The tags for the resource configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-tags)
-     * @param tags 
+     * @param tags The tags for the resource configuration. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
+     * The tags for the resource configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-tags)
-     * @param tags 
+     * @param tags The tags for the resource configuration. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -521,6 +668,129 @@ public open class CfnResourceConfiguration(
   }
 
   /**
+   * The domain name of the resource configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.vpclattice.*;
+   * DnsResourceProperty dnsResourceProperty = DnsResourceProperty.builder()
+   * .domainName("domainName")
+   * .ipAddressType("ipAddressType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-resourceconfiguration-dnsresource.html)
+   */
+  public interface DnsResourceProperty {
+    /**
+     * The domain name of the resource configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-resourceconfiguration-dnsresource.html#cfn-vpclattice-resourceconfiguration-dnsresource-domainname)
+     */
+    public fun domainName(): String
+
+    /**
+     * The IP address type for the resource configuration.
+     *
+     * Dualstack is not currently supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-resourceconfiguration-dnsresource.html#cfn-vpclattice-resourceconfiguration-dnsresource-ipaddresstype)
+     */
+    public fun ipAddressType(): String
+
+    /**
+     * A builder for [DnsResourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param domainName The domain name of the resource configuration. 
+       */
+      public fun domainName(domainName: String)
+
+      /**
+       * @param ipAddressType The IP address type for the resource configuration. 
+       * Dualstack is not currently supported.
+       */
+      public fun ipAddressType(ipAddressType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.vpclattice.CfnResourceConfiguration.DnsResourceProperty.Builder
+          =
+          software.amazon.awscdk.services.vpclattice.CfnResourceConfiguration.DnsResourceProperty.builder()
+
+      /**
+       * @param domainName The domain name of the resource configuration. 
+       */
+      override fun domainName(domainName: String) {
+        cdkBuilder.domainName(domainName)
+      }
+
+      /**
+       * @param ipAddressType The IP address type for the resource configuration. 
+       * Dualstack is not currently supported.
+       */
+      override fun ipAddressType(ipAddressType: String) {
+        cdkBuilder.ipAddressType(ipAddressType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.vpclattice.CfnResourceConfiguration.DnsResourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnResourceConfiguration.DnsResourceProperty,
+    ) : CdkObject(cdkObject),
+        DnsResourceProperty {
+      /**
+       * The domain name of the resource configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-resourceconfiguration-dnsresource.html#cfn-vpclattice-resourceconfiguration-dnsresource-domainname)
+       */
+      override fun domainName(): String = unwrap(this).getDomainName()
+
+      /**
+       * The IP address type for the resource configuration.
+       *
+       * Dualstack is not currently supported.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-resourceconfiguration-dnsresource.html#cfn-vpclattice-resourceconfiguration-dnsresource-ipaddresstype)
+       */
+      override fun ipAddressType(): String = unwrap(this).getIpAddressType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DnsResourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnResourceConfiguration.DnsResourceProperty):
+          DnsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? DnsResourceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DnsResourceProperty):
+          software.amazon.awscdk.services.vpclattice.CfnResourceConfiguration.DnsResourceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.vpclattice.CfnResourceConfiguration.DnsResourceProperty
+    }
+  }
+
+  /**
+   * Identifies the resource configuration in one of the following ways:.
+   *
+   * * *Amazon Resource Name (ARN)* - Supported resource-types that are provisioned by AWS services,
+   * such as RDS databases, can be identified by their ARN.
+   * * *Domain name* - Any domain name that is publicly resolvable.
+   * * *IP address* - For IPv4 and IPv6, only IP addresses in the VPC are supported.
+   *
    * Example:
    *
    * ```
@@ -529,6 +799,11 @@ public open class CfnResourceConfiguration(
    * import io.cloudshiftdev.awscdk.services.vpclattice.*;
    * ResourceConfigurationDefinitionProperty resourceConfigurationDefinitionProperty =
    * ResourceConfigurationDefinitionProperty.builder()
+   * .arnResource("arnResource")
+   * .dnsResource(DnsResourceProperty.builder()
+   * .domainName("domainName")
+   * .ipAddressType("ipAddressType")
+   * .build())
    * .ipResource("ipResource")
    * .build();
    * ```
@@ -537,9 +812,29 @@ public open class CfnResourceConfiguration(
    */
   public interface ResourceConfigurationDefinitionProperty {
     /**
+     * The Amazon Resource Name (ARN) of the resource configuration.
+     *
+     * For the ARN syntax and format, see [ARN
+     * format](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html#arns-syntax) in the
+     * *AWS Identity and Access Management user guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-resourceconfiguration-resourceconfigurationdefinition.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationdefinition-arnresource)
+     */
+    public fun arnResource(): String? = unwrap(this).getArnResource()
+
+    /**
+     * The DNS name of the resource configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-resourceconfiguration-resourceconfigurationdefinition.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationdefinition-dnsresource)
+     */
+    public fun dnsResource(): Any? = unwrap(this).getDnsResource()
+
+    /**
+     * The IP address of the resource configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-resourceconfiguration-resourceconfigurationdefinition.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationdefinition-ipresource)
      */
-    public fun ipResource(): String
+    public fun ipResource(): String? = unwrap(this).getIpResource()
 
     /**
      * A builder for [ResourceConfigurationDefinitionProperty]
@@ -547,7 +842,32 @@ public open class CfnResourceConfiguration(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param ipResource the value to be set. 
+       * @param arnResource The Amazon Resource Name (ARN) of the resource configuration.
+       * For the ARN syntax and format, see [ARN
+       * format](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html#arns-syntax) in
+       * the *AWS Identity and Access Management user guide* .
+       */
+      public fun arnResource(arnResource: String)
+
+      /**
+       * @param dnsResource The DNS name of the resource configuration.
+       */
+      public fun dnsResource(dnsResource: IResolvable)
+
+      /**
+       * @param dnsResource The DNS name of the resource configuration.
+       */
+      public fun dnsResource(dnsResource: DnsResourceProperty)
+
+      /**
+       * @param dnsResource The DNS name of the resource configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a5c66a59484e3706a3304ed012707285e64d3b98a393d644c351f9c3972fac1c")
+      public fun dnsResource(dnsResource: DnsResourceProperty.Builder.() -> Unit)
+
+      /**
+       * @param ipResource The IP address of the resource configuration.
        */
       public fun ipResource(ipResource: String)
     }
@@ -559,7 +879,39 @@ public open class CfnResourceConfiguration(
           software.amazon.awscdk.services.vpclattice.CfnResourceConfiguration.ResourceConfigurationDefinitionProperty.builder()
 
       /**
-       * @param ipResource the value to be set. 
+       * @param arnResource The Amazon Resource Name (ARN) of the resource configuration.
+       * For the ARN syntax and format, see [ARN
+       * format](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html#arns-syntax) in
+       * the *AWS Identity and Access Management user guide* .
+       */
+      override fun arnResource(arnResource: String) {
+        cdkBuilder.arnResource(arnResource)
+      }
+
+      /**
+       * @param dnsResource The DNS name of the resource configuration.
+       */
+      override fun dnsResource(dnsResource: IResolvable) {
+        cdkBuilder.dnsResource(dnsResource.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param dnsResource The DNS name of the resource configuration.
+       */
+      override fun dnsResource(dnsResource: DnsResourceProperty) {
+        cdkBuilder.dnsResource(dnsResource.let(DnsResourceProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param dnsResource The DNS name of the resource configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a5c66a59484e3706a3304ed012707285e64d3b98a393d644c351f9c3972fac1c")
+      override fun dnsResource(dnsResource: DnsResourceProperty.Builder.() -> Unit): Unit =
+          dnsResource(DnsResourceProperty(dnsResource))
+
+      /**
+       * @param ipResource The IP address of the resource configuration.
        */
       override fun ipResource(ipResource: String) {
         cdkBuilder.ipResource(ipResource)
@@ -575,9 +927,29 @@ public open class CfnResourceConfiguration(
     ) : CdkObject(cdkObject),
         ResourceConfigurationDefinitionProperty {
       /**
+       * The Amazon Resource Name (ARN) of the resource configuration.
+       *
+       * For the ARN syntax and format, see [ARN
+       * format](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html#arns-syntax) in
+       * the *AWS Identity and Access Management user guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-resourceconfiguration-resourceconfigurationdefinition.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationdefinition-arnresource)
+       */
+      override fun arnResource(): String? = unwrap(this).getArnResource()
+
+      /**
+       * The DNS name of the resource configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-resourceconfiguration-resourceconfigurationdefinition.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationdefinition-dnsresource)
+       */
+      override fun dnsResource(): Any? = unwrap(this).getDnsResource()
+
+      /**
+       * The IP address of the resource configuration.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-resourceconfiguration-resourceconfigurationdefinition.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationdefinition-ipresource)
        */
-      override fun ipResource(): String = unwrap(this).getIpResource()
+      override fun ipResource(): String? = unwrap(this).getIpResource()
     }
 
     public companion object {

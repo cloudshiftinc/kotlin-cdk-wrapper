@@ -3,8 +3,11 @@
 package io.cloudshiftdev.awscdk.services.gamelift
 
 import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -12,6 +15,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
@@ -42,6 +46,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * // the properties below are optional
  * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -50,7 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAlias(
   cdkObject: software.amazon.awscdk.services.gamelift.CfnAlias,
 ) : CfnResource(cdkObject),
-    IInspectable {
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -68,12 +77,28 @@ public open class CfnAlias(
   )
 
   /**
+   * The Amazon Resource Name (
+   * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) that is assigned to a
+   * Amazon GameLift Servers alias resource and uniquely identifies it. ARNs are unique across all
+   * Regions. Format is
+   * `arn:aws:gamelift:&lt;region&gt;::alias/alias-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912` . In a
+   * GameLift alias ARN, the resource ID matches the alias ID value.
+   */
+  public open fun attrAliasArn(): String = unwrap(this).getAttrAliasArn()
+
+  /**
    * A unique identifier for the alias. For example,
    * `arn:aws:gamelift:us-west-1::alias/alias-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912`.
    *
    * Alias IDs are unique within a Region.
    */
   public open fun attrAliasId(): String = unwrap(this).getAttrAliasId()
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * A human-readable description of the alias.
@@ -136,6 +161,23 @@ public open class CfnAlias(
       routingStrategy(RoutingStrategyProperty(`value`))
 
   /**
+   * An array of key-value pairs to apply to this resource.
+   */
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * An array of key-value pairs to apply to this resource.
+   */
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
+  }
+
+  /**
+   * An array of key-value pairs to apply to this resource.
+   */
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.gamelift.CfnAlias].
    */
   @CdkDslMarker
@@ -186,6 +228,22 @@ public open class CfnAlias(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("48db2f8128a66631467a218444363fbda68842721f78cbfaf41860c50d6f2b2b")
     public fun routingStrategy(routingStrategy: RoutingStrategyProperty.Builder.() -> Unit)
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html#cfn-gamelift-alias-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html#cfn-gamelift-alias-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -250,6 +308,24 @@ public open class CfnAlias(
     @JvmName("48db2f8128a66631467a218444363fbda68842721f78cbfaf41860c50d6f2b2b")
     override fun routingStrategy(routingStrategy: RoutingStrategyProperty.Builder.() -> Unit): Unit
         = routingStrategy(RoutingStrategyProperty(routingStrategy))
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html#cfn-gamelift-alias-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html#cfn-gamelift-alias-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.gamelift.CfnAlias = cdkBuilder.build()
   }

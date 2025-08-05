@@ -86,6 +86,9 @@ public interface ResponseHeadersCorsBehavior {
   /**
    * A list of HTTP methods that CloudFront includes as values for the Access-Control-Allow-Methods
    * HTTP response header.
+   *
+   * Allowed methods: `'GET'`, `'DELETE'`, `'HEAD'`, `'OPTIONS'`, `'PATCH'`, `'POST'`, and `'PUT'`.
+   * You can specify `['ALL']` to allow all methods.
    */
   public fun accessControlAllowMethods(): List<String>
 
@@ -150,12 +153,18 @@ public interface ResponseHeadersCorsBehavior {
     /**
      * @param accessControlAllowMethods A list of HTTP methods that CloudFront includes as values
      * for the Access-Control-Allow-Methods HTTP response header. 
+     * Allowed methods: `'GET'`, `'DELETE'`, `'HEAD'`, `'OPTIONS'`, `'PATCH'`, `'POST'`, and
+     * `'PUT'`.
+     * You can specify `['ALL']` to allow all methods.
      */
     public fun accessControlAllowMethods(accessControlAllowMethods: List<String>)
 
     /**
      * @param accessControlAllowMethods A list of HTTP methods that CloudFront includes as values
      * for the Access-Control-Allow-Methods HTTP response header. 
+     * Allowed methods: `'GET'`, `'DELETE'`, `'HEAD'`, `'OPTIONS'`, `'PATCH'`, `'POST'`, and
+     * `'PUT'`.
+     * You can specify `['ALL']` to allow all methods.
      */
     public fun accessControlAllowMethods(vararg accessControlAllowMethods: String)
 
@@ -233,6 +242,9 @@ public interface ResponseHeadersCorsBehavior {
     /**
      * @param accessControlAllowMethods A list of HTTP methods that CloudFront includes as values
      * for the Access-Control-Allow-Methods HTTP response header. 
+     * Allowed methods: `'GET'`, `'DELETE'`, `'HEAD'`, `'OPTIONS'`, `'PATCH'`, `'POST'`, and
+     * `'PUT'`.
+     * You can specify `['ALL']` to allow all methods.
      */
     override fun accessControlAllowMethods(accessControlAllowMethods: List<String>) {
       cdkBuilder.accessControlAllowMethods(accessControlAllowMethods)
@@ -241,6 +253,9 @@ public interface ResponseHeadersCorsBehavior {
     /**
      * @param accessControlAllowMethods A list of HTTP methods that CloudFront includes as values
      * for the Access-Control-Allow-Methods HTTP response header. 
+     * Allowed methods: `'GET'`, `'DELETE'`, `'HEAD'`, `'OPTIONS'`, `'PATCH'`, `'POST'`, and
+     * `'PUT'`.
+     * You can specify `['ALL']` to allow all methods.
      */
     override fun accessControlAllowMethods(vararg accessControlAllowMethods: String): Unit =
         accessControlAllowMethods(accessControlAllowMethods.toList())
@@ -322,6 +337,10 @@ public interface ResponseHeadersCorsBehavior {
     /**
      * A list of HTTP methods that CloudFront includes as values for the
      * Access-Control-Allow-Methods HTTP response header.
+     *
+     * Allowed methods: `'GET'`, `'DELETE'`, `'HEAD'`, `'OPTIONS'`, `'PATCH'`, `'POST'`, and
+     * `'PUT'`.
+     * You can specify `['ALL']` to allow all methods.
      */
     override fun accessControlAllowMethods(): List<String> =
         unwrap(this).getAccessControlAllowMethods()

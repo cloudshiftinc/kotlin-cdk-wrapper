@@ -191,16 +191,16 @@ public open class CfnStateMachine(
    * A map (string to string) that specifies the mappings for placeholder variables in the state
    * machine definition.
    */
-  public open fun definitionSubstitutions(`value`: IResolvable) {
-    unwrap(this).setDefinitionSubstitutions(`value`.let(IResolvable.Companion::unwrap))
+  public open fun definitionSubstitutions(`value`: Map<String, String>) {
+    unwrap(this).setDefinitionSubstitutions(`value`)
   }
 
   /**
    * A map (string to string) that specifies the mappings for placeholder variables in the state
    * machine definition.
    */
-  public open fun definitionSubstitutions(`value`: Map<String, String>) {
-    unwrap(this).setDefinitionSubstitutions(`value`)
+  public open fun definitionSubstitutions(`value`: IResolvable) {
+    unwrap(this).setDefinitionSubstitutions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -432,7 +432,7 @@ public open class CfnStateMachine(
      * @param definitionSubstitutions A map (string to string) that specifies the mappings for
      * placeholder variables in the state machine definition. 
      */
-    public fun definitionSubstitutions(definitionSubstitutions: IResolvable)
+    public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>)
 
     /**
      * A map (string to string) that specifies the mappings for placeholder variables in the state
@@ -448,7 +448,7 @@ public open class CfnStateMachine(
      * @param definitionSubstitutions A map (string to string) that specifies the mappings for
      * placeholder variables in the state machine definition. 
      */
-    public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>)
+    public fun definitionSubstitutions(definitionSubstitutions: IResolvable)
 
     /**
      * Encryption configuration for the state machine.
@@ -711,8 +711,8 @@ public open class CfnStateMachine(
      * @param definitionSubstitutions A map (string to string) that specifies the mappings for
      * placeholder variables in the state machine definition. 
      */
-    override fun definitionSubstitutions(definitionSubstitutions: IResolvable) {
-      cdkBuilder.definitionSubstitutions(definitionSubstitutions.let(IResolvable.Companion::unwrap))
+    override fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
+      cdkBuilder.definitionSubstitutions(definitionSubstitutions)
     }
 
     /**
@@ -729,8 +729,8 @@ public open class CfnStateMachine(
      * @param definitionSubstitutions A map (string to string) that specifies the mappings for
      * placeholder variables in the state machine definition. 
      */
-    override fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
-      cdkBuilder.definitionSubstitutions(definitionSubstitutions)
+    override fun definitionSubstitutions(definitionSubstitutions: IResolvable) {
+      cdkBuilder.definitionSubstitutions(definitionSubstitutions.let(IResolvable.Companion::unwrap))
     }
 
     /**

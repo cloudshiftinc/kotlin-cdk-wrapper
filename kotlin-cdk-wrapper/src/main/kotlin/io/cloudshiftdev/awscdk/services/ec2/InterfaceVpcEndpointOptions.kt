@@ -42,6 +42,22 @@ import kotlin.jvm.JvmName
  */
 public interface InterfaceVpcEndpointOptions {
   /**
+   * Type of DNS records created for the VPC endpoint.
+   *
+   * Default: not specified
+   */
+  public fun dnsRecordIpType(): VpcEndpointDnsRecordIpType? =
+      unwrap(this).getDnsRecordIpType()?.let(VpcEndpointDnsRecordIpType::wrap)
+
+  /**
+   * The IP address type for the endpoint.
+   *
+   * Default: not specified
+   */
+  public fun ipAddressType(): VpcEndpointIpAddressType? =
+      unwrap(this).getIpAddressType()?.let(VpcEndpointIpAddressType::wrap)
+
+  /**
    * Limit to only those availability zones where the endpoint service can be created.
    *
    * Setting this to 'true' requires a lookup to be performed at synthesis time. Account
@@ -73,6 +89,15 @@ public interface InterfaceVpcEndpointOptions {
   public fun privateDnsEnabled(): Boolean? = unwrap(this).getPrivateDnsEnabled()
 
   /**
+   * Whether to enable private DNS only for inbound endpoints.
+   *
+   * Default: not specified
+   */
+  public fun privateDnsOnlyForInboundResolverEndpoint():
+      VpcEndpointPrivateDnsOnlyForInboundResolverEndpoint? =
+      unwrap(this).getPrivateDnsOnlyForInboundResolverEndpoint()?.let(VpcEndpointPrivateDnsOnlyForInboundResolverEndpoint::wrap)
+
+  /**
    * The security groups to associate with this interface VPC endpoint.
    *
    * Default: - a new security group is created
@@ -101,6 +126,16 @@ public interface InterfaceVpcEndpointOptions {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param dnsRecordIpType Type of DNS records created for the VPC endpoint.
+     */
+    public fun dnsRecordIpType(dnsRecordIpType: VpcEndpointDnsRecordIpType)
+
+    /**
+     * @param ipAddressType The IP address type for the endpoint.
+     */
+    public fun ipAddressType(ipAddressType: VpcEndpointIpAddressType)
+
+    /**
      * @param lookupSupportedAzs Limit to only those availability zones where the endpoint service
      * can be created.
      * Setting this to 'true' requires a lookup to be performed at synthesis time. Account
@@ -121,6 +156,13 @@ public interface InterfaceVpcEndpointOptions {
      * allows you to make requests to the service using its default DNS hostname.
      */
     public fun privateDnsEnabled(privateDnsEnabled: Boolean)
+
+    /**
+     * @param privateDnsOnlyForInboundResolverEndpoint Whether to enable private DNS only for
+     * inbound endpoints.
+     */
+    public
+        fun privateDnsOnlyForInboundResolverEndpoint(privateDnsOnlyForInboundResolverEndpoint: VpcEndpointPrivateDnsOnlyForInboundResolverEndpoint)
 
     /**
      * @param securityGroups The security groups to associate with this interface VPC endpoint.
@@ -159,6 +201,20 @@ public interface InterfaceVpcEndpointOptions {
         = software.amazon.awscdk.services.ec2.InterfaceVpcEndpointOptions.builder()
 
     /**
+     * @param dnsRecordIpType Type of DNS records created for the VPC endpoint.
+     */
+    override fun dnsRecordIpType(dnsRecordIpType: VpcEndpointDnsRecordIpType) {
+      cdkBuilder.dnsRecordIpType(dnsRecordIpType.let(VpcEndpointDnsRecordIpType.Companion::unwrap))
+    }
+
+    /**
+     * @param ipAddressType The IP address type for the endpoint.
+     */
+    override fun ipAddressType(ipAddressType: VpcEndpointIpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(VpcEndpointIpAddressType.Companion::unwrap))
+    }
+
+    /**
      * @param lookupSupportedAzs Limit to only those availability zones where the endpoint service
      * can be created.
      * Setting this to 'true' requires a lookup to be performed at synthesis time. Account
@@ -184,6 +240,15 @@ public interface InterfaceVpcEndpointOptions {
      */
     override fun privateDnsEnabled(privateDnsEnabled: Boolean) {
       cdkBuilder.privateDnsEnabled(privateDnsEnabled)
+    }
+
+    /**
+     * @param privateDnsOnlyForInboundResolverEndpoint Whether to enable private DNS only for
+     * inbound endpoints.
+     */
+    override
+        fun privateDnsOnlyForInboundResolverEndpoint(privateDnsOnlyForInboundResolverEndpoint: VpcEndpointPrivateDnsOnlyForInboundResolverEndpoint) {
+      cdkBuilder.privateDnsOnlyForInboundResolverEndpoint(privateDnsOnlyForInboundResolverEndpoint.let(VpcEndpointPrivateDnsOnlyForInboundResolverEndpoint.Companion::unwrap))
     }
 
     /**
@@ -234,6 +299,22 @@ public interface InterfaceVpcEndpointOptions {
   ) : CdkObject(cdkObject),
       InterfaceVpcEndpointOptions {
     /**
+     * Type of DNS records created for the VPC endpoint.
+     *
+     * Default: not specified
+     */
+    override fun dnsRecordIpType(): VpcEndpointDnsRecordIpType? =
+        unwrap(this).getDnsRecordIpType()?.let(VpcEndpointDnsRecordIpType::wrap)
+
+    /**
+     * The IP address type for the endpoint.
+     *
+     * Default: not specified
+     */
+    override fun ipAddressType(): VpcEndpointIpAddressType? =
+        unwrap(this).getIpAddressType()?.let(VpcEndpointIpAddressType::wrap)
+
+    /**
      * Limit to only those availability zones where the endpoint service can be created.
      *
      * Setting this to 'true' requires a lookup to be performed at synthesis time. Account
@@ -263,6 +344,15 @@ public interface InterfaceVpcEndpointOptions {
      * not defined by the instance of IInterfaceVpcEndpointService
      */
     override fun privateDnsEnabled(): Boolean? = unwrap(this).getPrivateDnsEnabled()
+
+    /**
+     * Whether to enable private DNS only for inbound endpoints.
+     *
+     * Default: not specified
+     */
+    override fun privateDnsOnlyForInboundResolverEndpoint():
+        VpcEndpointPrivateDnsOnlyForInboundResolverEndpoint? =
+        unwrap(this).getPrivateDnsOnlyForInboundResolverEndpoint()?.let(VpcEndpointPrivateDnsOnlyForInboundResolverEndpoint::wrap)
 
     /**
      * The security groups to associate with this interface VPC endpoint.

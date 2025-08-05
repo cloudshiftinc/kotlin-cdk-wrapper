@@ -91,8 +91,19 @@ public open class S3JsonItemReader(
    *
    * @return 
    * * JSON object
+   * @param queryLanguage
    */
   public override fun render(): Any = unwrap(this).render()
+
+  /**
+   * Renders the ItemReader configuration as JSON object.
+   *
+   * @return 
+   * * JSON object
+   * @param queryLanguage
+   */
+  public override fun render(queryLanguage: QueryLanguage): Any =
+      unwrap(this).render(queryLanguage.let(QueryLanguage.Companion::unwrap))
 
   /**
    * ARN for the `getObject` method of the S3 API This API method is used to iterate all objects in

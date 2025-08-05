@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.lambda.IEventSourceDlq
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
+import io.cloudshiftdev.awscdk.services.lambda.ISchemaRegistry
 import io.cloudshiftdev.awscdk.services.lambda.StartingPosition
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import kotlin.Any
@@ -117,7 +118,7 @@ public open class ManagedKafkaEventSource(
      *
      * The consumer group ID must be unique among all your Kafka event sources. After creating a
      * Kafka event source mapping with the consumer group ID specified, you cannot update this value. 
-     * The value must have a lenght between 1 and 200 and full the pattern '[a-zA-Z0-9-/
+     * The value must have a length between 1 and 200 and full the pattern '[a-zA-Z0-9-/
      * *:_+=.&#64;-]*'.
      *
      * Default: - none
@@ -221,6 +222,15 @@ public open class ManagedKafkaEventSource(
         fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig.Builder.() -> Unit)
 
     /**
+     * Specific configuration settings for a Kafka schema registry.
+     *
+     * Default: - none
+     *
+     * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry. 
+     */
+    public fun schemaRegistryConfig(schemaRegistryConfig: ISchemaRegistry)
+
+    /**
      * The secret with the Kafka credentials, see
      * https://docs.aws.amazon.com/msk/latest/developerguide/msk-password.html for details This field
      * is required if your Kafka brokers are accessed over the Internet.
@@ -239,6 +249,15 @@ public open class ManagedKafkaEventSource(
      * @param startingPosition Where to begin consuming the stream. 
      */
     public fun startingPosition(startingPosition: StartingPosition)
+
+    /**
+     * The time from which to start reading, in Unix time seconds.
+     *
+     * Default: - no timestamp
+     *
+     * @param startingPositionTimestamp The time from which to start reading, in Unix time seconds. 
+     */
+    public fun startingPositionTimestamp(startingPositionTimestamp: Number)
 
     /**
      * The Kafka topic to subscribe to.
@@ -292,7 +311,7 @@ public open class ManagedKafkaEventSource(
      *
      * The consumer group ID must be unique among all your Kafka event sources. After creating a
      * Kafka event source mapping with the consumer group ID specified, you cannot update this value. 
-     * The value must have a lenght between 1 and 200 and full the pattern '[a-zA-Z0-9-/
+     * The value must have a length between 1 and 200 and full the pattern '[a-zA-Z0-9-/
      * *:_+=.&#64;-]*'.
      *
      * Default: - none
@@ -411,6 +430,17 @@ public open class ManagedKafkaEventSource(
         Unit = provisionedPollerConfig(ProvisionedPollerConfig(provisionedPollerConfig))
 
     /**
+     * Specific configuration settings for a Kafka schema registry.
+     *
+     * Default: - none
+     *
+     * @param schemaRegistryConfig Specific configuration settings for a Kafka schema registry. 
+     */
+    override fun schemaRegistryConfig(schemaRegistryConfig: ISchemaRegistry) {
+      cdkBuilder.schemaRegistryConfig(schemaRegistryConfig.let(ISchemaRegistry.Companion::unwrap))
+    }
+
+    /**
      * The secret with the Kafka credentials, see
      * https://docs.aws.amazon.com/msk/latest/developerguide/msk-password.html for details This field
      * is required if your Kafka brokers are accessed over the Internet.
@@ -432,6 +462,17 @@ public open class ManagedKafkaEventSource(
      */
     override fun startingPosition(startingPosition: StartingPosition) {
       cdkBuilder.startingPosition(startingPosition.let(StartingPosition.Companion::unwrap))
+    }
+
+    /**
+     * The time from which to start reading, in Unix time seconds.
+     *
+     * Default: - no timestamp
+     *
+     * @param startingPositionTimestamp The time from which to start reading, in Unix time seconds. 
+     */
+    override fun startingPositionTimestamp(startingPositionTimestamp: Number) {
+      cdkBuilder.startingPositionTimestamp(startingPositionTimestamp)
     }
 
     /**

@@ -150,6 +150,9 @@ public open class SigningProfile(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.signer.SigningProfile.PROPERTY_INJECTION_ID
+
     public fun fromSigningProfileAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

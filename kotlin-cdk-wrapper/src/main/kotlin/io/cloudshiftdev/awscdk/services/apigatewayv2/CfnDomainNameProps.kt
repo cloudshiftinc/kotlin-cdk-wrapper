@@ -29,6 +29,7 @@ import kotlin.jvm.JvmName
  * .certificateArn("certificateArn")
  * .certificateName("certificateName")
  * .endpointType("endpointType")
+ * .ipAddressType("ipAddressType")
  * .ownershipVerificationCertificateArn("ownershipVerificationCertificateArn")
  * .securityPolicy("securityPolicy")
  * .build()))
@@ -36,6 +37,7 @@ import kotlin.jvm.JvmName
  * .truststoreUri("truststoreUri")
  * .truststoreVersion("truststoreVersion")
  * .build())
+ * .routingMode("routingMode")
  * .tags(Map.of(
  * "tagsKey", "tags"))
  * .build();
@@ -66,6 +68,15 @@ public interface CfnDomainNameProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication)
    */
   public fun mutualTlsAuthentication(): Any? = unwrap(this).getMutualTlsAuthentication()
+
+  /**
+   * The routing mode API Gateway uses to route traffic to your APIs.
+   *
+   * Default: - "API_MAPPING_ONLY"
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-routingmode)
+   */
+  public fun routingMode(): String? = unwrap(this).getRoutingMode()
 
   /**
    * The collection of tags associated with a domain name.
@@ -121,6 +132,11 @@ public interface CfnDomainNameProps {
     @JvmName("9de18601ca103990b55c4ed58b3e33ace137b414a1c7353deead4a8b7c010bc0")
     public
         fun mutualTlsAuthentication(mutualTlsAuthentication: CfnDomainName.MutualTlsAuthenticationProperty.Builder.() -> Unit)
+
+    /**
+     * @param routingMode The routing mode API Gateway uses to route traffic to your APIs.
+     */
+    public fun routingMode(routingMode: String)
 
     /**
      * @param tags The collection of tags associated with a domain name.
@@ -189,6 +205,13 @@ public interface CfnDomainNameProps {
         mutualTlsAuthentication(CfnDomainName.MutualTlsAuthenticationProperty(mutualTlsAuthentication))
 
     /**
+     * @param routingMode The routing mode API Gateway uses to route traffic to your APIs.
+     */
+    override fun routingMode(routingMode: String) {
+      cdkBuilder.routingMode(routingMode)
+    }
+
+    /**
      * @param tags The collection of tags associated with a domain name.
      */
     override fun tags(tags: Map<String, String>) {
@@ -225,6 +248,15 @@ public interface CfnDomainNameProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication)
      */
     override fun mutualTlsAuthentication(): Any? = unwrap(this).getMutualTlsAuthentication()
+
+    /**
+     * The routing mode API Gateway uses to route traffic to your APIs.
+     *
+     * Default: - "API_MAPPING_ONLY"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-routingmode)
+     */
+    override fun routingMode(): String? = unwrap(this).getRoutingMode()
 
     /**
      * The collection of tags associated with a domain name.

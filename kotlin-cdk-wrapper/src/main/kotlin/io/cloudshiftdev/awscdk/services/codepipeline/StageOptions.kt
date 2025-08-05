@@ -56,6 +56,42 @@ public interface StageOptions : StageProps {
     public fun actions(vararg actions: IAction)
 
     /**
+     * @param beforeEntry The method to use when a stage allows entry.
+     */
+    public fun beforeEntry(beforeEntry: Conditions)
+
+    /**
+     * @param beforeEntry The method to use when a stage allows entry.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1a1d1cf4fd091bf6df7506b282e86ed7ba3969f647116ce1d6a3c74cbd58c70a")
+    public fun beforeEntry(beforeEntry: Conditions.Builder.() -> Unit)
+
+    /**
+     * @param onFailure The method to use when a stage has not completed successfully.
+     */
+    public fun onFailure(onFailure: FailureConditions)
+
+    /**
+     * @param onFailure The method to use when a stage has not completed successfully.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3f426db3ac9e19de485e1cfe150f0c37cf50553e9b144a8c0f542ab8f3331a0f")
+    public fun onFailure(onFailure: FailureConditions.Builder.() -> Unit)
+
+    /**
+     * @param onSuccess The method to use when a stage has succeeded.
+     */
+    public fun onSuccess(onSuccess: Conditions)
+
+    /**
+     * @param onSuccess The method to use when a stage has succeeded.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c20d5ed41c45ee3fb1a2a1de17db678e16f7042f8d3a49d424936c497afc4b3a")
+    public fun onSuccess(onSuccess: Conditions.Builder.() -> Unit)
+
+    /**
      * @param placement the value to be set.
      */
     public fun placement(placement: StagePlacement)
@@ -102,6 +138,51 @@ public interface StageOptions : StageProps {
      * You can always add more Actions later by calling `IStage#addAction`.
      */
     override fun actions(vararg actions: IAction): Unit = actions(actions.toList())
+
+    /**
+     * @param beforeEntry The method to use when a stage allows entry.
+     */
+    override fun beforeEntry(beforeEntry: Conditions) {
+      cdkBuilder.beforeEntry(beforeEntry.let(Conditions.Companion::unwrap))
+    }
+
+    /**
+     * @param beforeEntry The method to use when a stage allows entry.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1a1d1cf4fd091bf6df7506b282e86ed7ba3969f647116ce1d6a3c74cbd58c70a")
+    override fun beforeEntry(beforeEntry: Conditions.Builder.() -> Unit): Unit =
+        beforeEntry(Conditions(beforeEntry))
+
+    /**
+     * @param onFailure The method to use when a stage has not completed successfully.
+     */
+    override fun onFailure(onFailure: FailureConditions) {
+      cdkBuilder.onFailure(onFailure.let(FailureConditions.Companion::unwrap))
+    }
+
+    /**
+     * @param onFailure The method to use when a stage has not completed successfully.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3f426db3ac9e19de485e1cfe150f0c37cf50553e9b144a8c0f542ab8f3331a0f")
+    override fun onFailure(onFailure: FailureConditions.Builder.() -> Unit): Unit =
+        onFailure(FailureConditions(onFailure))
+
+    /**
+     * @param onSuccess The method to use when a stage has succeeded.
+     */
+    override fun onSuccess(onSuccess: Conditions) {
+      cdkBuilder.onSuccess(onSuccess.let(Conditions.Companion::unwrap))
+    }
+
+    /**
+     * @param onSuccess The method to use when a stage has succeeded.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c20d5ed41c45ee3fb1a2a1de17db678e16f7042f8d3a49d424936c497afc4b3a")
+    override fun onSuccess(onSuccess: Conditions.Builder.() -> Unit): Unit =
+        onSuccess(Conditions(onSuccess))
 
     /**
      * @param placement the value to be set.
@@ -156,6 +237,28 @@ public interface StageOptions : StageProps {
      */
     override fun actions(): List<IAction> = unwrap(this).getActions()?.map(IAction::wrap) ?:
         emptyList()
+
+    /**
+     * The method to use when a stage allows entry.
+     *
+     * Default: - No conditions are applied before stage entry
+     */
+    override fun beforeEntry(): Conditions? = unwrap(this).getBeforeEntry()?.let(Conditions::wrap)
+
+    /**
+     * The method to use when a stage has not completed successfully.
+     *
+     * Default: - No failure conditions are applied
+     */
+    override fun onFailure(): FailureConditions? =
+        unwrap(this).getOnFailure()?.let(FailureConditions::wrap)
+
+    /**
+     * The method to use when a stage has succeeded.
+     *
+     * Default: - No success conditions are applied
+     */
+    override fun onSuccess(): Conditions? = unwrap(this).getOnSuccess()?.let(Conditions::wrap)
 
     /**
      *

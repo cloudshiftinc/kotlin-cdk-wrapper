@@ -16,7 +16,11 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Creates a resource gateway for a service.
+ * A resource gateway is a point of ingress into the VPC where a resource resides.
+ *
+ * It spans multiple Availability Zones. For your resource to be accessible from all Availability
+ * Zones, you should create your resource gateways to span as many Availability Zones as possible. A
+ * VPC can have multiple resource gateways.
  *
  * Example:
  *
@@ -26,15 +30,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.vpclattice.*;
  * CfnResourceGateway cfnResourceGateway = CfnResourceGateway.Builder.create(this,
  * "MyCfnResourceGateway")
- * .ipAddressType("ipAddressType")
  * .name("name")
- * .securityGroupIds(List.of("securityGroupIds"))
  * .subnetIds(List.of("subnetIds"))
+ * .vpcIdentifier("vpcIdentifier")
+ * // the properties below are optional
+ * .ipAddressType("ipAddressType")
+ * .securityGroupIds(List.of("securityGroupIds"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
- * .vpcIdentifier("vpcIdentifier")
  * .build();
  * ```
  *
@@ -45,11 +50,6 @@ public open class CfnResourceGateway(
 ) : CfnResource(cdkObject),
     IInspectable,
     ITaggableV2 {
-  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.vpclattice.CfnResourceGateway(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
-      id)
-  )
-
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -67,12 +67,12 @@ public open class CfnResourceGateway(
   )
 
   /**
-   *
+   * The Amazon Resource Name (ARN) of the resource gateway.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   *
+   * The ID of the resource gateway.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
@@ -92,89 +92,89 @@ public open class CfnResourceGateway(
   }
 
   /**
-   *
+   * The type of IP address used by the resource gateway.
    */
   public open fun ipAddressType(): String? = unwrap(this).getIpAddressType()
 
   /**
-   *
+   * The type of IP address used by the resource gateway.
    */
   public open fun ipAddressType(`value`: String) {
     unwrap(this).setIpAddressType(`value`)
   }
 
   /**
-   *
+   * The name of the resource gateway.
    */
-  public open fun name(): String? = unwrap(this).getName()
+  public open fun name(): String = unwrap(this).getName()
 
   /**
-   *
+   * The name of the resource gateway.
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
   }
 
   /**
-   * The ID of one or more security groups to associate with the endpoint network interface.
+   * The IDs of the security groups applied to the resource gateway.
    */
   public open fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
       emptyList()
 
   /**
-   * The ID of one or more security groups to associate with the endpoint network interface.
+   * The IDs of the security groups applied to the resource gateway.
    */
   public open fun securityGroupIds(`value`: List<String>) {
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
   /**
-   * The ID of one or more security groups to associate with the endpoint network interface.
+   * The IDs of the security groups applied to the resource gateway.
    */
   public open fun securityGroupIds(vararg `value`: String): Unit =
       securityGroupIds(`value`.toList())
 
   /**
-   * The ID of one or more subnets in which to create an endpoint network interface.
+   * The IDs of the VPC subnets for the resource gateway.
    */
-  public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+  public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
 
   /**
-   * The ID of one or more subnets in which to create an endpoint network interface.
+   * The IDs of the VPC subnets for the resource gateway.
    */
   public open fun subnetIds(`value`: List<String>) {
     unwrap(this).setSubnetIds(`value`)
   }
 
   /**
-   * The ID of one or more subnets in which to create an endpoint network interface.
+   * The IDs of the VPC subnets for the resource gateway.
    */
   public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
 
   /**
-   *
+   * The tags for the resource gateway.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   *
+   * The tags for the resource gateway.
    */
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   *
+   * The tags for the resource gateway.
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
-   *
+   * The ID of the VPC for the resource gateway.
    */
-  public open fun vpcIdentifier(): String? = unwrap(this).getVpcIdentifier()
+  public open fun vpcIdentifier(): String = unwrap(this).getVpcIdentifier()
 
   /**
-   *
+   * The ID of the VPC for the resource gateway.
    */
   public open fun vpcIdentifier(`value`: String) {
     unwrap(this).setVpcIdentifier(`value`)
@@ -186,68 +186,74 @@ public open class CfnResourceGateway(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The type of IP address used by the resource gateway.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-ipaddresstype)
-     * @param ipAddressType 
+     * @param ipAddressType The type of IP address used by the resource gateway. 
      */
     public fun ipAddressType(ipAddressType: String)
 
     /**
+     * The name of the resource gateway.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-name)
-     * @param name 
+     * @param name The name of the resource gateway. 
      */
     public fun name(name: String)
 
     /**
-     * The ID of one or more security groups to associate with the endpoint network interface.
+     * The IDs of the security groups applied to the resource gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-securitygroupids)
-     * @param securityGroupIds The ID of one or more security groups to associate with the endpoint
-     * network interface. 
+     * @param securityGroupIds The IDs of the security groups applied to the resource gateway. 
      */
     public fun securityGroupIds(securityGroupIds: List<String>)
 
     /**
-     * The ID of one or more security groups to associate with the endpoint network interface.
+     * The IDs of the security groups applied to the resource gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-securitygroupids)
-     * @param securityGroupIds The ID of one or more security groups to associate with the endpoint
-     * network interface. 
+     * @param securityGroupIds The IDs of the security groups applied to the resource gateway. 
      */
     public fun securityGroupIds(vararg securityGroupIds: String)
 
     /**
-     * The ID of one or more subnets in which to create an endpoint network interface.
+     * The IDs of the VPC subnets for the resource gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-subnetids)
-     * @param subnetIds The ID of one or more subnets in which to create an endpoint network
-     * interface. 
+     * @param subnetIds The IDs of the VPC subnets for the resource gateway. 
      */
     public fun subnetIds(subnetIds: List<String>)
 
     /**
-     * The ID of one or more subnets in which to create an endpoint network interface.
+     * The IDs of the VPC subnets for the resource gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-subnetids)
-     * @param subnetIds The ID of one or more subnets in which to create an endpoint network
-     * interface. 
+     * @param subnetIds The IDs of the VPC subnets for the resource gateway. 
      */
     public fun subnetIds(vararg subnetIds: String)
 
     /**
+     * The tags for the resource gateway.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-tags)
-     * @param tags 
+     * @param tags The tags for the resource gateway. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
+     * The tags for the resource gateway.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-tags)
-     * @param tags 
+     * @param tags The tags for the resource gateway. 
      */
     public fun tags(vararg tags: CfnTag)
 
     /**
+     * The ID of the VPC for the resource gateway.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-vpcidentifier)
-     * @param vpcIdentifier 
+     * @param vpcIdentifier The ID of the VPC for the resource gateway. 
      */
     public fun vpcIdentifier(vpcIdentifier: String)
   }
@@ -260,79 +266,85 @@ public open class CfnResourceGateway(
         software.amazon.awscdk.services.vpclattice.CfnResourceGateway.Builder.create(scope, id)
 
     /**
+     * The type of IP address used by the resource gateway.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-ipaddresstype)
-     * @param ipAddressType 
+     * @param ipAddressType The type of IP address used by the resource gateway. 
      */
     override fun ipAddressType(ipAddressType: String) {
       cdkBuilder.ipAddressType(ipAddressType)
     }
 
     /**
+     * The name of the resource gateway.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-name)
-     * @param name 
+     * @param name The name of the resource gateway. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     /**
-     * The ID of one or more security groups to associate with the endpoint network interface.
+     * The IDs of the security groups applied to the resource gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-securitygroupids)
-     * @param securityGroupIds The ID of one or more security groups to associate with the endpoint
-     * network interface. 
+     * @param securityGroupIds The IDs of the security groups applied to the resource gateway. 
      */
     override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
     /**
-     * The ID of one or more security groups to associate with the endpoint network interface.
+     * The IDs of the security groups applied to the resource gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-securitygroupids)
-     * @param securityGroupIds The ID of one or more security groups to associate with the endpoint
-     * network interface. 
+     * @param securityGroupIds The IDs of the security groups applied to the resource gateway. 
      */
     override fun securityGroupIds(vararg securityGroupIds: String): Unit =
         securityGroupIds(securityGroupIds.toList())
 
     /**
-     * The ID of one or more subnets in which to create an endpoint network interface.
+     * The IDs of the VPC subnets for the resource gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-subnetids)
-     * @param subnetIds The ID of one or more subnets in which to create an endpoint network
-     * interface. 
+     * @param subnetIds The IDs of the VPC subnets for the resource gateway. 
      */
     override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
     /**
-     * The ID of one or more subnets in which to create an endpoint network interface.
+     * The IDs of the VPC subnets for the resource gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-subnetids)
-     * @param subnetIds The ID of one or more subnets in which to create an endpoint network
-     * interface. 
+     * @param subnetIds The IDs of the VPC subnets for the resource gateway. 
      */
     override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
     /**
+     * The tags for the resource gateway.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-tags)
-     * @param tags 
+     * @param tags The tags for the resource gateway. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
+     * The tags for the resource gateway.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-tags)
-     * @param tags 
+     * @param tags The tags for the resource gateway. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
+     * The ID of the VPC for the resource gateway.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-vpcidentifier)
-     * @param vpcIdentifier 
+     * @param vpcIdentifier The ID of the VPC for the resource gateway. 
      */
     override fun vpcIdentifier(vpcIdentifier: String) {
       cdkBuilder.vpcIdentifier(vpcIdentifier)

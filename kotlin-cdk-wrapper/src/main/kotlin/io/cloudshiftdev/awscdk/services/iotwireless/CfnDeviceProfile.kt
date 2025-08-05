@@ -515,12 +515,6 @@ public open class CfnDeviceProfile(
        * @param factoryPresetFreqsList The list of values that make up the FactoryPresetFreqs value.
        * Valid range of values include a minimum value of 1000000 and a maximum value of 16700000.
        */
-      public fun factoryPresetFreqsList(factoryPresetFreqsList: IResolvable)
-
-      /**
-       * @param factoryPresetFreqsList The list of values that make up the FactoryPresetFreqs value.
-       * Valid range of values include a minimum value of 1000000 and a maximum value of 16700000.
-       */
       public fun factoryPresetFreqsList(factoryPresetFreqsList: List<Number>)
 
       /**
@@ -528,6 +522,12 @@ public open class CfnDeviceProfile(
        * Valid range of values include a minimum value of 1000000 and a maximum value of 16700000.
        */
       public fun factoryPresetFreqsList(vararg factoryPresetFreqsList: Number)
+
+      /**
+       * @param factoryPresetFreqsList The list of values that make up the FactoryPresetFreqs value.
+       * Valid range of values include a minimum value of 1000000 and a maximum value of 16700000.
+       */
+      public fun factoryPresetFreqsList(factoryPresetFreqsList: IResolvable)
 
       /**
        * @param macVersion The MAC version (such as OTAA 1.1 or OTAA 1.0.3) to use with this device
@@ -655,14 +655,6 @@ public open class CfnDeviceProfile(
        * @param factoryPresetFreqsList The list of values that make up the FactoryPresetFreqs value.
        * Valid range of values include a minimum value of 1000000 and a maximum value of 16700000.
        */
-      override fun factoryPresetFreqsList(factoryPresetFreqsList: IResolvable) {
-        cdkBuilder.factoryPresetFreqsList(factoryPresetFreqsList.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param factoryPresetFreqsList The list of values that make up the FactoryPresetFreqs value.
-       * Valid range of values include a minimum value of 1000000 and a maximum value of 16700000.
-       */
       override fun factoryPresetFreqsList(factoryPresetFreqsList: List<Number>) {
         cdkBuilder.factoryPresetFreqsList(factoryPresetFreqsList)
       }
@@ -673,6 +665,14 @@ public open class CfnDeviceProfile(
        */
       override fun factoryPresetFreqsList(vararg factoryPresetFreqsList: Number): Unit =
           factoryPresetFreqsList(factoryPresetFreqsList.toList())
+
+      /**
+       * @param factoryPresetFreqsList The list of values that make up the FactoryPresetFreqs value.
+       * Valid range of values include a minimum value of 1000000 and a maximum value of 16700000.
+       */
+      override fun factoryPresetFreqsList(factoryPresetFreqsList: IResolvable) {
+        cdkBuilder.factoryPresetFreqsList(factoryPresetFreqsList.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param macVersion The MAC version (such as OTAA 1.1 or OTAA 1.0.3) to use with this device

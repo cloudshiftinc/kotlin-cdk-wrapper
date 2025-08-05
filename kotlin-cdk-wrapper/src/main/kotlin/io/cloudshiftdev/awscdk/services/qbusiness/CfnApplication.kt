@@ -209,20 +209,20 @@ public open class CfnApplication(
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
-   *
+   * The OIDC client ID for a Amazon Q Business application.
    */
   public open fun clientIdsForOidc(): List<String> = unwrap(this).getClientIdsForOidc() ?:
       emptyList()
 
   /**
-   *
+   * The OIDC client ID for a Amazon Q Business application.
    */
   public open fun clientIdsForOidc(`value`: List<String>) {
     unwrap(this).setClientIdsForOidc(`value`)
   }
 
   /**
-   *
+   * The OIDC client ID for a Amazon Q Business application.
    */
   public open fun clientIdsForOidc(vararg `value`: String): Unit =
       clientIdsForOidc(`value`.toList())
@@ -385,26 +385,30 @@ public open class CfnApplication(
       qAppsConfiguration(QAppsConfigurationProperty(`value`))
 
   /**
-   *
+   * The Amazon QuickSight configuration for an Amazon Q Business application that uses QuickSight
+   * as the identity provider.
    */
   public open fun quickSightConfiguration(): Any? = unwrap(this).getQuickSightConfiguration()
 
   /**
-   *
+   * The Amazon QuickSight configuration for an Amazon Q Business application that uses QuickSight
+   * as the identity provider.
    */
   public open fun quickSightConfiguration(`value`: IResolvable) {
     unwrap(this).setQuickSightConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   *
+   * The Amazon QuickSight configuration for an Amazon Q Business application that uses QuickSight
+   * as the identity provider.
    */
   public open fun quickSightConfiguration(`value`: QuickSightConfigurationProperty) {
     unwrap(this).setQuickSightConfiguration(`value`.let(QuickSightConfigurationProperty.Companion::unwrap))
   }
 
   /**
-   *
+   * The Amazon QuickSight configuration for an Amazon Q Business application that uses QuickSight
+   * as the identity provider.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("6b7a1e15751a3e4289984a687a250f865c4e2c84e8d2f45a890924b2671389ff")
@@ -513,14 +517,18 @@ public open class CfnApplication(
         fun autoSubscriptionConfiguration(autoSubscriptionConfiguration: AutoSubscriptionConfigurationProperty.Builder.() -> Unit)
 
     /**
+     * The OIDC client ID for a Amazon Q Business application.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-clientidsforoidc)
-     * @param clientIdsForOidc 
+     * @param clientIdsForOidc The OIDC client ID for a Amazon Q Business application. 
      */
     public fun clientIdsForOidc(clientIdsForOidc: List<String>)
 
     /**
+     * The OIDC client ID for a Amazon Q Business application.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-clientidsforoidc)
-     * @param clientIdsForOidc 
+     * @param clientIdsForOidc The OIDC client ID for a Amazon Q Business application. 
      */
     public fun clientIdsForOidc(vararg clientIdsForOidc: String)
 
@@ -676,20 +684,32 @@ public open class CfnApplication(
     public fun qAppsConfiguration(qAppsConfiguration: QAppsConfigurationProperty.Builder.() -> Unit)
 
     /**
+     * The Amazon QuickSight configuration for an Amazon Q Business application that uses QuickSight
+     * as the identity provider.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-quicksightconfiguration)
-     * @param quickSightConfiguration 
+     * @param quickSightConfiguration The Amazon QuickSight configuration for an Amazon Q Business
+     * application that uses QuickSight as the identity provider. 
      */
     public fun quickSightConfiguration(quickSightConfiguration: IResolvable)
 
     /**
+     * The Amazon QuickSight configuration for an Amazon Q Business application that uses QuickSight
+     * as the identity provider.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-quicksightconfiguration)
-     * @param quickSightConfiguration 
+     * @param quickSightConfiguration The Amazon QuickSight configuration for an Amazon Q Business
+     * application that uses QuickSight as the identity provider. 
      */
     public fun quickSightConfiguration(quickSightConfiguration: QuickSightConfigurationProperty)
 
     /**
+     * The Amazon QuickSight configuration for an Amazon Q Business application that uses QuickSight
+     * as the identity provider.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-quicksightconfiguration)
-     * @param quickSightConfiguration 
+     * @param quickSightConfiguration The Amazon QuickSight configuration for an Amazon Q Business
+     * application that uses QuickSight as the identity provider. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("06005c56037ea7a26e8925e5697032f5549ca20d64282947266875d4932a90c7")
@@ -819,16 +839,20 @@ public open class CfnApplication(
         autoSubscriptionConfiguration(AutoSubscriptionConfigurationProperty(autoSubscriptionConfiguration))
 
     /**
+     * The OIDC client ID for a Amazon Q Business application.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-clientidsforoidc)
-     * @param clientIdsForOidc 
+     * @param clientIdsForOidc The OIDC client ID for a Amazon Q Business application. 
      */
     override fun clientIdsForOidc(clientIdsForOidc: List<String>) {
       cdkBuilder.clientIdsForOidc(clientIdsForOidc)
     }
 
     /**
+     * The OIDC client ID for a Amazon Q Business application.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-clientidsforoidc)
-     * @param clientIdsForOidc 
+     * @param clientIdsForOidc The OIDC client ID for a Amazon Q Business application. 
      */
     override fun clientIdsForOidc(vararg clientIdsForOidc: String): Unit =
         clientIdsForOidc(clientIdsForOidc.toList())
@@ -1012,24 +1036,36 @@ public open class CfnApplication(
         Unit = qAppsConfiguration(QAppsConfigurationProperty(qAppsConfiguration))
 
     /**
+     * The Amazon QuickSight configuration for an Amazon Q Business application that uses QuickSight
+     * as the identity provider.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-quicksightconfiguration)
-     * @param quickSightConfiguration 
+     * @param quickSightConfiguration The Amazon QuickSight configuration for an Amazon Q Business
+     * application that uses QuickSight as the identity provider. 
      */
     override fun quickSightConfiguration(quickSightConfiguration: IResolvable) {
       cdkBuilder.quickSightConfiguration(quickSightConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
+     * The Amazon QuickSight configuration for an Amazon Q Business application that uses QuickSight
+     * as the identity provider.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-quicksightconfiguration)
-     * @param quickSightConfiguration 
+     * @param quickSightConfiguration The Amazon QuickSight configuration for an Amazon Q Business
+     * application that uses QuickSight as the identity provider. 
      */
     override fun quickSightConfiguration(quickSightConfiguration: QuickSightConfigurationProperty) {
       cdkBuilder.quickSightConfiguration(quickSightConfiguration.let(QuickSightConfigurationProperty.Companion::unwrap))
     }
 
     /**
+     * The Amazon QuickSight configuration for an Amazon Q Business application that uses QuickSight
+     * as the identity provider.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-quicksightconfiguration)
-     * @param quickSightConfiguration 
+     * @param quickSightConfiguration The Amazon QuickSight configuration for an Amazon Q Business
+     * application that uses QuickSight as the identity provider. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("06005c56037ea7a26e8925e5697032f5549ca20d64282947266875d4932a90c7")
@@ -1599,6 +1635,13 @@ public open class CfnApplication(
   }
 
   /**
+   * The Amazon QuickSight configuration for an Amazon Q Business application that uses QuickSight
+   * as the identity provider.
+   *
+   * For more information, see [Creating an Amazon QuickSight integrated
+   * application](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/create-quicksight-integrated-application.html)
+   * .
+   *
    * Example:
    *
    * ```
@@ -1615,6 +1658,12 @@ public open class CfnApplication(
    */
   public interface QuickSightConfigurationProperty {
     /**
+     * The Amazon QuickSight namespace that is used as the identity provider.
+     *
+     * For more information about QuickSight namespaces, see [Namespace
+     * operations](https://docs.aws.amazon.com/quicksight/latest/developerguide/namespace-operations.html)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-application-quicksightconfiguration.html#cfn-qbusiness-application-quicksightconfiguration-clientnamespace)
      */
     public fun clientNamespace(): String
@@ -1625,7 +1674,11 @@ public open class CfnApplication(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param clientNamespace the value to be set. 
+       * @param clientNamespace The Amazon QuickSight namespace that is used as the identity
+       * provider. 
+       * For more information about QuickSight namespaces, see [Namespace
+       * operations](https://docs.aws.amazon.com/quicksight/latest/developerguide/namespace-operations.html)
+       * .
        */
       public fun clientNamespace(clientNamespace: String)
     }
@@ -1637,7 +1690,11 @@ public open class CfnApplication(
           software.amazon.awscdk.services.qbusiness.CfnApplication.QuickSightConfigurationProperty.builder()
 
       /**
-       * @param clientNamespace the value to be set. 
+       * @param clientNamespace The Amazon QuickSight namespace that is used as the identity
+       * provider. 
+       * For more information about QuickSight namespaces, see [Namespace
+       * operations](https://docs.aws.amazon.com/quicksight/latest/developerguide/namespace-operations.html)
+       * .
        */
       override fun clientNamespace(clientNamespace: String) {
         cdkBuilder.clientNamespace(clientNamespace)
@@ -1653,6 +1710,12 @@ public open class CfnApplication(
     ) : CdkObject(cdkObject),
         QuickSightConfigurationProperty {
       /**
+       * The Amazon QuickSight namespace that is used as the identity provider.
+       *
+       * For more information about QuickSight namespaces, see [Namespace
+       * operations](https://docs.aws.amazon.com/quicksight/latest/developerguide/namespace-operations.html)
+       * .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-application-quicksightconfiguration.html#cfn-qbusiness-application-quicksightconfiguration-clientnamespace)
        */
       override fun clientNamespace(): String = unwrap(this).getClientNamespace()

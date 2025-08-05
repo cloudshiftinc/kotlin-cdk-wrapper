@@ -94,7 +94,7 @@ public interface CfnAppImageConfigProps {
   public fun jupyterLabAppImageConfig(): Any? = unwrap(this).getJupyterLabAppImageConfig()
 
   /**
-   * The configuration for the file system and kernels in the SageMaker image.
+   * The configuration for the file system and kernels in the SageMaker AI image.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-kernelgatewayimageconfig)
    */
@@ -168,20 +168,20 @@ public interface CfnAppImageConfigProps {
 
     /**
      * @param kernelGatewayImageConfig The configuration for the file system and kernels in the
-     * SageMaker image.
+     * SageMaker AI image.
      */
     public fun kernelGatewayImageConfig(kernelGatewayImageConfig: IResolvable)
 
     /**
      * @param kernelGatewayImageConfig The configuration for the file system and kernels in the
-     * SageMaker image.
+     * SageMaker AI image.
      */
     public
         fun kernelGatewayImageConfig(kernelGatewayImageConfig: CfnAppImageConfig.KernelGatewayImageConfigProperty)
 
     /**
      * @param kernelGatewayImageConfig The configuration for the file system and kernels in the
-     * SageMaker image.
+     * SageMaker AI image.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("357470f97bdee8f6eecaffdafe93e2b08713c6e91528d4b0c9c023e1fc1f7331")
@@ -275,7 +275,7 @@ public interface CfnAppImageConfigProps {
 
     /**
      * @param kernelGatewayImageConfig The configuration for the file system and kernels in the
-     * SageMaker image.
+     * SageMaker AI image.
      */
     override fun kernelGatewayImageConfig(kernelGatewayImageConfig: IResolvable) {
       cdkBuilder.kernelGatewayImageConfig(kernelGatewayImageConfig.let(IResolvable.Companion::unwrap))
@@ -283,7 +283,7 @@ public interface CfnAppImageConfigProps {
 
     /**
      * @param kernelGatewayImageConfig The configuration for the file system and kernels in the
-     * SageMaker image.
+     * SageMaker AI image.
      */
     override
         fun kernelGatewayImageConfig(kernelGatewayImageConfig: CfnAppImageConfig.KernelGatewayImageConfigProperty) {
@@ -292,7 +292,7 @@ public interface CfnAppImageConfigProps {
 
     /**
      * @param kernelGatewayImageConfig The configuration for the file system and kernels in the
-     * SageMaker image.
+     * SageMaker AI image.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("357470f97bdee8f6eecaffdafe93e2b08713c6e91528d4b0c9c023e1fc1f7331")
@@ -353,7 +353,7 @@ public interface CfnAppImageConfigProps {
     override fun jupyterLabAppImageConfig(): Any? = unwrap(this).getJupyterLabAppImageConfig()
 
     /**
-     * The configuration for the file system and kernels in the SageMaker image.
+     * The configuration for the file system and kernels in the SageMaker AI image.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-kernelgatewayimageconfig)
      */

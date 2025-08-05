@@ -293,20 +293,20 @@ public open class CfnUserPool(
   public open fun attrUserPoolId(): String = unwrap(this).getAttrUserPoolId()
 
   /**
-   * The attributes to be auto-verified.
+   * The attributes that you want your user pool to automatically verify.
    */
   public open fun autoVerifiedAttributes(): List<String> = unwrap(this).getAutoVerifiedAttributes()
       ?: emptyList()
 
   /**
-   * The attributes to be auto-verified.
+   * The attributes that you want your user pool to automatically verify.
    */
   public open fun autoVerifiedAttributes(`value`: List<String>) {
     unwrap(this).setAutoVerifiedAttributes(`value`)
   }
 
   /**
-   * The attributes to be auto-verified.
+   * The attributes that you want your user pool to automatically verify.
    */
   public open fun autoVerifiedAttributes(vararg `value`: String): Unit =
       autoVerifiedAttributes(`value`.toList())
@@ -481,16 +481,12 @@ public open class CfnUserPool(
       lambdaConfig(LambdaConfigProperty(`value`))
 
   /**
-   * The multi-factor authentication (MFA) configuration.
-   *
-   * Valid values include:.
+   * Displays the state of multi-factor authentication (MFA) as on, off, or optional.
    */
   public open fun mfaConfiguration(): String? = unwrap(this).getMfaConfiguration()
 
   /**
-   * The multi-factor authentication (MFA) configuration.
-   *
-   * Valid values include:.
+   * Displays the state of multi-factor authentication (MFA) as on, off, or optional.
    */
   public open fun mfaConfiguration(`value`: String) {
     unwrap(this).setMfaConfiguration(`value`)
@@ -498,15 +494,11 @@ public open class CfnUserPool(
 
   /**
    * A list of user pool policies.
-   *
-   * Contains the policy that sets password-complexity requirements.
    */
   public open fun policies(): Any? = unwrap(this).getPolicies()
 
   /**
    * A list of user pool policies.
-   *
-   * Contains the policy that sets password-complexity requirements.
    */
   public open fun policies(`value`: IResolvable) {
     unwrap(this).setPolicies(`value`.let(IResolvable.Companion::unwrap))
@@ -514,8 +506,6 @@ public open class CfnUserPool(
 
   /**
    * A list of user pool policies.
-   *
-   * Contains the policy that sets password-complexity requirements.
    */
   public open fun policies(`value`: PoliciesProperty) {
     unwrap(this).setPolicies(`value`.let(PoliciesProperty.Companion::unwrap))
@@ -523,8 +513,6 @@ public open class CfnUserPool(
 
   /**
    * A list of user pool policies.
-   *
-   * Contains the policy that sets password-complexity requirements.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("c8acea4f8e23426db34b7f27283cfb03e85ea58103fa10ce204a08d84d35d8da")
@@ -532,26 +520,26 @@ public open class CfnUserPool(
       policies(PoliciesProperty(`value`))
 
   /**
-   * An array of schema attributes for the new user pool.
+   * An array of attributes for the new user pool.
    */
   public open fun schema(): Any? = unwrap(this).getSchema()
 
   /**
-   * An array of schema attributes for the new user pool.
+   * An array of attributes for the new user pool.
    */
   public open fun schema(`value`: IResolvable) {
     unwrap(this).setSchema(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * An array of schema attributes for the new user pool.
+   * An array of attributes for the new user pool.
    */
   public open fun schema(`value`: List<Any>) {
     unwrap(this).setSchema(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * An array of schema attributes for the new user pool.
+   * An array of attributes for the new user pool.
    */
   public open fun schema(vararg `value`: Any): Unit = schema(`value`.toList())
 
@@ -568,30 +556,30 @@ public open class CfnUserPool(
   }
 
   /**
-   * The SMS configuration with the settings that your Amazon Cognito user pool must use to send an
-   * SMS message from your AWS account through Amazon Simple Notification Service.
+   * The settings for your Amazon Cognito user pool to send SMS messages with Amazon Simple
+   * Notification Service.
    */
   public open fun smsConfiguration(): Any? = unwrap(this).getSmsConfiguration()
 
   /**
-   * The SMS configuration with the settings that your Amazon Cognito user pool must use to send an
-   * SMS message from your AWS account through Amazon Simple Notification Service.
+   * The settings for your Amazon Cognito user pool to send SMS messages with Amazon Simple
+   * Notification Service.
    */
   public open fun smsConfiguration(`value`: IResolvable) {
     unwrap(this).setSmsConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The SMS configuration with the settings that your Amazon Cognito user pool must use to send an
-   * SMS message from your AWS account through Amazon Simple Notification Service.
+   * The settings for your Amazon Cognito user pool to send SMS messages with Amazon Simple
+   * Notification Service.
    */
   public open fun smsConfiguration(`value`: SmsConfigurationProperty) {
     unwrap(this).setSmsConfiguration(`value`.let(SmsConfigurationProperty.Companion::unwrap))
   }
 
   /**
-   * The SMS configuration with the settings that your Amazon Cognito user pool must use to send an
-   * SMS message from your AWS account through Amazon Simple Notification Service.
+   * The settings for your Amazon Cognito user pool to send SMS messages with Amazon Simple
+   * Notification Service.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("a50346460383087797abc34d738bc3deae588a86f4a5a46bf21193632e510438")
@@ -645,26 +633,30 @@ public open class CfnUserPool(
       Unit = userAttributeUpdateSettings(UserAttributeUpdateSettingsProperty(`value`))
 
   /**
-   * User pool add-ons.
+   * Contains settings for activation of threat protection, including the operating mode and
+   * additional authentication types.
    */
   public open fun userPoolAddOns(): Any? = unwrap(this).getUserPoolAddOns()
 
   /**
-   * User pool add-ons.
+   * Contains settings for activation of threat protection, including the operating mode and
+   * additional authentication types.
    */
   public open fun userPoolAddOns(`value`: IResolvable) {
     unwrap(this).setUserPoolAddOns(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * User pool add-ons.
+   * Contains settings for activation of threat protection, including the operating mode and
+   * additional authentication types.
    */
   public open fun userPoolAddOns(`value`: UserPoolAddOnsProperty) {
     unwrap(this).setUserPoolAddOns(`value`.let(UserPoolAddOnsProperty.Companion::unwrap))
   }
 
   /**
-   * User pool add-ons.
+   * Contains settings for activation of threat protection, including the operating mode and
+   * additional authentication types.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("52b1b6a3af630a51f88af5dab8da0c8eafd9d71d75bf8939966599637d57e6e4")
@@ -672,12 +664,12 @@ public open class CfnUserPool(
       userPoolAddOns(UserPoolAddOnsProperty(`value`))
 
   /**
-   * A string used to name the user pool.
+   * A friendly name for your user pool.
    */
   public open fun userPoolName(): String? = unwrap(this).getUserPoolName()
 
   /**
-   * A string used to name the user pool.
+   * A friendly name for your user pool.
    */
   public open fun userPoolName(`value`: String) {
     unwrap(this).setUserPoolName(`value`)
@@ -736,26 +728,26 @@ public open class CfnUserPool(
       usernameAttributes(`value`.toList())
 
   /**
-   * Case sensitivity on the username input for the selected sign-in option.
+   * Sets the case sensitivity option for sign-in usernames.
    */
   public open fun usernameConfiguration(): Any? = unwrap(this).getUsernameConfiguration()
 
   /**
-   * Case sensitivity on the username input for the selected sign-in option.
+   * Sets the case sensitivity option for sign-in usernames.
    */
   public open fun usernameConfiguration(`value`: IResolvable) {
     unwrap(this).setUsernameConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Case sensitivity on the username input for the selected sign-in option.
+   * Sets the case sensitivity option for sign-in usernames.
    */
   public open fun usernameConfiguration(`value`: UsernameConfigurationProperty) {
     unwrap(this).setUsernameConfiguration(`value`.let(UsernameConfigurationProperty.Companion::unwrap))
   }
 
   /**
-   * Case sensitivity on the username input for the selected sign-in option.
+   * Sets the case sensitivity option for sign-in usernames.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("a4530461026528910b8f5a9c46b31dd9e2b7bd6245adf82505f50792d1e4e7a7")
@@ -796,24 +788,34 @@ public open class CfnUserPool(
       Unit = verificationMessageTemplate(VerificationMessageTemplateProperty(`value`))
 
   /**
-   *
+   * Sets or displays the authentication domain, typically your user pool domain, that passkey
+   * providers must use as a relying party (RP) in their configuration.
    */
   public open fun webAuthnRelyingPartyId(): String? = unwrap(this).getWebAuthnRelyingPartyId()
 
   /**
-   *
+   * Sets or displays the authentication domain, typically your user pool domain, that passkey
+   * providers must use as a relying party (RP) in their configuration.
    */
   public open fun webAuthnRelyingPartyId(`value`: String) {
     unwrap(this).setWebAuthnRelyingPartyId(`value`)
   }
 
   /**
-   *
+   * When `required` , users can only register and sign in users with passkeys that are capable of
+   * [user
+   * verification](https://docs.aws.amazon.com/https://www.w3.org/TR/webauthn-2/#enum-userVerificationRequirement)
+   * . When `preferred` , your user pool doesn't require the use of authenticators with user
+   * verification but encourages it.
    */
   public open fun webAuthnUserVerification(): String? = unwrap(this).getWebAuthnUserVerification()
 
   /**
-   *
+   * When `required` , users can only register and sign in users with passkeys that are capable of
+   * [user
+   * verification](https://docs.aws.amazon.com/https://www.w3.org/TR/webauthn-2/#enum-userVerificationRequirement)
+   * . When `preferred` , your user pool doesn't require the use of authenticators with user
+   * verification but encourages it.
    */
   public open fun webAuthnUserVerification(`value`: String) {
     unwrap(this).setWebAuthnUserVerification(`value`)
@@ -881,14 +883,6 @@ public open class CfnUserPool(
      * Contains settings for allowing user sign-up, customizing invitation messages to new users,
      * and the amount of time before temporary passwords expire.
      *
-     * This data type is a request and response parameter of
-     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-     * and
-     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-     * , and a response parameter of
-     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-     * .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-admincreateuserconfig)
      * @param adminCreateUserConfig The settings for administrator creation of users in a user pool.
      * 
@@ -900,14 +894,6 @@ public open class CfnUserPool(
      *
      * Contains settings for allowing user sign-up, customizing invitation messages to new users,
      * and the amount of time before temporary passwords expire.
-     *
-     * This data type is a request and response parameter of
-     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-     * and
-     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-     * , and a response parameter of
-     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-admincreateuserconfig)
      * @param adminCreateUserConfig The settings for administrator creation of users in a user pool.
@@ -921,14 +907,6 @@ public open class CfnUserPool(
      * Contains settings for allowing user sign-up, customizing invitation messages to new users,
      * and the amount of time before temporary passwords expire.
      *
-     * This data type is a request and response parameter of
-     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-     * and
-     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-     * , and a response parameter of
-     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-     * .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-admincreateuserconfig)
      * @param adminCreateUserConfig The settings for administrator creation of users in a user pool.
      * 
@@ -941,7 +919,9 @@ public open class CfnUserPool(
     /**
      * Attributes supported as an alias for this user pool.
      *
-     * Possible values: *phone_number* , *email* , or *preferred_username* .
+     * For more information about alias attributes, see [Customizing sign-in
+     * attributes](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#user-pool-settings-aliases)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-aliasattributes)
      * @param aliasAttributes Attributes supported as an alias for this user pool. 
@@ -951,7 +931,9 @@ public open class CfnUserPool(
     /**
      * Attributes supported as an alias for this user pool.
      *
-     * Possible values: *phone_number* , *email* , or *preferred_username* .
+     * For more information about alias attributes, see [Customizing sign-in
+     * attributes](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#user-pool-settings-aliases)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-aliasattributes)
      * @param aliasAttributes Attributes supported as an alias for this user pool. 
@@ -959,22 +941,28 @@ public open class CfnUserPool(
     public fun aliasAttributes(vararg aliasAttributes: String)
 
     /**
-     * The attributes to be auto-verified.
+     * The attributes that you want your user pool to automatically verify.
      *
-     * Possible values: *email* , *phone_number* .
+     * For more information, see [Verifying contact information at
+     * sign-up](https://docs.aws.amazon.com/cognito/latest/developerguide/signing-up-users-in-your-app.html#allowing-users-to-sign-up-and-confirm-themselves)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-autoverifiedattributes)
-     * @param autoVerifiedAttributes The attributes to be auto-verified. 
+     * @param autoVerifiedAttributes The attributes that you want your user pool to automatically
+     * verify. 
      */
     public fun autoVerifiedAttributes(autoVerifiedAttributes: List<String>)
 
     /**
-     * The attributes to be auto-verified.
+     * The attributes that you want your user pool to automatically verify.
      *
-     * Possible values: *email* , *phone_number* .
+     * For more information, see [Verifying contact information at
+     * sign-up](https://docs.aws.amazon.com/cognito/latest/developerguide/signing-up-users-in-your-app.html#allowing-users-to-sign-up-and-confirm-themselves)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-autoverifiedattributes)
-     * @param autoVerifiedAttributes The attributes to be auto-verified. 
+     * @param autoVerifiedAttributes The attributes that you want your user pool to automatically
+     * verify. 
      */
     public fun autoVerifiedAttributes(vararg autoVerifiedAttributes: String)
 
@@ -998,11 +986,18 @@ public open class CfnUserPool(
     /**
      * The device-remembering configuration for a user pool.
      *
-     * A null value indicates that you have deactivated device remembering in your user pool.
+     * Device remembering or device tracking is a "Remember me on this device" option for user pools
+     * that perform authentication with the device key of a trusted device in the back end, instead of
+     * a user-provided MFA code. For more information about device authentication, see [Working with
+     * user devices in your user
+     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-device-tracking.html)
+     * . A null value indicates that you have deactivated device remembering in your user pool.
      *
      *
      * When you provide a value for any `DeviceConfiguration` field, you activate the Amazon Cognito
-     * device-remembering feature.
+     * device-remembering feature. For more information, see [Working with
+     * devices](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-device-tracking.html)
+     * .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-deviceconfiguration)
@@ -1013,11 +1008,18 @@ public open class CfnUserPool(
     /**
      * The device-remembering configuration for a user pool.
      *
-     * A null value indicates that you have deactivated device remembering in your user pool.
+     * Device remembering or device tracking is a "Remember me on this device" option for user pools
+     * that perform authentication with the device key of a trusted device in the back end, instead of
+     * a user-provided MFA code. For more information about device authentication, see [Working with
+     * user devices in your user
+     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-device-tracking.html)
+     * . A null value indicates that you have deactivated device remembering in your user pool.
      *
      *
      * When you provide a value for any `DeviceConfiguration` field, you activate the Amazon Cognito
-     * device-remembering feature.
+     * device-remembering feature. For more information, see [Working with
+     * devices](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-device-tracking.html)
+     * .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-deviceconfiguration)
@@ -1028,11 +1030,18 @@ public open class CfnUserPool(
     /**
      * The device-remembering configuration for a user pool.
      *
-     * A null value indicates that you have deactivated device remembering in your user pool.
+     * Device remembering or device tracking is a "Remember me on this device" option for user pools
+     * that perform authentication with the device key of a trusted device in the back end, instead of
+     * a user-provided MFA code. For more information about device authentication, see [Working with
+     * user devices in your user
+     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-device-tracking.html)
+     * . A null value indicates that you have deactivated device remembering in your user pool.
      *
      *
      * When you provide a value for any `DeviceConfiguration` field, you activate the Amazon Cognito
-     * device-remembering feature.
+     * device-remembering feature. For more information, see [Working with
+     * devices](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-device-tracking.html)
+     * .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-deviceconfiguration)
@@ -1194,98 +1203,93 @@ public open class CfnUserPool(
     public fun lambdaConfig(lambdaConfig: LambdaConfigProperty.Builder.() -> Unit)
 
     /**
-     * The multi-factor authentication (MFA) configuration. Valid values include:.
+     * Displays the state of multi-factor authentication (MFA) as on, off, or optional.
      *
-     * * `OFF` MFA won't be used for any users.
-     * * `ON` MFA is required for all users to sign in.
-     * * `OPTIONAL` MFA will be required only for individual users who have an MFA factor activated.
+     * When `ON` , all users must set up MFA before they can sign in. When `OPTIONAL` , your
+     * application must make a client-side determination of whether a user wants to register an MFA
+     * device. For user pools with adaptive authentication with threat protection, choose `OPTIONAL` .
+     *
+     * When `MfaConfiguration` is `OPTIONAL` , managed login doesn't automatically prompt users to
+     * set up MFA. Amazon Cognito generates MFA prompts in API responses and in managed login for users
+     * who have chosen and configured a preferred MFA factor.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-mfaconfiguration)
-     * @param mfaConfiguration The multi-factor authentication (MFA) configuration. Valid values
-     * include:. 
+     * @param mfaConfiguration Displays the state of multi-factor authentication (MFA) as on, off,
+     * or optional. 
      */
     public fun mfaConfiguration(mfaConfiguration: String)
 
     /**
-     * A list of user pool policies. Contains the policy that sets password-complexity requirements.
+     * A list of user pool policies.
      *
-     * This data type is a request and response parameter of
-     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-     * and
-     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-     * , and a response parameter of
-     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-     * .
+     * Contains the policy that sets password-complexity requirements.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-policies)
-     * @param policies A list of user pool policies. Contains the policy that sets
-     * password-complexity requirements. 
+     * @param policies A list of user pool policies. 
      */
     public fun policies(policies: IResolvable)
 
     /**
-     * A list of user pool policies. Contains the policy that sets password-complexity requirements.
+     * A list of user pool policies.
      *
-     * This data type is a request and response parameter of
-     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-     * and
-     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-     * , and a response parameter of
-     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-     * .
+     * Contains the policy that sets password-complexity requirements.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-policies)
-     * @param policies A list of user pool policies. Contains the policy that sets
-     * password-complexity requirements. 
+     * @param policies A list of user pool policies. 
      */
     public fun policies(policies: PoliciesProperty)
 
     /**
-     * A list of user pool policies. Contains the policy that sets password-complexity requirements.
+     * A list of user pool policies.
      *
-     * This data type is a request and response parameter of
-     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-     * and
-     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-     * , and a response parameter of
-     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-     * .
+     * Contains the policy that sets password-complexity requirements.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-policies)
-     * @param policies A list of user pool policies. Contains the policy that sets
-     * password-complexity requirements. 
+     * @param policies A list of user pool policies. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2314ae1357fcdad41bc2dff9235f62b786cb7031cd62319f510d5ece0d71b8d6")
     public fun policies(policies: PoliciesProperty.Builder.() -> Unit)
 
     /**
-     * An array of schema attributes for the new user pool.
+     * An array of attributes for the new user pool.
      *
-     * These attributes can be standard or custom attributes.
+     * You can add custom attributes and modify the properties of default attributes. The
+     * specifications in this parameter set the required attributes in your user pool. For more
+     * information, see [Working with user
+     * attributes](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-schema)
-     * @param schema An array of schema attributes for the new user pool. 
+     * @param schema An array of attributes for the new user pool. 
      */
     public fun schema(schema: IResolvable)
 
     /**
-     * An array of schema attributes for the new user pool.
+     * An array of attributes for the new user pool.
      *
-     * These attributes can be standard or custom attributes.
+     * You can add custom attributes and modify the properties of default attributes. The
+     * specifications in this parameter set the required attributes in your user pool. For more
+     * information, see [Working with user
+     * attributes](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-schema)
-     * @param schema An array of schema attributes for the new user pool. 
+     * @param schema An array of attributes for the new user pool. 
      */
     public fun schema(schema: List<Any>)
 
     /**
-     * An array of schema attributes for the new user pool.
+     * An array of attributes for the new user pool.
      *
-     * These attributes can be standard or custom attributes.
+     * You can add custom attributes and modify the properties of default attributes. The
+     * specifications in this parameter set the required attributes in your user pool. For more
+     * information, see [Working with user
+     * attributes](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-schema)
-     * @param schema An array of schema attributes for the new user pool. 
+     * @param schema An array of attributes for the new user pool. 
      */
     public fun schema(vararg schema: Any)
 
@@ -1298,44 +1302,50 @@ public open class CfnUserPool(
     public fun smsAuthenticationMessage(smsAuthenticationMessage: String)
 
     /**
-     * The SMS configuration with the settings that your Amazon Cognito user pool must use to send
-     * an SMS message from your AWS account through Amazon Simple Notification Service.
+     * The settings for your Amazon Cognito user pool to send SMS messages with Amazon Simple
+     * Notification Service.
      *
      * To send SMS messages with Amazon SNS in the AWS Region that you want, the Amazon Cognito user
-     * pool uses an AWS Identity and Access Management (IAM) role in your AWS account .
+     * pool uses an AWS Identity and Access Management (IAM) role in your AWS account . For more
+     * information see [SMS message
+     * settings](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-smsconfiguration)
-     * @param smsConfiguration The SMS configuration with the settings that your Amazon Cognito user
-     * pool must use to send an SMS message from your AWS account through Amazon Simple Notification
-     * Service. 
+     * @param smsConfiguration The settings for your Amazon Cognito user pool to send SMS messages
+     * with Amazon Simple Notification Service. 
      */
     public fun smsConfiguration(smsConfiguration: IResolvable)
 
     /**
-     * The SMS configuration with the settings that your Amazon Cognito user pool must use to send
-     * an SMS message from your AWS account through Amazon Simple Notification Service.
+     * The settings for your Amazon Cognito user pool to send SMS messages with Amazon Simple
+     * Notification Service.
      *
      * To send SMS messages with Amazon SNS in the AWS Region that you want, the Amazon Cognito user
-     * pool uses an AWS Identity and Access Management (IAM) role in your AWS account .
+     * pool uses an AWS Identity and Access Management (IAM) role in your AWS account . For more
+     * information see [SMS message
+     * settings](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-smsconfiguration)
-     * @param smsConfiguration The SMS configuration with the settings that your Amazon Cognito user
-     * pool must use to send an SMS message from your AWS account through Amazon Simple Notification
-     * Service. 
+     * @param smsConfiguration The settings for your Amazon Cognito user pool to send SMS messages
+     * with Amazon Simple Notification Service. 
      */
     public fun smsConfiguration(smsConfiguration: SmsConfigurationProperty)
 
     /**
-     * The SMS configuration with the settings that your Amazon Cognito user pool must use to send
-     * an SMS message from your AWS account through Amazon Simple Notification Service.
+     * The settings for your Amazon Cognito user pool to send SMS messages with Amazon Simple
+     * Notification Service.
      *
      * To send SMS messages with Amazon SNS in the AWS Region that you want, the Amazon Cognito user
-     * pool uses an AWS Identity and Access Management (IAM) role in your AWS account .
+     * pool uses an AWS Identity and Access Management (IAM) role in your AWS account . For more
+     * information see [SMS message
+     * settings](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-smsconfiguration)
-     * @param smsConfiguration The SMS configuration with the settings that your Amazon Cognito user
-     * pool must use to send an SMS message from your AWS account through Amazon Simple Notification
-     * Service. 
+     * @param smsConfiguration The settings for your Amazon Cognito user pool to send SMS messages
+     * with Amazon Simple Notification Service. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1ea364adb12244e589a60f32213c0b23b344aaebba234adf4fa4a99113a2d5fe")
@@ -1403,60 +1413,69 @@ public open class CfnUserPool(
         fun userAttributeUpdateSettings(userAttributeUpdateSettings: UserAttributeUpdateSettingsProperty.Builder.() -> Unit)
 
     /**
-     * User pool add-ons.
+     * Contains settings for activation of threat protection, including the operating mode and
+     * additional authentication types.
      *
-     * Contains settings for activation of advanced security features. To log user security
-     * information but take no action, set to `AUDIT` . To configure automatic security responses to
-     * risky traffic to your user pool, set to `ENFORCED` .
+     * To log user security information but take no action, set to `AUDIT` . To configure automatic
+     * security responses to potentially unwanted traffic to your user pool, set to `ENFORCED` .
      *
      * For more information, see [Adding advanced security to a user
      * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
+     * . To activate this setting, your user pool must be on the [Plus
+     * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-plus.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpooladdons)
-     * @param userPoolAddOns User pool add-ons. 
+     * @param userPoolAddOns Contains settings for activation of threat protection, including the
+     * operating mode and additional authentication types. 
      */
     public fun userPoolAddOns(userPoolAddOns: IResolvable)
 
     /**
-     * User pool add-ons.
+     * Contains settings for activation of threat protection, including the operating mode and
+     * additional authentication types.
      *
-     * Contains settings for activation of advanced security features. To log user security
-     * information but take no action, set to `AUDIT` . To configure automatic security responses to
-     * risky traffic to your user pool, set to `ENFORCED` .
+     * To log user security information but take no action, set to `AUDIT` . To configure automatic
+     * security responses to potentially unwanted traffic to your user pool, set to `ENFORCED` .
      *
      * For more information, see [Adding advanced security to a user
      * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
+     * . To activate this setting, your user pool must be on the [Plus
+     * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-plus.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpooladdons)
-     * @param userPoolAddOns User pool add-ons. 
+     * @param userPoolAddOns Contains settings for activation of threat protection, including the
+     * operating mode and additional authentication types. 
      */
     public fun userPoolAddOns(userPoolAddOns: UserPoolAddOnsProperty)
 
     /**
-     * User pool add-ons.
+     * Contains settings for activation of threat protection, including the operating mode and
+     * additional authentication types.
      *
-     * Contains settings for activation of advanced security features. To log user security
-     * information but take no action, set to `AUDIT` . To configure automatic security responses to
-     * risky traffic to your user pool, set to `ENFORCED` .
+     * To log user security information but take no action, set to `AUDIT` . To configure automatic
+     * security responses to potentially unwanted traffic to your user pool, set to `ENFORCED` .
      *
      * For more information, see [Adding advanced security to a user
      * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
+     * . To activate this setting, your user pool must be on the [Plus
+     * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-plus.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpooladdons)
-     * @param userPoolAddOns User pool add-ons. 
+     * @param userPoolAddOns Contains settings for activation of threat protection, including the
+     * operating mode and additional authentication types. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f0bd77391868ae9ce3d79949e6cf67dab1ff5ea9c26501d144ac9963e691697c")
     public fun userPoolAddOns(userPoolAddOns: UserPoolAddOnsProperty.Builder.() -> Unit)
 
     /**
-     * A string used to name the user pool.
+     * A friendly name for your user pool.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpoolname)
-     * @param userPoolName A string used to name the user pool. 
+     * @param userPoolName A friendly name for your user pool. 
      */
     public fun userPoolName(userPoolName: String)
 
@@ -1506,65 +1525,62 @@ public open class CfnUserPool(
     public fun usernameAttributes(vararg usernameAttributes: String)
 
     /**
-     * Case sensitivity on the username input for the selected sign-in option.
+     * Sets the case sensitivity option for sign-in usernames.
      *
-     * When case sensitivity is set to `False` (case insensitive), users can sign in with any
-     * combination of capital and lowercase letters. For example, `username` , `USERNAME` , or
-     * `UserName` , or for email, `email&#64;example.com` or `EMaiL&#64;eXamplE.Com` . For most use
-     * cases, set case sensitivity to `False` (case insensitive) as a best practice. When usernames and
-     * email addresses are case insensitive, Amazon Cognito treats any variation in case as the same
-     * user, and prevents a case variation from being assigned to the same attribute for a different
-     * user.
+     * When `CaseSensitive` is `false` (case insensitive), users can sign in with any combination of
+     * capital and lowercase letters. For example, `username` , `USERNAME` , or `UserName` , or for
+     * email, `email&#64;example.com` or `EMaiL&#64;eXamplE.Com` . For most use cases, set case
+     * sensitivity to `false` as a best practice. When usernames and email addresses are case
+     * insensitive, Amazon Cognito treats any variation in case as the same user, and prevents a case
+     * variation from being assigned to the same attribute for a different user.
      *
-     * This configuration is immutable after you set it. For more information, see
-     * [UsernameConfigurationType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UsernameConfigurationType.html)
-     * .
+     * When `CaseSensitive` is `true` (case sensitive), Amazon Cognito interprets `USERNAME` and
+     * `UserName` as distinct users.
+     *
+     * This configuration is immutable after you set it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-usernameconfiguration)
-     * @param usernameConfiguration Case sensitivity on the username input for the selected sign-in
-     * option. 
+     * @param usernameConfiguration Sets the case sensitivity option for sign-in usernames. 
      */
     public fun usernameConfiguration(usernameConfiguration: IResolvable)
 
     /**
-     * Case sensitivity on the username input for the selected sign-in option.
+     * Sets the case sensitivity option for sign-in usernames.
      *
-     * When case sensitivity is set to `False` (case insensitive), users can sign in with any
-     * combination of capital and lowercase letters. For example, `username` , `USERNAME` , or
-     * `UserName` , or for email, `email&#64;example.com` or `EMaiL&#64;eXamplE.Com` . For most use
-     * cases, set case sensitivity to `False` (case insensitive) as a best practice. When usernames and
-     * email addresses are case insensitive, Amazon Cognito treats any variation in case as the same
-     * user, and prevents a case variation from being assigned to the same attribute for a different
-     * user.
+     * When `CaseSensitive` is `false` (case insensitive), users can sign in with any combination of
+     * capital and lowercase letters. For example, `username` , `USERNAME` , or `UserName` , or for
+     * email, `email&#64;example.com` or `EMaiL&#64;eXamplE.Com` . For most use cases, set case
+     * sensitivity to `false` as a best practice. When usernames and email addresses are case
+     * insensitive, Amazon Cognito treats any variation in case as the same user, and prevents a case
+     * variation from being assigned to the same attribute for a different user.
      *
-     * This configuration is immutable after you set it. For more information, see
-     * [UsernameConfigurationType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UsernameConfigurationType.html)
-     * .
+     * When `CaseSensitive` is `true` (case sensitive), Amazon Cognito interprets `USERNAME` and
+     * `UserName` as distinct users.
+     *
+     * This configuration is immutable after you set it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-usernameconfiguration)
-     * @param usernameConfiguration Case sensitivity on the username input for the selected sign-in
-     * option. 
+     * @param usernameConfiguration Sets the case sensitivity option for sign-in usernames. 
      */
     public fun usernameConfiguration(usernameConfiguration: UsernameConfigurationProperty)
 
     /**
-     * Case sensitivity on the username input for the selected sign-in option.
+     * Sets the case sensitivity option for sign-in usernames.
      *
-     * When case sensitivity is set to `False` (case insensitive), users can sign in with any
-     * combination of capital and lowercase letters. For example, `username` , `USERNAME` , or
-     * `UserName` , or for email, `email&#64;example.com` or `EMaiL&#64;eXamplE.Com` . For most use
-     * cases, set case sensitivity to `False` (case insensitive) as a best practice. When usernames and
-     * email addresses are case insensitive, Amazon Cognito treats any variation in case as the same
-     * user, and prevents a case variation from being assigned to the same attribute for a different
-     * user.
+     * When `CaseSensitive` is `false` (case insensitive), users can sign in with any combination of
+     * capital and lowercase letters. For example, `username` , `USERNAME` , or `UserName` , or for
+     * email, `email&#64;example.com` or `EMaiL&#64;eXamplE.Com` . For most use cases, set case
+     * sensitivity to `false` as a best practice. When usernames and email addresses are case
+     * insensitive, Amazon Cognito treats any variation in case as the same user, and prevents a case
+     * variation from being assigned to the same attribute for a different user.
      *
-     * This configuration is immutable after you set it. For more information, see
-     * [UsernameConfigurationType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UsernameConfigurationType.html)
-     * .
+     * When `CaseSensitive` is `true` (case sensitive), Amazon Cognito interprets `USERNAME` and
+     * `UserName` as distinct users.
+     *
+     * This configuration is immutable after you set it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-usernameconfiguration)
-     * @param usernameConfiguration Case sensitivity on the username input for the selected sign-in
-     * option. 
+     * @param usernameConfiguration Sets the case sensitivity option for sign-in usernames. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5532e61a25d6f32e948ead823d706a13cc63936fd365e336428c65d754fa6931")
@@ -1621,14 +1637,35 @@ public open class CfnUserPool(
         fun verificationMessageTemplate(verificationMessageTemplate: VerificationMessageTemplateProperty.Builder.() -> Unit)
 
     /**
+     * Sets or displays the authentication domain, typically your user pool domain, that passkey
+     * providers must use as a relying party (RP) in their configuration.
+     *
+     * Under the following conditions, the passkey relying party ID must be the fully-qualified
+     * domain name of your custom domain:
+     *
+     * * The user pool is configured for passkey authentication.
+     * * The user pool has a custom domain, whether or not it also has a prefix domain.
+     * * Your application performs authentication with managed login or the classic hosted UI.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-webauthnrelyingpartyid)
-     * @param webAuthnRelyingPartyId 
+     * @param webAuthnRelyingPartyId Sets or displays the authentication domain, typically your user
+     * pool domain, that passkey providers must use as a relying party (RP) in their configuration. 
      */
     public fun webAuthnRelyingPartyId(webAuthnRelyingPartyId: String)
 
     /**
+     * When `required` , users can only register and sign in users with passkeys that are capable of
+     * [user
+     * verification](https://docs.aws.amazon.com/https://www.w3.org/TR/webauthn-2/#enum-userVerificationRequirement)
+     * . When `preferred` , your user pool doesn't require the use of authenticators with user
+     * verification but encourages it.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-webauthnuserverification)
-     * @param webAuthnUserVerification 
+     * @param webAuthnUserVerification When `required` , users can only register and sign in users
+     * with passkeys that are capable of [user
+     * verification](https://docs.aws.amazon.com/https://www.w3.org/TR/webauthn-2/#enum-userVerificationRequirement)
+     * . When `preferred` , your user pool doesn't require the use of authenticators with user
+     * verification but encourages it. 
      */
     public fun webAuthnUserVerification(webAuthnUserVerification: String)
   }
@@ -1702,14 +1739,6 @@ public open class CfnUserPool(
      * Contains settings for allowing user sign-up, customizing invitation messages to new users,
      * and the amount of time before temporary passwords expire.
      *
-     * This data type is a request and response parameter of
-     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-     * and
-     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-     * , and a response parameter of
-     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-     * .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-admincreateuserconfig)
      * @param adminCreateUserConfig The settings for administrator creation of users in a user pool.
      * 
@@ -1723,14 +1752,6 @@ public open class CfnUserPool(
      *
      * Contains settings for allowing user sign-up, customizing invitation messages to new users,
      * and the amount of time before temporary passwords expire.
-     *
-     * This data type is a request and response parameter of
-     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-     * and
-     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-     * , and a response parameter of
-     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-admincreateuserconfig)
      * @param adminCreateUserConfig The settings for administrator creation of users in a user pool.
@@ -1746,14 +1767,6 @@ public open class CfnUserPool(
      * Contains settings for allowing user sign-up, customizing invitation messages to new users,
      * and the amount of time before temporary passwords expire.
      *
-     * This data type is a request and response parameter of
-     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-     * and
-     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-     * , and a response parameter of
-     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-     * .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-admincreateuserconfig)
      * @param adminCreateUserConfig The settings for administrator creation of users in a user pool.
      * 
@@ -1767,7 +1780,9 @@ public open class CfnUserPool(
     /**
      * Attributes supported as an alias for this user pool.
      *
-     * Possible values: *phone_number* , *email* , or *preferred_username* .
+     * For more information about alias attributes, see [Customizing sign-in
+     * attributes](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#user-pool-settings-aliases)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-aliasattributes)
      * @param aliasAttributes Attributes supported as an alias for this user pool. 
@@ -1779,7 +1794,9 @@ public open class CfnUserPool(
     /**
      * Attributes supported as an alias for this user pool.
      *
-     * Possible values: *phone_number* , *email* , or *preferred_username* .
+     * For more information about alias attributes, see [Customizing sign-in
+     * attributes](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#user-pool-settings-aliases)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-aliasattributes)
      * @param aliasAttributes Attributes supported as an alias for this user pool. 
@@ -1788,24 +1805,30 @@ public open class CfnUserPool(
         aliasAttributes(aliasAttributes.toList())
 
     /**
-     * The attributes to be auto-verified.
+     * The attributes that you want your user pool to automatically verify.
      *
-     * Possible values: *email* , *phone_number* .
+     * For more information, see [Verifying contact information at
+     * sign-up](https://docs.aws.amazon.com/cognito/latest/developerguide/signing-up-users-in-your-app.html#allowing-users-to-sign-up-and-confirm-themselves)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-autoverifiedattributes)
-     * @param autoVerifiedAttributes The attributes to be auto-verified. 
+     * @param autoVerifiedAttributes The attributes that you want your user pool to automatically
+     * verify. 
      */
     override fun autoVerifiedAttributes(autoVerifiedAttributes: List<String>) {
       cdkBuilder.autoVerifiedAttributes(autoVerifiedAttributes)
     }
 
     /**
-     * The attributes to be auto-verified.
+     * The attributes that you want your user pool to automatically verify.
      *
-     * Possible values: *email* , *phone_number* .
+     * For more information, see [Verifying contact information at
+     * sign-up](https://docs.aws.amazon.com/cognito/latest/developerguide/signing-up-users-in-your-app.html#allowing-users-to-sign-up-and-confirm-themselves)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-autoverifiedattributes)
-     * @param autoVerifiedAttributes The attributes to be auto-verified. 
+     * @param autoVerifiedAttributes The attributes that you want your user pool to automatically
+     * verify. 
      */
     override fun autoVerifiedAttributes(vararg autoVerifiedAttributes: String): Unit =
         autoVerifiedAttributes(autoVerifiedAttributes.toList())
@@ -1832,11 +1855,18 @@ public open class CfnUserPool(
     /**
      * The device-remembering configuration for a user pool.
      *
-     * A null value indicates that you have deactivated device remembering in your user pool.
+     * Device remembering or device tracking is a "Remember me on this device" option for user pools
+     * that perform authentication with the device key of a trusted device in the back end, instead of
+     * a user-provided MFA code. For more information about device authentication, see [Working with
+     * user devices in your user
+     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-device-tracking.html)
+     * . A null value indicates that you have deactivated device remembering in your user pool.
      *
      *
      * When you provide a value for any `DeviceConfiguration` field, you activate the Amazon Cognito
-     * device-remembering feature.
+     * device-remembering feature. For more information, see [Working with
+     * devices](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-device-tracking.html)
+     * .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-deviceconfiguration)
@@ -1849,11 +1879,18 @@ public open class CfnUserPool(
     /**
      * The device-remembering configuration for a user pool.
      *
-     * A null value indicates that you have deactivated device remembering in your user pool.
+     * Device remembering or device tracking is a "Remember me on this device" option for user pools
+     * that perform authentication with the device key of a trusted device in the back end, instead of
+     * a user-provided MFA code. For more information about device authentication, see [Working with
+     * user devices in your user
+     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-device-tracking.html)
+     * . A null value indicates that you have deactivated device remembering in your user pool.
      *
      *
      * When you provide a value for any `DeviceConfiguration` field, you activate the Amazon Cognito
-     * device-remembering feature.
+     * device-remembering feature. For more information, see [Working with
+     * devices](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-device-tracking.html)
+     * .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-deviceconfiguration)
@@ -1866,11 +1903,18 @@ public open class CfnUserPool(
     /**
      * The device-remembering configuration for a user pool.
      *
-     * A null value indicates that you have deactivated device remembering in your user pool.
+     * Device remembering or device tracking is a "Remember me on this device" option for user pools
+     * that perform authentication with the device key of a trusted device in the back end, instead of
+     * a user-provided MFA code. For more information about device authentication, see [Working with
+     * user devices in your user
+     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-device-tracking.html)
+     * . A null value indicates that you have deactivated device remembering in your user pool.
      *
      *
      * When you provide a value for any `DeviceConfiguration` field, you activate the Amazon Cognito
-     * device-remembering feature.
+     * device-remembering feature. For more information, see [Working with
+     * devices](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-device-tracking.html)
+     * .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-deviceconfiguration)
@@ -2054,72 +2098,55 @@ public open class CfnUserPool(
         lambdaConfig(LambdaConfigProperty(lambdaConfig))
 
     /**
-     * The multi-factor authentication (MFA) configuration. Valid values include:.
+     * Displays the state of multi-factor authentication (MFA) as on, off, or optional.
      *
-     * * `OFF` MFA won't be used for any users.
-     * * `ON` MFA is required for all users to sign in.
-     * * `OPTIONAL` MFA will be required only for individual users who have an MFA factor activated.
+     * When `ON` , all users must set up MFA before they can sign in. When `OPTIONAL` , your
+     * application must make a client-side determination of whether a user wants to register an MFA
+     * device. For user pools with adaptive authentication with threat protection, choose `OPTIONAL` .
+     *
+     * When `MfaConfiguration` is `OPTIONAL` , managed login doesn't automatically prompt users to
+     * set up MFA. Amazon Cognito generates MFA prompts in API responses and in managed login for users
+     * who have chosen and configured a preferred MFA factor.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-mfaconfiguration)
-     * @param mfaConfiguration The multi-factor authentication (MFA) configuration. Valid values
-     * include:. 
+     * @param mfaConfiguration Displays the state of multi-factor authentication (MFA) as on, off,
+     * or optional. 
      */
     override fun mfaConfiguration(mfaConfiguration: String) {
       cdkBuilder.mfaConfiguration(mfaConfiguration)
     }
 
     /**
-     * A list of user pool policies. Contains the policy that sets password-complexity requirements.
+     * A list of user pool policies.
      *
-     * This data type is a request and response parameter of
-     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-     * and
-     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-     * , and a response parameter of
-     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-     * .
+     * Contains the policy that sets password-complexity requirements.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-policies)
-     * @param policies A list of user pool policies. Contains the policy that sets
-     * password-complexity requirements. 
+     * @param policies A list of user pool policies. 
      */
     override fun policies(policies: IResolvable) {
       cdkBuilder.policies(policies.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * A list of user pool policies. Contains the policy that sets password-complexity requirements.
+     * A list of user pool policies.
      *
-     * This data type is a request and response parameter of
-     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-     * and
-     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-     * , and a response parameter of
-     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-     * .
+     * Contains the policy that sets password-complexity requirements.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-policies)
-     * @param policies A list of user pool policies. Contains the policy that sets
-     * password-complexity requirements. 
+     * @param policies A list of user pool policies. 
      */
     override fun policies(policies: PoliciesProperty) {
       cdkBuilder.policies(policies.let(PoliciesProperty.Companion::unwrap))
     }
 
     /**
-     * A list of user pool policies. Contains the policy that sets password-complexity requirements.
+     * A list of user pool policies.
      *
-     * This data type is a request and response parameter of
-     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-     * and
-     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-     * , and a response parameter of
-     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-     * .
+     * Contains the policy that sets password-complexity requirements.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-policies)
-     * @param policies A list of user pool policies. Contains the policy that sets
-     * password-complexity requirements. 
+     * @param policies A list of user pool policies. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2314ae1357fcdad41bc2dff9235f62b786cb7031cd62319f510d5ece0d71b8d6")
@@ -2127,36 +2154,48 @@ public open class CfnUserPool(
         policies(PoliciesProperty(policies))
 
     /**
-     * An array of schema attributes for the new user pool.
+     * An array of attributes for the new user pool.
      *
-     * These attributes can be standard or custom attributes.
+     * You can add custom attributes and modify the properties of default attributes. The
+     * specifications in this parameter set the required attributes in your user pool. For more
+     * information, see [Working with user
+     * attributes](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-schema)
-     * @param schema An array of schema attributes for the new user pool. 
+     * @param schema An array of attributes for the new user pool. 
      */
     override fun schema(schema: IResolvable) {
       cdkBuilder.schema(schema.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * An array of schema attributes for the new user pool.
+     * An array of attributes for the new user pool.
      *
-     * These attributes can be standard or custom attributes.
+     * You can add custom attributes and modify the properties of default attributes. The
+     * specifications in this parameter set the required attributes in your user pool. For more
+     * information, see [Working with user
+     * attributes](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-schema)
-     * @param schema An array of schema attributes for the new user pool. 
+     * @param schema An array of attributes for the new user pool. 
      */
     override fun schema(schema: List<Any>) {
       cdkBuilder.schema(schema.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * An array of schema attributes for the new user pool.
+     * An array of attributes for the new user pool.
      *
-     * These attributes can be standard or custom attributes.
+     * You can add custom attributes and modify the properties of default attributes. The
+     * specifications in this parameter set the required attributes in your user pool. For more
+     * information, see [Working with user
+     * attributes](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-schema)
-     * @param schema An array of schema attributes for the new user pool. 
+     * @param schema An array of attributes for the new user pool. 
      */
     override fun schema(vararg schema: Any): Unit = schema(schema.toList())
 
@@ -2171,48 +2210,54 @@ public open class CfnUserPool(
     }
 
     /**
-     * The SMS configuration with the settings that your Amazon Cognito user pool must use to send
-     * an SMS message from your AWS account through Amazon Simple Notification Service.
+     * The settings for your Amazon Cognito user pool to send SMS messages with Amazon Simple
+     * Notification Service.
      *
      * To send SMS messages with Amazon SNS in the AWS Region that you want, the Amazon Cognito user
-     * pool uses an AWS Identity and Access Management (IAM) role in your AWS account .
+     * pool uses an AWS Identity and Access Management (IAM) role in your AWS account . For more
+     * information see [SMS message
+     * settings](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-smsconfiguration)
-     * @param smsConfiguration The SMS configuration with the settings that your Amazon Cognito user
-     * pool must use to send an SMS message from your AWS account through Amazon Simple Notification
-     * Service. 
+     * @param smsConfiguration The settings for your Amazon Cognito user pool to send SMS messages
+     * with Amazon Simple Notification Service. 
      */
     override fun smsConfiguration(smsConfiguration: IResolvable) {
       cdkBuilder.smsConfiguration(smsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The SMS configuration with the settings that your Amazon Cognito user pool must use to send
-     * an SMS message from your AWS account through Amazon Simple Notification Service.
+     * The settings for your Amazon Cognito user pool to send SMS messages with Amazon Simple
+     * Notification Service.
      *
      * To send SMS messages with Amazon SNS in the AWS Region that you want, the Amazon Cognito user
-     * pool uses an AWS Identity and Access Management (IAM) role in your AWS account .
+     * pool uses an AWS Identity and Access Management (IAM) role in your AWS account . For more
+     * information see [SMS message
+     * settings](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-smsconfiguration)
-     * @param smsConfiguration The SMS configuration with the settings that your Amazon Cognito user
-     * pool must use to send an SMS message from your AWS account through Amazon Simple Notification
-     * Service. 
+     * @param smsConfiguration The settings for your Amazon Cognito user pool to send SMS messages
+     * with Amazon Simple Notification Service. 
      */
     override fun smsConfiguration(smsConfiguration: SmsConfigurationProperty) {
       cdkBuilder.smsConfiguration(smsConfiguration.let(SmsConfigurationProperty.Companion::unwrap))
     }
 
     /**
-     * The SMS configuration with the settings that your Amazon Cognito user pool must use to send
-     * an SMS message from your AWS account through Amazon Simple Notification Service.
+     * The settings for your Amazon Cognito user pool to send SMS messages with Amazon Simple
+     * Notification Service.
      *
      * To send SMS messages with Amazon SNS in the AWS Region that you want, the Amazon Cognito user
-     * pool uses an AWS Identity and Access Management (IAM) role in your AWS account .
+     * pool uses an AWS Identity and Access Management (IAM) role in your AWS account . For more
+     * information see [SMS message
+     * settings](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-smsconfiguration)
-     * @param smsConfiguration The SMS configuration with the settings that your Amazon Cognito user
-     * pool must use to send an SMS message from your AWS account through Amazon Simple Notification
-     * Service. 
+     * @param smsConfiguration The settings for your Amazon Cognito user pool to send SMS messages
+     * with Amazon Simple Notification Service. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1ea364adb12244e589a60f32213c0b23b344aaebba234adf4fa4a99113a2d5fe")
@@ -2289,54 +2334,63 @@ public open class CfnUserPool(
         userAttributeUpdateSettings(UserAttributeUpdateSettingsProperty(userAttributeUpdateSettings))
 
     /**
-     * User pool add-ons.
+     * Contains settings for activation of threat protection, including the operating mode and
+     * additional authentication types.
      *
-     * Contains settings for activation of advanced security features. To log user security
-     * information but take no action, set to `AUDIT` . To configure automatic security responses to
-     * risky traffic to your user pool, set to `ENFORCED` .
+     * To log user security information but take no action, set to `AUDIT` . To configure automatic
+     * security responses to potentially unwanted traffic to your user pool, set to `ENFORCED` .
      *
      * For more information, see [Adding advanced security to a user
      * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
+     * . To activate this setting, your user pool must be on the [Plus
+     * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-plus.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpooladdons)
-     * @param userPoolAddOns User pool add-ons. 
+     * @param userPoolAddOns Contains settings for activation of threat protection, including the
+     * operating mode and additional authentication types. 
      */
     override fun userPoolAddOns(userPoolAddOns: IResolvable) {
       cdkBuilder.userPoolAddOns(userPoolAddOns.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * User pool add-ons.
+     * Contains settings for activation of threat protection, including the operating mode and
+     * additional authentication types.
      *
-     * Contains settings for activation of advanced security features. To log user security
-     * information but take no action, set to `AUDIT` . To configure automatic security responses to
-     * risky traffic to your user pool, set to `ENFORCED` .
+     * To log user security information but take no action, set to `AUDIT` . To configure automatic
+     * security responses to potentially unwanted traffic to your user pool, set to `ENFORCED` .
      *
      * For more information, see [Adding advanced security to a user
      * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
+     * . To activate this setting, your user pool must be on the [Plus
+     * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-plus.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpooladdons)
-     * @param userPoolAddOns User pool add-ons. 
+     * @param userPoolAddOns Contains settings for activation of threat protection, including the
+     * operating mode and additional authentication types. 
      */
     override fun userPoolAddOns(userPoolAddOns: UserPoolAddOnsProperty) {
       cdkBuilder.userPoolAddOns(userPoolAddOns.let(UserPoolAddOnsProperty.Companion::unwrap))
     }
 
     /**
-     * User pool add-ons.
+     * Contains settings for activation of threat protection, including the operating mode and
+     * additional authentication types.
      *
-     * Contains settings for activation of advanced security features. To log user security
-     * information but take no action, set to `AUDIT` . To configure automatic security responses to
-     * risky traffic to your user pool, set to `ENFORCED` .
+     * To log user security information but take no action, set to `AUDIT` . To configure automatic
+     * security responses to potentially unwanted traffic to your user pool, set to `ENFORCED` .
      *
      * For more information, see [Adding advanced security to a user
      * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
+     * . To activate this setting, your user pool must be on the [Plus
+     * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-plus.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpooladdons)
-     * @param userPoolAddOns User pool add-ons. 
+     * @param userPoolAddOns Contains settings for activation of threat protection, including the
+     * operating mode and additional authentication types. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f0bd77391868ae9ce3d79949e6cf67dab1ff5ea9c26501d144ac9963e691697c")
@@ -2344,10 +2398,10 @@ public open class CfnUserPool(
         userPoolAddOns(UserPoolAddOnsProperty(userPoolAddOns))
 
     /**
-     * A string used to name the user pool.
+     * A friendly name for your user pool.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpoolname)
-     * @param userPoolName A string used to name the user pool. 
+     * @param userPoolName A friendly name for your user pool. 
      */
     override fun userPoolName(userPoolName: String) {
       cdkBuilder.userPoolName(userPoolName)
@@ -2406,69 +2460,66 @@ public open class CfnUserPool(
         usernameAttributes(usernameAttributes.toList())
 
     /**
-     * Case sensitivity on the username input for the selected sign-in option.
+     * Sets the case sensitivity option for sign-in usernames.
      *
-     * When case sensitivity is set to `False` (case insensitive), users can sign in with any
-     * combination of capital and lowercase letters. For example, `username` , `USERNAME` , or
-     * `UserName` , or for email, `email&#64;example.com` or `EMaiL&#64;eXamplE.Com` . For most use
-     * cases, set case sensitivity to `False` (case insensitive) as a best practice. When usernames and
-     * email addresses are case insensitive, Amazon Cognito treats any variation in case as the same
-     * user, and prevents a case variation from being assigned to the same attribute for a different
-     * user.
+     * When `CaseSensitive` is `false` (case insensitive), users can sign in with any combination of
+     * capital and lowercase letters. For example, `username` , `USERNAME` , or `UserName` , or for
+     * email, `email&#64;example.com` or `EMaiL&#64;eXamplE.Com` . For most use cases, set case
+     * sensitivity to `false` as a best practice. When usernames and email addresses are case
+     * insensitive, Amazon Cognito treats any variation in case as the same user, and prevents a case
+     * variation from being assigned to the same attribute for a different user.
      *
-     * This configuration is immutable after you set it. For more information, see
-     * [UsernameConfigurationType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UsernameConfigurationType.html)
-     * .
+     * When `CaseSensitive` is `true` (case sensitive), Amazon Cognito interprets `USERNAME` and
+     * `UserName` as distinct users.
+     *
+     * This configuration is immutable after you set it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-usernameconfiguration)
-     * @param usernameConfiguration Case sensitivity on the username input for the selected sign-in
-     * option. 
+     * @param usernameConfiguration Sets the case sensitivity option for sign-in usernames. 
      */
     override fun usernameConfiguration(usernameConfiguration: IResolvable) {
       cdkBuilder.usernameConfiguration(usernameConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Case sensitivity on the username input for the selected sign-in option.
+     * Sets the case sensitivity option for sign-in usernames.
      *
-     * When case sensitivity is set to `False` (case insensitive), users can sign in with any
-     * combination of capital and lowercase letters. For example, `username` , `USERNAME` , or
-     * `UserName` , or for email, `email&#64;example.com` or `EMaiL&#64;eXamplE.Com` . For most use
-     * cases, set case sensitivity to `False` (case insensitive) as a best practice. When usernames and
-     * email addresses are case insensitive, Amazon Cognito treats any variation in case as the same
-     * user, and prevents a case variation from being assigned to the same attribute for a different
-     * user.
+     * When `CaseSensitive` is `false` (case insensitive), users can sign in with any combination of
+     * capital and lowercase letters. For example, `username` , `USERNAME` , or `UserName` , or for
+     * email, `email&#64;example.com` or `EMaiL&#64;eXamplE.Com` . For most use cases, set case
+     * sensitivity to `false` as a best practice. When usernames and email addresses are case
+     * insensitive, Amazon Cognito treats any variation in case as the same user, and prevents a case
+     * variation from being assigned to the same attribute for a different user.
      *
-     * This configuration is immutable after you set it. For more information, see
-     * [UsernameConfigurationType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UsernameConfigurationType.html)
-     * .
+     * When `CaseSensitive` is `true` (case sensitive), Amazon Cognito interprets `USERNAME` and
+     * `UserName` as distinct users.
+     *
+     * This configuration is immutable after you set it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-usernameconfiguration)
-     * @param usernameConfiguration Case sensitivity on the username input for the selected sign-in
-     * option. 
+     * @param usernameConfiguration Sets the case sensitivity option for sign-in usernames. 
      */
     override fun usernameConfiguration(usernameConfiguration: UsernameConfigurationProperty) {
       cdkBuilder.usernameConfiguration(usernameConfiguration.let(UsernameConfigurationProperty.Companion::unwrap))
     }
 
     /**
-     * Case sensitivity on the username input for the selected sign-in option.
+     * Sets the case sensitivity option for sign-in usernames.
      *
-     * When case sensitivity is set to `False` (case insensitive), users can sign in with any
-     * combination of capital and lowercase letters. For example, `username` , `USERNAME` , or
-     * `UserName` , or for email, `email&#64;example.com` or `EMaiL&#64;eXamplE.Com` . For most use
-     * cases, set case sensitivity to `False` (case insensitive) as a best practice. When usernames and
-     * email addresses are case insensitive, Amazon Cognito treats any variation in case as the same
-     * user, and prevents a case variation from being assigned to the same attribute for a different
-     * user.
+     * When `CaseSensitive` is `false` (case insensitive), users can sign in with any combination of
+     * capital and lowercase letters. For example, `username` , `USERNAME` , or `UserName` , or for
+     * email, `email&#64;example.com` or `EMaiL&#64;eXamplE.Com` . For most use cases, set case
+     * sensitivity to `false` as a best practice. When usernames and email addresses are case
+     * insensitive, Amazon Cognito treats any variation in case as the same user, and prevents a case
+     * variation from being assigned to the same attribute for a different user.
      *
-     * This configuration is immutable after you set it. For more information, see
-     * [UsernameConfigurationType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UsernameConfigurationType.html)
-     * .
+     * When `CaseSensitive` is `true` (case sensitive), Amazon Cognito interprets `USERNAME` and
+     * `UserName` as distinct users.
+     *
+     * This configuration is immutable after you set it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-usernameconfiguration)
-     * @param usernameConfiguration Case sensitivity on the username input for the selected sign-in
-     * option. 
+     * @param usernameConfiguration Sets the case sensitivity option for sign-in usernames. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5532e61a25d6f32e948ead823d706a13cc63936fd365e336428c65d754fa6931")
@@ -2532,16 +2583,37 @@ public open class CfnUserPool(
         verificationMessageTemplate(VerificationMessageTemplateProperty(verificationMessageTemplate))
 
     /**
+     * Sets or displays the authentication domain, typically your user pool domain, that passkey
+     * providers must use as a relying party (RP) in their configuration.
+     *
+     * Under the following conditions, the passkey relying party ID must be the fully-qualified
+     * domain name of your custom domain:
+     *
+     * * The user pool is configured for passkey authentication.
+     * * The user pool has a custom domain, whether or not it also has a prefix domain.
+     * * Your application performs authentication with managed login or the classic hosted UI.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-webauthnrelyingpartyid)
-     * @param webAuthnRelyingPartyId 
+     * @param webAuthnRelyingPartyId Sets or displays the authentication domain, typically your user
+     * pool domain, that passkey providers must use as a relying party (RP) in their configuration. 
      */
     override fun webAuthnRelyingPartyId(webAuthnRelyingPartyId: String) {
       cdkBuilder.webAuthnRelyingPartyId(webAuthnRelyingPartyId)
     }
 
     /**
+     * When `required` , users can only register and sign in users with passkeys that are capable of
+     * [user
+     * verification](https://docs.aws.amazon.com/https://www.w3.org/TR/webauthn-2/#enum-userVerificationRequirement)
+     * . When `preferred` , your user pool doesn't require the use of authenticators with user
+     * verification but encourages it.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-webauthnuserverification)
-     * @param webAuthnUserVerification 
+     * @param webAuthnUserVerification When `required` , users can only register and sign in users
+     * with passkeys that are capable of [user
+     * verification](https://docs.aws.amazon.com/https://www.w3.org/TR/webauthn-2/#enum-userVerificationRequirement)
+     * . When `preferred` , your user pool doesn't require the use of authenticators with user
+     * verification but encourages it. 
      */
     override fun webAuthnUserVerification(webAuthnUserVerification: String) {
       cdkBuilder.webAuthnUserVerification(webAuthnUserVerification)
@@ -2725,14 +2797,6 @@ public open class CfnUserPool(
    * Contains settings for allowing user sign-up, customizing invitation messages to new users, and
    * the amount of time before temporary passwords expire.
    *
-   * This data type is a request and response parameter of
-   * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-   * and
-   * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-   * , and a response parameter of
-   * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-   * .
-   *
    * Example:
    *
    * ```
@@ -2758,9 +2822,7 @@ public open class CfnUserPool(
      * The setting for allowing self-service sign-up.
      *
      * When `true` , only administrators can create new user profiles. When `false` , users can
-     * register themselves and create a new user profile with the
-     * [SignUp](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SignUp.html)
-     * operation.
+     * register themselves and create a new user profile with the `SignUp` operation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-admincreateuserconfig.html#cfn-cognito-userpool-admincreateuserconfig-allowadmincreateuseronly)
      */
@@ -2783,12 +2845,6 @@ public open class CfnUserPool(
     /**
      * This parameter is no longer in use.
      *
-     * Configure the duration of temporary passwords with the `TemporaryPasswordValidityDays`
-     * parameter of
-     * [PasswordPolicyType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_PasswordPolicyType.html)
-     * . For older user pools that have a `UnusedAccountValidityDays` configuration, that value is
-     * effective until you set a value for `TemporaryPasswordValidityDays` .
-     *
      * The password expiration limit in days for administrator-created users. When this time
      * expires, the user can't sign in with their temporary password. To reset the account after that
      * time limit, you must call `AdminCreateUser` again, specifying `RESEND` for the `MessageAction`
@@ -2808,18 +2864,14 @@ public open class CfnUserPool(
       /**
        * @param allowAdminCreateUserOnly The setting for allowing self-service sign-up.
        * When `true` , only administrators can create new user profiles. When `false` , users can
-       * register themselves and create a new user profile with the
-       * [SignUp](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SignUp.html)
-       * operation.
+       * register themselves and create a new user profile with the `SignUp` operation.
        */
       public fun allowAdminCreateUserOnly(allowAdminCreateUserOnly: Boolean)
 
       /**
        * @param allowAdminCreateUserOnly The setting for allowing self-service sign-up.
        * When `true` , only administrators can create new user profiles. When `false` , users can
-       * register themselves and create a new user profile with the
-       * [SignUp](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SignUp.html)
-       * operation.
+       * register themselves and create a new user profile with the `SignUp` operation.
        */
       public fun allowAdminCreateUserOnly(allowAdminCreateUserOnly: IResolvable)
 
@@ -2861,12 +2913,6 @@ public open class CfnUserPool(
 
       /**
        * @param unusedAccountValidityDays This parameter is no longer in use.
-       * Configure the duration of temporary passwords with the `TemporaryPasswordValidityDays`
-       * parameter of
-       * [PasswordPolicyType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_PasswordPolicyType.html)
-       * . For older user pools that have a `UnusedAccountValidityDays` configuration, that value is
-       * effective until you set a value for `TemporaryPasswordValidityDays` .
-       *
        * The password expiration limit in days for administrator-created users. When this time
        * expires, the user can't sign in with their temporary password. To reset the account after that
        * time limit, you must call `AdminCreateUser` again, specifying `RESEND` for the `MessageAction`
@@ -2886,9 +2932,7 @@ public open class CfnUserPool(
       /**
        * @param allowAdminCreateUserOnly The setting for allowing self-service sign-up.
        * When `true` , only administrators can create new user profiles. When `false` , users can
-       * register themselves and create a new user profile with the
-       * [SignUp](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SignUp.html)
-       * operation.
+       * register themselves and create a new user profile with the `SignUp` operation.
        */
       override fun allowAdminCreateUserOnly(allowAdminCreateUserOnly: Boolean) {
         cdkBuilder.allowAdminCreateUserOnly(allowAdminCreateUserOnly)
@@ -2897,9 +2941,7 @@ public open class CfnUserPool(
       /**
        * @param allowAdminCreateUserOnly The setting for allowing self-service sign-up.
        * When `true` , only administrators can create new user profiles. When `false` , users can
-       * register themselves and create a new user profile with the
-       * [SignUp](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SignUp.html)
-       * operation.
+       * register themselves and create a new user profile with the `SignUp` operation.
        */
       override fun allowAdminCreateUserOnly(allowAdminCreateUserOnly: IResolvable) {
         cdkBuilder.allowAdminCreateUserOnly(allowAdminCreateUserOnly.let(IResolvable.Companion::unwrap))
@@ -2948,12 +2990,6 @@ public open class CfnUserPool(
 
       /**
        * @param unusedAccountValidityDays This parameter is no longer in use.
-       * Configure the duration of temporary passwords with the `TemporaryPasswordValidityDays`
-       * parameter of
-       * [PasswordPolicyType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_PasswordPolicyType.html)
-       * . For older user pools that have a `UnusedAccountValidityDays` configuration, that value is
-       * effective until you set a value for `TemporaryPasswordValidityDays` .
-       *
        * The password expiration limit in days for administrator-created users. When this time
        * expires, the user can't sign in with their temporary password. To reset the account after that
        * time limit, you must call `AdminCreateUser` again, specifying `RESEND` for the `MessageAction`
@@ -2978,9 +3014,7 @@ public open class CfnUserPool(
        * The setting for allowing self-service sign-up.
        *
        * When `true` , only administrators can create new user profiles. When `false` , users can
-       * register themselves and create a new user profile with the
-       * [SignUp](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SignUp.html)
-       * operation.
+       * register themselves and create a new user profile with the `SignUp` operation.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-admincreateuserconfig.html#cfn-cognito-userpool-admincreateuserconfig-allowadmincreateuseronly)
        */
@@ -3002,12 +3036,6 @@ public open class CfnUserPool(
 
       /**
        * This parameter is no longer in use.
-       *
-       * Configure the duration of temporary passwords with the `TemporaryPasswordValidityDays`
-       * parameter of
-       * [PasswordPolicyType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_PasswordPolicyType.html)
-       * . For older user pools that have a `UnusedAccountValidityDays` configuration, that value is
-       * effective until you set a value for `TemporaryPasswordValidityDays` .
        *
        * The password expiration limit in days for administrator-created users. When this time
        * expires, the user can't sign in with their temporary password. To reset the account after that
@@ -3041,6 +3069,9 @@ public open class CfnUserPool(
   }
 
   /**
+   * Threat protection configuration options for additional authentication types in your user pool,
+   * including custom authentication.
+   *
    * Example:
    *
    * ```
@@ -3057,6 +3088,11 @@ public open class CfnUserPool(
    */
   public interface AdvancedSecurityAdditionalFlowsProperty {
     /**
+     * The operating mode of threat protection in custom authentication with [Custom authentication
+     * challenge Lambda
+     * triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-challenge.html)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-advancedsecurityadditionalflows.html#cfn-cognito-userpool-advancedsecurityadditionalflows-customauthmode)
      */
     public fun customAuthMode(): String? = unwrap(this).getCustomAuthMode()
@@ -3067,7 +3103,10 @@ public open class CfnUserPool(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param customAuthMode the value to be set.
+       * @param customAuthMode The operating mode of threat protection in custom authentication with
+       * [Custom authentication challenge Lambda
+       * triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-challenge.html)
+       * .
        */
       public fun customAuthMode(customAuthMode: String)
     }
@@ -3079,7 +3118,10 @@ public open class CfnUserPool(
           software.amazon.awscdk.services.cognito.CfnUserPool.AdvancedSecurityAdditionalFlowsProperty.builder()
 
       /**
-       * @param customAuthMode the value to be set.
+       * @param customAuthMode The operating mode of threat protection in custom authentication with
+       * [Custom authentication challenge Lambda
+       * triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-challenge.html)
+       * .
        */
       override fun customAuthMode(customAuthMode: String) {
         cdkBuilder.customAuthMode(customAuthMode)
@@ -3095,6 +3137,11 @@ public open class CfnUserPool(
     ) : CdkObject(cdkObject),
         AdvancedSecurityAdditionalFlowsProperty {
       /**
+       * The operating mode of threat protection in custom authentication with [Custom
+       * authentication challenge Lambda
+       * triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-challenge.html)
+       * .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-advancedsecurityadditionalflows.html#cfn-cognito-userpool-advancedsecurityadditionalflows-customauthmode)
        */
       override fun customAuthMode(): String? = unwrap(this).getCustomAuthMode()
@@ -3390,37 +3437,6 @@ public open class CfnUserPool(
   /**
    * The device-remembering configuration for a user pool.
    *
-   * A
-   * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-   * request returns a null value for this object when the user pool isn't configured to remember
-   * devices. When device remembering is active, you can remember a user's device with a
-   * [ConfirmDevice](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_ConfirmDevice.html)
-   * API request. Additionally. when the property `DeviceOnlyRememberedOnUserPrompt` is `true` , you
-   * must follow `ConfirmDevice` with an
-   * [UpdateDeviceStatus](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateDeviceStatus.html)
-   * API request that sets the user's device to `remembered` or `not_remembered` .
-   *
-   * To sign in with a remembered device, include `DEVICE_KEY` in the authentication parameters in
-   * your user's
-   * [InitiateAuth](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_InitiateAuth.html)
-   * request. If your app doesn't include a `DEVICE_KEY` parameter, the
-   * [response](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_InitiateAuth.html#API_InitiateAuth_ResponseSyntax)
-   * from Amazon Cognito includes newly-generated `DEVICE_KEY` and `DEVICE_GROUP_KEY` values under
-   * `NewDeviceMetadata` . Store these values to use in future device-authentication requests.
-   *
-   *
-   * When you provide a value for any property of `DeviceConfiguration` , you activate the device
-   * remembering for the user pool.
-   *
-   * This data type is a request and response parameter of
-   * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-   * and
-   * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-   * , and a response parameter of
-   * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-   * .
-   *
-   *
    * Example:
    *
    * ```
@@ -3452,12 +3468,10 @@ public open class CfnUserPool(
 
     /**
      * When true, Amazon Cognito doesn't automatically remember a user's device when your app sends
-     * a
-     * [ConfirmDevice](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_ConfirmDevice.html)
-     * API request. In your app, create a prompt for your user to choose whether they want to remember
-     * their device. Return the user's choice in an
-     * [UpdateDeviceStatus](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateDeviceStatus.html)
-     * API request.
+     * a `ConfirmDevice` API request.
+     *
+     * In your app, create a prompt for your user to choose whether they want to remember their
+     * device. Return the user's choice in an `UpdateDeviceStatus` API request.
      *
      * When `DeviceOnlyRememberedOnUserPrompt` is `false` , Amazon Cognito immediately remembers
      * devices that you register in a `ConfirmDevice` API request.
@@ -3496,12 +3510,10 @@ public open class CfnUserPool(
 
       /**
        * @param deviceOnlyRememberedOnUserPrompt When true, Amazon Cognito doesn't automatically
-       * remember a user's device when your app sends a
-       * [ConfirmDevice](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_ConfirmDevice.html)
-       * API request. In your app, create a prompt for your user to choose whether they want to
-       * remember their device. Return the user's choice in an
-       * [UpdateDeviceStatus](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateDeviceStatus.html)
-       * API request.
+       * remember a user's device when your app sends a `ConfirmDevice` API request.
+       * In your app, create a prompt for your user to choose whether they want to remember their
+       * device. Return the user's choice in an `UpdateDeviceStatus` API request.
+       *
        * When `DeviceOnlyRememberedOnUserPrompt` is `false` , Amazon Cognito immediately remembers
        * devices that you register in a `ConfirmDevice` API request.
        */
@@ -3509,12 +3521,10 @@ public open class CfnUserPool(
 
       /**
        * @param deviceOnlyRememberedOnUserPrompt When true, Amazon Cognito doesn't automatically
-       * remember a user's device when your app sends a
-       * [ConfirmDevice](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_ConfirmDevice.html)
-       * API request. In your app, create a prompt for your user to choose whether they want to
-       * remember their device. Return the user's choice in an
-       * [UpdateDeviceStatus](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateDeviceStatus.html)
-       * API request.
+       * remember a user's device when your app sends a `ConfirmDevice` API request.
+       * In your app, create a prompt for your user to choose whether they want to remember their
+       * device. Return the user's choice in an `UpdateDeviceStatus` API request.
+       *
        * When `DeviceOnlyRememberedOnUserPrompt` is `false` , Amazon Cognito immediately remembers
        * devices that you register in a `ConfirmDevice` API request.
        */
@@ -3554,12 +3564,10 @@ public open class CfnUserPool(
 
       /**
        * @param deviceOnlyRememberedOnUserPrompt When true, Amazon Cognito doesn't automatically
-       * remember a user's device when your app sends a
-       * [ConfirmDevice](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_ConfirmDevice.html)
-       * API request. In your app, create a prompt for your user to choose whether they want to
-       * remember their device. Return the user's choice in an
-       * [UpdateDeviceStatus](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateDeviceStatus.html)
-       * API request.
+       * remember a user's device when your app sends a `ConfirmDevice` API request.
+       * In your app, create a prompt for your user to choose whether they want to remember their
+       * device. Return the user's choice in an `UpdateDeviceStatus` API request.
+       *
        * When `DeviceOnlyRememberedOnUserPrompt` is `false` , Amazon Cognito immediately remembers
        * devices that you register in a `ConfirmDevice` API request.
        */
@@ -3569,12 +3577,10 @@ public open class CfnUserPool(
 
       /**
        * @param deviceOnlyRememberedOnUserPrompt When true, Amazon Cognito doesn't automatically
-       * remember a user's device when your app sends a
-       * [ConfirmDevice](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_ConfirmDevice.html)
-       * API request. In your app, create a prompt for your user to choose whether they want to
-       * remember their device. Return the user's choice in an
-       * [UpdateDeviceStatus](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateDeviceStatus.html)
-       * API request.
+       * remember a user's device when your app sends a `ConfirmDevice` API request.
+       * In your app, create a prompt for your user to choose whether they want to remember their
+       * device. Return the user's choice in an `UpdateDeviceStatus` API request.
+       *
        * When `DeviceOnlyRememberedOnUserPrompt` is `false` , Amazon Cognito immediately remembers
        * devices that you register in a `ConfirmDevice` API request.
        */
@@ -3608,12 +3614,10 @@ public open class CfnUserPool(
 
       /**
        * When true, Amazon Cognito doesn't automatically remember a user's device when your app
-       * sends a
-       * [ConfirmDevice](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_ConfirmDevice.html)
-       * API request. In your app, create a prompt for your user to choose whether they want to
-       * remember their device. Return the user's choice in an
-       * [UpdateDeviceStatus](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateDeviceStatus.html)
-       * API request.
+       * sends a `ConfirmDevice` API request.
+       *
+       * In your app, create a prompt for your user to choose whether they want to remember their
+       * device. Return the user's choice in an `UpdateDeviceStatus` API request.
        *
        * When `DeviceOnlyRememberedOnUserPrompt` is `false` , Amazon Cognito immediately remembers
        * devices that you register in a `ConfirmDevice` API request.
@@ -4283,14 +4287,6 @@ public open class CfnUserPool(
    *
    * Amazon Cognito invokes triggers at several possible stages of user pool operations. Triggers
    * can modify the outcome of the operations that invoked them.
-   *
-   * This data type is a request and response parameter of
-   * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-   * and
-   * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-   * , and a response parameter of
-   * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-   * .
    *
    * Example:
    *
@@ -5040,15 +5036,6 @@ public open class CfnUserPool(
    * The minimum and maximum values of an attribute that is of the number type, for example
    * `custom:age` .
    *
-   * This data type is part of
-   * [SchemaAttributeType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SchemaAttributeType.html)
-   * . It defines the length constraints on number-type attributes that you configure in
-   * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-   * and
-   * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-   * , and displays the length constraints of all number-type attributes in the response to
-   * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-   *
    * Example:
    *
    * ```
@@ -5172,14 +5159,6 @@ public open class CfnUserPool(
    * The password policy settings for a user pool, including complexity, history, and length
    * requirements.
    *
-   * This data type is a request and response parameter of
-   * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-   * and
-   * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-   * , and a response parameter of
-   * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-   * .
-   *
    * Example:
    *
    * ```
@@ -5215,13 +5194,6 @@ public open class CfnUserPool(
      *
      * Users can't set a password that matches any of `n` previous passwords, where `n` is the value
      * of `PasswordHistorySize` .
-     *
-     * Password history isn't enforced and isn't displayed in
-     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-     * responses when you set this value to `0` or don't provide it. To activate this setting,
-     * [advanced security
-     * features](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
-     * must be active in your user pool.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-passwordhistorysize)
      */
@@ -5292,13 +5264,6 @@ public open class CfnUserPool(
        * restrict each user from reusing.
        * Users can't set a password that matches any of `n` previous passwords, where `n` is the
        * value of `PasswordHistorySize` .
-       *
-       * Password history isn't enforced and isn't displayed in
-       * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-       * responses when you set this value to `0` or don't provide it. To activate this setting,
-       * [advanced security
-       * features](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
-       * must be active in your user pool.
        */
       public fun passwordHistorySize(passwordHistorySize: Number)
 
@@ -5382,13 +5347,6 @@ public open class CfnUserPool(
        * restrict each user from reusing.
        * Users can't set a password that matches any of `n` previous passwords, where `n` is the
        * value of `PasswordHistorySize` .
-       *
-       * Password history isn't enforced and isn't displayed in
-       * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-       * responses when you set this value to `0` or don't provide it. To activate this setting,
-       * [advanced security
-       * features](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
-       * must be active in your user pool.
        */
       override fun passwordHistorySize(passwordHistorySize: Number) {
         cdkBuilder.passwordHistorySize(passwordHistorySize)
@@ -5497,13 +5455,6 @@ public open class CfnUserPool(
        * Users can't set a password that matches any of `n` previous passwords, where `n` is the
        * value of `PasswordHistorySize` .
        *
-       * Password history isn't enforced and isn't displayed in
-       * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-       * responses when you set this value to `0` or don't provide it. To activate this setting,
-       * [advanced security
-       * features](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
-       * must be active in your user pool.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-passwordhistorysize)
        */
       override fun passwordHistorySize(): Number? = unwrap(this).getPasswordHistorySize()
@@ -5577,15 +5528,9 @@ public open class CfnUserPool(
   }
 
   /**
-   * A list of user pool policies. Contains the policy that sets password-complexity requirements.
+   * A list of user pool policies.
    *
-   * This data type is a request and response parameter of
-   * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-   * and
-   * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-   * , and a response parameter of
-   * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-   * .
+   * Contains the policy that sets password-complexity requirements.
    *
    * Example:
    *
@@ -5621,6 +5566,12 @@ public open class CfnUserPool(
     public fun passwordPolicy(): Any? = unwrap(this).getPasswordPolicy()
 
     /**
+     * The policy for allowed types of authentication in a user pool.
+     *
+     * To activate this setting, your user pool must be in the [Essentials
+     * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-essentials.html)
+     * or higher.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-policies.html#cfn-cognito-userpool-policies-signinpolicy)
      */
     public fun signInPolicy(): Any? = unwrap(this).getSignInPolicy()
@@ -5651,17 +5602,26 @@ public open class CfnUserPool(
       public fun passwordPolicy(passwordPolicy: PasswordPolicyProperty.Builder.() -> Unit)
 
       /**
-       * @param signInPolicy the value to be set.
+       * @param signInPolicy The policy for allowed types of authentication in a user pool.
+       * To activate this setting, your user pool must be in the [Essentials
+       * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-essentials.html)
+       * or higher.
        */
       public fun signInPolicy(signInPolicy: IResolvable)
 
       /**
-       * @param signInPolicy the value to be set.
+       * @param signInPolicy The policy for allowed types of authentication in a user pool.
+       * To activate this setting, your user pool must be in the [Essentials
+       * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-essentials.html)
+       * or higher.
        */
       public fun signInPolicy(signInPolicy: SignInPolicyProperty)
 
       /**
-       * @param signInPolicy the value to be set.
+       * @param signInPolicy The policy for allowed types of authentication in a user pool.
+       * To activate this setting, your user pool must be in the [Essentials
+       * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-essentials.html)
+       * or higher.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4637f26ccd21e203837a5784d48af8d868554a3c675006409b05915474aa8d10")
@@ -5699,21 +5659,30 @@ public open class CfnUserPool(
           passwordPolicy(PasswordPolicyProperty(passwordPolicy))
 
       /**
-       * @param signInPolicy the value to be set.
+       * @param signInPolicy The policy for allowed types of authentication in a user pool.
+       * To activate this setting, your user pool must be in the [Essentials
+       * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-essentials.html)
+       * or higher.
        */
       override fun signInPolicy(signInPolicy: IResolvable) {
         cdkBuilder.signInPolicy(signInPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param signInPolicy the value to be set.
+       * @param signInPolicy The policy for allowed types of authentication in a user pool.
+       * To activate this setting, your user pool must be in the [Essentials
+       * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-essentials.html)
+       * or higher.
        */
       override fun signInPolicy(signInPolicy: SignInPolicyProperty) {
         cdkBuilder.signInPolicy(signInPolicy.let(SignInPolicyProperty.Companion::unwrap))
       }
 
       /**
-       * @param signInPolicy the value to be set.
+       * @param signInPolicy The policy for allowed types of authentication in a user pool.
+       * To activate this setting, your user pool must be in the [Essentials
+       * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-essentials.html)
+       * or higher.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4637f26ccd21e203837a5784d48af8d868554a3c675006409b05915474aa8d10")
@@ -5737,6 +5706,12 @@ public open class CfnUserPool(
       override fun passwordPolicy(): Any? = unwrap(this).getPasswordPolicy()
 
       /**
+       * The policy for allowed types of authentication in a user pool.
+       *
+       * To activate this setting, your user pool must be in the [Essentials
+       * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-essentials.html)
+       * or higher.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-policies.html#cfn-cognito-userpool-policies-signinpolicy)
        */
       override fun signInPolicy(): Any? = unwrap(this).getSignInPolicy()
@@ -5762,14 +5737,6 @@ public open class CfnUserPool(
 
   /**
    * The properties of a pre token generation Lambda trigger.
-   *
-   * This data type is a request and response parameter of
-   * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-   * and
-   * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-   * , and a response parameter of
-   * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-   * .
    *
    * Example:
    *
@@ -5915,14 +5882,6 @@ public open class CfnUserPool(
    * falls back to an SMS message if the user has a verified phone number. The `admin_only` option
    * prevents self-service account recovery.
    *
-   * This data type is a request and response parameter of
-   * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-   * and
-   * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-   * , and a response parameter of
-   * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-   * .
-   *
    * Example:
    *
    * ```
@@ -6047,14 +6006,6 @@ public open class CfnUserPool(
    * Developer-only `dev:` attributes are a legacy feature of user pools, and are read-only to all
    * app clients. You can create and update developer-only attributes only with IAM-authenticated API
    * operations. Use app client read/write permissions instead.
-   *
-   * This data type is a request and response parameter of
-   * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-   * and
-   * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-   * , and a response parameter of
-   * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-   * .
    *
    * Example:
    *
@@ -6561,6 +6512,12 @@ public open class CfnUserPool(
   }
 
   /**
+   * The policy for allowed types of authentication in a user pool.
+   *
+   * To activate this setting, your user pool must be in the [Essentials
+   * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-essentials.html)
+   * or higher.
+   *
    * Example:
    *
    * ```
@@ -6576,6 +6533,13 @@ public open class CfnUserPool(
    */
   public interface SignInPolicyProperty {
     /**
+     * The sign-in methods that a user pool supports as the first factor.
+     *
+     * You can permit users to start authentication with a standard username and password, or with
+     * other one-time password and hardware factors.
+     *
+     * Supports values of `EMAIL_OTP` , `SMS_OTP` , `WEB_AUTHN` and `PASSWORD` ,
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-signinpolicy.html#cfn-cognito-userpool-signinpolicy-allowedfirstauthfactors)
      */
     public fun allowedFirstAuthFactors(): List<String> = unwrap(this).getAllowedFirstAuthFactors()
@@ -6587,12 +6551,22 @@ public open class CfnUserPool(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param allowedFirstAuthFactors the value to be set.
+       * @param allowedFirstAuthFactors The sign-in methods that a user pool supports as the first
+       * factor.
+       * You can permit users to start authentication with a standard username and password, or with
+       * other one-time password and hardware factors.
+       *
+       * Supports values of `EMAIL_OTP` , `SMS_OTP` , `WEB_AUTHN` and `PASSWORD` ,
        */
       public fun allowedFirstAuthFactors(allowedFirstAuthFactors: List<String>)
 
       /**
-       * @param allowedFirstAuthFactors the value to be set.
+       * @param allowedFirstAuthFactors The sign-in methods that a user pool supports as the first
+       * factor.
+       * You can permit users to start authentication with a standard username and password, or with
+       * other one-time password and hardware factors.
+       *
+       * Supports values of `EMAIL_OTP` , `SMS_OTP` , `WEB_AUTHN` and `PASSWORD` ,
        */
       public fun allowedFirstAuthFactors(vararg allowedFirstAuthFactors: String)
     }
@@ -6603,14 +6577,24 @@ public open class CfnUserPool(
           software.amazon.awscdk.services.cognito.CfnUserPool.SignInPolicyProperty.builder()
 
       /**
-       * @param allowedFirstAuthFactors the value to be set.
+       * @param allowedFirstAuthFactors The sign-in methods that a user pool supports as the first
+       * factor.
+       * You can permit users to start authentication with a standard username and password, or with
+       * other one-time password and hardware factors.
+       *
+       * Supports values of `EMAIL_OTP` , `SMS_OTP` , `WEB_AUTHN` and `PASSWORD` ,
        */
       override fun allowedFirstAuthFactors(allowedFirstAuthFactors: List<String>) {
         cdkBuilder.allowedFirstAuthFactors(allowedFirstAuthFactors)
       }
 
       /**
-       * @param allowedFirstAuthFactors the value to be set.
+       * @param allowedFirstAuthFactors The sign-in methods that a user pool supports as the first
+       * factor.
+       * You can permit users to start authentication with a standard username and password, or with
+       * other one-time password and hardware factors.
+       *
+       * Supports values of `EMAIL_OTP` , `SMS_OTP` , `WEB_AUTHN` and `PASSWORD` ,
        */
       override fun allowedFirstAuthFactors(vararg allowedFirstAuthFactors: String): Unit =
           allowedFirstAuthFactors(allowedFirstAuthFactors.toList())
@@ -6624,6 +6608,13 @@ public open class CfnUserPool(
     ) : CdkObject(cdkObject),
         SignInPolicyProperty {
       /**
+       * The sign-in methods that a user pool supports as the first factor.
+       *
+       * You can permit users to start authentication with a standard username and password, or with
+       * other one-time password and hardware factors.
+       *
+       * Supports values of `EMAIL_OTP` , `SMS_OTP` , `WEB_AUTHN` and `PASSWORD` ,
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-signinpolicy.html#cfn-cognito-userpool-signinpolicy-allowedfirstauthfactors)
        */
       override fun allowedFirstAuthFactors(): List<String> =
@@ -6653,20 +6644,6 @@ public open class CfnUserPool(
    *
    * To send SMS messages with Amazon SNS in the AWS Region that you want, the Amazon Cognito user
    * pool uses an AWS Identity and Access Management (IAM) role in your AWS account .
-   *
-   * This data type is a request parameter of
-   * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-   * ,
-   * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-   * , and
-   * [SetUserPoolMfaConfig](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetUserPoolMfaConfig.html)
-   * , and a response parameter of
-   * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-   * ,
-   * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-   * , and
-   * [GetUserPoolMfaConfig](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetUserPoolMfaConfig.html)
-   * .
    *
    * Example:
    *
@@ -6906,15 +6883,6 @@ public open class CfnUserPool(
    * The minimum and maximum length values of an attribute that is of the string type, for example
    * `custom:department` .
    *
-   * This data type is part of
-   * [SchemaAttributeType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SchemaAttributeType.html)
-   * . It defines the length constraints on string-type attributes that you configure in
-   * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-   * and
-   * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-   * , and displays the length constraints of all string-type attributes in the response to
-   * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-   *
    * Example:
    *
    * ```
@@ -7068,12 +7036,6 @@ public open class CfnUserPool(
      * value of the attribute until your user responds to the verification message and confirms the new
      * value.
      *
-     * You can verify an updated email address or phone number with a
-     * [VerifyUserAttribute](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerifyUserAttribute.html)
-     * API request. You can also call the
-     * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
-     * API and set `email_verified` or `phone_number_verified` to true.
-     *
      * When `AttributesRequireVerificationBeforeUpdate` is false, your user pool doesn't require
      * that your users verify attribute changes before Amazon Cognito updates them. In a user pool
      * where `AttributesRequireVerificationBeforeUpdate` is false, API operations that change attribute
@@ -7097,12 +7059,6 @@ public open class CfnUserPool(
        * the value of the attribute until your user responds to the verification message and confirms
        * the new value.
        *
-       * You can verify an updated email address or phone number with a
-       * [VerifyUserAttribute](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerifyUserAttribute.html)
-       * API request. You can also call the
-       * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
-       * API and set `email_verified` or `phone_number_verified` to true.
-       *
        * When `AttributesRequireVerificationBeforeUpdate` is false, your user pool doesn't require
        * that your users verify attribute changes before Amazon Cognito updates them. In a user pool
        * where `AttributesRequireVerificationBeforeUpdate` is false, API operations that change
@@ -7119,12 +7075,6 @@ public open class CfnUserPool(
        * verification message to the new phone number or email address. Amazon Cognito doesn’t change
        * the value of the attribute until your user responds to the verification message and confirms
        * the new value.
-       *
-       * You can verify an updated email address or phone number with a
-       * [VerifyUserAttribute](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerifyUserAttribute.html)
-       * API request. You can also call the
-       * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
-       * API and set `email_verified` or `phone_number_verified` to true.
        *
        * When `AttributesRequireVerificationBeforeUpdate` is false, your user pool doesn't require
        * that your users verify attribute changes before Amazon Cognito updates them. In a user pool
@@ -7150,12 +7100,6 @@ public open class CfnUserPool(
        * the value of the attribute until your user responds to the verification message and confirms
        * the new value.
        *
-       * You can verify an updated email address or phone number with a
-       * [VerifyUserAttribute](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerifyUserAttribute.html)
-       * API request. You can also call the
-       * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
-       * API and set `email_verified` or `phone_number_verified` to true.
-       *
        * When `AttributesRequireVerificationBeforeUpdate` is false, your user pool doesn't require
        * that your users verify attribute changes before Amazon Cognito updates them. In a user pool
        * where `AttributesRequireVerificationBeforeUpdate` is false, API operations that change
@@ -7174,12 +7118,6 @@ public open class CfnUserPool(
        * verification message to the new phone number or email address. Amazon Cognito doesn’t change
        * the value of the attribute until your user responds to the verification message and confirms
        * the new value.
-       *
-       * You can verify an updated email address or phone number with a
-       * [VerifyUserAttribute](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerifyUserAttribute.html)
-       * API request. You can also call the
-       * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
-       * API and set `email_verified` or `phone_number_verified` to true.
        *
        * When `AttributesRequireVerificationBeforeUpdate` is false, your user pool doesn't require
        * that your users verify attribute changes before Amazon Cognito updates them. In a user pool
@@ -7207,12 +7145,6 @@ public open class CfnUserPool(
        * verification message to the new phone number or email address. Amazon Cognito doesn’t change
        * the value of the attribute until your user responds to the verification message and confirms
        * the new value.
-       *
-       * You can verify an updated email address or phone number with a
-       * [VerifyUserAttribute](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerifyUserAttribute.html)
-       * API request. You can also call the
-       * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
-       * API and set `email_verified` or `phone_number_verified` to true.
        *
        * When `AttributesRequireVerificationBeforeUpdate` is false, your user pool doesn't require
        * that your users verify attribute changes before Amazon Cognito updates them. In a user pool
@@ -7247,20 +7179,14 @@ public open class CfnUserPool(
   /**
    * User pool add-ons.
    *
-   * Contains settings for activation of advanced security features. To log user security
-   * information but take no action, set to `AUDIT` . To configure automatic security responses to
-   * risky traffic to your user pool, set to `ENFORCED` .
+   * Contains settings for activation of threat protection. To log user security information but
+   * take no action, set to `AUDIT` . To configure automatic security responses to risky traffic to
+   * your user pool, set to `ENFORCED` .
    *
    * For more information, see [Adding advanced security to a user
    * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
-   * .
-   *
-   * This data type is a request and response parameter of
-   * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-   * and
-   * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-   * , and a response parameter of
-   * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+   * . To activate this setting, your user pool must be on the [Plus
+   * tier](https://docs.aws.amazon.com/cognito/latest/developerguide/feature-plans-features-plus.html)
    * .
    *
    * Example:
@@ -7281,14 +7207,17 @@ public open class CfnUserPool(
    */
   public interface UserPoolAddOnsProperty {
     /**
+     * Threat protection configuration options for additional authentication types in your user
+     * pool, including custom authentication.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-userpooladdons.html#cfn-cognito-userpool-userpooladdons-advancedsecurityadditionalflows)
      */
     public fun advancedSecurityAdditionalFlows(): Any? =
         unwrap(this).getAdvancedSecurityAdditionalFlows()
 
     /**
-     * The operating mode of advanced security features for standard authentication types in your
-     * user pool, including username-password and secure remote password (SRP) authentication.
+     * The operating mode of threat protection for standard authentication types in your user pool,
+     * including username-password and secure remote password (SRP) authentication.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-userpooladdons.html#cfn-cognito-userpool-userpooladdons-advancedsecuritymode)
      */
@@ -7300,18 +7229,21 @@ public open class CfnUserPool(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param advancedSecurityAdditionalFlows the value to be set.
+       * @param advancedSecurityAdditionalFlows Threat protection configuration options for
+       * additional authentication types in your user pool, including custom authentication.
        */
       public fun advancedSecurityAdditionalFlows(advancedSecurityAdditionalFlows: IResolvable)
 
       /**
-       * @param advancedSecurityAdditionalFlows the value to be set.
+       * @param advancedSecurityAdditionalFlows Threat protection configuration options for
+       * additional authentication types in your user pool, including custom authentication.
        */
       public
           fun advancedSecurityAdditionalFlows(advancedSecurityAdditionalFlows: AdvancedSecurityAdditionalFlowsProperty)
 
       /**
-       * @param advancedSecurityAdditionalFlows the value to be set.
+       * @param advancedSecurityAdditionalFlows Threat protection configuration options for
+       * additional authentication types in your user pool, including custom authentication.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c88fdc674109bd078b0a05975904bd69d7fedf2979e8b7013328198e6d479b98")
@@ -7319,7 +7251,7 @@ public open class CfnUserPool(
           fun advancedSecurityAdditionalFlows(advancedSecurityAdditionalFlows: AdvancedSecurityAdditionalFlowsProperty.Builder.() -> Unit)
 
       /**
-       * @param advancedSecurityMode The operating mode of advanced security features for standard
+       * @param advancedSecurityMode The operating mode of threat protection for standard
        * authentication types in your user pool, including username-password and secure remote password
        * (SRP) authentication.
        */
@@ -7332,14 +7264,16 @@ public open class CfnUserPool(
           software.amazon.awscdk.services.cognito.CfnUserPool.UserPoolAddOnsProperty.builder()
 
       /**
-       * @param advancedSecurityAdditionalFlows the value to be set.
+       * @param advancedSecurityAdditionalFlows Threat protection configuration options for
+       * additional authentication types in your user pool, including custom authentication.
        */
       override fun advancedSecurityAdditionalFlows(advancedSecurityAdditionalFlows: IResolvable) {
         cdkBuilder.advancedSecurityAdditionalFlows(advancedSecurityAdditionalFlows.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param advancedSecurityAdditionalFlows the value to be set.
+       * @param advancedSecurityAdditionalFlows Threat protection configuration options for
+       * additional authentication types in your user pool, including custom authentication.
        */
       override
           fun advancedSecurityAdditionalFlows(advancedSecurityAdditionalFlows: AdvancedSecurityAdditionalFlowsProperty) {
@@ -7347,7 +7281,8 @@ public open class CfnUserPool(
       }
 
       /**
-       * @param advancedSecurityAdditionalFlows the value to be set.
+       * @param advancedSecurityAdditionalFlows Threat protection configuration options for
+       * additional authentication types in your user pool, including custom authentication.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c88fdc674109bd078b0a05975904bd69d7fedf2979e8b7013328198e6d479b98")
@@ -7357,7 +7292,7 @@ public open class CfnUserPool(
           advancedSecurityAdditionalFlows(AdvancedSecurityAdditionalFlowsProperty(advancedSecurityAdditionalFlows))
 
       /**
-       * @param advancedSecurityMode The operating mode of advanced security features for standard
+       * @param advancedSecurityMode The operating mode of threat protection for standard
        * authentication types in your user pool, including username-password and secure remote password
        * (SRP) authentication.
        */
@@ -7374,14 +7309,17 @@ public open class CfnUserPool(
     ) : CdkObject(cdkObject),
         UserPoolAddOnsProperty {
       /**
+       * Threat protection configuration options for additional authentication types in your user
+       * pool, including custom authentication.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-userpooladdons.html#cfn-cognito-userpool-userpooladdons-advancedsecurityadditionalflows)
        */
       override fun advancedSecurityAdditionalFlows(): Any? =
           unwrap(this).getAdvancedSecurityAdditionalFlows()
 
       /**
-       * The operating mode of advanced security features for standard authentication types in your
-       * user pool, including username-password and secure remote password (SRP) authentication.
+       * The operating mode of threat protection for standard authentication types in your user
+       * pool, including username-password and secure remote password (SRP) authentication.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-userpooladdons.html#cfn-cognito-userpool-userpooladdons-advancedsecuritymode)
        */
@@ -7415,10 +7353,6 @@ public open class CfnUserPool(
    * sensitivity to `False` (case insensitive) as a best practice. When usernames and email addresses
    * are case insensitive, Amazon Cognito treats any variation in case as the same user, and prevents a
    * case variation from being assigned to the same attribute for a different user.
-   *
-   * This configuration is immutable after you set it. For more information, see
-   * [UsernameConfigurationType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UsernameConfigurationType.html)
-   * .
    *
    * Example:
    *
@@ -7602,14 +7536,6 @@ public open class CfnUserPool(
   /**
    * The template for the verification message that your user pool delivers to users who set an
    * email address or phone number attribute.
-   *
-   * This data type is a request and response parameter of
-   * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
-   * and
-   * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
-   * , and a response parameter of
-   * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
-   * .
    *
    * Example:
    *

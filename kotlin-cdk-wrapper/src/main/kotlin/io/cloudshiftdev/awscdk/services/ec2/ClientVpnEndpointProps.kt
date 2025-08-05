@@ -40,6 +40,9 @@ import kotlin.jvm.JvmName
  * .clientCertificateArn("clientCertificateArn")
  * .clientConnectionHandler(clientVpnConnectionHandler)
  * .clientLoginBanner("clientLoginBanner")
+ * .clientRouteEnforcementOptions(ClientRouteEnforcementOptions.builder()
+ * .enforced(false)
+ * .build())
  * .description("description")
  * .dnsServers(List.of("dnsServers"))
  * .logging(false)
@@ -112,6 +115,28 @@ public interface ClientVpnEndpointProps : ClientVpnEndpointOptions {
      * UTF-8 encoded characters only. Maximum of 1400 characters.
      */
     public fun clientLoginBanner(clientLoginBanner: String)
+
+    /**
+     * @param clientRouteEnforcementOptions Options for Client Route Enforcement.
+     * Client Route Enforcement is a feature of Client VPN that helps enforce administrator defined
+     * routes on devices connected through the VPN.
+     * This feature helps improve your security posture by ensuring that network traffic originating
+     * from a connected client is not inadvertently sent outside the VPN tunnel.
+     */
+    public
+        fun clientRouteEnforcementOptions(clientRouteEnforcementOptions: ClientRouteEnforcementOptions)
+
+    /**
+     * @param clientRouteEnforcementOptions Options for Client Route Enforcement.
+     * Client Route Enforcement is a feature of Client VPN that helps enforce administrator defined
+     * routes on devices connected through the VPN.
+     * This feature helps improve your security posture by ensuring that network traffic originating
+     * from a connected client is not inadvertently sent outside the VPN tunnel.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7c4c830ede1406a12c1f3be124a20670de45e3d857c0cbfb11c325311a371090")
+    public
+        fun clientRouteEnforcementOptions(clientRouteEnforcementOptions: ClientRouteEnforcementOptions.Builder.() -> Unit)
 
     /**
      * @param description A brief description of the Client VPN endpoint.
@@ -261,6 +286,32 @@ public interface ClientVpnEndpointProps : ClientVpnEndpointOptions {
     override fun clientLoginBanner(clientLoginBanner: String) {
       cdkBuilder.clientLoginBanner(clientLoginBanner)
     }
+
+    /**
+     * @param clientRouteEnforcementOptions Options for Client Route Enforcement.
+     * Client Route Enforcement is a feature of Client VPN that helps enforce administrator defined
+     * routes on devices connected through the VPN.
+     * This feature helps improve your security posture by ensuring that network traffic originating
+     * from a connected client is not inadvertently sent outside the VPN tunnel.
+     */
+    override
+        fun clientRouteEnforcementOptions(clientRouteEnforcementOptions: ClientRouteEnforcementOptions) {
+      cdkBuilder.clientRouteEnforcementOptions(clientRouteEnforcementOptions.let(ClientRouteEnforcementOptions.Companion::unwrap))
+    }
+
+    /**
+     * @param clientRouteEnforcementOptions Options for Client Route Enforcement.
+     * Client Route Enforcement is a feature of Client VPN that helps enforce administrator defined
+     * routes on devices connected through the VPN.
+     * This feature helps improve your security posture by ensuring that network traffic originating
+     * from a connected client is not inadvertently sent outside the VPN tunnel.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7c4c830ede1406a12c1f3be124a20670de45e3d857c0cbfb11c325311a371090")
+    override
+        fun clientRouteEnforcementOptions(clientRouteEnforcementOptions: ClientRouteEnforcementOptions.Builder.() -> Unit):
+        Unit =
+        clientRouteEnforcementOptions(ClientRouteEnforcementOptions(clientRouteEnforcementOptions))
 
     /**
      * @param description A brief description of the Client VPN endpoint.
@@ -450,6 +501,21 @@ public interface ClientVpnEndpointProps : ClientVpnEndpointOptions {
      * Default: - no banner is presented to the client
      */
     override fun clientLoginBanner(): String? = unwrap(this).getClientLoginBanner()
+
+    /**
+     * Options for Client Route Enforcement.
+     *
+     * Client Route Enforcement is a feature of Client VPN that helps enforce administrator defined
+     * routes on devices connected through the VPN.
+     * This feature helps improve your security posture by ensuring that network traffic originating
+     * from a connected client is not inadvertently sent outside the VPN tunnel.
+     *
+     * Default: undefined - AWS Client VPN default setting is disable client route enforcement
+     *
+     * [Documentation](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-working-cre.html)
+     */
+    override fun clientRouteEnforcementOptions(): ClientRouteEnforcementOptions? =
+        unwrap(this).getClientRouteEnforcementOptions()?.let(ClientRouteEnforcementOptions::wrap)
 
     /**
      * A brief description of the Client VPN endpoint.

@@ -441,6 +441,9 @@ public open class Alias(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.lambda.Alias.PROPERTY_INJECTION_ID
+
     public fun fromAliasAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

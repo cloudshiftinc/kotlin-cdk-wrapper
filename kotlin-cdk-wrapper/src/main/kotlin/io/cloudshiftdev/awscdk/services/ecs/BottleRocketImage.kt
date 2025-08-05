@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.services.ec2.MachineImageConfig
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.String
 import kotlin.Unit
 
 /**
@@ -55,6 +56,16 @@ public open class BottleRocketImage(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     *
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key. 
+     */
+    public fun additionalCacheKey(additionalCacheKey: String)
+
+    /**
      * The CPU architecture.
      *
      * Default: - x86_64
@@ -99,6 +110,18 @@ public open class BottleRocketImage(
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.BottleRocketImage.Builder =
         software.amazon.awscdk.services.ecs.BottleRocketImage.Builder.create()
+
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     *
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key. 
+     */
+    override fun additionalCacheKey(additionalCacheKey: String) {
+      cdkBuilder.additionalCacheKey(additionalCacheKey)
+    }
 
     /**
      * The CPU architecture.

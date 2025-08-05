@@ -205,43 +205,21 @@ public interface CfnTaskProps {
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * Specifies one of the following task modes for your data transfer:.
+   * The task mode that you're using.
    *
-   * * `ENHANCED` - Transfer virtually unlimited numbers of objects with higher performance than
-   * Basic mode. Enhanced mode tasks optimize the data transfer process by listing, preparing,
-   * transferring, and verifying data in parallel. Enhanced mode is currently available for transfers
-   * between Amazon S3 locations.
-   *
-   *
-   * To create an Enhanced mode task, the IAM role that you use to call the `CreateTask` operation
-   * must have the `iam:CreateServiceLinkedRole` permission.
-   *
-   *
-   * * `BASIC` (default) - Transfer files or objects between AWS storage and all other supported
-   * DataSync locations. Basic mode tasks are subject to
-   * [quotas](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-limits.html) on the number
-   * of files, objects, and directories in a dataset. Basic mode sequentially prepares, transfers, and
-   * verifies data, making it slower than Enhanced mode for most workloads.
-   *
-   * For more information, see [Understanding task mode
-   * differences](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html#task-mode-differences)
-   * .
+   * For more information, see [Choosing a task mode for your data
+   * transfer](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html) .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskmode)
    */
   public fun taskMode(): String? = unwrap(this).getTaskMode()
 
   /**
-   * Specifies how you want to configure a task report, which provides detailed information about
-   * your DataSync transfer.
+   * The configuration of your task report, which provides detailed information about your DataSync
+   * transfer.
    *
    * For more information, see [Monitoring your DataSync transfers with task
    * reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
-   *
-   * When using this parameter, your caller identity (the role that you're using DataSync with) must
-   * have the `iam:PassRole` permission. The
-   * [AWSDataSyncFullAccess](https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess)
-   * policy includes this permission.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskreportconfig)
    */
@@ -414,65 +392,33 @@ public interface CfnTaskProps {
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * @param taskMode Specifies one of the following task modes for your data transfer:.
-     * * `ENHANCED` - Transfer virtually unlimited numbers of objects with higher performance than
-     * Basic mode. Enhanced mode tasks optimize the data transfer process by listing, preparing,
-     * transferring, and verifying data in parallel. Enhanced mode is currently available for transfers
-     * between Amazon S3 locations.
-     *
-     *
-     * To create an Enhanced mode task, the IAM role that you use to call the `CreateTask` operation
-     * must have the `iam:CreateServiceLinkedRole` permission.
-     *
-     *
-     * * `BASIC` (default) - Transfer files or objects between AWS storage and all other supported
-     * DataSync locations. Basic mode tasks are subject to
-     * [quotas](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-limits.html) on the
-     * number of files, objects, and directories in a dataset. Basic mode sequentially prepares,
-     * transfers, and verifies data, making it slower than Enhanced mode for most workloads.
-     *
-     * For more information, see [Understanding task mode
-     * differences](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html#task-mode-differences)
-     * .
+     * @param taskMode The task mode that you're using.
+     * For more information, see [Choosing a task mode for your data
+     * transfer](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html) .
      */
     public fun taskMode(taskMode: String)
 
     /**
-     * @param taskReportConfig Specifies how you want to configure a task report, which provides
-     * detailed information about your DataSync transfer.
+     * @param taskReportConfig The configuration of your task report, which provides detailed
+     * information about your DataSync transfer.
      * For more information, see [Monitoring your DataSync transfers with task
      * reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
-     *
-     * When using this parameter, your caller identity (the role that you're using DataSync with)
-     * must have the `iam:PassRole` permission. The
-     * [AWSDataSyncFullAccess](https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess)
-     * policy includes this permission.
      */
     public fun taskReportConfig(taskReportConfig: IResolvable)
 
     /**
-     * @param taskReportConfig Specifies how you want to configure a task report, which provides
-     * detailed information about your DataSync transfer.
+     * @param taskReportConfig The configuration of your task report, which provides detailed
+     * information about your DataSync transfer.
      * For more information, see [Monitoring your DataSync transfers with task
      * reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
-     *
-     * When using this parameter, your caller identity (the role that you're using DataSync with)
-     * must have the `iam:PassRole` permission. The
-     * [AWSDataSyncFullAccess](https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess)
-     * policy includes this permission.
      */
     public fun taskReportConfig(taskReportConfig: CfnTask.TaskReportConfigProperty)
 
     /**
-     * @param taskReportConfig Specifies how you want to configure a task report, which provides
-     * detailed information about your DataSync transfer.
+     * @param taskReportConfig The configuration of your task report, which provides detailed
+     * information about your DataSync transfer.
      * For more information, see [Monitoring your DataSync transfers with task
      * reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
-     *
-     * When using this parameter, your caller identity (the role that you're using DataSync with)
-     * must have the `iam:PassRole` permission. The
-     * [AWSDataSyncFullAccess](https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess)
-     * policy includes this permission.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6e79cf2a5c9ab4868b668a0c4a6cfc11bdbda75a184e0540286ff4d950747b38")
@@ -679,71 +625,39 @@ public interface CfnTaskProps {
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * @param taskMode Specifies one of the following task modes for your data transfer:.
-     * * `ENHANCED` - Transfer virtually unlimited numbers of objects with higher performance than
-     * Basic mode. Enhanced mode tasks optimize the data transfer process by listing, preparing,
-     * transferring, and verifying data in parallel. Enhanced mode is currently available for transfers
-     * between Amazon S3 locations.
-     *
-     *
-     * To create an Enhanced mode task, the IAM role that you use to call the `CreateTask` operation
-     * must have the `iam:CreateServiceLinkedRole` permission.
-     *
-     *
-     * * `BASIC` (default) - Transfer files or objects between AWS storage and all other supported
-     * DataSync locations. Basic mode tasks are subject to
-     * [quotas](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-limits.html) on the
-     * number of files, objects, and directories in a dataset. Basic mode sequentially prepares,
-     * transfers, and verifies data, making it slower than Enhanced mode for most workloads.
-     *
-     * For more information, see [Understanding task mode
-     * differences](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html#task-mode-differences)
-     * .
+     * @param taskMode The task mode that you're using.
+     * For more information, see [Choosing a task mode for your data
+     * transfer](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html) .
      */
     override fun taskMode(taskMode: String) {
       cdkBuilder.taskMode(taskMode)
     }
 
     /**
-     * @param taskReportConfig Specifies how you want to configure a task report, which provides
-     * detailed information about your DataSync transfer.
+     * @param taskReportConfig The configuration of your task report, which provides detailed
+     * information about your DataSync transfer.
      * For more information, see [Monitoring your DataSync transfers with task
      * reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
-     *
-     * When using this parameter, your caller identity (the role that you're using DataSync with)
-     * must have the `iam:PassRole` permission. The
-     * [AWSDataSyncFullAccess](https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess)
-     * policy includes this permission.
      */
     override fun taskReportConfig(taskReportConfig: IResolvable) {
       cdkBuilder.taskReportConfig(taskReportConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param taskReportConfig Specifies how you want to configure a task report, which provides
-     * detailed information about your DataSync transfer.
+     * @param taskReportConfig The configuration of your task report, which provides detailed
+     * information about your DataSync transfer.
      * For more information, see [Monitoring your DataSync transfers with task
      * reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
-     *
-     * When using this parameter, your caller identity (the role that you're using DataSync with)
-     * must have the `iam:PassRole` permission. The
-     * [AWSDataSyncFullAccess](https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess)
-     * policy includes this permission.
      */
     override fun taskReportConfig(taskReportConfig: CfnTask.TaskReportConfigProperty) {
       cdkBuilder.taskReportConfig(taskReportConfig.let(CfnTask.TaskReportConfigProperty.Companion::unwrap))
     }
 
     /**
-     * @param taskReportConfig Specifies how you want to configure a task report, which provides
-     * detailed information about your DataSync transfer.
+     * @param taskReportConfig The configuration of your task report, which provides detailed
+     * information about your DataSync transfer.
      * For more information, see [Monitoring your DataSync transfers with task
      * reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
-     *
-     * When using this parameter, your caller identity (the role that you're using DataSync with)
-     * must have the `iam:PassRole` permission. The
-     * [AWSDataSyncFullAccess](https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess)
-     * policy includes this permission.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6e79cf2a5c9ab4868b668a0c4a6cfc11bdbda75a184e0540286ff4d950747b38")
@@ -856,43 +770,21 @@ public interface CfnTaskProps {
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
-     * Specifies one of the following task modes for your data transfer:.
+     * The task mode that you're using.
      *
-     * * `ENHANCED` - Transfer virtually unlimited numbers of objects with higher performance than
-     * Basic mode. Enhanced mode tasks optimize the data transfer process by listing, preparing,
-     * transferring, and verifying data in parallel. Enhanced mode is currently available for transfers
-     * between Amazon S3 locations.
-     *
-     *
-     * To create an Enhanced mode task, the IAM role that you use to call the `CreateTask` operation
-     * must have the `iam:CreateServiceLinkedRole` permission.
-     *
-     *
-     * * `BASIC` (default) - Transfer files or objects between AWS storage and all other supported
-     * DataSync locations. Basic mode tasks are subject to
-     * [quotas](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-limits.html) on the
-     * number of files, objects, and directories in a dataset. Basic mode sequentially prepares,
-     * transfers, and verifies data, making it slower than Enhanced mode for most workloads.
-     *
-     * For more information, see [Understanding task mode
-     * differences](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html#task-mode-differences)
-     * .
+     * For more information, see [Choosing a task mode for your data
+     * transfer](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskmode)
      */
     override fun taskMode(): String? = unwrap(this).getTaskMode()
 
     /**
-     * Specifies how you want to configure a task report, which provides detailed information about
-     * your DataSync transfer.
+     * The configuration of your task report, which provides detailed information about your
+     * DataSync transfer.
      *
      * For more information, see [Monitoring your DataSync transfers with task
      * reports](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
-     *
-     * When using this parameter, your caller identity (the role that you're using DataSync with)
-     * must have the `iam:PassRole` permission. The
-     * [AWSDataSyncFullAccess](https://docs.aws.amazon.com/datasync/latest/userguide/security-iam-awsmanpol.html#security-iam-awsmanpol-awsdatasyncfullaccess)
-     * policy includes this permission.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskreportconfig)
      */

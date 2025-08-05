@@ -36,15 +36,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * String serviceToken = CustomResourceProvider.getOrCreate(this, "Custom::MyCustomResourceType",
- * CustomResourceProviderProps.builder()
- * .codeDirectory(String.format("%s/my-handler", __dirname))
- * .runtime(CustomResourceProviderRuntime.NODEJS_18_X)
- * .description("Lambda function created by the custom resource provider")
- * .build());
- * CustomResource.Builder.create(this, "MyResource")
- * .resourceType("Custom::MyCustomResourceType")
- * .serviceToken(serviceToken)
+ * Stack stack = new Stack();
+ * CfnParameter durToken = CfnParameter.Builder.create(stack, "MyParameter")
+ * .type("Number")
+ * .default(60)
+ * .build();
+ * CustomResource.Builder.create(stack, "MyCustomResource")
+ * .serviceToken("MyServiceToken")
+ * .serviceTimeout(Duration.seconds(durToken.getValueAsNumber()))
  * .build();
  * ```
  */
@@ -115,6 +114,11 @@ public open class CustomResource(
     /**
      * Properties to pass to the Lambda.
      *
+     * Values in this `properties` dictionary can possibly overwrite other values in
+     * `CustomResourceProps`
+     * E.g. `ServiceToken` and `ServiceTimeout`
+     * It is recommended to avoid using same keys that exist in `CustomResourceProps`
+     *
      * Default: - No properties.
      *
      * @param properties Properties to pass to the Lambda. 
@@ -154,6 +158,39 @@ public open class CustomResource(
      * (the default) as the resource type, or you can specify your own resource type name. 
      */
     public fun resourceType(resourceType: String)
+
+    /**
+     * The maximum time that can elapse before a custom resource operation times out.
+     *
+     * The value must be between 1 second and 3600 seconds.
+     *
+     * Maps to
+     * [ServiceTimeout](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-customresource.html#cfn-cloudformation-customresource-servicetimeout)
+     * property for the `AWS::CloudFormation::CustomResource` resource
+     *
+     * A token can be specified for this property, but it must be specified with
+     * `Duration.seconds()`.
+     *
+     * Default: Duration.seconds(3600)
+     *
+     * Example:
+     *
+     * ```
+     * Stack stack = new Stack();
+     * CfnParameter durToken = CfnParameter.Builder.create(stack, "MyParameter")
+     * .type("Number")
+     * .default(60)
+     * .build();
+     * CustomResource.Builder.create(stack, "MyCustomResource")
+     * .serviceToken("MyServiceToken")
+     * .serviceTimeout(Duration.seconds(durToken.getValueAsNumber()))
+     * .build();
+     * ```
+     *
+     * @param serviceTimeout The maximum time that can elapse before a custom resource operation
+     * times out. 
+     */
+    public fun serviceTimeout(serviceTimeout: Duration)
 
     /**
      * The ARN of the provider which implements this custom resource type.
@@ -199,6 +236,10 @@ public open class CustomResource(
      * .build();
      * ```
      *
+     * Maps to
+     * [ServiceToken](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-customresource.html#cfn-cloudformation-customresource-servicetoken)
+     * property for the `AWS::CloudFormation::CustomResource` resource
+     *
      * @param serviceToken The ARN of the provider which implements this custom resource type. 
      */
     public fun serviceToken(serviceToken: String)
@@ -224,6 +265,11 @@ public open class CustomResource(
 
     /**
      * Properties to pass to the Lambda.
+     *
+     * Values in this `properties` dictionary can possibly overwrite other values in
+     * `CustomResourceProps`
+     * E.g. `ServiceToken` and `ServiceTimeout`
+     * It is recommended to avoid using same keys that exist in `CustomResourceProps`
      *
      * Default: - No properties.
      *
@@ -272,6 +318,41 @@ public open class CustomResource(
     }
 
     /**
+     * The maximum time that can elapse before a custom resource operation times out.
+     *
+     * The value must be between 1 second and 3600 seconds.
+     *
+     * Maps to
+     * [ServiceTimeout](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-customresource.html#cfn-cloudformation-customresource-servicetimeout)
+     * property for the `AWS::CloudFormation::CustomResource` resource
+     *
+     * A token can be specified for this property, but it must be specified with
+     * `Duration.seconds()`.
+     *
+     * Default: Duration.seconds(3600)
+     *
+     * Example:
+     *
+     * ```
+     * Stack stack = new Stack();
+     * CfnParameter durToken = CfnParameter.Builder.create(stack, "MyParameter")
+     * .type("Number")
+     * .default(60)
+     * .build();
+     * CustomResource.Builder.create(stack, "MyCustomResource")
+     * .serviceToken("MyServiceToken")
+     * .serviceTimeout(Duration.seconds(durToken.getValueAsNumber()))
+     * .build();
+     * ```
+     *
+     * @param serviceTimeout The maximum time that can elapse before a custom resource operation
+     * times out. 
+     */
+    override fun serviceTimeout(serviceTimeout: Duration) {
+      cdkBuilder.serviceTimeout(serviceTimeout.let(Duration.Companion::unwrap))
+    }
+
+    /**
      * The ARN of the provider which implements this custom resource type.
      *
      * You can implement a provider by listening to raw AWS CloudFormation events
@@ -315,6 +396,10 @@ public open class CustomResource(
      * .build();
      * ```
      *
+     * Maps to
+     * [ServiceToken](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-customresource.html#cfn-cloudformation-customresource-servicetoken)
+     * property for the `AWS::CloudFormation::CustomResource` resource
+     *
      * @param serviceToken The ARN of the provider which implements this custom resource type. 
      */
     override fun serviceToken(serviceToken: String) {
@@ -325,6 +410,9 @@ public open class CustomResource(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.CustomResource.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -33,6 +33,16 @@ import kotlin.jvm.JvmName
  * .tenantId("tenantId")
  * .build())
  * .deviceTrustProviderType("deviceTrustProviderType")
+ * .nativeApplicationOidcOptions(NativeApplicationOidcOptionsProperty.builder()
+ * .authorizationEndpoint("authorizationEndpoint")
+ * .clientId("clientId")
+ * .clientSecret("clientSecret")
+ * .issuer("issuer")
+ * .publicSigningKeyEndpoint("publicSigningKeyEndpoint")
+ * .scope("scope")
+ * .tokenEndpoint("tokenEndpoint")
+ * .userInfoEndpoint("userInfoEndpoint")
+ * .build())
  * .oidcOptions(OidcOptionsProperty.builder()
  * .authorizationEndpoint("authorizationEndpoint")
  * .clientId("clientId")
@@ -77,6 +87,13 @@ public interface CfnVerifiedAccessTrustProviderProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html#cfn-ec2-verifiedaccesstrustprovider-devicetrustprovidertype)
    */
   public fun deviceTrustProviderType(): String? = unwrap(this).getDeviceTrustProviderType()
+
+  /**
+   * The OpenID Connect (OIDC) options.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions)
+   */
+  public fun nativeApplicationOidcOptions(): Any? = unwrap(this).getNativeApplicationOidcOptions()
 
   /**
    * The options for an OpenID Connect-compatible user-identity trust provider.
@@ -152,6 +169,25 @@ public interface CfnVerifiedAccessTrustProviderProps {
      * @param deviceTrustProviderType The type of device-based trust provider.
      */
     public fun deviceTrustProviderType(deviceTrustProviderType: String)
+
+    /**
+     * @param nativeApplicationOidcOptions The OpenID Connect (OIDC) options.
+     */
+    public fun nativeApplicationOidcOptions(nativeApplicationOidcOptions: IResolvable)
+
+    /**
+     * @param nativeApplicationOidcOptions The OpenID Connect (OIDC) options.
+     */
+    public
+        fun nativeApplicationOidcOptions(nativeApplicationOidcOptions: CfnVerifiedAccessTrustProvider.NativeApplicationOidcOptionsProperty)
+
+    /**
+     * @param nativeApplicationOidcOptions The OpenID Connect (OIDC) options.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c06a32615940f3942c334ab61332c059a39d36918324b0927edd1c49a2c741ff")
+    public
+        fun nativeApplicationOidcOptions(nativeApplicationOidcOptions: CfnVerifiedAccessTrustProvider.NativeApplicationOidcOptionsProperty.Builder.() -> Unit)
 
     /**
      * @param oidcOptions The options for an OpenID Connect-compatible user-identity trust provider.
@@ -258,6 +294,31 @@ public interface CfnVerifiedAccessTrustProviderProps {
     override fun deviceTrustProviderType(deviceTrustProviderType: String) {
       cdkBuilder.deviceTrustProviderType(deviceTrustProviderType)
     }
+
+    /**
+     * @param nativeApplicationOidcOptions The OpenID Connect (OIDC) options.
+     */
+    override fun nativeApplicationOidcOptions(nativeApplicationOidcOptions: IResolvable) {
+      cdkBuilder.nativeApplicationOidcOptions(nativeApplicationOidcOptions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param nativeApplicationOidcOptions The OpenID Connect (OIDC) options.
+     */
+    override
+        fun nativeApplicationOidcOptions(nativeApplicationOidcOptions: CfnVerifiedAccessTrustProvider.NativeApplicationOidcOptionsProperty) {
+      cdkBuilder.nativeApplicationOidcOptions(nativeApplicationOidcOptions.let(CfnVerifiedAccessTrustProvider.NativeApplicationOidcOptionsProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param nativeApplicationOidcOptions The OpenID Connect (OIDC) options.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c06a32615940f3942c334ab61332c059a39d36918324b0927edd1c49a2c741ff")
+    override
+        fun nativeApplicationOidcOptions(nativeApplicationOidcOptions: CfnVerifiedAccessTrustProvider.NativeApplicationOidcOptionsProperty.Builder.() -> Unit):
+        Unit =
+        nativeApplicationOidcOptions(CfnVerifiedAccessTrustProvider.NativeApplicationOidcOptionsProperty(nativeApplicationOidcOptions))
 
     /**
      * @param oidcOptions The options for an OpenID Connect-compatible user-identity trust provider.
@@ -368,6 +429,14 @@ public interface CfnVerifiedAccessTrustProviderProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html#cfn-ec2-verifiedaccesstrustprovider-devicetrustprovidertype)
      */
     override fun deviceTrustProviderType(): String? = unwrap(this).getDeviceTrustProviderType()
+
+    /**
+     * The OpenID Connect (OIDC) options.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions)
+     */
+    override fun nativeApplicationOidcOptions(): Any? =
+        unwrap(this).getNativeApplicationOidcOptions()
 
     /**
      * The options for an OpenID Connect-compatible user-identity trust provider.

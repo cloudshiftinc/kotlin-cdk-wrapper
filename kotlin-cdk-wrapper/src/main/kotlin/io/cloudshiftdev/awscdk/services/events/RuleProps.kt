@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.events
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Boolean
 import kotlin.String
@@ -18,22 +19,16 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.lambda.*;
- * Function fn = Function.Builder.create(this, "MyFunc")
- * .runtime(Runtime.NODEJS_LATEST)
- * .handler("index.handler")
- * .code(Code.fromInline("exports.handler = handler.toString()"))
+ * import io.cloudshiftdev.awscdk.services.redshiftserverless.*;
+ * CfnWorkgroup workgroup;
+ * Rule rule = Rule.Builder.create(this, "Rule")
+ * .schedule(Schedule.rate(Duration.hours(1)))
  * .build();
- * Rule rule = Rule.Builder.create(this, "rule")
- * .eventPattern(EventPattern.builder()
- * .source(List.of("aws.ec2"))
- * .build())
- * .build();
- * Queue queue = new Queue(this, "Queue");
- * rule.addTarget(LambdaFunction.Builder.create(fn)
- * .deadLetterQueue(queue) // Optional: add a dead letter queue
- * .maxEventAge(Duration.hours(2)) // Optional: set the maxEventAge retry policy
- * .retryAttempts(2)
+ * Queue dlq = new Queue(this, "DeadLetterQueue");
+ * rule.addTarget(RedshiftQuery.Builder.create(workgroup.getAttrWorkgroupWorkgroupArn())
+ * .database("dev")
+ * .deadLetterQueue(dlq)
+ * .sql(List.of("SELECT * FROM foo", "SELECT * FROM baz"))
  * .build());
  * ```
  */
@@ -51,6 +46,15 @@ public interface RuleProps : EventCommonOptions {
    * Default: - The default event bus.
    */
   public fun eventBus(): IEventBus? = unwrap(this).getEventBus()?.let(IEventBus::wrap)
+
+  /**
+   * The role that is used for target invocation.
+   *
+   * Must be assumable by principal `events.amazonaws.com`.
+   *
+   * Default: - No role associated
+   */
+  public fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
   /**
    * The schedule or rate (frequency) that determines when EventBridge runs the rule.
@@ -121,6 +125,12 @@ public interface RuleProps : EventCommonOptions {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0ab104f4a3c722682a4e6ee29c6b84abd481a6aa2221ac103ed943ba770e5b91")
     public fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit)
+
+    /**
+     * @param role The role that is used for target invocation.
+     * Must be assumable by principal `events.amazonaws.com`.
+     */
+    public fun role(role: IRole)
 
     /**
      * @param ruleName A name for the rule.
@@ -206,6 +216,14 @@ public interface RuleProps : EventCommonOptions {
     @JvmName("0ab104f4a3c722682a4e6ee29c6b84abd481a6aa2221ac103ed943ba770e5b91")
     override fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit): Unit =
         eventPattern(EventPattern(eventPattern))
+
+    /**
+     * @param role The role that is used for target invocation.
+     * Must be assumable by principal `events.amazonaws.com`.
+     */
+    override fun role(role: IRole) {
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
+    }
 
     /**
      * @param ruleName A name for the rule.
@@ -294,6 +312,15 @@ public interface RuleProps : EventCommonOptions {
      */
     override fun eventPattern(): EventPattern? =
         unwrap(this).getEventPattern()?.let(EventPattern::wrap)
+
+    /**
+     * The role that is used for target invocation.
+     *
+     * Must be assumable by principal `events.amazonaws.com`.
+     *
+     * Default: - No role associated
+     */
+    override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
     /**
      * A name for the rule.

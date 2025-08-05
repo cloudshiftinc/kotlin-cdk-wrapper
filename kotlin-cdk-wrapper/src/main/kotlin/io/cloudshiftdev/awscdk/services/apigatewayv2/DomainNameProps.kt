@@ -16,21 +16,18 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.services.s3.*;
  * import io.cloudshiftdev.awscdk.services.certificatemanager.*;
- * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration;
- * Function handler;
+ * Bucket bucket;
  * String certArn = "arn:aws:acm:us-east-1:111111111111:certificate";
  * String domainName = "example.com";
- * DomainName dn = DomainName.Builder.create(this, "DN")
+ * DomainName.Builder.create(this, "DomainName")
  * .domainName(domainName)
  * .certificate(Certificate.fromCertificateArn(this, "cert", certArn))
- * .build();
- * HttpApi api = HttpApi.Builder.create(this, "HttpProxyProdApi")
- * .defaultIntegration(new HttpLambdaIntegration("DefaultIntegration", handler))
- * // https://${dn.domainName}/foo goes to prodApi $default stage
- * .defaultDomainMapping(DomainMappingOptions.builder()
- * .domainName(dn)
- * .mappingKey("foo")
+ * .mtls(MTLSConfig.builder()
+ * .bucket(bucket)
+ * .key("someca.pem")
+ * .version("version")
  * .build())
  * .build();
  * ```
@@ -74,6 +71,11 @@ public interface DomainNameProps : EndpointOptions {
      * @param endpointType The type of endpoint for this DomainName.
      */
     public fun endpointType(endpointType: EndpointType)
+
+    /**
+     * @param ipAddressType The IP address types that can invoke the API.
+     */
+    public fun ipAddressType(ipAddressType: IpAddressType)
 
     /**
      * @param mtls The mutual TLS authentication configuration for a custom domain name.
@@ -137,6 +139,13 @@ public interface DomainNameProps : EndpointOptions {
      */
     override fun endpointType(endpointType: EndpointType) {
       cdkBuilder.endpointType(endpointType.let(EndpointType.Companion::unwrap))
+    }
+
+    /**
+     * @param ipAddressType The IP address types that can invoke the API.
+     */
+    override fun ipAddressType(ipAddressType: IpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
     }
 
     /**
@@ -209,6 +218,16 @@ public interface DomainNameProps : EndpointOptions {
      */
     override fun endpointType(): EndpointType? =
         unwrap(this).getEndpointType()?.let(EndpointType::wrap)
+
+    /**
+     * The IP address types that can invoke the API.
+     *
+     * Default: undefined - AWS default is IPV4
+     *
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-ip-address-type.html)
+     */
+    override fun ipAddressType(): IpAddressType? =
+        unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
 
     /**
      * The mutual TLS authentication configuration for a custom domain name.

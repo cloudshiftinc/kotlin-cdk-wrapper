@@ -17,7 +17,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * A group of versioned models in the model registry.
+ * A group of versioned models in the Model Registry.
  *
  * Example:
  *

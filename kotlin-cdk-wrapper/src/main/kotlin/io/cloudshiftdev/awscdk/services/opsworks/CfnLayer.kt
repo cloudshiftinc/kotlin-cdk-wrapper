@@ -134,15 +134,15 @@ public open class CfnLayer(
   /**
    * One or more user-defined key-value pairs to be added to the stack attributes.
    */
-  public open fun attributes(`value`: IResolvable) {
-    unwrap(this).setAttributes(`value`.let(IResolvable.Companion::unwrap))
+  public open fun attributes(`value`: Map<String, String>) {
+    unwrap(this).setAttributes(`value`)
   }
 
   /**
    * One or more user-defined key-value pairs to be added to the stack attributes.
    */
-  public open fun attributes(`value`: Map<String, String>) {
-    unwrap(this).setAttributes(`value`)
+  public open fun attributes(`value`: IResolvable) {
+    unwrap(this).setAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -522,7 +522,7 @@ public open class CfnLayer(
      * @param attributes One or more user-defined key-value pairs to be added to the stack
      * attributes. 
      */
-    public fun attributes(attributes: IResolvable)
+    public fun attributes(attributes: Map<String, String>)
 
     /**
      * One or more user-defined key-value pairs to be added to the stack attributes.
@@ -533,7 +533,7 @@ public open class CfnLayer(
      * @param attributes One or more user-defined key-value pairs to be added to the stack
      * attributes. 
      */
-    public fun attributes(attributes: Map<String, String>)
+    public fun attributes(attributes: IResolvable)
 
     /**
      * Whether to automatically assign an [Elastic IP
@@ -921,8 +921,8 @@ public open class CfnLayer(
      * @param attributes One or more user-defined key-value pairs to be added to the stack
      * attributes. 
      */
-    override fun attributes(attributes: IResolvable) {
-      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
+    override fun attributes(attributes: Map<String, String>) {
+      cdkBuilder.attributes(attributes)
     }
 
     /**
@@ -934,8 +934,8 @@ public open class CfnLayer(
      * @param attributes One or more user-defined key-value pairs to be added to the stack
      * attributes. 
      */
-    override fun attributes(attributes: Map<String, String>) {
-      cdkBuilder.attributes(attributes)
+    override fun attributes(attributes: IResolvable) {
+      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
     }
 
     /**

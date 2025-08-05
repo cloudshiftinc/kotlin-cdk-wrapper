@@ -82,7 +82,7 @@ public interface CfnScheduledAuditProps {
    * list of all checks, including those that are enabled or use `UpdateAccountAuditConfiguration` to
    * select which checks are enabled.)
    *
-   * The following checks are currently aviable:
+   * The following checks are currently available:
    *
    * * `AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK`
    * * `CA_CERTIFICATE_EXPIRING_CHECK`
@@ -148,7 +148,7 @@ public interface CfnScheduledAuditProps {
      * list of all checks, including those that are enabled or use `UpdateAccountAuditConfiguration` to
      * select which checks are enabled.)
      *
-     * The following checks are currently aviable:
+     * The following checks are currently available:
      *
      * * `AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK`
      * * `CA_CERTIFICATE_EXPIRING_CHECK`
@@ -173,7 +173,7 @@ public interface CfnScheduledAuditProps {
      * list of all checks, including those that are enabled or use `UpdateAccountAuditConfiguration` to
      * select which checks are enabled.)
      *
-     * The following checks are currently aviable:
+     * The following checks are currently available:
      *
      * * `AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK`
      * * `CA_CERTIFICATE_EXPIRING_CHECK`
@@ -247,7 +247,7 @@ public interface CfnScheduledAuditProps {
      * list of all checks, including those that are enabled or use `UpdateAccountAuditConfiguration` to
      * select which checks are enabled.)
      *
-     * The following checks are currently aviable:
+     * The following checks are currently available:
      *
      * * `AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK`
      * * `CA_CERTIFICATE_EXPIRING_CHECK`
@@ -274,7 +274,7 @@ public interface CfnScheduledAuditProps {
      * list of all checks, including those that are enabled or use `UpdateAccountAuditConfiguration` to
      * select which checks are enabled.)
      *
-     * The following checks are currently aviable:
+     * The following checks are currently available:
      *
      * * `AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK`
      * * `CA_CERTIFICATE_EXPIRING_CHECK`
@@ -348,7 +348,7 @@ public interface CfnScheduledAuditProps {
      * list of all checks, including those that are enabled or use `UpdateAccountAuditConfiguration` to
      * select which checks are enabled.)
      *
-     * The following checks are currently aviable:
+     * The following checks are currently available:
      *
      * * `AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK`
      * * `CA_CERTIFICATE_EXPIRING_CHECK`

@@ -29,9 +29,22 @@ import kotlin.jvm.JvmName
  * .profileId("profileId")
  * // the properties below are optional
  * .capabilityOptions(CapabilityOptionsProperty.builder()
+ * .inboundEdi(InboundEdiOptionsProperty.builder()
+ * .x12(X12InboundEdiOptionsProperty.builder()
+ * .acknowledgmentOptions(X12AcknowledgmentOptionsProperty.builder()
+ * .functionalAcknowledgment("functionalAcknowledgment")
+ * .technicalAcknowledgment("technicalAcknowledgment")
+ * .build())
+ * .build())
+ * .build())
  * .outboundEdi(OutboundEdiOptionsProperty.builder()
  * .x12(X12EnvelopeProperty.builder()
  * .common(X12OutboundEdiHeadersProperty.builder()
+ * .controlNumbers(X12ControlNumbersProperty.builder()
+ * .startingFunctionalGroupControlNumber(123)
+ * .startingInterchangeControlNumber(123)
+ * .startingTransactionSetControlNumber(123)
+ * .build())
  * .delimiters(X12DelimitersProperty.builder()
  * .componentSeparator("componentSeparator")
  * .dataElementSeparator("dataElementSeparator")
@@ -42,6 +55,7 @@ import kotlin.jvm.JvmName
  * .applicationSenderCode("applicationSenderCode")
  * .responsibleAgencyCode("responsibleAgencyCode")
  * .build())
+ * .gs05TimeFormat("gs05TimeFormat")
  * .interchangeControlHeaders(X12InterchangeControlHeadersProperty.builder()
  * .acknowledgmentRequestedCode("acknowledgmentRequestedCode")
  * .receiverId("receiverId")
@@ -52,6 +66,11 @@ import kotlin.jvm.JvmName
  * .usageIndicatorCode("usageIndicatorCode")
  * .build())
  * .validateEdi(false)
+ * .build())
+ * .wrapOptions(WrapOptionsProperty.builder()
+ * .lineLength(123)
+ * .lineTerminator("lineTerminator")
+ * .wrapBy("wrapBy")
  * .build())
  * .build())
  * .build())
@@ -82,6 +101,8 @@ public interface CfnPartnershipProps {
   public fun capabilityOptions(): Any? = unwrap(this).getCapabilityOptions()
 
   /**
+   * Specifies the email address associated with this trading partner.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-partnership.html#cfn-b2bi-partnership-email)
    */
   public fun email(): String
@@ -94,6 +115,8 @@ public interface CfnPartnershipProps {
   public fun name(): String
 
   /**
+   * Specifies the phone number associated with the partnership.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-partnership.html#cfn-b2bi-partnership-phone)
    */
   public fun phone(): String? = unwrap(this).getPhone()
@@ -148,7 +171,7 @@ public interface CfnPartnershipProps {
         fun capabilityOptions(capabilityOptions: CfnPartnership.CapabilityOptionsProperty.Builder.() -> Unit)
 
     /**
-     * @param email the value to be set. 
+     * @param email Specifies the email address associated with this trading partner. 
      */
     public fun email(email: String)
 
@@ -158,7 +181,7 @@ public interface CfnPartnershipProps {
     public fun name(name: String)
 
     /**
-     * @param phone the value to be set.
+     * @param phone Specifies the phone number associated with the partnership.
      */
     public fun phone(phone: String)
 
@@ -222,7 +245,7 @@ public interface CfnPartnershipProps {
         Unit = capabilityOptions(CfnPartnership.CapabilityOptionsProperty(capabilityOptions))
 
     /**
-     * @param email the value to be set. 
+     * @param email Specifies the email address associated with this trading partner. 
      */
     override fun email(email: String) {
       cdkBuilder.email(email)
@@ -236,7 +259,7 @@ public interface CfnPartnershipProps {
     }
 
     /**
-     * @param phone the value to be set.
+     * @param phone Specifies the phone number associated with the partnership.
      */
     override fun phone(phone: String) {
       cdkBuilder.phone(phone)
@@ -287,6 +310,8 @@ public interface CfnPartnershipProps {
     override fun capabilityOptions(): Any? = unwrap(this).getCapabilityOptions()
 
     /**
+     * Specifies the email address associated with this trading partner.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-partnership.html#cfn-b2bi-partnership-email)
      */
     override fun email(): String = unwrap(this).getEmail()
@@ -299,6 +324,8 @@ public interface CfnPartnershipProps {
     override fun name(): String = unwrap(this).getName()
 
     /**
+     * Specifies the phone number associated with the partnership.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-partnership.html#cfn-b2bi-partnership-phone)
      */
     override fun phone(): String? = unwrap(this).getPhone()

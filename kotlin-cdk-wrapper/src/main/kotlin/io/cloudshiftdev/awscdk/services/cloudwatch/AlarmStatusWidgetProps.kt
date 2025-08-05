@@ -52,7 +52,7 @@ public interface AlarmStatusWidgetProps {
    * You can specify one or more alarm states in the value for this field.
    * The alarm states that you can specify are ALARM, INSUFFICIENT_DATA, and OK.
    *
-   * If you omit this field or specify an empty array, all the alarms specifed in alarms are
+   * If you omit this field or specify an empty array, all the alarms specified in alarms are
    * displayed.
    *
    * Default: -  all the alarms specified in alarms are displayed.
@@ -105,7 +105,7 @@ public interface AlarmStatusWidgetProps {
      * You can specify one or more alarm states in the value for this field.
      * The alarm states that you can specify are ALARM, INSUFFICIENT_DATA, and OK.
      *
-     * If you omit this field or specify an empty array, all the alarms specifed in alarms are
+     * If you omit this field or specify an empty array, all the alarms specified in alarms are
      * displayed.
      */
     public fun states(states: List<AlarmState>)
@@ -116,7 +116,7 @@ public interface AlarmStatusWidgetProps {
      * You can specify one or more alarm states in the value for this field.
      * The alarm states that you can specify are ALARM, INSUFFICIENT_DATA, and OK.
      *
-     * If you omit this field or specify an empty array, all the alarms specifed in alarms are
+     * If you omit this field or specify an empty array, all the alarms specified in alarms are
      * displayed.
      */
     public fun states(vararg states: AlarmState)
@@ -169,7 +169,7 @@ public interface AlarmStatusWidgetProps {
      * You can specify one or more alarm states in the value for this field.
      * The alarm states that you can specify are ALARM, INSUFFICIENT_DATA, and OK.
      *
-     * If you omit this field or specify an empty array, all the alarms specifed in alarms are
+     * If you omit this field or specify an empty array, all the alarms specified in alarms are
      * displayed.
      */
     override fun states(states: List<AlarmState>) {
@@ -182,7 +182,7 @@ public interface AlarmStatusWidgetProps {
      * You can specify one or more alarm states in the value for this field.
      * The alarm states that you can specify are ALARM, INSUFFICIENT_DATA, and OK.
      *
-     * If you omit this field or specify an empty array, all the alarms specifed in alarms are
+     * If you omit this field or specify an empty array, all the alarms specified in alarms are
      * displayed.
      */
     override fun states(vararg states: AlarmState): Unit = states(states.toList())
@@ -236,7 +236,7 @@ public interface AlarmStatusWidgetProps {
      * You can specify one or more alarm states in the value for this field.
      * The alarm states that you can specify are ALARM, INSUFFICIENT_DATA, and OK.
      *
-     * If you omit this field or specify an empty array, all the alarms specifed in alarms are
+     * If you omit this field or specify an empty array, all the alarms specified in alarms are
      * displayed.
      *
      * Default: -  all the alarms specified in alarms are displayed.

@@ -24,13 +24,13 @@ import kotlin.collections.Map
  * CfnEventBridgeRuleTemplateProps cfnEventBridgeRuleTemplateProps =
  * CfnEventBridgeRuleTemplateProps.builder()
  * .eventType("eventType")
- * .groupIdentifier("groupIdentifier")
  * .name("name")
  * // the properties below are optional
  * .description("description")
  * .eventTargets(List.of(EventBridgeRuleTemplateTargetProperty.builder()
  * .arn("arn")
  * .build()))
+ * .groupIdentifier("groupIdentifier")
  * .tags(Map.of(
  * "tagsKey", "tags"))
  * .build();
@@ -67,7 +67,7 @@ public interface CfnEventBridgeRuleTemplateProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-eventbridgeruletemplate.html#cfn-medialive-eventbridgeruletemplate-groupidentifier)
    */
-  public fun groupIdentifier(): String
+  public fun groupIdentifier(): String? = unwrap(this).getGroupIdentifier()
 
   /**
    * A resource's name.
@@ -116,7 +116,7 @@ public interface CfnEventBridgeRuleTemplateProps {
     public fun eventType(eventType: String)
 
     /**
-     * @param groupIdentifier An eventbridge rule template group's identifier. 
+     * @param groupIdentifier An eventbridge rule template group's identifier.
      * Can be either be its id or current name.
      */
     public fun groupIdentifier(groupIdentifier: String)
@@ -172,7 +172,7 @@ public interface CfnEventBridgeRuleTemplateProps {
     }
 
     /**
-     * @param groupIdentifier An eventbridge rule template group's identifier. 
+     * @param groupIdentifier An eventbridge rule template group's identifier.
      * Can be either be its id or current name.
      */
     override fun groupIdentifier(groupIdentifier: String) {
@@ -230,7 +230,7 @@ public interface CfnEventBridgeRuleTemplateProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-eventbridgeruletemplate.html#cfn-medialive-eventbridgeruletemplate-groupidentifier)
      */
-    override fun groupIdentifier(): String = unwrap(this).getGroupIdentifier()
+    override fun groupIdentifier(): String? = unwrap(this).getGroupIdentifier()
 
     /**
      * A resource's name.

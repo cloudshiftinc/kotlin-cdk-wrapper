@@ -18,19 +18,17 @@ import kotlin.jvm.JvmName
  * ```
  * Vpc vpc;
  * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
- * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
- * .credentials(Credentials.fromGeneratedSecret("clusteradmin")) // Optional - will default to
- * 'admin' username and generated password
- * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
- * .publiclyAccessible(false)
+ * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder()
+ * .version(AuroraMysqlEngineVersion.VER_3_03_0)
  * .build()))
- * .readers(List.of(ClusterInstance.provisioned("reader1",
- * ProvisionedClusterInstanceProps.builder().promotionTier(1).build()),
- * ClusterInstance.serverlessV2("reader2")))
- * .vpcSubnets(SubnetSelection.builder()
- * .subnetType(SubnetType.PRIVATE_WITH_EGRESS)
- * .build())
+ * .writer(ClusterInstance.provisioned("writer"))
  * .vpc(vpc)
+ * .build();
+ * DatabaseProxy proxy = DatabaseProxy.Builder.create(this, "Proxy")
+ * .proxyTarget(ProxyTarget.fromCluster(cluster))
+ * .secrets(List.of(cluster.getSecret()))
+ * .vpc(vpc)
+ * .clientPasswordAuthType(ClientPasswordAuthType.MYSQL_NATIVE_PASSWORD)
  * .build();
  * ```
  */

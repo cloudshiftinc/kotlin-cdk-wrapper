@@ -125,7 +125,7 @@ public interface CfnIntegrationProps {
      *
      * You can only include this parameter if you specify the `KMSKeyId` parameter.
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
+    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
     /**
      * @param additionalEncryptionContext An optional set of non-secret key–value pairs that
@@ -136,7 +136,7 @@ public interface CfnIntegrationProps {
      *
      * You can only include this parameter if you specify the `KMSKeyId` parameter.
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
     /**
      * @param dataFilter Data filters for the integration.
@@ -198,8 +198,8 @@ public interface CfnIntegrationProps {
      *
      * You can only include this parameter if you specify the `KMSKeyId` parameter.
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
+    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
     }
 
     /**
@@ -211,8 +211,8 @@ public interface CfnIntegrationProps {
      *
      * You can only include this parameter if you specify the `KMSKeyId` parameter.
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
     }
 
     /**

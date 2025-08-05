@@ -22,7 +22,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Describes an Amazon GameLift managed container fleet.
+ * Describes an Amazon GameLift Servers managed container fleet.
  *
  * Example:
  *
@@ -70,6 +70,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .logConfiguration(LogConfigurationProperty.builder()
  * .logDestination("logDestination")
+ * .logGroupArn("logGroupArn")
  * .s3BucketName("s3BucketName")
  * .build())
  * .metricGroups(List.of("metricGroups"))
@@ -135,9 +136,10 @@ public open class CfnContainerFleet(
   /**
    * The Amazon Resource Name (
    * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) that is assigned to a
-   * Amazon GameLift fleet resource and uniquely identifies it. ARNs are unique across all Regions.
-   * Format is `arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912` . In
-   * a GameLift fleet ARN, the resource ID matches the `FleetId` value.
+   * Amazon GameLift Servers fleet resource and uniquely identifies it. ARNs are unique across all
+   * Regions. Format is
+   * `arn:aws:gamelift:&lt;region&gt;::fleet/fleet-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912` . In a
+   * GameLift fleet ARN, the resource ID matches the `FleetId` value.
    */
   public open fun attrFleetArn(): String = unwrap(this).getAttrFleetArn()
 
@@ -247,13 +249,13 @@ public open class CfnContainerFleet(
 
   /**
    * The unique identifier for an AWS Identity and Access Management (IAM) role with permissions to
-   * run your containers on resources that are managed by Amazon GameLift.
+   * run your containers on resources that are managed by Amazon GameLift Servers.
    */
   public open fun fleetRoleArn(): String = unwrap(this).getFleetRoleArn()
 
   /**
    * The unique identifier for an AWS Identity and Access Management (IAM) role with permissions to
-   * run your containers on resources that are managed by Amazon GameLift.
+   * run your containers on resources that are managed by Amazon GameLift Servers.
    */
   public open fun fleetRoleArn(`value`: String) {
     unwrap(this).setFleetRoleArn(`value`)
@@ -468,15 +470,15 @@ public open class CfnContainerFleet(
   public open fun metricGroups(vararg `value`: String): Unit = metricGroups(`value`.toList())
 
   /**
-   * Determines whether Amazon GameLift can shut down game sessions on the fleet that are actively
-   * running and hosting players.
+   * Determines whether Amazon GameLift Servers can shut down game sessions on the fleet that are
+   * actively running and hosting players.
    */
   public open fun newGameSessionProtectionPolicy(): String? =
       unwrap(this).getNewGameSessionProtectionPolicy()
 
   /**
-   * Determines whether Amazon GameLift can shut down game sessions on the fleet that are actively
-   * running and hosting players.
+   * Determines whether Amazon GameLift Servers can shut down game sessions on the fleet that are
+   * actively running and hosting players.
    */
   public open fun newGameSessionProtectionPolicy(`value`: String) {
     unwrap(this).setNewGameSessionProtectionPolicy(`value`)
@@ -596,7 +598,7 @@ public open class CfnContainerFleet(
 
     /**
      * The unique identifier for an AWS Identity and Access Management (IAM) role with permissions
-     * to run your containers on resources that are managed by Amazon GameLift.
+     * to run your containers on resources that are managed by Amazon GameLift Servers.
      *
      * See [Set up an IAM service
      * role](https://docs.aws.amazon.com/gamelift/latest/developerguide/setting-up-role.html) . This
@@ -604,7 +606,8 @@ public open class CfnContainerFleet(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containerfleet.html#cfn-gamelift-containerfleet-fleetrolearn)
      * @param fleetRoleArn The unique identifier for an AWS Identity and Access Management (IAM)
-     * role with permissions to run your containers on resources that are managed by Amazon GameLift. 
+     * role with permissions to run your containers on resources that are managed by Amazon GameLift
+     * Servers. 
      */
     public fun fleetRoleArn(fleetRoleArn: String)
 
@@ -771,8 +774,8 @@ public open class CfnContainerFleet(
     /**
      * The method that is used to collect container logs for the fleet.
      *
-     * Amazon GameLift saves all standard output for each container in logs, including game session
-     * logs.
+     * Amazon GameLift Servers saves all standard output for each container in logs, including game
+     * session logs.
      *
      * * `CLOUDWATCH` -- Send logs to an Amazon CloudWatch log group that you define. Each container
      * emits a log stream, which is organized in the log group.
@@ -787,8 +790,8 @@ public open class CfnContainerFleet(
     /**
      * The method that is used to collect container logs for the fleet.
      *
-     * Amazon GameLift saves all standard output for each container in logs, including game session
-     * logs.
+     * Amazon GameLift Servers saves all standard output for each container in logs, including game
+     * session logs.
      *
      * * `CLOUDWATCH` -- Send logs to an Amazon CloudWatch log group that you define. Each container
      * emits a log stream, which is organized in the log group.
@@ -803,8 +806,8 @@ public open class CfnContainerFleet(
     /**
      * The method that is used to collect container logs for the fleet.
      *
-     * Amazon GameLift saves all standard output for each container in logs, including game session
-     * logs.
+     * Amazon GameLift Servers saves all standard output for each container in logs, including game
+     * session logs.
      *
      * * `CLOUDWATCH` -- Send logs to an Amazon CloudWatch log group that you define. Each container
      * emits a log stream, which is organized in the log group.
@@ -839,11 +842,11 @@ public open class CfnContainerFleet(
     public fun metricGroups(vararg metricGroups: String)
 
     /**
-     * Determines whether Amazon GameLift can shut down game sessions on the fleet that are actively
-     * running and hosting players.
+     * Determines whether Amazon GameLift Servers can shut down game sessions on the fleet that are
+     * actively running and hosting players.
      *
-     * Amazon GameLift might prompt an instance shutdown when scaling down fleet capacity or when
-     * retiring unhealthy instances. You can also set game session protection for individual game
+     * Amazon GameLift Servers might prompt an instance shutdown when scaling down fleet capacity or
+     * when retiring unhealthy instances. You can also set game session protection for individual game
      * sessions using
      * [UpdateGameSession](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateGameSession.html)
      * .
@@ -852,8 +855,8 @@ public open class CfnContainerFleet(
      * * *FullProtection* -- Game sessions in `ACTIVE` status can't be shut down.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containerfleet.html#cfn-gamelift-containerfleet-newgamesessionprotectionpolicy)
-     * @param newGameSessionProtectionPolicy Determines whether Amazon GameLift can shut down game
-     * sessions on the fleet that are actively running and hosting players. 
+     * @param newGameSessionProtectionPolicy Determines whether Amazon GameLift Servers can shut
+     * down game sessions on the fleet that are actively running and hosting players. 
      */
     public fun newGameSessionProtectionPolicy(newGameSessionProtectionPolicy: String)
 
@@ -979,7 +982,7 @@ public open class CfnContainerFleet(
 
     /**
      * The unique identifier for an AWS Identity and Access Management (IAM) role with permissions
-     * to run your containers on resources that are managed by Amazon GameLift.
+     * to run your containers on resources that are managed by Amazon GameLift Servers.
      *
      * See [Set up an IAM service
      * role](https://docs.aws.amazon.com/gamelift/latest/developerguide/setting-up-role.html) . This
@@ -987,7 +990,8 @@ public open class CfnContainerFleet(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containerfleet.html#cfn-gamelift-containerfleet-fleetrolearn)
      * @param fleetRoleArn The unique identifier for an AWS Identity and Access Management (IAM)
-     * role with permissions to run your containers on resources that are managed by Amazon GameLift. 
+     * role with permissions to run your containers on resources that are managed by Amazon GameLift
+     * Servers. 
      */
     override fun fleetRoleArn(fleetRoleArn: String) {
       cdkBuilder.fleetRoleArn(fleetRoleArn)
@@ -1184,8 +1188,8 @@ public open class CfnContainerFleet(
     /**
      * The method that is used to collect container logs for the fleet.
      *
-     * Amazon GameLift saves all standard output for each container in logs, including game session
-     * logs.
+     * Amazon GameLift Servers saves all standard output for each container in logs, including game
+     * session logs.
      *
      * * `CLOUDWATCH` -- Send logs to an Amazon CloudWatch log group that you define. Each container
      * emits a log stream, which is organized in the log group.
@@ -1202,8 +1206,8 @@ public open class CfnContainerFleet(
     /**
      * The method that is used to collect container logs for the fleet.
      *
-     * Amazon GameLift saves all standard output for each container in logs, including game session
-     * logs.
+     * Amazon GameLift Servers saves all standard output for each container in logs, including game
+     * session logs.
      *
      * * `CLOUDWATCH` -- Send logs to an Amazon CloudWatch log group that you define. Each container
      * emits a log stream, which is organized in the log group.
@@ -1220,8 +1224,8 @@ public open class CfnContainerFleet(
     /**
      * The method that is used to collect container logs for the fleet.
      *
-     * Amazon GameLift saves all standard output for each container in logs, including game session
-     * logs.
+     * Amazon GameLift Servers saves all standard output for each container in logs, including game
+     * session logs.
      *
      * * `CLOUDWATCH` -- Send logs to an Amazon CloudWatch log group that you define. Each container
      * emits a log stream, which is organized in the log group.
@@ -1260,11 +1264,11 @@ public open class CfnContainerFleet(
         metricGroups(metricGroups.toList())
 
     /**
-     * Determines whether Amazon GameLift can shut down game sessions on the fleet that are actively
-     * running and hosting players.
+     * Determines whether Amazon GameLift Servers can shut down game sessions on the fleet that are
+     * actively running and hosting players.
      *
-     * Amazon GameLift might prompt an instance shutdown when scaling down fleet capacity or when
-     * retiring unhealthy instances. You can also set game session protection for individual game
+     * Amazon GameLift Servers might prompt an instance shutdown when scaling down fleet capacity or
+     * when retiring unhealthy instances. You can also set game session protection for individual game
      * sessions using
      * [UpdateGameSession](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateGameSession.html)
      * .
@@ -1273,8 +1277,8 @@ public open class CfnContainerFleet(
      * * *FullProtection* -- Game sessions in `ACTIVE` status can't be shut down.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containerfleet.html#cfn-gamelift-containerfleet-newgamesessionprotectionpolicy)
-     * @param newGameSessionProtectionPolicy Determines whether Amazon GameLift can shut down game
-     * sessions on the fleet that are actively running and hosting players. 
+     * @param newGameSessionProtectionPolicy Determines whether Amazon GameLift Servers can shut
+     * down game sessions on the fleet that are actively running and hosting players. 
      */
     override fun newGameSessionProtectionPolicy(newGameSessionProtectionPolicy: String) {
       cdkBuilder.newGameSessionProtectionPolicy(newGameSessionProtectionPolicy)
@@ -1751,8 +1755,8 @@ public open class CfnContainerFleet(
    * With this policy, you can control players' ability to consume available resources.
    *
    * The policy is evaluated when a player tries to create a new game session. On receiving a
-   * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId` )
-   * has created fewer than game session limit in the specified time period.
+   * `CreateGameSession` request, Amazon GameLift Servers checks that the player (identified by
+   * `CreatorId` ) has created fewer than game session limit in the specified time period.
    *
    * Example:
    *
@@ -1777,8 +1781,8 @@ public open class CfnContainerFleet(
      * With this policy, you can control players' ability to consume available resources.
      *
      * The policy evaluates when a player tries to create a new game session. On receiving a
-     * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId` )
-     * has created fewer than game session limit in the specified time period.
+     * `CreateGameSession` request, Amazon GameLift Servers checks that the player (identified by
+     * `CreatorId` ) has created fewer than game session limit in the specified time period.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-containerfleet-gamesessioncreationlimitpolicy.html#cfn-gamelift-containerfleet-gamesessioncreationlimitpolicy-newgamesessionspercreator)
      */
@@ -1802,8 +1806,8 @@ public open class CfnContainerFleet(
        * With this policy, you can control players' ability to consume available resources.
        *
        * The policy evaluates when a player tries to create a new game session. On receiving a
-       * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId`
-       * ) has created fewer than game session limit in the specified time period.
+       * `CreateGameSession` request, Amazon GameLift Servers checks that the player (identified by
+       * `CreatorId` ) has created fewer than game session limit in the specified time period.
        */
       public fun newGameSessionsPerCreator(newGameSessionsPerCreator: Number)
 
@@ -1826,8 +1830,8 @@ public open class CfnContainerFleet(
        * With this policy, you can control players' ability to consume available resources.
        *
        * The policy evaluates when a player tries to create a new game session. On receiving a
-       * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId`
-       * ) has created fewer than game session limit in the specified time period.
+       * `CreateGameSession` request, Amazon GameLift Servers checks that the player (identified by
+       * `CreatorId` ) has created fewer than game session limit in the specified time period.
        */
       override fun newGameSessionsPerCreator(newGameSessionsPerCreator: Number) {
         cdkBuilder.newGameSessionsPerCreator(newGameSessionsPerCreator)
@@ -1857,8 +1861,8 @@ public open class CfnContainerFleet(
        * With this policy, you can control players' ability to consume available resources.
        *
        * The policy evaluates when a player tries to create a new game session. On receiving a
-       * `CreateGameSession` request, Amazon GameLift checks that the player (identified by `CreatorId`
-       * ) has created fewer than game session limit in the specified time period.
+       * `CreateGameSession` request, Amazon GameLift Servers checks that the player (identified by
+       * `CreatorId` ) has created fewer than game session limit in the specified time period.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-containerfleet-gamesessioncreationlimitpolicy.html#cfn-gamelift-containerfleet-gamesessioncreationlimitpolicy-newgamesessionspercreator)
        */
@@ -1899,8 +1903,8 @@ public open class CfnContainerFleet(
    * Processes are assigned an IP address/port number combination, which must fall into the fleet's
    * allowed ranges.
    *
-   * For Realtime Servers fleets, Amazon GameLift automatically opens two port ranges, one for TCP
-   * messaging and one for UDP.
+   * For Amazon GameLift Servers Realtime fleets, Amazon GameLift Servers automatically opens two
+   * port ranges, one for TCP messaging and one for UDP.
    *
    * Example:
    *
@@ -2132,7 +2136,12 @@ public open class CfnContainerFleet(
     /**
      * The number of EC2 instances you want to maintain in the specified fleet location.
      *
-     * This value must fall between the minimum and maximum size limits.
+     * This value must fall between the minimum and maximum size limits. If any auto-scaling policy
+     * is defined for the container fleet, the desired instance will only be applied once during fleet
+     * creation and will be ignored in updates to avoid conflicts with auto-scaling. During updates
+     * with any auto-scaling policy defined, if current desired instance is lower than the new MinSize,
+     * it will be increased to the new MinSize; if current desired instance is larger than the new
+     * MaxSize, it will be decreased to the new MaxSize.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-containerfleet-locationcapacity.html#cfn-gamelift-containerfleet-locationcapacity-desiredec2instances)
      */
@@ -2160,7 +2169,12 @@ public open class CfnContainerFleet(
       /**
        * @param desiredEc2Instances The number of EC2 instances you want to maintain in the
        * specified fleet location. 
-       * This value must fall between the minimum and maximum size limits.
+       * This value must fall between the minimum and maximum size limits. If any auto-scaling
+       * policy is defined for the container fleet, the desired instance will only be applied once
+       * during fleet creation and will be ignored in updates to avoid conflicts with auto-scaling.
+       * During updates with any auto-scaling policy defined, if current desired instance is lower than
+       * the new MinSize, it will be increased to the new MinSize; if current desired instance is
+       * larger than the new MaxSize, it will be decreased to the new MaxSize.
        */
       public fun desiredEc2Instances(desiredEc2Instances: Number)
 
@@ -2185,7 +2199,12 @@ public open class CfnContainerFleet(
       /**
        * @param desiredEc2Instances The number of EC2 instances you want to maintain in the
        * specified fleet location. 
-       * This value must fall between the minimum and maximum size limits.
+       * This value must fall between the minimum and maximum size limits. If any auto-scaling
+       * policy is defined for the container fleet, the desired instance will only be applied once
+       * during fleet creation and will be ignored in updates to avoid conflicts with auto-scaling.
+       * During updates with any auto-scaling policy defined, if current desired instance is lower than
+       * the new MinSize, it will be increased to the new MinSize; if current desired instance is
+       * larger than the new MaxSize, it will be decreased to the new MaxSize.
        */
       override fun desiredEc2Instances(desiredEc2Instances: Number) {
         cdkBuilder.desiredEc2Instances(desiredEc2Instances)
@@ -2218,7 +2237,12 @@ public open class CfnContainerFleet(
       /**
        * The number of EC2 instances you want to maintain in the specified fleet location.
        *
-       * This value must fall between the minimum and maximum size limits.
+       * This value must fall between the minimum and maximum size limits. If any auto-scaling
+       * policy is defined for the container fleet, the desired instance will only be applied once
+       * during fleet creation and will be ignored in updates to avoid conflicts with auto-scaling.
+       * During updates with any auto-scaling policy defined, if current desired instance is lower than
+       * the new MinSize, it will be increased to the new MinSize; if current desired instance is
+       * larger than the new MaxSize, it will be decreased to the new MaxSize.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-containerfleet-locationcapacity.html#cfn-gamelift-containerfleet-locationcapacity-desiredec2instances)
        */
@@ -2285,7 +2309,7 @@ public open class CfnContainerFleet(
     /**
      * An AWS Region code, such as `us-west-2` .
      *
-     * For a list of supported Regions and Local Zones, see [Amazon GameLift service
+     * For a list of supported Regions and Local Zones, see [Amazon GameLift Servers service
      * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
      * managed hosting.
      *
@@ -2316,7 +2340,7 @@ public open class CfnContainerFleet(
     public interface Builder {
       /**
        * @param location An AWS Region code, such as `us-west-2` . 
-       * For a list of supported Regions and Local Zones, see [Amazon GameLift service
+       * For a list of supported Regions and Local Zones, see [Amazon GameLift Servers service
        * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html)
        * for managed hosting.
        */
@@ -2366,7 +2390,7 @@ public open class CfnContainerFleet(
 
       /**
        * @param location An AWS Region code, such as `us-west-2` . 
-       * For a list of supported Regions and Local Zones, see [Amazon GameLift service
+       * For a list of supported Regions and Local Zones, see [Amazon GameLift Servers service
        * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html)
        * for managed hosting.
        */
@@ -2429,7 +2453,7 @@ public open class CfnContainerFleet(
       /**
        * An AWS Region code, such as `us-west-2` .
        *
-       * For a list of supported Regions and Local Zones, see [Amazon GameLift service
+       * For a list of supported Regions and Local Zones, see [Amazon GameLift Servers service
        * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html)
        * for managed hosting.
        *
@@ -2475,8 +2499,8 @@ public open class CfnContainerFleet(
   /**
    * A method for collecting container logs for the fleet.
    *
-   * Amazon GameLift saves all standard output for each container in logs, including game session
-   * logs. You can select from the following methods:
+   * Amazon GameLift Servers saves all standard output for each container in logs, including game
+   * session logs. You can select from the following methods:
    *
    * Example:
    *
@@ -2486,6 +2510,7 @@ public open class CfnContainerFleet(
    * import io.cloudshiftdev.awscdk.services.gamelift.*;
    * LogConfigurationProperty logConfigurationProperty = LogConfigurationProperty.builder()
    * .logDestination("logDestination")
+   * .logGroupArn("logGroupArn")
    * .s3BucketName("s3BucketName")
    * .build();
    * ```
@@ -2498,12 +2523,21 @@ public open class CfnContainerFleet(
      *
      * * `CLOUDWATCH` -- (default value) Send logs to an Amazon CloudWatch log group that you
      * define. Each container emits a log stream, which is organized in the log group.
-     * * `S3` -- Store logs in an Amazon S3 bucket that you define.
+     * * `S3` -- Store logs in an Amazon S3 bucket that you define. This bucket must reside in the
+     * fleet's home AWS Region.
      * * `NONE` -- Don't collect container logs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-containerfleet-logconfiguration.html#cfn-gamelift-containerfleet-logconfiguration-logdestination)
      */
     public fun logDestination(): String? = unwrap(this).getLogDestination()
+
+    /**
+     * If log destination is `CLOUDWATCH` , logs are sent to the specified log group in Amazon
+     * CloudWatch.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-containerfleet-logconfiguration.html#cfn-gamelift-containerfleet-logconfiguration-loggrouparn)
+     */
+    public fun logGroupArn(): String? = unwrap(this).getLogGroupArn()
 
     /**
      * If log destination is `S3` , logs are sent to the specified Amazon S3 bucket name.
@@ -2521,10 +2555,17 @@ public open class CfnContainerFleet(
        * @param logDestination The type of log collection to use for a fleet.
        * * `CLOUDWATCH` -- (default value) Send logs to an Amazon CloudWatch log group that you
        * define. Each container emits a log stream, which is organized in the log group.
-       * * `S3` -- Store logs in an Amazon S3 bucket that you define.
+       * * `S3` -- Store logs in an Amazon S3 bucket that you define. This bucket must reside in the
+       * fleet's home AWS Region.
        * * `NONE` -- Don't collect container logs.
        */
       public fun logDestination(logDestination: String)
+
+      /**
+       * @param logGroupArn If log destination is `CLOUDWATCH` , logs are sent to the specified log
+       * group in Amazon CloudWatch.
+       */
+      public fun logGroupArn(logGroupArn: String)
 
       /**
        * @param s3BucketName If log destination is `S3` , logs are sent to the specified Amazon S3
@@ -2543,11 +2584,20 @@ public open class CfnContainerFleet(
        * @param logDestination The type of log collection to use for a fleet.
        * * `CLOUDWATCH` -- (default value) Send logs to an Amazon CloudWatch log group that you
        * define. Each container emits a log stream, which is organized in the log group.
-       * * `S3` -- Store logs in an Amazon S3 bucket that you define.
+       * * `S3` -- Store logs in an Amazon S3 bucket that you define. This bucket must reside in the
+       * fleet's home AWS Region.
        * * `NONE` -- Don't collect container logs.
        */
       override fun logDestination(logDestination: String) {
         cdkBuilder.logDestination(logDestination)
+      }
+
+      /**
+       * @param logGroupArn If log destination is `CLOUDWATCH` , logs are sent to the specified log
+       * group in Amazon CloudWatch.
+       */
+      override fun logGroupArn(logGroupArn: String) {
+        cdkBuilder.logGroupArn(logGroupArn)
       }
 
       /**
@@ -2572,12 +2622,21 @@ public open class CfnContainerFleet(
        *
        * * `CLOUDWATCH` -- (default value) Send logs to an Amazon CloudWatch log group that you
        * define. Each container emits a log stream, which is organized in the log group.
-       * * `S3` -- Store logs in an Amazon S3 bucket that you define.
+       * * `S3` -- Store logs in an Amazon S3 bucket that you define. This bucket must reside in the
+       * fleet's home AWS Region.
        * * `NONE` -- Don't collect container logs.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-containerfleet-logconfiguration.html#cfn-gamelift-containerfleet-logconfiguration-logdestination)
        */
       override fun logDestination(): String? = unwrap(this).getLogDestination()
+
+      /**
+       * If log destination is `CLOUDWATCH` , logs are sent to the specified log group in Amazon
+       * CloudWatch.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-containerfleet-logconfiguration.html#cfn-gamelift-containerfleet-logconfiguration-loggrouparn)
+       */
+      override fun logGroupArn(): String? = unwrap(this).getLogGroupArn()
 
       /**
        * If log destination is `S3` , logs are sent to the specified Amazon S3 bucket name.
@@ -2651,9 +2710,10 @@ public open class CfnContainerFleet(
     public fun evaluationPeriods(): Number? = unwrap(this).getEvaluationPeriods()
 
     /**
-     * Name of the Amazon GameLift-defined metric that is used to trigger a scaling adjustment.
+     * Name of the Amazon GameLift Servers-defined metric that is used to trigger a scaling
+     * adjustment.
      *
-     * For detailed descriptions of fleet metrics, see [Monitor Amazon GameLift with Amazon
+     * For detailed descriptions of fleet metrics, see [Monitor Amazon GameLift Servers with Amazon
      * CloudWatch](https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html)
      * .
      *
@@ -2755,9 +2815,10 @@ public open class CfnContainerFleet(
       public fun evaluationPeriods(evaluationPeriods: Number)
 
       /**
-       * @param metricName Name of the Amazon GameLift-defined metric that is used to trigger a
-       * scaling adjustment. 
-       * For detailed descriptions of fleet metrics, see [Monitor Amazon GameLift with Amazon
+       * @param metricName Name of the Amazon GameLift Servers-defined metric that is used to
+       * trigger a scaling adjustment. 
+       * For detailed descriptions of fleet metrics, see [Monitor Amazon GameLift Servers with
+       * Amazon
        * CloudWatch](https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html)
        * .
        *
@@ -2865,9 +2926,10 @@ public open class CfnContainerFleet(
       }
 
       /**
-       * @param metricName Name of the Amazon GameLift-defined metric that is used to trigger a
-       * scaling adjustment. 
-       * For detailed descriptions of fleet metrics, see [Monitor Amazon GameLift with Amazon
+       * @param metricName Name of the Amazon GameLift Servers-defined metric that is used to
+       * trigger a scaling adjustment. 
+       * For detailed descriptions of fleet metrics, see [Monitor Amazon GameLift Servers with
+       * Amazon
        * CloudWatch](https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html)
        * .
        *
@@ -2994,9 +3056,11 @@ public open class CfnContainerFleet(
       override fun evaluationPeriods(): Number? = unwrap(this).getEvaluationPeriods()
 
       /**
-       * Name of the Amazon GameLift-defined metric that is used to trigger a scaling adjustment.
+       * Name of the Amazon GameLift Servers-defined metric that is used to trigger a scaling
+       * adjustment.
        *
-       * For detailed descriptions of fleet metrics, see [Monitor Amazon GameLift with Amazon
+       * For detailed descriptions of fleet metrics, see [Monitor Amazon GameLift Servers with
+       * Amazon
        * CloudWatch](https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html)
        * .
        *
@@ -3104,9 +3168,9 @@ public open class CfnContainerFleet(
    * Settings for a target-based scaling policy.
    *
    * A target-based policy tracks a particular fleet metric specifies a target value for the metric.
-   * As player usage changes, the policy triggers Amazon GameLift to adjust capacity so that the metric
-   * returns to the target value. The target configuration specifies settings as needed for the target
-   * based policy, including the target value.
+   * As player usage changes, the policy triggers Amazon GameLift Servers to adjust capacity so that
+   * the metric returns to the target value. The target configuration specifies settings as needed for
+   * the target based policy, including the target value.
    *
    * Example:
    *

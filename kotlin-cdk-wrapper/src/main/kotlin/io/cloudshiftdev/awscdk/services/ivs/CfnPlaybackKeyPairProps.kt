@@ -44,6 +44,8 @@ public interface CfnPlaybackKeyPairProps {
   /**
    * The public portion of a customer-generated key pair.
    *
+   * Note that this field is required to create the AWS::IVS::PlaybackKeyPair resource.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-playbackkeypair.html#cfn-ivs-playbackkeypair-publickeymaterial)
    */
   public fun publicKeyMaterial(): String? = unwrap(this).getPublicKeyMaterial()
@@ -72,6 +74,7 @@ public interface CfnPlaybackKeyPairProps {
 
     /**
      * @param publicKeyMaterial The public portion of a customer-generated key pair.
+     * Note that this field is required to create the AWS::IVS::PlaybackKeyPair resource.
      */
     public fun publicKeyMaterial(publicKeyMaterial: String)
 
@@ -106,6 +109,7 @@ public interface CfnPlaybackKeyPairProps {
 
     /**
      * @param publicKeyMaterial The public portion of a customer-generated key pair.
+     * Note that this field is required to create the AWS::IVS::PlaybackKeyPair resource.
      */
     override fun publicKeyMaterial(publicKeyMaterial: String) {
       cdkBuilder.publicKeyMaterial(publicKeyMaterial)
@@ -148,6 +152,8 @@ public interface CfnPlaybackKeyPairProps {
 
     /**
      * The public portion of a customer-generated key pair.
+     *
+     * Note that this field is required to create the AWS::IVS::PlaybackKeyPair resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-playbackkeypair.html#cfn-ivs-playbackkeypair-publickeymaterial)
      */

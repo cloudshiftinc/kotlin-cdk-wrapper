@@ -20,7 +20,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * Sets up or modifies the logging configuration of a user pool.
  *
- * User pools can export user notification logs and advanced security features user activity logs.
+ * User pools can export user notification logs and, when threat protection is active, user-activity
+ * logs. For more information, see [Exporting user pool
+ * logs](https://docs.aws.amazon.com/cognito/latest/developerguide/exporting-quotas-and-usage.html) .
  *
  * Example:
  *
@@ -376,7 +378,7 @@ public open class CfnLogDeliveryConfiguration(
 
   /**
    * Configuration for the Amazon Data Firehose stream destination of user activity log export with
-   * advanced security features.
+   * threat protection.
    *
    * Example:
    *
@@ -394,8 +396,8 @@ public open class CfnLogDeliveryConfiguration(
    */
   public interface FirehoseConfigurationProperty {
     /**
-     * The ARN of an Amazon Data Firehose stream that's the destination for advanced security
-     * features log export.
+     * The ARN of an Amazon Data Firehose stream that's the destination for threat protection log
+     * export.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-firehoseconfiguration.html#cfn-cognito-logdeliveryconfiguration-firehoseconfiguration-streamarn)
      */
@@ -408,7 +410,7 @@ public open class CfnLogDeliveryConfiguration(
     public interface Builder {
       /**
        * @param streamArn The ARN of an Amazon Data Firehose stream that's the destination for
-       * advanced security features log export.
+       * threat protection log export.
        */
       public fun streamArn(streamArn: String)
     }
@@ -421,7 +423,7 @@ public open class CfnLogDeliveryConfiguration(
 
       /**
        * @param streamArn The ARN of an Amazon Data Firehose stream that's the destination for
-       * advanced security features log export.
+       * threat protection log export.
        */
       override fun streamArn(streamArn: String) {
         cdkBuilder.streamArn(streamArn)
@@ -437,8 +439,8 @@ public open class CfnLogDeliveryConfiguration(
     ) : CdkObject(cdkObject),
         FirehoseConfigurationProperty {
       /**
-       * The ARN of an Amazon Data Firehose stream that's the destination for advanced security
-       * features log export.
+       * The ARN of an Amazon Data Firehose stream that's the destination for threat protection log
+       * export.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-firehoseconfiguration.html#cfn-cognito-logdeliveryconfiguration-firehoseconfiguration-streamarn)
        */
@@ -466,12 +468,6 @@ public open class CfnLogDeliveryConfiguration(
   /**
    * The configuration of user event logs to an external AWS service like Amazon Data Firehose,
    * Amazon S3, or Amazon CloudWatch Logs.
-   *
-   * This data type is a request parameter of
-   * [SetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetLogDeliveryConfiguration.html)
-   * and a response parameter of
-   * [GetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetLogDeliveryConfiguration.html)
-   * .
    *
    * Example:
    *
@@ -501,12 +497,6 @@ public open class CfnLogDeliveryConfiguration(
      * Configuration for the CloudWatch log group destination of user pool detailed activity
      * logging, or of user activity log export with advanced security features.
      *
-     * This data type is a request parameter of
-     * [SetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetLogDeliveryConfiguration.html)
-     * and a response parameter of
-     * [GetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetLogDeliveryConfiguration.html)
-     * .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-logconfiguration.html#cfn-cognito-logdeliveryconfiguration-logconfiguration-cloudwatchlogsconfiguration)
      */
     public fun cloudWatchLogsConfiguration(): Any? = unwrap(this).getCloudWatchLogsConfiguration()
@@ -515,7 +505,8 @@ public open class CfnLogDeliveryConfiguration(
      * The source of events that your user pool sends for logging.
      *
      * To send error-level logs about user notification activity, set to `userNotification` . To
-     * send info-level logs about advanced security features user activity, set to `userAuthEvents` .
+     * send info-level logs about threat-protection user activity in user pools with the Plus feature
+     * plan, set to `userAuthEvents` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-logconfiguration.html#cfn-cognito-logdeliveryconfiguration-logconfiguration-eventsource)
      */
@@ -523,7 +514,7 @@ public open class CfnLogDeliveryConfiguration(
 
     /**
      * Configuration for the Amazon Data Firehose stream destination of user activity log export
-     * with advanced security features.
+     * with threat protection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-logconfiguration.html#cfn-cognito-logdeliveryconfiguration-logconfiguration-firehoseconfiguration)
      */
@@ -533,9 +524,9 @@ public open class CfnLogDeliveryConfiguration(
      * The `errorlevel` selection of logs that a user pool sends for detailed activity logging.
      *
      * To send `userNotification` activity with [information about message
-     * delivery](https://docs.aws.amazon.com/cognito/latest/developerguide/tracking-quotas-and-usage-in-cloud-watch-logs.html)
+     * delivery](https://docs.aws.amazon.com/cognito/latest/developerguide/exporting-quotas-and-usage.html)
      * , choose `ERROR` with `CloudWatchLogsConfiguration` . To send `userAuthEvents` activity with
-     * user logs from advanced security features, choose `INFO` with one of
+     * user logs from threat protection with the Plus feature plan, choose `INFO` with one of
      * `CloudWatchLogsConfiguration` , `FirehoseConfiguration` , or `S3Configuration` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-logconfiguration.html#cfn-cognito-logdeliveryconfiguration-logconfiguration-loglevel)
@@ -543,8 +534,8 @@ public open class CfnLogDeliveryConfiguration(
     public fun logLevel(): String? = unwrap(this).getLogLevel()
 
     /**
-     * Configuration for the Amazon S3 bucket destination of user activity log export with advanced
-     * security features.
+     * Configuration for the Amazon S3 bucket destination of user activity log export with threat
+     * protection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-logconfiguration.html#cfn-cognito-logdeliveryconfiguration-logconfiguration-s3configuration)
      */
@@ -559,11 +550,6 @@ public open class CfnLogDeliveryConfiguration(
        * @param cloudWatchLogsConfiguration Configuration for the CloudWatch log group destination
        * of user pool detailed activity logging, or of user activity log export with advanced security
        * features.
-       * This data type is a request parameter of
-       * [SetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetLogDeliveryConfiguration.html)
-       * and a response parameter of
-       * [GetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetLogDeliveryConfiguration.html)
-       * .
        */
       public fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: IResolvable)
 
@@ -571,11 +557,6 @@ public open class CfnLogDeliveryConfiguration(
        * @param cloudWatchLogsConfiguration Configuration for the CloudWatch log group destination
        * of user pool detailed activity logging, or of user activity log export with advanced security
        * features.
-       * This data type is a request parameter of
-       * [SetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetLogDeliveryConfiguration.html)
-       * and a response parameter of
-       * [GetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetLogDeliveryConfiguration.html)
-       * .
        */
       public
           fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: CloudWatchLogsConfigurationProperty)
@@ -584,11 +565,6 @@ public open class CfnLogDeliveryConfiguration(
        * @param cloudWatchLogsConfiguration Configuration for the CloudWatch log group destination
        * of user pool detailed activity logging, or of user activity log export with advanced security
        * features.
-       * This data type is a request parameter of
-       * [SetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetLogDeliveryConfiguration.html)
-       * and a response parameter of
-       * [GetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetLogDeliveryConfiguration.html)
-       * .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1c72dbd13231f18ec304bbe35965e946d533d687a2d96901fa93fa1a35c6cc0d")
@@ -598,25 +574,26 @@ public open class CfnLogDeliveryConfiguration(
       /**
        * @param eventSource The source of events that your user pool sends for logging.
        * To send error-level logs about user notification activity, set to `userNotification` . To
-       * send info-level logs about advanced security features user activity, set to `userAuthEvents` .
+       * send info-level logs about threat-protection user activity in user pools with the Plus feature
+       * plan, set to `userAuthEvents` .
        */
       public fun eventSource(eventSource: String)
 
       /**
        * @param firehoseConfiguration Configuration for the Amazon Data Firehose stream destination
-       * of user activity log export with advanced security features.
+       * of user activity log export with threat protection.
        */
       public fun firehoseConfiguration(firehoseConfiguration: IResolvable)
 
       /**
        * @param firehoseConfiguration Configuration for the Amazon Data Firehose stream destination
-       * of user activity log export with advanced security features.
+       * of user activity log export with threat protection.
        */
       public fun firehoseConfiguration(firehoseConfiguration: FirehoseConfigurationProperty)
 
       /**
        * @param firehoseConfiguration Configuration for the Amazon Data Firehose stream destination
-       * of user activity log export with advanced security features.
+       * of user activity log export with threat protection.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9d2a3cc91104ab8b9f2fcc2767846cd8ef79a5a1e7e6d52f16005fd363a0fdfc")
@@ -627,28 +604,28 @@ public open class CfnLogDeliveryConfiguration(
        * @param logLevel The `errorlevel` selection of logs that a user pool sends for detailed
        * activity logging.
        * To send `userNotification` activity with [information about message
-       * delivery](https://docs.aws.amazon.com/cognito/latest/developerguide/tracking-quotas-and-usage-in-cloud-watch-logs.html)
+       * delivery](https://docs.aws.amazon.com/cognito/latest/developerguide/exporting-quotas-and-usage.html)
        * , choose `ERROR` with `CloudWatchLogsConfiguration` . To send `userAuthEvents` activity with
-       * user logs from advanced security features, choose `INFO` with one of
+       * user logs from threat protection with the Plus feature plan, choose `INFO` with one of
        * `CloudWatchLogsConfiguration` , `FirehoseConfiguration` , or `S3Configuration` .
        */
       public fun logLevel(logLevel: String)
 
       /**
        * @param s3Configuration Configuration for the Amazon S3 bucket destination of user activity
-       * log export with advanced security features.
+       * log export with threat protection.
        */
       public fun s3Configuration(s3Configuration: IResolvable)
 
       /**
        * @param s3Configuration Configuration for the Amazon S3 bucket destination of user activity
-       * log export with advanced security features.
+       * log export with threat protection.
        */
       public fun s3Configuration(s3Configuration: S3ConfigurationProperty)
 
       /**
        * @param s3Configuration Configuration for the Amazon S3 bucket destination of user activity
-       * log export with advanced security features.
+       * log export with threat protection.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("70aeb6ab0d57c7f8f4989bc440112ed5e9586c7e17180aa3f909c0b89c399a98")
@@ -665,11 +642,6 @@ public open class CfnLogDeliveryConfiguration(
        * @param cloudWatchLogsConfiguration Configuration for the CloudWatch log group destination
        * of user pool detailed activity logging, or of user activity log export with advanced security
        * features.
-       * This data type is a request parameter of
-       * [SetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetLogDeliveryConfiguration.html)
-       * and a response parameter of
-       * [GetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetLogDeliveryConfiguration.html)
-       * .
        */
       override fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: IResolvable) {
         cdkBuilder.cloudWatchLogsConfiguration(cloudWatchLogsConfiguration.let(IResolvable.Companion::unwrap))
@@ -679,11 +651,6 @@ public open class CfnLogDeliveryConfiguration(
        * @param cloudWatchLogsConfiguration Configuration for the CloudWatch log group destination
        * of user pool detailed activity logging, or of user activity log export with advanced security
        * features.
-       * This data type is a request parameter of
-       * [SetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetLogDeliveryConfiguration.html)
-       * and a response parameter of
-       * [GetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetLogDeliveryConfiguration.html)
-       * .
        */
       override
           fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: CloudWatchLogsConfigurationProperty) {
@@ -694,11 +661,6 @@ public open class CfnLogDeliveryConfiguration(
        * @param cloudWatchLogsConfiguration Configuration for the CloudWatch log group destination
        * of user pool detailed activity logging, or of user activity log export with advanced security
        * features.
-       * This data type is a request parameter of
-       * [SetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetLogDeliveryConfiguration.html)
-       * and a response parameter of
-       * [GetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetLogDeliveryConfiguration.html)
-       * .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1c72dbd13231f18ec304bbe35965e946d533d687a2d96901fa93fa1a35c6cc0d")
@@ -710,7 +672,8 @@ public open class CfnLogDeliveryConfiguration(
       /**
        * @param eventSource The source of events that your user pool sends for logging.
        * To send error-level logs about user notification activity, set to `userNotification` . To
-       * send info-level logs about advanced security features user activity, set to `userAuthEvents` .
+       * send info-level logs about threat-protection user activity in user pools with the Plus feature
+       * plan, set to `userAuthEvents` .
        */
       override fun eventSource(eventSource: String) {
         cdkBuilder.eventSource(eventSource)
@@ -718,7 +681,7 @@ public open class CfnLogDeliveryConfiguration(
 
       /**
        * @param firehoseConfiguration Configuration for the Amazon Data Firehose stream destination
-       * of user activity log export with advanced security features.
+       * of user activity log export with threat protection.
        */
       override fun firehoseConfiguration(firehoseConfiguration: IResolvable) {
         cdkBuilder.firehoseConfiguration(firehoseConfiguration.let(IResolvable.Companion::unwrap))
@@ -726,7 +689,7 @@ public open class CfnLogDeliveryConfiguration(
 
       /**
        * @param firehoseConfiguration Configuration for the Amazon Data Firehose stream destination
-       * of user activity log export with advanced security features.
+       * of user activity log export with threat protection.
        */
       override fun firehoseConfiguration(firehoseConfiguration: FirehoseConfigurationProperty) {
         cdkBuilder.firehoseConfiguration(firehoseConfiguration.let(FirehoseConfigurationProperty.Companion::unwrap))
@@ -734,7 +697,7 @@ public open class CfnLogDeliveryConfiguration(
 
       /**
        * @param firehoseConfiguration Configuration for the Amazon Data Firehose stream destination
-       * of user activity log export with advanced security features.
+       * of user activity log export with threat protection.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9d2a3cc91104ab8b9f2fcc2767846cd8ef79a5a1e7e6d52f16005fd363a0fdfc")
@@ -746,9 +709,9 @@ public open class CfnLogDeliveryConfiguration(
        * @param logLevel The `errorlevel` selection of logs that a user pool sends for detailed
        * activity logging.
        * To send `userNotification` activity with [information about message
-       * delivery](https://docs.aws.amazon.com/cognito/latest/developerguide/tracking-quotas-and-usage-in-cloud-watch-logs.html)
+       * delivery](https://docs.aws.amazon.com/cognito/latest/developerguide/exporting-quotas-and-usage.html)
        * , choose `ERROR` with `CloudWatchLogsConfiguration` . To send `userAuthEvents` activity with
-       * user logs from advanced security features, choose `INFO` with one of
+       * user logs from threat protection with the Plus feature plan, choose `INFO` with one of
        * `CloudWatchLogsConfiguration` , `FirehoseConfiguration` , or `S3Configuration` .
        */
       override fun logLevel(logLevel: String) {
@@ -757,7 +720,7 @@ public open class CfnLogDeliveryConfiguration(
 
       /**
        * @param s3Configuration Configuration for the Amazon S3 bucket destination of user activity
-       * log export with advanced security features.
+       * log export with threat protection.
        */
       override fun s3Configuration(s3Configuration: IResolvable) {
         cdkBuilder.s3Configuration(s3Configuration.let(IResolvable.Companion::unwrap))
@@ -765,7 +728,7 @@ public open class CfnLogDeliveryConfiguration(
 
       /**
        * @param s3Configuration Configuration for the Amazon S3 bucket destination of user activity
-       * log export with advanced security features.
+       * log export with threat protection.
        */
       override fun s3Configuration(s3Configuration: S3ConfigurationProperty) {
         cdkBuilder.s3Configuration(s3Configuration.let(S3ConfigurationProperty.Companion::unwrap))
@@ -773,7 +736,7 @@ public open class CfnLogDeliveryConfiguration(
 
       /**
        * @param s3Configuration Configuration for the Amazon S3 bucket destination of user activity
-       * log export with advanced security features.
+       * log export with threat protection.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("70aeb6ab0d57c7f8f4989bc440112ed5e9586c7e17180aa3f909c0b89c399a98")
@@ -793,12 +756,6 @@ public open class CfnLogDeliveryConfiguration(
        * Configuration for the CloudWatch log group destination of user pool detailed activity
        * logging, or of user activity log export with advanced security features.
        *
-       * This data type is a request parameter of
-       * [SetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetLogDeliveryConfiguration.html)
-       * and a response parameter of
-       * [GetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetLogDeliveryConfiguration.html)
-       * .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-logconfiguration.html#cfn-cognito-logdeliveryconfiguration-logconfiguration-cloudwatchlogsconfiguration)
        */
       override fun cloudWatchLogsConfiguration(): Any? =
@@ -808,7 +765,8 @@ public open class CfnLogDeliveryConfiguration(
        * The source of events that your user pool sends for logging.
        *
        * To send error-level logs about user notification activity, set to `userNotification` . To
-       * send info-level logs about advanced security features user activity, set to `userAuthEvents` .
+       * send info-level logs about threat-protection user activity in user pools with the Plus feature
+       * plan, set to `userAuthEvents` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-logconfiguration.html#cfn-cognito-logdeliveryconfiguration-logconfiguration-eventsource)
        */
@@ -816,7 +774,7 @@ public open class CfnLogDeliveryConfiguration(
 
       /**
        * Configuration for the Amazon Data Firehose stream destination of user activity log export
-       * with advanced security features.
+       * with threat protection.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-logconfiguration.html#cfn-cognito-logdeliveryconfiguration-logconfiguration-firehoseconfiguration)
        */
@@ -826,9 +784,9 @@ public open class CfnLogDeliveryConfiguration(
        * The `errorlevel` selection of logs that a user pool sends for detailed activity logging.
        *
        * To send `userNotification` activity with [information about message
-       * delivery](https://docs.aws.amazon.com/cognito/latest/developerguide/tracking-quotas-and-usage-in-cloud-watch-logs.html)
+       * delivery](https://docs.aws.amazon.com/cognito/latest/developerguide/exporting-quotas-and-usage.html)
        * , choose `ERROR` with `CloudWatchLogsConfiguration` . To send `userAuthEvents` activity with
-       * user logs from advanced security features, choose `INFO` with one of
+       * user logs from threat protection with the Plus feature plan, choose `INFO` with one of
        * `CloudWatchLogsConfiguration` , `FirehoseConfiguration` , or `S3Configuration` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-logconfiguration.html#cfn-cognito-logdeliveryconfiguration-logconfiguration-loglevel)
@@ -836,8 +794,8 @@ public open class CfnLogDeliveryConfiguration(
       override fun logLevel(): String? = unwrap(this).getLogLevel()
 
       /**
-       * Configuration for the Amazon S3 bucket destination of user activity log export with
-       * advanced security features.
+       * Configuration for the Amazon S3 bucket destination of user activity log export with threat
+       * protection.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-logconfiguration.html#cfn-cognito-logdeliveryconfiguration-logconfiguration-s3configuration)
        */
@@ -863,8 +821,8 @@ public open class CfnLogDeliveryConfiguration(
   }
 
   /**
-   * Configuration for the Amazon S3 bucket destination of user activity log export with advanced
-   * security features.
+   * Configuration for the Amazon S3 bucket destination of user activity log export with threat
+   * protection.
    *
    * Example:
    *
@@ -881,8 +839,7 @@ public open class CfnLogDeliveryConfiguration(
    */
   public interface S3ConfigurationProperty {
     /**
-     * The ARN of an Amazon S3 bucket that's the destination for advanced security features log
-     * export.
+     * The ARN of an Amazon S3 bucket that's the destination for threat protection log export.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-s3configuration.html#cfn-cognito-logdeliveryconfiguration-s3configuration-bucketarn)
      */
@@ -894,8 +851,8 @@ public open class CfnLogDeliveryConfiguration(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param bucketArn The ARN of an Amazon S3 bucket that's the destination for advanced
-       * security features log export.
+       * @param bucketArn The ARN of an Amazon S3 bucket that's the destination for threat
+       * protection log export.
        */
       public fun bucketArn(bucketArn: String)
     }
@@ -907,8 +864,8 @@ public open class CfnLogDeliveryConfiguration(
           software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.S3ConfigurationProperty.builder()
 
       /**
-       * @param bucketArn The ARN of an Amazon S3 bucket that's the destination for advanced
-       * security features log export.
+       * @param bucketArn The ARN of an Amazon S3 bucket that's the destination for threat
+       * protection log export.
        */
       override fun bucketArn(bucketArn: String) {
         cdkBuilder.bucketArn(bucketArn)
@@ -924,8 +881,7 @@ public open class CfnLogDeliveryConfiguration(
     ) : CdkObject(cdkObject),
         S3ConfigurationProperty {
       /**
-       * The ARN of an Amazon S3 bucket that's the destination for advanced security features log
-       * export.
+       * The ARN of an Amazon S3 bucket that's the destination for threat protection log export.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-logdeliveryconfiguration-s3configuration.html#cfn-cognito-logdeliveryconfiguration-s3configuration-bucketarn)
        */

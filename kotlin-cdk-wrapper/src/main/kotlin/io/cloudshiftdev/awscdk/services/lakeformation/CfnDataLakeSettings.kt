@@ -670,7 +670,7 @@ public open class CfnDataLakeSettings(
      * A key-value map that provides an additional configuration on your data lake.
      *
      * `CrossAccountVersion` is the key you can configure in the `Parameters` field. Accepted values
-     * for the `CrossAccountVersion` key are 1, 2, and 3.
+     * for the `CrossAccountVersion` key are 1, 2, 3, and 4.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html#cfn-lakeformation-datalakesettings-parameters)
      * @param parameters A key-value map that provides an additional configuration on your data
@@ -1053,7 +1053,7 @@ public open class CfnDataLakeSettings(
      * A key-value map that provides an additional configuration on your data lake.
      *
      * `CrossAccountVersion` is the key you can configure in the `Parameters` field. Accepted values
-     * for the `CrossAccountVersion` key are 1, 2, and 3.
+     * for the `CrossAccountVersion` key are 1, 2, 3, and 4.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html#cfn-lakeformation-datalakesettings-parameters)
      * @param parameters A key-value map that provides an additional configuration on your data

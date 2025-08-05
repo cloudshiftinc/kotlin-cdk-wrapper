@@ -815,6 +815,19 @@ public open class Project(
     public fun artifacts(artifacts: IArtifacts)
 
     /**
+     * CodeBuild will automatically call retry build using the project's service role up to the
+     * auto-retry limit.
+     *
+     * `autoRetryLimit` must be between 0 and 10.
+     *
+     * Default: - no retry
+     *
+     * @param autoRetryLimit CodeBuild will automatically call retry build using the project's
+     * service role up to the auto-retry limit. 
+     */
+    public fun autoRetryLimit(autoRetryLimit: Number)
+
+    /**
      * Indicates whether AWS CodeBuild generates a publicly accessible URL for your project's build
      * badge.
      *
@@ -1267,6 +1280,21 @@ public open class Project(
      */
     override fun artifacts(artifacts: IArtifacts) {
       cdkBuilder.artifacts(artifacts.let(IArtifacts.Companion::unwrap))
+    }
+
+    /**
+     * CodeBuild will automatically call retry build using the project's service role up to the
+     * auto-retry limit.
+     *
+     * `autoRetryLimit` must be between 0 and 10.
+     *
+     * Default: - no retry
+     *
+     * @param autoRetryLimit CodeBuild will automatically call retry build using the project's
+     * service role up to the auto-retry limit. 
+     */
+    override fun autoRetryLimit(autoRetryLimit: Number) {
+      cdkBuilder.autoRetryLimit(autoRetryLimit)
     }
 
     /**
@@ -1746,6 +1774,9 @@ public open class Project(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.codebuild.Project.PROPERTY_INJECTION_ID
+
     public fun fromProjectArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

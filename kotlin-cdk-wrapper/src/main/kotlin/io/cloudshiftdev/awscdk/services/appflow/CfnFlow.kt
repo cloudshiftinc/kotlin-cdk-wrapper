@@ -1884,13 +1884,13 @@ public open class CfnFlow(
        * @param customProperties The custom properties that are specific to the connector when it's
        * used as a destination in the flow.
        */
-      public fun customProperties(customProperties: IResolvable)
+      public fun customProperties(customProperties: Map<String, String>)
 
       /**
        * @param customProperties The custom properties that are specific to the connector when it's
        * used as a destination in the flow.
        */
-      public fun customProperties(customProperties: Map<String, String>)
+      public fun customProperties(customProperties: IResolvable)
 
       /**
        * @param entityName The entity specified in the custom connector as a destination in the
@@ -1948,16 +1948,16 @@ public open class CfnFlow(
        * @param customProperties The custom properties that are specific to the connector when it's
        * used as a destination in the flow.
        */
-      override fun customProperties(customProperties: IResolvable) {
-        cdkBuilder.customProperties(customProperties.let(IResolvable.Companion::unwrap))
+      override fun customProperties(customProperties: Map<String, String>) {
+        cdkBuilder.customProperties(customProperties)
       }
 
       /**
        * @param customProperties The custom properties that are specific to the connector when it's
        * used as a destination in the flow.
        */
-      override fun customProperties(customProperties: Map<String, String>) {
-        cdkBuilder.customProperties(customProperties)
+      override fun customProperties(customProperties: IResolvable) {
+        cdkBuilder.customProperties(customProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2140,13 +2140,13 @@ public open class CfnFlow(
        * @param customProperties Custom properties that are required to use the custom connector as
        * a source.
        */
-      public fun customProperties(customProperties: IResolvable)
+      public fun customProperties(customProperties: Map<String, String>)
 
       /**
        * @param customProperties Custom properties that are required to use the custom connector as
        * a source.
        */
-      public fun customProperties(customProperties: Map<String, String>)
+      public fun customProperties(customProperties: IResolvable)
 
       /**
        * @param dataTransferApi The API of the connector application that Amazon AppFlow uses to
@@ -2184,16 +2184,16 @@ public open class CfnFlow(
        * @param customProperties Custom properties that are required to use the custom connector as
        * a source.
        */
-      override fun customProperties(customProperties: IResolvable) {
-        cdkBuilder.customProperties(customProperties.let(IResolvable.Companion::unwrap))
+      override fun customProperties(customProperties: Map<String, String>) {
+        cdkBuilder.customProperties(customProperties)
       }
 
       /**
        * @param customProperties Custom properties that are required to use the custom connector as
        * a source.
        */
-      override fun customProperties(customProperties: Map<String, String>) {
-        cdkBuilder.customProperties(customProperties)
+      override fun customProperties(customProperties: IResolvable) {
+        cdkBuilder.customProperties(customProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**

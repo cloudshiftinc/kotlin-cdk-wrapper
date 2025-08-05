@@ -63,9 +63,7 @@ public open class CfnContactFlow(
   )
 
   /**
-   * `Ref` returns the Amazon Resource Name (ARN) of the flow. For example:.
-   *
-   * `{ "Ref": "myFlowArn" }`
+   * `Ref` returns the Amazon Resource Name (ARN) of the flow.
    */
   public open fun attrContactFlowArn(): String = unwrap(this).getAttrContactFlowArn()
 

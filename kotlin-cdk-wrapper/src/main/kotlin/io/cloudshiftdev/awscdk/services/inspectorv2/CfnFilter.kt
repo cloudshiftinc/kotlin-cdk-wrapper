@@ -5,6 +5,8 @@ package io.cloudshiftdev.awscdk.services.inspectorv2
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -14,6 +16,7 @@ import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.collections.Map
 import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
@@ -31,6 +34,18 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .filterAction("filterAction")
  * .filterCriteria(FilterCriteriaProperty.builder()
  * .awsAccountId(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build()))
+ * .codeVulnerabilityDetectorName(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build()))
+ * .codeVulnerabilityDetectorTags(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build()))
+ * .codeVulnerabilityFilePath(List.of(StringFilterProperty.builder()
  * .comparison("comparison")
  * .value("value")
  * .build()))
@@ -78,6 +93,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .comparison("comparison")
  * .value("value")
  * .build()))
+ * .epssScore(List.of(NumberFilterProperty.builder()
+ * .lowerInclusive(123)
+ * .upperInclusive(123)
+ * .build()))
+ * .exploitAvailable(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build()))
  * .findingArn(List.of(StringFilterProperty.builder()
  * .comparison("comparison")
  * .value("value")
@@ -94,9 +117,33 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .endInclusive(123)
  * .startInclusive(123)
  * .build()))
+ * .fixAvailable(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build()))
  * .inspectorScore(List.of(NumberFilterProperty.builder()
  * .lowerInclusive(123)
  * .upperInclusive(123)
+ * .build()))
+ * .lambdaFunctionExecutionRoleArn(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build()))
+ * .lambdaFunctionLastModifiedAt(List.of(DateFilterProperty.builder()
+ * .endInclusive(123)
+ * .startInclusive(123)
+ * .build()))
+ * .lambdaFunctionLayers(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build()))
+ * .lambdaFunctionName(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build()))
+ * .lambdaFunctionRuntime(List.of(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
  * .build()))
  * .lastObservedAt(List.of(DateFilterProperty.builder()
  * .endInclusive(123)
@@ -161,11 +208,19 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .lowerInclusive(123)
  * .upperInclusive(123)
  * .build())
+ * .filePath(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build())
  * .name(StringFilterProperty.builder()
  * .comparison("comparison")
  * .value("value")
  * .build())
  * .release(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build())
+ * .sourceLambdaLayerArn(StringFilterProperty.builder()
  * .comparison("comparison")
  * .value("value")
  * .build())
@@ -182,6 +237,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .name("name")
  * // the properties below are optional
  * .description("description")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
  * .build();
  * ```
  *
@@ -190,7 +247,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFilter(
   cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter,
 ) : CfnResource(cdkObject),
-    IInspectable {
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -211,6 +269,12 @@ public open class CfnFilter(
    * The Amazon Resource Number (ARN) associated with this filter.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * A description of the filter.
@@ -285,6 +349,18 @@ public open class CfnFilter(
   }
 
   /**
+   * The tags attached to the filter.
+   */
+  public open fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
+
+  /**
+   * The tags attached to the filter.
+   */
+  public open fun tags(`value`: Map<String, String>) {
+    unwrap(this).setTags(`value`)
+  }
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.inspectorv2.CfnFilter].
    */
   @CdkDslMarker
@@ -338,6 +414,14 @@ public open class CfnFilter(
      * @param name The name of the filter. 
      */
     public fun name(name: String)
+
+    /**
+     * The tags attached to the filter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-filter.html#cfn-inspectorv2-filter-tags)
+     * @param tags The tags attached to the filter. 
+     */
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -406,6 +490,16 @@ public open class CfnFilter(
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * The tags attached to the filter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-filter.html#cfn-inspectorv2-filter-tags)
+     * @param tags The tags attached to the filter. 
+     */
+    override fun tags(tags: Map<String, String>) {
+      cdkBuilder.tags(tags)
     }
 
     public fun build(): software.amazon.awscdk.services.inspectorv2.CfnFilter = cdkBuilder.build()
@@ -553,6 +647,18 @@ public open class CfnFilter(
    * .comparison("comparison")
    * .value("value")
    * .build()))
+   * .codeVulnerabilityDetectorName(List.of(StringFilterProperty.builder()
+   * .comparison("comparison")
+   * .value("value")
+   * .build()))
+   * .codeVulnerabilityDetectorTags(List.of(StringFilterProperty.builder()
+   * .comparison("comparison")
+   * .value("value")
+   * .build()))
+   * .codeVulnerabilityFilePath(List.of(StringFilterProperty.builder()
+   * .comparison("comparison")
+   * .value("value")
+   * .build()))
    * .componentId(List.of(StringFilterProperty.builder()
    * .comparison("comparison")
    * .value("value")
@@ -597,6 +703,14 @@ public open class CfnFilter(
    * .comparison("comparison")
    * .value("value")
    * .build()))
+   * .epssScore(List.of(NumberFilterProperty.builder()
+   * .lowerInclusive(123)
+   * .upperInclusive(123)
+   * .build()))
+   * .exploitAvailable(List.of(StringFilterProperty.builder()
+   * .comparison("comparison")
+   * .value("value")
+   * .build()))
    * .findingArn(List.of(StringFilterProperty.builder()
    * .comparison("comparison")
    * .value("value")
@@ -613,9 +727,33 @@ public open class CfnFilter(
    * .endInclusive(123)
    * .startInclusive(123)
    * .build()))
+   * .fixAvailable(List.of(StringFilterProperty.builder()
+   * .comparison("comparison")
+   * .value("value")
+   * .build()))
    * .inspectorScore(List.of(NumberFilterProperty.builder()
    * .lowerInclusive(123)
    * .upperInclusive(123)
+   * .build()))
+   * .lambdaFunctionExecutionRoleArn(List.of(StringFilterProperty.builder()
+   * .comparison("comparison")
+   * .value("value")
+   * .build()))
+   * .lambdaFunctionLastModifiedAt(List.of(DateFilterProperty.builder()
+   * .endInclusive(123)
+   * .startInclusive(123)
+   * .build()))
+   * .lambdaFunctionLayers(List.of(StringFilterProperty.builder()
+   * .comparison("comparison")
+   * .value("value")
+   * .build()))
+   * .lambdaFunctionName(List.of(StringFilterProperty.builder()
+   * .comparison("comparison")
+   * .value("value")
+   * .build()))
+   * .lambdaFunctionRuntime(List.of(StringFilterProperty.builder()
+   * .comparison("comparison")
+   * .value("value")
    * .build()))
    * .lastObservedAt(List.of(DateFilterProperty.builder()
    * .endInclusive(123)
@@ -680,11 +818,19 @@ public open class CfnFilter(
    * .lowerInclusive(123)
    * .upperInclusive(123)
    * .build())
+   * .filePath(StringFilterProperty.builder()
+   * .comparison("comparison")
+   * .value("value")
+   * .build())
    * .name(StringFilterProperty.builder()
    * .comparison("comparison")
    * .value("value")
    * .build())
    * .release(StringFilterProperty.builder()
+   * .comparison("comparison")
+   * .value("value")
+   * .build())
+   * .sourceLambdaLayerArn(StringFilterProperty.builder()
    * .comparison("comparison")
    * .value("value")
    * .build())
@@ -709,6 +855,23 @@ public open class CfnFilter(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-awsaccountid)
      */
     public fun awsAccountId(): Any? = unwrap(this).getAwsAccountId()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-codevulnerabilitydetectorname)
+     */
+    public fun codeVulnerabilityDetectorName(): Any? =
+        unwrap(this).getCodeVulnerabilityDetectorName()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-codevulnerabilitydetectortags)
+     */
+    public fun codeVulnerabilityDetectorTags(): Any? =
+        unwrap(this).getCodeVulnerabilityDetectorTags()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-codevulnerabilityfilepath)
+     */
+    public fun codeVulnerabilityFilePath(): Any? = unwrap(this).getCodeVulnerabilityFilePath()
 
     /**
      * Details of the component IDs used to filter findings.
@@ -788,6 +951,16 @@ public open class CfnFilter(
     public fun ecrImageTags(): Any? = unwrap(this).getEcrImageTags()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-epssscore)
+     */
+    public fun epssScore(): Any? = unwrap(this).getEpssScore()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-exploitavailable)
+     */
+    public fun exploitAvailable(): Any? = unwrap(this).getExploitAvailable()
+
+    /**
      * Details on the finding ARNs used to filter findings.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-findingarn)
@@ -816,11 +989,42 @@ public open class CfnFilter(
     public fun firstObservedAt(): Any? = unwrap(this).getFirstObservedAt()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-fixavailable)
+     */
+    public fun fixAvailable(): Any? = unwrap(this).getFixAvailable()
+
+    /**
      * The Amazon Inspector score to filter on.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-inspectorscore)
      */
     public fun inspectorScore(): Any? = unwrap(this).getInspectorScore()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-lambdafunctionexecutionrolearn)
+     */
+    public fun lambdaFunctionExecutionRoleArn(): Any? =
+        unwrap(this).getLambdaFunctionExecutionRoleArn()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-lambdafunctionlastmodifiedat)
+     */
+    public fun lambdaFunctionLastModifiedAt(): Any? = unwrap(this).getLambdaFunctionLastModifiedAt()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-lambdafunctionlayers)
+     */
+    public fun lambdaFunctionLayers(): Any? = unwrap(this).getLambdaFunctionLayers()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-lambdafunctionname)
+     */
+    public fun lambdaFunctionName(): Any? = unwrap(this).getLambdaFunctionName()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-lambdafunctionruntime)
+     */
+    public fun lambdaFunctionRuntime(): Any? = unwrap(this).getLambdaFunctionRuntime()
 
     /**
      * Details on the date and time a finding was last seen used to filter findings.
@@ -939,6 +1143,51 @@ public open class CfnFilter(
        * @param awsAccountId Details of the AWS account IDs used to filter findings.
        */
       public fun awsAccountId(vararg awsAccountId: Any)
+
+      /**
+       * @param codeVulnerabilityDetectorName the value to be set.
+       */
+      public fun codeVulnerabilityDetectorName(codeVulnerabilityDetectorName: IResolvable)
+
+      /**
+       * @param codeVulnerabilityDetectorName the value to be set.
+       */
+      public fun codeVulnerabilityDetectorName(codeVulnerabilityDetectorName: List<Any>)
+
+      /**
+       * @param codeVulnerabilityDetectorName the value to be set.
+       */
+      public fun codeVulnerabilityDetectorName(vararg codeVulnerabilityDetectorName: Any)
+
+      /**
+       * @param codeVulnerabilityDetectorTags the value to be set.
+       */
+      public fun codeVulnerabilityDetectorTags(codeVulnerabilityDetectorTags: IResolvable)
+
+      /**
+       * @param codeVulnerabilityDetectorTags the value to be set.
+       */
+      public fun codeVulnerabilityDetectorTags(codeVulnerabilityDetectorTags: List<Any>)
+
+      /**
+       * @param codeVulnerabilityDetectorTags the value to be set.
+       */
+      public fun codeVulnerabilityDetectorTags(vararg codeVulnerabilityDetectorTags: Any)
+
+      /**
+       * @param codeVulnerabilityFilePath the value to be set.
+       */
+      public fun codeVulnerabilityFilePath(codeVulnerabilityFilePath: IResolvable)
+
+      /**
+       * @param codeVulnerabilityFilePath the value to be set.
+       */
+      public fun codeVulnerabilityFilePath(codeVulnerabilityFilePath: List<Any>)
+
+      /**
+       * @param codeVulnerabilityFilePath the value to be set.
+       */
+      public fun codeVulnerabilityFilePath(vararg codeVulnerabilityFilePath: Any)
 
       /**
        * @param componentId Details of the component IDs used to filter findings.
@@ -1121,6 +1370,36 @@ public open class CfnFilter(
       public fun ecrImageTags(vararg ecrImageTags: Any)
 
       /**
+       * @param epssScore the value to be set.
+       */
+      public fun epssScore(epssScore: IResolvable)
+
+      /**
+       * @param epssScore the value to be set.
+       */
+      public fun epssScore(epssScore: List<Any>)
+
+      /**
+       * @param epssScore the value to be set.
+       */
+      public fun epssScore(vararg epssScore: Any)
+
+      /**
+       * @param exploitAvailable the value to be set.
+       */
+      public fun exploitAvailable(exploitAvailable: IResolvable)
+
+      /**
+       * @param exploitAvailable the value to be set.
+       */
+      public fun exploitAvailable(exploitAvailable: List<Any>)
+
+      /**
+       * @param exploitAvailable the value to be set.
+       */
+      public fun exploitAvailable(vararg exploitAvailable: Any)
+
+      /**
        * @param findingArn Details on the finding ARNs used to filter findings.
        */
       public fun findingArn(findingArn: IResolvable)
@@ -1184,6 +1463,21 @@ public open class CfnFilter(
       public fun firstObservedAt(vararg firstObservedAt: Any)
 
       /**
+       * @param fixAvailable the value to be set.
+       */
+      public fun fixAvailable(fixAvailable: IResolvable)
+
+      /**
+       * @param fixAvailable the value to be set.
+       */
+      public fun fixAvailable(fixAvailable: List<Any>)
+
+      /**
+       * @param fixAvailable the value to be set.
+       */
+      public fun fixAvailable(vararg fixAvailable: Any)
+
+      /**
        * @param inspectorScore The Amazon Inspector score to filter on.
        */
       public fun inspectorScore(inspectorScore: IResolvable)
@@ -1197,6 +1491,81 @@ public open class CfnFilter(
        * @param inspectorScore The Amazon Inspector score to filter on.
        */
       public fun inspectorScore(vararg inspectorScore: Any)
+
+      /**
+       * @param lambdaFunctionExecutionRoleArn the value to be set.
+       */
+      public fun lambdaFunctionExecutionRoleArn(lambdaFunctionExecutionRoleArn: IResolvable)
+
+      /**
+       * @param lambdaFunctionExecutionRoleArn the value to be set.
+       */
+      public fun lambdaFunctionExecutionRoleArn(lambdaFunctionExecutionRoleArn: List<Any>)
+
+      /**
+       * @param lambdaFunctionExecutionRoleArn the value to be set.
+       */
+      public fun lambdaFunctionExecutionRoleArn(vararg lambdaFunctionExecutionRoleArn: Any)
+
+      /**
+       * @param lambdaFunctionLastModifiedAt the value to be set.
+       */
+      public fun lambdaFunctionLastModifiedAt(lambdaFunctionLastModifiedAt: IResolvable)
+
+      /**
+       * @param lambdaFunctionLastModifiedAt the value to be set.
+       */
+      public fun lambdaFunctionLastModifiedAt(lambdaFunctionLastModifiedAt: List<Any>)
+
+      /**
+       * @param lambdaFunctionLastModifiedAt the value to be set.
+       */
+      public fun lambdaFunctionLastModifiedAt(vararg lambdaFunctionLastModifiedAt: Any)
+
+      /**
+       * @param lambdaFunctionLayers the value to be set.
+       */
+      public fun lambdaFunctionLayers(lambdaFunctionLayers: IResolvable)
+
+      /**
+       * @param lambdaFunctionLayers the value to be set.
+       */
+      public fun lambdaFunctionLayers(lambdaFunctionLayers: List<Any>)
+
+      /**
+       * @param lambdaFunctionLayers the value to be set.
+       */
+      public fun lambdaFunctionLayers(vararg lambdaFunctionLayers: Any)
+
+      /**
+       * @param lambdaFunctionName the value to be set.
+       */
+      public fun lambdaFunctionName(lambdaFunctionName: IResolvable)
+
+      /**
+       * @param lambdaFunctionName the value to be set.
+       */
+      public fun lambdaFunctionName(lambdaFunctionName: List<Any>)
+
+      /**
+       * @param lambdaFunctionName the value to be set.
+       */
+      public fun lambdaFunctionName(vararg lambdaFunctionName: Any)
+
+      /**
+       * @param lambdaFunctionRuntime the value to be set.
+       */
+      public fun lambdaFunctionRuntime(lambdaFunctionRuntime: IResolvable)
+
+      /**
+       * @param lambdaFunctionRuntime the value to be set.
+       */
+      public fun lambdaFunctionRuntime(lambdaFunctionRuntime: List<Any>)
+
+      /**
+       * @param lambdaFunctionRuntime the value to be set.
+       */
+      public fun lambdaFunctionRuntime(vararg lambdaFunctionRuntime: Any)
 
       /**
        * @param lastObservedAt Details on the date and time a finding was last seen used to filter
@@ -1444,6 +1813,66 @@ public open class CfnFilter(
           awsAccountId(awsAccountId.toList())
 
       /**
+       * @param codeVulnerabilityDetectorName the value to be set.
+       */
+      override fun codeVulnerabilityDetectorName(codeVulnerabilityDetectorName: IResolvable) {
+        cdkBuilder.codeVulnerabilityDetectorName(codeVulnerabilityDetectorName.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param codeVulnerabilityDetectorName the value to be set.
+       */
+      override fun codeVulnerabilityDetectorName(codeVulnerabilityDetectorName: List<Any>) {
+        cdkBuilder.codeVulnerabilityDetectorName(codeVulnerabilityDetectorName.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param codeVulnerabilityDetectorName the value to be set.
+       */
+      override fun codeVulnerabilityDetectorName(vararg codeVulnerabilityDetectorName: Any): Unit =
+          codeVulnerabilityDetectorName(codeVulnerabilityDetectorName.toList())
+
+      /**
+       * @param codeVulnerabilityDetectorTags the value to be set.
+       */
+      override fun codeVulnerabilityDetectorTags(codeVulnerabilityDetectorTags: IResolvable) {
+        cdkBuilder.codeVulnerabilityDetectorTags(codeVulnerabilityDetectorTags.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param codeVulnerabilityDetectorTags the value to be set.
+       */
+      override fun codeVulnerabilityDetectorTags(codeVulnerabilityDetectorTags: List<Any>) {
+        cdkBuilder.codeVulnerabilityDetectorTags(codeVulnerabilityDetectorTags.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param codeVulnerabilityDetectorTags the value to be set.
+       */
+      override fun codeVulnerabilityDetectorTags(vararg codeVulnerabilityDetectorTags: Any): Unit =
+          codeVulnerabilityDetectorTags(codeVulnerabilityDetectorTags.toList())
+
+      /**
+       * @param codeVulnerabilityFilePath the value to be set.
+       */
+      override fun codeVulnerabilityFilePath(codeVulnerabilityFilePath: IResolvable) {
+        cdkBuilder.codeVulnerabilityFilePath(codeVulnerabilityFilePath.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param codeVulnerabilityFilePath the value to be set.
+       */
+      override fun codeVulnerabilityFilePath(codeVulnerabilityFilePath: List<Any>) {
+        cdkBuilder.codeVulnerabilityFilePath(codeVulnerabilityFilePath.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param codeVulnerabilityFilePath the value to be set.
+       */
+      override fun codeVulnerabilityFilePath(vararg codeVulnerabilityFilePath: Any): Unit =
+          codeVulnerabilityFilePath(codeVulnerabilityFilePath.toList())
+
+      /**
        * @param componentId Details of the component IDs used to filter findings.
        */
       override fun componentId(componentId: IResolvable) {
@@ -1678,6 +2107,45 @@ public open class CfnFilter(
           ecrImageTags(ecrImageTags.toList())
 
       /**
+       * @param epssScore the value to be set.
+       */
+      override fun epssScore(epssScore: IResolvable) {
+        cdkBuilder.epssScore(epssScore.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param epssScore the value to be set.
+       */
+      override fun epssScore(epssScore: List<Any>) {
+        cdkBuilder.epssScore(epssScore.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param epssScore the value to be set.
+       */
+      override fun epssScore(vararg epssScore: Any): Unit = epssScore(epssScore.toList())
+
+      /**
+       * @param exploitAvailable the value to be set.
+       */
+      override fun exploitAvailable(exploitAvailable: IResolvable) {
+        cdkBuilder.exploitAvailable(exploitAvailable.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param exploitAvailable the value to be set.
+       */
+      override fun exploitAvailable(exploitAvailable: List<Any>) {
+        cdkBuilder.exploitAvailable(exploitAvailable.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param exploitAvailable the value to be set.
+       */
+      override fun exploitAvailable(vararg exploitAvailable: Any): Unit =
+          exploitAvailable(exploitAvailable.toList())
+
+      /**
        * @param findingArn Details on the finding ARNs used to filter findings.
        */
       override fun findingArn(findingArn: IResolvable) {
@@ -1759,6 +2227,26 @@ public open class CfnFilter(
           firstObservedAt(firstObservedAt.toList())
 
       /**
+       * @param fixAvailable the value to be set.
+       */
+      override fun fixAvailable(fixAvailable: IResolvable) {
+        cdkBuilder.fixAvailable(fixAvailable.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param fixAvailable the value to be set.
+       */
+      override fun fixAvailable(fixAvailable: List<Any>) {
+        cdkBuilder.fixAvailable(fixAvailable.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param fixAvailable the value to be set.
+       */
+      override fun fixAvailable(vararg fixAvailable: Any): Unit =
+          fixAvailable(fixAvailable.toList())
+
+      /**
        * @param inspectorScore The Amazon Inspector score to filter on.
        */
       override fun inspectorScore(inspectorScore: IResolvable) {
@@ -1777,6 +2265,106 @@ public open class CfnFilter(
        */
       override fun inspectorScore(vararg inspectorScore: Any): Unit =
           inspectorScore(inspectorScore.toList())
+
+      /**
+       * @param lambdaFunctionExecutionRoleArn the value to be set.
+       */
+      override fun lambdaFunctionExecutionRoleArn(lambdaFunctionExecutionRoleArn: IResolvable) {
+        cdkBuilder.lambdaFunctionExecutionRoleArn(lambdaFunctionExecutionRoleArn.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param lambdaFunctionExecutionRoleArn the value to be set.
+       */
+      override fun lambdaFunctionExecutionRoleArn(lambdaFunctionExecutionRoleArn: List<Any>) {
+        cdkBuilder.lambdaFunctionExecutionRoleArn(lambdaFunctionExecutionRoleArn.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param lambdaFunctionExecutionRoleArn the value to be set.
+       */
+      override fun lambdaFunctionExecutionRoleArn(vararg lambdaFunctionExecutionRoleArn: Any): Unit
+          = lambdaFunctionExecutionRoleArn(lambdaFunctionExecutionRoleArn.toList())
+
+      /**
+       * @param lambdaFunctionLastModifiedAt the value to be set.
+       */
+      override fun lambdaFunctionLastModifiedAt(lambdaFunctionLastModifiedAt: IResolvable) {
+        cdkBuilder.lambdaFunctionLastModifiedAt(lambdaFunctionLastModifiedAt.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param lambdaFunctionLastModifiedAt the value to be set.
+       */
+      override fun lambdaFunctionLastModifiedAt(lambdaFunctionLastModifiedAt: List<Any>) {
+        cdkBuilder.lambdaFunctionLastModifiedAt(lambdaFunctionLastModifiedAt.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param lambdaFunctionLastModifiedAt the value to be set.
+       */
+      override fun lambdaFunctionLastModifiedAt(vararg lambdaFunctionLastModifiedAt: Any): Unit =
+          lambdaFunctionLastModifiedAt(lambdaFunctionLastModifiedAt.toList())
+
+      /**
+       * @param lambdaFunctionLayers the value to be set.
+       */
+      override fun lambdaFunctionLayers(lambdaFunctionLayers: IResolvable) {
+        cdkBuilder.lambdaFunctionLayers(lambdaFunctionLayers.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param lambdaFunctionLayers the value to be set.
+       */
+      override fun lambdaFunctionLayers(lambdaFunctionLayers: List<Any>) {
+        cdkBuilder.lambdaFunctionLayers(lambdaFunctionLayers.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param lambdaFunctionLayers the value to be set.
+       */
+      override fun lambdaFunctionLayers(vararg lambdaFunctionLayers: Any): Unit =
+          lambdaFunctionLayers(lambdaFunctionLayers.toList())
+
+      /**
+       * @param lambdaFunctionName the value to be set.
+       */
+      override fun lambdaFunctionName(lambdaFunctionName: IResolvable) {
+        cdkBuilder.lambdaFunctionName(lambdaFunctionName.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param lambdaFunctionName the value to be set.
+       */
+      override fun lambdaFunctionName(lambdaFunctionName: List<Any>) {
+        cdkBuilder.lambdaFunctionName(lambdaFunctionName.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param lambdaFunctionName the value to be set.
+       */
+      override fun lambdaFunctionName(vararg lambdaFunctionName: Any): Unit =
+          lambdaFunctionName(lambdaFunctionName.toList())
+
+      /**
+       * @param lambdaFunctionRuntime the value to be set.
+       */
+      override fun lambdaFunctionRuntime(lambdaFunctionRuntime: IResolvable) {
+        cdkBuilder.lambdaFunctionRuntime(lambdaFunctionRuntime.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param lambdaFunctionRuntime the value to be set.
+       */
+      override fun lambdaFunctionRuntime(lambdaFunctionRuntime: List<Any>) {
+        cdkBuilder.lambdaFunctionRuntime(lambdaFunctionRuntime.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param lambdaFunctionRuntime the value to be set.
+       */
+      override fun lambdaFunctionRuntime(vararg lambdaFunctionRuntime: Any): Unit =
+          lambdaFunctionRuntime(lambdaFunctionRuntime.toList())
 
       /**
        * @param lastObservedAt Details on the date and time a finding was last seen used to filter
@@ -2079,6 +2667,23 @@ public open class CfnFilter(
       override fun awsAccountId(): Any? = unwrap(this).getAwsAccountId()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-codevulnerabilitydetectorname)
+       */
+      override fun codeVulnerabilityDetectorName(): Any? =
+          unwrap(this).getCodeVulnerabilityDetectorName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-codevulnerabilitydetectortags)
+       */
+      override fun codeVulnerabilityDetectorTags(): Any? =
+          unwrap(this).getCodeVulnerabilityDetectorTags()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-codevulnerabilityfilepath)
+       */
+      override fun codeVulnerabilityFilePath(): Any? = unwrap(this).getCodeVulnerabilityFilePath()
+
+      /**
        * Details of the component IDs used to filter findings.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-componentid)
@@ -2156,6 +2761,16 @@ public open class CfnFilter(
       override fun ecrImageTags(): Any? = unwrap(this).getEcrImageTags()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-epssscore)
+       */
+      override fun epssScore(): Any? = unwrap(this).getEpssScore()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-exploitavailable)
+       */
+      override fun exploitAvailable(): Any? = unwrap(this).getExploitAvailable()
+
+      /**
        * Details on the finding ARNs used to filter findings.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-findingarn)
@@ -2184,11 +2799,43 @@ public open class CfnFilter(
       override fun firstObservedAt(): Any? = unwrap(this).getFirstObservedAt()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-fixavailable)
+       */
+      override fun fixAvailable(): Any? = unwrap(this).getFixAvailable()
+
+      /**
        * The Amazon Inspector score to filter on.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-inspectorscore)
        */
       override fun inspectorScore(): Any? = unwrap(this).getInspectorScore()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-lambdafunctionexecutionrolearn)
+       */
+      override fun lambdaFunctionExecutionRoleArn(): Any? =
+          unwrap(this).getLambdaFunctionExecutionRoleArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-lambdafunctionlastmodifiedat)
+       */
+      override fun lambdaFunctionLastModifiedAt(): Any? =
+          unwrap(this).getLambdaFunctionLastModifiedAt()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-lambdafunctionlayers)
+       */
+      override fun lambdaFunctionLayers(): Any? = unwrap(this).getLambdaFunctionLayers()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-lambdafunctionname)
+       */
+      override fun lambdaFunctionName(): Any? = unwrap(this).getLambdaFunctionName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-lambdafunctionruntime)
+       */
+      override fun lambdaFunctionRuntime(): Any? = unwrap(this).getLambdaFunctionRuntime()
 
       /**
        * Details on the date and time a finding was last seen used to filter findings.
@@ -2569,11 +3216,19 @@ public open class CfnFilter(
    * .lowerInclusive(123)
    * .upperInclusive(123)
    * .build())
+   * .filePath(StringFilterProperty.builder()
+   * .comparison("comparison")
+   * .value("value")
+   * .build())
    * .name(StringFilterProperty.builder()
    * .comparison("comparison")
    * .value("value")
    * .build())
    * .release(StringFilterProperty.builder()
+   * .comparison("comparison")
+   * .value("value")
+   * .build())
+   * .sourceLambdaLayerArn(StringFilterProperty.builder()
    * .comparison("comparison")
    * .value("value")
    * .build())
@@ -2606,6 +3261,11 @@ public open class CfnFilter(
     public fun epoch(): Any? = unwrap(this).getEpoch()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-packagefilter.html#cfn-inspectorv2-filter-packagefilter-filepath)
+     */
+    public fun filePath(): Any? = unwrap(this).getFilePath()
+
+    /**
      * An object that contains details on the name of the package to filter on.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-packagefilter.html#cfn-inspectorv2-filter-packagefilter-name)
@@ -2618,6 +3278,11 @@ public open class CfnFilter(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-packagefilter.html#cfn-inspectorv2-filter-packagefilter-release)
      */
     public fun release(): Any? = unwrap(this).getRelease()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-packagefilter.html#cfn-inspectorv2-filter-packagefilter-sourcelambdalayerarn)
+     */
+    public fun sourceLambdaLayerArn(): Any? = unwrap(this).getSourceLambdaLayerArn()
 
     /**
      * An object that contains details on the source layer hash to filter on.
@@ -2676,6 +3341,23 @@ public open class CfnFilter(
       public fun epoch(epoch: NumberFilterProperty.Builder.() -> Unit)
 
       /**
+       * @param filePath the value to be set.
+       */
+      public fun filePath(filePath: IResolvable)
+
+      /**
+       * @param filePath the value to be set.
+       */
+      public fun filePath(filePath: StringFilterProperty)
+
+      /**
+       * @param filePath the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bafa5cf69bba8aa8720e93076634a04d4d68bd9935ad32f878fbd51685a0cb06")
+      public fun filePath(filePath: StringFilterProperty.Builder.() -> Unit)
+
+      /**
        * @param name An object that contains details on the name of the package to filter on.
        */
       public fun name(name: IResolvable)
@@ -2708,6 +3390,23 @@ public open class CfnFilter(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a9fd74b0bc06670d4201aff5c055291fda7425f666b5a97083937fb9668c0d8c")
       public fun release(release: StringFilterProperty.Builder.() -> Unit)
+
+      /**
+       * @param sourceLambdaLayerArn the value to be set.
+       */
+      public fun sourceLambdaLayerArn(sourceLambdaLayerArn: IResolvable)
+
+      /**
+       * @param sourceLambdaLayerArn the value to be set.
+       */
+      public fun sourceLambdaLayerArn(sourceLambdaLayerArn: StringFilterProperty)
+
+      /**
+       * @param sourceLambdaLayerArn the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ac8e8a686f01f6e16a08edc789ebe2fbe6702227b9d666d94f2b904d8facdc4a")
+      public fun sourceLambdaLayerArn(sourceLambdaLayerArn: StringFilterProperty.Builder.() -> Unit)
 
       /**
        * @param sourceLayerHash An object that contains details on the source layer hash to filter
@@ -2800,6 +3499,28 @@ public open class CfnFilter(
           epoch(NumberFilterProperty(epoch))
 
       /**
+       * @param filePath the value to be set.
+       */
+      override fun filePath(filePath: IResolvable) {
+        cdkBuilder.filePath(filePath.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param filePath the value to be set.
+       */
+      override fun filePath(filePath: StringFilterProperty) {
+        cdkBuilder.filePath(filePath.let(StringFilterProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param filePath the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bafa5cf69bba8aa8720e93076634a04d4d68bd9935ad32f878fbd51685a0cb06")
+      override fun filePath(filePath: StringFilterProperty.Builder.() -> Unit): Unit =
+          filePath(StringFilterProperty(filePath))
+
+      /**
        * @param name An object that contains details on the name of the package to filter on.
        */
       override fun name(name: IResolvable) {
@@ -2842,6 +3563,29 @@ public open class CfnFilter(
       @JvmName("a9fd74b0bc06670d4201aff5c055291fda7425f666b5a97083937fb9668c0d8c")
       override fun release(release: StringFilterProperty.Builder.() -> Unit): Unit =
           release(StringFilterProperty(release))
+
+      /**
+       * @param sourceLambdaLayerArn the value to be set.
+       */
+      override fun sourceLambdaLayerArn(sourceLambdaLayerArn: IResolvable) {
+        cdkBuilder.sourceLambdaLayerArn(sourceLambdaLayerArn.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param sourceLambdaLayerArn the value to be set.
+       */
+      override fun sourceLambdaLayerArn(sourceLambdaLayerArn: StringFilterProperty) {
+        cdkBuilder.sourceLambdaLayerArn(sourceLambdaLayerArn.let(StringFilterProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param sourceLambdaLayerArn the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ac8e8a686f01f6e16a08edc789ebe2fbe6702227b9d666d94f2b904d8facdc4a")
+      override
+          fun sourceLambdaLayerArn(sourceLambdaLayerArn: StringFilterProperty.Builder.() -> Unit):
+          Unit = sourceLambdaLayerArn(StringFilterProperty(sourceLambdaLayerArn))
 
       /**
        * @param sourceLayerHash An object that contains details on the source layer hash to filter
@@ -2914,6 +3658,11 @@ public open class CfnFilter(
       override fun epoch(): Any? = unwrap(this).getEpoch()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-packagefilter.html#cfn-inspectorv2-filter-packagefilter-filepath)
+       */
+      override fun filePath(): Any? = unwrap(this).getFilePath()
+
+      /**
        * An object that contains details on the name of the package to filter on.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-packagefilter.html#cfn-inspectorv2-filter-packagefilter-name)
@@ -2926,6 +3675,11 @@ public open class CfnFilter(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-packagefilter.html#cfn-inspectorv2-filter-packagefilter-release)
        */
       override fun release(): Any? = unwrap(this).getRelease()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-packagefilter.html#cfn-inspectorv2-filter-packagefilter-sourcelambdalayerarn)
+       */
+      override fun sourceLambdaLayerArn(): Any? = unwrap(this).getSourceLambdaLayerArn()
 
       /**
        * An object that contains details on the source layer hash to filter on.

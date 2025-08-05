@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -46,11 +47,21 @@ public interface CfnChannelProps {
   public fun channelClass(): String? = unwrap(this).getChannelClass()
 
   /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-channelengineversion)
+   */
+  public fun channelEngineVersion(): Any? = unwrap(this).getChannelEngineVersion()
+
+  /**
    * The settings that identify the destination for the outputs in this MediaLive output package.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-destinations)
    */
   public fun destinations(): Any? = unwrap(this).getDestinations()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-dryrun)
+   */
+  public fun dryRun(): Any? = unwrap(this).getDryRun()
 
   /**
    * The encoding configuration for the output content.
@@ -94,10 +105,7 @@ public interface CfnChannelProps {
   public fun maintenance(): Any? = unwrap(this).getMaintenance()
 
   /**
-   * A name for this audio selector.
-   *
-   * The AudioDescription (in an output) references this name in order to identify a specific input
-   * audio to include in that output.
+   * Name of channel.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-name)
    */
@@ -179,6 +187,25 @@ public interface CfnChannelProps {
     public fun channelClass(channelClass: String)
 
     /**
+     * @param channelEngineVersion the value to be set.
+     */
+    public fun channelEngineVersion(channelEngineVersion: IResolvable)
+
+    /**
+     * @param channelEngineVersion the value to be set.
+     */
+    public
+        fun channelEngineVersion(channelEngineVersion: CfnChannel.ChannelEngineVersionRequestProperty)
+
+    /**
+     * @param channelEngineVersion the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7e97752f1d998510ca9970f4335ea335ba94a48f0246bbc22426a3d705ad2ac5")
+    public
+        fun channelEngineVersion(channelEngineVersion: CfnChannel.ChannelEngineVersionRequestProperty.Builder.() -> Unit)
+
+    /**
      * @param destinations The settings that identify the destination for the outputs in this
      * MediaLive output package.
      */
@@ -195,6 +222,16 @@ public interface CfnChannelProps {
      * MediaLive output package.
      */
     public fun destinations(vararg destinations: Any)
+
+    /**
+     * @param dryRun the value to be set.
+     */
+    public fun dryRun(dryRun: Boolean)
+
+    /**
+     * @param dryRun the value to be set.
+     */
+    public fun dryRun(dryRun: IResolvable)
 
     /**
      * @param encoderSettings The encoding configuration for the output content.
@@ -279,9 +316,7 @@ public interface CfnChannelProps {
         fun maintenance(maintenance: CfnChannel.MaintenanceCreateSettingsProperty.Builder.() -> Unit)
 
     /**
-     * @param name A name for this audio selector.
-     * The AudioDescription (in an output) references this name in order to identify a specific
-     * input audio to include in that output.
+     * @param name Name of channel.
      */
     public fun name(name: String)
 
@@ -380,6 +415,31 @@ public interface CfnChannelProps {
     }
 
     /**
+     * @param channelEngineVersion the value to be set.
+     */
+    override fun channelEngineVersion(channelEngineVersion: IResolvable) {
+      cdkBuilder.channelEngineVersion(channelEngineVersion.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param channelEngineVersion the value to be set.
+     */
+    override
+        fun channelEngineVersion(channelEngineVersion: CfnChannel.ChannelEngineVersionRequestProperty) {
+      cdkBuilder.channelEngineVersion(channelEngineVersion.let(CfnChannel.ChannelEngineVersionRequestProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param channelEngineVersion the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7e97752f1d998510ca9970f4335ea335ba94a48f0246bbc22426a3d705ad2ac5")
+    override
+        fun channelEngineVersion(channelEngineVersion: CfnChannel.ChannelEngineVersionRequestProperty.Builder.() -> Unit):
+        Unit =
+        channelEngineVersion(CfnChannel.ChannelEngineVersionRequestProperty(channelEngineVersion))
+
+    /**
      * @param destinations The settings that identify the destination for the outputs in this
      * MediaLive output package.
      */
@@ -400,6 +460,20 @@ public interface CfnChannelProps {
      * MediaLive output package.
      */
     override fun destinations(vararg destinations: Any): Unit = destinations(destinations.toList())
+
+    /**
+     * @param dryRun the value to be set.
+     */
+    override fun dryRun(dryRun: Boolean) {
+      cdkBuilder.dryRun(dryRun)
+    }
+
+    /**
+     * @param dryRun the value to be set.
+     */
+    override fun dryRun(dryRun: IResolvable) {
+      cdkBuilder.dryRun(dryRun.let(IResolvable.Companion::unwrap))
+    }
 
     /**
      * @param encoderSettings The encoding configuration for the output content.
@@ -506,9 +580,7 @@ public interface CfnChannelProps {
         Unit = maintenance(CfnChannel.MaintenanceCreateSettingsProperty(maintenance))
 
     /**
-     * @param name A name for this audio selector.
-     * The AudioDescription (in an output) references this name in order to identify a specific
-     * input audio to include in that output.
+     * @param name Name of channel.
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -586,11 +658,21 @@ public interface CfnChannelProps {
     override fun channelClass(): String? = unwrap(this).getChannelClass()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-channelengineversion)
+     */
+    override fun channelEngineVersion(): Any? = unwrap(this).getChannelEngineVersion()
+
+    /**
      * The settings that identify the destination for the outputs in this MediaLive output package.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-destinations)
      */
     override fun destinations(): Any? = unwrap(this).getDestinations()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-dryrun)
+     */
+    override fun dryRun(): Any? = unwrap(this).getDryRun()
 
     /**
      * The encoding configuration for the output content.
@@ -634,10 +716,7 @@ public interface CfnChannelProps {
     override fun maintenance(): Any? = unwrap(this).getMaintenance()
 
     /**
-     * A name for this audio selector.
-     *
-     * The AudioDescription (in an output) references this name in order to identify a specific
-     * input audio to include in that output.
+     * Name of channel.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-name)
      */

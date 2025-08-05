@@ -5,10 +5,13 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -35,6 +38,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .ruleName("ruleName")
  * .ruleState("ruleState")
  * // the properties below are optional
+ * .applyOnTransformedLogs(false)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -64,6 +68,25 @@ public open class CfnInsightRule(
     props: CfnInsightRuleProps.Builder.() -> Unit,
   ) : this(scope, id, CfnInsightRuleProps(props)
   )
+
+  /**
+   * Determines whether the rules is evaluated on transformed versions of logs.
+   */
+  public open fun applyOnTransformedLogs(): Any? = unwrap(this).getApplyOnTransformedLogs()
+
+  /**
+   * Determines whether the rules is evaluated on transformed versions of logs.
+   */
+  public open fun applyOnTransformedLogs(`value`: Boolean) {
+    unwrap(this).setApplyOnTransformedLogs(`value`)
+  }
+
+  /**
+   * Determines whether the rules is evaluated on transformed versions of logs.
+   */
+  public open fun applyOnTransformedLogs(`value`: IResolvable) {
+    unwrap(this).setApplyOnTransformedLogs(`value`.let(IResolvable.Companion::unwrap))
+  }
 
   /**
    * The ARN of the Contributor Insights rule, such as
@@ -155,6 +178,28 @@ public open class CfnInsightRule(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Determines whether the rules is evaluated on transformed versions of logs.
+     *
+     * Valid values are `TRUE` and `FALSE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html#cfn-cloudwatch-insightrule-applyontransformedlogs)
+     * @param applyOnTransformedLogs Determines whether the rules is evaluated on transformed
+     * versions of logs. 
+     */
+    public fun applyOnTransformedLogs(applyOnTransformedLogs: Boolean)
+
+    /**
+     * Determines whether the rules is evaluated on transformed versions of logs.
+     *
+     * Valid values are `TRUE` and `FALSE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html#cfn-cloudwatch-insightrule-applyontransformedlogs)
+     * @param applyOnTransformedLogs Determines whether the rules is evaluated on transformed
+     * versions of logs. 
+     */
+    public fun applyOnTransformedLogs(applyOnTransformedLogs: IResolvable)
+
+    /**
      * The definition of the rule, as a JSON object.
      *
      * For details about the syntax, see [Contributor Insights Rule
@@ -227,6 +272,32 @@ public open class CfnInsightRule(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.CfnInsightRule.Builder =
         software.amazon.awscdk.services.cloudwatch.CfnInsightRule.Builder.create(scope, id)
+
+    /**
+     * Determines whether the rules is evaluated on transformed versions of logs.
+     *
+     * Valid values are `TRUE` and `FALSE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html#cfn-cloudwatch-insightrule-applyontransformedlogs)
+     * @param applyOnTransformedLogs Determines whether the rules is evaluated on transformed
+     * versions of logs. 
+     */
+    override fun applyOnTransformedLogs(applyOnTransformedLogs: Boolean) {
+      cdkBuilder.applyOnTransformedLogs(applyOnTransformedLogs)
+    }
+
+    /**
+     * Determines whether the rules is evaluated on transformed versions of logs.
+     *
+     * Valid values are `TRUE` and `FALSE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html#cfn-cloudwatch-insightrule-applyontransformedlogs)
+     * @param applyOnTransformedLogs Determines whether the rules is evaluated on transformed
+     * versions of logs. 
+     */
+    override fun applyOnTransformedLogs(applyOnTransformedLogs: IResolvable) {
+      cdkBuilder.applyOnTransformedLogs(applyOnTransformedLogs.let(IResolvable.Companion::unwrap))
+    }
 
     /**
      * The definition of the rule, as a JSON object.

@@ -37,6 +37,13 @@ import kotlin.jvm.JvmName
  * .inputConversion(InputConversionProperty.builder()
  * .fromFormat("fromFormat")
  * // the properties below are optional
+ * .advancedOptions(AdvancedOptionsProperty.builder()
+ * .x12(X12AdvancedOptionsProperty.builder()
+ * .splitOptions(X12SplitOptionsProperty.builder()
+ * .splitBy("splitBy")
+ * .build())
+ * .build())
+ * .build())
  * .formatOptions(FormatOptionsProperty.builder()
  * .x12(X12DetailsProperty.builder()
  * .transactionSet("transactionSet")

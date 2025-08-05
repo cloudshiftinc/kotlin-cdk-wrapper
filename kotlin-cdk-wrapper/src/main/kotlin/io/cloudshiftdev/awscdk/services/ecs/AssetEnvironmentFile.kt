@@ -60,6 +60,7 @@ import kotlin.jvm.JvmName
  * .workingDirectory("workingDirectory")
  * .build())
  * .deployTime(false)
+ * .displayName("displayName")
  * .exclude(List.of("exclude"))
  * .followSymlinks(SymlinkFollowMode.NEVER)
  * .ignoreMode(IgnoreMode.GLOB)
@@ -187,6 +188,30 @@ public open class AssetEnvironmentFile(
      * @param deployTime Whether or not the asset needs to exist beyond deployment time;. 
      */
     public fun deployTime(deployTime: Boolean)
+
+    /**
+     * A display name for this asset.
+     *
+     * If supplied, the display name will be used in locations where the asset
+     * identifier is printed, like in the CLI progress information. If the same
+     * asset is added multiple times, the display name of the first occurrence is
+     * used.
+     *
+     * The default is the construct path of the Asset construct, with respect to
+     * the enclosing stack. If the asset is produced by a construct helper
+     * function (such as `lambda.Code.fromAsset()`), this will look like
+     * `MyFunction/Code`.
+     *
+     * We use the stack-relative construct path so that in the common case where
+     * you have multiple stacks with the same asset, we won't show something like
+     * `/MyBetaStack/MyFunction/Code` when you are actually deploying to
+     * production.
+     *
+     * Default: - Stack-relative construct path
+     *
+     * @param displayName A display name for this asset. 
+     */
+    public fun displayName(displayName: String)
 
     /**
      * File paths matching the patterns will be excluded.
@@ -362,6 +387,32 @@ public open class AssetEnvironmentFile(
      */
     override fun deployTime(deployTime: Boolean) {
       cdkBuilder.deployTime(deployTime)
+    }
+
+    /**
+     * A display name for this asset.
+     *
+     * If supplied, the display name will be used in locations where the asset
+     * identifier is printed, like in the CLI progress information. If the same
+     * asset is added multiple times, the display name of the first occurrence is
+     * used.
+     *
+     * The default is the construct path of the Asset construct, with respect to
+     * the enclosing stack. If the asset is produced by a construct helper
+     * function (such as `lambda.Code.fromAsset()`), this will look like
+     * `MyFunction/Code`.
+     *
+     * We use the stack-relative construct path so that in the common case where
+     * you have multiple stacks with the same asset, we won't show something like
+     * `/MyBetaStack/MyFunction/Code` when you are actually deploying to
+     * production.
+     *
+     * Default: - Stack-relative construct path
+     *
+     * @param displayName A display name for this asset. 
+     */
+    override fun displayName(displayName: String) {
+      cdkBuilder.displayName(displayName)
     }
 
     /**

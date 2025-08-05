@@ -40,461 +40,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.wafv2.*;
- * Object all;
- * Object allow;
- * Object allQueryArguments;
- * Object block;
- * Object captcha;
- * Object challenge;
- * Object count;
- * Object forwardedIp;
- * Object httpMethod;
- * Object ip;
- * Object method;
- * Object queryString;
- * Object singleHeader;
- * Object singleQueryArgument;
- * StatementProperty statementProperty_;
- * Object uriPath;
- * CfnRuleGroup cfnRuleGroup = CfnRuleGroup.Builder.create(this, "MyCfnRuleGroup")
- * .capacity(123)
- * .scope("scope")
- * .visibilityConfig(VisibilityConfigProperty.builder()
- * .cloudWatchMetricsEnabled(false)
- * .metricName("metricName")
- * .sampledRequestsEnabled(false)
- * .build())
- * // the properties below are optional
- * .availableLabels(List.of(LabelSummaryProperty.builder()
- * .name("name")
- * .build()))
- * .consumedLabels(List.of(LabelSummaryProperty.builder()
- * .name("name")
- * .build()))
- * .customResponseBodies(Map.of(
- * "customResponseBodiesKey", CustomResponseBodyProperty.builder()
- * .content("content")
- * .contentType("contentType")
- * .build()))
- * .description("description")
- * .name("name")
- * .rules(List.of(RuleProperty.builder()
- * .name("name")
- * .priority(123)
- * .statement(StatementProperty.builder()
- * .andStatement(AndStatementProperty.builder()
- * .statements(List.of(statementProperty_))
- * .build())
- * .byteMatchStatement(ByteMatchStatementProperty.builder()
- * .fieldToMatch(FieldToMatchProperty.builder()
- * .allQueryArguments(allQueryArguments)
- * .body(BodyProperty.builder()
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .cookies(CookiesProperty.builder()
- * .matchPattern(CookieMatchPatternProperty.builder()
- * .all(all)
- * .excludedCookies(List.of("excludedCookies"))
- * .includedCookies(List.of("includedCookies"))
- * .build())
- * .matchScope("matchScope")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .headers(HeadersProperty.builder()
- * .matchPattern(HeaderMatchPatternProperty.builder()
- * .all(all)
- * .excludedHeaders(List.of("excludedHeaders"))
- * .includedHeaders(List.of("includedHeaders"))
- * .build())
- * .matchScope("matchScope")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .ja3Fingerprint(JA3FingerprintProperty.builder()
- * .fallbackBehavior("fallbackBehavior")
- * .build())
- * .jsonBody(JsonBodyProperty.builder()
- * .matchPattern(JsonMatchPatternProperty.builder()
- * .all(all)
- * .includedPaths(List.of("includedPaths"))
- * .build())
- * .matchScope("matchScope")
- * // the properties below are optional
- * .invalidFallbackBehavior("invalidFallbackBehavior")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .method(method)
- * .queryString(queryString)
- * .singleHeader(singleHeader)
- * .singleQueryArgument(singleQueryArgument)
- * .uriPath(uriPath)
- * .build())
- * .positionalConstraint("positionalConstraint")
- * .textTransformations(List.of(TextTransformationProperty.builder()
- * .priority(123)
- * .type("type")
- * .build()))
- * // the properties below are optional
- * .searchString("searchString")
- * .searchStringBase64("searchStringBase64")
- * .build())
- * .geoMatchStatement(GeoMatchStatementProperty.builder()
- * .countryCodes(List.of("countryCodes"))
- * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
- * .fallbackBehavior("fallbackBehavior")
- * .headerName("headerName")
- * .build())
- * .build())
- * .ipSetReferenceStatement(Map.of(
- * "arn", "arn",
- * // the properties below are optional
- * "ipSetForwardedIpConfig", Map.of(
- * "fallbackBehavior", "fallbackBehavior",
- * "headerName", "headerName",
- * "position", "position")))
- * .labelMatchStatement(LabelMatchStatementProperty.builder()
- * .key("key")
- * .scope("scope")
- * .build())
- * .notStatement(NotStatementProperty.builder()
- * .statement(statementProperty_)
- * .build())
- * .orStatement(OrStatementProperty.builder()
- * .statements(List.of(statementProperty_))
- * .build())
- * .rateBasedStatement(RateBasedStatementProperty.builder()
- * .aggregateKeyType("aggregateKeyType")
- * .limit(123)
- * // the properties below are optional
- * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
- * .cookie(RateLimitCookieProperty.builder()
- * .name("name")
- * .textTransformations(List.of(TextTransformationProperty.builder()
- * .priority(123)
- * .type("type")
- * .build()))
- * .build())
- * .forwardedIp(forwardedIp)
- * .header(RateLimitHeaderProperty.builder()
- * .name("name")
- * .textTransformations(List.of(TextTransformationProperty.builder()
- * .priority(123)
- * .type("type")
- * .build()))
- * .build())
- * .httpMethod(httpMethod)
- * .ip(ip)
- * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
- * .namespace("namespace")
- * .build())
- * .queryArgument(RateLimitQueryArgumentProperty.builder()
- * .name("name")
- * .textTransformations(List.of(TextTransformationProperty.builder()
- * .priority(123)
- * .type("type")
- * .build()))
- * .build())
- * .queryString(RateLimitQueryStringProperty.builder()
- * .textTransformations(List.of(TextTransformationProperty.builder()
- * .priority(123)
- * .type("type")
- * .build()))
- * .build())
- * .uriPath(RateLimitUriPathProperty.builder()
- * .textTransformations(List.of(TextTransformationProperty.builder()
- * .priority(123)
- * .type("type")
- * .build()))
- * .build())
- * .build()))
- * .evaluationWindowSec(123)
- * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
- * .fallbackBehavior("fallbackBehavior")
- * .headerName("headerName")
- * .build())
- * .scopeDownStatement(statementProperty_)
- * .build())
- * .regexMatchStatement(RegexMatchStatementProperty.builder()
- * .fieldToMatch(FieldToMatchProperty.builder()
- * .allQueryArguments(allQueryArguments)
- * .body(BodyProperty.builder()
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .cookies(CookiesProperty.builder()
- * .matchPattern(CookieMatchPatternProperty.builder()
- * .all(all)
- * .excludedCookies(List.of("excludedCookies"))
- * .includedCookies(List.of("includedCookies"))
- * .build())
- * .matchScope("matchScope")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .headers(HeadersProperty.builder()
- * .matchPattern(HeaderMatchPatternProperty.builder()
- * .all(all)
- * .excludedHeaders(List.of("excludedHeaders"))
- * .includedHeaders(List.of("includedHeaders"))
- * .build())
- * .matchScope("matchScope")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .ja3Fingerprint(JA3FingerprintProperty.builder()
- * .fallbackBehavior("fallbackBehavior")
- * .build())
- * .jsonBody(JsonBodyProperty.builder()
- * .matchPattern(JsonMatchPatternProperty.builder()
- * .all(all)
- * .includedPaths(List.of("includedPaths"))
- * .build())
- * .matchScope("matchScope")
- * // the properties below are optional
- * .invalidFallbackBehavior("invalidFallbackBehavior")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .method(method)
- * .queryString(queryString)
- * .singleHeader(singleHeader)
- * .singleQueryArgument(singleQueryArgument)
- * .uriPath(uriPath)
- * .build())
- * .regexString("regexString")
- * .textTransformations(List.of(TextTransformationProperty.builder()
- * .priority(123)
- * .type("type")
- * .build()))
- * .build())
- * .regexPatternSetReferenceStatement(RegexPatternSetReferenceStatementProperty.builder()
- * .arn("arn")
- * .fieldToMatch(FieldToMatchProperty.builder()
- * .allQueryArguments(allQueryArguments)
- * .body(BodyProperty.builder()
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .cookies(CookiesProperty.builder()
- * .matchPattern(CookieMatchPatternProperty.builder()
- * .all(all)
- * .excludedCookies(List.of("excludedCookies"))
- * .includedCookies(List.of("includedCookies"))
- * .build())
- * .matchScope("matchScope")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .headers(HeadersProperty.builder()
- * .matchPattern(HeaderMatchPatternProperty.builder()
- * .all(all)
- * .excludedHeaders(List.of("excludedHeaders"))
- * .includedHeaders(List.of("includedHeaders"))
- * .build())
- * .matchScope("matchScope")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .ja3Fingerprint(JA3FingerprintProperty.builder()
- * .fallbackBehavior("fallbackBehavior")
- * .build())
- * .jsonBody(JsonBodyProperty.builder()
- * .matchPattern(JsonMatchPatternProperty.builder()
- * .all(all)
- * .includedPaths(List.of("includedPaths"))
- * .build())
- * .matchScope("matchScope")
- * // the properties below are optional
- * .invalidFallbackBehavior("invalidFallbackBehavior")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .method(method)
- * .queryString(queryString)
- * .singleHeader(singleHeader)
- * .singleQueryArgument(singleQueryArgument)
- * .uriPath(uriPath)
- * .build())
- * .textTransformations(List.of(TextTransformationProperty.builder()
- * .priority(123)
- * .type("type")
- * .build()))
- * .build())
- * .sizeConstraintStatement(SizeConstraintStatementProperty.builder()
- * .comparisonOperator("comparisonOperator")
- * .fieldToMatch(FieldToMatchProperty.builder()
- * .allQueryArguments(allQueryArguments)
- * .body(BodyProperty.builder()
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .cookies(CookiesProperty.builder()
- * .matchPattern(CookieMatchPatternProperty.builder()
- * .all(all)
- * .excludedCookies(List.of("excludedCookies"))
- * .includedCookies(List.of("includedCookies"))
- * .build())
- * .matchScope("matchScope")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .headers(HeadersProperty.builder()
- * .matchPattern(HeaderMatchPatternProperty.builder()
- * .all(all)
- * .excludedHeaders(List.of("excludedHeaders"))
- * .includedHeaders(List.of("includedHeaders"))
- * .build())
- * .matchScope("matchScope")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .ja3Fingerprint(JA3FingerprintProperty.builder()
- * .fallbackBehavior("fallbackBehavior")
- * .build())
- * .jsonBody(JsonBodyProperty.builder()
- * .matchPattern(JsonMatchPatternProperty.builder()
- * .all(all)
- * .includedPaths(List.of("includedPaths"))
- * .build())
- * .matchScope("matchScope")
- * // the properties below are optional
- * .invalidFallbackBehavior("invalidFallbackBehavior")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .method(method)
- * .queryString(queryString)
- * .singleHeader(singleHeader)
- * .singleQueryArgument(singleQueryArgument)
- * .uriPath(uriPath)
- * .build())
- * .size(123)
- * .textTransformations(List.of(TextTransformationProperty.builder()
- * .priority(123)
- * .type("type")
- * .build()))
- * .build())
- * .sqliMatchStatement(SqliMatchStatementProperty.builder()
- * .fieldToMatch(FieldToMatchProperty.builder()
- * .allQueryArguments(allQueryArguments)
- * .body(BodyProperty.builder()
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .cookies(CookiesProperty.builder()
- * .matchPattern(CookieMatchPatternProperty.builder()
- * .all(all)
- * .excludedCookies(List.of("excludedCookies"))
- * .includedCookies(List.of("includedCookies"))
- * .build())
- * .matchScope("matchScope")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .headers(HeadersProperty.builder()
- * .matchPattern(HeaderMatchPatternProperty.builder()
- * .all(all)
- * .excludedHeaders(List.of("excludedHeaders"))
- * .includedHeaders(List.of("includedHeaders"))
- * .build())
- * .matchScope("matchScope")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .ja3Fingerprint(JA3FingerprintProperty.builder()
- * .fallbackBehavior("fallbackBehavior")
- * .build())
- * .jsonBody(JsonBodyProperty.builder()
- * .matchPattern(JsonMatchPatternProperty.builder()
- * .all(all)
- * .includedPaths(List.of("includedPaths"))
- * .build())
- * .matchScope("matchScope")
- * // the properties below are optional
- * .invalidFallbackBehavior("invalidFallbackBehavior")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .method(method)
- * .queryString(queryString)
- * .singleHeader(singleHeader)
- * .singleQueryArgument(singleQueryArgument)
- * .uriPath(uriPath)
- * .build())
- * .textTransformations(List.of(TextTransformationProperty.builder()
- * .priority(123)
- * .type("type")
- * .build()))
- * // the properties below are optional
- * .sensitivityLevel("sensitivityLevel")
- * .build())
- * .xssMatchStatement(XssMatchStatementProperty.builder()
- * .fieldToMatch(FieldToMatchProperty.builder()
- * .allQueryArguments(allQueryArguments)
- * .body(BodyProperty.builder()
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .cookies(CookiesProperty.builder()
- * .matchPattern(CookieMatchPatternProperty.builder()
- * .all(all)
- * .excludedCookies(List.of("excludedCookies"))
- * .includedCookies(List.of("includedCookies"))
- * .build())
- * .matchScope("matchScope")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .headers(HeadersProperty.builder()
- * .matchPattern(HeaderMatchPatternProperty.builder()
- * .all(all)
- * .excludedHeaders(List.of("excludedHeaders"))
- * .includedHeaders(List.of("includedHeaders"))
- * .build())
- * .matchScope("matchScope")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .ja3Fingerprint(JA3FingerprintProperty.builder()
- * .fallbackBehavior("fallbackBehavior")
- * .build())
- * .jsonBody(JsonBodyProperty.builder()
- * .matchPattern(JsonMatchPatternProperty.builder()
- * .all(all)
- * .includedPaths(List.of("includedPaths"))
- * .build())
- * .matchScope("matchScope")
- * // the properties below are optional
- * .invalidFallbackBehavior("invalidFallbackBehavior")
- * .oversizeHandling("oversizeHandling")
- * .build())
- * .method(method)
- * .queryString(queryString)
- * .singleHeader(singleHeader)
- * .singleQueryArgument(singleQueryArgument)
- * .uriPath(uriPath)
- * .build())
- * .textTransformations(List.of(TextTransformationProperty.builder()
- * .priority(123)
- * .type("type")
- * .build()))
- * .build())
- * .build())
- * .visibilityConfig(VisibilityConfigProperty.builder()
- * .cloudWatchMetricsEnabled(false)
- * .metricName("metricName")
- * .sampledRequestsEnabled(false)
- * .build())
- * // the properties below are optional
- * .action(RuleActionProperty.builder()
- * .allow(allow)
- * .block(block)
- * .captcha(captcha)
- * .challenge(challenge)
- * .count(count)
- * .build())
- * .captchaConfig(CaptchaConfigProperty.builder()
- * .immunityTimeProperty(ImmunityTimePropertyProperty.builder()
- * .immunityTime(123)
- * .build())
- * .build())
- * .challengeConfig(ChallengeConfigProperty.builder()
- * .immunityTimeProperty(ImmunityTimePropertyProperty.builder()
- * .immunityTime(123)
- * .build())
- * .build())
- * .ruleLabels(List.of(LabelProperty.builder()
- * .name("name")
- * .build()))
- * .build()))
- * .tags(List.of(CfnTag.builder()
- * .key("key")
- * .value("value")
- * .build()))
- * .build();
  * ```
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-rulegroup.html)
@@ -937,9 +482,10 @@ public open class CfnRuleGroup(
      * Specifies whether this is for an Amazon CloudFront distribution or for a regional
      * application.
      *
-     * A regional application can be an Application Load Balancer (ALB), an Amazon API Gateway REST
-     * API, an AWS AppSync GraphQL API, an Amazon Cognito user pool, an AWS App Runner service, or an
-     * AWS Verified Access instance. Valid Values are `CLOUDFRONT` and `REGIONAL` .
+     * For an AWS Amplify application, use `CLOUDFRONT` . A regional application can be an
+     * Application Load Balancer (ALB), an Amazon API Gateway REST API, an AWS AppSync GraphQL API, an
+     * Amazon Cognito user pool, an AWS App Runner service, or an AWS Verified Access instance. Valid
+     * Values are `CLOUDFRONT` and `REGIONAL` .
      *
      *
      * For `CLOUDFRONT` , you must create your WAFv2 resources in the US East (N. Virginia) Region,
@@ -1237,9 +783,10 @@ public open class CfnRuleGroup(
      * Specifies whether this is for an Amazon CloudFront distribution or for a regional
      * application.
      *
-     * A regional application can be an Application Load Balancer (ALB), an Amazon API Gateway REST
-     * API, an AWS AppSync GraphQL API, an Amazon Cognito user pool, an AWS App Runner service, or an
-     * AWS Verified Access instance. Valid Values are `CLOUDFRONT` and `REGIONAL` .
+     * For an AWS Amplify application, use `CLOUDFRONT` . A regional application can be an
+     * Application Load Balancer (ALB), an Amazon API Gateway REST API, an AWS AppSync GraphQL API, an
+     * Amazon Cognito user pool, an AWS App Runner service, or an AWS Verified Access instance. Valid
+     * Values are `CLOUDFRONT` and `REGIONAL` .
      *
      *
      * For `CLOUDFRONT` , you must create your WAFv2 resources in the US East (N. Virginia) Region,
@@ -1474,6 +1021,7 @@ public open class CfnRuleGroup(
    * Object all;
    * Object allQueryArguments;
    * AndStatementProperty andStatementProperty_;
+   * Object asn;
    * Object forwardedIp;
    * Object httpMethod;
    * Object ip;
@@ -1486,6 +1034,13 @@ public open class CfnRuleGroup(
    * AndStatementProperty andStatementProperty = AndStatementProperty.builder()
    * .statements(List.of(StatementProperty.builder()
    * .andStatement(andStatementProperty_)
+   * .asnMatchStatement(AsnMatchStatementProperty.builder()
+   * .asnList(List.of(123))
+   * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .headerName("headerName")
+   * .build())
+   * .build())
    * .byteMatchStatement(ByteMatchStatementProperty.builder()
    * .fieldToMatch(FieldToMatchProperty.builder()
    * .allQueryArguments(allQueryArguments)
@@ -1513,6 +1068,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -1527,6 +1085,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .positionalConstraint("positionalConstraint")
@@ -1567,6 +1128,7 @@ public open class CfnRuleGroup(
    * .limit(123)
    * // the properties below are optional
    * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
+   * .asn(asn)
    * .cookie(RateLimitCookieProperty.builder()
    * .name("name")
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -1584,6 +1146,12 @@ public open class CfnRuleGroup(
    * .build())
    * .httpMethod(httpMethod)
    * .ip(ip)
+   * .ja3Fingerprint(RateLimitJA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
+   * .ja4Fingerprint(RateLimitJA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
    * .namespace("namespace")
    * .build())
@@ -1641,6 +1209,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -1655,6 +1226,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .regexString("regexString")
@@ -1691,6 +1265,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -1705,6 +1282,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -1740,6 +1320,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -1754,6 +1337,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .size(123)
@@ -1789,6 +1375,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -1803,6 +1392,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -1839,6 +1431,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -1853,6 +1448,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -1960,6 +1558,217 @@ public open class CfnRuleGroup(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.AndStatementProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.AndStatementProperty
+    }
+  }
+
+  /**
+   * A rule statement that inspects web traffic based on the Autonomous System Number (ASN)
+   * associated with the request's IP address.
+   *
+   * For additional details, see [ASN match rule
+   * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+   * in the [AWS WAF Developer
+   * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * AsnMatchStatementProperty asnMatchStatementProperty = AsnMatchStatementProperty.builder()
+   * .asnList(List.of(123))
+   * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .headerName("headerName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-asnmatchstatement.html)
+   */
+  public interface AsnMatchStatementProperty {
+    /**
+     * Contains one or more Autonomous System Numbers (ASNs).
+     *
+     * ASNs are unique identifiers assigned to large internet networks managed by organizations such
+     * as internet service providers, enterprises, universities, or government agencies.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-asnmatchstatement.html#cfn-wafv2-rulegroup-asnmatchstatement-asnlist)
+     */
+    public fun asnList(): Any? = unwrap(this).getAsnList()
+
+    /**
+     * The configuration for inspecting IP addresses to match against an ASN in an HTTP header that
+     * you specify, instead of using the IP address that's reported by the web request origin.
+     *
+     * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-asnmatchstatement.html#cfn-wafv2-rulegroup-asnmatchstatement-forwardedipconfig)
+     */
+    public fun forwardedIpConfig(): Any? = unwrap(this).getForwardedIpConfig()
+
+    /**
+     * A builder for [AsnMatchStatementProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param asnList Contains one or more Autonomous System Numbers (ASNs).
+       * ASNs are unique identifiers assigned to large internet networks managed by organizations
+       * such as internet service providers, enterprises, universities, or government agencies.
+       */
+      public fun asnList(asnList: List<Number>)
+
+      /**
+       * @param asnList Contains one or more Autonomous System Numbers (ASNs).
+       * ASNs are unique identifiers assigned to large internet networks managed by organizations
+       * such as internet service providers, enterprises, universities, or government agencies.
+       */
+      public fun asnList(vararg asnList: Number)
+
+      /**
+       * @param asnList Contains one or more Autonomous System Numbers (ASNs).
+       * ASNs are unique identifiers assigned to large internet networks managed by organizations
+       * such as internet service providers, enterprises, universities, or government agencies.
+       */
+      public fun asnList(asnList: IResolvable)
+
+      /**
+       * @param forwardedIpConfig The configuration for inspecting IP addresses to match against an
+       * ASN in an HTTP header that you specify, instead of using the IP address that's reported by the
+       * web request origin.
+       * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+       */
+      public fun forwardedIpConfig(forwardedIpConfig: IResolvable)
+
+      /**
+       * @param forwardedIpConfig The configuration for inspecting IP addresses to match against an
+       * ASN in an HTTP header that you specify, instead of using the IP address that's reported by the
+       * web request origin.
+       * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+       */
+      public fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty)
+
+      /**
+       * @param forwardedIpConfig The configuration for inspecting IP addresses to match against an
+       * ASN in an HTTP header that you specify, instead of using the IP address that's reported by the
+       * web request origin.
+       * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aaff71592b4992871839779d5ebfe99ea599ed52e84d1c5f528f186c32f4d9f0")
+      public
+          fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.AsnMatchStatementProperty.Builder =
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.AsnMatchStatementProperty.builder()
+
+      /**
+       * @param asnList Contains one or more Autonomous System Numbers (ASNs).
+       * ASNs are unique identifiers assigned to large internet networks managed by organizations
+       * such as internet service providers, enterprises, universities, or government agencies.
+       */
+      override fun asnList(asnList: List<Number>) {
+        cdkBuilder.asnList(asnList)
+      }
+
+      /**
+       * @param asnList Contains one or more Autonomous System Numbers (ASNs).
+       * ASNs are unique identifiers assigned to large internet networks managed by organizations
+       * such as internet service providers, enterprises, universities, or government agencies.
+       */
+      override fun asnList(vararg asnList: Number): Unit = asnList(asnList.toList())
+
+      /**
+       * @param asnList Contains one or more Autonomous System Numbers (ASNs).
+       * ASNs are unique identifiers assigned to large internet networks managed by organizations
+       * such as internet service providers, enterprises, universities, or government agencies.
+       */
+      override fun asnList(asnList: IResolvable) {
+        cdkBuilder.asnList(asnList.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param forwardedIpConfig The configuration for inspecting IP addresses to match against an
+       * ASN in an HTTP header that you specify, instead of using the IP address that's reported by the
+       * web request origin.
+       * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+       */
+      override fun forwardedIpConfig(forwardedIpConfig: IResolvable) {
+        cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param forwardedIpConfig The configuration for inspecting IP addresses to match against an
+       * ASN in an HTTP header that you specify, instead of using the IP address that's reported by the
+       * web request origin.
+       * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+       */
+      override fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty) {
+        cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(ForwardedIPConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param forwardedIpConfig The configuration for inspecting IP addresses to match against an
+       * ASN in an HTTP header that you specify, instead of using the IP address that's reported by the
+       * web request origin.
+       * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aaff71592b4992871839779d5ebfe99ea599ed52e84d1c5f528f186c32f4d9f0")
+      override
+          fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty.Builder.() -> Unit):
+          Unit = forwardedIpConfig(ForwardedIPConfigurationProperty(forwardedIpConfig))
+
+      public fun build():
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.AsnMatchStatementProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.AsnMatchStatementProperty,
+    ) : CdkObject(cdkObject),
+        AsnMatchStatementProperty {
+      /**
+       * Contains one or more Autonomous System Numbers (ASNs).
+       *
+       * ASNs are unique identifiers assigned to large internet networks managed by organizations
+       * such as internet service providers, enterprises, universities, or government agencies.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-asnmatchstatement.html#cfn-wafv2-rulegroup-asnmatchstatement-asnlist)
+       */
+      override fun asnList(): Any? = unwrap(this).getAsnList()
+
+      /**
+       * The configuration for inspecting IP addresses to match against an ASN in an HTTP header
+       * that you specify, instead of using the IP address that's reported by the web request origin.
+       *
+       * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-asnmatchstatement.html#cfn-wafv2-rulegroup-asnmatchstatement-forwardedipconfig)
+       */
+      override fun forwardedIpConfig(): Any? = unwrap(this).getForwardedIpConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AsnMatchStatementProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.AsnMatchStatementProperty):
+          AsnMatchStatementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AsnMatchStatementProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AsnMatchStatementProperty):
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.AsnMatchStatementProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.AsnMatchStatementProperty
     }
   }
 
@@ -2109,6 +1918,7 @@ public open class CfnRuleGroup(
      * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
      * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the web
      * ACL `AssociationConfig` , for additional processing fees.
+     * * For AWS Amplify , use the CloudFront limit.
      *
      * The options for oversize handling are the following:
      *
@@ -2144,6 +1954,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * The options for oversize handling are the following:
        *
@@ -2178,6 +1989,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * The options for oversize handling are the following:
        *
@@ -2216,6 +2028,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * The options for oversize handling are the following:
        *
@@ -2298,6 +2111,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -2312,6 +2128,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .positionalConstraint("positionalConstraint")
@@ -4564,8 +4383,8 @@ public open class CfnRuleGroup(
    * web request component to inspect, but for field redaction, you are specifying the component type
    * to redact from the logs.
    * * If you have request sampling enabled, the redacted fields configuration for logging has no
-   * impact on sampling. The only way to exclude fields from request sampling is by disabling sampling
-   * in the web ACL visibility configuration.
+   * impact on sampling. You can only exclude fields from request sampling by disabling sampling in the
+   * web ACL visibility configuration or by configuring data protection for the web ACL.
    *
    * Example:
    *
@@ -4606,6 +4425,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -4620,6 +4442,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build();
    * ```
@@ -4650,6 +4475,7 @@ public open class CfnRuleGroup(
      * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
      * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the web
      * ACL `AssociationConfig` , for additional processing fees.
+     * * For AWS Amplify , use the CloudFront limit.
      *
      * For information about how to handle oversized request bodies, see the `Body` object
      * configuration.
@@ -4716,6 +4542,33 @@ public open class CfnRuleGroup(
     public fun ja3Fingerprint(): Any? = unwrap(this).getJa3Fingerprint()
 
     /**
+     * Available for use with Amazon CloudFront distributions and Application Load Balancers.
+     *
+     * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash
+     * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+     * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint for
+     * each request that has enough TLS Client Hello information for the calculation. Almost all web
+     * requests include this information.
+     *
+     *
+     * You can use this choice only with a string match `ByteMatchStatement` with the
+     * `PositionalConstraint` set to `EXACTLY` .
+     *
+     *
+     * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+     * able to calculate the fingerprint, it includes it in the logs. For information about the logging
+     * fields, see [Log
+     * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+     * WAF Developer Guide* .
+     *
+     * Provide the JA4 fingerprint string from the logs in your string match statement
+     * specification, to match with any future requests that have the same TLS configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-fieldtomatch.html#cfn-wafv2-rulegroup-fieldtomatch-ja4fingerprint)
+     */
+    public fun ja4Fingerprint(): Any? = unwrap(this).getJa4Fingerprint()
+
+    /**
      * Inspect the request body as JSON.
      *
      * The request body immediately follows the request headers. This is the part of a request that
@@ -4731,6 +4584,7 @@ public open class CfnRuleGroup(
      * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
      * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the web
      * ACL `AssociationConfig` , for additional processing fees.
+     * * For AWS Amplify , use the CloudFront limit.
      *
      * For information about how to handle oversized request bodies, see the `JsonBody` object
      * configuration.
@@ -4785,6 +4639,22 @@ public open class CfnRuleGroup(
     public fun singleQueryArgument(): Any? = unwrap(this).getSingleQueryArgument()
 
     /**
+     * Inspect fragments of the request URI.
+     *
+     * You must configure scope and pattern matching filters in the `UriFragment` object, to define
+     * the fragment of a URI that AWS WAF inspects.
+     *
+     * Only the first 8 KB (8192 bytes) of a request's URI fragments and only the first 200 URI
+     * fragments are forwarded to AWS WAF for inspection by the underlying host service. You must
+     * configure how to handle any oversize URI fragment content in the `UriFragment` object. AWS WAF
+     * applies the pattern matching filters to the cookies that it receives from the underlying host
+     * service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-fieldtomatch.html#cfn-wafv2-rulegroup-fieldtomatch-urifragment)
+     */
+    public fun uriFragment(): Any? = unwrap(this).getUriFragment()
+
+    /**
      * Inspect the request URI path.
      *
      * This is the part of the web request that identifies a resource, for example,
@@ -4819,6 +4689,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -4840,6 +4711,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -4861,6 +4733,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -5023,6 +4896,83 @@ public open class CfnRuleGroup(
       public fun ja3Fingerprint(ja3Fingerprint: JA3FingerprintProperty.Builder.() -> Unit)
 
       /**
+       * @param ja4Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA4 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      public fun ja4Fingerprint(ja4Fingerprint: IResolvable)
+
+      /**
+       * @param ja4Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA4 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      public fun ja4Fingerprint(ja4Fingerprint: JA4FingerprintProperty)
+
+      /**
+       * @param ja4Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA4 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3d35b652c4ddd507d75577e78d9b55fcb2bcbe6c6dedeb9559beb085716d73f2")
+      public fun ja4Fingerprint(ja4Fingerprint: JA4FingerprintProperty.Builder.() -> Unit)
+
+      /**
        * @param jsonBody Inspect the request body as JSON.
        * The request body immediately follows the request headers. This is the part of a request
        * that contains any additional data that you want to send to your web server as the HTTP request
@@ -5037,6 +4987,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -5058,6 +5009,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -5079,6 +5031,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -5122,6 +5075,47 @@ public open class CfnRuleGroup(
       public fun singleQueryArgument(singleQueryArgument: Any)
 
       /**
+       * @param uriFragment Inspect fragments of the request URI.
+       * You must configure scope and pattern matching filters in the `UriFragment` object, to
+       * define the fragment of a URI that AWS WAF inspects.
+       *
+       * Only the first 8 KB (8192 bytes) of a request's URI fragments and only the first 200 URI
+       * fragments are forwarded to AWS WAF for inspection by the underlying host service. You must
+       * configure how to handle any oversize URI fragment content in the `UriFragment` object. AWS WAF
+       * applies the pattern matching filters to the cookies that it receives from the underlying host
+       * service.
+       */
+      public fun uriFragment(uriFragment: IResolvable)
+
+      /**
+       * @param uriFragment Inspect fragments of the request URI.
+       * You must configure scope and pattern matching filters in the `UriFragment` object, to
+       * define the fragment of a URI that AWS WAF inspects.
+       *
+       * Only the first 8 KB (8192 bytes) of a request's URI fragments and only the first 200 URI
+       * fragments are forwarded to AWS WAF for inspection by the underlying host service. You must
+       * configure how to handle any oversize URI fragment content in the `UriFragment` object. AWS WAF
+       * applies the pattern matching filters to the cookies that it receives from the underlying host
+       * service.
+       */
+      public fun uriFragment(uriFragment: UriFragmentProperty)
+
+      /**
+       * @param uriFragment Inspect fragments of the request URI.
+       * You must configure scope and pattern matching filters in the `UriFragment` object, to
+       * define the fragment of a URI that AWS WAF inspects.
+       *
+       * Only the first 8 KB (8192 bytes) of a request's URI fragments and only the first 200 URI
+       * fragments are forwarded to AWS WAF for inspection by the underlying host service. You must
+       * configure how to handle any oversize URI fragment content in the `UriFragment` object. AWS WAF
+       * applies the pattern matching filters to the cookies that it receives from the underlying host
+       * service.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ce1827507f0ade550ba1bfa7ca6cdfdf541a0a87ef786a6d9bc6b44f98972be4")
+      public fun uriFragment(uriFragment: UriFragmentProperty.Builder.() -> Unit)
+
+      /**
        * @param uriPath Inspect the request URI path.
        * This is the part of the web request that identifies a resource, for example,
        * `/images/daily-ad.jpg` .
@@ -5156,6 +5150,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -5179,6 +5174,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -5202,6 +5198,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -5379,6 +5376,88 @@ public open class CfnRuleGroup(
           ja3Fingerprint(JA3FingerprintProperty(ja3Fingerprint))
 
       /**
+       * @param ja4Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA4 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      override fun ja4Fingerprint(ja4Fingerprint: IResolvable) {
+        cdkBuilder.ja4Fingerprint(ja4Fingerprint.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ja4Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA4 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      override fun ja4Fingerprint(ja4Fingerprint: JA4FingerprintProperty) {
+        cdkBuilder.ja4Fingerprint(ja4Fingerprint.let(JA4FingerprintProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param ja4Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA4 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3d35b652c4ddd507d75577e78d9b55fcb2bcbe6c6dedeb9559beb085716d73f2")
+      override fun ja4Fingerprint(ja4Fingerprint: JA4FingerprintProperty.Builder.() -> Unit): Unit =
+          ja4Fingerprint(JA4FingerprintProperty(ja4Fingerprint))
+
+      /**
        * @param jsonBody Inspect the request body as JSON.
        * The request body immediately follows the request headers. This is the part of a request
        * that contains any additional data that you want to send to your web server as the HTTP request
@@ -5393,6 +5472,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -5416,6 +5496,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -5439,6 +5520,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -5491,6 +5573,52 @@ public open class CfnRuleGroup(
       }
 
       /**
+       * @param uriFragment Inspect fragments of the request URI.
+       * You must configure scope and pattern matching filters in the `UriFragment` object, to
+       * define the fragment of a URI that AWS WAF inspects.
+       *
+       * Only the first 8 KB (8192 bytes) of a request's URI fragments and only the first 200 URI
+       * fragments are forwarded to AWS WAF for inspection by the underlying host service. You must
+       * configure how to handle any oversize URI fragment content in the `UriFragment` object. AWS WAF
+       * applies the pattern matching filters to the cookies that it receives from the underlying host
+       * service.
+       */
+      override fun uriFragment(uriFragment: IResolvable) {
+        cdkBuilder.uriFragment(uriFragment.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param uriFragment Inspect fragments of the request URI.
+       * You must configure scope and pattern matching filters in the `UriFragment` object, to
+       * define the fragment of a URI that AWS WAF inspects.
+       *
+       * Only the first 8 KB (8192 bytes) of a request's URI fragments and only the first 200 URI
+       * fragments are forwarded to AWS WAF for inspection by the underlying host service. You must
+       * configure how to handle any oversize URI fragment content in the `UriFragment` object. AWS WAF
+       * applies the pattern matching filters to the cookies that it receives from the underlying host
+       * service.
+       */
+      override fun uriFragment(uriFragment: UriFragmentProperty) {
+        cdkBuilder.uriFragment(uriFragment.let(UriFragmentProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param uriFragment Inspect fragments of the request URI.
+       * You must configure scope and pattern matching filters in the `UriFragment` object, to
+       * define the fragment of a URI that AWS WAF inspects.
+       *
+       * Only the first 8 KB (8192 bytes) of a request's URI fragments and only the first 200 URI
+       * fragments are forwarded to AWS WAF for inspection by the underlying host service. You must
+       * configure how to handle any oversize URI fragment content in the `UriFragment` object. AWS WAF
+       * applies the pattern matching filters to the cookies that it receives from the underlying host
+       * service.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ce1827507f0ade550ba1bfa7ca6cdfdf541a0a87ef786a6d9bc6b44f98972be4")
+      override fun uriFragment(uriFragment: UriFragmentProperty.Builder.() -> Unit): Unit =
+          uriFragment(UriFragmentProperty(uriFragment))
+
+      /**
        * @param uriPath Inspect the request URI path.
        * This is the part of the web request that identifies a resource, for example,
        * `/images/daily-ad.jpg` .
@@ -5530,6 +5658,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -5596,6 +5725,33 @@ public open class CfnRuleGroup(
       override fun ja3Fingerprint(): Any? = unwrap(this).getJa3Fingerprint()
 
       /**
+       * Available for use with Amazon CloudFront distributions and Application Load Balancers.
+       *
+       * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
+       *
+       *
+       * You can use this choice only with a string match `ByteMatchStatement` with the
+       * `PositionalConstraint` set to `EXACTLY` .
+       *
+       *
+       * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+       * able to calculate the fingerprint, it includes it in the logs. For information about the
+       * logging fields, see [Log
+       * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS
+       * WAF Developer Guide* .
+       *
+       * Provide the JA4 fingerprint string from the logs in your string match statement
+       * specification, to match with any future requests that have the same TLS configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-fieldtomatch.html#cfn-wafv2-rulegroup-fieldtomatch-ja4fingerprint)
+       */
+      override fun ja4Fingerprint(): Any? = unwrap(this).getJa4Fingerprint()
+
+      /**
        * Inspect the request body as JSON.
        *
        * The request body immediately follows the request headers. This is the part of a request
@@ -5611,6 +5767,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -5666,6 +5823,22 @@ public open class CfnRuleGroup(
       override fun singleQueryArgument(): Any? = unwrap(this).getSingleQueryArgument()
 
       /**
+       * Inspect fragments of the request URI.
+       *
+       * You must configure scope and pattern matching filters in the `UriFragment` object, to
+       * define the fragment of a URI that AWS WAF inspects.
+       *
+       * Only the first 8 KB (8192 bytes) of a request's URI fragments and only the first 200 URI
+       * fragments are forwarded to AWS WAF for inspection by the underlying host service. You must
+       * configure how to handle any oversize URI fragment content in the `UriFragment` object. AWS WAF
+       * applies the pattern matching filters to the cookies that it receives from the underlying host
+       * service.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-fieldtomatch.html#cfn-wafv2-rulegroup-fieldtomatch-urifragment)
+       */
+      override fun uriFragment(): Any? = unwrap(this).getUriFragment()
+
+      /**
        * Inspect the request URI path.
        *
        * This is the part of the web request that identifies a resource, for example,
@@ -5705,8 +5878,8 @@ public open class CfnRuleGroup(
    * request at all.
    *
    *
-   * This configuration is used for `GeoMatchStatement` and `RateBasedStatement` . For
-   * `IPSetReferenceStatement` , use `IPSetForwardedIPConfig` instead.
+   * This configuration is used for `GeoMatchStatement` , `AsnMatchStatement` , and
+   * `RateBasedStatement` . For `IPSetReferenceStatement` , use `IPSetForwardedIPConfig` instead.
    *
    * AWS WAF only evaluates the first IP address found in the specified HTTP header.
    *
@@ -6397,8 +6570,8 @@ public open class CfnRuleGroup(
     public fun matchScope(): String
 
     /**
-     * What AWS WAF should do if the headers of the request are more numerous or larger than AWS WAF
-     * can inspect.
+     * What AWS WAF should do if the headers determined by your match scope are more numerous or
+     * larger than AWS WAF can inspect.
      *
      * AWS WAF does not support inspecting the entire contents of request headers when they exceed 8
      * KB (8192 bytes) or 200 total headers. The underlying host service forwards a maximum of 200
@@ -6465,8 +6638,8 @@ public open class CfnRuleGroup(
       public fun matchScope(matchScope: String)
 
       /**
-       * @param oversizeHandling What AWS WAF should do if the headers of the request are more
-       * numerous or larger than AWS WAF can inspect. 
+       * @param oversizeHandling What AWS WAF should do if the headers determined by your match
+       * scope are more numerous or larger than AWS WAF can inspect. 
        * AWS WAF does not support inspecting the entire contents of request headers when they exceed
        * 8 KB (8192 bytes) or 200 total headers. The underlying host service forwards a maximum of 200
        * headers and at most 8 KB of header contents to AWS WAF .
@@ -6538,8 +6711,8 @@ public open class CfnRuleGroup(
       }
 
       /**
-       * @param oversizeHandling What AWS WAF should do if the headers of the request are more
-       * numerous or larger than AWS WAF can inspect. 
+       * @param oversizeHandling What AWS WAF should do if the headers determined by your match
+       * scope are more numerous or larger than AWS WAF can inspect. 
        * AWS WAF does not support inspecting the entire contents of request headers when they exceed
        * 8 KB (8192 bytes) or 200 total headers. The underlying host service forwards a maximum of 200
        * headers and at most 8 KB of header contents to AWS WAF .
@@ -6591,8 +6764,8 @@ public open class CfnRuleGroup(
       override fun matchScope(): String = unwrap(this).getMatchScope()
 
       /**
-       * What AWS WAF should do if the headers of the request are more numerous or larger than AWS
-       * WAF can inspect.
+       * What AWS WAF should do if the headers determined by your match scope are more numerous or
+       * larger than AWS WAF can inspect.
        *
        * AWS WAF does not support inspecting the entire contents of request headers when they exceed
        * 8 KB (8192 bytes) or 200 total headers. The underlying host service forwards a maximum of 200
@@ -7337,6 +7510,132 @@ public open class CfnRuleGroup(
   }
 
   /**
+   * Available for use with Amazon CloudFront distributions and Application Load Balancers.
+   *
+   * Match against the request's JA4 fingerprint. The JA4 fingerprint is a 36-character hash derived
+   * from the TLS Client Hello of an incoming request. This fingerprint serves as a unique identifier
+   * for the client's TLS configuration. AWS WAF calculates and logs this fingerprint for each request
+   * that has enough TLS Client Hello information for the calculation. Almost all web requests include
+   * this information.
+   *
+   *
+   * You can use this choice only with a string match `ByteMatchStatement` with the
+   * `PositionalConstraint` set to `EXACTLY` .
+   *
+   *
+   * You can obtain the JA4 fingerprint for client requests from the web ACL logs. If AWS WAF is
+   * able to calculate the fingerprint, it includes it in the logs. For information about the logging
+   * fields, see [Log
+   * fields](https://docs.aws.amazon.com/waf/latest/developerguide/logging-fields.html) in the *AWS WAF
+   * Developer Guide* .
+   *
+   * Provide the JA4 fingerprint string from the logs in your string match statement specification,
+   * to match with any future requests that have the same TLS configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * JA4FingerprintProperty jA4FingerprintProperty = JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ja4fingerprint.html)
+   */
+  public interface JA4FingerprintProperty {
+    /**
+     * The match status to assign to the web request if the request doesn't have a JA4 fingerprint.
+     *
+     * You can specify the following fallback behaviors:
+     *
+     * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+     * action to the request.
+     * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ja4fingerprint.html#cfn-wafv2-rulegroup-ja4fingerprint-fallbackbehavior)
+     */
+    public fun fallbackBehavior(): String
+
+    /**
+     * A builder for [JA4FingerprintProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fallbackBehavior The match status to assign to the web request if the request
+       * doesn't have a JA4 fingerprint. 
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       */
+      public fun fallbackBehavior(fallbackBehavior: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.JA4FingerprintProperty.Builder =
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.JA4FingerprintProperty.builder()
+
+      /**
+       * @param fallbackBehavior The match status to assign to the web request if the request
+       * doesn't have a JA4 fingerprint. 
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       */
+      override fun fallbackBehavior(fallbackBehavior: String) {
+        cdkBuilder.fallbackBehavior(fallbackBehavior)
+      }
+
+      public fun build(): software.amazon.awscdk.services.wafv2.CfnRuleGroup.JA4FingerprintProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.JA4FingerprintProperty,
+    ) : CdkObject(cdkObject),
+        JA4FingerprintProperty {
+      /**
+       * The match status to assign to the web request if the request doesn't have a JA4
+       * fingerprint.
+       *
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ja4fingerprint.html#cfn-wafv2-rulegroup-ja4fingerprint-fallbackbehavior)
+       */
+      override fun fallbackBehavior(): String = unwrap(this).getFallbackBehavior()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JA4FingerprintProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.JA4FingerprintProperty):
+          JA4FingerprintProperty = CdkObjectWrappers.wrap(cdkObject) as? JA4FingerprintProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JA4FingerprintProperty):
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.JA4FingerprintProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.JA4FingerprintProperty
+    }
+  }
+
+  /**
    * Inspect the body of the web request as JSON. The body immediately follows the request headers.
    *
    * This is used to indicate the web request component to inspect, in the `FieldToMatch`
@@ -7435,6 +7734,7 @@ public open class CfnRuleGroup(
      * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
      * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the web
      * ACL `AssociationConfig` , for additional processing fees.
+     * * For AWS Amplify , use the CloudFront limit.
      *
      * The options for oversize handling are the following:
      *
@@ -7523,6 +7823,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * The options for oversize handling are the following:
        *
@@ -7619,6 +7920,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * The options for oversize handling are the following:
        *
@@ -7706,6 +8008,7 @@ public open class CfnRuleGroup(
        * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
        * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
        * web ACL `AssociationConfig` , for additional processing fees.
+       * * For AWS Amplify , use the CloudFront limit.
        *
        * The options for oversize handling are the following:
        *
@@ -8282,6 +8585,7 @@ public open class CfnRuleGroup(
    * import io.cloudshiftdev.awscdk.services.wafv2.*;
    * Object all;
    * Object allQueryArguments;
+   * Object asn;
    * Object forwardedIp;
    * Object httpMethod;
    * Object ip;
@@ -8296,6 +8600,13 @@ public open class CfnRuleGroup(
    * .statement(StatementProperty.builder()
    * .andStatement(AndStatementProperty.builder()
    * .statements(List.of(statementProperty_))
+   * .build())
+   * .asnMatchStatement(AsnMatchStatementProperty.builder()
+   * .asnList(List.of(123))
+   * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .headerName("headerName")
+   * .build())
    * .build())
    * .byteMatchStatement(ByteMatchStatementProperty.builder()
    * .fieldToMatch(FieldToMatchProperty.builder()
@@ -8324,6 +8635,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -8338,6 +8652,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .positionalConstraint("positionalConstraint")
@@ -8376,6 +8693,7 @@ public open class CfnRuleGroup(
    * .limit(123)
    * // the properties below are optional
    * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
+   * .asn(asn)
    * .cookie(RateLimitCookieProperty.builder()
    * .name("name")
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -8393,6 +8711,12 @@ public open class CfnRuleGroup(
    * .build())
    * .httpMethod(httpMethod)
    * .ip(ip)
+   * .ja3Fingerprint(RateLimitJA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
+   * .ja4Fingerprint(RateLimitJA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
    * .namespace("namespace")
    * .build())
@@ -8450,6 +8774,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -8464,6 +8791,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .regexString("regexString")
@@ -8500,6 +8830,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -8514,6 +8847,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -8549,6 +8885,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -8563,6 +8902,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .size(123)
@@ -8598,6 +8940,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -8612,6 +8957,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -8648,6 +8996,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -8662,6 +9013,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -8790,6 +9144,7 @@ public open class CfnRuleGroup(
    * import io.cloudshiftdev.awscdk.services.wafv2.*;
    * Object all;
    * Object allQueryArguments;
+   * Object asn;
    * Object forwardedIp;
    * Object httpMethod;
    * Object ip;
@@ -8804,6 +9159,13 @@ public open class CfnRuleGroup(
    * .statements(List.of(StatementProperty.builder()
    * .andStatement(AndStatementProperty.builder()
    * .statements(List.of(statementProperty_))
+   * .build())
+   * .asnMatchStatement(AsnMatchStatementProperty.builder()
+   * .asnList(List.of(123))
+   * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .headerName("headerName")
+   * .build())
    * .build())
    * .byteMatchStatement(ByteMatchStatementProperty.builder()
    * .fieldToMatch(FieldToMatchProperty.builder()
@@ -8832,6 +9194,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -8846,6 +9211,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .positionalConstraint("positionalConstraint")
@@ -8884,6 +9252,7 @@ public open class CfnRuleGroup(
    * .limit(123)
    * // the properties below are optional
    * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
+   * .asn(asn)
    * .cookie(RateLimitCookieProperty.builder()
    * .name("name")
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -8901,6 +9270,12 @@ public open class CfnRuleGroup(
    * .build())
    * .httpMethod(httpMethod)
    * .ip(ip)
+   * .ja3Fingerprint(RateLimitJA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
+   * .ja4Fingerprint(RateLimitJA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
    * .namespace("namespace")
    * .build())
@@ -8958,6 +9333,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -8972,6 +9350,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .regexString("regexString")
@@ -9008,6 +9389,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -9022,6 +9406,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -9057,6 +9444,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -9071,6 +9461,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .size(123)
@@ -9106,6 +9499,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -9120,6 +9516,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -9156,6 +9555,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -9170,6 +9572,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -9294,11 +9699,13 @@ public open class CfnRuleGroup(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * Object asn;
    * Object forwardedIp;
    * Object httpMethod;
    * Object ip;
    * RateBasedStatementCustomKeyProperty rateBasedStatementCustomKeyProperty =
    * RateBasedStatementCustomKeyProperty.builder()
+   * .asn(asn)
    * .cookie(RateLimitCookieProperty.builder()
    * .name("name")
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -9316,6 +9723,12 @@ public open class CfnRuleGroup(
    * .build())
    * .httpMethod(httpMethod)
    * .ip(ip)
+   * .ja3Fingerprint(RateLimitJA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
+   * .ja4Fingerprint(RateLimitJA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
    * .namespace("namespace")
    * .build())
@@ -9344,6 +9757,16 @@ public open class CfnRuleGroup(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratebasedstatementcustomkey.html)
    */
   public interface RateBasedStatementCustomKeyProperty {
+    /**
+     * Use an Autonomous System Number (ASN) derived from the request's originating or forwarded IP
+     * address as an aggregate key.
+     *
+     * Each distinct ASN contributes to the aggregation instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratebasedstatementcustomkey.html#cfn-wafv2-rulegroup-ratebasedstatementcustomkey-asn)
+     */
+    public fun asn(): Any? = unwrap(this).getAsn()
+
     /**
      * Use the value of a cookie in the request as an aggregate key.
      *
@@ -9403,6 +9826,26 @@ public open class CfnRuleGroup(
     public fun ip(): Any? = unwrap(this).getIp()
 
     /**
+     * Use the request's JA3 fingerprint as an aggregate key.
+     *
+     * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+     * aggregation instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratebasedstatementcustomkey.html#cfn-wafv2-rulegroup-ratebasedstatementcustomkey-ja3fingerprint)
+     */
+    public fun ja3Fingerprint(): Any? = unwrap(this).getJa3Fingerprint()
+
+    /**
+     * Use the request's JA4 fingerprint as an aggregate key.
+     *
+     * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+     * aggregation instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratebasedstatementcustomkey.html#cfn-wafv2-rulegroup-ratebasedstatementcustomkey-ja4fingerprint)
+     */
+    public fun ja4Fingerprint(): Any? = unwrap(this).getJa4Fingerprint()
+
+    /**
      * Use the specified label namespace as an aggregate key.
      *
      * Each distinct fully qualified label name that has the specified label namespace contributes
@@ -9456,6 +9899,13 @@ public open class CfnRuleGroup(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param asn Use an Autonomous System Number (ASN) derived from the request's originating or
+       * forwarded IP address as an aggregate key.
+       * Each distinct ASN contributes to the aggregation instance.
+       */
+      public fun asn(asn: Any)
+
       /**
        * @param cookie Use the value of a cookie in the request as an aggregate key.
        * Each distinct value in the cookie contributes to the aggregation instance. If you use a
@@ -9530,6 +9980,52 @@ public open class CfnRuleGroup(
        * your rate-based statement's `AggregateKeyType` .
        */
       public fun ip(ip: Any)
+
+      /**
+       * @param ja3Fingerprint Use the request's JA3 fingerprint as an aggregate key.
+       * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      public fun ja3Fingerprint(ja3Fingerprint: IResolvable)
+
+      /**
+       * @param ja3Fingerprint Use the request's JA3 fingerprint as an aggregate key.
+       * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      public fun ja3Fingerprint(ja3Fingerprint: RateLimitJA3FingerprintProperty)
+
+      /**
+       * @param ja3Fingerprint Use the request's JA3 fingerprint as an aggregate key.
+       * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("77953b30d993ad56ac90db8b8cce88a51076a8ea86417ea0b2433ce46ae6e69a")
+      public fun ja3Fingerprint(ja3Fingerprint: RateLimitJA3FingerprintProperty.Builder.() -> Unit)
+
+      /**
+       * @param ja4Fingerprint Use the request's JA4 fingerprint as an aggregate key.
+       * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      public fun ja4Fingerprint(ja4Fingerprint: IResolvable)
+
+      /**
+       * @param ja4Fingerprint Use the request's JA4 fingerprint as an aggregate key.
+       * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      public fun ja4Fingerprint(ja4Fingerprint: RateLimitJA4FingerprintProperty)
+
+      /**
+       * @param ja4Fingerprint Use the request's JA4 fingerprint as an aggregate key.
+       * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fba0a60394642c2d7b0dbf2f81d5bd5b3a522bb880e1e9c3084c52128a53d478")
+      public fun ja4Fingerprint(ja4Fingerprint: RateLimitJA4FingerprintProperty.Builder.() -> Unit)
 
       /**
        * @param labelNamespace Use the specified label namespace as an aggregate key.
@@ -9658,6 +10154,15 @@ public open class CfnRuleGroup(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateBasedStatementCustomKeyProperty.builder()
 
       /**
+       * @param asn Use an Autonomous System Number (ASN) derived from the request's originating or
+       * forwarded IP address as an aggregate key.
+       * Each distinct ASN contributes to the aggregation instance.
+       */
+      override fun asn(asn: Any) {
+        cdkBuilder.asn(asn)
+      }
+
+      /**
        * @param cookie Use the value of a cookie in the request as an aggregate key.
        * Each distinct value in the cookie contributes to the aggregation instance. If you use a
        * single cookie as your custom key, then each value fully defines an aggregation instance.
@@ -9747,6 +10252,64 @@ public open class CfnRuleGroup(
       override fun ip(ip: Any) {
         cdkBuilder.ip(ip)
       }
+
+      /**
+       * @param ja3Fingerprint Use the request's JA3 fingerprint as an aggregate key.
+       * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      override fun ja3Fingerprint(ja3Fingerprint: IResolvable) {
+        cdkBuilder.ja3Fingerprint(ja3Fingerprint.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ja3Fingerprint Use the request's JA3 fingerprint as an aggregate key.
+       * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      override fun ja3Fingerprint(ja3Fingerprint: RateLimitJA3FingerprintProperty) {
+        cdkBuilder.ja3Fingerprint(ja3Fingerprint.let(RateLimitJA3FingerprintProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param ja3Fingerprint Use the request's JA3 fingerprint as an aggregate key.
+       * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("77953b30d993ad56ac90db8b8cce88a51076a8ea86417ea0b2433ce46ae6e69a")
+      override
+          fun ja3Fingerprint(ja3Fingerprint: RateLimitJA3FingerprintProperty.Builder.() -> Unit):
+          Unit = ja3Fingerprint(RateLimitJA3FingerprintProperty(ja3Fingerprint))
+
+      /**
+       * @param ja4Fingerprint Use the request's JA4 fingerprint as an aggregate key.
+       * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      override fun ja4Fingerprint(ja4Fingerprint: IResolvable) {
+        cdkBuilder.ja4Fingerprint(ja4Fingerprint.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ja4Fingerprint Use the request's JA4 fingerprint as an aggregate key.
+       * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      override fun ja4Fingerprint(ja4Fingerprint: RateLimitJA4FingerprintProperty) {
+        cdkBuilder.ja4Fingerprint(ja4Fingerprint.let(RateLimitJA4FingerprintProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param ja4Fingerprint Use the request's JA4 fingerprint as an aggregate key.
+       * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fba0a60394642c2d7b0dbf2f81d5bd5b3a522bb880e1e9c3084c52128a53d478")
+      override
+          fun ja4Fingerprint(ja4Fingerprint: RateLimitJA4FingerprintProperty.Builder.() -> Unit):
+          Unit = ja4Fingerprint(RateLimitJA4FingerprintProperty(ja4Fingerprint))
 
       /**
        * @param labelNamespace Use the specified label namespace as an aggregate key.
@@ -9898,6 +10461,16 @@ public open class CfnRuleGroup(
     ) : CdkObject(cdkObject),
         RateBasedStatementCustomKeyProperty {
       /**
+       * Use an Autonomous System Number (ASN) derived from the request's originating or forwarded
+       * IP address as an aggregate key.
+       *
+       * Each distinct ASN contributes to the aggregation instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratebasedstatementcustomkey.html#cfn-wafv2-rulegroup-ratebasedstatementcustomkey-asn)
+       */
+      override fun asn(): Any? = unwrap(this).getAsn()
+
+      /**
        * Use the value of a cookie in the request as an aggregate key.
        *
        * Each distinct value in the cookie contributes to the aggregation instance. If you use a
@@ -9954,6 +10527,26 @@ public open class CfnRuleGroup(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratebasedstatementcustomkey.html#cfn-wafv2-rulegroup-ratebasedstatementcustomkey-ip)
        */
       override fun ip(): Any? = unwrap(this).getIp()
+
+      /**
+       * Use the request's JA3 fingerprint as an aggregate key.
+       *
+       * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratebasedstatementcustomkey.html#cfn-wafv2-rulegroup-ratebasedstatementcustomkey-ja3fingerprint)
+       */
+      override fun ja3Fingerprint(): Any? = unwrap(this).getJa3Fingerprint()
+
+      /**
+       * Use the request's JA4 fingerprint as an aggregate key.
+       *
+       * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+       * aggregation instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratebasedstatementcustomkey.html#cfn-wafv2-rulegroup-ratebasedstatementcustomkey-ja4fingerprint)
+       */
+      override fun ja4Fingerprint(): Any? = unwrap(this).getJa4Fingerprint()
 
       /**
        * Use the specified label namespace as an aggregate key.
@@ -10110,6 +10703,7 @@ public open class CfnRuleGroup(
    * import io.cloudshiftdev.awscdk.services.wafv2.*;
    * Object all;
    * Object allQueryArguments;
+   * Object asn;
    * Object forwardedIp;
    * Object httpMethod;
    * Object ip;
@@ -10125,6 +10719,7 @@ public open class CfnRuleGroup(
    * .limit(123)
    * // the properties below are optional
    * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
+   * .asn(asn)
    * .cookie(RateLimitCookieProperty.builder()
    * .name("name")
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -10142,6 +10737,12 @@ public open class CfnRuleGroup(
    * .build())
    * .httpMethod(httpMethod)
    * .ip(ip)
+   * .ja3Fingerprint(RateLimitJA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
+   * .ja4Fingerprint(RateLimitJA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
    * .namespace("namespace")
    * .build())
@@ -10174,6 +10775,13 @@ public open class CfnRuleGroup(
    * .andStatement(AndStatementProperty.builder()
    * .statements(List.of(statementProperty_))
    * .build())
+   * .asnMatchStatement(AsnMatchStatementProperty.builder()
+   * .asnList(List.of(123))
+   * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .headerName("headerName")
+   * .build())
+   * .build())
    * .byteMatchStatement(ByteMatchStatementProperty.builder()
    * .fieldToMatch(FieldToMatchProperty.builder()
    * .allQueryArguments(allQueryArguments)
@@ -10201,6 +10809,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -10215,6 +10826,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .positionalConstraint("positionalConstraint")
@@ -10278,6 +10892,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -10292,6 +10909,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .regexString("regexString")
@@ -10328,6 +10948,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -10342,6 +10965,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -10377,6 +11003,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -10391,6 +11020,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .size(123)
@@ -10426,6 +11058,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -10440,6 +11075,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -10476,6 +11114,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -10490,6 +11131,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -10585,8 +11229,8 @@ public open class CfnRuleGroup(
     public fun forwardedIpConfig(): Any? = unwrap(this).getForwardedIpConfig()
 
     /**
-     * The limit on requests per 5-minute period for a single aggregation instance for the
-     * rate-based rule.
+     * The limit on requests during the specified evaluation window for a single aggregation
+     * instance for the rate-based rule.
      *
      * If the rate-based statement includes a `ScopeDownStatement` , this limit is applied only to
      * the requests that match the statement.
@@ -10731,8 +11375,8 @@ public open class CfnRuleGroup(
           fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param limit The limit on requests per 5-minute period for a single aggregation instance
-       * for the rate-based rule. 
+       * @param limit The limit on requests during the specified evaluation window for a single
+       * aggregation instance for the rate-based rule. 
        * If the rate-based statement includes a `ScopeDownStatement` , this limit is applied only to
        * the requests that match the statement.
        *
@@ -10908,8 +11552,8 @@ public open class CfnRuleGroup(
           Unit = forwardedIpConfig(ForwardedIPConfigurationProperty(forwardedIpConfig))
 
       /**
-       * @param limit The limit on requests per 5-minute period for a single aggregation instance
-       * for the rate-based rule. 
+       * @param limit The limit on requests during the specified evaluation window for a single
+       * aggregation instance for the rate-based rule. 
        * If the rate-based statement includes a `ScopeDownStatement` , this limit is applied only to
        * the requests that match the statement.
        *
@@ -11052,8 +11696,8 @@ public open class CfnRuleGroup(
       override fun forwardedIpConfig(): Any? = unwrap(this).getForwardedIpConfig()
 
       /**
-       * The limit on requests per 5-minute period for a single aggregation instance for the
-       * rate-based rule.
+       * The limit on requests during the specified evaluation window for a single aggregation
+       * instance for the rate-based rule.
        *
        * If the rate-based statement includes a `ScopeDownStatement` , this limit is applied only to
        * the requests that match the statement.
@@ -11486,6 +12130,234 @@ public open class CfnRuleGroup(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitHeaderProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitHeaderProperty
+    }
+  }
+
+  /**
+   * Use the request's JA3 fingerprint derived from the TLS Client Hello of an incoming request as
+   * an aggregate key.
+   *
+   * If you use a single JA3 fingerprint as your custom key, then each value fully defines an
+   * aggregation instance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * RateLimitJA3FingerprintProperty rateLimitJA3FingerprintProperty =
+   * RateLimitJA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratelimitja3fingerprint.html)
+   */
+  public interface RateLimitJA3FingerprintProperty {
+    /**
+     * The match status to assign to the web request if there is insufficient TSL Client Hello
+     * information to compute the JA3 fingerprint.
+     *
+     * You can specify the following fallback behaviors:
+     *
+     * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+     * action to the request.
+     * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratelimitja3fingerprint.html#cfn-wafv2-rulegroup-ratelimitja3fingerprint-fallbackbehavior)
+     */
+    public fun fallbackBehavior(): String
+
+    /**
+     * A builder for [RateLimitJA3FingerprintProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fallbackBehavior The match status to assign to the web request if there is
+       * insufficient TSL Client Hello information to compute the JA3 fingerprint. 
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       */
+      public fun fallbackBehavior(fallbackBehavior: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitJA3FingerprintProperty.Builder
+          =
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitJA3FingerprintProperty.builder()
+
+      /**
+       * @param fallbackBehavior The match status to assign to the web request if there is
+       * insufficient TSL Client Hello information to compute the JA3 fingerprint. 
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       */
+      override fun fallbackBehavior(fallbackBehavior: String) {
+        cdkBuilder.fallbackBehavior(fallbackBehavior)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitJA3FingerprintProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitJA3FingerprintProperty,
+    ) : CdkObject(cdkObject),
+        RateLimitJA3FingerprintProperty {
+      /**
+       * The match status to assign to the web request if there is insufficient TSL Client Hello
+       * information to compute the JA3 fingerprint.
+       *
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratelimitja3fingerprint.html#cfn-wafv2-rulegroup-ratelimitja3fingerprint-fallbackbehavior)
+       */
+      override fun fallbackBehavior(): String = unwrap(this).getFallbackBehavior()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RateLimitJA3FingerprintProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitJA3FingerprintProperty):
+          RateLimitJA3FingerprintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RateLimitJA3FingerprintProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RateLimitJA3FingerprintProperty):
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitJA3FingerprintProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitJA3FingerprintProperty
+    }
+  }
+
+  /**
+   * Use the request's JA4 fingerprint derived from the TLS Client Hello of an incoming request as
+   * an aggregate key.
+   *
+   * If you use a single JA4 fingerprint as your custom key, then each value fully defines an
+   * aggregation instance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * RateLimitJA4FingerprintProperty rateLimitJA4FingerprintProperty =
+   * RateLimitJA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratelimitja4fingerprint.html)
+   */
+  public interface RateLimitJA4FingerprintProperty {
+    /**
+     * The match status to assign to the web request if there is insufficient TSL Client Hello
+     * information to compute the JA4 fingerprint.
+     *
+     * You can specify the following fallback behaviors:
+     *
+     * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+     * action to the request.
+     * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratelimitja4fingerprint.html#cfn-wafv2-rulegroup-ratelimitja4fingerprint-fallbackbehavior)
+     */
+    public fun fallbackBehavior(): String
+
+    /**
+     * A builder for [RateLimitJA4FingerprintProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fallbackBehavior The match status to assign to the web request if there is
+       * insufficient TSL Client Hello information to compute the JA4 fingerprint. 
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       */
+      public fun fallbackBehavior(fallbackBehavior: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitJA4FingerprintProperty.Builder
+          =
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitJA4FingerprintProperty.builder()
+
+      /**
+       * @param fallbackBehavior The match status to assign to the web request if there is
+       * insufficient TSL Client Hello information to compute the JA4 fingerprint. 
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       */
+      override fun fallbackBehavior(fallbackBehavior: String) {
+        cdkBuilder.fallbackBehavior(fallbackBehavior)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitJA4FingerprintProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitJA4FingerprintProperty,
+    ) : CdkObject(cdkObject),
+        RateLimitJA4FingerprintProperty {
+      /**
+       * The match status to assign to the web request if there is insufficient TSL Client Hello
+       * information to compute the JA4 fingerprint.
+       *
+       * You can specify the following fallback behaviors:
+       *
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratelimitja4fingerprint.html#cfn-wafv2-rulegroup-ratelimitja4fingerprint-fallbackbehavior)
+       */
+      override fun fallbackBehavior(): String = unwrap(this).getFallbackBehavior()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RateLimitJA4FingerprintProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitJA4FingerprintProperty):
+          RateLimitJA4FingerprintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RateLimitJA4FingerprintProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RateLimitJA4FingerprintProperty):
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitJA4FingerprintProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitJA4FingerprintProperty
     }
   }
 
@@ -12163,6 +13035,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -12177,6 +13052,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .regexString("regexString")
@@ -12444,6 +13322,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -12458,6 +13339,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -12960,6 +13844,7 @@ public open class CfnRuleGroup(
    * Object all;
    * Object allow;
    * Object allQueryArguments;
+   * Object asn;
    * Object block;
    * Object captcha;
    * Object challenge;
@@ -12979,6 +13864,13 @@ public open class CfnRuleGroup(
    * .statement(StatementProperty.builder()
    * .andStatement(AndStatementProperty.builder()
    * .statements(List.of(statementProperty_))
+   * .build())
+   * .asnMatchStatement(AsnMatchStatementProperty.builder()
+   * .asnList(List.of(123))
+   * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .headerName("headerName")
+   * .build())
    * .build())
    * .byteMatchStatement(ByteMatchStatementProperty.builder()
    * .fieldToMatch(FieldToMatchProperty.builder()
@@ -13007,6 +13899,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -13021,6 +13916,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .positionalConstraint("positionalConstraint")
@@ -13061,6 +13959,7 @@ public open class CfnRuleGroup(
    * .limit(123)
    * // the properties below are optional
    * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
+   * .asn(asn)
    * .cookie(RateLimitCookieProperty.builder()
    * .name("name")
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -13078,6 +13977,12 @@ public open class CfnRuleGroup(
    * .build())
    * .httpMethod(httpMethod)
    * .ip(ip)
+   * .ja3Fingerprint(RateLimitJA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
+   * .ja4Fingerprint(RateLimitJA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
    * .namespace("namespace")
    * .build())
@@ -13135,6 +14040,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -13149,6 +14057,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .regexString("regexString")
@@ -13185,6 +14096,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -13199,6 +14113,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -13234,6 +14151,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -13248,6 +14168,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .size(123)
@@ -13283,6 +14206,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -13297,6 +14223,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -13333,6 +14262,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -13347,6 +14279,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -13444,6 +14379,11 @@ public open class CfnRuleGroup(
      * AWS WAF applies fully qualified labels to matching web requests. A fully qualified label is
      * the concatenation of a label namespace and a rule label. The rule's rule group or web ACL
      * defines the label namespace.
+     *
+     *
+     * Any rule that isn't a rule group reference statement or managed rule group statement can add
+     * labels to matching web requests.
+     *
      *
      * Rules that run after this rule in the web ACL can match against these labels using a
      * `LabelMatchStatement` .
@@ -13578,6 +14518,11 @@ public open class CfnRuleGroup(
        * the concatenation of a label namespace and a rule label. The rule's rule group or web ACL
        * defines the label namespace.
        *
+       *
+       * Any rule that isn't a rule group reference statement or managed rule group statement can
+       * add labels to matching web requests.
+       *
+       *
        * Rules that run after this rule in the web ACL can match against these labels using a
        * `LabelMatchStatement` .
        *
@@ -13600,6 +14545,11 @@ public open class CfnRuleGroup(
        * the concatenation of a label namespace and a rule label. The rule's rule group or web ACL
        * defines the label namespace.
        *
+       *
+       * Any rule that isn't a rule group reference statement or managed rule group statement can
+       * add labels to matching web requests.
+       *
+       *
        * Rules that run after this rule in the web ACL can match against these labels using a
        * `LabelMatchStatement` .
        *
@@ -13621,6 +14571,11 @@ public open class CfnRuleGroup(
        * AWS WAF applies fully qualified labels to matching web requests. A fully qualified label is
        * the concatenation of a label namespace and a rule label. The rule's rule group or web ACL
        * defines the label namespace.
+       *
+       *
+       * Any rule that isn't a rule group reference statement or managed rule group statement can
+       * add labels to matching web requests.
+       *
        *
        * Rules that run after this rule in the web ACL can match against these labels using a
        * `LabelMatchStatement` .
@@ -13803,6 +14758,11 @@ public open class CfnRuleGroup(
        * the concatenation of a label namespace and a rule label. The rule's rule group or web ACL
        * defines the label namespace.
        *
+       *
+       * Any rule that isn't a rule group reference statement or managed rule group statement can
+       * add labels to matching web requests.
+       *
+       *
        * Rules that run after this rule in the web ACL can match against these labels using a
        * `LabelMatchStatement` .
        *
@@ -13827,6 +14787,11 @@ public open class CfnRuleGroup(
        * the concatenation of a label namespace and a rule label. The rule's rule group or web ACL
        * defines the label namespace.
        *
+       *
+       * Any rule that isn't a rule group reference statement or managed rule group statement can
+       * add labels to matching web requests.
+       *
+       *
        * Rules that run after this rule in the web ACL can match against these labels using a
        * `LabelMatchStatement` .
        *
@@ -13850,6 +14815,11 @@ public open class CfnRuleGroup(
        * AWS WAF applies fully qualified labels to matching web requests. A fully qualified label is
        * the concatenation of a label namespace and a rule label. The rule's rule group or web ACL
        * defines the label namespace.
+       *
+       *
+       * Any rule that isn't a rule group reference statement or managed rule group statement can
+       * add labels to matching web requests.
+       *
        *
        * Rules that run after this rule in the web ACL can match against these labels using a
        * `LabelMatchStatement` .
@@ -13991,6 +14961,11 @@ public open class CfnRuleGroup(
        * AWS WAF applies fully qualified labels to matching web requests. A fully qualified label is
        * the concatenation of a label namespace and a rule label. The rule's rule group or web ACL
        * defines the label namespace.
+       *
+       *
+       * Any rule that isn't a rule group reference statement or managed rule group statement can
+       * add labels to matching web requests.
+       *
        *
        * Rules that run after this rule in the web ACL can match against these labels using a
        * `LabelMatchStatement` .
@@ -14284,6 +15259,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -14298,6 +15276,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .size(123)
@@ -14587,6 +15568,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -14601,6 +15585,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -14872,6 +15859,7 @@ public open class CfnRuleGroup(
    * import io.cloudshiftdev.awscdk.services.wafv2.*;
    * Object all;
    * Object allQueryArguments;
+   * Object asn;
    * Object forwardedIp;
    * Object httpMethod;
    * Object ip;
@@ -14884,6 +15872,13 @@ public open class CfnRuleGroup(
    * StatementProperty statementProperty = StatementProperty.builder()
    * .andStatement(AndStatementProperty.builder()
    * .statements(List.of(statementProperty_))
+   * .build())
+   * .asnMatchStatement(AsnMatchStatementProperty.builder()
+   * .asnList(List.of(123))
+   * .forwardedIpConfig(ForwardedIPConfigurationProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .headerName("headerName")
+   * .build())
    * .build())
    * .byteMatchStatement(ByteMatchStatementProperty.builder()
    * .fieldToMatch(FieldToMatchProperty.builder()
@@ -14912,6 +15907,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -14926,6 +15924,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .positionalConstraint("positionalConstraint")
@@ -14966,6 +15967,7 @@ public open class CfnRuleGroup(
    * .limit(123)
    * // the properties below are optional
    * .customKeys(List.of(RateBasedStatementCustomKeyProperty.builder()
+   * .asn(asn)
    * .cookie(RateLimitCookieProperty.builder()
    * .name("name")
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -14983,6 +15985,12 @@ public open class CfnRuleGroup(
    * .build())
    * .httpMethod(httpMethod)
    * .ip(ip)
+   * .ja3Fingerprint(RateLimitJA3FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
+   * .ja4Fingerprint(RateLimitJA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .labelNamespace(RateLimitLabelNamespaceProperty.builder()
    * .namespace("namespace")
    * .build())
@@ -15040,6 +16048,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -15054,6 +16065,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .regexString("regexString")
@@ -15090,6 +16104,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -15104,6 +16121,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -15139,6 +16159,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -15153,6 +16176,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .size(123)
@@ -15188,6 +16214,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -15202,6 +16231,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -15238,6 +16270,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -15252,6 +16287,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()
@@ -15273,6 +16311,19 @@ public open class CfnRuleGroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-statement.html#cfn-wafv2-rulegroup-statement-andstatement)
      */
     public fun andStatement(): Any? = unwrap(this).getAndStatement()
+
+    /**
+     * A rule statement that inspects web traffic based on the Autonomous System Number (ASN)
+     * associated with the request's IP address.
+     *
+     * For additional details, see [ASN match rule
+     * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+     * in the [AWS WAF Developer
+     * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-statement.html#cfn-wafv2-rulegroup-statement-asnmatchstatement)
+     */
+    public fun asnMatchStatement(): Any? = unwrap(this).getAsnMatchStatement()
 
     /**
      * A rule statement that defines a string match search for AWS WAF to apply to web requests.
@@ -15544,6 +16595,38 @@ public open class CfnRuleGroup(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5f84784e4830593c9b471589c902f676367c17294727111d314f1caec89c6e22")
       public fun andStatement(andStatement: AndStatementProperty.Builder.() -> Unit)
+
+      /**
+       * @param asnMatchStatement A rule statement that inspects web traffic based on the Autonomous
+       * System Number (ASN) associated with the request's IP address.
+       * For additional details, see [ASN match rule
+       * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+       * in the [AWS WAF Developer
+       * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+       */
+      public fun asnMatchStatement(asnMatchStatement: IResolvable)
+
+      /**
+       * @param asnMatchStatement A rule statement that inspects web traffic based on the Autonomous
+       * System Number (ASN) associated with the request's IP address.
+       * For additional details, see [ASN match rule
+       * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+       * in the [AWS WAF Developer
+       * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+       */
+      public fun asnMatchStatement(asnMatchStatement: AsnMatchStatementProperty)
+
+      /**
+       * @param asnMatchStatement A rule statement that inspects web traffic based on the Autonomous
+       * System Number (ASN) associated with the request's IP address.
+       * For additional details, see [ASN match rule
+       * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+       * in the [AWS WAF Developer
+       * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8142c6396ad712bbbceaa5929f7bad07aae7b08f0949fc6a5bd22e082ee561eb")
+      public fun asnMatchStatement(asnMatchStatement: AsnMatchStatementProperty.Builder.() -> Unit)
 
       /**
        * @param byteMatchStatement A rule statement that defines a string match search for AWS WAF
@@ -16256,6 +17339,44 @@ public open class CfnRuleGroup(
       @JvmName("5f84784e4830593c9b471589c902f676367c17294727111d314f1caec89c6e22")
       override fun andStatement(andStatement: AndStatementProperty.Builder.() -> Unit): Unit =
           andStatement(AndStatementProperty(andStatement))
+
+      /**
+       * @param asnMatchStatement A rule statement that inspects web traffic based on the Autonomous
+       * System Number (ASN) associated with the request's IP address.
+       * For additional details, see [ASN match rule
+       * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+       * in the [AWS WAF Developer
+       * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+       */
+      override fun asnMatchStatement(asnMatchStatement: IResolvable) {
+        cdkBuilder.asnMatchStatement(asnMatchStatement.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param asnMatchStatement A rule statement that inspects web traffic based on the Autonomous
+       * System Number (ASN) associated with the request's IP address.
+       * For additional details, see [ASN match rule
+       * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+       * in the [AWS WAF Developer
+       * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+       */
+      override fun asnMatchStatement(asnMatchStatement: AsnMatchStatementProperty) {
+        cdkBuilder.asnMatchStatement(asnMatchStatement.let(AsnMatchStatementProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param asnMatchStatement A rule statement that inspects web traffic based on the Autonomous
+       * System Number (ASN) associated with the request's IP address.
+       * For additional details, see [ASN match rule
+       * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+       * in the [AWS WAF Developer
+       * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8142c6396ad712bbbceaa5929f7bad07aae7b08f0949fc6a5bd22e082ee561eb")
+      override
+          fun asnMatchStatement(asnMatchStatement: AsnMatchStatementProperty.Builder.() -> Unit):
+          Unit = asnMatchStatement(AsnMatchStatementProperty(asnMatchStatement))
 
       /**
        * @param byteMatchStatement A rule statement that defines a string match search for AWS WAF
@@ -17019,6 +18140,19 @@ public open class CfnRuleGroup(
       override fun andStatement(): Any? = unwrap(this).getAndStatement()
 
       /**
+       * A rule statement that inspects web traffic based on the Autonomous System Number (ASN)
+       * associated with the request's IP address.
+       *
+       * For additional details, see [ASN match rule
+       * statement](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html)
+       * in the [AWS WAF Developer
+       * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-statement.html#cfn-wafv2-rulegroup-statement-asnmatchstatement)
+       */
+      override fun asnMatchStatement(): Any? = unwrap(this).getAsnMatchStatement()
+
+      /**
        * A rule statement that defines a string match search for AWS WAF to apply to web requests.
        *
        * The byte match statement provides the bytes to search for, the location in requests that
@@ -17416,6 +18550,176 @@ public open class CfnRuleGroup(
   }
 
   /**
+   * Inspect fragments of the request URI.
+   *
+   * You can specify the parts of the URI fragment to inspect and you can narrow the set of URI
+   * fragments to inspect by including or excluding specific keys.
+   *
+   * This is used to indicate the web request component to inspect, in the `FieldToMatch`
+   * specification.
+   *
+   * Example JSON: `"UriFragment": { "MatchPattern": { "All": {} }, "MatchScope": "KEY",
+   * "OversizeHandling": "MATCH" }`
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wafv2.*;
+   * UriFragmentProperty uriFragmentProperty = UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-urifragment.html)
+   */
+  public interface UriFragmentProperty {
+    /**
+     * What AWS WAF should do if it fails to completely parse the JSON body. The options are the
+     * following:.
+     *
+     * * `EVALUATE_AS_STRING` - Inspect the body as plain text. AWS WAF applies the text
+     * transformations and inspection criteria that you defined for the JSON inspection to the body
+     * text string.
+     * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+     * action to the request.
+     * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+     *
+     * If you don't provide this setting, AWS WAF parses and evaluates the content only up to the
+     * first parsing failure that it encounters.
+     *
+     * Example JSON: `{ "UriFragment": { "FallbackBehavior": "MATCH"} }`
+     *
+     *
+     * AWS WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even for
+     * invalid JSON. When parsing succeeds, AWS WAF doesn't apply the fallback behavior. For more
+     * information, see [JSON
+     * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+     * in the *AWS WAF Developer Guide* .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-urifragment.html#cfn-wafv2-rulegroup-urifragment-fallbackbehavior)
+     */
+    public fun fallbackBehavior(): String? = unwrap(this).getFallbackBehavior()
+
+    /**
+     * A builder for [UriFragmentProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fallbackBehavior What AWS WAF should do if it fails to completely parse the JSON
+       * body. The options are the following:.
+       * * `EVALUATE_AS_STRING` - Inspect the body as plain text. AWS WAF applies the text
+       * transformations and inspection criteria that you defined for the JSON inspection to the body
+       * text string.
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       *
+       * If you don't provide this setting, AWS WAF parses and evaluates the content only up to the
+       * first parsing failure that it encounters.
+       *
+       * Example JSON: `{ "UriFragment": { "FallbackBehavior": "MATCH"} }`
+       *
+       *
+       * AWS WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even
+       * for invalid JSON. When parsing succeeds, AWS WAF doesn't apply the fallback behavior. For more
+       * information, see [JSON
+       * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+       * in the *AWS WAF Developer Guide* .
+       */
+      public fun fallbackBehavior(fallbackBehavior: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.UriFragmentProperty.Builder =
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.UriFragmentProperty.builder()
+
+      /**
+       * @param fallbackBehavior What AWS WAF should do if it fails to completely parse the JSON
+       * body. The options are the following:.
+       * * `EVALUATE_AS_STRING` - Inspect the body as plain text. AWS WAF applies the text
+       * transformations and inspection criteria that you defined for the JSON inspection to the body
+       * text string.
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       *
+       * If you don't provide this setting, AWS WAF parses and evaluates the content only up to the
+       * first parsing failure that it encounters.
+       *
+       * Example JSON: `{ "UriFragment": { "FallbackBehavior": "MATCH"} }`
+       *
+       *
+       * AWS WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even
+       * for invalid JSON. When parsing succeeds, AWS WAF doesn't apply the fallback behavior. For more
+       * information, see [JSON
+       * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+       * in the *AWS WAF Developer Guide* .
+       */
+      override fun fallbackBehavior(fallbackBehavior: String) {
+        cdkBuilder.fallbackBehavior(fallbackBehavior)
+      }
+
+      public fun build(): software.amazon.awscdk.services.wafv2.CfnRuleGroup.UriFragmentProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.UriFragmentProperty,
+    ) : CdkObject(cdkObject),
+        UriFragmentProperty {
+      /**
+       * What AWS WAF should do if it fails to completely parse the JSON body. The options are the
+       * following:.
+       *
+       * * `EVALUATE_AS_STRING` - Inspect the body as plain text. AWS WAF applies the text
+       * transformations and inspection criteria that you defined for the JSON inspection to the body
+       * text string.
+       * * `MATCH` - Treat the web request as matching the rule statement. AWS WAF applies the rule
+       * action to the request.
+       * * `NO_MATCH` - Treat the web request as not matching the rule statement.
+       *
+       * If you don't provide this setting, AWS WAF parses and evaluates the content only up to the
+       * first parsing failure that it encounters.
+       *
+       * Example JSON: `{ "UriFragment": { "FallbackBehavior": "MATCH"} }`
+       *
+       *
+       * AWS WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even
+       * for invalid JSON. When parsing succeeds, AWS WAF doesn't apply the fallback behavior. For more
+       * information, see [JSON
+       * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+       * in the *AWS WAF Developer Guide* .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-urifragment.html#cfn-wafv2-rulegroup-urifragment-fallbackbehavior)
+       */
+      override fun fallbackBehavior(): String? = unwrap(this).getFallbackBehavior()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): UriFragmentProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.UriFragmentProperty):
+          UriFragmentProperty = CdkObjectWrappers.wrap(cdkObject) as? UriFragmentProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: UriFragmentProperty):
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.UriFragmentProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.wafv2.CfnRuleGroup.UriFragmentProperty
+    }
+  }
+
+  /**
    * Defines and enables Amazon CloudWatch metrics and web request sample collection.
    *
    * Example:
@@ -17468,10 +18772,14 @@ public open class CfnRuleGroup(
      *
      * You can view the sampled requests through the AWS WAF console.
      *
+     * If you configure data protection for the web ACL, the protection applies to the web ACL's
+     * sampled web request data.
+     *
      *
      * Request sampling doesn't provide a field redaction option, and any field redaction that you
-     * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
-     * from request sampling is by disabling sampling in the web ACL visibility configuration.
+     * specify in your logging configuration doesn't affect sampling. You can only exclude fields from
+     * request sampling by disabling sampling in the web ACL visibility configuration or by configuring
+     * data protection for the web ACL.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-visibilityconfig.html#cfn-wafv2-rulegroup-visibilityconfig-sampledrequestsenabled)
@@ -17528,10 +18836,14 @@ public open class CfnRuleGroup(
        * requests that match the rules. 
        * You can view the sampled requests through the AWS WAF console.
        *
+       * If you configure data protection for the web ACL, the protection applies to the web ACL's
+       * sampled web request data.
+       *
        *
        * Request sampling doesn't provide a field redaction option, and any field redaction that you
-       * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
-       * from request sampling is by disabling sampling in the web ACL visibility configuration.
+       * specify in your logging configuration doesn't affect sampling. You can only exclude fields
+       * from request sampling by disabling sampling in the web ACL visibility configuration or by
+       * configuring data protection for the web ACL.
        */
       public fun sampledRequestsEnabled(sampledRequestsEnabled: Boolean)
 
@@ -17540,10 +18852,14 @@ public open class CfnRuleGroup(
        * requests that match the rules. 
        * You can view the sampled requests through the AWS WAF console.
        *
+       * If you configure data protection for the web ACL, the protection applies to the web ACL's
+       * sampled web request data.
+       *
        *
        * Request sampling doesn't provide a field redaction option, and any field redaction that you
-       * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
-       * from request sampling is by disabling sampling in the web ACL visibility configuration.
+       * specify in your logging configuration doesn't affect sampling. You can only exclude fields
+       * from request sampling by disabling sampling in the web ACL visibility configuration or by
+       * configuring data protection for the web ACL.
        */
       public fun sampledRequestsEnabled(sampledRequestsEnabled: IResolvable)
     }
@@ -17604,10 +18920,14 @@ public open class CfnRuleGroup(
        * requests that match the rules. 
        * You can view the sampled requests through the AWS WAF console.
        *
+       * If you configure data protection for the web ACL, the protection applies to the web ACL's
+       * sampled web request data.
+       *
        *
        * Request sampling doesn't provide a field redaction option, and any field redaction that you
-       * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
-       * from request sampling is by disabling sampling in the web ACL visibility configuration.
+       * specify in your logging configuration doesn't affect sampling. You can only exclude fields
+       * from request sampling by disabling sampling in the web ACL visibility configuration or by
+       * configuring data protection for the web ACL.
        */
       override fun sampledRequestsEnabled(sampledRequestsEnabled: Boolean) {
         cdkBuilder.sampledRequestsEnabled(sampledRequestsEnabled)
@@ -17618,10 +18938,14 @@ public open class CfnRuleGroup(
        * requests that match the rules. 
        * You can view the sampled requests through the AWS WAF console.
        *
+       * If you configure data protection for the web ACL, the protection applies to the web ACL's
+       * sampled web request data.
+       *
        *
        * Request sampling doesn't provide a field redaction option, and any field redaction that you
-       * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
-       * from request sampling is by disabling sampling in the web ACL visibility configuration.
+       * specify in your logging configuration doesn't affect sampling. You can only exclude fields
+       * from request sampling by disabling sampling in the web ACL visibility configuration or by
+       * configuring data protection for the web ACL.
        */
       override fun sampledRequestsEnabled(sampledRequestsEnabled: IResolvable) {
         cdkBuilder.sampledRequestsEnabled(sampledRequestsEnabled.let(IResolvable.Companion::unwrap))
@@ -17670,10 +18994,14 @@ public open class CfnRuleGroup(
        *
        * You can view the sampled requests through the AWS WAF console.
        *
+       * If you configure data protection for the web ACL, the protection applies to the web ACL's
+       * sampled web request data.
+       *
        *
        * Request sampling doesn't provide a field redaction option, and any field redaction that you
-       * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
-       * from request sampling is by disabling sampling in the web ACL visibility configuration.
+       * specify in your logging configuration doesn't affect sampling. You can only exclude fields
+       * from request sampling by disabling sampling in the web ACL visibility configuration or by
+       * configuring data protection for the web ACL.
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-visibilityconfig.html#cfn-wafv2-rulegroup-visibilityconfig-sampledrequestsenabled)
@@ -17745,6 +19073,9 @@ public open class CfnRuleGroup(
    * .ja3Fingerprint(JA3FingerprintProperty.builder()
    * .fallbackBehavior("fallbackBehavior")
    * .build())
+   * .ja4Fingerprint(JA4FingerprintProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .jsonBody(JsonBodyProperty.builder()
    * .matchPattern(JsonMatchPatternProperty.builder()
    * .all(all)
@@ -17759,6 +19090,9 @@ public open class CfnRuleGroup(
    * .queryString(queryString)
    * .singleHeader(singleHeader)
    * .singleQueryArgument(singleQueryArgument)
+   * .uriFragment(UriFragmentProperty.builder()
+   * .fallbackBehavior("fallbackBehavior")
+   * .build())
    * .uriPath(uriPath)
    * .build())
    * .textTransformations(List.of(TextTransformationProperty.builder()

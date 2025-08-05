@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 
 /**
  * Properties for defining a `CfnCostCategory`.
@@ -24,6 +25,10 @@ import kotlin.Unit
  * // the properties below are optional
  * .defaultValue("defaultValue")
  * .splitChargeRules("splitChargeRules")
+ * .tags(List.of(ResourceTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -72,6 +77,14 @@ public interface CfnCostCategoryProps {
   public fun splitChargeRules(): String? = unwrap(this).getSplitChargeRules()
 
   /**
+   * Tags to assign to the cost category.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html#cfn-ce-costcategory-tags)
+   */
+  public fun tags(): List<CfnCostCategory.ResourceTagProperty> =
+      unwrap(this).getTags()?.map(CfnCostCategory.ResourceTagProperty::wrap) ?: emptyList()
+
+  /**
    * A builder for [CfnCostCategoryProps]
    */
   @CdkDslMarker
@@ -104,6 +117,16 @@ public interface CfnCostCategoryProps {
      * your Cost Category values.
      */
     public fun splitChargeRules(splitChargeRules: String)
+
+    /**
+     * @param tags Tags to assign to the cost category.
+     */
+    public fun tags(tags: List<CfnCostCategory.ResourceTagProperty>)
+
+    /**
+     * @param tags Tags to assign to the cost category.
+     */
+    public fun tags(vararg tags: CfnCostCategory.ResourceTagProperty)
   }
 
   private class BuilderImpl : Builder {
@@ -148,6 +171,18 @@ public interface CfnCostCategoryProps {
     override fun splitChargeRules(splitChargeRules: String) {
       cdkBuilder.splitChargeRules(splitChargeRules)
     }
+
+    /**
+     * @param tags Tags to assign to the cost category.
+     */
+    override fun tags(tags: List<CfnCostCategory.ResourceTagProperty>) {
+      cdkBuilder.tags(tags.map(CfnCostCategory.ResourceTagProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param tags Tags to assign to the cost category.
+     */
+    override fun tags(vararg tags: CfnCostCategory.ResourceTagProperty): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ce.CfnCostCategoryProps = cdkBuilder.build()
   }
@@ -196,6 +231,14 @@ public interface CfnCostCategoryProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html#cfn-ce-costcategory-splitchargerules)
      */
     override fun splitChargeRules(): String? = unwrap(this).getSplitChargeRules()
+
+    /**
+     * Tags to assign to the cost category.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html#cfn-ce-costcategory-tags)
+     */
+    override fun tags(): List<CfnCostCategory.ResourceTagProperty> =
+        unwrap(this).getTags()?.map(CfnCostCategory.ResourceTagProperty::wrap) ?: emptyList()
   }
 
   public companion object {

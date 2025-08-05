@@ -1880,6 +1880,9 @@ public open class Domain(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.elasticsearch.Domain.PROPERTY_INJECTION_ID
+
     @Deprecated(message = "deprecated in CDK")
     public fun fromDomainAttributes(
       scope: CloudshiftdevConstructsConstruct,

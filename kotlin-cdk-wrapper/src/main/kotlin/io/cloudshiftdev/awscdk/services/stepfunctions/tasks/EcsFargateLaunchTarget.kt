@@ -63,7 +63,7 @@ public open class EcsFargateLaunchTarget(
   /**
    * Called when the Fargate launch type configured on RunTask.
    *
-   * @param _task 
+   * @param task 
    * @param launchTargetOptions 
    */
   public override fun bind(task: EcsRunTask, launchTargetOptions: LaunchTargetBindOptions):
@@ -73,7 +73,7 @@ public open class EcsFargateLaunchTarget(
   /**
    * Called when the Fargate launch type configured on RunTask.
    *
-   * @param _task 
+   * @param task 
    * @param launchTargetOptions 
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")

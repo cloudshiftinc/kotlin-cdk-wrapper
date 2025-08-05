@@ -19,6 +19,7 @@ import kotlin.Unit
  * FargateService service = FargateService.Builder.create(this, "Service")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
+ * .minHealthyPercent(100)
  * .circuitBreaker(DeploymentCircuitBreaker.builder()
  * .enable(true)
  * .rollback(true)

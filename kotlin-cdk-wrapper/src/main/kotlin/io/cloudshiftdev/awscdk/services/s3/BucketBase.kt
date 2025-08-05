@@ -154,6 +154,52 @@ public abstract class BucketBase(
       NotificationKeyFilter(filters))
 
   /**
+   * Function to add required permissions to the destination bucket for cross account replication.
+   *
+   * These permissions will be added as a resource based policy on the bucket
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accesscontroltranslation.html)
+   * @param roleArn 
+   * @param accessControlTransition
+   * @param account
+   */
+  public override fun addReplicationPolicy(roleArn: String) {
+    unwrap(this).addReplicationPolicy(roleArn)
+  }
+
+  /**
+   * Function to add required permissions to the destination bucket for cross account replication.
+   *
+   * These permissions will be added as a resource based policy on the bucket
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accesscontroltranslation.html)
+   * @param roleArn 
+   * @param accessControlTransition
+   * @param account
+   */
+  public override fun addReplicationPolicy(roleArn: String, accessControlTransition: Boolean) {
+    unwrap(this).addReplicationPolicy(roleArn, accessControlTransition)
+  }
+
+  /**
+   * Function to add required permissions to the destination bucket for cross account replication.
+   *
+   * These permissions will be added as a resource based policy on the bucket
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accesscontroltranslation.html)
+   * @param roleArn 
+   * @param accessControlTransition
+   * @param account
+   */
+  public override fun addReplicationPolicy(
+    roleArn: String,
+    accessControlTransition: Boolean,
+    account: String,
+  ) {
+    unwrap(this).addReplicationPolicy(roleArn, accessControlTransition, account)
+  }
+
+  /**
    * Adds a statement to the resource policy for a principal (i.e. account/role/service) to perform
    * actions on this bucket and/or its contents. Use `bucketArn` and `arnForObjects(keys)` to obtain
    * ARNs for this bucket or objects.
@@ -448,6 +494,39 @@ public abstract class BucketBase(
       objectsKeyPattern).let(Grant::wrap)
 
   /**
+   * Grant replication permission to a principal. This method allows the principal to perform
+   * replication operations on this bucket.
+   *
+   * Note that when calling this function for source or destination buckets that support KMS
+   * encryption,
+   * you need to specify the KMS key for encryption and the KMS key for decryption, respectively.
+   *
+   * @param identity The principal to grant replication permission to. 
+   * @param props The properties of the replication source and destination buckets. 
+   */
+  public override fun grantReplicationPermission(identity: IGrantable,
+      props: GrantReplicationPermissionProps): Grant =
+      unwrap(this).grantReplicationPermission(identity.let(IGrantable.Companion::unwrap),
+      props.let(GrantReplicationPermissionProps.Companion::unwrap)).let(Grant::wrap)
+
+  /**
+   * Grant replication permission to a principal. This method allows the principal to perform
+   * replication operations on this bucket.
+   *
+   * Note that when calling this function for source or destination buckets that support KMS
+   * encryption,
+   * you need to specify the KMS key for encryption and the KMS key for decryption, respectively.
+   *
+   * @param identity The principal to grant replication permission to. 
+   * @param props The properties of the replication source and destination buckets. 
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("4af4565714d0f3d475cfcd76e1d76a09236ba375662fcfeefe3baa65b4c6de21")
+  public override fun grantReplicationPermission(identity: IGrantable,
+      props: GrantReplicationPermissionProps.Builder.() -> Unit): Grant =
+      grantReplicationPermission(identity, GrantReplicationPermissionProps(props))
+
+  /**
    * Grant write permissions to this bucket to an IAM principal.
    *
    * If encryption is used, permission to use the key to encrypt the contents
@@ -698,6 +777,18 @@ public abstract class BucketBase(
    */
   public override fun policy(`value`: BucketPolicy) {
     unwrap(this).setPolicy(`value`.let(BucketPolicy.Companion::unwrap))
+  }
+
+  /**
+   * Role used to set up permissions on this bucket for replication.
+   */
+  public override fun replicationRoleArn(): String? = unwrap(this).getReplicationRoleArn()
+
+  /**
+   * Role used to set up permissions on this bucket for replication.
+   */
+  public override fun replicationRoleArn(`value`: String) {
+    unwrap(this).setReplicationRoleArn(`value`)
   }
 
   /**

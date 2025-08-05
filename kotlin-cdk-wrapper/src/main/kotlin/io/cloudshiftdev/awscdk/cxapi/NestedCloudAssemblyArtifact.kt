@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.cloud_assembly_schema.ArtifactManifest
 import io.cloudshiftdev.awscdk.cloud_assembly_schema.ArtifactType
 import io.cloudshiftdev.awscdk.cloud_assembly_schema.AssetManifestProperties
 import io.cloudshiftdev.awscdk.cloud_assembly_schema.AwsCloudFormationStackProperties
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.FeatureFlagReportProperties
 import io.cloudshiftdev.awscdk.cloud_assembly_schema.MetadataEntry
 import io.cloudshiftdev.awscdk.cloud_assembly_schema.NestedCloudAssemblyProperties
 import io.cloudshiftdev.awscdk.cloud_assembly_schema.TreeArtifactProperties
@@ -140,13 +141,18 @@ public open class NestedCloudAssemblyArtifact(
     public fun dependencies(vararg dependencies: String)
 
     /**
-     * A string that represents this artifact.
+     * A string that can be shown to a user to uniquely identify this artifact inside a cloud
+     * assembly tree.
      *
-     * Should only be used in user interfaces.
+     * Is used by the CLI to present a list of stacks to the user in a way that
+     * makes sense to them. Even though the property name "display name" doesn't
+     * imply it, this field is used to select stacks as well, so all stacks should
+     * have a unique display name.
      *
      * Default: - no display name
      *
-     * @param displayName A string that represents this artifact. 
+     * @param displayName A string that can be shown to a user to uniquely identify this artifact
+     * inside a cloud assembly tree. 
      */
     public fun displayName(displayName: String)
 
@@ -249,6 +255,26 @@ public open class NestedCloudAssemblyArtifact(
     public fun properties(properties: NestedCloudAssemblyProperties.Builder.() -> Unit)
 
     /**
+     * The set of properties for this artifact (depends on type).
+     *
+     * Default: - no properties.
+     *
+     * @param properties The set of properties for this artifact (depends on type). 
+     */
+    public fun properties(properties: FeatureFlagReportProperties)
+
+    /**
+     * The set of properties for this artifact (depends on type).
+     *
+     * Default: - no properties.
+     *
+     * @param properties The set of properties for this artifact (depends on type). 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a7fa4c27a386e1d7508f738822dcba7a0339fe8ad15aa767b36fd2e81273eb01")
+    public fun properties(properties: FeatureFlagReportProperties.Builder.() -> Unit)
+
+    /**
      * The type of artifact.
      *
      * @param type The type of artifact. 
@@ -285,13 +311,18 @@ public open class NestedCloudAssemblyArtifact(
         dependencies(dependencies.toList())
 
     /**
-     * A string that represents this artifact.
+     * A string that can be shown to a user to uniquely identify this artifact inside a cloud
+     * assembly tree.
      *
-     * Should only be used in user interfaces.
+     * Is used by the CLI to present a list of stacks to the user in a way that
+     * makes sense to them. Even though the property name "display name" doesn't
+     * imply it, this field is used to select stacks as well, so all stacks should
+     * have a unique display name.
      *
      * Default: - no display name
      *
-     * @param displayName A string that represents this artifact. 
+     * @param displayName A string that can be shown to a user to uniquely identify this artifact
+     * inside a cloud assembly tree. 
      */
     override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
@@ -410,6 +441,29 @@ public open class NestedCloudAssemblyArtifact(
     @JvmName("a3e41b4ea4614eab80f28645b7d0d89d77c9fab840126bb4668c3ce4d651ac5b")
     override fun properties(properties: NestedCloudAssemblyProperties.Builder.() -> Unit): Unit =
         properties(NestedCloudAssemblyProperties(properties))
+
+    /**
+     * The set of properties for this artifact (depends on type).
+     *
+     * Default: - no properties.
+     *
+     * @param properties The set of properties for this artifact (depends on type). 
+     */
+    override fun properties(properties: FeatureFlagReportProperties) {
+      cdkBuilder.properties(properties.let(FeatureFlagReportProperties.Companion::unwrap))
+    }
+
+    /**
+     * The set of properties for this artifact (depends on type).
+     *
+     * Default: - no properties.
+     *
+     * @param properties The set of properties for this artifact (depends on type). 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a7fa4c27a386e1d7508f738822dcba7a0339fe8ad15aa767b36fd2e81273eb01")
+    override fun properties(properties: FeatureFlagReportProperties.Builder.() -> Unit): Unit =
+        properties(FeatureFlagReportProperties(properties))
 
     /**
      * The type of artifact.

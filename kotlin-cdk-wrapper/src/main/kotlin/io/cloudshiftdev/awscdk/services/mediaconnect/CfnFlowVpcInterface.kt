@@ -13,7 +13,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The AWS::MediaConnect::FlowVpcInterface resource is a connection between your AWS Elemental
+ * The `AWS::MediaConnect::FlowVpcInterface` resource is a connection between your AWS Elemental
  * MediaConnect flow and a virtual private cloud (VPC) that you created using the Amazon Virtual
  * Private Cloud service.
  *
@@ -33,7 +33,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * The previous steps must be undone before the CloudFormation stack can be deleted. Because the
  * source is manually updated in step 3, CloudFormation is not aware of this change. The source must be
- * returned to a standard source before CloudFormation stack deletion.
+ * returned to a standard source before CloudFormation stack deletion. &gt; When configuring NDI
+ * outputs for your flow, define the VPC interface as a nested attribute within the
+ * `AWS::MediaConnect::Flow` resource. Do not use the top-level `AWS::MediaConnect::FlowVpcInterface`
+ * resource type to specify NDI configurations.
  *
  *
  * Example:
@@ -102,12 +105,12 @@ public open class CfnFlowVpcInterface(
   }
 
   /**
-   * The name of the VPC Interface.
+   * The name for the VPC interface.
    */
   public open fun name(): String = unwrap(this).getName()
 
   /**
-   * The name of the VPC Interface.
+   * The name for the VPC interface.
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
@@ -128,19 +131,19 @@ public open class CfnFlowVpcInterface(
   }
 
   /**
-   * The VPC security groups that you want MediaConnect to use for your VPC configuration.
+   * A virtual firewall to control inbound and outbound traffic.
    */
   public open fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
   /**
-   * The VPC security groups that you want MediaConnect to use for your VPC configuration.
+   * A virtual firewall to control inbound and outbound traffic.
    */
   public open fun securityGroupIds(`value`: List<String>) {
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
   /**
-   * The VPC security groups that you want MediaConnect to use for your VPC configuration.
+   * A virtual firewall to control inbound and outbound traffic.
    */
   public open fun securityGroupIds(vararg `value`: String): Unit =
       securityGroupIds(`value`.toList())
@@ -171,12 +174,12 @@ public open class CfnFlowVpcInterface(
     public fun flowArn(flowArn: String)
 
     /**
-     * The name of the VPC Interface.
+     * The name for the VPC interface.
      *
-     * This value must be unique within the current flow.
+     * This name must be unique within the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html#cfn-mediaconnect-flowvpcinterface-name)
-     * @param name The name of the VPC Interface. 
+     * @param name The name for the VPC interface. 
      */
     public fun name(name: String)
 
@@ -191,24 +194,18 @@ public open class CfnFlowVpcInterface(
     public fun roleArn(roleArn: String)
 
     /**
-     * The VPC security groups that you want MediaConnect to use for your VPC configuration.
-     *
-     * You must include at least one security group in the request.
+     * A virtual firewall to control inbound and outbound traffic.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html#cfn-mediaconnect-flowvpcinterface-securitygroupids)
-     * @param securityGroupIds The VPC security groups that you want MediaConnect to use for your
-     * VPC configuration. 
+     * @param securityGroupIds A virtual firewall to control inbound and outbound traffic. 
      */
     public fun securityGroupIds(securityGroupIds: List<String>)
 
     /**
-     * The VPC security groups that you want MediaConnect to use for your VPC configuration.
-     *
-     * You must include at least one security group in the request.
+     * A virtual firewall to control inbound and outbound traffic.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html#cfn-mediaconnect-flowvpcinterface-securitygroupids)
-     * @param securityGroupIds The VPC security groups that you want MediaConnect to use for your
-     * VPC configuration. 
+     * @param securityGroupIds A virtual firewall to control inbound and outbound traffic. 
      */
     public fun securityGroupIds(vararg securityGroupIds: String)
 
@@ -218,10 +215,9 @@ public open class CfnFlowVpcInterface(
      * A range of IP addresses in your VPC. When you create your VPC, you specify a range of IPv4
      * addresses for the VPC in the form of a Classless Inter-Domain Routing (CIDR) block; for example,
      * 10.0.0.0/16. This is the primary CIDR block for your VPC. When you create a subnet for your VPC,
-     * you specify the CIDR block for the subnet, which is a subset of the VPC CIDR block.
-     *
-     * The subnets that you use across all VPC interfaces on the flow must be in the same
-     * Availability Zone as the flow.
+     * you specify the CIDR block for the subnet, which is a subset of the VPC CIDR block. The subnets
+     * that you use across all VPC interfaces on the flow must be in the same Availability Zone as the
+     * flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html#cfn-mediaconnect-flowvpcinterface-subnetid)
      * @param subnetId The subnet IDs that you want to use for your VPC interface. 
@@ -247,12 +243,12 @@ public open class CfnFlowVpcInterface(
     }
 
     /**
-     * The name of the VPC Interface.
+     * The name for the VPC interface.
      *
-     * This value must be unique within the current flow.
+     * This name must be unique within the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html#cfn-mediaconnect-flowvpcinterface-name)
-     * @param name The name of the VPC Interface. 
+     * @param name The name for the VPC interface. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -271,26 +267,20 @@ public open class CfnFlowVpcInterface(
     }
 
     /**
-     * The VPC security groups that you want MediaConnect to use for your VPC configuration.
-     *
-     * You must include at least one security group in the request.
+     * A virtual firewall to control inbound and outbound traffic.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html#cfn-mediaconnect-flowvpcinterface-securitygroupids)
-     * @param securityGroupIds The VPC security groups that you want MediaConnect to use for your
-     * VPC configuration. 
+     * @param securityGroupIds A virtual firewall to control inbound and outbound traffic. 
      */
     override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
     /**
-     * The VPC security groups that you want MediaConnect to use for your VPC configuration.
-     *
-     * You must include at least one security group in the request.
+     * A virtual firewall to control inbound and outbound traffic.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html#cfn-mediaconnect-flowvpcinterface-securitygroupids)
-     * @param securityGroupIds The VPC security groups that you want MediaConnect to use for your
-     * VPC configuration. 
+     * @param securityGroupIds A virtual firewall to control inbound and outbound traffic. 
      */
     override fun securityGroupIds(vararg securityGroupIds: String): Unit =
         securityGroupIds(securityGroupIds.toList())
@@ -301,10 +291,9 @@ public open class CfnFlowVpcInterface(
      * A range of IP addresses in your VPC. When you create your VPC, you specify a range of IPv4
      * addresses for the VPC in the form of a Classless Inter-Domain Routing (CIDR) block; for example,
      * 10.0.0.0/16. This is the primary CIDR block for your VPC. When you create a subnet for your VPC,
-     * you specify the CIDR block for the subnet, which is a subset of the VPC CIDR block.
-     *
-     * The subnets that you use across all VPC interfaces on the flow must be in the same
-     * Availability Zone as the flow.
+     * you specify the CIDR block for the subnet, which is a subset of the VPC CIDR block. The subnets
+     * that you use across all VPC interfaces on the flow must be in the same Availability Zone as the
+     * flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html#cfn-mediaconnect-flowvpcinterface-subnetid)
      * @param subnetId The subnet IDs that you want to use for your VPC interface. 

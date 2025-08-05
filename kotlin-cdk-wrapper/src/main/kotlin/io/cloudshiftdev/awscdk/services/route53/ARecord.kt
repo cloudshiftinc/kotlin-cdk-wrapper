@@ -18,14 +18,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+ * import io.cloudshiftdev.awscdk.regioninfo.RegionInfo;
  * HostedZone zone;
- * ApplicationLoadBalancer lb;
+ * String ebsEnvironmentUrl;
  * ARecord.Builder.create(this, "AliasRecord")
  * .zone(zone)
  * .target(RecordTarget.fromAlias(
- * new LoadBalancerTarget(lb, Map.of(
- * "evaluateTargetHealth", true))))
+ * new ElasticBeanstalkEnvironmentEndpointTarget(ebsEnvironmentUrl, Map.of(
+ * "hostedZoneId", RegionInfo.get("us-east-1").getEbsEnvEndpointHostedZoneId()))))
  * .build();
  * ```
  */
@@ -53,6 +53,21 @@ public open class ARecord(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The object that is specified in resource record set object when you are linking a resource
+     * record set to a CIDR location.
+     *
+     * A LocationName with an asterisk “*” can be used to create a default CIDR record. CollectionId
+     * is still required for default record.
+     *
+     * Default: - No CIDR routing configured
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordset.html#cfn-route53-recordset-cidrroutingconfig)
+     * @param cidrRoutingConfig The object that is specified in resource record set object when you
+     * are linking a resource record set to a CIDR location. 
+     */
+    public fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfig)
+
     /**
      * A comment to add on the record.
      *
@@ -215,6 +230,23 @@ public open class ARecord(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.route53.ARecord.Builder =
         software.amazon.awscdk.services.route53.ARecord.Builder.create(scope, id)
+
+    /**
+     * The object that is specified in resource record set object when you are linking a resource
+     * record set to a CIDR location.
+     *
+     * A LocationName with an asterisk “*” can be used to create a default CIDR record. CollectionId
+     * is still required for default record.
+     *
+     * Default: - No CIDR routing configured
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordset.html#cfn-route53-recordset-cidrroutingconfig)
+     * @param cidrRoutingConfig The object that is specified in resource record set object when you
+     * are linking a resource record set to a CIDR location. 
+     */
+    override fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfig) {
+      cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(CidrRoutingConfig.Companion::unwrap))
+    }
 
     /**
      * A comment to add on the record.
@@ -399,6 +431,9 @@ public open class ARecord(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.route53.ARecord.PROPERTY_INJECTION_ID
+
     public fun fromARecordAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

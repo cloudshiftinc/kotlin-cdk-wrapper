@@ -56,17 +56,13 @@ public interface CfnEnabledBaselineProps {
   public fun baselineVersion(): String
 
   /**
-   * Parameters that are applied when enabling this `Baseline` .
-   *
-   * These parameters configure the behavior of the baseline.
+   * Shows the parameters that are applied when enabling this `Baseline` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledbaseline.html#cfn-controltower-enabledbaseline-parameters)
    */
   public fun parameters(): Any? = unwrap(this).getParameters()
 
   /**
-   * Tags associated with input to `EnableBaseline` .
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledbaseline.html#cfn-controltower-enabledbaseline-tags)
    */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
@@ -95,30 +91,27 @@ public interface CfnEnabledBaselineProps {
     public fun baselineVersion(baselineVersion: String)
 
     /**
-     * @param parameters Parameters that are applied when enabling this `Baseline` .
-     * These parameters configure the behavior of the baseline.
+     * @param parameters Shows the parameters that are applied when enabling this `Baseline` .
      */
     public fun parameters(parameters: IResolvable)
 
     /**
-     * @param parameters Parameters that are applied when enabling this `Baseline` .
-     * These parameters configure the behavior of the baseline.
+     * @param parameters Shows the parameters that are applied when enabling this `Baseline` .
      */
     public fun parameters(parameters: List<Any>)
 
     /**
-     * @param parameters Parameters that are applied when enabling this `Baseline` .
-     * These parameters configure the behavior of the baseline.
+     * @param parameters Shows the parameters that are applied when enabling this `Baseline` .
      */
     public fun parameters(vararg parameters: Any)
 
     /**
-     * @param tags Tags associated with input to `EnableBaseline` .
+     * @param tags the value to be set.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags Tags associated with input to `EnableBaseline` .
+     * @param tags the value to be set.
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -149,36 +142,33 @@ public interface CfnEnabledBaselineProps {
     }
 
     /**
-     * @param parameters Parameters that are applied when enabling this `Baseline` .
-     * These parameters configure the behavior of the baseline.
+     * @param parameters Shows the parameters that are applied when enabling this `Baseline` .
      */
     override fun parameters(parameters: IResolvable) {
       cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param parameters Parameters that are applied when enabling this `Baseline` .
-     * These parameters configure the behavior of the baseline.
+     * @param parameters Shows the parameters that are applied when enabling this `Baseline` .
      */
     override fun parameters(parameters: List<Any>) {
       cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param parameters Parameters that are applied when enabling this `Baseline` .
-     * These parameters configure the behavior of the baseline.
+     * @param parameters Shows the parameters that are applied when enabling this `Baseline` .
      */
     override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
 
     /**
-     * @param tags Tags associated with input to `EnableBaseline` .
+     * @param tags the value to be set.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags Tags associated with input to `EnableBaseline` .
+     * @param tags the value to be set.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -212,17 +202,13 @@ public interface CfnEnabledBaselineProps {
     override fun baselineVersion(): String = unwrap(this).getBaselineVersion()
 
     /**
-     * Parameters that are applied when enabling this `Baseline` .
-     *
-     * These parameters configure the behavior of the baseline.
+     * Shows the parameters that are applied when enabling this `Baseline` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledbaseline.html#cfn-controltower-enabledbaseline-parameters)
      */
     override fun parameters(): Any? = unwrap(this).getParameters()
 
     /**
-     * Tags associated with input to `EnableBaseline` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-controltower-enabledbaseline.html#cfn-controltower-enabledbaseline-tags)
      */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()

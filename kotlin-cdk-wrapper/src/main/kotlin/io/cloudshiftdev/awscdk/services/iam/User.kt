@@ -446,6 +446,9 @@ public open class User(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.iam.User.PROPERTY_INJECTION_ID
+
     public fun fromUserArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

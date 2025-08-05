@@ -36,8 +36,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .name("name")
  * // the properties below are optional
  * .description("description")
+ * .domainVersion("domainVersion")
  * .kmsKeyIdentifier("kmsKeyIdentifier")
+ * .serviceRole("serviceRole")
  * .singleSignOn(SingleSignOnProperty.builder()
+ * .idcInstanceArn("idcInstanceArn")
  * .type("type")
  * .userAssignment("userAssignment")
  * .build())
@@ -102,6 +105,11 @@ public open class CfnDomain(
   public open fun attrPortalUrl(): String = unwrap(this).getAttrPortalUrl()
 
   /**
+   * The ID of the root domain unit.
+   */
+  public open fun attrRootDomainUnitId(): String = unwrap(this).getAttrRootDomainUnitId()
+
+  /**
    * The status of the Amazon DataZone domain.
    */
   public open fun attrStatus(): String = unwrap(this).getAttrStatus()
@@ -137,6 +145,18 @@ public open class CfnDomain(
   }
 
   /**
+   * The domain version.
+   */
+  public open fun domainVersion(): String? = unwrap(this).getDomainVersion()
+
+  /**
+   * The domain version.
+   */
+  public open fun domainVersion(`value`: String) {
+    unwrap(this).setDomainVersion(`value`)
+  }
+
+  /**
    * Examines the CloudFormation resource and discloses attributes.
    *
    * @param inspector tree inspector to collect and process attributes. 
@@ -169,6 +189,18 @@ public open class CfnDomain(
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
+  }
+
+  /**
+   * The service role of the domain.
+   */
+  public open fun serviceRole(): String? = unwrap(this).getServiceRole()
+
+  /**
+   * The service role of the domain.
+   */
+  public open fun serviceRole(`value`: String) {
+    unwrap(this).setServiceRole(`value`)
   }
 
   /**
@@ -241,6 +273,14 @@ public open class CfnDomain(
     public fun domainExecutionRole(domainExecutionRole: String)
 
     /**
+     * The domain version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-domain.html#cfn-datazone-domain-domainversion)
+     * @param domainVersion The domain version. 
+     */
+    public fun domainVersion(domainVersion: String)
+
+    /**
      * The identifier of the AWS Key Management Service (KMS) key that is used to encrypt the Amazon
      * DataZone domain, metadata, and reporting data.
      *
@@ -257,6 +297,14 @@ public open class CfnDomain(
      * @param name The name of the Amazon DataZone domain. 
      */
     public fun name(name: String)
+
+    /**
+     * The service role of the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-domain.html#cfn-datazone-domain-servicerole)
+     * @param serviceRole The service role of the domain. 
+     */
+    public fun serviceRole(serviceRole: String)
 
     /**
      * The single sign-on details in Amazon DataZone.
@@ -333,6 +381,16 @@ public open class CfnDomain(
     }
 
     /**
+     * The domain version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-domain.html#cfn-datazone-domain-domainversion)
+     * @param domainVersion The domain version. 
+     */
+    override fun domainVersion(domainVersion: String) {
+      cdkBuilder.domainVersion(domainVersion)
+    }
+
+    /**
      * The identifier of the AWS Key Management Service (KMS) key that is used to encrypt the Amazon
      * DataZone domain, metadata, and reporting data.
      *
@@ -352,6 +410,16 @@ public open class CfnDomain(
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * The service role of the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-domain.html#cfn-datazone-domain-servicerole)
+     * @param serviceRole The service role of the domain. 
+     */
+    override fun serviceRole(serviceRole: String) {
+      cdkBuilder.serviceRole(serviceRole)
     }
 
     /**
@@ -436,6 +504,7 @@ public open class CfnDomain(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.datazone.*;
    * SingleSignOnProperty singleSignOnProperty = SingleSignOnProperty.builder()
+   * .idcInstanceArn("idcInstanceArn")
    * .type("type")
    * .userAssignment("userAssignment")
    * .build();
@@ -444,6 +513,13 @@ public open class CfnDomain(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-domain-singlesignon.html)
    */
   public interface SingleSignOnProperty {
+    /**
+     * The ARN of the IDC instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-domain-singlesignon.html#cfn-datazone-domain-singlesignon-idcinstancearn)
+     */
+    public fun idcInstanceArn(): String? = unwrap(this).getIdcInstanceArn()
+
     /**
      * The type of single sign-on in Amazon DataZone.
      *
@@ -464,6 +540,11 @@ public open class CfnDomain(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param idcInstanceArn The ARN of the IDC instance.
+       */
+      public fun idcInstanceArn(idcInstanceArn: String)
+
+      /**
        * @param type The type of single sign-on in Amazon DataZone.
        */
       public fun type(type: String)
@@ -478,6 +559,13 @@ public open class CfnDomain(
       private val cdkBuilder:
           software.amazon.awscdk.services.datazone.CfnDomain.SingleSignOnProperty.Builder =
           software.amazon.awscdk.services.datazone.CfnDomain.SingleSignOnProperty.builder()
+
+      /**
+       * @param idcInstanceArn The ARN of the IDC instance.
+       */
+      override fun idcInstanceArn(idcInstanceArn: String) {
+        cdkBuilder.idcInstanceArn(idcInstanceArn)
+      }
 
       /**
        * @param type The type of single sign-on in Amazon DataZone.
@@ -501,6 +589,13 @@ public open class CfnDomain(
       cdkObject: software.amazon.awscdk.services.datazone.CfnDomain.SingleSignOnProperty,
     ) : CdkObject(cdkObject),
         SingleSignOnProperty {
+      /**
+       * The ARN of the IDC instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-domain-singlesignon.html#cfn-datazone-domain-singlesignon-idcinstancearn)
+       */
+      override fun idcInstanceArn(): String? = unwrap(this).getIdcInstanceArn()
+
       /**
        * The type of single sign-on in Amazon DataZone.
        *

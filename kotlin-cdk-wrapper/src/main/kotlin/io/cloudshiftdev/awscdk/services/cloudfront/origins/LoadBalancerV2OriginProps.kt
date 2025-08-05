@@ -21,7 +21,6 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
  * ApplicationLoadBalancer loadBalancer;
  * LoadBalancerV2Origin origin = LoadBalancerV2Origin.Builder.create(loadBalancer)
  * .connectionAttempts(3)

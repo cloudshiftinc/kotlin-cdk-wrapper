@@ -34,6 +34,9 @@ public open class RepositoryEncryption(
     public val KMS: RepositoryEncryption =
         RepositoryEncryption.wrap(software.amazon.awscdk.services.ecr.RepositoryEncryption.KMS)
 
+    public val KMS_DSSE: RepositoryEncryption =
+        RepositoryEncryption.wrap(software.amazon.awscdk.services.ecr.RepositoryEncryption.KMS_DSSE)
+
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.RepositoryEncryption):
         RepositoryEncryption = RepositoryEncryption(cdkObject)
 

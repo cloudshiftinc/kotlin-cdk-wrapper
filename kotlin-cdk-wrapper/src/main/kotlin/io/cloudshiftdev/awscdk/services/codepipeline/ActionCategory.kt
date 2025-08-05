@@ -11,6 +11,7 @@ public enum class ActionCategory(
   APPROVAL(software.amazon.awscdk.services.codepipeline.ActionCategory.APPROVAL),
   DEPLOY(software.amazon.awscdk.services.codepipeline.ActionCategory.DEPLOY),
   INVOKE(software.amazon.awscdk.services.codepipeline.ActionCategory.INVOKE),
+  COMPUTE(software.amazon.awscdk.services.codepipeline.ActionCategory.COMPUTE),
   ;
 
   public companion object {
@@ -23,6 +24,7 @@ public enum class ActionCategory(
           ActionCategory.APPROVAL
       software.amazon.awscdk.services.codepipeline.ActionCategory.DEPLOY -> ActionCategory.DEPLOY
       software.amazon.awscdk.services.codepipeline.ActionCategory.INVOKE -> ActionCategory.INVOKE
+      software.amazon.awscdk.services.codepipeline.ActionCategory.COMPUTE -> ActionCategory.COMPUTE
     }
 
     internal fun unwrap(wrapped: ActionCategory):

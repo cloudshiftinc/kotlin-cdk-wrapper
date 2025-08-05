@@ -23,8 +23,12 @@ import kotlin.collections.List
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.ec2.*;
  * CfnIPAMProps cfnIPAMProps = CfnIPAMProps.builder()
+ * .defaultResourceDiscoveryOrganizationalUnitExclusions(List.of(IpamOrganizationalUnitExclusionProperty.builder()
+ * .organizationsEntityPath("organizationsEntityPath")
+ * .build()))
  * .description("description")
  * .enablePrivateGua(false)
+ * .meteredAccount("meteredAccount")
  * .operatingRegions(List.of(IpamOperatingRegionProperty.builder()
  * .regionName("regionName")
  * .build()))
@@ -40,6 +44,19 @@ import kotlin.collections.List
  */
 public interface CfnIPAMProps {
   /**
+   * If your IPAM is integrated with AWS Organizations, you can exclude an [organizational unit
+   * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+   * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+   * accounts in that OU. For more information, see [Exclude organizational units from
+   * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual Private
+   * Cloud IP Address Manager User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html#cfn-ec2-ipam-defaultresourcediscoveryorganizationalunitexclusions)
+   */
+  public fun defaultResourceDiscoveryOrganizationalUnitExclusions(): Any? =
+      unwrap(this).getDefaultResourceDiscoveryOrganizationalUnitExclusions()
+
+  /**
    * The description for the IPAM.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html#cfn-ec2-ipam-description)
@@ -54,6 +71,13 @@ public interface CfnIPAMProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html#cfn-ec2-ipam-enableprivategua)
    */
   public fun enablePrivateGua(): Any? = unwrap(this).getEnablePrivateGua()
+
+  /**
+   * A metered account is an account that is charged for active IP addresses managed in IPAM.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html#cfn-ec2-ipam-meteredaccount)
+   */
+  public fun meteredAccount(): String? = unwrap(this).getMeteredAccount()
 
   /**
    * The operating Regions for an IPAM.
@@ -96,6 +120,42 @@ public interface CfnIPAMProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param defaultResourceDiscoveryOrganizationalUnitExclusions If your IPAM is integrated with
+     * AWS Organizations, you can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* .
+     */
+    public
+        fun defaultResourceDiscoveryOrganizationalUnitExclusions(defaultResourceDiscoveryOrganizationalUnitExclusions: IResolvable)
+
+    /**
+     * @param defaultResourceDiscoveryOrganizationalUnitExclusions If your IPAM is integrated with
+     * AWS Organizations, you can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* .
+     */
+    public
+        fun defaultResourceDiscoveryOrganizationalUnitExclusions(defaultResourceDiscoveryOrganizationalUnitExclusions: List<Any>)
+
+    /**
+     * @param defaultResourceDiscoveryOrganizationalUnitExclusions If your IPAM is integrated with
+     * AWS Organizations, you can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* .
+     */
+    public fun defaultResourceDiscoveryOrganizationalUnitExclusions(vararg
+        defaultResourceDiscoveryOrganizationalUnitExclusions: Any)
+
+    /**
      * @param description The description for the IPAM.
      */
     public fun description(description: String)
@@ -113,6 +173,12 @@ public interface CfnIPAMProps {
      * This option is disabled by default.
      */
     public fun enablePrivateGua(enablePrivateGua: IResolvable)
+
+    /**
+     * @param meteredAccount A metered account is an account that is charged for active IP addresses
+     * managed in IPAM.
+     */
+    public fun meteredAccount(meteredAccount: String)
 
     /**
      * @param operatingRegions The operating Regions for an IPAM.
@@ -176,6 +242,47 @@ public interface CfnIPAMProps {
         software.amazon.awscdk.services.ec2.CfnIPAMProps.builder()
 
     /**
+     * @param defaultResourceDiscoveryOrganizationalUnitExclusions If your IPAM is integrated with
+     * AWS Organizations, you can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* .
+     */
+    override
+        fun defaultResourceDiscoveryOrganizationalUnitExclusions(defaultResourceDiscoveryOrganizationalUnitExclusions: IResolvable) {
+      cdkBuilder.defaultResourceDiscoveryOrganizationalUnitExclusions(defaultResourceDiscoveryOrganizationalUnitExclusions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param defaultResourceDiscoveryOrganizationalUnitExclusions If your IPAM is integrated with
+     * AWS Organizations, you can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* .
+     */
+    override
+        fun defaultResourceDiscoveryOrganizationalUnitExclusions(defaultResourceDiscoveryOrganizationalUnitExclusions: List<Any>) {
+      cdkBuilder.defaultResourceDiscoveryOrganizationalUnitExclusions(defaultResourceDiscoveryOrganizationalUnitExclusions.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param defaultResourceDiscoveryOrganizationalUnitExclusions If your IPAM is integrated with
+     * AWS Organizations, you can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* .
+     */
+    override fun defaultResourceDiscoveryOrganizationalUnitExclusions(vararg
+        defaultResourceDiscoveryOrganizationalUnitExclusions: Any): Unit =
+        defaultResourceDiscoveryOrganizationalUnitExclusions(defaultResourceDiscoveryOrganizationalUnitExclusions.toList())
+
+    /**
      * @param description The description for the IPAM.
      */
     override fun description(description: String) {
@@ -198,6 +305,14 @@ public interface CfnIPAMProps {
      */
     override fun enablePrivateGua(enablePrivateGua: IResolvable) {
       cdkBuilder.enablePrivateGua(enablePrivateGua.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param meteredAccount A metered account is an account that is charged for active IP addresses
+     * managed in IPAM.
+     */
+    override fun meteredAccount(meteredAccount: String) {
+      cdkBuilder.meteredAccount(meteredAccount)
     }
 
     /**
@@ -273,6 +388,19 @@ public interface CfnIPAMProps {
   ) : CdkObject(cdkObject),
       CfnIPAMProps {
     /**
+     * If your IPAM is integrated with AWS Organizations, you can exclude an [organizational unit
+     * (OU)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#organizationalunit)
+     * from being managed by IPAM. When you exclude an OU, IPAM will not manage the IP addresses in
+     * accounts in that OU. For more information, see [Exclude organizational units from
+     * IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/exclude-ous.html) in the *Amazon Virtual
+     * Private Cloud IP Address Manager User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html#cfn-ec2-ipam-defaultresourcediscoveryorganizationalunitexclusions)
+     */
+    override fun defaultResourceDiscoveryOrganizationalUnitExclusions(): Any? =
+        unwrap(this).getDefaultResourceDiscoveryOrganizationalUnitExclusions()
+
+    /**
      * The description for the IPAM.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html#cfn-ec2-ipam-description)
@@ -287,6 +415,13 @@ public interface CfnIPAMProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html#cfn-ec2-ipam-enableprivategua)
      */
     override fun enablePrivateGua(): Any? = unwrap(this).getEnablePrivateGua()
+
+    /**
+     * A metered account is an account that is charged for active IP addresses managed in IPAM.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html#cfn-ec2-ipam-meteredaccount)
+     */
+    override fun meteredAccount(): String? = unwrap(this).getMeteredAccount()
 
     /**
      * The operating Regions for an IPAM.

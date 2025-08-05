@@ -22,10 +22,18 @@ import kotlin.collections.Map
  *
  * ```
  * Bucket myBucket = new Bucket(this, "myBucket");
+ * S3OriginAccessControl oac = S3OriginAccessControl.Builder.create(this, "MyOAC")
+ * .signing(Signing.SIGV4_NO_OVERRIDE)
+ * .build();
  * IOrigin s3Origin = S3BucketOrigin.withOriginAccessControl(myBucket,
  * S3BucketOriginWithOACProps.builder()
- * .originAccessLevels(List.of(AccessLevel.READ, AccessLevel.WRITE, AccessLevel.DELETE))
+ * .originAccessControl(oac)
  * .build());
+ * Distribution.Builder.create(this, "myDist")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(s3Origin)
+ * .build())
+ * .build();
  * ```
  */
 public interface S3BucketOriginWithOACProps : S3BucketOriginBaseProps {

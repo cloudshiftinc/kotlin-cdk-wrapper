@@ -169,6 +169,13 @@ public interface PipelineProps {
       emptyList()
 
   /**
+   * Use pipeline service role for actions if no action role configured.
+   *
+   * Default: - false
+   */
+  public fun usePipelineRoleForActions(): Boolean? = unwrap(this).getUsePipelineRoleForActions()
+
+  /**
    * A list that defines the pipeline variables for a pipeline resource.
    *
    * `variables` can only be used when `pipelineType` is set to `PipelineType.V2`.
@@ -284,6 +291,12 @@ public interface PipelineProps {
      * You can always add more triggers later by calling `Pipeline#addTrigger`.
      */
     public fun triggers(vararg triggers: TriggerProps)
+
+    /**
+     * @param usePipelineRoleForActions Use pipeline service role for actions if no action role
+     * configured.
+     */
+    public fun usePipelineRoleForActions(usePipelineRoleForActions: Boolean)
 
     /**
      * @param variables A list that defines the pipeline variables for a pipeline resource.
@@ -431,6 +444,14 @@ public interface PipelineProps {
     override fun triggers(vararg triggers: TriggerProps): Unit = triggers(triggers.toList())
 
     /**
+     * @param usePipelineRoleForActions Use pipeline service role for actions if no action role
+     * configured.
+     */
+    override fun usePipelineRoleForActions(usePipelineRoleForActions: Boolean) {
+      cdkBuilder.usePipelineRoleForActions(usePipelineRoleForActions)
+    }
+
+    /**
      * @param variables A list that defines the pipeline variables for a pipeline resource.
      * `variables` can only be used when `pipelineType` is set to `PipelineType.V2`.
      * You can always add more variables later by calling `Pipeline#addVariable`.
@@ -575,6 +596,13 @@ public interface PipelineProps {
      */
     override fun triggers(): List<TriggerProps> =
         unwrap(this).getTriggers()?.map(TriggerProps::wrap) ?: emptyList()
+
+    /**
+     * Use pipeline service role for actions if no action role configured.
+     *
+     * Default: - false
+     */
+    override fun usePipelineRoleForActions(): Boolean? = unwrap(this).getUsePipelineRoleForActions()
 
     /**
      * A list that defines the pipeline variables for a pipeline resource.

@@ -173,6 +173,9 @@ public open class DeploymentStrategy(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.appconfig.DeploymentStrategy.PROPERTY_INJECTION_ID
+
     public fun fromDeploymentStrategyArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

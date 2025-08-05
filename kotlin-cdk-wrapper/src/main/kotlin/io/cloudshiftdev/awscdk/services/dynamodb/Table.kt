@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import io.cloudshiftdev.awscdk.services.kinesis.IStream
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -353,12 +354,12 @@ public open class Table(
     public fun importSource(importSource: ImportSourceSpecification.Builder.() -> Unit)
 
     /**
-     * Kinesis Data Stream approximate creation timestamp prescision.
+     * Kinesis Data Stream approximate creation timestamp precision.
      *
      * Default: ApproximateCreationDateTimePrecision.MICROSECOND
      *
      * @param kinesisPrecisionTimestamp Kinesis Data Stream approximate creation timestamp
-     * prescision. 
+     * precision. 
      */
     public
         fun kinesisPrecisionTimestamp(kinesisPrecisionTimestamp: ApproximateCreationDateTimePrecision)
@@ -417,13 +418,39 @@ public open class Table(
     public fun partitionKey(partitionKey: Attribute.Builder.() -> Unit)
 
     /**
-     * Whether point-in-time recovery is enabled.
+     * (deprecated) Whether point-in-time recovery is enabled.
      *
-     * Default: - point-in-time recovery is disabled
+     * Default: false - point in time recovery is not enabled.
      *
+     * @deprecated use `pointInTimeRecoverySpecification` instead
      * @param pointInTimeRecovery Whether point-in-time recovery is enabled. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun pointInTimeRecovery(pointInTimeRecovery: Boolean)
+
+    /**
+     * Whether point-in-time recovery is enabled and recoveryPeriodInDays is set.
+     *
+     * Default: - point in time recovery is not enabled.
+     *
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set. 
+     */
+    public
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification)
+
+    /**
+     * Whether point-in-time recovery is enabled and recoveryPeriodInDays is set.
+     *
+     * Default: - point in time recovery is not enabled.
+     *
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f705565ce54a529959911be05c41fcca4cbac261021919417daba28f614413d6")
+    public
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification.Builder.() -> Unit)
 
     /**
      * The read capacity for the table.
@@ -447,6 +474,15 @@ public open class Table(
      * @param removalPolicy The removal policy to apply to the DynamoDB Table. 
      */
     public fun removalPolicy(removalPolicy: RemovalPolicy)
+
+    /**
+     * The removal policy to apply to the DynamoDB replica tables.
+     *
+     * Default: undefined - use DynamoDB Table's removal policy
+     *
+     * @param replicaRemovalPolicy The removal policy to apply to the DynamoDB replica tables. 
+     */
+    public fun replicaRemovalPolicy(replicaRemovalPolicy: RemovalPolicy)
 
     /**
      * Regions where replica tables will be created.
@@ -737,12 +773,12 @@ public open class Table(
         importSource(ImportSourceSpecification(importSource))
 
     /**
-     * Kinesis Data Stream approximate creation timestamp prescision.
+     * Kinesis Data Stream approximate creation timestamp precision.
      *
      * Default: ApproximateCreationDateTimePrecision.MICROSECOND
      *
      * @param kinesisPrecisionTimestamp Kinesis Data Stream approximate creation timestamp
-     * prescision. 
+     * precision. 
      */
     override
         fun kinesisPrecisionTimestamp(kinesisPrecisionTimestamp: ApproximateCreationDateTimePrecision) {
@@ -812,15 +848,45 @@ public open class Table(
         partitionKey(Attribute(partitionKey))
 
     /**
-     * Whether point-in-time recovery is enabled.
+     * (deprecated) Whether point-in-time recovery is enabled.
      *
-     * Default: - point-in-time recovery is disabled
+     * Default: false - point in time recovery is not enabled.
      *
+     * @deprecated use `pointInTimeRecoverySpecification` instead
      * @param pointInTimeRecovery Whether point-in-time recovery is enabled. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun pointInTimeRecovery(pointInTimeRecovery: Boolean) {
       cdkBuilder.pointInTimeRecovery(pointInTimeRecovery)
     }
+
+    /**
+     * Whether point-in-time recovery is enabled and recoveryPeriodInDays is set.
+     *
+     * Default: - point in time recovery is not enabled.
+     *
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set. 
+     */
+    override
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification) {
+      cdkBuilder.pointInTimeRecoverySpecification(pointInTimeRecoverySpecification.let(PointInTimeRecoverySpecification.Companion::unwrap))
+    }
+
+    /**
+     * Whether point-in-time recovery is enabled and recoveryPeriodInDays is set.
+     *
+     * Default: - point in time recovery is not enabled.
+     *
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f705565ce54a529959911be05c41fcca4cbac261021919417daba28f614413d6")
+    override
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification.Builder.() -> Unit):
+        Unit =
+        pointInTimeRecoverySpecification(PointInTimeRecoverySpecification(pointInTimeRecoverySpecification))
 
     /**
      * The read capacity for the table.
@@ -847,6 +913,17 @@ public open class Table(
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
+    }
+
+    /**
+     * The removal policy to apply to the DynamoDB replica tables.
+     *
+     * Default: undefined - use DynamoDB Table's removal policy
+     *
+     * @param replicaRemovalPolicy The removal policy to apply to the DynamoDB replica tables. 
+     */
+    override fun replicaRemovalPolicy(replicaRemovalPolicy: RemovalPolicy) {
+      cdkBuilder.replicaRemovalPolicy(replicaRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -1059,6 +1136,9 @@ public open class Table(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.dynamodb.Table.PROPERTY_INJECTION_ID
+
     public fun fromTableArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

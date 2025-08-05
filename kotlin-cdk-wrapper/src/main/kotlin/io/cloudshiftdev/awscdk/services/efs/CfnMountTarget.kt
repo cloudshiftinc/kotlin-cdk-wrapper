@@ -31,6 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .subnetId("subnetId")
  * // the properties below are optional
  * .ipAddress("ipAddress")
+ * .ipAddressType("ipAddressType")
+ * .ipv6Address("ipv6Address")
  * .build();
  * ```
  *
@@ -92,31 +94,59 @@ public open class CfnMountTarget(
   }
 
   /**
-   * Valid IPv4 address within the address range of the specified subnet.
+   * If the `IpAddressType` for the mount target is IPv4 ( `IPV4_ONLY` or `DUAL_STACK` ), then
+   * specify the IPv4 address to use.
    */
   public open fun ipAddress(): String? = unwrap(this).getIpAddress()
 
   /**
-   * Valid IPv4 address within the address range of the specified subnet.
+   * If the `IpAddressType` for the mount target is IPv4 ( `IPV4_ONLY` or `DUAL_STACK` ), then
+   * specify the IPv4 address to use.
    */
   public open fun ipAddress(`value`: String) {
     unwrap(this).setIpAddress(`value`)
   }
 
   /**
-   * Up to five VPC security group IDs, of the form `sg-xxxxxxxx` .
+   * The IP address type for the mount target.
+   */
+  public open fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+
+  /**
+   * The IP address type for the mount target.
+   */
+  public open fun ipAddressType(`value`: String) {
+    unwrap(this).setIpAddressType(`value`)
+  }
+
+  /**
+   * If the `IPAddressType` for the mount target is IPv6 ( `IPV6_ONLY` or `DUAL_STACK` ), then
+   * specify the IPv6 address to use.
+   */
+  public open fun ipv6Address(): String? = unwrap(this).getIpv6Address()
+
+  /**
+   * If the `IPAddressType` for the mount target is IPv6 ( `IPV6_ONLY` or `DUAL_STACK` ), then
+   * specify the IPv6 address to use.
+   */
+  public open fun ipv6Address(`value`: String) {
+    unwrap(this).setIpv6Address(`value`)
+  }
+
+  /**
+   * VPC security group IDs, of the form `sg-xxxxxxxx` .
    */
   public open fun securityGroups(): List<String> = unwrap(this).getSecurityGroups()
 
   /**
-   * Up to five VPC security group IDs, of the form `sg-xxxxxxxx` .
+   * VPC security group IDs, of the form `sg-xxxxxxxx` .
    */
   public open fun securityGroups(`value`: List<String>) {
     unwrap(this).setSecurityGroups(`value`)
   }
 
   /**
-   * Up to five VPC security group IDs, of the form `sg-xxxxxxxx` .
+   * VPC security group IDs, of the form `sg-xxxxxxxx` .
    */
   public open fun securityGroups(vararg `value`: String): Unit = securityGroups(`value`.toList())
 
@@ -146,30 +176,77 @@ public open class CfnMountTarget(
     public fun fileSystemId(fileSystemId: String)
 
     /**
-     * Valid IPv4 address within the address range of the specified subnet.
+     * If the `IpAddressType` for the mount target is IPv4 ( `IPV4_ONLY` or `DUAL_STACK` ), then
+     * specify the IPv4 address to use.
+     *
+     * If you do not specify an `IpAddress` , then Amazon EFS selects an unused IP address from the
+     * subnet specified for `SubnetId` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-ipaddress)
-     * @param ipAddress Valid IPv4 address within the address range of the specified subnet. 
+     * @param ipAddress If the `IpAddressType` for the mount target is IPv4 ( `IPV4_ONLY` or
+     * `DUAL_STACK` ), then specify the IPv4 address to use. 
      */
     public fun ipAddress(ipAddress: String)
 
     /**
-     * Up to five VPC security group IDs, of the form `sg-xxxxxxxx` .
+     * The IP address type for the mount target.
      *
-     * These must be for the same VPC as subnet specified.
+     * The possible values are `IPV4_ONLY` (only IPv4 addresses), `IPV6_ONLY` (only IPv6 addresses),
+     * and `DUAL_STACK` (dual-stack, both IPv4 and IPv6 addresses). If you don’t specify an
+     * `IpAddressType` , then `IPV4_ONLY` is used.
+     *
+     *
+     * The `IPAddressType` must match the IP type of the subnet. Additionally, the `IPAddressType`
+     * parameter overrides the value set as the default IP address for the subnet in the VPC. For
+     * example, if the `IPAddressType` is `IPV4_ONLY` and `AssignIpv6AddressOnCreation` is `true` ,
+     * then IPv4 is used for the mount target. For more information, see [Modify the IP addressing
+     * attributes of your
+     * subnet](https://docs.aws.amazon.com/vpc/latest/userguide/subnet-public-ip.html) .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-ipaddresstype)
+     * @param ipAddressType The IP address type for the mount target. 
+     */
+    public fun ipAddressType(ipAddressType: String)
+
+    /**
+     * If the `IPAddressType` for the mount target is IPv6 ( `IPV6_ONLY` or `DUAL_STACK` ), then
+     * specify the IPv6 address to use.
+     *
+     * If you do not specify an `Ipv6Address` , then Amazon EFS selects an unused IP address from
+     * the subnet specified for `SubnetId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-ipv6address)
+     * @param ipv6Address If the `IPAddressType` for the mount target is IPv6 ( `IPV6_ONLY` or
+     * `DUAL_STACK` ), then specify the IPv6 address to use. 
+     */
+    public fun ipv6Address(ipv6Address: String)
+
+    /**
+     * VPC security group IDs, of the form `sg-xxxxxxxx` .
+     *
+     * These must be for the same VPC as the subnet specified. The maximum number of security groups
+     * depends on account quota. For more information, see [Amazon VPC
+     * Quotas](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html) in the *Amazon
+     * VPC User Guide* (see the *Security Groups* table). If you don't specify a security group, then
+     * Amazon EFS uses the default security group for the subnet's VPC.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-securitygroups)
-     * @param securityGroups Up to five VPC security group IDs, of the form `sg-xxxxxxxx` . 
+     * @param securityGroups VPC security group IDs, of the form `sg-xxxxxxxx` . 
      */
     public fun securityGroups(securityGroups: List<String>)
 
     /**
-     * Up to five VPC security group IDs, of the form `sg-xxxxxxxx` .
+     * VPC security group IDs, of the form `sg-xxxxxxxx` .
      *
-     * These must be for the same VPC as subnet specified.
+     * These must be for the same VPC as the subnet specified. The maximum number of security groups
+     * depends on account quota. For more information, see [Amazon VPC
+     * Quotas](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html) in the *Amazon
+     * VPC User Guide* (see the *Security Groups* table). If you don't specify a security group, then
+     * Amazon EFS uses the default security group for the subnet's VPC.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-securitygroups)
-     * @param securityGroups Up to five VPC security group IDs, of the form `sg-xxxxxxxx` . 
+     * @param securityGroups VPC security group IDs, of the form `sg-xxxxxxxx` . 
      */
     public fun securityGroups(vararg securityGroups: String)
 
@@ -177,7 +254,7 @@ public open class CfnMountTarget(
      * The ID of the subnet to add the mount target in.
      *
      * For One Zone file systems, use the subnet that is associated with the file system's
-     * Availability Zone.
+     * Availability Zone. The subnet type must be the same type as the `IpAddressType` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-subnetid)
      * @param subnetId The ID of the subnet to add the mount target in. 
@@ -203,34 +280,85 @@ public open class CfnMountTarget(
     }
 
     /**
-     * Valid IPv4 address within the address range of the specified subnet.
+     * If the `IpAddressType` for the mount target is IPv4 ( `IPV4_ONLY` or `DUAL_STACK` ), then
+     * specify the IPv4 address to use.
+     *
+     * If you do not specify an `IpAddress` , then Amazon EFS selects an unused IP address from the
+     * subnet specified for `SubnetId` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-ipaddress)
-     * @param ipAddress Valid IPv4 address within the address range of the specified subnet. 
+     * @param ipAddress If the `IpAddressType` for the mount target is IPv4 ( `IPV4_ONLY` or
+     * `DUAL_STACK` ), then specify the IPv4 address to use. 
      */
     override fun ipAddress(ipAddress: String) {
       cdkBuilder.ipAddress(ipAddress)
     }
 
     /**
-     * Up to five VPC security group IDs, of the form `sg-xxxxxxxx` .
+     * The IP address type for the mount target.
      *
-     * These must be for the same VPC as subnet specified.
+     * The possible values are `IPV4_ONLY` (only IPv4 addresses), `IPV6_ONLY` (only IPv6 addresses),
+     * and `DUAL_STACK` (dual-stack, both IPv4 and IPv6 addresses). If you don’t specify an
+     * `IpAddressType` , then `IPV4_ONLY` is used.
+     *
+     *
+     * The `IPAddressType` must match the IP type of the subnet. Additionally, the `IPAddressType`
+     * parameter overrides the value set as the default IP address for the subnet in the VPC. For
+     * example, if the `IPAddressType` is `IPV4_ONLY` and `AssignIpv6AddressOnCreation` is `true` ,
+     * then IPv4 is used for the mount target. For more information, see [Modify the IP addressing
+     * attributes of your
+     * subnet](https://docs.aws.amazon.com/vpc/latest/userguide/subnet-public-ip.html) .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-ipaddresstype)
+     * @param ipAddressType The IP address type for the mount target. 
+     */
+    override fun ipAddressType(ipAddressType: String) {
+      cdkBuilder.ipAddressType(ipAddressType)
+    }
+
+    /**
+     * If the `IPAddressType` for the mount target is IPv6 ( `IPV6_ONLY` or `DUAL_STACK` ), then
+     * specify the IPv6 address to use.
+     *
+     * If you do not specify an `Ipv6Address` , then Amazon EFS selects an unused IP address from
+     * the subnet specified for `SubnetId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-ipv6address)
+     * @param ipv6Address If the `IPAddressType` for the mount target is IPv6 ( `IPV6_ONLY` or
+     * `DUAL_STACK` ), then specify the IPv6 address to use. 
+     */
+    override fun ipv6Address(ipv6Address: String) {
+      cdkBuilder.ipv6Address(ipv6Address)
+    }
+
+    /**
+     * VPC security group IDs, of the form `sg-xxxxxxxx` .
+     *
+     * These must be for the same VPC as the subnet specified. The maximum number of security groups
+     * depends on account quota. For more information, see [Amazon VPC
+     * Quotas](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html) in the *Amazon
+     * VPC User Guide* (see the *Security Groups* table). If you don't specify a security group, then
+     * Amazon EFS uses the default security group for the subnet's VPC.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-securitygroups)
-     * @param securityGroups Up to five VPC security group IDs, of the form `sg-xxxxxxxx` . 
+     * @param securityGroups VPC security group IDs, of the form `sg-xxxxxxxx` . 
      */
     override fun securityGroups(securityGroups: List<String>) {
       cdkBuilder.securityGroups(securityGroups)
     }
 
     /**
-     * Up to five VPC security group IDs, of the form `sg-xxxxxxxx` .
+     * VPC security group IDs, of the form `sg-xxxxxxxx` .
      *
-     * These must be for the same VPC as subnet specified.
+     * These must be for the same VPC as the subnet specified. The maximum number of security groups
+     * depends on account quota. For more information, see [Amazon VPC
+     * Quotas](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html) in the *Amazon
+     * VPC User Guide* (see the *Security Groups* table). If you don't specify a security group, then
+     * Amazon EFS uses the default security group for the subnet's VPC.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-securitygroups)
-     * @param securityGroups Up to five VPC security group IDs, of the form `sg-xxxxxxxx` . 
+     * @param securityGroups VPC security group IDs, of the form `sg-xxxxxxxx` . 
      */
     override fun securityGroups(vararg securityGroups: String): Unit =
         securityGroups(securityGroups.toList())
@@ -239,7 +367,7 @@ public open class CfnMountTarget(
      * The ID of the subnet to add the mount target in.
      *
      * For One Zone file systems, use the subnet that is associated with the file system's
-     * Availability Zone.
+     * Availability Zone. The subnet type must be the same type as the `IpAddressType` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-subnetid)
      * @param subnetId The ID of the subnet to add the mount target in. 

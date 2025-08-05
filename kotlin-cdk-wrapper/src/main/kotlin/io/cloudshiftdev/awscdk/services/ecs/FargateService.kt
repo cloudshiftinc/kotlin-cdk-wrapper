@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
+import io.cloudshiftdev.awscdk.services.elasticloadbalancing.LoadBalancer
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -28,6 +29,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * FargateService service = FargateService.Builder.create(this, "Service")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
+ * .minHealthyPercent(100)
  * .deploymentAlarms(DeploymentAlarmConfig.builder()
  * .alarmNames(List.of(elbAlarm.getAlarmName()))
  * .behavior(AlarmBehavior.ROLLBACK_ON_ALARM)
@@ -67,6 +69,17 @@ public open class FargateService(
   )
 
   /**
+   * Registers the service as a target of a Classic Load Balancer (CLB).
+   *
+   * Don't call this. Call `loadBalancer.addTarget()` instead.
+   *
+   * @param loadBalancer 
+   */
+  public override fun attachToClassicLB(loadBalancer: LoadBalancer) {
+    unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer.Companion::unwrap))
+  }
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.FargateService].
    */
   @CdkDslMarker
@@ -82,6 +95,21 @@ public open class FargateService(
      * public IP address. 
      */
     public fun assignPublicIp(assignPublicIp: Boolean)
+
+    /**
+     * Whether to use Availability Zone rebalancing for the service.
+     *
+     * If enabled, `maxHealthyPercent` must be greater than 100, and the service must not be a
+     * target
+     * of a Classic Load Balancer.
+     *
+     * Default: AvailabilityZoneRebalancing.DISABLED
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html)
+     * @param availabilityZoneRebalancing Whether to use Availability Zone rebalancing for the
+     * service. 
+     */
+    public fun availabilityZoneRebalancing(availabilityZoneRebalancing: AvailabilityZoneRebalancing)
 
     /**
      * A list of Capacity Provider strategies used to place a service.
@@ -450,6 +478,24 @@ public open class FargateService(
      */
     override fun assignPublicIp(assignPublicIp: Boolean) {
       cdkBuilder.assignPublicIp(assignPublicIp)
+    }
+
+    /**
+     * Whether to use Availability Zone rebalancing for the service.
+     *
+     * If enabled, `maxHealthyPercent` must be greater than 100, and the service must not be a
+     * target
+     * of a Classic Load Balancer.
+     *
+     * Default: AvailabilityZoneRebalancing.DISABLED
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html)
+     * @param availabilityZoneRebalancing Whether to use Availability Zone rebalancing for the
+     * service. 
+     */
+    override
+        fun availabilityZoneRebalancing(availabilityZoneRebalancing: AvailabilityZoneRebalancing) {
+      cdkBuilder.availabilityZoneRebalancing(availabilityZoneRebalancing.let(AvailabilityZoneRebalancing.Companion::unwrap))
     }
 
     /**
@@ -855,6 +901,9 @@ public open class FargateService(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ecs.FargateService.PROPERTY_INJECTION_ID
+
     public fun fromFargateServiceArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

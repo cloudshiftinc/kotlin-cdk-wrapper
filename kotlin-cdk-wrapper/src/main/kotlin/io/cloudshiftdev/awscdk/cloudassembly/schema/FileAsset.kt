@@ -13,11 +13,15 @@ import kotlin.jvm.JvmName
 public interface FileAsset {
   public fun destinations(): Map<String, FileDestination>
 
+  public fun displayName(): String? = unwrap(this).getDisplayName()
+
   public fun source(): FileSource
 
   @CdkDslMarker
   public interface Builder {
     public fun destinations(destinations: Map<String, FileDestination>)
+
+    public fun displayName(displayName: String)
 
     public fun source(source: FileSource)
 
@@ -32,6 +36,10 @@ public interface FileAsset {
 
     override fun destinations(destinations: Map<String, FileDestination>) {
       cdkBuilder.destinations(destinations.mapValues{FileDestination.unwrap(it.value)})
+    }
+
+    override fun displayName(displayName: String) {
+      cdkBuilder.displayName(displayName)
     }
 
     override fun source(source: FileSource) {
@@ -51,6 +59,8 @@ public interface FileAsset {
       FileAsset {
     override fun destinations(): Map<String, FileDestination> =
         unwrap(this).getDestinations().mapValues{FileDestination.wrap(it.value)}
+
+    override fun displayName(): String? = unwrap(this).getDisplayName()
 
     override fun source(): FileSource = unwrap(this).getSource().let(FileSource::wrap)
   }

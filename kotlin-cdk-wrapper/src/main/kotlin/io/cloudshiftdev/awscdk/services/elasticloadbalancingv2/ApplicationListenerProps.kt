@@ -32,6 +32,7 @@ import kotlin.jvm.JvmName
  * .defaultAction(listenerAction)
  * .defaultTargetGroups(List.of(applicationTargetGroup))
  * .mutualAuthentication(MutualAuthentication.builder()
+ * .advertiseTrustStoreCaNames(false)
  * .ignoreClientCertificateExpiry(false)
  * .mutualAuthenticationMode(MutualAuthenticationMode.OFF)
  * .trustStore(trustStore)

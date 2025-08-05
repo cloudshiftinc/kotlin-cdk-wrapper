@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
+import kotlin.String
 import kotlin.Unit
 
 /**
@@ -21,6 +22,7 @@ import kotlin.Unit
  * UserData userData;
  * AmazonLinux2022ImageSsmParameterProps amazonLinux2022ImageSsmParameterProps =
  * AmazonLinux2022ImageSsmParameterProps.builder()
+ * .additionalCacheKey("additionalCacheKey")
  * .cachedInContext(false)
  * .cpuType(AmazonLinuxCpuType.ARM_64)
  * .edition(AmazonLinuxEdition.STANDARD)
@@ -43,6 +45,12 @@ public interface AmazonLinux2022ImageSsmParameterProps : AmazonLinuxImageSsmPara
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key.
+     */
+    public fun additionalCacheKey(additionalCacheKey: String)
+
     /**
      * @param cachedInContext Whether the AMI ID is cached to be stable between deployments.
      * By default, the newest image is used on each deployment. This will cause
@@ -86,6 +94,14 @@ public interface AmazonLinux2022ImageSsmParameterProps : AmazonLinuxImageSsmPara
     private val cdkBuilder:
         software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameterProps.Builder =
         software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameterProps.builder()
+
+    /**
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key.
+     */
+    override fun additionalCacheKey(additionalCacheKey: String) {
+      cdkBuilder.additionalCacheKey(additionalCacheKey)
+    }
 
     /**
      * @param cachedInContext Whether the AMI ID is cached to be stable between deployments.
@@ -143,6 +159,13 @@ public interface AmazonLinux2022ImageSsmParameterProps : AmazonLinuxImageSsmPara
     cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameterProps,
   ) : CdkObject(cdkObject),
       AmazonLinux2022ImageSsmParameterProps {
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     */
+    override fun additionalCacheKey(): String? = unwrap(this).getAdditionalCacheKey()
+
     /**
      * Whether the AMI ID is cached to be stable between deployments.
      *

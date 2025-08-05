@@ -46,23 +46,29 @@ import kotlin.jvm.JvmName
  */
 public interface CfnServerlessClusterProps {
   /**
+   * Includes all client authentication related information.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clientauthentication)
    */
   public fun clientAuthentication(): Any
 
   /**
+   * The name of the cluster.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clustername)
    */
   public fun clusterName(): String
 
   /**
-   * A key-value pair to associate with a resource.
+   * An arbitrary set of tags (key-value pairs) for the cluster.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-tags)
    */
   public fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
   /**
+   * VPC configuration information for the serverless cluster.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-vpcconfigs)
    */
   public fun vpcConfigs(): Any
@@ -73,18 +79,18 @@ public interface CfnServerlessClusterProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param clientAuthentication the value to be set. 
+     * @param clientAuthentication Includes all client authentication related information. 
      */
     public fun clientAuthentication(clientAuthentication: IResolvable)
 
     /**
-     * @param clientAuthentication the value to be set. 
+     * @param clientAuthentication Includes all client authentication related information. 
      */
     public
         fun clientAuthentication(clientAuthentication: CfnServerlessCluster.ClientAuthenticationProperty)
 
     /**
-     * @param clientAuthentication the value to be set. 
+     * @param clientAuthentication Includes all client authentication related information. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e82de3d16091b92d09d367f5e6706fe07c07c4e8f35d5be42249cd82ee85e3a6")
@@ -92,27 +98,27 @@ public interface CfnServerlessClusterProps {
         fun clientAuthentication(clientAuthentication: CfnServerlessCluster.ClientAuthenticationProperty.Builder.() -> Unit)
 
     /**
-     * @param clusterName the value to be set. 
+     * @param clusterName The name of the cluster. 
      */
     public fun clusterName(clusterName: String)
 
     /**
-     * @param tags A key-value pair to associate with a resource.
+     * @param tags An arbitrary set of tags (key-value pairs) for the cluster.
      */
     public fun tags(tags: Map<String, String>)
 
     /**
-     * @param vpcConfigs the value to be set. 
+     * @param vpcConfigs VPC configuration information for the serverless cluster. 
      */
     public fun vpcConfigs(vpcConfigs: IResolvable)
 
     /**
-     * @param vpcConfigs the value to be set. 
+     * @param vpcConfigs VPC configuration information for the serverless cluster. 
      */
     public fun vpcConfigs(vpcConfigs: List<Any>)
 
     /**
-     * @param vpcConfigs the value to be set. 
+     * @param vpcConfigs VPC configuration information for the serverless cluster. 
      */
     public fun vpcConfigs(vararg vpcConfigs: Any)
   }
@@ -122,14 +128,14 @@ public interface CfnServerlessClusterProps {
         software.amazon.awscdk.services.msk.CfnServerlessClusterProps.builder()
 
     /**
-     * @param clientAuthentication the value to be set. 
+     * @param clientAuthentication Includes all client authentication related information. 
      */
     override fun clientAuthentication(clientAuthentication: IResolvable) {
       cdkBuilder.clientAuthentication(clientAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param clientAuthentication the value to be set. 
+     * @param clientAuthentication Includes all client authentication related information. 
      */
     override
         fun clientAuthentication(clientAuthentication: CfnServerlessCluster.ClientAuthenticationProperty) {
@@ -137,7 +143,7 @@ public interface CfnServerlessClusterProps {
     }
 
     /**
-     * @param clientAuthentication the value to be set. 
+     * @param clientAuthentication Includes all client authentication related information. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e82de3d16091b92d09d367f5e6706fe07c07c4e8f35d5be42249cd82ee85e3a6")
@@ -147,35 +153,35 @@ public interface CfnServerlessClusterProps {
         clientAuthentication(CfnServerlessCluster.ClientAuthenticationProperty(clientAuthentication))
 
     /**
-     * @param clusterName the value to be set. 
+     * @param clusterName The name of the cluster. 
      */
     override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
 
     /**
-     * @param tags A key-value pair to associate with a resource.
+     * @param tags An arbitrary set of tags (key-value pairs) for the cluster.
      */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
     /**
-     * @param vpcConfigs the value to be set. 
+     * @param vpcConfigs VPC configuration information for the serverless cluster. 
      */
     override fun vpcConfigs(vpcConfigs: IResolvable) {
       cdkBuilder.vpcConfigs(vpcConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param vpcConfigs the value to be set. 
+     * @param vpcConfigs VPC configuration information for the serverless cluster. 
      */
     override fun vpcConfigs(vpcConfigs: List<Any>) {
       cdkBuilder.vpcConfigs(vpcConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param vpcConfigs the value to be set. 
+     * @param vpcConfigs VPC configuration information for the serverless cluster. 
      */
     override fun vpcConfigs(vararg vpcConfigs: Any): Unit = vpcConfigs(vpcConfigs.toList())
 
@@ -188,23 +194,29 @@ public interface CfnServerlessClusterProps {
   ) : CdkObject(cdkObject),
       CfnServerlessClusterProps {
     /**
+     * Includes all client authentication related information.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clientauthentication)
      */
     override fun clientAuthentication(): Any = unwrap(this).getClientAuthentication()
 
     /**
+     * The name of the cluster.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clustername)
      */
     override fun clusterName(): String = unwrap(this).getClusterName()
 
     /**
-     * A key-value pair to associate with a resource.
+     * An arbitrary set of tags (key-value pairs) for the cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-tags)
      */
     override fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
     /**
+     * VPC configuration information for the serverless cluster.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-vpcconfigs)
      */
     override fun vpcConfigs(): Any = unwrap(this).getVpcConfigs()

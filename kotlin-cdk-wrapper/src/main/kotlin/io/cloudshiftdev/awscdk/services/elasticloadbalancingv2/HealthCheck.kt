@@ -28,6 +28,9 @@ import kotlin.Unit
  * .command(List.of("command"))
  * .entryPoint(List.of("entry", "point"))
  * .build())
+ * .containerCpu(256)
+ * .containerMemoryLimitMiB(512)
+ * .minHealthyPercent(100)
  * .build();
  * loadBalancedFargateService.targetGroup.configureHealthCheck(HealthCheck.builder()
  * .path("/custom-health-path")

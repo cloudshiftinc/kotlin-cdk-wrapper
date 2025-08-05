@@ -23,7 +23,7 @@ import kotlin.Unit
  * LogGroup logGroup;
  * Rule rule;
  * rule.addTarget(CloudWatchLogGroup.Builder.create(logGroup)
- * .logEvent(LogGroupTargetInput.fromObject(LogGroupTargetInputOptions.builder()
+ * .logEvent(LogGroupTargetInput.fromObjectV2(LogGroupTargetInputOptions.builder()
  * .message(JSON.stringify(Map.of(
  * "CustomField", "CustomValue")))
  * .build()))

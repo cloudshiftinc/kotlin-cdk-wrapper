@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -54,6 +55,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .build())
  * // the properties below are optional
+ * .enableMonitoringDashboard(false)
  * .firewallName("firewallName")
  * .build();
  * ```
@@ -79,6 +81,25 @@ public open class CfnLoggingConfiguration(
     props: CfnLoggingConfigurationProps.Builder.() -> Unit,
   ) : this(scope, id, CfnLoggingConfigurationProps(props)
   )
+
+  /**
+   *
+   */
+  public open fun enableMonitoringDashboard(): Any? = unwrap(this).getEnableMonitoringDashboard()
+
+  /**
+   *
+   */
+  public open fun enableMonitoringDashboard(`value`: Boolean) {
+    unwrap(this).setEnableMonitoringDashboard(`value`)
+  }
+
+  /**
+   *
+   */
+  public open fun enableMonitoringDashboard(`value`: IResolvable) {
+    unwrap(this).setEnableMonitoringDashboard(`value`.let(IResolvable.Companion::unwrap))
+  }
 
   /**
    * The Amazon Resource Name (ARN) of the `Firewall` that the logging configuration is associated
@@ -149,6 +170,18 @@ public open class CfnLoggingConfiguration(
   @CdkDslMarker
   public interface Builder {
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-enablemonitoringdashboard)
+     * @param enableMonitoringDashboard 
+     */
+    public fun enableMonitoringDashboard(enableMonitoringDashboard: Boolean)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-enablemonitoringdashboard)
+     * @param enableMonitoringDashboard 
+     */
+    public fun enableMonitoringDashboard(enableMonitoringDashboard: IResolvable)
+
+    /**
      * The Amazon Resource Name (ARN) of the `Firewall` that the logging configuration is associated
      * with.
      *
@@ -210,6 +243,22 @@ public open class CfnLoggingConfiguration(
         software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.Builder =
         software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.Builder.create(scope,
         id)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-enablemonitoringdashboard)
+     * @param enableMonitoringDashboard 
+     */
+    override fun enableMonitoringDashboard(enableMonitoringDashboard: Boolean) {
+      cdkBuilder.enableMonitoringDashboard(enableMonitoringDashboard)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-enablemonitoringdashboard)
+     * @param enableMonitoringDashboard 
+     */
+    override fun enableMonitoringDashboard(enableMonitoringDashboard: IResolvable) {
+      cdkBuilder.enableMonitoringDashboard(enableMonitoringDashboard.let(IResolvable.Companion::unwrap))
+    }
 
     /**
      * The Amazon Resource Name (ARN) of the `Firewall` that the logging configuration is associated
@@ -412,7 +461,7 @@ public open class CfnLoggingConfiguration(
        *
        * `"LogDestination": { "deliveryStream": "alert-delivery-stream" }`
        */
-      public fun logDestination(logDestination: IResolvable)
+      public fun logDestination(logDestination: Map<String, String>)
 
       /**
        * @param logDestination The named location for the logs, provided in a key:value mapping that
@@ -436,7 +485,7 @@ public open class CfnLoggingConfiguration(
        *
        * `"LogDestination": { "deliveryStream": "alert-delivery-stream" }`
        */
-      public fun logDestination(logDestination: Map<String, String>)
+      public fun logDestination(logDestination: IResolvable)
 
       /**
        * @param logDestinationType The type of storage destination to send these logs to. 
@@ -491,8 +540,8 @@ public open class CfnLoggingConfiguration(
        *
        * `"LogDestination": { "deliveryStream": "alert-delivery-stream" }`
        */
-      override fun logDestination(logDestination: IResolvable) {
-        cdkBuilder.logDestination(logDestination.let(IResolvable.Companion::unwrap))
+      override fun logDestination(logDestination: Map<String, String>) {
+        cdkBuilder.logDestination(logDestination)
       }
 
       /**
@@ -517,8 +566,8 @@ public open class CfnLoggingConfiguration(
        *
        * `"LogDestination": { "deliveryStream": "alert-delivery-stream" }`
        */
-      override fun logDestination(logDestination: Map<String, String>) {
-        cdkBuilder.logDestination(logDestination)
+      override fun logDestination(logDestination: IResolvable) {
+        cdkBuilder.logDestination(logDestination.let(IResolvable.Companion::unwrap))
       }
 
       /**

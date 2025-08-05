@@ -14,6 +14,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * A Cross Account Zone Delegation record.
  *
+ * This construct uses custom resource lambda that calls Route53
+ * ChangeResourceRecordSets API to upsert a NS record into the `parentHostedZone`.
+ *
+ * WARNING: The default removal policy of this resource is DESTROY, therefore, if this resource's
+ * logical ID changes or
+ * if this resource is removed from the stack, the existing NS record will be removed.
+ *
  * Example:
  *
  * ```

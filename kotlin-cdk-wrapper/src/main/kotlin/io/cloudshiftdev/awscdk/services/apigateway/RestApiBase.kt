@@ -7,8 +7,13 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
+import io.cloudshiftdev.awscdk.services.ec2.IVpcEndpoint
+import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
+import io.cloudshiftdev.awscdk.services.iam.IResourceWithPolicy
+import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.jvm.JvmName
 
 /**
@@ -26,7 +31,8 @@ import kotlin.jvm.JvmName
 public abstract class RestApiBase(
   cdkObject: software.amazon.awscdk.services.apigateway.RestApiBase,
 ) : Resource(cdkObject),
-    IRestApi {
+    IRestApi,
+    IResourceWithPolicy {
   /**
    * Add an ApiKey to the deploymentStage.
    *
@@ -97,6 +103,24 @@ public abstract class RestApiBase(
   public open fun addGatewayResponse(id: String,
       options: GatewayResponseOptions.Builder.() -> Unit): GatewayResponse = addGatewayResponse(id,
       GatewayResponseOptions(options))
+
+  /**
+   * Add a statement to the resource's resource policy.
+   *
+   * @param statement 
+   */
+  public override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
+      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
+
+  /**
+   * Add a statement to the resource's resource policy.
+   *
+   * @param statement 
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("b93f8258425594b02debe63f0c120f198512d8431f5ae67b7fb7780e34fcbae2")
+  public override fun addToResourcePolicy(statement: PolicyStatement.Builder.() -> Unit):
+      AddToResourcePolicyResult = addToResourcePolicy(PolicyStatement(statement))
 
   /**
    * Adds a usage plan.
@@ -193,6 +217,27 @@ public abstract class RestApiBase(
    * prop, or added via `addDomainName`.
    */
   public open fun domainName(): DomainName? = unwrap(this).getDomainName()?.let(DomainName::wrap)
+
+  /**
+   * Add a resource policy that only allows API execution from a VPC Endpoint to create a private
+   * API.
+   *
+   * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-resource-policies-examples.html#apigateway-resource-policies-source-vpc-example)
+   * @param vpcEndpoints the interface VPC endpoints to grant access to. 
+   */
+  public open fun grantInvokeFromVpcEndpointsOnly(vpcEndpoints: List<IVpcEndpoint>) {
+    unwrap(this).grantInvokeFromVpcEndpointsOnly(vpcEndpoints.map(IVpcEndpoint.Companion::unwrap))
+  }
+
+  /**
+   * Add a resource policy that only allows API execution from a VPC Endpoint to create a private
+   * API.
+   *
+   * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-resource-policies-examples.html#apigateway-resource-policies-source-vpc-example)
+   * @param vpcEndpoints the interface VPC endpoints to grant access to. 
+   */
+  public open fun grantInvokeFromVpcEndpointsOnly(vararg vpcEndpoints: IVpcEndpoint): Unit =
+      grantInvokeFromVpcEndpointsOnly(vpcEndpoints.toList())
 
   /**
    * API Gateway deployment that represents the latest changes of the API.

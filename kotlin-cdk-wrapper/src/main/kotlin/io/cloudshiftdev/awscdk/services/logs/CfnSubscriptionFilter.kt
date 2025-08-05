@@ -4,8 +4,11 @@ package io.cloudshiftdev.awscdk.services.logs
 
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
@@ -40,6 +43,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .filterPattern("filterPattern")
  * .logGroupName("logGroupName")
  * // the properties below are optional
+ * .applyOnTransformedLogs(false)
  * .distribution("distribution")
  * .filterName("filterName")
  * .roleArn("roleArn")
@@ -67,6 +71,25 @@ public open class CfnSubscriptionFilter(
     props: CfnSubscriptionFilterProps.Builder.() -> Unit,
   ) : this(scope, id, CfnSubscriptionFilterProps(props)
   )
+
+  /**
+   * This parameter is valid only for log groups that have an active log transformer.
+   */
+  public open fun applyOnTransformedLogs(): Any? = unwrap(this).getApplyOnTransformedLogs()
+
+  /**
+   * This parameter is valid only for log groups that have an active log transformer.
+   */
+  public open fun applyOnTransformedLogs(`value`: Boolean) {
+    unwrap(this).setApplyOnTransformedLogs(`value`)
+  }
+
+  /**
+   * This parameter is valid only for log groups that have an active log transformer.
+   */
+  public open fun applyOnTransformedLogs(`value`: IResolvable) {
+    unwrap(this).setApplyOnTransformedLogs(`value`.let(IResolvable.Companion::unwrap))
+  }
 
   /**
    * The Amazon Resource Name (ARN) of the destination.
@@ -159,6 +182,38 @@ public open class CfnSubscriptionFilter(
   @CdkDslMarker
   public interface Builder {
     /**
+     * This parameter is valid only for log groups that have an active log transformer.
+     *
+     * For more information about log transformers, see
+     * [PutTransformer](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutTransformer.html)
+     * .
+     *
+     * If this value is `true` , the subscription filter is applied on the transformed version of
+     * the log events instead of the original ingested log events.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html#cfn-logs-subscriptionfilter-applyontransformedlogs)
+     * @param applyOnTransformedLogs This parameter is valid only for log groups that have an active
+     * log transformer. 
+     */
+    public fun applyOnTransformedLogs(applyOnTransformedLogs: Boolean)
+
+    /**
+     * This parameter is valid only for log groups that have an active log transformer.
+     *
+     * For more information about log transformers, see
+     * [PutTransformer](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutTransformer.html)
+     * .
+     *
+     * If this value is `true` , the subscription filter is applied on the transformed version of
+     * the log events instead of the original ingested log events.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html#cfn-logs-subscriptionfilter-applyontransformedlogs)
+     * @param applyOnTransformedLogs This parameter is valid only for log groups that have an active
+     * log transformer. 
+     */
+    public fun applyOnTransformedLogs(applyOnTransformedLogs: IResolvable)
+
+    /**
      * The Amazon Resource Name (ARN) of the destination.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html#cfn-logs-subscriptionfilter-destinationarn)
@@ -227,6 +282,42 @@ public open class CfnSubscriptionFilter(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.logs.CfnSubscriptionFilter.Builder =
         software.amazon.awscdk.services.logs.CfnSubscriptionFilter.Builder.create(scope, id)
+
+    /**
+     * This parameter is valid only for log groups that have an active log transformer.
+     *
+     * For more information about log transformers, see
+     * [PutTransformer](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutTransformer.html)
+     * .
+     *
+     * If this value is `true` , the subscription filter is applied on the transformed version of
+     * the log events instead of the original ingested log events.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html#cfn-logs-subscriptionfilter-applyontransformedlogs)
+     * @param applyOnTransformedLogs This parameter is valid only for log groups that have an active
+     * log transformer. 
+     */
+    override fun applyOnTransformedLogs(applyOnTransformedLogs: Boolean) {
+      cdkBuilder.applyOnTransformedLogs(applyOnTransformedLogs)
+    }
+
+    /**
+     * This parameter is valid only for log groups that have an active log transformer.
+     *
+     * For more information about log transformers, see
+     * [PutTransformer](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutTransformer.html)
+     * .
+     *
+     * If this value is `true` , the subscription filter is applied on the transformed version of
+     * the log events instead of the original ingested log events.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html#cfn-logs-subscriptionfilter-applyontransformedlogs)
+     * @param applyOnTransformedLogs This parameter is valid only for log groups that have an active
+     * log transformer. 
+     */
+    override fun applyOnTransformedLogs(applyOnTransformedLogs: IResolvable) {
+      cdkBuilder.applyOnTransformedLogs(applyOnTransformedLogs.let(IResolvable.Companion::unwrap))
+    }
 
     /**
      * The Amazon Resource Name (ARN) of the destination.

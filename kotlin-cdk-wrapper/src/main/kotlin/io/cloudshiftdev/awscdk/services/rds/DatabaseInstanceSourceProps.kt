@@ -57,6 +57,7 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .allocatedStorage(123)
  * .allowMajorVersionUpgrade(false)
+ * .applyImmediately(false)
  * .autoMinorVersionUpgrade(false)
  * .availabilityZone("availabilityZone")
  * .backupRetention(Duration.minutes(30))
@@ -65,12 +66,14 @@ import kotlin.jvm.JvmName
  * .cloudwatchLogsRetention(RetentionDays.ONE_DAY)
  * .cloudwatchLogsRetentionRole(role)
  * .copyTagsToSnapshot(false)
+ * .databaseInsightsMode(DatabaseInsightsMode.STANDARD)
  * .databaseName("databaseName")
  * .deleteAutomatedBackups(false)
  * .deletionProtection(false)
  * .domain("domain")
  * .domainRole(role)
  * .enablePerformanceInsights(false)
+ * .engineLifecycleSupport(EngineLifecycleSupport.OPEN_SOURCE_RDS_EXTENDED_SUPPORT)
  * .iamAuthentication(false)
  * .instanceIdentifier("instanceIdentifier")
  * .instanceType(instanceType)
@@ -192,6 +195,20 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
     public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: Boolean)
 
     /**
+     * @param applyImmediately Specifies whether changes to the DB instance and any pending
+     * modifications are applied immediately, regardless of the `preferredMaintenanceWindow` setting.
+     * If set to `false`, changes are applied during the next maintenance window.
+     *
+     * Until RDS applies the changes, the DB instance remains in a drift state.
+     * As a result, the configuration doesn't fully reflect the requested modifications and
+     * temporarily diverges from the intended state.
+     *
+     * This property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     */
+    public fun applyImmediately(applyImmediately: Boolean)
+
+    /**
      * @param autoMinorVersionUpgrade Indicates that minor engine upgrades are applied automatically
      * to the DB instance during the maintenance window.
      */
@@ -252,6 +269,11 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
     public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean)
 
     /**
+     * @param databaseInsightsMode The database insights mode.
+     */
+    public fun databaseInsightsMode(databaseInsightsMode: DatabaseInsightsMode)
+
+    /**
      * @param databaseName The name of the database.
      */
     public fun databaseName(databaseName: String)
@@ -289,6 +311,12 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * @param engine The database engine. 
      */
     public fun engine(engine: IInstanceEngine)
+
+    /**
+     * @param engineLifecycleSupport The life cycle type for this DB instance.
+     * This setting applies only to RDS for MySQL and RDS for PostgreSQL.
+     */
+    public fun engineLifecycleSupport(engineLifecycleSupport: EngineLifecycleSupport)
 
     /**
      * @param iamAuthentication Whether to enable mapping of AWS Identity and Access Management
@@ -371,6 +399,8 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
     /**
      * @param performanceInsightRetention The amount of time, in days, to retain Performance
      * Insights data.
+     * If you set `databaseInsightsMode` to `DatabaseInsightsMode.ADVANCED`, you must set this
+     * property to `PerformanceInsightRetention.MONTHS_15`.
      */
     public fun performanceInsightRetention(performanceInsightRetention: PerformanceInsightRetention)
 
@@ -549,6 +579,22 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
     }
 
     /**
+     * @param applyImmediately Specifies whether changes to the DB instance and any pending
+     * modifications are applied immediately, regardless of the `preferredMaintenanceWindow` setting.
+     * If set to `false`, changes are applied during the next maintenance window.
+     *
+     * Until RDS applies the changes, the DB instance remains in a drift state.
+     * As a result, the configuration doesn't fully reflect the requested modifications and
+     * temporarily diverges from the intended state.
+     *
+     * This property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     */
+    override fun applyImmediately(applyImmediately: Boolean) {
+      cdkBuilder.applyImmediately(applyImmediately)
+    }
+
+    /**
      * @param autoMinorVersionUpgrade Indicates that minor engine upgrades are applied automatically
      * to the DB instance during the maintenance window.
      */
@@ -626,6 +672,13 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
     }
 
     /**
+     * @param databaseInsightsMode The database insights mode.
+     */
+    override fun databaseInsightsMode(databaseInsightsMode: DatabaseInsightsMode) {
+      cdkBuilder.databaseInsightsMode(databaseInsightsMode.let(DatabaseInsightsMode.Companion::unwrap))
+    }
+
+    /**
      * @param databaseName The name of the database.
      */
     override fun databaseName(databaseName: String) {
@@ -676,6 +729,14 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      */
     override fun engine(engine: IInstanceEngine) {
       cdkBuilder.engine(engine.let(IInstanceEngine.Companion::unwrap))
+    }
+
+    /**
+     * @param engineLifecycleSupport The life cycle type for this DB instance.
+     * This setting applies only to RDS for MySQL and RDS for PostgreSQL.
+     */
+    override fun engineLifecycleSupport(engineLifecycleSupport: EngineLifecycleSupport) {
+      cdkBuilder.engineLifecycleSupport(engineLifecycleSupport.let(EngineLifecycleSupport.Companion::unwrap))
     }
 
     /**
@@ -787,6 +848,8 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
     /**
      * @param performanceInsightRetention The amount of time, in days, to retain Performance
      * Insights data.
+     * If you set `databaseInsightsMode` to `DatabaseInsightsMode.ADVANCED`, you must set this
+     * property to `PerformanceInsightRetention.MONTHS_15`.
      */
     override
         fun performanceInsightRetention(performanceInsightRetention: PerformanceInsightRetention) {
@@ -1010,6 +1073,25 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
     override fun allowMajorVersionUpgrade(): Boolean? = unwrap(this).getAllowMajorVersionUpgrade()
 
     /**
+     * Specifies whether changes to the DB instance and any pending modifications are applied
+     * immediately, regardless of the `preferredMaintenanceWindow` setting.
+     *
+     * If set to `false`, changes are applied during the next maintenance window.
+     *
+     * Until RDS applies the changes, the DB instance remains in a drift state.
+     * As a result, the configuration doesn't fully reflect the requested modifications and
+     * temporarily diverges from the intended state.
+     *
+     * This property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     *
+     * Default: - Changes will be applied immediately
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+     */
+    override fun applyImmediately(): Boolean? = unwrap(this).getApplyImmediately()
+
+    /**
      * Indicates that minor engine upgrades are applied automatically to the DB instance during the
      * maintenance window.
      *
@@ -1088,6 +1170,15 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
     override fun copyTagsToSnapshot(): Boolean? = unwrap(this).getCopyTagsToSnapshot()
 
     /**
+     * The database insights mode.
+     *
+     * Default: - DatabaseInsightsMode.STANDARD when performance insights are enabled, otherwise not
+     * set.
+     */
+    override fun databaseInsightsMode(): DatabaseInsightsMode? =
+        unwrap(this).getDatabaseInsightsMode()?.let(DatabaseInsightsMode::wrap)
+
+    /**
      * The name of the database.
      *
      * Default: - no name
@@ -1138,6 +1229,19 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * The database engine.
      */
     override fun engine(): IInstanceEngine = unwrap(this).getEngine().let(IInstanceEngine::wrap)
+
+    /**
+     * The life cycle type for this DB instance.
+     *
+     * This setting applies only to RDS for MySQL and RDS for PostgreSQL.
+     *
+     * Default: undefined - AWS RDS default setting is
+     * `EngineLifecycleSupport.OPEN_SOURCE_RDS_EXTENDED_SUPPORT`
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html)
+     */
+    override fun engineLifecycleSupport(): EngineLifecycleSupport? =
+        unwrap(this).getEngineLifecycleSupport()?.let(EngineLifecycleSupport::wrap)
 
     /**
      * Whether to enable mapping of AWS Identity and Access Management (IAM) accounts to database
@@ -1263,6 +1367,9 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
 
     /**
      * The amount of time, in days, to retain Performance Insights data.
+     *
+     * If you set `databaseInsightsMode` to `DatabaseInsightsMode.ADVANCED`, you must set this
+     * property to `PerformanceInsightRetention.MONTHS_15`.
      *
      * Default: 7 this is the free tier
      */

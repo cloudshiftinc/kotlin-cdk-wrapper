@@ -24,6 +24,7 @@ import kotlin.collections.List
  * .vpc(vpc)
  * .memoryLimitMiB(512)
  * .image(ContainerImage.fromRegistry("test"))
+ * .minHealthyPercent(100)
  * .healthCheck(HealthCheck.builder()
  * .command(List.of("CMD-SHELL", "curl -f http://localhost/ || exit 1"))
  * // the properties below are optional

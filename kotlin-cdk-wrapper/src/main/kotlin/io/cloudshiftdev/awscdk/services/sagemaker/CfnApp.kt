@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -23,9 +24,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * Creates a running app for the specified UserProfile.
  *
- * This operation is automatically invoked by Amazon SageMaker upon access to the associated Domain,
- * and when new kernel configurations are selected by the user. A user may have multiple Apps active
- * simultaneously.
+ * This operation is automatically invoked by Amazon SageMaker AI upon access to the associated
+ * Domain, and when new kernel configurations are selected by the user. A user may have multiple Apps
+ * active simultaneously.
  *
  * Example:
  *
@@ -39,6 +40,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .domainId("domainId")
  * .userProfileName("userProfileName")
  * // the properties below are optional
+ * .recoveryMode(false)
  * .resourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
  * .lifecycleConfigArn("lifecycleConfigArn")
@@ -106,6 +108,14 @@ public open class CfnApp(
   public open fun attrAppArn(): String = unwrap(this).getAttrAppArn()
 
   /**
+   * The lifecycle configuration that runs before the default lifecycle configuration.
+   *
+   * It can override changes made in the default lifecycle configuration.
+   */
+  public open fun attrBuiltInLifecycleConfigArn(): String =
+      unwrap(this).getAttrBuiltInLifecycleConfigArn()
+
+  /**
    * The domain ID.
    */
   public open fun domainId(): String = unwrap(this).getDomainId()
@@ -124,6 +134,25 @@ public open class CfnApp(
    */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
+  }
+
+  /**
+   * Indicates whether the application is launched in recovery mode.
+   */
+  public open fun recoveryMode(): Any? = unwrap(this).getRecoveryMode()
+
+  /**
+   * Indicates whether the application is launched in recovery mode.
+   */
+  public open fun recoveryMode(`value`: Boolean) {
+    unwrap(this).setRecoveryMode(`value`)
+  }
+
+  /**
+   * Indicates whether the application is launched in recovery mode.
+   */
+  public open fun recoveryMode(`value`: IResolvable) {
+    unwrap(this).setRecoveryMode(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -220,6 +249,22 @@ public open class CfnApp(
      * @param domainId The domain ID. 
      */
     public fun domainId(domainId: String)
+
+    /**
+     * Indicates whether the application is launched in recovery mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html#cfn-sagemaker-app-recoverymode)
+     * @param recoveryMode Indicates whether the application is launched in recovery mode. 
+     */
+    public fun recoveryMode(recoveryMode: Boolean)
+
+    /**
+     * Indicates whether the application is launched in recovery mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html#cfn-sagemaker-app-recoverymode)
+     * @param recoveryMode Indicates whether the application is launched in recovery mode. 
+     */
+    public fun recoveryMode(recoveryMode: IResolvable)
 
     /**
      * Specifies the ARNs of a SageMaker image and SageMaker image version, and the instance type
@@ -324,6 +369,26 @@ public open class CfnApp(
     }
 
     /**
+     * Indicates whether the application is launched in recovery mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html#cfn-sagemaker-app-recoverymode)
+     * @param recoveryMode Indicates whether the application is launched in recovery mode. 
+     */
+    override fun recoveryMode(recoveryMode: Boolean) {
+      cdkBuilder.recoveryMode(recoveryMode)
+    }
+
+    /**
+     * Indicates whether the application is launched in recovery mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html#cfn-sagemaker-app-recoverymode)
+     * @param recoveryMode Indicates whether the application is launched in recovery mode. 
+     */
+    override fun recoveryMode(recoveryMode: IResolvable) {
+      cdkBuilder.recoveryMode(recoveryMode.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
      * Specifies the ARNs of a SageMaker image and SageMaker image version, and the instance type
      * that the version runs on.
      *
@@ -420,8 +485,16 @@ public open class CfnApp(
   }
 
   /**
-   * Specifies the ARN's of a SageMaker image and SageMaker image version, and the instance type
-   * that the version runs on.
+   * Specifies the ARN's of a SageMaker AI image and SageMaker AI image version, and the instance
+   * type that the version runs on.
+   *
+   *
+   * When both `SageMakerImageVersionArn` and `SageMakerImageArn` are passed,
+   * `SageMakerImageVersionArn` is used. Any updates to `SageMakerImageArn` will not take effect if
+   * `SageMakerImageVersionArn` already exists in the `ResourceSpec` because `SageMakerImageVersionArn`
+   * always takes precedence. To clear the value set for `SageMakerImageVersionArn` , pass `None` as
+   * the value.
+   *
    *
    * Example:
    *
@@ -462,7 +535,7 @@ public open class CfnApp(
     public fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
 
     /**
-     * The ARN of the SageMaker image that the image version belongs to.
+     * The ARN of the SageMaker AI image that the image version belongs to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-app-resourcespec.html#cfn-sagemaker-app-resourcespec-sagemakerimagearn)
      */
@@ -470,6 +543,8 @@ public open class CfnApp(
 
     /**
      * The ARN of the image version created on the instance.
+     *
+     * To clear the value set for `SageMakerImageVersionArn` , pass `None` as the value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-app-resourcespec.html#cfn-sagemaker-app-resourcespec-sagemakerimageversionarn)
      */
@@ -497,12 +572,14 @@ public open class CfnApp(
       public fun lifecycleConfigArn(lifecycleConfigArn: String)
 
       /**
-       * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
+       * @param sageMakerImageArn The ARN of the SageMaker AI image that the image version belongs
+       * to.
        */
       public fun sageMakerImageArn(sageMakerImageArn: String)
 
       /**
        * @param sageMakerImageVersionArn The ARN of the image version created on the instance.
+       * To clear the value set for `SageMakerImageVersionArn` , pass `None` as the value.
        */
       public fun sageMakerImageVersionArn(sageMakerImageVersionArn: String)
     }
@@ -533,7 +610,8 @@ public open class CfnApp(
       }
 
       /**
-       * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
+       * @param sageMakerImageArn The ARN of the SageMaker AI image that the image version belongs
+       * to.
        */
       override fun sageMakerImageArn(sageMakerImageArn: String) {
         cdkBuilder.sageMakerImageArn(sageMakerImageArn)
@@ -541,6 +619,7 @@ public open class CfnApp(
 
       /**
        * @param sageMakerImageVersionArn The ARN of the image version created on the instance.
+       * To clear the value set for `SageMakerImageVersionArn` , pass `None` as the value.
        */
       override fun sageMakerImageVersionArn(sageMakerImageVersionArn: String) {
         cdkBuilder.sageMakerImageVersionArn(sageMakerImageVersionArn)
@@ -576,7 +655,7 @@ public open class CfnApp(
       override fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
 
       /**
-       * The ARN of the SageMaker image that the image version belongs to.
+       * The ARN of the SageMaker AI image that the image version belongs to.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-app-resourcespec.html#cfn-sagemaker-app-resourcespec-sagemakerimagearn)
        */
@@ -584,6 +663,8 @@ public open class CfnApp(
 
       /**
        * The ARN of the image version created on the instance.
+       *
+       * To clear the value set for `SageMakerImageVersionArn` , pass `None` as the value.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-app-resourcespec.html#cfn-sagemaker-app-resourcespec-sagemakerimageversionarn)
        */

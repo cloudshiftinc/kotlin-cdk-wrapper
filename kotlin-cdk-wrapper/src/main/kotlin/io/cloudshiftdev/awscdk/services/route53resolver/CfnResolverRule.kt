@@ -33,6 +33,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnResolverRule cfnResolverRule = CfnResolverRule.Builder.create(this, "MyCfnResolverRule")
  * .ruleType("ruleType")
  * // the properties below are optional
+ * .delegationRecord("delegationRecord")
  * .domainName("domainName")
  * .name("name")
  * .resolverEndpointId("resolverEndpointId")
@@ -113,9 +114,26 @@ public open class CfnResolverRule(
    * forwards DNS queries to, typically the IP addresses for DNS resolvers on your network.
    *
    * This value isn't applicable when `RuleType` is `SYSTEM` .
+   *
+   * `TargetIps` is available only when the value of `RuleType` is `FORWARD` . You should not
+   * provide `TargetIps` when the `RuleType` is `DELEGATE` .
    */
   public open fun attrTargetIps(): IResolvable =
       unwrap(this).getAttrTargetIps().let(IResolvable::wrap)
+
+  /**
+   * DNS queries with delegation records that point to this domain name are forwarded to resolvers
+   * on your network.
+   */
+  public open fun delegationRecord(): String? = unwrap(this).getDelegationRecord()
+
+  /**
+   * DNS queries with delegation records that point to this domain name are forwarded to resolvers
+   * on your network.
+   */
+  public open fun delegationRecord(`value`: String) {
+    unwrap(this).setDelegationRecord(`value`)
+  }
 
   /**
    * DNS queries for this domain name are forwarded to the IP addresses that are specified in
@@ -166,13 +184,13 @@ public open class CfnResolverRule(
 
   /**
    * When you want to forward DNS queries for specified domain name to resolvers on your network,
-   * specify `FORWARD` .
+   * specify `FORWARD` or `DELEGATE` .
    */
   public open fun ruleType(): String = unwrap(this).getRuleType()
 
   /**
    * When you want to forward DNS queries for specified domain name to resolvers on your network,
-   * specify `FORWARD` .
+   * specify `FORWARD` or `DELEGATE` .
    */
   public open fun ruleType(`value`: String) {
     unwrap(this).setRuleType(`value`)
@@ -235,6 +253,16 @@ public open class CfnResolverRule(
   @CdkDslMarker
   public interface Builder {
     /**
+     * DNS queries with delegation records that point to this domain name are forwarded to resolvers
+     * on your network.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-delegationrecord)
+     * @param delegationRecord DNS queries with delegation records that point to this domain name
+     * are forwarded to resolvers on your network. 
+     */
+    public fun delegationRecord(delegationRecord: String)
+
+    /**
      * DNS queries for this domain name are forwarded to the IP addresses that are specified in
      * `TargetIps` .
      *
@@ -266,7 +294,11 @@ public open class CfnResolverRule(
 
     /**
      * When you want to forward DNS queries for specified domain name to resolvers on your network,
-     * specify `FORWARD` .
+     * specify `FORWARD` or `DELEGATE` .
+     *
+     * If a query matches multiple Resolver rules (example.com and www.example.com), outbound DNS
+     * queries are routed using the Resolver rule that contains the most specific domain name
+     * (www.example.com).
      *
      * When you have a forwarding rule to forward DNS queries for a domain to your network and you
      * want Resolver to process queries for a subdomain of that domain, specify `SYSTEM` .
@@ -279,7 +311,7 @@ public open class CfnResolverRule(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-ruletype)
      * @param ruleType When you want to forward DNS queries for specified domain name to resolvers
-     * on your network, specify `FORWARD` . 
+     * on your network, specify `FORWARD` or `DELEGATE` . 
      */
     public fun ruleType(ruleType: String)
 
@@ -348,6 +380,18 @@ public open class CfnResolverRule(
         = software.amazon.awscdk.services.route53resolver.CfnResolverRule.Builder.create(scope, id)
 
     /**
+     * DNS queries with delegation records that point to this domain name are forwarded to resolvers
+     * on your network.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-delegationrecord)
+     * @param delegationRecord DNS queries with delegation records that point to this domain name
+     * are forwarded to resolvers on your network. 
+     */
+    override fun delegationRecord(delegationRecord: String) {
+      cdkBuilder.delegationRecord(delegationRecord)
+    }
+
+    /**
      * DNS queries for this domain name are forwarded to the IP addresses that are specified in
      * `TargetIps` .
      *
@@ -385,7 +429,11 @@ public open class CfnResolverRule(
 
     /**
      * When you want to forward DNS queries for specified domain name to resolvers on your network,
-     * specify `FORWARD` .
+     * specify `FORWARD` or `DELEGATE` .
+     *
+     * If a query matches multiple Resolver rules (example.com and www.example.com), outbound DNS
+     * queries are routed using the Resolver rule that contains the most specific domain name
+     * (www.example.com).
      *
      * When you have a forwarding rule to forward DNS queries for a domain to your network and you
      * want Resolver to process queries for a subdomain of that domain, specify `SYSTEM` .
@@ -398,7 +446,7 @@ public open class CfnResolverRule(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-ruletype)
      * @param ruleType When you want to forward DNS queries for specified domain name to resolvers
-     * on your network, specify `FORWARD` . 
+     * on your network, specify `FORWARD` or `DELEGATE` . 
      */
     override fun ruleType(ruleType: String) {
       cdkBuilder.ruleType(ruleType)

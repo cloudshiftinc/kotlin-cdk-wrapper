@@ -20,6 +20,7 @@ import kotlin.collections.List
  * import io.cloudshiftdev.awscdk.services.appconfig.*;
  * Monitor monitor;
  * EnvironmentOptions environmentOptions = EnvironmentOptions.builder()
+ * .deletionProtectionCheck(DeletionProtectionCheck.ACCOUNT_DEFAULT)
  * .description("description")
  * .environmentName("environmentName")
  * .monitors(List.of(monitor))
@@ -27,6 +28,14 @@ import kotlin.collections.List
  * ```
  */
 public interface EnvironmentOptions {
+  /**
+   * A property to prevent accidental deletion of active environments.
+   *
+   * Default: undefined - AppConfig default is ACCOUNT_DEFAULT
+   */
+  public fun deletionProtectionCheck(): DeletionProtectionCheck? =
+      unwrap(this).getDeletionProtectionCheck()?.let(DeletionProtectionCheck::wrap)
+
   /**
    * The description of the environment.
    *
@@ -55,6 +64,12 @@ public interface EnvironmentOptions {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param deletionProtectionCheck A property to prevent accidental deletion of active
+     * environments.
+     */
+    public fun deletionProtectionCheck(deletionProtectionCheck: DeletionProtectionCheck)
+
+    /**
      * @param description The description of the environment.
      */
     public fun description(description: String)
@@ -78,6 +93,14 @@ public interface EnvironmentOptions {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.EnvironmentOptions.Builder =
         software.amazon.awscdk.services.appconfig.EnvironmentOptions.builder()
+
+    /**
+     * @param deletionProtectionCheck A property to prevent accidental deletion of active
+     * environments.
+     */
+    override fun deletionProtectionCheck(deletionProtectionCheck: DeletionProtectionCheck) {
+      cdkBuilder.deletionProtectionCheck(deletionProtectionCheck.let(DeletionProtectionCheck.Companion::unwrap))
+    }
 
     /**
      * @param description The description of the environment.
@@ -113,6 +136,14 @@ public interface EnvironmentOptions {
     cdkObject: software.amazon.awscdk.services.appconfig.EnvironmentOptions,
   ) : CdkObject(cdkObject),
       EnvironmentOptions {
+    /**
+     * A property to prevent accidental deletion of active environments.
+     *
+     * Default: undefined - AppConfig default is ACCOUNT_DEFAULT
+     */
+    override fun deletionProtectionCheck(): DeletionProtectionCheck? =
+        unwrap(this).getDeletionProtectionCheck()?.let(DeletionProtectionCheck::wrap)
+
     /**
      * The description of the environment.
      *

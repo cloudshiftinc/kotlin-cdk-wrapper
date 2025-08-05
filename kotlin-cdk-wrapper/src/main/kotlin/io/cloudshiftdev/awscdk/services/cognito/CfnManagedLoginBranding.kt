@@ -40,18 +40,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * `true` . For more information, see [API and SDK operations for managed login
  * branding](https://docs.aws.amazon.com/cognito/latest/developerguide/managed-login-brandingdesigner.html#branding-designer-api)
  *
- *
- * Amazon Cognito evaluates AWS Identity and Access Management (IAM) policies in requests for this
- * API operation. For this operation, you must use IAM credentials to authorize requests, and you must
- * grant yourself the corresponding IAM permission in a policy.
- *
- * **Learn more** - [Signing AWS API
- * Requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-signing.html)
- *
- * * [Using the Amazon Cognito user pools API and user pool
- * endpoints](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pools-API-operations.html)
- *
- *
  * Example:
  *
  * ```
@@ -131,12 +119,12 @@ public open class CfnManagedLoginBranding(
       unwrap(this).getAttrManagedLoginBrandingId()
 
   /**
-   *
+   * The app client that you want to assign the branding style to.
    */
   public open fun clientId(): String? = unwrap(this).getClientId()
 
   /**
-   *
+   * The app client that you want to assign the branding style to.
    */
   public open fun clientId(`value`: String) {
     unwrap(this).setClientId(`value`)
@@ -152,19 +140,22 @@ public open class CfnManagedLoginBranding(
   }
 
   /**
-   *
+   * When `true` , returns values for branding options that are unchanged from Amazon Cognito
+   * defaults.
    */
   public open fun returnMergedResources(): Any? = unwrap(this).getReturnMergedResources()
 
   /**
-   *
+   * When `true` , returns values for branding options that are unchanged from Amazon Cognito
+   * defaults.
    */
   public open fun returnMergedResources(`value`: Boolean) {
     unwrap(this).setReturnMergedResources(`value`)
   }
 
   /**
-   *
+   * When `true` , returns values for branding options that are unchanged from Amazon Cognito
+   * defaults.
    */
   public open fun returnMergedResources(`value`: IResolvable) {
     unwrap(this).setReturnMergedResources(`value`.let(IResolvable.Companion::unwrap))
@@ -257,20 +248,38 @@ public open class CfnManagedLoginBranding(
     public fun assets(vararg assets: Any)
 
     /**
+     * The app client that you want to assign the branding style to.
+     *
+     * Each style is linked to an app client until you delete it.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-managedloginbranding.html#cfn-cognito-managedloginbranding-clientid)
-     * @param clientId 
+     * @param clientId The app client that you want to assign the branding style to. 
      */
     public fun clientId(clientId: String)
 
     /**
+     * When `true` , returns values for branding options that are unchanged from Amazon Cognito
+     * defaults.
+     *
+     * When `false` or when you omit this parameter, returns only values that you customized in your
+     * branding style.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-managedloginbranding.html#cfn-cognito-managedloginbranding-returnmergedresources)
-     * @param returnMergedResources 
+     * @param returnMergedResources When `true` , returns values for branding options that are
+     * unchanged from Amazon Cognito defaults. 
      */
     public fun returnMergedResources(returnMergedResources: Boolean)
 
     /**
+     * When `true` , returns values for branding options that are unchanged from Amazon Cognito
+     * defaults.
+     *
+     * When `false` or when you omit this parameter, returns only values that you customized in your
+     * branding style.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-managedloginbranding.html#cfn-cognito-managedloginbranding-returnmergedresources)
-     * @param returnMergedResources 
+     * @param returnMergedResources When `true` , returns values for branding options that are
+     * unchanged from Amazon Cognito defaults. 
      */
     public fun returnMergedResources(returnMergedResources: IResolvable)
 
@@ -287,7 +296,11 @@ public open class CfnManagedLoginBranding(
     /**
      * When true, applies the default branding style options.
      *
-     * This option reverts to a "blank" style that you can modify later in the branding designer.
+     * This option reverts to default style options that are managed by Amazon Cognito. You can
+     * modify them later in the branding editor.
+     *
+     * When you specify `true` for this option, you must also omit values for `Settings` and
+     * `Assets` in the request.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-managedloginbranding.html#cfn-cognito-managedloginbranding-usecognitoprovidedvalues)
      * @param useCognitoProvidedValues When true, applies the default branding style options. 
@@ -297,7 +310,11 @@ public open class CfnManagedLoginBranding(
     /**
      * When true, applies the default branding style options.
      *
-     * This option reverts to a "blank" style that you can modify later in the branding designer.
+     * This option reverts to default style options that are managed by Amazon Cognito. You can
+     * modify them later in the branding editor.
+     *
+     * When you specify `true` for this option, you must also omit values for `Settings` and
+     * `Assets` in the request.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-managedloginbranding.html#cfn-cognito-managedloginbranding-usecognitoprovidedvalues)
      * @param useCognitoProvidedValues When true, applies the default branding style options. 
@@ -361,24 +378,42 @@ public open class CfnManagedLoginBranding(
     override fun assets(vararg assets: Any): Unit = assets(assets.toList())
 
     /**
+     * The app client that you want to assign the branding style to.
+     *
+     * Each style is linked to an app client until you delete it.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-managedloginbranding.html#cfn-cognito-managedloginbranding-clientid)
-     * @param clientId 
+     * @param clientId The app client that you want to assign the branding style to. 
      */
     override fun clientId(clientId: String) {
       cdkBuilder.clientId(clientId)
     }
 
     /**
+     * When `true` , returns values for branding options that are unchanged from Amazon Cognito
+     * defaults.
+     *
+     * When `false` or when you omit this parameter, returns only values that you customized in your
+     * branding style.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-managedloginbranding.html#cfn-cognito-managedloginbranding-returnmergedresources)
-     * @param returnMergedResources 
+     * @param returnMergedResources When `true` , returns values for branding options that are
+     * unchanged from Amazon Cognito defaults. 
      */
     override fun returnMergedResources(returnMergedResources: Boolean) {
       cdkBuilder.returnMergedResources(returnMergedResources)
     }
 
     /**
+     * When `true` , returns values for branding options that are unchanged from Amazon Cognito
+     * defaults.
+     *
+     * When `false` or when you omit this parameter, returns only values that you customized in your
+     * branding style.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-managedloginbranding.html#cfn-cognito-managedloginbranding-returnmergedresources)
-     * @param returnMergedResources 
+     * @param returnMergedResources When `true` , returns values for branding options that are
+     * unchanged from Amazon Cognito defaults. 
      */
     override fun returnMergedResources(returnMergedResources: IResolvable) {
       cdkBuilder.returnMergedResources(returnMergedResources.let(IResolvable.Companion::unwrap))
@@ -399,7 +434,11 @@ public open class CfnManagedLoginBranding(
     /**
      * When true, applies the default branding style options.
      *
-     * This option reverts to a "blank" style that you can modify later in the branding designer.
+     * This option reverts to default style options that are managed by Amazon Cognito. You can
+     * modify them later in the branding editor.
+     *
+     * When you specify `true` for this option, you must also omit values for `Settings` and
+     * `Assets` in the request.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-managedloginbranding.html#cfn-cognito-managedloginbranding-usecognitoprovidedvalues)
      * @param useCognitoProvidedValues When true, applies the default branding style options. 
@@ -411,7 +450,11 @@ public open class CfnManagedLoginBranding(
     /**
      * When true, applies the default branding style options.
      *
-     * This option reverts to a "blank" style that you can modify later in the branding designer.
+     * This option reverts to default style options that are managed by Amazon Cognito. You can
+     * modify them later in the branding editor.
+     *
+     * When you specify `true` for this option, you must also omit values for `Settings` and
+     * `Assets` in the request.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-managedloginbranding.html#cfn-cognito-managedloginbranding-usecognitoprovidedvalues)
      * @param useCognitoProvidedValues When true, applies the default branding style options. 
@@ -457,14 +500,6 @@ public open class CfnManagedLoginBranding(
 
   /**
    * An image file from a managed login branding style in a user pool.
-   *
-   * This data type is a request parameter of
-   * [CreateManagedLoginBranding](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateManagedLoginBranding.html)
-   * and
-   * [UpdateManagedLoginBranding](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateManagedLoginBranding.html)
-   * , and a response parameter of
-   * [DescribeManagedLoginBranding](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeManagedLoginBranding.html)
-   * .
    *
    * Example:
    *

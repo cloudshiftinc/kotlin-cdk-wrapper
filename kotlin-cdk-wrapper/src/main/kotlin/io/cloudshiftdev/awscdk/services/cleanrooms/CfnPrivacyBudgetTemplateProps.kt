@@ -79,7 +79,11 @@ public interface CfnPrivacyBudgetTemplateProps {
   public fun privacyBudgetType(): String
 
   /**
-   * An arbitrary set of tags (key-value pairs) for this cleanrooms privacy budget template.
+   * An optional label that you can assign to a resource when you create it.
+   *
+   * Each tag consists of a key and an optional value, both of which you define. When you use
+   * tagging, you can also use tag-based access control in IAM policies to control access to this
+   * resource.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-privacybudgettemplate.html#cfn-cleanrooms-privacybudgettemplate-tags)
    */
@@ -133,14 +137,18 @@ public interface CfnPrivacyBudgetTemplateProps {
     public fun privacyBudgetType(privacyBudgetType: String)
 
     /**
-     * @param tags An arbitrary set of tags (key-value pairs) for this cleanrooms privacy budget
-     * template.
+     * @param tags An optional label that you can assign to a resource when you create it.
+     * Each tag consists of a key and an optional value, both of which you define. When you use
+     * tagging, you can also use tag-based access control in IAM policies to control access to this
+     * resource.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags An arbitrary set of tags (key-value pairs) for this cleanrooms privacy budget
-     * template.
+     * @param tags An optional label that you can assign to a resource when you create it.
+     * Each tag consists of a key and an optional value, both of which you define. When you use
+     * tagging, you can also use tag-based access control in IAM policies to control access to this
+     * resource.
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -204,16 +212,20 @@ public interface CfnPrivacyBudgetTemplateProps {
     }
 
     /**
-     * @param tags An arbitrary set of tags (key-value pairs) for this cleanrooms privacy budget
-     * template.
+     * @param tags An optional label that you can assign to a resource when you create it.
+     * Each tag consists of a key and an optional value, both of which you define. When you use
+     * tagging, you can also use tag-based access control in IAM policies to control access to this
+     * resource.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags An arbitrary set of tags (key-value pairs) for this cleanrooms privacy budget
-     * template.
+     * @param tags An optional label that you can assign to a resource when you create it.
+     * Each tag consists of a key and an optional value, both of which you define. When you use
+     * tagging, you can also use tag-based access control in IAM policies to control access to this
+     * resource.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -262,7 +274,11 @@ public interface CfnPrivacyBudgetTemplateProps {
     override fun privacyBudgetType(): String = unwrap(this).getPrivacyBudgetType()
 
     /**
-     * An arbitrary set of tags (key-value pairs) for this cleanrooms privacy budget template.
+     * An optional label that you can assign to a resource when you create it.
+     *
+     * Each tag consists of a key and an optional value, both of which you define. When you use
+     * tagging, you can also use tag-based access control in IAM policies to control access to this
+     * resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-privacybudgettemplate.html#cfn-cleanrooms-privacybudgettemplate-tags)
      */

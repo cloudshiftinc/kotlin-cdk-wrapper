@@ -1454,7 +1454,7 @@ public open class CfnAccessPoint(
     /**
      * A container for the action of an Object Lambda Access Point configuration.
      *
-     * Valid inputs are `GetObject` , `HeadObject` , `ListObjects` , and `ListObjectsV2` .
+     * Valid inputs are `GetObject` , `HeadObject` , `ListObject` , and `ListObjectV2` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-transformationconfiguration.html#cfn-s3objectlambda-accesspoint-transformationconfiguration-actions)
      */
@@ -1478,13 +1478,13 @@ public open class CfnAccessPoint(
     public interface Builder {
       /**
        * @param actions A container for the action of an Object Lambda Access Point configuration. 
-       * Valid inputs are `GetObject` , `HeadObject` , `ListObjects` , and `ListObjectsV2` .
+       * Valid inputs are `GetObject` , `HeadObject` , `ListObject` , and `ListObjectV2` .
        */
       public fun actions(actions: List<String>)
 
       /**
        * @param actions A container for the action of an Object Lambda Access Point configuration. 
-       * Valid inputs are `GetObject` , `HeadObject` , `ListObjects` , and `ListObjectsV2` .
+       * Valid inputs are `GetObject` , `HeadObject` , `ListObject` , and `ListObjectV2` .
        */
       public fun actions(vararg actions: String)
 
@@ -1506,7 +1506,7 @@ public open class CfnAccessPoint(
 
       /**
        * @param actions A container for the action of an Object Lambda Access Point configuration. 
-       * Valid inputs are `GetObject` , `HeadObject` , `ListObjects` , and `ListObjectsV2` .
+       * Valid inputs are `GetObject` , `HeadObject` , `ListObject` , and `ListObjectV2` .
        */
       override fun actions(actions: List<String>) {
         cdkBuilder.actions(actions)
@@ -1514,7 +1514,7 @@ public open class CfnAccessPoint(
 
       /**
        * @param actions A container for the action of an Object Lambda Access Point configuration. 
-       * Valid inputs are `GetObject` , `HeadObject` , `ListObjects` , and `ListObjectsV2` .
+       * Valid inputs are `GetObject` , `HeadObject` , `ListObject` , and `ListObjectV2` .
        */
       override fun actions(vararg actions: String): Unit = actions(actions.toList())
 
@@ -1541,7 +1541,7 @@ public open class CfnAccessPoint(
       /**
        * A container for the action of an Object Lambda Access Point configuration.
        *
-       * Valid inputs are `GetObject` , `HeadObject` , `ListObjects` , and `ListObjectsV2` .
+       * Valid inputs are `GetObject` , `HeadObject` , `ListObject` , and `ListObjectV2` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-transformationconfiguration.html#cfn-s3objectlambda-accesspoint-transformationconfiguration-actions)
        */

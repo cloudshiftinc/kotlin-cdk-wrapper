@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 public enum class WindowsOptimizedVersion(
   private val cdkObject: software.amazon.awscdk.services.ecs.WindowsOptimizedVersion,
 ) {
+  SERVER_2025(software.amazon.awscdk.services.ecs.WindowsOptimizedVersion.SERVER_2025),
   SERVER_2022(software.amazon.awscdk.services.ecs.WindowsOptimizedVersion.SERVER_2022),
   SERVER_2019(software.amazon.awscdk.services.ecs.WindowsOptimizedVersion.SERVER_2019),
   SERVER_2016(software.amazon.awscdk.services.ecs.WindowsOptimizedVersion.SERVER_2016),
@@ -13,6 +14,8 @@ public enum class WindowsOptimizedVersion(
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.WindowsOptimizedVersion):
         WindowsOptimizedVersion = when (cdkObject) {
+      software.amazon.awscdk.services.ecs.WindowsOptimizedVersion.SERVER_2025 ->
+          WindowsOptimizedVersion.SERVER_2025
       software.amazon.awscdk.services.ecs.WindowsOptimizedVersion.SERVER_2022 ->
           WindowsOptimizedVersion.SERVER_2022
       software.amazon.awscdk.services.ecs.WindowsOptimizedVersion.SERVER_2019 ->

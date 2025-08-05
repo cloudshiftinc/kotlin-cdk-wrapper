@@ -217,6 +217,12 @@ public open class CfnLink(
      * as `mariagarcia&#64;example.com`
      * * `$AccountEmailNoDomain` is an email address without the domain name, such as `mariagarcia`
      *
+     *
+     * In the  and  Regions, the only supported option is to use custom labels, and the
+     * `$AccountName` , `$AccountEmail` , and `$AccountEmailNoDomain` variables all resolve as
+     * *account-id* instead of the specified variable.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-labeltemplate)
      * @param labelTemplate Specify a friendly human-readable name to use to identify this source
      * account when you are viewing data from it in the monitoring account. 
@@ -327,6 +333,12 @@ public open class CfnLink(
      * * `$AccountEmail` is a globally-unique email address, which includes the email domain, such
      * as `mariagarcia&#64;example.com`
      * * `$AccountEmailNoDomain` is an email address without the domain name, such as `mariagarcia`
+     *
+     *
+     * In the  and  Regions, the only supported option is to use custom labels, and the
+     * `$AccountName` , `$AccountEmail` , and `$AccountEmailNoDomain` variables all resolve as
+     * *account-id* instead of the specified variable.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-labeltemplate)
      * @param labelTemplate Specify a friendly human-readable name to use to identify this source

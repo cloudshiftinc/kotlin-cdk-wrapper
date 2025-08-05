@@ -47,12 +47,8 @@ public interface CfnPublicTypeVersionProps {
    * The user initiating the stack operation must be able to access items in the specified S3
    * bucket. Specifically, the user needs the following permissions:
    *
-   * * GetObject
-   * * PutObject
-   *
-   * For more information, see [Actions, Resources, and Condition Keys for Amazon
-   * S3](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html) in the
-   * *AWS Identity and Access Management User Guide* .
+   * * s3:GetObject
+   * * s3:PutObject
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-logdeliverybucket)
    */
@@ -117,12 +113,8 @@ public interface CfnPublicTypeVersionProps {
      * The user initiating the stack operation must be able to access items in the specified S3
      * bucket. Specifically, the user needs the following permissions:
      *
-     * * GetObject
-     * * PutObject
-     *
-     * For more information, see [Actions, Resources, and Condition Keys for Amazon
-     * S3](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html) in
-     * the *AWS Identity and Access Management User Guide* .
+     * * s3:GetObject
+     * * s3:PutObject
      */
     public fun logDeliveryBucket(logDeliveryBucket: String)
 
@@ -178,12 +170,8 @@ public interface CfnPublicTypeVersionProps {
      * The user initiating the stack operation must be able to access items in the specified S3
      * bucket. Specifically, the user needs the following permissions:
      *
-     * * GetObject
-     * * PutObject
-     *
-     * For more information, see [Actions, Resources, and Condition Keys for Amazon
-     * S3](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html) in
-     * the *AWS Identity and Access Management User Guide* .
+     * * s3:GetObject
+     * * s3:PutObject
      */
     override fun logDeliveryBucket(logDeliveryBucket: String) {
       cdkBuilder.logDeliveryBucket(logDeliveryBucket)
@@ -250,12 +238,8 @@ public interface CfnPublicTypeVersionProps {
      * The user initiating the stack operation must be able to access items in the specified S3
      * bucket. Specifically, the user needs the following permissions:
      *
-     * * GetObject
-     * * PutObject
-     *
-     * For more information, see [Actions, Resources, and Condition Keys for Amazon
-     * S3](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html) in
-     * the *AWS Identity and Access Management User Guide* .
+     * * s3:GetObject
+     * * s3:PutObject
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-logdeliverybucket)
      */

@@ -26,6 +26,8 @@ import kotlin.jvm.JvmName
  * .directoryId("directoryId")
  * .vpcInformation(VpcInformationProperty.builder()
  * .securityGroupIds(List.of("securityGroupIds"))
+ * // the properties below are optional
+ * .ipAddressType("ipAddressType")
  * .build())
  * // the properties below are optional
  * .tags(Map.of(

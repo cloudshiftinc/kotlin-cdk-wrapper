@@ -83,6 +83,17 @@ public interface StateMachineProps {
   public fun logs(): LogOptions? = unwrap(this).getLogs()?.let(LogOptions::wrap)
 
   /**
+   * The name of the query language used by the state machine.
+   *
+   * If the state does not contain a `queryLanguage` field,
+   * then it will use the query language specified in this `queryLanguage` field.
+   *
+   * Default: - JSON_PATH
+   */
+  public fun queryLanguage(): QueryLanguage? =
+      unwrap(this).getQueryLanguage()?.let(QueryLanguage::wrap)
+
+  /**
    * The removal policy to apply to state machine.
    *
    * Default: RemovalPolicy.DESTROY
@@ -172,6 +183,13 @@ public interface StateMachineProps {
     public fun logs(logs: LogOptions.Builder.() -> Unit)
 
     /**
+     * @param queryLanguage The name of the query language used by the state machine.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in this `queryLanguage` field.
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
+
+    /**
      * @param removalPolicy The removal policy to apply to state machine.
      */
     public fun removalPolicy(removalPolicy: RemovalPolicy)
@@ -258,6 +276,15 @@ public interface StateMachineProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("be5c6b273531147f59a129d65f6503e2caff68ad31ba091bf199e00a8be55b36")
     override fun logs(logs: LogOptions.Builder.() -> Unit): Unit = logs(LogOptions(logs))
+
+    /**
+     * @param queryLanguage The name of the query language used by the state machine.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in this `queryLanguage` field.
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
+    }
 
     /**
      * @param removalPolicy The removal policy to apply to state machine.
@@ -351,6 +378,17 @@ public interface StateMachineProps {
      * Default: No logging
      */
     override fun logs(): LogOptions? = unwrap(this).getLogs()?.let(LogOptions::wrap)
+
+    /**
+     * The name of the query language used by the state machine.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in this `queryLanguage` field.
+     *
+     * Default: - JSON_PATH
+     */
+    override fun queryLanguage(): QueryLanguage? =
+        unwrap(this).getQueryLanguage()?.let(QueryLanguage::wrap)
 
     /**
      * The removal policy to apply to state machine.

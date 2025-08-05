@@ -12,6 +12,8 @@ public enum class NodegroupAmiType(
   BOTTLEROCKET_X86_64(software.amazon.awscdk.services.eks.NodegroupAmiType.BOTTLEROCKET_X86_64),
   BOTTLEROCKET_ARM_64_NVIDIA(software.amazon.awscdk.services.eks.NodegroupAmiType.BOTTLEROCKET_ARM_64_NVIDIA),
   BOTTLEROCKET_X86_64_NVIDIA(software.amazon.awscdk.services.eks.NodegroupAmiType.BOTTLEROCKET_X86_64_NVIDIA),
+  BOTTLEROCKET_ARM_64_FIPS(software.amazon.awscdk.services.eks.NodegroupAmiType.BOTTLEROCKET_ARM_64_FIPS),
+  BOTTLEROCKET_X86_64_FIPS(software.amazon.awscdk.services.eks.NodegroupAmiType.BOTTLEROCKET_X86_64_FIPS),
   WINDOWS_CORE_2019_X86_64(software.amazon.awscdk.services.eks.NodegroupAmiType.WINDOWS_CORE_2019_X86_64),
   WINDOWS_CORE_2022_X86_64(software.amazon.awscdk.services.eks.NodegroupAmiType.WINDOWS_CORE_2022_X86_64),
   WINDOWS_FULL_2019_X86_64(software.amazon.awscdk.services.eks.NodegroupAmiType.WINDOWS_FULL_2019_X86_64),
@@ -37,6 +39,10 @@ public enum class NodegroupAmiType(
           NodegroupAmiType.BOTTLEROCKET_ARM_64_NVIDIA
       software.amazon.awscdk.services.eks.NodegroupAmiType.BOTTLEROCKET_X86_64_NVIDIA ->
           NodegroupAmiType.BOTTLEROCKET_X86_64_NVIDIA
+      software.amazon.awscdk.services.eks.NodegroupAmiType.BOTTLEROCKET_ARM_64_FIPS ->
+          NodegroupAmiType.BOTTLEROCKET_ARM_64_FIPS
+      software.amazon.awscdk.services.eks.NodegroupAmiType.BOTTLEROCKET_X86_64_FIPS ->
+          NodegroupAmiType.BOTTLEROCKET_X86_64_FIPS
       software.amazon.awscdk.services.eks.NodegroupAmiType.WINDOWS_CORE_2019_X86_64 ->
           NodegroupAmiType.WINDOWS_CORE_2019_X86_64
       software.amazon.awscdk.services.eks.NodegroupAmiType.WINDOWS_CORE_2022_X86_64 ->

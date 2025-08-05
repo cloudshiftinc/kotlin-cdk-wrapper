@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -149,6 +150,18 @@ public open class ManualApprovalAction(
     public fun runOrder(runOrder: Number)
 
     /**
+     * A timeout duration.
+     *
+     * It is configurable up to 86400 minutes (60 days) with a minimum value of 5 minutes.
+     *
+     * Default: - 10080 minutes (7 days)
+     *
+     * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html)
+     * @param timeout A timeout duration. 
+     */
+    public fun timeout(timeout: Duration)
+
+    /**
      * The name of the namespace to use for variables emitted by this action.
      *
      * Default: - a name will be generated, based on the stage and action names,
@@ -263,6 +276,20 @@ public open class ManualApprovalAction(
      */
     override fun runOrder(runOrder: Number) {
       cdkBuilder.runOrder(runOrder)
+    }
+
+    /**
+     * A timeout duration.
+     *
+     * It is configurable up to 86400 minutes (60 days) with a minimum value of 5 minutes.
+     *
+     * Default: - 10080 minutes (7 days)
+     *
+     * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html)
+     * @param timeout A timeout duration. 
+     */
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**

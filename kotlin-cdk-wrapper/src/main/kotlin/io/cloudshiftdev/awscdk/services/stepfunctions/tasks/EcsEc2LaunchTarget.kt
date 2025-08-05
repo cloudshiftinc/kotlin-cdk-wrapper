@@ -65,7 +65,7 @@ public open class EcsEc2LaunchTarget(
   /**
    * Called when the EC2 launch type is configured on RunTask.
    *
-   * @param _task 
+   * @param task 
    * @param launchTargetOptions 
    */
   public override fun bind(task: EcsRunTask, launchTargetOptions: LaunchTargetBindOptions):
@@ -75,7 +75,7 @@ public open class EcsEc2LaunchTarget(
   /**
    * Called when the EC2 launch type is configured on RunTask.
    *
-   * @param _task 
+   * @param task 
    * @param launchTargetOptions 
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")

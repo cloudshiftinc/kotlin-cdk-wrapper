@@ -153,13 +153,15 @@ public open class CfnCertificateAuthority(
   }
 
   /**
-   * Specifies a cryptographic key management compliance standard used for handling CA keys.
+   * Specifies a cryptographic key management compliance standard for handling and protecting CA
+   * keys.
    */
   public open fun keyStorageSecurityStandard(): String? =
       unwrap(this).getKeyStorageSecurityStandard()
 
   /**
-   * Specifies a cryptographic key management compliance standard used for handling CA keys.
+   * Specifies a cryptographic key management compliance standard for handling and protecting CA
+   * keys.
    */
   public open fun keyStorageSecurityStandard(`value`: String) {
     unwrap(this).setKeyStorageSecurityStandard(`value`)
@@ -337,25 +339,26 @@ public open class CfnCertificateAuthority(
     public fun keyAlgorithm(keyAlgorithm: String)
 
     /**
-     * Specifies a cryptographic key management compliance standard used for handling CA keys.
+     * Specifies a cryptographic key management compliance standard for handling and protecting CA
+     * keys.
      *
      * Default: FIPS_140_2_LEVEL_3_OR_HIGHER
      *
      *
-     * Some AWS Regions do not support the default. When creating a CA in these Regions, you must
-     * provide `FIPS_140_2_LEVEL_2_OR_HIGHER` as the argument for `KeyStorageSecurityStandard` .
-     * Failure to do this results in an `InvalidArgsException` with the message, "A certificate
-     * authority cannot be created in this region with the specified security standard."
+     * Some AWS Regions don't support the default value. When you create a CA in these Regions, you
+     * must use `CCPC_LEVEL_1_OR_HIGHER` for the `KeyStorageSecurityStandard` parameter. If you don't,
+     * the operation returns an `InvalidArgsException` with this message: "A certificate authority
+     * cannot be created in this region with the specified security standard."
      *
-     * For information about security standard support in various Regions, see [Storage and security
-     * compliance of AWS Private CA private
+     * For information about security standard support in different AWS Regions, see [Storage and
+     * security compliance of AWS Private CA private
      * keys](https://docs.aws.amazon.com/privateca/latest/userguide/data-protection.html#private-keys)
      * .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html#cfn-acmpca-certificateauthority-keystoragesecuritystandard)
      * @param keyStorageSecurityStandard Specifies a cryptographic key management compliance
-     * standard used for handling CA keys. 
+     * standard for handling and protecting CA keys. 
      */
     public fun keyStorageSecurityStandard(keyStorageSecurityStandard: String)
 
@@ -544,25 +547,26 @@ public open class CfnCertificateAuthority(
     }
 
     /**
-     * Specifies a cryptographic key management compliance standard used for handling CA keys.
+     * Specifies a cryptographic key management compliance standard for handling and protecting CA
+     * keys.
      *
      * Default: FIPS_140_2_LEVEL_3_OR_HIGHER
      *
      *
-     * Some AWS Regions do not support the default. When creating a CA in these Regions, you must
-     * provide `FIPS_140_2_LEVEL_2_OR_HIGHER` as the argument for `KeyStorageSecurityStandard` .
-     * Failure to do this results in an `InvalidArgsException` with the message, "A certificate
-     * authority cannot be created in this region with the specified security standard."
+     * Some AWS Regions don't support the default value. When you create a CA in these Regions, you
+     * must use `CCPC_LEVEL_1_OR_HIGHER` for the `KeyStorageSecurityStandard` parameter. If you don't,
+     * the operation returns an `InvalidArgsException` with this message: "A certificate authority
+     * cannot be created in this region with the specified security standard."
      *
-     * For information about security standard support in various Regions, see [Storage and security
-     * compliance of AWS Private CA private
+     * For information about security standard support in different AWS Regions, see [Storage and
+     * security compliance of AWS Private CA private
      * keys](https://docs.aws.amazon.com/privateca/latest/userguide/data-protection.html#private-keys)
      * .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html#cfn-acmpca-certificateauthority-keystoragesecuritystandard)
      * @param keyStorageSecurityStandard Specifies a cryptographic key management compliance
-     * standard used for handling CA keys. 
+     * standard for handling and protecting CA keys. 
      */
     override fun keyStorageSecurityStandard(keyStorageSecurityStandard: String) {
       cdkBuilder.keyStorageSecurityStandard(keyStorageSecurityStandard)
@@ -1134,7 +1138,9 @@ public open class CfnCertificateAuthority(
    * .crlDistributionPointExtensionConfiguration(CrlDistributionPointExtensionConfigurationProperty.builder()
    * .omitExtension(false)
    * .build())
+   * .crlType("crlType")
    * .customCname("customCname")
+   * .customPath("customPath")
    * .expirationInDays(123)
    * .s3BucketName("s3BucketName")
    * .s3ObjectAcl("s3ObjectAcl")
@@ -1157,6 +1163,31 @@ public open class CfnCertificateAuthority(
         unwrap(this).getCrlDistributionPointExtensionConfiguration()
 
     /**
+     * Specifies the type of CRL.
+     *
+     * This setting determines the maximum number of certificates that the certificate authority can
+     * issue and revoke. For more information, see [AWS Private CA
+     * quotas](https://docs.aws.amazon.com/general/latest/gr/pca.html#limits_pca) .
+     *
+     * * `COMPLETE` - The default setting. AWS Private CA maintains a single CRL file for all
+     * unexpired certificates issued by a CA that have been revoked for any reason. Each certificate
+     * that AWS Private CA issues is bound to a specific CRL through the CRL distribution point (CDP)
+     * defined in [RFC 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280)
+     * .
+     * * `PARTITIONED` - Compared to complete CRLs, partitioned CRLs dramatically increase the
+     * number of certificates your private CA can issue.
+     *
+     *
+     * When using partitioned CRLs, you must validate that the CRL's associated issuing distribution
+     * point (IDP) URI matches the certiﬁcate's CDP URI to ensure the right CRL has been fetched. AWS
+     * Private CA marks the IDP extension as critical, which your client must be able to process.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-crltype)
+     */
+    public fun crlType(): String? = unwrap(this).getCrlType()
+
+    /**
      * Name inserted into the certificate *CRL Distribution Points* extension that enables the use
      * of an alias for the CRL distribution point.
      *
@@ -1172,6 +1203,15 @@ public open class CfnCertificateAuthority(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-customcname)
      */
     public fun customCname(): String? = unwrap(this).getCustomCname()
+
+    /**
+     * Designates a custom file path in S3 for CRL(s).
+     *
+     * For example, `http://&lt;CustomName&gt;/&lt;CustomPath&gt;/&lt;CrlPartition_GUID&gt;.crl` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-custompath)
+     */
+    public fun customPath(): String? = unwrap(this).getCustomPath()
 
     /**
      * Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
@@ -1269,6 +1309,28 @@ public open class CfnCertificateAuthority(
           fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: CrlDistributionPointExtensionConfigurationProperty.Builder.() -> Unit)
 
       /**
+       * @param crlType Specifies the type of CRL.
+       * This setting determines the maximum number of certificates that the certificate authority
+       * can issue and revoke. For more information, see [AWS Private CA
+       * quotas](https://docs.aws.amazon.com/general/latest/gr/pca.html#limits_pca) .
+       *
+       * * `COMPLETE` - The default setting. AWS Private CA maintains a single CRL file for all
+       * unexpired certificates issued by a CA that have been revoked for any reason. Each certificate
+       * that AWS Private CA issues is bound to a specific CRL through the CRL distribution point (CDP)
+       * defined in [RFC
+       * 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280) .
+       * * `PARTITIONED` - Compared to complete CRLs, partitioned CRLs dramatically increase the
+       * number of certificates your private CA can issue.
+       *
+       *
+       * When using partitioned CRLs, you must validate that the CRL's associated issuing
+       * distribution point (IDP) URI matches the certiﬁcate's CDP URI to ensure the right CRL has been
+       * fetched. AWS Private CA marks the IDP extension as critical, which your client must be able to
+       * process.
+       */
+      public fun crlType(crlType: String)
+
+      /**
        * @param customCname Name inserted into the certificate *CRL Distribution Points* extension
        * that enables the use of an alias for the CRL distribution point.
        * Use this value if you don't want the name of your S3 bucket to be public.
@@ -1280,6 +1342,12 @@ public open class CfnCertificateAuthority(
        * protocol prefix such as "http://" or "https://".
        */
       public fun customCname(customCname: String)
+
+      /**
+       * @param customPath Designates a custom file path in S3 for CRL(s).
+       * For example, `http://&lt;CustomName&gt;/&lt;CustomPath&gt;/&lt;CrlPartition_GUID&gt;.crl` .
+       */
+      public fun customPath(customPath: String)
 
       /**
        * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are
@@ -1383,6 +1451,30 @@ public open class CfnCertificateAuthority(
           crlDistributionPointExtensionConfiguration(CrlDistributionPointExtensionConfigurationProperty(crlDistributionPointExtensionConfiguration))
 
       /**
+       * @param crlType Specifies the type of CRL.
+       * This setting determines the maximum number of certificates that the certificate authority
+       * can issue and revoke. For more information, see [AWS Private CA
+       * quotas](https://docs.aws.amazon.com/general/latest/gr/pca.html#limits_pca) .
+       *
+       * * `COMPLETE` - The default setting. AWS Private CA maintains a single CRL file for all
+       * unexpired certificates issued by a CA that have been revoked for any reason. Each certificate
+       * that AWS Private CA issues is bound to a specific CRL through the CRL distribution point (CDP)
+       * defined in [RFC
+       * 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280) .
+       * * `PARTITIONED` - Compared to complete CRLs, partitioned CRLs dramatically increase the
+       * number of certificates your private CA can issue.
+       *
+       *
+       * When using partitioned CRLs, you must validate that the CRL's associated issuing
+       * distribution point (IDP) URI matches the certiﬁcate's CDP URI to ensure the right CRL has been
+       * fetched. AWS Private CA marks the IDP extension as critical, which your client must be able to
+       * process.
+       */
+      override fun crlType(crlType: String) {
+        cdkBuilder.crlType(crlType)
+      }
+
+      /**
        * @param customCname Name inserted into the certificate *CRL Distribution Points* extension
        * that enables the use of an alias for the CRL distribution point.
        * Use this value if you don't want the name of your S3 bucket to be public.
@@ -1395,6 +1487,14 @@ public open class CfnCertificateAuthority(
        */
       override fun customCname(customCname: String) {
         cdkBuilder.customCname(customCname)
+      }
+
+      /**
+       * @param customPath Designates a custom file path in S3 for CRL(s).
+       * For example, `http://&lt;CustomName&gt;/&lt;CustomPath&gt;/&lt;CrlPartition_GUID&gt;.crl` .
+       */
+      override fun customPath(customPath: String) {
+        cdkBuilder.customPath(customPath)
       }
 
       /**
@@ -1488,6 +1588,32 @@ public open class CfnCertificateAuthority(
           unwrap(this).getCrlDistributionPointExtensionConfiguration()
 
       /**
+       * Specifies the type of CRL.
+       *
+       * This setting determines the maximum number of certificates that the certificate authority
+       * can issue and revoke. For more information, see [AWS Private CA
+       * quotas](https://docs.aws.amazon.com/general/latest/gr/pca.html#limits_pca) .
+       *
+       * * `COMPLETE` - The default setting. AWS Private CA maintains a single CRL file for all
+       * unexpired certificates issued by a CA that have been revoked for any reason. Each certificate
+       * that AWS Private CA issues is bound to a specific CRL through the CRL distribution point (CDP)
+       * defined in [RFC
+       * 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280) .
+       * * `PARTITIONED` - Compared to complete CRLs, partitioned CRLs dramatically increase the
+       * number of certificates your private CA can issue.
+       *
+       *
+       * When using partitioned CRLs, you must validate that the CRL's associated issuing
+       * distribution point (IDP) URI matches the certiﬁcate's CDP URI to ensure the right CRL has been
+       * fetched. AWS Private CA marks the IDP extension as critical, which your client must be able to
+       * process.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-crltype)
+       */
+      override fun crlType(): String? = unwrap(this).getCrlType()
+
+      /**
        * Name inserted into the certificate *CRL Distribution Points* extension that enables the use
        * of an alias for the CRL distribution point.
        *
@@ -1503,6 +1629,15 @@ public open class CfnCertificateAuthority(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-customcname)
        */
       override fun customCname(): String? = unwrap(this).getCustomCname()
+
+      /**
+       * Designates a custom file path in S3 for CRL(s).
+       *
+       * For example, `http://&lt;CustomName&gt;/&lt;CustomPath&gt;/&lt;CrlPartition_GUID&gt;.crl` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-custompath)
+       */
+      override fun customPath(): String? = unwrap(this).getCustomPath()
 
       /**
        * Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
@@ -3437,7 +3572,9 @@ public open class CfnCertificateAuthority(
    * .crlDistributionPointExtensionConfiguration(CrlDistributionPointExtensionConfigurationProperty.builder()
    * .omitExtension(false)
    * .build())
+   * .crlType("crlType")
    * .customCname("customCname")
+   * .customPath("customPath")
    * .expirationInDays(123)
    * .s3BucketName("s3BucketName")
    * .s3ObjectAcl("s3ObjectAcl")

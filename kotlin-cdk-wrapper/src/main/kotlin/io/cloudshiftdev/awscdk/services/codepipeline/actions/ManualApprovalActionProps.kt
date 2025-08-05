@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -56,6 +57,17 @@ public interface ManualApprovalActionProps : CommonAwsActionProps {
    * a new Topic will be created.
    */
   public fun notifyEmails(): List<String> = unwrap(this).getNotifyEmails() ?: emptyList()
+
+  /**
+   * A timeout duration.
+   *
+   * It is configurable up to 86400 minutes (60 days) with a minimum value of 5 minutes.
+   *
+   * Default: - 10080 minutes (7 days)
+   *
+   * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html)
+   */
+  public fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
   /**
    * A builder for [ManualApprovalActionProps]
@@ -117,6 +129,12 @@ public interface ManualApprovalActionProps : CommonAwsActionProps {
      * RunOrder determines the relative order in which multiple Actions in the same Stage execute.
      */
     public fun runOrder(runOrder: Number)
+
+    /**
+     * @param timeout A timeout duration.
+     * It is configurable up to 86400 minutes (60 days) with a minimum value of 5 minutes.
+     */
+    public fun timeout(timeout: Duration)
 
     /**
      * @param variablesNamespace The name of the namespace to use for variables emitted by this
@@ -202,6 +220,14 @@ public interface ManualApprovalActionProps : CommonAwsActionProps {
     }
 
     /**
+     * @param timeout A timeout duration.
+     * It is configurable up to 86400 minutes (60 days) with a minimum value of 5 minutes.
+     */
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
+    }
+
+    /**
      * @param variablesNamespace The name of the namespace to use for variables emitted by this
      * action.
      */
@@ -274,6 +300,17 @@ public interface ManualApprovalActionProps : CommonAwsActionProps {
      * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html)
      */
     override fun runOrder(): Number? = unwrap(this).getRunOrder()
+
+    /**
+     * A timeout duration.
+     *
+     * It is configurable up to 86400 minutes (60 days) with a minimum value of 5 minutes.
+     *
+     * Default: - 10080 minutes (7 days)
+     *
+     * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html)
+     */
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
     /**
      * The name of the namespace to use for variables emitted by this action.

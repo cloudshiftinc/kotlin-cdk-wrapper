@@ -2,11 +2,9 @@
 
 package io.cloudshiftdev.awscdk.services.ce
 
-import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
-import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -74,7 +72,9 @@ public interface CfnAnomalyMonitorProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalymonitor.html#cfn-ce-anomalymonitor-resourcetags)
    */
-  public fun resourceTags(): Any? = unwrap(this).getResourceTags()
+  public fun resourceTags(): List<CfnAnomalyMonitor.ResourceTagProperty> =
+      unwrap(this).getResourceTags()?.map(CfnAnomalyMonitor.ResourceTagProperty::wrap) ?:
+      emptyList()
 
   /**
    * A builder for [CfnAnomalyMonitorProps]
@@ -108,17 +108,12 @@ public interface CfnAnomalyMonitorProps {
     /**
      * @param resourceTags Tags to assign to monitor.
      */
-    public fun resourceTags(resourceTags: IResolvable)
+    public fun resourceTags(resourceTags: List<CfnAnomalyMonitor.ResourceTagProperty>)
 
     /**
      * @param resourceTags Tags to assign to monitor.
      */
-    public fun resourceTags(resourceTags: List<Any>)
-
-    /**
-     * @param resourceTags Tags to assign to monitor.
-     */
-    public fun resourceTags(vararg resourceTags: Any)
+    public fun resourceTags(vararg resourceTags: CfnAnomalyMonitor.ResourceTagProperty)
   }
 
   private class BuilderImpl : Builder {
@@ -160,21 +155,15 @@ public interface CfnAnomalyMonitorProps {
     /**
      * @param resourceTags Tags to assign to monitor.
      */
-    override fun resourceTags(resourceTags: IResolvable) {
-      cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
+    override fun resourceTags(resourceTags: List<CfnAnomalyMonitor.ResourceTagProperty>) {
+      cdkBuilder.resourceTags(resourceTags.map(CfnAnomalyMonitor.ResourceTagProperty.Companion::unwrap))
     }
 
     /**
      * @param resourceTags Tags to assign to monitor.
      */
-    override fun resourceTags(resourceTags: List<Any>) {
-      cdkBuilder.resourceTags(resourceTags.map{CdkObjectWrappers.unwrap(it)})
-    }
-
-    /**
-     * @param resourceTags Tags to assign to monitor.
-     */
-    override fun resourceTags(vararg resourceTags: Any): Unit = resourceTags(resourceTags.toList())
+    override fun resourceTags(vararg resourceTags: CfnAnomalyMonitor.ResourceTagProperty): Unit =
+        resourceTags(resourceTags.toList())
 
     public fun build(): software.amazon.awscdk.services.ce.CfnAnomalyMonitorProps =
         cdkBuilder.build()
@@ -222,7 +211,9 @@ public interface CfnAnomalyMonitorProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalymonitor.html#cfn-ce-anomalymonitor-resourcetags)
      */
-    override fun resourceTags(): Any? = unwrap(this).getResourceTags()
+    override fun resourceTags(): List<CfnAnomalyMonitor.ResourceTagProperty> =
+        unwrap(this).getResourceTags()?.map(CfnAnomalyMonitor.ResourceTagProperty::wrap) ?:
+        emptyList()
   }
 
   public companion object {

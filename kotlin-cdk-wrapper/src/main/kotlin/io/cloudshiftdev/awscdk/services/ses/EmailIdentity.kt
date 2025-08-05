@@ -315,6 +315,17 @@ public open class EmailIdentity(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ses.EmailIdentity.PROPERTY_INJECTION_ID
+
+    public fun fromEmailIdentityArn(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      emailIdentityArn: String,
+    ): IEmailIdentity =
+        software.amazon.awscdk.services.ses.EmailIdentity.fromEmailIdentityArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, emailIdentityArn).let(IEmailIdentity::wrap)
+
     public fun fromEmailIdentityName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

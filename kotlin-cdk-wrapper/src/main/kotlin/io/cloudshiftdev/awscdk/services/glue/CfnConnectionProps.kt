@@ -20,12 +20,48 @@ import kotlin.jvm.JvmName
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.glue.*;
+ * Object athenaProperties;
  * Object connectionProperties;
+ * Object customAuthenticationCredentials;
+ * Object pythonProperties;
+ * Object sparkProperties;
+ * Object tokenUrlParametersMap;
  * CfnConnectionProps cfnConnectionProps = CfnConnectionProps.builder()
  * .catalogId("catalogId")
  * .connectionInput(ConnectionInputProperty.builder()
  * .connectionType("connectionType")
  * // the properties below are optional
+ * .athenaProperties(athenaProperties)
+ * .authenticationConfiguration(AuthenticationConfigurationInputProperty.builder()
+ * .authenticationType("authenticationType")
+ * // the properties below are optional
+ * .basicAuthenticationCredentials(BasicAuthenticationCredentialsProperty.builder()
+ * .password("password")
+ * .username("username")
+ * .build())
+ * .customAuthenticationCredentials(customAuthenticationCredentials)
+ * .kmsKeyArn("kmsKeyArn")
+ * .oAuth2Properties(OAuth2PropertiesInputProperty.builder()
+ * .authorizationCodeProperties(AuthorizationCodePropertiesProperty.builder()
+ * .authorizationCode("authorizationCode")
+ * .redirectUri("redirectUri")
+ * .build())
+ * .oAuth2ClientApplication(OAuth2ClientApplicationProperty.builder()
+ * .awsManagedClientApplicationReference("awsManagedClientApplicationReference")
+ * .userManagedClientApplicationClientId("userManagedClientApplicationClientId")
+ * .build())
+ * .oAuth2Credentials(OAuth2CredentialsProperty.builder()
+ * .accessToken("accessToken")
+ * .jwtToken("jwtToken")
+ * .refreshToken("refreshToken")
+ * .userManagedClientApplicationClientSecret("userManagedClientApplicationClientSecret")
+ * .build())
+ * .oAuth2GrantType("oAuth2GrantType")
+ * .tokenUrl("tokenUrl")
+ * .tokenUrlParametersMap(tokenUrlParametersMap)
+ * .build())
+ * .secretArn("secretArn")
+ * .build())
  * .connectionProperties(connectionProperties)
  * .description("description")
  * .matchCriteria(List.of("matchCriteria"))
@@ -35,6 +71,10 @@ import kotlin.jvm.JvmName
  * .securityGroupIdList(List.of("securityGroupIdList"))
  * .subnetId("subnetId")
  * .build())
+ * .pythonProperties(pythonProperties)
+ * .sparkProperties(sparkProperties)
+ * .validateCredentials(false)
+ * .validateForComputeEnvironments(List.of("validateForComputeEnvironments"))
  * .build())
  * .build();
  * ```

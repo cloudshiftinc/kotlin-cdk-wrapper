@@ -39,6 +39,9 @@ public open class AdotLambdaLayerGenericVersion(
     public val V0_102_1: AdotLambdaLayerGenericVersion =
         AdotLambdaLayerGenericVersion.wrap(software.amazon.awscdk.services.lambda.AdotLambdaLayerGenericVersion.V0_102_1)
 
+    public val V0_115_0: AdotLambdaLayerGenericVersion =
+        AdotLambdaLayerGenericVersion.wrap(software.amazon.awscdk.services.lambda.AdotLambdaLayerGenericVersion.V0_115_0)
+
     public val V0_62_1: AdotLambdaLayerGenericVersion =
         AdotLambdaLayerGenericVersion.wrap(software.amazon.awscdk.services.lambda.AdotLambdaLayerGenericVersion.V0_62_1)
 

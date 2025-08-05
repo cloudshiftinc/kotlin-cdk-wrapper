@@ -16,19 +16,19 @@ import kotlin.collections.List
  *
  * ```
  * AwsCustomResource getParameter = AwsCustomResource.Builder.create(this, "GetParameter")
- * .onUpdate(AwsSdkCall.builder() // will also be called for a CREATE event
+ * .onUpdate(AwsSdkCall.builder()
  * .service("SSM")
  * .action("GetParameter")
  * .parameters(Map.of(
  * "Name", "my-parameter",
  * "WithDecryption", true))
- * .physicalResourceId(PhysicalResourceId.of(Date.now().toString())).build())
+ * .physicalResourceId(PhysicalResourceId.of(Date.now().toString()))
+ * .logging(Logging.withDataHidden())
+ * .build())
  * .policy(AwsCustomResourcePolicy.fromSdkCalls(SdkCallsPolicyOptions.builder()
  * .resources(AwsCustomResourcePolicy.ANY_RESOURCE)
  * .build()))
  * .build();
- * // Use the value in another construct with
- * getParameter.getResponseField("Parameter.Value");
  * ```
  */
 public interface SdkCallsPolicyOptions {

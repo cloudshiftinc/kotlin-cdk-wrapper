@@ -42,6 +42,12 @@ import kotlin.jvm.JvmName
  * .build())
  * .build())
  * .targetFilters(TargetFiltersProperty.builder()
+ * .targets(List.of(HookTargetProperty.builder()
+ * .action("action")
+ * .invocationPoint("invocationPoint")
+ * .targetName("targetName")
+ * .build()))
+ * // the properties below are optional
  * .actions(List.of("actions"))
  * .invocationPoints(List.of("invocationPoints"))
  * .targetNames(List.of("targetNames"))
@@ -104,6 +110,15 @@ public interface CfnLambdaHookProps {
   /**
    * Specifies the stack level filters for the Hook.
    *
+   * Example stack level filter in JSON:
+   *
+   * `"StackFilters": {"FilteringCriteria": "ALL", "StackNames": {"Exclude": [ "stack-1",
+   * "stack-2"]}}`
+   *
+   * Example stack level filter in YAML:
+   *
+   * `StackFilters: FilteringCriteria: ALL StackNames: Exclude: - stack-1 - stack-2`
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-lambdahook.html#cfn-cloudformation-lambdahook-stackfilters)
    */
   public fun stackFilters(): Any? = unwrap(this).getStackFilters()
@@ -111,12 +126,24 @@ public interface CfnLambdaHookProps {
   /**
    * Specifies the target filters for the Hook.
    *
+   * Example target filter in JSON:
+   *
+   * `"TargetFilters": {"Actions": [ "Create", "Update", "Delete" ]}`
+   *
+   * Example target filter in YAML:
+   *
+   * `TargetFilters: Actions: - CREATE - UPDATE - DELETE`
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-lambdahook.html#cfn-cloudformation-lambdahook-targetfilters)
    */
   public fun targetFilters(): Any? = unwrap(this).getTargetFilters()
 
   /**
-   * Specifies which type of operation the Hook is run against.
+   * Specifies the list of operations the Hook is run against.
+   *
+   * For more information, see [Hook
+   * targets](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-concepts.html#hook-terms-hook-target)
+   * in the *AWS CloudFormation Hooks User Guide* .
    *
    * Valid values: `STACK` | `RESOURCE` | `CHANGE_SET` | `CLOUD_CONTROL`
    *
@@ -166,16 +193,40 @@ public interface CfnLambdaHookProps {
 
     /**
      * @param stackFilters Specifies the stack level filters for the Hook.
+     * Example stack level filter in JSON:
+     *
+     * `"StackFilters": {"FilteringCriteria": "ALL", "StackNames": {"Exclude": [ "stack-1",
+     * "stack-2"]}}`
+     *
+     * Example stack level filter in YAML:
+     *
+     * `StackFilters: FilteringCriteria: ALL StackNames: Exclude: - stack-1 - stack-2`
      */
     public fun stackFilters(stackFilters: IResolvable)
 
     /**
      * @param stackFilters Specifies the stack level filters for the Hook.
+     * Example stack level filter in JSON:
+     *
+     * `"StackFilters": {"FilteringCriteria": "ALL", "StackNames": {"Exclude": [ "stack-1",
+     * "stack-2"]}}`
+     *
+     * Example stack level filter in YAML:
+     *
+     * `StackFilters: FilteringCriteria: ALL StackNames: Exclude: - stack-1 - stack-2`
      */
     public fun stackFilters(stackFilters: CfnLambdaHook.StackFiltersProperty)
 
     /**
      * @param stackFilters Specifies the stack level filters for the Hook.
+     * Example stack level filter in JSON:
+     *
+     * `"StackFilters": {"FilteringCriteria": "ALL", "StackNames": {"Exclude": [ "stack-1",
+     * "stack-2"]}}`
+     *
+     * Example stack level filter in YAML:
+     *
+     * `StackFilters: FilteringCriteria: ALL StackNames: Exclude: - stack-1 - stack-2`
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a6b6e11cd90dda0bad6186839e844e3785ba994f438316d80edaab88ae832c66")
@@ -183,29 +234,58 @@ public interface CfnLambdaHookProps {
 
     /**
      * @param targetFilters Specifies the target filters for the Hook.
+     * Example target filter in JSON:
+     *
+     * `"TargetFilters": {"Actions": [ "Create", "Update", "Delete" ]}`
+     *
+     * Example target filter in YAML:
+     *
+     * `TargetFilters: Actions: - CREATE - UPDATE - DELETE`
      */
     public fun targetFilters(targetFilters: IResolvable)
 
     /**
      * @param targetFilters Specifies the target filters for the Hook.
+     * Example target filter in JSON:
+     *
+     * `"TargetFilters": {"Actions": [ "Create", "Update", "Delete" ]}`
+     *
+     * Example target filter in YAML:
+     *
+     * `TargetFilters: Actions: - CREATE - UPDATE - DELETE`
      */
     public fun targetFilters(targetFilters: CfnLambdaHook.TargetFiltersProperty)
 
     /**
      * @param targetFilters Specifies the target filters for the Hook.
+     * Example target filter in JSON:
+     *
+     * `"TargetFilters": {"Actions": [ "Create", "Update", "Delete" ]}`
+     *
+     * Example target filter in YAML:
+     *
+     * `TargetFilters: Actions: - CREATE - UPDATE - DELETE`
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7be9b3b7ce3abad58e6d0f65fda1a60effebfafcd01e5b5b3e268362047fe013")
     public fun targetFilters(targetFilters: CfnLambdaHook.TargetFiltersProperty.Builder.() -> Unit)
 
     /**
-     * @param targetOperations Specifies which type of operation the Hook is run against. 
+     * @param targetOperations Specifies the list of operations the Hook is run against. 
+     * For more information, see [Hook
+     * targets](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-concepts.html#hook-terms-hook-target)
+     * in the *AWS CloudFormation Hooks User Guide* .
+     *
      * Valid values: `STACK` | `RESOURCE` | `CHANGE_SET` | `CLOUD_CONTROL`
      */
     public fun targetOperations(targetOperations: List<String>)
 
     /**
-     * @param targetOperations Specifies which type of operation the Hook is run against. 
+     * @param targetOperations Specifies the list of operations the Hook is run against. 
+     * For more information, see [Hook
+     * targets](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-concepts.html#hook-terms-hook-target)
+     * in the *AWS CloudFormation Hooks User Guide* .
+     *
      * Valid values: `STACK` | `RESOURCE` | `CHANGE_SET` | `CLOUD_CONTROL`
      */
     public fun targetOperations(vararg targetOperations: String)
@@ -263,6 +343,14 @@ public interface CfnLambdaHookProps {
 
     /**
      * @param stackFilters Specifies the stack level filters for the Hook.
+     * Example stack level filter in JSON:
+     *
+     * `"StackFilters": {"FilteringCriteria": "ALL", "StackNames": {"Exclude": [ "stack-1",
+     * "stack-2"]}}`
+     *
+     * Example stack level filter in YAML:
+     *
+     * `StackFilters: FilteringCriteria: ALL StackNames: Exclude: - stack-1 - stack-2`
      */
     override fun stackFilters(stackFilters: IResolvable) {
       cdkBuilder.stackFilters(stackFilters.let(IResolvable.Companion::unwrap))
@@ -270,6 +358,14 @@ public interface CfnLambdaHookProps {
 
     /**
      * @param stackFilters Specifies the stack level filters for the Hook.
+     * Example stack level filter in JSON:
+     *
+     * `"StackFilters": {"FilteringCriteria": "ALL", "StackNames": {"Exclude": [ "stack-1",
+     * "stack-2"]}}`
+     *
+     * Example stack level filter in YAML:
+     *
+     * `StackFilters: FilteringCriteria: ALL StackNames: Exclude: - stack-1 - stack-2`
      */
     override fun stackFilters(stackFilters: CfnLambdaHook.StackFiltersProperty) {
       cdkBuilder.stackFilters(stackFilters.let(CfnLambdaHook.StackFiltersProperty.Companion::unwrap))
@@ -277,6 +373,14 @@ public interface CfnLambdaHookProps {
 
     /**
      * @param stackFilters Specifies the stack level filters for the Hook.
+     * Example stack level filter in JSON:
+     *
+     * `"StackFilters": {"FilteringCriteria": "ALL", "StackNames": {"Exclude": [ "stack-1",
+     * "stack-2"]}}`
+     *
+     * Example stack level filter in YAML:
+     *
+     * `StackFilters: FilteringCriteria: ALL StackNames: Exclude: - stack-1 - stack-2`
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a6b6e11cd90dda0bad6186839e844e3785ba994f438316d80edaab88ae832c66")
@@ -285,6 +389,13 @@ public interface CfnLambdaHookProps {
 
     /**
      * @param targetFilters Specifies the target filters for the Hook.
+     * Example target filter in JSON:
+     *
+     * `"TargetFilters": {"Actions": [ "Create", "Update", "Delete" ]}`
+     *
+     * Example target filter in YAML:
+     *
+     * `TargetFilters: Actions: - CREATE - UPDATE - DELETE`
      */
     override fun targetFilters(targetFilters: IResolvable) {
       cdkBuilder.targetFilters(targetFilters.let(IResolvable.Companion::unwrap))
@@ -292,6 +403,13 @@ public interface CfnLambdaHookProps {
 
     /**
      * @param targetFilters Specifies the target filters for the Hook.
+     * Example target filter in JSON:
+     *
+     * `"TargetFilters": {"Actions": [ "Create", "Update", "Delete" ]}`
+     *
+     * Example target filter in YAML:
+     *
+     * `TargetFilters: Actions: - CREATE - UPDATE - DELETE`
      */
     override fun targetFilters(targetFilters: CfnLambdaHook.TargetFiltersProperty) {
       cdkBuilder.targetFilters(targetFilters.let(CfnLambdaHook.TargetFiltersProperty.Companion::unwrap))
@@ -299,6 +417,13 @@ public interface CfnLambdaHookProps {
 
     /**
      * @param targetFilters Specifies the target filters for the Hook.
+     * Example target filter in JSON:
+     *
+     * `"TargetFilters": {"Actions": [ "Create", "Update", "Delete" ]}`
+     *
+     * Example target filter in YAML:
+     *
+     * `TargetFilters: Actions: - CREATE - UPDATE - DELETE`
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7be9b3b7ce3abad58e6d0f65fda1a60effebfafcd01e5b5b3e268362047fe013")
@@ -307,7 +432,11 @@ public interface CfnLambdaHookProps {
         Unit = targetFilters(CfnLambdaHook.TargetFiltersProperty(targetFilters))
 
     /**
-     * @param targetOperations Specifies which type of operation the Hook is run against. 
+     * @param targetOperations Specifies the list of operations the Hook is run against. 
+     * For more information, see [Hook
+     * targets](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-concepts.html#hook-terms-hook-target)
+     * in the *AWS CloudFormation Hooks User Guide* .
+     *
      * Valid values: `STACK` | `RESOURCE` | `CHANGE_SET` | `CLOUD_CONTROL`
      */
     override fun targetOperations(targetOperations: List<String>) {
@@ -315,7 +444,11 @@ public interface CfnLambdaHookProps {
     }
 
     /**
-     * @param targetOperations Specifies which type of operation the Hook is run against. 
+     * @param targetOperations Specifies the list of operations the Hook is run against. 
+     * For more information, see [Hook
+     * targets](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-concepts.html#hook-terms-hook-target)
+     * in the *AWS CloudFormation Hooks User Guide* .
+     *
      * Valid values: `STACK` | `RESOURCE` | `CHANGE_SET` | `CLOUD_CONTROL`
      */
     override fun targetOperations(vararg targetOperations: String): Unit =
@@ -381,6 +514,15 @@ public interface CfnLambdaHookProps {
     /**
      * Specifies the stack level filters for the Hook.
      *
+     * Example stack level filter in JSON:
+     *
+     * `"StackFilters": {"FilteringCriteria": "ALL", "StackNames": {"Exclude": [ "stack-1",
+     * "stack-2"]}}`
+     *
+     * Example stack level filter in YAML:
+     *
+     * `StackFilters: FilteringCriteria: ALL StackNames: Exclude: - stack-1 - stack-2`
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-lambdahook.html#cfn-cloudformation-lambdahook-stackfilters)
      */
     override fun stackFilters(): Any? = unwrap(this).getStackFilters()
@@ -388,12 +530,24 @@ public interface CfnLambdaHookProps {
     /**
      * Specifies the target filters for the Hook.
      *
+     * Example target filter in JSON:
+     *
+     * `"TargetFilters": {"Actions": [ "Create", "Update", "Delete" ]}`
+     *
+     * Example target filter in YAML:
+     *
+     * `TargetFilters: Actions: - CREATE - UPDATE - DELETE`
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-lambdahook.html#cfn-cloudformation-lambdahook-targetfilters)
      */
     override fun targetFilters(): Any? = unwrap(this).getTargetFilters()
 
     /**
-     * Specifies which type of operation the Hook is run against.
+     * Specifies the list of operations the Hook is run against.
+     *
+     * For more information, see [Hook
+     * targets](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-concepts.html#hook-terms-hook-target)
+     * in the *AWS CloudFormation Hooks User Guide* .
      *
      * Valid values: `STACK` | `RESOURCE` | `CHANGE_SET` | `CLOUD_CONTROL`
      *

@@ -384,7 +384,7 @@ public interface CfnGraphQLApiProps {
      *
      * *Maximum* : 64
      */
-    public fun environmentVariables(environmentVariables: IResolvable)
+    public fun environmentVariables(environmentVariables: Map<String, String>)
 
     /**
      * @param environmentVariables A map containing the list of resources with their properties and
@@ -398,7 +398,7 @@ public interface CfnGraphQLApiProps {
      *
      * *Maximum* : 64
      */
-    public fun environmentVariables(environmentVariables: Map<String, String>)
+    public fun environmentVariables(environmentVariables: IResolvable)
 
     /**
      * @param introspectionConfig Sets the value of the GraphQL API to enable ( `ENABLED` ) or
@@ -676,8 +676,8 @@ public interface CfnGraphQLApiProps {
      *
      * *Maximum* : 64
      */
-    override fun environmentVariables(environmentVariables: IResolvable) {
-      cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
+    override fun environmentVariables(environmentVariables: Map<String, String>) {
+      cdkBuilder.environmentVariables(environmentVariables)
     }
 
     /**
@@ -692,8 +692,8 @@ public interface CfnGraphQLApiProps {
      *
      * *Maximum* : 64
      */
-    override fun environmentVariables(environmentVariables: Map<String, String>) {
-      cdkBuilder.environmentVariables(environmentVariables)
+    override fun environmentVariables(environmentVariables: IResolvable) {
+      cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
     }
 
     /**

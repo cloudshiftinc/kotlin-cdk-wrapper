@@ -31,11 +31,13 @@ import kotlin.collections.List
  * .statistic("statistic")
  * // the properties below are optional
  * .account("account")
+ * .accountOverride("accountOverride")
  * .dimensions(List.of(Dimension.builder()
  * .name("name")
  * .value(value)
  * .build()))
  * .region("region")
+ * .regionOverride("regionOverride")
  * .unitFilter(Unit.SECONDS)
  * .build();
  * ```
@@ -47,6 +49,13 @@ public interface MetricStatConfig {
    * Default: Deployment account.
    */
   public fun account(): String? = unwrap(this).getAccount()
+
+  /**
+   * Account set directly on the metric, not inherited from the attached stack.
+   *
+   * Default: No override.
+   */
+  public fun accountOverride(): String? = unwrap(this).getAccountOverride()
 
   /**
    * The dimensions to apply to the alarm.
@@ -79,6 +88,13 @@ public interface MetricStatConfig {
   public fun region(): String? = unwrap(this).getRegion()
 
   /**
+   * Region set directly on the metric, not inherited from the attached stack.
+   *
+   * Default: No override.
+   */
+  public fun regionOverride(): String? = unwrap(this).getRegionOverride()
+
+  /**
    * Aggregation function to use (can be either simple or a percentile).
    */
   public fun statistic(): String
@@ -106,6 +122,12 @@ public interface MetricStatConfig {
      * @param account Account which this metric comes from.
      */
     public fun account(account: String)
+
+    /**
+     * @param accountOverride Account set directly on the metric, not inherited from the attached
+     * stack.
+     */
+    public fun accountOverride(accountOverride: String)
 
     /**
      * @param dimensions The dimensions to apply to the alarm.
@@ -138,6 +160,12 @@ public interface MetricStatConfig {
     public fun region(region: String)
 
     /**
+     * @param regionOverride Region set directly on the metric, not inherited from the attached
+     * stack.
+     */
+    public fun regionOverride(regionOverride: String)
+
+    /**
      * @param statistic Aggregation function to use (can be either simple or a percentile). 
      */
     public fun statistic(statistic: String)
@@ -163,6 +191,14 @@ public interface MetricStatConfig {
      */
     override fun account(account: String) {
       cdkBuilder.account(account)
+    }
+
+    /**
+     * @param accountOverride Account set directly on the metric, not inherited from the attached
+     * stack.
+     */
+    override fun accountOverride(accountOverride: String) {
+      cdkBuilder.accountOverride(accountOverride)
     }
 
     /**
@@ -207,6 +243,14 @@ public interface MetricStatConfig {
     }
 
     /**
+     * @param regionOverride Region set directly on the metric, not inherited from the attached
+     * stack.
+     */
+    override fun regionOverride(regionOverride: String) {
+      cdkBuilder.regionOverride(regionOverride)
+    }
+
+    /**
      * @param statistic Aggregation function to use (can be either simple or a percentile). 
      */
     override fun statistic(statistic: String) {
@@ -242,6 +286,13 @@ public interface MetricStatConfig {
     override fun account(): String? = unwrap(this).getAccount()
 
     /**
+     * Account set directly on the metric, not inherited from the attached stack.
+     *
+     * Default: No override.
+     */
+    override fun accountOverride(): String? = unwrap(this).getAccountOverride()
+
+    /**
      * The dimensions to apply to the alarm.
      *
      * Default: []
@@ -270,6 +321,13 @@ public interface MetricStatConfig {
      * Default: Deployment region.
      */
     override fun region(): String? = unwrap(this).getRegion()
+
+    /**
+     * Region set directly on the metric, not inherited from the attached stack.
+     *
+     * Default: No override.
+     */
+    override fun regionOverride(): String? = unwrap(this).getRegionOverride()
 
     /**
      * Aggregation function to use (can be either simple or a percentile).

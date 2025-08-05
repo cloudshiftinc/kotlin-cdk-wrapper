@@ -101,6 +101,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .unit("unit")
  * .build()))
  * .build())
+ * .instanceLimitsHandling("instanceLimitsHandling")
  * .build())
  * .communicationTimeConfig(CommunicationTimeConfigProperty.builder()
  * .localTimeZoneConfig(LocalTimeZoneConfigProperty.builder()
@@ -178,6 +179,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .source(SourceProperty.builder()
  * .customerProfilesSegmentArn("customerProfilesSegmentArn")
+ * .eventTrigger(EventTriggerProperty.builder()
+ * .customerProfilesDomainArn("customerProfilesDomainArn")
+ * .build())
  * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -1432,6 +1436,7 @@ public open class CfnCampaign(
    * .unit("unit")
    * .build()))
    * .build())
+   * .instanceLimitsHandling("instanceLimitsHandling")
    * .build();
    * ```
    *
@@ -1444,6 +1449,13 @@ public open class CfnCampaign(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaignsv2-campaign-communicationlimitsconfig.html#cfn-connectcampaignsv2-campaign-communicationlimitsconfig-allchannelssubtypes)
      */
     public fun allChannelsSubtypes(): Any? = unwrap(this).getAllChannelsSubtypes()
+
+    /**
+     * Opt-in or Opt-out from instance-level limits.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaignsv2-campaign-communicationlimitsconfig.html#cfn-connectcampaignsv2-campaign-communicationlimitsconfig-instancelimitshandling)
+     */
+    public fun instanceLimitsHandling(): String? = unwrap(this).getInstanceLimitsHandling()
 
     /**
      * A builder for [CommunicationLimitsConfigProperty]
@@ -1470,6 +1482,11 @@ public open class CfnCampaign(
       @JvmName("2271138c459cbc3161668dc60f29a5fa3828055bb88b28db94312f1103b139e0")
       public
           fun allChannelsSubtypes(allChannelsSubtypes: CommunicationLimitsProperty.Builder.() -> Unit)
+
+      /**
+       * @param instanceLimitsHandling Opt-in or Opt-out from instance-level limits.
+       */
+      public fun instanceLimitsHandling(instanceLimitsHandling: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1504,6 +1521,13 @@ public open class CfnCampaign(
           fun allChannelsSubtypes(allChannelsSubtypes: CommunicationLimitsProperty.Builder.() -> Unit):
           Unit = allChannelsSubtypes(CommunicationLimitsProperty(allChannelsSubtypes))
 
+      /**
+       * @param instanceLimitsHandling Opt-in or Opt-out from instance-level limits.
+       */
+      override fun instanceLimitsHandling(instanceLimitsHandling: String) {
+        cdkBuilder.instanceLimitsHandling(instanceLimitsHandling)
+      }
+
       public fun build():
           software.amazon.awscdk.services.connectcampaignsv2.CfnCampaign.CommunicationLimitsConfigProperty
           = cdkBuilder.build()
@@ -1519,6 +1543,13 @@ public open class CfnCampaign(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaignsv2-campaign-communicationlimitsconfig.html#cfn-connectcampaignsv2-campaign-communicationlimitsconfig-allchannelssubtypes)
        */
       override fun allChannelsSubtypes(): Any? = unwrap(this).getAllChannelsSubtypes()
+
+      /**
+       * Opt-in or Opt-out from instance-level limits.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaignsv2-campaign-communicationlimitsconfig.html#cfn-connectcampaignsv2-campaign-communicationlimitsconfig-instancelimitshandling)
+       */
+      override fun instanceLimitsHandling(): String? = unwrap(this).getInstanceLimitsHandling()
     }
 
     public companion object {
@@ -2557,6 +2588,92 @@ public open class CfnCampaign(
           software.amazon.awscdk.services.connectcampaignsv2.CfnCampaign.EmailOutboundModeProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.connectcampaignsv2.CfnCampaign.EmailOutboundModeProperty
+    }
+  }
+
+  /**
+   * The event trigger of the campaign.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connectcampaignsv2.*;
+   * EventTriggerProperty eventTriggerProperty = EventTriggerProperty.builder()
+   * .customerProfilesDomainArn("customerProfilesDomainArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaignsv2-campaign-eventtrigger.html)
+   */
+  public interface EventTriggerProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the Customer Profiles domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaignsv2-campaign-eventtrigger.html#cfn-connectcampaignsv2-campaign-eventtrigger-customerprofilesdomainarn)
+     */
+    public fun customerProfilesDomainArn(): String? = unwrap(this).getCustomerProfilesDomainArn()
+
+    /**
+     * A builder for [EventTriggerProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param customerProfilesDomainArn The Amazon Resource Name (ARN) of the Customer Profiles
+       * domain.
+       */
+      public fun customerProfilesDomainArn(customerProfilesDomainArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connectcampaignsv2.CfnCampaign.EventTriggerProperty.Builder
+          =
+          software.amazon.awscdk.services.connectcampaignsv2.CfnCampaign.EventTriggerProperty.builder()
+
+      /**
+       * @param customerProfilesDomainArn The Amazon Resource Name (ARN) of the Customer Profiles
+       * domain.
+       */
+      override fun customerProfilesDomainArn(customerProfilesDomainArn: String) {
+        cdkBuilder.customerProfilesDomainArn(customerProfilesDomainArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.connectcampaignsv2.CfnCampaign.EventTriggerProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.connectcampaignsv2.CfnCampaign.EventTriggerProperty,
+    ) : CdkObject(cdkObject),
+        EventTriggerProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the Customer Profiles domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaignsv2-campaign-eventtrigger.html#cfn-connectcampaignsv2-campaign-eventtrigger-customerprofilesdomainarn)
+       */
+      override fun customerProfilesDomainArn(): String? =
+          unwrap(this).getCustomerProfilesDomainArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EventTriggerProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connectcampaignsv2.CfnCampaign.EventTriggerProperty):
+          EventTriggerProperty = CdkObjectWrappers.wrap(cdkObject) as? EventTriggerProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EventTriggerProperty):
+          software.amazon.awscdk.services.connectcampaignsv2.CfnCampaign.EventTriggerProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connectcampaignsv2.CfnCampaign.EventTriggerProperty
     }
   }
 
@@ -3762,6 +3879,9 @@ public open class CfnCampaign(
    * import io.cloudshiftdev.awscdk.services.connectcampaignsv2.*;
    * SourceProperty sourceProperty = SourceProperty.builder()
    * .customerProfilesSegmentArn("customerProfilesSegmentArn")
+   * .eventTrigger(EventTriggerProperty.builder()
+   * .customerProfilesDomainArn("customerProfilesDomainArn")
+   * .build())
    * .build();
    * ```
    *
@@ -3773,7 +3893,14 @@ public open class CfnCampaign(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaignsv2-campaign-source.html#cfn-connectcampaignsv2-campaign-source-customerprofilessegmentarn)
      */
-    public fun customerProfilesSegmentArn(): String
+    public fun customerProfilesSegmentArn(): String? = unwrap(this).getCustomerProfilesSegmentArn()
+
+    /**
+     * The event trigger of the campaign.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaignsv2-campaign-source.html#cfn-connectcampaignsv2-campaign-source-eventtrigger)
+     */
+    public fun eventTrigger(): Any? = unwrap(this).getEventTrigger()
 
     /**
      * A builder for [SourceProperty]
@@ -3782,9 +3909,26 @@ public open class CfnCampaign(
     public interface Builder {
       /**
        * @param customerProfilesSegmentArn The Amazon Resource Name (ARN) of the Customer Profiles
-       * segment. 
+       * segment.
        */
       public fun customerProfilesSegmentArn(customerProfilesSegmentArn: String)
+
+      /**
+       * @param eventTrigger The event trigger of the campaign.
+       */
+      public fun eventTrigger(eventTrigger: IResolvable)
+
+      /**
+       * @param eventTrigger The event trigger of the campaign.
+       */
+      public fun eventTrigger(eventTrigger: EventTriggerProperty)
+
+      /**
+       * @param eventTrigger The event trigger of the campaign.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f853285acf5737146ad2622bb0c43d79bc80c8ed154428e05cfe7e5e47bc388a")
+      public fun eventTrigger(eventTrigger: EventTriggerProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3794,11 +3938,33 @@ public open class CfnCampaign(
 
       /**
        * @param customerProfilesSegmentArn The Amazon Resource Name (ARN) of the Customer Profiles
-       * segment. 
+       * segment.
        */
       override fun customerProfilesSegmentArn(customerProfilesSegmentArn: String) {
         cdkBuilder.customerProfilesSegmentArn(customerProfilesSegmentArn)
       }
+
+      /**
+       * @param eventTrigger The event trigger of the campaign.
+       */
+      override fun eventTrigger(eventTrigger: IResolvable) {
+        cdkBuilder.eventTrigger(eventTrigger.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param eventTrigger The event trigger of the campaign.
+       */
+      override fun eventTrigger(eventTrigger: EventTriggerProperty) {
+        cdkBuilder.eventTrigger(eventTrigger.let(EventTriggerProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param eventTrigger The event trigger of the campaign.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f853285acf5737146ad2622bb0c43d79bc80c8ed154428e05cfe7e5e47bc388a")
+      override fun eventTrigger(eventTrigger: EventTriggerProperty.Builder.() -> Unit): Unit =
+          eventTrigger(EventTriggerProperty(eventTrigger))
 
       public fun build():
           software.amazon.awscdk.services.connectcampaignsv2.CfnCampaign.SourceProperty =
@@ -3814,8 +3980,15 @@ public open class CfnCampaign(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaignsv2-campaign-source.html#cfn-connectcampaignsv2-campaign-source-customerprofilessegmentarn)
        */
-      override fun customerProfilesSegmentArn(): String =
+      override fun customerProfilesSegmentArn(): String? =
           unwrap(this).getCustomerProfilesSegmentArn()
+
+      /**
+       * The event trigger of the campaign.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaignsv2-campaign-source.html#cfn-connectcampaignsv2-campaign-source-eventtrigger)
+       */
+      override fun eventTrigger(): Any? = unwrap(this).getEventTrigger()
     }
 
     public companion object {

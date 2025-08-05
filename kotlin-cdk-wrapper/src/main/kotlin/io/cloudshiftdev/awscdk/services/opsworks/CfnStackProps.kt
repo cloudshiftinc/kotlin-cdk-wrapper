@@ -464,13 +464,13 @@ public interface CfnStackProps {
      * @param attributes One or more user-defined key-value pairs to be added to the stack
      * attributes.
      */
-    public fun attributes(attributes: IResolvable)
+    public fun attributes(attributes: Map<String, String>)
 
     /**
      * @param attributes One or more user-defined key-value pairs to be added to the stack
      * attributes.
      */
-    public fun attributes(attributes: Map<String, String>)
+    public fun attributes(attributes: IResolvable)
 
     /**
      * @param chefConfiguration A `ChefConfiguration` object that specifies whether to enable
@@ -908,16 +908,16 @@ public interface CfnStackProps {
      * @param attributes One or more user-defined key-value pairs to be added to the stack
      * attributes.
      */
-    override fun attributes(attributes: IResolvable) {
-      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
+    override fun attributes(attributes: Map<String, String>) {
+      cdkBuilder.attributes(attributes)
     }
 
     /**
      * @param attributes One or more user-defined key-value pairs to be added to the stack
      * attributes.
      */
-    override fun attributes(attributes: Map<String, String>) {
-      cdkBuilder.attributes(attributes)
+    override fun attributes(attributes: IResolvable) {
+      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
     }
 
     /**

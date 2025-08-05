@@ -84,7 +84,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Console as the AWS account root user. For more information, see [Update the AWS account name, email
  * address, or password for the root
  * user](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-root-user.html) in
- * the *AWS Account Management Reference Guide* .
+ * the *Account Management Reference Guide* .
  *
  * * When you create an account in an organization using the AWS Organizations console, API, or AWS
  * CLI commands, we don't automatically collect the information required for the account to operate as

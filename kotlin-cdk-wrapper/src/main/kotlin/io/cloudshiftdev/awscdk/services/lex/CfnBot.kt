@@ -222,6 +222,33 @@ public open class CfnBot(
   }
 
   /**
+   *
+   */
+  public open fun replication(): Any? = unwrap(this).getReplication()
+
+  /**
+   *
+   */
+  public open fun replication(`value`: IResolvable) {
+    unwrap(this).setReplication(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  public open fun replication(`value`: ReplicationProperty) {
+    unwrap(this).setReplication(`value`.let(ReplicationProperty.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("83e98af042d9a596206f12735ea91c204b65664ada475ea66c1054db41a4006a")
+  public open fun replication(`value`: ReplicationProperty.Builder.() -> Unit): Unit =
+      replication(ReplicationProperty(`value`))
+
+  /**
    * The Amazon Resource Name (ARN) of the IAM role used to build and run the bot.
    */
   public open fun roleArn(): String = unwrap(this).getRoleArn()
@@ -446,6 +473,26 @@ public open class CfnBot(
      * @param name The name of the bot locale. 
      */
     public fun name(name: String)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-bot.html#cfn-lex-bot-replication)
+     * @param replication 
+     */
+    public fun replication(replication: IResolvable)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-bot.html#cfn-lex-bot-replication)
+     * @param replication 
+     */
+    public fun replication(replication: ReplicationProperty)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-bot.html#cfn-lex-bot-replication)
+     * @param replication 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("36f9328982dab1a0bef4edf3ce7618463c5faa08aa7dcaeb543822f621695c27")
+    public fun replication(replication: ReplicationProperty.Builder.() -> Unit)
 
     /**
      * The Amazon Resource Name (ARN) of the IAM role used to build and run the bot.
@@ -717,6 +764,31 @@ public open class CfnBot(
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-bot.html#cfn-lex-bot-replication)
+     * @param replication 
+     */
+    override fun replication(replication: IResolvable) {
+      cdkBuilder.replication(replication.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-bot.html#cfn-lex-bot-replication)
+     * @param replication 
+     */
+    override fun replication(replication: ReplicationProperty) {
+      cdkBuilder.replication(replication.let(ReplicationProperty.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-bot.html#cfn-lex-bot-replication)
+     * @param replication 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("36f9328982dab1a0bef4edf3ce7618463c5faa08aa7dcaeb543822f621695c27")
+    override fun replication(replication: ReplicationProperty.Builder.() -> Unit): Unit =
+        replication(ReplicationProperty(replication))
 
     /**
      * The Amazon Resource Name (ARN) of the IAM role used to build and run the bot.
@@ -1659,6 +1731,992 @@ public open class CfnBot(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * BKBExactResponseFieldsProperty bKBExactResponseFieldsProperty =
+   * BKBExactResponseFieldsProperty.builder()
+   * .answerField("answerField")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bkbexactresponsefields.html)
+   */
+  public interface BKBExactResponseFieldsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bkbexactresponsefields.html#cfn-lex-bot-bkbexactresponsefields-answerfield)
+     */
+    public fun answerField(): String? = unwrap(this).getAnswerField()
+
+    /**
+     * A builder for [BKBExactResponseFieldsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param answerField the value to be set.
+       */
+      public fun answerField(answerField: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.BKBExactResponseFieldsProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.BKBExactResponseFieldsProperty.builder()
+
+      /**
+       * @param answerField the value to be set.
+       */
+      override fun answerField(answerField: String) {
+        cdkBuilder.answerField(answerField)
+      }
+
+      public fun build(): software.amazon.awscdk.services.lex.CfnBot.BKBExactResponseFieldsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.BKBExactResponseFieldsProperty,
+    ) : CdkObject(cdkObject),
+        BKBExactResponseFieldsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bkbexactresponsefields.html#cfn-lex-bot-bkbexactresponsefields-answerfield)
+       */
+      override fun answerField(): String? = unwrap(this).getAnswerField()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BKBExactResponseFieldsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.BKBExactResponseFieldsProperty):
+          BKBExactResponseFieldsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BKBExactResponseFieldsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BKBExactResponseFieldsProperty):
+          software.amazon.awscdk.services.lex.CfnBot.BKBExactResponseFieldsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.BKBExactResponseFieldsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * BedrockAgentConfigurationProperty bedrockAgentConfigurationProperty =
+   * BedrockAgentConfigurationProperty.builder()
+   * .bedrockAgentAliasId("bedrockAgentAliasId")
+   * .bedrockAgentId("bedrockAgentId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockagentconfiguration.html)
+   */
+  public interface BedrockAgentConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockagentconfiguration.html#cfn-lex-bot-bedrockagentconfiguration-bedrockagentaliasid)
+     */
+    public fun bedrockAgentAliasId(): String? = unwrap(this).getBedrockAgentAliasId()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockagentconfiguration.html#cfn-lex-bot-bedrockagentconfiguration-bedrockagentid)
+     */
+    public fun bedrockAgentId(): String? = unwrap(this).getBedrockAgentId()
+
+    /**
+     * A builder for [BedrockAgentConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bedrockAgentAliasId the value to be set.
+       */
+      public fun bedrockAgentAliasId(bedrockAgentAliasId: String)
+
+      /**
+       * @param bedrockAgentId the value to be set.
+       */
+      public fun bedrockAgentId(bedrockAgentId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.BedrockAgentConfigurationProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.BedrockAgentConfigurationProperty.builder()
+
+      /**
+       * @param bedrockAgentAliasId the value to be set.
+       */
+      override fun bedrockAgentAliasId(bedrockAgentAliasId: String) {
+        cdkBuilder.bedrockAgentAliasId(bedrockAgentAliasId)
+      }
+
+      /**
+       * @param bedrockAgentId the value to be set.
+       */
+      override fun bedrockAgentId(bedrockAgentId: String) {
+        cdkBuilder.bedrockAgentId(bedrockAgentId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBot.BedrockAgentConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.BedrockAgentConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        BedrockAgentConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockagentconfiguration.html#cfn-lex-bot-bedrockagentconfiguration-bedrockagentaliasid)
+       */
+      override fun bedrockAgentAliasId(): String? = unwrap(this).getBedrockAgentAliasId()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockagentconfiguration.html#cfn-lex-bot-bedrockagentconfiguration-bedrockagentid)
+       */
+      override fun bedrockAgentId(): String? = unwrap(this).getBedrockAgentId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BedrockAgentConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.BedrockAgentConfigurationProperty):
+          BedrockAgentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BedrockAgentConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BedrockAgentConfigurationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.BedrockAgentConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.BedrockAgentConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * BedrockAgentIntentConfigurationProperty bedrockAgentIntentConfigurationProperty =
+   * BedrockAgentIntentConfigurationProperty.builder()
+   * .bedrockAgentConfiguration(BedrockAgentConfigurationProperty.builder()
+   * .bedrockAgentAliasId("bedrockAgentAliasId")
+   * .bedrockAgentId("bedrockAgentId")
+   * .build())
+   * .bedrockAgentIntentKnowledgeBaseConfiguration(BedrockAgentIntentKnowledgeBaseConfigurationProperty.builder()
+   * .bedrockKnowledgeBaseArn("bedrockKnowledgeBaseArn")
+   * .bedrockModelConfiguration(BedrockModelSpecificationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .bedrockGuardrailConfiguration(BedrockGuardrailConfigurationProperty.builder()
+   * .bedrockGuardrailIdentifier("bedrockGuardrailIdentifier")
+   * .bedrockGuardrailVersion("bedrockGuardrailVersion")
+   * .build())
+   * .bedrockModelCustomPrompt("bedrockModelCustomPrompt")
+   * .bedrockTraceStatus("bedrockTraceStatus")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockagentintentconfiguration.html)
+   */
+  public interface BedrockAgentIntentConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockagentintentconfiguration.html#cfn-lex-bot-bedrockagentintentconfiguration-bedrockagentconfiguration)
+     */
+    public fun bedrockAgentConfiguration(): Any? = unwrap(this).getBedrockAgentConfiguration()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockagentintentconfiguration.html#cfn-lex-bot-bedrockagentintentconfiguration-bedrockagentintentknowledgebaseconfiguration)
+     */
+    public fun bedrockAgentIntentKnowledgeBaseConfiguration(): Any? =
+        unwrap(this).getBedrockAgentIntentKnowledgeBaseConfiguration()
+
+    /**
+     * A builder for [BedrockAgentIntentConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bedrockAgentConfiguration the value to be set.
+       */
+      public fun bedrockAgentConfiguration(bedrockAgentConfiguration: IResolvable)
+
+      /**
+       * @param bedrockAgentConfiguration the value to be set.
+       */
+      public
+          fun bedrockAgentConfiguration(bedrockAgentConfiguration: BedrockAgentConfigurationProperty)
+
+      /**
+       * @param bedrockAgentConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6d6d80368736ba3e1b7cc89b1d4ff3c021e3b2bb15eaa7180e1a1f7dd177ae2e")
+      public
+          fun bedrockAgentConfiguration(bedrockAgentConfiguration: BedrockAgentConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param bedrockAgentIntentKnowledgeBaseConfiguration the value to be set.
+       */
+      public
+          fun bedrockAgentIntentKnowledgeBaseConfiguration(bedrockAgentIntentKnowledgeBaseConfiguration: IResolvable)
+
+      /**
+       * @param bedrockAgentIntentKnowledgeBaseConfiguration the value to be set.
+       */
+      public
+          fun bedrockAgentIntentKnowledgeBaseConfiguration(bedrockAgentIntentKnowledgeBaseConfiguration: BedrockAgentIntentKnowledgeBaseConfigurationProperty)
+
+      /**
+       * @param bedrockAgentIntentKnowledgeBaseConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d868dab0e2ef54055039a38a681b3c1a2c14a741b59ee5b8d2ec972741cd77ba")
+      public
+          fun bedrockAgentIntentKnowledgeBaseConfiguration(bedrockAgentIntentKnowledgeBaseConfiguration: BedrockAgentIntentKnowledgeBaseConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.BedrockAgentIntentConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.lex.CfnBot.BedrockAgentIntentConfigurationProperty.builder()
+
+      /**
+       * @param bedrockAgentConfiguration the value to be set.
+       */
+      override fun bedrockAgentConfiguration(bedrockAgentConfiguration: IResolvable) {
+        cdkBuilder.bedrockAgentConfiguration(bedrockAgentConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockAgentConfiguration the value to be set.
+       */
+      override
+          fun bedrockAgentConfiguration(bedrockAgentConfiguration: BedrockAgentConfigurationProperty) {
+        cdkBuilder.bedrockAgentConfiguration(bedrockAgentConfiguration.let(BedrockAgentConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockAgentConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6d6d80368736ba3e1b7cc89b1d4ff3c021e3b2bb15eaa7180e1a1f7dd177ae2e")
+      override
+          fun bedrockAgentConfiguration(bedrockAgentConfiguration: BedrockAgentConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          bedrockAgentConfiguration(BedrockAgentConfigurationProperty(bedrockAgentConfiguration))
+
+      /**
+       * @param bedrockAgentIntentKnowledgeBaseConfiguration the value to be set.
+       */
+      override
+          fun bedrockAgentIntentKnowledgeBaseConfiguration(bedrockAgentIntentKnowledgeBaseConfiguration: IResolvable) {
+        cdkBuilder.bedrockAgentIntentKnowledgeBaseConfiguration(bedrockAgentIntentKnowledgeBaseConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockAgentIntentKnowledgeBaseConfiguration the value to be set.
+       */
+      override
+          fun bedrockAgentIntentKnowledgeBaseConfiguration(bedrockAgentIntentKnowledgeBaseConfiguration: BedrockAgentIntentKnowledgeBaseConfigurationProperty) {
+        cdkBuilder.bedrockAgentIntentKnowledgeBaseConfiguration(bedrockAgentIntentKnowledgeBaseConfiguration.let(BedrockAgentIntentKnowledgeBaseConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockAgentIntentKnowledgeBaseConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d868dab0e2ef54055039a38a681b3c1a2c14a741b59ee5b8d2ec972741cd77ba")
+      override
+          fun bedrockAgentIntentKnowledgeBaseConfiguration(bedrockAgentIntentKnowledgeBaseConfiguration: BedrockAgentIntentKnowledgeBaseConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          bedrockAgentIntentKnowledgeBaseConfiguration(BedrockAgentIntentKnowledgeBaseConfigurationProperty(bedrockAgentIntentKnowledgeBaseConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBot.BedrockAgentIntentConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.BedrockAgentIntentConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        BedrockAgentIntentConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockagentintentconfiguration.html#cfn-lex-bot-bedrockagentintentconfiguration-bedrockagentconfiguration)
+       */
+      override fun bedrockAgentConfiguration(): Any? = unwrap(this).getBedrockAgentConfiguration()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockagentintentconfiguration.html#cfn-lex-bot-bedrockagentintentconfiguration-bedrockagentintentknowledgebaseconfiguration)
+       */
+      override fun bedrockAgentIntentKnowledgeBaseConfiguration(): Any? =
+          unwrap(this).getBedrockAgentIntentKnowledgeBaseConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BedrockAgentIntentConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.BedrockAgentIntentConfigurationProperty):
+          BedrockAgentIntentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BedrockAgentIntentConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BedrockAgentIntentConfigurationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.BedrockAgentIntentConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.BedrockAgentIntentConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * BedrockAgentIntentKnowledgeBaseConfigurationProperty
+   * bedrockAgentIntentKnowledgeBaseConfigurationProperty =
+   * BedrockAgentIntentKnowledgeBaseConfigurationProperty.builder()
+   * .bedrockKnowledgeBaseArn("bedrockKnowledgeBaseArn")
+   * .bedrockModelConfiguration(BedrockModelSpecificationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .bedrockGuardrailConfiguration(BedrockGuardrailConfigurationProperty.builder()
+   * .bedrockGuardrailIdentifier("bedrockGuardrailIdentifier")
+   * .bedrockGuardrailVersion("bedrockGuardrailVersion")
+   * .build())
+   * .bedrockModelCustomPrompt("bedrockModelCustomPrompt")
+   * .bedrockTraceStatus("bedrockTraceStatus")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockagentintentknowledgebaseconfiguration.html)
+   */
+  public interface BedrockAgentIntentKnowledgeBaseConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockagentintentknowledgebaseconfiguration.html#cfn-lex-bot-bedrockagentintentknowledgebaseconfiguration-bedrockknowledgebasearn)
+     */
+    public fun bedrockKnowledgeBaseArn(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockagentintentknowledgebaseconfiguration.html#cfn-lex-bot-bedrockagentintentknowledgebaseconfiguration-bedrockmodelconfiguration)
+     */
+    public fun bedrockModelConfiguration(): Any
+
+    /**
+     * A builder for [BedrockAgentIntentKnowledgeBaseConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bedrockKnowledgeBaseArn the value to be set. 
+       */
+      public fun bedrockKnowledgeBaseArn(bedrockKnowledgeBaseArn: String)
+
+      /**
+       * @param bedrockModelConfiguration the value to be set. 
+       */
+      public fun bedrockModelConfiguration(bedrockModelConfiguration: IResolvable)
+
+      /**
+       * @param bedrockModelConfiguration the value to be set. 
+       */
+      public
+          fun bedrockModelConfiguration(bedrockModelConfiguration: BedrockModelSpecificationProperty)
+
+      /**
+       * @param bedrockModelConfiguration the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("77cb4e18e58b128089366977fd9167cb493b46eb7d4334d9d892b0f65cf4f1bf")
+      public
+          fun bedrockModelConfiguration(bedrockModelConfiguration: BedrockModelSpecificationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.BedrockAgentIntentKnowledgeBaseConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.lex.CfnBot.BedrockAgentIntentKnowledgeBaseConfigurationProperty.builder()
+
+      /**
+       * @param bedrockKnowledgeBaseArn the value to be set. 
+       */
+      override fun bedrockKnowledgeBaseArn(bedrockKnowledgeBaseArn: String) {
+        cdkBuilder.bedrockKnowledgeBaseArn(bedrockKnowledgeBaseArn)
+      }
+
+      /**
+       * @param bedrockModelConfiguration the value to be set. 
+       */
+      override fun bedrockModelConfiguration(bedrockModelConfiguration: IResolvable) {
+        cdkBuilder.bedrockModelConfiguration(bedrockModelConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockModelConfiguration the value to be set. 
+       */
+      override
+          fun bedrockModelConfiguration(bedrockModelConfiguration: BedrockModelSpecificationProperty) {
+        cdkBuilder.bedrockModelConfiguration(bedrockModelConfiguration.let(BedrockModelSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockModelConfiguration the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("77cb4e18e58b128089366977fd9167cb493b46eb7d4334d9d892b0f65cf4f1bf")
+      override
+          fun bedrockModelConfiguration(bedrockModelConfiguration: BedrockModelSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          bedrockModelConfiguration(BedrockModelSpecificationProperty(bedrockModelConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBot.BedrockAgentIntentKnowledgeBaseConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.BedrockAgentIntentKnowledgeBaseConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        BedrockAgentIntentKnowledgeBaseConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockagentintentknowledgebaseconfiguration.html#cfn-lex-bot-bedrockagentintentknowledgebaseconfiguration-bedrockknowledgebasearn)
+       */
+      override fun bedrockKnowledgeBaseArn(): String = unwrap(this).getBedrockKnowledgeBaseArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockagentintentknowledgebaseconfiguration.html#cfn-lex-bot-bedrockagentintentknowledgebaseconfiguration-bedrockmodelconfiguration)
+       */
+      override fun bedrockModelConfiguration(): Any = unwrap(this).getBedrockModelConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BedrockAgentIntentKnowledgeBaseConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.BedrockAgentIntentKnowledgeBaseConfigurationProperty):
+          BedrockAgentIntentKnowledgeBaseConfigurationProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? BedrockAgentIntentKnowledgeBaseConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BedrockAgentIntentKnowledgeBaseConfigurationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.BedrockAgentIntentKnowledgeBaseConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.BedrockAgentIntentKnowledgeBaseConfigurationProperty
+    }
+  }
+
+  /**
+   * The details on the Bedrock guardrail configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * BedrockGuardrailConfigurationProperty bedrockGuardrailConfigurationProperty =
+   * BedrockGuardrailConfigurationProperty.builder()
+   * .bedrockGuardrailIdentifier("bedrockGuardrailIdentifier")
+   * .bedrockGuardrailVersion("bedrockGuardrailVersion")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockguardrailconfiguration.html)
+   */
+  public interface BedrockGuardrailConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockguardrailconfiguration.html#cfn-lex-bot-bedrockguardrailconfiguration-bedrockguardrailidentifier)
+     */
+    public fun bedrockGuardrailIdentifier(): String? = unwrap(this).getBedrockGuardrailIdentifier()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockguardrailconfiguration.html#cfn-lex-bot-bedrockguardrailconfiguration-bedrockguardrailversion)
+     */
+    public fun bedrockGuardrailVersion(): String? = unwrap(this).getBedrockGuardrailVersion()
+
+    /**
+     * A builder for [BedrockGuardrailConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bedrockGuardrailIdentifier the value to be set.
+       */
+      public fun bedrockGuardrailIdentifier(bedrockGuardrailIdentifier: String)
+
+      /**
+       * @param bedrockGuardrailVersion the value to be set.
+       */
+      public fun bedrockGuardrailVersion(bedrockGuardrailVersion: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.BedrockGuardrailConfigurationProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.BedrockGuardrailConfigurationProperty.builder()
+
+      /**
+       * @param bedrockGuardrailIdentifier the value to be set.
+       */
+      override fun bedrockGuardrailIdentifier(bedrockGuardrailIdentifier: String) {
+        cdkBuilder.bedrockGuardrailIdentifier(bedrockGuardrailIdentifier)
+      }
+
+      /**
+       * @param bedrockGuardrailVersion the value to be set.
+       */
+      override fun bedrockGuardrailVersion(bedrockGuardrailVersion: String) {
+        cdkBuilder.bedrockGuardrailVersion(bedrockGuardrailVersion)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBot.BedrockGuardrailConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.BedrockGuardrailConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        BedrockGuardrailConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockguardrailconfiguration.html#cfn-lex-bot-bedrockguardrailconfiguration-bedrockguardrailidentifier)
+       */
+      override fun bedrockGuardrailIdentifier(): String? =
+          unwrap(this).getBedrockGuardrailIdentifier()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockguardrailconfiguration.html#cfn-lex-bot-bedrockguardrailconfiguration-bedrockguardrailversion)
+       */
+      override fun bedrockGuardrailVersion(): String? = unwrap(this).getBedrockGuardrailVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BedrockGuardrailConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.BedrockGuardrailConfigurationProperty):
+          BedrockGuardrailConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BedrockGuardrailConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BedrockGuardrailConfigurationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.BedrockGuardrailConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.BedrockGuardrailConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains details about the configuration of a Amazon Bedrock knowledge base.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * BedrockKnowledgeStoreConfigurationProperty bedrockKnowledgeStoreConfigurationProperty =
+   * BedrockKnowledgeStoreConfigurationProperty.builder()
+   * .bedrockKnowledgeBaseArn("bedrockKnowledgeBaseArn")
+   * .bkbExactResponseFields(BKBExactResponseFieldsProperty.builder()
+   * .answerField("answerField")
+   * .build())
+   * .exactResponse(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockknowledgestoreconfiguration.html)
+   */
+  public interface BedrockKnowledgeStoreConfigurationProperty {
+    /**
+     * The base ARN of the knowledge base used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockknowledgestoreconfiguration.html#cfn-lex-bot-bedrockknowledgestoreconfiguration-bedrockknowledgebasearn)
+     */
+    public fun bedrockKnowledgeBaseArn(): String? = unwrap(this).getBedrockKnowledgeBaseArn()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockknowledgestoreconfiguration.html#cfn-lex-bot-bedrockknowledgestoreconfiguration-bkbexactresponsefields)
+     */
+    public fun bkbExactResponseFields(): Any? = unwrap(this).getBkbExactResponseFields()
+
+    /**
+     * Specifies whether to return an exact response, or to return an answer generated by the model,
+     * using the fields you specify from the database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockknowledgestoreconfiguration.html#cfn-lex-bot-bedrockknowledgestoreconfiguration-exactresponse)
+     */
+    public fun exactResponse(): Any? = unwrap(this).getExactResponse()
+
+    /**
+     * A builder for [BedrockKnowledgeStoreConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bedrockKnowledgeBaseArn The base ARN of the knowledge base used.
+       */
+      public fun bedrockKnowledgeBaseArn(bedrockKnowledgeBaseArn: String)
+
+      /**
+       * @param bkbExactResponseFields the value to be set.
+       */
+      public fun bkbExactResponseFields(bkbExactResponseFields: IResolvable)
+
+      /**
+       * @param bkbExactResponseFields the value to be set.
+       */
+      public fun bkbExactResponseFields(bkbExactResponseFields: BKBExactResponseFieldsProperty)
+
+      /**
+       * @param bkbExactResponseFields the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("327298248fcedda2bdd6dafe302d8b9dd865843834517ceb1896cf60d7f9c062")
+      public
+          fun bkbExactResponseFields(bkbExactResponseFields: BKBExactResponseFieldsProperty.Builder.() -> Unit)
+
+      /**
+       * @param exactResponse Specifies whether to return an exact response, or to return an answer
+       * generated by the model, using the fields you specify from the database.
+       */
+      public fun exactResponse(exactResponse: Boolean)
+
+      /**
+       * @param exactResponse Specifies whether to return an exact response, or to return an answer
+       * generated by the model, using the fields you specify from the database.
+       */
+      public fun exactResponse(exactResponse: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.BedrockKnowledgeStoreConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.lex.CfnBot.BedrockKnowledgeStoreConfigurationProperty.builder()
+
+      /**
+       * @param bedrockKnowledgeBaseArn The base ARN of the knowledge base used.
+       */
+      override fun bedrockKnowledgeBaseArn(bedrockKnowledgeBaseArn: String) {
+        cdkBuilder.bedrockKnowledgeBaseArn(bedrockKnowledgeBaseArn)
+      }
+
+      /**
+       * @param bkbExactResponseFields the value to be set.
+       */
+      override fun bkbExactResponseFields(bkbExactResponseFields: IResolvable) {
+        cdkBuilder.bkbExactResponseFields(bkbExactResponseFields.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bkbExactResponseFields the value to be set.
+       */
+      override fun bkbExactResponseFields(bkbExactResponseFields: BKBExactResponseFieldsProperty) {
+        cdkBuilder.bkbExactResponseFields(bkbExactResponseFields.let(BKBExactResponseFieldsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bkbExactResponseFields the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("327298248fcedda2bdd6dafe302d8b9dd865843834517ceb1896cf60d7f9c062")
+      override
+          fun bkbExactResponseFields(bkbExactResponseFields: BKBExactResponseFieldsProperty.Builder.() -> Unit):
+          Unit = bkbExactResponseFields(BKBExactResponseFieldsProperty(bkbExactResponseFields))
+
+      /**
+       * @param exactResponse Specifies whether to return an exact response, or to return an answer
+       * generated by the model, using the fields you specify from the database.
+       */
+      override fun exactResponse(exactResponse: Boolean) {
+        cdkBuilder.exactResponse(exactResponse)
+      }
+
+      /**
+       * @param exactResponse Specifies whether to return an exact response, or to return an answer
+       * generated by the model, using the fields you specify from the database.
+       */
+      override fun exactResponse(exactResponse: IResolvable) {
+        cdkBuilder.exactResponse(exactResponse.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBot.BedrockKnowledgeStoreConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.BedrockKnowledgeStoreConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        BedrockKnowledgeStoreConfigurationProperty {
+      /**
+       * The base ARN of the knowledge base used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockknowledgestoreconfiguration.html#cfn-lex-bot-bedrockknowledgestoreconfiguration-bedrockknowledgebasearn)
+       */
+      override fun bedrockKnowledgeBaseArn(): String? = unwrap(this).getBedrockKnowledgeBaseArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockknowledgestoreconfiguration.html#cfn-lex-bot-bedrockknowledgestoreconfiguration-bkbexactresponsefields)
+       */
+      override fun bkbExactResponseFields(): Any? = unwrap(this).getBkbExactResponseFields()
+
+      /**
+       * Specifies whether to return an exact response, or to return an answer generated by the
+       * model, using the fields you specify from the database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockknowledgestoreconfiguration.html#cfn-lex-bot-bedrockknowledgestoreconfiguration-exactresponse)
+       */
+      override fun exactResponse(): Any? = unwrap(this).getExactResponse()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BedrockKnowledgeStoreConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.BedrockKnowledgeStoreConfigurationProperty):
+          BedrockKnowledgeStoreConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BedrockKnowledgeStoreConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BedrockKnowledgeStoreConfigurationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.BedrockKnowledgeStoreConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.BedrockKnowledgeStoreConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains information about the Amazon Bedrock model used to interpret the prompt used in
+   * descriptive bot building.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * BedrockModelSpecificationProperty bedrockModelSpecificationProperty =
+   * BedrockModelSpecificationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .bedrockGuardrailConfiguration(BedrockGuardrailConfigurationProperty.builder()
+   * .bedrockGuardrailIdentifier("bedrockGuardrailIdentifier")
+   * .bedrockGuardrailVersion("bedrockGuardrailVersion")
+   * .build())
+   * .bedrockModelCustomPrompt("bedrockModelCustomPrompt")
+   * .bedrockTraceStatus("bedrockTraceStatus")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockmodelspecification.html)
+   */
+  public interface BedrockModelSpecificationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockmodelspecification.html#cfn-lex-bot-bedrockmodelspecification-bedrockguardrailconfiguration)
+     */
+    public fun bedrockGuardrailConfiguration(): Any? =
+        unwrap(this).getBedrockGuardrailConfiguration()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockmodelspecification.html#cfn-lex-bot-bedrockmodelspecification-bedrockmodelcustomprompt)
+     */
+    public fun bedrockModelCustomPrompt(): String? = unwrap(this).getBedrockModelCustomPrompt()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockmodelspecification.html#cfn-lex-bot-bedrockmodelspecification-bedrocktracestatus)
+     */
+    public fun bedrockTraceStatus(): String? = unwrap(this).getBedrockTraceStatus()
+
+    /**
+     * The ARN of the foundation model used in descriptive bot building.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockmodelspecification.html#cfn-lex-bot-bedrockmodelspecification-modelarn)
+     */
+    public fun modelArn(): String
+
+    /**
+     * A builder for [BedrockModelSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bedrockGuardrailConfiguration the value to be set.
+       */
+      public fun bedrockGuardrailConfiguration(bedrockGuardrailConfiguration: IResolvable)
+
+      /**
+       * @param bedrockGuardrailConfiguration the value to be set.
+       */
+      public
+          fun bedrockGuardrailConfiguration(bedrockGuardrailConfiguration: BedrockGuardrailConfigurationProperty)
+
+      /**
+       * @param bedrockGuardrailConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ee3a2ad3d3e57dd23f19b1e9d6dfd6e744899a10cc49c8e0aa2b98765a5682d8")
+      public
+          fun bedrockGuardrailConfiguration(bedrockGuardrailConfiguration: BedrockGuardrailConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param bedrockModelCustomPrompt the value to be set.
+       */
+      public fun bedrockModelCustomPrompt(bedrockModelCustomPrompt: String)
+
+      /**
+       * @param bedrockTraceStatus the value to be set.
+       */
+      public fun bedrockTraceStatus(bedrockTraceStatus: String)
+
+      /**
+       * @param modelArn The ARN of the foundation model used in descriptive bot building. 
+       */
+      public fun modelArn(modelArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.BedrockModelSpecificationProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.BedrockModelSpecificationProperty.builder()
+
+      /**
+       * @param bedrockGuardrailConfiguration the value to be set.
+       */
+      override fun bedrockGuardrailConfiguration(bedrockGuardrailConfiguration: IResolvable) {
+        cdkBuilder.bedrockGuardrailConfiguration(bedrockGuardrailConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockGuardrailConfiguration the value to be set.
+       */
+      override
+          fun bedrockGuardrailConfiguration(bedrockGuardrailConfiguration: BedrockGuardrailConfigurationProperty) {
+        cdkBuilder.bedrockGuardrailConfiguration(bedrockGuardrailConfiguration.let(BedrockGuardrailConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockGuardrailConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ee3a2ad3d3e57dd23f19b1e9d6dfd6e744899a10cc49c8e0aa2b98765a5682d8")
+      override
+          fun bedrockGuardrailConfiguration(bedrockGuardrailConfiguration: BedrockGuardrailConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          bedrockGuardrailConfiguration(BedrockGuardrailConfigurationProperty(bedrockGuardrailConfiguration))
+
+      /**
+       * @param bedrockModelCustomPrompt the value to be set.
+       */
+      override fun bedrockModelCustomPrompt(bedrockModelCustomPrompt: String) {
+        cdkBuilder.bedrockModelCustomPrompt(bedrockModelCustomPrompt)
+      }
+
+      /**
+       * @param bedrockTraceStatus the value to be set.
+       */
+      override fun bedrockTraceStatus(bedrockTraceStatus: String) {
+        cdkBuilder.bedrockTraceStatus(bedrockTraceStatus)
+      }
+
+      /**
+       * @param modelArn The ARN of the foundation model used in descriptive bot building. 
+       */
+      override fun modelArn(modelArn: String) {
+        cdkBuilder.modelArn(modelArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBot.BedrockModelSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.BedrockModelSpecificationProperty,
+    ) : CdkObject(cdkObject),
+        BedrockModelSpecificationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockmodelspecification.html#cfn-lex-bot-bedrockmodelspecification-bedrockguardrailconfiguration)
+       */
+      override fun bedrockGuardrailConfiguration(): Any? =
+          unwrap(this).getBedrockGuardrailConfiguration()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockmodelspecification.html#cfn-lex-bot-bedrockmodelspecification-bedrockmodelcustomprompt)
+       */
+      override fun bedrockModelCustomPrompt(): String? = unwrap(this).getBedrockModelCustomPrompt()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockmodelspecification.html#cfn-lex-bot-bedrockmodelspecification-bedrocktracestatus)
+       */
+      override fun bedrockTraceStatus(): String? = unwrap(this).getBedrockTraceStatus()
+
+      /**
+       * The ARN of the foundation model used in descriptive bot building.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-bedrockmodelspecification.html#cfn-lex-bot-bedrockmodelspecification-modelarn)
+       */
+      override fun modelArn(): String = unwrap(this).getModelArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BedrockModelSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.BedrockModelSpecificationProperty):
+          BedrockModelSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BedrockModelSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BedrockModelSpecificationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.BedrockModelSpecificationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.BedrockModelSpecificationProperty
+    }
+  }
+
+  /**
    * Specifies locale settings for a single locale.
    *
    * Example:
@@ -2007,6 +3065,11 @@ public open class CfnBot(
     public fun description(): String? = unwrap(this).getDescription()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-botlocale.html#cfn-lex-bot-botlocale-generativeaisettings)
+     */
+    public fun generativeAiSettings(): Any? = unwrap(this).getGenerativeAiSettings()
+
+    /**
      * One or more intents defined for the locale.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-botlocale.html#cfn-lex-bot-botlocale-intents)
@@ -2080,6 +3143,24 @@ public open class CfnBot(
        * Use this to help identify the bot locale in lists.
        */
       public fun description(description: String)
+
+      /**
+       * @param generativeAiSettings the value to be set.
+       */
+      public fun generativeAiSettings(generativeAiSettings: IResolvable)
+
+      /**
+       * @param generativeAiSettings the value to be set.
+       */
+      public fun generativeAiSettings(generativeAiSettings: GenerativeAISettingsProperty)
+
+      /**
+       * @param generativeAiSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("72613d76a3351cf508b54f08849ab58fbe91dbce7e68f8560b9227f88f3cdccf")
+      public
+          fun generativeAiSettings(generativeAiSettings: GenerativeAISettingsProperty.Builder.() -> Unit)
 
       /**
        * @param intents One or more intents defined for the locale.
@@ -2197,6 +3278,29 @@ public open class CfnBot(
       override fun description(description: String) {
         cdkBuilder.description(description)
       }
+
+      /**
+       * @param generativeAiSettings the value to be set.
+       */
+      override fun generativeAiSettings(generativeAiSettings: IResolvable) {
+        cdkBuilder.generativeAiSettings(generativeAiSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param generativeAiSettings the value to be set.
+       */
+      override fun generativeAiSettings(generativeAiSettings: GenerativeAISettingsProperty) {
+        cdkBuilder.generativeAiSettings(generativeAiSettings.let(GenerativeAISettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param generativeAiSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("72613d76a3351cf508b54f08849ab58fbe91dbce7e68f8560b9227f88f3cdccf")
+      override
+          fun generativeAiSettings(generativeAiSettings: GenerativeAISettingsProperty.Builder.() -> Unit):
+          Unit = generativeAiSettings(GenerativeAISettingsProperty(generativeAiSettings))
 
       /**
        * @param intents One or more intents defined for the locale.
@@ -2322,6 +3426,11 @@ public open class CfnBot(
       override fun description(): String? = unwrap(this).getDescription()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-botlocale.html#cfn-lex-bot-botlocale-generativeaisettings)
+       */
+      override fun generativeAiSettings(): Any? = unwrap(this).getGenerativeAiSettings()
+
+      /**
        * One or more intents defined for the locale.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-botlocale.html#cfn-lex-bot-botlocale-intents)
@@ -2382,6 +3491,204 @@ public open class CfnBot(
       internal fun unwrap(wrapped: BotLocaleProperty):
           software.amazon.awscdk.services.lex.CfnBot.BotLocaleProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.lex.CfnBot.BotLocaleProperty
+    }
+  }
+
+  /**
+   * Contains specifications about the Amazon Lex build time generative AI capabilities from Amazon
+   * Bedrock that you can turn on for your bot.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * BuildtimeSettingsProperty buildtimeSettingsProperty = BuildtimeSettingsProperty.builder()
+   * .descriptiveBotBuilderSpecification(DescriptiveBotBuilderSpecificationProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .bedrockModelSpecification(BedrockModelSpecificationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .bedrockGuardrailConfiguration(BedrockGuardrailConfigurationProperty.builder()
+   * .bedrockGuardrailIdentifier("bedrockGuardrailIdentifier")
+   * .bedrockGuardrailVersion("bedrockGuardrailVersion")
+   * .build())
+   * .bedrockModelCustomPrompt("bedrockModelCustomPrompt")
+   * .bedrockTraceStatus("bedrockTraceStatus")
+   * .build())
+   * .build())
+   * .sampleUtteranceGenerationSpecification(SampleUtteranceGenerationSpecificationProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .bedrockModelSpecification(BedrockModelSpecificationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .bedrockGuardrailConfiguration(BedrockGuardrailConfigurationProperty.builder()
+   * .bedrockGuardrailIdentifier("bedrockGuardrailIdentifier")
+   * .bedrockGuardrailVersion("bedrockGuardrailVersion")
+   * .build())
+   * .bedrockModelCustomPrompt("bedrockModelCustomPrompt")
+   * .bedrockTraceStatus("bedrockTraceStatus")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-buildtimesettings.html)
+   */
+  public interface BuildtimeSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-buildtimesettings.html#cfn-lex-bot-buildtimesettings-descriptivebotbuilderspecification)
+     */
+    public fun descriptiveBotBuilderSpecification(): Any? =
+        unwrap(this).getDescriptiveBotBuilderSpecification()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-buildtimesettings.html#cfn-lex-bot-buildtimesettings-sampleutterancegenerationspecification)
+     */
+    public fun sampleUtteranceGenerationSpecification(): Any? =
+        unwrap(this).getSampleUtteranceGenerationSpecification()
+
+    /**
+     * A builder for [BuildtimeSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param descriptiveBotBuilderSpecification the value to be set.
+       */
+      public fun descriptiveBotBuilderSpecification(descriptiveBotBuilderSpecification: IResolvable)
+
+      /**
+       * @param descriptiveBotBuilderSpecification the value to be set.
+       */
+      public
+          fun descriptiveBotBuilderSpecification(descriptiveBotBuilderSpecification: DescriptiveBotBuilderSpecificationProperty)
+
+      /**
+       * @param descriptiveBotBuilderSpecification the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("14814f39337dfae88a440f74b0ce6c608900ae029524ab8d9411d64b32d84d91")
+      public
+          fun descriptiveBotBuilderSpecification(descriptiveBotBuilderSpecification: DescriptiveBotBuilderSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param sampleUtteranceGenerationSpecification the value to be set.
+       */
+      public
+          fun sampleUtteranceGenerationSpecification(sampleUtteranceGenerationSpecification: IResolvable)
+
+      /**
+       * @param sampleUtteranceGenerationSpecification the value to be set.
+       */
+      public
+          fun sampleUtteranceGenerationSpecification(sampleUtteranceGenerationSpecification: SampleUtteranceGenerationSpecificationProperty)
+
+      /**
+       * @param sampleUtteranceGenerationSpecification the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2e546990990f27b68260e4e8448d89f3ccdd0d748dfb8eb4584efc61dd0731f5")
+      public
+          fun sampleUtteranceGenerationSpecification(sampleUtteranceGenerationSpecification: SampleUtteranceGenerationSpecificationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.BuildtimeSettingsProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.BuildtimeSettingsProperty.builder()
+
+      /**
+       * @param descriptiveBotBuilderSpecification the value to be set.
+       */
+      override
+          fun descriptiveBotBuilderSpecification(descriptiveBotBuilderSpecification: IResolvable) {
+        cdkBuilder.descriptiveBotBuilderSpecification(descriptiveBotBuilderSpecification.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param descriptiveBotBuilderSpecification the value to be set.
+       */
+      override
+          fun descriptiveBotBuilderSpecification(descriptiveBotBuilderSpecification: DescriptiveBotBuilderSpecificationProperty) {
+        cdkBuilder.descriptiveBotBuilderSpecification(descriptiveBotBuilderSpecification.let(DescriptiveBotBuilderSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param descriptiveBotBuilderSpecification the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("14814f39337dfae88a440f74b0ce6c608900ae029524ab8d9411d64b32d84d91")
+      override
+          fun descriptiveBotBuilderSpecification(descriptiveBotBuilderSpecification: DescriptiveBotBuilderSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          descriptiveBotBuilderSpecification(DescriptiveBotBuilderSpecificationProperty(descriptiveBotBuilderSpecification))
+
+      /**
+       * @param sampleUtteranceGenerationSpecification the value to be set.
+       */
+      override
+          fun sampleUtteranceGenerationSpecification(sampleUtteranceGenerationSpecification: IResolvable) {
+        cdkBuilder.sampleUtteranceGenerationSpecification(sampleUtteranceGenerationSpecification.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param sampleUtteranceGenerationSpecification the value to be set.
+       */
+      override
+          fun sampleUtteranceGenerationSpecification(sampleUtteranceGenerationSpecification: SampleUtteranceGenerationSpecificationProperty) {
+        cdkBuilder.sampleUtteranceGenerationSpecification(sampleUtteranceGenerationSpecification.let(SampleUtteranceGenerationSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param sampleUtteranceGenerationSpecification the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2e546990990f27b68260e4e8448d89f3ccdd0d748dfb8eb4584efc61dd0731f5")
+      override
+          fun sampleUtteranceGenerationSpecification(sampleUtteranceGenerationSpecification: SampleUtteranceGenerationSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          sampleUtteranceGenerationSpecification(SampleUtteranceGenerationSpecificationProperty(sampleUtteranceGenerationSpecification))
+
+      public fun build(): software.amazon.awscdk.services.lex.CfnBot.BuildtimeSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.BuildtimeSettingsProperty,
+    ) : CdkObject(cdkObject),
+        BuildtimeSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-buildtimesettings.html#cfn-lex-bot-buildtimesettings-descriptivebotbuilderspecification)
+       */
+      override fun descriptiveBotBuilderSpecification(): Any? =
+          unwrap(this).getDescriptiveBotBuilderSpecification()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-buildtimesettings.html#cfn-lex-bot-buildtimesettings-sampleutterancegenerationspecification)
+       */
+      override fun sampleUtteranceGenerationSpecification(): Any? =
+          unwrap(this).getSampleUtteranceGenerationSpecification()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BuildtimeSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.BuildtimeSettingsProperty):
+          BuildtimeSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BuildtimeSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BuildtimeSettingsProperty):
+          software.amazon.awscdk.services.lex.CfnBot.BuildtimeSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.BuildtimeSettingsProperty
     }
   }
 
@@ -2737,6 +4044,115 @@ public open class CfnBot(
           software.amazon.awscdk.services.lex.CfnBot.CodeHookSpecificationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.lex.CfnBot.CodeHookSpecificationProperty
+    }
+  }
+
+  /**
+   * A composite slot is a combination of two or more slots that capture multiple pieces of
+   * information in a single user input.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * CompositeSlotTypeSettingProperty compositeSlotTypeSettingProperty =
+   * CompositeSlotTypeSettingProperty.builder()
+   * .subSlots(List.of(SubSlotTypeCompositionProperty.builder()
+   * .name("name")
+   * .slotTypeId("slotTypeId")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-compositeslottypesetting.html)
+   */
+  public interface CompositeSlotTypeSettingProperty {
+    /**
+     * Subslots in the composite slot.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-compositeslottypesetting.html#cfn-lex-bot-compositeslottypesetting-subslots)
+     */
+    public fun subSlots(): Any? = unwrap(this).getSubSlots()
+
+    /**
+     * A builder for [CompositeSlotTypeSettingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param subSlots Subslots in the composite slot.
+       */
+      public fun subSlots(subSlots: IResolvable)
+
+      /**
+       * @param subSlots Subslots in the composite slot.
+       */
+      public fun subSlots(subSlots: List<Any>)
+
+      /**
+       * @param subSlots Subslots in the composite slot.
+       */
+      public fun subSlots(vararg subSlots: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.CompositeSlotTypeSettingProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.CompositeSlotTypeSettingProperty.builder()
+
+      /**
+       * @param subSlots Subslots in the composite slot.
+       */
+      override fun subSlots(subSlots: IResolvable) {
+        cdkBuilder.subSlots(subSlots.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param subSlots Subslots in the composite slot.
+       */
+      override fun subSlots(subSlots: List<Any>) {
+        cdkBuilder.subSlots(subSlots.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param subSlots Subslots in the composite slot.
+       */
+      override fun subSlots(vararg subSlots: Any): Unit = subSlots(subSlots.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBot.CompositeSlotTypeSettingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.CompositeSlotTypeSettingProperty,
+    ) : CdkObject(cdkObject),
+        CompositeSlotTypeSettingProperty {
+      /**
+       * Subslots in the composite slot.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-compositeslottypesetting.html#cfn-lex-bot-compositeslottypesetting-subslots)
+       */
+      override fun subSlots(): Any? = unwrap(this).getSubSlots()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CompositeSlotTypeSettingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.CompositeSlotTypeSettingProperty):
+          CompositeSlotTypeSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CompositeSlotTypeSettingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CompositeSlotTypeSettingProperty):
+          software.amazon.awscdk.services.lex.CfnBot.CompositeSlotTypeSettingProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.CompositeSlotTypeSettingProperty
     }
   }
 
@@ -4458,6 +5874,328 @@ public open class CfnBot(
   }
 
   /**
+   * Contains details about the configuration of the knowledge store used for the `AMAZON.QnAIntent`
+   * . You must have already created the knowledge store and indexed the documents within it.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * DataSourceConfigurationProperty dataSourceConfigurationProperty =
+   * DataSourceConfigurationProperty.builder()
+   * .bedrockKnowledgeStoreConfiguration(BedrockKnowledgeStoreConfigurationProperty.builder()
+   * .bedrockKnowledgeBaseArn("bedrockKnowledgeBaseArn")
+   * .bkbExactResponseFields(BKBExactResponseFieldsProperty.builder()
+   * .answerField("answerField")
+   * .build())
+   * .exactResponse(false)
+   * .build())
+   * .kendraConfiguration(QnAKendraConfigurationProperty.builder()
+   * .exactResponse(false)
+   * .kendraIndex("kendraIndex")
+   * .queryFilterStringEnabled(false)
+   * // the properties below are optional
+   * .queryFilterString("queryFilterString")
+   * .build())
+   * .opensearchConfiguration(OpensearchConfigurationProperty.builder()
+   * .domainEndpoint("domainEndpoint")
+   * .exactResponse(false)
+   * .exactResponseFields(ExactResponseFieldsProperty.builder()
+   * .answerField("answerField")
+   * .questionField("questionField")
+   * .build())
+   * .includeFields(List.of("includeFields"))
+   * .indexName("indexName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-datasourceconfiguration.html)
+   */
+  public interface DataSourceConfigurationProperty {
+    /**
+     * Contains details about the configuration of the Amazon Bedrock knowledge base used for the
+     * `AMAZON.QnAIntent` . To set up a knowledge base, follow the steps at [Building a knowledge
+     * base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-datasourceconfiguration.html#cfn-lex-bot-datasourceconfiguration-bedrockknowledgestoreconfiguration)
+     */
+    public fun bedrockKnowledgeStoreConfiguration(): Any? =
+        unwrap(this).getBedrockKnowledgeStoreConfiguration()
+
+    /**
+     * Contains details about the configuration of the Amazon Kendra index used for the
+     * `AMAZON.QnAIntent` . To create a Amazon Kendra index, follow the steps at [Creating an
+     * index](https://docs.aws.amazon.com/kendra/latest/dg/create-index.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-datasourceconfiguration.html#cfn-lex-bot-datasourceconfiguration-kendraconfiguration)
+     */
+    public fun kendraConfiguration(): Any? = unwrap(this).getKendraConfiguration()
+
+    /**
+     * Contains details about the configuration of the Amazon OpenSearch Service database used for
+     * the `AMAZON.QnAIntent` . To create a domain, follow the steps at [Creating and managing Amazon
+     * OpenSearch Service
+     * domains](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-datasourceconfiguration.html#cfn-lex-bot-datasourceconfiguration-opensearchconfiguration)
+     */
+    public fun opensearchConfiguration(): Any? = unwrap(this).getOpensearchConfiguration()
+
+    /**
+     * A builder for [DataSourceConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bedrockKnowledgeStoreConfiguration Contains details about the configuration of the
+       * Amazon Bedrock knowledge base used for the `AMAZON.QnAIntent` . To set up a knowledge base,
+       * follow the steps at [Building a knowledge
+       * base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html) .
+       */
+      public fun bedrockKnowledgeStoreConfiguration(bedrockKnowledgeStoreConfiguration: IResolvable)
+
+      /**
+       * @param bedrockKnowledgeStoreConfiguration Contains details about the configuration of the
+       * Amazon Bedrock knowledge base used for the `AMAZON.QnAIntent` . To set up a knowledge base,
+       * follow the steps at [Building a knowledge
+       * base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html) .
+       */
+      public
+          fun bedrockKnowledgeStoreConfiguration(bedrockKnowledgeStoreConfiguration: BedrockKnowledgeStoreConfigurationProperty)
+
+      /**
+       * @param bedrockKnowledgeStoreConfiguration Contains details about the configuration of the
+       * Amazon Bedrock knowledge base used for the `AMAZON.QnAIntent` . To set up a knowledge base,
+       * follow the steps at [Building a knowledge
+       * base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("946ff57ea770984bfc2031f57e444c910afa603d759159a0e38bc575b4149cbf")
+      public
+          fun bedrockKnowledgeStoreConfiguration(bedrockKnowledgeStoreConfiguration: BedrockKnowledgeStoreConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param kendraConfiguration Contains details about the configuration of the Amazon Kendra
+       * index used for the `AMAZON.QnAIntent` . To create a Amazon Kendra index, follow the steps at
+       * [Creating an index](https://docs.aws.amazon.com/kendra/latest/dg/create-index.html) .
+       */
+      public fun kendraConfiguration(kendraConfiguration: IResolvable)
+
+      /**
+       * @param kendraConfiguration Contains details about the configuration of the Amazon Kendra
+       * index used for the `AMAZON.QnAIntent` . To create a Amazon Kendra index, follow the steps at
+       * [Creating an index](https://docs.aws.amazon.com/kendra/latest/dg/create-index.html) .
+       */
+      public fun kendraConfiguration(kendraConfiguration: QnAKendraConfigurationProperty)
+
+      /**
+       * @param kendraConfiguration Contains details about the configuration of the Amazon Kendra
+       * index used for the `AMAZON.QnAIntent` . To create a Amazon Kendra index, follow the steps at
+       * [Creating an index](https://docs.aws.amazon.com/kendra/latest/dg/create-index.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6a36668f35915e64bdae061bc549dd8640298e0109ff511c1f1e8b0e768eba7a")
+      public
+          fun kendraConfiguration(kendraConfiguration: QnAKendraConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param opensearchConfiguration Contains details about the configuration of the Amazon
+       * OpenSearch Service database used for the `AMAZON.QnAIntent` . To create a domain, follow the
+       * steps at [Creating and managing Amazon OpenSearch Service
+       * domains](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html)
+       * .
+       */
+      public fun opensearchConfiguration(opensearchConfiguration: IResolvable)
+
+      /**
+       * @param opensearchConfiguration Contains details about the configuration of the Amazon
+       * OpenSearch Service database used for the `AMAZON.QnAIntent` . To create a domain, follow the
+       * steps at [Creating and managing Amazon OpenSearch Service
+       * domains](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html)
+       * .
+       */
+      public fun opensearchConfiguration(opensearchConfiguration: OpensearchConfigurationProperty)
+
+      /**
+       * @param opensearchConfiguration Contains details about the configuration of the Amazon
+       * OpenSearch Service database used for the `AMAZON.QnAIntent` . To create a domain, follow the
+       * steps at [Creating and managing Amazon OpenSearch Service
+       * domains](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9b45c68a3ef4d41504b747f9acf095601f5bb3ef03794d2608b0dbf2e79c7f0e")
+      public
+          fun opensearchConfiguration(opensearchConfiguration: OpensearchConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.DataSourceConfigurationProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.DataSourceConfigurationProperty.builder()
+
+      /**
+       * @param bedrockKnowledgeStoreConfiguration Contains details about the configuration of the
+       * Amazon Bedrock knowledge base used for the `AMAZON.QnAIntent` . To set up a knowledge base,
+       * follow the steps at [Building a knowledge
+       * base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html) .
+       */
+      override
+          fun bedrockKnowledgeStoreConfiguration(bedrockKnowledgeStoreConfiguration: IResolvable) {
+        cdkBuilder.bedrockKnowledgeStoreConfiguration(bedrockKnowledgeStoreConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockKnowledgeStoreConfiguration Contains details about the configuration of the
+       * Amazon Bedrock knowledge base used for the `AMAZON.QnAIntent` . To set up a knowledge base,
+       * follow the steps at [Building a knowledge
+       * base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html) .
+       */
+      override
+          fun bedrockKnowledgeStoreConfiguration(bedrockKnowledgeStoreConfiguration: BedrockKnowledgeStoreConfigurationProperty) {
+        cdkBuilder.bedrockKnowledgeStoreConfiguration(bedrockKnowledgeStoreConfiguration.let(BedrockKnowledgeStoreConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockKnowledgeStoreConfiguration Contains details about the configuration of the
+       * Amazon Bedrock knowledge base used for the `AMAZON.QnAIntent` . To set up a knowledge base,
+       * follow the steps at [Building a knowledge
+       * base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("946ff57ea770984bfc2031f57e444c910afa603d759159a0e38bc575b4149cbf")
+      override
+          fun bedrockKnowledgeStoreConfiguration(bedrockKnowledgeStoreConfiguration: BedrockKnowledgeStoreConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          bedrockKnowledgeStoreConfiguration(BedrockKnowledgeStoreConfigurationProperty(bedrockKnowledgeStoreConfiguration))
+
+      /**
+       * @param kendraConfiguration Contains details about the configuration of the Amazon Kendra
+       * index used for the `AMAZON.QnAIntent` . To create a Amazon Kendra index, follow the steps at
+       * [Creating an index](https://docs.aws.amazon.com/kendra/latest/dg/create-index.html) .
+       */
+      override fun kendraConfiguration(kendraConfiguration: IResolvable) {
+        cdkBuilder.kendraConfiguration(kendraConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param kendraConfiguration Contains details about the configuration of the Amazon Kendra
+       * index used for the `AMAZON.QnAIntent` . To create a Amazon Kendra index, follow the steps at
+       * [Creating an index](https://docs.aws.amazon.com/kendra/latest/dg/create-index.html) .
+       */
+      override fun kendraConfiguration(kendraConfiguration: QnAKendraConfigurationProperty) {
+        cdkBuilder.kendraConfiguration(kendraConfiguration.let(QnAKendraConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param kendraConfiguration Contains details about the configuration of the Amazon Kendra
+       * index used for the `AMAZON.QnAIntent` . To create a Amazon Kendra index, follow the steps at
+       * [Creating an index](https://docs.aws.amazon.com/kendra/latest/dg/create-index.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6a36668f35915e64bdae061bc549dd8640298e0109ff511c1f1e8b0e768eba7a")
+      override
+          fun kendraConfiguration(kendraConfiguration: QnAKendraConfigurationProperty.Builder.() -> Unit):
+          Unit = kendraConfiguration(QnAKendraConfigurationProperty(kendraConfiguration))
+
+      /**
+       * @param opensearchConfiguration Contains details about the configuration of the Amazon
+       * OpenSearch Service database used for the `AMAZON.QnAIntent` . To create a domain, follow the
+       * steps at [Creating and managing Amazon OpenSearch Service
+       * domains](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html)
+       * .
+       */
+      override fun opensearchConfiguration(opensearchConfiguration: IResolvable) {
+        cdkBuilder.opensearchConfiguration(opensearchConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param opensearchConfiguration Contains details about the configuration of the Amazon
+       * OpenSearch Service database used for the `AMAZON.QnAIntent` . To create a domain, follow the
+       * steps at [Creating and managing Amazon OpenSearch Service
+       * domains](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html)
+       * .
+       */
+      override
+          fun opensearchConfiguration(opensearchConfiguration: OpensearchConfigurationProperty) {
+        cdkBuilder.opensearchConfiguration(opensearchConfiguration.let(OpensearchConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param opensearchConfiguration Contains details about the configuration of the Amazon
+       * OpenSearch Service database used for the `AMAZON.QnAIntent` . To create a domain, follow the
+       * steps at [Creating and managing Amazon OpenSearch Service
+       * domains](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9b45c68a3ef4d41504b747f9acf095601f5bb3ef03794d2608b0dbf2e79c7f0e")
+      override
+          fun opensearchConfiguration(opensearchConfiguration: OpensearchConfigurationProperty.Builder.() -> Unit):
+          Unit = opensearchConfiguration(OpensearchConfigurationProperty(opensearchConfiguration))
+
+      public fun build(): software.amazon.awscdk.services.lex.CfnBot.DataSourceConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.DataSourceConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        DataSourceConfigurationProperty {
+      /**
+       * Contains details about the configuration of the Amazon Bedrock knowledge base used for the
+       * `AMAZON.QnAIntent` . To set up a knowledge base, follow the steps at [Building a knowledge
+       * base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-datasourceconfiguration.html#cfn-lex-bot-datasourceconfiguration-bedrockknowledgestoreconfiguration)
+       */
+      override fun bedrockKnowledgeStoreConfiguration(): Any? =
+          unwrap(this).getBedrockKnowledgeStoreConfiguration()
+
+      /**
+       * Contains details about the configuration of the Amazon Kendra index used for the
+       * `AMAZON.QnAIntent` . To create a Amazon Kendra index, follow the steps at [Creating an
+       * index](https://docs.aws.amazon.com/kendra/latest/dg/create-index.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-datasourceconfiguration.html#cfn-lex-bot-datasourceconfiguration-kendraconfiguration)
+       */
+      override fun kendraConfiguration(): Any? = unwrap(this).getKendraConfiguration()
+
+      /**
+       * Contains details about the configuration of the Amazon OpenSearch Service database used for
+       * the `AMAZON.QnAIntent` . To create a domain, follow the steps at [Creating and managing Amazon
+       * OpenSearch Service
+       * domains](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-datasourceconfiguration.html#cfn-lex-bot-datasourceconfiguration-opensearchconfiguration)
+       */
+      override fun opensearchConfiguration(): Any? = unwrap(this).getOpensearchConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataSourceConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.DataSourceConfigurationProperty):
+          DataSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataSourceConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataSourceConfigurationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.DataSourceConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.DataSourceConfigurationProperty
+    }
+  }
+
+  /**
    * A set of actions that Amazon Lex should run if none of the other conditions are met.
    *
    * Example:
@@ -4698,6 +6436,180 @@ public open class CfnBot(
           software.amazon.awscdk.services.lex.CfnBot.DefaultConditionalBranchProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.lex.CfnBot.DefaultConditionalBranchProperty
+    }
+  }
+
+  /**
+   * Contains specifications for the descriptive bot building feature.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * DescriptiveBotBuilderSpecificationProperty descriptiveBotBuilderSpecificationProperty =
+   * DescriptiveBotBuilderSpecificationProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .bedrockModelSpecification(BedrockModelSpecificationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .bedrockGuardrailConfiguration(BedrockGuardrailConfigurationProperty.builder()
+   * .bedrockGuardrailIdentifier("bedrockGuardrailIdentifier")
+   * .bedrockGuardrailVersion("bedrockGuardrailVersion")
+   * .build())
+   * .bedrockModelCustomPrompt("bedrockModelCustomPrompt")
+   * .bedrockTraceStatus("bedrockTraceStatus")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-descriptivebotbuilderspecification.html)
+   */
+  public interface DescriptiveBotBuilderSpecificationProperty {
+    /**
+     * An object containing information about the Amazon Bedrock model used to interpret the prompt
+     * used in descriptive bot building.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-descriptivebotbuilderspecification.html#cfn-lex-bot-descriptivebotbuilderspecification-bedrockmodelspecification)
+     */
+    public fun bedrockModelSpecification(): Any? = unwrap(this).getBedrockModelSpecification()
+
+    /**
+     * Specifies whether the descriptive bot building feature is activated or not.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-descriptivebotbuilderspecification.html#cfn-lex-bot-descriptivebotbuilderspecification-enabled)
+     */
+    public fun enabled(): Any
+
+    /**
+     * A builder for [DescriptiveBotBuilderSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bedrockModelSpecification An object containing information about the Amazon Bedrock
+       * model used to interpret the prompt used in descriptive bot building.
+       */
+      public fun bedrockModelSpecification(bedrockModelSpecification: IResolvable)
+
+      /**
+       * @param bedrockModelSpecification An object containing information about the Amazon Bedrock
+       * model used to interpret the prompt used in descriptive bot building.
+       */
+      public
+          fun bedrockModelSpecification(bedrockModelSpecification: BedrockModelSpecificationProperty)
+
+      /**
+       * @param bedrockModelSpecification An object containing information about the Amazon Bedrock
+       * model used to interpret the prompt used in descriptive bot building.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("365449c0b701eafceb7d19842c146bc775d214b045f6218beb272909c7673148")
+      public
+          fun bedrockModelSpecification(bedrockModelSpecification: BedrockModelSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param enabled Specifies whether the descriptive bot building feature is activated or not. 
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specifies whether the descriptive bot building feature is activated or not. 
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.DescriptiveBotBuilderSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.lex.CfnBot.DescriptiveBotBuilderSpecificationProperty.builder()
+
+      /**
+       * @param bedrockModelSpecification An object containing information about the Amazon Bedrock
+       * model used to interpret the prompt used in descriptive bot building.
+       */
+      override fun bedrockModelSpecification(bedrockModelSpecification: IResolvable) {
+        cdkBuilder.bedrockModelSpecification(bedrockModelSpecification.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockModelSpecification An object containing information about the Amazon Bedrock
+       * model used to interpret the prompt used in descriptive bot building.
+       */
+      override
+          fun bedrockModelSpecification(bedrockModelSpecification: BedrockModelSpecificationProperty) {
+        cdkBuilder.bedrockModelSpecification(bedrockModelSpecification.let(BedrockModelSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockModelSpecification An object containing information about the Amazon Bedrock
+       * model used to interpret the prompt used in descriptive bot building.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("365449c0b701eafceb7d19842c146bc775d214b045f6218beb272909c7673148")
+      override
+          fun bedrockModelSpecification(bedrockModelSpecification: BedrockModelSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          bedrockModelSpecification(BedrockModelSpecificationProperty(bedrockModelSpecification))
+
+      /**
+       * @param enabled Specifies whether the descriptive bot building feature is activated or not. 
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Specifies whether the descriptive bot building feature is activated or not. 
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBot.DescriptiveBotBuilderSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.DescriptiveBotBuilderSpecificationProperty,
+    ) : CdkObject(cdkObject),
+        DescriptiveBotBuilderSpecificationProperty {
+      /**
+       * An object containing information about the Amazon Bedrock model used to interpret the
+       * prompt used in descriptive bot building.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-descriptivebotbuilderspecification.html#cfn-lex-bot-descriptivebotbuilderspecification-bedrockmodelspecification)
+       */
+      override fun bedrockModelSpecification(): Any? = unwrap(this).getBedrockModelSpecification()
+
+      /**
+       * Specifies whether the descriptive bot building feature is activated or not.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-descriptivebotbuilderspecification.html#cfn-lex-bot-descriptivebotbuilderspecification-enabled)
+       */
+      override fun enabled(): Any = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DescriptiveBotBuilderSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.DescriptiveBotBuilderSpecificationProperty):
+          DescriptiveBotBuilderSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DescriptiveBotBuilderSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DescriptiveBotBuilderSpecificationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.DescriptiveBotBuilderSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.DescriptiveBotBuilderSpecificationProperty
     }
   }
 
@@ -5557,6 +7469,120 @@ public open class CfnBot(
           software.amazon.awscdk.services.lex.CfnBot.ElicitationCodeHookInvocationSettingProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lex.CfnBot.ElicitationCodeHookInvocationSettingProperty
+    }
+  }
+
+  /**
+   * Contains the names of the fields used for an exact response to the user.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * ExactResponseFieldsProperty exactResponseFieldsProperty = ExactResponseFieldsProperty.builder()
+   * .answerField("answerField")
+   * .questionField("questionField")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-exactresponsefields.html)
+   */
+  public interface ExactResponseFieldsProperty {
+    /**
+     * The name of the field that contains the answer to the query made to the OpenSearch Service
+     * database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-exactresponsefields.html#cfn-lex-bot-exactresponsefields-answerfield)
+     */
+    public fun answerField(): String? = unwrap(this).getAnswerField()
+
+    /**
+     * The name of the field that contains the query made to the OpenSearch Service database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-exactresponsefields.html#cfn-lex-bot-exactresponsefields-questionfield)
+     */
+    public fun questionField(): String? = unwrap(this).getQuestionField()
+
+    /**
+     * A builder for [ExactResponseFieldsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param answerField The name of the field that contains the answer to the query made to the
+       * OpenSearch Service database.
+       */
+      public fun answerField(answerField: String)
+
+      /**
+       * @param questionField The name of the field that contains the query made to the OpenSearch
+       * Service database.
+       */
+      public fun questionField(questionField: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.ExactResponseFieldsProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.ExactResponseFieldsProperty.builder()
+
+      /**
+       * @param answerField The name of the field that contains the answer to the query made to the
+       * OpenSearch Service database.
+       */
+      override fun answerField(answerField: String) {
+        cdkBuilder.answerField(answerField)
+      }
+
+      /**
+       * @param questionField The name of the field that contains the query made to the OpenSearch
+       * Service database.
+       */
+      override fun questionField(questionField: String) {
+        cdkBuilder.questionField(questionField)
+      }
+
+      public fun build(): software.amazon.awscdk.services.lex.CfnBot.ExactResponseFieldsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.ExactResponseFieldsProperty,
+    ) : CdkObject(cdkObject),
+        ExactResponseFieldsProperty {
+      /**
+       * The name of the field that contains the answer to the query made to the OpenSearch Service
+       * database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-exactresponsefields.html#cfn-lex-bot-exactresponsefields-answerfield)
+       */
+      override fun answerField(): String? = unwrap(this).getAnswerField()
+
+      /**
+       * The name of the field that contains the query made to the OpenSearch Service database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-exactresponsefields.html#cfn-lex-bot-exactresponsefields-questionfield)
+       */
+      override fun questionField(): String? = unwrap(this).getQuestionField()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ExactResponseFieldsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.ExactResponseFieldsProperty):
+          ExactResponseFieldsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExactResponseFieldsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExactResponseFieldsProperty):
+          software.amazon.awscdk.services.lex.CfnBot.ExactResponseFieldsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.ExactResponseFieldsProperty
     }
   }
 
@@ -6842,6 +8868,210 @@ public open class CfnBot(
           software.amazon.awscdk.services.lex.CfnBot.FulfillmentUpdatesSpecificationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lex.CfnBot.FulfillmentUpdatesSpecificationProperty
+    }
+  }
+
+  /**
+   * Contains specifications about the generative AI capabilities from Amazon Bedrock that you can
+   * turn on for your bot.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * GenerativeAISettingsProperty generativeAISettingsProperty =
+   * GenerativeAISettingsProperty.builder()
+   * .buildtimeSettings(BuildtimeSettingsProperty.builder()
+   * .descriptiveBotBuilderSpecification(DescriptiveBotBuilderSpecificationProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .bedrockModelSpecification(BedrockModelSpecificationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .bedrockGuardrailConfiguration(BedrockGuardrailConfigurationProperty.builder()
+   * .bedrockGuardrailIdentifier("bedrockGuardrailIdentifier")
+   * .bedrockGuardrailVersion("bedrockGuardrailVersion")
+   * .build())
+   * .bedrockModelCustomPrompt("bedrockModelCustomPrompt")
+   * .bedrockTraceStatus("bedrockTraceStatus")
+   * .build())
+   * .build())
+   * .sampleUtteranceGenerationSpecification(SampleUtteranceGenerationSpecificationProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .bedrockModelSpecification(BedrockModelSpecificationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .bedrockGuardrailConfiguration(BedrockGuardrailConfigurationProperty.builder()
+   * .bedrockGuardrailIdentifier("bedrockGuardrailIdentifier")
+   * .bedrockGuardrailVersion("bedrockGuardrailVersion")
+   * .build())
+   * .bedrockModelCustomPrompt("bedrockModelCustomPrompt")
+   * .bedrockTraceStatus("bedrockTraceStatus")
+   * .build())
+   * .build())
+   * .build())
+   * .runtimeSettings(RuntimeSettingsProperty.builder()
+   * .nluImprovementSpecification(NluImprovementSpecificationProperty.builder()
+   * .enabled(false)
+   * .build())
+   * .slotResolutionImprovementSpecification(SlotResolutionImprovementSpecificationProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .bedrockModelSpecification(BedrockModelSpecificationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .bedrockGuardrailConfiguration(BedrockGuardrailConfigurationProperty.builder()
+   * .bedrockGuardrailIdentifier("bedrockGuardrailIdentifier")
+   * .bedrockGuardrailVersion("bedrockGuardrailVersion")
+   * .build())
+   * .bedrockModelCustomPrompt("bedrockModelCustomPrompt")
+   * .bedrockTraceStatus("bedrockTraceStatus")
+   * .build())
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-generativeaisettings.html)
+   */
+  public interface GenerativeAISettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-generativeaisettings.html#cfn-lex-bot-generativeaisettings-buildtimesettings)
+     */
+    public fun buildtimeSettings(): Any? = unwrap(this).getBuildtimeSettings()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-generativeaisettings.html#cfn-lex-bot-generativeaisettings-runtimesettings)
+     */
+    public fun runtimeSettings(): Any? = unwrap(this).getRuntimeSettings()
+
+    /**
+     * A builder for [GenerativeAISettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param buildtimeSettings the value to be set.
+       */
+      public fun buildtimeSettings(buildtimeSettings: IResolvable)
+
+      /**
+       * @param buildtimeSettings the value to be set.
+       */
+      public fun buildtimeSettings(buildtimeSettings: BuildtimeSettingsProperty)
+
+      /**
+       * @param buildtimeSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4d7d14e7150485c452a10d53adeef047bd71f6e2916952ac78a511b46c7db7ff")
+      public fun buildtimeSettings(buildtimeSettings: BuildtimeSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param runtimeSettings the value to be set.
+       */
+      public fun runtimeSettings(runtimeSettings: IResolvable)
+
+      /**
+       * @param runtimeSettings the value to be set.
+       */
+      public fun runtimeSettings(runtimeSettings: RuntimeSettingsProperty)
+
+      /**
+       * @param runtimeSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("000596947e4b9dba2864c5bc27882546d5f9554a0c485a86b2dd1e1090e362e3")
+      public fun runtimeSettings(runtimeSettings: RuntimeSettingsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.GenerativeAISettingsProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.GenerativeAISettingsProperty.builder()
+
+      /**
+       * @param buildtimeSettings the value to be set.
+       */
+      override fun buildtimeSettings(buildtimeSettings: IResolvable) {
+        cdkBuilder.buildtimeSettings(buildtimeSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param buildtimeSettings the value to be set.
+       */
+      override fun buildtimeSettings(buildtimeSettings: BuildtimeSettingsProperty) {
+        cdkBuilder.buildtimeSettings(buildtimeSettings.let(BuildtimeSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param buildtimeSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4d7d14e7150485c452a10d53adeef047bd71f6e2916952ac78a511b46c7db7ff")
+      override
+          fun buildtimeSettings(buildtimeSettings: BuildtimeSettingsProperty.Builder.() -> Unit):
+          Unit = buildtimeSettings(BuildtimeSettingsProperty(buildtimeSettings))
+
+      /**
+       * @param runtimeSettings the value to be set.
+       */
+      override fun runtimeSettings(runtimeSettings: IResolvable) {
+        cdkBuilder.runtimeSettings(runtimeSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param runtimeSettings the value to be set.
+       */
+      override fun runtimeSettings(runtimeSettings: RuntimeSettingsProperty) {
+        cdkBuilder.runtimeSettings(runtimeSettings.let(RuntimeSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param runtimeSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("000596947e4b9dba2864c5bc27882546d5f9554a0c485a86b2dd1e1090e362e3")
+      override fun runtimeSettings(runtimeSettings: RuntimeSettingsProperty.Builder.() -> Unit):
+          Unit = runtimeSettings(RuntimeSettingsProperty(runtimeSettings))
+
+      public fun build(): software.amazon.awscdk.services.lex.CfnBot.GenerativeAISettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.GenerativeAISettingsProperty,
+    ) : CdkObject(cdkObject),
+        GenerativeAISettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-generativeaisettings.html#cfn-lex-bot-generativeaisettings-buildtimesettings)
+       */
+      override fun buildtimeSettings(): Any? = unwrap(this).getBuildtimeSettings()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-generativeaisettings.html#cfn-lex-bot-generativeaisettings-runtimesettings)
+       */
+      override fun runtimeSettings(): Any? = unwrap(this).getRuntimeSettings()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GenerativeAISettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.GenerativeAISettingsProperty):
+          GenerativeAISettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GenerativeAISettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GenerativeAISettingsProperty):
+          software.amazon.awscdk.services.lex.CfnBot.GenerativeAISettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.GenerativeAISettingsProperty
     }
   }
 
@@ -9359,6 +11589,12 @@ public open class CfnBot(
    */
   public interface IntentProperty {
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html#cfn-lex-bot-intent-bedrockagentintentconfiguration)
+     */
+    public fun bedrockAgentIntentConfiguration(): Any? =
+        unwrap(this).getBedrockAgentIntentConfiguration()
+
+    /**
      * A description of the intent.
      *
      * Use the description to help identify the intent in lists.
@@ -9452,6 +11688,17 @@ public open class CfnBot(
     public fun parentIntentSignature(): String? = unwrap(this).getParentIntentSignature()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html#cfn-lex-bot-intent-qinconnectintentconfiguration)
+     */
+    public fun qInConnectIntentConfiguration(): Any? =
+        unwrap(this).getQInConnectIntentConfiguration()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html#cfn-lex-bot-intent-qnaintentconfiguration)
+     */
+    public fun qnAIntentConfiguration(): Any? = unwrap(this).getQnAIntentConfiguration()
+
+    /**
      * A list of utterances that a user might say to signal the intent.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html#cfn-lex-bot-intent-sampleutterances)
@@ -9479,6 +11726,25 @@ public open class CfnBot(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param bedrockAgentIntentConfiguration the value to be set.
+       */
+      public fun bedrockAgentIntentConfiguration(bedrockAgentIntentConfiguration: IResolvable)
+
+      /**
+       * @param bedrockAgentIntentConfiguration the value to be set.
+       */
+      public
+          fun bedrockAgentIntentConfiguration(bedrockAgentIntentConfiguration: BedrockAgentIntentConfigurationProperty)
+
+      /**
+       * @param bedrockAgentIntentConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fbb78d19525ab706b463d55c8716fd1001bfa3faeab963e4134b92055c960d92")
+      public
+          fun bedrockAgentIntentConfiguration(bedrockAgentIntentConfiguration: BedrockAgentIntentConfigurationProperty.Builder.() -> Unit)
+
       /**
        * @param description A description of the intent.
        * Use the description to help identify the intent in lists.
@@ -9676,6 +11942,43 @@ public open class CfnBot(
       public fun parentIntentSignature(parentIntentSignature: String)
 
       /**
+       * @param qInConnectIntentConfiguration the value to be set.
+       */
+      public fun qInConnectIntentConfiguration(qInConnectIntentConfiguration: IResolvable)
+
+      /**
+       * @param qInConnectIntentConfiguration the value to be set.
+       */
+      public
+          fun qInConnectIntentConfiguration(qInConnectIntentConfiguration: QInConnectIntentConfigurationProperty)
+
+      /**
+       * @param qInConnectIntentConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ed44ce7d512225d66f0a04545dd1b2748417a3097e53d801e3320b80dfc47fe1")
+      public
+          fun qInConnectIntentConfiguration(qInConnectIntentConfiguration: QInConnectIntentConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param qnAIntentConfiguration the value to be set.
+       */
+      public fun qnAIntentConfiguration(qnAIntentConfiguration: IResolvable)
+
+      /**
+       * @param qnAIntentConfiguration the value to be set.
+       */
+      public fun qnAIntentConfiguration(qnAIntentConfiguration: QnAIntentConfigurationProperty)
+
+      /**
+       * @param qnAIntentConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b38d1987cdcea72592c3e1004831a5ca7e5d17cf66dac73d329ece60a1fa7ac2")
+      public
+          fun qnAIntentConfiguration(qnAIntentConfiguration: QnAIntentConfigurationProperty.Builder.() -> Unit)
+
+      /**
        * @param sampleUtterances A list of utterances that a user might say to signal the intent.
        */
       public fun sampleUtterances(sampleUtterances: IResolvable)
@@ -9727,6 +12030,31 @@ public open class CfnBot(
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.lex.CfnBot.IntentProperty.Builder =
           software.amazon.awscdk.services.lex.CfnBot.IntentProperty.builder()
+
+      /**
+       * @param bedrockAgentIntentConfiguration the value to be set.
+       */
+      override fun bedrockAgentIntentConfiguration(bedrockAgentIntentConfiguration: IResolvable) {
+        cdkBuilder.bedrockAgentIntentConfiguration(bedrockAgentIntentConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockAgentIntentConfiguration the value to be set.
+       */
+      override
+          fun bedrockAgentIntentConfiguration(bedrockAgentIntentConfiguration: BedrockAgentIntentConfigurationProperty) {
+        cdkBuilder.bedrockAgentIntentConfiguration(bedrockAgentIntentConfiguration.let(BedrockAgentIntentConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockAgentIntentConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fbb78d19525ab706b463d55c8716fd1001bfa3faeab963e4134b92055c960d92")
+      override
+          fun bedrockAgentIntentConfiguration(bedrockAgentIntentConfiguration: BedrockAgentIntentConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          bedrockAgentIntentConfiguration(BedrockAgentIntentConfigurationProperty(bedrockAgentIntentConfiguration))
 
       /**
        * @param description A description of the intent.
@@ -9972,6 +12300,54 @@ public open class CfnBot(
       }
 
       /**
+       * @param qInConnectIntentConfiguration the value to be set.
+       */
+      override fun qInConnectIntentConfiguration(qInConnectIntentConfiguration: IResolvable) {
+        cdkBuilder.qInConnectIntentConfiguration(qInConnectIntentConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param qInConnectIntentConfiguration the value to be set.
+       */
+      override
+          fun qInConnectIntentConfiguration(qInConnectIntentConfiguration: QInConnectIntentConfigurationProperty) {
+        cdkBuilder.qInConnectIntentConfiguration(qInConnectIntentConfiguration.let(QInConnectIntentConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param qInConnectIntentConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ed44ce7d512225d66f0a04545dd1b2748417a3097e53d801e3320b80dfc47fe1")
+      override
+          fun qInConnectIntentConfiguration(qInConnectIntentConfiguration: QInConnectIntentConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          qInConnectIntentConfiguration(QInConnectIntentConfigurationProperty(qInConnectIntentConfiguration))
+
+      /**
+       * @param qnAIntentConfiguration the value to be set.
+       */
+      override fun qnAIntentConfiguration(qnAIntentConfiguration: IResolvable) {
+        cdkBuilder.qnAIntentConfiguration(qnAIntentConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param qnAIntentConfiguration the value to be set.
+       */
+      override fun qnAIntentConfiguration(qnAIntentConfiguration: QnAIntentConfigurationProperty) {
+        cdkBuilder.qnAIntentConfiguration(qnAIntentConfiguration.let(QnAIntentConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param qnAIntentConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b38d1987cdcea72592c3e1004831a5ca7e5d17cf66dac73d329ece60a1fa7ac2")
+      override
+          fun qnAIntentConfiguration(qnAIntentConfiguration: QnAIntentConfigurationProperty.Builder.() -> Unit):
+          Unit = qnAIntentConfiguration(QnAIntentConfigurationProperty(qnAIntentConfiguration))
+
+      /**
        * @param sampleUtterances A list of utterances that a user might say to signal the intent.
        */
       override fun sampleUtterances(sampleUtterances: IResolvable) {
@@ -10041,6 +12417,12 @@ public open class CfnBot(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.IntentProperty,
     ) : CdkObject(cdkObject),
         IntentProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html#cfn-lex-bot-intent-bedrockagentintentconfiguration)
+       */
+      override fun bedrockAgentIntentConfiguration(): Any? =
+          unwrap(this).getBedrockAgentIntentConfiguration()
+
       /**
        * A description of the intent.
        *
@@ -10133,6 +12515,17 @@ public open class CfnBot(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html#cfn-lex-bot-intent-parentintentsignature)
        */
       override fun parentIntentSignature(): String? = unwrap(this).getParentIntentSignature()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html#cfn-lex-bot-intent-qinconnectintentconfiguration)
+       */
+      override fun qInConnectIntentConfiguration(): Any? =
+          unwrap(this).getQInConnectIntentConfiguration()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html#cfn-lex-bot-intent-qnaintentconfiguration)
+       */
+      override fun qnAIntentConfiguration(): Any? = unwrap(this).getQnAIntentConfiguration()
 
       /**
        * A list of utterances that a user might say to signal the intent.
@@ -11104,6 +13497,119 @@ public open class CfnBot(
   }
 
   /**
+   * Configures the Assisted Natural Language Understanding (NLU) feature for your bot.
+   *
+   * This specification determines whether enhanced intent recognition and utterance understanding
+   * capabilities are active.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * NluImprovementSpecificationProperty nluImprovementSpecificationProperty =
+   * NluImprovementSpecificationProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-nluimprovementspecification.html)
+   */
+  public interface NluImprovementSpecificationProperty {
+    /**
+     * Determines whether the Assisted NLU feature is enabled for the bot.
+     *
+     * When set to `true` , Amazon Lex uses advanced models to improve intent recognition and slot
+     * resolution, with the default being `false` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-nluimprovementspecification.html#cfn-lex-bot-nluimprovementspecification-enabled)
+     */
+    public fun enabled(): Any
+
+    /**
+     * A builder for [NluImprovementSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Determines whether the Assisted NLU feature is enabled for the bot. 
+       * When set to `true` , Amazon Lex uses advanced models to improve intent recognition and slot
+       * resolution, with the default being `false` .
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Determines whether the Assisted NLU feature is enabled for the bot. 
+       * When set to `true` , Amazon Lex uses advanced models to improve intent recognition and slot
+       * resolution, with the default being `false` .
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.NluImprovementSpecificationProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.NluImprovementSpecificationProperty.builder()
+
+      /**
+       * @param enabled Determines whether the Assisted NLU feature is enabled for the bot. 
+       * When set to `true` , Amazon Lex uses advanced models to improve intent recognition and slot
+       * resolution, with the default being `false` .
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Determines whether the Assisted NLU feature is enabled for the bot. 
+       * When set to `true` , Amazon Lex uses advanced models to improve intent recognition and slot
+       * resolution, with the default being `false` .
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBot.NluImprovementSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.NluImprovementSpecificationProperty,
+    ) : CdkObject(cdkObject),
+        NluImprovementSpecificationProperty {
+      /**
+       * Determines whether the Assisted NLU feature is enabled for the bot.
+       *
+       * When set to `true` , Amazon Lex uses advanced models to improve intent recognition and slot
+       * resolution, with the default being `false` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-nluimprovementspecification.html#cfn-lex-bot-nluimprovementspecification-enabled)
+       */
+      override fun enabled(): Any = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NluImprovementSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.NluImprovementSpecificationProperty):
+          NluImprovementSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NluImprovementSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NluImprovementSpecificationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.NluImprovementSpecificationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.NluImprovementSpecificationProperty
+    }
+  }
+
+  /**
    * Determines whether Amazon Lex obscures slot values in conversation logs.
    *
    * Example:
@@ -11189,6 +13695,270 @@ public open class CfnBot(
           software.amazon.awscdk.services.lex.CfnBot.ObfuscationSettingProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.lex.CfnBot.ObfuscationSettingProperty
+    }
+  }
+
+  /**
+   * Contains details about the configuration of the Amazon OpenSearch Service database used for the
+   * `AMAZON.QnAIntent` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * OpensearchConfigurationProperty opensearchConfigurationProperty =
+   * OpensearchConfigurationProperty.builder()
+   * .domainEndpoint("domainEndpoint")
+   * .exactResponse(false)
+   * .exactResponseFields(ExactResponseFieldsProperty.builder()
+   * .answerField("answerField")
+   * .questionField("questionField")
+   * .build())
+   * .includeFields(List.of("includeFields"))
+   * .indexName("indexName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-opensearchconfiguration.html)
+   */
+  public interface OpensearchConfigurationProperty {
+    /**
+     * The endpoint of the Amazon OpenSearch Service domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-opensearchconfiguration.html#cfn-lex-bot-opensearchconfiguration-domainendpoint)
+     */
+    public fun domainEndpoint(): String? = unwrap(this).getDomainEndpoint()
+
+    /**
+     * Specifies whether to return an exact response or to return an answer generated by the model
+     * using the fields you specify from the database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-opensearchconfiguration.html#cfn-lex-bot-opensearchconfiguration-exactresponse)
+     */
+    public fun exactResponse(): Any? = unwrap(this).getExactResponse()
+
+    /**
+     * Contains the names of the fields used for an exact response to the user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-opensearchconfiguration.html#cfn-lex-bot-opensearchconfiguration-exactresponsefields)
+     */
+    public fun exactResponseFields(): Any? = unwrap(this).getExactResponseFields()
+
+    /**
+     * Contains a list of fields from the Amazon OpenSearch Service that the model can use to
+     * generate the answer to the query.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-opensearchconfiguration.html#cfn-lex-bot-opensearchconfiguration-includefields)
+     */
+    public fun includeFields(): List<String> = unwrap(this).getIncludeFields() ?: emptyList()
+
+    /**
+     * The name of the Amazon OpenSearch Service index.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-opensearchconfiguration.html#cfn-lex-bot-opensearchconfiguration-indexname)
+     */
+    public fun indexName(): String? = unwrap(this).getIndexName()
+
+    /**
+     * A builder for [OpensearchConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param domainEndpoint The endpoint of the Amazon OpenSearch Service domain.
+       */
+      public fun domainEndpoint(domainEndpoint: String)
+
+      /**
+       * @param exactResponse Specifies whether to return an exact response or to return an answer
+       * generated by the model using the fields you specify from the database.
+       */
+      public fun exactResponse(exactResponse: Boolean)
+
+      /**
+       * @param exactResponse Specifies whether to return an exact response or to return an answer
+       * generated by the model using the fields you specify from the database.
+       */
+      public fun exactResponse(exactResponse: IResolvable)
+
+      /**
+       * @param exactResponseFields Contains the names of the fields used for an exact response to
+       * the user.
+       */
+      public fun exactResponseFields(exactResponseFields: IResolvable)
+
+      /**
+       * @param exactResponseFields Contains the names of the fields used for an exact response to
+       * the user.
+       */
+      public fun exactResponseFields(exactResponseFields: ExactResponseFieldsProperty)
+
+      /**
+       * @param exactResponseFields Contains the names of the fields used for an exact response to
+       * the user.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("226ef2fdc73c1e9214e6be1bb96d679271aeae222141f4b67e68746adcee3e8f")
+      public
+          fun exactResponseFields(exactResponseFields: ExactResponseFieldsProperty.Builder.() -> Unit)
+
+      /**
+       * @param includeFields Contains a list of fields from the Amazon OpenSearch Service that the
+       * model can use to generate the answer to the query.
+       */
+      public fun includeFields(includeFields: List<String>)
+
+      /**
+       * @param includeFields Contains a list of fields from the Amazon OpenSearch Service that the
+       * model can use to generate the answer to the query.
+       */
+      public fun includeFields(vararg includeFields: String)
+
+      /**
+       * @param indexName The name of the Amazon OpenSearch Service index.
+       */
+      public fun indexName(indexName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.OpensearchConfigurationProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.OpensearchConfigurationProperty.builder()
+
+      /**
+       * @param domainEndpoint The endpoint of the Amazon OpenSearch Service domain.
+       */
+      override fun domainEndpoint(domainEndpoint: String) {
+        cdkBuilder.domainEndpoint(domainEndpoint)
+      }
+
+      /**
+       * @param exactResponse Specifies whether to return an exact response or to return an answer
+       * generated by the model using the fields you specify from the database.
+       */
+      override fun exactResponse(exactResponse: Boolean) {
+        cdkBuilder.exactResponse(exactResponse)
+      }
+
+      /**
+       * @param exactResponse Specifies whether to return an exact response or to return an answer
+       * generated by the model using the fields you specify from the database.
+       */
+      override fun exactResponse(exactResponse: IResolvable) {
+        cdkBuilder.exactResponse(exactResponse.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param exactResponseFields Contains the names of the fields used for an exact response to
+       * the user.
+       */
+      override fun exactResponseFields(exactResponseFields: IResolvable) {
+        cdkBuilder.exactResponseFields(exactResponseFields.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param exactResponseFields Contains the names of the fields used for an exact response to
+       * the user.
+       */
+      override fun exactResponseFields(exactResponseFields: ExactResponseFieldsProperty) {
+        cdkBuilder.exactResponseFields(exactResponseFields.let(ExactResponseFieldsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param exactResponseFields Contains the names of the fields used for an exact response to
+       * the user.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("226ef2fdc73c1e9214e6be1bb96d679271aeae222141f4b67e68746adcee3e8f")
+      override
+          fun exactResponseFields(exactResponseFields: ExactResponseFieldsProperty.Builder.() -> Unit):
+          Unit = exactResponseFields(ExactResponseFieldsProperty(exactResponseFields))
+
+      /**
+       * @param includeFields Contains a list of fields from the Amazon OpenSearch Service that the
+       * model can use to generate the answer to the query.
+       */
+      override fun includeFields(includeFields: List<String>) {
+        cdkBuilder.includeFields(includeFields)
+      }
+
+      /**
+       * @param includeFields Contains a list of fields from the Amazon OpenSearch Service that the
+       * model can use to generate the answer to the query.
+       */
+      override fun includeFields(vararg includeFields: String): Unit =
+          includeFields(includeFields.toList())
+
+      /**
+       * @param indexName The name of the Amazon OpenSearch Service index.
+       */
+      override fun indexName(indexName: String) {
+        cdkBuilder.indexName(indexName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.lex.CfnBot.OpensearchConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.OpensearchConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        OpensearchConfigurationProperty {
+      /**
+       * The endpoint of the Amazon OpenSearch Service domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-opensearchconfiguration.html#cfn-lex-bot-opensearchconfiguration-domainendpoint)
+       */
+      override fun domainEndpoint(): String? = unwrap(this).getDomainEndpoint()
+
+      /**
+       * Specifies whether to return an exact response or to return an answer generated by the model
+       * using the fields you specify from the database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-opensearchconfiguration.html#cfn-lex-bot-opensearchconfiguration-exactresponse)
+       */
+      override fun exactResponse(): Any? = unwrap(this).getExactResponse()
+
+      /**
+       * Contains the names of the fields used for an exact response to the user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-opensearchconfiguration.html#cfn-lex-bot-opensearchconfiguration-exactresponsefields)
+       */
+      override fun exactResponseFields(): Any? = unwrap(this).getExactResponseFields()
+
+      /**
+       * Contains a list of fields from the Amazon OpenSearch Service that the model can use to
+       * generate the answer to the query.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-opensearchconfiguration.html#cfn-lex-bot-opensearchconfiguration-includefields)
+       */
+      override fun includeFields(): List<String> = unwrap(this).getIncludeFields() ?: emptyList()
+
+      /**
+       * The name of the Amazon OpenSearch Service index.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-opensearchconfiguration.html#cfn-lex-bot-opensearchconfiguration-indexname)
+       */
+      override fun indexName(): String? = unwrap(this).getIndexName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OpensearchConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.OpensearchConfigurationProperty):
+          OpensearchConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpensearchConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OpensearchConfigurationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.OpensearchConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.OpensearchConfigurationProperty
     }
   }
 
@@ -13270,6 +16040,723 @@ public open class CfnBot(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * QInConnectAssistantConfigurationProperty qInConnectAssistantConfigurationProperty =
+   * QInConnectAssistantConfigurationProperty.builder()
+   * .assistantArn("assistantArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qinconnectassistantconfiguration.html)
+   */
+  public interface QInConnectAssistantConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qinconnectassistantconfiguration.html#cfn-lex-bot-qinconnectassistantconfiguration-assistantarn)
+     */
+    public fun assistantArn(): String
+
+    /**
+     * A builder for [QInConnectAssistantConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param assistantArn the value to be set. 
+       */
+      public fun assistantArn(assistantArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.QInConnectAssistantConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.lex.CfnBot.QInConnectAssistantConfigurationProperty.builder()
+
+      /**
+       * @param assistantArn the value to be set. 
+       */
+      override fun assistantArn(assistantArn: String) {
+        cdkBuilder.assistantArn(assistantArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBot.QInConnectAssistantConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.QInConnectAssistantConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        QInConnectAssistantConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qinconnectassistantconfiguration.html#cfn-lex-bot-qinconnectassistantconfiguration-assistantarn)
+       */
+      override fun assistantArn(): String = unwrap(this).getAssistantArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          QInConnectAssistantConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.QInConnectAssistantConfigurationProperty):
+          QInConnectAssistantConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QInConnectAssistantConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: QInConnectAssistantConfigurationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.QInConnectAssistantConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.QInConnectAssistantConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * QInConnectIntentConfigurationProperty qInConnectIntentConfigurationProperty =
+   * QInConnectIntentConfigurationProperty.builder()
+   * .qInConnectAssistantConfiguration(QInConnectAssistantConfigurationProperty.builder()
+   * .assistantArn("assistantArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qinconnectintentconfiguration.html)
+   */
+  public interface QInConnectIntentConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qinconnectintentconfiguration.html#cfn-lex-bot-qinconnectintentconfiguration-qinconnectassistantconfiguration)
+     */
+    public fun qInConnectAssistantConfiguration(): Any? =
+        unwrap(this).getQInConnectAssistantConfiguration()
+
+    /**
+     * A builder for [QInConnectIntentConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param qInConnectAssistantConfiguration the value to be set.
+       */
+      public fun qInConnectAssistantConfiguration(qInConnectAssistantConfiguration: IResolvable)
+
+      /**
+       * @param qInConnectAssistantConfiguration the value to be set.
+       */
+      public
+          fun qInConnectAssistantConfiguration(qInConnectAssistantConfiguration: QInConnectAssistantConfigurationProperty)
+
+      /**
+       * @param qInConnectAssistantConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3373c5fc18a2d8a094896c73c5a41050830bc984f7c502c5b6b8e524b941a540")
+      public
+          fun qInConnectAssistantConfiguration(qInConnectAssistantConfiguration: QInConnectAssistantConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.QInConnectIntentConfigurationProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.QInConnectIntentConfigurationProperty.builder()
+
+      /**
+       * @param qInConnectAssistantConfiguration the value to be set.
+       */
+      override fun qInConnectAssistantConfiguration(qInConnectAssistantConfiguration: IResolvable) {
+        cdkBuilder.qInConnectAssistantConfiguration(qInConnectAssistantConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param qInConnectAssistantConfiguration the value to be set.
+       */
+      override
+          fun qInConnectAssistantConfiguration(qInConnectAssistantConfiguration: QInConnectAssistantConfigurationProperty) {
+        cdkBuilder.qInConnectAssistantConfiguration(qInConnectAssistantConfiguration.let(QInConnectAssistantConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param qInConnectAssistantConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3373c5fc18a2d8a094896c73c5a41050830bc984f7c502c5b6b8e524b941a540")
+      override
+          fun qInConnectAssistantConfiguration(qInConnectAssistantConfiguration: QInConnectAssistantConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          qInConnectAssistantConfiguration(QInConnectAssistantConfigurationProperty(qInConnectAssistantConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBot.QInConnectIntentConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.QInConnectIntentConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        QInConnectIntentConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qinconnectintentconfiguration.html#cfn-lex-bot-qinconnectintentconfiguration-qinconnectassistantconfiguration)
+       */
+      override fun qInConnectAssistantConfiguration(): Any? =
+          unwrap(this).getQInConnectAssistantConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          QInConnectIntentConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.QInConnectIntentConfigurationProperty):
+          QInConnectIntentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QInConnectIntentConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: QInConnectIntentConfigurationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.QInConnectIntentConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.QInConnectIntentConfigurationProperty
+    }
+  }
+
+  /**
+   * Details about the the configuration of the built-in `Amazon.QnAIntent` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * QnAIntentConfigurationProperty qnAIntentConfigurationProperty =
+   * QnAIntentConfigurationProperty.builder()
+   * .bedrockModelConfiguration(BedrockModelSpecificationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .bedrockGuardrailConfiguration(BedrockGuardrailConfigurationProperty.builder()
+   * .bedrockGuardrailIdentifier("bedrockGuardrailIdentifier")
+   * .bedrockGuardrailVersion("bedrockGuardrailVersion")
+   * .build())
+   * .bedrockModelCustomPrompt("bedrockModelCustomPrompt")
+   * .bedrockTraceStatus("bedrockTraceStatus")
+   * .build())
+   * .dataSourceConfiguration(DataSourceConfigurationProperty.builder()
+   * .bedrockKnowledgeStoreConfiguration(BedrockKnowledgeStoreConfigurationProperty.builder()
+   * .bedrockKnowledgeBaseArn("bedrockKnowledgeBaseArn")
+   * .bkbExactResponseFields(BKBExactResponseFieldsProperty.builder()
+   * .answerField("answerField")
+   * .build())
+   * .exactResponse(false)
+   * .build())
+   * .kendraConfiguration(QnAKendraConfigurationProperty.builder()
+   * .exactResponse(false)
+   * .kendraIndex("kendraIndex")
+   * .queryFilterStringEnabled(false)
+   * // the properties below are optional
+   * .queryFilterString("queryFilterString")
+   * .build())
+   * .opensearchConfiguration(OpensearchConfigurationProperty.builder()
+   * .domainEndpoint("domainEndpoint")
+   * .exactResponse(false)
+   * .exactResponseFields(ExactResponseFieldsProperty.builder()
+   * .answerField("answerField")
+   * .questionField("questionField")
+   * .build())
+   * .includeFields(List.of("includeFields"))
+   * .indexName("indexName")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qnaintentconfiguration.html)
+   */
+  public interface QnAIntentConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qnaintentconfiguration.html#cfn-lex-bot-qnaintentconfiguration-bedrockmodelconfiguration)
+     */
+    public fun bedrockModelConfiguration(): Any
+
+    /**
+     * Contains details about the configuration of the data source used for the `AMAZON.QnAIntent` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qnaintentconfiguration.html#cfn-lex-bot-qnaintentconfiguration-datasourceconfiguration)
+     */
+    public fun dataSourceConfiguration(): Any
+
+    /**
+     * A builder for [QnAIntentConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bedrockModelConfiguration the value to be set. 
+       */
+      public fun bedrockModelConfiguration(bedrockModelConfiguration: IResolvable)
+
+      /**
+       * @param bedrockModelConfiguration the value to be set. 
+       */
+      public
+          fun bedrockModelConfiguration(bedrockModelConfiguration: BedrockModelSpecificationProperty)
+
+      /**
+       * @param bedrockModelConfiguration the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5bb737ae24d53f55ae6947b2a83e8e162f8ac46e11781d3b446e1fd4e335cf39")
+      public
+          fun bedrockModelConfiguration(bedrockModelConfiguration: BedrockModelSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param dataSourceConfiguration Contains details about the configuration of the data source
+       * used for the `AMAZON.QnAIntent` . 
+       */
+      public fun dataSourceConfiguration(dataSourceConfiguration: IResolvable)
+
+      /**
+       * @param dataSourceConfiguration Contains details about the configuration of the data source
+       * used for the `AMAZON.QnAIntent` . 
+       */
+      public fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty)
+
+      /**
+       * @param dataSourceConfiguration Contains details about the configuration of the data source
+       * used for the `AMAZON.QnAIntent` . 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7c3847bbdef3704beacfaa33adfd2301f5fcc2a97c33f1b0204728f9a9b33b43")
+      public
+          fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.QnAIntentConfigurationProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.QnAIntentConfigurationProperty.builder()
+
+      /**
+       * @param bedrockModelConfiguration the value to be set. 
+       */
+      override fun bedrockModelConfiguration(bedrockModelConfiguration: IResolvable) {
+        cdkBuilder.bedrockModelConfiguration(bedrockModelConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockModelConfiguration the value to be set. 
+       */
+      override
+          fun bedrockModelConfiguration(bedrockModelConfiguration: BedrockModelSpecificationProperty) {
+        cdkBuilder.bedrockModelConfiguration(bedrockModelConfiguration.let(BedrockModelSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockModelConfiguration the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5bb737ae24d53f55ae6947b2a83e8e162f8ac46e11781d3b446e1fd4e335cf39")
+      override
+          fun bedrockModelConfiguration(bedrockModelConfiguration: BedrockModelSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          bedrockModelConfiguration(BedrockModelSpecificationProperty(bedrockModelConfiguration))
+
+      /**
+       * @param dataSourceConfiguration Contains details about the configuration of the data source
+       * used for the `AMAZON.QnAIntent` . 
+       */
+      override fun dataSourceConfiguration(dataSourceConfiguration: IResolvable) {
+        cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param dataSourceConfiguration Contains details about the configuration of the data source
+       * used for the `AMAZON.QnAIntent` . 
+       */
+      override
+          fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty) {
+        cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(DataSourceConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param dataSourceConfiguration Contains details about the configuration of the data source
+       * used for the `AMAZON.QnAIntent` . 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7c3847bbdef3704beacfaa33adfd2301f5fcc2a97c33f1b0204728f9a9b33b43")
+      override
+          fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty.Builder.() -> Unit):
+          Unit = dataSourceConfiguration(DataSourceConfigurationProperty(dataSourceConfiguration))
+
+      public fun build(): software.amazon.awscdk.services.lex.CfnBot.QnAIntentConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.QnAIntentConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        QnAIntentConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qnaintentconfiguration.html#cfn-lex-bot-qnaintentconfiguration-bedrockmodelconfiguration)
+       */
+      override fun bedrockModelConfiguration(): Any = unwrap(this).getBedrockModelConfiguration()
+
+      /**
+       * Contains details about the configuration of the data source used for the `AMAZON.QnAIntent`
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qnaintentconfiguration.html#cfn-lex-bot-qnaintentconfiguration-datasourceconfiguration)
+       */
+      override fun dataSourceConfiguration(): Any = unwrap(this).getDataSourceConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): QnAIntentConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.QnAIntentConfigurationProperty):
+          QnAIntentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QnAIntentConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: QnAIntentConfigurationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.QnAIntentConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.QnAIntentConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains details about the configuration of the Amazon Kendra index used for the
+   * `AMAZON.QnAIntent` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * QnAKendraConfigurationProperty qnAKendraConfigurationProperty =
+   * QnAKendraConfigurationProperty.builder()
+   * .exactResponse(false)
+   * .kendraIndex("kendraIndex")
+   * .queryFilterStringEnabled(false)
+   * // the properties below are optional
+   * .queryFilterString("queryFilterString")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qnakendraconfiguration.html)
+   */
+  public interface QnAKendraConfigurationProperty {
+    /**
+     * Specifies whether to return an exact response from the Amazon Kendra index or to let the
+     * Amazon Bedrock model you select generate a response based on the results.
+     *
+     * To use this feature, you must first add FAQ questions to your index by following the steps at
+     * [Adding frequently asked questions (FAQs) to an
+     * index](https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qnakendraconfiguration.html#cfn-lex-bot-qnakendraconfiguration-exactresponse)
+     */
+    public fun exactResponse(): Any
+
+    /**
+     * The ARN of the Amazon Kendra index to use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qnakendraconfiguration.html#cfn-lex-bot-qnakendraconfiguration-kendraindex)
+     */
+    public fun kendraIndex(): String
+
+    /**
+     * Contains the Amazon Kendra filter string to use if enabled.
+     *
+     * For more information on the Amazon Kendra search filter JSON format, see [Using document
+     * attributes to filter search
+     * results](https://docs.aws.amazon.com/kendra/latest/dg/filtering.html#search-filtering) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qnakendraconfiguration.html#cfn-lex-bot-qnakendraconfiguration-queryfilterstring)
+     */
+    public fun queryFilterString(): String? = unwrap(this).getQueryFilterString()
+
+    /**
+     * Specifies whether to enable an Amazon Kendra filter string or not.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qnakendraconfiguration.html#cfn-lex-bot-qnakendraconfiguration-queryfilterstringenabled)
+     */
+    public fun queryFilterStringEnabled(): Any
+
+    /**
+     * A builder for [QnAKendraConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param exactResponse Specifies whether to return an exact response from the Amazon Kendra
+       * index or to let the Amazon Bedrock model you select generate a response based on the results. 
+       * To use this feature, you must first add FAQ questions to your index by following the steps
+       * at [Adding frequently asked questions (FAQs) to an
+       * index](https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html) .
+       */
+      public fun exactResponse(exactResponse: Boolean)
+
+      /**
+       * @param exactResponse Specifies whether to return an exact response from the Amazon Kendra
+       * index or to let the Amazon Bedrock model you select generate a response based on the results. 
+       * To use this feature, you must first add FAQ questions to your index by following the steps
+       * at [Adding frequently asked questions (FAQs) to an
+       * index](https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html) .
+       */
+      public fun exactResponse(exactResponse: IResolvable)
+
+      /**
+       * @param kendraIndex The ARN of the Amazon Kendra index to use. 
+       */
+      public fun kendraIndex(kendraIndex: String)
+
+      /**
+       * @param queryFilterString Contains the Amazon Kendra filter string to use if enabled.
+       * For more information on the Amazon Kendra search filter JSON format, see [Using document
+       * attributes to filter search
+       * results](https://docs.aws.amazon.com/kendra/latest/dg/filtering.html#search-filtering) .
+       */
+      public fun queryFilterString(queryFilterString: String)
+
+      /**
+       * @param queryFilterStringEnabled Specifies whether to enable an Amazon Kendra filter string
+       * or not. 
+       */
+      public fun queryFilterStringEnabled(queryFilterStringEnabled: Boolean)
+
+      /**
+       * @param queryFilterStringEnabled Specifies whether to enable an Amazon Kendra filter string
+       * or not. 
+       */
+      public fun queryFilterStringEnabled(queryFilterStringEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.QnAKendraConfigurationProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.QnAKendraConfigurationProperty.builder()
+
+      /**
+       * @param exactResponse Specifies whether to return an exact response from the Amazon Kendra
+       * index or to let the Amazon Bedrock model you select generate a response based on the results. 
+       * To use this feature, you must first add FAQ questions to your index by following the steps
+       * at [Adding frequently asked questions (FAQs) to an
+       * index](https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html) .
+       */
+      override fun exactResponse(exactResponse: Boolean) {
+        cdkBuilder.exactResponse(exactResponse)
+      }
+
+      /**
+       * @param exactResponse Specifies whether to return an exact response from the Amazon Kendra
+       * index or to let the Amazon Bedrock model you select generate a response based on the results. 
+       * To use this feature, you must first add FAQ questions to your index by following the steps
+       * at [Adding frequently asked questions (FAQs) to an
+       * index](https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html) .
+       */
+      override fun exactResponse(exactResponse: IResolvable) {
+        cdkBuilder.exactResponse(exactResponse.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param kendraIndex The ARN of the Amazon Kendra index to use. 
+       */
+      override fun kendraIndex(kendraIndex: String) {
+        cdkBuilder.kendraIndex(kendraIndex)
+      }
+
+      /**
+       * @param queryFilterString Contains the Amazon Kendra filter string to use if enabled.
+       * For more information on the Amazon Kendra search filter JSON format, see [Using document
+       * attributes to filter search
+       * results](https://docs.aws.amazon.com/kendra/latest/dg/filtering.html#search-filtering) .
+       */
+      override fun queryFilterString(queryFilterString: String) {
+        cdkBuilder.queryFilterString(queryFilterString)
+      }
+
+      /**
+       * @param queryFilterStringEnabled Specifies whether to enable an Amazon Kendra filter string
+       * or not. 
+       */
+      override fun queryFilterStringEnabled(queryFilterStringEnabled: Boolean) {
+        cdkBuilder.queryFilterStringEnabled(queryFilterStringEnabled)
+      }
+
+      /**
+       * @param queryFilterStringEnabled Specifies whether to enable an Amazon Kendra filter string
+       * or not. 
+       */
+      override fun queryFilterStringEnabled(queryFilterStringEnabled: IResolvable) {
+        cdkBuilder.queryFilterStringEnabled(queryFilterStringEnabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.lex.CfnBot.QnAKendraConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.QnAKendraConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        QnAKendraConfigurationProperty {
+      /**
+       * Specifies whether to return an exact response from the Amazon Kendra index or to let the
+       * Amazon Bedrock model you select generate a response based on the results.
+       *
+       * To use this feature, you must first add FAQ questions to your index by following the steps
+       * at [Adding frequently asked questions (FAQs) to an
+       * index](https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qnakendraconfiguration.html#cfn-lex-bot-qnakendraconfiguration-exactresponse)
+       */
+      override fun exactResponse(): Any = unwrap(this).getExactResponse()
+
+      /**
+       * The ARN of the Amazon Kendra index to use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qnakendraconfiguration.html#cfn-lex-bot-qnakendraconfiguration-kendraindex)
+       */
+      override fun kendraIndex(): String = unwrap(this).getKendraIndex()
+
+      /**
+       * Contains the Amazon Kendra filter string to use if enabled.
+       *
+       * For more information on the Amazon Kendra search filter JSON format, see [Using document
+       * attributes to filter search
+       * results](https://docs.aws.amazon.com/kendra/latest/dg/filtering.html#search-filtering) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qnakendraconfiguration.html#cfn-lex-bot-qnakendraconfiguration-queryfilterstring)
+       */
+      override fun queryFilterString(): String? = unwrap(this).getQueryFilterString()
+
+      /**
+       * Specifies whether to enable an Amazon Kendra filter string or not.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-qnakendraconfiguration.html#cfn-lex-bot-qnakendraconfiguration-queryfilterstringenabled)
+       */
+      override fun queryFilterStringEnabled(): Any = unwrap(this).getQueryFilterStringEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): QnAKendraConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.QnAKendraConfigurationProperty):
+          QnAKendraConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QnAKendraConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: QnAKendraConfigurationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.QnAKendraConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.QnAKendraConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * ReplicationProperty replicationProperty = ReplicationProperty.builder()
+   * .replicaRegions(List.of("replicaRegions"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-replication.html)
+   */
+  public interface ReplicationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-replication.html#cfn-lex-bot-replication-replicaregions)
+     */
+    public fun replicaRegions(): List<String>
+
+    /**
+     * A builder for [ReplicationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param replicaRegions the value to be set. 
+       */
+      public fun replicaRegions(replicaRegions: List<String>)
+
+      /**
+       * @param replicaRegions the value to be set. 
+       */
+      public fun replicaRegions(vararg replicaRegions: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.services.lex.CfnBot.ReplicationProperty.Builder
+          = software.amazon.awscdk.services.lex.CfnBot.ReplicationProperty.builder()
+
+      /**
+       * @param replicaRegions the value to be set. 
+       */
+      override fun replicaRegions(replicaRegions: List<String>) {
+        cdkBuilder.replicaRegions(replicaRegions)
+      }
+
+      /**
+       * @param replicaRegions the value to be set. 
+       */
+      override fun replicaRegions(vararg replicaRegions: String): Unit =
+          replicaRegions(replicaRegions.toList())
+
+      public fun build(): software.amazon.awscdk.services.lex.CfnBot.ReplicationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.ReplicationProperty,
+    ) : CdkObject(cdkObject),
+        ReplicationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-replication.html#cfn-lex-bot-replication-replicaregions)
+       */
+      override fun replicaRegions(): List<String> = unwrap(this).getReplicaRegions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReplicationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.ReplicationProperty):
+          ReplicationProperty = CdkObjectWrappers.wrap(cdkObject) as? ReplicationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReplicationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.ReplicationProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.lex.CfnBot.ReplicationProperty
+    }
+  }
+
+  /**
    * Specifies a list of message groups that Amazon Lex uses to respond the user input.
    *
    * Example:
@@ -13469,6 +16956,190 @@ public open class CfnBot(
           software.amazon.awscdk.services.lex.CfnBot.ResponseSpecificationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.lex.CfnBot.ResponseSpecificationProperty
+    }
+  }
+
+  /**
+   * Contains specifications about the Amazon Lex runtime generative AI capabilities from Amazon
+   * Bedrock that you can turn on for your bot.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * RuntimeSettingsProperty runtimeSettingsProperty = RuntimeSettingsProperty.builder()
+   * .nluImprovementSpecification(NluImprovementSpecificationProperty.builder()
+   * .enabled(false)
+   * .build())
+   * .slotResolutionImprovementSpecification(SlotResolutionImprovementSpecificationProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .bedrockModelSpecification(BedrockModelSpecificationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .bedrockGuardrailConfiguration(BedrockGuardrailConfigurationProperty.builder()
+   * .bedrockGuardrailIdentifier("bedrockGuardrailIdentifier")
+   * .bedrockGuardrailVersion("bedrockGuardrailVersion")
+   * .build())
+   * .bedrockModelCustomPrompt("bedrockModelCustomPrompt")
+   * .bedrockTraceStatus("bedrockTraceStatus")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-runtimesettings.html)
+   */
+  public interface RuntimeSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-runtimesettings.html#cfn-lex-bot-runtimesettings-nluimprovementspecification)
+     */
+    public fun nluImprovementSpecification(): Any? = unwrap(this).getNluImprovementSpecification()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-runtimesettings.html#cfn-lex-bot-runtimesettings-slotresolutionimprovementspecification)
+     */
+    public fun slotResolutionImprovementSpecification(): Any? =
+        unwrap(this).getSlotResolutionImprovementSpecification()
+
+    /**
+     * A builder for [RuntimeSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param nluImprovementSpecification the value to be set.
+       */
+      public fun nluImprovementSpecification(nluImprovementSpecification: IResolvable)
+
+      /**
+       * @param nluImprovementSpecification the value to be set.
+       */
+      public
+          fun nluImprovementSpecification(nluImprovementSpecification: NluImprovementSpecificationProperty)
+
+      /**
+       * @param nluImprovementSpecification the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("93aa87bcd8ba92ecf6bc5daf738c9151c8a0e706cb2a25eae98e683fb39c6393")
+      public
+          fun nluImprovementSpecification(nluImprovementSpecification: NluImprovementSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param slotResolutionImprovementSpecification the value to be set.
+       */
+      public
+          fun slotResolutionImprovementSpecification(slotResolutionImprovementSpecification: IResolvable)
+
+      /**
+       * @param slotResolutionImprovementSpecification the value to be set.
+       */
+      public
+          fun slotResolutionImprovementSpecification(slotResolutionImprovementSpecification: SlotResolutionImprovementSpecificationProperty)
+
+      /**
+       * @param slotResolutionImprovementSpecification the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9f9eb76a5a2c6f90939d914471057f800504f34bfc768f368f7992ae06d4d4b1")
+      public
+          fun slotResolutionImprovementSpecification(slotResolutionImprovementSpecification: SlotResolutionImprovementSpecificationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.RuntimeSettingsProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.RuntimeSettingsProperty.builder()
+
+      /**
+       * @param nluImprovementSpecification the value to be set.
+       */
+      override fun nluImprovementSpecification(nluImprovementSpecification: IResolvable) {
+        cdkBuilder.nluImprovementSpecification(nluImprovementSpecification.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param nluImprovementSpecification the value to be set.
+       */
+      override
+          fun nluImprovementSpecification(nluImprovementSpecification: NluImprovementSpecificationProperty) {
+        cdkBuilder.nluImprovementSpecification(nluImprovementSpecification.let(NluImprovementSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param nluImprovementSpecification the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("93aa87bcd8ba92ecf6bc5daf738c9151c8a0e706cb2a25eae98e683fb39c6393")
+      override
+          fun nluImprovementSpecification(nluImprovementSpecification: NluImprovementSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          nluImprovementSpecification(NluImprovementSpecificationProperty(nluImprovementSpecification))
+
+      /**
+       * @param slotResolutionImprovementSpecification the value to be set.
+       */
+      override
+          fun slotResolutionImprovementSpecification(slotResolutionImprovementSpecification: IResolvable) {
+        cdkBuilder.slotResolutionImprovementSpecification(slotResolutionImprovementSpecification.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param slotResolutionImprovementSpecification the value to be set.
+       */
+      override
+          fun slotResolutionImprovementSpecification(slotResolutionImprovementSpecification: SlotResolutionImprovementSpecificationProperty) {
+        cdkBuilder.slotResolutionImprovementSpecification(slotResolutionImprovementSpecification.let(SlotResolutionImprovementSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param slotResolutionImprovementSpecification the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9f9eb76a5a2c6f90939d914471057f800504f34bfc768f368f7992ae06d4d4b1")
+      override
+          fun slotResolutionImprovementSpecification(slotResolutionImprovementSpecification: SlotResolutionImprovementSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          slotResolutionImprovementSpecification(SlotResolutionImprovementSpecificationProperty(slotResolutionImprovementSpecification))
+
+      public fun build(): software.amazon.awscdk.services.lex.CfnBot.RuntimeSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.RuntimeSettingsProperty,
+    ) : CdkObject(cdkObject),
+        RuntimeSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-runtimesettings.html#cfn-lex-bot-runtimesettings-nluimprovementspecification)
+       */
+      override fun nluImprovementSpecification(): Any? =
+          unwrap(this).getNluImprovementSpecification()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-runtimesettings.html#cfn-lex-bot-runtimesettings-slotresolutionimprovementspecification)
+       */
+      override fun slotResolutionImprovementSpecification(): Any? =
+          unwrap(this).getSlotResolutionImprovementSpecification()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RuntimeSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.RuntimeSettingsProperty):
+          RuntimeSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? RuntimeSettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RuntimeSettingsProperty):
+          software.amazon.awscdk.services.lex.CfnBot.RuntimeSettingsProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.lex.CfnBot.RuntimeSettingsProperty
     }
   }
 
@@ -13823,6 +17494,168 @@ public open class CfnBot(
       internal fun unwrap(wrapped: SSMLMessageProperty):
           software.amazon.awscdk.services.lex.CfnBot.SSMLMessageProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.lex.CfnBot.SSMLMessageProperty
+    }
+  }
+
+  /**
+   * Contains specifications for the sample utterance generation feature.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * SampleUtteranceGenerationSpecificationProperty sampleUtteranceGenerationSpecificationProperty =
+   * SampleUtteranceGenerationSpecificationProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .bedrockModelSpecification(BedrockModelSpecificationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .bedrockGuardrailConfiguration(BedrockGuardrailConfigurationProperty.builder()
+   * .bedrockGuardrailIdentifier("bedrockGuardrailIdentifier")
+   * .bedrockGuardrailVersion("bedrockGuardrailVersion")
+   * .build())
+   * .bedrockModelCustomPrompt("bedrockModelCustomPrompt")
+   * .bedrockTraceStatus("bedrockTraceStatus")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-sampleutterancegenerationspecification.html)
+   */
+  public interface SampleUtteranceGenerationSpecificationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-sampleutterancegenerationspecification.html#cfn-lex-bot-sampleutterancegenerationspecification-bedrockmodelspecification)
+     */
+    public fun bedrockModelSpecification(): Any? = unwrap(this).getBedrockModelSpecification()
+
+    /**
+     * Specifies whether to enable sample utterance generation or not.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-sampleutterancegenerationspecification.html#cfn-lex-bot-sampleutterancegenerationspecification-enabled)
+     */
+    public fun enabled(): Any
+
+    /**
+     * A builder for [SampleUtteranceGenerationSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bedrockModelSpecification the value to be set.
+       */
+      public fun bedrockModelSpecification(bedrockModelSpecification: IResolvable)
+
+      /**
+       * @param bedrockModelSpecification the value to be set.
+       */
+      public
+          fun bedrockModelSpecification(bedrockModelSpecification: BedrockModelSpecificationProperty)
+
+      /**
+       * @param bedrockModelSpecification the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("eeaaecaffcb70a27aade133f3f3aafd0c2fbad5550ef4a1d0022e947eeebccc3")
+      public
+          fun bedrockModelSpecification(bedrockModelSpecification: BedrockModelSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param enabled Specifies whether to enable sample utterance generation or not. 
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specifies whether to enable sample utterance generation or not. 
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.SampleUtteranceGenerationSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.lex.CfnBot.SampleUtteranceGenerationSpecificationProperty.builder()
+
+      /**
+       * @param bedrockModelSpecification the value to be set.
+       */
+      override fun bedrockModelSpecification(bedrockModelSpecification: IResolvable) {
+        cdkBuilder.bedrockModelSpecification(bedrockModelSpecification.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockModelSpecification the value to be set.
+       */
+      override
+          fun bedrockModelSpecification(bedrockModelSpecification: BedrockModelSpecificationProperty) {
+        cdkBuilder.bedrockModelSpecification(bedrockModelSpecification.let(BedrockModelSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockModelSpecification the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("eeaaecaffcb70a27aade133f3f3aafd0c2fbad5550ef4a1d0022e947eeebccc3")
+      override
+          fun bedrockModelSpecification(bedrockModelSpecification: BedrockModelSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          bedrockModelSpecification(BedrockModelSpecificationProperty(bedrockModelSpecification))
+
+      /**
+       * @param enabled Specifies whether to enable sample utterance generation or not. 
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Specifies whether to enable sample utterance generation or not. 
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBot.SampleUtteranceGenerationSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.SampleUtteranceGenerationSpecificationProperty,
+    ) : CdkObject(cdkObject),
+        SampleUtteranceGenerationSpecificationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-sampleutterancegenerationspecification.html#cfn-lex-bot-sampleutterancegenerationspecification-bedrockmodelspecification)
+       */
+      override fun bedrockModelSpecification(): Any? = unwrap(this).getBedrockModelSpecification()
+
+      /**
+       * Specifies whether to enable sample utterance generation or not.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-sampleutterancegenerationspecification.html#cfn-lex-bot-sampleutterancegenerationspecification-enabled)
+       */
+      override fun enabled(): Any = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SampleUtteranceGenerationSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SampleUtteranceGenerationSpecificationProperty):
+          SampleUtteranceGenerationSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SampleUtteranceGenerationSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SampleUtteranceGenerationSpecificationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.SampleUtteranceGenerationSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.SampleUtteranceGenerationSpecificationProperty
     }
   }
 
@@ -15091,6 +18924,11 @@ public open class CfnBot(
     public fun slotTypeName(): String
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slot.html#cfn-lex-bot-slot-subslotsetting)
+     */
+    public fun subSlotSetting(): Any? = unwrap(this).getSubSlotSetting()
+
+    /**
      * Determines the slot resolution strategy that Amazon Lex uses to return slot type values.
      *
      * The field can be set to one of the following values:
@@ -15171,6 +19009,23 @@ public open class CfnBot(
        * The slot type defines the acceptable values for the slot.
        */
       public fun slotTypeName(slotTypeName: String)
+
+      /**
+       * @param subSlotSetting the value to be set.
+       */
+      public fun subSlotSetting(subSlotSetting: IResolvable)
+
+      /**
+       * @param subSlotSetting the value to be set.
+       */
+      public fun subSlotSetting(subSlotSetting: SubSlotSettingProperty)
+
+      /**
+       * @param subSlotSetting the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3abb7917dffeec1f54f408603be2e072228c3cf7ebfe835bbb8b9eee939f9acc")
+      public fun subSlotSetting(subSlotSetting: SubSlotSettingProperty.Builder.() -> Unit)
 
       /**
        * @param valueElicitationSetting Determines the slot resolution strategy that Amazon Lex uses
@@ -15301,6 +19156,28 @@ public open class CfnBot(
       }
 
       /**
+       * @param subSlotSetting the value to be set.
+       */
+      override fun subSlotSetting(subSlotSetting: IResolvable) {
+        cdkBuilder.subSlotSetting(subSlotSetting.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param subSlotSetting the value to be set.
+       */
+      override fun subSlotSetting(subSlotSetting: SubSlotSettingProperty) {
+        cdkBuilder.subSlotSetting(subSlotSetting.let(SubSlotSettingProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param subSlotSetting the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3abb7917dffeec1f54f408603be2e072228c3cf7ebfe835bbb8b9eee939f9acc")
+      override fun subSlotSetting(subSlotSetting: SubSlotSettingProperty.Builder.() -> Unit): Unit =
+          subSlotSetting(SubSlotSettingProperty(subSlotSetting))
+
+      /**
        * @param valueElicitationSetting Determines the slot resolution strategy that Amazon Lex uses
        * to return slot type values. 
        * The field can be set to one of the following values:
@@ -15401,6 +19278,11 @@ public open class CfnBot(
       override fun slotTypeName(): String = unwrap(this).getSlotTypeName()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slot.html#cfn-lex-bot-slot-subslotsetting)
+       */
+      override fun subSlotSetting(): Any? = unwrap(this).getSubSlotSetting()
+
+      /**
        * Determines the slot resolution strategy that Amazon Lex uses to return slot type values.
        *
        * The field can be set to one of the following values:
@@ -15433,6 +19315,180 @@ public open class CfnBot(
   }
 
   /**
+   * Contains specifications for the assisted slot resolution feature.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * SlotResolutionImprovementSpecificationProperty slotResolutionImprovementSpecificationProperty =
+   * SlotResolutionImprovementSpecificationProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .bedrockModelSpecification(BedrockModelSpecificationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .bedrockGuardrailConfiguration(BedrockGuardrailConfigurationProperty.builder()
+   * .bedrockGuardrailIdentifier("bedrockGuardrailIdentifier")
+   * .bedrockGuardrailVersion("bedrockGuardrailVersion")
+   * .build())
+   * .bedrockModelCustomPrompt("bedrockModelCustomPrompt")
+   * .bedrockTraceStatus("bedrockTraceStatus")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slotresolutionimprovementspecification.html)
+   */
+  public interface SlotResolutionImprovementSpecificationProperty {
+    /**
+     * An object containing information about the Amazon Bedrock model used to assist slot
+     * resolution.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slotresolutionimprovementspecification.html#cfn-lex-bot-slotresolutionimprovementspecification-bedrockmodelspecification)
+     */
+    public fun bedrockModelSpecification(): Any? = unwrap(this).getBedrockModelSpecification()
+
+    /**
+     * Specifies whether assisted slot resolution is turned on or off.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slotresolutionimprovementspecification.html#cfn-lex-bot-slotresolutionimprovementspecification-enabled)
+     */
+    public fun enabled(): Any
+
+    /**
+     * A builder for [SlotResolutionImprovementSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bedrockModelSpecification An object containing information about the Amazon Bedrock
+       * model used to assist slot resolution.
+       */
+      public fun bedrockModelSpecification(bedrockModelSpecification: IResolvable)
+
+      /**
+       * @param bedrockModelSpecification An object containing information about the Amazon Bedrock
+       * model used to assist slot resolution.
+       */
+      public
+          fun bedrockModelSpecification(bedrockModelSpecification: BedrockModelSpecificationProperty)
+
+      /**
+       * @param bedrockModelSpecification An object containing information about the Amazon Bedrock
+       * model used to assist slot resolution.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7420e8e5fc028756cf220b531f49da1251e21feb8e94bee5572fcca0328a55a8")
+      public
+          fun bedrockModelSpecification(bedrockModelSpecification: BedrockModelSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param enabled Specifies whether assisted slot resolution is turned on or off. 
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specifies whether assisted slot resolution is turned on or off. 
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.SlotResolutionImprovementSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.lex.CfnBot.SlotResolutionImprovementSpecificationProperty.builder()
+
+      /**
+       * @param bedrockModelSpecification An object containing information about the Amazon Bedrock
+       * model used to assist slot resolution.
+       */
+      override fun bedrockModelSpecification(bedrockModelSpecification: IResolvable) {
+        cdkBuilder.bedrockModelSpecification(bedrockModelSpecification.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockModelSpecification An object containing information about the Amazon Bedrock
+       * model used to assist slot resolution.
+       */
+      override
+          fun bedrockModelSpecification(bedrockModelSpecification: BedrockModelSpecificationProperty) {
+        cdkBuilder.bedrockModelSpecification(bedrockModelSpecification.let(BedrockModelSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockModelSpecification An object containing information about the Amazon Bedrock
+       * model used to assist slot resolution.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7420e8e5fc028756cf220b531f49da1251e21feb8e94bee5572fcca0328a55a8")
+      override
+          fun bedrockModelSpecification(bedrockModelSpecification: BedrockModelSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          bedrockModelSpecification(BedrockModelSpecificationProperty(bedrockModelSpecification))
+
+      /**
+       * @param enabled Specifies whether assisted slot resolution is turned on or off. 
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Specifies whether assisted slot resolution is turned on or off. 
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBot.SlotResolutionImprovementSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotResolutionImprovementSpecificationProperty,
+    ) : CdkObject(cdkObject),
+        SlotResolutionImprovementSpecificationProperty {
+      /**
+       * An object containing information about the Amazon Bedrock model used to assist slot
+       * resolution.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slotresolutionimprovementspecification.html#cfn-lex-bot-slotresolutionimprovementspecification-bedrockmodelspecification)
+       */
+      override fun bedrockModelSpecification(): Any? = unwrap(this).getBedrockModelSpecification()
+
+      /**
+       * Specifies whether assisted slot resolution is turned on or off.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slotresolutionimprovementspecification.html#cfn-lex-bot-slotresolutionimprovementspecification-enabled)
+       */
+      override fun enabled(): Any = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SlotResolutionImprovementSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotResolutionImprovementSpecificationProperty):
+          SlotResolutionImprovementSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SlotResolutionImprovementSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SlotResolutionImprovementSpecificationProperty):
+          software.amazon.awscdk.services.lex.CfnBot.SlotResolutionImprovementSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.SlotResolutionImprovementSpecificationProperty
+    }
+  }
+
+  /**
    * Describes a slot type.
    *
    * Example:
@@ -15444,6 +19500,12 @@ public open class CfnBot(
    * SlotTypeProperty slotTypeProperty = SlotTypeProperty.builder()
    * .name("name")
    * // the properties below are optional
+   * .compositeSlotTypeSetting(CompositeSlotTypeSettingProperty.builder()
+   * .subSlots(List.of(SubSlotTypeCompositionProperty.builder()
+   * .name("name")
+   * .slotTypeId("slotTypeId")
+   * .build()))
+   * .build())
    * .description("description")
    * .externalSourceSetting(ExternalSourceSettingProperty.builder()
    * .grammarSlotTypeSetting(GrammarSlotTypeSettingProperty.builder()
@@ -15481,6 +19543,11 @@ public open class CfnBot(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slottype.html)
    */
   public interface SlotTypeProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slottype.html#cfn-lex-bot-slottype-compositeslottypesetting)
+     */
+    public fun compositeSlotTypeSetting(): Any? = unwrap(this).getCompositeSlotTypeSetting()
+
     /**
      * A description of the slot type.
      *
@@ -15549,6 +19616,25 @@ public open class CfnBot(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param compositeSlotTypeSetting the value to be set.
+       */
+      public fun compositeSlotTypeSetting(compositeSlotTypeSetting: IResolvable)
+
+      /**
+       * @param compositeSlotTypeSetting the value to be set.
+       */
+      public
+          fun compositeSlotTypeSetting(compositeSlotTypeSetting: CompositeSlotTypeSettingProperty)
+
+      /**
+       * @param compositeSlotTypeSetting the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("30bee57fe7d51132d839f0792771f743b5badff5813a01ca9cf52023d083aa6e")
+      public
+          fun compositeSlotTypeSetting(compositeSlotTypeSetting: CompositeSlotTypeSettingProperty.Builder.() -> Unit)
+
       /**
        * @param description A description of the slot type.
        * Use the description to help identify the slot type in lists.
@@ -15664,6 +19750,31 @@ public open class CfnBot(
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.lex.CfnBot.SlotTypeProperty.Builder =
           software.amazon.awscdk.services.lex.CfnBot.SlotTypeProperty.builder()
+
+      /**
+       * @param compositeSlotTypeSetting the value to be set.
+       */
+      override fun compositeSlotTypeSetting(compositeSlotTypeSetting: IResolvable) {
+        cdkBuilder.compositeSlotTypeSetting(compositeSlotTypeSetting.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param compositeSlotTypeSetting the value to be set.
+       */
+      override
+          fun compositeSlotTypeSetting(compositeSlotTypeSetting: CompositeSlotTypeSettingProperty) {
+        cdkBuilder.compositeSlotTypeSetting(compositeSlotTypeSetting.let(CompositeSlotTypeSettingProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param compositeSlotTypeSetting the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("30bee57fe7d51132d839f0792771f743b5badff5813a01ca9cf52023d083aa6e")
+      override
+          fun compositeSlotTypeSetting(compositeSlotTypeSetting: CompositeSlotTypeSettingProperty.Builder.() -> Unit):
+          Unit =
+          compositeSlotTypeSetting(CompositeSlotTypeSettingProperty(compositeSlotTypeSetting))
 
       /**
        * @param description A description of the slot type.
@@ -15805,6 +19916,11 @@ public open class CfnBot(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotTypeProperty,
     ) : CdkObject(cdkObject),
         SlotTypeProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slottype.html#cfn-lex-bot-slottype-compositeslottypesetting)
+       */
+      override fun compositeSlotTypeSetting(): Any? = unwrap(this).getCompositeSlotTypeSetting()
+
       /**
        * A description of the slot type.
        *
@@ -17315,6 +21431,390 @@ public open class CfnBot(
   }
 
   /**
+   * Subslot specifications.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * SpecificationsProperty specificationsProperty = SpecificationsProperty.builder()
+   * .slotTypeId("slotTypeId")
+   * .valueElicitationSetting(SubSlotValueElicitationSettingProperty.builder()
+   * .defaultValueSpecification(SlotDefaultValueSpecificationProperty.builder()
+   * .defaultValueList(List.of(SlotDefaultValueProperty.builder()
+   * .defaultValue("defaultValue")
+   * .build()))
+   * .build())
+   * .promptSpecification(PromptSpecificationProperty.builder()
+   * .maxRetries(123)
+   * .messageGroupsList(List.of(MessageGroupProperty.builder()
+   * .message(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .variations(List.of(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build()))
+   * .build()))
+   * // the properties below are optional
+   * .allowInterrupt(false)
+   * .messageSelectionStrategy("messageSelectionStrategy")
+   * .promptAttemptsSpecification(Map.of(
+   * "promptAttemptsSpecificationKey", PromptAttemptSpecificationProperty.builder()
+   * .allowedInputTypes(AllowedInputTypesProperty.builder()
+   * .allowAudioInput(false)
+   * .allowDtmfInput(false)
+   * .build())
+   * // the properties below are optional
+   * .allowInterrupt(false)
+   * .audioAndDtmfInputSpecification(AudioAndDTMFInputSpecificationProperty.builder()
+   * .startTimeoutMs(123)
+   * // the properties below are optional
+   * .audioSpecification(AudioSpecificationProperty.builder()
+   * .endTimeoutMs(123)
+   * .maxLengthMs(123)
+   * .build())
+   * .dtmfSpecification(DTMFSpecificationProperty.builder()
+   * .deletionCharacter("deletionCharacter")
+   * .endCharacter("endCharacter")
+   * .endTimeoutMs(123)
+   * .maxLength(123)
+   * .build())
+   * .build())
+   * .textInputSpecification(TextInputSpecificationProperty.builder()
+   * .startTimeoutMs(123)
+   * .build())
+   * .build()))
+   * .build())
+   * .sampleUtterances(List.of(SampleUtteranceProperty.builder()
+   * .utterance("utterance")
+   * .build()))
+   * .waitAndContinueSpecification(WaitAndContinueSpecificationProperty.builder()
+   * .continueResponse(ResponseSpecificationProperty.builder()
+   * .messageGroupsList(List.of(MessageGroupProperty.builder()
+   * .message(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .variations(List.of(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build()))
+   * .build()))
+   * // the properties below are optional
+   * .allowInterrupt(false)
+   * .build())
+   * .waitingResponse(ResponseSpecificationProperty.builder()
+   * .messageGroupsList(List.of(MessageGroupProperty.builder()
+   * .message(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .variations(List.of(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build()))
+   * .build()))
+   * // the properties below are optional
+   * .allowInterrupt(false)
+   * .build())
+   * // the properties below are optional
+   * .isActive(false)
+   * .stillWaitingResponse(StillWaitingResponseSpecificationProperty.builder()
+   * .frequencyInSeconds(123)
+   * .messageGroupsList(List.of(MessageGroupProperty.builder()
+   * .message(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .variations(List.of(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build()))
+   * .build()))
+   * .timeoutInSeconds(123)
+   * // the properties below are optional
+   * .allowInterrupt(false)
+   * .build())
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-specifications.html)
+   */
+  public interface SpecificationsProperty {
+    /**
+     * The unique identifier assigned to the slot type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-specifications.html#cfn-lex-bot-specifications-slottypeid)
+     */
+    public fun slotTypeId(): String
+
+    /**
+     * Specifies the elicitation setting details for constituent sub slots of a composite slot.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-specifications.html#cfn-lex-bot-specifications-valueelicitationsetting)
+     */
+    public fun valueElicitationSetting(): Any
+
+    /**
+     * A builder for [SpecificationsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param slotTypeId The unique identifier assigned to the slot type. 
+       */
+      public fun slotTypeId(slotTypeId: String)
+
+      /**
+       * @param valueElicitationSetting Specifies the elicitation setting details for constituent
+       * sub slots of a composite slot. 
+       */
+      public fun valueElicitationSetting(valueElicitationSetting: IResolvable)
+
+      /**
+       * @param valueElicitationSetting Specifies the elicitation setting details for constituent
+       * sub slots of a composite slot. 
+       */
+      public
+          fun valueElicitationSetting(valueElicitationSetting: SubSlotValueElicitationSettingProperty)
+
+      /**
+       * @param valueElicitationSetting Specifies the elicitation setting details for constituent
+       * sub slots of a composite slot. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3ad0c89f0ad8ea1ab869e0082f707e49afd86145bf3de0a4f4e2e1e4b28d0c2e")
+      public
+          fun valueElicitationSetting(valueElicitationSetting: SubSlotValueElicitationSettingProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.SpecificationsProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.SpecificationsProperty.builder()
+
+      /**
+       * @param slotTypeId The unique identifier assigned to the slot type. 
+       */
+      override fun slotTypeId(slotTypeId: String) {
+        cdkBuilder.slotTypeId(slotTypeId)
+      }
+
+      /**
+       * @param valueElicitationSetting Specifies the elicitation setting details for constituent
+       * sub slots of a composite slot. 
+       */
+      override fun valueElicitationSetting(valueElicitationSetting: IResolvable) {
+        cdkBuilder.valueElicitationSetting(valueElicitationSetting.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param valueElicitationSetting Specifies the elicitation setting details for constituent
+       * sub slots of a composite slot. 
+       */
+      override
+          fun valueElicitationSetting(valueElicitationSetting: SubSlotValueElicitationSettingProperty) {
+        cdkBuilder.valueElicitationSetting(valueElicitationSetting.let(SubSlotValueElicitationSettingProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param valueElicitationSetting Specifies the elicitation setting details for constituent
+       * sub slots of a composite slot. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3ad0c89f0ad8ea1ab869e0082f707e49afd86145bf3de0a4f4e2e1e4b28d0c2e")
+      override
+          fun valueElicitationSetting(valueElicitationSetting: SubSlotValueElicitationSettingProperty.Builder.() -> Unit):
+          Unit =
+          valueElicitationSetting(SubSlotValueElicitationSettingProperty(valueElicitationSetting))
+
+      public fun build(): software.amazon.awscdk.services.lex.CfnBot.SpecificationsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.SpecificationsProperty,
+    ) : CdkObject(cdkObject),
+        SpecificationsProperty {
+      /**
+       * The unique identifier assigned to the slot type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-specifications.html#cfn-lex-bot-specifications-slottypeid)
+       */
+      override fun slotTypeId(): String = unwrap(this).getSlotTypeId()
+
+      /**
+       * Specifies the elicitation setting details for constituent sub slots of a composite slot.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-specifications.html#cfn-lex-bot-specifications-valueelicitationsetting)
+       */
+      override fun valueElicitationSetting(): Any = unwrap(this).getValueElicitationSetting()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SpecificationsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SpecificationsProperty):
+          SpecificationsProperty = CdkObjectWrappers.wrap(cdkObject) as? SpecificationsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SpecificationsProperty):
+          software.amazon.awscdk.services.lex.CfnBot.SpecificationsProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.lex.CfnBot.SpecificationsProperty
+    }
+  }
+
+  /**
    * Defines the messages that Amazon Lex sends to a user to remind them that the bot is waiting for
    * a response.
    *
@@ -17582,6 +22082,1026 @@ public open class CfnBot(
           software.amazon.awscdk.services.lex.CfnBot.StillWaitingResponseSpecificationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.lex.CfnBot.StillWaitingResponseSpecificationProperty
+    }
+  }
+
+  /**
+   * Specifications for the constituent sub slots and the expression for the composite slot.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * SubSlotSettingProperty subSlotSettingProperty = SubSlotSettingProperty.builder()
+   * .expression("expression")
+   * .slotSpecifications(Map.of(
+   * "slotSpecificationsKey", SpecificationsProperty.builder()
+   * .slotTypeId("slotTypeId")
+   * .valueElicitationSetting(SubSlotValueElicitationSettingProperty.builder()
+   * .defaultValueSpecification(SlotDefaultValueSpecificationProperty.builder()
+   * .defaultValueList(List.of(SlotDefaultValueProperty.builder()
+   * .defaultValue("defaultValue")
+   * .build()))
+   * .build())
+   * .promptSpecification(PromptSpecificationProperty.builder()
+   * .maxRetries(123)
+   * .messageGroupsList(List.of(MessageGroupProperty.builder()
+   * .message(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .variations(List.of(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build()))
+   * .build()))
+   * // the properties below are optional
+   * .allowInterrupt(false)
+   * .messageSelectionStrategy("messageSelectionStrategy")
+   * .promptAttemptsSpecification(Map.of(
+   * "promptAttemptsSpecificationKey", PromptAttemptSpecificationProperty.builder()
+   * .allowedInputTypes(AllowedInputTypesProperty.builder()
+   * .allowAudioInput(false)
+   * .allowDtmfInput(false)
+   * .build())
+   * // the properties below are optional
+   * .allowInterrupt(false)
+   * .audioAndDtmfInputSpecification(AudioAndDTMFInputSpecificationProperty.builder()
+   * .startTimeoutMs(123)
+   * // the properties below are optional
+   * .audioSpecification(AudioSpecificationProperty.builder()
+   * .endTimeoutMs(123)
+   * .maxLengthMs(123)
+   * .build())
+   * .dtmfSpecification(DTMFSpecificationProperty.builder()
+   * .deletionCharacter("deletionCharacter")
+   * .endCharacter("endCharacter")
+   * .endTimeoutMs(123)
+   * .maxLength(123)
+   * .build())
+   * .build())
+   * .textInputSpecification(TextInputSpecificationProperty.builder()
+   * .startTimeoutMs(123)
+   * .build())
+   * .build()))
+   * .build())
+   * .sampleUtterances(List.of(SampleUtteranceProperty.builder()
+   * .utterance("utterance")
+   * .build()))
+   * .waitAndContinueSpecification(WaitAndContinueSpecificationProperty.builder()
+   * .continueResponse(ResponseSpecificationProperty.builder()
+   * .messageGroupsList(List.of(MessageGroupProperty.builder()
+   * .message(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .variations(List.of(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build()))
+   * .build()))
+   * // the properties below are optional
+   * .allowInterrupt(false)
+   * .build())
+   * .waitingResponse(ResponseSpecificationProperty.builder()
+   * .messageGroupsList(List.of(MessageGroupProperty.builder()
+   * .message(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .variations(List.of(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build()))
+   * .build()))
+   * // the properties below are optional
+   * .allowInterrupt(false)
+   * .build())
+   * // the properties below are optional
+   * .isActive(false)
+   * .stillWaitingResponse(StillWaitingResponseSpecificationProperty.builder()
+   * .frequencyInSeconds(123)
+   * .messageGroupsList(List.of(MessageGroupProperty.builder()
+   * .message(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .variations(List.of(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build()))
+   * .build()))
+   * .timeoutInSeconds(123)
+   * // the properties below are optional
+   * .allowInterrupt(false)
+   * .build())
+   * .build())
+   * .build())
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslotsetting.html)
+   */
+  public interface SubSlotSettingProperty {
+    /**
+     * The expression text for defining the constituent sub slots in the composite slot using
+     * logical AND and OR operators.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslotsetting.html#cfn-lex-bot-subslotsetting-expression)
+     */
+    public fun expression(): String? = unwrap(this).getExpression()
+
+    /**
+     * Specifications for the constituent sub slots of a composite slot.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslotsetting.html#cfn-lex-bot-subslotsetting-slotspecifications)
+     */
+    public fun slotSpecifications(): Any? = unwrap(this).getSlotSpecifications()
+
+    /**
+     * A builder for [SubSlotSettingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param expression The expression text for defining the constituent sub slots in the
+       * composite slot using logical AND and OR operators.
+       */
+      public fun expression(expression: String)
+
+      /**
+       * @param slotSpecifications Specifications for the constituent sub slots of a composite slot.
+       */
+      public fun slotSpecifications(slotSpecifications: IResolvable)
+
+      /**
+       * @param slotSpecifications Specifications for the constituent sub slots of a composite slot.
+       */
+      public fun slotSpecifications(slotSpecifications: Map<String, Any>)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.SubSlotSettingProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.SubSlotSettingProperty.builder()
+
+      /**
+       * @param expression The expression text for defining the constituent sub slots in the
+       * composite slot using logical AND and OR operators.
+       */
+      override fun expression(expression: String) {
+        cdkBuilder.expression(expression)
+      }
+
+      /**
+       * @param slotSpecifications Specifications for the constituent sub slots of a composite slot.
+       */
+      override fun slotSpecifications(slotSpecifications: IResolvable) {
+        cdkBuilder.slotSpecifications(slotSpecifications.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param slotSpecifications Specifications for the constituent sub slots of a composite slot.
+       */
+      override fun slotSpecifications(slotSpecifications: Map<String, Any>) {
+        cdkBuilder.slotSpecifications(slotSpecifications.mapValues{CdkObjectWrappers.unwrap(it.value)})
+      }
+
+      public fun build(): software.amazon.awscdk.services.lex.CfnBot.SubSlotSettingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.SubSlotSettingProperty,
+    ) : CdkObject(cdkObject),
+        SubSlotSettingProperty {
+      /**
+       * The expression text for defining the constituent sub slots in the composite slot using
+       * logical AND and OR operators.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslotsetting.html#cfn-lex-bot-subslotsetting-expression)
+       */
+      override fun expression(): String? = unwrap(this).getExpression()
+
+      /**
+       * Specifications for the constituent sub slots of a composite slot.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslotsetting.html#cfn-lex-bot-subslotsetting-slotspecifications)
+       */
+      override fun slotSpecifications(): Any? = unwrap(this).getSlotSpecifications()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SubSlotSettingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SubSlotSettingProperty):
+          SubSlotSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? SubSlotSettingProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SubSlotSettingProperty):
+          software.amazon.awscdk.services.lex.CfnBot.SubSlotSettingProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.lex.CfnBot.SubSlotSettingProperty
+    }
+  }
+
+  /**
+   * Subslot type composition.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * SubSlotTypeCompositionProperty subSlotTypeCompositionProperty =
+   * SubSlotTypeCompositionProperty.builder()
+   * .name("name")
+   * .slotTypeId("slotTypeId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslottypecomposition.html)
+   */
+  public interface SubSlotTypeCompositionProperty {
+    /**
+     * Name of a constituent sub slot inside a composite slot.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslottypecomposition.html#cfn-lex-bot-subslottypecomposition-name)
+     */
+    public fun name(): String
+
+    /**
+     * The unique identifier assigned to a slot type.
+     *
+     * This refers to either a built-in slot type or the unique slotTypeId of a custom slot type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslottypecomposition.html#cfn-lex-bot-subslottypecomposition-slottypeid)
+     */
+    public fun slotTypeId(): String
+
+    /**
+     * A builder for [SubSlotTypeCompositionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name Name of a constituent sub slot inside a composite slot. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param slotTypeId The unique identifier assigned to a slot type. 
+       * This refers to either a built-in slot type or the unique slotTypeId of a custom slot type.
+       */
+      public fun slotTypeId(slotTypeId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.SubSlotTypeCompositionProperty.Builder =
+          software.amazon.awscdk.services.lex.CfnBot.SubSlotTypeCompositionProperty.builder()
+
+      /**
+       * @param name Name of a constituent sub slot inside a composite slot. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param slotTypeId The unique identifier assigned to a slot type. 
+       * This refers to either a built-in slot type or the unique slotTypeId of a custom slot type.
+       */
+      override fun slotTypeId(slotTypeId: String) {
+        cdkBuilder.slotTypeId(slotTypeId)
+      }
+
+      public fun build(): software.amazon.awscdk.services.lex.CfnBot.SubSlotTypeCompositionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.SubSlotTypeCompositionProperty,
+    ) : CdkObject(cdkObject),
+        SubSlotTypeCompositionProperty {
+      /**
+       * Name of a constituent sub slot inside a composite slot.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslottypecomposition.html#cfn-lex-bot-subslottypecomposition-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The unique identifier assigned to a slot type.
+       *
+       * This refers to either a built-in slot type or the unique slotTypeId of a custom slot type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslottypecomposition.html#cfn-lex-bot-subslottypecomposition-slottypeid)
+       */
+      override fun slotTypeId(): String = unwrap(this).getSlotTypeId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SubSlotTypeCompositionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SubSlotTypeCompositionProperty):
+          SubSlotTypeCompositionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SubSlotTypeCompositionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SubSlotTypeCompositionProperty):
+          software.amazon.awscdk.services.lex.CfnBot.SubSlotTypeCompositionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.SubSlotTypeCompositionProperty
+    }
+  }
+
+  /**
+   * Subslot elicitation settings.
+   *
+   * `DefaultValueSpecification` is a list of default values for a constituent sub slot in a
+   * composite slot. Default values are used when Amazon Lex hasn't determined a value for a slot. You
+   * can specify default values from context variables, session attributes, and defined values. This is
+   * similar to `DefaultValueSpecification` for slots.
+   *
+   * `PromptSpecification` is the prompt that Amazon Lex uses to elicit the sub slot value from the
+   * user. This is similar to `PromptSpecification` for slots.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.lex.*;
+   * SubSlotValueElicitationSettingProperty subSlotValueElicitationSettingProperty =
+   * SubSlotValueElicitationSettingProperty.builder()
+   * .defaultValueSpecification(SlotDefaultValueSpecificationProperty.builder()
+   * .defaultValueList(List.of(SlotDefaultValueProperty.builder()
+   * .defaultValue("defaultValue")
+   * .build()))
+   * .build())
+   * .promptSpecification(PromptSpecificationProperty.builder()
+   * .maxRetries(123)
+   * .messageGroupsList(List.of(MessageGroupProperty.builder()
+   * .message(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .variations(List.of(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build()))
+   * .build()))
+   * // the properties below are optional
+   * .allowInterrupt(false)
+   * .messageSelectionStrategy("messageSelectionStrategy")
+   * .promptAttemptsSpecification(Map.of(
+   * "promptAttemptsSpecificationKey", PromptAttemptSpecificationProperty.builder()
+   * .allowedInputTypes(AllowedInputTypesProperty.builder()
+   * .allowAudioInput(false)
+   * .allowDtmfInput(false)
+   * .build())
+   * // the properties below are optional
+   * .allowInterrupt(false)
+   * .audioAndDtmfInputSpecification(AudioAndDTMFInputSpecificationProperty.builder()
+   * .startTimeoutMs(123)
+   * // the properties below are optional
+   * .audioSpecification(AudioSpecificationProperty.builder()
+   * .endTimeoutMs(123)
+   * .maxLengthMs(123)
+   * .build())
+   * .dtmfSpecification(DTMFSpecificationProperty.builder()
+   * .deletionCharacter("deletionCharacter")
+   * .endCharacter("endCharacter")
+   * .endTimeoutMs(123)
+   * .maxLength(123)
+   * .build())
+   * .build())
+   * .textInputSpecification(TextInputSpecificationProperty.builder()
+   * .startTimeoutMs(123)
+   * .build())
+   * .build()))
+   * .build())
+   * .sampleUtterances(List.of(SampleUtteranceProperty.builder()
+   * .utterance("utterance")
+   * .build()))
+   * .waitAndContinueSpecification(WaitAndContinueSpecificationProperty.builder()
+   * .continueResponse(ResponseSpecificationProperty.builder()
+   * .messageGroupsList(List.of(MessageGroupProperty.builder()
+   * .message(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .variations(List.of(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build()))
+   * .build()))
+   * // the properties below are optional
+   * .allowInterrupt(false)
+   * .build())
+   * .waitingResponse(ResponseSpecificationProperty.builder()
+   * .messageGroupsList(List.of(MessageGroupProperty.builder()
+   * .message(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .variations(List.of(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build()))
+   * .build()))
+   * // the properties below are optional
+   * .allowInterrupt(false)
+   * .build())
+   * // the properties below are optional
+   * .isActive(false)
+   * .stillWaitingResponse(StillWaitingResponseSpecificationProperty.builder()
+   * .frequencyInSeconds(123)
+   * .messageGroupsList(List.of(MessageGroupProperty.builder()
+   * .message(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .variations(List.of(MessageProperty.builder()
+   * .customPayload(CustomPayloadProperty.builder()
+   * .value("value")
+   * .build())
+   * .imageResponseCard(ImageResponseCardProperty.builder()
+   * .title("title")
+   * // the properties below are optional
+   * .buttons(List.of(ButtonProperty.builder()
+   * .text("text")
+   * .value("value")
+   * .build()))
+   * .imageUrl("imageUrl")
+   * .subtitle("subtitle")
+   * .build())
+   * .plainTextMessage(PlainTextMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .ssmlMessage(SSMLMessageProperty.builder()
+   * .value("value")
+   * .build())
+   * .build()))
+   * .build()))
+   * .timeoutInSeconds(123)
+   * // the properties below are optional
+   * .allowInterrupt(false)
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslotvalueelicitationsetting.html)
+   */
+  public interface SubSlotValueElicitationSettingProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslotvalueelicitationsetting.html#cfn-lex-bot-subslotvalueelicitationsetting-defaultvaluespecification)
+     */
+    public fun defaultValueSpecification(): Any? = unwrap(this).getDefaultValueSpecification()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslotvalueelicitationsetting.html#cfn-lex-bot-subslotvalueelicitationsetting-promptspecification)
+     */
+    public fun promptSpecification(): Any? = unwrap(this).getPromptSpecification()
+
+    /**
+     * If you know a specific pattern that users might respond to an Amazon Lex request for a sub
+     * slot value, you can provide those utterances to improve accuracy.
+     *
+     * This is optional. In most cases Amazon Lex is capable of understanding user utterances. This
+     * is similar to `SampleUtterances` for slots.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslotvalueelicitationsetting.html#cfn-lex-bot-subslotvalueelicitationsetting-sampleutterances)
+     */
+    public fun sampleUtterances(): Any? = unwrap(this).getSampleUtterances()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslotvalueelicitationsetting.html#cfn-lex-bot-subslotvalueelicitationsetting-waitandcontinuespecification)
+     */
+    public fun waitAndContinueSpecification(): Any? = unwrap(this).getWaitAndContinueSpecification()
+
+    /**
+     * A builder for [SubSlotValueElicitationSettingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param defaultValueSpecification the value to be set.
+       */
+      public fun defaultValueSpecification(defaultValueSpecification: IResolvable)
+
+      /**
+       * @param defaultValueSpecification the value to be set.
+       */
+      public
+          fun defaultValueSpecification(defaultValueSpecification: SlotDefaultValueSpecificationProperty)
+
+      /**
+       * @param defaultValueSpecification the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("83a28b3c20942931e8088510805c5bb2db4b72a74ea3002d1c4d9d3292d35c08")
+      public
+          fun defaultValueSpecification(defaultValueSpecification: SlotDefaultValueSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param promptSpecification the value to be set.
+       */
+      public fun promptSpecification(promptSpecification: IResolvable)
+
+      /**
+       * @param promptSpecification the value to be set.
+       */
+      public fun promptSpecification(promptSpecification: PromptSpecificationProperty)
+
+      /**
+       * @param promptSpecification the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4698a234934df4fdcfd582b414fcfe77337a643d54ef163bd772b589a142c322")
+      public
+          fun promptSpecification(promptSpecification: PromptSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param sampleUtterances If you know a specific pattern that users might respond to an
+       * Amazon Lex request for a sub slot value, you can provide those utterances to improve accuracy.
+       * This is optional. In most cases Amazon Lex is capable of understanding user utterances.
+       * This is similar to `SampleUtterances` for slots.
+       */
+      public fun sampleUtterances(sampleUtterances: IResolvable)
+
+      /**
+       * @param sampleUtterances If you know a specific pattern that users might respond to an
+       * Amazon Lex request for a sub slot value, you can provide those utterances to improve accuracy.
+       * This is optional. In most cases Amazon Lex is capable of understanding user utterances.
+       * This is similar to `SampleUtterances` for slots.
+       */
+      public fun sampleUtterances(sampleUtterances: List<Any>)
+
+      /**
+       * @param sampleUtterances If you know a specific pattern that users might respond to an
+       * Amazon Lex request for a sub slot value, you can provide those utterances to improve accuracy.
+       * This is optional. In most cases Amazon Lex is capable of understanding user utterances.
+       * This is similar to `SampleUtterances` for slots.
+       */
+      public fun sampleUtterances(vararg sampleUtterances: Any)
+
+      /**
+       * @param waitAndContinueSpecification the value to be set.
+       */
+      public fun waitAndContinueSpecification(waitAndContinueSpecification: IResolvable)
+
+      /**
+       * @param waitAndContinueSpecification the value to be set.
+       */
+      public
+          fun waitAndContinueSpecification(waitAndContinueSpecification: WaitAndContinueSpecificationProperty)
+
+      /**
+       * @param waitAndContinueSpecification the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b241c0e7c560ed4f1c406821096d85eef563ed7ceb47600d6e79984e2fe5dda0")
+      public
+          fun waitAndContinueSpecification(waitAndContinueSpecification: WaitAndContinueSpecificationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lex.CfnBot.SubSlotValueElicitationSettingProperty.Builder
+          =
+          software.amazon.awscdk.services.lex.CfnBot.SubSlotValueElicitationSettingProperty.builder()
+
+      /**
+       * @param defaultValueSpecification the value to be set.
+       */
+      override fun defaultValueSpecification(defaultValueSpecification: IResolvable) {
+        cdkBuilder.defaultValueSpecification(defaultValueSpecification.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param defaultValueSpecification the value to be set.
+       */
+      override
+          fun defaultValueSpecification(defaultValueSpecification: SlotDefaultValueSpecificationProperty) {
+        cdkBuilder.defaultValueSpecification(defaultValueSpecification.let(SlotDefaultValueSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param defaultValueSpecification the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("83a28b3c20942931e8088510805c5bb2db4b72a74ea3002d1c4d9d3292d35c08")
+      override
+          fun defaultValueSpecification(defaultValueSpecification: SlotDefaultValueSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          defaultValueSpecification(SlotDefaultValueSpecificationProperty(defaultValueSpecification))
+
+      /**
+       * @param promptSpecification the value to be set.
+       */
+      override fun promptSpecification(promptSpecification: IResolvable) {
+        cdkBuilder.promptSpecification(promptSpecification.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param promptSpecification the value to be set.
+       */
+      override fun promptSpecification(promptSpecification: PromptSpecificationProperty) {
+        cdkBuilder.promptSpecification(promptSpecification.let(PromptSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param promptSpecification the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4698a234934df4fdcfd582b414fcfe77337a643d54ef163bd772b589a142c322")
+      override
+          fun promptSpecification(promptSpecification: PromptSpecificationProperty.Builder.() -> Unit):
+          Unit = promptSpecification(PromptSpecificationProperty(promptSpecification))
+
+      /**
+       * @param sampleUtterances If you know a specific pattern that users might respond to an
+       * Amazon Lex request for a sub slot value, you can provide those utterances to improve accuracy.
+       * This is optional. In most cases Amazon Lex is capable of understanding user utterances.
+       * This is similar to `SampleUtterances` for slots.
+       */
+      override fun sampleUtterances(sampleUtterances: IResolvable) {
+        cdkBuilder.sampleUtterances(sampleUtterances.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param sampleUtterances If you know a specific pattern that users might respond to an
+       * Amazon Lex request for a sub slot value, you can provide those utterances to improve accuracy.
+       * This is optional. In most cases Amazon Lex is capable of understanding user utterances.
+       * This is similar to `SampleUtterances` for slots.
+       */
+      override fun sampleUtterances(sampleUtterances: List<Any>) {
+        cdkBuilder.sampleUtterances(sampleUtterances.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param sampleUtterances If you know a specific pattern that users might respond to an
+       * Amazon Lex request for a sub slot value, you can provide those utterances to improve accuracy.
+       * This is optional. In most cases Amazon Lex is capable of understanding user utterances.
+       * This is similar to `SampleUtterances` for slots.
+       */
+      override fun sampleUtterances(vararg sampleUtterances: Any): Unit =
+          sampleUtterances(sampleUtterances.toList())
+
+      /**
+       * @param waitAndContinueSpecification the value to be set.
+       */
+      override fun waitAndContinueSpecification(waitAndContinueSpecification: IResolvable) {
+        cdkBuilder.waitAndContinueSpecification(waitAndContinueSpecification.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param waitAndContinueSpecification the value to be set.
+       */
+      override
+          fun waitAndContinueSpecification(waitAndContinueSpecification: WaitAndContinueSpecificationProperty) {
+        cdkBuilder.waitAndContinueSpecification(waitAndContinueSpecification.let(WaitAndContinueSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param waitAndContinueSpecification the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b241c0e7c560ed4f1c406821096d85eef563ed7ceb47600d6e79984e2fe5dda0")
+      override
+          fun waitAndContinueSpecification(waitAndContinueSpecification: WaitAndContinueSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          waitAndContinueSpecification(WaitAndContinueSpecificationProperty(waitAndContinueSpecification))
+
+      public fun build():
+          software.amazon.awscdk.services.lex.CfnBot.SubSlotValueElicitationSettingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.lex.CfnBot.SubSlotValueElicitationSettingProperty,
+    ) : CdkObject(cdkObject),
+        SubSlotValueElicitationSettingProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslotvalueelicitationsetting.html#cfn-lex-bot-subslotvalueelicitationsetting-defaultvaluespecification)
+       */
+      override fun defaultValueSpecification(): Any? = unwrap(this).getDefaultValueSpecification()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslotvalueelicitationsetting.html#cfn-lex-bot-subslotvalueelicitationsetting-promptspecification)
+       */
+      override fun promptSpecification(): Any? = unwrap(this).getPromptSpecification()
+
+      /**
+       * If you know a specific pattern that users might respond to an Amazon Lex request for a sub
+       * slot value, you can provide those utterances to improve accuracy.
+       *
+       * This is optional. In most cases Amazon Lex is capable of understanding user utterances.
+       * This is similar to `SampleUtterances` for slots.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslotvalueelicitationsetting.html#cfn-lex-bot-subslotvalueelicitationsetting-sampleutterances)
+       */
+      override fun sampleUtterances(): Any? = unwrap(this).getSampleUtterances()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslotvalueelicitationsetting.html#cfn-lex-bot-subslotvalueelicitationsetting-waitandcontinuespecification)
+       */
+      override fun waitAndContinueSpecification(): Any? =
+          unwrap(this).getWaitAndContinueSpecification()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SubSlotValueElicitationSettingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SubSlotValueElicitationSettingProperty):
+          SubSlotValueElicitationSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SubSlotValueElicitationSettingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SubSlotValueElicitationSettingProperty):
+          software.amazon.awscdk.services.lex.CfnBot.SubSlotValueElicitationSettingProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.lex.CfnBot.SubSlotValueElicitationSettingProperty
     }
   }
 

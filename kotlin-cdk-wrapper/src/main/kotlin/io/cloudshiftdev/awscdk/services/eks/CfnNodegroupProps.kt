@@ -66,6 +66,7 @@ import kotlin.jvm.JvmName
  * .updateConfig(UpdateConfigProperty.builder()
  * .maxUnavailable(123)
  * .maxUnavailablePercentage(123)
+ * .updateStrategy("updateStrategy")
  * .build())
  * .version("version")
  * .build();
@@ -166,7 +167,10 @@ public interface CfnNodegroupProps {
    * An object representing a node group's launch template specification.
    *
    * When using this object, don't directly specify `instanceTypes` , `diskSize` , or `remoteAccess`
-   * . Make sure that the launch template meets the requirements in `launchTemplateSpecification` .
+   * . You cannot later specify a different launch template ID or name than what was used to create the
+   * node group.
+   *
+   * Make sure that the launch template meets the requirements in `launchTemplateSpecification` .
    * Also refer to [Customizing managed nodes with launch
    * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
    * EKS User Guide* .
@@ -176,7 +180,7 @@ public interface CfnNodegroupProps {
   public fun launchTemplate(): Any? = unwrap(this).getLaunchTemplate()
 
   /**
-   * The node auto repair configuration for node group.
+   * The node auto repair configuration for the node group.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderepairconfig)
    */
@@ -400,7 +404,7 @@ public interface CfnNodegroupProps {
      * Only `labels` that are applied with the Amazon EKS API are shown here. There may be other
      * Kubernetes `labels` applied to the nodes in this group.
      */
-    public fun labels(labels: IResolvable)
+    public fun labels(labels: Map<String, String>)
 
     /**
      * @param labels The Kubernetes `labels` applied to the nodes in the node group.
@@ -408,13 +412,16 @@ public interface CfnNodegroupProps {
      * Only `labels` that are applied with the Amazon EKS API are shown here. There may be other
      * Kubernetes `labels` applied to the nodes in this group.
      */
-    public fun labels(labels: Map<String, String>)
+    public fun labels(labels: IResolvable)
 
     /**
      * @param launchTemplate An object representing a node group's launch template specification.
      * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
-     * `remoteAccess` . Make sure that the launch template meets the requirements in
-     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * `remoteAccess` . You cannot later specify a different launch template ID or name than what was
+     * used to create the node group.
+     *
+     * Make sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * Also refer to [Customizing managed nodes with launch
      * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
      * *Amazon EKS User Guide* .
      */
@@ -423,8 +430,11 @@ public interface CfnNodegroupProps {
     /**
      * @param launchTemplate An object representing a node group's launch template specification.
      * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
-     * `remoteAccess` . Make sure that the launch template meets the requirements in
-     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * `remoteAccess` . You cannot later specify a different launch template ID or name than what was
+     * used to create the node group.
+     *
+     * Make sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * Also refer to [Customizing managed nodes with launch
      * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
      * *Amazon EKS User Guide* .
      */
@@ -433,8 +443,11 @@ public interface CfnNodegroupProps {
     /**
      * @param launchTemplate An object representing a node group's launch template specification.
      * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
-     * `remoteAccess` . Make sure that the launch template meets the requirements in
-     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * `remoteAccess` . You cannot later specify a different launch template ID or name than what was
+     * used to create the node group.
+     *
+     * Make sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * Also refer to [Customizing managed nodes with launch
      * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
      * *Amazon EKS User Guide* .
      */
@@ -444,17 +457,17 @@ public interface CfnNodegroupProps {
         fun launchTemplate(launchTemplate: CfnNodegroup.LaunchTemplateSpecificationProperty.Builder.() -> Unit)
 
     /**
-     * @param nodeRepairConfig The node auto repair configuration for node group.
+     * @param nodeRepairConfig The node auto repair configuration for the node group.
      */
     public fun nodeRepairConfig(nodeRepairConfig: IResolvable)
 
     /**
-     * @param nodeRepairConfig The node auto repair configuration for node group.
+     * @param nodeRepairConfig The node auto repair configuration for the node group.
      */
     public fun nodeRepairConfig(nodeRepairConfig: CfnNodegroup.NodeRepairConfigProperty)
 
     /**
-     * @param nodeRepairConfig The node auto repair configuration for node group.
+     * @param nodeRepairConfig The node auto repair configuration for the node group.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("eda98060c40d77d6b1807101c213fffd27bd7c18bcff6d00f3fc1de23d7a82e7")
@@ -752,8 +765,8 @@ public interface CfnNodegroupProps {
      * Only `labels` that are applied with the Amazon EKS API are shown here. There may be other
      * Kubernetes `labels` applied to the nodes in this group.
      */
-    override fun labels(labels: IResolvable) {
-      cdkBuilder.labels(labels.let(IResolvable.Companion::unwrap))
+    override fun labels(labels: Map<String, String>) {
+      cdkBuilder.labels(labels)
     }
 
     /**
@@ -762,15 +775,18 @@ public interface CfnNodegroupProps {
      * Only `labels` that are applied with the Amazon EKS API are shown here. There may be other
      * Kubernetes `labels` applied to the nodes in this group.
      */
-    override fun labels(labels: Map<String, String>) {
-      cdkBuilder.labels(labels)
+    override fun labels(labels: IResolvable) {
+      cdkBuilder.labels(labels.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param launchTemplate An object representing a node group's launch template specification.
      * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
-     * `remoteAccess` . Make sure that the launch template meets the requirements in
-     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * `remoteAccess` . You cannot later specify a different launch template ID or name than what was
+     * used to create the node group.
+     *
+     * Make sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * Also refer to [Customizing managed nodes with launch
      * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
      * *Amazon EKS User Guide* .
      */
@@ -781,8 +797,11 @@ public interface CfnNodegroupProps {
     /**
      * @param launchTemplate An object representing a node group's launch template specification.
      * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
-     * `remoteAccess` . Make sure that the launch template meets the requirements in
-     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * `remoteAccess` . You cannot later specify a different launch template ID or name than what was
+     * used to create the node group.
+     *
+     * Make sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * Also refer to [Customizing managed nodes with launch
      * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
      * *Amazon EKS User Guide* .
      */
@@ -793,8 +812,11 @@ public interface CfnNodegroupProps {
     /**
      * @param launchTemplate An object representing a node group's launch template specification.
      * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
-     * `remoteAccess` . Make sure that the launch template meets the requirements in
-     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * `remoteAccess` . You cannot later specify a different launch template ID or name than what was
+     * used to create the node group.
+     *
+     * Make sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * Also refer to [Customizing managed nodes with launch
      * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
      * *Amazon EKS User Guide* .
      */
@@ -805,21 +827,21 @@ public interface CfnNodegroupProps {
         Unit = launchTemplate(CfnNodegroup.LaunchTemplateSpecificationProperty(launchTemplate))
 
     /**
-     * @param nodeRepairConfig The node auto repair configuration for node group.
+     * @param nodeRepairConfig The node auto repair configuration for the node group.
      */
     override fun nodeRepairConfig(nodeRepairConfig: IResolvable) {
       cdkBuilder.nodeRepairConfig(nodeRepairConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param nodeRepairConfig The node auto repair configuration for node group.
+     * @param nodeRepairConfig The node auto repair configuration for the node group.
      */
     override fun nodeRepairConfig(nodeRepairConfig: CfnNodegroup.NodeRepairConfigProperty) {
       cdkBuilder.nodeRepairConfig(nodeRepairConfig.let(CfnNodegroup.NodeRepairConfigProperty.Companion::unwrap))
     }
 
     /**
-     * @param nodeRepairConfig The node auto repair configuration for node group.
+     * @param nodeRepairConfig The node auto repair configuration for the node group.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("eda98060c40d77d6b1807101c213fffd27bd7c18bcff6d00f3fc1de23d7a82e7")
@@ -1140,8 +1162,11 @@ public interface CfnNodegroupProps {
      * An object representing a node group's launch template specification.
      *
      * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
-     * `remoteAccess` . Make sure that the launch template meets the requirements in
-     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * `remoteAccess` . You cannot later specify a different launch template ID or name than what was
+     * used to create the node group.
+     *
+     * Make sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * Also refer to [Customizing managed nodes with launch
      * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
      * *Amazon EKS User Guide* .
      *
@@ -1150,7 +1175,7 @@ public interface CfnNodegroupProps {
     override fun launchTemplate(): Any? = unwrap(this).getLaunchTemplate()
 
     /**
-     * The node auto repair configuration for node group.
+     * The node auto repair configuration for the node group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderepairconfig)
      */

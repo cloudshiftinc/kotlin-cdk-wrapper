@@ -42,6 +42,14 @@ public interface TxtRecordProps : RecordSetOptions {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param cidrRoutingConfig The object that is specified in resource record set object when you
+     * are linking a resource record set to a CIDR location.
+     * A LocationName with an asterisk “*” can be used to create a default CIDR record. CollectionId
+     * is still required for default record.
+     */
+    public fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfig)
+
+    /**
      * @param comment A comment to add on the record.
      */
     public fun comment(comment: String)
@@ -150,6 +158,16 @@ public interface TxtRecordProps : RecordSetOptions {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.route53.TxtRecordProps.Builder =
         software.amazon.awscdk.services.route53.TxtRecordProps.builder()
+
+    /**
+     * @param cidrRoutingConfig The object that is specified in resource record set object when you
+     * are linking a resource record set to a CIDR location.
+     * A LocationName with an asterisk “*” can be used to create a default CIDR record. CollectionId
+     * is still required for default record.
+     */
+    override fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfig) {
+      cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(CidrRoutingConfig.Companion::unwrap))
+    }
 
     /**
      * @param comment A comment to add on the record.
@@ -287,6 +305,20 @@ public interface TxtRecordProps : RecordSetOptions {
     cdkObject: software.amazon.awscdk.services.route53.TxtRecordProps,
   ) : CdkObject(cdkObject),
       TxtRecordProps {
+    /**
+     * The object that is specified in resource record set object when you are linking a resource
+     * record set to a CIDR location.
+     *
+     * A LocationName with an asterisk “*” can be used to create a default CIDR record. CollectionId
+     * is still required for default record.
+     *
+     * Default: - No CIDR routing configured
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordset.html#cfn-route53-recordset-cidrroutingconfig)
+     */
+    override fun cidrRoutingConfig(): CidrRoutingConfig? =
+        unwrap(this).getCidrRoutingConfig()?.let(CidrRoutingConfig::wrap)
+
     /**
      * A comment to add on the record.
      *

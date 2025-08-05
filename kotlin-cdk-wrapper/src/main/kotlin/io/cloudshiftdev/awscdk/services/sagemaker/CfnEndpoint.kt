@@ -183,16 +183,12 @@ public open class CfnEndpoint(
   }
 
   /**
-   * The name of the endpoint.The name must be unique within an AWS Region in your AWS account. The
-   * name is case-insensitive in `CreateEndpoint` , but the case is preserved and must be matched in
-   * [](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html) .
+   * The name of the endpoint.
    */
   public open fun endpointName(): String? = unwrap(this).getEndpointName()
 
   /**
-   * The name of the endpoint.The name must be unique within an AWS Region in your AWS account. The
-   * name is case-insensitive in `CreateEndpoint` , but the case is preserved and must be matched in
-   * [](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html) .
+   * The name of the endpoint.
    */
   public open fun endpointName(`value`: String) {
     unwrap(this).setEndpointName(`value`)
@@ -375,16 +371,14 @@ public open class CfnEndpoint(
     public fun endpointConfigName(endpointConfigName: String)
 
     /**
-     * The name of the endpoint.The name must be unique within an AWS Region in your AWS account.
-     * The name is case-insensitive in `CreateEndpoint` , but the case is preserved and must be matched
-     * in [](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html)
-     * .
+     * The name of the endpoint.
+     *
+     * The name must be unique within an AWS Region in your AWS account. The name is
+     * case-insensitive in `CreateEndpoint` , but the case is preserved and must be matched in
+     * [](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html#cfn-sagemaker-endpoint-endpointname)
-     * @param endpointName The name of the endpoint.The name must be unique within an AWS Region in
-     * your AWS account. The name is case-insensitive in `CreateEndpoint` , but the case is preserved
-     * and must be matched in
-     * [](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html) . 
+     * @param endpointName The name of the endpoint. 
      */
     public fun endpointName(endpointName: String)
 
@@ -592,16 +586,14 @@ public open class CfnEndpoint(
     }
 
     /**
-     * The name of the endpoint.The name must be unique within an AWS Region in your AWS account.
-     * The name is case-insensitive in `CreateEndpoint` , but the case is preserved and must be matched
-     * in [](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html)
-     * .
+     * The name of the endpoint.
+     *
+     * The name must be unique within an AWS Region in your AWS account. The name is
+     * case-insensitive in `CreateEndpoint` , but the case is preserved and must be matched in
+     * [](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html#cfn-sagemaker-endpoint-endpointname)
-     * @param endpointName The name of the endpoint.The name must be unique within an AWS Region in
-     * your AWS account. The name is case-insensitive in `CreateEndpoint` , but the case is preserved
-     * and must be matched in
-     * [](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html) . 
+     * @param endpointName The name of the endpoint. 
      */
     override fun endpointName(endpointName: String) {
       cdkBuilder.endpointName(endpointName)

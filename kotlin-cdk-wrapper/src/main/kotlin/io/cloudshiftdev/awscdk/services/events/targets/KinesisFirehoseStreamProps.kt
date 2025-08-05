@@ -9,7 +9,7 @@ import io.cloudshiftdev.awscdk.services.events.RuleTargetInput
 import kotlin.Unit
 
 /**
- * Customize the Firehose Stream Event Target.
+ * Customize the Amazon Data Firehose Stream Event Target.
  *
  * Example:
  *

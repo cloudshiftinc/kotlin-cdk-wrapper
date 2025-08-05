@@ -22,6 +22,7 @@ import kotlin.collections.List
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.route53.*;
+ * CidrRoutingConfig cidrRoutingConfig;
  * GeoLocation geoLocation;
  * HealthCheck healthCheck;
  * HostedZone hostedZone;
@@ -33,6 +34,7 @@ import kotlin.collections.List
  * .build()))
  * .zone(hostedZone)
  * // the properties below are optional
+ * .cidrRoutingConfig(cidrRoutingConfig)
  * .comment("comment")
  * .deleteExisting(false)
  * .geoLocation(geoLocation)
@@ -57,6 +59,14 @@ public interface CaaRecordProps : RecordSetOptions {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param cidrRoutingConfig The object that is specified in resource record set object when you
+     * are linking a resource record set to a CIDR location.
+     * A LocationName with an asterisk “*” can be used to create a default CIDR record. CollectionId
+     * is still required for default record.
+     */
+    public fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfig)
+
     /**
      * @param comment A comment to add on the record.
      */
@@ -166,6 +176,16 @@ public interface CaaRecordProps : RecordSetOptions {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.route53.CaaRecordProps.Builder =
         software.amazon.awscdk.services.route53.CaaRecordProps.builder()
+
+    /**
+     * @param cidrRoutingConfig The object that is specified in resource record set object when you
+     * are linking a resource record set to a CIDR location.
+     * A LocationName with an asterisk “*” can be used to create a default CIDR record. CollectionId
+     * is still required for default record.
+     */
+    override fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfig) {
+      cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(CidrRoutingConfig.Companion::unwrap))
+    }
 
     /**
      * @param comment A comment to add on the record.
@@ -303,6 +323,20 @@ public interface CaaRecordProps : RecordSetOptions {
     cdkObject: software.amazon.awscdk.services.route53.CaaRecordProps,
   ) : CdkObject(cdkObject),
       CaaRecordProps {
+    /**
+     * The object that is specified in resource record set object when you are linking a resource
+     * record set to a CIDR location.
+     *
+     * A LocationName with an asterisk “*” can be used to create a default CIDR record. CollectionId
+     * is still required for default record.
+     *
+     * Default: - No CIDR routing configured
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordset.html#cfn-route53-recordset-cidrroutingconfig)
+     */
+    override fun cidrRoutingConfig(): CidrRoutingConfig? =
+        unwrap(this).getCidrRoutingConfig()?.let(CidrRoutingConfig::wrap)
+
     /**
      * A comment to add on the record.
      *

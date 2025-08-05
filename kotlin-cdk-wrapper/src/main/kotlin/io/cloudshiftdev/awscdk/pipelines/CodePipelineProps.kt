@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Pipeline
+import io.cloudshiftdev.awscdk.services.codepipeline.PipelineType
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Boolean
@@ -49,7 +50,22 @@ public interface CodePipelineProps {
       unwrap(this).getAssetPublishingCodeBuildDefaults()?.let(CodeBuildOptions::wrap)
 
   /**
-   * CDK CLI version to use in self-mutation and asset publishing steps.
+   * CDK CLI version to use in asset publishing steps.
+   *
+   * If you want to lock the `cdk-assets` version used in the pipeline, by steps
+   * that are automatically generated for you, specify the version here.
+   *
+   * We recommend you do not specify this value, as not specifying it always
+   * uses the latest CLI version which is backwards compatible with old versions.
+   *
+   * Default: - Latest version
+   *
+   * [Documentation](https://www.npmjs.com/package/cdk-assets)
+   */
+  public fun cdkAssetsCliVersion(): String? = unwrap(this).getCdkAssetsCliVersion()
+
+  /**
+   * CDK CLI version to use in self-mutation step.
    *
    * If you want to lock the CDK CLI version used in the pipeline, by steps
    * that are automatically generated for you, specify the version here.
@@ -187,6 +203,16 @@ public interface CodePipelineProps {
   public fun pipelineName(): String? = unwrap(this).getPipelineName()
 
   /**
+   * Type of the pipeline.
+   *
+   * Default: - PipelineType.V2 if the feature flag `CODEPIPELINE_DEFAULT_PIPELINE_TYPE_TO_V2`
+   * is true, PipelineType.V1 otherwise
+   *
+   * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html)
+   */
+  public fun pipelineType(): PipelineType? = unwrap(this).getPipelineType()?.let(PipelineType::wrap)
+
+  /**
    * Publish assets in multiple CodeBuild projects.
    *
    * If set to false, use one Project per type to publish all assets.
@@ -268,6 +294,13 @@ public interface CodePipelineProps {
   public fun useChangeSets(): Boolean? = unwrap(this).getUseChangeSets()
 
   /**
+   * Use pipeline service role for actions if no action role configured.
+   *
+   * Default: - false
+   */
+  public fun usePipelineRoleForActions(): Boolean? = unwrap(this).getUsePipelineRoleForActions()
+
+  /**
    * A builder for [CodePipelineProps]
    */
   @CdkDslMarker
@@ -293,7 +326,17 @@ public interface CodePipelineProps {
         fun assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults: CodeBuildOptions.Builder.() -> Unit)
 
     /**
-     * @param cliVersion CDK CLI version to use in self-mutation and asset publishing steps.
+     * @param cdkAssetsCliVersion CDK CLI version to use in asset publishing steps.
+     * If you want to lock the `cdk-assets` version used in the pipeline, by steps
+     * that are automatically generated for you, specify the version here.
+     *
+     * We recommend you do not specify this value, as not specifying it always
+     * uses the latest CLI version which is backwards compatible with old versions.
+     */
+    public fun cdkAssetsCliVersion(cdkAssetsCliVersion: String)
+
+    /**
+     * @param cliVersion CDK CLI version to use in self-mutation step.
      * If you want to lock the CDK CLI version used in the pipeline, by steps
      * that are automatically generated for you, specify the version here.
      *
@@ -414,6 +457,11 @@ public interface CodePipelineProps {
     public fun pipelineName(pipelineName: String)
 
     /**
+     * @param pipelineType Type of the pipeline.
+     */
+    public fun pipelineType(pipelineType: PipelineType)
+
+    /**
      * @param publishAssetsInParallel Publish assets in multiple CodeBuild projects.
      * If set to false, use one Project per type to publish all assets.
      *
@@ -492,6 +540,12 @@ public interface CodePipelineProps {
      * to deploy the stack in one pipeline action.
      */
     public fun useChangeSets(useChangeSets: Boolean)
+
+    /**
+     * @param usePipelineRoleForActions Use pipeline service role for actions if no action role
+     * configured.
+     */
+    public fun usePipelineRoleForActions(usePipelineRoleForActions: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -525,7 +579,19 @@ public interface CodePipelineProps {
         Unit = assetPublishingCodeBuildDefaults(CodeBuildOptions(assetPublishingCodeBuildDefaults))
 
     /**
-     * @param cliVersion CDK CLI version to use in self-mutation and asset publishing steps.
+     * @param cdkAssetsCliVersion CDK CLI version to use in asset publishing steps.
+     * If you want to lock the `cdk-assets` version used in the pipeline, by steps
+     * that are automatically generated for you, specify the version here.
+     *
+     * We recommend you do not specify this value, as not specifying it always
+     * uses the latest CLI version which is backwards compatible with old versions.
+     */
+    override fun cdkAssetsCliVersion(cdkAssetsCliVersion: String) {
+      cdkBuilder.cdkAssetsCliVersion(cdkAssetsCliVersion)
+    }
+
+    /**
+     * @param cliVersion CDK CLI version to use in self-mutation step.
      * If you want to lock the CDK CLI version used in the pipeline, by steps
      * that are automatically generated for you, specify the version here.
      *
@@ -669,6 +735,13 @@ public interface CodePipelineProps {
     }
 
     /**
+     * @param pipelineType Type of the pipeline.
+     */
+    override fun pipelineType(pipelineType: PipelineType) {
+      cdkBuilder.pipelineType(pipelineType.let(PipelineType.Companion::unwrap))
+    }
+
+    /**
      * @param publishAssetsInParallel Publish assets in multiple CodeBuild projects.
      * If set to false, use one Project per type to publish all assets.
      *
@@ -767,6 +840,14 @@ public interface CodePipelineProps {
       cdkBuilder.useChangeSets(useChangeSets)
     }
 
+    /**
+     * @param usePipelineRoleForActions Use pipeline service role for actions if no action role
+     * configured.
+     */
+    override fun usePipelineRoleForActions(usePipelineRoleForActions: Boolean) {
+      cdkBuilder.usePipelineRoleForActions(usePipelineRoleForActions)
+    }
+
     public fun build(): software.amazon.awscdk.pipelines.CodePipelineProps = cdkBuilder.build()
   }
 
@@ -790,7 +871,22 @@ public interface CodePipelineProps {
         unwrap(this).getAssetPublishingCodeBuildDefaults()?.let(CodeBuildOptions::wrap)
 
     /**
-     * CDK CLI version to use in self-mutation and asset publishing steps.
+     * CDK CLI version to use in asset publishing steps.
+     *
+     * If you want to lock the `cdk-assets` version used in the pipeline, by steps
+     * that are automatically generated for you, specify the version here.
+     *
+     * We recommend you do not specify this value, as not specifying it always
+     * uses the latest CLI version which is backwards compatible with old versions.
+     *
+     * Default: - Latest version
+     *
+     * [Documentation](https://www.npmjs.com/package/cdk-assets)
+     */
+    override fun cdkAssetsCliVersion(): String? = unwrap(this).getCdkAssetsCliVersion()
+
+    /**
+     * CDK CLI version to use in self-mutation step.
      *
      * If you want to lock the CDK CLI version used in the pipeline, by steps
      * that are automatically generated for you, specify the version here.
@@ -929,6 +1025,17 @@ public interface CodePipelineProps {
     override fun pipelineName(): String? = unwrap(this).getPipelineName()
 
     /**
+     * Type of the pipeline.
+     *
+     * Default: - PipelineType.V2 if the feature flag `CODEPIPELINE_DEFAULT_PIPELINE_TYPE_TO_V2`
+     * is true, PipelineType.V1 otherwise
+     *
+     * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-types-planning.html)
+     */
+    override fun pipelineType(): PipelineType? =
+        unwrap(this).getPipelineType()?.let(PipelineType::wrap)
+
+    /**
      * Publish assets in multiple CodeBuild projects.
      *
      * If set to false, use one Project per type to publish all assets.
@@ -1008,6 +1115,13 @@ public interface CodePipelineProps {
      * Default: true
      */
     override fun useChangeSets(): Boolean? = unwrap(this).getUseChangeSets()
+
+    /**
+     * Use pipeline service role for actions if no action role configured.
+     *
+     * Default: - false
+     */
+    override fun usePipelineRoleForActions(): Boolean? = unwrap(this).getUsePipelineRoleForActions()
   }
 
   public companion object {

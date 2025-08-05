@@ -6,6 +6,8 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -21,6 +23,10 @@ public interface MetadataEntry {
   @CdkDslMarker
   public interface Builder {
     public fun `data`(`data`: String)
+
+    public fun `data`(`data`: Number)
+
+    public fun `data`(`data`: Boolean)
 
     public fun `data`(`data`: FileAssetMetadataEntry)
 
@@ -50,6 +56,14 @@ public interface MetadataEntry {
         software.amazon.awscdk.cloudassembly.schema.MetadataEntry.builder()
 
     override fun `data`(`data`: String) {
+      cdkBuilder.`data`(`data`)
+    }
+
+    override fun `data`(`data`: Number) {
+      cdkBuilder.`data`(`data`)
+    }
+
+    override fun `data`(`data`: Boolean) {
       cdkBuilder.`data`(`data`)
     }
 

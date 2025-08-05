@@ -17,15 +17,26 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * ISecret mySecret;
- * EcsJobDefinition jobDefn = EcsJobDefinition.Builder.create(this, "JobDefn")
- * .container(EcsEc2ContainerDefinition.Builder.create(this, "containerDefn")
- * .image(ContainerImage.fromRegistry("public.ecr.aws/amazonlinux/amazonlinux:latest"))
- * .memory(Size.mebibytes(2048))
- * .cpu(256)
- * .secrets(Map.of(
- * "MY_SECRET_ENV_VAR", Secret.fromSecretsManager(mySecret)))
- * .build())
+ * Vpc vpc;
+ * Cluster cluster = Cluster.Builder.create(this, "FargateCPCluster")
+ * .vpc(vpc)
+ * .enableFargateCapacityProviders(true)
+ * .build();
+ * FargateTaskDefinition taskDefinition = new FargateTaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("web", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .build());
+ * FargateService.Builder.create(this, "FargateService")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .minHealthyPercent(100)
+ * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
+ * .capacityProvider("FARGATE_SPOT")
+ * .weight(2)
+ * .build(), CapacityProviderStrategy.builder()
+ * .capacityProvider("FARGATE")
+ * .weight(1)
+ * .build()))
  * .build();
  * ```
  */

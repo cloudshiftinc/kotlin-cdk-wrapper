@@ -22,16 +22,16 @@ import kotlin.jvm.JvmName
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.apigateway.*;
- * Object managementPolicy;
  * Object policy;
  * CfnDomainNameV2Props cfnDomainNameV2Props = CfnDomainNameV2Props.builder()
  * .certificateArn("certificateArn")
  * .domainName("domainName")
  * .endpointConfiguration(EndpointConfigurationProperty.builder()
+ * .ipAddressType("ipAddressType")
  * .types(List.of("types"))
  * .build())
- * .managementPolicy(managementPolicy)
  * .policy(policy)
+ * .routingMode("routingMode")
  * .securityPolicy("securityPolicy")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -62,16 +62,11 @@ public interface CfnDomainNameV2Props {
 
   /**
    * The endpoint configuration to indicate the types of endpoints an API (RestApi) or its custom
-   * domain name (DomainName) has.
+   * domain name (DomainName) has and the IP address types that can invoke it.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-endpointconfiguration)
    */
   public fun endpointConfiguration(): Any? = unwrap(this).getEndpointConfiguration()
-
-  /**
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-managementpolicy)
-   */
-  public fun managementPolicy(): Any? = unwrap(this).getManagementPolicy()
 
   /**
    * A stringified JSON policy document that applies to the `execute-api` service for this
@@ -84,6 +79,18 @@ public interface CfnDomainNameV2Props {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-policy)
    */
   public fun policy(): Any? = unwrap(this).getPolicy()
+
+  /**
+   * The routing mode for this domain name.
+   *
+   * The routing mode determines how API Gateway sends traffic from your custom domain name to your
+   * private APIs.
+   *
+   * Default: - "BASE_PATH_MAPPING_ONLY"
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-routingmode)
+   */
+  public fun routingMode(): String? = unwrap(this).getRoutingMode()
 
   /**
    * The Transport Layer Security (TLS) version + cipher suite for this DomainName.
@@ -123,30 +130,28 @@ public interface CfnDomainNameV2Props {
 
     /**
      * @param endpointConfiguration The endpoint configuration to indicate the types of endpoints an
-     * API (RestApi) or its custom domain name (DomainName) has.
+     * API (RestApi) or its custom domain name (DomainName) has and the IP address types that can
+     * invoke it.
      */
     public fun endpointConfiguration(endpointConfiguration: IResolvable)
 
     /**
      * @param endpointConfiguration The endpoint configuration to indicate the types of endpoints an
-     * API (RestApi) or its custom domain name (DomainName) has.
+     * API (RestApi) or its custom domain name (DomainName) has and the IP address types that can
+     * invoke it.
      */
     public
         fun endpointConfiguration(endpointConfiguration: CfnDomainNameV2.EndpointConfigurationProperty)
 
     /**
      * @param endpointConfiguration The endpoint configuration to indicate the types of endpoints an
-     * API (RestApi) or its custom domain name (DomainName) has.
+     * API (RestApi) or its custom domain name (DomainName) has and the IP address types that can
+     * invoke it.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("49a70fda523db86322b4e8c0d3543885b9701b04659d860766b5fc0788e423cb")
     public
         fun endpointConfiguration(endpointConfiguration: CfnDomainNameV2.EndpointConfigurationProperty.Builder.() -> Unit)
-
-    /**
-     * @param managementPolicy the value to be set.
-     */
-    public fun managementPolicy(managementPolicy: Any)
 
     /**
      * @param policy A stringified JSON policy document that applies to the `execute-api` service
@@ -156,6 +161,13 @@ public interface CfnDomainNameV2Props {
      * .
      */
     public fun policy(policy: Any)
+
+    /**
+     * @param routingMode The routing mode for this domain name.
+     * The routing mode determines how API Gateway sends traffic from your custom domain name to
+     * your private APIs.
+     */
+    public fun routingMode(routingMode: String)
 
     /**
      * @param securityPolicy The Transport Layer Security (TLS) version + cipher suite for this
@@ -200,7 +212,8 @@ public interface CfnDomainNameV2Props {
 
     /**
      * @param endpointConfiguration The endpoint configuration to indicate the types of endpoints an
-     * API (RestApi) or its custom domain name (DomainName) has.
+     * API (RestApi) or its custom domain name (DomainName) has and the IP address types that can
+     * invoke it.
      */
     override fun endpointConfiguration(endpointConfiguration: IResolvable) {
       cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable.Companion::unwrap))
@@ -208,7 +221,8 @@ public interface CfnDomainNameV2Props {
 
     /**
      * @param endpointConfiguration The endpoint configuration to indicate the types of endpoints an
-     * API (RestApi) or its custom domain name (DomainName) has.
+     * API (RestApi) or its custom domain name (DomainName) has and the IP address types that can
+     * invoke it.
      */
     override
         fun endpointConfiguration(endpointConfiguration: CfnDomainNameV2.EndpointConfigurationProperty) {
@@ -217,7 +231,8 @@ public interface CfnDomainNameV2Props {
 
     /**
      * @param endpointConfiguration The endpoint configuration to indicate the types of endpoints an
-     * API (RestApi) or its custom domain name (DomainName) has.
+     * API (RestApi) or its custom domain name (DomainName) has and the IP address types that can
+     * invoke it.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("49a70fda523db86322b4e8c0d3543885b9701b04659d860766b5fc0788e423cb")
@@ -225,13 +240,6 @@ public interface CfnDomainNameV2Props {
         fun endpointConfiguration(endpointConfiguration: CfnDomainNameV2.EndpointConfigurationProperty.Builder.() -> Unit):
         Unit =
         endpointConfiguration(CfnDomainNameV2.EndpointConfigurationProperty(endpointConfiguration))
-
-    /**
-     * @param managementPolicy the value to be set.
-     */
-    override fun managementPolicy(managementPolicy: Any) {
-      cdkBuilder.managementPolicy(managementPolicy)
-    }
 
     /**
      * @param policy A stringified JSON policy document that applies to the `execute-api` service
@@ -242,6 +250,15 @@ public interface CfnDomainNameV2Props {
      */
     override fun policy(policy: Any) {
       cdkBuilder.policy(policy)
+    }
+
+    /**
+     * @param routingMode The routing mode for this domain name.
+     * The routing mode determines how API Gateway sends traffic from your custom domain name to
+     * your private APIs.
+     */
+    override fun routingMode(routingMode: String) {
+      cdkBuilder.routingMode(routingMode)
     }
 
     /**
@@ -294,16 +311,11 @@ public interface CfnDomainNameV2Props {
 
     /**
      * The endpoint configuration to indicate the types of endpoints an API (RestApi) or its custom
-     * domain name (DomainName) has.
+     * domain name (DomainName) has and the IP address types that can invoke it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-endpointconfiguration)
      */
     override fun endpointConfiguration(): Any? = unwrap(this).getEndpointConfiguration()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-managementpolicy)
-     */
-    override fun managementPolicy(): Any? = unwrap(this).getManagementPolicy()
 
     /**
      * A stringified JSON policy document that applies to the `execute-api` service for this
@@ -316,6 +328,18 @@ public interface CfnDomainNameV2Props {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-policy)
      */
     override fun policy(): Any? = unwrap(this).getPolicy()
+
+    /**
+     * The routing mode for this domain name.
+     *
+     * The routing mode determines how API Gateway sends traffic from your custom domain name to
+     * your private APIs.
+     *
+     * Default: - "BASE_PATH_MAPPING_ONLY"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainnamev2.html#cfn-apigateway-domainnamev2-routingmode)
+     */
+    override fun routingMode(): String? = unwrap(this).getRoutingMode()
 
     /**
      * The Transport Layer Security (TLS) version + cipher suite for this DomainName.

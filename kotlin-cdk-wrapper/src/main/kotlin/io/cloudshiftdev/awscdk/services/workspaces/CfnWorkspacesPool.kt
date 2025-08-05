@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -45,6 +46,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .settingsGroup("settingsGroup")
  * .build())
  * .description("description")
+ * .runningMode("runningMode")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -213,20 +215,35 @@ public open class CfnWorkspacesPool(
   }
 
   /**
-   * The tags for the pool.
+   * The running mode of the pool.
    */
+  public open fun runningMode(): String? = unwrap(this).getRunningMode()
+
+  /**
+   * The running mode of the pool.
+   */
+  public open fun runningMode(`value`: String) {
+    unwrap(this).setRunningMode(`value`)
+  }
+
+  /**
+   * @deprecated this property has been deprecated
+   */
+  @Deprecated(message = "deprecated in CDK")
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * The tags for the pool.
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * The tags for the pool.
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
@@ -347,19 +364,27 @@ public open class CfnWorkspacesPool(
     public fun poolName(poolName: String)
 
     /**
-     * The tags for the pool.
+     * The running mode of the pool.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspacespool.html#cfn-workspaces-workspacespool-tags)
-     * @param tags The tags for the pool. 
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspacespool.html#cfn-workspaces-workspacespool-runningmode)
+     * @param runningMode The running mode of the pool. 
      */
+    public fun runningMode(runningMode: String)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspacespool.html#cfn-workspaces-workspacespool-tags)
+     * @deprecated this property has been deprecated
+     * @param tags 
+     */
+    @Deprecated(message = "deprecated in CDK")
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * The tags for the pool.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspacespool.html#cfn-workspaces-workspacespool-tags)
-     * @param tags The tags for the pool. 
+     * @deprecated this property has been deprecated
+     * @param tags 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun tags(vararg tags: CfnTag)
 
     /**
@@ -515,21 +540,31 @@ public open class CfnWorkspacesPool(
     }
 
     /**
-     * The tags for the pool.
+     * The running mode of the pool.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspacespool.html#cfn-workspaces-workspacespool-tags)
-     * @param tags The tags for the pool. 
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspacespool.html#cfn-workspaces-workspacespool-runningmode)
+     * @param runningMode The running mode of the pool. 
      */
+    override fun runningMode(runningMode: String) {
+      cdkBuilder.runningMode(runningMode)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspacespool.html#cfn-workspaces-workspacespool-tags)
+     * @deprecated this property has been deprecated
+     * @param tags 
+     */
+    @Deprecated(message = "deprecated in CDK")
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * The tags for the pool.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspacespool.html#cfn-workspaces-workspacespool-tags)
-     * @param tags The tags for the pool. 
+     * @deprecated this property has been deprecated
+     * @param tags 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**

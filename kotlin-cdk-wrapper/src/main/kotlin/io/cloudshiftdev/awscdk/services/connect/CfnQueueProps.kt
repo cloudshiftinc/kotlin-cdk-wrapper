@@ -35,6 +35,9 @@ import kotlin.jvm.JvmName
  * .outboundCallerIdNumberArn("outboundCallerIdNumberArn")
  * .outboundFlowArn("outboundFlowArn")
  * .build())
+ * .outboundEmailConfig(OutboundEmailConfigProperty.builder()
+ * .outboundEmailAddressId("outboundEmailAddressId")
+ * .build())
  * .quickConnectArns(List.of("quickConnectArns"))
  * .status("status")
  * .tags(List.of(CfnTag.builder()
@@ -88,6 +91,13 @@ public interface CfnQueueProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html#cfn-connect-queue-outboundcallerconfig)
    */
   public fun outboundCallerConfig(): Any? = unwrap(this).getOutboundCallerConfig()
+
+  /**
+   * The outbound email address ID for a specified queue.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html#cfn-connect-queue-outboundemailconfig)
+   */
+  public fun outboundEmailConfig(): Any? = unwrap(this).getOutboundEmailConfig()
 
   /**
    * The Amazon Resource Names (ARN) of the of the quick connects available to agents who are
@@ -161,6 +171,24 @@ public interface CfnQueueProps {
     @JvmName("16880054666c2efa682ec1fe91fbb9db3ee063e4717a75239d9deb55b1db742a")
     public
         fun outboundCallerConfig(outboundCallerConfig: CfnQueue.OutboundCallerConfigProperty.Builder.() -> Unit)
+
+    /**
+     * @param outboundEmailConfig The outbound email address ID for a specified queue.
+     */
+    public fun outboundEmailConfig(outboundEmailConfig: IResolvable)
+
+    /**
+     * @param outboundEmailConfig The outbound email address ID for a specified queue.
+     */
+    public fun outboundEmailConfig(outboundEmailConfig: CfnQueue.OutboundEmailConfigProperty)
+
+    /**
+     * @param outboundEmailConfig The outbound email address ID for a specified queue.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1f32f2796799a10ed6779b8504c6b20f3d390b3fc54a49a656339b9403dfaf21")
+    public
+        fun outboundEmailConfig(outboundEmailConfig: CfnQueue.OutboundEmailConfigProperty.Builder.() -> Unit)
 
     /**
      * @param quickConnectArns The Amazon Resource Names (ARN) of the of the quick connects
@@ -256,6 +284,29 @@ public interface CfnQueueProps {
         Unit = outboundCallerConfig(CfnQueue.OutboundCallerConfigProperty(outboundCallerConfig))
 
     /**
+     * @param outboundEmailConfig The outbound email address ID for a specified queue.
+     */
+    override fun outboundEmailConfig(outboundEmailConfig: IResolvable) {
+      cdkBuilder.outboundEmailConfig(outboundEmailConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param outboundEmailConfig The outbound email address ID for a specified queue.
+     */
+    override fun outboundEmailConfig(outboundEmailConfig: CfnQueue.OutboundEmailConfigProperty) {
+      cdkBuilder.outboundEmailConfig(outboundEmailConfig.let(CfnQueue.OutboundEmailConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param outboundEmailConfig The outbound email address ID for a specified queue.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1f32f2796799a10ed6779b8504c6b20f3d390b3fc54a49a656339b9403dfaf21")
+    override
+        fun outboundEmailConfig(outboundEmailConfig: CfnQueue.OutboundEmailConfigProperty.Builder.() -> Unit):
+        Unit = outboundEmailConfig(CfnQueue.OutboundEmailConfigProperty(outboundEmailConfig))
+
+    /**
      * @param quickConnectArns The Amazon Resource Names (ARN) of the of the quick connects
      * available to agents who are working the queue.
      */
@@ -339,6 +390,13 @@ public interface CfnQueueProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html#cfn-connect-queue-outboundcallerconfig)
      */
     override fun outboundCallerConfig(): Any? = unwrap(this).getOutboundCallerConfig()
+
+    /**
+     * The outbound email address ID for a specified queue.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html#cfn-connect-queue-outboundemailconfig)
+     */
+    override fun outboundEmailConfig(): Any? = unwrap(this).getOutboundEmailConfig()
 
     /**
      * The Amazon Resource Names (ARN) of the of the quick connects available to agents who are

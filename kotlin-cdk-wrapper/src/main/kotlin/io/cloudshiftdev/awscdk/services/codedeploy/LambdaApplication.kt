@@ -93,6 +93,9 @@ public open class LambdaApplication(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.codedeploy.LambdaApplication.PROPERTY_INJECTION_ID
+
     public fun fromLambdaApplicationArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

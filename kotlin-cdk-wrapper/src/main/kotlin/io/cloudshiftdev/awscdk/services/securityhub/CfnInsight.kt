@@ -1331,20 +1331,9 @@ public open class CfnInsight(
      * A timestamp that indicates when the security findings provider created the potential security
      * issue that a finding reflects.
      *
-     * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-     * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
-     * Security Hub:
-     *
-     * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-     * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-     * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
-     *
-     * If a finding provider sends a finding to Security Hub that contains a timestamp in
-     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
-     * to `2024-10-31T23:00:00.123Z` .
+     * For more information about the validation and formatting of timestamp fields in AWS Security
+     * Hub , see
+     * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-createdat)
      */
@@ -1442,20 +1431,9 @@ public open class CfnInsight(
      * A timestamp that indicates when the security findings provider first observed the potential
      * security issue that a finding captured.
      *
-     * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-     * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
-     * Security Hub:
-     *
-     * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-     * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-     * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
-     *
-     * If a finding provider sends a finding to Security Hub that contains a timestamp in
-     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
-     * to `2024-10-31T23:00:00.123Z` .
+     * For more information about the validation and formatting of timestamp fields in AWS Security
+     * Hub , see
+     * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-firstobservedat)
      */
@@ -1489,23 +1467,12 @@ public open class CfnInsight(
     public fun keyword(): Any? = unwrap(this).getKeyword()
 
     /**
-     * A timestamp that indicates when the security findings provider most recently observed the
-     * potential security issue that a finding captured.
+     * A timestamp that indicates when the security findings provider most recently observed a
+     * change in the resource that is involved in the finding.
      *
-     * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-     * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
-     * Security Hub:
-     *
-     * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-     * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-     * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
-     *
-     * If a finding provider sends a finding to Security Hub that contains a timestamp in
-     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
-     * to `2024-10-31T23:00:00.123Z` .
+     * For more information about the validation and formatting of timestamp fields in AWS Security
+     * Hub , see
+     * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-lastobservedat)
      */
@@ -1640,20 +1607,9 @@ public open class CfnInsight(
     /**
      * A timestamp that identifies when the process was launched.
      *
-     * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-     * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
-     * Security Hub:
-     *
-     * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-     * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-     * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
-     *
-     * If a finding provider sends a finding to Security Hub that contains a timestamp in
-     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
-     * to `2024-10-31T23:00:00.123Z` .
+     * For more information about the validation and formatting of timestamp fields in AWS Security
+     * Hub , see
+     * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-processlaunchedat)
      */
@@ -1692,20 +1648,9 @@ public open class CfnInsight(
     /**
      * A timestamp that identifies when the process was terminated.
      *
-     * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-     * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
-     * Security Hub:
-     *
-     * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-     * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-     * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
-     *
-     * If a finding provider sends a finding to Security Hub that contains a timestamp in
-     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
-     * to `2024-10-31T23:00:00.123Z` .
+     * For more information about the validation and formatting of timestamp fields in AWS Security
+     * Hub , see
+     * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-processterminatedat)
      */
@@ -1926,20 +1871,9 @@ public open class CfnInsight(
     /**
      * A timestamp that identifies when the container was started.
      *
-     * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-     * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
-     * Security Hub:
-     *
-     * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-     * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-     * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
-     *
-     * If a finding provider sends a finding to Security Hub that contains a timestamp in
-     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
-     * to `2024-10-31T23:00:00.123Z` .
+     * For more information about the validation and formatting of timestamp fields in AWS Security
+     * Hub , see
+     * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-resourcecontainerlaunchedat)
      */
@@ -2057,6 +1991,10 @@ public open class CfnInsight(
     /**
      * A timestamp that identifies the last observation of a threat intelligence indicator.
      *
+     * For more information about the validation and formatting of timestamp fields in AWS Security
+     * Hub , see
+     * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps) .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-threatintelindicatorlastobservedat)
      */
     public fun threatIntelIndicatorLastObservedAt(): Any? =
@@ -2109,20 +2047,9 @@ public open class CfnInsight(
      * A timestamp that indicates when the security findings provider last updated the finding
      * record.
      *
-     * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-     * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
-     * Security Hub:
-     *
-     * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-     * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-     * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
-     *
-     * If a finding provider sends a finding to Security Hub that contains a timestamp in
-     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
-     * to `2024-10-31T23:00:00.123Z` .
+     * For more information about the validation and formatting of timestamp fields in AWS Security
+     * Hub , see
+     * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-updatedat)
      */
@@ -2413,63 +2340,30 @@ public open class CfnInsight(
       /**
        * @param createdAt A timestamp that indicates when the security findings provider created the
        * potential security issue that a finding reflects.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun createdAt(createdAt: IResolvable)
 
       /**
        * @param createdAt A timestamp that indicates when the security findings provider created the
        * potential security issue that a finding reflects.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun createdAt(createdAt: List<Any>)
 
       /**
        * @param createdAt A timestamp that indicates when the security findings provider created the
        * potential security issue that a finding reflects.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun createdAt(vararg createdAt: Any)
 
@@ -2683,63 +2577,30 @@ public open class CfnInsight(
       /**
        * @param firstObservedAt A timestamp that indicates when the security findings provider first
        * observed the potential security issue that a finding captured.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun firstObservedAt(firstObservedAt: IResolvable)
 
       /**
        * @param firstObservedAt A timestamp that indicates when the security findings provider first
        * observed the potential security issue that a finding captured.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun firstObservedAt(firstObservedAt: List<Any>)
 
       /**
        * @param firstObservedAt A timestamp that indicates when the security findings provider first
        * observed the potential security issue that a finding captured.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun firstObservedAt(vararg firstObservedAt: Any)
 
@@ -2802,64 +2663,31 @@ public open class CfnInsight(
 
       /**
        * @param lastObservedAt A timestamp that indicates when the security findings provider most
-       * recently observed the potential security issue that a finding captured.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * recently observed a change in the resource that is involved in the finding.
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun lastObservedAt(lastObservedAt: IResolvable)
 
       /**
        * @param lastObservedAt A timestamp that indicates when the security findings provider most
-       * recently observed the potential security issue that a finding captured.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * recently observed a change in the resource that is involved in the finding.
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun lastObservedAt(lastObservedAt: List<Any>)
 
       /**
        * @param lastObservedAt A timestamp that indicates when the security findings provider most
-       * recently observed the potential security issue that a finding captured.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * recently observed a change in the resource that is involved in the finding.
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun lastObservedAt(vararg lastObservedAt: Any)
 
@@ -3162,61 +2990,28 @@ public open class CfnInsight(
 
       /**
        * @param processLaunchedAt A timestamp that identifies when the process was launched.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun processLaunchedAt(processLaunchedAt: IResolvable)
 
       /**
        * @param processLaunchedAt A timestamp that identifies when the process was launched.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun processLaunchedAt(processLaunchedAt: List<Any>)
 
       /**
        * @param processLaunchedAt A timestamp that identifies when the process was launched.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun processLaunchedAt(vararg processLaunchedAt: Any)
 
@@ -3285,61 +3080,28 @@ public open class CfnInsight(
 
       /**
        * @param processTerminatedAt A timestamp that identifies when the process was terminated.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun processTerminatedAt(processTerminatedAt: IResolvable)
 
       /**
        * @param processTerminatedAt A timestamp that identifies when the process was terminated.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun processTerminatedAt(processTerminatedAt: List<Any>)
 
       /**
        * @param processTerminatedAt A timestamp that identifies when the process was terminated.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun processTerminatedAt(vararg processTerminatedAt: Any)
 
@@ -3803,63 +3565,30 @@ public open class CfnInsight(
       /**
        * @param resourceContainerLaunchedAt A timestamp that identifies when the container was
        * started.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun resourceContainerLaunchedAt(resourceContainerLaunchedAt: IResolvable)
 
       /**
        * @param resourceContainerLaunchedAt A timestamp that identifies when the container was
        * started.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun resourceContainerLaunchedAt(resourceContainerLaunchedAt: List<Any>)
 
       /**
        * @param resourceContainerLaunchedAt A timestamp that identifies when the container was
        * started.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun resourceContainerLaunchedAt(vararg resourceContainerLaunchedAt: Any)
 
@@ -4115,18 +3844,30 @@ public open class CfnInsight(
       /**
        * @param threatIntelIndicatorLastObservedAt A timestamp that identifies the last observation
        * of a threat intelligence indicator.
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun threatIntelIndicatorLastObservedAt(threatIntelIndicatorLastObservedAt: IResolvable)
 
       /**
        * @param threatIntelIndicatorLastObservedAt A timestamp that identifies the last observation
        * of a threat intelligence indicator.
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun threatIntelIndicatorLastObservedAt(threatIntelIndicatorLastObservedAt: List<Any>)
 
       /**
        * @param threatIntelIndicatorLastObservedAt A timestamp that identifies the last observation
        * of a threat intelligence indicator.
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun threatIntelIndicatorLastObservedAt(vararg threatIntelIndicatorLastObservedAt: Any)
 
@@ -4229,63 +3970,30 @@ public open class CfnInsight(
       /**
        * @param updatedAt A timestamp that indicates when the security findings provider last
        * updated the finding record.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun updatedAt(updatedAt: IResolvable)
 
       /**
        * @param updatedAt A timestamp that indicates when the security findings provider last
        * updated the finding record.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun updatedAt(updatedAt: List<Any>)
 
       /**
        * @param updatedAt A timestamp that indicates when the security findings provider last
        * updated the finding record.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun updatedAt(vararg updatedAt: Any)
 
@@ -4747,21 +4455,10 @@ public open class CfnInsight(
       /**
        * @param createdAt A timestamp that indicates when the security findings provider created the
        * potential security issue that a finding reflects.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun createdAt(createdAt: IResolvable) {
         cdkBuilder.createdAt(createdAt.let(IResolvable.Companion::unwrap))
@@ -4770,21 +4467,10 @@ public open class CfnInsight(
       /**
        * @param createdAt A timestamp that indicates when the security findings provider created the
        * potential security issue that a finding reflects.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun createdAt(createdAt: List<Any>) {
         cdkBuilder.createdAt(createdAt.map{CdkObjectWrappers.unwrap(it)})
@@ -4793,21 +4479,10 @@ public open class CfnInsight(
       /**
        * @param createdAt A timestamp that indicates when the security findings provider created the
        * potential security issue that a finding reflects.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun createdAt(vararg createdAt: Any): Unit = createdAt(createdAt.toList())
 
@@ -5067,21 +4742,10 @@ public open class CfnInsight(
       /**
        * @param firstObservedAt A timestamp that indicates when the security findings provider first
        * observed the potential security issue that a finding captured.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun firstObservedAt(firstObservedAt: IResolvable) {
         cdkBuilder.firstObservedAt(firstObservedAt.let(IResolvable.Companion::unwrap))
@@ -5090,21 +4754,10 @@ public open class CfnInsight(
       /**
        * @param firstObservedAt A timestamp that indicates when the security findings provider first
        * observed the potential security issue that a finding captured.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun firstObservedAt(firstObservedAt: List<Any>) {
         cdkBuilder.firstObservedAt(firstObservedAt.map{CdkObjectWrappers.unwrap(it)})
@@ -5113,21 +4766,10 @@ public open class CfnInsight(
       /**
        * @param firstObservedAt A timestamp that indicates when the security findings provider first
        * observed the potential security issue that a finding captured.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun firstObservedAt(vararg firstObservedAt: Any): Unit =
           firstObservedAt(firstObservedAt.toList())
@@ -5203,22 +4845,11 @@ public open class CfnInsight(
 
       /**
        * @param lastObservedAt A timestamp that indicates when the security findings provider most
-       * recently observed the potential security issue that a finding captured.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * recently observed a change in the resource that is involved in the finding.
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun lastObservedAt(lastObservedAt: IResolvable) {
         cdkBuilder.lastObservedAt(lastObservedAt.let(IResolvable.Companion::unwrap))
@@ -5226,22 +4857,11 @@ public open class CfnInsight(
 
       /**
        * @param lastObservedAt A timestamp that indicates when the security findings provider most
-       * recently observed the potential security issue that a finding captured.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * recently observed a change in the resource that is involved in the finding.
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun lastObservedAt(lastObservedAt: List<Any>) {
         cdkBuilder.lastObservedAt(lastObservedAt.map{CdkObjectWrappers.unwrap(it)})
@@ -5249,22 +4869,11 @@ public open class CfnInsight(
 
       /**
        * @param lastObservedAt A timestamp that indicates when the security findings provider most
-       * recently observed the potential security issue that a finding captured.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * recently observed a change in the resource that is involved in the finding.
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun lastObservedAt(vararg lastObservedAt: Any): Unit =
           lastObservedAt(lastObservedAt.toList())
@@ -5654,21 +5263,10 @@ public open class CfnInsight(
 
       /**
        * @param processLaunchedAt A timestamp that identifies when the process was launched.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun processLaunchedAt(processLaunchedAt: IResolvable) {
         cdkBuilder.processLaunchedAt(processLaunchedAt.let(IResolvable.Companion::unwrap))
@@ -5676,21 +5274,10 @@ public open class CfnInsight(
 
       /**
        * @param processLaunchedAt A timestamp that identifies when the process was launched.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun processLaunchedAt(processLaunchedAt: List<Any>) {
         cdkBuilder.processLaunchedAt(processLaunchedAt.map{CdkObjectWrappers.unwrap(it)})
@@ -5698,21 +5285,10 @@ public open class CfnInsight(
 
       /**
        * @param processLaunchedAt A timestamp that identifies when the process was launched.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun processLaunchedAt(vararg processLaunchedAt: Any): Unit =
           processLaunchedAt(processLaunchedAt.toList())
@@ -5799,21 +5375,10 @@ public open class CfnInsight(
 
       /**
        * @param processTerminatedAt A timestamp that identifies when the process was terminated.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun processTerminatedAt(processTerminatedAt: IResolvable) {
         cdkBuilder.processTerminatedAt(processTerminatedAt.let(IResolvable.Companion::unwrap))
@@ -5821,21 +5386,10 @@ public open class CfnInsight(
 
       /**
        * @param processTerminatedAt A timestamp that identifies when the process was terminated.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun processTerminatedAt(processTerminatedAt: List<Any>) {
         cdkBuilder.processTerminatedAt(processTerminatedAt.map{CdkObjectWrappers.unwrap(it)})
@@ -5843,21 +5397,10 @@ public open class CfnInsight(
 
       /**
        * @param processTerminatedAt A timestamp that identifies when the process was terminated.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun processTerminatedAt(vararg processTerminatedAt: Any): Unit =
           processTerminatedAt(processTerminatedAt.toList())
@@ -6460,21 +6003,10 @@ public open class CfnInsight(
       /**
        * @param resourceContainerLaunchedAt A timestamp that identifies when the container was
        * started.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun resourceContainerLaunchedAt(resourceContainerLaunchedAt: IResolvable) {
         cdkBuilder.resourceContainerLaunchedAt(resourceContainerLaunchedAt.let(IResolvable.Companion::unwrap))
@@ -6483,21 +6015,10 @@ public open class CfnInsight(
       /**
        * @param resourceContainerLaunchedAt A timestamp that identifies when the container was
        * started.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun resourceContainerLaunchedAt(resourceContainerLaunchedAt: List<Any>) {
         cdkBuilder.resourceContainerLaunchedAt(resourceContainerLaunchedAt.map{CdkObjectWrappers.unwrap(it)})
@@ -6506,21 +6027,10 @@ public open class CfnInsight(
       /**
        * @param resourceContainerLaunchedAt A timestamp that identifies when the container was
        * started.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun resourceContainerLaunchedAt(vararg resourceContainerLaunchedAt: Any): Unit =
           resourceContainerLaunchedAt(resourceContainerLaunchedAt.toList())
@@ -6839,6 +6349,10 @@ public open class CfnInsight(
       /**
        * @param threatIntelIndicatorLastObservedAt A timestamp that identifies the last observation
        * of a threat intelligence indicator.
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override
           fun threatIntelIndicatorLastObservedAt(threatIntelIndicatorLastObservedAt: IResolvable) {
@@ -6848,6 +6362,10 @@ public open class CfnInsight(
       /**
        * @param threatIntelIndicatorLastObservedAt A timestamp that identifies the last observation
        * of a threat intelligence indicator.
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override
           fun threatIntelIndicatorLastObservedAt(threatIntelIndicatorLastObservedAt: List<Any>) {
@@ -6857,6 +6375,10 @@ public open class CfnInsight(
       /**
        * @param threatIntelIndicatorLastObservedAt A timestamp that identifies the last observation
        * of a threat intelligence indicator.
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun threatIntelIndicatorLastObservedAt(vararg
           threatIntelIndicatorLastObservedAt: Any): Unit =
@@ -6989,21 +6511,10 @@ public open class CfnInsight(
       /**
        * @param updatedAt A timestamp that indicates when the security findings provider last
        * updated the finding record.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun updatedAt(updatedAt: IResolvable) {
         cdkBuilder.updatedAt(updatedAt.let(IResolvable.Companion::unwrap))
@@ -7012,21 +6523,10 @@ public open class CfnInsight(
       /**
        * @param updatedAt A timestamp that indicates when the security findings provider last
        * updated the finding record.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun updatedAt(updatedAt: List<Any>) {
         cdkBuilder.updatedAt(updatedAt.map{CdkObjectWrappers.unwrap(it)})
@@ -7035,21 +6535,10 @@ public open class CfnInsight(
       /**
        * @param updatedAt A timestamp that indicates when the security findings provider last
        * updated the finding record.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun updatedAt(vararg updatedAt: Any): Unit = updatedAt(updatedAt.toList())
 
@@ -7397,21 +6886,10 @@ public open class CfnInsight(
        * A timestamp that indicates when the security findings provider created the potential
        * security issue that a finding reflects.
        *
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-createdat)
        */
@@ -7509,21 +6987,10 @@ public open class CfnInsight(
        * A timestamp that indicates when the security findings provider first observed the potential
        * security issue that a finding captured.
        *
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-firstobservedat)
        */
@@ -7557,24 +7024,13 @@ public open class CfnInsight(
       override fun keyword(): Any? = unwrap(this).getKeyword()
 
       /**
-       * A timestamp that indicates when the security findings provider most recently observed the
-       * potential security issue that a finding captured.
+       * A timestamp that indicates when the security findings provider most recently observed a
+       * change in the resource that is involved in the finding.
        *
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-lastobservedat)
        */
@@ -7710,21 +7166,10 @@ public open class CfnInsight(
       /**
        * A timestamp that identifies when the process was launched.
        *
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-processlaunchedat)
        */
@@ -7763,21 +7208,10 @@ public open class CfnInsight(
       /**
        * A timestamp that identifies when the process was terminated.
        *
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-processterminatedat)
        */
@@ -8000,21 +7434,10 @@ public open class CfnInsight(
       /**
        * A timestamp that identifies when the container was started.
        *
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-resourcecontainerlaunchedat)
        */
@@ -8134,6 +7557,11 @@ public open class CfnInsight(
       /**
        * A timestamp that identifies the last observation of a threat intelligence indicator.
        *
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-threatintelindicatorlastobservedat)
        */
       override fun threatIntelIndicatorLastObservedAt(): Any? =
@@ -8186,21 +7614,10 @@ public open class CfnInsight(
        * A timestamp that indicates when the security findings provider last updated the finding
        * record.
        *
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-updatedat)
        */
@@ -8441,20 +7858,9 @@ public open class CfnInsight(
     /**
      * A timestamp that provides the end date for the date filter.
      *
-     * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-     * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
-     * Security Hub:
-     *
-     * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-     * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-     * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
-     *
-     * If a finding provider sends a finding to Security Hub that contains a timestamp in
-     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
-     * to `2024-10-31T23:00:00.123Z` .
+     * For more information about the validation and formatting of timestamp fields in AWS Security
+     * Hub , see
+     * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-datefilter.html#cfn-securityhub-insight-datefilter-end)
      */
@@ -8463,20 +7869,9 @@ public open class CfnInsight(
     /**
      * A timestamp that provides the start date for the date filter.
      *
-     * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-     * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
-     * Security Hub:
-     *
-     * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-     * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-     * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
-     *
-     * If a finding provider sends a finding to Security Hub that contains a timestamp in
-     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
-     * to `2024-10-31T23:00:00.123Z` .
+     * For more information about the validation and formatting of timestamp fields in AWS Security
+     * Hub , see
+     * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-datefilter.html#cfn-securityhub-insight-datefilter-start)
      */
@@ -8506,41 +7901,19 @@ public open class CfnInsight(
 
       /**
        * @param end A timestamp that provides the end date for the date filter.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun end(end: String)
 
       /**
        * @param start A timestamp that provides the start date for the date filter.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       public fun start(start: String)
     }
@@ -8574,21 +7947,10 @@ public open class CfnInsight(
 
       /**
        * @param end A timestamp that provides the end date for the date filter.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun end(end: String) {
         cdkBuilder.end(end)
@@ -8596,21 +7958,10 @@ public open class CfnInsight(
 
       /**
        * @param start A timestamp that provides the start date for the date filter.
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        */
       override fun start(start: String) {
         cdkBuilder.start(start)
@@ -8634,21 +7985,10 @@ public open class CfnInsight(
       /**
        * A timestamp that provides the end date for the date filter.
        *
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-datefilter.html#cfn-securityhub-insight-datefilter-end)
        */
@@ -8657,21 +7997,10 @@ public open class CfnInsight(
       /**
        * A timestamp that provides the start date for the date filter.
        *
-       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
-       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
-       * to Security Hub:
-       *
-       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
-       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
-       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
-       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
-       * )
-       *
-       * If a finding provider sends a finding to Security Hub that contains a timestamp in
-       * nanoseconds, we round it to milliseconds. For example, we round
-       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
+       * For more information about the validation and formatting of timestamp fields in AWS
+       * Security Hub , see
+       * [Timestamps](https://docs.aws.amazon.com/securityhub/1.0/APIReference/Welcome.html#timestamps)
+       * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-datefilter.html#cfn-securityhub-insight-datefilter-start)
        */
@@ -9524,8 +8853,9 @@ public open class CfnInsight(
      * * `ResourceType NOT_EQUALS AwsIamPolicy`
      * * `ResourceType NOT_EQUALS AwsEc2NetworkInterface`
      *
-     * `CONTAINS` and `NOT_CONTAINS` operators can be used only with automation rules. For more
-     * information, see [Automation
+     * `CONTAINS` and `NOT_CONTAINS` operators can be used only with automation rules V1.
+     * `CONTAINS_WORD` operator is only supported in `GetFindingsV2` , `GetFindingStatisticsV2` ,
+     * `GetResourcesV2` , and `GetResourceStatisticsV2` APIs. For more information, see [Automation
      * rules](https://docs.aws.amazon.com/securityhub/latest/userguide/automation-rules.html) in the
      * *AWS Security Hub User Guide* .
      *
@@ -9608,8 +8938,9 @@ public open class CfnInsight(
        * * `ResourceType NOT_EQUALS AwsIamPolicy`
        * * `ResourceType NOT_EQUALS AwsEc2NetworkInterface`
        *
-       * `CONTAINS` and `NOT_CONTAINS` operators can be used only with automation rules. For more
-       * information, see [Automation
+       * `CONTAINS` and `NOT_CONTAINS` operators can be used only with automation rules V1.
+       * `CONTAINS_WORD` operator is only supported in `GetFindingsV2` , `GetFindingStatisticsV2` ,
+       * `GetResourcesV2` , and `GetResourceStatisticsV2` APIs. For more information, see [Automation
        * rules](https://docs.aws.amazon.com/securityhub/latest/userguide/automation-rules.html) in the
        * *AWS Security Hub User Guide* .
        */
@@ -9688,8 +9019,9 @@ public open class CfnInsight(
        * * `ResourceType NOT_EQUALS AwsIamPolicy`
        * * `ResourceType NOT_EQUALS AwsEc2NetworkInterface`
        *
-       * `CONTAINS` and `NOT_CONTAINS` operators can be used only with automation rules. For more
-       * information, see [Automation
+       * `CONTAINS` and `NOT_CONTAINS` operators can be used only with automation rules V1.
+       * `CONTAINS_WORD` operator is only supported in `GetFindingsV2` , `GetFindingStatisticsV2` ,
+       * `GetResourcesV2` , and `GetResourceStatisticsV2` APIs. For more information, see [Automation
        * rules](https://docs.aws.amazon.com/securityhub/latest/userguide/automation-rules.html) in the
        * *AWS Security Hub User Guide* .
        */
@@ -9775,8 +9107,9 @@ public open class CfnInsight(
        * * `ResourceType NOT_EQUALS AwsIamPolicy`
        * * `ResourceType NOT_EQUALS AwsEc2NetworkInterface`
        *
-       * `CONTAINS` and `NOT_CONTAINS` operators can be used only with automation rules. For more
-       * information, see [Automation
+       * `CONTAINS` and `NOT_CONTAINS` operators can be used only with automation rules V1.
+       * `CONTAINS_WORD` operator is only supported in `GetFindingsV2` , `GetFindingStatisticsV2` ,
+       * `GetResourcesV2` , and `GetResourceStatisticsV2` APIs. For more information, see [Automation
        * rules](https://docs.aws.amazon.com/securityhub/latest/userguide/automation-rules.html) in the
        * *AWS Security Hub User Guide* .
        *

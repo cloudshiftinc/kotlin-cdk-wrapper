@@ -192,16 +192,16 @@ public open class CfnRestoreTestingSelection(
    * You can override certain restore metadata keys by including the parameter
    * `RestoreMetadataOverrides` in the body of `RestoreTestingSelection` .
    */
-  public open fun restoreMetadataOverrides(`value`: IResolvable) {
-    unwrap(this).setRestoreMetadataOverrides(`value`.let(IResolvable.Companion::unwrap))
+  public open fun restoreMetadataOverrides(`value`: Map<String, String>) {
+    unwrap(this).setRestoreMetadataOverrides(`value`)
   }
 
   /**
    * You can override certain restore metadata keys by including the parameter
    * `RestoreMetadataOverrides` in the body of `RestoreTestingSelection` .
    */
-  public open fun restoreMetadataOverrides(`value`: Map<String, String>) {
-    unwrap(this).setRestoreMetadataOverrides(`value`)
+  public open fun restoreMetadataOverrides(`value`: IResolvable) {
+    unwrap(this).setRestoreMetadataOverrides(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -341,7 +341,7 @@ public open class CfnRestoreTestingSelection(
      * @param restoreMetadataOverrides You can override certain restore metadata keys by including
      * the parameter `RestoreMetadataOverrides` in the body of `RestoreTestingSelection` . 
      */
-    public fun restoreMetadataOverrides(restoreMetadataOverrides: IResolvable)
+    public fun restoreMetadataOverrides(restoreMetadataOverrides: Map<String, String>)
 
     /**
      * You can override certain restore metadata keys by including the parameter
@@ -357,7 +357,7 @@ public open class CfnRestoreTestingSelection(
      * @param restoreMetadataOverrides You can override certain restore metadata keys by including
      * the parameter `RestoreMetadataOverrides` in the body of `RestoreTestingSelection` . 
      */
-    public fun restoreMetadataOverrides(restoreMetadataOverrides: Map<String, String>)
+    public fun restoreMetadataOverrides(restoreMetadataOverrides: IResolvable)
 
     /**
      * Unique string that is the name of the restore testing plan.
@@ -507,8 +507,8 @@ public open class CfnRestoreTestingSelection(
      * @param restoreMetadataOverrides You can override certain restore metadata keys by including
      * the parameter `RestoreMetadataOverrides` in the body of `RestoreTestingSelection` . 
      */
-    override fun restoreMetadataOverrides(restoreMetadataOverrides: IResolvable) {
-      cdkBuilder.restoreMetadataOverrides(restoreMetadataOverrides.let(IResolvable.Companion::unwrap))
+    override fun restoreMetadataOverrides(restoreMetadataOverrides: Map<String, String>) {
+      cdkBuilder.restoreMetadataOverrides(restoreMetadataOverrides)
     }
 
     /**
@@ -525,8 +525,8 @@ public open class CfnRestoreTestingSelection(
      * @param restoreMetadataOverrides You can override certain restore metadata keys by including
      * the parameter `RestoreMetadataOverrides` in the body of `RestoreTestingSelection` . 
      */
-    override fun restoreMetadataOverrides(restoreMetadataOverrides: Map<String, String>) {
-      cdkBuilder.restoreMetadataOverrides(restoreMetadataOverrides)
+    override fun restoreMetadataOverrides(restoreMetadataOverrides: IResolvable) {
+      cdkBuilder.restoreMetadataOverrides(restoreMetadataOverrides.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -33,16 +33,28 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Object serviceCatalogProvisioningDetails;
  * CfnProject cfnProject = CfnProject.Builder.create(this, "MyCfnProject")
  * .projectName("projectName")
- * .serviceCatalogProvisioningDetails(serviceCatalogProvisioningDetails)
  * // the properties below are optional
  * .projectDescription("projectDescription")
  * .serviceCatalogProvisionedProductDetails(ServiceCatalogProvisionedProductDetailsProperty.builder()
  * .provisionedProductId("provisionedProductId")
  * .provisionedProductStatusMessage("provisionedProductStatusMessage")
  * .build())
+ * .serviceCatalogProvisioningDetails(serviceCatalogProvisioningDetails)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
+ * .build()))
+ * .templateProviderDetails(List.of(TemplateProviderDetailProperty.builder()
+ * .cfnTemplateProviderDetail(CfnTemplateProviderDetailProperty.builder()
+ * .templateName("templateName")
+ * .templateUrl("templateUrl")
+ * // the properties below are optional
+ * .parameters(List.of(CfnStackParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .roleArn("roleArn")
+ * .build())
  * .build()))
  * .build();
  * ```
@@ -159,7 +171,7 @@ public open class CfnProject(
   /**
    * The product ID and provisioning artifact ID to provision a service catalog.
    */
-  public open fun serviceCatalogProvisioningDetails(): Any =
+  public open fun serviceCatalogProvisioningDetails(): Any? =
       unwrap(this).getServiceCatalogProvisioningDetails()
 
   /**
@@ -191,6 +203,31 @@ public open class CfnProject(
    * A list of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
+  /**
+   * An array of template providers associated with the project.
+   */
+  public open fun templateProviderDetails(): Any? = unwrap(this).getTemplateProviderDetails()
+
+  /**
+   * An array of template providers associated with the project.
+   */
+  public open fun templateProviderDetails(`value`: IResolvable) {
+    unwrap(this).setTemplateProviderDetails(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * An array of template providers associated with the project.
+   */
+  public open fun templateProviderDetails(`value`: List<Any>) {
+    unwrap(this).setTemplateProviderDetails(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * An array of template providers associated with the project.
+   */
+  public open fun templateProviderDetails(vararg `value`: Any): Unit =
+      templateProviderDetails(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.sagemaker.CfnProject].
@@ -293,6 +330,30 @@ public open class CfnProject(
      * @param tags A list of key-value pairs to apply to this resource. 
      */
     public fun tags(vararg tags: CfnTag)
+
+    /**
+     * An array of template providers associated with the project.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-templateproviderdetails)
+     * @param templateProviderDetails An array of template providers associated with the project. 
+     */
+    public fun templateProviderDetails(templateProviderDetails: IResolvable)
+
+    /**
+     * An array of template providers associated with the project.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-templateproviderdetails)
+     * @param templateProviderDetails An array of template providers associated with the project. 
+     */
+    public fun templateProviderDetails(templateProviderDetails: List<Any>)
+
+    /**
+     * An array of template providers associated with the project.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-templateproviderdetails)
+     * @param templateProviderDetails An array of template providers associated with the project. 
+     */
+    public fun templateProviderDetails(vararg templateProviderDetails: Any)
   }
 
   private class BuilderImpl(
@@ -413,6 +474,35 @@ public open class CfnProject(
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
+    /**
+     * An array of template providers associated with the project.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-templateproviderdetails)
+     * @param templateProviderDetails An array of template providers associated with the project. 
+     */
+    override fun templateProviderDetails(templateProviderDetails: IResolvable) {
+      cdkBuilder.templateProviderDetails(templateProviderDetails.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * An array of template providers associated with the project.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-templateproviderdetails)
+     * @param templateProviderDetails An array of template providers associated with the project. 
+     */
+    override fun templateProviderDetails(templateProviderDetails: List<Any>) {
+      cdkBuilder.templateProviderDetails(templateProviderDetails.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * An array of template providers associated with the project.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-templateproviderdetails)
+     * @param templateProviderDetails An array of template providers associated with the project. 
+     */
+    override fun templateProviderDetails(vararg templateProviderDetails: Any): Unit =
+        templateProviderDetails(templateProviderDetails.toList())
+
     public fun build(): software.amazon.awscdk.services.sagemaker.CfnProject = cdkBuilder.build()
   }
 
@@ -434,6 +524,308 @@ public open class CfnProject(
 
     internal fun unwrap(wrapped: CfnProject): software.amazon.awscdk.services.sagemaker.CfnProject =
         wrapped.cdkObject as software.amazon.awscdk.services.sagemaker.CfnProject
+  }
+
+  /**
+   * A key-value pair representing a parameter used in the CloudFormation stack.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * CfnStackParameterProperty cfnStackParameterProperty = CfnStackParameterProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-cfnstackparameter.html)
+   */
+  public interface CfnStackParameterProperty {
+    /**
+     * The name of the CloudFormation parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-cfnstackparameter.html#cfn-sagemaker-project-cfnstackparameter-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value of the CloudFormation parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-cfnstackparameter.html#cfn-sagemaker-project-cfnstackparameter-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [CfnStackParameterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The name of the CloudFormation parameter. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value of the CloudFormation parameter. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnProject.CfnStackParameterProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnProject.CfnStackParameterProperty.builder()
+
+      /**
+       * @param key The name of the CloudFormation parameter. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value of the CloudFormation parameter. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnProject.CfnStackParameterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.CfnStackParameterProperty,
+    ) : CdkObject(cdkObject),
+        CfnStackParameterProperty {
+      /**
+       * The name of the CloudFormation parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-cfnstackparameter.html#cfn-sagemaker-project-cfnstackparameter-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value of the CloudFormation parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-cfnstackparameter.html#cfn-sagemaker-project-cfnstackparameter-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CfnStackParameterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.CfnStackParameterProperty):
+          CfnStackParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CfnStackParameterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CfnStackParameterProperty):
+          software.amazon.awscdk.services.sagemaker.CfnProject.CfnStackParameterProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnProject.CfnStackParameterProperty
+    }
+  }
+
+  /**
+   * Details about a CloudFormation template provider configuration and associated provisioning
+   * information.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * CfnTemplateProviderDetailProperty cfnTemplateProviderDetailProperty =
+   * CfnTemplateProviderDetailProperty.builder()
+   * .templateName("templateName")
+   * .templateUrl("templateUrl")
+   * // the properties below are optional
+   * .parameters(List.of(CfnStackParameterProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .roleArn("roleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-cfntemplateproviderdetail.html)
+   */
+  public interface CfnTemplateProviderDetailProperty {
+    /**
+     * An array of CloudFormation stack parameters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-cfntemplateproviderdetail.html#cfn-sagemaker-project-cfntemplateproviderdetail-parameters)
+     */
+    public fun parameters(): Any? = unwrap(this).getParameters()
+
+    /**
+     * The IAM role used by CloudFormation to create the stack.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-cfntemplateproviderdetail.html#cfn-sagemaker-project-cfntemplateproviderdetail-rolearn)
+     */
+    public fun roleArn(): String? = unwrap(this).getRoleArn()
+
+    /**
+     * The unique identifier of the template within the project.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-cfntemplateproviderdetail.html#cfn-sagemaker-project-cfntemplateproviderdetail-templatename)
+     */
+    public fun templateName(): String
+
+    /**
+     * The Amazon S3 URL of the CloudFormation template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-cfntemplateproviderdetail.html#cfn-sagemaker-project-cfntemplateproviderdetail-templateurl)
+     */
+    public fun templateUrl(): String
+
+    /**
+     * A builder for [CfnTemplateProviderDetailProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param parameters An array of CloudFormation stack parameters.
+       */
+      public fun parameters(parameters: IResolvable)
+
+      /**
+       * @param parameters An array of CloudFormation stack parameters.
+       */
+      public fun parameters(parameters: List<Any>)
+
+      /**
+       * @param parameters An array of CloudFormation stack parameters.
+       */
+      public fun parameters(vararg parameters: Any)
+
+      /**
+       * @param roleArn The IAM role used by CloudFormation to create the stack.
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param templateName The unique identifier of the template within the project. 
+       */
+      public fun templateName(templateName: String)
+
+      /**
+       * @param templateUrl The Amazon S3 URL of the CloudFormation template. 
+       */
+      public fun templateUrl(templateUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnProject.CfnTemplateProviderDetailProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnProject.CfnTemplateProviderDetailProperty.builder()
+
+      /**
+       * @param parameters An array of CloudFormation stack parameters.
+       */
+      override fun parameters(parameters: IResolvable) {
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param parameters An array of CloudFormation stack parameters.
+       */
+      override fun parameters(parameters: List<Any>) {
+        cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param parameters An array of CloudFormation stack parameters.
+       */
+      override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
+
+      /**
+       * @param roleArn The IAM role used by CloudFormation to create the stack.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param templateName The unique identifier of the template within the project. 
+       */
+      override fun templateName(templateName: String) {
+        cdkBuilder.templateName(templateName)
+      }
+
+      /**
+       * @param templateUrl The Amazon S3 URL of the CloudFormation template. 
+       */
+      override fun templateUrl(templateUrl: String) {
+        cdkBuilder.templateUrl(templateUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnProject.CfnTemplateProviderDetailProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.CfnTemplateProviderDetailProperty,
+    ) : CdkObject(cdkObject),
+        CfnTemplateProviderDetailProperty {
+      /**
+       * An array of CloudFormation stack parameters.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-cfntemplateproviderdetail.html#cfn-sagemaker-project-cfntemplateproviderdetail-parameters)
+       */
+      override fun parameters(): Any? = unwrap(this).getParameters()
+
+      /**
+       * The IAM role used by CloudFormation to create the stack.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-cfntemplateproviderdetail.html#cfn-sagemaker-project-cfntemplateproviderdetail-rolearn)
+       */
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
+
+      /**
+       * The unique identifier of the template within the project.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-cfntemplateproviderdetail.html#cfn-sagemaker-project-cfntemplateproviderdetail-templatename)
+       */
+      override fun templateName(): String = unwrap(this).getTemplateName()
+
+      /**
+       * The Amazon S3 URL of the CloudFormation template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-cfntemplateproviderdetail.html#cfn-sagemaker-project-cfntemplateproviderdetail-templateurl)
+       */
+      override fun templateUrl(): String = unwrap(this).getTemplateUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CfnTemplateProviderDetailProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.CfnTemplateProviderDetailProperty):
+          CfnTemplateProviderDetailProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CfnTemplateProviderDetailProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CfnTemplateProviderDetailProperty):
+          software.amazon.awscdk.services.sagemaker.CfnProject.CfnTemplateProviderDetailProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnProject.CfnTemplateProviderDetailProperty
+    }
   }
 
   /**
@@ -930,6 +1322,139 @@ public open class CfnProject(
           software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty
+    }
+  }
+
+  /**
+   * Details about a template provider configuration and associated provisioning information.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * TemplateProviderDetailProperty templateProviderDetailProperty =
+   * TemplateProviderDetailProperty.builder()
+   * .cfnTemplateProviderDetail(CfnTemplateProviderDetailProperty.builder()
+   * .templateName("templateName")
+   * .templateUrl("templateUrl")
+   * // the properties below are optional
+   * .parameters(List.of(CfnStackParameterProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .roleArn("roleArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-templateproviderdetail.html)
+   */
+  public interface TemplateProviderDetailProperty {
+    /**
+     * Details about a CloudFormation template provider configuration and associated provisioning
+     * information.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-templateproviderdetail.html#cfn-sagemaker-project-templateproviderdetail-cfntemplateproviderdetail)
+     */
+    public fun cfnTemplateProviderDetail(): Any
+
+    /**
+     * A builder for [TemplateProviderDetailProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cfnTemplateProviderDetail Details about a CloudFormation template provider
+       * configuration and associated provisioning information. 
+       */
+      public fun cfnTemplateProviderDetail(cfnTemplateProviderDetail: IResolvable)
+
+      /**
+       * @param cfnTemplateProviderDetail Details about a CloudFormation template provider
+       * configuration and associated provisioning information. 
+       */
+      public
+          fun cfnTemplateProviderDetail(cfnTemplateProviderDetail: CfnTemplateProviderDetailProperty)
+
+      /**
+       * @param cfnTemplateProviderDetail Details about a CloudFormation template provider
+       * configuration and associated provisioning information. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c8e0970682d2d2029aea0b9e3db5c44347aecabcced8998a8f3dde76dcf737cb")
+      public
+          fun cfnTemplateProviderDetail(cfnTemplateProviderDetail: CfnTemplateProviderDetailProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnProject.TemplateProviderDetailProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnProject.TemplateProviderDetailProperty.builder()
+
+      /**
+       * @param cfnTemplateProviderDetail Details about a CloudFormation template provider
+       * configuration and associated provisioning information. 
+       */
+      override fun cfnTemplateProviderDetail(cfnTemplateProviderDetail: IResolvable) {
+        cdkBuilder.cfnTemplateProviderDetail(cfnTemplateProviderDetail.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param cfnTemplateProviderDetail Details about a CloudFormation template provider
+       * configuration and associated provisioning information. 
+       */
+      override
+          fun cfnTemplateProviderDetail(cfnTemplateProviderDetail: CfnTemplateProviderDetailProperty) {
+        cdkBuilder.cfnTemplateProviderDetail(cfnTemplateProviderDetail.let(CfnTemplateProviderDetailProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param cfnTemplateProviderDetail Details about a CloudFormation template provider
+       * configuration and associated provisioning information. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c8e0970682d2d2029aea0b9e3db5c44347aecabcced8998a8f3dde76dcf737cb")
+      override
+          fun cfnTemplateProviderDetail(cfnTemplateProviderDetail: CfnTemplateProviderDetailProperty.Builder.() -> Unit):
+          Unit =
+          cfnTemplateProviderDetail(CfnTemplateProviderDetailProperty(cfnTemplateProviderDetail))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnProject.TemplateProviderDetailProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.TemplateProviderDetailProperty,
+    ) : CdkObject(cdkObject),
+        TemplateProviderDetailProperty {
+      /**
+       * Details about a CloudFormation template provider configuration and associated provisioning
+       * information.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-templateproviderdetail.html#cfn-sagemaker-project-templateproviderdetail-cfntemplateproviderdetail)
+       */
+      override fun cfnTemplateProviderDetail(): Any = unwrap(this).getCfnTemplateProviderDetail()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TemplateProviderDetailProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.TemplateProviderDetailProperty):
+          TemplateProviderDetailProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TemplateProviderDetailProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TemplateProviderDetailProperty):
+          software.amazon.awscdk.services.sagemaker.CfnProject.TemplateProviderDetailProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnProject.TemplateProviderDetailProperty
     }
   }
 }

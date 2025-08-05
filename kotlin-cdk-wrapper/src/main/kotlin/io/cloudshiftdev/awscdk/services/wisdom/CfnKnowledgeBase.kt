@@ -1112,6 +1112,8 @@ public open class CfnKnowledgeBase(
   }
 
   /**
+   * The configuration of the Bedrock foundation model.
+   *
    * Example:
    *
    * ```
@@ -1132,11 +1134,15 @@ public open class CfnKnowledgeBase(
    */
   public interface BedrockFoundationModelConfigurationProperty {
     /**
+     * The model ARN of the Bedrock foundation model.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-bedrockfoundationmodelconfiguration.html#cfn-wisdom-knowledgebase-bedrockfoundationmodelconfiguration-modelarn)
      */
     public fun modelArn(): String
 
     /**
+     * The parsing prompt of the Bedrock foundation model configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-bedrockfoundationmodelconfiguration.html#cfn-wisdom-knowledgebase-bedrockfoundationmodelconfiguration-parsingprompt)
      */
     public fun parsingPrompt(): Any? = unwrap(this).getParsingPrompt()
@@ -1147,22 +1153,22 @@ public open class CfnKnowledgeBase(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param modelArn the value to be set. 
+       * @param modelArn The model ARN of the Bedrock foundation model. 
        */
       public fun modelArn(modelArn: String)
 
       /**
-       * @param parsingPrompt the value to be set.
+       * @param parsingPrompt The parsing prompt of the Bedrock foundation model configuration.
        */
       public fun parsingPrompt(parsingPrompt: IResolvable)
 
       /**
-       * @param parsingPrompt the value to be set.
+       * @param parsingPrompt The parsing prompt of the Bedrock foundation model configuration.
        */
       public fun parsingPrompt(parsingPrompt: ParsingPromptProperty)
 
       /**
-       * @param parsingPrompt the value to be set.
+       * @param parsingPrompt The parsing prompt of the Bedrock foundation model configuration.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4940897dcb166ac6d26557d6d6c3deffa24a27c087343add76a5b6f9a7fd16a5")
@@ -1176,28 +1182,28 @@ public open class CfnKnowledgeBase(
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.BedrockFoundationModelConfigurationProperty.builder()
 
       /**
-       * @param modelArn the value to be set. 
+       * @param modelArn The model ARN of the Bedrock foundation model. 
        */
       override fun modelArn(modelArn: String) {
         cdkBuilder.modelArn(modelArn)
       }
 
       /**
-       * @param parsingPrompt the value to be set.
+       * @param parsingPrompt The parsing prompt of the Bedrock foundation model configuration.
        */
       override fun parsingPrompt(parsingPrompt: IResolvable) {
         cdkBuilder.parsingPrompt(parsingPrompt.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param parsingPrompt the value to be set.
+       * @param parsingPrompt The parsing prompt of the Bedrock foundation model configuration.
        */
       override fun parsingPrompt(parsingPrompt: ParsingPromptProperty) {
         cdkBuilder.parsingPrompt(parsingPrompt.let(ParsingPromptProperty.Companion::unwrap))
       }
 
       /**
-       * @param parsingPrompt the value to be set.
+       * @param parsingPrompt The parsing prompt of the Bedrock foundation model configuration.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4940897dcb166ac6d26557d6d6c3deffa24a27c087343add76a5b6f9a7fd16a5")
@@ -1214,11 +1220,15 @@ public open class CfnKnowledgeBase(
     ) : CdkObject(cdkObject),
         BedrockFoundationModelConfigurationProperty {
       /**
+       * The model ARN of the Bedrock foundation model.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-bedrockfoundationmodelconfiguration.html#cfn-wisdom-knowledgebase-bedrockfoundationmodelconfiguration-modelarn)
        */
       override fun modelArn(): String = unwrap(this).getModelArn()
 
       /**
+       * The parsing prompt of the Bedrock foundation model configuration.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-bedrockfoundationmodelconfiguration.html#cfn-wisdom-knowledgebase-bedrockfoundationmodelconfiguration-parsingprompt)
        */
       override fun parsingPrompt(): Any? = unwrap(this).getParsingPrompt()
@@ -1610,6 +1620,8 @@ public open class CfnKnowledgeBase(
   }
 
   /**
+   * The limits of the crawler.
+   *
    * Example:
    *
    * ```
@@ -1625,6 +1637,8 @@ public open class CfnKnowledgeBase(
    */
   public interface CrawlerLimitsProperty {
     /**
+     * The limit rate at which the crawler is configured.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-crawlerlimits.html#cfn-wisdom-knowledgebase-crawlerlimits-ratelimit)
      */
     public fun rateLimit(): Number? = unwrap(this).getRateLimit()
@@ -1635,7 +1649,7 @@ public open class CfnKnowledgeBase(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param rateLimit the value to be set.
+       * @param rateLimit The limit rate at which the crawler is configured.
        */
       public fun rateLimit(rateLimit: Number)
     }
@@ -1646,7 +1660,7 @@ public open class CfnKnowledgeBase(
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.CrawlerLimitsProperty.builder()
 
       /**
-       * @param rateLimit the value to be set.
+       * @param rateLimit The limit rate at which the crawler is configured.
        */
       override fun rateLimit(rateLimit: Number) {
         cdkBuilder.rateLimit(rateLimit)
@@ -1662,6 +1676,8 @@ public open class CfnKnowledgeBase(
     ) : CdkObject(cdkObject),
         CrawlerLimitsProperty {
       /**
+       * The limit rate at which the crawler is configured.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-crawlerlimits.html#cfn-wisdom-knowledgebase-crawlerlimits-ratelimit)
        */
       override fun rateLimit(): Number? = unwrap(this).getRateLimit()

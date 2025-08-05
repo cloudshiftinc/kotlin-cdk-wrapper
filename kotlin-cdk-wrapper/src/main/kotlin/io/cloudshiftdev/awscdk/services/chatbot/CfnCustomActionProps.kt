@@ -63,7 +63,7 @@ public interface CfnCustomActionProps {
   /**
    * The name used to invoke this action in a chat channel.
    *
-   * For example, `&#64;aws run my-alias` .
+   * For example, `&#64;Amazon Q run my-alias` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-customaction.html#cfn-chatbot-customaction-aliasname)
    */
@@ -103,7 +103,7 @@ public interface CfnCustomActionProps {
 
     /**
      * @param aliasName The name used to invoke this action in a chat channel.
-     * For example, `&#64;aws run my-alias` .
+     * For example, `&#64;Amazon Q run my-alias` .
      */
     public fun aliasName(aliasName: String)
 
@@ -171,7 +171,7 @@ public interface CfnCustomActionProps {
 
     /**
      * @param aliasName The name used to invoke this action in a chat channel.
-     * For example, `&#64;aws run my-alias` .
+     * For example, `&#64;Amazon Q run my-alias` .
      */
     override fun aliasName(aliasName: String) {
       cdkBuilder.aliasName(aliasName)
@@ -257,7 +257,7 @@ public interface CfnCustomActionProps {
     /**
      * The name used to invoke this action in a chat channel.
      *
-     * For example, `&#64;aws run my-alias` .
+     * For example, `&#64;Amazon Q run my-alias` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-customaction.html#cfn-chatbot-customaction-aliasname)
      */

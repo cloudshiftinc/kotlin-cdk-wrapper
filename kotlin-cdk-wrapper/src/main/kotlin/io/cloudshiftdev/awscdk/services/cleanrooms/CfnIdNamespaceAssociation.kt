@@ -85,13 +85,13 @@ public open class CfnIdNamespaceAssociation(
   public open fun attrCollaborationArn(): String = unwrap(this).getAttrCollaborationArn()
 
   /**
-   *
+   * The unique identifier of the collaboration that contains this ID namespace association.
    */
   public open fun attrCollaborationIdentifier(): String =
       unwrap(this).getAttrCollaborationIdentifier()
 
   /**
-   *
+   * The unique identifier of the ID namespace association that you want to retrieve.
    */
   public open fun attrIdNamespaceAssociationIdentifier(): String =
       unwrap(this).getAttrIdNamespaceAssociationIdentifier()

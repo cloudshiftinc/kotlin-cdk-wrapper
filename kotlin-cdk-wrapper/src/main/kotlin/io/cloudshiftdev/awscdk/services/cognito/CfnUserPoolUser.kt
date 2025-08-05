@@ -79,33 +79,33 @@ public open class CfnUserPoolUser(
    * A map of custom key-value pairs that you can provide as input for any custom workflows that
    * this action triggers.
    */
-  public open fun clientMetadata(`value`: IResolvable) {
-    unwrap(this).setClientMetadata(`value`.let(IResolvable.Companion::unwrap))
+  public open fun clientMetadata(`value`: Map<String, String>) {
+    unwrap(this).setClientMetadata(`value`)
   }
 
   /**
    * A map of custom key-value pairs that you can provide as input for any custom workflows that
    * this action triggers.
    */
-  public open fun clientMetadata(`value`: Map<String, String>) {
-    unwrap(this).setClientMetadata(`value`)
+  public open fun clientMetadata(`value`: IResolvable) {
+    unwrap(this).setClientMetadata(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Specify `"EMAIL"` if email will be used to send the welcome message.
+   * Specify `EMAIL` if email will be used to send the welcome message.
    */
   public open fun desiredDeliveryMediums(): List<String> = unwrap(this).getDesiredDeliveryMediums()
       ?: emptyList()
 
   /**
-   * Specify `"EMAIL"` if email will be used to send the welcome message.
+   * Specify `EMAIL` if email will be used to send the welcome message.
    */
   public open fun desiredDeliveryMediums(`value`: List<String>) {
     unwrap(this).setDesiredDeliveryMediums(`value`)
   }
 
   /**
-   * Specify `"EMAIL"` if email will be used to send the welcome message.
+   * Specify `EMAIL` if email will be used to send the welcome message.
    */
   public open fun desiredDeliveryMediums(vararg `value`: String): Unit =
       desiredDeliveryMediums(`value`.toList())
@@ -142,14 +142,14 @@ public open class CfnUserPoolUser(
   }
 
   /**
-   * Set to `RESEND` to resend the invitation message to a user that already exists and reset the
-   * expiration limit on the user's account.
+   * Set to `RESEND` to resend the invitation message to a user that already exists, and to reset
+   * the temporary-password duration with a new temporary password.
    */
   public open fun messageAction(): String? = unwrap(this).getMessageAction()
 
   /**
-   * Set to `RESEND` to resend the invitation message to a user that already exists and reset the
-   * expiration limit on the user's account.
+   * Set to `RESEND` to resend the invitation message to a user that already exists, and to reset
+   * the temporary-password duration with a new temporary password.
    */
   public open fun messageAction(`value`: String) {
     unwrap(this).setMessageAction(`value`)
@@ -184,12 +184,12 @@ public open class CfnUserPoolUser(
   public open fun userAttributes(vararg `value`: Any): Unit = userAttributes(`value`.toList())
 
   /**
-   * The user pool ID for the user pool where the user will be created.
+   * The ID of the user pool where you want to create a user.
    */
   public open fun userPoolId(): String = unwrap(this).getUserPoolId()
 
   /**
-   * The user pool ID for the user pool where the user will be created.
+   * The ID of the user pool where you want to create a user.
    */
   public open fun userPoolId(`value`: String) {
     unwrap(this).setUserPoolId(`value`)
@@ -243,59 +243,23 @@ public open class CfnUserPoolUser(
      * You create custom workflows by assigning AWS Lambda functions to user pool triggers. When you
      * use the AdminCreateUser API action, Amazon Cognito invokes the function that is assigned to the
      * *pre sign-up* trigger. When Amazon Cognito invokes this function, it passes a JSON payload,
-     * which the function receives as input. This payload contains a `clientMetadata` attribute, which
+     * which the function receives as input. This payload contains a `ClientMetadata` attribute, which
      * provides the data that you assigned to the ClientMetadata parameter in your AdminCreateUser
      * request. In your function code in AWS Lambda , you can process the `clientMetadata` value to
      * enhance your workflow for your specific needs.
      *
-     * For more information, see [Customizing user pool Workflows with Lambda
-     * Triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html)
+     * For more information, see [Using Lambda
+     * triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html)
      * in the *Amazon Cognito Developer Guide* .
      *
      *
-     * When you use the ClientMetadata parameter, remember that Amazon Cognito won't do the
-     * following:
+     * When you use the `ClientMetadata` parameter, note that Amazon Cognito won't do the following:
      *
-     * * Store the ClientMetadata value. This data is available only to AWS Lambda triggers that are
-     * assigned to a user pool to support custom workflows. If your user pool configuration doesn't
-     * include triggers, the ClientMetadata parameter serves no purpose.
-     * * Validate the ClientMetadata value.
-     * * Encrypt the ClientMetadata value. Don't use Amazon Cognito to provide sensitive
-     * information.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-clientmetadata)
-     * @param clientMetadata A map of custom key-value pairs that you can provide as input for any
-     * custom workflows that this action triggers. 
-     */
-    public fun clientMetadata(clientMetadata: IResolvable)
-
-    /**
-     * A map of custom key-value pairs that you can provide as input for any custom workflows that
-     * this action triggers.
-     *
-     * You create custom workflows by assigning AWS Lambda functions to user pool triggers. When you
-     * use the AdminCreateUser API action, Amazon Cognito invokes the function that is assigned to the
-     * *pre sign-up* trigger. When Amazon Cognito invokes this function, it passes a JSON payload,
-     * which the function receives as input. This payload contains a `clientMetadata` attribute, which
-     * provides the data that you assigned to the ClientMetadata parameter in your AdminCreateUser
-     * request. In your function code in AWS Lambda , you can process the `clientMetadata` value to
-     * enhance your workflow for your specific needs.
-     *
-     * For more information, see [Customizing user pool Workflows with Lambda
-     * Triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html)
-     * in the *Amazon Cognito Developer Guide* .
-     *
-     *
-     * When you use the ClientMetadata parameter, remember that Amazon Cognito won't do the
-     * following:
-     *
-     * * Store the ClientMetadata value. This data is available only to AWS Lambda triggers that are
-     * assigned to a user pool to support custom workflows. If your user pool configuration doesn't
-     * include triggers, the ClientMetadata parameter serves no purpose.
-     * * Validate the ClientMetadata value.
-     * * Encrypt the ClientMetadata value. Don't use Amazon Cognito to provide sensitive
-     * information.
+     * * Store the `ClientMetadata` value. This data is available only to AWS Lambda triggers that
+     * are assigned to a user pool to support custom workflows. If your user pool configuration doesn't
+     * include triggers, the `ClientMetadata` parameter serves no purpose.
+     * * Validate the `ClientMetadata` value.
+     * * Encrypt the `ClientMetadata` value. Don't send sensitive information in this parameter.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-clientmetadata)
@@ -305,25 +269,57 @@ public open class CfnUserPoolUser(
     public fun clientMetadata(clientMetadata: Map<String, String>)
 
     /**
-     * Specify `"EMAIL"` if email will be used to send the welcome message.
+     * A map of custom key-value pairs that you can provide as input for any custom workflows that
+     * this action triggers.
      *
-     * Specify `"SMS"` if the phone number will be used. The default value is `"SMS"` . You can
-     * specify more than one value.
+     * You create custom workflows by assigning AWS Lambda functions to user pool triggers. When you
+     * use the AdminCreateUser API action, Amazon Cognito invokes the function that is assigned to the
+     * *pre sign-up* trigger. When Amazon Cognito invokes this function, it passes a JSON payload,
+     * which the function receives as input. This payload contains a `ClientMetadata` attribute, which
+     * provides the data that you assigned to the ClientMetadata parameter in your AdminCreateUser
+     * request. In your function code in AWS Lambda , you can process the `clientMetadata` value to
+     * enhance your workflow for your specific needs.
+     *
+     * For more information, see [Using Lambda
+     * triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html)
+     * in the *Amazon Cognito Developer Guide* .
+     *
+     *
+     * When you use the `ClientMetadata` parameter, note that Amazon Cognito won't do the following:
+     *
+     * * Store the `ClientMetadata` value. This data is available only to AWS Lambda triggers that
+     * are assigned to a user pool to support custom workflows. If your user pool configuration doesn't
+     * include triggers, the `ClientMetadata` parameter serves no purpose.
+     * * Validate the `ClientMetadata` value.
+     * * Encrypt the `ClientMetadata` value. Don't send sensitive information in this parameter.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-clientmetadata)
+     * @param clientMetadata A map of custom key-value pairs that you can provide as input for any
+     * custom workflows that this action triggers. 
+     */
+    public fun clientMetadata(clientMetadata: IResolvable)
+
+    /**
+     * Specify `EMAIL` if email will be used to send the welcome message.
+     *
+     * Specify `SMS` if the phone number will be used. The default value is `SMS` . You can specify
+     * more than one value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-desireddeliverymediums)
-     * @param desiredDeliveryMediums Specify `"EMAIL"` if email will be used to send the welcome
+     * @param desiredDeliveryMediums Specify `EMAIL` if email will be used to send the welcome
      * message. 
      */
     public fun desiredDeliveryMediums(desiredDeliveryMediums: List<String>)
 
     /**
-     * Specify `"EMAIL"` if email will be used to send the welcome message.
+     * Specify `EMAIL` if email will be used to send the welcome message.
      *
-     * Specify `"SMS"` if the phone number will be used. The default value is `"SMS"` . You can
-     * specify more than one value.
+     * Specify `SMS` if the phone number will be used. The default value is `SMS` . You can specify
+     * more than one value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-desireddeliverymediums)
-     * @param desiredDeliveryMediums Specify `"EMAIL"` if email will be used to send the welcome
+     * @param desiredDeliveryMediums Specify `EMAIL` if email will be used to send the welcome
      * message. 
      */
     public fun desiredDeliveryMediums(vararg desiredDeliveryMediums: String)
@@ -335,8 +331,8 @@ public open class CfnUserPoolUser(
      * Otherwise, it is ignored.
      *
      * If this parameter is set to `True` and the phone number or email address specified in the
-     * UserAttributes parameter already exists as an alias with a different user, the API call will
-     * migrate the alias from the previous user to the newly created user. The previous user will no
+     * `UserAttributes` parameter already exists as an alias with a different user, this request
+     * migrates the alias from the previous user to the newly-created user. The previous user will no
      * longer be able to log in using that alias.
      *
      * If this parameter is set to `False` , the API throws an `AliasExistsException` error if the
@@ -355,8 +351,8 @@ public open class CfnUserPoolUser(
      * Otherwise, it is ignored.
      *
      * If this parameter is set to `True` and the phone number or email address specified in the
-     * UserAttributes parameter already exists as an alias with a different user, the API call will
-     * migrate the alias from the previous user to the newly created user. The previous user will no
+     * `UserAttributes` parameter already exists as an alias with a different user, this request
+     * migrates the alias from the previous user to the newly-created user. The previous user will no
      * longer be able to log in using that alias.
      *
      * If this parameter is set to `False` , the API throws an `AliasExistsException` error if the
@@ -369,14 +365,14 @@ public open class CfnUserPoolUser(
     public fun forceAliasCreation(forceAliasCreation: IResolvable)
 
     /**
-     * Set to `RESEND` to resend the invitation message to a user that already exists and reset the
-     * expiration limit on the user's account.
+     * Set to `RESEND` to resend the invitation message to a user that already exists, and to reset
+     * the temporary-password duration with a new temporary password.
      *
      * Set to `SUPPRESS` to suppress sending the message. You can specify only one value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-messageaction)
      * @param messageAction Set to `RESEND` to resend the invitation message to a user that already
-     * exists and reset the expiration limit on the user's account. 
+     * exists, and to reset the temporary-password duration with a new temporary password. 
      */
     public fun messageAction(messageAction: String)
 
@@ -400,10 +396,7 @@ public open class CfnUserPoolUser(
      * passwordless options are the only available, or when you don't submit a `TemporaryPassword` .
      *
      * In your call to `AdminCreateUser` , you can set the `email_verified` attribute to `True` ,
-     * and you can set the `phone_number_verified` attribute to `True` . You can also do this by
-     * calling
-     * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
-     * .
+     * and you can set the `phone_number_verified` attribute to `True` .
      *
      * * *email* : The email address of the user to whom the message that contains the code and
      * username will be sent. Required if the `email_verified` attribute is set to `True` , or if
@@ -438,10 +431,7 @@ public open class CfnUserPoolUser(
      * passwordless options are the only available, or when you don't submit a `TemporaryPassword` .
      *
      * In your call to `AdminCreateUser` , you can set the `email_verified` attribute to `True` ,
-     * and you can set the `phone_number_verified` attribute to `True` . You can also do this by
-     * calling
-     * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
-     * .
+     * and you can set the `phone_number_verified` attribute to `True` .
      *
      * * *email* : The email address of the user to whom the message that contains the code and
      * username will be sent. Required if the `email_verified` attribute is set to `True` , or if
@@ -476,10 +466,7 @@ public open class CfnUserPoolUser(
      * passwordless options are the only available, or when you don't submit a `TemporaryPassword` .
      *
      * In your call to `AdminCreateUser` , you can set the `email_verified` attribute to `True` ,
-     * and you can set the `phone_number_verified` attribute to `True` . You can also do this by
-     * calling
-     * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
-     * .
+     * and you can set the `phone_number_verified` attribute to `True` .
      *
      * * *email* : The email address of the user to whom the message that contains the code and
      * username will be sent. Required if the `email_verified` attribute is set to `True` , or if
@@ -495,10 +482,10 @@ public open class CfnUserPoolUser(
     public fun userAttributes(vararg userAttributes: Any)
 
     /**
-     * The user pool ID for the user pool where the user will be created.
+     * The ID of the user pool where you want to create a user.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-userpoolid)
-     * @param userPoolId The user pool ID for the user pool where the user will be created. 
+     * @param userPoolId The ID of the user pool where you want to create a user. 
      */
     public fun userPoolId(userPoolId: String)
 
@@ -526,10 +513,9 @@ public open class CfnUserPoolUser(
      * This set of key-value pairs are for custom validation of information that you collect from
      * your users but don't need to retain.
      *
-     * Your Lambda function can analyze this additional data and act on it. Your function might
-     * perform external API operations like logging user attributes and validation data to Amazon
-     * CloudWatch Logs. Validation data might also affect the response that your function returns to
-     * Amazon Cognito, like automatically confirming the user if they sign up from within your network.
+     * Your Lambda function can analyze this additional data and act on it. Your function can
+     * automatically confirm and verify select users or perform external API operations like logging
+     * user attributes and validation data to Amazon CloudWatch Logs.
      *
      * For more information about the pre sign-up Lambda trigger, see [Pre sign-up Lambda
      * trigger](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-pre-sign-up.html)
@@ -547,10 +533,9 @@ public open class CfnUserPoolUser(
      * This set of key-value pairs are for custom validation of information that you collect from
      * your users but don't need to retain.
      *
-     * Your Lambda function can analyze this additional data and act on it. Your function might
-     * perform external API operations like logging user attributes and validation data to Amazon
-     * CloudWatch Logs. Validation data might also affect the response that your function returns to
-     * Amazon Cognito, like automatically confirming the user if they sign up from within your network.
+     * Your Lambda function can analyze this additional data and act on it. Your function can
+     * automatically confirm and verify select users or perform external API operations like logging
+     * user attributes and validation data to Amazon CloudWatch Logs.
      *
      * For more information about the pre sign-up Lambda trigger, see [Pre sign-up Lambda
      * trigger](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-pre-sign-up.html)
@@ -568,10 +553,9 @@ public open class CfnUserPoolUser(
      * This set of key-value pairs are for custom validation of information that you collect from
      * your users but don't need to retain.
      *
-     * Your Lambda function can analyze this additional data and act on it. Your function might
-     * perform external API operations like logging user attributes and validation data to Amazon
-     * CloudWatch Logs. Validation data might also affect the response that your function returns to
-     * Amazon Cognito, like automatically confirming the user if they sign up from within your network.
+     * Your Lambda function can analyze this additional data and act on it. Your function can
+     * automatically confirm and verify select users or perform external API operations like logging
+     * user attributes and validation data to Amazon CloudWatch Logs.
      *
      * For more information about the pre sign-up Lambda trigger, see [Pre sign-up Lambda
      * trigger](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-pre-sign-up.html)
@@ -598,61 +582,23 @@ public open class CfnUserPoolUser(
      * You create custom workflows by assigning AWS Lambda functions to user pool triggers. When you
      * use the AdminCreateUser API action, Amazon Cognito invokes the function that is assigned to the
      * *pre sign-up* trigger. When Amazon Cognito invokes this function, it passes a JSON payload,
-     * which the function receives as input. This payload contains a `clientMetadata` attribute, which
+     * which the function receives as input. This payload contains a `ClientMetadata` attribute, which
      * provides the data that you assigned to the ClientMetadata parameter in your AdminCreateUser
      * request. In your function code in AWS Lambda , you can process the `clientMetadata` value to
      * enhance your workflow for your specific needs.
      *
-     * For more information, see [Customizing user pool Workflows with Lambda
-     * Triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html)
+     * For more information, see [Using Lambda
+     * triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html)
      * in the *Amazon Cognito Developer Guide* .
      *
      *
-     * When you use the ClientMetadata parameter, remember that Amazon Cognito won't do the
-     * following:
+     * When you use the `ClientMetadata` parameter, note that Amazon Cognito won't do the following:
      *
-     * * Store the ClientMetadata value. This data is available only to AWS Lambda triggers that are
-     * assigned to a user pool to support custom workflows. If your user pool configuration doesn't
-     * include triggers, the ClientMetadata parameter serves no purpose.
-     * * Validate the ClientMetadata value.
-     * * Encrypt the ClientMetadata value. Don't use Amazon Cognito to provide sensitive
-     * information.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-clientmetadata)
-     * @param clientMetadata A map of custom key-value pairs that you can provide as input for any
-     * custom workflows that this action triggers. 
-     */
-    override fun clientMetadata(clientMetadata: IResolvable) {
-      cdkBuilder.clientMetadata(clientMetadata.let(IResolvable.Companion::unwrap))
-    }
-
-    /**
-     * A map of custom key-value pairs that you can provide as input for any custom workflows that
-     * this action triggers.
-     *
-     * You create custom workflows by assigning AWS Lambda functions to user pool triggers. When you
-     * use the AdminCreateUser API action, Amazon Cognito invokes the function that is assigned to the
-     * *pre sign-up* trigger. When Amazon Cognito invokes this function, it passes a JSON payload,
-     * which the function receives as input. This payload contains a `clientMetadata` attribute, which
-     * provides the data that you assigned to the ClientMetadata parameter in your AdminCreateUser
-     * request. In your function code in AWS Lambda , you can process the `clientMetadata` value to
-     * enhance your workflow for your specific needs.
-     *
-     * For more information, see [Customizing user pool Workflows with Lambda
-     * Triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html)
-     * in the *Amazon Cognito Developer Guide* .
-     *
-     *
-     * When you use the ClientMetadata parameter, remember that Amazon Cognito won't do the
-     * following:
-     *
-     * * Store the ClientMetadata value. This data is available only to AWS Lambda triggers that are
-     * assigned to a user pool to support custom workflows. If your user pool configuration doesn't
-     * include triggers, the ClientMetadata parameter serves no purpose.
-     * * Validate the ClientMetadata value.
-     * * Encrypt the ClientMetadata value. Don't use Amazon Cognito to provide sensitive
-     * information.
+     * * Store the `ClientMetadata` value. This data is available only to AWS Lambda triggers that
+     * are assigned to a user pool to support custom workflows. If your user pool configuration doesn't
+     * include triggers, the `ClientMetadata` parameter serves no purpose.
+     * * Validate the `ClientMetadata` value.
+     * * Encrypt the `ClientMetadata` value. Don't send sensitive information in this parameter.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-clientmetadata)
@@ -664,13 +610,47 @@ public open class CfnUserPoolUser(
     }
 
     /**
-     * Specify `"EMAIL"` if email will be used to send the welcome message.
+     * A map of custom key-value pairs that you can provide as input for any custom workflows that
+     * this action triggers.
      *
-     * Specify `"SMS"` if the phone number will be used. The default value is `"SMS"` . You can
-     * specify more than one value.
+     * You create custom workflows by assigning AWS Lambda functions to user pool triggers. When you
+     * use the AdminCreateUser API action, Amazon Cognito invokes the function that is assigned to the
+     * *pre sign-up* trigger. When Amazon Cognito invokes this function, it passes a JSON payload,
+     * which the function receives as input. This payload contains a `ClientMetadata` attribute, which
+     * provides the data that you assigned to the ClientMetadata parameter in your AdminCreateUser
+     * request. In your function code in AWS Lambda , you can process the `clientMetadata` value to
+     * enhance your workflow for your specific needs.
+     *
+     * For more information, see [Using Lambda
+     * triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html)
+     * in the *Amazon Cognito Developer Guide* .
+     *
+     *
+     * When you use the `ClientMetadata` parameter, note that Amazon Cognito won't do the following:
+     *
+     * * Store the `ClientMetadata` value. This data is available only to AWS Lambda triggers that
+     * are assigned to a user pool to support custom workflows. If your user pool configuration doesn't
+     * include triggers, the `ClientMetadata` parameter serves no purpose.
+     * * Validate the `ClientMetadata` value.
+     * * Encrypt the `ClientMetadata` value. Don't send sensitive information in this parameter.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-clientmetadata)
+     * @param clientMetadata A map of custom key-value pairs that you can provide as input for any
+     * custom workflows that this action triggers. 
+     */
+    override fun clientMetadata(clientMetadata: IResolvable) {
+      cdkBuilder.clientMetadata(clientMetadata.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Specify `EMAIL` if email will be used to send the welcome message.
+     *
+     * Specify `SMS` if the phone number will be used. The default value is `SMS` . You can specify
+     * more than one value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-desireddeliverymediums)
-     * @param desiredDeliveryMediums Specify `"EMAIL"` if email will be used to send the welcome
+     * @param desiredDeliveryMediums Specify `EMAIL` if email will be used to send the welcome
      * message. 
      */
     override fun desiredDeliveryMediums(desiredDeliveryMediums: List<String>) {
@@ -678,13 +658,13 @@ public open class CfnUserPoolUser(
     }
 
     /**
-     * Specify `"EMAIL"` if email will be used to send the welcome message.
+     * Specify `EMAIL` if email will be used to send the welcome message.
      *
-     * Specify `"SMS"` if the phone number will be used. The default value is `"SMS"` . You can
-     * specify more than one value.
+     * Specify `SMS` if the phone number will be used. The default value is `SMS` . You can specify
+     * more than one value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-desireddeliverymediums)
-     * @param desiredDeliveryMediums Specify `"EMAIL"` if email will be used to send the welcome
+     * @param desiredDeliveryMediums Specify `EMAIL` if email will be used to send the welcome
      * message. 
      */
     override fun desiredDeliveryMediums(vararg desiredDeliveryMediums: String): Unit =
@@ -697,8 +677,8 @@ public open class CfnUserPoolUser(
      * Otherwise, it is ignored.
      *
      * If this parameter is set to `True` and the phone number or email address specified in the
-     * UserAttributes parameter already exists as an alias with a different user, the API call will
-     * migrate the alias from the previous user to the newly created user. The previous user will no
+     * `UserAttributes` parameter already exists as an alias with a different user, this request
+     * migrates the alias from the previous user to the newly-created user. The previous user will no
      * longer be able to log in using that alias.
      *
      * If this parameter is set to `False` , the API throws an `AliasExistsException` error if the
@@ -719,8 +699,8 @@ public open class CfnUserPoolUser(
      * Otherwise, it is ignored.
      *
      * If this parameter is set to `True` and the phone number or email address specified in the
-     * UserAttributes parameter already exists as an alias with a different user, the API call will
-     * migrate the alias from the previous user to the newly created user. The previous user will no
+     * `UserAttributes` parameter already exists as an alias with a different user, this request
+     * migrates the alias from the previous user to the newly-created user. The previous user will no
      * longer be able to log in using that alias.
      *
      * If this parameter is set to `False` , the API throws an `AliasExistsException` error if the
@@ -735,14 +715,14 @@ public open class CfnUserPoolUser(
     }
 
     /**
-     * Set to `RESEND` to resend the invitation message to a user that already exists and reset the
-     * expiration limit on the user's account.
+     * Set to `RESEND` to resend the invitation message to a user that already exists, and to reset
+     * the temporary-password duration with a new temporary password.
      *
      * Set to `SUPPRESS` to suppress sending the message. You can specify only one value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-messageaction)
      * @param messageAction Set to `RESEND` to resend the invitation message to a user that already
-     * exists and reset the expiration limit on the user's account. 
+     * exists, and to reset the temporary-password duration with a new temporary password. 
      */
     override fun messageAction(messageAction: String) {
       cdkBuilder.messageAction(messageAction)
@@ -768,10 +748,7 @@ public open class CfnUserPoolUser(
      * passwordless options are the only available, or when you don't submit a `TemporaryPassword` .
      *
      * In your call to `AdminCreateUser` , you can set the `email_verified` attribute to `True` ,
-     * and you can set the `phone_number_verified` attribute to `True` . You can also do this by
-     * calling
-     * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
-     * .
+     * and you can set the `phone_number_verified` attribute to `True` .
      *
      * * *email* : The email address of the user to whom the message that contains the code and
      * username will be sent. Required if the `email_verified` attribute is set to `True` , or if
@@ -808,10 +785,7 @@ public open class CfnUserPoolUser(
      * passwordless options are the only available, or when you don't submit a `TemporaryPassword` .
      *
      * In your call to `AdminCreateUser` , you can set the `email_verified` attribute to `True` ,
-     * and you can set the `phone_number_verified` attribute to `True` . You can also do this by
-     * calling
-     * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
-     * .
+     * and you can set the `phone_number_verified` attribute to `True` .
      *
      * * *email* : The email address of the user to whom the message that contains the code and
      * username will be sent. Required if the `email_verified` attribute is set to `True` , or if
@@ -848,10 +822,7 @@ public open class CfnUserPoolUser(
      * passwordless options are the only available, or when you don't submit a `TemporaryPassword` .
      *
      * In your call to `AdminCreateUser` , you can set the `email_verified` attribute to `True` ,
-     * and you can set the `phone_number_verified` attribute to `True` . You can also do this by
-     * calling
-     * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
-     * .
+     * and you can set the `phone_number_verified` attribute to `True` .
      *
      * * *email* : The email address of the user to whom the message that contains the code and
      * username will be sent. Required if the `email_verified` attribute is set to `True` , or if
@@ -868,10 +839,10 @@ public open class CfnUserPoolUser(
         userAttributes(userAttributes.toList())
 
     /**
-     * The user pool ID for the user pool where the user will be created.
+     * The ID of the user pool where you want to create a user.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-userpoolid)
-     * @param userPoolId The user pool ID for the user pool where the user will be created. 
+     * @param userPoolId The ID of the user pool where you want to create a user. 
      */
     override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
@@ -903,10 +874,9 @@ public open class CfnUserPoolUser(
      * This set of key-value pairs are for custom validation of information that you collect from
      * your users but don't need to retain.
      *
-     * Your Lambda function can analyze this additional data and act on it. Your function might
-     * perform external API operations like logging user attributes and validation data to Amazon
-     * CloudWatch Logs. Validation data might also affect the response that your function returns to
-     * Amazon Cognito, like automatically confirming the user if they sign up from within your network.
+     * Your Lambda function can analyze this additional data and act on it. Your function can
+     * automatically confirm and verify select users or perform external API operations like logging
+     * user attributes and validation data to Amazon CloudWatch Logs.
      *
      * For more information about the pre sign-up Lambda trigger, see [Pre sign-up Lambda
      * trigger](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-pre-sign-up.html)
@@ -926,10 +896,9 @@ public open class CfnUserPoolUser(
      * This set of key-value pairs are for custom validation of information that you collect from
      * your users but don't need to retain.
      *
-     * Your Lambda function can analyze this additional data and act on it. Your function might
-     * perform external API operations like logging user attributes and validation data to Amazon
-     * CloudWatch Logs. Validation data might also affect the response that your function returns to
-     * Amazon Cognito, like automatically confirming the user if they sign up from within your network.
+     * Your Lambda function can analyze this additional data and act on it. Your function can
+     * automatically confirm and verify select users or perform external API operations like logging
+     * user attributes and validation data to Amazon CloudWatch Logs.
      *
      * For more information about the pre sign-up Lambda trigger, see [Pre sign-up Lambda
      * trigger](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-pre-sign-up.html)
@@ -949,10 +918,9 @@ public open class CfnUserPoolUser(
      * This set of key-value pairs are for custom validation of information that you collect from
      * your users but don't need to retain.
      *
-     * Your Lambda function can analyze this additional data and act on it. Your function might
-     * perform external API operations like logging user attributes and validation data to Amazon
-     * CloudWatch Logs. Validation data might also affect the response that your function returns to
-     * Amazon Cognito, like automatically confirming the user if they sign up from within your network.
+     * Your Lambda function can analyze this additional data and act on it. Your function can
+     * automatically confirm and verify select users or perform external API operations like logging
+     * user attributes and validation data to Amazon CloudWatch Logs.
      *
      * For more information about the pre sign-up Lambda trigger, see [Pre sign-up Lambda
      * trigger](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-pre-sign-up.html)
@@ -991,12 +959,6 @@ public open class CfnUserPoolUser(
 
   /**
    * The name and value of a user attribute.
-   *
-   * This data type is a request parameter of
-   * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
-   * and
-   * [UpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserAttributes.html)
-   * .
    *
    * Example:
    *

@@ -152,26 +152,26 @@ public open class CfnService(
   }
 
   /**
-   * The DNS information of the service.
+   * Describes the DNS information of the service.
    */
   public open fun dnsEntry(): Any? = unwrap(this).getDnsEntry()
 
   /**
-   * The DNS information of the service.
+   * Describes the DNS information of the service.
    */
   public open fun dnsEntry(`value`: IResolvable) {
     unwrap(this).setDnsEntry(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The DNS information of the service.
+   * Describes the DNS information of the service.
    */
   public open fun dnsEntry(`value`: DnsEntryProperty) {
     unwrap(this).setDnsEntry(`value`.let(DnsEntryProperty.Companion::unwrap))
   }
 
   /**
-   * The DNS information of the service.
+   * Describes the DNS information of the service.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("0d891f5f9ad9ada8d9d7f685e87e5b5ce1f87654c2ba613788a5a7b5ccdc0555")
@@ -258,26 +258,32 @@ public open class CfnService(
     public fun customDomainName(customDomainName: String)
 
     /**
-     * The DNS information of the service.
+     * Describes the DNS information of the service.
+     *
+     * This field is read-only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-service.html#cfn-vpclattice-service-dnsentry)
-     * @param dnsEntry The DNS information of the service. 
+     * @param dnsEntry Describes the DNS information of the service. 
      */
     public fun dnsEntry(dnsEntry: IResolvable)
 
     /**
-     * The DNS information of the service.
+     * Describes the DNS information of the service.
+     *
+     * This field is read-only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-service.html#cfn-vpclattice-service-dnsentry)
-     * @param dnsEntry The DNS information of the service. 
+     * @param dnsEntry Describes the DNS information of the service. 
      */
     public fun dnsEntry(dnsEntry: DnsEntryProperty)
 
     /**
-     * The DNS information of the service.
+     * Describes the DNS information of the service.
+     *
+     * This field is read-only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-service.html#cfn-vpclattice-service-dnsentry)
-     * @param dnsEntry The DNS information of the service. 
+     * @param dnsEntry Describes the DNS information of the service. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a5d85bee0e0b2a595414b10b92d2c2c90c4f1f8724a69c1c2639f996dee89289")
@@ -358,30 +364,36 @@ public open class CfnService(
     }
 
     /**
-     * The DNS information of the service.
+     * Describes the DNS information of the service.
+     *
+     * This field is read-only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-service.html#cfn-vpclattice-service-dnsentry)
-     * @param dnsEntry The DNS information of the service. 
+     * @param dnsEntry Describes the DNS information of the service. 
      */
     override fun dnsEntry(dnsEntry: IResolvable) {
       cdkBuilder.dnsEntry(dnsEntry.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The DNS information of the service.
+     * Describes the DNS information of the service.
+     *
+     * This field is read-only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-service.html#cfn-vpclattice-service-dnsentry)
-     * @param dnsEntry The DNS information of the service. 
+     * @param dnsEntry Describes the DNS information of the service. 
      */
     override fun dnsEntry(dnsEntry: DnsEntryProperty) {
       cdkBuilder.dnsEntry(dnsEntry.let(DnsEntryProperty.Companion::unwrap))
     }
 
     /**
-     * The DNS information of the service.
+     * Describes the DNS information of the service.
+     *
+     * This field is read-only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-service.html#cfn-vpclattice-service-dnsentry)
-     * @param dnsEntry The DNS information of the service. 
+     * @param dnsEntry Describes the DNS information of the service. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a5d85bee0e0b2a595414b10b92d2c2c90c4f1f8724a69c1c2639f996dee89289")

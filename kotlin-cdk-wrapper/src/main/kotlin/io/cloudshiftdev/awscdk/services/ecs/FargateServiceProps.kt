@@ -28,6 +28,7 @@ import kotlin.jvm.JvmName
  * FargateService service = FargateService.Builder.create(this, "Service")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
+ * .minHealthyPercent(100)
  * .deploymentAlarms(DeploymentAlarmConfig.builder()
  * .alarmNames(List.of(elbAlarm.getAlarmName()))
  * .behavior(AlarmBehavior.ROLLBACK_ON_ALARM)
@@ -55,6 +56,19 @@ public interface FargateServiceProps : BaseServiceOptions {
    * Default: false
    */
   public fun assignPublicIp(): Boolean? = unwrap(this).getAssignPublicIp()
+
+  /**
+   * Whether to use Availability Zone rebalancing for the service.
+   *
+   * If enabled, `maxHealthyPercent` must be greater than 100, and the service must not be a target
+   * of a Classic Load Balancer.
+   *
+   * Default: AvailabilityZoneRebalancing.DISABLED
+   *
+   * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html)
+   */
+  public fun availabilityZoneRebalancing(): AvailabilityZoneRebalancing? =
+      unwrap(this).getAvailabilityZoneRebalancing()?.let(AvailabilityZoneRebalancing::wrap)
 
   /**
    * The platform version on which to run your service.
@@ -107,6 +121,15 @@ public interface FargateServiceProps : BaseServiceOptions {
      * If true, each task will receive a public IP address.
      */
     public fun assignPublicIp(assignPublicIp: Boolean)
+
+    /**
+     * @param availabilityZoneRebalancing Whether to use Availability Zone rebalancing for the
+     * service.
+     * If enabled, `maxHealthyPercent` must be greater than 100, and the service must not be a
+     * target
+     * of a Classic Load Balancer.
+     */
+    public fun availabilityZoneRebalancing(availabilityZoneRebalancing: AvailabilityZoneRebalancing)
 
     /**
      * @param capacityProviderStrategies A list of Capacity Provider strategies used to place a
@@ -327,6 +350,18 @@ public interface FargateServiceProps : BaseServiceOptions {
      */
     override fun assignPublicIp(assignPublicIp: Boolean) {
       cdkBuilder.assignPublicIp(assignPublicIp)
+    }
+
+    /**
+     * @param availabilityZoneRebalancing Whether to use Availability Zone rebalancing for the
+     * service.
+     * If enabled, `maxHealthyPercent` must be greater than 100, and the service must not be a
+     * target
+     * of a Classic Load Balancer.
+     */
+    override
+        fun availabilityZoneRebalancing(availabilityZoneRebalancing: AvailabilityZoneRebalancing) {
+      cdkBuilder.availabilityZoneRebalancing(availabilityZoneRebalancing.let(AvailabilityZoneRebalancing.Companion::unwrap))
     }
 
     /**
@@ -603,6 +638,20 @@ public interface FargateServiceProps : BaseServiceOptions {
      * Default: false
      */
     override fun assignPublicIp(): Boolean? = unwrap(this).getAssignPublicIp()
+
+    /**
+     * Whether to use Availability Zone rebalancing for the service.
+     *
+     * If enabled, `maxHealthyPercent` must be greater than 100, and the service must not be a
+     * target
+     * of a Classic Load Balancer.
+     *
+     * Default: AvailabilityZoneRebalancing.DISABLED
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html)
+     */
+    override fun availabilityZoneRebalancing(): AvailabilityZoneRebalancing? =
+        unwrap(this).getAvailabilityZoneRebalancing()?.let(AvailabilityZoneRebalancing::wrap)
 
     /**
      * A list of Capacity Provider strategies used to place a service.

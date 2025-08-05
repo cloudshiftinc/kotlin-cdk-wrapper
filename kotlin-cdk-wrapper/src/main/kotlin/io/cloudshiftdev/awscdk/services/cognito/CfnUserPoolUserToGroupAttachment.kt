@@ -87,12 +87,12 @@ public open class CfnUserPoolUserToGroupAttachment(
   }
 
   /**
-   * The user pool ID for the user pool.
+   * The ID of the user pool that contains the group that you want to add the user to.
    */
   public open fun userPoolId(): String = unwrap(this).getUserPoolId()
 
   /**
-   * The user pool ID for the user pool.
+   * The ID of the user pool that contains the group that you want to add the user to.
    */
   public open fun userPoolId(`value`: String) {
     unwrap(this).setUserPoolId(`value`)
@@ -125,10 +125,11 @@ public open class CfnUserPoolUserToGroupAttachment(
     public fun groupName(groupName: String)
 
     /**
-     * The user pool ID for the user pool.
+     * The ID of the user pool that contains the group that you want to add the user to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-userpoolid)
-     * @param userPoolId The user pool ID for the user pool. 
+     * @param userPoolId The ID of the user pool that contains the group that you want to add the
+     * user to. 
      */
     public fun userPoolId(userPoolId: String)
 
@@ -161,10 +162,11 @@ public open class CfnUserPoolUserToGroupAttachment(
     }
 
     /**
-     * The user pool ID for the user pool.
+     * The ID of the user pool that contains the group that you want to add the user to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-userpoolid)
-     * @param userPoolId The user pool ID for the user pool. 
+     * @param userPoolId The ID of the user pool that contains the group that you want to add the
+     * user to. 
      */
     override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)

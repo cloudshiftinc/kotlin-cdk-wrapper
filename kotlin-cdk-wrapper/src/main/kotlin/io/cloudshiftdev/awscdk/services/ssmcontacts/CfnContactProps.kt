@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.ssmcontacts
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -39,6 +40,10 @@ import kotlin.collections.List
  * .build())
  * .build()))
  * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -68,6 +73,11 @@ public interface CfnContactProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-plan)
    */
   public fun plan(): Any? = unwrap(this).getPlan()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
    * The type of contact.
@@ -115,6 +125,16 @@ public interface CfnContactProps {
      * escalation plan uses stages that contact specified contacts.
      */
     public fun plan(vararg plan: Any)
+
+    /**
+     * @param tags the value to be set.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags the value to be set.
+     */
+    public fun tags(vararg tags: CfnTag)
 
     /**
      * @param type The type of contact. 
@@ -169,6 +189,18 @@ public interface CfnContactProps {
     override fun plan(vararg plan: Any): Unit = plan(plan.toList())
 
     /**
+     * @param tags the value to be set.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags the value to be set.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    /**
      * @param type The type of contact. 
      * * `PERSONAL` : A single, individual contact.
      * * `ESCALATION` : An escalation plan.
@@ -209,6 +241,11 @@ public interface CfnContactProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-plan)
      */
     override fun plan(): Any? = unwrap(this).getPlan()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
      * The type of contact.

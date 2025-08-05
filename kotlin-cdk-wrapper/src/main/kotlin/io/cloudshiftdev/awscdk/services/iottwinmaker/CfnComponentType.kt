@@ -2135,13 +2135,13 @@ public open class CfnComponentType(
        * @param configurations A mapping that specifies configuration information about the
        * property.
        */
-      public fun configurations(configurations: IResolvable)
+      public fun configurations(configurations: Map<String, String>)
 
       /**
        * @param configurations A mapping that specifies configuration information about the
        * property.
        */
-      public fun configurations(configurations: Map<String, String>)
+      public fun configurations(configurations: IResolvable)
 
       /**
        * @param dataType An object that specifies the data type of a property.
@@ -2239,16 +2239,16 @@ public open class CfnComponentType(
        * @param configurations A mapping that specifies configuration information about the
        * property.
        */
-      override fun configurations(configurations: IResolvable) {
-        cdkBuilder.configurations(configurations.let(IResolvable.Companion::unwrap))
+      override fun configurations(configurations: Map<String, String>) {
+        cdkBuilder.configurations(configurations)
       }
 
       /**
        * @param configurations A mapping that specifies configuration information about the
        * property.
        */
-      override fun configurations(configurations: Map<String, String>) {
-        cdkBuilder.configurations(configurations)
+      override fun configurations(configurations: IResolvable) {
+        cdkBuilder.configurations(configurations.let(IResolvable.Companion::unwrap))
       }
 
       /**

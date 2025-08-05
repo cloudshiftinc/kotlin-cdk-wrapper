@@ -28,6 +28,7 @@ import kotlin.collections.List
  * .trafficMirrorTargetId("trafficMirrorTargetId")
  * // the properties below are optional
  * .description("description")
+ * .ownerId("ownerId")
  * .packetLength(123)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -53,6 +54,13 @@ public interface CfnTrafficMirrorSessionProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html#cfn-ec2-trafficmirrorsession-networkinterfaceid)
    */
   public fun networkInterfaceId(): String
+
+  /**
+   * The ID of the account that owns the Traffic Mirror session.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html#cfn-ec2-trafficmirrorsession-ownerid)
+   */
+  public fun ownerId(): String? = unwrap(this).getOwnerId()
 
   /**
    * The number of bytes in each packet to mirror.
@@ -133,6 +141,11 @@ public interface CfnTrafficMirrorSessionProps {
     public fun networkInterfaceId(networkInterfaceId: String)
 
     /**
+     * @param ownerId The ID of the account that owns the Traffic Mirror session.
+     */
+    public fun ownerId(ownerId: String)
+
+    /**
      * @param packetLength The number of bytes in each packet to mirror.
      * These are bytes after the VXLAN header. Do not specify this parameter when you want to mirror
      * the entire packet. To mirror a subset of the packet, set this to the length (in bytes) that you
@@ -202,6 +215,13 @@ public interface CfnTrafficMirrorSessionProps {
      */
     override fun networkInterfaceId(networkInterfaceId: String) {
       cdkBuilder.networkInterfaceId(networkInterfaceId)
+    }
+
+    /**
+     * @param ownerId The ID of the account that owns the Traffic Mirror session.
+     */
+    override fun ownerId(ownerId: String) {
+      cdkBuilder.ownerId(ownerId)
     }
 
     /**
@@ -290,6 +310,13 @@ public interface CfnTrafficMirrorSessionProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html#cfn-ec2-trafficmirrorsession-networkinterfaceid)
      */
     override fun networkInterfaceId(): String = unwrap(this).getNetworkInterfaceId()
+
+    /**
+     * The ID of the account that owns the Traffic Mirror session.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html#cfn-ec2-trafficmirrorsession-ownerid)
+     */
+    override fun ownerId(): String? = unwrap(this).getOwnerId()
 
     /**
      * The number of bytes in each packet to mirror.

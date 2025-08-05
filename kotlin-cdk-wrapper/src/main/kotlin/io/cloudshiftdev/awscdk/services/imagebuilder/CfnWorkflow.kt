@@ -4,6 +4,8 @@ package io.cloudshiftdev.awscdk.services.imagebuilder
 
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
@@ -41,7 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnWorkflow(
   cdkObject: software.amazon.awscdk.services.imagebuilder.CfnWorkflow,
 ) : CfnResource(cdkObject),
-    IInspectable {
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -62,6 +65,12 @@ public open class CfnWorkflow(
    * The Amazon Resource Name (ARN) of the workflow resource.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * Describes what change has been made in this version of the workflow, or what makes this version

@@ -27,6 +27,9 @@ public open class NodeProxyAgentLayer(
   )
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.lambda.layer.node.proxy.agent.NodeProxyAgentLayer.PROPERTY_INJECTION_ID
+
     internal
         fun wrap(cdkObject: software.amazon.awscdk.lambda.layer.node.proxy.agent.NodeProxyAgentLayer):
         NodeProxyAgentLayer = NodeProxyAgentLayer(cdkObject)

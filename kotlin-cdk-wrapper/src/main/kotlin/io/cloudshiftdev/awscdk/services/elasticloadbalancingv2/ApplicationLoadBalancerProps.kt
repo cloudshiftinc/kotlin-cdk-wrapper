@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -220,6 +221,11 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
     public fun loadBalancerName(loadBalancerName: String)
 
     /**
+     * @param minimumCapacityUnit The minimum capacity (LCU) for a load balancer.
+     */
+    public fun minimumCapacityUnit(minimumCapacityUnit: Number)
+
+    /**
      * @param preserveHostHeader Indicates whether the Application Load Balancer should preserve the
      * host header in the HTTP request and send it to the target without any change.
      */
@@ -364,6 +370,13 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
      */
     override fun loadBalancerName(loadBalancerName: String) {
       cdkBuilder.loadBalancerName(loadBalancerName)
+    }
+
+    /**
+     * @param minimumCapacityUnit The minimum capacity (LCU) for a load balancer.
+     */
+    override fun minimumCapacityUnit(minimumCapacityUnit: Number) {
+      cdkBuilder.minimumCapacityUnit(minimumCapacityUnit)
     }
 
     /**
@@ -538,6 +551,15 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
      * Default: - Automatically generated name.
      */
     override fun loadBalancerName(): String? = unwrap(this).getLoadBalancerName()
+
+    /**
+     * The minimum capacity (LCU) for a load balancer.
+     *
+     * Default: undefined - ELB default is 0 LCU
+     *
+     * [Documentation](https://exampleloadbalancer.com/ondemand_capacity_reservation_calculator.html)
+     */
+    override fun minimumCapacityUnit(): Number? = unwrap(this).getMinimumCapacityUnit()
 
     /**
      * Indicates whether the Application Load Balancer should preserve the host header in the HTTP

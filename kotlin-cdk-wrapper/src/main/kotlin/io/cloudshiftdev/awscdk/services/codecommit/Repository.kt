@@ -936,6 +936,9 @@ public open class Repository(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.codecommit.Repository.PROPERTY_INJECTION_ID
+
     public fun fromRepositoryArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

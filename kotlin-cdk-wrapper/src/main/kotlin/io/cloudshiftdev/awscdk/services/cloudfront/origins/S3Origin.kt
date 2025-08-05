@@ -32,17 +32,18 @@ import software.amazon.awscdk.services.s3.IBucket as AmazonAwscdkServicesS3IBuck
  * Example:
  *
  * ```
- * // Adding an existing Lambda&#64;Edge function created in a different stack
- * // to a CloudFront distribution.
  * Bucket s3Bucket;
- * IVersion functionVersion = Version.fromVersionArn(this, "Version",
- * "arn:aws:lambda:us-east-1:123456789012:function:functionName:1");
+ * // Add a cloudfront Function to a Distribution
+ * Function cfFunction = Function.Builder.create(this, "Function")
+ * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
+ * .runtime(FunctionRuntime.JS_2_0)
+ * .build();
  * Distribution.Builder.create(this, "distro")
  * .defaultBehavior(BehaviorOptions.builder()
  * .origin(new S3Origin(s3Bucket))
- * .edgeLambdas(List.of(EdgeLambda.builder()
- * .functionVersion(functionVersion)
- * .eventType(LambdaEdgeEventType.VIEWER_REQUEST)
+ * .functionAssociations(List.of(FunctionAssociation.builder()
+ * .function(cfFunction)
+ * .eventType(FunctionEventType.VIEWER_REQUEST)
  * .build()))
  * .build())
  * .build();

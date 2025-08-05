@@ -1758,13 +1758,12 @@ public open class CfnRuleGroup(
    */
   public interface MatchAttributesProperty {
     /**
-     * The destination ports to inspect for.
+     * The destination port to inspect for.
      *
-     * If not specified, this matches with any destination port. This setting is only used for
-     * protocols 6 (TCP) and 17 (UDP).
+     * You can specify an individual port, for example `1994` and you can specify a port range, for
+     * example `1990:1994` . To match with any port, specify `ANY` .
      *
-     * You can specify individual ports, for example `1994` and you can specify port ranges, for
-     * example `1990:1994` .
+     * This setting is only used for protocols 6 (TCP) and 17 (UDP).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-matchattributes.html#cfn-networkfirewall-rulegroup-matchattributes-destinationports)
      */
@@ -1780,8 +1779,8 @@ public open class CfnRuleGroup(
     public fun destinations(): Any? = unwrap(this).getDestinations()
 
     /**
-     * The protocols to inspect for, specified using each protocol's assigned internet protocol
-     * number (IANA).
+     * The protocols to inspect for, specified using the assigned internet protocol number (IANA)
+     * for each protocol.
      *
      * If not specified, this matches with any protocol.
      *
@@ -1790,13 +1789,14 @@ public open class CfnRuleGroup(
     public fun protocols(): Any? = unwrap(this).getProtocols()
 
     /**
-     * The source ports to inspect for.
+     * The source port to inspect for.
      *
-     * If not specified, this matches with any source port. This setting is only used for protocols
-     * 6 (TCP) and 17 (UDP).
+     * You can specify an individual port, for example `1994` and you can specify a port range, for
+     * example `1990:1994` . To match with any port, specify `ANY` .
      *
-     * You can specify individual ports, for example `1994` and you can specify port ranges, for
-     * example `1990:1994` .
+     * If not specified, this matches with any source port.
+     *
+     * This setting is only used for protocols 6 (TCP) and 17 (UDP).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-matchattributes.html#cfn-networkfirewall-rulegroup-matchattributes-sourceports)
      */
@@ -1827,32 +1827,29 @@ public open class CfnRuleGroup(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param destinationPorts The destination ports to inspect for.
-       * If not specified, this matches with any destination port. This setting is only used for
-       * protocols 6 (TCP) and 17 (UDP).
+       * @param destinationPorts The destination port to inspect for.
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
        *
-       * You can specify individual ports, for example `1994` and you can specify port ranges, for
-       * example `1990:1994` .
+       * This setting is only used for protocols 6 (TCP) and 17 (UDP).
        */
       public fun destinationPorts(destinationPorts: IResolvable)
 
       /**
-       * @param destinationPorts The destination ports to inspect for.
-       * If not specified, this matches with any destination port. This setting is only used for
-       * protocols 6 (TCP) and 17 (UDP).
+       * @param destinationPorts The destination port to inspect for.
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
        *
-       * You can specify individual ports, for example `1994` and you can specify port ranges, for
-       * example `1990:1994` .
+       * This setting is only used for protocols 6 (TCP) and 17 (UDP).
        */
       public fun destinationPorts(destinationPorts: List<Any>)
 
       /**
-       * @param destinationPorts The destination ports to inspect for.
-       * If not specified, this matches with any destination port. This setting is only used for
-       * protocols 6 (TCP) and 17 (UDP).
+       * @param destinationPorts The destination port to inspect for.
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
        *
-       * You can specify individual ports, for example `1994` and you can specify port ranges, for
-       * example `1990:1994` .
+       * This setting is only used for protocols 6 (TCP) and 17 (UDP).
        */
       public fun destinationPorts(vararg destinationPorts: Any)
 
@@ -1878,53 +1875,56 @@ public open class CfnRuleGroup(
       public fun destinations(vararg destinations: Any)
 
       /**
-       * @param protocols The protocols to inspect for, specified using each protocol's assigned
-       * internet protocol number (IANA).
-       * If not specified, this matches with any protocol.
-       */
-      public fun protocols(protocols: IResolvable)
-
-      /**
-       * @param protocols The protocols to inspect for, specified using each protocol's assigned
-       * internet protocol number (IANA).
+       * @param protocols The protocols to inspect for, specified using the assigned internet
+       * protocol number (IANA) for each protocol.
        * If not specified, this matches with any protocol.
        */
       public fun protocols(protocols: List<Number>)
 
       /**
-       * @param protocols The protocols to inspect for, specified using each protocol's assigned
-       * internet protocol number (IANA).
+       * @param protocols The protocols to inspect for, specified using the assigned internet
+       * protocol number (IANA) for each protocol.
        * If not specified, this matches with any protocol.
        */
       public fun protocols(vararg protocols: Number)
 
       /**
-       * @param sourcePorts The source ports to inspect for.
-       * If not specified, this matches with any source port. This setting is only used for
-       * protocols 6 (TCP) and 17 (UDP).
+       * @param protocols The protocols to inspect for, specified using the assigned internet
+       * protocol number (IANA) for each protocol.
+       * If not specified, this matches with any protocol.
+       */
+      public fun protocols(protocols: IResolvable)
+
+      /**
+       * @param sourcePorts The source port to inspect for.
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
        *
-       * You can specify individual ports, for example `1994` and you can specify port ranges, for
-       * example `1990:1994` .
+       * If not specified, this matches with any source port.
+       *
+       * This setting is only used for protocols 6 (TCP) and 17 (UDP).
        */
       public fun sourcePorts(sourcePorts: IResolvable)
 
       /**
-       * @param sourcePorts The source ports to inspect for.
-       * If not specified, this matches with any source port. This setting is only used for
-       * protocols 6 (TCP) and 17 (UDP).
+       * @param sourcePorts The source port to inspect for.
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
        *
-       * You can specify individual ports, for example `1994` and you can specify port ranges, for
-       * example `1990:1994` .
+       * If not specified, this matches with any source port.
+       *
+       * This setting is only used for protocols 6 (TCP) and 17 (UDP).
        */
       public fun sourcePorts(sourcePorts: List<Any>)
 
       /**
-       * @param sourcePorts The source ports to inspect for.
-       * If not specified, this matches with any source port. This setting is only used for
-       * protocols 6 (TCP) and 17 (UDP).
+       * @param sourcePorts The source port to inspect for.
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
        *
-       * You can specify individual ports, for example `1994` and you can specify port ranges, for
-       * example `1990:1994` .
+       * If not specified, this matches with any source port.
+       *
+       * This setting is only used for protocols 6 (TCP) and 17 (UDP).
        */
       public fun sourcePorts(vararg sourcePorts: Any)
 
@@ -1975,36 +1975,33 @@ public open class CfnRuleGroup(
           software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.MatchAttributesProperty.builder()
 
       /**
-       * @param destinationPorts The destination ports to inspect for.
-       * If not specified, this matches with any destination port. This setting is only used for
-       * protocols 6 (TCP) and 17 (UDP).
+       * @param destinationPorts The destination port to inspect for.
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
        *
-       * You can specify individual ports, for example `1994` and you can specify port ranges, for
-       * example `1990:1994` .
+       * This setting is only used for protocols 6 (TCP) and 17 (UDP).
        */
       override fun destinationPorts(destinationPorts: IResolvable) {
         cdkBuilder.destinationPorts(destinationPorts.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param destinationPorts The destination ports to inspect for.
-       * If not specified, this matches with any destination port. This setting is only used for
-       * protocols 6 (TCP) and 17 (UDP).
+       * @param destinationPorts The destination port to inspect for.
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
        *
-       * You can specify individual ports, for example `1994` and you can specify port ranges, for
-       * example `1990:1994` .
+       * This setting is only used for protocols 6 (TCP) and 17 (UDP).
        */
       override fun destinationPorts(destinationPorts: List<Any>) {
         cdkBuilder.destinationPorts(destinationPorts.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param destinationPorts The destination ports to inspect for.
-       * If not specified, this matches with any destination port. This setting is only used for
-       * protocols 6 (TCP) and 17 (UDP).
+       * @param destinationPorts The destination port to inspect for.
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
        *
-       * You can specify individual ports, for example `1994` and you can specify port ranges, for
-       * example `1990:1994` .
+       * This setting is only used for protocols 6 (TCP) and 17 (UDP).
        */
       override fun destinationPorts(vararg destinationPorts: Any): Unit =
           destinationPorts(destinationPorts.toList())
@@ -2036,17 +2033,8 @@ public open class CfnRuleGroup(
           destinations(destinations.toList())
 
       /**
-       * @param protocols The protocols to inspect for, specified using each protocol's assigned
-       * internet protocol number (IANA).
-       * If not specified, this matches with any protocol.
-       */
-      override fun protocols(protocols: IResolvable) {
-        cdkBuilder.protocols(protocols.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param protocols The protocols to inspect for, specified using each protocol's assigned
-       * internet protocol number (IANA).
+       * @param protocols The protocols to inspect for, specified using the assigned internet
+       * protocol number (IANA) for each protocol.
        * If not specified, this matches with any protocol.
        */
       override fun protocols(protocols: List<Number>) {
@@ -2054,43 +2042,55 @@ public open class CfnRuleGroup(
       }
 
       /**
-       * @param protocols The protocols to inspect for, specified using each protocol's assigned
-       * internet protocol number (IANA).
+       * @param protocols The protocols to inspect for, specified using the assigned internet
+       * protocol number (IANA) for each protocol.
        * If not specified, this matches with any protocol.
        */
       override fun protocols(vararg protocols: Number): Unit = protocols(protocols.toList())
 
       /**
-       * @param sourcePorts The source ports to inspect for.
-       * If not specified, this matches with any source port. This setting is only used for
-       * protocols 6 (TCP) and 17 (UDP).
+       * @param protocols The protocols to inspect for, specified using the assigned internet
+       * protocol number (IANA) for each protocol.
+       * If not specified, this matches with any protocol.
+       */
+      override fun protocols(protocols: IResolvable) {
+        cdkBuilder.protocols(protocols.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param sourcePorts The source port to inspect for.
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
        *
-       * You can specify individual ports, for example `1994` and you can specify port ranges, for
-       * example `1990:1994` .
+       * If not specified, this matches with any source port.
+       *
+       * This setting is only used for protocols 6 (TCP) and 17 (UDP).
        */
       override fun sourcePorts(sourcePorts: IResolvable) {
         cdkBuilder.sourcePorts(sourcePorts.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param sourcePorts The source ports to inspect for.
-       * If not specified, this matches with any source port. This setting is only used for
-       * protocols 6 (TCP) and 17 (UDP).
+       * @param sourcePorts The source port to inspect for.
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
        *
-       * You can specify individual ports, for example `1994` and you can specify port ranges, for
-       * example `1990:1994` .
+       * If not specified, this matches with any source port.
+       *
+       * This setting is only used for protocols 6 (TCP) and 17 (UDP).
        */
       override fun sourcePorts(sourcePorts: List<Any>) {
         cdkBuilder.sourcePorts(sourcePorts.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param sourcePorts The source ports to inspect for.
-       * If not specified, this matches with any source port. This setting is only used for
-       * protocols 6 (TCP) and 17 (UDP).
+       * @param sourcePorts The source port to inspect for.
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
        *
-       * You can specify individual ports, for example `1994` and you can specify port ranges, for
-       * example `1990:1994` .
+       * If not specified, this matches with any source port.
+       *
+       * This setting is only used for protocols 6 (TCP) and 17 (UDP).
        */
       override fun sourcePorts(vararg sourcePorts: Any): Unit = sourcePorts(sourcePorts.toList())
 
@@ -2151,13 +2151,12 @@ public open class CfnRuleGroup(
     ) : CdkObject(cdkObject),
         MatchAttributesProperty {
       /**
-       * The destination ports to inspect for.
+       * The destination port to inspect for.
        *
-       * If not specified, this matches with any destination port. This setting is only used for
-       * protocols 6 (TCP) and 17 (UDP).
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
        *
-       * You can specify individual ports, for example `1994` and you can specify port ranges, for
-       * example `1990:1994` .
+       * This setting is only used for protocols 6 (TCP) and 17 (UDP).
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-matchattributes.html#cfn-networkfirewall-rulegroup-matchattributes-destinationports)
        */
@@ -2173,8 +2172,8 @@ public open class CfnRuleGroup(
       override fun destinations(): Any? = unwrap(this).getDestinations()
 
       /**
-       * The protocols to inspect for, specified using each protocol's assigned internet protocol
-       * number (IANA).
+       * The protocols to inspect for, specified using the assigned internet protocol number (IANA)
+       * for each protocol.
        *
        * If not specified, this matches with any protocol.
        *
@@ -2183,13 +2182,14 @@ public open class CfnRuleGroup(
       override fun protocols(): Any? = unwrap(this).getProtocols()
 
       /**
-       * The source ports to inspect for.
+       * The source port to inspect for.
        *
-       * If not specified, this matches with any source port. This setting is only used for
-       * protocols 6 (TCP) and 17 (UDP).
+       * You can specify an individual port, for example `1994` and you can specify a port range,
+       * for example `1990:1994` . To match with any port, specify `ANY` .
        *
-       * You can specify individual ports, for example `1994` and you can specify port ranges, for
-       * example `1990:1994` .
+       * If not specified, this matches with any source port.
+       *
+       * This setting is only used for protocols 6 (TCP) and 17 (UDP).
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-matchattributes.html#cfn-networkfirewall-rulegroup-matchattributes-sourceports)
        */
@@ -3606,6 +3606,8 @@ public open class CfnRuleGroup(
   /**
    * Settings that are available for use in the rules in the `RuleGroup` where this is defined.
    *
+   * See `CreateRuleGroup` or `UpdateRuleGroup` for usage.
+   *
    * Example:
    *
    * ```
@@ -4071,7 +4073,7 @@ public open class CfnRuleGroup(
      * Use this option to specify simple Suricata rules with protocol, source and destination,
      * ports, direction, and rule options. For information about the Suricata `Rules` format, see
      * [Rules
-     * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+     * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-7.0.3/rules/intro.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-statefulrules)
@@ -4128,7 +4130,7 @@ public open class CfnRuleGroup(
        * Use this option to specify simple Suricata rules with protocol, source and destination,
        * ports, direction, and rule options. For information about the Suricata `Rules` format, see
        * [Rules
-       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-7.0.3/rules/intro.html)
        * .
        */
       public fun statefulRules(statefulRules: IResolvable)
@@ -4139,7 +4141,7 @@ public open class CfnRuleGroup(
        * Use this option to specify simple Suricata rules with protocol, source and destination,
        * ports, direction, and rule options. For information about the Suricata `Rules` format, see
        * [Rules
-       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-7.0.3/rules/intro.html)
        * .
        */
       public fun statefulRules(statefulRules: List<Any>)
@@ -4150,7 +4152,7 @@ public open class CfnRuleGroup(
        * Use this option to specify simple Suricata rules with protocol, source and destination,
        * ports, direction, and rule options. For information about the Suricata `Rules` format, see
        * [Rules
-       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-7.0.3/rules/intro.html)
        * .
        */
       public fun statefulRules(vararg statefulRules: Any)
@@ -4227,7 +4229,7 @@ public open class CfnRuleGroup(
        * Use this option to specify simple Suricata rules with protocol, source and destination,
        * ports, direction, and rule options. For information about the Suricata `Rules` format, see
        * [Rules
-       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-7.0.3/rules/intro.html)
        * .
        */
       override fun statefulRules(statefulRules: IResolvable) {
@@ -4240,7 +4242,7 @@ public open class CfnRuleGroup(
        * Use this option to specify simple Suricata rules with protocol, source and destination,
        * ports, direction, and rule options. For information about the Suricata `Rules` format, see
        * [Rules
-       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-7.0.3/rules/intro.html)
        * .
        */
       override fun statefulRules(statefulRules: List<Any>) {
@@ -4253,7 +4255,7 @@ public open class CfnRuleGroup(
        * Use this option to specify simple Suricata rules with protocol, source and destination,
        * ports, direction, and rule options. For information about the Suricata `Rules` format, see
        * [Rules
-       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-7.0.3/rules/intro.html)
        * .
        */
       override fun statefulRules(vararg statefulRules: Any): Unit =
@@ -4328,7 +4330,7 @@ public open class CfnRuleGroup(
        * Use this option to specify simple Suricata rules with protocol, source and destination,
        * ports, direction, and rule options. For information about the Suricata `Rules` format, see
        * [Rules
-       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+       * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-7.0.3/rules/intro.html)
        * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html#cfn-networkfirewall-rulegroup-rulessource-statefulrules)
@@ -4476,7 +4478,7 @@ public open class CfnRuleGroup(
    *
    * Use this option to specify a simple Suricata rule with protocol, source and destination, ports,
    * direction, and rule options. For information about the Suricata `Rules` format, see [Rules
-   * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+   * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-7.0.3/rules/intro.html)
    * .
    *
    * Example:

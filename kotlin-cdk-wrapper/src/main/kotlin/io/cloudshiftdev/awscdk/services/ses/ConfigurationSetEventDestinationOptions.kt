@@ -16,10 +16,12 @@ import kotlin.collections.List
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.services.events.*;
  * ConfigurationSet myConfigurationSet;
- * Topic myTopic;
- * myConfigurationSet.addEventDestination("ToSns", ConfigurationSetEventDestinationOptions.builder()
- * .destination(EventDestination.snsTopic(myTopic))
+ * IEventBus bus = EventBus.fromEventBusName(this, "EventBus", "default");
+ * myConfigurationSet.addEventDestination("ToEventBus",
+ * ConfigurationSetEventDestinationOptions.builder()
+ * .destination(EventDestination.eventBus(bus))
  * .build());
  * ```
  */

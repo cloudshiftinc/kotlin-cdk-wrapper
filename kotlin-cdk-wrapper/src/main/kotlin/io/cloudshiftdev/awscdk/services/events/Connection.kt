@@ -202,6 +202,9 @@ public open class Connection(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.events.Connection.PROPERTY_INJECTION_ID
+
     public fun fromConnectionAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

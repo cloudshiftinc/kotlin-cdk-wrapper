@@ -438,6 +438,9 @@ public open class LambdaDeploymentGroup(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup.PROPERTY_INJECTION_ID
+
     public fun fromLambdaDeploymentGroupAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -36,6 +36,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .activate(false)
  * .detectorId("detectorId")
+ * .expectedBucketOwner("expectedBucketOwner")
  * .name("name")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -101,6 +102,18 @@ public open class CfnIPSet(
    */
   public open fun detectorId(`value`: String) {
     unwrap(this).setDetectorId(`value`)
+  }
+
+  /**
+   * The AWS account ID that owns the Amazon S3 bucket specified in the *Location* field.
+   */
+  public open fun expectedBucketOwner(): String? = unwrap(this).getExpectedBucketOwner()
+
+  /**
+   * The AWS account ID that owns the Amazon S3 bucket specified in the *Location* field.
+   */
+  public open fun expectedBucketOwner(`value`: String) {
+    unwrap(this).setExpectedBucketOwner(`value`)
   }
 
   /**
@@ -207,6 +220,18 @@ public open class CfnIPSet(
     public fun detectorId(detectorId: String)
 
     /**
+     * The AWS account ID that owns the Amazon S3 bucket specified in the *Location* field.
+     *
+     * When you provide this account ID, GuardDuty will validate that the S3 bucket belongs to this
+     * account. If you don't specify an account ID owner, GuardDuty doesn't perform any validation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html#cfn-guardduty-ipset-expectedbucketowner)
+     * @param expectedBucketOwner The AWS account ID that owns the Amazon S3 bucket specified in the
+     * *Location* field. 
+     */
+    public fun expectedBucketOwner(expectedBucketOwner: String)
+
+    /**
      * The format of the file that contains the IPSet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html#cfn-guardduty-ipset-format)
@@ -302,6 +327,20 @@ public open class CfnIPSet(
      */
     override fun detectorId(detectorId: String) {
       cdkBuilder.detectorId(detectorId)
+    }
+
+    /**
+     * The AWS account ID that owns the Amazon S3 bucket specified in the *Location* field.
+     *
+     * When you provide this account ID, GuardDuty will validate that the S3 bucket belongs to this
+     * account. If you don't specify an account ID owner, GuardDuty doesn't perform any validation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html#cfn-guardduty-ipset-expectedbucketowner)
+     * @param expectedBucketOwner The AWS account ID that owns the Amazon S3 bucket specified in the
+     * *Location* field. 
+     */
+    override fun expectedBucketOwner(expectedBucketOwner: String) {
+      cdkBuilder.expectedBucketOwner(expectedBucketOwner)
     }
 
     /**

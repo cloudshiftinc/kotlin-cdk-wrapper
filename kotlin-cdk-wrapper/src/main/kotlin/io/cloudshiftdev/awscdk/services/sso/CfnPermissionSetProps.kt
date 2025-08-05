@@ -95,7 +95,8 @@ public interface CfnPermissionSetProps {
   public fun instanceArn(): String
 
   /**
-   * A structure that stores the details of the AWS managed policy.
+   * A structure that stores a list of managed policy ARNs that describe the associated AWS managed
+   * policy.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-permissionset.html#cfn-sso-permissionset-managedpolicies)
    */
@@ -198,12 +199,14 @@ public interface CfnPermissionSetProps {
     public fun instanceArn(instanceArn: String)
 
     /**
-     * @param managedPolicies A structure that stores the details of the AWS managed policy.
+     * @param managedPolicies A structure that stores a list of managed policy ARNs that describe
+     * the associated AWS managed policy.
      */
     public fun managedPolicies(managedPolicies: List<String>)
 
     /**
-     * @param managedPolicies A structure that stores the details of the AWS managed policy.
+     * @param managedPolicies A structure that stores a list of managed policy ARNs that describe
+     * the associated AWS managed policy.
      */
     public fun managedPolicies(vararg managedPolicies: String)
 
@@ -352,14 +355,16 @@ public interface CfnPermissionSetProps {
     }
 
     /**
-     * @param managedPolicies A structure that stores the details of the AWS managed policy.
+     * @param managedPolicies A structure that stores a list of managed policy ARNs that describe
+     * the associated AWS managed policy.
      */
     override fun managedPolicies(managedPolicies: List<String>) {
       cdkBuilder.managedPolicies(managedPolicies)
     }
 
     /**
-     * @param managedPolicies A structure that stores the details of the AWS managed policy.
+     * @param managedPolicies A structure that stores a list of managed policy ARNs that describe
+     * the associated AWS managed policy.
      */
     override fun managedPolicies(vararg managedPolicies: String): Unit =
         managedPolicies(managedPolicies.toList())
@@ -514,7 +519,8 @@ public interface CfnPermissionSetProps {
     override fun instanceArn(): String = unwrap(this).getInstanceArn()
 
     /**
-     * A structure that stores the details of the AWS managed policy.
+     * A structure that stores a list of managed policy ARNs that describe the associated AWS
+     * managed policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-permissionset.html#cfn-sso-permissionset-managedpolicies)
      */

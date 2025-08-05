@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Map
 import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
@@ -19,11 +20,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.services.logs.*;
  * HttpApi api;
- * HttpStage.Builder.create(this, "Stage")
+ * LogGroup logGroup;
+ * HttpStage stage = HttpStage.Builder.create(this, "Stage")
  * .httpApi(api)
- * .stageName("beta")
- * .description("My Stage")
+ * .accessLogSettings(Map.of(
+ * "destination", new LogGroupLogDestination(logGroup)))
  * .build();
  * ```
  */
@@ -47,6 +50,16 @@ public open class HttpStage(
     props: HttpStageProps.Builder.() -> Unit,
   ) : this(scope, id, HttpStageProps(props)
   )
+
+  /**
+   * Adds a stage variable to this stage.
+   *
+   * @param name 
+   * @param value 
+   */
+  public override fun addStageVariable(name: String, `value`: String) {
+    unwrap(this).addStageVariable(name, `value`)
+  }
 
   /**
    * The API this stage is associated to.
@@ -271,6 +284,15 @@ public open class HttpStage(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Settings for access logging.
+     *
+     * Default: - No access logging
+     *
+     * @param accessLogSettings Settings for access logging. 
+     */
+    public fun accessLogSettings(accessLogSettings: IAccessLogSettings)
+
+    /**
      * Whether updates to an API automatically trigger a new deployment.
      *
      * Default: false
@@ -287,6 +309,15 @@ public open class HttpStage(
      * @param description The description for the API stage. 
      */
     public fun description(description: String)
+
+    /**
+     * Specifies whether detailed metrics are enabled.
+     *
+     * Default: false
+     *
+     * @param detailedMetricsEnabled Specifies whether detailed metrics are enabled. 
+     */
+    public fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean)
 
     /**
      * The options for custom domain and api mapping.
@@ -328,6 +359,21 @@ public open class HttpStage(
     public fun stageName(stageName: String)
 
     /**
+     * Stage variables for the stage. These are key-value pairs that you can define and use in your
+     * API routes.
+     *
+     * The allowed characters for variable names and the required pattern for variable values are
+     * specified here:
+     * https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-apigateway-stage.html#cfn-apigateway-stage-variables
+     *
+     * Default: - No stage variables
+     *
+     * @param stageVariables Stage variables for the stage. These are key-value pairs that you can
+     * define and use in your API routes. 
+     */
+    public fun stageVariables(stageVariables: Map<String, String>)
+
+    /**
      * Throttle settings for the routes of this stage.
      *
      * Default: - no throttling configuration
@@ -356,6 +402,17 @@ public open class HttpStage(
         software.amazon.awscdk.services.apigatewayv2.HttpStage.Builder.create(scope, id)
 
     /**
+     * Settings for access logging.
+     *
+     * Default: - No access logging
+     *
+     * @param accessLogSettings Settings for access logging. 
+     */
+    override fun accessLogSettings(accessLogSettings: IAccessLogSettings) {
+      cdkBuilder.accessLogSettings(accessLogSettings.let(IAccessLogSettings.Companion::unwrap))
+    }
+
+    /**
      * Whether updates to an API automatically trigger a new deployment.
      *
      * Default: false
@@ -375,6 +432,17 @@ public open class HttpStage(
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
+    }
+
+    /**
+     * Specifies whether detailed metrics are enabled.
+     *
+     * Default: false
+     *
+     * @param detailedMetricsEnabled Specifies whether detailed metrics are enabled. 
+     */
+    override fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean) {
+      cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled)
     }
 
     /**
@@ -424,6 +492,23 @@ public open class HttpStage(
     }
 
     /**
+     * Stage variables for the stage. These are key-value pairs that you can define and use in your
+     * API routes.
+     *
+     * The allowed characters for variable names and the required pattern for variable values are
+     * specified here:
+     * https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-apigateway-stage.html#cfn-apigateway-stage-variables
+     *
+     * Default: - No stage variables
+     *
+     * @param stageVariables Stage variables for the stage. These are key-value pairs that you can
+     * define and use in your API routes. 
+     */
+    override fun stageVariables(stageVariables: Map<String, String>) {
+      cdkBuilder.stageVariables(stageVariables)
+    }
+
+    /**
      * Throttle settings for the routes of this stage.
      *
      * Default: - no throttling configuration
@@ -450,6 +535,9 @@ public open class HttpStage(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.apigatewayv2.HttpStage.PROPERTY_INJECTION_ID
+
     public fun fromHttpStageAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

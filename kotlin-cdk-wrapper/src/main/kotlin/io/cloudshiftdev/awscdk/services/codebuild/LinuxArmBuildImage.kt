@@ -106,6 +106,12 @@ public open class LinuxArmBuildImage(
     public val AMAZON_LINUX_2_STANDARD_3_0: IBuildImage =
         IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxArmBuildImage.AMAZON_LINUX_2_STANDARD_3_0)
 
+    public val AMAZON_LINUX_2023_STANDARD_2_0: IBuildImage =
+        IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxArmBuildImage.AMAZON_LINUX_2023_STANDARD_2_0)
+
+    public val AMAZON_LINUX_2023_STANDARD_3_0: IBuildImage =
+        IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxArmBuildImage.AMAZON_LINUX_2023_STANDARD_3_0)
+
     public fun fromCodeBuildImageId(id: String): IBuildImage =
         software.amazon.awscdk.services.codebuild.LinuxArmBuildImage.fromCodeBuildImageId(id).let(IBuildImage::wrap)
 

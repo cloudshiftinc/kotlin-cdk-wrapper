@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.gamelift
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -97,6 +98,10 @@ import kotlin.jvm.JvmName
  * .scriptId("scriptId")
  * .serverLaunchParameters("serverLaunchParameters")
  * .serverLaunchPath("serverLaunchPath")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -104,7 +109,7 @@ import kotlin.jvm.JvmName
  */
 public interface CfnFleetProps {
   /**
-   * Amazon GameLift Anywhere configuration options.
+   * Amazon GameLift Servers Anywhere configuration options.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-anywhereconfiguration)
    */
@@ -139,11 +144,11 @@ public interface CfnFleetProps {
   public fun buildId(): String? = unwrap(this).getBuildId()
 
   /**
-   * Prompts Amazon GameLift to generate a TLS/SSL certificate for the fleet.
+   * Prompts Amazon GameLift Servers to generate a TLS/SSL certificate for the fleet.
    *
-   * Amazon GameLift uses the certificates to encrypt traffic between game clients and the game
-   * servers running on Amazon GameLift. By default, the `CertificateConfiguration` is `DISABLED` . You
-   * can't change this property after you create the fleet.
+   * Amazon GameLift Servers uses the certificates to encrypt traffic between game clients and the
+   * game servers running on Amazon GameLift Servers. By default, the `CertificateConfiguration` is
+   * `DISABLED` . You can't change this property after you create the fleet.
    *
    * AWS Certificate Manager (ACM) certificates expire after 13 months. Certificate expiration can
    * cause fleets to fail, preventing players from connecting to instances in the fleet. We recommend
@@ -182,14 +187,16 @@ public interface CfnFleetProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * The number of EC2 instances that you want this fleet to host.
+   * (deprecated) [DEPRECATED] The number of EC2 instances that you want this fleet to host.
    *
    * When creating a new fleet, GameLift automatically sets this value to "1" and initiates a single
    * instance. Once the fleet is active, update this value to trigger GameLift to add or remove
    * instances from the fleet.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-desiredec2instances)
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun desiredEc2Instances(): Number? = unwrap(this).getDesiredEc2Instances()
 
   /**
@@ -200,15 +207,15 @@ public interface CfnFleetProps {
    * fleet, but you must call
    * [](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetPortSettings) to set it
    * before players can connect to game sessions. As a best practice, we recommend opening ports for
-   * remote access only when you need them and closing them when you're finished. For Realtime Servers
-   * fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+   * remote access only when you need them and closing them when you're finished. For Amazon GameLift
+   * Servers Realtime fleets, Amazon GameLift Servers automatically sets TCP and UDP ranges.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2inboundpermissions)
    */
   public fun ec2InboundPermissions(): Any? = unwrap(this).getEc2InboundPermissions()
 
   /**
-   * The Amazon GameLift-supported Amazon EC2 instance type to use with managed EC2 fleets.
+   * The Amazon GameLift Servers-supported Amazon EC2 instance type to use with managed EC2 fleets.
    *
    * Instance type determines the computing resources that will be used to host your game servers,
    * including CPU, memory, storage, and networking capacity. See [Amazon Elastic Compute Cloud
@@ -267,10 +274,10 @@ public interface CfnFleetProps {
    * fleet.
    *
    * Use this parameter when creating a fleet in AWS Regions that support multiple locations. You
-   * can add any AWS Region or Local Zone that's supported by Amazon GameLift. Provide a list of one or
-   * more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this parameter,
-   * Amazon GameLift requires you to include your home location in the request. For a list of supported
-   * Regions and Local Zones, see [Amazon GameLift service
+   * can add any AWS Region or Local Zone that's supported by Amazon GameLift Servers. Provide a list
+   * of one or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this
+   * parameter, Amazon GameLift Servers requires you to include your home location in the request. For
+   * a list of supported Regions and Local Zones, see [Amazon GameLift Servers service
    * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
    * managed hosting.
    *
@@ -291,12 +298,15 @@ public interface CfnFleetProps {
   public fun logPaths(): List<String> = unwrap(this).getLogPaths() ?: emptyList()
 
   /**
-   * The maximum number of instances that are allowed in the specified fleet location.
+   * (deprecated) [DEPRECATED] The maximum value that is allowed for the fleet's instance count.
    *
-   * If this parameter is not set, the default is 1.
+   * When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is
+   * active, you can change this value.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-maxsize)
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun maxSize(): Number? = unwrap(this).getMaxSize()
 
   /**
@@ -311,12 +321,15 @@ public interface CfnFleetProps {
   public fun metricGroups(): List<String> = unwrap(this).getMetricGroups() ?: emptyList()
 
   /**
-   * The minimum number of instances that are allowed in the specified fleet location.
+   * (deprecated) [DEPRECATED] The minimum value allowed for the fleet's instance count.
    *
-   * If this parameter is not set, the default is 0.
+   * When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is
+   * active, you can change this value.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-minsize)
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun minSize(): Number? = unwrap(this).getMinSize()
 
   /**
@@ -344,8 +357,8 @@ public interface CfnFleetProps {
       unwrap(this).getNewGameSessionProtectionPolicy()
 
   /**
-   * Used when peering your Amazon GameLift fleet with a VPC, the unique identifier for the AWS
-   * account that owns the VPC.
+   * Used when peering your Amazon GameLift Servers fleet with a VPC, the unique identifier for the
+   * AWS account that owns the VPC.
    *
    * You can find your account ID in the AWS Management Console under account settings.
    *
@@ -354,11 +367,12 @@ public interface CfnFleetProps {
   public fun peerVpcAwsAccountId(): String? = unwrap(this).getPeerVpcAwsAccountId()
 
   /**
-   * A unique identifier for a VPC with resources to be accessed by your Amazon GameLift fleet.
+   * A unique identifier for a VPC with resources to be accessed by your Amazon GameLift Servers
+   * fleet.
    *
    * The VPC must be in the same Region as your fleet. To look up a VPC ID, use the [VPC
    * Dashboard](https://docs.aws.amazon.com/vpc/) in the AWS Management Console . Learn more about VPC
-   * peering in [VPC Peering with Amazon GameLift
+   * peering in [VPC Peering with Amazon GameLift Servers
    * Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html) .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-peervpcid)
@@ -402,8 +416,8 @@ public interface CfnFleetProps {
   /**
    * The unique identifier for a Realtime configuration script to be deployed on fleet instances.
    *
-   * You can use either the script ID or ARN. Scripts must be uploaded to Amazon GameLift prior to
-   * creating the fleet. This fleet property cannot be changed later.
+   * You can use either the script ID or ARN. Scripts must be uploaded to Amazon GameLift Servers
+   * prior to creating the fleet. This fleet property cannot be changed later.
    *
    *
    * You can't use the `!Ref` command to reference a script created with a CloudFormation template
@@ -443,22 +457,29 @@ public interface CfnFleetProps {
   public fun serverLaunchPath(): String? = unwrap(this).getServerLaunchPath()
 
   /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
    * A builder for [CfnFleetProps]
    */
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param anywhereConfiguration Amazon GameLift Anywhere configuration options.
+     * @param anywhereConfiguration Amazon GameLift Servers Anywhere configuration options.
      */
     public fun anywhereConfiguration(anywhereConfiguration: IResolvable)
 
     /**
-     * @param anywhereConfiguration Amazon GameLift Anywhere configuration options.
+     * @param anywhereConfiguration Amazon GameLift Servers Anywhere configuration options.
      */
     public fun anywhereConfiguration(anywhereConfiguration: CfnFleet.AnywhereConfigurationProperty)
 
     /**
-     * @param anywhereConfiguration Amazon GameLift Anywhere configuration options.
+     * @param anywhereConfiguration Amazon GameLift Servers Anywhere configuration options.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a57775121bfaabdc7dbc0bf4d1a90036fc861b8f222bff3268b7aa4e48687e1b")
@@ -489,11 +510,11 @@ public interface CfnFleetProps {
     public fun buildId(buildId: String)
 
     /**
-     * @param certificateConfiguration Prompts Amazon GameLift to generate a TLS/SSL certificate for
-     * the fleet.
-     * Amazon GameLift uses the certificates to encrypt traffic between game clients and the game
-     * servers running on Amazon GameLift. By default, the `CertificateConfiguration` is `DISABLED` .
-     * You can't change this property after you create the fleet.
+     * @param certificateConfiguration Prompts Amazon GameLift Servers to generate a TLS/SSL
+     * certificate for the fleet.
+     * Amazon GameLift Servers uses the certificates to encrypt traffic between game clients and the
+     * game servers running on Amazon GameLift Servers. By default, the `CertificateConfiguration` is
+     * `DISABLED` . You can't change this property after you create the fleet.
      *
      * AWS Certificate Manager (ACM) certificates expire after 13 months. Certificate expiration can
      * cause fleets to fail, preventing players from connecting to instances in the fleet. We recommend
@@ -509,11 +530,11 @@ public interface CfnFleetProps {
     public fun certificateConfiguration(certificateConfiguration: IResolvable)
 
     /**
-     * @param certificateConfiguration Prompts Amazon GameLift to generate a TLS/SSL certificate for
-     * the fleet.
-     * Amazon GameLift uses the certificates to encrypt traffic between game clients and the game
-     * servers running on Amazon GameLift. By default, the `CertificateConfiguration` is `DISABLED` .
-     * You can't change this property after you create the fleet.
+     * @param certificateConfiguration Prompts Amazon GameLift Servers to generate a TLS/SSL
+     * certificate for the fleet.
+     * Amazon GameLift Servers uses the certificates to encrypt traffic between game clients and the
+     * game servers running on Amazon GameLift Servers. By default, the `CertificateConfiguration` is
+     * `DISABLED` . You can't change this property after you create the fleet.
      *
      * AWS Certificate Manager (ACM) certificates expire after 13 months. Certificate expiration can
      * cause fleets to fail, preventing players from connecting to instances in the fleet. We recommend
@@ -530,11 +551,11 @@ public interface CfnFleetProps {
         fun certificateConfiguration(certificateConfiguration: CfnFleet.CertificateConfigurationProperty)
 
     /**
-     * @param certificateConfiguration Prompts Amazon GameLift to generate a TLS/SSL certificate for
-     * the fleet.
-     * Amazon GameLift uses the certificates to encrypt traffic between game clients and the game
-     * servers running on Amazon GameLift. By default, the `CertificateConfiguration` is `DISABLED` .
-     * You can't change this property after you create the fleet.
+     * @param certificateConfiguration Prompts Amazon GameLift Servers to generate a TLS/SSL
+     * certificate for the fleet.
+     * Amazon GameLift Servers uses the certificates to encrypt traffic between game clients and the
+     * game servers running on Amazon GameLift Servers. By default, the `CertificateConfiguration` is
+     * `DISABLED` . You can't change this property after you create the fleet.
      *
      * AWS Certificate Manager (ACM) certificates expire after 13 months. Certificate expiration can
      * cause fleets to fail, preventing players from connecting to instances in the fleet. We recommend
@@ -568,11 +589,14 @@ public interface CfnFleetProps {
     public fun description(description: String)
 
     /**
-     * @param desiredEc2Instances The number of EC2 instances that you want this fleet to host.
+     * @param desiredEc2Instances [DEPRECATED] The number of EC2 instances that you want this fleet
+     * to host.
      * When creating a new fleet, GameLift automatically sets this value to "1" and initiates a
      * single instance. Once the fleet is active, update this value to trigger GameLift to add or
      * remove instances from the fleet.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun desiredEc2Instances(desiredEc2Instances: Number)
 
     /**
@@ -582,8 +606,8 @@ public interface CfnFleetProps {
      * the fleet, but you must call
      * [](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetPortSettings) to set
      * it before players can connect to game sessions. As a best practice, we recommend opening ports
-     * for remote access only when you need them and closing them when you're finished. For Realtime
-     * Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * for remote access only when you need them and closing them when you're finished. For Amazon
+     * GameLift Servers Realtime fleets, Amazon GameLift Servers automatically sets TCP and UDP ranges.
      */
     public fun ec2InboundPermissions(ec2InboundPermissions: IResolvable)
 
@@ -594,8 +618,8 @@ public interface CfnFleetProps {
      * the fleet, but you must call
      * [](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetPortSettings) to set
      * it before players can connect to game sessions. As a best practice, we recommend opening ports
-     * for remote access only when you need them and closing them when you're finished. For Realtime
-     * Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * for remote access only when you need them and closing them when you're finished. For Amazon
+     * GameLift Servers Realtime fleets, Amazon GameLift Servers automatically sets TCP and UDP ranges.
      */
     public fun ec2InboundPermissions(ec2InboundPermissions: List<Any>)
 
@@ -606,14 +630,14 @@ public interface CfnFleetProps {
      * the fleet, but you must call
      * [](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetPortSettings) to set
      * it before players can connect to game sessions. As a best practice, we recommend opening ports
-     * for remote access only when you need them and closing them when you're finished. For Realtime
-     * Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * for remote access only when you need them and closing them when you're finished. For Amazon
+     * GameLift Servers Realtime fleets, Amazon GameLift Servers automatically sets TCP and UDP ranges.
      */
     public fun ec2InboundPermissions(vararg ec2InboundPermissions: Any)
 
     /**
-     * @param ec2InstanceType The Amazon GameLift-supported Amazon EC2 instance type to use with
-     * managed EC2 fleets.
+     * @param ec2InstanceType The Amazon GameLift Servers-supported Amazon EC2 instance type to use
+     * with managed EC2 fleets.
      * Instance type determines the computing resources that will be used to host your game servers,
      * including CPU, memory, storage, and networking capacity. See [Amazon Elastic Compute Cloud
      * Instance Types](https://docs.aws.amazon.com/ec2/instance-types/) for detailed descriptions of
@@ -659,10 +683,10 @@ public interface CfnFleetProps {
      * @param locations A set of remote locations to deploy additional instances to and manage as a
      * multi-location fleet.
      * Use this parameter when creating a fleet in AWS Regions that support multiple locations. You
-     * can add any AWS Region or Local Zone that's supported by Amazon GameLift. Provide a list of one
-     * or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this parameter,
-     * Amazon GameLift requires you to include your home location in the request. For a list of
-     * supported Regions and Local Zones, see [Amazon GameLift service
+     * can add any AWS Region or Local Zone that's supported by Amazon GameLift Servers. Provide a list
+     * of one or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this
+     * parameter, Amazon GameLift Servers requires you to include your home location in the request.
+     * For a list of supported Regions and Local Zones, see [Amazon GameLift Servers service
      * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
      * managed hosting.
      */
@@ -672,10 +696,10 @@ public interface CfnFleetProps {
      * @param locations A set of remote locations to deploy additional instances to and manage as a
      * multi-location fleet.
      * Use this parameter when creating a fleet in AWS Regions that support multiple locations. You
-     * can add any AWS Region or Local Zone that's supported by Amazon GameLift. Provide a list of one
-     * or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this parameter,
-     * Amazon GameLift requires you to include your home location in the request. For a list of
-     * supported Regions and Local Zones, see [Amazon GameLift service
+     * can add any AWS Region or Local Zone that's supported by Amazon GameLift Servers. Provide a list
+     * of one or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this
+     * parameter, Amazon GameLift Servers requires you to include your home location in the request.
+     * For a list of supported Regions and Local Zones, see [Amazon GameLift Servers service
      * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
      * managed hosting.
      */
@@ -685,10 +709,10 @@ public interface CfnFleetProps {
      * @param locations A set of remote locations to deploy additional instances to and manage as a
      * multi-location fleet.
      * Use this parameter when creating a fleet in AWS Regions that support multiple locations. You
-     * can add any AWS Region or Local Zone that's supported by Amazon GameLift. Provide a list of one
-     * or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this parameter,
-     * Amazon GameLift requires you to include your home location in the request. For a list of
-     * supported Regions and Local Zones, see [Amazon GameLift service
+     * can add any AWS Region or Local Zone that's supported by Amazon GameLift Servers. Provide a list
+     * of one or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this
+     * parameter, Amazon GameLift Servers requires you to include your home location in the request.
+     * For a list of supported Regions and Local Zones, see [Amazon GameLift Servers service
      * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
      * managed hosting.
      */
@@ -713,10 +737,12 @@ public interface CfnFleetProps {
     public fun logPaths(vararg logPaths: String)
 
     /**
-     * @param maxSize The maximum number of instances that are allowed in the specified fleet
-     * location.
-     * If this parameter is not set, the default is 1.
+     * @param maxSize [DEPRECATED] The maximum value that is allowed for the fleet's instance count.
+     * When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is
+     * active, you can change this value.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun maxSize(maxSize: Number)
 
     /**
@@ -736,10 +762,12 @@ public interface CfnFleetProps {
     public fun metricGroups(vararg metricGroups: String)
 
     /**
-     * @param minSize The minimum number of instances that are allowed in the specified fleet
-     * location.
-     * If this parameter is not set, the default is 0.
+     * @param minSize [DEPRECATED] The minimum value allowed for the fleet's instance count.
+     * When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is
+     * active, you can change this value.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun minSize(minSize: Number)
 
     /**
@@ -761,18 +789,18 @@ public interface CfnFleetProps {
     public fun newGameSessionProtectionPolicy(newGameSessionProtectionPolicy: String)
 
     /**
-     * @param peerVpcAwsAccountId Used when peering your Amazon GameLift fleet with a VPC, the
-     * unique identifier for the AWS account that owns the VPC.
+     * @param peerVpcAwsAccountId Used when peering your Amazon GameLift Servers fleet with a VPC,
+     * the unique identifier for the AWS account that owns the VPC.
      * You can find your account ID in the AWS Management Console under account settings.
      */
     public fun peerVpcAwsAccountId(peerVpcAwsAccountId: String)
 
     /**
      * @param peerVpcId A unique identifier for a VPC with resources to be accessed by your Amazon
-     * GameLift fleet.
+     * GameLift Servers fleet.
      * The VPC must be in the same Region as your fleet. To look up a VPC ID, use the [VPC
      * Dashboard](https://docs.aws.amazon.com/vpc/) in the AWS Management Console . Learn more about
-     * VPC peering in [VPC Peering with Amazon GameLift
+     * VPC peering in [VPC Peering with Amazon GameLift Servers
      * Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html) .
      */
     public fun peerVpcId(peerVpcId: String)
@@ -865,8 +893,8 @@ public interface CfnFleetProps {
     /**
      * @param scriptId The unique identifier for a Realtime configuration script to be deployed on
      * fleet instances.
-     * You can use either the script ID or ARN. Scripts must be uploaded to Amazon GameLift prior to
-     * creating the fleet. This fleet property cannot be changed later.
+     * You can use either the script ID or ARN. Scripts must be uploaded to Amazon GameLift Servers
+     * prior to creating the fleet. This fleet property cannot be changed later.
      *
      *
      * You can't use the `!Ref` command to reference a script created with a CloudFormation template
@@ -896,6 +924,16 @@ public interface CfnFleetProps {
      */
     @Deprecated(message = "deprecated in CDK")
     public fun serverLaunchPath(serverLaunchPath: String)
+
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl : Builder {
@@ -903,14 +941,14 @@ public interface CfnFleetProps {
         software.amazon.awscdk.services.gamelift.CfnFleetProps.builder()
 
     /**
-     * @param anywhereConfiguration Amazon GameLift Anywhere configuration options.
+     * @param anywhereConfiguration Amazon GameLift Servers Anywhere configuration options.
      */
     override fun anywhereConfiguration(anywhereConfiguration: IResolvable) {
       cdkBuilder.anywhereConfiguration(anywhereConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param anywhereConfiguration Amazon GameLift Anywhere configuration options.
+     * @param anywhereConfiguration Amazon GameLift Servers Anywhere configuration options.
      */
     override
         fun anywhereConfiguration(anywhereConfiguration: CfnFleet.AnywhereConfigurationProperty) {
@@ -918,7 +956,7 @@ public interface CfnFleetProps {
     }
 
     /**
-     * @param anywhereConfiguration Amazon GameLift Anywhere configuration options.
+     * @param anywhereConfiguration Amazon GameLift Servers Anywhere configuration options.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a57775121bfaabdc7dbc0bf4d1a90036fc861b8f222bff3268b7aa4e48687e1b")
@@ -954,11 +992,11 @@ public interface CfnFleetProps {
     }
 
     /**
-     * @param certificateConfiguration Prompts Amazon GameLift to generate a TLS/SSL certificate for
-     * the fleet.
-     * Amazon GameLift uses the certificates to encrypt traffic between game clients and the game
-     * servers running on Amazon GameLift. By default, the `CertificateConfiguration` is `DISABLED` .
-     * You can't change this property after you create the fleet.
+     * @param certificateConfiguration Prompts Amazon GameLift Servers to generate a TLS/SSL
+     * certificate for the fleet.
+     * Amazon GameLift Servers uses the certificates to encrypt traffic between game clients and the
+     * game servers running on Amazon GameLift Servers. By default, the `CertificateConfiguration` is
+     * `DISABLED` . You can't change this property after you create the fleet.
      *
      * AWS Certificate Manager (ACM) certificates expire after 13 months. Certificate expiration can
      * cause fleets to fail, preventing players from connecting to instances in the fleet. We recommend
@@ -976,11 +1014,11 @@ public interface CfnFleetProps {
     }
 
     /**
-     * @param certificateConfiguration Prompts Amazon GameLift to generate a TLS/SSL certificate for
-     * the fleet.
-     * Amazon GameLift uses the certificates to encrypt traffic between game clients and the game
-     * servers running on Amazon GameLift. By default, the `CertificateConfiguration` is `DISABLED` .
-     * You can't change this property after you create the fleet.
+     * @param certificateConfiguration Prompts Amazon GameLift Servers to generate a TLS/SSL
+     * certificate for the fleet.
+     * Amazon GameLift Servers uses the certificates to encrypt traffic between game clients and the
+     * game servers running on Amazon GameLift Servers. By default, the `CertificateConfiguration` is
+     * `DISABLED` . You can't change this property after you create the fleet.
      *
      * AWS Certificate Manager (ACM) certificates expire after 13 months. Certificate expiration can
      * cause fleets to fail, preventing players from connecting to instances in the fleet. We recommend
@@ -999,11 +1037,11 @@ public interface CfnFleetProps {
     }
 
     /**
-     * @param certificateConfiguration Prompts Amazon GameLift to generate a TLS/SSL certificate for
-     * the fleet.
-     * Amazon GameLift uses the certificates to encrypt traffic between game clients and the game
-     * servers running on Amazon GameLift. By default, the `CertificateConfiguration` is `DISABLED` .
-     * You can't change this property after you create the fleet.
+     * @param certificateConfiguration Prompts Amazon GameLift Servers to generate a TLS/SSL
+     * certificate for the fleet.
+     * Amazon GameLift Servers uses the certificates to encrypt traffic between game clients and the
+     * game servers running on Amazon GameLift Servers. By default, the `CertificateConfiguration` is
+     * `DISABLED` . You can't change this property after you create the fleet.
      *
      * AWS Certificate Manager (ACM) certificates expire after 13 months. Certificate expiration can
      * cause fleets to fail, preventing players from connecting to instances in the fleet. We recommend
@@ -1043,11 +1081,14 @@ public interface CfnFleetProps {
     }
 
     /**
-     * @param desiredEc2Instances The number of EC2 instances that you want this fleet to host.
+     * @param desiredEc2Instances [DEPRECATED] The number of EC2 instances that you want this fleet
+     * to host.
      * When creating a new fleet, GameLift automatically sets this value to "1" and initiates a
      * single instance. Once the fleet is active, update this value to trigger GameLift to add or
      * remove instances from the fleet.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun desiredEc2Instances(desiredEc2Instances: Number) {
       cdkBuilder.desiredEc2Instances(desiredEc2Instances)
     }
@@ -1059,8 +1100,8 @@ public interface CfnFleetProps {
      * the fleet, but you must call
      * [](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetPortSettings) to set
      * it before players can connect to game sessions. As a best practice, we recommend opening ports
-     * for remote access only when you need them and closing them when you're finished. For Realtime
-     * Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * for remote access only when you need them and closing them when you're finished. For Amazon
+     * GameLift Servers Realtime fleets, Amazon GameLift Servers automatically sets TCP and UDP ranges.
      */
     override fun ec2InboundPermissions(ec2InboundPermissions: IResolvable) {
       cdkBuilder.ec2InboundPermissions(ec2InboundPermissions.let(IResolvable.Companion::unwrap))
@@ -1073,8 +1114,8 @@ public interface CfnFleetProps {
      * the fleet, but you must call
      * [](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetPortSettings) to set
      * it before players can connect to game sessions. As a best practice, we recommend opening ports
-     * for remote access only when you need them and closing them when you're finished. For Realtime
-     * Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * for remote access only when you need them and closing them when you're finished. For Amazon
+     * GameLift Servers Realtime fleets, Amazon GameLift Servers automatically sets TCP and UDP ranges.
      */
     override fun ec2InboundPermissions(ec2InboundPermissions: List<Any>) {
       cdkBuilder.ec2InboundPermissions(ec2InboundPermissions.map{CdkObjectWrappers.unwrap(it)})
@@ -1087,15 +1128,15 @@ public interface CfnFleetProps {
      * the fleet, but you must call
      * [](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetPortSettings) to set
      * it before players can connect to game sessions. As a best practice, we recommend opening ports
-     * for remote access only when you need them and closing them when you're finished. For Realtime
-     * Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * for remote access only when you need them and closing them when you're finished. For Amazon
+     * GameLift Servers Realtime fleets, Amazon GameLift Servers automatically sets TCP and UDP ranges.
      */
     override fun ec2InboundPermissions(vararg ec2InboundPermissions: Any): Unit =
         ec2InboundPermissions(ec2InboundPermissions.toList())
 
     /**
-     * @param ec2InstanceType The Amazon GameLift-supported Amazon EC2 instance type to use with
-     * managed EC2 fleets.
+     * @param ec2InstanceType The Amazon GameLift Servers-supported Amazon EC2 instance type to use
+     * with managed EC2 fleets.
      * Instance type determines the computing resources that will be used to host your game servers,
      * including CPU, memory, storage, and networking capacity. See [Amazon Elastic Compute Cloud
      * Instance Types](https://docs.aws.amazon.com/ec2/instance-types/) for detailed descriptions of
@@ -1149,10 +1190,10 @@ public interface CfnFleetProps {
      * @param locations A set of remote locations to deploy additional instances to and manage as a
      * multi-location fleet.
      * Use this parameter when creating a fleet in AWS Regions that support multiple locations. You
-     * can add any AWS Region or Local Zone that's supported by Amazon GameLift. Provide a list of one
-     * or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this parameter,
-     * Amazon GameLift requires you to include your home location in the request. For a list of
-     * supported Regions and Local Zones, see [Amazon GameLift service
+     * can add any AWS Region or Local Zone that's supported by Amazon GameLift Servers. Provide a list
+     * of one or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this
+     * parameter, Amazon GameLift Servers requires you to include your home location in the request.
+     * For a list of supported Regions and Local Zones, see [Amazon GameLift Servers service
      * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
      * managed hosting.
      */
@@ -1164,10 +1205,10 @@ public interface CfnFleetProps {
      * @param locations A set of remote locations to deploy additional instances to and manage as a
      * multi-location fleet.
      * Use this parameter when creating a fleet in AWS Regions that support multiple locations. You
-     * can add any AWS Region or Local Zone that's supported by Amazon GameLift. Provide a list of one
-     * or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this parameter,
-     * Amazon GameLift requires you to include your home location in the request. For a list of
-     * supported Regions and Local Zones, see [Amazon GameLift service
+     * can add any AWS Region or Local Zone that's supported by Amazon GameLift Servers. Provide a list
+     * of one or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this
+     * parameter, Amazon GameLift Servers requires you to include your home location in the request.
+     * For a list of supported Regions and Local Zones, see [Amazon GameLift Servers service
      * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
      * managed hosting.
      */
@@ -1179,10 +1220,10 @@ public interface CfnFleetProps {
      * @param locations A set of remote locations to deploy additional instances to and manage as a
      * multi-location fleet.
      * Use this parameter when creating a fleet in AWS Regions that support multiple locations. You
-     * can add any AWS Region or Local Zone that's supported by Amazon GameLift. Provide a list of one
-     * or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this parameter,
-     * Amazon GameLift requires you to include your home location in the request. For a list of
-     * supported Regions and Local Zones, see [Amazon GameLift service
+     * can add any AWS Region or Local Zone that's supported by Amazon GameLift Servers. Provide a list
+     * of one or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this
+     * parameter, Amazon GameLift Servers requires you to include your home location in the request.
+     * For a list of supported Regions and Local Zones, see [Amazon GameLift Servers service
      * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
      * managed hosting.
      */
@@ -1209,10 +1250,12 @@ public interface CfnFleetProps {
     override fun logPaths(vararg logPaths: String): Unit = logPaths(logPaths.toList())
 
     /**
-     * @param maxSize The maximum number of instances that are allowed in the specified fleet
-     * location.
-     * If this parameter is not set, the default is 1.
+     * @param maxSize [DEPRECATED] The maximum value that is allowed for the fleet's instance count.
+     * When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is
+     * active, you can change this value.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun maxSize(maxSize: Number) {
       cdkBuilder.maxSize(maxSize)
     }
@@ -1237,10 +1280,12 @@ public interface CfnFleetProps {
         metricGroups(metricGroups.toList())
 
     /**
-     * @param minSize The minimum number of instances that are allowed in the specified fleet
-     * location.
-     * If this parameter is not set, the default is 0.
+     * @param minSize [DEPRECATED] The minimum value allowed for the fleet's instance count.
+     * When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is
+     * active, you can change this value.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun minSize(minSize: Number) {
       cdkBuilder.minSize(minSize)
     }
@@ -1268,8 +1313,8 @@ public interface CfnFleetProps {
     }
 
     /**
-     * @param peerVpcAwsAccountId Used when peering your Amazon GameLift fleet with a VPC, the
-     * unique identifier for the AWS account that owns the VPC.
+     * @param peerVpcAwsAccountId Used when peering your Amazon GameLift Servers fleet with a VPC,
+     * the unique identifier for the AWS account that owns the VPC.
      * You can find your account ID in the AWS Management Console under account settings.
      */
     override fun peerVpcAwsAccountId(peerVpcAwsAccountId: String) {
@@ -1278,10 +1323,10 @@ public interface CfnFleetProps {
 
     /**
      * @param peerVpcId A unique identifier for a VPC with resources to be accessed by your Amazon
-     * GameLift fleet.
+     * GameLift Servers fleet.
      * The VPC must be in the same Region as your fleet. To look up a VPC ID, use the [VPC
      * Dashboard](https://docs.aws.amazon.com/vpc/) in the AWS Management Console . Learn more about
-     * VPC peering in [VPC Peering with Amazon GameLift
+     * VPC peering in [VPC Peering with Amazon GameLift Servers
      * Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html) .
      */
     override fun peerVpcId(peerVpcId: String) {
@@ -1392,8 +1437,8 @@ public interface CfnFleetProps {
     /**
      * @param scriptId The unique identifier for a Realtime configuration script to be deployed on
      * fleet instances.
-     * You can use either the script ID or ARN. Scripts must be uploaded to Amazon GameLift prior to
-     * creating the fleet. This fleet property cannot be changed later.
+     * You can use either the script ID or ARN. Scripts must be uploaded to Amazon GameLift Servers
+     * prior to creating the fleet. This fleet property cannot be changed later.
      *
      *
      * You can't use the `!Ref` command to reference a script created with a CloudFormation template
@@ -1430,6 +1475,18 @@ public interface CfnFleetProps {
       cdkBuilder.serverLaunchPath(serverLaunchPath)
     }
 
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.gamelift.CfnFleetProps = cdkBuilder.build()
   }
 
@@ -1438,7 +1495,7 @@ public interface CfnFleetProps {
   ) : CdkObject(cdkObject),
       CfnFleetProps {
     /**
-     * Amazon GameLift Anywhere configuration options.
+     * Amazon GameLift Servers Anywhere configuration options.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-anywhereconfiguration)
      */
@@ -1473,11 +1530,11 @@ public interface CfnFleetProps {
     override fun buildId(): String? = unwrap(this).getBuildId()
 
     /**
-     * Prompts Amazon GameLift to generate a TLS/SSL certificate for the fleet.
+     * Prompts Amazon GameLift Servers to generate a TLS/SSL certificate for the fleet.
      *
-     * Amazon GameLift uses the certificates to encrypt traffic between game clients and the game
-     * servers running on Amazon GameLift. By default, the `CertificateConfiguration` is `DISABLED` .
-     * You can't change this property after you create the fleet.
+     * Amazon GameLift Servers uses the certificates to encrypt traffic between game clients and the
+     * game servers running on Amazon GameLift Servers. By default, the `CertificateConfiguration` is
+     * `DISABLED` . You can't change this property after you create the fleet.
      *
      * AWS Certificate Manager (ACM) certificates expire after 13 months. Certificate expiration can
      * cause fleets to fail, preventing players from connecting to instances in the fleet. We recommend
@@ -1516,14 +1573,16 @@ public interface CfnFleetProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * The number of EC2 instances that you want this fleet to host.
+     * (deprecated) [DEPRECATED] The number of EC2 instances that you want this fleet to host.
      *
      * When creating a new fleet, GameLift automatically sets this value to "1" and initiates a
      * single instance. Once the fleet is active, update this value to trigger GameLift to add or
      * remove instances from the fleet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-desiredec2instances)
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun desiredEc2Instances(): Number? = unwrap(this).getDesiredEc2Instances()
 
     /**
@@ -1534,15 +1593,16 @@ public interface CfnFleetProps {
      * the fleet, but you must call
      * [](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetPortSettings) to set
      * it before players can connect to game sessions. As a best practice, we recommend opening ports
-     * for remote access only when you need them and closing them when you're finished. For Realtime
-     * Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * for remote access only when you need them and closing them when you're finished. For Amazon
+     * GameLift Servers Realtime fleets, Amazon GameLift Servers automatically sets TCP and UDP ranges.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2inboundpermissions)
      */
     override fun ec2InboundPermissions(): Any? = unwrap(this).getEc2InboundPermissions()
 
     /**
-     * The Amazon GameLift-supported Amazon EC2 instance type to use with managed EC2 fleets.
+     * The Amazon GameLift Servers-supported Amazon EC2 instance type to use with managed EC2
+     * fleets.
      *
      * Instance type determines the computing resources that will be used to host your game servers,
      * including CPU, memory, storage, and networking capacity. See [Amazon Elastic Compute Cloud
@@ -1601,10 +1661,10 @@ public interface CfnFleetProps {
      * fleet.
      *
      * Use this parameter when creating a fleet in AWS Regions that support multiple locations. You
-     * can add any AWS Region or Local Zone that's supported by Amazon GameLift. Provide a list of one
-     * or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this parameter,
-     * Amazon GameLift requires you to include your home location in the request. For a list of
-     * supported Regions and Local Zones, see [Amazon GameLift service
+     * can add any AWS Region or Local Zone that's supported by Amazon GameLift Servers. Provide a list
+     * of one or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this
+     * parameter, Amazon GameLift Servers requires you to include your home location in the request.
+     * For a list of supported Regions and Local Zones, see [Amazon GameLift Servers service
      * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
      * managed hosting.
      *
@@ -1625,12 +1685,15 @@ public interface CfnFleetProps {
     override fun logPaths(): List<String> = unwrap(this).getLogPaths() ?: emptyList()
 
     /**
-     * The maximum number of instances that are allowed in the specified fleet location.
+     * (deprecated) [DEPRECATED] The maximum value that is allowed for the fleet's instance count.
      *
-     * If this parameter is not set, the default is 1.
+     * When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is
+     * active, you can change this value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-maxsize)
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun maxSize(): Number? = unwrap(this).getMaxSize()
 
     /**
@@ -1645,12 +1708,15 @@ public interface CfnFleetProps {
     override fun metricGroups(): List<String> = unwrap(this).getMetricGroups() ?: emptyList()
 
     /**
-     * The minimum number of instances that are allowed in the specified fleet location.
+     * (deprecated) [DEPRECATED] The minimum value allowed for the fleet's instance count.
      *
-     * If this parameter is not set, the default is 0.
+     * When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is
+     * active, you can change this value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-minsize)
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun minSize(): Number? = unwrap(this).getMinSize()
 
     /**
@@ -1678,8 +1744,8 @@ public interface CfnFleetProps {
         unwrap(this).getNewGameSessionProtectionPolicy()
 
     /**
-     * Used when peering your Amazon GameLift fleet with a VPC, the unique identifier for the AWS
-     * account that owns the VPC.
+     * Used when peering your Amazon GameLift Servers fleet with a VPC, the unique identifier for
+     * the AWS account that owns the VPC.
      *
      * You can find your account ID in the AWS Management Console under account settings.
      *
@@ -1688,11 +1754,12 @@ public interface CfnFleetProps {
     override fun peerVpcAwsAccountId(): String? = unwrap(this).getPeerVpcAwsAccountId()
 
     /**
-     * A unique identifier for a VPC with resources to be accessed by your Amazon GameLift fleet.
+     * A unique identifier for a VPC with resources to be accessed by your Amazon GameLift Servers
+     * fleet.
      *
      * The VPC must be in the same Region as your fleet. To look up a VPC ID, use the [VPC
      * Dashboard](https://docs.aws.amazon.com/vpc/) in the AWS Management Console . Learn more about
-     * VPC peering in [VPC Peering with Amazon GameLift
+     * VPC peering in [VPC Peering with Amazon GameLift Servers
      * Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-peervpcid)
@@ -1736,8 +1803,8 @@ public interface CfnFleetProps {
     /**
      * The unique identifier for a Realtime configuration script to be deployed on fleet instances.
      *
-     * You can use either the script ID or ARN. Scripts must be uploaded to Amazon GameLift prior to
-     * creating the fleet. This fleet property cannot be changed later.
+     * You can use either the script ID or ARN. Scripts must be uploaded to Amazon GameLift Servers
+     * prior to creating the fleet. This fleet property cannot be changed later.
      *
      *
      * You can't use the `!Ref` command to reference a script created with a CloudFormation template
@@ -1775,6 +1842,13 @@ public interface CfnFleetProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun serverLaunchPath(): String? = unwrap(this).getServerLaunchPath()
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 
   public companion object {

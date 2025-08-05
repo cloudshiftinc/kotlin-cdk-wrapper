@@ -301,7 +301,7 @@ public open class CfnHostedZone(
      *
      * For information about using tags for cost allocation, see [Using Cost Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
-     * *AWS Billing and Cost Management User Guide* .
+     * *Billing and Cost Management User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzonetags)
      * @param hostedZoneTags Adds, edits, or deletes tags for a health check or a hosted zone. 
@@ -313,7 +313,7 @@ public open class CfnHostedZone(
      *
      * For information about using tags for cost allocation, see [Using Cost Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
-     * *AWS Billing and Cost Management User Guide* .
+     * *Billing and Cost Management User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzonetags)
      * @param hostedZoneTags Adds, edits, or deletes tags for a health check or a hosted zone. 
@@ -759,7 +759,7 @@ public open class CfnHostedZone(
      *
      * For information about using tags for cost allocation, see [Using Cost Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
-     * *AWS Billing and Cost Management User Guide* .
+     * *Billing and Cost Management User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzonetags)
      * @param hostedZoneTags Adds, edits, or deletes tags for a health check or a hosted zone. 
@@ -773,7 +773,7 @@ public open class CfnHostedZone(
      *
      * For information about using tags for cost allocation, see [Using Cost Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
-     * *AWS Billing and Cost Management User Guide* .
+     * *Billing and Cost Management User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzonetags)
      * @param hostedZoneTags Adds, edits, or deletes tags for a health check or a hosted zone. 

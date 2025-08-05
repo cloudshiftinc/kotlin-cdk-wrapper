@@ -70,7 +70,7 @@ public open class CfnTrafficMirrorFilter(
   )
 
   /**
-   *
+   * The ID of a traffic mirror filter.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 

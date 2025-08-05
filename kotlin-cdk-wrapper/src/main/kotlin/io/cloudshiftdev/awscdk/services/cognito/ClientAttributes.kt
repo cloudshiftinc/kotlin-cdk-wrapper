@@ -17,8 +17,8 @@ import kotlin.jvm.JvmName
  * ```
  * UserPool pool = new UserPool(this, "Pool");
  * ClientAttributes clientWriteAttributes = (new
- * ClientAttributes()).withStandardAttributes(StandardAttributesMask.builder().fullname(true).email(true).build()).withCustomAttributes("favouritePizza",
- * "favouriteBeverage");
+ * ClientAttributes()).withStandardAttributes(StandardAttributesMask.builder().fullname(true).email(true).build()).withCustomAttributes("favoritePizza",
+ * "favoriteBeverage");
  * ClientAttributes clientReadAttributes =
  * clientWriteAttributes.withStandardAttributes(StandardAttributesMask.builder().emailVerified(true).build()).withCustomAttributes("pointsEarned");
  * pool.addClient("app-client", UserPoolClientOptions.builder()

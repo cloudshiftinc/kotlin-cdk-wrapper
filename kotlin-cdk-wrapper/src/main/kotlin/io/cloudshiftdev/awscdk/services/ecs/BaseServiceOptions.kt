@@ -23,11 +23,15 @@ import kotlin.jvm.JvmName
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.ecs.*;
+ * import io.cloudshiftdev.awscdk.services.iam.*;
+ * import io.cloudshiftdev.awscdk.services.kms.*;
  * import io.cloudshiftdev.awscdk.services.servicediscovery.*;
  * Cluster cluster;
  * ContainerDefinition containerDefinition;
+ * Key key;
  * LogDriver logDriver;
  * INamespace namespace;
+ * Role role;
  * ServiceManagedVolume serviceManagedVolume;
  * TaskDefinitionRevision taskDefinitionRevision;
  * BaseServiceOptions baseServiceOptions = BaseServiceOptions.builder()
@@ -79,6 +83,11 @@ import kotlin.jvm.JvmName
  * .ingressPortOverride(123)
  * .perRequestTimeout(Duration.minutes(30))
  * .port(123)
+ * .tls(ServiceConnectTlsConfiguration.builder()
+ * .awsPcaAuthorityArn("awsPcaAuthorityArn")
+ * .kmsKey(key)
+ * .role(role)
+ * .build())
  * .build()))
  * .build())
  * .serviceName("serviceName")

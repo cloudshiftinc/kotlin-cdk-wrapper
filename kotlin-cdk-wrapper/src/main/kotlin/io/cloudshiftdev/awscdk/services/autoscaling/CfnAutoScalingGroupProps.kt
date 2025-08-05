@@ -555,7 +555,7 @@ public interface CfnAutoScalingGroupProps {
    *
    * For more information, see [Placement
    * groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the *Amazon
-   * EC2 User Guide for Linux Instances* .
+   * EC2 User Guide* .
    *
    *
    * A *cluster* placement group is a logical grouping of instances within a single Availability
@@ -1191,7 +1191,7 @@ public interface CfnAutoScalingGroupProps {
      * @param placementGroup The name of the placement group into which to launch your instances.
      * For more information, see [Placement
      * groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      *
      * A *cluster* placement group is a logical grouping of instances within a single Availability
@@ -1981,7 +1981,7 @@ public interface CfnAutoScalingGroupProps {
      * @param placementGroup The name of the placement group into which to launch your instances.
      * For more information, see [Placement
      * groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      *
      * A *cluster* placement group is a logical grouping of instances within a single Availability
@@ -2536,7 +2536,7 @@ public interface CfnAutoScalingGroupProps {
      *
      * For more information, see [Placement
      * groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      *
      * A *cluster* placement group is a logical grouping of instances within a single Availability

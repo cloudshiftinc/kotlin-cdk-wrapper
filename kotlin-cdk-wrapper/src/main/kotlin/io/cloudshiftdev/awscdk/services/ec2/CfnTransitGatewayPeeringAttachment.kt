@@ -125,24 +125,24 @@ public open class CfnTransitGatewayPeeringAttachment(
   }
 
   /**
-   * The Region of the transit gateway.
+   * The Region where the transit gateway that you want to create the peer for is located.
    */
   public open fun peerRegion(): String = unwrap(this).getPeerRegion()
 
   /**
-   * The Region of the transit gateway.
+   * The Region where the transit gateway that you want to create the peer for is located.
    */
   public open fun peerRegion(`value`: String) {
     unwrap(this).setPeerRegion(`value`)
   }
 
   /**
-   * The ID of the transit gateway.
+   * The ID of the transit gateway in the PeerRegion.
    */
   public open fun peerTransitGatewayId(): String = unwrap(this).getPeerTransitGatewayId()
 
   /**
-   * The ID of the transit gateway.
+   * The ID of the transit gateway in the PeerRegion.
    */
   public open fun peerTransitGatewayId(`value`: String) {
     unwrap(this).setPeerTransitGatewayId(`value`)
@@ -197,18 +197,19 @@ public open class CfnTransitGatewayPeeringAttachment(
     public fun peerAccountId(peerAccountId: String)
 
     /**
-     * The Region of the transit gateway.
+     * The Region where the transit gateway that you want to create the peer for is located.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html#cfn-ec2-transitgatewaypeeringattachment-peerregion)
-     * @param peerRegion The Region of the transit gateway. 
+     * @param peerRegion The Region where the transit gateway that you want to create the peer for
+     * is located. 
      */
     public fun peerRegion(peerRegion: String)
 
     /**
-     * The ID of the transit gateway.
+     * The ID of the transit gateway in the PeerRegion.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html#cfn-ec2-transitgatewaypeeringattachment-peertransitgatewayid)
-     * @param peerTransitGatewayId The ID of the transit gateway. 
+     * @param peerTransitGatewayId The ID of the transit gateway in the PeerRegion. 
      */
     public fun peerTransitGatewayId(peerTransitGatewayId: String)
 
@@ -257,20 +258,21 @@ public open class CfnTransitGatewayPeeringAttachment(
     }
 
     /**
-     * The Region of the transit gateway.
+     * The Region where the transit gateway that you want to create the peer for is located.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html#cfn-ec2-transitgatewaypeeringattachment-peerregion)
-     * @param peerRegion The Region of the transit gateway. 
+     * @param peerRegion The Region where the transit gateway that you want to create the peer for
+     * is located. 
      */
     override fun peerRegion(peerRegion: String) {
       cdkBuilder.peerRegion(peerRegion)
     }
 
     /**
-     * The ID of the transit gateway.
+     * The ID of the transit gateway in the PeerRegion.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html#cfn-ec2-transitgatewaypeeringattachment-peertransitgatewayid)
-     * @param peerTransitGatewayId The ID of the transit gateway. 
+     * @param peerTransitGatewayId The ID of the transit gateway in the PeerRegion. 
      */
     override fun peerTransitGatewayId(peerTransitGatewayId: String) {
       cdkBuilder.peerTransitGatewayId(peerTransitGatewayId)

@@ -235,6 +235,9 @@ public open class PrivateCertificate(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.certificatemanager.PrivateCertificate.PROPERTY_INJECTION_ID
+
     public fun fromCertificateArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

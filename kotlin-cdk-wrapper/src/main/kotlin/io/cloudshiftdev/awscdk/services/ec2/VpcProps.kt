@@ -20,21 +20,23 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.ec2.*;
- * Vpc vpc = Vpc.Builder.create(this, "Vpc")
- * .ipAddresses(IpAddresses.cidr("10.0.0.0/16"))
- * .build();
- * VpcConnector vpcConnector = VpcConnector.Builder.create(this, "VpcConnector")
- * .vpc(vpc)
- * .vpcSubnets(vpc.selectSubnets(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build()))
- * .vpcConnectorName("MyVpcConnector")
- * .build();
- * Service.Builder.create(this, "Service")
- * .source(Source.fromEcrPublic(EcrPublicProps.builder()
- * .imageConfiguration(ImageConfiguration.builder().port(8000).build())
- * .imageIdentifier("public.ecr.aws/aws-containers/hello-app-runner:latest")
+ * Vpc vpc = Vpc.Builder.create(this, "VPC")
+ * .cidr("10.0.0.0/16")
+ * .natGateways(0)
+ * .maxAzs(3)
+ * .subnetConfiguration(List.of(SubnetConfiguration.builder()
+ * .name("public-subnet-1")
+ * .subnetType(SubnetType.PUBLIC)
+ * .cidrMask(24)
  * .build()))
- * .vpcConnector(vpcConnector)
+ * .build();
+ * Instance instance = Instance.Builder.create(this, "Instance")
+ * .vpc(vpc)
+ * .vpcSubnets(SubnetSelection.builder().subnetGroupName("public-subnet-1").build())
+ * .instanceType(InstanceType.of(InstanceClass.T3, InstanceSize.NANO))
+ * .machineImage(AmazonLinuxImage.Builder.create().generation(AmazonLinuxGeneration.AMAZON_LINUX_2).build())
+ * .detailedMonitoring(true)
+ * .associatePublicIpAddress(true)
  * .build();
  * ```
  */

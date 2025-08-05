@@ -14,6 +14,7 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -32,7 +33,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .enabledRegions(List.of("enabledRegions"))
  * .environmentBlueprintIdentifier("environmentBlueprintIdentifier")
  * // the properties below are optional
+ * .environmentRolePermissionBoundary("environmentRolePermissionBoundary")
  * .manageAccessRoleArn("manageAccessRoleArn")
+ * .provisioningConfigurations(List.of(ProvisioningConfigurationProperty.builder()
+ * .lakeFormationConfiguration(LakeFormationConfigurationProperty.builder()
+ * .locationRegistrationExcludeS3Locations(List.of("locationRegistrationExcludeS3Locations"))
+ * .locationRegistrationRole("locationRegistrationRole")
+ * .build())
+ * .build()))
  * .provisioningRoleArn("provisioningRoleArn")
  * .regionalParameters(List.of(RegionalParameterProperty.builder()
  * .parameters(Map.of(
@@ -130,6 +138,19 @@ public open class CfnEnvironmentBlueprintConfiguration(
   }
 
   /**
+   * The environment role permission boundary.
+   */
+  public open fun environmentRolePermissionBoundary(): String? =
+      unwrap(this).getEnvironmentRolePermissionBoundary()
+
+  /**
+   * The environment role permission boundary.
+   */
+  public open fun environmentRolePermissionBoundary(`value`: String) {
+    unwrap(this).setEnvironmentRolePermissionBoundary(`value`)
+  }
+
+  /**
    * Examines the CloudFormation resource and discloses attributes.
    *
    * @param inspector tree inspector to collect and process attributes. 
@@ -149,6 +170,31 @@ public open class CfnEnvironmentBlueprintConfiguration(
   public open fun manageAccessRoleArn(`value`: String) {
     unwrap(this).setManageAccessRoleArn(`value`)
   }
+
+  /**
+   * The provisioning configuration of a blueprint.
+   */
+  public open fun provisioningConfigurations(): Any? = unwrap(this).getProvisioningConfigurations()
+
+  /**
+   * The provisioning configuration of a blueprint.
+   */
+  public open fun provisioningConfigurations(`value`: IResolvable) {
+    unwrap(this).setProvisioningConfigurations(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The provisioning configuration of a blueprint.
+   */
+  public open fun provisioningConfigurations(`value`: List<Any>) {
+    unwrap(this).setProvisioningConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * The provisioning configuration of a blueprint.
+   */
+  public open fun provisioningConfigurations(vararg `value`: Any): Unit =
+      provisioningConfigurations(`value`.toList())
 
   /**
    * The ARN of the provisioning role.
@@ -230,12 +276,44 @@ public open class CfnEnvironmentBlueprintConfiguration(
     public fun environmentBlueprintIdentifier(environmentBlueprintIdentifier: String)
 
     /**
+     * The environment role permission boundary.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-environmentrolepermissionboundary)
+     * @param environmentRolePermissionBoundary The environment role permission boundary. 
+     */
+    public fun environmentRolePermissionBoundary(environmentRolePermissionBoundary: String)
+
+    /**
      * The ARN of the manage access role.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-manageaccessrolearn)
      * @param manageAccessRoleArn The ARN of the manage access role. 
      */
     public fun manageAccessRoleArn(manageAccessRoleArn: String)
+
+    /**
+     * The provisioning configuration of a blueprint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-provisioningconfigurations)
+     * @param provisioningConfigurations The provisioning configuration of a blueprint. 
+     */
+    public fun provisioningConfigurations(provisioningConfigurations: IResolvable)
+
+    /**
+     * The provisioning configuration of a blueprint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-provisioningconfigurations)
+     * @param provisioningConfigurations The provisioning configuration of a blueprint. 
+     */
+    public fun provisioningConfigurations(provisioningConfigurations: List<Any>)
+
+    /**
+     * The provisioning configuration of a blueprint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-provisioningconfigurations)
+     * @param provisioningConfigurations The provisioning configuration of a blueprint. 
+     */
+    public fun provisioningConfigurations(vararg provisioningConfigurations: Any)
 
     /**
      * The ARN of the provisioning role.
@@ -323,6 +401,16 @@ public open class CfnEnvironmentBlueprintConfiguration(
     }
 
     /**
+     * The environment role permission boundary.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-environmentrolepermissionboundary)
+     * @param environmentRolePermissionBoundary The environment role permission boundary. 
+     */
+    override fun environmentRolePermissionBoundary(environmentRolePermissionBoundary: String) {
+      cdkBuilder.environmentRolePermissionBoundary(environmentRolePermissionBoundary)
+    }
+
+    /**
      * The ARN of the manage access role.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-manageaccessrolearn)
@@ -331,6 +419,35 @@ public open class CfnEnvironmentBlueprintConfiguration(
     override fun manageAccessRoleArn(manageAccessRoleArn: String) {
       cdkBuilder.manageAccessRoleArn(manageAccessRoleArn)
     }
+
+    /**
+     * The provisioning configuration of a blueprint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-provisioningconfigurations)
+     * @param provisioningConfigurations The provisioning configuration of a blueprint. 
+     */
+    override fun provisioningConfigurations(provisioningConfigurations: IResolvable) {
+      cdkBuilder.provisioningConfigurations(provisioningConfigurations.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The provisioning configuration of a blueprint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-provisioningconfigurations)
+     * @param provisioningConfigurations The provisioning configuration of a blueprint. 
+     */
+    override fun provisioningConfigurations(provisioningConfigurations: List<Any>) {
+      cdkBuilder.provisioningConfigurations(provisioningConfigurations.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * The provisioning configuration of a blueprint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-provisioningconfigurations)
+     * @param provisioningConfigurations The provisioning configuration of a blueprint. 
+     */
+    override fun provisioningConfigurations(vararg provisioningConfigurations: Any): Unit =
+        provisioningConfigurations(provisioningConfigurations.toList())
 
     /**
      * The ARN of the provisioning role.
@@ -400,6 +517,239 @@ public open class CfnEnvironmentBlueprintConfiguration(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datazone.*;
+   * LakeFormationConfigurationProperty lakeFormationConfigurationProperty =
+   * LakeFormationConfigurationProperty.builder()
+   * .locationRegistrationExcludeS3Locations(List.of("locationRegistrationExcludeS3Locations"))
+   * .locationRegistrationRole("locationRegistrationRole")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-environmentblueprintconfiguration-lakeformationconfiguration.html)
+   */
+  public interface LakeFormationConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-environmentblueprintconfiguration-lakeformationconfiguration.html#cfn-datazone-environmentblueprintconfiguration-lakeformationconfiguration-locationregistrationexcludes3locations)
+     */
+    public fun locationRegistrationExcludeS3Locations(): List<String> =
+        unwrap(this).getLocationRegistrationExcludeS3Locations() ?: emptyList()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-environmentblueprintconfiguration-lakeformationconfiguration.html#cfn-datazone-environmentblueprintconfiguration-lakeformationconfiguration-locationregistrationrole)
+     */
+    public fun locationRegistrationRole(): String? = unwrap(this).getLocationRegistrationRole()
+
+    /**
+     * A builder for [LakeFormationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param locationRegistrationExcludeS3Locations the value to be set.
+       */
+      public
+          fun locationRegistrationExcludeS3Locations(locationRegistrationExcludeS3Locations: List<String>)
+
+      /**
+       * @param locationRegistrationExcludeS3Locations the value to be set.
+       */
+      public fun locationRegistrationExcludeS3Locations(vararg
+          locationRegistrationExcludeS3Locations: String)
+
+      /**
+       * @param locationRegistrationRole the value to be set.
+       */
+      public fun locationRegistrationRole(locationRegistrationRole: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.LakeFormationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.LakeFormationConfigurationProperty.builder()
+
+      /**
+       * @param locationRegistrationExcludeS3Locations the value to be set.
+       */
+      override
+          fun locationRegistrationExcludeS3Locations(locationRegistrationExcludeS3Locations: List<String>) {
+        cdkBuilder.locationRegistrationExcludeS3Locations(locationRegistrationExcludeS3Locations)
+      }
+
+      /**
+       * @param locationRegistrationExcludeS3Locations the value to be set.
+       */
+      override fun locationRegistrationExcludeS3Locations(vararg
+          locationRegistrationExcludeS3Locations: String): Unit =
+          locationRegistrationExcludeS3Locations(locationRegistrationExcludeS3Locations.toList())
+
+      /**
+       * @param locationRegistrationRole the value to be set.
+       */
+      override fun locationRegistrationRole(locationRegistrationRole: String) {
+        cdkBuilder.locationRegistrationRole(locationRegistrationRole)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.LakeFormationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.LakeFormationConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        LakeFormationConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-environmentblueprintconfiguration-lakeformationconfiguration.html#cfn-datazone-environmentblueprintconfiguration-lakeformationconfiguration-locationregistrationexcludes3locations)
+       */
+      override fun locationRegistrationExcludeS3Locations(): List<String> =
+          unwrap(this).getLocationRegistrationExcludeS3Locations() ?: emptyList()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-environmentblueprintconfiguration-lakeformationconfiguration.html#cfn-datazone-environmentblueprintconfiguration-lakeformationconfiguration-locationregistrationrole)
+       */
+      override fun locationRegistrationRole(): String? = unwrap(this).getLocationRegistrationRole()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LakeFormationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.LakeFormationConfigurationProperty):
+          LakeFormationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LakeFormationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LakeFormationConfigurationProperty):
+          software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.LakeFormationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.LakeFormationConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datazone.*;
+   * ProvisioningConfigurationProperty provisioningConfigurationProperty =
+   * ProvisioningConfigurationProperty.builder()
+   * .lakeFormationConfiguration(LakeFormationConfigurationProperty.builder()
+   * .locationRegistrationExcludeS3Locations(List.of("locationRegistrationExcludeS3Locations"))
+   * .locationRegistrationRole("locationRegistrationRole")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-environmentblueprintconfiguration-provisioningconfiguration.html)
+   */
+  public interface ProvisioningConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-environmentblueprintconfiguration-provisioningconfiguration.html#cfn-datazone-environmentblueprintconfiguration-provisioningconfiguration-lakeformationconfiguration)
+     */
+    public fun lakeFormationConfiguration(): Any
+
+    /**
+     * A builder for [ProvisioningConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param lakeFormationConfiguration the value to be set. 
+       */
+      public fun lakeFormationConfiguration(lakeFormationConfiguration: IResolvable)
+
+      /**
+       * @param lakeFormationConfiguration the value to be set. 
+       */
+      public
+          fun lakeFormationConfiguration(lakeFormationConfiguration: LakeFormationConfigurationProperty)
+
+      /**
+       * @param lakeFormationConfiguration the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0540a8939eaf4f9b0b476c25ca80c0db4f67c6618671d1b50ea9744e23dc0f15")
+      public
+          fun lakeFormationConfiguration(lakeFormationConfiguration: LakeFormationConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.ProvisioningConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.ProvisioningConfigurationProperty.builder()
+
+      /**
+       * @param lakeFormationConfiguration the value to be set. 
+       */
+      override fun lakeFormationConfiguration(lakeFormationConfiguration: IResolvable) {
+        cdkBuilder.lakeFormationConfiguration(lakeFormationConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param lakeFormationConfiguration the value to be set. 
+       */
+      override
+          fun lakeFormationConfiguration(lakeFormationConfiguration: LakeFormationConfigurationProperty) {
+        cdkBuilder.lakeFormationConfiguration(lakeFormationConfiguration.let(LakeFormationConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param lakeFormationConfiguration the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0540a8939eaf4f9b0b476c25ca80c0db4f67c6618671d1b50ea9744e23dc0f15")
+      override
+          fun lakeFormationConfiguration(lakeFormationConfiguration: LakeFormationConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          lakeFormationConfiguration(LakeFormationConfigurationProperty(lakeFormationConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.ProvisioningConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.ProvisioningConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ProvisioningConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-environmentblueprintconfiguration-provisioningconfiguration.html#cfn-datazone-environmentblueprintconfiguration-provisioningconfiguration-lakeformationconfiguration)
+       */
+      override fun lakeFormationConfiguration(): Any = unwrap(this).getLakeFormationConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ProvisioningConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.ProvisioningConfigurationProperty):
+          ProvisioningConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProvisioningConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProvisioningConfigurationProperty):
+          software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.ProvisioningConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.ProvisioningConfigurationProperty
+    }
+  }
+
+  /**
    * The regional parameters in the environment blueprint.
    *
    * Example:
@@ -440,12 +790,12 @@ public open class CfnEnvironmentBlueprintConfiguration(
       /**
        * @param parameters A string to string map containing parameters for the region.
        */
-      public fun parameters(parameters: IResolvable)
+      public fun parameters(parameters: Map<String, String>)
 
       /**
        * @param parameters A string to string map containing parameters for the region.
        */
-      public fun parameters(parameters: Map<String, String>)
+      public fun parameters(parameters: IResolvable)
 
       /**
        * @param region The region specified in the environment parameter.
@@ -462,15 +812,15 @@ public open class CfnEnvironmentBlueprintConfiguration(
       /**
        * @param parameters A string to string map containing parameters for the region.
        */
-      override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+      override fun parameters(parameters: Map<String, String>) {
+        cdkBuilder.parameters(parameters)
       }
 
       /**
        * @param parameters A string to string map containing parameters for the region.
        */
-      override fun parameters(parameters: Map<String, String>) {
-        cdkBuilder.parameters(parameters)
+      override fun parameters(parameters: IResolvable) {
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**

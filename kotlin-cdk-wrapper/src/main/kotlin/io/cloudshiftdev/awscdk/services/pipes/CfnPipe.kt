@@ -5524,13 +5524,13 @@ public open class CfnPipe(
        * @param headerParameters The headers that need to be sent as part of request invoking the
        * API Gateway REST API or EventBridge ApiDestination.
        */
-      public fun headerParameters(headerParameters: IResolvable)
+      public fun headerParameters(headerParameters: Map<String, String>)
 
       /**
        * @param headerParameters The headers that need to be sent as part of request invoking the
        * API Gateway REST API or EventBridge ApiDestination.
        */
-      public fun headerParameters(headerParameters: Map<String, String>)
+      public fun headerParameters(headerParameters: IResolvable)
 
       /**
        * @param pathParameterValues The path parameter values to be used to populate API Gateway
@@ -5548,13 +5548,13 @@ public open class CfnPipe(
        * @param queryStringParameters The query string keys/values that need to be sent as part of
        * request invoking the API Gateway REST API or EventBridge ApiDestination.
        */
-      public fun queryStringParameters(queryStringParameters: IResolvable)
+      public fun queryStringParameters(queryStringParameters: Map<String, String>)
 
       /**
        * @param queryStringParameters The query string keys/values that need to be sent as part of
        * request invoking the API Gateway REST API or EventBridge ApiDestination.
        */
-      public fun queryStringParameters(queryStringParameters: Map<String, String>)
+      public fun queryStringParameters(queryStringParameters: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -5567,16 +5567,16 @@ public open class CfnPipe(
        * @param headerParameters The headers that need to be sent as part of request invoking the
        * API Gateway REST API or EventBridge ApiDestination.
        */
-      override fun headerParameters(headerParameters: IResolvable) {
-        cdkBuilder.headerParameters(headerParameters.let(IResolvable.Companion::unwrap))
+      override fun headerParameters(headerParameters: Map<String, String>) {
+        cdkBuilder.headerParameters(headerParameters)
       }
 
       /**
        * @param headerParameters The headers that need to be sent as part of request invoking the
        * API Gateway REST API or EventBridge ApiDestination.
        */
-      override fun headerParameters(headerParameters: Map<String, String>) {
-        cdkBuilder.headerParameters(headerParameters)
+      override fun headerParameters(headerParameters: IResolvable) {
+        cdkBuilder.headerParameters(headerParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5598,16 +5598,16 @@ public open class CfnPipe(
        * @param queryStringParameters The query string keys/values that need to be sent as part of
        * request invoking the API Gateway REST API or EventBridge ApiDestination.
        */
-      override fun queryStringParameters(queryStringParameters: IResolvable) {
-        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable.Companion::unwrap))
+      override fun queryStringParameters(queryStringParameters: Map<String, String>) {
+        cdkBuilder.queryStringParameters(queryStringParameters)
       }
 
       /**
        * @param queryStringParameters The query string keys/values that need to be sent as part of
        * request invoking the API Gateway REST API or EventBridge ApiDestination.
        */
-      override fun queryStringParameters(queryStringParameters: Map<String, String>) {
-        cdkBuilder.queryStringParameters(queryStringParameters)
+      override fun queryStringParameters(queryStringParameters: IResolvable) {
+        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -9105,7 +9105,7 @@ public open class CfnPipe(
        * Parameters are specified as a key and value pair mapping. Parameters included here override
        * any corresponding parameter defaults from the job definition.
        */
-      public fun parameters(parameters: IResolvable)
+      public fun parameters(parameters: Map<String, String>)
 
       /**
        * @param parameters Additional parameters passed to the job that replace parameter
@@ -9113,7 +9113,7 @@ public open class CfnPipe(
        * Parameters are specified as a key and value pair mapping. Parameters included here override
        * any corresponding parameter defaults from the job definition.
        */
-      public fun parameters(parameters: Map<String, String>)
+      public fun parameters(parameters: IResolvable)
 
       /**
        * @param retryStrategy The retry strategy to use for failed jobs.
@@ -9259,8 +9259,8 @@ public open class CfnPipe(
        * Parameters are specified as a key and value pair mapping. Parameters included here override
        * any corresponding parameter defaults from the job definition.
        */
-      override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+      override fun parameters(parameters: Map<String, String>) {
+        cdkBuilder.parameters(parameters)
       }
 
       /**
@@ -9269,8 +9269,8 @@ public open class CfnPipe(
        * Parameters are specified as a key and value pair mapping. Parameters included here override
        * any corresponding parameter defaults from the job definition.
        */
-      override fun parameters(parameters: Map<String, String>) {
-        cdkBuilder.parameters(parameters)
+      override fun parameters(parameters: IResolvable) {
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9429,8 +9429,16 @@ public open class CfnPipe(
     public fun logStreamName(): String? = unwrap(this).getLogStreamName()
 
     /**
-     * The time the event occurred, expressed as the number of milliseconds after Jan 1, 1970
-     * 00:00:00 UTC.
+     * A [dynamic path
+     * parameter](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-event-target.html)
+     * to a field in the payload containing the time the event occurred, expressed as the number of
+     * milliseconds after Jan 1, 1970 00:00:00 UTC.
+     *
+     * The value cannot be a static timestamp as the provided timestamp would be applied to all
+     * events delivered by the Pipe, regardless of when they are actually delivered.
+     *
+     * If no dynamic path parameter is provided, the default value is the time the invocation is
+     * processed by the Pipe.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargetcloudwatchlogsparameters.html#cfn-pipes-pipe-pipetargetcloudwatchlogsparameters-timestamp)
      */
@@ -9447,8 +9455,15 @@ public open class CfnPipe(
       public fun logStreamName(logStreamName: String)
 
       /**
-       * @param timestamp The time the event occurred, expressed as the number of milliseconds after
-       * Jan 1, 1970 00:00:00 UTC.
+       * @param timestamp A [dynamic path
+       * parameter](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-event-target.html)
+       * to a field in the payload containing the time the event occurred, expressed as the number of
+       * milliseconds after Jan 1, 1970 00:00:00 UTC.
+       * The value cannot be a static timestamp as the provided timestamp would be applied to all
+       * events delivered by the Pipe, regardless of when they are actually delivered.
+       *
+       * If no dynamic path parameter is provided, the default value is the time the invocation is
+       * processed by the Pipe.
        */
       public fun timestamp(timestamp: String)
     }
@@ -9467,8 +9482,15 @@ public open class CfnPipe(
       }
 
       /**
-       * @param timestamp The time the event occurred, expressed as the number of milliseconds after
-       * Jan 1, 1970 00:00:00 UTC.
+       * @param timestamp A [dynamic path
+       * parameter](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-event-target.html)
+       * to a field in the payload containing the time the event occurred, expressed as the number of
+       * milliseconds after Jan 1, 1970 00:00:00 UTC.
+       * The value cannot be a static timestamp as the provided timestamp would be applied to all
+       * events delivered by the Pipe, regardless of when they are actually delivered.
+       *
+       * If no dynamic path parameter is provided, the default value is the time the invocation is
+       * processed by the Pipe.
        */
       override fun timestamp(timestamp: String) {
         cdkBuilder.timestamp(timestamp)
@@ -9491,8 +9513,16 @@ public open class CfnPipe(
       override fun logStreamName(): String? = unwrap(this).getLogStreamName()
 
       /**
-       * The time the event occurred, expressed as the number of milliseconds after Jan 1, 1970
-       * 00:00:00 UTC.
+       * A [dynamic path
+       * parameter](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-event-target.html)
+       * to a field in the payload containing the time the event occurred, expressed as the number of
+       * milliseconds after Jan 1, 1970 00:00:00 UTC.
+       *
+       * The value cannot be a static timestamp as the provided timestamp would be applied to all
+       * events delivered by the Pipe, regardless of when they are actually delivered.
+       *
+       * If no dynamic path parameter is provided, the default value is the time the invocation is
+       * processed by the Pipe.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargetcloudwatchlogsparameters.html#cfn-pipes-pipe-pipetargetcloudwatchlogsparameters-timestamp)
        */
@@ -10758,13 +10788,13 @@ public open class CfnPipe(
        * @param headerParameters The headers that need to be sent as part of request invoking the
        * API Gateway REST API or EventBridge ApiDestination.
        */
-      public fun headerParameters(headerParameters: IResolvable)
+      public fun headerParameters(headerParameters: Map<String, String>)
 
       /**
        * @param headerParameters The headers that need to be sent as part of request invoking the
        * API Gateway REST API or EventBridge ApiDestination.
        */
-      public fun headerParameters(headerParameters: Map<String, String>)
+      public fun headerParameters(headerParameters: IResolvable)
 
       /**
        * @param pathParameterValues The path parameter values to be used to populate API Gateway
@@ -10782,13 +10812,13 @@ public open class CfnPipe(
        * @param queryStringParameters The query string keys/values that need to be sent as part of
        * request invoking the API Gateway REST API or EventBridge ApiDestination.
        */
-      public fun queryStringParameters(queryStringParameters: IResolvable)
+      public fun queryStringParameters(queryStringParameters: Map<String, String>)
 
       /**
        * @param queryStringParameters The query string keys/values that need to be sent as part of
        * request invoking the API Gateway REST API or EventBridge ApiDestination.
        */
-      public fun queryStringParameters(queryStringParameters: Map<String, String>)
+      public fun queryStringParameters(queryStringParameters: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -10800,16 +10830,16 @@ public open class CfnPipe(
        * @param headerParameters The headers that need to be sent as part of request invoking the
        * API Gateway REST API or EventBridge ApiDestination.
        */
-      override fun headerParameters(headerParameters: IResolvable) {
-        cdkBuilder.headerParameters(headerParameters.let(IResolvable.Companion::unwrap))
+      override fun headerParameters(headerParameters: Map<String, String>) {
+        cdkBuilder.headerParameters(headerParameters)
       }
 
       /**
        * @param headerParameters The headers that need to be sent as part of request invoking the
        * API Gateway REST API or EventBridge ApiDestination.
        */
-      override fun headerParameters(headerParameters: Map<String, String>) {
-        cdkBuilder.headerParameters(headerParameters)
+      override fun headerParameters(headerParameters: IResolvable) {
+        cdkBuilder.headerParameters(headerParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10831,16 +10861,16 @@ public open class CfnPipe(
        * @param queryStringParameters The query string keys/values that need to be sent as part of
        * request invoking the API Gateway REST API or EventBridge ApiDestination.
        */
-      override fun queryStringParameters(queryStringParameters: IResolvable) {
-        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable.Companion::unwrap))
+      override fun queryStringParameters(queryStringParameters: Map<String, String>) {
+        cdkBuilder.queryStringParameters(queryStringParameters)
       }
 
       /**
        * @param queryStringParameters The query string keys/values that need to be sent as part of
        * request invoking the API Gateway REST API or EventBridge ApiDestination.
        */
-      override fun queryStringParameters(queryStringParameters: Map<String, String>) {
-        cdkBuilder.queryStringParameters(queryStringParameters)
+      override fun queryStringParameters(queryStringParameters: IResolvable) {
+        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -11242,7 +11272,7 @@ public open class CfnPipe(
     public fun redshiftDataParameters(): Any? = unwrap(this).getRedshiftDataParameters()
 
     /**
-     * The parameters for using a SageMaker pipeline as a target.
+     * The parameters for using a SageMaker AI pipeline as a target.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargetparameters.html#cfn-pipes-pipe-pipetargetparameters-sagemakerpipelineparameters)
      */
@@ -11446,20 +11476,20 @@ public open class CfnPipe(
           fun redshiftDataParameters(redshiftDataParameters: PipeTargetRedshiftDataParametersProperty.Builder.() -> Unit)
 
       /**
-       * @param sageMakerPipelineParameters The parameters for using a SageMaker pipeline as a
+       * @param sageMakerPipelineParameters The parameters for using a SageMaker AI pipeline as a
        * target.
        */
       public fun sageMakerPipelineParameters(sageMakerPipelineParameters: IResolvable)
 
       /**
-       * @param sageMakerPipelineParameters The parameters for using a SageMaker pipeline as a
+       * @param sageMakerPipelineParameters The parameters for using a SageMaker AI pipeline as a
        * target.
        */
       public
           fun sageMakerPipelineParameters(sageMakerPipelineParameters: PipeTargetSageMakerPipelineParametersProperty)
 
       /**
-       * @param sageMakerPipelineParameters The parameters for using a SageMaker pipeline as a
+       * @param sageMakerPipelineParameters The parameters for using a SageMaker AI pipeline as a
        * target.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -11753,7 +11783,7 @@ public open class CfnPipe(
           redshiftDataParameters(PipeTargetRedshiftDataParametersProperty(redshiftDataParameters))
 
       /**
-       * @param sageMakerPipelineParameters The parameters for using a SageMaker pipeline as a
+       * @param sageMakerPipelineParameters The parameters for using a SageMaker AI pipeline as a
        * target.
        */
       override fun sageMakerPipelineParameters(sageMakerPipelineParameters: IResolvable) {
@@ -11761,7 +11791,7 @@ public open class CfnPipe(
       }
 
       /**
-       * @param sageMakerPipelineParameters The parameters for using a SageMaker pipeline as a
+       * @param sageMakerPipelineParameters The parameters for using a SageMaker AI pipeline as a
        * target.
        */
       override
@@ -11770,7 +11800,7 @@ public open class CfnPipe(
       }
 
       /**
-       * @param sageMakerPipelineParameters The parameters for using a SageMaker pipeline as a
+       * @param sageMakerPipelineParameters The parameters for using a SageMaker AI pipeline as a
        * target.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -11940,7 +11970,7 @@ public open class CfnPipe(
       override fun redshiftDataParameters(): Any? = unwrap(this).getRedshiftDataParameters()
 
       /**
-       * The parameters for using a SageMaker pipeline as a target.
+       * The parameters for using a SageMaker AI pipeline as a target.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargetparameters.html#cfn-pipes-pipe-pipetargetparameters-sagemakerpipelineparameters)
        */
@@ -12265,7 +12295,7 @@ public open class CfnPipe(
   }
 
   /**
-   * The parameters for using a SageMaker pipeline as a target.
+   * The parameters for using a SageMaker AI pipeline as a target.
    *
    * Example:
    *
@@ -12286,7 +12316,7 @@ public open class CfnPipe(
    */
   public interface PipeTargetSageMakerPipelineParametersProperty {
     /**
-     * List of Parameter names and values for SageMaker Model Building Pipeline execution.
+     * List of Parameter names and values for SageMaker AI Model Building Pipeline execution.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargetsagemakerpipelineparameters.html#cfn-pipes-pipe-pipetargetsagemakerpipelineparameters-pipelineparameterlist)
      */
@@ -12298,19 +12328,19 @@ public open class CfnPipe(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param pipelineParameterList List of Parameter names and values for SageMaker Model
+       * @param pipelineParameterList List of Parameter names and values for SageMaker AI Model
        * Building Pipeline execution.
        */
       public fun pipelineParameterList(pipelineParameterList: IResolvable)
 
       /**
-       * @param pipelineParameterList List of Parameter names and values for SageMaker Model
+       * @param pipelineParameterList List of Parameter names and values for SageMaker AI Model
        * Building Pipeline execution.
        */
       public fun pipelineParameterList(pipelineParameterList: List<Any>)
 
       /**
-       * @param pipelineParameterList List of Parameter names and values for SageMaker Model
+       * @param pipelineParameterList List of Parameter names and values for SageMaker AI Model
        * Building Pipeline execution.
        */
       public fun pipelineParameterList(vararg pipelineParameterList: Any)
@@ -12323,7 +12353,7 @@ public open class CfnPipe(
           software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetSageMakerPipelineParametersProperty.builder()
 
       /**
-       * @param pipelineParameterList List of Parameter names and values for SageMaker Model
+       * @param pipelineParameterList List of Parameter names and values for SageMaker AI Model
        * Building Pipeline execution.
        */
       override fun pipelineParameterList(pipelineParameterList: IResolvable) {
@@ -12331,7 +12361,7 @@ public open class CfnPipe(
       }
 
       /**
-       * @param pipelineParameterList List of Parameter names and values for SageMaker Model
+       * @param pipelineParameterList List of Parameter names and values for SageMaker AI Model
        * Building Pipeline execution.
        */
       override fun pipelineParameterList(pipelineParameterList: List<Any>) {
@@ -12339,7 +12369,7 @@ public open class CfnPipe(
       }
 
       /**
-       * @param pipelineParameterList List of Parameter names and values for SageMaker Model
+       * @param pipelineParameterList List of Parameter names and values for SageMaker AI Model
        * Building Pipeline execution.
        */
       override fun pipelineParameterList(vararg pipelineParameterList: Any): Unit =
@@ -12355,7 +12385,7 @@ public open class CfnPipe(
     ) : CdkObject(cdkObject),
         PipeTargetSageMakerPipelineParametersProperty {
       /**
-       * List of Parameter names and values for SageMaker Model Building Pipeline execution.
+       * List of Parameter names and values for SageMaker AI Model Building Pipeline execution.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargetsagemakerpipelineparameters.html#cfn-pipes-pipe-pipetargetsagemakerpipelineparameters-pipelineparameterlist)
        */
@@ -13622,7 +13652,7 @@ public open class CfnPipe(
   }
 
   /**
-   * Name/Value pair of a parameter to start execution of a SageMaker Model Building Pipeline.
+   * Name/Value pair of a parameter to start execution of a SageMaker AI Model Building Pipeline.
    *
    * Example:
    *
@@ -13641,14 +13671,14 @@ public open class CfnPipe(
    */
   public interface SageMakerPipelineParameterProperty {
     /**
-     * Name of parameter to start execution of a SageMaker Model Building Pipeline.
+     * Name of parameter to start execution of a SageMaker AI Model Building Pipeline.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-sagemakerpipelineparameter.html#cfn-pipes-pipe-sagemakerpipelineparameter-name)
      */
     public fun name(): String
 
     /**
-     * Value of parameter to start execution of a SageMaker Model Building Pipeline.
+     * Value of parameter to start execution of a SageMaker AI Model Building Pipeline.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-sagemakerpipelineparameter.html#cfn-pipes-pipe-sagemakerpipelineparameter-value)
      */
@@ -13660,12 +13690,14 @@ public open class CfnPipe(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name Name of parameter to start execution of a SageMaker Model Building Pipeline. 
+       * @param name Name of parameter to start execution of a SageMaker AI Model Building Pipeline.
+       * 
        */
       public fun name(name: String)
 
       /**
-       * @param value Value of parameter to start execution of a SageMaker Model Building Pipeline. 
+       * @param value Value of parameter to start execution of a SageMaker AI Model Building
+       * Pipeline. 
        */
       public fun `value`(`value`: String)
     }
@@ -13676,14 +13708,16 @@ public open class CfnPipe(
           software.amazon.awscdk.services.pipes.CfnPipe.SageMakerPipelineParameterProperty.builder()
 
       /**
-       * @param name Name of parameter to start execution of a SageMaker Model Building Pipeline. 
+       * @param name Name of parameter to start execution of a SageMaker AI Model Building Pipeline.
+       * 
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
       /**
-       * @param value Value of parameter to start execution of a SageMaker Model Building Pipeline. 
+       * @param value Value of parameter to start execution of a SageMaker AI Model Building
+       * Pipeline. 
        */
       override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
@@ -13699,14 +13733,14 @@ public open class CfnPipe(
     ) : CdkObject(cdkObject),
         SageMakerPipelineParameterProperty {
       /**
-       * Name of parameter to start execution of a SageMaker Model Building Pipeline.
+       * Name of parameter to start execution of a SageMaker AI Model Building Pipeline.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-sagemakerpipelineparameter.html#cfn-pipes-pipe-sagemakerpipelineparameter-name)
        */
       override fun name(): String = unwrap(this).getName()
 
       /**
-       * Value of parameter to start execution of a SageMaker Model Building Pipeline.
+       * Value of parameter to start execution of a SageMaker AI Model Building Pipeline.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-sagemakerpipelineparameter.html#cfn-pipes-pipe-sagemakerpipelineparameter-value)
        */

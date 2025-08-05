@@ -12,9 +12,15 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Specifies the default version of a resource.
+ * The `AWS::CloudFormation::ResourceDefaultVersion` resource specifies the default version of a
+ * resource.
  *
  * The default version of a resource will be used in CloudFormation operations.
+ *
+ * For information about the CloudFormation registry, see [Managing extensions with the
+ * CloudFormation
+ * registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html) in the *AWS
+ * CloudFormation User Guide* .
  *
  * Example:
  *

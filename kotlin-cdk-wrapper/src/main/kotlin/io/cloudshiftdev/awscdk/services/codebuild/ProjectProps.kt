@@ -104,6 +104,13 @@ public interface ProjectProps : CommonProjectProps {
     public fun artifacts(artifacts: IArtifacts)
 
     /**
+     * @param autoRetryLimit CodeBuild will automatically call retry build using the project's
+     * service role up to the auto-retry limit.
+     * `autoRetryLimit` must be between 0 and 10.
+     */
+    public fun autoRetryLimit(autoRetryLimit: Number)
+
+    /**
      * @param badge Indicates whether AWS CodeBuild generates a publicly accessible URL for your
      * project's build badge.
      * For more information, see Build Badges Sample
@@ -382,6 +389,15 @@ public interface ProjectProps : CommonProjectProps {
      */
     override fun artifacts(artifacts: IArtifacts) {
       cdkBuilder.artifacts(artifacts.let(IArtifacts.Companion::unwrap))
+    }
+
+    /**
+     * @param autoRetryLimit CodeBuild will automatically call retry build using the project's
+     * service role up to the auto-retry limit.
+     * `autoRetryLimit` must be between 0 and 10.
+     */
+    override fun autoRetryLimit(autoRetryLimit: Number) {
+      cdkBuilder.autoRetryLimit(autoRetryLimit)
     }
 
     /**
@@ -723,6 +739,16 @@ public interface ProjectProps : CommonProjectProps {
      * Default: NoArtifacts
      */
     override fun artifacts(): IArtifacts? = unwrap(this).getArtifacts()?.let(IArtifacts::wrap)
+
+    /**
+     * CodeBuild will automatically call retry build using the project's service role up to the
+     * auto-retry limit.
+     *
+     * `autoRetryLimit` must be between 0 and 10.
+     *
+     * Default: - no retry
+     */
+    override fun autoRetryLimit(): Number? = unwrap(this).getAutoRetryLimit()
 
     /**
      * Indicates whether AWS CodeBuild generates a publicly accessible URL for your project's build

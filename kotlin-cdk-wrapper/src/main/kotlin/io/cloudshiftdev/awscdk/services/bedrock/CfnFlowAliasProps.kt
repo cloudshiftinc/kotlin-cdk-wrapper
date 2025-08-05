@@ -11,6 +11,7 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a `CfnFlowAlias`.
@@ -28,6 +29,11 @@ import kotlin.collections.Map
  * .flowVersion("flowVersion")
  * .build()))
  * // the properties below are optional
+ * .concurrencyConfiguration(FlowAliasConcurrencyConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .maxConcurrency(123)
+ * .build())
  * .description("description")
  * .tags(Map.of(
  * "tagsKey", "tags"))
@@ -37,6 +43,13 @@ import kotlin.collections.Map
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-flowalias.html)
  */
 public interface CfnFlowAliasProps {
+  /**
+   * The configuration that specifies how nodes in the flow are executed concurrently.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-flowalias.html#cfn-bedrock-flowalias-concurrencyconfiguration)
+   */
+  public fun concurrencyConfiguration(): Any? = unwrap(this).getConcurrencyConfiguration()
+
   /**
    * A description of the alias.
    *
@@ -85,6 +98,28 @@ public interface CfnFlowAliasProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param concurrencyConfiguration The configuration that specifies how nodes in the flow are
+     * executed concurrently.
+     */
+    public fun concurrencyConfiguration(concurrencyConfiguration: IResolvable)
+
+    /**
+     * @param concurrencyConfiguration The configuration that specifies how nodes in the flow are
+     * executed concurrently.
+     */
+    public
+        fun concurrencyConfiguration(concurrencyConfiguration: CfnFlowAlias.FlowAliasConcurrencyConfigurationProperty)
+
+    /**
+     * @param concurrencyConfiguration The configuration that specifies how nodes in the flow are
+     * executed concurrently.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8c7d1d6c9b50891ca3e64f753b2303f73d890cfa26ff20a7d484cdf0dc1ffba9")
+    public
+        fun concurrencyConfiguration(concurrencyConfiguration: CfnFlowAlias.FlowAliasConcurrencyConfigurationProperty.Builder.() -> Unit)
+
     /**
      * @param description A description of the alias.
      */
@@ -135,6 +170,34 @@ public interface CfnFlowAliasProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.bedrock.CfnFlowAliasProps.Builder =
         software.amazon.awscdk.services.bedrock.CfnFlowAliasProps.builder()
+
+    /**
+     * @param concurrencyConfiguration The configuration that specifies how nodes in the flow are
+     * executed concurrently.
+     */
+    override fun concurrencyConfiguration(concurrencyConfiguration: IResolvable) {
+      cdkBuilder.concurrencyConfiguration(concurrencyConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param concurrencyConfiguration The configuration that specifies how nodes in the flow are
+     * executed concurrently.
+     */
+    override
+        fun concurrencyConfiguration(concurrencyConfiguration: CfnFlowAlias.FlowAliasConcurrencyConfigurationProperty) {
+      cdkBuilder.concurrencyConfiguration(concurrencyConfiguration.let(CfnFlowAlias.FlowAliasConcurrencyConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param concurrencyConfiguration The configuration that specifies how nodes in the flow are
+     * executed concurrently.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8c7d1d6c9b50891ca3e64f753b2303f73d890cfa26ff20a7d484cdf0dc1ffba9")
+    override
+        fun concurrencyConfiguration(concurrencyConfiguration: CfnFlowAlias.FlowAliasConcurrencyConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        concurrencyConfiguration(CfnFlowAlias.FlowAliasConcurrencyConfigurationProperty(concurrencyConfiguration))
 
     /**
      * @param description A description of the alias.
@@ -203,6 +266,13 @@ public interface CfnFlowAliasProps {
     cdkObject: software.amazon.awscdk.services.bedrock.CfnFlowAliasProps,
   ) : CdkObject(cdkObject),
       CfnFlowAliasProps {
+    /**
+     * The configuration that specifies how nodes in the flow are executed concurrently.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-flowalias.html#cfn-bedrock-flowalias-concurrencyconfiguration)
+     */
+    override fun concurrencyConfiguration(): Any? = unwrap(this).getConcurrencyConfiguration()
+
     /**
      * A description of the alias.
      *

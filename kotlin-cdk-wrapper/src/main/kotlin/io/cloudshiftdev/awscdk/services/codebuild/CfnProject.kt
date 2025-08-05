@@ -57,6 +57,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .type("type")
  * // the properties below are optional
  * .certificate("certificate")
+ * .dockerServer(DockerServerProperty.builder()
+ * .computeType("computeType")
+ * // the properties below are optional
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .build())
  * .environmentVariables(List.of(EnvironmentVariableProperty.builder()
  * .name("name")
  * .value("value")
@@ -112,6 +117,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .cache(ProjectCacheProperty.builder()
  * .type("type")
  * // the properties below are optional
+ * .cacheNamespace("cacheNamespace")
  * .location("location")
  * .modes(List.of("modes"))
  * .build())
@@ -198,6 +204,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())))
  * .scopeConfiguration(ScopeConfigurationProperty.builder()
  * .name("name")
+ * // the properties below are optional
+ * .domain("domain")
+ * .scope("scope")
  * .build())
  * .webhook(false)
  * .build())
@@ -3271,6 +3280,117 @@ public open class CfnProject(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codebuild.*;
+   * DockerServerProperty dockerServerProperty = DockerServerProperty.builder()
+   * .computeType("computeType")
+   * // the properties below are optional
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-dockerserver.html)
+   */
+  public interface DockerServerProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-dockerserver.html#cfn-codebuild-project-dockerserver-computetype)
+     */
+    public fun computeType(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-dockerserver.html#cfn-codebuild-project-dockerserver-securitygroupids)
+     */
+    public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
+
+    /**
+     * A builder for [DockerServerProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param computeType the value to be set. 
+       */
+      public fun computeType(computeType: String)
+
+      /**
+       * @param securityGroupIds the value to be set.
+       */
+      public fun securityGroupIds(securityGroupIds: List<String>)
+
+      /**
+       * @param securityGroupIds the value to be set.
+       */
+      public fun securityGroupIds(vararg securityGroupIds: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codebuild.CfnProject.DockerServerProperty.Builder =
+          software.amazon.awscdk.services.codebuild.CfnProject.DockerServerProperty.builder()
+
+      /**
+       * @param computeType the value to be set. 
+       */
+      override fun computeType(computeType: String) {
+        cdkBuilder.computeType(computeType)
+      }
+
+      /**
+       * @param securityGroupIds the value to be set.
+       */
+      override fun securityGroupIds(securityGroupIds: List<String>) {
+        cdkBuilder.securityGroupIds(securityGroupIds)
+      }
+
+      /**
+       * @param securityGroupIds the value to be set.
+       */
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
+      public fun build(): software.amazon.awscdk.services.codebuild.CfnProject.DockerServerProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.DockerServerProperty,
+    ) : CdkObject(cdkObject),
+        DockerServerProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-dockerserver.html#cfn-codebuild-project-dockerserver-computetype)
+       */
+      override fun computeType(): String = unwrap(this).getComputeType()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-dockerserver.html#cfn-codebuild-project-dockerserver-securitygroupids)
+       */
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+          emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DockerServerProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.DockerServerProperty):
+          DockerServerProperty = CdkObjectWrappers.wrap(cdkObject) as? DockerServerProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DockerServerProperty):
+          software.amazon.awscdk.services.codebuild.CfnProject.DockerServerProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.codebuild.CfnProject.DockerServerProperty
+    }
+  }
+
+  /**
    * `Environment` is a property of the
    * [AWS::CodeBuild::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
    * resource that specifies the environment for an AWS CodeBuild project.
@@ -3287,6 +3407,11 @@ public open class CfnProject(
    * .type("type")
    * // the properties below are optional
    * .certificate("certificate")
+   * .dockerServer(DockerServerProperty.builder()
+   * .computeType("computeType")
+   * // the properties below are optional
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .build())
    * .environmentVariables(List.of(EnvironmentVariableProperty.builder()
    * .name("name")
    * .value("value")
@@ -3383,6 +3508,11 @@ public open class CfnProject(
     public fun computeType(): String
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-dockerserver)
+     */
+    public fun dockerServer(): Any? = unwrap(this).getDockerServer()
+
+    /**
      * A set of environment variables to make available to builds for this build project.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-environmentvariables)
@@ -3475,24 +3605,6 @@ public open class CfnProject(
     /**
      * The type of build environment to use for related builds.
      *
-     * * The environment type `ARM_CONTAINER` is available only in regions US East (N. Virginia), US
-     * East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo), Asia
-     * Pacific (Sydney), and EU (Frankfurt).
-     * * The environment type `LINUX_CONTAINER` is available only in regions US East (N. Virginia),
-     * US East (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU (Frankfurt),
-     * Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney),
-     * China (Beijing), and China (Ningxia).
-     * * The environment type `LINUX_GPU_CONTAINER` is available only in regions US East (N.
-     * Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU
-     * (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific
-     * (Sydney) , China (Beijing), and China (Ningxia).
-     * * The environment types `ARM_LAMBDA_CONTAINER` and `LINUX_LAMBDA_CONTAINER` are available
-     * only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai),
-     * Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), EU (Frankfurt), EU
-     * (Ireland), and South America (São Paulo).
-     * * The environment types `WINDOWS_CONTAINER` and `WINDOWS_SERVER_2019_CONTAINER` are available
-     * only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland).
-     *
      *
      * If you're using compute fleets during project creation, `type` will be ignored.
      *
@@ -3577,6 +3689,23 @@ public open class CfnProject(
        * in the *AWS CodeBuild User Guide.*
        */
       public fun computeType(computeType: String)
+
+      /**
+       * @param dockerServer the value to be set.
+       */
+      public fun dockerServer(dockerServer: IResolvable)
+
+      /**
+       * @param dockerServer the value to be set.
+       */
+      public fun dockerServer(dockerServer: DockerServerProperty)
+
+      /**
+       * @param dockerServer the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("30e1193e1b3109ed74fc506d4d16483b07eab7abebd3d56e17f6bba3b699a549")
+      public fun dockerServer(dockerServer: DockerServerProperty.Builder.() -> Unit)
 
       /**
        * @param environmentVariables A set of environment variables to make available to builds for
@@ -3733,25 +3862,6 @@ public open class CfnProject(
 
       /**
        * @param type The type of build environment to use for related builds. 
-       * * The environment type `ARM_CONTAINER` is available only in regions US East (N. Virginia),
-       * US East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo),
-       * Asia Pacific (Sydney), and EU (Frankfurt).
-       * * The environment type `LINUX_CONTAINER` is available only in regions US East (N.
-       * Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU
-       * (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia
-       * Pacific (Sydney), China (Beijing), and China (Ningxia).
-       * * The environment type `LINUX_GPU_CONTAINER` is available only in regions US East (N.
-       * Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU
-       * (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia
-       * Pacific (Sydney) , China (Beijing), and China (Ningxia).
-       * * The environment types `ARM_LAMBDA_CONTAINER` and `LINUX_LAMBDA_CONTAINER` are available
-       * only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific
-       * (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), EU
-       * (Frankfurt), EU (Ireland), and South America (São Paulo).
-       * * The environment types `WINDOWS_CONTAINER` and `WINDOWS_SERVER_2019_CONTAINER` are
-       * available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU
-       * (Ireland).
-       *
        *
        * If you're using compute fleets during project creation, `type` will be ignored.
        *
@@ -3839,6 +3949,28 @@ public open class CfnProject(
       override fun computeType(computeType: String) {
         cdkBuilder.computeType(computeType)
       }
+
+      /**
+       * @param dockerServer the value to be set.
+       */
+      override fun dockerServer(dockerServer: IResolvable) {
+        cdkBuilder.dockerServer(dockerServer.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param dockerServer the value to be set.
+       */
+      override fun dockerServer(dockerServer: DockerServerProperty) {
+        cdkBuilder.dockerServer(dockerServer.let(DockerServerProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param dockerServer the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("30e1193e1b3109ed74fc506d4d16483b07eab7abebd3d56e17f6bba3b699a549")
+      override fun dockerServer(dockerServer: DockerServerProperty.Builder.() -> Unit): Unit =
+          dockerServer(DockerServerProperty(dockerServer))
 
       /**
        * @param environmentVariables A set of environment variables to make available to builds for
@@ -4018,25 +4150,6 @@ public open class CfnProject(
 
       /**
        * @param type The type of build environment to use for related builds. 
-       * * The environment type `ARM_CONTAINER` is available only in regions US East (N. Virginia),
-       * US East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo),
-       * Asia Pacific (Sydney), and EU (Frankfurt).
-       * * The environment type `LINUX_CONTAINER` is available only in regions US East (N.
-       * Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU
-       * (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia
-       * Pacific (Sydney), China (Beijing), and China (Ningxia).
-       * * The environment type `LINUX_GPU_CONTAINER` is available only in regions US East (N.
-       * Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU
-       * (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia
-       * Pacific (Sydney) , China (Beijing), and China (Ningxia).
-       * * The environment types `ARM_LAMBDA_CONTAINER` and `LINUX_LAMBDA_CONTAINER` are available
-       * only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific
-       * (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), EU
-       * (Frankfurt), EU (Ireland), and South America (São Paulo).
-       * * The environment types `WINDOWS_CONTAINER` and `WINDOWS_SERVER_2019_CONTAINER` are
-       * available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU
-       * (Ireland).
-       *
        *
        * If you're using compute fleets during project creation, `type` will be ignored.
        *
@@ -4132,6 +4245,11 @@ public open class CfnProject(
       override fun computeType(): String = unwrap(this).getComputeType()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-dockerserver)
+       */
+      override fun dockerServer(): Any? = unwrap(this).getDockerServer()
+
+      /**
        * A set of environment variables to make available to builds for this build project.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html#cfn-codebuild-project-environment-environmentvariables)
@@ -4224,25 +4342,6 @@ public open class CfnProject(
 
       /**
        * The type of build environment to use for related builds.
-       *
-       * * The environment type `ARM_CONTAINER` is available only in regions US East (N. Virginia),
-       * US East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo),
-       * Asia Pacific (Sydney), and EU (Frankfurt).
-       * * The environment type `LINUX_CONTAINER` is available only in regions US East (N.
-       * Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU
-       * (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia
-       * Pacific (Sydney), China (Beijing), and China (Ningxia).
-       * * The environment type `LINUX_GPU_CONTAINER` is available only in regions US East (N.
-       * Virginia), US East (Ohio), US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU
-       * (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia
-       * Pacific (Sydney) , China (Beijing), and China (Ningxia).
-       * * The environment types `ARM_LAMBDA_CONTAINER` and `LINUX_LAMBDA_CONTAINER` are available
-       * only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific
-       * (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), EU
-       * (Frankfurt), EU (Ireland), and South America (São Paulo).
-       * * The environment types `WINDOWS_CONTAINER` and `WINDOWS_SERVER_2019_CONTAINER` are
-       * available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU
-       * (Ireland).
        *
        *
        * If you're using compute fleets during project creation, `type` will be ignored.
@@ -5093,6 +5192,7 @@ public open class CfnProject(
    * ProjectCacheProperty projectCacheProperty = ProjectCacheProperty.builder()
    * .type("type")
    * // the properties below are optional
+   * .cacheNamespace("cacheNamespace")
    * .location("location")
    * .modes(List.of("modes"))
    * .build();
@@ -5101,6 +5201,18 @@ public open class CfnProject(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html)
    */
   public interface ProjectCacheProperty {
+    /**
+     * Defines the scope of the cache.
+     *
+     * You can use this namespace to share a cache across multiple projects. For more information,
+     * see [Cache sharing between
+     * projects](https://docs.aws.amazon.com/codebuild/latest/userguide/caching-s3.html#caching-s3-sharing)
+     * in the *AWS CodeBuild User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-cachenamespace)
+     */
+    public fun cacheNamespace(): String? = unwrap(this).getCacheNamespace()
+
     /**
      * Information about the cache location:.
      *
@@ -5164,6 +5276,15 @@ public open class CfnProject(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param cacheNamespace Defines the scope of the cache.
+       * You can use this namespace to share a cache across multiple projects. For more information,
+       * see [Cache sharing between
+       * projects](https://docs.aws.amazon.com/codebuild/latest/userguide/caching-s3.html#caching-s3-sharing)
+       * in the *AWS CodeBuild User Guide* .
+       */
+      public fun cacheNamespace(cacheNamespace: String)
+
       /**
        * @param location Information about the cache location:.
        * * `NO_CACHE` or `LOCAL` : This value is ignored.
@@ -5253,6 +5374,17 @@ public open class CfnProject(
       private val cdkBuilder:
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty.builder()
+
+      /**
+       * @param cacheNamespace Defines the scope of the cache.
+       * You can use this namespace to share a cache across multiple projects. For more information,
+       * see [Cache sharing between
+       * projects](https://docs.aws.amazon.com/codebuild/latest/userguide/caching-s3.html#caching-s3-sharing)
+       * in the *AWS CodeBuild User Guide* .
+       */
+      override fun cacheNamespace(cacheNamespace: String) {
+        cdkBuilder.cacheNamespace(cacheNamespace)
+      }
 
       /**
        * @param location Information about the cache location:.
@@ -5352,6 +5484,18 @@ public open class CfnProject(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty,
     ) : CdkObject(cdkObject),
         ProjectCacheProperty {
+      /**
+       * Defines the scope of the cache.
+       *
+       * You can use this namespace to share a cache across multiple projects. For more information,
+       * see [Cache sharing between
+       * projects](https://docs.aws.amazon.com/codebuild/latest/userguide/caching-s3.html#caching-s3-sharing)
+       * in the *AWS CodeBuild User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html#cfn-codebuild-project-projectcache-cachenamespace)
+       */
+      override fun cacheNamespace(): String? = unwrap(this).getCacheNamespace()
+
       /**
        * Information about the cache location:.
        *
@@ -6015,6 +6159,9 @@ public open class CfnProject(
    * .build())))
    * .scopeConfiguration(ScopeConfigurationProperty.builder()
    * .name("name")
+   * // the properties below are optional
+   * .domain("domain")
+   * .scope("scope")
    * .build())
    * .webhook(false)
    * .build();
@@ -6604,12 +6751,25 @@ public open class CfnProject(
    * import io.cloudshiftdev.awscdk.services.codebuild.*;
    * ScopeConfigurationProperty scopeConfigurationProperty = ScopeConfigurationProperty.builder()
    * .name("name")
+   * // the properties below are optional
+   * .domain("domain")
+   * .scope("scope")
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-scopeconfiguration.html)
    */
   public interface ScopeConfigurationProperty {
+    /**
+     * The domain of the GitHub Enterprise organization or the GitLab Self Managed group.
+     *
+     * Note that this parameter is only required if your project's source type is GITHUB_ENTERPRISE
+     * or GITLAB_SELF_MANAGED.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-scopeconfiguration.html#cfn-codebuild-project-scopeconfiguration-domain)
+     */
+    public fun domain(): String? = unwrap(this).getDomain()
+
     /**
      * The name of either the enterprise or organization that will send webhook events to CodeBuild
      * , depending on if the webhook is a global or organization webhook respectively.
@@ -6619,15 +6779,38 @@ public open class CfnProject(
     public fun name(): String
 
     /**
+     * The type of scope for a GitHub or GitLab webhook.
+     *
+     * The scope default is GITHUB_ORGANIZATION.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-scopeconfiguration.html#cfn-codebuild-project-scopeconfiguration-scope)
+     */
+    public fun scope(): String? = unwrap(this).getScope()
+
+    /**
      * A builder for [ScopeConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param domain The domain of the GitHub Enterprise organization or the GitLab Self Managed
+       * group.
+       * Note that this parameter is only required if your project's source type is
+       * GITHUB_ENTERPRISE or GITLAB_SELF_MANAGED.
+       */
+      public fun domain(domain: String)
+
+      /**
        * @param name The name of either the enterprise or organization that will send webhook events
        * to CodeBuild , depending on if the webhook is a global or organization webhook respectively. 
        */
       public fun name(name: String)
+
+      /**
+       * @param scope The type of scope for a GitHub or GitLab webhook.
+       * The scope default is GITHUB_ORGANIZATION.
+       */
+      public fun scope(scope: String)
     }
 
     private class BuilderImpl : Builder {
@@ -6636,11 +6819,29 @@ public open class CfnProject(
           software.amazon.awscdk.services.codebuild.CfnProject.ScopeConfigurationProperty.builder()
 
       /**
+       * @param domain The domain of the GitHub Enterprise organization or the GitLab Self Managed
+       * group.
+       * Note that this parameter is only required if your project's source type is
+       * GITHUB_ENTERPRISE or GITLAB_SELF_MANAGED.
+       */
+      override fun domain(domain: String) {
+        cdkBuilder.domain(domain)
+      }
+
+      /**
        * @param name The name of either the enterprise or organization that will send webhook events
        * to CodeBuild , depending on if the webhook is a global or organization webhook respectively. 
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
+      }
+
+      /**
+       * @param scope The type of scope for a GitHub or GitLab webhook.
+       * The scope default is GITHUB_ORGANIZATION.
+       */
+      override fun scope(scope: String) {
+        cdkBuilder.scope(scope)
       }
 
       public fun build():
@@ -6653,12 +6854,31 @@ public open class CfnProject(
     ) : CdkObject(cdkObject),
         ScopeConfigurationProperty {
       /**
+       * The domain of the GitHub Enterprise organization or the GitLab Self Managed group.
+       *
+       * Note that this parameter is only required if your project's source type is
+       * GITHUB_ENTERPRISE or GITLAB_SELF_MANAGED.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-scopeconfiguration.html#cfn-codebuild-project-scopeconfiguration-domain)
+       */
+      override fun domain(): String? = unwrap(this).getDomain()
+
+      /**
        * The name of either the enterprise or organization that will send webhook events to
        * CodeBuild , depending on if the webhook is a global or organization webhook respectively.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-scopeconfiguration.html#cfn-codebuild-project-scopeconfiguration-name)
        */
       override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The type of scope for a GitHub or GitLab webhook.
+       *
+       * The scope default is GITHUB_ORGANIZATION.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-scopeconfiguration.html#cfn-codebuild-project-scopeconfiguration-scope)
+       */
+      override fun scope(): String? = unwrap(this).getScope()
     }
 
     public companion object {
@@ -7830,8 +8050,9 @@ public open class CfnProject(
     /**
      * The type of webhook filter.
      *
-     * There are nine webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF` ,
-     * `FILE_PATH` , `COMMIT_MESSAGE` , `TAG_NAME` , `RELEASE_NAME` , and `WORKFLOW_NAME` .
+     * There are 11 webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF` ,
+     * `FILE_PATH` , `COMMIT_MESSAGE` , `TAG_NAME` , `RELEASE_NAME` , `REPOSITORY_NAME` ,
+     * `ORGANIZATION_NAME` , and `WORKFLOW_NAME` .
      *
      * * EVENT
      * * A webhook event triggers a build when the provided `pattern` matches one of nine event
@@ -7871,8 +8092,7 @@ public open class CfnProject(
      * `pattern` .
      *
      *
-     * Works with GitHub and Bitbucket events push and pull requests events. Also works with GitHub
-     * Enterprise push events, but does not work with GitHub Enterprise pull request events.
+     * Works with push and pull request events only.
      *
      *
      * * COMMIT_MESSAGE
@@ -7880,8 +8100,7 @@ public open class CfnProject(
      * `pattern` .
      *
      *
-     * Works with GitHub and Bitbucket events push and pull requests events. Also works with GitHub
-     * Enterprise push events, but does not work with GitHub Enterprise pull request events.
+     * Works with push and pull request events only.
      *
      *
      * * TAG_NAME
@@ -7900,10 +8119,19 @@ public open class CfnProject(
      *
      *
      * * REPOSITORY_NAME
-     * * A webhook triggers a build when the repository name matches the regular expression pattern.
+     * * A webhook triggers a build when the repository name matches the regular expression
+     * `pattern` .
      *
      *
      * Works with GitHub global or organization webhooks only.
+     *
+     *
+     * * ORGANIZATION_NAME
+     * * A webhook triggers a build when the organization name matches the regular expression
+     * `pattern` .
+     *
+     *
+     * Works with GitHub global webhooks only.
      *
      *
      * * WORKFLOW_NAME
@@ -7911,7 +8139,8 @@ public open class CfnProject(
      * .
      *
      *
-     * Works with `WORKFLOW_JOB_QUEUED` events only.
+     * Works with `WORKFLOW_JOB_QUEUED` events only. &gt; For CodeBuild-hosted Buildkite runner
+     * builds, WORKFLOW_NAME filters will filter by pipeline name.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-type)
@@ -7954,8 +8183,9 @@ public open class CfnProject(
 
       /**
        * @param type The type of webhook filter. 
-       * There are nine webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
-       * , `FILE_PATH` , `COMMIT_MESSAGE` , `TAG_NAME` , `RELEASE_NAME` , and `WORKFLOW_NAME` .
+       * There are 11 webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF` ,
+       * `FILE_PATH` , `COMMIT_MESSAGE` , `TAG_NAME` , `RELEASE_NAME` , `REPOSITORY_NAME` ,
+       * `ORGANIZATION_NAME` , and `WORKFLOW_NAME` .
        *
        * * EVENT
        * * A webhook event triggers a build when the provided `pattern` matches one of nine event
@@ -7995,8 +8225,7 @@ public open class CfnProject(
        * `pattern` .
        *
        *
-       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
-       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       * Works with push and pull request events only.
        *
        *
        * * COMMIT_MESSAGE
@@ -8004,8 +8233,7 @@ public open class CfnProject(
        * `pattern` .
        *
        *
-       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
-       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       * Works with push and pull request events only.
        *
        *
        * * TAG_NAME
@@ -8026,10 +8254,18 @@ public open class CfnProject(
        *
        * * REPOSITORY_NAME
        * * A webhook triggers a build when the repository name matches the regular expression
-       * pattern.
+       * `pattern` .
        *
        *
        * Works with GitHub global or organization webhooks only.
+       *
+       *
+       * * ORGANIZATION_NAME
+       * * A webhook triggers a build when the organization name matches the regular expression
+       * `pattern` .
+       *
+       *
+       * Works with GitHub global webhooks only.
        *
        *
        * * WORKFLOW_NAME
@@ -8037,7 +8273,8 @@ public open class CfnProject(
        * `pattern` .
        *
        *
-       * Works with `WORKFLOW_JOB_QUEUED` events only.
+       * Works with `WORKFLOW_JOB_QUEUED` events only. &gt; For CodeBuild-hosted Buildkite runner
+       * builds, WORKFLOW_NAME filters will filter by pipeline name.
        */
       public fun type(type: String)
     }
@@ -8084,8 +8321,9 @@ public open class CfnProject(
 
       /**
        * @param type The type of webhook filter. 
-       * There are nine webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
-       * , `FILE_PATH` , `COMMIT_MESSAGE` , `TAG_NAME` , `RELEASE_NAME` , and `WORKFLOW_NAME` .
+       * There are 11 webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF` ,
+       * `FILE_PATH` , `COMMIT_MESSAGE` , `TAG_NAME` , `RELEASE_NAME` , `REPOSITORY_NAME` ,
+       * `ORGANIZATION_NAME` , and `WORKFLOW_NAME` .
        *
        * * EVENT
        * * A webhook event triggers a build when the provided `pattern` matches one of nine event
@@ -8125,8 +8363,7 @@ public open class CfnProject(
        * `pattern` .
        *
        *
-       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
-       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       * Works with push and pull request events only.
        *
        *
        * * COMMIT_MESSAGE
@@ -8134,8 +8371,7 @@ public open class CfnProject(
        * `pattern` .
        *
        *
-       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
-       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       * Works with push and pull request events only.
        *
        *
        * * TAG_NAME
@@ -8156,10 +8392,18 @@ public open class CfnProject(
        *
        * * REPOSITORY_NAME
        * * A webhook triggers a build when the repository name matches the regular expression
-       * pattern.
+       * `pattern` .
        *
        *
        * Works with GitHub global or organization webhooks only.
+       *
+       *
+       * * ORGANIZATION_NAME
+       * * A webhook triggers a build when the organization name matches the regular expression
+       * `pattern` .
+       *
+       *
+       * Works with GitHub global webhooks only.
        *
        *
        * * WORKFLOW_NAME
@@ -8167,7 +8411,8 @@ public open class CfnProject(
        * `pattern` .
        *
        *
-       * Works with `WORKFLOW_JOB_QUEUED` events only.
+       * Works with `WORKFLOW_JOB_QUEUED` events only. &gt; For CodeBuild-hosted Buildkite runner
+       * builds, WORKFLOW_NAME filters will filter by pipeline name.
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -8210,8 +8455,9 @@ public open class CfnProject(
       /**
        * The type of webhook filter.
        *
-       * There are nine webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
-       * , `FILE_PATH` , `COMMIT_MESSAGE` , `TAG_NAME` , `RELEASE_NAME` , and `WORKFLOW_NAME` .
+       * There are 11 webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF` ,
+       * `FILE_PATH` , `COMMIT_MESSAGE` , `TAG_NAME` , `RELEASE_NAME` , `REPOSITORY_NAME` ,
+       * `ORGANIZATION_NAME` , and `WORKFLOW_NAME` .
        *
        * * EVENT
        * * A webhook event triggers a build when the provided `pattern` matches one of nine event
@@ -8251,8 +8497,7 @@ public open class CfnProject(
        * `pattern` .
        *
        *
-       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
-       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       * Works with push and pull request events only.
        *
        *
        * * COMMIT_MESSAGE
@@ -8260,8 +8505,7 @@ public open class CfnProject(
        * `pattern` .
        *
        *
-       * Works with GitHub and Bitbucket events push and pull requests events. Also works with
-       * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       * Works with push and pull request events only.
        *
        *
        * * TAG_NAME
@@ -8282,10 +8526,18 @@ public open class CfnProject(
        *
        * * REPOSITORY_NAME
        * * A webhook triggers a build when the repository name matches the regular expression
-       * pattern.
+       * `pattern` .
        *
        *
        * Works with GitHub global or organization webhooks only.
+       *
+       *
+       * * ORGANIZATION_NAME
+       * * A webhook triggers a build when the organization name matches the regular expression
+       * `pattern` .
+       *
+       *
+       * Works with GitHub global webhooks only.
        *
        *
        * * WORKFLOW_NAME
@@ -8293,7 +8545,8 @@ public open class CfnProject(
        * `pattern` .
        *
        *
-       * Works with `WORKFLOW_JOB_QUEUED` events only.
+       * Works with `WORKFLOW_JOB_QUEUED` events only. &gt; For CodeBuild-hosted Buildkite runner
+       * builds, WORKFLOW_NAME filters will filter by pipeline name.
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-type)

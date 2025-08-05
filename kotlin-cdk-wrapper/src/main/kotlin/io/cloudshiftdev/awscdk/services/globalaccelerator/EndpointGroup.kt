@@ -395,6 +395,9 @@ public open class EndpointGroup(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.globalaccelerator.EndpointGroup.PROPERTY_INJECTION_ID
+
     public fun fromEndpointGroupArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

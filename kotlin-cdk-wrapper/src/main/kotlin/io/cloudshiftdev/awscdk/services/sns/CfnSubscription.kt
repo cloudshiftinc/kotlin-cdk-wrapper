@@ -68,7 +68,7 @@ public open class CfnSubscription(
   )
 
   /**
-   * Arn of the subscription.
+   * Returns the ARN of the subscription created by the `AWS::SNS::Subscription` resource.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
@@ -278,6 +278,11 @@ public open class CfnSubscription(
      * * `MessageAttributes` (default) - The filter is applied on the message attributes.
      * * `MessageBody` - The filter is applied on the message body.
      *
+     *
+     * `Null` is not a valid value for `FilterPolicyScope` . To delete a filter policy, delete the
+     * `FilterPolicy` property but keep `FilterPolicyScope` property as is.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-filterpolicyscope)
      * @param filterPolicyScope This attribute lets you choose the filtering scope by using one of
      * the following string value types:. 
@@ -456,6 +461,11 @@ public open class CfnSubscription(
      *
      * * `MessageAttributes` (default) - The filter is applied on the message attributes.
      * * `MessageBody` - The filter is applied on the message body.
+     *
+     *
+     * `Null` is not a valid value for `FilterPolicyScope` . To delete a filter policy, delete the
+     * `FilterPolicy` property but keep `FilterPolicyScope` property as is.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-filterpolicyscope)
      * @param filterPolicyScope This attribute lets you choose the filtering scope by using one of

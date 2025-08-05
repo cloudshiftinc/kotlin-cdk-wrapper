@@ -200,12 +200,12 @@ public open class CfnRepositoryCreationTemplate(
   }
 
   /**
-   * he repository policy to apply to repositories created using the template.
+   * The repository policy to apply to repositories created using the template.
    */
   public open fun repositoryPolicy(): String? = unwrap(this).getRepositoryPolicy()
 
   /**
-   * he repository policy to apply to repositories created using the template.
+   * The repository policy to apply to repositories created using the template.
    */
   public open fun repositoryPolicy(`value`: String) {
     unwrap(this).setRepositoryPolicy(`value`)
@@ -317,8 +317,8 @@ public open class CfnRepositoryCreationTemplate(
     /**
      * The tag mutability setting for the repository.
      *
-     * If this parameter is omitted, the default setting of MUTABLE will be used which will allow
-     * image tags to be overwritten. If IMMUTABLE is specified, all image tags within the repository
+     * If this parameter is omitted, the default setting of `MUTABLE` will be used which will allow
+     * image tags to be overwritten. If `IMMUTABLE` is specified, all image tags within the repository
      * will be immutable which will prevent them from being overwritten.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-imagetagmutability)
@@ -345,13 +345,13 @@ public open class CfnRepositoryCreationTemplate(
     public fun prefix(prefix: String)
 
     /**
-     * he repository policy to apply to repositories created using the template.
+     * The repository policy to apply to repositories created using the template.
      *
      * A repository policy is a permissions policy associated with a repository to control access
      * permissions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-repositorypolicy)
-     * @param repositoryPolicy he repository policy to apply to repositories created using the
+     * @param repositoryPolicy The repository policy to apply to repositories created using the
      * template. 
      */
     public fun repositoryPolicy(repositoryPolicy: String)
@@ -492,8 +492,8 @@ public open class CfnRepositoryCreationTemplate(
     /**
      * The tag mutability setting for the repository.
      *
-     * If this parameter is omitted, the default setting of MUTABLE will be used which will allow
-     * image tags to be overwritten. If IMMUTABLE is specified, all image tags within the repository
+     * If this parameter is omitted, the default setting of `MUTABLE` will be used which will allow
+     * image tags to be overwritten. If `IMMUTABLE` is specified, all image tags within the repository
      * will be immutable which will prevent them from being overwritten.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-imagetagmutability)
@@ -526,13 +526,13 @@ public open class CfnRepositoryCreationTemplate(
     }
 
     /**
-     * he repository policy to apply to repositories created using the template.
+     * The repository policy to apply to repositories created using the template.
      *
      * A repository policy is a permissions policy associated with a repository to control access
      * permissions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-repositorypolicy)
-     * @param repositoryPolicy he repository policy to apply to repositories created using the
+     * @param repositoryPolicy The repository policy to apply to repositories created using the
      * template. 
      */
     override fun repositoryPolicy(repositoryPolicy: String) {

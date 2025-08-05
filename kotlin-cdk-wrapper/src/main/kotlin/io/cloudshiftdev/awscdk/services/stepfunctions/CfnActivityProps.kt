@@ -64,7 +64,9 @@ public interface CfnActivityProps {
    * * brackets `&lt; &gt; { } [ ]`
    * * wildcard characters `? *`
    * * special characters `" # % \ ^ | ~ ` $ &amp; , ; : /`
-   * * control characters ( `U+0000-001F` , `U+007F-009F` )
+   * * control characters ( `U+0000-001F` , `U+007F-009F` , `U+FFFE-FFFF` )
+   * * surrogates ( `U+D800-DFFF` )
+   * * invalid characters ( `U+10FFFF` )
    *
    * To enable logging with CloudWatch Logs, the name should only contain 0-9, A-Z, a-z, - and _.
    *
@@ -135,7 +137,9 @@ public interface CfnActivityProps {
      * * brackets `&lt; &gt; { } [ ]`
      * * wildcard characters `? *`
      * * special characters `" # % \ ^ | ~ ` $ &amp; , ; : /`
-     * * control characters ( `U+0000-001F` , `U+007F-009F` )
+     * * control characters ( `U+0000-001F` , `U+007F-009F` , `U+FFFE-FFFF` )
+     * * surrogates ( `U+D800-DFFF` )
+     * * invalid characters ( `U+10FFFF` )
      *
      * To enable logging with CloudWatch Logs, the name should only contain 0-9, A-Z, a-z, - and _.
      */
@@ -212,7 +216,9 @@ public interface CfnActivityProps {
      * * brackets `&lt; &gt; { } [ ]`
      * * wildcard characters `? *`
      * * special characters `" # % \ ^ | ~ ` $ &amp; , ; : /`
-     * * control characters ( `U+0000-001F` , `U+007F-009F` )
+     * * control characters ( `U+0000-001F` , `U+007F-009F` , `U+FFFE-FFFF` )
+     * * surrogates ( `U+D800-DFFF` )
+     * * invalid characters ( `U+10FFFF` )
      *
      * To enable logging with CloudWatch Logs, the name should only contain 0-9, A-Z, a-z, - and _.
      */
@@ -266,7 +272,9 @@ public interface CfnActivityProps {
      * * brackets `&lt; &gt; { } [ ]`
      * * wildcard characters `? *`
      * * special characters `" # % \ ^ | ~ ` $ &amp; , ; : /`
-     * * control characters ( `U+0000-001F` , `U+007F-009F` )
+     * * control characters ( `U+0000-001F` , `U+007F-009F` , `U+FFFE-FFFF` )
+     * * surrogates ( `U+D800-DFFF` )
+     * * invalid characters ( `U+10FFFF` )
      *
      * To enable logging with CloudWatch Logs, the name should only contain 0-9, A-Z, a-z, - and _.
      *

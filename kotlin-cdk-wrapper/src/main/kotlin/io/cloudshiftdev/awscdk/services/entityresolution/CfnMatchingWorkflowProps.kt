@@ -86,7 +86,15 @@ public interface CfnMatchingWorkflowProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * An object which defines an incremental run type and has only `incrementalRunType` as a field.
+   * Optional.
+   *
+   * An object that defines the incremental run type. This object contains only the
+   * `incrementalRunType` field, which appears as "Automatic" in the console.
+   *
+   *
+   * For workflows where `resolutionType` is `ML_MATCHING` , incremental processing is not
+   * supported.
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-matchingworkflow.html#cfn-entityresolution-matchingworkflow-incrementalrunconfig)
    */
@@ -151,21 +159,36 @@ public interface CfnMatchingWorkflowProps {
     public fun description(description: String)
 
     /**
-     * @param incrementalRunConfig An object which defines an incremental run type and has only
-     * `incrementalRunType` as a field.
+     * @param incrementalRunConfig Optional.
+     * An object that defines the incremental run type. This object contains only the
+     * `incrementalRunType` field, which appears as "Automatic" in the console.
+     *
+     *
+     * For workflows where `resolutionType` is `ML_MATCHING` , incremental processing is not
+     * supported.
      */
     public fun incrementalRunConfig(incrementalRunConfig: IResolvable)
 
     /**
-     * @param incrementalRunConfig An object which defines an incremental run type and has only
-     * `incrementalRunType` as a field.
+     * @param incrementalRunConfig Optional.
+     * An object that defines the incremental run type. This object contains only the
+     * `incrementalRunType` field, which appears as "Automatic" in the console.
+     *
+     *
+     * For workflows where `resolutionType` is `ML_MATCHING` , incremental processing is not
+     * supported.
      */
     public
         fun incrementalRunConfig(incrementalRunConfig: CfnMatchingWorkflow.IncrementalRunConfigProperty)
 
     /**
-     * @param incrementalRunConfig An object which defines an incremental run type and has only
-     * `incrementalRunType` as a field.
+     * @param incrementalRunConfig Optional.
+     * An object that defines the incremental run type. This object contains only the
+     * `incrementalRunType` field, which appears as "Automatic" in the console.
+     *
+     *
+     * For workflows where `resolutionType` is `ML_MATCHING` , incremental processing is not
+     * supported.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("37d18e057de3f39c2db48aca6fdcecbc1661ec9881157ead6368bc8fd069f90c")
@@ -267,16 +290,26 @@ public interface CfnMatchingWorkflowProps {
     }
 
     /**
-     * @param incrementalRunConfig An object which defines an incremental run type and has only
-     * `incrementalRunType` as a field.
+     * @param incrementalRunConfig Optional.
+     * An object that defines the incremental run type. This object contains only the
+     * `incrementalRunType` field, which appears as "Automatic" in the console.
+     *
+     *
+     * For workflows where `resolutionType` is `ML_MATCHING` , incremental processing is not
+     * supported.
      */
     override fun incrementalRunConfig(incrementalRunConfig: IResolvable) {
       cdkBuilder.incrementalRunConfig(incrementalRunConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param incrementalRunConfig An object which defines an incremental run type and has only
-     * `incrementalRunType` as a field.
+     * @param incrementalRunConfig Optional.
+     * An object that defines the incremental run type. This object contains only the
+     * `incrementalRunType` field, which appears as "Automatic" in the console.
+     *
+     *
+     * For workflows where `resolutionType` is `ML_MATCHING` , incremental processing is not
+     * supported.
      */
     override
         fun incrementalRunConfig(incrementalRunConfig: CfnMatchingWorkflow.IncrementalRunConfigProperty) {
@@ -284,8 +317,13 @@ public interface CfnMatchingWorkflowProps {
     }
 
     /**
-     * @param incrementalRunConfig An object which defines an incremental run type and has only
-     * `incrementalRunType` as a field.
+     * @param incrementalRunConfig Optional.
+     * An object that defines the incremental run type. This object contains only the
+     * `incrementalRunType` field, which appears as "Automatic" in the console.
+     *
+     *
+     * For workflows where `resolutionType` is `ML_MATCHING` , incremental processing is not
+     * supported.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("37d18e057de3f39c2db48aca6fdcecbc1661ec9881157ead6368bc8fd069f90c")
@@ -413,7 +451,15 @@ public interface CfnMatchingWorkflowProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * An object which defines an incremental run type and has only `incrementalRunType` as a field.
+     * Optional.
+     *
+     * An object that defines the incremental run type. This object contains only the
+     * `incrementalRunType` field, which appears as "Automatic" in the console.
+     *
+     *
+     * For workflows where `resolutionType` is `ML_MATCHING` , incremental processing is not
+     * supported.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-matchingworkflow.html#cfn-entityresolution-matchingworkflow-incrementalrunconfig)
      */

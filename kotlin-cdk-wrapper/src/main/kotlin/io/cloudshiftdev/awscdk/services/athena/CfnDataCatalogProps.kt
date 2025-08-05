@@ -26,9 +26,12 @@ import kotlin.collections.Map
  * .name("name")
  * .type("type")
  * // the properties below are optional
+ * .connectionType("connectionType")
  * .description("description")
+ * .error("error")
  * .parameters(Map.of(
  * "parametersKey", "parameters"))
+ * .status("status")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -40,11 +43,29 @@ import kotlin.collections.Map
  */
 public interface CfnDataCatalogProps {
   /**
+   * The type of connection for a `FEDERATED` data catalog (for example, `REDSHIFT` , `MYSQL` , or
+   * `SQLSERVER` ).
+   *
+   * For information about individual connectors, see [Available data source
+   * connectors](https://docs.aws.amazon.com/athena/latest/ug/connectors-available.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html#cfn-athena-datacatalog-connectiontype)
+   */
+  public fun connectionType(): String? = unwrap(this).getConnectionType()
+
+  /**
    * A description of the data catalog.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html#cfn-athena-datacatalog-description)
    */
   public fun description(): String? = unwrap(this).getDescription()
+
+  /**
+   * Text of the error that occurred during data catalog creation or deletion.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html#cfn-athena-datacatalog-error)
+   */
+  public fun error(): String? = unwrap(this).getError()
 
   /**
    * The name of the data catalog.
@@ -90,6 +111,34 @@ public interface CfnDataCatalogProps {
   public fun parameters(): Any? = unwrap(this).getParameters()
 
   /**
+   * The status of the creation or deletion of the data catalog.
+   *
+   * * The `LAMBDA` , `GLUE` , and `HIVE` data catalog types are created synchronously. Their status
+   * is either `CREATE_COMPLETE` or `CREATE_FAILED` .
+   * * The `FEDERATED` data catalog type is created asynchronously.
+   *
+   * Data catalog creation status:
+   *
+   * * `CREATE_IN_PROGRESS` : Federated data catalog creation in progress.
+   * * `CREATE_COMPLETE` : Data catalog creation complete.
+   * * `CREATE_FAILED` : Data catalog could not be created.
+   * * `CREATE_FAILED_CLEANUP_IN_PROGRESS` : Federated data catalog creation failed and is being
+   * removed.
+   * * `CREATE_FAILED_CLEANUP_COMPLETE` : Federated data catalog creation failed and was removed.
+   * * `CREATE_FAILED_CLEANUP_FAILED` : Federated data catalog creation failed but could not be
+   * removed.
+   *
+   * Data catalog deletion status:
+   *
+   * * `DELETE_IN_PROGRESS` : Federated data catalog deletion in progress.
+   * * `DELETE_COMPLETE` : Federated data catalog deleted.
+   * * `DELETE_FAILED` : Federated data catalog could not be deleted.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html#cfn-athena-datacatalog-status)
+   */
+  public fun status(): String? = unwrap(this).getStatus()
+
+  /**
    * The tags (key-value pairs) to associate with this resource.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html#cfn-athena-datacatalog-tags)
@@ -110,9 +159,22 @@ public interface CfnDataCatalogProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param connectionType The type of connection for a `FEDERATED` data catalog (for example,
+     * `REDSHIFT` , `MYSQL` , or `SQLSERVER` ).
+     * For information about individual connectors, see [Available data source
+     * connectors](https://docs.aws.amazon.com/athena/latest/ug/connectors-available.html) .
+     */
+    public fun connectionType(connectionType: String)
+
+    /**
      * @param description A description of the data catalog.
      */
     public fun description(description: String)
+
+    /**
+     * @param error Text of the error that occurred during data catalog creation or deletion.
+     */
+    public fun error(error: String)
 
     /**
      * @param name The name of the data catalog. 
@@ -151,7 +213,7 @@ public interface CfnDataCatalogProps {
      * * The `GLUE` data catalog type also applies to the default `AwsDataCatalog` that already
      * exists in your account, of which you can have only one and cannot modify.
      */
-    public fun parameters(parameters: IResolvable)
+    public fun parameters(parameters: Map<String, String>)
 
     /**
      * @param parameters Specifies the Lambda function or functions to use for the data catalog.
@@ -183,7 +245,32 @@ public interface CfnDataCatalogProps {
      * * The `GLUE` data catalog type also applies to the default `AwsDataCatalog` that already
      * exists in your account, of which you can have only one and cannot modify.
      */
-    public fun parameters(parameters: Map<String, String>)
+    public fun parameters(parameters: IResolvable)
+
+    /**
+     * @param status The status of the creation or deletion of the data catalog.
+     * * The `LAMBDA` , `GLUE` , and `HIVE` data catalog types are created synchronously. Their
+     * status is either `CREATE_COMPLETE` or `CREATE_FAILED` .
+     * * The `FEDERATED` data catalog type is created asynchronously.
+     *
+     * Data catalog creation status:
+     *
+     * * `CREATE_IN_PROGRESS` : Federated data catalog creation in progress.
+     * * `CREATE_COMPLETE` : Data catalog creation complete.
+     * * `CREATE_FAILED` : Data catalog could not be created.
+     * * `CREATE_FAILED_CLEANUP_IN_PROGRESS` : Federated data catalog creation failed and is being
+     * removed.
+     * * `CREATE_FAILED_CLEANUP_COMPLETE` : Federated data catalog creation failed and was removed.
+     * * `CREATE_FAILED_CLEANUP_FAILED` : Federated data catalog creation failed but could not be
+     * removed.
+     *
+     * Data catalog deletion status:
+     *
+     * * `DELETE_IN_PROGRESS` : Federated data catalog deletion in progress.
+     * * `DELETE_COMPLETE` : Federated data catalog deleted.
+     * * `DELETE_FAILED` : Federated data catalog could not be deleted.
+     */
+    public fun status(status: String)
 
     /**
      * @param tags The tags (key-value pairs) to associate with this resource.
@@ -207,10 +294,27 @@ public interface CfnDataCatalogProps {
         software.amazon.awscdk.services.athena.CfnDataCatalogProps.builder()
 
     /**
+     * @param connectionType The type of connection for a `FEDERATED` data catalog (for example,
+     * `REDSHIFT` , `MYSQL` , or `SQLSERVER` ).
+     * For information about individual connectors, see [Available data source
+     * connectors](https://docs.aws.amazon.com/athena/latest/ug/connectors-available.html) .
+     */
+    override fun connectionType(connectionType: String) {
+      cdkBuilder.connectionType(connectionType)
+    }
+
+    /**
      * @param description A description of the data catalog.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
+    }
+
+    /**
+     * @param error Text of the error that occurred during data catalog creation or deletion.
+     */
+    override fun error(error: String) {
+      cdkBuilder.error(error)
     }
 
     /**
@@ -252,8 +356,8 @@ public interface CfnDataCatalogProps {
      * * The `GLUE` data catalog type also applies to the default `AwsDataCatalog` that already
      * exists in your account, of which you can have only one and cannot modify.
      */
-    override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+    override fun parameters(parameters: Map<String, String>) {
+      cdkBuilder.parameters(parameters)
     }
 
     /**
@@ -286,8 +390,35 @@ public interface CfnDataCatalogProps {
      * * The `GLUE` data catalog type also applies to the default `AwsDataCatalog` that already
      * exists in your account, of which you can have only one and cannot modify.
      */
-    override fun parameters(parameters: Map<String, String>) {
-      cdkBuilder.parameters(parameters)
+    override fun parameters(parameters: IResolvable) {
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param status The status of the creation or deletion of the data catalog.
+     * * The `LAMBDA` , `GLUE` , and `HIVE` data catalog types are created synchronously. Their
+     * status is either `CREATE_COMPLETE` or `CREATE_FAILED` .
+     * * The `FEDERATED` data catalog type is created asynchronously.
+     *
+     * Data catalog creation status:
+     *
+     * * `CREATE_IN_PROGRESS` : Federated data catalog creation in progress.
+     * * `CREATE_COMPLETE` : Data catalog creation complete.
+     * * `CREATE_FAILED` : Data catalog could not be created.
+     * * `CREATE_FAILED_CLEANUP_IN_PROGRESS` : Federated data catalog creation failed and is being
+     * removed.
+     * * `CREATE_FAILED_CLEANUP_COMPLETE` : Federated data catalog creation failed and was removed.
+     * * `CREATE_FAILED_CLEANUP_FAILED` : Federated data catalog creation failed but could not be
+     * removed.
+     *
+     * Data catalog deletion status:
+     *
+     * * `DELETE_IN_PROGRESS` : Federated data catalog deletion in progress.
+     * * `DELETE_COMPLETE` : Federated data catalog deleted.
+     * * `DELETE_FAILED` : Federated data catalog could not be deleted.
+     */
+    override fun status(status: String) {
+      cdkBuilder.status(status)
     }
 
     /**
@@ -319,11 +450,29 @@ public interface CfnDataCatalogProps {
   ) : CdkObject(cdkObject),
       CfnDataCatalogProps {
     /**
+     * The type of connection for a `FEDERATED` data catalog (for example, `REDSHIFT` , `MYSQL` , or
+     * `SQLSERVER` ).
+     *
+     * For information about individual connectors, see [Available data source
+     * connectors](https://docs.aws.amazon.com/athena/latest/ug/connectors-available.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html#cfn-athena-datacatalog-connectiontype)
+     */
+    override fun connectionType(): String? = unwrap(this).getConnectionType()
+
+    /**
      * A description of the data catalog.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html#cfn-athena-datacatalog-description)
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * Text of the error that occurred during data catalog creation or deletion.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html#cfn-athena-datacatalog-error)
+     */
+    override fun error(): String? = unwrap(this).getError()
 
     /**
      * The name of the data catalog.
@@ -369,6 +518,34 @@ public interface CfnDataCatalogProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html#cfn-athena-datacatalog-parameters)
      */
     override fun parameters(): Any? = unwrap(this).getParameters()
+
+    /**
+     * The status of the creation or deletion of the data catalog.
+     *
+     * * The `LAMBDA` , `GLUE` , and `HIVE` data catalog types are created synchronously. Their
+     * status is either `CREATE_COMPLETE` or `CREATE_FAILED` .
+     * * The `FEDERATED` data catalog type is created asynchronously.
+     *
+     * Data catalog creation status:
+     *
+     * * `CREATE_IN_PROGRESS` : Federated data catalog creation in progress.
+     * * `CREATE_COMPLETE` : Data catalog creation complete.
+     * * `CREATE_FAILED` : Data catalog could not be created.
+     * * `CREATE_FAILED_CLEANUP_IN_PROGRESS` : Federated data catalog creation failed and is being
+     * removed.
+     * * `CREATE_FAILED_CLEANUP_COMPLETE` : Federated data catalog creation failed and was removed.
+     * * `CREATE_FAILED_CLEANUP_FAILED` : Federated data catalog creation failed but could not be
+     * removed.
+     *
+     * Data catalog deletion status:
+     *
+     * * `DELETE_IN_PROGRESS` : Federated data catalog deletion in progress.
+     * * `DELETE_COMPLETE` : Federated data catalog deleted.
+     * * `DELETE_FAILED` : Federated data catalog could not be deleted.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html#cfn-athena-datacatalog-status)
+     */
+    override fun status(): String? = unwrap(this).getStatus()
 
     /**
      * The tags (key-value pairs) to associate with this resource.

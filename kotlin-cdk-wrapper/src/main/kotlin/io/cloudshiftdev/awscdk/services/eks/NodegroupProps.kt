@@ -40,6 +40,7 @@ import kotlin.jvm.JvmName
  * .capacityType(CapacityType.SPOT)
  * .desiredSize(123)
  * .diskSize(123)
+ * .enableNodeAutoRepair(false)
  * .forceUpdate(false)
  * .instanceTypes(List.of(instanceType))
  * .labels(Map.of(
@@ -121,6 +122,12 @@ public interface NodegroupProps : NodegroupOptions {
      * @param diskSize The root device disk size (in GiB) for your node group instances.
      */
     public fun diskSize(diskSize: Number)
+
+    /**
+     * @param enableNodeAutoRepair Specifies whether to enable node auto repair for the node group.
+     * Node auto repair is disabled by default.
+     */
+    public fun enableNodeAutoRepair(enableNodeAutoRepair: Boolean)
 
     /**
      * @param forceUpdate Force the update if the existing node group's pods are unable to be
@@ -328,6 +335,14 @@ public interface NodegroupProps : NodegroupOptions {
      */
     override fun diskSize(diskSize: Number) {
       cdkBuilder.diskSize(diskSize)
+    }
+
+    /**
+     * @param enableNodeAutoRepair Specifies whether to enable node auto repair for the node group.
+     * Node auto repair is disabled by default.
+     */
+    override fun enableNodeAutoRepair(enableNodeAutoRepair: Boolean) {
+      cdkBuilder.enableNodeAutoRepair(enableNodeAutoRepair)
     }
 
     /**
@@ -575,6 +590,17 @@ public interface NodegroupProps : NodegroupOptions {
      * Default: 20
      */
     override fun diskSize(): Number? = unwrap(this).getDiskSize()
+
+    /**
+     * Specifies whether to enable node auto repair for the node group.
+     *
+     * Node auto repair is disabled by default.
+     *
+     * Default: - disabled
+     *
+     * [Documentation](https://docs.aws.amazon.com/eks/latest/userguide/node-health.html#node-auto-repair)
+     */
+    override fun enableNodeAutoRepair(): Boolean? = unwrap(this).getEnableNodeAutoRepair()
 
     /**
      * Force the update if the existing node group's pods are unable to be drained due to a pod

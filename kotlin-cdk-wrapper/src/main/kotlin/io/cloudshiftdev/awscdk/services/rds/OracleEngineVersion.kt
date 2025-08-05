@@ -283,6 +283,9 @@ public open class OracleEngineVersion(
     public val VER_19_0_0_0_2024_10_R1: OracleEngineVersion =
         OracleEngineVersion.wrap(software.amazon.awscdk.services.rds.OracleEngineVersion.VER_19_0_0_0_2024_10_R1)
 
+    public val VER_19_0_0_0_2025_01_R1: OracleEngineVersion =
+        OracleEngineVersion.wrap(software.amazon.awscdk.services.rds.OracleEngineVersion.VER_19_0_0_0_2025_01_R1)
+
     public val VER_21: OracleEngineVersion =
         OracleEngineVersion.wrap(software.amazon.awscdk.services.rds.OracleEngineVersion.VER_21)
 
@@ -324,6 +327,9 @@ public open class OracleEngineVersion(
 
     public val VER_21_0_0_0_2024_10_R1: OracleEngineVersion =
         OracleEngineVersion.wrap(software.amazon.awscdk.services.rds.OracleEngineVersion.VER_21_0_0_0_2024_10_R1)
+
+    public val VER_21_0_0_0_2025_01_R1: OracleEngineVersion =
+        OracleEngineVersion.wrap(software.amazon.awscdk.services.rds.OracleEngineVersion.VER_21_0_0_0_2025_01_R1)
 
     public fun of(oracleFullVersion: String, oracleMajorVersion: String): OracleEngineVersion =
         software.amazon.awscdk.services.rds.OracleEngineVersion.of(oracleFullVersion,

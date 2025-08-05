@@ -266,7 +266,7 @@ public interface DomainProps {
   /**
    * The minimum TLS version required for traffic to the domain.
    *
-   * Default: - TLSSecurityPolicy.TLS_1_0
+   * Default: - TLSSecurityPolicy.TLS_1_2
    */
   public fun tlsSecurityPolicy(): TLSSecurityPolicy? =
       unwrap(this).getTlsSecurityPolicy()?.let(TLSSecurityPolicy::wrap)
@@ -1236,7 +1236,7 @@ public interface DomainProps {
     /**
      * The minimum TLS version required for traffic to the domain.
      *
-     * Default: - TLSSecurityPolicy.TLS_1_0
+     * Default: - TLSSecurityPolicy.TLS_1_2
      */
     override fun tlsSecurityPolicy(): TLSSecurityPolicy? =
         unwrap(this).getTlsSecurityPolicy()?.let(TLSSecurityPolicy::wrap)

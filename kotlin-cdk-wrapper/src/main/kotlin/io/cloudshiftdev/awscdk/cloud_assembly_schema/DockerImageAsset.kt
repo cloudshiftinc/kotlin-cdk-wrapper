@@ -59,17 +59,26 @@ import kotlin.jvm.JvmName
  * .networkMode("networkMode")
  * .platform("platform")
  * .build())
+ * // the properties below are optional
+ * .displayName("displayName")
  * .build();
  * ```
  */
 public interface DockerImageAsset {
   /**
-   * Destinations for this file asset.
+   * Destinations for this container asset.
    */
   public fun destinations(): Map<String, DockerImageDestination>
 
   /**
-   * Source description for file assets.
+   * A display name for this asset.
+   *
+   * Default: - The identifier will be used as the display name
+   */
+  public fun displayName(): String? = unwrap(this).getDisplayName()
+
+  /**
+   * Source description for container assets.
    */
   public fun source(): DockerImageSource
 
@@ -79,17 +88,22 @@ public interface DockerImageAsset {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param destinations Destinations for this file asset. 
+     * @param destinations Destinations for this container asset. 
      */
     public fun destinations(destinations: Map<String, DockerImageDestination>)
 
     /**
-     * @param source Source description for file assets. 
+     * @param displayName A display name for this asset.
+     */
+    public fun displayName(displayName: String)
+
+    /**
+     * @param source Source description for container assets. 
      */
     public fun source(source: DockerImageSource)
 
     /**
-     * @param source Source description for file assets. 
+     * @param source Source description for container assets. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("10f859ead4d7b4650a33bce64644ba1f256468bf653cebd80eb451cdc738a4ae")
@@ -101,21 +115,28 @@ public interface DockerImageAsset {
         software.amazon.awscdk.cloud_assembly_schema.DockerImageAsset.builder()
 
     /**
-     * @param destinations Destinations for this file asset. 
+     * @param destinations Destinations for this container asset. 
      */
     override fun destinations(destinations: Map<String, DockerImageDestination>) {
       cdkBuilder.destinations(destinations.mapValues{DockerImageDestination.unwrap(it.value)})
     }
 
     /**
-     * @param source Source description for file assets. 
+     * @param displayName A display name for this asset.
+     */
+    override fun displayName(displayName: String) {
+      cdkBuilder.displayName(displayName)
+    }
+
+    /**
+     * @param source Source description for container assets. 
      */
     override fun source(source: DockerImageSource) {
       cdkBuilder.source(source.let(DockerImageSource.Companion::unwrap))
     }
 
     /**
-     * @param source Source description for file assets. 
+     * @param source Source description for container assets. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("10f859ead4d7b4650a33bce64644ba1f256468bf653cebd80eb451cdc738a4ae")
@@ -131,13 +152,20 @@ public interface DockerImageAsset {
   ) : CdkObject(cdkObject),
       DockerImageAsset {
     /**
-     * Destinations for this file asset.
+     * Destinations for this container asset.
      */
     override fun destinations(): Map<String, DockerImageDestination> =
         unwrap(this).getDestinations().mapValues{DockerImageDestination.wrap(it.value)}
 
     /**
-     * Source description for file assets.
+     * A display name for this asset.
+     *
+     * Default: - The identifier will be used as the display name
+     */
+    override fun displayName(): String? = unwrap(this).getDisplayName()
+
+    /**
+     * Source description for container assets.
      */
     override fun source(): DockerImageSource = unwrap(this).getSource().let(DockerImageSource::wrap)
   }

@@ -33,6 +33,14 @@ import kotlin.jvm.JvmName
  * .smtpPassword("smtpPassword")
  * .build())
  * .ingressPointName("ingressPointName")
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .privateNetworkConfiguration(PrivateNetworkConfigurationProperty.builder()
+ * .vpcEndpointId("vpcEndpointId")
+ * .build())
+ * .publicNetworkConfiguration(PublicNetworkConfigurationProperty.builder()
+ * .ipType("ipType")
+ * .build())
+ * .build())
  * .statusToUpdate("statusToUpdate")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -57,6 +65,13 @@ public interface CfnMailManagerIngressPointProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-mailmanageringresspoint.html#cfn-ses-mailmanageringresspoint-ingresspointname)
    */
   public fun ingressPointName(): String? = unwrap(this).getIngressPointName()
+
+  /**
+   * The network type (IPv4-only, Dual-Stack, PrivateLink) of the ingress endpoint resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-mailmanageringresspoint.html#cfn-ses-mailmanageringresspoint-networkconfiguration)
+   */
+  public fun networkConfiguration(): Any? = unwrap(this).getNetworkConfiguration()
 
   /**
    * The identifier of an existing rule set that you attach to an ingress endpoint resource.
@@ -123,6 +138,28 @@ public interface CfnMailManagerIngressPointProps {
      * @param ingressPointName A user friendly name for an ingress endpoint resource.
      */
     public fun ingressPointName(ingressPointName: String)
+
+    /**
+     * @param networkConfiguration The network type (IPv4-only, Dual-Stack, PrivateLink) of the
+     * ingress endpoint resource.
+     */
+    public fun networkConfiguration(networkConfiguration: IResolvable)
+
+    /**
+     * @param networkConfiguration The network type (IPv4-only, Dual-Stack, PrivateLink) of the
+     * ingress endpoint resource.
+     */
+    public
+        fun networkConfiguration(networkConfiguration: CfnMailManagerIngressPoint.NetworkConfigurationProperty)
+
+    /**
+     * @param networkConfiguration The network type (IPv4-only, Dual-Stack, PrivateLink) of the
+     * ingress endpoint resource.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("fab76353c6142f218b7bc46ec0775716e54560e9b43f815dcea5b3cbfcc49183")
+    public
+        fun networkConfiguration(networkConfiguration: CfnMailManagerIngressPoint.NetworkConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param ruleSetId The identifier of an existing rule set that you attach to an ingress
@@ -197,6 +234,34 @@ public interface CfnMailManagerIngressPointProps {
     }
 
     /**
+     * @param networkConfiguration The network type (IPv4-only, Dual-Stack, PrivateLink) of the
+     * ingress endpoint resource.
+     */
+    override fun networkConfiguration(networkConfiguration: IResolvable) {
+      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param networkConfiguration The network type (IPv4-only, Dual-Stack, PrivateLink) of the
+     * ingress endpoint resource.
+     */
+    override
+        fun networkConfiguration(networkConfiguration: CfnMailManagerIngressPoint.NetworkConfigurationProperty) {
+      cdkBuilder.networkConfiguration(networkConfiguration.let(CfnMailManagerIngressPoint.NetworkConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param networkConfiguration The network type (IPv4-only, Dual-Stack, PrivateLink) of the
+     * ingress endpoint resource.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("fab76353c6142f218b7bc46ec0775716e54560e9b43f815dcea5b3cbfcc49183")
+    override
+        fun networkConfiguration(networkConfiguration: CfnMailManagerIngressPoint.NetworkConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        networkConfiguration(CfnMailManagerIngressPoint.NetworkConfigurationProperty(networkConfiguration))
+
+    /**
      * @param ruleSetId The identifier of an existing rule set that you attach to an ingress
      * endpoint resource. 
      */
@@ -261,6 +326,13 @@ public interface CfnMailManagerIngressPointProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-mailmanageringresspoint.html#cfn-ses-mailmanageringresspoint-ingresspointname)
      */
     override fun ingressPointName(): String? = unwrap(this).getIngressPointName()
+
+    /**
+     * The network type (IPv4-only, Dual-Stack, PrivateLink) of the ingress endpoint resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-mailmanageringresspoint.html#cfn-ses-mailmanageringresspoint-networkconfiguration)
+     */
+    override fun networkConfiguration(): Any? = unwrap(this).getNetworkConfiguration()
 
     /**
      * The identifier of an existing rule set that you attach to an ingress endpoint resource.

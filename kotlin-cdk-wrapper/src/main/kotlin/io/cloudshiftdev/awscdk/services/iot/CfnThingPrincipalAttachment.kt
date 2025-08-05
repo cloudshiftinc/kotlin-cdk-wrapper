@@ -29,6 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnThingPrincipalAttachment.Builder.create(this, "MyCfnThingPrincipalAttachment")
  * .principal("principal")
  * .thingName("thingName")
+ * // the properties below are optional
+ * .thingPrincipalType("thingPrincipalType")
  * .build();
  * ```
  *
@@ -95,6 +97,18 @@ public open class CfnThingPrincipalAttachment(
   }
 
   /**
+   *
+   */
+  public open fun thingPrincipalType(): String? = unwrap(this).getThingPrincipalType()
+
+  /**
+   *
+   */
+  public open fun thingPrincipalType(`value`: String) {
+    unwrap(this).setThingPrincipalType(`value`)
+  }
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.iot.CfnThingPrincipalAttachment].
    */
   @CdkDslMarker
@@ -116,6 +130,12 @@ public open class CfnThingPrincipalAttachment(
      * @param thingName The name of the AWS IoT thing. 
      */
     public fun thingName(thingName: String)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingprincipalattachment.html#cfn-iot-thingprincipalattachment-thingprincipaltype)
+     * @param thingPrincipalType 
+     */
+    public fun thingPrincipalType(thingPrincipalType: String)
   }
 
   private class BuilderImpl(
@@ -145,6 +165,14 @@ public open class CfnThingPrincipalAttachment(
      */
     override fun thingName(thingName: String) {
       cdkBuilder.thingName(thingName)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingprincipalattachment.html#cfn-iot-thingprincipalattachment-thingprincipaltype)
+     * @param thingPrincipalType 
+     */
+    override fun thingPrincipalType(thingPrincipalType: String) {
+      cdkBuilder.thingPrincipalType(thingPrincipalType)
     }
 
     public fun build(): software.amazon.awscdk.services.iot.CfnThingPrincipalAttachment =

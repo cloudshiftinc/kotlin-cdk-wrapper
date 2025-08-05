@@ -65,7 +65,7 @@ public open class HttpServiceDiscoveryIntegration(
   /**
    * Bind this integration to the route.
    *
-   * @param _options 
+   * @param options 
    */
   public override fun bind(options: HttpRouteIntegrationBindOptions): HttpRouteIntegrationConfig =
       unwrap(this).bind(options.let(HttpRouteIntegrationBindOptions.Companion::unwrap)).let(HttpRouteIntegrationConfig::wrap)
@@ -73,7 +73,7 @@ public open class HttpServiceDiscoveryIntegration(
   /**
    * Bind this integration to the route.
    *
-   * @param _options 
+   * @param options 
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("adeb585f7d049df388aeb961213ea487ef99967ed3fab3c9dbfc7653776fc180")

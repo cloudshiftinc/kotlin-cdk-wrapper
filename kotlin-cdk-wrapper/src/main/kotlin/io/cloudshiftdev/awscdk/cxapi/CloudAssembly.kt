@@ -3,10 +3,12 @@
 package io.cloudshiftdev.awscdk.cxapi
 
 import io.cloudshiftdev.awscdk.cloud_assembly_schema.AssemblyManifest
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.ICloudAssembly
 import io.cloudshiftdev.awscdk.cloud_assembly_schema.LoadManifestOptions
 import io.cloudshiftdev.awscdk.cloud_assembly_schema.RuntimeInfo
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -30,7 +32,8 @@ import kotlin.collections.List
  */
 public open class CloudAssembly(
   cdkObject: software.amazon.awscdk.cxapi.CloudAssembly,
-) : CdkObject(cdkObject) {
+) : CdkObject(cdkObject),
+    ICloudAssembly {
   public constructor(directory: String) : this(software.amazon.awscdk.cxapi.CloudAssembly(directory)
   )
 
@@ -52,7 +55,7 @@ public open class CloudAssembly(
   /**
    * The root directory of the cloud assembly.
    */
-  public open fun directory(): String = unwrap(this).getDirectory()
+  public override fun directory(): String = unwrap(this).getDirectory()
 
   /**
    * The raw assembly manifest.
@@ -238,6 +241,9 @@ public open class CloudAssembly(
   }
 
   public companion object {
+    public fun isCloudAssembly(x: Any): Boolean =
+        software.amazon.awscdk.cxapi.CloudAssembly.isCloudAssembly(x)
+
     public operator fun invoke(directory: String, block: Builder.() -> Unit = {}): CloudAssembly {
       val builderImpl = BuilderImpl(directory)
       return CloudAssembly(builderImpl.apply(block).build())

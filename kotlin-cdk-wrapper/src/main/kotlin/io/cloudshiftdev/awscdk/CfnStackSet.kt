@@ -16,11 +16,11 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The `AWS::CloudFormation::StackSet` enables you to provision stacks into AWS accounts and across
- * Regions by using a single CloudFormation template.
+ * The `AWS::CloudFormation::StackSet` resource contains information about a StackSet.
  *
- * In the stack set, you specify the template to use, in addition to any parameters and capabilities
- * that the template requires.
+ * With StackSets, you can provision stacks across AWS accounts and Regions from a single
+ * CloudFormation template. Each stack is based on the same CloudFormation template, but you can
+ * customize individual stacks using parameters.
  *
  *
  * Run deployments to nested StackSets from the parent stack, not directly through the StackSet API.
@@ -107,47 +107,47 @@ public open class CfnStackSet(
   )
 
   /**
-   * The Amazon Resource Number (ARN) of the IAM role to use to create this stack set.
+   * The Amazon Resource Number (ARN) of the IAM role to use to create this StackSet.
    */
   public open fun administrationRoleArn(): String? = unwrap(this).getAdministrationRoleArn()
 
   /**
-   * The Amazon Resource Number (ARN) of the IAM role to use to create this stack set.
+   * The Amazon Resource Number (ARN) of the IAM role to use to create this StackSet.
    */
   public open fun administrationRoleArn(`value`: String) {
     unwrap(this).setAdministrationRoleArn(`value`)
   }
 
   /**
-   * The ID of the stack that you're creating.
+   * Returns the unique identifier of the resource.
    */
   public open fun attrStackSetId(): String = unwrap(this).getAttrStackSetId()
 
   /**
-   * [ `Service-managed` permissions] Describes whether StackSets automatically deploys to AWS
-   * Organizations accounts that are added to a target organization or organizational unit (OU).
+   * Describes whether StackSets automatically deploys to AWS Organizations accounts that are added
+   * to a target organization or organizational unit (OU).
    */
   public open fun autoDeployment(): Any? = unwrap(this).getAutoDeployment()
 
   /**
-   * [ `Service-managed` permissions] Describes whether StackSets automatically deploys to AWS
-   * Organizations accounts that are added to a target organization or organizational unit (OU).
+   * Describes whether StackSets automatically deploys to AWS Organizations accounts that are added
+   * to a target organization or organizational unit (OU).
    */
   public open fun autoDeployment(`value`: IResolvable) {
     unwrap(this).setAutoDeployment(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * [ `Service-managed` permissions] Describes whether StackSets automatically deploys to AWS
-   * Organizations accounts that are added to a target organization or organizational unit (OU).
+   * Describes whether StackSets automatically deploys to AWS Organizations accounts that are added
+   * to a target organization or organizational unit (OU).
    */
   public open fun autoDeployment(`value`: AutoDeploymentProperty) {
     unwrap(this).setAutoDeployment(`value`.let(AutoDeploymentProperty.Companion::unwrap))
   }
 
   /**
-   * [ `Service-managed` permissions] Describes whether StackSets automatically deploys to AWS
-   * Organizations accounts that are added to a target organization or organizational unit (OU).
+   * Describes whether StackSets automatically deploys to AWS Organizations accounts that are added
+   * to a target organization or organizational unit (OU).
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("541122c7707427c2c85e795a7eef12b7f230dc5310f83e8c1b12b4feeee16be7")
@@ -155,55 +155,55 @@ public open class CfnStackSet(
       autoDeployment(AutoDeploymentProperty(`value`))
 
   /**
-   * [Service-managed permissions] Specifies whether you are acting as an account administrator in
-   * the organization's management account or as a delegated administrator in a member account.
+   * Specifies whether you are acting as an account administrator in the organization's management
+   * account or as a delegated administrator in a member account.
    */
   public open fun callAs(): String? = unwrap(this).getCallAs()
 
   /**
-   * [Service-managed permissions] Specifies whether you are acting as an account administrator in
-   * the organization's management account or as a delegated administrator in a member account.
+   * Specifies whether you are acting as an account administrator in the organization's management
+   * account or as a delegated administrator in a member account.
    */
   public open fun callAs(`value`: String) {
     unwrap(this).setCallAs(`value`)
   }
 
   /**
-   * The capabilities that are allowed in the stack set.
+   * The capabilities that are allowed in the StackSet.
    */
   public open fun capabilities(): List<String> = unwrap(this).getCapabilities() ?: emptyList()
 
   /**
-   * The capabilities that are allowed in the stack set.
+   * The capabilities that are allowed in the StackSet.
    */
   public open fun capabilities(`value`: List<String>) {
     unwrap(this).setCapabilities(`value`)
   }
 
   /**
-   * The capabilities that are allowed in the stack set.
+   * The capabilities that are allowed in the StackSet.
    */
   public open fun capabilities(vararg `value`: String): Unit = capabilities(`value`.toList())
 
   /**
-   * A description of the stack set.
+   * A description of the StackSet.
    */
   public open fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * A description of the stack set.
+   * A description of the StackSet.
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
   }
 
   /**
-   * The name of the IAM execution role to use to create the stack set.
+   * The name of the IAM execution role to use to create the StackSet.
    */
   public open fun executionRoleName(): String? = unwrap(this).getExecutionRoleName()
 
   /**
-   * The name of the IAM execution role to use to create the stack set.
+   * The name of the IAM execution role to use to create the StackSet.
    */
   public open fun executionRoleName(`value`: String) {
     unwrap(this).setExecutionRoleName(`value`)
@@ -233,26 +233,26 @@ public open class CfnStackSet(
   }
 
   /**
-   * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
+   * The user-specified preferences for how CloudFormation performs a StackSet operation.
    */
   public open fun operationPreferences(): Any? = unwrap(this).getOperationPreferences()
 
   /**
-   * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
+   * The user-specified preferences for how CloudFormation performs a StackSet operation.
    */
   public open fun operationPreferences(`value`: IResolvable) {
     unwrap(this).setOperationPreferences(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
+   * The user-specified preferences for how CloudFormation performs a StackSet operation.
    */
   public open fun operationPreferences(`value`: OperationPreferencesProperty) {
     unwrap(this).setOperationPreferences(`value`.let(OperationPreferencesProperty.Companion::unwrap))
   }
 
   /**
-   * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
+   * The user-specified preferences for how CloudFormation performs a StackSet operation.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("286fcc6600897ac9954d756a260b4e84f2e4bc1178aa2780076c37d422d6e6c1")
@@ -260,36 +260,36 @@ public open class CfnStackSet(
       Unit = operationPreferences(OperationPreferencesProperty(`value`))
 
   /**
-   * The input parameters for the stack set template.
+   * The input parameters for the StackSet template.
    */
   public open fun parameters(): Any? = unwrap(this).getParameters()
 
   /**
-   * The input parameters for the stack set template.
+   * The input parameters for the StackSet template.
    */
   public open fun parameters(`value`: IResolvable) {
     unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The input parameters for the stack set template.
+   * The input parameters for the StackSet template.
    */
   public open fun parameters(`value`: List<Any>) {
     unwrap(this).setParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * The input parameters for the stack set template.
+   * The input parameters for the StackSet template.
    */
   public open fun parameters(vararg `value`: Any): Unit = parameters(`value`.toList())
 
   /**
-   * Describes how the IAM roles required for stack set operations are created.
+   * Describes how the IAM roles required for StackSet operations are created.
    */
   public open fun permissionModel(): String = unwrap(this).getPermissionModel()
 
   /**
-   * Describes how the IAM roles required for stack set operations are created.
+   * Describes how the IAM roles required for StackSet operations are created.
    */
   public open fun permissionModel(`value`: String) {
     unwrap(this).setPermissionModel(`value`)
@@ -321,12 +321,12 @@ public open class CfnStackSet(
       stackInstancesGroup(`value`.toList())
 
   /**
-   * The name to associate with the stack set.
+   * The name to associate with the StackSet.
    */
   public open fun stackSetName(): String = unwrap(this).getStackSetName()
 
   /**
-   * The name to associate with the stack set.
+   * The name to associate with the StackSet.
    */
   public open fun stackSetName(`value`: String) {
     unwrap(this).setStackSetName(`value`)
@@ -370,12 +370,12 @@ public open class CfnStackSet(
   }
 
   /**
-   * Location of file containing the template body.
+   * The URL of a file that contains the template body.
    */
   public open fun templateUrl(): String? = unwrap(this).getTemplateUrl()
 
   /**
-   * Location of file containing the template body.
+   * The URL of a file that contains the template body.
    */
   public open fun templateUrl(`value`: String) {
     unwrap(this).setTemplateUrl(`value`)
@@ -387,71 +387,86 @@ public open class CfnStackSet(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The Amazon Resource Number (ARN) of the IAM role to use to create this stack set.
+     * The Amazon Resource Number (ARN) of the IAM role to use to create this StackSet.
      *
      * Specify an IAM role only if you are using customized administrator roles to control which
-     * users or groups can manage specific stack sets within the same administrator account.
+     * users or groups can manage specific StackSets within the same administrator account.
      *
-     * Use customized administrator roles to control which users or groups can manage specific stack
-     * sets within the same administrator account. For more information, see [Prerequisites: Granting
-     * Permissions for Stack Set
-     * Operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html)
+     * Use customized administrator roles to control which users or groups can manage specific
+     * StackSets within the same administrator account. For more information, see [Grant self-managed
+     * permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
      * in the *AWS CloudFormation User Guide* .
      *
-     * *Minimum* : `20`
-     *
-     * *Maximum* : `2048`
+     * Valid only if the permissions model is `SELF_MANAGED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-administrationrolearn)
      * @param administrationRoleArn The Amazon Resource Number (ARN) of the IAM role to use to
-     * create this stack set. 
+     * create this StackSet. 
      */
     public fun administrationRoleArn(administrationRoleArn: String)
 
     /**
-     * [ `Service-managed` permissions] Describes whether StackSets automatically deploys to AWS
-     * Organizations accounts that are added to a target organization or organizational unit (OU).
+     * Describes whether StackSets automatically deploys to AWS Organizations accounts that are
+     * added to a target organization or organizational unit (OU).
+     *
+     * For more information, see [Enable or disable automatic deployments for StackSets in AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-manage-auto-deployment.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     * Required if the permissions model is `SERVICE_MANAGED` . (Not used with self-managed
+     * permissions.)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-autodeployment)
-     * @param autoDeployment [ `Service-managed` permissions] Describes whether StackSets
-     * automatically deploys to AWS Organizations accounts that are added to a target organization or
-     * organizational unit (OU). 
+     * @param autoDeployment Describes whether StackSets automatically deploys to AWS Organizations
+     * accounts that are added to a target organization or organizational unit (OU). 
      */
     public fun autoDeployment(autoDeployment: IResolvable)
 
     /**
-     * [ `Service-managed` permissions] Describes whether StackSets automatically deploys to AWS
-     * Organizations accounts that are added to a target organization or organizational unit (OU).
+     * Describes whether StackSets automatically deploys to AWS Organizations accounts that are
+     * added to a target organization or organizational unit (OU).
+     *
+     * For more information, see [Enable or disable automatic deployments for StackSets in AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-manage-auto-deployment.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     * Required if the permissions model is `SERVICE_MANAGED` . (Not used with self-managed
+     * permissions.)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-autodeployment)
-     * @param autoDeployment [ `Service-managed` permissions] Describes whether StackSets
-     * automatically deploys to AWS Organizations accounts that are added to a target organization or
-     * organizational unit (OU). 
+     * @param autoDeployment Describes whether StackSets automatically deploys to AWS Organizations
+     * accounts that are added to a target organization or organizational unit (OU). 
      */
     public fun autoDeployment(autoDeployment: AutoDeploymentProperty)
 
     /**
-     * [ `Service-managed` permissions] Describes whether StackSets automatically deploys to AWS
-     * Organizations accounts that are added to a target organization or organizational unit (OU).
+     * Describes whether StackSets automatically deploys to AWS Organizations accounts that are
+     * added to a target organization or organizational unit (OU).
+     *
+     * For more information, see [Enable or disable automatic deployments for StackSets in AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-manage-auto-deployment.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     * Required if the permissions model is `SERVICE_MANAGED` . (Not used with self-managed
+     * permissions.)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-autodeployment)
-     * @param autoDeployment [ `Service-managed` permissions] Describes whether StackSets
-     * automatically deploys to AWS Organizations accounts that are added to a target organization or
-     * organizational unit (OU). 
+     * @param autoDeployment Describes whether StackSets automatically deploys to AWS Organizations
+     * accounts that are added to a target organization or organizational unit (OU). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5868005ed7fa39620e55579b88bf6442571eecf32cf05b9a009b69fe9f7b6728")
     public fun autoDeployment(autoDeployment: AutoDeploymentProperty.Builder.() -> Unit)
 
     /**
-     * [Service-managed permissions] Specifies whether you are acting as an account administrator in
-     * the organization's management account or as a delegated administrator in a member account.
+     * Specifies whether you are acting as an account administrator in the organization's management
+     * account or as a delegated administrator in a member account.
      *
-     * By default, `SELF` is specified. Use `SELF` for stack sets with self-managed permissions.
+     * By default, `SELF` is specified. Use `SELF` for StackSets with self-managed permissions.
      *
-     * * To create a stack set with service-managed permissions while signed in to the management
+     * * To create a StackSet with service-managed permissions while signed in to the management
      * account, specify `SELF` .
-     * * To create a stack set with service-managed permissions while signed in to a delegated
+     * * To create a StackSet with service-managed permissions while signed in to a delegated
      * administrator account, specify `DELEGATED_ADMIN` .
      *
      * Your AWS account must be registered as a delegated admin in the management account. For more
@@ -459,72 +474,65 @@ public open class CfnStackSet(
      * administrator](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html)
      * in the *AWS CloudFormation User Guide* .
      *
-     * Stack sets with service-managed permissions are created in the management account, including
-     * stack sets that are created by delegated administrators.
+     * StackSets with service-managed permissions are created in the management account, including
+     * StackSets that are created by delegated administrators.
      *
-     * *Valid Values* : `SELF` | `DELEGATED_ADMIN`
+     * Valid only if the permissions model is `SERVICE_MANAGED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-callas)
-     * @param callAs [Service-managed permissions] Specifies whether you are acting as an account
-     * administrator in the organization's management account or as a delegated administrator in a
-     * member account. 
+     * @param callAs Specifies whether you are acting as an account administrator in the
+     * organization's management account or as a delegated administrator in a member account. 
      */
     public fun callAs(callAs: String)
 
     /**
-     * The capabilities that are allowed in the stack set.
+     * The capabilities that are allowed in the StackSet.
      *
-     * Some stack set templates might include resources that can affect permissions in your AWS
-     * account —for example, by creating new AWS Identity and Access Management ( IAM ) users. For more
-     * information, see [Acknowledging IAM Resources in AWS CloudFormation
-     * Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities)
-     * .
+     * Some StackSet templates might include resources that can affect permissions in your AWS
+     * account —for example, by creating new IAM users. For more information, see [Acknowledging IAM
+     * resources in CloudFormation
+     * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/control-access-with-iam.html#using-iam-capabilities)
+     * in the *AWS CloudFormation User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-capabilities)
-     * @param capabilities The capabilities that are allowed in the stack set. 
+     * @param capabilities The capabilities that are allowed in the StackSet. 
      */
     public fun capabilities(capabilities: List<String>)
 
     /**
-     * The capabilities that are allowed in the stack set.
+     * The capabilities that are allowed in the StackSet.
      *
-     * Some stack set templates might include resources that can affect permissions in your AWS
-     * account —for example, by creating new AWS Identity and Access Management ( IAM ) users. For more
-     * information, see [Acknowledging IAM Resources in AWS CloudFormation
-     * Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities)
-     * .
+     * Some StackSet templates might include resources that can affect permissions in your AWS
+     * account —for example, by creating new IAM users. For more information, see [Acknowledging IAM
+     * resources in CloudFormation
+     * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/control-access-with-iam.html#using-iam-capabilities)
+     * in the *AWS CloudFormation User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-capabilities)
-     * @param capabilities The capabilities that are allowed in the stack set. 
+     * @param capabilities The capabilities that are allowed in the StackSet. 
      */
     public fun capabilities(vararg capabilities: String)
 
     /**
-     * A description of the stack set.
-     *
-     * *Minimum* : `1`
-     *
-     * *Maximum* : `1024`
+     * A description of the StackSet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-description)
-     * @param description A description of the stack set. 
+     * @param description A description of the StackSet. 
      */
     public fun description(description: String)
 
     /**
-     * The name of the IAM execution role to use to create the stack set.
+     * The name of the IAM execution role to use to create the StackSet.
      *
-     * If you don't specify an execution role, AWS CloudFormation uses the
-     * `AWSCloudFormationStackSetExecutionRole` role for the stack set operation.
+     * If you don't specify an execution role, CloudFormation uses the
+     * `AWSCloudFormationStackSetExecutionRole` role for the StackSet operation.
      *
-     * *Minimum* : `1`
-     *
-     * *Maximum* : `64`
+     * Valid only if the permissions model is `SELF_MANAGED` .
      *
      * *Pattern* : `[a-zA-Z_0-9+=,.&#64;-]+`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-executionrolename)
-     * @param executionRoleName The name of the IAM execution role to use to create the stack set. 
+     * @param executionRoleName The name of the IAM execution role to use to create the StackSet. 
      */
     public fun executionRoleName(executionRoleName: String)
 
@@ -540,8 +548,8 @@ public open class CfnStackSet(
      * If there are already running or queued operations, StackSets queues all incoming operations
      * even if they are non-conflicting.
      *
-     * You can't modify your stack set's execution configuration while there are running or queued
-     * operations for that stack set.
+     * You can't modify your StackSet's execution configuration while there are running or queued
+     * operations for that StackSet.
      *
      *
      * When inactive (default), StackSets performs one operation at a time in request order.
@@ -553,29 +561,29 @@ public open class CfnStackSet(
     public fun managedExecution(managedExecution: Any)
 
     /**
-     * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
+     * The user-specified preferences for how CloudFormation performs a StackSet operation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-operationpreferences)
-     * @param operationPreferences The user-specified preferences for how AWS CloudFormation
-     * performs a stack set operation. 
+     * @param operationPreferences The user-specified preferences for how CloudFormation performs a
+     * StackSet operation. 
      */
     public fun operationPreferences(operationPreferences: IResolvable)
 
     /**
-     * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
+     * The user-specified preferences for how CloudFormation performs a StackSet operation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-operationpreferences)
-     * @param operationPreferences The user-specified preferences for how AWS CloudFormation
-     * performs a stack set operation. 
+     * @param operationPreferences The user-specified preferences for how CloudFormation performs a
+     * StackSet operation. 
      */
     public fun operationPreferences(operationPreferences: OperationPreferencesProperty)
 
     /**
-     * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
+     * The user-specified preferences for how CloudFormation performs a StackSet operation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-operationpreferences)
-     * @param operationPreferences The user-specified preferences for how AWS CloudFormation
-     * performs a stack set operation. 
+     * @param operationPreferences The user-specified preferences for how CloudFormation performs a
+     * StackSet operation. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8c95c55213cdb45e9d6922da2043547a34eb7688d49dde0667edbf3d2d163135")
@@ -583,41 +591,44 @@ public open class CfnStackSet(
         fun operationPreferences(operationPreferences: OperationPreferencesProperty.Builder.() -> Unit)
 
     /**
-     * The input parameters for the stack set template.
+     * The input parameters for the StackSet template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-parameters)
-     * @param parameters The input parameters for the stack set template. 
+     * @param parameters The input parameters for the StackSet template. 
      */
     public fun parameters(parameters: IResolvable)
 
     /**
-     * The input parameters for the stack set template.
+     * The input parameters for the StackSet template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-parameters)
-     * @param parameters The input parameters for the stack set template. 
+     * @param parameters The input parameters for the StackSet template. 
      */
     public fun parameters(parameters: List<Any>)
 
     /**
-     * The input parameters for the stack set template.
+     * The input parameters for the StackSet template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-parameters)
-     * @param parameters The input parameters for the stack set template. 
+     * @param parameters The input parameters for the StackSet template. 
      */
     public fun parameters(vararg parameters: Any)
 
     /**
-     * Describes how the IAM roles required for stack set operations are created.
+     * Describes how the IAM roles required for StackSet operations are created.
      *
      * * With `SELF_MANAGED` permissions, you must create the administrator and execution roles
-     * required to deploy to target accounts. For more information, see [Grant Self-Managed Stack Set
-     * Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
-     * .
+     * required to deploy to target accounts. For more information, see [Grant self-managed
+     * permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
+     * in the *AWS CloudFormation User Guide* .
      * * With `SERVICE_MANAGED` permissions, StackSets automatically creates the IAM roles required
-     * to deploy to accounts managed by AWS Organizations .
+     * to deploy to accounts managed by AWS Organizations . For more information, see [Activate trusted
+     * access for StackSets with AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-activate-trusted-access.html)
+     * in the *AWS CloudFormation User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-permissionmodel)
-     * @param permissionModel Describes how the IAM roles required for stack set operations are
+     * @param permissionModel Describes how the IAM roles required for StackSet operations are
      * created. 
      */
     public fun permissionModel(permissionModel: String)
@@ -650,16 +661,12 @@ public open class CfnStackSet(
     public fun stackInstancesGroup(vararg stackInstancesGroup: Any)
 
     /**
-     * The name to associate with the stack set.
+     * The name to associate with the StackSet.
      *
-     * The name must be unique in the Region where you create your stack set.
-     *
-     *
-     * The `StackSetName` property is required.
-     *
+     * The name must be unique in the Region where you create your StackSet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-stacksetname)
-     * @param stackSetName The name to associate with the stack set. 
+     * @param stackSetName The name to associate with the StackSet. 
      */
     public fun stackSetName(stackSetName: String)
 
@@ -697,7 +704,7 @@ public open class CfnStackSet(
      *
      * You must include either `TemplateURL` or `TemplateBody` in a StackSet, but you can't use
      * both. Dynamic references in the `TemplateBody` may not work correctly in all cases. It's
-     * recommended to pass templates containing dynamic references through `TemplateUrl` instead.
+     * recommended to pass templates that contain dynamic references through `TemplateUrl` instead.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-templatebody)
      * @param templateBody The structure that contains the template body, with a minimum length of 1
@@ -706,18 +713,16 @@ public open class CfnStackSet(
     public fun templateBody(templateBody: String)
 
     /**
-     * Location of file containing the template body.
+     * The URL of a file that contains the template body.
      *
-     * The URL must point to a template that's located in an Amazon S3 bucket or a Systems Manager
-     * document. For more information, go to [Template
-     * Anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html)
-     * in the AWS CloudFormation User Guide.
+     * The URL must point to a template (max size: 1 MB) that's located in an Amazon S3 bucket or a
+     * Systems Manager document. The location for an Amazon S3 bucket must start with `https://` .
      *
      * Conditional: You must specify only one of the following parameters: `TemplateBody` ,
      * `TemplateURL` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-templateurl)
-     * @param templateUrl Location of file containing the template body. 
+     * @param templateUrl The URL of a file that contains the template body. 
      */
     public fun templateUrl(templateUrl: String)
   }
@@ -730,63 +735,78 @@ public open class CfnStackSet(
         software.amazon.awscdk.CfnStackSet.Builder.create(scope, id)
 
     /**
-     * The Amazon Resource Number (ARN) of the IAM role to use to create this stack set.
+     * The Amazon Resource Number (ARN) of the IAM role to use to create this StackSet.
      *
      * Specify an IAM role only if you are using customized administrator roles to control which
-     * users or groups can manage specific stack sets within the same administrator account.
+     * users or groups can manage specific StackSets within the same administrator account.
      *
-     * Use customized administrator roles to control which users or groups can manage specific stack
-     * sets within the same administrator account. For more information, see [Prerequisites: Granting
-     * Permissions for Stack Set
-     * Operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html)
+     * Use customized administrator roles to control which users or groups can manage specific
+     * StackSets within the same administrator account. For more information, see [Grant self-managed
+     * permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
      * in the *AWS CloudFormation User Guide* .
      *
-     * *Minimum* : `20`
-     *
-     * *Maximum* : `2048`
+     * Valid only if the permissions model is `SELF_MANAGED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-administrationrolearn)
      * @param administrationRoleArn The Amazon Resource Number (ARN) of the IAM role to use to
-     * create this stack set. 
+     * create this StackSet. 
      */
     override fun administrationRoleArn(administrationRoleArn: String) {
       cdkBuilder.administrationRoleArn(administrationRoleArn)
     }
 
     /**
-     * [ `Service-managed` permissions] Describes whether StackSets automatically deploys to AWS
-     * Organizations accounts that are added to a target organization or organizational unit (OU).
+     * Describes whether StackSets automatically deploys to AWS Organizations accounts that are
+     * added to a target organization or organizational unit (OU).
+     *
+     * For more information, see [Enable or disable automatic deployments for StackSets in AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-manage-auto-deployment.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     * Required if the permissions model is `SERVICE_MANAGED` . (Not used with self-managed
+     * permissions.)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-autodeployment)
-     * @param autoDeployment [ `Service-managed` permissions] Describes whether StackSets
-     * automatically deploys to AWS Organizations accounts that are added to a target organization or
-     * organizational unit (OU). 
+     * @param autoDeployment Describes whether StackSets automatically deploys to AWS Organizations
+     * accounts that are added to a target organization or organizational unit (OU). 
      */
     override fun autoDeployment(autoDeployment: IResolvable) {
       cdkBuilder.autoDeployment(autoDeployment.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * [ `Service-managed` permissions] Describes whether StackSets automatically deploys to AWS
-     * Organizations accounts that are added to a target organization or organizational unit (OU).
+     * Describes whether StackSets automatically deploys to AWS Organizations accounts that are
+     * added to a target organization or organizational unit (OU).
+     *
+     * For more information, see [Enable or disable automatic deployments for StackSets in AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-manage-auto-deployment.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     * Required if the permissions model is `SERVICE_MANAGED` . (Not used with self-managed
+     * permissions.)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-autodeployment)
-     * @param autoDeployment [ `Service-managed` permissions] Describes whether StackSets
-     * automatically deploys to AWS Organizations accounts that are added to a target organization or
-     * organizational unit (OU). 
+     * @param autoDeployment Describes whether StackSets automatically deploys to AWS Organizations
+     * accounts that are added to a target organization or organizational unit (OU). 
      */
     override fun autoDeployment(autoDeployment: AutoDeploymentProperty) {
       cdkBuilder.autoDeployment(autoDeployment.let(AutoDeploymentProperty.Companion::unwrap))
     }
 
     /**
-     * [ `Service-managed` permissions] Describes whether StackSets automatically deploys to AWS
-     * Organizations accounts that are added to a target organization or organizational unit (OU).
+     * Describes whether StackSets automatically deploys to AWS Organizations accounts that are
+     * added to a target organization or organizational unit (OU).
+     *
+     * For more information, see [Enable or disable automatic deployments for StackSets in AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-manage-auto-deployment.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     * Required if the permissions model is `SERVICE_MANAGED` . (Not used with self-managed
+     * permissions.)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-autodeployment)
-     * @param autoDeployment [ `Service-managed` permissions] Describes whether StackSets
-     * automatically deploys to AWS Organizations accounts that are added to a target organization or
-     * organizational unit (OU). 
+     * @param autoDeployment Describes whether StackSets automatically deploys to AWS Organizations
+     * accounts that are added to a target organization or organizational unit (OU). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5868005ed7fa39620e55579b88bf6442571eecf32cf05b9a009b69fe9f7b6728")
@@ -794,14 +814,14 @@ public open class CfnStackSet(
         autoDeployment(AutoDeploymentProperty(autoDeployment))
 
     /**
-     * [Service-managed permissions] Specifies whether you are acting as an account administrator in
-     * the organization's management account or as a delegated administrator in a member account.
+     * Specifies whether you are acting as an account administrator in the organization's management
+     * account or as a delegated administrator in a member account.
      *
-     * By default, `SELF` is specified. Use `SELF` for stack sets with self-managed permissions.
+     * By default, `SELF` is specified. Use `SELF` for StackSets with self-managed permissions.
      *
-     * * To create a stack set with service-managed permissions while signed in to the management
+     * * To create a StackSet with service-managed permissions while signed in to the management
      * account, specify `SELF` .
-     * * To create a stack set with service-managed permissions while signed in to a delegated
+     * * To create a StackSet with service-managed permissions while signed in to a delegated
      * administrator account, specify `DELEGATED_ADMIN` .
      *
      * Your AWS account must be registered as a delegated admin in the management account. For more
@@ -809,79 +829,72 @@ public open class CfnStackSet(
      * administrator](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html)
      * in the *AWS CloudFormation User Guide* .
      *
-     * Stack sets with service-managed permissions are created in the management account, including
-     * stack sets that are created by delegated administrators.
+     * StackSets with service-managed permissions are created in the management account, including
+     * StackSets that are created by delegated administrators.
      *
-     * *Valid Values* : `SELF` | `DELEGATED_ADMIN`
+     * Valid only if the permissions model is `SERVICE_MANAGED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-callas)
-     * @param callAs [Service-managed permissions] Specifies whether you are acting as an account
-     * administrator in the organization's management account or as a delegated administrator in a
-     * member account. 
+     * @param callAs Specifies whether you are acting as an account administrator in the
+     * organization's management account or as a delegated administrator in a member account. 
      */
     override fun callAs(callAs: String) {
       cdkBuilder.callAs(callAs)
     }
 
     /**
-     * The capabilities that are allowed in the stack set.
+     * The capabilities that are allowed in the StackSet.
      *
-     * Some stack set templates might include resources that can affect permissions in your AWS
-     * account —for example, by creating new AWS Identity and Access Management ( IAM ) users. For more
-     * information, see [Acknowledging IAM Resources in AWS CloudFormation
-     * Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities)
-     * .
+     * Some StackSet templates might include resources that can affect permissions in your AWS
+     * account —for example, by creating new IAM users. For more information, see [Acknowledging IAM
+     * resources in CloudFormation
+     * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/control-access-with-iam.html#using-iam-capabilities)
+     * in the *AWS CloudFormation User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-capabilities)
-     * @param capabilities The capabilities that are allowed in the stack set. 
+     * @param capabilities The capabilities that are allowed in the StackSet. 
      */
     override fun capabilities(capabilities: List<String>) {
       cdkBuilder.capabilities(capabilities)
     }
 
     /**
-     * The capabilities that are allowed in the stack set.
+     * The capabilities that are allowed in the StackSet.
      *
-     * Some stack set templates might include resources that can affect permissions in your AWS
-     * account —for example, by creating new AWS Identity and Access Management ( IAM ) users. For more
-     * information, see [Acknowledging IAM Resources in AWS CloudFormation
-     * Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities)
-     * .
+     * Some StackSet templates might include resources that can affect permissions in your AWS
+     * account —for example, by creating new IAM users. For more information, see [Acknowledging IAM
+     * resources in CloudFormation
+     * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/control-access-with-iam.html#using-iam-capabilities)
+     * in the *AWS CloudFormation User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-capabilities)
-     * @param capabilities The capabilities that are allowed in the stack set. 
+     * @param capabilities The capabilities that are allowed in the StackSet. 
      */
     override fun capabilities(vararg capabilities: String): Unit =
         capabilities(capabilities.toList())
 
     /**
-     * A description of the stack set.
-     *
-     * *Minimum* : `1`
-     *
-     * *Maximum* : `1024`
+     * A description of the StackSet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-description)
-     * @param description A description of the stack set. 
+     * @param description A description of the StackSet. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
-     * The name of the IAM execution role to use to create the stack set.
+     * The name of the IAM execution role to use to create the StackSet.
      *
-     * If you don't specify an execution role, AWS CloudFormation uses the
-     * `AWSCloudFormationStackSetExecutionRole` role for the stack set operation.
+     * If you don't specify an execution role, CloudFormation uses the
+     * `AWSCloudFormationStackSetExecutionRole` role for the StackSet operation.
      *
-     * *Minimum* : `1`
-     *
-     * *Maximum* : `64`
+     * Valid only if the permissions model is `SELF_MANAGED` .
      *
      * *Pattern* : `[a-zA-Z_0-9+=,.&#64;-]+`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-executionrolename)
-     * @param executionRoleName The name of the IAM execution role to use to create the stack set. 
+     * @param executionRoleName The name of the IAM execution role to use to create the StackSet. 
      */
     override fun executionRoleName(executionRoleName: String) {
       cdkBuilder.executionRoleName(executionRoleName)
@@ -899,8 +912,8 @@ public open class CfnStackSet(
      * If there are already running or queued operations, StackSets queues all incoming operations
      * even if they are non-conflicting.
      *
-     * You can't modify your stack set's execution configuration while there are running or queued
-     * operations for that stack set.
+     * You can't modify your StackSet's execution configuration while there are running or queued
+     * operations for that StackSet.
      *
      *
      * When inactive (default), StackSets performs one operation at a time in request order.
@@ -914,33 +927,33 @@ public open class CfnStackSet(
     }
 
     /**
-     * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
+     * The user-specified preferences for how CloudFormation performs a StackSet operation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-operationpreferences)
-     * @param operationPreferences The user-specified preferences for how AWS CloudFormation
-     * performs a stack set operation. 
+     * @param operationPreferences The user-specified preferences for how CloudFormation performs a
+     * StackSet operation. 
      */
     override fun operationPreferences(operationPreferences: IResolvable) {
       cdkBuilder.operationPreferences(operationPreferences.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
+     * The user-specified preferences for how CloudFormation performs a StackSet operation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-operationpreferences)
-     * @param operationPreferences The user-specified preferences for how AWS CloudFormation
-     * performs a stack set operation. 
+     * @param operationPreferences The user-specified preferences for how CloudFormation performs a
+     * StackSet operation. 
      */
     override fun operationPreferences(operationPreferences: OperationPreferencesProperty) {
       cdkBuilder.operationPreferences(operationPreferences.let(OperationPreferencesProperty.Companion::unwrap))
     }
 
     /**
-     * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
+     * The user-specified preferences for how CloudFormation performs a StackSet operation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-operationpreferences)
-     * @param operationPreferences The user-specified preferences for how AWS CloudFormation
-     * performs a stack set operation. 
+     * @param operationPreferences The user-specified preferences for how CloudFormation performs a
+     * StackSet operation. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8c95c55213cdb45e9d6922da2043547a34eb7688d49dde0667edbf3d2d163135")
@@ -949,45 +962,48 @@ public open class CfnStackSet(
         Unit = operationPreferences(OperationPreferencesProperty(operationPreferences))
 
     /**
-     * The input parameters for the stack set template.
+     * The input parameters for the StackSet template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-parameters)
-     * @param parameters The input parameters for the stack set template. 
+     * @param parameters The input parameters for the StackSet template. 
      */
     override fun parameters(parameters: IResolvable) {
       cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The input parameters for the stack set template.
+     * The input parameters for the StackSet template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-parameters)
-     * @param parameters The input parameters for the stack set template. 
+     * @param parameters The input parameters for the StackSet template. 
      */
     override fun parameters(parameters: List<Any>) {
       cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * The input parameters for the stack set template.
+     * The input parameters for the StackSet template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-parameters)
-     * @param parameters The input parameters for the stack set template. 
+     * @param parameters The input parameters for the StackSet template. 
      */
     override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
 
     /**
-     * Describes how the IAM roles required for stack set operations are created.
+     * Describes how the IAM roles required for StackSet operations are created.
      *
      * * With `SELF_MANAGED` permissions, you must create the administrator and execution roles
-     * required to deploy to target accounts. For more information, see [Grant Self-Managed Stack Set
-     * Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
-     * .
+     * required to deploy to target accounts. For more information, see [Grant self-managed
+     * permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)
+     * in the *AWS CloudFormation User Guide* .
      * * With `SERVICE_MANAGED` permissions, StackSets automatically creates the IAM roles required
-     * to deploy to accounts managed by AWS Organizations .
+     * to deploy to accounts managed by AWS Organizations . For more information, see [Activate trusted
+     * access for StackSets with AWS
+     * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-activate-trusted-access.html)
+     * in the *AWS CloudFormation User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-permissionmodel)
-     * @param permissionModel Describes how the IAM roles required for stack set operations are
+     * @param permissionModel Describes how the IAM roles required for StackSet operations are
      * created. 
      */
     override fun permissionModel(permissionModel: String) {
@@ -1027,16 +1043,12 @@ public open class CfnStackSet(
         stackInstancesGroup(stackInstancesGroup.toList())
 
     /**
-     * The name to associate with the stack set.
+     * The name to associate with the StackSet.
      *
-     * The name must be unique in the Region where you create your stack set.
-     *
-     *
-     * The `StackSetName` property is required.
-     *
+     * The name must be unique in the Region where you create your StackSet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-stacksetname)
-     * @param stackSetName The name to associate with the stack set. 
+     * @param stackSetName The name to associate with the StackSet. 
      */
     override fun stackSetName(stackSetName: String) {
       cdkBuilder.stackSetName(stackSetName)
@@ -1078,7 +1090,7 @@ public open class CfnStackSet(
      *
      * You must include either `TemplateURL` or `TemplateBody` in a StackSet, but you can't use
      * both. Dynamic references in the `TemplateBody` may not work correctly in all cases. It's
-     * recommended to pass templates containing dynamic references through `TemplateUrl` instead.
+     * recommended to pass templates that contain dynamic references through `TemplateUrl` instead.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-templatebody)
      * @param templateBody The structure that contains the template body, with a minimum length of 1
@@ -1089,18 +1101,16 @@ public open class CfnStackSet(
     }
 
     /**
-     * Location of file containing the template body.
+     * The URL of a file that contains the template body.
      *
-     * The URL must point to a template that's located in an Amazon S3 bucket or a Systems Manager
-     * document. For more information, go to [Template
-     * Anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html)
-     * in the AWS CloudFormation User Guide.
+     * The URL must point to a template (max size: 1 MB) that's located in an Amazon S3 bucket or a
+     * Systems Manager document. The location for an Amazon S3 bucket must start with `https://` .
      *
      * Conditional: You must specify only one of the following parameters: `TemplateBody` ,
      * `TemplateURL` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-templateurl)
-     * @param templateUrl Location of file containing the template body. 
+     * @param templateUrl The URL of a file that contains the template body. 
      */
     override fun templateUrl(templateUrl: String) {
       cdkBuilder.templateUrl(templateUrl)
@@ -1130,8 +1140,12 @@ public open class CfnStackSet(
   }
 
   /**
-   * [ `Service-managed` permissions] Describes whether StackSets automatically deploys to AWS
-   * Organizations accounts that are added to a target organizational unit (OU).
+   * Describes whether StackSets automatically deploys to AWS Organizations accounts that are added
+   * to a target organization or organizational unit (OU).
+   *
+   * For more information, see [Enable or disable automatic deployments for StackSets in AWS
+   * Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-manage-auto-deployment.html)
+   * in the *AWS CloudFormation User Guide* .
    *
    * Example:
    *
@@ -1306,8 +1320,17 @@ public open class CfnStackSet(
   }
 
   /**
-   * The AWS OrganizationalUnitIds or Accounts for which to create stack instances in the specified
-   * Regions.
+   * The AWS Organizations accounts or AWS accounts to deploy stacks to in the specified Regions.
+   *
+   * When deploying to AWS Organizations accounts with `SERVICE_MANAGED` permissions:
+   *
+   * * You must specify the `OrganizationalUnitIds` property.
+   * * If you specify organizational units (OUs) for `OrganizationalUnitIds` and use either the
+   * `Accounts` or `AccountsUrl` property, you must also specify the `AccountFilterType` property.
+   *
+   * When deploying to AWS accounts with `SELF_MANAGED` permissions:
+   *
+   * * You must specify either the `Accounts` or `AccountsUrl` property, but not both.
    *
    * Example:
    *
@@ -1327,23 +1350,27 @@ public open class CfnStackSet(
    */
   public interface DeploymentTargetsProperty {
     /**
-     * Limit deployment targets to individual accounts or include additional accounts with provided
-     * OUs.
+     * Refines which accounts to deploy stacks to by specifying how to use the `Accounts` and
+     * `OrganizationalUnitIds` properties together.
      *
-     * The following is a list of possible values for the `AccountFilterType` operation.
+     * The following values determine how CloudFormation selects target accounts:
      *
-     * * `INTERSECTION` : StackSet deploys to the accounts specified in the `Accounts` parameter.
+     * * `INTERSECTION` : StackSet deploys to the accounts specified in the `Accounts` property.
      * * `DIFFERENCE` : StackSet deploys to the OU, excluding the accounts specified in the
-     * `Accounts` parameter.
-     * * `UNION` StackSet deploys to the OU, and the accounts specified in the `Accounts` parameter.
-     * `UNION` is not supported for create operations when using StackSet as a resource.
+     * `Accounts` property.
+     * * `UNION` : StackSet deploys to the OU, and the accounts specified in the `Accounts`
+     * property. `UNION` is not supported for create operations when using StackSet as a resource or
+     * the `CreateStackInstances` API.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-deploymenttargets.html#cfn-cloudformation-stackset-deploymenttargets-accountfiltertype)
      */
     public fun accountFilterType(): String? = unwrap(this).getAccountFilterType()
 
     /**
-     * The names of one or more AWS accounts for which you want to deploy stack set updates.
+     * The account IDs of the AWS accounts .
+     *
+     * If you have many account numbers, you can provide those accounts using the `AccountsUrl`
+     * property instead.
      *
      * *Pattern* : `^[0-9]{12}$`
      *
@@ -1352,14 +1379,21 @@ public open class CfnStackSet(
     public fun accounts(): List<String> = unwrap(this).getAccounts() ?: emptyList()
 
     /**
-     * Returns the value of the `AccountsUrl` property.
+     * The Amazon S3 URL path to a file that contains a list of AWS account IDs.
+     *
+     * The file format must be either `.csv` or `.txt` , and the data can be comma-separated or
+     * new-line-separated. There is currently a 10MB limit for the data (approximately 800,000
+     * accounts).
+     *
+     * This property serves the same purpose as `Accounts` but allows you to specify a large number
+     * of accounts.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-deploymenttargets.html#cfn-cloudformation-stackset-deploymenttargets-accountsurl)
      */
     public fun accountsUrl(): String? = unwrap(this).getAccountsUrl()
 
     /**
-     * The organization root ID or organizational unit (OU) IDs to which StackSets deploys.
+     * The organization root ID or organizational unit (OU) IDs.
      *
      * *Pattern* : `^(ou-[a-z0-9]{4,32}-[a-z0-9]{8,32}|r-[a-z0-9]{4,32})$`
      *
@@ -1374,47 +1408,57 @@ public open class CfnStackSet(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param accountFilterType Limit deployment targets to individual accounts or include
-       * additional accounts with provided OUs.
-       * The following is a list of possible values for the `AccountFilterType` operation.
+       * @param accountFilterType Refines which accounts to deploy stacks to by specifying how to
+       * use the `Accounts` and `OrganizationalUnitIds` properties together.
+       * The following values determine how CloudFormation selects target accounts:
        *
-       * * `INTERSECTION` : StackSet deploys to the accounts specified in the `Accounts` parameter.
+       * * `INTERSECTION` : StackSet deploys to the accounts specified in the `Accounts` property.
        * * `DIFFERENCE` : StackSet deploys to the OU, excluding the accounts specified in the
-       * `Accounts` parameter.
-       * * `UNION` StackSet deploys to the OU, and the accounts specified in the `Accounts`
-       * parameter. `UNION` is not supported for create operations when using StackSet as a resource.
+       * `Accounts` property.
+       * * `UNION` : StackSet deploys to the OU, and the accounts specified in the `Accounts`
+       * property. `UNION` is not supported for create operations when using StackSet as a resource or
+       * the `CreateStackInstances` API.
        */
       public fun accountFilterType(accountFilterType: String)
 
       /**
-       * @param accounts The names of one or more AWS accounts for which you want to deploy stack
-       * set updates.
+       * @param accounts The account IDs of the AWS accounts .
+       * If you have many account numbers, you can provide those accounts using the `AccountsUrl`
+       * property instead.
+       *
        * *Pattern* : `^[0-9]{12}$`
        */
       public fun accounts(accounts: List<String>)
 
       /**
-       * @param accounts The names of one or more AWS accounts for which you want to deploy stack
-       * set updates.
+       * @param accounts The account IDs of the AWS accounts .
+       * If you have many account numbers, you can provide those accounts using the `AccountsUrl`
+       * property instead.
+       *
        * *Pattern* : `^[0-9]{12}$`
        */
       public fun accounts(vararg accounts: String)
 
       /**
-       * @param accountsUrl Returns the value of the `AccountsUrl` property.
+       * @param accountsUrl The Amazon S3 URL path to a file that contains a list of AWS account
+       * IDs.
+       * The file format must be either `.csv` or `.txt` , and the data can be comma-separated or
+       * new-line-separated. There is currently a 10MB limit for the data (approximately 800,000
+       * accounts).
+       *
+       * This property serves the same purpose as `Accounts` but allows you to specify a large
+       * number of accounts.
        */
       public fun accountsUrl(accountsUrl: String)
 
       /**
-       * @param organizationalUnitIds The organization root ID or organizational unit (OU) IDs to
-       * which StackSets deploys.
+       * @param organizationalUnitIds The organization root ID or organizational unit (OU) IDs.
        * *Pattern* : `^(ou-[a-z0-9]{4,32}-[a-z0-9]{8,32}|r-[a-z0-9]{4,32})$`
        */
       public fun organizationalUnitIds(organizationalUnitIds: List<String>)
 
       /**
-       * @param organizationalUnitIds The organization root ID or organizational unit (OU) IDs to
-       * which StackSets deploys.
+       * @param organizationalUnitIds The organization root ID or organizational unit (OU) IDs.
        * *Pattern* : `^(ou-[a-z0-9]{4,32}-[a-z0-9]{8,32}|r-[a-z0-9]{4,32})$`
        */
       public fun organizationalUnitIds(vararg organizationalUnitIds: String)
@@ -1425,23 +1469,26 @@ public open class CfnStackSet(
           software.amazon.awscdk.CfnStackSet.DeploymentTargetsProperty.builder()
 
       /**
-       * @param accountFilterType Limit deployment targets to individual accounts or include
-       * additional accounts with provided OUs.
-       * The following is a list of possible values for the `AccountFilterType` operation.
+       * @param accountFilterType Refines which accounts to deploy stacks to by specifying how to
+       * use the `Accounts` and `OrganizationalUnitIds` properties together.
+       * The following values determine how CloudFormation selects target accounts:
        *
-       * * `INTERSECTION` : StackSet deploys to the accounts specified in the `Accounts` parameter.
+       * * `INTERSECTION` : StackSet deploys to the accounts specified in the `Accounts` property.
        * * `DIFFERENCE` : StackSet deploys to the OU, excluding the accounts specified in the
-       * `Accounts` parameter.
-       * * `UNION` StackSet deploys to the OU, and the accounts specified in the `Accounts`
-       * parameter. `UNION` is not supported for create operations when using StackSet as a resource.
+       * `Accounts` property.
+       * * `UNION` : StackSet deploys to the OU, and the accounts specified in the `Accounts`
+       * property. `UNION` is not supported for create operations when using StackSet as a resource or
+       * the `CreateStackInstances` API.
        */
       override fun accountFilterType(accountFilterType: String) {
         cdkBuilder.accountFilterType(accountFilterType)
       }
 
       /**
-       * @param accounts The names of one or more AWS accounts for which you want to deploy stack
-       * set updates.
+       * @param accounts The account IDs of the AWS accounts .
+       * If you have many account numbers, you can provide those accounts using the `AccountsUrl`
+       * property instead.
+       *
        * *Pattern* : `^[0-9]{12}$`
        */
       override fun accounts(accounts: List<String>) {
@@ -1449,22 +1496,30 @@ public open class CfnStackSet(
       }
 
       /**
-       * @param accounts The names of one or more AWS accounts for which you want to deploy stack
-       * set updates.
+       * @param accounts The account IDs of the AWS accounts .
+       * If you have many account numbers, you can provide those accounts using the `AccountsUrl`
+       * property instead.
+       *
        * *Pattern* : `^[0-9]{12}$`
        */
       override fun accounts(vararg accounts: String): Unit = accounts(accounts.toList())
 
       /**
-       * @param accountsUrl Returns the value of the `AccountsUrl` property.
+       * @param accountsUrl The Amazon S3 URL path to a file that contains a list of AWS account
+       * IDs.
+       * The file format must be either `.csv` or `.txt` , and the data can be comma-separated or
+       * new-line-separated. There is currently a 10MB limit for the data (approximately 800,000
+       * accounts).
+       *
+       * This property serves the same purpose as `Accounts` but allows you to specify a large
+       * number of accounts.
        */
       override fun accountsUrl(accountsUrl: String) {
         cdkBuilder.accountsUrl(accountsUrl)
       }
 
       /**
-       * @param organizationalUnitIds The organization root ID or organizational unit (OU) IDs to
-       * which StackSets deploys.
+       * @param organizationalUnitIds The organization root ID or organizational unit (OU) IDs.
        * *Pattern* : `^(ou-[a-z0-9]{4,32}-[a-z0-9]{8,32}|r-[a-z0-9]{4,32})$`
        */
       override fun organizationalUnitIds(organizationalUnitIds: List<String>) {
@@ -1472,8 +1527,7 @@ public open class CfnStackSet(
       }
 
       /**
-       * @param organizationalUnitIds The organization root ID or organizational unit (OU) IDs to
-       * which StackSets deploys.
+       * @param organizationalUnitIds The organization root ID or organizational unit (OU) IDs.
        * *Pattern* : `^(ou-[a-z0-9]{4,32}-[a-z0-9]{8,32}|r-[a-z0-9]{4,32})$`
        */
       override fun organizationalUnitIds(vararg organizationalUnitIds: String): Unit =
@@ -1488,23 +1542,27 @@ public open class CfnStackSet(
     ) : CdkObject(cdkObject),
         DeploymentTargetsProperty {
       /**
-       * Limit deployment targets to individual accounts or include additional accounts with
-       * provided OUs.
+       * Refines which accounts to deploy stacks to by specifying how to use the `Accounts` and
+       * `OrganizationalUnitIds` properties together.
        *
-       * The following is a list of possible values for the `AccountFilterType` operation.
+       * The following values determine how CloudFormation selects target accounts:
        *
-       * * `INTERSECTION` : StackSet deploys to the accounts specified in the `Accounts` parameter.
+       * * `INTERSECTION` : StackSet deploys to the accounts specified in the `Accounts` property.
        * * `DIFFERENCE` : StackSet deploys to the OU, excluding the accounts specified in the
-       * `Accounts` parameter.
-       * * `UNION` StackSet deploys to the OU, and the accounts specified in the `Accounts`
-       * parameter. `UNION` is not supported for create operations when using StackSet as a resource.
+       * `Accounts` property.
+       * * `UNION` : StackSet deploys to the OU, and the accounts specified in the `Accounts`
+       * property. `UNION` is not supported for create operations when using StackSet as a resource or
+       * the `CreateStackInstances` API.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-deploymenttargets.html#cfn-cloudformation-stackset-deploymenttargets-accountfiltertype)
        */
       override fun accountFilterType(): String? = unwrap(this).getAccountFilterType()
 
       /**
-       * The names of one or more AWS accounts for which you want to deploy stack set updates.
+       * The account IDs of the AWS accounts .
+       *
+       * If you have many account numbers, you can provide those accounts using the `AccountsUrl`
+       * property instead.
        *
        * *Pattern* : `^[0-9]{12}$`
        *
@@ -1513,14 +1571,21 @@ public open class CfnStackSet(
       override fun accounts(): List<String> = unwrap(this).getAccounts() ?: emptyList()
 
       /**
-       * Returns the value of the `AccountsUrl` property.
+       * The Amazon S3 URL path to a file that contains a list of AWS account IDs.
+       *
+       * The file format must be either `.csv` or `.txt` , and the data can be comma-separated or
+       * new-line-separated. There is currently a 10MB limit for the data (approximately 800,000
+       * accounts).
+       *
+       * This property serves the same purpose as `Accounts` but allows you to specify a large
+       * number of accounts.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-deploymenttargets.html#cfn-cloudformation-stackset-deploymenttargets-accountsurl)
        */
       override fun accountsUrl(): String? = unwrap(this).getAccountsUrl()
 
       /**
-       * The organization root ID or organizational unit (OU) IDs to which StackSets deploys.
+       * The organization root ID or organizational unit (OU) IDs.
        *
        * *Pattern* : `^(ou-[a-z0-9]{4,32}-[a-z0-9]{8,32}|r-[a-z0-9]{4,32})$`
        *
@@ -1565,17 +1630,18 @@ public open class CfnStackSet(
    */
   public interface ManagedExecutionProperty {
     /**
-     * When `true` , StackSets performs non-conflicting operations concurrently and queues
+     * When `true` , CloudFormation performs non-conflicting operations concurrently and queues
      * conflicting operations.
      *
-     * After conflicting operations finish, StackSets starts queued operations in request order.
+     * After conflicting operations finish, CloudFormation starts queued operations in request
+     * order.
      *
      *
-     * If there are already running or queued operations, StackSets queues all incoming operations
-     * even if they are non-conflicting.
+     * If there are already running or queued operations, CloudFormation queues all incoming
+     * operations even if they are non-conflicting.
      *
-     * You can't modify your stack set's execution configuration while there are running or queued
-     * operations for that stack set.
+     * You can't modify your StackSet's execution configuration while there are running or queued
+     * operations for that StackSet.
      *
      *
      * When `false` (default), StackSets performs one operation at a time in request order.
@@ -1590,16 +1656,17 @@ public open class CfnStackSet(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param active When `true` , StackSets performs non-conflicting operations concurrently and
-       * queues conflicting operations.
-       * After conflicting operations finish, StackSets starts queued operations in request order.
+       * @param active When `true` , CloudFormation performs non-conflicting operations concurrently
+       * and queues conflicting operations.
+       * After conflicting operations finish, CloudFormation starts queued operations in request
+       * order.
        *
        *
-       * If there are already running or queued operations, StackSets queues all incoming operations
-       * even if they are non-conflicting.
+       * If there are already running or queued operations, CloudFormation queues all incoming
+       * operations even if they are non-conflicting.
        *
-       * You can't modify your stack set's execution configuration while there are running or queued
-       * operations for that stack set.
+       * You can't modify your StackSet's execution configuration while there are running or queued
+       * operations for that StackSet.
        *
        *
        * When `false` (default), StackSets performs one operation at a time in request order.
@@ -1607,16 +1674,17 @@ public open class CfnStackSet(
       public fun active(active: Boolean)
 
       /**
-       * @param active When `true` , StackSets performs non-conflicting operations concurrently and
-       * queues conflicting operations.
-       * After conflicting operations finish, StackSets starts queued operations in request order.
+       * @param active When `true` , CloudFormation performs non-conflicting operations concurrently
+       * and queues conflicting operations.
+       * After conflicting operations finish, CloudFormation starts queued operations in request
+       * order.
        *
        *
-       * If there are already running or queued operations, StackSets queues all incoming operations
-       * even if they are non-conflicting.
+       * If there are already running or queued operations, CloudFormation queues all incoming
+       * operations even if they are non-conflicting.
        *
-       * You can't modify your stack set's execution configuration while there are running or queued
-       * operations for that stack set.
+       * You can't modify your StackSet's execution configuration while there are running or queued
+       * operations for that StackSet.
        *
        *
        * When `false` (default), StackSets performs one operation at a time in request order.
@@ -1629,16 +1697,17 @@ public open class CfnStackSet(
           software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty.builder()
 
       /**
-       * @param active When `true` , StackSets performs non-conflicting operations concurrently and
-       * queues conflicting operations.
-       * After conflicting operations finish, StackSets starts queued operations in request order.
+       * @param active When `true` , CloudFormation performs non-conflicting operations concurrently
+       * and queues conflicting operations.
+       * After conflicting operations finish, CloudFormation starts queued operations in request
+       * order.
        *
        *
-       * If there are already running or queued operations, StackSets queues all incoming operations
-       * even if they are non-conflicting.
+       * If there are already running or queued operations, CloudFormation queues all incoming
+       * operations even if they are non-conflicting.
        *
-       * You can't modify your stack set's execution configuration while there are running or queued
-       * operations for that stack set.
+       * You can't modify your StackSet's execution configuration while there are running or queued
+       * operations for that StackSet.
        *
        *
        * When `false` (default), StackSets performs one operation at a time in request order.
@@ -1648,16 +1717,17 @@ public open class CfnStackSet(
       }
 
       /**
-       * @param active When `true` , StackSets performs non-conflicting operations concurrently and
-       * queues conflicting operations.
-       * After conflicting operations finish, StackSets starts queued operations in request order.
+       * @param active When `true` , CloudFormation performs non-conflicting operations concurrently
+       * and queues conflicting operations.
+       * After conflicting operations finish, CloudFormation starts queued operations in request
+       * order.
        *
        *
-       * If there are already running or queued operations, StackSets queues all incoming operations
-       * even if they are non-conflicting.
+       * If there are already running or queued operations, CloudFormation queues all incoming
+       * operations even if they are non-conflicting.
        *
-       * You can't modify your stack set's execution configuration while there are running or queued
-       * operations for that stack set.
+       * You can't modify your StackSet's execution configuration while there are running or queued
+       * operations for that StackSet.
        *
        *
        * When `false` (default), StackSets performs one operation at a time in request order.
@@ -1675,17 +1745,18 @@ public open class CfnStackSet(
     ) : CdkObject(cdkObject),
         ManagedExecutionProperty {
       /**
-       * When `true` , StackSets performs non-conflicting operations concurrently and queues
+       * When `true` , CloudFormation performs non-conflicting operations concurrently and queues
        * conflicting operations.
        *
-       * After conflicting operations finish, StackSets starts queued operations in request order.
+       * After conflicting operations finish, CloudFormation starts queued operations in request
+       * order.
        *
        *
-       * If there are already running or queued operations, StackSets queues all incoming operations
-       * even if they are non-conflicting.
+       * If there are already running or queued operations, CloudFormation queues all incoming
+       * operations even if they are non-conflicting.
        *
-       * You can't modify your stack set's execution configuration while there are running or queued
-       * operations for that stack set.
+       * You can't modify your StackSet's execution configuration while there are running or queued
+       * operations for that StackSet.
        *
        *
        * When `false` (default), StackSets performs one operation at a time in request order.
@@ -1712,12 +1783,12 @@ public open class CfnStackSet(
   }
 
   /**
-   * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
+   * The user-specified preferences for how CloudFormation performs a StackSet operation.
    *
-   * For more information on maximum concurrent accounts and failure tolerance, see [Stack set
+   * For more information on maximum concurrent accounts and failure tolerance, see [StackSet
    * operation
    * options](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-ops-options)
-   * .
+   * in the *AWS CloudFormation User Guide* .
    *
    * Example:
    *
@@ -1753,7 +1824,7 @@ public open class CfnStackSet(
      * similar.
      *
      * * `SOFT_FAILURE_TOLERANCE` : This option decouples `FailureToleranceCount` from the actual
-     * concurrency. This allows stack set operations to run at the concurrency level set by the
+     * concurrency. This allows StackSet operations to run at the concurrency level set by the
      * `MaxConcurrentCount` value, or `MaxConcurrentPercentage` , regardless of the number of failures.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html#cfn-cloudformation-stackset-operationpreferences-concurrencymode)
@@ -1761,11 +1832,11 @@ public open class CfnStackSet(
     public fun concurrencyMode(): String? = unwrap(this).getConcurrencyMode()
 
     /**
-     * The number of accounts, per Region, for which this operation can fail before AWS
-     * CloudFormation stops the operation in that Region.
+     * The number of accounts per Region this operation can fail in before CloudFormation stops the
+     * operation in that Region.
      *
-     * If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the operation in
-     * any subsequent Regions.
+     * If the operation is stopped in a Region, CloudFormation doesn't attempt the operation in any
+     * subsequent Regions.
      *
      * Conditional: You must specify either `FailureToleranceCount` or `FailureTolerancePercentage`
      * (but not both).
@@ -1775,13 +1846,13 @@ public open class CfnStackSet(
     public fun failureToleranceCount(): Number? = unwrap(this).getFailureToleranceCount()
 
     /**
-     * The percentage of accounts, per Region, for which this stack operation can fail before AWS
-     * CloudFormation stops the operation in that Region.
+     * The percentage of accounts per Region this stack operation can fail in before CloudFormation
+     * stops the operation in that Region.
      *
-     * If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the operation in
-     * any subsequent Regions.
+     * If the operation is stopped in a Region, CloudFormation doesn't attempt the operation in any
+     * subsequent Regions.
      *
-     * When calculating the number of accounts based on the specified percentage, AWS CloudFormation
+     * When calculating the number of accounts based on the specified percentage, CloudFormation
      * rounds *down* to the next whole number.
      *
      * Conditional: You must specify either `FailureToleranceCount` or `FailureTolerancePercentage`
@@ -1811,7 +1882,7 @@ public open class CfnStackSet(
     /**
      * The maximum percentage of accounts in which to perform this operation at one time.
      *
-     * When calculating the number of accounts based on the specified percentage, AWS CloudFormation
+     * When calculating the number of accounts based on the specified percentage, CloudFormation
      * rounds down to the next whole number. This is true except in cases where rounding down would
      * result is zero. In this case, CloudFormation sets the number as one instead.
      *
@@ -1837,10 +1908,6 @@ public open class CfnStackSet(
     /**
      * The order of the Regions where you want to perform the stack operation.
      *
-     *
-     * `RegionOrder` isn't followed if `AutoDeployment` is enabled.
-     *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html#cfn-cloudformation-stackset-operationpreferences-regionorder)
      */
     public fun regionOrder(): List<String> = unwrap(this).getRegionOrder() ?: emptyList()
@@ -1863,17 +1930,17 @@ public open class CfnStackSet(
        * similar.
        *
        * * `SOFT_FAILURE_TOLERANCE` : This option decouples `FailureToleranceCount` from the actual
-       * concurrency. This allows stack set operations to run at the concurrency level set by the
+       * concurrency. This allows StackSet operations to run at the concurrency level set by the
        * `MaxConcurrentCount` value, or `MaxConcurrentPercentage` , regardless of the number of
        * failures.
        */
       public fun concurrencyMode(concurrencyMode: String)
 
       /**
-       * @param failureToleranceCount The number of accounts, per Region, for which this operation
-       * can fail before AWS CloudFormation stops the operation in that Region.
-       * If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the operation
-       * in any subsequent Regions.
+       * @param failureToleranceCount The number of accounts per Region this operation can fail in
+       * before CloudFormation stops the operation in that Region.
+       * If the operation is stopped in a Region, CloudFormation doesn't attempt the operation in
+       * any subsequent Regions.
        *
        * Conditional: You must specify either `FailureToleranceCount` or
        * `FailureTolerancePercentage` (but not both).
@@ -1881,13 +1948,13 @@ public open class CfnStackSet(
       public fun failureToleranceCount(failureToleranceCount: Number)
 
       /**
-       * @param failureTolerancePercentage The percentage of accounts, per Region, for which this
-       * stack operation can fail before AWS CloudFormation stops the operation in that Region.
-       * If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the operation
-       * in any subsequent Regions.
+       * @param failureTolerancePercentage The percentage of accounts per Region this stack
+       * operation can fail in before CloudFormation stops the operation in that Region.
+       * If the operation is stopped in a Region, CloudFormation doesn't attempt the operation in
+       * any subsequent Regions.
        *
-       * When calculating the number of accounts based on the specified percentage, AWS
-       * CloudFormation rounds *down* to the next whole number.
+       * When calculating the number of accounts based on the specified percentage, CloudFormation
+       * rounds *down* to the next whole number.
        *
        * Conditional: You must specify either `FailureToleranceCount` or
        * `FailureTolerancePercentage` , but not both.
@@ -1912,10 +1979,9 @@ public open class CfnStackSet(
       /**
        * @param maxConcurrentPercentage The maximum percentage of accounts in which to perform this
        * operation at one time.
-       * When calculating the number of accounts based on the specified percentage, AWS
-       * CloudFormation rounds down to the next whole number. This is true except in cases where
-       * rounding down would result is zero. In this case, CloudFormation sets the number as one
-       * instead.
+       * When calculating the number of accounts based on the specified percentage, CloudFormation
+       * rounds down to the next whole number. This is true except in cases where rounding down would
+       * result is zero. In this case, CloudFormation sets the number as one instead.
        *
        * Note that this setting lets you specify the *maximum* for operations. For large
        * deployments, under certain circumstances the actual number of accounts acted upon concurrently
@@ -1934,15 +2000,11 @@ public open class CfnStackSet(
 
       /**
        * @param regionOrder The order of the Regions where you want to perform the stack operation.
-       *
-       * `RegionOrder` isn't followed if `AutoDeployment` is enabled.
        */
       public fun regionOrder(regionOrder: List<String>)
 
       /**
        * @param regionOrder The order of the Regions where you want to perform the stack operation.
-       *
-       * `RegionOrder` isn't followed if `AutoDeployment` is enabled.
        */
       public fun regionOrder(vararg regionOrder: String)
     }
@@ -1965,7 +2027,7 @@ public open class CfnStackSet(
        * similar.
        *
        * * `SOFT_FAILURE_TOLERANCE` : This option decouples `FailureToleranceCount` from the actual
-       * concurrency. This allows stack set operations to run at the concurrency level set by the
+       * concurrency. This allows StackSet operations to run at the concurrency level set by the
        * `MaxConcurrentCount` value, or `MaxConcurrentPercentage` , regardless of the number of
        * failures.
        */
@@ -1974,10 +2036,10 @@ public open class CfnStackSet(
       }
 
       /**
-       * @param failureToleranceCount The number of accounts, per Region, for which this operation
-       * can fail before AWS CloudFormation stops the operation in that Region.
-       * If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the operation
-       * in any subsequent Regions.
+       * @param failureToleranceCount The number of accounts per Region this operation can fail in
+       * before CloudFormation stops the operation in that Region.
+       * If the operation is stopped in a Region, CloudFormation doesn't attempt the operation in
+       * any subsequent Regions.
        *
        * Conditional: You must specify either `FailureToleranceCount` or
        * `FailureTolerancePercentage` (but not both).
@@ -1987,13 +2049,13 @@ public open class CfnStackSet(
       }
 
       /**
-       * @param failureTolerancePercentage The percentage of accounts, per Region, for which this
-       * stack operation can fail before AWS CloudFormation stops the operation in that Region.
-       * If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the operation
-       * in any subsequent Regions.
+       * @param failureTolerancePercentage The percentage of accounts per Region this stack
+       * operation can fail in before CloudFormation stops the operation in that Region.
+       * If the operation is stopped in a Region, CloudFormation doesn't attempt the operation in
+       * any subsequent Regions.
        *
-       * When calculating the number of accounts based on the specified percentage, AWS
-       * CloudFormation rounds *down* to the next whole number.
+       * When calculating the number of accounts based on the specified percentage, CloudFormation
+       * rounds *down* to the next whole number.
        *
        * Conditional: You must specify either `FailureToleranceCount` or
        * `FailureTolerancePercentage` , but not both.
@@ -2022,10 +2084,9 @@ public open class CfnStackSet(
       /**
        * @param maxConcurrentPercentage The maximum percentage of accounts in which to perform this
        * operation at one time.
-       * When calculating the number of accounts based on the specified percentage, AWS
-       * CloudFormation rounds down to the next whole number. This is true except in cases where
-       * rounding down would result is zero. In this case, CloudFormation sets the number as one
-       * instead.
+       * When calculating the number of accounts based on the specified percentage, CloudFormation
+       * rounds down to the next whole number. This is true except in cases where rounding down would
+       * result is zero. In this case, CloudFormation sets the number as one instead.
        *
        * Note that this setting lets you specify the *maximum* for operations. For large
        * deployments, under certain circumstances the actual number of accounts acted upon concurrently
@@ -2048,8 +2109,6 @@ public open class CfnStackSet(
 
       /**
        * @param regionOrder The order of the Regions where you want to perform the stack operation.
-       *
-       * `RegionOrder` isn't followed if `AutoDeployment` is enabled.
        */
       override fun regionOrder(regionOrder: List<String>) {
         cdkBuilder.regionOrder(regionOrder)
@@ -2057,8 +2116,6 @@ public open class CfnStackSet(
 
       /**
        * @param regionOrder The order of the Regions where you want to perform the stack operation.
-       *
-       * `RegionOrder` isn't followed if `AutoDeployment` is enabled.
        */
       override fun regionOrder(vararg regionOrder: String): Unit = regionOrder(regionOrder.toList())
 
@@ -2083,7 +2140,7 @@ public open class CfnStackSet(
        * similar.
        *
        * * `SOFT_FAILURE_TOLERANCE` : This option decouples `FailureToleranceCount` from the actual
-       * concurrency. This allows stack set operations to run at the concurrency level set by the
+       * concurrency. This allows StackSet operations to run at the concurrency level set by the
        * `MaxConcurrentCount` value, or `MaxConcurrentPercentage` , regardless of the number of
        * failures.
        *
@@ -2092,11 +2149,11 @@ public open class CfnStackSet(
       override fun concurrencyMode(): String? = unwrap(this).getConcurrencyMode()
 
       /**
-       * The number of accounts, per Region, for which this operation can fail before AWS
-       * CloudFormation stops the operation in that Region.
+       * The number of accounts per Region this operation can fail in before CloudFormation stops
+       * the operation in that Region.
        *
-       * If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the operation
-       * in any subsequent Regions.
+       * If the operation is stopped in a Region, CloudFormation doesn't attempt the operation in
+       * any subsequent Regions.
        *
        * Conditional: You must specify either `FailureToleranceCount` or
        * `FailureTolerancePercentage` (but not both).
@@ -2106,14 +2163,14 @@ public open class CfnStackSet(
       override fun failureToleranceCount(): Number? = unwrap(this).getFailureToleranceCount()
 
       /**
-       * The percentage of accounts, per Region, for which this stack operation can fail before AWS
+       * The percentage of accounts per Region this stack operation can fail in before
        * CloudFormation stops the operation in that Region.
        *
-       * If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the operation
-       * in any subsequent Regions.
+       * If the operation is stopped in a Region, CloudFormation doesn't attempt the operation in
+       * any subsequent Regions.
        *
-       * When calculating the number of accounts based on the specified percentage, AWS
-       * CloudFormation rounds *down* to the next whole number.
+       * When calculating the number of accounts based on the specified percentage, CloudFormation
+       * rounds *down* to the next whole number.
        *
        * Conditional: You must specify either `FailureToleranceCount` or
        * `FailureTolerancePercentage` , but not both.
@@ -2143,10 +2200,9 @@ public open class CfnStackSet(
       /**
        * The maximum percentage of accounts in which to perform this operation at one time.
        *
-       * When calculating the number of accounts based on the specified percentage, AWS
-       * CloudFormation rounds down to the next whole number. This is true except in cases where
-       * rounding down would result is zero. In this case, CloudFormation sets the number as one
-       * instead.
+       * When calculating the number of accounts based on the specified percentage, CloudFormation
+       * rounds down to the next whole number. This is true except in cases where rounding down would
+       * result is zero. In this case, CloudFormation sets the number as one instead.
        *
        * Note that this setting lets you specify the *maximum* for operations. For large
        * deployments, under certain circumstances the actual number of accounts acted upon concurrently
@@ -2169,10 +2225,6 @@ public open class CfnStackSet(
 
       /**
        * The order of the Regions where you want to perform the stack operation.
-       *
-       *
-       * `RegionOrder` isn't followed if `AutoDeployment` is enabled.
-       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html#cfn-cloudformation-stackset-operationpreferences-regionorder)
        */
@@ -2216,7 +2268,7 @@ public open class CfnStackSet(
     /**
      * The key associated with the parameter.
      *
-     * If you don't specify a key and value for a particular parameter, AWS CloudFormation uses the
+     * If you don't specify a key and value for a particular parameter, CloudFormation uses the
      * default value that's specified in your template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html#cfn-cloudformation-stackset-parameter-parameterkey)
@@ -2237,8 +2289,8 @@ public open class CfnStackSet(
     public interface Builder {
       /**
        * @param parameterKey The key associated with the parameter. 
-       * If you don't specify a key and value for a particular parameter, AWS CloudFormation uses
-       * the default value that's specified in your template.
+       * If you don't specify a key and value for a particular parameter, CloudFormation uses the
+       * default value that's specified in your template.
        */
       public fun parameterKey(parameterKey: String)
 
@@ -2254,8 +2306,8 @@ public open class CfnStackSet(
 
       /**
        * @param parameterKey The key associated with the parameter. 
-       * If you don't specify a key and value for a particular parameter, AWS CloudFormation uses
-       * the default value that's specified in your template.
+       * If you don't specify a key and value for a particular parameter, CloudFormation uses the
+       * default value that's specified in your template.
        */
       override fun parameterKey(parameterKey: String) {
         cdkBuilder.parameterKey(parameterKey)
@@ -2278,8 +2330,8 @@ public open class CfnStackSet(
       /**
        * The key associated with the parameter.
        *
-       * If you don't specify a key and value for a particular parameter, AWS CloudFormation uses
-       * the default value that's specified in your template.
+       * If you don't specify a key and value for a particular parameter, CloudFormation uses the
+       * default value that's specified in your template.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html#cfn-cloudformation-stackset-parameter-parameterkey)
        */
@@ -2338,15 +2390,14 @@ public open class CfnStackSet(
    */
   public interface StackInstancesProperty {
     /**
-     * The AWS `OrganizationalUnitIds` or `Accounts` for which to create stack instances in the
-     * specified Regions.
+     * The AWS Organizations accounts or AWS accounts to deploy stacks to in the specified Regions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-stackinstances.html#cfn-cloudformation-stackset-stackinstances-deploymenttargets)
      */
     public fun deploymentTargets(): Any
 
     /**
-     * A list of stack set parameters whose values you want to override in the selected stack
+     * A list of StackSet parameters whose values you want to override in the selected stack
      * instances.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-stackinstances.html#cfn-cloudformation-stackset-stackinstances-parameteroverrides)
@@ -2367,39 +2418,39 @@ public open class CfnStackSet(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param deploymentTargets The AWS `OrganizationalUnitIds` or `Accounts` for which to create
-       * stack instances in the specified Regions. 
+       * @param deploymentTargets The AWS Organizations accounts or AWS accounts to deploy stacks to
+       * in the specified Regions. 
        */
       public fun deploymentTargets(deploymentTargets: IResolvable)
 
       /**
-       * @param deploymentTargets The AWS `OrganizationalUnitIds` or `Accounts` for which to create
-       * stack instances in the specified Regions. 
+       * @param deploymentTargets The AWS Organizations accounts or AWS accounts to deploy stacks to
+       * in the specified Regions. 
        */
       public fun deploymentTargets(deploymentTargets: DeploymentTargetsProperty)
 
       /**
-       * @param deploymentTargets The AWS `OrganizationalUnitIds` or `Accounts` for which to create
-       * stack instances in the specified Regions. 
+       * @param deploymentTargets The AWS Organizations accounts or AWS accounts to deploy stacks to
+       * in the specified Regions. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cce75b5342b1638fb000023ed0c15e590133242c5c446ad9ac733df727569a8f")
       public fun deploymentTargets(deploymentTargets: DeploymentTargetsProperty.Builder.() -> Unit)
 
       /**
-       * @param parameterOverrides A list of stack set parameters whose values you want to override
+       * @param parameterOverrides A list of StackSet parameters whose values you want to override
        * in the selected stack instances.
        */
       public fun parameterOverrides(parameterOverrides: IResolvable)
 
       /**
-       * @param parameterOverrides A list of stack set parameters whose values you want to override
+       * @param parameterOverrides A list of StackSet parameters whose values you want to override
        * in the selected stack instances.
        */
       public fun parameterOverrides(parameterOverrides: List<Any>)
 
       /**
-       * @param parameterOverrides A list of stack set parameters whose values you want to override
+       * @param parameterOverrides A list of StackSet parameters whose values you want to override
        * in the selected stack instances.
        */
       public fun parameterOverrides(vararg parameterOverrides: Any)
@@ -2422,24 +2473,24 @@ public open class CfnStackSet(
           software.amazon.awscdk.CfnStackSet.StackInstancesProperty.builder()
 
       /**
-       * @param deploymentTargets The AWS `OrganizationalUnitIds` or `Accounts` for which to create
-       * stack instances in the specified Regions. 
+       * @param deploymentTargets The AWS Organizations accounts or AWS accounts to deploy stacks to
+       * in the specified Regions. 
        */
       override fun deploymentTargets(deploymentTargets: IResolvable) {
         cdkBuilder.deploymentTargets(deploymentTargets.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param deploymentTargets The AWS `OrganizationalUnitIds` or `Accounts` for which to create
-       * stack instances in the specified Regions. 
+       * @param deploymentTargets The AWS Organizations accounts or AWS accounts to deploy stacks to
+       * in the specified Regions. 
        */
       override fun deploymentTargets(deploymentTargets: DeploymentTargetsProperty) {
         cdkBuilder.deploymentTargets(deploymentTargets.let(DeploymentTargetsProperty.Companion::unwrap))
       }
 
       /**
-       * @param deploymentTargets The AWS `OrganizationalUnitIds` or `Accounts` for which to create
-       * stack instances in the specified Regions. 
+       * @param deploymentTargets The AWS Organizations accounts or AWS accounts to deploy stacks to
+       * in the specified Regions. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cce75b5342b1638fb000023ed0c15e590133242c5c446ad9ac733df727569a8f")
@@ -2448,7 +2499,7 @@ public open class CfnStackSet(
           Unit = deploymentTargets(DeploymentTargetsProperty(deploymentTargets))
 
       /**
-       * @param parameterOverrides A list of stack set parameters whose values you want to override
+       * @param parameterOverrides A list of StackSet parameters whose values you want to override
        * in the selected stack instances.
        */
       override fun parameterOverrides(parameterOverrides: IResolvable) {
@@ -2456,7 +2507,7 @@ public open class CfnStackSet(
       }
 
       /**
-       * @param parameterOverrides A list of stack set parameters whose values you want to override
+       * @param parameterOverrides A list of StackSet parameters whose values you want to override
        * in the selected stack instances.
        */
       override fun parameterOverrides(parameterOverrides: List<Any>) {
@@ -2464,7 +2515,7 @@ public open class CfnStackSet(
       }
 
       /**
-       * @param parameterOverrides A list of stack set parameters whose values you want to override
+       * @param parameterOverrides A list of StackSet parameters whose values you want to override
        * in the selected stack instances.
        */
       override fun parameterOverrides(vararg parameterOverrides: Any): Unit =
@@ -2493,15 +2544,15 @@ public open class CfnStackSet(
     ) : CdkObject(cdkObject),
         StackInstancesProperty {
       /**
-       * The AWS `OrganizationalUnitIds` or `Accounts` for which to create stack instances in the
-       * specified Regions.
+       * The AWS Organizations accounts or AWS accounts to deploy stacks to in the specified
+       * Regions.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-stackinstances.html#cfn-cloudformation-stackset-stackinstances-deploymenttargets)
        */
       override fun deploymentTargets(): Any = unwrap(this).getDeploymentTargets()
 
       /**
-       * A list of stack set parameters whose values you want to override in the selected stack
+       * A list of StackSet parameters whose values you want to override in the selected stack
        * instances.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-stackinstances.html#cfn-cloudformation-stackset-stackinstances-parameteroverrides)

@@ -21,10 +21,10 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * An invoice unit is a set of mutually exclusive accounts that correspond to your business entity.
+ * An invoice unit is a set of mutually exclusive account that correspond to your business entity.
  *
- * Invoice units allow you to separate AWS account costs and configures your invoice for each
- * business entity.
+ * Invoice units allow you separate AWS account costs and configures your invoice for each business
+ * entity going forward.
  *
  * Example:
  *
@@ -72,12 +72,17 @@ public open class CfnInvoiceUnit(
   )
 
   /**
+   * The ARN to identify an invoice unit.
    *
+   * This information can't be modified or deleted.
    */
   public open fun attrInvoiceUnitArn(): String = unwrap(this).getAttrInvoiceUnitArn()
 
   /**
+   * The last time the invoice unit was updated.
    *
+   * This is important to determine the version of invoice unit configuration used to create the
+   * invoices. Any invoice created after this modified time will use this invoice unit configuration.
    */
   public open fun attrLastModified(): IResolvable =
       unwrap(this).getAttrLastModified().let(IResolvable::wrap)
@@ -89,12 +94,12 @@ public open class CfnInvoiceUnit(
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
-   *
+   * The assigned description for an invoice unit.
    */
   public open fun description(): String? = unwrap(this).getDescription()
 
   /**
-   *
+   * The assigned description for an invoice unit.
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
@@ -110,88 +115,88 @@ public open class CfnInvoiceUnit(
   }
 
   /**
-   *
+   * The account that receives invoices related to the invoice unit.
    */
   public open fun invoiceReceiver(): String = unwrap(this).getInvoiceReceiver()
 
   /**
-   *
+   * The account that receives invoices related to the invoice unit.
    */
   public open fun invoiceReceiver(`value`: String) {
     unwrap(this).setInvoiceReceiver(`value`)
   }
 
   /**
-   *
+   * A unique name that is distinctive within your AWS .
    */
   public open fun name(): String = unwrap(this).getName()
 
   /**
-   *
+   * A unique name that is distinctive within your AWS .
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
   }
 
   /**
-   *
+   * The tag structure that contains a tag key and value.
    */
   public open fun resourceTags(): List<ResourceTagProperty> =
       unwrap(this).getResourceTags()?.map(ResourceTagProperty::wrap) ?: emptyList()
 
   /**
-   *
+   * The tag structure that contains a tag key and value.
    */
   public open fun resourceTags(`value`: List<ResourceTagProperty>) {
     unwrap(this).setResourceTags(`value`.map(ResourceTagProperty.Companion::unwrap))
   }
 
   /**
-   *
+   * The tag structure that contains a tag key and value.
    */
   public open fun resourceTags(vararg `value`: ResourceTagProperty): Unit =
       resourceTags(`value`.toList())
 
   /**
-   *
+   * An `InvoiceUnitRule` object used the categorize invoice units.
    */
   public open fun rule(): Any = unwrap(this).getRule()
 
   /**
-   *
+   * An `InvoiceUnitRule` object used the categorize invoice units.
    */
   public open fun rule(`value`: IResolvable) {
     unwrap(this).setRule(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   *
+   * An `InvoiceUnitRule` object used the categorize invoice units.
    */
   public open fun rule(`value`: RuleProperty) {
     unwrap(this).setRule(`value`.let(RuleProperty.Companion::unwrap))
   }
 
   /**
-   *
+   * An `InvoiceUnitRule` object used the categorize invoice units.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("61a0c84553162241ddcc0ea09054e214431700d0a0cd740e84f96115960fd5b7")
   public open fun rule(`value`: RuleProperty.Builder.() -> Unit): Unit = rule(RuleProperty(`value`))
 
   /**
-   *
+   * Whether the invoice unit based tax inheritance is/ should be enabled or disabled.
    */
   public open fun taxInheritanceDisabled(): Any? = unwrap(this).getTaxInheritanceDisabled()
 
   /**
-   *
+   * Whether the invoice unit based tax inheritance is/ should be enabled or disabled.
    */
   public open fun taxInheritanceDisabled(`value`: Boolean) {
     unwrap(this).setTaxInheritanceDisabled(`value`)
   }
 
   /**
-   *
+   * Whether the invoice unit based tax inheritance is/ should be enabled or disabled.
    */
   public open fun taxInheritanceDisabled(`value`: IResolvable) {
     unwrap(this).setTaxInheritanceDisabled(`value`.let(IResolvable.Companion::unwrap))
@@ -203,64 +208,88 @@ public open class CfnInvoiceUnit(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The assigned description for an invoice unit.
+     *
+     * This information can't be modified or deleted.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-description)
-     * @param description 
+     * @param description The assigned description for an invoice unit. 
      */
     public fun description(description: String)
 
     /**
+     * The account that receives invoices related to the invoice unit.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-invoicereceiver)
-     * @param invoiceReceiver 
+     * @param invoiceReceiver The account that receives invoices related to the invoice unit. 
      */
     public fun invoiceReceiver(invoiceReceiver: String)
 
     /**
+     * A unique name that is distinctive within your AWS .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-name)
-     * @param name 
+     * @param name A unique name that is distinctive within your AWS . 
      */
     public fun name(name: String)
 
     /**
+     * The tag structure that contains a tag key and value.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-resourcetags)
-     * @param resourceTags 
+     * @param resourceTags The tag structure that contains a tag key and value. 
      */
     public fun resourceTags(resourceTags: List<ResourceTagProperty>)
 
     /**
+     * The tag structure that contains a tag key and value.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-resourcetags)
-     * @param resourceTags 
+     * @param resourceTags The tag structure that contains a tag key and value. 
      */
     public fun resourceTags(vararg resourceTags: ResourceTagProperty)
 
     /**
+     * An `InvoiceUnitRule` object used the categorize invoice units.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-rule)
-     * @param rule 
+     * @param rule An `InvoiceUnitRule` object used the categorize invoice units. 
      */
     public fun rule(rule: IResolvable)
 
     /**
+     * An `InvoiceUnitRule` object used the categorize invoice units.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-rule)
-     * @param rule 
+     * @param rule An `InvoiceUnitRule` object used the categorize invoice units. 
      */
     public fun rule(rule: RuleProperty)
 
     /**
+     * An `InvoiceUnitRule` object used the categorize invoice units.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-rule)
-     * @param rule 
+     * @param rule An `InvoiceUnitRule` object used the categorize invoice units. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d9746dea2aa395ecf2e2f6527aad93fd2837dac46b4c28905dc8bec28b305cb6")
     public fun rule(rule: RuleProperty.Builder.() -> Unit)
 
     /**
+     * Whether the invoice unit based tax inheritance is/ should be enabled or disabled.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-taxinheritancedisabled)
-     * @param taxInheritanceDisabled 
+     * @param taxInheritanceDisabled Whether the invoice unit based tax inheritance is/ should be
+     * enabled or disabled. 
      */
     public fun taxInheritanceDisabled(taxInheritanceDisabled: Boolean)
 
     /**
+     * Whether the invoice unit based tax inheritance is/ should be enabled or disabled.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-taxinheritancedisabled)
-     * @param taxInheritanceDisabled 
+     * @param taxInheritanceDisabled Whether the invoice unit based tax inheritance is/ should be
+     * enabled or disabled. 
      */
     public fun taxInheritanceDisabled(taxInheritanceDisabled: IResolvable)
   }
@@ -273,79 +302,103 @@ public open class CfnInvoiceUnit(
         software.amazon.awscdk.services.invoicing.CfnInvoiceUnit.Builder.create(scope, id)
 
     /**
+     * The assigned description for an invoice unit.
+     *
+     * This information can't be modified or deleted.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-description)
-     * @param description 
+     * @param description The assigned description for an invoice unit. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
+     * The account that receives invoices related to the invoice unit.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-invoicereceiver)
-     * @param invoiceReceiver 
+     * @param invoiceReceiver The account that receives invoices related to the invoice unit. 
      */
     override fun invoiceReceiver(invoiceReceiver: String) {
       cdkBuilder.invoiceReceiver(invoiceReceiver)
     }
 
     /**
+     * A unique name that is distinctive within your AWS .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-name)
-     * @param name 
+     * @param name A unique name that is distinctive within your AWS . 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     /**
+     * The tag structure that contains a tag key and value.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-resourcetags)
-     * @param resourceTags 
+     * @param resourceTags The tag structure that contains a tag key and value. 
      */
     override fun resourceTags(resourceTags: List<ResourceTagProperty>) {
       cdkBuilder.resourceTags(resourceTags.map(ResourceTagProperty.Companion::unwrap))
     }
 
     /**
+     * The tag structure that contains a tag key and value.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-resourcetags)
-     * @param resourceTags 
+     * @param resourceTags The tag structure that contains a tag key and value. 
      */
     override fun resourceTags(vararg resourceTags: ResourceTagProperty): Unit =
         resourceTags(resourceTags.toList())
 
     /**
+     * An `InvoiceUnitRule` object used the categorize invoice units.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-rule)
-     * @param rule 
+     * @param rule An `InvoiceUnitRule` object used the categorize invoice units. 
      */
     override fun rule(rule: IResolvable) {
       cdkBuilder.rule(rule.let(IResolvable.Companion::unwrap))
     }
 
     /**
+     * An `InvoiceUnitRule` object used the categorize invoice units.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-rule)
-     * @param rule 
+     * @param rule An `InvoiceUnitRule` object used the categorize invoice units. 
      */
     override fun rule(rule: RuleProperty) {
       cdkBuilder.rule(rule.let(RuleProperty.Companion::unwrap))
     }
 
     /**
+     * An `InvoiceUnitRule` object used the categorize invoice units.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-rule)
-     * @param rule 
+     * @param rule An `InvoiceUnitRule` object used the categorize invoice units. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d9746dea2aa395ecf2e2f6527aad93fd2837dac46b4c28905dc8bec28b305cb6")
     override fun rule(rule: RuleProperty.Builder.() -> Unit): Unit = rule(RuleProperty(rule))
 
     /**
+     * Whether the invoice unit based tax inheritance is/ should be enabled or disabled.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-taxinheritancedisabled)
-     * @param taxInheritanceDisabled 
+     * @param taxInheritanceDisabled Whether the invoice unit based tax inheritance is/ should be
+     * enabled or disabled. 
      */
     override fun taxInheritanceDisabled(taxInheritanceDisabled: Boolean) {
       cdkBuilder.taxInheritanceDisabled(taxInheritanceDisabled)
     }
 
     /**
+     * Whether the invoice unit based tax inheritance is/ should be enabled or disabled.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-invoicing-invoiceunit.html#cfn-invoicing-invoiceunit-taxinheritancedisabled)
-     * @param taxInheritanceDisabled 
+     * @param taxInheritanceDisabled Whether the invoice unit based tax inheritance is/ should be
+     * enabled or disabled. 
      */
     override fun taxInheritanceDisabled(taxInheritanceDisabled: IResolvable) {
       cdkBuilder.taxInheritanceDisabled(taxInheritanceDisabled.let(IResolvable.Companion::unwrap))
@@ -377,6 +430,8 @@ public open class CfnInvoiceUnit(
   }
 
   /**
+   * The tag structure that contains a tag key and value.
+   *
    * Example:
    *
    * ```
@@ -393,11 +448,15 @@ public open class CfnInvoiceUnit(
    */
   public interface ResourceTagProperty {
     /**
+     * The object key of your of your resource tag.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-invoicing-invoiceunit-resourcetag.html#cfn-invoicing-invoiceunit-resourcetag-key)
      */
     public fun key(): String
 
     /**
+     * The specific value of the resource tag.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-invoicing-invoiceunit-resourcetag.html#cfn-invoicing-invoiceunit-resourcetag-value)
      */
     public fun `value`(): String
@@ -408,12 +467,12 @@ public open class CfnInvoiceUnit(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param key the value to be set. 
+       * @param key The object key of your of your resource tag. 
        */
       public fun key(key: String)
 
       /**
-       * @param value the value to be set. 
+       * @param value The specific value of the resource tag. 
        */
       public fun `value`(`value`: String)
     }
@@ -424,14 +483,14 @@ public open class CfnInvoiceUnit(
           software.amazon.awscdk.services.invoicing.CfnInvoiceUnit.ResourceTagProperty.builder()
 
       /**
-       * @param key the value to be set. 
+       * @param key The object key of your of your resource tag. 
        */
       override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
       /**
-       * @param value the value to be set. 
+       * @param value The specific value of the resource tag. 
        */
       override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
@@ -447,11 +506,15 @@ public open class CfnInvoiceUnit(
     ) : CdkObject(cdkObject),
         ResourceTagProperty {
       /**
+       * The object key of your of your resource tag.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-invoicing-invoiceunit-resourcetag.html#cfn-invoicing-invoiceunit-resourcetag-key)
        */
       override fun key(): String = unwrap(this).getKey()
 
       /**
+       * The specific value of the resource tag.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-invoicing-invoiceunit-resourcetag.html#cfn-invoicing-invoiceunit-resourcetag-value)
        */
       override fun `value`(): String = unwrap(this).getValue()
@@ -476,6 +539,8 @@ public open class CfnInvoiceUnit(
   }
 
   /**
+   * The `InvoiceUnitRule` object used to update invoice units.
+   *
    * Example:
    *
    * ```
@@ -491,6 +556,8 @@ public open class CfnInvoiceUnit(
    */
   public interface RuleProperty {
     /**
+     * The list of `LINKED_ACCOUNT` IDs where charges are included within the invoice unit.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-invoicing-invoiceunit-rule.html#cfn-invoicing-invoiceunit-rule-linkedaccounts)
      */
     public fun linkedAccounts(): List<String>
@@ -501,12 +568,14 @@ public open class CfnInvoiceUnit(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param linkedAccounts the value to be set. 
+       * @param linkedAccounts The list of `LINKED_ACCOUNT` IDs where charges are included within
+       * the invoice unit. 
        */
       public fun linkedAccounts(linkedAccounts: List<String>)
 
       /**
-       * @param linkedAccounts the value to be set. 
+       * @param linkedAccounts The list of `LINKED_ACCOUNT` IDs where charges are included within
+       * the invoice unit. 
        */
       public fun linkedAccounts(vararg linkedAccounts: String)
     }
@@ -517,14 +586,16 @@ public open class CfnInvoiceUnit(
           software.amazon.awscdk.services.invoicing.CfnInvoiceUnit.RuleProperty.builder()
 
       /**
-       * @param linkedAccounts the value to be set. 
+       * @param linkedAccounts The list of `LINKED_ACCOUNT` IDs where charges are included within
+       * the invoice unit. 
        */
       override fun linkedAccounts(linkedAccounts: List<String>) {
         cdkBuilder.linkedAccounts(linkedAccounts)
       }
 
       /**
-       * @param linkedAccounts the value to be set. 
+       * @param linkedAccounts The list of `LINKED_ACCOUNT` IDs where charges are included within
+       * the invoice unit. 
        */
       override fun linkedAccounts(vararg linkedAccounts: String): Unit =
           linkedAccounts(linkedAccounts.toList())
@@ -538,6 +609,8 @@ public open class CfnInvoiceUnit(
     ) : CdkObject(cdkObject),
         RuleProperty {
       /**
+       * The list of `LINKED_ACCOUNT` IDs where charges are included within the invoice unit.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-invoicing-invoiceunit-rule.html#cfn-invoicing-invoiceunit-rule-linkedaccounts)
        */
       override fun linkedAccounts(): List<String> = unwrap(this).getLinkedAccounts()

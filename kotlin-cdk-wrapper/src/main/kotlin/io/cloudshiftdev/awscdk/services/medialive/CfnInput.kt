@@ -59,6 +59,25 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .name("name")
  * .roleArn("roleArn")
+ * .sdiSources(List.of("sdiSources"))
+ * .smpte2110ReceiverGroupSettings(Smpte2110ReceiverGroupSettingsProperty.builder()
+ * .smpte2110ReceiverGroups(List.of(Smpte2110ReceiverGroupProperty.builder()
+ * .sdpSettings(Smpte2110ReceiverGroupSdpSettingsProperty.builder()
+ * .ancillarySdps(List.of(InputSdpLocationProperty.builder()
+ * .mediaIndex(123)
+ * .sdpUrl("sdpUrl")
+ * .build()))
+ * .audioSdps(List.of(InputSdpLocationProperty.builder()
+ * .mediaIndex(123)
+ * .sdpUrl("sdpUrl")
+ * .build()))
+ * .videoSdp(InputSdpLocationProperty.builder()
+ * .mediaIndex(123)
+ * .sdpUrl("sdpUrl")
+ * .build())
+ * .build())
+ * .build()))
+ * .build())
  * .sources(List.of(InputSourceRequestProperty.builder()
  * .passwordParam("passwordParam")
  * .url("url")
@@ -310,6 +329,52 @@ public open class CfnInput(
   }
 
   /**
+   *
+   */
+  public open fun sdiSources(): List<String> = unwrap(this).getSdiSources() ?: emptyList()
+
+  /**
+   *
+   */
+  public open fun sdiSources(`value`: List<String>) {
+    unwrap(this).setSdiSources(`value`)
+  }
+
+  /**
+   *
+   */
+  public open fun sdiSources(vararg `value`: String): Unit = sdiSources(`value`.toList())
+
+  /**
+   *
+   */
+  public open fun smpte2110ReceiverGroupSettings(): Any? =
+      unwrap(this).getSmpte2110ReceiverGroupSettings()
+
+  /**
+   *
+   */
+  public open fun smpte2110ReceiverGroupSettings(`value`: IResolvable) {
+    unwrap(this).setSmpte2110ReceiverGroupSettings(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  public open fun smpte2110ReceiverGroupSettings(`value`: Smpte2110ReceiverGroupSettingsProperty) {
+    unwrap(this).setSmpte2110ReceiverGroupSettings(`value`.let(Smpte2110ReceiverGroupSettingsProperty.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("c83f11bec0968371cc22eb9ef32c8d7117725af54a9f98283e3e3e0c2ae98d9e")
+  public open
+      fun smpte2110ReceiverGroupSettings(`value`: Smpte2110ReceiverGroupSettingsProperty.Builder.() -> Unit):
+      Unit = smpte2110ReceiverGroupSettings(Smpte2110ReceiverGroupSettingsProperty(`value`))
+
+  /**
    * Settings that apply only if the input is a pull type of input.
    */
   public open fun sources(): Any? = unwrap(this).getSources()
@@ -558,6 +623,40 @@ public open class CfnInput(
      * Amazon VPC input. 
      */
     public fun roleArn(roleArn: String)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-sdisources)
+     * @param sdiSources 
+     */
+    public fun sdiSources(sdiSources: List<String>)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-sdisources)
+     * @param sdiSources 
+     */
+    public fun sdiSources(vararg sdiSources: String)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-smpte2110receivergroupsettings)
+     * @param smpte2110ReceiverGroupSettings 
+     */
+    public fun smpte2110ReceiverGroupSettings(smpte2110ReceiverGroupSettings: IResolvable)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-smpte2110receivergroupsettings)
+     * @param smpte2110ReceiverGroupSettings 
+     */
+    public
+        fun smpte2110ReceiverGroupSettings(smpte2110ReceiverGroupSettings: Smpte2110ReceiverGroupSettingsProperty)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-smpte2110receivergroupsettings)
+     * @param smpte2110ReceiverGroupSettings 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a18122e233278301dae7b23ae45e93e65531b653838a4edc6ee8256773b63314")
+    public
+        fun smpte2110ReceiverGroupSettings(smpte2110ReceiverGroupSettings: Smpte2110ReceiverGroupSettingsProperty.Builder.() -> Unit)
 
     /**
      * Settings that apply only if the input is a pull type of input.
@@ -822,6 +921,48 @@ public open class CfnInput(
     override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-sdisources)
+     * @param sdiSources 
+     */
+    override fun sdiSources(sdiSources: List<String>) {
+      cdkBuilder.sdiSources(sdiSources)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-sdisources)
+     * @param sdiSources 
+     */
+    override fun sdiSources(vararg sdiSources: String): Unit = sdiSources(sdiSources.toList())
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-smpte2110receivergroupsettings)
+     * @param smpte2110ReceiverGroupSettings 
+     */
+    override fun smpte2110ReceiverGroupSettings(smpte2110ReceiverGroupSettings: IResolvable) {
+      cdkBuilder.smpte2110ReceiverGroupSettings(smpte2110ReceiverGroupSettings.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-smpte2110receivergroupsettings)
+     * @param smpte2110ReceiverGroupSettings 
+     */
+    override
+        fun smpte2110ReceiverGroupSettings(smpte2110ReceiverGroupSettings: Smpte2110ReceiverGroupSettingsProperty) {
+      cdkBuilder.smpte2110ReceiverGroupSettings(smpte2110ReceiverGroupSettings.let(Smpte2110ReceiverGroupSettingsProperty.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-smpte2110receivergroupsettings)
+     * @param smpte2110ReceiverGroupSettings 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a18122e233278301dae7b23ae45e93e65531b653838a4edc6ee8256773b63314")
+    override
+        fun smpte2110ReceiverGroupSettings(smpte2110ReceiverGroupSettings: Smpte2110ReceiverGroupSettingsProperty.Builder.() -> Unit):
+        Unit =
+        smpte2110ReceiverGroupSettings(Smpte2110ReceiverGroupSettingsProperty(smpte2110ReceiverGroupSettings))
 
     /**
      * Settings that apply only if the input is a pull type of input.
@@ -1399,6 +1540,105 @@ public open class CfnInput(
           software.amazon.awscdk.services.medialive.CfnInput.InputRequestDestinationRouteProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.medialive.CfnInput.InputRequestDestinationRouteProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * InputSdpLocationProperty inputSdpLocationProperty = InputSdpLocationProperty.builder()
+   * .mediaIndex(123)
+   * .sdpUrl("sdpUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputsdplocation.html)
+   */
+  public interface InputSdpLocationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputsdplocation.html#cfn-medialive-input-inputsdplocation-mediaindex)
+     */
+    public fun mediaIndex(): Number? = unwrap(this).getMediaIndex()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputsdplocation.html#cfn-medialive-input-inputsdplocation-sdpurl)
+     */
+    public fun sdpUrl(): String? = unwrap(this).getSdpUrl()
+
+    /**
+     * A builder for [InputSdpLocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param mediaIndex the value to be set.
+       */
+      public fun mediaIndex(mediaIndex: Number)
+
+      /**
+       * @param sdpUrl the value to be set.
+       */
+      public fun sdpUrl(sdpUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnInput.InputSdpLocationProperty.Builder =
+          software.amazon.awscdk.services.medialive.CfnInput.InputSdpLocationProperty.builder()
+
+      /**
+       * @param mediaIndex the value to be set.
+       */
+      override fun mediaIndex(mediaIndex: Number) {
+        cdkBuilder.mediaIndex(mediaIndex)
+      }
+
+      /**
+       * @param sdpUrl the value to be set.
+       */
+      override fun sdpUrl(sdpUrl: String) {
+        cdkBuilder.sdpUrl(sdpUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnInput.InputSdpLocationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputSdpLocationProperty,
+    ) : CdkObject(cdkObject),
+        InputSdpLocationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputsdplocation.html#cfn-medialive-input-inputsdplocation-mediaindex)
+       */
+      override fun mediaIndex(): Number? = unwrap(this).getMediaIndex()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputsdplocation.html#cfn-medialive-input-inputsdplocation-sdpurl)
+       */
+      override fun sdpUrl(): String? = unwrap(this).getSdpUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputSdpLocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputSdpLocationProperty):
+          InputSdpLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? InputSdpLocationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputSdpLocationProperty):
+          software.amazon.awscdk.services.medialive.CfnInput.InputSdpLocationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnInput.InputSdpLocationProperty
     }
   }
 
@@ -2004,6 +2244,449 @@ public open class CfnInput(
           software.amazon.awscdk.services.medialive.CfnInput.MulticastSourceCreateRequestProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.medialive.CfnInput.MulticastSourceCreateRequestProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * Smpte2110ReceiverGroupProperty smpte2110ReceiverGroupProperty =
+   * Smpte2110ReceiverGroupProperty.builder()
+   * .sdpSettings(Smpte2110ReceiverGroupSdpSettingsProperty.builder()
+   * .ancillarySdps(List.of(InputSdpLocationProperty.builder()
+   * .mediaIndex(123)
+   * .sdpUrl("sdpUrl")
+   * .build()))
+   * .audioSdps(List.of(InputSdpLocationProperty.builder()
+   * .mediaIndex(123)
+   * .sdpUrl("sdpUrl")
+   * .build()))
+   * .videoSdp(InputSdpLocationProperty.builder()
+   * .mediaIndex(123)
+   * .sdpUrl("sdpUrl")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-smpte2110receivergroup.html)
+   */
+  public interface Smpte2110ReceiverGroupProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-smpte2110receivergroup.html#cfn-medialive-input-smpte2110receivergroup-sdpsettings)
+     */
+    public fun sdpSettings(): Any? = unwrap(this).getSdpSettings()
+
+    /**
+     * A builder for [Smpte2110ReceiverGroupProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sdpSettings the value to be set.
+       */
+      public fun sdpSettings(sdpSettings: IResolvable)
+
+      /**
+       * @param sdpSettings the value to be set.
+       */
+      public fun sdpSettings(sdpSettings: Smpte2110ReceiverGroupSdpSettingsProperty)
+
+      /**
+       * @param sdpSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e9f1f9110cc3fd966af659df80f61f81498f711f17dfd1661e419036551cfde3")
+      public
+          fun sdpSettings(sdpSettings: Smpte2110ReceiverGroupSdpSettingsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupProperty.builder()
+
+      /**
+       * @param sdpSettings the value to be set.
+       */
+      override fun sdpSettings(sdpSettings: IResolvable) {
+        cdkBuilder.sdpSettings(sdpSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param sdpSettings the value to be set.
+       */
+      override fun sdpSettings(sdpSettings: Smpte2110ReceiverGroupSdpSettingsProperty) {
+        cdkBuilder.sdpSettings(sdpSettings.let(Smpte2110ReceiverGroupSdpSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param sdpSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e9f1f9110cc3fd966af659df80f61f81498f711f17dfd1661e419036551cfde3")
+      override
+          fun sdpSettings(sdpSettings: Smpte2110ReceiverGroupSdpSettingsProperty.Builder.() -> Unit):
+          Unit = sdpSettings(Smpte2110ReceiverGroupSdpSettingsProperty(sdpSettings))
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupProperty,
+    ) : CdkObject(cdkObject),
+        Smpte2110ReceiverGroupProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-smpte2110receivergroup.html#cfn-medialive-input-smpte2110receivergroup-sdpsettings)
+       */
+      override fun sdpSettings(): Any? = unwrap(this).getSdpSettings()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): Smpte2110ReceiverGroupProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupProperty):
+          Smpte2110ReceiverGroupProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Smpte2110ReceiverGroupProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: Smpte2110ReceiverGroupProperty):
+          software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * Smpte2110ReceiverGroupSdpSettingsProperty smpte2110ReceiverGroupSdpSettingsProperty =
+   * Smpte2110ReceiverGroupSdpSettingsProperty.builder()
+   * .ancillarySdps(List.of(InputSdpLocationProperty.builder()
+   * .mediaIndex(123)
+   * .sdpUrl("sdpUrl")
+   * .build()))
+   * .audioSdps(List.of(InputSdpLocationProperty.builder()
+   * .mediaIndex(123)
+   * .sdpUrl("sdpUrl")
+   * .build()))
+   * .videoSdp(InputSdpLocationProperty.builder()
+   * .mediaIndex(123)
+   * .sdpUrl("sdpUrl")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-smpte2110receivergroupsdpsettings.html)
+   */
+  public interface Smpte2110ReceiverGroupSdpSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-smpte2110receivergroupsdpsettings.html#cfn-medialive-input-smpte2110receivergroupsdpsettings-ancillarysdps)
+     */
+    public fun ancillarySdps(): Any? = unwrap(this).getAncillarySdps()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-smpte2110receivergroupsdpsettings.html#cfn-medialive-input-smpte2110receivergroupsdpsettings-audiosdps)
+     */
+    public fun audioSdps(): Any? = unwrap(this).getAudioSdps()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-smpte2110receivergroupsdpsettings.html#cfn-medialive-input-smpte2110receivergroupsdpsettings-videosdp)
+     */
+    public fun videoSdp(): Any? = unwrap(this).getVideoSdp()
+
+    /**
+     * A builder for [Smpte2110ReceiverGroupSdpSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ancillarySdps the value to be set.
+       */
+      public fun ancillarySdps(ancillarySdps: IResolvable)
+
+      /**
+       * @param ancillarySdps the value to be set.
+       */
+      public fun ancillarySdps(ancillarySdps: List<Any>)
+
+      /**
+       * @param ancillarySdps the value to be set.
+       */
+      public fun ancillarySdps(vararg ancillarySdps: Any)
+
+      /**
+       * @param audioSdps the value to be set.
+       */
+      public fun audioSdps(audioSdps: IResolvable)
+
+      /**
+       * @param audioSdps the value to be set.
+       */
+      public fun audioSdps(audioSdps: List<Any>)
+
+      /**
+       * @param audioSdps the value to be set.
+       */
+      public fun audioSdps(vararg audioSdps: Any)
+
+      /**
+       * @param videoSdp the value to be set.
+       */
+      public fun videoSdp(videoSdp: IResolvable)
+
+      /**
+       * @param videoSdp the value to be set.
+       */
+      public fun videoSdp(videoSdp: InputSdpLocationProperty)
+
+      /**
+       * @param videoSdp the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6b5046f4c424c9e6b315f464a9c59e77a9f3ae6f78a81555917d0055c6b41270")
+      public fun videoSdp(videoSdp: InputSdpLocationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupSdpSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupSdpSettingsProperty.builder()
+
+      /**
+       * @param ancillarySdps the value to be set.
+       */
+      override fun ancillarySdps(ancillarySdps: IResolvable) {
+        cdkBuilder.ancillarySdps(ancillarySdps.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ancillarySdps the value to be set.
+       */
+      override fun ancillarySdps(ancillarySdps: List<Any>) {
+        cdkBuilder.ancillarySdps(ancillarySdps.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param ancillarySdps the value to be set.
+       */
+      override fun ancillarySdps(vararg ancillarySdps: Any): Unit =
+          ancillarySdps(ancillarySdps.toList())
+
+      /**
+       * @param audioSdps the value to be set.
+       */
+      override fun audioSdps(audioSdps: IResolvable) {
+        cdkBuilder.audioSdps(audioSdps.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param audioSdps the value to be set.
+       */
+      override fun audioSdps(audioSdps: List<Any>) {
+        cdkBuilder.audioSdps(audioSdps.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param audioSdps the value to be set.
+       */
+      override fun audioSdps(vararg audioSdps: Any): Unit = audioSdps(audioSdps.toList())
+
+      /**
+       * @param videoSdp the value to be set.
+       */
+      override fun videoSdp(videoSdp: IResolvable) {
+        cdkBuilder.videoSdp(videoSdp.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param videoSdp the value to be set.
+       */
+      override fun videoSdp(videoSdp: InputSdpLocationProperty) {
+        cdkBuilder.videoSdp(videoSdp.let(InputSdpLocationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param videoSdp the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6b5046f4c424c9e6b315f464a9c59e77a9f3ae6f78a81555917d0055c6b41270")
+      override fun videoSdp(videoSdp: InputSdpLocationProperty.Builder.() -> Unit): Unit =
+          videoSdp(InputSdpLocationProperty(videoSdp))
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupSdpSettingsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupSdpSettingsProperty,
+    ) : CdkObject(cdkObject),
+        Smpte2110ReceiverGroupSdpSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-smpte2110receivergroupsdpsettings.html#cfn-medialive-input-smpte2110receivergroupsdpsettings-ancillarysdps)
+       */
+      override fun ancillarySdps(): Any? = unwrap(this).getAncillarySdps()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-smpte2110receivergroupsdpsettings.html#cfn-medialive-input-smpte2110receivergroupsdpsettings-audiosdps)
+       */
+      override fun audioSdps(): Any? = unwrap(this).getAudioSdps()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-smpte2110receivergroupsdpsettings.html#cfn-medialive-input-smpte2110receivergroupsdpsettings-videosdp)
+       */
+      override fun videoSdp(): Any? = unwrap(this).getVideoSdp()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          Smpte2110ReceiverGroupSdpSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupSdpSettingsProperty):
+          Smpte2110ReceiverGroupSdpSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Smpte2110ReceiverGroupSdpSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: Smpte2110ReceiverGroupSdpSettingsProperty):
+          software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupSdpSettingsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupSdpSettingsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * Smpte2110ReceiverGroupSettingsProperty smpte2110ReceiverGroupSettingsProperty =
+   * Smpte2110ReceiverGroupSettingsProperty.builder()
+   * .smpte2110ReceiverGroups(List.of(Smpte2110ReceiverGroupProperty.builder()
+   * .sdpSettings(Smpte2110ReceiverGroupSdpSettingsProperty.builder()
+   * .ancillarySdps(List.of(InputSdpLocationProperty.builder()
+   * .mediaIndex(123)
+   * .sdpUrl("sdpUrl")
+   * .build()))
+   * .audioSdps(List.of(InputSdpLocationProperty.builder()
+   * .mediaIndex(123)
+   * .sdpUrl("sdpUrl")
+   * .build()))
+   * .videoSdp(InputSdpLocationProperty.builder()
+   * .mediaIndex(123)
+   * .sdpUrl("sdpUrl")
+   * .build())
+   * .build())
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-smpte2110receivergroupsettings.html)
+   */
+  public interface Smpte2110ReceiverGroupSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-smpte2110receivergroupsettings.html#cfn-medialive-input-smpte2110receivergroupsettings-smpte2110receivergroups)
+     */
+    public fun smpte2110ReceiverGroups(): Any? = unwrap(this).getSmpte2110ReceiverGroups()
+
+    /**
+     * A builder for [Smpte2110ReceiverGroupSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param smpte2110ReceiverGroups the value to be set.
+       */
+      public fun smpte2110ReceiverGroups(smpte2110ReceiverGroups: IResolvable)
+
+      /**
+       * @param smpte2110ReceiverGroups the value to be set.
+       */
+      public fun smpte2110ReceiverGroups(smpte2110ReceiverGroups: List<Any>)
+
+      /**
+       * @param smpte2110ReceiverGroups the value to be set.
+       */
+      public fun smpte2110ReceiverGroups(vararg smpte2110ReceiverGroups: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupSettingsProperty.builder()
+
+      /**
+       * @param smpte2110ReceiverGroups the value to be set.
+       */
+      override fun smpte2110ReceiverGroups(smpte2110ReceiverGroups: IResolvable) {
+        cdkBuilder.smpte2110ReceiverGroups(smpte2110ReceiverGroups.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param smpte2110ReceiverGroups the value to be set.
+       */
+      override fun smpte2110ReceiverGroups(smpte2110ReceiverGroups: List<Any>) {
+        cdkBuilder.smpte2110ReceiverGroups(smpte2110ReceiverGroups.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param smpte2110ReceiverGroups the value to be set.
+       */
+      override fun smpte2110ReceiverGroups(vararg smpte2110ReceiverGroups: Any): Unit =
+          smpte2110ReceiverGroups(smpte2110ReceiverGroups.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupSettingsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupSettingsProperty,
+    ) : CdkObject(cdkObject),
+        Smpte2110ReceiverGroupSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-smpte2110receivergroupsettings.html#cfn-medialive-input-smpte2110receivergroupsettings-smpte2110receivergroups)
+       */
+      override fun smpte2110ReceiverGroups(): Any? = unwrap(this).getSmpte2110ReceiverGroups()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          Smpte2110ReceiverGroupSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupSettingsProperty):
+          Smpte2110ReceiverGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Smpte2110ReceiverGroupSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: Smpte2110ReceiverGroupSettingsProperty):
+          software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupSettingsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnInput.Smpte2110ReceiverGroupSettingsProperty
     }
   }
 

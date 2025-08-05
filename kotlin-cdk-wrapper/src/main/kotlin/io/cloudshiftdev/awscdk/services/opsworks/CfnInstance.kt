@@ -1882,17 +1882,12 @@ public open class CfnInstance(
       /**
        * @param friday The schedule for Friday.
        */
-      public fun friday(friday: IResolvable)
+      public fun friday(friday: Map<String, String>)
 
       /**
        * @param friday The schedule for Friday.
        */
-      public fun friday(friday: Map<String, String>)
-
-      /**
-       * @param monday The schedule for Monday.
-       */
-      public fun monday(monday: IResolvable)
+      public fun friday(friday: IResolvable)
 
       /**
        * @param monday The schedule for Monday.
@@ -1900,9 +1895,9 @@ public open class CfnInstance(
       public fun monday(monday: Map<String, String>)
 
       /**
-       * @param saturday The schedule for Saturday.
+       * @param monday The schedule for Monday.
        */
-      public fun saturday(saturday: IResolvable)
+      public fun monday(monday: IResolvable)
 
       /**
        * @param saturday The schedule for Saturday.
@@ -1910,9 +1905,9 @@ public open class CfnInstance(
       public fun saturday(saturday: Map<String, String>)
 
       /**
-       * @param sunday The schedule for Sunday.
+       * @param saturday The schedule for Saturday.
        */
-      public fun sunday(sunday: IResolvable)
+      public fun saturday(saturday: IResolvable)
 
       /**
        * @param sunday The schedule for Sunday.
@@ -1920,9 +1915,9 @@ public open class CfnInstance(
       public fun sunday(sunday: Map<String, String>)
 
       /**
-       * @param thursday The schedule for Thursday.
+       * @param sunday The schedule for Sunday.
        */
-      public fun thursday(thursday: IResolvable)
+      public fun sunday(sunday: IResolvable)
 
       /**
        * @param thursday The schedule for Thursday.
@@ -1930,9 +1925,9 @@ public open class CfnInstance(
       public fun thursday(thursday: Map<String, String>)
 
       /**
-       * @param tuesday The schedule for Tuesday.
+       * @param thursday The schedule for Thursday.
        */
-      public fun tuesday(tuesday: IResolvable)
+      public fun thursday(thursday: IResolvable)
 
       /**
        * @param tuesday The schedule for Tuesday.
@@ -1940,14 +1935,19 @@ public open class CfnInstance(
       public fun tuesday(tuesday: Map<String, String>)
 
       /**
-       * @param wednesday The schedule for Wednesday.
+       * @param tuesday The schedule for Tuesday.
        */
-      public fun wednesday(wednesday: IResolvable)
+      public fun tuesday(tuesday: IResolvable)
 
       /**
        * @param wednesday The schedule for Wednesday.
        */
       public fun wednesday(wednesday: Map<String, String>)
+
+      /**
+       * @param wednesday The schedule for Wednesday.
+       */
+      public fun wednesday(wednesday: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1959,22 +1959,15 @@ public open class CfnInstance(
       /**
        * @param friday The schedule for Friday.
        */
-      override fun friday(friday: IResolvable) {
-        cdkBuilder.friday(friday.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param friday The schedule for Friday.
-       */
       override fun friday(friday: Map<String, String>) {
         cdkBuilder.friday(friday)
       }
 
       /**
-       * @param monday The schedule for Monday.
+       * @param friday The schedule for Friday.
        */
-      override fun monday(monday: IResolvable) {
-        cdkBuilder.monday(monday.let(IResolvable.Companion::unwrap))
+      override fun friday(friday: IResolvable) {
+        cdkBuilder.friday(friday.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1985,10 +1978,10 @@ public open class CfnInstance(
       }
 
       /**
-       * @param saturday The schedule for Saturday.
+       * @param monday The schedule for Monday.
        */
-      override fun saturday(saturday: IResolvable) {
-        cdkBuilder.saturday(saturday.let(IResolvable.Companion::unwrap))
+      override fun monday(monday: IResolvable) {
+        cdkBuilder.monday(monday.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1999,10 +1992,10 @@ public open class CfnInstance(
       }
 
       /**
-       * @param sunday The schedule for Sunday.
+       * @param saturday The schedule for Saturday.
        */
-      override fun sunday(sunday: IResolvable) {
-        cdkBuilder.sunday(sunday.let(IResolvable.Companion::unwrap))
+      override fun saturday(saturday: IResolvable) {
+        cdkBuilder.saturday(saturday.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2013,10 +2006,10 @@ public open class CfnInstance(
       }
 
       /**
-       * @param thursday The schedule for Thursday.
+       * @param sunday The schedule for Sunday.
        */
-      override fun thursday(thursday: IResolvable) {
-        cdkBuilder.thursday(thursday.let(IResolvable.Companion::unwrap))
+      override fun sunday(sunday: IResolvable) {
+        cdkBuilder.sunday(sunday.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2027,10 +2020,10 @@ public open class CfnInstance(
       }
 
       /**
-       * @param tuesday The schedule for Tuesday.
+       * @param thursday The schedule for Thursday.
        */
-      override fun tuesday(tuesday: IResolvable) {
-        cdkBuilder.tuesday(tuesday.let(IResolvable.Companion::unwrap))
+      override fun thursday(thursday: IResolvable) {
+        cdkBuilder.thursday(thursday.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2041,10 +2034,10 @@ public open class CfnInstance(
       }
 
       /**
-       * @param wednesday The schedule for Wednesday.
+       * @param tuesday The schedule for Tuesday.
        */
-      override fun wednesday(wednesday: IResolvable) {
-        cdkBuilder.wednesday(wednesday.let(IResolvable.Companion::unwrap))
+      override fun tuesday(tuesday: IResolvable) {
+        cdkBuilder.tuesday(tuesday.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2052,6 +2045,13 @@ public open class CfnInstance(
        */
       override fun wednesday(wednesday: Map<String, String>) {
         cdkBuilder.wednesday(wednesday)
+      }
+
+      /**
+       * @param wednesday The schedule for Wednesday.
+       */
+      override fun wednesday(wednesday: IResolvable) {
+        cdkBuilder.wednesday(wednesday.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

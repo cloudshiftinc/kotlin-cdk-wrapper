@@ -27,6 +27,8 @@ public enum class InstanceSize(
   XLARGE56(software.amazon.awscdk.services.ec2.InstanceSize.XLARGE56),
   XLARGE96(software.amazon.awscdk.services.ec2.InstanceSize.XLARGE96),
   XLARGE112(software.amazon.awscdk.services.ec2.InstanceSize.XLARGE112),
+  XLARGE224(software.amazon.awscdk.services.ec2.InstanceSize.XLARGE224),
+  XLARGE480(software.amazon.awscdk.services.ec2.InstanceSize.XLARGE480),
   METAL(software.amazon.awscdk.services.ec2.InstanceSize.METAL),
   XLARGE16METAL(software.amazon.awscdk.services.ec2.InstanceSize.XLARGE16METAL),
   XLARGE24METAL(software.amazon.awscdk.services.ec2.InstanceSize.XLARGE24METAL),
@@ -59,6 +61,8 @@ public enum class InstanceSize(
       software.amazon.awscdk.services.ec2.InstanceSize.XLARGE56 -> InstanceSize.XLARGE56
       software.amazon.awscdk.services.ec2.InstanceSize.XLARGE96 -> InstanceSize.XLARGE96
       software.amazon.awscdk.services.ec2.InstanceSize.XLARGE112 -> InstanceSize.XLARGE112
+      software.amazon.awscdk.services.ec2.InstanceSize.XLARGE224 -> InstanceSize.XLARGE224
+      software.amazon.awscdk.services.ec2.InstanceSize.XLARGE480 -> InstanceSize.XLARGE480
       software.amazon.awscdk.services.ec2.InstanceSize.METAL -> InstanceSize.METAL
       software.amazon.awscdk.services.ec2.InstanceSize.XLARGE16METAL -> InstanceSize.XLARGE16METAL
       software.amazon.awscdk.services.ec2.InstanceSize.XLARGE24METAL -> InstanceSize.XLARGE24METAL

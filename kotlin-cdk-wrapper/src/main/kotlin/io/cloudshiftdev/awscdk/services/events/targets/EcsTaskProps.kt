@@ -17,6 +17,7 @@ import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import kotlin.Boolean
 import kotlin.Number
+import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
@@ -28,18 +29,18 @@ import kotlin.jvm.JvmName
  *
  * ```
  * import io.cloudshiftdev.awscdk.services.ecs.*;
- * import io.cloudshiftdev.awscdk.services.ec2.*;
  * ICluster cluster;
  * TaskDefinition taskDefinition;
  * Rule rule = Rule.Builder.create(this, "Rule")
  * .schedule(Schedule.rate(Duration.hours(1)))
  * .build();
- * rule.addTarget(
- * EcsTask.Builder.create()
+ * rule.addTarget(EcsTask.Builder.create()
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
- * .assignPublicIp(true)
- * .subnetSelection(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build())
+ * .taskCount(1)
+ * // Overrides the cpu and memory values in the task definition
+ * .cpu("512")
+ * .memory("512")
  * .build());
  * ```
  */
@@ -68,6 +69,13 @@ public interface EcsTaskProps : TargetBaseProps {
       unwrap(this).getContainerOverrides()?.map(ContainerOverride::wrap) ?: emptyList()
 
   /**
+   * The CPU override for the task.
+   *
+   * Default: - The task definition's CPU value
+   */
+  public fun cpu(): String? = unwrap(this).getCpu()
+
+  /**
    * Whether or not to enable the execute command functionality for the containers in this task.
    *
    * If true, this enables execute command functionality on all containers in the task.
@@ -75,6 +83,38 @@ public interface EcsTaskProps : TargetBaseProps {
    * Default: - false
    */
   public fun enableExecuteCommand(): Boolean? = unwrap(this).getEnableExecuteCommand()
+
+  /**
+   * The ephemeral storage setting override for the task.
+   *
+   * NOTE: This parameter is only supported for tasks hosted on Fargate that use the following
+   * platform versions:
+   *
+   * * Linux platform version 1.4.0 or later.
+   * * Windows platform version 1.0.0 or later.
+   *
+   * Default: - The task definition's ephemeral storage value
+   */
+  public fun ephemeralStorage(): EphemeralStorageOverride? =
+      unwrap(this).getEphemeralStorage()?.let(EphemeralStorageOverride::wrap)
+
+  /**
+   * The execution role for the task.
+   *
+   * The Amazon Resource Name (ARN) of the task execution role override for the task.
+   *
+   * Default: - The task definition's execution role
+   */
+  public fun executionRole(): IRole? = unwrap(this).getExecutionRole()?.let(IRole::wrap)
+
+  /**
+   * The Elastic Inference accelerator override for the task.
+   *
+   * Default: - The task definition's inference accelerator overrides
+   */
+  public fun inferenceAcceleratorOverrides(): List<InferenceAcceleratorOverride> =
+      unwrap(this).getInferenceAcceleratorOverrides()?.map(InferenceAcceleratorOverride::wrap) ?:
+      emptyList()
 
   /**
    * Specifies the launch type on which your task is running.
@@ -85,6 +125,13 @@ public interface EcsTaskProps : TargetBaseProps {
    * Default: - 'EC2' if `isEc2Compatible` for the `taskDefinition` is true, otherwise 'FARGATE'
    */
   public fun launchType(): LaunchType? = unwrap(this).getLaunchType()?.let(LaunchType::wrap)
+
+  /**
+   * The memory override for the task.
+   *
+   * Default: - The task definition's memory value
+   */
+  public fun memory(): String? = unwrap(this).getMemory()
 
   /**
    * The platform version on which to run your task.
@@ -157,6 +204,13 @@ public interface EcsTaskProps : TargetBaseProps {
   public fun taskDefinition(): ITaskDefinition
 
   /**
+   * The IAM role for the task.
+   *
+   * Default: - The task definition's task role
+   */
+  public fun taskRole(): IRole? = unwrap(this).getTaskRole()?.let(IRole::wrap)
+
+  /**
    * A builder for [EcsTaskProps]
    */
   @CdkDslMarker
@@ -188,6 +242,11 @@ public interface EcsTaskProps : TargetBaseProps {
     public fun containerOverrides(vararg containerOverrides: ContainerOverride)
 
     /**
+     * @param cpu The CPU override for the task.
+     */
+    public fun cpu(cpu: String)
+
+    /**
      * @param deadLetterQueue The SQS queue to be used as deadLetterQueue. Check out the
      * [considerations for using a dead-letter
      * queue](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html#dlq-considerations).
@@ -207,6 +266,46 @@ public interface EcsTaskProps : TargetBaseProps {
     public fun enableExecuteCommand(enableExecuteCommand: Boolean)
 
     /**
+     * @param ephemeralStorage The ephemeral storage setting override for the task.
+     * NOTE: This parameter is only supported for tasks hosted on Fargate that use the following
+     * platform versions:
+     *
+     * * Linux platform version 1.4.0 or later.
+     * * Windows platform version 1.0.0 or later.
+     */
+    public fun ephemeralStorage(ephemeralStorage: EphemeralStorageOverride)
+
+    /**
+     * @param ephemeralStorage The ephemeral storage setting override for the task.
+     * NOTE: This parameter is only supported for tasks hosted on Fargate that use the following
+     * platform versions:
+     *
+     * * Linux platform version 1.4.0 or later.
+     * * Windows platform version 1.0.0 or later.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("757fd9b1d5d512ed25c058277fb303159977d70c541fcf96f77bdef65acc215f")
+    public fun ephemeralStorage(ephemeralStorage: EphemeralStorageOverride.Builder.() -> Unit)
+
+    /**
+     * @param executionRole The execution role for the task.
+     * The Amazon Resource Name (ARN) of the task execution role override for the task.
+     */
+    public fun executionRole(executionRole: IRole)
+
+    /**
+     * @param inferenceAcceleratorOverrides The Elastic Inference accelerator override for the task.
+     */
+    public
+        fun inferenceAcceleratorOverrides(inferenceAcceleratorOverrides: List<InferenceAcceleratorOverride>)
+
+    /**
+     * @param inferenceAcceleratorOverrides The Elastic Inference accelerator override for the task.
+     */
+    public fun inferenceAcceleratorOverrides(vararg
+        inferenceAcceleratorOverrides: InferenceAcceleratorOverride)
+
+    /**
      * @param launchType Specifies the launch type on which your task is running.
      * The launch type that you specify here
      * must match one of the launch type (compatibilities) of the target task.
@@ -220,6 +319,11 @@ public interface EcsTaskProps : TargetBaseProps {
      * Maximum value of 86400.
      */
     public fun maxEventAge(maxEventAge: Duration)
+
+    /**
+     * @param memory The memory override for the task.
+     */
+    public fun memory(memory: String)
 
     /**
      * @param platformVersion The platform version on which to run your task.
@@ -293,6 +397,11 @@ public interface EcsTaskProps : TargetBaseProps {
      * @param taskDefinition Task Definition of the task that should be started. 
      */
     public fun taskDefinition(taskDefinition: ITaskDefinition)
+
+    /**
+     * @param taskRole The IAM role for the task.
+     */
+    public fun taskRole(taskRole: IRole)
   }
 
   private class BuilderImpl : Builder {
@@ -333,6 +442,13 @@ public interface EcsTaskProps : TargetBaseProps {
         containerOverrides(containerOverrides.toList())
 
     /**
+     * @param cpu The CPU override for the task.
+     */
+    override fun cpu(cpu: String) {
+      cdkBuilder.cpu(cpu)
+    }
+
+    /**
      * @param deadLetterQueue The SQS queue to be used as deadLetterQueue. Check out the
      * [considerations for using a dead-letter
      * queue](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html#dlq-considerations).
@@ -356,6 +472,54 @@ public interface EcsTaskProps : TargetBaseProps {
     }
 
     /**
+     * @param ephemeralStorage The ephemeral storage setting override for the task.
+     * NOTE: This parameter is only supported for tasks hosted on Fargate that use the following
+     * platform versions:
+     *
+     * * Linux platform version 1.4.0 or later.
+     * * Windows platform version 1.0.0 or later.
+     */
+    override fun ephemeralStorage(ephemeralStorage: EphemeralStorageOverride) {
+      cdkBuilder.ephemeralStorage(ephemeralStorage.let(EphemeralStorageOverride.Companion::unwrap))
+    }
+
+    /**
+     * @param ephemeralStorage The ephemeral storage setting override for the task.
+     * NOTE: This parameter is only supported for tasks hosted on Fargate that use the following
+     * platform versions:
+     *
+     * * Linux platform version 1.4.0 or later.
+     * * Windows platform version 1.0.0 or later.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("757fd9b1d5d512ed25c058277fb303159977d70c541fcf96f77bdef65acc215f")
+    override fun ephemeralStorage(ephemeralStorage: EphemeralStorageOverride.Builder.() -> Unit):
+        Unit = ephemeralStorage(EphemeralStorageOverride(ephemeralStorage))
+
+    /**
+     * @param executionRole The execution role for the task.
+     * The Amazon Resource Name (ARN) of the task execution role override for the task.
+     */
+    override fun executionRole(executionRole: IRole) {
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
+    }
+
+    /**
+     * @param inferenceAcceleratorOverrides The Elastic Inference accelerator override for the task.
+     */
+    override
+        fun inferenceAcceleratorOverrides(inferenceAcceleratorOverrides: List<InferenceAcceleratorOverride>) {
+      cdkBuilder.inferenceAcceleratorOverrides(inferenceAcceleratorOverrides.map(InferenceAcceleratorOverride.Companion::unwrap))
+    }
+
+    /**
+     * @param inferenceAcceleratorOverrides The Elastic Inference accelerator override for the task.
+     */
+    override fun inferenceAcceleratorOverrides(vararg
+        inferenceAcceleratorOverrides: InferenceAcceleratorOverride): Unit =
+        inferenceAcceleratorOverrides(inferenceAcceleratorOverrides.toList())
+
+    /**
      * @param launchType Specifies the launch type on which your task is running.
      * The launch type that you specify here
      * must match one of the launch type (compatibilities) of the target task.
@@ -372,6 +536,13 @@ public interface EcsTaskProps : TargetBaseProps {
      */
     override fun maxEventAge(maxEventAge: Duration) {
       cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * @param memory The memory override for the task.
+     */
+    override fun memory(memory: String) {
+      cdkBuilder.memory(memory)
     }
 
     /**
@@ -467,6 +638,13 @@ public interface EcsTaskProps : TargetBaseProps {
       cdkBuilder.taskDefinition(taskDefinition.let(ITaskDefinition.Companion::unwrap))
     }
 
+    /**
+     * @param taskRole The IAM role for the task.
+     */
+    override fun taskRole(taskRole: IRole) {
+      cdkBuilder.taskRole(taskRole.let(IRole.Companion::unwrap))
+    }
+
     public fun build(): software.amazon.awscdk.services.events.targets.EcsTaskProps =
         cdkBuilder.build()
   }
@@ -499,6 +677,13 @@ public interface EcsTaskProps : TargetBaseProps {
         unwrap(this).getContainerOverrides()?.map(ContainerOverride::wrap) ?: emptyList()
 
     /**
+     * The CPU override for the task.
+     *
+     * Default: - The task definition's CPU value
+     */
+    override fun cpu(): String? = unwrap(this).getCpu()
+
+    /**
      * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a
      * dead-letter
      * queue](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html#dlq-considerations).
@@ -523,6 +708,38 @@ public interface EcsTaskProps : TargetBaseProps {
     override fun enableExecuteCommand(): Boolean? = unwrap(this).getEnableExecuteCommand()
 
     /**
+     * The ephemeral storage setting override for the task.
+     *
+     * NOTE: This parameter is only supported for tasks hosted on Fargate that use the following
+     * platform versions:
+     *
+     * * Linux platform version 1.4.0 or later.
+     * * Windows platform version 1.0.0 or later.
+     *
+     * Default: - The task definition's ephemeral storage value
+     */
+    override fun ephemeralStorage(): EphemeralStorageOverride? =
+        unwrap(this).getEphemeralStorage()?.let(EphemeralStorageOverride::wrap)
+
+    /**
+     * The execution role for the task.
+     *
+     * The Amazon Resource Name (ARN) of the task execution role override for the task.
+     *
+     * Default: - The task definition's execution role
+     */
+    override fun executionRole(): IRole? = unwrap(this).getExecutionRole()?.let(IRole::wrap)
+
+    /**
+     * The Elastic Inference accelerator override for the task.
+     *
+     * Default: - The task definition's inference accelerator overrides
+     */
+    override fun inferenceAcceleratorOverrides(): List<InferenceAcceleratorOverride> =
+        unwrap(this).getInferenceAcceleratorOverrides()?.map(InferenceAcceleratorOverride::wrap) ?:
+        emptyList()
+
+    /**
      * Specifies the launch type on which your task is running.
      *
      * The launch type that you specify here
@@ -541,6 +758,13 @@ public interface EcsTaskProps : TargetBaseProps {
      * Default: Duration.hours(24)
      */
     override fun maxEventAge(): Duration? = unwrap(this).getMaxEventAge()?.let(Duration::wrap)
+
+    /**
+     * The memory override for the task.
+     *
+     * Default: - The task definition's memory value
+     */
+    override fun memory(): String? = unwrap(this).getMemory()
 
     /**
      * The platform version on which to run your task.
@@ -622,6 +846,13 @@ public interface EcsTaskProps : TargetBaseProps {
      */
     override fun taskDefinition(): ITaskDefinition =
         unwrap(this).getTaskDefinition().let(ITaskDefinition::wrap)
+
+    /**
+     * The IAM role for the task.
+     *
+     * Default: - The task definition's task role
+     */
+    override fun taskRole(): IRole? = unwrap(this).getTaskRole()?.let(IRole::wrap)
   }
 
   public companion object {

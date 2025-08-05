@@ -227,7 +227,8 @@ public interface CfnTrailProps {
   public fun isOrganizationTrail(): Any? = unwrap(this).getIsOrganizationTrail()
 
   /**
-   * Specifies the AWS KMS key ID to use to encrypt the logs delivered by CloudTrail.
+   * Specifies the AWS KMS key ID to use to encrypt the logs and digest files delivered by
+   * CloudTrail.
    *
    * The value can be an alias name prefixed by "alias/", a fully specified ARN to an alias, a fully
    * specified ARN to a key, or a globally unique identifier.
@@ -271,7 +272,8 @@ public interface CfnTrailProps {
   public fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
 
   /**
-   * Specifies the name of the Amazon SNS topic defined for notification of log file delivery.
+   * Specifies the name or ARN of the Amazon SNS topic defined for notification of log file
+   * delivery.
    *
    * The maximum length is 256 characters.
    *
@@ -576,8 +578,8 @@ public interface CfnTrailProps {
     public fun isOrganizationTrail(isOrganizationTrail: IResolvable)
 
     /**
-     * @param kmsKeyId Specifies the AWS KMS key ID to use to encrypt the logs delivered by
-     * CloudTrail.
+     * @param kmsKeyId Specifies the AWS KMS key ID to use to encrypt the logs and digest files
+     * delivered by CloudTrail.
      * The value can be an alias name prefixed by "alias/", a fully specified ARN to an alias, a
      * fully specified ARN to a key, or a globally unique identifier.
      *
@@ -613,8 +615,8 @@ public interface CfnTrailProps {
     public fun s3KeyPrefix(s3KeyPrefix: String)
 
     /**
-     * @param snsTopicName Specifies the name of the Amazon SNS topic defined for notification of
-     * log file delivery.
+     * @param snsTopicName Specifies the name or ARN of the Amazon SNS topic defined for
+     * notification of log file delivery.
      * The maximum length is 256 characters.
      */
     public fun snsTopicName(snsTopicName: String)
@@ -956,8 +958,8 @@ public interface CfnTrailProps {
     }
 
     /**
-     * @param kmsKeyId Specifies the AWS KMS key ID to use to encrypt the logs delivered by
-     * CloudTrail.
+     * @param kmsKeyId Specifies the AWS KMS key ID to use to encrypt the logs and digest files
+     * delivered by CloudTrail.
      * The value can be an alias name prefixed by "alias/", a fully specified ARN to an alias, a
      * fully specified ARN to a key, or a globally unique identifier.
      *
@@ -999,8 +1001,8 @@ public interface CfnTrailProps {
     }
 
     /**
-     * @param snsTopicName Specifies the name of the Amazon SNS topic defined for notification of
-     * log file delivery.
+     * @param snsTopicName Specifies the name or ARN of the Amazon SNS topic defined for
+     * notification of log file delivery.
      * The maximum length is 256 characters.
      */
     override fun snsTopicName(snsTopicName: String) {
@@ -1197,7 +1199,8 @@ public interface CfnTrailProps {
     override fun isOrganizationTrail(): Any? = unwrap(this).getIsOrganizationTrail()
 
     /**
-     * Specifies the AWS KMS key ID to use to encrypt the logs delivered by CloudTrail.
+     * Specifies the AWS KMS key ID to use to encrypt the logs and digest files delivered by
+     * CloudTrail.
      *
      * The value can be an alias name prefixed by "alias/", a fully specified ARN to an alias, a
      * fully specified ARN to a key, or a globally unique identifier.
@@ -1241,7 +1244,8 @@ public interface CfnTrailProps {
     override fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
 
     /**
-     * Specifies the name of the Amazon SNS topic defined for notification of log file delivery.
+     * Specifies the name or ARN of the Amazon SNS topic defined for notification of log file
+     * delivery.
      *
      * The maximum length is 256 characters.
      *

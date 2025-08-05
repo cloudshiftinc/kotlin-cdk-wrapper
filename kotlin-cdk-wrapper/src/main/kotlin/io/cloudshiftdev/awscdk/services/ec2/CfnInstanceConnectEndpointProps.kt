@@ -53,6 +53,11 @@ public interface CfnInstanceConnectEndpointProps {
    * * `true` - Use the client IP address as the source.
    * * `false` - Use the network interface IP address as the source.
    *
+   *
+   * `PreserveClientIp` is only supported on IPv4 EC2 Instance Connect Endpoints. To use
+   * `PreserveClientIp` , the value for `IpAddressType` must be `ipv4` .
+   *
+   *
    * Default: `false`
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instanceconnectendpoint.html#cfn-ec2-instanceconnectendpoint-preserveclientip)
@@ -100,6 +105,11 @@ public interface CfnInstanceConnectEndpointProps {
      * * `true` - Use the client IP address as the source.
      * * `false` - Use the network interface IP address as the source.
      *
+     *
+     * `PreserveClientIp` is only supported on IPv4 EC2 Instance Connect Endpoints. To use
+     * `PreserveClientIp` , the value for `IpAddressType` must be `ipv4` .
+     *
+     *
      * Default: `false`
      */
     public fun preserveClientIp(preserveClientIp: Boolean)
@@ -109,6 +119,11 @@ public interface CfnInstanceConnectEndpointProps {
      * The following are the possible values.
      * * `true` - Use the client IP address as the source.
      * * `false` - Use the network interface IP address as the source.
+     *
+     *
+     * `PreserveClientIp` is only supported on IPv4 EC2 Instance Connect Endpoints. To use
+     * `PreserveClientIp` , the value for `IpAddressType` must be `ipv4` .
+     *
      *
      * Default: `false`
      */
@@ -163,6 +178,11 @@ public interface CfnInstanceConnectEndpointProps {
      * * `true` - Use the client IP address as the source.
      * * `false` - Use the network interface IP address as the source.
      *
+     *
+     * `PreserveClientIp` is only supported on IPv4 EC2 Instance Connect Endpoints. To use
+     * `PreserveClientIp` , the value for `IpAddressType` must be `ipv4` .
+     *
+     *
      * Default: `false`
      */
     override fun preserveClientIp(preserveClientIp: Boolean) {
@@ -174,6 +194,11 @@ public interface CfnInstanceConnectEndpointProps {
      * The following are the possible values.
      * * `true` - Use the client IP address as the source.
      * * `false` - Use the network interface IP address as the source.
+     *
+     *
+     * `PreserveClientIp` is only supported on IPv4 EC2 Instance Connect Endpoints. To use
+     * `PreserveClientIp` , the value for `IpAddressType` must be `ipv4` .
+     *
      *
      * Default: `false`
      */
@@ -238,6 +263,11 @@ public interface CfnInstanceConnectEndpointProps {
      *
      * * `true` - Use the client IP address as the source.
      * * `false` - Use the network interface IP address as the source.
+     *
+     *
+     * `PreserveClientIp` is only supported on IPv4 EC2 Instance Connect Endpoints. To use
+     * `PreserveClientIp` , the value for `IpAddressType` must be `ipv4` .
+     *
      *
      * Default: `false`
      *

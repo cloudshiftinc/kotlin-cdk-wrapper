@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
+import io.cloudshiftdev.awscdk.services.iam.IResourceWithPolicy
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
@@ -22,24 +23,20 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * EventBus bus = EventBus.Builder.create(this, "bus")
- * .eventBusName("MyCustomEventBus")
- * .description("MyCustomEventBus")
- * .build();
- * bus.archive("MyArchive", BaseArchiveProps.builder()
- * .archiveName("MyCustomEventBusArchive")
- * .description("MyCustomerEventBus Archive")
- * .eventPattern(EventPattern.builder()
- * .account(List.of(Stack.of(this).getAccount()))
- * .build())
- * .retention(Duration.days(365))
+ * import io.cloudshiftdev.awscdk.services.events.*;
+ * ConfigurationSet myConfigurationSet;
+ * IEventBus bus = EventBus.fromEventBusName(this, "EventBus", "default");
+ * myConfigurationSet.addEventDestination("ToEventBus",
+ * ConfigurationSetEventDestinationOptions.builder()
+ * .destination(EventDestination.eventBus(bus))
  * .build());
  * ```
  */
 public open class EventBus(
   cdkObject: software.amazon.awscdk.services.events.EventBus,
 ) : Resource(cdkObject),
-    IEventBus {
+    IEventBus,
+    IResourceWithPolicy {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.events.EventBus(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -66,7 +63,7 @@ public open class EventBus(
    *
    * @param statement 
    */
-  public open fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
+  public override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
       unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
   /**
@@ -76,7 +73,7 @@ public open class EventBus(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("b93f8258425594b02debe63f0c120f198512d8431f5ae67b7fb7780e34fcbae2")
-  public open fun addToResourcePolicy(statement: PolicyStatement.Builder.() -> Unit):
+  public override fun addToResourcePolicy(statement: PolicyStatement.Builder.() -> Unit):
       AddToResourcePolicyResult = addToResourcePolicy(PolicyStatement(statement))
 
   /**
@@ -133,9 +130,20 @@ public open class EventBus(
    * rules.
    *
    * @param grantee 
+   * @param sid
    */
   public override fun grantPutEventsTo(grantee: IGrantable): Grant =
       unwrap(this).grantPutEventsTo(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+  /**
+   * Grants an IAM Principal to send custom events to the eventBus so that they can be matched to
+   * rules.
+   *
+   * @param grantee 
+   * @param sid
+   */
+  public override fun grantPutEventsTo(grantee: IGrantable, sid: String): Grant =
+      unwrap(this).grantPutEventsTo(grantee.let(IGrantable.Companion::unwrap), sid).let(Grant::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.events.EventBus].
@@ -270,6 +278,9 @@ public open class EventBus(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.events.EventBus.PROPERTY_INJECTION_ID
+
     public fun fromEventBusArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

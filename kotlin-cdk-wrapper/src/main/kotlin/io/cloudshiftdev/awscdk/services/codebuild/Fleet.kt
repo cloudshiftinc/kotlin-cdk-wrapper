@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -98,6 +99,32 @@ public open class Fleet(
     public fun baseCapacity(baseCapacity: Number)
 
     /**
+     * The compute configuration of the compute fleet.
+     *
+     * This is only required if `computeType` is set to ATTRIBUTE_BASED.
+     *
+     * Default: - do not specify compute configuration
+     *
+     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment-reserved-capacity.types)
+     * @param computeConfiguration The compute configuration of the compute fleet. 
+     */
+    public fun computeConfiguration(computeConfiguration: ComputeConfiguration)
+
+    /**
+     * The compute configuration of the compute fleet.
+     *
+     * This is only required if `computeType` is set to ATTRIBUTE_BASED.
+     *
+     * Default: - do not specify compute configuration
+     *
+     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment-reserved-capacity.types)
+     * @param computeConfiguration The compute configuration of the compute fleet. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3e19357beb2e4993eae29d1a908da630a03b91a5919240b8b6c5f2af3211142d")
+    public fun computeConfiguration(computeConfiguration: ComputeConfiguration.Builder.() -> Unit)
+
+    /**
      * The instance type of the compute fleet.
      *
      * [Documentation](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_codebuild.ComputeType.html)
@@ -145,6 +172,36 @@ public open class Fleet(
     }
 
     /**
+     * The compute configuration of the compute fleet.
+     *
+     * This is only required if `computeType` is set to ATTRIBUTE_BASED.
+     *
+     * Default: - do not specify compute configuration
+     *
+     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment-reserved-capacity.types)
+     * @param computeConfiguration The compute configuration of the compute fleet. 
+     */
+    override fun computeConfiguration(computeConfiguration: ComputeConfiguration) {
+      cdkBuilder.computeConfiguration(computeConfiguration.let(ComputeConfiguration.Companion::unwrap))
+    }
+
+    /**
+     * The compute configuration of the compute fleet.
+     *
+     * This is only required if `computeType` is set to ATTRIBUTE_BASED.
+     *
+     * Default: - do not specify compute configuration
+     *
+     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment-reserved-capacity.types)
+     * @param computeConfiguration The compute configuration of the compute fleet. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3e19357beb2e4993eae29d1a908da630a03b91a5919240b8b6c5f2af3211142d")
+    override
+        fun computeConfiguration(computeConfiguration: ComputeConfiguration.Builder.() -> Unit):
+        Unit = computeConfiguration(ComputeConfiguration(computeConfiguration))
+
+    /**
      * The instance type of the compute fleet.
      *
      * [Documentation](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_codebuild.ComputeType.html)
@@ -180,6 +237,9 @@ public open class Fleet(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.codebuild.Fleet.PROPERTY_INJECTION_ID
+
     public fun fromFleetArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

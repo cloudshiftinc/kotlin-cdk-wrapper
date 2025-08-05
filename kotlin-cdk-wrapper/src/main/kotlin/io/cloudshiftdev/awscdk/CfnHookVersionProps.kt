@@ -49,20 +49,15 @@ public interface CfnHookVersionProps {
   public fun loggingConfig(): Any? = unwrap(this).getLoggingConfig()
 
   /**
-   * A URL to the Amazon S3 bucket containing the Hook project package that contains the necessary
-   * files for the Hook you want to register.
+   * A URL to the Amazon S3 bucket for the Hook project package that contains the necessary files
+   * for the Hook you want to register.
    *
-   * For information on generating a schema handler package for the resource you want to register,
-   * see
-   * [submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)
-   * in the *CloudFormation CLI User Guide for Extension Development* .
+   * For information on generating a schema handler package, see [Modeling custom CloudFormation
+   * Hooks](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-model.html) in
+   * the *AWS CloudFormation Hooks User Guide* .
    *
    *
-   * The user registering the resource must be able to access the package in the S3 bucket. That's,
-   * the user must have [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html)
-   * permissions for the schema handler package. For more information, see [Actions, Resources, and
-   * Condition Keys for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html)
-   * in the *AWS Identity and Access Management User Guide* .
+   * To register the Hook, you must have `s3:GetObject` permissions to access the S3 objects.
    *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookversion.html#cfn-cloudformation-hookversion-schemahandlerpackage)
@@ -120,20 +115,14 @@ public interface CfnHookVersionProps {
     public fun loggingConfig(loggingConfig: CfnHookVersion.LoggingConfigProperty.Builder.() -> Unit)
 
     /**
-     * @param schemaHandlerPackage A URL to the Amazon S3 bucket containing the Hook project package
-     * that contains the necessary files for the Hook you want to register. 
-     * For information on generating a schema handler package for the resource you want to register,
-     * see
-     * [submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)
-     * in the *CloudFormation CLI User Guide for Extension Development* .
+     * @param schemaHandlerPackage A URL to the Amazon S3 bucket for the Hook project package that
+     * contains the necessary files for the Hook you want to register. 
+     * For information on generating a schema handler package, see [Modeling custom CloudFormation
+     * Hooks](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-model.html)
+     * in the *AWS CloudFormation Hooks User Guide* .
      *
      *
-     * The user registering the resource must be able to access the package in the S3 bucket.
-     * That's, the user must have
-     * [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for
-     * the schema handler package. For more information, see [Actions, Resources, and Condition Keys
-     * for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS
-     * Identity and Access Management User Guide* .
+     * To register the Hook, you must have `s3:GetObject` permissions to access the S3 objects.
      */
     public fun schemaHandlerPackage(schemaHandlerPackage: String)
 
@@ -192,20 +181,14 @@ public interface CfnHookVersionProps {
         Unit = loggingConfig(CfnHookVersion.LoggingConfigProperty(loggingConfig))
 
     /**
-     * @param schemaHandlerPackage A URL to the Amazon S3 bucket containing the Hook project package
-     * that contains the necessary files for the Hook you want to register. 
-     * For information on generating a schema handler package for the resource you want to register,
-     * see
-     * [submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)
-     * in the *CloudFormation CLI User Guide for Extension Development* .
+     * @param schemaHandlerPackage A URL to the Amazon S3 bucket for the Hook project package that
+     * contains the necessary files for the Hook you want to register. 
+     * For information on generating a schema handler package, see [Modeling custom CloudFormation
+     * Hooks](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-model.html)
+     * in the *AWS CloudFormation Hooks User Guide* .
      *
      *
-     * The user registering the resource must be able to access the package in the S3 bucket.
-     * That's, the user must have
-     * [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for
-     * the schema handler package. For more information, see [Actions, Resources, and Condition Keys
-     * for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS
-     * Identity and Access Management User Guide* .
+     * To register the Hook, you must have `s3:GetObject` permissions to access the S3 objects.
      */
     override fun schemaHandlerPackage(schemaHandlerPackage: String) {
       cdkBuilder.schemaHandlerPackage(schemaHandlerPackage)
@@ -253,21 +236,15 @@ public interface CfnHookVersionProps {
     override fun loggingConfig(): Any? = unwrap(this).getLoggingConfig()
 
     /**
-     * A URL to the Amazon S3 bucket containing the Hook project package that contains the necessary
-     * files for the Hook you want to register.
+     * A URL to the Amazon S3 bucket for the Hook project package that contains the necessary files
+     * for the Hook you want to register.
      *
-     * For information on generating a schema handler package for the resource you want to register,
-     * see
-     * [submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)
-     * in the *CloudFormation CLI User Guide for Extension Development* .
+     * For information on generating a schema handler package, see [Modeling custom CloudFormation
+     * Hooks](https://docs.aws.amazon.com/cloudformation-cli/latest/hooks-userguide/hooks-model.html)
+     * in the *AWS CloudFormation Hooks User Guide* .
      *
      *
-     * The user registering the resource must be able to access the package in the S3 bucket.
-     * That's, the user must have
-     * [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for
-     * the schema handler package. For more information, see [Actions, Resources, and Condition Keys
-     * for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS
-     * Identity and Access Management User Guide* .
+     * To register the Hook, you must have `s3:GetObject` permissions to access the S3 objects.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookversion.html#cfn-cloudformation-hookversion-schemahandlerpackage)

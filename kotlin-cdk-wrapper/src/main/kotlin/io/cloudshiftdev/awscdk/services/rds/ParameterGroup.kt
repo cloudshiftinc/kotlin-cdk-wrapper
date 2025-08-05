@@ -237,6 +237,9 @@ public open class ParameterGroup(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.rds.ParameterGroup.PROPERTY_INJECTION_ID
+
     public fun fromParameterGroupName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

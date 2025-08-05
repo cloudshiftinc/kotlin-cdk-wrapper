@@ -135,6 +135,12 @@ import kotlin.jvm.JvmName
  * .values(List.of("values"))
  * .build())
  * .language("language")
+ * .messageTemplateAttachments(List.of(MessageTemplateAttachmentProperty.builder()
+ * .attachmentName("attachmentName")
+ * .s3PresignedUrl("s3PresignedUrl")
+ * // the properties below are optional
+ * .attachmentId("attachmentId")
+ * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -200,6 +206,13 @@ public interface CfnMessageTemplateProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-messagetemplate.html#cfn-wisdom-messagetemplate-language)
    */
   public fun language(): String? = unwrap(this).getLanguage()
+
+  /**
+   * List of message template attachments.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-messagetemplate.html#cfn-wisdom-messagetemplate-messagetemplateattachments)
+   */
+  public fun messageTemplateAttachments(): Any? = unwrap(this).getMessageTemplateAttachments()
 
   /**
    * The name of the message template.
@@ -309,6 +322,21 @@ public interface CfnMessageTemplateProps {
      * `it_IT` , `ja_JP` , `ko_KR` , `pt_BR` , `zh_CN` , `zh_TW`
      */
     public fun language(language: String)
+
+    /**
+     * @param messageTemplateAttachments List of message template attachments.
+     */
+    public fun messageTemplateAttachments(messageTemplateAttachments: IResolvable)
+
+    /**
+     * @param messageTemplateAttachments List of message template attachments.
+     */
+    public fun messageTemplateAttachments(messageTemplateAttachments: List<Any>)
+
+    /**
+     * @param messageTemplateAttachments List of message template attachments.
+     */
+    public fun messageTemplateAttachments(vararg messageTemplateAttachments: Any)
 
     /**
      * @param name The name of the message template. 
@@ -446,6 +474,26 @@ public interface CfnMessageTemplateProps {
     }
 
     /**
+     * @param messageTemplateAttachments List of message template attachments.
+     */
+    override fun messageTemplateAttachments(messageTemplateAttachments: IResolvable) {
+      cdkBuilder.messageTemplateAttachments(messageTemplateAttachments.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param messageTemplateAttachments List of message template attachments.
+     */
+    override fun messageTemplateAttachments(messageTemplateAttachments: List<Any>) {
+      cdkBuilder.messageTemplateAttachments(messageTemplateAttachments.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param messageTemplateAttachments List of message template attachments.
+     */
+    override fun messageTemplateAttachments(vararg messageTemplateAttachments: Any): Unit =
+        messageTemplateAttachments(messageTemplateAttachments.toList())
+
+    /**
      * @param name The name of the message template. 
      */
     override fun name(name: String) {
@@ -527,6 +575,13 @@ public interface CfnMessageTemplateProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-messagetemplate.html#cfn-wisdom-messagetemplate-language)
      */
     override fun language(): String? = unwrap(this).getLanguage()
+
+    /**
+     * List of message template attachments.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-messagetemplate.html#cfn-wisdom-messagetemplate-messagetemplateattachments)
+     */
+    override fun messageTemplateAttachments(): Any? = unwrap(this).getMessageTemplateAttachments()
 
     /**
      * The name of the message template.

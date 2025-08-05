@@ -14,6 +14,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -23,7 +24,10 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Resource Type definition for AWS::SageMaker::PartnerApp.
+ * The `AWS::SageMaker::PartnerApp` resource creates an Amazon SageMaker Partner AI App.
+ *
+ * For more information, see [Partner AI
+ * Apps](https://docs.aws.amazon.com/sagemaker/latest/dg/partner-apps.html) .
  *
  * Example:
  *
@@ -45,6 +49,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .clientToken("clientToken")
  * .enableIamSessionBasedIdentity(false)
+ * .kmsKeyId("kmsKeyId")
  * .maintenanceConfig(PartnerAppMaintenanceConfigProperty.builder()
  * .maintenanceWindowStart("maintenanceWindowStart")
  * .build())
@@ -79,26 +84,26 @@ public open class CfnPartnerApp(
   )
 
   /**
-   * A collection of configuration settings for the PartnerApp.
+   * Configuration settings for the Partner AI App.
    */
   public open fun applicationConfig(): Any? = unwrap(this).getApplicationConfig()
 
   /**
-   * A collection of configuration settings for the PartnerApp.
+   * Configuration settings for the Partner AI App.
    */
   public open fun applicationConfig(`value`: IResolvable) {
     unwrap(this).setApplicationConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * A collection of configuration settings for the PartnerApp.
+   * Configuration settings for the Partner AI App.
    */
   public open fun applicationConfig(`value`: PartnerAppConfigProperty) {
     unwrap(this).setApplicationConfig(`value`.let(PartnerAppConfigProperty.Companion::unwrap))
   }
 
   /**
-   * A collection of configuration settings for the PartnerApp.
+   * Configuration settings for the Partner AI App.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("f220482bfab17d673941767a0886890e191998cd56d1d0654e6fcd2ff22b9cce")
@@ -116,12 +121,12 @@ public open class CfnPartnerApp(
   public open fun attrBaseUrl(): String = unwrap(this).getAttrBaseUrl()
 
   /**
-   * The Auth type of PartnerApp.
+   * Defines the authentication type used for the Partner AI App.
    */
   public open fun authType(): String = unwrap(this).getAuthType()
 
   /**
-   * The Auth type of PartnerApp.
+   * Defines the authentication type used for the Partner AI App.
    */
   public open fun authType(`value`: String) {
     unwrap(this).setAuthType(`value`)
@@ -134,13 +139,19 @@ public open class CfnPartnerApp(
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
-   * The client token for the PartnerApp.
+   * (deprecated) The client token for the PartnerApp.
+   *
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun clientToken(): String? = unwrap(this).getClientToken()
 
   /**
-   * The client token for the PartnerApp.
+   * (deprecated) The client token for the PartnerApp.
+   *
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun clientToken(`value`: String) {
     unwrap(this).setClientToken(`value`)
   }
@@ -166,12 +177,12 @@ public open class CfnPartnerApp(
   }
 
   /**
-   * The execution role for the user.
+   * The Amazon Resource Name (ARN) of the IAM role of the user.
    */
   public open fun executionRoleArn(): String = unwrap(this).getExecutionRoleArn()
 
   /**
-   * The execution role for the user.
+   * The Amazon Resource Name (ARN) of the IAM role of the user.
    */
   public open fun executionRoleArn(`value`: String) {
     unwrap(this).setExecutionRoleArn(`value`)
@@ -184,6 +195,18 @@ public open class CfnPartnerApp(
    */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
+  }
+
+  /**
+   * The AWS KMS customer managed key used to encrypt the data associated with the PartnerApp.
+   */
+  public open fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+  /**
+   * The AWS KMS customer managed key used to encrypt the data associated with the PartnerApp.
+   */
+  public open fun kmsKeyId(`value`: String) {
+    unwrap(this).setKmsKeyId(`value`)
   }
 
   /**
@@ -215,12 +238,12 @@ public open class CfnPartnerApp(
       maintenanceConfig(PartnerAppMaintenanceConfigProperty(`value`))
 
   /**
-   * A name for the PartnerApp.
+   * The name of the Partner AI App.
    */
   public open fun name(): String = unwrap(this).getName()
 
   /**
-   * A name for the PartnerApp.
+   * The name of the Partner AI App.
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
@@ -244,24 +267,24 @@ public open class CfnPartnerApp(
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
-   * The tier of the PartnerApp.
+   * Specifies the tier or level of the Partner AI App.
    */
   public open fun tier(): String = unwrap(this).getTier()
 
   /**
-   * The tier of the PartnerApp.
+   * Specifies the tier or level of the Partner AI App.
    */
   public open fun tier(`value`: String) {
     unwrap(this).setTier(`value`)
   }
 
   /**
-   * The type of PartnerApp.
+   * Specifies the type of Partner AI App being created.
    */
   public open fun type(): String = unwrap(this).getType()
 
   /**
-   * The type of PartnerApp.
+   * Specifies the type of Partner AI App being created.
    */
   public open fun type(`value`: String) {
     unwrap(this).setType(`value`)
@@ -273,45 +296,47 @@ public open class CfnPartnerApp(
   @CdkDslMarker
   public interface Builder {
     /**
-     * A collection of configuration settings for the PartnerApp.
+     * Configuration settings for the Partner AI App.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-applicationconfig)
-     * @param applicationConfig A collection of configuration settings for the PartnerApp. 
+     * @param applicationConfig Configuration settings for the Partner AI App. 
      */
     public fun applicationConfig(applicationConfig: IResolvable)
 
     /**
-     * A collection of configuration settings for the PartnerApp.
+     * Configuration settings for the Partner AI App.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-applicationconfig)
-     * @param applicationConfig A collection of configuration settings for the PartnerApp. 
+     * @param applicationConfig Configuration settings for the Partner AI App. 
      */
     public fun applicationConfig(applicationConfig: PartnerAppConfigProperty)
 
     /**
-     * A collection of configuration settings for the PartnerApp.
+     * Configuration settings for the Partner AI App.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-applicationconfig)
-     * @param applicationConfig A collection of configuration settings for the PartnerApp. 
+     * @param applicationConfig Configuration settings for the Partner AI App. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ca5ab66766d992a5f369d9da53cab9956d4e70e6bda2f25703cf28c223933247")
     public fun applicationConfig(applicationConfig: PartnerAppConfigProperty.Builder.() -> Unit)
 
     /**
-     * The Auth type of PartnerApp.
+     * Defines the authentication type used for the Partner AI App.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-authtype)
-     * @param authType The Auth type of PartnerApp. 
+     * @param authType Defines the authentication type used for the Partner AI App. 
      */
     public fun authType(authType: String)
 
     /**
-     * The client token for the PartnerApp.
+     * (deprecated) The client token for the PartnerApp.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-clienttoken)
+     * @deprecated this property has been deprecated
      * @param clientToken The client token for the PartnerApp. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun clientToken(clientToken: String)
 
     /**
@@ -331,12 +356,21 @@ public open class CfnPartnerApp(
     public fun enableIamSessionBasedIdentity(enableIamSessionBasedIdentity: IResolvable)
 
     /**
-     * The execution role for the user.
+     * The Amazon Resource Name (ARN) of the IAM role of the user.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-executionrolearn)
-     * @param executionRoleArn The execution role for the user. 
+     * @param executionRoleArn The Amazon Resource Name (ARN) of the IAM role of the user. 
      */
     public fun executionRoleArn(executionRoleArn: String)
+
+    /**
+     * The AWS KMS customer managed key used to encrypt the data associated with the PartnerApp.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-kmskeyid)
+     * @param kmsKeyId The AWS KMS customer managed key used to encrypt the data associated with the
+     * PartnerApp. 
+     */
+    public fun kmsKeyId(kmsKeyId: String)
 
     /**
      * A collection of settings that specify the maintenance schedule for the PartnerApp.
@@ -369,10 +403,12 @@ public open class CfnPartnerApp(
         fun maintenanceConfig(maintenanceConfig: PartnerAppMaintenanceConfigProperty.Builder.() -> Unit)
 
     /**
-     * A name for the PartnerApp.
+     * The name of the Partner AI App.
+     *
+     * This name must be unique within your account and region.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-name)
-     * @param name A name for the PartnerApp. 
+     * @param name The name of the Partner AI App. 
      */
     public fun name(name: String)
 
@@ -393,18 +429,22 @@ public open class CfnPartnerApp(
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * The tier of the PartnerApp.
+     * Specifies the tier or level of the Partner AI App.
+     *
+     * The tier size impacts the speed and capabilities of the application. For more information,
+     * see [Set up Partner AI
+     * Apps](https://docs.aws.amazon.com/sagemaker/latest/dg/partner-app-onboard.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-tier)
-     * @param tier The tier of the PartnerApp. 
+     * @param tier Specifies the tier or level of the Partner AI App. 
      */
     public fun tier(tier: String)
 
     /**
-     * The type of PartnerApp.
+     * Specifies the type of Partner AI App being created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-type)
-     * @param type The type of PartnerApp. 
+     * @param type Specifies the type of Partner AI App being created. 
      */
     public fun type(type: String)
   }
@@ -417,30 +457,30 @@ public open class CfnPartnerApp(
         software.amazon.awscdk.services.sagemaker.CfnPartnerApp.Builder.create(scope, id)
 
     /**
-     * A collection of configuration settings for the PartnerApp.
+     * Configuration settings for the Partner AI App.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-applicationconfig)
-     * @param applicationConfig A collection of configuration settings for the PartnerApp. 
+     * @param applicationConfig Configuration settings for the Partner AI App. 
      */
     override fun applicationConfig(applicationConfig: IResolvable) {
       cdkBuilder.applicationConfig(applicationConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * A collection of configuration settings for the PartnerApp.
+     * Configuration settings for the Partner AI App.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-applicationconfig)
-     * @param applicationConfig A collection of configuration settings for the PartnerApp. 
+     * @param applicationConfig Configuration settings for the Partner AI App. 
      */
     override fun applicationConfig(applicationConfig: PartnerAppConfigProperty) {
       cdkBuilder.applicationConfig(applicationConfig.let(PartnerAppConfigProperty.Companion::unwrap))
     }
 
     /**
-     * A collection of configuration settings for the PartnerApp.
+     * Configuration settings for the Partner AI App.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-applicationconfig)
-     * @param applicationConfig A collection of configuration settings for the PartnerApp. 
+     * @param applicationConfig Configuration settings for the Partner AI App. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ca5ab66766d992a5f369d9da53cab9956d4e70e6bda2f25703cf28c223933247")
@@ -448,21 +488,23 @@ public open class CfnPartnerApp(
         Unit = applicationConfig(PartnerAppConfigProperty(applicationConfig))
 
     /**
-     * The Auth type of PartnerApp.
+     * Defines the authentication type used for the Partner AI App.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-authtype)
-     * @param authType The Auth type of PartnerApp. 
+     * @param authType Defines the authentication type used for the Partner AI App. 
      */
     override fun authType(authType: String) {
       cdkBuilder.authType(authType)
     }
 
     /**
-     * The client token for the PartnerApp.
+     * (deprecated) The client token for the PartnerApp.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-clienttoken)
+     * @deprecated this property has been deprecated
      * @param clientToken The client token for the PartnerApp. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun clientToken(clientToken: String) {
       cdkBuilder.clientToken(clientToken)
     }
@@ -488,13 +530,24 @@ public open class CfnPartnerApp(
     }
 
     /**
-     * The execution role for the user.
+     * The Amazon Resource Name (ARN) of the IAM role of the user.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-executionrolearn)
-     * @param executionRoleArn The execution role for the user. 
+     * @param executionRoleArn The Amazon Resource Name (ARN) of the IAM role of the user. 
      */
     override fun executionRoleArn(executionRoleArn: String) {
       cdkBuilder.executionRoleArn(executionRoleArn)
+    }
+
+    /**
+     * The AWS KMS customer managed key used to encrypt the data associated with the PartnerApp.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-kmskeyid)
+     * @param kmsKeyId The AWS KMS customer managed key used to encrypt the data associated with the
+     * PartnerApp. 
+     */
+    override fun kmsKeyId(kmsKeyId: String) {
+      cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
     /**
@@ -533,10 +586,12 @@ public open class CfnPartnerApp(
         Unit = maintenanceConfig(PartnerAppMaintenanceConfigProperty(maintenanceConfig))
 
     /**
-     * A name for the PartnerApp.
+     * The name of the Partner AI App.
+     *
+     * This name must be unique within your account and region.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-name)
-     * @param name A name for the PartnerApp. 
+     * @param name The name of the Partner AI App. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -561,20 +616,24 @@ public open class CfnPartnerApp(
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * The tier of the PartnerApp.
+     * Specifies the tier or level of the Partner AI App.
+     *
+     * The tier size impacts the speed and capabilities of the application. For more information,
+     * see [Set up Partner AI
+     * Apps](https://docs.aws.amazon.com/sagemaker/latest/dg/partner-app-onboard.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-tier)
-     * @param tier The tier of the PartnerApp. 
+     * @param tier Specifies the tier or level of the Partner AI App. 
      */
     override fun tier(tier: String) {
       cdkBuilder.tier(tier)
     }
 
     /**
-     * The type of PartnerApp.
+     * Specifies the type of Partner AI App being created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-partnerapp.html#cfn-sagemaker-partnerapp-type)
-     * @param type The type of PartnerApp. 
+     * @param type Specifies the type of Partner AI App being created. 
      */
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -624,14 +683,14 @@ public open class CfnPartnerApp(
    */
   public interface PartnerAppConfigProperty {
     /**
-     * A list of users with administrator privileges for the PartnerApp.
+     * A list of users that will have administrative access to the Partner AI App.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-partnerapp-partnerappconfig.html#cfn-sagemaker-partnerapp-partnerappconfig-adminusers)
      */
     public fun adminUsers(): List<String> = unwrap(this).getAdminUsers() ?: emptyList()
 
     /**
-     * A list of arguments to pass to the PartnerApp.
+     * Additional arguments passed to the Partner AI App during initialization or runtime.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-partnerapp-partnerappconfig.html#cfn-sagemaker-partnerapp-partnerappconfig-arguments)
      */
@@ -643,24 +702,28 @@ public open class CfnPartnerApp(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param adminUsers A list of users with administrator privileges for the PartnerApp.
+       * @param adminUsers A list of users that will have administrative access to the Partner AI
+       * App.
        */
       public fun adminUsers(adminUsers: List<String>)
 
       /**
-       * @param adminUsers A list of users with administrator privileges for the PartnerApp.
+       * @param adminUsers A list of users that will have administrative access to the Partner AI
+       * App.
        */
       public fun adminUsers(vararg adminUsers: String)
 
       /**
-       * @param arguments A list of arguments to pass to the PartnerApp.
-       */
-      public fun arguments(arguments: IResolvable)
-
-      /**
-       * @param arguments A list of arguments to pass to the PartnerApp.
+       * @param arguments Additional arguments passed to the Partner AI App during initialization or
+       * runtime.
        */
       public fun arguments(arguments: Map<String, String>)
+
+      /**
+       * @param arguments Additional arguments passed to the Partner AI App during initialization or
+       * runtime.
+       */
+      public fun arguments(arguments: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -669,29 +732,33 @@ public open class CfnPartnerApp(
           software.amazon.awscdk.services.sagemaker.CfnPartnerApp.PartnerAppConfigProperty.builder()
 
       /**
-       * @param adminUsers A list of users with administrator privileges for the PartnerApp.
+       * @param adminUsers A list of users that will have administrative access to the Partner AI
+       * App.
        */
       override fun adminUsers(adminUsers: List<String>) {
         cdkBuilder.adminUsers(adminUsers)
       }
 
       /**
-       * @param adminUsers A list of users with administrator privileges for the PartnerApp.
+       * @param adminUsers A list of users that will have administrative access to the Partner AI
+       * App.
        */
       override fun adminUsers(vararg adminUsers: String): Unit = adminUsers(adminUsers.toList())
 
       /**
-       * @param arguments A list of arguments to pass to the PartnerApp.
-       */
-      override fun arguments(arguments: IResolvable) {
-        cdkBuilder.arguments(arguments.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param arguments A list of arguments to pass to the PartnerApp.
+       * @param arguments Additional arguments passed to the Partner AI App during initialization or
+       * runtime.
        */
       override fun arguments(arguments: Map<String, String>) {
         cdkBuilder.arguments(arguments)
+      }
+
+      /**
+       * @param arguments Additional arguments passed to the Partner AI App during initialization or
+       * runtime.
+       */
+      override fun arguments(arguments: IResolvable) {
+        cdkBuilder.arguments(arguments.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -704,14 +771,14 @@ public open class CfnPartnerApp(
     ) : CdkObject(cdkObject),
         PartnerAppConfigProperty {
       /**
-       * A list of users with administrator privileges for the PartnerApp.
+       * A list of users that will have administrative access to the Partner AI App.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-partnerapp-partnerappconfig.html#cfn-sagemaker-partnerapp-partnerappconfig-adminusers)
        */
       override fun adminUsers(): List<String> = unwrap(this).getAdminUsers() ?: emptyList()
 
       /**
-       * A list of arguments to pass to the PartnerApp.
+       * Additional arguments passed to the Partner AI App during initialization or runtime.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-partnerapp-partnerappconfig.html#cfn-sagemaker-partnerapp-partnerappconfig-arguments)
        */

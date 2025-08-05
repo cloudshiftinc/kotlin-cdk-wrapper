@@ -142,6 +142,27 @@ public open class DatabaseInstanceReadReplica(
     public fun allocatedStorage(allocatedStorage: Number)
 
     /**
+     * Specifies whether changes to the DB instance and any pending modifications are applied
+     * immediately, regardless of the `preferredMaintenanceWindow` setting.
+     *
+     * If set to `false`, changes are applied during the next maintenance window.
+     *
+     * Until RDS applies the changes, the DB instance remains in a drift state.
+     * As a result, the configuration doesn't fully reflect the requested modifications and
+     * temporarily diverges from the intended state.
+     *
+     * This property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     *
+     * Default: - Changes will be applied immediately
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+     * @param applyImmediately Specifies whether changes to the DB instance and any pending
+     * modifications are applied immediately, regardless of the `preferredMaintenanceWindow` setting. 
+     */
+    public fun applyImmediately(applyImmediately: Boolean)
+
+    /**
      * Indicates that minor engine upgrades are applied automatically to the DB instance during the
      * maintenance window.
      *
@@ -245,6 +266,16 @@ public open class DatabaseInstanceReadReplica(
     public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean)
 
     /**
+     * The database insights mode.
+     *
+     * Default: - DatabaseInsightsMode.STANDARD when performance insights are enabled, otherwise not
+     * set.
+     *
+     * @param databaseInsightsMode The database insights mode. 
+     */
+    public fun databaseInsightsMode(databaseInsightsMode: DatabaseInsightsMode)
+
+    /**
      * Indicates whether automated backups should be deleted or retained when you delete a DB
      * instance.
      *
@@ -295,6 +326,19 @@ public open class DatabaseInstanceReadReplica(
      * @param enablePerformanceInsights Whether to enable Performance Insights for the DB instance. 
      */
     public fun enablePerformanceInsights(enablePerformanceInsights: Boolean)
+
+    /**
+     * The life cycle type for this DB instance.
+     *
+     * This setting applies only to RDS for MySQL and RDS for PostgreSQL.
+     *
+     * Default: undefined - AWS RDS default setting is
+     * `EngineLifecycleSupport.OPEN_SOURCE_RDS_EXTENDED_SUPPORT`
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html)
+     * @param engineLifecycleSupport The life cycle type for this DB instance. 
+     */
+    public fun engineLifecycleSupport(engineLifecycleSupport: EngineLifecycleSupport)
 
     /**
      * Whether to enable mapping of AWS Identity and Access Management (IAM) accounts to database
@@ -422,6 +466,9 @@ public open class DatabaseInstanceReadReplica(
 
     /**
      * The amount of time, in days, to retain Performance Insights data.
+     *
+     * If you set `databaseInsightsMode` to `DatabaseInsightsMode.ADVANCED`, you must set this
+     * property to `PerformanceInsightRetention.MONTHS_15`.
      *
      * Default: 7 this is the free tier
      *
@@ -746,6 +793,29 @@ public open class DatabaseInstanceReadReplica(
     }
 
     /**
+     * Specifies whether changes to the DB instance and any pending modifications are applied
+     * immediately, regardless of the `preferredMaintenanceWindow` setting.
+     *
+     * If set to `false`, changes are applied during the next maintenance window.
+     *
+     * Until RDS applies the changes, the DB instance remains in a drift state.
+     * As a result, the configuration doesn't fully reflect the requested modifications and
+     * temporarily diverges from the intended state.
+     *
+     * This property also determines whether the DB instance reboots when a static parameter is
+     * modified in the associated DB parameter group.
+     *
+     * Default: - Changes will be applied immediately
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
+     * @param applyImmediately Specifies whether changes to the DB instance and any pending
+     * modifications are applied immediately, regardless of the `preferredMaintenanceWindow` setting. 
+     */
+    override fun applyImmediately(applyImmediately: Boolean) {
+      cdkBuilder.applyImmediately(applyImmediately)
+    }
+
+    /**
      * Indicates that minor engine upgrades are applied automatically to the DB instance during the
      * maintenance window.
      *
@@ -866,6 +936,18 @@ public open class DatabaseInstanceReadReplica(
     }
 
     /**
+     * The database insights mode.
+     *
+     * Default: - DatabaseInsightsMode.STANDARD when performance insights are enabled, otherwise not
+     * set.
+     *
+     * @param databaseInsightsMode The database insights mode. 
+     */
+    override fun databaseInsightsMode(databaseInsightsMode: DatabaseInsightsMode) {
+      cdkBuilder.databaseInsightsMode(databaseInsightsMode.let(DatabaseInsightsMode.Companion::unwrap))
+    }
+
+    /**
      * Indicates whether automated backups should be deleted or retained when you delete a DB
      * instance.
      *
@@ -925,6 +1007,21 @@ public open class DatabaseInstanceReadReplica(
      */
     override fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
       cdkBuilder.enablePerformanceInsights(enablePerformanceInsights)
+    }
+
+    /**
+     * The life cycle type for this DB instance.
+     *
+     * This setting applies only to RDS for MySQL and RDS for PostgreSQL.
+     *
+     * Default: undefined - AWS RDS default setting is
+     * `EngineLifecycleSupport.OPEN_SOURCE_RDS_EXTENDED_SUPPORT`
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html)
+     * @param engineLifecycleSupport The life cycle type for this DB instance. 
+     */
+    override fun engineLifecycleSupport(engineLifecycleSupport: EngineLifecycleSupport) {
+      cdkBuilder.engineLifecycleSupport(engineLifecycleSupport.let(EngineLifecycleSupport.Companion::unwrap))
     }
 
     /**
@@ -1077,6 +1174,9 @@ public open class DatabaseInstanceReadReplica(
 
     /**
      * The amount of time, in days, to retain Performance Insights data.
+     *
+     * If you set `databaseInsightsMode` to `DatabaseInsightsMode.ADVANCED`, you must set this
+     * property to `PerformanceInsightRetention.MONTHS_15`.
      *
      * Default: 7 this is the free tier
      *
@@ -1432,6 +1532,9 @@ public open class DatabaseInstanceReadReplica(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.rds.DatabaseInstanceReadReplica.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

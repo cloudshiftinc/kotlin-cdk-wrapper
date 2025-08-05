@@ -14,7 +14,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Definition of AWS::Wisdom::AIGuardrailVersion Resource Type.
+ * Creates an Amazon Q in Connect AI Guardrail version.
  *
  * Example:
  *
@@ -54,46 +54,46 @@ public open class CfnAIGuardrailVersion(
   )
 
   /**
-   *
+   * The ID of the AI guardrail version.
    */
   public open fun aiGuardrailId(): String = unwrap(this).getAiGuardrailId()
 
   /**
-   *
+   * The ID of the AI guardrail version.
    */
   public open fun aiGuardrailId(`value`: String) {
     unwrap(this).setAiGuardrailId(`value`)
   }
 
   /**
-   *
+   * The ID of the AI guardrail version assistant.
    */
   public open fun assistantId(): String = unwrap(this).getAssistantId()
 
   /**
-   *
+   * The ID of the AI guardrail version assistant.
    */
   public open fun assistantId(`value`: String) {
     unwrap(this).setAssistantId(`value`)
   }
 
   /**
-   *
+   * The ARN of the AI guardrail version.
    */
   public open fun attrAiGuardrailArn(): String = unwrap(this).getAttrAiGuardrailArn()
 
   /**
-   *
+   * The ID of the AI guardrail version.
    */
   public open fun attrAiGuardrailVersionId(): String = unwrap(this).getAttrAiGuardrailVersionId()
 
   /**
-   *
+   * The ARN of the AI guardrail version assistant.
    */
   public open fun attrAssistantArn(): String = unwrap(this).getAttrAssistantArn()
 
   /**
-   *
+   * The version number for this AI Guardrail version.
    */
   public open fun attrVersionNumber(): IResolvable =
       unwrap(this).getAttrVersionNumber().let(IResolvable::wrap)
@@ -108,12 +108,12 @@ public open class CfnAIGuardrailVersion(
   }
 
   /**
-   *
+   * The modified time of the AI guardrail version in seconds.
    */
   public open fun modifiedTimeSeconds(): Number? = unwrap(this).getModifiedTimeSeconds()
 
   /**
-   *
+   * The modified time of the AI guardrail version in seconds.
    */
   public open fun modifiedTimeSeconds(`value`: Number) {
     unwrap(this).setModifiedTimeSeconds(`value`)
@@ -125,20 +125,26 @@ public open class CfnAIGuardrailVersion(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The ID of the AI guardrail version.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrailversion.html#cfn-wisdom-aiguardrailversion-aiguardrailid)
-     * @param aiGuardrailId 
+     * @param aiGuardrailId The ID of the AI guardrail version. 
      */
     public fun aiGuardrailId(aiGuardrailId: String)
 
     /**
+     * The ID of the AI guardrail version assistant.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrailversion.html#cfn-wisdom-aiguardrailversion-assistantid)
-     * @param assistantId 
+     * @param assistantId The ID of the AI guardrail version assistant. 
      */
     public fun assistantId(assistantId: String)
 
     /**
+     * The modified time of the AI guardrail version in seconds.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrailversion.html#cfn-wisdom-aiguardrailversion-modifiedtimeseconds)
-     * @param modifiedTimeSeconds 
+     * @param modifiedTimeSeconds The modified time of the AI guardrail version in seconds. 
      */
     public fun modifiedTimeSeconds(modifiedTimeSeconds: Number)
   }
@@ -151,24 +157,30 @@ public open class CfnAIGuardrailVersion(
         software.amazon.awscdk.services.wisdom.CfnAIGuardrailVersion.Builder.create(scope, id)
 
     /**
+     * The ID of the AI guardrail version.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrailversion.html#cfn-wisdom-aiguardrailversion-aiguardrailid)
-     * @param aiGuardrailId 
+     * @param aiGuardrailId The ID of the AI guardrail version. 
      */
     override fun aiGuardrailId(aiGuardrailId: String) {
       cdkBuilder.aiGuardrailId(aiGuardrailId)
     }
 
     /**
+     * The ID of the AI guardrail version assistant.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrailversion.html#cfn-wisdom-aiguardrailversion-assistantid)
-     * @param assistantId 
+     * @param assistantId The ID of the AI guardrail version assistant. 
      */
     override fun assistantId(assistantId: String) {
       cdkBuilder.assistantId(assistantId)
     }
 
     /**
+     * The modified time of the AI guardrail version in seconds.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiguardrailversion.html#cfn-wisdom-aiguardrailversion-modifiedtimeseconds)
-     * @param modifiedTimeSeconds 
+     * @param modifiedTimeSeconds The modified time of the AI guardrail version in seconds. 
      */
     override fun modifiedTimeSeconds(modifiedTimeSeconds: Number) {
       cdkBuilder.modifiedTimeSeconds(modifiedTimeSeconds)

@@ -235,6 +235,13 @@ public abstract class RepositoryBase(
       OnImageScanCompletedOptions(options))
 
   /**
+   * The URI of this repository's registry:.
+   *
+   * ACCOUNT.dkr.ecr.REGION.amazonaws.com
+   */
+  public override fun registryUri(): String = unwrap(this).getRegistryUri()
+
+  /**
    * The ARN of the repository.
    */
   public override fun repositoryArn(): String = unwrap(this).getRepositoryArn()

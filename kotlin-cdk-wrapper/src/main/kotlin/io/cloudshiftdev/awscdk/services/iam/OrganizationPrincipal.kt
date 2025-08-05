@@ -29,7 +29,8 @@ public open class OrganizationPrincipal(
   public override fun dedupeString(): String? = unwrap(this).dedupeString()
 
   /**
-   * The unique identifier (ID) of an organization (i.e. o-12345abcde).
+   * The unique identifier (ID) of an organization (i.e. o-12345abcde) It must match regex pattern
+   * ^o-[a-z0-9]{10,32}$.
    */
   public open fun organizationId(): String = unwrap(this).getOrganizationId()
 

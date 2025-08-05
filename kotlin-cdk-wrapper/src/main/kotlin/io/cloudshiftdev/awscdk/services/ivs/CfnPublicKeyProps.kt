@@ -44,6 +44,8 @@ public interface CfnPublicKeyProps {
   /**
    * The public portion of a customer-generated key pair.
    *
+   * Note that this field is required to create the AWS::IVS::PublicKey resource.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-publickey.html#cfn-ivs-publickey-publickeymaterial)
    */
   public fun publicKeyMaterial(): String? = unwrap(this).getPublicKeyMaterial()
@@ -68,6 +70,7 @@ public interface CfnPublicKeyProps {
 
     /**
      * @param publicKeyMaterial The public portion of a customer-generated key pair.
+     * Note that this field is required to create the AWS::IVS::PublicKey resource.
      */
     public fun publicKeyMaterial(publicKeyMaterial: String)
 
@@ -96,6 +99,7 @@ public interface CfnPublicKeyProps {
 
     /**
      * @param publicKeyMaterial The public portion of a customer-generated key pair.
+     * Note that this field is required to create the AWS::IVS::PublicKey resource.
      */
     override fun publicKeyMaterial(publicKeyMaterial: String) {
       cdkBuilder.publicKeyMaterial(publicKeyMaterial)
@@ -131,6 +135,8 @@ public interface CfnPublicKeyProps {
 
     /**
      * The public portion of a customer-generated key pair.
+     *
+     * Note that this field is required to create the AWS::IVS::PublicKey resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-publickey.html#cfn-ivs-publickey-publickeymaterial)
      */

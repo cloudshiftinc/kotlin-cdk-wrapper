@@ -82,8 +82,8 @@ public open class CfnDelivery(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   * Displays whether the delivery destination associated with this delivery is CloudWatch Logs,
-   * Amazon S3, or Firehose.
+   * Displays whether the delivery destination associated with this delivery is CloudWatch Logs ,
+   * Amazon S3 , or Firehose .
    */
   public open fun attrDeliveryDestinationType(): String =
       unwrap(this).getAttrDeliveryDestinationType()
@@ -147,72 +147,70 @@ public open class CfnDelivery(
   }
 
   /**
-   * The record fields used in this delivery.
+   * The list of record fields to be delivered to the destination, in order.
    */
   public open fun recordFields(): List<String> = unwrap(this).getRecordFields() ?: emptyList()
 
   /**
-   * The record fields used in this delivery.
+   * The list of record fields to be delivered to the destination, in order.
    */
   public open fun recordFields(`value`: List<String>) {
     unwrap(this).setRecordFields(`value`)
   }
 
   /**
-   * The record fields used in this delivery.
+   * The list of record fields to be delivered to the destination, in order.
    */
   public open fun recordFields(vararg `value`: String): Unit = recordFields(`value`.toList())
 
   /**
-   * This parameter causes the S3 objects that contain delivered logs to use a prefix structure that
-   * allows for integration with Apache Hive.
+   * Use this parameter to cause the S3 objects that contain delivered logs to use a prefix
+   * structure that allows for integration with Apache Hive.
    */
   public open fun s3EnableHiveCompatiblePath(): Any? = unwrap(this).getS3EnableHiveCompatiblePath()
 
   /**
-   * This parameter causes the S3 objects that contain delivered logs to use a prefix structure that
-   * allows for integration with Apache Hive.
+   * Use this parameter to cause the S3 objects that contain delivered logs to use a prefix
+   * structure that allows for integration with Apache Hive.
    */
   public open fun s3EnableHiveCompatiblePath(`value`: Boolean) {
     unwrap(this).setS3EnableHiveCompatiblePath(`value`)
   }
 
   /**
-   * This parameter causes the S3 objects that contain delivered logs to use a prefix structure that
-   * allows for integration with Apache Hive.
+   * Use this parameter to cause the S3 objects that contain delivered logs to use a prefix
+   * structure that allows for integration with Apache Hive.
    */
   public open fun s3EnableHiveCompatiblePath(`value`: IResolvable) {
     unwrap(this).setS3EnableHiveCompatiblePath(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * This string allows re-configuring the S3 object prefix to contain either static or variable
-   * sections.
+   * Use this to reconfigure the S3 object prefix to contain either static or variable sections.
    */
   public open fun s3SuffixPath(): String? = unwrap(this).getS3SuffixPath()
 
   /**
-   * This string allows re-configuring the S3 object prefix to contain either static or variable
-   * sections.
+   * Use this to reconfigure the S3 object prefix to contain either static or variable sections.
    */
   public open fun s3SuffixPath(`value`: String) {
     unwrap(this).setS3SuffixPath(`value`)
   }
 
   /**
-   * The tags that have been assigned to this delivery.
+   * An array of key-value pairs to apply to the delivery.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * The tags that have been assigned to this delivery.
+   * An array of key-value pairs to apply to the delivery.
    */
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * The tags that have been assigned to this delivery.
+   * An array of key-value pairs to apply to the delivery.
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
@@ -250,68 +248,80 @@ public open class CfnDelivery(
     public fun fieldDelimiter(fieldDelimiter: String)
 
     /**
-     * The record fields used in this delivery.
+     * The list of record fields to be delivered to the destination, in order.
+     *
+     * If the delivery's log source has mandatory fields, they must be included in this list.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-recordfields)
-     * @param recordFields The record fields used in this delivery. 
+     * @param recordFields The list of record fields to be delivered to the destination, in order. 
      */
     public fun recordFields(recordFields: List<String>)
 
     /**
-     * The record fields used in this delivery.
+     * The list of record fields to be delivered to the destination, in order.
+     *
+     * If the delivery's log source has mandatory fields, they must be included in this list.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-recordfields)
-     * @param recordFields The record fields used in this delivery. 
+     * @param recordFields The list of record fields to be delivered to the destination, in order. 
      */
     public fun recordFields(vararg recordFields: String)
 
     /**
-     * This parameter causes the S3 objects that contain delivered logs to use a prefix structure
-     * that allows for integration with Apache Hive.
+     * Use this parameter to cause the S3 objects that contain delivered logs to use a prefix
+     * structure that allows for integration with Apache Hive.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-s3enablehivecompatiblepath)
-     * @param s3EnableHiveCompatiblePath This parameter causes the S3 objects that contain delivered
-     * logs to use a prefix structure that allows for integration with Apache Hive. 
+     * @param s3EnableHiveCompatiblePath Use this parameter to cause the S3 objects that contain
+     * delivered logs to use a prefix structure that allows for integration with Apache Hive. 
      */
     public fun s3EnableHiveCompatiblePath(s3EnableHiveCompatiblePath: Boolean)
 
     /**
-     * This parameter causes the S3 objects that contain delivered logs to use a prefix structure
-     * that allows for integration with Apache Hive.
+     * Use this parameter to cause the S3 objects that contain delivered logs to use a prefix
+     * structure that allows for integration with Apache Hive.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-s3enablehivecompatiblepath)
-     * @param s3EnableHiveCompatiblePath This parameter causes the S3 objects that contain delivered
-     * logs to use a prefix structure that allows for integration with Apache Hive. 
+     * @param s3EnableHiveCompatiblePath Use this parameter to cause the S3 objects that contain
+     * delivered logs to use a prefix structure that allows for integration with Apache Hive. 
      */
     public fun s3EnableHiveCompatiblePath(s3EnableHiveCompatiblePath: IResolvable)
 
     /**
-     * This string allows re-configuring the S3 object prefix to contain either static or variable
-     * sections.
+     * Use this to reconfigure the S3 object prefix to contain either static or variable sections.
      *
-     * The valid variables to use in the suffix path will vary by each log source. See
-     * ConfigurationTemplate$allowedSuffixPathFields for more info on what values are supported in the
-     * suffix path for each log source.
+     * The valid variables to use in the suffix path will vary by each log source. To find the
+     * values supported for the suffix path for each log source, use the
+     * [DescribeConfigurationTemplates](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeConfigurationTemplates.html)
+     * operation and check the `allowedSuffixPathFields` field in the response.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-s3suffixpath)
-     * @param s3SuffixPath This string allows re-configuring the S3 object prefix to contain either
-     * static or variable sections. 
+     * @param s3SuffixPath Use this to reconfigure the S3 object prefix to contain either static or
+     * variable sections. 
      */
     public fun s3SuffixPath(s3SuffixPath: String)
 
     /**
-     * The tags that have been assigned to this delivery.
+     * An array of key-value pairs to apply to the delivery.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-tags)
-     * @param tags The tags that have been assigned to this delivery. 
+     * @param tags An array of key-value pairs to apply to the delivery. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * The tags that have been assigned to this delivery.
+     * An array of key-value pairs to apply to the delivery.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-tags)
-     * @param tags The tags that have been assigned to this delivery. 
+     * @param tags An array of key-value pairs to apply to the delivery. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -358,79 +368,91 @@ public open class CfnDelivery(
     }
 
     /**
-     * The record fields used in this delivery.
+     * The list of record fields to be delivered to the destination, in order.
+     *
+     * If the delivery's log source has mandatory fields, they must be included in this list.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-recordfields)
-     * @param recordFields The record fields used in this delivery. 
+     * @param recordFields The list of record fields to be delivered to the destination, in order. 
      */
     override fun recordFields(recordFields: List<String>) {
       cdkBuilder.recordFields(recordFields)
     }
 
     /**
-     * The record fields used in this delivery.
+     * The list of record fields to be delivered to the destination, in order.
+     *
+     * If the delivery's log source has mandatory fields, they must be included in this list.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-recordfields)
-     * @param recordFields The record fields used in this delivery. 
+     * @param recordFields The list of record fields to be delivered to the destination, in order. 
      */
     override fun recordFields(vararg recordFields: String): Unit =
         recordFields(recordFields.toList())
 
     /**
-     * This parameter causes the S3 objects that contain delivered logs to use a prefix structure
-     * that allows for integration with Apache Hive.
+     * Use this parameter to cause the S3 objects that contain delivered logs to use a prefix
+     * structure that allows for integration with Apache Hive.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-s3enablehivecompatiblepath)
-     * @param s3EnableHiveCompatiblePath This parameter causes the S3 objects that contain delivered
-     * logs to use a prefix structure that allows for integration with Apache Hive. 
+     * @param s3EnableHiveCompatiblePath Use this parameter to cause the S3 objects that contain
+     * delivered logs to use a prefix structure that allows for integration with Apache Hive. 
      */
     override fun s3EnableHiveCompatiblePath(s3EnableHiveCompatiblePath: Boolean) {
       cdkBuilder.s3EnableHiveCompatiblePath(s3EnableHiveCompatiblePath)
     }
 
     /**
-     * This parameter causes the S3 objects that contain delivered logs to use a prefix structure
-     * that allows for integration with Apache Hive.
+     * Use this parameter to cause the S3 objects that contain delivered logs to use a prefix
+     * structure that allows for integration with Apache Hive.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-s3enablehivecompatiblepath)
-     * @param s3EnableHiveCompatiblePath This parameter causes the S3 objects that contain delivered
-     * logs to use a prefix structure that allows for integration with Apache Hive. 
+     * @param s3EnableHiveCompatiblePath Use this parameter to cause the S3 objects that contain
+     * delivered logs to use a prefix structure that allows for integration with Apache Hive. 
      */
     override fun s3EnableHiveCompatiblePath(s3EnableHiveCompatiblePath: IResolvable) {
       cdkBuilder.s3EnableHiveCompatiblePath(s3EnableHiveCompatiblePath.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * This string allows re-configuring the S3 object prefix to contain either static or variable
-     * sections.
+     * Use this to reconfigure the S3 object prefix to contain either static or variable sections.
      *
-     * The valid variables to use in the suffix path will vary by each log source. See
-     * ConfigurationTemplate$allowedSuffixPathFields for more info on what values are supported in the
-     * suffix path for each log source.
+     * The valid variables to use in the suffix path will vary by each log source. To find the
+     * values supported for the suffix path for each log source, use the
+     * [DescribeConfigurationTemplates](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeConfigurationTemplates.html)
+     * operation and check the `allowedSuffixPathFields` field in the response.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-s3suffixpath)
-     * @param s3SuffixPath This string allows re-configuring the S3 object prefix to contain either
-     * static or variable sections. 
+     * @param s3SuffixPath Use this to reconfigure the S3 object prefix to contain either static or
+     * variable sections. 
      */
     override fun s3SuffixPath(s3SuffixPath: String) {
       cdkBuilder.s3SuffixPath(s3SuffixPath)
     }
 
     /**
-     * The tags that have been assigned to this delivery.
+     * An array of key-value pairs to apply to the delivery.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-tags)
-     * @param tags The tags that have been assigned to this delivery. 
+     * @param tags An array of key-value pairs to apply to the delivery. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * The tags that have been assigned to this delivery.
+     * An array of key-value pairs to apply to the delivery.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-tags)
-     * @param tags The tags that have been assigned to this delivery. 
+     * @param tags An array of key-value pairs to apply to the delivery. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 

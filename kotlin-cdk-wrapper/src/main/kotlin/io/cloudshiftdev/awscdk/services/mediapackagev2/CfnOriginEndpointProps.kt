@@ -32,7 +32,27 @@ import kotlin.jvm.JvmName
  * .dashManifests(List.of(DashManifestConfigurationProperty.builder()
  * .manifestName("manifestName")
  * // the properties below are optional
+ * .baseUrls(List.of(DashBaseUrlProperty.builder()
+ * .url("url")
+ * // the properties below are optional
+ * .dvbPriority(123)
+ * .dvbWeight(123)
+ * .serviceLocation("serviceLocation")
+ * .build()))
+ * .compactness("compactness")
  * .drmSignaling("drmSignaling")
+ * .dvbSettings(DashDvbSettingsProperty.builder()
+ * .errorMetrics(List.of(DashDvbMetricsReportingProperty.builder()
+ * .reportingUrl("reportingUrl")
+ * // the properties below are optional
+ * .probability(123)
+ * .build()))
+ * .fontDownload(DashDvbFontDownloadProperty.builder()
+ * .fontFamily("fontFamily")
+ * .mimeType("mimeType")
+ * .url("url")
+ * .build())
+ * .build())
  * .filterConfiguration(FilterConfigurationProperty.builder()
  * .clipStartTime("clipStartTime")
  * .end("end")
@@ -44,10 +64,23 @@ import kotlin.jvm.JvmName
  * .minBufferTimeSeconds(123)
  * .minUpdatePeriodSeconds(123)
  * .periodTriggers(List.of("periodTriggers"))
+ * .profiles(List.of("profiles"))
+ * .programInformation(DashProgramInformationProperty.builder()
+ * .copyright("copyright")
+ * .languageCode("languageCode")
+ * .moreInformationUrl("moreInformationUrl")
+ * .source("source")
+ * .title("title")
+ * .build())
  * .scteDash(ScteDashProperty.builder()
  * .adMarkerDash("adMarkerDash")
  * .build())
  * .segmentTemplateFormat("segmentTemplateFormat")
+ * .subtitleConfiguration(DashSubtitleConfigurationProperty.builder()
+ * .ttmlConfiguration(DashTtmlConfigurationProperty.builder()
+ * .ttmlProfile("ttmlProfile")
+ * .build())
+ * .build())
  * .suggestedPresentationDelaySeconds(123)
  * .utcTiming(DashUtcTimingProperty.builder()
  * .timingMode("timingMode")
@@ -80,6 +113,7 @@ import kotlin.jvm.JvmName
  * .precise(false)
  * .build())
  * .url("url")
+ * .urlEncodeChildManifest(false)
  * .build()))
  * .lowLatencyHlsManifests(List.of(LowLatencyHlsManifestConfigurationProperty.builder()
  * .manifestName("manifestName")
@@ -103,6 +137,7 @@ import kotlin.jvm.JvmName
  * .precise(false)
  * .build())
  * .url("url")
+ * .urlEncodeChildManifest(false)
  * .build()))
  * .segment(SegmentProperty.builder()
  * .encryption(EncryptionProperty.builder()
@@ -188,7 +223,7 @@ public interface CfnOriginEndpointProps {
       unwrap(this).getForceEndpointErrorConfiguration()
 
   /**
-   * The HLS manfiests associated with the origin endpoint configuration.
+   * The HLS manifests associated with the origin endpoint configuration.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-hlsmanifests)
    */
@@ -293,17 +328,17 @@ public interface CfnOriginEndpointProps {
         fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration.
+     * @param hlsManifests The HLS manifests associated with the origin endpoint configuration.
      */
     public fun hlsManifests(hlsManifests: IResolvable)
 
     /**
-     * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration.
+     * @param hlsManifests The HLS manifests associated with the origin endpoint configuration.
      */
     public fun hlsManifests(hlsManifests: List<Any>)
 
     /**
-     * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration.
+     * @param hlsManifests The HLS manifests associated with the origin endpoint configuration.
      */
     public fun hlsManifests(vararg hlsManifests: Any)
 
@@ -446,21 +481,21 @@ public interface CfnOriginEndpointProps {
         forceEndpointErrorConfiguration(CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty(forceEndpointErrorConfiguration))
 
     /**
-     * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration.
+     * @param hlsManifests The HLS manifests associated with the origin endpoint configuration.
      */
     override fun hlsManifests(hlsManifests: IResolvable) {
       cdkBuilder.hlsManifests(hlsManifests.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration.
+     * @param hlsManifests The HLS manifests associated with the origin endpoint configuration.
      */
     override fun hlsManifests(hlsManifests: List<Any>) {
       cdkBuilder.hlsManifests(hlsManifests.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration.
+     * @param hlsManifests The HLS manifests associated with the origin endpoint configuration.
      */
     override fun hlsManifests(vararg hlsManifests: Any): Unit = hlsManifests(hlsManifests.toList())
 
@@ -590,7 +625,7 @@ public interface CfnOriginEndpointProps {
         unwrap(this).getForceEndpointErrorConfiguration()
 
     /**
-     * The HLS manfiests associated with the origin endpoint configuration.
+     * The HLS manifests associated with the origin endpoint configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-hlsmanifests)
      */

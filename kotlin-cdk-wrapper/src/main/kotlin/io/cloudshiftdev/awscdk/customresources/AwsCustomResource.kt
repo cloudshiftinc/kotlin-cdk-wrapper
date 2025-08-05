@@ -126,7 +126,7 @@ public open class AwsCustomResource(
     public fun functionName(functionName: String)
 
     /**
-     * Whether to install the latest AWS SDK v2.
+     * Whether to install the latest AWS SDK v3.
      *
      * If not specified, this uses whatever JavaScript SDK version is the default in
      * AWS Lambda at the time of execution.
@@ -140,7 +140,7 @@ public open class AwsCustomResource(
      * Default: - The value of `@aws-cdk/customresources:installLatestAwsSdkDefault`, otherwise
      * `true`
      *
-     * @param installLatestAwsSdk Whether to install the latest AWS SDK v2. 
+     * @param installLatestAwsSdk Whether to install the latest AWS SDK v3. 
      */
     public fun installLatestAwsSdk(installLatestAwsSdk: Boolean)
 
@@ -299,6 +299,23 @@ public open class AwsCustomResource(
     public fun role(role: IRole)
 
     /**
+     * The maximum time that can elapse before a custom resource operation times out.
+     *
+     * You should not need to set this property. It is intended to allow quick turnaround
+     * even if the implementor of the custom resource forgets to include a `try/catch`.
+     * We have included the `try/catch`, and AWS service calls usually do not take an hour
+     * to complete.
+     *
+     * The value must be between 1 second and 3600 seconds.
+     *
+     * Default: Duration.seconds(3600)
+     *
+     * @param serviceTimeout The maximum time that can elapse before a custom resource operation
+     * times out. 
+     */
+    public fun serviceTimeout(serviceTimeout: Duration)
+
+    /**
      * The timeout for the singleton Lambda function implementing this custom resource.
      *
      * Default: Duration.minutes(2)
@@ -368,7 +385,7 @@ public open class AwsCustomResource(
     }
 
     /**
-     * Whether to install the latest AWS SDK v2.
+     * Whether to install the latest AWS SDK v3.
      *
      * If not specified, this uses whatever JavaScript SDK version is the default in
      * AWS Lambda at the time of execution.
@@ -382,7 +399,7 @@ public open class AwsCustomResource(
      * Default: - The value of `@aws-cdk/customresources:installLatestAwsSdkDefault`, otherwise
      * `true`
      *
-     * @param installLatestAwsSdk Whether to install the latest AWS SDK v2. 
+     * @param installLatestAwsSdk Whether to install the latest AWS SDK v3. 
      */
     override fun installLatestAwsSdk(installLatestAwsSdk: Boolean) {
       cdkBuilder.installLatestAwsSdk(installLatestAwsSdk)
@@ -566,6 +583,25 @@ public open class AwsCustomResource(
     }
 
     /**
+     * The maximum time that can elapse before a custom resource operation times out.
+     *
+     * You should not need to set this property. It is intended to allow quick turnaround
+     * even if the implementor of the custom resource forgets to include a `try/catch`.
+     * We have included the `try/catch`, and AWS service calls usually do not take an hour
+     * to complete.
+     *
+     * The value must be between 1 second and 3600 seconds.
+     *
+     * Default: Duration.seconds(3600)
+     *
+     * @param serviceTimeout The maximum time that can elapse before a custom resource operation
+     * times out. 
+     */
+    override fun serviceTimeout(serviceTimeout: Duration) {
+      cdkBuilder.serviceTimeout(serviceTimeout.let(Duration.Companion::unwrap))
+    }
+
+    /**
      * The timeout for the singleton Lambda function implementing this custom resource.
      *
      * Default: Duration.minutes(2)
@@ -622,6 +658,9 @@ public open class AwsCustomResource(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.customresources.AwsCustomResource.PROPERTY_INJECTION_ID
+
     public val PROVIDER_FUNCTION_UUID: String =
         software.amazon.awscdk.customresources.AwsCustomResource.PROVIDER_FUNCTION_UUID
 

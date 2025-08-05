@@ -31,8 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * applications and services. SLOs use service level indicators (SLIs) to calculate whether the
  * application is performing at the level that you want.
  *
- * Create an SLO to set a target for a service or operation’s availability or latency. CloudWatch
- * measures this target frequently you can find whether it has been breached.
+ * Create an SLO to set a target for a service operation, or service dependency's availability or
+ * latency. CloudWatch measures this target frequently you can find whether it has been breached.
  *
  * The target performance quality that is defined for an SLO is the *attainment goal* . An
  * attainment goal is the percentage of time or requests that the SLI is expected to meet the threshold
@@ -82,9 +82,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * * `tag:GetResources`
  * * `autoscaling:DescribeAutoScalingGroups`
  *
- * You can easily set SLO targets for your applications that are discovered by Application Signals,
- * using critical metrics such as latency and availability. You can also set SLOs against any
- * CloudWatch metric or math expression that produces a time series.
+ * You can easily set SLO targets for your applications, and their dependencies, that are discovered
+ * by Application Signals, using critical metrics such as latency and availability. You can also set
+ * SLOs against any CloudWatch metric or math expression that produces a time series.
  *
  *
  * You can't create an SLO for a service operation that was discovered by Application Signals until
@@ -112,6 +112,18 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .lookBackWindowMinutes(123)
  * .build()))
  * .description("description")
+ * .exclusionWindows(List.of(ExclusionWindowProperty.builder()
+ * .window(WindowProperty.builder()
+ * .duration(123)
+ * .durationUnit("durationUnit")
+ * .build())
+ * // the properties below are optional
+ * .reason("reason")
+ * .recurrenceRule(RecurrenceRuleProperty.builder()
+ * .expression("expression")
+ * .build())
+ * .startTime("startTime")
+ * .build()))
  * .goal(GoalProperty.builder()
  * .attainmentGoal(123)
  * .interval(IntervalProperty.builder()
@@ -129,6 +141,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .requestBasedSli(RequestBasedSliProperty.builder()
  * .requestBasedSliMetric(RequestBasedSliMetricProperty.builder()
+ * .dependencyConfig(DependencyConfigProperty.builder()
+ * .dependencyKeyAttributes(Map.of(
+ * "dependencyKeyAttributesKey", "dependencyKeyAttributes"))
+ * .dependencyOperationName("dependencyOperationName")
+ * .build())
  * .keyAttributes(Map.of(
  * "keyAttributesKey", "keyAttributes"))
  * .metricType("metricType")
@@ -207,6 +224,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .comparisonOperator("comparisonOperator")
  * .metricThreshold(123)
  * .sliMetric(SliMetricProperty.builder()
+ * .dependencyConfig(DependencyConfigProperty.builder()
+ * .dependencyKeyAttributes(Map.of(
+ * "dependencyKeyAttributesKey", "dependencyKeyAttributes"))
+ * .dependencyOperationName("dependencyOperationName")
+ * .build())
  * .keyAttributes(Map.of(
  * "keyAttributesKey", "keyAttributes"))
  * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
@@ -332,6 +354,30 @@ public open class CfnServiceLevelObjective(
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
   }
+
+  /**
+   * The time window to be excluded from the SLO performance metrics.
+   */
+  public open fun exclusionWindows(): Any? = unwrap(this).getExclusionWindows()
+
+  /**
+   * The time window to be excluded from the SLO performance metrics.
+   */
+  public open fun exclusionWindows(`value`: IResolvable) {
+    unwrap(this).setExclusionWindows(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The time window to be excluded from the SLO performance metrics.
+   */
+  public open fun exclusionWindows(`value`: List<Any>) {
+    unwrap(this).setExclusionWindows(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * The time window to be excluded from the SLO performance metrics.
+   */
+  public open fun exclusionWindows(vararg `value`: Any): Unit = exclusionWindows(`value`.toList())
 
   /**
    * This structure contains the attributes that determine the goal of an SLO.
@@ -512,6 +558,30 @@ public open class CfnServiceLevelObjective(
      * @param description An optional description for this SLO. 
      */
     public fun description(description: String)
+
+    /**
+     * The time window to be excluded from the SLO performance metrics.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-exclusionwindows)
+     * @param exclusionWindows The time window to be excluded from the SLO performance metrics. 
+     */
+    public fun exclusionWindows(exclusionWindows: IResolvable)
+
+    /**
+     * The time window to be excluded from the SLO performance metrics.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-exclusionwindows)
+     * @param exclusionWindows The time window to be excluded from the SLO performance metrics. 
+     */
+    public fun exclusionWindows(exclusionWindows: List<Any>)
+
+    /**
+     * The time window to be excluded from the SLO performance metrics.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-exclusionwindows)
+     * @param exclusionWindows The time window to be excluded from the SLO performance metrics. 
+     */
+    public fun exclusionWindows(vararg exclusionWindows: Any)
 
     /**
      * This structure contains the attributes that determine the goal of an SLO.
@@ -712,6 +782,35 @@ public open class CfnServiceLevelObjective(
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
+
+    /**
+     * The time window to be excluded from the SLO performance metrics.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-exclusionwindows)
+     * @param exclusionWindows The time window to be excluded from the SLO performance metrics. 
+     */
+    override fun exclusionWindows(exclusionWindows: IResolvable) {
+      cdkBuilder.exclusionWindows(exclusionWindows.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The time window to be excluded from the SLO performance metrics.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-exclusionwindows)
+     * @param exclusionWindows The time window to be excluded from the SLO performance metrics. 
+     */
+    override fun exclusionWindows(exclusionWindows: List<Any>) {
+      cdkBuilder.exclusionWindows(exclusionWindows.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * The time window to be excluded from the SLO performance metrics.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-exclusionwindows)
+     * @param exclusionWindows The time window to be excluded from the SLO performance metrics. 
+     */
+    override fun exclusionWindows(vararg exclusionWindows: Any): Unit =
+        exclusionWindows(exclusionWindows.toList())
 
     /**
      * This structure contains the attributes that determine the goal of an SLO.
@@ -1172,6 +1271,189 @@ public open class CfnServiceLevelObjective(
   }
 
   /**
+   * Identifies the dependency using the `DependencyKeyAttributes` and `DependencyOperationName` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationsignals.*;
+   * DependencyConfigProperty dependencyConfigProperty = DependencyConfigProperty.builder()
+   * .dependencyKeyAttributes(Map.of(
+   * "dependencyKeyAttributesKey", "dependencyKeyAttributes"))
+   * .dependencyOperationName("dependencyOperationName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-dependencyconfig.html)
+   */
+  public interface DependencyConfigProperty {
+    /**
+     * If this SLO is related to a metric collected by Application Signals, you must use this field
+     * to specify which dependency the SLO metric is related to.
+     *
+     * * `Type` designates the type of object this is.
+     * * `ResourceType` specifies the type of the resource. This field is used only when the value
+     * of the `Type` field is `Resource` or `AWS::Resource` .
+     * * `Name` specifies the name of the object. This is used only if the value of the `Type` field
+     * is `Service` , `RemoteService` , or `AWS::Service` .
+     * * `Identifier` identifies the resource objects of this resource. This is used only if the
+     * value of the `Type` field is `Resource` or `AWS::Resource` .
+     * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-dependencyconfig.html#cfn-applicationsignals-servicelevelobjective-dependencyconfig-dependencykeyattributes)
+     */
+    public fun dependencyKeyAttributes(): Any
+
+    /**
+     * When the SLO monitors a specific operation of the dependency, this field specifies the name
+     * of that operation in the dependency.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-dependencyconfig.html#cfn-applicationsignals-servicelevelobjective-dependencyconfig-dependencyoperationname)
+     */
+    public fun dependencyOperationName(): String
+
+    /**
+     * A builder for [DependencyConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dependencyKeyAttributes If this SLO is related to a metric collected by Application
+       * Signals, you must use this field to specify which dependency the SLO metric is related to. 
+       * * `Type` designates the type of object this is.
+       * * `ResourceType` specifies the type of the resource. This field is used only when the value
+       * of the `Type` field is `Resource` or `AWS::Resource` .
+       * * `Name` specifies the name of the object. This is used only if the value of the `Type`
+       * field is `Service` , `RemoteService` , or `AWS::Service` .
+       * * `Identifier` identifies the resource objects of this resource. This is used only if the
+       * value of the `Type` field is `Resource` or `AWS::Resource` .
+       * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+       */
+      public fun dependencyKeyAttributes(dependencyKeyAttributes: Map<String, String>)
+
+      /**
+       * @param dependencyKeyAttributes If this SLO is related to a metric collected by Application
+       * Signals, you must use this field to specify which dependency the SLO metric is related to. 
+       * * `Type` designates the type of object this is.
+       * * `ResourceType` specifies the type of the resource. This field is used only when the value
+       * of the `Type` field is `Resource` or `AWS::Resource` .
+       * * `Name` specifies the name of the object. This is used only if the value of the `Type`
+       * field is `Service` , `RemoteService` , or `AWS::Service` .
+       * * `Identifier` identifies the resource objects of this resource. This is used only if the
+       * value of the `Type` field is `Resource` or `AWS::Resource` .
+       * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+       */
+      public fun dependencyKeyAttributes(dependencyKeyAttributes: IResolvable)
+
+      /**
+       * @param dependencyOperationName When the SLO monitors a specific operation of the
+       * dependency, this field specifies the name of that operation in the dependency. 
+       */
+      public fun dependencyOperationName(dependencyOperationName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.DependencyConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.DependencyConfigProperty.builder()
+
+      /**
+       * @param dependencyKeyAttributes If this SLO is related to a metric collected by Application
+       * Signals, you must use this field to specify which dependency the SLO metric is related to. 
+       * * `Type` designates the type of object this is.
+       * * `ResourceType` specifies the type of the resource. This field is used only when the value
+       * of the `Type` field is `Resource` or `AWS::Resource` .
+       * * `Name` specifies the name of the object. This is used only if the value of the `Type`
+       * field is `Service` , `RemoteService` , or `AWS::Service` .
+       * * `Identifier` identifies the resource objects of this resource. This is used only if the
+       * value of the `Type` field is `Resource` or `AWS::Resource` .
+       * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+       */
+      override fun dependencyKeyAttributes(dependencyKeyAttributes: Map<String, String>) {
+        cdkBuilder.dependencyKeyAttributes(dependencyKeyAttributes)
+      }
+
+      /**
+       * @param dependencyKeyAttributes If this SLO is related to a metric collected by Application
+       * Signals, you must use this field to specify which dependency the SLO metric is related to. 
+       * * `Type` designates the type of object this is.
+       * * `ResourceType` specifies the type of the resource. This field is used only when the value
+       * of the `Type` field is `Resource` or `AWS::Resource` .
+       * * `Name` specifies the name of the object. This is used only if the value of the `Type`
+       * field is `Service` , `RemoteService` , or `AWS::Service` .
+       * * `Identifier` identifies the resource objects of this resource. This is used only if the
+       * value of the `Type` field is `Resource` or `AWS::Resource` .
+       * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+       */
+      override fun dependencyKeyAttributes(dependencyKeyAttributes: IResolvable) {
+        cdkBuilder.dependencyKeyAttributes(dependencyKeyAttributes.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param dependencyOperationName When the SLO monitors a specific operation of the
+       * dependency, this field specifies the name of that operation in the dependency. 
+       */
+      override fun dependencyOperationName(dependencyOperationName: String) {
+        cdkBuilder.dependencyOperationName(dependencyOperationName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.DependencyConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.DependencyConfigProperty,
+    ) : CdkObject(cdkObject),
+        DependencyConfigProperty {
+      /**
+       * If this SLO is related to a metric collected by Application Signals, you must use this
+       * field to specify which dependency the SLO metric is related to.
+       *
+       * * `Type` designates the type of object this is.
+       * * `ResourceType` specifies the type of the resource. This field is used only when the value
+       * of the `Type` field is `Resource` or `AWS::Resource` .
+       * * `Name` specifies the name of the object. This is used only if the value of the `Type`
+       * field is `Service` , `RemoteService` , or `AWS::Service` .
+       * * `Identifier` identifies the resource objects of this resource. This is used only if the
+       * value of the `Type` field is `Resource` or `AWS::Resource` .
+       * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-dependencyconfig.html#cfn-applicationsignals-servicelevelobjective-dependencyconfig-dependencykeyattributes)
+       */
+      override fun dependencyKeyAttributes(): Any = unwrap(this).getDependencyKeyAttributes()
+
+      /**
+       * When the SLO monitors a specific operation of the dependency, this field specifies the name
+       * of that operation in the dependency.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-dependencyconfig.html#cfn-applicationsignals-servicelevelobjective-dependencyconfig-dependencyoperationname)
+       */
+      override fun dependencyOperationName(): String = unwrap(this).getDependencyOperationName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DependencyConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.DependencyConfigProperty):
+          DependencyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DependencyConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DependencyConfigProperty):
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.DependencyConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.DependencyConfigProperty
+    }
+  }
+
+  /**
    * A dimension is a name/value pair that is part of the identity of a metric.
    *
    * Because dimensions are part of the unique identifier for a metric, whenever you add a unique
@@ -1313,6 +1595,240 @@ public open class CfnServiceLevelObjective(
           software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.DimensionProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.DimensionProperty
+    }
+  }
+
+  /**
+   * The time window to be excluded from the SLO performance metrics.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationsignals.*;
+   * ExclusionWindowProperty exclusionWindowProperty = ExclusionWindowProperty.builder()
+   * .window(WindowProperty.builder()
+   * .duration(123)
+   * .durationUnit("durationUnit")
+   * .build())
+   * // the properties below are optional
+   * .reason("reason")
+   * .recurrenceRule(RecurrenceRuleProperty.builder()
+   * .expression("expression")
+   * .build())
+   * .startTime("startTime")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-exclusionwindow.html)
+   */
+  public interface ExclusionWindowProperty {
+    /**
+     * The reason for the time exclusion windows.
+     *
+     * For example, maintenance.
+     *
+     * Default: - "No reason"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-exclusionwindow.html#cfn-applicationsignals-servicelevelobjective-exclusionwindow-reason)
+     */
+    public fun reason(): String? = unwrap(this).getReason()
+
+    /**
+     * The recurrence rule for the time exclusion window.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-exclusionwindow.html#cfn-applicationsignals-servicelevelobjective-exclusionwindow-recurrencerule)
+     */
+    public fun recurrenceRule(): Any? = unwrap(this).getRecurrenceRule()
+
+    /**
+     * The start time of the time exclusion window.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-exclusionwindow.html#cfn-applicationsignals-servicelevelobjective-exclusionwindow-starttime)
+     */
+    public fun startTime(): String? = unwrap(this).getStartTime()
+
+    /**
+     * The time exclusion window.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-exclusionwindow.html#cfn-applicationsignals-servicelevelobjective-exclusionwindow-window)
+     */
+    public fun window(): Any
+
+    /**
+     * A builder for [ExclusionWindowProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param reason The reason for the time exclusion windows.
+       * For example, maintenance.
+       */
+      public fun reason(reason: String)
+
+      /**
+       * @param recurrenceRule The recurrence rule for the time exclusion window.
+       */
+      public fun recurrenceRule(recurrenceRule: IResolvable)
+
+      /**
+       * @param recurrenceRule The recurrence rule for the time exclusion window.
+       */
+      public fun recurrenceRule(recurrenceRule: RecurrenceRuleProperty)
+
+      /**
+       * @param recurrenceRule The recurrence rule for the time exclusion window.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4e96120380e4438cc0884892aa180724abe4f6383c249af5ef14ffbc2bdf488b")
+      public fun recurrenceRule(recurrenceRule: RecurrenceRuleProperty.Builder.() -> Unit)
+
+      /**
+       * @param startTime The start time of the time exclusion window.
+       */
+      public fun startTime(startTime: String)
+
+      /**
+       * @param window The time exclusion window. 
+       */
+      public fun window(window: IResolvable)
+
+      /**
+       * @param window The time exclusion window. 
+       */
+      public fun window(window: WindowProperty)
+
+      /**
+       * @param window The time exclusion window. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("addc4edca8e7ef32512a444246977cdd0a161711a1884536533e2623f0e018b9")
+      public fun window(window: WindowProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.ExclusionWindowProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.ExclusionWindowProperty.builder()
+
+      /**
+       * @param reason The reason for the time exclusion windows.
+       * For example, maintenance.
+       */
+      override fun reason(reason: String) {
+        cdkBuilder.reason(reason)
+      }
+
+      /**
+       * @param recurrenceRule The recurrence rule for the time exclusion window.
+       */
+      override fun recurrenceRule(recurrenceRule: IResolvable) {
+        cdkBuilder.recurrenceRule(recurrenceRule.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param recurrenceRule The recurrence rule for the time exclusion window.
+       */
+      override fun recurrenceRule(recurrenceRule: RecurrenceRuleProperty) {
+        cdkBuilder.recurrenceRule(recurrenceRule.let(RecurrenceRuleProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param recurrenceRule The recurrence rule for the time exclusion window.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4e96120380e4438cc0884892aa180724abe4f6383c249af5ef14ffbc2bdf488b")
+      override fun recurrenceRule(recurrenceRule: RecurrenceRuleProperty.Builder.() -> Unit): Unit =
+          recurrenceRule(RecurrenceRuleProperty(recurrenceRule))
+
+      /**
+       * @param startTime The start time of the time exclusion window.
+       */
+      override fun startTime(startTime: String) {
+        cdkBuilder.startTime(startTime)
+      }
+
+      /**
+       * @param window The time exclusion window. 
+       */
+      override fun window(window: IResolvable) {
+        cdkBuilder.window(window.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param window The time exclusion window. 
+       */
+      override fun window(window: WindowProperty) {
+        cdkBuilder.window(window.let(WindowProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param window The time exclusion window. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("addc4edca8e7ef32512a444246977cdd0a161711a1884536533e2623f0e018b9")
+      override fun window(window: WindowProperty.Builder.() -> Unit): Unit =
+          window(WindowProperty(window))
+
+      public fun build():
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.ExclusionWindowProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.ExclusionWindowProperty,
+    ) : CdkObject(cdkObject),
+        ExclusionWindowProperty {
+      /**
+       * The reason for the time exclusion windows.
+       *
+       * For example, maintenance.
+       *
+       * Default: - "No reason"
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-exclusionwindow.html#cfn-applicationsignals-servicelevelobjective-exclusionwindow-reason)
+       */
+      override fun reason(): String? = unwrap(this).getReason()
+
+      /**
+       * The recurrence rule for the time exclusion window.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-exclusionwindow.html#cfn-applicationsignals-servicelevelobjective-exclusionwindow-recurrencerule)
+       */
+      override fun recurrenceRule(): Any? = unwrap(this).getRecurrenceRule()
+
+      /**
+       * The start time of the time exclusion window.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-exclusionwindow.html#cfn-applicationsignals-servicelevelobjective-exclusionwindow-starttime)
+       */
+      override fun startTime(): String? = unwrap(this).getStartTime()
+
+      /**
+       * The time exclusion window.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-exclusionwindow.html#cfn-applicationsignals-servicelevelobjective-exclusionwindow-window)
+       */
+      override fun window(): Any = unwrap(this).getWindow()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ExclusionWindowProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.ExclusionWindowProperty):
+          ExclusionWindowProperty = CdkObjectWrappers.wrap(cdkObject) as? ExclusionWindowProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExclusionWindowProperty):
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.ExclusionWindowProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.ExclusionWindowProperty
     }
   }
 
@@ -2821,6 +3337,106 @@ public open class CfnServiceLevelObjective(
   }
 
   /**
+   * The recurrence rule for the time exclusion window.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationsignals.*;
+   * RecurrenceRuleProperty recurrenceRuleProperty = RecurrenceRuleProperty.builder()
+   * .expression("expression")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-recurrencerule.html)
+   */
+  public interface RecurrenceRuleProperty {
+    /**
+     * The following two rules are supported:.
+     *
+     * * rate(value unit) - The value must be a positive integer and the unit can be hour|day|month.
+     * * cron - An expression which consists of six fields separated by white spaces: (minutes hours
+     * day_of_month month day_of_week year).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-recurrencerule.html#cfn-applicationsignals-servicelevelobjective-recurrencerule-expression)
+     */
+    public fun expression(): String
+
+    /**
+     * A builder for [RecurrenceRuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param expression The following two rules are supported:. 
+       * * rate(value unit) - The value must be a positive integer and the unit can be
+       * hour|day|month.
+       * * cron - An expression which consists of six fields separated by white spaces: (minutes
+       * hours day_of_month month day_of_week year).
+       */
+      public fun expression(expression: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.RecurrenceRuleProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.RecurrenceRuleProperty.builder()
+
+      /**
+       * @param expression The following two rules are supported:. 
+       * * rate(value unit) - The value must be a positive integer and the unit can be
+       * hour|day|month.
+       * * cron - An expression which consists of six fields separated by white spaces: (minutes
+       * hours day_of_month month day_of_week year).
+       */
+      override fun expression(expression: String) {
+        cdkBuilder.expression(expression)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.RecurrenceRuleProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.RecurrenceRuleProperty,
+    ) : CdkObject(cdkObject),
+        RecurrenceRuleProperty {
+      /**
+       * The following two rules are supported:.
+       *
+       * * rate(value unit) - The value must be a positive integer and the unit can be
+       * hour|day|month.
+       * * cron - An expression which consists of six fields separated by white spaces: (minutes
+       * hours day_of_month month day_of_week year).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-recurrencerule.html#cfn-applicationsignals-servicelevelobjective-recurrencerule-expression)
+       */
+      override fun expression(): String = unwrap(this).getExpression()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RecurrenceRuleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.RecurrenceRuleProperty):
+          RecurrenceRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? RecurrenceRuleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RecurrenceRuleProperty):
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.RecurrenceRuleProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.RecurrenceRuleProperty
+    }
+  }
+
+  /**
    * This structure contains the information about the metric that is used for a request-based SLO.
    *
    * Example:
@@ -2831,6 +3447,11 @@ public open class CfnServiceLevelObjective(
    * import io.cloudshiftdev.awscdk.services.applicationsignals.*;
    * RequestBasedSliMetricProperty requestBasedSliMetricProperty =
    * RequestBasedSliMetricProperty.builder()
+   * .dependencyConfig(DependencyConfigProperty.builder()
+   * .dependencyKeyAttributes(Map.of(
+   * "dependencyKeyAttributesKey", "dependencyKeyAttributes"))
+   * .dependencyOperationName("dependencyOperationName")
+   * .build())
    * .keyAttributes(Map.of(
    * "keyAttributesKey", "keyAttributes"))
    * .metricType("metricType")
@@ -2907,6 +3528,13 @@ public open class CfnServiceLevelObjective(
    */
   public interface RequestBasedSliMetricProperty {
     /**
+     * Identifies the dependency using the `DependencyKeyAttributes` and `DependencyOperationName` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-requestbasedslimetric.html#cfn-applicationsignals-servicelevelobjective-requestbasedslimetric-dependencyconfig)
+     */
+    public fun dependencyConfig(): Any? = unwrap(this).getDependencyConfig()
+
+    /**
      * This is a string-to-string map that contains information about the type of object that this
      * SLO is related to.
      *
@@ -2920,6 +3548,7 @@ public open class CfnServiceLevelObjective(
      * * `Identifier` identifies the resource objects of this resource. This is used only if the
      * value of the `Type` field is `Resource` or `AWS::Resource` .
      * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+     * * `AwsAccountId` allows you to create an SLO for an object that exists in another account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-requestbasedslimetric.html#cfn-applicationsignals-servicelevelobjective-requestbasedslimetric-keyattributes)
      */
@@ -2970,20 +3599,24 @@ public open class CfnServiceLevelObjective(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param keyAttributes This is a string-to-string map that contains information about the
-       * type of object that this SLO is related to.
-       * It can include the following fields.
-       *
-       * * `Type` designates the type of object that this SLO is related to.
-       * * `ResourceType` specifies the type of the resource. This field is used only when the value
-       * of the `Type` field is `Resource` or `AWS::Resource` .
-       * * `Name` specifies the name of the object. This is used only if the value of the `Type`
-       * field is `Service` , `RemoteService` , or `AWS::Service` .
-       * * `Identifier` identifies the resource objects of this resource. This is used only if the
-       * value of the `Type` field is `Resource` or `AWS::Resource` .
-       * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+       * @param dependencyConfig Identifies the dependency using the `DependencyKeyAttributes` and
+       * `DependencyOperationName` .
        */
-      public fun keyAttributes(keyAttributes: IResolvable)
+      public fun dependencyConfig(dependencyConfig: IResolvable)
+
+      /**
+       * @param dependencyConfig Identifies the dependency using the `DependencyKeyAttributes` and
+       * `DependencyOperationName` .
+       */
+      public fun dependencyConfig(dependencyConfig: DependencyConfigProperty)
+
+      /**
+       * @param dependencyConfig Identifies the dependency using the `DependencyKeyAttributes` and
+       * `DependencyOperationName` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("19746b600515b5b492f66bbe19f2b163cead2c4634eef3a895a860c62df06ce0")
+      public fun dependencyConfig(dependencyConfig: DependencyConfigProperty.Builder.() -> Unit)
 
       /**
        * @param keyAttributes This is a string-to-string map that contains information about the
@@ -2998,8 +3631,26 @@ public open class CfnServiceLevelObjective(
        * * `Identifier` identifies the resource objects of this resource. This is used only if the
        * value of the `Type` field is `Resource` or `AWS::Resource` .
        * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+       * * `AwsAccountId` allows you to create an SLO for an object that exists in another account.
        */
       public fun keyAttributes(keyAttributes: Map<String, String>)
+
+      /**
+       * @param keyAttributes This is a string-to-string map that contains information about the
+       * type of object that this SLO is related to.
+       * It can include the following fields.
+       *
+       * * `Type` designates the type of object that this SLO is related to.
+       * * `ResourceType` specifies the type of the resource. This field is used only when the value
+       * of the `Type` field is `Resource` or `AWS::Resource` .
+       * * `Name` specifies the name of the object. This is used only if the value of the `Type`
+       * field is `Service` , `RemoteService` , or `AWS::Service` .
+       * * `Identifier` identifies the resource objects of this resource. This is used only if the
+       * value of the `Type` field is `Resource` or `AWS::Resource` .
+       * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+       * * `AwsAccountId` allows you to create an SLO for an object that exists in another account.
+       */
+      public fun keyAttributes(keyAttributes: IResolvable)
 
       /**
        * @param metricType If the SLO monitors either the `LATENCY` or `AVAILABILITY` metric that
@@ -3076,6 +3727,31 @@ public open class CfnServiceLevelObjective(
           software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.RequestBasedSliMetricProperty.builder()
 
       /**
+       * @param dependencyConfig Identifies the dependency using the `DependencyKeyAttributes` and
+       * `DependencyOperationName` .
+       */
+      override fun dependencyConfig(dependencyConfig: IResolvable) {
+        cdkBuilder.dependencyConfig(dependencyConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param dependencyConfig Identifies the dependency using the `DependencyKeyAttributes` and
+       * `DependencyOperationName` .
+       */
+      override fun dependencyConfig(dependencyConfig: DependencyConfigProperty) {
+        cdkBuilder.dependencyConfig(dependencyConfig.let(DependencyConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param dependencyConfig Identifies the dependency using the `DependencyKeyAttributes` and
+       * `DependencyOperationName` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("19746b600515b5b492f66bbe19f2b163cead2c4634eef3a895a860c62df06ce0")
+      override fun dependencyConfig(dependencyConfig: DependencyConfigProperty.Builder.() -> Unit):
+          Unit = dependencyConfig(DependencyConfigProperty(dependencyConfig))
+
+      /**
        * @param keyAttributes This is a string-to-string map that contains information about the
        * type of object that this SLO is related to.
        * It can include the following fields.
@@ -3088,9 +3764,10 @@ public open class CfnServiceLevelObjective(
        * * `Identifier` identifies the resource objects of this resource. This is used only if the
        * value of the `Type` field is `Resource` or `AWS::Resource` .
        * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+       * * `AwsAccountId` allows you to create an SLO for an object that exists in another account.
        */
-      override fun keyAttributes(keyAttributes: IResolvable) {
-        cdkBuilder.keyAttributes(keyAttributes.let(IResolvable.Companion::unwrap))
+      override fun keyAttributes(keyAttributes: Map<String, String>) {
+        cdkBuilder.keyAttributes(keyAttributes)
       }
 
       /**
@@ -3106,9 +3783,10 @@ public open class CfnServiceLevelObjective(
        * * `Identifier` identifies the resource objects of this resource. This is used only if the
        * value of the `Type` field is `Resource` or `AWS::Resource` .
        * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+       * * `AwsAccountId` allows you to create an SLO for an object that exists in another account.
        */
-      override fun keyAttributes(keyAttributes: Map<String, String>) {
-        cdkBuilder.keyAttributes(keyAttributes)
+      override fun keyAttributes(keyAttributes: IResolvable) {
+        cdkBuilder.keyAttributes(keyAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3203,6 +3881,14 @@ public open class CfnServiceLevelObjective(
     ) : CdkObject(cdkObject),
         RequestBasedSliMetricProperty {
       /**
+       * Identifies the dependency using the `DependencyKeyAttributes` and `DependencyOperationName`
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-requestbasedslimetric.html#cfn-applicationsignals-servicelevelobjective-requestbasedslimetric-dependencyconfig)
+       */
+      override fun dependencyConfig(): Any? = unwrap(this).getDependencyConfig()
+
+      /**
        * This is a string-to-string map that contains information about the type of object that this
        * SLO is related to.
        *
@@ -3216,6 +3902,7 @@ public open class CfnServiceLevelObjective(
        * * `Identifier` identifies the resource objects of this resource. This is used only if the
        * value of the `Type` field is `Resource` or `AWS::Resource` .
        * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+       * * `AwsAccountId` allows you to create an SLO for an object that exists in another account.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-requestbasedslimetric.html#cfn-applicationsignals-servicelevelobjective-requestbasedslimetric-keyattributes)
        */
@@ -3292,6 +3979,11 @@ public open class CfnServiceLevelObjective(
    * import io.cloudshiftdev.awscdk.services.applicationsignals.*;
    * RequestBasedSliProperty requestBasedSliProperty = RequestBasedSliProperty.builder()
    * .requestBasedSliMetric(RequestBasedSliMetricProperty.builder()
+   * .dependencyConfig(DependencyConfigProperty.builder()
+   * .dependencyKeyAttributes(Map.of(
+   * "dependencyKeyAttributesKey", "dependencyKeyAttributes"))
+   * .dependencyOperationName("dependencyOperationName")
+   * .build())
    * .keyAttributes(Map.of(
    * "keyAttributesKey", "keyAttributes"))
    * .metricType("metricType")
@@ -3661,6 +4353,11 @@ public open class CfnServiceLevelObjective(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.applicationsignals.*;
    * SliMetricProperty sliMetricProperty = SliMetricProperty.builder()
+   * .dependencyConfig(DependencyConfigProperty.builder()
+   * .dependencyKeyAttributes(Map.of(
+   * "dependencyKeyAttributesKey", "dependencyKeyAttributes"))
+   * .dependencyOperationName("dependencyOperationName")
+   * .build())
    * .keyAttributes(Map.of(
    * "keyAttributesKey", "keyAttributes"))
    * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
@@ -3694,6 +4391,13 @@ public open class CfnServiceLevelObjective(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-slimetric.html)
    */
   public interface SliMetricProperty {
+    /**
+     * Identifies the dependency using the `DependencyKeyAttributes` and `DependencyOperationName` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-slimetric.html#cfn-applicationsignals-servicelevelobjective-slimetric-dependencyconfig)
+     */
+    public fun dependencyConfig(): Any? = unwrap(this).getDependencyConfig()
+
     /**
      * If this SLO is related to a metric collected by Application Signals, you must use this field
      * to specify which service the SLO metric is related to.
@@ -3767,22 +4471,24 @@ public open class CfnServiceLevelObjective(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param keyAttributes If this SLO is related to a metric collected by Application Signals,
-       * you must use this field to specify which service the SLO metric is related to.
-       * To do so, you must specify at least the `Type` , `Name` , and `Environment` attributes.
-       *
-       * This is a string-to-string map. It can include the following fields.
-       *
-       * * `Type` designates the type of object this is.
-       * * `ResourceType` specifies the type of the resource. This field is used only when the value
-       * of the `Type` field is `Resource` or `AWS::Resource` .
-       * * `Name` specifies the name of the object. This is used only if the value of the `Type`
-       * field is `Service` , `RemoteService` , or `AWS::Service` .
-       * * `Identifier` identifies the resource objects of this resource. This is used only if the
-       * value of the `Type` field is `Resource` or `AWS::Resource` .
-       * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+       * @param dependencyConfig Identifies the dependency using the `DependencyKeyAttributes` and
+       * `DependencyOperationName` .
        */
-      public fun keyAttributes(keyAttributes: IResolvable)
+      public fun dependencyConfig(dependencyConfig: IResolvable)
+
+      /**
+       * @param dependencyConfig Identifies the dependency using the `DependencyKeyAttributes` and
+       * `DependencyOperationName` .
+       */
+      public fun dependencyConfig(dependencyConfig: DependencyConfigProperty)
+
+      /**
+       * @param dependencyConfig Identifies the dependency using the `DependencyKeyAttributes` and
+       * `DependencyOperationName` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f06ed2648e3cfd87103e61a25f6959c78f5ec2b79f56668a386678ca550124c2")
+      public fun dependencyConfig(dependencyConfig: DependencyConfigProperty.Builder.() -> Unit)
 
       /**
        * @param keyAttributes If this SLO is related to a metric collected by Application Signals,
@@ -3801,6 +4507,24 @@ public open class CfnServiceLevelObjective(
        * * `Environment` specifies the location where this object is hosted, or what it belongs to.
        */
       public fun keyAttributes(keyAttributes: Map<String, String>)
+
+      /**
+       * @param keyAttributes If this SLO is related to a metric collected by Application Signals,
+       * you must use this field to specify which service the SLO metric is related to.
+       * To do so, you must specify at least the `Type` , `Name` , and `Environment` attributes.
+       *
+       * This is a string-to-string map. It can include the following fields.
+       *
+       * * `Type` designates the type of object this is.
+       * * `ResourceType` specifies the type of the resource. This field is used only when the value
+       * of the `Type` field is `Resource` or `AWS::Resource` .
+       * * `Name` specifies the name of the object. This is used only if the value of the `Type`
+       * field is `Service` , `RemoteService` , or `AWS::Service` .
+       * * `Identifier` identifies the resource objects of this resource. This is used only if the
+       * value of the `Type` field is `Resource` or `AWS::Resource` .
+       * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+       */
+      public fun keyAttributes(keyAttributes: IResolvable)
 
       /**
        * @param metricDataQueries If this SLO monitors a CloudWatch metric or the result of a
@@ -3857,24 +4581,29 @@ public open class CfnServiceLevelObjective(
           software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.SliMetricProperty.builder()
 
       /**
-       * @param keyAttributes If this SLO is related to a metric collected by Application Signals,
-       * you must use this field to specify which service the SLO metric is related to.
-       * To do so, you must specify at least the `Type` , `Name` , and `Environment` attributes.
-       *
-       * This is a string-to-string map. It can include the following fields.
-       *
-       * * `Type` designates the type of object this is.
-       * * `ResourceType` specifies the type of the resource. This field is used only when the value
-       * of the `Type` field is `Resource` or `AWS::Resource` .
-       * * `Name` specifies the name of the object. This is used only if the value of the `Type`
-       * field is `Service` , `RemoteService` , or `AWS::Service` .
-       * * `Identifier` identifies the resource objects of this resource. This is used only if the
-       * value of the `Type` field is `Resource` or `AWS::Resource` .
-       * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+       * @param dependencyConfig Identifies the dependency using the `DependencyKeyAttributes` and
+       * `DependencyOperationName` .
        */
-      override fun keyAttributes(keyAttributes: IResolvable) {
-        cdkBuilder.keyAttributes(keyAttributes.let(IResolvable.Companion::unwrap))
+      override fun dependencyConfig(dependencyConfig: IResolvable) {
+        cdkBuilder.dependencyConfig(dependencyConfig.let(IResolvable.Companion::unwrap))
       }
+
+      /**
+       * @param dependencyConfig Identifies the dependency using the `DependencyKeyAttributes` and
+       * `DependencyOperationName` .
+       */
+      override fun dependencyConfig(dependencyConfig: DependencyConfigProperty) {
+        cdkBuilder.dependencyConfig(dependencyConfig.let(DependencyConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param dependencyConfig Identifies the dependency using the `DependencyKeyAttributes` and
+       * `DependencyOperationName` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f06ed2648e3cfd87103e61a25f6959c78f5ec2b79f56668a386678ca550124c2")
+      override fun dependencyConfig(dependencyConfig: DependencyConfigProperty.Builder.() -> Unit):
+          Unit = dependencyConfig(DependencyConfigProperty(dependencyConfig))
 
       /**
        * @param keyAttributes If this SLO is related to a metric collected by Application Signals,
@@ -3894,6 +4623,26 @@ public open class CfnServiceLevelObjective(
        */
       override fun keyAttributes(keyAttributes: Map<String, String>) {
         cdkBuilder.keyAttributes(keyAttributes)
+      }
+
+      /**
+       * @param keyAttributes If this SLO is related to a metric collected by Application Signals,
+       * you must use this field to specify which service the SLO metric is related to.
+       * To do so, you must specify at least the `Type` , `Name` , and `Environment` attributes.
+       *
+       * This is a string-to-string map. It can include the following fields.
+       *
+       * * `Type` designates the type of object this is.
+       * * `ResourceType` specifies the type of the resource. This field is used only when the value
+       * of the `Type` field is `Resource` or `AWS::Resource` .
+       * * `Name` specifies the name of the object. This is used only if the value of the `Type`
+       * field is `Service` , `RemoteService` , or `AWS::Service` .
+       * * `Identifier` identifies the resource objects of this resource. This is used only if the
+       * value of the `Type` field is `Resource` or `AWS::Resource` .
+       * * `Environment` specifies the location where this object is hosted, or what it belongs to.
+       */
+      override fun keyAttributes(keyAttributes: IResolvable) {
+        cdkBuilder.keyAttributes(keyAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3965,6 +4714,14 @@ public open class CfnServiceLevelObjective(
       cdkObject: software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.SliMetricProperty,
     ) : CdkObject(cdkObject),
         SliMetricProperty {
+      /**
+       * Identifies the dependency using the `DependencyKeyAttributes` and `DependencyOperationName`
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-slimetric.html#cfn-applicationsignals-servicelevelobjective-slimetric-dependencyconfig)
+       */
+      override fun dependencyConfig(): Any? = unwrap(this).getDependencyConfig()
+
       /**
        * If this SLO is related to a metric collected by Application Signals, you must use this
        * field to specify which service the SLO metric is related to.
@@ -4066,6 +4823,11 @@ public open class CfnServiceLevelObjective(
    * .comparisonOperator("comparisonOperator")
    * .metricThreshold(123)
    * .sliMetric(SliMetricProperty.builder()
+   * .dependencyConfig(DependencyConfigProperty.builder()
+   * .dependencyKeyAttributes(Map.of(
+   * "dependencyKeyAttributesKey", "dependencyKeyAttributes"))
+   * .dependencyOperationName("dependencyOperationName")
+   * .build())
    * .keyAttributes(Map.of(
    * "keyAttributesKey", "keyAttributes"))
    * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
@@ -4243,6 +5005,116 @@ public open class CfnServiceLevelObjective(
           software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.SliProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.SliProperty
+    }
+  }
+
+  /**
+   * The start and end time of the time exclusion window.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationsignals.*;
+   * WindowProperty windowProperty = WindowProperty.builder()
+   * .duration(123)
+   * .durationUnit("durationUnit")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-window.html)
+   */
+  public interface WindowProperty {
+    /**
+     * The start and end time of the time exclusion window.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-window.html#cfn-applicationsignals-servicelevelobjective-window-duration)
+     */
+    public fun duration(): Number
+
+    /**
+     * The unit of measurement to use during the time window exclusion.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-window.html#cfn-applicationsignals-servicelevelobjective-window-durationunit)
+     */
+    public fun durationUnit(): String
+
+    /**
+     * A builder for [WindowProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param duration The start and end time of the time exclusion window. 
+       */
+      public fun duration(duration: Number)
+
+      /**
+       * @param durationUnit The unit of measurement to use during the time window exclusion. 
+       */
+      public fun durationUnit(durationUnit: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.WindowProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.WindowProperty.builder()
+
+      /**
+       * @param duration The start and end time of the time exclusion window. 
+       */
+      override fun duration(duration: Number) {
+        cdkBuilder.duration(duration)
+      }
+
+      /**
+       * @param durationUnit The unit of measurement to use during the time window exclusion. 
+       */
+      override fun durationUnit(durationUnit: String) {
+        cdkBuilder.durationUnit(durationUnit)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.WindowProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.WindowProperty,
+    ) : CdkObject(cdkObject),
+        WindowProperty {
+      /**
+       * The start and end time of the time exclusion window.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-window.html#cfn-applicationsignals-servicelevelobjective-window-duration)
+       */
+      override fun duration(): Number = unwrap(this).getDuration()
+
+      /**
+       * The unit of measurement to use during the time window exclusion.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-window.html#cfn-applicationsignals-servicelevelobjective-window-durationunit)
+       */
+      override fun durationUnit(): String = unwrap(this).getDurationUnit()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WindowProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.WindowProperty):
+          WindowProperty = CdkObjectWrappers.wrap(cdkObject) as? WindowProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: WindowProperty):
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.WindowProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.WindowProperty
     }
   }
 }

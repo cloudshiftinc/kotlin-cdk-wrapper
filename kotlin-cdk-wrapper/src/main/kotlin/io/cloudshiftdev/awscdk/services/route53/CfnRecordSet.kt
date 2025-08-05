@@ -132,8 +132,8 @@ public open class CfnRecordSet(
       aliasTarget(AliasTargetProperty(`value`))
 
   /**
-   * Specifies a coordinate of the east–west position of a geographic point on the surface of the
-   * Earth.
+   * This element contains an ID that you use when performing a `GetChange` action to get detailed
+   * information about the change.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 

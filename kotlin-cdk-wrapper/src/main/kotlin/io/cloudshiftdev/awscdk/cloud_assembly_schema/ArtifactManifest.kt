@@ -76,9 +76,13 @@ public interface ArtifactManifest {
   public fun dependencies(): List<String> = unwrap(this).getDependencies() ?: emptyList()
 
   /**
-   * A string that represents this artifact.
+   * A string that can be shown to a user to uniquely identify this artifact inside a cloud assembly
+   * tree.
    *
-   * Should only be used in user interfaces.
+   * Is used by the CLI to present a list of stacks to the user in a way that
+   * makes sense to them. Even though the property name "display name" doesn't
+   * imply it, this field is used to select stacks as well, so all stacks should
+   * have a unique display name.
    *
    * Default: - no display name
    */
@@ -127,8 +131,12 @@ public interface ArtifactManifest {
     public fun dependencies(vararg dependencies: String)
 
     /**
-     * @param displayName A string that represents this artifact.
-     * Should only be used in user interfaces.
+     * @param displayName A string that can be shown to a user to uniquely identify this artifact
+     * inside a cloud assembly tree.
+     * Is used by the CLI to present a list of stacks to the user in a way that
+     * makes sense to them. Even though the property name "display name" doesn't
+     * imply it, this field is used to select stacks as well, so all stacks should
+     * have a unique display name.
      */
     public fun displayName(displayName: String)
 
@@ -191,6 +199,18 @@ public interface ArtifactManifest {
     public fun properties(properties: NestedCloudAssemblyProperties.Builder.() -> Unit)
 
     /**
+     * @param properties The set of properties for this artifact (depends on type).
+     */
+    public fun properties(properties: FeatureFlagReportProperties)
+
+    /**
+     * @param properties The set of properties for this artifact (depends on type).
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d5a503714154ec49b707db78453e065bdf2692443f4e7c9ae4d84be50f67c96b")
+    public fun properties(properties: FeatureFlagReportProperties.Builder.() -> Unit)
+
+    /**
      * @param type The type of artifact. 
      */
     public fun type(type: ArtifactType)
@@ -214,8 +234,12 @@ public interface ArtifactManifest {
         dependencies(dependencies.toList())
 
     /**
-     * @param displayName A string that represents this artifact.
-     * Should only be used in user interfaces.
+     * @param displayName A string that can be shown to a user to uniquely identify this artifact
+     * inside a cloud assembly tree.
+     * Is used by the CLI to present a list of stacks to the user in a way that
+     * makes sense to them. Even though the property name "display name" doesn't
+     * imply it, this field is used to select stacks as well, so all stacks should
+     * have a unique display name.
      */
     override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
@@ -296,6 +320,21 @@ public interface ArtifactManifest {
         properties(NestedCloudAssemblyProperties(properties))
 
     /**
+     * @param properties The set of properties for this artifact (depends on type).
+     */
+    override fun properties(properties: FeatureFlagReportProperties) {
+      cdkBuilder.properties(properties.let(FeatureFlagReportProperties.Companion::unwrap))
+    }
+
+    /**
+     * @param properties The set of properties for this artifact (depends on type).
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d5a503714154ec49b707db78453e065bdf2692443f4e7c9ae4d84be50f67c96b")
+    override fun properties(properties: FeatureFlagReportProperties.Builder.() -> Unit): Unit =
+        properties(FeatureFlagReportProperties(properties))
+
+    /**
      * @param type The type of artifact. 
      */
     override fun type(type: ArtifactType) {
@@ -318,9 +357,13 @@ public interface ArtifactManifest {
     override fun dependencies(): List<String> = unwrap(this).getDependencies() ?: emptyList()
 
     /**
-     * A string that represents this artifact.
+     * A string that can be shown to a user to uniquely identify this artifact inside a cloud
+     * assembly tree.
      *
-     * Should only be used in user interfaces.
+     * Is used by the CLI to present a list of stacks to the user in a way that
+     * makes sense to them. Even though the property name "display name" doesn't
+     * imply it, this field is used to select stacks as well, so all stacks should
+     * have a unique display name.
      *
      * Default: - no display name
      */

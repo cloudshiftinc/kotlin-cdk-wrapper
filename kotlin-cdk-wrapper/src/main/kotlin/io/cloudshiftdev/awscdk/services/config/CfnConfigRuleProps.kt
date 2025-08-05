@@ -132,10 +132,6 @@ public interface CfnConfigRuleProps {
    * that can trigger an evaluation for the rule. If you do not specify a scope, evaluations are
    * triggered when any resource in the recording group changes.
    *
-   *
-   * The scope can be empty.
-   *
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-scope)
    */
   public fun scope(): Any? = unwrap(this).getScope()
@@ -237,9 +233,6 @@ public interface CfnConfigRuleProps {
      * resource ID, or a combination of a tag key and value. Specify a scope to constrain the resources
      * that can trigger an evaluation for the rule. If you do not specify a scope, evaluations are
      * triggered when any resource in the recording group changes.
-     *
-     *
-     * The scope can be empty.
      */
     public fun scope(scope: IResolvable)
 
@@ -249,9 +242,6 @@ public interface CfnConfigRuleProps {
      * resource ID, or a combination of a tag key and value. Specify a scope to constrain the resources
      * that can trigger an evaluation for the rule. If you do not specify a scope, evaluations are
      * triggered when any resource in the recording group changes.
-     *
-     *
-     * The scope can be empty.
      */
     public fun scope(scope: CfnConfigRule.ScopeProperty)
 
@@ -261,9 +251,6 @@ public interface CfnConfigRuleProps {
      * resource ID, or a combination of a tag key and value. Specify a scope to constrain the resources
      * that can trigger an evaluation for the rule. If you do not specify a scope, evaluations are
      * triggered when any resource in the recording group changes.
-     *
-     *
-     * The scope can be empty.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e4ee6e340306d531ad67256cb7041375fd9bcb1f4358b5b7586e29c65155c88b")
@@ -398,9 +385,6 @@ public interface CfnConfigRuleProps {
      * resource ID, or a combination of a tag key and value. Specify a scope to constrain the resources
      * that can trigger an evaluation for the rule. If you do not specify a scope, evaluations are
      * triggered when any resource in the recording group changes.
-     *
-     *
-     * The scope can be empty.
      */
     override fun scope(scope: IResolvable) {
       cdkBuilder.scope(scope.let(IResolvable.Companion::unwrap))
@@ -412,9 +396,6 @@ public interface CfnConfigRuleProps {
      * resource ID, or a combination of a tag key and value. Specify a scope to constrain the resources
      * that can trigger an evaluation for the rule. If you do not specify a scope, evaluations are
      * triggered when any resource in the recording group changes.
-     *
-     *
-     * The scope can be empty.
      */
     override fun scope(scope: CfnConfigRule.ScopeProperty) {
       cdkBuilder.scope(scope.let(CfnConfigRule.ScopeProperty.Companion::unwrap))
@@ -426,9 +407,6 @@ public interface CfnConfigRuleProps {
      * resource ID, or a combination of a tag key and value. Specify a scope to constrain the resources
      * that can trigger an evaluation for the rule. If you do not specify a scope, evaluations are
      * triggered when any resource in the recording group changes.
-     *
-     *
-     * The scope can be empty.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e4ee6e340306d531ad67256cb7041375fd9bcb1f4358b5b7586e29c65155c88b")
@@ -541,10 +519,6 @@ public interface CfnConfigRuleProps {
      * resource ID, or a combination of a tag key and value. Specify a scope to constrain the resources
      * that can trigger an evaluation for the rule. If you do not specify a scope, evaluations are
      * triggered when any resource in the recording group changes.
-     *
-     *
-     * The scope can be empty.
-     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-scope)
      */

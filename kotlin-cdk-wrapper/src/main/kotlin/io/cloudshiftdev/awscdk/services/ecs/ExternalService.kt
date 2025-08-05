@@ -27,10 +27,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * ```
  * Cluster cluster;
  * TaskDefinition taskDefinition;
- * ExternalService service = ExternalService.Builder.create(this, "Service")
+ * Ec2Service.Builder.create(this, "Ec2Service")
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
- * .desiredCount(5)
+ * .daemon(true)
+ * .build();
+ * ExternalService.Builder.create(this, "ExternalService")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .daemon(true)
  * .build();
  * ```
  */
@@ -55,7 +60,7 @@ public open class ExternalService(
   )
 
   /**
-   * Overriden method to throw error as `associateCloudMapService` is not supported for external
+   * Overridden method to throw error as `associateCloudMapService` is not supported for external
    * service.
    *
    * @param _options 
@@ -65,7 +70,7 @@ public open class ExternalService(
   }
 
   /**
-   * Overriden method to throw error as `associateCloudMapService` is not supported for external
+   * Overridden method to throw error as `associateCloudMapService` is not supported for external
    * service.
    *
    * @param _options 
@@ -77,7 +82,7 @@ public open class ExternalService(
       Unit = associateCloudMapService(AssociateCloudMapServiceOptions(options))
 
   /**
-   * Overriden method to throw error as `attachToApplicationTargetGroup` is not supported for
+   * Overridden method to throw error as `attachToApplicationTargetGroup` is not supported for
    * external service.
    *
    * @param _targetGroup 
@@ -87,7 +92,7 @@ public open class ExternalService(
       unwrap(this).attachToApplicationTargetGroup(targetGroup.let(IApplicationTargetGroup.Companion::unwrap)).let(LoadBalancerTargetProps::wrap)
 
   /**
-   * Overriden method to throw error as `autoScaleTaskCount` is not supported for external service.
+   * Overridden method to throw error as `autoScaleTaskCount` is not supported for external service.
    *
    * @param _props 
    */
@@ -95,7 +100,7 @@ public open class ExternalService(
       unwrap(this).autoScaleTaskCount(props.let(EnableScalingProps.Companion::unwrap)).let(ScalableTaskCount::wrap)
 
   /**
-   * Overriden method to throw error as `autoScaleTaskCount` is not supported for external service.
+   * Overridden method to throw error as `autoScaleTaskCount` is not supported for external service.
    *
    * @param _props 
    */
@@ -105,7 +110,7 @@ public open class ExternalService(
       ScalableTaskCount = autoScaleTaskCount(EnableScalingProps(props))
 
   /**
-   * Overriden method to throw error as `enableCloudMap` is not supported for external service.
+   * Overridden method to throw error as `enableCloudMap` is not supported for external service.
    *
    * @param _options 
    */
@@ -113,7 +118,7 @@ public open class ExternalService(
       unwrap(this).enableCloudMap(options.let(CloudMapOptions.Companion::unwrap)).let(Service::wrap)
 
   /**
-   * Overriden method to throw error as `enableCloudMap` is not supported for external service.
+   * Overridden method to throw error as `enableCloudMap` is not supported for external service.
    *
    * @param _options 
    */
@@ -123,7 +128,7 @@ public open class ExternalService(
       enableCloudMap(CloudMapOptions(options))
 
   /**
-   * Overriden method to throw error as `loadBalancerTarget` is not supported for external service.
+   * Overridden method to throw error as `loadBalancerTarget` is not supported for external service.
    *
    * @param _options 
    */
@@ -132,7 +137,7 @@ public open class ExternalService(
       unwrap(this).loadBalancerTarget(options.let(LoadBalancerTargetOptions.Companion::unwrap)).let(IEcsLoadBalancerTarget::wrap)
 
   /**
-   * Overriden method to throw error as `loadBalancerTarget` is not supported for external service.
+   * Overridden method to throw error as `loadBalancerTarget` is not supported for external service.
    *
    * @param _options 
    */
@@ -142,7 +147,7 @@ public open class ExternalService(
       IEcsLoadBalancerTarget = loadBalancerTarget(LoadBalancerTargetOptions(options))
 
   /**
-   * Overriden method to throw error as `registerLoadBalancerTargets` is not supported for external
+   * Overridden method to throw error as `registerLoadBalancerTargets` is not supported for external
    * service.
    *
    * @param _targets 
@@ -153,7 +158,7 @@ public open class ExternalService(
   }
 
   /**
-   * Overriden method to throw error as `registerLoadBalancerTargets` is not supported for external
+   * Overridden method to throw error as `registerLoadBalancerTargets` is not supported for external
    * service.
    *
    * @param _targets 
@@ -244,6 +249,25 @@ public open class ExternalService(
      * @param cluster The name of the cluster that hosts the service. 
      */
     public fun cluster(cluster: ICluster)
+
+    /**
+     * By default, service use REPLICA scheduling strategy, this parameter enable DAEMON scheduling
+     * strategy.
+     *
+     * If true, the service scheduler deploys exactly one task on each container instance in your
+     * cluster.
+     *
+     * When you are using this strategy, do not specify a desired number of tasks or any task
+     * placement strategies.
+     * Tasks using the Fargate launch type or the CODE_DEPLOY or EXTERNAL deployment controller
+     * types don't support the DAEMON scheduling strategy.
+     *
+     * Default: false
+     *
+     * @param daemon By default, service use REPLICA scheduling strategy, this parameter enable
+     * DAEMON scheduling strategy. 
+     */
+    public fun daemon(daemon: Boolean)
 
     /**
      * The alarm(s) to monitor during deployment, and behavior to apply if at least one enters a
@@ -575,6 +599,27 @@ public open class ExternalService(
     }
 
     /**
+     * By default, service use REPLICA scheduling strategy, this parameter enable DAEMON scheduling
+     * strategy.
+     *
+     * If true, the service scheduler deploys exactly one task on each container instance in your
+     * cluster.
+     *
+     * When you are using this strategy, do not specify a desired number of tasks or any task
+     * placement strategies.
+     * Tasks using the Fargate launch type or the CODE_DEPLOY or EXTERNAL deployment controller
+     * types don't support the DAEMON scheduling strategy.
+     *
+     * Default: false
+     *
+     * @param daemon By default, service use REPLICA scheduling strategy, this parameter enable
+     * DAEMON scheduling strategy. 
+     */
+    override fun daemon(daemon: Boolean) {
+      cdkBuilder.daemon(daemon)
+    }
+
+    /**
      * The alarm(s) to monitor during deployment, and behavior to apply if at least one enters a
      * state of alarm during the deployment or bake time.
      *
@@ -847,6 +892,9 @@ public open class ExternalService(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ecs.ExternalService.PROPERTY_INJECTION_ID
+
     public fun fromExternalServiceArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -467,7 +467,7 @@ public open class CfnLocationS3(
    * Specifies the Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role
    * that DataSync uses to access your S3 bucket.
    *
-   * For more information, see [Accessing S3
+   * For more information, see [Providing DataSync access to S3
    * buckets](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#create-s3-location-access)
    * .
    *

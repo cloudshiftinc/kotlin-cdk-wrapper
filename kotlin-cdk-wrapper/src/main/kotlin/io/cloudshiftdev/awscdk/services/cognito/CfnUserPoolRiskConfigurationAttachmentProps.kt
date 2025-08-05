@@ -85,7 +85,7 @@ import kotlin.jvm.JvmName
 public interface CfnUserPoolRiskConfigurationAttachmentProps {
   /**
    * The settings for automated responses and notification templates for adaptive authentication
-   * with advanced security features.
+   * with threat protection.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration)
    */
@@ -103,8 +103,8 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
   public fun clientId(): String
 
   /**
-   * Settings for compromised-credentials actions and authentication types with advanced security
-   * features in full-function `ENFORCED` mode.
+   * Settings for compromised-credentials actions and authentication types with threat protection in
+   * full-function `ENFORCED` mode.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration)
    */
@@ -133,20 +133,20 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
   public interface Builder {
     /**
      * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
-     * templates for adaptive authentication with advanced security features.
+     * templates for adaptive authentication with threat protection.
      */
     public fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: IResolvable)
 
     /**
      * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
-     * templates for adaptive authentication with advanced security features.
+     * templates for adaptive authentication with threat protection.
      */
     public
         fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty)
 
     /**
      * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
-     * templates for adaptive authentication with advanced security features.
+     * templates for adaptive authentication with threat protection.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bb271e35416f61b857614270b74ca98b3886d0741f2eff8f638aedbce2ef7ca0")
@@ -162,21 +162,21 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
 
     /**
      * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
-     * and authentication types with advanced security features in full-function `ENFORCED` mode.
+     * and authentication types with threat protection in full-function `ENFORCED` mode.
      */
     public
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: IResolvable)
 
     /**
      * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
-     * and authentication types with advanced security features in full-function `ENFORCED` mode.
+     * and authentication types with threat protection in full-function `ENFORCED` mode.
      */
     public
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty)
 
     /**
      * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
-     * and authentication types with advanced security features in full-function `ENFORCED` mode.
+     * and authentication types with threat protection in full-function `ENFORCED` mode.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("683ec85a0d5c3a7ccd5caf628278c5d85261b1299fa29aa29cf168b975643e5b")
@@ -219,7 +219,7 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
 
     /**
      * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
-     * templates for adaptive authentication with advanced security features.
+     * templates for adaptive authentication with threat protection.
      */
     override fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: IResolvable) {
       cdkBuilder.accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration.let(IResolvable.Companion::unwrap))
@@ -227,7 +227,7 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
 
     /**
      * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
-     * templates for adaptive authentication with advanced security features.
+     * templates for adaptive authentication with threat protection.
      */
     override
         fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty) {
@@ -236,7 +236,7 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
 
     /**
      * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
-     * templates for adaptive authentication with advanced security features.
+     * templates for adaptive authentication with threat protection.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bb271e35416f61b857614270b74ca98b3886d0741f2eff8f638aedbce2ef7ca0")
@@ -256,7 +256,7 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
 
     /**
      * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
-     * and authentication types with advanced security features in full-function `ENFORCED` mode.
+     * and authentication types with threat protection in full-function `ENFORCED` mode.
      */
     override
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: IResolvable) {
@@ -265,7 +265,7 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
 
     /**
      * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
-     * and authentication types with advanced security features in full-function `ENFORCED` mode.
+     * and authentication types with threat protection in full-function `ENFORCED` mode.
      */
     override
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty) {
@@ -274,7 +274,7 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
 
     /**
      * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
-     * and authentication types with advanced security features in full-function `ENFORCED` mode.
+     * and authentication types with threat protection in full-function `ENFORCED` mode.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("683ec85a0d5c3a7ccd5caf628278c5d85261b1299fa29aa29cf168b975643e5b")
@@ -329,7 +329,7 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
       CfnUserPoolRiskConfigurationAttachmentProps {
     /**
      * The settings for automated responses and notification templates for adaptive authentication
-     * with advanced security features.
+     * with threat protection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration)
      */
@@ -347,8 +347,8 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
     override fun clientId(): String = unwrap(this).getClientId()
 
     /**
-     * Settings for compromised-credentials actions and authentication types with advanced security
-     * features in full-function `ENFORCED` mode.
+     * Settings for compromised-credentials actions and authentication types with threat protection
+     * in full-function `ENFORCED` mode.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration)
      */

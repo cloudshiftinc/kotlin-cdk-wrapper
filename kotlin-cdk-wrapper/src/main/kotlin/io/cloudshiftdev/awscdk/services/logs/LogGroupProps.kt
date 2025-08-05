@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.jvm.JvmName
 
 /**
@@ -17,8 +18,7 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.kinesisfirehose.alpha.*;
- * import io.cloudshiftdev.awscdk.services.kinesisfirehose.destinations.alpha.*;
+ * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
  * LogGroup logGroupDestination = LogGroup.Builder.create(this, "LogGroupLambdaAudit")
  * .logGroupName("auditDestinationForCDK")
  * .build();
@@ -58,6 +58,14 @@ public interface LogGroupProps {
    * Default: Server-side encryption managed by the CloudWatch Logs service
    */
   public fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
+
+  /**
+   * Field Index Policies for this log group.
+   *
+   * Default: - no field index policies for this log group.
+   */
+  public fun fieldIndexPolicies(): List<FieldIndexPolicy> =
+      unwrap(this).getFieldIndexPolicies()?.map(FieldIndexPolicy::wrap) ?: emptyList()
 
   /**
    * The class of the log group. Possible values are: STANDARD and INFREQUENT_ACCESS.
@@ -123,6 +131,16 @@ public interface LogGroupProps {
     public fun encryptionKey(encryptionKey: IKey)
 
     /**
+     * @param fieldIndexPolicies Field Index Policies for this log group.
+     */
+    public fun fieldIndexPolicies(fieldIndexPolicies: List<FieldIndexPolicy>)
+
+    /**
+     * @param fieldIndexPolicies Field Index Policies for this log group.
+     */
+    public fun fieldIndexPolicies(vararg fieldIndexPolicies: FieldIndexPolicy)
+
+    /**
      * @param logGroupClass The class of the log group. Possible values are: STANDARD and
      * INFREQUENT_ACCESS.
      * INFREQUENT_ACCESS class provides customers a cost-effective way to consolidate
@@ -178,6 +196,19 @@ public interface LogGroupProps {
     override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
+
+    /**
+     * @param fieldIndexPolicies Field Index Policies for this log group.
+     */
+    override fun fieldIndexPolicies(fieldIndexPolicies: List<FieldIndexPolicy>) {
+      cdkBuilder.fieldIndexPolicies(fieldIndexPolicies.map(FieldIndexPolicy.Companion::unwrap))
+    }
+
+    /**
+     * @param fieldIndexPolicies Field Index Policies for this log group.
+     */
+    override fun fieldIndexPolicies(vararg fieldIndexPolicies: FieldIndexPolicy): Unit =
+        fieldIndexPolicies(fieldIndexPolicies.toList())
 
     /**
      * @param logGroupClass The class of the log group. Possible values are: STANDARD and
@@ -237,6 +268,14 @@ public interface LogGroupProps {
      * Default: Server-side encryption managed by the CloudWatch Logs service
      */
     override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
+
+    /**
+     * Field Index Policies for this log group.
+     *
+     * Default: - no field index policies for this log group.
+     */
+    override fun fieldIndexPolicies(): List<FieldIndexPolicy> =
+        unwrap(this).getFieldIndexPolicies()?.map(FieldIndexPolicy::wrap) ?: emptyList()
 
     /**
      * The class of the log group. Possible values are: STANDARD and INFREQUENT_ACCESS.

@@ -49,10 +49,19 @@ import kotlin.jvm.JvmName
  * .enabled(false)
  * .originShieldRegion("originShieldRegion")
  * .build())
+ * .responseCompletionTimeout(123)
  * .s3OriginConfig(S3OriginConfigProperty.builder()
  * .originAccessIdentity("originAccessIdentity")
+ * .originReadTimeout(123)
+ * .build())
+ * .vpcOriginConfig(VpcOriginConfigProperty.builder()
+ * .vpcOriginId("vpcOriginId")
+ * // the properties below are optional
+ * .originKeepaliveTimeout(123)
+ * .originReadTimeout(123)
  * .build())
  * .build())
+ * .selectionCriteria(OriginSelectionCriteria.DEFAULT)
  * .build();
  * ```
  */
@@ -72,6 +81,16 @@ public interface OriginBindConfig {
    */
   public fun originProperty(): CfnDistribution.OriginProperty? =
       unwrap(this).getOriginProperty()?.let(CfnDistribution.OriginProperty::wrap)
+
+  /**
+   * The selection criteria for how your origins are selected.
+   *
+   * Default: - OriginSelectionCriteria.DEFAULT
+   *
+   * [Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html#concept_origin_groups.creating)
+   */
+  public fun selectionCriteria(): OriginSelectionCriteria? =
+      unwrap(this).getSelectionCriteria()?.let(OriginSelectionCriteria::wrap)
 
   /**
    * A builder for [OriginBindConfig]
@@ -101,6 +120,11 @@ public interface OriginBindConfig {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("96f7c474fb3a60fea18965bccda8e808015483f54b24fbafb80d5ece2e8b035e")
     public fun originProperty(originProperty: CfnDistribution.OriginProperty.Builder.() -> Unit)
+
+    /**
+     * @param selectionCriteria The selection criteria for how your origins are selected.
+     */
+    public fun selectionCriteria(selectionCriteria: OriginSelectionCriteria)
   }
 
   private class BuilderImpl : Builder {
@@ -137,6 +161,13 @@ public interface OriginBindConfig {
     override fun originProperty(originProperty: CfnDistribution.OriginProperty.Builder.() -> Unit):
         Unit = originProperty(CfnDistribution.OriginProperty(originProperty))
 
+    /**
+     * @param selectionCriteria The selection criteria for how your origins are selected.
+     */
+    override fun selectionCriteria(selectionCriteria: OriginSelectionCriteria) {
+      cdkBuilder.selectionCriteria(selectionCriteria.let(OriginSelectionCriteria.Companion::unwrap))
+    }
+
     public fun build(): software.amazon.awscdk.services.cloudfront.OriginBindConfig =
         cdkBuilder.build()
   }
@@ -160,6 +191,16 @@ public interface OriginBindConfig {
      */
     override fun originProperty(): CfnDistribution.OriginProperty? =
         unwrap(this).getOriginProperty()?.let(CfnDistribution.OriginProperty::wrap)
+
+    /**
+     * The selection criteria for how your origins are selected.
+     *
+     * Default: - OriginSelectionCriteria.DEFAULT
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html#concept_origin_groups.creating)
+     */
+    override fun selectionCriteria(): OriginSelectionCriteria? =
+        unwrap(this).getSelectionCriteria()?.let(OriginSelectionCriteria::wrap)
   }
 
   public companion object {

@@ -23,8 +23,8 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Creates an inference component, which is a SageMaker hosting object that you can use to deploy a
- * model to an endpoint.
+ * Creates an inference component, which is a SageMaker AI hosting object that you can use to deploy
+ * a model to an endpoint.
  *
  * In the inference component settings, you specify the model, the endpoint, and how the model
  * utilizes the resources that the endpoint hosts. You can optimize resource utilization by tailoring
@@ -68,6 +68,25 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build())
  * // the properties below are optional
+ * .deploymentConfig(InferenceComponentDeploymentConfigProperty.builder()
+ * .autoRollbackConfiguration(AutoRollbackConfigurationProperty.builder()
+ * .alarms(List.of(AlarmProperty.builder()
+ * .alarmName("alarmName")
+ * .build()))
+ * .build())
+ * .rollingUpdatePolicy(InferenceComponentRollingUpdatePolicyProperty.builder()
+ * .maximumBatchSize(InferenceComponentCapacitySizeProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .maximumExecutionTimeoutInSeconds(123)
+ * .rollbackMaximumBatchSize(InferenceComponentCapacitySizeProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .waitIntervalInSeconds(123)
+ * .build())
+ * .build())
  * .endpointArn("endpointArn")
  * .inferenceComponentName("inferenceComponentName")
  * .runtimeConfig(InferenceComponentRuntimeConfigProperty.builder()
@@ -156,6 +175,38 @@ public open class CfnInferenceComponent(
    */
   public override fun cdkTagManager(): TagManager =
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
+
+  /**
+   * The deployment configuration for an endpoint, which contains the desired deployment strategy
+   * and rollback configurations.
+   */
+  public open fun deploymentConfig(): Any? = unwrap(this).getDeploymentConfig()
+
+  /**
+   * The deployment configuration for an endpoint, which contains the desired deployment strategy
+   * and rollback configurations.
+   */
+  public open fun deploymentConfig(`value`: IResolvable) {
+    unwrap(this).setDeploymentConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The deployment configuration for an endpoint, which contains the desired deployment strategy
+   * and rollback configurations.
+   */
+  public open fun deploymentConfig(`value`: InferenceComponentDeploymentConfigProperty) {
+    unwrap(this).setDeploymentConfig(`value`.let(InferenceComponentDeploymentConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * The deployment configuration for an endpoint, which contains the desired deployment strategy
+   * and rollback configurations.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("913ccc16603a449ed939f7451ee29ee8c30b583d180cbc5d4222a181de4d3515")
+  public open
+      fun deploymentConfig(`value`: InferenceComponentDeploymentConfigProperty.Builder.() -> Unit):
+      Unit = deploymentConfig(InferenceComponentDeploymentConfigProperty(`value`))
 
   /**
    * The Amazon Resource Name (ARN) of the endpoint that hosts the inference component.
@@ -293,6 +344,39 @@ public open class CfnInferenceComponent(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The deployment configuration for an endpoint, which contains the desired deployment strategy
+     * and rollback configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-deploymentconfig)
+     * @param deploymentConfig The deployment configuration for an endpoint, which contains the
+     * desired deployment strategy and rollback configurations. 
+     */
+    public fun deploymentConfig(deploymentConfig: IResolvable)
+
+    /**
+     * The deployment configuration for an endpoint, which contains the desired deployment strategy
+     * and rollback configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-deploymentconfig)
+     * @param deploymentConfig The deployment configuration for an endpoint, which contains the
+     * desired deployment strategy and rollback configurations. 
+     */
+    public fun deploymentConfig(deploymentConfig: InferenceComponentDeploymentConfigProperty)
+
+    /**
+     * The deployment configuration for an endpoint, which contains the desired deployment strategy
+     * and rollback configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-deploymentconfig)
+     * @param deploymentConfig The deployment configuration for an endpoint, which contains the
+     * desired deployment strategy and rollback configurations. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("070671df738ceddc1531c24367e5f72b193c5f77e66c96a8c23e14c86f92e69f")
+    public
+        fun deploymentConfig(deploymentConfig: InferenceComponentDeploymentConfigProperty.Builder.() -> Unit)
+
+    /**
      * The Amazon Resource Name (ARN) of the endpoint that hosts the inference component.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-endpointarn)
@@ -402,6 +486,44 @@ public open class CfnInferenceComponent(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.Builder
         = software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.Builder.create(scope, id)
+
+    /**
+     * The deployment configuration for an endpoint, which contains the desired deployment strategy
+     * and rollback configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-deploymentconfig)
+     * @param deploymentConfig The deployment configuration for an endpoint, which contains the
+     * desired deployment strategy and rollback configurations. 
+     */
+    override fun deploymentConfig(deploymentConfig: IResolvable) {
+      cdkBuilder.deploymentConfig(deploymentConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The deployment configuration for an endpoint, which contains the desired deployment strategy
+     * and rollback configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-deploymentconfig)
+     * @param deploymentConfig The deployment configuration for an endpoint, which contains the
+     * desired deployment strategy and rollback configurations. 
+     */
+    override fun deploymentConfig(deploymentConfig: InferenceComponentDeploymentConfigProperty) {
+      cdkBuilder.deploymentConfig(deploymentConfig.let(InferenceComponentDeploymentConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * The deployment configuration for an endpoint, which contains the desired deployment strategy
+     * and rollback configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-deploymentconfig)
+     * @param deploymentConfig The deployment configuration for an endpoint, which contains the
+     * desired deployment strategy and rollback configurations. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("070671df738ceddc1531c24367e5f72b193c5f77e66c96a8c23e14c86f92e69f")
+    override
+        fun deploymentConfig(deploymentConfig: InferenceComponentDeploymentConfigProperty.Builder.() -> Unit):
+        Unit = deploymentConfig(InferenceComponentDeploymentConfigProperty(deploymentConfig))
 
     /**
      * The Amazon Resource Name (ARN) of the endpoint that hosts the inference component.
@@ -552,6 +674,190 @@ public open class CfnInferenceComponent(
   }
 
   /**
+   * An Amazon CloudWatch alarm configured to monitor metrics on an endpoint.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * AlarmProperty alarmProperty = AlarmProperty.builder()
+   * .alarmName("alarmName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-alarm.html)
+   */
+  public interface AlarmProperty {
+    /**
+     * The name of a CloudWatch alarm in your account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-alarm.html#cfn-sagemaker-inferencecomponent-alarm-alarmname)
+     */
+    public fun alarmName(): String
+
+    /**
+     * A builder for [AlarmProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param alarmName The name of a CloudWatch alarm in your account. 
+       */
+      public fun alarmName(alarmName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.AlarmProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.AlarmProperty.builder()
+
+      /**
+       * @param alarmName The name of a CloudWatch alarm in your account. 
+       */
+      override fun alarmName(alarmName: String) {
+        cdkBuilder.alarmName(alarmName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.AlarmProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.AlarmProperty,
+    ) : CdkObject(cdkObject),
+        AlarmProperty {
+      /**
+       * The name of a CloudWatch alarm in your account.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-alarm.html#cfn-sagemaker-inferencecomponent-alarm-alarmname)
+       */
+      override fun alarmName(): String = unwrap(this).getAlarmName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AlarmProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.AlarmProperty):
+          AlarmProperty = CdkObjectWrappers.wrap(cdkObject) as? AlarmProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AlarmProperty):
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.AlarmProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.AlarmProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * AutoRollbackConfigurationProperty autoRollbackConfigurationProperty =
+   * AutoRollbackConfigurationProperty.builder()
+   * .alarms(List.of(AlarmProperty.builder()
+   * .alarmName("alarmName")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-autorollbackconfiguration.html)
+   */
+  public interface AutoRollbackConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-autorollbackconfiguration.html#cfn-sagemaker-inferencecomponent-autorollbackconfiguration-alarms)
+     */
+    public fun alarms(): Any
+
+    /**
+     * A builder for [AutoRollbackConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param alarms the value to be set. 
+       */
+      public fun alarms(alarms: IResolvable)
+
+      /**
+       * @param alarms the value to be set. 
+       */
+      public fun alarms(alarms: List<Any>)
+
+      /**
+       * @param alarms the value to be set. 
+       */
+      public fun alarms(vararg alarms: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.AutoRollbackConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.AutoRollbackConfigurationProperty.builder()
+
+      /**
+       * @param alarms the value to be set. 
+       */
+      override fun alarms(alarms: IResolvable) {
+        cdkBuilder.alarms(alarms.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param alarms the value to be set. 
+       */
+      override fun alarms(alarms: List<Any>) {
+        cdkBuilder.alarms(alarms.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param alarms the value to be set. 
+       */
+      override fun alarms(vararg alarms: Any): Unit = alarms(alarms.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.AutoRollbackConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.AutoRollbackConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        AutoRollbackConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-autorollbackconfiguration.html#cfn-sagemaker-inferencecomponent-autorollbackconfiguration-alarms)
+       */
+      override fun alarms(): Any = unwrap(this).getAlarms()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AutoRollbackConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.AutoRollbackConfigurationProperty):
+          AutoRollbackConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoRollbackConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AutoRollbackConfigurationProperty):
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.AutoRollbackConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.AutoRollbackConfigurationProperty
+    }
+  }
+
+  /**
    * Gets the Amazon EC2 Container Registry path of the docker image of the model that is hosted in
    * this
    * [ProductionVariant](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ProductionVariant.html)
@@ -699,6 +1005,149 @@ public open class CfnInferenceComponent(
           software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty
+    }
+  }
+
+  /**
+   * Specifies the type and size of the endpoint capacity to activate for a rolling deployment or a
+   * rollback strategy.
+   *
+   * You can specify your batches as either of the following:
+   *
+   * * A count of inference component copies
+   * * The overall percentage or your fleet
+   *
+   * For a rollback strategy, if you don't specify the fields in this object, or if you set the
+   * `Value` parameter to 100%, then SageMaker AI uses a blue/green rollback strategy and rolls all
+   * traffic back to the blue fleet.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * InferenceComponentCapacitySizeProperty inferenceComponentCapacitySizeProperty =
+   * InferenceComponentCapacitySizeProperty.builder()
+   * .type("type")
+   * .value(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcapacitysize.html)
+   */
+  public interface InferenceComponentCapacitySizeProperty {
+    /**
+     * Specifies the endpoint capacity type.
+     *
+     * * **COPY_COUNT** - The endpoint activates based on the number of inference component copies.
+     * * **CAPACITY_PERCENT** - The endpoint activates based on the specified percentage of
+     * capacity.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcapacitysize.html#cfn-sagemaker-inferencecomponent-inferencecomponentcapacitysize-type)
+     */
+    public fun type(): String
+
+    /**
+     * Defines the capacity size, either as a number of inference component copies or a capacity
+     * percentage.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcapacitysize.html#cfn-sagemaker-inferencecomponent-inferencecomponentcapacitysize-value)
+     */
+    public fun `value`(): Number
+
+    /**
+     * A builder for [InferenceComponentCapacitySizeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type Specifies the endpoint capacity type. 
+       * * **COPY_COUNT** - The endpoint activates based on the number of inference component
+       * copies.
+       * * **CAPACITY_PERCENT** - The endpoint activates based on the specified percentage of
+       * capacity.
+       */
+      public fun type(type: String)
+
+      /**
+       * @param value Defines the capacity size, either as a number of inference component copies or
+       * a capacity percentage. 
+       */
+      public fun `value`(`value`: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentCapacitySizeProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentCapacitySizeProperty.builder()
+
+      /**
+       * @param type Specifies the endpoint capacity type. 
+       * * **COPY_COUNT** - The endpoint activates based on the number of inference component
+       * copies.
+       * * **CAPACITY_PERCENT** - The endpoint activates based on the specified percentage of
+       * capacity.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      /**
+       * @param value Defines the capacity size, either as a number of inference component copies or
+       * a capacity percentage. 
+       */
+      override fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentCapacitySizeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentCapacitySizeProperty,
+    ) : CdkObject(cdkObject),
+        InferenceComponentCapacitySizeProperty {
+      /**
+       * Specifies the endpoint capacity type.
+       *
+       * * **COPY_COUNT** - The endpoint activates based on the number of inference component
+       * copies.
+       * * **CAPACITY_PERCENT** - The endpoint activates based on the specified percentage of
+       * capacity.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcapacitysize.html#cfn-sagemaker-inferencecomponent-inferencecomponentcapacitysize-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+
+      /**
+       * Defines the capacity size, either as a number of inference component copies or a capacity
+       * percentage.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentcapacitysize.html#cfn-sagemaker-inferencecomponent-inferencecomponentcapacitysize-value)
+       */
+      override fun `value`(): Number = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InferenceComponentCapacitySizeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentCapacitySizeProperty):
+          InferenceComponentCapacitySizeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InferenceComponentCapacitySizeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InferenceComponentCapacitySizeProperty):
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentCapacitySizeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentCapacitySizeProperty
     }
   }
 
@@ -989,14 +1438,14 @@ public open class CfnInferenceComponent(
        * Each key and value in the Environment string-to-string map can have length of up to 1024.
        * We support up to 16 entries in the map.
        */
-      public fun environment(environment: IResolvable)
+      public fun environment(environment: Map<String, String>)
 
       /**
        * @param environment The environment variables to set in the Docker container.
        * Each key and value in the Environment string-to-string map can have length of up to 1024.
        * We support up to 16 entries in the map.
        */
-      public fun environment(environment: Map<String, String>)
+      public fun environment(environment: IResolvable)
 
       /**
        * @param image The Amazon Elastic Container Registry (Amazon ECR) path where the Docker image
@@ -1047,8 +1496,8 @@ public open class CfnInferenceComponent(
        * Each key and value in the Environment string-to-string map can have length of up to 1024.
        * We support up to 16 entries in the map.
        */
-      override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
+      override fun environment(environment: Map<String, String>) {
+        cdkBuilder.environment(environment)
       }
 
       /**
@@ -1056,8 +1505,8 @@ public open class CfnInferenceComponent(
        * Each key and value in the Environment string-to-string map can have length of up to 1024.
        * We support up to 16 entries in the map.
        */
-      override fun environment(environment: Map<String, String>) {
-        cdkBuilder.environment(environment)
+      override fun environment(environment: IResolvable) {
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1126,6 +1575,498 @@ public open class CfnInferenceComponent(
           software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentContainerSpecificationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentContainerSpecificationProperty
+    }
+  }
+
+  /**
+   * The deployment configuration for an endpoint that hosts inference components.
+   *
+   * The configuration includes the desired deployment strategy and rollback settings.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * InferenceComponentDeploymentConfigProperty inferenceComponentDeploymentConfigProperty =
+   * InferenceComponentDeploymentConfigProperty.builder()
+   * .autoRollbackConfiguration(AutoRollbackConfigurationProperty.builder()
+   * .alarms(List.of(AlarmProperty.builder()
+   * .alarmName("alarmName")
+   * .build()))
+   * .build())
+   * .rollingUpdatePolicy(InferenceComponentRollingUpdatePolicyProperty.builder()
+   * .maximumBatchSize(InferenceComponentCapacitySizeProperty.builder()
+   * .type("type")
+   * .value(123)
+   * .build())
+   * .maximumExecutionTimeoutInSeconds(123)
+   * .rollbackMaximumBatchSize(InferenceComponentCapacitySizeProperty.builder()
+   * .type("type")
+   * .value(123)
+   * .build())
+   * .waitIntervalInSeconds(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentdeploymentconfig.html)
+   */
+  public interface InferenceComponentDeploymentConfigProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentdeploymentconfig.html#cfn-sagemaker-inferencecomponent-inferencecomponentdeploymentconfig-autorollbackconfiguration)
+     */
+    public fun autoRollbackConfiguration(): Any? = unwrap(this).getAutoRollbackConfiguration()
+
+    /**
+     * Specifies a rolling deployment strategy for updating a SageMaker AI endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentdeploymentconfig.html#cfn-sagemaker-inferencecomponent-inferencecomponentdeploymentconfig-rollingupdatepolicy)
+     */
+    public fun rollingUpdatePolicy(): Any? = unwrap(this).getRollingUpdatePolicy()
+
+    /**
+     * A builder for [InferenceComponentDeploymentConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param autoRollbackConfiguration the value to be set.
+       */
+      public fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable)
+
+      /**
+       * @param autoRollbackConfiguration the value to be set.
+       */
+      public
+          fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigurationProperty)
+
+      /**
+       * @param autoRollbackConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("26810b99c5cd977d842aebc2ce743196ec8c716123964d7c9480179cada6d22a")
+      public
+          fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
+       * AI endpoint.
+       */
+      public fun rollingUpdatePolicy(rollingUpdatePolicy: IResolvable)
+
+      /**
+       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
+       * AI endpoint.
+       */
+      public
+          fun rollingUpdatePolicy(rollingUpdatePolicy: InferenceComponentRollingUpdatePolicyProperty)
+
+      /**
+       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
+       * AI endpoint.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bf33ef8c4c3c96f342848c6bab804fdebeb5739858fa869468b1d6bf532d5676")
+      public
+          fun rollingUpdatePolicy(rollingUpdatePolicy: InferenceComponentRollingUpdatePolicyProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentDeploymentConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentDeploymentConfigProperty.builder()
+
+      /**
+       * @param autoRollbackConfiguration the value to be set.
+       */
+      override fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable) {
+        cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param autoRollbackConfiguration the value to be set.
+       */
+      override
+          fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigurationProperty) {
+        cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(AutoRollbackConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param autoRollbackConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("26810b99c5cd977d842aebc2ce743196ec8c716123964d7c9480179cada6d22a")
+      override
+          fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          autoRollbackConfiguration(AutoRollbackConfigurationProperty(autoRollbackConfiguration))
+
+      /**
+       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
+       * AI endpoint.
+       */
+      override fun rollingUpdatePolicy(rollingUpdatePolicy: IResolvable) {
+        cdkBuilder.rollingUpdatePolicy(rollingUpdatePolicy.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
+       * AI endpoint.
+       */
+      override
+          fun rollingUpdatePolicy(rollingUpdatePolicy: InferenceComponentRollingUpdatePolicyProperty) {
+        cdkBuilder.rollingUpdatePolicy(rollingUpdatePolicy.let(InferenceComponentRollingUpdatePolicyProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param rollingUpdatePolicy Specifies a rolling deployment strategy for updating a SageMaker
+       * AI endpoint.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bf33ef8c4c3c96f342848c6bab804fdebeb5739858fa869468b1d6bf532d5676")
+      override
+          fun rollingUpdatePolicy(rollingUpdatePolicy: InferenceComponentRollingUpdatePolicyProperty.Builder.() -> Unit):
+          Unit =
+          rollingUpdatePolicy(InferenceComponentRollingUpdatePolicyProperty(rollingUpdatePolicy))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentDeploymentConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentDeploymentConfigProperty,
+    ) : CdkObject(cdkObject),
+        InferenceComponentDeploymentConfigProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentdeploymentconfig.html#cfn-sagemaker-inferencecomponent-inferencecomponentdeploymentconfig-autorollbackconfiguration)
+       */
+      override fun autoRollbackConfiguration(): Any? = unwrap(this).getAutoRollbackConfiguration()
+
+      /**
+       * Specifies a rolling deployment strategy for updating a SageMaker AI endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentdeploymentconfig.html#cfn-sagemaker-inferencecomponent-inferencecomponentdeploymentconfig-rollingupdatepolicy)
+       */
+      override fun rollingUpdatePolicy(): Any? = unwrap(this).getRollingUpdatePolicy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InferenceComponentDeploymentConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentDeploymentConfigProperty):
+          InferenceComponentDeploymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InferenceComponentDeploymentConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InferenceComponentDeploymentConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentDeploymentConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentDeploymentConfigProperty
+    }
+  }
+
+  /**
+   * Specifies a rolling deployment strategy for updating a SageMaker AI inference component.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * InferenceComponentRollingUpdatePolicyProperty inferenceComponentRollingUpdatePolicyProperty =
+   * InferenceComponentRollingUpdatePolicyProperty.builder()
+   * .maximumBatchSize(InferenceComponentCapacitySizeProperty.builder()
+   * .type("type")
+   * .value(123)
+   * .build())
+   * .maximumExecutionTimeoutInSeconds(123)
+   * .rollbackMaximumBatchSize(InferenceComponentCapacitySizeProperty.builder()
+   * .type("type")
+   * .value(123)
+   * .build())
+   * .waitIntervalInSeconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy.html)
+   */
+  public interface InferenceComponentRollingUpdatePolicyProperty {
+    /**
+     * The batch size for each rolling step in the deployment process.
+     *
+     * For each step, SageMaker AI provisions capacity on the new endpoint fleet, routes traffic to
+     * that fleet, and terminates capacity on the old endpoint fleet. The value must be between 5% to
+     * 50% of the copy count of the inference component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy.html#cfn-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy-maximumbatchsize)
+     */
+    public fun maximumBatchSize(): Any? = unwrap(this).getMaximumBatchSize()
+
+    /**
+     * The time limit for the total deployment.
+     *
+     * Exceeding this limit causes a timeout.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy.html#cfn-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy-maximumexecutiontimeoutinseconds)
+     */
+    public fun maximumExecutionTimeoutInSeconds(): Number? =
+        unwrap(this).getMaximumExecutionTimeoutInSeconds()
+
+    /**
+     * The batch size for a rollback to the old endpoint fleet.
+     *
+     * If this field is absent, the value is set to the default, which is 100% of the total
+     * capacity. When the default is used, SageMaker AI provisions the entire capacity of the old fleet
+     * at once during rollback.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy.html#cfn-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy-rollbackmaximumbatchsize)
+     */
+    public fun rollbackMaximumBatchSize(): Any? = unwrap(this).getRollbackMaximumBatchSize()
+
+    /**
+     * The length of the baking period, during which SageMaker AI monitors alarms for each batch on
+     * the new fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy.html#cfn-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy-waitintervalinseconds)
+     */
+    public fun waitIntervalInSeconds(): Number? = unwrap(this).getWaitIntervalInSeconds()
+
+    /**
+     * A builder for [InferenceComponentRollingUpdatePolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maximumBatchSize The batch size for each rolling step in the deployment process.
+       * For each step, SageMaker AI provisions capacity on the new endpoint fleet, routes traffic
+       * to that fleet, and terminates capacity on the old endpoint fleet. The value must be between 5%
+       * to 50% of the copy count of the inference component.
+       */
+      public fun maximumBatchSize(maximumBatchSize: IResolvable)
+
+      /**
+       * @param maximumBatchSize The batch size for each rolling step in the deployment process.
+       * For each step, SageMaker AI provisions capacity on the new endpoint fleet, routes traffic
+       * to that fleet, and terminates capacity on the old endpoint fleet. The value must be between 5%
+       * to 50% of the copy count of the inference component.
+       */
+      public fun maximumBatchSize(maximumBatchSize: InferenceComponentCapacitySizeProperty)
+
+      /**
+       * @param maximumBatchSize The batch size for each rolling step in the deployment process.
+       * For each step, SageMaker AI provisions capacity on the new endpoint fleet, routes traffic
+       * to that fleet, and terminates capacity on the old endpoint fleet. The value must be between 5%
+       * to 50% of the copy count of the inference component.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("975ca168e3bdc4a266ab83c07f3a07dfdfb84c2da2a5c806d1218a556690bfcf")
+      public
+          fun maximumBatchSize(maximumBatchSize: InferenceComponentCapacitySizeProperty.Builder.() -> Unit)
+
+      /**
+       * @param maximumExecutionTimeoutInSeconds The time limit for the total deployment.
+       * Exceeding this limit causes a timeout.
+       */
+      public fun maximumExecutionTimeoutInSeconds(maximumExecutionTimeoutInSeconds: Number)
+
+      /**
+       * @param rollbackMaximumBatchSize The batch size for a rollback to the old endpoint fleet.
+       * If this field is absent, the value is set to the default, which is 100% of the total
+       * capacity. When the default is used, SageMaker AI provisions the entire capacity of the old
+       * fleet at once during rollback.
+       */
+      public fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: IResolvable)
+
+      /**
+       * @param rollbackMaximumBatchSize The batch size for a rollback to the old endpoint fleet.
+       * If this field is absent, the value is set to the default, which is 100% of the total
+       * capacity. When the default is used, SageMaker AI provisions the entire capacity of the old
+       * fleet at once during rollback.
+       */
+      public
+          fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: InferenceComponentCapacitySizeProperty)
+
+      /**
+       * @param rollbackMaximumBatchSize The batch size for a rollback to the old endpoint fleet.
+       * If this field is absent, the value is set to the default, which is 100% of the total
+       * capacity. When the default is used, SageMaker AI provisions the entire capacity of the old
+       * fleet at once during rollback.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("354c863c0125e64e7ddd14712ef688c2ce97bb1011d922157fe2616cbb70cc7b")
+      public
+          fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: InferenceComponentCapacitySizeProperty.Builder.() -> Unit)
+
+      /**
+       * @param waitIntervalInSeconds The length of the baking period, during which SageMaker AI
+       * monitors alarms for each batch on the new fleet.
+       */
+      public fun waitIntervalInSeconds(waitIntervalInSeconds: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentRollingUpdatePolicyProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentRollingUpdatePolicyProperty.builder()
+
+      /**
+       * @param maximumBatchSize The batch size for each rolling step in the deployment process.
+       * For each step, SageMaker AI provisions capacity on the new endpoint fleet, routes traffic
+       * to that fleet, and terminates capacity on the old endpoint fleet. The value must be between 5%
+       * to 50% of the copy count of the inference component.
+       */
+      override fun maximumBatchSize(maximumBatchSize: IResolvable) {
+        cdkBuilder.maximumBatchSize(maximumBatchSize.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param maximumBatchSize The batch size for each rolling step in the deployment process.
+       * For each step, SageMaker AI provisions capacity on the new endpoint fleet, routes traffic
+       * to that fleet, and terminates capacity on the old endpoint fleet. The value must be between 5%
+       * to 50% of the copy count of the inference component.
+       */
+      override fun maximumBatchSize(maximumBatchSize: InferenceComponentCapacitySizeProperty) {
+        cdkBuilder.maximumBatchSize(maximumBatchSize.let(InferenceComponentCapacitySizeProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param maximumBatchSize The batch size for each rolling step in the deployment process.
+       * For each step, SageMaker AI provisions capacity on the new endpoint fleet, routes traffic
+       * to that fleet, and terminates capacity on the old endpoint fleet. The value must be between 5%
+       * to 50% of the copy count of the inference component.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("975ca168e3bdc4a266ab83c07f3a07dfdfb84c2da2a5c806d1218a556690bfcf")
+      override
+          fun maximumBatchSize(maximumBatchSize: InferenceComponentCapacitySizeProperty.Builder.() -> Unit):
+          Unit = maximumBatchSize(InferenceComponentCapacitySizeProperty(maximumBatchSize))
+
+      /**
+       * @param maximumExecutionTimeoutInSeconds The time limit for the total deployment.
+       * Exceeding this limit causes a timeout.
+       */
+      override fun maximumExecutionTimeoutInSeconds(maximumExecutionTimeoutInSeconds: Number) {
+        cdkBuilder.maximumExecutionTimeoutInSeconds(maximumExecutionTimeoutInSeconds)
+      }
+
+      /**
+       * @param rollbackMaximumBatchSize The batch size for a rollback to the old endpoint fleet.
+       * If this field is absent, the value is set to the default, which is 100% of the total
+       * capacity. When the default is used, SageMaker AI provisions the entire capacity of the old
+       * fleet at once during rollback.
+       */
+      override fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: IResolvable) {
+        cdkBuilder.rollbackMaximumBatchSize(rollbackMaximumBatchSize.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param rollbackMaximumBatchSize The batch size for a rollback to the old endpoint fleet.
+       * If this field is absent, the value is set to the default, which is 100% of the total
+       * capacity. When the default is used, SageMaker AI provisions the entire capacity of the old
+       * fleet at once during rollback.
+       */
+      override
+          fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: InferenceComponentCapacitySizeProperty) {
+        cdkBuilder.rollbackMaximumBatchSize(rollbackMaximumBatchSize.let(InferenceComponentCapacitySizeProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param rollbackMaximumBatchSize The batch size for a rollback to the old endpoint fleet.
+       * If this field is absent, the value is set to the default, which is 100% of the total
+       * capacity. When the default is used, SageMaker AI provisions the entire capacity of the old
+       * fleet at once during rollback.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("354c863c0125e64e7ddd14712ef688c2ce97bb1011d922157fe2616cbb70cc7b")
+      override
+          fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: InferenceComponentCapacitySizeProperty.Builder.() -> Unit):
+          Unit =
+          rollbackMaximumBatchSize(InferenceComponentCapacitySizeProperty(rollbackMaximumBatchSize))
+
+      /**
+       * @param waitIntervalInSeconds The length of the baking period, during which SageMaker AI
+       * monitors alarms for each batch on the new fleet.
+       */
+      override fun waitIntervalInSeconds(waitIntervalInSeconds: Number) {
+        cdkBuilder.waitIntervalInSeconds(waitIntervalInSeconds)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentRollingUpdatePolicyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentRollingUpdatePolicyProperty,
+    ) : CdkObject(cdkObject),
+        InferenceComponentRollingUpdatePolicyProperty {
+      /**
+       * The batch size for each rolling step in the deployment process.
+       *
+       * For each step, SageMaker AI provisions capacity on the new endpoint fleet, routes traffic
+       * to that fleet, and terminates capacity on the old endpoint fleet. The value must be between 5%
+       * to 50% of the copy count of the inference component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy.html#cfn-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy-maximumbatchsize)
+       */
+      override fun maximumBatchSize(): Any? = unwrap(this).getMaximumBatchSize()
+
+      /**
+       * The time limit for the total deployment.
+       *
+       * Exceeding this limit causes a timeout.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy.html#cfn-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy-maximumexecutiontimeoutinseconds)
+       */
+      override fun maximumExecutionTimeoutInSeconds(): Number? =
+          unwrap(this).getMaximumExecutionTimeoutInSeconds()
+
+      /**
+       * The batch size for a rollback to the old endpoint fleet.
+       *
+       * If this field is absent, the value is set to the default, which is 100% of the total
+       * capacity. When the default is used, SageMaker AI provisions the entire capacity of the old
+       * fleet at once during rollback.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy.html#cfn-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy-rollbackmaximumbatchsize)
+       */
+      override fun rollbackMaximumBatchSize(): Any? = unwrap(this).getRollbackMaximumBatchSize()
+
+      /**
+       * The length of the baking period, during which SageMaker AI monitors alarms for each batch
+       * on the new fleet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy.html#cfn-sagemaker-inferencecomponent-inferencecomponentrollingupdatepolicy-waitintervalinseconds)
+       */
+      override fun waitIntervalInSeconds(): Number? = unwrap(this).getWaitIntervalInSeconds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InferenceComponentRollingUpdatePolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentRollingUpdatePolicyProperty):
+          InferenceComponentRollingUpdatePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InferenceComponentRollingUpdatePolicyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InferenceComponentRollingUpdatePolicyProperty):
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentRollingUpdatePolicyProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentRollingUpdatePolicyProperty
     }
   }
 
@@ -1365,8 +2306,8 @@ public open class CfnInferenceComponent(
     public fun container(): Any? = unwrap(this).getContainer()
 
     /**
-     * The name of an existing SageMaker model object in your account that you want to deploy with
-     * the inference component.
+     * The name of an existing SageMaker AI model object in your account that you want to deploy
+     * with the inference component.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentspecification.html#cfn-sagemaker-inferencecomponent-inferencecomponentspecification-modelname)
      */
@@ -1455,7 +2396,7 @@ public open class CfnInferenceComponent(
           fun container(container: InferenceComponentContainerSpecificationProperty.Builder.() -> Unit)
 
       /**
-       * @param modelName The name of an existing SageMaker model object in your account that you
+       * @param modelName The name of an existing SageMaker AI model object in your account that you
        * want to deploy with the inference component.
        */
       public fun modelName(modelName: String)
@@ -1569,7 +2510,7 @@ public open class CfnInferenceComponent(
           Unit = container(InferenceComponentContainerSpecificationProperty(container))
 
       /**
-       * @param modelName The name of an existing SageMaker model object in your account that you
+       * @param modelName The name of an existing SageMaker AI model object in your account that you
        * want to deploy with the inference component.
        */
       override fun modelName(modelName: String) {
@@ -1653,8 +2594,8 @@ public open class CfnInferenceComponent(
       override fun container(): Any? = unwrap(this).getContainer()
 
       /**
-       * The name of an existing SageMaker model object in your account that you want to deploy with
-       * the inference component.
+       * The name of an existing SageMaker AI model object in your account that you want to deploy
+       * with the inference component.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentspecification.html#cfn-sagemaker-inferencecomponent-inferencecomponentspecification-modelname)
        */

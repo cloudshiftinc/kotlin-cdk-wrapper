@@ -148,14 +148,14 @@ public open class CfnLocationNFS(
       onPremConfig(OnPremConfigProperty(`value`))
 
   /**
-   * Specifies the Domain Name System (DNS) name or IP version 4 address of the NFS file server that
-   * your DataSync agent connects to.
+   * Specifies the DNS name or IP address (IPv4 or IPv6) of the NFS file server that your DataSync
+   * agent connects to.
    */
   public open fun serverHostname(): String? = unwrap(this).getServerHostname()
 
   /**
-   * Specifies the Domain Name System (DNS) name or IP version 4 address of the NFS file server that
-   * your DataSync agent connects to.
+   * Specifies the DNS name or IP address (IPv4 or IPv6) of the NFS file server that your DataSync
+   * agent connects to.
    */
   public open fun serverHostname(`value`: String) {
     unwrap(this).setServerHostname(`value`)
@@ -275,12 +275,12 @@ public open class CfnLocationNFS(
     public fun onPremConfig(onPremConfig: OnPremConfigProperty.Builder.() -> Unit)
 
     /**
-     * Specifies the Domain Name System (DNS) name or IP version 4 address of the NFS file server
-     * that your DataSync agent connects to.
+     * Specifies the DNS name or IP address (IPv4 or IPv6) of the NFS file server that your DataSync
+     * agent connects to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-serverhostname)
-     * @param serverHostname Specifies the Domain Name System (DNS) name or IP version 4 address of
-     * the NFS file server that your DataSync agent connects to. 
+     * @param serverHostname Specifies the DNS name or IP address (IPv4 or IPv6) of the NFS file
+     * server that your DataSync agent connects to. 
      */
     public fun serverHostname(serverHostname: String)
 
@@ -412,12 +412,12 @@ public open class CfnLocationNFS(
         onPremConfig(OnPremConfigProperty(onPremConfig))
 
     /**
-     * Specifies the Domain Name System (DNS) name or IP version 4 address of the NFS file server
-     * that your DataSync agent connects to.
+     * Specifies the DNS name or IP address (IPv4 or IPv6) of the NFS file server that your DataSync
+     * agent connects to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-serverhostname)
-     * @param serverHostname Specifies the Domain Name System (DNS) name or IP version 4 address of
-     * the NFS file server that your DataSync agent connects to. 
+     * @param serverHostname Specifies the DNS name or IP address (IPv4 or IPv6) of the NFS file
+     * server that your DataSync agent connects to. 
      */
     override fun serverHostname(serverHostname: String) {
       cdkBuilder.serverHostname(serverHostname)

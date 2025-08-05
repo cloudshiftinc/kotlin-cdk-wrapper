@@ -15,20 +15,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * // Validating signed URLs or signed cookies with Trusted Key Groups
- * // public key in PEM format
- * String publicKey;
- * PublicKey pubKey = PublicKey.Builder.create(this, "MyPubKey")
- * .encodedKey(publicKey)
- * .build();
- * KeyGroup keyGroup = KeyGroup.Builder.create(this, "MyKeyGroup")
- * .items(List.of(pubKey))
- * .build();
- * Distribution.Builder.create(this, "Dist")
- * .defaultBehavior(BehaviorOptions.builder()
- * .origin(new HttpOrigin("www.example.com"))
- * .trustedKeyGroups(List.of(keyGroup))
- * .build())
+ * // Create a key group to use with CloudFront signed URLs and signed cookies.
+ * // Create a key group to use with CloudFront signed URLs and signed cookies.
+ * KeyGroup.Builder.create(this, "MyKeyGroup")
+ * .items(List.of(
+ * PublicKey.Builder.create(this, "MyPublicKey")
+ * .encodedKey("...")
+ * .build()))
  * .build();
  * ```
  */
@@ -142,6 +135,9 @@ public open class PublicKey(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.cloudfront.PublicKey.PROPERTY_INJECTION_ID
+
     public fun fromPublicKeyId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

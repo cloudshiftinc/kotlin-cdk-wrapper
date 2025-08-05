@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -24,9 +25,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * You can use the `AWS::Cassandra::Keyspace` resource to create a new keyspace in Amazon Keyspaces
  * (for Apache Cassandra).
  *
- * For more information, see [Create a keyspace and a
- * table](https://docs.aws.amazon.com/keyspaces/latest/devguide/getting-started.ddl.html) in the
- * *Amazon Keyspaces Developer Guide* .
+ * For more information, see [Create a
+ * keyspace](https://docs.aws.amazon.com/keyspaces/latest/devguide/getting-started.keyspaces.html) in
+ * the *Amazon Keyspaces Developer Guide* .
  *
  * Example:
  *
@@ -35,6 +36,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.cassandra.*;
  * CfnKeyspace cfnKeyspace = CfnKeyspace.Builder.create(this, "MyCfnKeyspace")
+ * .clientSideTimestampsEnabled(false)
  * .keyspaceName("keyspaceName")
  * .replicationSpecification(ReplicationSpecificationProperty.builder()
  * .regionList(List.of("regionList"))
@@ -74,6 +76,29 @@ public open class CfnKeyspace(
     props: CfnKeyspaceProps.Builder.() -> Unit,
   ) : this(scope, id, CfnKeyspaceProps(props)
   )
+
+  /**
+   * Indicates whether client-side timestamps are enabled (true) or disabled (false) for all tables
+   * in the keyspace.
+   */
+  public open fun clientSideTimestampsEnabled(): Any? =
+      unwrap(this).getClientSideTimestampsEnabled()
+
+  /**
+   * Indicates whether client-side timestamps are enabled (true) or disabled (false) for all tables
+   * in the keyspace.
+   */
+  public open fun clientSideTimestampsEnabled(`value`: Boolean) {
+    unwrap(this).setClientSideTimestampsEnabled(`value`)
+  }
+
+  /**
+   * Indicates whether client-side timestamps are enabled (true) or disabled (false) for all tables
+   * in the keyspace.
+   */
+  public open fun clientSideTimestampsEnabled(`value`: IResolvable) {
+    unwrap(this).setClientSideTimestampsEnabled(`value`.let(IResolvable.Companion::unwrap))
+  }
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -161,15 +186,39 @@ public open class CfnKeyspace(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Indicates whether client-side timestamps are enabled (true) or disabled (false) for all
+     * tables in the keyspace.
+     *
+     * To add a Region to a single-Region keyspace with at least one table, the value must be set to
+     * true. After you've enabled client-side timestamps for a table, you can’t disable it again.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html#cfn-cassandra-keyspace-clientsidetimestampsenabled)
+     * @param clientSideTimestampsEnabled Indicates whether client-side timestamps are enabled
+     * (true) or disabled (false) for all tables in the keyspace. 
+     */
+    public fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: Boolean)
+
+    /**
+     * Indicates whether client-side timestamps are enabled (true) or disabled (false) for all
+     * tables in the keyspace.
+     *
+     * To add a Region to a single-Region keyspace with at least one table, the value must be set to
+     * true. After you've enabled client-side timestamps for a table, you can’t disable it again.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html#cfn-cassandra-keyspace-clientsidetimestampsenabled)
+     * @param clientSideTimestampsEnabled Indicates whether client-side timestamps are enabled
+     * (true) or disabled (false) for all tables in the keyspace. 
+     */
+    public fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: IResolvable)
+
+    /**
      * The name of the keyspace to be created.
      *
      * The keyspace name is case sensitive. If you don't specify a name, AWS CloudFormation
      * generates a unique ID and uses that ID for the keyspace name. For more information, see [Name
      * type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html) .
      *
-     * *Length constraints:* Minimum length of 3. Maximum length of 255.
-     *
-     * *Pattern:* `^[a-zA-Z0-9][a-zA-Z0-9_]{1,47}$`
+     * *Length constraints:* Minimum length of 1. Maximum length of 48.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html#cfn-cassandra-keyspace-keyspacename)
      * @param keyspaceName The name of the keyspace to be created. 
@@ -260,15 +309,43 @@ public open class CfnKeyspace(
         software.amazon.awscdk.services.cassandra.CfnKeyspace.Builder.create(scope, id)
 
     /**
+     * Indicates whether client-side timestamps are enabled (true) or disabled (false) for all
+     * tables in the keyspace.
+     *
+     * To add a Region to a single-Region keyspace with at least one table, the value must be set to
+     * true. After you've enabled client-side timestamps for a table, you can’t disable it again.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html#cfn-cassandra-keyspace-clientsidetimestampsenabled)
+     * @param clientSideTimestampsEnabled Indicates whether client-side timestamps are enabled
+     * (true) or disabled (false) for all tables in the keyspace. 
+     */
+    override fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: Boolean) {
+      cdkBuilder.clientSideTimestampsEnabled(clientSideTimestampsEnabled)
+    }
+
+    /**
+     * Indicates whether client-side timestamps are enabled (true) or disabled (false) for all
+     * tables in the keyspace.
+     *
+     * To add a Region to a single-Region keyspace with at least one table, the value must be set to
+     * true. After you've enabled client-side timestamps for a table, you can’t disable it again.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html#cfn-cassandra-keyspace-clientsidetimestampsenabled)
+     * @param clientSideTimestampsEnabled Indicates whether client-side timestamps are enabled
+     * (true) or disabled (false) for all tables in the keyspace. 
+     */
+    override fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: IResolvable) {
+      cdkBuilder.clientSideTimestampsEnabled(clientSideTimestampsEnabled.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
      * The name of the keyspace to be created.
      *
      * The keyspace name is case sensitive. If you don't specify a name, AWS CloudFormation
      * generates a unique ID and uses that ID for the keyspace name. For more information, see [Name
      * type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html) .
      *
-     * *Length constraints:* Minimum length of 3. Maximum length of 255.
-     *
-     * *Pattern:* `^[a-zA-Z0-9][a-zA-Z0-9_]{1,47}$`
+     * *Length constraints:* Minimum length of 1. Maximum length of 48.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html#cfn-cassandra-keyspace-keyspacename)
      * @param keyspaceName The name of the keyspace to be created. 
@@ -387,11 +464,15 @@ public open class CfnKeyspace(
    * You can use `ReplicationSpecification` to configure the `ReplicationStrategy` of a keyspace in
    * Amazon Keyspaces .
    *
-   * The `ReplicationSpecification` property is `CreateOnly` and cannot be changed after the
-   * keyspace has been created. This property applies automatically to all tables in the keyspace.
+   * The `ReplicationSpecification` property applies automatically to all tables in the keyspace.
    *
-   * For more information, see [Multi-Region
-   * Replication](https://docs.aws.amazon.com/keyspaces/latest/devguide/multiRegion-replication.html)
+   * To review the permissions that are required to add a new Region to a single-Region keyspace,
+   * see [Configure the IAM permissions required to add an AWS Region to a
+   * keyspace](https://docs.aws.amazon.com/keyspaces/latest/devguide/howitworks_replication_permissions_addReplica.html)
+   * in the *Amazon Keyspaces Developer Guide* .
+   *
+   * For more information about multi-Region replication, see [Multi-Region
+   * replication](https://docs.aws.amazon.com/keyspaces/latest/devguide/multiRegion-replication.html)
    * in the *Amazon Keyspaces Developer Guide* .
    *
    * Example:
@@ -413,8 +494,15 @@ public open class CfnKeyspace(
     /**
      * Specifies the AWS Regions that the keyspace is replicated in.
      *
-     * You must specify at least two and up to six Regions, including the Region that the keyspace
-     * is being created in.
+     * You must specify at least two Regions, including the Region that the keyspace is being
+     * created in.
+     *
+     * To specify a Region [that's disabled by
+     * default](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-regions.html#rande-manage-enable)
+     * , you must first enable the Region. For more information, see [Multi-Region replication in AWS
+     * Regions disabled by
+     * default](https://docs.aws.amazon.com/keyspaces/latest/devguide/multiRegion-replication_how-it-works.html#howitworks_mrr_opt_in)
+     * in the *Amazon Keyspaces Developer Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-keyspace-replicationspecification.html#cfn-cassandra-keyspace-replicationspecification-regionlist)
      */
@@ -440,15 +528,29 @@ public open class CfnKeyspace(
     public interface Builder {
       /**
        * @param regionList Specifies the AWS Regions that the keyspace is replicated in.
-       * You must specify at least two and up to six Regions, including the Region that the keyspace
-       * is being created in.
+       * You must specify at least two Regions, including the Region that the keyspace is being
+       * created in.
+       *
+       * To specify a Region [that's disabled by
+       * default](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-regions.html#rande-manage-enable)
+       * , you must first enable the Region. For more information, see [Multi-Region replication in AWS
+       * Regions disabled by
+       * default](https://docs.aws.amazon.com/keyspaces/latest/devguide/multiRegion-replication_how-it-works.html#howitworks_mrr_opt_in)
+       * in the *Amazon Keyspaces Developer Guide* .
        */
       public fun regionList(regionList: List<String>)
 
       /**
        * @param regionList Specifies the AWS Regions that the keyspace is replicated in.
-       * You must specify at least two and up to six Regions, including the Region that the keyspace
-       * is being created in.
+       * You must specify at least two Regions, including the Region that the keyspace is being
+       * created in.
+       *
+       * To specify a Region [that's disabled by
+       * default](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-regions.html#rande-manage-enable)
+       * , you must first enable the Region. For more information, see [Multi-Region replication in AWS
+       * Regions disabled by
+       * default](https://docs.aws.amazon.com/keyspaces/latest/devguide/multiRegion-replication_how-it-works.html#howitworks_mrr_opt_in)
+       * in the *Amazon Keyspaces Developer Guide* .
        */
       public fun regionList(vararg regionList: String)
 
@@ -471,8 +573,15 @@ public open class CfnKeyspace(
 
       /**
        * @param regionList Specifies the AWS Regions that the keyspace is replicated in.
-       * You must specify at least two and up to six Regions, including the Region that the keyspace
-       * is being created in.
+       * You must specify at least two Regions, including the Region that the keyspace is being
+       * created in.
+       *
+       * To specify a Region [that's disabled by
+       * default](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-regions.html#rande-manage-enable)
+       * , you must first enable the Region. For more information, see [Multi-Region replication in AWS
+       * Regions disabled by
+       * default](https://docs.aws.amazon.com/keyspaces/latest/devguide/multiRegion-replication_how-it-works.html#howitworks_mrr_opt_in)
+       * in the *Amazon Keyspaces Developer Guide* .
        */
       override fun regionList(regionList: List<String>) {
         cdkBuilder.regionList(regionList)
@@ -480,8 +589,15 @@ public open class CfnKeyspace(
 
       /**
        * @param regionList Specifies the AWS Regions that the keyspace is replicated in.
-       * You must specify at least two and up to six Regions, including the Region that the keyspace
-       * is being created in.
+       * You must specify at least two Regions, including the Region that the keyspace is being
+       * created in.
+       *
+       * To specify a Region [that's disabled by
+       * default](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-regions.html#rande-manage-enable)
+       * , you must first enable the Region. For more information, see [Multi-Region replication in AWS
+       * Regions disabled by
+       * default](https://docs.aws.amazon.com/keyspaces/latest/devguide/multiRegion-replication_how-it-works.html#howitworks_mrr_opt_in)
+       * in the *Amazon Keyspaces Developer Guide* .
        */
       override fun regionList(vararg regionList: String): Unit = regionList(regionList.toList())
 
@@ -509,8 +625,15 @@ public open class CfnKeyspace(
       /**
        * Specifies the AWS Regions that the keyspace is replicated in.
        *
-       * You must specify at least two and up to six Regions, including the Region that the keyspace
-       * is being created in.
+       * You must specify at least two Regions, including the Region that the keyspace is being
+       * created in.
+       *
+       * To specify a Region [that's disabled by
+       * default](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-regions.html#rande-manage-enable)
+       * , you must first enable the Region. For more information, see [Multi-Region replication in AWS
+       * Regions disabled by
+       * default](https://docs.aws.amazon.com/keyspaces/latest/devguide/multiRegion-replication_how-it-works.html#howitworks_mrr_opt_in)
+       * in the *Amazon Keyspaces Developer Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-keyspace-replicationspecification.html#cfn-cassandra-keyspace-replicationspecification-regionlist)
        */

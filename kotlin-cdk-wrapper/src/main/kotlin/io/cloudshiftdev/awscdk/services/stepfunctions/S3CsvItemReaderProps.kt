@@ -27,12 +27,20 @@ import kotlin.Unit
  * // the properties below are optional
  * .bucket(bucket)
  * .bucketNamePath("bucketNamePath")
+ * .csvDelimiter(CsvDelimiter.COMMA)
  * .csvHeaders(csvHeaders)
  * .maxItems(123)
  * .build();
  * ```
  */
 public interface S3CsvItemReaderProps : S3FileItemReaderProps {
+  /**
+   * Delimiter used in a CSV file.
+   *
+   * Default: undefined - Default setting is COMMA.
+   */
+  public fun csvDelimiter(): CsvDelimiter? = unwrap(this).getCsvDelimiter()?.let(CsvDelimiter::wrap)
+
   /**
    * CSV file header configuration.
    *
@@ -56,6 +64,11 @@ public interface S3CsvItemReaderProps : S3FileItemReaderProps {
      * to iterate over, as JsonPath.
      */
     public fun bucketNamePath(bucketNamePath: String)
+
+    /**
+     * @param csvDelimiter Delimiter used in a CSV file.
+     */
+    public fun csvDelimiter(csvDelimiter: CsvDelimiter)
 
     /**
      * @param csvHeaders CSV file header configuration.
@@ -92,6 +105,13 @@ public interface S3CsvItemReaderProps : S3FileItemReaderProps {
      */
     override fun bucketNamePath(bucketNamePath: String) {
       cdkBuilder.bucketNamePath(bucketNamePath)
+    }
+
+    /**
+     * @param csvDelimiter Delimiter used in a CSV file.
+     */
+    override fun csvDelimiter(csvDelimiter: CsvDelimiter) {
+      cdkBuilder.csvDelimiter(csvDelimiter.let(CsvDelimiter.Companion::unwrap))
     }
 
     /**
@@ -141,6 +161,14 @@ public interface S3CsvItemReaderProps : S3FileItemReaderProps {
      * [Documentation](bucket)
      */
     override fun bucketNamePath(): String? = unwrap(this).getBucketNamePath()
+
+    /**
+     * Delimiter used in a CSV file.
+     *
+     * Default: undefined - Default setting is COMMA.
+     */
+    override fun csvDelimiter(): CsvDelimiter? =
+        unwrap(this).getCsvDelimiter()?.let(CsvDelimiter::wrap)
 
     /**
      * CSV file header configuration.

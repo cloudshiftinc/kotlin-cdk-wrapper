@@ -84,12 +84,12 @@ public open class CfnSoftwarePackage(
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
-   *
+   * A summary of the package being created.
    */
   public open fun description(): String? = unwrap(this).getDescription()
 
   /**
-   *
+   * A summary of the package being created.
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
@@ -105,31 +105,31 @@ public open class CfnSoftwarePackage(
   }
 
   /**
-   *
+   * The name of the new software package.
    */
   public open fun packageName(): String? = unwrap(this).getPackageName()
 
   /**
-   *
+   * The name of the new software package.
    */
   public open fun packageName(`value`: String) {
     unwrap(this).setPackageName(`value`)
   }
 
   /**
-   * An array of key-value pairs to apply to this resource.
+   * Metadata that can be used to manage the package.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * An array of key-value pairs to apply to this resource.
+   * Metadata that can be used to manage the package.
    */
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * An array of key-value pairs to apply to this resource.
+   * Metadata that can be used to manage the package.
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
@@ -139,30 +139,36 @@ public open class CfnSoftwarePackage(
   @CdkDslMarker
   public interface Builder {
     /**
+     * A summary of the package being created.
+     *
+     * This can be used to outline the package's contents or purpose.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackage.html#cfn-iot-softwarepackage-description)
-     * @param description 
+     * @param description A summary of the package being created. 
      */
     public fun description(description: String)
 
     /**
+     * The name of the new software package.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackage.html#cfn-iot-softwarepackage-packagename)
-     * @param packageName 
+     * @param packageName The name of the new software package. 
      */
     public fun packageName(packageName: String)
 
     /**
-     * An array of key-value pairs to apply to this resource.
+     * Metadata that can be used to manage the package.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackage.html#cfn-iot-softwarepackage-tags)
-     * @param tags An array of key-value pairs to apply to this resource. 
+     * @param tags Metadata that can be used to manage the package. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * An array of key-value pairs to apply to this resource.
+     * Metadata that can be used to manage the package.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackage.html#cfn-iot-softwarepackage-tags)
-     * @param tags An array of key-value pairs to apply to this resource. 
+     * @param tags Metadata that can be used to manage the package. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -175,36 +181,42 @@ public open class CfnSoftwarePackage(
         software.amazon.awscdk.services.iot.CfnSoftwarePackage.Builder.create(scope, id)
 
     /**
+     * A summary of the package being created.
+     *
+     * This can be used to outline the package's contents or purpose.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackage.html#cfn-iot-softwarepackage-description)
-     * @param description 
+     * @param description A summary of the package being created. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
+     * The name of the new software package.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackage.html#cfn-iot-softwarepackage-packagename)
-     * @param packageName 
+     * @param packageName The name of the new software package. 
      */
     override fun packageName(packageName: String) {
       cdkBuilder.packageName(packageName)
     }
 
     /**
-     * An array of key-value pairs to apply to this resource.
+     * Metadata that can be used to manage the package.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackage.html#cfn-iot-softwarepackage-tags)
-     * @param tags An array of key-value pairs to apply to this resource. 
+     * @param tags Metadata that can be used to manage the package. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * An array of key-value pairs to apply to this resource.
+     * Metadata that can be used to manage the package.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackage.html#cfn-iot-softwarepackage-tags)
-     * @param tags An array of key-value pairs to apply to this resource. 
+     * @param tags Metadata that can be used to manage the package. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 

@@ -63,6 +63,12 @@ public open class OperatingSystemFamily(
     public val WINDOWS_SERVER_2022_FULL: OperatingSystemFamily =
         OperatingSystemFamily.wrap(software.amazon.awscdk.services.ecs.OperatingSystemFamily.WINDOWS_SERVER_2022_FULL)
 
+    public val WINDOWS_SERVER_2025_CORE: OperatingSystemFamily =
+        OperatingSystemFamily.wrap(software.amazon.awscdk.services.ecs.OperatingSystemFamily.WINDOWS_SERVER_2025_CORE)
+
+    public val WINDOWS_SERVER_2025_FULL: OperatingSystemFamily =
+        OperatingSystemFamily.wrap(software.amazon.awscdk.services.ecs.OperatingSystemFamily.WINDOWS_SERVER_2025_FULL)
+
     public val WINDOWS_SERVER_20_H2_CORE: OperatingSystemFamily =
         OperatingSystemFamily.wrap(software.amazon.awscdk.services.ecs.OperatingSystemFamily.WINDOWS_SERVER_20_H2_CORE)
 

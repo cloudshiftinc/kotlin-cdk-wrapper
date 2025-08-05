@@ -76,7 +76,7 @@ public open class CfnGitHubRepository(
   )
 
   /**
-   *
+   * The repository ID.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 

@@ -171,12 +171,12 @@ public open class CfnLocationFSxONTAP(
   }
 
   /**
-   * Specifies a path to the file share in the SVM where you'll copy your data.
+   * Specifies a path to the file share in the SVM where you want to transfer data to or from.
    */
   public open fun subdirectory(): String? = unwrap(this).getSubdirectory()
 
   /**
-   * Specifies a path to the file share in the SVM where you'll copy your data.
+   * Specifies a path to the file share in the SVM where you want to transfer data to or from.
    */
   public open fun subdirectory(`value`: String) {
     unwrap(this).setSubdirectory(`value`)
@@ -289,7 +289,7 @@ public open class CfnLocationFSxONTAP(
     public fun storageVirtualMachineArn(storageVirtualMachineArn: String)
 
     /**
-     * Specifies a path to the file share in the SVM where you'll copy your data.
+     * Specifies a path to the file share in the SVM where you want to transfer data to or from.
      *
      * You can specify a junction path (also known as a mount point), qtree path (for NFS file
      * shares), or share name (for SMB file shares). For example, your mount path might be `/vol1` ,
@@ -303,8 +303,8 @@ public open class CfnLocationFSxONTAP(
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxontap.html#cfn-datasync-locationfsxontap-subdirectory)
-     * @param subdirectory Specifies a path to the file share in the SVM where you'll copy your
-     * data. 
+     * @param subdirectory Specifies a path to the file share in the SVM where you want to transfer
+     * data to or from. 
      */
     public fun subdirectory(subdirectory: String)
 
@@ -427,7 +427,7 @@ public open class CfnLocationFSxONTAP(
     }
 
     /**
-     * Specifies a path to the file share in the SVM where you'll copy your data.
+     * Specifies a path to the file share in the SVM where you want to transfer data to or from.
      *
      * You can specify a junction path (also known as a mount point), qtree path (for NFS file
      * shares), or share name (for SMB file shares). For example, your mount path might be `/vol1` ,
@@ -441,8 +441,8 @@ public open class CfnLocationFSxONTAP(
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxontap.html#cfn-datasync-locationfsxontap-subdirectory)
-     * @param subdirectory Specifies a path to the file share in the SVM where you'll copy your
-     * data. 
+     * @param subdirectory Specifies a path to the file share in the SVM where you want to transfer
+     * data to or from. 
      */
     override fun subdirectory(subdirectory: String) {
       cdkBuilder.subdirectory(subdirectory)
@@ -971,11 +971,13 @@ public open class CfnLocationFSxONTAP(
    */
   public interface SMBProperty {
     /**
-     * Specifies the fully qualified domain name (FQDN) of the Microsoft Active Directory that your
-     * storage virtual machine (SVM) belongs to.
+     * Specifies the name of the Windows domain that your storage virtual machine (SVM) belongs to.
      *
      * If you have multiple domains in your environment, configuring this setting makes sure that
      * DataSync connects to the right SVM.
+     *
+     * If you have multiple Active Directory domains in your environment, configuring this parameter
+     * makes sure that DataSync connects to the right SVM.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxontap-smb.html#cfn-datasync-locationfsxontap-smb-domain)
      */
@@ -1028,10 +1030,13 @@ public open class CfnLocationFSxONTAP(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param domain Specifies the fully qualified domain name (FQDN) of the Microsoft Active
-       * Directory that your storage virtual machine (SVM) belongs to.
+       * @param domain Specifies the name of the Windows domain that your storage virtual machine
+       * (SVM) belongs to.
        * If you have multiple domains in your environment, configuring this setting makes sure that
        * DataSync connects to the right SVM.
+       *
+       * If you have multiple Active Directory domains in your environment, configuring this
+       * parameter makes sure that DataSync connects to the right SVM.
        */
       public fun domain(domain: String)
 
@@ -1089,10 +1094,13 @@ public open class CfnLocationFSxONTAP(
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.SMBProperty.builder()
 
       /**
-       * @param domain Specifies the fully qualified domain name (FQDN) of the Microsoft Active
-       * Directory that your storage virtual machine (SVM) belongs to.
+       * @param domain Specifies the name of the Windows domain that your storage virtual machine
+       * (SVM) belongs to.
        * If you have multiple domains in your environment, configuring this setting makes sure that
        * DataSync connects to the right SVM.
+       *
+       * If you have multiple Active Directory domains in your environment, configuring this
+       * parameter makes sure that DataSync connects to the right SVM.
        */
       override fun domain(domain: String) {
         cdkBuilder.domain(domain)
@@ -1163,11 +1171,14 @@ public open class CfnLocationFSxONTAP(
     ) : CdkObject(cdkObject),
         SMBProperty {
       /**
-       * Specifies the fully qualified domain name (FQDN) of the Microsoft Active Directory that
-       * your storage virtual machine (SVM) belongs to.
+       * Specifies the name of the Windows domain that your storage virtual machine (SVM) belongs
+       * to.
        *
        * If you have multiple domains in your environment, configuring this setting makes sure that
        * DataSync connects to the right SVM.
+       *
+       * If you have multiple Active Directory domains in your environment, configuring this
+       * parameter makes sure that DataSync connects to the right SVM.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxontap-smb.html#cfn-datasync-locationfsxontap-smb-domain)
        */

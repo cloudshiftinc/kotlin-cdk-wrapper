@@ -444,6 +444,9 @@ public open class NetworkListener(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener.PROPERTY_INJECTION_ID
+
     public fun fromLookup(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

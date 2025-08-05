@@ -40,14 +40,19 @@ public interface CfnUserPoolUICustomizationAttachmentProps {
   public fun clientId(): String
 
   /**
-   * The CSS values in the UI customization.
+   * A plaintext CSS file that contains the custom fields that you want to apply to your user pool
+   * or app client.
+   *
+   * To download a template, go to the Amazon Cognito console. Navigate to your user pool *App
+   * clients* tab, select *Login pages* , edit *Hosted UI (classic) style* , and select the link to
+   * `CSS template.css` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-css)
    */
   public fun css(): String? = unwrap(this).getCss()
 
   /**
-   * The user pool ID for the user pool.
+   * The ID of the user pool where you want to apply branding to the classic hosted UI.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-userpoolid)
    */
@@ -66,12 +71,17 @@ public interface CfnUserPoolUICustomizationAttachmentProps {
     public fun clientId(clientId: String)
 
     /**
-     * @param css The CSS values in the UI customization.
+     * @param css A plaintext CSS file that contains the custom fields that you want to apply to
+     * your user pool or app client.
+     * To download a template, go to the Amazon Cognito console. Navigate to your user pool *App
+     * clients* tab, select *Login pages* , edit *Hosted UI (classic) style* , and select the link to
+     * `CSS template.css` .
      */
     public fun css(css: String)
 
     /**
-     * @param userPoolId The user pool ID for the user pool. 
+     * @param userPoolId The ID of the user pool where you want to apply branding to the classic
+     * hosted UI. 
      */
     public fun userPoolId(userPoolId: String)
   }
@@ -91,14 +101,19 @@ public interface CfnUserPoolUICustomizationAttachmentProps {
     }
 
     /**
-     * @param css The CSS values in the UI customization.
+     * @param css A plaintext CSS file that contains the custom fields that you want to apply to
+     * your user pool or app client.
+     * To download a template, go to the Amazon Cognito console. Navigate to your user pool *App
+     * clients* tab, select *Login pages* , edit *Hosted UI (classic) style* , and select the link to
+     * `CSS template.css` .
      */
     override fun css(css: String) {
       cdkBuilder.css(css)
     }
 
     /**
-     * @param userPoolId The user pool ID for the user pool. 
+     * @param userPoolId The ID of the user pool where you want to apply branding to the classic
+     * hosted UI. 
      */
     override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
@@ -124,14 +139,19 @@ public interface CfnUserPoolUICustomizationAttachmentProps {
     override fun clientId(): String = unwrap(this).getClientId()
 
     /**
-     * The CSS values in the UI customization.
+     * A plaintext CSS file that contains the custom fields that you want to apply to your user pool
+     * or app client.
+     *
+     * To download a template, go to the Amazon Cognito console. Navigate to your user pool *App
+     * clients* tab, select *Login pages* , edit *Hosted UI (classic) style* , and select the link to
+     * `CSS template.css` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-css)
      */
     override fun css(): String? = unwrap(this).getCss()
 
     /**
-     * The user pool ID for the user pool.
+     * The ID of the user pool where you want to apply branding to the classic hosted UI.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-userpoolid)
      */

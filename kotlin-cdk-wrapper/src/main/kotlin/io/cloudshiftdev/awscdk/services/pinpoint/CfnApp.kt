@@ -25,14 +25,18 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.pinpoint.*;
- * Object tags;
- * CfnApp cfnApp = CfnApp.Builder.create(this, "MyCfnApp")
- * .name("name")
- * // the properties below are optional
- * .tags(tags)
+ * UserPool userPool;
+ * CfnApp pinpointApp;
+ * Role pinpointRole;
+ * UserPoolClient.Builder.create(this, "Client")
+ * .userPool(userPool)
+ * .analytics(AnalyticsConfiguration.builder()
+ * // Your Pinpoint project
+ * .application(pinpointApp)
+ * // Whether to include user data in analytics events
+ * .shareUserData(true)
+ * .build())
  * .build();
  * ```
  *

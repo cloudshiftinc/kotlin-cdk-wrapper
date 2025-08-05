@@ -428,6 +428,10 @@ public open class CfnEventInvokeConfig(
   /**
    * A configuration object that specifies the destination of an event after Lambda processes it.
    *
+   * For more information, see [Adding a
+   * destination](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async-retain-records.html#invocation-async-destinations)
+   * .
+   *
    * Example:
    *
    * ```
@@ -450,12 +454,20 @@ public open class CfnEventInvokeConfig(
     /**
      * The destination configuration for failed invocations.
      *
+     *
+     * When using an Amazon SQS queue as a destination, FIFO queues cannot be used.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventinvokeconfig-destinationconfig.html#cfn-lambda-eventinvokeconfig-destinationconfig-onfailure)
      */
     public fun onFailure(): Any? = unwrap(this).getOnFailure()
 
     /**
      * The destination configuration for successful invocations.
+     *
+     *
+     * When using an Amazon SQS queue as a destination, FIFO queues cannot be used.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventinvokeconfig-destinationconfig.html#cfn-lambda-eventinvokeconfig-destinationconfig-onsuccess)
      */
@@ -468,16 +480,22 @@ public open class CfnEventInvokeConfig(
     public interface Builder {
       /**
        * @param onFailure The destination configuration for failed invocations.
+       *
+       * When using an Amazon SQS queue as a destination, FIFO queues cannot be used.
        */
       public fun onFailure(onFailure: IResolvable)
 
       /**
        * @param onFailure The destination configuration for failed invocations.
+       *
+       * When using an Amazon SQS queue as a destination, FIFO queues cannot be used.
        */
       public fun onFailure(onFailure: OnFailureProperty)
 
       /**
        * @param onFailure The destination configuration for failed invocations.
+       *
+       * When using an Amazon SQS queue as a destination, FIFO queues cannot be used.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3dbdff09ea3f6ad25eed2fd3d1089285979e928fe6db4b712232e789e38d983e")
@@ -485,16 +503,22 @@ public open class CfnEventInvokeConfig(
 
       /**
        * @param onSuccess The destination configuration for successful invocations.
+       *
+       * When using an Amazon SQS queue as a destination, FIFO queues cannot be used.
        */
       public fun onSuccess(onSuccess: IResolvable)
 
       /**
        * @param onSuccess The destination configuration for successful invocations.
+       *
+       * When using an Amazon SQS queue as a destination, FIFO queues cannot be used.
        */
       public fun onSuccess(onSuccess: OnSuccessProperty)
 
       /**
        * @param onSuccess The destination configuration for successful invocations.
+       *
+       * When using an Amazon SQS queue as a destination, FIFO queues cannot be used.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28faf1b795b060a72e364409fac9a5a0f08d96ec620d72677131ccf7b582231f")
@@ -509,6 +533,8 @@ public open class CfnEventInvokeConfig(
 
       /**
        * @param onFailure The destination configuration for failed invocations.
+       *
+       * When using an Amazon SQS queue as a destination, FIFO queues cannot be used.
        */
       override fun onFailure(onFailure: IResolvable) {
         cdkBuilder.onFailure(onFailure.let(IResolvable.Companion::unwrap))
@@ -516,6 +542,8 @@ public open class CfnEventInvokeConfig(
 
       /**
        * @param onFailure The destination configuration for failed invocations.
+       *
+       * When using an Amazon SQS queue as a destination, FIFO queues cannot be used.
        */
       override fun onFailure(onFailure: OnFailureProperty) {
         cdkBuilder.onFailure(onFailure.let(OnFailureProperty.Companion::unwrap))
@@ -523,6 +551,8 @@ public open class CfnEventInvokeConfig(
 
       /**
        * @param onFailure The destination configuration for failed invocations.
+       *
+       * When using an Amazon SQS queue as a destination, FIFO queues cannot be used.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3dbdff09ea3f6ad25eed2fd3d1089285979e928fe6db4b712232e789e38d983e")
@@ -531,6 +561,8 @@ public open class CfnEventInvokeConfig(
 
       /**
        * @param onSuccess The destination configuration for successful invocations.
+       *
+       * When using an Amazon SQS queue as a destination, FIFO queues cannot be used.
        */
       override fun onSuccess(onSuccess: IResolvable) {
         cdkBuilder.onSuccess(onSuccess.let(IResolvable.Companion::unwrap))
@@ -538,6 +570,8 @@ public open class CfnEventInvokeConfig(
 
       /**
        * @param onSuccess The destination configuration for successful invocations.
+       *
+       * When using an Amazon SQS queue as a destination, FIFO queues cannot be used.
        */
       override fun onSuccess(onSuccess: OnSuccessProperty) {
         cdkBuilder.onSuccess(onSuccess.let(OnSuccessProperty.Companion::unwrap))
@@ -545,6 +579,8 @@ public open class CfnEventInvokeConfig(
 
       /**
        * @param onSuccess The destination configuration for successful invocations.
+       *
+       * When using an Amazon SQS queue as a destination, FIFO queues cannot be used.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28faf1b795b060a72e364409fac9a5a0f08d96ec620d72677131ccf7b582231f")
@@ -563,12 +599,20 @@ public open class CfnEventInvokeConfig(
       /**
        * The destination configuration for failed invocations.
        *
+       *
+       * When using an Amazon SQS queue as a destination, FIFO queues cannot be used.
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventinvokeconfig-destinationconfig.html#cfn-lambda-eventinvokeconfig-destinationconfig-onfailure)
        */
       override fun onFailure(): Any? = unwrap(this).getOnFailure()
 
       /**
        * The destination configuration for successful invocations.
+       *
+       *
+       * When using an Amazon SQS queue as a destination, FIFO queues cannot be used.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventinvokeconfig-destinationconfig.html#cfn-lambda-eventinvokeconfig-destinationconfig-onsuccess)
        */
@@ -595,6 +639,10 @@ public open class CfnEventInvokeConfig(
 
   /**
    * A destination for events that failed processing.
+   *
+   * For more information, see [Adding a
+   * destination](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async-retain-records.html#invocation-async-destinations)
+   * .
    *
    * Example:
    *
@@ -736,6 +784,11 @@ public open class CfnEventInvokeConfig(
    * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
    * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon EventBridge
    * event bus as the destination.
+   *
+   *
+   * `OnSuccess` is not supported in `CreateEventSourceMapping` or `UpdateEventSourceMapping`
+   * requests.
+   *
    *
    * Example:
    *

@@ -1997,12 +1997,12 @@ public open class CfnEntity(
       /**
        * @param configuration The configuration.
        */
-      public fun configuration(configuration: IResolvable)
+      public fun configuration(configuration: Map<String, String>)
 
       /**
        * @param configuration The configuration.
        */
-      public fun configuration(configuration: Map<String, String>)
+      public fun configuration(configuration: IResolvable)
 
       /**
        * @param dataType The data type.
@@ -2117,15 +2117,15 @@ public open class CfnEntity(
       /**
        * @param configuration The configuration.
        */
-      override fun configuration(configuration: IResolvable) {
-        cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
+      override fun configuration(configuration: Map<String, String>) {
+        cdkBuilder.configuration(configuration)
       }
 
       /**
        * @param configuration The configuration.
        */
-      override fun configuration(configuration: Map<String, String>) {
-        cdkBuilder.configuration(configuration)
+      override fun configuration(configuration: IResolvable) {
+        cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
       }
 
       /**

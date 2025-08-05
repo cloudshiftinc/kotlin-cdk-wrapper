@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudfront.IOrigin
+import io.cloudshiftdev.awscdk.services.cloudfront.OriginSelectionCriteria
 import kotlin.Number
 import kotlin.Unit
 import kotlin.collections.List
@@ -50,6 +51,16 @@ public interface OriginGroupProps {
   public fun primaryOrigin(): IOrigin
 
   /**
+   * The selection criteria for the origin group.
+   *
+   * Default: - OriginSelectionCriteria.DEFAULT
+   *
+   * [Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html#concept_origin_groups.creating)
+   */
+  public fun selectionCriteria(): OriginSelectionCriteria? =
+      unwrap(this).getSelectionCriteria()?.let(OriginSelectionCriteria::wrap)
+
+  /**
    * A builder for [OriginGroupProps]
    */
   @CdkDslMarker
@@ -75,6 +86,11 @@ public interface OriginGroupProps {
      * @param primaryOrigin The primary origin that should serve requests for this group. 
      */
     public fun primaryOrigin(primaryOrigin: IOrigin)
+
+    /**
+     * @param selectionCriteria The selection criteria for the origin group.
+     */
+    public fun selectionCriteria(selectionCriteria: OriginSelectionCriteria)
   }
 
   private class BuilderImpl : Builder {
@@ -111,6 +127,13 @@ public interface OriginGroupProps {
       cdkBuilder.primaryOrigin(primaryOrigin.let(IOrigin.Companion::unwrap))
     }
 
+    /**
+     * @param selectionCriteria The selection criteria for the origin group.
+     */
+    override fun selectionCriteria(selectionCriteria: OriginSelectionCriteria) {
+      cdkBuilder.selectionCriteria(selectionCriteria.let(OriginSelectionCriteria.Companion::unwrap))
+    }
+
     public fun build(): software.amazon.awscdk.services.cloudfront.origins.OriginGroupProps =
         cdkBuilder.build()
   }
@@ -137,6 +160,16 @@ public interface OriginGroupProps {
      * The primary origin that should serve requests for this group.
      */
     override fun primaryOrigin(): IOrigin = unwrap(this).getPrimaryOrigin().let(IOrigin::wrap)
+
+    /**
+     * The selection criteria for the origin group.
+     *
+     * Default: - OriginSelectionCriteria.DEFAULT
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html#concept_origin_groups.creating)
+     */
+    override fun selectionCriteria(): OriginSelectionCriteria? =
+        unwrap(this).getSelectionCriteria()?.let(OriginSelectionCriteria::wrap)
   }
 
   public companion object {

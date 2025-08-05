@@ -123,9 +123,9 @@ public interface CfnVPNConnectionProps {
   public fun localIpv6NetworkCidr(): String? = unwrap(this).getLocalIpv6NetworkCidr()
 
   /**
-   * The type of IPv4 address assigned to the outside interface of the customer gateway device.
+   * The type of IP address assigned to the outside interface of the customer gateway device.
    *
-   * Valid values: `PrivateIpv4` | `PublicIpv4`
+   * Valid values: `PrivateIpv4` | `PublicIpv4` | `Ipv6`
    *
    * Default: `PublicIpv4`
    *
@@ -259,9 +259,9 @@ public interface CfnVPNConnectionProps {
     public fun localIpv6NetworkCidr(localIpv6NetworkCidr: String)
 
     /**
-     * @param outsideIpAddressType The type of IPv4 address assigned to the outside interface of the
+     * @param outsideIpAddressType The type of IP address assigned to the outside interface of the
      * customer gateway device.
-     * Valid values: `PrivateIpv4` | `PublicIpv4`
+     * Valid values: `PrivateIpv4` | `PublicIpv4` | `Ipv6`
      *
      * Default: `PublicIpv4`
      */
@@ -400,9 +400,9 @@ public interface CfnVPNConnectionProps {
     }
 
     /**
-     * @param outsideIpAddressType The type of IPv4 address assigned to the outside interface of the
+     * @param outsideIpAddressType The type of IP address assigned to the outside interface of the
      * customer gateway device.
-     * Valid values: `PrivateIpv4` | `PublicIpv4`
+     * Valid values: `PrivateIpv4` | `PublicIpv4` | `Ipv6`
      *
      * Default: `PublicIpv4`
      */
@@ -564,9 +564,9 @@ public interface CfnVPNConnectionProps {
     override fun localIpv6NetworkCidr(): String? = unwrap(this).getLocalIpv6NetworkCidr()
 
     /**
-     * The type of IPv4 address assigned to the outside interface of the customer gateway device.
+     * The type of IP address assigned to the outside interface of the customer gateway device.
      *
-     * Valid values: `PrivateIpv4` | `PublicIpv4`
+     * Valid values: `PrivateIpv4` | `PublicIpv4` | `Ipv6`
      *
      * Default: `PublicIpv4`
      *

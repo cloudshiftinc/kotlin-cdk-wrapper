@@ -37,6 +37,7 @@ import kotlin.jvm.JvmName
  * .backupRetentionPeriod(123)
  * .clusterScalabilityType("clusterScalabilityType")
  * .copyTagsToSnapshot(false)
+ * .databaseInsightsMode("databaseInsightsMode")
  * .databaseName("databaseName")
  * .dbClusterIdentifier("dbClusterIdentifier")
  * .dbClusterInstanceClass("dbClusterInstanceClass")
@@ -44,6 +45,7 @@ import kotlin.jvm.JvmName
  * .dbInstanceParameterGroupName("dbInstanceParameterGroupName")
  * .dbSubnetGroupName("dbSubnetGroupName")
  * .dbSystemId("dbSystemId")
+ * .deleteAutomatedBackups(false)
  * .deletionProtection(false)
  * .domain("domain")
  * .domainIamRoleName("domainIamRoleName")
@@ -90,6 +92,7 @@ import kotlin.jvm.JvmName
  * .serverlessV2ScalingConfiguration(ServerlessV2ScalingConfigurationProperty.builder()
  * .maxCapacity(123)
  * .minCapacity(123)
+ * .secondsUntilAutoPause(123)
  * .build())
  * .snapshotIdentifier("snapshotIdentifier")
  * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
@@ -139,7 +142,12 @@ public interface CfnDBClusterProps {
    *
    * By default, minor engine upgrades are applied automatically.
    *
-   * Valid for Cluster Type: Multi-AZ DB clusters only
+   * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB cluster.
+   *
+   * For more information about automatic minor version upgrades, see [Automatically upgrading the
+   * minor engine
+   * version](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades)
+   * .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-autominorversionupgrade)
    */
@@ -198,6 +206,10 @@ public interface CfnDBClusterProps {
    * create a DB shard group for horizontal scaling (sharding) capabilities. When set to `standard`
    * (the default), the cluster uses normal DB instance creation.
    *
+   * *Important:* Automated backup retention isn't supported with Aurora Limitless Database
+   * clusters. If you set this property to `limitless` , you cannot set `DeleteAutomatedBackups` to
+   * `false` . To create a backup, use manual snapshots instead.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-clusterscalabilitytype)
    */
   public fun clusterScalabilityType(): String? = unwrap(this).getClusterScalabilityType()
@@ -213,6 +225,18 @@ public interface CfnDBClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-copytagstosnapshot)
    */
   public fun copyTagsToSnapshot(): Any? = unwrap(this).getCopyTagsToSnapshot()
+
+  /**
+   * The mode of Database Insights to enable for the DB cluster.
+   *
+   * If you set this value to `advanced` , you must also set the `PerformanceInsightsEnabled`
+   * parameter to `true` and the `PerformanceInsightsRetentionPeriod` parameter to 465.
+   *
+   * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-databaseinsightsmode)
+   */
+  public fun databaseInsightsMode(): String? = unwrap(this).getDatabaseInsightsMode()
 
   /**
    * The name of your database.
@@ -329,6 +353,17 @@ public interface CfnDBClusterProps {
   public fun dbSystemId(): String? = unwrap(this).getDbSystemId()
 
   /**
+   * Specifies whether to remove automated backups immediately after the DB cluster is deleted.
+   *
+   * This parameter isn't case-sensitive. The default is to remove automated backups immediately
+   * after the DB cluster is deleted, unless the AWS Backup policy specifies a point-in-time restore
+   * rule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-deleteautomatedbackups)
+   */
+  public fun deleteAutomatedBackups(): Any? = unwrap(this).getDeleteAutomatedBackups()
+
+  /**
    * A value that indicates whether the DB cluster has deletion protection enabled.
    *
    * The database can't be deleted when deletion protection is enabled. By default, deletion
@@ -415,11 +450,6 @@ public interface CfnDBClusterProps {
    * running SQL queries on the DB cluster. You can also query your database from inside the RDS
    * console with the RDS query editor.
    *
-   * RDS Data API is supported with the following DB clusters:
-   *
-   * * Aurora PostgreSQL Serverless v2 and provisioned
-   * * Aurora PostgreSQL and Aurora MySQL Serverless v1
-   *
    * For more information, see [Using RDS Data
    * API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon
    * Aurora User Guide* .
@@ -490,12 +520,12 @@ public interface CfnDBClusterProps {
    * Extended Support, you can run the selected major engine version on your DB cluster past the end of
    * standard support for that engine version. For more information, see the following sections:
    *
-   * * Amazon Aurora - [Using Amazon RDS Extended
-   * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
-   * the *Amazon Aurora User Guide*
-   * * Amazon RDS - [Using Amazon RDS Extended
-   * Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
-   * *Amazon RDS User Guide*
+   * * Amazon Aurora - [Amazon RDS Extended Support with Amazon
+   * Aurora](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in the
+   * *Amazon Aurora User Guide*
+   * * Amazon RDS - [Amazon RDS Extended Support with Amazon
+   * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the *Amazon
+   * RDS User Guide*
    *
    * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
    *
@@ -691,6 +721,14 @@ public interface CfnDBClusterProps {
   /**
    * The secret managed by RDS in AWS Secrets Manager for the master user password.
    *
+   *
+   * When you restore a DB cluster from a snapshot, Amazon RDS generates a new secret instead of
+   * reusing the secret specified in the `SecretArn` property. This ensures that the restored DB
+   * cluster is securely managed with a dedicated secret. To maintain consistent integration with your
+   * application, you might need to update resource configurations to reference the newly created
+   * secret.
+   *
+   *
    * For more information, see [Password management with AWS Secrets
    * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the
    * *Amazon RDS User Guide* and [Password management with AWS Secrets
@@ -725,7 +763,7 @@ public interface CfnDBClusterProps {
    *
    * If `MonitoringRoleArn` is specified, also set `MonitoringInterval` to a value other than `0` .
    *
-   * Valid for Cluster Type: Multi-AZ DB clusters only
+   * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
    *
    * Valid Values: `0 | 1 | 5 | 10 | 15 | 30 | 60`
    *
@@ -746,7 +784,7 @@ public interface CfnDBClusterProps {
    *
    * If `MonitoringInterval` is set to a value other than `0` , supply a `MonitoringRoleArn` value.
    *
-   * Valid for Cluster Type: Multi-AZ DB clusters only
+   * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-monitoringrolearn)
    */
@@ -780,7 +818,7 @@ public interface CfnDBClusterProps {
    * Insights](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html) in the
    * *Amazon RDS User Guide* .
    *
-   * Valid for Cluster Type: Multi-AZ DB clusters only
+   * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-performanceinsightsenabled)
    */
@@ -795,7 +833,7 @@ public interface CfnDBClusterProps {
    * default KMS key. There is a default KMS key for your AWS account . Your AWS account has a
    * different default KMS key for each AWS Region .
    *
-   * Valid for Cluster Type: Multi-AZ DB clusters only
+   * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-performanceinsightskmskeyid)
    */
@@ -804,7 +842,10 @@ public interface CfnDBClusterProps {
   /**
    * The number of days to retain Performance Insights data.
    *
-   * Valid for Cluster Type: Multi-AZ DB clusters only
+   * When creating a DB cluster without enabling Performance Insights, you can't specify the
+   * parameter `PerformanceInsightsRetentionPeriod` .
+   *
+   * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
    *
    * Valid Values:
    *
@@ -872,9 +913,9 @@ public interface CfnDBClusterProps {
    * Format: `ddd:hh24:mi-ddd:hh24:mi`
    *
    * The default is a 30-minute window selected at random from an 8-hour block of time for each AWS
-   * Region, occurring on a random day of the week. To see the time blocks available, see [Adjusting
-   * the Preferred DB Cluster Maintenance
-   * Window](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora)
+   * Region, occurring on a random day of the week. To see the time blocks available, see [Maintaining
+   * an Amazon Aurora DB
+   * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora)
    * in the *Amazon Aurora User Guide.*
    *
    * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -1041,6 +1082,8 @@ public interface CfnDBClusterProps {
    * Constraints:
    *
    * * Must match the identifier of an existing DBCluster.
+   * * Cannot be specified if `SourceDbClusterResourceId` is specified. You must specify either
+   * `SourceDBClusterIdentifier` or `SourceDbClusterResourceId` , but not both.
    *
    * Valid for: Aurora DB clusters and Multi-AZ DB clusters
    *
@@ -1205,7 +1248,12 @@ public interface CfnDBClusterProps {
      * automatically to the DB cluster during the maintenance window.
      * By default, minor engine upgrades are applied automatically.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB cluster.
+     *
+     * For more information about automatic minor version upgrades, see [Automatically upgrading the
+     * minor engine
+     * version](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades)
+     * .
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
@@ -1214,7 +1262,12 @@ public interface CfnDBClusterProps {
      * automatically to the DB cluster during the maintenance window.
      * By default, minor engine upgrades are applied automatically.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB cluster.
+     *
+     * For more information about automatic minor version upgrades, see [Automatically upgrading the
+     * minor engine
+     * version](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades)
+     * .
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
 
@@ -1272,6 +1325,10 @@ public interface CfnDBClusterProps {
      * When set to `limitless` , the cluster operates as an Aurora Limitless Database, allowing you
      * to create a DB shard group for horizontal scaling (sharding) capabilities. When set to
      * `standard` (the default), the cluster uses normal DB instance creation.
+     *
+     * *Important:* Automated backup retention isn't supported with Aurora Limitless Database
+     * clusters. If you set this property to `limitless` , you cannot set `DeleteAutomatedBackups` to
+     * `false` . To create a backup, use manual snapshots instead.
      */
     public fun clusterScalabilityType(clusterScalabilityType: String)
 
@@ -1292,6 +1349,15 @@ public interface CfnDBClusterProps {
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
     public fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable)
+
+    /**
+     * @param databaseInsightsMode The mode of Database Insights to enable for the DB cluster.
+     * If you set this value to `advanced` , you must also set the `PerformanceInsightsEnabled`
+     * parameter to `true` and the `PerformanceInsightsRetentionPeriod` parameter to 465.
+     *
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
+     */
+    public fun databaseInsightsMode(databaseInsightsMode: String)
 
     /**
      * @param databaseName The name of your database.
@@ -1388,6 +1454,24 @@ public interface CfnDBClusterProps {
      * @param dbSystemId Reserved for future use.
      */
     public fun dbSystemId(dbSystemId: String)
+
+    /**
+     * @param deleteAutomatedBackups Specifies whether to remove automated backups immediately after
+     * the DB cluster is deleted.
+     * This parameter isn't case-sensitive. The default is to remove automated backups immediately
+     * after the DB cluster is deleted, unless the AWS Backup policy specifies a point-in-time restore
+     * rule.
+     */
+    public fun deleteAutomatedBackups(deleteAutomatedBackups: Boolean)
+
+    /**
+     * @param deleteAutomatedBackups Specifies whether to remove automated backups immediately after
+     * the DB cluster is deleted.
+     * This parameter isn't case-sensitive. The default is to remove automated backups immediately
+     * after the DB cluster is deleted, unless the AWS Backup policy specifies a point-in-time restore
+     * rule.
+     */
+    public fun deleteAutomatedBackups(deleteAutomatedBackups: IResolvable)
 
     /**
      * @param deletionProtection A value that indicates whether the DB cluster has deletion
@@ -1508,11 +1592,6 @@ public interface CfnDBClusterProps {
      * running SQL queries on the DB cluster. You can also query your database from inside the RDS
      * console with the RDS query editor.
      *
-     * RDS Data API is supported with the following DB clusters:
-     *
-     * * Aurora PostgreSQL Serverless v2 and provisioned
-     * * Aurora PostgreSQL and Aurora MySQL Serverless v1
-     *
      * For more information, see [Using RDS Data
      * API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon
      * Aurora User Guide* .
@@ -1527,11 +1606,6 @@ public interface CfnDBClusterProps {
      * When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for
      * running SQL queries on the DB cluster. You can also query your database from inside the RDS
      * console with the RDS query editor.
-     *
-     * RDS Data API is supported with the following DB clusters:
-     *
-     * * Aurora PostgreSQL Serverless v2 and provisioned
-     * * Aurora PostgreSQL and Aurora MySQL Serverless v1
      *
      * For more information, see [Using RDS Data
      * API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon
@@ -1612,11 +1686,11 @@ public interface CfnDBClusterProps {
      * Extended Support, you can run the selected major engine version on your DB cluster past the end
      * of standard support for that engine version. For more information, see the following sections:
      *
-     * * Amazon Aurora - [Using Amazon RDS Extended
-     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+     * * Amazon Aurora - [Amazon RDS Extended Support with Amazon
+     * Aurora](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
      * the *Amazon Aurora User Guide*
-     * * Amazon RDS - [Using Amazon RDS Extended
-     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
+     * * Amazon RDS - [Amazon RDS Extended Support with Amazon
+     * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
      * *Amazon RDS User Guide*
      *
      * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
@@ -1813,6 +1887,14 @@ public interface CfnDBClusterProps {
     /**
      * @param masterUserSecret The secret managed by RDS in AWS Secrets Manager for the master user
      * password.
+     *
+     * When you restore a DB cluster from a snapshot, Amazon RDS generates a new secret instead of
+     * reusing the secret specified in the `SecretArn` property. This ensures that the restored DB
+     * cluster is securely managed with a dedicated secret. To maintain consistent integration with
+     * your application, you might need to update resource configurations to reference the newly
+     * created secret.
+     *
+     *
      * For more information, see [Password management with AWS Secrets
      * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the
      * *Amazon RDS User Guide* and [Password management with AWS Secrets
@@ -1824,6 +1906,14 @@ public interface CfnDBClusterProps {
     /**
      * @param masterUserSecret The secret managed by RDS in AWS Secrets Manager for the master user
      * password.
+     *
+     * When you restore a DB cluster from a snapshot, Amazon RDS generates a new secret instead of
+     * reusing the secret specified in the `SecretArn` property. This ensures that the restored DB
+     * cluster is securely managed with a dedicated secret. To maintain consistent integration with
+     * your application, you might need to update resource configurations to reference the newly
+     * created secret.
+     *
+     *
      * For more information, see [Password management with AWS Secrets
      * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the
      * *Amazon RDS User Guide* and [Password management with AWS Secrets
@@ -1835,6 +1925,14 @@ public interface CfnDBClusterProps {
     /**
      * @param masterUserSecret The secret managed by RDS in AWS Secrets Manager for the master user
      * password.
+     *
+     * When you restore a DB cluster from a snapshot, Amazon RDS generates a new secret instead of
+     * reusing the secret specified in the `SecretArn` property. This ensures that the restored DB
+     * cluster is securely managed with a dedicated secret. To maintain consistent integration with
+     * your application, you might need to update resource configurations to reference the newly
+     * created secret.
+     *
+     *
      * For more information, see [Password management with AWS Secrets
      * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the
      * *Amazon RDS User Guide* and [Password management with AWS Secrets
@@ -1867,7 +1965,7 @@ public interface CfnDBClusterProps {
      * If `MonitoringRoleArn` is specified, also set `MonitoringInterval` to a value other than `0`
      * .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * Valid Values: `0 | 1 | 5 | 10 | 15 | 30 | 60`
      *
@@ -1886,7 +1984,7 @@ public interface CfnDBClusterProps {
      * If `MonitoringInterval` is set to a value other than `0` , supply a `MonitoringRoleArn`
      * value.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      */
     public fun monitoringRoleArn(monitoringRoleArn: String)
 
@@ -1915,7 +2013,7 @@ public interface CfnDBClusterProps {
      * Insights](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html) in the
      * *Amazon RDS User Guide* .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      */
     public fun performanceInsightsEnabled(performanceInsightsEnabled: Boolean)
 
@@ -1926,7 +2024,7 @@ public interface CfnDBClusterProps {
      * Insights](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html) in the
      * *Amazon RDS User Guide* .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      */
     public fun performanceInsightsEnabled(performanceInsightsEnabled: IResolvable)
 
@@ -1939,14 +2037,17 @@ public interface CfnDBClusterProps {
      * default KMS key. There is a default KMS key for your AWS account . Your AWS account has a
      * different default KMS key for each AWS Region .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      */
     public fun performanceInsightsKmsKeyId(performanceInsightsKmsKeyId: String)
 
     /**
      * @param performanceInsightsRetentionPeriod The number of days to retain Performance Insights
      * data.
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * When creating a DB cluster without enabling Performance Insights, you can't specify the
+     * parameter `PerformanceInsightsRetentionPeriod` .
+     *
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * Valid Values:
      *
@@ -2006,8 +2107,8 @@ public interface CfnDBClusterProps {
      *
      * The default is a 30-minute window selected at random from an 8-hour block of time for each
      * AWS Region, occurring on a random day of the week. To see the time blocks available, see
-     * [Adjusting the Preferred DB Cluster Maintenance
-     * Window](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora)
+     * [Maintaining an Amazon Aurora DB
+     * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora)
      * in the *Amazon Aurora User Guide.*
      *
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -2232,6 +2333,8 @@ public interface CfnDBClusterProps {
      * Constraints:
      *
      * * Must match the identifier of an existing DBCluster.
+     * * Cannot be specified if `SourceDbClusterResourceId` is specified. You must specify either
+     * `SourceDBClusterIdentifier` or `SourceDbClusterResourceId` , but not both.
      *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
@@ -2435,7 +2538,12 @@ public interface CfnDBClusterProps {
      * automatically to the DB cluster during the maintenance window.
      * By default, minor engine upgrades are applied automatically.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB cluster.
+     *
+     * For more information about automatic minor version upgrades, see [Automatically upgrading the
+     * minor engine
+     * version](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades)
+     * .
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
@@ -2446,7 +2554,12 @@ public interface CfnDBClusterProps {
      * automatically to the DB cluster during the maintenance window.
      * By default, minor engine upgrades are applied automatically.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB cluster.
+     *
+     * For more information about automatic minor version upgrades, see [Automatically upgrading the
+     * minor engine
+     * version](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades)
+     * .
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
@@ -2513,6 +2626,10 @@ public interface CfnDBClusterProps {
      * When set to `limitless` , the cluster operates as an Aurora Limitless Database, allowing you
      * to create a DB shard group for horizontal scaling (sharding) capabilities. When set to
      * `standard` (the default), the cluster uses normal DB instance creation.
+     *
+     * *Important:* Automated backup retention isn't supported with Aurora Limitless Database
+     * clusters. If you set this property to `limitless` , you cannot set `DeleteAutomatedBackups` to
+     * `false` . To create a backup, use manual snapshots instead.
      */
     override fun clusterScalabilityType(clusterScalabilityType: String) {
       cdkBuilder.clusterScalabilityType(clusterScalabilityType)
@@ -2538,6 +2655,17 @@ public interface CfnDBClusterProps {
      */
     override fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
       cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param databaseInsightsMode The mode of Database Insights to enable for the DB cluster.
+     * If you set this value to `advanced` , you must also set the `PerformanceInsightsEnabled`
+     * parameter to `true` and the `PerformanceInsightsRetentionPeriod` parameter to 465.
+     *
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
+     */
+    override fun databaseInsightsMode(databaseInsightsMode: String) {
+      cdkBuilder.databaseInsightsMode(databaseInsightsMode)
     }
 
     /**
@@ -2648,6 +2776,28 @@ public interface CfnDBClusterProps {
      */
     override fun dbSystemId(dbSystemId: String) {
       cdkBuilder.dbSystemId(dbSystemId)
+    }
+
+    /**
+     * @param deleteAutomatedBackups Specifies whether to remove automated backups immediately after
+     * the DB cluster is deleted.
+     * This parameter isn't case-sensitive. The default is to remove automated backups immediately
+     * after the DB cluster is deleted, unless the AWS Backup policy specifies a point-in-time restore
+     * rule.
+     */
+    override fun deleteAutomatedBackups(deleteAutomatedBackups: Boolean) {
+      cdkBuilder.deleteAutomatedBackups(deleteAutomatedBackups)
+    }
+
+    /**
+     * @param deleteAutomatedBackups Specifies whether to remove automated backups immediately after
+     * the DB cluster is deleted.
+     * This parameter isn't case-sensitive. The default is to remove automated backups immediately
+     * after the DB cluster is deleted, unless the AWS Backup policy specifies a point-in-time restore
+     * rule.
+     */
+    override fun deleteAutomatedBackups(deleteAutomatedBackups: IResolvable) {
+      cdkBuilder.deleteAutomatedBackups(deleteAutomatedBackups.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2784,11 +2934,6 @@ public interface CfnDBClusterProps {
      * running SQL queries on the DB cluster. You can also query your database from inside the RDS
      * console with the RDS query editor.
      *
-     * RDS Data API is supported with the following DB clusters:
-     *
-     * * Aurora PostgreSQL Serverless v2 and provisioned
-     * * Aurora PostgreSQL and Aurora MySQL Serverless v1
-     *
      * For more information, see [Using RDS Data
      * API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon
      * Aurora User Guide* .
@@ -2805,11 +2950,6 @@ public interface CfnDBClusterProps {
      * When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for
      * running SQL queries on the DB cluster. You can also query your database from inside the RDS
      * console with the RDS query editor.
-     *
-     * RDS Data API is supported with the following DB clusters:
-     *
-     * * Aurora PostgreSQL Serverless v2 and provisioned
-     * * Aurora PostgreSQL and Aurora MySQL Serverless v1
      *
      * For more information, see [Using RDS Data
      * API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon
@@ -2902,11 +3042,11 @@ public interface CfnDBClusterProps {
      * Extended Support, you can run the selected major engine version on your DB cluster past the end
      * of standard support for that engine version. For more information, see the following sections:
      *
-     * * Amazon Aurora - [Using Amazon RDS Extended
-     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+     * * Amazon Aurora - [Amazon RDS Extended Support with Amazon
+     * Aurora](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
      * the *Amazon Aurora User Guide*
-     * * Amazon RDS - [Using Amazon RDS Extended
-     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
+     * * Amazon RDS - [Amazon RDS Extended Support with Amazon
+     * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
      * *Amazon RDS User Guide*
      *
      * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
@@ -3121,6 +3261,14 @@ public interface CfnDBClusterProps {
     /**
      * @param masterUserSecret The secret managed by RDS in AWS Secrets Manager for the master user
      * password.
+     *
+     * When you restore a DB cluster from a snapshot, Amazon RDS generates a new secret instead of
+     * reusing the secret specified in the `SecretArn` property. This ensures that the restored DB
+     * cluster is securely managed with a dedicated secret. To maintain consistent integration with
+     * your application, you might need to update resource configurations to reference the newly
+     * created secret.
+     *
+     *
      * For more information, see [Password management with AWS Secrets
      * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the
      * *Amazon RDS User Guide* and [Password management with AWS Secrets
@@ -3134,6 +3282,14 @@ public interface CfnDBClusterProps {
     /**
      * @param masterUserSecret The secret managed by RDS in AWS Secrets Manager for the master user
      * password.
+     *
+     * When you restore a DB cluster from a snapshot, Amazon RDS generates a new secret instead of
+     * reusing the secret specified in the `SecretArn` property. This ensures that the restored DB
+     * cluster is securely managed with a dedicated secret. To maintain consistent integration with
+     * your application, you might need to update resource configurations to reference the newly
+     * created secret.
+     *
+     *
      * For more information, see [Password management with AWS Secrets
      * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the
      * *Amazon RDS User Guide* and [Password management with AWS Secrets
@@ -3147,6 +3303,14 @@ public interface CfnDBClusterProps {
     /**
      * @param masterUserSecret The secret managed by RDS in AWS Secrets Manager for the master user
      * password.
+     *
+     * When you restore a DB cluster from a snapshot, Amazon RDS generates a new secret instead of
+     * reusing the secret specified in the `SecretArn` property. This ensures that the restored DB
+     * cluster is securely managed with a dedicated secret. To maintain consistent integration with
+     * your application, you might need to update resource configurations to reference the newly
+     * created secret.
+     *
+     *
      * For more information, see [Password management with AWS Secrets
      * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the
      * *Amazon RDS User Guide* and [Password management with AWS Secrets
@@ -3182,7 +3346,7 @@ public interface CfnDBClusterProps {
      * If `MonitoringRoleArn` is specified, also set `MonitoringInterval` to a value other than `0`
      * .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * Valid Values: `0 | 1 | 5 | 10 | 15 | 30 | 60`
      *
@@ -3203,7 +3367,7 @@ public interface CfnDBClusterProps {
      * If `MonitoringInterval` is set to a value other than `0` , supply a `MonitoringRoleArn`
      * value.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      */
     override fun monitoringRoleArn(monitoringRoleArn: String) {
       cdkBuilder.monitoringRoleArn(monitoringRoleArn)
@@ -3236,7 +3400,7 @@ public interface CfnDBClusterProps {
      * Insights](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html) in the
      * *Amazon RDS User Guide* .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      */
     override fun performanceInsightsEnabled(performanceInsightsEnabled: Boolean) {
       cdkBuilder.performanceInsightsEnabled(performanceInsightsEnabled)
@@ -3249,7 +3413,7 @@ public interface CfnDBClusterProps {
      * Insights](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html) in the
      * *Amazon RDS User Guide* .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      */
     override fun performanceInsightsEnabled(performanceInsightsEnabled: IResolvable) {
       cdkBuilder.performanceInsightsEnabled(performanceInsightsEnabled.let(IResolvable.Companion::unwrap))
@@ -3264,7 +3428,7 @@ public interface CfnDBClusterProps {
      * default KMS key. There is a default KMS key for your AWS account . Your AWS account has a
      * different default KMS key for each AWS Region .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      */
     override fun performanceInsightsKmsKeyId(performanceInsightsKmsKeyId: String) {
       cdkBuilder.performanceInsightsKmsKeyId(performanceInsightsKmsKeyId)
@@ -3273,7 +3437,10 @@ public interface CfnDBClusterProps {
     /**
      * @param performanceInsightsRetentionPeriod The number of days to retain Performance Insights
      * data.
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * When creating a DB cluster without enabling Performance Insights, you can't specify the
+     * parameter `PerformanceInsightsRetentionPeriod` .
+     *
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * Valid Values:
      *
@@ -3339,8 +3506,8 @@ public interface CfnDBClusterProps {
      *
      * The default is a 30-minute window selected at random from an 8-hour block of time for each
      * AWS Region, occurring on a random day of the week. To see the time blocks available, see
-     * [Adjusting the Preferred DB Cluster Maintenance
-     * Window](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora)
+     * [Maintaining an Amazon Aurora DB
+     * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora)
      * in the *Amazon Aurora User Guide.*
      *
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -3591,6 +3758,8 @@ public interface CfnDBClusterProps {
      * Constraints:
      *
      * * Must match the identifier of an existing DBCluster.
+     * * Cannot be specified if `SourceDbClusterResourceId` is specified. You must specify either
+     * `SourceDBClusterIdentifier` or `SourceDbClusterResourceId` , but not both.
      *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
@@ -3795,7 +3964,12 @@ public interface CfnDBClusterProps {
      *
      * By default, minor engine upgrades are applied automatically.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB cluster.
+     *
+     * For more information about automatic minor version upgrades, see [Automatically upgrading the
+     * minor engine
+     * version](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-autominorversionupgrade)
      */
@@ -3855,6 +4029,10 @@ public interface CfnDBClusterProps {
      * to create a DB shard group for horizontal scaling (sharding) capabilities. When set to
      * `standard` (the default), the cluster uses normal DB instance creation.
      *
+     * *Important:* Automated backup retention isn't supported with Aurora Limitless Database
+     * clusters. If you set this property to `limitless` , you cannot set `DeleteAutomatedBackups` to
+     * `false` . To create a backup, use manual snapshots instead.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-clusterscalabilitytype)
      */
     override fun clusterScalabilityType(): String? = unwrap(this).getClusterScalabilityType()
@@ -3870,6 +4048,18 @@ public interface CfnDBClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-copytagstosnapshot)
      */
     override fun copyTagsToSnapshot(): Any? = unwrap(this).getCopyTagsToSnapshot()
+
+    /**
+     * The mode of Database Insights to enable for the DB cluster.
+     *
+     * If you set this value to `advanced` , you must also set the `PerformanceInsightsEnabled`
+     * parameter to `true` and the `PerformanceInsightsRetentionPeriod` parameter to 465.
+     *
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-databaseinsightsmode)
+     */
+    override fun databaseInsightsMode(): String? = unwrap(this).getDatabaseInsightsMode()
 
     /**
      * The name of your database.
@@ -3987,6 +4177,17 @@ public interface CfnDBClusterProps {
     override fun dbSystemId(): String? = unwrap(this).getDbSystemId()
 
     /**
+     * Specifies whether to remove automated backups immediately after the DB cluster is deleted.
+     *
+     * This parameter isn't case-sensitive. The default is to remove automated backups immediately
+     * after the DB cluster is deleted, unless the AWS Backup policy specifies a point-in-time restore
+     * rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-deleteautomatedbackups)
+     */
+    override fun deleteAutomatedBackups(): Any? = unwrap(this).getDeleteAutomatedBackups()
+
+    /**
      * A value that indicates whether the DB cluster has deletion protection enabled.
      *
      * The database can't be deleted when deletion protection is enabled. By default, deletion
@@ -4073,11 +4274,6 @@ public interface CfnDBClusterProps {
      * running SQL queries on the DB cluster. You can also query your database from inside the RDS
      * console with the RDS query editor.
      *
-     * RDS Data API is supported with the following DB clusters:
-     *
-     * * Aurora PostgreSQL Serverless v2 and provisioned
-     * * Aurora PostgreSQL and Aurora MySQL Serverless v1
-     *
      * For more information, see [Using RDS Data
      * API](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html) in the *Amazon
      * Aurora User Guide* .
@@ -4148,11 +4344,11 @@ public interface CfnDBClusterProps {
      * Extended Support, you can run the selected major engine version on your DB cluster past the end
      * of standard support for that engine version. For more information, see the following sections:
      *
-     * * Amazon Aurora - [Using Amazon RDS Extended
-     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+     * * Amazon Aurora - [Amazon RDS Extended Support with Amazon
+     * Aurora](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
      * the *Amazon Aurora User Guide*
-     * * Amazon RDS - [Using Amazon RDS Extended
-     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
+     * * Amazon RDS - [Amazon RDS Extended Support with Amazon
+     * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
      * *Amazon RDS User Guide*
      *
      * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
@@ -4352,6 +4548,14 @@ public interface CfnDBClusterProps {
     /**
      * The secret managed by RDS in AWS Secrets Manager for the master user password.
      *
+     *
+     * When you restore a DB cluster from a snapshot, Amazon RDS generates a new secret instead of
+     * reusing the secret specified in the `SecretArn` property. This ensures that the restored DB
+     * cluster is securely managed with a dedicated secret. To maintain consistent integration with
+     * your application, you might need to update resource configurations to reference the newly
+     * created secret.
+     *
+     *
      * For more information, see [Password management with AWS Secrets
      * Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the
      * *Amazon RDS User Guide* and [Password management with AWS Secrets
@@ -4387,7 +4591,7 @@ public interface CfnDBClusterProps {
      * If `MonitoringRoleArn` is specified, also set `MonitoringInterval` to a value other than `0`
      * .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * Valid Values: `0 | 1 | 5 | 10 | 15 | 30 | 60`
      *
@@ -4409,7 +4613,7 @@ public interface CfnDBClusterProps {
      * If `MonitoringInterval` is set to a value other than `0` , supply a `MonitoringRoleArn`
      * value.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-monitoringrolearn)
      */
@@ -4443,7 +4647,7 @@ public interface CfnDBClusterProps {
      * Insights](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html) in the
      * *Amazon RDS User Guide* .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-performanceinsightsenabled)
      */
@@ -4458,7 +4662,7 @@ public interface CfnDBClusterProps {
      * default KMS key. There is a default KMS key for your AWS account . Your AWS account has a
      * different default KMS key for each AWS Region .
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-performanceinsightskmskeyid)
      */
@@ -4468,7 +4672,10 @@ public interface CfnDBClusterProps {
     /**
      * The number of days to retain Performance Insights data.
      *
-     * Valid for Cluster Type: Multi-AZ DB clusters only
+     * When creating a DB cluster without enabling Performance Insights, you can't specify the
+     * parameter `PerformanceInsightsRetentionPeriod` .
+     *
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * Valid Values:
      *
@@ -4538,8 +4745,8 @@ public interface CfnDBClusterProps {
      *
      * The default is a 30-minute window selected at random from an 8-hour block of time for each
      * AWS Region, occurring on a random day of the week. To see the time blocks available, see
-     * [Adjusting the Preferred DB Cluster Maintenance
-     * Window](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora)
+     * [Maintaining an Amazon Aurora DB
+     * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora)
      * in the *Amazon Aurora User Guide.*
      *
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -4709,6 +4916,8 @@ public interface CfnDBClusterProps {
      * Constraints:
      *
      * * Must match the identifier of an existing DBCluster.
+     * * Cannot be specified if `SourceDbClusterResourceId` is specified. You must specify either
+     * `SourceDBClusterIdentifier` or `SourceDbClusterResourceId` , but not both.
      *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      *

@@ -24,6 +24,8 @@ import kotlin.jvm.JvmName
  * \"&lt;*&gt;: *\" as differentLoggingType, differentLoggingMessage"))
  * .filterStatements(List.of("loggingType = \"ERROR\"", "loggingMessage = \"A very strange error
  * occurred!\""))
+ * .statsStatements(List.of("count(loggingMessage) as loggingErrors",
+ * "count(differentLoggingMessage) as differentLoggingErrors"))
  * .sort("&#64;timestamp desc")
  * .limit(20)
  * .build())

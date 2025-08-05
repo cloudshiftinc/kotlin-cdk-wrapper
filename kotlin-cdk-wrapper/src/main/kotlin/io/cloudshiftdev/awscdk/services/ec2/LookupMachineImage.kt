@@ -22,6 +22,8 @@ import kotlin.collections.Map
  * will be used on future runs. To refresh the AMI lookup, you will have to
  * evict the value from the cache using the `cdk context` command. See
  * https://docs.aws.amazon.com/cdk/latest/guide/context.html for more information.
+ * If `props.additionalCacheKey` is set, the context key uses that value as a discriminator
+ * rather than the cached value being global across all lookups.
  *
  * Example:
  *
@@ -33,6 +35,7 @@ import kotlin.collections.Map
  * LookupMachineImage lookupMachineImage = LookupMachineImage.Builder.create()
  * .name("name")
  * // the properties below are optional
+ * .additionalCacheKey("additionalCacheKey")
  * .filters(Map.of(
  * "filtersKey", List.of("filters")))
  * .owners(List.of("owners"))
@@ -54,7 +57,7 @@ public open class LookupMachineImage(
   )
 
   /**
-   * Return the image to use in the given context.
+   * Return the correct image.
    *
    * @param scope 
    */
@@ -66,6 +69,16 @@ public open class LookupMachineImage(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     *
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key. 
+     */
+    public fun additionalCacheKey(additionalCacheKey: String)
+
     /**
      * Additional filters on the AMI.
      *
@@ -123,6 +136,18 @@ public open class LookupMachineImage(
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.LookupMachineImage.Builder =
         software.amazon.awscdk.services.ec2.LookupMachineImage.Builder.create()
+
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     *
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key. 
+     */
+    override fun additionalCacheKey(additionalCacheKey: String) {
+      cdkBuilder.additionalCacheKey(additionalCacheKey)
+    }
 
     /**
      * Additional filters on the AMI.

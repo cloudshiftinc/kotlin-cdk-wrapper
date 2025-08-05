@@ -54,9 +54,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.bedrock.*;
+ * Object additionalModelRequestFields;
  * Object collector;
+ * FlowDefinitionProperty flowDefinitionProperty_;
  * Object input;
  * Object iterator;
+ * Object loopInput;
  * Object output;
  * CfnFlow cfnFlow = CfnFlow.Builder.create(this, "MyCfnFlow")
  * .executionRoleArn("executionRoleArn")
@@ -96,6 +99,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .expression("expression")
  * .build()))
  * .build())
+ * .inlineCode(InlineCodeFlowNodeConfigurationProperty.builder()
+ * .code("code")
+ * .language("language")
+ * .build())
  * .input(input)
  * .iterator(iterator)
  * .knowledgeBase(KnowledgeBaseFlowNodeConfigurationProperty.builder()
@@ -105,7 +112,61 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .guardrailIdentifier("guardrailIdentifier")
  * .guardrailVersion("guardrailVersion")
  * .build())
+ * .inferenceConfiguration(PromptInferenceConfigurationProperty.builder()
+ * .text(PromptModelInferenceConfigurationProperty.builder()
+ * .maxTokens(123)
+ * .stopSequences(List.of("stopSequences"))
+ * .temperature(123)
+ * .topP(123)
+ * .build())
+ * .build())
  * .modelId("modelId")
+ * .numberOfResults(123)
+ * .orchestrationConfiguration(KnowledgeBaseOrchestrationConfigurationProperty.builder()
+ * .additionalModelRequestFields(additionalModelRequestFields)
+ * .inferenceConfig(PromptInferenceConfigurationProperty.builder()
+ * .text(PromptModelInferenceConfigurationProperty.builder()
+ * .maxTokens(123)
+ * .stopSequences(List.of("stopSequences"))
+ * .temperature(123)
+ * .topP(123)
+ * .build())
+ * .build())
+ * .performanceConfig(PerformanceConfigurationProperty.builder()
+ * .latency("latency")
+ * .build())
+ * .promptTemplate(KnowledgeBasePromptTemplateProperty.builder()
+ * .textPromptTemplate("textPromptTemplate")
+ * .build())
+ * .build())
+ * .promptTemplate(KnowledgeBasePromptTemplateProperty.builder()
+ * .textPromptTemplate("textPromptTemplate")
+ * .build())
+ * .rerankingConfiguration(VectorSearchRerankingConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .bedrockRerankingConfiguration(VectorSearchBedrockRerankingConfigurationProperty.builder()
+ * .modelConfiguration(VectorSearchBedrockRerankingModelConfigurationProperty.builder()
+ * .modelArn("modelArn")
+ * // the properties below are optional
+ * .additionalModelRequestFields(additionalModelRequestFields)
+ * .build())
+ * // the properties below are optional
+ * .metadataConfiguration(MetadataConfigurationForRerankingProperty.builder()
+ * .selectionMode("selectionMode")
+ * // the properties below are optional
+ * .selectiveModeConfiguration(RerankingMetadataSelectiveModeConfigurationProperty.builder()
+ * .fieldsToExclude(List.of(FieldForRerankingProperty.builder()
+ * .fieldName("fieldName")
+ * .build()))
+ * .fieldsToInclude(List.of(FieldForRerankingProperty.builder()
+ * .fieldName("fieldName")
+ * .build()))
+ * .build())
+ * .build())
+ * .numberOfRerankedResults(123)
+ * .build())
+ * .build())
  * .build())
  * .lambdaFunction(LambdaFunctionFlowNodeConfigurationProperty.builder()
  * .lambdaArn("lambdaArn")
@@ -114,6 +175,19 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .botAliasArn("botAliasArn")
  * .localeId("localeId")
  * .build())
+ * .loop(LoopFlowNodeConfigurationProperty.builder()
+ * .definition(flowDefinitionProperty_)
+ * .build())
+ * .loopController(LoopControllerFlowNodeConfigurationProperty.builder()
+ * .continueCondition(FlowConditionProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .expression("expression")
+ * .build())
+ * // the properties below are optional
+ * .maxIterations(123)
+ * .build())
+ * .loopInput(loopInput)
  * .output(output)
  * .prompt(PromptFlowNodeConfigurationProperty.builder()
  * .sourceConfiguration(PromptFlowNodeSourceConfigurationProperty.builder()
@@ -168,6 +242,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .expression("expression")
  * .name("name")
  * .type("type")
+ * // the properties below are optional
+ * .category("category")
  * .build()))
  * .outputs(List.of(FlowNodeOutputProperty.builder()
  * .name("name")
@@ -436,15 +512,15 @@ public open class CfnFlow(
   /**
    * A map of tag keys and values.
    */
-  public open fun testAliasTags(`value`: IResolvable) {
-    unwrap(this).setTestAliasTags(`value`.let(IResolvable.Companion::unwrap))
+  public open fun testAliasTags(`value`: Map<String, String>) {
+    unwrap(this).setTestAliasTags(`value`)
   }
 
   /**
    * A map of tag keys and values.
    */
-  public open fun testAliasTags(`value`: Map<String, String>) {
-    unwrap(this).setTestAliasTags(`value`)
+  public open fun testAliasTags(`value`: IResolvable) {
+    unwrap(this).setTestAliasTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -605,7 +681,7 @@ public open class CfnFlow(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-flow.html#cfn-bedrock-flow-testaliastags)
      * @param testAliasTags A map of tag keys and values. 
      */
-    public fun testAliasTags(testAliasTags: IResolvable)
+    public fun testAliasTags(testAliasTags: Map<String, String>)
 
     /**
      * A map of tag keys and values.
@@ -613,7 +689,7 @@ public open class CfnFlow(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-flow.html#cfn-bedrock-flow-testaliastags)
      * @param testAliasTags A map of tag keys and values. 
      */
-    public fun testAliasTags(testAliasTags: Map<String, String>)
+    public fun testAliasTags(testAliasTags: IResolvable)
   }
 
   private class BuilderImpl(
@@ -802,8 +878,8 @@ public open class CfnFlow(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-flow.html#cfn-bedrock-flow-testaliastags)
      * @param testAliasTags A map of tag keys and values. 
      */
-    override fun testAliasTags(testAliasTags: IResolvable) {
-      cdkBuilder.testAliasTags(testAliasTags.let(IResolvable.Companion::unwrap))
+    override fun testAliasTags(testAliasTags: Map<String, String>) {
+      cdkBuilder.testAliasTags(testAliasTags)
     }
 
     /**
@@ -812,8 +888,8 @@ public open class CfnFlow(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-flow.html#cfn-bedrock-flow-testaliastags)
      * @param testAliasTags A map of tag keys and values. 
      */
-    override fun testAliasTags(testAliasTags: Map<String, String>) {
-      cdkBuilder.testAliasTags(testAliasTags)
+    override fun testAliasTags(testAliasTags: IResolvable) {
+      cdkBuilder.testAliasTags(testAliasTags.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.bedrock.CfnFlow = cdkBuilder.build()
@@ -843,9 +919,8 @@ public open class CfnFlow(
    * Defines an agent node in your flow.
    *
    * You specify the agent to invoke at this point in the flow. For more information, see [Node
-   * types in Amazon Bedrock
-   * works](https://docs.aws.amazon.com/bedrock/latest/userguide/flows-nodes.html) in the Amazon
-   * Bedrock User Guide.
+   * types in a flow](https://docs.aws.amazon.com/bedrock/latest/userguide/flows-nodes.html) in the
+   * Amazon Bedrock User Guide.
    *
    * Example:
    *
@@ -933,9 +1008,9 @@ public open class CfnFlow(
    * Defines a condition node in your flow.
    *
    * You can specify conditions that determine which node comes next in the flow. For more
-   * information, see [Node types in Amazon Bedrock
-   * works](https://docs.aws.amazon.com/bedrock/latest/userguide/flows-nodes.html) in the Amazon
-   * Bedrock User Guide.
+   * information, see [Node types in a
+   * flow](https://docs.aws.amazon.com/bedrock/latest/userguide/flows-nodes.html) in the Amazon Bedrock
+   * User Guide.
    *
    * Example:
    *
@@ -1052,6 +1127,90 @@ public open class CfnFlow(
           software.amazon.awscdk.services.bedrock.CfnFlow.ConditionFlowNodeConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.bedrock.CfnFlow.ConditionFlowNodeConfigurationProperty
+    }
+  }
+
+  /**
+   * Specifies a field to be used during the reranking process in a Knowledge Base vector search.
+   *
+   * This structure identifies metadata fields that should be considered when reordering search
+   * results to improve relevance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * FieldForRerankingProperty fieldForRerankingProperty = FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-fieldforreranking.html)
+   */
+  public interface FieldForRerankingProperty {
+    /**
+     * The name of the metadata field to be used during the reranking process.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-fieldforreranking.html#cfn-bedrock-flow-fieldforreranking-fieldname)
+     */
+    public fun fieldName(): String
+
+    /**
+     * A builder for [FieldForRerankingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fieldName The name of the metadata field to be used during the reranking process. 
+       */
+      public fun fieldName(fieldName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnFlow.FieldForRerankingProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnFlow.FieldForRerankingProperty.builder()
+
+      /**
+       * @param fieldName The name of the metadata field to be used during the reranking process. 
+       */
+      override fun fieldName(fieldName: String) {
+        cdkBuilder.fieldName(fieldName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.bedrock.CfnFlow.FieldForRerankingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.FieldForRerankingProperty,
+    ) : CdkObject(cdkObject),
+        FieldForRerankingProperty {
+      /**
+       * The name of the metadata field to be used during the reranking process.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-fieldforreranking.html#cfn-bedrock-flow-fieldforreranking-fieldname)
+       */
+      override fun fieldName(): String = unwrap(this).getFieldName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FieldForRerankingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.FieldForRerankingProperty):
+          FieldForRerankingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FieldForRerankingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FieldForRerankingProperty):
+          software.amazon.awscdk.services.bedrock.CfnFlow.FieldForRerankingProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnFlow.FieldForRerankingProperty
     }
   }
 
@@ -1814,9 +1973,12 @@ public open class CfnFlow(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object additionalModelRequestFields;
    * Object collector;
+   * FlowDefinitionProperty flowDefinitionProperty_;
    * Object input;
    * Object iterator;
+   * Object loopInput;
    * Object output;
    * FlowDefinitionProperty flowDefinitionProperty = FlowDefinitionProperty.builder()
    * .connections(List.of(FlowConnectionProperty.builder()
@@ -1851,6 +2013,10 @@ public open class CfnFlow(
    * .expression("expression")
    * .build()))
    * .build())
+   * .inlineCode(InlineCodeFlowNodeConfigurationProperty.builder()
+   * .code("code")
+   * .language("language")
+   * .build())
    * .input(input)
    * .iterator(iterator)
    * .knowledgeBase(KnowledgeBaseFlowNodeConfigurationProperty.builder()
@@ -1860,7 +2026,61 @@ public open class CfnFlow(
    * .guardrailIdentifier("guardrailIdentifier")
    * .guardrailVersion("guardrailVersion")
    * .build())
+   * .inferenceConfiguration(PromptInferenceConfigurationProperty.builder()
+   * .text(PromptModelInferenceConfigurationProperty.builder()
+   * .maxTokens(123)
+   * .stopSequences(List.of("stopSequences"))
+   * .temperature(123)
+   * .topP(123)
+   * .build())
+   * .build())
    * .modelId("modelId")
+   * .numberOfResults(123)
+   * .orchestrationConfiguration(KnowledgeBaseOrchestrationConfigurationProperty.builder()
+   * .additionalModelRequestFields(additionalModelRequestFields)
+   * .inferenceConfig(PromptInferenceConfigurationProperty.builder()
+   * .text(PromptModelInferenceConfigurationProperty.builder()
+   * .maxTokens(123)
+   * .stopSequences(List.of("stopSequences"))
+   * .temperature(123)
+   * .topP(123)
+   * .build())
+   * .build())
+   * .performanceConfig(PerformanceConfigurationProperty.builder()
+   * .latency("latency")
+   * .build())
+   * .promptTemplate(KnowledgeBasePromptTemplateProperty.builder()
+   * .textPromptTemplate("textPromptTemplate")
+   * .build())
+   * .build())
+   * .promptTemplate(KnowledgeBasePromptTemplateProperty.builder()
+   * .textPromptTemplate("textPromptTemplate")
+   * .build())
+   * .rerankingConfiguration(VectorSearchRerankingConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .bedrockRerankingConfiguration(VectorSearchBedrockRerankingConfigurationProperty.builder()
+   * .modelConfiguration(VectorSearchBedrockRerankingModelConfigurationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .additionalModelRequestFields(additionalModelRequestFields)
+   * .build())
+   * // the properties below are optional
+   * .metadataConfiguration(MetadataConfigurationForRerankingProperty.builder()
+   * .selectionMode("selectionMode")
+   * // the properties below are optional
+   * .selectiveModeConfiguration(RerankingMetadataSelectiveModeConfigurationProperty.builder()
+   * .fieldsToExclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .fieldsToInclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .build())
+   * .build())
+   * .numberOfRerankedResults(123)
+   * .build())
+   * .build())
    * .build())
    * .lambdaFunction(LambdaFunctionFlowNodeConfigurationProperty.builder()
    * .lambdaArn("lambdaArn")
@@ -1869,6 +2089,19 @@ public open class CfnFlow(
    * .botAliasArn("botAliasArn")
    * .localeId("localeId")
    * .build())
+   * .loop(LoopFlowNodeConfigurationProperty.builder()
+   * .definition(flowDefinitionProperty_)
+   * .build())
+   * .loopController(LoopControllerFlowNodeConfigurationProperty.builder()
+   * .continueCondition(FlowConditionProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .expression("expression")
+   * .build())
+   * // the properties below are optional
+   * .maxIterations(123)
+   * .build())
+   * .loopInput(loopInput)
    * .output(output)
    * .prompt(PromptFlowNodeConfigurationProperty.builder()
    * .sourceConfiguration(PromptFlowNodeSourceConfigurationProperty.builder()
@@ -1923,6 +2156,8 @@ public open class CfnFlow(
    * .expression("expression")
    * .name("name")
    * .type("type")
+   * // the properties below are optional
+   * .category("category")
    * .build()))
    * .outputs(List.of(FlowNodeOutputProperty.builder()
    * .name("name")
@@ -2072,9 +2307,9 @@ public open class CfnFlow(
   /**
    * Contains configurations for a node in your flow.
    *
-   * For more information, see [Node types in Amazon Bedrock
-   * works](https://docs.aws.amazon.com/bedrock/latest/userguide/flows-nodes.html) in the Amazon
-   * Bedrock User Guide.
+   * For more information, see [Node types in a
+   * flow](https://docs.aws.amazon.com/bedrock/latest/userguide/flows-nodes.html) in the Amazon Bedrock
+   * User Guide.
    *
    * Example:
    *
@@ -2082,9 +2317,12 @@ public open class CfnFlow(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object additionalModelRequestFields;
    * Object collector;
+   * FlowNodeConfigurationProperty flowNodeConfigurationProperty_;
    * Object input;
    * Object iterator;
+   * Object loopInput;
    * Object output;
    * FlowNodeConfigurationProperty flowNodeConfigurationProperty =
    * FlowNodeConfigurationProperty.builder()
@@ -2099,6 +2337,10 @@ public open class CfnFlow(
    * .expression("expression")
    * .build()))
    * .build())
+   * .inlineCode(InlineCodeFlowNodeConfigurationProperty.builder()
+   * .code("code")
+   * .language("language")
+   * .build())
    * .input(input)
    * .iterator(iterator)
    * .knowledgeBase(KnowledgeBaseFlowNodeConfigurationProperty.builder()
@@ -2108,7 +2350,61 @@ public open class CfnFlow(
    * .guardrailIdentifier("guardrailIdentifier")
    * .guardrailVersion("guardrailVersion")
    * .build())
+   * .inferenceConfiguration(PromptInferenceConfigurationProperty.builder()
+   * .text(PromptModelInferenceConfigurationProperty.builder()
+   * .maxTokens(123)
+   * .stopSequences(List.of("stopSequences"))
+   * .temperature(123)
+   * .topP(123)
+   * .build())
+   * .build())
    * .modelId("modelId")
+   * .numberOfResults(123)
+   * .orchestrationConfiguration(KnowledgeBaseOrchestrationConfigurationProperty.builder()
+   * .additionalModelRequestFields(additionalModelRequestFields)
+   * .inferenceConfig(PromptInferenceConfigurationProperty.builder()
+   * .text(PromptModelInferenceConfigurationProperty.builder()
+   * .maxTokens(123)
+   * .stopSequences(List.of("stopSequences"))
+   * .temperature(123)
+   * .topP(123)
+   * .build())
+   * .build())
+   * .performanceConfig(PerformanceConfigurationProperty.builder()
+   * .latency("latency")
+   * .build())
+   * .promptTemplate(KnowledgeBasePromptTemplateProperty.builder()
+   * .textPromptTemplate("textPromptTemplate")
+   * .build())
+   * .build())
+   * .promptTemplate(KnowledgeBasePromptTemplateProperty.builder()
+   * .textPromptTemplate("textPromptTemplate")
+   * .build())
+   * .rerankingConfiguration(VectorSearchRerankingConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .bedrockRerankingConfiguration(VectorSearchBedrockRerankingConfigurationProperty.builder()
+   * .modelConfiguration(VectorSearchBedrockRerankingModelConfigurationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .additionalModelRequestFields(additionalModelRequestFields)
+   * .build())
+   * // the properties below are optional
+   * .metadataConfiguration(MetadataConfigurationForRerankingProperty.builder()
+   * .selectionMode("selectionMode")
+   * // the properties below are optional
+   * .selectiveModeConfiguration(RerankingMetadataSelectiveModeConfigurationProperty.builder()
+   * .fieldsToExclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .fieldsToInclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .build())
+   * .build())
+   * .numberOfRerankedResults(123)
+   * .build())
+   * .build())
    * .build())
    * .lambdaFunction(LambdaFunctionFlowNodeConfigurationProperty.builder()
    * .lambdaArn("lambdaArn")
@@ -2117,6 +2413,53 @@ public open class CfnFlow(
    * .botAliasArn("botAliasArn")
    * .localeId("localeId")
    * .build())
+   * .loop(LoopFlowNodeConfigurationProperty.builder()
+   * .definition(FlowDefinitionProperty.builder()
+   * .connections(List.of(FlowConnectionProperty.builder()
+   * .name("name")
+   * .source("source")
+   * .target("target")
+   * .type("type")
+   * // the properties below are optional
+   * .configuration(FlowConnectionConfigurationProperty.builder()
+   * .conditional(FlowConditionalConnectionConfigurationProperty.builder()
+   * .condition("condition")
+   * .build())
+   * .data(FlowDataConnectionConfigurationProperty.builder()
+   * .sourceOutput("sourceOutput")
+   * .targetInput("targetInput")
+   * .build())
+   * .build())
+   * .build()))
+   * .nodes(List.of(FlowNodeProperty.builder()
+   * .name("name")
+   * .type("type")
+   * // the properties below are optional
+   * .configuration(flowNodeConfigurationProperty_)
+   * .inputs(List.of(FlowNodeInputProperty.builder()
+   * .expression("expression")
+   * .name("name")
+   * .type("type")
+   * // the properties below are optional
+   * .category("category")
+   * .build()))
+   * .outputs(List.of(FlowNodeOutputProperty.builder()
+   * .name("name")
+   * .type("type")
+   * .build()))
+   * .build()))
+   * .build())
+   * .build())
+   * .loopController(LoopControllerFlowNodeConfigurationProperty.builder()
+   * .continueCondition(FlowConditionProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .expression("expression")
+   * .build())
+   * // the properties below are optional
+   * .maxIterations(123)
+   * .build())
+   * .loopInput(loopInput)
    * .output(output)
    * .prompt(PromptFlowNodeConfigurationProperty.builder()
    * .sourceConfiguration(PromptFlowNodeSourceConfigurationProperty.builder()
@@ -2191,13 +2534,23 @@ public open class CfnFlow(
     public fun collector(): Any? = unwrap(this).getCollector()
 
     /**
-     * Contains configurations for a Condition node in your flow.
+     * Contains configurations for a condition node in your flow.
      *
      * Defines conditions that lead to different branches of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-condition)
      */
     public fun condition(): Any? = unwrap(this).getCondition()
+
+    /**
+     * Contains configurations for an inline code node in your flow.
+     *
+     * Inline code nodes let you write and execute code directly within your flow, enabling data
+     * transformations, custom logic, and integrations without needing an external Lambda function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-inlinecode)
+     */
+    public fun inlineCode(): Any? = unwrap(this).getInlineCode()
 
     /**
      * Contains configurations for an input flow node in your flow.
@@ -2251,6 +2604,27 @@ public open class CfnFlow(
     public fun lex(): Any? = unwrap(this).getLex()
 
     /**
+     * Contains configurations for a DoWhile loop in your flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-loop)
+     */
+    public fun loop(): Any? = unwrap(this).getLoop()
+
+    /**
+     * Contains controller node configurations for a DoWhile loop in your flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-loopcontroller)
+     */
+    public fun loopController(): Any? = unwrap(this).getLoopController()
+
+    /**
+     * Contains input node configurations for a DoWhile loop in your flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-loopinput)
+     */
+    public fun loopInput(): Any? = unwrap(this).getLoopInput()
+
+    /**
      * Contains configurations for an output flow node in your flow.
      *
      * The last node in the flow. `outputs` can't be specified for this node.
@@ -2270,7 +2644,7 @@ public open class CfnFlow(
     public fun prompt(): Any? = unwrap(this).getPrompt()
 
     /**
-     * Contains configurations for a Retrieval node in your flow.
+     * Contains configurations for a retrieval node in your flow.
      *
      * Retrieves data from an Amazon S3 location and returns it as the output.
      *
@@ -2279,7 +2653,7 @@ public open class CfnFlow(
     public fun retrieval(): Any? = unwrap(this).getRetrieval()
 
     /**
-     * Contains configurations for a Storage node in your flow.
+     * Contains configurations for a storage node in your flow.
      *
      * Stores an input in an Amazon S3 location.
      *
@@ -2319,24 +2693,47 @@ public open class CfnFlow(
       public fun collector(collector: Any)
 
       /**
-       * @param condition Contains configurations for a Condition node in your flow.
+       * @param condition Contains configurations for a condition node in your flow.
        * Defines conditions that lead to different branches of the flow.
        */
       public fun condition(condition: IResolvable)
 
       /**
-       * @param condition Contains configurations for a Condition node in your flow.
+       * @param condition Contains configurations for a condition node in your flow.
        * Defines conditions that lead to different branches of the flow.
        */
       public fun condition(condition: ConditionFlowNodeConfigurationProperty)
 
       /**
-       * @param condition Contains configurations for a Condition node in your flow.
+       * @param condition Contains configurations for a condition node in your flow.
        * Defines conditions that lead to different branches of the flow.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f846f2c8dd0e3474c40ea04293f21251f9b90067d9566892608d779ed792dd6d")
       public fun condition(condition: ConditionFlowNodeConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param inlineCode Contains configurations for an inline code node in your flow.
+       * Inline code nodes let you write and execute code directly within your flow, enabling data
+       * transformations, custom logic, and integrations without needing an external Lambda function.
+       */
+      public fun inlineCode(inlineCode: IResolvable)
+
+      /**
+       * @param inlineCode Contains configurations for an inline code node in your flow.
+       * Inline code nodes let you write and execute code directly within your flow, enabling data
+       * transformations, custom logic, and integrations without needing an external Lambda function.
+       */
+      public fun inlineCode(inlineCode: InlineCodeFlowNodeConfigurationProperty)
+
+      /**
+       * @param inlineCode Contains configurations for an inline code node in your flow.
+       * Inline code nodes let you write and execute code directly within your flow, enabling data
+       * transformations, custom logic, and integrations without needing an external Lambda function.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6d8780163b5589420313f726ef93c61296e82ba2e464a246a0dba239276beb2a")
+      public fun inlineCode(inlineCode: InlineCodeFlowNodeConfigurationProperty.Builder.() -> Unit)
 
       /**
        * @param input Contains configurations for an input flow node in your flow.
@@ -2421,6 +2818,49 @@ public open class CfnFlow(
       public fun lex(lex: LexFlowNodeConfigurationProperty.Builder.() -> Unit)
 
       /**
+       * @param loop Contains configurations for a DoWhile loop in your flow.
+       */
+      public fun loop(loop: IResolvable)
+
+      /**
+       * @param loop Contains configurations for a DoWhile loop in your flow.
+       */
+      public fun loop(loop: LoopFlowNodeConfigurationProperty)
+
+      /**
+       * @param loop Contains configurations for a DoWhile loop in your flow.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3a92b45faa0a41134ab69f13bfa65375550f937047ccf2c0e60000629520d120")
+      public fun loop(loop: LoopFlowNodeConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param loopController Contains controller node configurations for a DoWhile loop in your
+       * flow.
+       */
+      public fun loopController(loopController: IResolvable)
+
+      /**
+       * @param loopController Contains controller node configurations for a DoWhile loop in your
+       * flow.
+       */
+      public fun loopController(loopController: LoopControllerFlowNodeConfigurationProperty)
+
+      /**
+       * @param loopController Contains controller node configurations for a DoWhile loop in your
+       * flow.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("103f6cabbc81c1cf9699a5a0cc71ef7e58856c5f72d7691c04bdc6bd31583fd0")
+      public
+          fun loopController(loopController: LoopControllerFlowNodeConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param loopInput Contains input node configurations for a DoWhile loop in your flow.
+       */
+      public fun loopInput(loopInput: Any)
+
+      /**
        * @param output Contains configurations for an output flow node in your flow.
        * The last node in the flow. `outputs` can't be specified for this node.
        */
@@ -2450,19 +2890,19 @@ public open class CfnFlow(
       public fun prompt(prompt: PromptFlowNodeConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param retrieval Contains configurations for a Retrieval node in your flow.
+       * @param retrieval Contains configurations for a retrieval node in your flow.
        * Retrieves data from an Amazon S3 location and returns it as the output.
        */
       public fun retrieval(retrieval: IResolvable)
 
       /**
-       * @param retrieval Contains configurations for a Retrieval node in your flow.
+       * @param retrieval Contains configurations for a retrieval node in your flow.
        * Retrieves data from an Amazon S3 location and returns it as the output.
        */
       public fun retrieval(retrieval: RetrievalFlowNodeConfigurationProperty)
 
       /**
-       * @param retrieval Contains configurations for a Retrieval node in your flow.
+       * @param retrieval Contains configurations for a retrieval node in your flow.
        * Retrieves data from an Amazon S3 location and returns it as the output.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -2470,19 +2910,19 @@ public open class CfnFlow(
       public fun retrieval(retrieval: RetrievalFlowNodeConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param storage Contains configurations for a Storage node in your flow.
+       * @param storage Contains configurations for a storage node in your flow.
        * Stores an input in an Amazon S3 location.
        */
       public fun storage(storage: IResolvable)
 
       /**
-       * @param storage Contains configurations for a Storage node in your flow.
+       * @param storage Contains configurations for a storage node in your flow.
        * Stores an input in an Amazon S3 location.
        */
       public fun storage(storage: StorageFlowNodeConfigurationProperty)
 
       /**
-       * @param storage Contains configurations for a Storage node in your flow.
+       * @param storage Contains configurations for a storage node in your flow.
        * Stores an input in an Amazon S3 location.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -2529,7 +2969,7 @@ public open class CfnFlow(
       }
 
       /**
-       * @param condition Contains configurations for a Condition node in your flow.
+       * @param condition Contains configurations for a condition node in your flow.
        * Defines conditions that lead to different branches of the flow.
        */
       override fun condition(condition: IResolvable) {
@@ -2537,7 +2977,7 @@ public open class CfnFlow(
       }
 
       /**
-       * @param condition Contains configurations for a Condition node in your flow.
+       * @param condition Contains configurations for a condition node in your flow.
        * Defines conditions that lead to different branches of the flow.
        */
       override fun condition(condition: ConditionFlowNodeConfigurationProperty) {
@@ -2545,13 +2985,42 @@ public open class CfnFlow(
       }
 
       /**
-       * @param condition Contains configurations for a Condition node in your flow.
+       * @param condition Contains configurations for a condition node in your flow.
        * Defines conditions that lead to different branches of the flow.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f846f2c8dd0e3474c40ea04293f21251f9b90067d9566892608d779ed792dd6d")
       override fun condition(condition: ConditionFlowNodeConfigurationProperty.Builder.() -> Unit):
           Unit = condition(ConditionFlowNodeConfigurationProperty(condition))
+
+      /**
+       * @param inlineCode Contains configurations for an inline code node in your flow.
+       * Inline code nodes let you write and execute code directly within your flow, enabling data
+       * transformations, custom logic, and integrations without needing an external Lambda function.
+       */
+      override fun inlineCode(inlineCode: IResolvable) {
+        cdkBuilder.inlineCode(inlineCode.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param inlineCode Contains configurations for an inline code node in your flow.
+       * Inline code nodes let you write and execute code directly within your flow, enabling data
+       * transformations, custom logic, and integrations without needing an external Lambda function.
+       */
+      override fun inlineCode(inlineCode: InlineCodeFlowNodeConfigurationProperty) {
+        cdkBuilder.inlineCode(inlineCode.let(InlineCodeFlowNodeConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param inlineCode Contains configurations for an inline code node in your flow.
+       * Inline code nodes let you write and execute code directly within your flow, enabling data
+       * transformations, custom logic, and integrations without needing an external Lambda function.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6d8780163b5589420313f726ef93c61296e82ba2e464a246a0dba239276beb2a")
+      override
+          fun inlineCode(inlineCode: InlineCodeFlowNodeConfigurationProperty.Builder.() -> Unit):
+          Unit = inlineCode(InlineCodeFlowNodeConfigurationProperty(inlineCode))
 
       /**
        * @param input Contains configurations for an input flow node in your flow.
@@ -2655,6 +3124,61 @@ public open class CfnFlow(
           lex(LexFlowNodeConfigurationProperty(lex))
 
       /**
+       * @param loop Contains configurations for a DoWhile loop in your flow.
+       */
+      override fun loop(loop: IResolvable) {
+        cdkBuilder.loop(loop.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param loop Contains configurations for a DoWhile loop in your flow.
+       */
+      override fun loop(loop: LoopFlowNodeConfigurationProperty) {
+        cdkBuilder.loop(loop.let(LoopFlowNodeConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param loop Contains configurations for a DoWhile loop in your flow.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3a92b45faa0a41134ab69f13bfa65375550f937047ccf2c0e60000629520d120")
+      override fun loop(loop: LoopFlowNodeConfigurationProperty.Builder.() -> Unit): Unit =
+          loop(LoopFlowNodeConfigurationProperty(loop))
+
+      /**
+       * @param loopController Contains controller node configurations for a DoWhile loop in your
+       * flow.
+       */
+      override fun loopController(loopController: IResolvable) {
+        cdkBuilder.loopController(loopController.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param loopController Contains controller node configurations for a DoWhile loop in your
+       * flow.
+       */
+      override fun loopController(loopController: LoopControllerFlowNodeConfigurationProperty) {
+        cdkBuilder.loopController(loopController.let(LoopControllerFlowNodeConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param loopController Contains controller node configurations for a DoWhile loop in your
+       * flow.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("103f6cabbc81c1cf9699a5a0cc71ef7e58856c5f72d7691c04bdc6bd31583fd0")
+      override
+          fun loopController(loopController: LoopControllerFlowNodeConfigurationProperty.Builder.() -> Unit):
+          Unit = loopController(LoopControllerFlowNodeConfigurationProperty(loopController))
+
+      /**
+       * @param loopInput Contains input node configurations for a DoWhile loop in your flow.
+       */
+      override fun loopInput(loopInput: Any) {
+        cdkBuilder.loopInput(loopInput)
+      }
+
+      /**
        * @param output Contains configurations for an output flow node in your flow.
        * The last node in the flow. `outputs` can't be specified for this node.
        */
@@ -2691,7 +3215,7 @@ public open class CfnFlow(
           prompt(PromptFlowNodeConfigurationProperty(prompt))
 
       /**
-       * @param retrieval Contains configurations for a Retrieval node in your flow.
+       * @param retrieval Contains configurations for a retrieval node in your flow.
        * Retrieves data from an Amazon S3 location and returns it as the output.
        */
       override fun retrieval(retrieval: IResolvable) {
@@ -2699,7 +3223,7 @@ public open class CfnFlow(
       }
 
       /**
-       * @param retrieval Contains configurations for a Retrieval node in your flow.
+       * @param retrieval Contains configurations for a retrieval node in your flow.
        * Retrieves data from an Amazon S3 location and returns it as the output.
        */
       override fun retrieval(retrieval: RetrievalFlowNodeConfigurationProperty) {
@@ -2707,7 +3231,7 @@ public open class CfnFlow(
       }
 
       /**
-       * @param retrieval Contains configurations for a Retrieval node in your flow.
+       * @param retrieval Contains configurations for a retrieval node in your flow.
        * Retrieves data from an Amazon S3 location and returns it as the output.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -2716,7 +3240,7 @@ public open class CfnFlow(
           Unit = retrieval(RetrievalFlowNodeConfigurationProperty(retrieval))
 
       /**
-       * @param storage Contains configurations for a Storage node in your flow.
+       * @param storage Contains configurations for a storage node in your flow.
        * Stores an input in an Amazon S3 location.
        */
       override fun storage(storage: IResolvable) {
@@ -2724,7 +3248,7 @@ public open class CfnFlow(
       }
 
       /**
-       * @param storage Contains configurations for a Storage node in your flow.
+       * @param storage Contains configurations for a storage node in your flow.
        * Stores an input in an Amazon S3 location.
        */
       override fun storage(storage: StorageFlowNodeConfigurationProperty) {
@@ -2732,7 +3256,7 @@ public open class CfnFlow(
       }
 
       /**
-       * @param storage Contains configurations for a Storage node in your flow.
+       * @param storage Contains configurations for a storage node in your flow.
        * Stores an input in an Amazon S3 location.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -2768,13 +3292,23 @@ public open class CfnFlow(
       override fun collector(): Any? = unwrap(this).getCollector()
 
       /**
-       * Contains configurations for a Condition node in your flow.
+       * Contains configurations for a condition node in your flow.
        *
        * Defines conditions that lead to different branches of the flow.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-condition)
        */
       override fun condition(): Any? = unwrap(this).getCondition()
+
+      /**
+       * Contains configurations for an inline code node in your flow.
+       *
+       * Inline code nodes let you write and execute code directly within your flow, enabling data
+       * transformations, custom logic, and integrations without needing an external Lambda function.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-inlinecode)
+       */
+      override fun inlineCode(): Any? = unwrap(this).getInlineCode()
 
       /**
        * Contains configurations for an input flow node in your flow.
@@ -2828,6 +3362,27 @@ public open class CfnFlow(
       override fun lex(): Any? = unwrap(this).getLex()
 
       /**
+       * Contains configurations for a DoWhile loop in your flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-loop)
+       */
+      override fun loop(): Any? = unwrap(this).getLoop()
+
+      /**
+       * Contains controller node configurations for a DoWhile loop in your flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-loopcontroller)
+       */
+      override fun loopController(): Any? = unwrap(this).getLoopController()
+
+      /**
+       * Contains input node configurations for a DoWhile loop in your flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-loopinput)
+       */
+      override fun loopInput(): Any? = unwrap(this).getLoopInput()
+
+      /**
        * Contains configurations for an output flow node in your flow.
        *
        * The last node in the flow. `outputs` can't be specified for this node.
@@ -2847,7 +3402,7 @@ public open class CfnFlow(
       override fun prompt(): Any? = unwrap(this).getPrompt()
 
       /**
-       * Contains configurations for a Retrieval node in your flow.
+       * Contains configurations for a retrieval node in your flow.
        *
        * Retrieves data from an Amazon S3 location and returns it as the output.
        *
@@ -2856,7 +3411,7 @@ public open class CfnFlow(
       override fun retrieval(): Any? = unwrap(this).getRetrieval()
 
       /**
-       * Contains configurations for a Storage node in your flow.
+       * Contains configurations for a storage node in your flow.
        *
        * Stores an input in an Amazon S3 location.
        *
@@ -2884,7 +3439,7 @@ public open class CfnFlow(
   }
 
   /**
-   * Contains configurations for an input to a node.
+   * Contains configurations for an input in an Amazon Bedrock Flows node.
    *
    * Example:
    *
@@ -2896,12 +3451,29 @@ public open class CfnFlow(
    * .expression("expression")
    * .name("name")
    * .type("type")
+   * // the properties below are optional
+   * .category("category")
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeinput.html)
    */
   public interface FlowNodeInputProperty {
+    /**
+     * Specifies how input data flows between iterations in a DoWhile loop.
+     *
+     * * `LoopCondition` - Controls whether the loop continues by evaluating condition expressions
+     * against the input data. Use this category to define the condition that determines if the loop
+     * should continue.
+     * * `ReturnValueToLoopStart` - Defines data to pass back to the start of the loop's next
+     * iteration. Use this category for variables that you want to update for each loop iteration.
+     * * `ExitLoop` - Defines the value that's available once the loop ends. Use this category to
+     * expose loop results to nodes outside the loop.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeinput.html#cfn-bedrock-flow-flownodeinput-category)
+     */
+    public fun category(): String? = unwrap(this).getCategory()
+
     /**
      * An expression that formats the input for the node.
      *
@@ -2913,14 +3485,14 @@ public open class CfnFlow(
     public fun expression(): String
 
     /**
-     * A name for the input that you can reference.
+     * Specifies a name for the input that you can reference.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeinput.html#cfn-bedrock-flow-flownodeinput-name)
      */
     public fun name(): String
 
     /**
-     * The data type of the input.
+     * Specifies the data type of the input.
      *
      * If the input doesn't match this type at runtime, a validation error will be thrown.
      *
@@ -2934,6 +3506,18 @@ public open class CfnFlow(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param category Specifies how input data flows between iterations in a DoWhile loop.
+       * * `LoopCondition` - Controls whether the loop continues by evaluating condition expressions
+       * against the input data. Use this category to define the condition that determines if the loop
+       * should continue.
+       * * `ReturnValueToLoopStart` - Defines data to pass back to the start of the loop's next
+       * iteration. Use this category for variables that you want to update for each loop iteration.
+       * * `ExitLoop` - Defines the value that's available once the loop ends. Use this category to
+       * expose loop results to nodes outside the loop.
+       */
+      public fun category(category: String)
+
+      /**
        * @param expression An expression that formats the input for the node. 
        * For an explanation of how to create expressions, see [Expressions in Prompt flows in Amazon
        * Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/flows-expressions.html) .
@@ -2941,12 +3525,12 @@ public open class CfnFlow(
       public fun expression(expression: String)
 
       /**
-       * @param name A name for the input that you can reference. 
+       * @param name Specifies a name for the input that you can reference. 
        */
       public fun name(name: String)
 
       /**
-       * @param type The data type of the input. 
+       * @param type Specifies the data type of the input. 
        * If the input doesn't match this type at runtime, a validation error will be thrown.
        */
       public fun type(type: String)
@@ -2958,6 +3542,20 @@ public open class CfnFlow(
           software.amazon.awscdk.services.bedrock.CfnFlow.FlowNodeInputProperty.builder()
 
       /**
+       * @param category Specifies how input data flows between iterations in a DoWhile loop.
+       * * `LoopCondition` - Controls whether the loop continues by evaluating condition expressions
+       * against the input data. Use this category to define the condition that determines if the loop
+       * should continue.
+       * * `ReturnValueToLoopStart` - Defines data to pass back to the start of the loop's next
+       * iteration. Use this category for variables that you want to update for each loop iteration.
+       * * `ExitLoop` - Defines the value that's available once the loop ends. Use this category to
+       * expose loop results to nodes outside the loop.
+       */
+      override fun category(category: String) {
+        cdkBuilder.category(category)
+      }
+
+      /**
        * @param expression An expression that formats the input for the node. 
        * For an explanation of how to create expressions, see [Expressions in Prompt flows in Amazon
        * Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/flows-expressions.html) .
@@ -2967,14 +3565,14 @@ public open class CfnFlow(
       }
 
       /**
-       * @param name A name for the input that you can reference. 
+       * @param name Specifies a name for the input that you can reference. 
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
       /**
-       * @param type The data type of the input. 
+       * @param type Specifies the data type of the input. 
        * If the input doesn't match this type at runtime, a validation error will be thrown.
        */
       override fun type(type: String) {
@@ -2990,6 +3588,21 @@ public open class CfnFlow(
     ) : CdkObject(cdkObject),
         FlowNodeInputProperty {
       /**
+       * Specifies how input data flows between iterations in a DoWhile loop.
+       *
+       * * `LoopCondition` - Controls whether the loop continues by evaluating condition expressions
+       * against the input data. Use this category to define the condition that determines if the loop
+       * should continue.
+       * * `ReturnValueToLoopStart` - Defines data to pass back to the start of the loop's next
+       * iteration. Use this category for variables that you want to update for each loop iteration.
+       * * `ExitLoop` - Defines the value that's available once the loop ends. Use this category to
+       * expose loop results to nodes outside the loop.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeinput.html#cfn-bedrock-flow-flownodeinput-category)
+       */
+      override fun category(): String? = unwrap(this).getCategory()
+
+      /**
        * An expression that formats the input for the node.
        *
        * For an explanation of how to create expressions, see [Expressions in Prompt flows in Amazon
@@ -3000,14 +3613,14 @@ public open class CfnFlow(
       override fun expression(): String = unwrap(this).getExpression()
 
       /**
-       * A name for the input that you can reference.
+       * Specifies a name for the input that you can reference.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeinput.html#cfn-bedrock-flow-flownodeinput-name)
        */
       override fun name(): String = unwrap(this).getName()
 
       /**
-       * The data type of the input.
+       * Specifies the data type of the input.
        *
        * If the input doesn't match this type at runtime, a validation error will be thrown.
        *
@@ -3157,9 +3770,12 @@ public open class CfnFlow(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object additionalModelRequestFields;
    * Object collector;
+   * FlowNodeProperty flowNodeProperty_;
    * Object input;
    * Object iterator;
+   * Object loopInput;
    * Object output;
    * FlowNodeProperty flowNodeProperty = FlowNodeProperty.builder()
    * .name("name")
@@ -3177,6 +3793,10 @@ public open class CfnFlow(
    * .expression("expression")
    * .build()))
    * .build())
+   * .inlineCode(InlineCodeFlowNodeConfigurationProperty.builder()
+   * .code("code")
+   * .language("language")
+   * .build())
    * .input(input)
    * .iterator(iterator)
    * .knowledgeBase(KnowledgeBaseFlowNodeConfigurationProperty.builder()
@@ -3186,7 +3806,61 @@ public open class CfnFlow(
    * .guardrailIdentifier("guardrailIdentifier")
    * .guardrailVersion("guardrailVersion")
    * .build())
+   * .inferenceConfiguration(PromptInferenceConfigurationProperty.builder()
+   * .text(PromptModelInferenceConfigurationProperty.builder()
+   * .maxTokens(123)
+   * .stopSequences(List.of("stopSequences"))
+   * .temperature(123)
+   * .topP(123)
+   * .build())
+   * .build())
    * .modelId("modelId")
+   * .numberOfResults(123)
+   * .orchestrationConfiguration(KnowledgeBaseOrchestrationConfigurationProperty.builder()
+   * .additionalModelRequestFields(additionalModelRequestFields)
+   * .inferenceConfig(PromptInferenceConfigurationProperty.builder()
+   * .text(PromptModelInferenceConfigurationProperty.builder()
+   * .maxTokens(123)
+   * .stopSequences(List.of("stopSequences"))
+   * .temperature(123)
+   * .topP(123)
+   * .build())
+   * .build())
+   * .performanceConfig(PerformanceConfigurationProperty.builder()
+   * .latency("latency")
+   * .build())
+   * .promptTemplate(KnowledgeBasePromptTemplateProperty.builder()
+   * .textPromptTemplate("textPromptTemplate")
+   * .build())
+   * .build())
+   * .promptTemplate(KnowledgeBasePromptTemplateProperty.builder()
+   * .textPromptTemplate("textPromptTemplate")
+   * .build())
+   * .rerankingConfiguration(VectorSearchRerankingConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .bedrockRerankingConfiguration(VectorSearchBedrockRerankingConfigurationProperty.builder()
+   * .modelConfiguration(VectorSearchBedrockRerankingModelConfigurationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .additionalModelRequestFields(additionalModelRequestFields)
+   * .build())
+   * // the properties below are optional
+   * .metadataConfiguration(MetadataConfigurationForRerankingProperty.builder()
+   * .selectionMode("selectionMode")
+   * // the properties below are optional
+   * .selectiveModeConfiguration(RerankingMetadataSelectiveModeConfigurationProperty.builder()
+   * .fieldsToExclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .fieldsToInclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .build())
+   * .build())
+   * .numberOfRerankedResults(123)
+   * .build())
+   * .build())
    * .build())
    * .lambdaFunction(LambdaFunctionFlowNodeConfigurationProperty.builder()
    * .lambdaArn("lambdaArn")
@@ -3195,6 +3869,37 @@ public open class CfnFlow(
    * .botAliasArn("botAliasArn")
    * .localeId("localeId")
    * .build())
+   * .loop(LoopFlowNodeConfigurationProperty.builder()
+   * .definition(FlowDefinitionProperty.builder()
+   * .connections(List.of(FlowConnectionProperty.builder()
+   * .name("name")
+   * .source("source")
+   * .target("target")
+   * .type("type")
+   * // the properties below are optional
+   * .configuration(FlowConnectionConfigurationProperty.builder()
+   * .conditional(FlowConditionalConnectionConfigurationProperty.builder()
+   * .condition("condition")
+   * .build())
+   * .data(FlowDataConnectionConfigurationProperty.builder()
+   * .sourceOutput("sourceOutput")
+   * .targetInput("targetInput")
+   * .build())
+   * .build())
+   * .build()))
+   * .nodes(List.of(flowNodeProperty_))
+   * .build())
+   * .build())
+   * .loopController(LoopControllerFlowNodeConfigurationProperty.builder()
+   * .continueCondition(FlowConditionProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .expression("expression")
+   * .build())
+   * // the properties below are optional
+   * .maxIterations(123)
+   * .build())
+   * .loopInput(loopInput)
    * .output(output)
    * .prompt(PromptFlowNodeConfigurationProperty.builder()
    * .sourceConfiguration(PromptFlowNodeSourceConfigurationProperty.builder()
@@ -3249,6 +3954,8 @@ public open class CfnFlow(
    * .expression("expression")
    * .name("name")
    * .type("type")
+   * // the properties below are optional
+   * .category("category")
    * .build()))
    * .outputs(List.of(FlowNodeOutputProperty.builder()
    * .name("name")
@@ -3721,13 +4428,10 @@ public open class CfnFlow(
   }
 
   /**
-   * Contains configurations for a knowledge base node in a flow.
+   * Contains configurations for an inline code node in your flow.
    *
-   * This node takes a query as the input and returns, as the output, the retrieved responses
-   * directly (as an array) or a response generated based on the retrieved responses. For more
-   * information, see [Node types in Amazon Bedrock
-   * works](https://docs.aws.amazon.com/bedrock/latest/userguide/flows-nodes.html) in the Amazon
-   * Bedrock User Guide.
+   * Inline code nodes let you write and execute code directly within your flow, enabling data
+   * transformations, custom logic, and integrations without needing an external Lambda function.
    *
    * Example:
    *
@@ -3735,6 +4439,153 @@ public open class CfnFlow(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * InlineCodeFlowNodeConfigurationProperty inlineCodeFlowNodeConfigurationProperty =
+   * InlineCodeFlowNodeConfigurationProperty.builder()
+   * .code("code")
+   * .language("language")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-inlinecodeflownodeconfiguration.html)
+   */
+  public interface InlineCodeFlowNodeConfigurationProperty {
+    /**
+     * The code that's executed in your inline code node.
+     *
+     * The code can access input data from previous nodes in the flow, perform operations on that
+     * data, and produce output that can be used by other nodes in your flow.
+     *
+     * The code must be valid in the programming `language` that you specify.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-inlinecodeflownodeconfiguration.html#cfn-bedrock-flow-inlinecodeflownodeconfiguration-code)
+     */
+    public fun code(): String
+
+    /**
+     * The programming language used by your inline code node.
+     *
+     * The code must be valid in the programming `language` that you specify. Currently, only Python
+     * 3 ( `Python_3` ) is supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-inlinecodeflownodeconfiguration.html#cfn-bedrock-flow-inlinecodeflownodeconfiguration-language)
+     */
+    public fun language(): String
+
+    /**
+     * A builder for [InlineCodeFlowNodeConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param code The code that's executed in your inline code node. 
+       * The code can access input data from previous nodes in the flow, perform operations on that
+       * data, and produce output that can be used by other nodes in your flow.
+       *
+       * The code must be valid in the programming `language` that you specify.
+       */
+      public fun code(code: String)
+
+      /**
+       * @param language The programming language used by your inline code node. 
+       * The code must be valid in the programming `language` that you specify. Currently, only
+       * Python 3 ( `Python_3` ) is supported.
+       */
+      public fun language(language: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnFlow.InlineCodeFlowNodeConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnFlow.InlineCodeFlowNodeConfigurationProperty.builder()
+
+      /**
+       * @param code The code that's executed in your inline code node. 
+       * The code can access input data from previous nodes in the flow, perform operations on that
+       * data, and produce output that can be used by other nodes in your flow.
+       *
+       * The code must be valid in the programming `language` that you specify.
+       */
+      override fun code(code: String) {
+        cdkBuilder.code(code)
+      }
+
+      /**
+       * @param language The programming language used by your inline code node. 
+       * The code must be valid in the programming `language` that you specify. Currently, only
+       * Python 3 ( `Python_3` ) is supported.
+       */
+      override fun language(language: String) {
+        cdkBuilder.language(language)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnFlow.InlineCodeFlowNodeConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.InlineCodeFlowNodeConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        InlineCodeFlowNodeConfigurationProperty {
+      /**
+       * The code that's executed in your inline code node.
+       *
+       * The code can access input data from previous nodes in the flow, perform operations on that
+       * data, and produce output that can be used by other nodes in your flow.
+       *
+       * The code must be valid in the programming `language` that you specify.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-inlinecodeflownodeconfiguration.html#cfn-bedrock-flow-inlinecodeflownodeconfiguration-code)
+       */
+      override fun code(): String = unwrap(this).getCode()
+
+      /**
+       * The programming language used by your inline code node.
+       *
+       * The code must be valid in the programming `language` that you specify. Currently, only
+       * Python 3 ( `Python_3` ) is supported.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-inlinecodeflownodeconfiguration.html#cfn-bedrock-flow-inlinecodeflownodeconfiguration-language)
+       */
+      override fun language(): String = unwrap(this).getLanguage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InlineCodeFlowNodeConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.InlineCodeFlowNodeConfigurationProperty):
+          InlineCodeFlowNodeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InlineCodeFlowNodeConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InlineCodeFlowNodeConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnFlow.InlineCodeFlowNodeConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnFlow.InlineCodeFlowNodeConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains configurations for a knowledge base node in a flow.
+   *
+   * This node takes a query as the input and returns, as the output, the retrieved responses
+   * directly (as an array) or a response generated based on the retrieved responses. For more
+   * information, see [Node types in a
+   * flow](https://docs.aws.amazon.com/bedrock/latest/userguide/flows-nodes.html) in the Amazon Bedrock
+   * User Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object additionalModelRequestFields;
    * KnowledgeBaseFlowNodeConfigurationProperty knowledgeBaseFlowNodeConfigurationProperty =
    * KnowledgeBaseFlowNodeConfigurationProperty.builder()
    * .knowledgeBaseId("knowledgeBaseId")
@@ -3743,7 +4594,61 @@ public open class CfnFlow(
    * .guardrailIdentifier("guardrailIdentifier")
    * .guardrailVersion("guardrailVersion")
    * .build())
+   * .inferenceConfiguration(PromptInferenceConfigurationProperty.builder()
+   * .text(PromptModelInferenceConfigurationProperty.builder()
+   * .maxTokens(123)
+   * .stopSequences(List.of("stopSequences"))
+   * .temperature(123)
+   * .topP(123)
+   * .build())
+   * .build())
    * .modelId("modelId")
+   * .numberOfResults(123)
+   * .orchestrationConfiguration(KnowledgeBaseOrchestrationConfigurationProperty.builder()
+   * .additionalModelRequestFields(additionalModelRequestFields)
+   * .inferenceConfig(PromptInferenceConfigurationProperty.builder()
+   * .text(PromptModelInferenceConfigurationProperty.builder()
+   * .maxTokens(123)
+   * .stopSequences(List.of("stopSequences"))
+   * .temperature(123)
+   * .topP(123)
+   * .build())
+   * .build())
+   * .performanceConfig(PerformanceConfigurationProperty.builder()
+   * .latency("latency")
+   * .build())
+   * .promptTemplate(KnowledgeBasePromptTemplateProperty.builder()
+   * .textPromptTemplate("textPromptTemplate")
+   * .build())
+   * .build())
+   * .promptTemplate(KnowledgeBasePromptTemplateProperty.builder()
+   * .textPromptTemplate("textPromptTemplate")
+   * .build())
+   * .rerankingConfiguration(VectorSearchRerankingConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .bedrockRerankingConfiguration(VectorSearchBedrockRerankingConfigurationProperty.builder()
+   * .modelConfiguration(VectorSearchBedrockRerankingModelConfigurationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .additionalModelRequestFields(additionalModelRequestFields)
+   * .build())
+   * // the properties below are optional
+   * .metadataConfiguration(MetadataConfigurationForRerankingProperty.builder()
+   * .selectionMode("selectionMode")
+   * // the properties below are optional
+   * .selectiveModeConfiguration(RerankingMetadataSelectiveModeConfigurationProperty.builder()
+   * .fieldsToExclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .fieldsToInclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .build())
+   * .build())
+   * .numberOfRerankedResults(123)
+   * .build())
+   * .build())
    * .build();
    * ```
    *
@@ -3757,6 +4662,13 @@ public open class CfnFlow(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-guardrailconfiguration)
      */
     public fun guardrailConfiguration(): Any? = unwrap(this).getGuardrailConfiguration()
+
+    /**
+     * Contains inference configurations for the prompt.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-inferenceconfiguration)
+     */
+    public fun inferenceConfiguration(): Any? = unwrap(this).getInferenceConfiguration()
 
     /**
      * The unique identifier of the knowledge base to query.
@@ -3774,6 +4686,36 @@ public open class CfnFlow(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-modelid)
      */
     public fun modelId(): String? = unwrap(this).getModelId()
+
+    /**
+     * The number of results to retrieve from the knowledge base.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-numberofresults)
+     */
+    public fun numberOfResults(): Number? = unwrap(this).getNumberOfResults()
+
+    /**
+     * The configuration for orchestrating the retrieval and generation process in the knowledge
+     * base node.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-orchestrationconfiguration)
+     */
+    public fun orchestrationConfiguration(): Any? = unwrap(this).getOrchestrationConfiguration()
+
+    /**
+     * A custom prompt template to use with the knowledge base for generating responses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-prompttemplate)
+     */
+    public fun promptTemplate(): Any? = unwrap(this).getPromptTemplate()
+
+    /**
+     * The configuration for reranking the retrieved results from the knowledge base to improve
+     * relevance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-rerankingconfiguration)
+     */
+    public fun rerankingConfiguration(): Any? = unwrap(this).getRerankingConfiguration()
 
     /**
      * A builder for [KnowledgeBaseFlowNodeConfigurationProperty]
@@ -3802,6 +4744,25 @@ public open class CfnFlow(
           fun guardrailConfiguration(guardrailConfiguration: GuardrailConfigurationProperty.Builder.() -> Unit)
 
       /**
+       * @param inferenceConfiguration Contains inference configurations for the prompt.
+       */
+      public fun inferenceConfiguration(inferenceConfiguration: IResolvable)
+
+      /**
+       * @param inferenceConfiguration Contains inference configurations for the prompt.
+       */
+      public
+          fun inferenceConfiguration(inferenceConfiguration: PromptInferenceConfigurationProperty)
+
+      /**
+       * @param inferenceConfiguration Contains inference configurations for the prompt.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("23cfa0c298ab890e2abaceaa03fed25a6a8a41cf2225a4de84c31cee5ee8ba8f")
+      public
+          fun inferenceConfiguration(inferenceConfiguration: PromptInferenceConfigurationProperty.Builder.() -> Unit)
+
+      /**
        * @param knowledgeBaseId The unique identifier of the knowledge base to query. 
        */
       public fun knowledgeBaseId(knowledgeBaseId: String)
@@ -3813,6 +4774,76 @@ public open class CfnFlow(
        * retrieved results as an array.
        */
       public fun modelId(modelId: String)
+
+      /**
+       * @param numberOfResults The number of results to retrieve from the knowledge base.
+       */
+      public fun numberOfResults(numberOfResults: Number)
+
+      /**
+       * @param orchestrationConfiguration The configuration for orchestrating the retrieval and
+       * generation process in the knowledge base node.
+       */
+      public fun orchestrationConfiguration(orchestrationConfiguration: IResolvable)
+
+      /**
+       * @param orchestrationConfiguration The configuration for orchestrating the retrieval and
+       * generation process in the knowledge base node.
+       */
+      public
+          fun orchestrationConfiguration(orchestrationConfiguration: KnowledgeBaseOrchestrationConfigurationProperty)
+
+      /**
+       * @param orchestrationConfiguration The configuration for orchestrating the retrieval and
+       * generation process in the knowledge base node.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("54d8b4ce56f7dc664dac5d290765b3dcba8ab58d29e2afccfe92cd5415e7b5c5")
+      public
+          fun orchestrationConfiguration(orchestrationConfiguration: KnowledgeBaseOrchestrationConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param promptTemplate A custom prompt template to use with the knowledge base for
+       * generating responses.
+       */
+      public fun promptTemplate(promptTemplate: IResolvable)
+
+      /**
+       * @param promptTemplate A custom prompt template to use with the knowledge base for
+       * generating responses.
+       */
+      public fun promptTemplate(promptTemplate: KnowledgeBasePromptTemplateProperty)
+
+      /**
+       * @param promptTemplate A custom prompt template to use with the knowledge base for
+       * generating responses.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e4f905d3da041534fa2ab6a1c91d7ff6a6a75e1dffb5f223c047683c58f12d45")
+      public
+          fun promptTemplate(promptTemplate: KnowledgeBasePromptTemplateProperty.Builder.() -> Unit)
+
+      /**
+       * @param rerankingConfiguration The configuration for reranking the retrieved results from
+       * the knowledge base to improve relevance.
+       */
+      public fun rerankingConfiguration(rerankingConfiguration: IResolvable)
+
+      /**
+       * @param rerankingConfiguration The configuration for reranking the retrieved results from
+       * the knowledge base to improve relevance.
+       */
+      public
+          fun rerankingConfiguration(rerankingConfiguration: VectorSearchRerankingConfigurationProperty)
+
+      /**
+       * @param rerankingConfiguration The configuration for reranking the retrieved results from
+       * the knowledge base to improve relevance.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c782ee9e643ff6354085037c8b6e3b388a7ac1f4acf0282fe6c727e8280dfc84")
+      public
+          fun rerankingConfiguration(rerankingConfiguration: VectorSearchRerankingConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3848,6 +4879,31 @@ public open class CfnFlow(
           Unit = guardrailConfiguration(GuardrailConfigurationProperty(guardrailConfiguration))
 
       /**
+       * @param inferenceConfiguration Contains inference configurations for the prompt.
+       */
+      override fun inferenceConfiguration(inferenceConfiguration: IResolvable) {
+        cdkBuilder.inferenceConfiguration(inferenceConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param inferenceConfiguration Contains inference configurations for the prompt.
+       */
+      override
+          fun inferenceConfiguration(inferenceConfiguration: PromptInferenceConfigurationProperty) {
+        cdkBuilder.inferenceConfiguration(inferenceConfiguration.let(PromptInferenceConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param inferenceConfiguration Contains inference configurations for the prompt.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("23cfa0c298ab890e2abaceaa03fed25a6a8a41cf2225a4de84c31cee5ee8ba8f")
+      override
+          fun inferenceConfiguration(inferenceConfiguration: PromptInferenceConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          inferenceConfiguration(PromptInferenceConfigurationProperty(inferenceConfiguration))
+
+      /**
        * @param knowledgeBaseId The unique identifier of the knowledge base to query. 
        */
       override fun knowledgeBaseId(knowledgeBaseId: String) {
@@ -3863,6 +4919,95 @@ public open class CfnFlow(
       override fun modelId(modelId: String) {
         cdkBuilder.modelId(modelId)
       }
+
+      /**
+       * @param numberOfResults The number of results to retrieve from the knowledge base.
+       */
+      override fun numberOfResults(numberOfResults: Number) {
+        cdkBuilder.numberOfResults(numberOfResults)
+      }
+
+      /**
+       * @param orchestrationConfiguration The configuration for orchestrating the retrieval and
+       * generation process in the knowledge base node.
+       */
+      override fun orchestrationConfiguration(orchestrationConfiguration: IResolvable) {
+        cdkBuilder.orchestrationConfiguration(orchestrationConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param orchestrationConfiguration The configuration for orchestrating the retrieval and
+       * generation process in the knowledge base node.
+       */
+      override
+          fun orchestrationConfiguration(orchestrationConfiguration: KnowledgeBaseOrchestrationConfigurationProperty) {
+        cdkBuilder.orchestrationConfiguration(orchestrationConfiguration.let(KnowledgeBaseOrchestrationConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param orchestrationConfiguration The configuration for orchestrating the retrieval and
+       * generation process in the knowledge base node.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("54d8b4ce56f7dc664dac5d290765b3dcba8ab58d29e2afccfe92cd5415e7b5c5")
+      override
+          fun orchestrationConfiguration(orchestrationConfiguration: KnowledgeBaseOrchestrationConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          orchestrationConfiguration(KnowledgeBaseOrchestrationConfigurationProperty(orchestrationConfiguration))
+
+      /**
+       * @param promptTemplate A custom prompt template to use with the knowledge base for
+       * generating responses.
+       */
+      override fun promptTemplate(promptTemplate: IResolvable) {
+        cdkBuilder.promptTemplate(promptTemplate.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param promptTemplate A custom prompt template to use with the knowledge base for
+       * generating responses.
+       */
+      override fun promptTemplate(promptTemplate: KnowledgeBasePromptTemplateProperty) {
+        cdkBuilder.promptTemplate(promptTemplate.let(KnowledgeBasePromptTemplateProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param promptTemplate A custom prompt template to use with the knowledge base for
+       * generating responses.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e4f905d3da041534fa2ab6a1c91d7ff6a6a75e1dffb5f223c047683c58f12d45")
+      override
+          fun promptTemplate(promptTemplate: KnowledgeBasePromptTemplateProperty.Builder.() -> Unit):
+          Unit = promptTemplate(KnowledgeBasePromptTemplateProperty(promptTemplate))
+
+      /**
+       * @param rerankingConfiguration The configuration for reranking the retrieved results from
+       * the knowledge base to improve relevance.
+       */
+      override fun rerankingConfiguration(rerankingConfiguration: IResolvable) {
+        cdkBuilder.rerankingConfiguration(rerankingConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param rerankingConfiguration The configuration for reranking the retrieved results from
+       * the knowledge base to improve relevance.
+       */
+      override
+          fun rerankingConfiguration(rerankingConfiguration: VectorSearchRerankingConfigurationProperty) {
+        cdkBuilder.rerankingConfiguration(rerankingConfiguration.let(VectorSearchRerankingConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param rerankingConfiguration The configuration for reranking the retrieved results from
+       * the knowledge base to improve relevance.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c782ee9e643ff6354085037c8b6e3b388a7ac1f4acf0282fe6c727e8280dfc84")
+      override
+          fun rerankingConfiguration(rerankingConfiguration: VectorSearchRerankingConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          rerankingConfiguration(VectorSearchRerankingConfigurationProperty(rerankingConfiguration))
 
       public fun build():
           software.amazon.awscdk.services.bedrock.CfnFlow.KnowledgeBaseFlowNodeConfigurationProperty
@@ -3882,6 +5027,13 @@ public open class CfnFlow(
       override fun guardrailConfiguration(): Any? = unwrap(this).getGuardrailConfiguration()
 
       /**
+       * Contains inference configurations for the prompt.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-inferenceconfiguration)
+       */
+      override fun inferenceConfiguration(): Any? = unwrap(this).getInferenceConfiguration()
+
+      /**
        * The unique identifier of the knowledge base to query.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-knowledgebaseid)
@@ -3897,6 +5049,36 @@ public open class CfnFlow(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-modelid)
        */
       override fun modelId(): String? = unwrap(this).getModelId()
+
+      /**
+       * The number of results to retrieve from the knowledge base.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-numberofresults)
+       */
+      override fun numberOfResults(): Number? = unwrap(this).getNumberOfResults()
+
+      /**
+       * The configuration for orchestrating the retrieval and generation process in the knowledge
+       * base node.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-orchestrationconfiguration)
+       */
+      override fun orchestrationConfiguration(): Any? = unwrap(this).getOrchestrationConfiguration()
+
+      /**
+       * A custom prompt template to use with the knowledge base for generating responses.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-prompttemplate)
+       */
+      override fun promptTemplate(): Any? = unwrap(this).getPromptTemplate()
+
+      /**
+       * The configuration for reranking the retrieved results from the knowledge base to improve
+       * relevance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-rerankingconfiguration)
+       */
+      override fun rerankingConfiguration(): Any? = unwrap(this).getRerankingConfiguration()
     }
 
     public companion object {
@@ -3919,12 +5101,382 @@ public open class CfnFlow(
   }
 
   /**
+   * Configures how the knowledge base orchestrates the retrieval and generation process, allowing
+   * for customization of prompts, inference parameters, and performance settings.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object additionalModelRequestFields;
+   * KnowledgeBaseOrchestrationConfigurationProperty knowledgeBaseOrchestrationConfigurationProperty
+   * = KnowledgeBaseOrchestrationConfigurationProperty.builder()
+   * .additionalModelRequestFields(additionalModelRequestFields)
+   * .inferenceConfig(PromptInferenceConfigurationProperty.builder()
+   * .text(PromptModelInferenceConfigurationProperty.builder()
+   * .maxTokens(123)
+   * .stopSequences(List.of("stopSequences"))
+   * .temperature(123)
+   * .topP(123)
+   * .build())
+   * .build())
+   * .performanceConfig(PerformanceConfigurationProperty.builder()
+   * .latency("latency")
+   * .build())
+   * .promptTemplate(KnowledgeBasePromptTemplateProperty.builder()
+   * .textPromptTemplate("textPromptTemplate")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseorchestrationconfiguration.html)
+   */
+  public interface KnowledgeBaseOrchestrationConfigurationProperty {
+    /**
+     * The additional model-specific request parameters as key-value pairs to be included in the
+     * request to the foundation model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseorchestrationconfiguration.html#cfn-bedrock-flow-knowledgebaseorchestrationconfiguration-additionalmodelrequestfields)
+     */
+    public fun additionalModelRequestFields(): Any? = unwrap(this).getAdditionalModelRequestFields()
+
+    /**
+     * Contains inference configurations for the prompt.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseorchestrationconfiguration.html#cfn-bedrock-flow-knowledgebaseorchestrationconfiguration-inferenceconfig)
+     */
+    public fun inferenceConfig(): Any? = unwrap(this).getInferenceConfig()
+
+    /**
+     * The performance configuration options for the knowledge base retrieval and generation
+     * process.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseorchestrationconfiguration.html#cfn-bedrock-flow-knowledgebaseorchestrationconfiguration-performanceconfig)
+     */
+    public fun performanceConfig(): Any? = unwrap(this).getPerformanceConfig()
+
+    /**
+     * A custom prompt template for orchestrating the retrieval and generation process.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseorchestrationconfiguration.html#cfn-bedrock-flow-knowledgebaseorchestrationconfiguration-prompttemplate)
+     */
+    public fun promptTemplate(): Any? = unwrap(this).getPromptTemplate()
+
+    /**
+     * A builder for [KnowledgeBaseOrchestrationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param additionalModelRequestFields The additional model-specific request parameters as
+       * key-value pairs to be included in the request to the foundation model.
+       */
+      public fun additionalModelRequestFields(additionalModelRequestFields: Any)
+
+      /**
+       * @param inferenceConfig Contains inference configurations for the prompt.
+       */
+      public fun inferenceConfig(inferenceConfig: IResolvable)
+
+      /**
+       * @param inferenceConfig Contains inference configurations for the prompt.
+       */
+      public fun inferenceConfig(inferenceConfig: PromptInferenceConfigurationProperty)
+
+      /**
+       * @param inferenceConfig Contains inference configurations for the prompt.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f2117397d6e54f78cb925394ef40d9aa9d297a158f499eaa881c633fa47c98ae")
+      public
+          fun inferenceConfig(inferenceConfig: PromptInferenceConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param performanceConfig The performance configuration options for the knowledge base
+       * retrieval and generation process.
+       */
+      public fun performanceConfig(performanceConfig: IResolvable)
+
+      /**
+       * @param performanceConfig The performance configuration options for the knowledge base
+       * retrieval and generation process.
+       */
+      public fun performanceConfig(performanceConfig: PerformanceConfigurationProperty)
+
+      /**
+       * @param performanceConfig The performance configuration options for the knowledge base
+       * retrieval and generation process.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5c30ee2693f330709dbcf3facfb2238c938b7b4b562278eb3d29573d57048fe2")
+      public
+          fun performanceConfig(performanceConfig: PerformanceConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param promptTemplate A custom prompt template for orchestrating the retrieval and
+       * generation process.
+       */
+      public fun promptTemplate(promptTemplate: IResolvable)
+
+      /**
+       * @param promptTemplate A custom prompt template for orchestrating the retrieval and
+       * generation process.
+       */
+      public fun promptTemplate(promptTemplate: KnowledgeBasePromptTemplateProperty)
+
+      /**
+       * @param promptTemplate A custom prompt template for orchestrating the retrieval and
+       * generation process.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ad4e65e4e8e619b235ec8dd310f70057007750f2604cd7f42914d1347684753d")
+      public
+          fun promptTemplate(promptTemplate: KnowledgeBasePromptTemplateProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnFlow.KnowledgeBaseOrchestrationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnFlow.KnowledgeBaseOrchestrationConfigurationProperty.builder()
+
+      /**
+       * @param additionalModelRequestFields The additional model-specific request parameters as
+       * key-value pairs to be included in the request to the foundation model.
+       */
+      override fun additionalModelRequestFields(additionalModelRequestFields: Any) {
+        cdkBuilder.additionalModelRequestFields(additionalModelRequestFields)
+      }
+
+      /**
+       * @param inferenceConfig Contains inference configurations for the prompt.
+       */
+      override fun inferenceConfig(inferenceConfig: IResolvable) {
+        cdkBuilder.inferenceConfig(inferenceConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param inferenceConfig Contains inference configurations for the prompt.
+       */
+      override fun inferenceConfig(inferenceConfig: PromptInferenceConfigurationProperty) {
+        cdkBuilder.inferenceConfig(inferenceConfig.let(PromptInferenceConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param inferenceConfig Contains inference configurations for the prompt.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f2117397d6e54f78cb925394ef40d9aa9d297a158f499eaa881c633fa47c98ae")
+      override
+          fun inferenceConfig(inferenceConfig: PromptInferenceConfigurationProperty.Builder.() -> Unit):
+          Unit = inferenceConfig(PromptInferenceConfigurationProperty(inferenceConfig))
+
+      /**
+       * @param performanceConfig The performance configuration options for the knowledge base
+       * retrieval and generation process.
+       */
+      override fun performanceConfig(performanceConfig: IResolvable) {
+        cdkBuilder.performanceConfig(performanceConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param performanceConfig The performance configuration options for the knowledge base
+       * retrieval and generation process.
+       */
+      override fun performanceConfig(performanceConfig: PerformanceConfigurationProperty) {
+        cdkBuilder.performanceConfig(performanceConfig.let(PerformanceConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param performanceConfig The performance configuration options for the knowledge base
+       * retrieval and generation process.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5c30ee2693f330709dbcf3facfb2238c938b7b4b562278eb3d29573d57048fe2")
+      override
+          fun performanceConfig(performanceConfig: PerformanceConfigurationProperty.Builder.() -> Unit):
+          Unit = performanceConfig(PerformanceConfigurationProperty(performanceConfig))
+
+      /**
+       * @param promptTemplate A custom prompt template for orchestrating the retrieval and
+       * generation process.
+       */
+      override fun promptTemplate(promptTemplate: IResolvable) {
+        cdkBuilder.promptTemplate(promptTemplate.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param promptTemplate A custom prompt template for orchestrating the retrieval and
+       * generation process.
+       */
+      override fun promptTemplate(promptTemplate: KnowledgeBasePromptTemplateProperty) {
+        cdkBuilder.promptTemplate(promptTemplate.let(KnowledgeBasePromptTemplateProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param promptTemplate A custom prompt template for orchestrating the retrieval and
+       * generation process.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ad4e65e4e8e619b235ec8dd310f70057007750f2604cd7f42914d1347684753d")
+      override
+          fun promptTemplate(promptTemplate: KnowledgeBasePromptTemplateProperty.Builder.() -> Unit):
+          Unit = promptTemplate(KnowledgeBasePromptTemplateProperty(promptTemplate))
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnFlow.KnowledgeBaseOrchestrationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.KnowledgeBaseOrchestrationConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        KnowledgeBaseOrchestrationConfigurationProperty {
+      /**
+       * The additional model-specific request parameters as key-value pairs to be included in the
+       * request to the foundation model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseorchestrationconfiguration.html#cfn-bedrock-flow-knowledgebaseorchestrationconfiguration-additionalmodelrequestfields)
+       */
+      override fun additionalModelRequestFields(): Any? =
+          unwrap(this).getAdditionalModelRequestFields()
+
+      /**
+       * Contains inference configurations for the prompt.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseorchestrationconfiguration.html#cfn-bedrock-flow-knowledgebaseorchestrationconfiguration-inferenceconfig)
+       */
+      override fun inferenceConfig(): Any? = unwrap(this).getInferenceConfig()
+
+      /**
+       * The performance configuration options for the knowledge base retrieval and generation
+       * process.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseorchestrationconfiguration.html#cfn-bedrock-flow-knowledgebaseorchestrationconfiguration-performanceconfig)
+       */
+      override fun performanceConfig(): Any? = unwrap(this).getPerformanceConfig()
+
+      /**
+       * A custom prompt template for orchestrating the retrieval and generation process.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseorchestrationconfiguration.html#cfn-bedrock-flow-knowledgebaseorchestrationconfiguration-prompttemplate)
+       */
+      override fun promptTemplate(): Any? = unwrap(this).getPromptTemplate()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          KnowledgeBaseOrchestrationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.KnowledgeBaseOrchestrationConfigurationProperty):
+          KnowledgeBaseOrchestrationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KnowledgeBaseOrchestrationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KnowledgeBaseOrchestrationConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnFlow.KnowledgeBaseOrchestrationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnFlow.KnowledgeBaseOrchestrationConfigurationProperty
+    }
+  }
+
+  /**
+   * Defines a custom prompt template for orchestrating the retrieval and generation process.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * KnowledgeBasePromptTemplateProperty knowledgeBasePromptTemplateProperty =
+   * KnowledgeBasePromptTemplateProperty.builder()
+   * .textPromptTemplate("textPromptTemplate")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseprompttemplate.html)
+   */
+  public interface KnowledgeBasePromptTemplateProperty {
+    /**
+     * The text of the prompt template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseprompttemplate.html#cfn-bedrock-flow-knowledgebaseprompttemplate-textprompttemplate)
+     */
+    public fun textPromptTemplate(): String
+
+    /**
+     * A builder for [KnowledgeBasePromptTemplateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param textPromptTemplate The text of the prompt template. 
+       */
+      public fun textPromptTemplate(textPromptTemplate: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnFlow.KnowledgeBasePromptTemplateProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnFlow.KnowledgeBasePromptTemplateProperty.builder()
+
+      /**
+       * @param textPromptTemplate The text of the prompt template. 
+       */
+      override fun textPromptTemplate(textPromptTemplate: String) {
+        cdkBuilder.textPromptTemplate(textPromptTemplate)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnFlow.KnowledgeBasePromptTemplateProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.KnowledgeBasePromptTemplateProperty,
+    ) : CdkObject(cdkObject),
+        KnowledgeBasePromptTemplateProperty {
+      /**
+       * The text of the prompt template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseprompttemplate.html#cfn-bedrock-flow-knowledgebaseprompttemplate-textprompttemplate)
+       */
+      override fun textPromptTemplate(): String = unwrap(this).getTextPromptTemplate()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          KnowledgeBasePromptTemplateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.KnowledgeBasePromptTemplateProperty):
+          KnowledgeBasePromptTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KnowledgeBasePromptTemplateProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: KnowledgeBasePromptTemplateProperty):
+          software.amazon.awscdk.services.bedrock.CfnFlow.KnowledgeBasePromptTemplateProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnFlow.KnowledgeBasePromptTemplateProperty
+    }
+  }
+
+  /**
    * Contains configurations for a Lambda function node in the flow.
    *
    * You specify the Lambda function to invoke and the inputs into the function. The output is the
-   * response that is defined in the Lambda function. For more information, see [Node types in Amazon
-   * Bedrock works](https://docs.aws.amazon.com/bedrock/latest/userguide/flows-nodes.html) in the
-   * Amazon Bedrock User Guide.
+   * response that is defined in the Lambda function. For more information, see [Node types in a
+   * flow](https://docs.aws.amazon.com/bedrock/latest/userguide/flows-nodes.html) in the Amazon Bedrock
+   * User Guide.
    *
    * Example:
    *
@@ -4013,8 +5565,8 @@ public open class CfnFlow(
    *
    * You specify a Amazon Lex bot to invoke. This node takes an utterance as the input and returns
    * as the output the intent identified by the Amazon Lex bot. For more information, see [Node types
-   * in Amazon Bedrock works](https://docs.aws.amazon.com/bedrock/latest/userguide/flows-nodes.html) in
-   * the Amazon Bedrock User Guide.
+   * in a flow](https://docs.aws.amazon.com/bedrock/latest/userguide/flows-nodes.html) in the Amazon
+   * Bedrock User Guide.
    *
    * Example:
    *
@@ -4124,13 +5676,773 @@ public open class CfnFlow(
   }
 
   /**
+   * Contains configurations for the controller node of a DoWhile loop in the flow.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * LoopControllerFlowNodeConfigurationProperty loopControllerFlowNodeConfigurationProperty =
+   * LoopControllerFlowNodeConfigurationProperty.builder()
+   * .continueCondition(FlowConditionProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .expression("expression")
+   * .build())
+   * // the properties below are optional
+   * .maxIterations(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-loopcontrollerflownodeconfiguration.html)
+   */
+  public interface LoopControllerFlowNodeConfigurationProperty {
+    /**
+     * Specifies the condition that determines when the flow exits the DoWhile loop.
+     *
+     * The loop executes until this condition evaluates to true.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-loopcontrollerflownodeconfiguration.html#cfn-bedrock-flow-loopcontrollerflownodeconfiguration-continuecondition)
+     */
+    public fun continueCondition(): Any
+
+    /**
+     * Specifies the maximum number of times the DoWhile loop can iterate before the flow exits the
+     * loop.
+     *
+     * Default: - 10
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-loopcontrollerflownodeconfiguration.html#cfn-bedrock-flow-loopcontrollerflownodeconfiguration-maxiterations)
+     */
+    public fun maxIterations(): Number? = unwrap(this).getMaxIterations()
+
+    /**
+     * A builder for [LoopControllerFlowNodeConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param continueCondition Specifies the condition that determines when the flow exits the
+       * DoWhile loop. 
+       * The loop executes until this condition evaluates to true.
+       */
+      public fun continueCondition(continueCondition: IResolvable)
+
+      /**
+       * @param continueCondition Specifies the condition that determines when the flow exits the
+       * DoWhile loop. 
+       * The loop executes until this condition evaluates to true.
+       */
+      public fun continueCondition(continueCondition: FlowConditionProperty)
+
+      /**
+       * @param continueCondition Specifies the condition that determines when the flow exits the
+       * DoWhile loop. 
+       * The loop executes until this condition evaluates to true.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5b62656d8db53854344415aa8c6010786cafc33394b56ea859e77c2ac67cea9c")
+      public fun continueCondition(continueCondition: FlowConditionProperty.Builder.() -> Unit)
+
+      /**
+       * @param maxIterations Specifies the maximum number of times the DoWhile loop can iterate
+       * before the flow exits the loop.
+       */
+      public fun maxIterations(maxIterations: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnFlow.LoopControllerFlowNodeConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnFlow.LoopControllerFlowNodeConfigurationProperty.builder()
+
+      /**
+       * @param continueCondition Specifies the condition that determines when the flow exits the
+       * DoWhile loop. 
+       * The loop executes until this condition evaluates to true.
+       */
+      override fun continueCondition(continueCondition: IResolvable) {
+        cdkBuilder.continueCondition(continueCondition.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param continueCondition Specifies the condition that determines when the flow exits the
+       * DoWhile loop. 
+       * The loop executes until this condition evaluates to true.
+       */
+      override fun continueCondition(continueCondition: FlowConditionProperty) {
+        cdkBuilder.continueCondition(continueCondition.let(FlowConditionProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param continueCondition Specifies the condition that determines when the flow exits the
+       * DoWhile loop. 
+       * The loop executes until this condition evaluates to true.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5b62656d8db53854344415aa8c6010786cafc33394b56ea859e77c2ac67cea9c")
+      override fun continueCondition(continueCondition: FlowConditionProperty.Builder.() -> Unit):
+          Unit = continueCondition(FlowConditionProperty(continueCondition))
+
+      /**
+       * @param maxIterations Specifies the maximum number of times the DoWhile loop can iterate
+       * before the flow exits the loop.
+       */
+      override fun maxIterations(maxIterations: Number) {
+        cdkBuilder.maxIterations(maxIterations)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnFlow.LoopControllerFlowNodeConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.LoopControllerFlowNodeConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        LoopControllerFlowNodeConfigurationProperty {
+      /**
+       * Specifies the condition that determines when the flow exits the DoWhile loop.
+       *
+       * The loop executes until this condition evaluates to true.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-loopcontrollerflownodeconfiguration.html#cfn-bedrock-flow-loopcontrollerflownodeconfiguration-continuecondition)
+       */
+      override fun continueCondition(): Any = unwrap(this).getContinueCondition()
+
+      /**
+       * Specifies the maximum number of times the DoWhile loop can iterate before the flow exits
+       * the loop.
+       *
+       * Default: - 10
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-loopcontrollerflownodeconfiguration.html#cfn-bedrock-flow-loopcontrollerflownodeconfiguration-maxiterations)
+       */
+      override fun maxIterations(): Number? = unwrap(this).getMaxIterations()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LoopControllerFlowNodeConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.LoopControllerFlowNodeConfigurationProperty):
+          LoopControllerFlowNodeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoopControllerFlowNodeConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LoopControllerFlowNodeConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnFlow.LoopControllerFlowNodeConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnFlow.LoopControllerFlowNodeConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains configurations for the nodes of a DoWhile loop in your flow.
+   *
+   * A DoWhile loop is made up of the following nodes:
+   *
+   * * `Loop` - The container node that holds the loop's flow definition. This node encompasses the
+   * entire loop structure.
+   * * `LoopInput` - The entry point node for the loop. This node receives inputs from nodes outside
+   * the loop and from previous loop iterations.
+   * * Body nodes - The processing nodes that execute within each loop iteration. These can be nodes
+   * for handling data in your flow, such as a prompt or Lambda function nodes. Some node types aren't
+   * supported inside a DoWhile loop body. For more information, see
+   * [LoopIncompatibleNodeTypeFlowValidationDetails](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_LoopIncompatibleNodeTypeFlowValidationDetails.html)
+   * .
+   * * `LoopController` - The node that evaluates whether the loop should continue or exit based on
+   * a condition.
+   *
+   * These nodes work together to create a loop that runs at least once and continues until a
+   * specified condition is met or a maximum number of iterations is reached.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object additionalModelRequestFields;
+   * Object collector;
+   * Object input;
+   * Object iterator;
+   * LoopFlowNodeConfigurationProperty loopFlowNodeConfigurationProperty_;
+   * Object loopInput;
+   * Object output;
+   * LoopFlowNodeConfigurationProperty loopFlowNodeConfigurationProperty =
+   * LoopFlowNodeConfigurationProperty.builder()
+   * .definition(FlowDefinitionProperty.builder()
+   * .connections(List.of(FlowConnectionProperty.builder()
+   * .name("name")
+   * .source("source")
+   * .target("target")
+   * .type("type")
+   * // the properties below are optional
+   * .configuration(FlowConnectionConfigurationProperty.builder()
+   * .conditional(FlowConditionalConnectionConfigurationProperty.builder()
+   * .condition("condition")
+   * .build())
+   * .data(FlowDataConnectionConfigurationProperty.builder()
+   * .sourceOutput("sourceOutput")
+   * .targetInput("targetInput")
+   * .build())
+   * .build())
+   * .build()))
+   * .nodes(List.of(FlowNodeProperty.builder()
+   * .name("name")
+   * .type("type")
+   * // the properties below are optional
+   * .configuration(FlowNodeConfigurationProperty.builder()
+   * .agent(AgentFlowNodeConfigurationProperty.builder()
+   * .agentAliasArn("agentAliasArn")
+   * .build())
+   * .collector(collector)
+   * .condition(ConditionFlowNodeConfigurationProperty.builder()
+   * .conditions(List.of(FlowConditionProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .expression("expression")
+   * .build()))
+   * .build())
+   * .inlineCode(InlineCodeFlowNodeConfigurationProperty.builder()
+   * .code("code")
+   * .language("language")
+   * .build())
+   * .input(input)
+   * .iterator(iterator)
+   * .knowledgeBase(KnowledgeBaseFlowNodeConfigurationProperty.builder()
+   * .knowledgeBaseId("knowledgeBaseId")
+   * // the properties below are optional
+   * .guardrailConfiguration(GuardrailConfigurationProperty.builder()
+   * .guardrailIdentifier("guardrailIdentifier")
+   * .guardrailVersion("guardrailVersion")
+   * .build())
+   * .inferenceConfiguration(PromptInferenceConfigurationProperty.builder()
+   * .text(PromptModelInferenceConfigurationProperty.builder()
+   * .maxTokens(123)
+   * .stopSequences(List.of("stopSequences"))
+   * .temperature(123)
+   * .topP(123)
+   * .build())
+   * .build())
+   * .modelId("modelId")
+   * .numberOfResults(123)
+   * .orchestrationConfiguration(KnowledgeBaseOrchestrationConfigurationProperty.builder()
+   * .additionalModelRequestFields(additionalModelRequestFields)
+   * .inferenceConfig(PromptInferenceConfigurationProperty.builder()
+   * .text(PromptModelInferenceConfigurationProperty.builder()
+   * .maxTokens(123)
+   * .stopSequences(List.of("stopSequences"))
+   * .temperature(123)
+   * .topP(123)
+   * .build())
+   * .build())
+   * .performanceConfig(PerformanceConfigurationProperty.builder()
+   * .latency("latency")
+   * .build())
+   * .promptTemplate(KnowledgeBasePromptTemplateProperty.builder()
+   * .textPromptTemplate("textPromptTemplate")
+   * .build())
+   * .build())
+   * .promptTemplate(KnowledgeBasePromptTemplateProperty.builder()
+   * .textPromptTemplate("textPromptTemplate")
+   * .build())
+   * .rerankingConfiguration(VectorSearchRerankingConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .bedrockRerankingConfiguration(VectorSearchBedrockRerankingConfigurationProperty.builder()
+   * .modelConfiguration(VectorSearchBedrockRerankingModelConfigurationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .additionalModelRequestFields(additionalModelRequestFields)
+   * .build())
+   * // the properties below are optional
+   * .metadataConfiguration(MetadataConfigurationForRerankingProperty.builder()
+   * .selectionMode("selectionMode")
+   * // the properties below are optional
+   * .selectiveModeConfiguration(RerankingMetadataSelectiveModeConfigurationProperty.builder()
+   * .fieldsToExclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .fieldsToInclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .build())
+   * .build())
+   * .numberOfRerankedResults(123)
+   * .build())
+   * .build())
+   * .build())
+   * .lambdaFunction(LambdaFunctionFlowNodeConfigurationProperty.builder()
+   * .lambdaArn("lambdaArn")
+   * .build())
+   * .lex(LexFlowNodeConfigurationProperty.builder()
+   * .botAliasArn("botAliasArn")
+   * .localeId("localeId")
+   * .build())
+   * .loop(loopFlowNodeConfigurationProperty_)
+   * .loopController(LoopControllerFlowNodeConfigurationProperty.builder()
+   * .continueCondition(FlowConditionProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .expression("expression")
+   * .build())
+   * // the properties below are optional
+   * .maxIterations(123)
+   * .build())
+   * .loopInput(loopInput)
+   * .output(output)
+   * .prompt(PromptFlowNodeConfigurationProperty.builder()
+   * .sourceConfiguration(PromptFlowNodeSourceConfigurationProperty.builder()
+   * .inline(PromptFlowNodeInlineConfigurationProperty.builder()
+   * .modelId("modelId")
+   * .templateConfiguration(PromptTemplateConfigurationProperty.builder()
+   * .text(TextPromptTemplateConfigurationProperty.builder()
+   * .text("text")
+   * // the properties below are optional
+   * .inputVariables(List.of(PromptInputVariableProperty.builder()
+   * .name("name")
+   * .build()))
+   * .build())
+   * .build())
+   * .templateType("templateType")
+   * // the properties below are optional
+   * .inferenceConfiguration(PromptInferenceConfigurationProperty.builder()
+   * .text(PromptModelInferenceConfigurationProperty.builder()
+   * .maxTokens(123)
+   * .stopSequences(List.of("stopSequences"))
+   * .temperature(123)
+   * .topP(123)
+   * .build())
+   * .build())
+   * .build())
+   * .resource(PromptFlowNodeResourceConfigurationProperty.builder()
+   * .promptArn("promptArn")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .guardrailConfiguration(GuardrailConfigurationProperty.builder()
+   * .guardrailIdentifier("guardrailIdentifier")
+   * .guardrailVersion("guardrailVersion")
+   * .build())
+   * .build())
+   * .retrieval(RetrievalFlowNodeConfigurationProperty.builder()
+   * .serviceConfiguration(RetrievalFlowNodeServiceConfigurationProperty.builder()
+   * .s3(RetrievalFlowNodeS3ConfigurationProperty.builder()
+   * .bucketName("bucketName")
+   * .build())
+   * .build())
+   * .build())
+   * .storage(StorageFlowNodeConfigurationProperty.builder()
+   * .serviceConfiguration(StorageFlowNodeServiceConfigurationProperty.builder()
+   * .s3(StorageFlowNodeS3ConfigurationProperty.builder()
+   * .bucketName("bucketName")
+   * .build())
+   * .build())
+   * .build())
+   * .build())
+   * .inputs(List.of(FlowNodeInputProperty.builder()
+   * .expression("expression")
+   * .name("name")
+   * .type("type")
+   * // the properties below are optional
+   * .category("category")
+   * .build()))
+   * .outputs(List.of(FlowNodeOutputProperty.builder()
+   * .name("name")
+   * .type("type")
+   * .build()))
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-loopflownodeconfiguration.html)
+   */
+  public interface LoopFlowNodeConfigurationProperty {
+    /**
+     * The definition of the DoWhile loop nodes and connections between nodes in the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-loopflownodeconfiguration.html#cfn-bedrock-flow-loopflownodeconfiguration-definition)
+     */
+    public fun definition(): Any
+
+    /**
+     * A builder for [LoopFlowNodeConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param definition The definition of the DoWhile loop nodes and connections between nodes in
+       * the flow. 
+       */
+      public fun definition(definition: IResolvable)
+
+      /**
+       * @param definition The definition of the DoWhile loop nodes and connections between nodes in
+       * the flow. 
+       */
+      public fun definition(definition: FlowDefinitionProperty)
+
+      /**
+       * @param definition The definition of the DoWhile loop nodes and connections between nodes in
+       * the flow. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("435c9ec9667d889302489b3caed78ff3d0c6954e1ac19afe7bc518f033aed4ef")
+      public fun definition(definition: FlowDefinitionProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnFlow.LoopFlowNodeConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnFlow.LoopFlowNodeConfigurationProperty.builder()
+
+      /**
+       * @param definition The definition of the DoWhile loop nodes and connections between nodes in
+       * the flow. 
+       */
+      override fun definition(definition: IResolvable) {
+        cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param definition The definition of the DoWhile loop nodes and connections between nodes in
+       * the flow. 
+       */
+      override fun definition(definition: FlowDefinitionProperty) {
+        cdkBuilder.definition(definition.let(FlowDefinitionProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param definition The definition of the DoWhile loop nodes and connections between nodes in
+       * the flow. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("435c9ec9667d889302489b3caed78ff3d0c6954e1ac19afe7bc518f033aed4ef")
+      override fun definition(definition: FlowDefinitionProperty.Builder.() -> Unit): Unit =
+          definition(FlowDefinitionProperty(definition))
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnFlow.LoopFlowNodeConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.LoopFlowNodeConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        LoopFlowNodeConfigurationProperty {
+      /**
+       * The definition of the DoWhile loop nodes and connections between nodes in the flow.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-loopflownodeconfiguration.html#cfn-bedrock-flow-loopflownodeconfiguration-definition)
+       */
+      override fun definition(): Any = unwrap(this).getDefinition()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LoopFlowNodeConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.LoopFlowNodeConfigurationProperty):
+          LoopFlowNodeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoopFlowNodeConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LoopFlowNodeConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnFlow.LoopFlowNodeConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnFlow.LoopFlowNodeConfigurationProperty
+    }
+  }
+
+  /**
+   * Configuration for how metadata should be used during the reranking process in Knowledge Base
+   * vector searches.
+   *
+   * This determines which metadata fields are included or excluded when reordering search results.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * MetadataConfigurationForRerankingProperty metadataConfigurationForRerankingProperty =
+   * MetadataConfigurationForRerankingProperty.builder()
+   * .selectionMode("selectionMode")
+   * // the properties below are optional
+   * .selectiveModeConfiguration(RerankingMetadataSelectiveModeConfigurationProperty.builder()
+   * .fieldsToExclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .fieldsToInclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-metadataconfigurationforreranking.html)
+   */
+  public interface MetadataConfigurationForRerankingProperty {
+    /**
+     * The mode for selecting which metadata fields to include in the reranking process.
+     *
+     * Valid values are ALL (use all available metadata fields) or SELECTIVE (use only specified
+     * fields).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-metadataconfigurationforreranking.html#cfn-bedrock-flow-metadataconfigurationforreranking-selectionmode)
+     */
+    public fun selectionMode(): String
+
+    /**
+     * Configuration for selective mode, which allows you to explicitly include or exclude specific
+     * metadata fields during reranking.
+     *
+     * This is only used when selectionMode is set to SELECTIVE.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-metadataconfigurationforreranking.html#cfn-bedrock-flow-metadataconfigurationforreranking-selectivemodeconfiguration)
+     */
+    public fun selectiveModeConfiguration(): Any? = unwrap(this).getSelectiveModeConfiguration()
+
+    /**
+     * A builder for [MetadataConfigurationForRerankingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param selectionMode The mode for selecting which metadata fields to include in the
+       * reranking process. 
+       * Valid values are ALL (use all available metadata fields) or SELECTIVE (use only specified
+       * fields).
+       */
+      public fun selectionMode(selectionMode: String)
+
+      /**
+       * @param selectiveModeConfiguration Configuration for selective mode, which allows you to
+       * explicitly include or exclude specific metadata fields during reranking.
+       * This is only used when selectionMode is set to SELECTIVE.
+       */
+      public fun selectiveModeConfiguration(selectiveModeConfiguration: IResolvable)
+
+      /**
+       * @param selectiveModeConfiguration Configuration for selective mode, which allows you to
+       * explicitly include or exclude specific metadata fields during reranking.
+       * This is only used when selectionMode is set to SELECTIVE.
+       */
+      public
+          fun selectiveModeConfiguration(selectiveModeConfiguration: RerankingMetadataSelectiveModeConfigurationProperty)
+
+      /**
+       * @param selectiveModeConfiguration Configuration for selective mode, which allows you to
+       * explicitly include or exclude specific metadata fields during reranking.
+       * This is only used when selectionMode is set to SELECTIVE.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0509314982173a0c3ec71dd34df6b28344b9c406cc31793eb19ee20051470648")
+      public
+          fun selectiveModeConfiguration(selectiveModeConfiguration: RerankingMetadataSelectiveModeConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnFlow.MetadataConfigurationForRerankingProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnFlow.MetadataConfigurationForRerankingProperty.builder()
+
+      /**
+       * @param selectionMode The mode for selecting which metadata fields to include in the
+       * reranking process. 
+       * Valid values are ALL (use all available metadata fields) or SELECTIVE (use only specified
+       * fields).
+       */
+      override fun selectionMode(selectionMode: String) {
+        cdkBuilder.selectionMode(selectionMode)
+      }
+
+      /**
+       * @param selectiveModeConfiguration Configuration for selective mode, which allows you to
+       * explicitly include or exclude specific metadata fields during reranking.
+       * This is only used when selectionMode is set to SELECTIVE.
+       */
+      override fun selectiveModeConfiguration(selectiveModeConfiguration: IResolvable) {
+        cdkBuilder.selectiveModeConfiguration(selectiveModeConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param selectiveModeConfiguration Configuration for selective mode, which allows you to
+       * explicitly include or exclude specific metadata fields during reranking.
+       * This is only used when selectionMode is set to SELECTIVE.
+       */
+      override
+          fun selectiveModeConfiguration(selectiveModeConfiguration: RerankingMetadataSelectiveModeConfigurationProperty) {
+        cdkBuilder.selectiveModeConfiguration(selectiveModeConfiguration.let(RerankingMetadataSelectiveModeConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param selectiveModeConfiguration Configuration for selective mode, which allows you to
+       * explicitly include or exclude specific metadata fields during reranking.
+       * This is only used when selectionMode is set to SELECTIVE.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0509314982173a0c3ec71dd34df6b28344b9c406cc31793eb19ee20051470648")
+      override
+          fun selectiveModeConfiguration(selectiveModeConfiguration: RerankingMetadataSelectiveModeConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          selectiveModeConfiguration(RerankingMetadataSelectiveModeConfigurationProperty(selectiveModeConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnFlow.MetadataConfigurationForRerankingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.MetadataConfigurationForRerankingProperty,
+    ) : CdkObject(cdkObject),
+        MetadataConfigurationForRerankingProperty {
+      /**
+       * The mode for selecting which metadata fields to include in the reranking process.
+       *
+       * Valid values are ALL (use all available metadata fields) or SELECTIVE (use only specified
+       * fields).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-metadataconfigurationforreranking.html#cfn-bedrock-flow-metadataconfigurationforreranking-selectionmode)
+       */
+      override fun selectionMode(): String = unwrap(this).getSelectionMode()
+
+      /**
+       * Configuration for selective mode, which allows you to explicitly include or exclude
+       * specific metadata fields during reranking.
+       *
+       * This is only used when selectionMode is set to SELECTIVE.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-metadataconfigurationforreranking.html#cfn-bedrock-flow-metadataconfigurationforreranking-selectivemodeconfiguration)
+       */
+      override fun selectiveModeConfiguration(): Any? = unwrap(this).getSelectiveModeConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MetadataConfigurationForRerankingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.MetadataConfigurationForRerankingProperty):
+          MetadataConfigurationForRerankingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetadataConfigurationForRerankingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetadataConfigurationForRerankingProperty):
+          software.amazon.awscdk.services.bedrock.CfnFlow.MetadataConfigurationForRerankingProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnFlow.MetadataConfigurationForRerankingProperty
+    }
+  }
+
+  /**
+   * Performance settings for a model.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * PerformanceConfigurationProperty performanceConfigurationProperty =
+   * PerformanceConfigurationProperty.builder()
+   * .latency("latency")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-performanceconfiguration.html)
+   */
+  public interface PerformanceConfigurationProperty {
+    /**
+     * To use a latency-optimized version of the model, set to `optimized` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-performanceconfiguration.html#cfn-bedrock-flow-performanceconfiguration-latency)
+     */
+    public fun latency(): String? = unwrap(this).getLatency()
+
+    /**
+     * A builder for [PerformanceConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param latency To use a latency-optimized version of the model, set to `optimized` .
+       */
+      public fun latency(latency: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnFlow.PerformanceConfigurationProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnFlow.PerformanceConfigurationProperty.builder()
+
+      /**
+       * @param latency To use a latency-optimized version of the model, set to `optimized` .
+       */
+      override fun latency(latency: String) {
+        cdkBuilder.latency(latency)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnFlow.PerformanceConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.PerformanceConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        PerformanceConfigurationProperty {
+      /**
+       * To use a latency-optimized version of the model, set to `optimized` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-performanceconfiguration.html#cfn-bedrock-flow-performanceconfiguration-latency)
+       */
+      override fun latency(): String? = unwrap(this).getLatency()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PerformanceConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.PerformanceConfigurationProperty):
+          PerformanceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PerformanceConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PerformanceConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnFlow.PerformanceConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnFlow.PerformanceConfigurationProperty
+    }
+  }
+
+  /**
    * Contains configurations for a prompt node in the flow.
    *
    * You can use a prompt from Prompt management or you can define one in this node. If the prompt
    * contains variables, the inputs into this node will fill in the variables. The output from this
-   * node is the response generated by the model. For more information, see [Node types in Amazon
-   * Bedrock works](https://docs.aws.amazon.com/bedrock/latest/userguide/flows-nodes.html) in the
-   * Amazon Bedrock User Guide.
+   * node is the response generated by the model. For more information, see [Node types in a
+   * flow](https://docs.aws.amazon.com/bedrock/latest/userguide/flows-nodes.html) in the Amazon Bedrock
+   * User Guide.
    *
    * Example:
    *
@@ -5395,6 +7707,221 @@ public open class CfnFlow(
   }
 
   /**
+   * Configuration for selectively including or excluding metadata fields during the reranking
+   * process.
+   *
+   * This allows you to control which metadata attributes are considered when reordering search
+   * results.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * RerankingMetadataSelectiveModeConfigurationProperty
+   * rerankingMetadataSelectiveModeConfigurationProperty =
+   * RerankingMetadataSelectiveModeConfigurationProperty.builder()
+   * .fieldsToExclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .fieldsToInclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-rerankingmetadataselectivemodeconfiguration.html)
+   */
+  public interface RerankingMetadataSelectiveModeConfigurationProperty {
+    /**
+     * A list of metadata field names to explicitly exclude from the reranking process.
+     *
+     * All metadata fields except these will be considered when reordering search results. This
+     * parameter cannot be used together with fieldsToInclude.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-rerankingmetadataselectivemodeconfiguration.html#cfn-bedrock-flow-rerankingmetadataselectivemodeconfiguration-fieldstoexclude)
+     */
+    public fun fieldsToExclude(): Any? = unwrap(this).getFieldsToExclude()
+
+    /**
+     * A list of metadata field names to explicitly include in the reranking process.
+     *
+     * Only these fields will be considered when reordering search results. This parameter cannot be
+     * used together with fieldsToExclude.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-rerankingmetadataselectivemodeconfiguration.html#cfn-bedrock-flow-rerankingmetadataselectivemodeconfiguration-fieldstoinclude)
+     */
+    public fun fieldsToInclude(): Any? = unwrap(this).getFieldsToInclude()
+
+    /**
+     * A builder for [RerankingMetadataSelectiveModeConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fieldsToExclude A list of metadata field names to explicitly exclude from the
+       * reranking process.
+       * All metadata fields except these will be considered when reordering search results. This
+       * parameter cannot be used together with fieldsToInclude.
+       */
+      public fun fieldsToExclude(fieldsToExclude: IResolvable)
+
+      /**
+       * @param fieldsToExclude A list of metadata field names to explicitly exclude from the
+       * reranking process.
+       * All metadata fields except these will be considered when reordering search results. This
+       * parameter cannot be used together with fieldsToInclude.
+       */
+      public fun fieldsToExclude(fieldsToExclude: List<Any>)
+
+      /**
+       * @param fieldsToExclude A list of metadata field names to explicitly exclude from the
+       * reranking process.
+       * All metadata fields except these will be considered when reordering search results. This
+       * parameter cannot be used together with fieldsToInclude.
+       */
+      public fun fieldsToExclude(vararg fieldsToExclude: Any)
+
+      /**
+       * @param fieldsToInclude A list of metadata field names to explicitly include in the
+       * reranking process.
+       * Only these fields will be considered when reordering search results. This parameter cannot
+       * be used together with fieldsToExclude.
+       */
+      public fun fieldsToInclude(fieldsToInclude: IResolvable)
+
+      /**
+       * @param fieldsToInclude A list of metadata field names to explicitly include in the
+       * reranking process.
+       * Only these fields will be considered when reordering search results. This parameter cannot
+       * be used together with fieldsToExclude.
+       */
+      public fun fieldsToInclude(fieldsToInclude: List<Any>)
+
+      /**
+       * @param fieldsToInclude A list of metadata field names to explicitly include in the
+       * reranking process.
+       * Only these fields will be considered when reordering search results. This parameter cannot
+       * be used together with fieldsToExclude.
+       */
+      public fun fieldsToInclude(vararg fieldsToInclude: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnFlow.RerankingMetadataSelectiveModeConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnFlow.RerankingMetadataSelectiveModeConfigurationProperty.builder()
+
+      /**
+       * @param fieldsToExclude A list of metadata field names to explicitly exclude from the
+       * reranking process.
+       * All metadata fields except these will be considered when reordering search results. This
+       * parameter cannot be used together with fieldsToInclude.
+       */
+      override fun fieldsToExclude(fieldsToExclude: IResolvable) {
+        cdkBuilder.fieldsToExclude(fieldsToExclude.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param fieldsToExclude A list of metadata field names to explicitly exclude from the
+       * reranking process.
+       * All metadata fields except these will be considered when reordering search results. This
+       * parameter cannot be used together with fieldsToInclude.
+       */
+      override fun fieldsToExclude(fieldsToExclude: List<Any>) {
+        cdkBuilder.fieldsToExclude(fieldsToExclude.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param fieldsToExclude A list of metadata field names to explicitly exclude from the
+       * reranking process.
+       * All metadata fields except these will be considered when reordering search results. This
+       * parameter cannot be used together with fieldsToInclude.
+       */
+      override fun fieldsToExclude(vararg fieldsToExclude: Any): Unit =
+          fieldsToExclude(fieldsToExclude.toList())
+
+      /**
+       * @param fieldsToInclude A list of metadata field names to explicitly include in the
+       * reranking process.
+       * Only these fields will be considered when reordering search results. This parameter cannot
+       * be used together with fieldsToExclude.
+       */
+      override fun fieldsToInclude(fieldsToInclude: IResolvable) {
+        cdkBuilder.fieldsToInclude(fieldsToInclude.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param fieldsToInclude A list of metadata field names to explicitly include in the
+       * reranking process.
+       * Only these fields will be considered when reordering search results. This parameter cannot
+       * be used together with fieldsToExclude.
+       */
+      override fun fieldsToInclude(fieldsToInclude: List<Any>) {
+        cdkBuilder.fieldsToInclude(fieldsToInclude.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param fieldsToInclude A list of metadata field names to explicitly include in the
+       * reranking process.
+       * Only these fields will be considered when reordering search results. This parameter cannot
+       * be used together with fieldsToExclude.
+       */
+      override fun fieldsToInclude(vararg fieldsToInclude: Any): Unit =
+          fieldsToInclude(fieldsToInclude.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnFlow.RerankingMetadataSelectiveModeConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.RerankingMetadataSelectiveModeConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        RerankingMetadataSelectiveModeConfigurationProperty {
+      /**
+       * A list of metadata field names to explicitly exclude from the reranking process.
+       *
+       * All metadata fields except these will be considered when reordering search results. This
+       * parameter cannot be used together with fieldsToInclude.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-rerankingmetadataselectivemodeconfiguration.html#cfn-bedrock-flow-rerankingmetadataselectivemodeconfiguration-fieldstoexclude)
+       */
+      override fun fieldsToExclude(): Any? = unwrap(this).getFieldsToExclude()
+
+      /**
+       * A list of metadata field names to explicitly include in the reranking process.
+       *
+       * Only these fields will be considered when reordering search results. This parameter cannot
+       * be used together with fieldsToExclude.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-rerankingmetadataselectivemodeconfiguration.html#cfn-bedrock-flow-rerankingmetadataselectivemodeconfiguration-fieldstoinclude)
+       */
+      override fun fieldsToInclude(): Any? = unwrap(this).getFieldsToInclude()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          RerankingMetadataSelectiveModeConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.RerankingMetadataSelectiveModeConfigurationProperty):
+          RerankingMetadataSelectiveModeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? RerankingMetadataSelectiveModeConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RerankingMetadataSelectiveModeConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnFlow.RerankingMetadataSelectiveModeConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnFlow.RerankingMetadataSelectiveModeConfigurationProperty
+    }
+  }
+
+  /**
    * Contains configurations for a Retrieval node in a flow.
    *
    * This node retrieves data from the Amazon S3 location that you specify and returns it as the
@@ -6348,6 +8875,610 @@ public open class CfnFlow(
           software.amazon.awscdk.services.bedrock.CfnFlow.TextPromptTemplateConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.bedrock.CfnFlow.TextPromptTemplateConfigurationProperty
+    }
+  }
+
+  /**
+   * Configuration for using Amazon Bedrock foundation models to rerank Knowledge Base vector search
+   * results.
+   *
+   * This enables more sophisticated relevance ranking using large language models.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object additionalModelRequestFields;
+   * VectorSearchBedrockRerankingConfigurationProperty
+   * vectorSearchBedrockRerankingConfigurationProperty =
+   * VectorSearchBedrockRerankingConfigurationProperty.builder()
+   * .modelConfiguration(VectorSearchBedrockRerankingModelConfigurationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .additionalModelRequestFields(additionalModelRequestFields)
+   * .build())
+   * // the properties below are optional
+   * .metadataConfiguration(MetadataConfigurationForRerankingProperty.builder()
+   * .selectionMode("selectionMode")
+   * // the properties below are optional
+   * .selectiveModeConfiguration(RerankingMetadataSelectiveModeConfigurationProperty.builder()
+   * .fieldsToExclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .fieldsToInclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .build())
+   * .build())
+   * .numberOfRerankedResults(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchbedrockrerankingconfiguration.html)
+   */
+  public interface VectorSearchBedrockRerankingConfigurationProperty {
+    /**
+     * Configuration for how document metadata should be used during the reranking process.
+     *
+     * This determines which metadata fields are included when reordering search results.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchbedrockrerankingconfiguration.html#cfn-bedrock-flow-vectorsearchbedrockrerankingconfiguration-metadataconfiguration)
+     */
+    public fun metadataConfiguration(): Any? = unwrap(this).getMetadataConfiguration()
+
+    /**
+     * Configuration for the Amazon Bedrock foundation model used for reranking.
+     *
+     * This includes the model ARN and any additional request fields required by the model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchbedrockrerankingconfiguration.html#cfn-bedrock-flow-vectorsearchbedrockrerankingconfiguration-modelconfiguration)
+     */
+    public fun modelConfiguration(): Any
+
+    /**
+     * The maximum number of results to rerank.
+     *
+     * This limits how many of the initial vector search results will be processed by the reranking
+     * model. A smaller number improves performance but may exclude potentially relevant results.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchbedrockrerankingconfiguration.html#cfn-bedrock-flow-vectorsearchbedrockrerankingconfiguration-numberofrerankedresults)
+     */
+    public fun numberOfRerankedResults(): Number? = unwrap(this).getNumberOfRerankedResults()
+
+    /**
+     * A builder for [VectorSearchBedrockRerankingConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param metadataConfiguration Configuration for how document metadata should be used during
+       * the reranking process.
+       * This determines which metadata fields are included when reordering search results.
+       */
+      public fun metadataConfiguration(metadataConfiguration: IResolvable)
+
+      /**
+       * @param metadataConfiguration Configuration for how document metadata should be used during
+       * the reranking process.
+       * This determines which metadata fields are included when reordering search results.
+       */
+      public
+          fun metadataConfiguration(metadataConfiguration: MetadataConfigurationForRerankingProperty)
+
+      /**
+       * @param metadataConfiguration Configuration for how document metadata should be used during
+       * the reranking process.
+       * This determines which metadata fields are included when reordering search results.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bc93c53bc0abdb0f6d35f471e8bbc9103a0ced66e8dd8f9226694b60c19b5676")
+      public
+          fun metadataConfiguration(metadataConfiguration: MetadataConfigurationForRerankingProperty.Builder.() -> Unit)
+
+      /**
+       * @param modelConfiguration Configuration for the Amazon Bedrock foundation model used for
+       * reranking. 
+       * This includes the model ARN and any additional request fields required by the model.
+       */
+      public fun modelConfiguration(modelConfiguration: IResolvable)
+
+      /**
+       * @param modelConfiguration Configuration for the Amazon Bedrock foundation model used for
+       * reranking. 
+       * This includes the model ARN and any additional request fields required by the model.
+       */
+      public
+          fun modelConfiguration(modelConfiguration: VectorSearchBedrockRerankingModelConfigurationProperty)
+
+      /**
+       * @param modelConfiguration Configuration for the Amazon Bedrock foundation model used for
+       * reranking. 
+       * This includes the model ARN and any additional request fields required by the model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("458f2384dea563b413fe616ad41dd8ab902659231d2ec4e18e2b7e5bbf19f686")
+      public
+          fun modelConfiguration(modelConfiguration: VectorSearchBedrockRerankingModelConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param numberOfRerankedResults The maximum number of results to rerank.
+       * This limits how many of the initial vector search results will be processed by the
+       * reranking model. A smaller number improves performance but may exclude potentially relevant
+       * results.
+       */
+      public fun numberOfRerankedResults(numberOfRerankedResults: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchBedrockRerankingConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchBedrockRerankingConfigurationProperty.builder()
+
+      /**
+       * @param metadataConfiguration Configuration for how document metadata should be used during
+       * the reranking process.
+       * This determines which metadata fields are included when reordering search results.
+       */
+      override fun metadataConfiguration(metadataConfiguration: IResolvable) {
+        cdkBuilder.metadataConfiguration(metadataConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param metadataConfiguration Configuration for how document metadata should be used during
+       * the reranking process.
+       * This determines which metadata fields are included when reordering search results.
+       */
+      override
+          fun metadataConfiguration(metadataConfiguration: MetadataConfigurationForRerankingProperty) {
+        cdkBuilder.metadataConfiguration(metadataConfiguration.let(MetadataConfigurationForRerankingProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param metadataConfiguration Configuration for how document metadata should be used during
+       * the reranking process.
+       * This determines which metadata fields are included when reordering search results.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bc93c53bc0abdb0f6d35f471e8bbc9103a0ced66e8dd8f9226694b60c19b5676")
+      override
+          fun metadataConfiguration(metadataConfiguration: MetadataConfigurationForRerankingProperty.Builder.() -> Unit):
+          Unit =
+          metadataConfiguration(MetadataConfigurationForRerankingProperty(metadataConfiguration))
+
+      /**
+       * @param modelConfiguration Configuration for the Amazon Bedrock foundation model used for
+       * reranking. 
+       * This includes the model ARN and any additional request fields required by the model.
+       */
+      override fun modelConfiguration(modelConfiguration: IResolvable) {
+        cdkBuilder.modelConfiguration(modelConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param modelConfiguration Configuration for the Amazon Bedrock foundation model used for
+       * reranking. 
+       * This includes the model ARN and any additional request fields required by the model.
+       */
+      override
+          fun modelConfiguration(modelConfiguration: VectorSearchBedrockRerankingModelConfigurationProperty) {
+        cdkBuilder.modelConfiguration(modelConfiguration.let(VectorSearchBedrockRerankingModelConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param modelConfiguration Configuration for the Amazon Bedrock foundation model used for
+       * reranking. 
+       * This includes the model ARN and any additional request fields required by the model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("458f2384dea563b413fe616ad41dd8ab902659231d2ec4e18e2b7e5bbf19f686")
+      override
+          fun modelConfiguration(modelConfiguration: VectorSearchBedrockRerankingModelConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          modelConfiguration(VectorSearchBedrockRerankingModelConfigurationProperty(modelConfiguration))
+
+      /**
+       * @param numberOfRerankedResults The maximum number of results to rerank.
+       * This limits how many of the initial vector search results will be processed by the
+       * reranking model. A smaller number improves performance but may exclude potentially relevant
+       * results.
+       */
+      override fun numberOfRerankedResults(numberOfRerankedResults: Number) {
+        cdkBuilder.numberOfRerankedResults(numberOfRerankedResults)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchBedrockRerankingConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchBedrockRerankingConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        VectorSearchBedrockRerankingConfigurationProperty {
+      /**
+       * Configuration for how document metadata should be used during the reranking process.
+       *
+       * This determines which metadata fields are included when reordering search results.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchbedrockrerankingconfiguration.html#cfn-bedrock-flow-vectorsearchbedrockrerankingconfiguration-metadataconfiguration)
+       */
+      override fun metadataConfiguration(): Any? = unwrap(this).getMetadataConfiguration()
+
+      /**
+       * Configuration for the Amazon Bedrock foundation model used for reranking.
+       *
+       * This includes the model ARN and any additional request fields required by the model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchbedrockrerankingconfiguration.html#cfn-bedrock-flow-vectorsearchbedrockrerankingconfiguration-modelconfiguration)
+       */
+      override fun modelConfiguration(): Any = unwrap(this).getModelConfiguration()
+
+      /**
+       * The maximum number of results to rerank.
+       *
+       * This limits how many of the initial vector search results will be processed by the
+       * reranking model. A smaller number improves performance but may exclude potentially relevant
+       * results.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchbedrockrerankingconfiguration.html#cfn-bedrock-flow-vectorsearchbedrockrerankingconfiguration-numberofrerankedresults)
+       */
+      override fun numberOfRerankedResults(): Number? = unwrap(this).getNumberOfRerankedResults()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VectorSearchBedrockRerankingConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchBedrockRerankingConfigurationProperty):
+          VectorSearchBedrockRerankingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VectorSearchBedrockRerankingConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VectorSearchBedrockRerankingConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchBedrockRerankingConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchBedrockRerankingConfigurationProperty
+    }
+  }
+
+  /**
+   * Configuration for the Amazon Bedrock foundation model used for reranking vector search results.
+   *
+   * This specifies which model to use and any additional parameters required by the model.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object additionalModelRequestFields;
+   * VectorSearchBedrockRerankingModelConfigurationProperty
+   * vectorSearchBedrockRerankingModelConfigurationProperty =
+   * VectorSearchBedrockRerankingModelConfigurationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .additionalModelRequestFields(additionalModelRequestFields)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchbedrockrerankingmodelconfiguration.html)
+   */
+  public interface VectorSearchBedrockRerankingModelConfigurationProperty {
+    /**
+     * A list of additional fields to include in the model request during reranking.
+     *
+     * These fields provide extra context or configuration options specific to the selected
+     * foundation model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchbedrockrerankingmodelconfiguration.html#cfn-bedrock-flow-vectorsearchbedrockrerankingmodelconfiguration-additionalmodelrequestfields)
+     */
+    public fun additionalModelRequestFields(): Any? = unwrap(this).getAdditionalModelRequestFields()
+
+    /**
+     * The Amazon Resource Name (ARN) of the foundation model to use for reranking.
+     *
+     * This model processes the query and search results to determine a more relevant ordering.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchbedrockrerankingmodelconfiguration.html#cfn-bedrock-flow-vectorsearchbedrockrerankingmodelconfiguration-modelarn)
+     */
+    public fun modelArn(): String
+
+    /**
+     * A builder for [VectorSearchBedrockRerankingModelConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param additionalModelRequestFields A list of additional fields to include in the model
+       * request during reranking.
+       * These fields provide extra context or configuration options specific to the selected
+       * foundation model.
+       */
+      public fun additionalModelRequestFields(additionalModelRequestFields: Any)
+
+      /**
+       * @param modelArn The Amazon Resource Name (ARN) of the foundation model to use for
+       * reranking. 
+       * This model processes the query and search results to determine a more relevant ordering.
+       */
+      public fun modelArn(modelArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchBedrockRerankingModelConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchBedrockRerankingModelConfigurationProperty.builder()
+
+      /**
+       * @param additionalModelRequestFields A list of additional fields to include in the model
+       * request during reranking.
+       * These fields provide extra context or configuration options specific to the selected
+       * foundation model.
+       */
+      override fun additionalModelRequestFields(additionalModelRequestFields: Any) {
+        cdkBuilder.additionalModelRequestFields(additionalModelRequestFields)
+      }
+
+      /**
+       * @param modelArn The Amazon Resource Name (ARN) of the foundation model to use for
+       * reranking. 
+       * This model processes the query and search results to determine a more relevant ordering.
+       */
+      override fun modelArn(modelArn: String) {
+        cdkBuilder.modelArn(modelArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchBedrockRerankingModelConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchBedrockRerankingModelConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        VectorSearchBedrockRerankingModelConfigurationProperty {
+      /**
+       * A list of additional fields to include in the model request during reranking.
+       *
+       * These fields provide extra context or configuration options specific to the selected
+       * foundation model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchbedrockrerankingmodelconfiguration.html#cfn-bedrock-flow-vectorsearchbedrockrerankingmodelconfiguration-additionalmodelrequestfields)
+       */
+      override fun additionalModelRequestFields(): Any? =
+          unwrap(this).getAdditionalModelRequestFields()
+
+      /**
+       * The Amazon Resource Name (ARN) of the foundation model to use for reranking.
+       *
+       * This model processes the query and search results to determine a more relevant ordering.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchbedrockrerankingmodelconfiguration.html#cfn-bedrock-flow-vectorsearchbedrockrerankingmodelconfiguration-modelarn)
+       */
+      override fun modelArn(): String = unwrap(this).getModelArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VectorSearchBedrockRerankingModelConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchBedrockRerankingModelConfigurationProperty):
+          VectorSearchBedrockRerankingModelConfigurationProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? VectorSearchBedrockRerankingModelConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VectorSearchBedrockRerankingModelConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchBedrockRerankingModelConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchBedrockRerankingModelConfigurationProperty
+    }
+  }
+
+  /**
+   * Configuration for reranking vector search results to improve relevance.
+   *
+   * Reranking applies additional relevance models to reorder the initial vector search results
+   * based on more sophisticated criteria.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * Object additionalModelRequestFields;
+   * VectorSearchRerankingConfigurationProperty vectorSearchRerankingConfigurationProperty =
+   * VectorSearchRerankingConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .bedrockRerankingConfiguration(VectorSearchBedrockRerankingConfigurationProperty.builder()
+   * .modelConfiguration(VectorSearchBedrockRerankingModelConfigurationProperty.builder()
+   * .modelArn("modelArn")
+   * // the properties below are optional
+   * .additionalModelRequestFields(additionalModelRequestFields)
+   * .build())
+   * // the properties below are optional
+   * .metadataConfiguration(MetadataConfigurationForRerankingProperty.builder()
+   * .selectionMode("selectionMode")
+   * // the properties below are optional
+   * .selectiveModeConfiguration(RerankingMetadataSelectiveModeConfigurationProperty.builder()
+   * .fieldsToExclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .fieldsToInclude(List.of(FieldForRerankingProperty.builder()
+   * .fieldName("fieldName")
+   * .build()))
+   * .build())
+   * .build())
+   * .numberOfRerankedResults(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchrerankingconfiguration.html)
+   */
+  public interface VectorSearchRerankingConfigurationProperty {
+    /**
+     * Configuration for using Amazon Bedrock foundation models to rerank search results.
+     *
+     * This is required when the reranking type is set to BEDROCK.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchrerankingconfiguration.html#cfn-bedrock-flow-vectorsearchrerankingconfiguration-bedrockrerankingconfiguration)
+     */
+    public fun bedrockRerankingConfiguration(): Any? =
+        unwrap(this).getBedrockRerankingConfiguration()
+
+    /**
+     * The type of reranking to apply to vector search results.
+     *
+     * Currently, the only supported value is BEDROCK, which uses Amazon Bedrock foundation models
+     * for reranking.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchrerankingconfiguration.html#cfn-bedrock-flow-vectorsearchrerankingconfiguration-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [VectorSearchRerankingConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bedrockRerankingConfiguration Configuration for using Amazon Bedrock foundation
+       * models to rerank search results.
+       * This is required when the reranking type is set to BEDROCK.
+       */
+      public fun bedrockRerankingConfiguration(bedrockRerankingConfiguration: IResolvable)
+
+      /**
+       * @param bedrockRerankingConfiguration Configuration for using Amazon Bedrock foundation
+       * models to rerank search results.
+       * This is required when the reranking type is set to BEDROCK.
+       */
+      public
+          fun bedrockRerankingConfiguration(bedrockRerankingConfiguration: VectorSearchBedrockRerankingConfigurationProperty)
+
+      /**
+       * @param bedrockRerankingConfiguration Configuration for using Amazon Bedrock foundation
+       * models to rerank search results.
+       * This is required when the reranking type is set to BEDROCK.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bede95a55af1480446684601d4b32144b1639dc850d4e59618a230cc818b7c48")
+      public
+          fun bedrockRerankingConfiguration(bedrockRerankingConfiguration: VectorSearchBedrockRerankingConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param type The type of reranking to apply to vector search results. 
+       * Currently, the only supported value is BEDROCK, which uses Amazon Bedrock foundation models
+       * for reranking.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchRerankingConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchRerankingConfigurationProperty.builder()
+
+      /**
+       * @param bedrockRerankingConfiguration Configuration for using Amazon Bedrock foundation
+       * models to rerank search results.
+       * This is required when the reranking type is set to BEDROCK.
+       */
+      override fun bedrockRerankingConfiguration(bedrockRerankingConfiguration: IResolvable) {
+        cdkBuilder.bedrockRerankingConfiguration(bedrockRerankingConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockRerankingConfiguration Configuration for using Amazon Bedrock foundation
+       * models to rerank search results.
+       * This is required when the reranking type is set to BEDROCK.
+       */
+      override
+          fun bedrockRerankingConfiguration(bedrockRerankingConfiguration: VectorSearchBedrockRerankingConfigurationProperty) {
+        cdkBuilder.bedrockRerankingConfiguration(bedrockRerankingConfiguration.let(VectorSearchBedrockRerankingConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockRerankingConfiguration Configuration for using Amazon Bedrock foundation
+       * models to rerank search results.
+       * This is required when the reranking type is set to BEDROCK.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bede95a55af1480446684601d4b32144b1639dc850d4e59618a230cc818b7c48")
+      override
+          fun bedrockRerankingConfiguration(bedrockRerankingConfiguration: VectorSearchBedrockRerankingConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          bedrockRerankingConfiguration(VectorSearchBedrockRerankingConfigurationProperty(bedrockRerankingConfiguration))
+
+      /**
+       * @param type The type of reranking to apply to vector search results. 
+       * Currently, the only supported value is BEDROCK, which uses Amazon Bedrock foundation models
+       * for reranking.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchRerankingConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchRerankingConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        VectorSearchRerankingConfigurationProperty {
+      /**
+       * Configuration for using Amazon Bedrock foundation models to rerank search results.
+       *
+       * This is required when the reranking type is set to BEDROCK.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchrerankingconfiguration.html#cfn-bedrock-flow-vectorsearchrerankingconfiguration-bedrockrerankingconfiguration)
+       */
+      override fun bedrockRerankingConfiguration(): Any? =
+          unwrap(this).getBedrockRerankingConfiguration()
+
+      /**
+       * The type of reranking to apply to vector search results.
+       *
+       * Currently, the only supported value is BEDROCK, which uses Amazon Bedrock foundation models
+       * for reranking.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-vectorsearchrerankingconfiguration.html#cfn-bedrock-flow-vectorsearchrerankingconfiguration-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          VectorSearchRerankingConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchRerankingConfigurationProperty):
+          VectorSearchRerankingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VectorSearchRerankingConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VectorSearchRerankingConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchRerankingConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnFlow.VectorSearchRerankingConfigurationProperty
     }
   }
 }

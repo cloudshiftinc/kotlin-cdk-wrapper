@@ -153,9 +153,9 @@ public open class CfnContainerGroupDefinition(
   /**
    * The Amazon Resource Name (
    * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) that is assigned to an
-   * Amazon GameLift `ContainerGroupDefinition` resource. It uniquely identifies the resource across
-   * all AWS Regions. Format is `arn:aws:gamelift:[region]::containergroupdefinition/[container group
-   * definition name]:[version]` .
+   * Amazon GameLift Servers `ContainerGroupDefinition` resource. It uniquely identifies the resource
+   * across all AWS Regions. Format is `arn:aws:gamelift:[region]::containergroupdefinition/[container
+   * group definition name]:[version]` .
    */
   public open fun attrContainerGroupDefinitionArn(): String =
       unwrap(this).getAttrContainerGroupDefinitionArn()
@@ -170,14 +170,15 @@ public open class CfnContainerGroupDefinition(
   /**
    * Current status of the container group definition resource. Values include:.
    *
-   * * `COPYING` -- Amazon GameLift is in the process of making copies of all container images that
-   * are defined in the group. While in this state, the resource can't be used to create a container
-   * fleet.
-   * * `READY` -- Amazon GameLift has copied the registry images for all containers that are defined
-   * in the group. You can use a container group definition in this status to create a container fleet.
-   * * `FAILED` -- Amazon GameLift failed to create a valid container group definition resource. For
-   * more details on the cause of the failure, see `StatusReason` . A container group definition
-   * resource in failed status will be deleted within a few minutes.
+   * * `COPYING` -- Amazon GameLift Servers is in the process of making copies of all container
+   * images that are defined in the group. While in this state, the resource can't be used to create a
+   * container fleet.
+   * * `READY` -- Amazon GameLift Servers has copied the registry images for all containers that are
+   * defined in the group. You can use a container group definition in this status to create a
+   * container fleet.
+   * * `FAILED` -- Amazon GameLift Servers failed to create a valid container group definition
+   * resource. For more details on the cause of the failure, see `StatusReason` . A container group
+   * definition resource in failed status will be deleted within a few minutes.
    */
   public open fun attrStatus(): String = unwrap(this).getAttrStatus()
 
@@ -185,18 +186,18 @@ public open class CfnContainerGroupDefinition(
    * Additional information about a container group definition that's in `FAILED` status. Possible
    * reasons include:.
    *
-   * * An internal issue prevented Amazon GameLift from creating the container group definition
-   * resource. Delete the failed resource and call
+   * * An internal issue prevented Amazon GameLift Servers from creating the container group
+   * definition resource. Delete the failed resource and call
    * [CreateContainerGroupDefinition](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateContainerGroupDefinition.html)
    * again.
    * * An access-denied message means that you don't have permissions to access the container image
    * on ECR. See [IAM permission
    * examples](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-iam-policy-examples.html.html)
-   * for help setting up required IAM permissions for Amazon GameLift.
+   * for help setting up required IAM permissions for Amazon GameLift Servers.
    * * The `ImageUri` value for at least one of the containers in the container group definition was
    * invalid or not found in the current AWS account.
    * * At least one of the container images referenced in the container group definition exceeds the
-   * allowed size. For size limits, see [Amazon GameLift endpoints and
+   * allowed size. For size limits, see [Amazon GameLift Servers endpoints and
    * quotas](https://docs.aws.amazon.com/general/latest/gr/gamelift.html) .
    * * At least one of the container images referenced in the container group definition uses a
    * different operating system than the one defined for the container group.
@@ -392,8 +393,8 @@ public open class CfnContainerGroupDefinition(
     /**
      * The type of container group.
      *
-     * Container group type determines how Amazon GameLift deploys the container group on each fleet
-     * instance.
+     * Container group type determines how Amazon GameLift Servers deploys the container group on
+     * each fleet instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-containergrouptype)
      * @param containerGroupType The type of container group. 
@@ -455,10 +456,10 @@ public open class CfnContainerGroupDefinition(
      *
      *
      * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
-     * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
-     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x, first update the
-     * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
-     * GameLift server SDK version
+     * Linux 2 FAQs](https://docs.aws.amazon.com/amazon-linux-2/faqs/) . For game servers that are
+     * hosted on AL2 and use server SDK version 4.x for Amazon GameLift Servers, first update the game
+     * server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to server SDK
+     * version
      * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
      *
      *
@@ -580,8 +581,8 @@ public open class CfnContainerGroupDefinition(
     /**
      * The type of container group.
      *
-     * Container group type determines how Amazon GameLift deploys the container group on each fleet
-     * instance.
+     * Container group type determines how Amazon GameLift Servers deploys the container group on
+     * each fleet instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-containergrouptype)
      * @param containerGroupType The type of container group. 
@@ -653,10 +654,10 @@ public open class CfnContainerGroupDefinition(
      *
      *
      * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
-     * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
-     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x, first update the
-     * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
-     * GameLift server SDK version
+     * Linux 2 FAQs](https://docs.aws.amazon.com/amazon-linux-2/faqs/) . For game servers that are
+     * hosted on AL2 and use server SDK version 4.x for Amazon GameLift Servers, first update the game
+     * server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to server SDK
+     * version
      * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
      *
      *
@@ -1105,7 +1106,7 @@ public open class CfnContainerGroupDefinition(
    * more information on container health checks, see [HealthCheck
    * command](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html#ECS-Type-HealthCheck-command)
    * in the *Amazon Elastic Container Service API* . Game server containers don't have a health check
-   * parameter; Amazon GameLift automatically handles health checks for these containers.
+   * parameter; Amazon GameLift Servers automatically handles health checks for these containers.
    *
    * The following example instructs the container to initiate a health check command every 60
    * seconds and wait 10 seconds for it to succeed. If it fails, retry the command 3 times before
@@ -1496,7 +1497,8 @@ public open class CfnContainerGroupDefinition(
   }
 
   /**
-   * A set of one or more port numbers that can be opened on the container.
+   * A set of one or more port numbers that can be opened on the container, and the supported
+   * network protocol.
    *
    * *Part of:*
    * [ContainerPortConfiguration](https://docs.aws.amazon.com/gamelift/latest/apireference/API_ContainerPortConfiguration.html)
@@ -1734,8 +1736,8 @@ public open class CfnContainerGroupDefinition(
     public fun environmentOverride(): Any? = unwrap(this).getEnvironmentOverride()
 
     /**
-     * The URI to the image that Amazon GameLift uses when deploying this container to a container
-     * fleet.
+     * The URI to the image that Amazon GameLift Servers uses when deploying this container to a
+     * container fleet.
      *
      * For a more specific identifier, see `ResolvedImageDigest` .
      *
@@ -1755,9 +1757,9 @@ public open class CfnContainerGroupDefinition(
      * The set of ports that are available to bind to processes in the container.
      *
      * For example, a game server process requires a container port to allow game clients to connect
-     * to it. Container ports aren't directly accessed by inbound traffic. Amazon GameLift maps these
-     * container ports to externally accessible connection ports, which are assigned as needed from the
-     * container fleet's `ConnectionPortRange` .
+     * to it. Container ports aren't directly accessed by inbound traffic. Amazon GameLift Servers maps
+     * these container ports to externally accessible connection ports, which are assigned as needed
+     * from the container fleet's `ConnectionPortRange` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-containergroupdefinition-gameservercontainerdefinition.html#cfn-gamelift-containergroupdefinition-gameservercontainerdefinition-portconfiguration)
      */
@@ -1773,7 +1775,7 @@ public open class CfnContainerGroupDefinition(
     public fun resolvedImageDigest(): String? = unwrap(this).getResolvedImageDigest()
 
     /**
-     * The Amazon GameLift server SDK version that the game server is integrated with.
+     * The Amazon GameLift Servers server SDK version that the game server is integrated with.
      *
      * Only game servers using 5.2.0 or higher are compatible with container fleets.
      *
@@ -1841,7 +1843,7 @@ public open class CfnContainerGroupDefinition(
       public fun environmentOverride(vararg environmentOverride: Any)
 
       /**
-       * @param imageUri The URI to the image that Amazon GameLift uses when deploying this
+       * @param imageUri The URI to the image that Amazon GameLift Servers uses when deploying this
        * container to a container fleet. 
        * For a more specific identifier, see `ResolvedImageDigest` .
        */
@@ -1870,8 +1872,8 @@ public open class CfnContainerGroupDefinition(
        * container.
        * For example, a game server process requires a container port to allow game clients to
        * connect to it. Container ports aren't directly accessed by inbound traffic. Amazon GameLift
-       * maps these container ports to externally accessible connection ports, which are assigned as
-       * needed from the container fleet's `ConnectionPortRange` .
+       * Servers maps these container ports to externally accessible connection ports, which are
+       * assigned as needed from the container fleet's `ConnectionPortRange` .
        */
       public fun portConfiguration(portConfiguration: IResolvable)
 
@@ -1880,8 +1882,8 @@ public open class CfnContainerGroupDefinition(
        * container.
        * For example, a game server process requires a container port to allow game clients to
        * connect to it. Container ports aren't directly accessed by inbound traffic. Amazon GameLift
-       * maps these container ports to externally accessible connection ports, which are assigned as
-       * needed from the container fleet's `ConnectionPortRange` .
+       * Servers maps these container ports to externally accessible connection ports, which are
+       * assigned as needed from the container fleet's `ConnectionPortRange` .
        */
       public fun portConfiguration(portConfiguration: PortConfigurationProperty)
 
@@ -1890,8 +1892,8 @@ public open class CfnContainerGroupDefinition(
        * container.
        * For example, a game server process requires a container port to allow game clients to
        * connect to it. Container ports aren't directly accessed by inbound traffic. Amazon GameLift
-       * maps these container ports to externally accessible connection ports, which are assigned as
-       * needed from the container fleet's `ConnectionPortRange` .
+       * Servers maps these container ports to externally accessible connection ports, which are
+       * assigned as needed from the container fleet's `ConnectionPortRange` .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("732cc90b7eaecab0aebe027fd3a3dc9eb1d42dfdb165634d4e0ad3d6a00a76af")
@@ -1904,8 +1906,8 @@ public open class CfnContainerGroupDefinition(
       public fun resolvedImageDigest(resolvedImageDigest: String)
 
       /**
-       * @param serverSdkVersion The Amazon GameLift server SDK version that the game server is
-       * integrated with. 
+       * @param serverSdkVersion The Amazon GameLift Servers server SDK version that the game server
+       * is integrated with. 
        * Only game servers using 5.2.0 or higher are compatible with container fleets.
        */
       public fun serverSdkVersion(serverSdkVersion: String)
@@ -1983,7 +1985,7 @@ public open class CfnContainerGroupDefinition(
           environmentOverride(environmentOverride.toList())
 
       /**
-       * @param imageUri The URI to the image that Amazon GameLift uses when deploying this
+       * @param imageUri The URI to the image that Amazon GameLift Servers uses when deploying this
        * container to a container fleet. 
        * For a more specific identifier, see `ResolvedImageDigest` .
        */
@@ -2018,8 +2020,8 @@ public open class CfnContainerGroupDefinition(
        * container.
        * For example, a game server process requires a container port to allow game clients to
        * connect to it. Container ports aren't directly accessed by inbound traffic. Amazon GameLift
-       * maps these container ports to externally accessible connection ports, which are assigned as
-       * needed from the container fleet's `ConnectionPortRange` .
+       * Servers maps these container ports to externally accessible connection ports, which are
+       * assigned as needed from the container fleet's `ConnectionPortRange` .
        */
       override fun portConfiguration(portConfiguration: IResolvable) {
         cdkBuilder.portConfiguration(portConfiguration.let(IResolvable.Companion::unwrap))
@@ -2030,8 +2032,8 @@ public open class CfnContainerGroupDefinition(
        * container.
        * For example, a game server process requires a container port to allow game clients to
        * connect to it. Container ports aren't directly accessed by inbound traffic. Amazon GameLift
-       * maps these container ports to externally accessible connection ports, which are assigned as
-       * needed from the container fleet's `ConnectionPortRange` .
+       * Servers maps these container ports to externally accessible connection ports, which are
+       * assigned as needed from the container fleet's `ConnectionPortRange` .
        */
       override fun portConfiguration(portConfiguration: PortConfigurationProperty) {
         cdkBuilder.portConfiguration(portConfiguration.let(PortConfigurationProperty.Companion::unwrap))
@@ -2042,8 +2044,8 @@ public open class CfnContainerGroupDefinition(
        * container.
        * For example, a game server process requires a container port to allow game clients to
        * connect to it. Container ports aren't directly accessed by inbound traffic. Amazon GameLift
-       * maps these container ports to externally accessible connection ports, which are assigned as
-       * needed from the container fleet's `ConnectionPortRange` .
+       * Servers maps these container ports to externally accessible connection ports, which are
+       * assigned as needed from the container fleet's `ConnectionPortRange` .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("732cc90b7eaecab0aebe027fd3a3dc9eb1d42dfdb165634d4e0ad3d6a00a76af")
@@ -2060,8 +2062,8 @@ public open class CfnContainerGroupDefinition(
       }
 
       /**
-       * @param serverSdkVersion The Amazon GameLift server SDK version that the game server is
-       * integrated with. 
+       * @param serverSdkVersion The Amazon GameLift Servers server SDK version that the game server
+       * is integrated with. 
        * Only game servers using 5.2.0 or higher are compatible with container fleets.
        */
       override fun serverSdkVersion(serverSdkVersion: String) {
@@ -2108,8 +2110,8 @@ public open class CfnContainerGroupDefinition(
       override fun environmentOverride(): Any? = unwrap(this).getEnvironmentOverride()
 
       /**
-       * The URI to the image that Amazon GameLift uses when deploying this container to a container
-       * fleet.
+       * The URI to the image that Amazon GameLift Servers uses when deploying this container to a
+       * container fleet.
        *
        * For a more specific identifier, see `ResolvedImageDigest` .
        *
@@ -2130,8 +2132,8 @@ public open class CfnContainerGroupDefinition(
        *
        * For example, a game server process requires a container port to allow game clients to
        * connect to it. Container ports aren't directly accessed by inbound traffic. Amazon GameLift
-       * maps these container ports to externally accessible connection ports, which are assigned as
-       * needed from the container fleet's `ConnectionPortRange` .
+       * Servers maps these container ports to externally accessible connection ports, which are
+       * assigned as needed from the container fleet's `ConnectionPortRange` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-containergroupdefinition-gameservercontainerdefinition.html#cfn-gamelift-containergroupdefinition-gameservercontainerdefinition-portconfiguration)
        */
@@ -2147,7 +2149,7 @@ public open class CfnContainerGroupDefinition(
       override fun resolvedImageDigest(): String? = unwrap(this).getResolvedImageDigest()
 
       /**
-       * The Amazon GameLift server SDK version that the game server is integrated with.
+       * The Amazon GameLift Servers server SDK version that the game server is integrated with.
        *
        * Only game servers using 5.2.0 or higher are compatible with container fleets.
        *
@@ -2406,7 +2408,7 @@ public open class CfnContainerGroupDefinition(
     public fun healthCheck(): Any? = unwrap(this).getHealthCheck()
 
     /**
-     * The URI to the image that Amazon GameLift deploys to a container fleet.
+     * The URI to the image that Amazon GameLift Servers deploys to a container fleet.
      *
      * For a more specific identifier, see `ResolvedImageDigest` .
      *
@@ -2415,7 +2417,7 @@ public open class CfnContainerGroupDefinition(
     public fun imageUri(): String
 
     /**
-     * The amount of memory that Amazon GameLift makes available to the container.
+     * The amount of memory that Amazon GameLift Servers makes available to the container.
      *
      * If memory limits aren't set for an individual container, the container shares the container
      * group's total memory allocation.
@@ -2439,8 +2441,8 @@ public open class CfnContainerGroupDefinition(
      * A set of ports that allow access to the container from external users.
      *
      * Processes running in the container can bind to a one of these ports. Container ports aren't
-     * directly accessed by inbound traffic. Amazon GameLift maps these container ports to externally
-     * accessible connection ports, which are assigned as needed from the container fleet's
+     * directly accessed by inbound traffic. Amazon GameLift Servers maps these container ports to
+     * externally accessible connection ports, which are assigned as needed from the container fleet's
      * `ConnectionPortRange` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-containergroupdefinition-supportcontainerdefinition.html#cfn-gamelift-containergroupdefinition-supportcontainerdefinition-portconfiguration)
@@ -2564,14 +2566,15 @@ public open class CfnContainerGroupDefinition(
       public fun healthCheck(healthCheck: ContainerHealthCheckProperty.Builder.() -> Unit)
 
       /**
-       * @param imageUri The URI to the image that Amazon GameLift deploys to a container fleet. 
+       * @param imageUri The URI to the image that Amazon GameLift Servers deploys to a container
+       * fleet. 
        * For a more specific identifier, see `ResolvedImageDigest` .
        */
       public fun imageUri(imageUri: String)
 
       /**
-       * @param memoryHardLimitMebibytes The amount of memory that Amazon GameLift makes available
-       * to the container.
+       * @param memoryHardLimitMebibytes The amount of memory that Amazon GameLift Servers makes
+       * available to the container.
        * If memory limits aren't set for an individual container, the container shares the container
        * group's total memory allocation.
        *
@@ -2602,9 +2605,9 @@ public open class CfnContainerGroupDefinition(
        * @param portConfiguration A set of ports that allow access to the container from external
        * users.
        * Processes running in the container can bind to a one of these ports. Container ports aren't
-       * directly accessed by inbound traffic. Amazon GameLift maps these container ports to externally
-       * accessible connection ports, which are assigned as needed from the container fleet's
-       * `ConnectionPortRange` .
+       * directly accessed by inbound traffic. Amazon GameLift Servers maps these container ports to
+       * externally accessible connection ports, which are assigned as needed from the container
+       * fleet's `ConnectionPortRange` .
        */
       public fun portConfiguration(portConfiguration: IResolvable)
 
@@ -2612,9 +2615,9 @@ public open class CfnContainerGroupDefinition(
        * @param portConfiguration A set of ports that allow access to the container from external
        * users.
        * Processes running in the container can bind to a one of these ports. Container ports aren't
-       * directly accessed by inbound traffic. Amazon GameLift maps these container ports to externally
-       * accessible connection ports, which are assigned as needed from the container fleet's
-       * `ConnectionPortRange` .
+       * directly accessed by inbound traffic. Amazon GameLift Servers maps these container ports to
+       * externally accessible connection ports, which are assigned as needed from the container
+       * fleet's `ConnectionPortRange` .
        */
       public fun portConfiguration(portConfiguration: PortConfigurationProperty)
 
@@ -2622,9 +2625,9 @@ public open class CfnContainerGroupDefinition(
        * @param portConfiguration A set of ports that allow access to the container from external
        * users.
        * Processes running in the container can bind to a one of these ports. Container ports aren't
-       * directly accessed by inbound traffic. Amazon GameLift maps these container ports to externally
-       * accessible connection ports, which are assigned as needed from the container fleet's
-       * `ConnectionPortRange` .
+       * directly accessed by inbound traffic. Amazon GameLift Servers maps these container ports to
+       * externally accessible connection ports, which are assigned as needed from the container
+       * fleet's `ConnectionPortRange` .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c0cd3a552b122c53f56756db99e81e0c8f327c9edd1e52ca200d4ffce4e2e667")
@@ -2763,7 +2766,8 @@ public open class CfnContainerGroupDefinition(
           healthCheck(ContainerHealthCheckProperty(healthCheck))
 
       /**
-       * @param imageUri The URI to the image that Amazon GameLift deploys to a container fleet. 
+       * @param imageUri The URI to the image that Amazon GameLift Servers deploys to a container
+       * fleet. 
        * For a more specific identifier, see `ResolvedImageDigest` .
        */
       override fun imageUri(imageUri: String) {
@@ -2771,8 +2775,8 @@ public open class CfnContainerGroupDefinition(
       }
 
       /**
-       * @param memoryHardLimitMebibytes The amount of memory that Amazon GameLift makes available
-       * to the container.
+       * @param memoryHardLimitMebibytes The amount of memory that Amazon GameLift Servers makes
+       * available to the container.
        * If memory limits aren't set for an individual container, the container shares the container
        * group's total memory allocation.
        *
@@ -2809,9 +2813,9 @@ public open class CfnContainerGroupDefinition(
        * @param portConfiguration A set of ports that allow access to the container from external
        * users.
        * Processes running in the container can bind to a one of these ports. Container ports aren't
-       * directly accessed by inbound traffic. Amazon GameLift maps these container ports to externally
-       * accessible connection ports, which are assigned as needed from the container fleet's
-       * `ConnectionPortRange` .
+       * directly accessed by inbound traffic. Amazon GameLift Servers maps these container ports to
+       * externally accessible connection ports, which are assigned as needed from the container
+       * fleet's `ConnectionPortRange` .
        */
       override fun portConfiguration(portConfiguration: IResolvable) {
         cdkBuilder.portConfiguration(portConfiguration.let(IResolvable.Companion::unwrap))
@@ -2821,9 +2825,9 @@ public open class CfnContainerGroupDefinition(
        * @param portConfiguration A set of ports that allow access to the container from external
        * users.
        * Processes running in the container can bind to a one of these ports. Container ports aren't
-       * directly accessed by inbound traffic. Amazon GameLift maps these container ports to externally
-       * accessible connection ports, which are assigned as needed from the container fleet's
-       * `ConnectionPortRange` .
+       * directly accessed by inbound traffic. Amazon GameLift Servers maps these container ports to
+       * externally accessible connection ports, which are assigned as needed from the container
+       * fleet's `ConnectionPortRange` .
        */
       override fun portConfiguration(portConfiguration: PortConfigurationProperty) {
         cdkBuilder.portConfiguration(portConfiguration.let(PortConfigurationProperty.Companion::unwrap))
@@ -2833,9 +2837,9 @@ public open class CfnContainerGroupDefinition(
        * @param portConfiguration A set of ports that allow access to the container from external
        * users.
        * Processes running in the container can bind to a one of these ports. Container ports aren't
-       * directly accessed by inbound traffic. Amazon GameLift maps these container ports to externally
-       * accessible connection ports, which are assigned as needed from the container fleet's
-       * `ConnectionPortRange` .
+       * directly accessed by inbound traffic. Amazon GameLift Servers maps these container ports to
+       * externally accessible connection ports, which are assigned as needed from the container
+       * fleet's `ConnectionPortRange` .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c0cd3a552b122c53f56756db99e81e0c8f327c9edd1e52ca200d4ffce4e2e667")
@@ -2922,7 +2926,7 @@ public open class CfnContainerGroupDefinition(
       override fun healthCheck(): Any? = unwrap(this).getHealthCheck()
 
       /**
-       * The URI to the image that Amazon GameLift deploys to a container fleet.
+       * The URI to the image that Amazon GameLift Servers deploys to a container fleet.
        *
        * For a more specific identifier, see `ResolvedImageDigest` .
        *
@@ -2931,7 +2935,7 @@ public open class CfnContainerGroupDefinition(
       override fun imageUri(): String = unwrap(this).getImageUri()
 
       /**
-       * The amount of memory that Amazon GameLift makes available to the container.
+       * The amount of memory that Amazon GameLift Servers makes available to the container.
        *
        * If memory limits aren't set for an individual container, the container shares the container
        * group's total memory allocation.
@@ -2955,9 +2959,9 @@ public open class CfnContainerGroupDefinition(
        * A set of ports that allow access to the container from external users.
        *
        * Processes running in the container can bind to a one of these ports. Container ports aren't
-       * directly accessed by inbound traffic. Amazon GameLift maps these container ports to externally
-       * accessible connection ports, which are assigned as needed from the container fleet's
-       * `ConnectionPortRange` .
+       * directly accessed by inbound traffic. Amazon GameLift Servers maps these container ports to
+       * externally accessible connection ports, which are assigned as needed from the container
+       * fleet's `ConnectionPortRange` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-containergroupdefinition-supportcontainerdefinition.html#cfn-gamelift-containergroupdefinition-supportcontainerdefinition-portconfiguration)
        */

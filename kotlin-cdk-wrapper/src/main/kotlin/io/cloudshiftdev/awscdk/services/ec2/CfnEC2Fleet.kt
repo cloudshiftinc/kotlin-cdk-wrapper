@@ -47,6 +47,20 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .overrides(List.of(FleetLaunchTemplateOverridesRequestProperty.builder()
  * .availabilityZone("availabilityZone")
+ * .blockDeviceMappings(List.of(BlockDeviceMappingProperty.builder()
+ * .deviceName("deviceName")
+ * .ebs(EbsBlockDeviceProperty.builder()
+ * .deleteOnTermination(false)
+ * .encrypted(false)
+ * .iops(123)
+ * .kmsKeyId("kmsKeyId")
+ * .snapshotId("snapshotId")
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build())
+ * .noDevice("noDevice")
+ * .virtualName("virtualName")
+ * .build()))
  * .instanceRequirements(InstanceRequirementsRequestProperty.builder()
  * .acceleratorCount(AcceleratorCountRequestProperty.builder()
  * .max(123)
@@ -64,6 +78,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
  * .max(123)
  * .min(123)
+ * .build())
+ * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+ * .cpu(CpuPerformanceFactorRequestProperty.builder()
+ * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+ * .instanceFamily("instanceFamily")
+ * .build()))
+ * .build())
  * .build())
  * .burstablePerformance("burstablePerformance")
  * .cpuManufacturers(List.of("cpuManufacturers"))
@@ -1474,6 +1495,396 @@ public open class CfnEC2Fleet(
   }
 
   /**
+   * The baseline performance to consider, using an instance family as a baseline reference.
+   *
+   * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+   * this baseline to guide instance type selection, but there is no guarantee that the selected
+   * instance types will always exceed the baseline for every application.
+   *
+   * Currently, this parameter only supports CPU performance as a baseline performance factor. For
+   * example, specifying `c6i` would use the CPU performance of the `c6i` family as the baseline
+   * reference.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * BaselinePerformanceFactorsRequestProperty baselinePerformanceFactorsRequestProperty =
+   * BaselinePerformanceFactorsRequestProperty.builder()
+   * .cpu(CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-baselineperformancefactorsrequest.html)
+   */
+  public interface BaselinePerformanceFactorsRequestProperty {
+    /**
+     * The CPU performance to consider, using an instance family as the baseline reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-baselineperformancefactorsrequest.html#cfn-ec2-ec2fleet-baselineperformancefactorsrequest-cpu)
+     */
+    public fun cpu(): Any? = unwrap(this).getCpu()
+
+    /**
+     * A builder for [BaselinePerformanceFactorsRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      public fun cpu(cpu: IResolvable)
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      public fun cpu(cpu: CpuPerformanceFactorRequestProperty)
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5fa7d287d3d7ce58a2186acab9a3aea7bbb90b61fe7680a14eabc769593c297e")
+      public fun cpu(cpu: CpuPerformanceFactorRequestProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselinePerformanceFactorsRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselinePerformanceFactorsRequestProperty.builder()
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      override fun cpu(cpu: IResolvable) {
+        cdkBuilder.cpu(cpu.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      override fun cpu(cpu: CpuPerformanceFactorRequestProperty) {
+        cdkBuilder.cpu(cpu.let(CpuPerformanceFactorRequestProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5fa7d287d3d7ce58a2186acab9a3aea7bbb90b61fe7680a14eabc769593c297e")
+      override fun cpu(cpu: CpuPerformanceFactorRequestProperty.Builder.() -> Unit): Unit =
+          cpu(CpuPerformanceFactorRequestProperty(cpu))
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselinePerformanceFactorsRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselinePerformanceFactorsRequestProperty,
+    ) : CdkObject(cdkObject),
+        BaselinePerformanceFactorsRequestProperty {
+      /**
+       * The CPU performance to consider, using an instance family as the baseline reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-baselineperformancefactorsrequest.html#cfn-ec2-ec2fleet-baselineperformancefactorsrequest-cpu)
+       */
+      override fun cpu(): Any? = unwrap(this).getCpu()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BaselinePerformanceFactorsRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselinePerformanceFactorsRequestProperty):
+          BaselinePerformanceFactorsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BaselinePerformanceFactorsRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BaselinePerformanceFactorsRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselinePerformanceFactorsRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselinePerformanceFactorsRequestProperty
+    }
+  }
+
+  /**
+   * Describes a block device mapping, which defines the EBS volumes and instance store volumes to
+   * attach to an instance at launch.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * BlockDeviceMappingProperty blockDeviceMappingProperty = BlockDeviceMappingProperty.builder()
+   * .deviceName("deviceName")
+   * .ebs(EbsBlockDeviceProperty.builder()
+   * .deleteOnTermination(false)
+   * .encrypted(false)
+   * .iops(123)
+   * .kmsKeyId("kmsKeyId")
+   * .snapshotId("snapshotId")
+   * .volumeSize(123)
+   * .volumeType("volumeType")
+   * .build())
+   * .noDevice("noDevice")
+   * .virtualName("virtualName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-blockdevicemapping.html)
+   */
+  public interface BlockDeviceMappingProperty {
+    /**
+     * The device name (for example, `/dev/sdh` or `xvdh` ).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-blockdevicemapping.html#cfn-ec2-ec2fleet-blockdevicemapping-devicename)
+     */
+    public fun deviceName(): String? = unwrap(this).getDeviceName()
+
+    /**
+     * Parameters used to automatically set up EBS volumes when the instance is launched.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-blockdevicemapping.html#cfn-ec2-ec2fleet-blockdevicemapping-ebs)
+     */
+    public fun ebs(): Any? = unwrap(this).getEbs()
+
+    /**
+     * To omit the device from the block device mapping, specify an empty string.
+     *
+     * When this property is specified, the device is removed from the block device mapping
+     * regardless of the assigned value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-blockdevicemapping.html#cfn-ec2-ec2fleet-blockdevicemapping-nodevice)
+     */
+    public fun noDevice(): String? = unwrap(this).getNoDevice()
+
+    /**
+     * The virtual device name ( `ephemeral` N).
+     *
+     * Instance store volumes are numbered starting from 0. An instance type with 2 available
+     * instance store volumes can specify mappings for `ephemeral0` and `ephemeral1` . The number of
+     * available instance store volumes depends on the instance type. After you connect to the
+     * instance, you must mount the volume.
+     *
+     * NVMe instance store volumes are automatically enumerated and assigned a device name.
+     * Including them in your block device mapping has no effect.
+     *
+     * Constraints: For M3 instances, you must specify instance store volumes in the block device
+     * mapping for the instance. When you launch an M3 instance, we ignore any instance store volumes
+     * specified in the block device mapping for the AMI.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-blockdevicemapping.html#cfn-ec2-ec2fleet-blockdevicemapping-virtualname)
+     */
+    public fun virtualName(): String? = unwrap(this).getVirtualName()
+
+    /**
+     * A builder for [BlockDeviceMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deviceName The device name (for example, `/dev/sdh` or `xvdh` ).
+       */
+      public fun deviceName(deviceName: String)
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       */
+      public fun ebs(ebs: IResolvable)
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       */
+      public fun ebs(ebs: EbsBlockDeviceProperty)
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7fb21c1a67cc396fe900f5e9a12ea183b6b63d10c1231c453853ff1221e5507b")
+      public fun ebs(ebs: EbsBlockDeviceProperty.Builder.() -> Unit)
+
+      /**
+       * @param noDevice To omit the device from the block device mapping, specify an empty string.
+       * When this property is specified, the device is removed from the block device mapping
+       * regardless of the assigned value.
+       */
+      public fun noDevice(noDevice: String)
+
+      /**
+       * @param virtualName The virtual device name ( `ephemeral` N).
+       * Instance store volumes are numbered starting from 0. An instance type with 2 available
+       * instance store volumes can specify mappings for `ephemeral0` and `ephemeral1` . The number of
+       * available instance store volumes depends on the instance type. After you connect to the
+       * instance, you must mount the volume.
+       *
+       * NVMe instance store volumes are automatically enumerated and assigned a device name.
+       * Including them in your block device mapping has no effect.
+       *
+       * Constraints: For M3 instances, you must specify instance store volumes in the block device
+       * mapping for the instance. When you launch an M3 instance, we ignore any instance store volumes
+       * specified in the block device mapping for the AMI.
+       */
+      public fun virtualName(virtualName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BlockDeviceMappingProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BlockDeviceMappingProperty.builder()
+
+      /**
+       * @param deviceName The device name (for example, `/dev/sdh` or `xvdh` ).
+       */
+      override fun deviceName(deviceName: String) {
+        cdkBuilder.deviceName(deviceName)
+      }
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       */
+      override fun ebs(ebs: IResolvable) {
+        cdkBuilder.ebs(ebs.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       */
+      override fun ebs(ebs: EbsBlockDeviceProperty) {
+        cdkBuilder.ebs(ebs.let(EbsBlockDeviceProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param ebs Parameters used to automatically set up EBS volumes when the instance is
+       * launched.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7fb21c1a67cc396fe900f5e9a12ea183b6b63d10c1231c453853ff1221e5507b")
+      override fun ebs(ebs: EbsBlockDeviceProperty.Builder.() -> Unit): Unit =
+          ebs(EbsBlockDeviceProperty(ebs))
+
+      /**
+       * @param noDevice To omit the device from the block device mapping, specify an empty string.
+       * When this property is specified, the device is removed from the block device mapping
+       * regardless of the assigned value.
+       */
+      override fun noDevice(noDevice: String) {
+        cdkBuilder.noDevice(noDevice)
+      }
+
+      /**
+       * @param virtualName The virtual device name ( `ephemeral` N).
+       * Instance store volumes are numbered starting from 0. An instance type with 2 available
+       * instance store volumes can specify mappings for `ephemeral0` and `ephemeral1` . The number of
+       * available instance store volumes depends on the instance type. After you connect to the
+       * instance, you must mount the volume.
+       *
+       * NVMe instance store volumes are automatically enumerated and assigned a device name.
+       * Including them in your block device mapping has no effect.
+       *
+       * Constraints: For M3 instances, you must specify instance store volumes in the block device
+       * mapping for the instance. When you launch an M3 instance, we ignore any instance store volumes
+       * specified in the block device mapping for the AMI.
+       */
+      override fun virtualName(virtualName: String) {
+        cdkBuilder.virtualName(virtualName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnEC2Fleet.BlockDeviceMappingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.BlockDeviceMappingProperty,
+    ) : CdkObject(cdkObject),
+        BlockDeviceMappingProperty {
+      /**
+       * The device name (for example, `/dev/sdh` or `xvdh` ).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-blockdevicemapping.html#cfn-ec2-ec2fleet-blockdevicemapping-devicename)
+       */
+      override fun deviceName(): String? = unwrap(this).getDeviceName()
+
+      /**
+       * Parameters used to automatically set up EBS volumes when the instance is launched.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-blockdevicemapping.html#cfn-ec2-ec2fleet-blockdevicemapping-ebs)
+       */
+      override fun ebs(): Any? = unwrap(this).getEbs()
+
+      /**
+       * To omit the device from the block device mapping, specify an empty string.
+       *
+       * When this property is specified, the device is removed from the block device mapping
+       * regardless of the assigned value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-blockdevicemapping.html#cfn-ec2-ec2fleet-blockdevicemapping-nodevice)
+       */
+      override fun noDevice(): String? = unwrap(this).getNoDevice()
+
+      /**
+       * The virtual device name ( `ephemeral` N).
+       *
+       * Instance store volumes are numbered starting from 0. An instance type with 2 available
+       * instance store volumes can specify mappings for `ephemeral0` and `ephemeral1` . The number of
+       * available instance store volumes depends on the instance type. After you connect to the
+       * instance, you must mount the volume.
+       *
+       * NVMe instance store volumes are automatically enumerated and assigned a device name.
+       * Including them in your block device mapping has no effect.
+       *
+       * Constraints: For M3 instances, you must specify instance store volumes in the block device
+       * mapping for the instance. When you launch an M3 instance, we ignore any instance store volumes
+       * specified in the block device mapping for the AMI.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-blockdevicemapping.html#cfn-ec2-ec2fleet-blockdevicemapping-virtualname)
+       */
+      override fun virtualName(): String? = unwrap(this).getVirtualName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BlockDeviceMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.BlockDeviceMappingProperty):
+          BlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BlockDeviceMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BlockDeviceMappingProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BlockDeviceMappingProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.BlockDeviceMappingProperty
+    }
+  }
+
+  /**
    * The Spot Instance replacement strategy to use when Amazon EC2 emits a rebalance notification
    * signal that your Spot Instance is at an elevated risk of being interrupted.
    *
@@ -1790,6 +2201,814 @@ public open class CfnEC2Fleet(
   }
 
   /**
+   * The CPU performance to consider, using an instance family as the baseline reference.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * CpuPerformanceFactorRequestProperty cpuPerformanceFactorRequestProperty =
+   * CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-cpuperformancefactorrequest.html)
+   */
+  public interface CpuPerformanceFactorRequestProperty {
+    /**
+     * Specify an instance family to use as the baseline reference for CPU performance.
+     *
+     * All instance types that match your specified attributes will be compared against the CPU
+     * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+     * differences.
+     *
+     *
+     * Currently, only one instance family can be specified in the list.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-cpuperformancefactorrequest.html#cfn-ec2-ec2fleet-cpuperformancefactorrequest-references)
+     */
+    public fun references(): Any? = unwrap(this).getReferences()
+
+    /**
+     * A builder for [CpuPerformanceFactorRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently, only one instance family can be specified in the list.
+       */
+      public fun references(references: IResolvable)
+
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently, only one instance family can be specified in the list.
+       */
+      public fun references(references: List<Any>)
+
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently, only one instance family can be specified in the list.
+       */
+      public fun references(vararg references: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CpuPerformanceFactorRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CpuPerformanceFactorRequestProperty.builder()
+
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently, only one instance family can be specified in the list.
+       */
+      override fun references(references: IResolvable) {
+        cdkBuilder.references(references.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently, only one instance family can be specified in the list.
+       */
+      override fun references(references: List<Any>) {
+        cdkBuilder.references(references.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently, only one instance family can be specified in the list.
+       */
+      override fun references(vararg references: Any): Unit = references(references.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CpuPerformanceFactorRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.CpuPerformanceFactorRequestProperty,
+    ) : CdkObject(cdkObject),
+        CpuPerformanceFactorRequestProperty {
+      /**
+       * Specify an instance family to use as the baseline reference for CPU performance.
+       *
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently, only one instance family can be specified in the list.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-cpuperformancefactorrequest.html#cfn-ec2-ec2fleet-cpuperformancefactorrequest-references)
+       */
+      override fun references(): Any? = unwrap(this).getReferences()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CpuPerformanceFactorRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.CpuPerformanceFactorRequestProperty):
+          CpuPerformanceFactorRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CpuPerformanceFactorRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CpuPerformanceFactorRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CpuPerformanceFactorRequestProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.CpuPerformanceFactorRequestProperty
+    }
+  }
+
+  /**
+   * Describes a block device for an EBS volume.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * EbsBlockDeviceProperty ebsBlockDeviceProperty = EbsBlockDeviceProperty.builder()
+   * .deleteOnTermination(false)
+   * .encrypted(false)
+   * .iops(123)
+   * .kmsKeyId("kmsKeyId")
+   * .snapshotId("snapshotId")
+   * .volumeSize(123)
+   * .volumeType("volumeType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html)
+   */
+  public interface EbsBlockDeviceProperty {
+    /**
+     * Indicates whether the EBS volume is deleted on instance termination.
+     *
+     * For more information, see [Preserving Amazon EBS volumes on instance
+     * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
+     * in the *Amazon EC2 User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-deleteontermination)
+     */
+    public fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+
+    /**
+     * Indicates whether the encryption state of an EBS volume is changed while being restored from
+     * a backing snapshot.
+     *
+     * The effect of setting the encryption state to `true` depends on the volume origin (new or
+     * from a snapshot), starting encryption state, ownership, and whether encryption by default is
+     * enabled. For more information, see [Amazon EBS
+     * encryption](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html#encryption-parameters)
+     * in the *Amazon EBS User Guide* .
+     *
+     * In no case can you remove encryption from an encrypted volume.
+     *
+     * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
+     * more information, see [Supported instance
+     * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances)
+     * .
+     *
+     * This parameter is not returned by `DescribeImageAttribute` .
+     *
+     * For `CreateImage` and `RegisterImage` , whether you can include this parameter, and the
+     * allowed values differ depending on the type of block device mapping you are creating.
+     *
+     * * If you are creating a block device mapping for a *new (empty) volume* , you can include
+     * this parameter, and specify either `true` for an encrypted volume, or `false` for an unencrypted
+     * volume. If you omit this parameter, it defaults to `false` (unencrypted).
+     * * If you are creating a block device mapping from an *existing encrypted or unencrypted
+     * snapshot* , you must omit this parameter. If you include this parameter, the request will fail,
+     * regardless of the value that you specify.
+     * * If you are creating a block device mapping from an *existing unencrypted volume* , you can
+     * include this parameter, but you must specify `false` . If you specify `true` , the request will
+     * fail. In this case, we recommend that you omit the parameter.
+     * * If you are creating a block device mapping from an *existing encrypted volume* , you can
+     * include this parameter, and specify either `true` or `false` . However, if you specify `false` ,
+     * the parameter is ignored and the block device mapping is always encrypted. In this case, we
+     * recommend that you omit the parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-encrypted)
+     */
+    public fun encrypted(): Any? = unwrap(this).getEncrypted()
+
+    /**
+     * The number of I/O operations per second (IOPS).
+     *
+     * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
+     * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
+     * volume and the rate at which the volume accumulates I/O credits for bursting.
+     *
+     * The following are the supported values for each volume type:
+     *
+     * * `gp3` : 3,000 - 16,000 IOPS
+     * * `io1` : 100 - 64,000 IOPS
+     * * `io2` : 100 - 256,000 IOPS
+     *
+     * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
+     * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
+     * . On other instances, you can achieve performance up to 32,000 IOPS.
+     *
+     * This parameter is required for `io1` and `io2` volumes. The default for `gp3` volumes is
+     * 3,000 IOPS.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-iops)
+     */
+    public fun iops(): Number? = unwrap(this).getIops()
+
+    /**
+     * Identifier (key ID, key alias, key ARN, or alias ARN) of the customer managed KMS key to use
+     * for EBS encryption.
+     *
+     * This parameter is only supported on `BlockDeviceMapping` objects called by
+     * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) ,
+     * [RequestSpotFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet.html)
+     * , and
+     * [RequestSpotInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotInstances.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * The ID of the snapshot.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-snapshotid)
+     */
+    public fun snapshotId(): String? = unwrap(this).getSnapshotId()
+
+    /**
+     * The size of the volume, in GiBs.
+     *
+     * You must specify either a snapshot ID or a volume size. If you specify a snapshot, the
+     * default is the snapshot size. You can specify a volume size that is equal to or larger than the
+     * snapshot size.
+     *
+     * The following are the supported sizes for each volume type:
+     *
+     * * `gp2` and `gp3` : 1 - 16,384 GiB
+     * * `io1` : 4 - 16,384 GiB
+     * * `io2` : 4 - 65,536 GiB
+     * * `st1` and `sc1` : 125 - 16,384 GiB
+     * * `standard` : 1 - 1024 GiB
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-volumesize)
+     */
+    public fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+
+    /**
+     * The volume type.
+     *
+     * For more information, see [Amazon EBS volume
+     * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) in the *Amazon
+     * EBS User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-volumetype)
+     */
+    public fun volumeType(): String? = unwrap(this).getVolumeType()
+
+    /**
+     * A builder for [EbsBlockDeviceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
+       * termination.
+       * For more information, see [Preserving Amazon EBS volumes on instance
+       * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
+       * in the *Amazon EC2 User Guide* .
+       */
+      public fun deleteOnTermination(deleteOnTermination: Boolean)
+
+      /**
+       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
+       * termination.
+       * For more information, see [Preserving Amazon EBS volumes on instance
+       * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
+       * in the *Amazon EC2 User Guide* .
+       */
+      public fun deleteOnTermination(deleteOnTermination: IResolvable)
+
+      /**
+       * @param encrypted Indicates whether the encryption state of an EBS volume is changed while
+       * being restored from a backing snapshot.
+       * The effect of setting the encryption state to `true` depends on the volume origin (new or
+       * from a snapshot), starting encryption state, ownership, and whether encryption by default is
+       * enabled. For more information, see [Amazon EBS
+       * encryption](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html#encryption-parameters)
+       * in the *Amazon EBS User Guide* .
+       *
+       * In no case can you remove encryption from an encrypted volume.
+       *
+       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
+       * more information, see [Supported instance
+       * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances)
+       * .
+       *
+       * This parameter is not returned by `DescribeImageAttribute` .
+       *
+       * For `CreateImage` and `RegisterImage` , whether you can include this parameter, and the
+       * allowed values differ depending on the type of block device mapping you are creating.
+       *
+       * * If you are creating a block device mapping for a *new (empty) volume* , you can include
+       * this parameter, and specify either `true` for an encrypted volume, or `false` for an
+       * unencrypted volume. If you omit this parameter, it defaults to `false` (unencrypted).
+       * * If you are creating a block device mapping from an *existing encrypted or unencrypted
+       * snapshot* , you must omit this parameter. If you include this parameter, the request will
+       * fail, regardless of the value that you specify.
+       * * If you are creating a block device mapping from an *existing unencrypted volume* , you
+       * can include this parameter, but you must specify `false` . If you specify `true` , the request
+       * will fail. In this case, we recommend that you omit the parameter.
+       * * If you are creating a block device mapping from an *existing encrypted volume* , you can
+       * include this parameter, and specify either `true` or `false` . However, if you specify `false`
+       * , the parameter is ignored and the block device mapping is always encrypted. In this case, we
+       * recommend that you omit the parameter.
+       */
+      public fun encrypted(encrypted: Boolean)
+
+      /**
+       * @param encrypted Indicates whether the encryption state of an EBS volume is changed while
+       * being restored from a backing snapshot.
+       * The effect of setting the encryption state to `true` depends on the volume origin (new or
+       * from a snapshot), starting encryption state, ownership, and whether encryption by default is
+       * enabled. For more information, see [Amazon EBS
+       * encryption](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html#encryption-parameters)
+       * in the *Amazon EBS User Guide* .
+       *
+       * In no case can you remove encryption from an encrypted volume.
+       *
+       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
+       * more information, see [Supported instance
+       * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances)
+       * .
+       *
+       * This parameter is not returned by `DescribeImageAttribute` .
+       *
+       * For `CreateImage` and `RegisterImage` , whether you can include this parameter, and the
+       * allowed values differ depending on the type of block device mapping you are creating.
+       *
+       * * If you are creating a block device mapping for a *new (empty) volume* , you can include
+       * this parameter, and specify either `true` for an encrypted volume, or `false` for an
+       * unencrypted volume. If you omit this parameter, it defaults to `false` (unencrypted).
+       * * If you are creating a block device mapping from an *existing encrypted or unencrypted
+       * snapshot* , you must omit this parameter. If you include this parameter, the request will
+       * fail, regardless of the value that you specify.
+       * * If you are creating a block device mapping from an *existing unencrypted volume* , you
+       * can include this parameter, but you must specify `false` . If you specify `true` , the request
+       * will fail. In this case, we recommend that you omit the parameter.
+       * * If you are creating a block device mapping from an *existing encrypted volume* , you can
+       * include this parameter, and specify either `true` or `false` . However, if you specify `false`
+       * , the parameter is ignored and the block device mapping is always encrypted. In this case, we
+       * recommend that you omit the parameter.
+       */
+      public fun encrypted(encrypted: IResolvable)
+
+      /**
+       * @param iops The number of I/O operations per second (IOPS).
+       * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
+       * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
+       * volume and the rate at which the volume accumulates I/O credits for bursting.
+       *
+       * The following are the supported values for each volume type:
+       *
+       * * `gp3` : 3,000 - 16,000 IOPS
+       * * `io1` : 100 - 64,000 IOPS
+       * * `io2` : 100 - 256,000 IOPS
+       *
+       * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
+       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
+       * . On other instances, you can achieve performance up to 32,000 IOPS.
+       *
+       * This parameter is required for `io1` and `io2` volumes. The default for `gp3` volumes is
+       * 3,000 IOPS.
+       */
+      public fun iops(iops: Number)
+
+      /**
+       * @param kmsKeyId Identifier (key ID, key alias, key ARN, or alias ARN) of the customer
+       * managed KMS key to use for EBS encryption.
+       * This parameter is only supported on `BlockDeviceMapping` objects called by
+       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) ,
+       * [RequestSpotFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet.html)
+       * , and
+       * [RequestSpotInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotInstances.html)
+       * .
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+
+      /**
+       * @param snapshotId The ID of the snapshot.
+       */
+      public fun snapshotId(snapshotId: String)
+
+      /**
+       * @param volumeSize The size of the volume, in GiBs.
+       * You must specify either a snapshot ID or a volume size. If you specify a snapshot, the
+       * default is the snapshot size. You can specify a volume size that is equal to or larger than
+       * the snapshot size.
+       *
+       * The following are the supported sizes for each volume type:
+       *
+       * * `gp2` and `gp3` : 1 - 16,384 GiB
+       * * `io1` : 4 - 16,384 GiB
+       * * `io2` : 4 - 65,536 GiB
+       * * `st1` and `sc1` : 125 - 16,384 GiB
+       * * `standard` : 1 - 1024 GiB
+       */
+      public fun volumeSize(volumeSize: Number)
+
+      /**
+       * @param volumeType The volume type.
+       * For more information, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) in the *Amazon
+       * EBS User Guide* .
+       */
+      public fun volumeType(volumeType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.EbsBlockDeviceProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.EbsBlockDeviceProperty.builder()
+
+      /**
+       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
+       * termination.
+       * For more information, see [Preserving Amazon EBS volumes on instance
+       * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
+       * in the *Amazon EC2 User Guide* .
+       */
+      override fun deleteOnTermination(deleteOnTermination: Boolean) {
+        cdkBuilder.deleteOnTermination(deleteOnTermination)
+      }
+
+      /**
+       * @param deleteOnTermination Indicates whether the EBS volume is deleted on instance
+       * termination.
+       * For more information, see [Preserving Amazon EBS volumes on instance
+       * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
+       * in the *Amazon EC2 User Guide* .
+       */
+      override fun deleteOnTermination(deleteOnTermination: IResolvable) {
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param encrypted Indicates whether the encryption state of an EBS volume is changed while
+       * being restored from a backing snapshot.
+       * The effect of setting the encryption state to `true` depends on the volume origin (new or
+       * from a snapshot), starting encryption state, ownership, and whether encryption by default is
+       * enabled. For more information, see [Amazon EBS
+       * encryption](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html#encryption-parameters)
+       * in the *Amazon EBS User Guide* .
+       *
+       * In no case can you remove encryption from an encrypted volume.
+       *
+       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
+       * more information, see [Supported instance
+       * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances)
+       * .
+       *
+       * This parameter is not returned by `DescribeImageAttribute` .
+       *
+       * For `CreateImage` and `RegisterImage` , whether you can include this parameter, and the
+       * allowed values differ depending on the type of block device mapping you are creating.
+       *
+       * * If you are creating a block device mapping for a *new (empty) volume* , you can include
+       * this parameter, and specify either `true` for an encrypted volume, or `false` for an
+       * unencrypted volume. If you omit this parameter, it defaults to `false` (unencrypted).
+       * * If you are creating a block device mapping from an *existing encrypted or unencrypted
+       * snapshot* , you must omit this parameter. If you include this parameter, the request will
+       * fail, regardless of the value that you specify.
+       * * If you are creating a block device mapping from an *existing unencrypted volume* , you
+       * can include this parameter, but you must specify `false` . If you specify `true` , the request
+       * will fail. In this case, we recommend that you omit the parameter.
+       * * If you are creating a block device mapping from an *existing encrypted volume* , you can
+       * include this parameter, and specify either `true` or `false` . However, if you specify `false`
+       * , the parameter is ignored and the block device mapping is always encrypted. In this case, we
+       * recommend that you omit the parameter.
+       */
+      override fun encrypted(encrypted: Boolean) {
+        cdkBuilder.encrypted(encrypted)
+      }
+
+      /**
+       * @param encrypted Indicates whether the encryption state of an EBS volume is changed while
+       * being restored from a backing snapshot.
+       * The effect of setting the encryption state to `true` depends on the volume origin (new or
+       * from a snapshot), starting encryption state, ownership, and whether encryption by default is
+       * enabled. For more information, see [Amazon EBS
+       * encryption](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html#encryption-parameters)
+       * in the *Amazon EBS User Guide* .
+       *
+       * In no case can you remove encryption from an encrypted volume.
+       *
+       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
+       * more information, see [Supported instance
+       * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances)
+       * .
+       *
+       * This parameter is not returned by `DescribeImageAttribute` .
+       *
+       * For `CreateImage` and `RegisterImage` , whether you can include this parameter, and the
+       * allowed values differ depending on the type of block device mapping you are creating.
+       *
+       * * If you are creating a block device mapping for a *new (empty) volume* , you can include
+       * this parameter, and specify either `true` for an encrypted volume, or `false` for an
+       * unencrypted volume. If you omit this parameter, it defaults to `false` (unencrypted).
+       * * If you are creating a block device mapping from an *existing encrypted or unencrypted
+       * snapshot* , you must omit this parameter. If you include this parameter, the request will
+       * fail, regardless of the value that you specify.
+       * * If you are creating a block device mapping from an *existing unencrypted volume* , you
+       * can include this parameter, but you must specify `false` . If you specify `true` , the request
+       * will fail. In this case, we recommend that you omit the parameter.
+       * * If you are creating a block device mapping from an *existing encrypted volume* , you can
+       * include this parameter, and specify either `true` or `false` . However, if you specify `false`
+       * , the parameter is ignored and the block device mapping is always encrypted. In this case, we
+       * recommend that you omit the parameter.
+       */
+      override fun encrypted(encrypted: IResolvable) {
+        cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param iops The number of I/O operations per second (IOPS).
+       * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
+       * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
+       * volume and the rate at which the volume accumulates I/O credits for bursting.
+       *
+       * The following are the supported values for each volume type:
+       *
+       * * `gp3` : 3,000 - 16,000 IOPS
+       * * `io1` : 100 - 64,000 IOPS
+       * * `io2` : 100 - 256,000 IOPS
+       *
+       * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
+       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
+       * . On other instances, you can achieve performance up to 32,000 IOPS.
+       *
+       * This parameter is required for `io1` and `io2` volumes. The default for `gp3` volumes is
+       * 3,000 IOPS.
+       */
+      override fun iops(iops: Number) {
+        cdkBuilder.iops(iops)
+      }
+
+      /**
+       * @param kmsKeyId Identifier (key ID, key alias, key ARN, or alias ARN) of the customer
+       * managed KMS key to use for EBS encryption.
+       * This parameter is only supported on `BlockDeviceMapping` objects called by
+       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) ,
+       * [RequestSpotFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet.html)
+       * , and
+       * [RequestSpotInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotInstances.html)
+       * .
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      /**
+       * @param snapshotId The ID of the snapshot.
+       */
+      override fun snapshotId(snapshotId: String) {
+        cdkBuilder.snapshotId(snapshotId)
+      }
+
+      /**
+       * @param volumeSize The size of the volume, in GiBs.
+       * You must specify either a snapshot ID or a volume size. If you specify a snapshot, the
+       * default is the snapshot size. You can specify a volume size that is equal to or larger than
+       * the snapshot size.
+       *
+       * The following are the supported sizes for each volume type:
+       *
+       * * `gp2` and `gp3` : 1 - 16,384 GiB
+       * * `io1` : 4 - 16,384 GiB
+       * * `io2` : 4 - 65,536 GiB
+       * * `st1` and `sc1` : 125 - 16,384 GiB
+       * * `standard` : 1 - 1024 GiB
+       */
+      override fun volumeSize(volumeSize: Number) {
+        cdkBuilder.volumeSize(volumeSize)
+      }
+
+      /**
+       * @param volumeType The volume type.
+       * For more information, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) in the *Amazon
+       * EBS User Guide* .
+       */
+      override fun volumeType(volumeType: String) {
+        cdkBuilder.volumeType(volumeType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnEC2Fleet.EbsBlockDeviceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.EbsBlockDeviceProperty,
+    ) : CdkObject(cdkObject),
+        EbsBlockDeviceProperty {
+      /**
+       * Indicates whether the EBS volume is deleted on instance termination.
+       *
+       * For more information, see [Preserving Amazon EBS volumes on instance
+       * termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination)
+       * in the *Amazon EC2 User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-deleteontermination)
+       */
+      override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+
+      /**
+       * Indicates whether the encryption state of an EBS volume is changed while being restored
+       * from a backing snapshot.
+       *
+       * The effect of setting the encryption state to `true` depends on the volume origin (new or
+       * from a snapshot), starting encryption state, ownership, and whether encryption by default is
+       * enabled. For more information, see [Amazon EBS
+       * encryption](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html#encryption-parameters)
+       * in the *Amazon EBS User Guide* .
+       *
+       * In no case can you remove encryption from an encrypted volume.
+       *
+       * Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
+       * more information, see [Supported instance
+       * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances)
+       * .
+       *
+       * This parameter is not returned by `DescribeImageAttribute` .
+       *
+       * For `CreateImage` and `RegisterImage` , whether you can include this parameter, and the
+       * allowed values differ depending on the type of block device mapping you are creating.
+       *
+       * * If you are creating a block device mapping for a *new (empty) volume* , you can include
+       * this parameter, and specify either `true` for an encrypted volume, or `false` for an
+       * unencrypted volume. If you omit this parameter, it defaults to `false` (unencrypted).
+       * * If you are creating a block device mapping from an *existing encrypted or unencrypted
+       * snapshot* , you must omit this parameter. If you include this parameter, the request will
+       * fail, regardless of the value that you specify.
+       * * If you are creating a block device mapping from an *existing unencrypted volume* , you
+       * can include this parameter, but you must specify `false` . If you specify `true` , the request
+       * will fail. In this case, we recommend that you omit the parameter.
+       * * If you are creating a block device mapping from an *existing encrypted volume* , you can
+       * include this parameter, and specify either `true` or `false` . However, if you specify `false`
+       * , the parameter is ignored and the block device mapping is always encrypted. In this case, we
+       * recommend that you omit the parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-encrypted)
+       */
+      override fun encrypted(): Any? = unwrap(this).getEncrypted()
+
+      /**
+       * The number of I/O operations per second (IOPS).
+       *
+       * For `gp3` , `io1` , and `io2` volumes, this represents the number of IOPS that are
+       * provisioned for the volume. For `gp2` volumes, this represents the baseline performance of the
+       * volume and the rate at which the volume accumulates I/O credits for bursting.
+       *
+       * The following are the supported values for each volume type:
+       *
+       * * `gp3` : 3,000 - 16,000 IOPS
+       * * `io1` : 100 - 64,000 IOPS
+       * * `io2` : 100 - 256,000 IOPS
+       *
+       * For `io2` volumes, you can achieve up to 256,000 IOPS on [instances built on the Nitro
+       * System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
+       * . On other instances, you can achieve performance up to 32,000 IOPS.
+       *
+       * This parameter is required for `io1` and `io2` volumes. The default for `gp3` volumes is
+       * 3,000 IOPS.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-iops)
+       */
+      override fun iops(): Number? = unwrap(this).getIops()
+
+      /**
+       * Identifier (key ID, key alias, key ARN, or alias ARN) of the customer managed KMS key to
+       * use for EBS encryption.
+       *
+       * This parameter is only supported on `BlockDeviceMapping` objects called by
+       * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) ,
+       * [RequestSpotFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet.html)
+       * , and
+       * [RequestSpotInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotInstances.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+      /**
+       * The ID of the snapshot.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-snapshotid)
+       */
+      override fun snapshotId(): String? = unwrap(this).getSnapshotId()
+
+      /**
+       * The size of the volume, in GiBs.
+       *
+       * You must specify either a snapshot ID or a volume size. If you specify a snapshot, the
+       * default is the snapshot size. You can specify a volume size that is equal to or larger than
+       * the snapshot size.
+       *
+       * The following are the supported sizes for each volume type:
+       *
+       * * `gp2` and `gp3` : 1 - 16,384 GiB
+       * * `io1` : 4 - 16,384 GiB
+       * * `io2` : 4 - 65,536 GiB
+       * * `st1` and `sc1` : 125 - 16,384 GiB
+       * * `standard` : 1 - 1024 GiB
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-volumesize)
+       */
+      override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+
+      /**
+       * The volume type.
+       *
+       * For more information, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) in the *Amazon
+       * EBS User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-volumetype)
+       */
+      override fun volumeType(): String? = unwrap(this).getVolumeType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EbsBlockDeviceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.EbsBlockDeviceProperty):
+          EbsBlockDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? EbsBlockDeviceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EbsBlockDeviceProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.EbsBlockDeviceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.EbsBlockDeviceProperty
+    }
+  }
+
+  /**
    * Specifies a launch template and overrides for an EC2 Fleet.
    *
    * `FleetLaunchTemplateConfigRequest` is a property of the
@@ -1812,6 +3031,20 @@ public open class CfnEC2Fleet(
    * .build())
    * .overrides(List.of(FleetLaunchTemplateOverridesRequestProperty.builder()
    * .availabilityZone("availabilityZone")
+   * .blockDeviceMappings(List.of(BlockDeviceMappingProperty.builder()
+   * .deviceName("deviceName")
+   * .ebs(EbsBlockDeviceProperty.builder()
+   * .deleteOnTermination(false)
+   * .encrypted(false)
+   * .iops(123)
+   * .kmsKeyId("kmsKeyId")
+   * .snapshotId("snapshotId")
+   * .volumeSize(123)
+   * .volumeType("volumeType")
+   * .build())
+   * .noDevice("noDevice")
+   * .virtualName("virtualName")
+   * .build()))
    * .instanceRequirements(InstanceRequirementsRequestProperty.builder()
    * .acceleratorCount(AcceleratorCountRequestProperty.builder()
    * .max(123)
@@ -1829,6 +3062,13 @@ public open class CfnEC2Fleet(
    * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
    * .max(123)
    * .min(123)
+   * .build())
+   * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+   * .cpu(CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
    * .build())
    * .burstablePerformance("burstablePerformance")
    * .cpuManufacturers(List.of("cpuManufacturers"))
@@ -2085,6 +3325,20 @@ public open class CfnEC2Fleet(
    * FleetLaunchTemplateOverridesRequestProperty fleetLaunchTemplateOverridesRequestProperty =
    * FleetLaunchTemplateOverridesRequestProperty.builder()
    * .availabilityZone("availabilityZone")
+   * .blockDeviceMappings(List.of(BlockDeviceMappingProperty.builder()
+   * .deviceName("deviceName")
+   * .ebs(EbsBlockDeviceProperty.builder()
+   * .deleteOnTermination(false)
+   * .encrypted(false)
+   * .iops(123)
+   * .kmsKeyId("kmsKeyId")
+   * .snapshotId("snapshotId")
+   * .volumeSize(123)
+   * .volumeType("volumeType")
+   * .build())
+   * .noDevice("noDevice")
+   * .virtualName("virtualName")
+   * .build()))
    * .instanceRequirements(InstanceRequirementsRequestProperty.builder()
    * .acceleratorCount(AcceleratorCountRequestProperty.builder()
    * .max(123)
@@ -2102,6 +3356,13 @@ public open class CfnEC2Fleet(
    * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
    * .max(123)
    * .min(123)
+   * .build())
+   * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+   * .cpu(CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
    * .build())
    * .burstablePerformance("burstablePerformance")
    * .cpuManufacturers(List.of("cpuManufacturers"))
@@ -2167,6 +3428,20 @@ public open class CfnEC2Fleet(
     public fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
     /**
+     * The block device mappings, which define the EBS volumes and instance store volumes to attach
+     * to the instance at launch.
+     *
+     * Supported only for fleets of type `instant` .
+     *
+     * For more information, see [Block device mappings for volumes on Amazon EC2
+     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
+     * in the *Amazon EC2 User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-blockdevicemappings)
+     */
+    public fun blockDeviceMappings(): Any? = unwrap(this).getBlockDeviceMappings()
+
+    /**
      * The attributes for the instance types.
      *
      * When you specify instance attributes, Amazon EC2 will identify instance types with those
@@ -2202,6 +3477,9 @@ public open class CfnEC2Fleet(
      *
      * If you specify a maximum price, your instances will be interrupted more frequently than if
      * you do not specify this parameter.
+     *
+     * If you specify a maximum price, it must be more than USD $0.001. Specifying a value below USD
+     * $0.001 will result in an `InvalidParameterValue` error message.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-maxprice)
@@ -2274,6 +3552,39 @@ public open class CfnEC2Fleet(
       public fun availabilityZone(availabilityZone: String)
 
       /**
+       * @param blockDeviceMappings The block device mappings, which define the EBS volumes and
+       * instance store volumes to attach to the instance at launch.
+       * Supported only for fleets of type `instant` .
+       *
+       * For more information, see [Block device mappings for volumes on Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
+       * in the *Amazon EC2 User Guide* .
+       */
+      public fun blockDeviceMappings(blockDeviceMappings: IResolvable)
+
+      /**
+       * @param blockDeviceMappings The block device mappings, which define the EBS volumes and
+       * instance store volumes to attach to the instance at launch.
+       * Supported only for fleets of type `instant` .
+       *
+       * For more information, see [Block device mappings for volumes on Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
+       * in the *Amazon EC2 User Guide* .
+       */
+      public fun blockDeviceMappings(blockDeviceMappings: List<Any>)
+
+      /**
+       * @param blockDeviceMappings The block device mappings, which define the EBS volumes and
+       * instance store volumes to attach to the instance at launch.
+       * Supported only for fleets of type `instant` .
+       *
+       * For more information, see [Block device mappings for volumes on Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
+       * in the *Amazon EC2 User Guide* .
+       */
+      public fun blockDeviceMappings(vararg blockDeviceMappings: Any)
+
+      /**
        * @param instanceRequirements The attributes for the instance types.
        * When you specify instance attributes, Amazon EC2 will identify instance types with those
        * attributes.
@@ -2324,6 +3635,9 @@ public open class CfnEC2Fleet(
        *
        * If you specify a maximum price, your instances will be interrupted more frequently than if
        * you do not specify this parameter.
+       *
+       * If you specify a maximum price, it must be more than USD $0.001. Specifying a value below
+       * USD $0.001 will result in an `InvalidParameterValue` error message.
        */
       public fun maxPrice(maxPrice: String)
 
@@ -2400,6 +3714,44 @@ public open class CfnEC2Fleet(
       }
 
       /**
+       * @param blockDeviceMappings The block device mappings, which define the EBS volumes and
+       * instance store volumes to attach to the instance at launch.
+       * Supported only for fleets of type `instant` .
+       *
+       * For more information, see [Block device mappings for volumes on Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
+       * in the *Amazon EC2 User Guide* .
+       */
+      override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
+        cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param blockDeviceMappings The block device mappings, which define the EBS volumes and
+       * instance store volumes to attach to the instance at launch.
+       * Supported only for fleets of type `instant` .
+       *
+       * For more information, see [Block device mappings for volumes on Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
+       * in the *Amazon EC2 User Guide* .
+       */
+      override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
+        cdkBuilder.blockDeviceMappings(blockDeviceMappings.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param blockDeviceMappings The block device mappings, which define the EBS volumes and
+       * instance store volumes to attach to the instance at launch.
+       * Supported only for fleets of type `instant` .
+       *
+       * For more information, see [Block device mappings for volumes on Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
+       * in the *Amazon EC2 User Guide* .
+       */
+      override fun blockDeviceMappings(vararg blockDeviceMappings: Any): Unit =
+          blockDeviceMappings(blockDeviceMappings.toList())
+
+      /**
        * @param instanceRequirements The attributes for the instance types.
        * When you specify instance attributes, Amazon EC2 will identify instance types with those
        * attributes.
@@ -2457,6 +3809,9 @@ public open class CfnEC2Fleet(
        *
        * If you specify a maximum price, your instances will be interrupted more frequently than if
        * you do not specify this parameter.
+       *
+       * If you specify a maximum price, it must be more than USD $0.001. Specifying a value below
+       * USD $0.001 will result in an `InvalidParameterValue` error message.
        */
       override fun maxPrice(maxPrice: String) {
         cdkBuilder.maxPrice(maxPrice)
@@ -2548,6 +3903,20 @@ public open class CfnEC2Fleet(
       override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
       /**
+       * The block device mappings, which define the EBS volumes and instance store volumes to
+       * attach to the instance at launch.
+       *
+       * Supported only for fleets of type `instant` .
+       *
+       * For more information, see [Block device mappings for volumes on Amazon EC2
+       * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
+       * in the *Amazon EC2 User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-blockdevicemappings)
+       */
+      override fun blockDeviceMappings(): Any? = unwrap(this).getBlockDeviceMappings()
+
+      /**
        * The attributes for the instance types.
        *
        * When you specify instance attributes, Amazon EC2 will identify instance types with those
@@ -2583,6 +3952,9 @@ public open class CfnEC2Fleet(
        *
        * If you specify a maximum price, your instances will be interrupted more frequently than if
        * you do not specify this parameter.
+       *
+       * If you specify a maximum price, it must be more than USD $0.001. Specifying a value below
+       * USD $0.001 will result in an `InvalidParameterValue` error message.
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-maxprice)
@@ -2921,6 +4293,13 @@ public open class CfnEC2Fleet(
    * .max(123)
    * .min(123)
    * .build())
+   * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+   * .cpu(CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
+   * .build())
    * .burstablePerformance("burstablePerformance")
    * .cpuManufacturers(List.of("cpuManufacturers"))
    * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
@@ -3023,8 +4402,9 @@ public open class CfnEC2Fleet(
     /**
      * The accelerator types that must be on the instance type.
      *
-     * * To include instance types with GPU hardware, specify `gpu` .
-     * * To include instance types with FPGA hardware, specify `fpga` .
+     * * For instance types with FPGA accelerators, specify `fpga` .
+     * * For instance types with GPU accelerators, specify `gpu` .
+     * * For instance types with Inference accelerators, specify `inference` .
      *
      * Default: Any accelerator type
      *
@@ -3081,6 +4461,21 @@ public open class CfnEC2Fleet(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-instancerequirementsrequest.html#cfn-ec2-ec2fleet-instancerequirementsrequest-baselineebsbandwidthmbps)
      */
     public fun baselineEbsBandwidthMbps(): Any? = unwrap(this).getBaselineEbsBandwidthMbps()
+
+    /**
+     * The baseline performance to consider, using an instance family as a baseline reference.
+     *
+     * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+     * this baseline to guide instance type selection, but there is no guarantee that the selected
+     * instance types will always exceed the baseline for every application. Currently, this parameter
+     * only supports CPU performance as a baseline performance factor. For more information, see
+     * [Performance
+     * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+     * in the *Amazon EC2 User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-instancerequirementsrequest.html#cfn-ec2-ec2fleet-instancerequirementsrequest-baselineperformancefactors)
+     */
+    public fun baselinePerformanceFactors(): Any? = unwrap(this).getBaselinePerformanceFactors()
 
     /**
      * Indicates whether burstable performance T instance types are included, excluded, or required.
@@ -3485,8 +4880,9 @@ public open class CfnEC2Fleet(
 
       /**
        * @param acceleratorTypes The accelerator types that must be on the instance type.
-       * * To include instance types with GPU hardware, specify `gpu` .
-       * * To include instance types with FPGA hardware, specify `fpga` .
+       * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with Inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -3494,8 +4890,9 @@ public open class CfnEC2Fleet(
 
       /**
        * @param acceleratorTypes The accelerator types that must be on the instance type.
-       * * To include instance types with GPU hardware, specify `gpu` .
-       * * To include instance types with FPGA hardware, specify `fpga` .
+       * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with Inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -3588,6 +4985,49 @@ public open class CfnEC2Fleet(
       @JvmName("19534bbb047387c09ab85613a207af1e0cb22e91d8d0f22ccc3db25943079ad9")
       public
           fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsRequestProperty.Builder.() -> Unit)
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      public fun baselinePerformanceFactors(baselinePerformanceFactors: IResolvable)
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      public
+          fun baselinePerformanceFactors(baselinePerformanceFactors: BaselinePerformanceFactorsRequestProperty)
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("04f90df8e39ef2b2aca3ad22e9fcfdd496e2dbd71adb01bdbbb9f2d8e57db65d")
+      public
+          fun baselinePerformanceFactors(baselinePerformanceFactors: BaselinePerformanceFactorsRequestProperty.Builder.() -> Unit)
 
       /**
        * @param burstablePerformance Indicates whether burstable performance T instance types are
@@ -4133,8 +5573,9 @@ public open class CfnEC2Fleet(
 
       /**
        * @param acceleratorTypes The accelerator types that must be on the instance type.
-       * * To include instance types with GPU hardware, specify `gpu` .
-       * * To include instance types with FPGA hardware, specify `fpga` .
+       * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with Inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -4144,8 +5585,9 @@ public open class CfnEC2Fleet(
 
       /**
        * @param acceleratorTypes The accelerator types that must be on the instance type.
-       * * To include instance types with GPU hardware, specify `gpu` .
-       * * To include instance types with FPGA hardware, specify `fpga` .
+       * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with Inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -4250,6 +5692,55 @@ public open class CfnEC2Fleet(
           fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsRequestProperty.Builder.() -> Unit):
           Unit =
           baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty(baselineEbsBandwidthMbps))
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      override fun baselinePerformanceFactors(baselinePerformanceFactors: IResolvable) {
+        cdkBuilder.baselinePerformanceFactors(baselinePerformanceFactors.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      override
+          fun baselinePerformanceFactors(baselinePerformanceFactors: BaselinePerformanceFactorsRequestProperty) {
+        cdkBuilder.baselinePerformanceFactors(baselinePerformanceFactors.let(BaselinePerformanceFactorsRequestProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("04f90df8e39ef2b2aca3ad22e9fcfdd496e2dbd71adb01bdbbb9f2d8e57db65d")
+      override
+          fun baselinePerformanceFactors(baselinePerformanceFactors: BaselinePerformanceFactorsRequestProperty.Builder.() -> Unit):
+          Unit =
+          baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty(baselinePerformanceFactors))
 
       /**
        * @param burstablePerformance Indicates whether burstable performance T instance types are
@@ -4779,8 +6270,9 @@ public open class CfnEC2Fleet(
       /**
        * The accelerator types that must be on the instance type.
        *
-       * * To include instance types with GPU hardware, specify `gpu` .
-       * * To include instance types with FPGA hardware, specify `fpga` .
+       * * For instance types with FPGA accelerators, specify `fpga` .
+       * * For instance types with GPU accelerators, specify `gpu` .
+       * * For instance types with Inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        *
@@ -4838,6 +6330,21 @@ public open class CfnEC2Fleet(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-instancerequirementsrequest.html#cfn-ec2-ec2fleet-instancerequirementsrequest-baselineebsbandwidthmbps)
        */
       override fun baselineEbsBandwidthMbps(): Any? = unwrap(this).getBaselineEbsBandwidthMbps()
+
+      /**
+       * The baseline performance to consider, using an instance family as a baseline reference.
+       *
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-instancerequirementsrequest.html#cfn-ec2-ec2fleet-instancerequirementsrequest-baselineperformancefactors)
+       */
+      override fun baselinePerformanceFactors(): Any? = unwrap(this).getBaselinePerformanceFactors()
 
       /**
        * Indicates whether burstable performance T instance types are included, excluded, or
@@ -6180,6 +7687,236 @@ public open class CfnEC2Fleet(
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.OnDemandOptionsRequestProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.OnDemandOptionsRequestProperty
+    }
+  }
+
+  /**
+   * Specify an instance family to use as the baseline reference for CPU performance.
+   *
+   * All instance types that match your specified attributes will be compared against the CPU
+   * performance of the referenced instance family, regardless of CPU manufacturer or architecture.
+   *
+   *
+   * Currently, only one instance family can be specified in the list.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * PerformanceFactorReferenceRequestProperty performanceFactorReferenceRequestProperty =
+   * PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-performancefactorreferencerequest.html)
+   */
+  public interface PerformanceFactorReferenceRequestProperty {
+    /**
+     * The instance family to use as a baseline reference.
+     *
+     *
+     * Ensure that you specify the correct value for the instance family. The instance family is
+     * everything before the period ( `.` ) in the instance type name. For example, in the instance
+     * type `c6i.large` , the instance family is `c6i` , not `c6` . For more information, see [Amazon
+     * EC2 instance type naming
+     * conventions](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-type-names.html) in
+     * *Amazon EC2 Instance Types* .
+     *
+     *
+     * The following instance families are *not supported* for performance protection:
+     *
+     * * `c1`
+     * * `g3` | `g3s`
+     * * `hpc7g`
+     * * `m1` | `m2`
+     * * `mac1` | `mac2` | `mac2-m1ultra` | `mac2-m2` | `mac2-m2pro`
+     * * `p3dn` | `p4d` | `p5`
+     * * `t1`
+     * * `u-12tb1` | `u-18tb1` | `u-24tb1` | `u-3tb1` | `u-6tb1` | `u-9tb1` | `u7i-12tb` |
+     * `u7in-16tb` | `u7in-24tb` | `u7in-32tb`
+     *
+     * If you enable performance protection by specifying a supported instance family, the returned
+     * instance types will exclude the above unsupported instance families.
+     *
+     * If you specify an unsupported instance family as a value for baseline performance, the API
+     * returns an empty response response for
+     * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
+     * and an exception for
+     * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet.html) ,
+     * [RequestSpotFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet.html)
+     * , [ModifyFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyFleet.html) ,
+     * and
+     * [ModifySpotFleetRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifySpotFleetRequest.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-performancefactorreferencerequest.html#cfn-ec2-ec2fleet-performancefactorreferencerequest-instancefamily)
+     */
+    public fun instanceFamily(): String? = unwrap(this).getInstanceFamily()
+
+    /**
+     * A builder for [PerformanceFactorReferenceRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instanceFamily The instance family to use as a baseline reference.
+       *
+       * Ensure that you specify the correct value for the instance family. The instance family is
+       * everything before the period ( `.` ) in the instance type name. For example, in the instance
+       * type `c6i.large` , the instance family is `c6i` , not `c6` . For more information, see [Amazon
+       * EC2 instance type naming
+       * conventions](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-type-names.html) in
+       * *Amazon EC2 Instance Types* .
+       *
+       *
+       * The following instance families are *not supported* for performance protection:
+       *
+       * * `c1`
+       * * `g3` | `g3s`
+       * * `hpc7g`
+       * * `m1` | `m2`
+       * * `mac1` | `mac2` | `mac2-m1ultra` | `mac2-m2` | `mac2-m2pro`
+       * * `p3dn` | `p4d` | `p5`
+       * * `t1`
+       * * `u-12tb1` | `u-18tb1` | `u-24tb1` | `u-3tb1` | `u-6tb1` | `u-9tb1` | `u7i-12tb` |
+       * `u7in-16tb` | `u7in-24tb` | `u7in-32tb`
+       *
+       * If you enable performance protection by specifying a supported instance family, the
+       * returned instance types will exclude the above unsupported instance families.
+       *
+       * If you specify an unsupported instance family as a value for baseline performance, the API
+       * returns an empty response response for
+       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
+       * and an exception for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet.html) ,
+       * [RequestSpotFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet.html)
+       * , [ModifyFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyFleet.html) ,
+       * and
+       * [ModifySpotFleetRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifySpotFleetRequest.html)
+       * .
+       */
+      public fun instanceFamily(instanceFamily: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.PerformanceFactorReferenceRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.PerformanceFactorReferenceRequestProperty.builder()
+
+      /**
+       * @param instanceFamily The instance family to use as a baseline reference.
+       *
+       * Ensure that you specify the correct value for the instance family. The instance family is
+       * everything before the period ( `.` ) in the instance type name. For example, in the instance
+       * type `c6i.large` , the instance family is `c6i` , not `c6` . For more information, see [Amazon
+       * EC2 instance type naming
+       * conventions](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-type-names.html) in
+       * *Amazon EC2 Instance Types* .
+       *
+       *
+       * The following instance families are *not supported* for performance protection:
+       *
+       * * `c1`
+       * * `g3` | `g3s`
+       * * `hpc7g`
+       * * `m1` | `m2`
+       * * `mac1` | `mac2` | `mac2-m1ultra` | `mac2-m2` | `mac2-m2pro`
+       * * `p3dn` | `p4d` | `p5`
+       * * `t1`
+       * * `u-12tb1` | `u-18tb1` | `u-24tb1` | `u-3tb1` | `u-6tb1` | `u-9tb1` | `u7i-12tb` |
+       * `u7in-16tb` | `u7in-24tb` | `u7in-32tb`
+       *
+       * If you enable performance protection by specifying a supported instance family, the
+       * returned instance types will exclude the above unsupported instance families.
+       *
+       * If you specify an unsupported instance family as a value for baseline performance, the API
+       * returns an empty response response for
+       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
+       * and an exception for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet.html) ,
+       * [RequestSpotFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet.html)
+       * , [ModifyFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyFleet.html) ,
+       * and
+       * [ModifySpotFleetRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifySpotFleetRequest.html)
+       * .
+       */
+      override fun instanceFamily(instanceFamily: String) {
+        cdkBuilder.instanceFamily(instanceFamily)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.PerformanceFactorReferenceRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.PerformanceFactorReferenceRequestProperty,
+    ) : CdkObject(cdkObject),
+        PerformanceFactorReferenceRequestProperty {
+      /**
+       * The instance family to use as a baseline reference.
+       *
+       *
+       * Ensure that you specify the correct value for the instance family. The instance family is
+       * everything before the period ( `.` ) in the instance type name. For example, in the instance
+       * type `c6i.large` , the instance family is `c6i` , not `c6` . For more information, see [Amazon
+       * EC2 instance type naming
+       * conventions](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-type-names.html) in
+       * *Amazon EC2 Instance Types* .
+       *
+       *
+       * The following instance families are *not supported* for performance protection:
+       *
+       * * `c1`
+       * * `g3` | `g3s`
+       * * `hpc7g`
+       * * `m1` | `m2`
+       * * `mac1` | `mac2` | `mac2-m1ultra` | `mac2-m2` | `mac2-m2pro`
+       * * `p3dn` | `p4d` | `p5`
+       * * `t1`
+       * * `u-12tb1` | `u-18tb1` | `u-24tb1` | `u-3tb1` | `u-6tb1` | `u-9tb1` | `u7i-12tb` |
+       * `u7in-16tb` | `u7in-24tb` | `u7in-32tb`
+       *
+       * If you enable performance protection by specifying a supported instance family, the
+       * returned instance types will exclude the above unsupported instance families.
+       *
+       * If you specify an unsupported instance family as a value for baseline performance, the API
+       * returns an empty response response for
+       * [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)
+       * and an exception for
+       * [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet.html) ,
+       * [RequestSpotFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet.html)
+       * , [ModifyFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyFleet.html) ,
+       * and
+       * [ModifySpotFleetRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifySpotFleetRequest.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-performancefactorreferencerequest.html#cfn-ec2-ec2fleet-performancefactorreferencerequest-instancefamily)
+       */
+      override fun instanceFamily(): String? = unwrap(this).getInstanceFamily()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PerformanceFactorReferenceRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.PerformanceFactorReferenceRequestProperty):
+          PerformanceFactorReferenceRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PerformanceFactorReferenceRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PerformanceFactorReferenceRequestProperty):
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.PerformanceFactorReferenceRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnEC2Fleet.PerformanceFactorReferenceRequestProperty
     }
   }
 

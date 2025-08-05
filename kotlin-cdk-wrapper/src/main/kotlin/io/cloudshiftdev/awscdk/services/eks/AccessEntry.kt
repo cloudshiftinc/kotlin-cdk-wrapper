@@ -210,6 +210,9 @@ public open class AccessEntry(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.eks.AccessEntry.PROPERTY_INJECTION_ID
+
     public fun fromAccessEntryAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

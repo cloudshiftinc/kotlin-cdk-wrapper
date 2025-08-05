@@ -186,6 +186,9 @@ public open class PublicDnsNamespace(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace.PROPERTY_INJECTION_ID
+
     public fun fromPublicDnsNamespaceAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

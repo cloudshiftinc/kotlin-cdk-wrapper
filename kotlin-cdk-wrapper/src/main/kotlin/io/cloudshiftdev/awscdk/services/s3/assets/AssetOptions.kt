@@ -54,6 +54,28 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
   public fun deployTime(): Boolean? = unwrap(this).getDeployTime()
 
   /**
+   * A display name for this asset.
+   *
+   * If supplied, the display name will be used in locations where the asset
+   * identifier is printed, like in the CLI progress information. If the same
+   * asset is added multiple times, the display name of the first occurrence is
+   * used.
+   *
+   * The default is the construct path of the Asset construct, with respect to
+   * the enclosing stack. If the asset is produced by a construct helper
+   * function (such as `lambda.Code.fromAsset()`), this will look like
+   * `MyFunction/Code`.
+   *
+   * We use the stack-relative construct path so that in the common case where
+   * you have multiple stacks with the same asset, we won't show something like
+   * `/MyBetaStack/MyFunction/Code` when you are actually deploying to
+   * production.
+   *
+   * Default: - Stack-relative construct path
+   */
+  public fun displayName(): String? = unwrap(this).getDisplayName()
+
+  /**
    * A list of principals that should be able to read this asset from S3.
    *
    * You can use `asset.grantRead(principal)` to grant read permissions later.
@@ -133,6 +155,25 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
      * we consider those deployTime assets.
      */
     public fun deployTime(deployTime: Boolean)
+
+    /**
+     * @param displayName A display name for this asset.
+     * If supplied, the display name will be used in locations where the asset
+     * identifier is printed, like in the CLI progress information. If the same
+     * asset is added multiple times, the display name of the first occurrence is
+     * used.
+     *
+     * The default is the construct path of the Asset construct, with respect to
+     * the enclosing stack. If the asset is produced by a construct helper
+     * function (such as `lambda.Code.fromAsset()`), this will look like
+     * `MyFunction/Code`.
+     *
+     * We use the stack-relative construct path so that in the common case where
+     * you have multiple stacks with the same asset, we won't show something like
+     * `/MyBetaStack/MyFunction/Code` when you are actually deploying to
+     * production.
+     */
+    public fun displayName(displayName: String)
 
     /**
      * @param exclude File paths matching the patterns will be excluded.
@@ -245,6 +286,27 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
      */
     override fun deployTime(deployTime: Boolean) {
       cdkBuilder.deployTime(deployTime)
+    }
+
+    /**
+     * @param displayName A display name for this asset.
+     * If supplied, the display name will be used in locations where the asset
+     * identifier is printed, like in the CLI progress information. If the same
+     * asset is added multiple times, the display name of the first occurrence is
+     * used.
+     *
+     * The default is the construct path of the Asset construct, with respect to
+     * the enclosing stack. If the asset is produced by a construct helper
+     * function (such as `lambda.Code.fromAsset()`), this will look like
+     * `MyFunction/Code`.
+     *
+     * We use the stack-relative construct path so that in the common case where
+     * you have multiple stacks with the same asset, we won't show something like
+     * `/MyBetaStack/MyFunction/Code` when you are actually deploying to
+     * production.
+     */
+    override fun displayName(displayName: String) {
+      cdkBuilder.displayName(displayName)
     }
 
     /**
@@ -365,6 +427,28 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
      * Default: false
      */
     override fun deployTime(): Boolean? = unwrap(this).getDeployTime()
+
+    /**
+     * A display name for this asset.
+     *
+     * If supplied, the display name will be used in locations where the asset
+     * identifier is printed, like in the CLI progress information. If the same
+     * asset is added multiple times, the display name of the first occurrence is
+     * used.
+     *
+     * The default is the construct path of the Asset construct, with respect to
+     * the enclosing stack. If the asset is produced by a construct helper
+     * function (such as `lambda.Code.fromAsset()`), this will look like
+     * `MyFunction/Code`.
+     *
+     * We use the stack-relative construct path so that in the common case where
+     * you have multiple stacks with the same asset, we won't show something like
+     * `/MyBetaStack/MyFunction/Code` when you are actually deploying to
+     * production.
+     *
+     * Default: - Stack-relative construct path
+     */
+    override fun displayName(): String? = unwrap(this).getDisplayName()
 
     /**
      * File paths matching the patterns will be excluded.

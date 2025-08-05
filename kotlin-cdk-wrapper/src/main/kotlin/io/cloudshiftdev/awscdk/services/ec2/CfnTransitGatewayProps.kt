@@ -72,7 +72,8 @@ public interface CfnTransitGatewayProps {
   /**
    * Enable or disable automatic association with the default association route table.
    *
-   * Enabled by default.
+   * Enabled by default. If `DefaultRouteTableAssociation` is set to enable, AWS Transit Gateway
+   * will create the default transit gateway route table.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-defaultroutetableassociation)
    */
@@ -82,7 +83,8 @@ public interface CfnTransitGatewayProps {
   /**
    * Enable or disable automatic propagation of routes to the default propagation route table.
    *
-   * Enabled by default.
+   * Enabled by default. If `DefaultRouteTablePropagation` is set to enable, AWS Transit Gateway
+   * will create the default transit gateway route table.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-defaultroutetablepropagation)
    */
@@ -189,14 +191,16 @@ public interface CfnTransitGatewayProps {
     /**
      * @param defaultRouteTableAssociation Enable or disable automatic association with the default
      * association route table.
-     * Enabled by default.
+     * Enabled by default. If `DefaultRouteTableAssociation` is set to enable, AWS Transit Gateway
+     * will create the default transit gateway route table.
      */
     public fun defaultRouteTableAssociation(defaultRouteTableAssociation: String)
 
     /**
      * @param defaultRouteTablePropagation Enable or disable automatic propagation of routes to the
      * default propagation route table.
-     * Enabled by default.
+     * Enabled by default. If `DefaultRouteTablePropagation` is set to enable, AWS Transit Gateway
+     * will create the default transit gateway route table.
      */
     public fun defaultRouteTablePropagation(defaultRouteTablePropagation: String)
 
@@ -295,7 +299,8 @@ public interface CfnTransitGatewayProps {
     /**
      * @param defaultRouteTableAssociation Enable or disable automatic association with the default
      * association route table.
-     * Enabled by default.
+     * Enabled by default. If `DefaultRouteTableAssociation` is set to enable, AWS Transit Gateway
+     * will create the default transit gateway route table.
      */
     override fun defaultRouteTableAssociation(defaultRouteTableAssociation: String) {
       cdkBuilder.defaultRouteTableAssociation(defaultRouteTableAssociation)
@@ -304,7 +309,8 @@ public interface CfnTransitGatewayProps {
     /**
      * @param defaultRouteTablePropagation Enable or disable automatic propagation of routes to the
      * default propagation route table.
-     * Enabled by default.
+     * Enabled by default. If `DefaultRouteTablePropagation` is set to enable, AWS Transit Gateway
+     * will create the default transit gateway route table.
      */
     override fun defaultRouteTablePropagation(defaultRouteTablePropagation: String) {
       cdkBuilder.defaultRouteTablePropagation(defaultRouteTablePropagation)
@@ -427,7 +433,8 @@ public interface CfnTransitGatewayProps {
     /**
      * Enable or disable automatic association with the default association route table.
      *
-     * Enabled by default.
+     * Enabled by default. If `DefaultRouteTableAssociation` is set to enable, AWS Transit Gateway
+     * will create the default transit gateway route table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-defaultroutetableassociation)
      */
@@ -437,7 +444,8 @@ public interface CfnTransitGatewayProps {
     /**
      * Enable or disable automatic propagation of routes to the default propagation route table.
      *
-     * Enabled by default.
+     * Enabled by default. If `DefaultRouteTablePropagation` is set to enable, AWS Transit Gateway
+     * will create the default transit gateway route table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-defaultroutetablepropagation)
      */

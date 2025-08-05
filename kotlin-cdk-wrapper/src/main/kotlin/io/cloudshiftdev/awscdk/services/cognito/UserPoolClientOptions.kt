@@ -46,6 +46,14 @@ public interface UserPoolClientOptions {
       unwrap(this).getAccessTokenValidity()?.let(Duration::wrap)
 
   /**
+   * The analytics configuration for this client.
+   *
+   * Default: - no analytics configuration
+   */
+  public fun analytics(): AnalyticsConfiguration? =
+      unwrap(this).getAnalytics()?.let(AnalyticsConfiguration::wrap)
+
+  /**
    * The set of OAuth authentication flows to enable on the client.
    *
    * Default: - If you don't specify a value, your user client supports ALLOW_REFRESH_TOKEN_AUTH,
@@ -201,6 +209,18 @@ public interface UserPoolClientOptions {
     public fun accessTokenValidity(accessTokenValidity: Duration)
 
     /**
+     * @param analytics The analytics configuration for this client.
+     */
+    public fun analytics(analytics: AnalyticsConfiguration)
+
+    /**
+     * @param analytics The analytics configuration for this client.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0e1f51e42850df02dcbca2f8825e6059f40b7297a18c8456061c7d2b35dbf9f9")
+    public fun analytics(analytics: AnalyticsConfiguration.Builder.() -> Unit)
+
+    /**
      * @param authFlows The set of OAuth authentication flows to enable on the client.
      */
     public fun authFlows(authFlows: AuthFlow)
@@ -320,6 +340,21 @@ public interface UserPoolClientOptions {
     override fun accessTokenValidity(accessTokenValidity: Duration) {
       cdkBuilder.accessTokenValidity(accessTokenValidity.let(Duration.Companion::unwrap))
     }
+
+    /**
+     * @param analytics The analytics configuration for this client.
+     */
+    override fun analytics(analytics: AnalyticsConfiguration) {
+      cdkBuilder.analytics(analytics.let(AnalyticsConfiguration.Companion::unwrap))
+    }
+
+    /**
+     * @param analytics The analytics configuration for this client.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0e1f51e42850df02dcbca2f8825e6059f40b7297a18c8456061c7d2b35dbf9f9")
+    override fun analytics(analytics: AnalyticsConfiguration.Builder.() -> Unit): Unit =
+        analytics(AnalyticsConfiguration(analytics))
 
     /**
      * @param authFlows The set of OAuth authentication flows to enable on the client.
@@ -478,6 +513,14 @@ public interface UserPoolClientOptions {
      */
     override fun accessTokenValidity(): Duration? =
         unwrap(this).getAccessTokenValidity()?.let(Duration::wrap)
+
+    /**
+     * The analytics configuration for this client.
+     *
+     * Default: - no analytics configuration
+     */
+    override fun analytics(): AnalyticsConfiguration? =
+        unwrap(this).getAnalytics()?.let(AnalyticsConfiguration::wrap)
 
     /**
      * The set of OAuth authentication flows to enable on the client.

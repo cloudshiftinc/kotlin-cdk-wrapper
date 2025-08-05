@@ -36,8 +36,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
  * CfnImage cfnImage = CfnImage.Builder.create(this, "MyCfnImage")
- * .infrastructureConfigurationArn("infrastructureConfigurationArn")
- * // the properties below are optional
  * .containerRecipeArn("containerRecipeArn")
  * .distributionConfigurationArn("distributionConfigurationArn")
  * .enhancedImageMetadataEnabled(false)
@@ -54,6 +52,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .imageTestsEnabled(false)
  * .timeoutMinutes(123)
  * .build())
+ * .infrastructureConfigurationArn("infrastructureConfigurationArn")
  * .tags(Map.of(
  * "tagsKey", "tags"))
  * .workflows(List.of(WorkflowConfigurationProperty.builder()
@@ -75,6 +74,11 @@ public open class CfnImage(
 ) : CfnResource(cdkObject),
     IInspectable,
     ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.imagebuilder.CfnImage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id)
+  )
+
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -257,7 +261,7 @@ public open class CfnImage(
    * The Amazon Resource Name (ARN) of the infrastructure configuration that defines the environment
    * in which your image will be built and tested.
    */
-  public open fun infrastructureConfigurationArn(): String =
+  public open fun infrastructureConfigurationArn(): String? =
       unwrap(this).getInfrastructureConfigurationArn()
 
   /**
@@ -1068,7 +1072,7 @@ public open class CfnImage(
      * The maximum time in minutes that tests are permitted to run.
      *
      *
-     * The timeout attribute is not currently active. This value is ignored.
+     * The timeout property is not currently active. This value is ignored.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-image-imagetestsconfiguration.html#cfn-imagebuilder-image-imagetestsconfiguration-timeoutminutes)
@@ -1097,7 +1101,7 @@ public open class CfnImage(
       /**
        * @param timeoutMinutes The maximum time in minutes that tests are permitted to run.
        *
-       * The timeout attribute is not currently active. This value is ignored.
+       * The timeout property is not currently active. This value is ignored.
        */
       public fun timeoutMinutes(timeoutMinutes: Number)
     }
@@ -1129,7 +1133,7 @@ public open class CfnImage(
       /**
        * @param timeoutMinutes The maximum time in minutes that tests are permitted to run.
        *
-       * The timeout attribute is not currently active. This value is ignored.
+       * The timeout property is not currently active. This value is ignored.
        */
       override fun timeoutMinutes(timeoutMinutes: Number) {
         cdkBuilder.timeoutMinutes(timeoutMinutes)
@@ -1158,7 +1162,7 @@ public open class CfnImage(
        * The maximum time in minutes that tests are permitted to run.
        *
        *
-       * The timeout attribute is not currently active. This value is ignored.
+       * The timeout property is not currently active. This value is ignored.
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-image-imagetestsconfiguration.html#cfn-imagebuilder-image-imagetestsconfiguration-timeoutminutes)

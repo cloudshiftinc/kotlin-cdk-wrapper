@@ -211,6 +211,9 @@ public open class Function(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.cloudfront.Function.PROPERTY_INJECTION_ID
+
     public fun fromFunctionAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

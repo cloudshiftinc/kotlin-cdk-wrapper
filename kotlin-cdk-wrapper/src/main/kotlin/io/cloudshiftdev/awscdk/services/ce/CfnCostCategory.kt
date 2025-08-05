@@ -4,20 +4,25 @@ package io.cloudshiftdev.awscdk.services.ce
 
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
  * The `AWS::CE::CostCategory` resource creates groupings of cost that you can use across products
- * in the AWS Billing and Cost Management console, such as Cost Explorer and AWS Budgets.
+ * in the Billing and Cost Management console, such as Cost Explorer and AWS Budgets.
  *
  * For more information, see [Managing Your Costs with Cost
  * Categories](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-cost-categories.html)
- * in the *AWS Billing and Cost Management User Guide* .
+ * in the *Billing and Cost Management User Guide* .
  *
  * Example:
  *
@@ -32,6 +37,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .defaultValue("defaultValue")
  * .splitChargeRules("splitChargeRules")
+ * .tags(List.of(ResourceTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -40,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCostCategory(
   cdkObject: software.amazon.awscdk.services.ce.CfnCostCategory,
 ) : CfnResource(cdkObject),
-    IInspectable {
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -66,6 +76,12 @@ public open class CfnCostCategory(
    * The Cost Category's effective start date.
    */
   public open fun attrEffectiveStart(): String = unwrap(this).getAttrEffectiveStart()
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * The default value for the cost category.
@@ -139,6 +155,24 @@ public open class CfnCostCategory(
   }
 
   /**
+   * Tags to assign to the cost category.
+   */
+  public open fun tags(): List<ResourceTagProperty> =
+      unwrap(this).getTags()?.map(ResourceTagProperty::wrap) ?: emptyList()
+
+  /**
+   * Tags to assign to the cost category.
+   */
+  public open fun tags(`value`: List<ResourceTagProperty>) {
+    unwrap(this).setTags(`value`.map(ResourceTagProperty.Companion::unwrap))
+  }
+
+  /**
+   * Tags to assign to the cost category.
+   */
+  public open fun tags(vararg `value`: ResourceTagProperty): Unit = tags(`value`.toList())
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ce.CfnCostCategory].
    */
   @CdkDslMarker
@@ -189,6 +223,22 @@ public open class CfnCostCategory(
      * your Cost Category values. 
      */
     public fun splitChargeRules(splitChargeRules: String)
+
+    /**
+     * Tags to assign to the cost category.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html#cfn-ce-costcategory-tags)
+     * @param tags Tags to assign to the cost category. 
+     */
+    public fun tags(tags: List<ResourceTagProperty>)
+
+    /**
+     * Tags to assign to the cost category.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html#cfn-ce-costcategory-tags)
+     * @param tags Tags to assign to the cost category. 
+     */
+    public fun tags(vararg tags: ResourceTagProperty)
   }
 
   private class BuilderImpl(
@@ -255,6 +305,24 @@ public open class CfnCostCategory(
       cdkBuilder.splitChargeRules(splitChargeRules)
     }
 
+    /**
+     * Tags to assign to the cost category.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html#cfn-ce-costcategory-tags)
+     * @param tags Tags to assign to the cost category. 
+     */
+    override fun tags(tags: List<ResourceTagProperty>) {
+      cdkBuilder.tags(tags.map(ResourceTagProperty.Companion::unwrap))
+    }
+
+    /**
+     * Tags to assign to the cost category.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html#cfn-ce-costcategory-tags)
+     * @param tags Tags to assign to the cost category. 
+     */
+    override fun tags(vararg tags: ResourceTagProperty): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.ce.CfnCostCategory = cdkBuilder.build()
   }
 
@@ -277,5 +345,123 @@ public open class CfnCostCategory(
     internal fun unwrap(wrapped: CfnCostCategory):
         software.amazon.awscdk.services.ce.CfnCostCategory = wrapped.cdkObject as
         software.amazon.awscdk.services.ce.CfnCostCategory
+  }
+
+  /**
+   * The tag structure that contains a tag key and value.
+   *
+   *
+   * Tagging is supported only for the following Cost Explorer resource types:
+   * [`AnomalyMonitor`](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_AnomalyMonitor.html)
+   * ,
+   * [`AnomalySubscription`](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_AnomalySubscription.html)
+   * ,
+   * [`CostCategory`](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CostCategory.html)
+   * .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ce.*;
+   * ResourceTagProperty resourceTagProperty = ResourceTagProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ce-costcategory-resourcetag.html)
+   */
+  public interface ResourceTagProperty {
+    /**
+     * The key that's associated with the tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ce-costcategory-resourcetag.html#cfn-ce-costcategory-resourcetag-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value that's associated with the tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ce-costcategory-resourcetag.html#cfn-ce-costcategory-resourcetag-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [ResourceTagProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The key that's associated with the tag. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value that's associated with the tag. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ce.CfnCostCategory.ResourceTagProperty.Builder =
+          software.amazon.awscdk.services.ce.CfnCostCategory.ResourceTagProperty.builder()
+
+      /**
+       * @param key The key that's associated with the tag. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value that's associated with the tag. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ce.CfnCostCategory.ResourceTagProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ce.CfnCostCategory.ResourceTagProperty,
+    ) : CdkObject(cdkObject),
+        ResourceTagProperty {
+      /**
+       * The key that's associated with the tag.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ce-costcategory-resourcetag.html#cfn-ce-costcategory-resourcetag-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value that's associated with the tag.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ce-costcategory-resourcetag.html#cfn-ce-costcategory-resourcetag-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceTagProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ce.CfnCostCategory.ResourceTagProperty):
+          ResourceTagProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceTagProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResourceTagProperty):
+          software.amazon.awscdk.services.ce.CfnCostCategory.ResourceTagProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ce.CfnCostCategory.ResourceTagProperty
+    }
   }
 }

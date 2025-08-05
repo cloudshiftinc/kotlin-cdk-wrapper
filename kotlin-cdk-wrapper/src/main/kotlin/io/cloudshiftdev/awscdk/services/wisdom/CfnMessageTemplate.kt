@@ -148,6 +148,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .values(List.of("values"))
  * .build())
  * .language("language")
+ * .messageTemplateAttachments(List.of(MessageTemplateAttachmentProperty.builder()
+ * .attachmentName("attachmentName")
+ * .s3PresignedUrl("s3PresignedUrl")
+ * // the properties below are optional
+ * .attachmentId("attachmentId")
+ * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -343,6 +349,31 @@ public open class CfnMessageTemplate(
   }
 
   /**
+   * List of message template attachments.
+   */
+  public open fun messageTemplateAttachments(): Any? = unwrap(this).getMessageTemplateAttachments()
+
+  /**
+   * List of message template attachments.
+   */
+  public open fun messageTemplateAttachments(`value`: IResolvable) {
+    unwrap(this).setMessageTemplateAttachments(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * List of message template attachments.
+   */
+  public open fun messageTemplateAttachments(`value`: List<Any>) {
+    unwrap(this).setMessageTemplateAttachments(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * List of message template attachments.
+   */
+  public open fun messageTemplateAttachments(vararg `value`: Any): Unit =
+      messageTemplateAttachments(`value`.toList())
+
+  /**
    * The name of the message template.
    */
   public open fun name(): String = unwrap(this).getName()
@@ -506,6 +537,30 @@ public open class CfnMessageTemplate(
      * written. 
      */
     public fun language(language: String)
+
+    /**
+     * List of message template attachments.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-messagetemplate.html#cfn-wisdom-messagetemplate-messagetemplateattachments)
+     * @param messageTemplateAttachments List of message template attachments. 
+     */
+    public fun messageTemplateAttachments(messageTemplateAttachments: IResolvable)
+
+    /**
+     * List of message template attachments.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-messagetemplate.html#cfn-wisdom-messagetemplate-messagetemplateattachments)
+     * @param messageTemplateAttachments List of message template attachments. 
+     */
+    public fun messageTemplateAttachments(messageTemplateAttachments: List<Any>)
+
+    /**
+     * List of message template attachments.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-messagetemplate.html#cfn-wisdom-messagetemplate-messagetemplateattachments)
+     * @param messageTemplateAttachments List of message template attachments. 
+     */
+    public fun messageTemplateAttachments(vararg messageTemplateAttachments: Any)
 
     /**
      * The name of the message template.
@@ -692,6 +747,35 @@ public open class CfnMessageTemplate(
     override fun language(language: String) {
       cdkBuilder.language(language)
     }
+
+    /**
+     * List of message template attachments.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-messagetemplate.html#cfn-wisdom-messagetemplate-messagetemplateattachments)
+     * @param messageTemplateAttachments List of message template attachments. 
+     */
+    override fun messageTemplateAttachments(messageTemplateAttachments: IResolvable) {
+      cdkBuilder.messageTemplateAttachments(messageTemplateAttachments.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * List of message template attachments.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-messagetemplate.html#cfn-wisdom-messagetemplate-messagetemplateattachments)
+     * @param messageTemplateAttachments List of message template attachments. 
+     */
+    override fun messageTemplateAttachments(messageTemplateAttachments: List<Any>) {
+      cdkBuilder.messageTemplateAttachments(messageTemplateAttachments.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * List of message template attachments.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-messagetemplate.html#cfn-wisdom-messagetemplate-messagetemplateattachments)
+     * @param messageTemplateAttachments List of message template attachments. 
+     */
+    override fun messageTemplateAttachments(vararg messageTemplateAttachments: Any): Unit =
+        messageTemplateAttachments(messageTemplateAttachments.toList())
 
     /**
      * The name of the message template.
@@ -1667,12 +1751,12 @@ public open class CfnMessageTemplate(
       /**
        * @param custom The custom attributes in customer profile attributes.
        */
-      public fun custom(custom: IResolvable)
+      public fun custom(custom: Map<String, String>)
 
       /**
        * @param custom The custom attributes in customer profile attributes.
        */
-      public fun custom(custom: Map<String, String>)
+      public fun custom(custom: IResolvable)
 
       /**
        * @param emailAddress The customer's email address, which has not been specified as a
@@ -2017,15 +2101,15 @@ public open class CfnMessageTemplate(
       /**
        * @param custom The custom attributes in customer profile attributes.
        */
-      override fun custom(custom: IResolvable) {
-        cdkBuilder.custom(custom.let(IResolvable.Companion::unwrap))
+      override fun custom(custom: Map<String, String>) {
+        cdkBuilder.custom(custom)
       }
 
       /**
        * @param custom The custom attributes in customer profile attributes.
        */
-      override fun custom(custom: Map<String, String>) {
-        cdkBuilder.custom(custom)
+      override fun custom(custom: IResolvable) {
+        cdkBuilder.custom(custom.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3428,6 +3512,166 @@ public open class CfnMessageTemplate(
   }
 
   /**
+   * Information about the message template attachment.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.wisdom.*;
+   * MessageTemplateAttachmentProperty messageTemplateAttachmentProperty =
+   * MessageTemplateAttachmentProperty.builder()
+   * .attachmentName("attachmentName")
+   * .s3PresignedUrl("s3PresignedUrl")
+   * // the properties below are optional
+   * .attachmentId("attachmentId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-messagetemplate-messagetemplateattachment.html)
+   */
+  public interface MessageTemplateAttachmentProperty {
+    /**
+     * The identifier of the attachment file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-messagetemplate-messagetemplateattachment.html#cfn-wisdom-messagetemplate-messagetemplateattachment-attachmentid)
+     */
+    public fun attachmentId(): String? = unwrap(this).getAttachmentId()
+
+    /**
+     * The name of the attachment file being uploaded.
+     *
+     * The name should include the file extension.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-messagetemplate-messagetemplateattachment.html#cfn-wisdom-messagetemplate-messagetemplateattachment-attachmentname)
+     */
+    public fun attachmentName(): String
+
+    /**
+     * The S3 Presigned URL for the attachment file.
+     *
+     * When generating the PreSignedUrl, please ensure that the expires-in time is set to 30
+     * minutes. The URL can be generated through the AWS Console or through the AWS CLI
+     * (https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-messagetemplate-messagetemplateattachment.html#cfn-wisdom-messagetemplate-messagetemplateattachment-s3presignedurl)
+     */
+    public fun s3PresignedUrl(): String
+
+    /**
+     * A builder for [MessageTemplateAttachmentProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attachmentId The identifier of the attachment file.
+       */
+      public fun attachmentId(attachmentId: String)
+
+      /**
+       * @param attachmentName The name of the attachment file being uploaded. 
+       * The name should include the file extension.
+       */
+      public fun attachmentName(attachmentName: String)
+
+      /**
+       * @param s3PresignedUrl The S3 Presigned URL for the attachment file. 
+       * When generating the PreSignedUrl, please ensure that the expires-in time is set to 30
+       * minutes. The URL can be generated through the AWS Console or through the AWS CLI
+       * (https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html).
+       */
+      public fun s3PresignedUrl(s3PresignedUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.wisdom.CfnMessageTemplate.MessageTemplateAttachmentProperty.Builder
+          =
+          software.amazon.awscdk.services.wisdom.CfnMessageTemplate.MessageTemplateAttachmentProperty.builder()
+
+      /**
+       * @param attachmentId The identifier of the attachment file.
+       */
+      override fun attachmentId(attachmentId: String) {
+        cdkBuilder.attachmentId(attachmentId)
+      }
+
+      /**
+       * @param attachmentName The name of the attachment file being uploaded. 
+       * The name should include the file extension.
+       */
+      override fun attachmentName(attachmentName: String) {
+        cdkBuilder.attachmentName(attachmentName)
+      }
+
+      /**
+       * @param s3PresignedUrl The S3 Presigned URL for the attachment file. 
+       * When generating the PreSignedUrl, please ensure that the expires-in time is set to 30
+       * minutes. The URL can be generated through the AWS Console or through the AWS CLI
+       * (https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html).
+       */
+      override fun s3PresignedUrl(s3PresignedUrl: String) {
+        cdkBuilder.s3PresignedUrl(s3PresignedUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.wisdom.CfnMessageTemplate.MessageTemplateAttachmentProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.wisdom.CfnMessageTemplate.MessageTemplateAttachmentProperty,
+    ) : CdkObject(cdkObject),
+        MessageTemplateAttachmentProperty {
+      /**
+       * The identifier of the attachment file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-messagetemplate-messagetemplateattachment.html#cfn-wisdom-messagetemplate-messagetemplateattachment-attachmentid)
+       */
+      override fun attachmentId(): String? = unwrap(this).getAttachmentId()
+
+      /**
+       * The name of the attachment file being uploaded.
+       *
+       * The name should include the file extension.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-messagetemplate-messagetemplateattachment.html#cfn-wisdom-messagetemplate-messagetemplateattachment-attachmentname)
+       */
+      override fun attachmentName(): String = unwrap(this).getAttachmentName()
+
+      /**
+       * The S3 Presigned URL for the attachment file.
+       *
+       * When generating the PreSignedUrl, please ensure that the expires-in time is set to 30
+       * minutes. The URL can be generated through the AWS Console or through the AWS CLI
+       * (https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-messagetemplate-messagetemplateattachment.html#cfn-wisdom-messagetemplate-messagetemplateattachment-s3presignedurl)
+       */
+      override fun s3PresignedUrl(): String = unwrap(this).getS3PresignedUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MessageTemplateAttachmentProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.wisdom.CfnMessageTemplate.MessageTemplateAttachmentProperty):
+          MessageTemplateAttachmentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MessageTemplateAttachmentProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MessageTemplateAttachmentProperty):
+          software.amazon.awscdk.services.wisdom.CfnMessageTemplate.MessageTemplateAttachmentProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.wisdom.CfnMessageTemplate.MessageTemplateAttachmentProperty
+    }
+  }
+
+  /**
    * The attributes that are used with the message template.
    *
    * Example:
@@ -3573,12 +3817,12 @@ public open class CfnMessageTemplate(
       /**
        * @param customAttributes The custom attributes that are used with the message template.
        */
-      public fun customAttributes(customAttributes: IResolvable)
+      public fun customAttributes(customAttributes: Map<String, String>)
 
       /**
        * @param customAttributes The custom attributes that are used with the message template.
        */
-      public fun customAttributes(customAttributes: Map<String, String>)
+      public fun customAttributes(customAttributes: IResolvable)
 
       /**
        * @param customerProfileAttributes The customer profile attributes that are used with the
@@ -3651,15 +3895,15 @@ public open class CfnMessageTemplate(
       /**
        * @param customAttributes The custom attributes that are used with the message template.
        */
-      override fun customAttributes(customAttributes: IResolvable) {
-        cdkBuilder.customAttributes(customAttributes.let(IResolvable.Companion::unwrap))
+      override fun customAttributes(customAttributes: Map<String, String>) {
+        cdkBuilder.customAttributes(customAttributes)
       }
 
       /**
        * @param customAttributes The custom attributes that are used with the message template.
        */
-      override fun customAttributes(customAttributes: Map<String, String>) {
-        cdkBuilder.customAttributes(customAttributes)
+      override fun customAttributes(customAttributes: IResolvable) {
+        cdkBuilder.customAttributes(customAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**

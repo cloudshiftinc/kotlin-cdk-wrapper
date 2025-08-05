@@ -111,7 +111,7 @@ public open class RegionInfo(
   public open fun elbv2Account(): String? = unwrap(this).getElbv2Account()
 
   /**
-   * The CIDR block used by Kinesis Data Firehose servers.
+   * The CIDR block used by Amazon Data Firehose servers.
    */
   public open fun firehoseCidrBlock(): String? = unwrap(this).getFirehoseCidrBlock()
 

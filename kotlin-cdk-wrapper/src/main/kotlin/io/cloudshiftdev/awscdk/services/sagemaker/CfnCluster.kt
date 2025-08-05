@@ -281,6 +281,8 @@ public open class CfnCluster(
     /**
      * The instance groups of the SageMaker HyperPod cluster.
      *
+     * To delete an instance group, remove it from the array.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-instancegroups)
      * @param instanceGroups The instance groups of the SageMaker HyperPod cluster. 
      */
@@ -289,6 +291,8 @@ public open class CfnCluster(
     /**
      * The instance groups of the SageMaker HyperPod cluster.
      *
+     * To delete an instance group, remove it from the array.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-instancegroups)
      * @param instanceGroups The instance groups of the SageMaker HyperPod cluster. 
      */
@@ -296,6 +300,8 @@ public open class CfnCluster(
 
     /**
      * The instance groups of the SageMaker HyperPod cluster.
+     *
+     * To delete an instance group, remove it from the array.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-instancegroups)
      * @param instanceGroups The instance groups of the SageMaker HyperPod cluster. 
@@ -455,6 +461,8 @@ public open class CfnCluster(
     /**
      * The instance groups of the SageMaker HyperPod cluster.
      *
+     * To delete an instance group, remove it from the array.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-instancegroups)
      * @param instanceGroups The instance groups of the SageMaker HyperPod cluster. 
      */
@@ -465,6 +473,8 @@ public open class CfnCluster(
     /**
      * The instance groups of the SageMaker HyperPod cluster.
      *
+     * To delete an instance group, remove it from the array.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-instancegroups)
      * @param instanceGroups The instance groups of the SageMaker HyperPod cluster. 
      */
@@ -474,6 +484,8 @@ public open class CfnCluster(
 
     /**
      * The instance groups of the SageMaker HyperPod cluster.
+     *
+     * To delete an instance group, remove it from the array.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-instancegroups)
      * @param instanceGroups The instance groups of the SageMaker HyperPod cluster. 
@@ -855,8 +867,8 @@ public open class CfnCluster(
         ?: emptyList()
 
     /**
-     * When specified, overrides the subnet and security group configuration for a specific instance
-     * group.
+     * The customized Amazon VPC configuration at the instance group level that overrides the
+     * default Amazon VPC configuration of the SageMaker HyperPod cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterinstancegroup.html#cfn-sagemaker-cluster-clusterinstancegroup-overridevpcconfig)
      */
@@ -954,20 +966,20 @@ public open class CfnCluster(
       public fun onStartDeepHealthChecks(vararg onStartDeepHealthChecks: String)
 
       /**
-       * @param overrideVpcConfig When specified, overrides the subnet and security group
-       * configuration for a specific instance group.
+       * @param overrideVpcConfig The customized Amazon VPC configuration at the instance group
+       * level that overrides the default Amazon VPC configuration of the SageMaker HyperPod cluster.
        */
       public fun overrideVpcConfig(overrideVpcConfig: IResolvable)
 
       /**
-       * @param overrideVpcConfig When specified, overrides the subnet and security group
-       * configuration for a specific instance group.
+       * @param overrideVpcConfig The customized Amazon VPC configuration at the instance group
+       * level that overrides the default Amazon VPC configuration of the SageMaker HyperPod cluster.
        */
       public fun overrideVpcConfig(overrideVpcConfig: VpcConfigProperty)
 
       /**
-       * @param overrideVpcConfig When specified, overrides the subnet and security group
-       * configuration for a specific instance group.
+       * @param overrideVpcConfig The customized Amazon VPC configuration at the instance group
+       * level that overrides the default Amazon VPC configuration of the SageMaker HyperPod cluster.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b416f9fd133f1986ef43fa82905739c2ebe85b30fdce1d407dbfd2f730f3cb5")
@@ -1090,24 +1102,24 @@ public open class CfnCluster(
           onStartDeepHealthChecks(onStartDeepHealthChecks.toList())
 
       /**
-       * @param overrideVpcConfig When specified, overrides the subnet and security group
-       * configuration for a specific instance group.
+       * @param overrideVpcConfig The customized Amazon VPC configuration at the instance group
+       * level that overrides the default Amazon VPC configuration of the SageMaker HyperPod cluster.
        */
       override fun overrideVpcConfig(overrideVpcConfig: IResolvable) {
         cdkBuilder.overrideVpcConfig(overrideVpcConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param overrideVpcConfig When specified, overrides the subnet and security group
-       * configuration for a specific instance group.
+       * @param overrideVpcConfig The customized Amazon VPC configuration at the instance group
+       * level that overrides the default Amazon VPC configuration of the SageMaker HyperPod cluster.
        */
       override fun overrideVpcConfig(overrideVpcConfig: VpcConfigProperty) {
         cdkBuilder.overrideVpcConfig(overrideVpcConfig.let(VpcConfigProperty.Companion::unwrap))
       }
 
       /**
-       * @param overrideVpcConfig When specified, overrides the subnet and security group
-       * configuration for a specific instance group.
+       * @param overrideVpcConfig The customized Amazon VPC configuration at the instance group
+       * level that overrides the default Amazon VPC configuration of the SageMaker HyperPod cluster.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b416f9fd133f1986ef43fa82905739c2ebe85b30fdce1d407dbfd2f730f3cb5")
@@ -1195,8 +1207,8 @@ public open class CfnCluster(
           unwrap(this).getOnStartDeepHealthChecks() ?: emptyList()
 
       /**
-       * When specified, overrides the subnet and security group configuration for a specific
-       * instance group.
+       * The customized Amazon VPC configuration at the instance group level that overrides the
+       * default Amazon VPC configuration of the SageMaker HyperPod cluster.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterinstancegroup.html#cfn-sagemaker-cluster-clusterinstancegroup-overridevpcconfig)
        */

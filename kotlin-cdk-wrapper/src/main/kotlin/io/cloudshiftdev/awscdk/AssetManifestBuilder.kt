@@ -44,6 +44,7 @@ public open class AssetManifestBuilder(
    * @param sourceHash 
    * @param source 
    * @param dest 
+   * @param options
    */
   public open fun addDockerImageAsset(
     stack: Stack,
@@ -63,6 +64,7 @@ public open class AssetManifestBuilder(
    * @param sourceHash 
    * @param source 
    * @param dest 
+   * @param options
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("54e5456fa066f79fbad9029e272e9bf9de8aad90e1195836eeb7243fb908e06d")
@@ -75,6 +77,50 @@ public open class AssetManifestBuilder(
       DockerImageDestination(dest))
 
   /**
+   * Add a docker asset source and destination to the manifest.
+   *
+   * sourceHash should be unique for every source.
+   *
+   * @param stack 
+   * @param sourceHash 
+   * @param source 
+   * @param dest 
+   * @param options
+   */
+  public open fun addDockerImageAsset(
+    stack: Stack,
+    sourceHash: String,
+    source: DockerImageSource,
+    dest: DockerImageDestination,
+    options: AddDockerImageAssetOptions,
+  ): DockerImageDestination = unwrap(this).addDockerImageAsset(stack.let(Stack.Companion::unwrap),
+      sourceHash, source.let(DockerImageSource.Companion::unwrap),
+      dest.let(DockerImageDestination.Companion::unwrap),
+      options.let(AddDockerImageAssetOptions.Companion::unwrap)).let(DockerImageDestination::wrap)
+
+  /**
+   * Add a docker asset source and destination to the manifest.
+   *
+   * sourceHash should be unique for every source.
+   *
+   * @param stack 
+   * @param sourceHash 
+   * @param source 
+   * @param dest 
+   * @param options
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("2c406616eeedc81e6489c47d1205f7083521737d0227b8b5f0bfa5d413b2832f")
+  public open fun addDockerImageAsset(
+    stack: Stack,
+    sourceHash: String,
+    source: DockerImageSource,
+    dest: DockerImageDestination,
+    options: AddDockerImageAssetOptions.Builder.() -> Unit,
+  ): DockerImageDestination = addDockerImageAsset(stack, sourceHash, source, dest,
+      AddDockerImageAssetOptions(options))
+
+  /**
    * Add a file asset source and destination to the manifest.
    *
    * sourceHash should be unique for every source.
@@ -83,6 +129,7 @@ public open class AssetManifestBuilder(
    * @param sourceHash 
    * @param source 
    * @param dest 
+   * @param options
    */
   public open fun addFileAsset(
     stack: Stack,
@@ -102,6 +149,7 @@ public open class AssetManifestBuilder(
    * @param sourceHash 
    * @param source 
    * @param dest 
+   * @param options
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("72eafdc567a6181964439383b6bcd3ce562703282a903f7cc6a2231e57a363a5")
@@ -113,6 +161,48 @@ public open class AssetManifestBuilder(
   ): FileDestination = addFileAsset(stack, sourceHash, source, FileDestination(dest))
 
   /**
+   * Add a file asset source and destination to the manifest.
+   *
+   * sourceHash should be unique for every source.
+   *
+   * @param stack 
+   * @param sourceHash 
+   * @param source 
+   * @param dest 
+   * @param options
+   */
+  public open fun addFileAsset(
+    stack: Stack,
+    sourceHash: String,
+    source: FileSource,
+    dest: FileDestination,
+    options: AddFileAssetOptions,
+  ): FileDestination = unwrap(this).addFileAsset(stack.let(Stack.Companion::unwrap), sourceHash,
+      source.let(FileSource.Companion::unwrap), dest.let(FileDestination.Companion::unwrap),
+      options.let(AddFileAssetOptions.Companion::unwrap)).let(FileDestination::wrap)
+
+  /**
+   * Add a file asset source and destination to the manifest.
+   *
+   * sourceHash should be unique for every source.
+   *
+   * @param stack 
+   * @param sourceHash 
+   * @param source 
+   * @param dest 
+   * @param options
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("706ed314809ced139fd428ef662abb476709c7ec8f3c29362d1f21fefe13e5e8")
+  public open fun addFileAsset(
+    stack: Stack,
+    sourceHash: String,
+    source: FileSource,
+    dest: FileDestination,
+    options: AddFileAssetOptions.Builder.() -> Unit,
+  ): FileDestination = addFileAsset(stack, sourceHash, source, dest, AddFileAssetOptions(options))
+
+  /**
    * Add a docker image asset to the manifest with default settings.
    *
    * Derive the region from the stack, use the asset hash as the key, and set the prefix.
@@ -120,6 +210,7 @@ public open class AssetManifestBuilder(
    * @param stack 
    * @param asset 
    * @param target 
+   * @param options
    */
   public open fun defaultAddDockerImageAsset(
     stack: Stack,
@@ -138,6 +229,7 @@ public open class AssetManifestBuilder(
    * @param stack 
    * @param asset 
    * @param target 
+   * @param options
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("58c402a5954ad544e84d12adade7f63acaa16f1da034b40517699778b7c0cfc0")
@@ -149,6 +241,47 @@ public open class AssetManifestBuilder(
       AssetManifestDockerImageDestination(target))
 
   /**
+   * Add a docker image asset to the manifest with default settings.
+   *
+   * Derive the region from the stack, use the asset hash as the key, and set the prefix.
+   *
+   * @param stack 
+   * @param asset 
+   * @param target 
+   * @param options
+   */
+  public open fun defaultAddDockerImageAsset(
+    stack: Stack,
+    asset: DockerImageAssetSource,
+    target: AssetManifestDockerImageDestination,
+    options: AddDockerImageAssetOptions,
+  ): DockerImageDestination =
+      unwrap(this).defaultAddDockerImageAsset(stack.let(Stack.Companion::unwrap),
+      asset.let(DockerImageAssetSource.Companion::unwrap),
+      target.let(AssetManifestDockerImageDestination.Companion::unwrap),
+      options.let(AddDockerImageAssetOptions.Companion::unwrap)).let(DockerImageDestination::wrap)
+
+  /**
+   * Add a docker image asset to the manifest with default settings.
+   *
+   * Derive the region from the stack, use the asset hash as the key, and set the prefix.
+   *
+   * @param stack 
+   * @param asset 
+   * @param target 
+   * @param options
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("898d96b46b7559e80d35f328e4f1ef9270cdf12f8749d58eac9da1b811f730c2")
+  public open fun defaultAddDockerImageAsset(
+    stack: Stack,
+    asset: DockerImageAssetSource,
+    target: AssetManifestDockerImageDestination,
+    options: AddDockerImageAssetOptions.Builder.() -> Unit,
+  ): DockerImageDestination = defaultAddDockerImageAsset(stack, asset, target,
+      AddDockerImageAssetOptions(options))
+
+  /**
    * Add a file asset to the manifest with default settings.
    *
    * Derive the region from the stack, use the asset hash as the key, copy the
@@ -157,6 +290,7 @@ public open class AssetManifestBuilder(
    * @param stack 
    * @param asset 
    * @param target 
+   * @param options
    */
   public open fun defaultAddFileAsset(
     stack: Stack,
@@ -175,6 +309,7 @@ public open class AssetManifestBuilder(
    * @param stack 
    * @param asset 
    * @param target 
+   * @param options
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("3af534afd81e127cca714111a29fd8dba3b9212966d3d315a30f50db18276d88")
@@ -183,6 +318,47 @@ public open class AssetManifestBuilder(
     asset: FileAssetSource,
     target: AssetManifestFileDestination.Builder.() -> Unit,
   ): FileDestination = defaultAddFileAsset(stack, asset, AssetManifestFileDestination(target))
+
+  /**
+   * Add a file asset to the manifest with default settings.
+   *
+   * Derive the region from the stack, use the asset hash as the key, copy the
+   * file extension over, and set the prefix.
+   *
+   * @param stack 
+   * @param asset 
+   * @param target 
+   * @param options
+   */
+  public open fun defaultAddFileAsset(
+    stack: Stack,
+    asset: FileAssetSource,
+    target: AssetManifestFileDestination,
+    options: AddFileAssetOptions,
+  ): FileDestination = unwrap(this).defaultAddFileAsset(stack.let(Stack.Companion::unwrap),
+      asset.let(FileAssetSource.Companion::unwrap),
+      target.let(AssetManifestFileDestination.Companion::unwrap),
+      options.let(AddFileAssetOptions.Companion::unwrap)).let(FileDestination::wrap)
+
+  /**
+   * Add a file asset to the manifest with default settings.
+   *
+   * Derive the region from the stack, use the asset hash as the key, copy the
+   * file extension over, and set the prefix.
+   *
+   * @param stack 
+   * @param asset 
+   * @param target 
+   * @param options
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("314771ea5dbac2482f722a49f3a864011d9b93af4828a39e178b71e70e7bbc75")
+  public open fun defaultAddFileAsset(
+    stack: Stack,
+    asset: FileAssetSource,
+    target: AssetManifestFileDestination,
+    options: AddFileAssetOptions.Builder.() -> Unit,
+  ): FileDestination = defaultAddFileAsset(stack, asset, target, AddFileAssetOptions(options))
 
   /**
    * Write the manifest to disk, and add it to the synthesis session.

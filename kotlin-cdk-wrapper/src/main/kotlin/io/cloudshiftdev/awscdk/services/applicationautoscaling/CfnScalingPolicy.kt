@@ -417,6 +417,8 @@ public open class CfnScalingPolicy(
      * `StepScaling` —Not supported for DynamoDB, Amazon Comprehend, Lambda, Amazon Keyspaces,
      * Amazon MSK, Amazon ElastiCache, or Neptune.
      *
+     * `PredictiveScaling` —Only supported for Amazon ECS
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-policytype)
      * @param policyType The scaling policy type. 
      */
@@ -494,6 +496,8 @@ public open class CfnScalingPolicy(
      * .
      * * Amazon ElastiCache replication group - The resource type is `replication-group` and the
      * unique identifier is the replication group name. Example: `replication-group/mycluster` .
+     * * Amazon ElastiCache cache cluster - The resource type is `cache-cluster` and the unique
+     * identifier is the cache cluster name. Example: `cache-cluster/mycluster` .
      * * Neptune cluster - The resource type is `cluster` and the unique identifier is the cluster
      * name. Example: `cluster:mycluster` .
      * * SageMaker serverless endpoint - The resource type is `variant` and the unique identifier is
@@ -541,6 +545,8 @@ public open class CfnScalingPolicy(
      * Keyspaces table.
      * * `kafka:broker-storage:VolumeSize` - The provisioned volume size (in GiB) for brokers in an
      * Amazon MSK cluster.
+     * * `elasticache:cache-cluster:Nodes` - The number of nodes for an Amazon ElastiCache cache
+     * cluster.
      * * `elasticache:replication-group:NodeGroups` - The number of node groups for an Amazon
      * ElastiCache replication group.
      * * `elasticache:replication-group:Replicas` - The number of replicas per node group for an
@@ -679,6 +685,8 @@ public open class CfnScalingPolicy(
      * `StepScaling` —Not supported for DynamoDB, Amazon Comprehend, Lambda, Amazon Keyspaces,
      * Amazon MSK, Amazon ElastiCache, or Neptune.
      *
+     * `PredictiveScaling` —Only supported for Amazon ECS
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-policytype)
      * @param policyType The scaling policy type. 
      */
@@ -764,6 +772,8 @@ public open class CfnScalingPolicy(
      * .
      * * Amazon ElastiCache replication group - The resource type is `replication-group` and the
      * unique identifier is the replication group name. Example: `replication-group/mycluster` .
+     * * Amazon ElastiCache cache cluster - The resource type is `cache-cluster` and the unique
+     * identifier is the cache cluster name. Example: `cache-cluster/mycluster` .
      * * Neptune cluster - The resource type is `cluster` and the unique identifier is the cluster
      * name. Example: `cluster:mycluster` .
      * * SageMaker serverless endpoint - The resource type is `variant` and the unique identifier is
@@ -813,6 +823,8 @@ public open class CfnScalingPolicy(
      * Keyspaces table.
      * * `kafka:broker-storage:VolumeSize` - The provisioned volume size (in GiB) for brokers in an
      * Amazon MSK cluster.
+     * * `elasticache:cache-cluster:Nodes` - The number of nodes for an Amazon ElastiCache cache
+     * cluster.
      * * `elasticache:replication-group:NodeGroups` - The number of node groups for an Amazon
      * ElastiCache replication group.
      * * `elasticache:replication-group:Replicas` - The number of replicas per node group for an
@@ -1923,6 +1935,8 @@ public open class CfnScalingPolicy(
   }
 
   /**
+   * One or more metric data queries to provide data points for a metric specification.
+   *
    * Example:
    *
    * ```
@@ -3496,6 +3510,8 @@ public open class CfnScalingPolicy(
   /**
    * Represents a predictive scaling policy configuration.
    *
+   * Predictive scaling is supported on Amazon ECS services.
+   *
    * Example:
    *
    * ```
@@ -3885,6 +3901,18 @@ public open class CfnScalingPolicy(
    * When returned in the output of `DescribePolicies` , it indicates that a predictive scaling
    * policy uses individually specified load and scaling metrics instead of a metric pair.
    *
+   * The following predefined metrics are available for predictive scaling:
+   *
+   * * `ECSServiceAverageCPUUtilization`
+   * * `ECSServiceAverageMemoryUtilization`
+   * * `ECSServiceCPUUtilization`
+   * * `ECSServiceMemoryUtilization`
+   * * `ECSServiceTotalCPUUtilization`
+   * * `ECSServiceTotalMemoryUtilization`
+   * * `ALBRequestCount`
+   * * `ALBRequestCountPerTarget`
+   * * `TotalALBRequestCount`
+   *
    * Example:
    *
    * ```
@@ -3997,6 +4025,18 @@ public open class CfnScalingPolicy(
 
   /**
    * Represents a metric pair for a predictive scaling policy.
+   *
+   * The following predefined metrics are available for predictive scaling:
+   *
+   * * `ECSServiceAverageCPUUtilization`
+   * * `ECSServiceAverageMemoryUtilization`
+   * * `ECSServiceCPUUtilization`
+   * * `ECSServiceMemoryUtilization`
+   * * `ECSServiceTotalCPUUtilization`
+   * * `ECSServiceTotalMemoryUtilization`
+   * * `ALBRequestCount`
+   * * `ALBRequestCountPerTarget`
+   * * `TotalALBRequestCount`
    *
    * Example:
    *
@@ -4127,6 +4167,18 @@ public open class CfnScalingPolicy(
    *
    * When returned in the output of `DescribePolicies` , it indicates that a predictive scaling
    * policy uses individually specified load and scaling metrics instead of a metric pair.
+   *
+   * The following predefined metrics are available for predictive scaling:
+   *
+   * * `ECSServiceAverageCPUUtilization`
+   * * `ECSServiceAverageMemoryUtilization`
+   * * `ECSServiceCPUUtilization`
+   * * `ECSServiceMemoryUtilization`
+   * * `ECSServiceTotalCPUUtilization`
+   * * `ECSServiceTotalMemoryUtilization`
+   * * `ALBRequestCount`
+   * * `ALBRequestCountPerTarget`
+   * * `TotalALBRequestCount`
    *
    * Example:
    *

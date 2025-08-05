@@ -47,7 +47,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .scheduleExpression("scheduleExpression")
  * // the properties below are optional
  * .scheduleExpressionTimezone("scheduleExpressionTimezone")
- * .scheduleStatus("scheduleStatus")
  * .startWindowHours(123)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -169,18 +168,6 @@ public open class CfnRestoreTestingPlan(
   }
 
   /**
-   * This parameter is not currently supported.
-   */
-  public open fun scheduleStatus(): String? = unwrap(this).getScheduleStatus()
-
-  /**
-   * This parameter is not currently supported.
-   */
-  public open fun scheduleStatus(`value`: String) {
-    unwrap(this).setScheduleStatus(`value`)
-  }
-
-  /**
    * Defaults to 24 hours.
    */
   public open fun startWindowHours(): Number? = unwrap(this).getStartWindowHours()
@@ -263,6 +250,9 @@ public open class CfnRestoreTestingPlan(
     /**
      * A CRON expression in specified timezone when a restore testing plan is executed.
      *
+     * When no CRON expression is provided, AWS Backup will use the default expression `cron(0 5 ? *
+     * * *)` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingplan.html#cfn-backup-restoretestingplan-scheduleexpression)
      * @param scheduleExpression A CRON expression in specified timezone when a restore testing plan
      * is executed. 
@@ -279,14 +269,6 @@ public open class CfnRestoreTestingPlan(
      * @param scheduleExpressionTimezone Optional. 
      */
     public fun scheduleExpressionTimezone(scheduleExpressionTimezone: String)
-
-    /**
-     * This parameter is not currently supported.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingplan.html#cfn-backup-restoretestingplan-schedulestatus)
-     * @param scheduleStatus This parameter is not currently supported. 
-     */
-    public fun scheduleStatus(scheduleStatus: String)
 
     /**
      * Defaults to 24 hours.
@@ -389,6 +371,9 @@ public open class CfnRestoreTestingPlan(
     /**
      * A CRON expression in specified timezone when a restore testing plan is executed.
      *
+     * When no CRON expression is provided, AWS Backup will use the default expression `cron(0 5 ? *
+     * * *)` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingplan.html#cfn-backup-restoretestingplan-scheduleexpression)
      * @param scheduleExpression A CRON expression in specified timezone when a restore testing plan
      * is executed. 
@@ -408,16 +393,6 @@ public open class CfnRestoreTestingPlan(
      */
     override fun scheduleExpressionTimezone(scheduleExpressionTimezone: String) {
       cdkBuilder.scheduleExpressionTimezone(scheduleExpressionTimezone)
-    }
-
-    /**
-     * This parameter is not currently supported.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingplan.html#cfn-backup-restoretestingplan-schedulestatus)
-     * @param scheduleStatus This parameter is not currently supported. 
-     */
-    override fun scheduleStatus(scheduleStatus: String) {
-      cdkBuilder.scheduleStatus(scheduleStatus)
     }
 
     /**

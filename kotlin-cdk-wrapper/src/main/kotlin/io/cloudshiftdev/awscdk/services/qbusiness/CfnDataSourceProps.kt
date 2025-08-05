@@ -89,6 +89,17 @@ import kotlin.jvm.JvmName
  * .s3BucketName("s3BucketName")
  * .build())
  * .build())
+ * .mediaExtractionConfiguration(MediaExtractionConfigurationProperty.builder()
+ * .audioExtractionConfiguration(AudioExtractionConfigurationProperty.builder()
+ * .audioExtractionStatus("audioExtractionStatus")
+ * .build())
+ * .imageExtractionConfiguration(ImageExtractionConfigurationProperty.builder()
+ * .imageExtractionStatus("imageExtractionStatus")
+ * .build())
+ * .videoExtractionConfiguration(VideoExtractionConfigurationProperty.builder()
+ * .videoExtractionStatus("videoExtractionStatus")
+ * .build())
+ * .build())
  * .roleArn("roleArn")
  * .syncSchedule("syncSchedule")
  * .tags(List.of(CfnTag.builder()
@@ -173,6 +184,13 @@ public interface CfnDataSourceProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-datasource.html#cfn-qbusiness-datasource-indexid)
    */
   public fun indexId(): String
+
+  /**
+   * The configuration for extracting information from media in documents.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-datasource.html#cfn-qbusiness-datasource-mediaextractionconfiguration)
+   */
+  public fun mediaExtractionConfiguration(): Any? = unwrap(this).getMediaExtractionConfiguration()
 
   /**
    * The Amazon Resource Name (ARN) of an IAM role with permission to access the data source and
@@ -300,6 +318,28 @@ public interface CfnDataSourceProps {
      * @param indexId The identifier of the index the data source is attached to. 
      */
     public fun indexId(indexId: String)
+
+    /**
+     * @param mediaExtractionConfiguration The configuration for extracting information from media
+     * in documents.
+     */
+    public fun mediaExtractionConfiguration(mediaExtractionConfiguration: IResolvable)
+
+    /**
+     * @param mediaExtractionConfiguration The configuration for extracting information from media
+     * in documents.
+     */
+    public
+        fun mediaExtractionConfiguration(mediaExtractionConfiguration: CfnDataSource.MediaExtractionConfigurationProperty)
+
+    /**
+     * @param mediaExtractionConfiguration The configuration for extracting information from media
+     * in documents.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c84ab979881fa0e745fa0366b58f85c1591f019c05d6b349a7464bf527265e52")
+    public
+        fun mediaExtractionConfiguration(mediaExtractionConfiguration: CfnDataSource.MediaExtractionConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param roleArn The Amazon Resource Name (ARN) of an IAM role with permission to access the
@@ -461,6 +501,34 @@ public interface CfnDataSourceProps {
     }
 
     /**
+     * @param mediaExtractionConfiguration The configuration for extracting information from media
+     * in documents.
+     */
+    override fun mediaExtractionConfiguration(mediaExtractionConfiguration: IResolvable) {
+      cdkBuilder.mediaExtractionConfiguration(mediaExtractionConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param mediaExtractionConfiguration The configuration for extracting information from media
+     * in documents.
+     */
+    override
+        fun mediaExtractionConfiguration(mediaExtractionConfiguration: CfnDataSource.MediaExtractionConfigurationProperty) {
+      cdkBuilder.mediaExtractionConfiguration(mediaExtractionConfiguration.let(CfnDataSource.MediaExtractionConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param mediaExtractionConfiguration The configuration for extracting information from media
+     * in documents.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c84ab979881fa0e745fa0366b58f85c1591f019c05d6b349a7464bf527265e52")
+    override
+        fun mediaExtractionConfiguration(mediaExtractionConfiguration: CfnDataSource.MediaExtractionConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        mediaExtractionConfiguration(CfnDataSource.MediaExtractionConfigurationProperty(mediaExtractionConfiguration))
+
+    /**
      * @param roleArn The Amazon Resource Name (ARN) of an IAM role with permission to access the
      * data source and required resources.
      */
@@ -608,6 +676,14 @@ public interface CfnDataSourceProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-datasource.html#cfn-qbusiness-datasource-indexid)
      */
     override fun indexId(): String = unwrap(this).getIndexId()
+
+    /**
+     * The configuration for extracting information from media in documents.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-datasource.html#cfn-qbusiness-datasource-mediaextractionconfiguration)
+     */
+    override fun mediaExtractionConfiguration(): Any? =
+        unwrap(this).getMediaExtractionConfiguration()
 
     /**
      * The Amazon Resource Name (ARN) of an IAM role with permission to access the data source and

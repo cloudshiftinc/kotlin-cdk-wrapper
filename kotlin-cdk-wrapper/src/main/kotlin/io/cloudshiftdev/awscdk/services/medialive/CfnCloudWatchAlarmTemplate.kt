@@ -28,7 +28,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnCloudWatchAlarmTemplate.Builder.create(this, "MyCfnCloudWatchAlarmTemplate")
  * .comparisonOperator("comparisonOperator")
  * .evaluationPeriods(123)
- * .groupIdentifier("groupIdentifier")
  * .metricName("metricName")
  * .name("name")
  * .period(123)
@@ -39,6 +38,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .datapointsToAlarm(123)
  * .description("description")
+ * .groupIdentifier("groupIdentifier")
  * .tags(Map.of(
  * "tagsKey", "tags"))
  * .build();
@@ -160,7 +160,7 @@ public open class CfnCloudWatchAlarmTemplate(
   /**
    * A cloudwatch alarm template group's identifier.
    */
-  public open fun groupIdentifier(): String = unwrap(this).getGroupIdentifier()
+  public open fun groupIdentifier(): String? = unwrap(this).getGroupIdentifier()
 
   /**
    * A cloudwatch alarm template group's identifier.

@@ -172,6 +172,9 @@ public open class PrivateHostedZone(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.route53.PrivateHostedZone.PROPERTY_INJECTION_ID
+
     public fun fromPrivateHostedZoneId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

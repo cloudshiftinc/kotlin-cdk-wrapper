@@ -766,6 +766,9 @@ public open class PolicyStatement(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.iam.PolicyStatement.PROPERTY_INJECTION_ID
+
     public fun fromJson(obj: Any): PolicyStatement =
         software.amazon.awscdk.services.iam.PolicyStatement.fromJson(obj).let(PolicyStatement::wrap)
 

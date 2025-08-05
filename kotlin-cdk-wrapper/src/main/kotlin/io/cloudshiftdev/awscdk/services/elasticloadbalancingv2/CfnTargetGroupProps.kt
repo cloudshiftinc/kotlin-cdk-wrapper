@@ -218,6 +218,8 @@ public interface CfnTargetGroupProps {
   /**
    * The target group attributes.
    *
+   * Attributes that you do not modify retain their current values.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)
    */
   public fun targetGroupAttributes(): Any? = unwrap(this).getTargetGroupAttributes()
@@ -422,16 +424,19 @@ public interface CfnTargetGroupProps {
 
     /**
      * @param targetGroupAttributes The target group attributes.
+     * Attributes that you do not modify retain their current values.
      */
     public fun targetGroupAttributes(targetGroupAttributes: IResolvable)
 
     /**
      * @param targetGroupAttributes The target group attributes.
+     * Attributes that you do not modify retain their current values.
      */
     public fun targetGroupAttributes(targetGroupAttributes: List<Any>)
 
     /**
      * @param targetGroupAttributes The target group attributes.
+     * Attributes that you do not modify retain their current values.
      */
     public fun targetGroupAttributes(vararg targetGroupAttributes: Any)
 
@@ -670,6 +675,7 @@ public interface CfnTargetGroupProps {
 
     /**
      * @param targetGroupAttributes The target group attributes.
+     * Attributes that you do not modify retain their current values.
      */
     override fun targetGroupAttributes(targetGroupAttributes: IResolvable) {
       cdkBuilder.targetGroupAttributes(targetGroupAttributes.let(IResolvable.Companion::unwrap))
@@ -677,6 +683,7 @@ public interface CfnTargetGroupProps {
 
     /**
      * @param targetGroupAttributes The target group attributes.
+     * Attributes that you do not modify retain their current values.
      */
     override fun targetGroupAttributes(targetGroupAttributes: List<Any>) {
       cdkBuilder.targetGroupAttributes(targetGroupAttributes.map{CdkObjectWrappers.unwrap(it)})
@@ -684,6 +691,7 @@ public interface CfnTargetGroupProps {
 
     /**
      * @param targetGroupAttributes The target group attributes.
+     * Attributes that you do not modify retain their current values.
      */
     override fun targetGroupAttributes(vararg targetGroupAttributes: Any): Unit =
         targetGroupAttributes(targetGroupAttributes.toList())
@@ -907,6 +915,8 @@ public interface CfnTargetGroupProps {
 
     /**
      * The target group attributes.
+     *
+     * Attributes that you do not modify retain their current values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)
      */

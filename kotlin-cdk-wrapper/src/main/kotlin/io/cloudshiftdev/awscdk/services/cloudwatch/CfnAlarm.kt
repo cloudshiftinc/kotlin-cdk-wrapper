@@ -783,7 +783,7 @@ public open class CfnAlarm(
     /**
      * The period, in seconds, over which the statistic is applied.
      *
-     * This is required for an alarm based on a metric. Valid values are 10, 30, 60, and any
+     * This is required for an alarm based on a metric. Valid values are 10, 20, 30, 60, and any
      * multiple of 60.
      *
      * For an alarm based on a math expression, you can't specify `Period` , and instead you use the
@@ -1244,7 +1244,7 @@ public open class CfnAlarm(
     /**
      * The period, in seconds, over which the statistic is applied.
      *
-     * This is required for an alarm based on a metric. Valid values are 10, 30, 60, and any
+     * This is required for an alarm based on a metric. Valid values are 10, 20, 30, 60, and any
      * multiple of 60.
      *
      * For an alarm based on a math expression, you can't specify `Period` , and instead you use the
@@ -1394,7 +1394,7 @@ public open class CfnAlarm(
    * Dimension is an embedded property of the `AWS::CloudWatch::Alarm` type.
    *
    * Dimensions are name/value pairs that can be associated with a CloudWatch metric. You can
-   * specify a maximum of 10 dimensions for a given metric.
+   * specify a maximum of 30 dimensions for a given metric.
    *
    * Example:
    *
@@ -1616,7 +1616,7 @@ public open class CfnAlarm(
      *
      * For metrics with regular resolution, a period can be as short as one minute (60 seconds) and
      * must be a multiple of 60. For high-resolution metrics that are collected at intervals of less
-     * than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60. High-resolution
+     * than one minute, the period can be 1, 5, 10, 20, 30, 60, or any multiple of 60. High-resolution
      * metrics are those metrics stored by a `PutMetricData` operation that includes a
      * `StorageResolution of 1 second` .
      *
@@ -1715,7 +1715,7 @@ public open class CfnAlarm(
        * @param period The granularity, in seconds, of the returned data points.
        * For metrics with regular resolution, a period can be as short as one minute (60 seconds)
        * and must be a multiple of 60. For high-resolution metrics that are collected at intervals of
-       * less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60.
+       * less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any multiple of 60.
        * High-resolution metrics are those metrics stored by a `PutMetricData` operation that includes
        * a `StorageResolution of 1 second` .
        */
@@ -1835,7 +1835,7 @@ public open class CfnAlarm(
        * @param period The granularity, in seconds, of the returned data points.
        * For metrics with regular resolution, a period can be as short as one minute (60 seconds)
        * and must be a multiple of 60. For high-resolution metrics that are collected at intervals of
-       * less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60.
+       * less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any multiple of 60.
        * High-resolution metrics are those metrics stored by a `PutMetricData` operation that includes
        * a `StorageResolution of 1 second` .
        */
@@ -1943,7 +1943,7 @@ public open class CfnAlarm(
        *
        * For metrics with regular resolution, a period can be as short as one minute (60 seconds)
        * and must be a multiple of 60. For high-resolution metrics that are collected at intervals of
-       * less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60.
+       * less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any multiple of 60.
        * High-resolution metrics are those metrics stored by a `PutMetricData` operation that includes
        * a `StorageResolution of 1 second` .
        *
@@ -2202,7 +2202,7 @@ public open class CfnAlarm(
      *
      * For metrics with regular resolution, a period can be as short as one minute (60 seconds) and
      * must be a multiple of 60. For high-resolution metrics that are collected at intervals of less
-     * than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60. High-resolution
+     * than one minute, the period can be 1, 5, 10, 20, 30, 60, or any multiple of 60. High-resolution
      * metrics are those metrics stored by a `PutMetricData` call that includes a `StorageResolution`
      * of 1 second.
      *
@@ -2268,7 +2268,7 @@ public open class CfnAlarm(
        * @param period The granularity, in seconds, of the returned data points. 
        * For metrics with regular resolution, a period can be as short as one minute (60 seconds)
        * and must be a multiple of 60. For high-resolution metrics that are collected at intervals of
-       * less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60.
+       * less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any multiple of 60.
        * High-resolution metrics are those metrics stored by a `PutMetricData` call that includes a
        * `StorageResolution` of 1 second.
        *
@@ -2332,7 +2332,7 @@ public open class CfnAlarm(
        * @param period The granularity, in seconds, of the returned data points. 
        * For metrics with regular resolution, a period can be as short as one minute (60 seconds)
        * and must be a multiple of 60. For high-resolution metrics that are collected at intervals of
-       * less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60.
+       * less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any multiple of 60.
        * High-resolution metrics are those metrics stored by a `PutMetricData` call that includes a
        * `StorageResolution` of 1 second.
        *
@@ -2390,7 +2390,7 @@ public open class CfnAlarm(
        *
        * For metrics with regular resolution, a period can be as short as one minute (60 seconds)
        * and must be a multiple of 60. For high-resolution metrics that are collected at intervals of
-       * less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60.
+       * less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any multiple of 60.
        * High-resolution metrics are those metrics stored by a `PutMetricData` call that includes a
        * `StorageResolution` of 1 second.
        *

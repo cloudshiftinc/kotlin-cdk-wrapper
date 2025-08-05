@@ -185,6 +185,9 @@ public open class PrivateSubnet(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ec2.PrivateSubnet.PROPERTY_INJECTION_ID
+
     public fun fromPrivateSubnetAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

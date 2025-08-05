@@ -16,19 +16,19 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * HostedZone exampleCom = HostedZone.Builder.create(this, "ExampleCom")
- * .zoneName("example.com")
+ * // To use your own domain name in a Distribution, you must associate a certificate
+ * import io.cloudshiftdev.awscdk.services.certificatemanager.*;
+ * import io.cloudshiftdev.awscdk.services.route53.*;
+ * HostedZone hostedZone;
+ * Bucket myBucket;
+ * Certificate myCertificate = Certificate.Builder.create(this, "mySiteCert")
+ * .domainName("www.example.com")
+ * .validation(CertificateValidation.fromDns(hostedZone))
  * .build();
- * HostedZone exampleNet = HostedZone.Builder.create(this, "ExampleNet")
- * .zoneName("example.net")
- * .build();
- * Certificate cert = Certificate.Builder.create(this, "Certificate")
- * .domainName("test.example.com")
- * .subjectAlternativeNames(List.of("cool.example.com", "test.example.net"))
- * .validation(CertificateValidation.fromDnsMultiZone(Map.of(
- * "test.example.com", exampleCom,
- * "cool.example.com", exampleCom,
- * "test.example.net", exampleNet)))
+ * Distribution.Builder.create(this, "myDist")
+ * .defaultBehavior(BehaviorOptions.builder().origin(new S3Origin(myBucket)).build())
+ * .domainNames(List.of("www.example.com"))
+ * .certificate(myCertificate)
  * .build();
  * ```
  */

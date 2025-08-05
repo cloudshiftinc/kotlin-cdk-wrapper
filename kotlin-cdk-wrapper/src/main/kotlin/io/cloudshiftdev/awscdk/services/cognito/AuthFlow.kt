@@ -14,12 +14,19 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * UserPool pool = new UserPool(this, "pool");
- * pool.addClient("app-client", UserPoolClientOptions.builder()
- * .authFlows(AuthFlow.builder()
- * .userPassword(true)
- * .userSrp(true)
+ * UserPool userPool = UserPool.Builder.create(this, "myuserpool")
+ * .signInPolicy(SignInPolicy.builder()
+ * .allowedFirstAuthFactors(AllowedFirstAuthFactors.builder()
+ * .password(true) // password authentication must be enabled
+ * .emailOtp(true) // enables email message one-time password
+ * .smsOtp(true) // enables SMS message one-time password
+ * .passkey(true)
  * .build())
+ * .build())
+ * .build();
+ * // You should also configure the user pool client with USER_AUTH authentication flow allowed
+ * userPool.addClient("myclient", UserPoolClientOptions.builder()
+ * .authFlows(AuthFlow.builder().user(true).build())
  * .build());
  * ```
  *

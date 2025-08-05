@@ -67,7 +67,7 @@ public interface CfnUserPoolResourceServerProps {
   public fun scopes(): Any? = unwrap(this).getScopes()
 
   /**
-   * The user pool ID for the user pool.
+   * The ID of the user pool where you want to create a resource server.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-userpoolid)
    */
@@ -113,7 +113,7 @@ public interface CfnUserPoolResourceServerProps {
     public fun scopes(vararg scopes: Any)
 
     /**
-     * @param userPoolId The user pool ID for the user pool. 
+     * @param userPoolId The ID of the user pool where you want to create a resource server. 
      */
     public fun userPoolId(userPoolId: String)
   }
@@ -166,7 +166,7 @@ public interface CfnUserPoolResourceServerProps {
     override fun scopes(vararg scopes: Any): Unit = scopes(scopes.toList())
 
     /**
-     * @param userPoolId The user pool ID for the user pool. 
+     * @param userPoolId The ID of the user pool where you want to create a resource server. 
      */
     override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
@@ -211,7 +211,7 @@ public interface CfnUserPoolResourceServerProps {
     override fun scopes(): Any? = unwrap(this).getScopes()
 
     /**
-     * The user pool ID for the user pool.
+     * The ID of the user pool where you want to create a resource server.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-userpoolid)
      */

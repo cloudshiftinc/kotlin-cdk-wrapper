@@ -254,6 +254,11 @@ public open class CfnAutoScalingGroup(
   )
 
   /**
+   * The Amazon Resource Name (ARN) of the Auto Scaling group.
+   */
+  public open fun attrAutoScalingGroupArn(): String = unwrap(this).getAttrAutoScalingGroupArn()
+
+  /**
    * The name of the Auto Scaling group.
    *
    * This name must be unique per Region per account.
@@ -1713,7 +1718,7 @@ public open class CfnAutoScalingGroup(
      *
      * For more information, see [Placement
      * groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      *
      * A *cluster* placement group is a logical grouping of instances within a single Availability
@@ -2771,7 +2776,7 @@ public open class CfnAutoScalingGroup(
      *
      * For more information, see [Placement
      * groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      *
      * A *cluster* placement group is a logical grouping of instances within a single Availability
@@ -4639,7 +4644,7 @@ public open class CfnAutoScalingGroup(
      *
      * For more information, see [Amazon EBS–optimized
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-     * *Amazon EC2 User Guide for Linux Instances* .
+     * *Amazon EC2 User Guide* .
      *
      * Default: No minimum or maximum limits
      *
@@ -4659,7 +4664,7 @@ public open class CfnAutoScalingGroup(
      *
      * For more information, see [Burstable performance
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      *
      * Default: `excluded`
      *
@@ -4673,6 +4678,7 @@ public open class CfnAutoScalingGroup(
      * * For instance types with Intel CPUs, specify `intel` .
      * * For instance types with AMD CPUs, specify `amd` .
      * * For instance types with AWS CPUs, specify `amazon-web-services` .
+     * * For instance types with Apple CPUs, specify `apple` .
      *
      *
      * Don't confuse the CPU hardware manufacturer with the CPU hardware architecture. Instances
@@ -4715,7 +4721,7 @@ public open class CfnAutoScalingGroup(
      * EC2 instance types currently recommended for use. This typically includes the latest two to
      * three generations in each instance family. For more information, see [Instance
      * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-     * EC2 User Guide for Linux Instances* .
+     * EC2 User Guide* .
      * * For previous generation instance types, specify `previous` .
      *
      * Default: Any current or previous generation
@@ -4731,7 +4737,7 @@ public open class CfnAutoScalingGroup(
      *
      * For more information, see [Amazon EC2 instance
      * store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the *Amazon
-     * EC2 User Guide for Linux Instances* .
+     * EC2 User Guide* .
      *
      * Default: `included`
      *
@@ -5080,7 +5086,7 @@ public open class CfnAutoScalingGroup(
        * an instance type, in Mbps.
        * For more information, see [Amazon EBS–optimized
        * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-       * *Amazon EC2 User Guide for Linux Instances* .
+       * *Amazon EC2 User Guide* .
        *
        * Default: No minimum or maximum limits
        */
@@ -5091,7 +5097,7 @@ public open class CfnAutoScalingGroup(
        * an instance type, in Mbps.
        * For more information, see [Amazon EBS–optimized
        * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-       * *Amazon EC2 User Guide for Linux Instances* .
+       * *Amazon EC2 User Guide* .
        *
        * Default: No minimum or maximum limits
        */
@@ -5103,7 +5109,7 @@ public open class CfnAutoScalingGroup(
        * an instance type, in Mbps.
        * For more information, see [Amazon EBS–optimized
        * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-       * *Amazon EC2 User Guide for Linux Instances* .
+       * *Amazon EC2 User Guide* .
        *
        * Default: No minimum or maximum limits
        */
@@ -5139,7 +5145,7 @@ public open class CfnAutoScalingGroup(
        * included, excluded, or required.
        * For more information, see [Burstable performance
        * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * in the *Amazon EC2 User Guide* .
        *
        * Default: `excluded`
        */
@@ -5150,6 +5156,7 @@ public open class CfnAutoScalingGroup(
        * * For instance types with Intel CPUs, specify `intel` .
        * * For instance types with AMD CPUs, specify `amd` .
        * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       * * For instance types with Apple CPUs, specify `apple` .
        *
        *
        * Don't confuse the CPU hardware manufacturer with the CPU hardware architecture. Instances
@@ -5166,6 +5173,7 @@ public open class CfnAutoScalingGroup(
        * * For instance types with Intel CPUs, specify `intel` .
        * * For instance types with AMD CPUs, specify `amd` .
        * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       * * For instance types with Apple CPUs, specify `apple` .
        *
        *
        * Don't confuse the CPU hardware manufacturer with the CPU hardware architecture. Instances
@@ -5220,7 +5228,7 @@ public open class CfnAutoScalingGroup(
        * includes EC2 instance types currently recommended for use. This typically includes the latest
        * two to three generations in each instance family. For more information, see [Instance
        * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-       * EC2 User Guide for Linux Instances* .
+       * EC2 User Guide* .
        * * For previous generation instance types, specify `previous` .
        *
        * Default: Any current or previous generation
@@ -5234,7 +5242,7 @@ public open class CfnAutoScalingGroup(
        * includes EC2 instance types currently recommended for use. This typically includes the latest
        * two to three generations in each instance family. For more information, see [Instance
        * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-       * EC2 User Guide for Linux Instances* .
+       * EC2 User Guide* .
        * * For previous generation instance types, specify `previous` .
        *
        * Default: Any current or previous generation
@@ -5246,7 +5254,7 @@ public open class CfnAutoScalingGroup(
        * included, excluded, or required.
        * For more information, see [Amazon EC2 instance
        * store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the
-       * *Amazon EC2 User Guide for Linux Instances* .
+       * *Amazon EC2 User Guide* .
        *
        * Default: `included`
        */
@@ -5705,7 +5713,7 @@ public open class CfnAutoScalingGroup(
        * an instance type, in Mbps.
        * For more information, see [Amazon EBS–optimized
        * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-       * *Amazon EC2 User Guide for Linux Instances* .
+       * *Amazon EC2 User Guide* .
        *
        * Default: No minimum or maximum limits
        */
@@ -5718,7 +5726,7 @@ public open class CfnAutoScalingGroup(
        * an instance type, in Mbps.
        * For more information, see [Amazon EBS–optimized
        * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-       * *Amazon EC2 User Guide for Linux Instances* .
+       * *Amazon EC2 User Guide* .
        *
        * Default: No minimum or maximum limits
        */
@@ -5732,7 +5740,7 @@ public open class CfnAutoScalingGroup(
        * an instance type, in Mbps.
        * For more information, see [Amazon EBS–optimized
        * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-       * *Amazon EC2 User Guide for Linux Instances* .
+       * *Amazon EC2 User Guide* .
        *
        * Default: No minimum or maximum limits
        */
@@ -5776,7 +5784,7 @@ public open class CfnAutoScalingGroup(
        * included, excluded, or required.
        * For more information, see [Burstable performance
        * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * in the *Amazon EC2 User Guide* .
        *
        * Default: `excluded`
        */
@@ -5789,6 +5797,7 @@ public open class CfnAutoScalingGroup(
        * * For instance types with Intel CPUs, specify `intel` .
        * * For instance types with AMD CPUs, specify `amd` .
        * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       * * For instance types with Apple CPUs, specify `apple` .
        *
        *
        * Don't confuse the CPU hardware manufacturer with the CPU hardware architecture. Instances
@@ -5807,6 +5816,7 @@ public open class CfnAutoScalingGroup(
        * * For instance types with Intel CPUs, specify `intel` .
        * * For instance types with AMD CPUs, specify `amd` .
        * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       * * For instance types with Apple CPUs, specify `apple` .
        *
        *
        * Don't confuse the CPU hardware manufacturer with the CPU hardware architecture. Instances
@@ -5865,7 +5875,7 @@ public open class CfnAutoScalingGroup(
        * includes EC2 instance types currently recommended for use. This typically includes the latest
        * two to three generations in each instance family. For more information, see [Instance
        * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-       * EC2 User Guide for Linux Instances* .
+       * EC2 User Guide* .
        * * For previous generation instance types, specify `previous` .
        *
        * Default: Any current or previous generation
@@ -5881,7 +5891,7 @@ public open class CfnAutoScalingGroup(
        * includes EC2 instance types currently recommended for use. This typically includes the latest
        * two to three generations in each instance family. For more information, see [Instance
        * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-       * EC2 User Guide for Linux Instances* .
+       * EC2 User Guide* .
        * * For previous generation instance types, specify `previous` .
        *
        * Default: Any current or previous generation
@@ -5894,7 +5904,7 @@ public open class CfnAutoScalingGroup(
        * included, excluded, or required.
        * For more information, see [Amazon EC2 instance
        * store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the
-       * *Amazon EC2 User Guide for Linux Instances* .
+       * *Amazon EC2 User Guide* .
        *
        * Default: `included`
        */
@@ -6303,7 +6313,7 @@ public open class CfnAutoScalingGroup(
        *
        * For more information, see [Amazon EBS–optimized
        * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
-       * *Amazon EC2 User Guide for Linux Instances* .
+       * *Amazon EC2 User Guide* .
        *
        * Default: No minimum or maximum limits
        *
@@ -6323,7 +6333,7 @@ public open class CfnAutoScalingGroup(
        *
        * For more information, see [Burstable performance
        * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * in the *Amazon EC2 User Guide* .
        *
        * Default: `excluded`
        *
@@ -6337,6 +6347,7 @@ public open class CfnAutoScalingGroup(
        * * For instance types with Intel CPUs, specify `intel` .
        * * For instance types with AMD CPUs, specify `amd` .
        * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       * * For instance types with Apple CPUs, specify `apple` .
        *
        *
        * Don't confuse the CPU hardware manufacturer with the CPU hardware architecture. Instances
@@ -6380,7 +6391,7 @@ public open class CfnAutoScalingGroup(
        * includes EC2 instance types currently recommended for use. This typically includes the latest
        * two to three generations in each instance family. For more information, see [Instance
        * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-       * EC2 User Guide for Linux Instances* .
+       * EC2 User Guide* .
        * * For previous generation instance types, specify `previous` .
        *
        * Default: Any current or previous generation
@@ -6396,7 +6407,7 @@ public open class CfnAutoScalingGroup(
        *
        * For more information, see [Amazon EC2 instance
        * store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the
-       * *Amazon EC2 User Guide for Linux Instances* .
+       * *Amazon EC2 User Guide* .
        *
        * Default: `included`
        *
@@ -7279,7 +7290,7 @@ public open class CfnAutoScalingGroup(
      * The instance type, such as `m3.xlarge` . You must specify an instance type that is supported
      * in your requested Region and Availability Zones. For more information, see [Instance
      * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-     * EC2 User Guide for Linux Instances* .
+     * EC2 User Guide* .
      *
      * You can specify up to 40 instance types per Auto Scaling group.
      *
@@ -7392,7 +7403,7 @@ public open class CfnAutoScalingGroup(
        * @param instanceType The instance type, such as `m3.xlarge` . You must specify an instance
        * type that is supported in your requested Region and Availability Zones. For more information,
        * see [Instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * in the *Amazon EC2 User Guide* .
        * You can specify up to 40 instance types per Auto Scaling group.
        */
       public fun instanceType(instanceType: String)
@@ -7538,7 +7549,7 @@ public open class CfnAutoScalingGroup(
        * @param instanceType The instance type, such as `m3.xlarge` . You must specify an instance
        * type that is supported in your requested Region and Availability Zones. For more information,
        * see [Instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * in the *Amazon EC2 User Guide* .
        * You can specify up to 40 instance types per Auto Scaling group.
        */
       override fun instanceType(instanceType: String) {
@@ -7660,7 +7671,7 @@ public open class CfnAutoScalingGroup(
        * The instance type, such as `m3.xlarge` . You must specify an instance type that is
        * supported in your requested Region and Availability Zones. For more information, see [Instance
        * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-       * EC2 User Guide for Linux Instances* .
+       * EC2 User Guide* .
        *
        * You can specify up to 40 instance types per Auto Scaling group.
        *

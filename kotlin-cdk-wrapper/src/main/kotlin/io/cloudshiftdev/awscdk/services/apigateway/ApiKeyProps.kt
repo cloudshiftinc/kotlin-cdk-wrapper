@@ -18,63 +18,10 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.*;
- * import io.cloudshiftdev.awscdk.services.apigateway.*;
- * Authorizer authorizer;
- * Integration integration;
- * Model model;
- * RequestValidator requestValidator;
- * RestApi restApi;
- * Stage stage;
- * ApiKeyProps apiKeyProps = ApiKeyProps.builder()
- * .apiKeyName("apiKeyName")
- * .customerId("customerId")
- * .defaultCorsPreflightOptions(CorsOptions.builder()
- * .allowOrigins(List.of("allowOrigins"))
- * // the properties below are optional
- * .allowCredentials(false)
- * .allowHeaders(List.of("allowHeaders"))
- * .allowMethods(List.of("allowMethods"))
- * .disableCache(false)
- * .exposeHeaders(List.of("exposeHeaders"))
- * .maxAge(Duration.minutes(30))
- * .statusCode(123)
- * .build())
- * .defaultIntegration(integration)
- * .defaultMethodOptions(MethodOptions.builder()
- * .apiKeyRequired(false)
- * .authorizationScopes(List.of("authorizationScopes"))
- * .authorizationType(AuthorizationType.NONE)
- * .authorizer(authorizer)
- * .methodResponses(List.of(MethodResponse.builder()
- * .statusCode("statusCode")
- * // the properties below are optional
- * .responseModels(Map.of(
- * "responseModelsKey", model))
- * .responseParameters(Map.of(
- * "responseParametersKey", false))
- * .build()))
- * .operationName("operationName")
- * .requestModels(Map.of(
- * "requestModelsKey", model))
- * .requestParameters(Map.of(
- * "requestParametersKey", false))
- * .requestValidator(requestValidator)
- * .requestValidatorOptions(RequestValidatorOptions.builder()
- * .requestValidatorName("requestValidatorName")
- * .validateRequestBody(false)
- * .validateRequestParameters(false)
- * .build())
- * .build())
- * .description("description")
- * .enabled(false)
- * .generateDistinctId(false)
- * .resources(List.of(restApi))
- * .stages(List.of(stage))
- * .value("value")
+ * Stack stack = Stack.Builder.create(app, "my-stack")
+ * .propertyInjectors(List.of(new ApiKeyPropsInjector()))
  * .build();
+ * ApiKey.Builder.create(stack, "my-api-key").build();
  * ```
  */
 public interface ApiKeyProps : ApiKeyOptions {

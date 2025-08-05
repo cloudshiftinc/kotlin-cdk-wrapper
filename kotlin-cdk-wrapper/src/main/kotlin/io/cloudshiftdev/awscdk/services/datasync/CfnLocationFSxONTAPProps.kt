@@ -85,7 +85,7 @@ public interface CfnLocationFSxONTAPProps {
   public fun storageVirtualMachineArn(): String
 
   /**
-   * Specifies a path to the file share in the SVM where you'll copy your data.
+   * Specifies a path to the file share in the SVM where you want to transfer data to or from.
    *
    * You can specify a junction path (also known as a mount point), qtree path (for NFS file
    * shares), or share name (for SMB file shares). For example, your mount path might be `/vol1` ,
@@ -169,8 +169,8 @@ public interface CfnLocationFSxONTAPProps {
     public fun storageVirtualMachineArn(storageVirtualMachineArn: String)
 
     /**
-     * @param subdirectory Specifies a path to the file share in the SVM where you'll copy your
-     * data.
+     * @param subdirectory Specifies a path to the file share in the SVM where you want to transfer
+     * data to or from.
      * You can specify a junction path (also known as a mount point), qtree path (for NFS file
      * shares), or share name (for SMB file shares). For example, your mount path might be `/vol1` ,
      * `/vol1/tree1` , or `/share1` .
@@ -266,8 +266,8 @@ public interface CfnLocationFSxONTAPProps {
     }
 
     /**
-     * @param subdirectory Specifies a path to the file share in the SVM where you'll copy your
-     * data.
+     * @param subdirectory Specifies a path to the file share in the SVM where you want to transfer
+     * data to or from.
      * You can specify a junction path (also known as a mount point), qtree path (for NFS file
      * shares), or share name (for SMB file shares). For example, your mount path might be `/vol1` ,
      * `/vol1/tree1` , or `/share1` .
@@ -339,7 +339,7 @@ public interface CfnLocationFSxONTAPProps {
     override fun storageVirtualMachineArn(): String = unwrap(this).getStorageVirtualMachineArn()
 
     /**
-     * Specifies a path to the file share in the SVM where you'll copy your data.
+     * Specifies a path to the file share in the SVM where you want to transfer data to or from.
      *
      * You can specify a junction path (also known as a mount point), qtree path (for NFS file
      * shares), or share name (for SMB file shares). For example, your mount path might be `/vol1` ,

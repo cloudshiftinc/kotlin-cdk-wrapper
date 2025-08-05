@@ -62,6 +62,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .inputConversion(InputConversionProperty.builder()
  * .fromFormat("fromFormat")
  * // the properties below are optional
+ * .advancedOptions(AdvancedOptionsProperty.builder()
+ * .x12(X12AdvancedOptionsProperty.builder()
+ * .splitOptions(X12SplitOptionsProperty.builder()
+ * .splitBy("splitBy")
+ * .build())
+ * .build())
+ * .build())
  * .formatOptions(FormatOptionsProperty.builder()
  * .x12(X12DetailsProperty.builder()
  * .transactionSet("transactionSet")
@@ -928,6 +935,113 @@ public open class CfnTransformer(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.b2bi.*;
+   * AdvancedOptionsProperty advancedOptionsProperty = AdvancedOptionsProperty.builder()
+   * .x12(X12AdvancedOptionsProperty.builder()
+   * .splitOptions(X12SplitOptionsProperty.builder()
+   * .splitBy("splitBy")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-advancedoptions.html)
+   */
+  public interface AdvancedOptionsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-advancedoptions.html#cfn-b2bi-transformer-advancedoptions-x12)
+     */
+    public fun x12(): Any? = unwrap(this).getX12()
+
+    /**
+     * A builder for [AdvancedOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param x12 the value to be set.
+       */
+      public fun x12(x12: IResolvable)
+
+      /**
+       * @param x12 the value to be set.
+       */
+      public fun x12(x12: X12AdvancedOptionsProperty)
+
+      /**
+       * @param x12 the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("98133a5e8b905f78b5ca5d9900a40fad46593c95fa59b2e6978c7d59a3790854")
+      public fun x12(x12: X12AdvancedOptionsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.b2bi.CfnTransformer.AdvancedOptionsProperty.Builder =
+          software.amazon.awscdk.services.b2bi.CfnTransformer.AdvancedOptionsProperty.builder()
+
+      /**
+       * @param x12 the value to be set.
+       */
+      override fun x12(x12: IResolvable) {
+        cdkBuilder.x12(x12.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param x12 the value to be set.
+       */
+      override fun x12(x12: X12AdvancedOptionsProperty) {
+        cdkBuilder.x12(x12.let(X12AdvancedOptionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param x12 the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("98133a5e8b905f78b5ca5d9900a40fad46593c95fa59b2e6978c7d59a3790854")
+      override fun x12(x12: X12AdvancedOptionsProperty.Builder.() -> Unit): Unit =
+          x12(X12AdvancedOptionsProperty(x12))
+
+      public fun build():
+          software.amazon.awscdk.services.b2bi.CfnTransformer.AdvancedOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.AdvancedOptionsProperty,
+    ) : CdkObject(cdkObject),
+        AdvancedOptionsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-advancedoptions.html#cfn-b2bi-transformer-advancedoptions-x12)
+       */
+      override fun x12(): Any? = unwrap(this).getX12()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AdvancedOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.AdvancedOptionsProperty):
+          AdvancedOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? AdvancedOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AdvancedOptionsProperty):
+          software.amazon.awscdk.services.b2bi.CfnTransformer.AdvancedOptionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.b2bi.CfnTransformer.AdvancedOptionsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.b2bi.*;
    * EdiTypeProperty ediTypeProperty = EdiTypeProperty.builder()
    * .x12Details(X12DetailsProperty.builder()
    * .transactionSet("transactionSet")
@@ -1141,6 +1255,13 @@ public open class CfnTransformer(
    * InputConversionProperty inputConversionProperty = InputConversionProperty.builder()
    * .fromFormat("fromFormat")
    * // the properties below are optional
+   * .advancedOptions(AdvancedOptionsProperty.builder()
+   * .x12(X12AdvancedOptionsProperty.builder()
+   * .splitOptions(X12SplitOptionsProperty.builder()
+   * .splitBy("splitBy")
+   * .build())
+   * .build())
+   * .build())
    * .formatOptions(FormatOptionsProperty.builder()
    * .x12(X12DetailsProperty.builder()
    * .transactionSet("transactionSet")
@@ -1153,6 +1274,11 @@ public open class CfnTransformer(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-inputconversion.html)
    */
   public interface InputConversionProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-inputconversion.html#cfn-b2bi-transformer-inputconversion-advancedoptions)
+     */
+    public fun advancedOptions(): Any? = unwrap(this).getAdvancedOptions()
+
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-inputconversion.html#cfn-b2bi-transformer-inputconversion-formatoptions)
      */
@@ -1168,6 +1294,23 @@ public open class CfnTransformer(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param advancedOptions the value to be set.
+       */
+      public fun advancedOptions(advancedOptions: IResolvable)
+
+      /**
+       * @param advancedOptions the value to be set.
+       */
+      public fun advancedOptions(advancedOptions: AdvancedOptionsProperty)
+
+      /**
+       * @param advancedOptions the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("422ee1c3922d18f4429e4f56bff956b09fef302031137555b5ab1a1adff07ce9")
+      public fun advancedOptions(advancedOptions: AdvancedOptionsProperty.Builder.() -> Unit)
+
       /**
        * @param formatOptions the value to be set.
        */
@@ -1195,6 +1338,28 @@ public open class CfnTransformer(
       private val cdkBuilder:
           software.amazon.awscdk.services.b2bi.CfnTransformer.InputConversionProperty.Builder =
           software.amazon.awscdk.services.b2bi.CfnTransformer.InputConversionProperty.builder()
+
+      /**
+       * @param advancedOptions the value to be set.
+       */
+      override fun advancedOptions(advancedOptions: IResolvable) {
+        cdkBuilder.advancedOptions(advancedOptions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param advancedOptions the value to be set.
+       */
+      override fun advancedOptions(advancedOptions: AdvancedOptionsProperty) {
+        cdkBuilder.advancedOptions(advancedOptions.let(AdvancedOptionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param advancedOptions the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("422ee1c3922d18f4429e4f56bff956b09fef302031137555b5ab1a1adff07ce9")
+      override fun advancedOptions(advancedOptions: AdvancedOptionsProperty.Builder.() -> Unit):
+          Unit = advancedOptions(AdvancedOptionsProperty(advancedOptions))
 
       /**
        * @param formatOptions the value to be set.
@@ -1234,6 +1399,11 @@ public open class CfnTransformer(
       cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.InputConversionProperty,
     ) : CdkObject(cdkObject),
         InputConversionProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-inputconversion.html#cfn-b2bi-transformer-inputconversion-advancedoptions)
+       */
+      override fun advancedOptions(): Any? = unwrap(this).getAdvancedOptions()
+
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-inputconversion.html#cfn-b2bi-transformer-inputconversion-formatoptions)
        */
@@ -1718,6 +1888,111 @@ public open class CfnTransformer(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.b2bi.*;
+   * X12AdvancedOptionsProperty x12AdvancedOptionsProperty = X12AdvancedOptionsProperty.builder()
+   * .splitOptions(X12SplitOptionsProperty.builder()
+   * .splitBy("splitBy")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12advancedoptions.html)
+   */
+  public interface X12AdvancedOptionsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12advancedoptions.html#cfn-b2bi-transformer-x12advancedoptions-splitoptions)
+     */
+    public fun splitOptions(): Any? = unwrap(this).getSplitOptions()
+
+    /**
+     * A builder for [X12AdvancedOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param splitOptions the value to be set.
+       */
+      public fun splitOptions(splitOptions: IResolvable)
+
+      /**
+       * @param splitOptions the value to be set.
+       */
+      public fun splitOptions(splitOptions: X12SplitOptionsProperty)
+
+      /**
+       * @param splitOptions the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("657e2e1d31315426929978b5a60237e61e83090286dfe15e12acea9ad9ccc8e9")
+      public fun splitOptions(splitOptions: X12SplitOptionsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.b2bi.CfnTransformer.X12AdvancedOptionsProperty.Builder =
+          software.amazon.awscdk.services.b2bi.CfnTransformer.X12AdvancedOptionsProperty.builder()
+
+      /**
+       * @param splitOptions the value to be set.
+       */
+      override fun splitOptions(splitOptions: IResolvable) {
+        cdkBuilder.splitOptions(splitOptions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param splitOptions the value to be set.
+       */
+      override fun splitOptions(splitOptions: X12SplitOptionsProperty) {
+        cdkBuilder.splitOptions(splitOptions.let(X12SplitOptionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param splitOptions the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("657e2e1d31315426929978b5a60237e61e83090286dfe15e12acea9ad9ccc8e9")
+      override fun splitOptions(splitOptions: X12SplitOptionsProperty.Builder.() -> Unit): Unit =
+          splitOptions(X12SplitOptionsProperty(splitOptions))
+
+      public fun build():
+          software.amazon.awscdk.services.b2bi.CfnTransformer.X12AdvancedOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.X12AdvancedOptionsProperty,
+    ) : CdkObject(cdkObject),
+        X12AdvancedOptionsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12advancedoptions.html#cfn-b2bi-transformer-x12advancedoptions-splitoptions)
+       */
+      override fun splitOptions(): Any? = unwrap(this).getSplitOptions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): X12AdvancedOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.X12AdvancedOptionsProperty):
+          X12AdvancedOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          X12AdvancedOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: X12AdvancedOptionsProperty):
+          software.amazon.awscdk.services.b2bi.CfnTransformer.X12AdvancedOptionsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.b2bi.CfnTransformer.X12AdvancedOptionsProperty
+    }
+  }
+
+  /**
    * A structure that contains the X12 transaction set and version.
    *
    * The X12 structure is used when the system transforms an EDI (electronic data interchange) file.
@@ -1837,6 +2112,82 @@ public open class CfnTransformer(
           software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.b2bi.*;
+   * X12SplitOptionsProperty x12SplitOptionsProperty = X12SplitOptionsProperty.builder()
+   * .splitBy("splitBy")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12splitoptions.html)
+   */
+  public interface X12SplitOptionsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12splitoptions.html#cfn-b2bi-transformer-x12splitoptions-splitby)
+     */
+    public fun splitBy(): String? = unwrap(this).getSplitBy()
+
+    /**
+     * A builder for [X12SplitOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param splitBy the value to be set.
+       */
+      public fun splitBy(splitBy: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.b2bi.CfnTransformer.X12SplitOptionsProperty.Builder =
+          software.amazon.awscdk.services.b2bi.CfnTransformer.X12SplitOptionsProperty.builder()
+
+      /**
+       * @param splitBy the value to be set.
+       */
+      override fun splitBy(splitBy: String) {
+        cdkBuilder.splitBy(splitBy)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.b2bi.CfnTransformer.X12SplitOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.X12SplitOptionsProperty,
+    ) : CdkObject(cdkObject),
+        X12SplitOptionsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12splitoptions.html#cfn-b2bi-transformer-x12splitoptions-splitby)
+       */
+      override fun splitBy(): String? = unwrap(this).getSplitBy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): X12SplitOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.X12SplitOptionsProperty):
+          X12SplitOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? X12SplitOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: X12SplitOptionsProperty):
+          software.amazon.awscdk.services.b2bi.CfnTransformer.X12SplitOptionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.b2bi.CfnTransformer.X12SplitOptionsProperty
     }
   }
 }

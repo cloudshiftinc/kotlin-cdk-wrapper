@@ -133,26 +133,26 @@ public open class CfnServiceNetwork(
   }
 
   /**
-   *
+   * Specify if the service network should be enabled for sharing.
    */
   public open fun sharingConfig(): Any? = unwrap(this).getSharingConfig()
 
   /**
-   *
+   * Specify if the service network should be enabled for sharing.
    */
   public open fun sharingConfig(`value`: IResolvable) {
     unwrap(this).setSharingConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   *
+   * Specify if the service network should be enabled for sharing.
    */
   public open fun sharingConfig(`value`: SharingConfigProperty) {
     unwrap(this).setSharingConfig(`value`.let(SharingConfigProperty.Companion::unwrap))
   }
 
   /**
-   *
+   * Specify if the service network should be enabled for sharing.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("74345cb30e4856d6f6b732e7122310fbe8f24f8243814618cdc689bd86ae1d61")
@@ -216,20 +216,26 @@ public open class CfnServiceNetwork(
     public fun name(name: String)
 
     /**
+     * Specify if the service network should be enabled for sharing.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-sharingconfig)
-     * @param sharingConfig 
+     * @param sharingConfig Specify if the service network should be enabled for sharing. 
      */
     public fun sharingConfig(sharingConfig: IResolvable)
 
     /**
+     * Specify if the service network should be enabled for sharing.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-sharingconfig)
-     * @param sharingConfig 
+     * @param sharingConfig Specify if the service network should be enabled for sharing. 
      */
     public fun sharingConfig(sharingConfig: SharingConfigProperty)
 
     /**
+     * Specify if the service network should be enabled for sharing.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-sharingconfig)
-     * @param sharingConfig 
+     * @param sharingConfig Specify if the service network should be enabled for sharing. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("eeb6c7e9643d32040942dfc3640d1ad3035f1177cd77e90c70c8cdecb99f650e")
@@ -292,24 +298,30 @@ public open class CfnServiceNetwork(
     }
 
     /**
+     * Specify if the service network should be enabled for sharing.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-sharingconfig)
-     * @param sharingConfig 
+     * @param sharingConfig Specify if the service network should be enabled for sharing. 
      */
     override fun sharingConfig(sharingConfig: IResolvable) {
       cdkBuilder.sharingConfig(sharingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
+     * Specify if the service network should be enabled for sharing.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-sharingconfig)
-     * @param sharingConfig 
+     * @param sharingConfig Specify if the service network should be enabled for sharing. 
      */
     override fun sharingConfig(sharingConfig: SharingConfigProperty) {
       cdkBuilder.sharingConfig(sharingConfig.let(SharingConfigProperty.Companion::unwrap))
     }
 
     /**
+     * Specify if the service network should be enabled for sharing.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-sharingconfig)
-     * @param sharingConfig 
+     * @param sharingConfig Specify if the service network should be enabled for sharing. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("eeb6c7e9643d32040942dfc3640d1ad3035f1177cd77e90c70c8cdecb99f650e")
@@ -360,6 +372,8 @@ public open class CfnServiceNetwork(
   }
 
   /**
+   * Specify if the service network should be enabled for sharing.
+   *
    * Example:
    *
    * ```
@@ -375,6 +389,8 @@ public open class CfnServiceNetwork(
    */
   public interface SharingConfigProperty {
     /**
+     * Specify if the service network should be enabled for sharing.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-servicenetwork-sharingconfig.html#cfn-vpclattice-servicenetwork-sharingconfig-enabled)
      */
     public fun enabled(): Any
@@ -385,12 +401,12 @@ public open class CfnServiceNetwork(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enabled the value to be set. 
+       * @param enabled Specify if the service network should be enabled for sharing. 
        */
       public fun enabled(enabled: Boolean)
 
       /**
-       * @param enabled the value to be set. 
+       * @param enabled Specify if the service network should be enabled for sharing. 
        */
       public fun enabled(enabled: IResolvable)
     }
@@ -402,14 +418,14 @@ public open class CfnServiceNetwork(
           software.amazon.awscdk.services.vpclattice.CfnServiceNetwork.SharingConfigProperty.builder()
 
       /**
-       * @param enabled the value to be set. 
+       * @param enabled Specify if the service network should be enabled for sharing. 
        */
       override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
       /**
-       * @param enabled the value to be set. 
+       * @param enabled Specify if the service network should be enabled for sharing. 
        */
       override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
@@ -425,6 +441,8 @@ public open class CfnServiceNetwork(
     ) : CdkObject(cdkObject),
         SharingConfigProperty {
       /**
+       * Specify if the service network should be enabled for sharing.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-servicenetwork-sharingconfig.html#cfn-vpclattice-servicenetwork-sharingconfig-enabled)
        */
       override fun enabled(): Any = unwrap(this).getEnabled()

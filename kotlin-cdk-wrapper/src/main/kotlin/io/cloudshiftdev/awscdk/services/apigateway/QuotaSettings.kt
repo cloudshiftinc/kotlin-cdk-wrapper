@@ -17,7 +17,7 @@ import kotlin.Unit
  * RestApi api;
  * RateLimitedApiKey key = RateLimitedApiKey.Builder.create(this, "rate-limited-api-key")
  * .customerId("hello-customer")
- * .stages(List.of(api.getDeploymentStage()))
+ * .apiStages(List.of(UsagePlanPerApiStage.builder().stage(api.getDeploymentStage()).build()))
  * .quota(QuotaSettings.builder()
  * .limit(10000)
  * .period(Period.MONTH)

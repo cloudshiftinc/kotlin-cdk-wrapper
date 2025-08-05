@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.IRole
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -52,7 +53,8 @@ public open class ExternalTaskDefinition(
   )
 
   /**
-   * Overriden method to throw error as interface accelerators are not supported for external tasks.
+   * Overridden method to throw error as interface accelerators are not supported for external
+   * tasks.
    *
    * @param _inferenceAccelerator 
    */
@@ -61,7 +63,8 @@ public open class ExternalTaskDefinition(
   }
 
   /**
-   * Overriden method to throw error as interface accelerators are not supported for external tasks.
+   * Overridden method to throw error as interface accelerators are not supported for external
+   * tasks.
    *
    * @param _inferenceAccelerator 
    */
@@ -76,6 +79,20 @@ public open class ExternalTaskDefinition(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Enables fault injection and allows for fault injection requests to be accepted from the
+     * task's containers.
+     *
+     * Fault injection only works with tasks using the [NetworkMode.AWS_VPC] or [NetworkMode.HOST]
+     * network modes.
+     *
+     * Default: undefined - ECS default setting is false
+     *
+     * @param enableFaultInjection Enables fault injection and allows for fault injection requests
+     * to be accepted from the task's containers. 
+     */
+    public fun enableFaultInjection(enableFaultInjection: Boolean)
+
     /**
      * The name of the IAM task execution role that grants the ECS agent permission to call AWS APIs
      * on your behalf.
@@ -165,6 +182,22 @@ public open class ExternalTaskDefinition(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.ExternalTaskDefinition.Builder =
         software.amazon.awscdk.services.ecs.ExternalTaskDefinition.Builder.create(scope, id)
+
+    /**
+     * Enables fault injection and allows for fault injection requests to be accepted from the
+     * task's containers.
+     *
+     * Fault injection only works with tasks using the [NetworkMode.AWS_VPC] or [NetworkMode.HOST]
+     * network modes.
+     *
+     * Default: undefined - ECS default setting is false
+     *
+     * @param enableFaultInjection Enables fault injection and allows for fault injection requests
+     * to be accepted from the task's containers. 
+     */
+    override fun enableFaultInjection(enableFaultInjection: Boolean) {
+      cdkBuilder.enableFaultInjection(enableFaultInjection)
+    }
 
     /**
      * The name of the IAM task execution role that grants the ECS agent permission to call AWS APIs
@@ -265,6 +298,9 @@ public open class ExternalTaskDefinition(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ecs.ExternalTaskDefinition.PROPERTY_INJECTION_ID
+
     public fun fromEc2TaskDefinitionArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

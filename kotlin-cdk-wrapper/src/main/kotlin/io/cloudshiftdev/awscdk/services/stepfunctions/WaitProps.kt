@@ -5,8 +5,10 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Map
 
 /**
  * Properties for defining a Wait state.
@@ -38,21 +40,7 @@ import kotlin.Unit
  * .build();
  * ```
  */
-public interface WaitProps {
-  /**
-   * An optional description for this state.
-   *
-   * Default: No comment
-   */
-  public fun comment(): String? = unwrap(this).getComment()
-
-  /**
-   * Optional name for this state.
-   *
-   * Default: - The construct ID will be used as state name
-   */
-  public fun stateName(): String? = unwrap(this).getStateName()
-
+public interface WaitProps : StateBaseProps, AssignableStateOptions {
   /**
    * Wait duration.
    */
@@ -64,9 +52,23 @@ public interface WaitProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param comment An optional description for this state.
+     * @param assign Workflow variables to store in this step.
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     */
+    public fun assign(assign: Map<String, Any>)
+
+    /**
+     * @param comment A comment describing this state.
      */
     public fun comment(comment: String)
+
+    /**
+     * @param queryLanguage The name of the query language used by the state.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
 
     /**
      * @param stateName Optional name for this state.
@@ -84,10 +86,28 @@ public interface WaitProps {
         software.amazon.awscdk.services.stepfunctions.WaitProps.builder()
 
     /**
-     * @param comment An optional description for this state.
+     * @param assign Workflow variables to store in this step.
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
+     * @param comment A comment describing this state.
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
+    }
+
+    /**
+     * @param queryLanguage The name of the query language used by the state.
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
     }
 
     /**
@@ -112,11 +132,34 @@ public interface WaitProps {
   ) : CdkObject(cdkObject),
       WaitProps {
     /**
-     * An optional description for this state.
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     */
+    override fun assign(): Map<String, Any> = unwrap(this).getAssign() ?: emptyMap()
+
+    /**
+     * A comment describing this state.
      *
      * Default: No comment
      */
     override fun comment(): String? = unwrap(this).getComment()
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     */
+    override fun queryLanguage(): QueryLanguage? =
+        unwrap(this).getQueryLanguage()?.let(QueryLanguage::wrap)
 
     /**
      * Optional name for this state.

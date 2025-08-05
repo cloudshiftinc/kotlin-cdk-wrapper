@@ -12,6 +12,7 @@ public enum class ActionPoint(
   ON_DEPLOYMENT_BAKING(software.amazon.awscdk.services.appconfig.ActionPoint.ON_DEPLOYMENT_BAKING),
   ON_DEPLOYMENT_COMPLETE(software.amazon.awscdk.services.appconfig.ActionPoint.ON_DEPLOYMENT_COMPLETE),
   ON_DEPLOYMENT_ROLLED_BACK(software.amazon.awscdk.services.appconfig.ActionPoint.ON_DEPLOYMENT_ROLLED_BACK),
+  AT_DEPLOYMENT_TICK(software.amazon.awscdk.services.appconfig.ActionPoint.AT_DEPLOYMENT_TICK),
   ;
 
   public companion object {
@@ -31,6 +32,8 @@ public enum class ActionPoint(
           ActionPoint.ON_DEPLOYMENT_COMPLETE
       software.amazon.awscdk.services.appconfig.ActionPoint.ON_DEPLOYMENT_ROLLED_BACK ->
           ActionPoint.ON_DEPLOYMENT_ROLLED_BACK
+      software.amazon.awscdk.services.appconfig.ActionPoint.AT_DEPLOYMENT_TICK ->
+          ActionPoint.AT_DEPLOYMENT_TICK
     }
 
     internal fun unwrap(wrapped: ActionPoint): software.amazon.awscdk.services.appconfig.ActionPoint

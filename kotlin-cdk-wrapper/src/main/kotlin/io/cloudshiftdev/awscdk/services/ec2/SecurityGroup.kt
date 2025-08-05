@@ -53,14 +53,18 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Vpc vpc;
- * SecurityGroup mySecurityGroup = SecurityGroup.Builder.create(this,
- * "SecurityGroup").vpc(vpc).build();
- * AutoScalingGroup.Builder.create(this, "ASG")
- * .vpc(vpc)
- * .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.MICRO))
- * .machineImage(MachineImage.latestAmazonLinux2())
- * .securityGroup(mySecurityGroup)
+ * Vpc vpc = Vpc.Builder.create(this, "Vpc").maxAzs(1).build();
+ * Cluster cluster = Cluster.Builder.create(this, "EcsCluster").vpc(vpc).build();
+ * SecurityGroup securityGroup = SecurityGroup.Builder.create(this, "SG").vpc(vpc).build();
+ * ScheduledFargateTask scheduledFargateTask = ScheduledFargateTask.Builder.create(this,
+ * "ScheduledFargateTask")
+ * .cluster(cluster)
+ * .scheduledFargateTaskImageOptions(ScheduledFargateTaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .memoryLimitMiB(512)
+ * .build())
+ * .schedule(Schedule.expression("rate(1 minute)"))
+ * .securityGroups(List.of(securityGroup))
  * .build();
  * ```
  */
@@ -358,7 +362,7 @@ public open class SecurityGroup(
      * Inlining rules is an optimization for producing smaller stack templates. Sometimes
      * this is not desirable, for example when security group access is managed via tags.
      *
-     * The default value can be overriden globally by setting the context variable
+     * The default value can be overridden globally by setting the context variable
      * '&#64;aws-cdk/aws-ec2.securityGroupDisableInlineRules'.
      *
      * Default: false
@@ -452,7 +456,7 @@ public open class SecurityGroup(
      * Inlining rules is an optimization for producing smaller stack templates. Sometimes
      * this is not desirable, for example when security group access is managed via tags.
      *
-     * The default value can be overriden globally by setting the context variable
+     * The default value can be overridden globally by setting the context variable
      * '&#64;aws-cdk/aws-ec2.securityGroupDisableInlineRules'.
      *
      * Default: false
@@ -494,6 +498,9 @@ public open class SecurityGroup(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ec2.SecurityGroup.PROPERTY_INJECTION_ID
+
     public fun fromLookupById(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

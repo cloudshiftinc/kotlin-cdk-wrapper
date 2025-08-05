@@ -3,4 +3,4 @@ plugins {
     id("cloudshift.awscdkdsl.build.library-publishing")
 }
 
-//dependencies { implementation(libs.awscdk) }
+// dependencies { implementation(libs.awscdk) }

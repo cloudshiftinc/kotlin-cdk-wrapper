@@ -42,6 +42,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .networkName("networkName")
  * .port(123)
  * .protocol("protocol")
+ * // the properties below are optional
+ * .multicastSourceSettings(MulticastSourceSettingsProperty.builder()
+ * .multicastSourceIp("multicastSourceIp")
+ * .build())
  * .build())
  * .build();
  * ```
@@ -69,38 +73,38 @@ public open class CfnBridgeSource(
   )
 
   /**
-   * The ARN of the bridge that you want to describe.
+   * The ARN of the bridge feeding this flow.
    */
   public open fun bridgeArn(): String = unwrap(this).getBridgeArn()
 
   /**
-   * The ARN of the bridge that you want to describe.
+   * The ARN of the bridge feeding this flow.
    */
   public open fun bridgeArn(`value`: String) {
     unwrap(this).setBridgeArn(`value`)
   }
 
   /**
-   * Add a flow source to an existing bridge.
+   * The source of the flow.
    */
   public open fun flowSource(): Any? = unwrap(this).getFlowSource()
 
   /**
-   * Add a flow source to an existing bridge.
+   * The source of the flow.
    */
   public open fun flowSource(`value`: IResolvable) {
     unwrap(this).setFlowSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Add a flow source to an existing bridge.
+   * The source of the flow.
    */
   public open fun flowSource(`value`: BridgeFlowSourceProperty) {
     unwrap(this).setFlowSource(`value`.let(BridgeFlowSourceProperty.Companion::unwrap))
   }
 
   /**
-   * Add a flow source to an existing bridge.
+   * The source of the flow.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("f35bd9d9dce9c21e47c1c586b44f3cd49d19e35ef4924b38c43a6e8bb09d0ad0")
@@ -129,26 +133,26 @@ public open class CfnBridgeSource(
   }
 
   /**
-   * Add a network source to an existing bridge.
+   * The source of the network.
    */
   public open fun networkSource(): Any? = unwrap(this).getNetworkSource()
 
   /**
-   * Add a network source to an existing bridge.
+   * The source of the network.
    */
   public open fun networkSource(`value`: IResolvable) {
     unwrap(this).setNetworkSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Add a network source to an existing bridge.
+   * The source of the network.
    */
   public open fun networkSource(`value`: BridgeNetworkSourceProperty) {
     unwrap(this).setNetworkSource(`value`.let(BridgeNetworkSourceProperty.Companion::unwrap))
   }
 
   /**
-   * Add a network source to an existing bridge.
+   * The source of the network.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("10b7826c27059c2c2192a3b1e1af166be2e9076e8f9397fa1299854f59705561")
@@ -161,34 +165,34 @@ public open class CfnBridgeSource(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The ARN of the bridge that you want to describe.
+     * The ARN of the bridge feeding this flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-bridgearn)
-     * @param bridgeArn The ARN of the bridge that you want to describe. 
+     * @param bridgeArn The ARN of the bridge feeding this flow. 
      */
     public fun bridgeArn(bridgeArn: String)
 
     /**
-     * Add a flow source to an existing bridge.
+     * The source of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-flowsource)
-     * @param flowSource Add a flow source to an existing bridge. 
+     * @param flowSource The source of the flow. 
      */
     public fun flowSource(flowSource: IResolvable)
 
     /**
-     * Add a flow source to an existing bridge.
+     * The source of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-flowsource)
-     * @param flowSource Add a flow source to an existing bridge. 
+     * @param flowSource The source of the flow. 
      */
     public fun flowSource(flowSource: BridgeFlowSourceProperty)
 
     /**
-     * Add a flow source to an existing bridge.
+     * The source of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-flowsource)
-     * @param flowSource Add a flow source to an existing bridge. 
+     * @param flowSource The source of the flow. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("14219218af9bf4119d9a300e98e1eba9e68fb69255d59134be5c58b26a0a3266")
@@ -205,26 +209,26 @@ public open class CfnBridgeSource(
     public fun name(name: String)
 
     /**
-     * Add a network source to an existing bridge.
+     * The source of the network.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-networksource)
-     * @param networkSource Add a network source to an existing bridge. 
+     * @param networkSource The source of the network. 
      */
     public fun networkSource(networkSource: IResolvable)
 
     /**
-     * Add a network source to an existing bridge.
+     * The source of the network.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-networksource)
-     * @param networkSource Add a network source to an existing bridge. 
+     * @param networkSource The source of the network. 
      */
     public fun networkSource(networkSource: BridgeNetworkSourceProperty)
 
     /**
-     * Add a network source to an existing bridge.
+     * The source of the network.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-networksource)
-     * @param networkSource Add a network source to an existing bridge. 
+     * @param networkSource The source of the network. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3c433b768300479d0195d0079aaf4b5ad0d06975e9878cb5629961d760ccb830")
@@ -239,40 +243,40 @@ public open class CfnBridgeSource(
         software.amazon.awscdk.services.mediaconnect.CfnBridgeSource.Builder.create(scope, id)
 
     /**
-     * The ARN of the bridge that you want to describe.
+     * The ARN of the bridge feeding this flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-bridgearn)
-     * @param bridgeArn The ARN of the bridge that you want to describe. 
+     * @param bridgeArn The ARN of the bridge feeding this flow. 
      */
     override fun bridgeArn(bridgeArn: String) {
       cdkBuilder.bridgeArn(bridgeArn)
     }
 
     /**
-     * Add a flow source to an existing bridge.
+     * The source of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-flowsource)
-     * @param flowSource Add a flow source to an existing bridge. 
+     * @param flowSource The source of the flow. 
      */
     override fun flowSource(flowSource: IResolvable) {
       cdkBuilder.flowSource(flowSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Add a flow source to an existing bridge.
+     * The source of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-flowsource)
-     * @param flowSource Add a flow source to an existing bridge. 
+     * @param flowSource The source of the flow. 
      */
     override fun flowSource(flowSource: BridgeFlowSourceProperty) {
       cdkBuilder.flowSource(flowSource.let(BridgeFlowSourceProperty.Companion::unwrap))
     }
 
     /**
-     * Add a flow source to an existing bridge.
+     * The source of the flow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-flowsource)
-     * @param flowSource Add a flow source to an existing bridge. 
+     * @param flowSource The source of the flow. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("14219218af9bf4119d9a300e98e1eba9e68fb69255d59134be5c58b26a0a3266")
@@ -292,30 +296,30 @@ public open class CfnBridgeSource(
     }
 
     /**
-     * Add a network source to an existing bridge.
+     * The source of the network.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-networksource)
-     * @param networkSource Add a network source to an existing bridge. 
+     * @param networkSource The source of the network. 
      */
     override fun networkSource(networkSource: IResolvable) {
       cdkBuilder.networkSource(networkSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Add a network source to an existing bridge.
+     * The source of the network.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-networksource)
-     * @param networkSource Add a network source to an existing bridge. 
+     * @param networkSource The source of the network. 
      */
     override fun networkSource(networkSource: BridgeNetworkSourceProperty) {
       cdkBuilder.networkSource(networkSource.let(BridgeNetworkSourceProperty.Companion::unwrap))
     }
 
     /**
-     * Add a network source to an existing bridge.
+     * The source of the network.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html#cfn-mediaconnect-bridgesource-networksource)
-     * @param networkSource Add a network source to an existing bridge. 
+     * @param networkSource The source of the network. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3c433b768300479d0195d0079aaf4b5ad0d06975e9878cb5629961d760ccb830")
@@ -516,6 +520,10 @@ public open class CfnBridgeSource(
    * .networkName("networkName")
    * .port(123)
    * .protocol("protocol")
+   * // the properties below are optional
+   * .multicastSourceSettings(MulticastSourceSettingsProperty.builder()
+   * .multicastSourceIp("multicastSourceIp")
+   * .build())
    * .build();
    * ```
    *
@@ -528,6 +536,13 @@ public open class CfnBridgeSource(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgesource-bridgenetworksource.html#cfn-mediaconnect-bridgesource-bridgenetworksource-multicastip)
      */
     public fun multicastIp(): String
+
+    /**
+     * The settings related to the multicast source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgesource-bridgenetworksource.html#cfn-mediaconnect-bridgesource-bridgenetworksource-multicastsourcesettings)
+     */
+    public fun multicastSourceSettings(): Any? = unwrap(this).getMulticastSourceSettings()
 
     /**
      * The network source's gateway network name.
@@ -546,6 +561,11 @@ public open class CfnBridgeSource(
     /**
      * The network source protocol.
      *
+     *
+     * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+     * maintained for legacy purposes only.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgesource-bridgenetworksource.html#cfn-mediaconnect-bridgesource-bridgenetworksource-protocol)
      */
     public fun protocol(): String
@@ -561,6 +581,24 @@ public open class CfnBridgeSource(
       public fun multicastIp(multicastIp: String)
 
       /**
+       * @param multicastSourceSettings The settings related to the multicast source.
+       */
+      public fun multicastSourceSettings(multicastSourceSettings: IResolvable)
+
+      /**
+       * @param multicastSourceSettings The settings related to the multicast source.
+       */
+      public fun multicastSourceSettings(multicastSourceSettings: MulticastSourceSettingsProperty)
+
+      /**
+       * @param multicastSourceSettings The settings related to the multicast source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a04c6a06fd96cc5df3b9514ee64cd751bc94bdb1a907cae8f90521378b6805df")
+      public
+          fun multicastSourceSettings(multicastSourceSettings: MulticastSourceSettingsProperty.Builder.() -> Unit)
+
+      /**
        * @param networkName The network source's gateway network name. 
        */
       public fun networkName(networkName: String)
@@ -572,6 +610,9 @@ public open class CfnBridgeSource(
 
       /**
        * @param protocol The network source protocol. 
+       *
+       * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+       * maintained for legacy purposes only.
        */
       public fun protocol(protocol: String)
     }
@@ -590,6 +631,30 @@ public open class CfnBridgeSource(
       }
 
       /**
+       * @param multicastSourceSettings The settings related to the multicast source.
+       */
+      override fun multicastSourceSettings(multicastSourceSettings: IResolvable) {
+        cdkBuilder.multicastSourceSettings(multicastSourceSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param multicastSourceSettings The settings related to the multicast source.
+       */
+      override
+          fun multicastSourceSettings(multicastSourceSettings: MulticastSourceSettingsProperty) {
+        cdkBuilder.multicastSourceSettings(multicastSourceSettings.let(MulticastSourceSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param multicastSourceSettings The settings related to the multicast source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a04c6a06fd96cc5df3b9514ee64cd751bc94bdb1a907cae8f90521378b6805df")
+      override
+          fun multicastSourceSettings(multicastSourceSettings: MulticastSourceSettingsProperty.Builder.() -> Unit):
+          Unit = multicastSourceSettings(MulticastSourceSettingsProperty(multicastSourceSettings))
+
+      /**
        * @param networkName The network source's gateway network name. 
        */
       override fun networkName(networkName: String) {
@@ -605,6 +670,9 @@ public open class CfnBridgeSource(
 
       /**
        * @param protocol The network source protocol. 
+       *
+       * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+       * maintained for legacy purposes only.
        */
       override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
@@ -627,6 +695,13 @@ public open class CfnBridgeSource(
       override fun multicastIp(): String = unwrap(this).getMulticastIp()
 
       /**
+       * The settings related to the multicast source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgesource-bridgenetworksource.html#cfn-mediaconnect-bridgesource-bridgenetworksource-multicastsourcesettings)
+       */
+      override fun multicastSourceSettings(): Any? = unwrap(this).getMulticastSourceSettings()
+
+      /**
        * The network source's gateway network name.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgesource-bridgenetworksource.html#cfn-mediaconnect-bridgesource-bridgenetworksource-networkname)
@@ -642,6 +717,11 @@ public open class CfnBridgeSource(
 
       /**
        * The network source protocol.
+       *
+       *
+       * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+       * maintained for legacy purposes only.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgesource-bridgenetworksource.html#cfn-mediaconnect-bridgesource-bridgenetworksource-protocol)
        */
@@ -667,7 +747,91 @@ public open class CfnBridgeSource(
   }
 
   /**
-   * The VPC interface that you want to send your output to.
+   * The settings related to the multicast source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediaconnect.*;
+   * MulticastSourceSettingsProperty multicastSourceSettingsProperty =
+   * MulticastSourceSettingsProperty.builder()
+   * .multicastSourceIp("multicastSourceIp")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgesource-multicastsourcesettings.html)
+   */
+  public interface MulticastSourceSettingsProperty {
+    /**
+     * The IP address of the source for source-specific multicast (SSM).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgesource-multicastsourcesettings.html#cfn-mediaconnect-bridgesource-multicastsourcesettings-multicastsourceip)
+     */
+    public fun multicastSourceIp(): String? = unwrap(this).getMulticastSourceIp()
+
+    /**
+     * A builder for [MulticastSourceSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param multicastSourceIp The IP address of the source for source-specific multicast (SSM).
+       */
+      public fun multicastSourceIp(multicastSourceIp: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediaconnect.CfnBridgeSource.MulticastSourceSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.mediaconnect.CfnBridgeSource.MulticastSourceSettingsProperty.builder()
+
+      /**
+       * @param multicastSourceIp The IP address of the source for source-specific multicast (SSM).
+       */
+      override fun multicastSourceIp(multicastSourceIp: String) {
+        cdkBuilder.multicastSourceIp(multicastSourceIp)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediaconnect.CfnBridgeSource.MulticastSourceSettingsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeSource.MulticastSourceSettingsProperty,
+    ) : CdkObject(cdkObject),
+        MulticastSourceSettingsProperty {
+      /**
+       * The IP address of the source for source-specific multicast (SSM).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgesource-multicastsourcesettings.html#cfn-mediaconnect-bridgesource-multicastsourcesettings-multicastsourceip)
+       */
+      override fun multicastSourceIp(): String? = unwrap(this).getMulticastSourceIp()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MulticastSourceSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeSource.MulticastSourceSettingsProperty):
+          MulticastSourceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MulticastSourceSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MulticastSourceSettingsProperty):
+          software.amazon.awscdk.services.mediaconnect.CfnBridgeSource.MulticastSourceSettingsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediaconnect.CfnBridgeSource.MulticastSourceSettingsProperty
+    }
+  }
+
+  /**
+   * The settings for attaching a VPC interface to an resource.
    *
    * Example:
    *
@@ -685,7 +849,7 @@ public open class CfnBridgeSource(
    */
   public interface VpcInterfaceAttachmentProperty {
     /**
-     * The name of the VPC interface that you want to send your output to.
+     * The name of the VPC interface to use for this resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgesource-vpcinterfaceattachment.html#cfn-mediaconnect-bridgesource-vpcinterfaceattachment-vpcinterfacename)
      */
@@ -697,7 +861,7 @@ public open class CfnBridgeSource(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+       * @param vpcInterfaceName The name of the VPC interface to use for this resource.
        */
       public fun vpcInterfaceName(vpcInterfaceName: String)
     }
@@ -709,7 +873,7 @@ public open class CfnBridgeSource(
           software.amazon.awscdk.services.mediaconnect.CfnBridgeSource.VpcInterfaceAttachmentProperty.builder()
 
       /**
-       * @param vpcInterfaceName The name of the VPC interface that you want to send your output to.
+       * @param vpcInterfaceName The name of the VPC interface to use for this resource.
        */
       override fun vpcInterfaceName(vpcInterfaceName: String) {
         cdkBuilder.vpcInterfaceName(vpcInterfaceName)
@@ -725,7 +889,7 @@ public open class CfnBridgeSource(
     ) : CdkObject(cdkObject),
         VpcInterfaceAttachmentProperty {
       /**
-       * The name of the VPC interface that you want to send your output to.
+       * The name of the VPC interface to use for this resource.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgesource-vpcinterfaceattachment.html#cfn-mediaconnect-bridgesource-vpcinterfaceattachment-vpcinterfacename)
        */

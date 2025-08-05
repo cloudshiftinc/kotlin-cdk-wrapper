@@ -216,6 +216,10 @@ public interface CfnKeyProps {
    * * `ECC_NIST_P521` (secp521r1)
    * * Other asymmetric elliptic curve key pairs (signing and verification)
    * * `ECC_SECG_P256K1` (secp256k1), commonly used for cryptocurrencies.
+   * * Asymmetric ML-DSA key pairs (signing and verification)
+   * * `ML_DSA_44`
+   * * `ML_DSA_65`
+   * * `ML_DSA_87`
    * * SM2 key pairs (encryption and decryption *or* signing and verification *or* deriving shared
    * secrets)
    * * `SM2` (China Regions only)
@@ -247,7 +251,8 @@ public interface CfnKeyProps {
    * * For asymmetric KMS keys with RSA key pairs, specify `ENCRYPT_DECRYPT` or `SIGN_VERIFY` .
    * * For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify `SIGN_VERIFY`
    * or `KEY_AGREEMENT` .
-   * * For asymmetric KMS keys with `ECC_SECG_P256K1` key pairs specify `SIGN_VERIFY` .
+   * * For asymmetric KMS keys with `ECC_SECG_P256K1` key pairs, specify `SIGN_VERIFY` .
+   * * For asymmetric KMS keys with ML-DSA key pairs, specify `SIGN_VERIFY` .
    * * For asymmetric KMS keys with SM2 key pairs (China Regions only), specify `ENCRYPT_DECRYPT` ,
    * `SIGN_VERIFY` , or `KEY_AGREEMENT` .
    *
@@ -316,8 +321,9 @@ public interface CfnKeyProps {
    * material, `ENABLED` updated to `true` . The KMS key can then be used for Cryptographic Operations.
    *
    *
-   * AWS CloudFormation doesn't support creating an `Origin` parameter of the `AWS_CLOUDHSM` or
+   * * AWS CloudFormation doesn't support creating an `Origin` parameter of the `AWS_CLOUDHSM` or
    * `EXTERNAL_KEY_STORE` values.
+   * * `EXTERNAL` is not supported for ML-DSA keys.
    *
    *
    * Default: - "AWS_KMS"
@@ -633,6 +639,10 @@ public interface CfnKeyProps {
      * * `ECC_NIST_P521` (secp521r1)
      * * Other asymmetric elliptic curve key pairs (signing and verification)
      * * `ECC_SECG_P256K1` (secp256k1), commonly used for cryptocurrencies.
+     * * Asymmetric ML-DSA key pairs (signing and verification)
+     * * `ML_DSA_44`
+     * * `ML_DSA_65`
+     * * `ML_DSA_87`
      * * SM2 key pairs (encryption and decryption *or* signing and verification *or* deriving shared
      * secrets)
      * * `SM2` (China Regions only)
@@ -660,7 +670,8 @@ public interface CfnKeyProps {
      * * For asymmetric KMS keys with RSA key pairs, specify `ENCRYPT_DECRYPT` or `SIGN_VERIFY` .
      * * For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify
      * `SIGN_VERIFY` or `KEY_AGREEMENT` .
-     * * For asymmetric KMS keys with `ECC_SECG_P256K1` key pairs specify `SIGN_VERIFY` .
+     * * For asymmetric KMS keys with `ECC_SECG_P256K1` key pairs, specify `SIGN_VERIFY` .
+     * * For asymmetric KMS keys with ML-DSA key pairs, specify `SIGN_VERIFY` .
      * * For asymmetric KMS keys with SM2 key pairs (China Regions only), specify `ENCRYPT_DECRYPT`
      * , `SIGN_VERIFY` , or `KEY_AGREEMENT` .
      */
@@ -762,8 +773,9 @@ public interface CfnKeyProps {
      * Operations.
      *
      *
-     * AWS CloudFormation doesn't support creating an `Origin` parameter of the `AWS_CLOUDHSM` or
+     * * AWS CloudFormation doesn't support creating an `Origin` parameter of the `AWS_CLOUDHSM` or
      * `EXTERNAL_KEY_STORE` values.
+     * * `EXTERNAL` is not supported for ML-DSA keys.
      */
     public fun origin(origin: String)
 
@@ -1095,6 +1107,10 @@ public interface CfnKeyProps {
      * * `ECC_NIST_P521` (secp521r1)
      * * Other asymmetric elliptic curve key pairs (signing and verification)
      * * `ECC_SECG_P256K1` (secp256k1), commonly used for cryptocurrencies.
+     * * Asymmetric ML-DSA key pairs (signing and verification)
+     * * `ML_DSA_44`
+     * * `ML_DSA_65`
+     * * `ML_DSA_87`
      * * SM2 key pairs (encryption and decryption *or* signing and verification *or* deriving shared
      * secrets)
      * * `SM2` (China Regions only)
@@ -1124,7 +1140,8 @@ public interface CfnKeyProps {
      * * For asymmetric KMS keys with RSA key pairs, specify `ENCRYPT_DECRYPT` or `SIGN_VERIFY` .
      * * For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify
      * `SIGN_VERIFY` or `KEY_AGREEMENT` .
-     * * For asymmetric KMS keys with `ECC_SECG_P256K1` key pairs specify `SIGN_VERIFY` .
+     * * For asymmetric KMS keys with `ECC_SECG_P256K1` key pairs, specify `SIGN_VERIFY` .
+     * * For asymmetric KMS keys with ML-DSA key pairs, specify `SIGN_VERIFY` .
      * * For asymmetric KMS keys with SM2 key pairs (China Regions only), specify `ENCRYPT_DECRYPT`
      * , `SIGN_VERIFY` , or `KEY_AGREEMENT` .
      */
@@ -1232,8 +1249,9 @@ public interface CfnKeyProps {
      * Operations.
      *
      *
-     * AWS CloudFormation doesn't support creating an `Origin` parameter of the `AWS_CLOUDHSM` or
+     * * AWS CloudFormation doesn't support creating an `Origin` parameter of the `AWS_CLOUDHSM` or
      * `EXTERNAL_KEY_STORE` values.
+     * * `EXTERNAL` is not supported for ML-DSA keys.
      */
     override fun origin(origin: String) {
       cdkBuilder.origin(origin)
@@ -1515,6 +1533,10 @@ public interface CfnKeyProps {
      * * `ECC_NIST_P521` (secp521r1)
      * * Other asymmetric elliptic curve key pairs (signing and verification)
      * * `ECC_SECG_P256K1` (secp256k1), commonly used for cryptocurrencies.
+     * * Asymmetric ML-DSA key pairs (signing and verification)
+     * * `ML_DSA_44`
+     * * `ML_DSA_65`
+     * * `ML_DSA_87`
      * * SM2 key pairs (encryption and decryption *or* signing and verification *or* deriving shared
      * secrets)
      * * `SM2` (China Regions only)
@@ -1547,7 +1569,8 @@ public interface CfnKeyProps {
      * * For asymmetric KMS keys with RSA key pairs, specify `ENCRYPT_DECRYPT` or `SIGN_VERIFY` .
      * * For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify
      * `SIGN_VERIFY` or `KEY_AGREEMENT` .
-     * * For asymmetric KMS keys with `ECC_SECG_P256K1` key pairs specify `SIGN_VERIFY` .
+     * * For asymmetric KMS keys with `ECC_SECG_P256K1` key pairs, specify `SIGN_VERIFY` .
+     * * For asymmetric KMS keys with ML-DSA key pairs, specify `SIGN_VERIFY` .
      * * For asymmetric KMS keys with SM2 key pairs (China Regions only), specify `ENCRYPT_DECRYPT`
      * , `SIGN_VERIFY` , or `KEY_AGREEMENT` .
      *
@@ -1619,8 +1642,9 @@ public interface CfnKeyProps {
      * Operations.
      *
      *
-     * AWS CloudFormation doesn't support creating an `Origin` parameter of the `AWS_CLOUDHSM` or
+     * * AWS CloudFormation doesn't support creating an `Origin` parameter of the `AWS_CLOUDHSM` or
      * `EXTERNAL_KEY_STORE` values.
+     * * `EXTERNAL` is not supported for ML-DSA keys.
      *
      *
      * Default: - "AWS_KMS"

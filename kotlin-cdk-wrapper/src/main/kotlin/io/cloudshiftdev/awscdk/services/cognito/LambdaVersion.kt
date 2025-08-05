@@ -7,6 +7,7 @@ public enum class LambdaVersion(
 ) {
   V1_0(software.amazon.awscdk.services.cognito.LambdaVersion.V1_0),
   V2_0(software.amazon.awscdk.services.cognito.LambdaVersion.V2_0),
+  V3_0(software.amazon.awscdk.services.cognito.LambdaVersion.V3_0),
   ;
 
   public companion object {
@@ -14,6 +15,7 @@ public enum class LambdaVersion(
         LambdaVersion = when (cdkObject) {
       software.amazon.awscdk.services.cognito.LambdaVersion.V1_0 -> LambdaVersion.V1_0
       software.amazon.awscdk.services.cognito.LambdaVersion.V2_0 -> LambdaVersion.V2_0
+      software.amazon.awscdk.services.cognito.LambdaVersion.V3_0 -> LambdaVersion.V3_0
     }
 
     internal fun unwrap(wrapped: LambdaVersion):

@@ -76,6 +76,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .instanceCount(123)
  * .instanceType("instanceType")
  * .multiAzWithStandbyEnabled(false)
+ * .nodeOptions(List.of(NodeOptionProperty.builder()
+ * .nodeConfig(NodeConfigProperty.builder()
+ * .count(123)
+ * .enabled(false)
+ * .type("type")
+ * .build())
+ * .nodeType("nodeType")
+ * .build()))
  * .warmCount(123)
  * .warmEnabled(false)
  * .warmType("warmType")
@@ -205,15 +213,15 @@ public open class CfnDomain(
   /**
    * Additional options to specify for the OpenSearch Service domain.
    */
-  public open fun advancedOptions(`value`: IResolvable) {
-    unwrap(this).setAdvancedOptions(`value`.let(IResolvable.Companion::unwrap))
+  public open fun advancedOptions(`value`: Map<String, String>) {
+    unwrap(this).setAdvancedOptions(`value`)
   }
 
   /**
    * Additional options to specify for the OpenSearch Service domain.
    */
-  public open fun advancedOptions(`value`: Map<String, String>) {
-    unwrap(this).setAdvancedOptions(`value`)
+  public open fun advancedOptions(`value`: IResolvable) {
+    unwrap(this).setAdvancedOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -287,14 +295,13 @@ public open class CfnDomain(
   public open fun attrId(): String = unwrap(this).getAttrId()
 
   /**
-   * The ARN for IAM Identity Center Application which will integrate with Amazon OpenSearch
-   * Service.
+   * The ARN of the IAM Identity Center application that integrates with Amazon OpenSearch Service.
    */
   public open fun attrIdentityCenterOptionsIdentityCenterApplicationArn(): String =
       unwrap(this).getAttrIdentityCenterOptionsIdentityCenterApplicationArn()
 
   /**
-   * The ID of IAM Identity Store.
+   * The identifier of the IAM Identity Store.
    */
   public open fun attrIdentityCenterOptionsIdentityStoreId(): String =
       unwrap(this).getAttrIdentityCenterOptionsIdentityStoreId()
@@ -534,26 +541,26 @@ public open class CfnDomain(
   }
 
   /**
-   * Container for IAM Identity Center Option control for the domain.
+   * Configuration options for controlling IAM Identity Center integration within a domain.
    */
   public open fun identityCenterOptions(): Any? = unwrap(this).getIdentityCenterOptions()
 
   /**
-   * Container for IAM Identity Center Option control for the domain.
+   * Configuration options for controlling IAM Identity Center integration within a domain.
    */
   public open fun identityCenterOptions(`value`: IResolvable) {
     unwrap(this).setIdentityCenterOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Container for IAM Identity Center Option control for the domain.
+   * Configuration options for controlling IAM Identity Center integration within a domain.
    */
   public open fun identityCenterOptions(`value`: IdentityCenterOptionsProperty) {
     unwrap(this).setIdentityCenterOptions(`value`.let(IdentityCenterOptionsProperty.Companion::unwrap))
   }
 
   /**
-   * Container for IAM Identity Center Option control for the domain.
+   * Configuration options for controlling IAM Identity Center integration within a domain.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("8845fc4355a2aaa4c86944fc30cca1a3079ffe8c8982873441653141d9bc882b")
@@ -815,7 +822,7 @@ public open class CfnDomain(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-advancedoptions)
      * @param advancedOptions Additional options to specify for the OpenSearch Service domain. 
      */
-    public fun advancedOptions(advancedOptions: IResolvable)
+    public fun advancedOptions(advancedOptions: Map<String, String>)
 
     /**
      * Additional options to specify for the OpenSearch Service domain.
@@ -827,7 +834,7 @@ public open class CfnDomain(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-advancedoptions)
      * @param advancedOptions Additional options to specify for the OpenSearch Service domain. 
      */
-    public fun advancedOptions(advancedOptions: Map<String, String>)
+    public fun advancedOptions(advancedOptions: IResolvable)
 
     /**
      * Specifies options for fine-grained access control and SAML authentication.
@@ -1126,29 +1133,29 @@ public open class CfnDomain(
     public fun engineVersion(engineVersion: String)
 
     /**
-     * Container for IAM Identity Center Option control for the domain.
+     * Configuration options for controlling IAM Identity Center integration within a domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-identitycenteroptions)
-     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
-     * 
+     * @param identityCenterOptions Configuration options for controlling IAM Identity Center
+     * integration within a domain. 
      */
     public fun identityCenterOptions(identityCenterOptions: IResolvable)
 
     /**
-     * Container for IAM Identity Center Option control for the domain.
+     * Configuration options for controlling IAM Identity Center integration within a domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-identitycenteroptions)
-     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
-     * 
+     * @param identityCenterOptions Configuration options for controlling IAM Identity Center
+     * integration within a domain. 
      */
     public fun identityCenterOptions(identityCenterOptions: IdentityCenterOptionsProperty)
 
     /**
-     * Container for IAM Identity Center Option control for the domain.
+     * Configuration options for controlling IAM Identity Center integration within a domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-identitycenteroptions)
-     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
-     * 
+     * @param identityCenterOptions Configuration options for controlling IAM Identity Center
+     * integration within a domain. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5c8fd82ae73b4adbcf008ebc9ea26847d3d005d517b1565cb4873713bbb68ebc")
@@ -1443,8 +1450,8 @@ public open class CfnDomain(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-advancedoptions)
      * @param advancedOptions Additional options to specify for the OpenSearch Service domain. 
      */
-    override fun advancedOptions(advancedOptions: IResolvable) {
-      cdkBuilder.advancedOptions(advancedOptions.let(IResolvable.Companion::unwrap))
+    override fun advancedOptions(advancedOptions: Map<String, String>) {
+      cdkBuilder.advancedOptions(advancedOptions)
     }
 
     /**
@@ -1457,8 +1464,8 @@ public open class CfnDomain(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-advancedoptions)
      * @param advancedOptions Additional options to specify for the OpenSearch Service domain. 
      */
-    override fun advancedOptions(advancedOptions: Map<String, String>) {
-      cdkBuilder.advancedOptions(advancedOptions)
+    override fun advancedOptions(advancedOptions: IResolvable) {
+      cdkBuilder.advancedOptions(advancedOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1795,33 +1802,33 @@ public open class CfnDomain(
     }
 
     /**
-     * Container for IAM Identity Center Option control for the domain.
+     * Configuration options for controlling IAM Identity Center integration within a domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-identitycenteroptions)
-     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
-     * 
+     * @param identityCenterOptions Configuration options for controlling IAM Identity Center
+     * integration within a domain. 
      */
     override fun identityCenterOptions(identityCenterOptions: IResolvable) {
       cdkBuilder.identityCenterOptions(identityCenterOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Container for IAM Identity Center Option control for the domain.
+     * Configuration options for controlling IAM Identity Center integration within a domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-identitycenteroptions)
-     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
-     * 
+     * @param identityCenterOptions Configuration options for controlling IAM Identity Center
+     * integration within a domain. 
      */
     override fun identityCenterOptions(identityCenterOptions: IdentityCenterOptionsProperty) {
       cdkBuilder.identityCenterOptions(identityCenterOptions.let(IdentityCenterOptionsProperty.Companion::unwrap))
     }
 
     /**
-     * Container for IAM Identity Center Option control for the domain.
+     * Configuration options for controlling IAM Identity Center integration within a domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-identitycenteroptions)
-     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
-     * 
+     * @param identityCenterOptions Configuration options for controlling IAM Identity Center
+     * integration within a domain. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5c8fd82ae73b4adbcf008ebc9ea26847d3d005d517b1565cb4873713bbb68ebc")
@@ -2636,6 +2643,14 @@ public open class CfnDomain(
    * .instanceCount(123)
    * .instanceType("instanceType")
    * .multiAzWithStandbyEnabled(false)
+   * .nodeOptions(List.of(NodeOptionProperty.builder()
+   * .nodeConfig(NodeConfigProperty.builder()
+   * .count(123)
+   * .enabled(false)
+   * .type("type")
+   * .build())
+   * .nodeType("nodeType")
+   * .build()))
    * .warmCount(123)
    * .warmEnabled(false)
    * .warmType("warmType")
@@ -2719,6 +2734,13 @@ public open class CfnDomain(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-clusterconfig.html#cfn-opensearchservice-domain-clusterconfig-multiazwithstandbyenabled)
      */
     public fun multiAzWithStandbyEnabled(): Any? = unwrap(this).getMultiAzWithStandbyEnabled()
+
+    /**
+     * List of node options for the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-clusterconfig.html#cfn-opensearchservice-domain-clusterconfig-nodeoptions)
+     */
+    public fun nodeOptions(): Any? = unwrap(this).getNodeOptions()
 
     /**
      * The number of warm nodes in the cluster.
@@ -2863,6 +2885,21 @@ public open class CfnDomain(
        * .
        */
       public fun multiAzWithStandbyEnabled(multiAzWithStandbyEnabled: IResolvable)
+
+      /**
+       * @param nodeOptions List of node options for the domain.
+       */
+      public fun nodeOptions(nodeOptions: IResolvable)
+
+      /**
+       * @param nodeOptions List of node options for the domain.
+       */
+      public fun nodeOptions(nodeOptions: List<Any>)
+
+      /**
+       * @param nodeOptions List of node options for the domain.
+       */
+      public fun nodeOptions(vararg nodeOptions: Any)
 
       /**
        * @param warmCount The number of warm nodes in the cluster.
@@ -3057,6 +3094,25 @@ public open class CfnDomain(
       }
 
       /**
+       * @param nodeOptions List of node options for the domain.
+       */
+      override fun nodeOptions(nodeOptions: IResolvable) {
+        cdkBuilder.nodeOptions(nodeOptions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param nodeOptions List of node options for the domain.
+       */
+      override fun nodeOptions(nodeOptions: List<Any>) {
+        cdkBuilder.nodeOptions(nodeOptions.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param nodeOptions List of node options for the domain.
+       */
+      override fun nodeOptions(vararg nodeOptions: Any): Unit = nodeOptions(nodeOptions.toList())
+
+      /**
        * @param warmCount The number of warm nodes in the cluster.
        */
       override fun warmCount(warmCount: Number) {
@@ -3225,6 +3281,13 @@ public open class CfnDomain(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-clusterconfig.html#cfn-opensearchservice-domain-clusterconfig-multiazwithstandbyenabled)
        */
       override fun multiAzWithStandbyEnabled(): Any? = unwrap(this).getMultiAzWithStandbyEnabled()
+
+      /**
+       * List of node options for the domain.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-clusterconfig.html#cfn-opensearchservice-domain-clusterconfig-nodeoptions)
+       */
+      override fun nodeOptions(): Any? = unwrap(this).getNodeOptions()
 
       /**
        * The number of warm nodes in the cluster.
@@ -4383,7 +4446,11 @@ public open class CfnDomain(
   }
 
   /**
-   * Container for IAM Identity Center Options settings.
+   * Settings container for integrating IAM Identity Center with OpenSearch UI applications, which
+   * enables enabling secure user authentication and access control across multiple data sources.
+   *
+   * This setup supports single sign-on (SSO) through IAM Identity Center, allowing centralized user
+   * management.
    *
    * Example:
    *
@@ -4406,14 +4473,14 @@ public open class CfnDomain(
    */
   public interface IdentityCenterOptionsProperty {
     /**
-     * True to enable IAM Identity Center for API access in Amazon OpenSearch Service.
+     * Indicates whether IAM Identity Center is enabled for the application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-enabledapiaccess)
      */
     public fun enabledApiAccess(): Any? = unwrap(this).getEnabledApiAccess()
 
     /**
-     * The ARN for IAM Identity Center Application which will integrate with Amazon OpenSearch
+     * The ARN of the IAM Identity Center application that integrates with Amazon OpenSearch
      * Service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-identitycenterapplicationarn)
@@ -4422,30 +4489,30 @@ public open class CfnDomain(
         unwrap(this).getIdentityCenterApplicationArn()
 
     /**
-     * The ARN for IAM Identity Center Instance.
+     * The Amazon Resource Name (ARN) of the IAM Identity Center instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-identitycenterinstancearn)
      */
     public fun identityCenterInstanceArn(): String? = unwrap(this).getIdentityCenterInstanceArn()
 
     /**
-     * The ID of IAM Identity Store.
+     * The identifier of the IAM Identity Store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-identitystoreid)
      */
     public fun identityStoreId(): String? = unwrap(this).getIdentityStoreId()
 
     /**
-     * Specify the attribute that contains the backend role (groupName, groupID) of IAM Identity
-     * Center.
+     * Specifies the attribute that contains the backend role identifier (such as group name or
+     * group ID) in IAM Identity Center.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-roleskey)
      */
     public fun rolesKey(): String? = unwrap(this).getRolesKey()
 
     /**
-     * Specify the attribute that contains the subject (username, userID, email) of IAM Identity
-     * Center.
+     * Specifies the attribute that contains the subject identifier (such as username, user ID, or
+     * email) in IAM Identity Center.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-subjectkey)
      */
@@ -4457,42 +4524,43 @@ public open class CfnDomain(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enabledApiAccess True to enable IAM Identity Center for API access in Amazon
-       * OpenSearch Service.
+       * @param enabledApiAccess Indicates whether IAM Identity Center is enabled for the
+       * application.
        */
       public fun enabledApiAccess(enabledApiAccess: Boolean)
 
       /**
-       * @param enabledApiAccess True to enable IAM Identity Center for API access in Amazon
-       * OpenSearch Service.
+       * @param enabledApiAccess Indicates whether IAM Identity Center is enabled for the
+       * application.
        */
       public fun enabledApiAccess(enabledApiAccess: IResolvable)
 
       /**
-       * @param identityCenterApplicationArn The ARN for IAM Identity Center Application which will
-       * integrate with Amazon OpenSearch Service.
+       * @param identityCenterApplicationArn The ARN of the IAM Identity Center application that
+       * integrates with Amazon OpenSearch Service.
        */
       public fun identityCenterApplicationArn(identityCenterApplicationArn: String)
 
       /**
-       * @param identityCenterInstanceArn The ARN for IAM Identity Center Instance.
+       * @param identityCenterInstanceArn The Amazon Resource Name (ARN) of the IAM Identity Center
+       * instance.
        */
       public fun identityCenterInstanceArn(identityCenterInstanceArn: String)
 
       /**
-       * @param identityStoreId The ID of IAM Identity Store.
+       * @param identityStoreId The identifier of the IAM Identity Store.
        */
       public fun identityStoreId(identityStoreId: String)
 
       /**
-       * @param rolesKey Specify the attribute that contains the backend role (groupName, groupID)
-       * of IAM Identity Center.
+       * @param rolesKey Specifies the attribute that contains the backend role identifier (such as
+       * group name or group ID) in IAM Identity Center.
        */
       public fun rolesKey(rolesKey: String)
 
       /**
-       * @param subjectKey Specify the attribute that contains the subject (username, userID, email)
-       * of IAM Identity Center.
+       * @param subjectKey Specifies the attribute that contains the subject identifier (such as
+       * username, user ID, or email) in IAM Identity Center.
        */
       public fun subjectKey(subjectKey: String)
     }
@@ -4504,54 +4572,55 @@ public open class CfnDomain(
           software.amazon.awscdk.services.opensearchservice.CfnDomain.IdentityCenterOptionsProperty.builder()
 
       /**
-       * @param enabledApiAccess True to enable IAM Identity Center for API access in Amazon
-       * OpenSearch Service.
+       * @param enabledApiAccess Indicates whether IAM Identity Center is enabled for the
+       * application.
        */
       override fun enabledApiAccess(enabledApiAccess: Boolean) {
         cdkBuilder.enabledApiAccess(enabledApiAccess)
       }
 
       /**
-       * @param enabledApiAccess True to enable IAM Identity Center for API access in Amazon
-       * OpenSearch Service.
+       * @param enabledApiAccess Indicates whether IAM Identity Center is enabled for the
+       * application.
        */
       override fun enabledApiAccess(enabledApiAccess: IResolvable) {
         cdkBuilder.enabledApiAccess(enabledApiAccess.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param identityCenterApplicationArn The ARN for IAM Identity Center Application which will
-       * integrate with Amazon OpenSearch Service.
+       * @param identityCenterApplicationArn The ARN of the IAM Identity Center application that
+       * integrates with Amazon OpenSearch Service.
        */
       override fun identityCenterApplicationArn(identityCenterApplicationArn: String) {
         cdkBuilder.identityCenterApplicationArn(identityCenterApplicationArn)
       }
 
       /**
-       * @param identityCenterInstanceArn The ARN for IAM Identity Center Instance.
+       * @param identityCenterInstanceArn The Amazon Resource Name (ARN) of the IAM Identity Center
+       * instance.
        */
       override fun identityCenterInstanceArn(identityCenterInstanceArn: String) {
         cdkBuilder.identityCenterInstanceArn(identityCenterInstanceArn)
       }
 
       /**
-       * @param identityStoreId The ID of IAM Identity Store.
+       * @param identityStoreId The identifier of the IAM Identity Store.
        */
       override fun identityStoreId(identityStoreId: String) {
         cdkBuilder.identityStoreId(identityStoreId)
       }
 
       /**
-       * @param rolesKey Specify the attribute that contains the backend role (groupName, groupID)
-       * of IAM Identity Center.
+       * @param rolesKey Specifies the attribute that contains the backend role identifier (such as
+       * group name or group ID) in IAM Identity Center.
        */
       override fun rolesKey(rolesKey: String) {
         cdkBuilder.rolesKey(rolesKey)
       }
 
       /**
-       * @param subjectKey Specify the attribute that contains the subject (username, userID, email)
-       * of IAM Identity Center.
+       * @param subjectKey Specifies the attribute that contains the subject identifier (such as
+       * username, user ID, or email) in IAM Identity Center.
        */
       override fun subjectKey(subjectKey: String) {
         cdkBuilder.subjectKey(subjectKey)
@@ -4567,14 +4636,14 @@ public open class CfnDomain(
     ) : CdkObject(cdkObject),
         IdentityCenterOptionsProperty {
       /**
-       * True to enable IAM Identity Center for API access in Amazon OpenSearch Service.
+       * Indicates whether IAM Identity Center is enabled for the application.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-enabledapiaccess)
        */
       override fun enabledApiAccess(): Any? = unwrap(this).getEnabledApiAccess()
 
       /**
-       * The ARN for IAM Identity Center Application which will integrate with Amazon OpenSearch
+       * The ARN of the IAM Identity Center application that integrates with Amazon OpenSearch
        * Service.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-identitycenterapplicationarn)
@@ -4583,7 +4652,7 @@ public open class CfnDomain(
           unwrap(this).getIdentityCenterApplicationArn()
 
       /**
-       * The ARN for IAM Identity Center Instance.
+       * The Amazon Resource Name (ARN) of the IAM Identity Center instance.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-identitycenterinstancearn)
        */
@@ -4591,23 +4660,23 @@ public open class CfnDomain(
           unwrap(this).getIdentityCenterInstanceArn()
 
       /**
-       * The ID of IAM Identity Store.
+       * The identifier of the IAM Identity Store.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-identitystoreid)
        */
       override fun identityStoreId(): String? = unwrap(this).getIdentityStoreId()
 
       /**
-       * Specify the attribute that contains the backend role (groupName, groupID) of IAM Identity
-       * Center.
+       * Specifies the attribute that contains the backend role identifier (such as group name or
+       * group ID) in IAM Identity Center.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-roleskey)
        */
       override fun rolesKey(): String? = unwrap(this).getRolesKey()
 
       /**
-       * Specify the attribute that contains the subject (username, userID, email) of IAM Identity
-       * Center.
+       * Specifies the attribute that contains the subject identifier (such as username, user ID, or
+       * email) in IAM Identity Center.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-subjectkey)
        */
@@ -5260,6 +5329,298 @@ public open class CfnDomain(
           software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty
+    }
+  }
+
+  /**
+   * Configuration options for defining the setup of any node type within the cluster.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
+   * NodeConfigProperty nodeConfigProperty = NodeConfigProperty.builder()
+   * .count(123)
+   * .enabled(false)
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodeconfig.html)
+   */
+  public interface NodeConfigProperty {
+    /**
+     * The number of nodes of a specific type within the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodeconfig.html#cfn-opensearchservice-domain-nodeconfig-count)
+     */
+    public fun count(): Number? = unwrap(this).getCount()
+
+    /**
+     * A boolean value indicating whether a specific node type is active or inactive.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodeconfig.html#cfn-opensearchservice-domain-nodeconfig-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * The instance type of a particular node within the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodeconfig.html#cfn-opensearchservice-domain-nodeconfig-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [NodeConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param count The number of nodes of a specific type within the cluster.
+       */
+      public fun count(count: Number)
+
+      /**
+       * @param enabled A boolean value indicating whether a specific node type is active or
+       * inactive.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled A boolean value indicating whether a specific node type is active or
+       * inactive.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param type The instance type of a particular node within the cluster.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeConfigProperty.Builder =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeConfigProperty.builder()
+
+      /**
+       * @param count The number of nodes of a specific type within the cluster.
+       */
+      override fun count(count: Number) {
+        cdkBuilder.count(count)
+      }
+
+      /**
+       * @param enabled A boolean value indicating whether a specific node type is active or
+       * inactive.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled A boolean value indicating whether a specific node type is active or
+       * inactive.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param type The instance type of a particular node within the cluster.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeConfigProperty,
+    ) : CdkObject(cdkObject),
+        NodeConfigProperty {
+      /**
+       * The number of nodes of a specific type within the cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodeconfig.html#cfn-opensearchservice-domain-nodeconfig-count)
+       */
+      override fun count(): Number? = unwrap(this).getCount()
+
+      /**
+       * A boolean value indicating whether a specific node type is active or inactive.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodeconfig.html#cfn-opensearchservice-domain-nodeconfig-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * The instance type of a particular node within the cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodeconfig.html#cfn-opensearchservice-domain-nodeconfig-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NodeConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeConfigProperty):
+          NodeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? NodeConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NodeConfigProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeConfigProperty
+    }
+  }
+
+  /**
+   * Configuration settings for defining the node type within a cluster.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
+   * NodeOptionProperty nodeOptionProperty = NodeOptionProperty.builder()
+   * .nodeConfig(NodeConfigProperty.builder()
+   * .count(123)
+   * .enabled(false)
+   * .type("type")
+   * .build())
+   * .nodeType("nodeType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodeoption.html)
+   */
+  public interface NodeOptionProperty {
+    /**
+     * Configuration options for defining the setup of any node type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodeoption.html#cfn-opensearchservice-domain-nodeoption-nodeconfig)
+     */
+    public fun nodeConfig(): Any? = unwrap(this).getNodeConfig()
+
+    /**
+     * Defines the type of node, such as coordinating nodes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodeoption.html#cfn-opensearchservice-domain-nodeoption-nodetype)
+     */
+    public fun nodeType(): String? = unwrap(this).getNodeType()
+
+    /**
+     * A builder for [NodeOptionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param nodeConfig Configuration options for defining the setup of any node type.
+       */
+      public fun nodeConfig(nodeConfig: IResolvable)
+
+      /**
+       * @param nodeConfig Configuration options for defining the setup of any node type.
+       */
+      public fun nodeConfig(nodeConfig: NodeConfigProperty)
+
+      /**
+       * @param nodeConfig Configuration options for defining the setup of any node type.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c70a345142a08a1eb2934bdcf087d396dc8a89e7d381626dc4049410bdf153d3")
+      public fun nodeConfig(nodeConfig: NodeConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param nodeType Defines the type of node, such as coordinating nodes.
+       */
+      public fun nodeType(nodeType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeOptionProperty.Builder =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeOptionProperty.builder()
+
+      /**
+       * @param nodeConfig Configuration options for defining the setup of any node type.
+       */
+      override fun nodeConfig(nodeConfig: IResolvable) {
+        cdkBuilder.nodeConfig(nodeConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param nodeConfig Configuration options for defining the setup of any node type.
+       */
+      override fun nodeConfig(nodeConfig: NodeConfigProperty) {
+        cdkBuilder.nodeConfig(nodeConfig.let(NodeConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param nodeConfig Configuration options for defining the setup of any node type.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c70a345142a08a1eb2934bdcf087d396dc8a89e7d381626dc4049410bdf153d3")
+      override fun nodeConfig(nodeConfig: NodeConfigProperty.Builder.() -> Unit): Unit =
+          nodeConfig(NodeConfigProperty(nodeConfig))
+
+      /**
+       * @param nodeType Defines the type of node, such as coordinating nodes.
+       */
+      override fun nodeType(nodeType: String) {
+        cdkBuilder.nodeType(nodeType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeOptionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeOptionProperty,
+    ) : CdkObject(cdkObject),
+        NodeOptionProperty {
+      /**
+       * Configuration options for defining the setup of any node type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodeoption.html#cfn-opensearchservice-domain-nodeoption-nodeconfig)
+       */
+      override fun nodeConfig(): Any? = unwrap(this).getNodeConfig()
+
+      /**
+       * Defines the type of node, such as coordinating nodes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodeoption.html#cfn-opensearchservice-domain-nodeoption-nodetype)
+       */
+      override fun nodeType(): String? = unwrap(this).getNodeType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NodeOptionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeOptionProperty):
+          NodeOptionProperty = CdkObjectWrappers.wrap(cdkObject) as? NodeOptionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NodeOptionProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeOptionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeOptionProperty
     }
   }
 

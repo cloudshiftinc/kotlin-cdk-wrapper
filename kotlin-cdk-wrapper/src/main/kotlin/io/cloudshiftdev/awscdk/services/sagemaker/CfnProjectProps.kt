@@ -25,16 +25,28 @@ import kotlin.jvm.JvmName
  * Object serviceCatalogProvisioningDetails;
  * CfnProjectProps cfnProjectProps = CfnProjectProps.builder()
  * .projectName("projectName")
- * .serviceCatalogProvisioningDetails(serviceCatalogProvisioningDetails)
  * // the properties below are optional
  * .projectDescription("projectDescription")
  * .serviceCatalogProvisionedProductDetails(ServiceCatalogProvisionedProductDetailsProperty.builder()
  * .provisionedProductId("provisionedProductId")
  * .provisionedProductStatusMessage("provisionedProductStatusMessage")
  * .build())
+ * .serviceCatalogProvisioningDetails(serviceCatalogProvisioningDetails)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
+ * .build()))
+ * .templateProviderDetails(List.of(TemplateProviderDetailProperty.builder()
+ * .cfnTemplateProviderDetail(CfnTemplateProviderDetailProperty.builder()
+ * .templateName("templateName")
+ * .templateUrl("templateUrl")
+ * // the properties below are optional
+ * .parameters(List.of(CfnStackParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .roleArn("roleArn")
+ * .build())
  * .build()))
  * .build();
  * ```
@@ -75,7 +87,8 @@ public interface CfnProjectProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-servicecatalogprovisioningdetails)
    */
-  public fun serviceCatalogProvisioningDetails(): Any
+  public fun serviceCatalogProvisioningDetails(): Any? =
+      unwrap(this).getServiceCatalogProvisioningDetails()
 
   /**
    * A list of key-value pairs to apply to this resource.
@@ -89,6 +102,13 @@ public interface CfnProjectProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-tags)
    */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * An array of template providers associated with the project.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-templateproviderdetails)
+   */
+  public fun templateProviderDetails(): Any? = unwrap(this).getTemplateProviderDetails()
 
   /**
    * A builder for [CfnProjectProps]
@@ -136,7 +156,7 @@ public interface CfnProjectProps {
 
     /**
      * @param serviceCatalogProvisioningDetails The product ID and provisioning artifact ID to
-     * provision a service catalog. 
+     * provision a service catalog.
      * For information, see [What is AWS Service
      * Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html) .
      */
@@ -161,6 +181,21 @@ public interface CfnProjectProps {
      * in the *AWS Billing and Cost Management User Guide* .
      */
     public fun tags(vararg tags: CfnTag)
+
+    /**
+     * @param templateProviderDetails An array of template providers associated with the project.
+     */
+    public fun templateProviderDetails(templateProviderDetails: IResolvable)
+
+    /**
+     * @param templateProviderDetails An array of template providers associated with the project.
+     */
+    public fun templateProviderDetails(templateProviderDetails: List<Any>)
+
+    /**
+     * @param templateProviderDetails An array of template providers associated with the project.
+     */
+    public fun templateProviderDetails(vararg templateProviderDetails: Any)
   }
 
   private class BuilderImpl : Builder {
@@ -218,7 +253,7 @@ public interface CfnProjectProps {
 
     /**
      * @param serviceCatalogProvisioningDetails The product ID and provisioning artifact ID to
-     * provision a service catalog. 
+     * provision a service catalog.
      * For information, see [What is AWS Service
      * Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html) .
      */
@@ -247,6 +282,26 @@ public interface CfnProjectProps {
      * in the *AWS Billing and Cost Management User Guide* .
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    /**
+     * @param templateProviderDetails An array of template providers associated with the project.
+     */
+    override fun templateProviderDetails(templateProviderDetails: IResolvable) {
+      cdkBuilder.templateProviderDetails(templateProviderDetails.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param templateProviderDetails An array of template providers associated with the project.
+     */
+    override fun templateProviderDetails(templateProviderDetails: List<Any>) {
+      cdkBuilder.templateProviderDetails(templateProviderDetails.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param templateProviderDetails An array of template providers associated with the project.
+     */
+    override fun templateProviderDetails(vararg templateProviderDetails: Any): Unit =
+        templateProviderDetails(templateProviderDetails.toList())
 
     public fun build(): software.amazon.awscdk.services.sagemaker.CfnProjectProps =
         cdkBuilder.build()
@@ -289,7 +344,7 @@ public interface CfnProjectProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-servicecatalogprovisioningdetails)
      */
-    override fun serviceCatalogProvisioningDetails(): Any =
+    override fun serviceCatalogProvisioningDetails(): Any? =
         unwrap(this).getServiceCatalogProvisioningDetails()
 
     /**
@@ -304,6 +359,13 @@ public interface CfnProjectProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-tags)
      */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * An array of template providers associated with the project.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-templateproviderdetails)
+     */
+    override fun templateProviderDetails(): Any? = unwrap(this).getTemplateProviderDetails()
   }
 
   public companion object {

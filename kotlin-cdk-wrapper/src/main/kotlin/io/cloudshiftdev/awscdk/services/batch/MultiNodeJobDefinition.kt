@@ -140,7 +140,7 @@ public open class MultiNodeJobDefinition(
   public override fun parameters(): Map<String, Any> = unwrap(this).getParameters() ?: emptyMap()
 
   /**
-   * Whether to propogate tags from the JobDefinition to the ECS task that Batch spawns.
+   * Whether to propagate tags from the JobDefinition to the ECS task that Batch spawns.
    */
   public open fun propagateTags(): Boolean? = unwrap(this).getPropagateTags()
 
@@ -241,11 +241,11 @@ public open class MultiNodeJobDefinition(
     public fun parameters(parameters: Map<String, Any>)
 
     /**
-     * Whether to propogate tags from the JobDefinition to the ECS task that Batch spawns.
+     * Whether to propagate tags from the JobDefinition to the ECS task that Batch spawns.
      *
      * Default: false
      *
-     * @param propagateTags Whether to propogate tags from the JobDefinition to the ECS task that
+     * @param propagateTags Whether to propagate tags from the JobDefinition to the ECS task that
      * Batch spawns. 
      */
     public fun propagateTags(propagateTags: Boolean)
@@ -385,11 +385,11 @@ public open class MultiNodeJobDefinition(
     }
 
     /**
-     * Whether to propogate tags from the JobDefinition to the ECS task that Batch spawns.
+     * Whether to propagate tags from the JobDefinition to the ECS task that Batch spawns.
      *
      * Default: false
      *
-     * @param propagateTags Whether to propogate tags from the JobDefinition to the ECS task that
+     * @param propagateTags Whether to propagate tags from the JobDefinition to the ECS task that
      * Batch spawns. 
      */
     override fun propagateTags(propagateTags: Boolean) {
@@ -464,6 +464,9 @@ public open class MultiNodeJobDefinition(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.batch.MultiNodeJobDefinition.PROPERTY_INJECTION_ID
+
     public fun fromJobDefinitionArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

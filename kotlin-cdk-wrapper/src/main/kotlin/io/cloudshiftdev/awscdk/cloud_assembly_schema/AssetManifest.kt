@@ -62,6 +62,8 @@ import kotlin.collections.Map
  * .networkMode("networkMode")
  * .platform("platform")
  * .build())
+ * // the properties below are optional
+ * .displayName("displayName")
  * .build()))
  * .files(Map.of(
  * "filesKey", FileAsset.builder()
@@ -81,6 +83,8 @@ import kotlin.collections.Map
  * .packaging(FileAssetPackaging.FILE)
  * .path("path")
  * .build())
+ * // the properties below are optional
+ * .displayName("displayName")
  * .build()))
  * .build();
  * ```

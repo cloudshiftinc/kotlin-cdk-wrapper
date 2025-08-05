@@ -459,8 +459,6 @@ public interface CfnTopicRuleProps {
   /**
    * The name of the rule.
    *
-   * *Pattern* : `^[a-zA-Z0-9_]+$`
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html#cfn-iot-topicrule-rulename)
    */
   public fun ruleName(): String? = unwrap(this).getRuleName()
@@ -494,7 +492,6 @@ public interface CfnTopicRuleProps {
   public interface Builder {
     /**
      * @param ruleName The name of the rule.
-     * *Pattern* : `^[a-zA-Z0-9_]+$`
      */
     public fun ruleName(ruleName: String)
 
@@ -545,7 +542,6 @@ public interface CfnTopicRuleProps {
 
     /**
      * @param ruleName The name of the rule.
-     * *Pattern* : `^[a-zA-Z0-9_]+$`
      */
     override fun ruleName(ruleName: String) {
       cdkBuilder.ruleName(ruleName)
@@ -607,8 +603,6 @@ public interface CfnTopicRuleProps {
       CfnTopicRuleProps {
     /**
      * The name of the rule.
-     *
-     * *Pattern* : `^[a-zA-Z0-9_]+$`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html#cfn-iot-topicrule-rulename)
      */

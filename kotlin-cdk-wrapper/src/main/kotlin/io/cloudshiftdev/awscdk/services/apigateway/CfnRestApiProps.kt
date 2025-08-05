@@ -41,6 +41,7 @@ import kotlin.jvm.JvmName
  * .description("description")
  * .disableExecuteApiEndpoint(false)
  * .endpointConfiguration(EndpointConfigurationProperty.builder()
+ * .ipAddressType("ipAddressType")
  * .types(List.of("types"))
  * .vpcEndpointIds(List.of("vpcEndpointIds"))
  * .build())
@@ -123,7 +124,7 @@ public interface CfnRestApiProps {
   public fun disableExecuteApiEndpoint(): Any? = unwrap(this).getDisableExecuteApiEndpoint()
 
   /**
-   * A list of the endpoint types of the API.
+   * A list of the endpoint types and IP address types of the API.
    *
    * Use this property when creating an API. When importing an existing API, specify the endpoint
    * configuration types using the `Parameters` property.
@@ -298,14 +299,14 @@ public interface CfnRestApiProps {
     public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable)
 
     /**
-     * @param endpointConfiguration A list of the endpoint types of the API.
+     * @param endpointConfiguration A list of the endpoint types and IP address types of the API.
      * Use this property when creating an API. When importing an existing API, specify the endpoint
      * configuration types using the `Parameters` property.
      */
     public fun endpointConfiguration(endpointConfiguration: IResolvable)
 
     /**
-     * @param endpointConfiguration A list of the endpoint types of the API.
+     * @param endpointConfiguration A list of the endpoint types and IP address types of the API.
      * Use this property when creating an API. When importing an existing API, specify the endpoint
      * configuration types using the `Parameters` property.
      */
@@ -313,7 +314,7 @@ public interface CfnRestApiProps {
         fun endpointConfiguration(endpointConfiguration: CfnRestApi.EndpointConfigurationProperty)
 
     /**
-     * @param endpointConfiguration A list of the endpoint types of the API.
+     * @param endpointConfiguration A list of the endpoint types and IP address types of the API.
      * Use this property when creating an API. When importing an existing API, specify the endpoint
      * configuration types using the `Parameters` property.
      */
@@ -380,7 +381,7 @@ public interface CfnRestApiProps {
      * import-rest-api --parameters ignore=documentation --body
      * 'file:///path/to/imported-api-body.json'` .
      */
-    public fun parameters(parameters: IResolvable)
+    public fun parameters(parameters: Map<String, String>)
 
     /**
      * @param parameters Custom header parameters as part of the request.
@@ -389,7 +390,7 @@ public interface CfnRestApiProps {
      * import-rest-api --parameters ignore=documentation --body
      * 'file:///path/to/imported-api-body.json'` .
      */
-    public fun parameters(parameters: Map<String, String>)
+    public fun parameters(parameters: IResolvable)
 
     /**
      * @param policy A policy document that contains the permissions for the `RestApi` resource.
@@ -512,7 +513,7 @@ public interface CfnRestApiProps {
     }
 
     /**
-     * @param endpointConfiguration A list of the endpoint types of the API.
+     * @param endpointConfiguration A list of the endpoint types and IP address types of the API.
      * Use this property when creating an API. When importing an existing API, specify the endpoint
      * configuration types using the `Parameters` property.
      */
@@ -521,7 +522,7 @@ public interface CfnRestApiProps {
     }
 
     /**
-     * @param endpointConfiguration A list of the endpoint types of the API.
+     * @param endpointConfiguration A list of the endpoint types and IP address types of the API.
      * Use this property when creating an API. When importing an existing API, specify the endpoint
      * configuration types using the `Parameters` property.
      */
@@ -531,7 +532,7 @@ public interface CfnRestApiProps {
     }
 
     /**
-     * @param endpointConfiguration A list of the endpoint types of the API.
+     * @param endpointConfiguration A list of the endpoint types and IP address types of the API.
      * Use this property when creating an API. When importing an existing API, specify the endpoint
      * configuration types using the `Parameters` property.
      */
@@ -610,8 +611,8 @@ public interface CfnRestApiProps {
      * import-rest-api --parameters ignore=documentation --body
      * 'file:///path/to/imported-api-body.json'` .
      */
-    override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+    override fun parameters(parameters: Map<String, String>) {
+      cdkBuilder.parameters(parameters)
     }
 
     /**
@@ -621,8 +622,8 @@ public interface CfnRestApiProps {
      * import-rest-api --parameters ignore=documentation --body
      * 'file:///path/to/imported-api-body.json'` .
      */
-    override fun parameters(parameters: Map<String, String>) {
-      cdkBuilder.parameters(parameters)
+    override fun parameters(parameters: IResolvable) {
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -721,7 +722,7 @@ public interface CfnRestApiProps {
     override fun disableExecuteApiEndpoint(): Any? = unwrap(this).getDisableExecuteApiEndpoint()
 
     /**
-     * A list of the endpoint types of the API.
+     * A list of the endpoint types and IP address types of the API.
      *
      * Use this property when creating an API. When importing an existing API, specify the endpoint
      * configuration types using the `Parameters` property.

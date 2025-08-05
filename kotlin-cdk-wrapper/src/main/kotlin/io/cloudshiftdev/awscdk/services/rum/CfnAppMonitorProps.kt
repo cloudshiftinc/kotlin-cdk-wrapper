@@ -24,7 +24,6 @@ import kotlin.jvm.JvmName
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.rum.*;
  * CfnAppMonitorProps cfnAppMonitorProps = CfnAppMonitorProps.builder()
- * .domain("domain")
  * .name("name")
  * // the properties below are optional
  * .appMonitorConfiguration(AppMonitorConfigurationProperty.builder()
@@ -58,6 +57,20 @@ import kotlin.jvm.JvmName
  * .status("status")
  * .build())
  * .cwLogEnabled(false)
+ * .deobfuscationConfiguration(DeobfuscationConfigurationProperty.builder()
+ * .javaScriptSourceMaps(JavaScriptSourceMapsProperty.builder()
+ * .status("status")
+ * // the properties below are optional
+ * .s3Uri("s3Uri")
+ * .build())
+ * .build())
+ * .domain("domain")
+ * .domainList(List.of("domainList"))
+ * .resourcePolicy(ResourcePolicyProperty.builder()
+ * .policyDocument("policyDocument")
+ * // the properties below are optional
+ * .policyRevisionId("policyRevisionId")
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -108,13 +121,32 @@ public interface CfnAppMonitorProps {
   public fun cwLogEnabled(): Any? = unwrap(this).getCwLogEnabled()
 
   /**
+   * A structure that contains the configuration for how an app monitor can deobfuscate stack
+   * traces.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-deobfuscationconfiguration)
+   */
+  public fun deobfuscationConfiguration(): Any? = unwrap(this).getDeobfuscationConfiguration()
+
+  /**
    * The top-level internet domain name for which your application has administrative authority.
    *
-   *
+   * This parameter or the `DomainList` parameter is required.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-domain)
    */
-  public fun domain(): String
+  public fun domain(): String? = unwrap(this).getDomain()
+
+  /**
+   * List the domain names for which your application has administrative authority. This parameter
+   * or the `Domain` parameter is required.
+   *
+   * You can have a minimum of 1 and a maximum of 5 `Domain` under `DomainList` . Each `Domain` must
+   * be a minimum length of 1 and a maximum of 253 characters.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-domainlist)
+   */
+  public fun domainList(): List<String> = unwrap(this).getDomainList() ?: emptyList()
 
   /**
    * A name for the app monitor.
@@ -124,6 +156,20 @@ public interface CfnAppMonitorProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-name)
    */
   public fun name(): String
+
+  /**
+   * Use this structure to assign a resource-based policy to a CloudWatch RUM app monitor to control
+   * access to it.
+   *
+   * Each app monitor can have one resource-based policy. The maximum size of the policy is 4 KB. To
+   * learn more about using resource policies with RUM, see [Using resource-based policies with
+   * CloudWatch
+   * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-resourcepolicy)
+   */
+  public fun resourcePolicy(): Any? = unwrap(this).getResourcePolicy()
 
   /**
    * Assigns one or more tags (key-value pairs) to the app monitor.
@@ -244,15 +290,90 @@ public interface CfnAppMonitorProps {
     public fun cwLogEnabled(cwLogEnabled: IResolvable)
 
     /**
+     * @param deobfuscationConfiguration A structure that contains the configuration for how an app
+     * monitor can deobfuscate stack traces.
+     */
+    public fun deobfuscationConfiguration(deobfuscationConfiguration: IResolvable)
+
+    /**
+     * @param deobfuscationConfiguration A structure that contains the configuration for how an app
+     * monitor can deobfuscate stack traces.
+     */
+    public
+        fun deobfuscationConfiguration(deobfuscationConfiguration: CfnAppMonitor.DeobfuscationConfigurationProperty)
+
+    /**
+     * @param deobfuscationConfiguration A structure that contains the configuration for how an app
+     * monitor can deobfuscate stack traces.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0e9db24396c92a8e2de16f78ec9240a236758309c17af9b4b4b306c6397dbc4f")
+    public
+        fun deobfuscationConfiguration(deobfuscationConfiguration: CfnAppMonitor.DeobfuscationConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * @param domain The top-level internet domain name for which your application has
-     * administrative authority. 
+     * administrative authority.
+     * This parameter or the `DomainList` parameter is required.
      */
     public fun domain(domain: String)
+
+    /**
+     * @param domainList List the domain names for which your application has administrative
+     * authority. This parameter or the `Domain` parameter is required.
+     * You can have a minimum of 1 and a maximum of 5 `Domain` under `DomainList` . Each `Domain`
+     * must be a minimum length of 1 and a maximum of 253 characters.
+     */
+    public fun domainList(domainList: List<String>)
+
+    /**
+     * @param domainList List the domain names for which your application has administrative
+     * authority. This parameter or the `Domain` parameter is required.
+     * You can have a minimum of 1 and a maximum of 5 `Domain` under `DomainList` . Each `Domain`
+     * must be a minimum length of 1 and a maximum of 253 characters.
+     */
+    public fun domainList(vararg domainList: String)
 
     /**
      * @param name A name for the app monitor. 
      */
     public fun name(name: String)
+
+    /**
+     * @param resourcePolicy Use this structure to assign a resource-based policy to a CloudWatch
+     * RUM app monitor to control access to it.
+     * Each app monitor can have one resource-based policy. The maximum size of the policy is 4 KB.
+     * To learn more about using resource policies with RUM, see [Using resource-based policies with
+     * CloudWatch
+     * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+     * .
+     */
+    public fun resourcePolicy(resourcePolicy: IResolvable)
+
+    /**
+     * @param resourcePolicy Use this structure to assign a resource-based policy to a CloudWatch
+     * RUM app monitor to control access to it.
+     * Each app monitor can have one resource-based policy. The maximum size of the policy is 4 KB.
+     * To learn more about using resource policies with RUM, see [Using resource-based policies with
+     * CloudWatch
+     * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+     * .
+     */
+    public fun resourcePolicy(resourcePolicy: CfnAppMonitor.ResourcePolicyProperty)
+
+    /**
+     * @param resourcePolicy Use this structure to assign a resource-based policy to a CloudWatch
+     * RUM app monitor to control access to it.
+     * Each app monitor can have one resource-based policy. The maximum size of the policy is 4 KB.
+     * To learn more about using resource policies with RUM, see [Using resource-based policies with
+     * CloudWatch
+     * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+     * .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("194ed93bed9eb40e7dc836f5b7c952281f75f91e3f6d31206fd2d0f4b4b574cc")
+    public
+        fun resourcePolicy(resourcePolicy: CfnAppMonitor.ResourcePolicyProperty.Builder.() -> Unit)
 
     /**
      * @param tags Assigns one or more tags (key-value pairs) to the app monitor.
@@ -401,12 +522,59 @@ public interface CfnAppMonitorProps {
     }
 
     /**
+     * @param deobfuscationConfiguration A structure that contains the configuration for how an app
+     * monitor can deobfuscate stack traces.
+     */
+    override fun deobfuscationConfiguration(deobfuscationConfiguration: IResolvable) {
+      cdkBuilder.deobfuscationConfiguration(deobfuscationConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param deobfuscationConfiguration A structure that contains the configuration for how an app
+     * monitor can deobfuscate stack traces.
+     */
+    override
+        fun deobfuscationConfiguration(deobfuscationConfiguration: CfnAppMonitor.DeobfuscationConfigurationProperty) {
+      cdkBuilder.deobfuscationConfiguration(deobfuscationConfiguration.let(CfnAppMonitor.DeobfuscationConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param deobfuscationConfiguration A structure that contains the configuration for how an app
+     * monitor can deobfuscate stack traces.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0e9db24396c92a8e2de16f78ec9240a236758309c17af9b4b4b306c6397dbc4f")
+    override
+        fun deobfuscationConfiguration(deobfuscationConfiguration: CfnAppMonitor.DeobfuscationConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        deobfuscationConfiguration(CfnAppMonitor.DeobfuscationConfigurationProperty(deobfuscationConfiguration))
+
+    /**
      * @param domain The top-level internet domain name for which your application has
-     * administrative authority. 
+     * administrative authority.
+     * This parameter or the `DomainList` parameter is required.
      */
     override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
+
+    /**
+     * @param domainList List the domain names for which your application has administrative
+     * authority. This parameter or the `Domain` parameter is required.
+     * You can have a minimum of 1 and a maximum of 5 `Domain` under `DomainList` . Each `Domain`
+     * must be a minimum length of 1 and a maximum of 253 characters.
+     */
+    override fun domainList(domainList: List<String>) {
+      cdkBuilder.domainList(domainList)
+    }
+
+    /**
+     * @param domainList List the domain names for which your application has administrative
+     * authority. This parameter or the `Domain` parameter is required.
+     * You can have a minimum of 1 and a maximum of 5 `Domain` under `DomainList` . Each `Domain`
+     * must be a minimum length of 1 and a maximum of 253 characters.
+     */
+    override fun domainList(vararg domainList: String): Unit = domainList(domainList.toList())
 
     /**
      * @param name A name for the app monitor. 
@@ -414,6 +582,47 @@ public interface CfnAppMonitorProps {
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
+
+    /**
+     * @param resourcePolicy Use this structure to assign a resource-based policy to a CloudWatch
+     * RUM app monitor to control access to it.
+     * Each app monitor can have one resource-based policy. The maximum size of the policy is 4 KB.
+     * To learn more about using resource policies with RUM, see [Using resource-based policies with
+     * CloudWatch
+     * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+     * .
+     */
+    override fun resourcePolicy(resourcePolicy: IResolvable) {
+      cdkBuilder.resourcePolicy(resourcePolicy.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param resourcePolicy Use this structure to assign a resource-based policy to a CloudWatch
+     * RUM app monitor to control access to it.
+     * Each app monitor can have one resource-based policy. The maximum size of the policy is 4 KB.
+     * To learn more about using resource policies with RUM, see [Using resource-based policies with
+     * CloudWatch
+     * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+     * .
+     */
+    override fun resourcePolicy(resourcePolicy: CfnAppMonitor.ResourcePolicyProperty) {
+      cdkBuilder.resourcePolicy(resourcePolicy.let(CfnAppMonitor.ResourcePolicyProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param resourcePolicy Use this structure to assign a resource-based policy to a CloudWatch
+     * RUM app monitor to control access to it.
+     * Each app monitor can have one resource-based policy. The maximum size of the policy is 4 KB.
+     * To learn more about using resource policies with RUM, see [Using resource-based policies with
+     * CloudWatch
+     * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+     * .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("194ed93bed9eb40e7dc836f5b7c952281f75f91e3f6d31206fd2d0f4b4b574cc")
+    override
+        fun resourcePolicy(resourcePolicy: CfnAppMonitor.ResourcePolicyProperty.Builder.() -> Unit):
+        Unit = resourcePolicy(CfnAppMonitor.ResourcePolicyProperty(resourcePolicy))
 
     /**
      * @param tags Assigns one or more tags (key-value pairs) to the app monitor.
@@ -496,13 +705,32 @@ public interface CfnAppMonitorProps {
     override fun cwLogEnabled(): Any? = unwrap(this).getCwLogEnabled()
 
     /**
+     * A structure that contains the configuration for how an app monitor can deobfuscate stack
+     * traces.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-deobfuscationconfiguration)
+     */
+    override fun deobfuscationConfiguration(): Any? = unwrap(this).getDeobfuscationConfiguration()
+
+    /**
      * The top-level internet domain name for which your application has administrative authority.
      *
-     *
+     * This parameter or the `DomainList` parameter is required.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-domain)
      */
-    override fun domain(): String = unwrap(this).getDomain()
+    override fun domain(): String? = unwrap(this).getDomain()
+
+    /**
+     * List the domain names for which your application has administrative authority. This parameter
+     * or the `Domain` parameter is required.
+     *
+     * You can have a minimum of 1 and a maximum of 5 `Domain` under `DomainList` . Each `Domain`
+     * must be a minimum length of 1 and a maximum of 253 characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-domainlist)
+     */
+    override fun domainList(): List<String> = unwrap(this).getDomainList() ?: emptyList()
 
     /**
      * A name for the app monitor.
@@ -512,6 +740,20 @@ public interface CfnAppMonitorProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-name)
      */
     override fun name(): String = unwrap(this).getName()
+
+    /**
+     * Use this structure to assign a resource-based policy to a CloudWatch RUM app monitor to
+     * control access to it.
+     *
+     * Each app monitor can have one resource-based policy. The maximum size of the policy is 4 KB.
+     * To learn more about using resource policies with RUM, see [Using resource-based policies with
+     * CloudWatch
+     * RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-resource-policies.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-resourcepolicy)
+     */
+    override fun resourcePolicy(): Any? = unwrap(this).getResourcePolicy()
 
     /**
      * Assigns one or more tags (key-value pairs) to the app monitor.

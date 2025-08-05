@@ -55,6 +55,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .dynamoDbTargets(List.of(DynamoDBTargetProperty.builder()
  * .path("path")
  * .build()))
+ * .hudiTargets(List.of(HudiTargetProperty.builder()
+ * .connectionName("connectionName")
+ * .exclusions(List.of("exclusions"))
+ * .maximumTraversalDepth(123)
+ * .paths(List.of("paths"))
+ * .build()))
  * .icebergTargets(List.of(IcebergTargetProperty.builder()
  * .connectionName("connectionName")
  * .exclusions(List.of("exclusions"))
@@ -1512,6 +1518,247 @@ public open class CfnCrawler(
   }
 
   /**
+   * Specifies an Apache Hudi data source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * HudiTargetProperty hudiTargetProperty = HudiTargetProperty.builder()
+   * .connectionName("connectionName")
+   * .exclusions(List.of("exclusions"))
+   * .maximumTraversalDepth(123)
+   * .paths(List.of("paths"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-huditarget.html)
+   */
+  public interface HudiTargetProperty {
+    /**
+     * The name of the connection to use to connect to the Hudi target.
+     *
+     * If your Hudi files are stored in buckets that require VPC authorization, you can set their
+     * connection properties here.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-huditarget.html#cfn-glue-crawler-huditarget-connectionname)
+     */
+    public fun connectionName(): String? = unwrap(this).getConnectionName()
+
+    /**
+     * A list of glob patterns used to exclude from the crawl.
+     *
+     * For more information, see [Catalog Tables with a
+     * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-huditarget.html#cfn-glue-crawler-huditarget-exclusions)
+     */
+    public fun exclusions(): List<String> = unwrap(this).getExclusions() ?: emptyList()
+
+    /**
+     * The maximum depth of Amazon S3 paths that the crawler can traverse to discover the Hudi
+     * metadata folder in your Amazon S3 path.
+     *
+     * Used to limit the crawler run time.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-huditarget.html#cfn-glue-crawler-huditarget-maximumtraversaldepth)
+     */
+    public fun maximumTraversalDepth(): Number? = unwrap(this).getMaximumTraversalDepth()
+
+    /**
+     * An array of Amazon S3 location strings for Hudi, each indicating the root folder with which
+     * the metadata files for a Hudi table resides.
+     *
+     * The Hudi folder may be located in a child folder of the root folder.
+     *
+     * The crawler will scan all folders underneath a path for a Hudi folder.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-huditarget.html#cfn-glue-crawler-huditarget-paths)
+     */
+    public fun paths(): List<String> = unwrap(this).getPaths() ?: emptyList()
+
+    /**
+     * A builder for [HudiTargetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param connectionName The name of the connection to use to connect to the Hudi target.
+       * If your Hudi files are stored in buckets that require VPC authorization, you can set their
+       * connection properties here.
+       */
+      public fun connectionName(connectionName: String)
+
+      /**
+       * @param exclusions A list of glob patterns used to exclude from the crawl.
+       * For more information, see [Catalog Tables with a
+       * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
+       */
+      public fun exclusions(exclusions: List<String>)
+
+      /**
+       * @param exclusions A list of glob patterns used to exclude from the crawl.
+       * For more information, see [Catalog Tables with a
+       * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
+       */
+      public fun exclusions(vararg exclusions: String)
+
+      /**
+       * @param maximumTraversalDepth The maximum depth of Amazon S3 paths that the crawler can
+       * traverse to discover the Hudi metadata folder in your Amazon S3 path.
+       * Used to limit the crawler run time.
+       */
+      public fun maximumTraversalDepth(maximumTraversalDepth: Number)
+
+      /**
+       * @param paths An array of Amazon S3 location strings for Hudi, each indicating the root
+       * folder with which the metadata files for a Hudi table resides.
+       * The Hudi folder may be located in a child folder of the root folder.
+       *
+       * The crawler will scan all folders underneath a path for a Hudi folder.
+       */
+      public fun paths(paths: List<String>)
+
+      /**
+       * @param paths An array of Amazon S3 location strings for Hudi, each indicating the root
+       * folder with which the metadata files for a Hudi table resides.
+       * The Hudi folder may be located in a child folder of the root folder.
+       *
+       * The crawler will scan all folders underneath a path for a Hudi folder.
+       */
+      public fun paths(vararg paths: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnCrawler.HudiTargetProperty.Builder =
+          software.amazon.awscdk.services.glue.CfnCrawler.HudiTargetProperty.builder()
+
+      /**
+       * @param connectionName The name of the connection to use to connect to the Hudi target.
+       * If your Hudi files are stored in buckets that require VPC authorization, you can set their
+       * connection properties here.
+       */
+      override fun connectionName(connectionName: String) {
+        cdkBuilder.connectionName(connectionName)
+      }
+
+      /**
+       * @param exclusions A list of glob patterns used to exclude from the crawl.
+       * For more information, see [Catalog Tables with a
+       * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
+       */
+      override fun exclusions(exclusions: List<String>) {
+        cdkBuilder.exclusions(exclusions)
+      }
+
+      /**
+       * @param exclusions A list of glob patterns used to exclude from the crawl.
+       * For more information, see [Catalog Tables with a
+       * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
+       */
+      override fun exclusions(vararg exclusions: String): Unit = exclusions(exclusions.toList())
+
+      /**
+       * @param maximumTraversalDepth The maximum depth of Amazon S3 paths that the crawler can
+       * traverse to discover the Hudi metadata folder in your Amazon S3 path.
+       * Used to limit the crawler run time.
+       */
+      override fun maximumTraversalDepth(maximumTraversalDepth: Number) {
+        cdkBuilder.maximumTraversalDepth(maximumTraversalDepth)
+      }
+
+      /**
+       * @param paths An array of Amazon S3 location strings for Hudi, each indicating the root
+       * folder with which the metadata files for a Hudi table resides.
+       * The Hudi folder may be located in a child folder of the root folder.
+       *
+       * The crawler will scan all folders underneath a path for a Hudi folder.
+       */
+      override fun paths(paths: List<String>) {
+        cdkBuilder.paths(paths)
+      }
+
+      /**
+       * @param paths An array of Amazon S3 location strings for Hudi, each indicating the root
+       * folder with which the metadata files for a Hudi table resides.
+       * The Hudi folder may be located in a child folder of the root folder.
+       *
+       * The crawler will scan all folders underneath a path for a Hudi folder.
+       */
+      override fun paths(vararg paths: String): Unit = paths(paths.toList())
+
+      public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.HudiTargetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.HudiTargetProperty,
+    ) : CdkObject(cdkObject),
+        HudiTargetProperty {
+      /**
+       * The name of the connection to use to connect to the Hudi target.
+       *
+       * If your Hudi files are stored in buckets that require VPC authorization, you can set their
+       * connection properties here.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-huditarget.html#cfn-glue-crawler-huditarget-connectionname)
+       */
+      override fun connectionName(): String? = unwrap(this).getConnectionName()
+
+      /**
+       * A list of glob patterns used to exclude from the crawl.
+       *
+       * For more information, see [Catalog Tables with a
+       * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-huditarget.html#cfn-glue-crawler-huditarget-exclusions)
+       */
+      override fun exclusions(): List<String> = unwrap(this).getExclusions() ?: emptyList()
+
+      /**
+       * The maximum depth of Amazon S3 paths that the crawler can traverse to discover the Hudi
+       * metadata folder in your Amazon S3 path.
+       *
+       * Used to limit the crawler run time.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-huditarget.html#cfn-glue-crawler-huditarget-maximumtraversaldepth)
+       */
+      override fun maximumTraversalDepth(): Number? = unwrap(this).getMaximumTraversalDepth()
+
+      /**
+       * An array of Amazon S3 location strings for Hudi, each indicating the root folder with which
+       * the metadata files for a Hudi table resides.
+       *
+       * The Hudi folder may be located in a child folder of the root folder.
+       *
+       * The crawler will scan all folders underneath a path for a Hudi folder.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-huditarget.html#cfn-glue-crawler-huditarget-paths)
+       */
+      override fun paths(): List<String> = unwrap(this).getPaths() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HudiTargetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.HudiTargetProperty):
+          HudiTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? HudiTargetProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HudiTargetProperty):
+          software.amazon.awscdk.services.glue.CfnCrawler.HudiTargetProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnCrawler.HudiTargetProperty
+    }
+  }
+
+  /**
    * Specifies Apache Iceberg data store targets.
    *
    * Example:
@@ -2867,6 +3114,12 @@ public open class CfnCrawler(
    * .dynamoDbTargets(List.of(DynamoDBTargetProperty.builder()
    * .path("path")
    * .build()))
+   * .hudiTargets(List.of(HudiTargetProperty.builder()
+   * .connectionName("connectionName")
+   * .exclusions(List.of("exclusions"))
+   * .maximumTraversalDepth(123)
+   * .paths(List.of("paths"))
+   * .build()))
    * .icebergTargets(List.of(IcebergTargetProperty.builder()
    * .connectionName("connectionName")
    * .exclusions(List.of("exclusions"))
@@ -2917,6 +3170,13 @@ public open class CfnCrawler(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-targets.html#cfn-glue-crawler-targets-dynamodbtargets)
      */
     public fun dynamoDbTargets(): Any? = unwrap(this).getDynamoDbTargets()
+
+    /**
+     * Specifies Apache Hudi data store targets.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-targets.html#cfn-glue-crawler-targets-huditargets)
+     */
+    public fun hudiTargets(): Any? = unwrap(this).getHudiTargets()
 
     /**
      * Specifies Apache Iceberg data store targets.
@@ -2995,6 +3255,21 @@ public open class CfnCrawler(
        * @param dynamoDbTargets Specifies Amazon DynamoDB targets.
        */
       public fun dynamoDbTargets(vararg dynamoDbTargets: Any)
+
+      /**
+       * @param hudiTargets Specifies Apache Hudi data store targets.
+       */
+      public fun hudiTargets(hudiTargets: IResolvable)
+
+      /**
+       * @param hudiTargets Specifies Apache Hudi data store targets.
+       */
+      public fun hudiTargets(hudiTargets: List<Any>)
+
+      /**
+       * @param hudiTargets Specifies Apache Hudi data store targets.
+       */
+      public fun hudiTargets(vararg hudiTargets: Any)
 
       /**
        * @param icebergTargets Specifies Apache Iceberg data store targets.
@@ -3123,6 +3398,25 @@ public open class CfnCrawler(
           dynamoDbTargets(dynamoDbTargets.toList())
 
       /**
+       * @param hudiTargets Specifies Apache Hudi data store targets.
+       */
+      override fun hudiTargets(hudiTargets: IResolvable) {
+        cdkBuilder.hudiTargets(hudiTargets.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param hudiTargets Specifies Apache Hudi data store targets.
+       */
+      override fun hudiTargets(hudiTargets: List<Any>) {
+        cdkBuilder.hudiTargets(hudiTargets.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param hudiTargets Specifies Apache Hudi data store targets.
+       */
+      override fun hudiTargets(vararg hudiTargets: Any): Unit = hudiTargets(hudiTargets.toList())
+
+      /**
        * @param icebergTargets Specifies Apache Iceberg data store targets.
        */
       override fun icebergTargets(icebergTargets: IResolvable) {
@@ -3228,6 +3522,13 @@ public open class CfnCrawler(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-targets.html#cfn-glue-crawler-targets-dynamodbtargets)
        */
       override fun dynamoDbTargets(): Any? = unwrap(this).getDynamoDbTargets()
+
+      /**
+       * Specifies Apache Hudi data store targets.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-targets.html#cfn-glue-crawler-targets-huditargets)
+       */
+      override fun hudiTargets(): Any? = unwrap(this).getHudiTargets()
 
       /**
        * Specifies Apache Iceberg data store targets.

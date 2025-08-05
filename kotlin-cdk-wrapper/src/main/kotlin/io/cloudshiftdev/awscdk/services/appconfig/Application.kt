@@ -160,6 +160,43 @@ public open class Application(
   public override fun applicationId(): String = unwrap(this).getApplicationId()
 
   /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to an application.
+   *
+   * @param eventDestination The event that occurs during the extension. 
+   * @param options Options for the extension.
+   */
+  public override fun atDeploymentTick(eventDestination: IEventDestination) {
+    unwrap(this).atDeploymentTick(eventDestination.let(IEventDestination.Companion::unwrap))
+  }
+
+  /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to an application.
+   *
+   * @param eventDestination The event that occurs during the extension. 
+   * @param options Options for the extension.
+   */
+  public override fun atDeploymentTick(eventDestination: IEventDestination,
+      options: ExtensionOptions) {
+    unwrap(this).atDeploymentTick(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
+  }
+
+  /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to an application.
+   *
+   * @param eventDestination The event that occurs during the extension. 
+   * @param options Options for the extension.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("f8c201d364bd1348c470ff45a380b57e5cbcd5d83fb8aa9250995db9670d33c2")
+  public override fun atDeploymentTick(eventDestination: IEventDestination,
+      options: ExtensionOptions.Builder.() -> Unit): Unit = atDeploymentTick(eventDestination,
+      ExtensionOptions(options))
+
+  /**
    * The description of the application.
    */
   public override fun description(): String? = unwrap(this).getDescription()
@@ -538,6 +575,9 @@ public open class Application(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.appconfig.Application.PROPERTY_INJECTION_ID
+
     public fun addAgentToEcs(taskDef: TaskDefinition) {
       software.amazon.awscdk.services.appconfig.Application.addAgentToEcs(taskDef.let(TaskDefinition.Companion::unwrap))
     }

@@ -115,15 +115,15 @@ public open class CfnParameterGroup(
   /**
    * A comma-delimited list of parameter name/value pairs.
    */
-  public open fun properties(`value`: IResolvable) {
-    unwrap(this).setProperties(`value`.let(IResolvable.Companion::unwrap))
+  public open fun properties(`value`: Map<String, String>) {
+    unwrap(this).setProperties(`value`)
   }
 
   /**
    * A comma-delimited list of parameter name/value pairs.
    */
-  public open fun properties(`value`: Map<String, String>) {
-    unwrap(this).setProperties(`value`)
+  public open fun properties(`value`: IResolvable) {
+    unwrap(this).setProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -158,8 +158,8 @@ public open class CfnParameterGroup(
      * The name of the cache parameter group family that this cache parameter group is compatible
      * with.
      *
-     * Valid values are: `memcached1.4` | `memcached1.5` | `memcached1.6` | `redis2.6` | `redis2.8`
-     * | `redis3.2` | `redis4.0` | `redis5.0` | `redis6.x` | `redis7`
+     * Valid values are: `valkey8` | `valkey7` | `memcached1.4` | `memcached1.5` | `memcached1.6` |
+     * `redis2.6` | `redis2.8` | `redis3.2` | `redis4.0` | `redis5.0` | `redis6.x` | `redis7`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-parametergroup.html#cfn-elasticache-parametergroup-cacheparametergroupfamily)
      * @param cacheParameterGroupFamily The name of the cache parameter group family that this cache
@@ -188,7 +188,7 @@ public open class CfnParameterGroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-parametergroup.html#cfn-elasticache-parametergroup-properties)
      * @param properties A comma-delimited list of parameter name/value pairs. 
      */
-    public fun properties(properties: IResolvable)
+    public fun properties(properties: Map<String, String>)
 
     /**
      * A comma-delimited list of parameter name/value pairs.
@@ -203,7 +203,7 @@ public open class CfnParameterGroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-parametergroup.html#cfn-elasticache-parametergroup-properties)
      * @param properties A comma-delimited list of parameter name/value pairs. 
      */
-    public fun properties(properties: Map<String, String>)
+    public fun properties(properties: IResolvable)
 
     /**
      * A tag that can be added to an ElastiCache parameter group.
@@ -239,8 +239,8 @@ public open class CfnParameterGroup(
      * The name of the cache parameter group family that this cache parameter group is compatible
      * with.
      *
-     * Valid values are: `memcached1.4` | `memcached1.5` | `memcached1.6` | `redis2.6` | `redis2.8`
-     * | `redis3.2` | `redis4.0` | `redis5.0` | `redis6.x` | `redis7`
+     * Valid values are: `valkey8` | `valkey7` | `memcached1.4` | `memcached1.5` | `memcached1.6` |
+     * `redis2.6` | `redis2.8` | `redis3.2` | `redis4.0` | `redis5.0` | `redis6.x` | `redis7`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-parametergroup.html#cfn-elasticache-parametergroup-cacheparametergroupfamily)
      * @param cacheParameterGroupFamily The name of the cache parameter group family that this cache
@@ -273,8 +273,8 @@ public open class CfnParameterGroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-parametergroup.html#cfn-elasticache-parametergroup-properties)
      * @param properties A comma-delimited list of parameter name/value pairs. 
      */
-    override fun properties(properties: IResolvable) {
-      cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
+    override fun properties(properties: Map<String, String>) {
+      cdkBuilder.properties(properties)
     }
 
     /**
@@ -290,8 +290,8 @@ public open class CfnParameterGroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-parametergroup.html#cfn-elasticache-parametergroup-properties)
      * @param properties A comma-delimited list of parameter name/value pairs. 
      */
-    override fun properties(properties: Map<String, String>) {
-      cdkBuilder.properties(properties)
+    override fun properties(properties: IResolvable) {
+      cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
     }
 
     /**

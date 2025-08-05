@@ -48,9 +48,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .engine("engine")
  * .engineVersion("engineVersion")
  * .finalSnapshotName("finalSnapshotName")
+ * .ipDiscovery("ipDiscovery")
  * .kmsKeyId("kmsKeyId")
  * .maintenanceWindow("maintenanceWindow")
  * .multiRegionClusterName("multiRegionClusterName")
+ * .networkType("networkType")
  * .numReplicasPerShard(123)
  * .numShards(123)
  * .parameterGroupName("parameterGroupName")
@@ -233,12 +235,12 @@ public open class CfnCluster(
   }
 
   /**
-   * The Valkey or Redis OSS engine version used by the cluster .
+   * The Redis engine version used by the cluster .
    */
   public open fun engineVersion(): String? = unwrap(this).getEngineVersion()
 
   /**
-   * The Valkey or Redis OSS engine version used by the cluster .
+   * The Redis engine version used by the cluster .
    */
   public open fun engineVersion(`value`: String) {
     unwrap(this).setEngineVersion(`value`)
@@ -263,6 +265,18 @@ public open class CfnCluster(
    */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
+  }
+
+  /**
+   * The mechanism that the cluster uses to discover IP addresses.
+   */
+  public open fun ipDiscovery(): String? = unwrap(this).getIpDiscovery()
+
+  /**
+   * The mechanism that the cluster uses to discover IP addresses.
+   */
+  public open fun ipDiscovery(`value`: String) {
+    unwrap(this).setIpDiscovery(`value`)
   }
 
   /**
@@ -299,6 +313,18 @@ public open class CfnCluster(
    */
   public open fun multiRegionClusterName(`value`: String) {
     unwrap(this).setMultiRegionClusterName(`value`)
+  }
+
+  /**
+   * The IP address type for the cluster.
+   */
+  public open fun networkType(): String? = unwrap(this).getNetworkType()
+
+  /**
+   * The IP address type for the cluster.
+   */
+  public open fun networkType(`value`: String) {
+    unwrap(this).setNetworkType(`value`)
   }
 
   /**
@@ -614,10 +640,10 @@ public open class CfnCluster(
     public fun engine(engine: String)
 
     /**
-     * The Valkey or Redis OSS engine version used by the cluster .
+     * The Redis engine version used by the cluster .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-engineversion)
-     * @param engineVersion The Valkey or Redis OSS engine version used by the cluster . 
+     * @param engineVersion The Redis engine version used by the cluster . 
      */
     public fun engineVersion(engineVersion: String)
 
@@ -631,6 +657,17 @@ public open class CfnCluster(
      * @param finalSnapshotName The user-supplied name of a final cluster snapshot. 
      */
     public fun finalSnapshotName(finalSnapshotName: String)
+
+    /**
+     * The mechanism that the cluster uses to discover IP addresses.
+     *
+     * Returns 'ipv4' when DNS endpoints resolve to IPv4 addresses, or 'ipv6' when DNS endpoints
+     * resolve to IPv6 addresses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-ipdiscovery)
+     * @param ipDiscovery The mechanism that the cluster uses to discover IP addresses. 
+     */
+    public fun ipDiscovery(ipDiscovery: String)
 
     /**
      * The ID of the KMS key used to encrypt the cluster .
@@ -662,6 +699,17 @@ public open class CfnCluster(
      * to. 
      */
     public fun multiRegionClusterName(multiRegionClusterName: String)
+
+    /**
+     * The IP address type for the cluster.
+     *
+     * Returns 'ipv4' for IPv4 only, 'ipv6' for IPv6 only, or 'dual-stack' if the cluster supports
+     * both IPv4 and IPv6 addressing.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-networktype)
+     * @param networkType The IP address type for the cluster. 
+     */
+    public fun networkType(networkType: String)
 
     /**
      * The cluster 's node type.
@@ -969,10 +1017,10 @@ public open class CfnCluster(
     }
 
     /**
-     * The Valkey or Redis OSS engine version used by the cluster .
+     * The Redis engine version used by the cluster .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-engineversion)
-     * @param engineVersion The Valkey or Redis OSS engine version used by the cluster . 
+     * @param engineVersion The Redis engine version used by the cluster . 
      */
     override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
@@ -989,6 +1037,19 @@ public open class CfnCluster(
      */
     override fun finalSnapshotName(finalSnapshotName: String) {
       cdkBuilder.finalSnapshotName(finalSnapshotName)
+    }
+
+    /**
+     * The mechanism that the cluster uses to discover IP addresses.
+     *
+     * Returns 'ipv4' when DNS endpoints resolve to IPv4 addresses, or 'ipv6' when DNS endpoints
+     * resolve to IPv6 addresses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-ipdiscovery)
+     * @param ipDiscovery The mechanism that the cluster uses to discover IP addresses. 
+     */
+    override fun ipDiscovery(ipDiscovery: String) {
+      cdkBuilder.ipDiscovery(ipDiscovery)
     }
 
     /**
@@ -1026,6 +1087,19 @@ public open class CfnCluster(
      */
     override fun multiRegionClusterName(multiRegionClusterName: String) {
       cdkBuilder.multiRegionClusterName(multiRegionClusterName)
+    }
+
+    /**
+     * The IP address type for the cluster.
+     *
+     * Returns 'ipv4' for IPv4 only, 'ipv6' for IPv6 only, or 'dual-stack' if the cluster supports
+     * both IPv4 and IPv6 addressing.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-networktype)
+     * @param networkType The IP address type for the cluster. 
+     */
+    override fun networkType(networkType: String) {
+      cdkBuilder.networkType(networkType)
     }
 
     /**

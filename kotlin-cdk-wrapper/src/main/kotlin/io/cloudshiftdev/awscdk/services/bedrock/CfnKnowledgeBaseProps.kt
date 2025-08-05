@@ -24,21 +24,127 @@ import kotlin.jvm.JvmName
  * CfnKnowledgeBaseProps cfnKnowledgeBaseProps = CfnKnowledgeBaseProps.builder()
  * .knowledgeBaseConfiguration(KnowledgeBaseConfigurationProperty.builder()
  * .type("type")
+ * // the properties below are optional
+ * .kendraKnowledgeBaseConfiguration(KendraKnowledgeBaseConfigurationProperty.builder()
+ * .kendraIndexArn("kendraIndexArn")
+ * .build())
+ * .sqlKnowledgeBaseConfiguration(SqlKnowledgeBaseConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .redshiftConfiguration(RedshiftConfigurationProperty.builder()
+ * .queryEngineConfiguration(RedshiftQueryEngineConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .provisionedConfiguration(RedshiftProvisionedConfigurationProperty.builder()
+ * .authConfiguration(RedshiftProvisionedAuthConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .databaseUser("databaseUser")
+ * .usernamePasswordSecretArn("usernamePasswordSecretArn")
+ * .build())
+ * .clusterIdentifier("clusterIdentifier")
+ * .build())
+ * .serverlessConfiguration(RedshiftServerlessConfigurationProperty.builder()
+ * .authConfiguration(RedshiftServerlessAuthConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .usernamePasswordSecretArn("usernamePasswordSecretArn")
+ * .build())
+ * .workgroupArn("workgroupArn")
+ * .build())
+ * .build())
+ * .storageConfigurations(List.of(RedshiftQueryEngineStorageConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .awsDataCatalogConfiguration(RedshiftQueryEngineAwsDataCatalogStorageConfigurationProperty.builder()
+ * .tableNames(List.of("tableNames"))
+ * .build())
+ * .redshiftConfiguration(RedshiftQueryEngineRedshiftStorageConfigurationProperty.builder()
+ * .databaseName("databaseName")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .queryGenerationConfiguration(QueryGenerationConfigurationProperty.builder()
+ * .executionTimeoutSeconds(123)
+ * .generationContext(QueryGenerationContextProperty.builder()
+ * .curatedQueries(List.of(CuratedQueryProperty.builder()
+ * .naturalLanguage("naturalLanguage")
+ * .sql("sql")
+ * .build()))
+ * .tables(List.of(QueryGenerationTableProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .columns(List.of(QueryGenerationColumnProperty.builder()
+ * .description("description")
+ * .inclusion("inclusion")
+ * .name("name")
+ * .build()))
+ * .description("description")
+ * .inclusion("inclusion")
+ * .build()))
+ * .build())
+ * .build())
+ * .build())
+ * .build())
  * .vectorKnowledgeBaseConfiguration(VectorKnowledgeBaseConfigurationProperty.builder()
  * .embeddingModelArn("embeddingModelArn")
  * // the properties below are optional
  * .embeddingModelConfiguration(EmbeddingModelConfigurationProperty.builder()
  * .bedrockEmbeddingModelConfiguration(BedrockEmbeddingModelConfigurationProperty.builder()
  * .dimensions(123)
+ * .embeddingDataType("embeddingDataType")
  * .build())
+ * .build())
+ * .supplementalDataStorageConfiguration(SupplementalDataStorageConfigurationProperty.builder()
+ * .supplementalDataStorageLocations(List.of(SupplementalDataStorageLocationProperty.builder()
+ * .supplementalDataStorageLocationType("supplementalDataStorageLocationType")
+ * // the properties below are optional
+ * .s3Location(S3LocationProperty.builder()
+ * .uri("uri")
+ * .build())
+ * .build()))
  * .build())
  * .build())
  * .build())
  * .name("name")
  * .roleArn("roleArn")
+ * // the properties below are optional
+ * .description("description")
  * .storageConfiguration(StorageConfigurationProperty.builder()
  * .type("type")
  * // the properties below are optional
+ * .mongoDbAtlasConfiguration(MongoDbAtlasConfigurationProperty.builder()
+ * .collectionName("collectionName")
+ * .credentialsSecretArn("credentialsSecretArn")
+ * .databaseName("databaseName")
+ * .endpoint("endpoint")
+ * .fieldMapping(MongoDbAtlasFieldMappingProperty.builder()
+ * .metadataField("metadataField")
+ * .textField("textField")
+ * .vectorField("vectorField")
+ * .build())
+ * .vectorIndexName("vectorIndexName")
+ * // the properties below are optional
+ * .endpointServiceName("endpointServiceName")
+ * .textIndexName("textIndexName")
+ * .build())
+ * .neptuneAnalyticsConfiguration(NeptuneAnalyticsConfigurationProperty.builder()
+ * .fieldMapping(NeptuneAnalyticsFieldMappingProperty.builder()
+ * .metadataField("metadataField")
+ * .textField("textField")
+ * .build())
+ * .graphArn("graphArn")
+ * .build())
+ * .opensearchManagedClusterConfiguration(OpenSearchManagedClusterConfigurationProperty.builder()
+ * .domainArn("domainArn")
+ * .domainEndpoint("domainEndpoint")
+ * .fieldMapping(OpenSearchManagedClusterFieldMappingProperty.builder()
+ * .metadataField("metadataField")
+ * .textField("textField")
+ * .vectorField("vectorField")
+ * .build())
+ * .vectorIndexName("vectorIndexName")
+ * .build())
  * .opensearchServerlessConfiguration(OpenSearchServerlessConfigurationProperty.builder()
  * .collectionArn("collectionArn")
  * .fieldMapping(OpenSearchServerlessFieldMappingProperty.builder()
@@ -66,13 +172,13 @@ import kotlin.jvm.JvmName
  * .primaryKeyField("primaryKeyField")
  * .textField("textField")
  * .vectorField("vectorField")
+ * // the properties below are optional
+ * .customMetadataField("customMetadataField")
  * .build())
  * .resourceArn("resourceArn")
  * .tableName("tableName")
  * .build())
  * .build())
- * // the properties below are optional
- * .description("description")
  * .tags(Map.of(
  * "tagsKey", "tags"))
  * .build();
@@ -115,7 +221,7 @@ public interface CfnKnowledgeBaseProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-storageconfiguration)
    */
-  public fun storageConfiguration(): Any
+  public fun storageConfiguration(): Any? = unwrap(this).getStorageConfiguration()
 
   /**
    * Metadata that you can assign to a resource as key-value pairs. For more information, see the
@@ -175,20 +281,20 @@ public interface CfnKnowledgeBaseProps {
 
     /**
      * @param storageConfiguration Contains details about the storage configuration of the knowledge
-     * base. 
+     * base.
      */
     public fun storageConfiguration(storageConfiguration: IResolvable)
 
     /**
      * @param storageConfiguration Contains details about the storage configuration of the knowledge
-     * base. 
+     * base.
      */
     public
         fun storageConfiguration(storageConfiguration: CfnKnowledgeBase.StorageConfigurationProperty)
 
     /**
      * @param storageConfiguration Contains details about the storage configuration of the knowledge
-     * base. 
+     * base.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("939a094bee2276eca705c0c724260f1173e535fbdddfe2f5d334b31351b6eb0a")
@@ -262,7 +368,7 @@ public interface CfnKnowledgeBaseProps {
 
     /**
      * @param storageConfiguration Contains details about the storage configuration of the knowledge
-     * base. 
+     * base.
      */
     override fun storageConfiguration(storageConfiguration: IResolvable) {
       cdkBuilder.storageConfiguration(storageConfiguration.let(IResolvable.Companion::unwrap))
@@ -270,7 +376,7 @@ public interface CfnKnowledgeBaseProps {
 
     /**
      * @param storageConfiguration Contains details about the storage configuration of the knowledge
-     * base. 
+     * base.
      */
     override
         fun storageConfiguration(storageConfiguration: CfnKnowledgeBase.StorageConfigurationProperty) {
@@ -279,7 +385,7 @@ public interface CfnKnowledgeBaseProps {
 
     /**
      * @param storageConfiguration Contains details about the storage configuration of the knowledge
-     * base. 
+     * base.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("939a094bee2276eca705c0c724260f1173e535fbdddfe2f5d334b31351b6eb0a")
@@ -342,7 +448,7 @@ public interface CfnKnowledgeBaseProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-storageconfiguration)
      */
-    override fun storageConfiguration(): Any = unwrap(this).getStorageConfiguration()
+    override fun storageConfiguration(): Any? = unwrap(this).getStorageConfiguration()
 
     /**
      * Metadata that you can assign to a resource as key-value pairs. For more information, see the

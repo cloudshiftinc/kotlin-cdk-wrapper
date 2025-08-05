@@ -188,6 +188,24 @@ public open class App(
     public fun postCliContext(postCliContext: Map<String, Any>)
 
     /**
+     * A list of IPropertyInjector attached to this App.
+     *
+     * Default: - no PropertyInjectors
+     *
+     * @param propertyInjectors A list of IPropertyInjector attached to this App. 
+     */
+    public fun propertyInjectors(propertyInjectors: List<IPropertyInjector>)
+
+    /**
+     * A list of IPropertyInjector attached to this App.
+     *
+     * Default: - no PropertyInjectors
+     *
+     * @param propertyInjectors A list of IPropertyInjector attached to this App. 
+     */
+    public fun propertyInjectors(vararg propertyInjectors: IPropertyInjector)
+
+    /**
      * Include construct creation stack trace in the `aws:cdk:trace` metadata key of all constructs.
      *
      * Default: true stack traces are included unless `aws:cdk:disable-stack-trace` is set in the
@@ -344,6 +362,27 @@ public open class App(
     override fun postCliContext(postCliContext: Map<String, Any>) {
       cdkBuilder.postCliContext(postCliContext.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
+
+    /**
+     * A list of IPropertyInjector attached to this App.
+     *
+     * Default: - no PropertyInjectors
+     *
+     * @param propertyInjectors A list of IPropertyInjector attached to this App. 
+     */
+    override fun propertyInjectors(propertyInjectors: List<IPropertyInjector>) {
+      cdkBuilder.propertyInjectors(propertyInjectors.map(IPropertyInjector.Companion::unwrap))
+    }
+
+    /**
+     * A list of IPropertyInjector attached to this App.
+     *
+     * Default: - no PropertyInjectors
+     *
+     * @param propertyInjectors A list of IPropertyInjector attached to this App. 
+     */
+    override fun propertyInjectors(vararg propertyInjectors: IPropertyInjector): Unit =
+        propertyInjectors(propertyInjectors.toList())
 
     /**
      * Include construct creation stack trace in the `aws:cdk:trace` metadata key of all constructs.

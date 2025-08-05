@@ -16,24 +16,29 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * GraphqlApi api;
- * AppsyncFunction myJsFunction = AppsyncFunction.Builder.create(this, "function")
- * .name("my_js_function")
- * .api(api)
- * .dataSource(api.addNoneDataSource("none"))
- * .code(Code.fromAsset("directory/function_code.js"))
- * .runtime(FunctionRuntime.JS_1_0_0)
- * .build();
- * Resolver.Builder.create(this, "PipelineResolver")
- * .api(api)
- * .typeName("typeName")
- * .fieldName("fieldName")
- * .code(Code.fromInline("\n    // The before step\n    export function request(...args) {\n     
- * console.log(args);\n      return {}\n    }\n\n    // The after step\n    export function
- * response(ctx) {\n      return ctx.prev.result\n    }\n  "))
- * .runtime(FunctionRuntime.JS_1_0_0)
- * .pipelineConfig(List.of(myJsFunction))
- * .build();
+ * EventApi api;
+ * AppSyncLambdaDataSource lambdaDataSource;
+ * // Lambda data source for publish handler
+ * api.addChannelNamespace("lambda-ns", ChannelNamespaceOptions.builder()
+ * .code(Code.fromInline("/ * event handler code here.*&#47;"))
+ * .publishHandlerConfig(HandlerConfig.builder()
+ * .dataSource(lambdaDataSource)
+ * .build())
+ * .build());
+ * // Direct Lambda data source for publish handler
+ * api.addChannelNamespace("lambda-direct-ns", ChannelNamespaceOptions.builder()
+ * .publishHandlerConfig(HandlerConfig.builder()
+ * .dataSource(lambdaDataSource)
+ * .direct(true)
+ * .build())
+ * .build());
+ * api.addChannelNamespace("lambda-direct-async-ns", ChannelNamespaceOptions.builder()
+ * .publishHandlerConfig(HandlerConfig.builder()
+ * .dataSource(lambdaDataSource)
+ * .direct(true)
+ * .lambdaInvokeType(LambdaInvokeType.EVENT)
+ * .build())
+ * .build());
  * ```
  */
 public abstract class Code(

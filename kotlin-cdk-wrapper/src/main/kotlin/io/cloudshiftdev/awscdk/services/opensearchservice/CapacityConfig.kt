@@ -9,6 +9,7 @@ import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 
 /**
  * Configures the capacity of the cluster such as the instance type and the number of instances.
@@ -16,14 +17,19 @@ import kotlin.Unit
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
  * Domain domain = Domain.Builder.create(this, "Domain")
- * .version(EngineVersion.OPENSEARCH_1_0)
+ * .version(EngineVersion.OPENSEARCH_1_3)
  * .capacity(CapacityConfig.builder()
- * .masterNodes(2)
- * .warmNodes(2)
- * .warmInstanceType("ultrawarm1.medium.search")
+ * .nodeOptions(List.of(NodeOptions.builder()
+ * .nodeType(NodeType.COORDINATOR)
+ * .nodeConfig(NodeConfig.builder()
+ * .enabled(true)
+ * .count(2)
+ * .type("m5.large.search")
  * .build())
- * .coldStorageEnabled(true)
+ * .build()))
+ * .build())
  * .build();
  * ```
  */
@@ -74,6 +80,14 @@ public interface CapacityConfig {
    * is true, no multi-az with standby otherwise
    */
   public fun multiAzWithStandbyEnabled(): Boolean? = unwrap(this).getMultiAzWithStandbyEnabled()
+
+  /**
+   * Additional node options for the domain.
+   *
+   * Default: - no additional node options
+   */
+  public fun nodeOptions(): List<NodeOptions> =
+      unwrap(this).getNodeOptions()?.map(NodeOptions::wrap) ?: emptyList()
 
   /**
    * The instance type for your UltraWarm node, such as `ultrawarm1.medium.search`. For valid
@@ -133,6 +147,16 @@ public interface CapacityConfig {
      * Standby</a>
      */
     public fun multiAzWithStandbyEnabled(multiAzWithStandbyEnabled: Boolean)
+
+    /**
+     * @param nodeOptions Additional node options for the domain.
+     */
+    public fun nodeOptions(nodeOptions: List<NodeOptions>)
+
+    /**
+     * @param nodeOptions Additional node options for the domain.
+     */
+    public fun nodeOptions(vararg nodeOptions: NodeOptions)
 
     /**
      * @param warmInstanceType The instance type for your UltraWarm node, such as
@@ -199,6 +223,19 @@ public interface CapacityConfig {
     override fun multiAzWithStandbyEnabled(multiAzWithStandbyEnabled: Boolean) {
       cdkBuilder.multiAzWithStandbyEnabled(multiAzWithStandbyEnabled)
     }
+
+    /**
+     * @param nodeOptions Additional node options for the domain.
+     */
+    override fun nodeOptions(nodeOptions: List<NodeOptions>) {
+      cdkBuilder.nodeOptions(nodeOptions.map(NodeOptions.Companion::unwrap))
+    }
+
+    /**
+     * @param nodeOptions Additional node options for the domain.
+     */
+    override fun nodeOptions(vararg nodeOptions: NodeOptions): Unit =
+        nodeOptions(nodeOptions.toList())
 
     /**
      * @param warmInstanceType The instance type for your UltraWarm node, such as
@@ -272,6 +309,14 @@ public interface CapacityConfig {
      * is true, no multi-az with standby otherwise
      */
     override fun multiAzWithStandbyEnabled(): Boolean? = unwrap(this).getMultiAzWithStandbyEnabled()
+
+    /**
+     * Additional node options for the domain.
+     *
+     * Default: - no additional node options
+     */
+    override fun nodeOptions(): List<NodeOptions> =
+        unwrap(this).getNodeOptions()?.map(NodeOptions::wrap) ?: emptyList()
 
     /**
      * The instance type for your UltraWarm node, such as `ultrawarm1.medium.search`. For valid

@@ -51,6 +51,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build())
  * .name("name")
+ * .networkType("networkType")
  * .organization("organization")
  * .password("password")
  * .port(123)
@@ -269,6 +270,18 @@ public open class CfnInfluxDBInstance(
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
+  }
+
+  /**
+   * Network type of the InfluxDB Instance.
+   */
+  public open fun networkType(): String? = unwrap(this).getNetworkType()
+
+  /**
+   * Network type of the InfluxDB Instance.
+   */
+  public open fun networkType(`value`: String) {
+    unwrap(this).setNetworkType(`value`)
   }
 
   /**
@@ -505,6 +518,14 @@ public open class CfnInfluxDBInstance(
      * Amazon Timestream for InfluxDB API and CLI commands. 
      */
     public fun name(name: String)
+
+    /**
+     * Network type of the InfluxDB Instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbinstance.html#cfn-timestream-influxdbinstance-networktype)
+     * @param networkType Network type of the InfluxDB Instance. 
+     */
+    public fun networkType(networkType: String)
 
     /**
      * The name of the initial organization for the initial admin user in InfluxDB.
@@ -762,6 +783,16 @@ public open class CfnInfluxDBInstance(
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * Network type of the InfluxDB Instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbinstance.html#cfn-timestream-influxdbinstance-networktype)
+     * @param networkType Network type of the InfluxDB Instance. 
+     */
+    override fun networkType(networkType: String) {
+      cdkBuilder.networkType(networkType)
     }
 
     /**

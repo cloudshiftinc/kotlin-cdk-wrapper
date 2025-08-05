@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.gamelift
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -9,6 +10,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.jvm.JvmName
 
 /**
@@ -30,6 +32,10 @@ import kotlin.jvm.JvmName
  * .build())
  * // the properties below are optional
  * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -58,6 +64,13 @@ public interface CfnAliasProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html#cfn-gamelift-alias-routingstrategy)
    */
   public fun routingStrategy(): Any
+
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html#cfn-gamelift-alias-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
    * A builder for [CfnAliasProps]
@@ -94,6 +107,16 @@ public interface CfnAliasProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3bf9d49be72354e74e2571d314f327249134c546d35618838ab0070e15d0e606")
     public fun routingStrategy(routingStrategy: CfnAlias.RoutingStrategyProperty.Builder.() -> Unit)
+
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl : Builder {
@@ -141,6 +164,18 @@ public interface CfnAliasProps {
         fun routingStrategy(routingStrategy: CfnAlias.RoutingStrategyProperty.Builder.() -> Unit):
         Unit = routingStrategy(CfnAlias.RoutingStrategyProperty(routingStrategy))
 
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.gamelift.CfnAliasProps = cdkBuilder.build()
   }
 
@@ -170,6 +205,13 @@ public interface CfnAliasProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html#cfn-gamelift-alias-routingstrategy)
      */
     override fun routingStrategy(): Any = unwrap(this).getRoutingStrategy()
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html#cfn-gamelift-alias-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 
   public companion object {

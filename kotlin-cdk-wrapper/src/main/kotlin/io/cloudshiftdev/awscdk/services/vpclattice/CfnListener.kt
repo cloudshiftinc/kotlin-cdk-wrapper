@@ -645,6 +645,8 @@ public open class CfnListener(
     /**
      * The HTTP response code.
      *
+     * Only `404` and `500` status codes are supported.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-fixedresponse.html#cfn-vpclattice-listener-fixedresponse-statuscode)
      */
     public fun statusCode(): Number
@@ -656,6 +658,7 @@ public open class CfnListener(
     public interface Builder {
       /**
        * @param statusCode The HTTP response code. 
+       * Only `404` and `500` status codes are supported.
        */
       public fun statusCode(statusCode: Number)
     }
@@ -667,6 +670,7 @@ public open class CfnListener(
 
       /**
        * @param statusCode The HTTP response code. 
+       * Only `404` and `500` status codes are supported.
        */
       override fun statusCode(statusCode: Number) {
         cdkBuilder.statusCode(statusCode)
@@ -683,6 +687,8 @@ public open class CfnListener(
         FixedResponseProperty {
       /**
        * The HTTP response code.
+       *
+       * Only `404` and `500` status codes are supported.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-fixedresponse.html#cfn-vpclattice-listener-fixedresponse-statuscode)
        */

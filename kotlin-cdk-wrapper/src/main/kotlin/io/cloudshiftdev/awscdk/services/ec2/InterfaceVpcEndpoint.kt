@@ -98,6 +98,24 @@ public open class InterfaceVpcEndpoint(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Type of DNS records created for the VPC endpoint.
+     *
+     * Default: not specified
+     *
+     * @param dnsRecordIpType Type of DNS records created for the VPC endpoint. 
+     */
+    public fun dnsRecordIpType(dnsRecordIpType: VpcEndpointDnsRecordIpType)
+
+    /**
+     * The IP address type for the endpoint.
+     *
+     * Default: not specified
+     *
+     * @param ipAddressType The IP address type for the endpoint. 
+     */
+    public fun ipAddressType(ipAddressType: VpcEndpointIpAddressType)
+
+    /**
      * Limit to only those availability zones where the endpoint service can be created.
      *
      * Setting this to 'true' requires a lookup to be performed at synthesis time. Account
@@ -134,6 +152,17 @@ public open class InterfaceVpcEndpoint(
      * @param privateDnsEnabled Whether to associate a private hosted zone with the specified VPC. 
      */
     public fun privateDnsEnabled(privateDnsEnabled: Boolean)
+
+    /**
+     * Whether to enable private DNS only for inbound endpoints.
+     *
+     * Default: not specified
+     *
+     * @param privateDnsOnlyForInboundResolverEndpoint Whether to enable private DNS only for
+     * inbound endpoints. 
+     */
+    public
+        fun privateDnsOnlyForInboundResolverEndpoint(privateDnsOnlyForInboundResolverEndpoint: VpcEndpointPrivateDnsOnlyForInboundResolverEndpoint)
 
     /**
      * The security groups to associate with this interface VPC endpoint.
@@ -202,6 +231,28 @@ public open class InterfaceVpcEndpoint(
         software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint.Builder.create(scope, id)
 
     /**
+     * Type of DNS records created for the VPC endpoint.
+     *
+     * Default: not specified
+     *
+     * @param dnsRecordIpType Type of DNS records created for the VPC endpoint. 
+     */
+    override fun dnsRecordIpType(dnsRecordIpType: VpcEndpointDnsRecordIpType) {
+      cdkBuilder.dnsRecordIpType(dnsRecordIpType.let(VpcEndpointDnsRecordIpType.Companion::unwrap))
+    }
+
+    /**
+     * The IP address type for the endpoint.
+     *
+     * Default: not specified
+     *
+     * @param ipAddressType The IP address type for the endpoint. 
+     */
+    override fun ipAddressType(ipAddressType: VpcEndpointIpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(VpcEndpointIpAddressType.Companion::unwrap))
+    }
+
+    /**
      * Limit to only those availability zones where the endpoint service can be created.
      *
      * Setting this to 'true' requires a lookup to be performed at synthesis time. Account
@@ -243,6 +294,19 @@ public open class InterfaceVpcEndpoint(
      */
     override fun privateDnsEnabled(privateDnsEnabled: Boolean) {
       cdkBuilder.privateDnsEnabled(privateDnsEnabled)
+    }
+
+    /**
+     * Whether to enable private DNS only for inbound endpoints.
+     *
+     * Default: not specified
+     *
+     * @param privateDnsOnlyForInboundResolverEndpoint Whether to enable private DNS only for
+     * inbound endpoints. 
+     */
+    override
+        fun privateDnsOnlyForInboundResolverEndpoint(privateDnsOnlyForInboundResolverEndpoint: VpcEndpointPrivateDnsOnlyForInboundResolverEndpoint) {
+      cdkBuilder.privateDnsOnlyForInboundResolverEndpoint(privateDnsOnlyForInboundResolverEndpoint.let(VpcEndpointPrivateDnsOnlyForInboundResolverEndpoint.Companion::unwrap))
     }
 
     /**
@@ -318,6 +382,9 @@ public open class InterfaceVpcEndpoint(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint.PROPERTY_INJECTION_ID
+
     public fun fromInterfaceVpcEndpointAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

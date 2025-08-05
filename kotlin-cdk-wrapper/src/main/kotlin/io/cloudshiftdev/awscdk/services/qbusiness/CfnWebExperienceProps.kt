@@ -25,6 +25,9 @@ import kotlin.jvm.JvmName
  * CfnWebExperienceProps cfnWebExperienceProps = CfnWebExperienceProps.builder()
  * .applicationId("applicationId")
  * // the properties below are optional
+ * .browserExtensionConfiguration(BrowserExtensionConfigurationProperty.builder()
+ * .enabledBrowserExtensions(List.of("enabledBrowserExtensions"))
+ * .build())
  * .customizationConfiguration(CustomizationConfigurationProperty.builder()
  * .customCssUrl("customCssUrl")
  * .faviconUrl("faviconUrl")
@@ -64,6 +67,16 @@ public interface CfnWebExperienceProps {
   public fun applicationId(): String
 
   /**
+   * The container for browser extension configuration for an Amazon Q Business web experience.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-browserextensionconfiguration)
+   */
+  public fun browserExtensionConfiguration(): Any? = unwrap(this).getBrowserExtensionConfiguration()
+
+  /**
+   * Contains the configuration information to customize the logo, font, and color of an Amazon Q
+   * Business web experience with individual files for each property or a CSS file for them all.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-customizationconfiguration)
    */
   public fun customizationConfiguration(): Any? = unwrap(this).getCustomizationConfiguration()
@@ -153,18 +166,46 @@ public interface CfnWebExperienceProps {
     public fun applicationId(applicationId: String)
 
     /**
-     * @param customizationConfiguration the value to be set.
+     * @param browserExtensionConfiguration The container for browser extension configuration for an
+     * Amazon Q Business web experience.
+     */
+    public fun browserExtensionConfiguration(browserExtensionConfiguration: IResolvable)
+
+    /**
+     * @param browserExtensionConfiguration The container for browser extension configuration for an
+     * Amazon Q Business web experience.
+     */
+    public
+        fun browserExtensionConfiguration(browserExtensionConfiguration: CfnWebExperience.BrowserExtensionConfigurationProperty)
+
+    /**
+     * @param browserExtensionConfiguration The container for browser extension configuration for an
+     * Amazon Q Business web experience.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("656b6581f1d873f54eae80f9d335e5057f58bd4c69548390f8fbfda673e27e55")
+    public
+        fun browserExtensionConfiguration(browserExtensionConfiguration: CfnWebExperience.BrowserExtensionConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * @param customizationConfiguration Contains the configuration information to customize the
+     * logo, font, and color of an Amazon Q Business web experience with individual files for each
+     * property or a CSS file for them all.
      */
     public fun customizationConfiguration(customizationConfiguration: IResolvable)
 
     /**
-     * @param customizationConfiguration the value to be set.
+     * @param customizationConfiguration Contains the configuration information to customize the
+     * logo, font, and color of an Amazon Q Business web experience with individual files for each
+     * property or a CSS file for them all.
      */
     public
         fun customizationConfiguration(customizationConfiguration: CfnWebExperience.CustomizationConfigurationProperty)
 
     /**
-     * @param customizationConfiguration the value to be set.
+     * @param customizationConfiguration Contains the configuration information to customize the
+     * logo, font, and color of an Amazon Q Business web experience with individual files for each
+     * property or a CSS file for them all.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4860db948daf2b7d44698045a45faa789e06387b6512a062b8939be18ff95e2e")
@@ -277,14 +318,46 @@ public interface CfnWebExperienceProps {
     }
 
     /**
-     * @param customizationConfiguration the value to be set.
+     * @param browserExtensionConfiguration The container for browser extension configuration for an
+     * Amazon Q Business web experience.
+     */
+    override fun browserExtensionConfiguration(browserExtensionConfiguration: IResolvable) {
+      cdkBuilder.browserExtensionConfiguration(browserExtensionConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param browserExtensionConfiguration The container for browser extension configuration for an
+     * Amazon Q Business web experience.
+     */
+    override
+        fun browserExtensionConfiguration(browserExtensionConfiguration: CfnWebExperience.BrowserExtensionConfigurationProperty) {
+      cdkBuilder.browserExtensionConfiguration(browserExtensionConfiguration.let(CfnWebExperience.BrowserExtensionConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param browserExtensionConfiguration The container for browser extension configuration for an
+     * Amazon Q Business web experience.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("656b6581f1d873f54eae80f9d335e5057f58bd4c69548390f8fbfda673e27e55")
+    override
+        fun browserExtensionConfiguration(browserExtensionConfiguration: CfnWebExperience.BrowserExtensionConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        browserExtensionConfiguration(CfnWebExperience.BrowserExtensionConfigurationProperty(browserExtensionConfiguration))
+
+    /**
+     * @param customizationConfiguration Contains the configuration information to customize the
+     * logo, font, and color of an Amazon Q Business web experience with individual files for each
+     * property or a CSS file for them all.
      */
     override fun customizationConfiguration(customizationConfiguration: IResolvable) {
       cdkBuilder.customizationConfiguration(customizationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param customizationConfiguration the value to be set.
+     * @param customizationConfiguration Contains the configuration information to customize the
+     * logo, font, and color of an Amazon Q Business web experience with individual files for each
+     * property or a CSS file for them all.
      */
     override
         fun customizationConfiguration(customizationConfiguration: CfnWebExperience.CustomizationConfigurationProperty) {
@@ -292,7 +365,9 @@ public interface CfnWebExperienceProps {
     }
 
     /**
-     * @param customizationConfiguration the value to be set.
+     * @param customizationConfiguration Contains the configuration information to customize the
+     * logo, font, and color of an Amazon Q Business web experience with individual files for each
+     * property or a CSS file for them all.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4860db948daf2b7d44698045a45faa789e06387b6512a062b8939be18ff95e2e")
@@ -430,6 +505,17 @@ public interface CfnWebExperienceProps {
     override fun applicationId(): String = unwrap(this).getApplicationId()
 
     /**
+     * The container for browser extension configuration for an Amazon Q Business web experience.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-browserextensionconfiguration)
+     */
+    override fun browserExtensionConfiguration(): Any? =
+        unwrap(this).getBrowserExtensionConfiguration()
+
+    /**
+     * Contains the configuration information to customize the logo, font, and color of an Amazon Q
+     * Business web experience with individual files for each property or a CSS file for them all.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-customizationconfiguration)
      */
     override fun customizationConfiguration(): Any? = unwrap(this).getCustomizationConfiguration()

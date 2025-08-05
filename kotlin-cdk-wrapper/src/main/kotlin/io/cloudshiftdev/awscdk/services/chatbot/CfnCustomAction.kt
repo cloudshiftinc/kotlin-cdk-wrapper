@@ -22,8 +22,13 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The `AWS::Chatbot::CustomAction` resource creates a custom action that can be invoked as an alias
- * or as a button on a notification.
+ * AWS Chatbot is now  .
+ *
+ * [Learn more](https://docs.aws.amazon.com//chatbot/latest/adminguide/service-rename.html)
+ *
+ *
+ * `Type` attribute values remain unchanged.
+ *
  *
  * Example:
  *
@@ -210,7 +215,7 @@ public open class CfnCustomAction(
     /**
      * The name used to invoke this action in a chat channel.
      *
-     * For example, `&#64;aws run my-alias` .
+     * For example, `&#64;Amazon Q run my-alias` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-customaction.html#cfn-chatbot-customaction-aliasname)
      * @param aliasName The name used to invoke this action in a chat channel. 
@@ -312,7 +317,7 @@ public open class CfnCustomAction(
     /**
      * The name used to invoke this action in a chat channel.
      *
-     * For example, `&#64;aws run my-alias` .
+     * For example, `&#64;Amazon Q run my-alias` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-customaction.html#cfn-chatbot-customaction-aliasname)
      * @param aliasName The name used to invoke this action in a chat channel. 
@@ -429,6 +434,10 @@ public open class CfnCustomAction(
   }
 
   /**
+   * AWS Chatbot is now  . [Learn
+   * more](https://docs.aws.amazon.com//chatbot/latest/adminguide/service-rename.html) &gt;  &gt;
+   * `Type` attribute values remain unchanged.
+   *
    * A criteria for when a button should be shown based on values in the notification.
    *
    * Example:
@@ -573,6 +582,10 @@ public open class CfnCustomAction(
   }
 
   /**
+   * AWS Chatbot is now  . [Learn
+   * more](https://docs.aws.amazon.com//chatbot/latest/adminguide/service-rename.html) &gt;  &gt;
+   * `Type` attribute values remain unchanged.
+   *
    * Defines when a custom action button should be attached to a notification.
    *
    * Example:
@@ -664,12 +677,12 @@ public open class CfnCustomAction(
       /**
        * @param variables The variables to extract from the notification.
        */
-      public fun variables(variables: IResolvable)
+      public fun variables(variables: Map<String, String>)
 
       /**
        * @param variables The variables to extract from the notification.
        */
-      public fun variables(variables: Map<String, String>)
+      public fun variables(variables: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -718,15 +731,15 @@ public open class CfnCustomAction(
       /**
        * @param variables The variables to extract from the notification.
        */
-      override fun variables(variables: IResolvable) {
-        cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
+      override fun variables(variables: Map<String, String>) {
+        cdkBuilder.variables(variables)
       }
 
       /**
        * @param variables The variables to extract from the notification.
        */
-      override fun variables(variables: Map<String, String>) {
-        cdkBuilder.variables(variables)
+      override fun variables(variables: IResolvable) {
+        cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -786,6 +799,10 @@ public open class CfnCustomAction(
   }
 
   /**
+   * AWS Chatbot is now  . [Learn
+   * more](https://docs.aws.amazon.com//chatbot/latest/adminguide/service-rename.html) &gt;  &gt;
+   * `Type` attribute values remain unchanged.
+   *
    * The definition of the command to run when invoked as an alias or as an action button.
    *
    * Example:

@@ -55,11 +55,21 @@ public interface CfnManagedLoginBrandingProps {
   public fun assets(): Any? = unwrap(this).getAssets()
 
   /**
+   * The app client that you want to assign the branding style to.
+   *
+   * Each style is linked to an app client until you delete it.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-managedloginbranding.html#cfn-cognito-managedloginbranding-clientid)
    */
   public fun clientId(): String? = unwrap(this).getClientId()
 
   /**
+   * When `true` , returns values for branding options that are unchanged from Amazon Cognito
+   * defaults.
+   *
+   * When `false` or when you omit this parameter, returns only values that you customized in your
+   * branding style.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-managedloginbranding.html#cfn-cognito-managedloginbranding-returnmergedresources)
    */
   public fun returnMergedResources(): Any? = unwrap(this).getReturnMergedResources()
@@ -75,7 +85,11 @@ public interface CfnManagedLoginBrandingProps {
   /**
    * When true, applies the default branding style options.
    *
-   * This option reverts to a "blank" style that you can modify later in the branding designer.
+   * This option reverts to default style options that are managed by Amazon Cognito. You can modify
+   * them later in the branding editor.
+   *
+   * When you specify `true` for this option, you must also omit values for `Settings` and `Assets`
+   * in the request.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-managedloginbranding.html#cfn-cognito-managedloginbranding-usecognitoprovidedvalues)
    */
@@ -118,17 +132,24 @@ public interface CfnManagedLoginBrandingProps {
     public fun assets(vararg assets: Any)
 
     /**
-     * @param clientId the value to be set.
+     * @param clientId The app client that you want to assign the branding style to.
+     * Each style is linked to an app client until you delete it.
      */
     public fun clientId(clientId: String)
 
     /**
-     * @param returnMergedResources the value to be set.
+     * @param returnMergedResources When `true` , returns values for branding options that are
+     * unchanged from Amazon Cognito defaults.
+     * When `false` or when you omit this parameter, returns only values that you customized in your
+     * branding style.
      */
     public fun returnMergedResources(returnMergedResources: Boolean)
 
     /**
-     * @param returnMergedResources the value to be set.
+     * @param returnMergedResources When `true` , returns values for branding options that are
+     * unchanged from Amazon Cognito defaults.
+     * When `false` or when you omit this parameter, returns only values that you customized in your
+     * branding style.
      */
     public fun returnMergedResources(returnMergedResources: IResolvable)
 
@@ -140,13 +161,21 @@ public interface CfnManagedLoginBrandingProps {
 
     /**
      * @param useCognitoProvidedValues When true, applies the default branding style options.
-     * This option reverts to a "blank" style that you can modify later in the branding designer.
+     * This option reverts to default style options that are managed by Amazon Cognito. You can
+     * modify them later in the branding editor.
+     *
+     * When you specify `true` for this option, you must also omit values for `Settings` and
+     * `Assets` in the request.
      */
     public fun useCognitoProvidedValues(useCognitoProvidedValues: Boolean)
 
     /**
      * @param useCognitoProvidedValues When true, applies the default branding style options.
-     * This option reverts to a "blank" style that you can modify later in the branding designer.
+     * This option reverts to default style options that are managed by Amazon Cognito. You can
+     * modify them later in the branding editor.
+     *
+     * When you specify `true` for this option, you must also omit values for `Settings` and
+     * `Assets` in the request.
      */
     public fun useCognitoProvidedValues(useCognitoProvidedValues: IResolvable)
 
@@ -190,21 +219,28 @@ public interface CfnManagedLoginBrandingProps {
     override fun assets(vararg assets: Any): Unit = assets(assets.toList())
 
     /**
-     * @param clientId the value to be set.
+     * @param clientId The app client that you want to assign the branding style to.
+     * Each style is linked to an app client until you delete it.
      */
     override fun clientId(clientId: String) {
       cdkBuilder.clientId(clientId)
     }
 
     /**
-     * @param returnMergedResources the value to be set.
+     * @param returnMergedResources When `true` , returns values for branding options that are
+     * unchanged from Amazon Cognito defaults.
+     * When `false` or when you omit this parameter, returns only values that you customized in your
+     * branding style.
      */
     override fun returnMergedResources(returnMergedResources: Boolean) {
       cdkBuilder.returnMergedResources(returnMergedResources)
     }
 
     /**
-     * @param returnMergedResources the value to be set.
+     * @param returnMergedResources When `true` , returns values for branding options that are
+     * unchanged from Amazon Cognito defaults.
+     * When `false` or when you omit this parameter, returns only values that you customized in your
+     * branding style.
      */
     override fun returnMergedResources(returnMergedResources: IResolvable) {
       cdkBuilder.returnMergedResources(returnMergedResources.let(IResolvable.Companion::unwrap))
@@ -220,7 +256,11 @@ public interface CfnManagedLoginBrandingProps {
 
     /**
      * @param useCognitoProvidedValues When true, applies the default branding style options.
-     * This option reverts to a "blank" style that you can modify later in the branding designer.
+     * This option reverts to default style options that are managed by Amazon Cognito. You can
+     * modify them later in the branding editor.
+     *
+     * When you specify `true` for this option, you must also omit values for `Settings` and
+     * `Assets` in the request.
      */
     override fun useCognitoProvidedValues(useCognitoProvidedValues: Boolean) {
       cdkBuilder.useCognitoProvidedValues(useCognitoProvidedValues)
@@ -228,7 +268,11 @@ public interface CfnManagedLoginBrandingProps {
 
     /**
      * @param useCognitoProvidedValues When true, applies the default branding style options.
-     * This option reverts to a "blank" style that you can modify later in the branding designer.
+     * This option reverts to default style options that are managed by Amazon Cognito. You can
+     * modify them later in the branding editor.
+     *
+     * When you specify `true` for this option, you must also omit values for `Settings` and
+     * `Assets` in the request.
      */
     override fun useCognitoProvidedValues(useCognitoProvidedValues: IResolvable) {
       cdkBuilder.useCognitoProvidedValues(useCognitoProvidedValues.let(IResolvable.Companion::unwrap))
@@ -260,11 +304,21 @@ public interface CfnManagedLoginBrandingProps {
     override fun assets(): Any? = unwrap(this).getAssets()
 
     /**
+     * The app client that you want to assign the branding style to.
+     *
+     * Each style is linked to an app client until you delete it.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-managedloginbranding.html#cfn-cognito-managedloginbranding-clientid)
      */
     override fun clientId(): String? = unwrap(this).getClientId()
 
     /**
+     * When `true` , returns values for branding options that are unchanged from Amazon Cognito
+     * defaults.
+     *
+     * When `false` or when you omit this parameter, returns only values that you customized in your
+     * branding style.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-managedloginbranding.html#cfn-cognito-managedloginbranding-returnmergedresources)
      */
     override fun returnMergedResources(): Any? = unwrap(this).getReturnMergedResources()
@@ -280,7 +334,11 @@ public interface CfnManagedLoginBrandingProps {
     /**
      * When true, applies the default branding style options.
      *
-     * This option reverts to a "blank" style that you can modify later in the branding designer.
+     * This option reverts to default style options that are managed by Amazon Cognito. You can
+     * modify them later in the branding editor.
+     *
+     * When you specify `true` for this option, you must also omit values for `Settings` and
+     * `Assets` in the request.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-managedloginbranding.html#cfn-cognito-managedloginbranding-usecognitoprovidedvalues)
      */

@@ -155,6 +155,8 @@ public open class CfnPublicKey(
     /**
      * The public portion of a customer-generated key pair.
      *
+     * Note that this field is required to create the AWS::IVS::PublicKey resource.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-publickey.html#cfn-ivs-publickey-publickeymaterial)
      * @param publicKeyMaterial The public portion of a customer-generated key pair. 
      */
@@ -198,6 +200,8 @@ public open class CfnPublicKey(
 
     /**
      * The public portion of a customer-generated key pair.
+     *
+     * Note that this field is required to create the AWS::IVS::PublicKey resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-publickey.html#cfn-ivs-publickey-publickeymaterial)
      * @param publicKeyMaterial The public portion of a customer-generated key pair. 

@@ -18,17 +18,17 @@ import kotlin.jvm.JvmName
  * Instance.Builder.create(this, "LatestAl2023")
  * .vpc(vpc)
  * .instanceType(InstanceType.of(InstanceClass.C7G, InstanceSize.LARGE))
- * .machineImage(MachineImage.latestAmazonLinux2023(AmazonLinux2023ImageSsmParameterProps.builder()
- * .cachedInContext(true)
- * .build()))
+ * // context cache is turned on by default
+ * .machineImage(AmazonLinux2023ImageSsmParameter.Builder.create()
+ * .kernel(AmazonLinux2023Kernel.CDK_LATEST)
+ * .build())
  * .build();
  * // or
  * // or
  * Instance.Builder.create(this, "LatestAl2023")
  * .vpc(vpc)
  * .instanceType(InstanceType.of(InstanceClass.C7G, InstanceSize.LARGE))
- * // context cache is turned on by default
- * .machineImage(new AmazonLinux2023ImageSsmParameter())
+ * .machineImage(MachineImage.latestAmazonLinux2023())
  * .build();
  * ```
  */
@@ -51,6 +51,16 @@ public open class AmazonLinux2023ImageSsmParameter(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     *
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key. 
+     */
+    public fun additionalCacheKey(additionalCacheKey: String)
+
     /**
      * Whether the AMI ID is cached to be stable between deployments.
      *
@@ -115,6 +125,18 @@ public open class AmazonLinux2023ImageSsmParameter(
     private val cdkBuilder:
         software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameter.Builder =
         software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameter.Builder.create()
+
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     *
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key. 
+     */
+    override fun additionalCacheKey(additionalCacheKey: String) {
+      cdkBuilder.additionalCacheKey(additionalCacheKey)
+    }
 
     /**
      * Whether the AMI ID is cached to be stable between deployments.

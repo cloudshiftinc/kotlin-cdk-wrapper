@@ -157,6 +157,8 @@ public open class CfnPlaybackKeyPair(
     /**
      * The public portion of a customer-generated key pair.
      *
+     * Note that this field is required to create the AWS::IVS::PlaybackKeyPair resource.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-playbackkeypair.html#cfn-ivs-playbackkeypair-publickeymaterial)
      * @param publicKeyMaterial The public portion of a customer-generated key pair. 
      */
@@ -208,6 +210,8 @@ public open class CfnPlaybackKeyPair(
 
     /**
      * The public portion of a customer-generated key pair.
+     *
+     * Note that this field is required to create the AWS::IVS::PlaybackKeyPair resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-playbackkeypair.html#cfn-ivs-playbackkeypair-publickeymaterial)
      * @param publicKeyMaterial The public portion of a customer-generated key pair. 

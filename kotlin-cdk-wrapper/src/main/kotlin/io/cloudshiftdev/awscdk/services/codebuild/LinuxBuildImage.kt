@@ -149,6 +149,18 @@ public open class LinuxBuildImage(
     public val AMAZON_LINUX_2_CORETTO_8: IBuildImage =
         IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxBuildImage.AMAZON_LINUX_2_CORETTO_8)
 
+    public val AMAZON_LINUX_2023_4: IBuildImage =
+        IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxBuildImage.AMAZON_LINUX_2023_4)
+
+    public val AMAZON_LINUX_2023_5: IBuildImage =
+        IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxBuildImage.AMAZON_LINUX_2023_5)
+
+    public val AMAZON_LINUX_2023_CORETTO_11: IBuildImage =
+        IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxBuildImage.AMAZON_LINUX_2023_CORETTO_11)
+
+    public val AMAZON_LINUX_2023_CORETTO_8: IBuildImage =
+        IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxBuildImage.AMAZON_LINUX_2023_CORETTO_8)
+
     public val STANDARD_1_0: IBuildImage =
         IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxBuildImage.STANDARD_1_0)
 

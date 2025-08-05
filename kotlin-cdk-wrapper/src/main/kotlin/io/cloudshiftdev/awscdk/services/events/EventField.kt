@@ -19,7 +19,7 @@ import kotlin.collections.List
  * LogGroup logGroup;
  * Rule rule;
  * rule.addTarget(CloudWatchLogGroup.Builder.create(logGroup)
- * .logEvent(LogGroupTargetInput.fromObject(LogGroupTargetInputOptions.builder()
+ * .logEvent(LogGroupTargetInput.fromObjectV2(LogGroupTargetInputOptions.builder()
  * .timestamp(EventField.fromPath("$.time"))
  * .message(EventField.fromPath("$.detail-type"))
  * .build()))

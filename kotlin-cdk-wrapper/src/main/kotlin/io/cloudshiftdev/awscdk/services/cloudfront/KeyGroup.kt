@@ -145,6 +145,9 @@ public open class KeyGroup(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.cloudfront.KeyGroup.PROPERTY_INJECTION_ID
+
     public fun fromKeyGroupId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

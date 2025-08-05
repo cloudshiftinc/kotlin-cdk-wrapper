@@ -25,10 +25,10 @@ import kotlin.collections.Map
  * CfnDeploymentProps cfnDeploymentProps = CfnDeploymentProps.builder()
  * .deploymentPatternName("deploymentPatternName")
  * .name("name")
- * .specifications(Map.of(
- * "specificationsKey", "specifications"))
  * .workloadName("workloadName")
  * // the properties below are optional
+ * .specifications(Map.of(
+ * "specificationsKey", "specifications"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -66,7 +66,7 @@ public interface CfnDeploymentProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-launchwizard-deployment.html#cfn-launchwizard-deployment-specifications)
    */
-  public fun specifications(): Any
+  public fun specifications(): Any? = unwrap(this).getSpecifications()
 
   /**
    * Information about the tags attached to a deployment.
@@ -98,19 +98,7 @@ public interface CfnDeploymentProps {
     public fun name(name: String)
 
     /**
-     * @param specifications The settings specified for the deployment. 
-     * These settings define how to deploy and configure your resources created by the deployment.
-     * For more information about the specifications required for creating a deployment for a SAP
-     * workload, see [SAP deployment
-     * specifications](https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html)
-     * . To retrieve the specifications required to create a deployment for other workloads, use the
-     * [`GetWorkloadDeploymentPattern`](https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html)
-     * operation.
-     */
-    public fun specifications(specifications: IResolvable)
-
-    /**
-     * @param specifications The settings specified for the deployment. 
+     * @param specifications The settings specified for the deployment.
      * These settings define how to deploy and configure your resources created by the deployment.
      * For more information about the specifications required for creating a deployment for a SAP
      * workload, see [SAP deployment
@@ -120,6 +108,18 @@ public interface CfnDeploymentProps {
      * operation.
      */
     public fun specifications(specifications: Map<String, String>)
+
+    /**
+     * @param specifications The settings specified for the deployment.
+     * These settings define how to deploy and configure your resources created by the deployment.
+     * For more information about the specifications required for creating a deployment for a SAP
+     * workload, see [SAP deployment
+     * specifications](https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html)
+     * . To retrieve the specifications required to create a deployment for other workloads, use the
+     * [`GetWorkloadDeploymentPattern`](https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html)
+     * operation.
+     */
+    public fun specifications(specifications: IResolvable)
 
     /**
      * @param tags Information about the tags attached to a deployment.
@@ -156,21 +156,7 @@ public interface CfnDeploymentProps {
     }
 
     /**
-     * @param specifications The settings specified for the deployment. 
-     * These settings define how to deploy and configure your resources created by the deployment.
-     * For more information about the specifications required for creating a deployment for a SAP
-     * workload, see [SAP deployment
-     * specifications](https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html)
-     * . To retrieve the specifications required to create a deployment for other workloads, use the
-     * [`GetWorkloadDeploymentPattern`](https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html)
-     * operation.
-     */
-    override fun specifications(specifications: IResolvable) {
-      cdkBuilder.specifications(specifications.let(IResolvable.Companion::unwrap))
-    }
-
-    /**
-     * @param specifications The settings specified for the deployment. 
+     * @param specifications The settings specified for the deployment.
      * These settings define how to deploy and configure your resources created by the deployment.
      * For more information about the specifications required for creating a deployment for a SAP
      * workload, see [SAP deployment
@@ -181,6 +167,20 @@ public interface CfnDeploymentProps {
      */
     override fun specifications(specifications: Map<String, String>) {
       cdkBuilder.specifications(specifications)
+    }
+
+    /**
+     * @param specifications The settings specified for the deployment.
+     * These settings define how to deploy and configure your resources created by the deployment.
+     * For more information about the specifications required for creating a deployment for a SAP
+     * workload, see [SAP deployment
+     * specifications](https://docs.aws.amazon.com/launchwizard/latest/APIReference/launch-wizard-specifications-sap.html)
+     * . To retrieve the specifications required to create a deployment for other workloads, use the
+     * [`GetWorkloadDeploymentPattern`](https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_GetWorkloadDeploymentPattern.html)
+     * operation.
+     */
+    override fun specifications(specifications: IResolvable) {
+      cdkBuilder.specifications(specifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -237,7 +237,7 @@ public interface CfnDeploymentProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-launchwizard-deployment.html#cfn-launchwizard-deployment-specifications)
      */
-    override fun specifications(): Any = unwrap(this).getSpecifications()
+    override fun specifications(): Any? = unwrap(this).getSpecifications()
 
     /**
      * Information about the tags attached to a deployment.

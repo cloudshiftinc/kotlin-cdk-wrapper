@@ -136,8 +136,18 @@ public open class StateGraph(
 
   /**
    * Return the Amazon States Language JSON for this graph.
+   *
+   * @param queryLanguage
    */
   public open fun toGraphJson(): ObjectNode = unwrap(this).toGraphJson()
+
+  /**
+   * Return the Amazon States Language JSON for this graph.
+   *
+   * @param queryLanguage
+   */
+  public open fun toGraphJson(queryLanguage: QueryLanguage): ObjectNode =
+      unwrap(this).toGraphJson(queryLanguage.let(QueryLanguage.Companion::unwrap))
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.StateGraph):

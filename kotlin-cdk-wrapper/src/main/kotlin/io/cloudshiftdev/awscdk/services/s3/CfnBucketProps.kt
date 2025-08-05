@@ -102,8 +102,8 @@ public interface CfnBucketProps {
    * (-) and must follow [Amazon S3 bucket restrictions and
    * limitations](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html) . For more
    * information, see [Rules for naming Amazon S3
-   * buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html#bucketnamingrules)
-   * in the *Amazon S3 User Guide* .
+   * buckets](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) in the
+   * *Amazon S3 User Guide* .
    *
    *
    * If you specify a name, you can't perform updates that require replacement of this resource. You
@@ -135,7 +135,7 @@ public interface CfnBucketProps {
       unwrap(this).getIntelligentTieringConfigurations()
 
   /**
-   * Specifies the inventory configuration for an Amazon S3 bucket.
+   * Specifies the S3 Inventory configuration for an Amazon S3 bucket.
    *
    * For more information, see [GET Bucket
    * inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in
@@ -162,6 +162,20 @@ public interface CfnBucketProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-loggingconfiguration)
    */
   public fun loggingConfiguration(): Any? = unwrap(this).getLoggingConfiguration()
+
+  /**
+   * The S3 Metadata configuration for a general purpose bucket.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-metadataconfiguration)
+   */
+  public fun metadataConfiguration(): Any? = unwrap(this).getMetadataConfiguration()
+
+  /**
+   * The metadata table configuration of an Amazon S3 general purpose bucket.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-metadatatableconfiguration)
+   */
+  public fun metadataTableConfiguration(): Any? = unwrap(this).getMetadataTableConfiguration()
 
   /**
    * Specifies a metrics configuration for the CloudWatch request metrics (specified by the metrics
@@ -400,8 +414,8 @@ public interface CfnBucketProps {
      * dashes (-) and must follow [Amazon S3 bucket restrictions and
      * limitations](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html) . For more
      * information, see [Rules for naming Amazon S3
-     * buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html#bucketnamingrules)
-     * in the *Amazon S3 User Guide* .
+     * buckets](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) in the
+     * *Amazon S3 User Guide* .
      *
      *
      * If you specify a name, you can't perform updates that require replacement of this resource.
@@ -459,7 +473,8 @@ public interface CfnBucketProps {
     public fun intelligentTieringConfigurations(vararg intelligentTieringConfigurations: Any)
 
     /**
-     * @param inventoryConfigurations Specifies the inventory configuration for an Amazon S3 bucket.
+     * @param inventoryConfigurations Specifies the S3 Inventory configuration for an Amazon S3
+     * bucket.
      * For more information, see [GET Bucket
      * inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in
      * the *Amazon S3 API Reference* .
@@ -467,7 +482,8 @@ public interface CfnBucketProps {
     public fun inventoryConfigurations(inventoryConfigurations: IResolvable)
 
     /**
-     * @param inventoryConfigurations Specifies the inventory configuration for an Amazon S3 bucket.
+     * @param inventoryConfigurations Specifies the S3 Inventory configuration for an Amazon S3
+     * bucket.
      * For more information, see [GET Bucket
      * inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in
      * the *Amazon S3 API Reference* .
@@ -475,7 +491,8 @@ public interface CfnBucketProps {
     public fun inventoryConfigurations(inventoryConfigurations: List<Any>)
 
     /**
-     * @param inventoryConfigurations Specifies the inventory configuration for an Amazon S3 bucket.
+     * @param inventoryConfigurations Specifies the S3 Inventory configuration for an Amazon S3
+     * bucket.
      * For more information, see [GET Bucket
      * inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in
      * the *Amazon S3 API Reference* .
@@ -530,6 +547,46 @@ public interface CfnBucketProps {
     @JvmName("40da739fe76f56ffb817546c21a42c6694444a7ba3ad5b2248e09c9dadea0727")
     public
         fun loggingConfiguration(loggingConfiguration: CfnBucket.LoggingConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * @param metadataConfiguration The S3 Metadata configuration for a general purpose bucket.
+     */
+    public fun metadataConfiguration(metadataConfiguration: IResolvable)
+
+    /**
+     * @param metadataConfiguration The S3 Metadata configuration for a general purpose bucket.
+     */
+    public fun metadataConfiguration(metadataConfiguration: CfnBucket.MetadataConfigurationProperty)
+
+    /**
+     * @param metadataConfiguration The S3 Metadata configuration for a general purpose bucket.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("461b0876a30b8d0baad73369c146ddb84b901a72a8925851651466e473d43d70")
+    public
+        fun metadataConfiguration(metadataConfiguration: CfnBucket.MetadataConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * @param metadataTableConfiguration The metadata table configuration of an Amazon S3 general
+     * purpose bucket.
+     */
+    public fun metadataTableConfiguration(metadataTableConfiguration: IResolvable)
+
+    /**
+     * @param metadataTableConfiguration The metadata table configuration of an Amazon S3 general
+     * purpose bucket.
+     */
+    public
+        fun metadataTableConfiguration(metadataTableConfiguration: CfnBucket.MetadataTableConfigurationProperty)
+
+    /**
+     * @param metadataTableConfiguration The metadata table configuration of an Amazon S3 general
+     * purpose bucket.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d87f52e613804584abb10c7afbfded1a09b83937d21b9d7ec0e4acc623e9054f")
+    public
+        fun metadataTableConfiguration(metadataTableConfiguration: CfnBucket.MetadataTableConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param metricsConfigurations Specifies a metrics configuration for the CloudWatch request
@@ -952,8 +1009,8 @@ public interface CfnBucketProps {
      * dashes (-) and must follow [Amazon S3 bucket restrictions and
      * limitations](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html) . For more
      * information, see [Rules for naming Amazon S3
-     * buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html#bucketnamingrules)
-     * in the *Amazon S3 User Guide* .
+     * buckets](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) in the
+     * *Amazon S3 User Guide* .
      *
      *
      * If you specify a name, you can't perform updates that require replacement of this resource.
@@ -1023,7 +1080,8 @@ public interface CfnBucketProps {
         Unit = intelligentTieringConfigurations(intelligentTieringConfigurations.toList())
 
     /**
-     * @param inventoryConfigurations Specifies the inventory configuration for an Amazon S3 bucket.
+     * @param inventoryConfigurations Specifies the S3 Inventory configuration for an Amazon S3
+     * bucket.
      * For more information, see [GET Bucket
      * inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in
      * the *Amazon S3 API Reference* .
@@ -1033,7 +1091,8 @@ public interface CfnBucketProps {
     }
 
     /**
-     * @param inventoryConfigurations Specifies the inventory configuration for an Amazon S3 bucket.
+     * @param inventoryConfigurations Specifies the S3 Inventory configuration for an Amazon S3
+     * bucket.
      * For more information, see [GET Bucket
      * inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in
      * the *Amazon S3 API Reference* .
@@ -1043,7 +1102,8 @@ public interface CfnBucketProps {
     }
 
     /**
-     * @param inventoryConfigurations Specifies the inventory configuration for an Amazon S3 bucket.
+     * @param inventoryConfigurations Specifies the S3 Inventory configuration for an Amazon S3
+     * bucket.
      * For more information, see [GET Bucket
      * inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in
      * the *Amazon S3 API Reference* .
@@ -1111,6 +1171,58 @@ public interface CfnBucketProps {
     override
         fun loggingConfiguration(loggingConfiguration: CfnBucket.LoggingConfigurationProperty.Builder.() -> Unit):
         Unit = loggingConfiguration(CfnBucket.LoggingConfigurationProperty(loggingConfiguration))
+
+    /**
+     * @param metadataConfiguration The S3 Metadata configuration for a general purpose bucket.
+     */
+    override fun metadataConfiguration(metadataConfiguration: IResolvable) {
+      cdkBuilder.metadataConfiguration(metadataConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param metadataConfiguration The S3 Metadata configuration for a general purpose bucket.
+     */
+    override
+        fun metadataConfiguration(metadataConfiguration: CfnBucket.MetadataConfigurationProperty) {
+      cdkBuilder.metadataConfiguration(metadataConfiguration.let(CfnBucket.MetadataConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param metadataConfiguration The S3 Metadata configuration for a general purpose bucket.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("461b0876a30b8d0baad73369c146ddb84b901a72a8925851651466e473d43d70")
+    override
+        fun metadataConfiguration(metadataConfiguration: CfnBucket.MetadataConfigurationProperty.Builder.() -> Unit):
+        Unit = metadataConfiguration(CfnBucket.MetadataConfigurationProperty(metadataConfiguration))
+
+    /**
+     * @param metadataTableConfiguration The metadata table configuration of an Amazon S3 general
+     * purpose bucket.
+     */
+    override fun metadataTableConfiguration(metadataTableConfiguration: IResolvable) {
+      cdkBuilder.metadataTableConfiguration(metadataTableConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param metadataTableConfiguration The metadata table configuration of an Amazon S3 general
+     * purpose bucket.
+     */
+    override
+        fun metadataTableConfiguration(metadataTableConfiguration: CfnBucket.MetadataTableConfigurationProperty) {
+      cdkBuilder.metadataTableConfiguration(metadataTableConfiguration.let(CfnBucket.MetadataTableConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param metadataTableConfiguration The metadata table configuration of an Amazon S3 general
+     * purpose bucket.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d87f52e613804584abb10c7afbfded1a09b83937d21b9d7ec0e4acc623e9054f")
+    override
+        fun metadataTableConfiguration(metadataTableConfiguration: CfnBucket.MetadataTableConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        metadataTableConfiguration(CfnBucket.MetadataTableConfigurationProperty(metadataTableConfiguration))
 
     /**
      * @param metricsConfigurations Specifies a metrics configuration for the CloudWatch request
@@ -1520,8 +1632,8 @@ public interface CfnBucketProps {
      * dashes (-) and must follow [Amazon S3 bucket restrictions and
      * limitations](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html) . For more
      * information, see [Rules for naming Amazon S3
-     * buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html#bucketnamingrules)
-     * in the *Amazon S3 User Guide* .
+     * buckets](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) in the
+     * *Amazon S3 User Guide* .
      *
      *
      * If you specify a name, you can't perform updates that require replacement of this resource.
@@ -1553,7 +1665,7 @@ public interface CfnBucketProps {
         unwrap(this).getIntelligentTieringConfigurations()
 
     /**
-     * Specifies the inventory configuration for an Amazon S3 bucket.
+     * Specifies the S3 Inventory configuration for an Amazon S3 bucket.
      *
      * For more information, see [GET Bucket
      * inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in
@@ -1580,6 +1692,20 @@ public interface CfnBucketProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-loggingconfiguration)
      */
     override fun loggingConfiguration(): Any? = unwrap(this).getLoggingConfiguration()
+
+    /**
+     * The S3 Metadata configuration for a general purpose bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-metadataconfiguration)
+     */
+    override fun metadataConfiguration(): Any? = unwrap(this).getMetadataConfiguration()
+
+    /**
+     * The metadata table configuration of an Amazon S3 general purpose bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-metadatatableconfiguration)
+     */
+    override fun metadataTableConfiguration(): Any? = unwrap(this).getMetadataTableConfiguration()
 
     /**
      * Specifies a metrics configuration for the CloudWatch request metrics (specified by the

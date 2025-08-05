@@ -50,6 +50,7 @@ import kotlin.jvm.JvmName
  * .params(Map.of(
  * "paramsKey", "params"))
  * .build())
+ * .displayName("displayName")
  * .exclude(List.of("exclude"))
  * .extraHash("extraHash")
  * .file("file")
@@ -211,6 +212,31 @@ public open class AssetImage(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3dbd4b2abcd3ab31ce315d550cfbf46c6067f6871850d113e1366ca33f1b6cdf")
     public fun cacheTo(cacheTo: DockerCacheOption.Builder.() -> Unit)
+
+    /**
+     * A display name for this asset.
+     *
+     * If supplied, the display name will be used in locations where the asset
+     * identifier is printed, like in the CLI progress information. If the same
+     * asset is added multiple times, the display name of the first occurrence is
+     * used.
+     *
+     * If `assetName` is given, it will also be used as the default `displayName`.
+     * Otherwise, the default is the construct path of the ImageAsset construct,
+     * with respect to the enclosing stack. If the asset is produced by a
+     * construct helper function (such as `lambda.Code.fromAssetImage()`), this
+     * will look like `MyFunction/AssetImage`.
+     *
+     * We use the stack-relative construct path so that in the common case where
+     * you have multiple stacks with the same asset, we won't show something like
+     * `/MyBetaStack/MyFunction/Code` when you are actually deploying to
+     * production.
+     *
+     * Default: - Stack-relative construct path
+     *
+     * @param displayName A display name for this asset. 
+     */
+    public fun displayName(displayName: String)
 
     /**
      * File paths matching the patterns will be excluded.
@@ -476,6 +502,33 @@ public open class AssetImage(
     @JvmName("3dbd4b2abcd3ab31ce315d550cfbf46c6067f6871850d113e1366ca33f1b6cdf")
     override fun cacheTo(cacheTo: DockerCacheOption.Builder.() -> Unit): Unit =
         cacheTo(DockerCacheOption(cacheTo))
+
+    /**
+     * A display name for this asset.
+     *
+     * If supplied, the display name will be used in locations where the asset
+     * identifier is printed, like in the CLI progress information. If the same
+     * asset is added multiple times, the display name of the first occurrence is
+     * used.
+     *
+     * If `assetName` is given, it will also be used as the default `displayName`.
+     * Otherwise, the default is the construct path of the ImageAsset construct,
+     * with respect to the enclosing stack. If the asset is produced by a
+     * construct helper function (such as `lambda.Code.fromAssetImage()`), this
+     * will look like `MyFunction/AssetImage`.
+     *
+     * We use the stack-relative construct path so that in the common case where
+     * you have multiple stacks with the same asset, we won't show something like
+     * `/MyBetaStack/MyFunction/Code` when you are actually deploying to
+     * production.
+     *
+     * Default: - Stack-relative construct path
+     *
+     * @param displayName A display name for this asset. 
+     */
+    override fun displayName(displayName: String) {
+      cdkBuilder.displayName(displayName)
+    }
 
     /**
      * File paths matching the patterns will be excluded.

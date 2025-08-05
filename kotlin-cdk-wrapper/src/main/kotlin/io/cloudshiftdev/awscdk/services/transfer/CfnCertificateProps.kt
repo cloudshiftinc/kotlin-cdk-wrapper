@@ -41,6 +41,9 @@ public interface CfnCertificateProps {
   /**
    * An optional date that specifies when the certificate becomes active.
    *
+   * If you do not specify a value, `ActiveDate` takes the same value as `NotBeforeDate` , which is
+   * specified by the CA.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-certificate.html#cfn-transfer-certificate-activedate)
    */
   public fun activeDate(): String? = unwrap(this).getActiveDate()
@@ -68,6 +71,9 @@ public interface CfnCertificateProps {
 
   /**
    * An optional date that specifies when the certificate becomes inactive.
+   *
+   * If you do not specify a value, `InactiveDate` takes the same value as `NotAfterDate` , which is
+   * specified by the CA.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-certificate.html#cfn-transfer-certificate-inactivedate)
    */
@@ -105,6 +111,8 @@ public interface CfnCertificateProps {
   public interface Builder {
     /**
      * @param activeDate An optional date that specifies when the certificate becomes active.
+     * If you do not specify a value, `ActiveDate` takes the same value as `NotBeforeDate` , which
+     * is specified by the CA.
      */
     public fun activeDate(activeDate: String)
 
@@ -125,6 +133,8 @@ public interface CfnCertificateProps {
 
     /**
      * @param inactiveDate An optional date that specifies when the certificate becomes inactive.
+     * If you do not specify a value, `InactiveDate` takes the same value as `NotAfterDate` , which
+     * is specified by the CA.
      */
     public fun inactiveDate(inactiveDate: String)
 
@@ -159,6 +169,8 @@ public interface CfnCertificateProps {
 
     /**
      * @param activeDate An optional date that specifies when the certificate becomes active.
+     * If you do not specify a value, `ActiveDate` takes the same value as `NotBeforeDate` , which
+     * is specified by the CA.
      */
     override fun activeDate(activeDate: String) {
       cdkBuilder.activeDate(activeDate)
@@ -187,6 +199,8 @@ public interface CfnCertificateProps {
 
     /**
      * @param inactiveDate An optional date that specifies when the certificate becomes inactive.
+     * If you do not specify a value, `InactiveDate` takes the same value as `NotAfterDate` , which
+     * is specified by the CA.
      */
     override fun inactiveDate(inactiveDate: String) {
       cdkBuilder.inactiveDate(inactiveDate)
@@ -233,6 +247,9 @@ public interface CfnCertificateProps {
     /**
      * An optional date that specifies when the certificate becomes active.
      *
+     * If you do not specify a value, `ActiveDate` takes the same value as `NotBeforeDate` , which
+     * is specified by the CA.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-certificate.html#cfn-transfer-certificate-activedate)
      */
     override fun activeDate(): String? = unwrap(this).getActiveDate()
@@ -260,6 +277,9 @@ public interface CfnCertificateProps {
 
     /**
      * An optional date that specifies when the certificate becomes inactive.
+     *
+     * If you do not specify a value, `InactiveDate` takes the same value as `NotAfterDate` , which
+     * is specified by the CA.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-certificate.html#cfn-transfer-certificate-inactivedate)
      */

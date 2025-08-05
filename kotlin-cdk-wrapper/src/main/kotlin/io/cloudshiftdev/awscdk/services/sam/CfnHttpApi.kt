@@ -411,15 +411,15 @@ public open class CfnHttpApi(
   /**
    *
    */
-  public open fun stageVariables(`value`: IResolvable) {
-    unwrap(this).setStageVariables(`value`.let(IResolvable.Companion::unwrap))
+  public open fun stageVariables(`value`: Map<String, String>) {
+    unwrap(this).setStageVariables(`value`)
   }
 
   /**
    *
    */
-  public open fun stageVariables(`value`: Map<String, String>) {
-    unwrap(this).setStageVariables(`value`)
+  public open fun stageVariables(`value`: IResolvable) {
+    unwrap(this).setStageVariables(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -643,13 +643,13 @@ public open class CfnHttpApi(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-httpapi.html#cfn-serverless-httpapi-stagevariables)
      * @param stageVariables 
      */
-    public fun stageVariables(stageVariables: IResolvable)
+    public fun stageVariables(stageVariables: Map<String, String>)
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-httpapi.html#cfn-serverless-httpapi-stagevariables)
      * @param stageVariables 
      */
-    public fun stageVariables(stageVariables: Map<String, String>)
+    public fun stageVariables(stageVariables: IResolvable)
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-httpapi.html#cfn-serverless-httpapi-tags)
@@ -918,16 +918,16 @@ public open class CfnHttpApi(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-httpapi.html#cfn-serverless-httpapi-stagevariables)
      * @param stageVariables 
      */
-    override fun stageVariables(stageVariables: IResolvable) {
-      cdkBuilder.stageVariables(stageVariables.let(IResolvable.Companion::unwrap))
+    override fun stageVariables(stageVariables: Map<String, String>) {
+      cdkBuilder.stageVariables(stageVariables)
     }
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-httpapi.html#cfn-serverless-httpapi-stagevariables)
      * @param stageVariables 
      */
-    override fun stageVariables(stageVariables: Map<String, String>) {
-      cdkBuilder.stageVariables(stageVariables)
+    override fun stageVariables(stageVariables: IResolvable) {
+      cdkBuilder.stageVariables(stageVariables.let(IResolvable.Companion::unwrap))
     }
 
     /**

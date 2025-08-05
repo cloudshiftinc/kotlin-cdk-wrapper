@@ -68,6 +68,7 @@ import kotlin.jvm.JvmName
  * .validateOnSynth(false)
  * .build())
  * .build()))
+ * .minimumCliVersion("minimumCliVersion")
  * .missing(List.of(MissingContext.builder()
  * .key("key")
  * .props(AmiContextQuery.builder()
@@ -101,6 +102,18 @@ public interface AssemblyManifest {
       unwrap(this).getArtifacts()?.mapValues{ArtifactManifest.wrap(it.value)} ?: emptyMap()
 
   /**
+   * Required CLI version, if available.
+   *
+   * If the manifest producer knows, it can put the minimum version of the CLI
+   * here that supports reading this assembly.
+   *
+   * If set, it can be used to show a more informative error message to users.
+   *
+   * Default: - Minimum CLI version unknown
+   */
+  public fun minimumCliVersion(): String? = unwrap(this).getMinimumCliVersion()
+
+  /**
    * Missing context information.
    *
    * If this field has values, it means that the
@@ -132,6 +145,15 @@ public interface AssemblyManifest {
      * @param artifacts The set of artifacts in this assembly.
      */
     public fun artifacts(artifacts: Map<String, ArtifactManifest>)
+
+    /**
+     * @param minimumCliVersion Required CLI version, if available.
+     * If the manifest producer knows, it can put the minimum version of the CLI
+     * here that supports reading this assembly.
+     *
+     * If set, it can be used to show a more informative error message to users.
+     */
+    public fun minimumCliVersion(minimumCliVersion: String)
 
     /**
      * @param missing Missing context information.
@@ -174,6 +196,17 @@ public interface AssemblyManifest {
      */
     override fun artifacts(artifacts: Map<String, ArtifactManifest>) {
       cdkBuilder.artifacts(artifacts.mapValues{ArtifactManifest.unwrap(it.value)})
+    }
+
+    /**
+     * @param minimumCliVersion Required CLI version, if available.
+     * If the manifest producer knows, it can put the minimum version of the CLI
+     * here that supports reading this assembly.
+     *
+     * If set, it can be used to show a more informative error message to users.
+     */
+    override fun minimumCliVersion(minimumCliVersion: String) {
+      cdkBuilder.minimumCliVersion(minimumCliVersion)
     }
 
     /**
@@ -229,6 +262,18 @@ public interface AssemblyManifest {
      */
     override fun artifacts(): Map<String, ArtifactManifest> =
         unwrap(this).getArtifacts()?.mapValues{ArtifactManifest.wrap(it.value)} ?: emptyMap()
+
+    /**
+     * Required CLI version, if available.
+     *
+     * If the manifest producer knows, it can put the minimum version of the CLI
+     * here that supports reading this assembly.
+     *
+     * If set, it can be used to show a more informative error message to users.
+     *
+     * Default: - Minimum CLI version unknown
+     */
+    override fun minimumCliVersion(): String? = unwrap(this).getMinimumCliVersion()
 
     /**
      * Missing context information.

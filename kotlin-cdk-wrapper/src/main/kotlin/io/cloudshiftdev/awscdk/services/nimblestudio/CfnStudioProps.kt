@@ -41,46 +41,41 @@ import kotlin.jvm.JvmName
  */
 public interface CfnStudioProps {
   /**
-   * The IAM role that studio admins assume when logging in to the Nimble Studio portal.
+   * The IAM role that Studio Admins will assume when logging in to the Nimble Studio portal.</p>.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-adminrolearn)
    */
   public fun adminRoleArn(): String
 
   /**
-   * A friendly name for the studio.
+   * A friendly name for the studio.</p>.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-displayname)
    */
   public fun displayName(): String
 
   /**
-   * Configuration of the encryption method that is used for the studio.
+   * Configuration of the encryption method that is used for the studio.</p>.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-studioencryptionconfiguration)
    */
   public fun studioEncryptionConfiguration(): Any? = unwrap(this).getStudioEncryptionConfiguration()
 
   /**
-   * The name of the studio, as included in the URL when accessing it in the Nimble Studio portal.
+   * The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble
+   * Studio users.</p>.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-studioname)
    */
   public fun studioName(): String
 
   /**
-   * An array of key-value pairs to apply to this resource.
-   *
-   * For more information, see
-   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-   * .
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-tags)
    */
   public fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
   /**
-   * The IAM role that studio users assume when logging in to the Nimble Studio portal.
+   * The IAM role that Studio Users will assume when logging in to the Nimble Studio portal.</p>.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-userrolearn)
    */
@@ -92,32 +87,32 @@ public interface CfnStudioProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param adminRoleArn The IAM role that studio admins assume when logging in to the Nimble
-     * Studio portal. 
+     * @param adminRoleArn The IAM role that Studio Admins will assume when logging in to the Nimble
+     * Studio portal.</p>. 
      */
     public fun adminRoleArn(adminRoleArn: String)
 
     /**
-     * @param displayName A friendly name for the studio. 
+     * @param displayName A friendly name for the studio.</p>. 
      */
     public fun displayName(displayName: String)
 
     /**
      * @param studioEncryptionConfiguration Configuration of the encryption method that is used for
-     * the studio.
+     * the studio.</p>.
      */
     public fun studioEncryptionConfiguration(studioEncryptionConfiguration: IResolvable)
 
     /**
      * @param studioEncryptionConfiguration Configuration of the encryption method that is used for
-     * the studio.
+     * the studio.</p>.
      */
     public
         fun studioEncryptionConfiguration(studioEncryptionConfiguration: CfnStudio.StudioEncryptionConfigurationProperty)
 
     /**
      * @param studioEncryptionConfiguration Configuration of the encryption method that is used for
-     * the studio.
+     * the studio.</p>.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e7caf0fa4ac0667612130fefd40540c448a4f6784c9ff61c8ead116516175e58")
@@ -125,22 +120,19 @@ public interface CfnStudioProps {
         fun studioEncryptionConfiguration(studioEncryptionConfiguration: CfnStudio.StudioEncryptionConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * @param studioName The name of the studio, as included in the URL when accessing it in the
-     * Nimble Studio portal. 
+     * @param studioName The studio name that is used in the URL of the Nimble Studio portal when
+     * accessed by Nimble Studio users.</p>. 
      */
     public fun studioName(studioName: String)
 
     /**
-     * @param tags An array of key-value pairs to apply to this resource.
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
+     * @param tags the value to be set.
      */
     public fun tags(tags: Map<String, String>)
 
     /**
-     * @param userRoleArn The IAM role that studio users assume when logging in to the Nimble Studio
-     * portal. 
+     * @param userRoleArn The IAM role that Studio Users will assume when logging in to the Nimble
+     * Studio portal.</p>. 
      */
     public fun userRoleArn(userRoleArn: String)
   }
@@ -150,15 +142,15 @@ public interface CfnStudioProps {
         software.amazon.awscdk.services.nimblestudio.CfnStudioProps.builder()
 
     /**
-     * @param adminRoleArn The IAM role that studio admins assume when logging in to the Nimble
-     * Studio portal. 
+     * @param adminRoleArn The IAM role that Studio Admins will assume when logging in to the Nimble
+     * Studio portal.</p>. 
      */
     override fun adminRoleArn(adminRoleArn: String) {
       cdkBuilder.adminRoleArn(adminRoleArn)
     }
 
     /**
-     * @param displayName A friendly name for the studio. 
+     * @param displayName A friendly name for the studio.</p>. 
      */
     override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
@@ -166,7 +158,7 @@ public interface CfnStudioProps {
 
     /**
      * @param studioEncryptionConfiguration Configuration of the encryption method that is used for
-     * the studio.
+     * the studio.</p>.
      */
     override fun studioEncryptionConfiguration(studioEncryptionConfiguration: IResolvable) {
       cdkBuilder.studioEncryptionConfiguration(studioEncryptionConfiguration.let(IResolvable.Companion::unwrap))
@@ -174,7 +166,7 @@ public interface CfnStudioProps {
 
     /**
      * @param studioEncryptionConfiguration Configuration of the encryption method that is used for
-     * the studio.
+     * the studio.</p>.
      */
     override
         fun studioEncryptionConfiguration(studioEncryptionConfiguration: CfnStudio.StudioEncryptionConfigurationProperty) {
@@ -183,7 +175,7 @@ public interface CfnStudioProps {
 
     /**
      * @param studioEncryptionConfiguration Configuration of the encryption method that is used for
-     * the studio.
+     * the studio.</p>.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e7caf0fa4ac0667612130fefd40540c448a4f6784c9ff61c8ead116516175e58")
@@ -193,26 +185,23 @@ public interface CfnStudioProps {
         studioEncryptionConfiguration(CfnStudio.StudioEncryptionConfigurationProperty(studioEncryptionConfiguration))
 
     /**
-     * @param studioName The name of the studio, as included in the URL when accessing it in the
-     * Nimble Studio portal. 
+     * @param studioName The studio name that is used in the URL of the Nimble Studio portal when
+     * accessed by Nimble Studio users.</p>. 
      */
     override fun studioName(studioName: String) {
       cdkBuilder.studioName(studioName)
     }
 
     /**
-     * @param tags An array of key-value pairs to apply to this resource.
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
+     * @param tags the value to be set.
      */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
     /**
-     * @param userRoleArn The IAM role that studio users assume when logging in to the Nimble Studio
-     * portal. 
+     * @param userRoleArn The IAM role that Studio Users will assume when logging in to the Nimble
+     * Studio portal.</p>. 
      */
     override fun userRoleArn(userRoleArn: String) {
       cdkBuilder.userRoleArn(userRoleArn)
@@ -227,21 +216,21 @@ public interface CfnStudioProps {
   ) : CdkObject(cdkObject),
       CfnStudioProps {
     /**
-     * The IAM role that studio admins assume when logging in to the Nimble Studio portal.
+     * The IAM role that Studio Admins will assume when logging in to the Nimble Studio portal.</p>.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-adminrolearn)
      */
     override fun adminRoleArn(): String = unwrap(this).getAdminRoleArn()
 
     /**
-     * A friendly name for the studio.
+     * A friendly name for the studio.</p>.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-displayname)
      */
     override fun displayName(): String = unwrap(this).getDisplayName()
 
     /**
-     * Configuration of the encryption method that is used for the studio.
+     * Configuration of the encryption method that is used for the studio.</p>.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-studioencryptionconfiguration)
      */
@@ -249,25 +238,20 @@ public interface CfnStudioProps {
         unwrap(this).getStudioEncryptionConfiguration()
 
     /**
-     * The name of the studio, as included in the URL when accessing it in the Nimble Studio portal.
+     * The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble
+     * Studio users.</p>.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-studioname)
      */
     override fun studioName(): String = unwrap(this).getStudioName()
 
     /**
-     * An array of key-value pairs to apply to this resource.
-     *
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-tags)
      */
     override fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
     /**
-     * The IAM role that studio users assume when logging in to the Nimble Studio portal.
+     * The IAM role that Studio Users will assume when logging in to the Nimble Studio portal.</p>.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html#cfn-nimblestudio-studio-userrolearn)
      */

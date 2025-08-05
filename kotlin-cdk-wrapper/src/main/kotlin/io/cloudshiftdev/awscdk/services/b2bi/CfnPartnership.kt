@@ -14,6 +14,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -40,9 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .profileId("profileId")
  * // the properties below are optional
  * .capabilityOptions(CapabilityOptionsProperty.builder()
+ * .inboundEdi(InboundEdiOptionsProperty.builder()
+ * .x12(X12InboundEdiOptionsProperty.builder()
+ * .acknowledgmentOptions(X12AcknowledgmentOptionsProperty.builder()
+ * .functionalAcknowledgment("functionalAcknowledgment")
+ * .technicalAcknowledgment("technicalAcknowledgment")
+ * .build())
+ * .build())
+ * .build())
  * .outboundEdi(OutboundEdiOptionsProperty.builder()
  * .x12(X12EnvelopeProperty.builder()
  * .common(X12OutboundEdiHeadersProperty.builder()
+ * .controlNumbers(X12ControlNumbersProperty.builder()
+ * .startingFunctionalGroupControlNumber(123)
+ * .startingInterchangeControlNumber(123)
+ * .startingTransactionSetControlNumber(123)
+ * .build())
  * .delimiters(X12DelimitersProperty.builder()
  * .componentSeparator("componentSeparator")
  * .dataElementSeparator("dataElementSeparator")
@@ -53,6 +67,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .applicationSenderCode("applicationSenderCode")
  * .responsibleAgencyCode("responsibleAgencyCode")
  * .build())
+ * .gs05TimeFormat("gs05TimeFormat")
  * .interchangeControlHeaders(X12InterchangeControlHeadersProperty.builder()
  * .acknowledgmentRequestedCode("acknowledgmentRequestedCode")
  * .receiverId("receiverId")
@@ -63,6 +78,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .usageIndicatorCode("usageIndicatorCode")
  * .build())
  * .validateEdi(false)
+ * .build())
+ * .wrapOptions(WrapOptionsProperty.builder()
+ * .lineLength(123)
+ * .lineTerminator("lineTerminator")
+ * .wrapBy("wrapBy")
  * .build())
  * .build())
  * .build())
@@ -176,12 +196,12 @@ public open class CfnPartnership(
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
-   *
+   * Specifies the email address associated with this trading partner.
    */
   public open fun email(): String = unwrap(this).getEmail()
 
   /**
-   *
+   * Specifies the email address associated with this trading partner.
    */
   public open fun email(`value`: String) {
     unwrap(this).setEmail(`value`)
@@ -209,12 +229,12 @@ public open class CfnPartnership(
   }
 
   /**
-   *
+   * Specifies the phone number associated with the partnership.
    */
   public open fun phone(): String? = unwrap(this).getPhone()
 
   /**
-   *
+   * Specifies the phone number associated with the partnership.
    */
   public open fun phone(`value`: String) {
     unwrap(this).setPhone(`value`)
@@ -297,8 +317,10 @@ public open class CfnPartnership(
     public fun capabilityOptions(capabilityOptions: CapabilityOptionsProperty.Builder.() -> Unit)
 
     /**
+     * Specifies the email address associated with this trading partner.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-partnership.html#cfn-b2bi-partnership-email)
-     * @param email 
+     * @param email Specifies the email address associated with this trading partner. 
      */
     public fun email(email: String)
 
@@ -311,8 +333,10 @@ public open class CfnPartnership(
     public fun name(name: String)
 
     /**
+     * Specifies the phone number associated with the partnership.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-partnership.html#cfn-b2bi-partnership-phone)
-     * @param phone 
+     * @param phone Specifies the phone number associated with the partnership. 
      */
     public fun phone(phone: String)
 
@@ -405,8 +429,10 @@ public open class CfnPartnership(
         Unit = capabilityOptions(CapabilityOptionsProperty(capabilityOptions))
 
     /**
+     * Specifies the email address associated with this trading partner.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-partnership.html#cfn-b2bi-partnership-email)
-     * @param email 
+     * @param email Specifies the email address associated with this trading partner. 
      */
     override fun email(email: String) {
       cdkBuilder.email(email)
@@ -423,8 +449,10 @@ public open class CfnPartnership(
     }
 
     /**
+     * Specifies the phone number associated with the partnership.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-partnership.html#cfn-b2bi-partnership-phone)
-     * @param phone 
+     * @param phone Specifies the phone number associated with the partnership. 
      */
     override fun phone(phone: String) {
       cdkBuilder.phone(phone)
@@ -498,9 +526,22 @@ public open class CfnPartnership(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.b2bi.*;
    * CapabilityOptionsProperty capabilityOptionsProperty = CapabilityOptionsProperty.builder()
+   * .inboundEdi(InboundEdiOptionsProperty.builder()
+   * .x12(X12InboundEdiOptionsProperty.builder()
+   * .acknowledgmentOptions(X12AcknowledgmentOptionsProperty.builder()
+   * .functionalAcknowledgment("functionalAcknowledgment")
+   * .technicalAcknowledgment("technicalAcknowledgment")
+   * .build())
+   * .build())
+   * .build())
    * .outboundEdi(OutboundEdiOptionsProperty.builder()
    * .x12(X12EnvelopeProperty.builder()
    * .common(X12OutboundEdiHeadersProperty.builder()
+   * .controlNumbers(X12ControlNumbersProperty.builder()
+   * .startingFunctionalGroupControlNumber(123)
+   * .startingInterchangeControlNumber(123)
+   * .startingTransactionSetControlNumber(123)
+   * .build())
    * .delimiters(X12DelimitersProperty.builder()
    * .componentSeparator("componentSeparator")
    * .dataElementSeparator("dataElementSeparator")
@@ -511,6 +552,7 @@ public open class CfnPartnership(
    * .applicationSenderCode("applicationSenderCode")
    * .responsibleAgencyCode("responsibleAgencyCode")
    * .build())
+   * .gs05TimeFormat("gs05TimeFormat")
    * .interchangeControlHeaders(X12InterchangeControlHeadersProperty.builder()
    * .acknowledgmentRequestedCode("acknowledgmentRequestedCode")
    * .receiverId("receiverId")
@@ -522,6 +564,11 @@ public open class CfnPartnership(
    * .build())
    * .validateEdi(false)
    * .build())
+   * .wrapOptions(WrapOptionsProperty.builder()
+   * .lineLength(123)
+   * .lineTerminator("lineTerminator")
+   * .wrapBy("wrapBy")
+   * .build())
    * .build())
    * .build())
    * .build();
@@ -530,6 +577,13 @@ public open class CfnPartnership(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-capabilityoptions.html)
    */
   public interface CapabilityOptionsProperty {
+    /**
+     * A structure that contains the inbound EDI options for the capability.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-capabilityoptions.html#cfn-b2bi-partnership-capabilityoptions-inboundedi)
+     */
+    public fun inboundEdi(): Any? = unwrap(this).getInboundEdi()
+
     /**
      * A structure that contains the outbound EDI options.
      *
@@ -542,6 +596,23 @@ public open class CfnPartnership(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param inboundEdi A structure that contains the inbound EDI options for the capability.
+       */
+      public fun inboundEdi(inboundEdi: IResolvable)
+
+      /**
+       * @param inboundEdi A structure that contains the inbound EDI options for the capability.
+       */
+      public fun inboundEdi(inboundEdi: InboundEdiOptionsProperty)
+
+      /**
+       * @param inboundEdi A structure that contains the inbound EDI options for the capability.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("49cb228978d57de272da962ceaa40201d5657ec1418ae0ff59c6b6a31b9aea99")
+      public fun inboundEdi(inboundEdi: InboundEdiOptionsProperty.Builder.() -> Unit)
+
       /**
        * @param outboundEdi A structure that contains the outbound EDI options.
        */
@@ -564,6 +635,28 @@ public open class CfnPartnership(
       private val cdkBuilder:
           software.amazon.awscdk.services.b2bi.CfnPartnership.CapabilityOptionsProperty.Builder =
           software.amazon.awscdk.services.b2bi.CfnPartnership.CapabilityOptionsProperty.builder()
+
+      /**
+       * @param inboundEdi A structure that contains the inbound EDI options for the capability.
+       */
+      override fun inboundEdi(inboundEdi: IResolvable) {
+        cdkBuilder.inboundEdi(inboundEdi.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param inboundEdi A structure that contains the inbound EDI options for the capability.
+       */
+      override fun inboundEdi(inboundEdi: InboundEdiOptionsProperty) {
+        cdkBuilder.inboundEdi(inboundEdi.let(InboundEdiOptionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param inboundEdi A structure that contains the inbound EDI options for the capability.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("49cb228978d57de272da962ceaa40201d5657ec1418ae0ff59c6b6a31b9aea99")
+      override fun inboundEdi(inboundEdi: InboundEdiOptionsProperty.Builder.() -> Unit): Unit =
+          inboundEdi(InboundEdiOptionsProperty(inboundEdi))
 
       /**
        * @param outboundEdi A structure that contains the outbound EDI options.
@@ -597,6 +690,13 @@ public open class CfnPartnership(
     ) : CdkObject(cdkObject),
         CapabilityOptionsProperty {
       /**
+       * A structure that contains the inbound EDI options for the capability.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-capabilityoptions.html#cfn-b2bi-partnership-capabilityoptions-inboundedi)
+       */
+      override fun inboundEdi(): Any? = unwrap(this).getInboundEdi()
+
+      /**
        * A structure that contains the outbound EDI options.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-capabilityoptions.html#cfn-b2bi-partnership-capabilityoptions-outboundedi)
@@ -623,6 +723,128 @@ public open class CfnPartnership(
   }
 
   /**
+   * Contains options for processing inbound EDI files.
+   *
+   * These options allow for customizing how incoming EDI documents are processed.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.b2bi.*;
+   * InboundEdiOptionsProperty inboundEdiOptionsProperty = InboundEdiOptionsProperty.builder()
+   * .x12(X12InboundEdiOptionsProperty.builder()
+   * .acknowledgmentOptions(X12AcknowledgmentOptionsProperty.builder()
+   * .functionalAcknowledgment("functionalAcknowledgment")
+   * .technicalAcknowledgment("technicalAcknowledgment")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-inboundedioptions.html)
+   */
+  public interface InboundEdiOptionsProperty {
+    /**
+     * A structure that contains X12-specific options for processing inbound X12 EDI files.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-inboundedioptions.html#cfn-b2bi-partnership-inboundedioptions-x12)
+     */
+    public fun x12(): Any? = unwrap(this).getX12()
+
+    /**
+     * A builder for [InboundEdiOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param x12 A structure that contains X12-specific options for processing inbound X12 EDI
+       * files.
+       */
+      public fun x12(x12: IResolvable)
+
+      /**
+       * @param x12 A structure that contains X12-specific options for processing inbound X12 EDI
+       * files.
+       */
+      public fun x12(x12: X12InboundEdiOptionsProperty)
+
+      /**
+       * @param x12 A structure that contains X12-specific options for processing inbound X12 EDI
+       * files.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f9429271eddca5834601e702deec3de63ae432705f3dde0bdd471563cd044904")
+      public fun x12(x12: X12InboundEdiOptionsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.b2bi.CfnPartnership.InboundEdiOptionsProperty.Builder =
+          software.amazon.awscdk.services.b2bi.CfnPartnership.InboundEdiOptionsProperty.builder()
+
+      /**
+       * @param x12 A structure that contains X12-specific options for processing inbound X12 EDI
+       * files.
+       */
+      override fun x12(x12: IResolvable) {
+        cdkBuilder.x12(x12.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param x12 A structure that contains X12-specific options for processing inbound X12 EDI
+       * files.
+       */
+      override fun x12(x12: X12InboundEdiOptionsProperty) {
+        cdkBuilder.x12(x12.let(X12InboundEdiOptionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param x12 A structure that contains X12-specific options for processing inbound X12 EDI
+       * files.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f9429271eddca5834601e702deec3de63ae432705f3dde0bdd471563cd044904")
+      override fun x12(x12: X12InboundEdiOptionsProperty.Builder.() -> Unit): Unit =
+          x12(X12InboundEdiOptionsProperty(x12))
+
+      public fun build():
+          software.amazon.awscdk.services.b2bi.CfnPartnership.InboundEdiOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnPartnership.InboundEdiOptionsProperty,
+    ) : CdkObject(cdkObject),
+        InboundEdiOptionsProperty {
+      /**
+       * A structure that contains X12-specific options for processing inbound X12 EDI files.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-inboundedioptions.html#cfn-b2bi-partnership-inboundedioptions-x12)
+       */
+      override fun x12(): Any? = unwrap(this).getX12()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InboundEdiOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnPartnership.InboundEdiOptionsProperty):
+          InboundEdiOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InboundEdiOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InboundEdiOptionsProperty):
+          software.amazon.awscdk.services.b2bi.CfnPartnership.InboundEdiOptionsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.b2bi.CfnPartnership.InboundEdiOptionsProperty
+    }
+  }
+
+  /**
    * A container for outbound EDI options.
    *
    * Example:
@@ -634,6 +856,11 @@ public open class CfnPartnership(
    * OutboundEdiOptionsProperty outboundEdiOptionsProperty = OutboundEdiOptionsProperty.builder()
    * .x12(X12EnvelopeProperty.builder()
    * .common(X12OutboundEdiHeadersProperty.builder()
+   * .controlNumbers(X12ControlNumbersProperty.builder()
+   * .startingFunctionalGroupControlNumber(123)
+   * .startingInterchangeControlNumber(123)
+   * .startingTransactionSetControlNumber(123)
+   * .build())
    * .delimiters(X12DelimitersProperty.builder()
    * .componentSeparator("componentSeparator")
    * .dataElementSeparator("dataElementSeparator")
@@ -644,6 +871,7 @@ public open class CfnPartnership(
    * .applicationSenderCode("applicationSenderCode")
    * .responsibleAgencyCode("responsibleAgencyCode")
    * .build())
+   * .gs05TimeFormat("gs05TimeFormat")
    * .interchangeControlHeaders(X12InterchangeControlHeadersProperty.builder()
    * .acknowledgmentRequestedCode("acknowledgmentRequestedCode")
    * .receiverId("receiverId")
@@ -654,6 +882,11 @@ public open class CfnPartnership(
    * .usageIndicatorCode("usageIndicatorCode")
    * .build())
    * .validateEdi(false)
+   * .build())
+   * .wrapOptions(WrapOptionsProperty.builder()
+   * .lineLength(123)
+   * .lineTerminator("lineTerminator")
+   * .wrapBy("wrapBy")
    * .build())
    * .build())
    * .build();
@@ -751,6 +984,358 @@ public open class CfnPartnership(
           software.amazon.awscdk.services.b2bi.CfnPartnership.OutboundEdiOptionsProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.b2bi.CfnPartnership.OutboundEdiOptionsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.b2bi.*;
+   * WrapOptionsProperty wrapOptionsProperty = WrapOptionsProperty.builder()
+   * .lineLength(123)
+   * .lineTerminator("lineTerminator")
+   * .wrapBy("wrapBy")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-wrapoptions.html)
+   */
+  public interface WrapOptionsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-wrapoptions.html#cfn-b2bi-partnership-wrapoptions-linelength)
+     */
+    public fun lineLength(): Number? = unwrap(this).getLineLength()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-wrapoptions.html#cfn-b2bi-partnership-wrapoptions-lineterminator)
+     */
+    public fun lineTerminator(): String? = unwrap(this).getLineTerminator()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-wrapoptions.html#cfn-b2bi-partnership-wrapoptions-wrapby)
+     */
+    public fun wrapBy(): String? = unwrap(this).getWrapBy()
+
+    /**
+     * A builder for [WrapOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param lineLength the value to be set.
+       */
+      public fun lineLength(lineLength: Number)
+
+      /**
+       * @param lineTerminator the value to be set.
+       */
+      public fun lineTerminator(lineTerminator: String)
+
+      /**
+       * @param wrapBy the value to be set.
+       */
+      public fun wrapBy(wrapBy: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.b2bi.CfnPartnership.WrapOptionsProperty.Builder =
+          software.amazon.awscdk.services.b2bi.CfnPartnership.WrapOptionsProperty.builder()
+
+      /**
+       * @param lineLength the value to be set.
+       */
+      override fun lineLength(lineLength: Number) {
+        cdkBuilder.lineLength(lineLength)
+      }
+
+      /**
+       * @param lineTerminator the value to be set.
+       */
+      override fun lineTerminator(lineTerminator: String) {
+        cdkBuilder.lineTerminator(lineTerminator)
+      }
+
+      /**
+       * @param wrapBy the value to be set.
+       */
+      override fun wrapBy(wrapBy: String) {
+        cdkBuilder.wrapBy(wrapBy)
+      }
+
+      public fun build(): software.amazon.awscdk.services.b2bi.CfnPartnership.WrapOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnPartnership.WrapOptionsProperty,
+    ) : CdkObject(cdkObject),
+        WrapOptionsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-wrapoptions.html#cfn-b2bi-partnership-wrapoptions-linelength)
+       */
+      override fun lineLength(): Number? = unwrap(this).getLineLength()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-wrapoptions.html#cfn-b2bi-partnership-wrapoptions-lineterminator)
+       */
+      override fun lineTerminator(): String? = unwrap(this).getLineTerminator()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-wrapoptions.html#cfn-b2bi-partnership-wrapoptions-wrapby)
+       */
+      override fun wrapBy(): String? = unwrap(this).getWrapBy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WrapOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnPartnership.WrapOptionsProperty):
+          WrapOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? WrapOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: WrapOptionsProperty):
+          software.amazon.awscdk.services.b2bi.CfnPartnership.WrapOptionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.b2bi.CfnPartnership.WrapOptionsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.b2bi.*;
+   * X12AcknowledgmentOptionsProperty x12AcknowledgmentOptionsProperty =
+   * X12AcknowledgmentOptionsProperty.builder()
+   * .functionalAcknowledgment("functionalAcknowledgment")
+   * .technicalAcknowledgment("technicalAcknowledgment")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12acknowledgmentoptions.html)
+   */
+  public interface X12AcknowledgmentOptionsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12acknowledgmentoptions.html#cfn-b2bi-partnership-x12acknowledgmentoptions-functionalacknowledgment)
+     */
+    public fun functionalAcknowledgment(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12acknowledgmentoptions.html#cfn-b2bi-partnership-x12acknowledgmentoptions-technicalacknowledgment)
+     */
+    public fun technicalAcknowledgment(): String
+
+    /**
+     * A builder for [X12AcknowledgmentOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param functionalAcknowledgment the value to be set. 
+       */
+      public fun functionalAcknowledgment(functionalAcknowledgment: String)
+
+      /**
+       * @param technicalAcknowledgment the value to be set. 
+       */
+      public fun technicalAcknowledgment(technicalAcknowledgment: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.b2bi.CfnPartnership.X12AcknowledgmentOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.b2bi.CfnPartnership.X12AcknowledgmentOptionsProperty.builder()
+
+      /**
+       * @param functionalAcknowledgment the value to be set. 
+       */
+      override fun functionalAcknowledgment(functionalAcknowledgment: String) {
+        cdkBuilder.functionalAcknowledgment(functionalAcknowledgment)
+      }
+
+      /**
+       * @param technicalAcknowledgment the value to be set. 
+       */
+      override fun technicalAcknowledgment(technicalAcknowledgment: String) {
+        cdkBuilder.technicalAcknowledgment(technicalAcknowledgment)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.b2bi.CfnPartnership.X12AcknowledgmentOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnPartnership.X12AcknowledgmentOptionsProperty,
+    ) : CdkObject(cdkObject),
+        X12AcknowledgmentOptionsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12acknowledgmentoptions.html#cfn-b2bi-partnership-x12acknowledgmentoptions-functionalacknowledgment)
+       */
+      override fun functionalAcknowledgment(): String = unwrap(this).getFunctionalAcknowledgment()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12acknowledgmentoptions.html#cfn-b2bi-partnership-x12acknowledgmentoptions-technicalacknowledgment)
+       */
+      override fun technicalAcknowledgment(): String = unwrap(this).getTechnicalAcknowledgment()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): X12AcknowledgmentOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnPartnership.X12AcknowledgmentOptionsProperty):
+          X12AcknowledgmentOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          X12AcknowledgmentOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: X12AcknowledgmentOptionsProperty):
+          software.amazon.awscdk.services.b2bi.CfnPartnership.X12AcknowledgmentOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.b2bi.CfnPartnership.X12AcknowledgmentOptionsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.b2bi.*;
+   * X12ControlNumbersProperty x12ControlNumbersProperty = X12ControlNumbersProperty.builder()
+   * .startingFunctionalGroupControlNumber(123)
+   * .startingInterchangeControlNumber(123)
+   * .startingTransactionSetControlNumber(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12controlnumbers.html)
+   */
+  public interface X12ControlNumbersProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12controlnumbers.html#cfn-b2bi-partnership-x12controlnumbers-startingfunctionalgroupcontrolnumber)
+     */
+    public fun startingFunctionalGroupControlNumber(): Number? =
+        unwrap(this).getStartingFunctionalGroupControlNumber()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12controlnumbers.html#cfn-b2bi-partnership-x12controlnumbers-startinginterchangecontrolnumber)
+     */
+    public fun startingInterchangeControlNumber(): Number? =
+        unwrap(this).getStartingInterchangeControlNumber()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12controlnumbers.html#cfn-b2bi-partnership-x12controlnumbers-startingtransactionsetcontrolnumber)
+     */
+    public fun startingTransactionSetControlNumber(): Number? =
+        unwrap(this).getStartingTransactionSetControlNumber()
+
+    /**
+     * A builder for [X12ControlNumbersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param startingFunctionalGroupControlNumber the value to be set.
+       */
+      public fun startingFunctionalGroupControlNumber(startingFunctionalGroupControlNumber: Number)
+
+      /**
+       * @param startingInterchangeControlNumber the value to be set.
+       */
+      public fun startingInterchangeControlNumber(startingInterchangeControlNumber: Number)
+
+      /**
+       * @param startingTransactionSetControlNumber the value to be set.
+       */
+      public fun startingTransactionSetControlNumber(startingTransactionSetControlNumber: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.b2bi.CfnPartnership.X12ControlNumbersProperty.Builder =
+          software.amazon.awscdk.services.b2bi.CfnPartnership.X12ControlNumbersProperty.builder()
+
+      /**
+       * @param startingFunctionalGroupControlNumber the value to be set.
+       */
+      override
+          fun startingFunctionalGroupControlNumber(startingFunctionalGroupControlNumber: Number) {
+        cdkBuilder.startingFunctionalGroupControlNumber(startingFunctionalGroupControlNumber)
+      }
+
+      /**
+       * @param startingInterchangeControlNumber the value to be set.
+       */
+      override fun startingInterchangeControlNumber(startingInterchangeControlNumber: Number) {
+        cdkBuilder.startingInterchangeControlNumber(startingInterchangeControlNumber)
+      }
+
+      /**
+       * @param startingTransactionSetControlNumber the value to be set.
+       */
+      override
+          fun startingTransactionSetControlNumber(startingTransactionSetControlNumber: Number) {
+        cdkBuilder.startingTransactionSetControlNumber(startingTransactionSetControlNumber)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.b2bi.CfnPartnership.X12ControlNumbersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnPartnership.X12ControlNumbersProperty,
+    ) : CdkObject(cdkObject),
+        X12ControlNumbersProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12controlnumbers.html#cfn-b2bi-partnership-x12controlnumbers-startingfunctionalgroupcontrolnumber)
+       */
+      override fun startingFunctionalGroupControlNumber(): Number? =
+          unwrap(this).getStartingFunctionalGroupControlNumber()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12controlnumbers.html#cfn-b2bi-partnership-x12controlnumbers-startinginterchangecontrolnumber)
+       */
+      override fun startingInterchangeControlNumber(): Number? =
+          unwrap(this).getStartingInterchangeControlNumber()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12controlnumbers.html#cfn-b2bi-partnership-x12controlnumbers-startingtransactionsetcontrolnumber)
+       */
+      override fun startingTransactionSetControlNumber(): Number? =
+          unwrap(this).getStartingTransactionSetControlNumber()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): X12ControlNumbersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnPartnership.X12ControlNumbersProperty):
+          X12ControlNumbersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          X12ControlNumbersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: X12ControlNumbersProperty):
+          software.amazon.awscdk.services.b2bi.CfnPartnership.X12ControlNumbersProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.b2bi.CfnPartnership.X12ControlNumbersProperty
     }
   }
 
@@ -893,6 +1478,11 @@ public open class CfnPartnership(
    * import io.cloudshiftdev.awscdk.services.b2bi.*;
    * X12EnvelopeProperty x12EnvelopeProperty = X12EnvelopeProperty.builder()
    * .common(X12OutboundEdiHeadersProperty.builder()
+   * .controlNumbers(X12ControlNumbersProperty.builder()
+   * .startingFunctionalGroupControlNumber(123)
+   * .startingInterchangeControlNumber(123)
+   * .startingTransactionSetControlNumber(123)
+   * .build())
    * .delimiters(X12DelimitersProperty.builder()
    * .componentSeparator("componentSeparator")
    * .dataElementSeparator("dataElementSeparator")
@@ -903,6 +1493,7 @@ public open class CfnPartnership(
    * .applicationSenderCode("applicationSenderCode")
    * .responsibleAgencyCode("responsibleAgencyCode")
    * .build())
+   * .gs05TimeFormat("gs05TimeFormat")
    * .interchangeControlHeaders(X12InterchangeControlHeadersProperty.builder()
    * .acknowledgmentRequestedCode("acknowledgmentRequestedCode")
    * .receiverId("receiverId")
@@ -913,6 +1504,11 @@ public open class CfnPartnership(
    * .usageIndicatorCode("usageIndicatorCode")
    * .build())
    * .validateEdi(false)
+   * .build())
+   * .wrapOptions(WrapOptionsProperty.builder()
+   * .lineLength(123)
+   * .lineTerminator("lineTerminator")
+   * .wrapBy("wrapBy")
    * .build())
    * .build();
    * ```
@@ -926,6 +1522,11 @@ public open class CfnPartnership(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12envelope.html#cfn-b2bi-partnership-x12envelope-common)
      */
     public fun common(): Any? = unwrap(this).getCommon()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12envelope.html#cfn-b2bi-partnership-x12envelope-wrapoptions)
+     */
+    public fun wrapOptions(): Any? = unwrap(this).getWrapOptions()
 
     /**
      * A builder for [X12EnvelopeProperty]
@@ -948,6 +1549,23 @@ public open class CfnPartnership(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("edb3ab4d7c8d88907238949c3b0e5f61c9d42de0808f302672b1a2f673445801")
       public fun common(common: X12OutboundEdiHeadersProperty.Builder.() -> Unit)
+
+      /**
+       * @param wrapOptions the value to be set.
+       */
+      public fun wrapOptions(wrapOptions: IResolvable)
+
+      /**
+       * @param wrapOptions the value to be set.
+       */
+      public fun wrapOptions(wrapOptions: WrapOptionsProperty)
+
+      /**
+       * @param wrapOptions the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("027789531888ee3bc8e40edfb8c9d447391681f7d4f90bdae44ac44e101d761e")
+      public fun wrapOptions(wrapOptions: WrapOptionsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -977,6 +1595,28 @@ public open class CfnPartnership(
       override fun common(common: X12OutboundEdiHeadersProperty.Builder.() -> Unit): Unit =
           common(X12OutboundEdiHeadersProperty(common))
 
+      /**
+       * @param wrapOptions the value to be set.
+       */
+      override fun wrapOptions(wrapOptions: IResolvable) {
+        cdkBuilder.wrapOptions(wrapOptions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param wrapOptions the value to be set.
+       */
+      override fun wrapOptions(wrapOptions: WrapOptionsProperty) {
+        cdkBuilder.wrapOptions(wrapOptions.let(WrapOptionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param wrapOptions the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("027789531888ee3bc8e40edfb8c9d447391681f7d4f90bdae44ac44e101d761e")
+      override fun wrapOptions(wrapOptions: WrapOptionsProperty.Builder.() -> Unit): Unit =
+          wrapOptions(WrapOptionsProperty(wrapOptions))
+
       public fun build(): software.amazon.awscdk.services.b2bi.CfnPartnership.X12EnvelopeProperty =
           cdkBuilder.build()
     }
@@ -991,6 +1631,11 @@ public open class CfnPartnership(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12envelope.html#cfn-b2bi-partnership-x12envelope-common)
        */
       override fun common(): Any? = unwrap(this).getCommon()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12envelope.html#cfn-b2bi-partnership-x12envelope-wrapoptions)
+       */
+      override fun wrapOptions(): Any? = unwrap(this).getWrapOptions()
     }
 
     public companion object {
@@ -1133,6 +1778,131 @@ public open class CfnPartnership(
           software.amazon.awscdk.services.b2bi.CfnPartnership.X12FunctionalGroupHeadersProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.b2bi.CfnPartnership.X12FunctionalGroupHeadersProperty
+    }
+  }
+
+  /**
+   * Contains options specific to processing inbound X12 EDI files.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.b2bi.*;
+   * X12InboundEdiOptionsProperty x12InboundEdiOptionsProperty =
+   * X12InboundEdiOptionsProperty.builder()
+   * .acknowledgmentOptions(X12AcknowledgmentOptionsProperty.builder()
+   * .functionalAcknowledgment("functionalAcknowledgment")
+   * .technicalAcknowledgment("technicalAcknowledgment")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12inboundedioptions.html)
+   */
+  public interface X12InboundEdiOptionsProperty {
+    /**
+     * Specifies acknowledgment options for inbound X12 EDI files.
+     *
+     * These options control how functional and technical acknowledgments are handled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12inboundedioptions.html#cfn-b2bi-partnership-x12inboundedioptions-acknowledgmentoptions)
+     */
+    public fun acknowledgmentOptions(): Any? = unwrap(this).getAcknowledgmentOptions()
+
+    /**
+     * A builder for [X12InboundEdiOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param acknowledgmentOptions Specifies acknowledgment options for inbound X12 EDI files.
+       * These options control how functional and technical acknowledgments are handled.
+       */
+      public fun acknowledgmentOptions(acknowledgmentOptions: IResolvable)
+
+      /**
+       * @param acknowledgmentOptions Specifies acknowledgment options for inbound X12 EDI files.
+       * These options control how functional and technical acknowledgments are handled.
+       */
+      public fun acknowledgmentOptions(acknowledgmentOptions: X12AcknowledgmentOptionsProperty)
+
+      /**
+       * @param acknowledgmentOptions Specifies acknowledgment options for inbound X12 EDI files.
+       * These options control how functional and technical acknowledgments are handled.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f7a01e4e99962bee156e838e31004727a93a3aa3fbc90619f38540ae6bbd9d8d")
+      public
+          fun acknowledgmentOptions(acknowledgmentOptions: X12AcknowledgmentOptionsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.b2bi.CfnPartnership.X12InboundEdiOptionsProperty.Builder =
+          software.amazon.awscdk.services.b2bi.CfnPartnership.X12InboundEdiOptionsProperty.builder()
+
+      /**
+       * @param acknowledgmentOptions Specifies acknowledgment options for inbound X12 EDI files.
+       * These options control how functional and technical acknowledgments are handled.
+       */
+      override fun acknowledgmentOptions(acknowledgmentOptions: IResolvable) {
+        cdkBuilder.acknowledgmentOptions(acknowledgmentOptions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param acknowledgmentOptions Specifies acknowledgment options for inbound X12 EDI files.
+       * These options control how functional and technical acknowledgments are handled.
+       */
+      override fun acknowledgmentOptions(acknowledgmentOptions: X12AcknowledgmentOptionsProperty) {
+        cdkBuilder.acknowledgmentOptions(acknowledgmentOptions.let(X12AcknowledgmentOptionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param acknowledgmentOptions Specifies acknowledgment options for inbound X12 EDI files.
+       * These options control how functional and technical acknowledgments are handled.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f7a01e4e99962bee156e838e31004727a93a3aa3fbc90619f38540ae6bbd9d8d")
+      override
+          fun acknowledgmentOptions(acknowledgmentOptions: X12AcknowledgmentOptionsProperty.Builder.() -> Unit):
+          Unit = acknowledgmentOptions(X12AcknowledgmentOptionsProperty(acknowledgmentOptions))
+
+      public fun build():
+          software.amazon.awscdk.services.b2bi.CfnPartnership.X12InboundEdiOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnPartnership.X12InboundEdiOptionsProperty,
+    ) : CdkObject(cdkObject),
+        X12InboundEdiOptionsProperty {
+      /**
+       * Specifies acknowledgment options for inbound X12 EDI files.
+       *
+       * These options control how functional and technical acknowledgments are handled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12inboundedioptions.html#cfn-b2bi-partnership-x12inboundedioptions-acknowledgmentoptions)
+       */
+      override fun acknowledgmentOptions(): Any? = unwrap(this).getAcknowledgmentOptions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): X12InboundEdiOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnPartnership.X12InboundEdiOptionsProperty):
+          X12InboundEdiOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          X12InboundEdiOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: X12InboundEdiOptionsProperty):
+          software.amazon.awscdk.services.b2bi.CfnPartnership.X12InboundEdiOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.b2bi.CfnPartnership.X12InboundEdiOptionsProperty
     }
   }
 
@@ -1366,6 +2136,11 @@ public open class CfnPartnership(
    * import io.cloudshiftdev.awscdk.services.b2bi.*;
    * X12OutboundEdiHeadersProperty x12OutboundEdiHeadersProperty =
    * X12OutboundEdiHeadersProperty.builder()
+   * .controlNumbers(X12ControlNumbersProperty.builder()
+   * .startingFunctionalGroupControlNumber(123)
+   * .startingInterchangeControlNumber(123)
+   * .startingTransactionSetControlNumber(123)
+   * .build())
    * .delimiters(X12DelimitersProperty.builder()
    * .componentSeparator("componentSeparator")
    * .dataElementSeparator("dataElementSeparator")
@@ -1376,6 +2151,7 @@ public open class CfnPartnership(
    * .applicationSenderCode("applicationSenderCode")
    * .responsibleAgencyCode("responsibleAgencyCode")
    * .build())
+   * .gs05TimeFormat("gs05TimeFormat")
    * .interchangeControlHeaders(X12InterchangeControlHeadersProperty.builder()
    * .acknowledgmentRequestedCode("acknowledgmentRequestedCode")
    * .receiverId("receiverId")
@@ -1393,6 +2169,16 @@ public open class CfnPartnership(
    */
   public interface X12OutboundEdiHeadersProperty {
     /**
+     * Specifies control number configuration for outbound X12 EDI headers.
+     *
+     * These settings determine the starting values for interchange, functional group, and
+     * transaction set control numbers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12outboundediheaders.html#cfn-b2bi-partnership-x12outboundediheaders-controlnumbers)
+     */
+    public fun controlNumbers(): Any? = unwrap(this).getControlNumbers()
+
+    /**
      * The delimiters, for example semicolon ( `;` ), that separates sections of the headers for the
      * X12 object.
      *
@@ -1406,6 +2192,11 @@ public open class CfnPartnership(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12outboundediheaders.html#cfn-b2bi-partnership-x12outboundediheaders-functionalgroupheaders)
      */
     public fun functionalGroupHeaders(): Any? = unwrap(this).getFunctionalGroupHeaders()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12outboundediheaders.html#cfn-b2bi-partnership-x12outboundediheaders-gs05timeformat)
+     */
+    public fun gs05TimeFormat(): String? = unwrap(this).getGs05TimeFormat()
 
     /**
      * In X12 EDI messages, delimiters are used to mark the end of segments or elements, and are
@@ -1427,6 +2218,29 @@ public open class CfnPartnership(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param controlNumbers Specifies control number configuration for outbound X12 EDI headers.
+       * These settings determine the starting values for interchange, functional group, and
+       * transaction set control numbers.
+       */
+      public fun controlNumbers(controlNumbers: IResolvable)
+
+      /**
+       * @param controlNumbers Specifies control number configuration for outbound X12 EDI headers.
+       * These settings determine the starting values for interchange, functional group, and
+       * transaction set control numbers.
+       */
+      public fun controlNumbers(controlNumbers: X12ControlNumbersProperty)
+
+      /**
+       * @param controlNumbers Specifies control number configuration for outbound X12 EDI headers.
+       * These settings determine the starting values for interchange, functional group, and
+       * transaction set control numbers.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4927f07f4b2df91fff9318dab2c8ce5a29eea0d4b87a6121f2014dc37404afef")
+      public fun controlNumbers(controlNumbers: X12ControlNumbersProperty.Builder.() -> Unit)
+
       /**
        * @param delimiters The delimiters, for example semicolon ( `;` ), that separates sections of
        * the headers for the X12 object.
@@ -1464,6 +2278,11 @@ public open class CfnPartnership(
       @JvmName("b65ef12148f77c7f6a260a75e055be2bc5a9b4f6ac2acb8a90b727f06803deac")
       public
           fun functionalGroupHeaders(functionalGroupHeaders: X12FunctionalGroupHeadersProperty.Builder.() -> Unit)
+
+      /**
+       * @param gs05TimeFormat the value to be set.
+       */
+      public fun gs05TimeFormat(gs05TimeFormat: String)
 
       /**
        * @param interchangeControlHeaders In X12 EDI messages, delimiters are used to mark the end
@@ -1505,6 +2324,34 @@ public open class CfnPartnership(
           software.amazon.awscdk.services.b2bi.CfnPartnership.X12OutboundEdiHeadersProperty.Builder
           =
           software.amazon.awscdk.services.b2bi.CfnPartnership.X12OutboundEdiHeadersProperty.builder()
+
+      /**
+       * @param controlNumbers Specifies control number configuration for outbound X12 EDI headers.
+       * These settings determine the starting values for interchange, functional group, and
+       * transaction set control numbers.
+       */
+      override fun controlNumbers(controlNumbers: IResolvable) {
+        cdkBuilder.controlNumbers(controlNumbers.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param controlNumbers Specifies control number configuration for outbound X12 EDI headers.
+       * These settings determine the starting values for interchange, functional group, and
+       * transaction set control numbers.
+       */
+      override fun controlNumbers(controlNumbers: X12ControlNumbersProperty) {
+        cdkBuilder.controlNumbers(controlNumbers.let(X12ControlNumbersProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param controlNumbers Specifies control number configuration for outbound X12 EDI headers.
+       * These settings determine the starting values for interchange, functional group, and
+       * transaction set control numbers.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4927f07f4b2df91fff9318dab2c8ce5a29eea0d4b87a6121f2014dc37404afef")
+      override fun controlNumbers(controlNumbers: X12ControlNumbersProperty.Builder.() -> Unit):
+          Unit = controlNumbers(X12ControlNumbersProperty(controlNumbers))
 
       /**
        * @param delimiters The delimiters, for example semicolon ( `;` ), that separates sections of
@@ -1554,6 +2401,13 @@ public open class CfnPartnership(
       override
           fun functionalGroupHeaders(functionalGroupHeaders: X12FunctionalGroupHeadersProperty.Builder.() -> Unit):
           Unit = functionalGroupHeaders(X12FunctionalGroupHeadersProperty(functionalGroupHeaders))
+
+      /**
+       * @param gs05TimeFormat the value to be set.
+       */
+      override fun gs05TimeFormat(gs05TimeFormat: String) {
+        cdkBuilder.gs05TimeFormat(gs05TimeFormat)
+      }
 
       /**
        * @param interchangeControlHeaders In X12 EDI messages, delimiters are used to mark the end
@@ -1609,6 +2463,16 @@ public open class CfnPartnership(
     ) : CdkObject(cdkObject),
         X12OutboundEdiHeadersProperty {
       /**
+       * Specifies control number configuration for outbound X12 EDI headers.
+       *
+       * These settings determine the starting values for interchange, functional group, and
+       * transaction set control numbers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12outboundediheaders.html#cfn-b2bi-partnership-x12outboundediheaders-controlnumbers)
+       */
+      override fun controlNumbers(): Any? = unwrap(this).getControlNumbers()
+
+      /**
        * The delimiters, for example semicolon ( `;` ), that separates sections of the headers for
        * the X12 object.
        *
@@ -1622,6 +2486,11 @@ public open class CfnPartnership(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12outboundediheaders.html#cfn-b2bi-partnership-x12outboundediheaders-functionalgroupheaders)
        */
       override fun functionalGroupHeaders(): Any? = unwrap(this).getFunctionalGroupHeaders()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12outboundediheaders.html#cfn-b2bi-partnership-x12outboundediheaders-gs05timeformat)
+       */
+      override fun gs05TimeFormat(): String? = unwrap(this).getGs05TimeFormat()
 
       /**
        * In X12 EDI messages, delimiters are used to mark the end of segments or elements, and are

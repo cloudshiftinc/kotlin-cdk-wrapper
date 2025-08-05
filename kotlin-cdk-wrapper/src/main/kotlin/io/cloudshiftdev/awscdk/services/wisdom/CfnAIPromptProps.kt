@@ -67,9 +67,25 @@ public interface CfnAIPromptProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * The identifier of the model used for this AI Prompt.
+   * The identifier of the model used for this AI Prompt. The following model Ids are supported:.
    *
-   * Model Ids supported are: `CLAUDE_3_HAIKU_20240307_V1` .
+   * * `anthropic.claude-3-haiku--v1:0`
+   * * `apac.amazon.nova-lite-v1:0`
+   * * `apac.amazon.nova-micro-v1:0`
+   * * `apac.amazon.nova-pro-v1:0`
+   * * `apac.anthropic.claude-3-5-sonnet--v2:0`
+   * * `apac.anthropic.claude-3-haiku-20240307-v1:0`
+   * * `eu.amazon.nova-lite-v1:0`
+   * * `eu.amazon.nova-micro-v1:0`
+   * * `eu.amazon.nova-pro-v1:0`
+   * * `eu.anthropic.claude-3-7-sonnet-20250219-v1:0`
+   * * `eu.anthropic.claude-3-haiku-20240307-v1:0`
+   * * `us.amazon.nova-lite-v1:0`
+   * * `us.amazon.nova-micro-v1:0`
+   * * `us.amazon.nova-pro-v1:0`
+   * * `us.anthropic.claude-3-5-haiku-20241022-v1:0`
+   * * `us.anthropic.claude-3-7-sonnet-20250219-v1:0`
+   * * `us.anthropic.claude-3-haiku-20240307-v1:0`
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiprompt.html#cfn-wisdom-aiprompt-modelid)
    */
@@ -132,8 +148,25 @@ public interface CfnAIPromptProps {
     public fun description(description: String)
 
     /**
-     * @param modelId The identifier of the model used for this AI Prompt. 
-     * Model Ids supported are: `CLAUDE_3_HAIKU_20240307_V1` .
+     * @param modelId The identifier of the model used for this AI Prompt. The following model Ids
+     * are supported:. 
+     * * `anthropic.claude-3-haiku--v1:0`
+     * * `apac.amazon.nova-lite-v1:0`
+     * * `apac.amazon.nova-micro-v1:0`
+     * * `apac.amazon.nova-pro-v1:0`
+     * * `apac.anthropic.claude-3-5-sonnet--v2:0`
+     * * `apac.anthropic.claude-3-haiku-20240307-v1:0`
+     * * `eu.amazon.nova-lite-v1:0`
+     * * `eu.amazon.nova-micro-v1:0`
+     * * `eu.amazon.nova-pro-v1:0`
+     * * `eu.anthropic.claude-3-7-sonnet-20250219-v1:0`
+     * * `eu.anthropic.claude-3-haiku-20240307-v1:0`
+     * * `us.amazon.nova-lite-v1:0`
+     * * `us.amazon.nova-micro-v1:0`
+     * * `us.amazon.nova-pro-v1:0`
+     * * `us.anthropic.claude-3-5-haiku-20241022-v1:0`
+     * * `us.anthropic.claude-3-7-sonnet-20250219-v1:0`
+     * * `us.anthropic.claude-3-haiku-20240307-v1:0`
      */
     public fun modelId(modelId: String)
 
@@ -204,8 +237,25 @@ public interface CfnAIPromptProps {
     }
 
     /**
-     * @param modelId The identifier of the model used for this AI Prompt. 
-     * Model Ids supported are: `CLAUDE_3_HAIKU_20240307_V1` .
+     * @param modelId The identifier of the model used for this AI Prompt. The following model Ids
+     * are supported:. 
+     * * `anthropic.claude-3-haiku--v1:0`
+     * * `apac.amazon.nova-lite-v1:0`
+     * * `apac.amazon.nova-micro-v1:0`
+     * * `apac.amazon.nova-pro-v1:0`
+     * * `apac.anthropic.claude-3-5-sonnet--v2:0`
+     * * `apac.anthropic.claude-3-haiku-20240307-v1:0`
+     * * `eu.amazon.nova-lite-v1:0`
+     * * `eu.amazon.nova-micro-v1:0`
+     * * `eu.amazon.nova-pro-v1:0`
+     * * `eu.anthropic.claude-3-7-sonnet-20250219-v1:0`
+     * * `eu.anthropic.claude-3-haiku-20240307-v1:0`
+     * * `us.amazon.nova-lite-v1:0`
+     * * `us.amazon.nova-micro-v1:0`
+     * * `us.amazon.nova-pro-v1:0`
+     * * `us.anthropic.claude-3-5-haiku-20241022-v1:0`
+     * * `us.anthropic.claude-3-7-sonnet-20250219-v1:0`
+     * * `us.anthropic.claude-3-haiku-20240307-v1:0`
      */
     override fun modelId(modelId: String) {
       cdkBuilder.modelId(modelId)
@@ -295,9 +345,25 @@ public interface CfnAIPromptProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * The identifier of the model used for this AI Prompt.
+     * The identifier of the model used for this AI Prompt. The following model Ids are supported:.
      *
-     * Model Ids supported are: `CLAUDE_3_HAIKU_20240307_V1` .
+     * * `anthropic.claude-3-haiku--v1:0`
+     * * `apac.amazon.nova-lite-v1:0`
+     * * `apac.amazon.nova-micro-v1:0`
+     * * `apac.amazon.nova-pro-v1:0`
+     * * `apac.anthropic.claude-3-5-sonnet--v2:0`
+     * * `apac.anthropic.claude-3-haiku-20240307-v1:0`
+     * * `eu.amazon.nova-lite-v1:0`
+     * * `eu.amazon.nova-micro-v1:0`
+     * * `eu.amazon.nova-pro-v1:0`
+     * * `eu.anthropic.claude-3-7-sonnet-20250219-v1:0`
+     * * `eu.anthropic.claude-3-haiku-20240307-v1:0`
+     * * `us.amazon.nova-lite-v1:0`
+     * * `us.amazon.nova-micro-v1:0`
+     * * `us.amazon.nova-pro-v1:0`
+     * * `us.anthropic.claude-3-5-haiku-20241022-v1:0`
+     * * `us.anthropic.claude-3-7-sonnet-20250219-v1:0`
+     * * `us.anthropic.claude-3-haiku-20240307-v1:0`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-aiprompt.html#cfn-wisdom-aiprompt-modelid)
      */

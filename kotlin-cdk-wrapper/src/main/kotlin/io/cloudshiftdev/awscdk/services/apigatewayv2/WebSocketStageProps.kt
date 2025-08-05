@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Map
 import kotlin.jvm.JvmName
 
 /**
@@ -46,6 +47,11 @@ public interface WebSocketStageProps : StageOptions {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param accessLogSettings Settings for access logging.
+     */
+    public fun accessLogSettings(accessLogSettings: IAccessLogSettings)
+
+    /**
      * @param autoDeploy Whether updates to an API automatically trigger a new deployment.
      */
     public fun autoDeploy(autoDeploy: Boolean)
@@ -54,6 +60,11 @@ public interface WebSocketStageProps : StageOptions {
      * @param description The description for the API stage.
      */
     public fun description(description: String)
+
+    /**
+     * @param detailedMetricsEnabled Specifies whether detailed metrics are enabled.
+     */
+    public fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean)
 
     /**
      * @param domainMapping The options for custom domain and api mapping.
@@ -71,6 +82,15 @@ public interface WebSocketStageProps : StageOptions {
      * @param stageName The name of the stage. 
      */
     public fun stageName(stageName: String)
+
+    /**
+     * @param stageVariables Stage variables for the stage. These are key-value pairs that you can
+     * define and use in your API routes.
+     * The allowed characters for variable names and the required pattern for variable values are
+     * specified here:
+     * https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-apigateway-stage.html#cfn-apigateway-stage-variables
+     */
+    public fun stageVariables(stageVariables: Map<String, String>)
 
     /**
      * @param throttle Throttle settings for the routes of this stage.
@@ -95,6 +115,13 @@ public interface WebSocketStageProps : StageOptions {
         = software.amazon.awscdk.services.apigatewayv2.WebSocketStageProps.builder()
 
     /**
+     * @param accessLogSettings Settings for access logging.
+     */
+    override fun accessLogSettings(accessLogSettings: IAccessLogSettings) {
+      cdkBuilder.accessLogSettings(accessLogSettings.let(IAccessLogSettings.Companion::unwrap))
+    }
+
+    /**
      * @param autoDeploy Whether updates to an API automatically trigger a new deployment.
      */
     override fun autoDeploy(autoDeploy: Boolean) {
@@ -106,6 +133,13 @@ public interface WebSocketStageProps : StageOptions {
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
+    }
+
+    /**
+     * @param detailedMetricsEnabled Specifies whether detailed metrics are enabled.
+     */
+    override fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean) {
+      cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled)
     }
 
     /**
@@ -128,6 +162,17 @@ public interface WebSocketStageProps : StageOptions {
      */
     override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
+    }
+
+    /**
+     * @param stageVariables Stage variables for the stage. These are key-value pairs that you can
+     * define and use in your API routes.
+     * The allowed characters for variable names and the required pattern for variable values are
+     * specified here:
+     * https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-apigateway-stage.html#cfn-apigateway-stage-variables
+     */
+    override fun stageVariables(stageVariables: Map<String, String>) {
+      cdkBuilder.stageVariables(stageVariables)
     }
 
     /**
@@ -161,6 +206,14 @@ public interface WebSocketStageProps : StageOptions {
   ) : CdkObject(cdkObject),
       WebSocketStageProps {
     /**
+     * Settings for access logging.
+     *
+     * Default: - No access logging
+     */
+    override fun accessLogSettings(): IAccessLogSettings? =
+        unwrap(this).getAccessLogSettings()?.let(IAccessLogSettings::wrap)
+
+    /**
      * Whether updates to an API automatically trigger a new deployment.
      *
      * Default: false
@@ -175,6 +228,13 @@ public interface WebSocketStageProps : StageOptions {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
+     * Specifies whether detailed metrics are enabled.
+     *
+     * Default: false
+     */
+    override fun detailedMetricsEnabled(): Boolean? = unwrap(this).getDetailedMetricsEnabled()
+
+    /**
      * The options for custom domain and api mapping.
      *
      * Default: - no custom domain and api mapping configuration
@@ -186,6 +246,19 @@ public interface WebSocketStageProps : StageOptions {
      * The name of the stage.
      */
     override fun stageName(): String = unwrap(this).getStageName()
+
+    /**
+     * Stage variables for the stage. These are key-value pairs that you can define and use in your
+     * API routes.
+     *
+     * The allowed characters for variable names and the required pattern for variable values are
+     * specified here:
+     * https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-apigateway-stage.html#cfn-apigateway-stage-variables
+     *
+     * Default: - No stage variables
+     */
+    override fun stageVariables(): Map<String, String> = unwrap(this).getStageVariables() ?:
+        emptyMap()
 
     /**
      * Throttle settings for the routes of this stage.

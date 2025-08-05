@@ -81,6 +81,12 @@ public interface MissingContext {
     @JvmName("7831cee57bf9fe073313dae582685932a01a35846484abcaaace6b15502d4fc4")
     public fun props(props: KeyContextQuery.Builder.() -> Unit)
 
+    public fun props(props: CcApiContextQuery)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("62f80640dc2188021b22563fa7667a85e436fe826cb8bd78d45f278396b706eb")
+    public fun props(props: CcApiContextQuery.Builder.() -> Unit)
+
     public fun props(props: PluginContextQuery)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -187,6 +193,15 @@ public interface MissingContext {
     @JvmName("7831cee57bf9fe073313dae582685932a01a35846484abcaaace6b15502d4fc4")
     override fun props(props: KeyContextQuery.Builder.() -> Unit): Unit =
         props(KeyContextQuery(props))
+
+    override fun props(props: CcApiContextQuery) {
+      cdkBuilder.props(props.let(CcApiContextQuery.Companion::unwrap))
+    }
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("62f80640dc2188021b22563fa7667a85e436fe826cb8bd78d45f278396b706eb")
+    override fun props(props: CcApiContextQuery.Builder.() -> Unit): Unit =
+        props(CcApiContextQuery(props))
 
     override fun props(props: PluginContextQuery) {
       cdkBuilder.props(props.let(PluginContextQuery.Companion::unwrap))

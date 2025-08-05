@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -27,7 +28,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * TaskDefinition taskDefinition;
  * Vpc vpc;
  * FargateService service = FargateService.Builder.create(this,
- * "Service").cluster(cluster).taskDefinition(taskDefinition).build();
+ * "Service").cluster(cluster).taskDefinition(taskDefinition).minHealthyPercent(100).build();
  * ApplicationLoadBalancer lb = ApplicationLoadBalancer.Builder.create(this,
  * "LB").vpc(vpc).internetFacing(true).build();
  * ApplicationListener listener = lb.addListener("Listener",
@@ -118,19 +119,23 @@ public open class TaskDefinition(
       addFirelensLogRouter(id, FirelensLogRouterDefinitionOptions(props))
 
   /**
-   * Adds an inference accelerator to the task definition.
+   * (deprecated) Adds an inference accelerator to the task definition.
    *
+   * @deprecated ECS TaskDefinition's inferenceAccelerator is EOL since April 2024
    * @param inferenceAccelerator 
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun addInferenceAccelerator(inferenceAccelerator: InferenceAccelerator) {
     unwrap(this).addInferenceAccelerator(inferenceAccelerator.let(InferenceAccelerator.Companion::unwrap))
   }
 
   /**
-   * Adds an inference accelerator to the task definition.
+   * (deprecated) Adds an inference accelerator to the task definition.
    *
+   * @deprecated ECS TaskDefinition's inferenceAccelerator is EOL since April 2024
    * @param inferenceAccelerator 
    */
+  @Deprecated(message = "deprecated in CDK")
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("5ed9df469538219aa4a519c5c670da4fa01bf9950e8d2a410fbf5d7fc465f966")
   public open
@@ -346,9 +351,9 @@ public open class TaskDefinition(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The task launch type compatiblity requirement.
+     * The task launch type compatibility requirement.
      *
-     * @param compatibility The task launch type compatiblity requirement. 
+     * @param compatibility The task launch type compatibility requirement. 
      */
     public fun compatibility(compatibility: Compatibility)
 
@@ -384,6 +389,20 @@ public open class TaskDefinition(
      * @param cpu The number of cpu units used by the task. 
      */
     public fun cpu(cpu: String)
+
+    /**
+     * Enables fault injection and allows for fault injection requests to be accepted from the
+     * task's containers.
+     *
+     * Fault injection only works with tasks using the [NetworkMode.AWS_VPC] or [NetworkMode.HOST]
+     * network modes.
+     *
+     * Default: undefined - ECS default setting is false
+     *
+     * @param enableFaultInjection Enables fault injection and allows for fault injection requests
+     * to be accepted from the task's containers. 
+     */
+    public fun enableFaultInjection(enableFaultInjection: Boolean)
 
     /**
      * The amount (in GiB) of ephemeral storage to be allocated to the task.
@@ -423,27 +442,31 @@ public open class TaskDefinition(
     public fun family(family: String)
 
     /**
-     * The inference accelerators to use for the containers in the task.
+     * (deprecated) The inference accelerators to use for the containers in the task.
      *
      * Not supported in Fargate.
      *
      * Default: - No inference accelerators.
      *
+     * @deprecated ECS TaskDefinition's inferenceAccelerator is EOL since April 2024
      * @param inferenceAccelerators The inference accelerators to use for the containers in the
      * task. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>)
 
     /**
-     * The inference accelerators to use for the containers in the task.
+     * (deprecated) The inference accelerators to use for the containers in the task.
      *
      * Not supported in Fargate.
      *
      * Default: - No inference accelerators.
      *
+     * @deprecated ECS TaskDefinition's inferenceAccelerator is EOL since April 2024
      * @param inferenceAccelerators The inference accelerators to use for the containers in the
      * task. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun inferenceAccelerators(vararg inferenceAccelerators: InferenceAccelerator)
 
     /**
@@ -625,9 +648,9 @@ public open class TaskDefinition(
         software.amazon.awscdk.services.ecs.TaskDefinition.Builder.create(scope, id)
 
     /**
-     * The task launch type compatiblity requirement.
+     * The task launch type compatibility requirement.
      *
-     * @param compatibility The task launch type compatiblity requirement. 
+     * @param compatibility The task launch type compatibility requirement. 
      */
     override fun compatibility(compatibility: Compatibility) {
       cdkBuilder.compatibility(compatibility.let(Compatibility.Companion::unwrap))
@@ -666,6 +689,22 @@ public open class TaskDefinition(
      */
     override fun cpu(cpu: String) {
       cdkBuilder.cpu(cpu)
+    }
+
+    /**
+     * Enables fault injection and allows for fault injection requests to be accepted from the
+     * task's containers.
+     *
+     * Fault injection only works with tasks using the [NetworkMode.AWS_VPC] or [NetworkMode.HOST]
+     * network modes.
+     *
+     * Default: undefined - ECS default setting is false
+     *
+     * @param enableFaultInjection Enables fault injection and allows for fault injection requests
+     * to be accepted from the task's containers. 
+     */
+    override fun enableFaultInjection(enableFaultInjection: Boolean) {
+      cdkBuilder.enableFaultInjection(enableFaultInjection)
     }
 
     /**
@@ -712,29 +751,33 @@ public open class TaskDefinition(
     }
 
     /**
-     * The inference accelerators to use for the containers in the task.
+     * (deprecated) The inference accelerators to use for the containers in the task.
      *
      * Not supported in Fargate.
      *
      * Default: - No inference accelerators.
      *
+     * @deprecated ECS TaskDefinition's inferenceAccelerator is EOL since April 2024
      * @param inferenceAccelerators The inference accelerators to use for the containers in the
      * task. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>) {
       cdkBuilder.inferenceAccelerators(inferenceAccelerators.map(InferenceAccelerator.Companion::unwrap))
     }
 
     /**
-     * The inference accelerators to use for the containers in the task.
+     * (deprecated) The inference accelerators to use for the containers in the task.
      *
      * Not supported in Fargate.
      *
      * Default: - No inference accelerators.
      *
+     * @deprecated ECS TaskDefinition's inferenceAccelerator is EOL since April 2024
      * @param inferenceAccelerators The inference accelerators to use for the containers in the
      * task. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun inferenceAccelerators(vararg inferenceAccelerators: InferenceAccelerator): Unit =
         inferenceAccelerators(inferenceAccelerators.toList())
 
@@ -932,6 +975,9 @@ public open class TaskDefinition(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ecs.TaskDefinition.PROPERTY_INJECTION_ID
+
     public fun fromTaskDefinitionArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

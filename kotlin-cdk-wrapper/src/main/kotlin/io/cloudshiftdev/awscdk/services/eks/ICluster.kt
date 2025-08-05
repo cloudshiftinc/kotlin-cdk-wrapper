@@ -285,8 +285,6 @@ public interface ICluster : IResource, IConnectable {
 
   /**
    * An AWS Lambda layer that includes `kubectl` and `helm`.
-   *
-   * If not defined, a default layer will be used containing Kubectl 1.20 and Helm 3.8
    */
   public fun kubectlLayer(): ILayerVersion? =
       unwrap(this).getKubectlLayer()?.let(ILayerVersion::wrap)
@@ -670,8 +668,6 @@ public interface ICluster : IResource, IConnectable {
 
     /**
      * An AWS Lambda layer that includes `kubectl` and `helm`.
-     *
-     * If not defined, a default layer will be used containing Kubectl 1.20 and Helm 3.8
      */
     override fun kubectlLayer(): ILayerVersion? =
         unwrap(this).getKubectlLayer()?.let(ILayerVersion::wrap)

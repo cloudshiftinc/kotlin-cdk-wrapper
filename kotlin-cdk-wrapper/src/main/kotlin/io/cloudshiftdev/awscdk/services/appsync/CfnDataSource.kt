@@ -655,7 +655,8 @@ public open class CfnDataSource(
      * The system assumes this role when accessing the data source.
      *
      * Required if `Type` is specified as `AWS_LAMBDA` , `AMAZON_DYNAMODB` , `AMAZON_ELASTICSEARCH`
-     * , `AMAZON_EVENTBRIDGE` , or `AMAZON_OPENSEARCH_SERVICE` .
+     * , `AMAZON_EVENTBRIDGE` , `AMAZON_OPENSEARCH_SERVICE` , `RELATIONAL_DATABASE` , or
+     * `AMAZON_BEDROCK_RUNTIME` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-servicerolearn)
      * @param serviceRoleArn The AWS Identity and Access Management service role ARN for the data
@@ -985,7 +986,8 @@ public open class CfnDataSource(
      * The system assumes this role when accessing the data source.
      *
      * Required if `Type` is specified as `AWS_LAMBDA` , `AMAZON_DYNAMODB` , `AMAZON_ELASTICSEARCH`
-     * , `AMAZON_EVENTBRIDGE` , or `AMAZON_OPENSEARCH_SERVICE` .
+     * , `AMAZON_EVENTBRIDGE` , `AMAZON_OPENSEARCH_SERVICE` , `RELATIONAL_DATABASE` , or
+     * `AMAZON_BEDROCK_RUNTIME` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-servicerolearn)
      * @param serviceRoleArn The AWS Identity and Access Management service role ARN for the data

@@ -51,8 +51,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .backupVaultEvents(List.of("backupVaultEvents"))
  * .snsTopicArn("snsTopicArn")
  * .build())
- * .vaultState("vaultState")
- * .vaultType("vaultType")
  * .build();
  * ```
  *
@@ -92,14 +90,28 @@ public open class CfnLogicallyAirGappedBackupVault(
   }
 
   /**
-   *
+   * The ARN of the backup vault.
    */
   public open fun attrBackupVaultArn(): String = unwrap(this).getAttrBackupVaultArn()
 
   /**
-   *
+   * The ARN of the server-side encryption key.
    */
   public open fun attrEncryptionKeyArn(): String = unwrap(this).getAttrEncryptionKeyArn()
+
+  /**
+   * The vault state.
+   *
+   * The possible values are `CREATING` , `AVAILABLE` , and `FAILED` .
+   */
+  public open fun attrVaultState(): String = unwrap(this).getAttrVaultState()
+
+  /**
+   * The vault type.
+   *
+   * The possible values are `BACKUP_VAULT` and `LOGICALLY_AIR_GAPPED_BACKUP_VAULT` .
+   */
+  public open fun attrVaultType(): String = unwrap(this).getAttrVaultType()
 
   /**
    * The name of a logical container where backups are stored.
@@ -193,30 +205,6 @@ public open class CfnLogicallyAirGappedBackupVault(
       notifications(NotificationObjectTypeProperty(`value`))
 
   /**
-   * The current state of the vault.
-   */
-  public open fun vaultState(): String? = unwrap(this).getVaultState()
-
-  /**
-   * The current state of the vault.
-   */
-  public open fun vaultState(`value`: String) {
-    unwrap(this).setVaultState(`value`)
-  }
-
-  /**
-   * The type of vault described.
-   */
-  public open fun vaultType(): String? = unwrap(this).getVaultType()
-
-  /**
-   * The type of vault described.
-   */
-  public open fun vaultType(`value`: String) {
-    unwrap(this).setVaultType(`value`)
-  }
-
-  /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.backup.CfnLogicallyAirGappedBackupVault].
    */
@@ -295,22 +283,6 @@ public open class CfnLogicallyAirGappedBackupVault(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7033afc7ac7f416461e8402fce41222d4a754a22d94b705eb50fb442b98e52d1")
     public fun notifications(notifications: NotificationObjectTypeProperty.Builder.() -> Unit)
-
-    /**
-     * The current state of the vault.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-logicallyairgappedbackupvault.html#cfn-backup-logicallyairgappedbackupvault-vaultstate)
-     * @param vaultState The current state of the vault. 
-     */
-    public fun vaultState(vaultState: String)
-
-    /**
-     * The type of vault described.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-logicallyairgappedbackupvault.html#cfn-backup-logicallyairgappedbackupvault-vaulttype)
-     * @param vaultType The type of vault described. 
-     */
-    public fun vaultType(vaultType: String)
   }
 
   private class BuilderImpl(
@@ -410,26 +382,6 @@ public open class CfnLogicallyAirGappedBackupVault(
     @JvmName("7033afc7ac7f416461e8402fce41222d4a754a22d94b705eb50fb442b98e52d1")
     override fun notifications(notifications: NotificationObjectTypeProperty.Builder.() -> Unit):
         Unit = notifications(NotificationObjectTypeProperty(notifications))
-
-    /**
-     * The current state of the vault.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-logicallyairgappedbackupvault.html#cfn-backup-logicallyairgappedbackupvault-vaultstate)
-     * @param vaultState The current state of the vault. 
-     */
-    override fun vaultState(vaultState: String) {
-      cdkBuilder.vaultState(vaultState)
-    }
-
-    /**
-     * The type of vault described.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-logicallyairgappedbackupvault.html#cfn-backup-logicallyairgappedbackupvault-vaulttype)
-     * @param vaultType The type of vault described. 
-     */
-    override fun vaultType(vaultType: String) {
-      cdkBuilder.vaultType(vaultType)
-    }
 
     public fun build(): software.amazon.awscdk.services.backup.CfnLogicallyAirGappedBackupVault =
         cdkBuilder.build()

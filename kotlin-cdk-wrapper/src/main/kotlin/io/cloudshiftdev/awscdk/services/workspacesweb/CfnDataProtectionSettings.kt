@@ -107,15 +107,15 @@ public open class CfnDataProtectionSettings(
   /**
    * The additional encryption context of the data protection settings.
    */
-  public open fun additionalEncryptionContext(`value`: IResolvable) {
-    unwrap(this).setAdditionalEncryptionContext(`value`.let(IResolvable.Companion::unwrap))
+  public open fun additionalEncryptionContext(`value`: Map<String, String>) {
+    unwrap(this).setAdditionalEncryptionContext(`value`)
   }
 
   /**
    * The additional encryption context of the data protection settings.
    */
-  public open fun additionalEncryptionContext(`value`: Map<String, String>) {
-    unwrap(this).setAdditionalEncryptionContext(`value`)
+  public open fun additionalEncryptionContext(`value`: IResolvable) {
+    unwrap(this).setAdditionalEncryptionContext(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -245,7 +245,7 @@ public open class CfnDataProtectionSettings(
      * @param additionalEncryptionContext The additional encryption context of the data protection
      * settings. 
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
+    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
     /**
      * The additional encryption context of the data protection settings.
@@ -254,7 +254,7 @@ public open class CfnDataProtectionSettings(
      * @param additionalEncryptionContext The additional encryption context of the data protection
      * settings. 
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
     /**
      * The customer managed key used to encrypt sensitive information in the data protection
@@ -346,8 +346,8 @@ public open class CfnDataProtectionSettings(
      * @param additionalEncryptionContext The additional encryption context of the data protection
      * settings. 
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
+    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
     }
 
     /**
@@ -357,8 +357,8 @@ public open class CfnDataProtectionSettings(
      * @param additionalEncryptionContext The additional encryption context of the data protection
      * settings. 
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
     }
 
     /**

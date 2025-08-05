@@ -420,6 +420,23 @@ public abstract class DatabaseInstanceBase(
     ): IDatabaseInstance = fromDatabaseInstanceAttributes(scope, id,
         DatabaseInstanceAttributes(attrs))
 
+    public fun fromLookup(
+      scope: Construct,
+      id: String,
+      options: DatabaseInstanceLookupOptions,
+    ): IDatabaseInstance =
+        software.amazon.awscdk.services.rds.DatabaseInstanceBase.fromLookup(scope.let(Construct.Companion::unwrap),
+        id,
+        options.let(DatabaseInstanceLookupOptions.Companion::unwrap)).let(IDatabaseInstance::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("acfb2e26ca5e5d720c075195f4a2fcef0a24a0aacf00e906fd4d0c9bd5630f06")
+    public fun fromLookup(
+      scope: Construct,
+      id: String,
+      options: DatabaseInstanceLookupOptions.Builder.() -> Unit,
+    ): IDatabaseInstance = fromLookup(scope, id, DatabaseInstanceLookupOptions(options))
+
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceBase):
         DatabaseInstanceBase = CdkObjectWrappers.wrap(cdkObject) as? DatabaseInstanceBase ?:
         Wrapper(cdkObject)

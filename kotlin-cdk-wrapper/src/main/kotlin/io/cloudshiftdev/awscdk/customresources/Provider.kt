@@ -9,10 +9,12 @@ import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.kms.IKey
+import io.cloudshiftdev.awscdk.services.lambda.ApplicationLogLevel
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
 import io.cloudshiftdev.awscdk.services.logs.RetentionDays
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -89,12 +91,55 @@ public open class Provider(
     /**
      * Whether logging for the waiter state machine is disabled.
      *
-     * Default: - false
+     * Default: - true
      *
      * @param disableWaiterStateMachineLogging Whether logging for the waiter state machine is
      * disabled. 
      */
     public fun disableWaiterStateMachineLogging(disableWaiterStateMachineLogging: Boolean)
+
+    /**
+     * Lambda execution role for provider framework's isComplete/onTimeout Lambda function.
+     *
+     * Note that this role
+     * must be assumed by the 'lambda.amazonaws.com' service principal. To prevent circular
+     * dependency problem
+     * in the provider framework, please ensure you specify a different IAM Role for
+     * 'frameworkCompleteAndTimeoutRole'
+     * from 'frameworkOnEventRole'.
+     *
+     * This property cannot be used with 'role' property
+     *
+     * Default: - A default role will be created.
+     *
+     * @param frameworkCompleteAndTimeoutRole Lambda execution role for provider framework's
+     * isComplete/onTimeout Lambda function. 
+     */
+    public fun frameworkCompleteAndTimeoutRole(frameworkCompleteAndTimeoutRole: IRole)
+
+    /**
+     * Log level of the provider framework lambda.
+     *
+     * Default: true - Logging is disabled by default
+     *
+     * @param frameworkLambdaLoggingLevel Log level of the provider framework lambda. 
+     */
+    public fun frameworkLambdaLoggingLevel(frameworkLambdaLoggingLevel: ApplicationLogLevel)
+
+    /**
+     * Lambda execution role for provider framework's onEvent Lambda function.
+     *
+     * Note that this role must be assumed
+     * by the 'lambda.amazonaws.com' service principal.
+     *
+     * This property cannot be used with 'role' property
+     *
+     * Default: - A default role will be created.
+     *
+     * @param frameworkOnEventRole Lambda execution role for provider framework's onEvent Lambda
+     * function. 
+     */
+    public fun frameworkOnEventRole(frameworkOnEventRole: IRole)
 
     /**
      * The AWS Lambda function to invoke in order to determine if the operation is complete.
@@ -193,15 +238,20 @@ public open class Provider(
     public fun queryInterval(queryInterval: Duration)
 
     /**
-     * AWS Lambda execution role.
+     * (deprecated) AWS Lambda execution role.
      *
-     * The role that will be assumed by the AWS Lambda.
-     * Must be assumable by the 'lambda.amazonaws.com' service principal.
+     * The role is shared by provider framework's onEvent, isComplete lambda, and onTimeout Lambda
+     * functions.
+     * This role will be assumed by the AWS Lambda, so it must be assumable by the
+     * 'lambda.amazonaws.com'
+     * service principal.
      *
      * Default: - A default role will be created.
      *
+     * * Use frameworkOnEventLambdaRole, frameworkIsCompleteLambdaRole, frameworkOnTimeoutLambdaRole
      * @param role AWS Lambda execution role. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun role(role: IRole)
 
     /**
@@ -314,13 +364,62 @@ public open class Provider(
     /**
      * Whether logging for the waiter state machine is disabled.
      *
-     * Default: - false
+     * Default: - true
      *
      * @param disableWaiterStateMachineLogging Whether logging for the waiter state machine is
      * disabled. 
      */
     override fun disableWaiterStateMachineLogging(disableWaiterStateMachineLogging: Boolean) {
       cdkBuilder.disableWaiterStateMachineLogging(disableWaiterStateMachineLogging)
+    }
+
+    /**
+     * Lambda execution role for provider framework's isComplete/onTimeout Lambda function.
+     *
+     * Note that this role
+     * must be assumed by the 'lambda.amazonaws.com' service principal. To prevent circular
+     * dependency problem
+     * in the provider framework, please ensure you specify a different IAM Role for
+     * 'frameworkCompleteAndTimeoutRole'
+     * from 'frameworkOnEventRole'.
+     *
+     * This property cannot be used with 'role' property
+     *
+     * Default: - A default role will be created.
+     *
+     * @param frameworkCompleteAndTimeoutRole Lambda execution role for provider framework's
+     * isComplete/onTimeout Lambda function. 
+     */
+    override fun frameworkCompleteAndTimeoutRole(frameworkCompleteAndTimeoutRole: IRole) {
+      cdkBuilder.frameworkCompleteAndTimeoutRole(frameworkCompleteAndTimeoutRole.let(IRole.Companion::unwrap))
+    }
+
+    /**
+     * Log level of the provider framework lambda.
+     *
+     * Default: true - Logging is disabled by default
+     *
+     * @param frameworkLambdaLoggingLevel Log level of the provider framework lambda. 
+     */
+    override fun frameworkLambdaLoggingLevel(frameworkLambdaLoggingLevel: ApplicationLogLevel) {
+      cdkBuilder.frameworkLambdaLoggingLevel(frameworkLambdaLoggingLevel.let(ApplicationLogLevel.Companion::unwrap))
+    }
+
+    /**
+     * Lambda execution role for provider framework's onEvent Lambda function.
+     *
+     * Note that this role must be assumed
+     * by the 'lambda.amazonaws.com' service principal.
+     *
+     * This property cannot be used with 'role' property
+     *
+     * Default: - A default role will be created.
+     *
+     * @param frameworkOnEventRole Lambda execution role for provider framework's onEvent Lambda
+     * function. 
+     */
+    override fun frameworkOnEventRole(frameworkOnEventRole: IRole) {
+      cdkBuilder.frameworkOnEventRole(frameworkOnEventRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -434,15 +533,20 @@ public open class Provider(
     }
 
     /**
-     * AWS Lambda execution role.
+     * (deprecated) AWS Lambda execution role.
      *
-     * The role that will be assumed by the AWS Lambda.
-     * Must be assumable by the 'lambda.amazonaws.com' service principal.
+     * The role is shared by provider framework's onEvent, isComplete lambda, and onTimeout Lambda
+     * functions.
+     * This role will be assumed by the AWS Lambda, so it must be assumable by the
+     * 'lambda.amazonaws.com'
+     * service principal.
      *
      * Default: - A default role will be created.
      *
+     * * Use frameworkOnEventLambdaRole, frameworkIsCompleteLambdaRole, frameworkOnTimeoutLambdaRole
      * @param role AWS Lambda execution role. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
@@ -563,6 +667,9 @@ public open class Provider(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.customresources.Provider.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

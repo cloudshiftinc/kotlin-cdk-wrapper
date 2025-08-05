@@ -36,9 +36,29 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .analysisMethod("analysisMethod")
  * .name("name")
  * .tableReference(TableReferenceProperty.builder()
+ * .athena(AthenaTableReferenceProperty.builder()
+ * .databaseName("databaseName")
+ * .tableName("tableName")
+ * .workGroup("workGroup")
+ * // the properties below are optional
+ * .outputLocation("outputLocation")
+ * .build())
  * .glue(GlueTableReferenceProperty.builder()
  * .databaseName("databaseName")
  * .tableName("tableName")
+ * .build())
+ * .snowflake(SnowflakeTableReferenceProperty.builder()
+ * .accountIdentifier("accountIdentifier")
+ * .databaseName("databaseName")
+ * .schemaName("schemaName")
+ * .secretArn("secretArn")
+ * .tableName("tableName")
+ * .tableSchema(SnowflakeTableSchemaProperty.builder()
+ * .v1(List.of(SnowflakeTableSchemaV1Property.builder()
+ * .columnName("columnName")
+ * .columnType("columnType")
+ * .build()))
+ * .build())
  * .build())
  * .build())
  * // the properties below are optional
@@ -87,6 +107,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .type("type")
  * .build()))
  * .description("description")
+ * .selectedAnalysisMethods(List.of("selectedAnalysisMethods"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -226,6 +247,25 @@ public open class CfnConfiguredTable(
   }
 
   /**
+   * The selected analysis methods for the configured table.
+   */
+  public open fun selectedAnalysisMethods(): List<String> =
+      unwrap(this).getSelectedAnalysisMethods() ?: emptyList()
+
+  /**
+   * The selected analysis methods for the configured table.
+   */
+  public open fun selectedAnalysisMethods(`value`: List<String>) {
+    unwrap(this).setSelectedAnalysisMethods(`value`)
+  }
+
+  /**
+   * The selected analysis methods for the configured table.
+   */
+  public open fun selectedAnalysisMethods(vararg `value`: String): Unit =
+      selectedAnalysisMethods(`value`.toList())
+
+  /**
    * The table that this configured table represents.
    */
   public open fun tableReference(): Any = unwrap(this).getTableReference()
@@ -295,7 +335,11 @@ public open class CfnConfiguredTable(
     /**
      * The analysis method for the configured table.
      *
-     * The only valid value is currently `DIRECT_QUERY`.
+     * `DIRECT_QUERY` allows SQL queries to be run directly on this table.
+     *
+     * `DIRECT_JOB` allows PySpark jobs to be run directly on this table.
+     *
+     * `MULTIPLE` allows both SQL queries and PySpark jobs to be run directly on this table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-analysismethod)
      * @param analysisMethod The analysis method for the configured table. 
@@ -341,6 +385,22 @@ public open class CfnConfiguredTable(
      * @param name A name for the configured table. 
      */
     public fun name(name: String)
+
+    /**
+     * The selected analysis methods for the configured table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-selectedanalysismethods)
+     * @param selectedAnalysisMethods The selected analysis methods for the configured table. 
+     */
+    public fun selectedAnalysisMethods(selectedAnalysisMethods: List<String>)
+
+    /**
+     * The selected analysis methods for the configured table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-selectedanalysismethods)
+     * @param selectedAnalysisMethods The selected analysis methods for the configured table. 
+     */
+    public fun selectedAnalysisMethods(vararg selectedAnalysisMethods: String)
 
     /**
      * The table that this configured table represents.
@@ -424,7 +484,11 @@ public open class CfnConfiguredTable(
     /**
      * The analysis method for the configured table.
      *
-     * The only valid value is currently `DIRECT_QUERY`.
+     * `DIRECT_QUERY` allows SQL queries to be run directly on this table.
+     *
+     * `DIRECT_JOB` allows PySpark jobs to be run directly on this table.
+     *
+     * `MULTIPLE` allows both SQL queries and PySpark jobs to be run directly on this table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-analysismethod)
      * @param analysisMethod The analysis method for the configured table. 
@@ -481,6 +545,25 @@ public open class CfnConfiguredTable(
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
+
+    /**
+     * The selected analysis methods for the configured table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-selectedanalysismethods)
+     * @param selectedAnalysisMethods The selected analysis methods for the configured table. 
+     */
+    override fun selectedAnalysisMethods(selectedAnalysisMethods: List<String>) {
+      cdkBuilder.selectedAnalysisMethods(selectedAnalysisMethods)
+    }
+
+    /**
+     * The selected analysis methods for the configured table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-selectedanalysismethods)
+     * @param selectedAnalysisMethods The selected analysis methods for the configured table. 
+     */
+    override fun selectedAnalysisMethods(vararg selectedAnalysisMethods: String): Unit =
+        selectedAnalysisMethods(selectedAnalysisMethods.toList())
 
     /**
      * The table that this configured table represents.
@@ -1972,6 +2055,172 @@ public open class CfnConfiguredTable(
   }
 
   /**
+   * A reference to a table within Athena.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * AthenaTableReferenceProperty athenaTableReferenceProperty =
+   * AthenaTableReferenceProperty.builder()
+   * .databaseName("databaseName")
+   * .tableName("tableName")
+   * .workGroup("workGroup")
+   * // the properties below are optional
+   * .outputLocation("outputLocation")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-athenatablereference.html)
+   */
+  public interface AthenaTableReferenceProperty {
+    /**
+     * The database name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-athenatablereference.html#cfn-cleanrooms-configuredtable-athenatablereference-databasename)
+     */
+    public fun databaseName(): String
+
+    /**
+     * The output location for the Athena table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-athenatablereference.html#cfn-cleanrooms-configuredtable-athenatablereference-outputlocation)
+     */
+    public fun outputLocation(): String? = unwrap(this).getOutputLocation()
+
+    /**
+     * The table reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-athenatablereference.html#cfn-cleanrooms-configuredtable-athenatablereference-tablename)
+     */
+    public fun tableName(): String
+
+    /**
+     * The workgroup of the Athena table reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-athenatablereference.html#cfn-cleanrooms-configuredtable-athenatablereference-workgroup)
+     */
+    public fun workGroup(): String
+
+    /**
+     * A builder for [AthenaTableReferenceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param databaseName The database name. 
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param outputLocation The output location for the Athena table.
+       */
+      public fun outputLocation(outputLocation: String)
+
+      /**
+       * @param tableName The table reference. 
+       */
+      public fun tableName(tableName: String)
+
+      /**
+       * @param workGroup The workgroup of the Athena table reference. 
+       */
+      public fun workGroup(workGroup: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AthenaTableReferenceProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AthenaTableReferenceProperty.builder()
+
+      /**
+       * @param databaseName The database name. 
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param outputLocation The output location for the Athena table.
+       */
+      override fun outputLocation(outputLocation: String) {
+        cdkBuilder.outputLocation(outputLocation)
+      }
+
+      /**
+       * @param tableName The table reference. 
+       */
+      override fun tableName(tableName: String) {
+        cdkBuilder.tableName(tableName)
+      }
+
+      /**
+       * @param workGroup The workgroup of the Athena table reference. 
+       */
+      override fun workGroup(workGroup: String) {
+        cdkBuilder.workGroup(workGroup)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AthenaTableReferenceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AthenaTableReferenceProperty,
+    ) : CdkObject(cdkObject),
+        AthenaTableReferenceProperty {
+      /**
+       * The database name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-athenatablereference.html#cfn-cleanrooms-configuredtable-athenatablereference-databasename)
+       */
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
+
+      /**
+       * The output location for the Athena table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-athenatablereference.html#cfn-cleanrooms-configuredtable-athenatablereference-outputlocation)
+       */
+      override fun outputLocation(): String? = unwrap(this).getOutputLocation()
+
+      /**
+       * The table reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-athenatablereference.html#cfn-cleanrooms-configuredtable-athenatablereference-tablename)
+       */
+      override fun tableName(): String = unwrap(this).getTableName()
+
+      /**
+       * The workgroup of the Athena table reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-athenatablereference.html#cfn-cleanrooms-configuredtable-athenatablereference-workgroup)
+       */
+      override fun workGroup(): String = unwrap(this).getWorkGroup()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AthenaTableReferenceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AthenaTableReferenceProperty):
+          AthenaTableReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AthenaTableReferenceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AthenaTableReferenceProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AthenaTableReferenceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AthenaTableReferenceProperty
+    }
+  }
+
+  /**
    * Controls on the query specifications that can be run on a configured table.
    *
    * Example:
@@ -2482,9 +2731,13 @@ public open class CfnConfiguredTable(
   }
 
   /**
-   * The analysis method for the configured tables.
+   * The analysis method allowed for the configured tables.
    *
-   * The only valid value is currently `DIRECT_QUERY`.
+   * `DIRECT_QUERY` allows SQL queries to be run directly on this table.
+   *
+   * `DIRECT_JOB` allows PySpark jobs to be run directly on this table.
+   *
+   * `MULTIPLE` allows both SQL queries and PySpark jobs to be run directly on this table.
    *
    * Example:
    *
@@ -2727,6 +2980,495 @@ public open class CfnConfiguredTable(
   }
 
   /**
+   * A reference to a table within Snowflake.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * SnowflakeTableReferenceProperty snowflakeTableReferenceProperty =
+   * SnowflakeTableReferenceProperty.builder()
+   * .accountIdentifier("accountIdentifier")
+   * .databaseName("databaseName")
+   * .schemaName("schemaName")
+   * .secretArn("secretArn")
+   * .tableName("tableName")
+   * .tableSchema(SnowflakeTableSchemaProperty.builder()
+   * .v1(List.of(SnowflakeTableSchemaV1Property.builder()
+   * .columnName("columnName")
+   * .columnType("columnType")
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketablereference.html)
+   */
+  public interface SnowflakeTableReferenceProperty {
+    /**
+     * The account identifier for the Snowflake table reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketablereference.html#cfn-cleanrooms-configuredtable-snowflaketablereference-accountidentifier)
+     */
+    public fun accountIdentifier(): String
+
+    /**
+     * The name of the database the Snowflake table belongs to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketablereference.html#cfn-cleanrooms-configuredtable-snowflaketablereference-databasename)
+     */
+    public fun databaseName(): String
+
+    /**
+     * The schema name of the Snowflake table reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketablereference.html#cfn-cleanrooms-configuredtable-snowflaketablereference-schemaname)
+     */
+    public fun schemaName(): String
+
+    /**
+     * The secret ARN of the Snowflake table reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketablereference.html#cfn-cleanrooms-configuredtable-snowflaketablereference-secretarn)
+     */
+    public fun secretArn(): String
+
+    /**
+     * The name of the Snowflake table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketablereference.html#cfn-cleanrooms-configuredtable-snowflaketablereference-tablename)
+     */
+    public fun tableName(): String
+
+    /**
+     * The schema of the Snowflake table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketablereference.html#cfn-cleanrooms-configuredtable-snowflaketablereference-tableschema)
+     */
+    public fun tableSchema(): Any
+
+    /**
+     * A builder for [SnowflakeTableReferenceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accountIdentifier The account identifier for the Snowflake table reference. 
+       */
+      public fun accountIdentifier(accountIdentifier: String)
+
+      /**
+       * @param databaseName The name of the database the Snowflake table belongs to. 
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param schemaName The schema name of the Snowflake table reference. 
+       */
+      public fun schemaName(schemaName: String)
+
+      /**
+       * @param secretArn The secret ARN of the Snowflake table reference. 
+       */
+      public fun secretArn(secretArn: String)
+
+      /**
+       * @param tableName The name of the Snowflake table. 
+       */
+      public fun tableName(tableName: String)
+
+      /**
+       * @param tableSchema The schema of the Snowflake table. 
+       */
+      public fun tableSchema(tableSchema: IResolvable)
+
+      /**
+       * @param tableSchema The schema of the Snowflake table. 
+       */
+      public fun tableSchema(tableSchema: SnowflakeTableSchemaProperty)
+
+      /**
+       * @param tableSchema The schema of the Snowflake table. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2d8ceb1738bf2a2a21a9b14b61e1284a53ca559cbdb34e580d4ca5a15a46848a")
+      public fun tableSchema(tableSchema: SnowflakeTableSchemaProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableReferenceProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableReferenceProperty.builder()
+
+      /**
+       * @param accountIdentifier The account identifier for the Snowflake table reference. 
+       */
+      override fun accountIdentifier(accountIdentifier: String) {
+        cdkBuilder.accountIdentifier(accountIdentifier)
+      }
+
+      /**
+       * @param databaseName The name of the database the Snowflake table belongs to. 
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param schemaName The schema name of the Snowflake table reference. 
+       */
+      override fun schemaName(schemaName: String) {
+        cdkBuilder.schemaName(schemaName)
+      }
+
+      /**
+       * @param secretArn The secret ARN of the Snowflake table reference. 
+       */
+      override fun secretArn(secretArn: String) {
+        cdkBuilder.secretArn(secretArn)
+      }
+
+      /**
+       * @param tableName The name of the Snowflake table. 
+       */
+      override fun tableName(tableName: String) {
+        cdkBuilder.tableName(tableName)
+      }
+
+      /**
+       * @param tableSchema The schema of the Snowflake table. 
+       */
+      override fun tableSchema(tableSchema: IResolvable) {
+        cdkBuilder.tableSchema(tableSchema.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param tableSchema The schema of the Snowflake table. 
+       */
+      override fun tableSchema(tableSchema: SnowflakeTableSchemaProperty) {
+        cdkBuilder.tableSchema(tableSchema.let(SnowflakeTableSchemaProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param tableSchema The schema of the Snowflake table. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2d8ceb1738bf2a2a21a9b14b61e1284a53ca559cbdb34e580d4ca5a15a46848a")
+      override fun tableSchema(tableSchema: SnowflakeTableSchemaProperty.Builder.() -> Unit): Unit =
+          tableSchema(SnowflakeTableSchemaProperty(tableSchema))
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableReferenceProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableReferenceProperty,
+    ) : CdkObject(cdkObject),
+        SnowflakeTableReferenceProperty {
+      /**
+       * The account identifier for the Snowflake table reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketablereference.html#cfn-cleanrooms-configuredtable-snowflaketablereference-accountidentifier)
+       */
+      override fun accountIdentifier(): String = unwrap(this).getAccountIdentifier()
+
+      /**
+       * The name of the database the Snowflake table belongs to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketablereference.html#cfn-cleanrooms-configuredtable-snowflaketablereference-databasename)
+       */
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
+
+      /**
+       * The schema name of the Snowflake table reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketablereference.html#cfn-cleanrooms-configuredtable-snowflaketablereference-schemaname)
+       */
+      override fun schemaName(): String = unwrap(this).getSchemaName()
+
+      /**
+       * The secret ARN of the Snowflake table reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketablereference.html#cfn-cleanrooms-configuredtable-snowflaketablereference-secretarn)
+       */
+      override fun secretArn(): String = unwrap(this).getSecretArn()
+
+      /**
+       * The name of the Snowflake table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketablereference.html#cfn-cleanrooms-configuredtable-snowflaketablereference-tablename)
+       */
+      override fun tableName(): String = unwrap(this).getTableName()
+
+      /**
+       * The schema of the Snowflake table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketablereference.html#cfn-cleanrooms-configuredtable-snowflaketablereference-tableschema)
+       */
+      override fun tableSchema(): Any = unwrap(this).getTableSchema()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SnowflakeTableReferenceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableReferenceProperty):
+          SnowflakeTableReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SnowflakeTableReferenceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SnowflakeTableReferenceProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableReferenceProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableReferenceProperty
+    }
+  }
+
+  /**
+   * The schema of a Snowflake table.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * SnowflakeTableSchemaProperty snowflakeTableSchemaProperty =
+   * SnowflakeTableSchemaProperty.builder()
+   * .v1(List.of(SnowflakeTableSchemaV1Property.builder()
+   * .columnName("columnName")
+   * .columnType("columnType")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketableschema.html)
+   */
+  public interface SnowflakeTableSchemaProperty {
+    /**
+     * The schema of a Snowflake table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketableschema.html#cfn-cleanrooms-configuredtable-snowflaketableschema-v1)
+     */
+    public fun v1(): Any
+
+    /**
+     * A builder for [SnowflakeTableSchemaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param v1 The schema of a Snowflake table. 
+       */
+      public fun v1(v1: IResolvable)
+
+      /**
+       * @param v1 The schema of a Snowflake table. 
+       */
+      public fun v1(v1: List<Any>)
+
+      /**
+       * @param v1 The schema of a Snowflake table. 
+       */
+      public fun v1(vararg v1: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableSchemaProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableSchemaProperty.builder()
+
+      /**
+       * @param v1 The schema of a Snowflake table. 
+       */
+      override fun v1(v1: IResolvable) {
+        cdkBuilder.v1(v1.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param v1 The schema of a Snowflake table. 
+       */
+      override fun v1(v1: List<Any>) {
+        cdkBuilder.v1(v1.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param v1 The schema of a Snowflake table. 
+       */
+      override fun v1(vararg v1: Any): Unit = v1(v1.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableSchemaProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableSchemaProperty,
+    ) : CdkObject(cdkObject),
+        SnowflakeTableSchemaProperty {
+      /**
+       * The schema of a Snowflake table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketableschema.html#cfn-cleanrooms-configuredtable-snowflaketableschema-v1)
+       */
+      override fun v1(): Any = unwrap(this).getV1()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SnowflakeTableSchemaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableSchemaProperty):
+          SnowflakeTableSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SnowflakeTableSchemaProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SnowflakeTableSchemaProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableSchemaProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableSchemaProperty
+    }
+  }
+
+  /**
+   * The Snowflake table schema.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * SnowflakeTableSchemaV1Property snowflakeTableSchemaV1Property =
+   * SnowflakeTableSchemaV1Property.builder()
+   * .columnName("columnName")
+   * .columnType("columnType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketableschemav1.html)
+   */
+  public interface SnowflakeTableSchemaV1Property {
+    /**
+     * The column name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketableschemav1.html#cfn-cleanrooms-configuredtable-snowflaketableschemav1-columnname)
+     */
+    public fun columnName(): String
+
+    /**
+     * The column's data type.
+     *
+     * Supported data types: `ARRAY` , `BIGINT` , `BOOLEAN` , `CHAR` , `DATE` , `DECIMAL` , `DOUBLE`
+     * , `DOUBLE PRECISION` , `FLOAT` , `FLOAT4` , `INT` , `INTEGER` , `MAP` , `NUMERIC` , `NUMBER` ,
+     * `REAL` , `SMALLINT` , `STRING` , `TIMESTAMP` , `TIMESTAMP_LTZ` , `TIMESTAMP_NTZ` , `DATETIME` ,
+     * `TINYINT` , `VARCHAR` , `TEXT` , `CHARACTER` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketableschemav1.html#cfn-cleanrooms-configuredtable-snowflaketableschemav1-columntype)
+     */
+    public fun columnType(): String
+
+    /**
+     * A builder for [SnowflakeTableSchemaV1Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param columnName The column name. 
+       */
+      public fun columnName(columnName: String)
+
+      /**
+       * @param columnType The column's data type. 
+       * Supported data types: `ARRAY` , `BIGINT` , `BOOLEAN` , `CHAR` , `DATE` , `DECIMAL` ,
+       * `DOUBLE` , `DOUBLE PRECISION` , `FLOAT` , `FLOAT4` , `INT` , `INTEGER` , `MAP` , `NUMERIC` ,
+       * `NUMBER` , `REAL` , `SMALLINT` , `STRING` , `TIMESTAMP` , `TIMESTAMP_LTZ` , `TIMESTAMP_NTZ` ,
+       * `DATETIME` , `TINYINT` , `VARCHAR` , `TEXT` , `CHARACTER` .
+       */
+      public fun columnType(columnType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableSchemaV1Property.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableSchemaV1Property.builder()
+
+      /**
+       * @param columnName The column name. 
+       */
+      override fun columnName(columnName: String) {
+        cdkBuilder.columnName(columnName)
+      }
+
+      /**
+       * @param columnType The column's data type. 
+       * Supported data types: `ARRAY` , `BIGINT` , `BOOLEAN` , `CHAR` , `DATE` , `DECIMAL` ,
+       * `DOUBLE` , `DOUBLE PRECISION` , `FLOAT` , `FLOAT4` , `INT` , `INTEGER` , `MAP` , `NUMERIC` ,
+       * `NUMBER` , `REAL` , `SMALLINT` , `STRING` , `TIMESTAMP` , `TIMESTAMP_LTZ` , `TIMESTAMP_NTZ` ,
+       * `DATETIME` , `TINYINT` , `VARCHAR` , `TEXT` , `CHARACTER` .
+       */
+      override fun columnType(columnType: String) {
+        cdkBuilder.columnType(columnType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableSchemaV1Property
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableSchemaV1Property,
+    ) : CdkObject(cdkObject),
+        SnowflakeTableSchemaV1Property {
+      /**
+       * The column name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketableschemav1.html#cfn-cleanrooms-configuredtable-snowflaketableschemav1-columnname)
+       */
+      override fun columnName(): String = unwrap(this).getColumnName()
+
+      /**
+       * The column's data type.
+       *
+       * Supported data types: `ARRAY` , `BIGINT` , `BOOLEAN` , `CHAR` , `DATE` , `DECIMAL` ,
+       * `DOUBLE` , `DOUBLE PRECISION` , `FLOAT` , `FLOAT4` , `INT` , `INTEGER` , `MAP` , `NUMERIC` ,
+       * `NUMBER` , `REAL` , `SMALLINT` , `STRING` , `TIMESTAMP` , `TIMESTAMP_LTZ` , `TIMESTAMP_NTZ` ,
+       * `DATETIME` , `TINYINT` , `VARCHAR` , `TEXT` , `CHARACTER` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-snowflaketableschemav1.html#cfn-cleanrooms-configuredtable-snowflaketableschemav1-columntype)
+       */
+      override fun columnType(): String = unwrap(this).getColumnType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SnowflakeTableSchemaV1Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableSchemaV1Property):
+          SnowflakeTableSchemaV1Property = CdkObjectWrappers.wrap(cdkObject) as?
+          SnowflakeTableSchemaV1Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SnowflakeTableSchemaV1Property):
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableSchemaV1Property
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.SnowflakeTableSchemaV1Property
+    }
+  }
+
+  /**
    * A pointer to the dataset that underlies this table.
    *
    * Example:
@@ -2736,9 +3478,29 @@ public open class CfnConfiguredTable(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
    * TableReferenceProperty tableReferenceProperty = TableReferenceProperty.builder()
+   * .athena(AthenaTableReferenceProperty.builder()
+   * .databaseName("databaseName")
+   * .tableName("tableName")
+   * .workGroup("workGroup")
+   * // the properties below are optional
+   * .outputLocation("outputLocation")
+   * .build())
    * .glue(GlueTableReferenceProperty.builder()
    * .databaseName("databaseName")
    * .tableName("tableName")
+   * .build())
+   * .snowflake(SnowflakeTableReferenceProperty.builder()
+   * .accountIdentifier("accountIdentifier")
+   * .databaseName("databaseName")
+   * .schemaName("schemaName")
+   * .secretArn("secretArn")
+   * .tableName("tableName")
+   * .tableSchema(SnowflakeTableSchemaProperty.builder()
+   * .v1(List.of(SnowflakeTableSchemaV1Property.builder()
+   * .columnName("columnName")
+   * .columnType("columnType")
+   * .build()))
+   * .build())
    * .build())
    * .build();
    * ```
@@ -2747,11 +3509,25 @@ public open class CfnConfiguredTable(
    */
   public interface TableReferenceProperty {
     /**
+     * If present, a reference to the Athena table referred to by this table reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-tablereference.html#cfn-cleanrooms-configuredtable-tablereference-athena)
+     */
+    public fun athena(): Any? = unwrap(this).getAthena()
+
+    /**
      * If present, a reference to the AWS Glue table referred to by this table reference.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-tablereference.html#cfn-cleanrooms-configuredtable-tablereference-glue)
      */
-    public fun glue(): Any
+    public fun glue(): Any? = unwrap(this).getGlue()
+
+    /**
+     * If present, a reference to the Snowflake table referred to by this table reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-tablereference.html#cfn-cleanrooms-configuredtable-tablereference-snowflake)
+     */
+    public fun snowflake(): Any? = unwrap(this).getSnowflake()
 
     /**
      * A builder for [TableReferenceProperty]
@@ -2759,24 +3535,64 @@ public open class CfnConfiguredTable(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param athena If present, a reference to the Athena table referred to by this table
+       * reference.
+       */
+      public fun athena(athena: IResolvable)
+
+      /**
+       * @param athena If present, a reference to the Athena table referred to by this table
+       * reference.
+       */
+      public fun athena(athena: AthenaTableReferenceProperty)
+
+      /**
+       * @param athena If present, a reference to the Athena table referred to by this table
+       * reference.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("750bf48f7c5a25e5188955c416241b06d7db46c048b45aa8809fdbe4b1365492")
+      public fun athena(athena: AthenaTableReferenceProperty.Builder.() -> Unit)
+
+      /**
        * @param glue If present, a reference to the AWS Glue table referred to by this table
-       * reference. 
+       * reference.
        */
       public fun glue(glue: IResolvable)
 
       /**
        * @param glue If present, a reference to the AWS Glue table referred to by this table
-       * reference. 
+       * reference.
        */
       public fun glue(glue: GlueTableReferenceProperty)
 
       /**
        * @param glue If present, a reference to the AWS Glue table referred to by this table
-       * reference. 
+       * reference.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("db4f6a5ba6d28531ae58587a3a8dd814bc5df20896049b36a90d989f5dfa0f07")
       public fun glue(glue: GlueTableReferenceProperty.Builder.() -> Unit)
+
+      /**
+       * @param snowflake If present, a reference to the Snowflake table referred to by this table
+       * reference.
+       */
+      public fun snowflake(snowflake: IResolvable)
+
+      /**
+       * @param snowflake If present, a reference to the Snowflake table referred to by this table
+       * reference.
+       */
+      public fun snowflake(snowflake: SnowflakeTableReferenceProperty)
+
+      /**
+       * @param snowflake If present, a reference to the Snowflake table referred to by this table
+       * reference.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4d981a8c95abc62dd9bc6d941945253907ad4f67efc84a4219c384951e08157e")
+      public fun snowflake(snowflake: SnowflakeTableReferenceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2786,8 +3602,33 @@ public open class CfnConfiguredTable(
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty.builder()
 
       /**
+       * @param athena If present, a reference to the Athena table referred to by this table
+       * reference.
+       */
+      override fun athena(athena: IResolvable) {
+        cdkBuilder.athena(athena.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param athena If present, a reference to the Athena table referred to by this table
+       * reference.
+       */
+      override fun athena(athena: AthenaTableReferenceProperty) {
+        cdkBuilder.athena(athena.let(AthenaTableReferenceProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param athena If present, a reference to the Athena table referred to by this table
+       * reference.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("750bf48f7c5a25e5188955c416241b06d7db46c048b45aa8809fdbe4b1365492")
+      override fun athena(athena: AthenaTableReferenceProperty.Builder.() -> Unit): Unit =
+          athena(AthenaTableReferenceProperty(athena))
+
+      /**
        * @param glue If present, a reference to the AWS Glue table referred to by this table
-       * reference. 
+       * reference.
        */
       override fun glue(glue: IResolvable) {
         cdkBuilder.glue(glue.let(IResolvable.Companion::unwrap))
@@ -2795,7 +3636,7 @@ public open class CfnConfiguredTable(
 
       /**
        * @param glue If present, a reference to the AWS Glue table referred to by this table
-       * reference. 
+       * reference.
        */
       override fun glue(glue: GlueTableReferenceProperty) {
         cdkBuilder.glue(glue.let(GlueTableReferenceProperty.Companion::unwrap))
@@ -2803,12 +3644,37 @@ public open class CfnConfiguredTable(
 
       /**
        * @param glue If present, a reference to the AWS Glue table referred to by this table
-       * reference. 
+       * reference.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("db4f6a5ba6d28531ae58587a3a8dd814bc5df20896049b36a90d989f5dfa0f07")
       override fun glue(glue: GlueTableReferenceProperty.Builder.() -> Unit): Unit =
           glue(GlueTableReferenceProperty(glue))
+
+      /**
+       * @param snowflake If present, a reference to the Snowflake table referred to by this table
+       * reference.
+       */
+      override fun snowflake(snowflake: IResolvable) {
+        cdkBuilder.snowflake(snowflake.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param snowflake If present, a reference to the Snowflake table referred to by this table
+       * reference.
+       */
+      override fun snowflake(snowflake: SnowflakeTableReferenceProperty) {
+        cdkBuilder.snowflake(snowflake.let(SnowflakeTableReferenceProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param snowflake If present, a reference to the Snowflake table referred to by this table
+       * reference.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4d981a8c95abc62dd9bc6d941945253907ad4f67efc84a4219c384951e08157e")
+      override fun snowflake(snowflake: SnowflakeTableReferenceProperty.Builder.() -> Unit): Unit =
+          snowflake(SnowflakeTableReferenceProperty(snowflake))
 
       public fun build():
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty =
@@ -2820,11 +3686,25 @@ public open class CfnConfiguredTable(
     ) : CdkObject(cdkObject),
         TableReferenceProperty {
       /**
+       * If present, a reference to the Athena table referred to by this table reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-tablereference.html#cfn-cleanrooms-configuredtable-tablereference-athena)
+       */
+      override fun athena(): Any? = unwrap(this).getAthena()
+
+      /**
        * If present, a reference to the AWS Glue table referred to by this table reference.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-tablereference.html#cfn-cleanrooms-configuredtable-tablereference-glue)
        */
-      override fun glue(): Any = unwrap(this).getGlue()
+      override fun glue(): Any? = unwrap(this).getGlue()
+
+      /**
+       * If present, a reference to the Snowflake table referred to by this table reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-tablereference.html#cfn-cleanrooms-configuredtable-tablereference-snowflake)
+       */
+      override fun snowflake(): Any? = unwrap(this).getSnowflake()
     }
 
     public companion object {

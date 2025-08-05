@@ -63,8 +63,18 @@ public abstract class State(
 
   /**
    * Render the state as JSON.
+   *
+   * @param stateMachineQueryLanguage
    */
   public open fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
+
+  /**
+   * Render the state as JSON.
+   *
+   * @param stateMachineQueryLanguage
+   */
+  public open fun toStateJson(stateMachineQueryLanguage: QueryLanguage): ObjectNode =
+      unwrap(this).toStateJson(stateMachineQueryLanguage.let(QueryLanguage.Companion::unwrap))
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.State,

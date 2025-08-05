@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -23,6 +24,7 @@ import kotlin.jvm.JvmName
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.cassandra.*;
  * CfnKeyspaceProps cfnKeyspaceProps = CfnKeyspaceProps.builder()
+ * .clientSideTimestampsEnabled(false)
  * .keyspaceName("keyspaceName")
  * .replicationSpecification(ReplicationSpecificationProperty.builder()
  * .regionList(List.of("regionList"))
@@ -39,15 +41,24 @@ import kotlin.jvm.JvmName
  */
 public interface CfnKeyspaceProps {
   /**
+   * Indicates whether client-side timestamps are enabled (true) or disabled (false) for all tables
+   * in the keyspace.
+   *
+   * To add a Region to a single-Region keyspace with at least one table, the value must be set to
+   * true. After you've enabled client-side timestamps for a table, you can’t disable it again.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html#cfn-cassandra-keyspace-clientsidetimestampsenabled)
+   */
+  public fun clientSideTimestampsEnabled(): Any? = unwrap(this).getClientSideTimestampsEnabled()
+
+  /**
    * The name of the keyspace to be created.
    *
    * The keyspace name is case sensitive. If you don't specify a name, AWS CloudFormation generates
    * a unique ID and uses that ID for the keyspace name. For more information, see [Name
    * type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html) .
    *
-   * *Length constraints:* Minimum length of 3. Maximum length of 255.
-   *
-   * *Pattern:* `^[a-zA-Z0-9][a-zA-Z0-9_]{1,47}$`
+   * *Length constraints:* Minimum length of 1. Maximum length of 48.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html#cfn-cassandra-keyspace-keyspacename)
    */
@@ -84,14 +95,28 @@ public interface CfnKeyspaceProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param clientSideTimestampsEnabled Indicates whether client-side timestamps are enabled
+     * (true) or disabled (false) for all tables in the keyspace.
+     * To add a Region to a single-Region keyspace with at least one table, the value must be set to
+     * true. After you've enabled client-side timestamps for a table, you can’t disable it again.
+     */
+    public fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: Boolean)
+
+    /**
+     * @param clientSideTimestampsEnabled Indicates whether client-side timestamps are enabled
+     * (true) or disabled (false) for all tables in the keyspace.
+     * To add a Region to a single-Region keyspace with at least one table, the value must be set to
+     * true. After you've enabled client-side timestamps for a table, you can’t disable it again.
+     */
+    public fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: IResolvable)
+
+    /**
      * @param keyspaceName The name of the keyspace to be created.
      * The keyspace name is case sensitive. If you don't specify a name, AWS CloudFormation
      * generates a unique ID and uses that ID for the keyspace name. For more information, see [Name
      * type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html) .
      *
-     * *Length constraints:* Minimum length of 3. Maximum length of 255.
-     *
-     * *Pattern:* `^[a-zA-Z0-9][a-zA-Z0-9_]{1,47}$`
+     * *Length constraints:* Minimum length of 1. Maximum length of 48.
      */
     public fun keyspaceName(keyspaceName: String)
 
@@ -157,14 +182,32 @@ public interface CfnKeyspaceProps {
         software.amazon.awscdk.services.cassandra.CfnKeyspaceProps.builder()
 
     /**
+     * @param clientSideTimestampsEnabled Indicates whether client-side timestamps are enabled
+     * (true) or disabled (false) for all tables in the keyspace.
+     * To add a Region to a single-Region keyspace with at least one table, the value must be set to
+     * true. After you've enabled client-side timestamps for a table, you can’t disable it again.
+     */
+    override fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: Boolean) {
+      cdkBuilder.clientSideTimestampsEnabled(clientSideTimestampsEnabled)
+    }
+
+    /**
+     * @param clientSideTimestampsEnabled Indicates whether client-side timestamps are enabled
+     * (true) or disabled (false) for all tables in the keyspace.
+     * To add a Region to a single-Region keyspace with at least one table, the value must be set to
+     * true. After you've enabled client-side timestamps for a table, you can’t disable it again.
+     */
+    override fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: IResolvable) {
+      cdkBuilder.clientSideTimestampsEnabled(clientSideTimestampsEnabled.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
      * @param keyspaceName The name of the keyspace to be created.
      * The keyspace name is case sensitive. If you don't specify a name, AWS CloudFormation
      * generates a unique ID and uses that ID for the keyspace name. For more information, see [Name
      * type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html) .
      *
-     * *Length constraints:* Minimum length of 3. Maximum length of 255.
-     *
-     * *Pattern:* `^[a-zA-Z0-9][a-zA-Z0-9_]{1,47}$`
+     * *Length constraints:* Minimum length of 1. Maximum length of 48.
      */
     override fun keyspaceName(keyspaceName: String) {
       cdkBuilder.keyspaceName(keyspaceName)
@@ -243,15 +286,24 @@ public interface CfnKeyspaceProps {
   ) : CdkObject(cdkObject),
       CfnKeyspaceProps {
     /**
+     * Indicates whether client-side timestamps are enabled (true) or disabled (false) for all
+     * tables in the keyspace.
+     *
+     * To add a Region to a single-Region keyspace with at least one table, the value must be set to
+     * true. After you've enabled client-side timestamps for a table, you can’t disable it again.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html#cfn-cassandra-keyspace-clientsidetimestampsenabled)
+     */
+    override fun clientSideTimestampsEnabled(): Any? = unwrap(this).getClientSideTimestampsEnabled()
+
+    /**
      * The name of the keyspace to be created.
      *
      * The keyspace name is case sensitive. If you don't specify a name, AWS CloudFormation
      * generates a unique ID and uses that ID for the keyspace name. For more information, see [Name
      * type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html) .
      *
-     * *Length constraints:* Minimum length of 3. Maximum length of 255.
-     *
-     * *Pattern:* `^[a-zA-Z0-9][a-zA-Z0-9_]{1,47}$`
+     * *Length constraints:* Minimum length of 1. Maximum length of 48.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html#cfn-cassandra-keyspace-keyspacename)
      */

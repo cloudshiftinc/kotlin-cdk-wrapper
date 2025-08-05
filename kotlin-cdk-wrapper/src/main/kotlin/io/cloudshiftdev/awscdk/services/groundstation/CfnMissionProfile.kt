@@ -45,6 +45,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .contactPrePassDurationSeconds(123)
  * .streamsKmsKey(StreamsKmsKeyProperty.builder()
  * .kmsAliasArn("kmsAliasArn")
+ * .kmsAliasName("kmsAliasName")
  * .kmsKeyArn("kmsKeyArn")
  * .build())
  * .streamsKmsRole("streamsKmsRole")
@@ -720,6 +721,7 @@ public open class CfnMissionProfile(
    * import io.cloudshiftdev.awscdk.services.groundstation.*;
    * StreamsKmsKeyProperty streamsKmsKeyProperty = StreamsKmsKeyProperty.builder()
    * .kmsAliasArn("kmsAliasArn")
+   * .kmsAliasName("kmsAliasName")
    * .kmsKeyArn("kmsKeyArn")
    * .build();
    * ```
@@ -733,6 +735,13 @@ public open class CfnMissionProfile(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-streamskmskey.html#cfn-groundstation-missionprofile-streamskmskey-kmsaliasarn)
      */
     public fun kmsAliasArn(): String? = unwrap(this).getKmsAliasArn()
+
+    /**
+     * KMS Alias Name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-streamskmskey.html#cfn-groundstation-missionprofile-streamskmskey-kmsaliasname)
+     */
+    public fun kmsAliasName(): String? = unwrap(this).getKmsAliasName()
 
     /**
      * KMS Key Arn.
@@ -752,6 +761,11 @@ public open class CfnMissionProfile(
       public fun kmsAliasArn(kmsAliasArn: String)
 
       /**
+       * @param kmsAliasName KMS Alias Name.
+       */
+      public fun kmsAliasName(kmsAliasName: String)
+
+      /**
        * @param kmsKeyArn KMS Key Arn.
        */
       public fun kmsKeyArn(kmsKeyArn: String)
@@ -768,6 +782,13 @@ public open class CfnMissionProfile(
        */
       override fun kmsAliasArn(kmsAliasArn: String) {
         cdkBuilder.kmsAliasArn(kmsAliasArn)
+      }
+
+      /**
+       * @param kmsAliasName KMS Alias Name.
+       */
+      override fun kmsAliasName(kmsAliasName: String) {
+        cdkBuilder.kmsAliasName(kmsAliasName)
       }
 
       /**
@@ -792,6 +813,13 @@ public open class CfnMissionProfile(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-streamskmskey.html#cfn-groundstation-missionprofile-streamskmskey-kmsaliasarn)
        */
       override fun kmsAliasArn(): String? = unwrap(this).getKmsAliasArn()
+
+      /**
+       * KMS Alias Name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-streamskmskey.html#cfn-groundstation-missionprofile-streamskmskey-kmsaliasname)
+       */
+      override fun kmsAliasName(): String? = unwrap(this).getKmsAliasName()
 
       /**
        * KMS Key Arn.

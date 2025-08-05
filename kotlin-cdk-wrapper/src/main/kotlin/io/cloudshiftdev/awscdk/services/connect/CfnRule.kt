@@ -1084,8 +1084,6 @@ public open class CfnRule(
   }
 
   /**
-   * The definition for create case action.
-   *
    * Example:
    *
    * ```
@@ -1118,8 +1116,6 @@ public open class CfnRule(
     public fun fields(): Any
 
     /**
-     * The Id of template.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-createcaseaction.html#cfn-connect-rule-createcaseaction-templateid)
      */
     public fun templateId(): String
@@ -1145,7 +1141,7 @@ public open class CfnRule(
       public fun fields(vararg fields: Any)
 
       /**
-       * @param templateId The Id of template. 
+       * @param templateId the value to be set. 
        */
       public fun templateId(templateId: String)
     }
@@ -1175,7 +1171,7 @@ public open class CfnRule(
       override fun fields(vararg fields: Any): Unit = fields(fields.toList())
 
       /**
-       * @param templateId The Id of template. 
+       * @param templateId the value to be set. 
        */
       override fun templateId(templateId: String) {
         cdkBuilder.templateId(templateId)
@@ -1197,8 +1193,6 @@ public open class CfnRule(
       override fun fields(): Any = unwrap(this).getFields()
 
       /**
-       * The Id of template.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-createcaseaction.html#cfn-connect-rule-createcaseaction-templateid)
        */
       override fun templateId(): String = unwrap(this).getTemplateId()
@@ -1304,8 +1298,6 @@ public open class CfnRule(
   }
 
   /**
-   * The field of the case.
-   *
    * Example:
    *
    * ```
@@ -1328,14 +1320,12 @@ public open class CfnRule(
    */
   public interface FieldProperty {
     /**
-     * The Id of the field.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-field.html#cfn-connect-rule-field-id)
      */
     public fun id(): String
 
     /**
-     * The value of the field.
+     * Object for case field values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-field.html#cfn-connect-rule-field-value)
      */
@@ -1347,22 +1337,22 @@ public open class CfnRule(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param id The Id of the field. 
+       * @param id the value to be set. 
        */
       public fun id(id: String)
 
       /**
-       * @param value The value of the field. 
+       * @param value Object for case field values. 
        */
       public fun `value`(`value`: IResolvable)
 
       /**
-       * @param value The value of the field. 
+       * @param value Object for case field values. 
        */
       public fun `value`(`value`: FieldValueProperty)
 
       /**
-       * @param value The value of the field. 
+       * @param value Object for case field values. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("39cb40b8cb920f22e478e3d3eed571fc7797d9217007ee67008ff865810ebeeb")
@@ -1374,28 +1364,28 @@ public open class CfnRule(
           = software.amazon.awscdk.services.connect.CfnRule.FieldProperty.builder()
 
       /**
-       * @param id The Id of the field. 
+       * @param id the value to be set. 
        */
       override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
       /**
-       * @param value The value of the field. 
+       * @param value Object for case field values. 
        */
       override fun `value`(`value`: IResolvable) {
         cdkBuilder.`value`(`value`.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param value The value of the field. 
+       * @param value Object for case field values. 
        */
       override fun `value`(`value`: FieldValueProperty) {
         cdkBuilder.`value`(`value`.let(FieldValueProperty.Companion::unwrap))
       }
 
       /**
-       * @param value The value of the field. 
+       * @param value Object for case field values. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("39cb40b8cb920f22e478e3d3eed571fc7797d9217007ee67008ff865810ebeeb")
@@ -1411,14 +1401,12 @@ public open class CfnRule(
     ) : CdkObject(cdkObject),
         FieldProperty {
       /**
-       * The Id of the field.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-field.html#cfn-connect-rule-field-id)
        */
       override fun id(): String = unwrap(this).getId()
 
       /**
-       * The value of the field.
+       * Object for case field values.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-field.html#cfn-connect-rule-field-value)
        */
@@ -1655,14 +1643,14 @@ public open class CfnRule(
        * For example, { "tags": {"key1":"value1", "key2":"value2"} }. Amazon Connect users with the
        * specified tags will be notified.
        */
-      public fun userTags(userTags: IResolvable)
+      public fun userTags(userTags: Map<String, String>)
 
       /**
        * @param userTags The tags used to organize, track, or control access for this resource.
        * For example, { "tags": {"key1":"value1", "key2":"value2"} }. Amazon Connect users with the
        * specified tags will be notified.
        */
-      public fun userTags(userTags: Map<String, String>)
+      public fun userTags(userTags: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1688,8 +1676,8 @@ public open class CfnRule(
        * For example, { "tags": {"key1":"value1", "key2":"value2"} }. Amazon Connect users with the
        * specified tags will be notified.
        */
-      override fun userTags(userTags: IResolvable) {
-        cdkBuilder.userTags(userTags.let(IResolvable.Companion::unwrap))
+      override fun userTags(userTags: Map<String, String>) {
+        cdkBuilder.userTags(userTags)
       }
 
       /**
@@ -1697,8 +1685,8 @@ public open class CfnRule(
        * For example, { "tags": {"key1":"value1", "key2":"value2"} }. Amazon Connect users with the
        * specified tags will be notified.
        */
-      override fun userTags(userTags: Map<String, String>) {
-        cdkBuilder.userTags(userTags)
+      override fun userTags(userTags: IResolvable) {
+        cdkBuilder.userTags(userTags.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2260,8 +2248,6 @@ public open class CfnRule(
   }
 
   /**
-   * The definition of submit auto evaluation action.
-   *
    * Example:
    *
    * ```
@@ -2278,8 +2264,6 @@ public open class CfnRule(
    */
   public interface SubmitAutoEvaluationActionProperty {
     /**
-     * The Amazon Resource Name (ARN) of the evaluation form.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-submitautoevaluationaction.html#cfn-connect-rule-submitautoevaluationaction-evaluationformarn)
      */
     public fun evaluationFormArn(): String
@@ -2290,7 +2274,7 @@ public open class CfnRule(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param evaluationFormArn The Amazon Resource Name (ARN) of the evaluation form. 
+       * @param evaluationFormArn the value to be set. 
        */
       public fun evaluationFormArn(evaluationFormArn: String)
     }
@@ -2302,7 +2286,7 @@ public open class CfnRule(
           software.amazon.awscdk.services.connect.CfnRule.SubmitAutoEvaluationActionProperty.builder()
 
       /**
-       * @param evaluationFormArn The Amazon Resource Name (ARN) of the evaluation form. 
+       * @param evaluationFormArn the value to be set. 
        */
       override fun evaluationFormArn(evaluationFormArn: String) {
         cdkBuilder.evaluationFormArn(evaluationFormArn)
@@ -2318,8 +2302,6 @@ public open class CfnRule(
     ) : CdkObject(cdkObject),
         SubmitAutoEvaluationActionProperty {
       /**
-       * The Amazon Resource Name (ARN) of the evaluation form.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-submitautoevaluationaction.html#cfn-connect-rule-submitautoevaluationaction-evaluationformarn)
        */
       override fun evaluationFormArn(): String = unwrap(this).getEvaluationFormArn()
@@ -2568,8 +2550,6 @@ public open class CfnRule(
   }
 
   /**
-   * The definition for update case action.
-   *
    * Example:
    *
    * ```

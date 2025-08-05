@@ -23,7 +23,7 @@ import kotlin.jvm.JvmName
  * ModelProps modelProps = ModelProps.builder()
  * .restApi(restApi)
  * .schema(JsonSchema.builder()
- * .additionalItems(List.of(jsonSchema_))
+ * .additionalItems(false)
  * .additionalProperties(false)
  * .allOf(List.of(jsonSchema_))
  * .anyOf(List.of(jsonSchema_))

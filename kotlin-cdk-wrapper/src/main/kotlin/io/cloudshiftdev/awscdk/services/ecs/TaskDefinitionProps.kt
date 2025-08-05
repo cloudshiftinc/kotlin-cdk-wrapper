@@ -6,6 +6,8 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
+import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -48,7 +50,7 @@ import kotlin.jvm.JvmName
  */
 public interface TaskDefinitionProps : CommonTaskDefinitionProps {
   /**
-   * The task launch type compatiblity requirement.
+   * The task launch type compatibility requirement.
    */
   public fun compatibility(): Compatibility
 
@@ -93,12 +95,15 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
   public fun ephemeralStorageGiB(): Number? = unwrap(this).getEphemeralStorageGiB()
 
   /**
-   * The inference accelerators to use for the containers in the task.
+   * (deprecated) The inference accelerators to use for the containers in the task.
    *
    * Not supported in Fargate.
    *
    * Default: - No inference accelerators.
+   *
+   * @deprecated ECS TaskDefinition's inferenceAccelerator is EOL since April 2024
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun inferenceAccelerators(): List<InferenceAccelerator> =
       unwrap(this).getInferenceAccelerators()?.map(InferenceAccelerator::wrap) ?: emptyList()
 
@@ -195,7 +200,7 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param compatibility The task launch type compatiblity requirement. 
+     * @param compatibility The task launch type compatibility requirement. 
      */
     public fun compatibility(compatibility: Compatibility)
 
@@ -228,6 +233,14 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
     public fun cpu(cpu: String)
 
     /**
+     * @param enableFaultInjection Enables fault injection and allows for fault injection requests
+     * to be accepted from the task's containers.
+     * Fault injection only works with tasks using the [NetworkMode.AWS_VPC] or [NetworkMode.HOST]
+     * network modes.
+     */
+    public fun enableFaultInjection(enableFaultInjection: Boolean)
+
+    /**
      * @param ephemeralStorageGiB The amount (in GiB) of ephemeral storage to be allocated to the
      * task.
      * Only supported in Fargate platform version 1.4.0 or later.
@@ -251,14 +264,18 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
      * @param inferenceAccelerators The inference accelerators to use for the containers in the
      * task.
      * Not supported in Fargate.
+     * @deprecated ECS TaskDefinition's inferenceAccelerator is EOL since April 2024
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>)
 
     /**
      * @param inferenceAccelerators The inference accelerators to use for the containers in the
      * task.
      * Not supported in Fargate.
+     * @deprecated ECS TaskDefinition's inferenceAccelerator is EOL since April 2024
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun inferenceAccelerators(vararg inferenceAccelerators: InferenceAccelerator)
 
     /**
@@ -378,7 +395,7 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
         software.amazon.awscdk.services.ecs.TaskDefinitionProps.builder()
 
     /**
-     * @param compatibility The task launch type compatiblity requirement. 
+     * @param compatibility The task launch type compatibility requirement. 
      */
     override fun compatibility(compatibility: Compatibility) {
       cdkBuilder.compatibility(compatibility.let(Compatibility.Companion::unwrap))
@@ -415,6 +432,16 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
     }
 
     /**
+     * @param enableFaultInjection Enables fault injection and allows for fault injection requests
+     * to be accepted from the task's containers.
+     * Fault injection only works with tasks using the [NetworkMode.AWS_VPC] or [NetworkMode.HOST]
+     * network modes.
+     */
+    override fun enableFaultInjection(enableFaultInjection: Boolean) {
+      cdkBuilder.enableFaultInjection(enableFaultInjection)
+    }
+
+    /**
      * @param ephemeralStorageGiB The amount (in GiB) of ephemeral storage to be allocated to the
      * task.
      * Only supported in Fargate platform version 1.4.0 or later.
@@ -444,7 +471,9 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
      * @param inferenceAccelerators The inference accelerators to use for the containers in the
      * task.
      * Not supported in Fargate.
+     * @deprecated ECS TaskDefinition's inferenceAccelerator is EOL since April 2024
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>) {
       cdkBuilder.inferenceAccelerators(inferenceAccelerators.map(InferenceAccelerator.Companion::unwrap))
     }
@@ -453,7 +482,9 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
      * @param inferenceAccelerators The inference accelerators to use for the containers in the
      * task.
      * Not supported in Fargate.
+     * @deprecated ECS TaskDefinition's inferenceAccelerator is EOL since April 2024
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun inferenceAccelerators(vararg inferenceAccelerators: InferenceAccelerator): Unit =
         inferenceAccelerators(inferenceAccelerators.toList())
 
@@ -596,7 +627,7 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
   ) : CdkObject(cdkObject),
       TaskDefinitionProps {
     /**
-     * The task launch type compatiblity requirement.
+     * The task launch type compatibility requirement.
      */
     override fun compatibility(): Compatibility =
         unwrap(this).getCompatibility().let(Compatibility::wrap)
@@ -633,6 +664,17 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
     override fun cpu(): String? = unwrap(this).getCpu()
 
     /**
+     * Enables fault injection and allows for fault injection requests to be accepted from the
+     * task's containers.
+     *
+     * Fault injection only works with tasks using the [NetworkMode.AWS_VPC] or [NetworkMode.HOST]
+     * network modes.
+     *
+     * Default: undefined - ECS default setting is false
+     */
+    override fun enableFaultInjection(): Boolean? = unwrap(this).getEnableFaultInjection()
+
+    /**
      * The amount (in GiB) of ephemeral storage to be allocated to the task.
      *
      * Only supported in Fargate platform version 1.4.0 or later.
@@ -662,12 +704,15 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
     override fun family(): String? = unwrap(this).getFamily()
 
     /**
-     * The inference accelerators to use for the containers in the task.
+     * (deprecated) The inference accelerators to use for the containers in the task.
      *
      * Not supported in Fargate.
      *
      * Default: - No inference accelerators.
+     *
+     * @deprecated ECS TaskDefinition's inferenceAccelerator is EOL since April 2024
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun inferenceAccelerators(): List<InferenceAccelerator> =
         unwrap(this).getInferenceAccelerators()?.map(InferenceAccelerator::wrap) ?: emptyList()
 

@@ -17,6 +17,7 @@ import kotlin.Unit
  * Example:
  *
  * ```
+ * Project project;
  * Artifact sourceOutput = new Artifact();
  * CodeStarConnectionsSourceAction sourceAction = CodeStarConnectionsSourceAction.Builder.create()
  * .actionName("BitBucket_Source")
@@ -24,6 +25,18 @@ import kotlin.Unit
  * .repo("aws-cdk")
  * .output(sourceOutput)
  * .connectionArn("arn:aws:codestar-connections:us-east-1:123456789012:connection/12345678-abcd-12ab-34cdef5678gh")
+ * .variablesNamespace("SomeSpace")
+ * .build();
+ * // later:
+ * // later:
+ * CodeBuildAction.Builder.create()
+ * .actionName("CodeBuild")
+ * .project(project)
+ * .input(sourceOutput)
+ * .environmentVariables(Map.of(
+ * "COMMIT_ID", BuildEnvironmentVariable.builder()
+ * .value(sourceAction.getVariables().getCommitId())
+ * .build()))
  * .build();
  * ```
  */

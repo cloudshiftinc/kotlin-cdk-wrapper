@@ -149,6 +149,9 @@ public open class LambdaDeploymentConfig(
     public val LINEAR_10_PERCENT_EVERY_3_MINUTES: ILambdaDeploymentConfig =
         ILambdaDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.LINEAR_10_PERCENT_EVERY_3_MINUTES)
 
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.PROPERTY_INJECTION_ID
+
     @Deprecated(message = "deprecated in CDK")
     public fun doImport(
       scope: CloudshiftdevConstructsConstruct,

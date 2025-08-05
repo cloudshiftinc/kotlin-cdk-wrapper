@@ -29,11 +29,15 @@ import kotlin.collections.List
  */
 public interface CfnBatchScramSecretProps {
   /**
+   * The Amazon Resource Name (ARN) that uniquely identifies the cluster.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html#cfn-msk-batchscramsecret-clusterarn)
    */
   public fun clusterArn(): String
 
   /**
+   * List of Amazon Resource Name (ARN)s of Secrets Manager secrets.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html#cfn-msk-batchscramsecret-secretarnlist)
    */
   public fun secretArnList(): List<String> = unwrap(this).getSecretArnList() ?: emptyList()
@@ -44,17 +48,17 @@ public interface CfnBatchScramSecretProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param clusterArn the value to be set. 
+     * @param clusterArn The Amazon Resource Name (ARN) that uniquely identifies the cluster. 
      */
     public fun clusterArn(clusterArn: String)
 
     /**
-     * @param secretArnList the value to be set.
+     * @param secretArnList List of Amazon Resource Name (ARN)s of Secrets Manager secrets.
      */
     public fun secretArnList(secretArnList: List<String>)
 
     /**
-     * @param secretArnList the value to be set.
+     * @param secretArnList List of Amazon Resource Name (ARN)s of Secrets Manager secrets.
      */
     public fun secretArnList(vararg secretArnList: String)
   }
@@ -64,21 +68,21 @@ public interface CfnBatchScramSecretProps {
         software.amazon.awscdk.services.msk.CfnBatchScramSecretProps.builder()
 
     /**
-     * @param clusterArn the value to be set. 
+     * @param clusterArn The Amazon Resource Name (ARN) that uniquely identifies the cluster. 
      */
     override fun clusterArn(clusterArn: String) {
       cdkBuilder.clusterArn(clusterArn)
     }
 
     /**
-     * @param secretArnList the value to be set.
+     * @param secretArnList List of Amazon Resource Name (ARN)s of Secrets Manager secrets.
      */
     override fun secretArnList(secretArnList: List<String>) {
       cdkBuilder.secretArnList(secretArnList)
     }
 
     /**
-     * @param secretArnList the value to be set.
+     * @param secretArnList List of Amazon Resource Name (ARN)s of Secrets Manager secrets.
      */
     override fun secretArnList(vararg secretArnList: String): Unit =
         secretArnList(secretArnList.toList())
@@ -92,11 +96,15 @@ public interface CfnBatchScramSecretProps {
   ) : CdkObject(cdkObject),
       CfnBatchScramSecretProps {
     /**
+     * The Amazon Resource Name (ARN) that uniquely identifies the cluster.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html#cfn-msk-batchscramsecret-clusterarn)
      */
     override fun clusterArn(): String = unwrap(this).getClusterArn()
 
     /**
+     * List of Amazon Resource Name (ARN)s of Secrets Manager secrets.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html#cfn-msk-batchscramsecret-secretarnlist)
      */
     override fun secretArnList(): List<String> = unwrap(this).getSecretArnList() ?: emptyList()

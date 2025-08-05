@@ -53,6 +53,13 @@ import kotlin.collections.Map
  */
 public interface LookupMachineImageProps {
   /**
+   * Adds an additional discriminator to the `cdk.context.json` cache key.
+   *
+   * Default: - no additional cache key
+   */
+  public fun additionalCacheKey(): String? = unwrap(this).getAdditionalCacheKey()
+
+  /**
    * Additional filters on the AMI.
    *
    * Default: - No additional filters
@@ -93,6 +100,12 @@ public interface LookupMachineImageProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key.
+     */
+    public fun additionalCacheKey(additionalCacheKey: String)
+
+    /**
      * @param filters Additional filters on the AMI.
      */
     public fun filters(filters: Map<String, List<String>>)
@@ -126,6 +139,14 @@ public interface LookupMachineImageProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.LookupMachineImageProps.Builder =
         software.amazon.awscdk.services.ec2.LookupMachineImageProps.builder()
+
+    /**
+     * @param additionalCacheKey Adds an additional discriminator to the `cdk.context.json` cache
+     * key.
+     */
+    override fun additionalCacheKey(additionalCacheKey: String) {
+      cdkBuilder.additionalCacheKey(additionalCacheKey)
+    }
 
     /**
      * @param filters Additional filters on the AMI.
@@ -175,6 +196,13 @@ public interface LookupMachineImageProps {
     cdkObject: software.amazon.awscdk.services.ec2.LookupMachineImageProps,
   ) : CdkObject(cdkObject),
       LookupMachineImageProps {
+    /**
+     * Adds an additional discriminator to the `cdk.context.json` cache key.
+     *
+     * Default: - no additional cache key
+     */
+    override fun additionalCacheKey(): String? = unwrap(this).getAdditionalCacheKey()
+
     /**
      * Additional filters on the AMI.
      *

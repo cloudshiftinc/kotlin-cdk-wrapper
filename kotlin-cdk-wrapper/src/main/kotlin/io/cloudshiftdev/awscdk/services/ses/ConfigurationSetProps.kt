@@ -17,11 +17,9 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * ConfigurationSet.Builder.create(this, "ConfigurationSetWithVdmOptions")
- * .vdmOptions(VdmOptions.builder()
- * .engagementMetrics(true)
- * .optimizedSharedDelivery(true)
- * .build())
+ * ConfigurationSet.Builder.create(this, "ConfigurationSet")
+ * .customTrackingRedirectDomain("track.cdk.dev")
+ * .customTrackingHttpsPolicy(HttpsPolicy.REQUIRE)
  * .build();
  * ```
  */
@@ -32,6 +30,14 @@ public interface ConfigurationSetProps {
    * Default: - a CloudFormation generated name
    */
   public fun configurationSetName(): String? = unwrap(this).getConfigurationSetName()
+
+  /**
+   * The https policy to use for tracking open and click events.
+   *
+   * Default: - HttpsPolicy.OPTIONAL if customTrackingRedirectDomain is set, otherwise undefined
+   */
+  public fun customTrackingHttpsPolicy(): HttpsPolicy? =
+      unwrap(this).getCustomTrackingHttpsPolicy()?.let(HttpsPolicy::wrap)
 
   /**
    * The custom subdomain that is used to redirect email recipients to the Amazon SES event tracking
@@ -122,6 +128,11 @@ public interface ConfigurationSetProps {
     public fun configurationSetName(configurationSetName: String)
 
     /**
+     * @param customTrackingHttpsPolicy The https policy to use for tracking open and click events.
+     */
+    public fun customTrackingHttpsPolicy(customTrackingHttpsPolicy: HttpsPolicy)
+
+    /**
      * @param customTrackingRedirectDomain The custom subdomain that is used to redirect email
      * recipients to the Amazon SES event tracking domain.
      */
@@ -193,6 +204,13 @@ public interface ConfigurationSetProps {
      */
     override fun configurationSetName(configurationSetName: String) {
       cdkBuilder.configurationSetName(configurationSetName)
+    }
+
+    /**
+     * @param customTrackingHttpsPolicy The https policy to use for tracking open and click events.
+     */
+    override fun customTrackingHttpsPolicy(customTrackingHttpsPolicy: HttpsPolicy) {
+      cdkBuilder.customTrackingHttpsPolicy(customTrackingHttpsPolicy.let(HttpsPolicy.Companion::unwrap))
     }
 
     /**
@@ -290,6 +308,14 @@ public interface ConfigurationSetProps {
      * Default: - a CloudFormation generated name
      */
     override fun configurationSetName(): String? = unwrap(this).getConfigurationSetName()
+
+    /**
+     * The https policy to use for tracking open and click events.
+     *
+     * Default: - HttpsPolicy.OPTIONAL if customTrackingRedirectDomain is set, otherwise undefined
+     */
+    override fun customTrackingHttpsPolicy(): HttpsPolicy? =
+        unwrap(this).getCustomTrackingHttpsPolicy()?.let(HttpsPolicy::wrap)
 
     /**
      * The custom subdomain that is used to redirect email recipients to the Amazon SES event

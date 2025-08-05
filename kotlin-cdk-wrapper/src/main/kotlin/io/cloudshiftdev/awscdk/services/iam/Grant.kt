@@ -87,7 +87,7 @@ public open class Grant(
       unwrap(this).getResourceStatement()?.let(PolicyStatement::wrap)
 
   /**
-   * The statements that were added to the principal's policy.
+   * The statements that were added to the resource policy.
    */
   public open fun resourceStatements(): List<PolicyStatement> =
       unwrap(this).getResourceStatements().map(PolicyStatement::wrap)
@@ -98,6 +98,15 @@ public open class Grant(
   public open fun success(): Boolean = unwrap(this).getSuccess()
 
   public companion object {
+    public fun addStatementToResourcePolicy(options: GrantPolicyWithResourceOptions): Grant =
+        software.amazon.awscdk.services.iam.Grant.addStatementToResourcePolicy(options.let(GrantPolicyWithResourceOptions.Companion::unwrap)).let(Grant::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b21306f98ec0799a8530f6fc2785798adfa9c75a28e5b0bd55125bf47fbad8df")
+    public
+        fun addStatementToResourcePolicy(options: GrantPolicyWithResourceOptions.Builder.() -> Unit):
+        Grant = addStatementToResourcePolicy(GrantPolicyWithResourceOptions(options))
+
     public fun addToPrincipal(options: GrantOnPrincipalOptions): Grant =
         software.amazon.awscdk.services.iam.Grant.addToPrincipal(options.let(GrantOnPrincipalOptions.Companion::unwrap)).let(Grant::wrap)
 

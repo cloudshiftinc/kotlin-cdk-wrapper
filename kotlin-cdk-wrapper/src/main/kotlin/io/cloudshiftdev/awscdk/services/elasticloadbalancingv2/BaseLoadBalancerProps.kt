@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -33,6 +34,7 @@ import kotlin.jvm.JvmName
  * .denyAllIgwTraffic(false)
  * .internetFacing(false)
  * .loadBalancerName("loadBalancerName")
+ * .minimumCapacityUnit(123)
  * .vpcSubnets(SubnetSelection.builder()
  * .availabilityZones(List.of("availabilityZones"))
  * .onePerAz(false)
@@ -84,6 +86,15 @@ public interface BaseLoadBalancerProps {
   public fun loadBalancerName(): String? = unwrap(this).getLoadBalancerName()
 
   /**
+   * The minimum capacity (LCU) for a load balancer.
+   *
+   * Default: undefined - ELB default is 0 LCU
+   *
+   * [Documentation](https://exampleloadbalancer.com/ondemand_capacity_reservation_calculator.html)
+   */
+  public fun minimumCapacityUnit(): Number? = unwrap(this).getMinimumCapacityUnit()
+
+  /**
    * The VPC network to place the load balancer in.
    */
   public fun vpc(): IVpc
@@ -126,6 +137,11 @@ public interface BaseLoadBalancerProps {
      * @param loadBalancerName Name of the load balancer.
      */
     public fun loadBalancerName(loadBalancerName: String)
+
+    /**
+     * @param minimumCapacityUnit The minimum capacity (LCU) for a load balancer.
+     */
+    public fun minimumCapacityUnit(minimumCapacityUnit: Number)
 
     /**
      * @param vpc The VPC network to place the load balancer in. 
@@ -184,6 +200,13 @@ public interface BaseLoadBalancerProps {
      */
     override fun loadBalancerName(loadBalancerName: String) {
       cdkBuilder.loadBalancerName(loadBalancerName)
+    }
+
+    /**
+     * @param minimumCapacityUnit The minimum capacity (LCU) for a load balancer.
+     */
+    override fun minimumCapacityUnit(minimumCapacityUnit: Number) {
+      cdkBuilder.minimumCapacityUnit(minimumCapacityUnit)
     }
 
     /**
@@ -253,6 +276,15 @@ public interface BaseLoadBalancerProps {
      * Default: - Automatically generated name.
      */
     override fun loadBalancerName(): String? = unwrap(this).getLoadBalancerName()
+
+    /**
+     * The minimum capacity (LCU) for a load balancer.
+     *
+     * Default: undefined - ELB default is 0 LCU
+     *
+     * [Documentation](https://exampleloadbalancer.com/ondemand_capacity_reservation_calculator.html)
+     */
+    override fun minimumCapacityUnit(): Number? = unwrap(this).getMinimumCapacityUnit()
 
     /**
      * The VPC network to place the load balancer in.

@@ -2096,11 +2096,6 @@ public open class CfnSecurityProfile(
       /**
        * @param numbers The numeric value of a metric.
        */
-      public fun numbers(numbers: IResolvable)
-
-      /**
-       * @param numbers The numeric value of a metric.
-       */
       public fun numbers(numbers: List<Number>)
 
       /**
@@ -2109,10 +2104,9 @@ public open class CfnSecurityProfile(
       public fun numbers(vararg numbers: Number)
 
       /**
-       * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
-       * set to be compared with the `metric` .
+       * @param numbers The numeric value of a metric.
        */
-      public fun ports(ports: IResolvable)
+      public fun numbers(numbers: IResolvable)
 
       /**
        * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
@@ -2125,6 +2119,12 @@ public open class CfnSecurityProfile(
        * set to be compared with the `metric` .
        */
       public fun ports(vararg ports: Number)
+
+      /**
+       * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
+       * set to be compared with the `metric` .
+       */
+      public fun ports(ports: IResolvable)
 
       /**
        * @param strings The string values of a metric.
@@ -2174,13 +2174,6 @@ public open class CfnSecurityProfile(
       /**
        * @param numbers The numeric value of a metric.
        */
-      override fun numbers(numbers: IResolvable) {
-        cdkBuilder.numbers(numbers.let(IResolvable.Companion::unwrap))
-      }
-
-      /**
-       * @param numbers The numeric value of a metric.
-       */
       override fun numbers(numbers: List<Number>) {
         cdkBuilder.numbers(numbers)
       }
@@ -2191,11 +2184,10 @@ public open class CfnSecurityProfile(
       override fun numbers(vararg numbers: Number): Unit = numbers(numbers.toList())
 
       /**
-       * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
-       * set to be compared with the `metric` .
+       * @param numbers The numeric value of a metric.
        */
-      override fun ports(ports: IResolvable) {
-        cdkBuilder.ports(ports.let(IResolvable.Companion::unwrap))
+      override fun numbers(numbers: IResolvable) {
+        cdkBuilder.numbers(numbers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2211,6 +2203,14 @@ public open class CfnSecurityProfile(
        * set to be compared with the `metric` .
        */
       override fun ports(vararg ports: Number): Unit = ports(ports.toList())
+
+      /**
+       * @param ports If the `comparisonOperator` calls for a set of ports, use this to specify that
+       * set to be compared with the `metric` .
+       */
+      override fun ports(ports: IResolvable) {
+        cdkBuilder.ports(ports.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param strings The string values of a metric.

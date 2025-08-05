@@ -197,14 +197,14 @@ public open class CfnMatchmakingConfiguration(
   }
 
   /**
-   * Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or
-   * as a standalone matchmaking solution.
+   * Indicates whether this matchmaking configuration is being used with Amazon GameLift Servers
+   * hosting or as a standalone matchmaking solution.
    */
   public open fun flexMatchMode(): String? = unwrap(this).getFlexMatchMode()
 
   /**
-   * Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or
-   * as a standalone matchmaking solution.
+   * Indicates whether this matchmaking configuration is being used with Amazon GameLift Servers
+   * hosting or as a standalone matchmaking solution.
    */
   public open fun flexMatchMode(`value`: String) {
     unwrap(this).setFlexMatchMode(`value`)
@@ -249,11 +249,11 @@ public open class CfnMatchmakingConfiguration(
   /**
    * The Amazon Resource Name (
    * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) that is assigned to a
-   * Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
-   * Regions. Format is `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` . Queues
-   * can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions
-   * for matches that are created with this matchmaking configuration. If `FlexMatchMode` is set to
-   * `STANDALONE` , do not set this parameter.
+   * Amazon GameLift Servers game session queue resource and uniquely identifies it. ARNs are unique
+   * across all Regions. Format is `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue
+   * name&gt;` . Queues can be located in any Region. Queues are used to start new Amazon GameLift
+   * Servers-hosted game sessions for matches that are created with this matchmaking configuration. If
+   * `FlexMatchMode` is set to `STANDALONE` , do not set this parameter.
    */
   public open fun gameSessionQueueArns(): List<String> = unwrap(this).getGameSessionQueueArns() ?:
       emptyList()
@@ -261,11 +261,11 @@ public open class CfnMatchmakingConfiguration(
   /**
    * The Amazon Resource Name (
    * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) that is assigned to a
-   * Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
-   * Regions. Format is `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` . Queues
-   * can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions
-   * for matches that are created with this matchmaking configuration. If `FlexMatchMode` is set to
-   * `STANDALONE` , do not set this parameter.
+   * Amazon GameLift Servers game session queue resource and uniquely identifies it. ARNs are unique
+   * across all Regions. Format is `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue
+   * name&gt;` . Queues can be located in any Region. Queues are used to start new Amazon GameLift
+   * Servers-hosted game sessions for matches that are created with this matchmaking configuration. If
+   * `FlexMatchMode` is set to `STANDALONE` , do not set this parameter.
    */
   public open fun gameSessionQueueArns(`value`: List<String>) {
     unwrap(this).setGameSessionQueueArns(`value`)
@@ -274,11 +274,11 @@ public open class CfnMatchmakingConfiguration(
   /**
    * The Amazon Resource Name (
    * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) that is assigned to a
-   * Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across all
-   * Regions. Format is `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` . Queues
-   * can be located in any Region. Queues are used to start new Amazon GameLift-hosted game sessions
-   * for matches that are created with this matchmaking configuration. If `FlexMatchMode` is set to
-   * `STANDALONE` , do not set this parameter.
+   * Amazon GameLift Servers game session queue resource and uniquely identifies it. ARNs are unique
+   * across all Regions. Format is `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue
+   * name&gt;` . Queues can be located in any Region. Queues are used to start new Amazon GameLift
+   * Servers-hosted game sessions for matches that are created with this matchmaking configuration. If
+   * `FlexMatchMode` is set to `STANDALONE` , do not set this parameter.
    */
   public open fun gameSessionQueueArns(vararg `value`: String): Unit =
       gameSessionQueueArns(`value`.toList())
@@ -482,19 +482,19 @@ public open class CfnMatchmakingConfiguration(
     public fun description(description: String)
 
     /**
-     * Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting
-     * or as a standalone matchmaking solution.
+     * Indicates whether this matchmaking configuration is being used with Amazon GameLift Servers
+     * hosting or as a standalone matchmaking solution.
      *
      * * *STANDALONE* - FlexMatch forms matches and returns match information, including players and
      * team assignments, in a
      * [MatchmakingSucceeded](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-events.html#match-events-matchmakingsucceeded)
      * event.
-     * * *WITH_QUEUE* - FlexMatch forms matches and uses the specified Amazon GameLift queue to
-     * start a game session for the match.
+     * * *WITH_QUEUE* - FlexMatch forms matches and uses the specified Amazon GameLift Servers queue
+     * to start a game session for the match.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingconfiguration.html#cfn-gamelift-matchmakingconfiguration-flexmatchmode)
      * @param flexMatchMode Indicates whether this matchmaking configuration is being used with
-     * Amazon GameLift hosting or as a standalone matchmaking solution. 
+     * Amazon GameLift Servers hosting or as a standalone matchmaking solution. 
      */
     public fun flexMatchMode(flexMatchMode: String)
 
@@ -557,40 +557,44 @@ public open class CfnMatchmakingConfiguration(
     /**
      * The Amazon Resource Name (
      * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) that is assigned to
-     * a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across
-     * all Regions. Format is `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` .
-     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game
-     * sessions for matches that are created with this matchmaking configuration. If `FlexMatchMode` is
-     * set to `STANDALONE` , do not set this parameter.
+     * a Amazon GameLift Servers game session queue resource and uniquely identifies it. ARNs are
+     * unique across all Regions. Format is
+     * `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` . Queues can be located
+     * in any Region. Queues are used to start new Amazon GameLift Servers-hosted game sessions for
+     * matches that are created with this matchmaking configuration. If `FlexMatchMode` is set to
+     * `STANDALONE` , do not set this parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingconfiguration.html#cfn-gamelift-matchmakingconfiguration-gamesessionqueuearns)
      * @param gameSessionQueueArns The Amazon Resource Name (
      * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) that is assigned to
-     * a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across
-     * all Regions. Format is `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` .
-     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game
-     * sessions for matches that are created with this matchmaking configuration. If `FlexMatchMode` is
-     * set to `STANDALONE` , do not set this parameter. 
+     * a Amazon GameLift Servers game session queue resource and uniquely identifies it. ARNs are
+     * unique across all Regions. Format is
+     * `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` . Queues can be located
+     * in any Region. Queues are used to start new Amazon GameLift Servers-hosted game sessions for
+     * matches that are created with this matchmaking configuration. If `FlexMatchMode` is set to
+     * `STANDALONE` , do not set this parameter. 
      */
     public fun gameSessionQueueArns(gameSessionQueueArns: List<String>)
 
     /**
      * The Amazon Resource Name (
      * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) that is assigned to
-     * a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across
-     * all Regions. Format is `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` .
-     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game
-     * sessions for matches that are created with this matchmaking configuration. If `FlexMatchMode` is
-     * set to `STANDALONE` , do not set this parameter.
+     * a Amazon GameLift Servers game session queue resource and uniquely identifies it. ARNs are
+     * unique across all Regions. Format is
+     * `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` . Queues can be located
+     * in any Region. Queues are used to start new Amazon GameLift Servers-hosted game sessions for
+     * matches that are created with this matchmaking configuration. If `FlexMatchMode` is set to
+     * `STANDALONE` , do not set this parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingconfiguration.html#cfn-gamelift-matchmakingconfiguration-gamesessionqueuearns)
      * @param gameSessionQueueArns The Amazon Resource Name (
      * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) that is assigned to
-     * a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across
-     * all Regions. Format is `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` .
-     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game
-     * sessions for matches that are created with this matchmaking configuration. If `FlexMatchMode` is
-     * set to `STANDALONE` , do not set this parameter. 
+     * a Amazon GameLift Servers game session queue resource and uniquely identifies it. ARNs are
+     * unique across all Regions. Format is
+     * `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` . Queues can be located
+     * in any Region. Queues are used to start new Amazon GameLift Servers-hosted game sessions for
+     * matches that are created with this matchmaking configuration. If `FlexMatchMode` is set to
+     * `STANDALONE` , do not set this parameter. 
      */
     public fun gameSessionQueueArns(vararg gameSessionQueueArns: String)
 
@@ -806,19 +810,19 @@ public open class CfnMatchmakingConfiguration(
     }
 
     /**
-     * Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting
-     * or as a standalone matchmaking solution.
+     * Indicates whether this matchmaking configuration is being used with Amazon GameLift Servers
+     * hosting or as a standalone matchmaking solution.
      *
      * * *STANDALONE* - FlexMatch forms matches and returns match information, including players and
      * team assignments, in a
      * [MatchmakingSucceeded](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-events.html#match-events-matchmakingsucceeded)
      * event.
-     * * *WITH_QUEUE* - FlexMatch forms matches and uses the specified Amazon GameLift queue to
-     * start a game session for the match.
+     * * *WITH_QUEUE* - FlexMatch forms matches and uses the specified Amazon GameLift Servers queue
+     * to start a game session for the match.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingconfiguration.html#cfn-gamelift-matchmakingconfiguration-flexmatchmode)
      * @param flexMatchMode Indicates whether this matchmaking configuration is being used with
-     * Amazon GameLift hosting or as a standalone matchmaking solution. 
+     * Amazon GameLift Servers hosting or as a standalone matchmaking solution. 
      */
     override fun flexMatchMode(flexMatchMode: String) {
       cdkBuilder.flexMatchMode(flexMatchMode)
@@ -890,20 +894,22 @@ public open class CfnMatchmakingConfiguration(
     /**
      * The Amazon Resource Name (
      * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) that is assigned to
-     * a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across
-     * all Regions. Format is `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` .
-     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game
-     * sessions for matches that are created with this matchmaking configuration. If `FlexMatchMode` is
-     * set to `STANDALONE` , do not set this parameter.
+     * a Amazon GameLift Servers game session queue resource and uniquely identifies it. ARNs are
+     * unique across all Regions. Format is
+     * `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` . Queues can be located
+     * in any Region. Queues are used to start new Amazon GameLift Servers-hosted game sessions for
+     * matches that are created with this matchmaking configuration. If `FlexMatchMode` is set to
+     * `STANDALONE` , do not set this parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingconfiguration.html#cfn-gamelift-matchmakingconfiguration-gamesessionqueuearns)
      * @param gameSessionQueueArns The Amazon Resource Name (
      * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) that is assigned to
-     * a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across
-     * all Regions. Format is `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` .
-     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game
-     * sessions for matches that are created with this matchmaking configuration. If `FlexMatchMode` is
-     * set to `STANDALONE` , do not set this parameter. 
+     * a Amazon GameLift Servers game session queue resource and uniquely identifies it. ARNs are
+     * unique across all Regions. Format is
+     * `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` . Queues can be located
+     * in any Region. Queues are used to start new Amazon GameLift Servers-hosted game sessions for
+     * matches that are created with this matchmaking configuration. If `FlexMatchMode` is set to
+     * `STANDALONE` , do not set this parameter. 
      */
     override fun gameSessionQueueArns(gameSessionQueueArns: List<String>) {
       cdkBuilder.gameSessionQueueArns(gameSessionQueueArns)
@@ -912,20 +918,22 @@ public open class CfnMatchmakingConfiguration(
     /**
      * The Amazon Resource Name (
      * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) that is assigned to
-     * a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across
-     * all Regions. Format is `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` .
-     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game
-     * sessions for matches that are created with this matchmaking configuration. If `FlexMatchMode` is
-     * set to `STANDALONE` , do not set this parameter.
+     * a Amazon GameLift Servers game session queue resource and uniquely identifies it. ARNs are
+     * unique across all Regions. Format is
+     * `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` . Queues can be located
+     * in any Region. Queues are used to start new Amazon GameLift Servers-hosted game sessions for
+     * matches that are created with this matchmaking configuration. If `FlexMatchMode` is set to
+     * `STANDALONE` , do not set this parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingconfiguration.html#cfn-gamelift-matchmakingconfiguration-gamesessionqueuearns)
      * @param gameSessionQueueArns The Amazon Resource Name (
      * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) that is assigned to
-     * a Amazon GameLift game session queue resource and uniquely identifies it. ARNs are unique across
-     * all Regions. Format is `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` .
-     * Queues can be located in any Region. Queues are used to start new Amazon GameLift-hosted game
-     * sessions for matches that are created with this matchmaking configuration. If `FlexMatchMode` is
-     * set to `STANDALONE` , do not set this parameter. 
+     * a Amazon GameLift Servers game session queue resource and uniquely identifies it. ARNs are
+     * unique across all Regions. Format is
+     * `arn:aws:gamelift:&lt;region&gt;::gamesessionqueue/&lt;queue name&gt;` . Queues can be located
+     * in any Region. Queues are used to start new Amazon GameLift Servers-hosted game sessions for
+     * matches that are created with this matchmaking configuration. If `FlexMatchMode` is set to
+     * `STANDALONE` , do not set this parameter. 
      */
     override fun gameSessionQueueArns(vararg gameSessionQueueArns: String): Unit =
         gameSessionQueueArns(gameSessionQueueArns.toList())

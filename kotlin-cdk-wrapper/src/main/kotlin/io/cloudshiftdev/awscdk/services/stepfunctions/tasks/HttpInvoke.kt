@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.IConnection
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
+import io.cloudshiftdev.awscdk.services.stepfunctions.QueryLanguage
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskInput
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBase
 import io.cloudshiftdev.awscdk.services.stepfunctions.Timeout
@@ -27,18 +28,38 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * ```
  * import io.cloudshiftdev.awscdk.services.events.*;
- * Connection connection = Connection.Builder.create(this, "Connection")
- * .authorization(Authorization.basic("username", SecretValue.unsafePlainText("password")))
- * .build();
- * HttpInvoke.Builder.create(this, "Invoke HTTP API")
- * .apiRoot("https://api.example.com")
- * .apiEndpoint(TaskInput.fromText("path/to/resource"))
- * .body(TaskInput.fromObject(Map.of("foo", "bar")))
+ * Connection connection;
+ * HttpInvoke getIssue = HttpInvoke.jsonata(this, "Get Issue", HttpInvokeJsonataProps.builder()
  * .connection(connection)
- * .headers(TaskInput.fromObject(Map.of("Content-Type", "application/json")))
+ * .apiRoot("{% 'https://' &amp; $states.input.hostname %}")
+ * .apiEndpoint(TaskInput.fromText("{% 'issues/' &amp; $states.input.issue.id %}"))
+ * .method(TaskInput.fromText("GET"))
+ * // Parse the API call result to object and set to the variables
+ * .assign(Map.of(
+ * "hostname", "{% $states.input.hostname %}",
+ * "issue", "{% $parse($states.result.ResponseBody) %}"))
+ * .build());
+ * HttpInvoke updateLabels = HttpInvoke.jsonata(this, "Update Issue Labels",
+ * HttpInvokeJsonataProps.builder()
+ * .connection(connection)
+ * .apiRoot("{% 'https://' &amp; $states.input.hostname %}")
+ * .apiEndpoint(TaskInput.fromText("{% 'issues/' &amp; $states.input.issue.id &amp; 'labels' %}"))
  * .method(TaskInput.fromText("POST"))
- * .queryStringParameters(TaskInput.fromObject(Map.of("id", "123")))
- * .urlEncodingFormat(URLEncodingFormat.BRACKETS)
+ * .body(TaskInput.fromObject(Map.of(
+ * "labels", "{% [$type, $component] %}")))
+ * .build());
+ * Pass notMatchTitleTemplate = Pass.jsonata(this, "Not Match Title Template");
+ * Chain definition = getIssue.next(Choice.jsonata(this, "Match Title
+ * Template?").when(Condition.jsonata("{% $contains($issue.title, /(feat)|(fix)|(chore)(w*):.*&#47;)
+ * %}"), updateLabels, ChoiceTransitionOptions.builder()
+ * .assign(Map.of(
+ * "type", "{% $match($states.input.title, /(w*)((.*))/).groups[0] %}",
+ * "component", "{% $match($states.input.title, /(w*)((.*))/).groups[1] %}"))
+ * .build()).otherwise(notMatchTitleTemplate));
+ * StateMachine.Builder.create(this, "StateMachine")
+ * .definitionBody(DefinitionBody.fromChainable(definition))
+ * .timeout(Duration.minutes(5))
+ * .comment("automate issue labeling state machine")
  * .build();
  * ```
  */
@@ -93,6 +114,19 @@ public open class HttpInvoke(
     public fun apiRoot(apiRoot: String)
 
     /**
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    public fun assign(assign: Map<String, Any>)
+
+    /**
      * The body to send to the HTTP endpoint.
      *
      * Default: - No body is sent with the request.
@@ -102,11 +136,11 @@ public open class HttpInvoke(
     public fun body(body: TaskInput)
 
     /**
-     * An optional description for this state.
+     * A comment describing this state.
      *
-     * Default: - No comment
+     * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     public fun comment(comment: String)
 
@@ -189,7 +223,7 @@ public open class HttpInvoke(
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      *
      * @param inputPath JSONPath expression to select part of the state to be the input to this
      * state. 
@@ -228,18 +262,45 @@ public open class HttpInvoke(
     public fun method(method: TaskInput)
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      *
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state. 
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state. 
      */
     public fun outputPath(outputPath: String)
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    public fun outputs(outputs: Any)
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    public fun queryLanguage(queryLanguage: QueryLanguage)
 
     /**
      * The query string parameters to send to the HTTP endpoint.
@@ -256,7 +317,7 @@ public open class HttpInvoke(
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      *
      * @param resultPath JSONPath expression to indicate where to inject the state's output. 
      */
@@ -366,6 +427,21 @@ public open class HttpInvoke(
     }
 
     /**
+     * Workflow variables to store in this step.
+     *
+     * Using workflow variables, you can store data in a step and retrieve that data in future
+     * steps.
+     *
+     * Default: - Not assign variables
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/workflow-variables.html)
+     * @param assign Workflow variables to store in this step. 
+     */
+    override fun assign(assign: Map<String, Any>) {
+      cdkBuilder.assign(assign.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
      * The body to send to the HTTP endpoint.
      *
      * Default: - No body is sent with the request.
@@ -377,11 +453,11 @@ public open class HttpInvoke(
     }
 
     /**
-     * An optional description for this state.
+     * A comment describing this state.
      *
-     * Default: - No comment
+     * Default: No comment
      *
-     * @param comment An optional description for this state. 
+     * @param comment A comment describing this state. 
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -477,7 +553,7 @@ public open class HttpInvoke(
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * input to be the empty object {}.
      *
-     * Default: - The entire task input (JSON path '$')
+     * Default: $
      *
      * @param inputPath JSONPath expression to select part of the state to be the input to this
      * state. 
@@ -522,19 +598,50 @@ public open class HttpInvoke(
     }
 
     /**
-     * JSONPath expression to select select a portion of the state output to pass to the next state.
+     * JSONPath expression to select part of the state to be the output to this state.
      *
      * May also be the special value JsonPath.DISCARD, which will cause the effective
      * output to be the empty object {}.
      *
-     * Default: - The entire JSON node determined by the state input, the task result,
-     * and resultPath is passed to the next state (JSON path '$')
+     * Default: $
      *
-     * @param outputPath JSONPath expression to select select a portion of the state output to pass
-     * to the next state. 
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state. 
      */
     override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
+    }
+
+    /**
+     * Used to specify and transform output from the state.
+     *
+     * When specified, the value overrides the state output default.
+     * The output field accepts any JSON value (object, array, string, number, boolean, null).
+     * Any string value, including those inside objects or arrays,
+     * will be evaluated as JSONata if surrounded by {% %} characters.
+     * Output also accepts a JSONata expression directly.
+     *
+     * Default: - $states.result or $states.errorOutput
+     *
+     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html)
+     * @param outputs Used to specify and transform output from the state. 
+     */
+    override fun outputs(outputs: Any) {
+      cdkBuilder.outputs(outputs)
+    }
+
+    /**
+     * The name of the query language used by the state.
+     *
+     * If the state does not contain a `queryLanguage` field,
+     * then it will use the query language specified in the top-level `queryLanguage` field.
+     *
+     * Default: - JSONPath
+     *
+     * @param queryLanguage The name of the query language used by the state. 
+     */
+    override fun queryLanguage(queryLanguage: QueryLanguage) {
+      cdkBuilder.queryLanguage(queryLanguage.let(QueryLanguage.Companion::unwrap))
     }
 
     /**
@@ -554,7 +661,7 @@ public open class HttpInvoke(
      * May also be the special value JsonPath.DISCARD, which will cause the state's
      * input to become its output.
      *
-     * Default: - Replaces the entire input with the result (JSON path '$')
+     * Default: $
      *
      * @param resultPath JSONPath expression to indicate where to inject the state's output. 
      */
@@ -642,6 +749,38 @@ public open class HttpInvoke(
   }
 
   public companion object {
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: HttpInvokeJsonPathProps,
+    ): HttpInvoke =
+        software.amazon.awscdk.services.stepfunctions.tasks.HttpInvoke.jsonPath(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, props.let(HttpInvokeJsonPathProps.Companion::unwrap)).let(HttpInvoke::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f43133b8f2fb75e1ee9380b06ad90a5932d8934b8287e86c7d464e8a442d3fb2")
+    public fun jsonPath(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: HttpInvokeJsonPathProps.Builder.() -> Unit,
+    ): HttpInvoke = jsonPath(scope, id, HttpInvokeJsonPathProps(props))
+
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: HttpInvokeJsonataProps,
+    ): HttpInvoke =
+        software.amazon.awscdk.services.stepfunctions.tasks.HttpInvoke.jsonata(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, props.let(HttpInvokeJsonataProps.Companion::unwrap)).let(HttpInvoke::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b51957a2b9146561ebfd34f500ac1951a235712a9200e1977e00546a083f0d50")
+    public fun jsonata(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      props: HttpInvokeJsonataProps.Builder.() -> Unit,
+    ): HttpInvoke = jsonata(scope, id, HttpInvokeJsonataProps(props))
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

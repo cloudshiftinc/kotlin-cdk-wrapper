@@ -38,6 +38,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .trackingOptions(TrackingOptionsProperty.builder()
  * .customRedirectDomain("customRedirectDomain")
+ * .httpsPolicy("httpsPolicy")
  * .build())
  * .vdmOptions(VdmOptionsProperty.builder()
  * .dashboardOptions(DashboardOptionsProperty.builder()

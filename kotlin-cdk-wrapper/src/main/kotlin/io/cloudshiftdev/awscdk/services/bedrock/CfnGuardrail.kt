@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -22,27 +23,29 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Creates a guardrail to block topics and to implement safeguards for your generative AI
- * applications.
+ * Creates a guardrail to detect and filter harmful content in your generative AI application.
  *
- * You can configure the following policies in a guardrail to avoid undesirable and harmful content,
- * filter out denied topics and words, and remove sensitive information for privacy protection.
+ * Amazon Bedrock Guardrails provides the following safeguards (also known as policies) to detect
+ * and filter harmful content:
  *
- * * *Content filters* - Adjust filter strengths to block input prompts or model responses
- * containing harmful content.
+ * * *Content filters* - Detect and filter harmful text or image content in input prompts or model
+ * responses. Filtering is done based on detection of certain predefined harmful content categories:
+ * Hate, Insults, Sexual, Violence, Misconduct and Prompt Attack. You also can adjust the filter
+ * strength for each of these categories.
  * * *Denied topics* - Define a set of topics that are undesirable in the context of your
- * application. These topics will be blocked if detected in user queries or model responses.
- * * *Word filters* - Configure filters to block undesirable words, phrases, and profanity. Such
- * words can include offensive terms, competitor names etc.
- * * *Sensitive information filters* - Block or mask sensitive information such as personally
- * identifiable information (PII) or custom regex in user inputs and model responses.
+ * application. The filter will help block them if detected in user queries or model responses.
+ * * *Word filters* - Configure filters to help block undesirable words, phrases, and profanity
+ * (exact match). Such words can include offensive terms, competitor names, etc.
+ * * *Sensitive information filters* - Configure filters to help block or mask sensitive
+ * information, such as personally identifiable information (PII), or custom regex in user inputs and
+ * model responses. Blocking or masking is done based on probabilistic detection of sensitive
+ * information in standard formats in entities such as SSN number, Date of Birth, address, etc. This
+ * also allows configuring regular expression based detection of patterns for identifiers.
+ * * *Contextual grounding check* - Help detect and filter hallucinations in model responses based
+ * on grounding in a source and relevance to the user query.
  *
- * In addition to the above policies, you can also configure the messages to be returned to the user
- * if a user input or model response is in violation of the policies defined in the guardrail.
- *
- * For more information, see [Amazon Bedrock
- * Guardrails](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html) in the *Amazon
- * Bedrock User Guide* .
+ * For more information, see [How Amazon Bedrock Guardrails
+ * works](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-how.html) .
  *
  * Example:
  *
@@ -60,13 +63,30 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .inputStrength("inputStrength")
  * .outputStrength("outputStrength")
  * .type("type")
+ * // the properties below are optional
+ * .inputAction("inputAction")
+ * .inputEnabled(false)
+ * .inputModalities(List.of("inputModalities"))
+ * .outputAction("outputAction")
+ * .outputEnabled(false)
+ * .outputModalities(List.of("outputModalities"))
  * .build()))
+ * // the properties below are optional
+ * .contentFiltersTierConfig(ContentFiltersTierConfigProperty.builder()
+ * .tierName("tierName")
+ * .build())
  * .build())
  * .contextualGroundingPolicyConfig(ContextualGroundingPolicyConfigProperty.builder()
  * .filtersConfig(List.of(ContextualGroundingFilterConfigProperty.builder()
  * .threshold(123)
  * .type("type")
+ * // the properties below are optional
+ * .action("action")
+ * .enabled(false)
  * .build()))
+ * .build())
+ * .crossRegionConfig(GuardrailCrossRegionConfigProperty.builder()
+ * .guardrailProfileArn("guardrailProfileArn")
  * .build())
  * .description("description")
  * .kmsKeyArn("kmsKeyArn")
@@ -74,6 +94,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .piiEntitiesConfig(List.of(PiiEntityConfigProperty.builder()
  * .action("action")
  * .type("type")
+ * // the properties below are optional
+ * .inputAction("inputAction")
+ * .inputEnabled(false)
+ * .outputAction("outputAction")
+ * .outputEnabled(false)
  * .build()))
  * .regexesConfig(List.of(RegexConfigProperty.builder()
  * .action("action")
@@ -81,6 +106,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .pattern("pattern")
  * // the properties below are optional
  * .description("description")
+ * .inputAction("inputAction")
+ * .inputEnabled(false)
+ * .outputAction("outputAction")
+ * .outputEnabled(false)
  * .build()))
  * .build())
  * .tags(List.of(CfnTag.builder()
@@ -94,14 +123,32 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .type("type")
  * // the properties below are optional
  * .examples(List.of("examples"))
+ * .inputAction("inputAction")
+ * .inputEnabled(false)
+ * .outputAction("outputAction")
+ * .outputEnabled(false)
  * .build()))
+ * // the properties below are optional
+ * .topicsTierConfig(TopicsTierConfigProperty.builder()
+ * .tierName("tierName")
+ * .build())
  * .build())
  * .wordPolicyConfig(WordPolicyConfigProperty.builder()
  * .managedWordListsConfig(List.of(ManagedWordsConfigProperty.builder()
  * .type("type")
+ * // the properties below are optional
+ * .inputAction("inputAction")
+ * .inputEnabled(false)
+ * .outputAction("outputAction")
+ * .outputEnabled(false)
  * .build()))
  * .wordsConfig(List.of(WordConfigProperty.builder()
  * .text("text")
+ * // the properties below are optional
+ * .inputAction("inputAction")
+ * .inputEnabled(false)
+ * .outputAction("outputAction")
+ * .outputEnabled(false)
  * .build()))
  * .build())
  * .build();
@@ -263,6 +310,33 @@ public open class CfnGuardrail(
   public open
       fun contextualGroundingPolicyConfig(`value`: ContextualGroundingPolicyConfigProperty.Builder.() -> Unit):
       Unit = contextualGroundingPolicyConfig(ContextualGroundingPolicyConfigProperty(`value`))
+
+  /**
+   * The system-defined guardrail profile that you're using with your guardrail.
+   */
+  public open fun crossRegionConfig(): Any? = unwrap(this).getCrossRegionConfig()
+
+  /**
+   * The system-defined guardrail profile that you're using with your guardrail.
+   */
+  public open fun crossRegionConfig(`value`: IResolvable) {
+    unwrap(this).setCrossRegionConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The system-defined guardrail profile that you're using with your guardrail.
+   */
+  public open fun crossRegionConfig(`value`: GuardrailCrossRegionConfigProperty) {
+    unwrap(this).setCrossRegionConfig(`value`.let(GuardrailCrossRegionConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * The system-defined guardrail profile that you're using with your guardrail.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("5ee70dd75cc606f6994a6c72c3d56d76d79d1b03421ecef29fed3ffe9dfee519")
+  public open fun crossRegionConfig(`value`: GuardrailCrossRegionConfigProperty.Builder.() -> Unit):
+      Unit = crossRegionConfig(GuardrailCrossRegionConfigProperty(`value`))
 
   /**
    * A description of the guardrail.
@@ -488,6 +562,57 @@ public open class CfnGuardrail(
         fun contextualGroundingPolicyConfig(contextualGroundingPolicyConfig: ContextualGroundingPolicyConfigProperty.Builder.() -> Unit)
 
     /**
+     * The system-defined guardrail profile that you're using with your guardrail.
+     *
+     * Guardrail profiles define the destination AWS Regions where guardrail inference requests can
+     * be automatically routed. Using guardrail profiles helps maintain guardrail performance and
+     * reliability when demand increases.
+     *
+     * For more information, see the [Amazon Bedrock User
+     * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-crossregionconfig)
+     * @param crossRegionConfig The system-defined guardrail profile that you're using with your
+     * guardrail. 
+     */
+    public fun crossRegionConfig(crossRegionConfig: IResolvable)
+
+    /**
+     * The system-defined guardrail profile that you're using with your guardrail.
+     *
+     * Guardrail profiles define the destination AWS Regions where guardrail inference requests can
+     * be automatically routed. Using guardrail profiles helps maintain guardrail performance and
+     * reliability when demand increases.
+     *
+     * For more information, see the [Amazon Bedrock User
+     * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-crossregionconfig)
+     * @param crossRegionConfig The system-defined guardrail profile that you're using with your
+     * guardrail. 
+     */
+    public fun crossRegionConfig(crossRegionConfig: GuardrailCrossRegionConfigProperty)
+
+    /**
+     * The system-defined guardrail profile that you're using with your guardrail.
+     *
+     * Guardrail profiles define the destination AWS Regions where guardrail inference requests can
+     * be automatically routed. Using guardrail profiles helps maintain guardrail performance and
+     * reliability when demand increases.
+     *
+     * For more information, see the [Amazon Bedrock User
+     * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-crossregionconfig)
+     * @param crossRegionConfig The system-defined guardrail profile that you're using with your
+     * guardrail. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9a97e06939dd99cfbd71972a593af7756b9af6e3354043c02eb5b1fedecc57f3")
+    public
+        fun crossRegionConfig(crossRegionConfig: GuardrailCrossRegionConfigProperty.Builder.() -> Unit)
+
+    /**
      * A description of the guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-description)
@@ -706,6 +831,62 @@ public open class CfnGuardrail(
         contextualGroundingPolicyConfig(ContextualGroundingPolicyConfigProperty(contextualGroundingPolicyConfig))
 
     /**
+     * The system-defined guardrail profile that you're using with your guardrail.
+     *
+     * Guardrail profiles define the destination AWS Regions where guardrail inference requests can
+     * be automatically routed. Using guardrail profiles helps maintain guardrail performance and
+     * reliability when demand increases.
+     *
+     * For more information, see the [Amazon Bedrock User
+     * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-crossregionconfig)
+     * @param crossRegionConfig The system-defined guardrail profile that you're using with your
+     * guardrail. 
+     */
+    override fun crossRegionConfig(crossRegionConfig: IResolvable) {
+      cdkBuilder.crossRegionConfig(crossRegionConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The system-defined guardrail profile that you're using with your guardrail.
+     *
+     * Guardrail profiles define the destination AWS Regions where guardrail inference requests can
+     * be automatically routed. Using guardrail profiles helps maintain guardrail performance and
+     * reliability when demand increases.
+     *
+     * For more information, see the [Amazon Bedrock User
+     * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-crossregionconfig)
+     * @param crossRegionConfig The system-defined guardrail profile that you're using with your
+     * guardrail. 
+     */
+    override fun crossRegionConfig(crossRegionConfig: GuardrailCrossRegionConfigProperty) {
+      cdkBuilder.crossRegionConfig(crossRegionConfig.let(GuardrailCrossRegionConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * The system-defined guardrail profile that you're using with your guardrail.
+     *
+     * Guardrail profiles define the destination AWS Regions where guardrail inference requests can
+     * be automatically routed. Using guardrail profiles helps maintain guardrail performance and
+     * reliability when demand increases.
+     *
+     * For more information, see the [Amazon Bedrock User
+     * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-crossregionconfig)
+     * @param crossRegionConfig The system-defined guardrail profile that you're using with your
+     * guardrail. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9a97e06939dd99cfbd71972a593af7756b9af6e3354043c02eb5b1fedecc57f3")
+    override
+        fun crossRegionConfig(crossRegionConfig: GuardrailCrossRegionConfigProperty.Builder.() -> Unit):
+        Unit = crossRegionConfig(GuardrailCrossRegionConfigProperty(crossRegionConfig))
+
+    /**
      * A description of the guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-description)
@@ -913,12 +1094,46 @@ public open class CfnGuardrail(
    * .inputStrength("inputStrength")
    * .outputStrength("outputStrength")
    * .type("type")
+   * // the properties below are optional
+   * .inputAction("inputAction")
+   * .inputEnabled(false)
+   * .inputModalities(List.of("inputModalities"))
+   * .outputAction("outputAction")
+   * .outputEnabled(false)
+   * .outputModalities(List.of("outputModalities"))
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterconfig.html)
    */
   public interface ContentFilterConfigProperty {
+    /**
+     * Specifies the action to take when harmful content is detected. Supported values include:.
+     *
+     * * `BLOCK` – Block the content and replace it with blocked messaging.
+     * * `NONE` – Take no action but return detection information in the trace response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterconfig.html#cfn-bedrock-guardrail-contentfilterconfig-inputaction)
+     */
+    public fun inputAction(): String? = unwrap(this).getInputAction()
+
+    /**
+     * Specifies whether to enable guardrail evaluation on the input.
+     *
+     * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+     * response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterconfig.html#cfn-bedrock-guardrail-contentfilterconfig-inputenabled)
+     */
+    public fun inputEnabled(): Any? = unwrap(this).getInputEnabled()
+
+    /**
+     * The input modalities selected for the guardrail content filter configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterconfig.html#cfn-bedrock-guardrail-contentfilterconfig-inputmodalities)
+     */
+    public fun inputModalities(): List<String> = unwrap(this).getInputModalities() ?: emptyList()
+
     /**
      * The strength of the content filter to apply to prompts.
      *
@@ -928,6 +1143,34 @@ public open class CfnGuardrail(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterconfig.html#cfn-bedrock-guardrail-contentfilterconfig-inputstrength)
      */
     public fun inputStrength(): String
+
+    /**
+     * Specifies the action to take when harmful content is detected in the output. Supported values
+     * include:.
+     *
+     * * `BLOCK` – Block the content and replace it with blocked messaging.
+     * * `NONE` – Take no action but return detection information in the trace response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterconfig.html#cfn-bedrock-guardrail-contentfilterconfig-outputaction)
+     */
+    public fun outputAction(): String? = unwrap(this).getOutputAction()
+
+    /**
+     * Specifies whether to enable guardrail evaluation on the output.
+     *
+     * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+     * response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterconfig.html#cfn-bedrock-guardrail-contentfilterconfig-outputenabled)
+     */
+    public fun outputEnabled(): Any? = unwrap(this).getOutputEnabled()
+
+    /**
+     * The output modalities selected for the guardrail content filter configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterconfig.html#cfn-bedrock-guardrail-contentfilterconfig-outputmodalities)
+     */
+    public fun outputModalities(): List<String> = unwrap(this).getOutputModalities() ?: emptyList()
 
     /**
      * The strength of the content filter to apply to model responses.
@@ -952,11 +1195,79 @@ public open class CfnGuardrail(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param inputAction Specifies the action to take when harmful content is detected. Supported
+       * values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      public fun inputAction(inputAction: String)
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun inputEnabled(inputEnabled: Boolean)
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun inputEnabled(inputEnabled: IResolvable)
+
+      /**
+       * @param inputModalities The input modalities selected for the guardrail content filter
+       * configuration.
+       */
+      public fun inputModalities(inputModalities: List<String>)
+
+      /**
+       * @param inputModalities The input modalities selected for the guardrail content filter
+       * configuration.
+       */
+      public fun inputModalities(vararg inputModalities: String)
+
+      /**
        * @param inputStrength The strength of the content filter to apply to prompts. 
        * As you increase the filter strength, the likelihood of filtering harmful content increases
        * and the probability of seeing harmful content in your application reduces.
        */
       public fun inputStrength(inputStrength: String)
+
+      /**
+       * @param outputAction Specifies the action to take when harmful content is detected in the
+       * output. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      public fun outputAction(outputAction: String)
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun outputEnabled(outputEnabled: Boolean)
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun outputEnabled(outputEnabled: IResolvable)
+
+      /**
+       * @param outputModalities The output modalities selected for the guardrail content filter
+       * configuration.
+       */
+      public fun outputModalities(outputModalities: List<String>)
+
+      /**
+       * @param outputModalities The output modalities selected for the guardrail content filter
+       * configuration.
+       */
+      public fun outputModalities(vararg outputModalities: String)
 
       /**
        * @param outputStrength The strength of the content filter to apply to model responses. 
@@ -977,6 +1288,49 @@ public open class CfnGuardrail(
           software.amazon.awscdk.services.bedrock.CfnGuardrail.ContentFilterConfigProperty.builder()
 
       /**
+       * @param inputAction Specifies the action to take when harmful content is detected. Supported
+       * values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      override fun inputAction(inputAction: String) {
+        cdkBuilder.inputAction(inputAction)
+      }
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun inputEnabled(inputEnabled: Boolean) {
+        cdkBuilder.inputEnabled(inputEnabled)
+      }
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun inputEnabled(inputEnabled: IResolvable) {
+        cdkBuilder.inputEnabled(inputEnabled.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param inputModalities The input modalities selected for the guardrail content filter
+       * configuration.
+       */
+      override fun inputModalities(inputModalities: List<String>) {
+        cdkBuilder.inputModalities(inputModalities)
+      }
+
+      /**
+       * @param inputModalities The input modalities selected for the guardrail content filter
+       * configuration.
+       */
+      override fun inputModalities(vararg inputModalities: String): Unit =
+          inputModalities(inputModalities.toList())
+
+      /**
        * @param inputStrength The strength of the content filter to apply to prompts. 
        * As you increase the filter strength, the likelihood of filtering harmful content increases
        * and the probability of seeing harmful content in your application reduces.
@@ -984,6 +1338,49 @@ public open class CfnGuardrail(
       override fun inputStrength(inputStrength: String) {
         cdkBuilder.inputStrength(inputStrength)
       }
+
+      /**
+       * @param outputAction Specifies the action to take when harmful content is detected in the
+       * output. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      override fun outputAction(outputAction: String) {
+        cdkBuilder.outputAction(outputAction)
+      }
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun outputEnabled(outputEnabled: Boolean) {
+        cdkBuilder.outputEnabled(outputEnabled)
+      }
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun outputEnabled(outputEnabled: IResolvable) {
+        cdkBuilder.outputEnabled(outputEnabled.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param outputModalities The output modalities selected for the guardrail content filter
+       * configuration.
+       */
+      override fun outputModalities(outputModalities: List<String>) {
+        cdkBuilder.outputModalities(outputModalities)
+      }
+
+      /**
+       * @param outputModalities The output modalities selected for the guardrail content filter
+       * configuration.
+       */
+      override fun outputModalities(vararg outputModalities: String): Unit =
+          outputModalities(outputModalities.toList())
 
       /**
        * @param outputStrength The strength of the content filter to apply to model responses. 
@@ -1011,6 +1408,34 @@ public open class CfnGuardrail(
     ) : CdkObject(cdkObject),
         ContentFilterConfigProperty {
       /**
+       * Specifies the action to take when harmful content is detected. Supported values include:.
+       *
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterconfig.html#cfn-bedrock-guardrail-contentfilterconfig-inputaction)
+       */
+      override fun inputAction(): String? = unwrap(this).getInputAction()
+
+      /**
+       * Specifies whether to enable guardrail evaluation on the input.
+       *
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterconfig.html#cfn-bedrock-guardrail-contentfilterconfig-inputenabled)
+       */
+      override fun inputEnabled(): Any? = unwrap(this).getInputEnabled()
+
+      /**
+       * The input modalities selected for the guardrail content filter configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterconfig.html#cfn-bedrock-guardrail-contentfilterconfig-inputmodalities)
+       */
+      override fun inputModalities(): List<String> = unwrap(this).getInputModalities() ?:
+          emptyList()
+
+      /**
        * The strength of the content filter to apply to prompts.
        *
        * As you increase the filter strength, the likelihood of filtering harmful content increases
@@ -1019,6 +1444,35 @@ public open class CfnGuardrail(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterconfig.html#cfn-bedrock-guardrail-contentfilterconfig-inputstrength)
        */
       override fun inputStrength(): String = unwrap(this).getInputStrength()
+
+      /**
+       * Specifies the action to take when harmful content is detected in the output. Supported
+       * values include:.
+       *
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterconfig.html#cfn-bedrock-guardrail-contentfilterconfig-outputaction)
+       */
+      override fun outputAction(): String? = unwrap(this).getOutputAction()
+
+      /**
+       * Specifies whether to enable guardrail evaluation on the output.
+       *
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterconfig.html#cfn-bedrock-guardrail-contentfilterconfig-outputenabled)
+       */
+      override fun outputEnabled(): Any? = unwrap(this).getOutputEnabled()
+
+      /**
+       * The output modalities selected for the guardrail content filter configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterconfig.html#cfn-bedrock-guardrail-contentfilterconfig-outputmodalities)
+       */
+      override fun outputModalities(): List<String> = unwrap(this).getOutputModalities() ?:
+          emptyList()
 
       /**
        * The strength of the content filter to apply to model responses.
@@ -1057,6 +1511,120 @@ public open class CfnGuardrail(
   }
 
   /**
+   * The tier that your guardrail uses for content filters.
+   *
+   * Consider using a tier that balances performance, accuracy, and compatibility with your existing
+   * generative AI workflows.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * ContentFiltersTierConfigProperty contentFiltersTierConfigProperty =
+   * ContentFiltersTierConfigProperty.builder()
+   * .tierName("tierName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterstierconfig.html)
+   */
+  public interface ContentFiltersTierConfigProperty {
+    /**
+     * The tier that your guardrail uses for content filters. Valid values include:.
+     *
+     * * `CLASSIC` tier – Provides established guardrails functionality supporting English, French,
+     * and Spanish languages.
+     * * `STANDARD` tier – Provides a more robust solution than the `CLASSIC` tier and has more
+     * comprehensive language support. This tier requires that your guardrail use [cross-Region
+     * inference](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterstierconfig.html#cfn-bedrock-guardrail-contentfilterstierconfig-tiername)
+     */
+    public fun tierName(): String
+
+    /**
+     * A builder for [ContentFiltersTierConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param tierName The tier that your guardrail uses for content filters. Valid values
+       * include:. 
+       * * `CLASSIC` tier – Provides established guardrails functionality supporting English,
+       * French, and Spanish languages.
+       * * `STANDARD` tier – Provides a more robust solution than the `CLASSIC` tier and has more
+       * comprehensive language support. This tier requires that your guardrail use [cross-Region
+       * inference](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html)
+       * .
+       */
+      public fun tierName(tierName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnGuardrail.ContentFiltersTierConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnGuardrail.ContentFiltersTierConfigProperty.builder()
+
+      /**
+       * @param tierName The tier that your guardrail uses for content filters. Valid values
+       * include:. 
+       * * `CLASSIC` tier – Provides established guardrails functionality supporting English,
+       * French, and Spanish languages.
+       * * `STANDARD` tier – Provides a more robust solution than the `CLASSIC` tier and has more
+       * comprehensive language support. This tier requires that your guardrail use [cross-Region
+       * inference](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html)
+       * .
+       */
+      override fun tierName(tierName: String) {
+        cdkBuilder.tierName(tierName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnGuardrail.ContentFiltersTierConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnGuardrail.ContentFiltersTierConfigProperty,
+    ) : CdkObject(cdkObject),
+        ContentFiltersTierConfigProperty {
+      /**
+       * The tier that your guardrail uses for content filters. Valid values include:.
+       *
+       * * `CLASSIC` tier – Provides established guardrails functionality supporting English,
+       * French, and Spanish languages.
+       * * `STANDARD` tier – Provides a more robust solution than the `CLASSIC` tier and has more
+       * comprehensive language support. This tier requires that your guardrail use [cross-Region
+       * inference](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentfilterstierconfig.html#cfn-bedrock-guardrail-contentfilterstierconfig-tiername)
+       */
+      override fun tierName(): String = unwrap(this).getTierName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ContentFiltersTierConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnGuardrail.ContentFiltersTierConfigProperty):
+          ContentFiltersTierConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContentFiltersTierConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ContentFiltersTierConfigProperty):
+          software.amazon.awscdk.services.bedrock.CfnGuardrail.ContentFiltersTierConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnGuardrail.ContentFiltersTierConfigProperty
+    }
+  }
+
+  /**
    * Contains details about how to handle harmful content.
    *
    * Example:
@@ -1070,13 +1638,34 @@ public open class CfnGuardrail(
    * .inputStrength("inputStrength")
    * .outputStrength("outputStrength")
    * .type("type")
+   * // the properties below are optional
+   * .inputAction("inputAction")
+   * .inputEnabled(false)
+   * .inputModalities(List.of("inputModalities"))
+   * .outputAction("outputAction")
+   * .outputEnabled(false)
+   * .outputModalities(List.of("outputModalities"))
    * .build()))
+   * // the properties below are optional
+   * .contentFiltersTierConfig(ContentFiltersTierConfigProperty.builder()
+   * .tierName("tierName")
+   * .build())
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentpolicyconfig.html)
    */
   public interface ContentPolicyConfigProperty {
+    /**
+     * The tier that your guardrail uses for content filters.
+     *
+     * Consider using a tier that balances performance, accuracy, and compatibility with your
+     * existing generative AI workflows.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentpolicyconfig.html#cfn-bedrock-guardrail-contentpolicyconfig-contentfilterstierconfig)
+     */
+    public fun contentFiltersTierConfig(): Any? = unwrap(this).getContentFiltersTierConfig()
+
     /**
      * Contains the type of the content filter and how strongly it should apply to prompts and model
      * responses.
@@ -1090,6 +1679,31 @@ public open class CfnGuardrail(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param contentFiltersTierConfig The tier that your guardrail uses for content filters.
+       * Consider using a tier that balances performance, accuracy, and compatibility with your
+       * existing generative AI workflows.
+       */
+      public fun contentFiltersTierConfig(contentFiltersTierConfig: IResolvable)
+
+      /**
+       * @param contentFiltersTierConfig The tier that your guardrail uses for content filters.
+       * Consider using a tier that balances performance, accuracy, and compatibility with your
+       * existing generative AI workflows.
+       */
+      public
+          fun contentFiltersTierConfig(contentFiltersTierConfig: ContentFiltersTierConfigProperty)
+
+      /**
+       * @param contentFiltersTierConfig The tier that your guardrail uses for content filters.
+       * Consider using a tier that balances performance, accuracy, and compatibility with your
+       * existing generative AI workflows.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("45233f4e9ead519e82c8c3bb630645eed6c97e253d57b4670e170691b7f51c4e")
+      public
+          fun contentFiltersTierConfig(contentFiltersTierConfig: ContentFiltersTierConfigProperty.Builder.() -> Unit)
+
       /**
        * @param filtersConfig Contains the type of the content filter and how strongly it should
        * apply to prompts and model responses. 
@@ -1113,6 +1727,37 @@ public open class CfnGuardrail(
       private val cdkBuilder:
           software.amazon.awscdk.services.bedrock.CfnGuardrail.ContentPolicyConfigProperty.Builder =
           software.amazon.awscdk.services.bedrock.CfnGuardrail.ContentPolicyConfigProperty.builder()
+
+      /**
+       * @param contentFiltersTierConfig The tier that your guardrail uses for content filters.
+       * Consider using a tier that balances performance, accuracy, and compatibility with your
+       * existing generative AI workflows.
+       */
+      override fun contentFiltersTierConfig(contentFiltersTierConfig: IResolvable) {
+        cdkBuilder.contentFiltersTierConfig(contentFiltersTierConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param contentFiltersTierConfig The tier that your guardrail uses for content filters.
+       * Consider using a tier that balances performance, accuracy, and compatibility with your
+       * existing generative AI workflows.
+       */
+      override
+          fun contentFiltersTierConfig(contentFiltersTierConfig: ContentFiltersTierConfigProperty) {
+        cdkBuilder.contentFiltersTierConfig(contentFiltersTierConfig.let(ContentFiltersTierConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param contentFiltersTierConfig The tier that your guardrail uses for content filters.
+       * Consider using a tier that balances performance, accuracy, and compatibility with your
+       * existing generative AI workflows.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("45233f4e9ead519e82c8c3bb630645eed6c97e253d57b4670e170691b7f51c4e")
+      override
+          fun contentFiltersTierConfig(contentFiltersTierConfig: ContentFiltersTierConfigProperty.Builder.() -> Unit):
+          Unit =
+          contentFiltersTierConfig(ContentFiltersTierConfigProperty(contentFiltersTierConfig))
 
       /**
        * @param filtersConfig Contains the type of the content filter and how strongly it should
@@ -1146,6 +1791,16 @@ public open class CfnGuardrail(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnGuardrail.ContentPolicyConfigProperty,
     ) : CdkObject(cdkObject),
         ContentPolicyConfigProperty {
+      /**
+       * The tier that your guardrail uses for content filters.
+       *
+       * Consider using a tier that balances performance, accuracy, and compatibility with your
+       * existing generative AI workflows.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contentpolicyconfig.html#cfn-bedrock-guardrail-contentpolicyconfig-contentfilterstierconfig)
+       */
+      override fun contentFiltersTierConfig(): Any? = unwrap(this).getContentFiltersTierConfig()
+
       /**
        * Contains the type of the content filter and how strongly it should apply to prompts and
        * model responses.
@@ -1186,12 +1841,36 @@ public open class CfnGuardrail(
    * ContextualGroundingFilterConfigProperty.builder()
    * .threshold(123)
    * .type("type")
+   * // the properties below are optional
+   * .action("action")
+   * .enabled(false)
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contextualgroundingfilterconfig.html)
    */
   public interface ContextualGroundingFilterConfigProperty {
+    /**
+     * Specifies the action to take when content fails the contextual grounding evaluation.
+     * Supported values include:.
+     *
+     * * `BLOCK` – Block the content and replace it with blocked messaging.
+     * * `NONE` – Take no action but return detection information in the trace response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contextualgroundingfilterconfig.html#cfn-bedrock-guardrail-contextualgroundingfilterconfig-action)
+     */
+    public fun action(): String? = unwrap(this).getAction()
+
+    /**
+     * Specifies whether to enable contextual grounding evaluation.
+     *
+     * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+     * response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contextualgroundingfilterconfig.html#cfn-bedrock-guardrail-contextualgroundingfilterconfig-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
     /**
      * The threshold details for the guardrails contextual grounding filter.
      *
@@ -1212,6 +1891,28 @@ public open class CfnGuardrail(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param action Specifies the action to take when content fails the contextual grounding
+       * evaluation. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      public fun action(action: String)
+
+      /**
+       * @param enabled Specifies whether to enable contextual grounding evaluation.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specifies whether to enable contextual grounding evaluation.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
        * @param threshold The threshold details for the guardrails contextual grounding filter. 
        */
       public fun threshold(threshold: Number)
@@ -1227,6 +1928,34 @@ public open class CfnGuardrail(
           software.amazon.awscdk.services.bedrock.CfnGuardrail.ContextualGroundingFilterConfigProperty.Builder
           =
           software.amazon.awscdk.services.bedrock.CfnGuardrail.ContextualGroundingFilterConfigProperty.builder()
+
+      /**
+       * @param action Specifies the action to take when content fails the contextual grounding
+       * evaluation. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      override fun action(action: String) {
+        cdkBuilder.action(action)
+      }
+
+      /**
+       * @param enabled Specifies whether to enable contextual grounding evaluation.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Specifies whether to enable contextual grounding evaluation.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param threshold The threshold details for the guardrails contextual grounding filter. 
@@ -1251,6 +1980,27 @@ public open class CfnGuardrail(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnGuardrail.ContextualGroundingFilterConfigProperty,
     ) : CdkObject(cdkObject),
         ContextualGroundingFilterConfigProperty {
+      /**
+       * Specifies the action to take when content fails the contextual grounding evaluation.
+       * Supported values include:.
+       *
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contextualgroundingfilterconfig.html#cfn-bedrock-guardrail-contextualgroundingfilterconfig-action)
+       */
+      override fun action(): String? = unwrap(this).getAction()
+
+      /**
+       * Specifies whether to enable contextual grounding evaluation.
+       *
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-contextualgroundingfilterconfig.html#cfn-bedrock-guardrail-contextualgroundingfilterconfig-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
       /**
        * The threshold details for the guardrails contextual grounding filter.
        *
@@ -1299,6 +2049,9 @@ public open class CfnGuardrail(
    * .filtersConfig(List.of(ContextualGroundingFilterConfigProperty.builder()
    * .threshold(123)
    * .type("type")
+   * // the properties below are optional
+   * .action("action")
+   * .enabled(false)
    * .build()))
    * .build();
    * ```
@@ -1397,6 +2150,118 @@ public open class CfnGuardrail(
   }
 
   /**
+   * The system-defined guardrail profile that you're using with your guardrail.
+   *
+   * Guardrail profiles define the destination AWS Regions where guardrail inference requests can be
+   * automatically routed. Using guardrail profiles helps maintain guardrail performance and
+   * reliability when demand increases.
+   *
+   * For more information, see the [Amazon Bedrock User
+   * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * GuardrailCrossRegionConfigProperty guardrailCrossRegionConfigProperty =
+   * GuardrailCrossRegionConfigProperty.builder()
+   * .guardrailProfileArn("guardrailProfileArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-guardrailcrossregionconfig.html)
+   */
+  public interface GuardrailCrossRegionConfigProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the guardrail profile that your guardrail is using.
+     *
+     * Guardrail profile availability depends on your current AWS Region . For more information, see
+     * the [Amazon Bedrock User
+     * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region-support.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-guardrailcrossregionconfig.html#cfn-bedrock-guardrail-guardrailcrossregionconfig-guardrailprofilearn)
+     */
+    public fun guardrailProfileArn(): String
+
+    /**
+     * A builder for [GuardrailCrossRegionConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param guardrailProfileArn The Amazon Resource Name (ARN) of the guardrail profile that
+       * your guardrail is using. 
+       * Guardrail profile availability depends on your current AWS Region . For more information,
+       * see the [Amazon Bedrock User
+       * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region-support.html)
+       * .
+       */
+      public fun guardrailProfileArn(guardrailProfileArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnGuardrail.GuardrailCrossRegionConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnGuardrail.GuardrailCrossRegionConfigProperty.builder()
+
+      /**
+       * @param guardrailProfileArn The Amazon Resource Name (ARN) of the guardrail profile that
+       * your guardrail is using. 
+       * Guardrail profile availability depends on your current AWS Region . For more information,
+       * see the [Amazon Bedrock User
+       * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region-support.html)
+       * .
+       */
+      override fun guardrailProfileArn(guardrailProfileArn: String) {
+        cdkBuilder.guardrailProfileArn(guardrailProfileArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnGuardrail.GuardrailCrossRegionConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnGuardrail.GuardrailCrossRegionConfigProperty,
+    ) : CdkObject(cdkObject),
+        GuardrailCrossRegionConfigProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the guardrail profile that your guardrail is using.
+       *
+       * Guardrail profile availability depends on your current AWS Region . For more information,
+       * see the [Amazon Bedrock User
+       * Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region-support.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-guardrailcrossregionconfig.html#cfn-bedrock-guardrail-guardrailcrossregionconfig-guardrailprofilearn)
+       */
+      override fun guardrailProfileArn(): String = unwrap(this).getGuardrailProfileArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          GuardrailCrossRegionConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnGuardrail.GuardrailCrossRegionConfigProperty):
+          GuardrailCrossRegionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GuardrailCrossRegionConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GuardrailCrossRegionConfigProperty):
+          software.amazon.awscdk.services.bedrock.CfnGuardrail.GuardrailCrossRegionConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnGuardrail.GuardrailCrossRegionConfigProperty
+    }
+  }
+
+  /**
    * The managed word list to configure for the guardrail.
    *
    * Example:
@@ -1407,12 +2272,59 @@ public open class CfnGuardrail(
    * import io.cloudshiftdev.awscdk.services.bedrock.*;
    * ManagedWordsConfigProperty managedWordsConfigProperty = ManagedWordsConfigProperty.builder()
    * .type("type")
+   * // the properties below are optional
+   * .inputAction("inputAction")
+   * .inputEnabled(false)
+   * .outputAction("outputAction")
+   * .outputEnabled(false)
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-managedwordsconfig.html)
    */
   public interface ManagedWordsConfigProperty {
+    /**
+     * Specifies the action to take when harmful content is detected in the input. Supported values
+     * include:.
+     *
+     * * `BLOCK` – Block the content and replace it with blocked messaging.
+     * * `NONE` – Take no action but return detection information in the trace response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-managedwordsconfig.html#cfn-bedrock-guardrail-managedwordsconfig-inputaction)
+     */
+    public fun inputAction(): String? = unwrap(this).getInputAction()
+
+    /**
+     * Specifies whether to enable guardrail evaluation on the input.
+     *
+     * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+     * response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-managedwordsconfig.html#cfn-bedrock-guardrail-managedwordsconfig-inputenabled)
+     */
+    public fun inputEnabled(): Any? = unwrap(this).getInputEnabled()
+
+    /**
+     * Specifies the action to take when harmful content is detected in the output. Supported values
+     * include:.
+     *
+     * * `BLOCK` – Block the content and replace it with blocked messaging.
+     * * `NONE` – Take no action but return detection information in the trace response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-managedwordsconfig.html#cfn-bedrock-guardrail-managedwordsconfig-outputaction)
+     */
+    public fun outputAction(): String? = unwrap(this).getOutputAction()
+
+    /**
+     * Specifies whether to enable guardrail evaluation on the output.
+     *
+     * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+     * response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-managedwordsconfig.html#cfn-bedrock-guardrail-managedwordsconfig-outputenabled)
+     */
+    public fun outputEnabled(): Any? = unwrap(this).getOutputEnabled()
+
     /**
      * The managed word type to configure for the guardrail.
      *
@@ -1426,6 +2338,50 @@ public open class CfnGuardrail(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param inputAction Specifies the action to take when harmful content is detected in the
+       * input. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      public fun inputAction(inputAction: String)
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun inputEnabled(inputEnabled: Boolean)
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun inputEnabled(inputEnabled: IResolvable)
+
+      /**
+       * @param outputAction Specifies the action to take when harmful content is detected in the
+       * output. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      public fun outputAction(outputAction: String)
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun outputEnabled(outputEnabled: Boolean)
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun outputEnabled(outputEnabled: IResolvable)
+
+      /**
        * @param type The managed word type to configure for the guardrail. 
        */
       public fun type(type: String)
@@ -1435,6 +2391,62 @@ public open class CfnGuardrail(
       private val cdkBuilder:
           software.amazon.awscdk.services.bedrock.CfnGuardrail.ManagedWordsConfigProperty.Builder =
           software.amazon.awscdk.services.bedrock.CfnGuardrail.ManagedWordsConfigProperty.builder()
+
+      /**
+       * @param inputAction Specifies the action to take when harmful content is detected in the
+       * input. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      override fun inputAction(inputAction: String) {
+        cdkBuilder.inputAction(inputAction)
+      }
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun inputEnabled(inputEnabled: Boolean) {
+        cdkBuilder.inputEnabled(inputEnabled)
+      }
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun inputEnabled(inputEnabled: IResolvable) {
+        cdkBuilder.inputEnabled(inputEnabled.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param outputAction Specifies the action to take when harmful content is detected in the
+       * output. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      override fun outputAction(outputAction: String) {
+        cdkBuilder.outputAction(outputAction)
+      }
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun outputEnabled(outputEnabled: Boolean) {
+        cdkBuilder.outputEnabled(outputEnabled)
+      }
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun outputEnabled(outputEnabled: IResolvable) {
+        cdkBuilder.outputEnabled(outputEnabled.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param type The managed word type to configure for the guardrail. 
@@ -1452,6 +2464,48 @@ public open class CfnGuardrail(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnGuardrail.ManagedWordsConfigProperty,
     ) : CdkObject(cdkObject),
         ManagedWordsConfigProperty {
+      /**
+       * Specifies the action to take when harmful content is detected in the input. Supported
+       * values include:.
+       *
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-managedwordsconfig.html#cfn-bedrock-guardrail-managedwordsconfig-inputaction)
+       */
+      override fun inputAction(): String? = unwrap(this).getInputAction()
+
+      /**
+       * Specifies whether to enable guardrail evaluation on the input.
+       *
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-managedwordsconfig.html#cfn-bedrock-guardrail-managedwordsconfig-inputenabled)
+       */
+      override fun inputEnabled(): Any? = unwrap(this).getInputEnabled()
+
+      /**
+       * Specifies the action to take when harmful content is detected in the output. Supported
+       * values include:.
+       *
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-managedwordsconfig.html#cfn-bedrock-guardrail-managedwordsconfig-outputaction)
+       */
+      override fun outputAction(): String? = unwrap(this).getOutputAction()
+
+      /**
+       * Specifies whether to enable guardrail evaluation on the output.
+       *
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-managedwordsconfig.html#cfn-bedrock-guardrail-managedwordsconfig-outputenabled)
+       */
+      override fun outputEnabled(): Any? = unwrap(this).getOutputEnabled()
+
       /**
        * The managed word type to configure for the guardrail.
        *
@@ -1490,6 +2544,11 @@ public open class CfnGuardrail(
    * PiiEntityConfigProperty piiEntityConfigProperty = PiiEntityConfigProperty.builder()
    * .action("action")
    * .type("type")
+   * // the properties below are optional
+   * .inputAction("inputAction")
+   * .inputEnabled(false)
+   * .outputAction("outputAction")
+   * .outputEnabled(false)
    * .build();
    * ```
    *
@@ -1502,6 +2561,50 @@ public open class CfnGuardrail(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-piientityconfig.html#cfn-bedrock-guardrail-piientityconfig-action)
      */
     public fun action(): String
+
+    /**
+     * Specifies the action to take when harmful content is detected in the input. Supported values
+     * include:.
+     *
+     * * `BLOCK` – Block the content and replace it with blocked messaging.
+     * * `ANONYMIZE` – Mask the content and replace it with identifier tags.
+     * * `NONE` – Take no action but return detection information in the trace response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-piientityconfig.html#cfn-bedrock-guardrail-piientityconfig-inputaction)
+     */
+    public fun inputAction(): String? = unwrap(this).getInputAction()
+
+    /**
+     * Specifies whether to enable guardrail evaluation on the input.
+     *
+     * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+     * response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-piientityconfig.html#cfn-bedrock-guardrail-piientityconfig-inputenabled)
+     */
+    public fun inputEnabled(): Any? = unwrap(this).getInputEnabled()
+
+    /**
+     * Specifies the action to take when harmful content is detected in the output. Supported values
+     * include:.
+     *
+     * * `BLOCK` – Block the content and replace it with blocked messaging.
+     * * `ANONYMIZE` – Mask the content and replace it with identifier tags.
+     * * `NONE` – Take no action but return detection information in the trace response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-piientityconfig.html#cfn-bedrock-guardrail-piientityconfig-outputaction)
+     */
+    public fun outputAction(): String? = unwrap(this).getOutputAction()
+
+    /**
+     * Indicates whether guardrail evaluation is enabled on the output.
+     *
+     * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+     * response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-piientityconfig.html#cfn-bedrock-guardrail-piientityconfig-outputenabled)
+     */
+    public fun outputEnabled(): Any? = unwrap(this).getOutputEnabled()
 
     /**
      * Configure guardrail type when the PII entity is detected.
@@ -1518,7 +2621,7 @@ public open class CfnGuardrail(
      * * *AGE*
      *
      * An individual's age, including the quantity and unit of time. For example, in the phrase "I
-     * am 40 years old," Guarrails recognizes "40 years" as an age.
+     * am 40 years old," Guardrails recognizes "40 years" as an age.
      *
      * * *NAME*
      *
@@ -1564,7 +2667,7 @@ public open class CfnGuardrail(
      * VINs.
      *
      * * *Finance*
-     * * *REDIT_DEBIT_CARD_CVV*
+     * * *CREDIT_DEBIT_CARD_CVV*
      *
      * A three-digit card verification code (CVV) that is present on VISA, MasterCard, and Discover
      * credit and debit cards. For American Express credit or debit cards, the CVV is a four-digit
@@ -1704,6 +2807,52 @@ public open class CfnGuardrail(
       public fun action(action: String)
 
       /**
+       * @param inputAction Specifies the action to take when harmful content is detected in the
+       * input. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `ANONYMIZE` – Mask the content and replace it with identifier tags.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      public fun inputAction(inputAction: String)
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun inputEnabled(inputEnabled: Boolean)
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun inputEnabled(inputEnabled: IResolvable)
+
+      /**
+       * @param outputAction Specifies the action to take when harmful content is detected in the
+       * output. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `ANONYMIZE` – Mask the content and replace it with identifier tags.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      public fun outputAction(outputAction: String)
+
+      /**
+       * @param outputEnabled Indicates whether guardrail evaluation is enabled on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun outputEnabled(outputEnabled: Boolean)
+
+      /**
+       * @param outputEnabled Indicates whether guardrail evaluation is enabled on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun outputEnabled(outputEnabled: IResolvable)
+
+      /**
        * @param type Configure guardrail type when the PII entity is detected. 
        * The following PIIs are used to block or mask sensitive information:
        *
@@ -1717,7 +2866,7 @@ public open class CfnGuardrail(
        * * *AGE*
        *
        * An individual's age, including the quantity and unit of time. For example, in the phrase "I
-       * am 40 years old," Guarrails recognizes "40 years" as an age.
+       * am 40 years old," Guardrails recognizes "40 years" as an age.
        *
        * * *NAME*
        *
@@ -1763,7 +2912,7 @@ public open class CfnGuardrail(
        * VINs.
        *
        * * *Finance*
-       * * *REDIT_DEBIT_CARD_CVV*
+       * * *CREDIT_DEBIT_CARD_CVV*
        *
        * A three-digit card verification code (CVV) that is present on VISA, MasterCard, and
        * Discover credit and debit cards. For American Express credit or debit cards, the CVV is a
@@ -1906,6 +3055,64 @@ public open class CfnGuardrail(
       }
 
       /**
+       * @param inputAction Specifies the action to take when harmful content is detected in the
+       * input. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `ANONYMIZE` – Mask the content and replace it with identifier tags.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      override fun inputAction(inputAction: String) {
+        cdkBuilder.inputAction(inputAction)
+      }
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun inputEnabled(inputEnabled: Boolean) {
+        cdkBuilder.inputEnabled(inputEnabled)
+      }
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun inputEnabled(inputEnabled: IResolvable) {
+        cdkBuilder.inputEnabled(inputEnabled.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param outputAction Specifies the action to take when harmful content is detected in the
+       * output. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `ANONYMIZE` – Mask the content and replace it with identifier tags.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      override fun outputAction(outputAction: String) {
+        cdkBuilder.outputAction(outputAction)
+      }
+
+      /**
+       * @param outputEnabled Indicates whether guardrail evaluation is enabled on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun outputEnabled(outputEnabled: Boolean) {
+        cdkBuilder.outputEnabled(outputEnabled)
+      }
+
+      /**
+       * @param outputEnabled Indicates whether guardrail evaluation is enabled on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun outputEnabled(outputEnabled: IResolvable) {
+        cdkBuilder.outputEnabled(outputEnabled.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
        * @param type Configure guardrail type when the PII entity is detected. 
        * The following PIIs are used to block or mask sensitive information:
        *
@@ -1919,7 +3126,7 @@ public open class CfnGuardrail(
        * * *AGE*
        *
        * An individual's age, including the quantity and unit of time. For example, in the phrase "I
-       * am 40 years old," Guarrails recognizes "40 years" as an age.
+       * am 40 years old," Guardrails recognizes "40 years" as an age.
        *
        * * *NAME*
        *
@@ -1965,7 +3172,7 @@ public open class CfnGuardrail(
        * VINs.
        *
        * * *Finance*
-       * * *REDIT_DEBIT_CARD_CVV*
+       * * *CREDIT_DEBIT_CARD_CVV*
        *
        * A three-digit card verification code (CVV) that is present on VISA, MasterCard, and
        * Discover credit and debit cards. For American Express credit or debit cards, the CVV is a
@@ -2113,6 +3320,50 @@ public open class CfnGuardrail(
       override fun action(): String = unwrap(this).getAction()
 
       /**
+       * Specifies the action to take when harmful content is detected in the input. Supported
+       * values include:.
+       *
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `ANONYMIZE` – Mask the content and replace it with identifier tags.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-piientityconfig.html#cfn-bedrock-guardrail-piientityconfig-inputaction)
+       */
+      override fun inputAction(): String? = unwrap(this).getInputAction()
+
+      /**
+       * Specifies whether to enable guardrail evaluation on the input.
+       *
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-piientityconfig.html#cfn-bedrock-guardrail-piientityconfig-inputenabled)
+       */
+      override fun inputEnabled(): Any? = unwrap(this).getInputEnabled()
+
+      /**
+       * Specifies the action to take when harmful content is detected in the output. Supported
+       * values include:.
+       *
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `ANONYMIZE` – Mask the content and replace it with identifier tags.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-piientityconfig.html#cfn-bedrock-guardrail-piientityconfig-outputaction)
+       */
+      override fun outputAction(): String? = unwrap(this).getOutputAction()
+
+      /**
+       * Indicates whether guardrail evaluation is enabled on the output.
+       *
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-piientityconfig.html#cfn-bedrock-guardrail-piientityconfig-outputenabled)
+       */
+      override fun outputEnabled(): Any? = unwrap(this).getOutputEnabled()
+
+      /**
        * Configure guardrail type when the PII entity is detected.
        *
        * The following PIIs are used to block or mask sensitive information:
@@ -2127,7 +3378,7 @@ public open class CfnGuardrail(
        * * *AGE*
        *
        * An individual's age, including the quantity and unit of time. For example, in the phrase "I
-       * am 40 years old," Guarrails recognizes "40 years" as an age.
+       * am 40 years old," Guardrails recognizes "40 years" as an age.
        *
        * * *NAME*
        *
@@ -2173,7 +3424,7 @@ public open class CfnGuardrail(
        * VINs.
        *
        * * *Finance*
-       * * *REDIT_DEBIT_CARD_CVV*
+       * * *CREDIT_DEBIT_CARD_CVV*
        *
        * A three-digit card verification code (CVV) that is present on VISA, MasterCard, and
        * Discover credit and debit cards. For American Express credit or debit cards, the CVV is a
@@ -2338,6 +3589,10 @@ public open class CfnGuardrail(
    * .pattern("pattern")
    * // the properties below are optional
    * .description("description")
+   * .inputAction("inputAction")
+   * .inputEnabled(false)
+   * .outputAction("outputAction")
+   * .outputEnabled(false)
    * .build();
    * ```
    *
@@ -2359,11 +3614,53 @@ public open class CfnGuardrail(
     public fun description(): String? = unwrap(this).getDescription()
 
     /**
+     * Specifies the action to take when harmful content is detected in the input. Supported values
+     * include:.
+     *
+     * * `BLOCK` – Block the content and replace it with blocked messaging.
+     * * `NONE` – Take no action but return detection information in the trace response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-regexconfig.html#cfn-bedrock-guardrail-regexconfig-inputaction)
+     */
+    public fun inputAction(): String? = unwrap(this).getInputAction()
+
+    /**
+     * Specifies whether to enable guardrail evaluation on the input.
+     *
+     * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+     * response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-regexconfig.html#cfn-bedrock-guardrail-regexconfig-inputenabled)
+     */
+    public fun inputEnabled(): Any? = unwrap(this).getInputEnabled()
+
+    /**
      * The name of the regular expression to configure for the guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-regexconfig.html#cfn-bedrock-guardrail-regexconfig-name)
      */
     public fun name(): String
+
+    /**
+     * Specifies the action to take when harmful content is detected in the output. Supported values
+     * include:.
+     *
+     * * `BLOCK` – Block the content and replace it with blocked messaging.
+     * * `NONE` – Take no action but return detection information in the trace response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-regexconfig.html#cfn-bedrock-guardrail-regexconfig-outputaction)
+     */
+    public fun outputAction(): String? = unwrap(this).getOutputAction()
+
+    /**
+     * Specifies whether to enable guardrail evaluation on the output.
+     *
+     * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+     * response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-regexconfig.html#cfn-bedrock-guardrail-regexconfig-outputenabled)
+     */
+    public fun outputEnabled(): Any? = unwrap(this).getOutputEnabled()
 
     /**
      * The regular expression pattern to configure for the guardrail.
@@ -2390,9 +3687,53 @@ public open class CfnGuardrail(
       public fun description(description: String)
 
       /**
+       * @param inputAction Specifies the action to take when harmful content is detected in the
+       * input. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      public fun inputAction(inputAction: String)
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun inputEnabled(inputEnabled: Boolean)
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun inputEnabled(inputEnabled: IResolvable)
+
+      /**
        * @param name The name of the regular expression to configure for the guardrail. 
        */
       public fun name(name: String)
+
+      /**
+       * @param outputAction Specifies the action to take when harmful content is detected in the
+       * output. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      public fun outputAction(outputAction: String)
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun outputEnabled(outputEnabled: Boolean)
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun outputEnabled(outputEnabled: IResolvable)
 
       /**
        * @param pattern The regular expression pattern to configure for the guardrail. 
@@ -2422,10 +3763,66 @@ public open class CfnGuardrail(
       }
 
       /**
+       * @param inputAction Specifies the action to take when harmful content is detected in the
+       * input. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      override fun inputAction(inputAction: String) {
+        cdkBuilder.inputAction(inputAction)
+      }
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun inputEnabled(inputEnabled: Boolean) {
+        cdkBuilder.inputEnabled(inputEnabled)
+      }
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun inputEnabled(inputEnabled: IResolvable) {
+        cdkBuilder.inputEnabled(inputEnabled.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
        * @param name The name of the regular expression to configure for the guardrail. 
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
+      }
+
+      /**
+       * @param outputAction Specifies the action to take when harmful content is detected in the
+       * output. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      override fun outputAction(outputAction: String) {
+        cdkBuilder.outputAction(outputAction)
+      }
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun outputEnabled(outputEnabled: Boolean) {
+        cdkBuilder.outputEnabled(outputEnabled)
+      }
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun outputEnabled(outputEnabled: IResolvable) {
+        cdkBuilder.outputEnabled(outputEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2458,11 +3855,53 @@ public open class CfnGuardrail(
       override fun description(): String? = unwrap(this).getDescription()
 
       /**
+       * Specifies the action to take when harmful content is detected in the input. Supported
+       * values include:.
+       *
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-regexconfig.html#cfn-bedrock-guardrail-regexconfig-inputaction)
+       */
+      override fun inputAction(): String? = unwrap(this).getInputAction()
+
+      /**
+       * Specifies whether to enable guardrail evaluation on the input.
+       *
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-regexconfig.html#cfn-bedrock-guardrail-regexconfig-inputenabled)
+       */
+      override fun inputEnabled(): Any? = unwrap(this).getInputEnabled()
+
+      /**
        * The name of the regular expression to configure for the guardrail.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-regexconfig.html#cfn-bedrock-guardrail-regexconfig-name)
        */
       override fun name(): String = unwrap(this).getName()
+
+      /**
+       * Specifies the action to take when harmful content is detected in the output. Supported
+       * values include:.
+       *
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-regexconfig.html#cfn-bedrock-guardrail-regexconfig-outputaction)
+       */
+      override fun outputAction(): String? = unwrap(this).getOutputAction()
+
+      /**
+       * Specifies whether to enable guardrail evaluation on the output.
+       *
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-regexconfig.html#cfn-bedrock-guardrail-regexconfig-outputenabled)
+       */
+      override fun outputEnabled(): Any? = unwrap(this).getOutputEnabled()
 
       /**
        * The regular expression pattern to configure for the guardrail.
@@ -2504,6 +3943,11 @@ public open class CfnGuardrail(
    * .piiEntitiesConfig(List.of(PiiEntityConfigProperty.builder()
    * .action("action")
    * .type("type")
+   * // the properties below are optional
+   * .inputAction("inputAction")
+   * .inputEnabled(false)
+   * .outputAction("outputAction")
+   * .outputEnabled(false)
    * .build()))
    * .regexesConfig(List.of(RegexConfigProperty.builder()
    * .action("action")
@@ -2511,6 +3955,10 @@ public open class CfnGuardrail(
    * .pattern("pattern")
    * // the properties below are optional
    * .description("description")
+   * .inputAction("inputAction")
+   * .inputEnabled(false)
+   * .outputAction("outputAction")
+   * .outputEnabled(false)
    * .build()))
    * .build();
    * ```
@@ -2672,6 +4120,10 @@ public open class CfnGuardrail(
    * .type("type")
    * // the properties below are optional
    * .examples(List.of("examples"))
+   * .inputAction("inputAction")
+   * .inputEnabled(false)
+   * .outputAction("outputAction")
+   * .outputEnabled(false)
    * .build();
    * ```
    *
@@ -2694,11 +4146,53 @@ public open class CfnGuardrail(
     public fun examples(): List<String> = unwrap(this).getExamples() ?: emptyList()
 
     /**
+     * Specifies the action to take when harmful content is detected in the input. Supported values
+     * include:.
+     *
+     * * `BLOCK` – Block the content and replace it with blocked messaging.
+     * * `NONE` – Take no action but return detection information in the trace response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicconfig.html#cfn-bedrock-guardrail-topicconfig-inputaction)
+     */
+    public fun inputAction(): String? = unwrap(this).getInputAction()
+
+    /**
+     * Specifies whether to enable guardrail evaluation on the input.
+     *
+     * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+     * response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicconfig.html#cfn-bedrock-guardrail-topicconfig-inputenabled)
+     */
+    public fun inputEnabled(): Any? = unwrap(this).getInputEnabled()
+
+    /**
      * The name of the topic to deny.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicconfig.html#cfn-bedrock-guardrail-topicconfig-name)
      */
     public fun name(): String
+
+    /**
+     * Specifies the action to take when harmful content is detected in the output. Supported values
+     * include:.
+     *
+     * * `BLOCK` – Block the content and replace it with blocked messaging.
+     * * `NONE` – Take no action but return detection information in the trace response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicconfig.html#cfn-bedrock-guardrail-topicconfig-outputaction)
+     */
+    public fun outputAction(): String? = unwrap(this).getOutputAction()
+
+    /**
+     * Specifies whether to enable guardrail evaluation on the output.
+     *
+     * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+     * response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicconfig.html#cfn-bedrock-guardrail-topicconfig-outputenabled)
+     */
+    public fun outputEnabled(): Any? = unwrap(this).getOutputEnabled()
 
     /**
      * Specifies to deny the topic.
@@ -2730,9 +4224,53 @@ public open class CfnGuardrail(
       public fun examples(vararg examples: String)
 
       /**
+       * @param inputAction Specifies the action to take when harmful content is detected in the
+       * input. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      public fun inputAction(inputAction: String)
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun inputEnabled(inputEnabled: Boolean)
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun inputEnabled(inputEnabled: IResolvable)
+
+      /**
        * @param name The name of the topic to deny. 
        */
       public fun name(name: String)
+
+      /**
+       * @param outputAction Specifies the action to take when harmful content is detected in the
+       * output. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      public fun outputAction(outputAction: String)
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun outputEnabled(outputEnabled: Boolean)
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun outputEnabled(outputEnabled: IResolvable)
 
       /**
        * @param type Specifies to deny the topic. 
@@ -2767,10 +4305,66 @@ public open class CfnGuardrail(
       override fun examples(vararg examples: String): Unit = examples(examples.toList())
 
       /**
+       * @param inputAction Specifies the action to take when harmful content is detected in the
+       * input. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      override fun inputAction(inputAction: String) {
+        cdkBuilder.inputAction(inputAction)
+      }
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun inputEnabled(inputEnabled: Boolean) {
+        cdkBuilder.inputEnabled(inputEnabled)
+      }
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the input.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun inputEnabled(inputEnabled: IResolvable) {
+        cdkBuilder.inputEnabled(inputEnabled.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
        * @param name The name of the topic to deny. 
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
+      }
+
+      /**
+       * @param outputAction Specifies the action to take when harmful content is detected in the
+       * output. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      override fun outputAction(outputAction: String) {
+        cdkBuilder.outputAction(outputAction)
+      }
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun outputEnabled(outputEnabled: Boolean) {
+        cdkBuilder.outputEnabled(outputEnabled)
+      }
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun outputEnabled(outputEnabled: IResolvable) {
+        cdkBuilder.outputEnabled(outputEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2804,11 +4398,53 @@ public open class CfnGuardrail(
       override fun examples(): List<String> = unwrap(this).getExamples() ?: emptyList()
 
       /**
+       * Specifies the action to take when harmful content is detected in the input. Supported
+       * values include:.
+       *
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicconfig.html#cfn-bedrock-guardrail-topicconfig-inputaction)
+       */
+      override fun inputAction(): String? = unwrap(this).getInputAction()
+
+      /**
+       * Specifies whether to enable guardrail evaluation on the input.
+       *
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicconfig.html#cfn-bedrock-guardrail-topicconfig-inputenabled)
+       */
+      override fun inputEnabled(): Any? = unwrap(this).getInputEnabled()
+
+      /**
        * The name of the topic to deny.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicconfig.html#cfn-bedrock-guardrail-topicconfig-name)
        */
       override fun name(): String = unwrap(this).getName()
+
+      /**
+       * Specifies the action to take when harmful content is detected in the output. Supported
+       * values include:.
+       *
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicconfig.html#cfn-bedrock-guardrail-topicconfig-outputaction)
+       */
+      override fun outputAction(): String? = unwrap(this).getOutputAction()
+
+      /**
+       * Specifies whether to enable guardrail evaluation on the output.
+       *
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicconfig.html#cfn-bedrock-guardrail-topicconfig-outputenabled)
+       */
+      override fun outputEnabled(): Any? = unwrap(this).getOutputEnabled()
 
       /**
        * Specifies to deny the topic.
@@ -2852,7 +4488,15 @@ public open class CfnGuardrail(
    * .type("type")
    * // the properties below are optional
    * .examples(List.of("examples"))
+   * .inputAction("inputAction")
+   * .inputEnabled(false)
+   * .outputAction("outputAction")
+   * .outputEnabled(false)
    * .build()))
+   * // the properties below are optional
+   * .topicsTierConfig(TopicsTierConfigProperty.builder()
+   * .tierName("tierName")
+   * .build())
    * .build();
    * ```
    *
@@ -2865,6 +4509,13 @@ public open class CfnGuardrail(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicpolicyconfig.html#cfn-bedrock-guardrail-topicpolicyconfig-topicsconfig)
      */
     public fun topicsConfig(): Any
+
+    /**
+     * The tier that your guardrail uses for denied topic filters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicpolicyconfig.html#cfn-bedrock-guardrail-topicpolicyconfig-topicstierconfig)
+     */
+    public fun topicsTierConfig(): Any? = unwrap(this).getTopicsTierConfig()
 
     /**
      * A builder for [TopicPolicyConfigProperty]
@@ -2885,6 +4536,23 @@ public open class CfnGuardrail(
        * @param topicsConfig A list of policies related to topics that the guardrail should deny. 
        */
       public fun topicsConfig(vararg topicsConfig: Any)
+
+      /**
+       * @param topicsTierConfig The tier that your guardrail uses for denied topic filters.
+       */
+      public fun topicsTierConfig(topicsTierConfig: IResolvable)
+
+      /**
+       * @param topicsTierConfig The tier that your guardrail uses for denied topic filters.
+       */
+      public fun topicsTierConfig(topicsTierConfig: TopicsTierConfigProperty)
+
+      /**
+       * @param topicsTierConfig The tier that your guardrail uses for denied topic filters.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("37cadad3ca6af2b454c16ff5170b3a29e0bd46080d93135506f752115530db72")
+      public fun topicsTierConfig(topicsTierConfig: TopicsTierConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2912,6 +4580,28 @@ public open class CfnGuardrail(
       override fun topicsConfig(vararg topicsConfig: Any): Unit =
           topicsConfig(topicsConfig.toList())
 
+      /**
+       * @param topicsTierConfig The tier that your guardrail uses for denied topic filters.
+       */
+      override fun topicsTierConfig(topicsTierConfig: IResolvable) {
+        cdkBuilder.topicsTierConfig(topicsTierConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param topicsTierConfig The tier that your guardrail uses for denied topic filters.
+       */
+      override fun topicsTierConfig(topicsTierConfig: TopicsTierConfigProperty) {
+        cdkBuilder.topicsTierConfig(topicsTierConfig.let(TopicsTierConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param topicsTierConfig The tier that your guardrail uses for denied topic filters.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("37cadad3ca6af2b454c16ff5170b3a29e0bd46080d93135506f752115530db72")
+      override fun topicsTierConfig(topicsTierConfig: TopicsTierConfigProperty.Builder.() -> Unit):
+          Unit = topicsTierConfig(TopicsTierConfigProperty(topicsTierConfig))
+
       public fun build():
           software.amazon.awscdk.services.bedrock.CfnGuardrail.TopicPolicyConfigProperty =
           cdkBuilder.build()
@@ -2927,6 +4617,13 @@ public open class CfnGuardrail(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicpolicyconfig.html#cfn-bedrock-guardrail-topicpolicyconfig-topicsconfig)
        */
       override fun topicsConfig(): Any = unwrap(this).getTopicsConfig()
+
+      /**
+       * The tier that your guardrail uses for denied topic filters.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicpolicyconfig.html#cfn-bedrock-guardrail-topicpolicyconfig-topicstierconfig)
+       */
+      override fun topicsTierConfig(): Any? = unwrap(this).getTopicsTierConfig()
     }
 
     public companion object {
@@ -2948,6 +4645,118 @@ public open class CfnGuardrail(
   }
 
   /**
+   * The tier that your guardrail uses for denied topic filters.
+   *
+   * Consider using a tier that balances performance, accuracy, and compatibility with your existing
+   * generative AI workflows.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * TopicsTierConfigProperty topicsTierConfigProperty = TopicsTierConfigProperty.builder()
+   * .tierName("tierName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicstierconfig.html)
+   */
+  public interface TopicsTierConfigProperty {
+    /**
+     * The tier that your guardrail uses for denied topic filters. Valid values include:.
+     *
+     * * `CLASSIC` tier – Provides established guardrails functionality supporting English, French,
+     * and Spanish languages.
+     * * `STANDARD` tier – Provides a more robust solution than the `CLASSIC` tier and has more
+     * comprehensive language support. This tier requires that your guardrail use [cross-Region
+     * inference](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicstierconfig.html#cfn-bedrock-guardrail-topicstierconfig-tiername)
+     */
+    public fun tierName(): String
+
+    /**
+     * A builder for [TopicsTierConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param tierName The tier that your guardrail uses for denied topic filters. Valid values
+       * include:. 
+       * * `CLASSIC` tier – Provides established guardrails functionality supporting English,
+       * French, and Spanish languages.
+       * * `STANDARD` tier – Provides a more robust solution than the `CLASSIC` tier and has more
+       * comprehensive language support. This tier requires that your guardrail use [cross-Region
+       * inference](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html)
+       * .
+       */
+      public fun tierName(tierName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnGuardrail.TopicsTierConfigProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnGuardrail.TopicsTierConfigProperty.builder()
+
+      /**
+       * @param tierName The tier that your guardrail uses for denied topic filters. Valid values
+       * include:. 
+       * * `CLASSIC` tier – Provides established guardrails functionality supporting English,
+       * French, and Spanish languages.
+       * * `STANDARD` tier – Provides a more robust solution than the `CLASSIC` tier and has more
+       * comprehensive language support. This tier requires that your guardrail use [cross-Region
+       * inference](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html)
+       * .
+       */
+      override fun tierName(tierName: String) {
+        cdkBuilder.tierName(tierName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnGuardrail.TopicsTierConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnGuardrail.TopicsTierConfigProperty,
+    ) : CdkObject(cdkObject),
+        TopicsTierConfigProperty {
+      /**
+       * The tier that your guardrail uses for denied topic filters. Valid values include:.
+       *
+       * * `CLASSIC` tier – Provides established guardrails functionality supporting English,
+       * French, and Spanish languages.
+       * * `STANDARD` tier – Provides a more robust solution than the `CLASSIC` tier and has more
+       * comprehensive language support. This tier requires that your guardrail use [cross-Region
+       * inference](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-cross-region.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-topicstierconfig.html#cfn-bedrock-guardrail-topicstierconfig-tiername)
+       */
+      override fun tierName(): String = unwrap(this).getTierName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TopicsTierConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnGuardrail.TopicsTierConfigProperty):
+          TopicsTierConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TopicsTierConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TopicsTierConfigProperty):
+          software.amazon.awscdk.services.bedrock.CfnGuardrail.TopicsTierConfigProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnGuardrail.TopicsTierConfigProperty
+    }
+  }
+
+  /**
    * A word to configure for the guardrail.
    *
    * Example:
@@ -2958,12 +4767,59 @@ public open class CfnGuardrail(
    * import io.cloudshiftdev.awscdk.services.bedrock.*;
    * WordConfigProperty wordConfigProperty = WordConfigProperty.builder()
    * .text("text")
+   * // the properties below are optional
+   * .inputAction("inputAction")
+   * .inputEnabled(false)
+   * .outputAction("outputAction")
+   * .outputEnabled(false)
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-wordconfig.html)
    */
   public interface WordConfigProperty {
+    /**
+     * Specifies the action to take when harmful content is detected in the input. Supported values
+     * include:.
+     *
+     * * `BLOCK` – Block the content and replace it with blocked messaging.
+     * * `NONE` – Take no action but return detection information in the trace response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-wordconfig.html#cfn-bedrock-guardrail-wordconfig-inputaction)
+     */
+    public fun inputAction(): String? = unwrap(this).getInputAction()
+
+    /**
+     * Specifies whether to enable guardrail evaluation on the intput.
+     *
+     * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+     * response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-wordconfig.html#cfn-bedrock-guardrail-wordconfig-inputenabled)
+     */
+    public fun inputEnabled(): Any? = unwrap(this).getInputEnabled()
+
+    /**
+     * Specifies the action to take when harmful content is detected in the output. Supported values
+     * include:.
+     *
+     * * `BLOCK` – Block the content and replace it with blocked messaging.
+     * * `NONE` – Take no action but return detection information in the trace response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-wordconfig.html#cfn-bedrock-guardrail-wordconfig-outputaction)
+     */
+    public fun outputAction(): String? = unwrap(this).getOutputAction()
+
+    /**
+     * Specifies whether to enable guardrail evaluation on the output.
+     *
+     * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+     * response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-wordconfig.html#cfn-bedrock-guardrail-wordconfig-outputenabled)
+     */
+    public fun outputEnabled(): Any? = unwrap(this).getOutputEnabled()
+
     /**
      * Text of the word configured for the guardrail to block.
      *
@@ -2977,6 +4833,50 @@ public open class CfnGuardrail(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param inputAction Specifies the action to take when harmful content is detected in the
+       * input. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      public fun inputAction(inputAction: String)
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the intput.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun inputEnabled(inputEnabled: Boolean)
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the intput.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun inputEnabled(inputEnabled: IResolvable)
+
+      /**
+       * @param outputAction Specifies the action to take when harmful content is detected in the
+       * output. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      public fun outputAction(outputAction: String)
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun outputEnabled(outputEnabled: Boolean)
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      public fun outputEnabled(outputEnabled: IResolvable)
+
+      /**
        * @param text Text of the word configured for the guardrail to block. 
        */
       public fun text(text: String)
@@ -2986,6 +4886,62 @@ public open class CfnGuardrail(
       private val cdkBuilder:
           software.amazon.awscdk.services.bedrock.CfnGuardrail.WordConfigProperty.Builder =
           software.amazon.awscdk.services.bedrock.CfnGuardrail.WordConfigProperty.builder()
+
+      /**
+       * @param inputAction Specifies the action to take when harmful content is detected in the
+       * input. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      override fun inputAction(inputAction: String) {
+        cdkBuilder.inputAction(inputAction)
+      }
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the intput.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun inputEnabled(inputEnabled: Boolean) {
+        cdkBuilder.inputEnabled(inputEnabled)
+      }
+
+      /**
+       * @param inputEnabled Specifies whether to enable guardrail evaluation on the intput.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun inputEnabled(inputEnabled: IResolvable) {
+        cdkBuilder.inputEnabled(inputEnabled.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param outputAction Specifies the action to take when harmful content is detected in the
+       * output. Supported values include:.
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       */
+      override fun outputAction(outputAction: String) {
+        cdkBuilder.outputAction(outputAction)
+      }
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun outputEnabled(outputEnabled: Boolean) {
+        cdkBuilder.outputEnabled(outputEnabled)
+      }
+
+      /**
+       * @param outputEnabled Specifies whether to enable guardrail evaluation on the output.
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       */
+      override fun outputEnabled(outputEnabled: IResolvable) {
+        cdkBuilder.outputEnabled(outputEnabled.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param text Text of the word configured for the guardrail to block. 
@@ -3002,6 +4958,48 @@ public open class CfnGuardrail(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnGuardrail.WordConfigProperty,
     ) : CdkObject(cdkObject),
         WordConfigProperty {
+      /**
+       * Specifies the action to take when harmful content is detected in the input. Supported
+       * values include:.
+       *
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-wordconfig.html#cfn-bedrock-guardrail-wordconfig-inputaction)
+       */
+      override fun inputAction(): String? = unwrap(this).getInputAction()
+
+      /**
+       * Specifies whether to enable guardrail evaluation on the intput.
+       *
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-wordconfig.html#cfn-bedrock-guardrail-wordconfig-inputenabled)
+       */
+      override fun inputEnabled(): Any? = unwrap(this).getInputEnabled()
+
+      /**
+       * Specifies the action to take when harmful content is detected in the output. Supported
+       * values include:.
+       *
+       * * `BLOCK` – Block the content and replace it with blocked messaging.
+       * * `NONE` – Take no action but return detection information in the trace response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-wordconfig.html#cfn-bedrock-guardrail-wordconfig-outputaction)
+       */
+      override fun outputAction(): String? = unwrap(this).getOutputAction()
+
+      /**
+       * Specifies whether to enable guardrail evaluation on the output.
+       *
+       * When disabled, you aren't charged for the evaluation. The evaluation doesn't appear in the
+       * response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-guardrail-wordconfig.html#cfn-bedrock-guardrail-wordconfig-outputenabled)
+       */
+      override fun outputEnabled(): Any? = unwrap(this).getOutputEnabled()
+
       /**
        * Text of the word configured for the guardrail to block.
        *
@@ -3040,9 +5038,19 @@ public open class CfnGuardrail(
    * WordPolicyConfigProperty wordPolicyConfigProperty = WordPolicyConfigProperty.builder()
    * .managedWordListsConfig(List.of(ManagedWordsConfigProperty.builder()
    * .type("type")
+   * // the properties below are optional
+   * .inputAction("inputAction")
+   * .inputEnabled(false)
+   * .outputAction("outputAction")
+   * .outputEnabled(false)
    * .build()))
    * .wordsConfig(List.of(WordConfigProperty.builder()
    * .text("text")
+   * // the properties below are optional
+   * .inputAction("inputAction")
+   * .inputEnabled(false)
+   * .outputAction("outputAction")
+   * .outputEnabled(false)
    * .build()))
    * .build();
    * ```

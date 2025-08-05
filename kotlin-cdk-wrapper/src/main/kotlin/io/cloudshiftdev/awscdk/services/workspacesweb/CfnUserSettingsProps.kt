@@ -56,6 +56,12 @@ import kotlin.jvm.JvmName
  * .key("key")
  * .value("value")
  * .build()))
+ * .toolbarConfiguration(ToolbarConfigurationProperty.builder()
+ * .hiddenToolbarItems(List.of("hiddenToolbarItems"))
+ * .maxDisplayResolution("maxDisplayResolution")
+ * .toolbarType("toolbarType")
+ * .visualMode("visualMode")
+ * .build())
  * .build();
  * ```
  *
@@ -147,6 +153,18 @@ public interface CfnUserSettingsProps {
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
+   * The configuration of the toolbar.
+   *
+   * This allows administrators to select the toolbar type and visual mode, set maximum display
+   * resolution for sessions, and choose which items are visible to end users during their sessions. If
+   * administrators do not modify these settings, end users retain control over their toolbar
+   * preferences.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-toolbarconfiguration)
+   */
+  public fun toolbarConfiguration(): Any? = unwrap(this).getToolbarConfiguration()
+
+  /**
    * Specifies whether the user can upload files from the local device to the streaming session.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-uploadallowed)
@@ -161,12 +179,12 @@ public interface CfnUserSettingsProps {
     /**
      * @param additionalEncryptionContext The additional encryption context of the user settings.
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
+    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
     /**
      * @param additionalEncryptionContext The additional encryption context of the user settings.
      */
-    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
     /**
      * @param cookieSynchronizationConfiguration The configuration that specifies which cookies
@@ -251,6 +269,37 @@ public interface CfnUserSettingsProps {
     public fun tags(vararg tags: CfnTag)
 
     /**
+     * @param toolbarConfiguration The configuration of the toolbar.
+     * This allows administrators to select the toolbar type and visual mode, set maximum display
+     * resolution for sessions, and choose which items are visible to end users during their sessions.
+     * If administrators do not modify these settings, end users retain control over their toolbar
+     * preferences.
+     */
+    public fun toolbarConfiguration(toolbarConfiguration: IResolvable)
+
+    /**
+     * @param toolbarConfiguration The configuration of the toolbar.
+     * This allows administrators to select the toolbar type and visual mode, set maximum display
+     * resolution for sessions, and choose which items are visible to end users during their sessions.
+     * If administrators do not modify these settings, end users retain control over their toolbar
+     * preferences.
+     */
+    public
+        fun toolbarConfiguration(toolbarConfiguration: CfnUserSettings.ToolbarConfigurationProperty)
+
+    /**
+     * @param toolbarConfiguration The configuration of the toolbar.
+     * This allows administrators to select the toolbar type and visual mode, set maximum display
+     * resolution for sessions, and choose which items are visible to end users during their sessions.
+     * If administrators do not modify these settings, end users retain control over their toolbar
+     * preferences.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7d9eafadec9800a711b13fceaab632283c1e0c190730647cb0cfaadaf8f27a69")
+    public
+        fun toolbarConfiguration(toolbarConfiguration: CfnUserSettings.ToolbarConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * @param uploadAllowed Specifies whether the user can upload files from the local device to the
      * streaming session. 
      */
@@ -265,15 +314,15 @@ public interface CfnUserSettingsProps {
     /**
      * @param additionalEncryptionContext The additional encryption context of the user settings.
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
+    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
     }
 
     /**
      * @param additionalEncryptionContext The additional encryption context of the user settings.
      */
-    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -384,6 +433,43 @@ public interface CfnUserSettingsProps {
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
+     * @param toolbarConfiguration The configuration of the toolbar.
+     * This allows administrators to select the toolbar type and visual mode, set maximum display
+     * resolution for sessions, and choose which items are visible to end users during their sessions.
+     * If administrators do not modify these settings, end users retain control over their toolbar
+     * preferences.
+     */
+    override fun toolbarConfiguration(toolbarConfiguration: IResolvable) {
+      cdkBuilder.toolbarConfiguration(toolbarConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param toolbarConfiguration The configuration of the toolbar.
+     * This allows administrators to select the toolbar type and visual mode, set maximum display
+     * resolution for sessions, and choose which items are visible to end users during their sessions.
+     * If administrators do not modify these settings, end users retain control over their toolbar
+     * preferences.
+     */
+    override
+        fun toolbarConfiguration(toolbarConfiguration: CfnUserSettings.ToolbarConfigurationProperty) {
+      cdkBuilder.toolbarConfiguration(toolbarConfiguration.let(CfnUserSettings.ToolbarConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param toolbarConfiguration The configuration of the toolbar.
+     * This allows administrators to select the toolbar type and visual mode, set maximum display
+     * resolution for sessions, and choose which items are visible to end users during their sessions.
+     * If administrators do not modify these settings, end users retain control over their toolbar
+     * preferences.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7d9eafadec9800a711b13fceaab632283c1e0c190730647cb0cfaadaf8f27a69")
+    override
+        fun toolbarConfiguration(toolbarConfiguration: CfnUserSettings.ToolbarConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        toolbarConfiguration(CfnUserSettings.ToolbarConfigurationProperty(toolbarConfiguration))
+
+    /**
      * @param uploadAllowed Specifies whether the user can upload files from the local device to the
      * streaming session. 
      */
@@ -483,6 +569,18 @@ public interface CfnUserSettingsProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-tags)
      */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * The configuration of the toolbar.
+     *
+     * This allows administrators to select the toolbar type and visual mode, set maximum display
+     * resolution for sessions, and choose which items are visible to end users during their sessions.
+     * If administrators do not modify these settings, end users retain control over their toolbar
+     * preferences.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-toolbarconfiguration)
+     */
+    override fun toolbarConfiguration(): Any? = unwrap(this).getToolbarConfiguration()
 
     /**
      * Specifies whether the user can upload files from the local device to the streaming session.

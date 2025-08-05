@@ -50,6 +50,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .taskImageOptions(ApplicationLoadBalancedTaskImageOptions.builder()
  * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
  * .build())
+ * .minHealthyPercent(100)
  * .build();
  * ScalableTaskCount scalableTarget =
  * loadBalancedFargateService.service.autoScaleTaskCount(EnableScalingProps.builder()
@@ -215,6 +216,27 @@ public open class ApplicationLoadBalancedFargateService(
      * @param cluster The name of the cluster that hosts the service. 
      */
     public fun cluster(cluster: ICluster)
+
+    /**
+     * The minimum number of CPU units to reserve for the container.
+     *
+     * Default: - No minimum CPU units reserved.
+     *
+     * @param containerCpu The minimum number of CPU units to reserve for the container. 
+     */
+    public fun containerCpu(containerCpu: Number)
+
+    /**
+     * The amount (in MiB) of memory to present to the container.
+     *
+     * If your container attempts to exceed the allocated memory, the container
+     * is terminated.
+     *
+     * Default: - No memory limit.
+     *
+     * @param containerMemoryLimitMiB The amount (in MiB) of memory to present to the container. 
+     */
+    public fun containerMemoryLimitMiB(containerMemoryLimitMiB: Number)
 
     /**
      * The number of cpu units used by the task.
@@ -571,14 +593,15 @@ public open class ApplicationLoadBalancedFargateService(
     public fun recordType(recordType: ApplicationLoadBalancedServiceRecordType)
 
     /**
-     * Specifies whether the load balancer should redirect traffic on port 80 to port 443 to support
-     * HTTP-&gt;HTTPS redirects This is only valid if the protocol of the ALB is HTTPS.
+     * Specifies whether the load balancer should redirect traffic on port 80 to the [listenerPort]
+     * to support HTTP->HTTPS redirects.
+     *
+     * This is only valid if the protocol of the ALB is HTTPS.
      *
      * Default: false
      *
      * @param redirectHttp Specifies whether the load balancer should redirect traffic on port 80 to
-     * port 443 to support HTTP-&gt;HTTPS redirects This is only valid if the protocol of the ALB is
-     * HTTPS. 
+     * the [listenerPort] to support HTTP->HTTPS redirects. 
      */
     public fun redirectHttp(redirectHttp: Boolean)
 
@@ -861,6 +884,31 @@ public open class ApplicationLoadBalancedFargateService(
      */
     override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
+    }
+
+    /**
+     * The minimum number of CPU units to reserve for the container.
+     *
+     * Default: - No minimum CPU units reserved.
+     *
+     * @param containerCpu The minimum number of CPU units to reserve for the container. 
+     */
+    override fun containerCpu(containerCpu: Number) {
+      cdkBuilder.containerCpu(containerCpu)
+    }
+
+    /**
+     * The amount (in MiB) of memory to present to the container.
+     *
+     * If your container attempts to exceed the allocated memory, the container
+     * is terminated.
+     *
+     * Default: - No memory limit.
+     *
+     * @param containerMemoryLimitMiB The amount (in MiB) of memory to present to the container. 
+     */
+    override fun containerMemoryLimitMiB(containerMemoryLimitMiB: Number) {
+      cdkBuilder.containerMemoryLimitMiB(containerMemoryLimitMiB)
     }
 
     /**
@@ -1271,14 +1319,15 @@ public open class ApplicationLoadBalancedFargateService(
     }
 
     /**
-     * Specifies whether the load balancer should redirect traffic on port 80 to port 443 to support
-     * HTTP-&gt;HTTPS redirects This is only valid if the protocol of the ALB is HTTPS.
+     * Specifies whether the load balancer should redirect traffic on port 80 to the [listenerPort]
+     * to support HTTP->HTTPS redirects.
+     *
+     * This is only valid if the protocol of the ALB is HTTPS.
      *
      * Default: false
      *
      * @param redirectHttp Specifies whether the load balancer should redirect traffic on port 80 to
-     * port 443 to support HTTP-&gt;HTTPS redirects This is only valid if the protocol of the ALB is
-     * HTTPS. 
+     * the [listenerPort] to support HTTP->HTTPS redirects. 
      */
     override fun redirectHttp(redirectHttp: Boolean) {
       cdkBuilder.redirectHttp(redirectHttp)
@@ -1462,6 +1511,9 @@ public open class ApplicationLoadBalancedFargateService(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateService.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

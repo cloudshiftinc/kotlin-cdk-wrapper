@@ -11,6 +11,9 @@ public enum class EnvironmentType(
   WINDOWS_SERVER_2019_CONTAINER(software.amazon.awscdk.services.codebuild.EnvironmentType.WINDOWS_SERVER_2019_CONTAINER),
   WINDOWS_SERVER_2022_CONTAINER(software.amazon.awscdk.services.codebuild.EnvironmentType.WINDOWS_SERVER_2022_CONTAINER),
   MAC_ARM(software.amazon.awscdk.services.codebuild.EnvironmentType.MAC_ARM),
+  LINUX_EC2(software.amazon.awscdk.services.codebuild.EnvironmentType.LINUX_EC2),
+  ARM_EC2(software.amazon.awscdk.services.codebuild.EnvironmentType.ARM_EC2),
+  WINDOWS_EC2(software.amazon.awscdk.services.codebuild.EnvironmentType.WINDOWS_EC2),
   ;
 
   public companion object {
@@ -27,6 +30,11 @@ public enum class EnvironmentType(
       software.amazon.awscdk.services.codebuild.EnvironmentType.WINDOWS_SERVER_2022_CONTAINER ->
           EnvironmentType.WINDOWS_SERVER_2022_CONTAINER
       software.amazon.awscdk.services.codebuild.EnvironmentType.MAC_ARM -> EnvironmentType.MAC_ARM
+      software.amazon.awscdk.services.codebuild.EnvironmentType.LINUX_EC2 ->
+          EnvironmentType.LINUX_EC2
+      software.amazon.awscdk.services.codebuild.EnvironmentType.ARM_EC2 -> EnvironmentType.ARM_EC2
+      software.amazon.awscdk.services.codebuild.EnvironmentType.WINDOWS_EC2 ->
+          EnvironmentType.WINDOWS_EC2
     }
 
     internal fun unwrap(wrapped: EnvironmentType):

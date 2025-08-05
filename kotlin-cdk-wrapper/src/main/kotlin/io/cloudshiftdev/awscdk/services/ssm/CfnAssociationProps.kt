@@ -80,7 +80,7 @@ public interface CfnAssociationProps {
    * Choose the parameter that will define how your automation will branch out.
    *
    * This target is required for associations that use an Automation runbook and target resources by
-   * using rate controls. Automation is a capability of AWS Systems Manager .
+   * using rate controls. Automation is a tool in AWS Systems Manager .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-automationtargetparametername)
    */
@@ -94,7 +94,7 @@ public interface CfnAssociationProps {
    * The associations only run when that Change Calendar is open. For more information, see [AWS
    * Systems Manager Change
    * Calendar](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-change-calendar)
-   * .
+   * in the *AWS Systems Manager User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-calendarnames)
    */
@@ -129,16 +129,20 @@ public interface CfnAssociationProps {
   public fun documentVersion(): String? = unwrap(this).getDocumentVersion()
 
   /**
-   * The ID of the instance that the SSM document is associated with.
+   * `InstanceId` has been deprecated.
    *
-   * You must specify the `InstanceId` or `Targets` property.
+   * To specify an instance ID for an association, use the `Targets` parameter. If you use the
+   * parameter `InstanceId` , you cannot use the parameters `AssociationName` , `DocumentVersion` ,
+   * `MaxErrors` , `MaxConcurrency` , `OutputLocation` , or `ScheduleExpression` . To use these
+   * parameters, you must use the `Targets` parameter.
    *
    *
-   * `InstanceId` has been deprecated. To specify an instance ID for an association, use the
-   * `Targets` parameter. If you use the parameter `InstanceId` , you cannot use the parameters
-   * `AssociationName` , `DocumentVersion` , `MaxErrors` , `MaxConcurrency` , `OutputLocation` , or
-   * `ScheduleExpression` . To use these parameters, you must use the `Targets` parameter.
+   * Note that in some examples later in this page, `InstanceIds` is used as the tag-key name in a
+   * `Targets` filter. `InstanceId` is not used as a parameter.
    *
+   *
+   * The ID of the instance that the SSM document is associated with. You must specify the
+   * `InstanceId` or `Targets` property.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-instanceid)
    */
@@ -314,7 +318,7 @@ public interface CfnAssociationProps {
      * @param automationTargetParameterName Choose the parameter that will define how your
      * automation will branch out.
      * This target is required for associations that use an Automation runbook and target resources
-     * by using rate controls. Automation is a capability of AWS Systems Manager .
+     * by using rate controls. Automation is a tool in AWS Systems Manager .
      */
     public fun automationTargetParameterName(automationTargetParameterName: String)
 
@@ -324,7 +328,7 @@ public interface CfnAssociationProps {
      * The associations only run when that Change Calendar is open. For more information, see [AWS
      * Systems Manager Change
      * Calendar](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-change-calendar)
-     * .
+     * in the *AWS Systems Manager User Guide* .
      */
     public fun calendarNames(calendarNames: List<String>)
 
@@ -334,7 +338,7 @@ public interface CfnAssociationProps {
      * The associations only run when that Change Calendar is open. For more information, see [AWS
      * Systems Manager Change
      * Calendar](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-change-calendar)
-     * .
+     * in the *AWS Systems Manager User Guide* .
      */
     public fun calendarNames(vararg calendarNames: String)
 
@@ -361,14 +365,19 @@ public interface CfnAssociationProps {
     public fun documentVersion(documentVersion: String)
 
     /**
-     * @param instanceId The ID of the instance that the SSM document is associated with.
-     * You must specify the `InstanceId` or `Targets` property.
+     * @param instanceId `InstanceId` has been deprecated.
+     * To specify an instance ID for an association, use the `Targets` parameter. If you use the
+     * parameter `InstanceId` , you cannot use the parameters `AssociationName` , `DocumentVersion` ,
+     * `MaxErrors` , `MaxConcurrency` , `OutputLocation` , or `ScheduleExpression` . To use these
+     * parameters, you must use the `Targets` parameter.
      *
      *
-     * `InstanceId` has been deprecated. To specify an instance ID for an association, use the
-     * `Targets` parameter. If you use the parameter `InstanceId` , you cannot use the parameters
-     * `AssociationName` , `DocumentVersion` , `MaxErrors` , `MaxConcurrency` , `OutputLocation` , or
-     * `ScheduleExpression` . To use these parameters, you must use the `Targets` parameter.
+     * Note that in some examples later in this page, `InstanceIds` is used as the tag-key name in a
+     * `Targets` filter. `InstanceId` is not used as a parameter.
+     *
+     *
+     * The ID of the instance that the SSM document is associated with. You must specify the
+     * `InstanceId` or `Targets` property.
      */
     public fun instanceId(instanceId: String)
 
@@ -568,7 +577,7 @@ public interface CfnAssociationProps {
      * @param automationTargetParameterName Choose the parameter that will define how your
      * automation will branch out.
      * This target is required for associations that use an Automation runbook and target resources
-     * by using rate controls. Automation is a capability of AWS Systems Manager .
+     * by using rate controls. Automation is a tool in AWS Systems Manager .
      */
     override fun automationTargetParameterName(automationTargetParameterName: String) {
       cdkBuilder.automationTargetParameterName(automationTargetParameterName)
@@ -580,7 +589,7 @@ public interface CfnAssociationProps {
      * The associations only run when that Change Calendar is open. For more information, see [AWS
      * Systems Manager Change
      * Calendar](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-change-calendar)
-     * .
+     * in the *AWS Systems Manager User Guide* .
      */
     override fun calendarNames(calendarNames: List<String>) {
       cdkBuilder.calendarNames(calendarNames)
@@ -592,7 +601,7 @@ public interface CfnAssociationProps {
      * The associations only run when that Change Calendar is open. For more information, see [AWS
      * Systems Manager Change
      * Calendar](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-change-calendar)
-     * .
+     * in the *AWS Systems Manager User Guide* .
      */
     override fun calendarNames(vararg calendarNames: String): Unit =
         calendarNames(calendarNames.toList())
@@ -624,14 +633,19 @@ public interface CfnAssociationProps {
     }
 
     /**
-     * @param instanceId The ID of the instance that the SSM document is associated with.
-     * You must specify the `InstanceId` or `Targets` property.
+     * @param instanceId `InstanceId` has been deprecated.
+     * To specify an instance ID for an association, use the `Targets` parameter. If you use the
+     * parameter `InstanceId` , you cannot use the parameters `AssociationName` , `DocumentVersion` ,
+     * `MaxErrors` , `MaxConcurrency` , `OutputLocation` , or `ScheduleExpression` . To use these
+     * parameters, you must use the `Targets` parameter.
      *
      *
-     * `InstanceId` has been deprecated. To specify an instance ID for an association, use the
-     * `Targets` parameter. If you use the parameter `InstanceId` , you cannot use the parameters
-     * `AssociationName` , `DocumentVersion` , `MaxErrors` , `MaxConcurrency` , `OutputLocation` , or
-     * `ScheduleExpression` . To use these parameters, you must use the `Targets` parameter.
+     * Note that in some examples later in this page, `InstanceIds` is used as the tag-key name in a
+     * `Targets` filter. `InstanceId` is not used as a parameter.
+     *
+     *
+     * The ID of the instance that the SSM document is associated with. You must specify the
+     * `InstanceId` or `Targets` property.
      */
     override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
@@ -852,7 +866,7 @@ public interface CfnAssociationProps {
      * Choose the parameter that will define how your automation will branch out.
      *
      * This target is required for associations that use an Automation runbook and target resources
-     * by using rate controls. Automation is a capability of AWS Systems Manager .
+     * by using rate controls. Automation is a tool in AWS Systems Manager .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-automationtargetparametername)
      */
@@ -866,7 +880,7 @@ public interface CfnAssociationProps {
      * The associations only run when that Change Calendar is open. For more information, see [AWS
      * Systems Manager Change
      * Calendar](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-change-calendar)
-     * .
+     * in the *AWS Systems Manager User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-calendarnames)
      */
@@ -901,16 +915,20 @@ public interface CfnAssociationProps {
     override fun documentVersion(): String? = unwrap(this).getDocumentVersion()
 
     /**
-     * The ID of the instance that the SSM document is associated with.
+     * `InstanceId` has been deprecated.
      *
-     * You must specify the `InstanceId` or `Targets` property.
+     * To specify an instance ID for an association, use the `Targets` parameter. If you use the
+     * parameter `InstanceId` , you cannot use the parameters `AssociationName` , `DocumentVersion` ,
+     * `MaxErrors` , `MaxConcurrency` , `OutputLocation` , or `ScheduleExpression` . To use these
+     * parameters, you must use the `Targets` parameter.
      *
      *
-     * `InstanceId` has been deprecated. To specify an instance ID for an association, use the
-     * `Targets` parameter. If you use the parameter `InstanceId` , you cannot use the parameters
-     * `AssociationName` , `DocumentVersion` , `MaxErrors` , `MaxConcurrency` , `OutputLocation` , or
-     * `ScheduleExpression` . To use these parameters, you must use the `Targets` parameter.
+     * Note that in some examples later in this page, `InstanceIds` is used as the tag-key name in a
+     * `Targets` filter. `InstanceId` is not used as a parameter.
      *
+     *
+     * The ID of the instance that the SSM document is associated with. You must specify the
+     * `InstanceId` or `Targets` property.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-instanceid)
      */

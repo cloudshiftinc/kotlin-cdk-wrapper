@@ -28,6 +28,7 @@ import kotlin.collections.List
  * // the properties below are optional
  * .activate(false)
  * .detectorId("detectorId")
+ * .expectedBucketOwner("expectedBucketOwner")
  * .name("name")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -58,6 +59,16 @@ public interface CfnThreatIntelSetProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html#cfn-guardduty-threatintelset-detectorid)
    */
   public fun detectorId(): String? = unwrap(this).getDetectorId()
+
+  /**
+   * The AWS account ID that owns the Amazon S3 bucket specified in the *Location* field.
+   *
+   * When you provide this account ID, GuardDuty will validate that the S3 bucket belongs to this
+   * account. If you don't specify an account ID owner, GuardDuty doesn't perform any validation.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html#cfn-guardduty-threatintelset-expectedbucketowner)
+   */
+  public fun expectedBucketOwner(): String? = unwrap(this).getExpectedBucketOwner()
 
   /**
    * The format of the file that contains the ThreatIntelSet.
@@ -120,6 +131,14 @@ public interface CfnThreatIntelSetProps {
      * API.
      */
     public fun detectorId(detectorId: String)
+
+    /**
+     * @param expectedBucketOwner The AWS account ID that owns the Amazon S3 bucket specified in the
+     * *Location* field.
+     * When you provide this account ID, GuardDuty will validate that the S3 bucket belongs to this
+     * account. If you don't specify an account ID owner, GuardDuty doesn't perform any validation.
+     */
+    public fun expectedBucketOwner(expectedBucketOwner: String)
 
     /**
      * @param format The format of the file that contains the ThreatIntelSet. 
@@ -188,6 +207,16 @@ public interface CfnThreatIntelSetProps {
      */
     override fun detectorId(detectorId: String) {
       cdkBuilder.detectorId(detectorId)
+    }
+
+    /**
+     * @param expectedBucketOwner The AWS account ID that owns the Amazon S3 bucket specified in the
+     * *Location* field.
+     * When you provide this account ID, GuardDuty will validate that the S3 bucket belongs to this
+     * account. If you don't specify an account ID owner, GuardDuty doesn't perform any validation.
+     */
+    override fun expectedBucketOwner(expectedBucketOwner: String) {
+      cdkBuilder.expectedBucketOwner(expectedBucketOwner)
     }
 
     /**
@@ -262,6 +291,16 @@ public interface CfnThreatIntelSetProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html#cfn-guardduty-threatintelset-detectorid)
      */
     override fun detectorId(): String? = unwrap(this).getDetectorId()
+
+    /**
+     * The AWS account ID that owns the Amazon S3 bucket specified in the *Location* field.
+     *
+     * When you provide this account ID, GuardDuty will validate that the S3 bucket belongs to this
+     * account. If you don't specify an account ID owner, GuardDuty doesn't perform any validation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html#cfn-guardduty-threatintelset-expectedbucketowner)
+     */
+    override fun expectedBucketOwner(): String? = unwrap(this).getExpectedBucketOwner()
 
     /**
      * The format of the file that contains the ThreatIntelSet.

@@ -2,11 +2,13 @@
 
 package io.cloudshiftdev.awscdk.services.kinesis
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 
 /**
  * Properties for defining a `CfnStreamConsumer`.
@@ -20,6 +22,11 @@ import kotlin.Unit
  * CfnStreamConsumerProps cfnStreamConsumerProps = CfnStreamConsumerProps.builder()
  * .consumerName("consumerName")
  * .streamArn("streamArn")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -41,6 +48,16 @@ public interface CfnStreamConsumerProps {
   public fun streamArn(): String
 
   /**
+   * An array of tags to be added to a specified Kinesis resource.
+   *
+   * A tag consists of a required key and an optional value. You can specify up to 50 tag key-value
+   * pairs.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html#cfn-kinesis-streamconsumer-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
    * A builder for [CfnStreamConsumerProps]
    */
   @CdkDslMarker
@@ -55,6 +72,20 @@ public interface CfnStreamConsumerProps {
      * @param streamArn The ARN of the stream with which you registered the consumer. 
      */
     public fun streamArn(streamArn: String)
+
+    /**
+     * @param tags An array of tags to be added to a specified Kinesis resource.
+     * A tag consists of a required key and an optional value. You can specify up to 50 tag
+     * key-value pairs.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags An array of tags to be added to a specified Kinesis resource.
+     * A tag consists of a required key and an optional value. You can specify up to 50 tag
+     * key-value pairs.
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl : Builder {
@@ -75,6 +106,22 @@ public interface CfnStreamConsumerProps {
     override fun streamArn(streamArn: String) {
       cdkBuilder.streamArn(streamArn)
     }
+
+    /**
+     * @param tags An array of tags to be added to a specified Kinesis resource.
+     * A tag consists of a required key and an optional value. You can specify up to 50 tag
+     * key-value pairs.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags An array of tags to be added to a specified Kinesis resource.
+     * A tag consists of a required key and an optional value. You can specify up to 50 tag
+     * key-value pairs.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.kinesis.CfnStreamConsumerProps =
         cdkBuilder.build()
@@ -97,6 +144,16 @@ public interface CfnStreamConsumerProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html#cfn-kinesis-streamconsumer-streamarn)
      */
     override fun streamArn(): String = unwrap(this).getStreamArn()
+
+    /**
+     * An array of tags to be added to a specified Kinesis resource.
+     *
+     * A tag consists of a required key and an optional value. You can specify up to 50 tag
+     * key-value pairs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html#cfn-kinesis-streamconsumer-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 
   public companion object {

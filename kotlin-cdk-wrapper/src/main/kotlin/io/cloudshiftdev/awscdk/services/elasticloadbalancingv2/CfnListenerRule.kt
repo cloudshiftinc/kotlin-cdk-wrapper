@@ -1193,14 +1193,14 @@ public open class CfnListenerRule(
        * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
        * redirect request to the authorization endpoint.
        */
-      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable)
+      public
+          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>)
 
       /**
        * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
        * redirect request to the authorization endpoint.
        */
-      public
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>)
+      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable)
 
       /**
        * @param onUnauthenticatedRequest The behavior if the user is not authenticated. The
@@ -1258,17 +1258,17 @@ public open class CfnListenerRule(
        * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
        * redirect request to the authorization endpoint.
        */
-      override fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
-        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams.let(IResolvable.Companion::unwrap))
+      override
+          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
+        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams)
       }
 
       /**
        * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
        * redirect request to the authorization endpoint.
        */
-      override
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
-        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams)
+      override fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
+        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1579,14 +1579,14 @@ public open class CfnListenerRule(
        * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
        * redirect request to the authorization endpoint.
        */
-      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable)
+      public
+          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>)
 
       /**
        * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
        * redirect request to the authorization endpoint.
        */
-      public
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>)
+      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable)
 
       /**
        * @param authorizationEndpoint The authorization endpoint of the IdP. 
@@ -1678,17 +1678,17 @@ public open class CfnListenerRule(
        * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
        * redirect request to the authorization endpoint.
        */
-      override fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
-        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams.let(IResolvable.Companion::unwrap))
+      override
+          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
+        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams)
       }
 
       /**
        * @param authenticationRequestExtraParams The query parameters (up to 10) to include in the
        * redirect request to the authorization endpoint.
        */
-      override
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
-        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams)
+      override fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
+        cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2289,7 +2289,8 @@ public open class CfnListenerRule(
      *
      * The maximum size of each name is 128 characters. The comparison is case insensitive. The
      * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-     * exactly 1 character).
+     * exactly 1 character). You must include at least one "." character. You can include only
+     * alphabetical characters after the final "." character.
      *
      * If you specify multiple strings, the condition is satisfied if one of the strings matches the
      * host name.
@@ -2307,7 +2308,8 @@ public open class CfnListenerRule(
        * @param values The host names.
        * The maximum size of each name is 128 characters. The comparison is case insensitive. The
        * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-       * exactly 1 character).
+       * exactly 1 character). You must include at least one "." character. You can include only
+       * alphabetical characters after the final "." character.
        *
        * If you specify multiple strings, the condition is satisfied if one of the strings matches
        * the host name.
@@ -2318,7 +2320,8 @@ public open class CfnListenerRule(
        * @param values The host names.
        * The maximum size of each name is 128 characters. The comparison is case insensitive. The
        * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-       * exactly 1 character).
+       * exactly 1 character). You must include at least one "." character. You can include only
+       * alphabetical characters after the final "." character.
        *
        * If you specify multiple strings, the condition is satisfied if one of the strings matches
        * the host name.
@@ -2336,7 +2339,8 @@ public open class CfnListenerRule(
        * @param values The host names.
        * The maximum size of each name is 128 characters. The comparison is case insensitive. The
        * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-       * exactly 1 character).
+       * exactly 1 character). You must include at least one "." character. You can include only
+       * alphabetical characters after the final "." character.
        *
        * If you specify multiple strings, the condition is satisfied if one of the strings matches
        * the host name.
@@ -2349,7 +2353,8 @@ public open class CfnListenerRule(
        * @param values The host names.
        * The maximum size of each name is 128 characters. The comparison is case insensitive. The
        * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-       * exactly 1 character).
+       * exactly 1 character). You must include at least one "." character. You can include only
+       * alphabetical characters after the final "." character.
        *
        * If you specify multiple strings, the condition is satisfied if one of the strings matches
        * the host name.
@@ -2370,7 +2375,8 @@ public open class CfnListenerRule(
        *
        * The maximum size of each name is 128 characters. The comparison is case insensitive. The
        * following wildcard characters are supported: * (matches 0 or more characters) and ? (matches
-       * exactly 1 character).
+       * exactly 1 character). You must include at least one "." character. You can include only
+       * alphabetical characters after the final "." character.
        *
        * If you specify multiple strings, the condition is satisfied if one of the strings matches
        * the host name.
@@ -4297,7 +4303,8 @@ public open class CfnListenerRule(
      * The time period, in seconds, during which requests from a client should be routed to the same
      * target group.
      *
-     * The range is 1-604800 seconds (7 days).
+     * The range is 1-604800 seconds (7 days). You must specify this value when enabling target
+     * group stickiness.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig-durationseconds)
      */
@@ -4318,7 +4325,8 @@ public open class CfnListenerRule(
       /**
        * @param durationSeconds The time period, in seconds, during which requests from a client
        * should be routed to the same target group.
-       * The range is 1-604800 seconds (7 days).
+       * The range is 1-604800 seconds (7 days). You must specify this value when enabling target
+       * group stickiness.
        */
       public fun durationSeconds(durationSeconds: Number)
 
@@ -4342,7 +4350,8 @@ public open class CfnListenerRule(
       /**
        * @param durationSeconds The time period, in seconds, during which requests from a client
        * should be routed to the same target group.
-       * The range is 1-604800 seconds (7 days).
+       * The range is 1-604800 seconds (7 days). You must specify this value when enabling target
+       * group stickiness.
        */
       override fun durationSeconds(durationSeconds: Number) {
         cdkBuilder.durationSeconds(durationSeconds)
@@ -4375,7 +4384,8 @@ public open class CfnListenerRule(
        * The time period, in seconds, during which requests from a client should be routed to the
        * same target group.
        *
-       * The range is 1-604800 seconds (7 days).
+       * The range is 1-604800 seconds (7 days). You must specify this value when enabling target
+       * group stickiness.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig.html#cfn-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig-durationseconds)
        */

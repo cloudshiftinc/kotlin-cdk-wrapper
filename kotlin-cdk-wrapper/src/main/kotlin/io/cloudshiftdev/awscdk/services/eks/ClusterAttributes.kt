@@ -130,8 +130,7 @@ public interface ClusterAttributes {
    * This layer is used by the kubectl handler to apply manifests and install
    * helm charts. You must pick an appropriate releases of one of the
    * `&#64;aws-cdk/layer-kubectl-vXX` packages, that works with the version of
-   * Kubernetes you have chosen. If you don't supply this value `kubectl`
-   * 1.20 will be used, but that version is most likely too old.
+   * Kubernetes you have chosen.
    *
    * The handler expects the layer to include the following executables:
    *
@@ -140,7 +139,7 @@ public interface ClusterAttributes {
    * /opt/kubectl/kubectl
    * ```
    *
-   * Default: - a default layer with Kubectl 1.20 and helm 3.8.
+   * Default: - No default layer will be provided
    */
   public fun kubectlLayer(): ILayerVersion? =
       unwrap(this).getKubectlLayer()?.let(ILayerVersion::wrap)
@@ -319,8 +318,7 @@ public interface ClusterAttributes {
      * This layer is used by the kubectl handler to apply manifests and install
      * helm charts. You must pick an appropriate releases of one of the
      * `&#64;aws-cdk/layer-kubectl-vXX` packages, that works with the version of
-     * Kubernetes you have chosen. If you don't supply this value `kubectl`
-     * 1.20 will be used, but that version is most likely too old.
+     * Kubernetes you have chosen.
      *
      * The handler expects the layer to include the following executables:
      *
@@ -507,8 +505,7 @@ public interface ClusterAttributes {
      * This layer is used by the kubectl handler to apply manifests and install
      * helm charts. You must pick an appropriate releases of one of the
      * `&#64;aws-cdk/layer-kubectl-vXX` packages, that works with the version of
-     * Kubernetes you have chosen. If you don't supply this value `kubectl`
-     * 1.20 will be used, but that version is most likely too old.
+     * Kubernetes you have chosen.
      *
      * The handler expects the layer to include the following executables:
      *
@@ -728,8 +725,7 @@ public interface ClusterAttributes {
      * This layer is used by the kubectl handler to apply manifests and install
      * helm charts. You must pick an appropriate releases of one of the
      * `&#64;aws-cdk/layer-kubectl-vXX` packages, that works with the version of
-     * Kubernetes you have chosen. If you don't supply this value `kubectl`
-     * 1.20 will be used, but that version is most likely too old.
+     * Kubernetes you have chosen.
      *
      * The handler expects the layer to include the following executables:
      *
@@ -738,7 +734,7 @@ public interface ClusterAttributes {
      * /opt/kubectl/kubectl
      * ```
      *
-     * Default: - a default layer with Kubectl 1.20 and helm 3.8.
+     * Default: - No default layer will be provided
      */
     override fun kubectlLayer(): ILayerVersion? =
         unwrap(this).getKubectlLayer()?.let(ILayerVersion::wrap)

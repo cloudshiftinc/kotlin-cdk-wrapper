@@ -170,6 +170,22 @@ public interface CfnImageBuilderProps {
    * * stream.graphics-pro.4xlarge
    * * stream.graphics-pro.8xlarge
    * * stream.graphics-pro.16xlarge
+   * * stream.graphics.g5.xlarge
+   * * stream.graphics.g5.2xlarge
+   * * stream.graphics.g5.4xlarge
+   * * stream.graphics.g5.8xlarge
+   * * stream.graphics.g5.16xlarge
+   * * stream.graphics.g5.12xlarge
+   * * stream.graphics.g5.24xlarge
+   * * stream.graphics.g6.xlarge
+   * * stream.graphics.g6.2xlarge
+   * * stream.graphics.g6.4xlarge
+   * * stream.graphics.g6.8xlarge
+   * * stream.graphics.g6.16xlarge
+   * * stream.graphics.g6.12xlarge
+   * * stream.graphics.g6.24xlarge
+   * * stream.graphics.gr6.4xlarge
+   * * stream.graphics.gr6.8xlarge
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html#cfn-appstream-imagebuilder-instancetype)
    */
@@ -330,6 +346,22 @@ public interface CfnImageBuilderProps {
      * * stream.graphics-pro.4xlarge
      * * stream.graphics-pro.8xlarge
      * * stream.graphics-pro.16xlarge
+     * * stream.graphics.g5.xlarge
+     * * stream.graphics.g5.2xlarge
+     * * stream.graphics.g5.4xlarge
+     * * stream.graphics.g5.8xlarge
+     * * stream.graphics.g5.16xlarge
+     * * stream.graphics.g5.12xlarge
+     * * stream.graphics.g5.24xlarge
+     * * stream.graphics.g6.xlarge
+     * * stream.graphics.g6.2xlarge
+     * * stream.graphics.g6.4xlarge
+     * * stream.graphics.g6.8xlarge
+     * * stream.graphics.g6.16xlarge
+     * * stream.graphics.g6.12xlarge
+     * * stream.graphics.g6.24xlarge
+     * * stream.graphics.gr6.4xlarge
+     * * stream.graphics.gr6.8xlarge
      */
     public fun instanceType(instanceType: String)
 
@@ -526,6 +558,22 @@ public interface CfnImageBuilderProps {
      * * stream.graphics-pro.4xlarge
      * * stream.graphics-pro.8xlarge
      * * stream.graphics-pro.16xlarge
+     * * stream.graphics.g5.xlarge
+     * * stream.graphics.g5.2xlarge
+     * * stream.graphics.g5.4xlarge
+     * * stream.graphics.g5.8xlarge
+     * * stream.graphics.g5.16xlarge
+     * * stream.graphics.g5.12xlarge
+     * * stream.graphics.g5.24xlarge
+     * * stream.graphics.g6.xlarge
+     * * stream.graphics.g6.2xlarge
+     * * stream.graphics.g6.4xlarge
+     * * stream.graphics.g6.8xlarge
+     * * stream.graphics.g6.16xlarge
+     * * stream.graphics.g6.12xlarge
+     * * stream.graphics.g6.24xlarge
+     * * stream.graphics.gr6.4xlarge
+     * * stream.graphics.gr6.8xlarge
      */
     override fun instanceType(instanceType: String) {
       cdkBuilder.instanceType(instanceType)
@@ -697,6 +745,22 @@ public interface CfnImageBuilderProps {
      * * stream.graphics-pro.4xlarge
      * * stream.graphics-pro.8xlarge
      * * stream.graphics-pro.16xlarge
+     * * stream.graphics.g5.xlarge
+     * * stream.graphics.g5.2xlarge
+     * * stream.graphics.g5.4xlarge
+     * * stream.graphics.g5.8xlarge
+     * * stream.graphics.g5.16xlarge
+     * * stream.graphics.g5.12xlarge
+     * * stream.graphics.g5.24xlarge
+     * * stream.graphics.g6.xlarge
+     * * stream.graphics.g6.2xlarge
+     * * stream.graphics.g6.4xlarge
+     * * stream.graphics.g6.8xlarge
+     * * stream.graphics.g6.16xlarge
+     * * stream.graphics.g6.12xlarge
+     * * stream.graphics.g6.24xlarge
+     * * stream.graphics.gr6.4xlarge
+     * * stream.graphics.gr6.8xlarge
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html#cfn-appstream-imagebuilder-instancetype)
      */

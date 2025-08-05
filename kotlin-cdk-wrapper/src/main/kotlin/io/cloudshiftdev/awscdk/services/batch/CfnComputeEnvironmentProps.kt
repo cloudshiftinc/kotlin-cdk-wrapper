@@ -52,8 +52,10 @@ import kotlin.jvm.JvmName
  * .launchTemplateId("launchTemplateId")
  * .launchTemplateName("launchTemplateName")
  * .targetInstanceTypes(List.of("targetInstanceTypes"))
+ * .userdataType("userdataType")
  * .version("version")
  * .build()))
+ * .userdataType("userdataType")
  * .version("version")
  * .build())
  * .minvCpus(123)
@@ -134,6 +136,9 @@ public interface CfnComputeEnvironmentProps {
    * it again. For more information, see [Continue rolling back an
    * update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html)
    * in the *AWS CloudFormation User Guide* .
+   *
+   * `ReplaceComputeEnvironment` is not applicable for Fargate compute environments. Fargate compute
+   * environments are always updated without interruption.
    *
    * The properties that can't be changed without replacing the compute environment are in the
    * [`ComputeResources`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html)
@@ -264,8 +269,8 @@ public interface CfnComputeEnvironmentProps {
   /**
    * The maximum number of vCPUs for an unmanaged compute environment.
    *
-   * This parameter is only used for fair share scheduling to reserve vCPU capacity for new share
-   * identifiers. If this parameter isn't provided for a fair share job queue, no vCPU capacity is
+   * This parameter is only used for fair-share scheduling to reserve vCPU capacity for new share
+   * identifiers. If this parameter isn't provided for a fair-share job queue, no vCPU capacity is
    * reserved.
    *
    *
@@ -371,6 +376,9 @@ public interface CfnComputeEnvironmentProps {
      * update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html)
      * in the *AWS CloudFormation User Guide* .
      *
+     * `ReplaceComputeEnvironment` is not applicable for Fargate compute environments. Fargate
+     * compute environments are always updated without interruption.
+     *
      * The properties that can't be changed without replacing the compute environment are in the
      * [`ComputeResources`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html)
      * property type:
@@ -423,6 +431,9 @@ public interface CfnComputeEnvironmentProps {
      * settings and then try to update it again. For more information, see [Continue rolling back an
      * update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html)
      * in the *AWS CloudFormation User Guide* .
+     *
+     * `ReplaceComputeEnvironment` is not applicable for Fargate compute environments. Fargate
+     * compute environments are always updated without interruption.
      *
      * The properties that can't be changed without replacing the compute environment are in the
      * [`ComputeResources`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html)
@@ -536,8 +547,8 @@ public interface CfnComputeEnvironmentProps {
 
     /**
      * @param unmanagedvCpus The maximum number of vCPUs for an unmanaged compute environment.
-     * This parameter is only used for fair share scheduling to reserve vCPU capacity for new share
-     * identifiers. If this parameter isn't provided for a fair share job queue, no vCPU capacity is
+     * This parameter is only used for fair-share scheduling to reserve vCPU capacity for new share
+     * identifiers. If this parameter isn't provided for a fair-share job queue, no vCPU capacity is
      * reserved.
      *
      *
@@ -672,6 +683,9 @@ public interface CfnComputeEnvironmentProps {
      * update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html)
      * in the *AWS CloudFormation User Guide* .
      *
+     * `ReplaceComputeEnvironment` is not applicable for Fargate compute environments. Fargate
+     * compute environments are always updated without interruption.
+     *
      * The properties that can't be changed without replacing the compute environment are in the
      * [`ComputeResources`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html)
      * property type:
@@ -726,6 +740,9 @@ public interface CfnComputeEnvironmentProps {
      * settings and then try to update it again. For more information, see [Continue rolling back an
      * update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html)
      * in the *AWS CloudFormation User Guide* .
+     *
+     * `ReplaceComputeEnvironment` is not applicable for Fargate compute environments. Fargate
+     * compute environments are always updated without interruption.
      *
      * The properties that can't be changed without replacing the compute environment are in the
      * [`ComputeResources`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html)
@@ -849,8 +866,8 @@ public interface CfnComputeEnvironmentProps {
 
     /**
      * @param unmanagedvCpus The maximum number of vCPUs for an unmanaged compute environment.
-     * This parameter is only used for fair share scheduling to reserve vCPU capacity for new share
-     * identifiers. If this parameter isn't provided for a fair share job queue, no vCPU capacity is
+     * This parameter is only used for fair-share scheduling to reserve vCPU capacity for new share
+     * identifiers. If this parameter isn't provided for a fair-share job queue, no vCPU capacity is
      * reserved.
      *
      *
@@ -950,6 +967,9 @@ public interface CfnComputeEnvironmentProps {
      * settings and then try to update it again. For more information, see [Continue rolling back an
      * update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html)
      * in the *AWS CloudFormation User Guide* .
+     *
+     * `ReplaceComputeEnvironment` is not applicable for Fargate compute environments. Fargate
+     * compute environments are always updated without interruption.
      *
      * The properties that can't be changed without replacing the compute environment are in the
      * [`ComputeResources`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html)
@@ -1080,8 +1100,8 @@ public interface CfnComputeEnvironmentProps {
     /**
      * The maximum number of vCPUs for an unmanaged compute environment.
      *
-     * This parameter is only used for fair share scheduling to reserve vCPU capacity for new share
-     * identifiers. If this parameter isn't provided for a fair share job queue, no vCPU capacity is
+     * This parameter is only used for fair-share scheduling to reserve vCPU capacity for new share
+     * identifiers. If this parameter isn't provided for a fair-share job queue, no vCPU capacity is
      * reserved.
      *
      *

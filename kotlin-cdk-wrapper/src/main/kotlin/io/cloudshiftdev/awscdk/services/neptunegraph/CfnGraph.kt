@@ -286,7 +286,7 @@ public open class CfnGraph(
     /**
      * The provisioned memory-optimized Neptune Capacity Units (m-NCUs) to use for the graph.
      *
-     * Min = 128
+     * Min = 16
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptunegraph-graph.html#cfn-neptunegraph-graph-provisionedmemory)
      * @param provisionedMemory The provisioned memory-optimized Neptune Capacity Units (m-NCUs) to
@@ -460,7 +460,7 @@ public open class CfnGraph(
     /**
      * The provisioned memory-optimized Neptune Capacity Units (m-NCUs) to use for the graph.
      *
-     * Min = 128
+     * Min = 16
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptunegraph-graph.html#cfn-neptunegraph-graph-provisionedmemory)
      * @param provisionedMemory The provisioned memory-optimized Neptune Capacity Units (m-NCUs) to

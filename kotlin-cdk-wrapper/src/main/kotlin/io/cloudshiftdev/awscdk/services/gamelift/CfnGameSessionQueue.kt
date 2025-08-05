@@ -412,8 +412,9 @@ public open class CfnGameSessionQueue(
      * A set of policies that enforce a sliding cap on player latency when processing game sessions
      * placement requests.
      *
-     * Use multiple policies to gradually relax the cap over time if Amazon GameLift can't make a
-     * placement. Policies are evaluated in order starting with the lowest maximum latency value.
+     * Use multiple policies to gradually relax the cap over time if Amazon GameLift Servers can't
+     * make a placement. Policies are evaluated in order starting with the lowest maximum latency
+     * value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-playerlatencypolicies)
      * @param playerLatencyPolicies A set of policies that enforce a sliding cap on player latency
@@ -425,8 +426,9 @@ public open class CfnGameSessionQueue(
      * A set of policies that enforce a sliding cap on player latency when processing game sessions
      * placement requests.
      *
-     * Use multiple policies to gradually relax the cap over time if Amazon GameLift can't make a
-     * placement. Policies are evaluated in order starting with the lowest maximum latency value.
+     * Use multiple policies to gradually relax the cap over time if Amazon GameLift Servers can't
+     * make a placement. Policies are evaluated in order starting with the lowest maximum latency
+     * value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-playerlatencypolicies)
      * @param playerLatencyPolicies A set of policies that enforce a sliding cap on player latency
@@ -438,8 +440,9 @@ public open class CfnGameSessionQueue(
      * A set of policies that enforce a sliding cap on player latency when processing game sessions
      * placement requests.
      *
-     * Use multiple policies to gradually relax the cap over time if Amazon GameLift can't make a
-     * placement. Policies are evaluated in order starting with the lowest maximum latency value.
+     * Use multiple policies to gradually relax the cap over time if Amazon GameLift Servers can't
+     * make a placement. Policies are evaluated in order starting with the lowest maximum latency
+     * value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-playerlatencypolicies)
      * @param playerLatencyPolicies A set of policies that enforce a sliding cap on player latency
@@ -523,6 +526,7 @@ public open class CfnGameSessionQueue(
      * The maximum time, in seconds, that a new game session placement request remains in the queue.
      *
      * When a request exceeds this time, the game session placement changes to a `TIMED_OUT` status.
+     * If you don't specify a request timeout, the queue uses a default value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-timeoutinseconds)
      * @param timeoutInSeconds The maximum time, in seconds, that a new game session placement
@@ -666,8 +670,9 @@ public open class CfnGameSessionQueue(
      * A set of policies that enforce a sliding cap on player latency when processing game sessions
      * placement requests.
      *
-     * Use multiple policies to gradually relax the cap over time if Amazon GameLift can't make a
-     * placement. Policies are evaluated in order starting with the lowest maximum latency value.
+     * Use multiple policies to gradually relax the cap over time if Amazon GameLift Servers can't
+     * make a placement. Policies are evaluated in order starting with the lowest maximum latency
+     * value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-playerlatencypolicies)
      * @param playerLatencyPolicies A set of policies that enforce a sliding cap on player latency
@@ -681,8 +686,9 @@ public open class CfnGameSessionQueue(
      * A set of policies that enforce a sliding cap on player latency when processing game sessions
      * placement requests.
      *
-     * Use multiple policies to gradually relax the cap over time if Amazon GameLift can't make a
-     * placement. Policies are evaluated in order starting with the lowest maximum latency value.
+     * Use multiple policies to gradually relax the cap over time if Amazon GameLift Servers can't
+     * make a placement. Policies are evaluated in order starting with the lowest maximum latency
+     * value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-playerlatencypolicies)
      * @param playerLatencyPolicies A set of policies that enforce a sliding cap on player latency
@@ -696,8 +702,9 @@ public open class CfnGameSessionQueue(
      * A set of policies that enforce a sliding cap on player latency when processing game sessions
      * placement requests.
      *
-     * Use multiple policies to gradually relax the cap over time if Amazon GameLift can't make a
-     * placement. Policies are evaluated in order starting with the lowest maximum latency value.
+     * Use multiple policies to gradually relax the cap over time if Amazon GameLift Servers can't
+     * make a placement. Policies are evaluated in order starting with the lowest maximum latency
+     * value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-playerlatencypolicies)
      * @param playerLatencyPolicies A set of policies that enforce a sliding cap on player latency
@@ -789,6 +796,7 @@ public open class CfnGameSessionQueue(
      * The maximum time, in seconds, that a new game session placement request remains in the queue.
      *
      * When a request exceeds this time, the game session placement changes to a `TIMED_OUT` status.
+     * If you don't specify a request timeout, the queue uses a default value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-timeoutinseconds)
      * @param timeoutInSeconds The maximum time, in seconds, that a new game session placement
@@ -1280,27 +1288,28 @@ public open class CfnGameSessionQueue(
      * The prioritization order to use for fleet locations, when the `PriorityOrder` property
      * includes `LOCATION` .
      *
-     * Locations are identified by AWS Region codes such as `us-west-2` . Each location can only be
-     * listed once.
+     * Locations can include AWS Region codes (such as `us-west-2` ), local zones, and custom
+     * locations (for Anywhere fleets). Each location must be listed only once. For details, see
+     * [Amazon GameLift Servers service
+     * locations.](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-priorityconfiguration.html#cfn-gamelift-gamesessionqueue-priorityconfiguration-locationorder)
      */
     public fun locationOrder(): List<String> = unwrap(this).getLocationOrder() ?: emptyList()
 
     /**
-     * The recommended sequence to use when prioritizing where to place new game sessions.
+     * A custom sequence to use when prioritizing where to place new game sessions. Each priority
+     * type is listed once.
      *
-     * Each type can only be listed once.
-     *
-     * * `LATENCY` -- FleetIQ prioritizes locations where the average player latency (provided in
-     * each game session request) is lowest.
-     * * `COST` -- FleetIQ prioritizes destinations with the lowest current hosting costs. Cost is
-     * evaluated based on the location, instance type, and fleet type (Spot or On-Demand) for each
-     * destination in the queue.
-     * * `DESTINATION` -- FleetIQ prioritizes based on the order that destinations are listed in the
-     * queue configuration.
-     * * `LOCATION` -- FleetIQ prioritizes based on the provided order of locations, as defined in
-     * `LocationOrder` .
+     * * `LATENCY` -- Amazon GameLift Servers prioritizes locations where the average player latency
+     * is lowest. Player latency data is provided in each game session placement request.
+     * * `COST` -- Amazon GameLift Servers prioritizes queue destinations with the lowest current
+     * hosting costs. Cost is evaluated based on the destination's location, instance type, and fleet
+     * type (Spot or On-Demand).
+     * * `DESTINATION` -- Amazon GameLift Servers prioritizes based on the list order of
+     * destinations in the queue configuration.
+     * * `LOCATION` -- Amazon GameLift Servers prioritizes based on the provided order of locations,
+     * as defined in `LocationOrder` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-priorityconfiguration.html#cfn-gamelift-gamesessionqueue-priorityconfiguration-priorityorder)
      */
@@ -1314,50 +1323,50 @@ public open class CfnGameSessionQueue(
       /**
        * @param locationOrder The prioritization order to use for fleet locations, when the
        * `PriorityOrder` property includes `LOCATION` .
-       * Locations are identified by AWS Region codes such as `us-west-2` . Each location can only
-       * be listed once.
+       * Locations can include AWS Region codes (such as `us-west-2` ), local zones, and custom
+       * locations (for Anywhere fleets). Each location must be listed only once. For details, see
+       * [Amazon GameLift Servers service
+       * locations.](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html)
        */
       public fun locationOrder(locationOrder: List<String>)
 
       /**
        * @param locationOrder The prioritization order to use for fleet locations, when the
        * `PriorityOrder` property includes `LOCATION` .
-       * Locations are identified by AWS Region codes such as `us-west-2` . Each location can only
-       * be listed once.
+       * Locations can include AWS Region codes (such as `us-west-2` ), local zones, and custom
+       * locations (for Anywhere fleets). Each location must be listed only once. For details, see
+       * [Amazon GameLift Servers service
+       * locations.](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html)
        */
       public fun locationOrder(vararg locationOrder: String)
 
       /**
-       * @param priorityOrder The recommended sequence to use when prioritizing where to place new
-       * game sessions.
-       * Each type can only be listed once.
-       *
-       * * `LATENCY` -- FleetIQ prioritizes locations where the average player latency (provided in
-       * each game session request) is lowest.
-       * * `COST` -- FleetIQ prioritizes destinations with the lowest current hosting costs. Cost is
-       * evaluated based on the location, instance type, and fleet type (Spot or On-Demand) for each
-       * destination in the queue.
-       * * `DESTINATION` -- FleetIQ prioritizes based on the order that destinations are listed in
-       * the queue configuration.
-       * * `LOCATION` -- FleetIQ prioritizes based on the provided order of locations, as defined in
-       * `LocationOrder` .
+       * @param priorityOrder A custom sequence to use when prioritizing where to place new game
+       * sessions. Each priority type is listed once.
+       * * `LATENCY` -- Amazon GameLift Servers prioritizes locations where the average player
+       * latency is lowest. Player latency data is provided in each game session placement request.
+       * * `COST` -- Amazon GameLift Servers prioritizes queue destinations with the lowest current
+       * hosting costs. Cost is evaluated based on the destination's location, instance type, and fleet
+       * type (Spot or On-Demand).
+       * * `DESTINATION` -- Amazon GameLift Servers prioritizes based on the list order of
+       * destinations in the queue configuration.
+       * * `LOCATION` -- Amazon GameLift Servers prioritizes based on the provided order of
+       * locations, as defined in `LocationOrder` .
        */
       public fun priorityOrder(priorityOrder: List<String>)
 
       /**
-       * @param priorityOrder The recommended sequence to use when prioritizing where to place new
-       * game sessions.
-       * Each type can only be listed once.
-       *
-       * * `LATENCY` -- FleetIQ prioritizes locations where the average player latency (provided in
-       * each game session request) is lowest.
-       * * `COST` -- FleetIQ prioritizes destinations with the lowest current hosting costs. Cost is
-       * evaluated based on the location, instance type, and fleet type (Spot or On-Demand) for each
-       * destination in the queue.
-       * * `DESTINATION` -- FleetIQ prioritizes based on the order that destinations are listed in
-       * the queue configuration.
-       * * `LOCATION` -- FleetIQ prioritizes based on the provided order of locations, as defined in
-       * `LocationOrder` .
+       * @param priorityOrder A custom sequence to use when prioritizing where to place new game
+       * sessions. Each priority type is listed once.
+       * * `LATENCY` -- Amazon GameLift Servers prioritizes locations where the average player
+       * latency is lowest. Player latency data is provided in each game session placement request.
+       * * `COST` -- Amazon GameLift Servers prioritizes queue destinations with the lowest current
+       * hosting costs. Cost is evaluated based on the destination's location, instance type, and fleet
+       * type (Spot or On-Demand).
+       * * `DESTINATION` -- Amazon GameLift Servers prioritizes based on the list order of
+       * destinations in the queue configuration.
+       * * `LOCATION` -- Amazon GameLift Servers prioritizes based on the provided order of
+       * locations, as defined in `LocationOrder` .
        */
       public fun priorityOrder(vararg priorityOrder: String)
     }
@@ -1371,8 +1380,10 @@ public open class CfnGameSessionQueue(
       /**
        * @param locationOrder The prioritization order to use for fleet locations, when the
        * `PriorityOrder` property includes `LOCATION` .
-       * Locations are identified by AWS Region codes such as `us-west-2` . Each location can only
-       * be listed once.
+       * Locations can include AWS Region codes (such as `us-west-2` ), local zones, and custom
+       * locations (for Anywhere fleets). Each location must be listed only once. For details, see
+       * [Amazon GameLift Servers service
+       * locations.](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html)
        */
       override fun locationOrder(locationOrder: List<String>) {
         cdkBuilder.locationOrder(locationOrder)
@@ -1381,45 +1392,43 @@ public open class CfnGameSessionQueue(
       /**
        * @param locationOrder The prioritization order to use for fleet locations, when the
        * `PriorityOrder` property includes `LOCATION` .
-       * Locations are identified by AWS Region codes such as `us-west-2` . Each location can only
-       * be listed once.
+       * Locations can include AWS Region codes (such as `us-west-2` ), local zones, and custom
+       * locations (for Anywhere fleets). Each location must be listed only once. For details, see
+       * [Amazon GameLift Servers service
+       * locations.](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html)
        */
       override fun locationOrder(vararg locationOrder: String): Unit =
           locationOrder(locationOrder.toList())
 
       /**
-       * @param priorityOrder The recommended sequence to use when prioritizing where to place new
-       * game sessions.
-       * Each type can only be listed once.
-       *
-       * * `LATENCY` -- FleetIQ prioritizes locations where the average player latency (provided in
-       * each game session request) is lowest.
-       * * `COST` -- FleetIQ prioritizes destinations with the lowest current hosting costs. Cost is
-       * evaluated based on the location, instance type, and fleet type (Spot or On-Demand) for each
-       * destination in the queue.
-       * * `DESTINATION` -- FleetIQ prioritizes based on the order that destinations are listed in
-       * the queue configuration.
-       * * `LOCATION` -- FleetIQ prioritizes based on the provided order of locations, as defined in
-       * `LocationOrder` .
+       * @param priorityOrder A custom sequence to use when prioritizing where to place new game
+       * sessions. Each priority type is listed once.
+       * * `LATENCY` -- Amazon GameLift Servers prioritizes locations where the average player
+       * latency is lowest. Player latency data is provided in each game session placement request.
+       * * `COST` -- Amazon GameLift Servers prioritizes queue destinations with the lowest current
+       * hosting costs. Cost is evaluated based on the destination's location, instance type, and fleet
+       * type (Spot or On-Demand).
+       * * `DESTINATION` -- Amazon GameLift Servers prioritizes based on the list order of
+       * destinations in the queue configuration.
+       * * `LOCATION` -- Amazon GameLift Servers prioritizes based on the provided order of
+       * locations, as defined in `LocationOrder` .
        */
       override fun priorityOrder(priorityOrder: List<String>) {
         cdkBuilder.priorityOrder(priorityOrder)
       }
 
       /**
-       * @param priorityOrder The recommended sequence to use when prioritizing where to place new
-       * game sessions.
-       * Each type can only be listed once.
-       *
-       * * `LATENCY` -- FleetIQ prioritizes locations where the average player latency (provided in
-       * each game session request) is lowest.
-       * * `COST` -- FleetIQ prioritizes destinations with the lowest current hosting costs. Cost is
-       * evaluated based on the location, instance type, and fleet type (Spot or On-Demand) for each
-       * destination in the queue.
-       * * `DESTINATION` -- FleetIQ prioritizes based on the order that destinations are listed in
-       * the queue configuration.
-       * * `LOCATION` -- FleetIQ prioritizes based on the provided order of locations, as defined in
-       * `LocationOrder` .
+       * @param priorityOrder A custom sequence to use when prioritizing where to place new game
+       * sessions. Each priority type is listed once.
+       * * `LATENCY` -- Amazon GameLift Servers prioritizes locations where the average player
+       * latency is lowest. Player latency data is provided in each game session placement request.
+       * * `COST` -- Amazon GameLift Servers prioritizes queue destinations with the lowest current
+       * hosting costs. Cost is evaluated based on the destination's location, instance type, and fleet
+       * type (Spot or On-Demand).
+       * * `DESTINATION` -- Amazon GameLift Servers prioritizes based on the list order of
+       * destinations in the queue configuration.
+       * * `LOCATION` -- Amazon GameLift Servers prioritizes based on the provided order of
+       * locations, as defined in `LocationOrder` .
        */
       override fun priorityOrder(vararg priorityOrder: String): Unit =
           priorityOrder(priorityOrder.toList())
@@ -1437,27 +1446,28 @@ public open class CfnGameSessionQueue(
        * The prioritization order to use for fleet locations, when the `PriorityOrder` property
        * includes `LOCATION` .
        *
-       * Locations are identified by AWS Region codes such as `us-west-2` . Each location can only
-       * be listed once.
+       * Locations can include AWS Region codes (such as `us-west-2` ), local zones, and custom
+       * locations (for Anywhere fleets). Each location must be listed only once. For details, see
+       * [Amazon GameLift Servers service
+       * locations.](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html)
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-priorityconfiguration.html#cfn-gamelift-gamesessionqueue-priorityconfiguration-locationorder)
        */
       override fun locationOrder(): List<String> = unwrap(this).getLocationOrder() ?: emptyList()
 
       /**
-       * The recommended sequence to use when prioritizing where to place new game sessions.
+       * A custom sequence to use when prioritizing where to place new game sessions. Each priority
+       * type is listed once.
        *
-       * Each type can only be listed once.
-       *
-       * * `LATENCY` -- FleetIQ prioritizes locations where the average player latency (provided in
-       * each game session request) is lowest.
-       * * `COST` -- FleetIQ prioritizes destinations with the lowest current hosting costs. Cost is
-       * evaluated based on the location, instance type, and fleet type (Spot or On-Demand) for each
-       * destination in the queue.
-       * * `DESTINATION` -- FleetIQ prioritizes based on the order that destinations are listed in
-       * the queue configuration.
-       * * `LOCATION` -- FleetIQ prioritizes based on the provided order of locations, as defined in
-       * `LocationOrder` .
+       * * `LATENCY` -- Amazon GameLift Servers prioritizes locations where the average player
+       * latency is lowest. Player latency data is provided in each game session placement request.
+       * * `COST` -- Amazon GameLift Servers prioritizes queue destinations with the lowest current
+       * hosting costs. Cost is evaluated based on the destination's location, instance type, and fleet
+       * type (Spot or On-Demand).
+       * * `DESTINATION` -- Amazon GameLift Servers prioritizes based on the list order of
+       * destinations in the queue configuration.
+       * * `LOCATION` -- Amazon GameLift Servers prioritizes based on the provided order of
+       * locations, as defined in `LocationOrder` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-priorityconfiguration.html#cfn-gamelift-gamesessionqueue-priorityconfiguration-priorityorder)
        */

@@ -927,12 +927,12 @@ public open class CfnModelCard(
       /**
        * @param customDetails Any additional information to document about the model.
        */
-      public fun customDetails(customDetails: IResolvable)
+      public fun customDetails(customDetails: Map<String, String>)
 
       /**
        * @param customDetails Any additional information to document about the model.
        */
-      public fun customDetails(customDetails: Map<String, String>)
+      public fun customDetails(customDetails: IResolvable)
 
       /**
        * @param ethicalConsiderations Any ethical considerations documented by the model card
@@ -958,15 +958,15 @@ public open class CfnModelCard(
       /**
        * @param customDetails Any additional information to document about the model.
        */
-      override fun customDetails(customDetails: IResolvable) {
-        cdkBuilder.customDetails(customDetails.let(IResolvable.Companion::unwrap))
+      override fun customDetails(customDetails: Map<String, String>) {
+        cdkBuilder.customDetails(customDetails)
       }
 
       /**
        * @param customDetails Any additional information to document about the model.
        */
-      override fun customDetails(customDetails: Map<String, String>) {
-        cdkBuilder.customDetails(customDetails)
+      override fun customDetails(customDetails: IResolvable) {
+        cdkBuilder.customDetails(customDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1964,12 +1964,12 @@ public open class CfnModelCard(
       /**
        * @param metadata Additional attributes associated with the evaluation results.
        */
-      public fun metadata(metadata: IResolvable)
+      public fun metadata(metadata: Map<String, String>)
 
       /**
        * @param metadata Additional attributes associated with the evaluation results.
        */
-      public fun metadata(metadata: Map<String, String>)
+      public fun metadata(metadata: IResolvable)
 
       /**
        * @param metricGroups An evaluation Metric Group object.
@@ -2026,15 +2026,15 @@ public open class CfnModelCard(
       /**
        * @param metadata Additional attributes associated with the evaluation results.
        */
-      override fun metadata(metadata: IResolvable) {
-        cdkBuilder.metadata(metadata.let(IResolvable.Companion::unwrap))
+      override fun metadata(metadata: Map<String, String>) {
+        cdkBuilder.metadata(metadata)
       }
 
       /**
        * @param metadata Additional attributes associated with the evaluation results.
        */
-      override fun metadata(metadata: Map<String, String>) {
-        cdkBuilder.metadata(metadata)
+      override fun metadata(metadata: IResolvable) {
+        cdkBuilder.metadata(metadata.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3251,7 +3251,7 @@ public open class CfnModelCard(
     public fun modelDescription(): String? = unwrap(this).getModelDescription()
 
     /**
-     * The SageMaker Model ARN or non- SageMaker Model ID.
+     * The SageMaker AI Model ARN or non- SageMaker AI Model ID.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-modeloverview.html#cfn-sagemaker-modelcard-modeloverview-modelid)
      */
@@ -3334,7 +3334,7 @@ public open class CfnModelCard(
       public fun modelDescription(modelDescription: String)
 
       /**
-       * @param modelId The SageMaker Model ARN or non- SageMaker Model ID.
+       * @param modelId The SageMaker AI Model ARN or non- SageMaker AI Model ID.
        */
       public fun modelId(modelId: String)
 
@@ -3422,7 +3422,7 @@ public open class CfnModelCard(
       }
 
       /**
-       * @param modelId The SageMaker Model ARN or non- SageMaker Model ID.
+       * @param modelId The SageMaker AI Model ARN or non- SageMaker AI Model ID.
        */
       override fun modelId(modelId: String) {
         cdkBuilder.modelId(modelId)
@@ -3501,7 +3501,7 @@ public open class CfnModelCard(
       override fun modelDescription(): String? = unwrap(this).getModelDescription()
 
       /**
-       * The SageMaker Model ARN or non- SageMaker Model ID.
+       * The SageMaker AI Model ARN or non- SageMaker AI Model ID.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-modeloverview.html#cfn-sagemaker-modelcard-modeloverview-modelid)
        */
@@ -4753,7 +4753,7 @@ public open class CfnModelCard(
   }
 
   /**
-   * SageMaker training image.
+   * SageMaker AI training image.
    *
    * Example:
    *
@@ -4770,7 +4770,7 @@ public open class CfnModelCard(
    */
   public interface TrainingEnvironmentProperty {
     /**
-     * SageMaker inference image URI.
+     * SageMaker AI inference image URI.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-trainingenvironment.html#cfn-sagemaker-modelcard-trainingenvironment-containerimage)
      */
@@ -4782,12 +4782,12 @@ public open class CfnModelCard(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param containerImage SageMaker inference image URI.
+       * @param containerImage SageMaker AI inference image URI.
        */
       public fun containerImage(containerImage: List<String>)
 
       /**
-       * @param containerImage SageMaker inference image URI.
+       * @param containerImage SageMaker AI inference image URI.
        */
       public fun containerImage(vararg containerImage: String)
     }
@@ -4799,14 +4799,14 @@ public open class CfnModelCard(
           software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingEnvironmentProperty.builder()
 
       /**
-       * @param containerImage SageMaker inference image URI.
+       * @param containerImage SageMaker AI inference image URI.
        */
       override fun containerImage(containerImage: List<String>) {
         cdkBuilder.containerImage(containerImage)
       }
 
       /**
-       * @param containerImage SageMaker inference image URI.
+       * @param containerImage SageMaker AI inference image URI.
        */
       override fun containerImage(vararg containerImage: String): Unit =
           containerImage(containerImage.toList())
@@ -4821,7 +4821,7 @@ public open class CfnModelCard(
     ) : CdkObject(cdkObject),
         TrainingEnvironmentProperty {
       /**
-       * SageMaker inference image URI.
+       * SageMaker AI inference image URI.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-trainingenvironment.html#cfn-sagemaker-modelcard-trainingenvironment-containerimage)
        */
@@ -5006,7 +5006,7 @@ public open class CfnModelCard(
     public fun hyperParameters(): Any? = unwrap(this).getHyperParameters()
 
     /**
-     * The SageMaker training job Amazon Resource Name (ARN).
+     * The SageMaker AI training job Amazon Resource Name (ARN).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-trainingjobdetails.html#cfn-sagemaker-modelcard-trainingjobdetails-trainingarn)
      */
@@ -5020,14 +5020,14 @@ public open class CfnModelCard(
     public fun trainingDatasets(): List<String> = unwrap(this).getTrainingDatasets() ?: emptyList()
 
     /**
-     * The SageMaker training job image URI.
+     * The SageMaker AI training job image URI.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-trainingjobdetails.html#cfn-sagemaker-modelcard-trainingjobdetails-trainingenvironment)
      */
     public fun trainingEnvironment(): Any? = unwrap(this).getTrainingEnvironment()
 
     /**
-     * The SageMaker training job results.
+     * The SageMaker AI training job results.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-trainingjobdetails.html#cfn-sagemaker-modelcard-trainingjobdetails-trainingmetrics)
      */
@@ -5068,7 +5068,7 @@ public open class CfnModelCard(
       public fun hyperParameters(vararg hyperParameters: Any)
 
       /**
-       * @param trainingArn The SageMaker training job Amazon Resource Name (ARN).
+       * @param trainingArn The SageMaker AI training job Amazon Resource Name (ARN).
        */
       public fun trainingArn(trainingArn: String)
 
@@ -5083,17 +5083,17 @@ public open class CfnModelCard(
       public fun trainingDatasets(vararg trainingDatasets: String)
 
       /**
-       * @param trainingEnvironment The SageMaker training job image URI.
+       * @param trainingEnvironment The SageMaker AI training job image URI.
        */
       public fun trainingEnvironment(trainingEnvironment: IResolvable)
 
       /**
-       * @param trainingEnvironment The SageMaker training job image URI.
+       * @param trainingEnvironment The SageMaker AI training job image URI.
        */
       public fun trainingEnvironment(trainingEnvironment: TrainingEnvironmentProperty)
 
       /**
-       * @param trainingEnvironment The SageMaker training job image URI.
+       * @param trainingEnvironment The SageMaker AI training job image URI.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c17f90744d1767db88202028eb3e9048a087d33456aeee772f5cfbc1c25bc4eb")
@@ -5101,17 +5101,17 @@ public open class CfnModelCard(
           fun trainingEnvironment(trainingEnvironment: TrainingEnvironmentProperty.Builder.() -> Unit)
 
       /**
-       * @param trainingMetrics The SageMaker training job results.
+       * @param trainingMetrics The SageMaker AI training job results.
        */
       public fun trainingMetrics(trainingMetrics: IResolvable)
 
       /**
-       * @param trainingMetrics The SageMaker training job results.
+       * @param trainingMetrics The SageMaker AI training job results.
        */
       public fun trainingMetrics(trainingMetrics: List<Any>)
 
       /**
-       * @param trainingMetrics The SageMaker training job results.
+       * @param trainingMetrics The SageMaker AI training job results.
        */
       public fun trainingMetrics(vararg trainingMetrics: Any)
 
@@ -5176,7 +5176,7 @@ public open class CfnModelCard(
           hyperParameters(hyperParameters.toList())
 
       /**
-       * @param trainingArn The SageMaker training job Amazon Resource Name (ARN).
+       * @param trainingArn The SageMaker AI training job Amazon Resource Name (ARN).
        */
       override fun trainingArn(trainingArn: String) {
         cdkBuilder.trainingArn(trainingArn)
@@ -5196,21 +5196,21 @@ public open class CfnModelCard(
           trainingDatasets(trainingDatasets.toList())
 
       /**
-       * @param trainingEnvironment The SageMaker training job image URI.
+       * @param trainingEnvironment The SageMaker AI training job image URI.
        */
       override fun trainingEnvironment(trainingEnvironment: IResolvable) {
         cdkBuilder.trainingEnvironment(trainingEnvironment.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param trainingEnvironment The SageMaker training job image URI.
+       * @param trainingEnvironment The SageMaker AI training job image URI.
        */
       override fun trainingEnvironment(trainingEnvironment: TrainingEnvironmentProperty) {
         cdkBuilder.trainingEnvironment(trainingEnvironment.let(TrainingEnvironmentProperty.Companion::unwrap))
       }
 
       /**
-       * @param trainingEnvironment The SageMaker training job image URI.
+       * @param trainingEnvironment The SageMaker AI training job image URI.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c17f90744d1767db88202028eb3e9048a087d33456aeee772f5cfbc1c25bc4eb")
@@ -5219,21 +5219,21 @@ public open class CfnModelCard(
           Unit = trainingEnvironment(TrainingEnvironmentProperty(trainingEnvironment))
 
       /**
-       * @param trainingMetrics The SageMaker training job results.
+       * @param trainingMetrics The SageMaker AI training job results.
        */
       override fun trainingMetrics(trainingMetrics: IResolvable) {
         cdkBuilder.trainingMetrics(trainingMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param trainingMetrics The SageMaker training job results.
+       * @param trainingMetrics The SageMaker AI training job results.
        */
       override fun trainingMetrics(trainingMetrics: List<Any>) {
         cdkBuilder.trainingMetrics(trainingMetrics.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param trainingMetrics The SageMaker training job results.
+       * @param trainingMetrics The SageMaker AI training job results.
        */
       override fun trainingMetrics(vararg trainingMetrics: Any): Unit =
           trainingMetrics(trainingMetrics.toList())
@@ -5298,7 +5298,7 @@ public open class CfnModelCard(
       override fun hyperParameters(): Any? = unwrap(this).getHyperParameters()
 
       /**
-       * The SageMaker training job Amazon Resource Name (ARN).
+       * The SageMaker AI training job Amazon Resource Name (ARN).
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-trainingjobdetails.html#cfn-sagemaker-modelcard-trainingjobdetails-trainingarn)
        */
@@ -5313,14 +5313,14 @@ public open class CfnModelCard(
           emptyList()
 
       /**
-       * The SageMaker training job image URI.
+       * The SageMaker AI training job image URI.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-trainingjobdetails.html#cfn-sagemaker-modelcard-trainingjobdetails-trainingenvironment)
        */
       override fun trainingEnvironment(): Any? = unwrap(this).getTrainingEnvironment()
 
       /**
-       * The SageMaker training job results.
+       * The SageMaker AI training job results.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-trainingjobdetails.html#cfn-sagemaker-modelcard-trainingjobdetails-trainingmetrics)
        */
@@ -5362,7 +5362,7 @@ public open class CfnModelCard(
   }
 
   /**
-   * A result from a SageMaker training job.
+   * A result from a SageMaker AI training job.
    *
    * Example:
    *
@@ -5382,7 +5382,7 @@ public open class CfnModelCard(
    */
   public interface TrainingMetricProperty {
     /**
-     * The name of the result from the SageMaker training job.
+     * The name of the result from the SageMaker AI training job.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-trainingmetric.html#cfn-sagemaker-modelcard-trainingmetric-name)
      */
@@ -5396,7 +5396,7 @@ public open class CfnModelCard(
     public fun notes(): String? = unwrap(this).getNotes()
 
     /**
-     * The value of a result from the SageMaker training job.
+     * The value of a result from the SageMaker AI training job.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-trainingmetric.html#cfn-sagemaker-modelcard-trainingmetric-value)
      */
@@ -5408,7 +5408,7 @@ public open class CfnModelCard(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name The name of the result from the SageMaker training job. 
+       * @param name The name of the result from the SageMaker AI training job. 
        */
       public fun name(name: String)
 
@@ -5418,7 +5418,7 @@ public open class CfnModelCard(
       public fun notes(notes: String)
 
       /**
-       * @param value The value of a result from the SageMaker training job. 
+       * @param value The value of a result from the SageMaker AI training job. 
        */
       public fun `value`(`value`: Number)
     }
@@ -5429,7 +5429,7 @@ public open class CfnModelCard(
           software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingMetricProperty.builder()
 
       /**
-       * @param name The name of the result from the SageMaker training job. 
+       * @param name The name of the result from the SageMaker AI training job. 
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -5443,7 +5443,7 @@ public open class CfnModelCard(
       }
 
       /**
-       * @param value The value of a result from the SageMaker training job. 
+       * @param value The value of a result from the SageMaker AI training job. 
        */
       override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
@@ -5459,7 +5459,7 @@ public open class CfnModelCard(
     ) : CdkObject(cdkObject),
         TrainingMetricProperty {
       /**
-       * The name of the result from the SageMaker training job.
+       * The name of the result from the SageMaker AI training job.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-trainingmetric.html#cfn-sagemaker-modelcard-trainingmetric-name)
        */
@@ -5473,7 +5473,7 @@ public open class CfnModelCard(
       override fun notes(): String? = unwrap(this).getNotes()
 
       /**
-       * The value of a result from the SageMaker training job.
+       * The value of a result from the SageMaker AI training job.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-trainingmetric.html#cfn-sagemaker-modelcard-trainingmetric-value)
        */
@@ -5499,8 +5499,7 @@ public open class CfnModelCard(
   }
 
   /**
-   * Information about the user who created or modified an experiment, trial, trial component,
-   * lineage group, project, or model card.
+   * Information about the user who created or modified a SageMaker resource.
    *
    * Example:
    *

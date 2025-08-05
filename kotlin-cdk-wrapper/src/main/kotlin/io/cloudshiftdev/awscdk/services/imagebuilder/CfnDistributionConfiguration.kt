@@ -62,6 +62,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .setDefaultVersion(false)
  * .build()))
  * .licenseConfigurationArns(List.of("licenseConfigurationArns"))
+ * .ssmParameterConfigurations(List.of(SsmParameterConfigurationProperty.builder()
+ * .parameterName("parameterName")
+ * // the properties below are optional
+ * .amiAccountId("amiAccountId")
+ * .dataType("dataType")
+ * .build()))
  * .build()))
  * .name("name")
  * // the properties below are optional
@@ -431,12 +437,12 @@ public open class CfnDistributionConfiguration(
       /**
        * @param amiTags The tags to apply to AMIs distributed to this Region.
        */
-      public fun amiTags(amiTags: IResolvable)
+      public fun amiTags(amiTags: Map<String, String>)
 
       /**
        * @param amiTags The tags to apply to AMIs distributed to this Region.
        */
-      public fun amiTags(amiTags: Map<String, String>)
+      public fun amiTags(amiTags: IResolvable)
 
       /**
        * @param description The description of the AMI distribution configuration.
@@ -496,15 +502,15 @@ public open class CfnDistributionConfiguration(
       /**
        * @param amiTags The tags to apply to AMIs distributed to this Region.
        */
-      override fun amiTags(amiTags: IResolvable) {
-        cdkBuilder.amiTags(amiTags.let(IResolvable.Companion::unwrap))
+      override fun amiTags(amiTags: Map<String, String>) {
+        cdkBuilder.amiTags(amiTags)
       }
 
       /**
        * @param amiTags The tags to apply to AMIs distributed to this Region.
        */
-      override fun amiTags(amiTags: Map<String, String>) {
-        cdkBuilder.amiTags(amiTags)
+      override fun amiTags(amiTags: IResolvable) {
+        cdkBuilder.amiTags(amiTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -876,6 +882,12 @@ public open class CfnDistributionConfiguration(
    * .setDefaultVersion(false)
    * .build()))
    * .licenseConfigurationArns(List.of("licenseConfigurationArns"))
+   * .ssmParameterConfigurations(List.of(SsmParameterConfigurationProperty.builder()
+   * .parameterName("parameterName")
+   * // the properties below are optional
+   * .amiAccountId("amiAccountId")
+   * .dataType("dataType")
+   * .build()))
    * .build();
    * ```
    *
@@ -936,6 +948,14 @@ public open class CfnDistributionConfiguration(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html#cfn-imagebuilder-distributionconfiguration-distribution-region)
      */
     public fun region(): String
+
+    /**
+     * Contains settings to update AWS Systems Manager (SSM) Parameter Store Parameters with output
+     * AMI IDs from the build by target Region.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html#cfn-imagebuilder-distributionconfiguration-distribution-ssmparameterconfigurations)
+     */
+    public fun ssmParameterConfigurations(): Any? = unwrap(this).getSsmParameterConfigurations()
 
     /**
      * A builder for [DistributionProperty]
@@ -1015,6 +1035,24 @@ public open class CfnDistributionConfiguration(
        * For example, `eu-west-1` .
        */
       public fun region(region: String)
+
+      /**
+       * @param ssmParameterConfigurations Contains settings to update AWS Systems Manager (SSM)
+       * Parameter Store Parameters with output AMI IDs from the build by target Region.
+       */
+      public fun ssmParameterConfigurations(ssmParameterConfigurations: IResolvable)
+
+      /**
+       * @param ssmParameterConfigurations Contains settings to update AWS Systems Manager (SSM)
+       * Parameter Store Parameters with output AMI IDs from the build by target Region.
+       */
+      public fun ssmParameterConfigurations(ssmParameterConfigurations: List<Any>)
+
+      /**
+       * @param ssmParameterConfigurations Contains settings to update AWS Systems Manager (SSM)
+       * Parameter Store Parameters with output AMI IDs from the build by target Region.
+       */
+      public fun ssmParameterConfigurations(vararg ssmParameterConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1116,6 +1154,29 @@ public open class CfnDistributionConfiguration(
         cdkBuilder.region(region)
       }
 
+      /**
+       * @param ssmParameterConfigurations Contains settings to update AWS Systems Manager (SSM)
+       * Parameter Store Parameters with output AMI IDs from the build by target Region.
+       */
+      override fun ssmParameterConfigurations(ssmParameterConfigurations: IResolvable) {
+        cdkBuilder.ssmParameterConfigurations(ssmParameterConfigurations.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ssmParameterConfigurations Contains settings to update AWS Systems Manager (SSM)
+       * Parameter Store Parameters with output AMI IDs from the build by target Region.
+       */
+      override fun ssmParameterConfigurations(ssmParameterConfigurations: List<Any>) {
+        cdkBuilder.ssmParameterConfigurations(ssmParameterConfigurations.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param ssmParameterConfigurations Contains settings to update AWS Systems Manager (SSM)
+       * Parameter Store Parameters with output AMI IDs from the build by target Region.
+       */
+      override fun ssmParameterConfigurations(vararg ssmParameterConfigurations: Any): Unit =
+          ssmParameterConfigurations(ssmParameterConfigurations.toList())
+
       public fun build():
           software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.DistributionProperty
           = cdkBuilder.build()
@@ -1182,6 +1243,14 @@ public open class CfnDistributionConfiguration(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html#cfn-imagebuilder-distributionconfiguration-distribution-region)
        */
       override fun region(): String = unwrap(this).getRegion()
+
+      /**
+       * Contains settings to update AWS Systems Manager (SSM) Parameter Store Parameters with
+       * output AMI IDs from the build by target Region.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html#cfn-imagebuilder-distributionconfiguration-distribution-ssmparameterconfigurations)
+       */
+      override fun ssmParameterConfigurations(): Any? = unwrap(this).getSsmParameterConfigurations()
     }
 
     public companion object {
@@ -2172,6 +2241,173 @@ public open class CfnDistributionConfiguration(
           software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.LaunchTemplateConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.LaunchTemplateConfigurationProperty
+    }
+  }
+
+  /**
+   * Configuration for a single Parameter in the AWS Systems Manager (SSM) Parameter Store in a
+   * given Region.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * SsmParameterConfigurationProperty ssmParameterConfigurationProperty =
+   * SsmParameterConfigurationProperty.builder()
+   * .parameterName("parameterName")
+   * // the properties below are optional
+   * .amiAccountId("amiAccountId")
+   * .dataType("dataType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-ssmparameterconfiguration.html)
+   */
+  public interface SsmParameterConfigurationProperty {
+    /**
+     * Specify the account that will own the Parameter in a given Region.
+     *
+     * During distribution, this account must be specified in distribution settings as a target
+     * account for the Region.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-ssmparameterconfiguration.html#cfn-imagebuilder-distributionconfiguration-ssmparameterconfiguration-amiaccountid)
+     */
+    public fun amiAccountId(): String? = unwrap(this).getAmiAccountId()
+
+    /**
+     * The data type specifies what type of value the Parameter contains.
+     *
+     * We recommend that you use data type `aws:ec2:image` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-ssmparameterconfiguration.html#cfn-imagebuilder-distributionconfiguration-ssmparameterconfiguration-datatype)
+     */
+    public fun dataType(): String? = unwrap(this).getDataType()
+
+    /**
+     * This is the name of the Parameter in the target Region or account.
+     *
+     * The image distribution creates the Parameter if it doesn't already exist. Otherwise, it
+     * updates the parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-ssmparameterconfiguration.html#cfn-imagebuilder-distributionconfiguration-ssmparameterconfiguration-parametername)
+     */
+    public fun parameterName(): String
+
+    /**
+     * A builder for [SsmParameterConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param amiAccountId Specify the account that will own the Parameter in a given Region.
+       * During distribution, this account must be specified in distribution settings as a target
+       * account for the Region.
+       */
+      public fun amiAccountId(amiAccountId: String)
+
+      /**
+       * @param dataType The data type specifies what type of value the Parameter contains.
+       * We recommend that you use data type `aws:ec2:image` .
+       */
+      public fun dataType(dataType: String)
+
+      /**
+       * @param parameterName This is the name of the Parameter in the target Region or account. 
+       * The image distribution creates the Parameter if it doesn't already exist. Otherwise, it
+       * updates the parameter.
+       */
+      public fun parameterName(parameterName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.SsmParameterConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.SsmParameterConfigurationProperty.builder()
+
+      /**
+       * @param amiAccountId Specify the account that will own the Parameter in a given Region.
+       * During distribution, this account must be specified in distribution settings as a target
+       * account for the Region.
+       */
+      override fun amiAccountId(amiAccountId: String) {
+        cdkBuilder.amiAccountId(amiAccountId)
+      }
+
+      /**
+       * @param dataType The data type specifies what type of value the Parameter contains.
+       * We recommend that you use data type `aws:ec2:image` .
+       */
+      override fun dataType(dataType: String) {
+        cdkBuilder.dataType(dataType)
+      }
+
+      /**
+       * @param parameterName This is the name of the Parameter in the target Region or account. 
+       * The image distribution creates the Parameter if it doesn't already exist. Otherwise, it
+       * updates the parameter.
+       */
+      override fun parameterName(parameterName: String) {
+        cdkBuilder.parameterName(parameterName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.SsmParameterConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.SsmParameterConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        SsmParameterConfigurationProperty {
+      /**
+       * Specify the account that will own the Parameter in a given Region.
+       *
+       * During distribution, this account must be specified in distribution settings as a target
+       * account for the Region.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-ssmparameterconfiguration.html#cfn-imagebuilder-distributionconfiguration-ssmparameterconfiguration-amiaccountid)
+       */
+      override fun amiAccountId(): String? = unwrap(this).getAmiAccountId()
+
+      /**
+       * The data type specifies what type of value the Parameter contains.
+       *
+       * We recommend that you use data type `aws:ec2:image` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-ssmparameterconfiguration.html#cfn-imagebuilder-distributionconfiguration-ssmparameterconfiguration-datatype)
+       */
+      override fun dataType(): String? = unwrap(this).getDataType()
+
+      /**
+       * This is the name of the Parameter in the target Region or account.
+       *
+       * The image distribution creates the Parameter if it doesn't already exist. Otherwise, it
+       * updates the parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-ssmparameterconfiguration.html#cfn-imagebuilder-distributionconfiguration-ssmparameterconfiguration-parametername)
+       */
+      override fun parameterName(): String = unwrap(this).getParameterName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SsmParameterConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.SsmParameterConfigurationProperty):
+          SsmParameterConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SsmParameterConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SsmParameterConfigurationProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.SsmParameterConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.SsmParameterConfigurationProperty
     }
   }
 

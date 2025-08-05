@@ -16,22 +16,41 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Bucket myCachingBucket;
- * Project.Builder.create(this, "Project")
- * .source(Source.bitBucket(BitBucketSourceProps.builder()
- * .owner("awslabs")
- * .repo("aws-cdk")
- * .build()))
- * .cache(Cache.bucket(myCachingBucket))
- * // BuildSpec with a 'cache' section necessary for S3 caching. This can
- * // also come from 'buildspec.yml' in your source.
- * .buildSpec(BuildSpec.fromObject(Map.of(
- * "version", "0.2",
- * "phases", Map.of(
- * "build", Map.of(
- * "commands", List.of("..."))),
- * "cache", Map.of(
- * "paths", List.of("/root/cachedir/ **&#47;*")))))
+ * Vpc vpc;
+ * SecurityGroup mySecurityGroup;
+ * CodeBuildStep.Builder.create("Synth")
+ * // ...standard ShellStep props...
+ * .commands(List.of())
+ * .env(Map.of())
+ * // If you are using a CodeBuildStep explicitly, set the 'cdk.out' directory
+ * // to be the synth step's output.
+ * .primaryOutputDirectory("cdk.out")
+ * // Control the name of the project
+ * .projectName("MyProject")
+ * // Control parts of the BuildSpec other than the regular 'build' and 'install' commands
+ * .partialBuildSpec(BuildSpec.fromObject(Map.of(
+ * "version", "0.2")))
+ * // Control the build environment
+ * .buildEnvironment(BuildEnvironment.builder()
+ * .computeType(ComputeType.LARGE)
+ * .privileged(true)
+ * .build())
+ * .timeout(Duration.minutes(90))
+ * .fileSystemLocations(List.of(FileSystemLocation.efs(EfsFileSystemLocationProps.builder()
+ * .identifier("myidentifier2")
+ * .location("myclodation.mydnsroot.com:/loc")
+ * .mountPoint("/media")
+ * .mountOptions("opts")
+ * .build())))
+ * // Control Elastic Network Interface creation
+ * .vpc(vpc)
+ * .subnetSelection(SubnetSelection.builder().subnetType(SubnetType.PRIVATE_WITH_EGRESS).build())
+ * .securityGroups(List.of(mySecurityGroup))
+ * // Control caching
+ * .cache(Cache.bucket(new Bucket(this, "Cache")))
+ * // Additional policy statements for the execution role
+ * .rolePolicyStatements(List.of(
+ * PolicyStatement.Builder.create().build()))
  * .build();
  * ```
  *

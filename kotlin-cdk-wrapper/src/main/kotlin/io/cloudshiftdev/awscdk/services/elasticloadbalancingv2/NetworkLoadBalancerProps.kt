@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -82,6 +83,14 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
       unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
 
   /**
+   * Subnet information for the load balancer.
+   *
+   * Default: undefined - The VPC default strategy for subnets is used
+   */
+  public fun subnetMappings(): List<SubnetMapping> =
+      unwrap(this).getSubnetMappings()?.map(SubnetMapping::wrap) ?: emptyList()
+
+  /**
    * Indicates whether zonal shift is enabled.
    *
    * Default: false
@@ -149,6 +158,11 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
     public fun loadBalancerName(loadBalancerName: String)
 
     /**
+     * @param minimumCapacityUnit The minimum capacity (LCU) for a load balancer.
+     */
+    public fun minimumCapacityUnit(minimumCapacityUnit: Number)
+
+    /**
      * @param securityGroups Security groups to associate with this load balancer.
      */
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
@@ -157,6 +171,16 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
      * @param securityGroups Security groups to associate with this load balancer.
      */
     public fun securityGroups(vararg securityGroups: ISecurityGroup)
+
+    /**
+     * @param subnetMappings Subnet information for the load balancer.
+     */
+    public fun subnetMappings(subnetMappings: List<SubnetMapping>)
+
+    /**
+     * @param subnetMappings Subnet information for the load balancer.
+     */
+    public fun subnetMappings(vararg subnetMappings: SubnetMapping)
 
     /**
      * @param vpc The VPC network to place the load balancer in. 
@@ -258,6 +282,13 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
     }
 
     /**
+     * @param minimumCapacityUnit The minimum capacity (LCU) for a load balancer.
+     */
+    override fun minimumCapacityUnit(minimumCapacityUnit: Number) {
+      cdkBuilder.minimumCapacityUnit(minimumCapacityUnit)
+    }
+
+    /**
      * @param securityGroups Security groups to associate with this load balancer.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
@@ -269,6 +300,19 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
      */
     override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
         securityGroups(securityGroups.toList())
+
+    /**
+     * @param subnetMappings Subnet information for the load balancer.
+     */
+    override fun subnetMappings(subnetMappings: List<SubnetMapping>) {
+      cdkBuilder.subnetMappings(subnetMappings.map(SubnetMapping.Companion::unwrap))
+    }
+
+    /**
+     * @param subnetMappings Subnet information for the load balancer.
+     */
+    override fun subnetMappings(vararg subnetMappings: SubnetMapping): Unit =
+        subnetMappings(subnetMappings.toList())
 
     /**
      * @param vpc The VPC network to place the load balancer in. 
@@ -387,12 +431,29 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
     override fun loadBalancerName(): String? = unwrap(this).getLoadBalancerName()
 
     /**
+     * The minimum capacity (LCU) for a load balancer.
+     *
+     * Default: undefined - ELB default is 0 LCU
+     *
+     * [Documentation](https://exampleloadbalancer.com/ondemand_capacity_reservation_calculator.html)
+     */
+    override fun minimumCapacityUnit(): Number? = unwrap(this).getMinimumCapacityUnit()
+
+    /**
      * Security groups to associate with this load balancer.
      *
      * Default: - No security groups associated with the load balancer.
      */
     override fun securityGroups(): List<ISecurityGroup> =
         unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
+
+    /**
+     * Subnet information for the load balancer.
+     *
+     * Default: undefined - The VPC default strategy for subnets is used
+     */
+    override fun subnetMappings(): List<SubnetMapping> =
+        unwrap(this).getSubnetMappings()?.map(SubnetMapping::wrap) ?: emptyList()
 
     /**
      * The VPC network to place the load balancer in.

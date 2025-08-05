@@ -145,7 +145,7 @@ public interface CfnIdentityProviderProps {
      * * `RequestSigningAlgorithm` (string) *optional* - Only accepts `rsa-sha256`
      * * `EncryptedResponses` (boolean) *optional*
      */
-    public fun identityProviderDetails(identityProviderDetails: IResolvable)
+    public fun identityProviderDetails(identityProviderDetails: Map<String, String>)
 
     /**
      * @param identityProviderDetails The identity provider details. The following list describes
@@ -182,7 +182,7 @@ public interface CfnIdentityProviderProps {
      * * `RequestSigningAlgorithm` (string) *optional* - Only accepts `rsa-sha256`
      * * `EncryptedResponses` (boolean) *optional*
      */
-    public fun identityProviderDetails(identityProviderDetails: Map<String, String>)
+    public fun identityProviderDetails(identityProviderDetails: IResolvable)
 
     /**
      * @param identityProviderName The identity provider name. 
@@ -250,8 +250,8 @@ public interface CfnIdentityProviderProps {
      * * `RequestSigningAlgorithm` (string) *optional* - Only accepts `rsa-sha256`
      * * `EncryptedResponses` (boolean) *optional*
      */
-    override fun identityProviderDetails(identityProviderDetails: IResolvable) {
-      cdkBuilder.identityProviderDetails(identityProviderDetails.let(IResolvable.Companion::unwrap))
+    override fun identityProviderDetails(identityProviderDetails: Map<String, String>) {
+      cdkBuilder.identityProviderDetails(identityProviderDetails)
     }
 
     /**
@@ -289,8 +289,8 @@ public interface CfnIdentityProviderProps {
      * * `RequestSigningAlgorithm` (string) *optional* - Only accepts `rsa-sha256`
      * * `EncryptedResponses` (boolean) *optional*
      */
-    override fun identityProviderDetails(identityProviderDetails: Map<String, String>) {
-      cdkBuilder.identityProviderDetails(identityProviderDetails)
+    override fun identityProviderDetails(identityProviderDetails: IResolvable) {
+      cdkBuilder.identityProviderDetails(identityProviderDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -14,6 +14,7 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.collections.Map
 import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
@@ -31,7 +32,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.datazone.*;
  * CfnDataSource cfnDataSource = CfnDataSource.Builder.create(this, "MyCfnDataSource")
  * .domainIdentifier("domainIdentifier")
- * .environmentIdentifier("environmentIdentifier")
  * .name("name")
  * .projectIdentifier("projectIdentifier")
  * .type("type")
@@ -56,20 +56,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * // the properties below are optional
  * .autoImportDataQualityResult(false)
+ * .catalogName("catalogName")
  * .dataAccessRole("dataAccessRole")
  * .build())
  * .redshiftRunConfiguration(RedshiftRunConfigurationInputProperty.builder()
- * .redshiftCredentialConfiguration(RedshiftCredentialConfigurationProperty.builder()
- * .secretManagerArn("secretManagerArn")
- * .build())
- * .redshiftStorage(RedshiftStorageProperty.builder()
- * .redshiftClusterSource(RedshiftClusterStorageProperty.builder()
- * .clusterName("clusterName")
- * .build())
- * .redshiftServerlessSource(RedshiftServerlessStorageProperty.builder()
- * .workgroupName("workgroupName")
- * .build())
- * .build())
  * .relationalFilterConfigurations(List.of(RelationalFilterConfigurationProperty.builder()
  * .databaseName("databaseName")
  * // the properties below are optional
@@ -81,10 +71,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * // the properties below are optional
  * .dataAccessRole("dataAccessRole")
+ * .redshiftCredentialConfiguration(RedshiftCredentialConfigurationProperty.builder()
+ * .secretManagerArn("secretManagerArn")
+ * .build())
+ * .redshiftStorage(RedshiftStorageProperty.builder()
+ * .redshiftClusterSource(RedshiftClusterStorageProperty.builder()
+ * .clusterName("clusterName")
+ * .build())
+ * .redshiftServerlessSource(RedshiftServerlessStorageProperty.builder()
+ * .workgroupName("workgroupName")
  * .build())
  * .build())
+ * .build())
+ * .sageMakerRunConfiguration(SageMakerRunConfigurationInputProperty.builder()
+ * .trackingAssets(Map.of(
+ * "trackingAssetsKey", List.of("trackingAssets")))
+ * .build())
+ * .build())
+ * .connectionIdentifier("connectionIdentifier")
  * .description("description")
  * .enableSetting("enableSetting")
+ * .environmentIdentifier("environmentIdentifier")
  * .publishOnImport(false)
  * .recommendation(RecommendationConfigurationProperty.builder()
  * .enableBusinessNameGeneration(false)
@@ -141,6 +148,11 @@ public open class CfnDataSource(
    * The metadata forms attached to the assets that the data source works with.
    */
   public open fun assetFormsInput(vararg `value`: Any): Unit = assetFormsInput(`value`.toList())
+
+  /**
+   * The connection ID that's part of the data source summary.
+   */
+  public open fun attrConnectionId(): String = unwrap(this).getAttrConnectionId()
 
   /**
    * The timestamp of when the data source was created.
@@ -221,6 +233,20 @@ public open class CfnDataSource(
       Unit = configuration(DataSourceConfigurationInputProperty(`value`))
 
   /**
+   * The unique identifier of a connection used to fetch relevant parameters from connection during
+   * Datasource run.
+   */
+  public open fun connectionIdentifier(): String? = unwrap(this).getConnectionIdentifier()
+
+  /**
+   * The unique identifier of a connection used to fetch relevant parameters from connection during
+   * Datasource run.
+   */
+  public open fun connectionIdentifier(`value`: String) {
+    unwrap(this).setConnectionIdentifier(`value`)
+  }
+
+  /**
    * The description of the data source.
    */
   public open fun description(): String? = unwrap(this).getDescription()
@@ -260,7 +286,7 @@ public open class CfnDataSource(
    * The unique identifier of the Amazon DataZone environment to which the data source publishes
    * assets.
    */
-  public open fun environmentIdentifier(): String = unwrap(this).getEnvironmentIdentifier()
+  public open fun environmentIdentifier(): String? = unwrap(this).getEnvironmentIdentifier()
 
   /**
    * The unique identifier of the Amazon DataZone environment to which the data source publishes
@@ -450,6 +476,16 @@ public open class CfnDataSource(
     public fun configuration(configuration: DataSourceConfigurationInputProperty.Builder.() -> Unit)
 
     /**
+     * The unique identifier of a connection used to fetch relevant parameters from connection
+     * during Datasource run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-connectionidentifier)
+     * @param connectionIdentifier The unique identifier of a connection used to fetch relevant
+     * parameters from connection during Datasource run. 
+     */
+    public fun connectionIdentifier(connectionIdentifier: String)
+
+    /**
      * The description of the data source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-description)
@@ -580,6 +616,10 @@ public open class CfnDataSource(
     /**
      * The type of the data source.
      *
+     * In Amazon DataZone, you can use data sources to import technical metadata of assets (data)
+     * from the source databases or data warehouses into Amazon DataZone. In the current release of
+     * Amazon DataZone, you can create and run data sources for AWS Glue and Amazon Redshift.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-type)
      * @param type The type of the data source. 
      */
@@ -656,6 +696,18 @@ public open class CfnDataSource(
     override
         fun configuration(configuration: DataSourceConfigurationInputProperty.Builder.() -> Unit):
         Unit = configuration(DataSourceConfigurationInputProperty(configuration))
+
+    /**
+     * The unique identifier of a connection used to fetch relevant parameters from connection
+     * during Datasource run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-connectionidentifier)
+     * @param connectionIdentifier The unique identifier of a connection used to fetch relevant
+     * parameters from connection during Datasource run. 
+     */
+    override fun connectionIdentifier(connectionIdentifier: String) {
+      cdkBuilder.connectionIdentifier(connectionIdentifier)
+    }
 
     /**
      * The description of the data source.
@@ -814,6 +866,10 @@ public open class CfnDataSource(
     /**
      * The type of the data source.
      *
+     * In Amazon DataZone, you can use data sources to import technical metadata of assets (data)
+     * from the source databases or data warehouses into Amazon DataZone. In the current release of
+     * Amazon DataZone, you can create and run data sources for AWS Glue and Amazon Redshift.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-type)
      * @param type The type of the data source. 
      */
@@ -868,20 +924,10 @@ public open class CfnDataSource(
    * .build()))
    * // the properties below are optional
    * .autoImportDataQualityResult(false)
+   * .catalogName("catalogName")
    * .dataAccessRole("dataAccessRole")
    * .build())
    * .redshiftRunConfiguration(RedshiftRunConfigurationInputProperty.builder()
-   * .redshiftCredentialConfiguration(RedshiftCredentialConfigurationProperty.builder()
-   * .secretManagerArn("secretManagerArn")
-   * .build())
-   * .redshiftStorage(RedshiftStorageProperty.builder()
-   * .redshiftClusterSource(RedshiftClusterStorageProperty.builder()
-   * .clusterName("clusterName")
-   * .build())
-   * .redshiftServerlessSource(RedshiftServerlessStorageProperty.builder()
-   * .workgroupName("workgroupName")
-   * .build())
-   * .build())
    * .relationalFilterConfigurations(List.of(RelationalFilterConfigurationProperty.builder()
    * .databaseName("databaseName")
    * // the properties below are optional
@@ -893,6 +939,21 @@ public open class CfnDataSource(
    * .build()))
    * // the properties below are optional
    * .dataAccessRole("dataAccessRole")
+   * .redshiftCredentialConfiguration(RedshiftCredentialConfigurationProperty.builder()
+   * .secretManagerArn("secretManagerArn")
+   * .build())
+   * .redshiftStorage(RedshiftStorageProperty.builder()
+   * .redshiftClusterSource(RedshiftClusterStorageProperty.builder()
+   * .clusterName("clusterName")
+   * .build())
+   * .redshiftServerlessSource(RedshiftServerlessStorageProperty.builder()
+   * .workgroupName("workgroupName")
+   * .build())
+   * .build())
+   * .build())
+   * .sageMakerRunConfiguration(SageMakerRunConfigurationInputProperty.builder()
+   * .trackingAssets(Map.of(
+   * "trackingAssetsKey", List.of("trackingAssets")))
    * .build())
    * .build();
    * ```
@@ -913,6 +974,13 @@ public open class CfnDataSource(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-datasourceconfigurationinput.html#cfn-datazone-datasource-datasourceconfigurationinput-redshiftrunconfiguration)
      */
     public fun redshiftRunConfiguration(): Any? = unwrap(this).getRedshiftRunConfiguration()
+
+    /**
+     * The configuration details of the Amazon SageMaker data source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-datasourceconfigurationinput.html#cfn-datazone-datasource-datasourceconfigurationinput-sagemakerrunconfiguration)
+     */
+    public fun sageMakerRunConfiguration(): Any? = unwrap(this).getSageMakerRunConfiguration()
 
     /**
      * A builder for [DataSourceConfigurationInputProperty]
@@ -955,6 +1023,28 @@ public open class CfnDataSource(
       @JvmName("87ea29d27e9f07fa556b546a5850087d69a993ce39f2c81674d2c99b16b76a8a")
       public
           fun redshiftRunConfiguration(redshiftRunConfiguration: RedshiftRunConfigurationInputProperty.Builder.() -> Unit)
+
+      /**
+       * @param sageMakerRunConfiguration The configuration details of the Amazon SageMaker data
+       * source.
+       */
+      public fun sageMakerRunConfiguration(sageMakerRunConfiguration: IResolvable)
+
+      /**
+       * @param sageMakerRunConfiguration The configuration details of the Amazon SageMaker data
+       * source.
+       */
+      public
+          fun sageMakerRunConfiguration(sageMakerRunConfiguration: SageMakerRunConfigurationInputProperty)
+
+      /**
+       * @param sageMakerRunConfiguration The configuration details of the Amazon SageMaker data
+       * source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("35d9fb9f44b53c2b794a3e522e37964f5f0d6370bf3c12c5df9499021b8d57d5")
+      public
+          fun sageMakerRunConfiguration(sageMakerRunConfiguration: SageMakerRunConfigurationInputProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1011,6 +1101,34 @@ public open class CfnDataSource(
           Unit =
           redshiftRunConfiguration(RedshiftRunConfigurationInputProperty(redshiftRunConfiguration))
 
+      /**
+       * @param sageMakerRunConfiguration The configuration details of the Amazon SageMaker data
+       * source.
+       */
+      override fun sageMakerRunConfiguration(sageMakerRunConfiguration: IResolvable) {
+        cdkBuilder.sageMakerRunConfiguration(sageMakerRunConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param sageMakerRunConfiguration The configuration details of the Amazon SageMaker data
+       * source.
+       */
+      override
+          fun sageMakerRunConfiguration(sageMakerRunConfiguration: SageMakerRunConfigurationInputProperty) {
+        cdkBuilder.sageMakerRunConfiguration(sageMakerRunConfiguration.let(SageMakerRunConfigurationInputProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param sageMakerRunConfiguration The configuration details of the Amazon SageMaker data
+       * source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("35d9fb9f44b53c2b794a3e522e37964f5f0d6370bf3c12c5df9499021b8d57d5")
+      override
+          fun sageMakerRunConfiguration(sageMakerRunConfiguration: SageMakerRunConfigurationInputProperty.Builder.() -> Unit):
+          Unit =
+          sageMakerRunConfiguration(SageMakerRunConfigurationInputProperty(sageMakerRunConfiguration))
+
       public fun build():
           software.amazon.awscdk.services.datazone.CfnDataSource.DataSourceConfigurationInputProperty
           = cdkBuilder.build()
@@ -1033,6 +1151,13 @@ public open class CfnDataSource(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-datasourceconfigurationinput.html#cfn-datazone-datasource-datasourceconfigurationinput-redshiftrunconfiguration)
        */
       override fun redshiftRunConfiguration(): Any? = unwrap(this).getRedshiftRunConfiguration()
+
+      /**
+       * The configuration details of the Amazon SageMaker data source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-datasourceconfigurationinput.html#cfn-datazone-datasource-datasourceconfigurationinput-sagemakerrunconfiguration)
+       */
+      override fun sageMakerRunConfiguration(): Any? = unwrap(this).getSageMakerRunConfiguration()
     }
 
     public companion object {
@@ -1348,6 +1473,7 @@ public open class CfnDataSource(
    * .build()))
    * // the properties below are optional
    * .autoImportDataQualityResult(false)
+   * .catalogName("catalogName")
    * .dataAccessRole("dataAccessRole")
    * .build();
    * ```
@@ -1362,6 +1488,13 @@ public open class CfnDataSource(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-gluerunconfigurationinput.html#cfn-datazone-datasource-gluerunconfigurationinput-autoimportdataqualityresult)
      */
     public fun autoImportDataQualityResult(): Any? = unwrap(this).getAutoImportDataQualityResult()
+
+    /**
+     * The catalog name in the AWS Glue run configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-gluerunconfigurationinput.html#cfn-datazone-datasource-gluerunconfigurationinput-catalogname)
+     */
+    public fun catalogName(): String? = unwrap(this).getCatalogName()
 
     /**
      * The data access role included in the configuration details of the AWS Glue data source.
@@ -1394,6 +1527,11 @@ public open class CfnDataSource(
        * metrics as part of the data source run.
        */
       public fun autoImportDataQualityResult(autoImportDataQualityResult: IResolvable)
+
+      /**
+       * @param catalogName The catalog name in the AWS Glue run configuration.
+       */
+      public fun catalogName(catalogName: String)
 
       /**
        * @param dataAccessRole The data access role included in the configuration details of the AWS
@@ -1440,6 +1578,13 @@ public open class CfnDataSource(
        */
       override fun autoImportDataQualityResult(autoImportDataQualityResult: IResolvable) {
         cdkBuilder.autoImportDataQualityResult(autoImportDataQualityResult.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param catalogName The catalog name in the AWS Glue run configuration.
+       */
+      override fun catalogName(catalogName: String) {
+        cdkBuilder.catalogName(catalogName)
       }
 
       /**
@@ -1490,6 +1635,13 @@ public open class CfnDataSource(
        */
       override fun autoImportDataQualityResult(): Any? =
           unwrap(this).getAutoImportDataQualityResult()
+
+      /**
+       * The catalog name in the AWS Glue run configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-gluerunconfigurationinput.html#cfn-datazone-datasource-gluerunconfigurationinput-catalogname)
+       */
+      override fun catalogName(): String? = unwrap(this).getCatalogName()
 
       /**
        * The data access role included in the configuration details of the AWS Glue data source.
@@ -1812,17 +1964,6 @@ public open class CfnDataSource(
    * import io.cloudshiftdev.awscdk.services.datazone.*;
    * RedshiftRunConfigurationInputProperty redshiftRunConfigurationInputProperty =
    * RedshiftRunConfigurationInputProperty.builder()
-   * .redshiftCredentialConfiguration(RedshiftCredentialConfigurationProperty.builder()
-   * .secretManagerArn("secretManagerArn")
-   * .build())
-   * .redshiftStorage(RedshiftStorageProperty.builder()
-   * .redshiftClusterSource(RedshiftClusterStorageProperty.builder()
-   * .clusterName("clusterName")
-   * .build())
-   * .redshiftServerlessSource(RedshiftServerlessStorageProperty.builder()
-   * .workgroupName("workgroupName")
-   * .build())
-   * .build())
    * .relationalFilterConfigurations(List.of(RelationalFilterConfigurationProperty.builder()
    * .databaseName("databaseName")
    * // the properties below are optional
@@ -1834,6 +1975,17 @@ public open class CfnDataSource(
    * .build()))
    * // the properties below are optional
    * .dataAccessRole("dataAccessRole")
+   * .redshiftCredentialConfiguration(RedshiftCredentialConfigurationProperty.builder()
+   * .secretManagerArn("secretManagerArn")
+   * .build())
+   * .redshiftStorage(RedshiftStorageProperty.builder()
+   * .redshiftClusterSource(RedshiftClusterStorageProperty.builder()
+   * .clusterName("clusterName")
+   * .build())
+   * .redshiftServerlessSource(RedshiftServerlessStorageProperty.builder()
+   * .workgroupName("workgroupName")
+   * .build())
+   * .build())
    * .build();
    * ```
    *
@@ -1853,7 +2005,8 @@ public open class CfnDataSource(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftrunconfigurationinput.html#cfn-datazone-datasource-redshiftrunconfigurationinput-redshiftcredentialconfiguration)
      */
-    public fun redshiftCredentialConfiguration(): Any
+    public fun redshiftCredentialConfiguration(): Any? =
+        unwrap(this).getRedshiftCredentialConfiguration()
 
     /**
      * The details of the Amazon Redshift storage as part of the configuration of an Amazon Redshift
@@ -1861,7 +2014,7 @@ public open class CfnDataSource(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftrunconfigurationinput.html#cfn-datazone-datasource-redshiftrunconfigurationinput-redshiftstorage)
      */
-    public fun redshiftStorage(): Any
+    public fun redshiftStorage(): Any? = unwrap(this).getRedshiftStorage()
 
     /**
      * The relational filter configurations included in the configuration details of the AWS Glue
@@ -1884,20 +2037,20 @@ public open class CfnDataSource(
 
       /**
        * @param redshiftCredentialConfiguration The details of the credentials required to access an
-       * Amazon Redshift cluster. 
+       * Amazon Redshift cluster.
        */
       public fun redshiftCredentialConfiguration(redshiftCredentialConfiguration: IResolvable)
 
       /**
        * @param redshiftCredentialConfiguration The details of the credentials required to access an
-       * Amazon Redshift cluster. 
+       * Amazon Redshift cluster.
        */
       public
           fun redshiftCredentialConfiguration(redshiftCredentialConfiguration: RedshiftCredentialConfigurationProperty)
 
       /**
        * @param redshiftCredentialConfiguration The details of the credentials required to access an
-       * Amazon Redshift cluster. 
+       * Amazon Redshift cluster.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e201875d0fa55c8500b08cfe89434f772ef00b245c4a8273ea2ba4ba6fcbc207")
@@ -1906,19 +2059,19 @@ public open class CfnDataSource(
 
       /**
        * @param redshiftStorage The details of the Amazon Redshift storage as part of the
-       * configuration of an Amazon Redshift data source run. 
+       * configuration of an Amazon Redshift data source run.
        */
       public fun redshiftStorage(redshiftStorage: IResolvable)
 
       /**
        * @param redshiftStorage The details of the Amazon Redshift storage as part of the
-       * configuration of an Amazon Redshift data source run. 
+       * configuration of an Amazon Redshift data source run.
        */
       public fun redshiftStorage(redshiftStorage: RedshiftStorageProperty)
 
       /**
        * @param redshiftStorage The details of the Amazon Redshift storage as part of the
-       * configuration of an Amazon Redshift data source run. 
+       * configuration of an Amazon Redshift data source run.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c96c9f1fca94be303cefa3be2240a1598e8f221de0dab9360c4273e4ae3ac81b")
@@ -1959,7 +2112,7 @@ public open class CfnDataSource(
 
       /**
        * @param redshiftCredentialConfiguration The details of the credentials required to access an
-       * Amazon Redshift cluster. 
+       * Amazon Redshift cluster.
        */
       override fun redshiftCredentialConfiguration(redshiftCredentialConfiguration: IResolvable) {
         cdkBuilder.redshiftCredentialConfiguration(redshiftCredentialConfiguration.let(IResolvable.Companion::unwrap))
@@ -1967,7 +2120,7 @@ public open class CfnDataSource(
 
       /**
        * @param redshiftCredentialConfiguration The details of the credentials required to access an
-       * Amazon Redshift cluster. 
+       * Amazon Redshift cluster.
        */
       override
           fun redshiftCredentialConfiguration(redshiftCredentialConfiguration: RedshiftCredentialConfigurationProperty) {
@@ -1976,7 +2129,7 @@ public open class CfnDataSource(
 
       /**
        * @param redshiftCredentialConfiguration The details of the credentials required to access an
-       * Amazon Redshift cluster. 
+       * Amazon Redshift cluster.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e201875d0fa55c8500b08cfe89434f772ef00b245c4a8273ea2ba4ba6fcbc207")
@@ -1987,7 +2140,7 @@ public open class CfnDataSource(
 
       /**
        * @param redshiftStorage The details of the Amazon Redshift storage as part of the
-       * configuration of an Amazon Redshift data source run. 
+       * configuration of an Amazon Redshift data source run.
        */
       override fun redshiftStorage(redshiftStorage: IResolvable) {
         cdkBuilder.redshiftStorage(redshiftStorage.let(IResolvable.Companion::unwrap))
@@ -1995,7 +2148,7 @@ public open class CfnDataSource(
 
       /**
        * @param redshiftStorage The details of the Amazon Redshift storage as part of the
-       * configuration of an Amazon Redshift data source run. 
+       * configuration of an Amazon Redshift data source run.
        */
       override fun redshiftStorage(redshiftStorage: RedshiftStorageProperty) {
         cdkBuilder.redshiftStorage(redshiftStorage.let(RedshiftStorageProperty.Companion::unwrap))
@@ -2003,7 +2156,7 @@ public open class CfnDataSource(
 
       /**
        * @param redshiftStorage The details of the Amazon Redshift storage as part of the
-       * configuration of an Amazon Redshift data source run. 
+       * configuration of an Amazon Redshift data source run.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c96c9f1fca94be303cefa3be2240a1598e8f221de0dab9360c4273e4ae3ac81b")
@@ -2055,7 +2208,7 @@ public open class CfnDataSource(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftrunconfigurationinput.html#cfn-datazone-datasource-redshiftrunconfigurationinput-redshiftcredentialconfiguration)
        */
-      override fun redshiftCredentialConfiguration(): Any =
+      override fun redshiftCredentialConfiguration(): Any? =
           unwrap(this).getRedshiftCredentialConfiguration()
 
       /**
@@ -2064,7 +2217,7 @@ public open class CfnDataSource(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftrunconfigurationinput.html#cfn-datazone-datasource-redshiftrunconfigurationinput-redshiftstorage)
        */
-      override fun redshiftStorage(): Any = unwrap(this).getRedshiftStorage()
+      override fun redshiftStorage(): Any? = unwrap(this).getRedshiftStorage()
 
       /**
        * The relational filter configurations included in the configuration details of the AWS Glue
@@ -2535,6 +2688,104 @@ public open class CfnDataSource(
           software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty
+    }
+  }
+
+  /**
+   * The configuration details of the Amazon SageMaker data source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datazone.*;
+   * SageMakerRunConfigurationInputProperty sageMakerRunConfigurationInputProperty =
+   * SageMakerRunConfigurationInputProperty.builder()
+   * .trackingAssets(Map.of(
+   * "trackingAssetsKey", List.of("trackingAssets")))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-sagemakerrunconfigurationinput.html)
+   */
+  public interface SageMakerRunConfigurationInputProperty {
+    /**
+     * The tracking assets of the Amazon SageMaker run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-sagemakerrunconfigurationinput.html#cfn-datazone-datasource-sagemakerrunconfigurationinput-trackingassets)
+     */
+    public fun trackingAssets(): Any
+
+    /**
+     * A builder for [SageMakerRunConfigurationInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param trackingAssets The tracking assets of the Amazon SageMaker run. 
+       */
+      public fun trackingAssets(trackingAssets: IResolvable)
+
+      /**
+       * @param trackingAssets The tracking assets of the Amazon SageMaker run. 
+       */
+      public fun trackingAssets(trackingAssets: Map<String, List<String>>)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datazone.CfnDataSource.SageMakerRunConfigurationInputProperty.Builder
+          =
+          software.amazon.awscdk.services.datazone.CfnDataSource.SageMakerRunConfigurationInputProperty.builder()
+
+      /**
+       * @param trackingAssets The tracking assets of the Amazon SageMaker run. 
+       */
+      override fun trackingAssets(trackingAssets: IResolvable) {
+        cdkBuilder.trackingAssets(trackingAssets.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param trackingAssets The tracking assets of the Amazon SageMaker run. 
+       */
+      override fun trackingAssets(trackingAssets: Map<String, List<String>>) {
+        cdkBuilder.trackingAssets(trackingAssets)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.datazone.CfnDataSource.SageMakerRunConfigurationInputProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.SageMakerRunConfigurationInputProperty,
+    ) : CdkObject(cdkObject),
+        SageMakerRunConfigurationInputProperty {
+      /**
+       * The tracking assets of the Amazon SageMaker run.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-sagemakerrunconfigurationinput.html#cfn-datazone-datasource-sagemakerrunconfigurationinput-trackingassets)
+       */
+      override fun trackingAssets(): Any = unwrap(this).getTrackingAssets()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SageMakerRunConfigurationInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.SageMakerRunConfigurationInputProperty):
+          SageMakerRunConfigurationInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SageMakerRunConfigurationInputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SageMakerRunConfigurationInputProperty):
+          software.amazon.awscdk.services.datazone.CfnDataSource.SageMakerRunConfigurationInputProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datazone.CfnDataSource.SageMakerRunConfigurationInputProperty
     }
   }
 

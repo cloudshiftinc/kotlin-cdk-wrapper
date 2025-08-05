@@ -69,6 +69,11 @@ import kotlin.jvm.JvmName
  * .writeCapacityUnits(123)
  * .build())
  * .build())
+ * .cdcSpecification(CdcSpecificationProperty.builder()
+ * .status("status")
+ * // the properties below are optional
+ * .viewType("viewType")
+ * .build())
  * .clientSideTimestampsEnabled(false)
  * .clusteringKeyColumns(List.of(ClusteringKeyColumnProperty.builder()
  * .column(ColumnProperty.builder()
@@ -139,6 +144,17 @@ public interface CfnTableProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-billingmode)
    */
   public fun billingMode(): Any? = unwrap(this).getBillingMode()
+
+  /**
+   * The settings for the CDC stream of a table.
+   *
+   * For more information about CDC streams, see [Working with change data capture (CDC) streams in
+   * Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/cdc.html) in the *Amazon
+   * Keyspaces Developer Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-cdcspecification)
+   */
+  public fun cdcSpecification(): Any? = unwrap(this).getCdcSpecification()
 
   /**
    * Enables client-side timestamps for the table.
@@ -343,6 +359,33 @@ public interface CfnTableProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fb8d6dbc6f6662222780a9bfad95d32dd40625124100e2249da324e1eed3c3b3")
     public fun billingMode(billingMode: CfnTable.BillingModeProperty.Builder.() -> Unit)
+
+    /**
+     * @param cdcSpecification The settings for the CDC stream of a table.
+     * For more information about CDC streams, see [Working with change data capture (CDC) streams
+     * in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/cdc.html) in the
+     * *Amazon Keyspaces Developer Guide* .
+     */
+    public fun cdcSpecification(cdcSpecification: IResolvable)
+
+    /**
+     * @param cdcSpecification The settings for the CDC stream of a table.
+     * For more information about CDC streams, see [Working with change data capture (CDC) streams
+     * in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/cdc.html) in the
+     * *Amazon Keyspaces Developer Guide* .
+     */
+    public fun cdcSpecification(cdcSpecification: CfnTable.CdcSpecificationProperty)
+
+    /**
+     * @param cdcSpecification The settings for the CDC stream of a table.
+     * For more information about CDC streams, see [Working with change data capture (CDC) streams
+     * in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/cdc.html) in the
+     * *Amazon Keyspaces Developer Guide* .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1a36d4909537b1d59e65ed544e92c59fd1a52fea423876d7587ceb99fe326ae1")
+    public
+        fun cdcSpecification(cdcSpecification: CfnTable.CdcSpecificationProperty.Builder.() -> Unit)
 
     /**
      * @param clientSideTimestampsEnabled Enables client-side timestamps for the table.
@@ -659,6 +702,38 @@ public interface CfnTableProps {
         billingMode(CfnTable.BillingModeProperty(billingMode))
 
     /**
+     * @param cdcSpecification The settings for the CDC stream of a table.
+     * For more information about CDC streams, see [Working with change data capture (CDC) streams
+     * in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/cdc.html) in the
+     * *Amazon Keyspaces Developer Guide* .
+     */
+    override fun cdcSpecification(cdcSpecification: IResolvable) {
+      cdkBuilder.cdcSpecification(cdcSpecification.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param cdcSpecification The settings for the CDC stream of a table.
+     * For more information about CDC streams, see [Working with change data capture (CDC) streams
+     * in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/cdc.html) in the
+     * *Amazon Keyspaces Developer Guide* .
+     */
+    override fun cdcSpecification(cdcSpecification: CfnTable.CdcSpecificationProperty) {
+      cdkBuilder.cdcSpecification(cdcSpecification.let(CfnTable.CdcSpecificationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param cdcSpecification The settings for the CDC stream of a table.
+     * For more information about CDC streams, see [Working with change data capture (CDC) streams
+     * in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/cdc.html) in the
+     * *Amazon Keyspaces Developer Guide* .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1a36d4909537b1d59e65ed544e92c59fd1a52fea423876d7587ceb99fe326ae1")
+    override
+        fun cdcSpecification(cdcSpecification: CfnTable.CdcSpecificationProperty.Builder.() -> Unit):
+        Unit = cdcSpecification(CfnTable.CdcSpecificationProperty(cdcSpecification))
+
+    /**
      * @param clientSideTimestampsEnabled Enables client-side timestamps for the table.
      * By default, the setting is disabled. You can enable client-side timestamps with the following
      * option:
@@ -965,6 +1040,17 @@ public interface CfnTableProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-billingmode)
      */
     override fun billingMode(): Any? = unwrap(this).getBillingMode()
+
+    /**
+     * The settings for the CDC stream of a table.
+     *
+     * For more information about CDC streams, see [Working with change data capture (CDC) streams
+     * in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/cdc.html) in the
+     * *Amazon Keyspaces Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-cdcspecification)
+     */
+    override fun cdcSpecification(): Any? = unwrap(this).getCdcSpecification()
 
     /**
      * Enables client-side timestamps for the table.

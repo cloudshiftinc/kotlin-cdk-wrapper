@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.verifiedpermissions
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -9,6 +10,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.jvm.JvmName
 
 /**
@@ -25,16 +27,33 @@ import kotlin.jvm.JvmName
  * .mode("mode")
  * .build())
  * // the properties below are optional
+ * .deletionProtection(DeletionProtectionProperty.builder()
+ * .mode("mode")
+ * .build())
  * .description("description")
  * .schema(SchemaDefinitionProperty.builder()
  * .cedarJson("cedarJson")
  * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policystore.html)
  */
 public interface CfnPolicyStoreProps {
+  /**
+   * Specifies whether the policy store can be deleted. If enabled, the policy store can't be
+   * deleted.
+   *
+   * The default state is `DISABLED` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policystore.html#cfn-verifiedpermissions-policystore-deletionprotection)
+   */
+  public fun deletionProtection(): Any? = unwrap(this).getDeletionProtection()
+
   /**
    * Descriptive text that you can provide to help with identification of the current policy store.
    *
@@ -53,6 +72,13 @@ public interface CfnPolicyStoreProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policystore.html#cfn-verifiedpermissions-policystore-schema)
    */
   public fun schema(): Any? = unwrap(this).getSchema()
+
+  /**
+   * The list of key-value pairs to associate with the policy store.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policystore.html#cfn-verifiedpermissions-policystore-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
    * Specifies the validation setting for this policy store.
@@ -78,6 +104,30 @@ public interface CfnPolicyStoreProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param deletionProtection Specifies whether the policy store can be deleted. If enabled, the
+     * policy store can't be deleted.
+     * The default state is `DISABLED` .
+     */
+    public fun deletionProtection(deletionProtection: IResolvable)
+
+    /**
+     * @param deletionProtection Specifies whether the policy store can be deleted. If enabled, the
+     * policy store can't be deleted.
+     * The default state is `DISABLED` .
+     */
+    public fun deletionProtection(deletionProtection: CfnPolicyStore.DeletionProtectionProperty)
+
+    /**
+     * @param deletionProtection Specifies whether the policy store can be deleted. If enabled, the
+     * policy store can't be deleted.
+     * The default state is `DISABLED` .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("bac5763e1ed2e3b3831dcf0b8ab21ecba54f64862941d3fa30d54870256c2cd1")
+    public
+        fun deletionProtection(deletionProtection: CfnPolicyStore.DeletionProtectionProperty.Builder.() -> Unit)
+
     /**
      * @param description Descriptive text that you can provide to help with identification of the
      * current policy store.
@@ -112,6 +162,16 @@ public interface CfnPolicyStoreProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c1e2df7745e1396a73afdcbf2a815d412c1eee9b0ced71b3785a01285e267a6e")
     public fun schema(schema: CfnPolicyStore.SchemaDefinitionProperty.Builder.() -> Unit)
+
+    /**
+     * @param tags The list of key-value pairs to associate with the policy store.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags The list of key-value pairs to associate with the policy store.
+     */
+    public fun tags(vararg tags: CfnTag)
 
     /**
      * @param validationSettings Specifies the validation setting for this policy store. 
@@ -168,6 +228,35 @@ public interface CfnPolicyStoreProps {
         software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStoreProps.builder()
 
     /**
+     * @param deletionProtection Specifies whether the policy store can be deleted. If enabled, the
+     * policy store can't be deleted.
+     * The default state is `DISABLED` .
+     */
+    override fun deletionProtection(deletionProtection: IResolvable) {
+      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param deletionProtection Specifies whether the policy store can be deleted. If enabled, the
+     * policy store can't be deleted.
+     * The default state is `DISABLED` .
+     */
+    override fun deletionProtection(deletionProtection: CfnPolicyStore.DeletionProtectionProperty) {
+      cdkBuilder.deletionProtection(deletionProtection.let(CfnPolicyStore.DeletionProtectionProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param deletionProtection Specifies whether the policy store can be deleted. If enabled, the
+     * policy store can't be deleted.
+     * The default state is `DISABLED` .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("bac5763e1ed2e3b3831dcf0b8ab21ecba54f64862941d3fa30d54870256c2cd1")
+    override
+        fun deletionProtection(deletionProtection: CfnPolicyStore.DeletionProtectionProperty.Builder.() -> Unit):
+        Unit = deletionProtection(CfnPolicyStore.DeletionProtectionProperty(deletionProtection))
+
+    /**
      * @param description Descriptive text that you can provide to help with identification of the
      * current policy store.
      */
@@ -208,6 +297,18 @@ public interface CfnPolicyStoreProps {
     @JvmName("c1e2df7745e1396a73afdcbf2a815d412c1eee9b0ced71b3785a01285e267a6e")
     override fun schema(schema: CfnPolicyStore.SchemaDefinitionProperty.Builder.() -> Unit): Unit =
         schema(CfnPolicyStore.SchemaDefinitionProperty(schema))
+
+    /**
+     * @param tags The list of key-value pairs to associate with the policy store.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags The list of key-value pairs to associate with the policy store.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
      * @param validationSettings Specifies the validation setting for this policy store. 
@@ -271,6 +372,16 @@ public interface CfnPolicyStoreProps {
   ) : CdkObject(cdkObject),
       CfnPolicyStoreProps {
     /**
+     * Specifies whether the policy store can be deleted. If enabled, the policy store can't be
+     * deleted.
+     *
+     * The default state is `DISABLED` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policystore.html#cfn-verifiedpermissions-policystore-deletionprotection)
+     */
+    override fun deletionProtection(): Any? = unwrap(this).getDeletionProtection()
+
+    /**
      * Descriptive text that you can provide to help with identification of the current policy
      * store.
      *
@@ -289,6 +400,13 @@ public interface CfnPolicyStoreProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policystore.html#cfn-verifiedpermissions-policystore-schema)
      */
     override fun schema(): Any? = unwrap(this).getSchema()
+
+    /**
+     * The list of key-value pairs to associate with the policy store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policystore.html#cfn-verifiedpermissions-policystore-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
      * Specifies the validation setting for this policy store.

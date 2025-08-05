@@ -418,6 +418,9 @@ public open class EksJobDefinition(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.batch.EksJobDefinition.PROPERTY_INJECTION_ID
+
     public fun fromEksJobDefinitionArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -25,7 +25,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .logGroup(logGroup)
  * .metricNamespace("MyApp")
  * .metricName("Latency")
- * .filterPattern(FilterPattern.exists("$.latency"))
+ * .filterPattern(FilterPattern.all(FilterPattern.exists("$.latency"),
+ * FilterPattern.regexValue("$.message", "=", "bind: address already in use")))
  * .metricValue("$.latency")
  * .build();
  * ```
@@ -289,6 +290,9 @@ public open class MetricFilter(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.logs.MetricFilter.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

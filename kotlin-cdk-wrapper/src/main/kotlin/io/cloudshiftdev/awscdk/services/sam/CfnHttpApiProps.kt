@@ -328,12 +328,12 @@ public interface CfnHttpApiProps {
     /**
      * @param stageVariables the value to be set.
      */
-    public fun stageVariables(stageVariables: IResolvable)
+    public fun stageVariables(stageVariables: Map<String, String>)
 
     /**
      * @param stageVariables the value to be set.
      */
-    public fun stageVariables(stageVariables: Map<String, String>)
+    public fun stageVariables(stageVariables: IResolvable)
 
     /**
      * @param tags the value to be set.
@@ -568,15 +568,15 @@ public interface CfnHttpApiProps {
     /**
      * @param stageVariables the value to be set.
      */
-    override fun stageVariables(stageVariables: IResolvable) {
-      cdkBuilder.stageVariables(stageVariables.let(IResolvable.Companion::unwrap))
+    override fun stageVariables(stageVariables: Map<String, String>) {
+      cdkBuilder.stageVariables(stageVariables)
     }
 
     /**
      * @param stageVariables the value to be set.
      */
-    override fun stageVariables(stageVariables: Map<String, String>) {
-      cdkBuilder.stageVariables(stageVariables)
+    override fun stageVariables(stageVariables: IResolvable) {
+      cdkBuilder.stageVariables(stageVariables.let(IResolvable.Companion::unwrap))
     }
 
     /**

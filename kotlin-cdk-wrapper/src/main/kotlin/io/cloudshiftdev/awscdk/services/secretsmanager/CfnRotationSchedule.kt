@@ -19,32 +19,35 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Sets the rotation schedule and Lambda rotation function for a secret. For more information, see
- * [How rotation
+ * Configure the rotation schedule and Lambda rotation function for a secret. For more information,
+ * see [How rotation
  * works](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) .
  *
- * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
+ * For database credentials, refer to the following resources:
+ *
+ * * Amazon RDS master user credentials: [AWS::RDS::DBCluster
  * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
- * .
- *
- * For Amazon Redshift admin user credentials, see
+ * * Amazon Redshift admin user credentials:
  * [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
+ *
+ * Choose one of the following options for the rotation function:
+ *
+ * * Create a new rotation function using `HostedRotationLambda` based on a [Secrets Manager
+ * rotation function
+ * template](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
  * .
+ * * Use an existing rotation function by specifying its ARN with `RotationLambdaARN` .
  *
- * For the rotation function, you have two options:
  *
- * * You can create a new rotation function based on one of the [Secrets Manager rotation function
- * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
- * by using `HostedRotationLambda` .
- * * You can choose an existing rotation function by using `RotationLambdaARN` .
+ * For database secrets defined in the same AWS CloudFormation template as the database or service:
  *
- * For database secrets, if you define both the secret and the database or service in the AWS
- * CloudFormation template, then you need to define the
+ * * Use the
  * [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html)
- * resource to populate the secret with the connection details of the database or service before you
- * attempt to configure rotation.
+ * resource to populate the secret with connection details.
+ * * Add a `DependsOn` attribute to the `RotationSchedule` resource that uses a
+ * `SecretTargetAttachment` . This ensures the rotation is configured after the secret is populated
+ * with connection details. &gt; You can define only one rotation schedule per secret.
  *
- * For a single secret, you can only define one rotation schedule with it.
  *
  * Example:
  *
@@ -152,22 +155,22 @@ public open class CfnRotationSchedule(
   }
 
   /**
-   * Specifies whether to rotate the secret immediately or wait until the next scheduled rotation
-   * window.
+   * Determines whether to rotate the secret immediately or wait until the next scheduled rotation
+   * window when the rotation schedule is updated.
    */
   public open fun rotateImmediatelyOnUpdate(): Any? = unwrap(this).getRotateImmediatelyOnUpdate()
 
   /**
-   * Specifies whether to rotate the secret immediately or wait until the next scheduled rotation
-   * window.
+   * Determines whether to rotate the secret immediately or wait until the next scheduled rotation
+   * window when the rotation schedule is updated.
    */
   public open fun rotateImmediatelyOnUpdate(`value`: Boolean) {
     unwrap(this).setRotateImmediatelyOnUpdate(`value`)
   }
 
   /**
-   * Specifies whether to rotate the secret immediately or wait until the next scheduled rotation
-   * window.
+   * Determines whether to rotate the secret immediately or wait until the next scheduled rotation
+   * window when the rotation schedule is updated.
    */
   public open fun rotateImmediatelyOnUpdate(`value`: IResolvable) {
     unwrap(this).setRotateImmediatelyOnUpdate(`value`.let(IResolvable.Companion::unwrap))
@@ -327,50 +330,70 @@ public open class CfnRotationSchedule(
         fun hostedRotationLambda(hostedRotationLambda: HostedRotationLambdaProperty.Builder.() -> Unit)
 
     /**
-     * Specifies whether to rotate the secret immediately or wait until the next scheduled rotation
-     * window.
+     * Determines whether to rotate the secret immediately or wait until the next scheduled rotation
+     * window when the rotation schedule is updated.
      *
      * The rotation schedule is defined in `RotationRules` .
      *
-     * If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration
-     * by running the [`testSecret`
+     * The default for `RotateImmediatelyOnUpdate` is `true` . If you don't specify this value,
+     * Secrets Manager rotates the secret immediately.
+     *
+     * If you set `RotateImmediatelyOnUpdate` to `false` , Secrets Manager tests the rotation
+     * configuration by running the [`testSecret`
      * step](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) of
-     * the Lambda rotation function. The test creates an `AWSPENDING` version of the secret and then
+     * the Lambda rotation function. This test creates an `AWSPENDING` version of the secret and then
      * removes it.
      *
-     * If you don't specify this value, then by default, Secrets Manager rotates the secret
-     * immediately.
+     *
+     * When changing an existing rotation schedule and setting `RotateImmediatelyOnUpdate` to
+     * `false` :
+     *
+     * * If using `AutomaticallyAfterDays` or a `ScheduleExpression` with `rate()` , the previously
+     * scheduled rotation might still occur.
+     * * To prevent unintended rotations, use a `ScheduleExpression` with `cron()` for granular
+     * control over rotation windows.
+     *
      *
      * Rotation is an asynchronous process. For more information, see [How rotation
      * works](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-rotateimmediatelyonupdate)
-     * @param rotateImmediatelyOnUpdate Specifies whether to rotate the secret immediately or wait
-     * until the next scheduled rotation window. 
+     * @param rotateImmediatelyOnUpdate Determines whether to rotate the secret immediately or wait
+     * until the next scheduled rotation window when the rotation schedule is updated. 
      */
     public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean)
 
     /**
-     * Specifies whether to rotate the secret immediately or wait until the next scheduled rotation
-     * window.
+     * Determines whether to rotate the secret immediately or wait until the next scheduled rotation
+     * window when the rotation schedule is updated.
      *
      * The rotation schedule is defined in `RotationRules` .
      *
-     * If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration
-     * by running the [`testSecret`
+     * The default for `RotateImmediatelyOnUpdate` is `true` . If you don't specify this value,
+     * Secrets Manager rotates the secret immediately.
+     *
+     * If you set `RotateImmediatelyOnUpdate` to `false` , Secrets Manager tests the rotation
+     * configuration by running the [`testSecret`
      * step](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) of
-     * the Lambda rotation function. The test creates an `AWSPENDING` version of the secret and then
+     * the Lambda rotation function. This test creates an `AWSPENDING` version of the secret and then
      * removes it.
      *
-     * If you don't specify this value, then by default, Secrets Manager rotates the secret
-     * immediately.
+     *
+     * When changing an existing rotation schedule and setting `RotateImmediatelyOnUpdate` to
+     * `false` :
+     *
+     * * If using `AutomaticallyAfterDays` or a `ScheduleExpression` with `rate()` , the previously
+     * scheduled rotation might still occur.
+     * * To prevent unintended rotations, use a `ScheduleExpression` with `cron()` for granular
+     * control over rotation windows.
+     *
      *
      * Rotation is an asynchronous process. For more information, see [How rotation
      * works](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-rotateimmediatelyonupdate)
-     * @param rotateImmediatelyOnUpdate Specifies whether to rotate the secret immediately or wait
-     * until the next scheduled rotation window. 
+     * @param rotateImmediatelyOnUpdate Determines whether to rotate the secret immediately or wait
+     * until the next scheduled rotation window when the rotation schedule is updated. 
      */
     public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: IResolvable)
 
@@ -546,52 +569,72 @@ public open class CfnRotationSchedule(
         Unit = hostedRotationLambda(HostedRotationLambdaProperty(hostedRotationLambda))
 
     /**
-     * Specifies whether to rotate the secret immediately or wait until the next scheduled rotation
-     * window.
+     * Determines whether to rotate the secret immediately or wait until the next scheduled rotation
+     * window when the rotation schedule is updated.
      *
      * The rotation schedule is defined in `RotationRules` .
      *
-     * If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration
-     * by running the [`testSecret`
+     * The default for `RotateImmediatelyOnUpdate` is `true` . If you don't specify this value,
+     * Secrets Manager rotates the secret immediately.
+     *
+     * If you set `RotateImmediatelyOnUpdate` to `false` , Secrets Manager tests the rotation
+     * configuration by running the [`testSecret`
      * step](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) of
-     * the Lambda rotation function. The test creates an `AWSPENDING` version of the secret and then
+     * the Lambda rotation function. This test creates an `AWSPENDING` version of the secret and then
      * removes it.
      *
-     * If you don't specify this value, then by default, Secrets Manager rotates the secret
-     * immediately.
+     *
+     * When changing an existing rotation schedule and setting `RotateImmediatelyOnUpdate` to
+     * `false` :
+     *
+     * * If using `AutomaticallyAfterDays` or a `ScheduleExpression` with `rate()` , the previously
+     * scheduled rotation might still occur.
+     * * To prevent unintended rotations, use a `ScheduleExpression` with `cron()` for granular
+     * control over rotation windows.
+     *
      *
      * Rotation is an asynchronous process. For more information, see [How rotation
      * works](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-rotateimmediatelyonupdate)
-     * @param rotateImmediatelyOnUpdate Specifies whether to rotate the secret immediately or wait
-     * until the next scheduled rotation window. 
+     * @param rotateImmediatelyOnUpdate Determines whether to rotate the secret immediately or wait
+     * until the next scheduled rotation window when the rotation schedule is updated. 
      */
     override fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
       cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate)
     }
 
     /**
-     * Specifies whether to rotate the secret immediately or wait until the next scheduled rotation
-     * window.
+     * Determines whether to rotate the secret immediately or wait until the next scheduled rotation
+     * window when the rotation schedule is updated.
      *
      * The rotation schedule is defined in `RotationRules` .
      *
-     * If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration
-     * by running the [`testSecret`
+     * The default for `RotateImmediatelyOnUpdate` is `true` . If you don't specify this value,
+     * Secrets Manager rotates the secret immediately.
+     *
+     * If you set `RotateImmediatelyOnUpdate` to `false` , Secrets Manager tests the rotation
+     * configuration by running the [`testSecret`
      * step](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) of
-     * the Lambda rotation function. The test creates an `AWSPENDING` version of the secret and then
+     * the Lambda rotation function. This test creates an `AWSPENDING` version of the secret and then
      * removes it.
      *
-     * If you don't specify this value, then by default, Secrets Manager rotates the secret
-     * immediately.
+     *
+     * When changing an existing rotation schedule and setting `RotateImmediatelyOnUpdate` to
+     * `false` :
+     *
+     * * If using `AutomaticallyAfterDays` or a `ScheduleExpression` with `rate()` , the previously
+     * scheduled rotation might still occur.
+     * * To prevent unintended rotations, use a `ScheduleExpression` with `cron()` for granular
+     * control over rotation windows.
+     *
      *
      * Rotation is an asynchronous process. For more information, see [How rotation
      * works](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-rotateimmediatelyonupdate)
-     * @param rotateImmediatelyOnUpdate Specifies whether to rotate the secret immediately or wait
-     * until the next scheduled rotation window. 
+     * @param rotateImmediatelyOnUpdate Determines whether to rotate the secret immediately or wait
+     * until the next scheduled rotation window when the rotation schedule is updated. 
      */
     override fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: IResolvable) {
       cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate.let(IResolvable.Companion::unwrap))
@@ -1631,6 +1674,16 @@ public open class CfnRotationSchedule(
    *
    * We recommend you use `ScheduleExpression` to set a cron or rate expression for the schedule and
    * `Duration` to set the length of the rotation window.
+   *
+   *
+   * When changing an existing rotation schedule and setting `RotateImmediatelyOnUpdate` to `false`
+   * :
+   *
+   * * If using `AutomaticallyAfterDays` or a `ScheduleExpression` with `rate()` , the previously
+   * scheduled rotation might still occur.
+   * * To prevent unintended rotations, use a `ScheduleExpression` with `cron()` for granular
+   * control over rotation windows.
+   *
    *
    * Example:
    *

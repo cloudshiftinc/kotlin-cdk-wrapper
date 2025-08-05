@@ -227,6 +227,9 @@ public open class NetworkAcl(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ec2.NetworkAcl.PROPERTY_INJECTION_ID
+
     public fun fromNetworkAclId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

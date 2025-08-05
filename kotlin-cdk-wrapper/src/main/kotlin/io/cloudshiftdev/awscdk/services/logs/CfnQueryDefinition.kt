@@ -30,6 +30,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .queryString("queryString")
  * // the properties below are optional
  * .logGroupNames(List.of("logGroupNames"))
+ * .queryLanguage("queryLanguage")
  * .build();
  * ```
  *
@@ -99,6 +100,18 @@ public open class CfnQueryDefinition(
   }
 
   /**
+   * The query language used for this query.
+   */
+  public open fun queryLanguage(): String? = unwrap(this).getQueryLanguage()
+
+  /**
+   * The query language used for this query.
+   */
+  public open fun queryLanguage(`value`: String) {
+    unwrap(this).setQueryLanguage(`value`)
+  }
+
+  /**
    * The query string to use for this query definition.
    */
   public open fun queryString(): String = unwrap(this).getQueryString()
@@ -146,6 +159,21 @@ public open class CfnQueryDefinition(
      * @param name A name for the query definition. 
      */
     public fun name(name: String)
+
+    /**
+     * The query language used for this query.
+     *
+     * For more information about the query languages that CloudWatch Logs supports, see [Supported
+     * query
+     * languages](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_AnalyzeLogData_Languages.html)
+     * .
+     *
+     * Default: - "CWLI"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-querydefinition.html#cfn-logs-querydefinition-querylanguage)
+     * @param queryLanguage The query language used for this query. 
+     */
+    public fun queryLanguage(queryLanguage: String)
 
     /**
      * The query string to use for this query definition.
@@ -201,6 +229,23 @@ public open class CfnQueryDefinition(
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * The query language used for this query.
+     *
+     * For more information about the query languages that CloudWatch Logs supports, see [Supported
+     * query
+     * languages](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_AnalyzeLogData_Languages.html)
+     * .
+     *
+     * Default: - "CWLI"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-querydefinition.html#cfn-logs-querydefinition-querylanguage)
+     * @param queryLanguage The query language used for this query. 
+     */
+    override fun queryLanguage(queryLanguage: String) {
+      cdkBuilder.queryLanguage(queryLanguage)
     }
 
     /**

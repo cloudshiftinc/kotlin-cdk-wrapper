@@ -18,6 +18,8 @@ import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.s3.LifecycleRule
 import kotlin.Boolean
+import kotlin.Deprecated
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -32,15 +34,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.*;
  * Canary canary = Canary.Builder.create(this, "MyCanary")
  * .schedule(Schedule.rate(Duration.minutes(5)))
  * .test(Test.custom(CustomTestOptions.builder()
  * .code(Code.fromAsset(join(__dirname, "canary")))
  * .handler("index.handler")
  * .build()))
- * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
- * .memory(Size.mebibytes(1024))
+ * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_7_0)
+ * .resourcesToReplicateTags(List.of(ResourceToReplicateTags.LAMBDA_FUNCTION))
  * .build();
  * ```
  */
@@ -309,15 +310,36 @@ public open class Canary(
     public fun canaryName(canaryName: String)
 
     /**
-     * Specify the underlying resources to be cleaned up when the canary is deleted.
+     * (deprecated) Specify the underlying resources to be cleaned up when the canary is deleted.
      *
      * Using `Cleanup.LAMBDA` will create a Custom Resource to achieve this.
      *
      * Default: Cleanup.NOTHING
      *
+     * @deprecated use provisionedResourceCleanup
      * @param cleanup Specify the underlying resources to be cleaned up when the canary is deleted. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun cleanup(cleanup: Cleanup)
+
+    /**
+     * Specifies whether to perform a dry run before updating the canary.
+     *
+     * If set to true, CDK will execute a dry run to validate the changes before applying them to
+     * the canary.
+     * If the dry run succeeds, the canary will be updated with the changes.
+     * If the dry run fails, the CloudFormation deployment will fail with the dry run's failure
+     * reason.
+     *
+     * If set to false or omitted, the canary will be updated directly without first performing a
+     * dry run.
+     *
+     * Default: undefined - AWS CloudWatch default is false
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/performing-safe-canary-upgrades.html)
+     * @param dryRunAndUpdate Specifies whether to perform a dry run before updating the canary. 
+     */
+    public fun dryRunAndUpdate(dryRunAndUpdate: Boolean)
 
     /**
      * Key-value pairs that the Synthetics caches and makes available for your canary scripts.
@@ -344,6 +366,22 @@ public open class Canary(
     public fun failureRetentionPeriod(failureRetentionPeriod: Duration)
 
     /**
+     * The amount of times the canary will automatically retry a failed run.
+     *
+     * This is only supported on the following runtimes or newer:
+     * `Runtime.SYNTHETICS_NODEJS_PUPPETEER_10_0`, `Runtime.SYNTHETICS_NODEJS_PLAYWRIGHT_2_0`,
+     * `Runtime.SYNTHETICS_PYTHON_SELENIUM_5_1`.
+     * Max retries can be set between 0 and 2. Canaries which time out after 10 minutes are
+     * automatically limited to one retry.
+     *
+     * Default: 0
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_autoretry.html)
+     * @param maxRetries The amount of times the canary will automatically retry a failed run. 
+     */
+    public fun maxRetries(maxRetries: Number)
+
+    /**
      * The maximum amount of memory that the canary can use while running.
      *
      * This value must be a multiple of 64 Mib.
@@ -354,6 +392,51 @@ public open class Canary(
      * @param memory The maximum amount of memory that the canary can use while running. 
      */
     public fun memory(memory: Size)
+
+    /**
+     * Whether to also delete the Lambda functions and layers used by this canary when the canary is
+     * deleted.
+     *
+     * Default: undefined - the default behavior is to not delete the Lambda functions and layers
+     *
+     * @param provisionedResourceCleanup Whether to also delete the Lambda functions and layers used
+     * by this canary when the canary is deleted. 
+     */
+    public fun provisionedResourceCleanup(provisionedResourceCleanup: Boolean)
+
+    /**
+     * Specifies which resources should have their tags replicated to this canary.
+     *
+     * To have the tags that you apply to this canary also be applied to the Lambda
+     * function that the canary uses, specify this property with the value
+     * ResourceToReplicateTags.LAMBDA_FUNCTION. If you do this, CloudWatch Synthetics will keep the
+     * tags of the canary and the
+     * Lambda function synchronized. Any future changes you make to the canary's tags
+     * will also be applied to the function.
+     *
+     * Default: - No resources will have their tags replicated to this canary
+     *
+     * @param resourcesToReplicateTags Specifies which resources should have their tags replicated
+     * to this canary. 
+     */
+    public fun resourcesToReplicateTags(resourcesToReplicateTags: List<ResourceToReplicateTags>)
+
+    /**
+     * Specifies which resources should have their tags replicated to this canary.
+     *
+     * To have the tags that you apply to this canary also be applied to the Lambda
+     * function that the canary uses, specify this property with the value
+     * ResourceToReplicateTags.LAMBDA_FUNCTION. If you do this, CloudWatch Synthetics will keep the
+     * tags of the canary and the
+     * Lambda function synchronized. Any future changes you make to the canary's tags
+     * will also be applied to the function.
+     *
+     * Default: - No resources will have their tags replicated to this canary
+     *
+     * @param resourcesToReplicateTags Specifies which resources should have their tags replicated
+     * to this canary. 
+     */
+    public fun resourcesToReplicateTags(vararg resourcesToReplicateTags: ResourceToReplicateTags)
 
     /**
      * Canary execution role.
@@ -643,16 +726,39 @@ public open class Canary(
     }
 
     /**
-     * Specify the underlying resources to be cleaned up when the canary is deleted.
+     * (deprecated) Specify the underlying resources to be cleaned up when the canary is deleted.
      *
      * Using `Cleanup.LAMBDA` will create a Custom Resource to achieve this.
      *
      * Default: Cleanup.NOTHING
      *
+     * @deprecated use provisionedResourceCleanup
      * @param cleanup Specify the underlying resources to be cleaned up when the canary is deleted. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun cleanup(cleanup: Cleanup) {
       cdkBuilder.cleanup(cleanup.let(Cleanup.Companion::unwrap))
+    }
+
+    /**
+     * Specifies whether to perform a dry run before updating the canary.
+     *
+     * If set to true, CDK will execute a dry run to validate the changes before applying them to
+     * the canary.
+     * If the dry run succeeds, the canary will be updated with the changes.
+     * If the dry run fails, the CloudFormation deployment will fail with the dry run's failure
+     * reason.
+     *
+     * If set to false or omitted, the canary will be updated directly without first performing a
+     * dry run.
+     *
+     * Default: undefined - AWS CloudWatch default is false
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/performing-safe-canary-upgrades.html)
+     * @param dryRunAndUpdate Specifies whether to perform a dry run before updating the canary. 
+     */
+    override fun dryRunAndUpdate(dryRunAndUpdate: Boolean) {
+      cdkBuilder.dryRunAndUpdate(dryRunAndUpdate)
     }
 
     /**
@@ -684,6 +790,24 @@ public open class Canary(
     }
 
     /**
+     * The amount of times the canary will automatically retry a failed run.
+     *
+     * This is only supported on the following runtimes or newer:
+     * `Runtime.SYNTHETICS_NODEJS_PUPPETEER_10_0`, `Runtime.SYNTHETICS_NODEJS_PLAYWRIGHT_2_0`,
+     * `Runtime.SYNTHETICS_PYTHON_SELENIUM_5_1`.
+     * Max retries can be set between 0 and 2. Canaries which time out after 10 minutes are
+     * automatically limited to one retry.
+     *
+     * Default: 0
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_autoretry.html)
+     * @param maxRetries The amount of times the canary will automatically retry a failed run. 
+     */
+    override fun maxRetries(maxRetries: Number) {
+      cdkBuilder.maxRetries(maxRetries)
+    }
+
+    /**
      * The maximum amount of memory that the canary can use while running.
      *
      * This value must be a multiple of 64 Mib.
@@ -696,6 +820,56 @@ public open class Canary(
     override fun memory(memory: Size) {
       cdkBuilder.memory(memory.let(Size.Companion::unwrap))
     }
+
+    /**
+     * Whether to also delete the Lambda functions and layers used by this canary when the canary is
+     * deleted.
+     *
+     * Default: undefined - the default behavior is to not delete the Lambda functions and layers
+     *
+     * @param provisionedResourceCleanup Whether to also delete the Lambda functions and layers used
+     * by this canary when the canary is deleted. 
+     */
+    override fun provisionedResourceCleanup(provisionedResourceCleanup: Boolean) {
+      cdkBuilder.provisionedResourceCleanup(provisionedResourceCleanup)
+    }
+
+    /**
+     * Specifies which resources should have their tags replicated to this canary.
+     *
+     * To have the tags that you apply to this canary also be applied to the Lambda
+     * function that the canary uses, specify this property with the value
+     * ResourceToReplicateTags.LAMBDA_FUNCTION. If you do this, CloudWatch Synthetics will keep the
+     * tags of the canary and the
+     * Lambda function synchronized. Any future changes you make to the canary's tags
+     * will also be applied to the function.
+     *
+     * Default: - No resources will have their tags replicated to this canary
+     *
+     * @param resourcesToReplicateTags Specifies which resources should have their tags replicated
+     * to this canary. 
+     */
+    override fun resourcesToReplicateTags(resourcesToReplicateTags: List<ResourceToReplicateTags>) {
+      cdkBuilder.resourcesToReplicateTags(resourcesToReplicateTags.map(ResourceToReplicateTags.Companion::unwrap))
+    }
+
+    /**
+     * Specifies which resources should have their tags replicated to this canary.
+     *
+     * To have the tags that you apply to this canary also be applied to the Lambda
+     * function that the canary uses, specify this property with the value
+     * ResourceToReplicateTags.LAMBDA_FUNCTION. If you do this, CloudWatch Synthetics will keep the
+     * tags of the canary and the
+     * Lambda function synchronized. Any future changes you make to the canary's tags
+     * will also be applied to the function.
+     *
+     * Default: - No resources will have their tags replicated to this canary
+     *
+     * @param resourcesToReplicateTags Specifies which resources should have their tags replicated
+     * to this canary. 
+     */
+    override fun resourcesToReplicateTags(vararg resourcesToReplicateTags: ResourceToReplicateTags):
+        Unit = resourcesToReplicateTags(resourcesToReplicateTags.toList())
 
     /**
      * Canary execution role.
@@ -880,6 +1054,9 @@ public open class Canary(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.synthetics.Canary.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

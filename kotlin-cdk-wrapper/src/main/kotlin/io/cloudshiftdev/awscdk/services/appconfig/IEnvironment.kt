@@ -59,6 +59,36 @@ public interface IEnvironment : IResource {
   public fun applicationId(): String
 
   /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to an application.
+   *
+   * @param eventDestination The event that occurs during the extension. 
+   * @param options Options for the extension.
+   */
+  public fun atDeploymentTick(eventDestination: IEventDestination)
+
+  /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to an application.
+   *
+   * @param eventDestination The event that occurs during the extension. 
+   * @param options Options for the extension.
+   */
+  public fun atDeploymentTick(eventDestination: IEventDestination, options: ExtensionOptions)
+
+  /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to an application.
+   *
+   * @param eventDestination The event that occurs during the extension. 
+   * @param options Options for the extension.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("f8c201d364bd1348c470ff45a380b57e5cbcd5d83fb8aa9250995db9670d33c2")
+  public fun atDeploymentTick(eventDestination: IEventDestination,
+      options: ExtensionOptions.Builder.() -> Unit)
+
+  /**
    * The description of the environment.
    */
   public fun description(): String? = unwrap(this).getDescription()
@@ -419,6 +449,42 @@ public interface IEnvironment : IResource {
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
+
+    /**
+     * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+     * extension association to an application.
+     *
+     * @param eventDestination The event that occurs during the extension. 
+     * @param options Options for the extension.
+     */
+    override fun atDeploymentTick(eventDestination: IEventDestination) {
+      unwrap(this).atDeploymentTick(eventDestination.let(IEventDestination.Companion::unwrap))
+    }
+
+    /**
+     * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+     * extension association to an application.
+     *
+     * @param eventDestination The event that occurs during the extension. 
+     * @param options Options for the extension.
+     */
+    override fun atDeploymentTick(eventDestination: IEventDestination, options: ExtensionOptions) {
+      unwrap(this).atDeploymentTick(eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
+    }
+
+    /**
+     * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+     * extension association to an application.
+     *
+     * @param eventDestination The event that occurs during the extension. 
+     * @param options Options for the extension.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f8c201d364bd1348c470ff45a380b57e5cbcd5d83fb8aa9250995db9670d33c2")
+    override fun atDeploymentTick(eventDestination: IEventDestination,
+        options: ExtensionOptions.Builder.() -> Unit): Unit = atDeploymentTick(eventDestination,
+        ExtensionOptions(options))
 
     /**
      * The description of the environment.

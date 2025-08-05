@@ -54,6 +54,43 @@ public open class ExtensibleBase(
   }
 
   /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to the derived resource.
+   *
+   * @param eventDestination 
+   * @param options
+   */
+  public override fun atDeploymentTick(eventDestination: IEventDestination) {
+    unwrap(this).atDeploymentTick(eventDestination.let(IEventDestination.Companion::unwrap))
+  }
+
+  /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to the derived resource.
+   *
+   * @param eventDestination 
+   * @param options
+   */
+  public override fun atDeploymentTick(eventDestination: IEventDestination,
+      options: ExtensionOptions) {
+    unwrap(this).atDeploymentTick(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
+  }
+
+  /**
+   * Adds an AT_DEPLOYMENT_TICK extension with the provided event destination and also creates an
+   * extension association to the derived resource.
+   *
+   * @param eventDestination 
+   * @param options
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("f8c201d364bd1348c470ff45a380b57e5cbcd5d83fb8aa9250995db9670d33c2")
+  public override fun atDeploymentTick(eventDestination: IEventDestination,
+      options: ExtensionOptions.Builder.() -> Unit): Unit = atDeploymentTick(eventDestination,
+      ExtensionOptions(options))
+
+  /**
    * Adds an extension defined by the action point and event destination and also creates an
    * extension association to the derived resource.
    *

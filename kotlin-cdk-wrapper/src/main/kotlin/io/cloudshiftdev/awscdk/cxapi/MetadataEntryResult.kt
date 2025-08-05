@@ -10,6 +10,8 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -46,6 +48,16 @@ public interface MetadataEntryResult : MetadataEntry {
      * @param data The data.
      */
     public fun `data`(`data`: String)
+
+    /**
+     * @param data The data.
+     */
+    public fun `data`(`data`: Number)
+
+    /**
+     * @param data The data.
+     */
+    public fun `data`(`data`: Boolean)
 
     /**
      * @param data The data.
@@ -110,6 +122,20 @@ public interface MetadataEntryResult : MetadataEntry {
      * @param data The data.
      */
     override fun `data`(`data`: String) {
+      cdkBuilder.`data`(`data`)
+    }
+
+    /**
+     * @param data The data.
+     */
+    override fun `data`(`data`: Number) {
+      cdkBuilder.`data`(`data`)
+    }
+
+    /**
+     * @param data The data.
+     */
+    override fun `data`(`data`: Boolean) {
       cdkBuilder.`data`(`data`)
     }
 

@@ -47,7 +47,7 @@ public interface CfnWaitConditionProps {
    * A reference to the wait condition handle used to signal this wait condition.
    *
    * Use the `Ref` intrinsic function to specify an
-   * [`AWS::CloudFormation::WaitConditionHandle`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html)
+   * [AWS::CloudFormation::WaitConditionHandle](https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-cloudformation-waitconditionhandle.html)
    * resource.
    *
    * Anytime you add a `WaitCondition` resource during a stack update, you must associate the wait
@@ -95,7 +95,7 @@ public interface CfnWaitConditionProps {
     /**
      * @param handle A reference to the wait condition handle used to signal this wait condition.
      * Use the `Ref` intrinsic function to specify an
-     * [`AWS::CloudFormation::WaitConditionHandle`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html)
+     * [AWS::CloudFormation::WaitConditionHandle](https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-cloudformation-waitconditionhandle.html)
      * resource.
      *
      * Anytime you add a `WaitCondition` resource during a stack update, you must associate the wait
@@ -140,7 +140,7 @@ public interface CfnWaitConditionProps {
     /**
      * @param handle A reference to the wait condition handle used to signal this wait condition.
      * Use the `Ref` intrinsic function to specify an
-     * [`AWS::CloudFormation::WaitConditionHandle`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html)
+     * [AWS::CloudFormation::WaitConditionHandle](https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-cloudformation-waitconditionhandle.html)
      * resource.
      *
      * Anytime you add a `WaitCondition` resource during a stack update, you must associate the wait
@@ -193,7 +193,7 @@ public interface CfnWaitConditionProps {
      * A reference to the wait condition handle used to signal this wait condition.
      *
      * Use the `Ref` intrinsic function to specify an
-     * [`AWS::CloudFormation::WaitConditionHandle`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html)
+     * [AWS::CloudFormation::WaitConditionHandle](https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-cloudformation-waitconditionhandle.html)
      * resource.
      *
      * Anytime you add a `WaitCondition` resource during a stack update, you must associate the wait

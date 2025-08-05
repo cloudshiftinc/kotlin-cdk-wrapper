@@ -22,7 +22,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Your SCEP clients include the challenge password as part of their certificate request to Connector
  * for SCEP. To retrieve the connector Amazon Resource Names (ARNs) for the connectors in your account,
  * call
- * [ListConnectors](https://docs.aws.amazon.com/C4SCEP_API/pca-connector-scep/latest/APIReference/API_ListConnectors.html)
+ * [ListConnectors](https://docs.aws.amazon.com/pca-connector-scep/latest/APIReference/API_ListConnectors.html)
  * .
  *
  * To create additional challenge passwords for the connector, call `CreateChallenge` again. We

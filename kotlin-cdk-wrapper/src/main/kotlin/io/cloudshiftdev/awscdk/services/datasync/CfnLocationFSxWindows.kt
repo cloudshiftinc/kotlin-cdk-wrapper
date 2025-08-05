@@ -75,14 +75,14 @@ public open class CfnLocationFSxWindows(
   public open fun attrLocationUri(): String = unwrap(this).getAttrLocationUri()
 
   /**
-   * Specifies the name of the Microsoft Active Directory domain that the FSx for Windows File
-   * Server file system belongs to.
+   * Specifies the name of the Windows domain that the FSx for Windows File Server file system
+   * belongs to.
    */
   public open fun domain(): String? = unwrap(this).getDomain()
 
   /**
-   * Specifies the name of the Microsoft Active Directory domain that the FSx for Windows File
-   * Server file system belongs to.
+   * Specifies the name of the Windows domain that the FSx for Windows File Server file system
+   * belongs to.
    */
   public open fun domain(`value`: String) {
     unwrap(this).setDomain(`value`)
@@ -199,15 +199,15 @@ public open class CfnLocationFSxWindows(
   @CdkDslMarker
   public interface Builder {
     /**
-     * Specifies the name of the Microsoft Active Directory domain that the FSx for Windows File
-     * Server file system belongs to.
+     * Specifies the name of the Windows domain that the FSx for Windows File Server file system
+     * belongs to.
      *
      * If you have multiple Active Directory domains in your environment, configuring this parameter
      * makes sure that DataSync connects to the right file system.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-domain)
-     * @param domain Specifies the name of the Microsoft Active Directory domain that the FSx for
-     * Windows File Server file system belongs to. 
+     * @param domain Specifies the name of the Windows domain that the FSx for Windows File Server
+     * file system belongs to. 
      */
     public fun domain(domain: String)
 
@@ -317,15 +317,15 @@ public open class CfnLocationFSxWindows(
         software.amazon.awscdk.services.datasync.CfnLocationFSxWindows.Builder.create(scope, id)
 
     /**
-     * Specifies the name of the Microsoft Active Directory domain that the FSx for Windows File
-     * Server file system belongs to.
+     * Specifies the name of the Windows domain that the FSx for Windows File Server file system
+     * belongs to.
      *
      * If you have multiple Active Directory domains in your environment, configuring this parameter
      * makes sure that DataSync connects to the right file system.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-domain)
-     * @param domain Specifies the name of the Microsoft Active Directory domain that the FSx for
-     * Windows File Server file system belongs to. 
+     * @param domain Specifies the name of the Windows domain that the FSx for Windows File Server
+     * file system belongs to. 
      */
     override fun domain(domain: String) {
       cdkBuilder.domain(domain)

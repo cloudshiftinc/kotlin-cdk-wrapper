@@ -96,6 +96,14 @@ public interface CfnDeliveryStreamProps {
   public fun deliveryStreamType(): String? = unwrap(this).getDeliveryStreamType()
 
   /**
+   * The structure that configures parameters such as `ThroughputHintInMBs` for a stream configured
+   * with Direct PUT as a source.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-directputsourceconfiguration)
+   */
+  public fun directPutSourceConfiguration(): Any? = unwrap(this).getDirectPutSourceConfiguration()
+
+  /**
    * An Amazon ES destination for the delivery stream.
    *
    * Conditional. You must specify only one destination configuration.
@@ -350,6 +358,28 @@ public interface CfnDeliveryStreamProps {
      * * `KinesisStreamAsSource` : The Firehose stream uses a Kinesis data stream as a source.
      */
     public fun deliveryStreamType(deliveryStreamType: String)
+
+    /**
+     * @param directPutSourceConfiguration The structure that configures parameters such as
+     * `ThroughputHintInMBs` for a stream configured with Direct PUT as a source.
+     */
+    public fun directPutSourceConfiguration(directPutSourceConfiguration: IResolvable)
+
+    /**
+     * @param directPutSourceConfiguration The structure that configures parameters such as
+     * `ThroughputHintInMBs` for a stream configured with Direct PUT as a source.
+     */
+    public
+        fun directPutSourceConfiguration(directPutSourceConfiguration: CfnDeliveryStream.DirectPutSourceConfigurationProperty)
+
+    /**
+     * @param directPutSourceConfiguration The structure that configures parameters such as
+     * `ThroughputHintInMBs` for a stream configured with Direct PUT as a source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("47969a7fbf5c5c72b62470b385496d327a93e6a528ca22b68c658e04f80b81e8")
+    public
+        fun directPutSourceConfiguration(directPutSourceConfiguration: CfnDeliveryStream.DirectPutSourceConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param elasticsearchDestinationConfiguration An Amazon ES destination for the delivery
@@ -851,6 +881,34 @@ public interface CfnDeliveryStreamProps {
     }
 
     /**
+     * @param directPutSourceConfiguration The structure that configures parameters such as
+     * `ThroughputHintInMBs` for a stream configured with Direct PUT as a source.
+     */
+    override fun directPutSourceConfiguration(directPutSourceConfiguration: IResolvable) {
+      cdkBuilder.directPutSourceConfiguration(directPutSourceConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param directPutSourceConfiguration The structure that configures parameters such as
+     * `ThroughputHintInMBs` for a stream configured with Direct PUT as a source.
+     */
+    override
+        fun directPutSourceConfiguration(directPutSourceConfiguration: CfnDeliveryStream.DirectPutSourceConfigurationProperty) {
+      cdkBuilder.directPutSourceConfiguration(directPutSourceConfiguration.let(CfnDeliveryStream.DirectPutSourceConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param directPutSourceConfiguration The structure that configures parameters such as
+     * `ThroughputHintInMBs` for a stream configured with Direct PUT as a source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("47969a7fbf5c5c72b62470b385496d327a93e6a528ca22b68c658e04f80b81e8")
+    override
+        fun directPutSourceConfiguration(directPutSourceConfiguration: CfnDeliveryStream.DirectPutSourceConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        directPutSourceConfiguration(CfnDeliveryStream.DirectPutSourceConfigurationProperty(directPutSourceConfiguration))
+
+    /**
      * @param elasticsearchDestinationConfiguration An Amazon ES destination for the delivery
      * stream.
      * Conditional. You must specify only one destination configuration.
@@ -1330,6 +1388,15 @@ public interface CfnDeliveryStreamProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-deliverystreamtype)
      */
     override fun deliveryStreamType(): String? = unwrap(this).getDeliveryStreamType()
+
+    /**
+     * The structure that configures parameters such as `ThroughputHintInMBs` for a stream
+     * configured with Direct PUT as a source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-directputsourceconfiguration)
+     */
+    override fun directPutSourceConfiguration(): Any? =
+        unwrap(this).getDirectPutSourceConfiguration()
 
     /**
      * An Amazon ES destination for the delivery stream.

@@ -985,7 +985,10 @@ public open class CfnTaskSet(
     /**
      * Whether the task's elastic network interface receives a public IP address.
      *
-     * The default value is `ENABLED` .
+     * Consider the following when you set this value:
+     *
+     * * When you use `create-service` or `update-service` , the default is `DISABLED` .
+     * * When the service `deploymentController` is `ECS` , the value must be `DISABLED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html#cfn-ecs-taskset-awsvpcconfiguration-assignpublicip)
      */
@@ -995,7 +998,7 @@ public open class CfnTaskSet(
      * The IDs of the security groups associated with the task or service.
      *
      * If you don't specify a security group, the default security group for the VPC is used.
-     * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
+     * There's a limit of 5 security groups that can be specified.
      *
      *
      * All specified security groups must be from the same VPC.
@@ -1008,7 +1011,7 @@ public open class CfnTaskSet(
     /**
      * The IDs of the subnets associated with the task or service.
      *
-     * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
+     * There's a limit of 16 subnets that can be specified.
      *
      *
      * All specified subnets must be from the same VPC.
@@ -1026,14 +1029,17 @@ public open class CfnTaskSet(
       /**
        * @param assignPublicIp Whether the task's elastic network interface receives a public IP
        * address.
-       * The default value is `ENABLED` .
+       * Consider the following when you set this value:
+       *
+       * * When you use `create-service` or `update-service` , the default is `DISABLED` .
+       * * When the service `deploymentController` is `ECS` , the value must be `DISABLED` .
        */
       public fun assignPublicIp(assignPublicIp: String)
 
       /**
        * @param securityGroups The IDs of the security groups associated with the task or service.
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified.
        *
        *
        * All specified security groups must be from the same VPC.
@@ -1043,7 +1049,7 @@ public open class CfnTaskSet(
       /**
        * @param securityGroups The IDs of the security groups associated with the task or service.
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified.
        *
        *
        * All specified security groups must be from the same VPC.
@@ -1052,7 +1058,7 @@ public open class CfnTaskSet(
 
       /**
        * @param subnets The IDs of the subnets associated with the task or service. 
-       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified.
        *
        *
        * All specified subnets must be from the same VPC.
@@ -1061,7 +1067,7 @@ public open class CfnTaskSet(
 
       /**
        * @param subnets The IDs of the subnets associated with the task or service. 
-       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified.
        *
        *
        * All specified subnets must be from the same VPC.
@@ -1077,7 +1083,10 @@ public open class CfnTaskSet(
       /**
        * @param assignPublicIp Whether the task's elastic network interface receives a public IP
        * address.
-       * The default value is `ENABLED` .
+       * Consider the following when you set this value:
+       *
+       * * When you use `create-service` or `update-service` , the default is `DISABLED` .
+       * * When the service `deploymentController` is `ECS` , the value must be `DISABLED` .
        */
       override fun assignPublicIp(assignPublicIp: String) {
         cdkBuilder.assignPublicIp(assignPublicIp)
@@ -1086,7 +1095,7 @@ public open class CfnTaskSet(
       /**
        * @param securityGroups The IDs of the security groups associated with the task or service.
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified.
        *
        *
        * All specified security groups must be from the same VPC.
@@ -1098,7 +1107,7 @@ public open class CfnTaskSet(
       /**
        * @param securityGroups The IDs of the security groups associated with the task or service.
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified.
        *
        *
        * All specified security groups must be from the same VPC.
@@ -1108,7 +1117,7 @@ public open class CfnTaskSet(
 
       /**
        * @param subnets The IDs of the subnets associated with the task or service. 
-       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified.
        *
        *
        * All specified subnets must be from the same VPC.
@@ -1119,7 +1128,7 @@ public open class CfnTaskSet(
 
       /**
        * @param subnets The IDs of the subnets associated with the task or service. 
-       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified.
        *
        *
        * All specified subnets must be from the same VPC.
@@ -1137,7 +1146,10 @@ public open class CfnTaskSet(
       /**
        * Whether the task's elastic network interface receives a public IP address.
        *
-       * The default value is `ENABLED` .
+       * Consider the following when you set this value:
+       *
+       * * When you use `create-service` or `update-service` , the default is `DISABLED` .
+       * * When the service `deploymentController` is `ECS` , the value must be `DISABLED` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html#cfn-ecs-taskset-awsvpcconfiguration-assignpublicip)
        */
@@ -1147,7 +1159,7 @@ public open class CfnTaskSet(
        * The IDs of the security groups associated with the task or service.
        *
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified.
        *
        *
        * All specified security groups must be from the same VPC.
@@ -1160,7 +1172,7 @@ public open class CfnTaskSet(
       /**
        * The IDs of the subnets associated with the task or service.
        *
-       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified.
        *
        *
        * All specified subnets must be from the same VPC.
@@ -1218,7 +1230,7 @@ public open class CfnTaskSet(
    * `FARGATE_SPOT` supports Linux tasks with the ARM64 architecture on platform version 1.4.0 or
    * later.
    *
-   * A capacity provider strategy may contain a maximum of 6 capacity providers.
+   * A capacity provider strategy can contain a maximum of 20 capacity providers.
    *
    * Example:
    *

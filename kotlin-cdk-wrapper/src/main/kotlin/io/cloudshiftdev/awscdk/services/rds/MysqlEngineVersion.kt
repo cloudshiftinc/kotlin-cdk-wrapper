@@ -12,18 +12,14 @@ import kotlin.String
  *
  * ```
  * Vpc vpc;
- * DatabaseInstance iopsInstance = DatabaseInstance.Builder.create(this, "IopsInstance")
+ * Key kmsKey;
+ * DatabaseInstance instance = DatabaseInstance.Builder.create(this, "Instance")
  * .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder().version(MysqlEngineVersion.VER_8_0_39).build()))
+ * .instanceType(InstanceType.of(InstanceClass.R7G, InstanceSize.LARGE))
  * .vpc(vpc)
- * .storageType(StorageType.IO1)
- * .iops(5000)
- * .build();
- * DatabaseInstance gp3Instance = DatabaseInstance.Builder.create(this, "Gp3Instance")
- * .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder().version(MysqlEngineVersion.VER_8_0_39).build()))
- * .vpc(vpc)
- * .allocatedStorage(500)
- * .storageType(StorageType.GP3)
- * .storageThroughput(500)
+ * .enablePerformanceInsights(true)
+ * .performanceInsightRetention(PerformanceInsightRetention.LONG_TERM)
+ * .performanceInsightEncryptionKey(kmsKey)
  * .build();
  * ```
  */
@@ -128,6 +124,15 @@ public open class MysqlEngineVersion(
     public val VER_5_7_44_RDS_20240808: MysqlEngineVersion =
         MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_5_7_44_RDS_20240808)
 
+    public val VER_5_7_44_RDS_20250103: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_5_7_44_RDS_20250103)
+
+    public val VER_5_7_44_RDS_20250213: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_5_7_44_RDS_20250213)
+
+    public val VER_5_7_44_RDS_20250508: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_5_7_44_RDS_20250508)
+
     public val VER_8_0: MysqlEngineVersion =
         MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_0)
 
@@ -203,8 +208,20 @@ public open class MysqlEngineVersion(
     public val VER_8_0_40: MysqlEngineVersion =
         MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_0_40)
 
+    public val VER_8_0_41: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_0_41)
+
+    public val VER_8_0_42: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_0_42)
+
     public val VER_8_4_3: MysqlEngineVersion =
         MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_4_3)
+
+    public val VER_8_4_4: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_4_4)
+
+    public val VER_8_4_5: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_4_5)
 
     public fun of(mysqlFullVersion: String, mysqlMajorVersion: String): MysqlEngineVersion =
         software.amazon.awscdk.services.rds.MysqlEngineVersion.of(mysqlFullVersion,

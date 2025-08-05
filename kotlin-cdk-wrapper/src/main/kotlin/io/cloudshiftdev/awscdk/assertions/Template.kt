@@ -254,6 +254,31 @@ public open class Template(
   }
 
   /**
+   * Get the Resource ID of a matching resource, expects only to find one match.
+   *
+   * Throws AssertionError if none or multiple resources were found.
+   *
+   * @return The resource id of the matched resource.
+   * Performs a partial match via `Match.objectLike()`.
+   * @param type the resource type;. 
+   * @param props by default, matches all resources with the given type.
+   */
+  public open fun resourceId(type: String): String = unwrap(this).getResourceId(type)
+
+  /**
+   * Get the Resource ID of a matching resource, expects only to find one match.
+   *
+   * Throws AssertionError if none or multiple resources were found.
+   *
+   * @return The resource id of the matched resource.
+   * Performs a partial match via `Match.objectLike()`.
+   * @param type the resource type;. 
+   * @param props by default, matches all resources with the given type.
+   */
+  public open fun resourceId(type: String, props: Any): String = unwrap(this).getResourceId(type,
+      props)
+
+  /**
    * Assert that the given number of resources of the given type and properties exists in the
    * CloudFormation template.
    *

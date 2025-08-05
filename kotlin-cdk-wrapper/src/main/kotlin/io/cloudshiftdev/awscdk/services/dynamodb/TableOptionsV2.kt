@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import io.cloudshiftdev.awscdk.services.kinesis.IStream
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
@@ -31,6 +32,11 @@ import kotlin.jvm.JvmName
  * .deletionProtection(false)
  * .kinesisStream(stream)
  * .pointInTimeRecovery(false)
+ * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecification.builder()
+ * .pointInTimeRecoveryEnabled(false)
+ * // the properties below are optional
+ * .recoveryPeriodInDays(123)
+ * .build())
  * .resourcePolicy(policyDocument)
  * .tableClass(TableClass.STANDARD)
  * .tags(List.of(CfnTag.builder()
@@ -63,11 +69,22 @@ public interface TableOptionsV2 {
   public fun kinesisStream(): IStream? = unwrap(this).getKinesisStream()?.let(IStream::wrap)
 
   /**
-   * Whether point-in-time recovery is enabled.
+   * (deprecated) Whether point-in-time recovery is enabled.
    *
-   * Default: false
+   * Default: false - point in time recovery is not enabled.
+   *
+   * @deprecated use `pointInTimeRecoverySpecification` instead
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun pointInTimeRecovery(): Boolean? = unwrap(this).getPointInTimeRecovery()
+
+  /**
+   * Whether point-in-time recovery is enabled and recoveryPeriodInDays is set.
+   *
+   * Default: - point in time recovery is not enabled.
+   */
+  public fun pointInTimeRecoverySpecification(): PointInTimeRecoverySpecification? =
+      unwrap(this).getPointInTimeRecoverySpecification()?.let(PointInTimeRecoverySpecification::wrap)
 
   /**
    * Resource policy to assign to DynamoDB Table.
@@ -115,8 +132,26 @@ public interface TableOptionsV2 {
 
     /**
      * @param pointInTimeRecovery Whether point-in-time recovery is enabled.
+     * @deprecated use `pointInTimeRecoverySpecification` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun pointInTimeRecovery(pointInTimeRecovery: Boolean)
+
+    /**
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set.
+     */
+    public
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification)
+
+    /**
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9fbac23aebd8981581558d8ca0c9dcae8f06511420fb4161c05e639d45a44f45")
+    public
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification.Builder.() -> Unit)
 
     /**
      * @param resourcePolicy Resource policy to assign to DynamoDB Table.
@@ -173,10 +208,32 @@ public interface TableOptionsV2 {
 
     /**
      * @param pointInTimeRecovery Whether point-in-time recovery is enabled.
+     * @deprecated use `pointInTimeRecoverySpecification` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun pointInTimeRecovery(pointInTimeRecovery: Boolean) {
       cdkBuilder.pointInTimeRecovery(pointInTimeRecovery)
     }
+
+    /**
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set.
+     */
+    override
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification) {
+      cdkBuilder.pointInTimeRecoverySpecification(pointInTimeRecoverySpecification.let(PointInTimeRecoverySpecification.Companion::unwrap))
+    }
+
+    /**
+     * @param pointInTimeRecoverySpecification Whether point-in-time recovery is enabled and
+     * recoveryPeriodInDays is set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9fbac23aebd8981581558d8ca0c9dcae8f06511420fb4161c05e639d45a44f45")
+    override
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecification.Builder.() -> Unit):
+        Unit =
+        pointInTimeRecoverySpecification(PointInTimeRecoverySpecification(pointInTimeRecoverySpecification))
 
     /**
      * @param resourcePolicy Resource policy to assign to DynamoDB Table.
@@ -241,11 +298,22 @@ public interface TableOptionsV2 {
     override fun kinesisStream(): IStream? = unwrap(this).getKinesisStream()?.let(IStream::wrap)
 
     /**
-     * Whether point-in-time recovery is enabled.
+     * (deprecated) Whether point-in-time recovery is enabled.
      *
-     * Default: false
+     * Default: false - point in time recovery is not enabled.
+     *
+     * @deprecated use `pointInTimeRecoverySpecification` instead
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun pointInTimeRecovery(): Boolean? = unwrap(this).getPointInTimeRecovery()
+
+    /**
+     * Whether point-in-time recovery is enabled and recoveryPeriodInDays is set.
+     *
+     * Default: - point in time recovery is not enabled.
+     */
+    override fun pointInTimeRecoverySpecification(): PointInTimeRecoverySpecification? =
+        unwrap(this).getPointInTimeRecoverySpecification()?.let(PointInTimeRecoverySpecification::wrap)
 
     /**
      * Resource policy to assign to DynamoDB Table.

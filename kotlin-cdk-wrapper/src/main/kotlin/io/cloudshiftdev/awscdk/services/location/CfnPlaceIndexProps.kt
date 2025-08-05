@@ -71,13 +71,13 @@ public interface CfnPlaceIndexProps {
    *
    * If you specify HERE Technologies ( `Here` ) as the data provider, you may not [store
    * results](https://docs.aws.amazon.com//location-places/latest/APIReference/API_DataSourceConfiguration.html)
-   * for locations in Japan. For more information, see the [AWS Service
-   * Terms](https://docs.aws.amazon.com/service-terms/) for Amazon Location Service.
+   * for locations in Japan. For more information, see the [AWS service
+   * terms](https://docs.aws.amazon.com/service-terms/) for Amazon Location Service.
    *
    *
    * For additional information , see [Data
    * providers](https://docs.aws.amazon.com/location/previous/developerguide/what-is-data-provider.html)
-   * on the *Amazon Location Service Developer Guide* .
+   * on the *Amazon Location Service developer guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-placeindex.html#cfn-location-placeindex-datasource)
    */
@@ -161,13 +161,13 @@ public interface CfnPlaceIndexProps {
      *
      * If you specify HERE Technologies ( `Here` ) as the data provider, you may not [store
      * results](https://docs.aws.amazon.com//location-places/latest/APIReference/API_DataSourceConfiguration.html)
-     * for locations in Japan. For more information, see the [AWS Service
-     * Terms](https://docs.aws.amazon.com/service-terms/) for Amazon Location Service.
+     * for locations in Japan. For more information, see the [AWS service
+     * terms](https://docs.aws.amazon.com/service-terms/) for Amazon Location Service.
      *
      *
      * For additional information , see [Data
      * providers](https://docs.aws.amazon.com/location/previous/developerguide/what-is-data-provider.html)
-     * on the *Amazon Location Service Developer Guide* .
+     * on the *Amazon Location Service developer guide* .
      */
     public fun dataSource(dataSource: String)
 
@@ -257,13 +257,13 @@ public interface CfnPlaceIndexProps {
      *
      * If you specify HERE Technologies ( `Here` ) as the data provider, you may not [store
      * results](https://docs.aws.amazon.com//location-places/latest/APIReference/API_DataSourceConfiguration.html)
-     * for locations in Japan. For more information, see the [AWS Service
-     * Terms](https://docs.aws.amazon.com/service-terms/) for Amazon Location Service.
+     * for locations in Japan. For more information, see the [AWS service
+     * terms](https://docs.aws.amazon.com/service-terms/) for Amazon Location Service.
      *
      *
      * For additional information , see [Data
      * providers](https://docs.aws.amazon.com/location/previous/developerguide/what-is-data-provider.html)
-     * on the *Amazon Location Service Developer Guide* .
+     * on the *Amazon Location Service developer guide* .
      */
     override fun dataSource(dataSource: String) {
       cdkBuilder.dataSource(dataSource)
@@ -373,13 +373,13 @@ public interface CfnPlaceIndexProps {
      *
      * If you specify HERE Technologies ( `Here` ) as the data provider, you may not [store
      * results](https://docs.aws.amazon.com//location-places/latest/APIReference/API_DataSourceConfiguration.html)
-     * for locations in Japan. For more information, see the [AWS Service
-     * Terms](https://docs.aws.amazon.com/service-terms/) for Amazon Location Service.
+     * for locations in Japan. For more information, see the [AWS service
+     * terms](https://docs.aws.amazon.com/service-terms/) for Amazon Location Service.
      *
      *
      * For additional information , see [Data
      * providers](https://docs.aws.amazon.com/location/previous/developerguide/what-is-data-provider.html)
-     * on the *Amazon Location Service Developer Guide* .
+     * on the *Amazon Location Service developer guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-placeindex.html#cfn-location-placeindex-datasource)
      */

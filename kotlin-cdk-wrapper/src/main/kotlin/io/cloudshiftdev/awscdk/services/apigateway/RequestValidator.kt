@@ -160,6 +160,9 @@ public open class RequestValidator(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.apigateway.RequestValidator.PROPERTY_INJECTION_ID
+
     public fun fromRequestValidatorId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

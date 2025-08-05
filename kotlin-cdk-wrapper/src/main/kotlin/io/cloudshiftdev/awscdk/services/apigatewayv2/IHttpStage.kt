@@ -219,6 +219,16 @@ public interface IHttpStage : IStage {
   ) : CdkObject(cdkObject),
       IHttpStage {
     /**
+     * Adds a stage variable to this stage.
+     *
+     * @param name The name of the stage variable. 
+     * @param value The value of the stage variable. 
+     */
+    override fun addStageVariable(name: String, `value`: String) {
+      unwrap(this).addStageVariable(name, `value`)
+    }
+
+    /**
      * The API this stage is associated to.
      */
     override fun api(): IHttpApi = unwrap(this).getApi().let(IHttpApi::wrap)

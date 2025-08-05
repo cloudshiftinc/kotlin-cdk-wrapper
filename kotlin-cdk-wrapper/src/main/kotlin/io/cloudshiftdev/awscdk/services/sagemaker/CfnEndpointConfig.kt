@@ -44,6 +44,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .acceleratorType("acceleratorType")
  * .containerStartupHealthCheckTimeoutInSeconds(123)
  * .enableSsmAccess(false)
+ * .inferenceAmiVersion("inferenceAmiVersion")
  * .initialInstanceCount(123)
  * .initialVariantWeight(123)
  * .instanceType("instanceType")
@@ -140,6 +141,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .acceleratorType("acceleratorType")
  * .containerStartupHealthCheckTimeoutInSeconds(123)
  * .enableSsmAccess(false)
+ * .inferenceAmiVersion("inferenceAmiVersion")
  * .initialInstanceCount(123)
  * .initialVariantWeight(123)
  * .instanceType("instanceType")
@@ -4291,6 +4293,7 @@ public open class CfnEndpointConfig(
    * .acceleratorType("acceleratorType")
    * .containerStartupHealthCheckTimeoutInSeconds(123)
    * .enableSsmAccess(false)
+   * .inferenceAmiVersion("inferenceAmiVersion")
    * .initialInstanceCount(123)
    * .initialVariantWeight(123)
    * .instanceType("instanceType")
@@ -4354,6 +4357,11 @@ public open class CfnEndpointConfig(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-enablessmaccess)
      */
     public fun enableSsmAccess(): Any? = unwrap(this).getEnableSsmAccess()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-inferenceamiversion)
+     */
+    public fun inferenceAmiVersion(): String? = unwrap(this).getInferenceAmiVersion()
 
     /**
      * Number of instances to launch initially.
@@ -4480,6 +4488,11 @@ public open class CfnEndpointConfig(
        * creating a new endpoint configuration and calling `UpdateEndpoint` .
        */
       public fun enableSsmAccess(enableSsmAccess: IResolvable)
+
+      /**
+       * @param inferenceAmiVersion the value to be set.
+       */
+      public fun inferenceAmiVersion(inferenceAmiVersion: String)
 
       /**
        * @param initialInstanceCount Number of instances to launch initially.
@@ -4636,6 +4649,13 @@ public open class CfnEndpointConfig(
        */
       override fun enableSsmAccess(enableSsmAccess: IResolvable) {
         cdkBuilder.enableSsmAccess(enableSsmAccess.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param inferenceAmiVersion the value to be set.
+       */
+      override fun inferenceAmiVersion(inferenceAmiVersion: String) {
+        cdkBuilder.inferenceAmiVersion(inferenceAmiVersion)
       }
 
       /**
@@ -4816,6 +4836,11 @@ public open class CfnEndpointConfig(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-enablessmaccess)
        */
       override fun enableSsmAccess(): Any? = unwrap(this).getEnableSsmAccess()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-inferenceamiversion)
+       */
+      override fun inferenceAmiVersion(): String? = unwrap(this).getInferenceAmiVersion()
 
       /**
        * Number of instances to launch initially.

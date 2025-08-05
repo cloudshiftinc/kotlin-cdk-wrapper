@@ -19,14 +19,12 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * Instance instance;
- * Role role;
- * Volume volume = Volume.Builder.create(this, "Volume")
- * .availabilityZone("us-west-2a")
- * .size(Size.gibibytes(500))
- * .encrypted(true)
+ * Volume.Builder.create(this, "Volume")
+ * .availabilityZone("us-east-1a")
+ * .size(Size.gibibytes(125))
+ * .volumeType(EbsDeviceVolumeType.GP3)
+ * .throughput(125)
  * .build();
- * volume.grantAttachVolume(role, List.of(instance));
  * ```
  */
 public interface VolumeProps {
@@ -106,7 +104,7 @@ public interface VolumeProps {
    * }
    * ```
    *
-   * Default: The default KMS key for the account, region, and EC2 service is used.
+   * Default: - The default KMS key for the account, region, and EC2 service is used.
    */
   public fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
@@ -141,7 +139,7 @@ public interface VolumeProps {
    * See https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-volume.html
    * for details on the allowable size for each type of volume.
    *
-   * Default: If you're creating the volume from a snapshot and don't specify a volume size, the
+   * Default: - If you're creating the volume from a snapshot and don't specify a volume size, the
    * default is the snapshot size.
    */
   public fun size(): Size? = unwrap(this).getSize()?.let(Size::wrap)
@@ -151,7 +149,7 @@ public interface VolumeProps {
    *
    * You must specify either a snapshot ID or a volume size.
    *
-   * Default: The EBS volume is not created from a snapshot.
+   * Default: - The EBS volume is not created from a snapshot.
    */
   public fun snapshotId(): String? = unwrap(this).getSnapshotId()
 
@@ -165,9 +163,24 @@ public interface VolumeProps {
   public fun throughput(): Number? = unwrap(this).getThroughput()
 
   /**
+   * Specifies the Amazon EBS Provisioned Rate for Volume Initialization (volume initialization
+   * rate), at which to download the snapshot blocks from Amazon S3 to the volume.
+   *
+   * Valid range is between 100 and 300 MiB/s.
+   *
+   * This parameter is supported only for volumes created from snapshots.
+   *
+   * Default: undefined - The volume initialization rate is not set.
+   *
+   * [Documentation](https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html#volume-initialization-rate)
+   */
+  public fun volumeInitializationRate(): Size? =
+      unwrap(this).getVolumeInitializationRate()?.let(Size::wrap)
+
+  /**
    * The value of the physicalName property of this resource.
    *
-   * Default: The physical name will be allocated by CloudFormation at deployment time
+   * Default: - The physical name will be allocated by CloudFormation at deployment time
    */
   public fun volumeName(): String? = unwrap(this).getVolumeName()
 
@@ -293,6 +306,16 @@ public interface VolumeProps {
      * and maximum of 1000.
      */
     public fun throughput(throughput: Number)
+
+    /**
+     * @param volumeInitializationRate Specifies the Amazon EBS Provisioned Rate for Volume
+     * Initialization (volume initialization rate), at which to download the snapshot blocks from
+     * Amazon S3 to the volume.
+     * Valid range is between 100 and 300 MiB/s.
+     *
+     * This parameter is supported only for volumes created from snapshots.
+     */
+    public fun volumeInitializationRate(volumeInitializationRate: Size)
 
     /**
      * @param volumeName The value of the physicalName property of this resource.
@@ -439,6 +462,18 @@ public interface VolumeProps {
     }
 
     /**
+     * @param volumeInitializationRate Specifies the Amazon EBS Provisioned Rate for Volume
+     * Initialization (volume initialization rate), at which to download the snapshot blocks from
+     * Amazon S3 to the volume.
+     * Valid range is between 100 and 300 MiB/s.
+     *
+     * This parameter is supported only for volumes created from snapshots.
+     */
+    override fun volumeInitializationRate(volumeInitializationRate: Size) {
+      cdkBuilder.volumeInitializationRate(volumeInitializationRate.let(Size.Companion::unwrap))
+    }
+
+    /**
      * @param volumeName The value of the physicalName property of this resource.
      */
     override fun volumeName(volumeName: String) {
@@ -537,7 +572,7 @@ public interface VolumeProps {
      * }
      * ```
      *
-     * Default: The default KMS key for the account, region, and EC2 service is used.
+     * Default: - The default KMS key for the account, region, and EC2 service is used.
      */
     override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
@@ -574,7 +609,7 @@ public interface VolumeProps {
      * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-volume.html
      * for details on the allowable size for each type of volume.
      *
-     * Default: If you're creating the volume from a snapshot and don't specify a volume size, the
+     * Default: - If you're creating the volume from a snapshot and don't specify a volume size, the
      * default is the snapshot size.
      */
     override fun size(): Size? = unwrap(this).getSize()?.let(Size::wrap)
@@ -584,7 +619,7 @@ public interface VolumeProps {
      *
      * You must specify either a snapshot ID or a volume size.
      *
-     * Default: The EBS volume is not created from a snapshot.
+     * Default: - The EBS volume is not created from a snapshot.
      */
     override fun snapshotId(): String? = unwrap(this).getSnapshotId()
 
@@ -598,9 +633,24 @@ public interface VolumeProps {
     override fun throughput(): Number? = unwrap(this).getThroughput()
 
     /**
+     * Specifies the Amazon EBS Provisioned Rate for Volume Initialization (volume initialization
+     * rate), at which to download the snapshot blocks from Amazon S3 to the volume.
+     *
+     * Valid range is between 100 and 300 MiB/s.
+     *
+     * This parameter is supported only for volumes created from snapshots.
+     *
+     * Default: undefined - The volume initialization rate is not set.
+     *
+     * [Documentation](https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html#volume-initialization-rate)
+     */
+    override fun volumeInitializationRate(): Size? =
+        unwrap(this).getVolumeInitializationRate()?.let(Size::wrap)
+
+    /**
      * The value of the physicalName property of this resource.
      *
-     * Default: The physical name will be allocated by CloudFormation at deployment time
+     * Default: - The physical name will be allocated by CloudFormation at deployment time
      */
     override fun volumeName(): String? = unwrap(this).getVolumeName()
 

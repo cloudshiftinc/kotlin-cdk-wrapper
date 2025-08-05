@@ -68,6 +68,14 @@ import kotlin.jvm.JvmName
  * .instanceCount(123)
  * .instanceType("instanceType")
  * .multiAzWithStandbyEnabled(false)
+ * .nodeOptions(List.of(NodeOptionProperty.builder()
+ * .nodeConfig(NodeConfigProperty.builder()
+ * .count(123)
+ * .enabled(false)
+ * .type("type")
+ * .build())
+ * .nodeType("nodeType")
+ * .build()))
  * .warmCount(123)
  * .warmEnabled(false)
  * .warmType("warmType")
@@ -285,7 +293,7 @@ public interface CfnDomainProps {
   public fun engineVersion(): String? = unwrap(this).getEngineVersion()
 
   /**
-   * Container for IAM Identity Center Option control for the domain.
+   * Configuration options for controlling IAM Identity Center integration within a domain.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-identitycenteroptions)
    */
@@ -395,7 +403,7 @@ public interface CfnDomainProps {
      * [AdvancedOptions](https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_CreateDomain.html#API_CreateDomain_RequestBody)
      * in the OpenSearch Service API reference.
      */
-    public fun advancedOptions(advancedOptions: IResolvable)
+    public fun advancedOptions(advancedOptions: Map<String, String>)
 
     /**
      * @param advancedOptions Additional options to specify for the OpenSearch Service domain.
@@ -403,7 +411,7 @@ public interface CfnDomainProps {
      * [AdvancedOptions](https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_CreateDomain.html#API_CreateDomain_RequestBody)
      * in the OpenSearch Service API reference.
      */
-    public fun advancedOptions(advancedOptions: Map<String, String>)
+    public fun advancedOptions(advancedOptions: IResolvable)
 
     /**
      * @param advancedSecurityOptions Specifies options for fine-grained access control and SAML
@@ -624,17 +632,20 @@ public interface CfnDomainProps {
     public fun engineVersion(engineVersion: String)
 
     /**
-     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     * @param identityCenterOptions Configuration options for controlling IAM Identity Center
+     * integration within a domain.
      */
     public fun identityCenterOptions(identityCenterOptions: IResolvable)
 
     /**
-     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     * @param identityCenterOptions Configuration options for controlling IAM Identity Center
+     * integration within a domain.
      */
     public fun identityCenterOptions(identityCenterOptions: CfnDomain.IdentityCenterOptionsProperty)
 
     /**
-     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     * @param identityCenterOptions Configuration options for controlling IAM Identity Center
+     * integration within a domain.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("797d8ae1a4efba3bf25f23355d9fd502f832bf20fab7b514afa3d5dfb23e27c6")
@@ -839,8 +850,8 @@ public interface CfnDomainProps {
      * [AdvancedOptions](https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_CreateDomain.html#API_CreateDomain_RequestBody)
      * in the OpenSearch Service API reference.
      */
-    override fun advancedOptions(advancedOptions: IResolvable) {
-      cdkBuilder.advancedOptions(advancedOptions.let(IResolvable.Companion::unwrap))
+    override fun advancedOptions(advancedOptions: Map<String, String>) {
+      cdkBuilder.advancedOptions(advancedOptions)
     }
 
     /**
@@ -849,8 +860,8 @@ public interface CfnDomainProps {
      * [AdvancedOptions](https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_CreateDomain.html#API_CreateDomain_RequestBody)
      * in the OpenSearch Service API reference.
      */
-    override fun advancedOptions(advancedOptions: Map<String, String>) {
-      cdkBuilder.advancedOptions(advancedOptions)
+    override fun advancedOptions(advancedOptions: IResolvable) {
+      cdkBuilder.advancedOptions(advancedOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1112,14 +1123,16 @@ public interface CfnDomainProps {
     }
 
     /**
-     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     * @param identityCenterOptions Configuration options for controlling IAM Identity Center
+     * integration within a domain.
      */
     override fun identityCenterOptions(identityCenterOptions: IResolvable) {
       cdkBuilder.identityCenterOptions(identityCenterOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     * @param identityCenterOptions Configuration options for controlling IAM Identity Center
+     * integration within a domain.
      */
     override
         fun identityCenterOptions(identityCenterOptions: CfnDomain.IdentityCenterOptionsProperty) {
@@ -1127,7 +1140,8 @@ public interface CfnDomainProps {
     }
 
     /**
-     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     * @param identityCenterOptions Configuration options for controlling IAM Identity Center
+     * integration within a domain.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("797d8ae1a4efba3bf25f23355d9fd502f832bf20fab7b514afa3d5dfb23e27c6")
@@ -1494,7 +1508,7 @@ public interface CfnDomainProps {
     override fun engineVersion(): String? = unwrap(this).getEngineVersion()
 
     /**
-     * Container for IAM Identity Center Option control for the domain.
+     * Configuration options for controlling IAM Identity Center integration within a domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-identitycenteroptions)
      */

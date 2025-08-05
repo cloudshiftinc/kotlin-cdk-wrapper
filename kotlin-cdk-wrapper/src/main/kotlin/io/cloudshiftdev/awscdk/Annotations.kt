@@ -43,6 +43,48 @@ public open class Annotations(
   cdkObject: software.amazon.awscdk.Annotations,
 ) : CdkObject(cdkObject) {
   /**
+   * Acknowledge a info. When a info is acknowledged for a scope all infos that match the id will be
+   * ignored.
+   *
+   * The acknowledgement will apply to all child scopes
+   *
+   * Example:
+   *
+   * ```
+   * Construct myConstruct;
+   * Annotations.of(myConstruct).acknowledgeInfo("SomeInfoId", "This info can be ignored
+   * because...");
+   * ```
+   *
+   * @param id * the id of the info message to acknowledge. 
+   * @param message optional message to explain the reason for acknowledgement.
+   */
+  public open fun acknowledgeInfo(id: String) {
+    unwrap(this).acknowledgeInfo(id)
+  }
+
+  /**
+   * Acknowledge a info. When a info is acknowledged for a scope all infos that match the id will be
+   * ignored.
+   *
+   * The acknowledgement will apply to all child scopes
+   *
+   * Example:
+   *
+   * ```
+   * Construct myConstruct;
+   * Annotations.of(myConstruct).acknowledgeInfo("SomeInfoId", "This info can be ignored
+   * because...");
+   * ```
+   *
+   * @param id * the id of the info message to acknowledge. 
+   * @param message optional message to explain the reason for acknowledgement.
+   */
+  public open fun acknowledgeInfo(id: String, message: String) {
+    unwrap(this).acknowledgeInfo(id, message)
+  }
+
+  /**
    * Acknowledge a warning. When a warning is acknowledged for a scope all warnings that match the
    * id will be ignored.
    *
@@ -121,6 +163,28 @@ public open class Annotations(
    */
   public open fun addInfo(message: String) {
     unwrap(this).addInfo(message)
+  }
+
+  /**
+   * Adds an acknowledgeable info metadata entry to this construct.
+   *
+   * The CLI will display the info when an app is synthesized.
+   *
+   * If the info is acknowledged using `acknowledgeInfo()`, it will not be shown by the CLI.
+   *
+   * Example:
+   *
+   * ```
+   * Construct myConstruct;
+   * Annotations.of(myConstruct).addInfoV2("my-library:Construct.someInfo", "Some message explaining
+   * the info");
+   * ```
+   *
+   * @param id the unique identifier for the info. 
+   * @param message The info message. 
+   */
+  public open fun addInfoV2(id: String, message: String) {
+    unwrap(this).addInfoV2(id, message)
   }
 
   /**

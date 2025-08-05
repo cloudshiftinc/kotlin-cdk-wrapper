@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -18,16 +19,20 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * FargateTaskDefinition fargateTaskDefinition = FargateTaskDefinition.Builder.create(this,
- * "TaskDef")
+ * // Create a Task Definition for the Windows container to start
+ * FargateTaskDefinition taskDefinition = FargateTaskDefinition.Builder.create(this, "TaskDef")
  * .runtimePlatform(RuntimePlatform.builder()
- * .operatingSystemFamily(OperatingSystemFamily.LINUX)
- * .cpuArchitecture(CpuArchitecture.ARM64)
+ * .operatingSystemFamily(OperatingSystemFamily.WINDOWS_SERVER_2019_CORE)
+ * .cpuArchitecture(CpuArchitecture.X86_64)
  * .build())
- * .memoryLimitMiB(512)
- * .cpu(256)
- * .pidMode(PidMode.TASK)
+ * .cpu(1024)
+ * .memoryLimitMiB(2048)
  * .build();
+ * taskDefinition.addContainer("windowsservercore", ContainerDefinitionOptions.builder()
+ * .logging(LogDriver.awsLogs(AwsLogDriverProps.builder().streamPrefix("win-iis-on-fargate").build()))
+ * .portMappings(List.of(PortMapping.builder().containerPort(80).build()))
+ * .image(ContainerImage.fromRegistry("mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2019"))
+ * .build());
  * ```
  */
 public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
@@ -56,6 +61,10 @@ public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
    *
    * 16384 (16 vCPU) - Available memory values: Between 32768 (32 GB) and 122880 (120 GB) in
    * increments of 8192 (8 GB)
+   *
+   * Note: For windows platforms, this field is not enforced at runtime. However, it is still
+   * required as it is used to determine
+   * the instance type and size that tasks run on.
    *
    * Default: 256
    */
@@ -98,6 +107,10 @@ public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
    *
    * Between 32768 (32 GB) and 122880 (120 GB) in increments of 8192 (8 GB) - Available cpu values:
    * 16384 (16 vCPU)
+   *
+   * Note: For windows platforms, this field is not enforced at runtime. However, it is still
+   * required as it is used to determine
+   * the instance type and size that tasks run on.
    *
    * Default: 512
    */
@@ -157,8 +170,20 @@ public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
      *
      * 16384 (16 vCPU) - Available memory values: Between 32768 (32 GB) and 122880 (120 GB) in
      * increments of 8192 (8 GB)
+     *
+     * Note: For windows platforms, this field is not enforced at runtime. However, it is still
+     * required as it is used to determine
+     * the instance type and size that tasks run on.
      */
     public fun cpu(cpu: Number)
+
+    /**
+     * @param enableFaultInjection Enables fault injection and allows for fault injection requests
+     * to be accepted from the task's containers.
+     * Fault injection only works with tasks using the [NetworkMode.AWS_VPC] or [NetworkMode.HOST]
+     * network modes.
+     */
+    public fun enableFaultInjection(enableFaultInjection: Boolean)
 
     /**
      * @param ephemeralStorageGiB The amount (in GiB) of ephemeral storage to be allocated to the
@@ -207,6 +232,10 @@ public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
      *
      * Between 32768 (32 GB) and 122880 (120 GB) in increments of 8192 (8 GB) - Available cpu
      * values: 16384 (16 vCPU)
+     *
+     * Note: For windows platforms, this field is not enforced at runtime. However, it is still
+     * required as it is used to determine
+     * the instance type and size that tasks run on.
      */
     public fun memoryLimitMiB(memoryLimitMiB: Number)
 
@@ -292,9 +321,23 @@ public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
      *
      * 16384 (16 vCPU) - Available memory values: Between 32768 (32 GB) and 122880 (120 GB) in
      * increments of 8192 (8 GB)
+     *
+     * Note: For windows platforms, this field is not enforced at runtime. However, it is still
+     * required as it is used to determine
+     * the instance type and size that tasks run on.
      */
     override fun cpu(cpu: Number) {
       cdkBuilder.cpu(cpu)
+    }
+
+    /**
+     * @param enableFaultInjection Enables fault injection and allows for fault injection requests
+     * to be accepted from the task's containers.
+     * Fault injection only works with tasks using the [NetworkMode.AWS_VPC] or [NetworkMode.HOST]
+     * network modes.
+     */
+    override fun enableFaultInjection(enableFaultInjection: Boolean) {
+      cdkBuilder.enableFaultInjection(enableFaultInjection)
     }
 
     /**
@@ -350,6 +393,10 @@ public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
      *
      * Between 32768 (32 GB) and 122880 (120 GB) in increments of 8192 (8 GB) - Available cpu
      * values: 16384 (16 vCPU)
+     *
+     * Note: For windows platforms, this field is not enforced at runtime. However, it is still
+     * required as it is used to determine
+     * the instance type and size that tasks run on.
      */
     override fun memoryLimitMiB(memoryLimitMiB: Number) {
       cdkBuilder.memoryLimitMiB(memoryLimitMiB)
@@ -453,9 +500,24 @@ public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
      * 16384 (16 vCPU) - Available memory values: Between 32768 (32 GB) and 122880 (120 GB) in
      * increments of 8192 (8 GB)
      *
+     * Note: For windows platforms, this field is not enforced at runtime. However, it is still
+     * required as it is used to determine
+     * the instance type and size that tasks run on.
+     *
      * Default: 256
      */
     override fun cpu(): Number? = unwrap(this).getCpu()
+
+    /**
+     * Enables fault injection and allows for fault injection requests to be accepted from the
+     * task's containers.
+     *
+     * Fault injection only works with tasks using the [NetworkMode.AWS_VPC] or [NetworkMode.HOST]
+     * network modes.
+     *
+     * Default: undefined - ECS default setting is false
+     */
+    override fun enableFaultInjection(): Boolean? = unwrap(this).getEnableFaultInjection()
 
     /**
      * The amount (in GiB) of ephemeral storage to be allocated to the task.
@@ -514,6 +576,10 @@ public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
      *
      * Between 32768 (32 GB) and 122880 (120 GB) in increments of 8192 (8 GB) - Available cpu
      * values: 16384 (16 vCPU)
+     *
+     * Note: For windows platforms, this field is not enforced at runtime. However, it is still
+     * required as it is used to determine
+     * the instance type and size that tasks run on.
      *
      * Default: 512
      */

@@ -78,7 +78,7 @@ public interface AdvancedSecurityOptions {
   /**
    * Container for information about the SAML configuration for OpenSearch Dashboards.
    *
-   * If set, `samlAuthenticationEnabled` will be enabled.
+   * If set, `samlAuthenticationEnabled` will be enabled.
    *
    * Default: - no SAML authentication options
    */
@@ -118,14 +118,14 @@ public interface AdvancedSecurityOptions {
     /**
      * @param samlAuthenticationOptions Container for information about the SAML configuration for
      * OpenSearch Dashboards.
-     * If set, `samlAuthenticationEnabled` will be enabled.
+     * If set, `samlAuthenticationEnabled` will be enabled.
      */
     public fun samlAuthenticationOptions(samlAuthenticationOptions: SAMLOptionsProperty)
 
     /**
      * @param samlAuthenticationOptions Container for information about the SAML configuration for
      * OpenSearch Dashboards.
-     * If set, `samlAuthenticationEnabled` will be enabled.
+     * If set, `samlAuthenticationEnabled` will be enabled.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("95d35bcd5990b82875687519147a3dda825cd7a271485f83779d92ad8484332d")
@@ -174,7 +174,7 @@ public interface AdvancedSecurityOptions {
     /**
      * @param samlAuthenticationOptions Container for information about the SAML configuration for
      * OpenSearch Dashboards.
-     * If set, `samlAuthenticationEnabled` will be enabled.
+     * If set, `samlAuthenticationEnabled` will be enabled.
      */
     override fun samlAuthenticationOptions(samlAuthenticationOptions: SAMLOptionsProperty) {
       cdkBuilder.samlAuthenticationOptions(samlAuthenticationOptions.let(SAMLOptionsProperty.Companion::unwrap))
@@ -183,7 +183,7 @@ public interface AdvancedSecurityOptions {
     /**
      * @param samlAuthenticationOptions Container for information about the SAML configuration for
      * OpenSearch Dashboards.
-     * If set, `samlAuthenticationEnabled` will be enabled.
+     * If set, `samlAuthenticationEnabled` will be enabled.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("95d35bcd5990b82875687519147a3dda825cd7a271485f83779d92ad8484332d")
@@ -241,7 +241,7 @@ public interface AdvancedSecurityOptions {
     /**
      * Container for information about the SAML configuration for OpenSearch Dashboards.
      *
-     * If set, `samlAuthenticationEnabled` will be enabled.
+     * If set, `samlAuthenticationEnabled` will be enabled.
      *
      * Default: - no SAML authentication options
      */

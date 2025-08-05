@@ -7,6 +7,7 @@ public enum class CapacityType(
 ) {
   SPOT(software.amazon.awscdk.services.eks.CapacityType.SPOT),
   ON_DEMAND(software.amazon.awscdk.services.eks.CapacityType.ON_DEMAND),
+  CAPACITY_BLOCK(software.amazon.awscdk.services.eks.CapacityType.CAPACITY_BLOCK),
   ;
 
   public companion object {
@@ -14,6 +15,7 @@ public enum class CapacityType(
         when (cdkObject) {
       software.amazon.awscdk.services.eks.CapacityType.SPOT -> CapacityType.SPOT
       software.amazon.awscdk.services.eks.CapacityType.ON_DEMAND -> CapacityType.ON_DEMAND
+      software.amazon.awscdk.services.eks.CapacityType.CAPACITY_BLOCK -> CapacityType.CAPACITY_BLOCK
     }
 
     internal fun unwrap(wrapped: CapacityType): software.amazon.awscdk.services.eks.CapacityType =

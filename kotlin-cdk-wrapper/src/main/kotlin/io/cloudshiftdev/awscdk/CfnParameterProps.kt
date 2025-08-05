@@ -16,10 +16,13 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * CfnParameter.Builder.create(this, "MyParameter")
- * .type("Number")
- * .default(1337)
- * .build();
+ * CfnParameter param = CfnParameter.Builder.create(this, "ParameterName").build();
+ * // If the parameter is a String
+ * param.getValueAsString();
+ * // If the parameter is a Number
+ * param.getValueAsNumber();
+ * // If the parameter is a List
+ * param.getValueAsList();
  * ```
  */
 public interface CfnParameterProps {

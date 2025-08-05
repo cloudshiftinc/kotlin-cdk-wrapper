@@ -38,6 +38,16 @@ public interface PasswordPolicy {
   public fun minLength(): Number? = unwrap(this).getMinLength()
 
   /**
+   * The number of previous passwords that you want Amazon Cognito to restrict each user from
+   * reusing.
+   *
+   * `passwordHistorySize` can not be set when `featurePlan` is `FeaturePlan.LITE`.
+   *
+   * Default: undefined - Cognito default setting is no restriction
+   */
+  public fun passwordHistorySize(): Number? = unwrap(this).getPasswordHistorySize()
+
+  /**
    * Whether the user is required to have digits in their password.
    *
    * Default: true
@@ -87,6 +97,13 @@ public interface PasswordPolicy {
     public fun minLength(minLength: Number)
 
     /**
+     * @param passwordHistorySize The number of previous passwords that you want Amazon Cognito to
+     * restrict each user from reusing.
+     * `passwordHistorySize` can not be set when `featurePlan` is `FeaturePlan.LITE`.
+     */
+    public fun passwordHistorySize(passwordHistorySize: Number)
+
+    /**
      * @param requireDigits Whether the user is required to have digits in their password.
      */
     public fun requireDigits(requireDigits: Boolean)
@@ -126,6 +143,15 @@ public interface PasswordPolicy {
      */
     override fun minLength(minLength: Number) {
       cdkBuilder.minLength(minLength)
+    }
+
+    /**
+     * @param passwordHistorySize The number of previous passwords that you want Amazon Cognito to
+     * restrict each user from reusing.
+     * `passwordHistorySize` can not be set when `featurePlan` is `FeaturePlan.LITE`.
+     */
+    override fun passwordHistorySize(passwordHistorySize: Number) {
+      cdkBuilder.passwordHistorySize(passwordHistorySize)
     }
 
     /**
@@ -181,6 +207,16 @@ public interface PasswordPolicy {
      * Default: 8
      */
     override fun minLength(): Number? = unwrap(this).getMinLength()
+
+    /**
+     * The number of previous passwords that you want Amazon Cognito to restrict each user from
+     * reusing.
+     *
+     * `passwordHistorySize` can not be set when `featurePlan` is `FeaturePlan.LITE`.
+     *
+     * Default: undefined - Cognito default setting is no restriction
+     */
+    override fun passwordHistorySize(): Number? = unwrap(this).getPasswordHistorySize()
 
     /**
      * Whether the user is required to have digits in their password.

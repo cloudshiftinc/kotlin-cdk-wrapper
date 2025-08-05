@@ -27,6 +27,9 @@ public open class AwsCliLayer(
   )
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.lambdalayer.awscli.AwsCliLayer.PROPERTY_INJECTION_ID
+
     internal fun wrap(cdkObject: software.amazon.awscdk.lambdalayer.awscli.AwsCliLayer): AwsCliLayer
         = AwsCliLayer(cdkObject)
 

@@ -24,6 +24,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * As part of the association, you can specify parts of the standard logging fields to keep out of
  * the logs and you can specify filters so that you log only a subset of the logging records.
  *
+ * If you configure data protection for the web ACL, the protection applies to the data that AWS WAF
+ * sends to the logs.
+ *
  *
  * You can define one logging destination per web ACL.
  *
@@ -237,15 +240,18 @@ public open class CfnLoggingConfiguration(
      * For example, if you redact the `SingleHeader` field, the `HEADER` field in the logs will be
      * `REDACTED` for all rules that use the `SingleHeader` `FieldToMatch` setting.
      *
+     * If you configure data protection for the web ACL, the protection applies to the data that AWS
+     * WAF sends to the logs.
+     *
      * Redaction applies only to the component that's specified in the rule's `FieldToMatch`
      * setting, so the `SingleHeader` redaction doesn't apply to rules that use the `Headers`
      * `FieldToMatch` .
      *
      *
      * You can specify only the following fields for redaction: `UriPath` , `QueryString` ,
-     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. With
-     * request sampling, the only way to exclude fields is by disabling sampling in the web ACL
-     * visibility configuration.
+     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. You can
+     * only exclude fields from request sampling by disabling sampling in the web ACL visibility
+     * configuration or by configuring data protection for the web ACL.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html#cfn-wafv2-loggingconfiguration-redactedfields)
@@ -259,15 +265,18 @@ public open class CfnLoggingConfiguration(
      * For example, if you redact the `SingleHeader` field, the `HEADER` field in the logs will be
      * `REDACTED` for all rules that use the `SingleHeader` `FieldToMatch` setting.
      *
+     * If you configure data protection for the web ACL, the protection applies to the data that AWS
+     * WAF sends to the logs.
+     *
      * Redaction applies only to the component that's specified in the rule's `FieldToMatch`
      * setting, so the `SingleHeader` redaction doesn't apply to rules that use the `Headers`
      * `FieldToMatch` .
      *
      *
      * You can specify only the following fields for redaction: `UriPath` , `QueryString` ,
-     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. With
-     * request sampling, the only way to exclude fields is by disabling sampling in the web ACL
-     * visibility configuration.
+     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. You can
+     * only exclude fields from request sampling by disabling sampling in the web ACL visibility
+     * configuration or by configuring data protection for the web ACL.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html#cfn-wafv2-loggingconfiguration-redactedfields)
@@ -281,15 +290,18 @@ public open class CfnLoggingConfiguration(
      * For example, if you redact the `SingleHeader` field, the `HEADER` field in the logs will be
      * `REDACTED` for all rules that use the `SingleHeader` `FieldToMatch` setting.
      *
+     * If you configure data protection for the web ACL, the protection applies to the data that AWS
+     * WAF sends to the logs.
+     *
      * Redaction applies only to the component that's specified in the rule's `FieldToMatch`
      * setting, so the `SingleHeader` redaction doesn't apply to rules that use the `Headers`
      * `FieldToMatch` .
      *
      *
      * You can specify only the following fields for redaction: `UriPath` , `QueryString` ,
-     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. With
-     * request sampling, the only way to exclude fields is by disabling sampling in the web ACL
-     * visibility configuration.
+     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. You can
+     * only exclude fields from request sampling by disabling sampling in the web ACL visibility
+     * configuration or by configuring data protection for the web ACL.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html#cfn-wafv2-loggingconfiguration-redactedfields)
@@ -364,15 +376,18 @@ public open class CfnLoggingConfiguration(
      * For example, if you redact the `SingleHeader` field, the `HEADER` field in the logs will be
      * `REDACTED` for all rules that use the `SingleHeader` `FieldToMatch` setting.
      *
+     * If you configure data protection for the web ACL, the protection applies to the data that AWS
+     * WAF sends to the logs.
+     *
      * Redaction applies only to the component that's specified in the rule's `FieldToMatch`
      * setting, so the `SingleHeader` redaction doesn't apply to rules that use the `Headers`
      * `FieldToMatch` .
      *
      *
      * You can specify only the following fields for redaction: `UriPath` , `QueryString` ,
-     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. With
-     * request sampling, the only way to exclude fields is by disabling sampling in the web ACL
-     * visibility configuration.
+     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. You can
+     * only exclude fields from request sampling by disabling sampling in the web ACL visibility
+     * configuration or by configuring data protection for the web ACL.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html#cfn-wafv2-loggingconfiguration-redactedfields)
@@ -388,15 +403,18 @@ public open class CfnLoggingConfiguration(
      * For example, if you redact the `SingleHeader` field, the `HEADER` field in the logs will be
      * `REDACTED` for all rules that use the `SingleHeader` `FieldToMatch` setting.
      *
+     * If you configure data protection for the web ACL, the protection applies to the data that AWS
+     * WAF sends to the logs.
+     *
      * Redaction applies only to the component that's specified in the rule's `FieldToMatch`
      * setting, so the `SingleHeader` redaction doesn't apply to rules that use the `Headers`
      * `FieldToMatch` .
      *
      *
      * You can specify only the following fields for redaction: `UriPath` , `QueryString` ,
-     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. With
-     * request sampling, the only way to exclude fields is by disabling sampling in the web ACL
-     * visibility configuration.
+     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. You can
+     * only exclude fields from request sampling by disabling sampling in the web ACL visibility
+     * configuration or by configuring data protection for the web ACL.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html#cfn-wafv2-loggingconfiguration-redactedfields)
@@ -412,15 +430,18 @@ public open class CfnLoggingConfiguration(
      * For example, if you redact the `SingleHeader` field, the `HEADER` field in the logs will be
      * `REDACTED` for all rules that use the `SingleHeader` `FieldToMatch` setting.
      *
+     * If you configure data protection for the web ACL, the protection applies to the data that AWS
+     * WAF sends to the logs.
+     *
      * Redaction applies only to the component that's specified in the rule's `FieldToMatch`
      * setting, so the `SingleHeader` redaction doesn't apply to rules that use the `Headers`
      * `FieldToMatch` .
      *
      *
      * You can specify only the following fields for redaction: `UriPath` , `QueryString` ,
-     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. With
-     * request sampling, the only way to exclude fields is by disabling sampling in the web ACL
-     * visibility configuration.
+     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. You can
+     * only exclude fields from request sampling by disabling sampling in the web ACL visibility
+     * configuration or by configuring data protection for the web ACL.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html#cfn-wafv2-loggingconfiguration-redactedfields)

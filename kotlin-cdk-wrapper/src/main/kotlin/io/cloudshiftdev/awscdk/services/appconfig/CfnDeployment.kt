@@ -106,9 +106,9 @@ public open class CfnDeployment(
   }
 
   /**
-   *
+   * The sequence number of the deployment.
    */
-  public open fun attrId(): String = unwrap(this).getAttrId()
+  public open fun attrDeploymentNumber(): String = unwrap(this).getAttrDeploymentNumber()
 
   /**
    * Tag Manager which manages the tags for this resource.

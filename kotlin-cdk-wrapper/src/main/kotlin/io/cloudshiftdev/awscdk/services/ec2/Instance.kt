@@ -26,18 +26,18 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * IVpc vpc;
- * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB")
+ * // Creates a distribution from an EC2 instance
+ * Vpc vpc;
+ * // Create an EC2 instance in a VPC. 'subnetType' can be private.
+ * Instance instance = Instance.Builder.create(this, "Instance")
  * .vpc(vpc)
- * .internetFacing(true)
+ * .instanceType(InstanceType.of(InstanceClass.BURSTABLE3, InstanceSize.MICRO))
+ * .machineImage(MachineImage.latestAmazonLinux2023())
+ * .vpcSubnets(SubnetSelection.builder().subnetType(SubnetType.PRIVATE_WITH_EGRESS).build())
  * .build();
- * // instance to add as the target for load balancer.
- * Instance instance = Instance.Builder.create(this, "targetInstance")
- * .vpc(vpc)
- * .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.MICRO))
- * .machineImage(AmazonLinuxImage.Builder.create().generation(AmazonLinuxGeneration.AMAZON_LINUX_2).build())
+ * Distribution.Builder.create(this, "myDist")
+ * .defaultBehavior(BehaviorOptions.builder().origin(VpcOrigin.withEc2Instance(instance)).build())
  * .build();
- * lb.addTarget(new InstanceTarget(instance));
  * ```
  */
 public open class Instance(
@@ -1218,6 +1218,9 @@ public open class Instance(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ec2.Instance.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

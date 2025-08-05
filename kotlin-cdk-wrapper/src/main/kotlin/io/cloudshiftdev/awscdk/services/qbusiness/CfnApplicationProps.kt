@@ -77,6 +77,8 @@ public interface CfnApplicationProps {
   public fun autoSubscriptionConfiguration(): Any? = unwrap(this).getAutoSubscriptionConfiguration()
 
   /**
+   * The OIDC client ID for a Amazon Q Business application.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-clientidsforoidc)
    */
   public fun clientIdsForOidc(): List<String> = unwrap(this).getClientIdsForOidc() ?: emptyList()
@@ -148,6 +150,9 @@ public interface CfnApplicationProps {
   public fun qAppsConfiguration(): Any? = unwrap(this).getQAppsConfiguration()
 
   /**
+   * The Amazon QuickSight configuration for an Amazon Q Business application that uses QuickSight
+   * as the identity provider.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-quicksightconfiguration)
    */
   public fun quickSightConfiguration(): Any? = unwrap(this).getQuickSightConfiguration()
@@ -224,12 +229,12 @@ public interface CfnApplicationProps {
         fun autoSubscriptionConfiguration(autoSubscriptionConfiguration: CfnApplication.AutoSubscriptionConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * @param clientIdsForOidc the value to be set.
+     * @param clientIdsForOidc The OIDC client ID for a Amazon Q Business application.
      */
     public fun clientIdsForOidc(clientIdsForOidc: List<String>)
 
     /**
-     * @param clientIdsForOidc the value to be set.
+     * @param clientIdsForOidc The OIDC client ID for a Amazon Q Business application.
      */
     public fun clientIdsForOidc(vararg clientIdsForOidc: String)
 
@@ -336,18 +341,21 @@ public interface CfnApplicationProps {
         fun qAppsConfiguration(qAppsConfiguration: CfnApplication.QAppsConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * @param quickSightConfiguration the value to be set.
+     * @param quickSightConfiguration The Amazon QuickSight configuration for an Amazon Q Business
+     * application that uses QuickSight as the identity provider.
      */
     public fun quickSightConfiguration(quickSightConfiguration: IResolvable)
 
     /**
-     * @param quickSightConfiguration the value to be set.
+     * @param quickSightConfiguration The Amazon QuickSight configuration for an Amazon Q Business
+     * application that uses QuickSight as the identity provider.
      */
     public
         fun quickSightConfiguration(quickSightConfiguration: CfnApplication.QuickSightConfigurationProperty)
 
     /**
-     * @param quickSightConfiguration the value to be set.
+     * @param quickSightConfiguration The Amazon QuickSight configuration for an Amazon Q Business
+     * application that uses QuickSight as the identity provider.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2644237e81915884b45721068d8bd81308b42917f6b7436b89d47f25e2e28c13")
@@ -441,14 +449,14 @@ public interface CfnApplicationProps {
         autoSubscriptionConfiguration(CfnApplication.AutoSubscriptionConfigurationProperty(autoSubscriptionConfiguration))
 
     /**
-     * @param clientIdsForOidc the value to be set.
+     * @param clientIdsForOidc The OIDC client ID for a Amazon Q Business application.
      */
     override fun clientIdsForOidc(clientIdsForOidc: List<String>) {
       cdkBuilder.clientIdsForOidc(clientIdsForOidc)
     }
 
     /**
-     * @param clientIdsForOidc the value to be set.
+     * @param clientIdsForOidc The OIDC client ID for a Amazon Q Business application.
      */
     override fun clientIdsForOidc(vararg clientIdsForOidc: String): Unit =
         clientIdsForOidc(clientIdsForOidc.toList())
@@ -583,14 +591,16 @@ public interface CfnApplicationProps {
         Unit = qAppsConfiguration(CfnApplication.QAppsConfigurationProperty(qAppsConfiguration))
 
     /**
-     * @param quickSightConfiguration the value to be set.
+     * @param quickSightConfiguration The Amazon QuickSight configuration for an Amazon Q Business
+     * application that uses QuickSight as the identity provider.
      */
     override fun quickSightConfiguration(quickSightConfiguration: IResolvable) {
       cdkBuilder.quickSightConfiguration(quickSightConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param quickSightConfiguration the value to be set.
+     * @param quickSightConfiguration The Amazon QuickSight configuration for an Amazon Q Business
+     * application that uses QuickSight as the identity provider.
      */
     override
         fun quickSightConfiguration(quickSightConfiguration: CfnApplication.QuickSightConfigurationProperty) {
@@ -598,7 +608,8 @@ public interface CfnApplicationProps {
     }
 
     /**
-     * @param quickSightConfiguration the value to be set.
+     * @param quickSightConfiguration The Amazon QuickSight configuration for an Amazon Q Business
+     * application that uses QuickSight as the identity provider.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2644237e81915884b45721068d8bd81308b42917f6b7436b89d47f25e2e28c13")
@@ -661,6 +672,8 @@ public interface CfnApplicationProps {
         unwrap(this).getAutoSubscriptionConfiguration()
 
     /**
+     * The OIDC client ID for a Amazon Q Business application.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-clientidsforoidc)
      */
     override fun clientIdsForOidc(): List<String> = unwrap(this).getClientIdsForOidc() ?:
@@ -734,6 +747,9 @@ public interface CfnApplicationProps {
     override fun qAppsConfiguration(): Any? = unwrap(this).getQAppsConfiguration()
 
     /**
+     * The Amazon QuickSight configuration for an Amazon Q Business application that uses QuickSight
+     * as the identity provider.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-quicksightconfiguration)
      */
     override fun quickSightConfiguration(): Any? = unwrap(this).getQuickSightConfiguration()

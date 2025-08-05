@@ -69,14 +69,15 @@ public interface CfnInfrastructureConfigurationProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * The instance metadata option settings for the infrastructure configuration.
+   * The instance metadata options that you can set for the HTTP requests that pipeline builds use
+   * to launch EC2 build and test instances.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-instancemetadataoptions)
    */
   public fun instanceMetadataOptions(): Any? = unwrap(this).getInstanceMetadataOptions()
 
   /**
-   * The instance profile of the infrastructure configuration.
+   * The instance profile to associate with the instance used to customize your Amazon EC2 AMI.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-instanceprofilename)
    */
@@ -85,19 +86,24 @@ public interface CfnInfrastructureConfigurationProps {
   /**
    * The instance types of the infrastructure configuration.
    *
+   * You can specify one or more instance types to use for this build. The service will pick one of
+   * these instance types based on availability.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-instancetypes)
    */
   public fun instanceTypes(): List<String> = unwrap(this).getInstanceTypes() ?: emptyList()
 
   /**
-   * The Amazon EC2 key pair of the infrastructure configuration.
+   * The key pair of the infrastructure configuration.
+   *
+   * You can use this to log on to and debug the instance used to create your image.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-keypair)
    */
   public fun keyPair(): String? = unwrap(this).getKeyPair()
 
   /**
-   * The logging configuration defines where Image Builder uploads your logs.
+   * The logging configuration of the infrastructure configuration.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-logging)
    */
@@ -119,42 +125,58 @@ public interface CfnInfrastructureConfigurationProps {
   public fun placement(): Any? = unwrap(this).getPlacement()
 
   /**
-   * The tags attached to the resource created by Image Builder.
+   * The metadata tags to assign to the Amazon EC2 instance that Image Builder launches during the
+   * build process.
+   *
+   * Tags are formatted as key value pairs.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-resourcetags)
    */
   public fun resourceTags(): Any? = unwrap(this).getResourceTags()
 
   /**
-   * The security group IDs of the infrastructure configuration.
+   * The security group IDs to associate with the instance used to customize your Amazon EC2 AMI.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-securitygroupids)
    */
   public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
 
   /**
-   * The Amazon Resource Name (ARN) of the SNS topic for the infrastructure configuration.
+   * The Amazon Resource Name (ARN) for the SNS topic to which we send image build event
+   * notifications.
+   *
+   *
+   * EC2 Image Builder is unable to send notifications to SNS topics that are encrypted using keys
+   * from other accounts. The key that is used to encrypt the SNS topic must reside in the account that
+   * the Image Builder service runs under.
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-snstopicarn)
    */
   public fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
 
   /**
-   * The subnet ID of the infrastructure configuration.
+   * The subnet ID in which to place the instance used to customize your Amazon EC2 AMI.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-subnetid)
    */
   public fun subnetId(): String? = unwrap(this).getSubnetId()
 
   /**
-   * The tags of the infrastructure configuration.
+   * The metadata tags to assign to the infrastructure configuration resource that Image Builder
+   * creates as output.
+   *
+   * Tags are formatted as key value pairs.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-tags)
    */
   public fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
   /**
-   * The terminate instance on failure configuration of the infrastructure configuration.
+   * The terminate instance on failure setting of the infrastructure configuration.
+   *
+   * Set to false if you want Image Builder to retain the instance used to configure your AMI if the
+   * build or test phase of your workflow fails.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-terminateinstanceonfailure)
    */
@@ -171,21 +193,21 @@ public interface CfnInfrastructureConfigurationProps {
     public fun description(description: String)
 
     /**
-     * @param instanceMetadataOptions The instance metadata option settings for the infrastructure
-     * configuration.
+     * @param instanceMetadataOptions The instance metadata options that you can set for the HTTP
+     * requests that pipeline builds use to launch EC2 build and test instances.
      */
     public fun instanceMetadataOptions(instanceMetadataOptions: IResolvable)
 
     /**
-     * @param instanceMetadataOptions The instance metadata option settings for the infrastructure
-     * configuration.
+     * @param instanceMetadataOptions The instance metadata options that you can set for the HTTP
+     * requests that pipeline builds use to launch EC2 build and test instances.
      */
     public
         fun instanceMetadataOptions(instanceMetadataOptions: CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty)
 
     /**
-     * @param instanceMetadataOptions The instance metadata option settings for the infrastructure
-     * configuration.
+     * @param instanceMetadataOptions The instance metadata options that you can set for the HTTP
+     * requests that pipeline builds use to launch EC2 build and test instances.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9a6a8239cd0b9d52c1d027610fb7cdc90f79c930841a33643caaa091a0fafc8e")
@@ -193,37 +215,43 @@ public interface CfnInfrastructureConfigurationProps {
         fun instanceMetadataOptions(instanceMetadataOptions: CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty.Builder.() -> Unit)
 
     /**
-     * @param instanceProfileName The instance profile of the infrastructure configuration. 
+     * @param instanceProfileName The instance profile to associate with the instance used to
+     * customize your Amazon EC2 AMI. 
      */
     public fun instanceProfileName(instanceProfileName: String)
 
     /**
      * @param instanceTypes The instance types of the infrastructure configuration.
+     * You can specify one or more instance types to use for this build. The service will pick one
+     * of these instance types based on availability.
      */
     public fun instanceTypes(instanceTypes: List<String>)
 
     /**
      * @param instanceTypes The instance types of the infrastructure configuration.
+     * You can specify one or more instance types to use for this build. The service will pick one
+     * of these instance types based on availability.
      */
     public fun instanceTypes(vararg instanceTypes: String)
 
     /**
-     * @param keyPair The Amazon EC2 key pair of the infrastructure configuration.
+     * @param keyPair The key pair of the infrastructure configuration.
+     * You can use this to log on to and debug the instance used to create your image.
      */
     public fun keyPair(keyPair: String)
 
     /**
-     * @param logging The logging configuration defines where Image Builder uploads your logs.
+     * @param logging The logging configuration of the infrastructure configuration.
      */
     public fun logging(logging: IResolvable)
 
     /**
-     * @param logging The logging configuration defines where Image Builder uploads your logs.
+     * @param logging The logging configuration of the infrastructure configuration.
      */
     public fun logging(logging: CfnInfrastructureConfiguration.LoggingProperty)
 
     /**
-     * @param logging The logging configuration defines where Image Builder uploads your logs.
+     * @param logging The logging configuration of the infrastructure configuration.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9cf648abfd79f264614f5df1feaae17d622c7d7a162001c656eecb67db4671b0")
@@ -256,50 +284,67 @@ public interface CfnInfrastructureConfigurationProps {
         fun placement(placement: CfnInfrastructureConfiguration.PlacementProperty.Builder.() -> Unit)
 
     /**
-     * @param resourceTags The tags attached to the resource created by Image Builder.
-     */
-    public fun resourceTags(resourceTags: IResolvable)
-
-    /**
-     * @param resourceTags The tags attached to the resource created by Image Builder.
+     * @param resourceTags The metadata tags to assign to the Amazon EC2 instance that Image Builder
+     * launches during the build process.
+     * Tags are formatted as key value pairs.
      */
     public fun resourceTags(resourceTags: Map<String, String>)
 
     /**
-     * @param securityGroupIds The security group IDs of the infrastructure configuration.
+     * @param resourceTags The metadata tags to assign to the Amazon EC2 instance that Image Builder
+     * launches during the build process.
+     * Tags are formatted as key value pairs.
+     */
+    public fun resourceTags(resourceTags: IResolvable)
+
+    /**
+     * @param securityGroupIds The security group IDs to associate with the instance used to
+     * customize your Amazon EC2 AMI.
      */
     public fun securityGroupIds(securityGroupIds: List<String>)
 
     /**
-     * @param securityGroupIds The security group IDs of the infrastructure configuration.
+     * @param securityGroupIds The security group IDs to associate with the instance used to
+     * customize your Amazon EC2 AMI.
      */
     public fun securityGroupIds(vararg securityGroupIds: String)
 
     /**
-     * @param snsTopicArn The Amazon Resource Name (ARN) of the SNS topic for the infrastructure
-     * configuration.
+     * @param snsTopicArn The Amazon Resource Name (ARN) for the SNS topic to which we send image
+     * build event notifications.
+     *
+     * EC2 Image Builder is unable to send notifications to SNS topics that are encrypted using keys
+     * from other accounts. The key that is used to encrypt the SNS topic must reside in the account
+     * that the Image Builder service runs under.
      */
     public fun snsTopicArn(snsTopicArn: String)
 
     /**
-     * @param subnetId The subnet ID of the infrastructure configuration.
+     * @param subnetId The subnet ID in which to place the instance used to customize your Amazon
+     * EC2 AMI.
      */
     public fun subnetId(subnetId: String)
 
     /**
-     * @param tags The tags of the infrastructure configuration.
+     * @param tags The metadata tags to assign to the infrastructure configuration resource that
+     * Image Builder creates as output.
+     * Tags are formatted as key value pairs.
      */
     public fun tags(tags: Map<String, String>)
 
     /**
-     * @param terminateInstanceOnFailure The terminate instance on failure configuration of the
+     * @param terminateInstanceOnFailure The terminate instance on failure setting of the
      * infrastructure configuration.
+     * Set to false if you want Image Builder to retain the instance used to configure your AMI if
+     * the build or test phase of your workflow fails.
      */
     public fun terminateInstanceOnFailure(terminateInstanceOnFailure: Boolean)
 
     /**
-     * @param terminateInstanceOnFailure The terminate instance on failure configuration of the
+     * @param terminateInstanceOnFailure The terminate instance on failure setting of the
      * infrastructure configuration.
+     * Set to false if you want Image Builder to retain the instance used to configure your AMI if
+     * the build or test phase of your workflow fails.
      */
     public fun terminateInstanceOnFailure(terminateInstanceOnFailure: IResolvable)
   }
@@ -317,16 +362,16 @@ public interface CfnInfrastructureConfigurationProps {
     }
 
     /**
-     * @param instanceMetadataOptions The instance metadata option settings for the infrastructure
-     * configuration.
+     * @param instanceMetadataOptions The instance metadata options that you can set for the HTTP
+     * requests that pipeline builds use to launch EC2 build and test instances.
      */
     override fun instanceMetadataOptions(instanceMetadataOptions: IResolvable) {
       cdkBuilder.instanceMetadataOptions(instanceMetadataOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param instanceMetadataOptions The instance metadata option settings for the infrastructure
-     * configuration.
+     * @param instanceMetadataOptions The instance metadata options that you can set for the HTTP
+     * requests that pipeline builds use to launch EC2 build and test instances.
      */
     override
         fun instanceMetadataOptions(instanceMetadataOptions: CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty) {
@@ -334,8 +379,8 @@ public interface CfnInfrastructureConfigurationProps {
     }
 
     /**
-     * @param instanceMetadataOptions The instance metadata option settings for the infrastructure
-     * configuration.
+     * @param instanceMetadataOptions The instance metadata options that you can set for the HTTP
+     * requests that pipeline builds use to launch EC2 build and test instances.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9a6a8239cd0b9d52c1d027610fb7cdc90f79c930841a33643caaa091a0fafc8e")
@@ -345,7 +390,8 @@ public interface CfnInfrastructureConfigurationProps {
         instanceMetadataOptions(CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty(instanceMetadataOptions))
 
     /**
-     * @param instanceProfileName The instance profile of the infrastructure configuration. 
+     * @param instanceProfileName The instance profile to associate with the instance used to
+     * customize your Amazon EC2 AMI. 
      */
     override fun instanceProfileName(instanceProfileName: String) {
       cdkBuilder.instanceProfileName(instanceProfileName)
@@ -353,6 +399,8 @@ public interface CfnInfrastructureConfigurationProps {
 
     /**
      * @param instanceTypes The instance types of the infrastructure configuration.
+     * You can specify one or more instance types to use for this build. The service will pick one
+     * of these instance types based on availability.
      */
     override fun instanceTypes(instanceTypes: List<String>) {
       cdkBuilder.instanceTypes(instanceTypes)
@@ -360,33 +408,36 @@ public interface CfnInfrastructureConfigurationProps {
 
     /**
      * @param instanceTypes The instance types of the infrastructure configuration.
+     * You can specify one or more instance types to use for this build. The service will pick one
+     * of these instance types based on availability.
      */
     override fun instanceTypes(vararg instanceTypes: String): Unit =
         instanceTypes(instanceTypes.toList())
 
     /**
-     * @param keyPair The Amazon EC2 key pair of the infrastructure configuration.
+     * @param keyPair The key pair of the infrastructure configuration.
+     * You can use this to log on to and debug the instance used to create your image.
      */
     override fun keyPair(keyPair: String) {
       cdkBuilder.keyPair(keyPair)
     }
 
     /**
-     * @param logging The logging configuration defines where Image Builder uploads your logs.
+     * @param logging The logging configuration of the infrastructure configuration.
      */
     override fun logging(logging: IResolvable) {
       cdkBuilder.logging(logging.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param logging The logging configuration defines where Image Builder uploads your logs.
+     * @param logging The logging configuration of the infrastructure configuration.
      */
     override fun logging(logging: CfnInfrastructureConfiguration.LoggingProperty) {
       cdkBuilder.logging(logging.let(CfnInfrastructureConfiguration.LoggingProperty.Companion::unwrap))
     }
 
     /**
-     * @param logging The logging configuration defines where Image Builder uploads your logs.
+     * @param logging The logging configuration of the infrastructure configuration.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9cf648abfd79f264614f5df1feaae17d622c7d7a162001c656eecb67db4671b0")
@@ -428,65 +479,82 @@ public interface CfnInfrastructureConfigurationProps {
         Unit = placement(CfnInfrastructureConfiguration.PlacementProperty(placement))
 
     /**
-     * @param resourceTags The tags attached to the resource created by Image Builder.
-     */
-    override fun resourceTags(resourceTags: IResolvable) {
-      cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
-    }
-
-    /**
-     * @param resourceTags The tags attached to the resource created by Image Builder.
+     * @param resourceTags The metadata tags to assign to the Amazon EC2 instance that Image Builder
+     * launches during the build process.
+     * Tags are formatted as key value pairs.
      */
     override fun resourceTags(resourceTags: Map<String, String>) {
       cdkBuilder.resourceTags(resourceTags)
     }
 
     /**
-     * @param securityGroupIds The security group IDs of the infrastructure configuration.
+     * @param resourceTags The metadata tags to assign to the Amazon EC2 instance that Image Builder
+     * launches during the build process.
+     * Tags are formatted as key value pairs.
+     */
+    override fun resourceTags(resourceTags: IResolvable) {
+      cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param securityGroupIds The security group IDs to associate with the instance used to
+     * customize your Amazon EC2 AMI.
      */
     override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
     /**
-     * @param securityGroupIds The security group IDs of the infrastructure configuration.
+     * @param securityGroupIds The security group IDs to associate with the instance used to
+     * customize your Amazon EC2 AMI.
      */
     override fun securityGroupIds(vararg securityGroupIds: String): Unit =
         securityGroupIds(securityGroupIds.toList())
 
     /**
-     * @param snsTopicArn The Amazon Resource Name (ARN) of the SNS topic for the infrastructure
-     * configuration.
+     * @param snsTopicArn The Amazon Resource Name (ARN) for the SNS topic to which we send image
+     * build event notifications.
+     *
+     * EC2 Image Builder is unable to send notifications to SNS topics that are encrypted using keys
+     * from other accounts. The key that is used to encrypt the SNS topic must reside in the account
+     * that the Image Builder service runs under.
      */
     override fun snsTopicArn(snsTopicArn: String) {
       cdkBuilder.snsTopicArn(snsTopicArn)
     }
 
     /**
-     * @param subnetId The subnet ID of the infrastructure configuration.
+     * @param subnetId The subnet ID in which to place the instance used to customize your Amazon
+     * EC2 AMI.
      */
     override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 
     /**
-     * @param tags The tags of the infrastructure configuration.
+     * @param tags The metadata tags to assign to the infrastructure configuration resource that
+     * Image Builder creates as output.
+     * Tags are formatted as key value pairs.
      */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
     /**
-     * @param terminateInstanceOnFailure The terminate instance on failure configuration of the
+     * @param terminateInstanceOnFailure The terminate instance on failure setting of the
      * infrastructure configuration.
+     * Set to false if you want Image Builder to retain the instance used to configure your AMI if
+     * the build or test phase of your workflow fails.
      */
     override fun terminateInstanceOnFailure(terminateInstanceOnFailure: Boolean) {
       cdkBuilder.terminateInstanceOnFailure(terminateInstanceOnFailure)
     }
 
     /**
-     * @param terminateInstanceOnFailure The terminate instance on failure configuration of the
+     * @param terminateInstanceOnFailure The terminate instance on failure setting of the
      * infrastructure configuration.
+     * Set to false if you want Image Builder to retain the instance used to configure your AMI if
+     * the build or test phase of your workflow fails.
      */
     override fun terminateInstanceOnFailure(terminateInstanceOnFailure: IResolvable) {
       cdkBuilder.terminateInstanceOnFailure(terminateInstanceOnFailure.let(IResolvable.Companion::unwrap))
@@ -509,14 +577,15 @@ public interface CfnInfrastructureConfigurationProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * The instance metadata option settings for the infrastructure configuration.
+     * The instance metadata options that you can set for the HTTP requests that pipeline builds use
+     * to launch EC2 build and test instances.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-instancemetadataoptions)
      */
     override fun instanceMetadataOptions(): Any? = unwrap(this).getInstanceMetadataOptions()
 
     /**
-     * The instance profile of the infrastructure configuration.
+     * The instance profile to associate with the instance used to customize your Amazon EC2 AMI.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-instanceprofilename)
      */
@@ -525,19 +594,24 @@ public interface CfnInfrastructureConfigurationProps {
     /**
      * The instance types of the infrastructure configuration.
      *
+     * You can specify one or more instance types to use for this build. The service will pick one
+     * of these instance types based on availability.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-instancetypes)
      */
     override fun instanceTypes(): List<String> = unwrap(this).getInstanceTypes() ?: emptyList()
 
     /**
-     * The Amazon EC2 key pair of the infrastructure configuration.
+     * The key pair of the infrastructure configuration.
+     *
+     * You can use this to log on to and debug the instance used to create your image.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-keypair)
      */
     override fun keyPair(): String? = unwrap(this).getKeyPair()
 
     /**
-     * The logging configuration defines where Image Builder uploads your logs.
+     * The logging configuration of the infrastructure configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-logging)
      */
@@ -559,14 +633,17 @@ public interface CfnInfrastructureConfigurationProps {
     override fun placement(): Any? = unwrap(this).getPlacement()
 
     /**
-     * The tags attached to the resource created by Image Builder.
+     * The metadata tags to assign to the Amazon EC2 instance that Image Builder launches during the
+     * build process.
+     *
+     * Tags are formatted as key value pairs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-resourcetags)
      */
     override fun resourceTags(): Any? = unwrap(this).getResourceTags()
 
     /**
-     * The security group IDs of the infrastructure configuration.
+     * The security group IDs to associate with the instance used to customize your Amazon EC2 AMI.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-securitygroupids)
      */
@@ -574,28 +651,41 @@ public interface CfnInfrastructureConfigurationProps {
         emptyList()
 
     /**
-     * The Amazon Resource Name (ARN) of the SNS topic for the infrastructure configuration.
+     * The Amazon Resource Name (ARN) for the SNS topic to which we send image build event
+     * notifications.
+     *
+     *
+     * EC2 Image Builder is unable to send notifications to SNS topics that are encrypted using keys
+     * from other accounts. The key that is used to encrypt the SNS topic must reside in the account
+     * that the Image Builder service runs under.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-snstopicarn)
      */
     override fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
 
     /**
-     * The subnet ID of the infrastructure configuration.
+     * The subnet ID in which to place the instance used to customize your Amazon EC2 AMI.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-subnetid)
      */
     override fun subnetId(): String? = unwrap(this).getSubnetId()
 
     /**
-     * The tags of the infrastructure configuration.
+     * The metadata tags to assign to the infrastructure configuration resource that Image Builder
+     * creates as output.
+     *
+     * Tags are formatted as key value pairs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-tags)
      */
     override fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
     /**
-     * The terminate instance on failure configuration of the infrastructure configuration.
+     * The terminate instance on failure setting of the infrastructure configuration.
+     *
+     * Set to false if you want Image Builder to retain the instance used to configure your AMI if
+     * the build or test phase of your workflow fails.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-terminateinstanceonfailure)
      */

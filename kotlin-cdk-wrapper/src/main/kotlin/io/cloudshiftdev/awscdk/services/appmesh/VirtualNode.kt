@@ -330,6 +330,9 @@ public open class VirtualNode(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.appmesh.VirtualNode.PROPERTY_INJECTION_ID
+
     public fun fromVirtualNodeArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

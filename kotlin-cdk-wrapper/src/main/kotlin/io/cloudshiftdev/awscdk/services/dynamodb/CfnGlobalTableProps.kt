@@ -71,6 +71,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty.builder()
  * .pointInTimeRecoveryEnabled(false)
+ * .recoveryPeriodInDays(123)
  * .build())
  * .readOnDemandThroughputSettings(ReadOnDemandThroughputSettingsProperty.builder()
  * .maxReadRequestUnits(123)
@@ -144,6 +145,9 @@ import kotlin.jvm.JvmName
  * .build())
  * .build())
  * .build()))
+ * .globalTableWitnesses(List.of(GlobalTableWitnessProperty.builder()
+ * .region("region")
+ * .build()))
  * .localSecondaryIndexes(List.of(LocalSecondaryIndexProperty.builder()
  * .indexName("indexName")
  * .keySchema(List.of(KeySchemaProperty.builder()
@@ -155,6 +159,7 @@ import kotlin.jvm.JvmName
  * .projectionType("projectionType")
  * .build())
  * .build()))
+ * .multiRegionConsistency("multiRegionConsistency")
  * .sseSpecification(SSESpecificationProperty.builder()
  * .sseEnabled(false)
  * // the properties below are optional
@@ -236,6 +241,15 @@ public interface CfnGlobalTableProps {
   public fun globalSecondaryIndexes(): Any? = unwrap(this).getGlobalSecondaryIndexes()
 
   /**
+   * The list of witnesses of the MRSC global table.
+   *
+   * Only one witness Region can be configured per MRSC global table.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-globaltablewitnesses)
+   */
+  public fun globalTableWitnesses(): Any? = unwrap(this).getGlobalTableWitnesses()
+
+  /**
    * Specifies the attributes that make up the primary key for the table.
    *
    * The attributes in the `KeySchema` property must also be defined in the `AttributeDefinitions`
@@ -257,6 +271,23 @@ public interface CfnGlobalTableProps {
   public fun localSecondaryIndexes(): Any? = unwrap(this).getLocalSecondaryIndexes()
 
   /**
+   * Specifies the consistency mode for a new global table.
+   *
+   * You can specify one of the following consistency modes:
+   *
+   * * `EVENTUAL` : Configures a new global table for multi-Region eventual consistency (MREC).
+   * * `STRONG` : Configures a new global table for multi-Region strong consistency (MRSC).
+   *
+   * If you don't specify this field, the global table consistency mode defaults to `EVENTUAL` . For
+   * more information about global tables consistency modes, see [Consistency
+   * modes](https://docs.aws.amazon.com/V2globaltables_HowItWorks.html#V2globaltables_HowItWorks.consistency-modes)
+   * in DynamoDB developer guide.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-multiregionconsistency)
+   */
+  public fun multiRegionConsistency(): String? = unwrap(this).getMultiRegionConsistency()
+
+  /**
    * Specifies the list of replicas for your global table.
    *
    * The list must contain at least one element, the region where the stack defining the global
@@ -275,7 +306,9 @@ public interface CfnGlobalTableProps {
    *
    *
    * You can create a new global table with as many replicas as needed. You can add or remove
-   * replicas after table creation, but you can only add or remove a single replica in each update.
+   * replicas after table creation, but you can only add or remove a single replica in each update. For
+   * Multi-Region Strong Consistency (MRSC), you can add or remove up to 3 replicas, or 2 replicas plus
+   * a witness Region.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-replicas)
    */
@@ -296,7 +329,9 @@ public interface CfnGlobalTableProps {
    * Specifies the streams settings on your global table.
    *
    * You must provide a value for this property if your global table contains more than one replica.
-   * You can only change the streams settings if your global table has only one replica.
+   * You can only change the streams settings if your global table has only one replica. For
+   * Multi-Region Strong Consistency (MRSC), you do not need to provide a value for this property and
+   * can change the settings at any time.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-streamspecification)
    */
@@ -433,6 +468,24 @@ public interface CfnGlobalTableProps {
     public fun globalSecondaryIndexes(vararg globalSecondaryIndexes: Any)
 
     /**
+     * @param globalTableWitnesses The list of witnesses of the MRSC global table.
+     * Only one witness Region can be configured per MRSC global table.
+     */
+    public fun globalTableWitnesses(globalTableWitnesses: IResolvable)
+
+    /**
+     * @param globalTableWitnesses The list of witnesses of the MRSC global table.
+     * Only one witness Region can be configured per MRSC global table.
+     */
+    public fun globalTableWitnesses(globalTableWitnesses: List<Any>)
+
+    /**
+     * @param globalTableWitnesses The list of witnesses of the MRSC global table.
+     * Only one witness Region can be configured per MRSC global table.
+     */
+    public fun globalTableWitnesses(vararg globalTableWitnesses: Any)
+
+    /**
      * @param keySchema Specifies the attributes that make up the primary key for the table. 
      * The attributes in the `KeySchema` property must also be defined in the `AttributeDefinitions`
      * property.
@@ -478,6 +531,20 @@ public interface CfnGlobalTableProps {
     public fun localSecondaryIndexes(vararg localSecondaryIndexes: Any)
 
     /**
+     * @param multiRegionConsistency Specifies the consistency mode for a new global table.
+     * You can specify one of the following consistency modes:
+     *
+     * * `EVENTUAL` : Configures a new global table for multi-Region eventual consistency (MREC).
+     * * `STRONG` : Configures a new global table for multi-Region strong consistency (MRSC).
+     *
+     * If you don't specify this field, the global table consistency mode defaults to `EVENTUAL` .
+     * For more information about global tables consistency modes, see [Consistency
+     * modes](https://docs.aws.amazon.com/V2globaltables_HowItWorks.html#V2globaltables_HowItWorks.consistency-modes)
+     * in DynamoDB developer guide.
+     */
+    public fun multiRegionConsistency(multiRegionConsistency: String)
+
+    /**
      * @param replicas Specifies the list of replicas for your global table. 
      * The list must contain at least one element, the region where the stack defining the global
      * table is deployed. For example, if you define your table in a stack deployed to us-east-1, you
@@ -496,6 +563,8 @@ public interface CfnGlobalTableProps {
      *
      * You can create a new global table with as many replicas as needed. You can add or remove
      * replicas after table creation, but you can only add or remove a single replica in each update.
+     * For Multi-Region Strong Consistency (MRSC), you can add or remove up to 3 replicas, or 2
+     * replicas plus a witness Region.
      */
     public fun replicas(replicas: IResolvable)
 
@@ -518,6 +587,8 @@ public interface CfnGlobalTableProps {
      *
      * You can create a new global table with as many replicas as needed. You can add or remove
      * replicas after table creation, but you can only add or remove a single replica in each update.
+     * For Multi-Region Strong Consistency (MRSC), you can add or remove up to 3 replicas, or 2
+     * replicas plus a witness Region.
      */
     public fun replicas(replicas: List<Any>)
 
@@ -540,6 +611,8 @@ public interface CfnGlobalTableProps {
      *
      * You can create a new global table with as many replicas as needed. You can add or remove
      * replicas after table creation, but you can only add or remove a single replica in each update.
+     * For Multi-Region Strong Consistency (MRSC), you can add or remove up to 3 replicas, or 2
+     * replicas plus a witness Region.
      */
     public fun replicas(vararg replicas: Any)
 
@@ -573,21 +646,27 @@ public interface CfnGlobalTableProps {
     /**
      * @param streamSpecification Specifies the streams settings on your global table.
      * You must provide a value for this property if your global table contains more than one
-     * replica. You can only change the streams settings if your global table has only one replica.
+     * replica. You can only change the streams settings if your global table has only one replica. For
+     * Multi-Region Strong Consistency (MRSC), you do not need to provide a value for this property and
+     * can change the settings at any time.
      */
     public fun streamSpecification(streamSpecification: IResolvable)
 
     /**
      * @param streamSpecification Specifies the streams settings on your global table.
      * You must provide a value for this property if your global table contains more than one
-     * replica. You can only change the streams settings if your global table has only one replica.
+     * replica. You can only change the streams settings if your global table has only one replica. For
+     * Multi-Region Strong Consistency (MRSC), you do not need to provide a value for this property and
+     * can change the settings at any time.
      */
     public fun streamSpecification(streamSpecification: CfnGlobalTable.StreamSpecificationProperty)
 
     /**
      * @param streamSpecification Specifies the streams settings on your global table.
      * You must provide a value for this property if your global table contains more than one
-     * replica. You can only change the streams settings if your global table has only one replica.
+     * replica. You can only change the streams settings if your global table has only one replica. For
+     * Multi-Region Strong Consistency (MRSC), you do not need to provide a value for this property and
+     * can change the settings at any time.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f4f9b31fb0659ae8acbde94b33870b3a9b0ea251163265714a8659f838ca2139")
@@ -794,6 +873,29 @@ public interface CfnGlobalTableProps {
         globalSecondaryIndexes(globalSecondaryIndexes.toList())
 
     /**
+     * @param globalTableWitnesses The list of witnesses of the MRSC global table.
+     * Only one witness Region can be configured per MRSC global table.
+     */
+    override fun globalTableWitnesses(globalTableWitnesses: IResolvable) {
+      cdkBuilder.globalTableWitnesses(globalTableWitnesses.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param globalTableWitnesses The list of witnesses of the MRSC global table.
+     * Only one witness Region can be configured per MRSC global table.
+     */
+    override fun globalTableWitnesses(globalTableWitnesses: List<Any>) {
+      cdkBuilder.globalTableWitnesses(globalTableWitnesses.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param globalTableWitnesses The list of witnesses of the MRSC global table.
+     * Only one witness Region can be configured per MRSC global table.
+     */
+    override fun globalTableWitnesses(vararg globalTableWitnesses: Any): Unit =
+        globalTableWitnesses(globalTableWitnesses.toList())
+
+    /**
      * @param keySchema Specifies the attributes that make up the primary key for the table. 
      * The attributes in the `KeySchema` property must also be defined in the `AttributeDefinitions`
      * property.
@@ -848,6 +950,22 @@ public interface CfnGlobalTableProps {
         localSecondaryIndexes(localSecondaryIndexes.toList())
 
     /**
+     * @param multiRegionConsistency Specifies the consistency mode for a new global table.
+     * You can specify one of the following consistency modes:
+     *
+     * * `EVENTUAL` : Configures a new global table for multi-Region eventual consistency (MREC).
+     * * `STRONG` : Configures a new global table for multi-Region strong consistency (MRSC).
+     *
+     * If you don't specify this field, the global table consistency mode defaults to `EVENTUAL` .
+     * For more information about global tables consistency modes, see [Consistency
+     * modes](https://docs.aws.amazon.com/V2globaltables_HowItWorks.html#V2globaltables_HowItWorks.consistency-modes)
+     * in DynamoDB developer guide.
+     */
+    override fun multiRegionConsistency(multiRegionConsistency: String) {
+      cdkBuilder.multiRegionConsistency(multiRegionConsistency)
+    }
+
+    /**
      * @param replicas Specifies the list of replicas for your global table. 
      * The list must contain at least one element, the region where the stack defining the global
      * table is deployed. For example, if you define your table in a stack deployed to us-east-1, you
@@ -866,6 +984,8 @@ public interface CfnGlobalTableProps {
      *
      * You can create a new global table with as many replicas as needed. You can add or remove
      * replicas after table creation, but you can only add or remove a single replica in each update.
+     * For Multi-Region Strong Consistency (MRSC), you can add or remove up to 3 replicas, or 2
+     * replicas plus a witness Region.
      */
     override fun replicas(replicas: IResolvable) {
       cdkBuilder.replicas(replicas.let(IResolvable.Companion::unwrap))
@@ -890,6 +1010,8 @@ public interface CfnGlobalTableProps {
      *
      * You can create a new global table with as many replicas as needed. You can add or remove
      * replicas after table creation, but you can only add or remove a single replica in each update.
+     * For Multi-Region Strong Consistency (MRSC), you can add or remove up to 3 replicas, or 2
+     * replicas plus a witness Region.
      */
     override fun replicas(replicas: List<Any>) {
       cdkBuilder.replicas(replicas.map{CdkObjectWrappers.unwrap(it)})
@@ -914,6 +1036,8 @@ public interface CfnGlobalTableProps {
      *
      * You can create a new global table with as many replicas as needed. You can add or remove
      * replicas after table creation, but you can only add or remove a single replica in each update.
+     * For Multi-Region Strong Consistency (MRSC), you can add or remove up to 3 replicas, or 2
+     * replicas plus a witness Region.
      */
     override fun replicas(vararg replicas: Any): Unit = replicas(replicas.toList())
 
@@ -952,7 +1076,9 @@ public interface CfnGlobalTableProps {
     /**
      * @param streamSpecification Specifies the streams settings on your global table.
      * You must provide a value for this property if your global table contains more than one
-     * replica. You can only change the streams settings if your global table has only one replica.
+     * replica. You can only change the streams settings if your global table has only one replica. For
+     * Multi-Region Strong Consistency (MRSC), you do not need to provide a value for this property and
+     * can change the settings at any time.
      */
     override fun streamSpecification(streamSpecification: IResolvable) {
       cdkBuilder.streamSpecification(streamSpecification.let(IResolvable.Companion::unwrap))
@@ -961,7 +1087,9 @@ public interface CfnGlobalTableProps {
     /**
      * @param streamSpecification Specifies the streams settings on your global table.
      * You must provide a value for this property if your global table contains more than one
-     * replica. You can only change the streams settings if your global table has only one replica.
+     * replica. You can only change the streams settings if your global table has only one replica. For
+     * Multi-Region Strong Consistency (MRSC), you do not need to provide a value for this property and
+     * can change the settings at any time.
      */
     override
         fun streamSpecification(streamSpecification: CfnGlobalTable.StreamSpecificationProperty) {
@@ -971,7 +1099,9 @@ public interface CfnGlobalTableProps {
     /**
      * @param streamSpecification Specifies the streams settings on your global table.
      * You must provide a value for this property if your global table contains more than one
-     * replica. You can only change the streams settings if your global table has only one replica.
+     * replica. You can only change the streams settings if your global table has only one replica. For
+     * Multi-Region Strong Consistency (MRSC), you do not need to provide a value for this property and
+     * can change the settings at any time.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f4f9b31fb0659ae8acbde94b33870b3a9b0ea251163265714a8659f838ca2139")
@@ -1167,6 +1297,15 @@ public interface CfnGlobalTableProps {
     override fun globalSecondaryIndexes(): Any? = unwrap(this).getGlobalSecondaryIndexes()
 
     /**
+     * The list of witnesses of the MRSC global table.
+     *
+     * Only one witness Region can be configured per MRSC global table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-globaltablewitnesses)
+     */
+    override fun globalTableWitnesses(): Any? = unwrap(this).getGlobalTableWitnesses()
+
+    /**
      * Specifies the attributes that make up the primary key for the table.
      *
      * The attributes in the `KeySchema` property must also be defined in the `AttributeDefinitions`
@@ -1188,6 +1327,23 @@ public interface CfnGlobalTableProps {
     override fun localSecondaryIndexes(): Any? = unwrap(this).getLocalSecondaryIndexes()
 
     /**
+     * Specifies the consistency mode for a new global table.
+     *
+     * You can specify one of the following consistency modes:
+     *
+     * * `EVENTUAL` : Configures a new global table for multi-Region eventual consistency (MREC).
+     * * `STRONG` : Configures a new global table for multi-Region strong consistency (MRSC).
+     *
+     * If you don't specify this field, the global table consistency mode defaults to `EVENTUAL` .
+     * For more information about global tables consistency modes, see [Consistency
+     * modes](https://docs.aws.amazon.com/V2globaltables_HowItWorks.html#V2globaltables_HowItWorks.consistency-modes)
+     * in DynamoDB developer guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-multiregionconsistency)
+     */
+    override fun multiRegionConsistency(): String? = unwrap(this).getMultiRegionConsistency()
+
+    /**
      * Specifies the list of replicas for your global table.
      *
      * The list must contain at least one element, the region where the stack defining the global
@@ -1207,6 +1363,8 @@ public interface CfnGlobalTableProps {
      *
      * You can create a new global table with as many replicas as needed. You can add or remove
      * replicas after table creation, but you can only add or remove a single replica in each update.
+     * For Multi-Region Strong Consistency (MRSC), you can add or remove up to 3 replicas, or 2
+     * replicas plus a witness Region.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-replicas)
      */
@@ -1227,7 +1385,9 @@ public interface CfnGlobalTableProps {
      * Specifies the streams settings on your global table.
      *
      * You must provide a value for this property if your global table contains more than one
-     * replica. You can only change the streams settings if your global table has only one replica.
+     * replica. You can only change the streams settings if your global table has only one replica. For
+     * Multi-Region Strong Consistency (MRSC), you do not need to provide a value for this property and
+     * can change the settings at any time.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-streamspecification)
      */

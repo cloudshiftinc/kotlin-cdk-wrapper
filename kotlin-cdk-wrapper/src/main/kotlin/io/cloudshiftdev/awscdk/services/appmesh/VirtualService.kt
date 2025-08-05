@@ -133,6 +133,9 @@ public open class VirtualService(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.appmesh.VirtualService.PROPERTY_INJECTION_ID
+
     public fun fromVirtualServiceArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -96,6 +96,7 @@ import kotlin.jvm.JvmName
  * .resourceAssociationArn("resourceAssociationArn")
  * .build())
  * .build())
+ * .kmsKeyIdentifier("kmsKeyIdentifier")
  * .name("name")
  * .build();
  * ```
@@ -131,12 +132,33 @@ public interface CfnConnectionProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * The private resource the HTTP request will be sent to.
+   * For connections to private APIs, the parameters to use for invoking the API.
+   *
+   * For more information, see [Connecting to private
+   * APIs](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html) in the
+   * **Amazon EventBridge User Guide** .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters)
    */
   public fun invocationConnectivityParameters(): Any? =
       unwrap(this).getInvocationConnectivityParameters()
+
+  /**
+   * The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use
+   * a customer managed key to encrypt this connection.
+   *
+   * The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.
+   *
+   * If you do not specify a customer managed key identifier, EventBridge uses an AWS owned key to
+   * encrypt the connection.
+   *
+   * For more information, see [Identify and view
+   * keys](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html) in the *AWS Key
+   * Management Service Developer Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-kmskeyidentifier)
+   */
+  public fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
 
   /**
    * The name for the connection to create.
@@ -184,26 +206,49 @@ public interface CfnConnectionProps {
     public fun description(description: String)
 
     /**
-     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
-     * to.
+     * @param invocationConnectivityParameters For connections to private APIs, the parameters to
+     * use for invoking the API.
+     * For more information, see [Connecting to private
+     * APIs](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html) in the
+     * **Amazon EventBridge User Guide** .
      */
     public fun invocationConnectivityParameters(invocationConnectivityParameters: IResolvable)
 
     /**
-     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
-     * to.
+     * @param invocationConnectivityParameters For connections to private APIs, the parameters to
+     * use for invoking the API.
+     * For more information, see [Connecting to private
+     * APIs](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html) in the
+     * **Amazon EventBridge User Guide** .
      */
     public
         fun invocationConnectivityParameters(invocationConnectivityParameters: CfnConnection.InvocationConnectivityParametersProperty)
 
     /**
-     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
-     * to.
+     * @param invocationConnectivityParameters For connections to private APIs, the parameters to
+     * use for invoking the API.
+     * For more information, see [Connecting to private
+     * APIs](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html) in the
+     * **Amazon EventBridge User Guide** .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9cde2803880cc27f9f21bfdfcc7817f53c11e92e43490873291f8da85e402e15")
     public
         fun invocationConnectivityParameters(invocationConnectivityParameters: CfnConnection.InvocationConnectivityParametersProperty.Builder.() -> Unit)
+
+    /**
+     * @param kmsKeyIdentifier The identifier of the AWS KMS customer managed key for EventBridge to
+     * use, if you choose to use a customer managed key to encrypt this connection.
+     * The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.
+     *
+     * If you do not specify a customer managed key identifier, EventBridge uses an AWS owned key to
+     * encrypt the connection.
+     *
+     * For more information, see [Identify and view
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
+     */
+    public fun kmsKeyIdentifier(kmsKeyIdentifier: String)
 
     /**
      * @param name The name for the connection to create.
@@ -258,16 +303,22 @@ public interface CfnConnectionProps {
     }
 
     /**
-     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
-     * to.
+     * @param invocationConnectivityParameters For connections to private APIs, the parameters to
+     * use for invoking the API.
+     * For more information, see [Connecting to private
+     * APIs](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html) in the
+     * **Amazon EventBridge User Guide** .
      */
     override fun invocationConnectivityParameters(invocationConnectivityParameters: IResolvable) {
       cdkBuilder.invocationConnectivityParameters(invocationConnectivityParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
-     * to.
+     * @param invocationConnectivityParameters For connections to private APIs, the parameters to
+     * use for invoking the API.
+     * For more information, see [Connecting to private
+     * APIs](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html) in the
+     * **Amazon EventBridge User Guide** .
      */
     override
         fun invocationConnectivityParameters(invocationConnectivityParameters: CfnConnection.InvocationConnectivityParametersProperty) {
@@ -275,8 +326,11 @@ public interface CfnConnectionProps {
     }
 
     /**
-     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
-     * to.
+     * @param invocationConnectivityParameters For connections to private APIs, the parameters to
+     * use for invoking the API.
+     * For more information, see [Connecting to private
+     * APIs](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html) in the
+     * **Amazon EventBridge User Guide** .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9cde2803880cc27f9f21bfdfcc7817f53c11e92e43490873291f8da85e402e15")
@@ -284,6 +338,22 @@ public interface CfnConnectionProps {
         fun invocationConnectivityParameters(invocationConnectivityParameters: CfnConnection.InvocationConnectivityParametersProperty.Builder.() -> Unit):
         Unit =
         invocationConnectivityParameters(CfnConnection.InvocationConnectivityParametersProperty(invocationConnectivityParameters))
+
+    /**
+     * @param kmsKeyIdentifier The identifier of the AWS KMS customer managed key for EventBridge to
+     * use, if you choose to use a customer managed key to encrypt this connection.
+     * The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.
+     *
+     * If you do not specify a customer managed key identifier, EventBridge uses an AWS owned key to
+     * encrypt the connection.
+     *
+     * For more information, see [Identify and view
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
+     */
+    override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
+      cdkBuilder.kmsKeyIdentifier(kmsKeyIdentifier)
+    }
 
     /**
      * @param name The name for the connection to create.
@@ -328,12 +398,33 @@ public interface CfnConnectionProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * The private resource the HTTP request will be sent to.
+     * For connections to private APIs, the parameters to use for invoking the API.
+     *
+     * For more information, see [Connecting to private
+     * APIs](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html) in the
+     * **Amazon EventBridge User Guide** .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters)
      */
     override fun invocationConnectivityParameters(): Any? =
         unwrap(this).getInvocationConnectivityParameters()
+
+    /**
+     * The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to
+     * use a customer managed key to encrypt this connection.
+     *
+     * The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.
+     *
+     * If you do not specify a customer managed key identifier, EventBridge uses an AWS owned key to
+     * encrypt the connection.
+     *
+     * For more information, see [Identify and view
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-kmskeyidentifier)
+     */
+    override fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
 
     /**
      * The name for the connection to create.

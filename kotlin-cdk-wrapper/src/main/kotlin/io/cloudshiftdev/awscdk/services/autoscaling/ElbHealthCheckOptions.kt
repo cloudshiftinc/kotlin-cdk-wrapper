@@ -6,10 +6,11 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Deprecated
 import kotlin.Unit
 
 /**
- * ELB Heath check options.
+ * (deprecated) ELB Heath check options.
  *
  * Example:
  *
@@ -22,26 +23,31 @@ import kotlin.Unit
  * .grace(Duration.minutes(30))
  * .build();
  * ```
+ *
+ * @deprecated Use AdditionalHealthChecksOptions instead
  */
 public interface ElbHealthCheckOptions {
   /**
-   * Specified the time Auto Scaling waits before checking the health status of an EC2 instance that
-   * has come into service.
+   * (deprecated) Specified the time Auto Scaling waits before checking the health status of an EC2
+   * instance that has come into service.
    *
    * This option is required for ELB health checks.
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun grace(): Duration
 
   /**
    * A builder for [ElbHealthCheckOptions]
    */
   @CdkDslMarker
+  @Deprecated(message = "deprecated in CDK")
   public interface Builder {
     /**
      * @param grace Specified the time Auto Scaling waits before checking the health status of an
      * EC2 instance that has come into service. 
      * This option is required for ELB health checks.
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun grace(grace: Duration)
   }
 
@@ -55,6 +61,7 @@ public interface ElbHealthCheckOptions {
      * EC2 instance that has come into service. 
      * This option is required for ELB health checks.
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun grace(grace: Duration) {
       cdkBuilder.grace(grace.let(Duration.Companion::unwrap))
     }
@@ -68,11 +75,12 @@ public interface ElbHealthCheckOptions {
   ) : CdkObject(cdkObject),
       ElbHealthCheckOptions {
     /**
-     * Specified the time Auto Scaling waits before checking the health status of an EC2 instance
-     * that has come into service.
+     * (deprecated) Specified the time Auto Scaling waits before checking the health status of an
+     * EC2 instance that has come into service.
      *
      * This option is required for ELB health checks.
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun grace(): Duration = unwrap(this).getGrace().let(Duration::wrap)
   }
 

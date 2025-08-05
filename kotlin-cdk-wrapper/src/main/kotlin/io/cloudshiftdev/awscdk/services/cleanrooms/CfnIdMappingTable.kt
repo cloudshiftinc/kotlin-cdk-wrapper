@@ -82,13 +82,13 @@ public open class CfnIdMappingTable(
   public open fun attrCollaborationArn(): String = unwrap(this).getAttrCollaborationArn()
 
   /**
-   *
+   * The unique identifier of the collaboration that contains this ID mapping table.
    */
   public open fun attrCollaborationIdentifier(): String =
       unwrap(this).getAttrCollaborationIdentifier()
 
   /**
-   *
+   * The unique identifier of the ID mapping table identifier that you want to retrieve.
    */
   public open fun attrIdMappingTableIdentifier(): String =
       unwrap(this).getAttrIdMappingTableIdentifier()

@@ -12,10 +12,8 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Specifies a permission for an Amazon EC2 network interface.
- *
- * For example, you can grant an AWS authorized partner account permission to attach the specified
- * network interface to an instance in their account.
+ * Specifies a permission for the network interface, For example, you can grant an AWS -authorized
+ * account permission to attach the network interface to an instance in their account.
  *
  * Example:
  *

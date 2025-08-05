@@ -45,8 +45,8 @@ public interface CfnSessionProps {
   /**
    * The status of Amazon Macie for the account.
    *
-   * Valid values are: `ENABLED` , start or resume all Macie activities for the account; and,
-   * `PAUSED` , suspend all Macie activities for the account.
+   * Valid values are: `ENABLED` , start or resume Macie activities for the account; and, `PAUSED` ,
+   * suspend Macie activities for the account.
    *
    * Default: - "ENABLED"
    *
@@ -73,8 +73,8 @@ public interface CfnSessionProps {
 
     /**
      * @param status The status of Amazon Macie for the account.
-     * Valid values are: `ENABLED` , start or resume all Macie activities for the account; and,
-     * `PAUSED` , suspend all Macie activities for the account.
+     * Valid values are: `ENABLED` , start or resume Macie activities for the account; and, `PAUSED`
+     * , suspend Macie activities for the account.
      */
     public fun status(status: String)
   }
@@ -99,8 +99,8 @@ public interface CfnSessionProps {
 
     /**
      * @param status The status of Amazon Macie for the account.
-     * Valid values are: `ENABLED` , start or resume all Macie activities for the account; and,
-     * `PAUSED` , suspend all Macie activities for the account.
+     * Valid values are: `ENABLED` , start or resume Macie activities for the account; and, `PAUSED`
+     * , suspend Macie activities for the account.
      */
     override fun status(status: String) {
       cdkBuilder.status(status)
@@ -133,8 +133,8 @@ public interface CfnSessionProps {
     /**
      * The status of Amazon Macie for the account.
      *
-     * Valid values are: `ENABLED` , start or resume all Macie activities for the account; and,
-     * `PAUSED` , suspend all Macie activities for the account.
+     * Valid values are: `ENABLED` , start or resume Macie activities for the account; and, `PAUSED`
+     * , suspend Macie activities for the account.
      *
      * Default: - "ENABLED"
      *

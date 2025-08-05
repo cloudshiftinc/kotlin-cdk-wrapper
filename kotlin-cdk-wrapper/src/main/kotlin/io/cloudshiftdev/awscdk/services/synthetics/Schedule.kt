@@ -17,11 +17,11 @@ import kotlin.jvm.JvmName
  * Canary canary = Canary.Builder.create(this, "MyCanary")
  * .schedule(Schedule.rate(Duration.minutes(5)))
  * .test(Test.custom(CustomTestOptions.builder()
- * .code(Code.fromAsset(join(__dirname, "canary")))
- * .handler("index.handler")
+ * .handler("canary.handler")
+ * .code(Code.fromAsset(join(__dirname, "canaries")))
  * .build()))
- * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
- * .activeTracing(true)
+ * .runtime(Runtime.SYNTHETICS_PYTHON_SELENIUM_5_1)
+ * .maxRetries(2)
  * .build();
  * ```
  */

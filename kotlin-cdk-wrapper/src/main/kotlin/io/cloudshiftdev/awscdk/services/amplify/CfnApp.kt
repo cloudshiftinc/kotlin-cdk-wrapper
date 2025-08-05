@@ -65,6 +65,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .cacheConfig(CacheConfigProperty.builder()
  * .type("type")
  * .build())
+ * .computeRoleArn("computeRoleArn")
  * .customHeaders("customHeaders")
  * .customRules(List.of(CustomRuleProperty.builder()
  * .source("source")
@@ -80,6 +81,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .value("value")
  * .build()))
  * .iamServiceRole("iamServiceRole")
+ * .jobConfig(JobConfigProperty.builder()
+ * .buildComputeType("buildComputeType")
+ * .build())
  * .oauthToken("oauthToken")
  * .platform("platform")
  * .repository("repository")
@@ -240,6 +244,18 @@ public open class CfnApp(
       cacheConfig(CacheConfigProperty(`value`))
 
   /**
+   * The Amazon Resource Name (ARN) of the IAM role for an SSR app.
+   */
+  public open fun computeRoleArn(): String? = unwrap(this).getComputeRoleArn()
+
+  /**
+   * The Amazon Resource Name (ARN) of the IAM role for an SSR app.
+   */
+  public open fun computeRoleArn(`value`: String) {
+    unwrap(this).setComputeRoleArn(`value`)
+  }
+
+  /**
    * The custom HTTP headers for an Amplify app.
    */
   public open fun customHeaders(): String? = unwrap(this).getCustomHeaders()
@@ -356,6 +372,33 @@ public open class CfnApp(
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
+
+  /**
+   * The configuration details that apply to the jobs for an Amplify app.
+   */
+  public open fun jobConfig(): Any? = unwrap(this).getJobConfig()
+
+  /**
+   * The configuration details that apply to the jobs for an Amplify app.
+   */
+  public open fun jobConfig(`value`: IResolvable) {
+    unwrap(this).setJobConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The configuration details that apply to the jobs for an Amplify app.
+   */
+  public open fun jobConfig(`value`: JobConfigProperty) {
+    unwrap(this).setJobConfig(`value`.let(JobConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * The configuration details that apply to the jobs for an Amplify app.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("937b26022e7038c586ac0df532ae9751c31b605e2101e57ea3a80c1a202b8dc6")
+  public open fun jobConfig(`value`: JobConfigProperty.Builder.() -> Unit): Unit =
+      jobConfig(JobConfigProperty(`value`))
 
   /**
    * The name of the Amplify app.
@@ -561,6 +604,20 @@ public open class CfnApp(
     public fun cacheConfig(cacheConfig: CacheConfigProperty.Builder.() -> Unit)
 
     /**
+     * The Amazon Resource Name (ARN) of the IAM role for an SSR app.
+     *
+     * The Compute role allows the Amplify Hosting compute service to securely access specific AWS
+     * resources based on the role's permissions. For more information about the SSR Compute role, see
+     * [Adding an SSR Compute
+     * role](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-SSR-compute-role.html) in the
+     * *Amplify User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-computerolearn)
+     * @param computeRoleArn The Amazon Resource Name (ARN) of the IAM role for an SSR app. 
+     */
+    public fun computeRoleArn(computeRoleArn: String)
+
+    /**
      * The custom HTTP headers for an Amplify app.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-customheaders)
@@ -668,6 +725,32 @@ public open class CfnApp(
      * Resource Name (ARN) of the Amplify app. 
      */
     public fun iamServiceRole(iamServiceRole: String)
+
+    /**
+     * The configuration details that apply to the jobs for an Amplify app.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-jobconfig)
+     * @param jobConfig The configuration details that apply to the jobs for an Amplify app. 
+     */
+    public fun jobConfig(jobConfig: IResolvable)
+
+    /**
+     * The configuration details that apply to the jobs for an Amplify app.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-jobconfig)
+     * @param jobConfig The configuration details that apply to the jobs for an Amplify app. 
+     */
+    public fun jobConfig(jobConfig: JobConfigProperty)
+
+    /**
+     * The configuration details that apply to the jobs for an Amplify app.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-jobconfig)
+     * @param jobConfig The configuration details that apply to the jobs for an Amplify app. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b262dddab4bd207ac3938072b1f83bd7e5b9e44271ddee5a6b3494c0e85edb91")
+    public fun jobConfig(jobConfig: JobConfigProperty.Builder.() -> Unit)
 
     /**
      * The name of the Amplify app.
@@ -899,6 +982,22 @@ public open class CfnApp(
         cacheConfig(CacheConfigProperty(cacheConfig))
 
     /**
+     * The Amazon Resource Name (ARN) of the IAM role for an SSR app.
+     *
+     * The Compute role allows the Amplify Hosting compute service to securely access specific AWS
+     * resources based on the role's permissions. For more information about the SSR Compute role, see
+     * [Adding an SSR Compute
+     * role](https://docs.aws.amazon.com/amplify/latest/userguide/amplify-SSR-compute-role.html) in the
+     * *Amplify User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-computerolearn)
+     * @param computeRoleArn The Amazon Resource Name (ARN) of the IAM role for an SSR app. 
+     */
+    override fun computeRoleArn(computeRoleArn: String) {
+      cdkBuilder.computeRoleArn(computeRoleArn)
+    }
+
+    /**
      * The custom HTTP headers for an Amplify app.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-customheaders)
@@ -1025,6 +1124,37 @@ public open class CfnApp(
     override fun iamServiceRole(iamServiceRole: String) {
       cdkBuilder.iamServiceRole(iamServiceRole)
     }
+
+    /**
+     * The configuration details that apply to the jobs for an Amplify app.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-jobconfig)
+     * @param jobConfig The configuration details that apply to the jobs for an Amplify app. 
+     */
+    override fun jobConfig(jobConfig: IResolvable) {
+      cdkBuilder.jobConfig(jobConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The configuration details that apply to the jobs for an Amplify app.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-jobconfig)
+     * @param jobConfig The configuration details that apply to the jobs for an Amplify app. 
+     */
+    override fun jobConfig(jobConfig: JobConfigProperty) {
+      cdkBuilder.jobConfig(jobConfig.let(JobConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * The configuration details that apply to the jobs for an Amplify app.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-jobconfig)
+     * @param jobConfig The configuration details that apply to the jobs for an Amplify app. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b262dddab4bd207ac3938072b1f83bd7e5b9e44271ddee5a6b3494c0e85edb91")
+    override fun jobConfig(jobConfig: JobConfigProperty.Builder.() -> Unit): Unit =
+        jobConfig(JobConfigProperty(jobConfig))
 
     /**
      * The name of the Amplify app.
@@ -1941,11 +2071,10 @@ public open class CfnApp(
      * The type of cache configuration to use for an Amplify app.
      *
      * The `AMPLIFY_MANAGED` cache configuration automatically applies an optimized cache
-     * configuration for your app based on its platform, routing rules, and rewrite rules. This is the
-     * default setting.
+     * configuration for your app based on its platform, routing rules, and rewrite rules.
      *
      * The `AMPLIFY_MANAGED_NO_COOKIES` cache configuration type is the same as `AMPLIFY_MANAGED` ,
-     * except that it excludes all cookies from the cache key.
+     * except that it excludes all cookies from the cache key. This is the default setting.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-cacheconfig.html#cfn-amplify-app-cacheconfig-type)
      */
@@ -1959,11 +2088,10 @@ public open class CfnApp(
       /**
        * @param type The type of cache configuration to use for an Amplify app.
        * The `AMPLIFY_MANAGED` cache configuration automatically applies an optimized cache
-       * configuration for your app based on its platform, routing rules, and rewrite rules. This is
-       * the default setting.
+       * configuration for your app based on its platform, routing rules, and rewrite rules.
        *
        * The `AMPLIFY_MANAGED_NO_COOKIES` cache configuration type is the same as `AMPLIFY_MANAGED`
-       * , except that it excludes all cookies from the cache key.
+       * , except that it excludes all cookies from the cache key. This is the default setting.
        */
       public fun type(type: String)
     }
@@ -1976,11 +2104,10 @@ public open class CfnApp(
       /**
        * @param type The type of cache configuration to use for an Amplify app.
        * The `AMPLIFY_MANAGED` cache configuration automatically applies an optimized cache
-       * configuration for your app based on its platform, routing rules, and rewrite rules. This is
-       * the default setting.
+       * configuration for your app based on its platform, routing rules, and rewrite rules.
        *
        * The `AMPLIFY_MANAGED_NO_COOKIES` cache configuration type is the same as `AMPLIFY_MANAGED`
-       * , except that it excludes all cookies from the cache key.
+       * , except that it excludes all cookies from the cache key. This is the default setting.
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -1998,11 +2125,10 @@ public open class CfnApp(
        * The type of cache configuration to use for an Amplify app.
        *
        * The `AMPLIFY_MANAGED` cache configuration automatically applies an optimized cache
-       * configuration for your app based on its platform, routing rules, and rewrite rules. This is
-       * the default setting.
+       * configuration for your app based on its platform, routing rules, and rewrite rules.
        *
        * The `AMPLIFY_MANAGED_NO_COOKIES` cache configuration type is the same as `AMPLIFY_MANAGED`
-       * , except that it excludes all cookies from the cache key.
+       * , except that it excludes all cookies from the cache key. This is the default setting.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-cacheconfig.html#cfn-amplify-app-cacheconfig-type)
        */
@@ -2323,6 +2449,154 @@ public open class CfnApp(
           software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty
+    }
+  }
+
+  /**
+   * Describes the configuration details that apply to the jobs for an Amplify app.
+   *
+   * Use `JobConfig` to apply configuration to jobs, such as customizing the build instance size
+   * when you create or update an Amplify app. For more information about customizable build instances,
+   * see [Custom build
+   * instances](https://docs.aws.amazon.com/amplify/latest/userguide/custom-build-instance.html) in the
+   * *Amplify User Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplify.*;
+   * JobConfigProperty jobConfigProperty = JobConfigProperty.builder()
+   * .buildComputeType("buildComputeType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-jobconfig.html)
+   */
+  public interface JobConfigProperty {
+    /**
+     * Specifies the size of the build instance.
+     *
+     * Amplify supports three instance sizes: `STANDARD_8GB` , `LARGE_16GB` , and `XLARGE_72GB` . If
+     * you don't specify a value, Amplify uses the `STANDARD_8GB` default.
+     *
+     * The following list describes the CPU, memory, and storage capacity for each build instance
+     * type:
+     *
+     * * **STANDARD_8GB** - - vCPUs: 4
+     * * Memory: 8 GiB
+     * * Disk space: 128 GB
+     * * **LARGE_16GB** - - vCPUs: 8
+     * * Memory: 16 GiB
+     * * Disk space: 128 GB
+     * * **XLARGE_72GB** - - vCPUs: 36
+     * * Memory: 72 GiB
+     * * Disk space: 256 GB
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-jobconfig.html#cfn-amplify-app-jobconfig-buildcomputetype)
+     */
+    public fun buildComputeType(): String
+
+    /**
+     * A builder for [JobConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param buildComputeType Specifies the size of the build instance. 
+       * Amplify supports three instance sizes: `STANDARD_8GB` , `LARGE_16GB` , and `XLARGE_72GB` .
+       * If you don't specify a value, Amplify uses the `STANDARD_8GB` default.
+       *
+       * The following list describes the CPU, memory, and storage capacity for each build instance
+       * type:
+       *
+       * * **STANDARD_8GB** - - vCPUs: 4
+       * * Memory: 8 GiB
+       * * Disk space: 128 GB
+       * * **LARGE_16GB** - - vCPUs: 8
+       * * Memory: 16 GiB
+       * * Disk space: 128 GB
+       * * **XLARGE_72GB** - - vCPUs: 36
+       * * Memory: 72 GiB
+       * * Disk space: 256 GB
+       */
+      public fun buildComputeType(buildComputeType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplify.CfnApp.JobConfigProperty.Builder =
+          software.amazon.awscdk.services.amplify.CfnApp.JobConfigProperty.builder()
+
+      /**
+       * @param buildComputeType Specifies the size of the build instance. 
+       * Amplify supports three instance sizes: `STANDARD_8GB` , `LARGE_16GB` , and `XLARGE_72GB` .
+       * If you don't specify a value, Amplify uses the `STANDARD_8GB` default.
+       *
+       * The following list describes the CPU, memory, and storage capacity for each build instance
+       * type:
+       *
+       * * **STANDARD_8GB** - - vCPUs: 4
+       * * Memory: 8 GiB
+       * * Disk space: 128 GB
+       * * **LARGE_16GB** - - vCPUs: 8
+       * * Memory: 16 GiB
+       * * Disk space: 128 GB
+       * * **XLARGE_72GB** - - vCPUs: 36
+       * * Memory: 72 GiB
+       * * Disk space: 256 GB
+       */
+      override fun buildComputeType(buildComputeType: String) {
+        cdkBuilder.buildComputeType(buildComputeType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.amplify.CfnApp.JobConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.amplify.CfnApp.JobConfigProperty,
+    ) : CdkObject(cdkObject),
+        JobConfigProperty {
+      /**
+       * Specifies the size of the build instance.
+       *
+       * Amplify supports three instance sizes: `STANDARD_8GB` , `LARGE_16GB` , and `XLARGE_72GB` .
+       * If you don't specify a value, Amplify uses the `STANDARD_8GB` default.
+       *
+       * The following list describes the CPU, memory, and storage capacity for each build instance
+       * type:
+       *
+       * * **STANDARD_8GB** - - vCPUs: 4
+       * * Memory: 8 GiB
+       * * Disk space: 128 GB
+       * * **LARGE_16GB** - - vCPUs: 8
+       * * Memory: 16 GiB
+       * * Disk space: 128 GB
+       * * **XLARGE_72GB** - - vCPUs: 36
+       * * Memory: 72 GiB
+       * * Disk space: 256 GB
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-jobconfig.html#cfn-amplify-app-jobconfig-buildcomputetype)
+       */
+      override fun buildComputeType(): String = unwrap(this).getBuildComputeType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JobConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnApp.JobConfigProperty):
+          JobConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? JobConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JobConfigProperty):
+          software.amazon.awscdk.services.amplify.CfnApp.JobConfigProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.amplify.CfnApp.JobConfigProperty
     }
   }
 }

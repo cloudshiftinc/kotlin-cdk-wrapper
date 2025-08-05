@@ -88,6 +88,24 @@ public interface ILogGroup : IResourceWithPolicy {
       SubscriptionFilter
 
   /**
+   * Create a new Transformer on this Log Group.
+   *
+   * @param id Unique identifier for the construct in its parent. 
+   * @param props Properties for creating the Transformer. 
+   */
+  public fun addTransformer(id: String, props: TransformerOptions): Transformer
+
+  /**
+   * Create a new Transformer on this Log Group.
+   *
+   * @param id Unique identifier for the construct in its parent. 
+   * @param props Properties for creating the Transformer. 
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("b9ff4e7a8c844c9c7e83b607771b404351b7784102e7de5dbb13f4be956945d3")
+  public fun addTransformer(id: String, props: TransformerOptions.Builder.() -> Unit): Transformer
+
+  /**
    * Extract a metric from structured log events in the LogGroup.
    *
    * Creates a MetricFilter on this LogGroup that will extract the value
@@ -326,6 +344,27 @@ public interface ILogGroup : IResourceWithPolicy {
     @JvmName("b93f8258425594b02debe63f0c120f198512d8431f5ae67b7fb7780e34fcbae2")
     override fun addToResourcePolicy(statement: PolicyStatement.Builder.() -> Unit):
         AddToResourcePolicyResult = addToResourcePolicy(PolicyStatement(statement))
+
+    /**
+     * Create a new Transformer on this Log Group.
+     *
+     * @param id Unique identifier for the construct in its parent. 
+     * @param props Properties for creating the Transformer. 
+     */
+    override fun addTransformer(id: String, props: TransformerOptions): Transformer =
+        unwrap(this).addTransformer(id,
+        props.let(TransformerOptions.Companion::unwrap)).let(Transformer::wrap)
+
+    /**
+     * Create a new Transformer on this Log Group.
+     *
+     * @param id Unique identifier for the construct in its parent. 
+     * @param props Properties for creating the Transformer. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b9ff4e7a8c844c9c7e83b607771b404351b7784102e7de5dbb13f4be956945d3")
+    override fun addTransformer(id: String, props: TransformerOptions.Builder.() -> Unit):
+        Transformer = addTransformer(id, TransformerOptions(props))
 
     /**
      * Apply the given removal policy to this resource.

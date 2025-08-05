@@ -37,6 +37,16 @@ public abstract class IgnoreStrategy(
   }
 
   /**
+   * Determines whether a given file path should be ignored and have all of its children ignored if
+   * its a directory.
+   *
+   * @return `true` if the file should be ignored
+   * @param absoluteFilePath absolute file path to be assessed against the pattern. 
+   */
+  public open fun completelyIgnores(absoluteFilePath: String): Boolean =
+      unwrap(this).completelyIgnores(absoluteFilePath)
+
+  /**
    * Determines whether a given file path should be ignored or not.
    *
    * @return `true` if the file should be ignored

@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -51,6 +52,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .loggingRole("loggingRole")
  * .securityPolicyName("securityPolicyName")
  * .sftpConfig(SftpConfigProperty.builder()
+ * .maxConcurrentConnections(123)
  * .trustedHostKeys(List.of("trustedHostKeys"))
  * .userSecretId("userSecretId")
  * .build())
@@ -517,6 +519,7 @@ public open class CfnConnector(
    * .mdnSigningAlgorithm("mdnSigningAlgorithm")
    * .messageSubject("messageSubject")
    * .partnerProfileId("partnerProfileId")
+   * .preserveContentType("preserveContentType")
    * .signingAlgorithm("signingAlgorithm")
    * .build();
    * ```
@@ -588,7 +591,7 @@ public open class CfnConnector(
     public fun localProfileId(): String? = unwrap(this).getLocalProfileId()
 
     /**
-     * Used for outbound requests (from an AWS Transfer Family server to a partner AS2 server) to
+     * Used for outbound requests (from an AWS Transfer Family connector to a partner AS2 server) to
      * determine whether the partner response for transfers is synchronous or asynchronous.
      *
      * Specify either of the following values:
@@ -626,6 +629,14 @@ public open class CfnConnector(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-as2config.html#cfn-transfer-connector-as2config-partnerprofileid)
      */
     public fun partnerProfileId(): String? = unwrap(this).getPartnerProfileId()
+
+    /**
+     * Specifies whether to use the AWS S3 object content-type as the content-type for the AS2
+     * message.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-as2config.html#cfn-transfer-connector-as2config-preservecontenttype)
+     */
+    public fun preserveContentType(): String? = unwrap(this).getPreserveContentType()
 
     /**
      * The algorithm that is used to sign the AS2 messages sent with the connector.
@@ -693,7 +704,7 @@ public open class CfnConnector(
       public fun localProfileId(localProfileId: String)
 
       /**
-       * @param mdnResponse Used for outbound requests (from an AWS Transfer Family server to a
+       * @param mdnResponse Used for outbound requests (from an AWS Transfer Family connector to a
        * partner AS2 server) to determine whether the partner response for transfers is synchronous or
        * asynchronous.
        * Specify either of the following values:
@@ -721,6 +732,12 @@ public open class CfnConnector(
        * @param partnerProfileId A unique identifier for the partner profile for the connector.
        */
       public fun partnerProfileId(partnerProfileId: String)
+
+      /**
+       * @param preserveContentType Specifies whether to use the AWS S3 object content-type as the
+       * content-type for the AS2 message.
+       */
+      public fun preserveContentType(preserveContentType: String)
 
       /**
        * @param signingAlgorithm The algorithm that is used to sign the AS2 messages sent with the
@@ -796,7 +813,7 @@ public open class CfnConnector(
       }
 
       /**
-       * @param mdnResponse Used for outbound requests (from an AWS Transfer Family server to a
+       * @param mdnResponse Used for outbound requests (from an AWS Transfer Family connector to a
        * partner AS2 server) to determine whether the partner response for transfers is synchronous or
        * asynchronous.
        * Specify either of the following values:
@@ -831,6 +848,14 @@ public open class CfnConnector(
        */
       override fun partnerProfileId(partnerProfileId: String) {
         cdkBuilder.partnerProfileId(partnerProfileId)
+      }
+
+      /**
+       * @param preserveContentType Specifies whether to use the AWS S3 object content-type as the
+       * content-type for the AS2 message.
+       */
+      override fun preserveContentType(preserveContentType: String) {
+        cdkBuilder.preserveContentType(preserveContentType)
       }
 
       /**
@@ -913,8 +938,8 @@ public open class CfnConnector(
       override fun localProfileId(): String? = unwrap(this).getLocalProfileId()
 
       /**
-       * Used for outbound requests (from an AWS Transfer Family server to a partner AS2 server) to
-       * determine whether the partner response for transfers is synchronous or asynchronous.
+       * Used for outbound requests (from an AWS Transfer Family connector to a partner AS2 server)
+       * to determine whether the partner response for transfers is synchronous or asynchronous.
        *
        * Specify either of the following values:
        *
@@ -953,6 +978,14 @@ public open class CfnConnector(
       override fun partnerProfileId(): String? = unwrap(this).getPartnerProfileId()
 
       /**
+       * Specifies whether to use the AWS S3 object content-type as the content-type for the AS2
+       * message.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-as2config.html#cfn-transfer-connector-as2config-preservecontenttype)
+       */
+      override fun preserveContentType(): String? = unwrap(this).getPreserveContentType()
+
+      /**
        * The algorithm that is used to sign the AS2 messages sent with the connector.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-as2config.html#cfn-transfer-connector-as2config-signingalgorithm)
@@ -988,6 +1021,7 @@ public open class CfnConnector(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.transfer.*;
    * SftpConfigProperty sftpConfigProperty = SftpConfigProperty.builder()
+   * .maxConcurrentConnections(123)
    * .trustedHostKeys(List.of("trustedHostKeys"))
    * .userSecretId("userSecretId")
    * .build();
@@ -997,10 +1031,36 @@ public open class CfnConnector(
    */
   public interface SftpConfigProperty {
     /**
+     * Specify the number of concurrent connections that your connector creates to the remote
+     * server.
+     *
+     * The default value is `1` . The maximum values is `5` .
+     *
+     *
+     * If you are using the AWS Management Console , the default value is `5` .
+     *
+     *
+     * This parameter specifies the number of active connections that your connector can establish
+     * with the remote server at the same time. Increasing this value can enhance connector performance
+     * when transferring large file batches by enabling parallel operations.
+     *
+     * Default: - 1
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html#cfn-transfer-connector-sftpconfig-maxconcurrentconnections)
+     */
+    public fun maxConcurrentConnections(): Number? = unwrap(this).getMaxConcurrentConnections()
+
+    /**
      * The public portion of the host key, or keys, that are used to identify the external server to
      * which you are connecting.
      *
      * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary key.
+     *
+     *
+     * `TrustedHostKeys` is optional for `CreateConnector` . If not provided, you can use
+     * `TestConnection` to retrieve the server host key during the initial connection attempt, and
+     * subsequently update the connector with the observed host key.
+     *
      *
      * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
      * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify only
@@ -1036,6 +1096,11 @@ public open class CfnConnector(
      *
      * The identifier must be the Amazon Resource Name (ARN) of the secret.
      *
+     *
+     * * Required when creating an SFTP connector
+     * * Optional when updating an existing SFTP connector
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html#cfn-transfer-connector-sftpconfig-usersecretid)
      */
     public fun userSecretId(): String? = unwrap(this).getUserSecretId()
@@ -1046,10 +1111,31 @@ public open class CfnConnector(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param maxConcurrentConnections Specify the number of concurrent connections that your
+       * connector creates to the remote server.
+       * The default value is `1` . The maximum values is `5` .
+       *
+       *
+       * If you are using the AWS Management Console , the default value is `5` .
+       *
+       *
+       * This parameter specifies the number of active connections that your connector can establish
+       * with the remote server at the same time. Increasing this value can enhance connector
+       * performance when transferring large file batches by enabling parallel operations.
+       */
+      public fun maxConcurrentConnections(maxConcurrentConnections: Number)
+
+      /**
        * @param trustedHostKeys The public portion of the host key, or keys, that are used to
        * identify the external server to which you are connecting.
        * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary
        * key.
+       *
+       *
+       * `TrustedHostKeys` is optional for `CreateConnector` . If not provided, you can use
+       * `TestConnection` to retrieve the server host key during the initial connection attempt, and
+       * subsequently update the connector with the observed host key.
+       *
        *
        * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
        * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify
@@ -1083,6 +1169,12 @@ public open class CfnConnector(
        * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary
        * key.
        *
+       *
+       * `TrustedHostKeys` is optional for `CreateConnector` . If not provided, you can use
+       * `TestConnection` to retrieve the server host key during the initial connection attempt, and
+       * subsequently update the connector with the observed host key.
+       *
+       *
        * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
        * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify
        * only the `&lt;key type&gt;` and `&lt;body base64&gt;` : do not enter the `&lt;comment&gt;`
@@ -1113,6 +1205,10 @@ public open class CfnConnector(
        * @param userSecretId The identifier for the secret (in AWS Secrets Manager) that contains
        * the SFTP user's private key, password, or both.
        * The identifier must be the Amazon Resource Name (ARN) of the secret.
+       *
+       *
+       * * Required when creating an SFTP connector
+       * * Optional when updating an existing SFTP connector
        */
       public fun userSecretId(userSecretId: String)
     }
@@ -1123,10 +1219,33 @@ public open class CfnConnector(
           software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty.builder()
 
       /**
+       * @param maxConcurrentConnections Specify the number of concurrent connections that your
+       * connector creates to the remote server.
+       * The default value is `1` . The maximum values is `5` .
+       *
+       *
+       * If you are using the AWS Management Console , the default value is `5` .
+       *
+       *
+       * This parameter specifies the number of active connections that your connector can establish
+       * with the remote server at the same time. Increasing this value can enhance connector
+       * performance when transferring large file batches by enabling parallel operations.
+       */
+      override fun maxConcurrentConnections(maxConcurrentConnections: Number) {
+        cdkBuilder.maxConcurrentConnections(maxConcurrentConnections)
+      }
+
+      /**
        * @param trustedHostKeys The public portion of the host key, or keys, that are used to
        * identify the external server to which you are connecting.
        * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary
        * key.
+       *
+       *
+       * `TrustedHostKeys` is optional for `CreateConnector` . If not provided, you can use
+       * `TestConnection` to retrieve the server host key during the initial connection attempt, and
+       * subsequently update the connector with the observed host key.
+       *
        *
        * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
        * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify
@@ -1162,6 +1281,12 @@ public open class CfnConnector(
        * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary
        * key.
        *
+       *
+       * `TrustedHostKeys` is optional for `CreateConnector` . If not provided, you can use
+       * `TestConnection` to retrieve the server host key during the initial connection attempt, and
+       * subsequently update the connector with the observed host key.
+       *
+       *
        * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
        * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify
        * only the `&lt;key type&gt;` and `&lt;body base64&gt;` : do not enter the `&lt;comment&gt;`
@@ -1193,6 +1318,10 @@ public open class CfnConnector(
        * @param userSecretId The identifier for the secret (in AWS Secrets Manager) that contains
        * the SFTP user's private key, password, or both.
        * The identifier must be the Amazon Resource Name (ARN) of the secret.
+       *
+       *
+       * * Required when creating an SFTP connector
+       * * Optional when updating an existing SFTP connector
        */
       override fun userSecretId(userSecretId: String) {
         cdkBuilder.userSecretId(userSecretId)
@@ -1207,11 +1336,37 @@ public open class CfnConnector(
     ) : CdkObject(cdkObject),
         SftpConfigProperty {
       /**
+       * Specify the number of concurrent connections that your connector creates to the remote
+       * server.
+       *
+       * The default value is `1` . The maximum values is `5` .
+       *
+       *
+       * If you are using the AWS Management Console , the default value is `5` .
+       *
+       *
+       * This parameter specifies the number of active connections that your connector can establish
+       * with the remote server at the same time. Increasing this value can enhance connector
+       * performance when transferring large file batches by enabling parallel operations.
+       *
+       * Default: - 1
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html#cfn-transfer-connector-sftpconfig-maxconcurrentconnections)
+       */
+      override fun maxConcurrentConnections(): Number? = unwrap(this).getMaxConcurrentConnections()
+
+      /**
        * The public portion of the host key, or keys, that are used to identify the external server
        * to which you are connecting.
        *
        * You can use the `ssh-keyscan` command against the SFTP server to retrieve the necessary
        * key.
+       *
+       *
+       * `TrustedHostKeys` is optional for `CreateConnector` . If not provided, you can use
+       * `TestConnection` to retrieve the server host key during the initial connection attempt, and
+       * subsequently update the connector with the observed host key.
+       *
        *
        * The three standard SSH public key format elements are `&lt;key type&gt;` , `&lt;body
        * base64&gt;` , and an optional `&lt;comment&gt;` , with spaces between each element. Specify
@@ -1247,6 +1402,11 @@ public open class CfnConnector(
        * private key, password, or both.
        *
        * The identifier must be the Amazon Resource Name (ARN) of the secret.
+       *
+       *
+       * * Required when creating an SFTP connector
+       * * Optional when updating an existing SFTP connector
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-sftpconfig.html#cfn-transfer-connector-sftpconfig-usersecretid)
        */

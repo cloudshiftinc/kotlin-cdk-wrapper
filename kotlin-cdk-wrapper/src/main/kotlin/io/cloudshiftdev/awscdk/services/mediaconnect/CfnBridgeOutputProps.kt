@@ -37,7 +37,7 @@ import kotlin.jvm.JvmName
  */
 public interface CfnBridgeOutputProps {
   /**
-   * The ARN of the bridge that you want to describe.
+   * The Amazon Resource Name (ARN) of the bridge that you want to update.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html#cfn-mediaconnect-bridgeoutput-bridgearn)
    */
@@ -53,7 +53,9 @@ public interface CfnBridgeOutputProps {
   public fun name(): String
 
   /**
-   * Add a network output to an existing bridge.
+   * The network output of the bridge.
+   *
+   * A network output is delivered to your premises.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html#cfn-mediaconnect-bridgeoutput-networkoutput)
    */
@@ -65,7 +67,7 @@ public interface CfnBridgeOutputProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param bridgeArn The ARN of the bridge that you want to describe. 
+     * @param bridgeArn The Amazon Resource Name (ARN) of the bridge that you want to update. 
      */
     public fun bridgeArn(bridgeArn: String)
 
@@ -76,17 +78,20 @@ public interface CfnBridgeOutputProps {
     public fun name(name: String)
 
     /**
-     * @param networkOutput Add a network output to an existing bridge. 
+     * @param networkOutput The network output of the bridge. 
+     * A network output is delivered to your premises.
      */
     public fun networkOutput(networkOutput: IResolvable)
 
     /**
-     * @param networkOutput Add a network output to an existing bridge. 
+     * @param networkOutput The network output of the bridge. 
+     * A network output is delivered to your premises.
      */
     public fun networkOutput(networkOutput: CfnBridgeOutput.BridgeNetworkOutputProperty)
 
     /**
-     * @param networkOutput Add a network output to an existing bridge. 
+     * @param networkOutput The network output of the bridge. 
+     * A network output is delivered to your premises.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3999916e1f03ba7a4a8fcccf4e14d4b51debc62ebec897d60514865280db5eda")
@@ -100,7 +105,7 @@ public interface CfnBridgeOutputProps {
         software.amazon.awscdk.services.mediaconnect.CfnBridgeOutputProps.builder()
 
     /**
-     * @param bridgeArn The ARN of the bridge that you want to describe. 
+     * @param bridgeArn The Amazon Resource Name (ARN) of the bridge that you want to update. 
      */
     override fun bridgeArn(bridgeArn: String) {
       cdkBuilder.bridgeArn(bridgeArn)
@@ -115,21 +120,24 @@ public interface CfnBridgeOutputProps {
     }
 
     /**
-     * @param networkOutput Add a network output to an existing bridge. 
+     * @param networkOutput The network output of the bridge. 
+     * A network output is delivered to your premises.
      */
     override fun networkOutput(networkOutput: IResolvable) {
       cdkBuilder.networkOutput(networkOutput.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param networkOutput Add a network output to an existing bridge. 
+     * @param networkOutput The network output of the bridge. 
+     * A network output is delivered to your premises.
      */
     override fun networkOutput(networkOutput: CfnBridgeOutput.BridgeNetworkOutputProperty) {
       cdkBuilder.networkOutput(networkOutput.let(CfnBridgeOutput.BridgeNetworkOutputProperty.Companion::unwrap))
     }
 
     /**
-     * @param networkOutput Add a network output to an existing bridge. 
+     * @param networkOutput The network output of the bridge. 
+     * A network output is delivered to your premises.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3999916e1f03ba7a4a8fcccf4e14d4b51debc62ebec897d60514865280db5eda")
@@ -146,7 +154,7 @@ public interface CfnBridgeOutputProps {
   ) : CdkObject(cdkObject),
       CfnBridgeOutputProps {
     /**
-     * The ARN of the bridge that you want to describe.
+     * The Amazon Resource Name (ARN) of the bridge that you want to update.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html#cfn-mediaconnect-bridgeoutput-bridgearn)
      */
@@ -162,7 +170,9 @@ public interface CfnBridgeOutputProps {
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * Add a network output to an existing bridge.
+     * The network output of the bridge.
+     *
+     * A network output is delivered to your premises.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html#cfn-mediaconnect-bridgeoutput-networkoutput)
      */

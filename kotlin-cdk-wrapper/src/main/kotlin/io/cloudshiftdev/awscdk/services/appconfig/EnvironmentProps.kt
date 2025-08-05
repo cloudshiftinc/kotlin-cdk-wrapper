@@ -48,6 +48,12 @@ public interface EnvironmentProps : EnvironmentOptions {
     public fun application(application: IApplication)
 
     /**
+     * @param deletionProtectionCheck A property to prevent accidental deletion of active
+     * environments.
+     */
+    public fun deletionProtectionCheck(deletionProtectionCheck: DeletionProtectionCheck)
+
+    /**
      * @param description The description of the environment.
      */
     public fun description(description: String)
@@ -77,6 +83,14 @@ public interface EnvironmentProps : EnvironmentOptions {
      */
     override fun application(application: IApplication) {
       cdkBuilder.application(application.let(IApplication.Companion::unwrap))
+    }
+
+    /**
+     * @param deletionProtectionCheck A property to prevent accidental deletion of active
+     * environments.
+     */
+    override fun deletionProtectionCheck(deletionProtectionCheck: DeletionProtectionCheck) {
+      cdkBuilder.deletionProtectionCheck(deletionProtectionCheck.let(DeletionProtectionCheck.Companion::unwrap))
     }
 
     /**
@@ -117,6 +131,14 @@ public interface EnvironmentProps : EnvironmentOptions {
      * The application to be associated with the environment.
      */
     override fun application(): IApplication = unwrap(this).getApplication().let(IApplication::wrap)
+
+    /**
+     * A property to prevent accidental deletion of active environments.
+     *
+     * Default: undefined - AppConfig default is ACCOUNT_DEFAULT
+     */
+    override fun deletionProtectionCheck(): DeletionProtectionCheck? =
+        unwrap(this).getDeletionProtectionCheck()?.let(DeletionProtectionCheck::wrap)
 
     /**
      * The description of the environment.

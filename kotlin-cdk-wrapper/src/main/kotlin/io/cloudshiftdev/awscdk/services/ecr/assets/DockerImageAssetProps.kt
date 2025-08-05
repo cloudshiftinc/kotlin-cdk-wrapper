@@ -106,6 +106,26 @@ public interface DockerImageAssetProps : DockerImageAssetOptions {
     public fun directory(directory: String)
 
     /**
+     * @param displayName A display name for this asset.
+     * If supplied, the display name will be used in locations where the asset
+     * identifier is printed, like in the CLI progress information. If the same
+     * asset is added multiple times, the display name of the first occurrence is
+     * used.
+     *
+     * If `assetName` is given, it will also be used as the default `displayName`.
+     * Otherwise, the default is the construct path of the ImageAsset construct,
+     * with respect to the enclosing stack. If the asset is produced by a
+     * construct helper function (such as `lambda.Code.fromAssetImage()`), this
+     * will look like `MyFunction/AssetImage`.
+     *
+     * We use the stack-relative construct path so that in the common case where
+     * you have multiple stacks with the same asset, we won't show something like
+     * `/MyBetaStack/MyFunction/Code` when you are actually deploying to
+     * production.
+     */
+    public fun displayName(displayName: String)
+
+    /**
      * @param exclude File paths matching the patterns will be excluded.
      * See `ignoreMode` to set the matching behavior.
      * Has no effect on Assets bundled using the `bundling` property.
@@ -262,6 +282,28 @@ public interface DockerImageAssetProps : DockerImageAssetOptions {
      */
     override fun directory(directory: String) {
       cdkBuilder.directory(directory)
+    }
+
+    /**
+     * @param displayName A display name for this asset.
+     * If supplied, the display name will be used in locations where the asset
+     * identifier is printed, like in the CLI progress information. If the same
+     * asset is added multiple times, the display name of the first occurrence is
+     * used.
+     *
+     * If `assetName` is given, it will also be used as the default `displayName`.
+     * Otherwise, the default is the construct path of the ImageAsset construct,
+     * with respect to the enclosing stack. If the asset is produced by a
+     * construct helper function (such as `lambda.Code.fromAssetImage()`), this
+     * will look like `MyFunction/AssetImage`.
+     *
+     * We use the stack-relative construct path so that in the common case where
+     * you have multiple stacks with the same asset, we won't show something like
+     * `/MyBetaStack/MyFunction/Code` when you are actually deploying to
+     * production.
+     */
+    override fun displayName(displayName: String) {
+      cdkBuilder.displayName(displayName)
     }
 
     /**
@@ -453,6 +495,29 @@ public interface DockerImageAssetProps : DockerImageAssetOptions {
      * be excluded from the asset
      */
     override fun directory(): String = unwrap(this).getDirectory()
+
+    /**
+     * A display name for this asset.
+     *
+     * If supplied, the display name will be used in locations where the asset
+     * identifier is printed, like in the CLI progress information. If the same
+     * asset is added multiple times, the display name of the first occurrence is
+     * used.
+     *
+     * If `assetName` is given, it will also be used as the default `displayName`.
+     * Otherwise, the default is the construct path of the ImageAsset construct,
+     * with respect to the enclosing stack. If the asset is produced by a
+     * construct helper function (such as `lambda.Code.fromAssetImage()`), this
+     * will look like `MyFunction/AssetImage`.
+     *
+     * We use the stack-relative construct path so that in the common case where
+     * you have multiple stacks with the same asset, we won't show something like
+     * `/MyBetaStack/MyFunction/Code` when you are actually deploying to
+     * production.
+     *
+     * Default: - Stack-relative construct path
+     */
+    override fun displayName(): String? = unwrap(this).getDisplayName()
 
     /**
      * File paths matching the patterns will be excluded.

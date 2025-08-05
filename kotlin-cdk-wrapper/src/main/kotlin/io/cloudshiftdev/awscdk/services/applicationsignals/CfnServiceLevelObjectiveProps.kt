@@ -30,6 +30,18 @@ import kotlin.jvm.JvmName
  * .lookBackWindowMinutes(123)
  * .build()))
  * .description("description")
+ * .exclusionWindows(List.of(ExclusionWindowProperty.builder()
+ * .window(WindowProperty.builder()
+ * .duration(123)
+ * .durationUnit("durationUnit")
+ * .build())
+ * // the properties below are optional
+ * .reason("reason")
+ * .recurrenceRule(RecurrenceRuleProperty.builder()
+ * .expression("expression")
+ * .build())
+ * .startTime("startTime")
+ * .build()))
  * .goal(GoalProperty.builder()
  * .attainmentGoal(123)
  * .interval(IntervalProperty.builder()
@@ -47,6 +59,11 @@ import kotlin.jvm.JvmName
  * .build())
  * .requestBasedSli(RequestBasedSliProperty.builder()
  * .requestBasedSliMetric(RequestBasedSliMetricProperty.builder()
+ * .dependencyConfig(DependencyConfigProperty.builder()
+ * .dependencyKeyAttributes(Map.of(
+ * "dependencyKeyAttributesKey", "dependencyKeyAttributes"))
+ * .dependencyOperationName("dependencyOperationName")
+ * .build())
  * .keyAttributes(Map.of(
  * "keyAttributesKey", "keyAttributes"))
  * .metricType("metricType")
@@ -125,6 +142,11 @@ import kotlin.jvm.JvmName
  * .comparisonOperator("comparisonOperator")
  * .metricThreshold(123)
  * .sliMetric(SliMetricProperty.builder()
+ * .dependencyConfig(DependencyConfigProperty.builder()
+ * .dependencyKeyAttributes(Map.of(
+ * "dependencyKeyAttributesKey", "dependencyKeyAttributes"))
+ * .dependencyOperationName("dependencyOperationName")
+ * .build())
  * .keyAttributes(Map.of(
  * "keyAttributesKey", "keyAttributes"))
  * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
@@ -183,6 +205,13 @@ public interface CfnServiceLevelObjectiveProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-description)
    */
   public fun description(): String? = unwrap(this).getDescription()
+
+  /**
+   * The time window to be excluded from the SLO performance metrics.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-exclusionwindows)
+   */
+  public fun exclusionWindows(): Any? = unwrap(this).getExclusionWindows()
 
   /**
    * This structure contains the attributes that determine the goal of an SLO.
@@ -263,6 +292,21 @@ public interface CfnServiceLevelObjectiveProps {
      * @param description An optional description for this SLO.
      */
     public fun description(description: String)
+
+    /**
+     * @param exclusionWindows The time window to be excluded from the SLO performance metrics.
+     */
+    public fun exclusionWindows(exclusionWindows: IResolvable)
+
+    /**
+     * @param exclusionWindows The time window to be excluded from the SLO performance metrics.
+     */
+    public fun exclusionWindows(exclusionWindows: List<Any>)
+
+    /**
+     * @param exclusionWindows The time window to be excluded from the SLO performance metrics.
+     */
+    public fun exclusionWindows(vararg exclusionWindows: Any)
 
     /**
      * @param goal This structure contains the attributes that determine the goal of an SLO.
@@ -393,6 +437,26 @@ public interface CfnServiceLevelObjectiveProps {
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
+
+    /**
+     * @param exclusionWindows The time window to be excluded from the SLO performance metrics.
+     */
+    override fun exclusionWindows(exclusionWindows: IResolvable) {
+      cdkBuilder.exclusionWindows(exclusionWindows.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param exclusionWindows The time window to be excluded from the SLO performance metrics.
+     */
+    override fun exclusionWindows(exclusionWindows: List<Any>) {
+      cdkBuilder.exclusionWindows(exclusionWindows.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param exclusionWindows The time window to be excluded from the SLO performance metrics.
+     */
+    override fun exclusionWindows(vararg exclusionWindows: Any): Unit =
+        exclusionWindows(exclusionWindows.toList())
 
     /**
      * @param goal This structure contains the attributes that determine the goal of an SLO.
@@ -530,6 +594,13 @@ public interface CfnServiceLevelObjectiveProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-description)
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The time window to be excluded from the SLO performance metrics.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-exclusionwindows)
+     */
+    override fun exclusionWindows(): Any? = unwrap(this).getExclusionWindows()
 
     /**
      * This structure contains the attributes that determine the goal of an SLO.

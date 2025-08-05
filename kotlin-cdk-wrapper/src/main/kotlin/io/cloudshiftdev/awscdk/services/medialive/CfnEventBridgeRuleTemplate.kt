@@ -31,13 +31,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnEventBridgeRuleTemplate cfnEventBridgeRuleTemplate =
  * CfnEventBridgeRuleTemplate.Builder.create(this, "MyCfnEventBridgeRuleTemplate")
  * .eventType("eventType")
- * .groupIdentifier("groupIdentifier")
  * .name("name")
  * // the properties below are optional
  * .description("description")
  * .eventTargets(List.of(EventBridgeRuleTemplateTargetProperty.builder()
  * .arn("arn")
  * .build()))
+ * .groupIdentifier("groupIdentifier")
  * .tags(Map.of(
  * "tagsKey", "tags"))
  * .build();
@@ -157,7 +157,7 @@ public open class CfnEventBridgeRuleTemplate(
   /**
    * An eventbridge rule template group's identifier.
    */
-  public open fun groupIdentifier(): String = unwrap(this).getGroupIdentifier()
+  public open fun groupIdentifier(): String? = unwrap(this).getGroupIdentifier()
 
   /**
    * An eventbridge rule template group's identifier.

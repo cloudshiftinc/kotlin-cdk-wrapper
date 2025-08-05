@@ -23,7 +23,11 @@ import kotlin.collections.Map
  * .defaultStackSynthesizer(AppStagingSynthesizer.defaultResources(DefaultResourcesOptions.builder()
  * .appId("my-app-id")
  * .stagingBucketEncryption(BucketEncryption.S3_MANAGED)
- * .deploymentIdentities(DeploymentIdentities.cliCredentials())
+ * .deploymentIdentities(DeploymentIdentities.specifyRoles(BootstrapRoles.builder()
+ * .cloudFormationExecutionRole(BootstrapRole.fromRoleArn("arn:aws:iam::123456789012:role/Execute"))
+ * .deploymentRole(BootstrapRole.fromRoleArn("arn:aws:iam::123456789012:role/Deploy"))
+ * .lookupRole(BootstrapRole.fromRoleArn("arn:aws:iam::123456789012:role/Lookup"))
+ * .build()))
  * .build()))
  * .build();
  * ```
@@ -127,6 +131,14 @@ public interface AppProps {
   public fun postCliContext(): Map<String, Any> = unwrap(this).getPostCliContext() ?: emptyMap()
 
   /**
+   * A list of IPropertyInjector attached to this App.
+   *
+   * Default: - no PropertyInjectors
+   */
+  public fun propertyInjectors(): List<IPropertyInjector> =
+      unwrap(this).getPropertyInjectors()?.map(IPropertyInjector::wrap) ?: emptyList()
+
+  /**
    * Include construct creation stack trace in the `aws:cdk:trace` metadata key of all constructs.
    *
    * Default: true stack traces are included unless `aws:cdk:disable-stack-trace` is set in the
@@ -210,6 +222,16 @@ public interface AppProps {
      * Context can be read from any construct using `node.getContext(key)`.
      */
     public fun postCliContext(postCliContext: Map<String, Any>)
+
+    /**
+     * @param propertyInjectors A list of IPropertyInjector attached to this App.
+     */
+    public fun propertyInjectors(propertyInjectors: List<IPropertyInjector>)
+
+    /**
+     * @param propertyInjectors A list of IPropertyInjector attached to this App.
+     */
+    public fun propertyInjectors(vararg propertyInjectors: IPropertyInjector)
 
     /**
      * @param stackTraces Include construct creation stack trace in the `aws:cdk:trace` metadata key
@@ -306,6 +328,19 @@ public interface AppProps {
     override fun postCliContext(postCliContext: Map<String, Any>) {
       cdkBuilder.postCliContext(postCliContext.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
+
+    /**
+     * @param propertyInjectors A list of IPropertyInjector attached to this App.
+     */
+    override fun propertyInjectors(propertyInjectors: List<IPropertyInjector>) {
+      cdkBuilder.propertyInjectors(propertyInjectors.map(IPropertyInjector.Companion::unwrap))
+    }
+
+    /**
+     * @param propertyInjectors A list of IPropertyInjector attached to this App.
+     */
+    override fun propertyInjectors(vararg propertyInjectors: IPropertyInjector): Unit =
+        propertyInjectors(propertyInjectors.toList())
 
     /**
      * @param stackTraces Include construct creation stack trace in the `aws:cdk:trace` metadata key
@@ -425,6 +460,14 @@ public interface AppProps {
      * ```
      */
     override fun postCliContext(): Map<String, Any> = unwrap(this).getPostCliContext() ?: emptyMap()
+
+    /**
+     * A list of IPropertyInjector attached to this App.
+     *
+     * Default: - no PropertyInjectors
+     */
+    override fun propertyInjectors(): List<IPropertyInjector> =
+        unwrap(this).getPropertyInjectors()?.map(IPropertyInjector::wrap) ?: emptyList()
 
     /**
      * Include construct creation stack trace in the `aws:cdk:trace` metadata key of all constructs.

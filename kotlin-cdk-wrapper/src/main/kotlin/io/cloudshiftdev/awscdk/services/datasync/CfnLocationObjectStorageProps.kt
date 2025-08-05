@@ -3,13 +3,16 @@
 package io.cloudshiftdev.awscdk.services.datasync
 
 import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a `CfnLocationObjectStorage`.
@@ -22,10 +25,17 @@ import kotlin.collections.List
  * import io.cloudshiftdev.awscdk.services.datasync.*;
  * CfnLocationObjectStorageProps cfnLocationObjectStorageProps =
  * CfnLocationObjectStorageProps.builder()
- * .agentArns(List.of("agentArns"))
- * // the properties below are optional
  * .accessKey("accessKey")
+ * .agentArns(List.of("agentArns"))
  * .bucketName("bucketName")
+ * .cmkSecretConfig(CmkSecretConfigProperty.builder()
+ * .kmsKeyArn("kmsKeyArn")
+ * .secretArn("secretArn")
+ * .build())
+ * .customSecretConfig(CustomSecretConfigProperty.builder()
+ * .secretAccessRoleArn("secretAccessRoleArn")
+ * .secretArn("secretArn")
+ * .build())
  * .secretKey("secretKey")
  * .serverCertificate("serverCertificate")
  * .serverHostname("serverHostname")
@@ -51,12 +61,20 @@ public interface CfnLocationObjectStorageProps {
   public fun accessKey(): String? = unwrap(this).getAccessKey()
 
   /**
-   * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can connect with your
-   * object storage system.
+   * (Optional) Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can connect
+   * with your object storage system.
+   *
+   * If you are setting up an agentless cross-cloud transfer, you do not need to specify a value for
+   * this parameter.
+   *
+   *
+   * Make sure you configure this parameter correctly when you first create your storage location.
+   * You cannot add or remove agents from a storage location after you create it.
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-agentarns)
    */
-  public fun agentArns(): List<String>
+  public fun agentArns(): List<String> = unwrap(this).getAgentArns() ?: emptyList()
 
   /**
    * Specifies the name of the object storage bucket involved in the transfer.
@@ -66,8 +84,53 @@ public interface CfnLocationObjectStorageProps {
   public fun bucketName(): String? = unwrap(this).getBucketName()
 
   /**
+   * Specifies configuration information for a DataSync-managed secret, which includes the
+   * `SecretKey` that DataSync uses to access a specific object storage location, with a
+   * customer-managed AWS KMS key .
+   *
+   * When you include this paramater as part of a `CreateLocationObjectStorage` request, you provide
+   * only the KMS key ARN. DataSync uses this KMS key together with the value you specify for the
+   * `SecretKey` parameter to create a DataSync-managed secret to store the location access
+   * credentials.
+   *
+   * Make sure the DataSync has permission to access the KMS key that you specify.
+   *
+   *
+   * You can use either `CmkSecretConfig` (with `SecretKey` ) or `CustomSecretConfig` (without
+   * `SecretKey` ) to provide credentials for a `CreateLocationObjectStorage` request. Do not provide
+   * both parameters for the same request.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-cmksecretconfig)
+   */
+  public fun cmkSecretConfig(): Any? = unwrap(this).getCmkSecretConfig()
+
+  /**
+   * Specifies configuration information for a customer-managed Secrets Manager secret where the
+   * secret key for a specific object storage location is stored in plain text.
+   *
+   * This configuration includes the secret ARN, and the ARN for an IAM role that provides access to
+   * the secret.
+   *
+   *
+   * You can use either `CmkSecretConfig` (with `SecretKey` ) or `CustomSecretConfig` (without
+   * `SecretKey` ) to provide credentials for a `CreateLocationObjectStorage` request. Do not provide
+   * both parameters for the same request.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-customsecretconfig)
+   */
+  public fun customSecretConfig(): Any? = unwrap(this).getCustomSecretConfig()
+
+  /**
    * Specifies the secret key (for example, a password) if credentials are required to authenticate
    * with the object storage server.
+   *
+   *
+   * If you provide a secret using `SecretKey` , but do not provide secret configuration details
+   * using `CmkSecretConfig` or `CustomSecretConfig` , then DataSync stores the token using your AWS
+   * account's Secrets Manager secret.
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-secretkey)
    */
@@ -100,9 +163,8 @@ public interface CfnLocationObjectStorageProps {
   public fun serverCertificate(): String? = unwrap(this).getServerCertificate()
 
   /**
-   * Specifies the domain name or IP address of the object storage server.
-   *
-   * A DataSync agent uses this hostname to mount the object storage server in a network.
+   * Specifies the domain name or IP address (IPv4 or IPv6) of the object storage server that your
+   * DataSync agent connects to.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-serverhostname)
    */
@@ -118,6 +180,8 @@ public interface CfnLocationObjectStorageProps {
 
   /**
    * Specifies the protocol that your object storage server uses to communicate.
+   *
+   * If not specified, the default value is `HTTPS` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-serverprotocol)
    */
@@ -155,14 +219,26 @@ public interface CfnLocationObjectStorageProps {
     public fun accessKey(accessKey: String)
 
     /**
-     * @param agentArns Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can
-     * connect with your object storage system. 
+     * @param agentArns (Optional) Specifies the Amazon Resource Names (ARNs) of the DataSync agents
+     * that can connect with your object storage system.
+     * If you are setting up an agentless cross-cloud transfer, you do not need to specify a value
+     * for this parameter.
+     *
+     *
+     * Make sure you configure this parameter correctly when you first create your storage location.
+     * You cannot add or remove agents from a storage location after you create it.
      */
     public fun agentArns(agentArns: List<String>)
 
     /**
-     * @param agentArns Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can
-     * connect with your object storage system. 
+     * @param agentArns (Optional) Specifies the Amazon Resource Names (ARNs) of the DataSync agents
+     * that can connect with your object storage system.
+     * If you are setting up an agentless cross-cloud transfer, you do not need to specify a value
+     * for this parameter.
+     *
+     *
+     * Make sure you configure this parameter correctly when you first create your storage location.
+     * You cannot add or remove agents from a storage location after you create it.
      */
     public fun agentArns(vararg agentArns: String)
 
@@ -172,8 +248,115 @@ public interface CfnLocationObjectStorageProps {
     public fun bucketName(bucketName: String)
 
     /**
+     * @param cmkSecretConfig Specifies configuration information for a DataSync-managed secret,
+     * which includes the `SecretKey` that DataSync uses to access a specific object storage location,
+     * with a customer-managed AWS KMS key .
+     * When you include this paramater as part of a `CreateLocationObjectStorage` request, you
+     * provide only the KMS key ARN. DataSync uses this KMS key together with the value you specify for
+     * the `SecretKey` parameter to create a DataSync-managed secret to store the location access
+     * credentials.
+     *
+     * Make sure the DataSync has permission to access the KMS key that you specify.
+     *
+     *
+     * You can use either `CmkSecretConfig` (with `SecretKey` ) or `CustomSecretConfig` (without
+     * `SecretKey` ) to provide credentials for a `CreateLocationObjectStorage` request. Do not provide
+     * both parameters for the same request.
+     */
+    public fun cmkSecretConfig(cmkSecretConfig: IResolvable)
+
+    /**
+     * @param cmkSecretConfig Specifies configuration information for a DataSync-managed secret,
+     * which includes the `SecretKey` that DataSync uses to access a specific object storage location,
+     * with a customer-managed AWS KMS key .
+     * When you include this paramater as part of a `CreateLocationObjectStorage` request, you
+     * provide only the KMS key ARN. DataSync uses this KMS key together with the value you specify for
+     * the `SecretKey` parameter to create a DataSync-managed secret to store the location access
+     * credentials.
+     *
+     * Make sure the DataSync has permission to access the KMS key that you specify.
+     *
+     *
+     * You can use either `CmkSecretConfig` (with `SecretKey` ) or `CustomSecretConfig` (without
+     * `SecretKey` ) to provide credentials for a `CreateLocationObjectStorage` request. Do not provide
+     * both parameters for the same request.
+     */
+    public fun cmkSecretConfig(cmkSecretConfig: CfnLocationObjectStorage.CmkSecretConfigProperty)
+
+    /**
+     * @param cmkSecretConfig Specifies configuration information for a DataSync-managed secret,
+     * which includes the `SecretKey` that DataSync uses to access a specific object storage location,
+     * with a customer-managed AWS KMS key .
+     * When you include this paramater as part of a `CreateLocationObjectStorage` request, you
+     * provide only the KMS key ARN. DataSync uses this KMS key together with the value you specify for
+     * the `SecretKey` parameter to create a DataSync-managed secret to store the location access
+     * credentials.
+     *
+     * Make sure the DataSync has permission to access the KMS key that you specify.
+     *
+     *
+     * You can use either `CmkSecretConfig` (with `SecretKey` ) or `CustomSecretConfig` (without
+     * `SecretKey` ) to provide credentials for a `CreateLocationObjectStorage` request. Do not provide
+     * both parameters for the same request.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0dba3e2987d376adc2137e306007986a33d7f1dfd5f8ebb243807b1f88320d78")
+    public
+        fun cmkSecretConfig(cmkSecretConfig: CfnLocationObjectStorage.CmkSecretConfigProperty.Builder.() -> Unit)
+
+    /**
+     * @param customSecretConfig Specifies configuration information for a customer-managed Secrets
+     * Manager secret where the secret key for a specific object storage location is stored in plain
+     * text.
+     * This configuration includes the secret ARN, and the ARN for an IAM role that provides access
+     * to the secret.
+     *
+     *
+     * You can use either `CmkSecretConfig` (with `SecretKey` ) or `CustomSecretConfig` (without
+     * `SecretKey` ) to provide credentials for a `CreateLocationObjectStorage` request. Do not provide
+     * both parameters for the same request.
+     */
+    public fun customSecretConfig(customSecretConfig: IResolvable)
+
+    /**
+     * @param customSecretConfig Specifies configuration information for a customer-managed Secrets
+     * Manager secret where the secret key for a specific object storage location is stored in plain
+     * text.
+     * This configuration includes the secret ARN, and the ARN for an IAM role that provides access
+     * to the secret.
+     *
+     *
+     * You can use either `CmkSecretConfig` (with `SecretKey` ) or `CustomSecretConfig` (without
+     * `SecretKey` ) to provide credentials for a `CreateLocationObjectStorage` request. Do not provide
+     * both parameters for the same request.
+     */
+    public
+        fun customSecretConfig(customSecretConfig: CfnLocationObjectStorage.CustomSecretConfigProperty)
+
+    /**
+     * @param customSecretConfig Specifies configuration information for a customer-managed Secrets
+     * Manager secret where the secret key for a specific object storage location is stored in plain
+     * text.
+     * This configuration includes the secret ARN, and the ARN for an IAM role that provides access
+     * to the secret.
+     *
+     *
+     * You can use either `CmkSecretConfig` (with `SecretKey` ) or `CustomSecretConfig` (without
+     * `SecretKey` ) to provide credentials for a `CreateLocationObjectStorage` request. Do not provide
+     * both parameters for the same request.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("bb17ae3c7ee31d421f05348a52b86e8a64c36d81729cfdd760b06c57efbd871a")
+    public
+        fun customSecretConfig(customSecretConfig: CfnLocationObjectStorage.CustomSecretConfigProperty.Builder.() -> Unit)
+
+    /**
      * @param secretKey Specifies the secret key (for example, a password) if credentials are
      * required to authenticate with the object storage server.
+     *
+     * If you provide a secret using `SecretKey` , but do not provide secret configuration details
+     * using `CmkSecretConfig` or `CustomSecretConfig` , then DataSync stores the token using your AWS
+     * account's Secrets Manager secret.
      */
     public fun secretKey(secretKey: String)
 
@@ -201,8 +384,8 @@ public interface CfnLocationObjectStorageProps {
     public fun serverCertificate(serverCertificate: String)
 
     /**
-     * @param serverHostname Specifies the domain name or IP address of the object storage server.
-     * A DataSync agent uses this hostname to mount the object storage server in a network.
+     * @param serverHostname Specifies the domain name or IP address (IPv4 or IPv6) of the object
+     * storage server that your DataSync agent connects to.
      */
     public fun serverHostname(serverHostname: String)
 
@@ -215,6 +398,7 @@ public interface CfnLocationObjectStorageProps {
     /**
      * @param serverProtocol Specifies the protocol that your object storage server uses to
      * communicate.
+     * If not specified, the default value is `HTTPS` .
      */
     public fun serverProtocol(serverProtocol: String)
 
@@ -256,16 +440,28 @@ public interface CfnLocationObjectStorageProps {
     }
 
     /**
-     * @param agentArns Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can
-     * connect with your object storage system. 
+     * @param agentArns (Optional) Specifies the Amazon Resource Names (ARNs) of the DataSync agents
+     * that can connect with your object storage system.
+     * If you are setting up an agentless cross-cloud transfer, you do not need to specify a value
+     * for this parameter.
+     *
+     *
+     * Make sure you configure this parameter correctly when you first create your storage location.
+     * You cannot add or remove agents from a storage location after you create it.
      */
     override fun agentArns(agentArns: List<String>) {
       cdkBuilder.agentArns(agentArns)
     }
 
     /**
-     * @param agentArns Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can
-     * connect with your object storage system. 
+     * @param agentArns (Optional) Specifies the Amazon Resource Names (ARNs) of the DataSync agents
+     * that can connect with your object storage system.
+     * If you are setting up an agentless cross-cloud transfer, you do not need to specify a value
+     * for this parameter.
+     *
+     *
+     * Make sure you configure this parameter correctly when you first create your storage location.
+     * You cannot add or remove agents from a storage location after you create it.
      */
     override fun agentArns(vararg agentArns: String): Unit = agentArns(agentArns.toList())
 
@@ -277,8 +473,127 @@ public interface CfnLocationObjectStorageProps {
     }
 
     /**
+     * @param cmkSecretConfig Specifies configuration information for a DataSync-managed secret,
+     * which includes the `SecretKey` that DataSync uses to access a specific object storage location,
+     * with a customer-managed AWS KMS key .
+     * When you include this paramater as part of a `CreateLocationObjectStorage` request, you
+     * provide only the KMS key ARN. DataSync uses this KMS key together with the value you specify for
+     * the `SecretKey` parameter to create a DataSync-managed secret to store the location access
+     * credentials.
+     *
+     * Make sure the DataSync has permission to access the KMS key that you specify.
+     *
+     *
+     * You can use either `CmkSecretConfig` (with `SecretKey` ) or `CustomSecretConfig` (without
+     * `SecretKey` ) to provide credentials for a `CreateLocationObjectStorage` request. Do not provide
+     * both parameters for the same request.
+     */
+    override fun cmkSecretConfig(cmkSecretConfig: IResolvable) {
+      cdkBuilder.cmkSecretConfig(cmkSecretConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param cmkSecretConfig Specifies configuration information for a DataSync-managed secret,
+     * which includes the `SecretKey` that DataSync uses to access a specific object storage location,
+     * with a customer-managed AWS KMS key .
+     * When you include this paramater as part of a `CreateLocationObjectStorage` request, you
+     * provide only the KMS key ARN. DataSync uses this KMS key together with the value you specify for
+     * the `SecretKey` parameter to create a DataSync-managed secret to store the location access
+     * credentials.
+     *
+     * Make sure the DataSync has permission to access the KMS key that you specify.
+     *
+     *
+     * You can use either `CmkSecretConfig` (with `SecretKey` ) or `CustomSecretConfig` (without
+     * `SecretKey` ) to provide credentials for a `CreateLocationObjectStorage` request. Do not provide
+     * both parameters for the same request.
+     */
+    override
+        fun cmkSecretConfig(cmkSecretConfig: CfnLocationObjectStorage.CmkSecretConfigProperty) {
+      cdkBuilder.cmkSecretConfig(cmkSecretConfig.let(CfnLocationObjectStorage.CmkSecretConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param cmkSecretConfig Specifies configuration information for a DataSync-managed secret,
+     * which includes the `SecretKey` that DataSync uses to access a specific object storage location,
+     * with a customer-managed AWS KMS key .
+     * When you include this paramater as part of a `CreateLocationObjectStorage` request, you
+     * provide only the KMS key ARN. DataSync uses this KMS key together with the value you specify for
+     * the `SecretKey` parameter to create a DataSync-managed secret to store the location access
+     * credentials.
+     *
+     * Make sure the DataSync has permission to access the KMS key that you specify.
+     *
+     *
+     * You can use either `CmkSecretConfig` (with `SecretKey` ) or `CustomSecretConfig` (without
+     * `SecretKey` ) to provide credentials for a `CreateLocationObjectStorage` request. Do not provide
+     * both parameters for the same request.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0dba3e2987d376adc2137e306007986a33d7f1dfd5f8ebb243807b1f88320d78")
+    override
+        fun cmkSecretConfig(cmkSecretConfig: CfnLocationObjectStorage.CmkSecretConfigProperty.Builder.() -> Unit):
+        Unit = cmkSecretConfig(CfnLocationObjectStorage.CmkSecretConfigProperty(cmkSecretConfig))
+
+    /**
+     * @param customSecretConfig Specifies configuration information for a customer-managed Secrets
+     * Manager secret where the secret key for a specific object storage location is stored in plain
+     * text.
+     * This configuration includes the secret ARN, and the ARN for an IAM role that provides access
+     * to the secret.
+     *
+     *
+     * You can use either `CmkSecretConfig` (with `SecretKey` ) or `CustomSecretConfig` (without
+     * `SecretKey` ) to provide credentials for a `CreateLocationObjectStorage` request. Do not provide
+     * both parameters for the same request.
+     */
+    override fun customSecretConfig(customSecretConfig: IResolvable) {
+      cdkBuilder.customSecretConfig(customSecretConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param customSecretConfig Specifies configuration information for a customer-managed Secrets
+     * Manager secret where the secret key for a specific object storage location is stored in plain
+     * text.
+     * This configuration includes the secret ARN, and the ARN for an IAM role that provides access
+     * to the secret.
+     *
+     *
+     * You can use either `CmkSecretConfig` (with `SecretKey` ) or `CustomSecretConfig` (without
+     * `SecretKey` ) to provide credentials for a `CreateLocationObjectStorage` request. Do not provide
+     * both parameters for the same request.
+     */
+    override
+        fun customSecretConfig(customSecretConfig: CfnLocationObjectStorage.CustomSecretConfigProperty) {
+      cdkBuilder.customSecretConfig(customSecretConfig.let(CfnLocationObjectStorage.CustomSecretConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param customSecretConfig Specifies configuration information for a customer-managed Secrets
+     * Manager secret where the secret key for a specific object storage location is stored in plain
+     * text.
+     * This configuration includes the secret ARN, and the ARN for an IAM role that provides access
+     * to the secret.
+     *
+     *
+     * You can use either `CmkSecretConfig` (with `SecretKey` ) or `CustomSecretConfig` (without
+     * `SecretKey` ) to provide credentials for a `CreateLocationObjectStorage` request. Do not provide
+     * both parameters for the same request.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("bb17ae3c7ee31d421f05348a52b86e8a64c36d81729cfdd760b06c57efbd871a")
+    override
+        fun customSecretConfig(customSecretConfig: CfnLocationObjectStorage.CustomSecretConfigProperty.Builder.() -> Unit):
+        Unit =
+        customSecretConfig(CfnLocationObjectStorage.CustomSecretConfigProperty(customSecretConfig))
+
+    /**
      * @param secretKey Specifies the secret key (for example, a password) if credentials are
      * required to authenticate with the object storage server.
+     *
+     * If you provide a secret using `SecretKey` , but do not provide secret configuration details
+     * using `CmkSecretConfig` or `CustomSecretConfig` , then DataSync stores the token using your AWS
+     * account's Secrets Manager secret.
      */
     override fun secretKey(secretKey: String) {
       cdkBuilder.secretKey(secretKey)
@@ -310,8 +625,8 @@ public interface CfnLocationObjectStorageProps {
     }
 
     /**
-     * @param serverHostname Specifies the domain name or IP address of the object storage server.
-     * A DataSync agent uses this hostname to mount the object storage server in a network.
+     * @param serverHostname Specifies the domain name or IP address (IPv4 or IPv6) of the object
+     * storage server that your DataSync agent connects to.
      */
     override fun serverHostname(serverHostname: String) {
       cdkBuilder.serverHostname(serverHostname)
@@ -328,6 +643,7 @@ public interface CfnLocationObjectStorageProps {
     /**
      * @param serverProtocol Specifies the protocol that your object storage server uses to
      * communicate.
+     * If not specified, the default value is `HTTPS` .
      */
     override fun serverProtocol(serverProtocol: String) {
       cdkBuilder.serverProtocol(serverProtocol)
@@ -377,12 +693,20 @@ public interface CfnLocationObjectStorageProps {
     override fun accessKey(): String? = unwrap(this).getAccessKey()
 
     /**
-     * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can connect with your
-     * object storage system.
+     * (Optional) Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can connect
+     * with your object storage system.
+     *
+     * If you are setting up an agentless cross-cloud transfer, you do not need to specify a value
+     * for this parameter.
+     *
+     *
+     * Make sure you configure this parameter correctly when you first create your storage location.
+     * You cannot add or remove agents from a storage location after you create it.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-agentarns)
      */
-    override fun agentArns(): List<String> = unwrap(this).getAgentArns()
+    override fun agentArns(): List<String> = unwrap(this).getAgentArns() ?: emptyList()
 
     /**
      * Specifies the name of the object storage bucket involved in the transfer.
@@ -392,8 +716,53 @@ public interface CfnLocationObjectStorageProps {
     override fun bucketName(): String? = unwrap(this).getBucketName()
 
     /**
+     * Specifies configuration information for a DataSync-managed secret, which includes the
+     * `SecretKey` that DataSync uses to access a specific object storage location, with a
+     * customer-managed AWS KMS key .
+     *
+     * When you include this paramater as part of a `CreateLocationObjectStorage` request, you
+     * provide only the KMS key ARN. DataSync uses this KMS key together with the value you specify for
+     * the `SecretKey` parameter to create a DataSync-managed secret to store the location access
+     * credentials.
+     *
+     * Make sure the DataSync has permission to access the KMS key that you specify.
+     *
+     *
+     * You can use either `CmkSecretConfig` (with `SecretKey` ) or `CustomSecretConfig` (without
+     * `SecretKey` ) to provide credentials for a `CreateLocationObjectStorage` request. Do not provide
+     * both parameters for the same request.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-cmksecretconfig)
+     */
+    override fun cmkSecretConfig(): Any? = unwrap(this).getCmkSecretConfig()
+
+    /**
+     * Specifies configuration information for a customer-managed Secrets Manager secret where the
+     * secret key for a specific object storage location is stored in plain text.
+     *
+     * This configuration includes the secret ARN, and the ARN for an IAM role that provides access
+     * to the secret.
+     *
+     *
+     * You can use either `CmkSecretConfig` (with `SecretKey` ) or `CustomSecretConfig` (without
+     * `SecretKey` ) to provide credentials for a `CreateLocationObjectStorage` request. Do not provide
+     * both parameters for the same request.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-customsecretconfig)
+     */
+    override fun customSecretConfig(): Any? = unwrap(this).getCustomSecretConfig()
+
+    /**
      * Specifies the secret key (for example, a password) if credentials are required to
      * authenticate with the object storage server.
+     *
+     *
+     * If you provide a secret using `SecretKey` , but do not provide secret configuration details
+     * using `CmkSecretConfig` or `CustomSecretConfig` , then DataSync stores the token using your AWS
+     * account's Secrets Manager secret.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-secretkey)
      */
@@ -426,9 +795,8 @@ public interface CfnLocationObjectStorageProps {
     override fun serverCertificate(): String? = unwrap(this).getServerCertificate()
 
     /**
-     * Specifies the domain name or IP address of the object storage server.
-     *
-     * A DataSync agent uses this hostname to mount the object storage server in a network.
+     * Specifies the domain name or IP address (IPv4 or IPv6) of the object storage server that your
+     * DataSync agent connects to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-serverhostname)
      */
@@ -444,6 +812,8 @@ public interface CfnLocationObjectStorageProps {
 
     /**
      * Specifies the protocol that your object storage server uses to communicate.
+     *
+     * If not specified, the default value is `HTTPS` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-serverprotocol)
      */

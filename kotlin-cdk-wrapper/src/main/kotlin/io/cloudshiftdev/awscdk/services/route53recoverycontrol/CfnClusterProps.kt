@@ -22,6 +22,7 @@ import kotlin.collections.List
  * CfnClusterProps cfnClusterProps = CfnClusterProps.builder()
  * .name("name")
  * // the properties below are optional
+ * .networkType("networkType")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -43,6 +44,13 @@ public interface CfnClusterProps {
   public fun name(): String
 
   /**
+   * The network-type can either be IPV4 or DUALSTACK.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html#cfn-route53recoverycontrol-cluster-networktype)
+   */
+  public fun networkType(): String? = unwrap(this).getNetworkType()
+
+  /**
    * The tags associated with the cluster.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html#cfn-route53recoverycontrol-cluster-tags)
@@ -60,6 +68,11 @@ public interface CfnClusterProps {
      * (single quote) " (double quote) ; (semicolon).
      */
     public fun name(name: String)
+
+    /**
+     * @param networkType The network-type can either be IPV4 or DUALSTACK.
+     */
+    public fun networkType(networkType: String)
 
     /**
      * @param tags The tags associated with the cluster.
@@ -84,6 +97,13 @@ public interface CfnClusterProps {
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * @param networkType The network-type can either be IPV4 or DUALSTACK.
+     */
+    override fun networkType(networkType: String) {
+      cdkBuilder.networkType(networkType)
     }
 
     /**
@@ -115,6 +135,13 @@ public interface CfnClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html#cfn-route53recoverycontrol-cluster-name)
      */
     override fun name(): String = unwrap(this).getName()
+
+    /**
+     * The network-type can either be IPV4 or DUALSTACK.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html#cfn-route53recoverycontrol-cluster-networktype)
+     */
+    override fun networkType(): String? = unwrap(this).getNetworkType()
 
     /**
      * The tags associated with the cluster.

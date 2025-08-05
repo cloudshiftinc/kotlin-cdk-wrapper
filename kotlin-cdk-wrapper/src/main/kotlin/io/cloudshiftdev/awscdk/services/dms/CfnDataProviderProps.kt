@@ -31,6 +31,37 @@ import kotlin.jvm.JvmName
  * .description("description")
  * .exactSettings(false)
  * .settings(SettingsProperty.builder()
+ * .docDbSettings(DocDbSettingsProperty.builder()
+ * .databaseName("databaseName")
+ * .port(123)
+ * .serverName("serverName")
+ * // the properties below are optional
+ * .certificateArn("certificateArn")
+ * .sslMode("sslMode")
+ * .build())
+ * .ibmDb2LuwSettings(IbmDb2LuwSettingsProperty.builder()
+ * .databaseName("databaseName")
+ * .port(123)
+ * .serverName("serverName")
+ * .sslMode("sslMode")
+ * // the properties below are optional
+ * .certificateArn("certificateArn")
+ * .build())
+ * .ibmDb2ZOsSettings(IbmDb2zOsSettingsProperty.builder()
+ * .databaseName("databaseName")
+ * .port(123)
+ * .serverName("serverName")
+ * .sslMode("sslMode")
+ * // the properties below are optional
+ * .certificateArn("certificateArn")
+ * .build())
+ * .mariaDbSettings(MariaDbSettingsProperty.builder()
+ * .port(123)
+ * .serverName("serverName")
+ * .sslMode("sslMode")
+ * // the properties below are optional
+ * .certificateArn("certificateArn")
+ * .build())
  * .microsoftSqlServerSettings(MicrosoftSqlServerSettingsProperty.builder()
  * .databaseName("databaseName")
  * .port(123)
@@ -38,6 +69,17 @@ import kotlin.jvm.JvmName
  * .sslMode("sslMode")
  * // the properties below are optional
  * .certificateArn("certificateArn")
+ * .build())
+ * .mongoDbSettings(MongoDbSettingsProperty.builder()
+ * .port(123)
+ * .serverName("serverName")
+ * // the properties below are optional
+ * .authMechanism("authMechanism")
+ * .authSource("authSource")
+ * .authType("authType")
+ * .certificateArn("certificateArn")
+ * .databaseName("databaseName")
+ * .sslMode("sslMode")
  * .build())
  * .mySqlSettings(MySqlSettingsProperty.builder()
  * .port(123)
@@ -66,6 +108,11 @@ import kotlin.jvm.JvmName
  * .sslMode("sslMode")
  * // the properties below are optional
  * .certificateArn("certificateArn")
+ * .build())
+ * .redshiftSettings(RedshiftSettingsProperty.builder()
+ * .databaseName("databaseName")
+ * .port(123)
+ * .serverName("serverName")
  * .build())
  * .build())
  * .tags(List.of(CfnTag.builder()
@@ -110,8 +157,8 @@ public interface CfnDataProviderProps {
    * The type of database engine for the data provider.
    *
    * Valid values include `"aurora"` , `"aurora-postgresql"` , `"mysql"` , `"oracle"` , `"postgres"`
-   * , `"sqlserver"` , `redshift` , `mariadb` , `mongodb` , and `docdb` . A value of `"aurora"`
-   * represents Amazon Aurora MySQL-Compatible Edition.
+   * , `"sqlserver"` , `redshift` , `mariadb` , `mongodb` , `db2` , `db2-zos` and `docdb` . A value of
+   * `"aurora"` represents Amazon Aurora MySQL-Compatible Edition.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-engine)
    */
@@ -168,8 +215,8 @@ public interface CfnDataProviderProps {
     /**
      * @param engine The type of database engine for the data provider. 
      * Valid values include `"aurora"` , `"aurora-postgresql"` , `"mysql"` , `"oracle"` ,
-     * `"postgres"` , `"sqlserver"` , `redshift` , `mariadb` , `mongodb` , and `docdb` . A value of
-     * `"aurora"` represents Amazon Aurora MySQL-Compatible Edition.
+     * `"postgres"` , `"sqlserver"` , `redshift` , `mariadb` , `mongodb` , `db2` , `db2-zos` and
+     * `docdb` . A value of `"aurora"` represents Amazon Aurora MySQL-Compatible Edition.
      */
     public fun engine(engine: String)
 
@@ -244,8 +291,8 @@ public interface CfnDataProviderProps {
     /**
      * @param engine The type of database engine for the data provider. 
      * Valid values include `"aurora"` , `"aurora-postgresql"` , `"mysql"` , `"oracle"` ,
-     * `"postgres"` , `"sqlserver"` , `redshift` , `mariadb` , `mongodb` , and `docdb` . A value of
-     * `"aurora"` represents Amazon Aurora MySQL-Compatible Edition.
+     * `"postgres"` , `"sqlserver"` , `redshift` , `mariadb` , `mongodb` , `db2` , `db2-zos` and
+     * `docdb` . A value of `"aurora"` represents Amazon Aurora MySQL-Compatible Edition.
      */
     override fun engine(engine: String) {
       cdkBuilder.engine(engine)
@@ -339,8 +386,8 @@ public interface CfnDataProviderProps {
      * The type of database engine for the data provider.
      *
      * Valid values include `"aurora"` , `"aurora-postgresql"` , `"mysql"` , `"oracle"` ,
-     * `"postgres"` , `"sqlserver"` , `redshift` , `mariadb` , `mongodb` , and `docdb` . A value of
-     * `"aurora"` represents Amazon Aurora MySQL-Compatible Edition.
+     * `"postgres"` , `"sqlserver"` , `redshift` , `mariadb` , `mongodb` , `db2` , `db2-zos` and
+     * `docdb` . A value of `"aurora"` represents Amazon Aurora MySQL-Compatible Edition.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-engine)
      */

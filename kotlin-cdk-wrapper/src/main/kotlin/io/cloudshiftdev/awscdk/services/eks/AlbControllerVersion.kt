@@ -14,11 +14,13 @@ import kotlin.String
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.cdk.lambdalayer.kubectl.v33.KubectlV33Layer;
  * Cluster.Builder.create(this, "HelloEKS")
- * .version(KubernetesVersion.V1_31)
+ * .version(KubernetesVersion.V1_33)
  * .albController(AlbControllerOptions.builder()
  * .version(AlbControllerVersion.V2_8_2)
  * .build())
+ * .kubectlLayer(new KubectlV33Layer(this, "kubectl"))
  * .build();
  * ```
  */

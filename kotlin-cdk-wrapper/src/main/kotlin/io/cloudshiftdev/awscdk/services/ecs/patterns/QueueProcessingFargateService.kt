@@ -45,6 +45,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .cluster(cluster)
  * .memoryLimitMiB(512)
  * .image(ContainerImage.fromRegistry("test"))
+ * .minHealthyPercent(100)
  * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
  * .capacityProvider("FARGATE_SPOT")
  * .weight(2)
@@ -382,6 +383,19 @@ public open class QueueProcessingFargateService(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("da5a7971c845e3598a76c1861d1848d91dcb77e996123167092de622a2b12b39")
     public fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit)
+
+    /**
+     * The period of time, in seconds, that the Amazon ECS service scheduler ignores unhealthy
+     * Elastic Load Balancing target health checks after a task has first started.
+     *
+     * Default: - defaults to 60 seconds if at least one load balancer is in-use and it is not
+     * already set
+     *
+     * @param healthCheckGracePeriod The period of time, in seconds, that the Amazon ECS service
+     * scheduler ignores unhealthy Elastic Load Balancing target health checks after a task has first
+     * started. 
+     */
+    public fun healthCheckGracePeriod(healthCheckGracePeriod: Duration)
 
     /**
      * The image used to start a container.
@@ -1038,6 +1052,21 @@ public open class QueueProcessingFargateService(
     @JvmName("da5a7971c845e3598a76c1861d1848d91dcb77e996123167092de622a2b12b39")
     override fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit): Unit =
         healthCheck(HealthCheck(healthCheck))
+
+    /**
+     * The period of time, in seconds, that the Amazon ECS service scheduler ignores unhealthy
+     * Elastic Load Balancing target health checks after a task has first started.
+     *
+     * Default: - defaults to 60 seconds if at least one load balancer is in-use and it is not
+     * already set
+     *
+     * @param healthCheckGracePeriod The period of time, in seconds, that the Amazon ECS service
+     * scheduler ignores unhealthy Elastic Load Balancing target health checks after a task has first
+     * started. 
+     */
+    override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
+      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration.Companion::unwrap))
+    }
 
     /**
      * The image used to start a container.

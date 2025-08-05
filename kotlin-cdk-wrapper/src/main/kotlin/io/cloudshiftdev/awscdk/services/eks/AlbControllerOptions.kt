@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.jvm.JvmName
 
 /**
  * Options for `AlbController`.
@@ -15,15 +16,25 @@ import kotlin.Unit
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.cdk.lambdalayer.kubectl.v33.KubectlV33Layer;
  * Cluster.Builder.create(this, "HelloEKS")
- * .version(KubernetesVersion.V1_31)
+ * .version(KubernetesVersion.V1_33)
  * .albController(AlbControllerOptions.builder()
  * .version(AlbControllerVersion.V2_8_2)
  * .build())
+ * .kubectlLayer(new KubectlV33Layer(this, "kubectl"))
  * .build();
  * ```
  */
 public interface AlbControllerOptions {
+  /**
+   * Additional helm chart values for ALB controller.
+   *
+   * Default: - no additional helm chart values
+   */
+  public fun additionalHelmChartValues(): AlbControllerHelmChartOptions? =
+      unwrap(this).getAdditionalHelmChartValues()?.let(AlbControllerHelmChartOptions::wrap)
+
   /**
    * The IAM policy to apply to the service account.
    *
@@ -59,6 +70,19 @@ public interface AlbControllerOptions {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param additionalHelmChartValues Additional helm chart values for ALB controller.
+     */
+    public fun additionalHelmChartValues(additionalHelmChartValues: AlbControllerHelmChartOptions)
+
+    /**
+     * @param additionalHelmChartValues Additional helm chart values for ALB controller.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9b99cfb45717343677edd410c377f4be1c3e79611a4c5e02f22f7db2a6cf4563")
+    public
+        fun additionalHelmChartValues(additionalHelmChartValues: AlbControllerHelmChartOptions.Builder.() -> Unit)
+
+    /**
      * @param policy The IAM policy to apply to the service account.
      * If you're using one of the built-in versions, this is not required since
      * CDK ships with the appropriate policies for those versions.
@@ -85,6 +109,23 @@ public interface AlbControllerOptions {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.eks.AlbControllerOptions.Builder =
         software.amazon.awscdk.services.eks.AlbControllerOptions.builder()
+
+    /**
+     * @param additionalHelmChartValues Additional helm chart values for ALB controller.
+     */
+    override
+        fun additionalHelmChartValues(additionalHelmChartValues: AlbControllerHelmChartOptions) {
+      cdkBuilder.additionalHelmChartValues(additionalHelmChartValues.let(AlbControllerHelmChartOptions.Companion::unwrap))
+    }
+
+    /**
+     * @param additionalHelmChartValues Additional helm chart values for ALB controller.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9b99cfb45717343677edd410c377f4be1c3e79611a4c5e02f22f7db2a6cf4563")
+    override
+        fun additionalHelmChartValues(additionalHelmChartValues: AlbControllerHelmChartOptions.Builder.() -> Unit):
+        Unit = additionalHelmChartValues(AlbControllerHelmChartOptions(additionalHelmChartValues))
 
     /**
      * @param policy The IAM policy to apply to the service account.
@@ -123,6 +164,14 @@ public interface AlbControllerOptions {
     cdkObject: software.amazon.awscdk.services.eks.AlbControllerOptions,
   ) : CdkObject(cdkObject),
       AlbControllerOptions {
+    /**
+     * Additional helm chart values for ALB controller.
+     *
+     * Default: - no additional helm chart values
+     */
+    override fun additionalHelmChartValues(): AlbControllerHelmChartOptions? =
+        unwrap(this).getAdditionalHelmChartValues()?.let(AlbControllerHelmChartOptions::wrap)
+
     /**
      * The IAM policy to apply to the service account.
      *

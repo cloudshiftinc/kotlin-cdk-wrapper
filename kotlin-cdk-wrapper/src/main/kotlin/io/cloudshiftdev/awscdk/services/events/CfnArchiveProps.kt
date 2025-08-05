@@ -26,6 +26,7 @@ import kotlin.Unit
  * .archiveName("archiveName")
  * .description("description")
  * .eventPattern(eventPattern)
+ * .kmsKeyIdentifier("kmsKeyIdentifier")
  * .retentionDays(123)
  * .build();
  * ```
@@ -53,6 +54,33 @@ public interface CfnArchiveProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html#cfn-events-archive-eventpattern)
    */
   public fun eventPattern(): Any? = unwrap(this).getEventPattern()
+
+  /**
+   * The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use
+   * a customer managed key to encrypt this archive.
+   *
+   * The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.
+   *
+   * If you do not specify a customer managed key identifier, EventBridge uses an AWS owned key to
+   * encrypt the archive.
+   *
+   * For more information, see [Identify and view
+   * keys](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html) in the *AWS Key
+   * Management Service Developer Guide* .
+   *
+   *
+   * If you have specified that EventBridge use a customer managed key for encrypting the source
+   * event bus, we strongly recommend you also specify a customer managed key for any archives for the
+   * event bus as well.
+   *
+   * For more information, see [Encrypting
+   * archives](https://docs.aws.amazon.com/eventbridge/latest/userguide/encryption-archives.html) in
+   * the *Amazon EventBridge User Guide* .
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html#cfn-events-archive-kmskeyidentifier)
+   */
+  public fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
 
   /**
    * The number of days to retain events for.
@@ -91,6 +119,29 @@ public interface CfnArchiveProps {
     public fun eventPattern(eventPattern: Any)
 
     /**
+     * @param kmsKeyIdentifier The identifier of the AWS KMS customer managed key for EventBridge to
+     * use, if you choose to use a customer managed key to encrypt this archive.
+     * The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.
+     *
+     * If you do not specify a customer managed key identifier, EventBridge uses an AWS owned key to
+     * encrypt the archive.
+     *
+     * For more information, see [Identify and view
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
+     *
+     *
+     * If you have specified that EventBridge use a customer managed key for encrypting the source
+     * event bus, we strongly recommend you also specify a customer managed key for any archives for
+     * the event bus as well.
+     *
+     * For more information, see [Encrypting
+     * archives](https://docs.aws.amazon.com/eventbridge/latest/userguide/encryption-archives.html) in
+     * the *Amazon EventBridge User Guide* .
+     */
+    public fun kmsKeyIdentifier(kmsKeyIdentifier: String)
+
+    /**
      * @param retentionDays The number of days to retain events for.
      * Default value is 0. If set to 0, events are retained indefinitely
      */
@@ -125,6 +176,31 @@ public interface CfnArchiveProps {
      */
     override fun eventPattern(eventPattern: Any) {
       cdkBuilder.eventPattern(eventPattern)
+    }
+
+    /**
+     * @param kmsKeyIdentifier The identifier of the AWS KMS customer managed key for EventBridge to
+     * use, if you choose to use a customer managed key to encrypt this archive.
+     * The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.
+     *
+     * If you do not specify a customer managed key identifier, EventBridge uses an AWS owned key to
+     * encrypt the archive.
+     *
+     * For more information, see [Identify and view
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
+     *
+     *
+     * If you have specified that EventBridge use a customer managed key for encrypting the source
+     * event bus, we strongly recommend you also specify a customer managed key for any archives for
+     * the event bus as well.
+     *
+     * For more information, see [Encrypting
+     * archives](https://docs.aws.amazon.com/eventbridge/latest/userguide/encryption-archives.html) in
+     * the *Amazon EventBridge User Guide* .
+     */
+    override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
+      cdkBuilder.kmsKeyIdentifier(kmsKeyIdentifier)
     }
 
     /**
@@ -169,6 +245,33 @@ public interface CfnArchiveProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html#cfn-events-archive-eventpattern)
      */
     override fun eventPattern(): Any? = unwrap(this).getEventPattern()
+
+    /**
+     * The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to
+     * use a customer managed key to encrypt this archive.
+     *
+     * The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.
+     *
+     * If you do not specify a customer managed key identifier, EventBridge uses an AWS owned key to
+     * encrypt the archive.
+     *
+     * For more information, see [Identify and view
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
+     *
+     *
+     * If you have specified that EventBridge use a customer managed key for encrypting the source
+     * event bus, we strongly recommend you also specify a customer managed key for any archives for
+     * the event bus as well.
+     *
+     * For more information, see [Encrypting
+     * archives](https://docs.aws.amazon.com/eventbridge/latest/userguide/encryption-archives.html) in
+     * the *Amazon EventBridge User Guide* .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html#cfn-events-archive-kmskeyidentifier)
+     */
+    override fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
 
     /**
      * The number of days to retain events for.

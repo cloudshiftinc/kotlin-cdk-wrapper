@@ -35,7 +35,7 @@ import kotlin.collections.List
  */
 public interface CfnLocationFSxLustreProps {
   /**
-   * The Amazon Resource Name (ARN) for the FSx for Lustre file system.
+   * Specifies the Amazon Resource Name (ARN) of the FSx for Lustre file system.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxlustre.html#cfn-datasync-locationfsxlustre-fsxfilesystemarn)
    */
@@ -54,20 +54,21 @@ public interface CfnLocationFSxLustreProps {
   public fun securityGroupArns(): List<String>
 
   /**
-   * A subdirectory in the location's path.
+   * Specifies a mount path for your FSx for Lustre file system. The path can include
+   * subdirectories.
    *
-   * This subdirectory in the FSx for Lustre file system is used to read data from the FSx for
-   * Lustre source location or write data to the FSx for Lustre destination.
+   * When the location is used as a source, DataSync reads data from the mount path. When the
+   * location is used as a destination, DataSync writes data to the mount path. If you don't include
+   * this parameter, DataSync uses the file system's root directory ( `/` ).
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxlustre.html#cfn-datasync-locationfsxlustre-subdirectory)
    */
   public fun subdirectory(): String? = unwrap(this).getSubdirectory()
 
   /**
-   * The key-value pair that represents a tag that you want to add to the resource.
+   * Specifies labels that help you categorize, filter, and search for your AWS resources.
    *
-   * The value can be an empty string. This value helps you manage, filter, and search for your
-   * resources. We recommend that you create a name tag for your location.
+   * We recommend creating at least a name tag for your location.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxlustre.html#cfn-datasync-locationfsxlustre-tags)
    */
@@ -79,7 +80,8 @@ public interface CfnLocationFSxLustreProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param fsxFilesystemArn The Amazon Resource Name (ARN) for the FSx for Lustre file system.
+     * @param fsxFilesystemArn Specifies the Amazon Resource Name (ARN) of the FSx for Lustre file
+     * system.
      */
     public fun fsxFilesystemArn(fsxFilesystemArn: String)
 
@@ -104,23 +106,25 @@ public interface CfnLocationFSxLustreProps {
     public fun securityGroupArns(vararg securityGroupArns: String)
 
     /**
-     * @param subdirectory A subdirectory in the location's path.
-     * This subdirectory in the FSx for Lustre file system is used to read data from the FSx for
-     * Lustre source location or write data to the FSx for Lustre destination.
+     * @param subdirectory Specifies a mount path for your FSx for Lustre file system. The path can
+     * include subdirectories.
+     * When the location is used as a source, DataSync reads data from the mount path. When the
+     * location is used as a destination, DataSync writes data to the mount path. If you don't include
+     * this parameter, DataSync uses the file system's root directory ( `/` ).
      */
     public fun subdirectory(subdirectory: String)
 
     /**
-     * @param tags The key-value pair that represents a tag that you want to add to the resource.
-     * The value can be an empty string. This value helps you manage, filter, and search for your
-     * resources. We recommend that you create a name tag for your location.
+     * @param tags Specifies labels that help you categorize, filter, and search for your AWS
+     * resources.
+     * We recommend creating at least a name tag for your location.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags The key-value pair that represents a tag that you want to add to the resource.
-     * The value can be an empty string. This value helps you manage, filter, and search for your
-     * resources. We recommend that you create a name tag for your location.
+     * @param tags Specifies labels that help you categorize, filter, and search for your AWS
+     * resources.
+     * We recommend creating at least a name tag for your location.
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -131,7 +135,8 @@ public interface CfnLocationFSxLustreProps {
         software.amazon.awscdk.services.datasync.CfnLocationFSxLustreProps.builder()
 
     /**
-     * @param fsxFilesystemArn The Amazon Resource Name (ARN) for the FSx for Lustre file system.
+     * @param fsxFilesystemArn Specifies the Amazon Resource Name (ARN) of the FSx for Lustre file
+     * system.
      */
     override fun fsxFilesystemArn(fsxFilesystemArn: String) {
       cdkBuilder.fsxFilesystemArn(fsxFilesystemArn)
@@ -161,27 +166,29 @@ public interface CfnLocationFSxLustreProps {
         securityGroupArns(securityGroupArns.toList())
 
     /**
-     * @param subdirectory A subdirectory in the location's path.
-     * This subdirectory in the FSx for Lustre file system is used to read data from the FSx for
-     * Lustre source location or write data to the FSx for Lustre destination.
+     * @param subdirectory Specifies a mount path for your FSx for Lustre file system. The path can
+     * include subdirectories.
+     * When the location is used as a source, DataSync reads data from the mount path. When the
+     * location is used as a destination, DataSync writes data to the mount path. If you don't include
+     * this parameter, DataSync uses the file system's root directory ( `/` ).
      */
     override fun subdirectory(subdirectory: String) {
       cdkBuilder.subdirectory(subdirectory)
     }
 
     /**
-     * @param tags The key-value pair that represents a tag that you want to add to the resource.
-     * The value can be an empty string. This value helps you manage, filter, and search for your
-     * resources. We recommend that you create a name tag for your location.
+     * @param tags Specifies labels that help you categorize, filter, and search for your AWS
+     * resources.
+     * We recommend creating at least a name tag for your location.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags The key-value pair that represents a tag that you want to add to the resource.
-     * The value can be an empty string. This value helps you manage, filter, and search for your
-     * resources. We recommend that you create a name tag for your location.
+     * @param tags Specifies labels that help you categorize, filter, and search for your AWS
+     * resources.
+     * We recommend creating at least a name tag for your location.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -194,7 +201,7 @@ public interface CfnLocationFSxLustreProps {
   ) : CdkObject(cdkObject),
       CfnLocationFSxLustreProps {
     /**
-     * The Amazon Resource Name (ARN) for the FSx for Lustre file system.
+     * Specifies the Amazon Resource Name (ARN) of the FSx for Lustre file system.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxlustre.html#cfn-datasync-locationfsxlustre-fsxfilesystemarn)
      */
@@ -213,20 +220,21 @@ public interface CfnLocationFSxLustreProps {
     override fun securityGroupArns(): List<String> = unwrap(this).getSecurityGroupArns()
 
     /**
-     * A subdirectory in the location's path.
+     * Specifies a mount path for your FSx for Lustre file system. The path can include
+     * subdirectories.
      *
-     * This subdirectory in the FSx for Lustre file system is used to read data from the FSx for
-     * Lustre source location or write data to the FSx for Lustre destination.
+     * When the location is used as a source, DataSync reads data from the mount path. When the
+     * location is used as a destination, DataSync writes data to the mount path. If you don't include
+     * this parameter, DataSync uses the file system's root directory ( `/` ).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxlustre.html#cfn-datasync-locationfsxlustre-subdirectory)
      */
     override fun subdirectory(): String? = unwrap(this).getSubdirectory()
 
     /**
-     * The key-value pair that represents a tag that you want to add to the resource.
+     * Specifies labels that help you categorize, filter, and search for your AWS resources.
      *
-     * The value can be an empty string. This value helps you manage, filter, and search for your
-     * resources. We recommend that you create a name tag for your location.
+     * We recommend creating at least a name tag for your location.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxlustre.html#cfn-datasync-locationfsxlustre-tags)
      */

@@ -14,6 +14,9 @@ public open class Manifest(
   cdkObject: software.amazon.awscdk.cloud_assembly_schema.Manifest,
 ) : CdkObject(cdkObject) {
   public companion object {
+    public fun cliVersion(): String? =
+        software.amazon.awscdk.cloud_assembly_schema.Manifest.cliVersion()
+
     public fun loadAssemblyManifest(filePath: String): AssemblyManifest =
         software.amazon.awscdk.cloud_assembly_schema.Manifest.loadAssemblyManifest(filePath).let(AssemblyManifest::wrap)
 

@@ -3,11 +3,15 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -36,6 +40,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .instanceFamily("instanceFamily")
  * .instanceType("instanceType")
  * .outpostArn("outpostArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -44,7 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnHost(
   cdkObject: software.amazon.awscdk.services.ec2.CfnHost,
 ) : CfnResource(cdkObject),
-    IInspectable {
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -105,6 +114,12 @@ public open class CfnHost(
   public open fun availabilityZone(`value`: String) {
     unwrap(this).setAvailabilityZone(`value`)
   }
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * Indicates whether host maintenance is enabled or disabled for the Dedicated Host.
@@ -174,6 +189,23 @@ public open class CfnHost(
   public open fun outpostArn(`value`: String) {
     unwrap(this).setOutpostArn(`value`)
   }
+
+  /**
+   * Any tags assigned to the Dedicated Host.
+   */
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * Any tags assigned to the Dedicated Host.
+   */
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
+  }
+
+  /**
+   * Any tags assigned to the Dedicated Host.
+   */
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.CfnHost].
@@ -268,6 +300,22 @@ public open class CfnHost(
      * Host is allocated. 
      */
     public fun outpostArn(outpostArn: String)
+
+    /**
+     * Any tags assigned to the Dedicated Host.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-tags)
+     * @param tags Any tags assigned to the Dedicated Host. 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * Any tags assigned to the Dedicated Host.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-tags)
+     * @param tags Any tags assigned to the Dedicated Host. 
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -381,6 +429,24 @@ public open class CfnHost(
     override fun outpostArn(outpostArn: String) {
       cdkBuilder.outpostArn(outpostArn)
     }
+
+    /**
+     * Any tags assigned to the Dedicated Host.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-tags)
+     * @param tags Any tags assigned to the Dedicated Host. 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * Any tags assigned to the Dedicated Host.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-tags)
+     * @param tags Any tags assigned to the Dedicated Host. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnHost = cdkBuilder.build()
   }

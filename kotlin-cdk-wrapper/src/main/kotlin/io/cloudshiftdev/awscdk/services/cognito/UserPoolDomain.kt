@@ -183,6 +183,18 @@ public open class UserPoolDomain(
     public fun customDomain(customDomain: CustomDomainOptions.Builder.() -> Unit)
 
     /**
+     * A version that indicates the state of managed login.
+     *
+     * This choice applies to all app clients that host services at the domain.
+     *
+     * Default: undefined - Cognito default setting is ManagedLoginVersion.CLASSIC_HOSTED_UI
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-managed-login.html)
+     * @param managedLoginVersion A version that indicates the state of managed login. 
+     */
+    public fun managedLoginVersion(managedLoginVersion: ManagedLoginVersion)
+
+    /**
      * The user pool to which this domain should be associated.
      *
      * @param userPool The user pool to which this domain should be associated. 
@@ -256,6 +268,20 @@ public open class UserPoolDomain(
         customDomain(CustomDomainOptions(customDomain))
 
     /**
+     * A version that indicates the state of managed login.
+     *
+     * This choice applies to all app clients that host services at the domain.
+     *
+     * Default: undefined - Cognito default setting is ManagedLoginVersion.CLASSIC_HOSTED_UI
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-managed-login.html)
+     * @param managedLoginVersion A version that indicates the state of managed login. 
+     */
+    override fun managedLoginVersion(managedLoginVersion: ManagedLoginVersion) {
+      cdkBuilder.managedLoginVersion(managedLoginVersion.let(ManagedLoginVersion.Companion::unwrap))
+    }
+
+    /**
      * The user pool to which this domain should be associated.
      *
      * @param userPool The user pool to which this domain should be associated. 
@@ -268,6 +294,9 @@ public open class UserPoolDomain(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.cognito.UserPoolDomain.PROPERTY_INJECTION_ID
+
     public fun fromDomainName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

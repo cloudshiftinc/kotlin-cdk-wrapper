@@ -38,6 +38,7 @@ import kotlin.collections.List
  * .key("key")
  * .value("value")
  * .build()))
+ * .teamsChannelName("teamsChannelName")
  * .userRoleRequired(false)
  * .build();
  * ```
@@ -53,8 +54,8 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
   public fun configurationName(): String
 
   /**
-   * Links a list of resource ARNs (for example, custom action ARNs) to a Miscrosoft Teams channel
-   * configuration for AWS Chatbot .
+   * Links a list of resource ARNs (for example, custom action ARNs) to a Microsoft Teams channel
+   * configuration for  .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-customizationresourcearns)
    */
@@ -71,11 +72,11 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
   public fun guardrailPolicies(): List<String> = unwrap(this).getGuardrailPolicies() ?: emptyList()
 
   /**
-   * The ARN of the IAM role that defines the permissions for AWS Chatbot .
+   * The ARN of the IAM role that defines the permissions for  .
    *
-   * This is a user-defined role that AWS Chatbot will assume. This is not the service-linked role.
-   * For more information, see [IAM Policies for AWS
-   * Chatbot](https://docs.aws.amazon.com/chatbot/latest/adminguide/chatbot-iam-policies.html) .
+   * This is a user-defined role that  will assume. This is not the service-linked role. For more
+   * information, see [IAM Policies for  in chat
+   * applications](https://docs.aws.amazon.com/chatbot/latest/adminguide/chatbot-iam-policies.html) .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-iamrolearn)
    */
@@ -94,7 +95,7 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
   public fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
 
   /**
-   * The ARNs of the SNS topics that deliver notifications to AWS Chatbot .
+   * The ARNs of the SNS topics that deliver notifications to  .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-snstopicarns)
    */
@@ -108,13 +109,13 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * The ID of the Microsoft Team authorized with AWS Chatbot .
+   * The ID of the Microsoft Team authorized with  .
    *
    * To get the team ID, you must perform the initial authorization flow with Microsoft Teams in the
-   * AWS Chatbot console. Then you can copy and paste the team ID from the console. For more details,
-   * see steps 1-3 in [Get started with Microsoft
-   * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup)
-   * in the *AWS Chatbot Administrator Guide* .
+   *  in chat applications console. Then you can copy and paste the team ID from the console. For more
+   * details, see steps 1-3 in [Tutorial: Get started with Microsoft
+   * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html) in the *in chat
+   * applications Administrator Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-teamid)
    */
@@ -124,7 +125,7 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
    * The ID of the Microsoft Teams channel.
    *
    * To get the channel ID, open Microsoft Teams, right click on the channel name in the left pane,
-   * then choose Copy. An example of the channel ID syntax is:
+   * then choose *Copy* . An example of the channel ID syntax is:
    * `19%3ab6ef35dc342d56ba5654e6fc6d25a071%40thread.tacv2` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-teamschannelid)
@@ -132,13 +133,20 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
   public fun teamsChannelId(): String
 
   /**
+   * The name of the Microsoft Teams channel.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-teamschannelname)
+   */
+  public fun teamsChannelName(): String? = unwrap(this).getTeamsChannelName()
+
+  /**
    * The ID of the Microsoft Teams tenant.
    *
    * To get the tenant ID, you must perform the initial authorization flow with Microsoft Teams in
-   * the AWS Chatbot console. Then you can copy and paste the tenant ID from the console. For more
-   * details, see steps 1-4 in [Get started with Microsoft
-   * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup)
-   * in the *AWS Chatbot Administrator Guide* .
+   * the  in chat applications console. Then you can copy and paste the tenant ID from the console. For
+   * more details, see steps 1-3 in [Tutorial: Get started with Microsoft
+   * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html) in the *in chat
+   * applications Administrator Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-teamstenantid)
    */
@@ -165,13 +173,13 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
 
     /**
      * @param customizationResourceArns Links a list of resource ARNs (for example, custom action
-     * ARNs) to a Miscrosoft Teams channel configuration for AWS Chatbot .
+     * ARNs) to a Microsoft Teams channel configuration for  .
      */
     public fun customizationResourceArns(customizationResourceArns: List<String>)
 
     /**
      * @param customizationResourceArns Links a list of resource ARNs (for example, custom action
-     * ARNs) to a Miscrosoft Teams channel configuration for AWS Chatbot .
+     * ARNs) to a Microsoft Teams channel configuration for  .
      */
     public fun customizationResourceArns(vararg customizationResourceArns: String)
 
@@ -188,10 +196,10 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     public fun guardrailPolicies(vararg guardrailPolicies: String)
 
     /**
-     * @param iamRoleArn The ARN of the IAM role that defines the permissions for AWS Chatbot . 
-     * This is a user-defined role that AWS Chatbot will assume. This is not the service-linked
-     * role. For more information, see [IAM Policies for AWS
-     * Chatbot](https://docs.aws.amazon.com/chatbot/latest/adminguide/chatbot-iam-policies.html) .
+     * @param iamRoleArn The ARN of the IAM role that defines the permissions for  . 
+     * This is a user-defined role that  will assume. This is not the service-linked role. For more
+     * information, see [IAM Policies for  in chat
+     * applications](https://docs.aws.amazon.com/chatbot/latest/adminguide/chatbot-iam-policies.html) .
      */
     public fun iamRoleArn(iamRoleArn: String)
 
@@ -203,12 +211,12 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     public fun loggingLevel(loggingLevel: String)
 
     /**
-     * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to AWS Chatbot .
+     * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to  .
      */
     public fun snsTopicArns(snsTopicArns: List<String>)
 
     /**
-     * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to AWS Chatbot .
+     * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to  .
      */
     public fun snsTopicArns(vararg snsTopicArns: String)
 
@@ -223,30 +231,35 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * @param teamId The ID of the Microsoft Team authorized with AWS Chatbot . 
+     * @param teamId The ID of the Microsoft Team authorized with  . 
      * To get the team ID, you must perform the initial authorization flow with Microsoft Teams in
-     * the AWS Chatbot console. Then you can copy and paste the team ID from the console. For more
-     * details, see steps 1-3 in [Get started with Microsoft
-     * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup)
-     * in the *AWS Chatbot Administrator Guide* .
+     * the  in chat applications console. Then you can copy and paste the team ID from the console. For
+     * more details, see steps 1-3 in [Tutorial: Get started with Microsoft
+     * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html) in the *in chat
+     * applications Administrator Guide* .
      */
     public fun teamId(teamId: String)
 
     /**
      * @param teamsChannelId The ID of the Microsoft Teams channel. 
      * To get the channel ID, open Microsoft Teams, right click on the channel name in the left
-     * pane, then choose Copy. An example of the channel ID syntax is:
+     * pane, then choose *Copy* . An example of the channel ID syntax is:
      * `19%3ab6ef35dc342d56ba5654e6fc6d25a071%40thread.tacv2` .
      */
     public fun teamsChannelId(teamsChannelId: String)
 
     /**
+     * @param teamsChannelName The name of the Microsoft Teams channel.
+     */
+    public fun teamsChannelName(teamsChannelName: String)
+
+    /**
      * @param teamsTenantId The ID of the Microsoft Teams tenant. 
      * To get the tenant ID, you must perform the initial authorization flow with Microsoft Teams in
-     * the AWS Chatbot console. Then you can copy and paste the tenant ID from the console. For more
-     * details, see steps 1-4 in [Get started with Microsoft
-     * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup)
-     * in the *AWS Chatbot Administrator Guide* .
+     * the  in chat applications console. Then you can copy and paste the tenant ID from the console.
+     * For more details, see steps 1-3 in [Tutorial: Get started with Microsoft
+     * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html) in the *in chat
+     * applications Administrator Guide* .
      */
     public fun teamsTenantId(teamsTenantId: String)
 
@@ -275,7 +288,7 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
 
     /**
      * @param customizationResourceArns Links a list of resource ARNs (for example, custom action
-     * ARNs) to a Miscrosoft Teams channel configuration for AWS Chatbot .
+     * ARNs) to a Microsoft Teams channel configuration for  .
      */
     override fun customizationResourceArns(customizationResourceArns: List<String>) {
       cdkBuilder.customizationResourceArns(customizationResourceArns)
@@ -283,7 +296,7 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
 
     /**
      * @param customizationResourceArns Links a list of resource ARNs (for example, custom action
-     * ARNs) to a Miscrosoft Teams channel configuration for AWS Chatbot .
+     * ARNs) to a Microsoft Teams channel configuration for  .
      */
     override fun customizationResourceArns(vararg customizationResourceArns: String): Unit =
         customizationResourceArns(customizationResourceArns.toList())
@@ -304,10 +317,10 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
         guardrailPolicies(guardrailPolicies.toList())
 
     /**
-     * @param iamRoleArn The ARN of the IAM role that defines the permissions for AWS Chatbot . 
-     * This is a user-defined role that AWS Chatbot will assume. This is not the service-linked
-     * role. For more information, see [IAM Policies for AWS
-     * Chatbot](https://docs.aws.amazon.com/chatbot/latest/adminguide/chatbot-iam-policies.html) .
+     * @param iamRoleArn The ARN of the IAM role that defines the permissions for  . 
+     * This is a user-defined role that  will assume. This is not the service-linked role. For more
+     * information, see [IAM Policies for  in chat
+     * applications](https://docs.aws.amazon.com/chatbot/latest/adminguide/chatbot-iam-policies.html) .
      */
     override fun iamRoleArn(iamRoleArn: String) {
       cdkBuilder.iamRoleArn(iamRoleArn)
@@ -323,14 +336,14 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     }
 
     /**
-     * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to AWS Chatbot .
+     * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to  .
      */
     override fun snsTopicArns(snsTopicArns: List<String>) {
       cdkBuilder.snsTopicArns(snsTopicArns)
     }
 
     /**
-     * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to AWS Chatbot .
+     * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to  .
      */
     override fun snsTopicArns(vararg snsTopicArns: String): Unit =
         snsTopicArns(snsTopicArns.toList())
@@ -348,12 +361,12 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * @param teamId The ID of the Microsoft Team authorized with AWS Chatbot . 
+     * @param teamId The ID of the Microsoft Team authorized with  . 
      * To get the team ID, you must perform the initial authorization flow with Microsoft Teams in
-     * the AWS Chatbot console. Then you can copy and paste the team ID from the console. For more
-     * details, see steps 1-3 in [Get started with Microsoft
-     * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup)
-     * in the *AWS Chatbot Administrator Guide* .
+     * the  in chat applications console. Then you can copy and paste the team ID from the console. For
+     * more details, see steps 1-3 in [Tutorial: Get started with Microsoft
+     * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html) in the *in chat
+     * applications Administrator Guide* .
      */
     override fun teamId(teamId: String) {
       cdkBuilder.teamId(teamId)
@@ -362,7 +375,7 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     /**
      * @param teamsChannelId The ID of the Microsoft Teams channel. 
      * To get the channel ID, open Microsoft Teams, right click on the channel name in the left
-     * pane, then choose Copy. An example of the channel ID syntax is:
+     * pane, then choose *Copy* . An example of the channel ID syntax is:
      * `19%3ab6ef35dc342d56ba5654e6fc6d25a071%40thread.tacv2` .
      */
     override fun teamsChannelId(teamsChannelId: String) {
@@ -370,12 +383,19 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     }
 
     /**
+     * @param teamsChannelName The name of the Microsoft Teams channel.
+     */
+    override fun teamsChannelName(teamsChannelName: String) {
+      cdkBuilder.teamsChannelName(teamsChannelName)
+    }
+
+    /**
      * @param teamsTenantId The ID of the Microsoft Teams tenant. 
      * To get the tenant ID, you must perform the initial authorization flow with Microsoft Teams in
-     * the AWS Chatbot console. Then you can copy and paste the tenant ID from the console. For more
-     * details, see steps 1-4 in [Get started with Microsoft
-     * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup)
-     * in the *AWS Chatbot Administrator Guide* .
+     * the  in chat applications console. Then you can copy and paste the tenant ID from the console.
+     * For more details, see steps 1-3 in [Tutorial: Get started with Microsoft
+     * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html) in the *in chat
+     * applications Administrator Guide* .
      */
     override fun teamsTenantId(teamsTenantId: String) {
       cdkBuilder.teamsTenantId(teamsTenantId)
@@ -412,8 +432,8 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     override fun configurationName(): String = unwrap(this).getConfigurationName()
 
     /**
-     * Links a list of resource ARNs (for example, custom action ARNs) to a Miscrosoft Teams channel
-     * configuration for AWS Chatbot .
+     * Links a list of resource ARNs (for example, custom action ARNs) to a Microsoft Teams channel
+     * configuration for  .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-customizationresourcearns)
      */
@@ -431,11 +451,11 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
         emptyList()
 
     /**
-     * The ARN of the IAM role that defines the permissions for AWS Chatbot .
+     * The ARN of the IAM role that defines the permissions for  .
      *
-     * This is a user-defined role that AWS Chatbot will assume. This is not the service-linked
-     * role. For more information, see [IAM Policies for AWS
-     * Chatbot](https://docs.aws.amazon.com/chatbot/latest/adminguide/chatbot-iam-policies.html) .
+     * This is a user-defined role that  will assume. This is not the service-linked role. For more
+     * information, see [IAM Policies for  in chat
+     * applications](https://docs.aws.amazon.com/chatbot/latest/adminguide/chatbot-iam-policies.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-iamrolearn)
      */
@@ -454,7 +474,7 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     override fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
 
     /**
-     * The ARNs of the SNS topics that deliver notifications to AWS Chatbot .
+     * The ARNs of the SNS topics that deliver notifications to  .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-snstopicarns)
      */
@@ -468,13 +488,13 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
-     * The ID of the Microsoft Team authorized with AWS Chatbot .
+     * The ID of the Microsoft Team authorized with  .
      *
      * To get the team ID, you must perform the initial authorization flow with Microsoft Teams in
-     * the AWS Chatbot console. Then you can copy and paste the team ID from the console. For more
-     * details, see steps 1-3 in [Get started with Microsoft
-     * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup)
-     * in the *AWS Chatbot Administrator Guide* .
+     * the  in chat applications console. Then you can copy and paste the team ID from the console. For
+     * more details, see steps 1-3 in [Tutorial: Get started with Microsoft
+     * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html) in the *in chat
+     * applications Administrator Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-teamid)
      */
@@ -484,7 +504,7 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
      * The ID of the Microsoft Teams channel.
      *
      * To get the channel ID, open Microsoft Teams, right click on the channel name in the left
-     * pane, then choose Copy. An example of the channel ID syntax is:
+     * pane, then choose *Copy* . An example of the channel ID syntax is:
      * `19%3ab6ef35dc342d56ba5654e6fc6d25a071%40thread.tacv2` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-teamschannelid)
@@ -492,13 +512,20 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     override fun teamsChannelId(): String = unwrap(this).getTeamsChannelId()
 
     /**
+     * The name of the Microsoft Teams channel.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-teamschannelname)
+     */
+    override fun teamsChannelName(): String? = unwrap(this).getTeamsChannelName()
+
+    /**
      * The ID of the Microsoft Teams tenant.
      *
      * To get the tenant ID, you must perform the initial authorization flow with Microsoft Teams in
-     * the AWS Chatbot console. Then you can copy and paste the tenant ID from the console. For more
-     * details, see steps 1-4 in [Get started with Microsoft
-     * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup)
-     * in the *AWS Chatbot Administrator Guide* .
+     * the  in chat applications console. Then you can copy and paste the tenant ID from the console.
+     * For more details, see steps 1-3 in [Tutorial: Get started with Microsoft
+     * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html) in the *in chat
+     * applications Administrator Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-teamstenantid)
      */

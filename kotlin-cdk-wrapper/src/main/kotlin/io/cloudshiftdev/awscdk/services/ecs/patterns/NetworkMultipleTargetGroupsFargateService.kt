@@ -56,6 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .containerPort(90)
  * .listener("listener2")
  * .build()))
+ * .minHealthyPercent(100)
+ * .maxHealthyPercent(200)
  * .build();
  * ```
  */
@@ -268,6 +270,17 @@ public open class NetworkMultipleTargetGroupsFargateService(
     public fun loadBalancers(vararg loadBalancers: NetworkLoadBalancerProps)
 
     /**
+     * The maximum number of tasks, specified as a percentage of the Amazon ECS service's
+     * DesiredCount value, that can run in a service during a deployment.
+     *
+     * Default: - 200%
+     *
+     * @param maxHealthyPercent The maximum number of tasks, specified as a percentage of the Amazon
+     * ECS service's DesiredCount value, that can run in a service during a deployment. 
+     */
+    public fun maxHealthyPercent(maxHealthyPercent: Number)
+
+    /**
      * The amount (in MiB) of memory used by the task.
      *
      * This field is required and you must use one of the following values, which determines your
@@ -300,6 +313,18 @@ public open class NetworkMultipleTargetGroupsFargateService(
      * @param memoryLimitMiB The amount (in MiB) of memory used by the task. 
      */
     public fun memoryLimitMiB(memoryLimitMiB: Number)
+
+    /**
+     * The minimum number of tasks, specified as a percentage of the Amazon ECS service's
+     * DesiredCount value, that must continue to run and remain healthy during a deployment.
+     *
+     * Default: - 50%
+     *
+     * @param minHealthyPercent The minimum number of tasks, specified as a percentage of the Amazon
+     * ECS service's DesiredCount value, that must continue to run and remain healthy during a
+     * deployment. 
+     */
+    public fun minHealthyPercent(minHealthyPercent: Number)
 
     /**
      * The platform version on which to run your service.
@@ -619,6 +644,19 @@ public open class NetworkMultipleTargetGroupsFargateService(
         loadBalancers(loadBalancers.toList())
 
     /**
+     * The maximum number of tasks, specified as a percentage of the Amazon ECS service's
+     * DesiredCount value, that can run in a service during a deployment.
+     *
+     * Default: - 200%
+     *
+     * @param maxHealthyPercent The maximum number of tasks, specified as a percentage of the Amazon
+     * ECS service's DesiredCount value, that can run in a service during a deployment. 
+     */
+    override fun maxHealthyPercent(maxHealthyPercent: Number) {
+      cdkBuilder.maxHealthyPercent(maxHealthyPercent)
+    }
+
+    /**
      * The amount (in MiB) of memory used by the task.
      *
      * This field is required and you must use one of the following values, which determines your
@@ -652,6 +690,20 @@ public open class NetworkMultipleTargetGroupsFargateService(
      */
     override fun memoryLimitMiB(memoryLimitMiB: Number) {
       cdkBuilder.memoryLimitMiB(memoryLimitMiB)
+    }
+
+    /**
+     * The minimum number of tasks, specified as a percentage of the Amazon ECS service's
+     * DesiredCount value, that must continue to run and remain healthy during a deployment.
+     *
+     * Default: - 50%
+     *
+     * @param minHealthyPercent The minimum number of tasks, specified as a percentage of the Amazon
+     * ECS service's DesiredCount value, that must continue to run and remain healthy during a
+     * deployment. 
+     */
+    override fun minHealthyPercent(minHealthyPercent: Number) {
+      cdkBuilder.minHealthyPercent(minHealthyPercent)
     }
 
     /**
@@ -810,6 +862,9 @@ public open class NetworkMultipleTargetGroupsFargateService(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsFargateService.PROPERTY_INJECTION_ID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

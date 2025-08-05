@@ -20,19 +20,15 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * // Adding realtime logs config to a Cloudfront Distribution on default behavior.
- * import io.cloudshiftdev.awscdk.services.kinesis.*;
- * Stream stream;
- * RealtimeLogConfig realTimeConfig = RealtimeLogConfig.Builder.create(this, "realtimeLog")
- * .endPoints(List.of(Endpoint.fromKinesisStream(stream)))
- * .fields(List.of("timestamp", "c-ip", "time-to-first-byte", "sc-status"))
- * .realtimeLogConfigName("my-delivery-stream")
- * .samplingRate(100)
- * .build();
- * Distribution.Builder.create(this, "myCdn")
+ * Bucket myBucket = new Bucket(this, "myBucket");
+ * Distribution.Builder.create(this, "myDist")
  * .defaultBehavior(BehaviorOptions.builder()
- * .origin(new HttpOrigin("www.example.com"))
- * .realtimeLogConfig(realTimeConfig)
+ * .origin(OriginGroup.Builder.create()
+ * .primaryOrigin(S3BucketOrigin.withOriginAccessControl(myBucket))
+ * .fallbackOrigin(new HttpOrigin("www.example.com"))
+ * // optional, defaults to: 500, 502, 503 and 504
+ * .fallbackStatusCodes(List.of(404))
+ * .build())
  * .build())
  * .build();
  * ```

@@ -22,13 +22,10 @@ import kotlin.jvm.JvmName
  * TaskDefinition taskDefinition;
  * Vpc vpc;
  * Ec2Service service = Ec2Service.Builder.create(this,
- * "Service").cluster(cluster).taskDefinition(taskDefinition).build();
+ * "Service").cluster(cluster).taskDefinition(taskDefinition).minHealthyPercent(100).build();
  * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB").vpc(vpc).build();
  * lb.addListener(LoadBalancerListener.builder().externalPort(80).build());
- * lb.addTarget(service.loadBalancerTarget(LoadBalancerTargetOptions.builder()
- * .containerName("MyContainer")
- * .containerPort(80)
- * .build()));
+ * lb.addTarget(service);
  * ```
  */
 public interface LoadBalancerProps {

@@ -12,7 +12,13 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The `HookTypeConfig` resource specifies the configuration of a Hook.
+ * The `AWS::CloudFormation::HookTypeConfig` resource specifies the configuration of an activated
+ * Hook.
+ *
+ * For information about the CloudFormation registry, see [Managing extensions with the
+ * CloudFormation
+ * registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html) in the *AWS
+ * CloudFormation User Guide* .
  *
  * Example:
  *
@@ -53,7 +59,7 @@ public open class CfnHookTypeConfig(
   )
 
   /**
-   * The Amazon Resource Number (ARN) of the activated Hook type configuration, in this account and
+   * The Amazon Resource Number (ARN) of the activated Hook type configuration in this account and
    * Region.
    */
   public open fun attrConfigurationArn(): String = unwrap(this).getAttrConfigurationArn()
@@ -71,12 +77,12 @@ public open class CfnHookTypeConfig(
   }
 
   /**
-   * Specifies the activated Hook type configuration, in this AWS account and AWS Region .
+   * An alias by which to refer to this configuration data.
    */
   public open fun configurationAlias(): String? = unwrap(this).getConfigurationAlias()
 
   /**
-   * Specifies the activated Hook type configuration, in this AWS account and AWS Region .
+   * An alias by which to refer to this configuration data.
    */
   public open fun configurationAlias(`value`: String) {
     unwrap(this).setConfigurationAlias(`value`)
@@ -132,15 +138,14 @@ public open class CfnHookTypeConfig(
     public fun configuration(configuration: String)
 
     /**
-     * Specifies the activated Hook type configuration, in this AWS account and AWS Region .
+     * An alias by which to refer to this configuration data.
      *
      * Defaults to `default` alias. Hook types currently support default configuration alias.
      *
      * Default: - "default"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html#cfn-cloudformation-hooktypeconfig-configurationalias)
-     * @param configurationAlias Specifies the activated Hook type configuration, in this AWS
-     * account and AWS Region . 
+     * @param configurationAlias An alias by which to refer to this configuration data. 
      */
     public fun configurationAlias(configurationAlias: String)
 
@@ -189,15 +194,14 @@ public open class CfnHookTypeConfig(
     }
 
     /**
-     * Specifies the activated Hook type configuration, in this AWS account and AWS Region .
+     * An alias by which to refer to this configuration data.
      *
      * Defaults to `default` alias. Hook types currently support default configuration alias.
      *
      * Default: - "default"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html#cfn-cloudformation-hooktypeconfig-configurationalias)
-     * @param configurationAlias Specifies the activated Hook type configuration, in this AWS
-     * account and AWS Region . 
+     * @param configurationAlias An alias by which to refer to this configuration data. 
      */
     override fun configurationAlias(configurationAlias: String) {
       cdkBuilder.configurationAlias(configurationAlias)

@@ -144,6 +144,9 @@ public open class S3OriginAccessControl(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.cloudfront.S3OriginAccessControl.PROPERTY_INJECTION_ID
+
     public fun fromOriginAccessControlId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

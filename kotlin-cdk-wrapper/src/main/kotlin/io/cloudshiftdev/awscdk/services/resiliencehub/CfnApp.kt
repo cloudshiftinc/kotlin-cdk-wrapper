@@ -1292,6 +1292,10 @@ public open class CfnApp(
      * Hub Service Principle to obtain a read-only access to your application resources while running
      * an assessment.
      *
+     * If your IAM role includes a path, you must include the path in the `invokerRoleName`
+     * parameter. For example, if your IAM role's ARN is
+     * `arn:aws:iam:123456789012:role/my-path/role-name` , you should pass `my-path/role-name` .
+     *
      *
      * * You must have `iam:passRole` permission for this role while creating or updating the
      * application.
@@ -1351,6 +1355,10 @@ public open class CfnApp(
        * @param invokerRoleName Existing AWS IAM role name in the primary AWS account that will be
        * assumed by AWS Resilience Hub Service Principle to obtain a read-only access to your
        * application resources while running an assessment.
+       * If your IAM role includes a path, you must include the path in the `invokerRoleName`
+       * parameter. For example, if your IAM role's ARN is
+       * `arn:aws:iam:123456789012:role/my-path/role-name` , you should pass `my-path/role-name` .
+       *
        *
        * * You must have `iam:passRole` permission for this role while creating or updating the
        * application.
@@ -1408,6 +1416,10 @@ public open class CfnApp(
        * @param invokerRoleName Existing AWS IAM role name in the primary AWS account that will be
        * assumed by AWS Resilience Hub Service Principle to obtain a read-only access to your
        * application resources while running an assessment.
+       * If your IAM role includes a path, you must include the path in the `invokerRoleName`
+       * parameter. For example, if your IAM role's ARN is
+       * `arn:aws:iam:123456789012:role/my-path/role-name` , you should pass `my-path/role-name` .
+       *
        *
        * * You must have `iam:passRole` permission for this role while creating or updating the
        * application.
@@ -1458,6 +1470,10 @@ public open class CfnApp(
        * Existing AWS IAM role name in the primary AWS account that will be assumed by AWS
        * Resilience Hub Service Principle to obtain a read-only access to your application resources
        * while running an assessment.
+       *
+       * If your IAM role includes a path, you must include the path in the `invokerRoleName`
+       * parameter. For example, if your IAM role's ARN is
+       * `arn:aws:iam:123456789012:role/my-path/role-name` , you should pass `my-path/role-name` .
        *
        *
        * * You must have `iam:passRole` permission for this role while creating or updating the

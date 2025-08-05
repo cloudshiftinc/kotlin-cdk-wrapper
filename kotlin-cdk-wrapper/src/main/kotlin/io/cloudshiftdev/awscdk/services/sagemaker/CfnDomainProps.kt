@@ -27,6 +27,7 @@ import kotlin.jvm.JvmName
  * .defaultUserSettings(UserSettingsProperty.builder()
  * .executionRole("executionRole")
  * // the properties below are optional
+ * .autoMountHomeEfs("autoMountHomeEfs")
  * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
  * .appLifecycleManagement(AppLifecycleManagementProperty.builder()
  * .idleSettings(IdleSettingsProperty.builder()
@@ -36,6 +37,7 @@ import kotlin.jvm.JvmName
  * .minIdleTimeoutInMinutes(123)
  * .build())
  * .build())
+ * .builtInLifecycleConfigArn("builtInLifecycleConfigArn")
  * .customImages(List.of(CustomImageProperty.builder()
  * .appImageConfigName("appImageConfigName")
  * .imageName("imageName")
@@ -56,6 +58,11 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .fileSystemPath("fileSystemPath")
  * .build())
+ * .fSxLustreFileSystemConfig(FSxLustreFileSystemConfigProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * // the properties below are optional
+ * .fileSystemPath("fileSystemPath")
+ * .build())
  * .build()))
  * .customPosixUserConfig(CustomPosixUserConfigProperty.builder()
  * .gid(123)
@@ -71,6 +78,7 @@ import kotlin.jvm.JvmName
  * .minIdleTimeoutInMinutes(123)
  * .build())
  * .build())
+ * .builtInLifecycleConfigArn("builtInLifecycleConfigArn")
  * .codeRepositories(List.of(CodeRepositoryProperty.builder()
  * .repositoryUrl("repositoryUrl")
  * .build()))
@@ -145,12 +153,15 @@ import kotlin.jvm.JvmName
  * .studioWebPortal("studioWebPortal")
  * .studioWebPortalSettings(StudioWebPortalSettingsProperty.builder()
  * .hiddenAppTypes(List.of("hiddenAppTypes"))
+ * .hiddenInstanceTypes(List.of("hiddenInstanceTypes"))
  * .hiddenMlTools(List.of("hiddenMlTools"))
+ * .hiddenSageMakerImageVersionAliases(List.of(HiddenSageMakerImageProperty.builder()
+ * .sageMakerImageName("sageMakerImageName")
+ * .versionAliases(List.of("versionAliases"))
+ * .build()))
  * .build())
  * .build())
  * .domainName("domainName")
- * .subnetIds(List.of("subnetIds"))
- * .vpcId("vpcId")
  * // the properties below are optional
  * .appNetworkAccessType("appNetworkAccessType")
  * .appSecurityGroupManagement("appSecurityGroupManagement")
@@ -159,6 +170,11 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .customFileSystemConfigs(List.of(CustomFileSystemConfigProperty.builder()
  * .efsFileSystemConfig(EFSFileSystemConfigProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * // the properties below are optional
+ * .fileSystemPath("fileSystemPath")
+ * .build())
+ * .fSxLustreFileSystemConfig(FSxLustreFileSystemConfigProperty.builder()
  * .fileSystemId("fileSystemId")
  * // the properties below are optional
  * .fileSystemPath("fileSystemPath")
@@ -177,6 +193,7 @@ import kotlin.jvm.JvmName
  * .minIdleTimeoutInMinutes(123)
  * .build())
  * .build())
+ * .builtInLifecycleConfigArn("builtInLifecycleConfigArn")
  * .codeRepositories(List.of(CodeRepositoryProperty.builder()
  * .repositoryUrl("repositoryUrl")
  * .build()))
@@ -245,13 +262,25 @@ import kotlin.jvm.JvmName
  * .rStudioPackageManagerUrl("rStudioPackageManagerUrl")
  * .build())
  * .securityGroupIds(List.of("securityGroupIds"))
+ * .unifiedStudioSettings(UnifiedStudioSettingsProperty.builder()
+ * .domainAccountId("domainAccountId")
+ * .domainId("domainId")
+ * .domainRegion("domainRegion")
+ * .environmentId("environmentId")
+ * .projectId("projectId")
+ * .projectS3Path("projectS3Path")
+ * .singleSignOnApplicationArn("singleSignOnApplicationArn")
+ * .studioWebPortalAccess("studioWebPortalAccess")
+ * .build())
  * .build())
  * .kmsKeyId("kmsKeyId")
+ * .subnetIds(List.of("subnetIds"))
  * .tagPropagation("tagPropagation")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .vpcId("vpcId")
  * .build();
  * ```
  *
@@ -261,8 +290,8 @@ public interface CfnDomainProps {
   /**
    * Specifies the VPC used for non-EFS traffic. The default value is `PublicInternetOnly` .
    *
-   * * `PublicInternetOnly` - Non-EFS traffic is through a VPC managed by Amazon SageMaker , which
-   * allows direct internet access
+   * * `PublicInternetOnly` - Non-EFS traffic is through a VPC managed by Amazon SageMaker AI ,
+   * which allows direct internet access
    * * `VpcOnly` - All Studio traffic is through the specified VPC and subnets
    *
    * *Valid Values* : `PublicInternetOnly | VpcOnly`
@@ -352,7 +381,7 @@ public interface CfnDomainProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-subnetids)
    */
-  public fun subnetIds(): List<String>
+  public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
   /**
    * Indicates whether the tags added to Domain, User Profile and Space entity is propagated to all
@@ -386,7 +415,7 @@ public interface CfnDomainProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-vpcid)
    */
-  public fun vpcId(): String
+  public fun vpcId(): String? = unwrap(this).getVpcId()
 
   /**
    * A builder for [CfnDomainProps]
@@ -396,8 +425,8 @@ public interface CfnDomainProps {
     /**
      * @param appNetworkAccessType Specifies the VPC used for non-EFS traffic. The default value is
      * `PublicInternetOnly` .
-     * * `PublicInternetOnly` - Non-EFS traffic is through a VPC managed by Amazon SageMaker , which
-     * allows direct internet access
+     * * `PublicInternetOnly` - Non-EFS traffic is through a VPC managed by Amazon SageMaker AI ,
+     * which allows direct internet access
      * * `VpcOnly` - All Studio traffic is through the specified VPC and subnets
      *
      * *Valid Values* : `PublicInternetOnly | VpcOnly`
@@ -503,7 +532,7 @@ public interface CfnDomainProps {
     public fun kmsKeyId(kmsKeyId: String)
 
     /**
-     * @param subnetIds The VPC subnets that Studio uses for communication. 
+     * @param subnetIds The VPC subnets that Studio uses for communication.
      * *Length Constraints* : Maximum length of 32.
      *
      * *Array members* : Minimum number of 1 item. Maximum number of 16 items.
@@ -513,7 +542,7 @@ public interface CfnDomainProps {
     public fun subnetIds(subnetIds: List<String>)
 
     /**
-     * @param subnetIds The VPC subnets that Studio uses for communication. 
+     * @param subnetIds The VPC subnets that Studio uses for communication.
      * *Length Constraints* : Maximum length of 32.
      *
      * *Array members* : Minimum number of 1 item. Maximum number of 16 items.
@@ -554,7 +583,7 @@ public interface CfnDomainProps {
 
     /**
      * @param vpcId The ID of the Amazon Virtual Private Cloud (Amazon VPC) that Studio uses for
-     * communication. 
+     * communication.
      * *Length Constraints* : Maximum length of 32.
      *
      * *Pattern* : `[-0-9a-zA-Z]+`
@@ -569,8 +598,8 @@ public interface CfnDomainProps {
     /**
      * @param appNetworkAccessType Specifies the VPC used for non-EFS traffic. The default value is
      * `PublicInternetOnly` .
-     * * `PublicInternetOnly` - Non-EFS traffic is through a VPC managed by Amazon SageMaker , which
-     * allows direct internet access
+     * * `PublicInternetOnly` - Non-EFS traffic is through a VPC managed by Amazon SageMaker AI ,
+     * which allows direct internet access
      * * `VpcOnly` - All Studio traffic is through the specified VPC and subnets
      *
      * *Valid Values* : `PublicInternetOnly | VpcOnly`
@@ -703,7 +732,7 @@ public interface CfnDomainProps {
     }
 
     /**
-     * @param subnetIds The VPC subnets that Studio uses for communication. 
+     * @param subnetIds The VPC subnets that Studio uses for communication.
      * *Length Constraints* : Maximum length of 32.
      *
      * *Array members* : Minimum number of 1 item. Maximum number of 16 items.
@@ -715,7 +744,7 @@ public interface CfnDomainProps {
     }
 
     /**
-     * @param subnetIds The VPC subnets that Studio uses for communication. 
+     * @param subnetIds The VPC subnets that Studio uses for communication.
      * *Length Constraints* : Maximum length of 32.
      *
      * *Array members* : Minimum number of 1 item. Maximum number of 16 items.
@@ -760,7 +789,7 @@ public interface CfnDomainProps {
 
     /**
      * @param vpcId The ID of the Amazon Virtual Private Cloud (Amazon VPC) that Studio uses for
-     * communication. 
+     * communication.
      * *Length Constraints* : Maximum length of 32.
      *
      * *Pattern* : `[-0-9a-zA-Z]+`
@@ -780,8 +809,8 @@ public interface CfnDomainProps {
     /**
      * Specifies the VPC used for non-EFS traffic. The default value is `PublicInternetOnly` .
      *
-     * * `PublicInternetOnly` - Non-EFS traffic is through a VPC managed by Amazon SageMaker , which
-     * allows direct internet access
+     * * `PublicInternetOnly` - Non-EFS traffic is through a VPC managed by Amazon SageMaker AI ,
+     * which allows direct internet access
      * * `VpcOnly` - All Studio traffic is through the specified VPC and subnets
      *
      * *Valid Values* : `PublicInternetOnly | VpcOnly`
@@ -872,7 +901,7 @@ public interface CfnDomainProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-subnetids)
      */
-    override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
+    override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
     /**
      * Indicates whether the tags added to Domain, User Profile and Space entity is propagated to
@@ -906,7 +935,7 @@ public interface CfnDomainProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-vpcid)
      */
-    override fun vpcId(): String = unwrap(this).getVpcId()
+    override fun vpcId(): String? = unwrap(this).getVpcId()
   }
 
   public companion object {

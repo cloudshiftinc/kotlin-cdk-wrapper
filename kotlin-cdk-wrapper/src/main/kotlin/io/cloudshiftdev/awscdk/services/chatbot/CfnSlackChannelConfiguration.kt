@@ -19,15 +19,19 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The `AWS::Chatbot::SlackChannelConfiguration` resource configures a Slack channel to allow users
- * to use AWS Chatbot with AWS CloudFormation templates.
+ * AWS Chatbot is now  . [Learn
+ * more](https://docs.aws.amazon.com//chatbot/latest/adminguide/service-rename.html) &gt;  &gt; `Type`
+ * attribute values remain unchanged.
  *
- * This resource requires some setup to be done in the AWS Chatbot console. To provide the required
- * Slack workspace ID, you must perform the initial authorization flow with Slack in the AWS Chatbot
- * console, then copy and paste the workspace ID from the console. For more details, see [Configure a
- * Slack
- * client](https://docs.aws.amazon.com/chatbot/latest/adminguide/slack-setup.html#slack-client-setup)
- * in the *AWS Chatbot User Guide* .
+ * The `AWS::Chatbot::SlackChannelConfiguration` resource configures a Slack channel to allow users
+ * to use  with AWS CloudFormation templates.
+ *
+ * This resource requires some setup to be done in the  in chat applications console. To provide the
+ * required Slack workspace ID, you must perform the initial authorization flow with Slack in the  in
+ * chat applications console, then copy and paste the workspace ID from the console. For more details,
+ * see steps 1-3 in [Tutorial: Get started with
+ * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/slack-setup.html#slack-client-setup) in
+ * the *in chat applications User Guide* .
  *
  * Example:
  *
@@ -102,14 +106,14 @@ public open class CfnSlackChannelConfiguration(
 
   /**
    * Links a list of resource ARNs (for example, custom action ARNs) to a Slack channel
-   * configuration for AWS Chatbot .
+   * configuration for  .
    */
   public open fun customizationResourceArns(): List<String> =
       unwrap(this).getCustomizationResourceArns() ?: emptyList()
 
   /**
    * Links a list of resource ARNs (for example, custom action ARNs) to a Slack channel
-   * configuration for AWS Chatbot .
+   * configuration for  .
    */
   public open fun customizationResourceArns(`value`: List<String>) {
     unwrap(this).setCustomizationResourceArns(`value`)
@@ -117,7 +121,7 @@ public open class CfnSlackChannelConfiguration(
 
   /**
    * Links a list of resource ARNs (for example, custom action ARNs) to a Slack channel
-   * configuration for AWS Chatbot .
+   * configuration for  .
    */
   public open fun customizationResourceArns(vararg `value`: String): Unit =
       customizationResourceArns(`value`.toList())
@@ -142,12 +146,12 @@ public open class CfnSlackChannelConfiguration(
       guardrailPolicies(`value`.toList())
 
   /**
-   * The ARN of the IAM role that defines the permissions for AWS Chatbot .
+   * The ARN of the IAM role that defines the permissions for  .
    */
   public open fun iamRoleArn(): String = unwrap(this).getIamRoleArn()
 
   /**
-   * The ARN of the IAM role that defines the permissions for AWS Chatbot .
+   * The ARN of the IAM role that defines the permissions for  .
    */
   public open fun iamRoleArn(`value`: String) {
     unwrap(this).setIamRoleArn(`value`)
@@ -191,31 +195,31 @@ public open class CfnSlackChannelConfiguration(
   }
 
   /**
-   * The ID of the Slack workspace authorized with AWS Chatbot .
+   * The ID of the Slack workspace authorized with  .
    */
   public open fun slackWorkspaceId(): String = unwrap(this).getSlackWorkspaceId()
 
   /**
-   * The ID of the Slack workspace authorized with AWS Chatbot .
+   * The ID of the Slack workspace authorized with  .
    */
   public open fun slackWorkspaceId(`value`: String) {
     unwrap(this).setSlackWorkspaceId(`value`)
   }
 
   /**
-   * The ARNs of the SNS topics that deliver notifications to AWS Chatbot .
+   * The ARNs of the SNS topics that deliver notifications to  .
    */
   public open fun snsTopicArns(): List<String> = unwrap(this).getSnsTopicArns() ?: emptyList()
 
   /**
-   * The ARNs of the SNS topics that deliver notifications to AWS Chatbot .
+   * The ARNs of the SNS topics that deliver notifications to  .
    */
   public open fun snsTopicArns(`value`: List<String>) {
     unwrap(this).setSnsTopicArns(`value`)
   }
 
   /**
-   * The ARNs of the SNS topics that deliver notifications to AWS Chatbot .
+   * The ARNs of the SNS topics that deliver notifications to  .
    */
   public open fun snsTopicArns(vararg `value`: String): Unit = snsTopicArns(`value`.toList())
 
@@ -270,21 +274,21 @@ public open class CfnSlackChannelConfiguration(
 
     /**
      * Links a list of resource ARNs (for example, custom action ARNs) to a Slack channel
-     * configuration for AWS Chatbot .
+     * configuration for  .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-customizationresourcearns)
      * @param customizationResourceArns Links a list of resource ARNs (for example, custom action
-     * ARNs) to a Slack channel configuration for AWS Chatbot . 
+     * ARNs) to a Slack channel configuration for  . 
      */
     public fun customizationResourceArns(customizationResourceArns: List<String>)
 
     /**
      * Links a list of resource ARNs (for example, custom action ARNs) to a Slack channel
-     * configuration for AWS Chatbot .
+     * configuration for  .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-customizationresourcearns)
      * @param customizationResourceArns Links a list of resource ARNs (for example, custom action
-     * ARNs) to a Slack channel configuration for AWS Chatbot . 
+     * ARNs) to a Slack channel configuration for  . 
      */
     public fun customizationResourceArns(vararg customizationResourceArns: String)
 
@@ -309,14 +313,14 @@ public open class CfnSlackChannelConfiguration(
     public fun guardrailPolicies(vararg guardrailPolicies: String)
 
     /**
-     * The ARN of the IAM role that defines the permissions for AWS Chatbot .
+     * The ARN of the IAM role that defines the permissions for  .
      *
-     * This is a user-defined role that AWS Chatbot will assume. This is not the service-linked
-     * role. For more information, see [IAM Policies for AWS
-     * Chatbot](https://docs.aws.amazon.com/chatbot/latest/adminguide/chatbot-iam-policies.html) .
+     * This is a user-defined role that  will assume. This is not the service-linked role. For more
+     * information, see [IAM Policies for  in chat
+     * applications](https://docs.aws.amazon.com/chatbot/latest/adminguide/chatbot-iam-policies.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-iamrolearn)
-     * @param iamRoleArn The ARN of the IAM role that defines the permissions for AWS Chatbot . 
+     * @param iamRoleArn The ARN of the IAM role that defines the permissions for  . 
      */
     public fun iamRoleArn(iamRoleArn: String)
 
@@ -346,32 +350,32 @@ public open class CfnSlackChannelConfiguration(
     public fun slackChannelId(slackChannelId: String)
 
     /**
-     * The ID of the Slack workspace authorized with AWS Chatbot .
+     * The ID of the Slack workspace authorized with  .
      *
-     * To get the workspace ID, you must perform the initial authorization flow with Slack in the
-     * AWS Chatbot console. Then you can copy and paste the workspace ID from the console. For more
-     * details, see steps 1-3 in [Tutorial: Get started with
-     * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/slack-setup.html) in the *AWS
-     * Chatbot User Guide* .
+     * To get the workspace ID, you must perform the initial authorization flow with Slack in the 
+     * in chat applications console. Then you can copy and paste the workspace ID from the console. For
+     * more details, see steps 1-3 in [Tutorial: Get started with
+     * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/slack-setup.html#slack-client-setup)
+     * in the *in chat applications User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-slackworkspaceid)
-     * @param slackWorkspaceId The ID of the Slack workspace authorized with AWS Chatbot . 
+     * @param slackWorkspaceId The ID of the Slack workspace authorized with  . 
      */
     public fun slackWorkspaceId(slackWorkspaceId: String)
 
     /**
-     * The ARNs of the SNS topics that deliver notifications to AWS Chatbot .
+     * The ARNs of the SNS topics that deliver notifications to  .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-snstopicarns)
-     * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to AWS Chatbot . 
+     * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to  . 
      */
     public fun snsTopicArns(snsTopicArns: List<String>)
 
     /**
-     * The ARNs of the SNS topics that deliver notifications to AWS Chatbot .
+     * The ARNs of the SNS topics that deliver notifications to  .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-snstopicarns)
-     * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to AWS Chatbot . 
+     * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to  . 
      */
     public fun snsTopicArns(vararg snsTopicArns: String)
 
@@ -433,11 +437,11 @@ public open class CfnSlackChannelConfiguration(
 
     /**
      * Links a list of resource ARNs (for example, custom action ARNs) to a Slack channel
-     * configuration for AWS Chatbot .
+     * configuration for  .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-customizationresourcearns)
      * @param customizationResourceArns Links a list of resource ARNs (for example, custom action
-     * ARNs) to a Slack channel configuration for AWS Chatbot . 
+     * ARNs) to a Slack channel configuration for  . 
      */
     override fun customizationResourceArns(customizationResourceArns: List<String>) {
       cdkBuilder.customizationResourceArns(customizationResourceArns)
@@ -445,11 +449,11 @@ public open class CfnSlackChannelConfiguration(
 
     /**
      * Links a list of resource ARNs (for example, custom action ARNs) to a Slack channel
-     * configuration for AWS Chatbot .
+     * configuration for  .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-customizationresourcearns)
      * @param customizationResourceArns Links a list of resource ARNs (for example, custom action
-     * ARNs) to a Slack channel configuration for AWS Chatbot . 
+     * ARNs) to a Slack channel configuration for  . 
      */
     override fun customizationResourceArns(vararg customizationResourceArns: String): Unit =
         customizationResourceArns(customizationResourceArns.toList())
@@ -478,14 +482,14 @@ public open class CfnSlackChannelConfiguration(
         guardrailPolicies(guardrailPolicies.toList())
 
     /**
-     * The ARN of the IAM role that defines the permissions for AWS Chatbot .
+     * The ARN of the IAM role that defines the permissions for  .
      *
-     * This is a user-defined role that AWS Chatbot will assume. This is not the service-linked
-     * role. For more information, see [IAM Policies for AWS
-     * Chatbot](https://docs.aws.amazon.com/chatbot/latest/adminguide/chatbot-iam-policies.html) .
+     * This is a user-defined role that  will assume. This is not the service-linked role. For more
+     * information, see [IAM Policies for  in chat
+     * applications](https://docs.aws.amazon.com/chatbot/latest/adminguide/chatbot-iam-policies.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-iamrolearn)
-     * @param iamRoleArn The ARN of the IAM role that defines the permissions for AWS Chatbot . 
+     * @param iamRoleArn The ARN of the IAM role that defines the permissions for  . 
      */
     override fun iamRoleArn(iamRoleArn: String) {
       cdkBuilder.iamRoleArn(iamRoleArn)
@@ -521,36 +525,36 @@ public open class CfnSlackChannelConfiguration(
     }
 
     /**
-     * The ID of the Slack workspace authorized with AWS Chatbot .
+     * The ID of the Slack workspace authorized with  .
      *
-     * To get the workspace ID, you must perform the initial authorization flow with Slack in the
-     * AWS Chatbot console. Then you can copy and paste the workspace ID from the console. For more
-     * details, see steps 1-3 in [Tutorial: Get started with
-     * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/slack-setup.html) in the *AWS
-     * Chatbot User Guide* .
+     * To get the workspace ID, you must perform the initial authorization flow with Slack in the 
+     * in chat applications console. Then you can copy and paste the workspace ID from the console. For
+     * more details, see steps 1-3 in [Tutorial: Get started with
+     * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/slack-setup.html#slack-client-setup)
+     * in the *in chat applications User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-slackworkspaceid)
-     * @param slackWorkspaceId The ID of the Slack workspace authorized with AWS Chatbot . 
+     * @param slackWorkspaceId The ID of the Slack workspace authorized with  . 
      */
     override fun slackWorkspaceId(slackWorkspaceId: String) {
       cdkBuilder.slackWorkspaceId(slackWorkspaceId)
     }
 
     /**
-     * The ARNs of the SNS topics that deliver notifications to AWS Chatbot .
+     * The ARNs of the SNS topics that deliver notifications to  .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-snstopicarns)
-     * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to AWS Chatbot . 
+     * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to  . 
      */
     override fun snsTopicArns(snsTopicArns: List<String>) {
       cdkBuilder.snsTopicArns(snsTopicArns)
     }
 
     /**
-     * The ARNs of the SNS topics that deliver notifications to AWS Chatbot .
+     * The ARNs of the SNS topics that deliver notifications to  .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-snstopicarns)
-     * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to AWS Chatbot . 
+     * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to  . 
      */
     override fun snsTopicArns(vararg snsTopicArns: String): Unit =
         snsTopicArns(snsTopicArns.toList())

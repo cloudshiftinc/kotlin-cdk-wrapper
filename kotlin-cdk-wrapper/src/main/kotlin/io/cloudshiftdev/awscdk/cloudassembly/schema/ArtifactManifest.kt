@@ -62,6 +62,12 @@ public interface ArtifactManifest {
     @JvmName("d46dae78e7b3afa168d770b9d51e110746b9cc92d5dde476a945f005261b5f64")
     public fun properties(properties: NestedCloudAssemblyProperties.Builder.() -> Unit)
 
+    public fun properties(properties: FeatureFlagReportProperties)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b4ec89534d8b9badc251f53363eae7762bef71e628057cf6ea1f02af3a17969c")
+    public fun properties(properties: FeatureFlagReportProperties.Builder.() -> Unit)
+
     public fun type(type: ArtifactType)
   }
 
@@ -123,6 +129,15 @@ public interface ArtifactManifest {
     @JvmName("d46dae78e7b3afa168d770b9d51e110746b9cc92d5dde476a945f005261b5f64")
     override fun properties(properties: NestedCloudAssemblyProperties.Builder.() -> Unit): Unit =
         properties(NestedCloudAssemblyProperties(properties))
+
+    override fun properties(properties: FeatureFlagReportProperties) {
+      cdkBuilder.properties(properties.let(FeatureFlagReportProperties.Companion::unwrap))
+    }
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b4ec89534d8b9badc251f53363eae7762bef71e628057cf6ea1f02af3a17969c")
+    override fun properties(properties: FeatureFlagReportProperties.Builder.() -> Unit): Unit =
+        properties(FeatureFlagReportProperties(properties))
 
     override fun type(type: ArtifactType) {
       cdkBuilder.type(type.let(ArtifactType.Companion::unwrap))

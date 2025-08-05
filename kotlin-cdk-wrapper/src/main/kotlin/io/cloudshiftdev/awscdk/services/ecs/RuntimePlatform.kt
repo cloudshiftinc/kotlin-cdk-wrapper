@@ -13,20 +13,20 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * // Create a Task Definition for the Windows container to start
- * FargateTaskDefinition taskDefinition = FargateTaskDefinition.Builder.create(this, "TaskDef")
- * .runtimePlatform(RuntimePlatform.builder()
- * .operatingSystemFamily(OperatingSystemFamily.WINDOWS_SERVER_2019_CORE)
- * .cpuArchitecture(CpuArchitecture.X86_64)
+ * Cluster cluster;
+ * ApplicationLoadBalancedFargateService applicationLoadBalancedFargateService =
+ * ApplicationLoadBalancedFargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(512)
+ * .taskImageOptions(ApplicationLoadBalancedTaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
  * .build())
- * .cpu(1024)
- * .memoryLimitMiB(2048)
+ * .minHealthyPercent(100)
+ * .runtimePlatform(RuntimePlatform.builder()
+ * .cpuArchitecture(CpuArchitecture.ARM64)
+ * .operatingSystemFamily(OperatingSystemFamily.LINUX)
+ * .build())
  * .build();
- * taskDefinition.addContainer("windowsservercore", ContainerDefinitionOptions.builder()
- * .logging(LogDriver.awsLogs(AwsLogDriverProps.builder().streamPrefix("win-iis-on-fargate").build()))
- * .portMappings(List.of(PortMapping.builder().containerPort(80).build()))
- * .image(ContainerImage.fromRegistry("mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2019"))
- * .build());
  * ```
  */
 public interface RuntimePlatform {

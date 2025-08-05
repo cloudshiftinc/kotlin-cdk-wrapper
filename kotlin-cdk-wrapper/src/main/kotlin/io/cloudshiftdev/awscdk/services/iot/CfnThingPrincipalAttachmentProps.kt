@@ -21,6 +21,8 @@ import kotlin.Unit
  * CfnThingPrincipalAttachmentProps.builder()
  * .principal("principal")
  * .thingName("thingName")
+ * // the properties below are optional
+ * .thingPrincipalType("thingPrincipalType")
  * .build();
  * ```
  *
@@ -43,6 +45,11 @@ public interface CfnThingPrincipalAttachmentProps {
   public fun thingName(): String
 
   /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingprincipalattachment.html#cfn-iot-thingprincipalattachment-thingprincipaltype)
+   */
+  public fun thingPrincipalType(): String? = unwrap(this).getThingPrincipalType()
+
+  /**
    * A builder for [CfnThingPrincipalAttachmentProps]
    */
   @CdkDslMarker
@@ -57,6 +64,11 @@ public interface CfnThingPrincipalAttachmentProps {
      * @param thingName The name of the AWS IoT thing. 
      */
     public fun thingName(thingName: String)
+
+    /**
+     * @param thingPrincipalType the value to be set.
+     */
+    public fun thingPrincipalType(thingPrincipalType: String)
   }
 
   private class BuilderImpl : Builder {
@@ -77,6 +89,13 @@ public interface CfnThingPrincipalAttachmentProps {
      */
     override fun thingName(thingName: String) {
       cdkBuilder.thingName(thingName)
+    }
+
+    /**
+     * @param thingPrincipalType the value to be set.
+     */
+    override fun thingPrincipalType(thingPrincipalType: String) {
+      cdkBuilder.thingPrincipalType(thingPrincipalType)
     }
 
     public fun build(): software.amazon.awscdk.services.iot.CfnThingPrincipalAttachmentProps =
@@ -101,6 +120,11 @@ public interface CfnThingPrincipalAttachmentProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingprincipalattachment.html#cfn-iot-thingprincipalattachment-thingname)
      */
     override fun thingName(): String = unwrap(this).getThingName()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingprincipalattachment.html#cfn-iot-thingprincipalattachment-thingprincipaltype)
+     */
+    override fun thingPrincipalType(): String? = unwrap(this).getThingPrincipalType()
   }
 
   public companion object {

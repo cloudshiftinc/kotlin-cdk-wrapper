@@ -419,6 +419,9 @@ public open class Repository(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.ecr.Repository.PROPERTY_INJECTION_ID
+
     public fun arnForLocalRepository(repositoryName: String, scope: IConstruct): String =
         software.amazon.awscdk.services.ecr.Repository.arnForLocalRepository(repositoryName,
         scope.let(IConstruct.Companion::unwrap))
@@ -429,6 +432,22 @@ public open class Repository(
       account: String,
     ): String = software.amazon.awscdk.services.ecr.Repository.arnForLocalRepository(repositoryName,
         scope.let(IConstruct.Companion::unwrap), account)
+
+    public fun fromLookup(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      options: RepositoryLookupOptions,
+    ): IRepository =
+        software.amazon.awscdk.services.ecr.Repository.fromLookup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, options.let(RepositoryLookupOptions.Companion::unwrap)).let(IRepository::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3d69c7a6d275c3662d869dfd7d7b2d743293705eded6aa02f3d9c37aef7c648a")
+    public fun fromLookup(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      options: RepositoryLookupOptions.Builder.() -> Unit,
+    ): IRepository = fromLookup(scope, id, RepositoryLookupOptions(options))
 
     public fun fromRepositoryArn(
       scope: CloudshiftdevConstructsConstruct,

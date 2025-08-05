@@ -54,39 +54,37 @@ import kotlin.jvm.JvmName
  */
 public interface CfnFHIRDatastoreProps {
   /**
-   * The user generated name for the data store.
+   * The data store name (user-generated).
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-datastorename)
    */
   public fun datastoreName(): String? = unwrap(this).getDatastoreName()
 
   /**
-   * The FHIR version of the data store.
+   * The FHIR release version supported by the data store.
    *
-   * The only supported version is R4.
+   * Current support is for version `R4` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-datastoretypeversion)
    */
   public fun datastoreTypeVersion(): String
 
   /**
-   * The identity provider configuration that you gave when the data store was created.
+   * The identity provider configuration selected when the data store was created.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration)
    */
   public fun identityProviderConfiguration(): Any? = unwrap(this).getIdentityProviderConfiguration()
 
   /**
-   * The preloaded data configuration for the data store.
-   *
-   * Only data preloaded from Synthea is supported.
+   * The preloaded Synthea data configuration for the data store.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-preloaddataconfig)
    */
   public fun preloadDataConfig(): Any? = unwrap(this).getPreloadDataConfig()
 
   /**
-   * The server-side encryption key configuration for a customer provided encryption key specified
+   * The server-side encryption key configuration for a customer-provided encryption key specified
    * for creating a data store.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-sseconfiguration)
@@ -110,32 +108,32 @@ public interface CfnFHIRDatastoreProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param datastoreName The user generated name for the data store.
+     * @param datastoreName The data store name (user-generated).
      */
     public fun datastoreName(datastoreName: String)
 
     /**
-     * @param datastoreTypeVersion The FHIR version of the data store. 
-     * The only supported version is R4.
+     * @param datastoreTypeVersion The FHIR release version supported by the data store. 
+     * Current support is for version `R4` .
      */
     public fun datastoreTypeVersion(datastoreTypeVersion: String)
 
     /**
-     * @param identityProviderConfiguration The identity provider configuration that you gave when
-     * the data store was created.
+     * @param identityProviderConfiguration The identity provider configuration selected when the
+     * data store was created.
      */
     public fun identityProviderConfiguration(identityProviderConfiguration: IResolvable)
 
     /**
-     * @param identityProviderConfiguration The identity provider configuration that you gave when
-     * the data store was created.
+     * @param identityProviderConfiguration The identity provider configuration selected when the
+     * data store was created.
      */
     public
         fun identityProviderConfiguration(identityProviderConfiguration: CfnFHIRDatastore.IdentityProviderConfigurationProperty)
 
     /**
-     * @param identityProviderConfiguration The identity provider configuration that you gave when
-     * the data store was created.
+     * @param identityProviderConfiguration The identity provider configuration selected when the
+     * data store was created.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("45755fdf68254141e2b75c6c8cccefe78b8ed2d1f3426f0340d49596a8a3754e")
@@ -143,20 +141,17 @@ public interface CfnFHIRDatastoreProps {
         fun identityProviderConfiguration(identityProviderConfiguration: CfnFHIRDatastore.IdentityProviderConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * @param preloadDataConfig The preloaded data configuration for the data store.
-     * Only data preloaded from Synthea is supported.
+     * @param preloadDataConfig The preloaded Synthea data configuration for the data store.
      */
     public fun preloadDataConfig(preloadDataConfig: IResolvable)
 
     /**
-     * @param preloadDataConfig The preloaded data configuration for the data store.
-     * Only data preloaded from Synthea is supported.
+     * @param preloadDataConfig The preloaded Synthea data configuration for the data store.
      */
     public fun preloadDataConfig(preloadDataConfig: CfnFHIRDatastore.PreloadDataConfigProperty)
 
     /**
-     * @param preloadDataConfig The preloaded data configuration for the data store.
-     * Only data preloaded from Synthea is supported.
+     * @param preloadDataConfig The preloaded Synthea data configuration for the data store.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a132be8301b86ccda20d3511b8b35da5cd9714d6d6004087e3050216cdb2299c")
@@ -164,19 +159,19 @@ public interface CfnFHIRDatastoreProps {
         fun preloadDataConfig(preloadDataConfig: CfnFHIRDatastore.PreloadDataConfigProperty.Builder.() -> Unit)
 
     /**
-     * @param sseConfiguration The server-side encryption key configuration for a customer provided
+     * @param sseConfiguration The server-side encryption key configuration for a customer-provided
      * encryption key specified for creating a data store.
      */
     public fun sseConfiguration(sseConfiguration: IResolvable)
 
     /**
-     * @param sseConfiguration The server-side encryption key configuration for a customer provided
+     * @param sseConfiguration The server-side encryption key configuration for a customer-provided
      * encryption key specified for creating a data store.
      */
     public fun sseConfiguration(sseConfiguration: CfnFHIRDatastore.SseConfigurationProperty)
 
     /**
-     * @param sseConfiguration The server-side encryption key configuration for a customer provided
+     * @param sseConfiguration The server-side encryption key configuration for a customer-provided
      * encryption key specified for creating a data store.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -206,31 +201,31 @@ public interface CfnFHIRDatastoreProps {
         = software.amazon.awscdk.services.healthlake.CfnFHIRDatastoreProps.builder()
 
     /**
-     * @param datastoreName The user generated name for the data store.
+     * @param datastoreName The data store name (user-generated).
      */
     override fun datastoreName(datastoreName: String) {
       cdkBuilder.datastoreName(datastoreName)
     }
 
     /**
-     * @param datastoreTypeVersion The FHIR version of the data store. 
-     * The only supported version is R4.
+     * @param datastoreTypeVersion The FHIR release version supported by the data store. 
+     * Current support is for version `R4` .
      */
     override fun datastoreTypeVersion(datastoreTypeVersion: String) {
       cdkBuilder.datastoreTypeVersion(datastoreTypeVersion)
     }
 
     /**
-     * @param identityProviderConfiguration The identity provider configuration that you gave when
-     * the data store was created.
+     * @param identityProviderConfiguration The identity provider configuration selected when the
+     * data store was created.
      */
     override fun identityProviderConfiguration(identityProviderConfiguration: IResolvable) {
       cdkBuilder.identityProviderConfiguration(identityProviderConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param identityProviderConfiguration The identity provider configuration that you gave when
-     * the data store was created.
+     * @param identityProviderConfiguration The identity provider configuration selected when the
+     * data store was created.
      */
     override
         fun identityProviderConfiguration(identityProviderConfiguration: CfnFHIRDatastore.IdentityProviderConfigurationProperty) {
@@ -238,8 +233,8 @@ public interface CfnFHIRDatastoreProps {
     }
 
     /**
-     * @param identityProviderConfiguration The identity provider configuration that you gave when
-     * the data store was created.
+     * @param identityProviderConfiguration The identity provider configuration selected when the
+     * data store was created.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("45755fdf68254141e2b75c6c8cccefe78b8ed2d1f3426f0340d49596a8a3754e")
@@ -249,24 +244,21 @@ public interface CfnFHIRDatastoreProps {
         identityProviderConfiguration(CfnFHIRDatastore.IdentityProviderConfigurationProperty(identityProviderConfiguration))
 
     /**
-     * @param preloadDataConfig The preloaded data configuration for the data store.
-     * Only data preloaded from Synthea is supported.
+     * @param preloadDataConfig The preloaded Synthea data configuration for the data store.
      */
     override fun preloadDataConfig(preloadDataConfig: IResolvable) {
       cdkBuilder.preloadDataConfig(preloadDataConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param preloadDataConfig The preloaded data configuration for the data store.
-     * Only data preloaded from Synthea is supported.
+     * @param preloadDataConfig The preloaded Synthea data configuration for the data store.
      */
     override fun preloadDataConfig(preloadDataConfig: CfnFHIRDatastore.PreloadDataConfigProperty) {
       cdkBuilder.preloadDataConfig(preloadDataConfig.let(CfnFHIRDatastore.PreloadDataConfigProperty.Companion::unwrap))
     }
 
     /**
-     * @param preloadDataConfig The preloaded data configuration for the data store.
-     * Only data preloaded from Synthea is supported.
+     * @param preloadDataConfig The preloaded Synthea data configuration for the data store.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a132be8301b86ccda20d3511b8b35da5cd9714d6d6004087e3050216cdb2299c")
@@ -275,7 +267,7 @@ public interface CfnFHIRDatastoreProps {
         Unit = preloadDataConfig(CfnFHIRDatastore.PreloadDataConfigProperty(preloadDataConfig))
 
     /**
-     * @param sseConfiguration The server-side encryption key configuration for a customer provided
+     * @param sseConfiguration The server-side encryption key configuration for a customer-provided
      * encryption key specified for creating a data store.
      */
     override fun sseConfiguration(sseConfiguration: IResolvable) {
@@ -283,7 +275,7 @@ public interface CfnFHIRDatastoreProps {
     }
 
     /**
-     * @param sseConfiguration The server-side encryption key configuration for a customer provided
+     * @param sseConfiguration The server-side encryption key configuration for a customer-provided
      * encryption key specified for creating a data store.
      */
     override fun sseConfiguration(sseConfiguration: CfnFHIRDatastore.SseConfigurationProperty) {
@@ -291,7 +283,7 @@ public interface CfnFHIRDatastoreProps {
     }
 
     /**
-     * @param sseConfiguration The server-side encryption key configuration for a customer provided
+     * @param sseConfiguration The server-side encryption key configuration for a customer-provided
      * encryption key specified for creating a data store.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -327,23 +319,23 @@ public interface CfnFHIRDatastoreProps {
   ) : CdkObject(cdkObject),
       CfnFHIRDatastoreProps {
     /**
-     * The user generated name for the data store.
+     * The data store name (user-generated).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-datastorename)
      */
     override fun datastoreName(): String? = unwrap(this).getDatastoreName()
 
     /**
-     * The FHIR version of the data store.
+     * The FHIR release version supported by the data store.
      *
-     * The only supported version is R4.
+     * Current support is for version `R4` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-datastoretypeversion)
      */
     override fun datastoreTypeVersion(): String = unwrap(this).getDatastoreTypeVersion()
 
     /**
-     * The identity provider configuration that you gave when the data store was created.
+     * The identity provider configuration selected when the data store was created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-identityproviderconfiguration)
      */
@@ -351,16 +343,14 @@ public interface CfnFHIRDatastoreProps {
         unwrap(this).getIdentityProviderConfiguration()
 
     /**
-     * The preloaded data configuration for the data store.
-     *
-     * Only data preloaded from Synthea is supported.
+     * The preloaded Synthea data configuration for the data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-preloaddataconfig)
      */
     override fun preloadDataConfig(): Any? = unwrap(this).getPreloadDataConfig()
 
     /**
-     * The server-side encryption key configuration for a customer provided encryption key specified
+     * The server-side encryption key configuration for a customer-provided encryption key specified
      * for creating a data store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html#cfn-healthlake-fhirdatastore-sseconfiguration)

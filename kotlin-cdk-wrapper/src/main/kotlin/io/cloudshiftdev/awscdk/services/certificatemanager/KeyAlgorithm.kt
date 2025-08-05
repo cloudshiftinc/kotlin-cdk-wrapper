@@ -45,8 +45,20 @@ public open class KeyAlgorithm(
     public val EC_SECP384_R1: KeyAlgorithm =
         KeyAlgorithm.wrap(software.amazon.awscdk.services.certificatemanager.KeyAlgorithm.EC_SECP384_R1)
 
+    public val EC_SECP521_R1: KeyAlgorithm =
+        KeyAlgorithm.wrap(software.amazon.awscdk.services.certificatemanager.KeyAlgorithm.EC_SECP521_R1)
+
+    public val RSA_1024: KeyAlgorithm =
+        KeyAlgorithm.wrap(software.amazon.awscdk.services.certificatemanager.KeyAlgorithm.RSA_1024)
+
     public val RSA_2048: KeyAlgorithm =
         KeyAlgorithm.wrap(software.amazon.awscdk.services.certificatemanager.KeyAlgorithm.RSA_2048)
+
+    public val RSA_3072: KeyAlgorithm =
+        KeyAlgorithm.wrap(software.amazon.awscdk.services.certificatemanager.KeyAlgorithm.RSA_3072)
+
+    public val RSA_4096: KeyAlgorithm =
+        KeyAlgorithm.wrap(software.amazon.awscdk.services.certificatemanager.KeyAlgorithm.RSA_4096)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.certificatemanager.KeyAlgorithm):
         KeyAlgorithm = KeyAlgorithm(cdkObject)

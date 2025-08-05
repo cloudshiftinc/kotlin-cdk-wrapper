@@ -37,27 +37,53 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.ec2.*;
  * CfnVerifiedAccessEndpoint cfnVerifiedAccessEndpoint =
  * CfnVerifiedAccessEndpoint.Builder.create(this, "MyCfnVerifiedAccessEndpoint")
- * .applicationDomain("applicationDomain")
  * .attachmentType("attachmentType")
- * .domainCertificateArn("domainCertificateArn")
- * .endpointDomainPrefix("endpointDomainPrefix")
  * .endpointType("endpointType")
  * .verifiedAccessGroupId("verifiedAccessGroupId")
  * // the properties below are optional
+ * .applicationDomain("applicationDomain")
+ * .cidrOptions(CidrOptionsProperty.builder()
+ * .cidr("cidr")
+ * .portRanges(List.of(PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
+ * .protocol("protocol")
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
  * .description("description")
+ * .domainCertificateArn("domainCertificateArn")
+ * .endpointDomainPrefix("endpointDomainPrefix")
  * .loadBalancerOptions(LoadBalancerOptionsProperty.builder()
  * .loadBalancerArn("loadBalancerArn")
  * .port(123)
+ * .portRanges(List.of(PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
  * .protocol("protocol")
  * .subnetIds(List.of("subnetIds"))
  * .build())
  * .networkInterfaceOptions(NetworkInterfaceOptionsProperty.builder()
  * .networkInterfaceId("networkInterfaceId")
  * .port(123)
+ * .portRanges(List.of(PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
  * .protocol("protocol")
  * .build())
  * .policyDocument("policyDocument")
  * .policyEnabled(false)
+ * .rdsOptions(RdsOptionsProperty.builder()
+ * .port(123)
+ * .protocol("protocol")
+ * .rdsDbClusterArn("rdsDbClusterArn")
+ * .rdsDbInstanceArn("rdsDbInstanceArn")
+ * .rdsDbProxyArn("rdsDbProxyArn")
+ * .rdsEndpoint("rdsEndpoint")
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
  * .securityGroupIds(List.of("securityGroupIds"))
  * .sseSpecification(SseSpecificationProperty.builder()
  * .customerManagedKeyEnabled(false)
@@ -96,7 +122,7 @@ public open class CfnVerifiedAccessEndpoint(
   /**
    * The DNS name for users to reach your application.
    */
-  public open fun applicationDomain(): String = unwrap(this).getApplicationDomain()
+  public open fun applicationDomain(): String? = unwrap(this).getApplicationDomain()
 
   /**
    * The DNS name for users to reach your application.
@@ -158,6 +184,33 @@ public open class CfnVerifiedAccessEndpoint(
       unwrap(this).getAttrVerifiedAccessInstanceId()
 
   /**
+   * The options for a CIDR endpoint.
+   */
+  public open fun cidrOptions(): Any? = unwrap(this).getCidrOptions()
+
+  /**
+   * The options for a CIDR endpoint.
+   */
+  public open fun cidrOptions(`value`: IResolvable) {
+    unwrap(this).setCidrOptions(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The options for a CIDR endpoint.
+   */
+  public open fun cidrOptions(`value`: CidrOptionsProperty) {
+    unwrap(this).setCidrOptions(`value`.let(CidrOptionsProperty.Companion::unwrap))
+  }
+
+  /**
+   * The options for a CIDR endpoint.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("684d50215163ce0273673946b71431cb435279310132017f0884d5958fd6638d")
+  public open fun cidrOptions(`value`: CidrOptionsProperty.Builder.() -> Unit): Unit =
+      cidrOptions(CidrOptionsProperty(`value`))
+
+  /**
    * A description for the AWS Verified Access endpoint.
    */
   public open fun description(): String? = unwrap(this).getDescription()
@@ -172,7 +225,7 @@ public open class CfnVerifiedAccessEndpoint(
   /**
    * The ARN of a public TLS/SSL certificate imported into or created with ACM.
    */
-  public open fun domainCertificateArn(): String = unwrap(this).getDomainCertificateArn()
+  public open fun domainCertificateArn(): String? = unwrap(this).getDomainCertificateArn()
 
   /**
    * The ARN of a public TLS/SSL certificate imported into or created with ACM.
@@ -184,7 +237,7 @@ public open class CfnVerifiedAccessEndpoint(
   /**
    * A custom identifier that is prepended to the DNS name that is generated for the endpoint.
    */
-  public open fun endpointDomainPrefix(): String = unwrap(this).getEndpointDomainPrefix()
+  public open fun endpointDomainPrefix(): String? = unwrap(this).getEndpointDomainPrefix()
 
   /**
    * A custom identifier that is prepended to the DNS name that is generated for the endpoint.
@@ -301,6 +354,33 @@ public open class CfnVerifiedAccessEndpoint(
   }
 
   /**
+   * The options for an RDS endpoint.
+   */
+  public open fun rdsOptions(): Any? = unwrap(this).getRdsOptions()
+
+  /**
+   * The options for an RDS endpoint.
+   */
+  public open fun rdsOptions(`value`: IResolvable) {
+    unwrap(this).setRdsOptions(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The options for an RDS endpoint.
+   */
+  public open fun rdsOptions(`value`: RdsOptionsProperty) {
+    unwrap(this).setRdsOptions(`value`.let(RdsOptionsProperty.Companion::unwrap))
+  }
+
+  /**
+   * The options for an RDS endpoint.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("c657a1de91e3492dc494bb28eeb9a14efa230aa35c53be5ef8b34d8a2a56a0b9")
+  public open fun rdsOptions(`value`: RdsOptionsProperty.Builder.() -> Unit): Unit =
+      rdsOptions(RdsOptionsProperty(`value`))
+
+  /**
    * The IDs of the security groups for the endpoint.
    */
   public open fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
@@ -403,6 +483,32 @@ public open class CfnVerifiedAccessEndpoint(
      * Verified Access endpoint and the application. 
      */
     public fun attachmentType(attachmentType: String)
+
+    /**
+     * The options for a CIDR endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-cidroptions)
+     * @param cidrOptions The options for a CIDR endpoint. 
+     */
+    public fun cidrOptions(cidrOptions: IResolvable)
+
+    /**
+     * The options for a CIDR endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-cidroptions)
+     * @param cidrOptions The options for a CIDR endpoint. 
+     */
+    public fun cidrOptions(cidrOptions: CidrOptionsProperty)
+
+    /**
+     * The options for a CIDR endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-cidroptions)
+     * @param cidrOptions The options for a CIDR endpoint. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1bb1657a3f7c3e82d692ed16836c54fad47a2a984688b70a288a780c73da654e")
+    public fun cidrOptions(cidrOptions: CidrOptionsProperty.Builder.() -> Unit)
 
     /**
      * A description for the AWS Verified Access endpoint.
@@ -526,6 +632,32 @@ public open class CfnVerifiedAccessEndpoint(
     public fun policyEnabled(policyEnabled: IResolvable)
 
     /**
+     * The options for an RDS endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-rdsoptions)
+     * @param rdsOptions The options for an RDS endpoint. 
+     */
+    public fun rdsOptions(rdsOptions: IResolvable)
+
+    /**
+     * The options for an RDS endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-rdsoptions)
+     * @param rdsOptions The options for an RDS endpoint. 
+     */
+    public fun rdsOptions(rdsOptions: RdsOptionsProperty)
+
+    /**
+     * The options for an RDS endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-rdsoptions)
+     * @param rdsOptions The options for an RDS endpoint. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c2ca48339b597bb5f05b239ef981f8e5dfc8a595038d95ebc4a6e54894f263c9")
+    public fun rdsOptions(rdsOptions: RdsOptionsProperty.Builder.() -> Unit)
+
+    /**
      * The IDs of the security groups for the endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-securitygroupids)
@@ -620,6 +752,37 @@ public open class CfnVerifiedAccessEndpoint(
     override fun attachmentType(attachmentType: String) {
       cdkBuilder.attachmentType(attachmentType)
     }
+
+    /**
+     * The options for a CIDR endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-cidroptions)
+     * @param cidrOptions The options for a CIDR endpoint. 
+     */
+    override fun cidrOptions(cidrOptions: IResolvable) {
+      cdkBuilder.cidrOptions(cidrOptions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The options for a CIDR endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-cidroptions)
+     * @param cidrOptions The options for a CIDR endpoint. 
+     */
+    override fun cidrOptions(cidrOptions: CidrOptionsProperty) {
+      cdkBuilder.cidrOptions(cidrOptions.let(CidrOptionsProperty.Companion::unwrap))
+    }
+
+    /**
+     * The options for a CIDR endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-cidroptions)
+     * @param cidrOptions The options for a CIDR endpoint. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1bb1657a3f7c3e82d692ed16836c54fad47a2a984688b70a288a780c73da654e")
+    override fun cidrOptions(cidrOptions: CidrOptionsProperty.Builder.() -> Unit): Unit =
+        cidrOptions(CidrOptionsProperty(cidrOptions))
 
     /**
      * A description for the AWS Verified Access endpoint.
@@ -767,6 +930,37 @@ public open class CfnVerifiedAccessEndpoint(
     }
 
     /**
+     * The options for an RDS endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-rdsoptions)
+     * @param rdsOptions The options for an RDS endpoint. 
+     */
+    override fun rdsOptions(rdsOptions: IResolvable) {
+      cdkBuilder.rdsOptions(rdsOptions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The options for an RDS endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-rdsoptions)
+     * @param rdsOptions The options for an RDS endpoint. 
+     */
+    override fun rdsOptions(rdsOptions: RdsOptionsProperty) {
+      cdkBuilder.rdsOptions(rdsOptions.let(RdsOptionsProperty.Companion::unwrap))
+    }
+
+    /**
+     * The options for an RDS endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-rdsoptions)
+     * @param rdsOptions The options for an RDS endpoint. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c2ca48339b597bb5f05b239ef981f8e5dfc8a595038d95ebc4a6e54894f263c9")
+    override fun rdsOptions(rdsOptions: RdsOptionsProperty.Builder.() -> Unit): Unit =
+        rdsOptions(RdsOptionsProperty(rdsOptions))
+
+    /**
      * The IDs of the security groups for the endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-securitygroupids)
@@ -870,6 +1064,205 @@ public open class CfnVerifiedAccessEndpoint(
   }
 
   /**
+   * Describes the CIDR options for a Verified Access endpoint.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * CidrOptionsProperty cidrOptionsProperty = CidrOptionsProperty.builder()
+   * .cidr("cidr")
+   * .portRanges(List.of(PortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
+   * .build()))
+   * .protocol("protocol")
+   * .subnetIds(List.of("subnetIds"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-cidroptions.html)
+   */
+  public interface CidrOptionsProperty {
+    /**
+     * The CIDR.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-cidroptions.html#cfn-ec2-verifiedaccessendpoint-cidroptions-cidr)
+     */
+    public fun cidr(): String? = unwrap(this).getCidr()
+
+    /**
+     * The port ranges.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-cidroptions.html#cfn-ec2-verifiedaccessendpoint-cidroptions-portranges)
+     */
+    public fun portRanges(): Any? = unwrap(this).getPortRanges()
+
+    /**
+     * The protocol.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-cidroptions.html#cfn-ec2-verifiedaccessendpoint-cidroptions-protocol)
+     */
+    public fun protocol(): String? = unwrap(this).getProtocol()
+
+    /**
+     * The IDs of the subnets.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-cidroptions.html#cfn-ec2-verifiedaccessendpoint-cidroptions-subnetids)
+     */
+    public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+
+    /**
+     * A builder for [CidrOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cidr The CIDR.
+       */
+      public fun cidr(cidr: String)
+
+      /**
+       * @param portRanges The port ranges.
+       */
+      public fun portRanges(portRanges: IResolvable)
+
+      /**
+       * @param portRanges The port ranges.
+       */
+      public fun portRanges(portRanges: List<Any>)
+
+      /**
+       * @param portRanges The port ranges.
+       */
+      public fun portRanges(vararg portRanges: Any)
+
+      /**
+       * @param protocol The protocol.
+       */
+      public fun protocol(protocol: String)
+
+      /**
+       * @param subnetIds The IDs of the subnets.
+       */
+      public fun subnetIds(subnetIds: List<String>)
+
+      /**
+       * @param subnetIds The IDs of the subnets.
+       */
+      public fun subnetIds(vararg subnetIds: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.CidrOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.CidrOptionsProperty.builder()
+
+      /**
+       * @param cidr The CIDR.
+       */
+      override fun cidr(cidr: String) {
+        cdkBuilder.cidr(cidr)
+      }
+
+      /**
+       * @param portRanges The port ranges.
+       */
+      override fun portRanges(portRanges: IResolvable) {
+        cdkBuilder.portRanges(portRanges.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param portRanges The port ranges.
+       */
+      override fun portRanges(portRanges: List<Any>) {
+        cdkBuilder.portRanges(portRanges.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param portRanges The port ranges.
+       */
+      override fun portRanges(vararg portRanges: Any): Unit = portRanges(portRanges.toList())
+
+      /**
+       * @param protocol The protocol.
+       */
+      override fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+      }
+
+      /**
+       * @param subnetIds The IDs of the subnets.
+       */
+      override fun subnetIds(subnetIds: List<String>) {
+        cdkBuilder.subnetIds(subnetIds)
+      }
+
+      /**
+       * @param subnetIds The IDs of the subnets.
+       */
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.CidrOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.CidrOptionsProperty,
+    ) : CdkObject(cdkObject),
+        CidrOptionsProperty {
+      /**
+       * The CIDR.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-cidroptions.html#cfn-ec2-verifiedaccessendpoint-cidroptions-cidr)
+       */
+      override fun cidr(): String? = unwrap(this).getCidr()
+
+      /**
+       * The port ranges.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-cidroptions.html#cfn-ec2-verifiedaccessendpoint-cidroptions-portranges)
+       */
+      override fun portRanges(): Any? = unwrap(this).getPortRanges()
+
+      /**
+       * The protocol.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-cidroptions.html#cfn-ec2-verifiedaccessendpoint-cidroptions-protocol)
+       */
+      override fun protocol(): String? = unwrap(this).getProtocol()
+
+      /**
+       * The IDs of the subnets.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-cidroptions.html#cfn-ec2-verifiedaccessendpoint-cidroptions-subnetids)
+       */
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CidrOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.CidrOptionsProperty):
+          CidrOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? CidrOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CidrOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.CidrOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.CidrOptionsProperty
+    }
+  }
+
+  /**
    * Describes the load balancer options when creating an AWS Verified Access endpoint using the
    * `load-balancer` type.
    *
@@ -882,6 +1275,10 @@ public open class CfnVerifiedAccessEndpoint(
    * LoadBalancerOptionsProperty loadBalancerOptionsProperty = LoadBalancerOptionsProperty.builder()
    * .loadBalancerArn("loadBalancerArn")
    * .port(123)
+   * .portRanges(List.of(PortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
+   * .build()))
    * .protocol("protocol")
    * .subnetIds(List.of("subnetIds"))
    * .build();
@@ -905,6 +1302,13 @@ public open class CfnVerifiedAccessEndpoint(
     public fun port(): Number? = unwrap(this).getPort()
 
     /**
+     * The port ranges.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-portranges)
+     */
+    public fun portRanges(): Any? = unwrap(this).getPortRanges()
+
+    /**
      * The IP protocol.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-protocol)
@@ -913,6 +1317,8 @@ public open class CfnVerifiedAccessEndpoint(
 
     /**
      * The IDs of the subnets.
+     *
+     * You can specify only one subnet per Availability Zone.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-subnetids)
      */
@@ -934,17 +1340,34 @@ public open class CfnVerifiedAccessEndpoint(
       public fun port(port: Number)
 
       /**
+       * @param portRanges The port ranges.
+       */
+      public fun portRanges(portRanges: IResolvable)
+
+      /**
+       * @param portRanges The port ranges.
+       */
+      public fun portRanges(portRanges: List<Any>)
+
+      /**
+       * @param portRanges The port ranges.
+       */
+      public fun portRanges(vararg portRanges: Any)
+
+      /**
        * @param protocol The IP protocol.
        */
       public fun protocol(protocol: String)
 
       /**
        * @param subnetIds The IDs of the subnets.
+       * You can specify only one subnet per Availability Zone.
        */
       public fun subnetIds(subnetIds: List<String>)
 
       /**
        * @param subnetIds The IDs of the subnets.
+       * You can specify only one subnet per Availability Zone.
        */
       public fun subnetIds(vararg subnetIds: String)
     }
@@ -970,6 +1393,25 @@ public open class CfnVerifiedAccessEndpoint(
       }
 
       /**
+       * @param portRanges The port ranges.
+       */
+      override fun portRanges(portRanges: IResolvable) {
+        cdkBuilder.portRanges(portRanges.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param portRanges The port ranges.
+       */
+      override fun portRanges(portRanges: List<Any>) {
+        cdkBuilder.portRanges(portRanges.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param portRanges The port ranges.
+       */
+      override fun portRanges(vararg portRanges: Any): Unit = portRanges(portRanges.toList())
+
+      /**
        * @param protocol The IP protocol.
        */
       override fun protocol(protocol: String) {
@@ -978,6 +1420,7 @@ public open class CfnVerifiedAccessEndpoint(
 
       /**
        * @param subnetIds The IDs of the subnets.
+       * You can specify only one subnet per Availability Zone.
        */
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
@@ -985,6 +1428,7 @@ public open class CfnVerifiedAccessEndpoint(
 
       /**
        * @param subnetIds The IDs of the subnets.
+       * You can specify only one subnet per Availability Zone.
        */
       override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
@@ -1012,6 +1456,13 @@ public open class CfnVerifiedAccessEndpoint(
       override fun port(): Number? = unwrap(this).getPort()
 
       /**
+       * The port ranges.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-portranges)
+       */
+      override fun portRanges(): Any? = unwrap(this).getPortRanges()
+
+      /**
        * The IP protocol.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-protocol)
@@ -1020,6 +1471,8 @@ public open class CfnVerifiedAccessEndpoint(
 
       /**
        * The IDs of the subnets.
+       *
+       * You can specify only one subnet per Availability Zone.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html#cfn-ec2-verifiedaccessendpoint-loadbalanceroptions-subnetids)
        */
@@ -1058,6 +1511,10 @@ public open class CfnVerifiedAccessEndpoint(
    * NetworkInterfaceOptionsProperty.builder()
    * .networkInterfaceId("networkInterfaceId")
    * .port(123)
+   * .portRanges(List.of(PortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
+   * .build()))
    * .protocol("protocol")
    * .build();
    * ```
@@ -1080,6 +1537,13 @@ public open class CfnVerifiedAccessEndpoint(
     public fun port(): Number? = unwrap(this).getPort()
 
     /**
+     * The port ranges.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-networkinterfaceoptions.html#cfn-ec2-verifiedaccessendpoint-networkinterfaceoptions-portranges)
+     */
+    public fun portRanges(): Any? = unwrap(this).getPortRanges()
+
+    /**
      * The IP protocol.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-networkinterfaceoptions.html#cfn-ec2-verifiedaccessendpoint-networkinterfaceoptions-protocol)
@@ -1100,6 +1564,21 @@ public open class CfnVerifiedAccessEndpoint(
        * @param port The IP port number.
        */
       public fun port(port: Number)
+
+      /**
+       * @param portRanges The port ranges.
+       */
+      public fun portRanges(portRanges: IResolvable)
+
+      /**
+       * @param portRanges The port ranges.
+       */
+      public fun portRanges(portRanges: List<Any>)
+
+      /**
+       * @param portRanges The port ranges.
+       */
+      public fun portRanges(vararg portRanges: Any)
 
       /**
        * @param protocol The IP protocol.
@@ -1126,6 +1605,25 @@ public open class CfnVerifiedAccessEndpoint(
       override fun port(port: Number) {
         cdkBuilder.port(port)
       }
+
+      /**
+       * @param portRanges The port ranges.
+       */
+      override fun portRanges(portRanges: IResolvable) {
+        cdkBuilder.portRanges(portRanges.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param portRanges The port ranges.
+       */
+      override fun portRanges(portRanges: List<Any>) {
+        cdkBuilder.portRanges(portRanges.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param portRanges The port ranges.
+       */
+      override fun portRanges(vararg portRanges: Any): Unit = portRanges(portRanges.toList())
 
       /**
        * @param protocol The IP protocol.
@@ -1158,6 +1656,13 @@ public open class CfnVerifiedAccessEndpoint(
       override fun port(): Number? = unwrap(this).getPort()
 
       /**
+       * The port ranges.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-networkinterfaceoptions.html#cfn-ec2-verifiedaccessendpoint-networkinterfaceoptions-portranges)
+       */
+      override fun portRanges(): Any? = unwrap(this).getPortRanges()
+
+      /**
        * The IP protocol.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-networkinterfaceoptions.html#cfn-ec2-verifiedaccessendpoint-networkinterfaceoptions-protocol)
@@ -1180,6 +1685,377 @@ public open class CfnVerifiedAccessEndpoint(
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty
+    }
+  }
+
+  /**
+   * Describes the port range for a Verified Access endpoint.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * PortRangeProperty portRangeProperty = PortRangeProperty.builder()
+   * .fromPort(123)
+   * .toPort(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-portrange.html)
+   */
+  public interface PortRangeProperty {
+    /**
+     * The start of the port range.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-portrange.html#cfn-ec2-verifiedaccessendpoint-portrange-fromport)
+     */
+    public fun fromPort(): Number? = unwrap(this).getFromPort()
+
+    /**
+     * The end of the port range.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-portrange.html#cfn-ec2-verifiedaccessendpoint-portrange-toport)
+     */
+    public fun toPort(): Number? = unwrap(this).getToPort()
+
+    /**
+     * A builder for [PortRangeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fromPort The start of the port range.
+       */
+      public fun fromPort(fromPort: Number)
+
+      /**
+       * @param toPort The end of the port range.
+       */
+      public fun toPort(toPort: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.PortRangeProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.PortRangeProperty.builder()
+
+      /**
+       * @param fromPort The start of the port range.
+       */
+      override fun fromPort(fromPort: Number) {
+        cdkBuilder.fromPort(fromPort)
+      }
+
+      /**
+       * @param toPort The end of the port range.
+       */
+      override fun toPort(toPort: Number) {
+        cdkBuilder.toPort(toPort)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.PortRangeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.PortRangeProperty,
+    ) : CdkObject(cdkObject),
+        PortRangeProperty {
+      /**
+       * The start of the port range.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-portrange.html#cfn-ec2-verifiedaccessendpoint-portrange-fromport)
+       */
+      override fun fromPort(): Number? = unwrap(this).getFromPort()
+
+      /**
+       * The end of the port range.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-portrange.html#cfn-ec2-verifiedaccessendpoint-portrange-toport)
+       */
+      override fun toPort(): Number? = unwrap(this).getToPort()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PortRangeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.PortRangeProperty):
+          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? PortRangeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PortRangeProperty):
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.PortRangeProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.PortRangeProperty
+    }
+  }
+
+  /**
+   * Describes the RDS options for a Verified Access endpoint.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * RdsOptionsProperty rdsOptionsProperty = RdsOptionsProperty.builder()
+   * .port(123)
+   * .protocol("protocol")
+   * .rdsDbClusterArn("rdsDbClusterArn")
+   * .rdsDbInstanceArn("rdsDbInstanceArn")
+   * .rdsDbProxyArn("rdsDbProxyArn")
+   * .rdsEndpoint("rdsEndpoint")
+   * .subnetIds(List.of("subnetIds"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-rdsoptions.html)
+   */
+  public interface RdsOptionsProperty {
+    /**
+     * The port.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-rdsoptions.html#cfn-ec2-verifiedaccessendpoint-rdsoptions-port)
+     */
+    public fun port(): Number? = unwrap(this).getPort()
+
+    /**
+     * The protocol.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-rdsoptions.html#cfn-ec2-verifiedaccessendpoint-rdsoptions-protocol)
+     */
+    public fun protocol(): String? = unwrap(this).getProtocol()
+
+    /**
+     * The ARN of the DB cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-rdsoptions.html#cfn-ec2-verifiedaccessendpoint-rdsoptions-rdsdbclusterarn)
+     */
+    public fun rdsDbClusterArn(): String? = unwrap(this).getRdsDbClusterArn()
+
+    /**
+     * The ARN of the RDS instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-rdsoptions.html#cfn-ec2-verifiedaccessendpoint-rdsoptions-rdsdbinstancearn)
+     */
+    public fun rdsDbInstanceArn(): String? = unwrap(this).getRdsDbInstanceArn()
+
+    /**
+     * The ARN of the RDS proxy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-rdsoptions.html#cfn-ec2-verifiedaccessendpoint-rdsoptions-rdsdbproxyarn)
+     */
+    public fun rdsDbProxyArn(): String? = unwrap(this).getRdsDbProxyArn()
+
+    /**
+     * The RDS endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-rdsoptions.html#cfn-ec2-verifiedaccessendpoint-rdsoptions-rdsendpoint)
+     */
+    public fun rdsEndpoint(): String? = unwrap(this).getRdsEndpoint()
+
+    /**
+     * The IDs of the subnets.
+     *
+     * You can specify only one subnet per Availability Zone.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-rdsoptions.html#cfn-ec2-verifiedaccessendpoint-rdsoptions-subnetids)
+     */
+    public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+
+    /**
+     * A builder for [RdsOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param port The port.
+       */
+      public fun port(port: Number)
+
+      /**
+       * @param protocol The protocol.
+       */
+      public fun protocol(protocol: String)
+
+      /**
+       * @param rdsDbClusterArn The ARN of the DB cluster.
+       */
+      public fun rdsDbClusterArn(rdsDbClusterArn: String)
+
+      /**
+       * @param rdsDbInstanceArn The ARN of the RDS instance.
+       */
+      public fun rdsDbInstanceArn(rdsDbInstanceArn: String)
+
+      /**
+       * @param rdsDbProxyArn The ARN of the RDS proxy.
+       */
+      public fun rdsDbProxyArn(rdsDbProxyArn: String)
+
+      /**
+       * @param rdsEndpoint The RDS endpoint.
+       */
+      public fun rdsEndpoint(rdsEndpoint: String)
+
+      /**
+       * @param subnetIds The IDs of the subnets.
+       * You can specify only one subnet per Availability Zone.
+       */
+      public fun subnetIds(subnetIds: List<String>)
+
+      /**
+       * @param subnetIds The IDs of the subnets.
+       * You can specify only one subnet per Availability Zone.
+       */
+      public fun subnetIds(vararg subnetIds: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.RdsOptionsProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.RdsOptionsProperty.builder()
+
+      /**
+       * @param port The port.
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param protocol The protocol.
+       */
+      override fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+      }
+
+      /**
+       * @param rdsDbClusterArn The ARN of the DB cluster.
+       */
+      override fun rdsDbClusterArn(rdsDbClusterArn: String) {
+        cdkBuilder.rdsDbClusterArn(rdsDbClusterArn)
+      }
+
+      /**
+       * @param rdsDbInstanceArn The ARN of the RDS instance.
+       */
+      override fun rdsDbInstanceArn(rdsDbInstanceArn: String) {
+        cdkBuilder.rdsDbInstanceArn(rdsDbInstanceArn)
+      }
+
+      /**
+       * @param rdsDbProxyArn The ARN of the RDS proxy.
+       */
+      override fun rdsDbProxyArn(rdsDbProxyArn: String) {
+        cdkBuilder.rdsDbProxyArn(rdsDbProxyArn)
+      }
+
+      /**
+       * @param rdsEndpoint The RDS endpoint.
+       */
+      override fun rdsEndpoint(rdsEndpoint: String) {
+        cdkBuilder.rdsEndpoint(rdsEndpoint)
+      }
+
+      /**
+       * @param subnetIds The IDs of the subnets.
+       * You can specify only one subnet per Availability Zone.
+       */
+      override fun subnetIds(subnetIds: List<String>) {
+        cdkBuilder.subnetIds(subnetIds)
+      }
+
+      /**
+       * @param subnetIds The IDs of the subnets.
+       * You can specify only one subnet per Availability Zone.
+       */
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.RdsOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.RdsOptionsProperty,
+    ) : CdkObject(cdkObject),
+        RdsOptionsProperty {
+      /**
+       * The port.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-rdsoptions.html#cfn-ec2-verifiedaccessendpoint-rdsoptions-port)
+       */
+      override fun port(): Number? = unwrap(this).getPort()
+
+      /**
+       * The protocol.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-rdsoptions.html#cfn-ec2-verifiedaccessendpoint-rdsoptions-protocol)
+       */
+      override fun protocol(): String? = unwrap(this).getProtocol()
+
+      /**
+       * The ARN of the DB cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-rdsoptions.html#cfn-ec2-verifiedaccessendpoint-rdsoptions-rdsdbclusterarn)
+       */
+      override fun rdsDbClusterArn(): String? = unwrap(this).getRdsDbClusterArn()
+
+      /**
+       * The ARN of the RDS instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-rdsoptions.html#cfn-ec2-verifiedaccessendpoint-rdsoptions-rdsdbinstancearn)
+       */
+      override fun rdsDbInstanceArn(): String? = unwrap(this).getRdsDbInstanceArn()
+
+      /**
+       * The ARN of the RDS proxy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-rdsoptions.html#cfn-ec2-verifiedaccessendpoint-rdsoptions-rdsdbproxyarn)
+       */
+      override fun rdsDbProxyArn(): String? = unwrap(this).getRdsDbProxyArn()
+
+      /**
+       * The RDS endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-rdsoptions.html#cfn-ec2-verifiedaccessendpoint-rdsoptions-rdsendpoint)
+       */
+      override fun rdsEndpoint(): String? = unwrap(this).getRdsEndpoint()
+
+      /**
+       * The IDs of the subnets.
+       *
+       * You can specify only one subnet per Availability Zone.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-rdsoptions.html#cfn-ec2-verifiedaccessendpoint-rdsoptions-subnetids)
+       */
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RdsOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.RdsOptionsProperty):
+          RdsOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? RdsOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RdsOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.RdsOptionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.RdsOptionsProperty
     }
   }
 

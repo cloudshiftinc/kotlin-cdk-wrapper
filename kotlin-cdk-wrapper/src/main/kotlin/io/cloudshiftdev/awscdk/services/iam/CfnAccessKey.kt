@@ -65,7 +65,7 @@ public open class CfnAccessKey(
   )
 
   /**
-   *
+   * The ID for this access key.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 

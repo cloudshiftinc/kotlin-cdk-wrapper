@@ -323,6 +323,9 @@ public open class DatabaseInstance(
   }
 
   public companion object {
+    public val PROPERTY_INJECTION_ID: String =
+        software.amazon.awscdk.services.docdb.DatabaseInstance.PROPERTY_INJECTION_ID
+
     public fun fromDatabaseInstanceAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
